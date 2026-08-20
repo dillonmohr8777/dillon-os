@@ -37,7 +37,7 @@ const fs = require('fs');
 const path = require('path');
 const { repoPath, readJson, writeJson, ensureDir, todayISO, nowISO, slugify } = require('../lib/fsutil');
 const radar = require('../lib/radar');
-const { planDiscovery, describePlan, DAILY } = require('../lib/coverage-plan');
+const { planDiscovery, describePlan, recordAreaYield, DAILY } = require('../lib/coverage-plan');
 const { surveyImagery, imageryStale, HOMEPAGE_IMAGE_SLOTS } = require('../lib/imagery');
 const { renderDashboard } = require('../lib/radar-dashboard');
 const { gradeSite, mergeAudits } = require('../lib/site-grader');
@@ -312,7 +312,7 @@ async function main() {
           reason: `forced market ${args.market}`, areaDeficits: [], groupDeficits: [],
         };
       })()
-    : planDiscovery(registry, { budget: args.discover });
+    : planDiscovery(registry, { budget: args.discover, today });
   const slot = { market: plan.targets[0]?.market || 'PHL', areas: plan.targets };
   const areaLabel = plan.targets.map((a) => a.name).join(', ') || 'none (discovery paused)';
 
@@ -347,6 +347,11 @@ async function main() {
         added += 1;
       }
       process.stderr.write(`${stats.raw} raw → ${added} new\n`);
+      // Remember the yield. A cell that returns nothing new twice running is
+      // treated as mined out and stops absorbing tomorrow's budget, which is
+      // the failure that quietly stopped registry growth on 2026-08-18.
+      recordAreaYield(registry, area.name, added, today);
+      if (added === 0) run.barren_areas = (run.barren_areas || []).concat(area.name);
     }
     const upserted = radar.upsertDiscovered(registry, [...fresh.values()], { today });
     run.discovered_new = upserted.added;

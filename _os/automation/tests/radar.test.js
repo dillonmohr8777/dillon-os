@@ -636,10 +636,23 @@ function registryWith(counts) {
 
 test('the plan sends the budget to the areas furthest behind target', () => {
   // Mirrors the real skew that motivated this: one county badly over-collected,
-  // the priority market badly under-collected.
+  // the priority market badly under-collected. The expansion counties are seeded
+  // near their own targets so this tests deficit ordering rather than simply
+  // rediscovering that a brand-new market is empty.
   const reg = registryWith({
     'Montgomery County': { 'home-services': 400 },
-    Philadelphia: { 'home-services': 100 },
+    Philadelphia: { 'home-services': 20 },
+    'Lehigh County': { 'home-services': 60 },
+    'Northampton County': { 'home-services': 60 },
+    'Berks County': { 'home-services': 60 },
+    'Lancaster County': { 'home-services': 60 },
+    'York County': { 'home-services': 60 },
+    'Dauphin County': { 'home-services': 60 },
+    'Cumberland County': { 'home-services': 60 },
+    'Luzerne County': { 'home-services': 60 },
+    'Lackawanna County': { 'home-services': 60 },
+    'Allegheny County': { 'home-services': 60 },
+    'Westmoreland County': { 'home-services': 60 },
   });
   const plan = planDiscovery(reg, { budget: 60 });
 
@@ -913,4 +926,85 @@ test('no em dash survives into a generated page', () => {
   const r = buildArchSite(candidate({ business_name: 'Dash Test' }), {});
   const text = r.html.replace(/<style[\s\S]*?<\/style>/gi, '').replace(/<script[\s\S]*?<\/script>/gi, '');
   assert.doesNotMatch(text, /—/, 'house style: no em dashes on any customer-facing page');
+});
+
+/* ------------------------------------------------------------------ *
+ * Discovery must not keep spending the budget on a mined-out cell
+ *
+ * The 2026-08-18 failure: the sweep ran, reported ok, pulled 144 candidates and
+ * added none, because Philadelphia held the largest deficit and OSM had no more
+ * Philadelphia businesses of these verticals to give. The deficit was real and
+ * permanently unclosable, so the planner aimed there every morning forever.
+ * ------------------------------------------------------------------ */
+
+test('a cell that yields nothing twice stops absorbing the discovery budget', () => {
+  const { planDiscovery, recordAreaYield, SATURATION_STRIKES } = require('../lib/coverage-plan');
+
+  // A registry deliberately starved of Philadelphia, so it holds the top deficit.
+  const prospects = {};
+  for (let i = 0; i < 300; i += 1) {
+    prospects[`m${i}.com`] = {
+      domain: `m${i}.com`, area: 'Montgomery County', vertical_group: 'home-services',
+      lifecycle: 'graded', current: { sqs: 40, verdict: 'rebuild', tier: 0 },
+    };
+  }
+  const registry = { prospects };
+
+  const before = planDiscovery(registry, { budget: 60, today: '2026-08-20' });
+  assert.ok(
+    before.targets.some((t) => t.name === 'Philadelphia'),
+    'with Philadelphia empty it should be targeted first'
+  );
+
+  // Two barren visits is the threshold.
+  for (let i = 0; i < SATURATION_STRIKES; i += 1) {
+    recordAreaYield(registry, 'Philadelphia', 0, '2026-08-20');
+  }
+  const after = planDiscovery(registry, { budget: 60, today: '2026-08-20' });
+  assert.equal(
+    after.targets.some((t) => t.name === 'Philadelphia'), false,
+    'a mined-out cell must not be targeted again'
+  );
+  assert.ok(after.targets.length > 0, 'the budget goes somewhere else, not nowhere');
+  assert.match(after.reason, /mined-out/);
+
+  // A single good day clears the streak: OSM does get edited.
+  recordAreaYield(registry, 'Philadelphia', 5, '2026-08-21');
+  const recovered = planDiscovery(registry, { budget: 60, today: '2026-08-21' });
+  assert.ok(
+    recovered.targets.some((t) => t.name === 'Philadelphia'),
+    'a cell that just yielded is plainly not exhausted'
+  );
+});
+
+test('saturation expires after the cooldown so a rested cell is retried', () => {
+  const { planDiscovery, recordAreaYield, SATURATION_STRIKES, SATURATION_COOLDOWN_DAYS } =
+    require('../lib/coverage-plan');
+  const registry = { prospects: {} };
+  for (let i = 0; i < SATURATION_STRIKES; i += 1) {
+    recordAreaYield(registry, 'Philadelphia', 0, '2026-08-20');
+  }
+  assert.equal(
+    planDiscovery(registry, { budget: 60, today: '2026-08-21' })
+      .areaDeficits.find((a) => a.name === 'Philadelphia').saturated,
+    true
+  );
+  const later = new Date(Date.parse('2026-08-20T00:00:00Z') + (SATURATION_COOLDOWN_DAYS + 1) * 86400000)
+    .toISOString().slice(0, 10);
+  assert.equal(
+    planDiscovery(registry, { budget: 60, today: later })
+      .areaDeficits.find((a) => a.name === 'Philadelphia').saturated,
+    false,
+    'after the cooldown the cell is eligible again'
+  );
+});
+
+test('the expanded market list still sums to a full share and reaches beyond Philadelphia', () => {
+  const { AREA_TARGETS } = require('../lib/coverage-plan');
+  const sum = AREA_TARGETS.reduce((a, x) => a + x.share, 0);
+  assert.ok(Math.abs(sum - 1) < 1e-9, `area shares must sum to 1, got ${sum}`);
+  const markets = new Set(AREA_TARGETS.map((a) => a.market));
+  assert.ok(markets.size >= 6, `expected several markets, got ${[...markets].join(',')}`);
+  const phl = AREA_TARGETS.filter((a) => a.market === 'PHL').reduce((a, x) => a + x.share, 0);
+  assert.ok(phl > 0.4 && phl < 0.7, `Philadelphia metro should lead but not monopolise, got ${phl}`);
 });
