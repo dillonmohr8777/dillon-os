@@ -350,7 +350,9 @@ async function main() {
       // Remember the yield. A cell that returns nothing new twice running is
       // treated as mined out and stops absorbing tomorrow's budget, which is
       // the failure that quietly stopped registry growth on 2026-08-18.
-      recordAreaYield(registry, area.name, added, today);
+      // `raw` distinguishes a real barren visit from a query that never ran:
+      // an empty Overpass response must not count as exhaustion.
+      recordAreaYield(registry, area.name, added, today, { raw: stats.raw });
       if (added === 0) run.barren_areas = (run.barren_areas || []).concat(area.name);
     }
     const upserted = radar.upsertDiscovered(registry, [...fresh.values()], { today });

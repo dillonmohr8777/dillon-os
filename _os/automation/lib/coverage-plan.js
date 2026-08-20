@@ -342,11 +342,28 @@ function describePlan(plan) {
  * @param {number} added new rows this area contributed today
  * @param {string} today ISO date
  */
-function recordAreaYield(registry, area, added, today) {
+function recordAreaYield(registry, area, added, today, { raw = null } = {}) {
   if (!registry || !area) return null;
   if (!registry.discovery_yield) registry.discovery_yield = {};
   const y = registry.discovery_yield[area] || { barren_streak: 0 };
   y.last_seen = today;
+
+  // An empty response is NOT evidence of exhaustion. Overpass answers HTTP 200
+  // with `elements: []` when its area lookup silently fails, so "this county has
+  // no matching businesses" and "the query never resolved" look identical.
+  // Measured 2026-08-19: Montgomery County — 389 rows in the registry, plainly
+  // well mapped — returned 0 raw elements twice in a row while the service was
+  // throttling this host. Striking on that would blacklist the most productive
+  // cells in the market and hand us a worse version of the bug this whole
+  // mechanism exists to fix. A strike requires proof the query actually ran:
+  // some raw elements came back, and none of them were new.
+  if (raw != null && Number(raw) === 0) {
+    y.last_inconclusive = today;
+    y.inconclusive = (y.inconclusive || 0) + 1;
+    registry.discovery_yield[area] = y;
+    return y;
+  }
+
   if (Number(added) > 0) {
     y.barren_streak = 0;
     y.last_yield = today;

@@ -1008,3 +1008,38 @@ test('the expanded market list still sums to a full share and reaches beyond Phi
   const phl = AREA_TARGETS.filter((a) => a.market === 'PHL').reduce((a, x) => a + x.share, 0);
   assert.ok(phl > 0.4 && phl < 0.7, `Philadelphia metro should lead but not monopolise, got ${phl}`);
 });
+
+test('an empty Overpass response never counts as exhaustion', () => {
+  // Found by verifying the saturation fix against the live API: Overpass answers
+  // HTTP 200 with `elements: []` when its area lookup silently fails, so a
+  // throttled query is indistinguishable from an empty county. Montgomery County
+  // — 389 rows in the registry — returned 0 raw twice in a row while the service
+  // was rate limiting this host. Striking on that would blacklist the most
+  // productive cells in the market.
+  const { planDiscovery, recordAreaYield, SATURATION_STRIKES } = require('../lib/coverage-plan');
+  const registry = { prospects: {} };
+
+  for (let i = 0; i < SATURATION_STRIKES + 2; i += 1) {
+    recordAreaYield(registry, 'Montgomery County', 0, '2026-08-20', { raw: 0 });
+  }
+  const y = registry.discovery_yield['Montgomery County'];
+  assert.equal(y.barren_streak, 0, 'an unresolved query must not earn a strike');
+  assert.ok(y.inconclusive >= SATURATION_STRIKES, 'but it is recorded, not silently dropped');
+  assert.equal(
+    planDiscovery(registry, { budget: 60, today: '2026-08-20' })
+      .areaDeficits.find((a) => a.name === 'Montgomery County').saturated,
+    false
+  );
+
+  // A query that demonstrably ran and returned only known businesses is the real
+  // barren case, and still strikes.
+  for (let i = 0; i < SATURATION_STRIKES; i += 1) {
+    recordAreaYield(registry, 'Montgomery County', 0, '2026-08-20', { raw: 144 });
+  }
+  assert.equal(registry.discovery_yield['Montgomery County'].barren_streak, SATURATION_STRIKES);
+  assert.equal(
+    planDiscovery(registry, { budget: 60, today: '2026-08-20' })
+      .areaDeficits.find((a) => a.name === 'Montgomery County').saturated,
+    true
+  );
+});
