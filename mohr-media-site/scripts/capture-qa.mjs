@@ -39,6 +39,11 @@ async function inspect(name, viewport, options = {}) {
   await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }));
   await page.waitForTimeout(250);
 
+  if (options.openMenu) {
+    await page.locator('.nav-toggle').click();
+    await page.waitForTimeout(350);
+  }
+
   const metrics = await page.evaluate(() => ({
     title: document.title,
     width: document.documentElement.clientWidth,
@@ -66,6 +71,8 @@ async function inspect(name, viewport, options = {}) {
 
 await inspect(`portfolio-desktop-${suffix}`, { width: 1440, height: 1000 });
 await inspect(`portfolio-mobile-${suffix}`, { width: 390, height: 844 });
+await inspect(`portfolio-menu-desktop-${suffix}`, { width: 1440, height: 1000 }, { openMenu: true });
+await inspect(`portfolio-menu-mobile-${suffix}`, { width: 390, height: 844 }, { openMenu: true });
 await inspect(
   `portfolio-reduced-motion-${suffix}`,
   { width: 1440, height: 1000 },

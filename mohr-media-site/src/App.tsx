@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect, useMemo, useRef, useState, type KeyboardEvent } from 'react'
+import { lazy, Suspense, useEffect, useMemo, useRef, useState, type KeyboardEvent, type ReactNode } from 'react'
 import { SpineStage } from './components/SpineStage'
 import { clients, projects, videos } from './data'
 import { SPINE_SECTIONS, type SpineEngine } from './spine/config'
@@ -12,6 +12,19 @@ function ArrowIcon({ direction = 'up' }: { direction?: 'up' | 'down' | 'left' | 
       <path d="M7 17 17 7M8 7h9v9" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   )
+}
+
+type MenuIconName = 'align' | 'work' | 'motion' | 'documents' | 'contact'
+
+function MenuIcon({ name }: { name: MenuIconName }) {
+  const paths: Record<MenuIconName, ReactNode> = {
+    align: <><path d="M4 5h16v5H4zM4 14h7v5H4zM15 14h5v5h-5z" /></>,
+    work: <><rect x="3" y="4" width="18" height="16" rx="2" /><path d="M3 9h18M7 6.5h.01M10 6.5h.01" /></>,
+    motion: <><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m10 9 5 3-5 3V9Z" /></>,
+    documents: <><path d="M6 3h9l3 3v15H6zM15 3v4h4M9 11h6M9 15h6" /></>,
+    contact: <><path d="M4 5h16v14H4zM4 7l8 6 8-6" /></>,
+  }
+  return <svg viewBox="0 0 24 24" aria-hidden="true">{paths[name]}</svg>
 }
 
 function useExperienceMotion() {
@@ -112,33 +125,61 @@ function Loader({ engineRef }: { engineRef: { current: SpineEngine | null } }) {
 
 function Navigation() {
   const [open, setOpen] = useState(false)
-  const links = [
-    ['Align HCM', '#align'],
-    ['Live work', '#work'],
-    ['Motion', '#motion'],
-    ['Documents', '#vault'],
+  const headerRef = useRef<HTMLElement>(null)
+  const toggleRef = useRef<HTMLButtonElement>(null)
+  const links: Array<{ label: string; detail: string; href: string; icon: MenuIconName; tone: string }> = [
+    { label: 'Align HCM', detail: 'Flagship client system', href: '#align', icon: 'align', tone: 'cyan' },
+    { label: 'Live work', detail: 'Websites built to open', href: '#work', icon: 'work', tone: 'blue' },
+    { label: 'Motion', detail: 'Edited content and campaigns', href: '#motion', icon: 'motion', tone: 'mint' },
+    { label: 'Documents', detail: 'Strategy and proof files', href: '#vault', icon: 'documents', tone: 'silver' },
   ]
   useEffect(() => {
     if (!open) return
     const closeOnEscape = (event: globalThis.KeyboardEvent) => {
-      if (event.key === 'Escape') setOpen(false)
+      if (event.key === 'Escape') {
+        setOpen(false)
+        toggleRef.current?.focus()
+      }
+    }
+    const closeOutside = (event: PointerEvent) => {
+      if (!headerRef.current?.contains(event.target as Node)) setOpen(false)
     }
     window.addEventListener('keydown', closeOnEscape)
-    return () => window.removeEventListener('keydown', closeOnEscape)
+    window.addEventListener('pointerdown', closeOutside)
+    return () => {
+      window.removeEventListener('keydown', closeOnEscape)
+      window.removeEventListener('pointerdown', closeOutside)
+    }
   }, [open])
   return (
-    <header className="site-nav">
+    <header className={`site-nav${open ? ' site-nav--open' : ''}`} ref={headerRef}>
       <a className="nav-mark" href="#top" aria-label="Dillon Mohr portfolio home">
         <img src="/brand/immohrtal-logo.png" alt="" />
         <span>Dillon Mohr</span>
       </a>
-      <button className="nav-toggle" type="button" aria-expanded={open} aria-controls="primary-navigation" onClick={() => setOpen((value) => !value)}>
+      <button ref={toggleRef} className="nav-toggle" type="button" aria-expanded={open} aria-controls="primary-navigation" onClick={() => setOpen((value) => !value)}>
         <span>{open ? 'Close' : 'Menu'}</span>
         <i /><i />
       </button>
       <nav id="primary-navigation" className={open ? 'is-open' : ''} aria-label="Primary navigation">
-        {links.map(([label, href]) => <a key={href} href={href} onClick={() => setOpen(false)}>{label}</a>)}
-        <a className="nav-contact" href="mailto:hello@themohrmedia.com?subject=Portfolio%20inquiry">Open channel <ArrowIcon /></a>
+        <div className="nav-panel__head">
+          <p>Navigate the signal</p>
+          <span>Selected work and proof</span>
+        </div>
+        <div className="nav-panel__grid">
+          {links.map(({ label, detail, href, icon, tone }) => (
+            <a className="nav-card" key={href} href={href} onClick={() => setOpen(false)}>
+              <span className={`nav-card__icon nav-card__icon--${tone}`}><MenuIcon name={icon} /></span>
+              <span className="nav-card__copy"><strong>{label}</strong><small>{detail}</small></span>
+              <ArrowIcon direction="right" />
+            </a>
+          ))}
+        </div>
+        <a className="nav-contact" href="mailto:hello@themohrmedia.com?subject=Portfolio%20inquiry" onClick={() => setOpen(false)}>
+          <span className="nav-card__icon nav-card__icon--contact"><MenuIcon name="contact" /></span>
+          <span className="nav-card__copy"><strong>Open channel</strong><small>Start a conversation</small></span>
+          <ArrowIcon />
+        </a>
       </nav>
     </header>
   )
@@ -358,8 +399,6 @@ export default function App() {
             <Suspense fallback={<div className="particle-logo particle-logo--static" role="img" aria-label="IMMOHRTAL logo"><img src="/brand/immohrtal-logo.png" alt="" /></div>}>
               <ParticleLogo />
             </Suspense>
-            <div className="hero-orbit hero-orbit--one" aria-hidden="true" />
-            <div className="hero-orbit hero-orbit--two" aria-hidden="true" />
             <p aria-hidden="true"><span>Live signal</span><em>Pittsburgh, PA</em><strong>DM // 2026</strong></p>
           </div>
           <div className="hero-status" aria-hidden="true">

@@ -71,7 +71,24 @@ const layout = await page.evaluate(() => ({
   },
 }));
 
+await menuButton.click();
+await page.waitForTimeout(350);
+const menuPanel = await page.evaluate(() => {
+  const panel = document.querySelector('#primary-navigation');
+  const rect = panel?.getBoundingClientRect();
+  return {
+    visible: Boolean(panel?.classList.contains('is-open')),
+    iconCount: panel?.querySelectorAll('.nav-card__icon').length ?? 0,
+    cardCount: panel?.querySelectorAll('a').length ?? 0,
+    left: rect?.left ?? 0,
+    right: rect?.right ?? 0,
+    bottom: rect?.bottom ?? 0,
+    viewportWidth: window.innerWidth,
+    viewportHeight: window.innerHeight,
+  };
+});
 const axe = await new AxeBuilder({ page }).analyze();
+await page.keyboard.press('Escape');
 
 const reducedContext = await browser.newContext({
   viewport: { width: 390, height: 844 },
@@ -95,6 +112,7 @@ const report = {
     changed: firstVideoSource !== secondVideoSource,
   },
   layout,
+  menuPanel,
   reducedMotion,
   imageFailures: imageResults.filter((item) => !item.ok),
   resourceFailures: resourceResults.filter((item) => !item.ok),
@@ -126,6 +144,12 @@ const failed = menuOpened !== 'true'
   || secondTabSelected !== 'true'
   || firstVideoSource === secondVideoSource
   || layout.scrollWidth > layout.clientWidth
+  || !menuPanel.visible
+  || menuPanel.iconCount !== 5
+  || menuPanel.cardCount !== 5
+  || menuPanel.left < 0
+  || menuPanel.right > menuPanel.viewportWidth
+  || menuPanel.bottom > menuPanel.viewportHeight
   || !reducedMotion.staticLogo
   || report.imageFailures.length > 0
   || report.resourceFailures.length > 0
