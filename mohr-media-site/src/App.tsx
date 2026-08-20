@@ -1,9 +1,6 @@
-import { lazy, Suspense, useEffect, useMemo, useRef, useState, type KeyboardEvent, type ReactNode } from 'react'
-import { SpineStage } from './components/SpineStage'
+import { useEffect, useMemo, useRef, useState, type KeyboardEvent } from 'react'
+import { AmbientParticleSpine, ParticleLogo, ProspectSequence } from './components/ParticleLogo'
 import { clients, projects, videos } from './data'
-import { SPINE_SECTIONS, type SpineEngine } from './spine/config'
-
-const ParticleLogo = lazy(() => import('./components/ParticleLogo').then((module) => ({ default: module.ParticleLogo })))
 
 function ArrowIcon({ direction = 'up' }: { direction?: 'up' | 'down' | 'left' | 'right' }) {
   const rotation = direction === 'down' ? 90 : direction === 'left' ? 225 : direction === 'right' ? 45 : 0
@@ -12,19 +9,6 @@ function ArrowIcon({ direction = 'up' }: { direction?: 'up' | 'down' | 'left' | 
       <path d="M7 17 17 7M8 7h9v9" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   )
-}
-
-type MenuIconName = 'align' | 'work' | 'motion' | 'documents' | 'contact'
-
-function MenuIcon({ name }: { name: MenuIconName }) {
-  const paths: Record<MenuIconName, ReactNode> = {
-    align: <><path d="M4 5h16v5H4zM4 14h7v5H4zM15 14h5v5h-5z" /></>,
-    work: <><rect x="3" y="4" width="18" height="16" rx="2" /><path d="M3 9h18M7 6.5h.01M10 6.5h.01" /></>,
-    motion: <><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m10 9 5 3-5 3V9Z" /></>,
-    documents: <><path d="M6 3h9l3 3v15H6zM15 3v4h4M9 11h6M9 15h6" /></>,
-    contact: <><path d="M4 5h16v14H4zM4 7l8 6 8-6" /></>,
-  }
-  return <svg viewBox="0 0 24 24" aria-hidden="true">{paths[name]}</svg>
 }
 
 function useExperienceMotion() {
@@ -85,53 +69,16 @@ function useExperienceMotion() {
   }, [])
 }
 
-function Loader({ engineRef }: { engineRef: { current: SpineEngine | null } }) {
-  const [progress, setProgress] = useState(0)
-  const [done, setDone] = useState(false)
-
-  useEffect(() => {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      setProgress(100)
-      setDone(true)
-      return
-    }
-    const started = performance.now()
-    let frame = 0
-    const tick = (now: number) => {
-      const elapsed = now - started
-      const next = Math.min(100, Math.round((elapsed / 1500) * 100))
-      setProgress(next)
-      if (next >= 100) {
-        engineRef.current?.pulse(0)
-        window.setTimeout(() => setDone(true), 260)
-        return
-      }
-      frame = requestAnimationFrame(tick)
-    }
-    frame = requestAnimationFrame(tick)
-    return () => cancelAnimationFrame(frame)
-  }, [engineRef])
-
-  return (
-    <div className={`loader${done ? ' loader--done' : ''}`} aria-hidden={done}>
-      <img src="/brand/immohrtal-logo.png" alt="" />
-      <p>Signal foundry // cueing up</p>
-      <strong>{String(progress).padStart(3, '0')}</strong>
-      <span><i style={{ transform: `scaleX(${progress / 100})` }} /></span>
-      <em>Transmission // {progress < 100 ? 'assembling' : 'live'}</em>
-    </div>
-  )
-}
-
 function Navigation() {
   const [open, setOpen] = useState(false)
   const headerRef = useRef<HTMLElement>(null)
   const toggleRef = useRef<HTMLButtonElement>(null)
-  const links: Array<{ label: string; detail: string; href: string; icon: MenuIconName; tone: string }> = [
-    { label: 'Align HCM', detail: 'Flagship client system', href: '#align', icon: 'align', tone: 'cyan' },
-    { label: 'Live work', detail: 'Websites built to open', href: '#work', icon: 'work', tone: 'blue' },
-    { label: 'Motion', detail: 'Edited content and campaigns', href: '#motion', icon: 'motion', tone: 'mint' },
-    { label: 'Documents', detail: 'Strategy and proof files', href: '#vault', icon: 'documents', tone: 'silver' },
+  const links = [
+    { label: 'Align HCM', href: '#align' },
+    { label: 'Live work', href: '#work' },
+    { label: 'Motion', href: '#motion' },
+    { label: 'Documents', href: '#vault' },
+    { label: 'Contact', href: '#contact' },
   ]
   useEffect(() => {
     if (!open) return
@@ -152,71 +99,24 @@ function Navigation() {
     }
   }, [open])
   return (
-    <header className={`site-nav${open ? ' site-nav--open' : ''}`} ref={headerRef}>
-      <a className="nav-mark" href="#top" aria-label="Dillon Mohr portfolio home">
+    <header className={`site-header${open ? ' site-header--open' : ''}`} ref={headerRef}>
+      <a className="brand-lockup" href="#top" aria-label="Immortal Marketing Solutions home">
+        <span className="brand-lockup__vertical" aria-hidden="true">DILLON</span>
         <img src="/brand/immohrtal-logo.png" alt="" />
-        <span>Dillon Mohr</span>
+        <span className="brand-lockup__type"><strong>IMMORTAL</strong><small>Marketing Solutions</small></span>
       </a>
-      <button ref={toggleRef} className="nav-toggle" type="button" aria-expanded={open} aria-controls="primary-navigation" onClick={() => setOpen((value) => !value)}>
-        <span>{open ? 'Close' : 'Menu'}</span>
-        <i /><i />
+      <button ref={toggleRef} className="menu-button" type="button" aria-expanded={open} aria-controls="primary-navigation" aria-label={open ? 'Close menu' : 'Open menu'} onClick={() => setOpen((value) => !value)}>
+        {open ? (
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" /></svg>
+        ) : (
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M5 12h14M5 17h14" /></svg>
+        )}
       </button>
       <nav id="primary-navigation" className={open ? 'is-open' : ''} aria-label="Primary navigation">
-        <div className="nav-panel__head">
-          <p>Navigate the signal</p>
-          <span>Selected work and proof</span>
-        </div>
-        <div className="nav-panel__grid">
-          {links.map(({ label, detail, href, icon, tone }) => (
-            <a className="nav-card" key={href} href={href} onClick={() => setOpen(false)}>
-              <span className={`nav-card__icon nav-card__icon--${tone}`}><MenuIcon name={icon} /></span>
-              <span className="nav-card__copy"><strong>{label}</strong><small>{detail}</small></span>
-              <ArrowIcon direction="right" />
-            </a>
-          ))}
-        </div>
-        <a className="nav-contact" href="mailto:hello@themohrmedia.com?subject=Portfolio%20inquiry" onClick={() => setOpen(false)}>
-          <span className="nav-card__icon nav-card__icon--contact"><MenuIcon name="contact" /></span>
-          <span className="nav-card__copy"><strong>Open channel</strong><small>Start a conversation</small></span>
-          <ArrowIcon />
-        </a>
+        {links.map(({ label, href }) => <a key={href} href={href} onClick={() => setOpen(false)}>{label}</a>)}
       </nav>
+      <a className="header-cta" href="mailto:hello@themohrmedia.com?subject=Portfolio%20inquiry">Open channel <ArrowIcon /></a>
     </header>
-  )
-}
-
-function SpineRail({ engineRef }: { engineRef: { current: SpineEngine | null } }) {
-  const [waypoint, setWaypoint] = useState(0)
-  const [percent, setPercent] = useState('000.0%')
-  useEffect(() => {
-    let unsubscribe: undefined | (() => void)
-    const timer = window.setTimeout(() => {
-      unsubscribe = engineRef.current?.onHud((hud) => {
-        setWaypoint(hud.waypoint)
-        setPercent(hud.pct)
-      })
-    }, 80)
-    return () => {
-      window.clearTimeout(timer)
-      unsubscribe?.()
-    }
-  }, [engineRef])
-  return (
-    <nav className="spine-rail" aria-label="Page waypoints">
-      {SPINE_SECTIONS.map((section, index) => (
-        <button
-          key={section.id}
-          type="button"
-          className={index === waypoint ? 'is-active' : ''}
-          aria-current={index === waypoint ? 'location' : undefined}
-          aria-label={`Go to ${section.label}`}
-          onClick={() => document.getElementById(section.id)?.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' })}
-        >
-          <i />
-        </button>
-      ))}
-      <p aria-hidden="true"><span>WPT {String(waypoint).padStart(2, '0')}</span>{SPINE_SECTIONS[waypoint]?.label}<em>{percent}</em></p>
-    </nav>
   )
 }
 
@@ -374,21 +274,27 @@ function DocumentVault() {
 
 export default function App() {
   useExperienceMotion()
-  const engineRef = useRef<SpineEngine | null>(null)
   return (
     <div className="site-shell">
       <a className="skip-link" href="#align">Skip to featured work</a>
-      <SpineStage engineRef={engineRef} />
-      <Loader engineRef={engineRef} />
+      <AmbientParticleSpine />
       <div className="scroll-progress" aria-hidden="true"><i /></div>
       <Navigation />
-      <SpineRail engineRef={engineRef} />
 
       <main>
-        <section className="hero-section" id="top">
+        <section className="prospect-sequence" id="top" aria-label="Align HCM proof transformed into an HRchitect possibility">
+          <p className="prospect-sequence__eyebrow">Dillon Mohr // HCM growth systems</p>
+          <ProspectSequence />
+          <a className="prospect-sequence__continue" href="#portfolio">See the system <ArrowIcon direction="down" /></a>
+          <div className="hero-status" aria-hidden="true">
+            <span>Build the signal</span><i /><span>Show the work</span><i /><span>Prove the system</span><i /><span>Make it immortal</span><i />
+          </div>
+        </section>
+
+        <section className="hero-section" id="portfolio">
           <div className="hero-copy">
             <p className="eyebrow">Dillon Mohr // marketing systems operator</p>
-            <h1><span>I build the</span><strong>signal.</strong><span>And the system</span><em>behind it.</em></h1>
+            <h1><span>I build the signal.</span><span>I build the system.</span></h1>
             <p className="hero-intro">Positioning, web, content, motion, paid media, CRM, analytics, and AI assisted production, connected into work people can see, use, and act on.</p>
             <div className="hero-actions">
               <a className="button button--primary" href="#align">Enter the work <ArrowIcon direction="down" /></a>
@@ -396,13 +302,7 @@ export default function App() {
             </div>
           </div>
           <div className="hero-logo-stage">
-            <Suspense fallback={<div className="particle-logo particle-logo--static" role="img" aria-label="IMMOHRTAL logo"><img src="/brand/immohrtal-logo.png" alt="" /></div>}>
-              <ParticleLogo />
-            </Suspense>
-            <p aria-hidden="true"><span>Live signal</span><em>Pittsburgh, PA</em><strong>DM // 2026</strong></p>
-          </div>
-          <div className="hero-status" aria-hidden="true">
-            <span>Strategy</span><i /><span>Creative</span><i /><span>Web systems</span><i /><span>Growth operations</span>
+            <ParticleLogo />
           </div>
         </section>
 
@@ -493,7 +393,7 @@ export default function App() {
               <a href="/downloads/Dillon-Mohr-ATS-Resume.pdf" download>Résumé</a>
               <a href="#top">Back to signal</a>
             </nav>
-            <span>© 2026 Dillon Mohr // IMMOHRTAL</span>
+            <span>© 2026 Immortal Marketing Solutions</span>
           </footer>
         </section>
       </main>

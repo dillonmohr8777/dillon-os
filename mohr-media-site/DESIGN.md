@@ -1,6 +1,6 @@
 ---
-name: Dillon Mohr Signal Foundry
-description: A cinematic portfolio system where strategy, craft, and operating proof move as one signal.
+name: Immortal Kinetic Proof
+description: An experience-led portfolio system that turns finished HCM work into a live prospect demonstration.
 colors:
   ink: "#020711"
   gunmetal: "#07101f"
@@ -11,8 +11,21 @@ colors:
   muted-signal: "#9fb2c9"
   cobalt: "#287dff"
   electric-cyan: "#18c8ff"
+  action-cyan-top: "#49dcff"
+  action-cyan-base: "#18bde9"
   signal-mint: "#58edb2"
 typography:
+  experience-display:
+    fontFamily: "Unbounded Variable, sans-serif"
+    fontSize: "clamp(3.8rem, 7.5vw, 8.4rem)"
+    fontWeight: 760
+    lineHeight: 0.92
+    letterSpacing: "-0.065em"
+  interface:
+    fontFamily: "Manrope Variable, sans-serif"
+    fontSize: "0.8rem"
+    fontWeight: 590
+    lineHeight: 1.4
   display:
     fontFamily: "Foundry Display, sans-serif"
     fontSize: "clamp(4rem, 8.4vw, 9.2rem)"
@@ -37,6 +50,8 @@ typography:
     letterSpacing: "0.15em"
 rounded:
   control: "10px"
+  action: "12px"
+  rail: "15px"
   surface: "16px"
   capsule: "999px"
 spacing:
@@ -47,6 +62,15 @@ spacing:
   xl: "32px"
   section: "clamp(96px, 14vw, 180px)"
 components:
+  navigation-rail:
+    backgroundColor: "rgba(5, 16, 34, 0.9)"
+    textColor: "{colors.paper}"
+    typography: "{typography.interface}"
+    rounded: "{rounded.rail}"
+    height: "78px"
+  prospect-statement:
+    textColor: "{colors.paper}"
+    typography: "{typography.experience-display}"
   button-primary:
     backgroundColor: "{colors.paper}"
     textColor: "{colors.ink}"
@@ -66,19 +90,23 @@ components:
     padding: "32px"
 ---
 
-# Design System: Dillon Mohr Signal Foundry
+# Design System: Immortal Kinetic Proof
 
 ## Overview
 
-**Creative North Star: "The Signal Foundry"**
+**Creative North Star: "The Need Momentum Mirror"**
 
-The system treats a portfolio as a working machine rather than a gallery. Deep gunmetal space carries the IMMOHRTAL spine, kinetic mark, and live-work sequence; pale blueprint chambers interrupt it when dense proof needs daylight, precision, and longer reading.
+This Experience surface borrows the proven interaction grammar of the approved Need Momentum homepage while preserving the Immortal identity and Dillon's portfolio evidence. It opens with a prospect-specific claim, proves the Align HCM result through the exact Align mark, then transforms the same visual language into a direct HRchitect possibility.
+
+Deep gunmetal space carries the prospect sequence, full IMMOHRTAL particle mark, and live-work sequence; pale blueprint chambers interrupt it when dense proof needs daylight, precision, and longer reading. The ambient particle spine is an intentional spatial layer. It remains behind content and never becomes a substitute for hierarchy or proof.
 
 Expression comes from editorial scale, restrained industrial labels, live browser frames, and motion with an operating purpose. The world is cinematic but never hides the work: each flourish resolves into a link, artifact, explanation, or playable edit.
 
 **Key Characteristics:**
 
-- Monumental condensed headlines cut with fluid serif phrases.
+- Dimensional Unbounded statements for the experience opener and Immortal hero.
+- Manrope navigation and interface copy that match the pinned interaction reference.
+- Monumental Anton headlines cut with Instrument Serif phrases in downstream proof sections.
 - Dark signal space alternating with cool blueprint proof surfaces.
 - Exact IMMOHRTAL geometry as the recurring identity anchor.
 - Substantial instrument frames, bounded glass, and tactile depth instead of decorative chrome.
@@ -110,8 +138,10 @@ The palette is a cold foundry: near-black operating space, cobalt and cyan energ
 
 ## Typography
 
-**Display Font:** Foundry Display, built from Anton with a sans-serif fallback.
-**Body Font:** The platform UI sans stack.
+**Experience Display Font:** Unbounded Variable. Used for the prospect opener, brand lockup, and primary Immortal command.
+**Interface Font:** Manrope Variable. Used for the persistent rail, controls, and supporting interface copy.
+**Display Font:** Foundry Display, built from Anton with a sans-serif fallback. Retained for downstream portfolio and case-study sections.
+**Body Font:** Manrope Variable where the mirrored shell owns the surface; the platform UI sans stack remains available in legacy proof modules.
 **Accent Font:** Foundry Serif, built from Instrument Serif.
 **Label/Mono Font:** Foundry Mono, built from IBM Plex Mono.
 
@@ -119,13 +149,15 @@ The palette is a cold foundry: near-black operating space, cobalt and cyan energ
 
 ### Hierarchy
 
-- **Display:** Regular weight, tightly tracked, sub-single line height. Used for hero statements, case-study theses, and section commands.
+- **Experience Display:** Heavy Unbounded with tight tracking, dimensional shadows, and sub-single line height. Used only for the top prospect statements and Immortal hero command.
+- **Interface:** Manrope at medium to bold weights. Used for navigation, brand lockup, controls, and concise supporting copy.
+- **Display:** Regular Anton, tightly tracked, sub-single line height. Used for downstream case-study theses and section commands.
 - **Headline:** Regular condensed display at responsive editorial scale. Used for card and proof titles.
 - **Accent:** Regular serif, usually italic, at the same visual weight as nearby display text. Used for one decisive phrase, not paragraphs.
 - **Body:** Regular UI sans with generous leading and a practical maximum line length near 60 characters.
 - **Label:** Medium mono, small, tracked, and uppercase. Used for coordinates, metadata, navigation, and state.
 
-**The Three-Voice Rule.** Display commands, serif interprets, mono locates. Do not make any one voice perform all three jobs.
+**The Four-Voice Rule.** Unbounded commands at the experience level, Manrope guides interaction, Anton commands inside the portfolio, serif interprets, and mono locates. Keep each voice within its assigned layer.
 
 ## Layout
 
@@ -133,7 +165,7 @@ The page uses full-bleed experience sections wrapped around inner widths between
 
 At 820 pixels, multi-column sections collapse, navigation becomes a disclosed panel, and the logo becomes an atmospheric layer above the copy. Horizontal work cards remain deliberately swipeable. At 560 pixels, actions stack, proof tiles become single-column, and section padding tightens without reducing tap targets.
 
-The fixed WebGL spine belongs behind content and never determines document flow. Content remains complete when the spine or particle layer is absent.
+The fixed WebGL spine belongs behind content and never determines document flow. The blueprint grid used in the downloadable-document vault is a functional artifact cue and a narrow detector exception, not a general page background. Content remains complete when the spine or particle layer is absent.
 
 ## Elevation & Depth
 
@@ -149,9 +181,9 @@ Depth is a hybrid of tonal layering, decisive cool borders, restrained blur, and
 
 ## Shapes
 
-Corners are restrained and functional. Controls use compact 10-pixel rounding, large bounded chambers use 16-pixel rounding, and circular geometry is reserved for waypoint dots, video selectors, and orbit lines. Browser frames keep a slim instrument bar and clipped viewport. Primary frames use two or three pixel cool borders, while one pixel lines are reserved for quiet internal divisions.
+Corners are restrained and functional. Controls use compact 10-pixel rounding, the action control uses 12 pixels, the pinned navigation rail uses 15 pixels, and large bounded chambers use 16 pixels. Circular geometry is reserved for waypoint dots, video selectors, and orbit lines. Browser frames keep a slim instrument bar and clipped viewport. Primary proof frames use two or three pixel cool borders. The mirrored header and its mobile menu intentionally use one-pixel strokes because those dimensions are part of the approved Need Momentum reference, not a weakening of the general structural-frame rule.
 
-**The Structural Frame Rule.** Major interactive surfaces and section boundaries use visible two or three pixel strokes. Thin rules may organize content but never run through or crowd a brand mark.
+**The Structural Frame Rule.** Major proof surfaces and section boundaries use visible two or three pixel strokes. Thin rules may organize content but never run through or crowd a brand mark. The single-pixel mirrored navigation frame is the sole pinned-reference exception.
 
 ## Components
 
@@ -177,7 +209,11 @@ Corners are restrained and functional. Controls use compact 10-pixel rounding, l
 
 ### Navigation
 
-The persistent navigation is a single bounded liquid-glass rail with mono labels and one bright contact control. Mobile turns the same rail into an explicit Menu/Close disclosure; Escape closes it and focus remains visible.
+The persistent navigation exactly follows the approved Need Momentum geometry: 18-pixel desktop side offsets, 20-pixel top offset, 78-pixel minimum height, 15-pixel radius, and a one-pixel cool stroke. Its action uses a 12-pixel radius and the vertical cyan gradient from #49dcff to #18bde9. At 820 pixels and below, the rail uses 12-pixel side offsets and a 68-pixel minimum height. The mobile disclosure is a centered 120-pixel-wide vertical menu with a 46-pixel square Menu/Close control; Escape closes it and focus remains visible.
+
+### Prospect Proof Sequence
+
+The page opens in this exact order and then loops: "I did this for" for 1.8 seconds, the Align HCM logo for 5 seconds, "I can do it for" for 1.8 seconds, the HRchitect logo for 5 seconds, then a 0.9-second reset gap. Each logo uses the same camera, scene, and optical target width. Both marks converge from a right-origin particle field, stay fully resolved for 3.07 seconds, and dissolve without clipping. The local transparent assets preserve official artwork and backgrounds remain removed. Reduced motion replaces the loop with a static two-logo proof statement.
 
 ### Client Logo Rail
 
@@ -185,7 +221,7 @@ Client marks appear in their exact brand colors on individual cool paper stages.
 
 ### Particle Logo
 
-The exact IMMOHRTAL logo is sampled into a bounded particle field that moves from scatter to recognition. Particle code is lazy-loaded after the primary interface, and reduced-motion or unsupported contexts receive the exact static mark.
+The complete 1000 by 912 IMMOHRTAL artwork, including the monogram, infinity form, and wordmark, is sampled with stratified alpha-mask selection so every region remains represented. It uses 36,000 particles on desktop and 24,000 on mobile across platinum, cobalt, cyan, and mint energy colors. The mark moves from scatter to convergence, holds as one fully legible identity, then dissolves without orbital rings or cropped geometry. Particle code is lazy-loaded after the primary interface, and reduced-motion contexts receive a settled particle rendering of the same complete mark.
 
 ### Live Browser Frame
 

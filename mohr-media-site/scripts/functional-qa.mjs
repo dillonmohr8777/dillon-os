@@ -21,7 +21,7 @@ page.on('requestfailed', (request) => {
 await page.goto(baseUrl, { waitUntil: 'networkidle' });
 await page.waitForTimeout(1700);
 
-const menuButton = page.locator('.nav-toggle');
+const menuButton = page.locator('.menu-button');
 await menuButton.click();
 const menuOpened = await menuButton.getAttribute('aria-expanded');
 await page.keyboard.press('Escape');
@@ -78,7 +78,6 @@ const menuPanel = await page.evaluate(() => {
   const rect = panel?.getBoundingClientRect();
   return {
     visible: Boolean(panel?.classList.contains('is-open')),
-    iconCount: panel?.querySelectorAll('.nav-card__icon').length ?? 0,
     cardCount: panel?.querySelectorAll('a').length ?? 0,
     left: rect?.left ?? 0,
     right: rect?.right ?? 0,
@@ -99,7 +98,7 @@ await reducedPage.goto(baseUrl, { waitUntil: 'networkidle' });
 await reducedPage.waitForTimeout(400);
 const reducedMotion = await reducedPage.evaluate(() => ({
   canvases: document.querySelectorAll('canvas').length,
-  staticLogo: Boolean(document.querySelector('.particle-logo--static img')),
+  staticLogo: Boolean(document.querySelector('.particle-logo--static canvas')),
 }));
 
 const report = {
@@ -145,7 +144,6 @@ const failed = menuOpened !== 'true'
   || firstVideoSource === secondVideoSource
   || layout.scrollWidth > layout.clientWidth
   || !menuPanel.visible
-  || menuPanel.iconCount !== 5
   || menuPanel.cardCount !== 5
   || menuPanel.left < 0
   || menuPanel.right > menuPanel.viewportWidth

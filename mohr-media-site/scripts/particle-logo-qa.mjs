@@ -19,15 +19,19 @@ page.on('console', (message) => {
 })
 page.on('pageerror', (error) => errors.push(error.message))
 
-await page.goto(baseUrl, { waitUntil: 'networkidle' })
-await page.waitForTimeout(2200)
+await page.goto(baseUrl, { waitUntil: 'domcontentloaded' })
+await page.evaluate(() => document.fonts.ready)
 
 const stage = page.locator('.hero-logo-stage')
-await stage.screenshot({ path: `${outputDir}/particle-logo-resolved.png` })
-await page.waitForTimeout(7600)
-await stage.screenshot({ path: `${outputDir}/particle-logo-dispersing.png` })
-await page.waitForTimeout(1500)
-await stage.screenshot({ path: `${outputDir}/particle-logo-regathering.png` })
+await stage.scrollIntoViewIfNeeded()
+await page.waitForTimeout(700)
+await stage.screenshot({ path: `${outputDir}/immortal-logo-scattered.png` })
+await page.waitForTimeout(3500)
+await stage.screenshot({ path: `${outputDir}/immortal-logo-converging.png` })
+await page.waitForTimeout(1200)
+await stage.screenshot({ path: `${outputDir}/immortal-logo-resolved.png` })
+await page.waitForTimeout(3000)
+await stage.screenshot({ path: `${outputDir}/immortal-logo-dispersing.png` })
 
 const report = await page.evaluate(() => ({
   orbitElements: document.querySelectorAll('.hero-orbit').length,

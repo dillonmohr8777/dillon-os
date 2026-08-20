@@ -1,16 +1,20 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-08-20T17:25:57.2247338-04:00",
-  "title": "Design System: Dillon Mohr Signal Foundry",
+  "generatedAt": "2026-08-20T19:46:24.0638183-04:00",
+  "title": "Design System: Immortal Kinetic Proof",
   "extensions": {
     "colorMeta": {
       "ink": { "role": "neutral", "displayName": "Foundry Ink", "canonical": "#020711", "tonalRamp": ["#020711", "#07101f", "#142338", "#30435a", "#5f7288", "#9fb2c9", "#dce4ed", "#f3f7fb"] },
       "electric-cyan": { "role": "primary", "displayName": "Electric Cyan", "canonical": "#18c8ff", "tonalRamp": ["#002b3a", "#004b63", "#006f91", "#0094bf", "#18c8ff", "#66dcff", "#b5efff", "#effcff"] },
+      "action-cyan-top": { "role": "primary", "displayName": "Action Cyan Highlight", "canonical": "#49dcff", "tonalRamp": ["#00303a", "#005163", "#007991", "#12a4c0", "#49dcff", "#7fe7ff", "#b9f2ff", "#effcff"] },
+      "action-cyan-base": { "role": "primary", "displayName": "Action Cyan Base", "canonical": "#18bde9", "tonalRamp": ["#002c36", "#004c5c", "#006d83", "#0092ad", "#18bde9", "#67d6ef", "#b5edf8", "#effbfd"] },
       "cobalt": { "role": "primary", "displayName": "Cobalt Drive", "canonical": "#287dff", "tonalRamp": ["#061b43", "#0d3277", "#164aa9", "#1f63dc", "#287dff", "#6aa7ff", "#acd0ff", "#edf5ff"] },
       "signal-mint": { "role": "secondary", "displayName": "Signal Mint", "canonical": "#58edb2", "tonalRamp": ["#062f23", "#0d523e", "#17785b", "#25a17b", "#58edb2", "#89f4ca", "#bcfae2", "#effdf7"] },
       "paper": { "role": "neutral", "displayName": "Cool Paper", "canonical": "#f3f7fb", "tonalRamp": ["#111a23", "#29343f", "#4b5967", "#738392", "#9fb2c9", "#c7d3df", "#e8f2fb", "#f3f7fb"] }
     },
     "typographyMeta": {
+      "experience-display": { "displayName": "Unbounded Experience Display", "purpose": "Prospect statements, Immortal hero commands, and the brand lockup." },
+      "interface": { "displayName": "Manrope Interface", "purpose": "Persistent navigation, action controls, and supporting interface copy." },
       "display": { "displayName": "Foundry Display", "purpose": "Compressed commands and section theses." },
       "accent": { "displayName": "Foundry Serif", "purpose": "One fluid interpretive phrase beside display type." },
       "body": { "displayName": "Interface Sans", "purpose": "Readable explanations and case-study copy." },
@@ -22,6 +26,8 @@
     ],
     "motion": [
       { "name": "foundry-ease", "value": "cubic-bezier(.16, 1, .3, 1)", "purpose": "Scroll reveals, interactive lift, and menu state changes." },
+      { "name": "prospect-loop", "value": "1.8s copy, 5s logo, 1.8s copy, 5s logo, 0.9s gap", "purpose": "Turns Align proof into an HRchitect prospect statement with equal logo treatment." },
+      { "name": "resolved-logo-hold", "value": "3.07s", "purpose": "Keeps each prospect mark fully formed long enough to read and verify." },
       { "name": "reduced-motion", "value": "0.001ms", "purpose": "Collapses non-essential transitions and swaps WebGL identity for the static mark." }
     ],
     "breakpoints": [
@@ -49,9 +55,18 @@
     {
       "name": "Signal Navigation",
       "kind": "nav",
+      "refersTo": "navigation-rail",
       "description": "A bounded liquid-glass rail that keeps identity, wayfinding, and contact in one line.",
-      "html": "<nav class=\"ds-nav\"><strong>DILLON MOHR</strong><a href=\"#work\">LIVE WORK</a><a class=\"ds-nav-action\" href=\"#contact\">OPEN CHANNEL</a></nav>",
-      "css": ".ds-nav{display:flex;align-items:center;gap:24px;padding:10px 12px 10px 18px;border:2px solid rgba(181,218,250,.2);border-radius:16px;background:rgba(4,11,23,.72);color:#dce4ed;backdrop-filter:blur(24px);font:500 .64rem/1.4 ui-monospace,monospace;letter-spacing:.14em}.ds-nav strong{margin-right:auto}.ds-nav a{color:inherit;text-decoration:none}.ds-nav a:hover{color:#18c8ff}.ds-nav a:focus-visible{outline:3px solid #18c8ff;outline-offset:4px}.ds-nav-action{padding:11px 14px;border-radius:10px;background:#f3f7fb;color:#020711!important}"
+      "html": "<nav class=\"ds-nav\"><strong>IMMORTAL MARKETING SOLUTIONS</strong><a href=\"#portfolio\">PORTFOLIO</a><a class=\"ds-nav-action\" href=\"#contact\">START A CONVERSATION</a></nav>",
+      "css": ".ds-nav{display:flex;min-height:78px;align-items:center;gap:24px;padding:10px 14px 10px 18px;border:1px solid rgba(76,143,211,.38);border-radius:15px;background:linear-gradient(118deg,rgba(5,16,34,.9),rgba(4,14,29,.72));color:#f3f7fb;backdrop-filter:blur(28px) saturate(145%);font:590 .8rem/1.4 'Manrope Variable',sans-serif}.ds-nav strong{margin-right:auto;font:650 .86rem/1 'Unbounded Variable',sans-serif}.ds-nav a{color:inherit;text-decoration:none}.ds-nav a:hover{color:#18c8ff}.ds-nav a:focus-visible{outline:3px solid #18c8ff;outline-offset:4px}.ds-nav-action{padding:15px 18px;border-radius:12px;background:linear-gradient(180deg,#49dcff,#18bde9);color:#03101d!important;font-weight:750}"
+    },
+    {
+      "name": "Prospect Proof Sequence",
+      "kind": "custom",
+      "refersTo": "prospect-statement",
+      "description": "An equal-stage particle transformation that turns finished Align HCM work into a direct HRchitect possibility.",
+      "html": "<section class=\"ds-prospect\"><p>I DID THIS FOR</p><strong>ALIGN HCM</strong><p>I CAN DO IT FOR</p><strong>HRCHITECT</strong></section>",
+      "css": ".ds-prospect{min-height:320px;display:grid;place-items:center;padding:32px;background:#020711;color:#f6f8fb;text-align:center}.ds-prospect p{margin:0;font:760 clamp(2.4rem,7vw,5rem)/.92 'Unbounded Variable',sans-serif;letter-spacing:-.065em;text-shadow:0 .06em 0 #718197,0 .12em 0 #263244}.ds-prospect strong{color:#18c8ff;font:720 clamp(1.8rem,5vw,3.8rem)/1 'Unbounded Variable',sans-serif}.ds-prospect:focus-within{outline:3px solid #18c8ff;outline-offset:4px}"
     },
     {
       "name": "Live Browser Frame",
@@ -84,10 +99,12 @@
     }
   ],
   "narrative": {
-    "northStar": "The Signal Foundry",
-    "overview": "The system treats a portfolio as a working machine rather than a gallery. Deep gunmetal space carries the IMMOHRTAL spine, kinetic mark, and live-work sequence; pale blueprint chambers interrupt it when dense proof needs daylight, precision, and longer reading. Expression comes from editorial scale, restrained industrial labels, live browser frames, and motion with an operating purpose.",
+    "northStar": "The Need Momentum Mirror",
+    "overview": "This Experience surface borrows the proven interaction grammar of the approved Need Momentum homepage while preserving the Immortal identity and Dillon's portfolio evidence. It opens with a prospect-specific claim, proves the Align HCM result through the exact Align mark, then transforms the same visual language into a direct HRchitect possibility. Deep gunmetal space carries the prospect sequence, full IMMOHRTAL particle mark, and live-work sequence; pale blueprint chambers interrupt it when dense proof needs daylight, precision, and longer reading. The ambient particle spine is an intentional spatial layer. It remains behind content and never becomes a substitute for hierarchy or proof.",
     "keyCharacteristics": [
-      "Monumental condensed headlines cut with fluid serif phrases.",
+      "Dimensional Unbounded statements for the experience opener and Immortal hero.",
+      "Manrope navigation and interface copy that match the pinned interaction reference.",
+      "Monumental Anton headlines cut with Instrument Serif phrases in downstream proof sections.",
       "Dark signal space alternating with cool blueprint proof surfaces.",
       "Exact IMMOHRTAL geometry as the recurring identity anchor.",
       "Substantial instrument frames, bounded glass, and tactile depth instead of decorative chrome.",
@@ -95,9 +112,9 @@
     ],
     "rules": [
       { "name": "The Charged Minority Rule", "body": "Cyan, cobalt, and mint identify signal and state; they never become the entire surface.", "section": "colors" },
-      { "name": "The Three-Voice Rule", "body": "Display commands, serif interprets, mono locates. Do not make any one voice perform all three jobs.", "section": "typography" },
+      { "name": "The Four-Voice Rule", "body": "Unbounded commands at the experience level, Manrope guides interaction, Anton commands inside the portfolio, serif interprets, and mono locates. Keep each voice within its assigned layer.", "section": "typography" },
       { "name": "The Depth Has a Job Rule", "body": "Blur indicates persistent glass, hard offset indicates a tactile control, and atmospheric glow indicates signal.", "section": "elevation" },
-      { "name": "The Structural Frame Rule", "body": "Major interactive surfaces and section boundaries use visible two or three pixel strokes. Thin rules may organize content but never run through or crowd a brand mark.", "section": "shapes" }
+      { "name": "The Structural Frame Rule", "body": "Major proof surfaces and section boundaries use visible two or three pixel strokes. Thin rules may organize content but never run through or crowd a brand mark. The single-pixel mirrored navigation frame is the sole pinned-reference exception.", "section": "shapes" }
     ],
     "dos": [
       "Do use the exact IMMOHRTAL mark whenever the identity is shown.",
