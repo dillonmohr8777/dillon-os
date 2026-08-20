@@ -548,3 +548,69 @@ test('a client-rendered shell is unreadable: content exists but not in the sourc
   assert.match(g.unreadable_reason, /client-rendered/);
   assert.equal(g.band, 'unconfirmed');
 });
+
+/* ------------------------------------------------------------------ *
+ * The polish gate and its fixer
+ * ------------------------------------------------------------------ */
+
+test('the gate blocks alt text that asserts ownership without a disclosure', () => {
+  const { auditPage } = require('../bin/polish-audit');
+  const page = (extra = '') =>
+    '<html><head><meta name="robots" content="noindex"></head><body>' +
+    '<img src="a.webp" alt="The people photograph for Acme Dental: people at work">' +
+    '<img src="b.webp" alt="The place photograph for Acme Dental: the place">' +
+    `<p>${'Real copy about the practice. '.repeat(40)}</p>${extra}</body></html>`;
+
+  const blocked = auditPage(page()).findings.filter((f) => f.blocker).map((f) => f.code);
+  assert.deepEqual(blocked, ['asserted-imagery']);
+
+  // The same page with the disclosure the passing batch already carries.
+  const ok = auditPage(page('<p class="disclosure">Illustrative concept imagery plus any photographs harvested from the official site.</p>'));
+  assert.equal(ok.findings.filter((f) => f.blocker).length, 0);
+});
+
+test('the gate blocks a missing noindex and an em dash in copy', () => {
+  const { auditPage } = require('../bin/polish-audit');
+  const body = `<img src="a.webp" alt="storefront"><p>${'Copy. '.repeat(60)}</p>`;
+  const noRobots = auditPage(`<html><head></head><body>${body}</body></html>`);
+  assert.ok(noRobots.findings.some((f) => f.code === 'no-noindex' && f.blocker));
+
+  const dash = auditPage(
+    `<html><head><meta name="robots" content="noindex"></head><body>${body}<p>We fix things — fast.</p></body></html>`
+  );
+  assert.ok(dash.findings.some((f) => f.code === 'em-dash' && f.blocker));
+});
+
+test('the fixer clears both defects and leaves markup and URLs alone', () => {
+  const { fixPage } = require('../bin/polish-fix');
+  const { auditPage } = require('../bin/polish-audit');
+  const html =
+    '<html><head><meta name="robots" content="noindex"></head><body><main>' +
+    '<section><figure><img src="x.webp" alt="The crew photograph for Acme: people at work"></figure></section>' +
+    `<p>Same day service — no call-out fee. ${'Real copy. '.repeat(50)}</p>` +
+    '<a href="/a—b">link</a>' +
+    '</main></body></html>';
+
+  assert.ok(auditPage(html).findings.some((f) => f.blocker), 'fixture must start blocked');
+  const { html: fixed, applied } = fixPage(html);
+  assert.deepEqual(auditPage(fixed).findings.filter((f) => f.blocker), [], 'fixed page must pass the gate');
+  assert.deepEqual(applied.sort(), ['disclosure', 'em-dash']);
+
+  // Copy is rewritten; an em dash inside an href is not, because that is a URL
+  // and rewriting it would break the link.
+  assert.match(fixed, /Same day service, no call-out fee/);
+  assert.match(fixed, /href="\/a—b"/);
+});
+
+test('the fixer is idempotent and never doubles the disclosure', () => {
+  const { fixPage } = require('../bin/polish-fix');
+  const html =
+    '<html><head><meta name="robots" content="noindex"></head><body><main>' +
+    '<section><figure><img src="x.webp" alt="The crew photograph for Acme: people at work"></figure></section>' +
+    `<p>${'Copy. '.repeat(60)}</p></main></body></html>`;
+  const once = fixPage(html).html;
+  const twice = fixPage(once).html;
+  assert.equal(twice, once, 'a second pass must change nothing');
+  const count = (once.match(/Illustrative concept imagery/g) || []).length;
+  assert.equal(count, 1, 'exactly one disclosure');
+});
