@@ -319,8 +319,17 @@ function routeOpportunity(prospect, options = {}) {
     // rebuild target. Send it to the render queue instead.
     verdict = 'verify';
     offer = 'undecided — needs a rendered audit';
-    next_action = 'Run Tier 1 (rendered) audit: no markup faults found, but design was never seen';
-    reasons.push(`score capped at ${sqs} — Tier 0 cannot certify a site as good`);
+    if (grade.unreadable) {
+      // Distinct from "clean markup, unseen design": here we never got the page
+      // at all, so there is no evidence in either direction. Saying "no faults
+      // found" about a page nobody read is the sentence that let bot walls look
+      // like qualified rebuild targets.
+      next_action = `Run Tier 1 (rendered) audit: ${grade.unreadable_reason || 'homepage could not be read'}`;
+      reasons.push(`grade withheld: ${grade.unreadable_reason || 'homepage unreadable'} — no evidence either way`);
+    } else {
+      next_action = 'Run Tier 1 (rendered) audit: no markup faults found, but design was never seen';
+      reasons.push(`score capped at ${sqs} — Tier 0 cannot certify a site as good`);
+    }
   } else if (sqs <= th.rebuildCeiling) {
     if (opportunity >= th.buildFloor) {
       verdict = 'rebuild';

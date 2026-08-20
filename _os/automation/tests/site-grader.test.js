@@ -473,3 +473,144 @@ test('reachability reads has_phone as well as a literal phone', () => {
   assert.ok(withBool.components.reachability > 0, 'a sanitized row must still score reachability');
   assert.ok(!withBool.components.missing_signals.includes('reachability'));
 });
+
+/* ------------------------------------------------------------------ *
+ * A page we could not read is not a page we proved bad
+ *
+ * The failure these lock down was live and expensive: bot walls graded as
+ * decayed sites, reached the rebuild queue as "proven" faults, and got homepage
+ * concepts built and queued for outreach. epam.com — a multi-billion-dollar
+ * public company — scored 35 "decayed" on an HTTP 403, and theory.com 23.
+ * ------------------------------------------------------------------ */
+
+test('a 403 bot wall is withheld, not scored as a decayed site', () => {
+  const g = gradeSite(analyzeTier0(
+    res('', MODERN_HEAD, { status: 403, ok: false, hops: [{ url: 'https://example.com/', status: 403 }] }),
+    'https://example.com/'
+  ));
+  assert.equal(g.unreadable, true, 'a refused fetch must be flagged unreadable');
+  assert.match(g.unreadable_reason, /403/);
+  // The decisive property: never a fault that licenses a build slot.
+  assert.equal(
+    g.hard_faults.some((f) => /returns 403/.test(f)), false,
+    'a 403 must not appear as a provable hard fault'
+  );
+  assert.equal(g.capped, true, 'an unread page may not report a band');
+  assert.equal(g.band, 'unconfirmed');
+
+  const route = routeOpportunity(
+    { business_name: 'Blocked Co', website: 'https://example.com/', vertical: 'dentist', area: 'Philadelphia', has_phone: true },
+    { grade: g }
+  );
+  // Either withheld verdict is correct and both are safe: `enrich` when the
+  // refusal left too little evidence to route at all, `verify` when there is
+  // enough to be worth a render. What must never happen is a pitch.
+  assert.ok(
+    ['verify', 'enrich'].includes(route.verdict),
+    `a blocked page must be withheld, got "${route.verdict}"`
+  );
+  assert.notEqual(route.verdict, 'rebuild');
+});
+
+test('404 and 500 stay real faults — only 401/403/429 are treated as blocks', () => {
+  for (const status of [404, 500, 503]) {
+    const g = gradeSite(analyzeTier0(
+      res('<p>Gone</p>', '<title>x</title>', { status, ok: false, hops: [{ url: 'https://example.com/', status }] }),
+      'https://example.com/'
+    ));
+    assert.equal(g.unreadable, false, `${status} is a defect the prospect suffers too`);
+    assert.ok(
+      g.hard_faults.some((f) => f.includes(String(status))),
+      `${status} must remain a provable fault`
+    );
+  }
+});
+
+test('a genuinely near-empty homepage is still a rebuild target, not "unread"', () => {
+  // The distinction that matters: this page really does say nothing to a visitor.
+  // Treating a low word count alone as unreadable would hand every terrible site
+  // a free pass out of the rebuild queue.
+  const g = gradeSite(analyzeTier0(res('<p>Call us.</p>', '<title>x</title>', {
+    finalUrl: 'http://old.example/',
+  }), 'http://old.example/'));
+  assert.equal(g.unreadable, false);
+  assert.equal(g.rebuildable, true);
+});
+
+test('a client-rendered shell is unreadable: content exists but not in the source', () => {
+  const g = gradeSite({
+    ...analyzeTier0(res('<div id="root"></div>', MODERN_HEAD), 'https://example.com/'),
+    renderPending: true,
+    wordCount: 3,
+    tier: 0,
+  });
+  assert.equal(g.unreadable, true);
+  assert.match(g.unreadable_reason, /client-rendered/);
+  assert.equal(g.band, 'unconfirmed');
+});
+
+/* ------------------------------------------------------------------ *
+ * The polish gate and its fixer
+ * ------------------------------------------------------------------ */
+
+test('the gate blocks alt text that asserts ownership without a disclosure', () => {
+  const { auditPage } = require('../bin/polish-audit');
+  const page = (extra = '') =>
+    '<html><head><meta name="robots" content="noindex"></head><body>' +
+    '<img src="a.webp" alt="The people photograph for Acme Dental: people at work">' +
+    '<img src="b.webp" alt="The place photograph for Acme Dental: the place">' +
+    `<p>${'Real copy about the practice. '.repeat(40)}</p>${extra}</body></html>`;
+
+  const blocked = auditPage(page()).findings.filter((f) => f.blocker).map((f) => f.code);
+  assert.deepEqual(blocked, ['asserted-imagery']);
+
+  // The same page with the disclosure the passing batch already carries.
+  const ok = auditPage(page('<p class="disclosure">Illustrative concept imagery plus any photographs harvested from the official site.</p>'));
+  assert.equal(ok.findings.filter((f) => f.blocker).length, 0);
+});
+
+test('the gate blocks a missing noindex and an em dash in copy', () => {
+  const { auditPage } = require('../bin/polish-audit');
+  const body = `<img src="a.webp" alt="storefront"><p>${'Copy. '.repeat(60)}</p>`;
+  const noRobots = auditPage(`<html><head></head><body>${body}</body></html>`);
+  assert.ok(noRobots.findings.some((f) => f.code === 'no-noindex' && f.blocker));
+
+  const dash = auditPage(
+    `<html><head><meta name="robots" content="noindex"></head><body>${body}<p>We fix things — fast.</p></body></html>`
+  );
+  assert.ok(dash.findings.some((f) => f.code === 'em-dash' && f.blocker));
+});
+
+test('the fixer clears both defects and leaves markup and URLs alone', () => {
+  const { fixPage } = require('../bin/polish-fix');
+  const { auditPage } = require('../bin/polish-audit');
+  const html =
+    '<html><head><meta name="robots" content="noindex"></head><body><main>' +
+    '<section><figure><img src="x.webp" alt="The crew photograph for Acme: people at work"></figure></section>' +
+    `<p>Same day service — no call-out fee. ${'Real copy. '.repeat(50)}</p>` +
+    '<a href="/a—b">link</a>' +
+    '</main></body></html>';
+
+  assert.ok(auditPage(html).findings.some((f) => f.blocker), 'fixture must start blocked');
+  const { html: fixed, applied } = fixPage(html);
+  assert.deepEqual(auditPage(fixed).findings.filter((f) => f.blocker), [], 'fixed page must pass the gate');
+  assert.deepEqual(applied.sort(), ['disclosure', 'em-dash']);
+
+  // Copy is rewritten; an em dash inside an href is not, because that is a URL
+  // and rewriting it would break the link.
+  assert.match(fixed, /Same day service, no call-out fee/);
+  assert.match(fixed, /href="\/a—b"/);
+});
+
+test('the fixer is idempotent and never doubles the disclosure', () => {
+  const { fixPage } = require('../bin/polish-fix');
+  const html =
+    '<html><head><meta name="robots" content="noindex"></head><body><main>' +
+    '<section><figure><img src="x.webp" alt="The crew photograph for Acme: people at work"></figure></section>' +
+    `<p>${'Copy. '.repeat(60)}</p></main></body></html>`;
+  const once = fixPage(html).html;
+  const twice = fixPage(once).html;
+  assert.equal(twice, once, 'a second pass must change nothing');
+  const count = (once.match(/Illustrative concept imagery/g) || []).length;
+  assert.equal(count, 1, 'exactly one disclosure');
+});
