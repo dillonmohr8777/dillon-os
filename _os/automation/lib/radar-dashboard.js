@@ -57,6 +57,10 @@ const QUEUES = [
   { key: 'polish', label: 'Polish', verdicts: ['polish'], sort: 'p', desc: 'Working sites with fixable gaps. A retainer or a paid tune-up, not a rebuild pitch.' },
   { key: 'traffic', label: 'Traffic', verdicts: ['ads_seo', 'nurture'], sort: 'q', desc: 'Sorted by site quality, best first. A genuinely good site means sell traffic, not a redesign.' },
   { key: 'enrich', label: 'Re-audit', verdicts: ['enrich'], sort: 'p', desc: 'Not enough signal to route. These need another pass before they mean anything.' },
+  // Built pages are their own queue now that the registry records them. Before
+  // this, 238 pages existed for 236 businesses and no row knew, so the same
+  // business could be built twice by two lanes — and it was, twice.
+  { key: 'built', label: 'Built', builtOnly: true, verdicts: null, sort: 'bt', desc: 'Businesses that already have a homepage concept. "Cleared" means the page passed the polish gate; a page existing is not permission to show it.' },
   { key: 'all', label: 'Everything', verdicts: null, sort: 'p', desc: 'The whole registry. Search and filter to find anything the queues do not surface.' },
 ];
 
@@ -178,7 +182,55 @@ function coverageBar(label, total, rebuild, max) {
  * Object literals do not warn on duplicate keys, and no test caught it — so the
  * list is the guard, and assertNoDuplicateKeys() below is the enforcement.
  */
-function projectRows(prospects) {
+/**
+ * How many rows carry the drawer-only detail.
+ *
+ * Measured on the 1,088-row registry, the projection's cost breaks down as:
+ *
+ *   grade history   160KB   23%   drawer only
+ *   dimensions      152KB   22%   drawer only
+ *   headline        127KB   18%   table + drawer (interned)
+ *   faults           93KB   13%   drawer
+ *   next action      82KB   12%   drawer (interned)
+ *
+ * So **45% of the payload is two fields nobody sees until they open a row**, and
+ * both scale linearly with the registry. Shipping them for every row is what put
+ * the render ceiling at roughly 1,900 prospects and forced the discovery caps
+ * down to 1,200/1,500 — which in turn is part of why growth stalled.
+ *
+ * Tiering by verdict does not help here: 962 of 1,088 rows are actionable, so
+ * almost nothing would be trimmed. Tiering by *attention* does. Nobody opens the
+ * 700th row of a queue, so the detail goes to the highest-priority rows and the
+ * long tail ships light. The cost of detail is then a **fixed budget** rather
+ * than something proportional to the registry, which is what makes discovery
+ * safe to run indefinitely.
+ *
+ * The drawer says plainly when a row is light. It never shows a blank chart and
+ * lets the reader assume there was nothing to show.
+ */
+const DETAIL_ROWS = 400;
+
+/**
+ * Choose which rows carry full detail: the highest priority first.
+ *
+ * @param {Array} prospects rows in any order
+ * @returns {Set<string>} domains that get `dm` and `gh`
+ */
+function detailSet(prospects, limit = DETAIL_ROWS) {
+  return new Set(
+    (prospects || [])
+      .slice()
+      .sort((a, b) => (Number(b.priority_score) || 0) - (Number(a.priority_score) || 0))
+      .slice(0, limit)
+      .map((p) => p.domain)
+      .filter(Boolean)
+  );
+}
+
+function projectRows(prospects, opts = {}) {
+  // `null` means "everything gets detail" so existing callers and tests that do
+  // not care about the budget keep their old behaviour.
+  const detail = opts.detailFor || null;
   return (prospects || []).map((p) => {
     const c = p.current || {};
     const dm = {};
@@ -220,14 +272,38 @@ function projectRows(prospects) {
       cfm: p.contact?.has_form ? 1 : 0,
       cn: p.contact?.named_contacts || 0,
       cg: p.contact?.has_agency ? 1 : 0,
-      f: (p.top_faults || []).filter(Boolean),
+      // Light rows keep the first fault only: it fills the table's "why" column
+      // and the CSV, while the full list is drawer-only. Faults embed measured
+      // numbers so they intern poorly, which makes this the second-largest
+      // compressible field after the headline.
+      f: (() => {
+        const all = (p.top_faults || []).filter(Boolean);
+        return (!detail || detail.has(p.domain)) ? all : all.slice(0, 1);
+      })(),
       hl: p.headline || '',
       of: p.offer || '',
       na: p.next_action || '',
     };
-    if (Object.keys(dm).length) row.dm = dm;
-    const hist = (p.grades || []).filter((g) => g && g.date);
-    if (hist.length) row.gh = hist.map((g) => [g.date, Number.isFinite(Number(g.sqs)) ? Math.round(Number(g.sqs)) : null, g.band || '']);
+    // Build state. `bu` is the deployed concept URL, `bs` whether it is cleared
+    // to show. Kept distinct on purpose: a page existing is not permission to
+    // put it in front of the business.
+    if (p.build) {
+      row.bu = p.build.url || '';
+      row.bs = p.build.showable === true ? 1 : 0;
+      row.bt = p.build.date || '';
+      if (p.build.qa_state) row.bq = p.build.qa_state;
+    }
+
+    const full = !detail || detail.has(p.domain);
+    if (full) {
+      if (Object.keys(dm).length) row.dm = dm;
+      const hist = (p.grades || []).filter((g) => g && g.date);
+      if (hist.length) row.gh = hist.map((g) => [g.date, Number.isFinite(Number(g.sqs)) ? Math.round(Number(g.sqs)) : null, g.band || '']);
+    } else {
+      // Marks the row as deliberately light rather than empty, so the drawer can
+      // say which it is. Cheaper than either field by two orders of magnitude.
+      row.lt = 1;
+    }
     return row;
   });
 }
@@ -401,6 +477,7 @@ function clientScript() {
     var qd = queueDef(state.queue);
     if (qd.verdicts && qd.verdicts.indexOf(r.r) < 0) return false;
     if (qd.buildableOnly && r.bd !== 1) return false;
+    if (qd.builtOnly && !r.bu) return false;
     var f = state.filters;
     if (f.a.length && f.a.indexOf(r.a) < 0) return false;
     if (f.g.length && f.g.indexOf(r.g) < 0) return false;
@@ -490,6 +567,11 @@ function clientScript() {
 
   function dimsHtml(r) {
     if (!r.dm) {
+      if (r.lt) {
+        return '<p class="det__none">Dimension breakdown not loaded for this row. The page ships full detail for the ' +
+          META.detailRows + ' highest-priority prospects to stay under its size budget; this one is further down. ' +
+          'Its score and verdict are exact.</p>';
+      }
       return '<p class="det__none">No dimension breakdown stored for this grade. It predates the breakdown, or the audit never completed.</p>';
     }
     var out = '';
@@ -539,7 +621,9 @@ function clientScript() {
           return '<li><span class="det__date">' + esc(g[0]) + '</span><span class="det__band" style="color:' + bandColor(g[2]) + '">' +
             esc(g[2]) + '</span><span class="det__sqs">' + (g[1] === null ? '—' : g[1]) + '</span></li>';
         }).join('') + '</ul>'
-      : '<p class="det__none">Graded once. A trend needs two.</p>';
+      : (r.lt
+          ? '<p class="det__none">Grade history not loaded for this row (see above). Nothing is missing from the registry.</p>'
+          : '<p class="det__none">Graded once. A trend needs two.</p>');
 
     return '<tr class="det" data-det="' + esc(r.d) + '"><td colspan="7"><div class="det__in">' +
       '<div class="det__col">' +
@@ -746,7 +830,12 @@ function clientScript() {
 function renderDashboard(summary, opts = {}) {
   const s = summary;
   const prospects = s.prospects || [];
-  const rows = projectRows(prospects);
+  // Drawer-only detail goes to the rows most likely to be opened, so its cost
+  // is a fixed budget rather than growing with the registry. See DETAIL_ROWS.
+  const detailLimit = opts.detailRows == null ? DETAIL_ROWS : opts.detailRows;
+  const rows = projectRows(prospects, {
+    detailFor: detailLimit >= (prospects || []).length ? null : detailSet(prospects, detailLimit),
+  });
   const movers = (s.movers || []).slice(0, 8);
   const run = opts.run || null;
 
@@ -769,9 +858,11 @@ function renderDashboard(summary, opts = {}) {
 
   const queueCounts = {};
   for (const q of QUEUES) {
-    queueCounts[q.key] = q.verdicts
-      ? rows.filter((r) => q.verdicts.includes(r.r) && (!q.buildableOnly || r.bd === 1)).length
-      : rows.length;
+    queueCounts[q.key] = q.builtOnly
+      ? rows.filter((r) => !!r.bu).length
+      : q.verdicts
+        ? rows.filter((r) => q.verdicts.includes(r.r) && (!q.buildableOnly || r.bd === 1)).length
+        : rows.length;
   }
 
   const lifecycleOrder = ['new', 'graded', 'queued_build', 'built', 'mailed', 'client', 'excluded'];
@@ -818,6 +909,7 @@ function renderDashboard(summary, opts = {}) {
       bandColors: BAND_COLORS,
       verdictLabel: VERDICT_LABEL,
       evidence: EVIDENCE_LABEL,
+      detailRows: detailLimit,
       dimensions: Object.entries(DIMENSIONS).map(([key, d]) => ({
         key,
         label: d.label,

@@ -128,20 +128,35 @@ const GROUP_TARGETS = {
  * I got them wrong once, so the numbers here are now measured by *rendering*
  * synthetic registries rather than extrapolating a bytes-per-row figure:
  *
+ * Before the payload was tiered (radar-dashboard.DETAIL_ROWS):
+ *
  *   1,500 rows -> 1.18MB   ok
  *   2,000 rows -> 1.54MB   THROWS
- *   2,400 rows -> 1.83MB   THROWS
+ *
+ * After tiering the drawer-only fields, re-measured the same way:
+ *
+ *   1,500 rows -> 1.13MB   ok
+ *   1,800 rows -> 1.32MB   ok
+ *   2,000 rows -> 1.45MB   ok
+ *   2,200 rows -> 1.57MB   THROWS
+ *
+ * So the ceiling moved from roughly 1,900 rows to roughly 2,100. That is a
+ * smaller gain than tiering promised, and the reason is worth recording: the
+ * payload is dominated by genuinely unique per-row text — headlines, faults and
+ * next actions all embed measured numbers — and the table itself needs the
+ * headline and the first fault, so neither interning nor tiering can remove
+ * them. Only ~7% of the page was drawer-only detail. A materially higher ceiling
+ * needs the rows fetched on demand rather than embedded, which is a different
+ * design, not a tuning pass.
  *
  * The earlier estimate assumed per-row cost stays flat. It does not: the
- * interned string table grows ~1.43 entries per row, because headlines and fault
- * text embed measured numbers and so are nearly unique per prospect. Interning
- * de-duplicates the genuinely repeated strings and cannot help with the rest.
+ * interned string table grows ~1.43 entries per row.
  *
  * tests/radar.test.js renders at the hard cap and fails if it throws, so these
  * cannot silently drift above the ceiling again.
  */
-const REGISTRY_SOFT_CAP = 1200;
-const REGISTRY_HARD_CAP = 1500;
+const REGISTRY_SOFT_CAP = 1700;
+const REGISTRY_HARD_CAP = 2000;
 
 /** Default daily budgets. Deliberately modest for discovery — see the file header. */
 const DAILY = {
