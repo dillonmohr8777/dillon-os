@@ -1,0 +1,1815 @@
+{
+ "generated": "2026-08-19",
+ "tool": "_os/automation/bin/polish-fix.js",
+ "stats": {
+  "checked": 238,
+  "already_clean": 146,
+  "fixed": 89,
+  "still_blocked": 0,
+  "unreachable": 3
+ },
+ "note": "Fixed HTML is regenerable: re-run polish-fix.js with the same URL list. The pages themselves are not committed, only the record of what was fixed.",
+ "pages": [
+  {
+   "slug": "bartram-garden",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "dibruno-bros",
+   "outcome": "unreachable",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "eastern-state",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "fantes-kitchen-shop",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "frankford-hall",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "franklin-fountain",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "genos-steaks",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "good-dog-bar",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "isgro-pastries",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "johns-roast-pork",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "johnny-brendas",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "la-colombe-rittenhouse",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "moms-organic-market",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "morris-arboretum",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "pats-king-steaks",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "philadelphia-record-exchange",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "magic-gardens",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "reading-terminal",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "reanimator-coffee",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "square-1682",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "standard-tap",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "suraya",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "termini-bros",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "victor-cafe",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "zahav",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "dependable-concrete",
+   "outcome": "fixed",
+   "was": [
+    "em-dash"
+   ],
+   "applied": [
+    "disclosure",
+    "em-dash"
+   ]
+  },
+  {
+   "slug": "a-positive-response-plumbing-llc",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "advanced-commercial-interior-inc",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "anton-s-plumbing-heating-inc",
+   "outcome": "fixed",
+   "was": [
+    "em-dash"
+   ],
+   "applied": [
+    "disclosure",
+    "em-dash"
+   ]
+  },
+  {
+   "slug": "bryn-mawr-plumbing-heating-co-inc",
+   "outcome": "fixed",
+   "was": [
+    "em-dash"
+   ],
+   "applied": [
+    "disclosure",
+    "em-dash"
+   ]
+  },
+  {
+   "slug": "c-mazzoni-brothers-inc",
+   "outcome": "fixed",
+   "was": [
+    "em-dash"
+   ],
+   "applied": [
+    "disclosure",
+    "em-dash"
+   ]
+  },
+  {
+   "slug": "choice-coating-inc",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "chris-clement-plumbing-heating",
+   "outcome": "fixed",
+   "was": [
+    "em-dash"
+   ],
+   "applied": [
+    "disclosure",
+    "em-dash"
+   ]
+  },
+  {
+   "slug": "commercial-wallcovering",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "dan-ferry-plumbing-inc",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "ferguson-plumbing-heating",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "gracies-painting",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "graham-painting-10-98",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "integrity-interiors",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "james-harper-painting",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "lynch-plumbing-heating",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "mary-cleary-drywall-carpentry-llc",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "mitchell-painting-llc",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "pk2-construction",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "prime-interiors-llc",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "robert-j-spence-plumbing-and-heating",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "sharp-edge-construction-company",
+   "outcome": "fixed",
+   "was": [
+    "em-dash"
+   ],
+   "applied": [
+    "disclosure",
+    "em-dash"
+   ]
+  },
+  {
+   "slug": "shooster-development",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "sioutis-coatings-ent-inc",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "tanglewood-ptg-corp",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "trend-painting",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "a-m-electric-inc",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "all-phase-electric-co",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "apt-heating-and-cooling",
+   "outcome": "fixed",
+   "was": [
+    "em-dash"
+   ],
+   "applied": [
+    "disclosure",
+    "em-dash"
+   ]
+  },
+  {
+   "slug": "bill-frusco-plumbing-heating-cooling",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "borden-heating-cooling-inc",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "brandon-electric-inc",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "centrum-mechanical-services",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "charles-schillinger-company",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "cleaned-by-d-d-llc",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "compucraft-fabricators-inc",
+   "outcome": "fixed",
+   "was": [
+    "em-dash"
+   ],
+   "applied": [
+    "disclosure",
+    "em-dash"
+   ]
+  },
+  {
+   "slug": "dunryte-electric-inc",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "ernest-d-menold-inc",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "gallagher-fabrication-machine",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "guaranteed-plumbing-heating",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "h-g-sign-company",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "jdv-electric-llc",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "k-a-m-sheet-metal-fab",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "manayunk-plumbing-heating",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "solution-based-plumbing-and-heating-inc",
+   "outcome": "fixed",
+   "was": [
+    "em-dash"
+   ],
+   "applied": [
+    "disclosure",
+    "em-dash"
+   ]
+  },
+  {
+   "slug": "strickland-electric",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "summers-quality-services",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "united-metal-construction-llc",
+   "outcome": "fixed",
+   "was": [
+    "em-dash"
+   ],
+   "applied": [
+    "disclosure",
+    "em-dash"
+   ]
+  },
+  {
+   "slug": "waste-gas-fabricating-company-inc",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "wilson-s-forklift-service-llc",
+   "outcome": "fixed",
+   "was": [
+    "em-dash"
+   ],
+   "applied": [
+    "disclosure",
+    "em-dash"
+   ]
+  },
+  {
+   "slug": "young-s-electrical-services-inc",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "academy-chiropractic-center",
+   "outcome": "fixed",
+   "was": [
+    "em-dash"
+   ],
+   "applied": [
+    "disclosure",
+    "em-dash"
+   ]
+  },
+  {
+   "slug": "acupuncture-medical-practice",
+   "outcome": "fixed",
+   "was": [
+    "em-dash"
+   ],
+   "applied": [
+    "disclosure",
+    "em-dash"
+   ]
+  },
+  {
+   "slug": "bridesburg-spine-and-injury-clinic",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "bustleton-services",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "e-and-e-cleaning",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "farrells-roofing",
+   "outcome": "fixed",
+   "was": [
+    "em-dash"
+   ],
+   "applied": [
+    "disclosure",
+    "em-dash"
+   ]
+  },
+  {
+   "slug": "greater-philadelphia-chiropractic-center",
+   "outcome": "fixed",
+   "was": [
+    "em-dash"
+   ],
+   "applied": [
+    "disclosure",
+    "em-dash"
+   ]
+  },
+  {
+   "slug": "hal-rosenthaler-dmd",
+   "outcome": "fixed",
+   "was": [
+    "em-dash"
+   ],
+   "applied": [
+    "disclosure",
+    "em-dash"
+   ]
+  },
+  {
+   "slug": "lawrence-kassan-podiatry",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "marthas-sophisticated-shine",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "mayfair-family-chiropractic",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "mayfair-fence",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "metro-physical-medicine",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "moss-contracting",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "northeast-family-foot-care",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "oxford-rehabilitation-center",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "patriot-fence-and-ironworks",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "philly-medical-and-rehab-associates",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "pt-in-philly",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "rhi-construction",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "rittenhouse-square-chiro",
+   "outcome": "unreachable",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "rufus-chiropractic-and-wellness",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "scrc-accident-and-injury-center",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "zbc-general-contracting",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "andorra-family-dentistry",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "benjamin-lovell-shoes",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "davidson-fabricating",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "dream-team-hvac",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "dutton-road-veterinary-clinic",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "eastern-dragon",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "electric-direct",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "elverson-supply",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "floral-and-hardy",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "oster-fine-violins",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "go2tech",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "home-furnishings-consignment",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "johnnys-pizza",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "maclaren-kitchen-and-bath",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "metalmorphose-iron-studio",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "oaks-italian-deli",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "peking-gourmet",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "philadelphia-garage",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "pipe-xpress",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "pro-nails",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "salters-fireplace",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "southampton-hot-tub",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "new-pennsburg-diner",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "thr-insurance",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "wja-landscaping",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "always-dental-care",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "auger-manufacturing",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "barnes-financial-group",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "be-balanced-hormone",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "bg-electric",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "bpm-fitness",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "chestnut-hill-animal-hospital",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "colmar-dentistry-for-kids",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "county-line-veterinary-hospital",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "dreammaker-bath-kitchen",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "easy-auto-tag-insurance",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "eisenberg-rothweiler",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "fillman-and-sons-floors",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "glen-eagle-pediatric-dentistry",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "havercrown-dental",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "jarman-hvac",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "verruni-landscaping",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "live-urgent-care",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "malvern-vision-care",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "mcmenamin-margiotti",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "pennsylvania-dental-group",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "plastic-surgery-solutions",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "sciacca-service-center",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "train-and-nourish",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "wynnewood-eyecare",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "artisan-wine-and-cheese-cellars",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "chadds-ford-animal-hospital",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "ciocca-pre-owned-autos",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "del-chevrolet",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "dinse-dental-care",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "faulkner-buick-gmc",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "fredo-s-deli",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "hamburg-animal-hospital",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "harry-s-hotdogs",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "katana",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "legacy-jewelers",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "nicky-s-thai-kitchen",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "nottingham-creamery",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "openarc",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "oss-health",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "radiance-dental",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "reardon-dental",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "riley-rodzianko-and-clymer-llp",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "scott-lot",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "sesame-inn",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "c-and-c-super-seal",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "anthony-gueriera-insurance",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "ban-ban-asian-bistro",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "big-head-transport",
+   "outcome": "unreachable",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "elite-auto-parts",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "germantown-dental-group",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "?forcegl",
+   "outcome": "fixed",
+   "was": [
+    "em-dash"
+   ],
+   "applied": [
+    "disclosure",
+    "em-dash"
+   ]
+  },
+  {
+   "slug": "kehans-auto-service",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "lees-hoagie-house",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "morton-electric-pool-spa",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "udis-conn-orthodontics",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "art-city-vets",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "baldwins-book-barn",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "dentistry-for-life",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "frazer-antiques",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "main-line-veterinary-hospital",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "pizza-peddler",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "urgentvet-pottstown",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "welcome-dental",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "whitelands-animal-hospital",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "wholly-grounds",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "agnes-edmunds-bridal-formals",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "al-tacos-locos",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "lpl-financial",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "apr-supply-company",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "borsello-landscaping",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "boyle-energy-heating-air-conditioning-oil-propane",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "brandywine-auto-parts",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "captain-car-wash",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "city-electric-supply",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "custom-it-solutions",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "ember-ale",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "epam",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "euphoria-nail-bar",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "ferrari-philadelphia",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "field-1-post-llc",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "francis-kaufman-house",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "heart-soul-tattoo",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "highline-motors",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "holiday-hair",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "ivc-wealth-advisors",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "j-pro-inc",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "hero-complex",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "johnnys-pizza",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "just-tires",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "kinetic-physical-therapy",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "manatawny-still-works",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "ming-s-chinese",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "narberth-pizza",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "novacare",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "o-donnell-weiss-mattei-p-c",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "ooka-hibachi-and-sushi",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "dr-weiss-s-office",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "philadelphia-auto-accident-injury-attorney",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "rally-house-collegeville",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "red-hill-greenhouses-florist",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "rocco-s-brick-oven-pizzeria",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "seiler-drury",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "snyder-online-marketing",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "the-edge-fitness-clubs",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "the-restaurant-store",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "theory",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "thr-insurance",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "tm-prestige-home-cash-buyer",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "towne-book-center-wine-bar",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "trend-auto-trader",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  },
+  {
+   "slug": "uno-chicago-style-pizza",
+   "outcome": "already clean",
+   "was": null,
+   "applied": null
+  },
+  {
+   "slug": "zuber-realty",
+   "outcome": "fixed",
+   "was": [
+    "asserted-imagery"
+   ],
+   "applied": [
+    "disclosure"
+   ]
+  }
+ ]
+}
