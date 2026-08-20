@@ -10,7 +10,7 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    name: 'Align HCM — Public Sector',
+    name: 'Align HCM: Public Sector',
     role: 'Strategy · UX · Design · Build',
     summary: 'A focused HCM experience translating implementation, compliance, support, and platform optimization into a public-sector decision path.',
     image: '/projects/align-public-sector.jpg',
@@ -84,29 +84,37 @@ export const clients = [
   ['Onsite Concrete & Landscape', '/clients/onsite.png'],
   ['BigOrange Marketing', '/clients/bigorange.png'],
   ['Pritzker Law Group', '/clients/pritzker.png'],
-  ['Tags 2 Go', '/clients/tags2go.jpeg'],
+  ['Tags 2 Go', '/clients/tags2go.png'],
+  ['AMI Commercial Cleaning', '/clients/ami-cleaning.png'],
+  ['Replenish at 7 Eleven', '/clients/replenish-7-eleven.png'],
+  ['Revive Systems', '/clients/revive-systems.png'],
+  ['Cindy May, Mrs. Christmas', '/clients/cindy-may.png'],
+  ['Bridge Software', '/clients/bridge-software.svg'],
 ] as const
 
 export const videos = [
   {
-    title: 'Different missions. Same pressure.',
-    eyebrow: 'Align HCM · 60 seconds',
-    source: '/media/align-different-missions.mp4',
-    poster: '/media/align-different-missions.jpg',
-    summary: 'A public-sector motion piece built around the pressure shared by very different missions.',
-  },
-  {
     title: 'Public service cannot pause.',
-    eyebrow: 'Align HCM · 60 seconds',
-    source: '/media/align-public-service.mp4',
-    poster: '/media/align-public-service.jpg',
-    summary: 'A vertical campaign edit connecting workforce continuity to public-service reality.',
+    eyebrow: 'Align HCM · August 2026 · 60 seconds',
+    source: '/media/public-service-cannot-pause.mp4',
+    poster: '/media/public-service-cannot-pause.png',
+    summary: 'A fully edited public sector campaign film connecting workforce continuity to the essential services communities depend on.',
+    format: 'portrait',
   },
   {
-    title: 'Implementation starts before kickoff.',
-    eyebrow: 'Align HCM · 30 seconds',
-    source: '/media/align-before-kickoff.mp4',
-    poster: '/media/align-before-kickoff.jpg',
-    summary: 'A concise implementation story that makes preparation, alignment, and operating context visible.',
+    title: 'Foundation to skyscraper.',
+    eyebrow: 'Maher and Brent · August 2026',
+    source: '/media/foundation-to-skyscraper.mp4',
+    poster: '/media/foundation-to-skyscraper.png',
+    summary: 'A clean podcast edit that turns long form executive conversation into a focused social story about building lasting HCM value.',
+    format: 'landscape',
+  },
+  {
+    title: 'Leverage the system.',
+    eyebrow: 'Maher and Brent · August 2026',
+    source: '/media/leverage-the-system.mp4',
+    poster: '/media/leverage-the-system.png',
+    summary: 'A polished social cut about moving beyond basic administration and using the full value already inside the platform.',
+    format: 'landscape',
   },
 ] as const

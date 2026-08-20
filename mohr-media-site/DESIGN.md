@@ -81,7 +81,7 @@ Expression comes from editorial scale, restrained industrial labels, live browse
 - Monumental condensed headlines cut with fluid serif phrases.
 - Dark signal space alternating with cool blueprint proof surfaces.
 - Exact IMMOHRTAL geometry as the recurring identity anchor.
-- Thin instrument lines, bounded glass, and tactile depth instead of decorative chrome.
+- Substantial instrument frames, bounded glass, and tactile depth instead of decorative chrome.
 - Motion that reveals state, sequence, or authorship and always has a reduced-motion equivalent.
 
 ## Colors
@@ -137,7 +137,7 @@ The fixed WebGL spine belongs behind content and never determines document flow.
 
 ## Elevation & Depth
 
-Depth is a hybrid of tonal layering, thin cool borders, restrained blur, and selective hard offsets. Navigation uses liquid glass; browser frames and document cards lift with bounded shadows; the particle logo and spine provide spatial depth without forcing perspective onto reading surfaces.
+Depth is a hybrid of tonal layering, decisive cool borders, restrained blur, and selective hard offsets. Navigation uses liquid glass; browser frames and document cards lift with bounded shadows; the particle logo and spine provide spatial depth without forcing perspective onto reading surfaces.
 
 ### Shadow Vocabulary
 
@@ -149,7 +149,9 @@ Depth is a hybrid of tonal layering, thin cool borders, restrained blur, and sel
 
 ## Shapes
 
-Corners are restrained and functional. Controls use compact 10-pixel rounding, large bounded chambers use 16-pixel rounding, and circular geometry is reserved for waypoint dots, video selectors, and orbit lines. Browser frames keep a slim instrument bar and clipped viewport. Borders are cool, thin, and more important than shadows for structural separation.
+Corners are restrained and functional. Controls use compact 10-pixel rounding, large bounded chambers use 16-pixel rounding, and circular geometry is reserved for waypoint dots, video selectors, and orbit lines. Browser frames keep a slim instrument bar and clipped viewport. Primary frames use two or three pixel cool borders, while one pixel lines are reserved for quiet internal divisions.
+
+**The Structural Frame Rule.** Major interactive surfaces and section boundaries use visible two or three pixel strokes. Thin rules may organize content but never run through or crowd a brand mark.
 
 ## Components
 
@@ -158,11 +160,11 @@ Corners are restrained and functional. Controls use compact 10-pixel rounding, l
 - **Shape:** Compact rounded rectangle with a controlled 10-pixel radius.
 - **Primary:** Cool paper on foundry ink with a cobalt physical offset.
 - **Hover / Focus:** Small translation, high-contrast focus ring, and no hidden label change.
-- **Secondary / Glass:** Dark translucent fill with a thin cool border; it remains quieter than the primary action.
+- **Secondary / Glass:** Dark translucent fill with a two pixel cool border; it remains quieter than the primary action.
 
 ### Chips
 
-- **Style:** Small mono labels with thin cool borders and no decorative fill.
+- **Style:** Small mono labels with two pixel cool borders and no decorative fill.
 - **State:** Selected circular video tabs switch to electric cyan with foundry-ink text.
 
 ### Cards / Containers
@@ -170,12 +172,16 @@ Corners are restrained and functional. Controls use compact 10-pixel rounding, l
 - **Corner Style:** 10 pixels for portable cards, 16 pixels for large chambers.
 - **Background:** Gunmetal for media and operating cards; cool paper for proof and document cards.
 - **Shadow Strategy:** Lift is reserved for interactive frames and portable artifacts.
-- **Border:** One-pixel cool structural line; the Align flagship outer shell uses a heavier frame.
+- **Border:** Two pixel cool structural frame; flagship outer shells may use three or four pixels.
 - **Internal Padding:** Usually 24 to 32 pixels on cards, scaling upward on large proof tiles.
 
 ### Navigation
 
 The persistent navigation is a single bounded liquid-glass rail with mono labels and one bright contact control. Mobile turns the same rail into an explicit Menu/Close disclosure; Escape closes it and focus remains visible.
+
+### Client Logo Rail
+
+Client marks appear in their exact brand colors on individual cool paper stages. Marks are never desaturated, recolored, or separated by lines that can visually collide with their artwork. Each stage provides generous clear space, consistent optical height, and an unhurried continuous rail with a static responsive grid under reduced motion.
 
 ### Particle Logo
 

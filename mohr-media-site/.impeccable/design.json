@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-08-20T15:51:23.7242994-04:00",
+  "generatedAt": "2026-08-20T17:25:57.2247338-04:00",
   "title": "Design System: Dillon Mohr Signal Foundry",
   "extensions": {
     "colorMeta": {
@@ -36,7 +36,7 @@
       "refersTo": "button-primary",
       "description": "The tactile high-priority action used once per decision cluster.",
       "html": "<button class=\"ds-button-primary\">ENTER THE WORK</button>",
-      "css": ".ds-button-primary{border:1px solid rgba(181,218,250,.38);border-radius:10px;background:#f3f7fb;color:#020711;padding:16px 22px;font:500 .68rem/1.4 ui-monospace,monospace;letter-spacing:.15em;box-shadow:0 7px 0 #287dff;transition:transform .3s cubic-bezier(.16,1,.3,1)}.ds-button-primary:hover{transform:translateY(-3px)}.ds-button-primary:focus-visible{outline:3px solid #18c8ff;outline-offset:4px}"
+      "css": ".ds-button-primary{border:2px solid rgba(181,218,250,.38);border-radius:10px;background:#f3f7fb;color:#020711;padding:16px 22px;font:500 .68rem/1.4 ui-monospace,monospace;letter-spacing:.15em;box-shadow:0 7px 0 #287dff;transition:transform .3s cubic-bezier(.16,1,.3,1)}.ds-button-primary:hover{transform:translateY(-3px)}.ds-button-primary:focus-visible{outline:3px solid #18c8ff;outline-offset:4px}"
     },
     {
       "name": "Glass Button",
@@ -44,36 +44,43 @@
       "refersTo": "button-glass",
       "description": "A quieter secondary action inside dark operating space.",
       "html": "<button class=\"ds-button-glass\">OPEN A CHANNEL</button>",
-      "css": ".ds-button-glass{border:1px solid rgba(181,218,250,.22);border-radius:10px;background:rgba(11,23,41,.72);color:#f3f7fb;padding:16px 22px;font:500 .68rem/1.4 ui-monospace,monospace;letter-spacing:.15em;backdrop-filter:blur(18px);transition:border-color .25s,background .25s}.ds-button-glass:hover{border-color:#18c8ff;background:rgba(11,23,41,.94)}.ds-button-glass:focus-visible{outline:3px solid #18c8ff;outline-offset:4px}"
+      "css": ".ds-button-glass{border:2px solid rgba(181,218,250,.22);border-radius:10px;background:rgba(11,23,41,.72);color:#f3f7fb;padding:16px 22px;font:500 .68rem/1.4 ui-monospace,monospace;letter-spacing:.15em;backdrop-filter:blur(18px);transition:border-color .25s,background .25s}.ds-button-glass:hover{border-color:#18c8ff;background:rgba(11,23,41,.94)}.ds-button-glass:focus-visible{outline:3px solid #18c8ff;outline-offset:4px}"
     },
     {
       "name": "Signal Navigation",
       "kind": "nav",
       "description": "A bounded liquid-glass rail that keeps identity, wayfinding, and contact in one line.",
       "html": "<nav class=\"ds-nav\"><strong>DILLON MOHR</strong><a href=\"#work\">LIVE WORK</a><a class=\"ds-nav-action\" href=\"#contact\">OPEN CHANNEL</a></nav>",
-      "css": ".ds-nav{display:flex;align-items:center;gap:24px;padding:10px 12px 10px 18px;border:1px solid rgba(181,218,250,.2);border-radius:16px;background:rgba(4,11,23,.72);color:#dce4ed;backdrop-filter:blur(24px);font:500 .64rem/1.4 ui-monospace,monospace;letter-spacing:.14em}.ds-nav strong{margin-right:auto}.ds-nav a{color:inherit;text-decoration:none}.ds-nav a:hover{color:#18c8ff}.ds-nav a:focus-visible{outline:3px solid #18c8ff;outline-offset:4px}.ds-nav-action{padding:11px 14px;border-radius:10px;background:#f3f7fb;color:#020711!important}"
+      "css": ".ds-nav{display:flex;align-items:center;gap:24px;padding:10px 12px 10px 18px;border:2px solid rgba(181,218,250,.2);border-radius:16px;background:rgba(4,11,23,.72);color:#dce4ed;backdrop-filter:blur(24px);font:500 .64rem/1.4 ui-monospace,monospace;letter-spacing:.14em}.ds-nav strong{margin-right:auto}.ds-nav a{color:inherit;text-decoration:none}.ds-nav a:hover{color:#18c8ff}.ds-nav a:focus-visible{outline:3px solid #18c8ff;outline-offset:4px}.ds-nav-action{padding:11px 14px;border-radius:10px;background:#f3f7fb;color:#020711!important}"
     },
     {
       "name": "Live Browser Frame",
       "kind": "card",
       "description": "An interactive project proof that reads as a real outbound website, not a decorative mockup.",
       "html": "<a class=\"ds-browser\" href=\"#\"><span class=\"ds-browser-bar\">● ● ● <em>LIVE-SITE.EXAMPLE</em></span><span class=\"ds-browser-view\">LIVE WEBSITE PREVIEW</span></a>",
-      "css": ".ds-browser{display:block;overflow:hidden;border:1px solid rgba(181,218,250,.28);border-radius:12px;background:#07101f;color:#f3f7fb;text-decoration:none;box-shadow:0 24px 70px rgba(0,0,0,.3);transition:transform .4s cubic-bezier(.16,1,.3,1)}.ds-browser:hover{transform:translateY(-6px)}.ds-browser:focus-visible{outline:3px solid #18c8ff;outline-offset:4px}.ds-browser-bar{display:flex;gap:7px;padding:10px 14px;color:#58edb2;font:500 .58rem/1 ui-monospace,monospace}.ds-browser-bar em{margin-left:auto;color:#9fb2c9;font-style:normal;letter-spacing:.1em}.ds-browser-view{display:grid;min-height:150px;place-items:center;background:#e8f2fb;color:#020711;font:400 2rem/1 ui-sans-serif,sans-serif}"
+      "css": ".ds-browser{display:block;overflow:hidden;border:2px solid rgba(181,218,250,.28);border-radius:12px;background:#07101f;color:#f3f7fb;text-decoration:none;box-shadow:0 24px 70px rgba(0,0,0,.3);transition:transform .4s cubic-bezier(.16,1,.3,1)}.ds-browser:hover{transform:translateY(-6px)}.ds-browser:focus-visible{outline:3px solid #18c8ff;outline-offset:4px}.ds-browser-bar{display:flex;gap:7px;padding:10px 14px;color:#58edb2;font:500 .58rem/1 ui-monospace,monospace}.ds-browser-bar em{margin-left:auto;color:#9fb2c9;font-style:normal;letter-spacing:.1em}.ds-browser-view{display:grid;min-height:150px;place-items:center;background:#e8f2fb;color:#020711;font:400 2rem/1 ui-sans-serif,sans-serif}"
     },
     {
       "name": "Document Card",
       "kind": "card",
       "refersTo": "document-card",
       "description": "A portable proof artifact that looks downloadable before the label is read.",
-      "html": "<a class=\"ds-document\" href=\"#\"><strong>ATS</strong><span>PORTABLE DOCUMENT // PDF</span><h3>DILLON MOHR — ATS RESUME</h3><em>DOWNLOAD</em></a>",
-      "css": ".ds-document{display:grid;grid-template-columns:auto 1fr;gap:14px 18px;padding:32px;border:1px solid #9fb2c9;border-radius:10px;background:#f3f7fb;color:#020711;text-decoration:none;box-shadow:8px 10px 0 #dce4ed;transition:transform .35s cubic-bezier(.16,1,.3,1)}.ds-document:hover{transform:translate(-3px,-4px)}.ds-document:focus-visible{outline:3px solid #18c8ff;outline-offset:4px}.ds-document strong{grid-row:1/4;padding:16px;background:#07101f;color:#18c8ff;font:500 .68rem/1 ui-monospace,monospace}.ds-document span,.ds-document em{font:500 .58rem/1.4 ui-monospace,monospace;letter-spacing:.14em;color:#006a9c}.ds-document h3{margin:0;font:400 2.4rem/.95 Impact,sans-serif}.ds-document em{justify-self:end;font-style:normal}"
+      "html": "<a class=\"ds-document\" href=\"#\"><strong>ATS</strong><span>PORTABLE DOCUMENT // PDF</span><h3>DILLON MOHR: ATS RESUME</h3><em>DOWNLOAD</em></a>",
+      "css": ".ds-document{display:grid;grid-template-columns:auto 1fr;gap:14px 18px;padding:32px;border:2px solid #9fb2c9;border-radius:10px;background:#f3f7fb;color:#020711;text-decoration:none;box-shadow:8px 10px 0 #dce4ed;transition:transform .35s cubic-bezier(.16,1,.3,1)}.ds-document:hover{transform:translate(-3px,-4px)}.ds-document:focus-visible{outline:3px solid #18c8ff;outline-offset:4px}.ds-document strong{grid-row:1/4;padding:16px;background:#07101f;color:#18c8ff;font:500 .68rem/1 ui-monospace,monospace}.ds-document span,.ds-document em{font:500 .58rem/1.4 ui-monospace,monospace;letter-spacing:.14em;color:#006a9c}.ds-document h3{margin:0;font:400 2.4rem/.95 Impact,sans-serif}.ds-document em{justify-self:end;font-style:normal}"
     },
     {
       "name": "Video Selector",
       "kind": "chip",
       "description": "A numbered, keyboard-operable selector for edited motion studies.",
       "html": "<button class=\"ds-video-tab\" aria-selected=\"true\">01</button>",
-      "css": ".ds-video-tab{width:48px;height:48px;border:1px solid #18c8ff;border-radius:999px;background:#18c8ff;color:#020711;font:500 .68rem/1 ui-monospace,monospace;transition:transform .3s cubic-bezier(.16,1,.3,1)}.ds-video-tab:hover{transform:translateY(-4px)}.ds-video-tab:focus-visible{outline:3px solid #f3f7fb;outline-offset:4px}"
+      "css": ".ds-video-tab{width:48px;height:48px;border:2px solid #18c8ff;border-radius:999px;background:#18c8ff;color:#020711;font:500 .68rem/1 ui-monospace,monospace;transition:transform .3s cubic-bezier(.16,1,.3,1)}.ds-video-tab:hover{transform:translateY(-4px)}.ds-video-tab:focus-visible{outline:3px solid #f3f7fb;outline-offset:4px}"
+    },
+    {
+      "name": "Client Logo Stage",
+      "kind": "custom",
+      "description": "A full color brand mark on a protected cool paper stage with generous clear space.",
+      "html": "<figure class=\"ds-logo-stage\"><span>CLIENT LOGO</span></figure>",
+      "css": ".ds-logo-stage{width:224px;height:112px;display:grid;place-items:center;margin:0;padding:20px 28px;border:2px solid #dce4ed;border-radius:16px;background:#f3f7fb;color:#287dff;box-shadow:7px 7px 0 rgba(40,125,255,.12)}.ds-logo-stage span{font:500 .68rem/1.4 ui-monospace,monospace;letter-spacing:.14em}.ds-logo-stage:focus-within{outline:3px solid #18c8ff;outline-offset:4px}"
     }
   ],
   "narrative": {
@@ -83,21 +90,24 @@
       "Monumental condensed headlines cut with fluid serif phrases.",
       "Dark signal space alternating with cool blueprint proof surfaces.",
       "Exact IMMOHRTAL geometry as the recurring identity anchor.",
-      "Thin instrument lines, bounded glass, and tactile depth instead of decorative chrome.",
+      "Substantial instrument frames, bounded glass, and tactile depth instead of decorative chrome.",
       "Motion that reveals state, sequence, or authorship and always has a reduced-motion equivalent."
     ],
     "rules": [
       { "name": "The Charged Minority Rule", "body": "Cyan, cobalt, and mint identify signal and state; they never become the entire surface.", "section": "colors" },
       { "name": "The Three-Voice Rule", "body": "Display commands, serif interprets, mono locates. Do not make any one voice perform all three jobs.", "section": "typography" },
-      { "name": "The Depth Has a Job Rule", "body": "Blur indicates persistent glass, hard offset indicates a tactile control, and atmospheric glow indicates signal.", "section": "elevation" }
+      { "name": "The Depth Has a Job Rule", "body": "Blur indicates persistent glass, hard offset indicates a tactile control, and atmospheric glow indicates signal.", "section": "elevation" },
+      { "name": "The Structural Frame Rule", "body": "Major interactive surfaces and section boundaries use visible two or three pixel strokes. Thin rules may organize content but never run through or crowd a brand mark.", "section": "shapes" }
     ],
     "dos": [
       "Do use the exact IMMOHRTAL mark whenever the identity is shown.",
       "Do let every cinematic interaction resolve into useful proof or navigation.",
+      "Do present every client mark in its exact brand color with protected clear space.",
       "Do preserve keyboard, touch, reduced-motion, and static-image paths for every signature interaction."
     ],
     "donts": [
       "Don't replace the identity with a generic monogram, icon library mark, or reconstructed wordmark.",
+      "Don't desaturate client logos or place divider lines through their clear space.",
       "Don't invent impact metrics, testimonials, awards, or client scope.",
       "Don't autoplay portfolio videos or make 3D motion a prerequisite for reading."
     ]

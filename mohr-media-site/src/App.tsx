@@ -281,12 +281,11 @@ function VideoTheater() {
             ))}
           </div>
         </div>
-        <div className="video-shell" id="video-panel" role="tabpanel" aria-labelledby={`video-tab-${active}`} data-tilt>
+        <div className={`video-shell video-shell--${video.format}`} id="video-panel" role="tabpanel" aria-labelledby={`video-tab-${active}`} data-tilt>
           <video key={video.source} controls playsInline preload="metadata" poster={video.poster} aria-describedby="video-summary">
             <source src={video.source} type="video/mp4" />
             Your browser does not support embedded video. <a href={video.source}>Open the MP4 directly.</a>
           </video>
-          <span aria-hidden="true">Align HCM // motion study</span>
         </div>
       </div>
     </section>
@@ -297,13 +296,13 @@ function DocumentVault() {
   const documents = [
     {
       code: 'ATS',
-      title: 'Dillon Mohr — ATS Résumé',
+      title: 'Dillon Mohr: ATS Résumé',
       note: 'Selectable, searchable, and structured for recruiting systems.',
       file: '/downloads/Dillon-Mohr-ATS-Resume.pdf',
     },
     {
       code: 'VIS',
-      title: 'Dillon Mohr — Visual Résumé',
+      title: 'Dillon Mohr: Visual Résumé',
       note: 'The designed edition for hiring managers, partners, and collaborators.',
       file: '/downloads/Dillon-Mohr-Visual-Resume.pdf',
     },
@@ -349,7 +348,7 @@ export default function App() {
           <div className="hero-copy">
             <p className="eyebrow">Dillon Mohr // marketing systems operator</p>
             <h1><span>I build the</span><strong>signal.</strong><span>And the system</span><em>behind it.</em></h1>
-            <p className="hero-intro">Positioning, web, content, motion, paid media, CRM, analytics, and AI-assisted production—connected into work people can see, use, and act on.</p>
+            <p className="hero-intro">Positioning, web, content, motion, paid media, CRM, analytics, and AI assisted production, connected into work people can see, use, and act on.</p>
             <div className="hero-actions">
               <a className="button button--primary" href="#align">Enter the work <ArrowIcon direction="down" /></a>
               <a className="button button--glass" href="mailto:hello@themohrmedia.com?subject=Portfolio%20inquiry">Open a channel <ArrowIcon /></a>
@@ -377,7 +376,7 @@ export default function App() {
           </div>
           <div className="operator-copy" data-reveal>
             <span>Not a stack of disconnected services.</span>
-            <p>I work across the entire path—from what a brand needs to say, to the page that says it, the campaign that finds the right person, the system that captures the response, and the reporting that tells us what happened.</p>
+            <p>I work across the entire path, from what a brand needs to say, to the page that says it, the campaign that finds the right person, the system that captures the response, and the reporting that tells us what happened.</p>
             <a href="https://github.com/dillonmohr8777" target="_blank" rel="noreferrer">Inspect public GitHub work <ArrowIcon /></a>
           </div>
         </section>
@@ -388,7 +387,7 @@ export default function App() {
               <p>01 // Flagship body of work</p>
               <img src="/clients/align-hcm.png" alt="Align HCM" />
               <h2>One brand.<br /><em>An entire operating surface.</em></h2>
-              <p>Strategy, repositioning, service architecture, public-sector experiences, SmartCare product storytelling, SEO, paid media, executive content, sales enablement, and motion—built as a connected body of work.</p>
+              <p>Strategy, repositioning, service architecture, public sector experiences, SmartCare product storytelling, SEO, paid media, executive content, sales enablement, and motion, built as a connected body of work.</p>
               <div className="align-links">
                 <a className="button button--dark" href="https://www.alignhcm.com/" target="_blank" rel="noreferrer">Live Align HCM <ArrowIcon /></a>
                 <a className="button button--line" href="https://github.com/dillonmohr8777/align-hcm-public-content" target="_blank" rel="noreferrer">Public repository <ArrowIcon /></a>
