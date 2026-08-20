@@ -133,9 +133,21 @@ function num(v, d = 0) {
  *        area costs several Overpass queries, and that API is a free community
  *        service, so a run stays polite rather than sweeping everything nightly
  * @param {number} [opts.groupsPerArea=3]
+ * @param {string} [opts.today] YYYY-MM-DD, used to rotate the vertical-group slate
  * @returns {{targets:Array, budget:number, throttled:boolean, total:number,
  *            reason:string, areaDeficits:Array, groupDeficits:Array}}
  */
+/**
+ * Days since the epoch for a YYYY-MM-DD string (or today). Used to rotate the
+ * vertical-group slate deterministically: the same date always plans the same
+ * sweep, which is what makes a re-run safe.
+ */
+function dayIndex(today) {
+  const d = today ? new Date(`${today}T00:00:00Z`) : new Date();
+  const ms = d.getTime();
+  return Number.isFinite(ms) ? Math.floor(ms / 86400000) : 0;
+}
+
 function planDiscovery(registry, opts = {}) {
   const all = Object.values(registry?.prospects || {});
   const total = all.length;
@@ -212,10 +224,40 @@ function planDiscovery(registry, opts = {}) {
     reason = `every area is at or above target; topping up ${chosenAreas[0].name}`;
   }
 
+  // Vertical groups to query.
+  //
+  // This used to be `pool.slice(0, groupsPerArea)` over the groups with a
+  // positive deficit, and nothing else. That is a fixed point: deficits move
+  // slowly, so the same two or three groups were queried against the same two
+  // or three areas every single morning. Overpass answers each identical query
+  // with the same businesses, all of which are already in the registry, so the
+  // sweep reported `144 raw -> 0 new` and the brief came out byte-identical to
+  // the day before. On 2026-08-18 only home-services and industrial had a
+  // positive deficit at all, which meant the other six groups — auto, retail,
+  // legal, medical, spa-wellness, food — were never queried in any area.
+  //
+  // Two changes. Deficit groups still lead, because coverage is still the goal.
+  // But the day's slate is topped up from the remaining groups on a rotation
+  // keyed to the date, so an at-target group is revisited every few days rather
+  // than never, and a saturated cell stops costing the whole run.
   const chosenGroups = (() => {
-    const behind = groupDeficits.filter((g) => g.deficit > 0);
-    const pool = behind.length ? behind : groupDeficits;
-    return pool.slice(0, groupsPerArea).map((g) => g.group).filter((g) => VERTICAL_GROUPS[g]);
+    const known = groupDeficits.filter((g) => VERTICAL_GROUPS[g.group]);
+    const behind = known.filter((g) => g.deficit > 0).map((g) => g.group);
+    const rest = known.filter((g) => g.deficit <= 0).map((g) => g.group);
+
+    const picked = behind.slice(0, groupsPerArea);
+    if (picked.length >= groupsPerArea || !rest.length) {
+      return picked.length ? picked : known.slice(0, groupsPerArea).map((g) => g.group);
+    }
+
+    // Rotate the at-target groups by day so the slate changes without any
+    // stored cursor — the sweep has to stay idempotent for a given date, and a
+    // rotation offset is reproducible where a random pick is not.
+    const offset = dayIndex(opts.today) % rest.length;
+    for (let i = 0; i < rest.length && picked.length < groupsPerArea; i += 1) {
+      picked.push(rest[(offset + i) % rest.length]);
+    }
+    return picked;
   })();
 
   // Split the budget across areas in proportion to how far behind each one is.

@@ -47,6 +47,7 @@ const { buildQuery, runOverpass, toCandidates, VERTICAL_GROUPS, normalizeDomain 
 const places = require('../lib/places');
 const { buildSuppressSets } = require('../lib/clients');
 const { writeRunState } = require('../lib/registry');
+const builtSites = require('../lib/built-sites');
 
 const AUTOMATION_ID = 'radar-refresh';
 const DASHBOARD_PATH = 'Daily-Briefs/prospect-radar.html';
@@ -284,20 +285,61 @@ async function main() {
   const registry = radar.load();
   const { suppressIds, suppressDomains } = buildSuppressSets(repoPath('01_Clients'));
 
-  // Never re-pitch a business from the completed 100.
-  const built = readJson(repoPath('_os/automation/fixtures/prospects/philly-100-completed.json'), null);
-  const excludeDomains = new Set(suppressDomains);
-  if (built) {
-    for (const r of built.prospects || []) {
-      const d = r.domain || normalizeDomain(r.website);
-      if (d) excludeDomains.add(d);
-    }
-  }
-  for (const [domain, p] of Object.entries(registry.prospects)) {
-    if (p.lifecycle === 'client' || p.lifecycle === 'excluded') excludeDomains.add(domain);
+  const run = { discovered_raw: 0, discovered_new: 0, regraded: 0, enriched: 0, enrich_no_match: 0, enrich_skipped: 0, errors: [] };
+
+  // Never re-pitch a business we have already built for. This used to read
+  // philly-100-completed.json, which froze on 2026-08-05 and so knew nothing
+  // about the 138 builds that followed it.
+  const built = builtSites.load();
+  if (built.stale) {
+    process.stderr.write('  WARNING: momentum-built-sites.json missing, falling back to the frozen 100\n');
   }
 
-  const run = { discovered_raw: 0, discovered_new: 0, regraded: 0, enriched: 0, enrich_no_match: 0, enrich_skipped: 0, errors: [] };
+  // Reconcile BEFORE discovery, grading and ranking, so every one of them sees
+  // the flag. Marking a row `built` is what finally activates the -40 de-rank
+  // in radar.priorityScore, which has been unreachable code until now because
+  // nothing ever set the lifecycle it tests for.
+  const rec = builtSites.reconcile(registry, built, { today });
+  run.built_marked = rec.marked;
+  run.built_total = built.domains.size;
+  if (rec.marked) {
+    process.stderr.write(
+      `  reconciled ${rec.marked} already-built row(s) out of the rebuild queue `
+      + `(${rec.alreadyBuilt} were already marked)\n`
+    );
+  }
+
+  // Normalize the recheck schedule. `recheckDays` spreads each verdict's cadence
+  // by a deterministic per-domain offset, but rows graded before that existed
+  // still carry the flat date — which is why 333 rows sat on 2026-11-04 and
+  // nothing at all was due on 2026-08-18. Re-deriving here converges the whole
+  // registry on the spread schedule and then stays put, because the offset is a
+  // pure function of (verdict, domain) and the date is anchored to last_graded.
+  let respread = 0;
+  for (const [domain, p] of Object.entries(registry.prospects)) {
+    const verdict = (p.current || {}).verdict;
+    if (!verdict || !p.last_graded || !p.next_recheck) continue;
+    const want = radar.addDays(p.last_graded, radar.recheckDays(verdict, domain));
+    if (want === p.next_recheck) continue;
+    // Never push a row that is already due back into the future — that would
+    // hide work this very sweep should be doing.
+    if (p.next_recheck <= today && want > today) continue;
+    p.next_recheck = want;
+    respread += 1;
+  }
+  if (respread) {
+    run.recheck_respread = respread;
+    process.stderr.write(`  respread ${respread} recheck date(s) off the seed-batch cliffs\n`);
+  }
+
+  const excludeDomains = new Set(suppressDomains);
+  for (const d of built.domains) excludeDomains.add(d);
+  for (const [domain, p] of Object.entries(registry.prospects)) {
+    if (p.lifecycle === 'client' || p.lifecycle === 'excluded') excludeDomains.add(domain);
+    // A built row must not come back through discovery either.
+    if (p.lifecycle === 'built' || p.lifecycle === 'mailed') excludeDomains.add(domain);
+  }
+
   // Coverage-driven targeting. The old day-of-year rotation was even in *slots*
   // but not in *rows* — Montgomery County yields far more per query than
   // Philadelphia does, which is how the registry ended up 2.2:1 against the
@@ -402,12 +444,42 @@ async function main() {
   }
 
   // --- 2 & 3. Grade new arrivals and re-audit what went stale --------------
-  const toGrade = radar.dueForRecheck(registry, {
-    limit: args.recheck + run.discovered_new,
+  const gradeLimit = args.recheck + run.discovered_new;
+  let toGrade = radar.dueForRecheck(registry, {
+    limit: gradeLimit,
     today,
     verdicts: args.regrade,
     force: args.force,
   });
+
+  // A sweep with nothing due does nothing, and that is how the radar spent
+  // 2026-08-18: discovery returned 0 new, 0 rows were due, and the brief came
+  // out byte-identical to the day before. The registry is not actually short of
+  // work — 568 rows carry a provisional Tier 0 grade, 144 of them a `rebuild`
+  // verdict that has never been checked against a rendered page. So when the
+  // schedule leaves capacity, spend it there rather than reporting an idle run.
+  if (!args.regrade && toGrade.length < gradeLimit) {
+    const topUp = radar.dueForRecheck(registry, {
+      limit: gradeLimit,
+      today,
+      force: args.force,
+      includeProvisional: true,
+    });
+    const have = new Set(toGrade.map((p) => p.domain));
+    for (const p of topUp) {
+      if (toGrade.length >= gradeLimit) break;
+      if (have.has(p.domain)) continue;
+      have.add(p.domain);
+      toGrade.push(p);
+      run.provisional_topup = (run.provisional_topup || 0) + 1;
+    }
+    if (run.provisional_topup) {
+      process.stderr.write(
+        `  schedule left ${gradeLimit - run.provisional_topup} of ${gradeLimit} slots idle; `
+        + `topped up with ${run.provisional_topup} provisional row(s)\n`
+      );
+    }
+  }
   if (toGrade.length) {
     process.stderr.write(`  grading ${toGrade.length} (new + due for re-audit)\n`);
     const renderBudget = args.maxTier >= 1 ? { left: args.render, spent: 0 } : null;
