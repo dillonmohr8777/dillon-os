@@ -1,240 +1,38 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Mohr Media — AI-powered marketing systems you own</title>
-<meta name="description" content="Founder-led, AI-powered marketing systems — lead generation, SEO, paid media, automation and CRO — run by eight agents and one operator. Start with a $497 audit.">
-<link rel="canonical" href="https://themohrmedia.com/">
-<meta name="robots" content="index,follow,max-image-preview:large">
-<meta name="theme-color" content="#03060c">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Mohr Media">
-<meta property="og:title" content="Mohr Media — AI-powered marketing systems you own">
-<meta property="og:description" content="Founder-led, AI-powered marketing systems — lead generation, SEO, paid media, automation and CRO — run by eight agents and one operator. Start with a $497 audit.">
-<meta property="og:url" content="https://themohrmedia.com/">
-<meta property="og:image" content="https://themohrmedia.com/og.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Mohr Media — AI-powered marketing systems you own">
-<meta name="twitter:description" content="Founder-led, AI-powered marketing systems — lead generation, SEO, paid media, automation and CRO — run by eight agents and one operator. Start with a $497 audit.">
-<meta name="twitter:image" content="https://themohrmedia.com/og.png">
-<link rel="stylesheet" href="assets/site.css">
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": ["Organization", "ProfessionalService"], "@id": "https://themohrmedia.com/#organization", "name": "Mohr Media", "url": "https://themohrmedia.com/", "logo": {"@type": "ImageObject", "url": "https://themohrmedia.com/logo.png", "width": 512, "height": 512}, "image": "https://themohrmedia.com/og.png", "description": "Founder-led, AI-powered marketing systems — lead generation, SEO, paid media, automation and CRO — run by a roster of eight agents and one operator.", "email": "hello@themohrmedia.com", "priceRange": "$$", "foundingDate": "2023", "areaServed": {"@type": "Country", "name": "United States"}, "founder": {"@id": "https://themohrmedia.com/#founder"}, "knowsAbout": ["Lead Generation", "Search Engine Optimization", "Google Ads", "Marketing Automation", "Conversion Rate Optimization", "Answer Engine Optimization", "Generative Engine Optimization"]}, {"@type": "WebSite", "@id": "https://themohrmedia.com/#website", "url": "https://themohrmedia.com/", "name": "Mohr Media", "publisher": {"@id": "https://themohrmedia.com/#organization"}}, {"@type": "Person", "@id": "https://themohrmedia.com/#founder", "name": "Dillon Mohr", "url": "https://themohrmedia.com/about.html", "image": "https://themohrmedia.com/operator.jpg", "jobTitle": "Founder & Operator", "worksFor": {"@id": "https://themohrmedia.com/#organization"}, "description": "Founder and operator of Mohr Media, an AI-powered marketing agency. Designs the systems, wires them into client accounts, and answers for the outcome.", "knowsAbout": ["Performance Marketing", "Lead Generation", "SEO", "Google Ads", "Marketing Automation"]}]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How is Mohr Media different from hiring an agency?", "acceptedAnswer": {"@type": "Answer", "text": "You pay for infrastructure that compounds, not retainer hours. Everything is scoped around systems, documented, and installed in your accounts — so you're never hostage to a vendor."}}, {"@type": "Question", "name": "Does this work for small businesses?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The best fit is a business that knows marketing matters but hasn't built the operational layer yet. The $497 audit tells you exactly where you stand before you spend on a build."}}, {"@type": "Question", "name": "What does \"AI-powered\" actually mean here?", "acceptedAnswer": {"@type": "Answer", "text": "AI is used where it creates leverage — content, reporting, enrichment, analysis, and follow-up speed — with a human operator running every agent. Implementation, not buzzwords."}}, {"@type": "Question", "name": "What if I only need one thing fixed?", "acceptedAnswer": {"@type": "Answer", "text": "Start with the audit. Get clarity fast and decide what to build next. Plenty of engagements stop at a single system."}}]}</script>
-</head>
-<body>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="mgrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#265bdc"/><stop offset="0.5" stop-color="#3f8bd4"/><stop offset="1" stop-color="#5fd4a5"/></linearGradient></defs></svg>
-<canvas id="stage" aria-hidden="true"></canvas>
-<canvas id="crew-stage" aria-hidden="true"></canvas>
-<div id="loader" aria-hidden="true"><svg class="m-mark" width="96" height="80" viewBox="0 0 120 100"><path d="M8 92 L42 10 L60 54 L78 10 L112 92" fill="none" stroke="url(#mgrad)" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" pathLength="300"/></svg><span class="mono">Mohr·Media flight systems — pre-flight</span><div class="count" id="load-count">000</div><div class="bar"><i id="load-bar"></i></div><div class="check" id="load-check">SIGNAL ......... LOCKED</div></div>
-<div id="cur-dot" aria-hidden="true"></div><div id="cur-ring" aria-hidden="true"></div>
-<nav id="rail" aria-label="Section waypoints"><div class="readout" id="rail-readout" aria-hidden="true"><em>WPT 00</em> · STAGE 000.0%</div></nav>
-<nav id="nav"><a class="wordmark" href="index.html" aria-label="Mohr Media — home"><svg width="28" height="24" viewBox="0 0 120 100" aria-hidden="true"><path d="M8 92 L42 10 L60 54 L78 10 L112 92" fill="none" stroke="url(#mgrad)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="wm-mohr">M<em>O</em>HR</span><span class="wm-media">MEDIA</span></a><div class="nav-links"><a href="agents.html">Agents</a><a href="work.html">Work</a><a href="services.html">Services</a><a href="pricing.html">Pricing</a><a href="blog.html">Blog</a><a href="about.html">About</a><a class="cta-link" href="contact.html">Book the audit</a></div></nav>
-<main id="top">
-
-
-
-<header class="hero">
-  <div class="hud-corner hud-tl" aria-hidden="true">SECTOR / <b>HERO · DEPARTURE</b></div>
-  <div class="hud-corner hud-tr" aria-hidden="true">LAT 38.210°N · LON 77.040°W</div>
-  <div class="hud-corner hud-bl" aria-hidden="true">STAGE / <b id="hud-stage">000.0%</b></div>
-  <div class="hud-corner hud-br" aria-hidden="true"><span class="lamp-dot"></span>SIGNAL / <b>LIVE</b></div>
-
-  <div class="eyebrow mono">WPT 00 · Departure <i>—</i> AI-powered marketing systems</div>
-  <h1>Marketing that runs<br>like a <span class="outline">machine</span>.<br>Results that <span class="hotword">compound</span>.</h1>
-  <p class="lede">One founder-led operating layer that turns lead generation, SEO, paid media, and automation into a single machine you own.</p>
-  <div class="hero-cta">
-    <a class="btn primary" href="#pricing">Start with the audit</a>
-    <a class="btn" href="#agents">Meet the roster</a>
-  </div>
-  <div class="scroll-hint"><span class="mono">Begin transit</span><span class="stem"></span></div>
-</header>
-
-<section class="reveal" style="padding:0 clamp(20px,6vw,80px)"><div class="wrap"><div class="proofbar">
-  <div class="m"><em>3,145</em><span>tickets · Bar Crawl USA · 3 wks</span></div>
-  <div class="m"><em>−62%</em><span>cost / booking · KJ Bridal</span></div>
-  <div class="m"><em>4.1×</em><span>qualified leads · Shadow HVAC</span></div>
-  <div class="m"><em>$1.2M</em><span>pipeline · Onsite Concrete</span></div>
-</div></div></section>
-
-<section class="block reveal" id="agents">
-  <div class="wrap">
-    <div class="sec-head"><span class="idx">WPT 01 / Crew deck · 8 agents online</span><span class="rule"></span></div>
-    <h2>Eight agents. One operator. Zero retainer theater.</h2>
-    <p class="section-lede">Every function in the system has a named agent with one job, and every agent reports to the operator. That's the whole org chart.</p>
-    <span class="roster-chip" aria-hidden="true"><span class="lamp-dot"></span>Live roster — 8/8 online</span>
-    <div class="agents">
-      <div class="agent tilt" style="--i:0" data-agent="0"><div class="bot" data-bot="0" style="--bot-acc:73,197,182"><svg class="bot-fallback" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="6" y="8.5" width="12" height="9.5" rx="2.2"/><circle cx="9.5" cy="13" r="1.1"/><circle cx="14.5" cy="13" r="1.1"/><line x1="12" y1="4.5" x2="12" y2="8.5"/><circle cx="12" cy="3.4" r="1.2"/><line x1="4.5" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="19.5" y2="12"/></svg><i class="bot-scan" aria-hidden="true"></i></div><div class="id"><span class="mono">AGT-01 · ON DUTY</span><span class="lamp"></span></div><h3>Leo Leadwell</h3><span class="role">Lead Scout</span><p>Sources qualified leads and maps signal across paid and organic channels.</p></div>
-      <div class="agent tilt" style="--i:1" data-agent="1"><div class="bot" data-bot="1" style="--bot-acc:47,212,152"><svg class="bot-fallback" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="6" y="8.5" width="12" height="9.5" rx="2.2"/><circle cx="9.5" cy="13" r="1.1"/><circle cx="14.5" cy="13" r="1.1"/><line x1="12" y1="4.5" x2="12" y2="8.5"/><circle cx="12" cy="3.4" r="1.2"/><line x1="4.5" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="19.5" y2="12"/></svg><i class="bot-scan" aria-hidden="true"></i></div><div class="id"><span class="mono">AGT-02 · ON DUTY</span><span class="lamp"></span></div><h3>Cora Copy</h3><span class="role">Content Crafter</span><p>Writes the messaging, ad copy, and content engine outputs.</p></div>
-      <div class="agent tilt" style="--i:2" data-agent="2"><div class="bot" data-bot="2" style="--bot-acc:110,224,255"><svg class="bot-fallback" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="6" y="8.5" width="12" height="9.5" rx="2.2"/><circle cx="9.5" cy="13" r="1.1"/><circle cx="14.5" cy="13" r="1.1"/><line x1="12" y1="4.5" x2="12" y2="8.5"/><circle cx="12" cy="3.4" r="1.2"/><line x1="4.5" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="19.5" y2="12"/></svg><i class="bot-scan" aria-hidden="true"></i></div><div class="id"><span class="mono">AGT-03 · ON DUTY</span><span class="lamp"></span></div><h3>Ari Ads</h3><span class="role">Ad Optimizer</span><p>Tunes paid search and social campaigns for cost-per-lead efficiency.</p></div>
-      <div class="agent tilt" style="--i:3" data-agent="3"><div class="bot" data-bot="3" style="--bot-acc:53,208,127"><svg class="bot-fallback" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="6" y="8.5" width="12" height="9.5" rx="2.2"/><circle cx="9.5" cy="13" r="1.1"/><circle cx="14.5" cy="13" r="1.1"/><line x1="12" y1="4.5" x2="12" y2="8.5"/><circle cx="12" cy="3.4" r="1.2"/><line x1="4.5" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="19.5" y2="12"/></svg><i class="bot-scan" aria-hidden="true"></i></div><div class="id"><span class="mono">AGT-04 · ON DUTY</span><span class="lamp"></span></div><h3>Piper Pipeline</h3><span class="role">Pipeline Driver</span><p>Routes leads through CRM, follow-up, and qualification logic.</p></div>
-      <div class="agent tilt" style="--i:4" data-agent="4"><div class="bot" data-bot="4" style="--bot-acc:92,217,199"><svg class="bot-fallback" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="6" y="8.5" width="12" height="9.5" rx="2.2"/><circle cx="9.5" cy="13" r="1.1"/><circle cx="14.5" cy="13" r="1.1"/><line x1="12" y1="4.5" x2="12" y2="8.5"/><circle cx="12" cy="3.4" r="1.2"/><line x1="4.5" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="19.5" y2="12"/></svg><i class="bot-scan" aria-hidden="true"></i></div><div class="id"><span class="mono">AGT-05 · ON DUTY</span><span class="lamp"></span></div><h3>Calvin Convert</h3><span class="role">Conversion Engineer</span><p>Sharpens landing pages, offer framing, and conversion paths.</p></div>
-      <div class="agent tilt" style="--i:5" data-agent="5"><div class="bot" data-bot="5" style="--bot-acc:77,184,255"><svg class="bot-fallback" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="6" y="8.5" width="12" height="9.5" rx="2.2"/><circle cx="9.5" cy="13" r="1.1"/><circle cx="14.5" cy="13" r="1.1"/><line x1="12" y1="4.5" x2="12" y2="8.5"/><circle cx="12" cy="3.4" r="1.2"/><line x1="4.5" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="19.5" y2="12"/></svg><i class="bot-scan" aria-hidden="true"></i></div><div class="id"><span class="mono">AGT-06 · ON DUTY</span><span class="lamp"></span></div><h3>Sage Signals</h3><span class="role">Analytics Sage</span><p>Reads attribution, cohort data, and revenue signals across the system.</p></div>
-      <div class="agent tilt" style="--i:6" data-agent="6"><div class="bot" data-bot="6" style="--bot-acc:61,230,168"><svg class="bot-fallback" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="6" y="8.5" width="12" height="9.5" rx="2.2"/><circle cx="9.5" cy="13" r="1.1"/><circle cx="14.5" cy="13" r="1.1"/><line x1="12" y1="4.5" x2="12" y2="8.5"/><circle cx="12" cy="3.4" r="1.2"/><line x1="4.5" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="19.5" y2="12"/></svg><i class="bot-scan" aria-hidden="true"></i></div><div class="id"><span class="mono">AGT-07 · ON DUTY</span><span class="lamp"></span></div><h3>Mira Motion</h3><span class="role">Design &amp; Motion</span><p>Owns design, motion, and the cinematic command-center surface.</p></div>
-      <div class="agent tilt" style="--i:7" data-agent="7"><div class="bot" data-bot="7" style="--bot-acc:128,230,217"><svg class="bot-fallback" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="6" y="8.5" width="12" height="9.5" rx="2.2"/><circle cx="9.5" cy="13" r="1.1"/><circle cx="14.5" cy="13" r="1.1"/><line x1="12" y1="4.5" x2="12" y2="8.5"/><circle cx="12" cy="3.4" r="1.2"/><line x1="4.5" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="19.5" y2="12"/></svg><i class="bot-scan" aria-hidden="true"></i></div><div class="id"><span class="mono">AGT-08 · ON DUTY</span><span class="lamp"></span></div><h3>Remy Reports</h3><span class="role">Reporting Agent</span><p>Produces founder-ready reporting and proof snapshots.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="block reveal" id="services">
-  <div class="wrap">
-    <div class="sec-head"><span class="idx">WPT 02 / Engineering · Cargo manifest</span><span class="rule"></span></div>
-    <h2>Five systems. Each one you own outright.</h2>
-    <p class="section-lede">Everything is installed in your accounts and documented for handoff. If we disappear tomorrow, the system keeps running. <a href="services.html" style="color:var(--teal-txt)">See all services →</a></p>
-    <div class="systems">
-      <div class="system"><span class="bay">Bay 01 · Pipeline</span><div><h3>Lead Generation Systems</h3><p>Landing pages, CRM workflows, and qualification logic wired into one pipeline you can audit.</p></div></div>
-      <div class="system"><span class="bay">Bay 02 · Organic</span><div><h3>SEO Content Engines</h3><p>Keyword planning, editorial systems, and a publishing workflow that ships every week.</p></div></div>
-      <div class="system"><span class="bay">Bay 03 · Paid</span><div><h3>Google Ads Management</h3><p>Account rebuilds, search intent structure, and performance reporting with numbers you can check.</p></div></div>
-      <div class="system"><span class="bay">Bay 04 · Automation</span><div><h3>AI Marketing Implementation</h3><p>Workflow design, AI prompts, and reporting automation. Implementation, not buzzwords.</p></div></div>
-      <div class="system"><span class="bay">Bay 05 · CRO</span><div><h3>Website Conversion Systems</h3><p>CRO, page systems, and offer framing that turn existing traffic into booked revenue.</p></div></div>
-    </div>
-  </div>
-</section>
-
-<section class="block reveal" id="method">
-  <div class="wrap">
-    <div class="sec-head"><span class="idx">WPT 03 / Nav chart · The Mohr Method</span><span class="rule"></span></div>
-    <h2>Four phases. It spells MOHR for a reason.</h2>
-    <div class="steps">
-      <div class="step" style="--i:0"><span class="num">Leg 01</span><div class="letter">M</div><h3>Map</h3><p>Map the funnel and data flow. You can't optimize a machine you can't see.</p></div>
-      <div class="step" style="--i:1"><span class="num">Leg 02</span><div class="letter">O</div><h3>Optimize</h3><p>Optimize the conversion layers so existing traffic stops leaking revenue.</p></div>
-      <div class="step" style="--i:2"><span class="num">Leg 03</span><div class="letter">H</div><h3>Harness</h3><p>Harness AI and automation where it creates leverage: content, reporting, enrichment, follow-up speed.</p></div>
-      <div class="step" style="--i:3"><span class="num">Leg 04</span><div class="letter">R</div><h3>Run</h3><p>Run the machine with clarity. The roster operates the system and results compound.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="block reveal" id="results">
-  <div class="wrap">
-    <div class="sec-head"><span class="idx">WPT 04 / Telemetry · Verified downlink</span><span class="rule"></span></div>
-    <h2>Real systems. Real clients. Real proof.</h2>
-    <p class="section-lede">Four engagements, every number tied to the system that produced it. <a href="work.html" style="color:var(--teal-txt)">See all results →</a></p>
-    <div class="results">
-      <div class="result tilt" style="--i:0"><span class="tag">Downlink · Verified</span><span class="mono">Bar Crawl USA</span><div class="big"><em>3,145</em> tickets</div><p>Sold in 3 weeks across 18 cities on an $8.5k budget. 18 Google campaigns built in under an hour.</p><span class="crew">Operated by: Ari Ads + Leo Leadwell</span></div>
-      <div class="result tilt" style="--i:1"><span class="tag">Downlink · Verified</span><span class="mono">Kimberly James Bridal</span><div class="big"><em>−62%</em> cost</div><p>Per booked appointment, through sharper intent handling, landing experience, and campaign structure.</p><span class="crew">Operated by: Calvin Convert + Sage Signals</span></div>
-      <div class="result tilt" style="--i:2"><span class="tag">Downlink · Verified</span><span class="mono">Shadow HVAC</span><div class="big"><em>4.1×</em> leads</div><p>Qualified lead volume growth in 90 days via tighter paid search and a local visibility system.</p><span class="crew">Operated by: Leo Leadwell + Piper Pipeline</span></div>
-      <div class="result tilt" style="--i:3"><span class="tag">Downlink · Verified</span><span class="mono">Onsite Concrete</span><div class="big"><em>$1.2M</em> pipeline</div><p>Generated from paid plus SEO — a stronger search, content, and conversion system turned scattered effort into a measurable demand engine.</p><span class="crew">Operated by: Cora Copy + Calvin Convert + Sage Signals</span></div>
-    </div>
-  </div>
-</section>
-
-
-<section class="block reveal operator-sec" id="operator">
-  <div class="wrap">
-    <div class="sec-head"><span class="idx">WPT 04.5 / Flight deck · One operator</span><span class="rule"></span></div>
-    <div class="op-grid">
-      <div class="op-portrait">
-        <div class="portrait" id="op-portrait">
-          <img id="op-photo" src="operator.jpg" alt="Dillon Mohr — founder and operator" width="520" height="640" decoding="async">
-          <span class="ph-mark" aria-hidden="true">DM</span>
-          <span class="ph-note mono" aria-hidden="true">OPERATOR / LIVE</span>
-          <i class="frame-tl" aria-hidden="true"></i><i class="frame-br" aria-hidden="true"></i>
-          <i class="scanline" aria-hidden="true"></i>
-        </div>
-        <span class="roster-chip" aria-hidden="true"><span class="lamp-dot"></span>Signal — operator on deck</span>
-      </div>
-      <div class="op-body">
-        <h2>Eight agents. <span class="hotword">One human</span> at the controls.</h2>
-        <p class="section-lede">Every agent on the roster reports to <strong>Dillon Mohr</strong> — the operator who designs the system, wires it into your accounts, and answers for the whole machine. No account managers. No retainer theater. One person accountable end to end.</p>
-        <ul class="op-stats">
-          <li><em>8</em><span>agents, one operator</span></li>
-          <li><em>3,145</em><span>tickets sold in 3 weeks</span></li>
-          <li><em>100%</em><span>systems you own outright</span></li>
-        </ul>
-        <div class="hero-cta">
-          <a class="btn primary" href="mailto:hello@themohrmedia.com?subject=Strategy%20call">Talk to the operator</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="block reveal" id="pricing">
-  <div class="wrap">
-    <div class="sec-head"><span class="idx">WPT 05 / Docking · Three modes</span><span class="rule"></span></div>
-    <h2>Start small. Scale when the numbers say so.</h2>
-    <div class="plates">
-      <div class="plate-card lead" style="--i:0">
-        <span class="badge">Start here</span>
-        <div class="mono"><span>Dock A</span><span>90 min + plan</span></div>
-        <h3>Audit</h3>
-        <div class="price">$497 one-time</div>
-        <p>See where the marketing system is leaking before committing to a build. One 90-minute session plus a written plan you keep either way.</p>
-        <div class="foot">Deliverable: diagnostic + written build plan</div>
-      </div>
-      <div class="plate-card" style="--i:1">
-        <div class="mono"><span>Dock B</span><span>4–12 weeks</span></div>
-        <h3>Build</h3>
-        <div class="price">Custom scoped</div>
-        <p>Install the operating layer: lead gen, SEO, paid, automation, reporting. Fixed scope, documented handoff, wired into your accounts, not ours.</p>
-        <div class="foot">Deliverable: a working system you own</div>
-      </div>
-      <div class="plate-card" style="--i:2">
-        <div class="mono"><span>Dock C</span><span>Monthly</span></div>
-        <h3>Operate</h3>
-        <div class="price">Monthly retainer</div>
-        <p>Run the machine. The roster operates the system and compounds results, with founder-ready reporting every month.</p>
-        <div class="foot">Deliverable: performance, reported honestly</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="block reveal faq-sec" id="faq">
-  <div class="wrap">
-    <div class="sec-head"><span class="idx">WPT 06 / Comms · Open channel</span><span class="rule"></span></div>
-    <h2>Asked before every engagement.</h2>
-    <div class="faq">
-      <details>
-        <summary>How is this different from hiring an agency?</summary>
-        <div class="a">The work is scoped around infrastructure, not vague activity. You're paying for a system that compounds, not retainer hours. Everything gets documented and installed in your accounts, so you're never hostage to your marketing vendor.</div>
-      </details>
-      <details>
-        <summary>Does this work for small businesses?</summary>
-        <div class="a">Yes. The strongest fit is a business that knows marketing matters but hasn't yet built the operational layer. The audit tells you exactly where you stand before you spend anything on a build.</div>
-      </details>
-      <details>
-        <summary>What does "AI-powered" actually mean here?</summary>
-        <div class="a">It means AI is used where it creates leverage: content workflows, reporting, enrichment, analysis, and follow-up speed. It's implementation, not buzzwords, and an operator runs every agent.</div>
-      </details>
-      <details>
-        <summary>What if I only need one thing fixed?</summary>
-        <div class="a">That's why the audit and strategy call exist. Start with a defined diagnostic, get clarity fast, and decide what to build next. Plenty of engagements stop at one system.</div>
-      </details>
-      <details>
-        <summary>How long does an engagement last?</summary>
-        <div class="a">The diagnostic is one 90-minute session plus a written plan. A build runs 4 to 12 weeks. The retainer is monthly, and it earns its renewal with reported numbers.</div>
-      </details>
-    </div>
-  </div>
-</section>
-
-<section class="cta reveal" id="start">
-  <div class="wrap">
-    <span class="mono" style="color:var(--teal-txt)">WPT 07 / Ignition</span>
-    <h2>Start with the audit.<br><span class="outline">Judge us on the findings.</span></h2>
-    <p>$497, one 90-minute session, and a written plan you keep no matter what. If the findings aren't worth ten times that, don't hire us for the build.</p>
-    <div class="hero-cta">
-      <a class="btn primary" id="ignite" href="mailto:hello@themohrmedia.com?subject=Audit%20request">Start with the audit</a>
-      <a class="btn" href="mailto:hello@themohrmedia.com?subject=Strategy%20call">Book a strategy call</a>
-    </div>
-    <div class="operator">
-      <span class="mono">The operator</span>
-      <p>Every agent reports to <strong>Dillon Mohr</strong>. One human, accountable for the whole machine.</p>
-    </div>
-  </div>
-</section>
-
-
-
-</main>
-<footer><div class="foot-cols"><div class="fc-brand"><a class="wordmark" href="index.html" aria-label="Mohr Media"><svg width="26" height="22" viewBox="0 0 120 100" aria-hidden="true"><path d="M8 92 L42 10 L60 54 L78 10 L112 92" fill="none" stroke="url(#mgrad)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="wm-mohr">M<em>O</em>HR</span><span class="wm-media">MEDIA</span></a><p>AI-powered marketing systems you own outright. One operator, eight agents.</p><a class="btn primary" href="contact.html">Book the audit</a></div><div class="fc"><h4>Explore</h4><a href="work.html">Work</a><a href="services.html">Services</a><a href="pricing.html">Pricing</a><a href="about.html">About</a><a href="contact.html">Contact</a></div><div class="fc"><h4>The roster</h4><a href="agent-leo-leadwell.html">Leo Leadwell</a><a href="agent-cora-copy.html">Cora Copy</a><a href="agent-ari-ads.html">Ari Ads</a><a href="agent-piper-pipeline.html">Piper Pipeline</a><a href="agent-calvin-convert.html">Calvin Convert</a><a href="agent-sage-signals.html">Sage Signals</a><a href="agent-mira-motion.html">Mira Motion</a><a href="agent-remy-reports.html">Remy Reports</a></div><div class="fc"><h4>Insights</h4><a href="blog.html">Blog</a><a href="blog-marketing-audit-teardown.html">The $497 Marketing Audit: What a Funnel Teardown Finds</a><a href="blog-google-ads-local-service.html">Google Ads for Local Service Businesses: The 4x Lead System</a><a href="blog-lead-generation-system.html">How to Build a Lead Gen System That Runs Without You</a><a href="blog-aeo-geo-ai-search.html">AEO &amp; GEO: Get Cited by ChatGPT &amp; AI Search in 2026</a></div></div><div class="cols"><span>Mohr Media · Ground control — Fredericksburg, VA · 38.210°N 77.040°W</span><span>© 2026 · <a href="mailto:hello@themohrmedia.com" style="color:inherit">hello@themohrmedia.com</a></span><span class="sig">Signal: <b>LIVE</b> · AI-powered marketing systems</span></div></footer>
-<script>window.__SPINE={"anchors": [".hero", "#proof", "#agents", "#services", "#method", "#results", "#operator", "#pricing", "#faq", "#start"], "wpts": ["DEPARTURE", "SIGNAL LOCK", "CREW DECK", "SYSTEMS", "NAV CHART", "TELEMETRY", "OPERATOR", "DOCKING", "COMMS", "IGNITION"]};</script>
-<script src="assets/spine.js"></script>
-<script src="assets/robot.js"></script>
-<script>(function(){var i=document.getElementById("op-photo");if(i){function m(){var p=document.getElementById("op-portrait");if(p)p.classList.add("noimg");}i.addEventListener("error",m);if(i.complete&&!i.naturalWidth)m();}})();</script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#07101f" />
+    <meta name="description" content="Dillon Mohr builds connected growth systems across positioning, web, content, motion, paid media, CRM, analytics, and AI-assisted production." />
+    <meta name="robots" content="noindex,nofollow" />
+    <link rel="canonical" href="https://dillon-mohr-portfolio.netlify.app/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Dillon Mohr | Interactive Growth & Web Portfolio" />
+    <meta property="og:description" content="Strategy, design, motion, implementation, and proof—connected into one operating system." />
+    <meta property="og:image" content="/brand/immohrtal-logo.png" />
+    <title>Dillon Mohr | Interactive Growth & Web Portfolio</title>
+  </head>
+  <body>
+    <!--
+    THESIS: Dillon turns disconnected marketing work into one visible operating signal; this refuses the standard portfolio grid followed by an about paragraph.
+    OWN-WORLD: Gunmetal chambers, ice-white proof fields, cobalt/cyan/teal particles, thick instrument borders, liquid lenses, and the exact IMMOHRTAL mark.
+    STORY: Enter the signal, meet the operator, inspect Align HCM, move through live work, watch the edits, take the documents, open a direct channel.
+    FIRST VIEWPORT: A giant sampled IMMOHRTAL mark resolves at right while an oversized three-line promise anchors left; proof and contact actions stay visible.
+    FORM: Signal Foundry Experience, brief-pinned direction, seed-key a32f810c.
+    FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
+    -->
+    <div id="root"></div>
+    <noscript>
+      <main style="max-width:760px;margin:8rem auto;padding:2rem;font-family:ui-monospace,Consolas,monospace">
+        <img src="/brand/immohrtal-logo.png" alt="IMMOHRTAL" width="240" />
+        <h1>Dillon Mohr builds connected growth systems.</h1>
+        <p>View the live work, download the résumé, or contact Dillon directly.</p>
+        <p><a href="https://align-hcm-public-sector-expanded.netlify.app">Align HCM public-sector experience</a></p>
+        <p><a href="/downloads/Dillon-Mohr-ATS-Resume.pdf" download>Download Dillon Mohr's résumé</a></p>
+        <p><a href="mailto:hello@themohrmedia.com">hello@themohrmedia.com</a></p>
+      </main>
+    </noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
