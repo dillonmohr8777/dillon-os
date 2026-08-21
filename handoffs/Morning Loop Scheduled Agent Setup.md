@@ -1,8 +1,12 @@
 ---
 tags: [handoff, automation, slack]
+status: superseded
+superseded_by: handoffs/Dillon Command Center Scheduled Agent Setup.md
 ---
 
 # Morning Loop: Scheduled Agent Setup
+
+> **SUPERSEDED 2026-08-21.** Use [[handoffs/Dillon Command Center Scheduled Agent Setup|Dillon Command Center Scheduled Agent Setup]] instead. This doc remains for rollback reference only.
 
 This wires the daily loop: every morning a cloud agent reads Slack, files boss requests into the vault, and writes the morning brief. Dillon does this once; it runs forever after.
 

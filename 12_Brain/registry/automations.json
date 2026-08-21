@@ -426,6 +426,33 @@
       "external_actions": false,
       "status": "implemented",
       "note": "Refuses forbidden port 9222 with exit 3 and marks chrome_isolated not-live unless the process on the port really runs a claude-chrome profile. probe/recommend describe agent-only rungs (WebFetch, WebSearch, Firecrawl) that a CLI cannot drive."
+    },
+    {
+      "id": "dillon-command",
+      "name": "Dillon Command Center umbrella workflow",
+      "lane": "command",
+      "tier": 0,
+      "cadence": "weekdays 6:45 AM America/New_York (scheduled cloud agent)",
+      "command": "node _os/automation/bin/dillon-command.js run --agent-mode --print-board",
+      "inputs": [
+        "_os/automation/profiles/dillon-command.json",
+        "00_Inbox/slack/",
+        "01_Clients/",
+        "System/approval-queue.md",
+        "Daily-Briefs/radar-*.md",
+        "12_Brain/state/*.json"
+      ],
+      "outputs": [
+        "automation-runs/dillon-command/YYYY-MM-DD/approval-board.md",
+        "automation-runs/dillon-command/YYYY-MM-DD/lane-*.json",
+        "Daily-Briefs/am-report-YYYY-MM-DD.md",
+        "Daily-Briefs/pulse-today.md",
+        "12_Brain/state/dillon-command.json",
+        "12_Brain/queue/dillon-command-*.jsonl"
+      ],
+      "external_actions": false,
+      "notes": "One umbrella automation with eight parallel agent lanes (comms, clients, intelligence, websites, outreach, ads, reporting, command). Supersedes separate morning-loop crons for slack-intake, am-report, and client-pulse. Claude daily driver and Prospect Radar Next 20 remain separate micro-loops.",
+      "status": "implemented"
     }
   ],
   "gates": {
