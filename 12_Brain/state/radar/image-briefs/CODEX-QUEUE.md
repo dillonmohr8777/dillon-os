@@ -1,4 +1,4 @@
-# Codex image queue — generated 2026-08-20
+# Codex image queue — generated 2026-08-21
 
 100 rebuild targets own no usable photographs. Each has a brief in
 this directory specifying exactly what to generate, slot by slot.
@@ -64,60 +64,60 @@ this directory specifying exactly what to generate, slot by slot.
 | 41 | Fanta C Beauty Bar | beauty | Abington | fanta-c-beauty-bar.json |
 | 42 | Valley Auto Group, Inc. | car-repair | Pennsburg | valley-auto-group-inc.json |
 | 43 | Powerstroke Diesel Specialties | car-repair | Pottstown | powerstroke-diesel-specialties.json |
-| 44 | Twisted Shamrock Studios & Spa | cosmetics |  | twisted-shamrock-studios-and-spa.json |
-| 45 | A & J Custom Painting | painter | Bensalem | a-and-j-custom-painting.json |
-| 46 | Chris Orser Landscaping | gardener | Doylestown | chris-orser-landscaping.json |
-| 47 | Morton Electric Pool & Spa Specialists | plumber | Trevose | morton-electric-pool-and-spa-specialists.json |
-| 48 | Sharp Stream Power Washing & Painting | painter | West Chester | sharp-stream-power-washing-and-painting.json |
-| 49 | Allure - Skincare. Nails. Body. | beauty | Lahaska | allure-skincare-nails-body.json |
-| 50 | A New Dawn Therapeutic Massage | massage | Doylestown | a-new-dawn-therapeutic-massage.json |
-| 51 | CoCo Nails | beauty | Warrington | coco-nails.json |
-| 52 | Tax Express | tax-advisor | Yardley | tax-express.json |
-| 53 | Pisano and Son Shoe Repair | shoes |  | pisano-and-son-shoe-repair.json |
-| 54 | West Philadelphia VA Clinic | clinic |  | west-philadelphia-va-clinic.json |
-| 55 | Danger Salon | hairdresser | Philadelphia | danger-salon.json |
-| 56 | Sense Zero Float Center | beauty | Yardley | sense-zero-float-center.json |
-| 57 | Mexico Magico | tax-advisor | Avondale | mexico-magico.json |
-| 58 | Chestnut Hill Animal Hospital | veterinary | Erdenheim | chestnut-hill-animal-hospital.json |
-| 59 | County Line Veterinary Hospital | veterinary | Hatboro | county-line-veterinary-hospital.json |
-| 60 | Gallo Insurance Agency | insurance | Philadelphia | gallo-insurance-agency.json |
-| 61 | Grand Sport Auto Body | car-repair | Collegeville | grand-sport-auto-body.json |
-| 62 | BPM Fitness | fitness-centre |  | bpm-fitness.json |
-| 63 | First Class Auto Land | car | Philadelphia | first-class-auto-land.json |
-| 64 | Train and Nourish | fitness-centre | Philadelphia | train-and-nourish.json |
-| 65 | Fusion Gyms | fitness-centre | Philadelphia | fusion-gyms.json |
-| 66 | Easy Auto Tag & Insurance | insurance |  | easy-auto-tag-and-insurance.json |
-| 67 | NewAge® Industries | works | Southampton | newage-industries.json |
-| 68 | The Juice Merchant | restaurant | Narberth | the-juice-merchant.json |
-| 69 | Francis Kaufman House | restaurant |  | francis-kaufman-house.json |
-| 70 | Bei Jing Chinese Food | restaurant | Norristown | bei-jing-chinese-food.json |
-| 71 | Sciacca Service Center | car-repair |  | sciacca-service-center.json |
-| 72 | Malvern Veterinary Hospital | veterinary |  | malvern-veterinary-hospital.json |
-| 73 | Golden Sea | restaurant | Blue Bell | golden-sea.json |
-| 74 | Glocker and Co. Inc. Realtors | estate-agent | Boyertown | glocker-and-co-inc-realtors.json |
-| 75 | Upscale Consignments Boutiques Maria Fe's | clothes |  | upscale-consignments-boutiques-maria-fe-s.json |
-| 76 | Wynnewood Eyecare | optometrist |  | wynnewood-eyecare.json |
-| 77 | Bar 31 | bar | Ambler | bar-31.json |
-| 78 | August Moon | restaurant | Norristown | august-moon.json |
-| 79 | Theory | clothes | Pottstown | theory.json |
-| 80 | Highline Motors | car-repair | Aston | highline-motors.json |
-| 81 | Hero Complex | books | Philadelphia | hero-complex.json |
-| 82 | Barnes Financial Group | accountant | Media | barnes-financial-group.json |
-| 83 | Weathers Motors & Auto Sales | car | Media | weathers-motors-and-auto-sales.json |
-| 84 | TM Prestige Home Cash Buyer | estate-agent | Philadelphia | tm-prestige-home-cash-buyer.json |
-| 85 | Kinetic Physical Therapy | physiotherapist | Collegeville | kinetic-physical-therapy.json |
-| 86 | Field 1 Post, LLC | advertising-agency | Havertown | field-1-post-llc.json |
-| 87 | Boyle Energy - Heating, Air Conditioning, Oil & Propane | hvac | Havertown | boyle-energy-heating-air-conditioning-oil-and-propane.json |
-| 88 | Accurate Temperature | hvac | Bensalem | accurate-temperature.json |
-| 89 | Euphoria Nail Bar | beauty |  | euphoria-nail-bar.json |
-| 90 | Narberth Pizza | restaurant | Narberth | narberth-pizza.json |
-| 91 | Al Tacos Locos | restaurant | Jenkintown | al-tacos-locos.json |
-| 92 | Ming's Chinese | restaurant | Hatboro | ming-s-chinese.json |
-| 93 | Ember & Ale | restaurant | Collegeville | ember-and-ale.json |
-| 94 | The Edge Fitness Clubs | fitness-centre | Media | the-edge-fitness-clubs.json |
-| 95 | Affordable Dentures & Implants | dentist | Doylestown | affordable-dentures-and-implants.json |
-| 96 | B & M Construction & Hvac LLC | hvac | Whitehall | b-and-m-construction-and-hvac-llc.json |
-| 97 | Epam | it | Philadelphia | epam.json |
-| 98 | Fit4Mom | fitness-centre | Warrington | fit4mom.json |
-| 99 | Belle Palace Nail Spa | beauty | Warrington | belle-palace-nail-spa.json |
-| 100 | Anthropology | clothes | Devon | anthropology.json |
+| 44 | Metro Motors | car | Upper Darby | metro-motors.json |
+| 45 | Fenza's Auto Body | car-repair | Chester | fenza-s-auto-body.json |
+| 46 | Wallace Auto Service | car-repair | Bryn Mawr | wallace-auto-service.json |
+| 47 | Twisted Shamrock Studios & Spa | cosmetics |  | twisted-shamrock-studios-and-spa.json |
+| 48 | A & J Custom Painting | painter | Bensalem | a-and-j-custom-painting.json |
+| 49 | Chris Orser Landscaping | gardener | Doylestown | chris-orser-landscaping.json |
+| 50 | Morton Electric Pool & Spa Specialists | plumber | Trevose | morton-electric-pool-and-spa-specialists.json |
+| 51 | Sharp Stream Power Washing & Painting | painter | West Chester | sharp-stream-power-washing-and-painting.json |
+| 52 | Allure - Skincare. Nails. Body. | beauty | Lahaska | allure-skincare-nails-body.json |
+| 53 | A New Dawn Therapeutic Massage | massage | Doylestown | a-new-dawn-therapeutic-massage.json |
+| 54 | CoCo Nails | beauty | Warrington | coco-nails.json |
+| 55 | Tax Express | tax-advisor | Yardley | tax-express.json |
+| 56 | Pisano and Son Shoe Repair | shoes |  | pisano-and-son-shoe-repair.json |
+| 57 | West Philadelphia VA Clinic | clinic |  | west-philadelphia-va-clinic.json |
+| 58 | Danger Salon | hairdresser | Philadelphia | danger-salon.json |
+| 59 | Sense Zero Float Center | beauty | Yardley | sense-zero-float-center.json |
+| 60 | Mexico Magico | tax-advisor | Avondale | mexico-magico.json |
+| 61 | Chestnut Hill Animal Hospital | veterinary | Erdenheim | chestnut-hill-animal-hospital.json |
+| 62 | County Line Veterinary Hospital | veterinary | Hatboro | county-line-veterinary-hospital.json |
+| 63 | Gallo Insurance Agency | insurance | Philadelphia | gallo-insurance-agency.json |
+| 64 | Grand Sport Auto Body | car-repair | Collegeville | grand-sport-auto-body.json |
+| 65 | BPM Fitness | fitness-centre |  | bpm-fitness.json |
+| 66 | First Class Auto Land | car | Philadelphia | first-class-auto-land.json |
+| 67 | Train and Nourish | fitness-centre | Philadelphia | train-and-nourish.json |
+| 68 | Fusion Gyms | fitness-centre | Philadelphia | fusion-gyms.json |
+| 69 | Easy Auto Tag & Insurance | insurance |  | easy-auto-tag-and-insurance.json |
+| 70 | NewAge® Industries | works | Southampton | newage-industries.json |
+| 71 | The Juice Merchant | restaurant | Narberth | the-juice-merchant.json |
+| 72 | Francis Kaufman House | restaurant |  | francis-kaufman-house.json |
+| 73 | Bei Jing Chinese Food | restaurant | Norristown | bei-jing-chinese-food.json |
+| 74 | Sciacca Service Center | car-repair |  | sciacca-service-center.json |
+| 75 | Clear Vision Auto Glass | car-repair | Chadds Ford | clear-vision-auto-glass.json |
+| 76 | Malvern Veterinary Hospital | veterinary |  | malvern-veterinary-hospital.json |
+| 77 | Golden Sea | restaurant | Blue Bell | golden-sea.json |
+| 78 | Glocker and Co. Inc. Realtors | estate-agent | Boyertown | glocker-and-co-inc-realtors.json |
+| 79 | Upscale Consignments Boutiques Maria Fe's | clothes |  | upscale-consignments-boutiques-maria-fe-s.json |
+| 80 | Wynnewood Eyecare | optometrist |  | wynnewood-eyecare.json |
+| 81 | Bar 31 | bar | Ambler | bar-31.json |
+| 82 | August Moon | restaurant | Norristown | august-moon.json |
+| 83 | Theory | clothes | Pottstown | theory.json |
+| 84 | Highline Motors | car-repair | Aston | highline-motors.json |
+| 85 | Hero Complex | books | Philadelphia | hero-complex.json |
+| 86 | Barnes Financial Group | accountant | Media | barnes-financial-group.json |
+| 87 | Weathers Motors & Auto Sales | car | Media | weathers-motors-and-auto-sales.json |
+| 88 | TM Prestige Home Cash Buyer | estate-agent | Philadelphia | tm-prestige-home-cash-buyer.json |
+| 89 | Kinetic Physical Therapy | physiotherapist | Collegeville | kinetic-physical-therapy.json |
+| 90 | Field 1 Post, LLC | advertising-agency | Havertown | field-1-post-llc.json |
+| 91 | Boyle Energy - Heating, Air Conditioning, Oil & Propane | hvac | Havertown | boyle-energy-heating-air-conditioning-oil-and-propane.json |
+| 92 | Accurate Temperature | hvac | Bensalem | accurate-temperature.json |
+| 93 | Euphoria Nail Bar | beauty |  | euphoria-nail-bar.json |
+| 94 | Narberth Pizza | restaurant | Narberth | narberth-pizza.json |
+| 95 | Al Tacos Locos | restaurant | Jenkintown | al-tacos-locos.json |
+| 96 | Ming's Chinese | restaurant | Hatboro | ming-s-chinese.json |
+| 97 | Ember & Ale | restaurant | Collegeville | ember-and-ale.json |
+| 98 | The Edge Fitness Clubs | fitness-centre | Media | the-edge-fitness-clubs.json |
+| 99 | Affordable Dentures & Implants | dentist | Doylestown | affordable-dentures-and-implants.json |
+| 100 | B & M Construction & Hvac LLC | hvac | Whitehall | b-and-m-construction-and-hvac-llc.json |
