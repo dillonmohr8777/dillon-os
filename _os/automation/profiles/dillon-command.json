@@ -1,0 +1,119 @@
+{
+  "workflow_id": "dillon-command",
+  "name": "Dillon Command Center",
+  "version": "1.0.0",
+  "purpose": "One umbrella morning-and-midday loop: eight parallel agent lanes, one approval board, one push surface.",
+  "contract": "11_Agents/64gb Morning Orchestrator Spec 2026-07-08.md",
+  "supersedes": [
+    "handoffs/Morning Loop Scheduled Agent Setup.md",
+    "separate slack-intake + am-report + client-pulse crons",
+    "duplicate daily-orchestrator PR family"
+  ],
+  "parallel_lanes": 8,
+  "max_concurrent_workers": 8,
+  "approval_tiers": {
+    "0": "read, analyze, draft, build local artifacts",
+    "1": "reversible batch after one approval",
+    "2": "send, publish, deploy, spend, account change"
+  },
+  "p0_tie_break": [
+    "launch blocked",
+    "billing risk",
+    "ad disapprovals",
+    "calendar commitment"
+  ],
+  "lanes": {
+    "comms": {
+      "agent": "chief-of-staff",
+      "owner_routines": ["D04", "D05", "D06", "D20", "D21"],
+      "skills": ["slack-intake", "inbox-brief"],
+      "collectors": ["slack_inbox", "inbox_unprocessed", "communication_state"],
+      "commands": [],
+      "outputs": ["lane-comms.json", "open-loops.md"]
+    },
+    "clients": {
+      "agent": "marketing-chief",
+      "owner_routines": ["D01", "D02", "M04"],
+      "skills": ["client-pulse", "plan-today"],
+      "collectors": ["client_pulse", "approval_client_items"],
+      "commands": [],
+      "outputs": ["lane-clients.json", "pulse-today.md"]
+    },
+    "intelligence": {
+      "agent": "brain-curator",
+      "owner_routines": ["D13", "D26", "E05", "E10"],
+      "skills": ["research-sweep", "vault-compile"],
+      "collectors": ["grok_state", "research_freshness", "craft_brief_state"],
+      "commands": [],
+      "outputs": ["lane-intelligence.json"]
+    },
+    "websites": {
+      "agent": "web-product-builder",
+      "owner_routines": ["W01", "W10", "W11"],
+      "skills": ["site-factory", "site-grade", "ux-audit"],
+      "collectors": ["site_health_state", "radar_summary", "landing_page_queue"],
+      "commands": [
+        {
+          "id": "site-health-dry",
+          "cmd": "node",
+          "args": ["_os/automation/bin/site-health.js", "--dry-run"],
+          "optional": true,
+          "timeout_ms": 120000
+        }
+      ],
+      "outputs": ["lane-websites.json"]
+    },
+    "outreach": {
+      "agent": "growth-content",
+      "owner_routines": ["W07", "E07"],
+      "skills": ["site-batch"],
+      "collectors": ["radar_build_queue", "prospect_counts"],
+      "commands": [],
+      "outputs": ["lane-outreach.json"]
+    },
+    "ads": {
+      "agent": "paid-media-analyst",
+      "owner_routines": ["D17", "D18", "M01", "M02"],
+      "skills": ["metrics-pull", "client-report"],
+      "collectors": ["approval_ads_items", "client_campaign_overlays"],
+      "commands": [],
+      "outputs": ["lane-ads.json"]
+    },
+    "reporting": {
+      "agent": "paid-media-analyst",
+      "owner_routines": ["M02", "M03"],
+      "skills": ["client-report"],
+      "collectors": ["report_ingest_state", "pending_reports"],
+      "commands": [],
+      "outputs": ["lane-reporting.json"]
+    },
+    "command": {
+      "agent": "marketing-chief",
+      "owner_routines": ["D08", "D09", "D10", "D11", "D27"],
+      "skills": ["am-report", "plan-today", "operating-team"],
+      "collectors": ["synthesize_board"],
+      "depends_on": ["comms", "clients", "intelligence", "websites", "outreach", "ads", "reporting"],
+      "outputs": ["approval-board.md", "am-report-YYYY-MM-DD.md", "run-state.json"]
+    }
+  },
+  "local_only_commands": [
+    {
+      "id": "claude-daily-driver",
+      "note": "Micro-loop for gated routine execution; runs on Windows Task Scheduler every 15m, not inside cloud agent mode.",
+      "cmd": "powershell",
+      "args": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "System/scripts/Invoke-ClaudeDailyDriver.ps1"]
+    },
+    {
+      "id": "prospect-radar-daily",
+      "note": "05:20 local build of 20 noindex sites; stays separate heavy batch, but surfaces state to outreach lane.",
+      "cmd": "powershell",
+      "args": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "automation/prospect-radar-next20/Run-ProspectRadarNext20Daily.ps1"]
+    }
+  ],
+  "retained_separate": {
+    "claude-daily-driver": "15m micro-loop for 54 routines — feeds command lane receipts, not replaced",
+    "prospect-radar-next20": "heavy site builder batch — outreach lane reads its state only",
+    "agent-memory-vault-sync": "hourly memory projection — intelligence lane reads freshness only",
+    "hermes-gateway-health": "infrastructure probe — reliability lane future; do not merge into command synthesis"
+  }
+}
