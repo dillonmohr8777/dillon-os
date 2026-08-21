@@ -1,0 +1,21 @@
+{
+  "lane": "outreach",
+  "agent": "growth-content",
+  "started_at": "2026-08-21T13:04:16.943Z",
+  "collectors": {
+    "radar_summary": {
+      "file": "Daily-Briefs/radar-2026-08-21.md",
+      "tracked": 1088,
+      "build_queue": 207
+    },
+    "radar_build_queue": {
+      "file": "12_Brain/state/radar/build-queue.csv",
+      "rows": 54
+    }
+  },
+  "commands": [],
+  "tasks": [],
+  "blockers": [],
+  "finished_at": "2026-08-21T13:04:16.943Z",
+  "task_count": 0
+}

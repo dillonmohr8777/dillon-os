@@ -1,0 +1,105 @@
+{
+  "lane": "ads",
+  "agent": "paid-media-analyst",
+  "started_at": "2026-08-21T13:04:16.943Z",
+  "collectors": {
+    "approval_ads_items": [
+      {
+        "line": "- [ ] 2026-07-12 - Omega Landscaping & Concrete - Approve account changes only after Google/Meta call, form, and lead-quality attribution is verified - Risk: high",
+        "risk": "high",
+        "client": "unknown"
+      },
+      {
+        "line": "- [ ] 2026-07-12 - On-Site Concrete & Landscape - Approve technical or campaign changes after allowlisted crawl and conversion-action audit - Risk: medium",
+        "risk": "mediumium",
+        "client": "unknown"
+      },
+      {
+        "line": "- [ ] 2026-07-12 - Shadow Heating & Cooling - Approve site deployment and any spend change after Meta access and current lead delivery are verified - Risk: high",
+        "risk": "high",
+        "client": "unknown"
+      },
+      {
+        "line": "- [ ] 2026-07-12 - Replenish - Confirm recurring fifth dashboard slot; approve any new location, budget, or campaign change - Risk: high",
+        "risk": "high",
+        "client": "unknown"
+      },
+      {
+        "line": "- [ ] 2026-07-12 - Fagan Painting - Approve scaling only after Meta Lead event, form, phone, and lead delivery reconcile - Risk: high",
+        "risk": "high",
+        "client": "unknown"
+      },
+      {
+        "line": "- [ ] 2026-07-12 - Capsule & Tonic - Approve optimization only after platform conversions reconcile to real leads - Risk: high",
+        "risk": "high",
+        "client": "unknown"
+      },
+      {
+        "line": "- [ ] 2026-07-12 - Pro Fence & Deck - Approve future LSA work separately; current lane is SEO only - Risk: medium",
+        "risk": "mediumium",
+        "client": "unknown"
+      },
+      {
+        "line": "- [ ] 2026-07-12 - Cursor/MCP - Authenticate Composio, Slack, and WordPress connectors when live reads are required - Risk: low",
+        "risk": "low",
+        "client": "unknown"
+      },
+      {
+        "line": "- [ ] 2026-07-12 -- [Book Funnel / ironicineptocracy.com] -- Approve GA4 + Meta Pixel install and launch Meta ads to lead-magnet; spend change -- Source: 00_Inbox/Top 15 Opportunities 2026-07-02.md -- Evidence: \"Install ",
+        "risk": "high",
+        "client": "unknown"
+      },
+      {
+        "line": "- [ ] 2026-07-12 -- [Ironic Ineptocracy Book / ironicineptocracy.com] -- Fix broken /api/dossier-leads endpoint with Vercel serverless function and verify lead-magnet delivery; deployment -- Source: 00_Inbox/Top 15 Oppor",
+        "risk": "high",
+        "client": "unknown"
+      },
+      {
+        "line": "- [ ] 2026-07-12 -- [Book / Guest Posts] -- Approve and send guest-post pitches to CrimeReads, Spybrary, Independent Book Review -- Source: 00_Inbox/Top 15 Opportunities 2026-07-02.md -- Evidence: \"Run the guest-post pip",
+        "risk": "low",
+        "client": "unknown"
+      },
+      {
+        "line": "- [ ] 2026-07-12 -- [Bar Crawl USA] -- Approve clearance of 2 disapproved ads (Halloween/Fall Cocktail) and audit PMax for Presence Only + tCPA guardrail; ad change -- Source: 01_Clients/Bar Crawl USA/active-campaigns.md",
+        "risk": "high",
+        "client": "unknown"
+      }
+    ]
+  },
+  "commands": [],
+  "tasks": [
+    {
+      "title": "2026-07-12 - Omega Landscaping & Concrete - Approve account changes only after Google/Meta call, form, and lead-quality ",
+      "client": "unknown",
+      "risk": "high",
+      "tier": 2
+    },
+    {
+      "title": "2026-07-12 - On-Site Concrete & Landscape - Approve technical or campaign changes after allowlisted crawl and conversion",
+      "client": "unknown",
+      "risk": "mediumium",
+      "tier": 1
+    },
+    {
+      "title": "2026-07-12 - Shadow Heating & Cooling - Approve site deployment and any spend change after Meta access and current lead ",
+      "client": "unknown",
+      "risk": "high",
+      "tier": 2
+    },
+    {
+      "title": "2026-07-12 - Replenish - Confirm recurring fifth dashboard slot; approve any new location, budget, or campaign change - ",
+      "client": "unknown",
+      "risk": "high",
+      "tier": 2
+    },
+    {
+      "title": "2026-07-12 - Fagan Painting - Approve scaling only after Meta Lead event, form, phone, and lead delivery reconcile - Ris",
+      "client": "unknown",
+      "risk": "high",
+      "tier": 2
+    }
+  ],
+  "blockers": [],
+  "finished_at": "2026-08-21T13:04:16.944Z",
+  "task_count": 5
+}

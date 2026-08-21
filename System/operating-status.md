@@ -1,6 +1,6 @@
 ---
 tags: [system, operating-status]
-last_updated: 2026-07-19
+last_updated: 2026-08-21
 callsign: D.I.L.L.O.N.
 operator: Dillon Mohr
 goal_label: ACTIVE CLIENTS
@@ -38,3 +38,12 @@ The vault was reconciled on 2026-07-12 against current work from the rolling thr
 - Refresh the roster weekly using current Slack, Gmail, Ads, project, and delivery evidence.
 - Do not revive a removed name from historical notes without current evidence.
 - No send, publish, deploy, campaign mutation, spend change, or client-account change without explicit approval.
+
+## Automation umbrella (2026-08-21)
+
+Competing morning automations are consolidated under **Dillon Command Center**
+(`dillon-command` in `12_Brain/registry/automations.json`). One scheduled cloud
+agent runs eight parallel lanes and emits a single approval board. The separate
+Morning Loop cron (slack-intake + am-report + client-pulse) is superseded.
+Claude daily driver (15m) and Prospect Radar Next 20 (05:20) remain separate
+micro-loops. Setup: `handoffs/Dillon Command Center Scheduled Agent Setup.md`.

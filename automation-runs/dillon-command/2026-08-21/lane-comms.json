@@ -1,0 +1,88 @@
+{
+  "lane": "comms",
+  "agent": "chief-of-staff",
+  "started_at": "2026-08-21T13:04:16.892Z",
+  "collectors": {
+    "slack_inbox": {
+      "total": 4,
+      "open": 4,
+      "items": [
+        {
+          "file": "00_Inbox/slack/2026-07-30-jason-sean-bot-case-status-alert.md",
+          "title": "Stabilize the bot and add case-status notifications",
+          "status": "new",
+          "priority": "urgent",
+          "client": "Momentum 360",
+          "source_as_of": "2026-07-30T09:35:59-04:00",
+          "age_days": 21
+        },
+        {
+          "file": "00_Inbox/slack/2026-07-30-jenny-brand-direction.md",
+          "title": "Confirm NeedMomentum brand direction",
+          "status": "new",
+          "priority": "normal",
+          "client": "Momentum 360",
+          "source_as_of": "2026-07-30T09:46:20-04:00",
+          "age_days": 21
+        },
+        {
+          "file": "00_Inbox/slack/2026-07-30-melissa-guidelines-training-prompt.md",
+          "title": "Close the guidelines prompt and Loom follow-up",
+          "status": "new",
+          "priority": "high",
+          "client": "Momentum 360",
+          "source_as_of": "2026-07-30T10:01:50-04:00",
+          "age_days": 21
+        },
+        {
+          "file": "00_Inbox/slack/2026-07-30-sean-callrail-status.md",
+          "title": "Verify CallRail activity and report what changed",
+          "status": "new",
+          "priority": "high",
+          "client": "Momentum 360",
+          "source_as_of": "2026-07-30T09:48:25-04:00",
+          "age_days": 21
+        }
+      ]
+    },
+    "communication_state": {}
+  },
+  "commands": [],
+  "tasks": [
+    {
+      "title": "Stabilize the bot and add case-status notifications",
+      "client": "Momentum 360",
+      "priority": "urgent",
+      "age_days": 21,
+      "file": "00_Inbox/slack/2026-07-30-jason-sean-bot-case-status-alert.md",
+      "tier": 2
+    },
+    {
+      "title": "Confirm NeedMomentum brand direction",
+      "client": "Momentum 360",
+      "priority": "normal",
+      "age_days": 21,
+      "file": "00_Inbox/slack/2026-07-30-jenny-brand-direction.md",
+      "tier": 2
+    },
+    {
+      "title": "Close the guidelines prompt and Loom follow-up",
+      "client": "Momentum 360",
+      "priority": "high",
+      "age_days": 21,
+      "file": "00_Inbox/slack/2026-07-30-melissa-guidelines-training-prompt.md",
+      "tier": 2
+    },
+    {
+      "title": "Verify CallRail activity and report what changed",
+      "client": "Momentum 360",
+      "priority": "high",
+      "age_days": 21,
+      "file": "00_Inbox/slack/2026-07-30-sean-callrail-status.md",
+      "tier": 2
+    }
+  ],
+  "blockers": [],
+  "finished_at": "2026-08-21T13:04:16.893Z",
+  "task_count": 4
+}

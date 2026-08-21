@@ -2,7 +2,7 @@
 note_type: dashboard
 status: active
 owner: Dillon Mohr
-updated: 2026-08-15
+updated: 2026-08-21
 review_cadence: daily
 tags:
   - dashboard
@@ -21,10 +21,11 @@ navigation is needed.
 Checkbox items only — `_os/vault-state.js` reads this section for the HUD
 directive feed and skips any other list format.
 
-- [ ] Process [[00_Inbox/Start Here|inbox]] material that affects current work.
-- [ ] Choose one finish line from the active-project view.
+- [ ] Stabilize Momentum bot + case-status alerts ([[00_Inbox/slack/2026-07-30-jason-sean-bot-case-status-alert|urgent Slack loop]])
+- [ ] Clear Bar Crawl disapproved ads + PMax audit (approval-gated)
+- [ ] Reply to Momentum brand direction + CallRail status after evidence check
+- [ ] Run [[12_Brain/03_Concepts/Dillon Command Center|Dillon Command Center]] umbrella cycle (replaces separate morning crons)
 - [ ] Verify facts before external or consequential action.
-- [ ] Record decisions, lessons, and outcome evidence before closing the loop.
 
 ## Active projects
 

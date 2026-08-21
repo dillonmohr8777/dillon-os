@@ -1,0 +1,146 @@
+{
+  "lane": "websites",
+  "agent": "web-product-builder",
+  "started_at": "2026-08-21T13:04:16.940Z",
+  "collectors": {
+    "site_health_state": {
+      "automation_id": "site-health-sentinel",
+      "started_at": "2026-08-21T13:04:02.642Z",
+      "status": "error",
+      "dry_run": true,
+      "counts": {
+        "total": 5,
+        "pass": 1,
+        "warn": 0,
+        "fail": 1,
+        "skipped": 3
+      },
+      "results": [
+        {
+          "id": "fixture-healthy",
+          "name": "Fixture healthy site",
+          "url": "fixture://healthy",
+          "priority": "test",
+          "mode": "fixture",
+          "ok": true,
+          "status": "pass",
+          "checks": [
+            {
+              "id": "viewport",
+              "ok": true,
+              "detail": "viewport meta present"
+            },
+            {
+              "id": "tracking_hints",
+              "ok": true,
+              "detail": "tracking hints: ga=true meta=false",
+              "severity": "warn"
+            }
+          ]
+        },
+        {
+          "id": "fixture-broken-form",
+          "name": "Fixture broken form",
+          "url": "fixture://broken-form",
+          "priority": "test",
+          "mode": "fixture",
+          "ok": false,
+          "status": "fail",
+          "checks": [
+            {
+              "id": "viewport",
+              "ok": false,
+              "detail": "missing viewport meta"
+            },
+            {
+              "id": "tracking_hints",
+              "ok": false,
+              "detail": "no GA4/Meta pixel hints",
+              "severity": "warn"
+            },
+            {
+              "id": "form_endpoint",
+              "ok": false,
+              "detail": "form endpoint marked missing: /api/dossier-leads",
+              "severity": "critical"
+            }
+          ]
+        },
+        {
+          "id": "book-ironicineptocracy",
+          "name": "Ironic Ineptocracy book site",
+          "url": "https://ironicineptocracy.com",
+          "mode": "dry-run-skip-live",
+          "ok": true,
+          "status": "skipped",
+          "checks": [
+            {
+              "id": "live_skipped",
+              "ok": true,
+              "detail": "skipped in dry-run; pass --live to GET",
+              "severity": "info"
+            }
+          ]
+        },
+        {
+          "id": "mohr-media",
+          "name": "Mohr Media",
+          "url": "https://themohrmedia.com",
+          "mode": "dry-run-skip-live",
+          "ok": true,
+          "status": "skipped",
+          "checks": [
+            {
+              "id": "live_skipped",
+              "ok": true,
+              "detail": "skipped in dry-run; pass --live to GET",
+              "severity": "info"
+            }
+          ]
+        },
+        {
+          "id": "immohrtal",
+          "name": "IMMOHRTAL",
+          "url": "https://immohrtal-site.netlify.app",
+          "mode": "dry-run-skip-live",
+          "ok": true,
+          "status": "skipped",
+          "checks": [
+            {
+              "id": "live_skipped",
+              "ok": true,
+              "detail": "skipped in dry-run; pass --live to GET",
+              "severity": "info"
+            }
+          ]
+        }
+      ],
+      "artifact_paths": [
+        "/workspace/Daily-Briefs/site-health-report.md"
+      ],
+      "written_at": "2026-08-21T13:04:02.643Z"
+    },
+    "radar_summary": {
+      "file": "Daily-Briefs/radar-2026-08-21.md",
+      "tracked": 1088,
+      "build_queue": 207
+    },
+    "landing_page_queue": {
+      "file": "02_Campaigns/Landing Page Build Queue.md",
+      "exists": true
+    }
+  },
+  "commands": [
+    {
+      "id": "site-health-dry",
+      "state": "ok",
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"fail\",\n  \"dry_run\": true,\n  \"counts\": {\n    \"total\": 5,\n    \"pass\": 1,\n    \"warn\": 0,\n    \"fail\": 1,\n    \"skipped\": 3\n  },\n  \"state\": \"/workspace/12_Brain/state/site-health-sentinel.json\",\n  \"report\": \"/workspace/Daily-Briefs/site-health-report.md\"\n}\n",
+      "stderr": ""
+    }
+  ],
+  "tasks": [],
+  "blockers": [],
+  "finished_at": "2026-08-21T13:04:16.966Z",
+  "task_count": 0
+}

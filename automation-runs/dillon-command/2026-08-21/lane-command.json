@@ -1,0 +1,150 @@
+{
+  "lane": "command",
+  "agent": "marketing-chief",
+  "started_at": "2026-08-21T13:04:16.967Z",
+  "synthesis": {
+    "p0": [
+      {
+        "title": "- [ ] 2026-07-12 -- [Bar Crawl USA] -- Approve clearance of 2 disapproved ads (Halloween/Fall Cocktail) and audit PMax for Presence Only + t",
+        "client": "unknown",
+        "lane": "ads",
+        "tier": 2,
+        "p0_reason": "billing or disapproval risk"
+      },
+      {
+        "title": "Stabilize the bot and add case-status notifications",
+        "client": "Momentum 360",
+        "lane": "comms",
+        "tier": 2,
+        "p0_reason": "urgent slack loop",
+        "file": "00_Inbox/slack/2026-07-30-jason-sean-bot-case-status-alert.md"
+      },
+      {
+        "title": "Confirm NeedMomentum brand direction",
+        "client": "Momentum 360",
+        "priority": "normal",
+        "age_days": 21,
+        "file": "00_Inbox/slack/2026-07-30-jenny-brand-direction.md",
+        "tier": 2,
+        "lane": "comms"
+      },
+      {
+        "title": "Close the guidelines prompt and Loom follow-up",
+        "client": "Momentum 360",
+        "priority": "high",
+        "age_days": 21,
+        "file": "00_Inbox/slack/2026-07-30-melissa-guidelines-training-prompt.md",
+        "tier": 2,
+        "lane": "comms"
+      },
+      {
+        "title": "Verify CallRail activity and report what changed",
+        "client": "Momentum 360",
+        "priority": "high",
+        "age_days": 21,
+        "file": "00_Inbox/slack/2026-07-30-sean-callrail-status.md",
+        "tier": 2,
+        "lane": "comms"
+      },
+      {
+        "title": "Touch stalled client: AMI Cleaning",
+        "client": "AMI Cleaning",
+        "age_days": 999,
+        "tier": 0,
+        "lane": "clients"
+      },
+      {
+        "title": "Touch stalled client: BOK Law Firm",
+        "client": "BOK Law Firm",
+        "age_days": 999,
+        "tier": 0,
+        "lane": "clients"
+      },
+      {
+        "title": "Touch stalled client: Bar Crawl USA",
+        "client": "Bar Crawl USA",
+        "age_days": 999,
+        "tier": 0,
+        "lane": "clients"
+      }
+    ],
+    "open_approvals": 181,
+    "open_slack_loops": 4,
+    "radar_build_queue": 207,
+    "stalled_clients": 24
+  },
+  "tasks": [
+    {
+      "rank": 1,
+      "title": "- [ ] 2026-07-12 -- [Bar Crawl USA] -- Approve clearance of 2 disapproved ads (Halloween/Fall Cocktail) and audit PMax for Presence Only + t",
+      "client": "unknown",
+      "lane": "ads",
+      "tier": 2,
+      "p0_reason": "billing or disapproval risk"
+    },
+    {
+      "rank": 2,
+      "title": "Stabilize the bot and add case-status notifications",
+      "client": "Momentum 360",
+      "lane": "comms",
+      "tier": 2,
+      "p0_reason": "urgent slack loop",
+      "file": "00_Inbox/slack/2026-07-30-jason-sean-bot-case-status-alert.md"
+    },
+    {
+      "rank": 3,
+      "title": "Confirm NeedMomentum brand direction",
+      "client": "Momentum 360",
+      "priority": "normal",
+      "age_days": 21,
+      "file": "00_Inbox/slack/2026-07-30-jenny-brand-direction.md",
+      "tier": 2,
+      "lane": "comms"
+    },
+    {
+      "rank": 4,
+      "title": "Close the guidelines prompt and Loom follow-up",
+      "client": "Momentum 360",
+      "priority": "high",
+      "age_days": 21,
+      "file": "00_Inbox/slack/2026-07-30-melissa-guidelines-training-prompt.md",
+      "tier": 2,
+      "lane": "comms"
+    },
+    {
+      "rank": 5,
+      "title": "Verify CallRail activity and report what changed",
+      "client": "Momentum 360",
+      "priority": "high",
+      "age_days": 21,
+      "file": "00_Inbox/slack/2026-07-30-sean-callrail-status.md",
+      "tier": 2,
+      "lane": "comms"
+    },
+    {
+      "rank": 6,
+      "title": "Touch stalled client: AMI Cleaning",
+      "client": "AMI Cleaning",
+      "age_days": 999,
+      "tier": 0,
+      "lane": "clients"
+    },
+    {
+      "rank": 7,
+      "title": "Touch stalled client: BOK Law Firm",
+      "client": "BOK Law Firm",
+      "age_days": 999,
+      "tier": 0,
+      "lane": "clients"
+    },
+    {
+      "rank": 8,
+      "title": "Touch stalled client: Bar Crawl USA",
+      "client": "Bar Crawl USA",
+      "age_days": 999,
+      "tier": 0,
+      "lane": "clients"
+    }
+  ],
+  "finished_at": "2026-08-21T13:04:16.967Z"
+}

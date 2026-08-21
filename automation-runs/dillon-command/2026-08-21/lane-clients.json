@@ -1,0 +1,247 @@
+{
+  "lane": "clients",
+  "agent": "marketing-chief",
+  "started_at": "2026-08-21T13:04:16.893Z",
+  "collectors": {
+    "client_pulse": {
+      "moving": 0,
+      "watch": 0,
+      "stalled": 24,
+      "clients": [
+        {
+          "client": "AMI Cleaning",
+          "age_days": 999,
+          "state": "stalled",
+          "files": 2
+        },
+        {
+          "client": "BOK Law Firm",
+          "age_days": 999,
+          "state": "stalled",
+          "files": 2
+        },
+        {
+          "client": "Bar Crawl USA",
+          "age_days": 999,
+          "state": "stalled",
+          "files": 9
+        },
+        {
+          "client": "Bercos Popcorn",
+          "age_days": 999,
+          "state": "stalled",
+          "files": 2
+        },
+        {
+          "client": "BigOrange Marketing",
+          "age_days": 999,
+          "state": "stalled",
+          "files": 3
+        },
+        {
+          "client": "Bridge Software Development",
+          "age_days": 999,
+          "state": "stalled",
+          "files": 7
+        },
+        {
+          "client": "Capsule & Tonic",
+          "age_days": 999,
+          "state": "stalled",
+          "files": 1
+        },
+        {
+          "client": "Cindy May Christmas",
+          "age_days": 999,
+          "state": "stalled",
+          "files": 2
+        },
+        {
+          "client": "Everyday Life Insurance",
+          "age_days": 999,
+          "state": "stalled",
+          "files": 1
+        },
+        {
+          "client": "Fagan Painting",
+          "age_days": 999,
+          "state": "stalled",
+          "files": 2
+        },
+        {
+          "client": "Fresh Blends",
+          "age_days": 999,
+          "state": "stalled",
+          "files": 2
+        },
+        {
+          "client": "Hope Wellness Center",
+          "age_days": 999,
+          "state": "stalled",
+          "files": 2
+        },
+        {
+          "client": "Kimberly James Bridal",
+          "age_days": 999,
+          "state": "stalled",
+          "files": 9
+        },
+        {
+          "client": "Momentum 360",
+          "age_days": 999,
+          "state": "stalled",
+          "files": 2
+        },
+        {
+          "client": "NKCDC",
+          "age_days": 999,
+          "state": "stalled",
+          "files": 2
+        },
+        {
+          "client": "Omega Landscaping",
+          "age_days": 999,
+          "state": "stalled",
+          "files": 9
+        },
+        {
+          "client": "Onsite Concrete",
+          "age_days": 999,
+          "state": "stalled",
+          "files": 9
+        },
+        {
+          "client": "Pritzker Law Group",
+          "age_days": 999,
+          "state": "stalled",
+          "files": 2
+        },
+        {
+          "client": "Pro Fence & Deck",
+          "age_days": 999,
+          "state": "stalled",
+          "files": 2
+        },
+        {
+          "client": "Replenish",
+          "age_days": 999,
+          "state": "stalled",
+          "files": 4
+        }
+      ]
+    },
+    "approval_client_items": [
+      {
+        "line": "- [ ] 2026-07-12 - Kimberly James Bridal - Approve completion update after FAQ desktop image crop and responsive QA; verify appointment-source reconciliation first - Risk: low",
+        "risk": "low",
+        "client": "unknown"
+      },
+      {
+        "line": "- [ ] 2026-07-12 - Omega Landscaping & Concrete - Approve account changes only after Google/Meta call, form, and lead-quality attribution is verified - Risk: high",
+        "risk": "high",
+        "client": "unknown"
+      },
+      {
+        "line": "- [ ] 2026-07-12 - On-Site Concrete & Landscape - Approve technical or campaign changes after allowlisted crawl and conversion-action audit - Risk: medium",
+        "risk": "mediumium",
+        "client": "unknown"
+      },
+      {
+        "line": "- [ ] 2026-07-12 - Shadow Heating & Cooling - Approve site deployment and any spend change after Meta access and current lead delivery are verified - Risk: high",
+        "risk": "high",
+        "client": "unknown"
+      },
+      {
+        "line": "- [ ] 2026-07-12 - Replenish - Confirm recurring fifth dashboard slot; approve any new location, budget, or campaign change - Risk: high",
+        "risk": "high",
+        "client": "unknown"
+      },
+      {
+        "line": "- [ ] 2026-07-12 - Fagan Painting - Approve scaling only after Meta Lead event, form, phone, and lead delivery reconcile - Risk: high",
+        "risk": "high",
+        "client": "unknown"
+      },
+      {
+        "line": "- [ ] 2026-07-12 - Capsule & Tonic - Approve optimization only after platform conversions reconcile to real leads - Risk: high",
+        "risk": "high",
+        "client": "unknown"
+      },
+      {
+        "line": "- [ ] 2026-07-12 - Bar Crawl USA - Approve publish after current-event hub and Boos & Booze SEO QA; do not alter ticketing or source data - Risk: medium",
+        "risk": "mediumium",
+        "client": "unknown"
+      },
+      {
+        "line": "- [ ] 2026-07-12 - Hope Wellness Center - Approve external response and any added graphic-design scope after request analysis - Risk: low",
+        "risk": "low",
+        "client": "unknown"
+      },
+      {
+        "line": "- [ ] 2026-07-12 - Pro Fence & Deck - Approve future LSA work separately; current lane is SEO only - Risk: medium",
+        "risk": "mediumium",
+        "client": "unknown"
+      },
+      {
+        "line": "- [ ] 2026-07-12 - Everyday Life Insurance - Approve launch changes after 404 and site QA; approve links before acquisition - Risk: medium",
+        "risk": "mediumium",
+        "client": "unknown"
+      },
+      {
+        "line": "- [ ] 2026-07-12 - VA Claims - Approve client review after VACE design reconciliation; backend and DNS changes remain gated - Risk: medium",
+        "risk": "mediumium",
+        "client": "unknown"
+      },
+      {
+        "line": "- [ ] 2026-07-12 - Bridge Software Development - Approve client-facing milestone after Phase 1 ownership board and compliance review - Risk: medium",
+        "risk": "mediumium",
+        "client": "unknown"
+      },
+      {
+        "line": "- [ ] 2026-07-12 - Revenue - Verify current invoices or contracts for all 14 active clients before publishing MRR - Risk: low",
+        "risk": "low",
+        "client": "unknown"
+      },
+      {
+        "line": "- [ ] 2026-07-12 - Cursor/MCP - Authenticate Composio, Slack, and WordPress connectors when live reads are required - Risk: low",
+        "risk": "low",
+        "client": "unknown"
+      }
+    ]
+  },
+  "commands": [],
+  "tasks": [
+    {
+      "title": "Touch stalled client: AMI Cleaning",
+      "client": "AMI Cleaning",
+      "age_days": 999,
+      "tier": 0
+    },
+    {
+      "title": "Touch stalled client: BOK Law Firm",
+      "client": "BOK Law Firm",
+      "age_days": 999,
+      "tier": 0
+    },
+    {
+      "title": "Touch stalled client: Bar Crawl USA",
+      "client": "Bar Crawl USA",
+      "age_days": 999,
+      "tier": 0
+    },
+    {
+      "title": "Touch stalled client: Bercos Popcorn",
+      "client": "Bercos Popcorn",
+      "age_days": 999,
+      "tier": 0
+    },
+    {
+      "title": "Touch stalled client: BigOrange Marketing",
+      "client": "BigOrange Marketing",
+      "age_days": 999,
+      "tier": 0
+    }
+  ],
+  "blockers": [],
+  "finished_at": "2026-08-21T13:04:16.940Z",
+  "task_count": 5
+}
