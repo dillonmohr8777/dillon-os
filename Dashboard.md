@@ -21,10 +21,9 @@ navigation is needed.
 Checkbox items only — `_os/vault-state.js` reads this section for the HUD
 directive feed and skips any other list format.
 
-- [ ] Process [[00_Inbox/Start Here|inbox]] material that affects current work.
-- [ ] Choose one finish line from the active-project view.
-- [ ] Verify facts before external or consequential action.
-- [ ] Record decisions, lessons, and outcome evidence before closing the loop.
+- [ ] 2026-07-12 -- [Ironic Ineptocracy Book / ironicineptocracy.com] -- Fix broken /api/dossier ([[System/approval-queue.md|source]])
+- [ ] Replenish Google Ads billing block ([[01_Clients/Replenish/Google Ads Billing Block 2026-07-30.md|source]])
+- [ ] 2026-08-13 -- [Replenish] -- Approve account-owner billing follow-up with Mia, then verify ([[System/approval-queue.md|source]])
 
 ## Active projects
 

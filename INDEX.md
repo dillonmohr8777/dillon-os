@@ -74,6 +74,8 @@ links instead of loading the entire vault.
 
 ## Operating system
 
+- [[12_Brain/03_Concepts/Dillon Command Center|Dillon Command Center]] — one umbrella morning workflow, eight parallel lanes.
+- [[handoffs/Dillon Command Center Scheduled Agent Setup|Command Center cron setup]]
 - [[12_Brain/09_Ops/Architecture|Second Brain Architecture]]
 - [[12_Brain/09_Ops/Schema|Canonical Properties]]
 - [[12_Brain/09_Ops/AGENT_PROTOCOL|Agent Protocol]]

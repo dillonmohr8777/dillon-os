@@ -1,0 +1,123 @@
+{
+  "id": "dillon-command",
+  "name": "Dillon Command Center",
+  "version": 1,
+  "description": "One umbrella morning workflow with eight parallel agent lanes.",
+  "schedule": "0 13 * * *",
+  "timezone": "UTC",
+  "concurrency": 8,
+  "p0_tiebreak": [
+    "launch_blocked",
+    "billing_risk",
+    "ad_disapproval",
+    "calendar_commitment"
+  ],
+  "lanes": [
+    {
+      "id": "comms",
+      "agent": "chief-of-staff",
+      "skills": ["slack-intake", "inbox-brief"],
+      "scans": [
+        "00_Inbox/slack",
+        "00_Inbox",
+        "Daily-Briefs/source-intake-*.md"
+      ],
+      "outputs": ["slack-requests", "inbox-decisions"]
+    },
+    {
+      "id": "clients",
+      "agent": "marketing-chief",
+      "skills": ["client-pulse", "plan-today"],
+      "scans": [
+        "01_Clients",
+        "System/operating-status.md",
+        "System/approval-queue.md"
+      ],
+      "outputs": ["client-movement", "stalled-clients"]
+    },
+    {
+      "id": "intelligence",
+      "agent": "brain-curator",
+      "skills": ["research-sweep", "vault-compile"],
+      "scans": [
+        "12_Brain/06_Research",
+        "Daily-Briefs/radar-*.md",
+        "_os/automation/incoming/grok"
+      ],
+      "outputs": ["intel-signals", "stale-research"]
+    },
+    {
+      "id": "websites",
+      "agent": "web-product-builder",
+      "skills": ["site-factory", "site-grade", "ux-audit"],
+      "scans": [
+        "02_Campaigns/Landing Page Build Queue.md",
+        "_os/creative-factory/landing-pages",
+        "Daily-Briefs/site-health-report.md"
+      ],
+      "outputs": ["ready-to-publish", "site-health-flags"]
+    },
+    {
+      "id": "outreach",
+      "agent": "growth-content",
+      "skills": ["site-batch", "content-scan"],
+      "scans": [
+        "12_Brain/state/radar/build-queue.csv",
+        "Daily-Briefs/radar-*.md",
+        "08_Prospects"
+      ],
+      "outputs": ["prospect-queue", "sell-traffic-not-rebuild"]
+    },
+    {
+      "id": "ads",
+      "agent": "paid-media-analyst",
+      "skills": ["metrics-pull", "client-report"],
+      "scans": [
+        "01_Clients/*/active-campaigns.md",
+        "System/approval-queue.md"
+      ],
+      "outputs": ["billing-blocks", "disapprovals", "attribution-gaps"]
+    },
+    {
+      "id": "reporting",
+      "agent": "paid-media-analyst",
+      "skills": ["client-report", "am-report"],
+      "scans": [
+        "Daily-Briefs/reports",
+        "_os/automation/incoming/reports"
+      ],
+      "outputs": ["draft-reports", "report-gaps"]
+    },
+    {
+      "id": "command",
+      "agent": "marketing-chief",
+      "skills": ["am-report", "plan-today", "operating-team"],
+      "scans": [
+        "System/approval-queue.md",
+        "Dashboard.md",
+        "System/OS Config.md"
+      ],
+      "outputs": ["approval-board", "top-priorities", "today-directives"]
+    }
+  ],
+  "supersedes": [
+    "handoffs/Morning Loop Scheduled Agent Setup.md",
+    "daily-morning-orchestrator-dry-board"
+  ],
+  "retained_separate": [
+    "Claude-Autonomous-Daily-Driver",
+    "Prospect Radar - Next 20 Daily Builder",
+    "Codex-AgentMemory-VaultSync"
+  ],
+  "artifacts": {
+    "run_dir": "automation-runs/dillon-command/YYYY-MM-DD",
+    "files": [
+      "run-state.json",
+      "approval-board.md",
+      "lane-results.json",
+      "am-report.md",
+      "tier1-batch.json",
+      "tier2-queue.md"
+    ]
+  }
+}

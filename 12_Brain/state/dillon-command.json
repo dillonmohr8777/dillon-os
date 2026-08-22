@@ -1,0 +1,79 @@
+{
+  "id": "dillon-command",
+  "date": "2099-01-01",
+  "started_at": "2026-08-22T13:06:59.083Z",
+  "status": "ok",
+  "lanes": [
+    {
+      "lane": "comms",
+      "agent": "chief-of-staff",
+      "status": "ok",
+      "findings": 4,
+      "errors": []
+    },
+    {
+      "lane": "clients",
+      "agent": "marketing-chief",
+      "status": "ok",
+      "findings": 8,
+      "errors": []
+    },
+    {
+      "lane": "intelligence",
+      "agent": "brain-curator",
+      "status": "ok",
+      "findings": 1,
+      "errors": []
+    },
+    {
+      "lane": "websites",
+      "agent": "web-product-builder",
+      "status": "ok",
+      "findings": 3,
+      "errors": []
+    },
+    {
+      "lane": "outreach",
+      "agent": "growth-content",
+      "status": "ok",
+      "findings": 2,
+      "errors": []
+    },
+    {
+      "lane": "ads",
+      "agent": "paid-media-analyst",
+      "status": "ok",
+      "findings": 3,
+      "errors": []
+    },
+    {
+      "lane": "reporting",
+      "agent": "paid-media-analyst",
+      "status": "ok",
+      "findings": 1,
+      "errors": []
+    },
+    {
+      "lane": "command",
+      "agent": "marketing-chief",
+      "status": "ok",
+      "findings": 1,
+      "errors": []
+    }
+  ],
+  "competitive_tasks": 40,
+  "approval_open": 181,
+  "top_priority": {
+    "id": "2026-07-12 -- [Ironic Ineptocracy Book / ironicineptocracy.com] -- Fix broken /api/dossier-leads endpoint with Vercel se",
+    "title": "2026-07-12 -- [Ironic Ineptocracy Book / ironicineptocracy.com] -- Fix broken /api/dossier-leads endpoint with Vercel serverless function and verify lead-magnet delivery; deployment -- Source: 00_Inbox/Top 15 Opportunities 2026-07-02.md -- Evidence: \"The signup form posts to `/api/dossier-leads` and that endpoint doesn't exist in the repo. The SPA rewrite swallows every submission.\"",
+    "lane": "websites",
+    "category": "launch_blocked",
+    "score": 100,
+    "risk": "high",
+    "tier": 2,
+    "source": "System/approval-queue.md"
+  },
+  "finished_at": "2026-08-22T13:06:59.088Z",
+  "automation_id": "dillon-command",
+  "written_at": "2026-08-22T13:06:59.088Z"
+}
