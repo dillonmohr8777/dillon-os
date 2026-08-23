@@ -25,6 +25,10 @@ links instead of loading the entire vault.
   truth.
 - [[System/approval-queue|Approval Queue]] — consequential actions waiting for
   Dillon.
+- [[Daily-Briefs/competitive-task-today|Competitive Task Today]] — one afternoon
+  brief from the umbrella orchestrator (replaces seven legacy crons).
+- [[System/competitive-task-definition|Competitive Task Definition]] — operator
+  throughput scope and P0 tie-break rules.
 - [[System/revenue-scorecard|Revenue Scorecard]] — verified revenue state.
 
 - [[12_Brain/Bases/Strategy Library.base|Strategy Library]] - the compiled

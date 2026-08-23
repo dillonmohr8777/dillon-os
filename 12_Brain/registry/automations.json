@@ -427,6 +427,31 @@
       "status": "implemented",
       "note": "Refuses forbidden port 9222 with exit 3 and marks chrome_isolated not-live unless the process on the port really runs a claude-chrome profile. probe/recommend describe agent-only rungs (WebFetch, WebSearch, Firecrawl) that a CLI cannot drive."
     }
+    {
+      "id": "competitive-task-orchestrator",
+      "name": "Competitive task umbrella orchestrator",
+      "lane": "operations",
+      "tier": 0,
+      "cadence": "daily 13:00 America/New_York",
+      "command": "Cursor Automation cron 0 13 * * * — see System/competitive-task-orchestrator-prompt.md",
+      "inputs": [
+        "01_Clients/",
+        "00_Inbox/slack/",
+        "_os/automation/incoming/communications/",
+        "10_Sessions/",
+        "02_Campaigns/*Queue*.md"
+      ],
+      "outputs": [
+        "Daily-Briefs/competitive-task-today.md",
+        "System/urgent-replies.md",
+        "System/slack-action-queue.md",
+        "System/claude-memory-sync.md",
+        "System/routine-health.md"
+      ],
+      "external_actions": false,
+      "notes": "Replaces seven legacy operator crons. Phase 1 parallel agents in .cursor/agents/; Phase 2 memory-consolidator. Gmail/Slack MCP optional with vault-fallback.",
+      "status": "implemented"
+    }
   ],
   "gates": {
     "obsidian_sync_cli": "pending-human",

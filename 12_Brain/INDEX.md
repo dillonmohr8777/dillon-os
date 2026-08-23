@@ -48,6 +48,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/03_Concepts/Conversion Tracking Setup 2026|Conversion Tracking Setup 2026]] — generic setup patterns (no account IDs).
 - [[12_Brain/03_Concepts/Google Ads Conversion Optimization 2026|Google Ads Conversion Optimization 2026]] — generic optimization patterns.
 - [[12_Brain/03_Concepts/Meta Lead Ads Optimization 2026|Meta Lead Ads Optimization 2026]] — generic Lead Ads patterns.
+- [[12_Brain/03_Concepts/Competitive Task Umbrella Workflow|Competitive Task Umbrella Workflow]] — one 1 PM orchestrator replaces seven operator crons; parallel intel lanes.
 
 ## Raw captures (Git-safe)
 
