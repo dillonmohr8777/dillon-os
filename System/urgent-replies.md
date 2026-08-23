@@ -1,29 +1,39 @@
 ---
-last_updated: 2026-07-12
+last_updated: 2026-08-23
 tags: [system, urgent]
+source_refs:
+  - "[[System/approval-queue]]"
+  - "[[Daily-Briefs/2026-08-17]]"
+  - "[[01_Clients/Replenish/Google Ads Billing Block 2026-07-30]]"
 ---
 
 # Urgent Client Work
 
-This file tracks current work, not April catch-up drafts.
+Refreshed by competitive-task-orchestrator 2026-08-23. Gmail MCP unavailable; sources are vault + approval queue.
 
 ## Immediate
 
-- KJB: finish the desktop FAQ image crop and responsive QA; reconcile appointment routing.
-- Fagan Painting: repair attribution across Meta Lead event, form, phone, and lead delivery before scale.
-- Shadow: restore live Meta visibility and verify current-week delivery.
-- Revive Systems: complete the urgent 48-hour lead-recovery brief.
+- **Replenish:** Billing block — confirm Mia completed Google Ads payment, then verify delivery. No budget change without approval.
+- **Momentum 360 / NeedMomentum:** Reply to Jenny on brand direction after Mac/Sean confirm — approval-gated.
+- **Momentum 360 / CallRail:** Evidence-backed status reply to Sean — approval-gated.
+- **Momentum Customer Agent:** Bot stability + case-status alerts to Jason/Sean — approval-gated.
+- **KJB:** Finish desktop FAQ image crop and responsive QA; reconcile appointment routing.
+- **Fagan Painting:** Repair attribution across Meta Lead event, form, phone, and lead delivery before scale.
+- **Shadow:** Restore live Meta visibility and verify current-week delivery.
+- **Revive Systems:** Complete urgent 48-hour lead-recovery brief.
 
 ## This week
 
-- Bar Crawl USA: finish confirmed-event SEO and repair the current-event hub listing.
-- Onsite: run the allowlisted technical crawl and conversion-action audit.
+- **Melissa / Guidelines training:** Status reply and meeting slot — approval-gated.
+- **BigOrange Marketing:** SEMrush report request and Janice interview scheduling — approval-gated.
+- Bar Crawl USA: finish confirmed-event SEO and repair current-event hub listing.
+- Onsite: run allowlisted technical crawl and conversion-action audit.
 - Omega: reconcile call/form attribution and lead quality.
-- Replenish: verify store-level weekly reporting and confirm the recurring fifth dashboard slot.
-- Hope Wellness Center: complete request analysis and determine visual-resource needs.
-- VA Claims: reconcile the client prototype to the approved VACE design system.
-- Bridge: advance the Phase 1 implementation board and dependencies.
+- Hope Wellness Center: complete request analysis and visual-resource needs.
+- VA Claims: reconcile client prototype to approved VACE design system.
+- Bridge: advance Phase 1 implementation board.
 
-## Boundary
+## Operator rules
 
-Drafting and internal QA may proceed. External replies, publishing, deployment, spend, and client-account changes require approval.
+- **KJB emails** CC: mjfrederick334@gmail.com, sean@needmomentum.com, melissarobinn@gmail.com
+- Drafting and internal QA may proceed. External replies, publishing, deployment, spend, and account changes require approval.
