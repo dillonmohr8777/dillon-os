@@ -1,0 +1,469 @@
+{
+  "schema_version": 1,
+  "artifact": "immohrtal_public_source_expansion_lane",
+  "as_of": "2026-08-25T17:29:35-04:00",
+  "status": "manifest_ready_research_only_activation_held",
+  "purpose": "Expand company-level public research beyond the authorized 47-row discovery Sheet without creating contact records or commercial-stage leads.",
+  "truth_summary": {
+    "current_public_source_paths_verified": 5,
+    "recurring_automation_ready_sources": 0,
+    "candidate_company_records_created": 0,
+    "qualified_leads_created": 0,
+    "contact_records_created": 0,
+    "outreach_ready_sources_proven": 0,
+    "contact_discovery_authorized": false,
+    "external_actions_authorized": false,
+    "external_actions": 0
+  },
+  "authority": {
+    "request_scope": "Current public company research and source-method design only.",
+    "permitted": [
+      "Bounded Exa category:company discovery",
+      "Read-only first-party company website verification",
+      "Read-only official public company and recipient dataset inspection",
+      "Company-level identity, domain, category, observable public condition, and provenance storage after privacy filtering"
+    ],
+    "not_permitted": [
+      "Exa category:people search",
+      "Personal LinkedIn paths or profiles",
+      "Person names or titles",
+      "Email addresses",
+      "Phone numbers",
+      "Postal addresses",
+      "Raw search or source payload persistence",
+      "Contact discovery",
+      "Outreach copy or drafts",
+      "Message sending",
+      "Connection requests",
+      "Calendar or booking actions",
+      "Provider CRM writes"
+    ],
+    "public_access_is_not_outreach_authority": true,
+    "legal_or_contractual_rights_note": "This artifact records current public access and internal use boundaries. It is not a legal opinion. Source-specific terms and robots controls still apply."
+  },
+  "current_capability_probe": {
+    "observed_at": "2026-08-25T17:29:35-04:00",
+    "exa_company_search": {
+      "tool_locator": "mcp__codex_apps__exa_web_search_exa",
+      "query_mode": "category:company",
+      "call_succeeded": true,
+      "result_count_observed": 5,
+      "company_homepage_locators_returned": true,
+      "prohibited_data_also_returned": true,
+      "prohibited_data_classes_observed": [
+        "person_identity",
+        "email_address",
+        "phone_number",
+        "postal_address"
+      ],
+      "safe_conclusion": "Exa is callable as an ephemeral company locator and raw-result persistence remains prohibited. A pure-local company allowlist now passes 10 adversarial tests, but recurring activation still requires safe upstream projection, canonical dedupe, conflict and suppression reads, query approval, source terms, and per-batch QA."
+    },
+    "exa_public_fetch": {
+      "tool_locator": "mcp__codex_apps__exa_web_fetch_exa",
+      "call_succeeded": true,
+      "official_source_pages_fetched": 5,
+      "prospect_company_pages_persisted": 0
+    }
+  },
+  "source_manifest": [
+    {
+      "source_id": "exa_company_locator",
+      "source_type": "public_search_index",
+      "locator": "mcp__codex_apps__exa_web_search_exa",
+      "operator_mode": "category:company_only",
+      "current_access_state": "verified_callable_2026-08-25",
+      "internal_authorization_status": "authorized_ephemeral_locator_only",
+      "automation_status": "adapter_tested_recurring_integration_held",
+      "normal_lane_role": "Discover a small bounded set of company homepage locators. Never treat snippets or enriched fields as current first-party truth.",
+      "allowed_persisted_fields": [
+        "company_name",
+        "canonical_first_party_domain",
+        "canonical_first_party_url",
+        "public_company_page_locator",
+        "query_fingerprint",
+        "retrieved_at",
+        "source_lane",
+        "verification_state"
+      ],
+      "blocked_persisted_fields": [
+        "raw_result",
+        "person_name",
+        "person_title",
+        "personal_profile_url",
+        "email_address",
+        "phone_number",
+        "postal_address",
+        "traffic_estimate",
+        "revenue_estimate",
+        "employee_identity"
+      ],
+      "batch_capacity": {
+        "raw_results_viewed_per_query_max": 10,
+        "persisted_accounts_per_daily_run_max": 8,
+        "effective_current_persisted_capacity": 0,
+        "capacity_reason": "The pure-local allowlist is tested but no recurring collector is connected to it. Manual privacy-safe extraction may proceed within the shared daily cap."
+      },
+      "hard_stops": [
+        "Any people-category query",
+        "Any implementation that logs raw results",
+        "No resolvable first-party domain",
+        "Ambiguous identity",
+        "A source-rights, duplicate, relationship, or suppression conflict"
+      ]
+    },
+    {
+      "source_id": "first_party_company_web",
+      "source_type": "first_party_public_company_source",
+      "locator_pattern": "https://<canonical-company-domain>/",
+      "current_access_state": "available_per_candidate_not_preverified_globally",
+      "internal_authorization_status": "authorized_read_only_company_research",
+      "automation_status": "manual_or_bounded_fetch_after_identity_resolution",
+      "normal_lane_role": "Confirm company identity and record one reproducible public observation from the official site.",
+      "source_priority": 1,
+      "allowed_persisted_fields": [
+        "confirmed_company_name",
+        "canonical_first_party_domain",
+        "public_evidence_url",
+        "observable_company_level_condition",
+        "service_category",
+        "observed_date",
+        "refresh_due_date",
+        "truth_state",
+        "confidence",
+        "explicit_unknowns"
+      ],
+      "blocked_persisted_fields": [
+        "person_name",
+        "person_title",
+        "email_address",
+        "phone_number",
+        "postal_address",
+        "form_submission",
+        "login_content",
+        "private_impact_inference",
+        "raw_html_archive"
+      ],
+      "freshness_window_days": 14,
+      "batch_capacity": {
+        "verified_accounts_per_daily_run_max": 8,
+        "shared_with_existing_daily_company_cap": true
+      },
+      "hard_stops": [
+        "Login or consent gate",
+        "Robots or terms restriction",
+        "Unresolved redirect or domain conflict",
+        "Only directory or social evidence exists",
+        "No reproducible company-level observation"
+      ]
+    },
+    {
+      "source_id": "sba_small_business_search",
+      "source_type": "official_public_business_directory",
+      "locator": "https://search.certifications.sba.gov/",
+      "current_access_state": "verified_public_page_2026-08-25",
+      "internal_authorization_status": "authorized_manual_locator_only",
+      "automation_status": "blocked_pending_export_or_api_terms_review",
+      "normal_lane_role": "Optional discovery of businesses seeking federal contracts. Verify every retained identity on its first-party site.",
+      "allowed_persisted_fields": [
+        "company_name_after_first_party_confirmation",
+        "canonical_first_party_domain_if_first_party_confirmed",
+        "company_level_industry_or_certification_signal",
+        "source_locator",
+        "retrieved_at"
+      ],
+      "blocked_persisted_fields": [
+        "person_name",
+        "email_address",
+        "phone_number",
+        "postal_address",
+        "raw_profile",
+        "procurement_contact",
+        "bulk_export"
+      ],
+      "batch_capacity": {
+        "manual_review_accounts_per_run_max": 8,
+        "automated_accounts_per_run_max": 0
+      },
+      "hard_stops": [
+        "No explicit public API or export-use authority verified",
+        "Federal-contractor or existing-vendor conflict",
+        "Identity not reproducible from a first-party public site"
+      ]
+    },
+    {
+      "source_id": "sec_edgar_company_data",
+      "source_type": "official_public_company_api",
+      "locator": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+      "data_host": "https://data.sec.gov/",
+      "current_access_state": "verified_public_no_auth_api_2026-08-25",
+      "internal_authorization_status": "authorized_company_identity_research_only",
+      "automation_status": "conditionally_available_under_sec_fair_access",
+      "normal_lane_role": "Resolve current public-filer legal identity and filing recency. It is a narrow public-company lane, not a general SMB source.",
+      "allowed_persisted_fields": [
+        "current_company_name",
+        "cik",
+        "ticker",
+        "exchange",
+        "latest_company_filing_date",
+        "source_locator",
+        "retrieved_at"
+      ],
+      "blocked_persisted_fields": [
+        "postal_address",
+        "person_name",
+        "officer_or_owner_record",
+        "email_address",
+        "phone_number",
+        "raw_filing_body",
+        "individual_filer_record"
+      ],
+      "source_controls": [
+        "Use a declared runtime user agent without storing contact data in this artifact",
+        "Stay below the published 10 requests per second maximum",
+        "Download only the bounded records needed",
+        "Prefer company submissions metadata over free-form filing text"
+      ],
+      "batch_capacity": {
+        "reviewed_company_records_per_run_max": 8,
+        "shared_with_existing_daily_company_cap": true
+      },
+      "hard_stops": [
+        "Entity is a fund or individual",
+        "Current first-party domain cannot be resolved",
+        "Public-company size or service fit is outside the target lane",
+        "Any relationship, client, partner, vendor, or suppression conflict"
+      ]
+    },
+    {
+      "source_id": "usaspending_recipient_data",
+      "source_type": "official_public_recipient_api",
+      "locator": "https://api.usaspending.gov/",
+      "endpoint_index": "https://api.usaspending.gov/docs/endpoints",
+      "current_access_state": "verified_public_no_auth_api_2026-08-25",
+      "internal_authorization_status": "authorized_recipient_company_locator_only",
+      "automation_status": "conditionally_available_after_fit_and_conflict_query_design",
+      "normal_lane_role": "Find company-level federal award recipients by bounded business category, then verify the identity and need from first-party public sources.",
+      "allowed_persisted_fields": [
+        "recipient_company_name",
+        "uei",
+        "company_level_award_category",
+        "source_locator",
+        "retrieved_at"
+      ],
+      "blocked_persisted_fields": [
+        "postal_address",
+        "person_name",
+        "email_address",
+        "phone_number",
+        "raw_award_payload",
+        "individual_recipient_record"
+      ],
+      "batch_capacity": {
+        "reviewed_company_records_per_run_max": 8,
+        "shared_with_existing_daily_company_cap": true
+      },
+      "hard_stops": [
+        "Recipient is a government entity, individual, client, partner, vendor, employer, or separate venture",
+        "No current first-party company identity",
+        "Government-award history is the only evidence of service fit or buyer need",
+        "Any suppression or relationship conflict"
+      ]
+    }
+  ],
+  "sources_not_authorized_for_recurring_ingestion": [
+    {
+      "source_class": "exa_people_or_person_search",
+      "reason": "Contact discovery and personal records are outside the current authority."
+    },
+    {
+      "source_class": "personal_linkedin_profiles_or_private_linkedin_paths",
+      "reason": "No direct LinkedIn connector or authenticated research authority is proven, and personal profile data is prohibited in this lane."
+    },
+    {
+      "source_class": "commercial_maps_review_or_business_directories",
+      "reason": "Public visibility does not prove bulk extraction, storage, or reuse rights. A specific licensed connector or source review is required."
+    },
+    {
+      "source_class": "state_or_local_registries_without_source_specific_review",
+      "reason": "Availability, terms, fields, and business-purpose restrictions vary by jurisdiction."
+    },
+    {
+      "source_class": "search_snippets_model_output_or_generated_company_lists",
+      "reason": "They are locators or hypotheses only and cannot independently prove identity, fit, need, authority, or current status."
+    }
+  ],
+  "dedupe_contract": {
+    "primary_key": "domain:<lowercase registrable first-party domain>",
+    "secondary_keys": [
+      "sec_cik:<10 digit company CIK>",
+      "usaspending_uei:<company UEI>",
+      "public_company_locator:<canonical company-page slug>"
+    ],
+    "review_only_key": "normalized company name plus country, never used alone for automatic merge",
+    "canonical_comparison_sets": [
+      "authorized 47-row company Sheet",
+      "06_Revenue/IMMOHRTAL/pipeline-import.json",
+      "06_Revenue/IMMOHRTAL/lead-intelligence/requalification/*.json",
+      "private outbound ledger without copying contact fields",
+      "client-operations/registry/clients.json",
+      "client-operations/queue/work-items.json"
+    ],
+    "merge_rule": "Automatic merge requires an exact canonical domain or an exact source-stable company identifier. Name-only similarity creates a review hold.",
+    "duplicate_result_actions": {
+      "exact_existing_account": "attach source provenance to the existing account only after canonical-owner review",
+      "ambiguous_possible_match": "keep separate and hold at P00",
+      "confirmed_cross_client_or_cross_venture_match": "exclude or route to the exact canonical owner"
+    }
+  },
+  "conflict_contract": {
+    "checks_required_before_any_p10_entry": [
+      "canonical client registry",
+      "canonical work queue",
+      "active and prior IMMOHRTAL account records",
+      "private outbound ledger",
+      "employer and job-search boundaries",
+      "partner and vendor boundaries",
+      "platform representative boundaries",
+      "separate-venture boundaries",
+      "franchise and webinar-source exclusions",
+      "staffing and marketing-agency exclusions",
+      "business-category acceptance"
+    ],
+    "unresolved_result": "hold_research_only",
+    "confirmed_conflict_result": "exclude_or_route_to_canonical_owner"
+  },
+  "suppression_contract": {
+    "account_level_checks": [
+      "company-level do-not-pursue record",
+      "prior opt-out or complaint linked to the company",
+      "invalid or disputed identity",
+      "active client, partner, vendor, or protected relationship"
+    ],
+    "contact_level_state": "not_applicable_no_contact_record_permitted",
+    "default_when_canonical_clearance_is_missing": "pending_fail_closed",
+    "advancement_rule": "No account may cross P20 and no contact may be discovered until an authorized canonical suppression source returns clear."
+  },
+  "safe_batch_method": {
+    "shared_daily_account_cap": 8,
+    "cap_scope": "The eight-account cap is shared across the existing Sheet lane and every public expansion source until the canonical configuration is explicitly changed.",
+    "steps": [
+      {
+        "order": 1,
+        "action": "Choose one approved discovery source and one explicit company-level ICP query. Record the query fingerprint and source rights state."
+      },
+      {
+        "order": 2,
+        "action": "Retrieve no more than 10 ephemeral locator results. Never use Exa category:people."
+      },
+      {
+        "order": 3,
+        "action": "Apply an in-memory field allowlist. Discard person, contact, address, enrichment, and raw payload fields before any file write. If redaction cannot be proven, persist zero accounts and stop."
+      },
+      {
+        "order": 4,
+        "action": "Resolve a stable account identity and canonical first-party domain. Name-only identity stays provisional."
+      },
+      {
+        "order": 5,
+        "action": "Dedupe against every canonical comparison set and complete relationship and business-category checks."
+      },
+      {
+        "order": 6,
+        "action": "Read the current first-party company site and record one reproducible company-level observation, explicit unknowns, observed date, and 14-day refresh due date."
+      },
+      {
+        "order": 7,
+        "action": "Set suppression pending unless an authorized canonical source proves clear. Withhold the 0 to 16 qualification score until every score dimension is evidenced."
+      },
+      {
+        "order": 8,
+        "action": "Persist at most eight privacy-safe P00 records, run zero-PII and JSON validation, then require independent QA before any commercial boundary."
+      }
+    ],
+    "failure_policy": "fail_closed_persist_zero_for_the_affected_record_or_entire_batch_when_adapter_safety_is_uncertain"
+  },
+  "required_provenance_fields": [
+    "source_lane_id",
+    "source_type",
+    "source_locator",
+    "query_fingerprint",
+    "source_observed_at",
+    "canonical_first_party_domain",
+    "public_evidence_urls",
+    "observed_date",
+    "refresh_due_date",
+    "truth_state",
+    "confidence",
+    "source_rights_state",
+    "source_integrity_state",
+    "identity_state",
+    "duplicate_state",
+    "relationship_conflict_state",
+    "suppression_state",
+    "explicit_unknowns",
+    "current_lifecycle",
+    "current_stage",
+    "external_actions"
+  ],
+  "fail_closed_stage_contract": {
+    "new_account_lifecycle": "RESEARCH_ONLY",
+    "new_account_stage": "P00_ACCOUNT_RESEARCH",
+    "commercial_status": "uncontacted",
+    "qualification_score": null,
+    "forecast_category": "excluded",
+    "amount_usd": null,
+    "probability_percent": null,
+    "p10_entry_requires": [
+      "stable account identity",
+      "current first-party public source",
+      "one reproducible company-level observation",
+      "dated provenance and freshness",
+      "direct service-lane fit hypothesis",
+      "explicit unknowns",
+      "no confirmed hard disqualifier"
+    ],
+    "p20_entry_requires": [
+      "complete 0 to 16 score",
+      "score of 13 to 16 or separately approved conditional route",
+      "hard-disqualifier clearance",
+      "duplicate clearance",
+      "relationship and client-conflict clearance",
+      "canonical suppression clearance",
+      "decision ownership evidence",
+      "capacity check",
+      "smallest sufficient offer",
+      "independent QA receipt"
+    ],
+    "research_cannot_prove": [
+      "buyer intent",
+      "budget",
+      "decision authority",
+      "lost leads or revenue",
+      "reply",
+      "meeting",
+      "proposal",
+      "customer",
+      "revenue"
+    ],
+    "outreach_or_booking_permitted": false
+  },
+  "activation_requirements": [
+    "COMPLETE 2026-08-25: Build and independently test a pure-local allowlist that has no network, filesystem, console, or raw-payload serialization path.",
+    "Add the approved public-source lane and shared cap to the canonical automation configuration.",
+    "Define one explicit ICP query and accepted business categories.",
+    "Prove source-specific terms, robots, and rate controls for any recurring automated source.",
+    "Prove canonical duplicate, relationship-conflict, and account-level suppression reads.",
+    "Require a zero-PII validation receipt before every batch is retained."
+  ],
+  "validation": {
+    "json_parse": "passed_powershell_convertfrom_json",
+    "pii_scan": "passed_zero_matches_for_email_phone_street_address_and_personal_linkedin_patterns",
+    "manual_person_name_review": "passed_zero_prospect_person_names_persisted",
+    "machine_readable_source_count": 5,
+    "allowlist_adapter_test": "passed_10_of_10_adversarial_tests",
+    "allowlist_policy_locator": "automation/immohrtal-agency/config/public-source-policy.json",
+    "allowlist_adapter_locator": "automation/immohrtal-agency/src/public-company-allowlist.mjs",
+    "allowlist_test_locator": "automation/immohrtal-agency/test/public-company-allowlist.test.mjs"
+  },
+  "external_actions": 0
+}

@@ -3,7 +3,7 @@
 **Status:** active internal foundation
 **Workflow:** `IMMOHRTAL-DAY1-20260825`
 **External systems:** disabled
-**Commercial baseline:** no verified send, reply, meeting, proposal, win, active client, or new revenue event
+**Commercial baseline:** no verified prospect send, reply, meeting, proposal, win, active client, or new revenue event
 
 This folder is the local source of truth for IMMOHRTAL account research,
 qualification, and pipeline hygiene. It is deliberately not connected to a
@@ -38,8 +38,24 @@ runtime.
 - `lead-intelligence/requalification/2026-08-25-batch-01.json` — eight
   public-safe company research records: seven current identities, one identity
   block, zero qualified, and zero external actions.
+- `lead-intelligence/requalification/2026-08-25-batch-02.json` — the next eight
+  public-safe company research records: six current identities, two identity
+  blocks, zero qualified, and zero external actions.
+- `lead-intelligence/requalification/2026-08-25-batch-02-independent-qa.md` —
+  root verifier receipt confirming live source-row parity, exact public URLs,
+  no PII, and the research-only boundary.
+- `lead-intelligence/LEGACY-SHEET-RESOLUTION-2026-08-25.md` — privacy-safe
+  resolution of the seven formerly unresolved spreadsheet candidates. All were
+  excluded and none authorized contact reuse.
+- `lead-intelligence/PUBLIC-SOURCE-EXPANSION-2026-08-25.md` — governed public
+  source lanes, zero-lead expansion receipt, and the controls still required
+  before recurring collection.
 - `../../automation/immohrtal-agency/config/requalification-source.json` —
   canonical 47-company discovery-only contract with an eight-company daily cap.
+- `../../automation/immohrtal-agency/config/public-source-policy.json` and
+  `../../automation/immohrtal-agency/src/public-company-allowlist.mjs` — strict
+  local company-only allowlist that rejects contact data, personal profiles,
+  unsafe URLs, unknown fields, policy widening, and batches above eight.
 - `../../automation/immohrtal-agency/ops/LEGACY-SOURCE-ISOLATION-2026-08-25.md`
   — reversible receipt proving the excluded-source 08:10 task is disabled.
 - `../../05_Offers/IMMOHRTAL/PUBLIC-MONTHLY-SERVICE-MENU.json` — exact
@@ -55,11 +71,13 @@ because a public observation and a concept exist. Decision ownership, budget,
 timing, capacity, suppression, prior-touch, and client-conflict checks remain
 unresolved. No message copy or contact identifier is stored here.
 
-The eight records in requalification batch 01 are a separate research backlog.
-All remain `RESEARCH_ONLY` in `P00_ACCOUNT_RESEARCH`; they must not be appended
-to the five-record pipeline import until the documented P10 entry rules pass.
-The historical 25-record run used an excluded source and contributes zero
-active pipeline records. Verified active IMMOHRTAL clients remain zero.
+The 16 records in requalification batches 01 and 02 are a separate research
+backlog. Thirteen identities are current and three are blocked. All remain
+`RESEARCH_ONLY` in `P00_ACCOUNT_RESEARCH`; they must not be appended to the
+five-record pipeline import until the documented P10 entry rules pass. Thirty-one
+authorized rows remain unreviewed. The historical 25-record run used an
+excluded source and contributes zero active pipeline records. Verified active
+IMMOHRTAL clients remain zero.
 
 ## Daily loop
 
@@ -77,3 +95,5 @@ active pipeline records. Verified active IMMOHRTAL clients remain zero.
 
 No email body, email subject, mailbox action, provider CRM write, social
 scheduling, automatic reply, or external contact is authorized by this folder.
+The separately authorized owner status email sent on 2026-08-25 is an operating
+receipt, not authority for prospect outreach.

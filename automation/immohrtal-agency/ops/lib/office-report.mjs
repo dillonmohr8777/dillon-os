@@ -287,6 +287,7 @@ function buildCommercialTruth(scorecard) {
     gmail_drafts_created: Number(current.gmail_drafts_created ?? 0),
     gmail_drafts_directly_read_back: Number(current.gmail_drafts_directly_read_back ?? 0),
     gmail_drafts_compliance_blocked: Number(current.gmail_drafts_compliance_blocked ?? 0),
+    owner_status_updates_sent: Number(current.owner_status_updates_sent ?? 0),
     ...values,
     truth_note: current.truth_note || 'Preparation counts do not prove commercial outcomes.'
   };
@@ -596,7 +597,8 @@ export function renderOfficeMarkdown(snapshot) {
     ['Gmail drafts created', commercial.gmail_drafts_created],
     ['Gmail drafts directly read back', commercial.gmail_drafts_directly_read_back],
     ['Gmail drafts on compliance hold', commercial.gmail_drafts_compliance_blocked],
-    ['External messages sent', commercial.messages_sent],
+    ['Prospect messages sent', commercial.messages_sent],
+    ['Internal owner status updates sent', commercial.owner_status_updates_sent],
     ['Replies', commercial.replies],
     ['Meetings booked', commercial.meetings_booked],
     ['Proposals sent', commercial.proposals_sent],
@@ -834,11 +836,11 @@ export function renderOfficeDashboard(snapshot) {
           <div><h2>Verified or done</h2><ul class="completed-list">${completedRows}</ul></div>
           <aside class="receipt-panel"><h2>Latest agency evidence</h2><p>${escapeHtml(agency.does_not_prove)}</p>${agencyEvidence}</aside>
         </div>
-        <div class="outcome-line" aria-label="Daily research and commercial outcomes"><div><span>Companies researched today</span><strong>${escapeHtml(commercial.researched_today)}</strong></div><div><span>Current identities confirmed today</span><strong>${escapeHtml(commercial.identity_confirmed_today)}</strong></div><div><span>Identities blocked today</span><strong>${escapeHtml(commercial.identity_blocked_today)}</strong></div><div><span>Qualified today</span><strong>${escapeHtml(commercial.qualified_today)}</strong></div><div><span>Drafts held</span><strong>${escapeHtml(commercial.gmail_drafts_compliance_blocked)}</strong></div><div><span>Messages sent</span><strong>${escapeHtml(commercial.messages_sent)}</strong></div><div><span>Meetings booked</span><strong>${escapeHtml(commercial.meetings_booked)}</strong></div><div><span>Active IMMOHRTAL clients</span><strong>${escapeHtml(commercial.active_clients)}</strong></div><div><span>Closed won</span><strong>${escapeHtml(commercial.closed_won)}</strong></div><div><span>Verified new revenue</span><strong>$${escapeHtml(commercial.verified_new_revenue_usd)}</strong></div></div>
+        <div class="outcome-line" aria-label="Daily research and commercial outcomes"><div><span>Companies researched today</span><strong>${escapeHtml(commercial.researched_today)}</strong></div><div><span>Current identities confirmed today</span><strong>${escapeHtml(commercial.identity_confirmed_today)}</strong></div><div><span>Identities blocked today</span><strong>${escapeHtml(commercial.identity_blocked_today)}</strong></div><div><span>Qualified today</span><strong>${escapeHtml(commercial.qualified_today)}</strong></div><div><span>Drafts held</span><strong>${escapeHtml(commercial.gmail_drafts_compliance_blocked)}</strong></div><div><span>Prospect messages sent</span><strong>${escapeHtml(commercial.messages_sent)}</strong></div><div><span>Owner status updates sent</span><strong>${escapeHtml(commercial.owner_status_updates_sent)}</strong></div><div><span>Meetings booked</span><strong>${escapeHtml(commercial.meetings_booked)}</strong></div><div><span>Active IMMOHRTAL clients</span><strong>${escapeHtml(commercial.active_clients)}</strong></div><div><span>Closed won</span><strong>${escapeHtml(commercial.closed_won)}</strong></div><div><span>Verified new revenue</span><strong>$${escapeHtml(commercial.verified_new_revenue_usd)}</strong></div></div>
       </div>
     </section>
   </main>
-  <footer class="footer"><div class="shell"><p>Generated ${escapeHtml(snapshot.as_of)} from hashed local roster, command-board, scorecard, and available run-receipt sources. No messages, drafts, calendar events, CRM records, deployments, purchases, schedules, or credentials were changed.</p></div></footer>
+  <footer class="footer"><div class="shell"><p>Generated ${escapeHtml(snapshot.as_of)} from hashed local roster, command-board, scorecard, and available run-receipt sources. This report invocation changed no messages, drafts, calendar events, CRM records, deployments, purchases, schedules, or credentials.</p></div></footer>
 </body>
 </html>\n`;
 }

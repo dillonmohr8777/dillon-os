@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "workflow": "IMMOHRTAL-DAY1",
+  "step": "LEADS-01B",
+  "as_of": "2026-08-25T17:42:00-04:00",
+  "status": "verified_current",
+  "scope": "read_only_metadata_and_bounded_first_row_resolution",
+  "summary": {
+    "legacy_candidates_reviewed": 7,
+    "authorized_sources_found": 0,
+    "excluded_sources": 7,
+    "unresolved_legacy_candidates_remaining": 0,
+    "prospect_rows_imported": 0,
+    "contact_records_persisted": 0,
+    "external_actions": 0
+  },
+  "sources": [
+    {
+      "locator": "google-drive-file:1KyjDvL36x3Zv8ZzPjvdUFhj_NB8z6csgq_a5JTzhRHY",
+      "resolution": "excluded",
+      "classification": "third_party_campaign_contact_data"
+    },
+    {
+      "locator": "google-drive-file:1bGJHhOxQw2dV7YHS06OeGmg7Gufh49txXxO1ASOJGJM",
+      "resolution": "excluded",
+      "classification": "aggregate_email_statistics_not_prospect_source"
+    },
+    {
+      "locator": "google-drive-file:1cK5t_prmZx7MrQdOK8da8bvXovJI_JDng768UDTSYHw",
+      "resolution": "excluded",
+      "classification": "consumer_health_appointment_contact_data"
+    },
+    {
+      "locator": "google-drive-file:1-FPaBwZZPxFRl2zovTHMtVANQp8F3Aq44RqFWzfy-S0",
+      "resolution": "excluded",
+      "classification": "consumer_health_appointment_contact_data"
+    },
+    {
+      "locator": "google-drive-file:1j8tpy4e0pwOr5Lr7qUSf8MQqBu9N-fUYITYowVmgEWU",
+      "resolution": "excluded",
+      "classification": "historical_client_ad_lead_reporting"
+    },
+    {
+      "locator": "google-drive-file:1xStd_0HqfYmBuguhck90MTJfWoMWW3Qm4x3WurOD_Ek",
+      "resolution": "excluded",
+      "classification": "native_sheet_without_visible_tab"
+    },
+    {
+      "locator": "google-drive-file:1IyMO0ek3YYhZRajH0jcZM0qTYdmswUAx6l4gARbaH6s",
+      "resolution": "excluded",
+      "classification": "raw_name_email_report_without_reuse_authority"
+    }
+  ],
+  "controls": {
+    "exact_account_verified": true,
+    "metadata_read": true,
+    "tab_metadata_read": true,
+    "first_row_probe_maximum": true,
+    "raw_values_persisted": false,
+    "personal_identifiers_persisted": false,
+    "sheet_mutation": false,
+    "permission_mutation": false,
+    "gmail_mutation": false,
+    "calendar_mutation": false,
+    "crm_mutation": false
+  },
+  "resulting_source_state": {
+    "authorized_drive_source_count": 1,
+    "authorized_drive_source_company_rows": 47,
+    "contact_discovery_authorized": false,
+    "outreach_authorized": false
+  }
+}

@@ -7,7 +7,7 @@ owner: Dillon Mohr
 area: business infrastructure
 priority: high
 outcome: IMMOHRTAL Marketing Solutions operates as a specialized AI-native web optimization studio with a proof-led website, a five-seat internal Codex workforce, a bounded offer system, and governed delivery controls.
-next_action: Run the active 08:30 ET daily heartbeat, requalify the next bounded company batch, and resolve the outbound compliance and dedicated booking blockers before requesting approval for any send.
+next_action: Run the active 08:30 ET daily heartbeat, requalify rows 18 through 25, and resolve the postal, Zoho access, suppression, and dedicated booking blockers before requesting approval for any prospect send.
 review_on: 2026-08-31
 source_refs:
   - "[[immohrtal-marketing-site/PRODUCT]]"
@@ -32,6 +32,13 @@ source_refs:
   - "06_Revenue/IMMOHRTAL/pipeline-import.json"
   - "[[06_Revenue/IMMOHRTAL/lead-intelligence/SOURCE-AUDIT-2026-08-25]]"
   - "[[06_Revenue/IMMOHRTAL/lead-intelligence/GMAIL-DRAFT-READBACK-2026-08-25]]"
+  - "[[06_Revenue/IMMOHRTAL/lead-intelligence/requalification/2026-08-25-batch-01]]"
+  - "[[06_Revenue/IMMOHRTAL/lead-intelligence/requalification/2026-08-25-batch-02]]"
+  - "[[06_Revenue/IMMOHRTAL/lead-intelligence/requalification/2026-08-25-batch-02-independent-qa]]"
+  - "[[06_Revenue/IMMOHRTAL/lead-intelligence/LEGACY-SHEET-RESOLUTION-2026-08-25]]"
+  - "[[06_Revenue/IMMOHRTAL/lead-intelligence/PUBLIC-SOURCE-EXPANSION-2026-08-25]]"
+  - "[[05_Offers/IMMOHRTAL/ACTIVATION-ACCOUNT-AUDIT-2026-08-25]]"
+  - "[[11_Agents/IMMOHRTAL Business Crew/daily/2026-08-25]]"
 tags:
   - brain
   - project
@@ -104,17 +111,20 @@ without the required evidence and Dillon's exact approval.
   company records remain held and grant no authority to write to an external
   CRM. Five matching HTML Gmail drafts exist outside the public CRM, were read
   back by immutable message ID, and remain unsent behind compliance controls.
-- The finance ledger begins at a truthful zero baseline. Five unsent drafts are
-  recorded, while messages sent, replies, meetings, proposals, closed-won deals,
-  workflow revenue, hires, purchases, and commitments all remain zero.
+- The finance ledger begins at a truthful zero baseline. Five unsent prospect
+  drafts are recorded, while prospect messages sent, replies, meetings,
+  proposals, closed-won deals, workflow revenue, hires, purchases, and
+  commitments all remain zero. One separately authorized internal owner status
+  update was sent and read back; it is not an acquisition outcome.
 - The immediate business-foundation blockers are the legal seller and required
   registrations, dedicated banking and payment rails, bookkeeping and invoicing,
   contract and privacy controls, and appropriate insurance or vendor controls.
 - No account was opened, purchase made, contract signed, or money moved during
   this setup.
-- Independent Day 1 review returned `SHIP`: the exact five-seat roster, full
-  board contract, canonical delivery roles, local CRM controls, zero send or
-  booking authority, and 15 of 15 agency and office regression tests passed.
+- The current evidence packet passed 26 of 26 agency, office, and public-source
+  allowlist regression tests. Those checks cover the five-seat roster, board
+  contract, canonical delivery roles, local CRM controls, and the zero prospect
+  send and booking boundary.
 
 ## Live responsive baseline
 
@@ -142,7 +152,8 @@ these behaviors in future homepage changes.
 
 - Internal office: five subordinate job seats, 13-item command board, daily closeout, and noindex desktop and mobile dashboard
 - Daily scheduler: `immohrtal-daily-business-clock-in` active at 08:30 ET; the duplicate office manifest is not installed
-- Lead intelligence: 2,467 Drive metadata rows inspected, 297 spreadsheet-like files inventoried, 47 discovery-only companies authorized for requalification, five current public-business prospects, and 52 conservative unique companies across both sources
-- Gmail: five exact drafts verified with `DRAFT` present and `SENT` absent; external messages sent remains zero
-- Booking: no IMMOHRTAL booking destination exists yet, and no calendar event or invitation was created
-- Pricing: canonical `/pricing/` route, exact seven monthly fees, navigation entry, structured data, sitemap entry, and desktop and mobile QA completed for the pending production release
+- Lead intelligence: 2,467 Drive metadata rows inspected, all 59 candidate spreadsheets audited, one 47-company discovery-only Sheet authorized, 16 companies researched, 13 current identities, three identity blocks, zero qualified, and 31 authorized rows remaining
+- Public expansion: five bounded company-only source lanes documented; the pure-local allowlist rejects personal and contact data and passed 10 of 10 adversarial tests; recurring collection remains held
+- Gmail: five exact prospect drafts verified with `DRAFT` present and `SENT` absent; one separately authorized internal owner update sent and read back; prospect messages sent remains zero
+- Booking: the connected Google primary owner calendar and authenticated IMMOHRTAL Zoho mailbox are resolved, but no dedicated booking page, calendar event, or invitation was created
+- Pricing: canonical `/pricing/` route, exact seven monthly fees, navigation entry, structured data, sitemap entry, and desktop and mobile QA are live on production

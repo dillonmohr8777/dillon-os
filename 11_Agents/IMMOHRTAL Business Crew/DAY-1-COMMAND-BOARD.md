@@ -5,12 +5,16 @@ date: 2026-08-25
 status: active_internal
 owner: Dillon Mohr
 orchestrator: Codex Marketing Chief
-gmail_in_scope: false
-external_actions_authorized: false
+gmail_in_scope: read_only_activation_audit_unsent_draft_verification_and_one_owner_status_update
+external_actions_authorized: owner_status_update_only
 source_refs:
   - "[[11_Agents/IMMOHRTAL Business Crew/README]]"
   - "[[12_Brain/05_Projects/2026-08-24 - IMMOHRTAL Marketing Solutions]]"
   - "automation/immohrtal-agency/ops/DAY-1-SCORECARD.json"
+  - "[[06_Revenue/IMMOHRTAL/lead-intelligence/requalification/2026-08-25-batch-02]]"
+  - "[[06_Revenue/IMMOHRTAL/lead-intelligence/LEGACY-SHEET-RESOLUTION-2026-08-25]]"
+  - "[[06_Revenue/IMMOHRTAL/lead-intelligence/PUBLIC-SOURCE-EXPANSION-2026-08-25]]"
+  - "[[05_Offers/IMMOHRTAL/ACTIVATION-ACCOUNT-AUDIT-2026-08-25]]"
   - "[[immohrtal-marketing-site/research/outreach/DAY-1-FIRST-BATCH]]"
   - "[[05_Offers/IMMOHRTAL/DAY-1-PRICE-BOOK]]"
 ---
@@ -25,17 +29,26 @@ source_refs:
 - The old 25-record preparation run used a Sheet now classified
   `franchise_webinar_excluded`. Its 08:10 Windows task is disabled, its runner
   fails closed, and those records contribute zero active pipeline accounts.
-- Batch 01 reviewed eight rows from the authorized 47-company discovery source.
-  Seven identities are current, one is blocked, and all eight remain
+- Batches 01 and 02 reviewed 16 rows from the authorized 47-company discovery
+  source. Thirteen identities are current, three are blocked, and all 16 remain
   `RESEARCH_ONLY / P00` with null scores and zero external actions.
+- The seven formerly unresolved legacy Sheets were resolved through metadata
+  and bounded first-row inspection. All seven are excluded, and zero additional
+  authorized contact or prospect sources were found.
 - The current priority outreach CSV contains five rows, all labeled
   `DRAFT_ONLY_DO_NOT_SEND`.
 - The seven-item monthly service menu is approved and live on the canonical
   pricing page. It is not evidence of historical customers or revenue.
-- Five Gmail drafts were directly read back as `DRAFT`, with zero exact-subject
-  sent copies and zero matching calendar events. Messages sent, replies,
-  meetings, proposals, closed-won deals, active clients, verified new revenue,
-  and new hires or purchases remain **0**.
+- Five prospect Gmail drafts were directly read back as `DRAFT`, with zero
+  exact-subject sent copies and zero matching calendar events. Prospect
+  outreach sent, replies, meetings, proposals, closed-won deals, active
+  clients, verified new revenue, and new hires or purchases remain **0**. One
+  separately authorized internal status update was sent to Dillon's connected
+  Gmail and read back from the resulting thread; it is not prospect outreach.
+- The IMMOHRTAL Zoho mailbox emitted one authenticated launch test, and the
+  connected Google primary owner calendar is resolved. Outreach and booking
+  configuration remain held for the postal locator, exact approval, Access
+  Broker registration, and controlled setup verification.
 - Scout, Atlas, Forge, Relay, and Proof remain the public-facing prospect and
   website characters. None owns this board.
 
@@ -89,14 +102,14 @@ Every item below implements all 13 required fields in `CREW.json`.
 - `owner_role_id`: `demand_intelligence_lead`
 - `due_at`: `2026-08-25T11:30:00-04:00`
 - `status`: `VERIFIED`
-- `inputs`: `automation/immohrtal-agency/config/requalification-source.json`; `automation/immohrtal-agency/ops/LEGACY-SOURCE-ISOLATION-2026-08-25.md`; `06_Revenue/IMMOHRTAL/lead-intelligence/requalification/2026-08-25-batch-01.json`.
-- `exact_output`: Source-isolation receipt plus separate counts for 25 excluded legacy records, eight authorized research records, and five held Gmail drafts.
+- `inputs`: `automation/immohrtal-agency/config/requalification-source.json`; `automation/immohrtal-agency/ops/LEGACY-SOURCE-ISOLATION-2026-08-25.md`; `06_Revenue/IMMOHRTAL/lead-intelligence/LEGACY-SHEET-RESOLUTION-2026-08-25.json`; both requalification batches.
+- `exact_output`: Source-isolation receipt plus separate counts for 25 excluded legacy records, 16 authorized research records, seven excluded legacy Sheets, and five held Gmail drafts.
 - `evidence_required`: JSON parse; task-state readback; source-ID match; company-count checks; no contact data; zero external actions; no commercial-outcome inference.
 - `artifact_locator`: `automation/immohrtal-agency/ops/LEGACY-SOURCE-ISOLATION-2026-08-25.md`
 - `checker_role_id`: `quality_risk_auditor`
 - `blocker`: None for source isolation. Advancement remains blocked by weak source integrity, relationship reconciliation, suppression, decision ownership, and incomplete qualification evidence.
-- `next_action`: `demand_intelligence_lead` continues with the next unreviewed authorized rows and keeps every record at P00 until all hard gates pass.
-- `updated_at`: `2026-08-25T17:20:00-04:00`
+- `next_action`: `demand_intelligence_lead` continues with rows 18 through 25 and keeps every record at P00 until all hard gates pass.
+- `updated_at`: `2026-08-25T17:50:00-04:00`
 
 ### DEM-002
 
@@ -104,15 +117,15 @@ Every item below implements all 13 required fields in `CREW.json`.
 - `objective`: Requalify up to eight authorized companies and select one market wedge only from current, independently reviewable problem evidence.
 - `owner_role_id`: `demand_intelligence_lead`
 - `due_at`: `2026-08-26 EOD ET`
-- `status`: `IN_PROGRESS`
-- `inputs`: `automation/immohrtal-agency/config/requalification-source.json`; current public company sites; callable Exa company and people research; `immohrtal-marketing-site/research/outreach/segment-offer-matrix.md`.
+- `status`: `VERIFIED`
+- `inputs`: `automation/immohrtal-agency/config/requalification-source.json`; current public company sites; callable Exa company research; `immohrtal-marketing-site/research/outreach/segment-offer-matrix.md`.
 - `exact_output`: Up to eight public-safe company evidence packets, exact holds or disqualifications, and one wedge brief only when the evidence supports it.
 - `evidence_required`: Current URL, observed fact, captured date, unknowns, disqualifiers, and relevant service route for each record.
-- `artifact_locator`: `06_Revenue/IMMOHRTAL/lead-intelligence/requalification/2026-08-25-batch-01.json`
+- `artifact_locator`: `06_Revenue/IMMOHRTAL/lead-intelligence/requalification/2026-08-25-batch-02-independent-qa.md`
 - `checker_role_id`: `quality_risk_auditor`
-- `blocker`: Batch 01 produced seven current identities and one identity block, but zero records have full relationship, suppression, decision-owner, or qualification clearance. A wedge is not yet proven.
-- `next_action`: `demand_intelligence_lead` reproduces the strongest public conditions and completes the remaining governance checks. No contact discovery or outreach is included.
-- `updated_at`: `2026-08-25T17:20:00-04:00`
+- `blocker`: Batches 01 and 02 produced 13 current identities and three identity blocks, but zero records have full relationship, suppression, decision-owner, or qualification clearance. A wedge is not yet proven.
+- `next_action`: `demand_intelligence_lead` opens Batch 03 at rows 18 through 25 and applies the same public-evidence and zero-contact controls.
+- `updated_at`: `2026-08-25T17:50:00-04:00`
 
 ### REV-001
 
@@ -216,15 +229,15 @@ Every item below implements all 13 required fields in `CREW.json`.
 - `objective`: Audit DEM-002 and REV-002 outputs for evidence, identity, isolation, claims, and state truth.
 - `owner_role_id`: `quality_risk_auditor`
 - `due_at`: `2026-08-26 EOD ET`
-- `status`: `BLOCKED`
+- `status`: `IN_PROGRESS`
 - `inputs`: Immutable DEM-002 and REV-002 maker artifacts with their source locators.
 - `exact_output`: PASS or FAIL receipt for every submitted demand and opportunity record.
 - `evidence_required`: Source freshness, identity, disqualifiers, claims, offer fit, one-company isolation, and zero external action.
-- `artifact_locator`: `pending — maker artifacts do not yet exist`
+- `artifact_locator`: `06_Revenue/IMMOHRTAL/lead-intelligence/requalification/2026-08-25-batch-02-independent-qa.md`
 - `checker_role_id`: `none`
-- `blocker`: DEM-002 and REV-002 are not ready for review; auditor independence means no self-checker is assigned.
-- `next_action`: `quality_risk_auditor` waits for immutable maker artifacts and does not rewrite them.
-- `updated_at`: `2026-08-25T17:10:00-04:00`
+- `blocker`: DEM-002 Batch 02 passed only at the research boundary. REV-002 remains blocked because no record satisfies P10 entry or proves a wedge.
+- `next_action`: `quality_risk_auditor` reviews the next immutable maker batch and does not rewrite it.
+- `updated_at`: `2026-08-25T17:50:00-04:00`
 
 ### QA-002
 
@@ -255,8 +268,8 @@ Every item below implements all 13 required fields in `CREW.json`.
 - `artifact_locator`: `11_Agents/IMMOHRTAL Business Crew/daily/2026-08-25.md`
 - `checker_role_id`: `quality_risk_auditor`
 - `blocker`: The 08:30 Codex heartbeat is active. The duplicate office schedule manifest remains uninstalled, and the legacy 08:10 Windows task remains disabled by source isolation.
-- `next_action`: `codex_marketing_chief` verifies the next heartbeat receipt, keeps the 08:10 path disabled, and closes the next authorized eight-company research batch.
-- `updated_at`: `2026-08-25T17:20:00-04:00`
+- `next_action`: `codex_marketing_chief` keeps the 08:10 path disabled, opens rows 18 through 25 next, and presents only the smallest sender, postal, and calendar activation approval.
+- `updated_at`: `2026-08-25T17:50:00-04:00`
 
 ## Required Day 1 closeout counts
 
@@ -266,11 +279,14 @@ Report each separately, even when zero:
 |---|---:|
 | Active prepared records from the legacy automation run | 0 |
 | Legacy prepared records excluded from canonical intake | 25 |
-| Authorized company rows researched today | 8 |
-| Current identities confirmed | 7 |
+| Authorized company rows researched today | 16 |
+| Current identities confirmed | 13 |
+| Identity blocks recorded | 3 |
+| Authorized source rows remaining | 31 |
 | Qualified accounts from today's batch | 0 |
 | Priority outreach rows currently staged | 5 |
-| External messages sent | 0 |
+| Prospect or client-acquisition messages sent | 0 |
+| Internal owner status updates sent | 1 |
 | Replies | 0 |
 | Meetings booked | 0 |
 | Proposals sent | 0 |
@@ -280,7 +296,7 @@ Report each separately, even when zero:
 | New hires, contractors, software, data, domains, or mailboxes purchased | 0 |
 
 The five priority rows remain draft-only. The 25-record run is historical
-evidence from an excluded source and is not a preparation queue. The eight
+evidence from an excluded source and is not a preparation queue. All 16
 authorized research records remain held at P00 and are not qualified accounts.
 
 ## Day 1 source map
@@ -289,6 +305,11 @@ authorized research records remain held at P00 and are not qualified accounts.
 |---|---|
 | `12_Brain/05_Projects/2026-08-24 - IMMOHRTAL Marketing Solutions.md` | Recorded launch scope, canonical domain, and launch receipt |
 | `automation/immohrtal-agency/ops/DAY-1-SCORECARD.json` | Recorded automation-run preparation counts and machine states |
+| `06_Revenue/IMMOHRTAL/lead-intelligence/requalification/2026-08-25-batch-02-independent-qa.md` | Independent Batch 02 research-boundary receipt and exact holds |
+| `06_Revenue/IMMOHRTAL/lead-intelligence/LEGACY-SHEET-RESOLUTION-2026-08-25.md` | Resolution and exclusion of the seven formerly unresolved legacy Sheets |
+| `06_Revenue/IMMOHRTAL/lead-intelligence/PUBLIC-SOURCE-EXPANSION-2026-08-25.md` | Governed public-company source lanes, zero-lead expansion receipt, and activation holds |
+| `automation/immohrtal-agency/config/public-source-policy.json` | Fail-closed public-company allowlist policy with an eight-record ceiling and no contact authority |
+| `05_Offers/IMMOHRTAL/ACTIVATION-ACCOUNT-AUDIT-2026-08-25.md` | Current sender, calendar, Access Broker, and smallest activation approval state |
 | `immohrtal-marketing-site/research/outreach/DAY-1-FIRST-BATCH.csv` | Five current draft-only priority rows and their supplied public-evidence fields |
 | `immohrtal-marketing-site/research/outreach/pre-outreach-readiness.md` | Readiness questions and unresolved external-action gates |
 | `05_Offers/IMMOHRTAL/QUALIFICATION.md` | Qualification and disqualification rules |
@@ -297,8 +318,10 @@ authorized research records remain held at P00 and are not qualified accounts.
 
 ## Decisions explicitly not made today
 
-- No Gmail or other mailbox setup.
-- No message creation, sending, posting, or form submission.
+- No mailbox, sender, or send-as configuration change.
+- No prospect message, proposal, posting, form submission, or booking action.
+- One exact internal owner status update was sent to Dillon's connected Gmail
+  under his explicit request and read back; it conveyed no prospect outreach.
 - No CRM write.
 - No public pricing publication or proposal delivery.
 - No purchase, hiring, contracting, spend, or external runtime.

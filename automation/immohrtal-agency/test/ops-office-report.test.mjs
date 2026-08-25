@@ -25,7 +25,7 @@ test('office snapshot derives five truthful seat states from the real command bo
   assert.ok(snapshot.roster.every((role) => role.online_claim === false));
   assert.equal(snapshot.board.total_items, 13);
   assert.equal(snapshot.board.status_counts.READY_FOR_REVIEW, 4);
-  assert.equal(snapshot.board.status_counts.BLOCKED, 3);
+  assert.equal(snapshot.board.status_counts.BLOCKED, 2);
   assert.equal(snapshot.board.status_counts.IN_PROGRESS, 1);
   assert.equal(snapshot.board.status_counts.DEFERRED ?? 0, 0);
   assert.equal(snapshot.office_lifecycle.current_state, 'CONFIGURED_WITH_RECORDED_BLOCKERS');
@@ -35,8 +35,11 @@ test('office snapshot derives five truthful seat states from the real command bo
   assert.equal(snapshot.standup.commercial_truth.gmail_drafts_created, 5);
   assert.equal(snapshot.standup.commercial_truth.gmail_drafts_directly_read_back, 5);
   assert.equal(snapshot.standup.commercial_truth.gmail_drafts_compliance_blocked, 5);
-  assert.equal(snapshot.standup.commercial_truth.researched_today, 8);
+  assert.equal(snapshot.standup.commercial_truth.researched_today, 16);
+  assert.equal(snapshot.standup.commercial_truth.identity_confirmed_today, 13);
+  assert.equal(snapshot.standup.commercial_truth.identity_blocked_today, 3);
   assert.equal(snapshot.standup.commercial_truth.qualified_today, 0);
+  assert.equal(snapshot.standup.commercial_truth.owner_status_updates_sent, 1);
   assert.equal(snapshot.standup.commercial_truth.messages_sent, 0);
   assert.equal(snapshot.standup.commercial_truth.replies, 0);
   assert.equal(snapshot.standup.commercial_truth.meetings_booked, 0);
@@ -120,7 +123,8 @@ test('dashboard renderer exposes exact due times and blockers with no secret or 
 
   assert.match(dashboard, /2026-08-25T12:00:00-04:00/);
   assert.match(dashboard, /Legal seller, registrations, banking, payments/);
-  assert.match(dashboard, /External messages sent|Messages sent/);
+  assert.match(dashboard, /Prospect messages sent/);
+  assert.match(dashboard, /Owner status updates sent/);
   assert.match(dashboard, /Drafts held<\/span><strong>5<\/strong>/);
   assert.match(dashboard, /Daily Codex heartbeat/);
   assert.doesNotMatch(dashboard, /contact_email|contact_name|sheet_id|sender_email/);

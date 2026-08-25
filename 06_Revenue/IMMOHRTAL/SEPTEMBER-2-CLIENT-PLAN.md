@@ -14,18 +14,23 @@
 | Operating days remaining, excluding weekends and Labor Day | 14 |
 | Verified customers | 0 |
 | Customer gap | 2 |
-| Authorized source rows researched | 8 |
-| Authorized source rows remaining | 39 |
+| Authorized source rows researched | 16 |
+| Current identities confirmed | 13 |
+| Identity blocks | 3 |
+| Authorized source rows remaining | 31 |
 | Newly qualified accounts | 0 |
-| Messages sent | 0 |
+| Prospect messages sent | 0 |
+| Internal owner status updates sent | 1 |
 | Replies | 0 |
 | Meetings booked | 0 |
 | Verified recurring revenue | $0 |
 
 **Risk state:** `AT_RISK_CONFIGURATION_BLOCKED`. The two-customer target remains
 active, but no acquisition motion is live while the sender, compliant postal
-footer, suppression route, and dedicated booking destination are unresolved.
-At the current eight-company cap, the remaining authorized Sheet requires five
+footer, suppression route, Access Broker record, and dedicated booking
+destination are unresolved. The sender and owner calendar identities are now
+verified, which narrows the configuration gap but does not activate outreach.
+At the current eight-company cap, the remaining authorized Sheet requires four
 daily batches. Those batches create research evidence, not permission to send.
 
 ## Definition of success
@@ -80,11 +85,18 @@ Never move client-owned contacts, employer contacts, job-search contacts, purcha
 - Authorized discovery source: 47 company rows.
 - Daily research ceiling: 8 companies.
 - Batch 01 completed: 8 researched, 7 current identities, 1 identity block.
-- Qualification result: 0 qualified, 8 held at P00, 0 external actions.
-- Remaining source rows before dedupe and future blocks: 39.
-- Expansion need: identify additional current public-company sources without
-  importing private people data or weakening client, employer, vendor,
-  prior-touch, suppression, or consent controls.
+- Batch 02 completed: 8 researched, 6 current identities, 2 identity blocks.
+- Combined qualification result: 0 qualified, 16 held at P00, 0 prospect
+  actions.
+- Remaining source rows before dedupe and future blocks: 31, which is three
+  full eight-row batches plus one seven-row batch.
+- Expansion research identified first-party business sites, SEC EDGAR,
+  USAspending, manual SBA certification search, and ephemeral Exa company
+  locators as bounded lanes. It created zero leads and granted no contact use.
+- A local allowlist now rejects personal data, personal LinkedIn paths, unsafe
+  URLs, unknown fields, and policy widening. Recurring public collection stays
+  held until exact queries, terms, conflict checks, suppression, dedupe, and
+  independent receipts are integrated.
 
 ## First wedge
 
@@ -107,7 +119,13 @@ Do not lead with every service. Route one observable problem to one plausible of
 
 ## Booking state
 
-The primary Google Calendar identity is live and verified. A dedicated IMMOHRTAL booking page is not currently verified. The booking lane therefore remains `BLOCKED_CONFIGURATION` until Dillon's availability, meeting length, notice, buffer, cap, fields, privacy language, confirmation copy, and test receipts are approved.
+The connected Google primary calendar is live with owner access, and the
+authenticated IMMOHRTAL business mailbox is the Zoho route. A dedicated
+IMMOHRTAL booking page is not currently verified, the business mailbox is not
+registered in Access Broker, and the Gmail identity is not proven as a send-as
+alias. The booking lane therefore remains `BLOCKED_CONFIGURATION` until the
+approved calendar defaults, privacy language, confirmation copy, Access Broker
+route, and controlled test receipts exist.
 
 Until then, the system may read live availability and prepare a reply with two or three open times after a positive prospect response. It may not create the event or send an invitation without the applicable approval and confirmed prospect selection.
 

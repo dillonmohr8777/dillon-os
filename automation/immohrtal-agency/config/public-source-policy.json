@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "status": "pure_local_allowlist_not_scheduled",
+  "purpose": "Permit only privacy-safe company identity fields after an upstream public-source result has been projected in memory.",
+  "safety": {
+    "pure_local": true,
+    "network_enabled": false,
+    "automatic_fetch_enabled": false,
+    "raw_payload_persistence": false,
+    "raw_payload_logging": false,
+    "deny_unknown_fields": true,
+    "external_actions_authorized": false,
+    "cadence_changed": false
+  },
+  "allowed_fields": [
+    "company_name",
+    "canonical_first_party_domain",
+    "canonical_first_party_url",
+    "public_company_page_locator",
+    "query_fingerprint",
+    "retrieved_at",
+    "source_lane",
+    "verification_state"
+  ],
+  "required_fields": [
+    "company_name",
+    "canonical_first_party_domain",
+    "canonical_first_party_url",
+    "query_fingerprint",
+    "retrieved_at",
+    "source_lane",
+    "verification_state"
+  ],
+  "optional_fields": [
+    "public_company_page_locator"
+  ],
+  "allowed_source_lanes": [
+    "exa_company_locator",
+    "first_party_company_web",
+    "sba_small_business_search",
+    "sec_edgar_company_data",
+    "usaspending_recipient_data"
+  ],
+  "allowed_verification_states": [
+    "locator_only_exact_domain",
+    "first_party_confirmed",
+    "official_source_confirmed"
+  ],
+  "blocked_field_tokens": [
+    "email",
+    "phone",
+    "telephone",
+    "mobile",
+    "postal",
+    "address",
+    "street",
+    "contact",
+    "person",
+    "people",
+    "employee",
+    "staff",
+    "owner",
+    "founder",
+    "executive",
+    "recipient"
+  ],
+  "url_policy": {
+    "canonical_scheme": "https",
+    "allow_credentials": false,
+    "allow_non_default_ports": false,
+    "allow_query": false,
+    "allow_fragment": false,
+    "canonical_url_must_be_origin_root": true,
+    "public_company_page_hosts": [
+      "linkedin.com"
+    ],
+    "public_company_page_path_prefix": "/company/",
+    "reject_personal_linkedin_path_prefix": "/in/"
+  },
+  "fingerprint": {
+    "algorithm": "sha256",
+    "encoding": "lowercase_hex",
+    "length": 64
+  },
+  "limits": {
+    "max_company_name_length": 160,
+    "max_input_object_nodes": 1000,
+    "max_persisted_accounts_per_run": 8
+  },
+  "output_contract": {
+    "account_lifecycle": "RESEARCH_ONLY",
+    "stage": "P00_ACCOUNT_RESEARCH",
+    "contact_discovery_authorized": false,
+    "outreach_authorized": false,
+    "external_actions": 0
+  }
+}
