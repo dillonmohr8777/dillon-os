@@ -219,6 +219,13 @@ Hairlines are cool, translucent, and structural. Circular geometry is reserved f
 - **Motion:** Three slow alternate drift paths create a living workflow. They stop effectively under reduced motion.
 - **Integrity:** Illustrative values must be labeled illustrative; real evidence retains source, date, and change caveat.
 
+### Platform Pressroom Artwork
+
+- **Integration:** Google, HubSpot, ChatGPT, Claude, and Perplexity marks belong inside the illustrated artifact as printed paper seals, engraved hardware, worn enamel, or in-scene screens.
+- **Material match:** Every platform mark inherits the artwork's perspective, lighting, occlusion, scratches, halftone grain, paper fibers, and restrained saturation while remaining recognizable.
+- **Presentation:** Platform identity is described semantically in the caption, but never repeated as a detached logo pill, clean app tile, or flat vector sticker around the image.
+- **Integrity:** The marks identify platforms used or discussed in the work and never imply endorsement.
+
 ### Client Particle Sequence
 
 - **Structure:** One persistent WebGL particle field resolves the exact IMMOHRTAL mark in white, runs through 21 verified public-safe marks, bridges to the invitation, and builds “YOU” from the same system.
@@ -255,3 +262,4 @@ Hairlines are cool, translucent, and structural. Circular geometry is reserved f
 - **Don't** make a visitor decode AEO, GEO, entities, schema, bounded agents, or governance language before they understand what improves for their business.
 - **Don't** introduce a new display family, radius step, or shadow vocabulary without updating this system intentionally.
 - **Don't** preserve a former brand name, domain, or attribution merely because a component or asset originated in an earlier implementation.
+- **Don't** paste pristine platform logos over distressed pressroom artwork or place separate logo badges beneath it; build the mark into the scene's physical material instead.

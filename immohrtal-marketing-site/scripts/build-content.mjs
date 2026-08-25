@@ -95,20 +95,20 @@ const responsiveImageAttributes = (media) => {
   return ` srcset="${srcset.join(', ')}" sizes="(max-width: 760px) 100vw, (max-width: 1180px) 88vw, 1240px"`
 }
 
-const brandMarks = {
-  google: { name: 'Google', src: '/pressroom/brands/google.png' },
-  hubspot: { name: 'HubSpot', src: '/pressroom/brands/hubspot.png' },
-  chatgpt: { name: 'ChatGPT', src: '/pressroom/brands/chatgpt.png' },
-  claude: { name: 'Claude', src: '/pressroom/brands/claude.png' },
-  perplexity: { name: 'Perplexity', src: '/pressroom/brands/perplexity.png' },
+const platformNames = {
+  google: 'Google',
+  hubspot: 'HubSpot',
+  chatgpt: 'ChatGPT',
+  claude: 'Claude',
+  perplexity: 'Perplexity',
 }
 
-const brandMarksHtml = (brands = []) => brands.length
-  ? `<ul class="brand-marks" aria-label="Platforms referenced in this chapter">${brands.map((brand) => {
-      const mark = brandMarks[brand]
-      if (!mark) throw new Error(`Unknown pressroom brand: ${brand}`)
-      return `<li><img src="${mark.src}" width="24" height="24" alt=""><span>${mark.name}</span></li>`
-    }).join('')}</ul>`
+const platformProvenanceHtml = (brands = []) => brands.length
+  ? `<span class="platform-provenance">Platforms shown: ${brands.map((brand) => {
+      const name = platformNames[brand]
+      if (!name) throw new Error(`Unknown pressroom brand: ${brand}`)
+      return name
+    }).join(', ')}</span>`
   : ''
 
 const imageHtml = (media, className = 'pressroom-figure', priority = false) => {
@@ -118,7 +118,7 @@ const imageHtml = (media, className = 'pressroom-figure', priority = false) => {
       <div class="pressroom-image">
         <img src="${resolved.src}"${responsiveImageAttributes(resolved)} width="${resolved.width}" height="${resolved.height}" alt="${escapeHtml(resolved.alt)}" ${priority ? 'fetchpriority="high" loading="eager"' : 'loading="lazy"'} decoding="async">
       </div>
-      <figcaption>${escapeHtml(resolved.caption)}${brandMarksHtml(resolved.brands)}</figcaption>
+      <figcaption>${escapeHtml(resolved.caption)}${platformProvenanceHtml(resolved.brands)}</figcaption>
     </figure>`
   : ''
 }
