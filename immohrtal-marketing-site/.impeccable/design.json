@@ -1,0 +1,283 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-24T20:27:55.1611955-04:00",
+  "title": "Design System: IMMOHRTAL Marketing Solutions",
+  "extensions": {
+    "colorMeta": {
+      "space-ink": {
+        "role": "neutral",
+        "displayName": "Space Ink",
+        "canonical": "#020711",
+        "tonalRamp": ["oklch(15% 0.025 255)", "oklch(25% 0.025 255)", "oklch(35% 0.022 255)", "oklch(47% 0.018 255)", "oklch(60% 0.014 255)", "oklch(72% 0.010 255)", "oklch(84% 0.006 255)", "oklch(95% 0.003 255)"]
+      },
+      "deep-observatory": {
+        "role": "neutral",
+        "displayName": "Deep Observatory",
+        "canonical": "#07101f",
+        "tonalRamp": ["oklch(15% 0.030 255)", "oklch(25% 0.030 255)", "oklch(35% 0.027 255)", "oklch(47% 0.023 255)", "oklch(60% 0.018 255)", "oklch(72% 0.013 255)", "oklch(84% 0.008 255)", "oklch(95% 0.004 255)"]
+      },
+      "raised-gunmetal": {
+        "role": "neutral",
+        "displayName": "Raised Gunmetal",
+        "canonical": "#0b1729",
+        "tonalRamp": ["oklch(15% 0.035 255)", "oklch(25% 0.035 255)", "oklch(35% 0.031 255)", "oklch(47% 0.026 255)", "oklch(60% 0.020 255)", "oklch(72% 0.014 255)", "oklch(84% 0.009 255)", "oklch(95% 0.004 255)"]
+      },
+      "proof-paper": {
+        "role": "neutral",
+        "displayName": "Proof Paper",
+        "canonical": "#f3f7fb",
+        "tonalRamp": ["oklch(15% 0.010 245)", "oklch(25% 0.010 245)", "oklch(35% 0.009 245)", "oklch(47% 0.008 245)", "oklch(60% 0.007 245)", "oklch(72% 0.006 245)", "oklch(84% 0.005 245)", "oklch(95% 0.004 245)"]
+      },
+      "proof-paper-blue": {
+        "role": "neutral",
+        "displayName": "Proof Paper Blue",
+        "canonical": "#e8f2fb",
+        "tonalRamp": ["oklch(15% 0.025 245)", "oklch(25% 0.024 245)", "oklch(35% 0.022 245)", "oklch(47% 0.019 245)", "oklch(60% 0.016 245)", "oklch(72% 0.013 245)", "oklch(84% 0.010 245)", "oklch(95% 0.007 245)"]
+      },
+      "platinum": {
+        "role": "neutral",
+        "displayName": "Platinum",
+        "canonical": "#dce4ed",
+        "tonalRamp": ["oklch(15% 0.015 245)", "oklch(25% 0.015 245)", "oklch(35% 0.014 245)", "oklch(47% 0.013 245)", "oklch(60% 0.011 245)", "oklch(72% 0.009 245)", "oklch(84% 0.007 245)", "oklch(95% 0.004 245)"]
+      },
+      "signal-muted": {
+        "role": "neutral",
+        "displayName": "Signal Muted",
+        "canonical": "#a7bbd1",
+        "tonalRamp": ["oklch(15% 0.040 245)", "oklch(25% 0.040 245)", "oklch(35% 0.037 245)", "oklch(47% 0.033 245)", "oklch(60% 0.028 245)", "oklch(72% 0.022 245)", "oklch(84% 0.015 245)", "oklch(95% 0.007 245)"]
+      },
+      "cobalt": {
+        "role": "primary",
+        "displayName": "Cobalt Current",
+        "canonical": "#287dff",
+        "tonalRamp": ["oklch(15% 0.110 255)", "oklch(25% 0.155 255)", "oklch(35% 0.190 255)", "oklch(47% 0.215 255)", "oklch(60% 0.205 255)", "oklch(72% 0.165 255)", "oklch(84% 0.100 255)", "oklch(95% 0.035 255)"]
+      },
+      "signal-cyan": {
+        "role": "primary",
+        "displayName": "Signal Cyan",
+        "canonical": "#18c8ff",
+        "tonalRamp": ["oklch(15% 0.080 220)", "oklch(25% 0.115 220)", "oklch(35% 0.145 220)", "oklch(47% 0.165 220)", "oklch(60% 0.155 220)", "oklch(72% 0.125 220)", "oklch(84% 0.080 220)", "oklch(95% 0.025 220)"]
+      },
+      "verification-mint": {
+        "role": "secondary",
+        "displayName": "Verification Mint",
+        "canonical": "#58edb2",
+        "tonalRamp": ["oklch(15% 0.070 165)", "oklch(25% 0.105 165)", "oklch(35% 0.135 165)", "oklch(47% 0.155 165)", "oklch(60% 0.145 165)", "oklch(72% 0.115 165)", "oklch(84% 0.075 165)", "oklch(95% 0.025 165)"]
+      },
+      "proof-ink": {
+        "role": "neutral",
+        "displayName": "Proof Ink",
+        "canonical": "#06101d",
+        "tonalRamp": ["oklch(15% 0.028 250)", "oklch(25% 0.028 250)", "oklch(35% 0.025 250)", "oklch(47% 0.021 250)", "oklch(60% 0.017 250)", "oklch(72% 0.012 250)", "oklch(84% 0.008 250)", "oklch(95% 0.004 250)"]
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "rgba(166, 204, 240, 0.22)",
+        "tonalRamp": ["oklch(15% 0.035 245)", "oklch(25% 0.035 245)", "oklch(35% 0.032 245)", "oklch(47% 0.028 245)", "oklch(60% 0.023 245)", "oklch(72% 0.018 245)", "oklch(84% 0.012 245)", "oklch(95% 0.005 245)"]
+      },
+      "hairline-strong": {
+        "role": "neutral",
+        "displayName": "Hairline Strong",
+        "canonical": "rgba(181, 218, 250, 0.42)",
+        "tonalRamp": ["oklch(15% 0.040 245)", "oklch(25% 0.040 245)", "oklch(35% 0.036 245)", "oklch(47% 0.031 245)", "oklch(60% 0.026 245)", "oklch(72% 0.020 245)", "oklch(84% 0.013 245)", "oklch(95% 0.005 245)"]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Conviction Display",
+        "purpose": "Short section theses, hero phrases, project names, and agent names."
+      },
+      "title": {
+        "displayName": "Project Title",
+        "purpose": "Named work and mid-level authored headings."
+      },
+      "body": {
+        "displayName": "Plainspoken Body",
+        "purpose": "Technical explanations and proof context at readable line lengths."
+      },
+      "label": {
+        "displayName": "Evidence Label",
+        "purpose": "Sources, statuses, URLs, sequence controls, and operating steps."
+      }
+    },
+    "shadows": [
+      {
+        "name": "evidence-lift",
+        "value": "0 32px 90px rgba(0, 0, 0, 0.34)",
+        "purpose": "Browser frames and elevated navigation surfaces."
+      },
+      {
+        "name": "paper-proof-lift",
+        "value": "0 44px 100px rgba(18, 43, 65, 0.20)",
+        "purpose": "Dated search-result captures over the pale proof field."
+      },
+      {
+        "name": "operating-window-lift",
+        "value": "0 30px 80px rgba(0, 0, 0, 0.42)",
+        "purpose": "Moving audit, entity, and CRM artifacts."
+      },
+      {
+        "name": "signal-action-lift",
+        "value": "0 12px 34px rgba(24, 200, 255, 0.20)",
+        "purpose": "Cyan calls to action at rest."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-resolve",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "The default material easing for lifts, reveals, and operating-window drift."
+      },
+      {
+        "name": "interface-response",
+        "value": "200ms ease",
+        "purpose": "Navigation color, control boundary, and skip-link feedback."
+      },
+      {
+        "name": "artifact-lift",
+        "value": "250ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Primary-action and control elevation."
+      },
+      {
+        "name": "reveal",
+        "value": "900ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "One-time section-copy entrance after intersection."
+      },
+      {
+        "name": "window-drift",
+        "value": "10s to 12s cubic-bezier(0.16, 1, 0.3, 1) alternate",
+        "purpose": "Slow independent motion for operating artifacts; disabled by reduced motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "navigation-collapse",
+        "value": "1000px"
+      },
+      {
+        "name": "compact",
+        "value": "720px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Signal Action",
+      "kind": "button",
+      "description": "The compact cyan action used in the navigation rail and final conversion section.",
+      "html": "<a class=\"ds-primary-action\" href=\"#\">OPEN CHANNEL <svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M5 12h13M13 6l6 6-6 6\"/></svg></a>",
+      "css": ".ds-primary-action { min-height: 50px; display: inline-flex; align-items: center; justify-content: center; gap: 12px; padding: 0 19px; border-radius: var(--action-radius, 12px); background: linear-gradient(180deg, #53dcff 0%, #18bde9 100%); color: #020711; font: 760 0.86rem/1 'Manrope Variable', sans-serif; text-decoration: none; box-shadow: 0 12px 34px rgba(24, 200, 255, 0.20); transition: transform 250ms cubic-bezier(.16,1,.3,1), box-shadow 250ms cubic-bezier(.16,1,.3,1); } .ds-primary-action svg { width: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; } .ds-primary-action:hover { transform: translateY(-3px); box-shadow: 0 18px 44px rgba(24, 200, 255, 0.30); } .ds-primary-action:focus-visible { outline: 3px solid #58edb2; outline-offset: 4px; }"
+    },
+    {
+      "name": "Website Rail Control",
+      "kind": "button",
+      "refersTo": "control-button",
+      "description": "Square directional control for advancing the website proof conveyor.",
+      "html": "<button class=\"ds-rail-control\" type=\"button\" aria-label=\"Next website\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M5 12h13M13 6l6 6-6 6\"/></svg></button>",
+      "css": ".ds-rail-control { width: 50px; height: 50px; display: grid; place-items: center; border: 1px solid rgba(181, 218, 250, 0.42); border-radius: 12px; background: #0b1729; color: #f3f7fb; cursor: pointer; transition: border-color 200ms ease, background 200ms ease, transform 200ms cubic-bezier(.16,1,.3,1); } .ds-rail-control svg { width: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; } .ds-rail-control:hover { transform: translateY(-2px); border-color: #18c8ff; background: #10213a; } .ds-rail-control:focus-visible { outline: 3px solid #58edb2; outline-offset: 4px; }"
+    },
+    {
+      "name": "Navigation Rail",
+      "kind": "nav",
+      "refersTo": "navigation-rail",
+      "description": "The fixed branded control rail that keeps proof sections and direct contact available.",
+      "html": "<nav class=\"ds-nav-rail\" aria-label=\"Primary navigation\"><strong>IMMOHRTAL</strong><span>WEB WORK</span><span>AEO / GEO</span><a href=\"#\">OPEN CHANNEL</a></nav>",
+      "css": ".ds-nav-rail { min-height: 76px; display: grid; grid-template-columns: 1fr auto auto auto; align-items: center; gap: 28px; padding: 12px 14px 12px 20px; border: 1px solid rgba(130, 191, 238, 0.34); border-radius: 15px; background: rgba(4, 14, 29, 0.89); color: #dce4ed; box-shadow: 0 14px 46px rgba(0,0,0,0.36); backdrop-filter: blur(18px) saturate(130%); font: 620 0.78rem/1 'Manrope Variable', sans-serif; } .ds-nav-rail strong { color: #f3f7fb; font: 720 1rem/1 'Unbounded Variable', sans-serif; } .ds-nav-rail a { padding: 14px; border-radius: 12px; background: #18c8ff; color: #020711; text-decoration: none; } .ds-nav-rail span:hover { color: #18c8ff; } .ds-nav-rail a:focus-visible { outline: 3px solid #58edb2; outline-offset: 4px; }"
+    },
+    {
+      "name": "Live Website Browser Frame",
+      "kind": "card",
+      "refersTo": "browser-frame",
+      "description": "An inspectable public web project presented as a restrained browser artifact.",
+      "html": "<a class=\"ds-browser\" href=\"#\"><span class=\"ds-browser__bar\"><i></i><i></i><i></i><em>example.com</em></span><span class=\"ds-browser__viewport\">LIVE WEBSITE PREVIEW</span><span class=\"ds-browser__open\">VIEW LIVE →</span></a>",
+      "css": ".ds-browser { position: relative; display: block; overflow: hidden; border-radius: 16px; background: #0b1729; color: #f3f7fb; text-decoration: none; box-shadow: 0 32px 90px rgba(0,0,0,0.34); } .ds-browser__bar { height: 44px; display: flex; align-items: center; gap: 7px; padding: 0 18px; border-bottom: 1px solid rgba(166,204,240,0.22); background: #0b1728; } .ds-browser__bar i { width: 8px; height: 8px; border-radius: 50%; background: rgba(210,231,248,0.42); } .ds-browser__bar em { margin-left: 12px; color: #a7bbd1; font: normal 500 0.62rem/1 'Foundry Mono', monospace; } .ds-browser__viewport { min-height: 220px; display: grid; place-items: center; background: radial-gradient(circle at center, rgba(24,200,255,0.14), transparent 40%), #07111d; color: #18c8ff; font: 500 0.67rem/1.3 'Foundry Mono', monospace; letter-spacing: 0.12em; transition: transform 800ms cubic-bezier(.16,1,.3,1); } .ds-browser:hover .ds-browser__viewport { transform: scale(1.025); } .ds-browser__open { position: absolute; right: 18px; bottom: 18px; min-height: 44px; display: inline-flex; align-items: center; padding: 0 14px; border-radius: 10px; background: rgba(2,7,17,0.88); font: 700 0.78rem/1 'Manrope Variable', sans-serif; } .ds-browser:focus-visible { outline: 3px solid #58edb2; outline-offset: 4px; }"
+    },
+    {
+      "name": "Project Discipline Chip",
+      "kind": "chip",
+      "description": "A factual discipline label attached to a website project.",
+      "html": "<span class=\"ds-chip\">AEO / GEO</span>",
+      "css": ".ds-chip { display: inline-flex; align-items: center; min-height: 32px; padding: 7px 10px; border: 1px solid rgba(166, 204, 240, 0.22); border-radius: 999px; background: transparent; color: #dce4ed; font: 600 0.72rem/1 'Manrope Variable', sans-serif; }"
+    },
+    {
+      "name": "Operating Evidence Window",
+      "kind": "custom",
+      "refersTo": "evidence-window",
+      "description": "A floating operating artifact with status header, bounded content, and an integrity receipt.",
+      "html": "<article class=\"ds-evidence-window\"><header><span>SITE AUDIT</span><em>public source scan</em></header><div class=\"ds-evidence-window__body\">ENTITY → EVIDENCE → PAGE</div><small>Illustrative interface. Values populate only from a real audit.</small></article>",
+      "css": ".ds-evidence-window { overflow: hidden; border-radius: 14px; background: rgba(9,24,42,0.94); color: #dce4ed; box-shadow: 0 30px 80px rgba(0,0,0,0.42); backdrop-filter: blur(20px); } .ds-evidence-window header { min-height: 42px; display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 0 15px; border-bottom: 1px solid rgba(166,204,240,0.22); color: #18c8ff; font: 500 0.62rem/1 'Foundry Mono', monospace; letter-spacing: 0.1em; } .ds-evidence-window header em { color: #a7bbd1; font-style: normal; letter-spacing: 0; } .ds-evidence-window__body { min-height: 150px; display: grid; place-items: center; padding: 34px; color: #58edb2; font: 500 0.82rem/2 'Foundry Mono', monospace; } .ds-evidence-window small { display: block; padding: 14px 16px; border-top: 1px solid rgba(166,204,240,0.22); color: #a7bbd1; font: 500 0.7rem/1.5 'Manrope Variable', sans-serif; }"
+    },
+    {
+      "name": "Particle Sequence Controls",
+      "kind": "custom",
+      "description": "Visible pause and replay controls that keep the authored hero interruptible.",
+      "html": "<div class=\"ds-sequence-controls\" aria-label=\"Logo sequence controls\"><button type=\"button\">PAUSE SEQUENCE</button><button type=\"button\">REPLAY SEQUENCE</button></div>",
+      "css": ".ds-sequence-controls { display: flex; gap: 8px; } .ds-sequence-controls button { min-width: 48px; min-height: 48px; padding: 0 14px; border: 1px solid rgba(181,218,250,0.42); border-radius: 10px; background: rgba(5,16,34,0.86); color: #f3f7fb; font: 500 0.67rem/1.3 'Foundry Mono', monospace; cursor: pointer; } .ds-sequence-controls button:hover { border-color: #18c8ff; } .ds-sequence-controls button:focus-visible { outline: 3px solid #58edb2; outline-offset: 4px; } .ds-sequence-controls button:disabled { opacity: 0.45; cursor: default; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Particle Proof Conveyor",
+    "overview": "IMMOHRTAL is a dark technical observatory built around one visual argument: proof moves first. Work begins as signal, resolves into exact client marks, expands into live website frames and search evidence, then becomes a legible operating system. The atmosphere is cinematic and technically fluent, but every authored effect must terminate in a name, artifact, status, or action the visitor can understand.\n\nCold gunmetal space carries the active system. Pale paper chambers interrupt that darkness when evidence needs daylight, establishing a strong proof-versus-process rhythm. Cobalt, cyan, and mint behave as signal colors rather than ambient decoration; platinum and muted blue-gray keep long explanations readable without flattening the hierarchy.\n\nThe world is precise, dense, and proof-led. It rejects generic agency dashboards, unsupported metric theater, and spectacle that never resolves into usable evidence.",
+    "keyCharacteristics": [
+      "A dark observatory alternating with pale, high-contrast proof chambers.",
+      "Exact-color particles that converge rapidly into recognizable marks and words.",
+      "Browser frames, evidence windows, agent stations, and operating receipts as the visual vocabulary.",
+      "Chunky geometric display type balanced by plainspoken body copy and compact mono labels.",
+      "Motion that communicates flow, verification, and system state, with complete static fallbacks."
+    ],
+    "rules": [
+      {
+        "name": "The Signal Rarity Rule",
+        "body": "Cyan and mint identify action, evidence, or verified state. They do not wash whole sections or decorate every edge.",
+        "section": "colors"
+      },
+      {
+        "name": "The Proof in Daylight Rule",
+        "body": "Search captures and operating sequences move onto pale paper so evidence reads as evidence, not as another effect inside the spectacle.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Conviction Voice Rule",
+        "body": "Unbounded owns declarations and names. It never carries paragraph-length explanation.",
+        "section": "typography"
+      },
+      {
+        "name": "The Instrument Panel Rule",
+        "body": "Mono text is functional: status, source, step, URL, or evidence label. It is not a texture applied to ordinary body copy.",
+        "section": "typography"
+      },
+      {
+        "name": "The Conveyor Rule",
+        "body": "Every section advances the proof sequence: trust marks, web work, search evidence, operating artifacts, agents, system, action. Reordering must preserve that causal story.",
+        "section": "layout"
+      },
+      {
+        "name": "The Artifact Elevation Rule",
+        "body": "Shadows belong to inspectable artifacts or active controls. Ordinary copy sections stay flat.",
+        "section": "elevation"
+      },
+      {
+        "name": "The One Container, One Radius Rule",
+        "body": "Use the established 10px control, 12px action, 14px window, 15px rail, and 16px frame steps instead of introducing near-duplicate corner values.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "Do make proof visible before explaining the method.",
+      "Do use Cyan, Cobalt, and Mint to describe signal, action, flow, and verification.",
+      "Do move evidence inside browser frames, captured-paper layers, operating windows, or named agent stations.",
+      "Do preserve exact logo geometry, colors, and transparency in particle and static treatments.",
+      "Do label illustrative interfaces and time-sensitive search evidence honestly.",
+      "Do provide pause, keyboard focus, reduced-motion, and no-WebGL paths that retain the complete story."
+    ],
+    "donts": [
+      "Don't turn the page into a generic grid of glass cards or an interchangeable agency dashboard.",
+      "Don't add unsupported metrics, testimonials, client counts, system status, or autonomous-operation claims.",
+      "Don't use accent color as an ambient wash when no signal, action, or state is present.",
+      "Don't let motion obscure source material, delay access to proof, or continue without a useful final state.",
+      "Don't use mono labels as a decorative substitute for clear body copy.",
+      "Don't introduce a new display family, radius step, or shadow vocabulary without updating this system intentionally."
+    ]
+  }
+}

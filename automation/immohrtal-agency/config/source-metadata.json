@@ -1,0 +1,11 @@
+{
+  "source_id": "personal-drive-prospect-sheet",
+  "source_type": "google_drive_discovery_reference",
+  "sheet_id": "1S1jX-LSuK0pmNg8orJFsqNzhJu5nCzjQsPnoMq4jBXU",
+  "purpose": "discovery_only_pending_requalification",
+  "adapter_status": "not_configured",
+  "embedded_rows": false,
+  "contains_momentum_360_data": "unknown_do_not_import_without_requalification",
+  "allowed_next_step": "A future read-only Google Drive adapter may copy explicitly requalified IMMOHRTAL rows into the local input schema."
+}
+

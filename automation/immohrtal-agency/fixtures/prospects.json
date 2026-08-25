@@ -1,0 +1,57 @@
+{
+  "source": {
+    "source_id": "fictional-json-fixture",
+    "source_type": "local_json",
+    "label": "IMMOHRTAL fictional QA records",
+    "requalified_for_immohrtal": true
+  },
+  "prospects": [
+    {
+      "prospect_id": "fixture-northstar",
+      "company_name": "Northstar Heating Lab",
+      "website": "https://northstar-heating.example",
+      "market": "Philadelphia, PA",
+      "category": "home services",
+      "contact_name": "Jordan",
+      "contact_email": "jordan@northstar-heating.example",
+      "allowed_channels": ["email"],
+      "opt_out": false,
+      "do_not_contact": false,
+      "observations": [
+        "Service pages were reported as difficult to navigate on mobile.",
+        "No answer-focused FAQ structure was supplied in the source record."
+      ]
+    },
+    {
+      "prospect_id": "fixture-harbor",
+      "company_name": "Harbor & Pine Dental Studio",
+      "website": "https://harbor-pine.example",
+      "market": "Wilmington, DE",
+      "category": "dental",
+      "contact_name": "Casey",
+      "contact_email": "casey@harbor-pine.example",
+      "allowed_channels": ["email"],
+      "opt_out": false,
+      "do_not_contact": false,
+      "observations": [
+        "The supplied record did not include structured treatment FAQs.",
+        "The supplied record flagged a long appointment path."
+      ]
+    },
+    {
+      "prospect_id": "fixture-optout",
+      "company_name": "Cedar Street Workshop",
+      "website": "https://cedar-street.example",
+      "market": "Lancaster, PA",
+      "category": "retail",
+      "contact_name": "Morgan",
+      "contact_email": "morgan@cedar-street.example",
+      "allowed_channels": [],
+      "opt_out": true,
+      "do_not_contact": true,
+      "suppression_reason": "Fictional opt-out fixture",
+      "observations": []
+    }
+  ]
+}
+

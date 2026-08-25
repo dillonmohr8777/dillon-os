@@ -1,0 +1,27 @@
+{
+  "source": {
+    "source_id": "fictional-model-smoke",
+    "source_type": "local_json",
+    "label": "IMMOHRTAL fictional model QA record",
+    "requalified_for_immohrtal": true
+  },
+  "prospects": [
+    {
+      "prospect_id": "fixture-model-orbit",
+      "company_name": "Orbit Window & Door Lab",
+      "website": "https://orbit-window.example",
+      "market": "Philadelphia, PA",
+      "category": "home services",
+      "contact_name": "Avery",
+      "contact_email": "avery@orbit-window.example",
+      "allowed_channels": ["email"],
+      "opt_out": false,
+      "do_not_contact": false,
+      "observations": [
+        "The fictional source record reports that mobile visitors need several steps to reach the estimate form.",
+        "The fictional source record contains no answer-first pages for material, installation, or service-area questions."
+      ]
+    }
+  ]
+}
+

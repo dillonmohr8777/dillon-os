@@ -1,0 +1,28 @@
+{
+  "business": {
+    "name": "IMMOHRTAL Marketing Solutions",
+    "sender_name": "Dillon Mohr",
+    "sender_email": "dillonmohr8777@gmail.com"
+  },
+  "limits": {
+    "max_prospects_per_run": 25,
+    "lock_stale_minutes": 180
+  },
+  "policy": {
+    "allowed_input_sources": ["local_json", "local_csv", "google_drive_discovery_reference"],
+    "forbidden_source_labels": ["momentum 360", "momentum360", "momentum_360"],
+    "external_actions": false,
+    "delivery_mode": "draft_only"
+  },
+  "approval": {
+    "required": true,
+    "scope": "exact prospect, exact subject, exact body, exact channel",
+    "adapter_handoff_enabled": false
+  },
+  "model_lane": {
+    "default_enabled": false,
+    "model": "gpt-5.6-luna",
+    "timeout_ms": 120000,
+    "max_prospects_per_run": 3
+  }
+}

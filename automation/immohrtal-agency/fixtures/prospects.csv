@@ -1,0 +1,4 @@
+prospect_id,company_name,website,market,category,contact_name,contact_email,allowed_channels,opt_out,do_not_contact,observations
+fixture-summit,Summit Glass Works,https://summit-glass.example,"Reading, PA",home services,Riley,riley@summit-glass.example,email,false,false,"The source record flagged an unclear mobile quote path.|No structured service-area answers were supplied."
+fixture-suppressed,Willow Test Company,https://willow-test.example,"York, PA",retail,Taylor,taylor@willow-test.example,email,false,false,"Fictional suppression fixture."
+

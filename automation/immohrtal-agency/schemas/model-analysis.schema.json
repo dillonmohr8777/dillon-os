@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["prospect_id", "evidence_mode", "agent_findings", "risk_flags"],
+  "properties": {
+    "prospect_id": { "type": "string", "minLength": 1, "maxLength": 100 },
+    "evidence_mode": { "type": "string", "const": "untrusted_input_only" },
+    "agent_findings": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["scout", "atlas", "forge", "relay"],
+      "properties": {
+        "scout": { "$ref": "#/$defs/finding" },
+        "atlas": { "$ref": "#/$defs/finding" },
+        "forge": { "$ref": "#/$defs/finding" },
+        "relay": { "$ref": "#/$defs/finding" }
+      }
+    },
+    "risk_flags": {
+      "type": "array",
+      "maxItems": 5,
+      "items": { "type": "string", "minLength": 1, "maxLength": 240 }
+    }
+  },
+  "$defs": {
+    "finding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["analysis", "unknowns"],
+      "properties": {
+        "analysis": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 4,
+          "items": { "type": "string", "minLength": 1, "maxLength": 240 }
+        },
+        "unknowns": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 4,
+          "items": { "type": "string", "minLength": 1, "maxLength": 240 }
+        }
+      }
+    }
+  }
+}

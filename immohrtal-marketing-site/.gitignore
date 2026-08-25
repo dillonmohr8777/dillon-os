@@ -1,0 +1,6 @@
+node_modules/
+dist/
+.netlify/
+.qa/
+*.local
+!public/media/*.mp4
