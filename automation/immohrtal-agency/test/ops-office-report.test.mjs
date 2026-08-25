@@ -26,7 +26,9 @@ test('office snapshot derives five truthful seat states from the real command bo
   assert.equal(snapshot.board.total_items, 13);
   assert.equal(snapshot.board.status_counts.READY_FOR_REVIEW, 4);
   assert.equal(snapshot.board.status_counts.BLOCKED, 2);
-  assert.equal(snapshot.board.status_counts.IN_PROGRESS, 1);
+  assert.equal(snapshot.board.status_counts.VERIFIED, 4);
+  assert.equal(snapshot.board.status_counts.DONE, 3);
+  assert.equal(snapshot.board.status_counts.IN_PROGRESS, 0);
   assert.equal(snapshot.board.status_counts.DEFERRED ?? 0, 0);
   assert.equal(snapshot.office_lifecycle.current_state, 'CONFIGURED_WITH_RECORDED_BLOCKERS');
   assert.equal(snapshot.office_lifecycle.background_runtime_state, 'NOT_VERIFIED_RUNNING');
@@ -35,9 +37,9 @@ test('office snapshot derives five truthful seat states from the real command bo
   assert.equal(snapshot.standup.commercial_truth.gmail_drafts_created, 5);
   assert.equal(snapshot.standup.commercial_truth.gmail_drafts_directly_read_back, 5);
   assert.equal(snapshot.standup.commercial_truth.gmail_drafts_compliance_blocked, 5);
-  assert.equal(snapshot.standup.commercial_truth.researched_today, 16);
-  assert.equal(snapshot.standup.commercial_truth.identity_confirmed_today, 13);
-  assert.equal(snapshot.standup.commercial_truth.identity_blocked_today, 3);
+  assert.equal(snapshot.standup.commercial_truth.researched_today, 24);
+  assert.equal(snapshot.standup.commercial_truth.identity_confirmed_today, 20);
+  assert.equal(snapshot.standup.commercial_truth.identity_blocked_today, 4);
   assert.equal(snapshot.standup.commercial_truth.qualified_today, 0);
   assert.equal(snapshot.standup.commercial_truth.owner_status_updates_sent, 1);
   assert.equal(snapshot.standup.commercial_truth.messages_sent, 0);

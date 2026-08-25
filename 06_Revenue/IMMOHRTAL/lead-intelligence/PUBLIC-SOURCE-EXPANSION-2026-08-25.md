@@ -253,8 +253,10 @@ The source lane remains held for recurring automation until all are true:
    configuration.
 3. **Pending:** one explicit ICP query and accepted business categories are recorded.
 4. **Pending:** terms, robots, and rate controls are proven for each recurring source.
-5. **Pending:** canonical dedupe, relationship-conflict, and account-level suppression reads
-   are live.
+5. **Complete for bounded current operator runs:** the six-source account
+   governance preflight fails closed on missing, stale, widened, or matched
+   evidence. Batch 03 produced an eight-account integration receipt. This does
+   not schedule a recurring collector or authorize contact discovery.
 6. **Pending:** every retained batch has a zero-PII validation and independent QA receipt.
 
 **External actions:** `0`

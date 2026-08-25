@@ -14,10 +14,11 @@
 | Operating days remaining, excluding weekends and Labor Day | 14 |
 | Verified customers | 0 |
 | Customer gap | 2 |
-| Authorized source rows researched | 16 |
-| Current identities confirmed | 13 |
-| Identity blocks | 3 |
-| Authorized source rows remaining | 31 |
+| Authorized source rows researched | 24 |
+| Current identities confirmed | 20 |
+| Identity blocks | 4 |
+| Authorized source rows remaining | 23 |
+| Batch 03 accounts clear in current exact account-level governance sources | 8 |
 | Newly qualified accounts | 0 |
 | Prospect messages sent | 0 |
 | Internal owner status updates sent | 1 |
@@ -25,13 +26,15 @@
 | Meetings booked | 0 |
 | Verified recurring revenue | $0 |
 
-**Risk state:** `AT_RISK_CONFIGURATION_BLOCKED`. The two-customer target remains
-active, but no acquisition motion is live while the sender, compliant postal
-footer, suppression route, Access Broker record, and dedicated booking
-destination are unresolved. The sender and owner calendar identities are now
-verified, which narrows the configuration gap but does not activate outreach.
-At the current eight-company cap, the remaining authorized Sheet requires four
-daily batches. Those batches create research evidence, not permission to send.
+**Risk state:** `AT_RISK_HUMAN_ACTIVATION_BLOCKED`. The two-customer target
+remains active, but no acquisition motion is live. The sender identity, primary
+owner calendar, local booking configuration, and Batch 03 account-level
+governance are resolved. The remaining activation gates are a compliant postal
+locator, an exact Zoho access locator and approved sender route, approval of
+the connected Google public identity and calendar, separate public Save
+approval, and controlled test approval. At the current eight-company cap, the
+remaining authorized Sheet requires three daily batches. Those batches create
+research evidence, not permission to send.
 
 ## Definition of success
 
@@ -120,12 +123,13 @@ Do not lead with every service. Route one observable problem to one plausible of
 ## Booking state
 
 The connected Google primary calendar is live with owner access, and the
-authenticated IMMOHRTAL business mailbox is the Zoho route. A dedicated
-IMMOHRTAL booking page is not currently verified, the business mailbox is not
-registered in Access Broker, and the Gmail identity is not proven as a send-as
-alias. The booking lane therefore remains `BLOCKED_CONFIGURATION` until the
-approved calendar defaults, privacy language, confirmation copy, Access Broker
-route, and controlled test receipts exist.
+authenticated IMMOHRTAL business mailbox is the Zoho route. The complete local
+30-minute appointment configuration is ready. Google provides no private saved
+preview: Save creates an always-public page showing the connected account name
+and photo, and that public name does not exactly match the business. The
+mailbox also lacks an exact opaque Access Broker locator. The booking lane is
+therefore `BLOCKED_HUMAN_ACTIVATION` until the postal, sender, calendar and
+public identity, Save, and controlled test receipts exist.
 
 Until then, the system may read live availability and prepare a reply with two or three open times after a positive prospect response. It may not create the event or send an invitation without the applicable approval and confirmed prospect selection.
 

@@ -22,6 +22,9 @@ tags:
 
 # IMMOHRTAL Activation Account Audit
 
+Current blocker disposition: [[05_Offers/IMMOHRTAL/ACTIVATION-BLOCKER-CLEARANCE-2026-08-25]].
+This audit remains the source evidence for the earlier account state.
+
 Related: [[05_Offers/IMMOHRTAL/BOOKING-AND-OUTREACH-ACTIVATION]];
 [[06_Revenue/IMMOHRTAL/lead-intelligence/GMAIL-DRAFT-READBACK-2026-08-25]]
 

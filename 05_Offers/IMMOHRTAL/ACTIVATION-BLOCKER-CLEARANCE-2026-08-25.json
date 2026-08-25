@@ -1,0 +1,320 @@
+{
+  "schema_version": 1,
+  "record_type": "activation_blocker_clearance",
+  "status": "partial_clearance_human_gates_remain",
+  "created_at": "2026-08-25T22:12:07.7318561Z",
+  "observed_at": "2026-08-25T22:12:07.7318561Z",
+  "workflow": "IMMOHRTAL-DAILY-20260825",
+  "step": "ACTIVATE-BLOCKER-CLEARANCE-02",
+  "business": "IMMOHRTAL Marketing Solutions",
+  "privacy": {
+    "redacted": true,
+    "raw_postal_values_persisted": 0,
+    "raw_email_values_persisted": 0,
+    "raw_credentials_persisted": 0,
+    "raw_message_bodies_persisted": 0
+  },
+  "external_actions": {
+    "count": 0,
+    "messages_created": 0,
+    "drafts_created_or_changed": 0,
+    "messages_sent": 0,
+    "events_created_or_changed": 0,
+    "invitations_created_or_changed": 0,
+    "booking_pages_created_or_changed": 0,
+    "account_settings_changed": 0,
+    "dns_changes": 0,
+    "login_surfaces_opened": 0
+  },
+  "identities": {
+    "google_account": {
+      "locator": "google-account:fpr:7ea0edc7",
+      "gmail_live": true,
+      "calendar_live": true,
+      "drive_live": true,
+      "same_identity": true,
+      "account_class": "personal_gmail"
+    },
+    "zoho_mailbox": {
+      "locator": "immohrtal-zoho-mailbox:fpr:704cd641",
+      "identity_verified": true,
+      "authenticated_launch_message_observed": true,
+      "spf": "pass",
+      "dkim": "pass",
+      "dmarc": "pass",
+      "automation_access": "unverified",
+      "outbound_approval": "missing"
+    },
+    "calendar": {
+      "destination_locator": "google-calendar:primary:fpr:7ea0edc7",
+      "primary": true,
+      "access_role": "owner",
+      "secondary_visible_count": 1,
+      "secondary_access_role": "reader",
+      "profile_name_present": true,
+      "profile_picture_present": true,
+      "profile_name_matches_exact_business_name": false
+    }
+  },
+  "access_broker": {
+    "registry_path": "C:\\Users\\dillo\\AppData\\Local\\Codex\\AccessBroker\\registry.json",
+    "registry_modified": false,
+    "before_sha256": "0153b6aef6c30a8f3affd870cc2848a615106e89de139a5ff98ca4259c9239c0",
+    "after_sha256": "0153b6aef6c30a8f3affd870cc2848a615106e89de139a5ff98ca4259c9239c0",
+    "size_bytes": 149637,
+    "json_parses": true,
+    "schema_version": 1,
+    "clients": 14,
+    "systems": 83,
+    "nodes_scanned": 1506,
+    "duplicate_client_ids": 0,
+    "duplicate_system_ids": 0,
+    "forbidden_secret_fields": 0,
+    "likely_secret_values": 0,
+    "embedded_url_credentials": 0,
+    "zoho_records": 0,
+    "unsupported_secret_refs": 7,
+    "unsupported_schemes": {
+      "env": 1,
+      "wincred": 4,
+      "session": 1,
+      "hermes-env": 1
+    },
+    "packaged_validate": {
+      "state": "no_result_after_75_seconds_stopped",
+      "registry_change": false
+    },
+    "bitwarden_bridge": {
+      "version": "1.3.0",
+      "cli_version": "2026.6.0",
+      "state": "locked",
+      "bootstrap_credential_present": true,
+      "human_action_required": null,
+      "zoho_item_locator_observed": false,
+      "vault_item_value_read": false
+    },
+    "zoho_candidate_record": {
+      "registered": false,
+      "client_id": "dillon-operations",
+      "system_id": "zoho-mail-immohrtal",
+      "service": "zoho-mail",
+      "account_locator": "immohrtal-zoho-mailbox:fpr:704cd641",
+      "endpoint": "https://mail.zoho.com/",
+      "environment": "production",
+      "auth_method": "MISSING_CURRENT_EVIDENCE",
+      "secret_ref": "MISSING_EXACT_LOCATOR",
+      "allowed_capabilities_proposed": [
+        "authentication.presence.check",
+        "authentication.login",
+        "authentication.session.reuse",
+        "account.metadata.read"
+      ],
+      "access_state": "LIVE_MAILBOX_EVIDENCE_ONLY_NOT_AUTOMATION_CONNECTED",
+      "last_verified_at": null,
+      "registration_blockers": [
+        "exact opaque secret or OAuth locator not observed",
+        "auth method not proven",
+        "canonical register-system action cannot record account locator or access state",
+        "canonical registry validator does not complete on the current registry"
+      ]
+    }
+  },
+  "postal_locator": {
+    "state": "NOT_FOUND_IN_AUTHORIZED_EVIDENCE",
+    "approved_secure_locator": null,
+    "raw_value_retained": false,
+    "local": {
+      "search_sha256": "5bff99938b37fd34cfb70c79277dad2758522309b6349f176dc14a7146024344",
+      "current_foundation_note_explicitly_missing": true,
+      "qualifying_receipts_found": 0
+    },
+    "drive": {
+      "search_sha256": "e2381e56cbb330844abe9bd44e82100489f74e7057c2a2936ccc02a11f0b2415",
+      "profile_matches_google_identity": true,
+      "immohrtal_native_documents_read": 3,
+      "mohr_related_native_documents_read": 2,
+      "candidate_street_values": 0,
+      "candidate_po_box_values": 0,
+      "qualifying_registration_or_mailbox_evidence": 0
+    },
+    "gmail": {
+      "search_sha256": "f1b9835057f345e452f243a32ba46d010bd821daa9eca15039a0b7f14d0f8c96",
+      "immohrtal_address_messages_read": 22,
+      "candidate_street_values": 0,
+      "candidate_po_box_values": 0,
+      "usps_form_1583_matches": 0,
+      "known_virtual_mailbox_provider_account_matches": 0,
+      "immohrtal_articles_of_organization_matches": 0,
+      "qualifying_current_immohrtal_locator": 0
+    }
+  },
+  "calendar_booking": {
+    "core_personal_account_eligibility": "verified_one_booking_page",
+    "premium_entitlement": "unverified",
+    "callable_google_calendar_tools": 15,
+    "callable_appointment_schedule_tools": 0,
+    "existing_immohrtal_schedule_found": false,
+    "existing_booking_url_found": false,
+    "configuration": {
+      "title": "IMMOHRTAL Marketing Strategy Call",
+      "duration_minutes": 30,
+      "time_zone": "America/New_York",
+      "availability": [
+        {
+          "day": "Tuesday",
+          "start": "10:00",
+          "end": "15:00"
+        },
+        {
+          "day": "Wednesday",
+          "start": "10:00",
+          "end": "15:00"
+        },
+        {
+          "day": "Thursday",
+          "start": "10:00",
+          "end": "15:00"
+        }
+      ],
+      "minimum_notice_hours": 24,
+      "maximum_advance_days": 21,
+      "buffer_minutes": 15,
+      "daily_booking_cap": 3,
+      "location": "Google Meet",
+      "destination": "google-calendar:primary:fpr:7ea0edc7",
+      "conflict_calendars": [
+        "google-calendar:primary:fpr:7ea0edc7"
+      ],
+      "guest_can_invite_others": false,
+      "required_fields": [
+        "first_name",
+        "last_name",
+        "email",
+        "company",
+        "website"
+      ],
+      "optional_prompt": "What would make this call useful?",
+      "privacy_notice": "IMMOHRTAL uses these details only to schedule and prepare for this consultation. Do not include confidential information.",
+      "email_verification": "off_unless_live_editor_proves_entitlement",
+      "automatic_reminder": "off_unless_live_editor_proves_entitlement"
+    },
+    "states": {
+      "local_configuration_specified": true,
+      "editor_populated": false,
+      "private_persisted_preview": "unavailable_provider_behavior",
+      "saved_and_public": false,
+      "url_observed": false,
+      "controlled_booking_tested": false,
+      "enabled_in_outreach": false
+    },
+    "publication_boundary": "Google Save persists the schedule and creates an always-public booking page",
+    "exact_supported_path": [
+      "Open calendar.google.com in the Codex in-app browser using the resolved Google account",
+      "Verify primary owner calendar and public account identity",
+      "Select Create then Appointment schedule",
+      "Enter schedule settings and select Next",
+      "Enter booking-page settings",
+      "Stop before Save for settings and identity readback",
+      "After exact Save approval, select Save",
+      "Copy and read back the provider booking URL",
+      "After separate controlled-test approval, self book, verify, cancel, and verify slot restoration",
+      "Enable the verified URL only in a separately approved outreach preview"
+    ]
+  },
+  "blockers": [
+    {
+      "id": "B12",
+      "name": "compliant business postal locator",
+      "state": "BLOCKED_HUMAN_INPUT",
+      "next_requirement": "approved registered business mailbox secure locator"
+    },
+    {
+      "id": "B10",
+      "name": "Zoho automation registration",
+      "state": "BLOCKED_MISSING_LOCATOR",
+      "next_requirement": "exact authorized opaque Zoho credential or OAuth locator plus supported registration fields"
+    },
+    {
+      "id": "B11",
+      "name": "outbound sender route",
+      "state": "BLOCKED_HUMAN_AUTHORITY",
+      "next_requirement": "approved route, registered access, and separately approved internal header test"
+    },
+    {
+      "id": "B05",
+      "name": "Google booking-page public identity",
+      "state": "BLOCKED_HUMAN_DECISION",
+      "next_requirement": "approve current public identity or approve a separate account or profile change"
+    },
+    {
+      "id": "B07",
+      "name": "public Google booking page",
+      "state": "BLOCKED_EXACT_SAVE_APPROVAL",
+      "next_requirement": "BOOKING PAGE: APPROVE SAVE after exact settings and identity readback"
+    },
+    {
+      "id": "B08",
+      "name": "controlled booking test",
+      "state": "BLOCKED_EXACT_TEST_APPROVAL",
+      "next_requirement": "approval to create and cancel one self-booking event"
+    }
+  ],
+  "smallest_remaining_inputs": [
+    "POSTAL LOCATOR: [approved registered business mailbox secure locator]",
+    "FROM: APPROVE VERIFIED IMMOHRTAL ZOHO MAILBOX",
+    "CALENDAR: APPROVE CONNECTED GOOGLE PRIMARY OWNER CALENDAR | DEFAULTS: APPROVE"
+  ],
+  "separate_publication_approval": "BOOKING PAGE: APPROVE SAVE",
+  "verification": {
+    "json_parses": true,
+    "raw_email_matches": 0,
+    "candidate_street_matches": 0,
+    "state_postal_code_pairs": 0,
+    "numbered_po_box_matches": 0,
+    "likely_secret_value_matches": 0,
+    "unicode_en_or_em_dash_matches": 0,
+    "registry_hash_unchanged": true,
+    "second_brain": {
+      "owned_artifact_findings": 0,
+      "repository_status": "fail_pre_existing_graph_fragmented",
+      "graph_components": 117,
+      "largest_component_coverage_percent": 85.6,
+      "graph_orphans": 116,
+      "error_count": 1
+    }
+  },
+  "sources": [
+    {
+      "type": "vault",
+      "locator": "05_Offers/IMMOHRTAL/ACTIVATION-ACCOUNT-AUDIT-2026-08-25.md"
+    },
+    {
+      "type": "vault",
+      "locator": "05_Offers/IMMOHRTAL/BOOKING-AND-OUTREACH-ACTIVATION.md"
+    },
+    {
+      "type": "vault",
+      "locator": "05_Offers/IMMOHRTAL/BUSINESS-FOUNDATION-CHECKLIST.md"
+    },
+    {
+      "type": "official_google",
+      "url": "https://support.google.com/calendar/answer/10729749?hl=en"
+    },
+    {
+      "type": "official_google",
+      "url": "https://support.google.com/calendar/answer/16287038?hl=en"
+    },
+    {
+      "type": "official_google",
+      "url": "https://support.google.com/calendar/answer/10733297?hl=en-GB"
+    },
+    {
+      "type": "official_google",
+      "url": "https://support.google.com/calendar/answer/16287054?hl=en"
+    },
+    {
+      "type": "official_zoho",
+      "url": "https://www.zoho.com/mail/help/login-to-zoho.html"
+    }
+  ]
+}

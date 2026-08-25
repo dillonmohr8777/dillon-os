@@ -44,6 +44,18 @@ runtime.
 - `lead-intelligence/requalification/2026-08-25-batch-02-independent-qa.md` —
   root verifier receipt confirming live source-row parity, exact public URLs,
   no PII, and the research-only boundary.
+- `lead-intelligence/requalification/2026-08-25-batch-03.json` — the next
+  eight company records: seven current identities, one identity block, zero
+  qualified, and zero external actions.
+- `lead-intelligence/requalification/2026-08-25-batch-03-governance.json` —
+  bounded six-source account governance receipt. All eight are clear in the
+  current exact account-level sources, with no contact or outreach authority.
+- `lead-intelligence/requalification/2026-08-25-batch-03-independent-qa.md` —
+  independent SHIP receipt for the internal research boundary, 36 passing
+  scoped tests, zero personal-contact persistence, and zero external actions.
+- `lead-intelligence/ACCOUNT-SUPPRESSION-REGISTER.json` — canonical
+  account-only suppression contract. Its current zero-entry state is not a
+  claim of contact-level consent or global opt-out clearance.
 - `lead-intelligence/LEGACY-SHEET-RESOLUTION-2026-08-25.md` — privacy-safe
   resolution of the seven formerly unresolved spreadsheet candidates. All were
   excluded and none authorized contact reuse.
@@ -56,6 +68,10 @@ runtime.
   `../../automation/immohrtal-agency/src/public-company-allowlist.mjs` — strict
   local company-only allowlist that rejects contact data, personal profiles,
   unsafe URLs, unknown fields, policy widening, and batches above eight.
+- `../../automation/immohrtal-agency/config/account-governance-policy.json` and
+  `../../automation/immohrtal-agency/src/account-governance-preflight.mjs` —
+  fail-closed account-level duplicate, relationship, Gmail-routing, and
+  suppression evaluator with trusted-clock freshness and no external action.
 - `../../automation/immohrtal-agency/ops/LEGACY-SOURCE-ISOLATION-2026-08-25.md`
   — reversible receipt proving the excluded-source 08:10 task is disabled.
 - `../../05_Offers/IMMOHRTAL/PUBLIC-MONTHLY-SERVICE-MENU.json` — exact
@@ -71,13 +87,14 @@ because a public observation and a concept exist. Decision ownership, budget,
 timing, capacity, suppression, prior-touch, and client-conflict checks remain
 unresolved. No message copy or contact identifier is stored here.
 
-The 16 records in requalification batches 01 and 02 are a separate research
-backlog. Thirteen identities are current and three are blocked. All remain
+The 24 records in requalification batches 01 through 03 are a separate
+research backlog. Twenty identities are current and four are blocked. All remain
 `RESEARCH_ONLY` in `P00_ACCOUNT_RESEARCH`; they must not be appended to the
-five-record pipeline import until the documented P10 entry rules pass. Thirty-one
+five-record pipeline import until the documented P10 entry rules pass. Twenty-three
 authorized rows remain unreviewed. The historical 25-record run used an
 excluded source and contributes zero active pipeline records. Verified active
-IMMOHRTAL clients remain zero.
+IMMOHRTAL clients remain zero. Batch 03's eight account-level exact-source
+clearances expire on 2026-08-26 and do not authorize contact discovery.
 
 ## Daily loop
 

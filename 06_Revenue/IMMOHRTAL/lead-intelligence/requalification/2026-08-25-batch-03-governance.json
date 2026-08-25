@@ -1,0 +1,243 @@
+{
+  "schema_version": "1.0.0",
+  "workflow_id": "IMMOHRTAL-DAILY-20260825",
+  "step_id": "LEADS-04-GOVERNANCE",
+  "receipt_id": "2026-08-25-batch-03-governance",
+  "status": "account_level_exact_sources_reconciled",
+  "observed_at": "2026-08-25T22:12:00Z",
+  "expires_at": "2026-08-26T22:12:00Z",
+  "policy": "automation/immohrtal-agency/config/account-governance-policy.json",
+  "source_evidence": [
+    {
+      "source_id": "canonical_client_registry",
+      "state": "complete",
+      "scope": "Exact current company, canonical domain, parent, and rebrand aliases across the canonical client registry.",
+      "aliases_checked": 39,
+      "exact_account_matches": 0,
+      "exact_domain_matches": 0
+    },
+    {
+      "source_id": "canonical_work_queue",
+      "state": "complete",
+      "scope": "Exact current company, canonical domain, parent, and rebrand aliases across the canonical work queue.",
+      "aliases_checked": 39,
+      "exact_account_matches": 0,
+      "exact_domain_matches": 0
+    },
+    {
+      "source_id": "protected_local_contexts",
+      "state": "complete",
+      "scope": "Exact aliases across client folders, full-time work, Second Brain entities, decisions, projects, and System records.",
+      "aliases_checked": 39,
+      "exact_account_matches": 0,
+      "exact_domain_matches": 0
+    },
+    {
+      "source_id": "private_outbound_ledger",
+      "state": "complete",
+      "scope": "Exact company and domain aliases against the private local outbound ledger without persisting contact data.",
+      "aliases_checked": 39,
+      "exact_account_matches": 0,
+      "exact_domain_matches": 0
+    },
+    {
+      "source_id": "gmail_exact_domain_history",
+      "state": "complete",
+      "scope": "Read-only Gmail search for supplied domains and surfaced parent or rebrand domains. Only routed From, To, Cc, and Bcc domain matches counted.",
+      "accounts_checked": 8,
+      "exact_account_matches": 0,
+      "exact_domain_matches": 0
+    },
+    {
+      "source_id": "account_suppression_register",
+      "state": "complete",
+      "scope": "Current account-level register plus an additional safety-only exact check of the excluded legacy runtime suppression snapshot.",
+      "aliases_checked": 39,
+      "exact_account_matches": 0,
+      "exact_domain_matches": 0,
+      "legacy_safety_exact_matches": 0
+    }
+  ],
+  "accounts": [
+    {
+      "source_row_rank": 17,
+      "company_name": "MultiView",
+      "canonical_first_party_domain": "multiview.com",
+      "aliases_checked": 5,
+      "identity_state": "confirmed_current",
+      "source_completeness_state": "complete_current_exact_sources",
+      "duplicate_state": "clear_current_exact_sources",
+      "relationship_conflict_state": "clear_current_exact_sources",
+      "account_suppression_state": "clear_current_exact_sources",
+      "account_governance_state": "clear_current_exact_sources",
+      "remaining_non_governance_holds": [
+        "direct competitive overlap",
+        "Stagwell parent procurement",
+        "weak discovery-source integrity",
+        "decision owner and buyer-side qualification evidence"
+      ],
+      "overall_state": "hold"
+    },
+    {
+      "source_row_rank": 18,
+      "company_name": "CarMax",
+      "canonical_first_party_domain": "carmax.com",
+      "aliases_checked": 3,
+      "identity_state": "confirmed_current",
+      "source_completeness_state": "complete_current_exact_sources",
+      "duplicate_state": "clear_current_exact_sources",
+      "relationship_conflict_state": "clear_current_exact_sources",
+      "account_suppression_state": "clear_current_exact_sources",
+      "account_governance_state": "clear_current_exact_sources",
+      "remaining_non_governance_holds": [
+        "auto-finance category acceptance",
+        "enterprise procurement",
+        "weak discovery-source integrity",
+        "decision owner and buyer-side qualification evidence"
+      ],
+      "overall_state": "hold"
+    },
+    {
+      "source_row_rank": 19,
+      "company_name": "Export-Import Bank of the United States",
+      "canonical_first_party_domain": "exim.gov",
+      "aliases_checked": 4,
+      "identity_state": "confirmed_current",
+      "source_completeness_state": "complete_current_exact_sources",
+      "duplicate_state": "clear_current_exact_sources",
+      "relationship_conflict_state": "clear_current_exact_sources",
+      "account_suppression_state": "clear_current_exact_sources",
+      "account_governance_state": "clear_current_exact_sources",
+      "remaining_non_governance_holds": [
+        "current commercial-service-business floor not met",
+        "federal procurement and solicitation route",
+        "weak discovery-source integrity",
+        "decision authority and buyer-side qualification evidence"
+      ],
+      "overall_state": "hold"
+    },
+    {
+      "source_row_rank": 20,
+      "company_name": "eXp Realty",
+      "canonical_first_party_domain": "exprealty.com",
+      "aliases_checked": 6,
+      "identity_state": "confirmed_current_with_parent_rebrand",
+      "source_completeness_state": "complete_current_exact_sources",
+      "duplicate_state": "clear_current_exact_sources",
+      "relationship_conflict_state": "clear_current_exact_sources",
+      "account_suppression_state": "clear_current_exact_sources",
+      "account_governance_state": "clear_current_exact_sources",
+      "remaining_non_governance_holds": [
+        "AGNT parent procurement",
+        "jurisdictional brokerage and category acceptance",
+        "weak discovery-source integrity",
+        "decision owner and buyer-side qualification evidence"
+      ],
+      "overall_state": "hold"
+    },
+    {
+      "source_row_rank": 21,
+      "company_name": "Gold Buyers At the Mall LLC",
+      "canonical_first_party_domain": "goldbuyersatthemall.com",
+      "aliases_checked": 3,
+      "identity_state": "blocked_unresolvable_domain_and_unresolved_migration",
+      "source_completeness_state": "complete_current_exact_sources",
+      "duplicate_state": "clear_current_exact_sources",
+      "relationship_conflict_state": "clear_current_exact_sources",
+      "account_suppression_state": "clear_current_exact_sources",
+      "account_governance_state": "clear_current_exact_sources",
+      "remaining_non_governance_holds": [
+        "current identity and canonical domain",
+        "migration and legal entity",
+        "regulatory and category acceptance",
+        "decision owner and buyer-side qualification evidence"
+      ],
+      "overall_state": "hold"
+    },
+    {
+      "source_row_rank": 22,
+      "company_name": "Surterre Properties Luxury Real Estate Brokerage",
+      "canonical_first_party_domain": "surterreproperties.com",
+      "aliases_checked": 3,
+      "identity_state": "confirmed_current",
+      "source_completeness_state": "complete_current_exact_sources",
+      "duplicate_state": "clear_current_exact_sources",
+      "relationship_conflict_state": "clear_current_exact_sources",
+      "account_suppression_state": "clear_current_exact_sources",
+      "account_governance_state": "clear_current_exact_sources",
+      "remaining_non_governance_holds": [
+        "legal contracting entity and brokerage standing",
+        "category acceptance",
+        "weak discovery-source integrity",
+        "decision owner and buyer-side qualification evidence"
+      ],
+      "overall_state": "hold"
+    },
+    {
+      "source_row_rank": 23,
+      "company_name": "American Gold & Diamond Buyers",
+      "canonical_first_party_domain": "americancash4gold.com",
+      "aliases_checked": 2,
+      "identity_state": "confirmed_current",
+      "source_completeness_state": "complete_current_exact_sources",
+      "duplicate_state": "clear_current_exact_sources",
+      "relationship_conflict_state": "clear_current_exact_sources",
+      "account_suppression_state": "clear_current_exact_sources",
+      "account_governance_state": "clear_current_exact_sources",
+      "remaining_non_governance_holds": [
+        "legal contracting entity and market licensing",
+        "precious-metals category acceptance",
+        "weak discovery-source integrity",
+        "decision owner and buyer-side qualification evidence"
+      ],
+      "overall_state": "hold"
+    },
+    {
+      "source_row_rank": 24,
+      "company_name": "Pick-n-Pull, a division of Schnitzer Steel Industries",
+      "canonical_first_party_domain": "picknpull.com",
+      "aliases_checked": 13,
+      "identity_state": "confirmed_current_with_parent_and_rebrand_chain",
+      "source_completeness_state": "complete_current_exact_sources",
+      "duplicate_state": "clear_current_exact_sources",
+      "relationship_conflict_state": "clear_current_exact_sources",
+      "account_suppression_state": "clear_current_exact_sources",
+      "account_governance_state": "clear_current_exact_sources",
+      "remaining_non_governance_holds": [
+        "market-specific contracting and regulation",
+        "enterprise procurement and category acceptance",
+        "weak discovery-source integrity",
+        "decision owner and buyer-side qualification evidence"
+      ],
+      "overall_state": "hold"
+    }
+  ],
+  "counts": {
+    "accounts_checked": 8,
+    "aliases_checked": 39,
+    "identity_confirmed_current": 7,
+    "identity_blocked": 1,
+    "account_governance_clear_current_exact_sources": 8,
+    "overall_qualification_holds": 8,
+    "contact_level_suppression_clearance_claimed": 0,
+    "contact_discovery_authorized": 0,
+    "outreach_authorized": 0,
+    "external_actions": 0
+  },
+  "boundary": {
+    "clearance_scope": "Current exact account-level sources only.",
+    "contact_level_suppression_state": "not_applicable_contact_discovery_prohibited",
+    "global_relationship_clearance_claimed": false,
+    "qualification_clearance_claimed": false,
+    "account_lifecycle": "RESEARCH_ONLY",
+    "stage": "P00_ACCOUNT_RESEARCH"
+  },
+  "validation": {
+    "canonical_and_local_exact_searches": "passed_zero_matches",
+    "gmail_direct_domain_routing_search": "passed_zero_matches",
+    "account_register_and_legacy_safety_exact_search": "passed_zero_matches",
+    "preflight_core_replay": "passed_8_of_8_clear_current_exact_sources_with_zero_contact_or_external_authority",
+    "json_parse": "passed",
+    "pii_scan": "passed_zero_email_phone_compact_phone_street_address_or_personal_linkedin_matches"
+  }
+}

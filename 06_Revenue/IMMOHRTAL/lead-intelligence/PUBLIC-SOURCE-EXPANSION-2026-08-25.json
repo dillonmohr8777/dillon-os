@@ -56,7 +56,7 @@
         "phone_number",
         "postal_address"
       ],
-      "safe_conclusion": "Exa is callable as an ephemeral company locator and raw-result persistence remains prohibited. A pure-local company allowlist now passes 10 adversarial tests, but recurring activation still requires safe upstream projection, canonical dedupe, conflict and suppression reads, query approval, source terms, and per-batch QA."
+      "safe_conclusion": "Exa is callable as an ephemeral company locator and raw-result persistence remains prohibited. A pure-local company allowlist passes 10 adversarial tests. A separate six-source account-governance preflight now passes 10 tests and produced an eight-account Batch 03 integration receipt. Recurring activation still requires safe upstream projection, query approval, source terms, canonical configuration, and per-batch independent QA."
     },
     "exa_public_fetch": {
       "tool_locator": "mcp__codex_apps__exa_web_fetch_exa",
@@ -452,7 +452,7 @@
     "Add the approved public-source lane and shared cap to the canonical automation configuration.",
     "Define one explicit ICP query and accepted business categories.",
     "Prove source-specific terms, robots, and rate controls for any recurring automated source.",
-    "Prove canonical duplicate, relationship-conflict, and account-level suppression reads.",
+    "COMPLETE FOR BOUNDED CURRENT OPERATOR RUNS 2026-08-25: Six-source duplicate, relationship-conflict, routed Gmail, and account-level suppression preflight plus Batch 03 integration receipt. This is not a scheduled collector.",
     "Require a zero-PII validation receipt before every batch is retained."
   ],
   "validation": {
@@ -463,7 +463,11 @@
     "allowlist_adapter_test": "passed_10_of_10_adversarial_tests",
     "allowlist_policy_locator": "automation/immohrtal-agency/config/public-source-policy.json",
     "allowlist_adapter_locator": "automation/immohrtal-agency/src/public-company-allowlist.mjs",
-    "allowlist_test_locator": "automation/immohrtal-agency/test/public-company-allowlist.test.mjs"
+    "allowlist_test_locator": "automation/immohrtal-agency/test/public-company-allowlist.test.mjs",
+    "account_governance_test": "passed_10_of_10_fail_closed_tests",
+    "account_governance_policy_locator": "automation/immohrtal-agency/config/account-governance-policy.json",
+    "account_governance_adapter_locator": "automation/immohrtal-agency/src/account-governance-preflight.mjs",
+    "account_governance_receipt_locator": "06_Revenue/IMMOHRTAL/lead-intelligence/requalification/2026-08-25-batch-03-governance.json"
   },
   "external_actions": 0
 }

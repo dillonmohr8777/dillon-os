@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "status": "pure_local_fail_closed_not_scheduled",
+  "purpose": "Derive a bounded account-level duplicate, relationship-conflict, and suppression disposition from current exact-source counts without storing contact data or authorizing contact discovery or outreach.",
+  "safety": {
+    "pure_local": true,
+    "network_enabled": false,
+    "filesystem_enabled": false,
+    "raw_match_persistence": false,
+    "raw_match_logging": false,
+    "account_level_only": true,
+    "deny_unknown_fields": true,
+    "contact_discovery_authorized": false,
+    "outreach_authorized": false,
+    "external_actions_authorized": false,
+    "cadence_changed": false
+  },
+  "required_source_ids": [
+    "canonical_client_registry",
+    "canonical_work_queue",
+    "protected_local_contexts",
+    "private_outbound_ledger",
+    "gmail_exact_domain_history",
+    "account_suppression_register"
+  ],
+  "source_roles": {
+    "duplicate": [
+      "canonical_client_registry",
+      "canonical_work_queue",
+      "private_outbound_ledger"
+    ],
+    "relationship_conflict": [
+      "canonical_client_registry",
+      "canonical_work_queue",
+      "protected_local_contexts",
+      "gmail_exact_domain_history"
+    ],
+    "account_suppression": [
+      "account_suppression_register"
+    ]
+  },
+  "allowed_source_states": [
+    "complete",
+    "unavailable",
+    "error"
+  ],
+  "limits": {
+    "max_source_age_hours": 24,
+    "max_expiry_horizon_hours": 24,
+    "max_future_skew_minutes": 5,
+    "exact_required_source_count": 6
+  },
+  "output_contract": {
+    "clear_state": "clear_current_exact_sources",
+    "account_lifecycle": "RESEARCH_ONLY",
+    "stage": "P00_ACCOUNT_RESEARCH",
+    "contact_discovery_authorized": false,
+    "outreach_authorized": false,
+    "external_actions": 0
+  }
+}

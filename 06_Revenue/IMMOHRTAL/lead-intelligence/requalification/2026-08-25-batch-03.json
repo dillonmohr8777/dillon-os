@@ -1,0 +1,164 @@
+{
+  "schema_version": "1.0.0",
+  "workflow_id": "IMMOHRTAL-DAILY-20260825",
+  "step_id": "LEADS-04",
+  "batch_id": "2026-08-25-batch-03",
+  "status": "complete_internal_research_hold",
+  "observed_at": "2026-08-25T22:12:00Z",
+  "freshness_review_due": "2026-09-08",
+  "scope": {
+    "source_tab": "Sheet1",
+    "source_rows_read": "18 through 25",
+    "source_row_count": 8,
+    "read_only": true,
+    "contact_discovery_performed": false,
+    "sheet_changed": false,
+    "external_actions": 0
+  },
+  "parts": [
+    {
+      "step_id": "LEADS-04A",
+      "markdown": "2026-08-25-batch-03-a.md",
+      "json": "2026-08-25-batch-03-a.json",
+      "source_rows": "18 through 21"
+    },
+    {
+      "step_id": "LEADS-04B",
+      "markdown": "2026-08-25-batch-03-b.md",
+      "json": "2026-08-25-batch-03-b.json",
+      "source_rows": "22 through 25"
+    }
+  ],
+  "governance_receipt": {
+    "markdown": "2026-08-25-batch-03-governance.md",
+    "json": "2026-08-25-batch-03-governance.json",
+    "expires_at": "2026-08-26T22:12:00Z",
+    "account_level_clear_current_exact_sources": 8,
+    "contact_level_suppression_state": "not_applicable_contact_discovery_prohibited",
+    "contact_discovery_authorized": false,
+    "outreach_authorized": false
+  },
+  "counts": {
+    "input_records": 8,
+    "output_records": 8,
+    "identity_confirmed_current": 7,
+    "identity_blocked": 1,
+    "account_governance_clear_current_exact_sources": 8,
+    "qualification_scores_complete": 0,
+    "qualification_scores_null": 8,
+    "qualified_accounts": 0,
+    "records_in_research_only": 8,
+    "records_held_by_hard_gates": 8,
+    "personal_records_persisted": 0,
+    "drafts_created": 0,
+    "messages_sent": 0,
+    "calendar_events_created": 0,
+    "bookings_created": 0,
+    "crm_writes": 0,
+    "external_actions": 0
+  },
+  "records": [
+    {
+      "source_row_rank": 17,
+      "company_name": "MultiView",
+      "canonical_domain": "multiview.com",
+      "identity_state": "confirmed_current",
+      "account_governance_state": "clear_current_exact_sources",
+      "primary_hold": "direct_competitive_overlap_and_parent_procurement",
+      "qualification_score": null,
+      "lifecycle": "RESEARCH_ONLY",
+      "stage": "P00_ACCOUNT_RESEARCH"
+    },
+    {
+      "source_row_rank": 18,
+      "company_name": "CarMax",
+      "canonical_domain": "carmax.com",
+      "identity_state": "confirmed_current",
+      "account_governance_state": "clear_current_exact_sources",
+      "primary_hold": "regulated_category_and_enterprise_procurement",
+      "qualification_score": null,
+      "lifecycle": "RESEARCH_ONLY",
+      "stage": "P00_ACCOUNT_RESEARCH"
+    },
+    {
+      "source_row_rank": 19,
+      "company_name": "Export-Import Bank of the United States",
+      "canonical_domain": "exim.gov",
+      "identity_state": "confirmed_current",
+      "account_governance_state": "clear_current_exact_sources",
+      "primary_hold": "commercial_service_business_floor_not_met_and_federal_procurement_unresolved",
+      "qualification_score": null,
+      "lifecycle": "RESEARCH_ONLY",
+      "stage": "P00_ACCOUNT_RESEARCH"
+    },
+    {
+      "source_row_rank": 20,
+      "company_name": "eXp Realty",
+      "canonical_domain": "exprealty.com",
+      "identity_state": "confirmed_current_with_parent_rebrand",
+      "account_governance_state": "clear_current_exact_sources",
+      "primary_hold": "parent_jurisdiction_category_and_enterprise_procurement",
+      "qualification_score": null,
+      "lifecycle": "RESEARCH_ONLY",
+      "stage": "P00_ACCOUNT_RESEARCH"
+    },
+    {
+      "source_row_rank": 21,
+      "company_name": "Gold Buyers At the Mall LLC",
+      "canonical_domain": "goldbuyersatthemall.com",
+      "identity_state": "blocked_unresolvable_domain_and_unresolved_migration",
+      "account_governance_state": "clear_current_exact_sources",
+      "primary_hold": "identity_domain_migration_and_legal_entity_unresolved",
+      "qualification_score": null,
+      "lifecycle": "RESEARCH_ONLY",
+      "stage": "P00_ACCOUNT_RESEARCH"
+    },
+    {
+      "source_row_rank": 22,
+      "company_name": "Surterre Properties Luxury Real Estate Brokerage",
+      "canonical_domain": "surterreproperties.com",
+      "identity_state": "confirmed_current",
+      "account_governance_state": "clear_current_exact_sources",
+      "primary_hold": "legal_entity_brokerage_standing_and_category_acceptance",
+      "qualification_score": null,
+      "lifecycle": "RESEARCH_ONLY",
+      "stage": "P00_ACCOUNT_RESEARCH"
+    },
+    {
+      "source_row_rank": 23,
+      "company_name": "American Gold & Diamond Buyers",
+      "canonical_domain": "americancash4gold.com",
+      "identity_state": "confirmed_current",
+      "account_governance_state": "clear_current_exact_sources",
+      "primary_hold": "legal_entity_market_licensing_and_category_acceptance",
+      "qualification_score": null,
+      "lifecycle": "RESEARCH_ONLY",
+      "stage": "P00_ACCOUNT_RESEARCH"
+    },
+    {
+      "source_row_rank": 24,
+      "company_name": "Pick-n-Pull, a division of Schnitzer Steel Industries",
+      "canonical_domain": "picknpull.com",
+      "identity_state": "confirmed_current_with_parent_and_rebrand_chain",
+      "account_governance_state": "clear_current_exact_sources",
+      "primary_hold": "market_contracting_regulation_category_and_enterprise_procurement",
+      "qualification_score": null,
+      "lifecycle": "RESEARCH_ONLY",
+      "stage": "P00_ACCOUNT_RESEARCH"
+    }
+  ],
+  "batch_blockers": [
+    "The discovery source permits company research only and reports weak link-writable integrity.",
+    "One supplied company domain is unresolvable and the migration target is unresolved.",
+    "Competitive, category, legal, regulatory, jurisdictional, or procurement gates remain where recorded.",
+    "No account has a verified problem, decision owner, scope, access, budget, timing, capacity, evidence culture, or no-guarantee acceptance.",
+    "Contact discovery, drafting, sending, connecting, calendar mutation, booking, CRM writes, and account changes remain disabled."
+  ],
+  "validation": {
+    "part_json_parse": "passed",
+    "governance_receipt": "passed_current_exact_sources",
+    "combined_json_parse": "passed",
+    "pii_scan": "passed_no_personal_contact_values",
+    "external_action_review": "passed_zero_external_actions"
+  }
+}

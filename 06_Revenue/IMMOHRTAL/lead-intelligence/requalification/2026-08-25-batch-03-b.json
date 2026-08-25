@@ -1,0 +1,471 @@
+{
+  "schema_version": "1.0.0",
+  "workflow_id": "IMMOHRTAL-DAILY-20260825",
+  "step_id": "LEADS-04B",
+  "batch_id": "2026-08-25-batch-03-b",
+  "status": "complete_internal_research_hold",
+  "observed_at": "2026-08-25T22:05:15Z",
+  "observed_date": "2026-08-25",
+  "freshness_review_due": "2026-09-08",
+  "scope": {
+    "source_reference": "../SOURCE-AUDIT-2026-08-25.md#authorized-2023-b2b-source",
+    "source_tab": "Sheet1",
+    "source_rows_read": "22 through 25",
+    "source_row_count": 4,
+    "read_only": true,
+    "sheet_changed": false,
+    "private_linkedin_session_used": false,
+    "contact_discovery_performed": false,
+    "drafts_created": 0,
+    "messages_sent": 0,
+    "connection_requests_created": 0,
+    "calendar_events_created": 0,
+    "bookings_created": 0,
+    "crm_writes": 0
+  },
+  "source_governance": {
+    "source_rights_state": "authorized_discovery_only",
+    "source_integrity_state": "weak_anyone_with_link_writer_permission_reported",
+    "contact_permission_state": "not_authorized",
+    "raw_sheet_rows_persisted": false,
+    "contact_data_persisted": false,
+    "person_data_persisted": false,
+    "message_data_persisted": false,
+    "private_identifiers_persisted": false,
+    "raw_payload_persisted": false
+  },
+  "method": {
+    "public_company_website": "The four supplied company domains were checked by current public fetch. Only reproducible company-level conditions were retained.",
+    "official_parent_path": "Current official parent and acquirer pages were used only where a parent, acquisition, or rebrand relationship required reconciliation.",
+    "public_search_path": "Twenty bounded company-focused public search queries covered the four supplied identities and necessary ownership or rebrand follow-ups. Search results were treated as locators until reproduced on first-party or official parent pages.",
+    "linkedin_policy": "Only the four supplied company-page locators are stored. Company pages are locators and corroboration, not proof of present legal identity, authority, consent, or regulatory standing.",
+    "people_path": "Not run. Person research and contact discovery were prohibited.",
+    "duplicate_check": "Exact supplied company names and domains, plus current parent and rebrand aliases surfaced by official evidence, were checked against prior IMMOHRTAL research, the canonical client registry, and the canonical work queue.",
+    "conflict_check": "No exact company, domain, parent, or rebrand match was found in the canonical client registry or canonical work queue. Employer, job, partner, vendor, prior-touch, and separate-venture reconciliation remains incomplete, so relationship conflict remains pending and fail closed.",
+    "suppression_check": "No permissioned contact or suppression record was available in this company-only step. Suppression remains pending and fail closed.",
+    "score_policy": "The 0 to 16 qualification score remains null unless all eight dimensions and every hard gate have evidence. No record met that condition."
+  },
+  "counts": {
+    "input_records": 4,
+    "output_records": 4,
+    "identity_confirmed_current": 3,
+    "identity_blocked": 1,
+    "current_public_domain_with_identity_content": 3,
+    "supplied_domain_not_resolvable": 1,
+    "current_parent_chain_confirmed": 1,
+    "current_rebrand_chain_confirmed": 1,
+    "public_company_search_queries": 20,
+    "people_queries": 0,
+    "personal_records_persisted": 0,
+    "duplicate_clear_current_sources": 4,
+    "exact_client_registry_matches": 0,
+    "exact_canonical_work_queue_matches": 0,
+    "relationship_conflict_clear": 0,
+    "suppression_clear": 0,
+    "qualification_scores_complete": 0,
+    "qualification_scores_null": 4,
+    "records_in_research_only": 4,
+    "records_held_by_hard_gates": 4,
+    "external_actions": 0
+  },
+  "records": [
+    {
+      "batch_index": 1,
+      "source_sheet_row": 22,
+      "source_row_rank": 21,
+      "company_name": "Gold Buyers At the Mall LLC",
+      "business_category": "Gold and jewelry buying, current operating category unverified",
+      "canonical_website_url": "https://www.goldbuyersatthemall.com/",
+      "company_linkedin_locator": "https://www.linkedin.com/company/gold-buyers-at-the-mall-llc/",
+      "public_evidence_urls": [
+        "https://www.goldbuyersatthemall.com/",
+        "https://www.linkedin.com/company/gold-buyers-at-the-mall-llc/"
+      ],
+      "public_evidence_observations": [
+        {
+          "url": "https://www.goldbuyersatthemall.com/",
+          "observed_date": "2026-08-25",
+          "source_type": "supplied_first_party_domain_locator",
+          "observation": "The root and www hostnames did not resolve, so the supplied domain could not provide current first-party identity content."
+        },
+        {
+          "url": "https://www.linkedin.com/company/gold-buyers-at-the-mall-llc/",
+          "observed_date": "2026-08-25",
+          "source_type": "public_company_page_locator",
+          "observation": "The company locator still names the supplied company and old domain but also signals a different future domain. The migration target and current operating identity are not reconciled."
+        }
+      ],
+      "identity_state": "blocked",
+      "freshness_state": "blocked_supplied_domain_unresolvable_and_migration_unresolved",
+      "truth_state": "blocked_current_identity_not_proven",
+      "confidence": "high_for_domain_failure_low_for_operating_status",
+      "evidence_summary": "The supplied first-party domain had no resolvable root or www hostname on 2026-08-25. A public company locator remains available but signals an unresolved domain migration, which is not sufficient current first-party identity proof.",
+      "website_observation": "No first-party page was reproducible at the supplied domain. No technical marketing gap or commercial need can be attributed while identity is unresolved.",
+      "ownership_parent_rebrand_regulatory_state": {
+        "ownership_state": "unverified",
+        "parent_state": "unverified",
+        "rebrand_state": "company_locator_signals_domain_migration_but_target_identity_is_unresolved",
+        "regulatory_state": "gold_and_jewelry_buying_category_suggested_but_current_entity_registration_and_category_acceptance_unverified",
+        "legal_entity_state": "unverified"
+      },
+      "public_company_state": "company_locator_only_first_party_domain_unavailable",
+      "people_state": "not_run_contact_discovery_prohibited",
+      "source_rights_state": "authorized_research_only",
+      "source_integrity_state": "weak_fail_closed_for_advancement",
+      "duplicate_state": "clear_current_sources",
+      "conflict_state": "pending_fail_closed",
+      "suppression_state": "pending_fail_closed",
+      "fit_lane": null,
+      "fit_state": "none_until_current_identity_and_category_are_resolved",
+      "qualification_score": null,
+      "score_state": "withheld_incomplete_evidence",
+      "missing_score_dimensions": [
+        "problem_evidence",
+        "service_fit",
+        "decision_ownership",
+        "scope_readiness",
+        "inputs_and_access",
+        "budget_fit",
+        "timing_and_capacity",
+        "evidence_culture"
+      ],
+      "explicit_unknowns": [
+        "current operating identity",
+        "current canonical first-party domain",
+        "domain migration target relationship",
+        "legal entity and ownership",
+        "parent or successor relationship",
+        "current regulatory standing",
+        "agency category acceptance",
+        "client, partner, vendor, employer, job, and prior-touch conflicts",
+        "suppression state",
+        "decision ownership, budget, timing, and capacity",
+        "reproducible marketing problem"
+      ],
+      "hard_gates": {
+        "identity": "fail",
+        "freshness": "fail",
+        "source_rights": "pass_for_research_only",
+        "source_integrity": "fail_closed_for_advancement",
+        "duplicate": "pass_current_sources",
+        "ownership_parent_rebrand": "pending_fail_closed",
+        "regulatory_and_category_acceptance": "pending_fail_closed",
+        "relationship_conflict": "pending_fail_closed",
+        "suppression": "pending_fail_closed",
+        "decision_owner": "pending_fail_closed",
+        "problem_evidence": "pending_fail_closed",
+        "overall": "hold"
+      },
+      "current_lifecycle": "RESEARCH_ONLY",
+      "current_stage": "P00_ACCOUNT_RESEARCH",
+      "next_internal_action": "Resolve a current canonical first-party domain, legal operating identity, migration relationship, and category acceptance before any further qualification or people research."
+    },
+    {
+      "batch_index": 2,
+      "source_sheet_row": 23,
+      "source_row_rank": 22,
+      "company_name": "Surterre Properties Luxury Real Estate Brokerage",
+      "business_category": "Luxury real estate brokerage",
+      "canonical_website_url": "https://surterreproperties.com/",
+      "company_linkedin_locator": "https://www.linkedin.com/company/surterre-properties/",
+      "public_evidence_urls": [
+        "https://surterreproperties.com/",
+        "https://surterreproperties.com/about-us/",
+        "https://rise.surterreproperties.com/",
+        "https://www.linkedin.com/company/surterre-properties/"
+      ],
+      "public_evidence_observations": [
+        {
+          "url": "https://surterreproperties.com/",
+          "observed_date": "2026-08-25",
+          "source_type": "first_party_company_web",
+          "observation": "The current homepage presents active property search, listing, neighborhood, buyer, seller, journal, and brokerage pathways, including current 2026 journal content."
+        },
+        {
+          "url": "https://surterreproperties.com/about-us/",
+          "observed_date": "2026-08-25",
+          "source_type": "first_party_identity_page",
+          "observation": "The current about page identifies the brand as a boutique Southern California luxury real estate brokerage operating since 2006."
+        },
+        {
+          "url": "https://rise.surterreproperties.com/",
+          "observed_date": "2026-08-25",
+          "source_type": "first_party_program_subdomain",
+          "observation": "The current first-party recruiting program describes the brokerage as independent and promotes an in-house marketing studio and structured training."
+        }
+      ],
+      "identity_state": "confirmed_current",
+      "freshness_state": "confirmed_current_review_due_2026-09-08",
+      "truth_state": "confirmed_current",
+      "confidence": "high",
+      "evidence_summary": "Current first-party pages consistently identify Surterre Properties as an operating boutique luxury real estate brokerage with current property, neighborhood, journal, buyer, seller, recruiting, and training pathways.",
+      "website_observation": "The site exposes a broad property, neighborhood, editorial, and lead-capture footprint. No search visibility, answer visibility, conversion, or commercial gap is proven.",
+      "ownership_parent_rebrand_regulatory_state": {
+        "ownership_state": "first_party_program_describes_independent_brokerage",
+        "parent_state": "no_parent_claim_found_on_reviewed_first_party_pages",
+        "rebrand_state": "no_rebrand_claim_found_on_reviewed_first_party_pages",
+        "regulatory_state": "brokerage_category_confirmed_but_current_legal_entity_license_check_not_completed",
+        "legal_entity_state": "public_brand_confirmed_legal_contracting_entity_not_reconciled"
+      },
+      "public_company_state": "current_first_party_identity_and_company_locator_match",
+      "people_state": "not_run_contact_discovery_prohibited",
+      "source_rights_state": "authorized_research_only",
+      "source_integrity_state": "weak_fail_closed_for_advancement",
+      "duplicate_state": "clear_current_sources",
+      "conflict_state": "pending_fail_closed",
+      "suppression_state": "pending_fail_closed",
+      "fit_lane": "SEO, AEO, and GEO",
+      "fit_state": "property_location_and_editorial_footprint_hypothesis_only",
+      "qualification_score": null,
+      "score_state": "withheld_incomplete_evidence",
+      "missing_score_dimensions": [
+        "problem_evidence",
+        "decision_ownership",
+        "scope_readiness",
+        "inputs_and_access",
+        "budget_fit",
+        "timing_and_capacity",
+        "evidence_culture"
+      ],
+      "explicit_unknowns": [
+        "legal contracting entity and beneficial ownership",
+        "current entity-level brokerage license verification",
+        "agency category acceptance",
+        "client, partner, vendor, employer, job, and prior-touch conflicts",
+        "suppression state",
+        "decision ownership, budget, timing, and capacity",
+        "reproducible SEO, AEO, GEO, or conversion problem"
+      ],
+      "hard_gates": {
+        "identity": "pass",
+        "freshness": "pass",
+        "source_rights": "pass_for_research_only",
+        "source_integrity": "fail_closed_for_advancement",
+        "duplicate": "pass_current_sources",
+        "ownership_parent_rebrand": "partial_pending_legal_entity_reconciliation",
+        "regulatory_and_category_acceptance": "pending_fail_closed",
+        "relationship_conflict": "pending_fail_closed",
+        "suppression": "pending_fail_closed",
+        "decision_owner": "pending_fail_closed",
+        "problem_evidence": "pending_fail_closed",
+        "overall": "hold"
+      },
+      "current_lifecycle": "RESEARCH_ONLY",
+      "current_stage": "P00_ACCOUNT_RESEARCH",
+      "next_internal_action": "Verify the legal entity and brokerage standing, inspect representative property, neighborhood, and editorial templates for one reproducible condition, then complete conflict, suppression, and decision-owner checks."
+    },
+    {
+      "batch_index": 3,
+      "source_sheet_row": 24,
+      "source_row_rank": 23,
+      "company_name": "American Gold & Diamond Buyers",
+      "business_category": "Precious metals, jewelry, coin, and watch buying",
+      "canonical_website_url": "https://www.americancash4gold.com/",
+      "company_linkedin_locator": "https://www.linkedin.com/company/american-gold-&-diamond-buyers/",
+      "public_evidence_urls": [
+        "https://www.americancash4gold.com/",
+        "https://www.americancash4gold.com/about",
+        "https://www.americancash4gold.com/post/how-much-is-gold-worth-nj",
+        "https://www.linkedin.com/company/american-gold-&-diamond-buyers/"
+      ],
+      "public_evidence_observations": [
+        {
+          "url": "https://www.americancash4gold.com/",
+          "observed_date": "2026-08-25",
+          "source_type": "first_party_company_web",
+          "observation": "The current homepage identifies the company and presents active gold, silver, diamond, jewelry, watch, coin, bullion, offer, and location pathways."
+        },
+        {
+          "url": "https://www.americancash4gold.com/about",
+          "observed_date": "2026-08-25",
+          "source_type": "first_party_identity_page",
+          "observation": "The current about page describes in-person estate jewelry evaluations tied to current market pricing and a no-obligation offer process."
+        },
+        {
+          "url": "https://www.americancash4gold.com/post/how-much-is-gold-worth-nj",
+          "observed_date": "2026-08-25",
+          "source_type": "first_party_dated_content",
+          "observation": "A 2026 first-party guide provides current educational content about gold pricing and the local evaluation process."
+        }
+      ],
+      "identity_state": "confirmed_current",
+      "freshness_state": "confirmed_current_review_due_2026-09-08",
+      "truth_state": "confirmed_current",
+      "confidence": "high",
+      "evidence_summary": "The current first-party site and company locator consistently identify American Gold & Diamond Buyers and expose active service, offer, location, education, and evaluation pathways, including 2026 content.",
+      "website_observation": "The public site has multiple service, location, offer, and educational journeys. No search visibility, answer visibility, conversion, or commercial gap is proven.",
+      "ownership_parent_rebrand_regulatory_state": {
+        "ownership_state": "first_party_site_identifies_a_founder_owner_but_person_details_are_not_persisted",
+        "parent_state": "no_parent_claim_found_on_reviewed_first_party_pages",
+        "rebrand_state": "no_rebrand_claim_found_on_reviewed_first_party_pages",
+        "regulatory_state": "precious_metals_and_secondhand_purchase_category_confirmed_but_current_entity_registration_licensing_and_agency_acceptance_not_completed",
+        "legal_entity_state": "public_brand_confirmed_legal_contracting_entity_not_reconciled"
+      },
+      "public_company_state": "current_first_party_identity_and_company_locator_match",
+      "people_state": "not_run_contact_discovery_prohibited",
+      "source_rights_state": "authorized_research_only",
+      "source_integrity_state": "weak_fail_closed_for_advancement",
+      "duplicate_state": "clear_current_sources",
+      "conflict_state": "pending_fail_closed",
+      "suppression_state": "pending_fail_closed",
+      "fit_lane": "SEO, AEO, and GEO",
+      "fit_state": "service_location_and_educational_footprint_hypothesis_only",
+      "qualification_score": null,
+      "score_state": "withheld_incomplete_evidence",
+      "missing_score_dimensions": [
+        "problem_evidence",
+        "decision_ownership",
+        "scope_readiness",
+        "inputs_and_access",
+        "budget_fit",
+        "timing_and_capacity",
+        "evidence_culture"
+      ],
+      "explicit_unknowns": [
+        "legal contracting entity",
+        "parent or affiliate relationship",
+        "current registration and licensing requirements by operating market",
+        "agency category acceptance for precious metals and secondhand purchases",
+        "client, partner, vendor, employer, job, and prior-touch conflicts",
+        "suppression state",
+        "decision ownership, budget, timing, and capacity",
+        "reproducible SEO, AEO, GEO, or conversion problem"
+      ],
+      "hard_gates": {
+        "identity": "pass",
+        "freshness": "pass",
+        "source_rights": "pass_for_research_only",
+        "source_integrity": "fail_closed_for_advancement",
+        "duplicate": "pass_current_sources",
+        "ownership_parent_rebrand": "partial_pending_legal_entity_and_parent_reconciliation",
+        "regulatory_and_category_acceptance": "pending_fail_closed",
+        "relationship_conflict": "pending_fail_closed",
+        "suppression": "pending_fail_closed",
+        "decision_owner": "pending_fail_closed",
+        "problem_evidence": "pending_fail_closed",
+        "overall": "hold"
+      },
+      "current_lifecycle": "RESEARCH_ONLY",
+      "current_stage": "P00_ACCOUNT_RESEARCH",
+      "next_internal_action": "Verify the legal entity, market-specific registration and licensing, and agency category acceptance, then inspect representative service, location, offer, and educational templates for one reproducible condition."
+    },
+    {
+      "batch_index": 4,
+      "source_sheet_row": 25,
+      "source_row_rank": 24,
+      "company_name": "Pick-n-Pull, a division of Schnitzer Steel Industries",
+      "business_category": "Self-service used auto parts and end-of-life vehicle recycling",
+      "canonical_website_url": "https://www.picknpull.com/",
+      "company_linkedin_locator": "https://www.linkedin.com/company/pick-n-pull/",
+      "public_evidence_urls": [
+        "https://www.picknpull.com/",
+        "https://www.radiusrecycling.com/legal-notices",
+        "https://www.radiusrecycling.com/company/history",
+        "https://www.toyota-tsusho.com/english/press/detail/250711_006639.html",
+        "https://www.linkedin.com/company/pick-n-pull/"
+      ],
+      "public_evidence_observations": [
+        {
+          "url": "https://www.picknpull.com/",
+          "observed_date": "2026-08-25",
+          "source_type": "first_party_company_web",
+          "observation": "The current homepage identifies Pick-n-Pull as a self-service used auto parts and cash-for-junk-cars business with active inventory and store pathways."
+        },
+        {
+          "url": "https://www.radiusrecycling.com/legal-notices",
+          "observed_date": "2026-08-25",
+          "source_type": "official_current_parent_legal_page",
+          "observation": "The current Radius legal and privacy page identifies Pick-n-Pull among Radius Recycling subsidiaries."
+        },
+        {
+          "url": "https://www.radiusrecycling.com/company/history",
+          "observed_date": "2026-08-25",
+          "source_type": "official_parent_history",
+          "observation": "The official history records that Pick-n-Pull became wholly owned in 2003 and that Schnitzer rebranded as Radius Recycling in 2023."
+        },
+        {
+          "url": "https://www.toyota-tsusho.com/english/press/detail/250711_006639.html",
+          "observed_date": "2026-08-25",
+          "source_type": "official_acquirer_release",
+          "observation": "Toyota Tsusho states that it completed acquisition of all Radius Recycling shares through Toyota Tsusho America in July 2025 and made Radius a wholly owned subsidiary."
+        }
+      ],
+      "identity_state": "confirmed_current_with_parent_and_rebrand_chain",
+      "freshness_state": "confirmed_current_review_due_2026-09-08",
+      "truth_state": "confirmed_current_parent_chain_resolved",
+      "confidence": "high",
+      "evidence_summary": "The current Pick-n-Pull site is active. Official current parent and acquirer sources identify Pick-n-Pull as a Radius Recycling subsidiary, document the Schnitzer to Radius rebrand, and show Radius as wholly owned through Toyota Tsusho America by Toyota Tsusho.",
+      "website_observation": "The public site exposes inventory, store, parts, and sell-a-vehicle journeys. No search visibility, answer visibility, conversion, or commercial gap is proven, and enterprise account fit is unknown.",
+      "ownership_parent_rebrand_regulatory_state": {
+        "ownership_state": "wholly_owned_subsidiary_chain_confirmed_via_current_official_parent_sources",
+        "parent_state": "pick_n_pull_is_a_radius_recycling_subsidiary_and_radius_is_wholly_owned_through_toyota_tsusho_america_by_toyota_tsusho",
+        "rebrand_state": "schnitzer_rebranded_as_radius_recycling_in_2023",
+        "regulatory_state": "auto_dismantling_recycling_and_used_parts_category_confirmed_but_site_level_licensing_compliance_and_agency_acceptance_not_completed",
+        "legal_entity_state": "brand_and_parent_chain_confirmed_contracting_entity_by_market_not_reconciled"
+      },
+      "public_company_state": "current_first_party_identity_company_locator_and_official_parent_chain_match",
+      "people_state": "not_run_contact_discovery_prohibited",
+      "source_rights_state": "authorized_research_only",
+      "source_integrity_state": "weak_fail_closed_for_advancement",
+      "duplicate_state": "clear_current_sources",
+      "conflict_state": "pending_fail_closed",
+      "suppression_state": "pending_fail_closed",
+      "fit_lane": "SEO, AEO, and GEO",
+      "fit_state": "inventory_location_and_vehicle_journey_hypothesis_only_enterprise_fit_unknown",
+      "qualification_score": null,
+      "score_state": "withheld_incomplete_evidence",
+      "missing_score_dimensions": [
+        "problem_evidence",
+        "decision_ownership",
+        "scope_readiness",
+        "inputs_and_access",
+        "budget_fit",
+        "timing_and_capacity",
+        "evidence_culture"
+      ],
+      "explicit_unknowns": [
+        "market-specific contracting entity",
+        "site-level licensing and compliance standing",
+        "agency category acceptance for auto dismantling and recycling",
+        "enterprise vendor and procurement route",
+        "client, partner, vendor, employer, job, and prior-touch conflicts across the parent chain",
+        "suppression state",
+        "decision ownership, budget, timing, and capacity",
+        "reproducible SEO, AEO, GEO, or conversion problem"
+      ],
+      "hard_gates": {
+        "identity": "pass",
+        "freshness": "pass",
+        "source_rights": "pass_for_research_only",
+        "source_integrity": "fail_closed_for_advancement",
+        "duplicate": "pass_current_sources",
+        "ownership_parent_rebrand": "pass_current_official_chain",
+        "regulatory_and_category_acceptance": "pending_fail_closed",
+        "relationship_conflict": "pending_fail_closed",
+        "suppression": "pending_fail_closed",
+        "decision_owner": "pending_fail_closed",
+        "problem_evidence": "pending_fail_closed",
+        "overall": "hold"
+      },
+      "current_lifecycle": "RESEARCH_ONLY",
+      "current_stage": "P00_ACCOUNT_RESEARCH",
+      "next_internal_action": "Resolve market-specific contracting, regulatory, enterprise procurement, parent-chain conflict, suppression, and category acceptance before inspecting representative inventory, store, and sell-a-vehicle templates for a reproducible condition."
+    }
+  ],
+  "batch_blockers": [
+    "The source permits company research only and reports weak link-writable integrity.",
+    "Gold Buyers At the Mall lacks a resolvable supplied first-party domain and has an unresolved migration signal.",
+    "Surterre Properties has not completed legal entity and brokerage standing reconciliation.",
+    "American Gold & Diamond Buyers has not completed legal entity, registration, licensing, or agency category acceptance checks.",
+    "Pick-n-Pull has a resolved parent and rebrand chain but still requires market-specific contracting, regulatory, procurement, and conflict checks.",
+    "No record has canonical suppression clearance or complete relationship, prior-touch, and decision-owner reconciliation.",
+    "No record has evidence for all eight qualification dimensions or a reproducible commercial problem.",
+    "Contact discovery, drafting, sending, connecting, calendar mutation, booking, and CRM writes remain disabled."
+  ],
+  "validation": {
+    "json_parse": "passed",
+    "pii_scan": "passed_zero_matches_for_email_phone_street_address_personal_linkedin_raw_sheet_id_and_gmail_locator_patterns",
+    "manual_person_name_review": "passed_zero_person_names_persisted",
+    "external_action_review": "passed_zero_messages_drafts_connections_calendar_events_bookings_crm_writes_or_account_changes"
+  }
+}

@@ -7,7 +7,7 @@ owner: Dillon Mohr
 area: business infrastructure
 priority: high
 outcome: IMMOHRTAL Marketing Solutions operates as a specialized AI-native web optimization studio with a proof-led website, a five-seat internal Codex workforce, a bounded offer system, and governed delivery controls.
-next_action: Run the active 08:30 ET daily heartbeat, requalify rows 18 through 25, and resolve the postal, Zoho access, suppression, and dedicated booking blockers before requesting approval for any prospect send.
+next_action: Run the active 08:30 ET daily heartbeat, independently review Batch 03, open rows 26 through 33, and obtain only the exact postal, Zoho sender, Google calendar, public identity, Save, and controlled-test approvals before any acquisition motion.
 review_on: 2026-08-31
 source_refs:
   - "[[immohrtal-marketing-site/PRODUCT]]"
@@ -35,9 +35,14 @@ source_refs:
   - "[[06_Revenue/IMMOHRTAL/lead-intelligence/requalification/2026-08-25-batch-01]]"
   - "[[06_Revenue/IMMOHRTAL/lead-intelligence/requalification/2026-08-25-batch-02]]"
   - "[[06_Revenue/IMMOHRTAL/lead-intelligence/requalification/2026-08-25-batch-02-independent-qa]]"
+  - "[[06_Revenue/IMMOHRTAL/lead-intelligence/requalification/2026-08-25-batch-03]]"
+  - "[[06_Revenue/IMMOHRTAL/lead-intelligence/requalification/2026-08-25-batch-03-governance]]"
+  - "[[06_Revenue/IMMOHRTAL/lead-intelligence/requalification/2026-08-25-batch-03-independent-qa]]"
+  - "[[06_Revenue/IMMOHRTAL/lead-intelligence/ACCOUNT-SUPPRESSION-REGISTER]]"
   - "[[06_Revenue/IMMOHRTAL/lead-intelligence/LEGACY-SHEET-RESOLUTION-2026-08-25]]"
   - "[[06_Revenue/IMMOHRTAL/lead-intelligence/PUBLIC-SOURCE-EXPANSION-2026-08-25]]"
   - "[[05_Offers/IMMOHRTAL/ACTIVATION-ACCOUNT-AUDIT-2026-08-25]]"
+  - "[[05_Offers/IMMOHRTAL/ACTIVATION-BLOCKER-CLEARANCE-2026-08-25]]"
   - "[[11_Agents/IMMOHRTAL Business Crew/daily/2026-08-25]]"
 tags:
   - brain
@@ -121,9 +126,10 @@ without the required evidence and Dillon's exact approval.
   contract and privacy controls, and appropriate insurance or vendor controls.
 - No account was opened, purchase made, contract signed, or money moved during
   this setup.
-- The current evidence packet passed 26 of 26 agency, office, and public-source
-  allowlist regression tests. Those checks cover the five-seat roster, board
-  contract, canonical delivery roles, local CRM controls, and the zero prospect
+- The current evidence packet passed the agency, office, public-source, and
+  account-governance regression suites. Those checks cover the five-seat
+  roster, board contract, canonical delivery roles, local CRM controls,
+  trusted-clock freshness, strict policy fields, privacy, and the zero prospect
   send and booking boundary.
 
 ## Live responsive baseline
@@ -152,8 +158,9 @@ these behaviors in future homepage changes.
 
 - Internal office: five subordinate job seats, 13-item command board, daily closeout, and noindex desktop and mobile dashboard
 - Daily scheduler: `immohrtal-daily-business-clock-in` active at 08:30 ET; the duplicate office manifest is not installed
-- Lead intelligence: 2,467 Drive metadata rows inspected, all 59 candidate spreadsheets audited, one 47-company discovery-only Sheet authorized, 16 companies researched, 13 current identities, three identity blocks, zero qualified, and 31 authorized rows remaining
-- Public expansion: five bounded company-only source lanes documented; the pure-local allowlist rejects personal and contact data and passed 10 of 10 adversarial tests; recurring collection remains held
+- Lead intelligence: 2,467 Drive metadata rows inspected, all 59 candidate spreadsheets audited, one 47-company discovery-only Sheet authorized, 24 companies researched, 20 current identities, four identity blocks, zero qualified, and 23 authorized rows remaining
+- Account governance: Batch 03 cleared eight accounts against six current exact account-level duplicate, relationship, routed Gmail, and suppression source lanes; contact discovery and outreach remain unauthorized
+- Public expansion: five bounded company-only source lanes documented; the pure-local allowlist rejects personal and contact data and passed 10 of 10 adversarial tests; recurring collection remains held on query, terms, rate, configuration, and independent-QA gates
 - Gmail: five exact prospect drafts verified with `DRAFT` present and `SENT` absent; one separately authorized internal owner update sent and read back; prospect messages sent remains zero
-- Booking: the connected Google primary owner calendar and authenticated IMMOHRTAL Zoho mailbox are resolved, but no dedicated booking page, calendar event, or invitation was created
+- Booking: the connected Google primary owner calendar, authenticated IMMOHRTAL Zoho mailbox, and complete local 30-minute configuration are resolved; no page, event, or invitation was created because Google Save publishes the page, the public account name does not exactly match the business, and exact human approvals remain
 - Pricing: canonical `/pricing/` route, exact seven monthly fees, navigation entry, structured data, sitemap entry, and desktop and mobile QA are live on production
