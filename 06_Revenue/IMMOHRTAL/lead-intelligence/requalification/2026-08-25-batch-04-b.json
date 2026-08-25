@@ -1,0 +1,532 @@
+{
+  "schema_version": "1.0.0",
+  "workflow_id": "IMMOHRTAL-DAILY-20260825",
+  "step_id": "LEADS-05B",
+  "batch_id": "2026-08-25-batch-04-b",
+  "status": "complete_internal_research_hold",
+  "observed_at": "2026-08-25T22:44:41Z",
+  "observed_date": "2026-08-25",
+  "freshness_review_due": "2026-09-08",
+  "scope": {
+    "source_reference": "../SOURCE-AUDIT-2026-08-25.md#authorized-2023-b2b-source",
+    "source_tab": "Sheet1",
+    "source_rows_read": "30 through 33",
+    "source_row_count": 4,
+    "source_row_ranks": [
+      29,
+      30,
+      31,
+      32
+    ],
+    "read_only": true,
+    "sheet_changed": false,
+    "private_linkedin_session_used": false,
+    "contact_discovery_performed": false,
+    "drafts_created": 0,
+    "messages_sent": 0,
+    "connection_requests_created": 0,
+    "calendar_events_created": 0,
+    "bookings_created": 0,
+    "crm_writes": 0,
+    "account_changes": 0
+  },
+  "source_governance": {
+    "source_rights_state": "authorized_discovery_only",
+    "source_integrity_state": "weak_anyone_with_link_writer_permission_reported",
+    "contact_permission_state": "not_authorized",
+    "raw_sheet_rows_persisted": false,
+    "contact_data_persisted": false,
+    "person_data_persisted": false,
+    "message_data_persisted": false,
+    "private_identifiers_persisted": false,
+    "raw_payload_persisted": false
+  },
+  "method": {
+    "public_company_website": "The four supplied company domains were checked against current official first-party pages. Only reproducible company-level identity, ownership, rebrand, category, legal, regulatory, procurement, and public web conditions were retained.",
+    "official_corporate_and_regulatory_path": "Current official company releases, legal terms, and an official federal regulator release were used only where ownership, rebrand, legal entity, or regulatory state required reconciliation.",
+    "public_search_path": "Twenty bounded company-focused public search queries covered the four supplied identities, official company locators, and necessary ownership, legal, privacy, or regulatory follow-ups. Search results were treated as locators until reproduced on a first-party or official regulator page.",
+    "linkedin_policy": "Only four public company-page locators are stored. No personal profile, person name, private session, connection request, or message was used or retained. Company pages corroborate public brand identity but do not prove legal identity, authority, consent, or regulatory standing.",
+    "people_path": "Not run. Person research and contact discovery were prohibited.",
+    "duplicate_check": "Exact supplied and current company names, canonical domains, and confirmed parent or rebrand aliases were checked against prior IMMOHRTAL research, the canonical client registry, and the canonical work queue.",
+    "conflict_check": "No exact company, domain, confirmed parent, or rebrand alias match was found in the canonical client registry or canonical work queue. Employer, job, partner, vendor, prior-touch, competitive, parent-portfolio, and separate-venture reconciliation remains incomplete, so relationship conflict stays pending and fail closed.",
+    "suppression_check": "No permissioned contact or suppression record was available in this company-only step. Suppression stays pending and fail closed.",
+    "score_policy": "The 0 to 16 qualification score remains null unless all eight dimensions and every hard gate have evidence. No record met that condition. A current identity pass does not authorize qualification, contact discovery, or outreach.",
+    "external_action_policy": "Research only. No contact discovery, message, draft, connection, calendar event, booking, CRM write, account change, or other external action was performed."
+  },
+  "counts": {
+    "input_records": 4,
+    "output_records": 4,
+    "unique_company_names": 4,
+    "unique_canonical_domains": 4,
+    "identity_confirmed_current": 4,
+    "identity_blocked": 0,
+    "current_public_domain_with_identity_content": 4,
+    "current_parent_chain_confirmed": 1,
+    "current_rebrand_chain_confirmed": 1,
+    "current_public_regulatory_enforcement_holds": 1,
+    "direct_competitive_service_overlap_holds": 1,
+    "enterprise_procurement_pending": 4,
+    "public_company_search_queries": 20,
+    "people_queries": 0,
+    "personal_records_persisted": 0,
+    "duplicate_clear_current_sources": 4,
+    "exact_client_registry_matches": 0,
+    "exact_canonical_work_queue_matches": 0,
+    "relationship_conflict_clear": 0,
+    "suppression_clear": 0,
+    "qualification_scores_complete": 0,
+    "qualification_scores_null": 4,
+    "records_in_research_only": 4,
+    "records_held_by_hard_gates": 4,
+    "external_actions": 0
+  },
+  "records": [
+    {
+      "batch_index": 1,
+      "source_sheet_row": 30,
+      "source_row_rank": 29,
+      "company_name": "ANDMORE",
+      "supplied_identity_context": "International Market Centers, now ANDMORE",
+      "business_category": "Wholesale markets, tradeshows, design centers, and marketplace real estate",
+      "canonical_website_url": "https://www.andmore.com/",
+      "company_linkedin_locator": "https://www.linkedin.com/company/andmore-market",
+      "public_evidence_urls": [
+        "https://www.andmore.com/",
+        "https://www.andmore.com/about-us",
+        "https://www.andmore.com/news/news-and-media/imc-unveils-new-vision-and-brand-identity-andmore",
+        "https://www.andmore.com/news/andmore-announces-executive-team-transition",
+        "https://www.andmore.com/privacy-policy",
+        "https://www.linkedin.com/company/andmore-market"
+      ],
+      "public_evidence_observations": [
+        {
+          "url": "https://www.andmore.com/",
+          "observed_date": "2026-08-25",
+          "source_type": "first_party_company_web",
+          "observation": "The current site identifies ANDMORE and presents active wholesale market, design center, campus, news, and event pathways with current 2026 activity."
+        },
+        {
+          "url": "https://www.andmore.com/news/news-and-media/imc-unveils-new-vision-and-brand-identity-andmore",
+          "observed_date": "2026-08-25",
+          "source_type": "first_party_rebrand_release",
+          "observation": "The official 2023 release states that International Market Centers unified its physical marketplace business with Juniper digital offerings and rebranded as ANDMORE."
+        },
+        {
+          "url": "https://www.andmore.com/news/andmore-announces-executive-team-transition",
+          "observed_date": "2026-08-25",
+          "source_type": "first_party_current_corporate_release",
+          "observation": "A May 2026 company release identifies ANDMORE as a Blackstone portfolio company and describes a current board-led executive structure."
+        },
+        {
+          "url": "https://www.andmore.com/privacy-policy",
+          "observed_date": "2026-08-25",
+          "source_type": "first_party_privacy_policy",
+          "observation": "The current policy covers affiliated entities, event and online-service data, advertising, analytics, verification, and business-transfer processing, creating privacy and vendor-governance requirements for any engagement."
+        }
+      ],
+      "identity_state": "confirmed_current_with_parent_and_rebrand_chain",
+      "freshness_state": "confirmed_current_review_due_2026-09-08",
+      "truth_state": "confirmed_current_parent_and_rebrand_resolved",
+      "confidence": "high",
+      "evidence_summary": "Current first-party pages confirm ANDMORE as the active successor brand to International Market Centers, and a current 2026 company release confirms Blackstone portfolio ownership.",
+      "website_observation": "The public web footprint spans multiple markets, campuses, industries, event programs, and buyer and seller journeys. This is a reproducible enterprise content and location footprint, not proof of a visibility, conversion, or commercial problem.",
+      "ownership_parent_rebrand_regulatory_state": {
+        "ownership_state": "current_first_party_release_identifies_blackstone_portfolio_ownership",
+        "parent_state": "blackstone_portfolio_relationship_confirmed_current",
+        "rebrand_state": "international_market_centers_rebranded_as_andmore_in_2023_after_unifying_physical_and_juniper_digital_offerings",
+        "regulatory_state": "wholesale_event_real_estate_and_data_processing_categories_confirmed_but_market_specific_contracting_privacy_and_category_acceptance_not_completed",
+        "legal_entity_state": "public_brand_and_corporate_relationship_confirmed_exact_contracting_entity_by_market_or_property_not_reconciled",
+        "procurement_state": "blackstone_portfolio_enterprise_procurement_and_vendor_requirements_unverified"
+      },
+      "public_company_state": "current_first_party_identity_rebrand_parent_and_company_locator_match",
+      "people_state": "not_run_contact_discovery_prohibited",
+      "source_rights_state": "authorized_research_only",
+      "source_integrity_state": "weak_fail_closed_for_advancement",
+      "duplicate_state": "clear_current_sources",
+      "conflict_state": "pending_fail_closed_blackstone_portfolio_and_legacy_imc_relationships_unresolved",
+      "suppression_state": "pending_fail_closed",
+      "fit_lane": "SEO, AEO, and GEO",
+      "fit_state": "multi_market_campus_event_and_industry_footprint_hypothesis_only_enterprise_fit_unknown",
+      "qualification_score": null,
+      "score_state": "withheld_incomplete_evidence",
+      "missing_score_dimensions": [
+        "problem_evidence",
+        "decision_ownership",
+        "scope_readiness",
+        "inputs_and_access",
+        "budget_fit",
+        "timing_and_capacity",
+        "evidence_culture"
+      ],
+      "explicit_unknowns": [
+        "exact contracting entity by market or property",
+        "Blackstone portfolio procurement and vendor route",
+        "market-specific legal and privacy requirements",
+        "agency category acceptance",
+        "client, partner, vendor, employer, job, and prior-touch conflicts across current and legacy aliases",
+        "suppression state",
+        "decision ownership, budget, timing, and capacity",
+        "reproducible SEO, AEO, GEO, or conversion problem"
+      ],
+      "hard_gates": {
+        "identity": "pass_with_parent_and_rebrand",
+        "freshness": "pass",
+        "source_rights": "pass_for_research_only",
+        "source_integrity": "fail_closed_for_advancement",
+        "duplicate": "pass_current_sources",
+        "ownership_parent_rebrand": "pass_current_official_chain",
+        "legal_privacy_and_category_acceptance": "pending_fail_closed",
+        "relationship_conflict": "pending_fail_closed",
+        "enterprise_procurement": "pending_fail_closed",
+        "suppression": "pending_fail_closed",
+        "decision_owner": "pending_fail_closed",
+        "problem_evidence": "pending_fail_closed",
+        "overall": "hold"
+      },
+      "current_lifecycle": "RESEARCH_ONLY",
+      "current_stage": "P00_ACCOUNT_RESEARCH",
+      "next_internal_action": "Resolve exact contracting entity, Blackstone portfolio relationships, enterprise procurement, privacy and category acceptance, suppression, prior touch, and decision ownership before inspecting representative market, campus, and event templates for one reproducible condition."
+    },
+    {
+      "batch_index": 2,
+      "source_sheet_row": 31,
+      "source_row_rank": 30,
+      "company_name": "Registria",
+      "business_category": "Ownership experience management software and post-purchase data services",
+      "canonical_website_url": "https://www.registria.com/",
+      "company_linkedin_locator": "https://www.linkedin.com/company/registria-inc-",
+      "public_evidence_urls": [
+        "https://www.registria.com/",
+        "https://www.registria.com/about",
+        "https://www.registria.com/privacy",
+        "https://www.registria.com/terms",
+        "https://www.linkedin.com/company/registria-inc-"
+      ],
+      "public_evidence_observations": [
+        {
+          "url": "https://www.registria.com/about",
+          "observed_date": "2026-08-25",
+          "source_type": "first_party_identity_and_history_page",
+          "observation": "The current about page identifies Registria as an ownership experience platform company, documents its company history, and shows current 2026 platform activity."
+        },
+        {
+          "url": "https://www.registria.com/",
+          "observed_date": "2026-08-25",
+          "source_type": "first_party_company_web",
+          "observation": "The current site presents product registration, care, commerce, insights, customer profiles, and post-purchase ownership journeys for global brands."
+        },
+        {
+          "url": "https://www.registria.com/privacy",
+          "observed_date": "2026-08-25",
+          "source_type": "first_party_privacy_policy",
+          "observation": "The current policy describes collection and handling of personal information and third-party support, so privacy, security, data-processing, and vendor review are necessary engagement gates."
+        },
+        {
+          "url": "https://www.registria.com/terms",
+          "observed_date": "2026-08-25",
+          "source_type": "first_party_terms",
+          "observation": "The current terms establish Registria ownership of site materials but do not resolve the exact contracting entity, current parent, or enterprise procurement route."
+        }
+      ],
+      "identity_state": "confirmed_current",
+      "freshness_state": "confirmed_current_review_due_2026-09-08",
+      "truth_state": "confirmed_current",
+      "confidence": "high",
+      "evidence_summary": "Current first-party pages consistently identify Registria as an operating ownership experience management platform with current 2026 product activity and global brand workflows.",
+      "website_observation": "The public site exposes solution, platform, industry, research, case-study, and product-education pathways. This is a reproducible B2B software content footprint, not proof of a search, answer, conversion, or commercial gap.",
+      "ownership_parent_rebrand_regulatory_state": {
+        "ownership_state": "unverified_current_ownership_not_stated_on_reviewed_first_party_pages",
+        "parent_state": "no_current_parent_claim_found_on_reviewed_first_party_pages",
+        "rebrand_state": "no_current_rebrand_claim_found_on_reviewed_first_party_pages",
+        "regulatory_state": "personal_data_product_registration_warranty_and_post_purchase_processing_categories_confirmed_but_client_specific_privacy_security_and_regulatory_requirements_not_reconciled",
+        "legal_entity_state": "public_brand_confirmed_exact_contracting_entity_not_reconciled",
+        "procurement_state": "enterprise_security_privacy_data_processing_and_vendor_review_unverified"
+      },
+      "public_company_state": "current_first_party_identity_and_company_locator_match",
+      "people_state": "not_run_contact_discovery_prohibited",
+      "source_rights_state": "authorized_research_only",
+      "source_integrity_state": "weak_fail_closed_for_advancement",
+      "duplicate_state": "clear_current_sources",
+      "conflict_state": "pending_fail_closed_martech_partner_vendor_and_competitive_relationships_unresolved",
+      "suppression_state": "pending_fail_closed",
+      "fit_lane": "SEO, AEO, and GEO",
+      "fit_state": "platform_solution_and_research_footprint_hypothesis_only_enterprise_fit_unknown",
+      "qualification_score": null,
+      "score_state": "withheld_incomplete_evidence",
+      "missing_score_dimensions": [
+        "problem_evidence",
+        "decision_ownership",
+        "scope_readiness",
+        "inputs_and_access",
+        "budget_fit",
+        "timing_and_capacity",
+        "evidence_culture"
+      ],
+      "explicit_unknowns": [
+        "exact legal contracting entity and current ownership",
+        "parent or affiliate relationship",
+        "enterprise security, privacy, data-processing, and vendor requirements",
+        "agency category acceptance for data-driven post-purchase technology",
+        "client, partner, vendor, employer, job, competitive, and prior-touch conflicts",
+        "suppression state",
+        "decision ownership, budget, timing, and capacity",
+        "reproducible SEO, AEO, GEO, or conversion problem"
+      ],
+      "hard_gates": {
+        "identity": "pass",
+        "freshness": "pass",
+        "source_rights": "pass_for_research_only",
+        "source_integrity": "fail_closed_for_advancement",
+        "duplicate": "pass_current_sources",
+        "ownership_parent_rebrand": "pending_fail_closed",
+        "privacy_security_and_category_acceptance": "pending_fail_closed",
+        "relationship_conflict": "pending_fail_closed",
+        "enterprise_procurement": "pending_fail_closed",
+        "suppression": "pending_fail_closed",
+        "decision_owner": "pending_fail_closed",
+        "problem_evidence": "pending_fail_closed",
+        "overall": "hold"
+      },
+      "current_lifecycle": "RESEARCH_ONLY",
+      "current_stage": "P00_ACCOUNT_RESEARCH",
+      "next_internal_action": "Resolve the exact contracting entity, ownership, martech relationships, enterprise security and privacy requirements, procurement, category acceptance, suppression, prior touch, and decision ownership before inspecting representative solution and research templates for one reproducible condition."
+    },
+    {
+      "batch_index": 3,
+      "source_sheet_row": 32,
+      "source_row_rank": 31,
+      "company_name": "The Federal Savings Bank",
+      "business_category": "Federally chartered savings bank and nationwide mortgage lender",
+      "canonical_website_url": "https://www.thefederalsavingsbank.com/",
+      "company_linkedin_locator": "https://www.linkedin.com/company/the-federal-savings-bank",
+      "public_evidence_urls": [
+        "https://www.thefederalsavingsbank.com/",
+        "https://www.thefederalsavingsbank.com/about/",
+        "https://www.occ.gov/news-issuances/news-releases/2026/nr-occ-2026-28.html",
+        "https://apps.occ.gov/EASearch/Search/Table?acs=&cat=&isAdv=false&pg=0&pgsz=10&q=716195&srt=1",
+        "https://www.linkedin.com/company/the-federal-savings-bank"
+      ],
+      "public_evidence_observations": [
+        {
+          "url": "https://www.thefederalsavingsbank.com/",
+          "observed_date": "2026-08-25",
+          "source_type": "first_party_company_web",
+          "observation": "The current site identifies The Federal Savings Bank as an active nationwide mortgage and banking provider and displays current member and equal-housing status signals."
+        },
+        {
+          "url": "https://www.thefederalsavingsbank.com/about/",
+          "observed_date": "2026-08-25",
+          "source_type": "first_party_identity_page",
+          "observation": "The current about page describes a federally chartered bank focused primarily on home lending and serving borrowers nationwide."
+        },
+        {
+          "url": "https://www.occ.gov/news-issuances/news-releases/2026/nr-occ-2026-28.html",
+          "observed_date": "2026-08-25",
+          "source_type": "official_current_regulator_release",
+          "observation": "The Office of the Comptroller of the Currency announced an April 2026 consent order against the bank under Docket AA-ENF-2025-63 for violations connected to cash-out refinance practices."
+        },
+        {
+          "url": "https://apps.occ.gov/EASearch/Search/Table?acs=&cat=&isAdv=false&pg=0&pgsz=10&q=716195&srt=1",
+          "observed_date": "2026-08-25",
+          "source_type": "official_current_regulator_database",
+          "observation": "The current OCC enforcement database identifies The Federal Savings Bank under charter 716195 and shows the April 2026 action."
+        }
+      ],
+      "identity_state": "confirmed_current_with_regulatory_hold",
+      "freshness_state": "confirmed_current_review_due_2026-09-08",
+      "truth_state": "confirmed_current_public_regulatory_enforcement_hold",
+      "confidence": "high",
+      "evidence_summary": "Current first-party pages and current OCC records confirm the bank's operating identity and federally chartered status. The official regulator also shows a current 2026 enforcement action that blocks commercial advancement pending legal and category review.",
+      "website_observation": "The public site exposes national mortgage, refinance, lending, banking, location, eligibility, and educational journeys. No visibility or conversion defect is proven, and current regulatory posture prevents treating the footprint as a sales opportunity.",
+      "ownership_parent_rebrand_regulatory_state": {
+        "ownership_state": "current_private_ownership_claim_exists_but_beneficial_ownership_not_reconciled_from_current_first_party_or_regulator_evidence",
+        "parent_state": "current_holding_company_or_parent_not_reconciled",
+        "rebrand_state": "no_current_rebrand_claim_found_on_reviewed_first_party_or_regulator_pages",
+        "regulatory_state": "federally_chartered_bank_with_current_april_2026_occ_consent_order_aa_enf_2025_63",
+        "legal_entity_state": "bank_identity_and_occ_charter_716195_confirmed_current_exact_parent_and_contracting_route_not_reconciled",
+        "procurement_state": "regulated_financial_institution_vendor_legal_compliance_security_and_procurement_requirements_unverified"
+      },
+      "public_company_state": "current_first_party_identity_company_locator_and_official_regulator_records_match",
+      "people_state": "not_run_contact_discovery_prohibited",
+      "source_rights_state": "authorized_research_only",
+      "source_integrity_state": "weak_fail_closed_for_advancement",
+      "duplicate_state": "clear_current_sources",
+      "conflict_state": "pending_fail_closed_financial_services_parent_affiliate_vendor_and_prior_touch_relationships_unresolved",
+      "suppression_state": "pending_fail_closed",
+      "fit_lane": null,
+      "fit_state": "none_until_current_regulatory_legal_and_financial_services_category_acceptance_are_resolved",
+      "qualification_score": null,
+      "score_state": "withheld_incomplete_evidence_and_current_regulatory_hold",
+      "missing_score_dimensions": [
+        "problem_evidence",
+        "service_fit",
+        "decision_ownership",
+        "scope_readiness",
+        "inputs_and_access",
+        "budget_fit",
+        "timing_and_capacity",
+        "evidence_culture"
+      ],
+      "explicit_unknowns": [
+        "current parent or holding company relationship",
+        "current beneficial ownership",
+        "scope and disposition requirements of the April 2026 regulatory order",
+        "agency legal and category acceptance for regulated financial services",
+        "vendor legal, compliance, security, and procurement requirements",
+        "client, partner, vendor, employer, job, affiliate, and prior-touch conflicts",
+        "suppression state",
+        "decision ownership, budget, timing, and capacity",
+        "reproducible marketing problem that may be evaluated lawfully"
+      ],
+      "hard_gates": {
+        "identity": "pass_with_regulator_corroboration",
+        "freshness": "pass",
+        "source_rights": "pass_for_research_only",
+        "source_integrity": "fail_closed_for_advancement",
+        "duplicate": "pass_current_sources",
+        "ownership_parent_rebrand": "pending_fail_closed",
+        "regulatory_and_category_acceptance": "fail_current_public_enforcement_action_pending_legal_review",
+        "relationship_conflict": "pending_fail_closed",
+        "enterprise_procurement": "pending_fail_closed",
+        "suppression": "pending_fail_closed",
+        "decision_owner": "pending_fail_closed",
+        "problem_evidence": "pending_fail_closed",
+        "overall": "hold"
+      },
+      "current_lifecycle": "RESEARCH_ONLY",
+      "current_stage": "P00_ACCOUNT_RESEARCH",
+      "next_internal_action": "Do not conduct people research. Resolve current regulatory order requirements, legal and financial-services category acceptance, parent and affiliate state, enterprise procurement, relationship conflicts, suppression, and decision ownership before any further qualification."
+    },
+    {
+      "batch_index": 4,
+      "source_sheet_row": 33,
+      "source_row_rank": 32,
+      "company_name": "Slashdot Media",
+      "business_category": "B2B technology media, advertising, demand generation, lead generation, and intent data",
+      "canonical_website_url": "https://slashdotmedia.com/",
+      "company_linkedin_locator": "https://www.linkedin.com/company/slashdot-media",
+      "public_evidence_urls": [
+        "https://slashdotmedia.com/",
+        "https://slashdotmedia.com/about-slashdot-media/",
+        "https://slashdotmedia.com/terms-of-use/",
+        "https://slashdotmedia.com/terms-dpa/",
+        "https://slashdotmedia.com/subprocessor-list-page/",
+        "https://www.linkedin.com/company/slashdot-media"
+      ],
+      "public_evidence_observations": [
+        {
+          "url": "https://slashdotmedia.com/",
+          "observed_date": "2026-08-25",
+          "source_type": "first_party_company_web",
+          "observation": "The current site presents B2B lead generation, display and native advertising, email marketing, software listings, custom content, and intent-driven demand services."
+        },
+        {
+          "url": "https://slashdotmedia.com/about-slashdot-media/",
+          "observed_date": "2026-08-25",
+          "source_type": "first_party_identity_and_portfolio_page",
+          "observation": "The current about page identifies Slashdot Media and its active technology-media and demand-generation brand portfolio."
+        },
+        {
+          "url": "https://slashdotmedia.com/terms-of-use/",
+          "observed_date": "2026-08-25",
+          "source_type": "first_party_current_legal_terms",
+          "observation": "Terms updated in 2025 identify Slashdot Media, LLC as the company operating the listed media and software sites."
+        },
+        {
+          "url": "https://slashdotmedia.com/terms-dpa/",
+          "observed_date": "2026-08-25",
+          "source_type": "first_party_data_processing_terms",
+          "observation": "The data-processing terms describe lead generation, email marketing, advertising, client data, and consumer-data processing, creating privacy, direct-marketing, data-governance, and competitive-conflict holds."
+        },
+        {
+          "url": "https://slashdotmedia.com/subprocessor-list-page/",
+          "observed_date": "2026-08-25",
+          "source_type": "first_party_current_subprocessor_page",
+          "observation": "A current subprocessor page documents third-party processing used for Slashdot offerings, reinforcing enterprise data-processing and vendor-governance requirements."
+        }
+      ],
+      "identity_state": "confirmed_current_with_direct_competitive_overlap_hold",
+      "freshness_state": "confirmed_current_review_due_2026-09-08",
+      "truth_state": "confirmed_current_direct_marketing_services_competitive_hold",
+      "confidence": "high",
+      "evidence_summary": "Current first-party pages and current legal terms confirm Slashdot Media, LLC as an operating B2B technology-media and marketing-services company. Its lead generation, advertising, email marketing, content, and intent-data offerings create direct competitive and data-governance holds.",
+      "website_observation": "The public site presents the company's own demand-generation, advertising, content, email, listings, and intent-data capabilities. This is evidence of direct service overlap, not evidence that Slashdot Media is a prospect with an unmet marketing need.",
+      "ownership_parent_rebrand_regulatory_state": {
+        "ownership_state": "current_operating_legal_entity_confirmed_as_slashdot_media_llc_beneficial_ownership_unverified",
+        "parent_state": "no_current_parent_claim_found_on_reviewed_first_party_pages",
+        "rebrand_state": "no_current_rebrand_claim_found_on_reviewed_first_party_pages",
+        "regulatory_state": "advertising_lead_generation_email_marketing_intent_data_and_consumer_data_processing_categories_confirmed_with_unresolved_privacy_direct_marketing_and_category_acceptance",
+        "legal_entity_state": "slashdot_media_llc_confirmed_in_current_first_party_terms",
+        "procurement_state": "enterprise_data_processing_security_privacy_vendor_and_competitive_conflict_review_unverified"
+      },
+      "public_company_state": "current_first_party_identity_legal_entity_portfolio_and_company_locator_match",
+      "people_state": "not_run_contact_discovery_prohibited",
+      "source_rights_state": "authorized_research_only",
+      "source_integrity_state": "weak_fail_closed_for_advancement",
+      "duplicate_state": "clear_current_sources",
+      "conflict_state": "hard_hold_direct_marketing_services_overlap_plus_pending_partner_vendor_parent_and_prior_touch_reconciliation",
+      "suppression_state": "pending_fail_closed",
+      "fit_lane": null,
+      "fit_state": "none_until_direct_competitive_overlap_and_category_acceptance_are_resolved",
+      "qualification_score": null,
+      "score_state": "withheld_incomplete_evidence_and_direct_competitive_overlap",
+      "missing_score_dimensions": [
+        "problem_evidence",
+        "service_fit",
+        "decision_ownership",
+        "scope_readiness",
+        "inputs_and_access",
+        "budget_fit",
+        "timing_and_capacity",
+        "evidence_culture"
+      ],
+      "explicit_unknowns": [
+        "current beneficial ownership and parent relationship",
+        "whether any noncompetitive service lane is permissible",
+        "agency category acceptance for a marketing and data-services company",
+        "privacy, direct-marketing, data-processing, and security requirements",
+        "client, partner, vendor, employer, job, competitive, affiliate, and prior-touch conflicts",
+        "suppression state",
+        "enterprise procurement and vendor route",
+        "decision ownership, budget, timing, and capacity",
+        "reproducible noncompetitive problem evidence"
+      ],
+      "hard_gates": {
+        "identity": "pass_with_current_legal_entity",
+        "freshness": "pass",
+        "source_rights": "pass_for_research_only",
+        "source_integrity": "fail_closed_for_advancement",
+        "duplicate": "pass_current_sources",
+        "ownership_parent_rebrand": "partial_legal_entity_confirmed_parent_pending",
+        "competitive_and_category_acceptance": "fail_direct_marketing_services_overlap_pending_explicit_review",
+        "privacy_security_and_direct_marketing": "pending_fail_closed",
+        "relationship_conflict": "pending_fail_closed",
+        "enterprise_procurement": "pending_fail_closed",
+        "suppression": "pending_fail_closed",
+        "decision_owner": "pending_fail_closed",
+        "problem_evidence": "pending_fail_closed",
+        "overall": "hold"
+      },
+      "current_lifecycle": "RESEARCH_ONLY",
+      "current_stage": "P00_ACCOUNT_RESEARCH",
+      "next_internal_action": "Do not conduct people research. Resolve direct competitive service overlap, category acceptance, current ownership, privacy and direct-marketing requirements, partner and vendor conflicts, suppression, procurement, and decision ownership before any further qualification."
+    }
+  ],
+  "batch_blockers": [
+    "The source permits company research only and reports weak link-writable integrity.",
+    "ANDMORE has a confirmed International Market Centers rebrand and current Blackstone portfolio relationship, but exact contracting entity, portfolio conflicts, privacy requirements, and enterprise procurement are unresolved.",
+    "Registria has unresolved legal entity, ownership, privacy, security, data-processing, category acceptance, and enterprise procurement gates.",
+    "The Federal Savings Bank has a current April 2026 OCC consent order and may not advance without legal, regulatory, financial-services category, parent, and procurement review.",
+    "Slashdot Media has direct marketing-services overlap plus unresolved ownership, privacy, direct-marketing, competitive-conflict, and procurement gates.",
+    "No record has canonical suppression clearance, complete relationship reconciliation, or a verified decision owner.",
+    "No record has evidence for all eight qualification dimensions or a reproducible commercial problem.",
+    "Contact discovery, drafting, sending, connecting, calendar mutation, booking, CRM writes, account changes, and all other external actions remain disabled."
+  ],
+  "validation": {
+    "json_parse": "passed",
+    "pii_scan": "passed_zero_matches_for_email_phone_street_address_personal_linkedin_google_sheet_url_or_source_id_field_and_gmail_locator_patterns",
+    "manual_person_name_review": "passed_zero_person_names_or_titles_persisted",
+    "source_row_review": "passed_exactly_rows_30_through_33_and_ranks_29_through_32_once_each",
+    "external_action_review": "passed_zero_messages_drafts_connections_calendar_events_bookings_crm_writes_account_changes_or_other_external_actions"
+  }
+}

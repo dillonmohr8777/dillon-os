@@ -675,8 +675,7 @@ export function renderOfficeMarkdown(snapshot) {
     '',
     '## External-action receipt',
     '',
-    'Messages, provider-side drafts, calendar writes, CRM writes, publishing, deployment, spend, purchases, schedule changes, and credential access performed by this report loop: `0`.',
-    ''
+    'Messages, provider-side drafts, calendar writes, CRM writes, publishing, deployment, spend, purchases, schedule changes, and credential access performed by this report loop: `0`.'
   );
   return `${sections.join('\n')}\n`;
 }
@@ -817,7 +816,7 @@ export function renderOfficeDashboard(snapshot) {
     <section class="roster" id="office-roster" aria-labelledby="roster-heading">
       <div class="shell">
         <header class="section-head"><h2 id="roster-heading">The five-seat office</h2><p>Board state and runtime state are separate. A recorded assignment does not prove an agent is online. Each seat remains <strong>NOT_OBSERVED</strong> until a current process receipt exists.</p></header>
-        ${rosterRows}
+        ${rosterRows.trimStart()}
       </div>
     </section>
     <section class="control-floor" aria-labelledby="control-heading">

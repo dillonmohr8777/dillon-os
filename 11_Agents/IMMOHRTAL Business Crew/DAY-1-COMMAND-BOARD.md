@@ -12,6 +12,9 @@ source_refs:
   - "[[12_Brain/05_Projects/2026-08-24 - IMMOHRTAL Marketing Solutions]]"
   - "automation/immohrtal-agency/ops/DAY-1-SCORECARD.json"
   - "[[06_Revenue/IMMOHRTAL/lead-intelligence/requalification/2026-08-25-batch-02]]"
+  - "[[06_Revenue/IMMOHRTAL/lead-intelligence/requalification/2026-08-25-batch-04]]"
+  - "[[06_Revenue/IMMOHRTAL/lead-intelligence/requalification/2026-08-25-batch-04-governance]]"
+  - "[[06_Revenue/IMMOHRTAL/lead-intelligence/requalification/2026-08-25-batch-04-independent-qa]]"
   - "[[06_Revenue/IMMOHRTAL/lead-intelligence/LEGACY-SHEET-RESOLUTION-2026-08-25]]"
   - "[[06_Revenue/IMMOHRTAL/lead-intelligence/PUBLIC-SOURCE-EXPANSION-2026-08-25]]"
   - "[[05_Offers/IMMOHRTAL/ACTIVATION-ACCOUNT-AUDIT-2026-08-25]]"
@@ -29,12 +32,13 @@ source_refs:
 - The old 25-record preparation run used a Sheet now classified
   `franchise_webinar_excluded`. Its 08:10 Windows task is disabled, its runner
   fails closed, and those records contribute zero active pipeline accounts.
-- Batches 01 through 03 reviewed 24 rows from the authorized 47-company
-  discovery source. Twenty identities are current, four are blocked, and all
-  24 remain `RESEARCH_ONLY / P00` with null scores and zero external actions.
-  Batch 03 cleared eight accounts against the current exact account-level
-  duplicate, relationship, routed Gmail, and suppression sources without
-  creating contact permission or outreach authority.
+- Batches 01 through 04 reviewed 32 rows from the authorized 47-company
+  discovery source. Twenty-eight identities are current, four are blocked, and
+  all 32 remain `RESEARCH_ONLY / P00` with null scores and zero external
+  actions. Batch 03 cleared eight accounts and Batch 04 cleared seven against
+  the current exact account-level duplicate, relationship, routed Gmail, and
+  suppression sources. ANDMORE is held by one protected-context parent-alias
+  match. None creates contact permission or outreach authority.
 - The seven formerly unresolved legacy Sheets were resolved through metadata
   and bounded first-row inspection. All seven are excluded, and zero additional
   authorized contact or prospect sources were found.
@@ -108,14 +112,14 @@ Every item below implements all 13 required fields in `CREW.json`.
 - `owner_role_id`: `demand_intelligence_lead`
 - `due_at`: `2026-08-25T11:30:00-04:00`
 - `status`: `VERIFIED`
-- `inputs`: `automation/immohrtal-agency/config/requalification-source.json`; `automation/immohrtal-agency/ops/LEGACY-SOURCE-ISOLATION-2026-08-25.md`; `06_Revenue/IMMOHRTAL/lead-intelligence/LEGACY-SHEET-RESOLUTION-2026-08-25.json`; all three requalification batches.
-- `exact_output`: Source-isolation receipt plus separate counts for 25 excluded legacy records, 24 authorized research records, seven excluded legacy Sheets, and five held Gmail drafts.
+- `inputs`: `automation/immohrtal-agency/config/requalification-source.json`; `automation/immohrtal-agency/ops/LEGACY-SOURCE-ISOLATION-2026-08-25.md`; `06_Revenue/IMMOHRTAL/lead-intelligence/LEGACY-SHEET-RESOLUTION-2026-08-25.json`; all four requalification batches.
+- `exact_output`: Source-isolation receipt plus separate counts for 25 excluded legacy records, 32 authorized research records, seven excluded legacy Sheets, and five held Gmail drafts.
 - `evidence_required`: JSON parse; task-state readback; source-ID match; company-count checks; no contact data; zero external actions; no commercial-outcome inference.
 - `artifact_locator`: `automation/immohrtal-agency/ops/LEGACY-SOURCE-ISOLATION-2026-08-25.md`
 - `checker_role_id`: `quality_risk_auditor`
-- `blocker`: None for source isolation. Batch 03 account-level exact-source governance is clear. Advancement remains blocked by weak discovery-source integrity, company-specific legal or category gates, decision ownership, and incomplete buyer-side qualification evidence.
-- `next_action`: `demand_intelligence_lead` opens rows 26 through 33 from the authorized source and keeps every incomplete record at P00.
-- `updated_at`: `2026-08-25T18:35:00-04:00`
+- `blocker`: None for source isolation. Batch 03 has eight bounded account-level clears. Batch 04 has seven clears and one protected-context hold. Advancement remains blocked by weak discovery-source integrity, company-specific legal or category gates, decision ownership, and incomplete buyer-side qualification evidence.
+- `next_action`: `demand_intelligence_lead` opens rows 34 through 41 from the authorized source and keeps every incomplete record at P00.
+- `updated_at`: `2026-08-25T19:01:00-04:00`
 
 ### DEM-002
 
@@ -127,11 +131,11 @@ Every item below implements all 13 required fields in `CREW.json`.
 - `inputs`: `automation/immohrtal-agency/config/requalification-source.json`; current public company sites; callable Exa company research; `immohrtal-marketing-site/research/outreach/segment-offer-matrix.md`.
 - `exact_output`: Up to eight public-safe company evidence packets, exact holds or disqualifications, and one wedge brief only when the evidence supports it.
 - `evidence_required`: Current URL, observed fact, captured date, unknowns, disqualifiers, and relevant service route for each record.
-- `artifact_locator`: `06_Revenue/IMMOHRTAL/lead-intelligence/requalification/2026-08-25-batch-03.md`
+- `artifact_locator`: `06_Revenue/IMMOHRTAL/lead-intelligence/requalification/2026-08-25-batch-04.md`
 - `checker_role_id`: `quality_risk_auditor`
-- `blocker`: None for the internal research-boundary artifact. Batches 01 through 03 produced 20 current identities and four identity blocks, but zero records have complete buyer-side qualification evidence and no wedge is proven.
-- `next_action`: `demand_intelligence_lead` opens rows 26 through 33 from the authorized source. Revenue advancement remains blocked until an independently reviewed record satisfies P10 and proves a wedge.
-- `updated_at`: `2026-08-25T18:35:00-04:00`
+- `blocker`: None for the Batch 04 internal research-boundary artifact. Batches 01 through 04 produced 28 current identities and four identity blocks, but zero records have complete buyer-side qualification evidence and no wedge is proven.
+- `next_action`: `demand_intelligence_lead` opens rows 34 through 41 from the authorized source. Revenue advancement remains blocked until an independently reviewed record satisfies P10 and proves a wedge.
+- `updated_at`: `2026-08-25T19:01:00-04:00`
 
 ### REV-001
 
@@ -239,11 +243,11 @@ Every item below implements all 13 required fields in `CREW.json`.
 - `inputs`: Immutable DEM-002 and REV-002 maker artifacts with their source locators.
 - `exact_output`: PASS or FAIL receipt for every submitted demand and opportunity record.
 - `evidence_required`: Source freshness, identity, disqualifiers, claims, offer fit, one-company isolation, and zero external action.
-- `artifact_locator`: `06_Revenue/IMMOHRTAL/lead-intelligence/requalification/2026-08-25-batch-03-independent-qa.md`
+- `artifact_locator`: `06_Revenue/IMMOHRTAL/lead-intelligence/requalification/2026-08-25-batch-04-independent-qa.md`
 - `checker_role_id`: `none`
-- `blocker`: None for Batch 03 internal research release. REV-002 remains blocked because no record satisfies P10 entry or proves a wedge.
+- `blocker`: None for Batch 04 internal research release. The fresh reviewer returned no findings and SHIP. REV-002 remains blocked because no record satisfies P10 entry or proves a wedge.
 - `next_action`: `quality_risk_auditor` reviews the next immutable maker batch and does not rewrite it.
-- `updated_at`: `2026-08-25T18:35:00-04:00`
+- `updated_at`: `2026-08-25T19:01:00-04:00`
 
 ### QA-002
 
@@ -273,9 +277,9 @@ Every item below implements all 13 required fields in `CREW.json`.
 - `evidence_required`: Independent SHIP verdict; passing parses and tests; exact artifact locators; automation scheduler truth state.
 - `artifact_locator`: `11_Agents/IMMOHRTAL Business Crew/daily/2026-08-25.md`
 - `checker_role_id`: `quality_risk_auditor`
-- `blocker`: The 08:30 Codex heartbeat is active and the legacy 08:10 task remains disabled. Batch 03 account governance is technically clear. Activation still requires a compliant business postal locator, an exact Zoho credential or OAuth locator plus sender approval, approval of the connected primary calendar and its public identity, and a separate Google booking-page Save approval.
-- `next_action`: `codex_marketing_chief` preserves the no-send boundary, opens the next governed company batch, and requests only the exact postal, sender, calendar, and later public Save inputs documented in `ACTIVATION-BLOCKER-CLEARANCE-2026-08-25.md`.
-- `updated_at`: `2026-08-25T18:35:00-04:00`
+- `blocker`: The 08:30 Codex heartbeat is active and the legacy 08:10 task remains disabled. Batch 03 has eight bounded account-level clears. Batch 04 has seven clears and one protected-context hold. Activation still requires a compliant business postal locator, an exact Zoho credential or OAuth locator plus sender approval, approval of the connected primary calendar and its public identity, and a separate Google booking-page Save approval.
+- `next_action`: `codex_marketing_chief` preserves the no-send boundary, opens rows 34 through 41 as the next governed company batch, reconciles the ANDMORE protected-context hold, and requests only the exact postal, sender, calendar, and later public Save inputs documented in `ACTIVATION-BLOCKER-CLEARANCE-2026-08-25.md`.
+- `updated_at`: `2026-08-25T19:01:00-04:00`
 
 ## Required Day 1 closeout counts
 
@@ -285,11 +289,12 @@ Report each separately, even when zero:
 |---|---:|
 | Active prepared records from the legacy automation run | 0 |
 | Legacy prepared records excluded from canonical intake | 25 |
-| Authorized company rows researched today | 24 |
-| Current identities confirmed | 20 |
+| Authorized company rows researched today | 32 |
+| Current identities confirmed | 28 |
 | Identity blocks recorded | 4 |
-| Authorized source rows remaining | 23 |
-| Batch 03 accounts clear in current exact account-level governance sources | 8 |
+| Authorized source rows remaining | 15 |
+| Batch 03 and 04 accounts clear in current exact account-level governance sources | 15 |
+| Batch 04 accounts held by a current exact governance source | 1 |
 | Qualified accounts from today's batch | 0 |
 | Priority outreach rows currently staged | 5 |
 | Prospect or client-acquisition messages sent | 0 |
@@ -303,7 +308,7 @@ Report each separately, even when zero:
 | New hires, contractors, software, data, domains, or mailboxes purchased | 0 |
 
 The five priority rows remain draft-only. The 25-record run is historical
-evidence from an excluded source and is not a preparation queue. All 24
+evidence from an excluded source and is not a preparation queue. All 32
 authorized research records remain held at P00 and are not qualified accounts.
 
 ## Day 1 source map
@@ -316,6 +321,9 @@ authorized research records remain held at P00 and are not qualified accounts.
 | `06_Revenue/IMMOHRTAL/lead-intelligence/requalification/2026-08-25-batch-03.md` | Combined Batch 03 company evidence, seven current identities, one block, and zero external actions |
 | `06_Revenue/IMMOHRTAL/lead-intelligence/requalification/2026-08-25-batch-03-governance.md` | Current exact account-level duplicate, relationship, routed Gmail, and suppression disposition for all eight Batch 03 accounts |
 | `06_Revenue/IMMOHRTAL/lead-intelligence/requalification/2026-08-25-batch-03-independent-qa.md` | Independent SHIP receipt for the Batch 03 internal research boundary and zero-action state |
+| `06_Revenue/IMMOHRTAL/lead-intelligence/requalification/2026-08-25-batch-04.md` | Combined Batch 04 company evidence, eight current identities, zero qualified accounts, and zero external actions |
+| `06_Revenue/IMMOHRTAL/lead-intelligence/requalification/2026-08-25-batch-04-governance.md` | Seven bounded current exact-source clears and one protected-context ANDMORE hold |
+| `06_Revenue/IMMOHRTAL/lead-intelligence/requalification/2026-08-25-batch-04-independent-qa.md` | Independent SHIP receipt for the Batch 04 internal research boundary and zero-action state |
 | `06_Revenue/IMMOHRTAL/lead-intelligence/ACCOUNT-SUPPRESSION-REGISTER.md` | Canonical account-level suppression contract and current zero-entry truth boundary |
 | `06_Revenue/IMMOHRTAL/lead-intelligence/LEGACY-SHEET-RESOLUTION-2026-08-25.md` | Resolution and exclusion of the seven formerly unresolved legacy Sheets |
 | `06_Revenue/IMMOHRTAL/lead-intelligence/PUBLIC-SOURCE-EXPANSION-2026-08-25.md` | Governed public-company source lanes, zero-lead expansion receipt, and activation holds |

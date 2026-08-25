@@ -1,0 +1,166 @@
+{
+  "schema_version": "1.0.0",
+  "workflow_id": "IMMOHRTAL-DAILY-20260825",
+  "step_id": "LEADS-05",
+  "batch_id": "2026-08-25-batch-04",
+  "status": "complete_internal_research_hold",
+  "observed_at": "2026-08-25T22:55:12.504Z",
+  "freshness_review_due": "2026-09-08",
+  "scope": {
+    "source_tab": "Sheet1",
+    "source_rows_read": "26 through 33",
+    "source_row_count": 8,
+    "read_only": true,
+    "contact_discovery_performed": false,
+    "sheet_changed": false,
+    "external_actions": 0
+  },
+  "parts": [
+    {
+      "step_id": "LEADS-05A",
+      "markdown": "2026-08-25-batch-04-a.md",
+      "json": "2026-08-25-batch-04-a.json",
+      "source_rows": "26 through 29"
+    },
+    {
+      "step_id": "LEADS-05B",
+      "markdown": "2026-08-25-batch-04-b.md",
+      "json": "2026-08-25-batch-04-b.json",
+      "source_rows": "30 through 33"
+    }
+  ],
+  "governance_receipt": {
+    "markdown": "2026-08-25-batch-04-governance.md",
+    "json": "2026-08-25-batch-04-governance.json",
+    "expires_at": "2026-08-26T22:55:12.504Z",
+    "account_level_clear_current_exact_sources": 7,
+    "account_level_held_current_exact_sources": 1,
+    "contact_level_suppression_state": "not_applicable_contact_discovery_prohibited",
+    "contact_discovery_authorized": false,
+    "outreach_authorized": false
+  },
+  "counts": {
+    "input_records": 8,
+    "output_records": 8,
+    "identity_confirmed_current": 8,
+    "identity_blocked": 0,
+    "account_governance_clear_current_exact_sources": 7,
+    "account_governance_held_current_exact_sources": 1,
+    "qualification_scores_complete": 0,
+    "qualification_scores_null": 8,
+    "qualified_accounts": 0,
+    "records_in_research_only": 8,
+    "records_held_by_hard_gates": 8,
+    "personal_records_persisted": 0,
+    "drafts_created": 0,
+    "messages_sent": 0,
+    "calendar_events_created": 0,
+    "bookings_created": 0,
+    "crm_writes": 0,
+    "external_actions": 0
+  },
+  "records": [
+    {
+      "source_row_rank": 25,
+      "company_name": "Lennar",
+      "canonical_domain": "lennar.com",
+      "identity_state": "confirmed_current",
+      "account_governance_state": "clear_current_exact_sources",
+      "primary_hold": "regulated_real_estate_and_financial_services_category_plus_enterprise_procurement",
+      "qualification_score": null,
+      "lifecycle": "RESEARCH_ONLY",
+      "stage": "P00_ACCOUNT_RESEARCH"
+    },
+    {
+      "source_row_rank": 26,
+      "company_name": "Luminate Bank",
+      "canonical_domain": "luminate.bank",
+      "identity_state": "confirmed_current_with_successor_brand",
+      "account_governance_state": "clear_current_exact_sources",
+      "primary_hold": "successor_brand_regulated_financial_services_category_and_enterprise_procurement",
+      "qualification_score": null,
+      "lifecycle": "RESEARCH_ONLY",
+      "stage": "P00_ACCOUNT_RESEARCH"
+    },
+    {
+      "source_row_rank": 27,
+      "company_name": "TradeWheel.com",
+      "canonical_domain": "tradewheel.com",
+      "identity_state": "confirmed_current_with_legal_entity",
+      "account_governance_state": "clear_current_exact_sources",
+      "primary_hold": "direct_competitive_overlap_and_cross_border_marketplace_compliance",
+      "qualification_score": null,
+      "lifecycle": "RESEARCH_ONLY",
+      "stage": "P00_ACCOUNT_RESEARCH"
+    },
+    {
+      "source_row_rank": 28,
+      "company_name": "PGS Gold & Coin",
+      "canonical_domain": "pgsgoldandcoin.com",
+      "identity_state": "confirmed_current_with_brand_domain_transition_and_legal_entity_conflict",
+      "account_governance_state": "clear_current_exact_sources",
+      "primary_hold": "legal_entity_conflict_precious_metals_category_and_transaction_compliance",
+      "qualification_score": null,
+      "lifecycle": "RESEARCH_ONLY",
+      "stage": "P00_ACCOUNT_RESEARCH"
+    },
+    {
+      "source_row_rank": 29,
+      "company_name": "ANDMORE",
+      "canonical_domain": "andmore.com",
+      "identity_state": "confirmed_current_with_parent_and_rebrand_chain",
+      "account_governance_state": "held",
+      "primary_hold": "confirmed_parent_alias_exact_match_in_protected_job_search_context_plus_parent_procurement",
+      "qualification_score": null,
+      "lifecycle": "RESEARCH_ONLY",
+      "stage": "P00_ACCOUNT_RESEARCH"
+    },
+    {
+      "source_row_rank": 30,
+      "company_name": "Registria",
+      "canonical_domain": "registria.com",
+      "identity_state": "confirmed_current",
+      "account_governance_state": "clear_current_exact_sources",
+      "primary_hold": "legal_entity_ownership_privacy_security_and_enterprise_procurement",
+      "qualification_score": null,
+      "lifecycle": "RESEARCH_ONLY",
+      "stage": "P00_ACCOUNT_RESEARCH"
+    },
+    {
+      "source_row_rank": 31,
+      "company_name": "The Federal Savings Bank",
+      "canonical_domain": "thefederalsavingsbank.com",
+      "identity_state": "confirmed_current_with_regulatory_hold",
+      "account_governance_state": "clear_current_exact_sources",
+      "primary_hold": "current_occ_consent_order_and_regulated_financial_services_category",
+      "qualification_score": null,
+      "lifecycle": "RESEARCH_ONLY",
+      "stage": "P00_ACCOUNT_RESEARCH"
+    },
+    {
+      "source_row_rank": 32,
+      "company_name": "Slashdot Media",
+      "canonical_domain": "slashdotmedia.com",
+      "identity_state": "confirmed_current_with_direct_competitive_overlap_hold",
+      "account_governance_state": "clear_current_exact_sources",
+      "primary_hold": "direct_competitive_overlap_and_privacy_data_category_review",
+      "qualification_score": null,
+      "lifecycle": "RESEARCH_ONLY",
+      "stage": "P00_ACCOUNT_RESEARCH"
+    }
+  ],
+  "batch_blockers": [
+    "The discovery source permits company research only and reports weak link-writable integrity.",
+    "ANDMORE has a current exact protected-context match through its confirmed Blackstone parent alias and remains held pending reconciliation.",
+    "Competitive, category, legal, regulatory, cross-border, privacy, procurement, and exact-entity gates remain where recorded.",
+    "No account has a verified commercial problem, decision owner, scope, safe access, budget, timing, capacity, evidence culture, or no-guarantee acceptance.",
+    "Contact discovery, drafting, sending, connecting, calendar mutation, booking, CRM writes, and account changes remain disabled."
+  ],
+  "validation": {
+    "part_json_parse": "passed",
+    "governance_receipt": "passed_seven_clear_one_held_current_exact_sources",
+    "combined_json_parse": "passed",
+    "pii_scan": "passed_no_personal_contact_values",
+    "external_action_review": "passed_zero_external_actions"
+  }
+}

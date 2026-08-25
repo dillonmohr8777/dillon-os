@@ -18,7 +18,8 @@ tags:
 # IMMOHRTAL Account Suppression Register
 
 Related: [[06_Revenue/IMMOHRTAL/lead-intelligence/SOURCE-AUDIT-2026-08-25]];
-[[06_Revenue/IMMOHRTAL/lead-intelligence/requalification/2026-08-25-batch-03-governance]]
+[[06_Revenue/IMMOHRTAL/lead-intelligence/requalification/2026-08-25-batch-03-governance]];
+[[06_Revenue/IMMOHRTAL/lead-intelligence/requalification/2026-08-25-batch-04-governance]]
 
 **Current state:** active account-level register with zero entries as of
 2026-08-25 18:12 ET.
@@ -35,8 +36,9 @@ does not prove contact consent, contact permission, or the global absence of an
 opt out.
 
 The excluded legacy runtime suppression snapshot was not imported. Batch 03
-company, domain, parent, and rebrand aliases were checked against it as an
-additional conservative safety signal and produced zero exact matches.
+and Batch 04 company, domain, parent, and rebrand aliases were checked against
+it as an additional conservative safety signal and produced zero exact
+matches.
 
 The machine-readable register is
 `06_Revenue/IMMOHRTAL/lead-intelligence/ACCOUNT-SUPPRESSION-REGISTER.json`.

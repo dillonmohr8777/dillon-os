@@ -1,0 +1,623 @@
+{
+  "schema_version": "1.0.0",
+  "report_type": "immohrtal_office_daily_state",
+  "workflow_id": "IMMOHRTAL-DAY1-20260825",
+  "business": "IMMOHRTAL Marketing Solutions",
+  "owner": "Dillon Mohr",
+  "orchestrator": "Codex Marketing Chief",
+  "as_of": "2026-08-25T23:06:30.977Z",
+  "date_et": "2026-08-25",
+  "timezone": "America/New_York",
+  "report_mode": "both",
+  "dry_run": true,
+  "office_lifecycle": {
+    "build_state": "BUILT",
+    "configuration_state": "CONFIGURED",
+    "current_state": "CONFIGURED_WITH_RECORDED_BLOCKERS",
+    "current_invocation_state": "COMPLETED_LOCAL_DRY_RUN",
+    "background_runtime_state": "NOT_VERIFIED_RUNNING",
+    "schedule_state": "NOT_INSTALLED_OR_CHANGED_BY_THIS_RUNNER",
+    "codex_heartbeat_state": "ACTIVE",
+    "codex_heartbeat_id": "immohrtal-daily-business-clock-in",
+    "codex_heartbeat_cadence": "daily at 08:30 America/New_York",
+    "codex_heartbeat_verified_at": "2026-08-25T16:24:08-04:00",
+    "codex_heartbeat_truth": "The active Codex heartbeat can wake the governed operating loop. It does not prove that all five seats run continuously between wakeups.",
+    "truth": "This receipt proves one local report invocation. It does not prove persistent agents, a background service, or a scheduled task."
+  },
+  "roster": [
+    {
+      "role_id": "operations_finance_controller",
+      "title": "Operations and Finance Controller",
+      "kind": "maker",
+      "reports_to": "Codex Marketing Chief",
+      "coverage": [
+        "company operations",
+        "finance and administration",
+        "capacity",
+        "approval control"
+      ],
+      "work_state": "READY_FOR_REVIEW",
+      "board_assignments": [
+        {
+          "item_id": "OPS-001",
+          "status": "VERIFIED",
+          "due_at": "2026-08-25T10:00:00-04:00",
+          "blocker": "None for the internal roster contract.",
+          "next_action": "operations_finance_controller uses the verified contract at the next clock-in."
+        },
+        {
+          "item_id": "OPS-002",
+          "status": "READY_FOR_REVIEW",
+          "due_at": "2026-08-25T12:00:00-04:00",
+          "blocker": "Legal seller, registrations, banking, payments, bookkeeping, contract, privacy, and insurance controls remain unresolved.",
+          "next_action": "operations_finance_controller assigns an owner and evidence requirement to every unresolved control without opening accounts or spending."
+        }
+      ],
+      "runtime_state": "NOT_OBSERVED",
+      "online_claim": false,
+      "runtime_truth": "Board state records work control and provides no active process or agent heartbeat evidence."
+    },
+    {
+      "role_id": "demand_intelligence_lead",
+      "title": "Demand Intelligence Lead",
+      "kind": "maker",
+      "reports_to": "Codex Marketing Chief",
+      "coverage": [
+        "market research",
+        "ideal-customer focus",
+        "demand evidence",
+        "prospect qualification research"
+      ],
+      "work_state": "VERIFIED_OR_DONE",
+      "board_assignments": [
+        {
+          "item_id": "DEM-001",
+          "status": "VERIFIED",
+          "due_at": "2026-08-25T11:30:00-04:00",
+          "blocker": "None for source isolation. Batch 03 has eight bounded account-level clears. Batch 04 has seven clears and one protected-context hold. Advancement remains blocked by weak discovery-source integrity, company-specific legal or category gates, decision ownership, and incomplete buyer-side qualification evidence.",
+          "next_action": "demand_intelligence_lead opens rows 34 through 41 from the authorized source and keeps every incomplete record at P00."
+        },
+        {
+          "item_id": "DEM-002",
+          "status": "VERIFIED",
+          "due_at": "2026-08-26 EOD ET",
+          "blocker": "None for the Batch 04 internal research-boundary artifact. Batches 01 through 04 produced 28 current identities and four identity blocks, but zero records have complete buyer-side qualification evidence and no wedge is proven.",
+          "next_action": "demand_intelligence_lead opens rows 34 through 41 from the authorized source. Revenue advancement remains blocked until an independently reviewed record satisfies P10 and proves a wedge."
+        }
+      ],
+      "runtime_state": "NOT_OBSERVED",
+      "online_claim": false,
+      "runtime_truth": "Board state records work control and provides no active process or agent heartbeat evidence."
+    },
+    {
+      "role_id": "revenue_pipeline_manager",
+      "title": "Revenue Pipeline Manager",
+      "kind": "maker",
+      "reports_to": "Codex Marketing Chief",
+      "coverage": [
+        "sales pipeline",
+        "qualification",
+        "offer routing",
+        "proposal preparation"
+      ],
+      "work_state": "HAS_BLOCKED_WORK",
+      "board_assignments": [
+        {
+          "item_id": "REV-001",
+          "status": "READY_FOR_REVIEW",
+          "due_at": "2026-08-25T13:30:00-04:00",
+          "blocker": "Market-wedge selection remains pending, so no offer is yet recommended to a specific account.",
+          "next_action": "revenue_pipeline_manager maps a future independently QA-passed wedge packet to the smallest valid offer. No current account has proven a wedge."
+        },
+        {
+          "item_id": "REV-002",
+          "status": "BLOCKED",
+          "due_at": "2026-08-26 EOD ET",
+          "blocker": "No independently QA-passed wedge packet exists, and no current record satisfies P10 entry.",
+          "next_action": "revenue_pipeline_manager waits for a future independently QA-passed wedge packet and does not create messages, provider drafts, or CRM records."
+        },
+        {
+          "item_id": "REV-003",
+          "status": "VERIFIED",
+          "due_at": "2026-08-25T18:15:00-04:00",
+          "blocker": "Suppression, duplicate, client-conflict, decision-owner, budget, and timing checks remain pending; records cannot advance beyond qualification pending.",
+          "next_action": "revenue_pipeline_manager reconciles the five records daily while demand_intelligence_lead completes current evidence and governance checks."
+        }
+      ],
+      "runtime_state": "NOT_OBSERVED",
+      "online_claim": false,
+      "runtime_truth": "Board state records work control and provides no active process or agent heartbeat evidence."
+    },
+    {
+      "role_id": "delivery_client_success_lead",
+      "title": "Delivery and Client Success Lead",
+      "kind": "maker",
+      "reports_to": "Codex Marketing Chief",
+      "coverage": [
+        "delivery",
+        "scope control",
+        "acceptance",
+        "client success",
+        "capacity readiness"
+      ],
+      "work_state": "HAS_BLOCKED_WORK",
+      "board_assignments": [
+        {
+          "item_id": "DEL-001",
+          "status": "READY_FOR_REVIEW",
+          "due_at": "2026-08-25T12:30:00-04:00",
+          "blocker": "None for internal use; any public claim requires a current live recheck.",
+          "next_action": "delivery_client_success_lead reuses only the bounded proof statement in future internal opportunity packets."
+        },
+        {
+          "item_id": "DEL-002",
+          "status": "READY_FOR_REVIEW",
+          "due_at": "2026-08-25T14:30:00-04:00",
+          "blocker": "Real booked capacity is zero and no customer has passed the delivery gate.",
+          "next_action": "delivery_client_success_lead maintains the zero-active-engagement view until a verified signed, funded, intake-ready project exists."
+        },
+        {
+          "item_id": "DEL-003",
+          "status": "BLOCKED",
+          "due_at": "2026-08-25T16:00:00-04:00",
+          "blocker": "No verified active IMMOHRTAL customer obligation is recorded in the sources reviewed today.",
+          "next_action": "delivery_client_success_lead leaves active engagements at zero until a canonical current record exists."
+        }
+      ],
+      "runtime_state": "NOT_OBSERVED",
+      "online_claim": false,
+      "runtime_truth": "Board state records work control and provides no active process or agent heartbeat evidence."
+    },
+    {
+      "role_id": "quality_risk_auditor",
+      "title": "Independent Quality and Risk Auditor",
+      "kind": "checker",
+      "reports_to": "Codex Marketing Chief",
+      "coverage": [
+        "evidence",
+        "claims",
+        "routing",
+        "privacy",
+        "policy",
+        "release control"
+      ],
+      "work_state": "VERIFIED_OR_DONE",
+      "board_assignments": [
+        {
+          "item_id": "QA-001",
+          "status": "DONE",
+          "due_at": "2026-08-26 EOD ET",
+          "blocker": "None for Batch 04 internal research release. The fresh reviewer returned no findings and SHIP. REV-002 remains blocked because no record satisfies P10 entry or proves a wedge.",
+          "next_action": "quality_risk_auditor reviews the next immutable maker batch and does not rewrite it."
+        },
+        {
+          "item_id": "QA-002",
+          "status": "DONE",
+          "due_at": "2026-08-25T17:30:00-04:00",
+          "blocker": "None; the recheck passed the crew, board, SOP, CRM, tests, and diff checks.",
+          "next_action": "quality_risk_auditor audits the next immutable revenue packet before any stage advancement."
+        }
+      ],
+      "runtime_state": "NOT_OBSERVED",
+      "online_claim": false,
+      "runtime_truth": "Board state records work control and provides no active process or agent heartbeat evidence."
+    }
+  ],
+  "responsibility_authority": {
+    "internal_allowed": [
+      "read in-scope local files and public evidence",
+      "research",
+      "analyze",
+      "draft local artifacts",
+      "test local artifacts",
+      "update an assigned internal board item",
+      "prepare an approval preview"
+    ],
+    "prohibited_without_separate_exact_authority": [
+      "send or post any message",
+      "create or modify a provider-side email draft",
+      "publish or deploy",
+      "spend or purchase",
+      "hire or contract",
+      "accept terms or sign",
+      "mutate a CRM or client account",
+      "change authentication, DNS, mailbox, or account settings",
+      "start a scheduled or external runtime"
+    ],
+    "legal_employee_claim": false,
+    "company_binding_authority": false,
+    "external_runtime_authority": false
+  },
+  "board": {
+    "total_items": 13,
+    "active_items": 6,
+    "status_counts": {
+      "INBOX": 0,
+      "TRIAGED": 0,
+      "ASSIGNED": 0,
+      "IN_PROGRESS": 0,
+      "READY_FOR_REVIEW": 4,
+      "VERIFIED": 4,
+      "DONE": 3,
+      "BLOCKED": 2,
+      "WAITING_APPROVAL": 0,
+      "FAILED_QA": 0,
+      "DEFERRED": 0,
+      "CANCELLED": 0
+    },
+    "blocking_items": [
+      {
+        "item_id": "REV-002",
+        "owner_role_id": "revenue_pipeline_manager",
+        "status": "BLOCKED",
+        "blocker": "No independently QA-passed wedge packet exists, and no current record satisfies P10 entry.",
+        "next_action": "revenue_pipeline_manager waits for a future independently QA-passed wedge packet and does not create messages, provider drafts, or CRM records."
+      },
+      {
+        "item_id": "DEL-003",
+        "owner_role_id": "delivery_client_success_lead",
+        "status": "BLOCKED",
+        "blocker": "No verified active IMMOHRTAL customer obligation is recorded in the sources reviewed today.",
+        "next_action": "delivery_client_success_lead leaves active engagements at zero until a canonical current record exists."
+      }
+    ],
+    "completed_or_verified_items": [
+      {
+        "item_id": "OPS-001",
+        "status": "VERIFIED",
+        "artifact_locator": "11_Agents/IMMOHRTAL Business Crew/CREW.json"
+      },
+      {
+        "item_id": "DEM-001",
+        "status": "VERIFIED",
+        "artifact_locator": "automation/immohrtal-agency/ops/LEGACY-SOURCE-ISOLATION-2026-08-25.md"
+      },
+      {
+        "item_id": "DEM-002",
+        "status": "VERIFIED",
+        "artifact_locator": "06_Revenue/IMMOHRTAL/lead-intelligence/requalification/2026-08-25-batch-04.md"
+      },
+      {
+        "item_id": "REV-003",
+        "status": "VERIFIED",
+        "artifact_locator": "06_Revenue/IMMOHRTAL/"
+      },
+      {
+        "item_id": "QA-001",
+        "status": "DONE",
+        "artifact_locator": "06_Revenue/IMMOHRTAL/lead-intelligence/requalification/2026-08-25-batch-04-independent-qa.md"
+      },
+      {
+        "item_id": "QA-002",
+        "status": "DONE",
+        "artifact_locator": "Codex independent-review receipt dated 2026-08-25; verdict SHIP"
+      },
+      {
+        "item_id": "CHIEF-001",
+        "status": "DONE",
+        "artifact_locator": "11_Agents/IMMOHRTAL Business Crew/daily/2026-08-25.md"
+      }
+    ]
+  },
+  "standup": {
+    "included": true,
+    "objective": "Stand up a real, repeatable company operating system inside Codex and convert the website launch, 25-candidate preparation queue, five-row priority batch, and offer system into one truthful revenue-ready internal pipeline without any external action.",
+    "required_truth": [
+      "offer and segment or unknown",
+      "source observation times",
+      "assigned work and exact ownership",
+      "blocked work and approvals",
+      "capacity",
+      "commercial zero baseline"
+    ],
+    "assignments": [
+      {
+        "role_id": "operations_finance_controller",
+        "work_state": "READY_FOR_REVIEW",
+        "item_ids": [
+          "OPS-001",
+          "OPS-002"
+        ],
+        "runtime_state": "NOT_OBSERVED"
+      },
+      {
+        "role_id": "demand_intelligence_lead",
+        "work_state": "VERIFIED_OR_DONE",
+        "item_ids": [
+          "DEM-001",
+          "DEM-002"
+        ],
+        "runtime_state": "NOT_OBSERVED"
+      },
+      {
+        "role_id": "revenue_pipeline_manager",
+        "work_state": "HAS_BLOCKED_WORK",
+        "item_ids": [
+          "REV-001",
+          "REV-002",
+          "REV-003"
+        ],
+        "runtime_state": "NOT_OBSERVED"
+      },
+      {
+        "role_id": "delivery_client_success_lead",
+        "work_state": "HAS_BLOCKED_WORK",
+        "item_ids": [
+          "DEL-001",
+          "DEL-002",
+          "DEL-003"
+        ],
+        "runtime_state": "NOT_OBSERVED"
+      },
+      {
+        "role_id": "quality_risk_auditor",
+        "work_state": "VERIFIED_OR_DONE",
+        "item_ids": [
+          "QA-001",
+          "QA-002"
+        ],
+        "runtime_state": "NOT_OBSERVED"
+      }
+    ],
+    "blockers": [
+      {
+        "item_id": "REV-002",
+        "owner_role_id": "revenue_pipeline_manager",
+        "status": "BLOCKED",
+        "blocker": "No independently QA-passed wedge packet exists, and no current record satisfies P10 entry.",
+        "next_action": "revenue_pipeline_manager waits for a future independently QA-passed wedge packet and does not create messages, provider drafts, or CRM records."
+      },
+      {
+        "item_id": "DEL-003",
+        "owner_role_id": "delivery_client_success_lead",
+        "status": "BLOCKED",
+        "blocker": "No verified active IMMOHRTAL customer obligation is recorded in the sources reviewed today.",
+        "next_action": "delivery_client_success_lead leaves active engagements at zero until a canonical current record exists."
+      }
+    ],
+    "commercial_truth": {
+      "prepared_candidate_records": 0,
+      "legacy_prepared_candidate_records_excluded": 25,
+      "authorized_company_source_rows": 47,
+      "researched_today": 32,
+      "identity_confirmed_today": 28,
+      "identity_blocked_today": 4,
+      "qualified_today": 0,
+      "priority_draft_only_rows": 5,
+      "gmail_drafts_created": 5,
+      "gmail_drafts_directly_read_back": 5,
+      "gmail_drafts_compliance_blocked": 5,
+      "owner_status_updates_sent": 1,
+      "messages_sent": 0,
+      "replies": 0,
+      "meetings_booked": 0,
+      "proposals_sent": 0,
+      "closed_won": 0,
+      "active_clients": 0,
+      "verified_new_revenue_usd": 0,
+      "new_hires_or_purchases": 0,
+      "truth_note": "The old 25-record run used an excluded source and contributes zero active pipeline records. The authorized source has 47 company rows; 32 were researched today, 28 identities were current, four were blocked, 15 remain unreviewed, and zero qualified. Batch 03 cleared eight accounts and Batch 04 cleared seven against current exact account-level duplicate, relationship, routed Gmail, and suppression sources. ANDMORE is held by one protected-context parent-alias match. No result authorizes contact discovery. Five exact prospect Gmail drafts remain unsent under compliance hold. One separately authorized owner status update was sent to Dillon and is not prospect outreach or a commercial outcome."
+    }
+  },
+  "end_of_day": {
+    "included": true,
+    "board_status_counts": {
+      "INBOX": 0,
+      "TRIAGED": 0,
+      "ASSIGNED": 0,
+      "IN_PROGRESS": 0,
+      "READY_FOR_REVIEW": 4,
+      "VERIFIED": 4,
+      "DONE": 3,
+      "BLOCKED": 2,
+      "WAITING_APPROVAL": 0,
+      "FAILED_QA": 0,
+      "DEFERRED": 0,
+      "CANCELLED": 0
+    },
+    "completed_or_verified_items": [
+      {
+        "item_id": "OPS-001",
+        "status": "VERIFIED",
+        "artifact_locator": "11_Agents/IMMOHRTAL Business Crew/CREW.json"
+      },
+      {
+        "item_id": "DEM-001",
+        "status": "VERIFIED",
+        "artifact_locator": "automation/immohrtal-agency/ops/LEGACY-SOURCE-ISOLATION-2026-08-25.md"
+      },
+      {
+        "item_id": "DEM-002",
+        "status": "VERIFIED",
+        "artifact_locator": "06_Revenue/IMMOHRTAL/lead-intelligence/requalification/2026-08-25-batch-04.md"
+      },
+      {
+        "item_id": "REV-003",
+        "status": "VERIFIED",
+        "artifact_locator": "06_Revenue/IMMOHRTAL/"
+      },
+      {
+        "item_id": "QA-001",
+        "status": "DONE",
+        "artifact_locator": "06_Revenue/IMMOHRTAL/lead-intelligence/requalification/2026-08-25-batch-04-independent-qa.md"
+      },
+      {
+        "item_id": "QA-002",
+        "status": "DONE",
+        "artifact_locator": "Codex independent-review receipt dated 2026-08-25; verdict SHIP"
+      },
+      {
+        "item_id": "CHIEF-001",
+        "status": "DONE",
+        "artifact_locator": "11_Agents/IMMOHRTAL Business Crew/daily/2026-08-25.md"
+      }
+    ],
+    "quality_receipts": [
+      {
+        "item_id": "QA-001",
+        "status": "DONE",
+        "blocker": "None for Batch 04 internal research release. The fresh reviewer returned no findings and SHIP. REV-002 remains blocked because no record satisfies P10 entry or proves a wedge."
+      },
+      {
+        "item_id": "QA-002",
+        "status": "DONE",
+        "blocker": "None; the recheck passed the crew, board, SOP, CRM, tests, and diff checks."
+      }
+    ],
+    "commercial_truth": {
+      "prepared_candidate_records": 0,
+      "legacy_prepared_candidate_records_excluded": 25,
+      "authorized_company_source_rows": 47,
+      "researched_today": 32,
+      "identity_confirmed_today": 28,
+      "identity_blocked_today": 4,
+      "qualified_today": 0,
+      "priority_draft_only_rows": 5,
+      "gmail_drafts_created": 5,
+      "gmail_drafts_directly_read_back": 5,
+      "gmail_drafts_compliance_blocked": 5,
+      "owner_status_updates_sent": 1,
+      "messages_sent": 0,
+      "replies": 0,
+      "meetings_booked": 0,
+      "proposals_sent": 0,
+      "closed_won": 0,
+      "active_clients": 0,
+      "verified_new_revenue_usd": 0,
+      "new_hires_or_purchases": 0,
+      "truth_note": "The old 25-record run used an excluded source and contributes zero active pipeline records. The authorized source has 47 company rows; 32 were researched today, 28 identities were current, four were blocked, 15 remain unreviewed, and zero qualified. Batch 03 cleared eight accounts and Batch 04 cleared seven against current exact account-level duplicate, relationship, routed Gmail, and suppression sources. ANDMORE is held by one protected-context parent-alias match. No result authorizes contact discovery. Five exact prospect Gmail drafts remain unsent under compliance hold. One separately authorized owner status update was sent to Dillon and is not prospect outreach or a commercial outcome."
+    },
+    "blockers": [
+      {
+        "item_id": "REV-002",
+        "owner_role_id": "revenue_pipeline_manager",
+        "status": "BLOCKED",
+        "blocker": "No independently QA-passed wedge packet exists, and no current record satisfies P10 entry.",
+        "next_action": "revenue_pipeline_manager waits for a future independently QA-passed wedge packet and does not create messages, provider drafts, or CRM records."
+      },
+      {
+        "item_id": "DEL-003",
+        "owner_role_id": "delivery_client_success_lead",
+        "status": "BLOCKED",
+        "blocker": "No verified active IMMOHRTAL customer obligation is recorded in the sources reviewed today.",
+        "next_action": "delivery_client_success_lead leaves active engagements at zero until a canonical current record exists."
+      }
+    ],
+    "next_actions": [
+      {
+        "owner_role_id": "revenue_pipeline_manager",
+        "item_id": "REV-002",
+        "next_action": "revenue_pipeline_manager waits for a future independently QA-passed wedge packet and does not create messages, provider drafts, or CRM records."
+      },
+      {
+        "owner_role_id": "delivery_client_success_lead",
+        "item_id": "DEL-003",
+        "next_action": "delivery_client_success_lead leaves active engagements at zero until a canonical current record exists."
+      }
+    ],
+    "process_correction": "Resolve exact blockers and collect required evidence before stage advancement."
+  },
+  "agency_run_evidence": {
+    "available": true,
+    "locator": "automation/immohrtal-agency/runs/20260825-081000/run-receipt.json",
+    "run_id": "20260825-081000",
+    "as_of": "2026-08-25T12:10:00.8266637Z",
+    "status": "complete",
+    "mode": "local_draft_only",
+    "counts": {
+      "total": 25,
+      "awaiting_approval": 25,
+      "suppressed": 0,
+      "duplicate": 0,
+      "blocked": 0
+    },
+    "evidence": {
+      "live_verified": 25,
+      "unavailable": 0
+    },
+    "approval": {
+      "required": true,
+      "granted": false,
+      "adapter_handoff_enabled": false
+    },
+    "external_actions": {
+      "gmail_drafts_created": 0,
+      "sent": 0,
+      "published": 0,
+      "spend_changes": 0,
+      "crm_writes": 0,
+      "credential_accesses": 0
+    },
+    "source_authority_state": "legacy_excluded_source",
+    "truth_state": "confirmed_historical_legacy_excluded_source",
+    "does_not_prove": "This historical receipt used an excluded source. It proves only that the old local run completed; it contributes zero active pipeline records and does not prove the five internal office seats are online."
+  },
+  "exceptions": [],
+  "external_actions_performed_by_report_loop": {
+    "messages_or_posts": 0,
+    "provider_side_drafts": 0,
+    "calendar_writes": 0,
+    "crm_or_account_writes": 0,
+    "publishing_or_deployment": 0,
+    "spend_or_purchase": 0,
+    "schedule_changes": 0,
+    "credential_accesses": 0
+  },
+  "privacy": {
+    "raw_communications_included": false,
+    "secrets_included": false,
+    "contact_rows_included": false,
+    "evidence_is_aggregate_or_locator_only": true
+  },
+  "source_evidence": [
+    {
+      "locator": "11_Agents/IMMOHRTAL Business Crew/CREW.json",
+      "kind": "machine_readable_roster",
+      "bytes": 7278,
+      "sha256": "1e7bfcb8bc9f1d27e05351ecd9cd2bac622a34d79fbc5717fea1afcb3ca1170c"
+    },
+    {
+      "locator": "11_Agents/IMMOHRTAL Business Crew/DAY-1-COMMAND-BOARD.md",
+      "kind": "command_board",
+      "bytes": 24061,
+      "sha256": "68b54afc0158bedd23dfde46ca79ed19914137f3f84203b74f394cb5a26ca94c"
+    },
+    {
+      "locator": "automation/immohrtal-agency/ops/DAY-1-SCORECARD.json",
+      "kind": "machine_readable_scorecard",
+      "bytes": 26609,
+      "sha256": "94b31f1efa9a2cd746322822fbbdfa8adfa8c146380d533b61bcf8786ce4e064"
+    },
+    {
+      "locator": "automation/immohrtal-agency/ops/lib/office-report.mjs",
+      "kind": "report_generator",
+      "bytes": 57827,
+      "sha256": "442f1f6cbfb9112d3aa96d55cd86a10f80e8f453a4265b7dbc984b9263e628f0"
+    },
+    {
+      "locator": "automation/immohrtal-agency/ops/run-office-report.mjs",
+      "kind": "report_cli",
+      "bytes": 3787,
+      "sha256": "92f110c61c7f723d6cf5e06ff99f88aa394a1bff0f40e6614509d6fb7444bae0"
+    },
+    {
+      "locator": "automation/immohrtal-agency/ops/Run-ImmohrtalOfficeDaily.ps1",
+      "kind": "powershell_entrypoint",
+      "bytes": 1364,
+      "sha256": "f2ab41f33fdb15d4d701eac83583eedc6e72f56ddfcc798ae8a8901324edd3ef"
+    },
+    {
+      "locator": "automation/immohrtal-agency/ops/office-daily.manifest.json",
+      "kind": "manifest_only_schedule_contract",
+      "bytes": 1983,
+      "sha256": "b63ae368629f838fa5033aad780e48d58cd407372265402ae0fec42e5a84adcf"
+    },
+    {
+      "locator": "automation/immohrtal-agency/runs/20260825-081000/run-receipt.json",
+      "kind": "agency_run_receipt",
+      "bytes": 2473,
+      "sha256": "8a5f70541a630626cd9cf2b449a9ccc2222963b2aed869f2a9f592cf62f3cddb"
+    }
+  ],
+  "input_fingerprint": "75f06e890786a27248e055b7ed3b98d0e95e13c36573055eb997e19984f46d99"
+}

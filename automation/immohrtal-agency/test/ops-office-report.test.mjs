@@ -37,8 +37,8 @@ test('office snapshot derives five truthful seat states from the real command bo
   assert.equal(snapshot.standup.commercial_truth.gmail_drafts_created, 5);
   assert.equal(snapshot.standup.commercial_truth.gmail_drafts_directly_read_back, 5);
   assert.equal(snapshot.standup.commercial_truth.gmail_drafts_compliance_blocked, 5);
-  assert.equal(snapshot.standup.commercial_truth.researched_today, 24);
-  assert.equal(snapshot.standup.commercial_truth.identity_confirmed_today, 20);
+  assert.equal(snapshot.standup.commercial_truth.researched_today, 32);
+  assert.equal(snapshot.standup.commercial_truth.identity_confirmed_today, 28);
   assert.equal(snapshot.standup.commercial_truth.identity_blocked_today, 4);
   assert.equal(snapshot.standup.commercial_truth.qualified_today, 0);
   assert.equal(snapshot.standup.commercial_truth.owner_status_updates_sent, 1);

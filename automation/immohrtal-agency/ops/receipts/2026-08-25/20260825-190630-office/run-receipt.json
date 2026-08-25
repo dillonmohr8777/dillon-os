@@ -1,0 +1,189 @@
+{
+  "schema_version": "1.0.0",
+  "receipt_type": "immohrtal_office_daily_report_run",
+  "run_id": "20260825-190630-office",
+  "workflow_id": "IMMOHRTAL-DAY1-20260825",
+  "as_of": "2026-08-25T23:06:30.977Z",
+  "date_et": "2026-08-25",
+  "mode": "both",
+  "dry_run": true,
+  "status": "complete",
+  "input_fingerprint": "75f06e890786a27248e055b7ed3b98d0e95e13c36573055eb997e19984f46d99",
+  "office_lifecycle": {
+    "build_state": "BUILT",
+    "configuration_state": "CONFIGURED",
+    "current_state": "CONFIGURED_WITH_RECORDED_BLOCKERS",
+    "current_invocation_state": "COMPLETED_LOCAL_DRY_RUN",
+    "background_runtime_state": "NOT_VERIFIED_RUNNING",
+    "schedule_state": "NOT_INSTALLED_OR_CHANGED_BY_THIS_RUNNER",
+    "codex_heartbeat_state": "ACTIVE",
+    "codex_heartbeat_id": "immohrtal-daily-business-clock-in",
+    "codex_heartbeat_cadence": "daily at 08:30 America/New_York",
+    "codex_heartbeat_verified_at": "2026-08-25T16:24:08-04:00",
+    "codex_heartbeat_truth": "The active Codex heartbeat can wake the governed operating loop. It does not prove that all five seats run continuously between wakeups.",
+    "truth": "This receipt proves one local report invocation. It does not prove persistent agents, a background service, or a scheduled task."
+  },
+  "source_evidence": [
+    {
+      "locator": "11_Agents/IMMOHRTAL Business Crew/CREW.json",
+      "kind": "machine_readable_roster",
+      "bytes": 7278,
+      "sha256": "1e7bfcb8bc9f1d27e05351ecd9cd2bac622a34d79fbc5717fea1afcb3ca1170c"
+    },
+    {
+      "locator": "11_Agents/IMMOHRTAL Business Crew/DAY-1-COMMAND-BOARD.md",
+      "kind": "command_board",
+      "bytes": 24061,
+      "sha256": "68b54afc0158bedd23dfde46ca79ed19914137f3f84203b74f394cb5a26ca94c"
+    },
+    {
+      "locator": "automation/immohrtal-agency/ops/DAY-1-SCORECARD.json",
+      "kind": "machine_readable_scorecard",
+      "bytes": 26609,
+      "sha256": "94b31f1efa9a2cd746322822fbbdfa8adfa8c146380d533b61bcf8786ce4e064"
+    },
+    {
+      "locator": "automation/immohrtal-agency/ops/lib/office-report.mjs",
+      "kind": "report_generator",
+      "bytes": 57827,
+      "sha256": "442f1f6cbfb9112d3aa96d55cd86a10f80e8f453a4265b7dbc984b9263e628f0"
+    },
+    {
+      "locator": "automation/immohrtal-agency/ops/run-office-report.mjs",
+      "kind": "report_cli",
+      "bytes": 3787,
+      "sha256": "92f110c61c7f723d6cf5e06ff99f88aa394a1bff0f40e6614509d6fb7444bae0"
+    },
+    {
+      "locator": "automation/immohrtal-agency/ops/Run-ImmohrtalOfficeDaily.ps1",
+      "kind": "powershell_entrypoint",
+      "bytes": 1364,
+      "sha256": "f2ab41f33fdb15d4d701eac83583eedc6e72f56ddfcc798ae8a8901324edd3ef"
+    },
+    {
+      "locator": "automation/immohrtal-agency/ops/office-daily.manifest.json",
+      "kind": "manifest_only_schedule_contract",
+      "bytes": 1983,
+      "sha256": "b63ae368629f838fa5033aad780e48d58cd407372265402ae0fec42e5a84adcf"
+    },
+    {
+      "locator": "automation/immohrtal-agency/runs/20260825-081000/run-receipt.json",
+      "kind": "agency_run_receipt",
+      "bytes": 2473,
+      "sha256": "8a5f70541a630626cd9cf2b449a9ccc2222963b2aed869f2a9f592cf62f3cddb"
+    }
+  ],
+  "artifacts": {
+    "office_report_json": "office-report.json",
+    "office_report_markdown": "office-report.md",
+    "office_dashboard_html": "office-dashboard.html"
+  },
+  "artifact_sha256": {
+    "office_report_json": "b79afe941e8d0c19b8284f0afdd7d3ab05dff0572514227f20f02c29218fb058",
+    "office_report_markdown": "9c85a7dd2118e6758363399cc2e13e60156e7cbd1450be32996a5a5a196b81e0",
+    "office_dashboard_html": "eaee9014498ffe82a51d411293b78e20b62caef023be85a0fb69899b4d19a803"
+  },
+  "board_summary": {
+    "total_items": 13,
+    "active_items": 6,
+    "blocking_items": 2,
+    "status_counts": {
+      "INBOX": 0,
+      "TRIAGED": 0,
+      "ASSIGNED": 0,
+      "IN_PROGRESS": 0,
+      "READY_FOR_REVIEW": 4,
+      "VERIFIED": 4,
+      "DONE": 3,
+      "BLOCKED": 2,
+      "WAITING_APPROVAL": 0,
+      "FAILED_QA": 0,
+      "DEFERRED": 0,
+      "CANCELLED": 0
+    }
+  },
+  "roster_summary": [
+    {
+      "role_id": "operations_finance_controller",
+      "work_state": "READY_FOR_REVIEW",
+      "runtime_state": "NOT_OBSERVED",
+      "online_claim": false
+    },
+    {
+      "role_id": "demand_intelligence_lead",
+      "work_state": "VERIFIED_OR_DONE",
+      "runtime_state": "NOT_OBSERVED",
+      "online_claim": false
+    },
+    {
+      "role_id": "revenue_pipeline_manager",
+      "work_state": "HAS_BLOCKED_WORK",
+      "runtime_state": "NOT_OBSERVED",
+      "online_claim": false
+    },
+    {
+      "role_id": "delivery_client_success_lead",
+      "work_state": "HAS_BLOCKED_WORK",
+      "runtime_state": "NOT_OBSERVED",
+      "online_claim": false
+    },
+    {
+      "role_id": "quality_risk_auditor",
+      "work_state": "VERIFIED_OR_DONE",
+      "runtime_state": "NOT_OBSERVED",
+      "online_claim": false
+    }
+  ],
+  "agency_run_evidence": {
+    "available": true,
+    "locator": "automation/immohrtal-agency/runs/20260825-081000/run-receipt.json",
+    "run_id": "20260825-081000",
+    "as_of": "2026-08-25T12:10:00.8266637Z",
+    "status": "complete",
+    "mode": "local_draft_only",
+    "counts": {
+      "total": 25,
+      "awaiting_approval": 25,
+      "suppressed": 0,
+      "duplicate": 0,
+      "blocked": 0
+    },
+    "evidence": {
+      "live_verified": 25,
+      "unavailable": 0
+    },
+    "approval": {
+      "required": true,
+      "granted": false,
+      "adapter_handoff_enabled": false
+    },
+    "external_actions": {
+      "gmail_drafts_created": 0,
+      "sent": 0,
+      "published": 0,
+      "spend_changes": 0,
+      "crm_writes": 0,
+      "credential_accesses": 0
+    },
+    "source_authority_state": "legacy_excluded_source",
+    "truth_state": "confirmed_historical_legacy_excluded_source",
+    "does_not_prove": "This historical receipt used an excluded source. It proves only that the old local run completed; it contributes zero active pipeline records and does not prove the five internal office seats are online."
+  },
+  "external_actions_performed": {
+    "messages_or_posts": 0,
+    "provider_side_drafts": 0,
+    "calendar_writes": 0,
+    "crm_or_account_writes": 0,
+    "publishing_or_deployment": 0,
+    "spend_or_purchase": 0,
+    "schedule_changes": 0,
+    "credential_accesses": 0
+  },
+  "privacy": {
+    "raw_communications_included": false,
+    "secrets_included": false,
+    "contact_rows_included": false,
+    "evidence_is_aggregate_or_locator_only": true
+  },
+  "truth": "Complete means this local report run wrote and hashed its artifacts. It does not mean the office is background-running or any external action occurred."
+}

@@ -34,7 +34,8 @@
     "legacy_runtime_suppressions_imported": false,
     "legacy_runtime_suppressions_used_for_safety_exact_match_check": true,
     "legacy_runtime_exact_matches_for_batch_03": 0,
-    "reason": "The prior franchise and webinar source is excluded from canonical intake. Its local suppression snapshot was checked only as an additional conservative safety signal and was not promoted into this register."
+    "legacy_runtime_exact_matches_for_batch_04": 0,
+    "reason": "The prior franchise and webinar source is excluded from canonical intake. Its local suppression snapshot was checked only as an additional conservative safety signal for Batches 03 and 04 and was not promoted into this register."
   },
   "truth_note": "This empty current register proves zero explicit account-level entries in this register at the observation time. It does not prove contact-level consent, contact permission, or global absence of an opt-out."
 }

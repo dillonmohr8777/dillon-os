@@ -53,6 +53,14 @@ runtime.
 - `lead-intelligence/requalification/2026-08-25-batch-03-independent-qa.md` —
   independent SHIP receipt for the internal research boundary, 36 passing
   scoped tests, zero personal-contact persistence, and zero external actions.
+- `lead-intelligence/requalification/2026-08-25-batch-04.json` — eight current
+  company records with brand, domain, legal, regulatory, procurement, and
+  competitive holds; zero qualified and zero external actions.
+- `lead-intelligence/requalification/2026-08-25-batch-04-governance.json` —
+  bounded six-source account governance receipt with seven current exact-source
+  clears and one protected-context parent-alias hold.
+- `lead-intelligence/requalification/2026-08-25-batch-04-independent-qa.md` —
+  fresh read-only independent receipt for the Batch 04 research boundary.
 - `lead-intelligence/ACCOUNT-SUPPRESSION-REGISTER.json` — canonical
   account-only suppression contract. Its current zero-entry state is not a
   claim of contact-level consent or global opt-out clearance.
@@ -87,14 +95,15 @@ because a public observation and a concept exist. Decision ownership, budget,
 timing, capacity, suppression, prior-touch, and client-conflict checks remain
 unresolved. No message copy or contact identifier is stored here.
 
-The 24 records in requalification batches 01 through 03 are a separate
-research backlog. Twenty identities are current and four are blocked. All remain
+The 32 records in requalification batches 01 through 04 are a separate
+research backlog. Twenty-eight identities are current and four are blocked. All remain
 `RESEARCH_ONLY` in `P00_ACCOUNT_RESEARCH`; they must not be appended to the
-five-record pipeline import until the documented P10 entry rules pass. Twenty-three
+five-record pipeline import until the documented P10 entry rules pass. Fifteen
 authorized rows remain unreviewed. The historical 25-record run used an
 excluded source and contributes zero active pipeline records. Verified active
-IMMOHRTAL clients remain zero. Batch 03's eight account-level exact-source
-clearances expire on 2026-08-26 and do not authorize contact discovery.
+IMMOHRTAL clients remain zero. Batch 03 has eight bounded account-level
+exact-source clears. Batch 04 has seven clears and one held ANDMORE record due
+to a protected-context parent-alias match. None authorizes contact discovery.
 
 ## Daily loop
 

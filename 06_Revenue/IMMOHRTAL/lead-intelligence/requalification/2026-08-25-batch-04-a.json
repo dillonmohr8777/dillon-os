@@ -1,0 +1,540 @@
+{
+  "schema_version": "1.0.0",
+  "workflow_id": "IMMOHRTAL-DAILY-20260825",
+  "step_id": "LEADS-05A",
+  "batch_id": "2026-08-25-batch-04-a",
+  "status": "complete_internal_research_hold",
+  "observed_at": "2026-08-25T22:47:59Z",
+  "observed_date": "2026-08-25",
+  "freshness_review_due": "2026-09-08",
+  "scope": {
+    "source_reference": "../SOURCE-AUDIT-2026-08-25.md#authorized-2023-b2b-source",
+    "source_tab": "Sheet1",
+    "source_rows_read": "26 through 29",
+    "source_row_count": 4,
+    "source_row_ranks": [
+      25,
+      26,
+      27,
+      28
+    ],
+    "read_only": true,
+    "sheet_changed": false,
+    "private_linkedin_session_used": false,
+    "contact_discovery_performed": false,
+    "drafts_created": 0,
+    "messages_sent": 0,
+    "connection_requests_created": 0,
+    "calendar_events_created": 0,
+    "bookings_created": 0,
+    "crm_writes": 0,
+    "account_changes": 0
+  },
+  "source_governance": {
+    "source_rights_state": "authorized_discovery_only",
+    "source_integrity_state": "weak_anyone_with_link_writer_permission_reported",
+    "contact_permission_state": "not_authorized",
+    "raw_sheet_rows_persisted": false,
+    "contact_data_persisted": false,
+    "person_data_persisted": false,
+    "message_data_persisted": false,
+    "private_identifiers_persisted": false,
+    "raw_payload_persisted": false
+  },
+  "method": {
+    "public_company_website": "The four supplied company domains were checked against current official first-party pages. Only reproducible company-level identity, canonical domain, ownership, rebrand, legal, regulatory, procurement, and public web conditions were retained.",
+    "official_corporate_and_legal_path": "Current official investor pages, company history and transition pages, company licensing pages, legal terms, content policies, and corporate policies were used only where current ownership, rebrand, legal entity, or regulatory state required reconciliation.",
+    "public_search_path": "Twelve bounded company-focused public search queries returned 86 source candidates across four company workstreams and three passes. Search results were treated as locators until reproduced on a first-party page.",
+    "linkedin_policy": "Only the supplied public Lennar company-page locator is stored. No personal profile, person name, private session, connection request, or message was used or retained. No company page is treated as proof of legal identity, authority, consent, or regulatory standing.",
+    "people_path": "Not run. Person research and contact discovery were prohibited.",
+    "duplicate_check": "The source audit reports no duplicate groups in the authorized Sheet. Exact supplied and current company, domain, predecessor, successor, and legal-entity tokens produced zero matches across the other current requalification artifacts. These four records are distinct by normalized current company identity and canonical domain.",
+    "conflict_check": "Exact supplied and current company names, domains, and confirmed predecessor, successor, or legal-entity aliases produced zero matches in the canonical client registry and canonical work queue. Employer, job, partner, vendor, prior-touch, competitive, parent-portfolio, and separate-venture reconciliation remains incomplete, so relationship conflict stays pending and fail closed.",
+    "suppression_check": "The same scoped account aliases produced zero current exact matches in the account suppression register, but no permissioned contact record was available. Contact-level suppression remains not applicable because contact discovery is prohibited, and broader suppression remains pending and fail closed.",
+    "score_policy": "The 0 to 16 qualification score remains null unless all eight dimensions and every hard gate have evidence. No record met that condition. A current identity pass does not authorize qualification, contact discovery, or outreach.",
+    "external_action_policy": "Research only. No contact discovery, message, draft, connection, calendar event, booking, CRM write, account change, or other external action was performed."
+  },
+  "counts": {
+    "input_records": 4,
+    "output_records": 4,
+    "unique_company_names": 4,
+    "unique_canonical_domains": 4,
+    "identity_confirmed_current": 4,
+    "identity_blocked": 0,
+    "current_public_domain_with_identity_content": 4,
+    "confirmed_brand_domain_or_corporate_transitions": 2,
+    "conflicting_first_party_legal_entity_records": 1,
+    "regulated_legal_or_cross_border_category_holds": 4,
+    "direct_competitive_service_overlap_holds": 1,
+    "procurement_or_contracting_route_pending": 4,
+    "public_company_search_queries": 12,
+    "search_results_reviewed": 86,
+    "people_queries": 0,
+    "personal_records_persisted": 0,
+    "duplicate_clear_current_sources": 4,
+    "exact_client_registry_matches": 0,
+    "exact_canonical_work_queue_matches": 0,
+    "exact_account_suppression_register_matches": 0,
+    "relationship_conflict_clear": 0,
+    "suppression_clear": 0,
+    "qualification_scores_complete": 0,
+    "qualification_scores_null": 4,
+    "records_in_research_only": 4,
+    "records_held_by_hard_gates": 4,
+    "external_actions": 0
+  },
+  "records": [
+    {
+      "batch_index": 1,
+      "source_sheet_row": 26,
+      "source_row_rank": 25,
+      "company_name": "Lennar",
+      "supplied_identity_context": "Lennar at lennar.com with the supplied public company LinkedIn locator",
+      "business_category": "Public national homebuilder with mortgage, title, closing, multifamily, land, and real-estate financial services",
+      "canonical_website_url": "https://www.lennar.com/",
+      "company_linkedin_locator": "https://www.linkedin.com/company/lennar/",
+      "public_evidence_urls": [
+        "https://www.lennar.com/",
+        "https://investors.lennar.com/company-profile",
+        "https://investors.lennar.com/press-releases/2026/06-11-2026-214520364",
+        "https://www.lennar.com/about/companies",
+        "https://www.linkedin.com/company/lennar/"
+      ],
+      "public_evidence_observations": [
+        {
+          "url": "https://www.lennar.com/",
+          "observed_date": "2026-08-25",
+          "source_type": "first_party_company_web",
+          "observation": "The current site identifies Lennar as a national homebuilder and presents active home, community, product, mortgage-offer, and homebuying journeys."
+        },
+        {
+          "url": "https://investors.lennar.com/company-profile",
+          "observed_date": "2026-08-25",
+          "source_type": "first_party_corporate_profile",
+          "observation": "The current company profile identifies Lennar Corporation as a public company operating primarily under the Lennar brand and documents homebuilding, mortgage, title, closing, multifamily, and current corporate-structure activity."
+        },
+        {
+          "url": "https://investors.lennar.com/press-releases/2026/06-11-2026-214520364",
+          "observed_date": "2026-08-25",
+          "source_type": "first_party_current_corporate_release",
+          "observation": "A June 2026 official results release confirms the current Lennar Corporation identity and its homebuilding, financial-services, multifamily, and technology activities."
+        },
+        {
+          "url": "https://www.lennar.com/about/companies",
+          "observed_date": "2026-08-25",
+          "source_type": "first_party_company_structure_page",
+          "observation": "The current family-of-companies page shows multiple homebuilding, rental, technology, and related brand paths within the Lennar footprint."
+        }
+      ],
+      "identity_state": "confirmed_current",
+      "freshness_state": "confirmed_current_review_due_2026-09-08",
+      "truth_state": "confirmed_current",
+      "confidence": "high",
+      "evidence_summary": "Current first-party consumer, investor, and company-structure pages consistently identify Lennar Corporation as an operating public homebuilder with mortgage, title, closing, multifamily, and related activities.",
+      "website_observation": "The public web footprint spans national home and community search, product and lifestyle paths, mortgage offers, and a family of companies. This is a reproducible enterprise content and location footprint, not proof of a search, answer, usability, buyer, or revenue problem.",
+      "ownership_parent_rebrand_regulatory_state": {
+        "ownership_state": "current_public_company_identity_confirmed",
+        "parent_state": "no_current_parent_claim_found_on_reviewed_first_party_pages",
+        "rebrand_state": "no_current_lennar_company_rebrand_observed",
+        "regulatory_state": "homebuilding_mortgage_title_closing_and_real_estate_financial_services_categories_confirmed_but_category_and_legal_acceptance_not_completed",
+        "legal_entity_state": "lennar_corporation_confirmed_current_public_company_exact_contracting_unit_not_reconciled",
+        "procurement_state": "large_public_enterprise_procurement_vendor_legal_and_compliance_requirements_unverified"
+      },
+      "public_company_state": "current_first_party_identity_and_supplied_company_locator_match",
+      "people_state": "not_run_contact_discovery_prohibited",
+      "source_rights_state": "authorized_research_only",
+      "source_integrity_state": "weak_fail_closed_for_advancement",
+      "duplicate_state": "clear_current_sources",
+      "conflict_state": "pending_fail_closed_real_estate_financial_services_affiliate_vendor_and_prior_touch_relationships_unresolved",
+      "suppression_state": "pending_fail_closed",
+      "fit_lane": "SEO, AEO, and GEO plus Website Optimization",
+      "fit_state": "national_location_community_product_and_financial_services_footprint_hypothesis_only_enterprise_fit_unknown",
+      "qualification_score": null,
+      "score_state": "withheld_incomplete_evidence",
+      "missing_score_dimensions": [
+        "problem_evidence",
+        "decision_ownership",
+        "scope_readiness",
+        "inputs_and_access",
+        "budget_fit",
+        "timing_and_capacity",
+        "evidence_culture"
+      ],
+      "explicit_unknowns": [
+        "reproducible SEO, AEO, GEO, website, or workflow problem",
+        "exact contracting business unit",
+        "regulated real-estate and financial-services category acceptance",
+        "enterprise procurement, legal, compliance, security, and vendor requirements",
+        "client, partner, vendor, employer, job, affiliate, and prior-touch conflicts",
+        "suppression state",
+        "decision ownership, scope, access, budget, timing, and capacity"
+      ],
+      "hard_gates": {
+        "identity": "pass",
+        "freshness": "pass",
+        "source_rights": "pass_for_research_only",
+        "source_integrity": "fail_closed_for_advancement",
+        "duplicate": "pass_current_sources",
+        "ownership_parent_rebrand": "partial_public_identity_confirmed_parent_and_contracting_unit_pending",
+        "regulated_category_and_legal_acceptance": "pending_fail_closed",
+        "relationship_conflict": "pending_fail_closed",
+        "enterprise_procurement": "pending_fail_closed",
+        "suppression": "pending_fail_closed",
+        "decision_owner": "pending_fail_closed",
+        "problem_evidence": "pending_fail_closed",
+        "overall": "hold"
+      },
+      "current_lifecycle": "RESEARCH_ONLY",
+      "current_stage": "P00_ACCOUNT_RESEARCH",
+      "next_internal_action": "Resolve the exact contracting unit, regulated-category acceptance, enterprise procurement, affiliate and prior-touch relationships, suppression, and decision ownership before inspecting one bounded community or financial-services template for a reproducible condition."
+    },
+    {
+      "batch_index": 2,
+      "source_sheet_row": 27,
+      "source_row_rank": 26,
+      "company_name": "Luminate Bank",
+      "supplied_identity_context": "Luminate Home Loans, Inc. at goluminate.com, now unified under the Luminate Bank brand",
+      "business_category": "FDIC-insured bank and nationwide full-service mortgage lender",
+      "canonical_website_url": "https://www.luminate.bank/",
+      "company_linkedin_locator": null,
+      "public_evidence_urls": [
+        "https://goluminate.com/",
+        "https://www.luminate.bank/",
+        "https://www.luminate.bank/about",
+        "https://www.luminate.bank/becoming-luminate-bank",
+        "https://www.luminate.bank/company-licenses",
+        "https://www.luminate.bank/spotlight-on-luminate-bank-the-best-of-banking-and-mortgage-lending-in-one-place"
+      ],
+      "public_evidence_observations": [
+        {
+          "url": "https://goluminate.com/",
+          "observed_date": "2026-08-25",
+          "source_type": "first_party_supplied_alias_domain",
+          "observation": "The supplied Luminate Home Loans domain resolves to the current Luminate Bank website and displays the current bank identity."
+        },
+        {
+          "url": "https://www.luminate.bank/about",
+          "observed_date": "2026-08-25",
+          "source_type": "first_party_identity_and_history_page",
+          "observation": "The current history page says Luminate Home Loans and Luminate Bank unified under one Luminate Bank brand in 2025."
+        },
+        {
+          "url": "https://www.luminate.bank/becoming-luminate-bank",
+          "observed_date": "2026-08-25",
+          "source_type": "first_party_transition_page",
+          "observation": "The official transition page states that Luminate Home Loans was a wholly owned subsidiary of Luminate Bank and would transition into a division of the bank."
+        },
+        {
+          "url": "https://www.luminate.bank/company-licenses",
+          "observed_date": "2026-08-25",
+          "source_type": "first_party_compliance_page",
+          "observation": "The current compliance page identifies Luminate Bank as fully licensed and FDIC-insured and documents state and federal banking and mortgage licensing coverage."
+        },
+        {
+          "url": "https://www.luminate.bank/spotlight-on-luminate-bank-the-best-of-banking-and-mortgage-lending-in-one-place",
+          "observed_date": "2026-08-25",
+          "source_type": "first_party_current_business_page",
+          "observation": "A June 2026 official page identifies Luminate Bank as an FDIC-insured bank and full-service mortgage lender with personal, business, and home-financing products."
+        }
+      ],
+      "identity_state": "confirmed_current_with_successor_brand",
+      "freshness_state": "confirmed_current_review_due_2026-09-08",
+      "truth_state": "confirmed_current_predecessor_successor_chain_resolved",
+      "confidence": "high",
+      "evidence_summary": "Current first-party pages confirm that Luminate Home Loans transitioned from a wholly owned subsidiary into a division and unified with Luminate Bank under the bank brand in 2025. The supplied domain resolves to the current bank domain.",
+      "website_observation": "The public site combines personal banking, business banking, treasury, mortgage, title, life-stage, and educational paths under one current brand. This is a reproducible regulated multi-service footprint, not proof of a visibility, conversion, buyer, or revenue problem.",
+      "ownership_parent_rebrand_regulatory_state": {
+        "ownership_state": "current_luminate_bank_identity_confirmed_beneficial_ownership_not_reconciled",
+        "parent_state": "luminate_home_loans_confirmed_former_wholly_owned_subsidiary_then_division_of_luminate_bank",
+        "rebrand_state": "luminate_home_loans_and_luminate_bank_unified_under_luminate_bank_brand_in_2025",
+        "regulatory_state": "fdic_insured_bank_and_full_service_nationwide_mortgage_lender_with_current_company_license_page",
+        "legal_entity_state": "current_luminate_bank_brand_confirmed_exact_contracting_unit_after_unification_not_reconciled",
+        "procurement_state": "regulated_financial_institution_vendor_legal_privacy_security_compliance_and_procurement_requirements_unverified"
+      },
+      "public_company_state": "current_first_party_predecessor_successor_identity_and_domain_transition_match",
+      "people_state": "not_run_contact_discovery_prohibited",
+      "source_rights_state": "authorized_research_only",
+      "source_integrity_state": "weak_fail_closed_for_advancement",
+      "duplicate_state": "clear_current_sources",
+      "conflict_state": "pending_fail_closed_financial_services_predecessor_affiliate_vendor_and_prior_touch_relationships_unresolved",
+      "suppression_state": "pending_fail_closed",
+      "fit_lane": "SEO, AEO, and GEO plus Website Optimization",
+      "fit_state": "banking_mortgage_business_and_education_footprint_hypothesis_only_regulated_enterprise_fit_unknown",
+      "qualification_score": null,
+      "score_state": "withheld_incomplete_evidence",
+      "missing_score_dimensions": [
+        "problem_evidence",
+        "decision_ownership",
+        "scope_readiness",
+        "inputs_and_access",
+        "budget_fit",
+        "timing_and_capacity",
+        "evidence_culture"
+      ],
+      "explicit_unknowns": [
+        "exact contracting unit after the 2025 brand unification",
+        "current beneficial ownership or further parent relationship",
+        "regulated banking and mortgage category acceptance",
+        "privacy, security, legal, compliance, and enterprise procurement requirements",
+        "client, partner, vendor, employer, job, predecessor, affiliate, and prior-touch conflicts",
+        "suppression state",
+        "decision ownership, scope, access, budget, timing, and capacity",
+        "reproducible SEO, AEO, GEO, website, or workflow problem"
+      ],
+      "hard_gates": {
+        "identity": "pass_with_predecessor_successor_chain",
+        "freshness": "pass",
+        "source_rights": "pass_for_research_only",
+        "source_integrity": "fail_closed_for_advancement",
+        "duplicate": "pass_current_sources",
+        "ownership_parent_rebrand": "pass_current_official_transition_chain_exact_contracting_unit_pending",
+        "regulated_category_privacy_security_and_legal_acceptance": "pending_fail_closed",
+        "relationship_conflict": "pending_fail_closed",
+        "enterprise_procurement": "pending_fail_closed",
+        "suppression": "pending_fail_closed",
+        "decision_owner": "pending_fail_closed",
+        "problem_evidence": "pending_fail_closed",
+        "overall": "hold"
+      },
+      "current_lifecycle": "RESEARCH_ONLY",
+      "current_stage": "P00_ACCOUNT_RESEARCH",
+      "next_internal_action": "Resolve the exact post-unification contracting unit, financial-services category acceptance, privacy, security, legal and procurement requirements, predecessor and affiliate conflicts, suppression, and decision ownership before inspecting one bounded public banking or mortgage template."
+    },
+    {
+      "batch_index": 3,
+      "source_sheet_row": 28,
+      "source_row_rank": 27,
+      "company_name": "TradeWheel.com",
+      "supplied_identity_context": "TradeWheel.com at tradewheel.com",
+      "business_category": "Global user-generated B2B marketplace with supplier, buyer, lead, account-management, and digital-marketing services",
+      "canonical_website_url": "https://www.tradewheel.com/",
+      "company_linkedin_locator": null,
+      "public_evidence_urls": [
+        "https://www.tradewheel.com/",
+        "https://www.tradewheel.com/about-us/",
+        "https://www.tradewheel.com/terms-and-conditions/",
+        "https://www.tradewheel.com/content-policy/"
+      ],
+      "public_evidence_observations": [
+        {
+          "url": "https://www.tradewheel.com/",
+          "observed_date": "2026-08-25",
+          "source_type": "first_party_company_web",
+          "observation": "The current site presents a global B2B marketplace with supplier, buyer, product-listing, account-management, lead, and digital-marketing paths."
+        },
+        {
+          "url": "https://www.tradewheel.com/about-us/",
+          "observed_date": "2026-08-25",
+          "source_type": "first_party_identity_and_service_page",
+          "observation": "The current about page identifies TradeWheel as a global B2B marketplace and presents lead-generation, buyer-access, customer-support, and human-assisted services."
+        },
+        {
+          "url": "https://www.tradewheel.com/terms-and-conditions/",
+          "observed_date": "2026-08-25",
+          "source_type": "first_party_legal_terms",
+          "observation": "The current terms identify TradeWheel LLC as a Delaware limited liability company and define a user-to-user marketplace with sanctions, transaction, content, and platform obligations."
+        },
+        {
+          "url": "https://www.tradewheel.com/content-policy/",
+          "observed_date": "2026-08-25",
+          "source_type": "first_party_content_and_compliance_policy",
+          "observation": "The current policy identifies user-generated listings, prohibited and regulated categories, intellectual-property controls, and documentation review, creating material platform, legal, and compliance requirements."
+        }
+      ],
+      "identity_state": "confirmed_current_with_legal_entity",
+      "freshness_state": "confirmed_current_review_due_2026-09-08",
+      "truth_state": "confirmed_current_direct_competitive_overlap_hold",
+      "confidence": "high",
+      "evidence_summary": "Current first-party pages and legal terms identify TradeWheel.com as an operating global B2B marketplace and TradeWheel LLC as the current platform company. Its own SEO, paid search, social, lead-generation, and account-management services create direct competitive overlap.",
+      "website_observation": "The public web footprint spans buyers, suppliers, products, listings, messaging, account management, leads, and digital-marketing services across an international marketplace. This is evidence of direct service overlap, not proof of an unmet marketing problem.",
+      "ownership_parent_rebrand_regulatory_state": {
+        "ownership_state": "tradeWheel_llc_confirmed_current_beneficial_ownership_unverified",
+        "parent_state": "no_current_parent_claim_found_on_reviewed_first_party_pages",
+        "rebrand_state": "no_current_rebrand_claim_found_on_reviewed_first_party_pages",
+        "regulatory_state": "international_user_generated_marketplace_with_sanctions_ipr_privacy_data_and_prohibited_product_compliance_obligations",
+        "legal_entity_state": "tradewheel_llc_delaware_limited_liability_company_confirmed_in_current_first_party_terms",
+        "procurement_state": "international_marketplace_data_legal_security_vendor_and_competitive_review_unverified"
+      },
+      "public_company_state": "current_first_party_identity_legal_entity_and_domain_match",
+      "people_state": "not_run_contact_discovery_prohibited",
+      "source_rights_state": "authorized_research_only",
+      "source_integrity_state": "weak_fail_closed_for_advancement",
+      "duplicate_state": "clear_current_sources",
+      "conflict_state": "hard_hold_direct_marketing_services_overlap_plus_pending_partner_vendor_parent_and_prior_touch_reconciliation",
+      "suppression_state": "pending_fail_closed",
+      "fit_lane": null,
+      "fit_state": "none_until_direct_competitive_overlap_and_international_marketplace_category_acceptance_are_resolved",
+      "qualification_score": null,
+      "score_state": "withheld_incomplete_evidence_and_direct_competitive_overlap",
+      "missing_score_dimensions": [
+        "problem_evidence",
+        "service_fit",
+        "decision_ownership",
+        "scope_readiness",
+        "inputs_and_access",
+        "budget_fit",
+        "timing_and_capacity",
+        "evidence_culture"
+      ],
+      "explicit_unknowns": [
+        "current beneficial ownership or parent relationship",
+        "whether any noncompetitive service lane is permissible",
+        "international marketplace category acceptance",
+        "sanctions, privacy, data-processing, intellectual-property, and platform requirements",
+        "enterprise legal, security, procurement, and vendor route",
+        "client, partner, vendor, employer, job, competitive, affiliate, and prior-touch conflicts",
+        "suppression state",
+        "decision ownership, budget, timing, and capacity",
+        "reproducible noncompetitive problem evidence"
+      ],
+      "hard_gates": {
+        "identity": "pass_with_current_legal_entity",
+        "freshness": "pass",
+        "source_rights": "pass_for_research_only",
+        "source_integrity": "fail_closed_for_advancement",
+        "duplicate": "pass_current_sources",
+        "ownership_parent_rebrand": "partial_legal_entity_confirmed_parent_pending",
+        "competitive_and_category_acceptance": "fail_direct_marketing_services_overlap_pending_explicit_review",
+        "marketplace_legal_privacy_data_and_sanctions": "pending_fail_closed",
+        "relationship_conflict": "pending_fail_closed",
+        "enterprise_procurement": "pending_fail_closed",
+        "suppression": "pending_fail_closed",
+        "decision_owner": "pending_fail_closed",
+        "problem_evidence": "pending_fail_closed",
+        "overall": "hold"
+      },
+      "current_lifecycle": "RESEARCH_ONLY",
+      "current_stage": "P00_ACCOUNT_RESEARCH",
+      "next_internal_action": "Do not conduct people research. Resolve direct competitive service overlap, category acceptance, beneficial ownership, international marketplace and data requirements, partner and vendor conflicts, suppression, procurement, and decision ownership before any further qualification."
+    },
+    {
+      "batch_index": 4,
+      "source_sheet_row": 29,
+      "source_row_rank": 28,
+      "company_name": "PGS Gold & Coin",
+      "supplied_identity_context": "PGS Gold Buyers at pgsgoldbuyers.com, now resolving to the PGS Gold & Coin brand and domain",
+      "business_category": "Precious-metals, coin, jewelry, collectibles, appraisal, cash-purchase, and ecommerce retailer",
+      "canonical_website_url": "https://pgsgoldandcoin.com/",
+      "company_linkedin_locator": null,
+      "public_evidence_urls": [
+        "https://pgsgoldbuyers.com/",
+        "https://pgsgoldandcoin.com/",
+        "https://pgsgoldandcoin.com/about-us/",
+        "https://pgsgoldandcoin.com/policies/",
+        "https://pgsgoldandcoin.com/about-us/accreditations-certifications/"
+      ],
+      "public_evidence_observations": [
+        {
+          "url": "https://pgsgoldbuyers.com/",
+          "observed_date": "2026-08-25",
+          "source_type": "first_party_supplied_alias_domain",
+          "observation": "The supplied PGS Gold Buyers domain resolves to the current PGS Gold & Coin domain and displays the current operating brand."
+        },
+        {
+          "url": "https://pgsgoldandcoin.com/",
+          "observed_date": "2026-08-25",
+          "source_type": "first_party_company_web",
+          "observation": "The current site presents PGS Gold & Coin as an active retailer and appraiser with ecommerce, precious-metals, coin, jewelry, collectible, selling, and location pathways."
+        },
+        {
+          "url": "https://pgsgoldandcoin.com/about-us/",
+          "observed_date": "2026-08-25",
+          "source_type": "first_party_identity_and_history_page",
+          "observation": "The current about page identifies PGS Gold & Coin as an operating Chicago-area precious-metals, coin, jewelry, collectible, appraisal, and tangible-asset business established in 2008."
+        },
+        {
+          "url": "https://pgsgoldandcoin.com/policies/",
+          "observed_date": "2026-08-25",
+          "source_type": "first_party_legal_and_transaction_policy",
+          "observation": "The current policies retain the PGS Gold Buyers name in the privacy notice, define PGS Gold & Coin as an LLC, and describe ecommerce, bullion, precious-metals pricing, cash-purchase, payment, and transaction conditions."
+        },
+        {
+          "url": "https://pgsgoldandcoin.com/about-us/accreditations-certifications/",
+          "observed_date": "2026-08-25",
+          "source_type": "first_party_accreditation_page",
+          "observation": "The current accreditation page identifies PGS Gold & Coin as an Inc., conflicting with the LLC identity in the current policy page."
+        }
+      ],
+      "identity_state": "confirmed_current_with_brand_domain_transition_and_legal_entity_conflict",
+      "freshness_state": "confirmed_current_review_due_2026-09-08",
+      "truth_state": "confirmed_current_operating_brand_exact_legal_entity_blocked",
+      "confidence": "high_for_operating_brand_low_for_exact_legal_entity",
+      "evidence_summary": "The supplied domain resolves to the current PGS Gold & Coin site, confirming the operating brand and canonical domain. Current first-party pages conflict on whether the legal entity is PGS Gold & Coin LLC or PGS Gold & Coin, Inc., so the exact contracting identity is blocked.",
+      "website_observation": "The public site combines an ecommerce catalog with appraisal, selling, location, collectible, and educational paths. This is a reproducible local and transactional content footprint, not proof of a search, answer, usability, buyer, or revenue problem.",
+      "ownership_parent_rebrand_regulatory_state": {
+        "ownership_state": "unverified_current_ownership_not_stated_on_reviewed_first_party_pages",
+        "parent_state": "no_current_parent_claim_found_on_reviewed_first_party_pages",
+        "rebrand_state": "supplied_pgs_gold_buyers_domain_and_current_policy_alias_resolve_to_pgs_gold_and_coin_effective_transition_date_unverified",
+        "regulatory_state": "precious_metals_bullion_coin_jewelry_appraisal_cash_purchase_and_ecommerce_categories_confirmed_but_applicable_licensing_transaction_and_category_acceptance_not_reconciled",
+        "legal_entity_state": "blocked_conflicting_current_first_party_claims_pgs_gold_and_coin_llc_versus_pgs_gold_and_coin_inc",
+        "procurement_state": "legal_entity_category_transaction_compliance_and_vendor_requirements_unverified"
+      },
+      "public_company_state": "current_first_party_operating_brand_and_domain_transition_match_exact_legal_entity_conflicts",
+      "people_state": "not_run_contact_discovery_prohibited",
+      "source_rights_state": "authorized_research_only",
+      "source_integrity_state": "weak_fail_closed_for_advancement",
+      "duplicate_state": "clear_current_sources",
+      "conflict_state": "pending_fail_closed_legacy_alias_precious_metals_affiliate_vendor_and_prior_touch_relationships_unresolved",
+      "suppression_state": "pending_fail_closed",
+      "fit_lane": "SEO, AEO, and GEO plus Website Optimization",
+      "fit_state": "local_location_ecommerce_appraisal_and_education_footprint_hypothesis_only_category_and_legal_fit_unknown",
+      "qualification_score": null,
+      "score_state": "withheld_incomplete_evidence_and_exact_legal_entity_conflict",
+      "missing_score_dimensions": [
+        "problem_evidence",
+        "decision_ownership",
+        "scope_readiness",
+        "inputs_and_access",
+        "budget_fit",
+        "timing_and_capacity",
+        "evidence_culture"
+      ],
+      "explicit_unknowns": [
+        "exact legal and contracting entity",
+        "current ownership or parent relationship",
+        "effective brand and domain transition date",
+        "applicable precious-metals, appraisal, cash-purchase, ecommerce, and transaction licenses or requirements",
+        "agency category acceptance",
+        "client, partner, vendor, employer, job, affiliate, and prior-touch conflicts",
+        "suppression state",
+        "decision ownership, scope, access, budget, timing, and capacity",
+        "reproducible SEO, AEO, GEO, website, or workflow problem"
+      ],
+      "hard_gates": {
+        "identity": "pass_current_operating_brand_exact_legal_entity_blocked",
+        "freshness": "pass",
+        "source_rights": "pass_for_research_only",
+        "source_integrity": "fail_closed_for_advancement",
+        "duplicate": "pass_current_sources",
+        "ownership_parent_rebrand": "partial_brand_and_domain_transition_confirmed_ownership_and_date_pending",
+        "legal_entity": "fail_conflicting_first_party_llc_and_inc_claims",
+        "regulated_category_transaction_and_legal_acceptance": "pending_fail_closed",
+        "relationship_conflict": "pending_fail_closed",
+        "procurement_and_contracting_route": "pending_fail_closed",
+        "suppression": "pending_fail_closed",
+        "decision_owner": "pending_fail_closed",
+        "problem_evidence": "pending_fail_closed",
+        "overall": "hold"
+      },
+      "current_lifecycle": "RESEARCH_ONLY",
+      "current_stage": "P00_ACCOUNT_RESEARCH",
+      "next_internal_action": "Do not conduct people research. Resolve the conflicting LLC and Inc. claims, ownership, effective brand transition, precious-metals and transaction category acceptance, applicable licensing, relationships, suppression, procurement, and decision ownership before any further qualification."
+    }
+  ],
+  "batch_blockers": [
+    "The source permits company research only and reports weak link-writable integrity.",
+    "Lennar has regulated real-estate and financial-services subsidiaries plus unresolved category acceptance, exact contracting unit, and enterprise procurement.",
+    "Luminate Home Loans transitioned into Luminate Bank, so post-unification contracting identity, financial-services category, privacy, security, legal, and procurement gates remain unresolved.",
+    "TradeWheel.com has direct marketing-service overlap plus international marketplace, sanctions, intellectual-property, privacy, data, and enterprise-procurement gates.",
+    "PGS Gold & Coin has conflicting current first-party legal-entity claims plus precious-metals, transaction, licensing, category-acceptance, and procurement gates.",
+    "No record has canonical contact-level suppression clearance, complete relationship reconciliation, or a verified decision owner.",
+    "No record has evidence for all eight qualification dimensions or a reproducible commercial problem.",
+    "Contact discovery, drafting, sending, connecting, calendar mutation, booking, CRM writes, account changes, and all other external actions remain disabled."
+  ],
+  "validation": {
+    "json_parse": "passed",
+    "pii_scan": "passed_zero_matches_for_email_phone_compact_phone_street_address_personal_linkedin_source_file_id_and_gmail_locator_patterns",
+    "manual_person_name_review": "passed_zero_person_names_or_person_title_tokens_persisted",
+    "source_row_review": "passed_exactly_four_unique_records_rows_26_through_29_ranks_25_through_28",
+    "external_action_review": "passed_zero_external_actions"
+  }
+}

@@ -1,0 +1,250 @@
+{
+  "schema_version": "1.0.0",
+  "workflow_id": "IMMOHRTAL-DAILY-20260825",
+  "step_id": "LEADS-05-GOVERNANCE",
+  "receipt_id": "2026-08-25-batch-04-governance",
+  "status": "account_level_exact_sources_reconciled_with_one_hold",
+  "observed_at": "2026-08-25T22:55:12.504Z",
+  "expires_at": "2026-08-26T22:55:12.504Z",
+  "policy": "automation/immohrtal-agency/config/account-governance-policy.json",
+  "source_evidence": [
+    {
+      "source_id": "canonical_client_registry",
+      "state": "complete",
+      "scope": "Exact current company, canonical domain, parent, and rebrand aliases across the canonical client registry.",
+      "aliases_checked": 33,
+      "exact_account_matches": 0,
+      "exact_domain_matches": 0
+    },
+    {
+      "source_id": "canonical_work_queue",
+      "state": "complete",
+      "scope": "Exact current company, canonical domain, parent, and rebrand aliases across the canonical work queue.",
+      "aliases_checked": 33,
+      "exact_account_matches": 0,
+      "exact_domain_matches": 0
+    },
+    {
+      "source_id": "protected_local_contexts",
+      "state": "complete",
+      "scope": "Exact aliases across client folders, full-time work, Second Brain entities, decisions, projects, and System records.",
+      "aliases_checked": 33,
+      "exact_account_matches": 1,
+      "exact_domain_matches": 0,
+      "bounded_match": "ANDMORE parent alias Blackstone appears in a prior raw job-search discovery feed; no match exists in the full-time master ledger or application log."
+    },
+    {
+      "source_id": "private_outbound_ledger",
+      "state": "complete",
+      "scope": "Exact company and domain aliases against the private local outbound ledger without persisting contact data.",
+      "aliases_checked": 33,
+      "exact_account_matches": 0,
+      "exact_domain_matches": 0
+    },
+    {
+      "source_id": "gmail_exact_domain_history",
+      "state": "complete",
+      "scope": "Read-only Gmail search for supplied, current, parent, and rebrand domains. Only routed From, To, Cc, and Bcc domain matches counted.",
+      "accounts_checked": 13,
+      "exact_account_matches": 0,
+      "exact_domain_matches": 0
+    },
+    {
+      "source_id": "account_suppression_register",
+      "state": "complete",
+      "scope": "Current account-level register plus an additional safety-only exact check of the excluded legacy runtime suppression snapshot.",
+      "aliases_checked": 33,
+      "exact_account_matches": 0,
+      "exact_domain_matches": 0,
+      "legacy_safety_exact_matches": 0
+    }
+  ],
+  "accounts": [
+    {
+      "source_row_rank": 25,
+      "company_name": "Lennar",
+      "canonical_first_party_domain": "lennar.com",
+      "aliases_checked": 3,
+      "identity_state": "confirmed_current",
+      "source_completeness_state": "complete_current_exact_sources",
+      "duplicate_state": "clear_current_exact_sources",
+      "relationship_conflict_state": "clear_current_exact_sources",
+      "account_suppression_state": "clear_current_exact_sources",
+      "account_governance_state": "clear_current_exact_sources",
+      "remaining_non_governance_holds": [
+        "regulated real-estate and financial-services category acceptance",
+        "enterprise procurement",
+        "weak discovery-source integrity",
+        "decision owner and buyer-side qualification evidence"
+      ],
+      "overall_state": "hold"
+    },
+    {
+      "source_row_rank": 26,
+      "company_name": "Luminate Bank",
+      "canonical_first_party_domain": "luminate.bank",
+      "aliases_checked": 5,
+      "identity_state": "confirmed_current_with_successor_brand",
+      "source_completeness_state": "complete_current_exact_sources",
+      "duplicate_state": "clear_current_exact_sources",
+      "relationship_conflict_state": "clear_current_exact_sources",
+      "account_suppression_state": "clear_current_exact_sources",
+      "account_governance_state": "clear_current_exact_sources",
+      "remaining_non_governance_holds": [
+        "predecessor and successor reconciliation",
+        "regulated financial-services category acceptance",
+        "enterprise privacy, security, and procurement",
+        "weak discovery-source integrity and buyer evidence"
+      ],
+      "overall_state": "hold"
+    },
+    {
+      "source_row_rank": 27,
+      "company_name": "TradeWheel.com",
+      "canonical_first_party_domain": "tradewheel.com",
+      "aliases_checked": 2,
+      "identity_state": "confirmed_current_with_legal_entity",
+      "source_completeness_state": "complete_current_exact_sources",
+      "duplicate_state": "clear_current_exact_sources",
+      "relationship_conflict_state": "clear_current_exact_sources",
+      "account_suppression_state": "clear_current_exact_sources",
+      "account_governance_state": "clear_current_exact_sources",
+      "remaining_non_governance_holds": [
+        "direct competitive service overlap",
+        "cross-border marketplace, data, and sanctions review",
+        "enterprise procurement",
+        "weak discovery-source integrity and buyer evidence"
+      ],
+      "overall_state": "hold"
+    },
+    {
+      "source_row_rank": 28,
+      "company_name": "PGS Gold & Coin",
+      "canonical_first_party_domain": "pgsgoldandcoin.com",
+      "aliases_checked": 6,
+      "identity_state": "confirmed_current_with_brand_domain_transition_and_legal_entity_conflict",
+      "source_completeness_state": "complete_current_exact_sources",
+      "duplicate_state": "clear_current_exact_sources",
+      "relationship_conflict_state": "clear_current_exact_sources",
+      "account_suppression_state": "clear_current_exact_sources",
+      "account_governance_state": "clear_current_exact_sources",
+      "remaining_non_governance_holds": [
+        "conflicting current first-party legal entity claims",
+        "precious-metals category and transaction compliance",
+        "weak discovery-source integrity",
+        "decision owner and buyer-side qualification evidence"
+      ],
+      "overall_state": "hold"
+    },
+    {
+      "source_row_rank": 29,
+      "company_name": "ANDMORE",
+      "canonical_first_party_domain": "andmore.com",
+      "aliases_checked": 9,
+      "identity_state": "confirmed_current_with_parent_and_rebrand_chain",
+      "source_completeness_state": "complete_current_exact_sources",
+      "duplicate_state": "clear_current_exact_sources",
+      "relationship_conflict_state": "relationship_match_current_exact_sources",
+      "account_suppression_state": "clear_current_exact_sources",
+      "account_governance_state": "held",
+      "governance_hold_reasons": [
+        "relationship_conflict:exact_match"
+      ],
+      "bounded_match_context": "Confirmed parent alias Blackstone appears in a prior raw job-search discovery feed. It does not appear in the full-time master ledger or application log, so application and employment states remain unproven.",
+      "remaining_non_governance_holds": [
+        "Blackstone portfolio procurement and relationship reconciliation",
+        "exact contracting entity and privacy requirements",
+        "weak discovery-source integrity",
+        "decision owner and buyer-side qualification evidence"
+      ],
+      "overall_state": "hold"
+    },
+    {
+      "source_row_rank": 30,
+      "company_name": "Registria",
+      "canonical_first_party_domain": "registria.com",
+      "aliases_checked": 2,
+      "identity_state": "confirmed_current",
+      "source_completeness_state": "complete_current_exact_sources",
+      "duplicate_state": "clear_current_exact_sources",
+      "relationship_conflict_state": "clear_current_exact_sources",
+      "account_suppression_state": "clear_current_exact_sources",
+      "account_governance_state": "clear_current_exact_sources",
+      "remaining_non_governance_holds": [
+        "exact legal entity and ownership",
+        "privacy, security, and data processing review",
+        "enterprise procurement",
+        "weak discovery-source integrity and buyer evidence"
+      ],
+      "overall_state": "hold"
+    },
+    {
+      "source_row_rank": 31,
+      "company_name": "The Federal Savings Bank",
+      "canonical_first_party_domain": "thefederalsavingsbank.com",
+      "aliases_checked": 2,
+      "identity_state": "confirmed_current_with_regulatory_hold",
+      "source_completeness_state": "complete_current_exact_sources",
+      "duplicate_state": "clear_current_exact_sources",
+      "relationship_conflict_state": "clear_current_exact_sources",
+      "account_suppression_state": "clear_current_exact_sources",
+      "account_governance_state": "clear_current_exact_sources",
+      "remaining_non_governance_holds": [
+        "current April 2026 OCC consent order",
+        "financial-services legal and category acceptance",
+        "regulated enterprise procurement",
+        "weak discovery-source integrity and buyer evidence"
+      ],
+      "overall_state": "hold"
+    },
+    {
+      "source_row_rank": 32,
+      "company_name": "Slashdot Media",
+      "canonical_first_party_domain": "slashdotmedia.com",
+      "aliases_checked": 4,
+      "identity_state": "confirmed_current_with_direct_competitive_overlap_hold",
+      "source_completeness_state": "complete_current_exact_sources",
+      "duplicate_state": "clear_current_exact_sources",
+      "relationship_conflict_state": "clear_current_exact_sources",
+      "account_suppression_state": "clear_current_exact_sources",
+      "account_governance_state": "clear_current_exact_sources",
+      "remaining_non_governance_holds": [
+        "direct competitive service overlap",
+        "ownership, privacy, data, and category review",
+        "enterprise procurement",
+        "weak discovery-source integrity and buyer evidence"
+      ],
+      "overall_state": "hold"
+    }
+  ],
+  "counts": {
+    "accounts_checked": 8,
+    "aliases_checked": 33,
+    "gmail_domains_checked": 13,
+    "identity_confirmed_current": 8,
+    "identity_blocked": 0,
+    "account_governance_clear_current_exact_sources": 7,
+    "account_governance_held_current_exact_sources": 1,
+    "overall_qualification_holds": 8,
+    "contact_level_suppression_clearance_claimed": 0,
+    "contact_discovery_authorized": 0,
+    "outreach_authorized": 0,
+    "external_actions": 0
+  },
+  "boundary": {
+    "clearance_scope": "Current exact account-level sources only.",
+    "contact_level_suppression_state": "not_applicable_contact_discovery_prohibited",
+    "global_relationship_clearance_claimed": false,
+    "qualification_clearance_claimed": false,
+    "account_lifecycle": "RESEARCH_ONLY",
+    "stage": "P00_ACCOUNT_RESEARCH"
+  },
+  "validation": {
+    "canonical_and_local_exact_searches": "passed_seven_accounts_clear_one_protected_context_match",
+    "gmail_direct_domain_routing_search": "passed_zero_matches_across_thirteen_domains",
+    "account_register_and_legacy_safety_exact_search": "passed_zero_matches",
+    "preflight_core_replay": "passed_seven_clear_one_held_with_zero_contact_or_external_authority",
+    "json_parse": "passed",
+    "pii_scan": "passed_zero_email_phone_compact_phone_street_address_or_personal_linkedin_matches"
+  }
+}
