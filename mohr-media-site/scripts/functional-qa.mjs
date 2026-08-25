@@ -71,6 +71,8 @@ const layout = await page.evaluate(() => ({
   },
 }));
 
+// Let reveal transitions settle after the keyboard-driven video tab focus scroll.
+await page.waitForTimeout(1200);
 const axe = await new AxeBuilder({ page }).analyze();
 
 const reducedContext = await browser.newContext({
@@ -82,7 +84,7 @@ await reducedPage.goto(baseUrl, { waitUntil: 'networkidle' });
 await reducedPage.waitForTimeout(400);
 const reducedMotion = await reducedPage.evaluate(() => ({
   canvases: document.querySelectorAll('canvas').length,
-  staticLogo: Boolean(document.querySelector('.particle-logo--static img')),
+  staticLogo: Boolean(document.querySelector('.hero-proof-sequence--reduced img')),
 }));
 
 const report = {

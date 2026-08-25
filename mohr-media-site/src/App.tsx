@@ -3,7 +3,7 @@ import { SpineStage } from './components/SpineStage'
 import { alignSignals, projects, videos } from './data'
 import { SPINE_SECTIONS, type SpineEngine } from './spine/config'
 
-const ParticleLogo = lazy(() => import('./components/ParticleLogo').then((module) => ({ default: module.ParticleLogo })))
+const HeroProofSequence = lazy(() => import('./components/HeroProofSequence').then((module) => ({ default: module.HeroProofSequence })))
 
 function ArrowIcon({ direction = 'up' }: { direction?: 'up' | 'down' | 'left' | 'right' }) {
   const rotation = direction === 'down' ? 90 : direction === 'left' ? 225 : direction === 'right' ? 45 : 0
@@ -38,6 +38,19 @@ function useExperienceMotion() {
     }, { threshold: .12, rootMargin: '0px 0px -8% 0px' })
     reveals.forEach((node) => observer?.observe(node))
 
+    const sectionNodes = Array.from(document.querySelectorAll<HTMLElement>('[data-section-pop]'))
+    if (!('IntersectionObserver' in window) || reduced) {
+      sectionNodes.forEach((node) => node.classList.add('is-section-visible'))
+    }
+    const sectionObserver = reduced ? null : new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return
+        entry.target.classList.add('is-section-visible')
+        sectionObserver?.unobserve(entry.target)
+      })
+    }, { threshold: .16, rootMargin: '0px 0px -10% 0px' })
+    sectionNodes.forEach((node) => sectionObserver?.observe(node))
+
     const tiltNodes = Array.from(document.querySelectorAll<HTMLElement>('[data-tilt]'))
     const fine = window.matchMedia('(pointer:fine)').matches && !reduced
     const cleanups: Array<() => void> = []
@@ -67,6 +80,7 @@ function useExperienceMotion() {
     return () => {
       window.removeEventListener('scroll', onScroll)
       observer?.disconnect()
+      sectionObserver?.disconnect()
       cleanups.forEach((cleanup) => cleanup())
     }
   }, [])
@@ -177,7 +191,7 @@ function ProjectRail() {
   const rail = useRef<HTMLDivElement>(null)
   const move = (direction: number) => rail.current?.scrollBy({ left: direction * Math.min(window.innerWidth * .78, 980), behavior: 'smooth' })
   return (
-    <section className="work-section" id="work">
+    <section className="work-section" id="work" data-section-pop data-chapter="LIVE SYSTEMS">
       <div className="section-heading" data-reveal>
         <p>02 // Align HCM live systems</p>
         <h2>Built to be<br /><em>opened.</em></h2>
@@ -218,7 +232,7 @@ function VideoTheater() {
     window.requestAnimationFrame(() => document.getElementById(`video-tab-${next}`)?.focus())
   }
   return (
-    <section className="motion-section" id="motion">
+    <section className="motion-section" id="motion" data-section-pop data-chapter="MOTION">
       <div className="motion-stage" data-reveal>
         <div className="motion-stage__copy">
           <p>03 // Edited motion</p>
@@ -284,7 +298,7 @@ function DocumentVault() {
     },
   ]
   return (
-    <section className="vault-section" id="vault">
+    <section className="vault-section" id="vault" data-section-pop data-chapter="PROOF">
       <div className="section-heading section-heading--light" data-reveal>
         <p>04 // Public proof vault</p>
         <h2>Open the<br /><em>receipts.</em></h2>
@@ -330,12 +344,16 @@ export default function App() {
             </div>
           </div>
           <div className="hero-logo-stage">
-            <Suspense fallback={<div className="particle-logo particle-logo--static" role="img" aria-label="IMMOHRTAL Marketing Solutions logo"><img className="brand-logo--chrome" src="/brand/immohrtal-logo.png" alt="" /></div>}>
-              <ParticleLogo />
+            <Suspense fallback={(
+              <div className="hero-proof-sequence hero-proof-sequence--reduced hero-proof-sequence--pending" role="img" aria-label="I did this for Align HCM. I can do it for you.">
+                <p>I did this for</p>
+                <img src="/clients/align-hcm.png" alt="Align HCM" />
+              </div>
+            )}>
+              <HeroProofSequence />
             </Suspense>
             <div className="hero-orbit hero-orbit--one" aria-hidden="true" />
             <div className="hero-orbit hero-orbit--two" aria-hidden="true" />
-            <p aria-hidden="true"><span>Live signal</span><em>Pittsburgh, PA</em><strong>DM // 2026</strong></p>
           </div>
           <div className="hero-status" aria-hidden="true">
             <span>Strategy</span><i /><span>Creative</span><i /><span>Web systems</span><i /><span>Growth operations</span>
@@ -344,7 +362,7 @@ export default function App() {
 
         <AlignSignalTicker />
 
-        <section className="operator-section">
+        <section className="operator-section" data-section-pop data-chapter="STRATEGY">
           <div className="operator-manifesto" data-reveal>
             <p>One flagship body of work.</p>
             <h2>Set the strategy.<br />Execute the system.<br /><em>Prove what moved.</em></h2>
@@ -356,7 +374,7 @@ export default function App() {
           </div>
         </section>
 
-        <section className="align-section" id="align">
+        <section className="align-section" id="align" data-section-pop data-chapter="ALIGN">
           <div className="align-sticky">
             <div className="align-heading" data-reveal>
               <p>01 // Flagship body of work</p>
@@ -459,7 +477,7 @@ export default function App() {
         <VideoTheater />
         <DocumentVault />
 
-        <section className="contact-section" id="contact">
+        <section className="contact-section" id="contact" data-section-pop data-chapter="OPEN">
           <div className="contact-signal" aria-hidden="true">
             <img className="brand-logo--chrome" src="/brand/immohrtal-logo.png" alt="" />
             <i /><i /><i />

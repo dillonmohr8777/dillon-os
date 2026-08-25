@@ -2,7 +2,7 @@
 version: 1
 slug: "index-html"
 primary_target: "index.html"
-related_targets: ["src/App.tsx"]
+related_targets: ["src/App.tsx", "src/components/HeroProofSequence.tsx", "src/styles.css"]
 ---
 
 ## Scope and mode
@@ -15,7 +15,11 @@ Recruiters, hiring leaders, executives, and collaborators must understand Dillon
 
 ## Chosen direction and memorable moment
 
-Signal Foundry preserved as a faithful mirror of the live primary portfolio. The full-height WebGL spine and sampled IMMOHRTAL particle mark remain the spatial backbone. The mark disperses into a persistent spine guiding visitors through an Align HCM flagship chamber, a liquid-glass Google AI Overviews proof surface, eight major operating capabilities, Align-only live systems, a video theater, a public proof vault, and a decisive role-focused close.
+Signal Foundry remains the spatial backbone, but the hero now makes the promise explicit: "I did this for" resolves into the sampled Align HCM mark, "I can do it for" bridges the proof, and the field resolves permanently into "YOU." The small authoritative IMMOHRTAL lockup stays in navigation instead of competing with the work. Oversized outlined chapter signals and more dimensional reveals give every major section an unmistakable entrance while the Align HCM flagship chamber, liquid-glass Google AI Overviews proof surface, eight operating capabilities, live systems, video theater, public proof vault, and role-focused close remain the evidence sequence.
+
+## Surface-specific design-system exceptions
+
+The responsive particle phrases, the final particle-built "YOU," and the oversized outlined chapter words intentionally use display sizes outside the portable editorial ramp. They are experiential image masks and atmospheric section signals, not reusable text hierarchy. They retain the documented IMMOHRTAL Display and Foundry Display families, the existing palette, reduced-motion equivalence, and readable DOM announcements. The detector also reports legacy color, radius, type-ramp, side-accent, and blueprint-grid findings throughout the consolidated stylesheet; those predate this surface pass and are not waived as new system rules because repairing that repository-wide drift would be an unrelated DESIGN.md refresh.
 
 ## Unresolved decisions
 
