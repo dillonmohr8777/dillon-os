@@ -2,12 +2,12 @@
 note_type: project
 status: active
 created: 2026-08-24
-updated: 2026-08-24
+updated: 2026-08-25
 owner: Dillon Mohr
 area: business infrastructure
 priority: high
 outcome: IMMOHRTAL Marketing Solutions operates as a specialized AI-native web optimization studio with a proof-led homepage and governed prospect-to-draft agents.
-next_action: Review the daily prospect evidence and Gmail-ready drafts while the live site continues through bounded responsive and conversion QA.
+next_action: Begin approval-gated one-to-one outreach from the staged launch kit, using only verified prospect evidence and the most relevant live IMMOHRTAL page.
 review_on: 2026-08-31
 source_refs:
   - "[[immohrtal-marketing-site/PRODUCT]]"
@@ -17,7 +17,9 @@ source_refs:
   - "immohrtal-marketing-site/src/styles.css"
   - "immohrtal-marketing-site/src/components/ClientParticleSequence.tsx"
   - "https://dillon-mohr-primary-portfolio.netlify.app"
-  - "https://themohrmedia.com"
+  - "https://www.immohrtalmarketing.com"
+  - "immohrtal-marketing-site/research/SEO_KEYWORD_MAP_2026-08-25.csv"
+  - "immohrtal-marketing-site/research/outreach/README.md"
 tags:
   - brain
   - project
@@ -57,9 +59,22 @@ business.
 
 ## Live responsive baseline
 
-`themohrmedia.com` is the verified public IMMOHRTAL destination. The mobile
+`www.immohrtalmarketing.com` is the verified canonical public IMMOHRTAL destination. The apex
+redirects to `www` in one permanent hop. Both former MOHR MEDIA hostnames preserve paths and
+redirect permanently to the matching IMMOHRTAL route. The mobile
 baseline supports 320, 390, 430, and 768 pixel viewports without accidental
 page overflow. Wide particle logos use a narrow-screen camera fit, portfolio
 cards remain inside the viewport, proof strips wrap instead of clipping, and
 the animated operating windows stop drifting on phone-sized screens. Preserve
 these behaviors in future homepage changes.
+
+## 2026-08-25 production launch receipt
+
+- Production commit: `952dc39e` on `codex/immohrtal-marketing-solutions-20260824`
+- Host: Vercel project `mohr-media-site` under `dillonmohr-2940s-projects`
+- Canonical origin: `https://www.immohrtalmarketing.com`
+- Published surface: 23 routes, including seven service lanes and ten guides
+- Editorial authority: 40 visible FAQ pairs, 40 validated internal links, and 40 academic citations across the ten guides
+- Demand map: 200 unique SEMrush US queries assigned to commercial and editorial routes
+- Live QA: 23 of 23 routes passed status, canonical, sitemap, console, overflow, keyboard, focus, reduced-motion, asset, and no-WebGL checks
+- Outreach: staged only; six first-touch drafts and the segment-to-page routing map exist under `immohrtal-marketing-site/research/outreach/`; messages sent remains zero until exact recipient approval
