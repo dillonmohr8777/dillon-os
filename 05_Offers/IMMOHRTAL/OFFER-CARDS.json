@@ -1,0 +1,512 @@
+{
+  "schema_version": "1.0.0",
+  "workflow_id": "IMMOHRTAL-DAY1-20260825",
+  "step_id": "OFFERS",
+  "brand": "IMMOHRTAL Marketing Solutions",
+  "status": "internal_day_1_launch_pricing",
+  "public": false,
+  "historical_customer_pricing": false,
+  "currency": "USD",
+  "pricing_note": "Recommended internal launch prices only. These figures are not evidence of what any current or former customer paid and are not approved for publication.",
+  "economic_model": {
+    "loaded_delivery_hour_usd": 70,
+    "gross_margin_formula": "(price - assumed_delivery_labor - direct_expenses) / price",
+    "excluded_from_gross_margin": [
+      "sales time",
+      "general overhead",
+      "taxes",
+      "founder profit distributions"
+    ]
+  },
+  "global_guarantee_exclusions": [
+    "search rankings",
+    "indexing",
+    "AI answer inclusion or citations",
+    "traffic",
+    "leads",
+    "revenue",
+    "third-party platform behavior"
+  ],
+  "offers": [
+    {
+      "id": "live-website-decision-diagnostic",
+      "name": "Live Website Decision Diagnostic",
+      "category": "founder_led_front_door_diagnostic",
+      "website_service_lanes": [
+        "Website Optimization",
+        "Web Design",
+        "Technical SEO",
+        "AEO and GEO",
+        "Content and Schema",
+        "HubSpot and CRM Agents"
+      ],
+      "website_routes": [
+        "/web-design-optimization/",
+        "/web-design/",
+        "/technical-seo/",
+        "/aeo-geo/",
+        "/content-schema/",
+        "/hubspot-crm-agents/"
+      ],
+      "pricing": {
+        "model": "fixed",
+        "starting_price_usd": 950,
+        "maximum_price_usd": 950,
+        "public": false
+      },
+      "delivery": {
+        "window_business_days": 5,
+        "assumed_delivery_hours": {
+          "minimum": 7,
+          "maximum": 7
+        },
+        "founder_hours_cap": 7,
+        "direct_expense_cap_usd": 50,
+        "planning_delivery_cost_usd": 540,
+        "planning_gross_margin_percent": 43.2
+      },
+      "scope": [
+        "Kickoff questionnaire and one 30-minute decision call",
+        "Review homepage, one primary service path, contact path, and representative mobile behavior",
+        "Three to five prioritized and reproducible findings",
+        "Source-located decision brief with sequenced recommendation",
+        "One 30-minute readout and one written clarification round"
+      ],
+      "exclusions": [
+        "Production implementation",
+        "Design concepts",
+        "Full-site crawl for a large site",
+        "Full copywriting",
+        "Analytics or CRM configuration",
+        "Paid-media review",
+        "Legal or accessibility certification",
+        "Unlimited consulting"
+      ],
+      "client_inputs": [
+        "Live website and safe staging URL if applicable",
+        "Primary service or decision path",
+        "One business goal and one known constraint",
+        "One authorized decision maker",
+        "Optional read-only analytics or Search Console access when measurement is in scope"
+      ],
+      "acceptance_criteria": [
+        "Every inspected URL is named",
+        "Every material finding is reproducible or labeled as a hypothesis",
+        "Findings are prioritized",
+        "Recommendation distinguishes repair, rebuild, visibility, content, CRM, and workflow work",
+        "No unsupported performance or ranking/citation claim appears"
+      ],
+      "payment_milestones": [
+        {
+          "percent": 100,
+          "trigger": "booking"
+        }
+      ],
+      "upsell_paths": [
+        "website-optimization-sprint",
+        "distinctive-website-system",
+        "search-answer-visibility-program",
+        "bounded-business-agent-implementation"
+      ],
+      "capacity_rule": "Maximum three diagnostic starts per week; no free custom audit and no implementation inside the diagnostic."
+    },
+    {
+      "id": "website-optimization-sprint",
+      "name": "Website Optimization Sprint",
+      "category": "optimization_sprint",
+      "website_service_lanes": [
+        "Website Optimization",
+        "Technical SEO",
+        "Content and Schema"
+      ],
+      "website_routes": [
+        "/web-design-optimization/",
+        "/technical-seo/",
+        "/content-schema/"
+      ],
+      "pricing": {
+        "model": "fixed_range",
+        "starting_price_usd": 4500,
+        "maximum_price_usd": 7500,
+        "public": false
+      },
+      "delivery": {
+        "window_business_days": {
+          "minimum": 10,
+          "maximum": 15
+        },
+        "assumed_delivery_hours": {
+          "minimum": 32,
+          "maximum": 50
+        },
+        "direct_expense_usd": {
+          "minimum": 150,
+          "maximum": 300
+        },
+        "planning_delivery_cost_usd": {
+          "minimum": 2390,
+          "maximum": 3800
+        },
+        "planning_gross_margin_percent": {
+          "minimum": 47.0,
+          "maximum": 49.3
+        }
+      },
+      "scope": [
+        "Confirmed baseline and prioritized sprint backlog",
+        "Up to five agreed repairs across no more than five representative public routes or one shared template family",
+        "One staging review and one consolidated revision round",
+        "Production release to the verified existing host",
+        "Desktop, mobile, and live verification with before-and-after evidence"
+      ],
+      "exclusions": [
+        "New brand identity",
+        "Complete redesign",
+        "Unlimited pages or revisions",
+        "New CMS",
+        "Full copywriting",
+        "Ecommerce or custom application logic",
+        "CRM rebuild",
+        "Paid media",
+        "Ongoing SEO",
+        "Third-party subscriptions"
+      ],
+      "client_inputs": [
+        "Repository or CMS access and hosting access",
+        "Approved backup or recovery path",
+        "Current brand assets and source copy",
+        "Analytics definitions when measurement is included",
+        "One authorized approver with consolidated feedback"
+      ],
+      "acceptance_criteria": [
+        "Every agreed repair has a pass/fail check and before-state locator",
+        "Project tests and production build pass where available",
+        "Agreed desktop and mobile routes have no change-related blocking overflow or console error",
+        "Keyboard, focus, and reduced motion are checked where affected",
+        "Affected live routes, metadata, links, and forms are verified after release",
+        "Remaining issues are labeled deferred, blocked, or out of scope"
+      ],
+      "payment_milestones": [
+        {
+          "percent": 60,
+          "trigger": "booking"
+        },
+        {
+          "percent": 40,
+          "trigger": "before_production_release"
+        }
+      ],
+      "upsell_paths": [
+        "distinctive-website-system",
+        "search-answer-visibility-program"
+      ],
+      "capacity_rule": "Maximum two active optimization sprints; one route set and one prioritized backlog per sprint."
+    },
+    {
+      "id": "distinctive-website-system",
+      "name": "Distinctive Website System",
+      "category": "full_website_system",
+      "website_service_lanes": [
+        "Web Design",
+        "Website Optimization",
+        "Technical SEO",
+        "Content and Schema",
+        "HubSpot and CRM Agents"
+      ],
+      "website_routes": [
+        "/web-design/",
+        "/web-design-optimization/",
+        "/technical-seo/",
+        "/content-schema/",
+        "/hubspot-crm-agents/",
+        "/work/"
+      ],
+      "pricing": {
+        "model": "fixed_range",
+        "starting_price_usd": 18000,
+        "maximum_price_usd": 32000,
+        "public": false
+      },
+      "delivery": {
+        "window_weeks": {
+          "minimum": 8,
+          "maximum": 12
+        },
+        "assumed_delivery_hours": {
+          "minimum": 120,
+          "maximum": 210
+        },
+        "founder_hours_range": {
+          "minimum": 30,
+          "maximum": 50
+        },
+        "direct_expense_usd": {
+          "minimum": 800,
+          "maximum": 1500
+        },
+        "planning_delivery_cost_usd": {
+          "minimum": 9200,
+          "maximum": 16200
+        },
+        "planning_gross_margin_percent": {
+          "minimum": 48.9,
+          "maximum": 49.4
+        }
+      },
+      "scope": [
+        "Product and positioning brief for one primary audience and decision path",
+        "One committed visual direction and documented design system",
+        "Up to eight core public pages using up to four reusable page templates",
+        "Responsive production build in the agreed web stack",
+        "Client-supplied copy editing plus source-backed net-new copy for included core pages",
+        "Metadata, canonicals, sitemap, robots controls, internal links, and supported schema",
+        "One contact path, analytics event plan, included redirect map, and verified release",
+        "Two consolidated review rounds"
+      ],
+      "exclusions": [
+        "Unlimited pages or revisions",
+        "Brand strategy beyond the web system",
+        "Logo design unless named",
+        "Photography or video production",
+        "Ecommerce, memberships, or complex web applications",
+        "Third-party fees",
+        "Legal or privacy drafting",
+        "Ongoing content",
+        "Guaranteed WCAG certification",
+        "Rankings, AI citations, or lead volume"
+      ],
+      "client_inputs": [
+        "One authorized decision maker and one source-of-truth content owner",
+        "Approved brand assets and factual service information",
+        "People, location, project proof, policy, and imagery-rights records",
+        "Existing domain, hosting, analytics, repository or CMS, and redirect context",
+        "Consolidated approval at direction and staging gates"
+      ],
+      "acceptance_criteria": [
+        "Included routes and templates match the signed page matrix",
+        "Approved content and assets are present without invented claims",
+        "Core content is available in meaningful HTML",
+        "Important routes have consistent metadata and canonical signals",
+        "Agreed responsive, keyboard, focus, reduced-motion, overflow, media, form, and console checks pass",
+        "Redirects and affected live routes are verified on the mapped production host",
+        "Known exclusions and third-party limitations are recorded"
+      ],
+      "payment_milestones": [
+        {
+          "percent": 40,
+          "trigger": "booking"
+        },
+        {
+          "percent": 30,
+          "trigger": "approved_visual_direction"
+        },
+        {
+          "percent": 20,
+          "trigger": "staging_acceptance"
+        },
+        {
+          "percent": 10,
+          "trigger": "before_production_release"
+        }
+      ],
+      "upsell_paths": [
+        "website-optimization-sprint",
+        "search-answer-visibility-program",
+        "bounded-business-agent-implementation"
+      ],
+      "capacity_rule": "One active full website build; additional sold work must enter a dated queue."
+    },
+    {
+      "id": "search-answer-visibility-program",
+      "name": "Search and Answer Visibility Program",
+      "category": "recurring_aeo_geo_search",
+      "website_service_lanes": [
+        "AEO and GEO",
+        "Technical SEO",
+        "Content and Schema",
+        "Website Optimization"
+      ],
+      "website_routes": [
+        "/aeo-geo/",
+        "/technical-seo/",
+        "/content-schema/",
+        "/web-design-optimization/"
+      ],
+      "pricing": {
+        "model": "foundation_plus_monthly_range",
+        "foundation_fee_usd": 2000,
+        "monthly_starting_price_usd": 3500,
+        "monthly_maximum_price_usd": 6500,
+        "initial_term_months": 6,
+        "public": false
+      },
+      "delivery": {
+        "foundation_window_business_days": 15,
+        "monthly_assumed_delivery_hours": {
+          "minimum": 25,
+          "maximum": 45
+        },
+        "monthly_direct_expense_usd": {
+          "minimum": 200,
+          "maximum": 300
+        },
+        "monthly_planning_delivery_cost_usd": {
+          "minimum": 1950,
+          "maximum": 3450
+        },
+        "monthly_planning_gross_margin_percent": {
+          "minimum": 44.3,
+          "maximum": 46.9
+        }
+      },
+      "scope": [
+        "Foundation crawl, indexability, priority-question, entity, evidence, and measurement map",
+        "One focused service or topic cluster",
+        "At starting tier, up to two substantial new or revised source pages or one page plus two bounded technical/content repairs per month",
+        "Internal-link and supported-schema updates for changed routes",
+        "One dated visibility observation and monthly decision memo",
+        "One monthly working session and one consolidated revision round"
+      ],
+      "exclusions": [
+        "Guaranteed rankings, indexing, traffic, AI inclusion, or citations",
+        "PR or link buying",
+        "Review generation",
+        "Mass commodity articles",
+        "Unsupported schema",
+        "Paid media",
+        "Social publishing",
+        "Unlimited technical remediation",
+        "Website rebuild"
+      ],
+      "client_inputs": [
+        "Website, repository or CMS access",
+        "Search Console and analytics access when measurement is expected",
+        "Subject-matter reviewer and source documents",
+        "Accurate organization, service, people, location, credential, and proof facts",
+        "Monthly release approval within three business days"
+      ],
+      "acceptance_criteria": [
+        "Every changed page has a documented job and target question set",
+        "Claims are supported or explicitly labeled uncertain",
+        "Changed pages have crawlable content, intentional links, accurate facts, and supported schema",
+        "Monthly memo separates outputs, observations, and business outcomes",
+        "Production routes and changed technical signals are verified after release"
+      ],
+      "payment_milestones": [
+        {
+          "amount_type": "foundation_plus_first_month",
+          "trigger": "booking"
+        },
+        {
+          "amount_type": "monthly_fee",
+          "trigger": "monthly_in_advance"
+        }
+      ],
+      "upsell_paths": [
+        "website-optimization-sprint",
+        "distinctive-website-system",
+        "bounded-business-agent-implementation"
+      ],
+      "capacity_rule": "Maximum three launch programs; monthly units do not roll over."
+    },
+    {
+      "id": "bounded-business-agent-implementation",
+      "name": "Bounded Business Agent Implementation",
+      "category": "business_agent_implementation",
+      "website_service_lanes": [
+        "Business Agents",
+        "HubSpot and CRM Agents"
+      ],
+      "website_routes": [
+        "/business-agents/",
+        "/hubspot-crm-agents/"
+      ],
+      "pricing": {
+        "model": "fixed_range",
+        "starting_price_usd": 7500,
+        "maximum_price_usd": 15000,
+        "optional_managed_support_monthly_usd": {
+          "minimum": 1500,
+          "maximum": 3000
+        },
+        "public": false
+      },
+      "delivery": {
+        "window_weeks": {
+          "minimum": 4,
+          "maximum": 6
+        },
+        "assumed_delivery_hours": {
+          "minimum": 60,
+          "maximum": 115
+        },
+        "direct_expense_usd": {
+          "minimum": 300,
+          "maximum": 600
+        },
+        "planning_delivery_cost_usd": {
+          "minimum": 4500,
+          "maximum": 8650
+        },
+        "planning_gross_margin_percent": {
+          "minimum": 40.0,
+          "maximum": 42.3
+        }
+      },
+      "scope": [
+        "Workflow discovery and written worker contract",
+        "One workflow in one environment with one owner and one primary integration or data source",
+        "Read-only, inspection, classification, or draft/staging authority first",
+        "Validation, duplicate/retry handling, failure states, logs/receipts, and human review path",
+        "Test fixtures, acceptance run, operator guide, and one training session",
+        "Thirty calendar days of defect support for the agreed workflow"
+      ],
+      "exclusions": [
+        "Autonomous sending or public publishing",
+        "Spend or destructive actions",
+        "Ambiguous CRM writes",
+        "Credentials stored in project files",
+        "Bypassing MFA, CAPTCHA, or passkeys",
+        "Broad multi-agent transformation",
+        "24/7 managed operations",
+        "Model or API usage fees",
+        "Unsupported integrations",
+        "Guaranteed labor savings"
+      ],
+      "client_inputs": [
+        "Named workflow owner and reviewer",
+        "Current process and representative non-sensitive examples",
+        "Expected output, failure examples, and baseline review time when available",
+        "Approved account, environment, least-privilege access route, and retention rules",
+        "Timely review of staged outputs"
+      ],
+      "acceptance_criteria": [
+        "Worker stays inside the agreed trigger, account/client boundary, sources, and actions",
+        "At least three representative fixtures and one failure fixture produce documented status and receipt",
+        "Duplicate and retry behavior is deterministic for accepted cases",
+        "Missing access, ambiguous routing, unsupported claims, and consequential actions fail closed or pause",
+        "Operator can inspect what the worker used, prepared, changed, or refused",
+        "Activation does not exceed signed authority; draft/read-only acceptance is valid completion"
+      ],
+      "payment_milestones": [
+        {
+          "percent": 50,
+          "trigger": "booking"
+        },
+        {
+          "percent": 30,
+          "trigger": "safe_mode_demonstration"
+        },
+        {
+          "percent": 20,
+          "trigger": "acceptance"
+        }
+      ],
+      "upsell_paths": [
+        "managed_reliability_support",
+        "separately_qualified_second_workflow"
+      ],
+      "capacity_rule": "One active implementation; one workflow only; consequential authority is never bundled."
+    }
+  ]
+}

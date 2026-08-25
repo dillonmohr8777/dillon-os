@@ -11,6 +11,15 @@ const routeSet = new Set(expectedRoutes)
 const errors = []
 const warnings = []
 const pageReports = []
+const expectedMonthlyPrices = [
+  { id: 'technical-seo', name: 'Technical SEO', price: '700' },
+  { id: 'aeo', name: 'AEO', price: '700' },
+  { id: 'geo', name: 'GEO', price: '700' },
+  { id: 'search-visibility-bundle', name: 'Technical SEO + AEO + GEO', price: '1500' },
+  { id: 'google-ads-management', name: 'Google Ads management', price: '400' },
+  { id: 'meta-ads-management', name: 'Meta Ads management', price: '400' },
+  { id: 'paid-media-bundle', name: 'Google + Meta Ads management', price: '650' },
+]
 
 const academicHosts = [
   'aclanthology.org',
@@ -111,8 +120,8 @@ const validateLinks = (html, route, canonical) => {
   }
 }
 
-if (expectedRoutes.length !== 23 || routeSet.size !== 23) {
-  errors.push(`route inventory must contain 23 unique pages; found ${expectedRoutes.length} total and ${routeSet.size} unique`)
+if (expectedRoutes.length !== 24 || routeSet.size !== 24) {
+  errors.push(`route inventory must contain 24 unique pages; found ${expectedRoutes.length} total and ${routeSet.size} unique`)
 }
 
 const seenTitles = new Map()
@@ -131,6 +140,8 @@ for (const route of expectedRoutes) {
   const types = schemaTypes(html, route)
 
   if (/themohrmedia\.com|\bMohr Media\b/i.test(html)) addError(route, 'contains stale Mohr Media domain or brand text')
+  if (/dillonmohr8777@gmail\.com/i.test(html)) addError(route, 'contains the retired personal Gmail address')
+  if (route !== '/' && !html.includes('dillon@immohrtalmarketing.com')) addError(route, 'missing the verified IMMOHRTAL business email in Organization data')
   if (canonical !== expectedCanonical) addError(route, `canonical is ${canonical || 'missing'}; expected ${expectedCanonical}`)
   if (metaContent(html, 'property', 'og:url') !== expectedCanonical) addError(route, 'og:url does not match canonical')
   if (metaContent(html, 'property', 'og:title') !== title) addError(route, 'og:title does not match the page title')
@@ -155,6 +166,29 @@ for (const route of expectedRoutes) {
 
   const corePage = corePages.find((page) => page.path === route)
   if (corePage?.pageKind === 'service' && !types.has('Service')) addError(route, 'service page is missing Service schema')
+  if (corePage?.pageKind === 'pricing') {
+    if (!types.has('OfferCatalog')) addError(route, 'pricing page is missing OfferCatalog schema')
+    const schemaScripts = html.match(/<script\b[^>]*type=["']application\/ld\+json["'][^>]*>[\s\S]*?<\/script>/gi) || []
+    const schemaNodes = schemaScripts.flatMap((script) => {
+      try {
+        const data = JSON.parse(script.replace(/^<script\b[^>]*>/i, '').replace(/<\/script>$/i, '').trim())
+        return data['@graph'] || [data]
+      } catch {
+        return []
+      }
+    })
+    const catalog = schemaNodes.find((node) => node?.['@type'] === 'OfferCatalog')
+    const offers = Array.isArray(catalog?.itemListElement) ? catalog.itemListElement : []
+    if (offers.length !== expectedMonthlyPrices.length) addError(route, `OfferCatalog contains ${offers.length} offers; expected ${expectedMonthlyPrices.length}`)
+    for (const expected of expectedMonthlyPrices) {
+      const offer = offers.find((item) => item?.name === expected.name)
+      if (!offer) addError(route, `OfferCatalog is missing ${expected.name}`)
+      else if (String(offer.price) !== expected.price || offer.priceCurrency !== 'USD') addError(route, `${expected.name} schema price must be USD ${expected.price}`)
+      const formattedPrice = Number(expected.price).toLocaleString('en-US')
+      if (!html.includes(`id="${expected.id}"`) || !html.includes(`>${`$${formattedPrice}`}<`)) addError(route, `${expected.name} visible monthly price is missing or incorrect`)
+    }
+    if (/[\u2013\u2014]/u.test(html)) addError(route, 'pricing page contains a forbidden en dash or em dash')
+  }
   if (corePage?.schema === 'profile' && (!types.has('ProfilePage') || !types.has('Person'))) addError(route, 'about page is missing ProfilePage or Person schema')
   const article = articles.find((item) => `/insights/${item.slug}/` === route)
   if (article?.faqs?.length && !types.has('FAQPage')) addError(route, 'visible FAQs are missing FAQPage schema')
@@ -193,7 +227,7 @@ for (const article of articles) {
 const sitemap = fileText(path.join(publicDir, 'sitemap.xml'))
 const sitemapUrls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1])
 const expectedUrls = expectedRoutes.map((route) => new URL(route, site.origin).toString())
-if (JSON.stringify([...sitemapUrls].sort()) !== JSON.stringify([...expectedUrls].sort())) errors.push('sitemap.xml does not contain the exact 23-route canonical set')
+if (JSON.stringify([...sitemapUrls].sort()) !== JSON.stringify([...expectedUrls].sort())) errors.push('sitemap.xml does not contain the exact 24-route canonical set')
 if (/themohrmedia\.com/i.test(sitemap)) errors.push('sitemap.xml contains the stale domain')
 
 const robots = fileText(path.join(publicDir, 'robots.txt'))
@@ -210,10 +244,12 @@ for (const article of articles) {
 }
 if (!feed.includes(`<atom:link href="${site.origin}/feed.xml"`)) errors.push('feed.xml self link does not use the canonical domain')
 if (/themohrmedia\.com/i.test(feed)) errors.push('feed.xml contains the stale domain')
+if (/dillonmohr8777@gmail\.com/i.test(feed) || !feed.includes(site.email)) errors.push('feed.xml does not use the verified IMMOHRTAL business email')
 
 const llms = fileText(path.join(publicDir, 'llms.txt'))
 for (const url of expectedUrls) if (!llms.includes(url)) errors.push(`llms.txt is missing ${url}`)
 if (/themohrmedia\.com/i.test(llms)) errors.push('llms.txt contains the stale domain')
+if (/dillonmohr8777@gmail\.com/i.test(llms) || !llms.includes(site.email)) errors.push('llms.txt does not use the verified IMMOHRTAL business email')
 
 const result = {
   ok: errors.length === 0,

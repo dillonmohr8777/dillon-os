@@ -1,0 +1,605 @@
+{
+  "schema_version": "3.0.0",
+  "workflow_id": "IMMOHRTAL-DAY1-20260825",
+  "step_id": "OPS",
+  "as_of": "2026-08-25",
+  "timezone": "America/New_York",
+  "company": {
+    "name": "IMMOHRTAL Marketing Solutions",
+    "owner": "Dillon Mohr",
+    "orchestrator": "Codex Marketing Chief",
+    "orchestrator_is_counted_subordinate_seat": false,
+    "canonical_origin": "https://www.immohrtalmarketing.com",
+    "positioning": "Website and AI implementation studio",
+    "operating_environment": "Codex"
+  },
+  "organizational_separation": {
+    "internal_subordinate_seat_count": 5,
+    "internal_roster_source": "11_Agents/IMMOHRTAL Business Crew/CREW.json",
+    "client_facing_specialist_crew": "Scout, Atlas, Forge, Relay, and Proof",
+    "specialist_crew_runs_the_company": false,
+    "external_platform_handoff_required": false,
+    "single_operating_surface": "Codex"
+  },
+  "legal_posture": {
+    "roles_are_codex_internal_job_seats": true,
+    "roles_are_legal_employees": false,
+    "roles_can_bind_company": false,
+    "roles_can_sign_or_accept_terms": false,
+    "roles_can_hire_or_purchase": false,
+    "human_authority": "Dillon Mohr",
+    "secret_material_allowed_in_artifacts": false
+  },
+  "scope": {
+    "internal_workforce_build": true,
+    "external_actions": false,
+    "provider_side_message_drafts": false,
+    "messages_or_posts": false,
+    "publishing_or_deployment": false,
+    "spend_or_purchase": false,
+    "hiring_or_contracting": false,
+    "crm_or_account_mutation": false,
+    "scheduled_or_external_runtime": false,
+    "truth_note": "This local office runner cannot mutate provider drafts or schedules. Current Gmail draft and Codex heartbeat receipts are read-only operating evidence."
+  },
+  "current_evidence": {
+    "existing_runtime_kind": "client_service_crew_prospect_preparation_subworkflow",
+    "source_run_id": "20260825-081000",
+    "source_run_status": "complete",
+    "source_run_mode": "local_draft_only",
+    "prepared_candidate_records": 25,
+    "concepts_live_verified_in_recorded_run": 25,
+    "runtime_awaiting_approval": 25,
+    "priority_draft_only_rows": 5,
+    "gmail_drafts_created": 5,
+    "gmail_drafts_directly_read_back": 5,
+    "gmail_drafts_compliance_blocked": 5,
+    "newly_internal_qa_verified_accounts": 0,
+    "external_messages_sent": 0,
+    "replies": 0,
+    "meetings_booked": 0,
+    "proposals_sent": 0,
+    "closed_won": 0,
+    "verified_new_revenue_usd": 0,
+    "new_hires_or_purchases": 0,
+    "truth_note": "The 25-record run and five priority rows are preparation counts, not qualified opportunities or commercial outcomes. Five exact Gmail drafts exist and remain unsent under compliance hold."
+  },
+  "orchestrator": {
+    "title": "Codex Marketing Chief",
+    "counted_as_subordinate_seat": false,
+    "accountability": "Set the single revenue objective, assign board items and file ownership, resolve priorities, reconcile verified work, manage waiting approvals, and make the overall completion claim.",
+    "daily_sla": {
+      "clock_in_et": "08:30",
+      "chief_review_et": "16:15",
+      "closeout_et": "17:00"
+    }
+  },
+  "internal_business_workforce": [
+    {
+      "role_id": "operations_finance_controller",
+      "title": "Operations and Finance Controller",
+      "kind": "maker",
+      "reports_to": "Codex Marketing Chief",
+      "coverage": [
+        "company operations",
+        "finance and administration",
+        "capacity",
+        "approval control"
+      ],
+      "inputs": [
+        "Current command board",
+        "Verified financial artifacts",
+        "Offer and capacity files",
+        "Approval state",
+        "Commitments",
+        "Agent receipts"
+      ],
+      "outputs": [
+        "Board reconciliation",
+        "Capacity and workload ceiling",
+        "Approval queue",
+        "Verified workflow financial facts and unknowns",
+        "Closeout packet"
+      ],
+      "day_1_quota_sla": {
+        "crew_and_zero_baseline_check_due_et": "10:00",
+        "control_snapshot_due_et": "12:00",
+        "closeout_input_due_et": "17:00"
+      }
+    },
+    {
+      "role_id": "demand_intelligence_lead",
+      "title": "Demand Intelligence Lead",
+      "kind": "maker",
+      "reports_to": "Codex Marketing Chief",
+      "coverage": [
+        "market research",
+        "ideal-customer focus",
+        "demand evidence",
+        "prospect qualification research"
+      ],
+      "inputs": [
+        "Target wedge and qualification rules",
+        "Approved prospect sources",
+        "Suppression, dedupe, and prior-touch evidence",
+        "Current public sites",
+        "IMMOHRTAL service, proof, keyword, and offer files"
+      ],
+      "outputs": [
+        "Reconciled candidate ledger",
+        "Source-backed evidence packet per accepted account",
+        "One selected market wedge",
+        "Block records for stale, ambiguous, duplicate, suppressed, or weak candidates"
+      ],
+      "day_1_quota_sla": {
+        "prepared_records_to_reconcile": 25,
+        "priority_rows_to_reconcile": 5,
+        "evidence_qualified_accounts_ceiling": 5,
+        "reconciliation_due_et": "11:30",
+        "wedge_and_accounts_due_et": "13:00",
+        "newly_verified_baseline": 0
+      },
+      "client_specialists_available": [
+        "Scout",
+        "Atlas"
+      ]
+    },
+    {
+      "role_id": "revenue_pipeline_manager",
+      "title": "Revenue Pipeline Manager",
+      "kind": "maker",
+      "reports_to": "Codex Marketing Chief",
+      "coverage": [
+        "sales pipeline",
+        "qualification",
+        "offer routing",
+        "proposal preparation"
+      ],
+      "inputs": [
+        "QA-eligible demand packets",
+        "Qualification rules",
+        "Offer cards and internal price book",
+        "Capacity and proof",
+        "Existing interaction receipts when explicitly in scope"
+      ],
+      "outputs": [
+        "Opportunity record with buyer role, problem, evidence, fit, stage, offer, owner, next action, exit rule, and source freshness",
+        "Reconciled pipeline stage counts",
+        "Internal offer recommendation",
+        "Local draft-only sales artifacts when assigned"
+      ],
+      "day_1_quota_sla": {
+        "offer_reconciliation_due_et": "13:30",
+        "opportunity_records_due_et": "15:00",
+        "opportunity_records_target": "One per QA-eligible priority account",
+        "messages_sent": 0,
+        "proposals_sent": 0
+      },
+      "client_specialists_available": [
+        "Scout",
+        "Atlas",
+        "Forge",
+        "Relay",
+        "Proof"
+      ]
+    },
+    {
+      "role_id": "delivery_client_success_lead",
+      "title": "Delivery and Client Success Lead",
+      "kind": "maker",
+      "reports_to": "Codex Marketing Chief",
+      "coverage": [
+        "delivery",
+        "scope control",
+        "acceptance",
+        "client success",
+        "capacity readiness"
+      ],
+      "inputs": [
+        "Qualified opportunities and approved scopes",
+        "Offer capacity and acceptance rules",
+        "Canonical client and project routes",
+        "Current commitments and source materials",
+        "Approvals, tests, and live receipts"
+      ],
+      "outputs": [
+        "Fulfillment-readiness check",
+        "Delivery plan",
+        "Daily client-success view",
+        "Proof-asset record with explicit does and does-not-prove fields"
+      ],
+      "day_1_quota_sla": {
+        "website_proof_asset_check_due_et": "12:30",
+        "selected_offer_readiness_due_et": "14:30",
+        "client_success_view_due_et": "16:00",
+        "new_engagements_entered_delivery": 0
+      },
+      "primary_dispatcher_for_client_specialists": true
+    },
+    {
+      "role_id": "quality_risk_auditor",
+      "title": "Independent Quality and Risk Auditor",
+      "kind": "checker",
+      "reports_to": "Codex Marketing Chief",
+      "independent_from": [
+        "operations_finance_controller",
+        "demand_intelligence_lead",
+        "revenue_pipeline_manager",
+        "delivery_client_success_lead"
+      ],
+      "coverage": [
+        "evidence",
+        "claims",
+        "routing",
+        "privacy",
+        "policy",
+        "release control"
+      ],
+      "inputs": [
+        "Immutable maker artifact and board item",
+        "Source locators and observation times",
+        "Expected acceptance criteria",
+        "Authority, isolation, privacy, suppression, claims, and policy rules"
+      ],
+      "outputs": [
+        "PASS or FAIL receipt",
+        "Checks and findings",
+        "Defect owner and required correction",
+        "Retest condition",
+        "Bounded release recommendation",
+        "Daily risk summary"
+      ],
+      "day_1_quota_sla": {
+        "release_artifact_review_pct": 100,
+        "priority_demand_and_revenue_audit_due_et": "16:15",
+        "crew_and_board_audit_due_et": "16:30",
+        "audits_completed_baseline": 0,
+        "sampling_allowed": false,
+        "silent_repair_allowed": false
+      },
+      "may_use_public_proof_for_client_deliverables": true
+    }
+  ],
+  "client_facing_specialist_crew": [
+    {
+      "name": "Scout",
+      "job": "Website detective",
+      "invoked_by": [
+        "Demand Intelligence Lead",
+        "Delivery and Client Success Lead"
+      ],
+      "receipt": "Current source-backed website check",
+      "does_not_own": [
+        "Internal company board",
+        "Revenue pipeline",
+        "External communication"
+      ]
+    },
+    {
+      "name": "Atlas",
+      "job": "Search and AI visibility",
+      "invoked_by": [
+        "Demand Intelligence Lead",
+        "Revenue Pipeline Manager",
+        "Delivery and Client Success Lead"
+      ],
+      "receipt": "Question map, page plan, visibility scorecard, sources, and unknowns",
+      "does_not_own": [
+        "Internal company quota",
+        "Offer approval",
+        "External communication"
+      ]
+    },
+    {
+      "name": "Forge",
+      "job": "Website builder",
+      "invoked_by": [
+        "Revenue Pipeline Manager",
+        "Delivery and Client Success Lead"
+      ],
+      "receipt": "Working build or components plus browser and build verification",
+      "does_not_own": [
+        "Contracting",
+        "Pricing",
+        "Publication authority"
+      ]
+    },
+    {
+      "name": "Relay",
+      "job": "Systems connector",
+      "invoked_by": [
+        "Revenue Pipeline Manager",
+        "Delivery and Client Success Lead"
+      ],
+      "receipt": "Workflow, routing rules, approval points, and execution receipt",
+      "does_not_own": [
+        "Company outreach",
+        "CRM ownership",
+        "Communications policy"
+      ]
+    },
+    {
+      "name": "Proof",
+      "job": "Client-deliverable checker",
+      "invoked_by": [
+        "Delivery and Client Success Lead",
+        "Independent Quality and Risk Auditor"
+      ],
+      "receipt": "Independent client-work QA receipt",
+      "does_not_own": [
+        "Internal business audit",
+        "External-action authority",
+        "Canonical company truth"
+      ]
+    }
+  ],
+  "board": {
+    "required_fields": [
+      "item_id",
+      "objective",
+      "owner_role_id",
+      "due_at",
+      "status",
+      "inputs",
+      "exact_output",
+      "evidence_required",
+      "artifact_locator",
+      "checker_role_id",
+      "blocker",
+      "next_action",
+      "updated_at"
+    ],
+    "primary_states": [
+      "INBOX",
+      "TRIAGED",
+      "ASSIGNED",
+      "IN_PROGRESS",
+      "READY_FOR_REVIEW",
+      "VERIFIED",
+      "DONE"
+    ],
+    "exception_states": [
+      "BLOCKED",
+      "WAITING_APPROVAL",
+      "FAILED_QA",
+      "DEFERRED",
+      "CANCELLED"
+    ],
+    "done_definition": "The exact internal output exists, evidence is attached, the independent checker verified it when required, and the state does not imply an external action."
+  },
+  "office_reporting": {
+    "implementation_state": "built",
+    "configuration_state": "configured",
+    "background_runtime_state": "not_verified_running",
+    "schedule_state": "codex_heartbeat_active_office_manifest_not_installed",
+    "codex_heartbeat": {
+      "id": "immohrtal-daily-business-clock-in",
+      "status": "active",
+      "cadence": "daily at 08:30 America/New_York",
+      "verified_at": "2026-08-25T16:24:08-04:00",
+      "truth_rule": "The active Codex heartbeat can wake the governed operating loop. It does not prove that all five seats run continuously between wakeups."
+    },
+    "entrypoint": "automation/immohrtal-agency/ops/Run-ImmohrtalOfficeDaily.ps1",
+    "runbook": "automation/immohrtal-agency/ops/DAILY-REPORT-RUNBOOK.md",
+    "manifest": "automation/immohrtal-agency/ops/office-daily.manifest.json",
+    "default_mode": "both",
+    "dry_run_required": true,
+    "inputs": [
+      "11_Agents/IMMOHRTAL Business Crew/CREW.json",
+      "11_Agents/IMMOHRTAL Business Crew/DAY-1-COMMAND-BOARD.md",
+      "automation/immohrtal-agency/ops/DAY-1-SCORECARD.json",
+      "latest usable automation/immohrtal-agency/runs/*/run-receipt.json"
+    ],
+    "outputs": [
+      "run-receipt.json",
+      "office-report.json",
+      "office-report.md",
+      "office-dashboard.html"
+    ],
+    "truth_rule": "A complete receipt proves one local report invocation. It does not prove persistent employee runtime, a background service, or a scheduled task."
+  },
+  "daily_cadence": [
+    {
+      "time_et": "08:30",
+      "owner": "Codex Marketing Chief",
+      "event": "Clock in",
+      "output": "Revenue objective, offer and segment or unknown, current inputs, work in progress, blocker, approvals, capacity, zero-baseline counts, and assignments."
+    },
+    {
+      "time_et": "08:40",
+      "owner": "Operations and Finance Controller",
+      "event": "Control desk",
+      "output": "Board, capacity, finance facts and unknowns, approvals, and administrative prerequisites reconciled."
+    },
+    {
+      "time_et": "09:00",
+      "owner": "Demand Intelligence Lead",
+      "event": "Demand block",
+      "output": "Twenty-five prepared records reconciled to five priority rows; one wedge and up to five evidence-qualified accounts."
+    },
+    {
+      "time_et": "11:00",
+      "owner": "Revenue Pipeline Manager",
+      "event": "Revenue block",
+      "output": "Qualified internal opportunities, smallest sufficient offers, stages, next actions, exit rules, and draft-only artifacts when assigned."
+    },
+    {
+      "time_et": "13:00",
+      "owner": "Delivery and Client Success Lead",
+      "event": "Delivery and success block",
+      "output": "Capacity, scope, inputs, exclusions, acceptance, QA, and current work truth."
+    },
+    {
+      "time_et": "15:00",
+      "owner": "Independent Quality and Risk Auditor",
+      "event": "Independent audit",
+      "output": "PASS or FAIL receipts for 100% of Day 1 release artifacts."
+    },
+    {
+      "time_et": "16:15",
+      "owner": "Codex Marketing Chief",
+      "event": "Chief review",
+      "output": "Verified internal items closed, defects returned, consequential actions held for exact approval, and ambiguous work stopped."
+    },
+    {
+      "time_et": "17:00",
+      "owner": "Operations and Finance Controller with Codex verification",
+      "event": "Close out",
+      "output": "Board counts, artifacts, QA, commercial zeros, finance facts or unknowns, blockers, decisions, oldest item, tomorrow's first revenue action, and correction."
+    }
+  ],
+  "kpis": {
+    "preparation": {
+      "prepared_candidate_records": 25,
+      "priority_draft_only_rows": 5,
+      "gmail_drafts_created": 5,
+      "gmail_drafts_compliance_blocked": 5,
+      "newly_qa_verified_accounts": 0,
+      "internal_opportunity_records": 0,
+      "workforce_audits_completed": 0,
+      "source_freshness_pct": null
+    },
+    "workflow_outcomes": {
+      "messages_sent": 0,
+      "replies": 0,
+      "meetings_booked": 0,
+      "proposals_sent": 0,
+      "closed_won": 0,
+      "verified_new_revenue_usd": 0,
+      "new_hires_or_purchases": 0
+    },
+    "business_finance_unknown_until_reconciled": {
+      "business_revenue_usd": null,
+      "business_cost_usd": null,
+      "cash_usd": null,
+      "cac_usd": null,
+      "ltv_usd": null,
+      "gross_margin_pct": null,
+      "forecast_accuracy_pct": null,
+      "reason": "Workflow-specific new outcomes begin at zero. Missing business-wide finance data remains unknown, not zero."
+    }
+  },
+  "authority": {
+    "current_exact_authority_used": "Create and read back the five reviewed unsent Gmail drafts requested on 2026-08-25. No send authority was granted.",
+    "internally_allowed": [
+      "Read in-scope local files and public evidence",
+      "Research and analyze",
+      "Draft and test local artifacts",
+      "Update assigned internal board items",
+      "Prepare exact approval previews"
+    ],
+    "prohibited_without_separate_exact_authority": [
+      "Send or post any message",
+      "Create or modify a provider-side message draft",
+      "Publish or deploy",
+      "Spend or purchase",
+      "Hire or contract",
+      "Accept terms or sign",
+      "Mutate a CRM or client account",
+      "Change authentication, DNS, mailbox, or account settings",
+      "Start a scheduled or external runtime"
+    ]
+  },
+  "thirty_day_ramp": [
+    {
+      "period": "Days 1-3",
+      "objective": "Prove the five-seat internal workforce.",
+      "external_action_ceiling": 0,
+      "gate": "Crew and board parse, 25-versus-5 reconciliation, one wedge, up to five QA-eligible accounts, offer and capacity consistency."
+    },
+    {
+      "period": "Days 4-7",
+      "objective": "Stabilize the internal opportunity loop.",
+      "external_action_ceiling": "Set only under new exact authority",
+      "gate": "Each opportunity has owner, stage, next action, exit rule, source freshness, capacity, and audit receipt."
+    },
+    {
+      "period": "Days 8-14",
+      "objective": "Expand one evidence-backed wedge.",
+      "external_action_ceiling": "Set from separately authorized operational data",
+      "gate": "One clean week, 100% evidence and audit coverage, no unresolved routing or privacy defects."
+    },
+    {
+      "period": "Days 15-21",
+      "objective": "Add a second wedge only if delivery supports it.",
+      "external_action_ceiling": "Set after capacity review and separate authority",
+      "gate": "First wedge measurable; second offer has proof, scope, acceptance, and capacity."
+    },
+    {
+      "period": "Days 22-30",
+      "objective": "Approach sustainable company cadence.",
+      "preparation_ceiling_per_run": 25,
+      "gate": "Audit independence, delivery capacity, response SLAs, and finance/administrative controls remain healthy."
+    }
+  ],
+  "human_hiring_triggers": [
+    {
+      "capacity": "Outreach and business development coordinator",
+      "trigger": "More than 20 qualified accounts per day for 10 business days and an approval or response queue older than one business day.",
+      "evidence": "Board aging, qualified volume, response SLA, and defects.",
+      "decision_only": true
+    },
+    {
+      "capacity": "Senior web designer or developer",
+      "trigger": "More than two simultaneous paid builds or committed work above 40 hours per week for two weeks.",
+      "evidence": "Signed scopes, deadlines, and capacity plan.",
+      "decision_only": true
+    },
+    {
+      "capacity": "CRM or automation specialist",
+      "trigger": "More than two concurrent credentialed implementations or over eight supervised integration hours per week for four weeks.",
+      "evidence": "Scopes, access map, and incident load.",
+      "decision_only": true
+    },
+    {
+      "capacity": "Account or project manager",
+      "trigger": "Five active paying clients or coordination above 15 hours per week for four weeks.",
+      "evidence": "Active-contract ledger, meeting load, and response SLA.",
+      "decision_only": true
+    },
+    {
+      "capacity": "Finance or bookkeeping professional",
+      "trigger": "Before the first recurring close or when the first payment or contract requires invoicing, tax, or reconciliation setup.",
+      "evidence": "Private finance and contract facts.",
+      "decision_only": true
+    },
+    {
+      "capacity": "Qualified legal counsel",
+      "trigger": "Before standard terms, jurisdiction expansion, regulated data, or a material outreach-compliance decision.",
+      "evidence": "Documents, jurisdictions, data flow, and method.",
+      "decision_only": true
+    }
+  ],
+  "failure_policy": {
+    "stale_source_state": "BLOCKED",
+    "routing_conflict_state": "BLOCKED",
+    "qa_failure_state": "FAILED_QA",
+    "external_action_pending_state": "WAITING_APPROVAL",
+    "same_day_repair_loops_max": 2,
+    "same_cause_circuit_breaker_failures": 3,
+    "suppression_bypass_allowed": false,
+    "checker_may_rewrite": false
+  },
+  "source_locators": [
+    "11_Agents/IMMOHRTAL Business Crew/CREW.json",
+    "11_Agents/IMMOHRTAL Business Crew/README.md",
+    "11_Agents/IMMOHRTAL Business Crew/OFFICE.md",
+    "11_Agents/IMMOHRTAL Business Crew/DAILY-OPERATING-LOOP.md",
+    "11_Agents/IMMOHRTAL Business Crew/DAY-1-COMMAND-BOARD.md",
+    "automation/immohrtal-agency/PRODUCT.md",
+    "automation/immohrtal-agency/AUTOMATION.md",
+    "automation/immohrtal-agency/README.md",
+    "automation/immohrtal-agency/config/default.json",
+    "automation/immohrtal-agency/src/agents.mjs",
+    "automation/immohrtal-agency/ops/DAILY-REPORT-RUNBOOK.md",
+    "automation/immohrtal-agency/ops/office-daily.manifest.json",
+    "automation/immohrtal-agency/ops/run-office-report.mjs",
+    "automation/immohrtal-agency/runs/20260825-081000/run-receipt.json",
+    "automation/immohrtal-agency/runs/20260825-081000/outreach-packages.json",
+    "immohrtal-marketing-site/PRODUCT.md",
+    "immohrtal-marketing-site/src/data.ts",
+    "immohrtal-marketing-site/research/outreach/DAY-1-FIRST-BATCH.csv",
+    "immohrtal-marketing-site/research/outreach/segment-offer-matrix.md",
+    "12_Brain/05_Projects/2026-08-24 - IMMOHRTAL Marketing Solutions.md"
+  ]
+}

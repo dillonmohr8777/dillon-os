@@ -1,0 +1,156 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:immohrtal:crm:account-opportunity:1.0.0",
+  "title": "IMMOHRTAL local account and opportunity record",
+  "description": "Internal, local-only revenue record. It does not authorize contact or external CRM mutation.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "record_id",
+    "account_id",
+    "opportunity_id",
+    "account",
+    "evidence",
+    "qualification",
+    "pipeline",
+    "governance",
+    "audit"
+  ],
+  "properties": {
+    "record_id": { "type": "string", "pattern": "^CRM-IM-[0-9]{4}$" },
+    "account_id": { "type": "string", "pattern": "^ACCT-IM-[0-9]{4}$" },
+    "opportunity_id": { "type": "string", "pattern": "^OPP-IM-[0-9]{4}$" },
+    "account": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["display_name", "website_url", "business_category", "account_type", "identity_state"],
+      "properties": {
+        "display_name": { "type": "string", "minLength": 1 },
+        "website_url": { "type": "string", "format": "uri", "pattern": "^https://" },
+        "business_category": { "type": "string", "minLength": 1 },
+        "account_type": { "const": "prospective_service_business" },
+        "identity_state": { "enum": ["verified_public_identity", "ambiguous", "blocked"] }
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "owner_role_id",
+        "source_locator",
+        "source_url",
+        "source_kind",
+        "observed_date",
+        "freshness_review_due",
+        "observable_issue",
+        "immohrtal_relevance",
+        "concept_url",
+        "confidence",
+        "truth_state",
+        "verification_method",
+        "unknowns"
+      ],
+      "properties": {
+        "owner_role_id": { "const": "demand_intelligence_lead" },
+        "source_locator": { "type": "string", "minLength": 1 },
+        "source_url": { "type": "string", "format": "uri", "pattern": "^https://" },
+        "source_kind": { "enum": ["current_public_website", "authorized_private_evidence", "buyer_supplied"] },
+        "observed_date": { "type": "string", "format": "date" },
+        "freshness_review_due": { "type": "string", "format": "date" },
+        "observable_issue": { "type": "string", "minLength": 1 },
+        "immohrtal_relevance": { "type": "string", "minLength": 1 },
+        "concept_url": { "type": "string", "format": "uri", "pattern": "^https://" },
+        "confidence": { "enum": ["medium", "medium_high", "high"] },
+        "truth_state": { "enum": ["confirmed_current", "provisional", "unknown", "blocked"] },
+        "verification_method": { "type": "string", "minLength": 1 },
+        "unknowns": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string", "minLength": 1 } }
+      }
+    },
+    "qualification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "state",
+        "score",
+        "hard_disqualifier_check",
+        "suppression_check",
+        "duplicate_check",
+        "client_conflict_check",
+        "service_lane",
+        "offer_fit_id",
+        "offer_fit_state",
+        "offer_fit_rationale",
+        "unresolved_requirements"
+      ],
+      "properties": {
+        "state": { "enum": ["pending", "conditional", "qualified", "disqualified", "blocked"] },
+        "score": { "type": ["integer", "null"], "minimum": 0, "maximum": 16 },
+        "hard_disqualifier_check": { "enum": ["pending", "clear", "triggered"] },
+        "suppression_check": { "enum": ["pending", "clear", "suppressed"] },
+        "duplicate_check": { "enum": ["pending", "clear", "duplicate"] },
+        "client_conflict_check": { "enum": ["pending", "clear", "conflict"] },
+        "service_lane": { "enum": ["Web Design", "Website Optimization", "Technical SEO", "AEO", "GEO", "AEO and GEO", "Paid Media Management", "Content and Schema", "Business Agents", "HubSpot and CRM Agents"] },
+        "offer_fit_id": { "enum": ["technical-seo-monthly", "aeo-monthly", "geo-monthly", "search-answer-everywhere-bundle", "google-ads-management-monthly", "meta-ads-management-monthly", "google-meta-ads-management-bundle", "live-website-decision-diagnostic", "website-optimization-sprint", "distinctive-website-system", "search-answer-visibility-program", "bounded-business-agent-implementation"] },
+        "offer_fit_state": { "enum": ["hypothesis", "validated_internal", "buyer_confirmed"] },
+        "offer_fit_rationale": { "type": "string", "minLength": 1 },
+        "unresolved_requirements": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string", "minLength": 1 } }
+      }
+    },
+    "pipeline": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "owner_role_id",
+        "account_lifecycle",
+        "stage",
+        "commercial_status",
+        "amount_usd",
+        "probability_percent",
+        "forecast_category",
+        "next_action",
+        "next_action_owner_role_id",
+        "next_action_due",
+        "exit_rule",
+        "last_stage_changed_at"
+      ],
+      "properties": {
+        "owner_role_id": { "const": "revenue_pipeline_manager" },
+        "account_lifecycle": { "enum": ["RESEARCH_ONLY", "EVIDENCE_READY", "QUALIFICATION_PENDING", "QUALIFIED", "OPPORTUNITY_OPEN", "CUSTOMER_ACTIVE", "INACTIVE", "SUPPRESSED"] },
+        "stage": { "enum": ["P00_ACCOUNT_RESEARCH", "P10_QUALIFICATION_PENDING", "P20_QUALIFIED", "P30_DISCOVERY_CONFIRMED", "P40_SOLUTION_SCOPED", "P50_PROPOSAL_APPROVED_INTERNAL", "P60_PROPOSAL_SENT", "P70_DECISION_PENDING", "P80_CLOSED_WON", "P90_CLOSED_LOST", "P95_NURTURE", "P99_SUPPRESSED"] },
+        "commercial_status": { "enum": ["uncontacted", "contacted_receipt_verified", "reply_verified", "meeting_verified", "proposal_sent_verified", "decision_verified", "payment_verified"] },
+        "amount_usd": { "type": ["number", "null"], "minimum": 0 },
+        "probability_percent": { "type": ["integer", "null"], "minimum": 0, "maximum": 100 },
+        "forecast_category": { "enum": ["excluded", "pipeline", "best_case", "commit", "closed"] },
+        "next_action": { "type": "string", "minLength": 1 },
+        "next_action_owner_role_id": { "enum": ["demand_intelligence_lead", "revenue_pipeline_manager", "quality_risk_auditor", "codex_marketing_chief"] },
+        "next_action_due": { "type": "string", "format": "date" },
+        "exit_rule": { "type": "string", "minLength": 1 },
+        "last_stage_changed_at": { "type": "string", "format": "date-time" }
+      }
+    },
+    "governance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["local_only", "contact_authorized", "external_write_authorized", "contains_contact_identifier", "contains_message_copy"],
+      "properties": {
+        "local_only": { "const": true },
+        "contact_authorized": { "const": false },
+        "external_write_authorized": { "const": false },
+        "contains_contact_identifier": { "const": false },
+        "contains_message_copy": { "const": false }
+      }
+    },
+    "audit": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["created_at", "updated_at", "created_by", "source_row_rank", "qa_state"],
+      "properties": {
+        "created_at": { "type": "string", "format": "date-time" },
+        "updated_at": { "type": "string", "format": "date-time" },
+        "created_by": { "const": "crm_pipeline_builder" },
+        "source_row_rank": { "type": "integer", "minimum": 1 },
+        "qa_state": { "enum": ["pending_independent_review", "passed", "failed"] }
+      }
+    }
+  }
+}

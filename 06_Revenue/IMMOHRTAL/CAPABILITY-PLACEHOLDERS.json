@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0.0",
+  "business": "IMMOHRTAL Marketing Solutions",
+  "status": "placeholders_only",
+  "capabilities": [
+    {
+      "capability_id": "automatic_reply_operator",
+      "title": "Automatic Reply Operator",
+      "status": "disabled_not_built",
+      "execution_authority": false,
+      "external_write_authority": false,
+      "current_scope": [],
+      "activation_prerequisites": [
+        "source-backed Dillon voice standard",
+        "intent and recipient routing policy",
+        "high-risk and exception escalation",
+        "shutdown and audit controls",
+        "independent QA",
+        "separate exact authorization"
+      ]
+    },
+    {
+      "capability_id": "social_content_operator",
+      "title": "Social and Content Operator",
+      "status": "disabled_planned",
+      "execution_authority": false,
+      "external_write_authority": false,
+      "current_scope": [],
+      "future_scope": [
+        "editorial calendar",
+        "source-backed content production coordination",
+        "channel-specific review queues",
+        "approved scheduling",
+        "performance learning"
+      ],
+      "activation_prerequisites": [
+        "revenue pipeline and CRM contract passes independent QA",
+        "verified brand voice and content standards",
+        "exact channel and account routing",
+        "approval and shutdown controls",
+        "separate exact scheduling or publication authority"
+      ]
+    }
+  ]
+}

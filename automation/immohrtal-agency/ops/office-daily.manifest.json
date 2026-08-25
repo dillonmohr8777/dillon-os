@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0.0",
+  "workflow_id": "IMMOHRTAL-OFFICE-DAILY",
+  "status": "manifest_only_not_installed",
+  "owner": "Codex Marketing Chief",
+  "human_authority": "Dillon Mohr",
+  "timezone": "America/New_York",
+  "entrypoint": "automation/immohrtal-agency/ops/Run-ImmohrtalOfficeDaily.ps1",
+  "safety": {
+    "dry_run_required": true,
+    "external_actions": false,
+    "messages_or_posts": false,
+    "provider_side_drafts": false,
+    "calendar_writes": false,
+    "crm_or_account_writes": false,
+    "publishing_or_deployment": false,
+    "spend_or_purchase": false,
+    "credential_access": false,
+    "schedule_installation_authorized": false
+  },
+  "proposed_triggers": [
+    {
+      "name": "IMMOHRTAL Office Standup",
+      "cadence": "weekdays",
+      "local_time": "08:30",
+      "mode": "standup",
+      "arguments": ["-DryRun", "-Mode", "standup"]
+    },
+    {
+      "name": "IMMOHRTAL Office Closeout",
+      "cadence": "weekdays",
+      "local_time": "17:00",
+      "mode": "eod",
+      "arguments": ["-DryRun", "-Mode", "eod"]
+    }
+  ],
+  "future_registration_contract": {
+    "state": "not_performed",
+    "requires_separate_exact_authority": true,
+    "windows_launcher": "C:/Users/dillo/.codex/tools/Run-HiddenScheduledTask.vbs",
+    "windows_manifest": "C:/Users/dillo/.codex/tools/hidden-scheduled-tasks.tsv",
+    "direct_scheduled_powershell_prohibited": true,
+    "verification_required": [
+      "registered task name and exact triggers",
+      "hidden-launcher manifest mapping",
+      "last run result",
+      "dated local run receipt",
+      "no visible console window",
+      "zero external actions"
+    ]
+  },
+  "output_contract": {
+    "root": "automation/immohrtal-agency/ops/receipts/<YYYY-MM-DD>/<run-id>/",
+    "artifacts": [
+      "run-receipt.json",
+      "office-report.json",
+      "office-report.md",
+      "office-dashboard.html"
+    ],
+    "latest_pointer_written": false,
+    "secrets_or_raw_communications_allowed": false
+  }
+}

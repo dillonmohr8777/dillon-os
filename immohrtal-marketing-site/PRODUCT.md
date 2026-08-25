@@ -28,19 +28,20 @@ Visitors arrive from referrals, direct outreach, shared teardown links, search, 
 
 ## Launch Information Architecture
 
-The public site has 23 indexable URLs: the homepage, About, Work, Contact, a Services hub, seven focused service pages, the Insights index, and 10 full editorial guides. The service system covers Web Design, Website Optimization, Technical SEO, AEO and GEO, Content and Schema, Business Agents, and HubSpot and CRM Agents. Each non-home route is generated as semantic static HTML with its own title, description, canonical URL, visible authorship where relevant, contextual internal links, original media, and accurate structured data. The homepage retains the interactive React experience while also shipping meaningful initial HTML for crawlers and no-JavaScript visitors.
+The public site has 24 indexable URLs: the homepage, About, Work, Contact, Pricing, a Services hub, seven focused service pages, the Insights index, and 10 full editorial guides. The service system covers Web Design, Website Optimization, Technical SEO, AEO and GEO, Content and Schema, Business Agents, and HubSpot and CRM Agents. Each non-home route is generated as semantic static HTML with its own title, description, canonical URL, visible authorship where relevant, contextual internal links, original media where appropriate, and accurate structured data. The homepage retains the interactive React experience while also shipping meaningful initial HTML for crawlers and no-JavaScript visitors.
 
 The 10 launch guides cover AEO versus GEO, Google AI Overviews, website redesign planning, accurate schema, AI crawler controls, JavaScript SEO, HubSpot and business agents, AI visibility measurement, entity-first content architecture, and human approval gates. Primary official sources are linked visibly. The library must not imply that publication guarantees indexing, rankings, AI inclusion, or citation.
 
 ## Capabilities and Constraints
 
 - Center the offer on web design, website optimization, AEO, GEO, technical SEO, structured content, HubSpot and CRM agents, and business workflow agents.
-- Google Ads may be supported when a client needs it, but it is not the homepage's primary offer and no autonomous spend or account change is implied.
+- Google Ads and Meta Ads management may be supported when a client needs them, but paid media is not the homepage's primary offer and no autonomous spend or account change is implied.
+- The approved monthly catalog is limited to Technical SEO at $700, AEO at $700, GEO at $700, the Technical SEO plus AEO plus GEO bundle at $1,500, Google Ads management at $400, Meta Ads management at $400, and the Google plus Meta management bundle at $650. Do not infer setup fees, ad spend, contract terms, guarantees, or prices for any other service.
 - Lead navigation, headlines, calls to action, and robot roles with customer problems and outcomes. Introduce terms such as AEO, GEO, entity architecture, schema, and agent governance only after the plain-language benefit is clear.
 - The opening sequence uses the 21 currently verified public-safe client and partner marks. Do not call them 22 clients until the canonical registry supports that claim.
 - The sequence reads “I did this for,” resolves every verified mark rapidly, then reads “I could do it for” and resolves “YOU” through the same particle system.
 - Reuse the original 3D agent renderer, but show only workers that map to real bounded operating roles. Do not claim they are online or autonomous without current receipts.
-- Do not publish unsupported performance figures, testimonials, pricing, client scope, or sole-authorship claims.
+- Do not publish unsupported performance figures, testimonials, client scope, sole-authorship claims, or pricing outside the approved monthly catalog.
 - Google AI Overview captures are time-stamped evidence, not a promise of current or permanent placement.
 - Preserve complete keyboard, touch, reduced-motion, no-WebGL, and responsive paths.
 
@@ -63,7 +64,7 @@ The 10 launch guides cover AEO versus GEO, Google AI Overviews, website redesign
 - Public-safe Google AI Overview captures for Align HCM from July 2026, including HR data integration and data conversion searches.
 - Live public projects for Align HCM, Momentum 360, AMI Commercial Cleaning, Shadow Heating and Cooling, Cindy May, Overhill Flowers, and Graveley Roofing.
 - Existing HubSpot, terminal-agent, AEO/GEO, site-factory, prospect-radar, and governed communications infrastructure in Dillon OS and client operations.
-- No approved universal metric set, testimonial packet, or final offer pricing for this repositioning. Do not fabricate them.
+- No approved universal metric set or testimonial packet. The seven monthly prices listed in the approved catalog are current product truth; all other offers remain custom scoped until Dillon approves another price.
 
 ## Product Principles
 

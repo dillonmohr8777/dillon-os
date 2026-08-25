@@ -9,6 +9,7 @@ import { executeRun } from '../src/orchestrator.mjs';
 import { STATES, discovered, transition } from '../src/state-machine.mjs';
 import { buildDriveSnapshot } from '../src/drive-snapshot-adapter.mjs';
 import { extractHtmlEvidence } from '../src/evidence.mjs';
+import { Relay } from '../src/agents.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const config = JSON.parse(fs.readFileSync(path.join(root, 'config', 'default.json'), 'utf8'));
@@ -17,6 +18,27 @@ const asOf = '2026-08-24T12:00:00.000Z';
 test('state machine rejects skipping maker-checker stages', () => {
   const record = discovered({ prospect_id: 'x' }, asOf);
   assert.throws(() => transition(record, STATES.AWAITING_APPROVAL, 'test', asOf), /Illegal state transition/);
+});
+
+test('Relay always uses the canonical IMMOHRTAL outreach identity', () => {
+  const legacyBrand = ['MOHR', 'MEDIA'].join(' ');
+  const legacyDomain = ['themohr', 'media.com'].join('');
+  const draft = Relay.run(
+    {
+      company_name: 'Example Company',
+      contact_name: 'Casey',
+      website: 'https://example.test',
+      concept_url: 'https://concept.example.test'
+    },
+    { live_evidence: null },
+    { workstreams: [{ name: 'Website optimization' }] },
+    { name: 'Dillon Mohr', business_name: legacyBrand }
+  );
+
+  assert.match(draft.body, /\nIMMOHRTAL Marketing Solutions\nhttps:\/\/www\.immohrtalmarketing\.com$/);
+  assert.equal(draft.body.toLowerCase().includes(legacyDomain), false);
+  assert.equal(draft.body.includes(legacyBrand), false);
+  assert.equal(/[-–—]/u.test(draft.body), false);
 });
 
 test('CSV adapter preserves booleans and list fields', () => {

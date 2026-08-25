@@ -1,5 +1,8 @@
 import { normalizeDomain, sha256 } from './policy.mjs';
 
+const IMMOHRTAL_BUSINESS_NAME = 'IMMOHRTAL Marketing Solutions';
+const IMMOHRTAL_WEBSITE = 'https://www.immohrtalmarketing.com';
+
 export const Scout = Object.freeze({
   name: 'Scout',
   role: 'Website intelligence maker',
@@ -63,7 +66,7 @@ export const Relay = Object.freeze({
   run(prospect, scout, forge, sender) {
     const firstName = String(prospect.contact_name || '').trim() || 'there';
     const subject = `A homepage direction for ${prospect.company_name}`;
-    const body = `Hi ${firstName},\n\nI put together a homepage direction for ${prospect.company_name}:\n${prospect.concept_url || prospect.website}\n\nIt is a concept, not a live replacement. I focused it on clearer service positioning, a stronger mobile path, and answer-first content that can support both conversion and AI/search visibility.\n\nIf it is useful, I can send a concise breakdown of what I would keep, what I would change, and where AEO or GEO could fit.\n\n${sender.name}\n${sender.business_name}\nhttps://themohrmedia.com`;
+    const body = `Hi ${firstName},\n\nI put together a homepage direction for ${prospect.company_name}:\n${prospect.concept_url || prospect.website}\n\nIt is a concept, not a live replacement. I focused it on clearer service positioning, a stronger mobile path, and direct answer content that can support both conversion and AI search visibility.\n\nIf it is useful, I can send a concise breakdown of what I would keep, what I would change, and where AEO or GEO could fit.\n\n${sender.name}\n${IMMOHRTAL_BUSINESS_NAME}\n${IMMOHRTAL_WEBSITE}`;
     const packageValue = {
       channel: 'email',
       to: prospect.contact_email || null,

@@ -16,6 +16,7 @@ const routes = [
   '/work/',
   '/contact/',
   '/services/',
+  '/pricing/',
   '/web-design/',
   '/technical-seo/',
   '/content-schema/',
@@ -34,7 +35,7 @@ const routes = [
 ]
 
 const articleRoutes = new Set(routes.filter((route) => route.startsWith('/insights/') && route !== '/insights/'))
-const expectedNav = ['Services', 'Work', 'Guides', 'About']
+const expectedNav = ['Services', 'Pricing', 'Work', 'Guides', 'About']
 const serviceAssetDir = path.resolve('public', 'pressroom', 'services')
 const serviceAssets = (await fs.readdir(serviceAssetDir)).filter((file) => /\.(?:avif|jpe?g|png|webp)$/i.test(file))
 
@@ -229,7 +230,7 @@ const failures = routeResults.filter((result) => {
     || wrongFonts
     || wrongNavigation
     || result.footerServiceLinks !== 7
-    || result.footerCompanyLinks !== 4
+    || result.footerCompanyLinks !== 5
     || result.brandLeak
     || result.noIndex
     || (isArticle && (!result.articleSchema || result.internalArticleLinks < 3 || result.externalArticleLinks < 1))
@@ -270,7 +271,7 @@ console.log(JSON.stringify(report, null, 2))
 
 if (
   failures.length
-  || routes.length !== 23
+  || routes.length !== 24
   || articleSchemaCount !== 10
   || sitemapMismatch
   || serviceAssets.length !== 24

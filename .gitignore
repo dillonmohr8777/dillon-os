@@ -65,3 +65,5 @@ automation/*/latest-daily-state.json
 # IMMOHRTAL live intake snapshots and generated operating state can contain
 # prospect contact data. Keep them local even though the repository is private.
 automation/immohrtal-agency/.runtime/
+automation/immohrtal-agency/ops/qa/
+automation/immohrtal-agency/ops/receipts/

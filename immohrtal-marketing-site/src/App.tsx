@@ -71,6 +71,7 @@ function Navigation() {
       </button>
       <nav id="site-nav" className={open ? 'is-open' : ''} aria-label="Primary navigation">
         <a href="/services/" onClick={() => setOpen(false)}>Services</a>
+        <a href="/pricing/" onClick={() => setOpen(false)}>Pricing</a>
         <a href="/work/" onClick={() => setOpen(false)}>Work</a>
         <a href="/insights/" onClick={() => setOpen(false)}>Guides</a>
         <a href="/about/" onClick={() => setOpen(false)}>About</a>
@@ -407,6 +408,7 @@ function App() {
           <a href="/hubspot-crm-agents/">HubSpot and CRM agents</a>
         </nav>
         <nav className="footer-directory footer-directory--company" aria-label="Company">
+          <a href="/pricing/">Pricing</a>
           <a href="/work/">Work</a>
           <a href="/insights/">Guides</a>
           <a href="/about/">About</a>

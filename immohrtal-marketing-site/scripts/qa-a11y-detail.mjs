@@ -2,7 +2,7 @@ import { chromium } from 'playwright'
 import AxeBuilder from '@axe-core/playwright'
 
 const baseUrl = process.argv[2] || 'http://127.0.0.1:4178/'
-const routes = ['/', '/about/', '/contact/', '/insights/', '/insights/google-ai-overviews-service-businesses/']
+const routes = ['/', '/about/', '/contact/', '/pricing/', '/insights/', '/insights/google-ai-overviews-service-businesses/']
 const browser = await chromium.launch({ headless: true })
 
 for (const route of routes) {

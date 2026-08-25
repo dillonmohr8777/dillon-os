@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url'
 import path from 'node:path'
 import { articles } from '../content/articles.mjs'
 import { allPressroomAssets, pressroom } from '../content/pressroom-assets.mjs'
-import { corePages, insightsPage, navigation, projects, serviceDirectory, site } from '../content/site-content.mjs'
+import { corePages, insightsPage, navigation, pricingCatalog, projects, serviceDirectory, site } from '../content/site-content.mjs'
 
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const publicDir = path.join(projectRoot, 'public')
@@ -41,6 +41,7 @@ const wordCount = (value = '') => {
 }
 
 const absoluteUrl = (route) => new URL(route, site.origin).toString()
+const formatUsd = (value) => `$${String(value).replace(/\B(?=(\d{3})+(?!\d))/g, ',')}`
 const routeToFile = (route) => path.join(publicDir, route.replace(/^\/+|\/+$/g, ''), 'index.html')
 const localAssetPath = (src) => path.join(publicDir, String(src).replace(/^\/+/, ''))
 const assetExists = (src) => Boolean(src && existsSync(localAssetPath(src)))
@@ -145,7 +146,7 @@ const footerHtml = () => `<footer class="site-footer">
   </div>
   <nav class="footer-directory" aria-label="Services">${serviceDirectory.map((service) => `<a href="${service.href}">${escapeHtml(service.title)}</a>`).join('')}</nav>
   <nav class="footer-directory footer-directory--company" aria-label="Company">
-    <a href="/work/">Work</a><a href="/insights/">Guides</a><a href="/about/">About</a><a href="/contact/">Contact</a>
+    <a href="/pricing/">Pricing</a><a href="/work/">Work</a><a href="/insights/">Guides</a><a href="/about/">About</a><a href="/contact/">Contact</a>
   </nav>
   <a class="footer-action" href="/contact/">Fix my website ${arrowHtml()}</a>
   <p class="trademark-note">Google, HubSpot, ChatGPT, Claude, and Perplexity are trademarks of their respective owners. Their appearance identifies platforms discussed in the work and does not imply endorsement.</p>
@@ -287,6 +288,30 @@ const serviceSchema = (page, canonical) => {
   }
 }
 
+const pricingOffers = [...pricingCatalog.search, ...pricingCatalog.paidMedia]
+
+const pricingCatalogSchema = (canonical) => ({
+  '@type': 'OfferCatalog',
+  '@id': `${canonical}#offer-catalog`,
+  name: 'IMMOHRTAL monthly marketing services',
+  url: canonical,
+  itemListElement: pricingOffers.map((offer) => ({
+    '@type': 'Offer',
+    '@id': `${canonical}#offer-${offer.id}`,
+    name: offer.name,
+    price: String(offer.price),
+    priceCurrency: 'USD',
+    url: `${canonical}#${offer.id}`,
+    seller: { '@id': `${site.origin}/#organization` },
+    itemOffered: {
+      '@type': 'Service',
+      name: offer.name,
+      description: offer.description,
+      provider: { '@id': `${site.origin}/#organization` },
+    },
+  })),
+})
+
 const faqSchema = (faqs, canonical) => ({
   '@type': 'FAQPage',
   '@id': `${canonical}#faq`,
@@ -335,12 +360,44 @@ const serviceDirectoryHtml = () => `<div class="service-directory">${serviceDire
   ${arrowHtml()}
 </a>`).join('')}</div>`
 
+const pricingHeroHtml = () => {
+  const bundles = pricingOffers.filter((offer) => offer.featured)
+  return `<div class="pricing-hero-ledger" aria-label="Featured monthly bundles">${bundles.map((offer) => `<a class="pricing-hero-entry" href="#${offer.id}">
+    <span><small>${escapeHtml(offer.shortName)}</small><strong>${escapeHtml(offer.name)}</strong></span>
+    <span class="pricing-hero-price"><b>${formatUsd(offer.price)}</b><small>per month</small></span>
+  </a>`).join('')}</div>`
+}
+
+const pricingLedgerHtml = (offers, label) => `<div class="pricing-menu" aria-label="${escapeHtml(label)}">
+  <ul class="pricing-ledger">${offers.map((offer) => `<li class="pricing-row${offer.featured ? ' pricing-row--bundle' : ''}" id="${offer.id}">
+    <div class="pricing-row__service">
+      <small>${escapeHtml(offer.featured ? offer.shortName : 'Monthly service')}</small>
+      <h3>${offer.href ? `<a href="${offer.href}">${escapeHtml(offer.name)}</a>` : escapeHtml(offer.name)}</h3>
+      <p>${escapeHtml(offer.description)}</p>
+    </div>
+    <p class="pricing-row__price"><strong>${formatUsd(offer.price)}</strong><span>per month</span></p>
+  </li>`).join('')}</ul>
+  <a class="pricing-menu__action" href="/contact/">Talk through this work ${arrowHtml()}</a>
+</div>`
+
+const directionContractHtml = (page) => page.directionContract
+  ? `<!--
+THESIS: ${page.directionContract.thesis}
+OWN-WORLD: ${page.directionContract.ownWorld}
+STORY: ${page.directionContract.story}
+FIRST VIEWPORT: ${page.directionContract.firstViewport}
+FORM: ${page.directionContract.form}
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
+-->`
+  : ''
+
 const routeLabel = (route) => {
   const service = serviceDirectory.find((item) => item.href === route)
   if (service) return { title: service.title, description: service.plainTitle }
   if (route === '/work/') return { title: 'Selected work', description: 'Inspect the public website experiences behind the system.' }
   if (route === '/contact/') return { title: 'Start a conversation', description: 'Show me the live page or repeated task that needs attention.' }
   if (route === '/services/') return { title: 'All services', description: 'Choose the problem before the service label.' }
+  if (route === '/pricing/') return { title: 'Monthly pricing', description: 'Compare every approved monthly service and connected bundle.' }
   return { title: route.replaceAll('/', ' ').trim(), description: 'Continue through the IMMOHRTAL system.' }
 }
 
@@ -368,7 +425,11 @@ const renderSection = (section, index, page) => {
     ? projectGridHtml()
     : section.html === 'SERVICE_DIRECTORY'
       ? serviceDirectoryHtml()
-      : section.html
+      : section.html === 'PRICING_SEARCH'
+        ? pricingLedgerHtml(pricingCatalog.search, 'Search visibility pricing')
+        : section.html === 'PRICING_PAID_MEDIA'
+          ? pricingLedgerHtml(pricingCatalog.paidMedia, 'Paid media management pricing')
+          : section.html
   const media = page.media?.[index + 1]
   const direction = index % 2 ? ' story-layout--reverse' : ''
   return `<section class="content-section${tone}">
@@ -396,11 +457,13 @@ const renderCorePage = (page) => {
       title: page.title,
       description: page.description,
       crumbs,
-      type: page.pageKind === 'services-hub' || page.path === '/work/' ? ['WebPage', 'CollectionPage'] : 'WebPage',
+      type: page.pageKind === 'services-hub' || page.pageKind === 'pricing' || page.path === '/work/' ? ['WebPage', 'CollectionPage'] : 'WebPage',
       image: page.media?.[0],
+      mainEntity: page.pageKind === 'pricing' ? `${canonical}#offer-catalog` : undefined,
     }),
   ]
   if (page.pageKind === 'service') schema.push(serviceSchema(page, canonical))
+  if (page.pageKind === 'pricing') schema.push(pricingCatalogSchema(canonical))
   if (page.schema === 'profile') schema.push(profileSchema(), personSchema())
   if (page.faqs?.length) schema.push(faqSchema(page.faqs, canonical))
 
@@ -409,7 +472,8 @@ const renderCorePage = (page) => {
 <head>
   ${baseHead({ title: page.title, description: page.description, canonical, image: page.media?.[0], imageAlt: page.media?.[0]?.alt || page.h1, schema })}
 </head>
-<body>
+<body${page.pageKind === 'pricing' ? ' class="pricing-page"' : ''}>
+  ${directionContractHtml(page)}
   <a class="skip-link" href="#main-content">Skip to content</a>
   ${headerHtml(page.path)}
   <main id="main-content">
@@ -419,7 +483,7 @@ const renderCorePage = (page) => {
         <div class="hero-grid">
           <h1 data-swipe-heading data-reveal>${escapeHtml(page.h1)}</h1>
           <div class="hero-support"><p class="hero-lede">${escapeHtml(page.lede)}</p>${renderActions(page.actions)}</div>
-          ${imageHtml(page.media?.[0], 'pressroom-figure hero-media', true)}
+          ${page.heroArtifact === 'PRICING_HERO' ? pricingHeroHtml() : imageHtml(page.media?.[0], 'pressroom-figure hero-media', true)}
         </div>
       </div>
     </header>
@@ -708,7 +772,7 @@ const cleanGeneratedRoutes = async () => {
 
 const build = async () => {
   if (articles.length !== 10) throw new Error(`Expected 10 articles, found ${articles.length}`)
-  if (corePages.length !== 11) throw new Error(`Expected 11 core pages, found ${corePages.length}`)
+  if (corePages.length !== 12) throw new Error(`Expected 12 core pages, found ${corePages.length}`)
 
   const malformedArticles = articles.filter((article) => !article.title || !article.description || !article.directAnswer || !article.sources?.length || !article.related?.length)
   if (malformedArticles.length) throw new Error(`Articles missing required content fields: ${malformedArticles.map((article) => article.slug).join(', ')}`)
@@ -725,8 +789,8 @@ const build = async () => {
   const articleRoutes = articles.map((article) => `/insights/${article.slug}/`)
   const generatedRoutes = [...corePages.map((page) => page.path), insightsPage.path, ...articleRoutes]
   const allRoutes = ['/', ...generatedRoutes]
-  if (generatedRoutes.length !== 22 || allRoutes.length !== 23) {
-    throw new Error(`Expected 22 generated routes and 23 total pages, found ${generatedRoutes.length} and ${allRoutes.length}`)
+  if (generatedRoutes.length !== 23 || allRoutes.length !== 24) {
+    throw new Error(`Expected 23 generated routes and 24 total pages, found ${generatedRoutes.length} and ${allRoutes.length}`)
   }
   if (new Set(allRoutes).size !== allRoutes.length) throw new Error('Duplicate canonical route detected')
 

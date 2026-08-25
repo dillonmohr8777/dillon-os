@@ -4,7 +4,7 @@ export const site = {
   origin: 'https://www.immohrtalmarketing.com',
   name: 'IMMOHRTAL Marketing Solutions',
   shortName: 'IMMOHRTAL',
-  email: 'dillonmohr8777@gmail.com',
+  email: 'dillon@immohrtalmarketing.com',
   logo: '/brand/immohrtal-logo.png',
   portrait: '/people/dillon-mohr.jpg',
   published: '2026-08-24',
@@ -13,10 +13,68 @@ export const site = {
 
 export const navigation = [
   { label: 'Services', href: '/services/' },
+  { label: 'Pricing', href: '/pricing/' },
   { label: 'Work', href: '/work/' },
   { label: 'Guides', href: '/insights/' },
   { label: 'About', href: '/about/' },
 ]
+
+export const pricingCatalog = {
+  search: [
+    {
+      id: 'technical-seo',
+      name: 'Technical SEO',
+      price: 700,
+      href: '/technical-seo/',
+      description: 'Crawl paths, rendering, canonical signals, sitemaps, internal links, schema accuracy, and release checks.',
+    },
+    {
+      id: 'aeo',
+      name: 'AEO',
+      price: 700,
+      href: '/aeo-geo/',
+      description: 'Priority questions, direct answer structure, clear source pages, and retrievable passages for answer engines.',
+    },
+    {
+      id: 'geo',
+      name: 'GEO',
+      price: 700,
+      href: '/aeo-geo/',
+      description: 'Entity relationships, corroborating sources, authorship, useful depth, and dated observation for generative search.',
+    },
+    {
+      id: 'search-visibility-bundle',
+      name: 'Technical SEO + AEO + GEO',
+      shortName: 'Search visibility bundle',
+      price: 1500,
+      href: '/aeo-geo/',
+      featured: true,
+      description: 'Technical access, answer ready pages, and generative visibility work connected in one monthly program.',
+    },
+  ],
+  paidMedia: [
+    {
+      id: 'google-ads-management',
+      name: 'Google Ads management',
+      price: 400,
+      description: 'Focused monthly management for the Google Ads channel.',
+    },
+    {
+      id: 'meta-ads-management',
+      name: 'Meta Ads management',
+      price: 400,
+      description: 'Focused monthly management for the Meta Ads channel.',
+    },
+    {
+      id: 'paid-media-bundle',
+      name: 'Google + Meta Ads management',
+      shortName: 'Paid media bundle',
+      price: 650,
+      featured: true,
+      description: 'Google and Meta management connected in one monthly program.',
+    },
+  ],
+}
 
 export const projects = [
   {
@@ -618,6 +676,58 @@ const newCorePages = [
         title: 'Start with one bounded engagement',
         html: `<p>The first engagement should answer a useful question, not create a vague retainer. That might be a live website audit, one redesigned service page, a technical crawl and internal-link repair, an answer-visibility source map, a HubSpot routing review, or one bounded AI worker.</p>
         <p><a href="/contact/">Send the live site and the problem you already see.</a> I will identify the smallest first move that can produce a real artifact and a clear next decision.</p>`,
+      },
+    ],
+  },
+  {
+    path: '/pricing/',
+    navSection: 'pricing',
+    pageKind: 'pricing',
+    title: 'Monthly Marketing Services and Pricing | IMMOHRTAL',
+    description: 'See monthly pricing for Technical SEO, AEO, GEO, search visibility bundles, Google Ads management, and Meta Ads management from IMMOHRTAL.',
+    h1: 'Choose the work you need. See the monthly price before we talk.',
+    lede: 'Monthly pricing is published for search visibility and paid media management. Website, content, CRM, and agent projects are shaped around the real system because the scope changes with the work.',
+    heroArtifact: 'PRICING_HERO',
+    directionContract: {
+      thesis: 'Price truth moves first. This page replaces the familiar pricing card wall with one inspectable rate ledger that keeps individual services and bundles in the same system.',
+      ownWorld: 'Space Ink orbit stage, proof paper ledgers, cyan rules, Unbounded amounts, Manrope explanations, Foundry Mono monthly labels, and the existing action and radius vocabulary.',
+      story: 'The visitor sees the two connected bundles, compares every approved monthly rate, understands which projects need a custom scope, and starts one focused conversation.',
+      firstViewport: 'The fixed rail sits above an orbit stage. The outcome statement and contact action lead at left while two bundle rates resolve in a full width ledger below.',
+      form: 'Particle Proof Ledger, a direct extension of the existing static sales page surface. No concept seed was required for this fixed scope route.',
+    },
+    actions: [
+      { label: 'Talk through the right fit', href: '/contact/' },
+      { label: 'See every service', href: '/services/', secondary: true },
+    ],
+    relatedServices: ['/services/', '/technical-seo/', '/aeo-geo/'],
+    sections: [
+      {
+        title: 'Build the search system one layer at a time',
+        tone: 'paper',
+        html: 'PRICING_SEARCH',
+      },
+      {
+        title: 'Manage the channels your buyers already use',
+        html: 'PRICING_PAID_MEDIA',
+      },
+      {
+        title: 'Projects that need a custom scope',
+        tone: 'blue',
+        html: `<div class="custom-scope-list">
+          <section><h3>Web design and website optimization</h3><p>Scope follows the current site, the pages that need to change, the visual direction, the platform, and the release work.</p></section>
+          <section><h3>Content and schema systems</h3><p>Scope follows the approved source material, missing pages, entity relationships, templates, internal links, and validation needs.</p></section>
+          <section><h3>Business agents and CRM connections</h3><p>Scope follows the repeated job, the exact systems involved, access boundaries, approval points, and the evidence needed to verify the handoff.</p></section>
+        </div>
+        <div class="callout"><strong>Custom scoped</strong>No monthly price is published for these engagements. The first conversation defines one bounded scope before a proposal.</div>`,
+      },
+      {
+        title: 'Choose the smallest plan that solves the real problem',
+        html: `<ol class="steps">
+          <li><strong>Bring the live website or channel.</strong> Share the current URL, the problem you can already see, and any important platform constraint.</li>
+          <li><strong>Choose one lane or one connected bundle.</strong> Use an individual monthly service when the need is focused. Use a bundle when the channels or search layers need to move together.</li>
+          <li><strong>Confirm the working scope.</strong> The conversation should make the target, responsibilities, and first useful output clear before work begins.</li>
+        </ol>
+        <p><a href="/contact/">Start with the problem you want fixed.</a></p>`,
       },
     ],
   },

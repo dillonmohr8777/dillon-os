@@ -1,0 +1,243 @@
+{
+  "schema_version": "1.0.0",
+  "workflow_id": "IMMOHRTAL-DAY1-20260825",
+  "step_id": "INTERNAL-WORKFORCE",
+  "business": "IMMOHRTAL Marketing Solutions",
+  "operating_environment": "Codex",
+  "owner": "Dillon Mohr",
+  "orchestrator": "Codex Marketing Chief",
+  "status": "active_internal_day_1",
+  "external_runtime": false,
+  "gmail_in_scope": false,
+  "source_refs": [
+    "12_Brain/05_Projects/2026-08-24 - IMMOHRTAL Marketing Solutions.md",
+    "automation/immohrtal-agency/ops/DAY-1-SCORECARD.json",
+    "immohrtal-marketing-site/research/outreach/DAY-1-FIRST-BATCH.csv",
+    "05_Offers/IMMOHRTAL/DAY-1-PRICE-BOOK.md"
+  ],
+  "public_character_separation": {
+    "reserved_public_characters": [
+      "Scout",
+      "Atlas",
+      "Forge",
+      "Relay",
+      "Proof"
+    ],
+    "rule": "Reserved public characters are not internal company seats and must not be assigned internal operating accountability."
+  },
+  "authority": {
+    "internally_allowed": [
+      "read in-scope local files and public evidence",
+      "research",
+      "analyze",
+      "draft local artifacts",
+      "test local artifacts",
+      "update an assigned internal board item",
+      "prepare an approval preview"
+    ],
+    "prohibited_without_separate_exact_authority": [
+      "send or post any message",
+      "create or modify a provider-side email draft",
+      "publish or deploy",
+      "spend or purchase",
+      "hire or contract",
+      "accept terms or sign",
+      "mutate a CRM or client account",
+      "change authentication, DNS, mailbox, or account settings",
+      "start a scheduled or external runtime"
+    ]
+  },
+  "communications_policy": {
+    "email_drafts_allowed": false,
+    "outbound_message_copy_allowed": false,
+    "automatic_replies_active": false,
+    "automatic_reply_prerequisites": [
+      "source-backed Dillon voice standard",
+      "intent and recipient routing policy",
+      "high-risk and exception escalation",
+      "approval and shutdown controls",
+      "independent QA and live verification"
+    ],
+    "rule": "Current revenue work is account evidence, qualification, CRM hygiene, offer fit, and next-action control. It does not create email drafts or activate automatic replies."
+  },
+  "planned_specialists": [
+    {
+      "role_id": "social_content_operator",
+      "title": "Social and Content Operator",
+      "status": "planned_inactive",
+      "activation_condition": "Activate after the revenue pipeline and CRM operating contract pass independent QA.",
+      "future_scope": [
+        "editorial calendar",
+        "content production coordination",
+        "approved scheduling",
+        "channel-specific publishing controls",
+        "performance learning"
+      ],
+      "execution_authority": false
+    }
+  ],
+  "roster": [
+    {
+      "role_id": "operations_finance_controller",
+      "title": "Operations and Finance Controller",
+      "kind": "maker",
+      "reports_to": "Codex Marketing Chief",
+      "coverage": [
+        "company operations",
+        "finance and administration",
+        "capacity",
+        "approval control"
+      ],
+      "brief": "roles/operations-finance-controller.md",
+      "clock_in_prompt_anchor": "Clock-in prompt"
+    },
+    {
+      "role_id": "demand_intelligence_lead",
+      "title": "Demand Intelligence Lead",
+      "kind": "maker",
+      "reports_to": "Codex Marketing Chief",
+      "coverage": [
+        "market research",
+        "ideal-customer focus",
+        "demand evidence",
+        "prospect qualification research"
+      ],
+      "brief": "roles/demand-intelligence-lead.md",
+      "clock_in_prompt_anchor": "Clock-in prompt"
+    },
+    {
+      "role_id": "revenue_pipeline_manager",
+      "title": "Revenue Pipeline Manager",
+      "kind": "maker",
+      "reports_to": "Codex Marketing Chief",
+      "coverage": [
+        "sales pipeline",
+        "qualification",
+        "offer routing",
+        "proposal preparation"
+      ],
+      "brief": "roles/revenue-pipeline-manager.md",
+      "clock_in_prompt_anchor": "Clock-in prompt"
+    },
+    {
+      "role_id": "delivery_client_success_lead",
+      "title": "Delivery and Client Success Lead",
+      "kind": "maker",
+      "reports_to": "Codex Marketing Chief",
+      "coverage": [
+        "delivery",
+        "scope control",
+        "acceptance",
+        "client success",
+        "capacity readiness"
+      ],
+      "brief": "roles/delivery-client-success-lead.md",
+      "clock_in_prompt_anchor": "Clock-in prompt"
+    },
+    {
+      "role_id": "quality_risk_auditor",
+      "title": "Independent Quality and Risk Auditor",
+      "kind": "checker",
+      "reports_to": "Codex Marketing Chief",
+      "independent_from": [
+        "operations_finance_controller",
+        "demand_intelligence_lead",
+        "revenue_pipeline_manager",
+        "delivery_client_success_lead"
+      ],
+      "coverage": [
+        "evidence",
+        "claims",
+        "routing",
+        "privacy",
+        "policy",
+        "release control"
+      ],
+      "brief": "roles/quality-risk-auditor.md",
+      "clock_in_prompt_anchor": "Clock-in prompt"
+    }
+  ],
+  "board": {
+    "required_fields": [
+      "item_id",
+      "objective",
+      "owner_role_id",
+      "due_at",
+      "status",
+      "inputs",
+      "exact_output",
+      "evidence_required",
+      "artifact_locator",
+      "checker_role_id",
+      "blocker",
+      "next_action",
+      "updated_at"
+    ],
+    "primary_states": [
+      "INBOX",
+      "TRIAGED",
+      "ASSIGNED",
+      "IN_PROGRESS",
+      "READY_FOR_REVIEW",
+      "VERIFIED",
+      "DONE"
+    ],
+    "exception_states": [
+      "BLOCKED",
+      "WAITING_APPROVAL",
+      "FAILED_QA",
+      "DEFERRED",
+      "CANCELLED"
+    ],
+    "transitions": [
+      "INBOX->TRIAGED",
+      "TRIAGED->ASSIGNED",
+      "ASSIGNED->IN_PROGRESS",
+      "IN_PROGRESS->READY_FOR_REVIEW",
+      "READY_FOR_REVIEW->VERIFIED",
+      "VERIFIED->DONE",
+      "READY_FOR_REVIEW->FAILED_QA",
+      "FAILED_QA->ASSIGNED",
+      "ANY_ACTIVE->BLOCKED",
+      "BLOCKED->ASSIGNED",
+      "ANY_ACTIVE->WAITING_APPROVAL",
+      "WAITING_APPROVAL->ASSIGNED",
+      "TRIAGED->DEFERRED",
+      "ANY_NON_DONE->CANCELLED"
+    ],
+    "done_definition": "The exact internal output exists, evidence is attached, an independent checker has verified it when required, and the state label does not imply an external action."
+  },
+  "evidence_contract": {
+    "required": [
+      "claim",
+      "source_locator",
+      "source_kind",
+      "observed_at",
+      "artifact_locator",
+      "verification_method",
+      "verifier",
+      "truth_state"
+    ],
+    "truth_states": [
+      "confirmed_current",
+      "confirmed_historical",
+      "provisional",
+      "unknown",
+      "blocked",
+      "draft_only",
+      "verified_internal",
+      "verified_live"
+    ],
+    "rule": "Unknowns remain unknown. A local artifact, draft, test, deploy receipt, or agent assertion is not evidence of an external send, customer outcome, revenue event, or live state."
+  },
+  "zero_baseline": {
+    "scope": "New business outcomes generated by workflow IMMOHRTAL-DAY1-20260825",
+    "messages_sent": 0,
+    "replies": 0,
+    "meetings_booked": 0,
+    "proposals_sent": 0,
+    "closed_won": 0,
+    "verified_new_revenue_usd": 0,
+    "new_hires_or_purchases": 0
+  }
+}

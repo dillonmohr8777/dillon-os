@@ -25,7 +25,7 @@ export async function collectWebsiteEvidence(url, options = {}) {
   try {
     const response = await fetch(url, {
       redirect: 'follow', signal: controller.signal,
-      headers: { 'user-agent': 'IMMOHRTAL-Scout/1.0 (+https://themohrmedia.com)' }
+      headers: { 'user-agent': 'IMMOHRTAL-Scout/1.0 (+https://www.immohrtalmarketing.com)' }
     });
     const contentType = response.headers.get('content-type') || '';
     const raw = (await response.text()).slice(0, maxBytes);

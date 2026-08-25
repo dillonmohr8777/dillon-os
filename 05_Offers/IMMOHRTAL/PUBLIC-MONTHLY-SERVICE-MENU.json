@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "brand": "IMMOHRTAL Marketing Solutions",
+  "approved_by": "Dillon Mohr",
+  "approval_observed_date": "2026-08-25",
+  "status": "approved_for_existing_website_publication",
+  "currency": "USD",
+  "billing_basis": "monthly",
+  "historical_customer_pricing": false,
+  "services": [
+    {
+      "id": "technical-seo-monthly",
+      "name": "Technical SEO",
+      "monthly_fee_usd": 700,
+      "public": true
+    },
+    {
+      "id": "aeo-monthly",
+      "name": "AEO",
+      "monthly_fee_usd": 700,
+      "public": true
+    },
+    {
+      "id": "geo-monthly",
+      "name": "GEO",
+      "monthly_fee_usd": 700,
+      "public": true
+    },
+    {
+      "id": "search-answer-everywhere-bundle",
+      "name": "SEO + AEO + GEO",
+      "monthly_fee_usd": 1500,
+      "a_la_carte_total_usd": 2100,
+      "monthly_savings_usd": 600,
+      "public": true
+    },
+    {
+      "id": "google-ads-management-monthly",
+      "name": "Google Ads management",
+      "monthly_fee_usd": 400,
+      "advertising_spend_included": false,
+      "public": true
+    },
+    {
+      "id": "meta-ads-management-monthly",
+      "name": "Meta Ads management",
+      "monthly_fee_usd": 400,
+      "advertising_spend_included": false,
+      "public": true
+    },
+    {
+      "id": "google-meta-ads-management-bundle",
+      "name": "Google + Meta Ads management",
+      "monthly_fee_usd": 650,
+      "a_la_carte_total_usd": 800,
+      "monthly_savings_usd": 150,
+      "advertising_spend_included": false,
+      "public": true
+    }
+  ],
+  "custom_scoped_without_public_price": [
+    "Web design and complete website systems",
+    "Website optimization sprints",
+    "Content and structured-data implementation",
+    "Business-agent implementation",
+    "HubSpot and CRM agent implementation"
+  ],
+  "unapproved_public_terms": [
+    "setup fees",
+    "minimum terms",
+    "cancellation terms",
+    "ad budgets",
+    "deliverable quantities",
+    "turnaround times",
+    "performance guarantees"
+  ]
+}
