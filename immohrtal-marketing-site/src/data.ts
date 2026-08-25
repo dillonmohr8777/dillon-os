@@ -15,6 +15,8 @@ export type AgentRole = {
   name: string
   role: string
   summary: string
+  temperament: string
+  signature: string
   receipt: string
   accent: string
 }
@@ -105,43 +107,53 @@ export const clients = [
 
 export const agentRoles: AgentRole[] = [
   {
-    id: 'INTEL',
+    id: 'FIND',
     name: 'Scout',
-    role: 'Website intelligence',
-    summary: 'Inspects public sites, search surfaces, structure, performance, and conversion paths before a recommendation is written.',
-    receipt: 'Maps to Prospect Radar, site grading, and source-located research.',
+    role: 'Website detective',
+    temperament: 'Restlessly curious.',
+    signature: 'Twin scanners sweep the public web, then snap back to the exact source behind every finding.',
+    summary: 'Finds what is confusing, slow, hidden, or costing a website the next conversation.',
+    receipt: 'Leaves behind a source-backed website check and a clear list of opportunities.',
     accent: '0.431,0.878,1.0',
   },
   {
-    id: 'ANSWER',
+    id: 'CLARITY',
     name: 'Atlas',
-    role: 'AEO / GEO architect',
-    summary: 'Finds the questions, entities, evidence, schema, and content relationships answer engines can actually use.',
-    receipt: 'Maps to the AEO trust gate, keyword research, entity packs, and citation scorecards.',
+    role: 'Search and AI visibility',
+    temperament: 'Calm under ambiguity.',
+    signature: 'An orbital crown slows the room down while Atlas connects customer questions to clear answers and real proof.',
+    summary: 'Turns the questions customers ask into pages that Google and AI tools can understand and use.',
+    receipt: 'Leaves behind a question map, page plan, and visibility scorecard.',
     accent: '0.345,0.929,0.698',
   },
   {
     id: 'BUILD',
     name: 'Forge',
-    role: 'Web system builder',
-    summary: 'Turns the diagnosis into an expressive, accessible site with reusable components and a conversion path that holds up.',
-    receipt: 'Maps to the site factory, Impeccable design checks, and browser QA.',
+    role: 'Website builder',
+    temperament: 'Built like a workshop.',
+    signature: 'Forge plants its feet, raises the tool, and turns approved briefs into durable components.',
+    summary: 'Turns the plan into a memorable, accessible website with a clear path to the next step.',
+    receipt: 'Leaves behind the working site, reusable pieces, and browser test results.',
     accent: '0.176,0.490,1.0',
   },
   {
-    id: 'SYSTEM',
+    id: 'CONNECT',
     name: 'Relay',
-    role: 'CRM and agent integration',
-    summary: 'Connects forms, HubSpot, routing, follow-up preparation, analytics, and operational agents without blending client data.',
-    receipt: 'Maps to HubSpot agents, workflow gates, client routing, and governed communications.',
+    role: 'Systems connector',
+    temperament: 'Fast, social, and exact.',
+    signature: 'Relay throws a bright signal only after the destination, client boundary, and approval state are resolved.',
+    summary: 'Moves the right information from forms and websites into HubSpot, follow-up drafts, and the right person’s hands.',
+    receipt: 'Leaves behind the workflow, routing rules, approval points, and a record of what happened.',
     accent: '0.361,0.851,0.780',
   },
   {
-    id: 'PROOF',
+    id: 'CHECK',
     name: 'Proof',
-    role: 'Independent QA',
-    summary: 'Checks the build, evidence, accessibility, mobile behavior, and public claims before anything is called finished.',
-    receipt: 'Maps to maker-checker review, automated tests, visual QA, and deployment receipts.',
+    role: 'Final checker',
+    temperament: 'Professionally skeptical.',
+    signature: 'The monocle scans, the shield holds, and the check appears only when the evidence survives review.',
+    summary: 'Checks the website, proof, mobile experience, accessibility, and public claims before anything is called finished.',
+    receipt: 'Leaves behind test results, visual checks, and proof of the live release.',
     accent: '0.502,0.902,0.851',
   },
 ]

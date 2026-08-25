@@ -1,0 +1,19 @@
+# Crawl policy for IMMOHRTAL Marketing Solutions
+# robots.txt is public and is not an access control system.
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: *
+Allow: /
+
+Sitemap: https://themohrmedia.com/sitemap.xml

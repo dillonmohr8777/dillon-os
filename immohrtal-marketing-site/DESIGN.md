@@ -1,6 +1,6 @@
 ---
 name: IMMOHRTAL Marketing Solutions
-description: A particle-first technical observatory where expressive web work resolves into verifiable proof.
+description: A particle-first proof system where memorable web work resolves into clear business outcomes.
 colors:
   space-ink: "#020711"
   deep-observatory: "#07101f"
@@ -78,7 +78,7 @@ components:
 
 **Creative North Star: "Particle Proof Conveyor"**
 
-IMMOHRTAL is a dark technical observatory built around one visual argument: proof moves first. Work begins as signal, resolves into exact client marks, expands into live website frames and search evidence, then becomes a legible operating system. The atmosphere is cinematic and technically fluent, but every authored effect must terminate in a name, artifact, status, or action the visitor can understand.
+IMMOHRTAL is a dark technical observatory built around one visual argument: proof moves first. Work begins as signal, resolves first into the exact white IMMOHRTAL mark and then into exact-color client marks, expands into live website frames and search evidence, then becomes a legible operating system. The atmosphere is cinematic and technically fluent, but every authored effect must terminate in a name, artifact, status, or action the visitor can understand without learning agency terminology first.
 
 Cold gunmetal space carries the active system. Pale paper chambers interrupt that darkness when evidence needs daylight, establishing a strong proof-versus-process rhythm. Cobalt, cyan, and mint behave as signal colors rather than ambient decoration; platinum and muted blue-gray keep long explanations readable without flattening the hierarchy.
 
@@ -87,7 +87,7 @@ The world is precise, dense, and proof-led. It rejects generic agency dashboards
 **Key Characteristics:**
 
 - A dark observatory alternating with pale, high-contrast proof chambers.
-- Exact-color particles that converge rapidly into recognizable marks and words.
+- A high-clarity white IMMOHRTAL particle mark followed by exact-color client marks that resolve rapidly.
 - Browser frames, evidence windows, agent stations, and operating receipts as the visual vocabulary.
 - Chunky geometric display type balanced by plainspoken body copy and compact mono labels.
 - Motion that communicates flow, verification, and system state, with complete static fallbacks.
@@ -141,6 +141,8 @@ The palette combines cold technical depth with bright signal accents and clean p
 **The One Conviction Voice Rule.** Unbounded owns declarations and names. It never carries paragraph-length explanation.
 
 **The Instrument Panel Rule.** Mono text is functional: status, source, step, URL, or evidence label. It is not a texture applied to ordinary body copy.
+
+**The Outcome Before Acronym Rule.** Navigation, headlines, calls to action, and robot roles name the customer problem or outcome first. AEO, GEO, schema, entity, and governance language belongs in the supporting explanation or the long-form guide that defines it.
 
 ## Layout
 
@@ -215,15 +217,16 @@ Hairlines are cool, translucent, and structural. Circular geometry is reserved f
 
 ### Client Particle Sequence
 
-- **Structure:** One persistent WebGL particle field resolves 21 verified public-safe marks, bridges to the invitation, and builds “YOU” from the same system.
-- **Color:** Sample exact source RGB and alpha. Do not tint or normalize client artwork.
+- **Structure:** One persistent WebGL particle field resolves the exact IMMOHRTAL mark in white, runs through 21 verified public-safe marks, bridges to the invitation, and builds “YOU” from the same system.
+- **Color:** The house mark preserves its exact alpha silhouette in pure white. Client and partner marks preserve their sampled source RGB and alpha without tinting or normalization.
 - **Control:** Pause and replay remain visible; status announcements update for assistive technology.
 - **Fallback:** Reduced motion or loading failure produces a complete static logo grid and a high-clarity “YOU” conclusion.
 
 ### Agent Stations
 
-- **Structure:** Repeated full-width rows with a visual worker bay and a named operating role, responsibility, and receipt.
+- **Structure:** Repeated full-width rows with a visual worker bay and a named plain-language job, responsibility, personality line, and receipt.
 - **Depth:** The shared robot canvas sits behind the copy layer; static line-art workers remain available as the fallback.
+- **Personality:** Scout is curious and scanner-led, Atlas is calm and orbital, Forge is broad and tool-driven, Relay is fast and signal-led, and Proof is skeptical with a monocle and shield. Silhouette, props, motion, and temperament must all differ.
 - **Integrity:** A worker appears only when its public role maps to real bounded infrastructure.
 
 ## Do's and Don'ts
@@ -233,7 +236,8 @@ Hairlines are cool, translucent, and structural. Circular geometry is reserved f
 - **Do** make proof visible before explaining the method.
 - **Do** use Cyan, Cobalt, and Mint to describe signal, action, flow, and verification.
 - **Do** move evidence inside browser frames, captured-paper layers, operating windows, or named agent stations.
-- **Do** preserve exact logo geometry, colors, and transparency in particle and static treatments.
+- **Do** lead with a better website, getting found, less busywork, or another customer outcome before naming the technical discipline.
+- **Do** preserve the exact house-logo geometry and transparency in white, and preserve exact client-mark colors and transparency.
 - **Do** label illustrative interfaces and time-sensitive search evidence honestly.
 - **Do** provide pause, keyboard focus, reduced-motion, and no-WebGL paths that retain the complete story.
 
@@ -244,4 +248,5 @@ Hairlines are cool, translucent, and structural. Circular geometry is reserved f
 - **Don't** use accent color as an ambient wash when no signal, action, or state is present.
 - **Don't** let motion obscure source material, delay access to proof, or continue without a useful final state.
 - **Don't** use mono labels as a decorative substitute for clear body copy.
+- **Don't** make a visitor decode AEO, GEO, entities, schema, bounded agents, or governance language before they understand what improves for their business.
 - **Don't** introduce a new display family, radius step, or shadow vocabulary without updating this system intentionally.

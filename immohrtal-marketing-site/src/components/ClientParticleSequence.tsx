@@ -26,6 +26,7 @@ type LogoCloud = {
 }
 
 type SequenceStage =
+  | { kind: 'brand'; duration: number; cloudIndex: number }
   | { kind: 'intro'; duration: number }
   | { kind: 'logo'; duration: number; cloudIndex: number; name: string }
   | { kind: 'bridge'; duration: number }
@@ -41,6 +42,11 @@ type RuntimeState = {
 const DESKTOP_PARTICLE_COUNT = 17_000
 const COMPACT_PARTICLE_COUNT = 10_500
 const DEFAULT_LOGO_DURATION = 560
+const BRAND_LOGO: NormalizedBrand = {
+  name: 'IMMOHRTAL Marketing Solutions',
+  logo: '/brand/immohrtal-logo.png',
+  seed: 0x1a44a11,
+}
 const decodedImageCache = new Map<string, Promise<HTMLImageElement>>()
 const cloudCache = new Map<string, Promise<LogoCloud>>()
 
@@ -222,6 +228,7 @@ function sampleMask(
   count: number,
   compact: boolean,
   seed: number,
+  forceWhite = false,
 ): LogoCloud {
   const pixels = context.getImageData(0, 0, canvas.width, canvas.height).data
   const candidates: number[] = []
@@ -273,14 +280,28 @@ function sampleMask(
     target[targetOffset + 1] = -((y - minY) / maskHeight - 0.5) * fittedHeight + (random() - 0.5) * 0.0025
     target[targetOffset + 2] = (random() - 0.5) * 0.018
 
-    // These are the source pixels themselves: no tinting or low-luminance lift.
-    colors[targetOffset] = pixels[pixelOffset] / 255
-    colors[targetOffset + 1] = pixels[pixelOffset + 1] / 255
-    colors[targetOffset + 2] = pixels[pixelOffset + 2] / 255
+    // Client marks retain their sampled source pixels. The house mark is the
+    // only exception: its exact alpha silhouette resolves in pure white.
+    colors[targetOffset] = forceWhite ? 1 : pixels[pixelOffset] / 255
+    colors[targetOffset + 1] = forceWhite ? 1 : pixels[pixelOffset + 1] / 255
+    colors[targetOffset + 2] = forceWhite ? 1 : pixels[pixelOffset + 2] / 255
     opacity[index] = pixels[pixelOffset + 3] / 255
   }
 
   return { target, colors, opacity }
+}
+
+function getBrandCloud(count: number, compact: boolean) {
+  const cacheKey = `__immohrtal_white__|${count}|${compact ? 'compact' : 'desktop'}`
+  const cached = cloudCache.get(cacheKey)
+  if (cached) return cached
+
+  const pending = loadDecodedImage(BRAND_LOGO.logo).then((image) => {
+    const { canvas, context } = drawImageMask(image)
+    return sampleMask(canvas, context, count, compact, BRAND_LOGO.seed, true)
+  })
+  cloudCache.set(cacheKey, pending)
+  return pending
 }
 
 function getLogoCloud(brand: NormalizedBrand, count: number, compact: boolean) {
@@ -398,7 +419,7 @@ function ParticleField({
     const sequence = runtime.current
     const stage = stages[sequence.stageIndex]
     const fallbackCloud = stage.kind === 'bridge' || stage.kind === 'you' ? clouds.length - 1 : 0
-    const cloudIndex = stage.kind === 'logo' || stage.kind === 'you' ? stage.cloudIndex : fallbackCloud
+    const cloudIndex = stage.kind === 'brand' || stage.kind === 'logo' || stage.kind === 'you' ? stage.cloudIndex : fallbackCloud
 
     if (activeCloud.current !== cloudIndex) {
       const cloud = clouds[cloudIndex]
@@ -419,9 +440,11 @@ function ParticleField({
     let resolve = 0
     let stageOpacity = 0.48
 
-    if (stage.kind === 'logo') {
+    if (stage.kind === 'brand' || stage.kind === 'logo') {
       const convergeEnd = Math.min(0.24, 132 / duration)
-      const dissolveStart = Math.max(convergeEnd + 0.18, 1 - 205 / duration)
+      const dissolveStart = stage.kind === 'brand'
+        ? Math.max(convergeEnd + 0.32, 1 - 300 / duration)
+        : Math.max(convergeEnd + 0.18, 1 - 205 / duration)
       if (progress < convergeEnd) resolve = THREE.MathUtils.smoothstep(progress, 0, convergeEnd)
       else if (progress < dissolveStart) resolve = 1
       else resolve = 1 - THREE.MathUtils.smoothstep(progress, dissolveStart, 1)
@@ -455,7 +478,8 @@ function ParticleField({
 
 function ReducedMotionSequence({ brands, className }: { brands: readonly NormalizedBrand[]; className: string }) {
   return (
-    <section className={`${className} client-particle-sequence--reduced`} aria-label="Client work and an invitation to work together">
+    <section className={`${className} client-particle-sequence--reduced`} aria-label="Client work and an invitation to work together" tabIndex={0}>
+      <img className="client-particle-sequence__brand-static brand-logo--white" src={BRAND_LOGO.logo} alt="IMMOHRTAL Marketing Solutions" decoding="async" />
       <p className="client-particle-sequence__phrase">I did this for</p>
       <ul className="client-particle-sequence__static-grid">
         {brands.map((brand) => (
@@ -492,15 +516,16 @@ export function ClientParticleSequence({
   const [complete, setComplete] = useState(false)
   const runtime = useRef<RuntimeState>({ stageIndex: 0, elapsedMs: 0, paused: false, complete: false })
   const stages = useMemo<SequenceStage[]>(() => [
+    { kind: 'brand', duration: 1_450, cloudIndex: 0 },
     { kind: 'intro', duration: 1_050 },
     ...normalizedBrands.map((brand, cloudIndex) => ({
       kind: 'logo' as const,
       duration: Math.max(460, logoDurationMs),
-      cloudIndex,
+      cloudIndex: cloudIndex + 1,
       name: brand.name,
     })),
     { kind: 'bridge', duration: 1_000 },
-    { kind: 'you', duration: 3_600, cloudIndex: normalizedBrands.length },
+    { kind: 'you', duration: 3_600, cloudIndex: normalizedBrands.length + 1 },
   ], [brandSignature, logoDurationMs])
   const scatter = useMemo(() => makeScatter(count, compact), [compact, count])
   const rootClassName = `client-particle-sequence${className ? ` ${className}` : ''}`
@@ -513,9 +538,9 @@ export function ClientParticleSequence({
 
     // Decode every source in parallel, then sample sequentially to avoid 21 large
     // temporary ImageData candidate lists existing at the same time.
-    Promise.all(normalizedBrands.map((brand) => loadDecodedImage(brand.logo)))
+    Promise.all([loadDecodedImage(BRAND_LOGO.logo), ...normalizedBrands.map((brand) => loadDecodedImage(brand.logo))])
       .then(async () => {
-        const nextClouds: LogoCloud[] = []
+        const nextClouds: LogoCloud[] = [await getBrandCloud(count, compact)]
         for (const brand of normalizedBrands) {
           nextClouds.push(await getLogoCloud(brand, count, compact))
         }
@@ -586,7 +611,9 @@ export function ClientParticleSequence({
   }
 
   const currentStage = stages[stageIndex]
-  const liveText = currentStage.kind === 'logo'
+  const liveText = currentStage.kind === 'brand'
+    ? 'IMMOHRTAL Marketing Solutions'
+    : currentStage.kind === 'logo'
     ? currentStage.name
     : currentStage.kind === 'intro'
       ? 'I did this for'
@@ -615,7 +642,12 @@ export function ClientParticleSequence({
             )}
           </Canvas>
         </CanvasErrorBoundary>
-        {!clouds && <p className="client-particle-sequence__loading">Resolving client work…</p>}
+        {!clouds && (
+          <div className="client-particle-sequence__loading-brand">
+            <img className="brand-logo--white" src={BRAND_LOGO.logo} alt="" />
+            <p className="client-particle-sequence__loading">Preparing the particle sequence…</p>
+          </div>
+        )}
         {(currentStage.kind === 'intro' || currentStage.kind === 'bridge') && (
           <p className="client-particle-sequence__phrase">
             {currentStage.kind === 'intro' ? 'I did this for' : 'I could do it for'}
