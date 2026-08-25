@@ -25,34 +25,38 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
-  <header class="static-header">
-  <nav class="static-nav" aria-label="Primary navigation">
-    <a class="brand-lockup" href="/" aria-label="IMMOHRTAL Marketing Solutions home">
-      <img src="/brand/immohrtal-logo.png" width="600" height="160" alt="" fetchpriority="high">
-      <span>IMMOHRTAL Marketing Solutions</span>
+  <header class="site-rail static-header">
+  <div class="static-nav">
+    <a class="wordmark brand-lockup" href="/" aria-label="IMMOHRTAL Marketing Solutions home">
+      <img class="brand-logo--white" src="/brand/immohrtal-logo.png" width="600" height="160" alt="" fetchpriority="high">
+      <span><strong>IMMOHRTAL</strong><small>MARKETING SOLUTIONS</small></span>
     </a>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="static-menu" data-menu-toggle>Menu</button>
-    <div class="nav-links" id="static-menu" data-menu><a href="/work/">Work</a><a href="/web-design-optimization/">Better website</a><a href="/aeo-geo/">Get found</a><a href="/business-agents/">AI workers</a><a href="/insights/">Guides</a></div>
-    <a class="nav-action" href="/contact/">Let’s talk</a>
-  </nav>
+    <button class="menu-button menu-toggle" type="button" aria-expanded="false" aria-controls="static-menu" data-menu-toggle>Menu</button>
+    <nav class="nav-links" id="static-menu" data-menu aria-label="Primary navigation"><a href="/work/">Work</a><a href="/web-design-optimization/">Better website</a><a href="/aeo-geo/">Get found</a><a href="/business-agents/">AI workers</a><a href="/insights/">Guides</a></nav>
+    <a class="rail-cta nav-action" href="/contact/">Let’s talk <span aria-hidden="true">→</span></a>
+  </div>
 </header>
   <main id="main-content">
-    <header class="page-hero">
+    <header class="page-hero persuade-hero">
       <div class="hero-inner">
         <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><span aria-current="page">One person accountable for the website and the work behind it.</span></li></ol></nav>
-        <p class="eyebrow">Built by Dillon Mohr</p>
-        <h1>One person accountable for the website and the work behind it.</h1>
-        <p class="hero-lede">Dillon designs the website, improves how people find it, and connects it to the tools that keep the business moving. You always know who is responsible and why a change is being made.</p>
-        <div class="hero-actions"><a class="button" href="/work/">See the work</a><a class="button secondary" href="/contact/">Tell me what is not working</a></div>
+        <div class="hero-grid">
+          <h1>One person accountable for the website and the work behind it.</h1>
+          <div class="hero-support"><p class="hero-lede">Dillon designs the website, improves how people find it, and connects it to the tools that keep the business moving. You always know who is responsible and why a change is being made.</p><div class="hero-actions"><a class="button" href="/work/">See the work <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg></a><a class="button secondary" href="/contact/">Tell me what is not working <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg></a></div></div>
+        </div>
       </div>
     </header>
+    <section class="positioning-strip" aria-label="IMMOHRTAL focus" tabindex="0">
+  <span>BETTER WEBSITES. EASIER TO FIND. BUILT TO WORK.</span><i></i>
+  <span>GOOGLE, AI ANSWERS, AND THE PEOPLE SEARCHING</span><i></i>
+  <span>AI WORKERS. HUMAN CONTROL.</span>
+</section>
     <section class="content-section tone-paper">
     <div class="section-inner">
-      <header class="section-heading">
-        <p class="eyebrow">The person behind the system</p>
+      <header class="section-heading" data-reveal>
         <h2>A hands on studio, not a mystery box</h2>
       </header>
-      <div class="prose"><div class="portrait-layout">
+      <div class="prose" data-reveal><div class="portrait-layout">
           <img class="portrait" src="/people/dillon-mohr.jpg" width="700" height="700" alt="Portrait of Dillon Mohr, founder of IMMOHRTAL Marketing Solutions" loading="eager">
           <div>
             <p>Dillon designs and builds websites, writes the pages people need, and connects the finished experience to search, HubSpot, and useful AI workers. The goal is not to add an AI label to ordinary agency work. The goal is to make the business easier to understand, trust, and contact.</p>
@@ -64,11 +68,10 @@
   </section>
 <section class="content-section">
     <div class="section-inner">
-      <header class="section-heading">
-        <p class="eyebrow">The operating thesis</p>
+      <header class="section-heading" data-reveal>
         <h2>A website is the first impression, the explanation, and the handoff</h2>
       </header>
-      <div class="prose"><p>A polished homepage can earn attention, but attention alone does not make a site perform. The information needs a clear hierarchy. Key pages need crawlable HTML. Claims need support. Structured data needs to match what people can actually see. Forms and analytics need to deliver reliable context to the right place.</p>
+      <div class="prose" data-reveal><p>A polished homepage can earn attention, but attention alone does not make a site perform. The information needs a clear hierarchy. Key pages need crawlable HTML. Claims need support. Structured data needs to match what people can actually see. Forms and analytics need to deliver reliable context to the right place.</p>
         <p>That is why IMMOHRTAL centers its work around three connected layers:</p>
         <ul class="fact-grid">
           <li class="fact-card"><h3>First impression</h3><p>Art direction, motion, responsive design, and accessibility that make the business feel specific and trustworthy.</p></li>
@@ -80,11 +83,10 @@
   </section>
 <section class="content-section tone-blue">
     <div class="section-inner">
-      <header class="section-heading">
-        <p class="eyebrow">How the work moves</p>
+      <header class="section-heading" data-reveal>
         <h2>Check, choose, build, connect, prove</h2>
       </header>
-      <div class="prose"><ol class="steps">
+      <div class="prose" data-reveal><ol class="steps">
           <li><strong>Check what is happening now.</strong> Review the live site, the mobile experience, what customers can find, where they get stuck, and which tools receive their information.</li>
           <li><strong>Choose one focused direction.</strong> Define who the site is for, what it needs them to understand, what proof matters, and what a useful result looks like.</li>
           <li><strong>Build the public experience.</strong> Create memorable pages with clear language, strong structure, useful proof, and responsive behavior.</li>
@@ -95,33 +97,28 @@
   </section>
 <section class="content-section">
     <div class="section-inner">
-      <header class="section-heading">
-        <p class="eyebrow">AI needs boundaries</p>
+      <header class="section-heading" data-reveal>
         <h2>Let AI handle the busywork, not the final say</h2>
       </header>
-      <div class="prose"><p>AI workers can research, inspect websites, organize proof, draft content, check a build, and prepare the next step. Important actions still need the right approval. That includes sending outreach, publishing outside an approved website, changing ad spend, choosing an unclear account, or crossing a login challenge.</p>
+      <div class="prose" data-reveal><p>AI workers can research, inspect websites, organize proof, draft content, check a build, and prepare the next step. Important actions still need the right approval. That includes sending outreach, publishing outside an approved website, changing ad spend, choosing an unclear account, or crossing a login challenge.</p>
         <p>A useful worker should be able to explain what it checked, which client it served, what evidence it used, and where a person approved the work. If it cannot, it is not ready to act for a business.</p>
         <p>Meet the <a href="/business-agents/">AI worker crew</a>, read how <a href="/insights/human-approval-gates-for-marketing-agents/">approval keeps automation safe</a>, or <a href="/contact/">show me the repeated task you want off your plate</a>.</p></div>
     </div>
   </section>
+    <section class="closing-section" data-reveal>
+  <img src="/brand/immohrtal-logo.png" width="600" height="160" alt="">
+  <h2>Your website should make it easier for the right customer to say yes.</h2>
+  <p>Show me what feels broken. I’ll help you find the right first move.</p>
+  <a class="closing-cta" href="/contact/">Show me what to fix <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg></a>
+</section>
   </main>
   <footer class="site-footer">
-  <div class="footer-inner">
-    <a class="footer-brand" href="/" aria-label="IMMOHRTAL Marketing Solutions home"><img src="/brand/immohrtal-logo.png" width="600" height="160" alt="IMMOHRTAL Marketing Solutions"></a>
-    <p>Websites that stand out, get found, and hand less busywork to your team. Built by Dillon Mohr.</p>
-    <nav class="footer-links" aria-label="Footer navigation">
-      <a href="/about/">About</a>
-      <a href="/work/">Work</a>
-      <a href="/insights/">Guides</a>
-      <a href="/contact/">Let’s talk</a>
-      <a href="mailto:dillonmohr8777@gmail.com">Email</a>
-    </nav>
-  </div>
-  <div class="footer-inner" style="margin-top:34px">
-    <p>Copyright <span data-current-year>2026</span> IMMOHRTAL Marketing Solutions.</p>
-    <p>Canonical website: themohrmedia.com</p>
-    <p><a href="/sitemap.xml">Sitemap</a> · <a href="/feed.xml">RSS feed</a></p>
-  </div>
+  <a class="wordmark footer-wordmark" href="/" aria-label="IMMOHRTAL Marketing Solutions home">
+    <img class="brand-logo--white" src="/brand/immohrtal-logo.png" width="600" height="160" alt="">
+    <span><strong>IMMOHRTAL</strong><small>MARKETING SOLUTIONS</small></span>
+  </a>
+  <p>Websites that stand out, get found, and hand less busywork to your team. Built by Dillon Mohr.</p>
+  <a class="footer-action" href="/contact/">Fix my website</a>
 </footer>
 </body>
 </html>

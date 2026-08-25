@@ -42,6 +42,7 @@ for (const route of routes) {
   page.on('requestfailed', (request) => errors.push(`requestfailed: ${request.url()} ${request.failure()?.errorText || ''}`))
   const response = await page.goto(new URL(route, baseUrl).toString(), { waitUntil: 'domcontentloaded' })
   await page.waitForTimeout(route === '/' ? 900 : 100)
+  await page.evaluate(async () => { await document.fonts.ready })
   const result = await page.evaluate(() => ({
     title: document.title,
     h1: document.querySelector('h1')?.textContent?.trim() || '',
@@ -49,6 +50,10 @@ for (const route of routes) {
     viewport: document.documentElement.clientWidth,
     scrollWidth: document.documentElement.scrollWidth,
     articleSchema: [...document.querySelectorAll('script[type="application/ld+json"]')].some((script) => script.textContent?.includes('"Article"')),
+    bodyFont: getComputedStyle(document.body).fontFamily,
+    displayFont: getComputedStyle(document.querySelector('.section-copy h2, .page-hero h1') || document.body).fontFamily,
+    hasHomepageRail: Boolean(document.querySelector('.site-rail')),
+    hasClosingSection: Boolean(document.querySelector('.closing-section')),
   }))
   const accessibility = await new AxeBuilder({ page }).analyze()
   const violations = accessibility.violations.map(({ id, impact, nodes }) => ({ id, impact, nodes: nodes.length }))
@@ -78,7 +83,11 @@ const robotState = await visualPage.evaluate(() => ({
 await visualContext.close()
 await browser.close()
 
-const failures = routeResults.filter((result) => result.status !== 200 || !result.title || !result.h1 || result.scrollWidth > result.viewport || result.errors.length || result.violations.length)
+const failures = routeResults.filter((result) => {
+  const sharedSystemMissing = result.route !== '/' && (!result.hasHomepageRail || !result.hasClosingSection)
+  const wrongFonts = !result.bodyFont.includes('Manrope Variable') || !result.displayFont.includes('Unbounded Variable')
+  return result.status !== 200 || !result.title || !result.h1 || result.scrollWidth > result.viewport || result.errors.length || result.violations.length || sharedSystemMissing || wrongFonts
+})
 const articleSchemaCount = routeResults.filter((result) => result.articleSchema).length
 const report = { routes: routeResults.length, failures, articleSchemaCount, robotState, visualErrors }
 await fs.writeFile(path.join(outputDir, 'qa-site-results.json'), `${JSON.stringify(report, null, 2)}\n`)

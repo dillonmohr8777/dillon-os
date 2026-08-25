@@ -25,45 +25,48 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
-  <header class="static-header">
-  <nav class="static-nav" aria-label="Primary navigation">
-    <a class="brand-lockup" href="/" aria-label="IMMOHRTAL Marketing Solutions home">
-      <img src="/brand/immohrtal-logo.png" width="600" height="160" alt="" fetchpriority="high">
-      <span>IMMOHRTAL Marketing Solutions</span>
+  <header class="site-rail static-header">
+  <div class="static-nav">
+    <a class="wordmark brand-lockup" href="/" aria-label="IMMOHRTAL Marketing Solutions home">
+      <img class="brand-logo--white" src="/brand/immohrtal-logo.png" width="600" height="160" alt="" fetchpriority="high">
+      <span><strong>IMMOHRTAL</strong><small>MARKETING SOLUTIONS</small></span>
     </a>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="static-menu" data-menu-toggle>Menu</button>
-    <div class="nav-links" id="static-menu" data-menu><a href="/work/">Work</a><a href="/web-design-optimization/" aria-current="page">Better website</a><a href="/aeo-geo/">Get found</a><a href="/business-agents/">AI workers</a><a href="/insights/">Guides</a></div>
-    <a class="nav-action" href="/contact/">Let’s talk</a>
-  </nav>
+    <button class="menu-button menu-toggle" type="button" aria-expanded="false" aria-controls="static-menu" data-menu-toggle>Menu</button>
+    <nav class="nav-links" id="static-menu" data-menu aria-label="Primary navigation"><a href="/work/">Work</a><a href="/web-design-optimization/" aria-current="page">Better website</a><a href="/aeo-geo/">Get found</a><a href="/business-agents/">AI workers</a><a href="/insights/">Guides</a></nav>
+    <a class="rail-cta nav-action" href="/contact/">Let’s talk <span aria-hidden="true">→</span></a>
+  </div>
 </header>
   <main id="main-content">
-    <header class="page-hero">
+    <header class="page-hero persuade-hero">
       <div class="hero-inner">
         <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><span aria-current="page">Get a website people remember, trust, and know how to use.</span></li></ol></nav>
-        <p class="eyebrow">A better website</p>
-        <h1>Get a website people remember, trust, and know how to use.</h1>
-        <p class="hero-lede">I redesign and improve service business websites so the offer is clear, the mobile experience works, the next step is obvious, and Google and AI tools can understand the pages.</p>
-        <div class="hero-actions"><a class="button" href="/work/">See websites I built</a><a class="button secondary" href="/contact/">Help me improve my site</a></div>
+        <div class="hero-grid">
+          <h1>Get a website people remember, trust, and know how to use.</h1>
+          <div class="hero-support"><p class="hero-lede">I redesign and improve service business websites so the offer is clear, the mobile experience works, the next step is obvious, and Google and AI tools can understand the pages.</p><div class="hero-actions"><a class="button" href="/work/">See websites I built <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg></a><a class="button secondary" href="/contact/">Help me improve my site <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg></a></div></div>
+        </div>
       </div>
     </header>
+    <section class="positioning-strip" aria-label="IMMOHRTAL focus" tabindex="0">
+  <span>BETTER WEBSITES. EASIER TO FIND. BUILT TO WORK.</span><i></i>
+  <span>GOOGLE, AI ANSWERS, AND THE PEOPLE SEARCHING</span><i></i>
+  <span>AI WORKERS. HUMAN CONTROL.</span>
+</section>
     <section class="content-section tone-paper">
     <div class="section-inner">
-      <header class="section-heading">
-        <p class="eyebrow">What gets better</p>
+      <header class="section-heading" data-reveal>
         <h2>More than a prettier homepage</h2>
       </header>
-      <div class="prose"><p>Website optimization is the coordinated improvement of design, content, technical delivery, accessibility, discoverability, and conversion flow. A page can be visually beautiful and still hide its main service behind vague copy. It can score well in one lab test and still frustrate real mobile visitors. It can contain extensive information while giving search systems no clear relationship between the company, its services, its locations, and its evidence.</p>
+      <div class="prose" data-reveal><p>Website optimization is the coordinated improvement of design, content, technical delivery, accessibility, discoverability, and conversion flow. A page can be visually beautiful and still hide its main service behind vague copy. It can score well in one lab test and still frustrate real mobile visitors. It can contain extensive information while giving search systems no clear relationship between the company, its services, its locations, and its evidence.</p>
         <p>The work starts by deciding what each page is for. A service page should answer a real buying question, state who the service fits, explain the process, show appropriate proof, address constraints, and offer a clear next step. The interface then supports that job with hierarchy, interaction, and responsive behavior.</p>
         <div class="callout"><strong>The practical standard</strong>A visitor should understand what the business does, why the offer is credible, and what to do next without decoding generic agency language.</div></div>
     </div>
   </section>
 <section class="content-section">
     <div class="section-inner">
-      <header class="section-heading">
-        <p class="eyebrow">The build system</p>
+      <header class="section-heading" data-reveal>
         <h2>Six connected layers</h2>
       </header>
-      <div class="prose"><ul class="fact-grid">
+      <div class="prose" data-reveal><ul class="fact-grid">
           <li class="fact-card"><h3>Positioning and page architecture</h3><p>Define the audience, offer, proof order, page jobs, and internal paths before decoration hardens the wrong structure.</p></li>
           <li class="fact-card"><h3>Art direction and interaction</h3><p>Create a recognizable visual world with typography, layout, materials, motion, and imagery that belong to the business.</p></li>
           <li class="fact-card"><h3>Semantic content</h3><p>Use clear headings, descriptive links, readable sections, tables, lists, source references, and real HTML that can be retrieved without guesswork.</p></li>
@@ -75,11 +78,10 @@
   </section>
 <section class="content-section tone-blue">
     <div class="section-inner">
-      <header class="section-heading">
-        <p class="eyebrow">Typical engagement sequence</p>
+      <header class="section-heading" data-reveal>
         <h2>From live site audit to verified release</h2>
       </header>
-      <div class="prose"><ol class="steps">
+      <div class="prose" data-reveal><ol class="steps">
           <li><strong>Inspect the live experience.</strong> Capture desktop and mobile behavior, crawlable content, information structure, key templates, forms, links, and visible technical problems.</li>
           <li><strong>Map demand and decisions.</strong> Identify the questions prospects ask, the services and entities they need to understand, and the evidence required to move forward.</li>
           <li><strong>Set the visual thesis.</strong> Select a design direction that expresses the business through a coherent palette, type system, layout grammar, imagery, and motion behavior.</li>
@@ -91,11 +93,10 @@
   </section>
 <section class="content-section">
     <div class="section-inner">
-      <header class="section-heading">
-        <p class="eyebrow">What can be delivered</p>
+      <header class="section-heading" data-reveal>
         <h2>A focused system shaped to the site</h2>
       </header>
-      <div class="prose"><p>The exact deliverables depend on what already exists and what the business needs next. A redesign may include a new homepage, service architecture, about and contact experience, case study templates, an insights library, a design system, analytics events, CRM handoff, migration support, and a technical release checklist.</p>
+      <div class="prose" data-reveal><p>The exact deliverables depend on what already exists and what the business needs next. A redesign may include a new homepage, service architecture, about and contact experience, case study templates, an insights library, a design system, analytics events, CRM handoff, migration support, and a technical release checklist.</p>
         <p>An optimization engagement may keep the visual foundation and focus on weak templates, thin service content, confusing navigation, Core Web Vitals, accessibility, crawl controls, duplicate URLs, internal links, schema accuracy, or form routing. The audit should determine the work. A fixed package should not force every website into the same answer.</p>
         <h3>Good fit</h3>
         <ul>
@@ -107,24 +108,20 @@
         <p>Use the <a href="/insights/website-redesign-checklist-service-businesses/">website redesign checklist</a> to assess the current state, then <a href="/contact/">start with the pages that matter most</a>.</p></div>
     </div>
   </section>
+    <section class="closing-section" data-reveal>
+  <img src="/brand/immohrtal-logo.png" width="600" height="160" alt="">
+  <h2>Your website should make it easier for the right customer to say yes.</h2>
+  <p>Show me what feels broken. I’ll help you find the right first move.</p>
+  <a class="closing-cta" href="/contact/">Show me what to fix <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg></a>
+</section>
   </main>
   <footer class="site-footer">
-  <div class="footer-inner">
-    <a class="footer-brand" href="/" aria-label="IMMOHRTAL Marketing Solutions home"><img src="/brand/immohrtal-logo.png" width="600" height="160" alt="IMMOHRTAL Marketing Solutions"></a>
-    <p>Websites that stand out, get found, and hand less busywork to your team. Built by Dillon Mohr.</p>
-    <nav class="footer-links" aria-label="Footer navigation">
-      <a href="/about/">About</a>
-      <a href="/work/">Work</a>
-      <a href="/insights/">Guides</a>
-      <a href="/contact/">Let’s talk</a>
-      <a href="mailto:dillonmohr8777@gmail.com">Email</a>
-    </nav>
-  </div>
-  <div class="footer-inner" style="margin-top:34px">
-    <p>Copyright <span data-current-year>2026</span> IMMOHRTAL Marketing Solutions.</p>
-    <p>Canonical website: themohrmedia.com</p>
-    <p><a href="/sitemap.xml">Sitemap</a> · <a href="/feed.xml">RSS feed</a></p>
-  </div>
+  <a class="wordmark footer-wordmark" href="/" aria-label="IMMOHRTAL Marketing Solutions home">
+    <img class="brand-logo--white" src="/brand/immohrtal-logo.png" width="600" height="160" alt="">
+    <span><strong>IMMOHRTAL</strong><small>MARKETING SOLUTIONS</small></span>
+  </a>
+  <p>Websites that stand out, get found, and hand less busywork to your team. Built by Dillon Mohr.</p>
+  <a class="footer-action" href="/contact/">Fix my website</a>
 </footer>
 </body>
 </html>

@@ -25,34 +25,38 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
-  <header class="static-header">
-  <nav class="static-nav" aria-label="Primary navigation">
-    <a class="brand-lockup" href="/" aria-label="IMMOHRTAL Marketing Solutions home">
-      <img src="/brand/immohrtal-logo.png" width="600" height="160" alt="" fetchpriority="high">
-      <span>IMMOHRTAL Marketing Solutions</span>
+  <header class="site-rail static-header">
+  <div class="static-nav">
+    <a class="wordmark brand-lockup" href="/" aria-label="IMMOHRTAL Marketing Solutions home">
+      <img class="brand-logo--white" src="/brand/immohrtal-logo.png" width="600" height="160" alt="" fetchpriority="high">
+      <span><strong>IMMOHRTAL</strong><small>MARKETING SOLUTIONS</small></span>
     </a>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="static-menu" data-menu-toggle>Menu</button>
-    <div class="nav-links" id="static-menu" data-menu><a href="/work/">Work</a><a href="/web-design-optimization/">Better website</a><a href="/aeo-geo/">Get found</a><a href="/business-agents/" aria-current="page">AI workers</a><a href="/insights/">Guides</a></div>
-    <a class="nav-action" href="/contact/">Let’s talk</a>
-  </nav>
+    <button class="menu-button menu-toggle" type="button" aria-expanded="false" aria-controls="static-menu" data-menu-toggle>Menu</button>
+    <nav class="nav-links" id="static-menu" data-menu aria-label="Primary navigation"><a href="/work/">Work</a><a href="/web-design-optimization/">Better website</a><a href="/aeo-geo/">Get found</a><a href="/business-agents/" aria-current="page">AI workers</a><a href="/insights/">Guides</a></nav>
+    <a class="rail-cta nav-action" href="/contact/">Let’s talk <span aria-hidden="true">→</span></a>
+  </div>
 </header>
   <main id="main-content">
-    <header class="page-hero">
+    <header class="page-hero persuade-hero">
       <div class="hero-inner">
         <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><span aria-current="page">Give the busywork to AI without giving up control.</span></li></ol></nav>
-        <p class="eyebrow">AI workers for the busywork</p>
-        <h1>Give the busywork to AI without giving up control.</h1>
-        <p class="hero-lede">I build AI workers that research, organize, draft, check, and prepare updates while you keep approval over anything that gets sent, published, purchased, or changed.</p>
-        <div class="hero-actions"><a class="button" href="/contact/">Show me what to automate</a><a class="button secondary" href="/insights/human-approval-gates-for-marketing-agents/">See how approval works</a></div>
+        <div class="hero-grid">
+          <h1>Give the busywork to AI without giving up control.</h1>
+          <div class="hero-support"><p class="hero-lede">I build AI workers that research, organize, draft, check, and prepare updates while you keep approval over anything that gets sent, published, purchased, or changed.</p><div class="hero-actions"><a class="button" href="/contact/">Show me what to automate <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg></a><a class="button secondary" href="/insights/human-approval-gates-for-marketing-agents/">See how approval works <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg></a></div></div>
+        </div>
       </div>
     </header>
+    <section class="positioning-strip" aria-label="IMMOHRTAL focus" tabindex="0">
+  <span>BETTER WEBSITES. EASIER TO FIND. BUILT TO WORK.</span><i></i>
+  <span>GOOGLE, AI ANSWERS, AND THE PEOPLE SEARCHING</span><i></i>
+  <span>AI WORKERS. HUMAN CONTROL.</span>
+</section>
     <section class="content-section tone-paper">
     <div class="section-inner">
-      <header class="section-heading">
-        <p class="eyebrow">The public crew</p>
+      <header class="section-heading" data-reveal>
         <h2>Five AI workers with five clear jobs</h2>
       </header>
-      <div class="prose"><ul class="fact-grid">
+      <div class="prose" data-reveal><ul class="fact-grid">
           <li class="fact-card"><h3>Scout: finds the problem</h3><p>Checks the live website and shows what is confusing, hidden, slow, or getting in the customer’s way.</p></li>
           <li class="fact-card"><h3>Atlas: makes the business easier to find</h3><p>Turns customer questions into clear pages, useful answers, and proof that search and AI tools can understand.</p></li>
           <li class="fact-card"><h3>Forge: builds the website</h3><p>Turns an approved plan into accessible pages, reusable pieces, and a site that works on real screens.</p></li>
@@ -64,11 +68,10 @@
   </section>
 <section class="content-section">
     <div class="section-inner">
-      <header class="section-heading">
-        <p class="eyebrow">Rules before access</p>
+      <header class="section-heading" data-reveal>
         <h2>Every AI worker needs a job description</h2>
       </header>
-      <div class="prose"><p>A clever prompt is not enough. A useful AI worker needs a written job: what starts the work, which client it serves, what it may read or change, what proof it must return, when it must stop, and who reviews the result.</p>
+      <div class="prose" data-reveal><p>A clever prompt is not enough. A useful AI worker needs a written job: what starts the work, which client it serves, what it may read or change, what proof it must return, when it must stop, and who reviews the result.</p>
         <ol class="steps">
           <li><strong>Trigger.</strong> State what starts the job and which event, schedule, or human request is authoritative.</li>
           <li><strong>Scope.</strong> Name the client, account, repository, website, date range, and systems the worker may inspect or change.</li>
@@ -81,44 +84,38 @@
   </section>
 <section class="content-section tone-blue">
     <div class="section-inner">
-      <header class="section-heading">
-        <p class="eyebrow">From website to HubSpot</p>
+      <header class="section-heading" data-reveal>
         <h2>Move better information to the right person</h2>
       </header>
-      <div class="prose"><p>A website form can be the beginning of a useful operating flow when the fields, consent, routing, and CRM model are designed together. The goal is not to trigger the largest possible workflow. It is to collect appropriate context, identify the right record, apply explicit enrollment criteria, notify the right owner, and preserve a reviewable history.</p>
+      <div class="prose" data-reveal><p>A website form can be the beginning of a useful operating flow when the fields, consent, routing, and CRM model are designed together. The goal is not to trigger the largest possible workflow. It is to collect appropriate context, identify the right record, apply explicit enrollment criteria, notify the right owner, and preserve a reviewable history.</p>
         <p>HubSpot workflows, webhooks, and form events can support this architecture. Implementation still needs exact portal routing, deduplication rules, field definitions, permission boundaries, retry behavior, and failure monitoring. The agent layer should never guess which client portal or contact record is intended.</p>
         <div class="callout"><strong>Useful default</strong>Research, classification, summarization, and draft preparation can often run automatically. Sending, publishing, spending, deleting, changing access, and acting across an ambiguous account should require explicit authority.</div></div>
     </div>
   </section>
 <section class="content-section">
     <div class="section-inner">
-      <header class="section-heading">
-        <p class="eyebrow">A practical first build</p>
+      <header class="section-heading" data-reveal>
         <h2>Start with one repeated task</h2>
       </header>
-      <div class="prose"><p>The strongest first agent is usually a repetitive, evidence rich job with a clear output and a low cost of review. Examples include a daily website health check, a prospect site audit that produces a draft brief, a content refresh monitor, a HubSpot record enrichment queue, or a prepublication quality gate.</p>
+      <div class="prose" data-reveal><p>The strongest first agent is usually a repetitive, evidence rich job with a clear output and a low cost of review. Examples include a daily website health check, a prospect site audit that produces a draft brief, a content refresh monitor, a HubSpot record enrichment queue, or a prepublication quality gate.</p>
         <p>Choose one workflow, establish baseline time and error patterns, build the contract, run it in read only or draft mode, inspect the receipts, and expand authority only after the evidence supports it. This sequence produces operating knowledge. Launching a large roster before the contracts and routing exist produces uncertainty at scale.</p>
         <p>Read <a href="/insights/hubspot-business-agents-safe-integration/">the HubSpot integration guide</a> and <a href="/insights/human-approval-gates-for-marketing-agents/">the approval gate framework</a>, then <a href="/contact/">bring one workflow to map</a>.</p></div>
     </div>
   </section>
+    <section class="closing-section" data-reveal>
+  <img src="/brand/immohrtal-logo.png" width="600" height="160" alt="">
+  <h2>Your website should make it easier for the right customer to say yes.</h2>
+  <p>Show me what feels broken. I’ll help you find the right first move.</p>
+  <a class="closing-cta" href="/contact/">Show me what to fix <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg></a>
+</section>
   </main>
   <footer class="site-footer">
-  <div class="footer-inner">
-    <a class="footer-brand" href="/" aria-label="IMMOHRTAL Marketing Solutions home"><img src="/brand/immohrtal-logo.png" width="600" height="160" alt="IMMOHRTAL Marketing Solutions"></a>
-    <p>Websites that stand out, get found, and hand less busywork to your team. Built by Dillon Mohr.</p>
-    <nav class="footer-links" aria-label="Footer navigation">
-      <a href="/about/">About</a>
-      <a href="/work/">Work</a>
-      <a href="/insights/">Guides</a>
-      <a href="/contact/">Let’s talk</a>
-      <a href="mailto:dillonmohr8777@gmail.com">Email</a>
-    </nav>
-  </div>
-  <div class="footer-inner" style="margin-top:34px">
-    <p>Copyright <span data-current-year>2026</span> IMMOHRTAL Marketing Solutions.</p>
-    <p>Canonical website: themohrmedia.com</p>
-    <p><a href="/sitemap.xml">Sitemap</a> · <a href="/feed.xml">RSS feed</a></p>
-  </div>
+  <a class="wordmark footer-wordmark" href="/" aria-label="IMMOHRTAL Marketing Solutions home">
+    <img class="brand-logo--white" src="/brand/immohrtal-logo.png" width="600" height="160" alt="">
+    <span><strong>IMMOHRTAL</strong><small>MARKETING SOLUTIONS</small></span>
+  </a>
+  <p>Websites that stand out, get found, and hand less busywork to your team. Built by Dillon Mohr.</p>
+  <a class="footer-action" href="/contact/">Fix my website</a>
 </footer>
 </body>
 </html>

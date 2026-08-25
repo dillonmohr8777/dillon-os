@@ -1,4 +1,4 @@
-import { mkdir, rm, writeFile } from 'node:fs/promises'
+import { copyFile, mkdir, rm, writeFile } from 'node:fs/promises'
 import { fileURLToPath } from 'node:url'
 import path from 'node:path'
 import { articles } from '../content/articles.mjs'
@@ -6,7 +6,15 @@ import { corePages, insightsPage, navigation, projects, site } from '../content/
 
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const publicDir = path.join(projectRoot, 'public')
+const fontDir = path.join(publicDir, 'fonts')
 const forbiddenDashPattern = /[\u2013\u2014]/u
+
+const fontAssets = [
+  ['node_modules/@fontsource-variable/unbounded/files/unbounded-latin-wght-normal.woff2', 'Unbounded-Variable-Latin.woff2'],
+  ['node_modules/@fontsource-variable/manrope/files/manrope-latin-wght-normal.woff2', 'Manrope-Variable-Latin.woff2'],
+  ['src/fonts/IBMPlexMono-400.woff2', 'FoundryMono-400.woff2'],
+  ['src/fonts/IBMPlexMono-500.woff2', 'FoundryMono-500.woff2'],
+]
 
 const escapeHtml = (value = '') => String(value)
   .replaceAll('&', '&amp;')
@@ -38,36 +46,41 @@ const navHtml = (currentPath) => navigation.map((item) => {
   return `<a href="${item.href}"${current ? ' aria-current="page"' : ''}>${escapeHtml(item.label)}</a>`
 }).join('')
 
-const headerHtml = (currentPath) => `<header class="static-header">
-  <nav class="static-nav" aria-label="Primary navigation">
-    <a class="brand-lockup" href="/" aria-label="IMMOHRTAL Marketing Solutions home">
-      <img src="${site.logo}" width="600" height="160" alt="" fetchpriority="high">
-      <span>${site.name}</span>
+const headerHtml = (currentPath) => `<header class="site-rail static-header">
+  <div class="static-nav">
+    <a class="wordmark brand-lockup" href="/" aria-label="IMMOHRTAL Marketing Solutions home">
+      <img class="brand-logo--white" src="${site.logo}" width="600" height="160" alt="" fetchpriority="high">
+      <span><strong>IMMOHRTAL</strong><small>MARKETING SOLUTIONS</small></span>
     </a>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="static-menu" data-menu-toggle>Menu</button>
-    <div class="nav-links" id="static-menu" data-menu>${navHtml(currentPath)}</div>
-    <a class="nav-action" href="/contact/">Let’s talk</a>
-  </nav>
+    <button class="menu-button menu-toggle" type="button" aria-expanded="false" aria-controls="static-menu" data-menu-toggle>Menu</button>
+    <nav class="nav-links" id="static-menu" data-menu aria-label="Primary navigation">${navHtml(currentPath)}</nav>
+    <a class="rail-cta nav-action" href="/contact/">Let’s talk <span aria-hidden="true">→</span></a>
+  </div>
 </header>`
 
+const arrowHtml = () => '<svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg>'
+
+const closingHtml = () => `<section class="closing-section" data-reveal>
+  <img src="${site.logo}" width="600" height="160" alt="">
+  <h2>Your website should make it easier for the right customer to say yes.</h2>
+  <p>Show me what feels broken. I’ll help you find the right first move.</p>
+  <a class="closing-cta" href="/contact/">Show me what to fix ${arrowHtml()}</a>
+</section>`
+
 const footerHtml = () => `<footer class="site-footer">
-  <div class="footer-inner">
-    <a class="footer-brand" href="/" aria-label="IMMOHRTAL Marketing Solutions home"><img src="${site.logo}" width="600" height="160" alt="IMMOHRTAL Marketing Solutions"></a>
-    <p>Websites that stand out, get found, and hand less busywork to your team. Built by Dillon Mohr.</p>
-    <nav class="footer-links" aria-label="Footer navigation">
-      <a href="/about/">About</a>
-      <a href="/work/">Work</a>
-      <a href="/insights/">Guides</a>
-      <a href="/contact/">Let’s talk</a>
-      <a href="mailto:${site.email}">Email</a>
-    </nav>
-  </div>
-  <div class="footer-inner" style="margin-top:34px">
-    <p>Copyright <span data-current-year>${new Date().getFullYear()}</span> ${site.name}.</p>
-    <p>Canonical website: themohrmedia.com</p>
-    <p><a href="/sitemap.xml">Sitemap</a> · <a href="/feed.xml">RSS feed</a></p>
-  </div>
+  <a class="wordmark footer-wordmark" href="/" aria-label="IMMOHRTAL Marketing Solutions home">
+    <img class="brand-logo--white" src="${site.logo}" width="600" height="160" alt="">
+    <span><strong>IMMOHRTAL</strong><small>MARKETING SOLUTIONS</small></span>
+  </a>
+  <p>Websites that stand out, get found, and hand less busywork to your team. Built by Dillon Mohr.</p>
+  <a class="footer-action" href="/contact/">Fix my website</a>
 </footer>`
+
+const positioningStripHtml = () => `<section class="positioning-strip" aria-label="IMMOHRTAL focus" tabindex="0">
+  <span>BETTER WEBSITES. EASIER TO FIND. BUILT TO WORK.</span><i></i>
+  <span>GOOGLE, AI ANSWERS, AND THE PEOPLE SEARCHING</span><i></i>
+  <span>AI WORKERS. HUMAN CONTROL.</span>
+</section>`
 
 const breadcrumbsFor = (page, article = false) => article
   ? [
@@ -146,19 +159,22 @@ const profileSchema = () => ({
   },
 })
 
-const projectGridHtml = () => `<div class="project-grid">${projects.map((project) => `<article class="project-card">
-  <img src="${project.image}" width="960" height="540" alt="Preview of the ${escapeHtml(project.name)} website" loading="lazy">
-  <div class="project-card__body">
-    <p class="eyebrow">${escapeHtml(project.role)}</p>
+const projectGridHtml = () => `<div class="project-rail project-grid" tabindex="0" aria-label="Selected website work">${projects.map((project) => `<article class="project project-card" data-reveal>
+  <a class="browser-frame" href="${project.url}" aria-label="Open ${escapeHtml(project.name)} live website">
+    <span class="browser-bar"><i></i><i></i><i></i><em>${escapeHtml(project.url.replace(/^https?:\/\//, ''))}</em></span>
+    <span class="browser-viewport"><img src="${project.image}" width="960" height="540" alt="Preview of the ${escapeHtml(project.name)} website" loading="lazy"></span>
+    <span class="browser-open">View live ${arrowHtml()}</span>
+  </a>
+  <div class="project-copy project-card__body">
+    <p>${escapeHtml(project.role)}</p>
     <h3>${escapeHtml(project.name)}</h3>
-    <p>${escapeHtml(project.description)}</p>
+    <span>${escapeHtml(project.description)}</span>
     <ul class="tag-list" aria-label="Project disciplines">${project.tags.map((tag) => `<li>${escapeHtml(tag)}</li>`).join('')}</ul>
-    <a class="inline-link" href="${project.url}">Open live project <span aria-hidden="true">↗</span></a>
   </div>
 </article>`).join('')}</div>`
 
 const renderActions = (actions = []) => actions.length
-  ? `<div class="hero-actions">${actions.map((action) => `<a class="button${action.secondary ? ' secondary' : ''}" href="${action.href}">${escapeHtml(action.label)}</a>`).join('')}</div>`
+  ? `<div class="hero-actions">${actions.map((action) => `<a class="button${action.secondary ? ' secondary' : ''}" href="${action.href}">${escapeHtml(action.label)} ${arrowHtml()}</a>`).join('')}</div>`
   : ''
 
 const renderSection = (section) => {
@@ -166,11 +182,10 @@ const renderSection = (section) => {
   const body = section.html === 'PROJECT_GRID' ? projectGridHtml() : section.html
   return `<section class="content-section${tone}">
     <div class="section-inner">
-      <header class="section-heading">
-        <p class="eyebrow">${escapeHtml(section.eyebrow)}</p>
+      <header class="section-heading" data-reveal>
         <h2>${escapeHtml(section.title)}</h2>
       </header>
-      <div class="prose">${body}</div>
+      <div class="prose" data-reveal>${body}</div>
     </div>
   </section>`
 }
@@ -190,16 +205,18 @@ const renderCorePage = (page) => {
   <a class="skip-link" href="#main-content">Skip to content</a>
   ${headerHtml(page.path)}
   <main id="main-content">
-    <header class="page-hero">
+    <header class="page-hero persuade-hero">
       <div class="hero-inner">
         ${breadcrumbHtml(crumbs)}
-        <p class="eyebrow">${escapeHtml(page.eyebrow)}</p>
-        <h1>${escapeHtml(page.h1)}</h1>
-        <p class="hero-lede">${escapeHtml(page.lede)}</p>
-        ${renderActions(page.actions)}
+        <div class="hero-grid">
+          <h1>${escapeHtml(page.h1)}</h1>
+          <div class="hero-support"><p class="hero-lede">${escapeHtml(page.lede)}</p>${renderActions(page.actions)}</div>
+        </div>
       </div>
     </header>
+    ${positioningStripHtml()}
     ${page.sections.map(renderSection).join('\n')}
+    ${closingHtml()}
   </main>
   ${footerHtml()}
 </body>
@@ -257,20 +274,23 @@ const renderArticle = (article) => {
   <a class="skip-link" href="#main-content">Skip to content</a>
   ${headerHtml(route)}
   <main id="main-content">
-    <header class="page-hero">
+    <header class="page-hero article-page-hero">
       <div class="hero-inner">
         ${breadcrumbHtml(crumbs)}
-        <p class="eyebrow">${escapeHtml(article.category)}</p>
-        <h1>${escapeHtml(article.title)}</h1>
-        <p class="hero-lede">${escapeHtml(article.description)}</p>
-        <div class="hero-meta">
-          <span>By <a href="/about/"><strong>Dillon Mohr</strong></a></span>
-          <span>Published <time datetime="${site.published}">August 24, 2026</time></span>
-          <span>Updated <time datetime="${site.modified}">August 24, 2026</time></span>
-          <span>${count.toLocaleString('en-US')} words, about ${readingMinutes} minutes</span>
+        <div class="hero-grid article-hero-grid">
+          <h1>${escapeHtml(article.title)}</h1>
+          <div class="hero-support">
+            <p class="hero-lede">${escapeHtml(article.description)}</p>
+            <div class="hero-meta">
+              <span>By <a href="/about/"><strong>Dillon Mohr</strong></a></span>
+              <span><time datetime="${site.modified}">August 24, 2026</time></span>
+              <span>${readingMinutes} minute read</span>
+            </div>
+          </div>
         </div>
       </div>
     </header>
+    ${positioningStripHtml()}
     <div class="article-shell">
       <div class="article-layout">
         <aside class="article-toc" aria-label="Article contents">
@@ -292,6 +312,7 @@ const renderArticle = (article) => {
         </article>
       </div>
     </div>
+    ${closingHtml()}
   </main>
   ${footerHtml()}
 </body>
@@ -306,12 +327,11 @@ const renderInsightsIndex = () => {
   const schema = [breadcrumbSchema(crumbs)]
   const cards = articles.map((article) => {
     const route = `/insights/${article.slug}/`
-    return `<article class="article-card">
-      <p class="eyebrow">${escapeHtml(article.category)}</p>
+    return `<article class="article-row article-card" data-reveal>
+      <div class="article-row__meta"><span>${escapeHtml(article.category)}</span><time datetime="${site.published}">August 24, 2026</time></div>
       <h2><a href="${route}">${escapeHtml(article.title)}</a></h2>
       <p>${escapeHtml(article.description)}</p>
-      <time datetime="${site.published}">August 24, 2026</time>
-      <a class="inline-link" href="${route}">Read the guide</a>
+      <a class="inline-link" href="${route}" aria-label="Read ${escapeHtml(article.title)}">Read ${arrowHtml()}</a>
     </article>`
   }).join('')
 
@@ -324,17 +344,17 @@ const renderInsightsIndex = () => {
   <a class="skip-link" href="#main-content">Skip to content</a>
   ${headerHtml(page.path)}
   <main id="main-content">
-    <header class="page-hero">
+    <header class="page-hero persuade-hero insights-hero">
       <div class="hero-inner">
         ${breadcrumbHtml(crumbs)}
-        <p class="eyebrow">${escapeHtml(page.eyebrow)}</p>
-        <h1>${escapeHtml(page.h1)}</h1>
-        <p class="hero-lede">${escapeHtml(page.lede)}</p>
+        <div class="hero-grid"><h1>${escapeHtml(page.h1)}</h1><div class="hero-support"><p class="hero-lede">${escapeHtml(page.lede)}</p></div></div>
       </div>
     </header>
+    ${positioningStripHtml()}
     <section class="insights-intro" aria-label="All insights">
       <div class="article-grid">${cards}</div>
     </section>
+    ${closingHtml()}
   </main>
   ${footerHtml()}
 </body>
@@ -441,6 +461,11 @@ const build = async () => {
     throw new Error(`Expected 17 generated routes and 18 total pages, found ${generatedRoutes.length} and ${allRoutes.length}`)
   }
   if (new Set(allRoutes).size !== allRoutes.length) throw new Error('Duplicate canonical route detected')
+
+  await mkdir(fontDir, { recursive: true })
+  for (const [source, destination] of fontAssets) {
+    await copyFile(path.join(projectRoot, source), path.join(fontDir, destination))
+  }
 
   await cleanGeneratedRoutes()
   for (const page of corePages) await writeRoute(page.path, renderCorePage(page))

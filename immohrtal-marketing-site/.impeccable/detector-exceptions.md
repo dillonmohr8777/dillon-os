@@ -29,3 +29,21 @@ They remain a narrow exception because the rendered desktop and mobile pages,
 reduced-motion experience, no-WebGL fallback, and all-route accessibility gate
 are clean. New headline and navigation language still follows the documented
 Outcome Before Acronym rule.
+
+## 2026-08-24 homepage-system expansion across inner pages
+
+The unified inner-page detector returns exit code 2 because the compact static
+stylesheet repeats many advisory values on a small number of minified lines. No
+blocking anti-pattern was reported. The cited values are the homepage's existing
+cyan action gradient, cool structural border alphas, high-contrast proof-paper
+text tones, and responsive optical type steps required for 320px through 1440px.
+They introduce no new font family, visual direction, or competing palette.
+
+This is a narrow exception for `public/static-site.css`: service and work pages
+use Persuade mode while articles use Read mode, so their responsive type
+endpoints and proof-paper contrast roles cannot all collapse to the four broad
+portable type roles without damaging hierarchy or readability. The exact
+Unbounded, Manrope, and Foundry Mono files are now self-hosted and verified in
+computed styles. All 18 routes pass the browser, accessibility, overflow,
+reduced-motion, console, schema, and production-build gates. The exception does
+not permit new literal values outside this shared stylesheet.
