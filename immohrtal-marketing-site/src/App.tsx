@@ -1,6 +1,16 @@
-import { useEffect, useRef, useState, type CSSProperties } from 'react'
-import { ClientParticleSequence } from './components/ClientParticleSequence'
+import { lazy, Suspense, useEffect, useRef, useState, type CSSProperties } from 'react'
 import { agentRoles, clients, projects, type Project } from './data'
+
+const ClientParticleSequence = lazy(() => import('./components/ClientParticleSequence').then((module) => ({ default: module.ClientParticleSequence })))
+
+const servicePlatforms = [
+  { name: 'Google', logo: '/pressroom/brands/google.png', seed: 1001 },
+  { name: 'Meta', logo: '/pressroom/brands/meta.png', seed: 1002 },
+  { name: 'ChatGPT', logo: '/pressroom/brands/chatgpt.png', seed: 1003 },
+  { name: 'Claude', logo: '/pressroom/brands/claude.png', seed: 1004 },
+  { name: 'Perplexity', logo: '/pressroom/brands/perplexity.png', seed: 1005 },
+  { name: 'HubSpot', logo: '/pressroom/brands/hubspot.png', seed: 1006 },
+] as const
 
 function ArrowIcon({ direction = 'right' }: { direction?: 'right' | 'left' | 'down' }) {
   const rotate = direction === 'left' ? 180 : direction === 'down' ? 90 : 0
@@ -17,21 +27,53 @@ function LogoMark({ className = '' }: { className?: string }) {
 
 function Navigation() {
   const [open, setOpen] = useState(false)
+  const headerRef = useRef<HTMLElement>(null)
+  const toggleRef = useRef<HTMLButtonElement>(null)
+
+  useEffect(() => {
+    document.body.classList.toggle('menu-open', open)
+    if (!open) return () => document.body.classList.remove('menu-open')
+
+    const close = (restoreFocus = false) => {
+      setOpen(false)
+      if (restoreFocus) toggleRef.current?.focus()
+    }
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') close(true)
+    }
+    const onPointerDown = (event: PointerEvent) => {
+      if (event.target instanceof Node && !headerRef.current?.contains(event.target)) close()
+    }
+    const desktop = window.matchMedia('(min-width: 1181px)')
+    const onBreakpointChange = (event: MediaQueryListEvent) => {
+      if (event.matches) close()
+    }
+
+    document.addEventListener('keydown', onKeyDown)
+    document.addEventListener('pointerdown', onPointerDown)
+    desktop.addEventListener('change', onBreakpointChange)
+    return () => {
+      document.body.classList.remove('menu-open')
+      document.removeEventListener('keydown', onKeyDown)
+      document.removeEventListener('pointerdown', onPointerDown)
+      desktop.removeEventListener('change', onBreakpointChange)
+    }
+  }, [open])
+
   return (
-    <header className="site-rail">
+    <header className="site-rail" ref={headerRef}>
       <a className="wordmark" href="/" aria-label="IMMOHRTAL Marketing Solutions home">
         <LogoMark />
         <span><strong>IMMOHRTAL</strong><small>MARKETING SOLUTIONS</small></span>
       </a>
-      <button className="menu-button" type="button" aria-expanded={open} aria-controls="site-nav" onClick={() => setOpen((value) => !value)}>
+      <button ref={toggleRef} className="menu-button" type="button" aria-expanded={open} aria-controls="site-nav" aria-label={`${open ? 'Close' : 'Open'} navigation menu`} onClick={() => setOpen((value) => !value)}>
         {open ? 'Close' : 'Menu'}
       </button>
       <nav id="site-nav" className={open ? 'is-open' : ''} aria-label="Primary navigation">
+        <a href="/services/" onClick={() => setOpen(false)}>Services</a>
         <a href="/work/" onClick={() => setOpen(false)}>Work</a>
-        <a href="/web-design-optimization/" onClick={() => setOpen(false)}>Better site</a>
-        <a href="/aeo-geo/" onClick={() => setOpen(false)}>Get found</a>
-        <a href="/business-agents/" onClick={() => setOpen(false)}>AI workers</a>
         <a href="/insights/" onClick={() => setOpen(false)}>Guides</a>
+        <a href="/about/" onClick={() => setOpen(false)}>About</a>
       </nav>
       <a className="rail-cta" href="/contact/">Let’s talk <ArrowIcon /></a>
     </header>
@@ -50,7 +92,10 @@ function BrowserFrame({ project }: { project: Project }) {
 
 function ProjectRail() {
   const railRef = useRef<HTMLDivElement>(null)
-  const move = (direction: number) => railRef.current?.scrollBy({ left: direction * Math.min(window.innerWidth * 0.82, 980), behavior: 'smooth' })
+  const move = (direction: number) => railRef.current?.scrollBy({
+    left: direction * Math.min(window.innerWidth * 0.82, 980),
+    behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+  })
   return (
     <section className="work-section" id="work">
       <div className="section-copy" data-reveal>
@@ -103,6 +148,45 @@ function VisibilityProof() {
       <div className="visibility-chain" aria-label="How IMMOHRTAL helps a business get found" tabIndex={0}>
         <span>CLEAR BUSINESS</span><i /><span>USEFUL ANSWERS</span><i /><span>REAL PROOF</span><i /><span>EASY TO FIND</span><i /><span>MEASURED</span>
       </div>
+    </section>
+  )
+}
+
+function ServiceSignals() {
+  const sectionRef = useRef<HTMLElement>(null)
+  const [particleReady, setParticleReady] = useState(false)
+
+  useEffect(() => {
+    const section = sectionRef.current
+    if (!section || particleReady) return
+    if (!('IntersectionObserver' in window)) {
+      setParticleReady(true)
+      return
+    }
+    const observer = new IntersectionObserver((entries) => {
+      if (!entries.some((entry) => entry.isIntersecting)) return
+      setParticleReady(true)
+      observer.disconnect()
+    }, { rootMargin: '520px 0px' })
+    observer.observe(section)
+    return () => observer.disconnect()
+  }, [particleReady])
+
+  return (
+    <section className="service-signal-section" aria-labelledby="service-signal-heading" ref={sectionRef}>
+      <div className="service-signal-copy" data-reveal>
+        <h2 id="service-signal-heading">Six major platforms. One connected business system.</h2>
+        <p>Google and Meta help people discover you. ChatGPT, Claude, and Perplexity shape how your business is understood in AI answers and useful workers. HubSpot carries the right context into the next human step.</p>
+        <a className="text-link" href="/services/">Explore all seven service lanes <ArrowIcon /></a>
+      </div>
+      {particleReady
+        ? <Suspense fallback={<div className="service-particle-sequence service-particle-sequence--pending" aria-hidden="true"><LogoMark /></div>}>
+            <ClientParticleSequence brands={servicePlatforms} variant="services" className="service-particle-sequence" logoDurationMs={1850} />
+          </Suspense>
+        : <div className="service-particle-sequence service-particle-sequence--pending" aria-hidden="true"><LogoMark /></div>}
+      <ul className="service-platform-key" aria-label="Connected platforms">
+        {servicePlatforms.map((platform) => <li key={platform.name}><img src={platform.logo} alt="" /><span>{platform.name}</span></li>)}
+      </ul>
     </section>
   )
 }
@@ -194,15 +278,22 @@ function AgentCrew() {
   useEffect(() => {
     const section = sectionRef.current
     if (!section) return
-    const observer = new IntersectionObserver((entries) => {
-      if (!entries.some((entry) => entry.isIntersecting)) return
-      observer.disconnect()
+    const loadRuntime = () => {
       if (document.querySelector('script[data-robot-runtime]')) return
       const script = document.createElement('script')
       script.src = '/robot.js'
       script.defer = true
       script.dataset.robotRuntime = 'true'
       document.body.appendChild(script)
+    }
+    if (!('IntersectionObserver' in window)) {
+      loadRuntime()
+      return
+    }
+    const observer = new IntersectionObserver((entries) => {
+      if (!entries.some((entry) => entry.isIntersecting)) return
+      observer.disconnect()
+      loadRuntime()
     }, { rootMargin: '300px 0px' })
     observer.observe(section)
     return () => observer.disconnect()
@@ -255,6 +346,11 @@ function OperatingSystem() {
 
 function App() {
   useEffect(() => {
+    const revealNodes = [...document.querySelectorAll<HTMLElement>('[data-reveal]')]
+    if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      revealNodes.forEach((node) => node.classList.add('is-visible'))
+      return
+    }
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return
@@ -262,7 +358,7 @@ function App() {
         observer.unobserve(entry.target)
       })
     }, { threshold: 0.16 })
-    document.querySelectorAll('[data-reveal]').forEach((node) => observer.observe(node))
+    revealNodes.forEach((node) => observer.observe(node))
     return () => observer.disconnect()
   }, [])
 
@@ -273,7 +369,9 @@ function App() {
       <main>
         <section className="particle-hero" id="top">
           <h1 className="sr-only">IMMOHRTAL builds memorable websites, helps businesses get found in Google and AI answers, and creates useful AI workers.</h1>
-          <ClientParticleSequence brands={clients} />
+          <Suspense fallback={<div className="client-particle-sequence client-particle-sequence--pending" aria-hidden="true"><LogoMark /></div>}>
+            <ClientParticleSequence brands={clients} />
+          </Suspense>
           <a className="hero-next" href="#work">See the work <ArrowIcon direction="down" /></a>
         </section>
         <section className="positioning-strip" aria-label="IMMOHRTAL focus" tabIndex={0}>
@@ -282,6 +380,7 @@ function App() {
           <span>AI WORKERS. HUMAN CONTROL.</span>
         </section>
         <ProjectRail />
+        <ServiceSignals />
         <VisibilityProof />
         <SystemWindows />
         <AgentCrew />
@@ -293,10 +392,28 @@ function App() {
           <a className="closing-cta" href="/contact/">Show me what to fix <ArrowIcon /></a>
         </section>
       </main>
-      <footer>
-        <a className="wordmark footer-wordmark" href="/"><LogoMark /><span><strong>IMMOHRTAL</strong><small>MARKETING SOLUTIONS</small></span></a>
-        <p>Websites that stand out, get found, and hand less busywork to your team. Built by Dillon Mohr.</p>
-        <a href="/contact/">Fix my website</a>
+      <footer className="site-footer">
+        <div className="footer-intro">
+          <a className="wordmark footer-wordmark" href="/" aria-label="IMMOHRTAL Marketing Solutions home"><LogoMark /><span><strong>IMMOHRTAL</strong><small>MARKETING SOLUTIONS</small></span></a>
+          <p>Websites that stand out, get found, and hand less busywork to your team. Built by Dillon Mohr.</p>
+        </div>
+        <nav className="footer-directory" aria-label="Services">
+          <a href="/web-design/">Web design</a>
+          <a href="/web-design-optimization/">Website optimization</a>
+          <a href="/technical-seo/">Technical SEO</a>
+          <a href="/aeo-geo/">AEO and GEO</a>
+          <a href="/content-schema/">Content and schema systems</a>
+          <a href="/business-agents/">Business agents</a>
+          <a href="/hubspot-crm-agents/">HubSpot and CRM agents</a>
+        </nav>
+        <nav className="footer-directory footer-directory--company" aria-label="Company">
+          <a href="/work/">Work</a>
+          <a href="/insights/">Guides</a>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+        </nav>
+        <a className="footer-action" href="/contact/">Fix my website <ArrowIcon /></a>
+        <p className="trademark-note">Google, HubSpot, ChatGPT, Claude, and Perplexity are trademarks of their respective owners. Their appearance identifies platforms discussed in the work and does not imply endorsement.</p>
       </footer>
     </>
   )

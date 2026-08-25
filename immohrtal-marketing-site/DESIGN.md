@@ -84,6 +84,8 @@ Cold gunmetal space carries the active system. Pale paper chambers interrupt tha
 
 The world is precise, dense, and proof-led. It rejects generic agency dashboards, unsupported metric theater, and spectacle that never resolves into usable evidence.
 
+This entire visual system belongs to IMMOHRTAL Marketing Solutions: the palette, type hierarchy, particle proof sequence, agent silhouettes, browser frames, evidence windows, page patterns, asset treatments, interaction grammar, and responsive behavior. Earlier implementation sources are provenance only; they do not retain public brand ownership, naming, or domain authority.
+
 **Key Characteristics:**
 
 - A dark observatory alternating with pale, high-contrast proof chambers.
@@ -166,6 +168,8 @@ The system is layered rather than uniformly glassy. Most page regions are flat c
 - **Signal action lift** (`0 12px 34px rgba(24, 200, 255, 0.20)`): Cyan calls to action at rest, strengthening on hover.
 
 **The Artifact Elevation Rule.** Shadows belong to inspectable artifacts or active controls. Ordinary copy sections stay flat.
+
+**The One Public Identity Rule.** Every reusable component and authored interaction presents IMMOHRTAL Marketing Solutions; historical source brands never appear in public UI, metadata, asset labels, or design-system examples.
 
 ## Shapes
 
@@ -250,3 +254,4 @@ Hairlines are cool, translucent, and structural. Circular geometry is reserved f
 - **Don't** use mono labels as a decorative substitute for clear body copy.
 - **Don't** make a visitor decode AEO, GEO, entities, schema, bounded agents, or governance language before they understand what improves for their business.
 - **Don't** introduce a new display family, radius step, or shadow vocabulary without updating this system intentionally.
+- **Don't** preserve a former brand name, domain, or attribution merely because a component or asset originated in an earlier implementation.

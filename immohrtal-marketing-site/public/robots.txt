@@ -13,7 +13,19 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
 User-agent: *
 Allow: /
 
-Sitemap: https://themohrmedia.com/sitemap.xml
+Sitemap: https://www.immohrtalmarketing.com/sitemap.xml

@@ -11,6 +11,7 @@ export type ClientParticleSequenceProps = {
   brands?: readonly ClientParticleBrand[]
   className?: string
   logoDurationMs?: number
+  variant?: 'clients' | 'services'
 }
 
 type NormalizedBrand = {
@@ -476,7 +477,23 @@ function ParticleField({
   )
 }
 
-function ReducedMotionSequence({ brands, className }: { brands: readonly NormalizedBrand[]; className: string }) {
+function ReducedMotionSequence({ brands, className, variant }: { brands: readonly NormalizedBrand[]; className: string; variant: 'clients' | 'services' }) {
+  if (variant === 'services') {
+    return (
+      <section className={`${className} client-particle-sequence--reduced service-particle-sequence--reduced`} aria-label="Platforms connected by IMMOHRTAL" tabIndex={0}>
+        <p className="client-particle-sequence__phrase">The tools your business already uses</p>
+        <ul className="client-particle-sequence__static-grid">
+          {brands.map((brand) => (
+            <li key={`${brand.name}-${brand.logo}`}>
+              <img src={brand.logo} alt={brand.name} decoding="async" />
+            </li>
+          ))}
+        </ul>
+        <p className="client-particle-sequence__phrase">Connected into one useful system.</p>
+      </section>
+    )
+  }
+
   return (
     <section className={`${className} client-particle-sequence--reduced`} aria-label="Client work and an invitation to work together" tabIndex={0}>
       <img className="client-particle-sequence__brand-static brand-logo--white" src={BRAND_LOGO.logo} alt="IMMOHRTAL Marketing Solutions" decoding="async" />
@@ -499,6 +516,7 @@ export function ClientParticleSequence({
   brands = verifiedClients,
   className = '',
   logoDurationMs = DEFAULT_LOGO_DURATION,
+  variant = 'clients',
 }: ClientParticleSequenceProps) {
   const compact = useMediaQuery('(max-width: 760px)')
   const narrow = useMediaQuery('(max-width: 480px)')
@@ -515,18 +533,30 @@ export function ClientParticleSequence({
   const [paused, setPaused] = useState(false)
   const [complete, setComplete] = useState(false)
   const runtime = useRef<RuntimeState>({ stageIndex: 0, elapsedMs: 0, paused: false, complete: false })
-  const stages = useMemo<SequenceStage[]>(() => [
-    { kind: 'brand', duration: 1_450, cloudIndex: 0 },
-    { kind: 'intro', duration: 1_050 },
-    ...normalizedBrands.map((brand, cloudIndex) => ({
-      kind: 'logo' as const,
-      duration: Math.max(460, logoDurationMs),
-      cloudIndex: cloudIndex + 1,
-      name: brand.name,
-    })),
-    { kind: 'bridge', duration: 1_000 },
-    { kind: 'you', duration: 3_600, cloudIndex: normalizedBrands.length + 1 },
-  ], [brandSignature, logoDurationMs])
+  const stages = useMemo<SequenceStage[]>(() => variant === 'services'
+    ? [
+        { kind: 'intro', duration: 1_250 },
+        ...normalizedBrands.map((brand, cloudIndex) => ({
+          kind: 'logo' as const,
+          duration: Math.max(1_350, logoDurationMs),
+          cloudIndex: cloudIndex + 1,
+          name: brand.name,
+        })),
+        { kind: 'bridge', duration: 1_350 },
+        { kind: 'brand', duration: 3_200, cloudIndex: 0 },
+      ]
+    : [
+        { kind: 'brand', duration: 1_450, cloudIndex: 0 },
+        { kind: 'intro', duration: 1_050 },
+        ...normalizedBrands.map((brand, cloudIndex) => ({
+          kind: 'logo' as const,
+          duration: Math.max(460, logoDurationMs),
+          cloudIndex: cloudIndex + 1,
+          name: brand.name,
+        })),
+        { kind: 'bridge', duration: 1_000 },
+        { kind: 'you', duration: 3_600, cloudIndex: normalizedBrands.length + 1 },
+      ], [brandSignature, logoDurationMs, variant])
   const scatter = useMemo(() => makeScatter(count, compact), [compact, count])
   const rootClassName = `client-particle-sequence${className ? ` ${className}` : ''}`
 
@@ -544,7 +574,7 @@ export function ClientParticleSequence({
         for (const brand of normalizedBrands) {
           nextClouds.push(await getLogoCloud(brand, count, compact))
         }
-        nextClouds.push(await getYouCloud(count, compact))
+        if (variant === 'clients') nextClouds.push(await getYouCloud(count, compact))
         if (!cancelled) setClouds(nextClouds)
       })
       .catch(() => {
@@ -552,7 +582,7 @@ export function ClientParticleSequence({
       })
 
     return () => { cancelled = true }
-  }, [brandSignature, compact, count, reducedMotion])
+  }, [brandSignature, compact, count, reducedMotion, variant])
 
   const replay = useCallback(() => {
     runtime.current = { stageIndex: 0, elapsedMs: 0, paused: false, complete: false }
@@ -607,21 +637,17 @@ export function ClientParticleSequence({
   }, [clouds, reducedMotion, stages])
 
   if (reducedMotion || loadError || webglFailed || normalizedBrands.length === 0) {
-    return <ReducedMotionSequence brands={normalizedBrands} className={rootClassName} />
+    return <ReducedMotionSequence brands={normalizedBrands} className={rootClassName} variant={variant} />
   }
 
   const currentStage = stages[stageIndex]
-  const liveText = currentStage.kind === 'brand'
-    ? 'IMMOHRTAL Marketing Solutions'
-    : currentStage.kind === 'logo'
-    ? currentStage.name
-    : currentStage.kind === 'intro'
-      ? 'I did this for'
-      : 'I could do it for you'
 
   return (
-    <section className={`${rootClassName} client-particle-sequence--${currentStage.kind}`} aria-label="Client logo particle sequence">
-      <span role="status" aria-live="polite" aria-atomic="true" style={visuallyHidden}>{liveText}</span>
+    <section className={`${rootClassName} client-particle-sequence--${currentStage.kind}`} aria-label={variant === 'services' ? 'Service platform logo particle sequence' : 'Client logo particle sequence'}>
+      <div style={visuallyHidden}>
+        <p>{variant === 'services' ? 'Platforms connected by IMMOHRTAL' : 'Selected organizations Dillon has supported'}</p>
+        <ul>{normalizedBrands.map((brand) => <li key={brand.name}>{brand.name}</li>)}</ul>
+      </div>
 
       <div className="client-particle-sequence__viewport" aria-hidden="true">
         <CanvasErrorBoundary onError={() => setWebglFailed(true)}>
@@ -650,12 +676,14 @@ export function ClientParticleSequence({
         )}
         {(currentStage.kind === 'intro' || currentStage.kind === 'bridge') && (
           <p className="client-particle-sequence__phrase">
-            {currentStage.kind === 'intro' ? 'I did this for' : 'I could do it for'}
+            {variant === 'services'
+              ? currentStage.kind === 'intro' ? 'The tools your business already uses' : 'Connected into one useful system'
+              : currentStage.kind === 'intro' ? 'I did this for' : 'I could do it for'}
           </p>
         )}
       </div>
 
-      <div className="client-particle-sequence__controls" aria-label="Logo sequence controls">
+      <div className="client-particle-sequence__controls" aria-label={variant === 'services' ? 'Platform sequence controls' : 'Logo sequence controls'}>
         <button type="button" onClick={togglePause} aria-pressed={paused} disabled={!clouds || complete}>
           {paused ? 'Resume sequence' : 'Pause sequence'}
         </button>

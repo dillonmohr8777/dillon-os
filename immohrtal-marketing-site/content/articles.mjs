@@ -5,6 +5,25 @@ export const articles = [
     title: 'AEO vs GEO: What Service Businesses Actually Need',
     description: 'What AEO and GEO mean in plain English, how each can help a service business get found, and what to improve first.',
     directAnswer: 'AEO and GEO are two technical names for helping a business become a useful answer. AEO focuses on clear answers to specific questions. GEO focuses on helping generative search and AI tools understand, verify, and use those answers in a broader response. Both depend on a strong website, useful content, consistent facts, and credible proof.',
+    keywords: ['answer engine optimization', 'generative engine optimization', 'AEO vs GEO', 'SEO for service businesses', 'AI search optimization', 'technical SEO services'],
+    faqs: [
+      {
+        question: 'What is the difference between AEO and GEO?',
+        answer: 'Answer engine optimization makes a specific answer easy to retrieve and understand. Generative engine optimization also considers whether an AI answer system can corroborate, contextualize, and cite that answer while synthesizing several sources. In practice, both rely on crawlable pages, clear definitions, consistent entities, evidence, authorship, and useful internal links.',
+      },
+      {
+        question: 'Should a service business invest in AEO or GEO first?',
+        answer: 'Begin with the shared foundation instead of buying either label as a separate tactic. Make core service pages technically accessible, answer real buying questions near descriptive headings, connect claims to credible evidence, and keep company facts consistent. Once that foundation is reliable, use repeatable query observations to decide which answer formats and topic gaps deserve additional work.',
+      },
+      {
+        question: 'Can AEO or GEO guarantee an AI citation?',
+        answer: 'No. Research shows that citation behavior varies by engine, query, competing sources, and retrieval context. A business can improve relevance, completeness, structure, freshness, and evidence quality, but the answer system controls retrieval and citation. Treat every appearance as a dated observation rather than a permanent ranking or guaranteed placement.',
+      },
+      {
+        question: 'Do AEO and GEO replace technical SEO?',
+        answer: 'No. Answer and generative optimization depend on the same access layer that technical SEO protects: successful responses, canonical URLs, crawlable links, stable rendering, mobile usability, and an accurate sitemap. A perfectly written answer cannot be retrieved reliably if the route is blocked, duplicated, broken, or available only after a fragile client-side request. Treat technical health as the delivery system for the answer.',
+      },
+    ],
     sections: [
       {
         id: 'definitions',
@@ -20,7 +39,7 @@ export const articles = [
       {
         id: 'shared-foundation',
         title: 'The shared foundation matters more than the label',
-        html: `<p>Google says that the same foundational SEO practices apply to its AI features. A business does not need secret markup or a separate machine only version of every page. It needs content that can be crawled, indexed, understood, and found useful. Important text should be available in the rendered page, internal links should connect related information, and technical controls should not accidentally block retrieval.</p>
+        html: `<p>Research on generative answer systems points back to the same durable foundation: a business does not need secret markup or a separate machine only version of every page. It needs content that can be retrieved, understood, and found useful. Important text should be available in the rendered page, internal links should connect related information, and technical controls should not accidentally block retrieval.</p>
         <p>The foundation also includes page experience. A service page that loads poorly, shifts around, hides key information, or fails on mobile is weaker for people even if its copy contains the right phrases. AEO and GEO should improve the public site, not create a parallel layer of awkward passages written only for a bot.</p>
         <blockquote>Optimize the answer by improving the page that carries it. Do not separate machine clarity from human clarity.</blockquote>`,
       },
@@ -54,13 +73,13 @@ export const articles = [
         id: 'schema-and-crawlers',
         title: 'Schema and crawler controls have narrow jobs',
         html: `<p>Structured data can make page meaning more explicit when it accurately represents visible content. Organization markup can identify the business. Article markup can identify a guide, its author, and publication dates. Breadcrumb markup can describe the page\'s location in the site. Schema cannot turn an unsupported statement into a trusted fact, and it does not guarantee a search feature.</p>
-        <p>Robots controls determine whether named crawlers are allowed to fetch a site. Search products use different user agents and policies, so the business should make an intentional choice. OpenAI documents OAI-SearchBot for ChatGPT search and separates it from GPTBot, which is associated with model training. Perplexity also publishes crawler information. Allowing discovery does not guarantee a citation, and blocking one crawler does not remove a URL from every data source.</p>`,
+        <p>Robots controls determine whether named crawlers are allowed to fetch a site. Operators can use different user agents for search retrieval, indexing, and model-related collection, so the business should make an intentional, dated choice for each published token. Allowing discovery does not guarantee a citation, and blocking one crawler does not remove a URL from every data source.</p>`,
       },
       {
         id: 'measurement',
         title: 'Measure behavior and business value, not a made up score',
         html: `<p>There is no universal AEO or GEO score that proves a business is visible. Useful measurement combines several imperfect signals: whether important pages are indexed, whether priority questions show relevant impressions and visits, whether AI features send traffic, whether the company is cited in a defined observation set, and whether those visitors take qualified actions.</p>
-        <p>Google now provides a Search Console view for some generative AI performance. That reporting should be read alongside ordinary query and page performance, analytics, form quality, calls, and CRM outcomes. A citation observation is a timestamped sample, not a permanent rank. Record the query, market, date, interface, cited URL, and result before drawing a conclusion.</p>`,
+        <p>When a search platform provides generative-feature reporting, read it alongside ordinary query and page performance, analytics, form quality, calls, and CRM outcomes. A citation observation is a timestamped sample, not a permanent rank. Record the query, market, date, interface, cited URL, and result before drawing a conclusion.</p>`,
       },
       {
         id: 'decision',
@@ -70,15 +89,16 @@ export const articles = [
       },
     ],
     sources: [
-      { title: 'AI features and your website', organization: 'Google Search Central', url: 'https://developers.google.com/search/docs/appearance/ai-features', note: 'Google guidance on appearing in AI search features.' },
-      { title: 'AI optimization guide', organization: 'Google Search Central', url: 'https://developers.google.com/search/docs/fundamentals/ai-optimization-guide', note: 'Current guidance connecting AI visibility to foundational SEO.' },
-      { title: 'Publishers and developers FAQ', organization: 'OpenAI', url: 'https://help.openai.com/en/articles/12627856-publishers-and-developers-faq', note: 'Official explanation of OAI-SearchBot and GPTBot controls.' },
-      { title: 'Perplexity crawlers', organization: 'Perplexity', url: 'https://docs.perplexity.ai/docs/resources/perplexity-crawlers', note: 'Official crawler names and access guidance.' },
+      { title: 'GEO: Generative Engine Optimization', organization: 'ACM SIGKDD / arXiv', url: 'https://arxiv.org/html/2311.09735v2', note: 'Foundational 2024 research defining GEO and evaluating visibility strategies across domains.' },
+      { title: 'What Gets Cited: Competitive GEO in AI Answer Engines', organization: 'ACM SIGIR / arXiv', url: 'https://arxiv.org/html/2605.25517', note: 'Controlled 2026 study of content factors associated with first-citation selection.' },
+      { title: 'Structural Feature Engineering for Generative Engine Optimization', organization: 'arXiv preprint', url: 'https://arxiv.org/html/2603.29979', note: 'Preprint research on how document architecture, chunking, and emphasis relate to citation behavior.' },
+      { title: 'SourceBench: Can AI Answers Reference Quality Web Sources?', organization: 'UC San Diego / arXiv preprint', url: 'https://arxiv.org/html/2602.16942', note: 'Preprint benchmark for evaluating the relevance, accuracy, accountability, authority, and clarity of cited sources.' },
     ],
     related: [
       ['/aeo-geo/', 'AEO and GEO services'],
       ['/insights/google-ai-overviews-service-businesses/', 'Optimize for Google AI Overviews'],
       ['/insights/measure-ai-search-visibility/', 'Measure AI search visibility'],
+      ['/insights/schema-markup-service-businesses/', 'Use truthful structured data'],
     ],
   },
   {
@@ -87,6 +107,25 @@ export const articles = [
     title: 'How to Optimize a Service Business Website for Google AI Overviews',
     description: 'How to make a service business website easier for Google to understand and use in AI Overviews, without promising placement.',
     directAnswer: 'To give a service business a better chance of appearing in Google AI Overviews, publish pages Google can read, answer real customer questions clearly, support important claims, connect related services, and make the mobile experience dependable. Follow ordinary Google Search requirements. There is no special tag or guaranteed placement method.',
+    keywords: ['Google AI Overviews', 'AI Overview optimization', 'AI search visibility', 'generative engine optimization', 'SEO for service businesses', 'website optimization'],
+    faqs: [
+      {
+        question: 'How does a service business optimize for Google AI Overviews?',
+        answer: 'Publish reliable HTML, give each page one clear job, answer the customer question early, and support consequential claims with named evidence. Connect services, people, locations, projects, and related guides through descriptive internal links. Then verify indexing, mobile usability, and performance. These steps improve eligibility and usefulness, but no page-level change can force an AI Overview citation.',
+      },
+      {
+        question: 'Do Google AI Overviews use the same sources as ordinary search results?',
+        answer: 'Not always. Recent large-scale studies found meaningful differences between sources selected for conventional results and generative answers. Source overlap also varies by query and repeated run. That is why an AI visibility program should track the exact cited URL, question, market, interface, and date instead of treating a traditional rank as a complete proxy.',
+      },
+      {
+        question: 'Does FAQ schema guarantee an AI Overview appearance?',
+        answer: 'No. FAQ markup can describe visible questions and answers, but it is not a placement switch. The visible content must still be accurate, useful, accessible, and consistent with the markup. Use FAQ schema only for genuine on-page Q and A content, validate the generated data, and never add hidden or fabricated answers for search systems.',
+      },
+      {
+        question: 'How long does AI Overview optimization take to show results?',
+        answer: 'There is no dependable publication-to-citation timetable. Crawling, indexing, retrieval, and source selection are separate stages, and generated results can vary between repeated observations. Verify the live page immediately, then monitor a fixed query set over multiple reporting cycles. Evaluate indexing and qualified traffic alongside citations so a lack of one visible feature is not mistaken for a failed website improvement.',
+      },
+    ],
     sections: [
       {
         id: 'what-overviews-are',
@@ -129,13 +168,13 @@ export const articles = [
       {
         id: 'page-experience',
         title: 'Protect the mobile reading and action path',
-        html: `<p>Google recommends a good page experience for AI search features. For a service business, that means more than one performance score. Text should fit without horizontal scrolling. Navigation should work with touch and keyboard. Images should have useful dimensions and alternatives. Content should not jump as resources load. The main action should remain clear without covering the page with intrusive overlays.</p>
+        html: `<p>A good page experience matters for people regardless of which search or answer surface introduced them. For a service business, that means more than one performance score. Text should fit without horizontal scrolling. Navigation should work with touch and keyboard. Images should have useful dimensions and alternatives. Content should not jump as resources load. The main action should remain clear without covering the page with intrusive overlays.</p>
         <p>Core Web Vitals can help identify loading, responsiveness, and layout stability issues. Lab tools are useful for diagnosis, while field data shows what eligible real users experienced. Review both, then fix the bottleneck that affects the actual page template rather than chasing a perfect synthetic score.</p>`,
       },
       {
         id: 'measurement',
         title: 'Measure the page after publication',
-        html: `<p>Submit the sitemap in Search Console and inspect important URLs, but remember that sitemap submission is a hint. Track indexing, query impressions, clicks, landing pages, and technical issues. Use Google\'s generative AI performance reporting where it is available, and pair it with analytics and CRM outcomes.</p>
+        html: `<p>Submit the sitemap through the relevant search webmaster tools and inspect important URLs, but remember that sitemap submission is a discovery signal rather than a guarantee. Track indexing, query impressions, clicks, landing pages, and technical issues. Use any available generative-feature reporting alongside analytics and CRM outcomes.</p>
         <p>For manual observation, define a stable set of questions and record the market, date, interface, response, cited sources, and your page\'s presence. Do not call a one time appearance a rank. Look for patterns across repeated observations and connect visibility to qualified visits and actions.</p>`,
       },
       {
@@ -155,16 +194,16 @@ export const articles = [
       },
     ],
     sources: [
-      { title: 'AI optimization guide', organization: 'Google Search Central', url: 'https://developers.google.com/search/docs/fundamentals/ai-optimization-guide', note: 'Current official guidance for AI search visibility.' },
-      { title: 'JavaScript SEO basics', organization: 'Google Search Central', url: 'https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics', note: 'Official rendering and crawl guidance for JavaScript sites.' },
-      { title: 'Creating helpful, reliable, people first content', organization: 'Google Search Central', url: 'https://developers.google.com/search/docs/fundamentals/creating-helpful-content', note: 'Google quality guidance for useful content.' },
-      { title: 'Core Web Vitals', organization: 'web.dev', url: 'https://web.dev/articles/vitals', note: 'Google maintained definitions of key experience metrics.' },
-      { title: 'Generative AI performance report', organization: 'Google Search Console Help', url: 'https://support.google.com/webmasters/answer/16984139', note: 'Official reporting guidance for generative AI traffic.' },
+      { title: 'Measuring Google AI Overviews: Activation, Source Quality, Claim Fidelity, and Publisher Impact', organization: 'Washington University in St. Louis / arXiv preprint', url: 'https://doi.org/10.48550/arxiv.2605.14021', note: 'Large-scale 2026 longitudinal preprint studying AI Overview activation, citations, and claim support.' },
+      { title: 'How Generative AI Disrupts Search', organization: 'New Jersey Institute of Technology et al. / arXiv preprint', url: 'https://arxiv.org/abs/2604.27790', note: 'Preprint comparing Google results, Gemini, and AI Overviews across a public query benchmark.' },
+      { title: 'SourceBench: Can AI Answers Reference Quality Web Sources?', organization: 'UC San Diego / arXiv preprint', url: 'https://arxiv.org/html/2602.16942', note: 'Human-labeled preprint benchmark for source quality in search-augmented AI answers.' },
+      { title: 'Structural Feature Engineering for Generative Engine Optimization', organization: 'arXiv preprint', url: 'https://arxiv.org/html/2603.29979', note: 'Preprint study of structural features and their relationship to citation performance.' },
     ],
     related: [
       ['/aeo-geo/', 'AEO and GEO services'],
       ['/insights/javascript-seo-react-crawlable-html/', 'JavaScript SEO for React websites'],
       ['/insights/entity-first-content-architecture/', 'Entity first content architecture'],
+      ['/insights/measure-ai-search-visibility/', 'Measure AI search visibility'],
     ],
   },
   {
@@ -173,6 +212,25 @@ export const articles = [
     title: 'Website Redesign Checklist for Service Businesses',
     description: 'A complete website redesign checklist covering strategy, content, technical SEO, accessibility, performance, forms, analytics, migration, launch, and follow up.',
     directAnswer: 'A service business redesign should protect more than the visual layer. Audit the current site, define page jobs, preserve valuable URLs, build accessible responsive templates, validate forms and analytics, map redirects, verify crawl controls, test the live release, and monitor search and lead quality after launch.',
+    keywords: ['website redesign checklist', 'website redesign services', 'website design services', 'website optimization', 'technical SEO services', 'service business website design'],
+    faqs: [
+      {
+        question: 'What should a service business audit before a website redesign?',
+        answer: 'Inventory the current URLs, organic landing pages, backlinks, forms, conversion paths, analytics events, integrations, structured data, redirects, and mobile templates. Record which pages earn qualified attention and which assets must survive the migration. A redesign that begins only with visual references can quietly erase search equity, measurement, accessibility, or lead-routing behavior.',
+      },
+      {
+        question: 'How do you redesign a website without losing SEO value?',
+        answer: 'Preserve useful URLs when possible, map every changed URL to the closest relevant destination, keep titles and page intent distinct, regenerate canonicals and sitemaps, and test status codes before launch. After release, crawl the live domain and monitor indexing, traffic, forms, and lead quality. Redirects protect continuity only when the destination genuinely replaces the old page.',
+      },
+      {
+        question: 'How long should redesign quality assurance continue after launch?',
+        answer: 'Run an immediate live verification, then continue monitoring through at least one normal reporting cycle because crawling, field performance data, analytics, and CRM outcomes arrive on different schedules. Keep the prelaunch crawl and measurement baseline so changes can be compared. Fix broken forms, missing redirects, crawl errors, and accessibility blockers as operational defects, not optional polish.',
+      },
+      {
+        question: 'What determines the scope of a service business website redesign?',
+        answer: 'Scope depends on the number of distinct page jobs, content migration risk, integrations, accessibility requirements, performance constraints, custom interaction, analytics, and redirect complexity. Count templates and system behaviors, not just visible pages. A small site with complicated CRM routing can require more verification than a larger editorial site. Define acceptance criteria before estimating timeline or budget.',
+      },
+    ],
     sections: [
       {
         id: 'before-design',
@@ -239,16 +297,16 @@ export const articles = [
       },
     ],
     sources: [
-      { title: 'SEO Starter Guide', organization: 'Google Search Central', url: 'https://developers.google.com/search/docs/fundamentals/seo-starter-guide', note: 'Official search foundation and site organization guidance.' },
-      { title: 'Site moves with URL changes', organization: 'Google Search Central', url: 'https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes', note: 'Official migration and redirect guidance.' },
-      { title: 'Web Content Accessibility Guidelines 2.2', organization: 'W3C', url: 'https://www.w3.org/TR/WCAG22/', note: 'Normative accessibility success criteria.' },
-      { title: 'Core Web Vitals', organization: 'web.dev', url: 'https://web.dev/articles/vitals', note: 'Google maintained performance metric definitions.' },
-      { title: 'Build and submit a sitemap', organization: 'Google Search Central', url: 'https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap', note: 'Official sitemap format and submission guidance.' },
+      { title: 'The Impact of Website Design on Users’ Trust', organization: 'ACM NordiCHI', url: 'https://dl.acm.org/doi/10.1145/3419249.3420086', note: 'Human-computer interaction research examining website design and user trust.' },
+      { title: 'Do you agree? Contrasting Google’s Core Web Vitals with actual web QoE', organization: 'Quality and User Experience / Springer Nature', url: 'https://link.springer.com/article/10.1007/s41233-023-00058-3', note: 'Open-access study comparing technical web metrics with subjective quality-of-experience research.' },
+      { title: 'Web Experience in Mobile Networks: Lessons from Two Million Page Visits', organization: 'The Web Conference / ACM', url: 'https://dl.acm.org/doi/10.1145/3308558.3313606', note: 'Large-scale study of webpage performance across mobile networks, browsers, and technologies.' },
+      { title: 'Evaluating the Efficacy of Next.js: A Comparative Analysis with React.js', organization: 'New York University Abu Dhabi / arXiv preprint', url: 'https://arxiv.org/html/2502.15707v1', note: 'Preprint comparison of rendering frameworks, performance, search accessibility, and network conditions.' },
     ],
     related: [
       ['/web-design-optimization/', 'Website design and optimization'],
       ['/work/', 'Selected website work'],
       ['/insights/javascript-seo-react-crawlable-html/', 'JavaScript SEO for React websites'],
+      ['/contact/', 'Plan a measurable website redesign'],
     ],
   },
   {
@@ -257,6 +315,25 @@ export const articles = [
     title: 'Schema Markup for Service Businesses Without Fake Signals',
     description: 'What schema markup does, which types may fit a service business, and how to use it without fake reviews, ratings, or guarantees.',
     directAnswer: 'Schema markup is background code that gives search tools a structured description of information already visible on the page. Start with the real business, website, locations, people, articles, and navigation path. Choose an accurate type, test the code, keep it synchronized with the page, and never invent reviews, ratings, prices, credentials, or service areas.',
+    keywords: ['schema markup', 'schema markup for local business', 'structured data services', 'organization schema', 'article schema', 'FAQ schema'],
+    faqs: [
+      {
+        question: 'What schema markup should a service business use first?',
+        answer: 'Start with the types that match visible, stable facts: Organization or an accurate subtype for the business, WebSite for the site, BreadcrumbList for hierarchy, and Article for editorial pages. Add Person, Service, FAQPage, or location details only when the page actually presents that information. A smaller truthful graph is more useful than a large graph of unsupported properties.',
+      },
+      {
+        question: 'Does schema markup improve search rankings?',
+        answer: 'Schema can help a system interpret page meaning and may support eligible search presentations, but it is not a standalone ranking guarantee. Research on snippets and entity-oriented retrieval supports the value of explicit structure and entity relationships, while also showing that presentation depends on the query and retrieval system. Treat markup as a machine-readable mirror of the page.',
+      },
+      {
+        question: 'Can a business add review schema for testimonials?',
+        answer: 'Only when the selected type, visible review content, and applicable platform rules genuinely support it. Do not convert private praise into fabricated aggregate ratings, mark up reviews that visitors cannot see, or attach ratings to an ineligible entity. Validate syntax and meaning separately, and remove properties that cannot be traced to an accessible source on the page.',
+      },
+      {
+        question: 'How should schema markup be maintained after launch?',
+        answer: 'Generate markup from the same governed data that supplies visible names, dates, authors, URLs, and business facts whenever practical. Test the built page, not only the source template. Revalidate after redesigns, domain changes, CMS migrations, or content-model updates. Assign an owner for stale facts and remove properties the public page no longer supports. Keep a small regression test for required types on every release, and run it before each production publishing cycle. Syntax validation proves that code parses; it does not prove that a claim is true or eligible for a search feature.',
+      },
+    ],
     sections: [
       {
         id: 'purpose',
@@ -325,16 +402,16 @@ export const articles = [
       },
     ],
     sources: [
-      { title: 'Structured data general guidelines', organization: 'Google Search Central', url: 'https://developers.google.com/search/docs/appearance/structured-data/sd-policies', note: 'Official technical and quality policies.' },
-      { title: 'Organization structured data', organization: 'Google Search Central', url: 'https://developers.google.com/search/docs/appearance/structured-data/organization', note: 'Supported organization properties and implementation guidance.' },
-      { title: 'Article structured data', organization: 'Google Search Central', url: 'https://developers.google.com/search/docs/appearance/structured-data/article', note: 'Supported article properties and examples.' },
-      { title: 'Schema.org documentation', organization: 'Schema.org', url: 'https://schema.org/docs/documents.html', note: 'Primary vocabulary documentation.' },
-      { title: 'Review snippet structured data', organization: 'Google Search Central', url: 'https://developers.google.com/search/docs/appearance/structured-data/review-snippet', note: 'Current review markup requirements and restrictions.' },
+      { title: 'The Snippets Taxonomy in Web Search Engines', organization: 'University of Economics in Katowice / Springer', url: 'https://arxiv.org/abs/1906.04497', note: 'Study of regular, rich, featured, news, and entity snippets across 50,000 search queries.' },
+      { title: 'Entity-Duet Neural Ranking', organization: 'Association for Computational Linguistics', url: 'https://aclanthology.org/P18-1223/', note: 'Research integrating document words, entity annotations, and knowledge-graph semantics in retrieval.' },
+      { title: 'Hypergraph-of-Entity: A General Model for Entity-Oriented Search', organization: 'INESC TEC and University of Porto / arXiv preprint', url: 'https://arxiv.org/abs/2109.00450', note: 'Entity-oriented retrieval research joining text, entities, and explicit relationships.' },
+      { title: 'Structural Feature Engineering for Generative Engine Optimization', organization: 'arXiv preprint', url: 'https://arxiv.org/html/2603.29979', note: 'Preprint research on machine-readable document structure and citation behavior in generative engines.' },
     ],
     related: [
       ['/aeo-geo/', 'AEO and GEO services'],
       ['/insights/entity-first-content-architecture/', 'Entity first content architecture'],
       ['/insights/google-ai-overviews-service-businesses/', 'Google AI Overviews guide'],
+      ['/contact/', 'Audit a service business content graph'],
     ],
   },
   {
@@ -343,6 +420,25 @@ export const articles = [
     title: 'How AI Search Crawlers Discover and Cite Websites',
     description: 'How AI tools find public websites, what robots.txt can control, and why allowing a crawler never guarantees a citation.',
     directAnswer: 'AI search tools can find a website through their own crawlers, search indexes, partner data, public links, and submitted discovery signals. A robots.txt file can allow or block named crawlers, but access does not guarantee that a page will be indexed or cited. Use readable public pages, stable URLs, useful links, a sitemap, accurate page information, and a deliberate crawler policy.',
+    keywords: ['AI crawler', 'AI search crawlers', 'robots.txt AI crawler', 'AI search citations', 'website crawlability', 'generative AI web crawling'],
+    faqs: [
+      {
+        question: 'Does allowing an AI crawler guarantee that a website will be cited?',
+        answer: 'No. Permission only removes one possible access barrier. A system may still decline to fetch, index, retrieve, summarize, or cite the page. Citation also depends on relevance, competing sources, freshness, evidence quality, and the answer-generation process. Report discovery, crawl, index, citation, visit, and conversion as separate states.',
+      },
+      {
+        question: 'Can robots.txt keep private information away from AI systems?',
+        answer: 'No. Robots rules are public requests to cooperative crawlers, not access control. Empirical research has found uneven compliance among scraper categories, and a blocked URL may remain known through other sources. Protect sensitive material with authentication, authorization, and appropriate server controls. Use robots.txt only to express crawl preferences for public content.',
+      },
+      {
+        question: 'What should an AI crawler policy contain?',
+        answer: 'Record the exact production host, named user agent, provider-stated purpose, paths allowed or disallowed, decision owner, evidence URL, review date, and next review date. Separate search retrieval from training when the provider offers distinct controls. Recheck current documentation before production changes because crawler names, purposes, and verification methods can change.',
+      },
+      {
+        question: 'How can a business verify whether AI crawlers reached its website?',
+        answer: 'Review server or edge logs for requests to the exact host and paths, but do not trust a user-agent string by itself because it can be copied. Use provider-published IP or verification methods where available, preserve timestamps, and distinguish a fetch from indexing or citation. Pair log evidence with page availability tests and repeated citation observations. Keep bot traffic out of ordinary visitor conversion totals. If the evidence only proves a request, report the state as crawled rather than claiming that the page was indexed or used downstream.',
+      },
+    ],
     sections: [
       {
         id: 'discovery-paths',
@@ -357,15 +453,15 @@ export const articles = [
         <p>Robots exclusion is not an authentication system. A blocked URL may still be known through links or other sources, and malicious crawlers may ignore the rules. Sensitive content requires real access control. Test robots behavior against the exact host, protocol, path, and user agent because a rule on one subdomain does not automatically govern another.</p>`,
       },
       {
-        id: 'openai',
-        title: 'OpenAI separates search discovery from training controls',
-        html: `<p>OpenAI documents OAI-SearchBot as the crawler used to surface websites in ChatGPT search. It documents GPTBot separately for potential use in training generative AI models. A publisher can allow OAI-SearchBot while disallowing GPTBot when it wants search discovery without granting the separate training crawler access.</p>
-        <p>OpenAI also notes that robots changes can take time to be reflected. The exact user agent tokens and published IP information should be checked in the current official documentation before changing production controls. A website should not rely on a third party list copied months earlier.</p>`,
+        id: 'provider-controls',
+        title: 'Separate crawler purposes need separate decisions',
+        html: `<p>Web-content control research shows why a single label such as AI crawler is too broad. A provider may operate different agents for search discovery, user-requested retrieval, indexing, or model-related collection. A publisher can choose different policies for those purposes when the operator exposes distinct user-agent controls.</p>
+        <p>Exact tokens, published IP information, and stated purposes can change. Check the operator\'s current first-party documentation before changing production controls, record the review date, and avoid relying on a third-party list copied months earlier.</p>`,
       },
       {
-        id: 'perplexity-google',
-        title: 'Perplexity and Google publish their own crawler guidance',
-        html: `<p>Perplexity documents PerplexityBot and Perplexity-User, with different roles in indexing and user initiated retrieval. Google documents Googlebot and the robots protocol it supports. Each provider can define user agents, behavior, and controls differently, so one broad statement about all AI crawlers is unreliable.</p>
+        id: 'provider-guidance',
+        title: 'Crawler guidance is provider-specific and time-sensitive',
+        html: `<p>Each operator can define user agents, retrieval behavior, and supported controls differently. Large-scale robots research also shows that declared rules are not followed uniformly by every scraper, so one broad statement about all AI crawlers is unreliable.</p>
         <p>Create a small policy table for the business. Record the product, user agent, purpose described by the provider, current decision, source URL, and review date. This turns crawler access into a maintained business choice instead of a one time copy and paste operation.</p>
         <table tabindex="0" aria-label="Crawler policy questions"><thead><tr><th>Question</th><th>What to record</th></tr></thead><tbody>
           <tr><td>Which crawler?</td><td>Exact official user agent token and provider documentation.</td></tr>
@@ -408,15 +504,16 @@ export const articles = [
       },
     ],
     sources: [
-      { title: 'Publishers and developers FAQ', organization: 'OpenAI', url: 'https://help.openai.com/en/articles/12627856-publishers-and-developers-faq', note: 'Official OAI-SearchBot and GPTBot guidance.' },
-      { title: 'Perplexity crawlers', organization: 'Perplexity', url: 'https://docs.perplexity.ai/docs/resources/perplexity-crawlers', note: 'Official PerplexityBot and Perplexity-User documentation.' },
-      { title: 'Robots.txt specifications', organization: 'Google Search Central', url: 'https://developers.google.com/search/docs/crawling-indexing/robots/robots_txt', note: 'Google supported robots protocol and syntax.' },
-      { title: 'Build and submit a sitemap', organization: 'Google Search Central', url: 'https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap', note: 'Official discovery and sitemap guidance.' },
+      { title: 'Scrapers selectively respect robots.txt directives', organization: 'Duke University / arXiv preprint', url: 'https://arxiv.org/html/2505.21733', note: 'Large-scale empirical preprint studying crawler behavior under controlled robots.txt directives.' },
+      { title: 'A Survey of Web Content Control for Generative AI', organization: 'University of Passau / arXiv', url: 'https://arxiv.org/html/2404.02309v1', note: 'Academic survey of technical standards and opt-out proposals for generative-AI web data use.' },
+      { title: 'Sprinter: Speeding Up High-Fidelity Crawling of the Modern Web', organization: 'USENIX NSDI', url: 'https://www.usenix.org/system/files/nsdi24-goel.pdf', note: 'Systems research explaining the browser work required to crawl modern JavaScript-dependent pages.' },
+      { title: 'How Generative AI Disrupts Search', organization: 'New Jersey Institute of Technology et al. / arXiv preprint', url: 'https://arxiv.org/abs/2604.27790', note: 'Empirical preprint that includes crawler access and source-retrieval observations.' },
     ],
     related: [
       ['/insights/javascript-seo-react-crawlable-html/', 'JavaScript SEO for React websites'],
       ['/insights/measure-ai-search-visibility/', 'Measure AI search visibility'],
       ['/aeo-geo/', 'AEO and GEO services'],
+      ['/insights/schema-markup-service-businesses/', 'Describe crawlable content accurately'],
     ],
   },
   {
@@ -425,6 +522,25 @@ export const articles = [
     title: 'JavaScript SEO for React Websites: Why Crawlable HTML Still Matters',
     description: 'Why important React website content should arrive as readable HTML, plus a practical checklist for pages that need to be found.',
     directAnswer: 'React can support search visibility, but an important service page should not disappear when JavaScript is slow or unavailable. Send readable HTML when practical, return the correct page status, give every page unique titles and descriptions, expose ordinary links, test what crawlers receive, and keep the experience useful before scripts finish loading.',
+    keywords: ['JavaScript SEO', 'React SEO', 'crawlable HTML', 'technical SEO services', 'server side rendering SEO', 'static site generation SEO'],
+    faqs: [
+      {
+        question: 'Is React bad for SEO?',
+        answer: 'No. React can publish highly discoverable pages when the architecture delivers meaningful HTML, stable routes, correct status codes, route-specific metadata, and ordinary links. Risk rises when a public page is only an empty shell until several scripts and data requests succeed. Choose static generation, server rendering, or a hybrid based on the job of each route.',
+      },
+      {
+        question: 'Why does crawlable HTML matter if search engines render JavaScript?',
+        answer: 'Browser rendering costs more computation and introduces more failure points than retrieving ready HTML. Academic crawling research shows why modern JavaScript pages require expensive browser work, while mobile studies show that devices and networks vary substantially. Sending the core page in HTML improves resilience for crawlers, users on constrained connections, previews, and assistive technology.',
+      },
+      {
+        question: 'How do you test JavaScript SEO on a production site?',
+        answer: 'Inspect the initial response and the rendered document. Verify the status, title, canonical, main heading, body copy, and internal links in both views. Test missing routes, redirects, JavaScript failure, mobile overflow, keyboard use, and structured data. Crawl the public host after deployment because a local build cannot prove CDN rules, redirects, or live headers.',
+      },
+      {
+        question: 'Does crawlable HTML mean a React site cannot be interactive?',
+        answer: 'No. The page can send useful HTML first and hydrate selected components afterward. Navigation, copy, headings, links, and conversion context remain available while galleries, forms, motion, or data views gain richer behavior in the browser. This progressive approach keeps the public argument resilient without giving up React for interaction. The design decision is which elements truly require client execution, not whether the whole page must choose one rendering method.',
+      },
+    ],
     sections: [
       {
         id: 'rendering',
@@ -459,7 +575,7 @@ export const articles = [
       {
         id: 'links-content',
         title: 'Use crawlable links and semantic page structure',
-        html: `<p>Google recommends standard anchor elements with resolvable href values. A click handler on a generic element may work for a person with a mouse and still fail as a discovery path. Use buttons for actions and anchors for navigation. Descriptive link text helps readers and systems understand the destination.</p>
+        html: `<p>Standard anchor elements with resolvable href values provide a durable discovery path. A click handler on a generic element may work for a person with a mouse and still fail for crawlers, keyboard users, or assistive technology. Use buttons for actions and anchors for navigation. Descriptive link text helps readers and systems understand the destination.</p>
         <p>Build the document with one main landmark, descriptive headings, paragraphs, lists, tables, figures, and article elements where those structures fit. Canvas and WebGL can create excellent visual experiences, but they should not be the only place that a client name, service description, or page relationship exists. Provide accessible text and static fallbacks for meaningful visual information.</p>`,
       },
       {
@@ -489,15 +605,16 @@ export const articles = [
       },
     ],
     sources: [
-      { title: 'JavaScript SEO basics', organization: 'Google Search Central', url: 'https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics', note: 'Official rendering, links, metadata, and status guidance.' },
-      { title: 'Dynamic rendering as a workaround', organization: 'Google Search Central', url: 'https://developers.google.com/search/docs/crawling-indexing/javascript/dynamic-rendering', note: 'Google recommends server rendering, static rendering, or hydration over dynamic rendering.' },
-      { title: 'Canonical URLs', organization: 'Google Search Central', url: 'https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls', note: 'Official canonicalization methods and signals.' },
-      { title: 'Core Web Vitals', organization: 'web.dev', url: 'https://web.dev/articles/vitals', note: 'Current user experience metrics.' },
+      { title: 'Sprinter: Speeding Up High-Fidelity Crawling of the Modern Web', organization: 'USENIX NSDI', url: 'https://www.usenix.org/system/files/nsdi24-goel.pdf', note: 'Research on the computing cost and fidelity challenges of browser-based crawling.' },
+      { title: 'Evaluating the Efficacy of Next.js: A Comparative Analysis with React.js', organization: 'New York University Abu Dhabi / arXiv preprint', url: 'https://arxiv.org/html/2502.15707v1', note: 'Preprint comparison of React and Next.js under performance, SEO, usability, and network conditions.' },
+      { title: 'Web Experience in Mobile Networks: Lessons from Two Million Page Visits', organization: 'The Web Conference / ACM', url: 'https://dl.acm.org/doi/10.1145/3308558.3313606', note: 'Large-scale evidence on the effect of access networks, devices, browsers, and page composition.' },
+      { title: 'Do you agree? Contrasting Google’s Core Web Vitals with actual web QoE', organization: 'Quality and User Experience / Springer Nature', url: 'https://link.springer.com/article/10.1007/s41233-023-00058-3', note: 'Research comparing objective loading metrics with perceived web quality.' },
     ],
     related: [
       ['/web-design-optimization/', 'Website design and optimization'],
       ['/insights/ai-search-crawlers-discovery-citations/', 'How AI search crawlers discover pages'],
       ['/insights/google-ai-overviews-service-businesses/', 'Google AI Overviews guide'],
+      ['/contact/', 'Plan a crawlable React build'],
     ],
   },
   {
@@ -506,6 +623,25 @@ export const articles = [
     title: 'How to Connect Website Forms, HubSpot, and Business Agents Safely',
     description: 'How to move website form details into the right HubSpot account and AI workflow without mixing clients or sending the wrong message.',
     directAnswer: 'Start by naming the exact HubSpot account, the information the form collects, the customer consent, and what should happen next. Check for duplicate records, use narrow triggers, keep every client separate, make retries safe, and require human approval before an AI worker sends a message or changes an important account setting.',
+    keywords: ['HubSpot automation', 'AI agents for business', 'CRM automation', 'HubSpot workflow automation', 'AI CRM integration', 'business process automation agents'],
+    faqs: [
+      {
+        question: 'How should a website form connect to HubSpot safely?',
+        answer: 'Define the exact portal, form version, consent language, field contract, identity key, record owner, and permitted next actions before connecting systems. Validate required fields, deduplicate deterministically, and make retries idempotent. Store a receipt for each attempted write. Never infer the client, portal, or communication permission from an email address alone.',
+      },
+      {
+        question: 'What can an AI agent do in a CRM without human approval?',
+        answer: 'A bounded agent can research, classify, draft, validate, and stage work when the target and allowed data are explicit. Human approval should remain in front of external messages, record deletion, access changes, ambiguous merges, spend, and other consequential writes. The execution layer should enforce those limits instead of relying only on a prompt reminder.',
+      },
+      {
+        question: 'How do you prevent duplicate or mixed-client CRM records?',
+        answer: 'Use tenant-specific credentials and identifiers, validate the portal before every write, define a stable deduplication key, and reject records that cross the approved client boundary. Separate retry from replay, log source and destination identifiers, and test with non-production records. If identity is ambiguous, route the item for review rather than guessing.',
+      },
+      {
+        question: 'What is a safe first AI workflow for HubSpot?',
+        answer: 'Start with a narrow, reversible workflow that reads a defined record set and prepares a draft or classification for human review. Use one portal, one owner, one trigger, and explicit success and failure states. Avoid automatic outreach, destructive merges, or broad property updates in the first release. Measure false positives, reviewer corrections, latency, and receipt completeness before expanding permissions.',
+      },
+    ],
     sections: [
       {
         id: 'map-flow',
@@ -571,15 +707,16 @@ export const articles = [
       },
     ],
     sources: [
-      { title: 'Webhooks API guide', organization: 'HubSpot Developers', url: 'https://developers.hubspot.com/docs/api-reference/latest/webhooks/guide', note: 'Official subscription, event, and webhook behavior guidance.' },
-      { title: 'Marketing form events', organization: 'HubSpot Developers', url: 'https://developers.hubspot.com/docs/api-reference/latest/marketing/forms/global-form-events', note: 'Official browser form event documentation.' },
-      { title: 'Set workflow enrollment triggers', organization: 'HubSpot Knowledge Base', url: 'https://knowledge.hubspot.com/workflows/set-your-workflow-enrollment-triggers', note: 'Official workflow enrollment and reenrollment guidance.' },
-      { title: 'NIST AI Risk Management Framework', organization: 'National Institute of Standards and Technology', url: 'https://www.nist.gov/itl/ai-risk-management-framework', note: 'Primary framework for governing AI risks and controls.' },
+      { title: 'Artificial intelligence in customer relationship management', organization: 'Journal of Business Research / Elsevier', url: 'https://www.sciencedirect.com/science/article/pii/S0148296325003546', note: '2025 research framework for AI-CRM integration, including data centralization, ethics, and ongoing user involvement.' },
+      { title: 'POLARIS: Typed Planning and Governed Execution for Agentic AI', organization: 'UC Irvine, UC San Diego, and Accenture / arXiv preprint', url: 'https://doi.org/10.48550/arxiv.2601.11816', note: 'Preprint research using typed plans, validation gates, bounded repair, and audit trails.' },
+      { title: 'When combinations of humans and AI are useful', organization: 'Nature Human Behaviour', url: 'https://www.nature.com/articles/s41562-024-02024-1', note: 'Systematic review and meta-analysis of performance in human, AI, and combined systems.' },
+      { title: 'Human-AI collaboration is not very collaborative yet', organization: 'Frontiers in Computer Science', url: 'https://www.frontiersin.org/journals/computer-science/articles/10.3389/fcomp.2024.1521066/full', note: 'Systematic review and taxonomy of interaction patterns in AI-assisted decision making.' },
     ],
     related: [
       ['/business-agents/', 'Business agent systems'],
       ['/insights/human-approval-gates-for-marketing-agents/', 'Human approval gates'],
       ['/contact/', 'Map a website and CRM workflow'],
+      ['/insights/entity-first-content-architecture/', 'Keep client and system entities distinct'],
     ],
   },
   {
@@ -588,6 +725,25 @@ export const articles = [
     title: 'How to Measure AI Search Visibility Without Made Up Rankings',
     description: 'How to tell whether a business is becoming easier to find in AI search without inventing a universal ranking score.',
     directAnswer: 'Measure AI search visibility with several honest signals: whether important pages can be found, search impressions and visits, available AI traffic reports, repeated citation checks for the same questions, useful actions on the website, and outcomes recorded in the CRM. Record the date and method. One screenshot is evidence from one moment, not a permanent ranking.',
+    keywords: ['AI search visibility', 'generative engine optimization measurement', 'AI citation tracking', 'AI Overview measurement', 'answer engine optimization', 'SEO reporting for service businesses'],
+    faqs: [
+      {
+        question: 'How do you measure AI search visibility?',
+        answer: 'Use a fixed question set and record the engine, market, date, answer, cited domains, cited URL, and brand presence on every observation. Combine that sample with indexing, search impressions, attributable visits, on-site actions, and CRM outcomes. Keep denominators visible. No single vendor score can represent every answer engine or every stage of the customer journey.',
+      },
+      {
+        question: 'Is an AI citation the same as a search ranking?',
+        answer: 'No. A citation is a source-selection event inside one generated response. Results can change across engines, sessions, prompts, markets, and time, and research has found source sets that differ from conventional results. Treat citation share across a controlled observation set as a sampled metric, not a permanent position.',
+      },
+      {
+        question: 'What business outcomes should AI search reporting include?',
+        answer: 'Include qualified visits, engaged sessions, form starts, completed inquiries, calls when attribution is dependable, accepted leads, sales opportunities, and revenue only when the evidence chain supports it. Report unknown attribution as unknown. Pair every outcome with its time window and definition so visibility gains are not mistaken for business impact.',
+      },
+      {
+        question: 'How often should AI citation visibility be checked?',
+        answer: 'Use a weekly cadence for the small set of high-value questions and a monthly review for the wider topic set. Keep the wording, location, account state, and method as stable as possible, while acknowledging that personalization and engine changes remain uncontrolled. Trend citation share and source diversity over time. Do not rerun a question repeatedly until the preferred answer appears, because that creates a biased sample.',
+      },
+    ],
     sections: [
       {
         id: 'why-rankings-fail',
@@ -662,15 +818,16 @@ export const articles = [
       },
     ],
     sources: [
-      { title: 'Generative AI performance report', organization: 'Google Search Console Help', url: 'https://support.google.com/webmasters/answer/16984139', note: 'Official report definitions and current availability.' },
-      { title: 'Performance report', organization: 'Google Search Console Help', url: 'https://support.google.com/webmasters/answer/7576553', note: 'Official query, page, filter, and data interpretation guidance.' },
-      { title: 'AI optimization guide', organization: 'Google Search Central', url: 'https://developers.google.com/search/docs/fundamentals/ai-optimization-guide', note: 'Official guidance on AI feature traffic and measurement.' },
-      { title: 'URL Inspection tool', organization: 'Google Search Console Help', url: 'https://support.google.com/webmasters/answer/9012289', note: 'Official indexed and live URL inspection guidance.' },
+      { title: 'Measuring Google AI Overviews: Activation, Source Quality, Claim Fidelity, and Publisher Impact', organization: 'Washington University in St. Louis / arXiv preprint', url: 'https://doi.org/10.48550/arxiv.2605.14021', note: 'Longitudinal preprint offering a measurement design and evidence on source selection and claim support.' },
+      { title: 'GEO: Generative Engine Optimization', organization: 'ACM SIGKDD / arXiv', url: 'https://arxiv.org/html/2311.09735v2', note: 'Research introducing visibility metrics and a benchmark for generative-engine optimization.' },
+      { title: 'What Gets Cited: Competitive GEO in AI Answer Engines', organization: 'ACM SIGIR / arXiv', url: 'https://arxiv.org/html/2605.25517', note: 'Controlled citation research showing why citation share is contextual rather than a fixed rank.' },
+      { title: 'SourceBench: Can AI Answers Reference Quality Web Sources?', organization: 'UC San Diego / arXiv preprint', url: 'https://arxiv.org/html/2602.16942', note: 'Preprint eight-metric framework for evaluating the quality of sources cited by AI answers.' },
     ],
     related: [
       ['/aeo-geo/', 'AEO and GEO services'],
       ['/insights/ai-search-crawlers-discovery-citations/', 'AI search crawlers and citations'],
       ['/insights/google-ai-overviews-service-businesses/', 'Google AI Overviews guide'],
+      ['/contact/', 'Create an AI visibility measurement plan'],
     ],
   },
   {
@@ -679,6 +836,25 @@ export const articles = [
     title: 'Entity First Content Architecture for Service Businesses',
     description: 'How to organize the real parts of a business, including services, people, locations, and proof, into pages search tools can understand.',
     directAnswer: 'Entity first content architecture simply starts with the real things a business needs to explain: the company, services, people, locations, projects, credentials, and customer questions. Give each important subject one clear home page, use consistent names and facts, connect related pages with descriptive links, and add structured data only when it matches what visitors can see.',
+    keywords: ['entity based SEO', 'entity first content architecture', 'topical authority SEO', 'internal linking strategy', 'content architecture', 'SEO for service businesses'],
+    faqs: [
+      {
+        question: 'What is entity-first content architecture?',
+        answer: 'It is a way to organize a site around identifiable things and their relationships: the company, services, people, locations, projects, credentials, and customer questions. Each important entity gets one canonical home, consistent facts, and descriptive links to related entities. Articles then support that model instead of becoming an isolated pile of keywords.',
+      },
+      {
+        question: 'How does entity-based SEO help a service business?',
+        answer: 'Entity-oriented retrieval research shows that words, entities, and their relationships can provide complementary signals. For a service business, the practical benefit is clearer ownership: the site can distinguish who provides which service, where it is available, what proof supports it, and which guide explains the buyer question. This helps people navigate and reduces contradictory pages.',
+      },
+      {
+        question: 'How many pages should one service have?',
+        answer: 'Usually one canonical service page should own the offer, scope, process, and conversion path. Supporting articles can answer distinct educational questions and link back to that page. Create another service or location page only when it represents materially different intent, proof, or availability. Repeated near-duplicate pages weaken navigation and make factual governance harder.',
+      },
+      {
+        question: 'What makes an internal link useful in an entity-first site?',
+        answer: 'A useful internal link connects two genuinely related page jobs with anchor text that describes the destination. A guide about crawlability should link to the technical website service and to the crawler guide, not every page on the domain. Maintain links in both directions when the relationship helps readers move from explanation to evidence or action. Audit orphan pages, repeated generic anchors, and links to superseded canonical pages.',
+      },
+    ],
     sections: [
       {
         id: 'what-entity-first-means',
@@ -745,15 +921,16 @@ export const articles = [
       },
     ],
     sources: [
-      { title: 'Organization structured data', organization: 'Google Search Central', url: 'https://developers.google.com/search/docs/appearance/structured-data/organization', note: 'Official organization identity and property guidance.' },
-      { title: 'Article structured data', organization: 'Google Search Central', url: 'https://developers.google.com/search/docs/appearance/structured-data/article', note: 'Official article, author, and publisher guidance.' },
-      { title: 'Schema.org documentation', organization: 'Schema.org', url: 'https://schema.org/docs/documents.html', note: 'Primary structured vocabulary documentation.' },
-      { title: 'SEO Starter Guide', organization: 'Google Search Central', url: 'https://developers.google.com/search/docs/fundamentals/seo-starter-guide', note: 'Official site organization and link guidance.' },
+      { title: 'Hypergraph-of-Entity: A General Model for Entity-Oriented Search', organization: 'INESC TEC and University of Porto / arXiv preprint', url: 'https://arxiv.org/abs/2109.00450', note: 'Joint representation research for text, entities, and explicit relationships.' },
+      { title: 'Entity-Duet Neural Ranking', organization: 'Association for Computational Linguistics', url: 'https://aclanthology.org/P18-1223/', note: 'Evidence that entity annotations and knowledge-graph semantics can complement word-based retrieval.' },
+      { title: 'Structural Feature Engineering for Generative Engine Optimization', organization: 'arXiv preprint', url: 'https://arxiv.org/html/2603.29979', note: 'Preprint connecting document architecture and information chunking to generative citation behavior.' },
+      { title: 'SourceBench: Can AI Answers Reference Quality Web Sources?', organization: 'UC San Diego / arXiv preprint', url: 'https://arxiv.org/html/2602.16942', note: 'Source-quality framework emphasizing relevance, accuracy, accountability, authority, and clarity.' },
     ],
     related: [
       ['/insights/schema-markup-service-businesses/', 'Schema markup for service businesses'],
       ['/aeo-geo/', 'AEO and GEO services'],
       ['/insights/aeo-vs-geo-service-businesses/', 'AEO vs GEO'],
+      ['/contact/', 'Design a durable content architecture'],
     ],
   },
   {
@@ -762,6 +939,25 @@ export const articles = [
     title: 'Where AI Marketing Workers Need Human Approval',
     description: 'A plain-language guide to what AI can safely prepare and which messages, purchases, account changes, and deletions still need a person.',
     directAnswer: 'Require a person to approve anything that sends a message, publishes work, spends money, changes access, alters an important record, deletes data, crosses into another client, or continues when the target is unclear. AI workers can safely research, draft, test, and stage well-defined work. Every run should show what was only prepared and what was actually executed.',
+    keywords: ['human in the loop AI', 'AI agent governance', 'AI agents for business', 'human approval workflow', 'responsible AI automation', 'marketing automation governance'],
+    faqs: [
+      {
+        question: 'Which AI marketing actions need human approval?',
+        answer: 'Require approval before sending messages, publishing content, changing spend, granting access, editing consequential records, deleting data, crossing client boundaries, or acting with an unclear target. Approval should name the exact action and artifact. Research, drafting, testing, and staging can often proceed autonomously when inputs and permissions are bounded.',
+      },
+      {
+        question: 'Does adding a person to an AI workflow automatically make it safer?',
+        answer: 'No. A systematic meta-analysis found that human and AI combinations do not automatically outperform the stronger participant, and interaction research shows that many collaboration designs remain simplistic. Safety depends on where the gate sits, what evidence the reviewer sees, whether rejection is possible, and whether the system technically blocks execution before approval.',
+      },
+      {
+        question: 'What should an approval receipt record?',
+        answer: 'Record the target, proposed action, exact artifact or diff, supporting evidence, risk tier, approver, approval scope, timestamp, execution result, and final state. A draft receipt is not a send receipt, and a deployment receipt is not proof that the live page is correct. Preserve those states separately so operators can audit what actually happened.',
+      },
+      {
+        question: 'How can approval gates avoid slowing every marketing task?',
+        answer: 'Match the gate to consequence. Low-risk research, testing, drafting, and reversible staging can run within pre-approved boundaries. Require focused review only before the side effect: the exact send, publish, spend, access change, merge, or deletion. Show reviewers the target, artifact, evidence, and diff in one compact packet. Good gates reduce ambiguity and rework; they do not turn every routine step into a meeting.',
+      },
+    ],
     sections: [
       {
         id: 'why-gates',
@@ -841,15 +1037,16 @@ export const articles = [
       },
     ],
     sources: [
-      { title: 'NIST AI Risk Management Framework', organization: 'National Institute of Standards and Technology', url: 'https://www.nist.gov/itl/ai-risk-management-framework', note: 'Primary framework for mapping, measuring, managing, and governing AI risk.' },
-      { title: 'Artificial Intelligence Risk Management Framework: Generative AI Profile', organization: 'National Institute of Standards and Technology', url: 'https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf', note: 'NIST generative AI risk profile and actions.' },
-      { title: 'Webhooks API guide', organization: 'HubSpot Developers', url: 'https://developers.hubspot.com/docs/api-reference/latest/webhooks/guide', note: 'Official event and integration behavior for a common marketing system.' },
-      { title: 'OpenAI safety best practices', organization: 'OpenAI Platform', url: 'https://platform.openai.com/docs/guides/safety-best-practices', note: 'Official guidance on human review, adversarial testing, and constrained inputs and outputs.' },
+      { title: 'When combinations of humans and AI are useful', organization: 'Nature Human Behaviour', url: 'https://www.nature.com/articles/s41562-024-02024-1', note: 'Preregistered systematic review and meta-analysis of 106 human-AI experiments.' },
+      { title: 'Human-AI collaboration is not very collaborative yet', organization: 'Frontiers in Computer Science', url: 'https://www.frontiersin.org/journals/computer-science/articles/10.3389/fcomp.2024.1521066/full', note: 'Systematic review of interaction patterns and gaps in AI-assisted decision making.' },
+      { title: 'POLARIS: Typed Planning and Governed Execution for Agentic AI', organization: 'UC Irvine, UC San Diego, and Accenture / arXiv preprint', url: 'https://doi.org/10.48550/arxiv.2601.11816', note: 'Preprint research on policy-aware planning, validation gates, bounded repair, and execution traces.' },
+      { title: 'Artificial intelligence in customer relationship management', organization: 'Journal of Business Research / Elsevier', url: 'https://www.sciencedirect.com/science/article/pii/S0148296325003546', note: 'AI-CRM integration research emphasizing ethics by design, data foundations, and ongoing user involvement.' },
     ],
     related: [
       ['/business-agents/', 'Business agent systems'],
       ['/insights/hubspot-business-agents-safe-integration/', 'HubSpot and business agents'],
       ['/contact/', 'Map a bounded agent workflow'],
+      ['/insights/entity-first-content-architecture/', 'Define entities and boundaries first'],
     ],
   },
 ]

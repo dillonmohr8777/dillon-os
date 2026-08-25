@@ -1,91 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
     <title>IMMOHRTAL Marketing Solutions Insights</title>
-    <link>https://themohrmedia.com/insights/</link>
+    <link>https://www.immohrtalmarketing.com/insights/</link>
     <description>Guides to web optimization, AEO, GEO, AI search visibility, CRM integration, and governed business agents.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 24 Aug 2026 12:00:00 GMT</lastBuildDate>
-    <atom:link href="https://themohrmedia.com/feed.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 25 Aug 2026 12:00:00 GMT</lastBuildDate>
+    <atom:link href="https://www.immohrtalmarketing.com/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AEO vs GEO: What Service Businesses Actually Need</title>
-      <link>https://themohrmedia.com/insights/aeo-vs-geo-service-businesses/</link>
-      <guid isPermaLink="true">https://themohrmedia.com/insights/aeo-vs-geo-service-businesses/</guid>
+      <link>https://www.immohrtalmarketing.com/insights/aeo-vs-geo-service-businesses/</link>
+      <guid isPermaLink="true">https://www.immohrtalmarketing.com/insights/aeo-vs-geo-service-businesses/</guid>
       <pubDate>Mon, 24 Aug 2026 12:00:00 GMT</pubDate>
       <description>What AEO and GEO mean in plain English, how each can help a service business get found, and what to improve first.</description>
       <author>dillonmohr8777@gmail.com (Dillon Mohr)</author>
+      <dc:creator>Dillon Mohr</dc:creator>
+      <category>AEO and GEO</category>
     </item>
     <item>
       <title>How to Optimize a Service Business Website for Google AI Overviews</title>
-      <link>https://themohrmedia.com/insights/google-ai-overviews-service-businesses/</link>
-      <guid isPermaLink="true">https://themohrmedia.com/insights/google-ai-overviews-service-businesses/</guid>
+      <link>https://www.immohrtalmarketing.com/insights/google-ai-overviews-service-businesses/</link>
+      <guid isPermaLink="true">https://www.immohrtalmarketing.com/insights/google-ai-overviews-service-businesses/</guid>
       <pubDate>Mon, 24 Aug 2026 12:00:00 GMT</pubDate>
       <description>How to make a service business website easier for Google to understand and use in AI Overviews, without promising placement.</description>
       <author>dillonmohr8777@gmail.com (Dillon Mohr)</author>
+      <dc:creator>Dillon Mohr</dc:creator>
+      <category>Google AI Overviews</category>
     </item>
     <item>
       <title>Website Redesign Checklist for Service Businesses</title>
-      <link>https://themohrmedia.com/insights/website-redesign-checklist-service-businesses/</link>
-      <guid isPermaLink="true">https://themohrmedia.com/insights/website-redesign-checklist-service-businesses/</guid>
+      <link>https://www.immohrtalmarketing.com/insights/website-redesign-checklist-service-businesses/</link>
+      <guid isPermaLink="true">https://www.immohrtalmarketing.com/insights/website-redesign-checklist-service-businesses/</guid>
       <pubDate>Mon, 24 Aug 2026 12:00:00 GMT</pubDate>
       <description>A complete website redesign checklist covering strategy, content, technical SEO, accessibility, performance, forms, analytics, migration, launch, and follow up.</description>
       <author>dillonmohr8777@gmail.com (Dillon Mohr)</author>
+      <dc:creator>Dillon Mohr</dc:creator>
+      <category>Web optimization</category>
     </item>
     <item>
       <title>Schema Markup for Service Businesses Without Fake Signals</title>
-      <link>https://themohrmedia.com/insights/schema-markup-service-businesses/</link>
-      <guid isPermaLink="true">https://themohrmedia.com/insights/schema-markup-service-businesses/</guid>
+      <link>https://www.immohrtalmarketing.com/insights/schema-markup-service-businesses/</link>
+      <guid isPermaLink="true">https://www.immohrtalmarketing.com/insights/schema-markup-service-businesses/</guid>
       <pubDate>Mon, 24 Aug 2026 12:00:00 GMT</pubDate>
       <description>What schema markup does, which types may fit a service business, and how to use it without fake reviews, ratings, or guarantees.</description>
       <author>dillonmohr8777@gmail.com (Dillon Mohr)</author>
+      <dc:creator>Dillon Mohr</dc:creator>
+      <category>Structured data</category>
     </item>
     <item>
       <title>How AI Search Crawlers Discover and Cite Websites</title>
-      <link>https://themohrmedia.com/insights/ai-search-crawlers-discovery-citations/</link>
-      <guid isPermaLink="true">https://themohrmedia.com/insights/ai-search-crawlers-discovery-citations/</guid>
+      <link>https://www.immohrtalmarketing.com/insights/ai-search-crawlers-discovery-citations/</link>
+      <guid isPermaLink="true">https://www.immohrtalmarketing.com/insights/ai-search-crawlers-discovery-citations/</guid>
       <pubDate>Mon, 24 Aug 2026 12:00:00 GMT</pubDate>
       <description>How AI tools find public websites, what robots.txt can control, and why allowing a crawler never guarantees a citation.</description>
       <author>dillonmohr8777@gmail.com (Dillon Mohr)</author>
+      <dc:creator>Dillon Mohr</dc:creator>
+      <category>AI crawlers</category>
     </item>
     <item>
       <title>JavaScript SEO for React Websites: Why Crawlable HTML Still Matters</title>
-      <link>https://themohrmedia.com/insights/javascript-seo-react-crawlable-html/</link>
-      <guid isPermaLink="true">https://themohrmedia.com/insights/javascript-seo-react-crawlable-html/</guid>
+      <link>https://www.immohrtalmarketing.com/insights/javascript-seo-react-crawlable-html/</link>
+      <guid isPermaLink="true">https://www.immohrtalmarketing.com/insights/javascript-seo-react-crawlable-html/</guid>
       <pubDate>Mon, 24 Aug 2026 12:00:00 GMT</pubDate>
       <description>Why important React website content should arrive as readable HTML, plus a practical checklist for pages that need to be found.</description>
       <author>dillonmohr8777@gmail.com (Dillon Mohr)</author>
+      <dc:creator>Dillon Mohr</dc:creator>
+      <category>Technical SEO</category>
     </item>
     <item>
       <title>How to Connect Website Forms, HubSpot, and Business Agents Safely</title>
-      <link>https://themohrmedia.com/insights/hubspot-business-agents-safe-integration/</link>
-      <guid isPermaLink="true">https://themohrmedia.com/insights/hubspot-business-agents-safe-integration/</guid>
+      <link>https://www.immohrtalmarketing.com/insights/hubspot-business-agents-safe-integration/</link>
+      <guid isPermaLink="true">https://www.immohrtalmarketing.com/insights/hubspot-business-agents-safe-integration/</guid>
       <pubDate>Mon, 24 Aug 2026 12:00:00 GMT</pubDate>
       <description>How to move website form details into the right HubSpot account and AI workflow without mixing clients or sending the wrong message.</description>
       <author>dillonmohr8777@gmail.com (Dillon Mohr)</author>
+      <dc:creator>Dillon Mohr</dc:creator>
+      <category>CRM and agents</category>
     </item>
     <item>
       <title>How to Measure AI Search Visibility Without Made Up Rankings</title>
-      <link>https://themohrmedia.com/insights/measure-ai-search-visibility/</link>
-      <guid isPermaLink="true">https://themohrmedia.com/insights/measure-ai-search-visibility/</guid>
+      <link>https://www.immohrtalmarketing.com/insights/measure-ai-search-visibility/</link>
+      <guid isPermaLink="true">https://www.immohrtalmarketing.com/insights/measure-ai-search-visibility/</guid>
       <pubDate>Mon, 24 Aug 2026 12:00:00 GMT</pubDate>
       <description>How to tell whether a business is becoming easier to find in AI search without inventing a universal ranking score.</description>
       <author>dillonmohr8777@gmail.com (Dillon Mohr)</author>
+      <dc:creator>Dillon Mohr</dc:creator>
+      <category>Measurement</category>
     </item>
     <item>
       <title>Entity First Content Architecture for Service Businesses</title>
-      <link>https://themohrmedia.com/insights/entity-first-content-architecture/</link>
-      <guid isPermaLink="true">https://themohrmedia.com/insights/entity-first-content-architecture/</guid>
+      <link>https://www.immohrtalmarketing.com/insights/entity-first-content-architecture/</link>
+      <guid isPermaLink="true">https://www.immohrtalmarketing.com/insights/entity-first-content-architecture/</guid>
       <pubDate>Mon, 24 Aug 2026 12:00:00 GMT</pubDate>
       <description>How to organize the real parts of a business, including services, people, locations, and proof, into pages search tools can understand.</description>
       <author>dillonmohr8777@gmail.com (Dillon Mohr)</author>
+      <dc:creator>Dillon Mohr</dc:creator>
+      <category>Content architecture</category>
     </item>
     <item>
       <title>Where AI Marketing Workers Need Human Approval</title>
-      <link>https://themohrmedia.com/insights/human-approval-gates-for-marketing-agents/</link>
-      <guid isPermaLink="true">https://themohrmedia.com/insights/human-approval-gates-for-marketing-agents/</guid>
+      <link>https://www.immohrtalmarketing.com/insights/human-approval-gates-for-marketing-agents/</link>
+      <guid isPermaLink="true">https://www.immohrtalmarketing.com/insights/human-approval-gates-for-marketing-agents/</guid>
       <pubDate>Mon, 24 Aug 2026 12:00:00 GMT</pubDate>
       <description>A plain-language guide to what AI can safely prepare and which messages, purchases, account changes, and deletions still need a person.</description>
       <author>dillonmohr8777@gmail.com (Dillon Mohr)</author>
+      <dc:creator>Dillon Mohr</dc:creator>
+      <category>Agent governance</category>
     </item>
   </channel>
 </rss>

@@ -28,7 +28,7 @@ Visitors arrive from referrals, direct outreach, shared teardown links, search, 
 
 ## Launch Information Architecture
 
-The launch has 18 indexable URLs: the homepage, About, Web Design and Optimization, AEO and GEO, Business Agents, Work, Contact, the Insights index, and 10 full editorial guides. Each non-home route is generated as semantic static HTML with its own title, description, canonical URL, visible authorship, internal links, and accurate structured data. The homepage retains the interactive React experience while also shipping meaningful initial HTML for crawlers and no-JavaScript visitors.
+The public site has 23 indexable URLs: the homepage, About, Work, Contact, a Services hub, seven focused service pages, the Insights index, and 10 full editorial guides. The service system covers Web Design, Website Optimization, Technical SEO, AEO and GEO, Content and Schema, Business Agents, and HubSpot and CRM Agents. Each non-home route is generated as semantic static HTML with its own title, description, canonical URL, visible authorship where relevant, contextual internal links, original media, and accurate structured data. The homepage retains the interactive React experience while also shipping meaningful initial HTML for crawlers and no-JavaScript visitors.
 
 The 10 launch guides cover AEO versus GEO, Google AI Overviews, website redesign planning, accurate schema, AI crawler controls, JavaScript SEO, HubSpot and business agents, AI visibility measurement, entity-first content architecture, and human approval gates. Primary official sources are linked visibly. The library must not imply that publication guarantees indexing, rankings, AI inclusion, or citation.
 
@@ -47,8 +47,10 @@ The 10 launch guides cover AEO versus GEO, Google AI Overviews, website redesign
 ## Brand Commitments
 
 - The exact public name is IMMOHRTAL Marketing Solutions.
+- The canonical public origin is `https://www.immohrtalmarketing.com`. The apex redirects permanently to this Vercel production host. Canonical links, social metadata, structured-data identifiers, sitemap entries, feeds, crawler directives, discovery summaries, and public asset URLs must resolve to the canonical origin.
+- Every current design decision, component, page pattern, interaction, asset treatment, particle sequence, agent station, evidence window, and responsive behavior in this project belongs to IMMOHRTAL Marketing Solutions. No former brand retains public ownership of this system.
 - The primary visual authority is `https://dillon-mohr-primary-portfolio.netlify.app/`.
-- The source quarry for the 3D agents is the verified July 2026 MOHR MEDIA build at commit `05968bbe9f713d0a06fc1c638072f4ec6e93b3db`; its old brand, metrics, pricing, and ad-led positioning are not product truth.
+- The source quarry for the 3D agents is the verified July 2026 MOHR MEDIA build at commit `05968bbe9f713d0a06fc1c638072f4ec6e93b3db`; that name may appear only as non-public historical provenance. Its old brand, domain, metrics, pricing, and ad-led positioning are not product truth and must never appear in public output.
 - Preserve the exact IMMOHRTAL logo artwork and its cobalt, cyan, mint, platinum, and gunmetal lineage.
 - The public logo presentation is now white. Its exact alpha silhouette resolves as the first particle target, while every client and partner mark retains its original sampled colors.
 - The approved Dillon Mohr portrait is the exact source file at `public/people/dillon-mohr.jpg`. Do not regenerate, retouch, recolor, or substitute it.

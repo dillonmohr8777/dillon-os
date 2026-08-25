@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-08-25T02:08:15.655Z",
+  "generatedAt": "2026-08-25T17:27:54.415Z",
   "title": "Design System: IMMOHRTAL Marketing Solutions",
   "extensions": {
     "colorMeta": {
@@ -342,7 +342,7 @@
   ],
   "narrative": {
     "northStar": "Particle Proof Conveyor",
-    "overview": "IMMOHRTAL is a dark technical observatory built around one visual argument: proof moves first. Work begins as signal, resolves first into the exact white IMMOHRTAL mark and then into exact-color client marks, expands into live website frames and search evidence, then becomes a legible operating system. The atmosphere is cinematic and technically fluent, but every authored effect must terminate in a name, artifact, status, or action the visitor can understand without learning agency terminology first.\n\nCold gunmetal space carries the active system. Pale paper chambers interrupt that darkness when evidence needs daylight, establishing a strong proof-versus-process rhythm. Cobalt, cyan, and mint behave as signal colors rather than ambient decoration; platinum and muted blue-gray keep long explanations readable without flattening the hierarchy.\n\nThe world is precise, dense, and proof-led. It rejects generic agency dashboards, unsupported metric theater, and spectacle that never resolves into usable evidence.",
+    "overview": "IMMOHRTAL is a dark technical observatory built around one visual argument: proof moves first. Work begins as signal, resolves first into the exact white IMMOHRTAL mark and then into exact-color client marks, expands into live website frames and search evidence, then becomes a legible operating system. The atmosphere is cinematic and technically fluent, but every authored effect must terminate in a name, artifact, status, or action the visitor can understand without learning agency terminology first.\n\nCold gunmetal space carries the active system. Pale paper chambers interrupt that darkness when evidence needs daylight, establishing a strong proof-versus-process rhythm. Cobalt, cyan, and mint behave as signal colors rather than ambient decoration; platinum and muted blue-gray keep long explanations readable without flattening the hierarchy.\n\nThe world is precise, dense, and proof-led. It rejects generic agency dashboards, unsupported metric theater, and spectacle that never resolves into usable evidence.\n\nThis entire visual system belongs to IMMOHRTAL Marketing Solutions: the palette, type hierarchy, particle proof sequence, agent silhouettes, browser frames, evidence windows, page patterns, asset treatments, interaction grammar, and responsive behavior. Earlier implementation sources are provenance only; they do not retain public brand ownership, naming, or domain authority.",
     "keyCharacteristics": [
       "A dark observatory alternating with pale, high-contrast proof chambers.",
       "A high-clarity white IMMOHRTAL particle mark followed by exact-color client marks that resolve rapidly.",
@@ -387,6 +387,11 @@
         "section": "elevation"
       },
       {
+        "name": "The One Public Identity Rule",
+        "body": "Every reusable component and authored interaction presents IMMOHRTAL Marketing Solutions; historical source brands never appear in public UI, metadata, asset labels, or design-system examples.",
+        "section": "elevation"
+      },
+      {
         "name": "The One Container, One Radius Rule",
         "body": "Use the established 10px control, 12px action, 14px window, 15px rail, and 16px frame steps instead of introducing near-duplicate corner values.",
         "section": "shapes"
@@ -408,7 +413,8 @@
       "Don't let motion obscure source material, delay access to proof, or continue without a useful final state.",
       "Don't use mono labels as a decorative substitute for clear body copy.",
       "Don't make a visitor decode AEO, GEO, entities, schema, bounded agents, or governance language before they understand what improves for their business.",
-      "Don't introduce a new display family, radius step, or shadow vocabulary without updating this system intentionally."
+      "Don't introduce a new display family, radius step, or shadow vocabulary without updating this system intentionally.",
+      "Don't preserve a former brand name, domain, or attribution merely because a component or asset originated in an earlier implementation."
     ]
   }
 }

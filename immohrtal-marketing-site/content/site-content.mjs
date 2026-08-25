@@ -1,20 +1,21 @@
+import { pressroom } from './pressroom-assets.mjs'
+
 export const site = {
-  origin: 'https://themohrmedia.com',
+  origin: 'https://www.immohrtalmarketing.com',
   name: 'IMMOHRTAL Marketing Solutions',
   shortName: 'IMMOHRTAL',
   email: 'dillonmohr8777@gmail.com',
   logo: '/brand/immohrtal-logo.png',
   portrait: '/people/dillon-mohr.jpg',
   published: '2026-08-24',
-  modified: '2026-08-24',
+  modified: '2026-08-25',
 }
 
 export const navigation = [
+  { label: 'Services', href: '/services/' },
   { label: 'Work', href: '/work/' },
-  { label: 'Better website', href: '/web-design-optimization/' },
-  { label: 'Get found', href: '/aeo-geo/' },
-  { label: 'AI workers', href: '/business-agents/' },
   { label: 'Guides', href: '/insights/' },
+  { label: 'About', href: '/about/' },
 ]
 
 export const projects = [
@@ -76,7 +77,7 @@ export const projects = [
   },
 ]
 
-export const corePages = [
+const baseCorePages = [
   {
     path: '/about/',
     navSection: 'about',
@@ -407,6 +408,432 @@ export const corePages = [
   },
 ]
 
+export const serviceDirectory = [
+  {
+    key: 'webDesign',
+    href: '/web-design/',
+    title: 'Web design',
+    plainTitle: 'Make the business impossible to confuse with anyone else',
+    summary: 'Art direction, responsive page systems, interaction, accessibility, and production code built around the way customers actually decide.',
+    agent: 'Forge',
+  },
+  {
+    key: 'websiteOptimization',
+    href: '/web-design-optimization/',
+    title: 'Website optimization',
+    plainTitle: 'Fix the friction without throwing away what already works',
+    summary: 'Performance, mobile usability, content hierarchy, accessibility, conversion paths, analytics, and release quality for an existing website.',
+    agent: 'Scout + Proof',
+  },
+  {
+    key: 'technicalSeo',
+    href: '/technical-seo/',
+    title: 'Technical SEO',
+    plainTitle: 'Give search systems a clean path through the site',
+    summary: 'Crawlability, indexation signals, rendering, canonical structure, sitemaps, internal links, structured data, and measurable release checks.',
+    agent: 'Scout + Atlas',
+  },
+  {
+    key: 'aeoGeo',
+    href: '/aeo-geo/',
+    title: 'AEO and GEO',
+    plainTitle: 'Become a useful answer wherever customers search',
+    summary: 'Clear source pages, entity relationships, direct answers, supporting proof, and dated visibility measurement for Google and AI answer systems.',
+    agent: 'Atlas + Proof',
+  },
+  {
+    key: 'contentSchema',
+    href: '/content-schema/',
+    title: 'Content and schema systems',
+    plainTitle: 'Explain the business once, then keep every page consistent',
+    summary: 'Service-page architecture, entity-first content, reusable editorial templates, accurate schema, source controls, and connected internal links.',
+    agent: 'Forge + Atlas',
+  },
+  {
+    key: 'businessAgents',
+    href: '/business-agents/',
+    title: 'Business agents',
+    plainTitle: 'Give repeated work to a bounded AI worker',
+    summary: 'Research, drafting, inspection, organization, quality checks, receipts, and explicit approval gates for consequential actions.',
+    agent: 'The full crew',
+  },
+  {
+    key: 'hubspotCrm',
+    href: '/hubspot-crm-agents/',
+    title: 'HubSpot and CRM agents',
+    plainTitle: 'Move website interest to the right person with useful context',
+    summary: 'Form architecture, exact routing, lifecycle design, client isolation, governed follow-up preparation, and CRM quality control.',
+    agent: 'Relay + Proof',
+  },
+]
+
+const serviceLinks = {
+  webDesign: {
+    services: ['/web-design-optimization/', '/content-schema/', '/aeo-geo/'],
+    guides: ['/insights/website-redesign-checklist-service-businesses/', '/insights/javascript-seo-react-crawlable-html/'],
+  },
+  websiteOptimization: {
+    services: ['/web-design/', '/technical-seo/', '/aeo-geo/'],
+    guides: ['/insights/website-redesign-checklist-service-businesses/', '/insights/javascript-seo-react-crawlable-html/'],
+  },
+  technicalSeo: {
+    services: ['/web-design-optimization/', '/content-schema/', '/aeo-geo/'],
+    guides: ['/insights/javascript-seo-react-crawlable-html/', '/insights/schema-markup-service-businesses/', '/insights/ai-search-crawlers-discovery-citations/'],
+  },
+  aeoGeo: {
+    services: ['/technical-seo/', '/content-schema/', '/web-design-optimization/'],
+    guides: ['/insights/aeo-vs-geo-service-businesses/', '/insights/google-ai-overviews-service-businesses/', '/insights/measure-ai-search-visibility/'],
+  },
+  contentSchema: {
+    services: ['/technical-seo/', '/aeo-geo/', '/web-design/'],
+    guides: ['/insights/entity-first-content-architecture/', '/insights/schema-markup-service-businesses/'],
+  },
+  businessAgents: {
+    services: ['/hubspot-crm-agents/', '/content-schema/', '/web-design-optimization/'],
+    guides: ['/insights/human-approval-gates-for-marketing-agents/', '/insights/hubspot-business-agents-safe-integration/'],
+  },
+  hubspotCrm: {
+    services: ['/business-agents/', '/content-schema/', '/web-design-optimization/'],
+    guides: ['/insights/hubspot-business-agents-safe-integration/', '/insights/human-approval-gates-for-marketing-agents/'],
+  },
+}
+
+const pageEnhancements = {
+  '/about/': {
+    media: pressroom.about,
+    relatedServices: ['/web-design/', '/business-agents/', '/hubspot-crm-agents/'],
+  },
+  '/web-design-optimization/': {
+    pageKind: 'service',
+    serviceKey: 'websiteOptimization',
+    media: pressroom.services.websiteOptimization,
+    title: 'Website Optimization for Service Businesses | IMMOHRTAL',
+    description: 'Website audits and implementation for performance, mobile usability, accessibility, content clarity, conversion paths, analytics, and release quality.',
+    h1: 'Keep the look. Fix what makes the website harder to use, find, or trust.',
+    lede: 'Website optimization improves the experience that already exists. I inspect the live pages, identify the friction that matters, fix it in the real build, and prove the release on desktop and mobile.',
+    actions: [
+      { label: 'Show me the live site', href: '/contact/' },
+      { label: 'See the optimization checklist', href: '/insights/website-redesign-checklist-service-businesses/', secondary: true },
+    ],
+    relatedServices: serviceLinks.websiteOptimization.services,
+    relatedGuides: serviceLinks.websiteOptimization.guides,
+    sections: [
+      {
+        title: 'Start with a reproducible problem',
+        tone: 'paper',
+        html: `<p>A vague request to make a website better usually creates random edits. A useful optimization begins with something that can be observed: a slow page, a buried service, a confusing mobile path, an inaccessible control, an unclear form, a missing source page, or analytics that cannot answer the business question.</p>
+        <p>Scout reviews the live experience and records the page, viewport, behavior, and evidence. That turns feedback into a change the build can actually solve.</p>
+        <div class="callout"><strong>Optimization is not a cosmetic subscription.</strong>Each change needs a reason, an implementation, and a release check.</div>`,
+      },
+      {
+        title: 'Improve the whole path, not one isolated score',
+        html: `<ul class="fact-grid">
+          <li class="fact-card"><h3>Speed and stability</h3><p>Reduce waste in images, scripts, fonts, rendering, and layout movement while preserving the visual direction.</p></li>
+          <li class="fact-card"><h3>Mobile usability</h3><p>Correct cramped controls, broken hierarchy, accidental overflow, sticky collisions, and hard-to-complete forms.</p></li>
+          <li class="fact-card"><h3>Clarity and action</h3><p>Strengthen the page order, service explanation, proof placement, calls to action, and next-step language.</p></li>
+          <li class="fact-card"><h3>Accessibility</h3><p>Improve semantics, focus, keyboard use, contrast, motion behavior, alternatives, and readable content structure.</p></li>
+          <li class="fact-card"><h3>Findability</h3><p>Repair crawl paths, metadata, internal links, canonical signals, source pages, and visible structured information.</p></li>
+          <li class="fact-card"><h3>Measurement</h3><p>Confirm that the events and forms answer useful questions instead of collecting numbers with no decision attached.</p></li>
+        </ul>`,
+      },
+      {
+        title: 'Fix, compare, and release',
+        tone: 'blue',
+        html: `<ol class="steps">
+          <li><strong>Inspect the live site.</strong> Capture the current behavior, source, network, accessibility, and responsive evidence.</li>
+          <li><strong>Choose the highest-value repair.</strong> Prioritize by customer impact, business importance, confidence, and implementation risk.</li>
+          <li><strong>Change the real build.</strong> Work in the existing design and technical system unless the evidence supports a broader redesign.</li>
+          <li><strong>Compare before and after.</strong> Re-run the same checks, inspect the page visually, and confirm that the fix did not create a new failure.</li>
+          <li><strong>Verify production.</strong> Release to the mapped site, check the live response, and retain the evidence that supports completion.</li>
+        </ol>`,
+      },
+      {
+        title: 'Know when optimization has become a redesign',
+        html: `<p>If the page structure, visual language, content hierarchy, and responsive system all need to change together, continued patching becomes more expensive than choosing a new direction. That is the point to move from <a href="/web-design-optimization/">optimization</a> to a focused <a href="/web-design/">web design engagement</a>.</p>
+        <p>If the interface works but important pages remain hard to discover or understand, the next move may be <a href="/technical-seo/">technical SEO</a>, <a href="/content-schema/">content and schema architecture</a>, or <a href="/aeo-geo/">answer visibility work</a>.</p>`,
+      },
+    ],
+  },
+  '/aeo-geo/': {
+    pageKind: 'service',
+    serviceKey: 'aeoGeo',
+    media: pressroom.services.aeoGeo,
+    relatedServices: serviceLinks.aeoGeo.services,
+    relatedGuides: serviceLinks.aeoGeo.guides,
+  },
+  '/business-agents/': {
+    pageKind: 'service',
+    serviceKey: 'businessAgents',
+    media: pressroom.services.businessAgents,
+    relatedServices: serviceLinks.businessAgents.services,
+    relatedGuides: serviceLinks.businessAgents.guides,
+  },
+  '/work/': {
+    media: pressroom.work,
+    relatedServices: ['/web-design/', '/web-design-optimization/', '/aeo-geo/'],
+  },
+  '/contact/': {
+    media: pressroom.contact,
+    relatedServices: ['/services/', '/web-design-optimization/', '/business-agents/'],
+  },
+}
+
+const newCorePages = [
+  {
+    path: '/services/',
+    navSection: 'services',
+    pageKind: 'services-hub',
+    title: 'Website, Search, Content, and Business Agent Services | IMMOHRTAL',
+    description: 'Explore IMMOHRTAL web design, website optimization, technical SEO, AEO and GEO, content and schema, business agent, and HubSpot services.',
+    h1: 'One website system. Seven ways to make it work harder.',
+    lede: 'Start with the problem the business can already feel. Then connect only the design, search, content, CRM, and AI work needed to solve it.',
+    media: pressroom.servicesHub,
+    actions: [
+      { label: 'Show me what is not working', href: '/contact/' },
+      { label: 'See the work', href: '/work/', secondary: true },
+    ],
+    sections: [
+      {
+        title: 'Choose the problem before the service label',
+        tone: 'paper',
+        html: 'SERVICE_DIRECTORY',
+      },
+      {
+        title: 'Design, discovery, and handoff belong together',
+        html: `<p>A website is not finished when it looks polished. Customers need to understand the offer, search systems need to discover and interpret the important pages, and the business needs to receive useful context when someone acts.</p>
+        <p>That is why these services connect. <a href="/web-design/">Web design</a> creates the public experience. <a href="/technical-seo/">Technical SEO</a> gives it a clean structure. <a href="/content-schema/">Content and schema</a> make the business relationships explicit. <a href="/hubspot-crm-agents/">HubSpot and CRM agents</a> improve the handoff after interest becomes action.</p>`,
+      },
+      {
+        title: 'The crew changes with the job',
+        tone: 'blue',
+        html: `<ul class="fact-grid">
+          <li class="fact-card"><h3>Scout finds the friction</h3><p>Live-page inspection, crawl paths, source checks, mobile behavior, and evidence collection.</p></li>
+          <li class="fact-card"><h3>Atlas connects the system</h3><p>Page architecture, entity relationships, service paths, lifecycle stages, and operating context.</p></li>
+          <li class="fact-card"><h3>Forge builds the change</h3><p>Responsive interfaces, reusable templates, production code, structured pages, and performance repairs.</p></li>
+          <li class="fact-card"><h3>Relay moves the context</h3><p>Forms, CRM routing, research packets, approvals, and exact handoffs between systems and people.</p></li>
+          <li class="fact-card"><h3>Proof tries to stop the release</h3><p>Accessibility, responsive behavior, links, schema, console output, evidence, and production verification.</p></li>
+        </ul>`,
+      },
+      {
+        title: 'Start with one bounded engagement',
+        html: `<p>The first engagement should answer a useful question, not create a vague retainer. That might be a live website audit, one redesigned service page, a technical crawl and internal-link repair, an answer-visibility source map, a HubSpot routing review, or one bounded AI worker.</p>
+        <p><a href="/contact/">Send the live site and the problem you already see.</a> I will identify the smallest first move that can produce a real artifact and a clear next decision.</p>`,
+      },
+    ],
+  },
+  {
+    path: '/web-design/',
+    navSection: 'services',
+    pageKind: 'service',
+    serviceKey: 'webDesign',
+    title: 'Distinctive Web Design for Service Businesses | IMMOHRTAL',
+    description: 'Custom responsive web design with specific art direction, clear service structure, accessible interaction, production code, and a verified mobile release.',
+    h1: 'Build a website no one could mistake for a template.',
+    lede: 'The visual direction should make the business recognizable. The page structure should make the offer understandable. The finished build should work beautifully on the devices customers actually use.',
+    media: pressroom.services.webDesign,
+    relatedServices: serviceLinks.webDesign.services,
+    relatedGuides: serviceLinks.webDesign.guides,
+    actions: [
+      { label: 'Show me the current website', href: '/contact/' },
+      { label: 'See selected work', href: '/work/', secondary: true },
+    ],
+    sections: [
+      {
+        title: 'Art direction with a business job',
+        tone: 'paper',
+        html: `<p>A distinctive website is not a strange color palette laid over a familiar template. It needs a visual thesis that belongs to the business and reinforces what the customer should understand, remember, and do.</p>
+        <p>The direction is translated through typography, composition, imagery, materials, interaction, motion, and responsive behavior. Forge turns that system into real components instead of a static concept that falls apart in production.</p>`,
+      },
+      {
+        title: 'Every screen carries the same conviction',
+        html: `<ul class="fact-grid">
+          <li class="fact-card"><h3>Homepage</h3><p>Make the promise, proof, and next step immediately legible without flattening the personality.</p></li>
+          <li class="fact-card"><h3>Service pages</h3><p>Answer the specific buying question with useful depth, connected proof, and a clear internal path.</p></li>
+          <li class="fact-card"><h3>Work and evidence</h3><p>Let visitors inspect real projects, dated source material, and the decisions behind the interface.</p></li>
+          <li class="fact-card"><h3>Mobile experience</h3><p>Recompose the story for touch, narrow widths, readable type, and controls that remain easy to use.</p></li>
+          <li class="fact-card"><h3>Reading pages</h3><p>Give long-form guidance a calmer mode without making it feel like a different website.</p></li>
+          <li class="fact-card"><h3>Contact path</h3><p>Reduce uncertainty at the moment a visitor decides whether to start a conversation.</p></li>
+        </ul>`,
+      },
+      {
+        title: 'From source material to working interface',
+        tone: 'blue',
+        html: `<ol class="steps">
+          <li><strong>Resolve the audience and job.</strong> Define the customer, the decision, the proof, and the action the page needs to support.</li>
+          <li><strong>Choose a committed visual world.</strong> Compare real directions, select one, and document the rules that make it coherent.</li>
+          <li><strong>Build the responsive system.</strong> Create the actual page structure, components, images, states, and interactions in production code.</li>
+          <li><strong>Connect the content.</strong> Add service depth, internal links, metadata, structured information, and a useful handoff path.</li>
+          <li><strong>Inspect and release.</strong> Review desktop and mobile together, fix the complete finding batch, and verify the live site.</li>
+        </ol>`,
+      },
+      {
+        title: 'The launch is the start of the evidence',
+        html: `<p>After release, the next questions become visible. Are customers finding the right service? Does the mobile path make sense? Can search systems reach the important pages? Does the form deliver the right context?</p>
+        <p>Those answers lead naturally into <a href="/web-design-optimization/">website optimization</a>, <a href="/technical-seo/">technical SEO</a>, <a href="/aeo-geo/">answer visibility</a>, or <a href="/hubspot-crm-agents/">HubSpot and CRM routing</a>.</p>`,
+      },
+    ],
+  },
+  {
+    path: '/technical-seo/',
+    navSection: 'services',
+    pageKind: 'service',
+    serviceKey: 'technicalSeo',
+    title: 'Technical SEO and Crawlability for Service Websites | IMMOHRTAL',
+    description: 'Technical SEO for crawlability, rendering, indexation signals, canonical URLs, sitemaps, internal links, schema, performance, and verified releases.',
+    h1: 'Give search systems a clean way through the site.',
+    lede: 'Important pages need to exist in useful HTML, connect through intentional links, send consistent indexing signals, and describe the same business a visitor can see.',
+    media: pressroom.services.technicalSeo,
+    relatedServices: serviceLinks.technicalSeo.services,
+    relatedGuides: serviceLinks.technicalSeo.guides,
+    actions: [
+      { label: 'Audit the live site', href: '/contact/' },
+      { label: 'Read the crawlability guide', href: '/insights/javascript-seo-react-crawlable-html/', secondary: true },
+    ],
+    sections: [
+      {
+        title: 'Crawlability is a path, not a switch',
+        tone: 'paper',
+        html: `<p>A page can be public and still be difficult to discover, render, interpret, or prioritize. Scout follows the actual path from navigation and internal links through response codes, HTML, canonical signals, sitemaps, scripts, and robots controls.</p>
+        <p>The result is a source-located issue list tied to real URLs and business importance, not a giant export of warnings with no decision attached.</p>`,
+      },
+      {
+        title: 'Make every technical signal tell the same story',
+        html: `<ul class="fact-grid">
+          <li class="fact-card"><h3>Responses and rendering</h3><p>Important routes return useful content, load reliably, and remain understandable before optional JavaScript enhancements.</p></li>
+          <li class="fact-card"><h3>Canonical structure</h3><p>URLs, redirects, canonicals, pagination, and duplicate variants point toward one intended public version.</p></li>
+          <li class="fact-card"><h3>Internal links</h3><p>Services, guides, proof, people, and contact paths connect in the HTML instead of depending on search or a hidden menu.</p></li>
+          <li class="fact-card"><h3>Sitemaps and controls</h3><p>Sitemaps list the real indexable routes while robots rules avoid accidental blocks and false discovery promises.</p></li>
+          <li class="fact-card"><h3>Structured data</h3><p>Schema describes visible organizations, people, services, breadcrumbs, and articles without adding claims the page does not support.</p></li>
+          <li class="fact-card"><h3>Release evidence</h3><p>Production checks confirm the live status, metadata, links, schema, responsive behavior, console, and crawlable content.</p></li>
+        </ul>`,
+      },
+      {
+        title: 'Repair the architecture in business order',
+        tone: 'blue',
+        html: `<ol class="steps">
+          <li><strong>Inventory the pages that matter.</strong> Separate valuable public routes from duplicates, dead ends, parameters, and internal-only surfaces.</li>
+          <li><strong>Trace discovery.</strong> Follow navigation, contextual links, sitemaps, redirects, and response behavior from the homepage outward.</li>
+          <li><strong>Inspect the delivered content.</strong> Confirm titles, descriptions, headings, body copy, media alternatives, links, and structured information in the actual response.</li>
+          <li><strong>Fix in dependency order.</strong> Resolve response and canonical problems before polishing schema or measuring answer visibility.</li>
+          <li><strong>Validate production.</strong> Re-crawl the live release and retain the exact routes and checks that support completion.</li>
+        </ol>`,
+      },
+      {
+        title: 'Technical SEO creates the runway for useful answers',
+        html: `<p>Technical access alone does not make a page valuable, but weak access can prevent valuable content from participating. After the crawl path is clean, <a href="/content-schema/">content and schema work</a> can clarify the business and <a href="/aeo-geo/">AEO and GEO work</a> can strengthen the source pages answer systems may use.</p>`,
+      },
+    ],
+  },
+  {
+    path: '/content-schema/',
+    navSection: 'services',
+    pageKind: 'service',
+    serviceKey: 'contentSchema',
+    title: 'Content Architecture and Schema for Service Businesses | IMMOHRTAL',
+    description: 'Entity-first service content, reusable page templates, internal links, source controls, and accurate schema that matches visible website claims.',
+    h1: 'Make every important page explain exactly what the business is, does, and proves.',
+    lede: 'A connected content system gives customers useful answers, keeps service pages consistent, and gives search and AI systems a clearer view of the real business.',
+    media: pressroom.services.contentSchema,
+    relatedServices: serviceLinks.contentSchema.services,
+    relatedGuides: serviceLinks.contentSchema.guides,
+    actions: [
+      { label: 'Map the missing pages', href: '/contact/' },
+      { label: 'Read the entity architecture guide', href: '/insights/entity-first-content-architecture/', secondary: true },
+    ],
+    sections: [
+      {
+        title: 'Begin with the business entities and relationships',
+        tone: 'paper',
+        html: `<p>Before producing more content, Atlas maps the things the business can accurately describe: the organization, people, services, locations, customers, qualifications, process, proof, questions, and source material.</p>
+        <p>That map decides which pages deserve to exist, which facts should stay consistent, and where a visitor should move next. It also prevents a blog library from becoming an isolated pile of topics.</p>`,
+      },
+      {
+        title: 'Build reusable structure without producing duplicate pages',
+        html: `<ul class="fact-grid">
+          <li class="fact-card"><h3>Service templates</h3><p>Give every offer a consistent decision path while preserving the details that make the service distinct.</p></li>
+          <li class="fact-card"><h3>Evidence patterns</h3><p>Attach claims to projects, dated captures, sources, people, or implementation artifacts that a visitor can inspect.</p></li>
+          <li class="fact-card"><h3>Answer blocks</h3><p>Place concise direct answers near the question while keeping the full explanation and source context available.</p></li>
+          <li class="fact-card"><h3>Internal links</h3><p>Connect services to complementary services, relevant guides, public work, people, and the next useful action.</p></li>
+          <li class="fact-card"><h3>Source controls</h3><p>Record where important facts came from, when evidence was captured, and which statements remain pending.</p></li>
+          <li class="fact-card"><h3>Structured data</h3><p>Express the same visible truth through accurate organization, person, service, article, image, and breadcrumb markup.</p></li>
+        </ul>`,
+      },
+      {
+        title: 'Write, connect, validate, and publish',
+        tone: 'blue',
+        html: `<ol class="steps">
+          <li><strong>Inventory approved facts and sources.</strong> Separate verified public information from ideas, internal context, and unsupported claims.</li>
+          <li><strong>Choose the page job.</strong> Define the question, audience, decision, proof, and next link before writing.</li>
+          <li><strong>Build the visible content.</strong> Use plain language, useful depth, headings, media, tables, and direct answers where they help.</li>
+          <li><strong>Add accurate structure.</strong> Connect the page internally and add only the schema supported by the visible content.</li>
+          <li><strong>Inspect the release.</strong> Validate HTML, links, media alternatives, schema, canonical metadata, and the production route.</li>
+        </ol>`,
+      },
+      {
+        title: 'Content earns visibility by being useful and connected',
+        html: `<p>No template or schema type guarantees search inclusion or an AI citation. A strong content system creates better source material and a clearer site architecture. <a href="/technical-seo/">Technical SEO</a> keeps that material accessible, while <a href="/aeo-geo/">AEO and GEO</a> focus on the answer surfaces and the dated evidence used to measure them.</p>`,
+      },
+    ],
+  },
+  {
+    path: '/hubspot-crm-agents/',
+    navSection: 'services',
+    pageKind: 'service',
+    serviceKey: 'hubspotCrm',
+    title: 'HubSpot and CRM Agents for Website Handoffs | IMMOHRTAL',
+    description: 'Connect website forms, HubSpot, CRM lifecycle stages, governed research, follow-up preparation, routing, and quality control without losing human approval.',
+    h1: 'Turn website interest into useful context, not another messy inbox.',
+    lede: 'A strong handoff records what the person asked for, routes it to the correct place, prepares the next step, and keeps approval around consequential communication.',
+    media: pressroom.services.hubspotCrm,
+    relatedServices: serviceLinks.hubspotCrm.services,
+    relatedGuides: serviceLinks.hubspotCrm.guides,
+    actions: [
+      { label: 'Show me the current handoff', href: '/contact/' },
+      { label: 'Read the integration guide', href: '/insights/hubspot-business-agents-safe-integration/', secondary: true },
+    ],
+    sections: [
+      {
+        title: 'The form is only the first handoff',
+        tone: 'paper',
+        html: `<p>A website inquiry should arrive with enough context to make the next decision easier. That includes the exact source page, service interest, campaign context when available, consent, ownership, and the information the visitor intentionally supplied.</p>
+        <p>Relay moves that packet to the correct HubSpot or CRM route. Proof checks the destination and the rules before an agent prepares any consequential follow-up.</p>`,
+      },
+      {
+        title: 'Build the lifecycle around the real business process',
+        html: `<ul class="fact-grid">
+          <li class="fact-card"><h3>Forms and fields</h3><p>Collect only useful information, preserve consent, and keep the mobile experience simple enough to complete.</p></li>
+          <li class="fact-card"><h3>Exact routing</h3><p>Resolve the right portal, pipeline, owner, team, client, and environment before any record or task is changed.</p></li>
+          <li class="fact-card"><h3>Lifecycle stages</h3><p>Use definitions that match the way the business qualifies, follows up, serves, and closes work.</p></li>
+          <li class="fact-card"><h3>Context enrichment</h3><p>Prepare bounded company, website, and source research without overwriting verified CRM truth.</p></li>
+          <li class="fact-card"><h3>Follow-up preparation</h3><p>Draft the next message or task with the current thread, routing, facts, and uncertainty visible for review.</p></li>
+          <li class="fact-card"><h3>Quality receipts</h3><p>Read back the destination, fields, ownership, source, approval, and resulting state before reporting completion.</p></li>
+        </ul>`,
+      },
+      {
+        title: 'Prepare autonomously. Act with the right approval.',
+        tone: 'blue',
+        html: `<ol class="steps">
+          <li><strong>Receive the website event.</strong> Capture the submitted information and source context without inventing missing facts.</li>
+          <li><strong>Resolve the destination.</strong> Select the exact CRM, portal, pipeline, owner, and client boundary.</li>
+          <li><strong>Prepare the next artifact.</strong> Organize research, create a task, or draft a reply using the current record and approved sources.</li>
+          <li><strong>Pause at consequential action.</strong> Sending, publishing, spend, ambiguous writes, and human-only login gates retain explicit approval.</li>
+          <li><strong>Verify the resulting state.</strong> Read back the record, routing, draft, or task and preserve the evidence that proves what changed.</li>
+        </ol>`,
+      },
+      {
+        title: 'Start with one broken handoff',
+        html: `<p>The first useful project might be a form that loses source context, a pipeline nobody trusts, a repeated research step, a draft process that ignores the full thread, or an agent that cannot explain what it changed.</p>
+        <p>Start there. If the wider workflow needs a bounded research or quality worker, connect the handoff to the <a href="/business-agents/">business agent system</a>. If the public page is collecting the wrong information, improve the <a href="/web-design-optimization/">website experience</a> first.</p>`,
+      },
+    ],
+  },
+]
+
+export const corePages = [
+  ...baseCorePages.map((page) => ({ ...page, ...pageEnhancements[page.path] })),
+  ...newCorePages,
+]
+
 export const insightsPage = {
   path: '/insights/',
   navSection: 'insights',
@@ -414,5 +841,6 @@ export const insightsPage = {
   description: 'Evidence led guides to AEO, GEO, Google AI Overviews, website redesign, schema, AI crawlers, JavaScript SEO, HubSpot agents, measurement, entities, and governance.',
   eyebrow: 'IMMOHRTAL insights',
   h1: 'Plain English guides to better websites, better visibility, and useful AI workers.',
-  lede: 'Ten detailed guides explain how to improve a website, help more of the right people find it, connect it to HubSpot, and use AI without giving up control. The technical terms are here when they matter, and every guide links to primary official sources.',
+  lede: 'Ten detailed guides explain how to improve a website, help more of the right people find it, connect it to HubSpot, and use AI without giving up control. The technical terms are here when they matter, and every guide links to relevant academic research.',
+  media: pressroom.guides,
 }
