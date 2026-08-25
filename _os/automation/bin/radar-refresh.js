@@ -8,10 +8,9 @@
  *
  * Four things happen, in this order:
  *
- *   1. **Expand.** Discover new businesses in the rotation's next market and add
- *      them to the registry. Philadelphia and its collar counties come up far
- *      more often than the rest of Pennsylvania — this is Momentum 360's home
- *      market and local proof is what carries a cold open.
+ *   1. **Expand.** Discover new Pennsylvania businesses and add them to the
+ *      registry. Every daily plan reaches all six operating regions, choosing
+ *      the thinnest county in each one.
  *   2. **Grade the new arrivals.** Tier 0, so a couple of hundred rows is a few
  *      minutes and no browser.
  *   3. **Re-audit what went stale.** Every verdict carries its own recheck
@@ -22,9 +21,9 @@
  *   4. **Publish.** Rewrite the dashboard, the CSV, and a dated digest.
  *
  * Options
- *   --discover <n>     new candidates to look for (default 200, 0 to skip)
- *   --recheck <n>      stale prospects to re-audit (default 120, 0 to skip)
- *   --market <CODE>    force a market instead of using the rotation
+ *   --discover <n>     new candidates to look for (default 60, 0 to skip)
+ *   --recheck <n>      stale prospects to re-audit (default 250, 0 to skip)
+ *   --market <CODE>    force PA (statewide), PHL, or PGH instead of the plan
  *   --concurrency <n>  parallel fetches (default 12)
  *   --max-tier <0|1>   deepest audit tier (default 0; 1 needs a working browser)
  *   --enrich <n>       Google Places lookups to spend today (default 60, 0 to skip).
@@ -53,30 +52,20 @@ const DASHBOARD_PATH = 'Daily-Briefs/prospect-radar.html';
 const CSV_PATH = '12_Brain/state/radar/build-queue.csv';
 
 /**
- * Market rotation, Philadelphia-weighted.
- *
- * Momentum 360 is a Philadelphia agency: we can shoot our own photography there,
- * name local proof, and drive to a meeting. So the city and its collar counties
- * occupy five of seven slots and the rest of Pennsylvania fills the other two.
- * Rotating by day-of-year rather than at random keeps coverage even and makes any
- * given morning's run reproducible.
+ * Narrow manual presets. The scheduled/default path is always the statewide
+ * coverage planner; these exist only for an operator deliberately forcing a
+ * local diagnostic run.
  */
-const ROTATION = [
-  { market: 'PHL', areas: [{ name: 'Philadelphia', adminLevel: 8, state: 'Pennsylvania' }] },
-  { market: 'PHL', areas: [{ name: 'Montgomery County', adminLevel: 6, state: 'Pennsylvania' }] },
-  { market: 'PHL', areas: [{ name: 'Delaware County', adminLevel: 6, state: 'Pennsylvania' }] },
-  { market: 'PHL', areas: [{ name: 'Bucks County', adminLevel: 6, state: 'Pennsylvania' }] },
-  { market: 'PHL', areas: [{ name: 'Chester County', adminLevel: 6, state: 'Pennsylvania' }] },
-  { market: 'PGH', areas: [{ name: 'Allegheny County', adminLevel: 6, state: 'Pennsylvania' }] },
-  { market: 'PA', areas: [
-      { name: 'Lehigh County', adminLevel: 6, state: 'Pennsylvania' },
-      { name: 'Erie County', adminLevel: 6, state: 'Pennsylvania' },
-      { name: 'Lancaster County', adminLevel: 6, state: 'Pennsylvania' },
-      { name: 'Dauphin County', adminLevel: 6, state: 'Pennsylvania' },
-      { name: 'Berks County', adminLevel: 6, state: 'Pennsylvania' },
-      { name: 'York County', adminLevel: 6, state: 'Pennsylvania' },
-    ] },
-];
+const MANUAL_MARKETS = {
+  PHL: [
+    { name: 'Philadelphia', adminLevel: 8, state: 'Pennsylvania' },
+    { name: 'Montgomery County', adminLevel: 6, state: 'Pennsylvania' },
+    { name: 'Delaware County', adminLevel: 6, state: 'Pennsylvania' },
+    { name: 'Bucks County', adminLevel: 6, state: 'Pennsylvania' },
+    { name: 'Chester County', adminLevel: 6, state: 'Pennsylvania' },
+  ],
+  PGH: [{ name: 'Allegheny County', adminLevel: 6, state: 'Pennsylvania' }],
+};
 
 /** Vertical priority for discovery — high-fit groups first. */
 const GROUP_ORDER = ['home-services', 'medical', 'legal', 'industrial', 'spa-wellness', 'auto', 'retail', 'food'];
@@ -108,12 +97,6 @@ function parseArgs(argv) {
     else if (a === '--help' || a === '-h') o.help = true;
   }
   return o;
-}
-
-function dayOfYear(iso) {
-  const d = new Date(`${iso}T00:00:00Z`);
-  const start = Date.UTC(d.getUTCFullYear(), 0, 0);
-  return Math.floor((d.getTime() - start) / 86400000);
 }
 
 async function mapLimit(items, limit, fn) {
@@ -298,22 +281,20 @@ async function main() {
   }
 
   const run = { discovered_raw: 0, discovered_new: 0, regraded: 0, enriched: 0, enrich_no_match: 0, enrich_skipped: 0, errors: [] };
-  // Coverage-driven targeting. The old day-of-year rotation was even in *slots*
-  // but not in *rows* — Montgomery County yields far more per query than
-  // Philadelphia does, which is how the registry ended up 2.2:1 against the
-  // priority market with no mechanism to correct itself. --market still forces a
-  // single area for a manual run.
-  const plan = args.market
-    ? (() => {
-        const r = ROTATION.find((x) => x.market === args.market) || ROTATION[0];
-        return {
-          targets: r.areas.map((a) => ({ ...a, market: r.market, groups: GROUP_ORDER.slice(0, 3), cap: args.discover })),
-          budget: args.discover, throttled: false, total: Object.keys(registry.prospects).length,
-          reason: `forced market ${args.market}`, areaDeficits: [], groupDeficits: [],
-        };
-      })()
-    : planDiscovery(registry, { budget: args.discover });
-  const slot = { market: plan.targets[0]?.market || 'PHL', areas: plan.targets };
+  // The default and `--market PA` paths are the same statewide plan: one county
+  // from each of six Pennsylvania regions. PHL/PGH remain narrow manual tools.
+  const plan = (() => {
+    if (!args.market || args.market === 'PA') return planDiscovery(registry, { budget: args.discover, today });
+    const areas = MANUAL_MARKETS[args.market];
+    if (!areas) throw new Error(`unknown forced market ${args.market}; use PA, PHL, or PGH`);
+    const cap = Math.max(1, Math.ceil(args.discover / areas.length));
+    return {
+      targets: areas.map((a) => ({ ...a, market: args.market, groups: GROUP_ORDER.slice(0, 3), cap })),
+      budget: args.discover, throttled: false, total: Object.keys(registry.prospects).length,
+      reason: `forced market ${args.market}`, areaDeficits: [], groupDeficits: [],
+    };
+  })();
+  const slot = { market: plan.targets[0]?.market || 'PA', areas: plan.targets };
   const areaLabel = plan.targets.map((a) => a.name).join(', ') || 'none (discovery paused)';
 
   process.stderr.write(`radar refresh ${today} · ${plan.reason}\n`);
@@ -346,6 +327,14 @@ async function main() {
         fresh.set(c.domain, { ...c, area: area.name });
         added += 1;
       }
+      registry.coverage_attempts = registry.coverage_attempts || {};
+      registry.coverage_attempts[area.name] = {
+        last_attempt: today,
+        raw: stats.raw,
+        eligible: stats.kept,
+        added,
+        groups: area.groups,
+      };
       process.stderr.write(`${stats.raw} raw → ${added} new\n`);
     }
     const upserted = radar.upsertDiscovered(registry, [...fresh.values()], { today });

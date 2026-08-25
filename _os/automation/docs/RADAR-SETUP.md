@@ -88,7 +88,7 @@ Run it once by hand first:
 ## 4. What each morning does
 
 1. Commits any stray vault edits, then fast-forwards from `origin/main`.
-2. Discovers ~200 new businesses in the day's rotation slot. Five of seven slots are Philadelphia and the collar counties.
+2. Discovers new Pennsylvania businesses in six county queries: one under-covered county from each statewide operating region.
 3. Enriches the highest-priority rows with Google review data, up to the budget.
 4. Grades the new arrivals and re-audits whatever went stale on its own cadence.
 5. Rewrites the dashboard, the queue CSV and a dated digest, then commits and pushes.
@@ -213,19 +213,17 @@ tab, plus a `regrade` input for forcing a verdict class to be re-audited.
 
 ### Coverage-driven targeting, not a rotation
 
-Discovery used to pick its target by day-of-year — seven slots, Philadelphia
-taking one. That is even in *slots* but not in *rows*: Montgomery County is
-densely mapped and yields far more per query than Philadelphia does. The result
-was a registry at **Montgomery 389 / Philadelphia 175**, a 2.2:1 skew away from
-the priority market, with nothing in the loop to correct it.
+Discovery used to concentrate on Philadelphia and a short list of nearby
+counties. Successful daily runs therefore did not mean Pennsylvania was being
+covered: most of the state's 67 counties were never eligible for selection.
 
-`lib/coverage-plan.js` plans from the registry instead. It compares what each
-county and vertical *holds* against what it *should* hold and spends the day on
-the largest deficits, so coverage self-corrects: the thinner a cell, the more of
-tomorrow it gets. Each target also carries a per-area cap, so one dense county
-can never absorb the whole day again.
+`lib/coverage-plan.js` contains all 67 counties in six operating regions. Each
+default daily plan selects the largest county deficit in every region, then
+splits the discovery budget across those six queries. Coverage self-corrects,
+one dense county cannot absorb the whole day, and every morning has statewide
+reach without firing one oversized query at the community-run Overpass API.
 
-Target shares live in `AREA_TARGETS` and `GROUP_TARGETS`. Vertical shares are
+Region and county targets live in `PA_REGIONS` and `AREA_TARGETS`; vertical targets live in `GROUP_TARGETS`. Vertical shares are
 weighted by how well a group converts, **not** by how many OSM happens to hold —
 OSM under-maps suburban trades badly, and following availability would keep
 over-collecting restaurants and under-collecting the contractors that close.
@@ -300,17 +298,15 @@ days, silently enriching nothing.
 
 ### A limit worth knowing about
 
-The planner can ask for rows that do not exist. On the first plan-driven sweep
-Philadelphia was allotted 23 and returned **10**: Overpass had 120 raw matches
-for those three verticals, but almost all were chains, had no website, or were
-already tracked. The deficit therefore persists and Philadelphia gets asked
-again tomorrow, yielding little again.
+The planner can ask for rows that do not exist. A thin county may return only a
+few eligible businesses because most mapped entries are chains, have no website,
+or are already tracked. Its deficit therefore persists and the region may select
+it again on a later morning.
 
-Nothing breaks — the run just under-delivers quietly — but it means the
-Philadelphia target may be **unreachable with OpenStreetMap alone**. That is the
-same gap as "OSM under-maps suburban trades", seen from the other side. A second
-discovery source is what fixes it; until then, treat a persistently unmet
-Philadelphia deficit as evidence of source coverage, not of a planner bug.
+Nothing breaks — the run just under-delivers quietly — but some county targets
+may be **unreachable with OpenStreetMap alone**. A second discovery source is
+what fixes it; until then, treat a persistently unmet county deficit as evidence
+of source coverage, not of a planner bug.
 
 ---
 

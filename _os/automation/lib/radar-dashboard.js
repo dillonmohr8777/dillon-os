@@ -51,7 +51,7 @@ const VERDICT_LABEL = {
 
 /** Queues, in the order they appear in the switcher. */
 const QUEUES = [
-  { key: 'rebuild', label: 'Rebuild', verdicts: ['rebuild'], sort: 'p', desc: 'Ranked by opportunity, weighted for Philadelphia. Each one earns a homepage concept — one page from their own copy and imagery, pitched as the first step of a rebuild.' },
+  { key: 'rebuild', label: 'Rebuild', verdicts: ['rebuild'], sort: 'p', desc: 'Ranked by website opportunity across Pennsylvania. Each one earns a homepage concept — one page from their own copy and imagery, pitched as the first step of a rebuild.' },
   { key: 'buildable', label: 'Buildable now', verdicts: ['rebuild'], buildableOnly: true, sort: 'p', desc: `Rebuild targets that already own enough imagery for a ${HOMEPAGE_IMAGE_SLOTS}-photo homepage concept. This is this week's batch — no asset chasing required.` },
   { key: 'verify', label: 'Needs render', verdicts: ['verify'], sort: 'lg', desc: 'Markup found no disqualifying fault, but nobody has seen the design. Not decisions yet.' },
   { key: 'polish', label: 'Polish', verdicts: ['polish'], sort: 'p', desc: 'Working sites with fixable gaps. A retainer or a paid tune-up, not a rebuild pitch.' },
@@ -297,26 +297,22 @@ function crossTab(rows) {
 /**
  * The gap worth naming in prose.
  *
- * A matrix shows you everything and therefore emphasises nothing. Philadelphia
- * is the stated priority for this pipeline, so the sentence that matters is the
- * one comparing it against whichever county the rotation has over-served.
+ * A matrix shows you everything and therefore emphasises nothing. Statewide
+ * coverage needs a compact breadth check: how many Pennsylvania counties are
+ * represented, how much of the registry sits outside the old Philly footprint,
+ * and which currently represented county is thinnest.
  */
 function coverageGap(ct) {
-  const phl = ct.areas.get('Philadelphia') || 0;
-  let biggest = null;
-  for (const [k, v] of ct.areas) {
-    if (k === 'Philadelphia') continue;
-    if (!biggest || v > biggest[1]) biggest = [k, v];
-  }
+  const oldPhillyFootprint = new Set([
+    'Philadelphia', 'Bucks County', 'Chester County', 'Delaware County', 'Montgomery County',
+  ]);
+  const outsidePhilly = [...ct.areas.entries()]
+    .filter(([area]) => !oldPhillyFootprint.has(area))
+    .reduce((sum, [, count]) => sum + count, 0);
+  const total = [...ct.areas.values()].reduce((sum, count) => sum + count, 0);
   const lines = [];
-  if (phl && biggest && biggest[1] > phl) {
-    lines.push(
-      `<strong>${esc(biggest[0])} holds ${biggest[1]} rows against Philadelphia's ${phl}</strong> — coverage is running ` +
-        `${(biggest[1] / phl).toFixed(1)}:1 away from the priority market. Point the next sweep at Philadelphia.`
-    );
-  } else if (phl && biggest) {
-    lines.push(`Philadelphia leads coverage at ${phl} rows; ${esc(biggest[0])} is next at ${biggest[1]}.`);
-  }
+  lines.push(`<strong>${ct.areas.size} Pennsylvania counties represented</strong>.`);
+  if (total) lines.push(`${outsidePhilly} rows (${Math.round((outsidePhilly / total) * 100)}%) are outside the former five-county Philly footprint.`);
   const thinAreas = [...ct.areas.entries()].sort((a, b) => a[1] - b[1]).slice(0, 1);
   const thinGroups = [...ct.groups.entries()].sort((a, b) => a[1] - b[1]).slice(0, 1);
   if (thinAreas.length) lines.push(`Thinnest county: <strong>${esc(thinAreas[0][0])}</strong> at ${thinAreas[0][1]}.`);
@@ -1191,7 +1187,7 @@ function renderDashboard(summary, opts = {}) {
 
   <header class="mast">
     <div>
-      <div class="eyebrow">Philadelphia metro · site quality</div>
+      <div class="eyebrow">Pennsylvania statewide · site quality</div>
       <h1>Who to build for <em>today</em></h1>
       <p class="lede">Two numbers per business: how good their site already is, and whether it is worth a build slot. A great site is a traffic pitch, not a redesign.</p>
     </div>
@@ -1371,13 +1367,13 @@ ${changeFeed(s)}
   <div class="rails">
     <section>
       <h2>Coverage by county</h2>
-      <p class="note">Philadelphia and the collar counties carry the local-proof advantage, so they are weighted highest in the ranking. Orange marks rebuild targets.</p>
+      <p class="note">The daily planner gives all six Pennsylvania regions a discovery lane. Counties rank equally; orange marks rebuild targets.</p>
       ${areaEntries.map(([k, v]) => coverageBar(k, v.total, v.rebuild, areaMax)).join('')}
     </section>
 
     <section>
       <h2>Coverage by vertical</h2>
-      <p class="note">Home services, medical, and legal are the high-value verticals the shipped Philadelphia batch barely touched.</p>
+      <p class="note">Home services, medical, and legal remain the highest-value verticals across the statewide pipeline.</p>
       ${groupEntries.map(([k, v]) => coverageBar(k.replace(/-/g, ' '), v.total, v.rebuild, groupMax)).join('')}
     </section>
   </div>
