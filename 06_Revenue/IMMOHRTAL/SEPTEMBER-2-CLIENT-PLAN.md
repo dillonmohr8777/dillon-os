@@ -5,6 +5,29 @@
 **Window:** 22 calendar dates, 16 weekdays, or 15 operating days when Labor Day is held out
 **Status:** Internal operating target, not a forecast or guarantee
 
+## Progress at Day 1 close
+
+| Fact | Verified state |
+|---|---:|
+| Target date | 2026-09-15 |
+| Calendar days remaining after 2026-08-25 | 21 |
+| Operating days remaining, excluding weekends and Labor Day | 14 |
+| Verified customers | 0 |
+| Customer gap | 2 |
+| Authorized source rows researched | 8 |
+| Authorized source rows remaining | 39 |
+| Newly qualified accounts | 0 |
+| Messages sent | 0 |
+| Replies | 0 |
+| Meetings booked | 0 |
+| Verified recurring revenue | $0 |
+
+**Risk state:** `AT_RISK_CONFIGURATION_BLOCKED`. The two-customer target remains
+active, but no acquisition motion is live while the sender, compliant postal
+footer, suppression route, and dedicated booking destination are unresolved.
+At the current eight-company cap, the remaining authorized Sheet requires five
+daily batches. Those batches create research evidence, not permission to send.
+
 ## Definition of success
 
 A customer counts only when the exact legal customer and scope are resolved, the agreement or order form is signed, the required initial payment or written authorization is verified, and a delivery slot is reserved. Interest, a reply, a call, a proposal, or a verbal yes does not count.
@@ -12,6 +35,11 @@ A customer counts only when the exact legal customer and scope are resolved, the
 ## Planning funnel
 
 This is capacity math built from explicit assumptions. It is not a market benchmark.
+The original 200-account scenario requires 13 to 14 screens per operating day.
+The governed loop currently permits no more than eight, and the only authorized
+Sheet contains 47 company rows. The scenario is therefore not executable until
+additional public-company research sources pass the same source, conflict,
+privacy, and suppression controls.
 
 | Stage | Target count | Planning assumption |
 |---|---:|---|
@@ -29,8 +57,8 @@ The funnel should be recalculated from actual results after every 30 verified se
 | Time ET | Owner | Required output |
 |---|---|---|
 | 08:30 | Marketing Chief | Source sync, prior-day receipts, stage counts, blockers, and today's capacity |
-| 09:00 | Demand Intelligence Lead | At least 14 current account screens with source, identity, category, and conflict status |
-| 10:30 | Demand Intelligence Lead | At least 10 source-qualified account packets or explicit disqualifications |
+| 09:00 | Demand Intelligence Lead | Up to eight authorized company screens with source, identity, category, evidence, and exact hold state |
+| 10:30 | Demand Intelligence Lead | Up to eight public-safe research packets or explicit blocks; zero is acceptable when hard gates fail |
 | 12:00 | Revenue Pipeline Manager | Smallest sufficient offer fit, qualification gaps, and one truthful next action per usable account |
 | 13:30 | Revenue Pipeline Manager | Up to eight individualized outreach drafts with exact recipient source and no em dash |
 | 14:30 | Quality and Risk Auditor | Identity, source, suppression, client-conflict, claim, recipient, link, and copy check |
@@ -46,6 +74,17 @@ The funnel should be recalculated from actual results after every 30 verified se
 4. Public LinkedIn company or owner evidence only when the identity is current and the information is visible without bypassing access controls.
 
 Never move client-owned contacts, employer contacts, job-search contacts, purchased lists without a verified use basis, private profile data, or inferred email addresses into the IMMOHRTAL prospect pool.
+
+## Current governed capacity
+
+- Authorized discovery source: 47 company rows.
+- Daily research ceiling: 8 companies.
+- Batch 01 completed: 8 researched, 7 current identities, 1 identity block.
+- Qualification result: 0 qualified, 8 held at P00, 0 external actions.
+- Remaining source rows before dedupe and future blocks: 39.
+- Expansion need: identify additional current public-company sources without
+  importing private people data or weakening client, employer, vendor,
+  prior-touch, suppression, or consent controls.
 
 ## First wedge
 

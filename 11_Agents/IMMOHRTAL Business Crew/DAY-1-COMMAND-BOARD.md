@@ -22,16 +22,20 @@ source_refs:
 - The canonical website is live at `https://www.immohrtalmarketing.com`; the
   recorded production launch covers 23 routes and passed the documented live QA
   set.
-- The agency automation scorecard records a 25-prospect preparation run at
-  `AWAITING_APPROVAL`. That machine state does not mean contact-ready or sent.
+- The old 25-record preparation run used a Sheet now classified
+  `franchise_webinar_excluded`. Its 08:10 Windows task is disabled, its runner
+  fails closed, and those records contribute zero active pipeline accounts.
+- Batch 01 reviewed eight rows from the authorized 47-company discovery source.
+  Seven identities are current, one is blocked, and all eight remain
+  `RESEARCH_ONLY / P00` with null scores and zero external actions.
 - The current priority outreach CSV contains five rows, all labeled
   `DRAFT_ONLY_DO_NOT_SEND`.
-- The internal offer system contains a qualification standard, price book, and
-  five offer cards. Prices are internal launch recommendations and are not
-  historical customer prices or approved public pricing.
-- Gmail is out of scope today. Messages sent, replies, meetings booked,
-  proposals sent, closed-won deals, verified new revenue from this workflow,
-  and new hires or purchases all begin at **0**.
+- The seven-item monthly service menu is approved and live on the canonical
+  pricing page. It is not evidence of historical customers or revenue.
+- Five Gmail drafts were directly read back as `DRAFT`, with zero exact-subject
+  sent copies and zero matching calendar events. Messages sent, replies,
+  meetings, proposals, closed-won deals, active clients, verified new revenue,
+  and new hires or purchases remain **0**.
 - Scout, Atlas, Forge, Relay, and Proof remain the public-facing prospect and
   website characters. None owns this board.
 
@@ -81,34 +85,34 @@ Every item below implements all 13 required fields in `CREW.json`.
 ### DEM-001
 
 - `item_id`: `DEM-001`
-- `objective`: Reconcile the 25 prepared records with the five-row priority batch without converting preparation into performance.
+- `objective`: Isolate the excluded 25-record legacy run and reconcile the authorized company source without converting research into pipeline performance.
 - `owner_role_id`: `demand_intelligence_lead`
 - `due_at`: `2026-08-25T11:30:00-04:00`
-- `status`: `READY_FOR_REVIEW`
-- `inputs`: `automation/immohrtal-agency/ops/DAY-1-SCORECARD.json`; `immohrtal-marketing-site/research/outreach/DAY-1-FIRST-BATCH.csv`.
-- `exact_output`: Separate, source-located counts for 25 prepared records and five priority drafts.
-- `evidence_required`: JSON and CSV parse; row counts; suppression and no-send state; no commercial-outcome inference.
-- `artifact_locator`: `11_Agents/IMMOHRTAL Business Crew/DAY-1-COMMAND-BOARD.md`
+- `status`: `VERIFIED`
+- `inputs`: `automation/immohrtal-agency/config/requalification-source.json`; `automation/immohrtal-agency/ops/LEGACY-SOURCE-ISOLATION-2026-08-25.md`; `06_Revenue/IMMOHRTAL/lead-intelligence/requalification/2026-08-25-batch-01.json`.
+- `exact_output`: Source-isolation receipt plus separate counts for 25 excluded legacy records, eight authorized research records, and five held Gmail drafts.
+- `evidence_required`: JSON parse; task-state readback; source-ID match; company-count checks; no contact data; zero external actions; no commercial-outcome inference.
+- `artifact_locator`: `automation/immohrtal-agency/ops/LEGACY-SOURCE-ISOLATION-2026-08-25.md`
 - `checker_role_id`: `quality_risk_auditor`
-- `blocker`: Current evidence qualification for each company has not been independently rechecked today.
-- `next_action`: `demand_intelligence_lead` requalifies only the chosen wedge using current public evidence before any opportunity is created.
-- `updated_at`: `2026-08-25T17:10:00-04:00`
+- `blocker`: None for source isolation. Advancement remains blocked by weak source integrity, relationship reconciliation, suppression, decision ownership, and incomplete qualification evidence.
+- `next_action`: `demand_intelligence_lead` continues with the next unreviewed authorized rows and keeps every record at P00 until all hard gates pass.
+- `updated_at`: `2026-08-25T17:20:00-04:00`
 
 ### DEM-002
 
 - `item_id`: `DEM-002`
-- `objective`: Select one market wedge and document up to five evidence-qualified company problems.
+- `objective`: Requalify up to eight authorized companies and select one market wedge only from current, independently reviewable problem evidence.
 - `owner_role_id`: `demand_intelligence_lead`
 - `due_at`: `2026-08-26 EOD ET`
-- `status`: `DEFERRED`
-- `inputs`: Current public company sites; `immohrtal-marketing-site/research/outreach/segment-offer-matrix.md`; qualified demand records only.
-- `exact_output`: One wedge brief and no more than five source-located company problem records.
+- `status`: `IN_PROGRESS`
+- `inputs`: `automation/immohrtal-agency/config/requalification-source.json`; current public company sites; callable Exa company and people research; `immohrtal-marketing-site/research/outreach/segment-offer-matrix.md`.
+- `exact_output`: Up to eight public-safe company evidence packets, exact holds or disqualifications, and one wedge brief only when the evidence supports it.
 - `evidence_required`: Current URL, observed fact, captured date, unknowns, disqualifiers, and relevant service route for each record.
-- `artifact_locator`: `pending — create under immohrtal-marketing-site/research/demand/ after evidence collection`
+- `artifact_locator`: `06_Revenue/IMMOHRTAL/lead-intelligence/requalification/2026-08-25-batch-01.json`
 - `checker_role_id`: `quality_risk_auditor`
-- `blocker`: No current-source wedge packet was completed during the company-system setup.
-- `next_action`: `demand_intelligence_lead` performs the bounded current-evidence pass on the next operating day; no contact work is included.
-- `updated_at`: `2026-08-25T17:10:00-04:00`
+- `blocker`: Batch 01 produced seven current identities and one identity block, but zero records have full relationship, suppression, decision-owner, or qualification clearance. A wedge is not yet proven.
+- `next_action`: `demand_intelligence_lead` reproduces the strongest public conditions and completes the remaining governance checks. No contact discovery or outreach is included.
+- `updated_at`: `2026-08-25T17:20:00-04:00`
 
 ### REV-001
 
@@ -250,9 +254,9 @@ Every item below implements all 13 required fields in `CREW.json`.
 - `evidence_required`: Independent SHIP verdict; passing parses and tests; exact artifact locators; automation scheduler truth state.
 - `artifact_locator`: `11_Agents/IMMOHRTAL Business Crew/daily/2026-08-25.md`
 - `checker_role_id`: `quality_risk_auditor`
-- `blocker`: Native Codex automation handler remains unavailable; this blocks automatic wake-up registration but not manual operation in the task.
-- `next_action`: `codex_marketing_chief` clocks in the five-seat crew on the next business day and retries native scheduling only when the handler is available.
-- `updated_at`: `2026-08-25T19:05:00-04:00`
+- `blocker`: The 08:30 Codex heartbeat is active. The duplicate office schedule manifest remains uninstalled, and the legacy 08:10 Windows task remains disabled by source isolation.
+- `next_action`: `codex_marketing_chief` verifies the next heartbeat receipt, keeps the 08:10 path disabled, and closes the next authorized eight-company research batch.
+- `updated_at`: `2026-08-25T17:20:00-04:00`
 
 ## Required Day 1 closeout counts
 
@@ -260,20 +264,24 @@ Report each separately, even when zero:
 
 | Commercial fact | Baseline |
 |---|---:|
-| Prepared candidate records in the recorded automation run | 25 |
+| Active prepared records from the legacy automation run | 0 |
+| Legacy prepared records excluded from canonical intake | 25 |
+| Authorized company rows researched today | 8 |
+| Current identities confirmed | 7 |
+| Qualified accounts from today's batch | 0 |
 | Priority outreach rows currently staged | 5 |
 | External messages sent | 0 |
 | Replies | 0 |
 | Meetings booked | 0 |
 | Proposals sent | 0 |
 | Closed won | 0 |
+| Active IMMOHRTAL clients | 0 |
 | Verified new revenue from this workflow | $0 |
 | New hires, contractors, software, data, domains, or mailboxes purchased | 0 |
 
-The first two rows are internal preparation counts, not commercial outcomes.
-The five priority rows remain draft-only. The 25-record scorecard remains a
-preparation queue until each record passes the current internal evidence and
-qualification checks.
+The five priority rows remain draft-only. The 25-record run is historical
+evidence from an excluded source and is not a preparation queue. The eight
+authorized research records remain held at P00 and are not qualified accounts.
 
 ## Day 1 source map
 

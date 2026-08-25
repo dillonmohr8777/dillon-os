@@ -1,8 +1,16 @@
 {
   "source_id": "immohrtal-drive-prospect-system",
   "source_type": "google_drive_snapshot",
-  "purpose": "website_concept_outreach",
-  "adapter_status": "live_verified_2026-08-24",
+  "purpose": "retired_legacy_franchise_webinar_input",
+  "adapter_status": "disabled_source_isolation_2026-08-25",
+  "disabled": true,
+  "disabled_reason": "The configured allowlist is classified franchise_webinar_excluded by the current IMMOHRTAL source audit and cannot feed the company pipeline.",
+  "canonical_replacement": {
+    "sheet_id": "1S1jX-LSuK0pmNg8orJFsqNzhJu5nCzjQsPnoMq4jBXU",
+    "tab": "Sheet1",
+    "role": "company_requalification_only",
+    "outreach_ready": false
+  },
   "embedded_rows": false,
   "default_market": "Philadelphia region",
   "sources": {

@@ -3,7 +3,7 @@
 **Status:** active internal foundation
 **Workflow:** `IMMOHRTAL-DAY1-20260825`
 **External systems:** disabled
-**Commercial baseline:** no verified contact, reply, meeting, proposal, win, or new revenue event
+**Commercial baseline:** no verified send, reply, meeting, proposal, win, active client, or new revenue event
 
 This folder is the local source of truth for IMMOHRTAL account research,
 qualification, and pipeline hygiene. It is deliberately not connected to a
@@ -35,6 +35,13 @@ runtime.
 - `pipeline-import.csv` — flattened five-record import for tabular inspection.
 - `CAPABILITY-PLACEHOLDERS.json` — disabled future automatic-reply and
   social/content capabilities, without execution authority.
+- `lead-intelligence/requalification/2026-08-25-batch-01.json` — eight
+  public-safe company research records: seven current identities, one identity
+  block, zero qualified, and zero external actions.
+- `../../automation/immohrtal-agency/config/requalification-source.json` —
+  canonical 47-company discovery-only contract with an eight-company daily cap.
+- `../../automation/immohrtal-agency/ops/LEGACY-SOURCE-ISOLATION-2026-08-25.md`
+  — reversible receipt proving the excluded-source 08:10 task is disabled.
 - `../../05_Offers/IMMOHRTAL/PUBLIC-MONTHLY-SERVICE-MENU.json` — exact
   Dillon-approved monthly fees that may be routed into a public offer fit.
 - `../../05_Offers/IMMOHRTAL/OUTREACH-AND-BOOKING-STANDARD.md` — source,
@@ -48,9 +55,16 @@ because a public observation and a concept exist. Decision ownership, budget,
 timing, capacity, suppression, prior-touch, and client-conflict checks remain
 unresolved. No message copy or contact identifier is stored here.
 
+The eight records in requalification batch 01 are a separate research backlog.
+All remain `RESEARCH_ONLY` in `P00_ACCOUNT_RESEARCH`; they must not be appended
+to the five-record pipeline import until the documented P10 entry rules pass.
+The historical 25-record run used an excluded source and contributes zero
+active pipeline records. Verified active IMMOHRTAL clients remain zero.
+
 ## Daily loop
 
-1. Demand Intelligence refreshes identity and evidence due for review.
+1. Demand Intelligence reads the canonical source contract and requalifies no
+   more than eight unreviewed company rows using current public evidence.
 2. Demand Intelligence completes duplicate, suppression, prior-touch, and
    client-conflict checks against authorized canonical sources.
 3. Revenue Pipeline Manager validates every required field and next action.

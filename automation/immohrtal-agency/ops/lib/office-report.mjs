@@ -21,6 +21,7 @@ const INTERNAL_EXTERNAL_ACTION_KEYS = [
   'meetings_booked',
   'proposals_sent',
   'closed_won',
+  'active_clients',
   'verified_new_revenue_usd',
   'new_hires_or_purchases'
 ];
@@ -276,6 +277,12 @@ function buildCommercialTruth(scorecard) {
   const values = Object.fromEntries(INTERNAL_EXTERNAL_ACTION_KEYS.map((key) => [key, Number(outcomes[key] ?? current[key] ?? 0)]));
   return {
     prepared_candidate_records: Number(current.prepared_candidate_records ?? 0),
+    legacy_prepared_candidate_records_excluded: Number(current.legacy_prepared_candidate_records_excluded ?? 0),
+    authorized_company_source_rows: Number(current.authorized_company_source_rows ?? 0),
+    researched_today: Number(current.researched_today ?? 0),
+    identity_confirmed_today: Number(current.identity_confirmed_today ?? 0),
+    identity_blocked_today: Number(current.identity_blocked_today ?? 0),
+    qualified_today: Number(current.qualified_today ?? 0),
     priority_draft_only_rows: Number(current.priority_draft_only_rows ?? 0),
     gmail_drafts_created: Number(current.gmail_drafts_created ?? 0),
     gmail_drafts_directly_read_back: Number(current.gmail_drafts_directly_read_back ?? 0),
@@ -285,7 +292,7 @@ function buildCommercialTruth(scorecard) {
   };
 }
 
-function buildAgencyEvidence(repoRoot, selected) {
+function buildAgencyEvidence(repoRoot, selected, scorecard) {
   if (!selected) {
     return {
       available: false,
@@ -294,6 +301,8 @@ function buildAgencyEvidence(repoRoot, selected) {
     };
   }
   const receipt = selected.receipt;
+  const excludedLegacySource = scorecard.current_evidence?.source_run_status === 'historical_complete_excluded_source'
+    && receipt.run_id === scorecard.current_evidence?.source_run_id;
   return {
     available: true,
     locator: toLocator(repoRoot, selected.receiptPath),
@@ -305,8 +314,13 @@ function buildAgencyEvidence(repoRoot, selected) {
     evidence: receipt.evidence || {},
     approval: receipt.approval || {},
     external_actions: receipt.external_actions || {},
-    truth_state: receipt.status === 'complete' ? 'confirmed_historical_run_receipt' : 'provisional_run_receipt',
-    does_not_prove: 'This prospect-preparation receipt does not prove the five internal office seats are online or continuously running.'
+    source_authority_state: excludedLegacySource ? 'legacy_excluded_source' : 'not_reconciled_by_office_report',
+    truth_state: excludedLegacySource
+      ? 'confirmed_historical_legacy_excluded_source'
+      : receipt.status === 'complete' ? 'confirmed_historical_run_receipt' : 'provisional_run_receipt',
+    does_not_prove: excludedLegacySource
+      ? 'This historical receipt used an excluded source. It proves only that the old local run completed; it contributes zero active pipeline records and does not prove the five internal office seats are online.'
+      : 'This prospect-preparation receipt does not prove the five internal office seats are online or continuously running.'
   };
 }
 
@@ -406,7 +420,7 @@ export function buildOfficeSnapshot(options = {}) {
     }));
   const roster = buildRosterState(crew, items);
   const commercialTruth = buildCommercialTruth(scorecard);
-  const agencyEvidence = buildAgencyEvidence(repoRoot, selectedAgencyReceipt);
+  const agencyEvidence = buildAgencyEvidence(repoRoot, selectedAgencyReceipt, scorecard);
   const scopeExceptions = externalScopeExceptions(commercialTruth, agencyEvidence);
   const activeItems = items.filter((item) => BOARD_ACTIVE_STATES.has(item.status));
   const lifecycleState = scopeExceptions.length
@@ -571,7 +585,13 @@ export function renderOfficeMarkdown(snapshot) {
     : [['none', 'none', 'none', 'No recorded blocking item', 'Continue the verified board flow']];
   const commercial = snapshot.standup.commercial_truth;
   const commercialRows = [
-    ['Prepared candidate records', commercial.prepared_candidate_records],
+    ['Active prepared candidate records', commercial.prepared_candidate_records],
+    ['Legacy prepared records excluded', commercial.legacy_prepared_candidate_records_excluded],
+    ['Authorized company source rows', commercial.authorized_company_source_rows],
+    ['Companies researched today', commercial.researched_today],
+    ['Current identities confirmed today', commercial.identity_confirmed_today],
+    ['Identities blocked today', commercial.identity_blocked_today],
+    ['Qualified today', commercial.qualified_today],
     ['Priority draft-only rows', commercial.priority_draft_only_rows],
     ['Gmail drafts created', commercial.gmail_drafts_created],
     ['Gmail drafts directly read back', commercial.gmail_drafts_directly_read_back],
@@ -581,6 +601,7 @@ export function renderOfficeMarkdown(snapshot) {
     ['Meetings booked', commercial.meetings_booked],
     ['Proposals sent', commercial.proposals_sent],
     ['Closed won', commercial.closed_won],
+    ['Active IMMOHRTAL clients', commercial.active_clients],
     ['Verified new workflow revenue USD', commercial.verified_new_revenue_usd],
     ['New hires or purchases', commercial.new_hires_or_purchases]
   ];
@@ -728,13 +749,14 @@ export function renderOfficeDashboard(snapshot) {
 
   const commercial = snapshot.end_of_day.commercial_truth;
   const agency = snapshot.agency_run_evidence;
+  const legacyAgencyEvidence = agency.source_authority_state === 'legacy_excluded_source';
   const agencyEvidence = agency.available
     ? `<dl class="receipt-ledger">
         <div><dt>Run</dt><dd>${escapeHtml(agency.run_id)}</dd></div>
         <div><dt>Observed</dt><dd>${escapeHtml(agency.as_of)}</dd></div>
         <div><dt>Status</dt><dd>${escapeHtml(agency.status)}</dd></div>
-        <div><dt>Prepared</dt><dd>${escapeHtml(agency.counts?.total ?? 'unknown')}</dd></div>
-        <div><dt>Awaiting approval</dt><dd>${escapeHtml(agency.counts?.awaiting_approval ?? 'unknown')}</dd></div>
+        <div><dt>${legacyAgencyEvidence ? 'Legacy prepared' : 'Prepared'}</dt><dd>${escapeHtml(agency.counts?.total ?? 'unknown')}</dd></div>
+        <div><dt>${legacyAgencyEvidence ? 'Legacy awaiting' : 'Awaiting approval'}</dt><dd>${escapeHtml(agency.counts?.awaiting_approval ?? 'unknown')}</dd></div>
         <div><dt>External actions</dt><dd>${Object.values(agency.external_actions || {}).every((value) => Number(value || 0) === 0) ? '0' : 'VERIFY'}</dd></div>
       </dl>`
     : '<p class="empty-copy">No usable agency run receipt was found.</p>';
@@ -750,13 +772,13 @@ export function renderOfficeDashboard(snapshot) {
   <style>
     :root{color-scheme:dark;--ink:#020711;--observatory:#07101f;--raised:#0b1729;--paper:#f3f7fb;--platinum:#dce4ed;--muted:#a7bbd1;--cyan:#18c8ff;--mint:#58edb2;--cobalt:#287dff;--attention:#ffc56e;--danger:#ff8d8d;--line:rgba(166,204,240,.22);--line-strong:rgba(181,218,250,.42);--body:"Segoe UI Variable","Segoe UI",Arial,sans-serif;--mono:"Cascadia Mono","SFMono-Regular",Consolas,monospace;--max:1480px}
     *{box-sizing:border-box}html{min-width:320px;background:var(--ink);scroll-behavior:smooth}body{margin:0;background:var(--ink);color:var(--paper);font:400 1rem/1.55 var(--body);text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}a{color:inherit}h1,h2,h3,p{margin-top:0}:focus-visible{outline:3px solid var(--mint);outline-offset:4px}.skip-link{position:fixed;z-index:20;top:12px;left:12px;transform:translateY(-160%);padding:10px 14px;border-radius:10px;background:var(--paper);color:var(--ink)}.skip-link:focus{transform:none}
-    .shell{width:min(100% - 40px,var(--max));margin:0 auto}.masthead{padding:54px 0 38px;border-bottom:1px solid var(--line)}.masthead-grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(300px,.7fr);gap:70px;align-items:end}.brand-lockup{display:flex;align-items:center;gap:14px;margin-bottom:28px;color:var(--muted);font:600 .72rem/1.3 var(--mono);letter-spacing:.08em;text-transform:uppercase}.brand-mark{width:18px;height:18px;border:1px solid var(--cyan);border-radius:50%;box-shadow:inset 0 0 0 4px var(--ink),inset 0 0 0 6px var(--mint)}h1{max-width:16ch;margin-bottom:14px;font-size:clamp(2.25rem,5vw,5rem);font-weight:760;line-height:.98;letter-spacing:-.04em;text-wrap:balance}.masthead-copy{max-width:66ch;margin:0;color:var(--muted);font-size:1.05rem}.truth-plate{align-self:stretch;display:flex;flex-direction:column;justify-content:flex-end;padding:28px;border:1px solid var(--line-strong);border-radius:14px;background:var(--raised);box-shadow:0 24px 64px rgba(0,0,0,.3)}.truth-plate strong{display:block;margin-bottom:8px;color:var(--mint);font:650 .72rem/1.3 var(--mono);letter-spacing:.08em;text-transform:uppercase}.truth-plate p{margin:0;color:var(--platinum)}
+    .shell{width:min(100% - 40px,var(--max));margin:0 auto}.masthead{padding:54px 0 38px;border-bottom:1px solid var(--line)}.masthead-grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(300px,.7fr);gap:70px;align-items:end}.masthead-grid>*{min-width:0}.brand-lockup{display:flex;align-items:center;gap:14px;margin-bottom:28px;color:var(--muted);font:600 .72rem/1.3 var(--mono);letter-spacing:.08em;text-transform:uppercase}.brand-mark{flex:0 0 auto;width:18px;height:18px;border:1px solid var(--cyan);border-radius:50%;box-shadow:inset 0 0 0 4px var(--ink),inset 0 0 0 6px var(--mint)}h1{max-width:16ch;margin-bottom:14px;font-size:clamp(2.25rem,5vw,5rem);font-weight:760;line-height:.98;letter-spacing:-.04em;text-wrap:balance}.masthead-copy{max-width:66ch;margin:0;color:var(--muted);font-size:1.05rem}.truth-plate{align-self:stretch;display:flex;flex-direction:column;justify-content:flex-end;padding:28px;border:1px solid var(--line-strong);border-radius:14px;background:var(--raised);box-shadow:0 24px 64px rgba(0,0,0,.3)}.truth-plate strong{display:block;margin-bottom:8px;color:var(--mint);font:650 .72rem/1.3 var(--mono);letter-spacing:.08em;text-transform:uppercase}.truth-plate p{margin:0;color:var(--platinum)}
     .lifecycle{padding:24px 0 70px}.lifecycle-list{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));margin:0;padding:0;border-bottom:1px solid var(--line);list-style:none}.lifecycle-list li{min-width:0;padding:22px 20px 24px 0;border-top:1px solid var(--line)}.lifecycle-list li+li{padding-left:20px;border-left:1px solid var(--line)}.lifecycle-list span,.lifecycle-list small{display:block;color:var(--muted)}.lifecycle-list span{margin-bottom:8px;font-size:.78rem}.lifecycle-list strong{display:block;overflow-wrap:anywhere;font:600 .72rem/1.4 var(--mono)}.lifecycle-list small{margin-top:8px;font-size:.74rem;line-height:1.45}.verified-text{color:var(--mint)!important}.attention-text{color:var(--attention)!important}.active-text{color:var(--cyan)!important}.neutral-text{color:var(--muted)!important}
     .section-head{display:grid;grid-template-columns:minmax(250px,.75fr) minmax(0,1.25fr);gap:70px;align-items:end;margin-bottom:34px}.section-head h2{margin:0;font-size:clamp(1.8rem,3vw,3rem);line-height:1.05;letter-spacing:-.035em}.section-head p{max-width:66ch;margin:0;color:var(--muted)}.roster{padding:52px 0 100px}.seat-row{display:grid;grid-template-columns:minmax(250px,.78fr) minmax(250px,.55fr) minmax(0,1.35fr);gap:38px;padding:34px 0 38px;border-top:1px solid var(--line)}.seat-row:last-child{border-bottom:1px solid var(--line)}.seat-identity{display:flex;gap:18px;align-items:flex-start}.seat-index{padding-top:5px;color:var(--cyan);font:600 .7rem/1 var(--mono)}.seat-identity h2{max-width:18ch;margin-bottom:9px;font-size:1.22rem;line-height:1.2;letter-spacing:-.025em}.seat-identity p{margin:0;color:var(--muted);font-size:.78rem}.seat-state{align-self:start}.seat-state>p{margin:15px 0 0;color:var(--muted);font-size:.78rem;line-height:1.55}.runtime-truth{display:block;margin-top:12px;color:var(--platinum);font-size:.78rem}.runtime-truth b{margin-right:7px;color:var(--muted);font:500 .66rem/1 var(--mono);letter-spacing:.06em;text-transform:uppercase}.status-chip{display:inline-flex;width:max-content;max-width:100%;padding:6px 9px;border:1px solid var(--line-strong);border-radius:999px;font:600 .64rem/1.2 var(--mono);letter-spacing:.04em;overflow-wrap:anywhere}.status-chip.verified{border-color:rgba(88,237,178,.48);color:var(--mint)}.status-chip.active{border-color:rgba(24,200,255,.5);color:var(--cyan)}.status-chip.attention{border-color:rgba(255,197,110,.52);color:var(--attention)}.status-chip.neutral{color:var(--muted)}.assignment-list{margin:0;padding:0;list-style:none}.assignment-row{display:grid;grid-template-columns:145px minmax(0,1fr);gap:22px;padding:0 0 22px}.assignment-row+.assignment-row{padding-top:22px;border-top:1px solid var(--line)}.assignment-id{display:flex;flex-direction:column;align-items:flex-start;gap:10px}.assignment-id strong{font:650 .78rem/1.2 var(--mono)}.assignment-main p{margin:0 0 15px;color:var(--platinum);font-size:.88rem}.assignment-main dl{display:grid;grid-template-columns:minmax(120px,.35fr) minmax(0,1fr);gap:16px;margin:0}.assignment-main dl>div{min-width:0}.assignment-main dt{margin-bottom:5px;color:var(--muted);font:500 .62rem/1.3 var(--mono);letter-spacing:.06em;text-transform:uppercase}.assignment-main dd{margin:0;color:var(--muted);font-size:.76rem;line-height:1.5}.assignment-empty{color:var(--muted);font-size:.84rem}
     .control-floor{padding:96px 0;background:var(--observatory);border-block:1px solid var(--line)}.board-grid{display:grid;grid-template-columns:minmax(260px,.62fr) minmax(0,1.38fr);gap:72px;align-items:start}.board-counts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--line)}.board-count{display:flex;align-items:baseline;justify-content:space-between;gap:18px;padding:18px 0;border-bottom:1px solid var(--line)}.board-count:nth-child(odd){padding-right:18px}.board-count:nth-child(even){padding-left:18px;border-left:1px solid var(--line)}.board-count span{color:var(--muted);font:500 .65rem/1.3 var(--mono);overflow-wrap:anywhere}.board-count strong{font-size:1.55rem}.ledger-table{width:100%;border-collapse:collapse}.ledger-table th,.ledger-table td{padding:16px 14px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}.ledger-table th{color:var(--muted);font:500 .64rem/1.3 var(--mono);letter-spacing:.06em;text-transform:uppercase}.ledger-table td{color:var(--muted);font-size:.8rem;line-height:1.5}.ledger-table td:first-child{width:120px;color:var(--paper)}.ledger-table td strong,.ledger-table td span{display:block}.ledger-table td span{margin-top:5px;color:var(--attention);font:500 .62rem/1.2 var(--mono)}
-    .closeout{padding:100px 0}.closeout-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(300px,.8fr);gap:80px}.completed-list{margin:28px 0 0;padding:0;border-top:1px solid var(--line);list-style:none}.completed-list li{display:grid;grid-template-columns:90px 130px minmax(0,1fr);gap:18px;padding:18px 0;border-bottom:1px solid var(--line);align-items:start}.completed-list strong{font:650 .74rem/1.4 var(--mono)}.completed-list span{color:var(--mint);font:500 .62rem/1.4 var(--mono)}.completed-list p{margin:0;color:var(--muted);font-size:.8rem;overflow-wrap:anywhere}.receipt-panel{padding:28px;border-radius:14px;background:var(--raised);box-shadow:0 26px 70px rgba(0,0,0,.32)}.receipt-panel h2{margin-bottom:12px;font-size:1.25rem}.receipt-panel>p{color:var(--muted);font-size:.82rem}.receipt-ledger{margin:22px 0 0}.receipt-ledger>div{display:flex;justify-content:space-between;gap:24px;padding:11px 0;border-top:1px solid var(--line)}.receipt-ledger dt{color:var(--muted);font-size:.72rem}.receipt-ledger dd{margin:0;text-align:right;font:600 .7rem/1.35 var(--mono);overflow-wrap:anywhere}.outcome-line{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;margin-top:70px;border-block:1px solid var(--line)}.outcome-line div{padding:22px 18px}.outcome-line div+div{border-left:1px solid var(--line)}.outcome-line span{display:block;color:var(--muted);font-size:.7rem}.outcome-line strong{display:block;margin-top:7px;font-size:1.5rem}.footer{padding:32px 0 50px;border-top:1px solid var(--line);color:var(--muted);font-size:.76rem}.footer p{max-width:90ch;margin:0}.empty-copy{color:var(--muted)}
-    @media(max-width:1100px){.masthead-grid,.section-head,.board-grid,.closeout-grid{grid-template-columns:1fr;gap:34px}.lifecycle-list{grid-template-columns:repeat(2,minmax(0,1fr))}.lifecycle-list li:nth-child(odd){padding-left:0;border-left:0}.lifecycle-list li:nth-child(even){padding-left:20px;border-left:1px solid var(--line)}.seat-row{grid-template-columns:minmax(230px,.75fr) minmax(0,1.25fr)}.seat-state{grid-column:1}.assignment-list{grid-column:2;grid-row:1/span 2}.outcome-line{grid-template-columns:repeat(2,minmax(0,1fr))}.outcome-line div:nth-child(3),.outcome-line div:nth-child(5){border-left:0;border-top:1px solid var(--line)}.outcome-line div:nth-child(4){border-top:1px solid var(--line)}}
-    @media(max-width:720px){.shell{width:min(100% - 28px,var(--max))}.masthead{padding-top:34px}.masthead-grid{gap:28px}.truth-plate{padding:22px}.lifecycle{padding-bottom:48px}.lifecycle-list{display:block}.lifecycle-list li,.lifecycle-list li+li,.lifecycle-list li:nth-child(even){padding:18px 0;border-left:0}.roster{padding:30px 0 72px}.section-head{margin-bottom:20px}.seat-row{display:block;padding:28px 0}.seat-state{margin:22px 0 28px}.assignment-row{grid-template-columns:1fr}.assignment-id{flex-direction:row;align-items:center}.assignment-main dl{grid-template-columns:1fr}.control-floor,.closeout{padding:72px 0}.board-counts{display:block}.board-count,.board-count:nth-child(even),.board-count:nth-child(odd){padding:16px 0;border-left:0}.ledger-wrap{overflow-x:auto}.ledger-table{min-width:720px}.completed-list li{grid-template-columns:72px minmax(0,1fr)}.completed-list p{grid-column:1/-1}.outcome-line{display:block}.outcome-line div,.outcome-line div+div,.outcome-line div:nth-child(3),.outcome-line div:nth-child(4){border-top:1px solid var(--line);border-left:0}.outcome-line div:first-child{border-top:0}}
+    .closeout{padding:100px 0}.closeout-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(300px,.8fr);gap:80px}.completed-list{margin:28px 0 0;padding:0;border-top:1px solid var(--line);list-style:none}.completed-list li{display:grid;grid-template-columns:90px 130px minmax(0,1fr);gap:18px;padding:18px 0;border-bottom:1px solid var(--line);align-items:start}.completed-list strong{font:650 .74rem/1.4 var(--mono)}.completed-list span{color:var(--mint);font:500 .62rem/1.4 var(--mono)}.completed-list p{margin:0;color:var(--muted);font-size:.8rem;overflow-wrap:anywhere}.receipt-panel{padding:28px;border-radius:14px;background:var(--raised);box-shadow:0 26px 70px rgba(0,0,0,.32)}.receipt-panel h2{margin-bottom:12px;font-size:1.25rem}.receipt-panel>p{color:var(--muted);font-size:.82rem}.receipt-ledger{margin:22px 0 0}.receipt-ledger>div{display:flex;justify-content:space-between;gap:24px;padding:11px 0;border-top:1px solid var(--line)}.receipt-ledger dt{color:var(--muted);font-size:.72rem}.receipt-ledger dd{margin:0;text-align:right;font:600 .7rem/1.35 var(--mono);overflow-wrap:anywhere}.outcome-line{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;margin-top:70px;border-block:1px solid var(--line)}.outcome-line div{padding:22px 18px}.outcome-line div+div{border-left:1px solid var(--line)}.outcome-line div:nth-child(5n+1){border-left:0}.outcome-line div:nth-child(n+6){border-top:1px solid var(--line)}.outcome-line span{display:block;color:var(--muted);font-size:.7rem}.outcome-line strong{display:block;margin-top:7px;font-size:1.5rem}.footer{padding:32px 0 50px;border-top:1px solid var(--line);color:var(--muted);font-size:.76rem}.footer p{max-width:90ch;margin:0}.empty-copy{color:var(--muted)}
+    @media(max-width:1100px){.masthead-grid,.section-head,.board-grid,.closeout-grid{grid-template-columns:1fr;gap:34px}.lifecycle-list{grid-template-columns:repeat(2,minmax(0,1fr))}.lifecycle-list li:nth-child(odd){padding-left:0;border-left:0}.lifecycle-list li:nth-child(even){padding-left:20px;border-left:1px solid var(--line)}.seat-row{grid-template-columns:minmax(230px,.75fr) minmax(0,1.25fr)}.seat-state{grid-column:1}.assignment-list{grid-column:2;grid-row:1/span 2}.outcome-line{grid-template-columns:repeat(2,minmax(0,1fr))}.outcome-line div:nth-child(odd){border-left:0}.outcome-line div:nth-child(n+3){border-top:1px solid var(--line)}}
+    @media(max-width:720px){.shell{width:min(100% - 28px,var(--max))}.masthead{padding-top:34px}.masthead-grid{gap:28px}.brand-lockup{align-items:flex-start;flex-wrap:wrap;overflow-wrap:anywhere}.truth-plate{padding:22px}.lifecycle{padding-bottom:48px}.lifecycle-list{display:block}.lifecycle-list li,.lifecycle-list li+li,.lifecycle-list li:nth-child(even){padding:18px 0;border-left:0}.roster{padding:30px 0 72px}.section-head{margin-bottom:20px}.seat-row{display:block;padding:28px 0}.seat-state{margin:22px 0 28px}.assignment-row{grid-template-columns:1fr}.assignment-id{flex-direction:row;align-items:center}.assignment-main dl{grid-template-columns:1fr}.control-floor,.closeout{padding:72px 0}.board-counts{display:block}.board-count,.board-count:nth-child(even),.board-count:nth-child(odd){padding:16px 0;border-left:0}.ledger-wrap{overflow-x:auto}.ledger-table{min-width:720px}.completed-list li{grid-template-columns:72px minmax(0,1fr)}.completed-list p{grid-column:1/-1}.outcome-line{display:block}.outcome-line div,.outcome-line div+div{border-top:1px solid var(--line);border-left:0}.outcome-line div:first-child{border-top:0}}
     @media print{body{background:#fff;color:#111}.masthead,.control-floor{background:#fff}.truth-plate,.receipt-panel{border:1px solid #999;background:#fff;box-shadow:none}.masthead-copy,.section-head p,.seat-identity p,.seat-state>p,.assignment-main dd,.ledger-table td,.completed-list p,.receipt-panel>p,.footer{color:#333}.lifecycle-list,.seat-row,.seat-row:last-child,.control-floor,.completed-list,.completed-list li,.ledger-table th,.ledger-table td,.footer{border-color:#aaa}.status-chip{color:#111!important;border-color:#777}.shell{width:100%}}
   </style>
 </head>
@@ -812,7 +834,7 @@ export function renderOfficeDashboard(snapshot) {
           <div><h2>Verified or done</h2><ul class="completed-list">${completedRows}</ul></div>
           <aside class="receipt-panel"><h2>Latest agency evidence</h2><p>${escapeHtml(agency.does_not_prove)}</p>${agencyEvidence}</aside>
         </div>
-        <div class="outcome-line" aria-label="Commercial outcomes"><div><span>Drafts held</span><strong>${escapeHtml(commercial.gmail_drafts_compliance_blocked)}</strong></div><div><span>Messages sent</span><strong>${escapeHtml(commercial.messages_sent)}</strong></div><div><span>Meetings booked</span><strong>${escapeHtml(commercial.meetings_booked)}</strong></div><div><span>Closed won</span><strong>${escapeHtml(commercial.closed_won)}</strong></div><div><span>Verified new revenue</span><strong>$${escapeHtml(commercial.verified_new_revenue_usd)}</strong></div></div>
+        <div class="outcome-line" aria-label="Daily research and commercial outcomes"><div><span>Companies researched today</span><strong>${escapeHtml(commercial.researched_today)}</strong></div><div><span>Current identities confirmed today</span><strong>${escapeHtml(commercial.identity_confirmed_today)}</strong></div><div><span>Identities blocked today</span><strong>${escapeHtml(commercial.identity_blocked_today)}</strong></div><div><span>Qualified today</span><strong>${escapeHtml(commercial.qualified_today)}</strong></div><div><span>Drafts held</span><strong>${escapeHtml(commercial.gmail_drafts_compliance_blocked)}</strong></div><div><span>Messages sent</span><strong>${escapeHtml(commercial.messages_sent)}</strong></div><div><span>Meetings booked</span><strong>${escapeHtml(commercial.meetings_booked)}</strong></div><div><span>Active IMMOHRTAL clients</span><strong>${escapeHtml(commercial.active_clients)}</strong></div><div><span>Closed won</span><strong>${escapeHtml(commercial.closed_won)}</strong></div><div><span>Verified new revenue</span><strong>$${escapeHtml(commercial.verified_new_revenue_usd)}</strong></div></div>
       </div>
     </section>
   </main>

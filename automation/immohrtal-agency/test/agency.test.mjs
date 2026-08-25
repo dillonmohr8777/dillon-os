@@ -86,6 +86,24 @@ test('Momentum 360 labeled sources and external-action config are rejected', () 
   assert.throws(() => executeRun({ config: unsafe, input: cleanInput, suppressions: [], runId: '20260824-120003', asOf, outputRoot }), /Fail-closed/);
 });
 
+test('legacy scheduled source is disabled and the canonical replacement is research only', () => {
+  const legacy = JSON.parse(fs.readFileSync(path.join(root, 'config', 'source-metadata.json'), 'utf8'));
+  const replacement = JSON.parse(fs.readFileSync(path.join(root, 'config', 'requalification-source.json'), 'utf8'));
+  const runner = fs.readFileSync(path.join(root, 'Run-ImmohrtalAgencyDaily.ps1'), 'utf8');
+  const installer = fs.readFileSync(path.join(root, 'Install-ImmohrtalAgencySchedule.ps1'), 'utf8');
+
+  assert.equal(legacy.disabled, true);
+  assert.equal(legacy.sources.cleared.sheet_id, '1mK1di7eMV6SUI226pwEoFrA-7pBkV_3y2BG5PwDIiwY');
+  assert.equal(legacy.canonical_replacement.sheet_id, replacement.sheet_id);
+  assert.equal(replacement.outreach_ready, false);
+  assert.equal(replacement.external_actions_authorized, false);
+  assert.match(runner, /Fail-closed source isolation/);
+  assert.match(runner, /canonical replacement is research only/);
+  assert.match(installer, /Schedule installation is blocked by source isolation/);
+  assert.match(installer, /canonical replacement is research only/);
+  assert.match(installer, /configured source is not the authorized IMMOHRTAL Sheet/);
+});
+
 test('Drive snapshot adapter imports only email-ready allowlist rows and builds hard suppressions', () => {
   const metadata = {
     source_id: 'drive', default_market: 'Philadelphia region',

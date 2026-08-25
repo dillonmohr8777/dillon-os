@@ -21,12 +21,27 @@ $stamp = if ($RunId) { $RunId } else { Get-Date -Format 'yyyyMMdd-HHmmss' }
 $timestamp = if ($AsOf) { $AsOf } else { (Get-Date).ToUniversalTime().ToString('o') }
 $output = if ($DryRun) { Join-Path $root '.tmp\dry-run' } else { Join-Path $root 'runs' }
 $state = if ($DryRun) { Join-Path $root '.tmp\dry-state' } else { Join-Path $root 'state' }
+$sourceMetadataPath = Join-Path $root 'config\source-metadata.json'
 $mutex = [System.Threading.Mutex]::new($false, 'Global\ImmohrtalAgencyDaily')
 $locked = $false
 
 try {
   $locked = $mutex.WaitOne(0)
   if (-not $locked) { throw 'Fail-closed overlap: another IMMOHRTAL daily run owns the mutex.' }
+  if (-not $DryRun) {
+    if (-not (Test-Path -LiteralPath $sourceMetadataPath)) { throw 'Fail-closed source isolation: source metadata is missing.' }
+    $sourceMetadata = Get-Content -LiteralPath $sourceMetadataPath -Raw | ConvertFrom-Json
+    if ($sourceMetadata.disabled -eq $true) { throw "Fail-closed source isolation: $($sourceMetadata.disabled_reason)" }
+    if ($sourceMetadata.canonical_replacement.outreach_ready -ne $true) {
+      throw 'Fail-closed source isolation: the canonical replacement is research only and cannot feed the legacy draft orchestrator.'
+    }
+    $inputPayload = Get-Content -LiteralPath $input -Raw | ConvertFrom-Json
+    $configuredSheetId = [string]$inputPayload.source.sheet_id
+    $authorizedSheetId = [string]$sourceMetadata.canonical_replacement.sheet_id
+    if (-not $configuredSheetId -or $configuredSheetId -ne $authorizedSheetId) {
+      throw 'Fail-closed source isolation: the live input is not the authorized IMMOHRTAL company-requalification Sheet.'
+    }
+  }
   $arguments = @(
     (Join-Path $root 'src\cli.mjs'),
     '--input', $input,

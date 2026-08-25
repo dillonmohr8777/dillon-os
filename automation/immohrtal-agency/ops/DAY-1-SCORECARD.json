@@ -1,5 +1,5 @@
 {
-  "schema_version": "3.0.0",
+  "schema_version": "3.1.0",
   "workflow_id": "IMMOHRTAL-DAY1-20260825",
   "step_id": "OPS",
   "as_of": "2026-08-25",
@@ -40,16 +40,24 @@
     "hiring_or_contracting": false,
     "crm_or_account_mutation": false,
     "scheduled_or_external_runtime": false,
-    "truth_note": "This local office runner cannot mutate provider drafts or schedules. Current Gmail draft and Codex heartbeat receipts are read-only operating evidence."
+    "truth_note": "This local office runner cannot mutate provider drafts or schedules. The 08:30 Codex heartbeat is active. The separate 08:10 Windows task is disabled and its legacy source is excluded."
   },
   "current_evidence": {
-    "existing_runtime_kind": "client_service_crew_prospect_preparation_subworkflow",
+    "existing_runtime_kind": "canonical_company_requalification_with_legacy_source_isolation",
     "source_run_id": "20260825-081000",
-    "source_run_status": "complete",
-    "source_run_mode": "local_draft_only",
-    "prepared_candidate_records": 25,
+    "source_run_status": "historical_complete_excluded_source",
+    "source_run_mode": "legacy_local_draft_only_task_disabled",
+    "prepared_candidate_records": 0,
+    "legacy_prepared_candidate_records_excluded": 25,
     "concepts_live_verified_in_recorded_run": 25,
-    "runtime_awaiting_approval": 25,
+    "runtime_awaiting_approval": 0,
+    "legacy_runtime_awaiting_approval_excluded": 25,
+    "authorized_company_source_rows": 47,
+    "research_batch_limit": 8,
+    "researched_today": 8,
+    "identity_confirmed_today": 7,
+    "identity_blocked_today": 1,
+    "qualified_today": 0,
     "priority_draft_only_rows": 5,
     "gmail_drafts_created": 5,
     "gmail_drafts_directly_read_back": 5,
@@ -60,9 +68,10 @@
     "meetings_booked": 0,
     "proposals_sent": 0,
     "closed_won": 0,
+    "active_clients": 0,
     "verified_new_revenue_usd": 0,
     "new_hires_or_purchases": 0,
-    "truth_note": "The 25-record run and five priority rows are preparation counts, not qualified opportunities or commercial outcomes. Five exact Gmail drafts exist and remain unsent under compliance hold."
+    "truth_note": "The old 25-record run used an excluded source and contributes zero active pipeline records. The authorized source has 47 company rows; eight were researched today, seven identities were current, one was blocked, and zero qualified. Five exact Gmail drafts remain unsent under compliance hold."
   },
   "orchestrator": {
     "title": "Codex Marketing Chief",
@@ -415,7 +424,7 @@
       "time_et": "09:00",
       "owner": "Demand Intelligence Lead",
       "event": "Demand block",
-      "output": "Twenty-five prepared records reconciled to five priority rows; one wedge and up to five evidence-qualified accounts."
+      "output": "Up to eight unreviewed companies from the authorized source requalified with current public evidence, exact holds, and zero contact action."
     },
     {
       "time_et": "11:00",
@@ -450,7 +459,14 @@
   ],
   "kpis": {
     "preparation": {
-      "prepared_candidate_records": 25,
+      "prepared_candidate_records": 0,
+      "legacy_prepared_candidate_records_excluded": 25,
+      "authorized_company_source_rows": 47,
+      "research_batch_limit": 8,
+      "researched_today": 8,
+      "identity_confirmed_today": 7,
+      "identity_blocked_today": 1,
+      "qualified_today": 0,
       "priority_draft_only_rows": 5,
       "gmail_drafts_created": 5,
       "gmail_drafts_compliance_blocked": 5,
@@ -465,6 +481,7 @@
       "meetings_booked": 0,
       "proposals_sent": 0,
       "closed_won": 0,
+      "active_clients": 0,
       "verified_new_revenue_usd": 0,
       "new_hires_or_purchases": 0
     },
@@ -590,12 +607,17 @@
     "automation/immohrtal-agency/AUTOMATION.md",
     "automation/immohrtal-agency/README.md",
     "automation/immohrtal-agency/config/default.json",
+    "automation/immohrtal-agency/config/requalification-source.json",
+    "automation/immohrtal-agency/ops/LEGACY-SOURCE-ISOLATION-2026-08-25.md",
     "automation/immohrtal-agency/src/agents.mjs",
     "automation/immohrtal-agency/ops/DAILY-REPORT-RUNBOOK.md",
     "automation/immohrtal-agency/ops/office-daily.manifest.json",
     "automation/immohrtal-agency/ops/run-office-report.mjs",
     "automation/immohrtal-agency/runs/20260825-081000/run-receipt.json",
     "automation/immohrtal-agency/runs/20260825-081000/outreach-packages.json",
+    "06_Revenue/IMMOHRTAL/lead-intelligence/requalification/2026-08-25-batch-01.json",
+    "06_Revenue/IMMOHRTAL/lead-intelligence/requalification/2026-08-25-batch-01-qa.md",
+    "05_Offers/IMMOHRTAL/BOOKING-AND-OUTREACH-ACTIVATION.md",
     "immohrtal-marketing-site/PRODUCT.md",
     "immohrtal-marketing-site/src/data.ts",
     "immohrtal-marketing-site/research/outreach/DAY-1-FIRST-BATCH.csv",

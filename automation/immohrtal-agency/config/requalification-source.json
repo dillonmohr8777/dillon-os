@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "source_id": "immohrtal-authorized-company-discovery-2023",
+  "source_type": "google_sheet_via_codex_connector",
+  "purpose": "company_requalification_only",
+  "adapter_status": "active_via_immohrtal_daily_heartbeat",
+  "sheet_id": "1S1jX-LSuK0pmNg8orJFsqNzhJu5nCzjQsPnoMq4jBXU",
+  "tab": "Sheet1",
+  "source_created_at": "2023-10-12T19:41:04.945Z",
+  "source_modified_at": "2023-10-12T19:55:46.513Z",
+  "populated_company_rows": 47,
+  "source_integrity_state": "weak_anyone_with_link_writer_permission_reported",
+  "outreach_ready": false,
+  "contact_discovery_authorized": false,
+  "allowed_persisted_fields": [
+    "company_name",
+    "company_website",
+    "company_linkedin_locator",
+    "public_company_description",
+    "public_evidence_urls",
+    "observed_date",
+    "qualification_and_governance_state"
+  ],
+  "blocked_persisted_fields": [
+    "person_name",
+    "person_title",
+    "email_address",
+    "phone_number",
+    "street_address",
+    "raw_sheet_row",
+    "message_subject",
+    "message_body"
+  ],
+  "daily_batch_limit": 8,
+  "external_actions_authorized": false
+}

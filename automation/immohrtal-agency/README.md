@@ -44,10 +44,10 @@ The verified Drive allowlist, HOLD, and DO NOT PITCH sheet IDs live in `config/s
 - Google Drive intake is snapshot-based because local scheduled code cannot reuse the in-app connector token. Stale snapshots fail closed.
 - Gmail output is a fingerprinted draft manifest. A connected Codex operator can create drafts from it, but the local scheduler cannot send.
 - No HubSpot, publishing, ads, spend, or credential adapter exists.
-- The weekday 8:10 AM task is installed through the console-free launcher.
+- The legacy weekday 8:10 AM task is registered through the console-free launcher but disabled because its configured allowlist is excluded by the current source audit. The 8:30 AM Codex heartbeat is the active safe daily loop.
 
 ## Adapter path
 
-1. Refresh the three Drive snapshots through the connected Codex Drive tool when the freshness gate approaches 14 days.
+1. Rebuild the local adapter around `config/requalification-source.json`; do not refresh or reuse the retired three-Sheet franchise/webinar set.
 2. Review fingerprinted Gmail-ready packages and create Gmail drafts only after exact routing and body verification.
 3. Keep sending as a separate, one-time, human-approved command. It never belongs in the daily orchestrator.

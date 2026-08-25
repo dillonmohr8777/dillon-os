@@ -2,11 +2,11 @@
 
 ## Entrypoint
 
-`Run-ImmohrtalAgencyDaily.ps1` is registered through the existing hidden-task launcher pattern as `IMMOHRTAL Agency Daily`, weekdays at 8:10 AM local time.
+`Run-ImmohrtalAgencyDaily.ps1` remains registered through the hidden-task launcher pattern as `IMMOHRTAL Agency Daily`, but the Windows task was disabled on 2026-08-25 after the current source audit classified its allowlist as `franchise_webinar_excluded`. The active 08:30 Codex heartbeat is the canonical daily IMMOHRTAL loop while company requalification uses the separately governed 47-company source.
 
 The PowerShell entrypoint:
 
-1. Resolves the latest local snapshot of the verified Drive allowlist and suppression sheets.
+1. Resolves the latest local snapshot only after the source-isolation gate proves it matches the authorized company-requalification Sheet.
 2. Acquires the named `Global\ImmohrtalAgencyDaily` mutex without waiting.
 3. Calls the Node orchestrator with a stable run ID and timestamp.
 4. Relies on a second exclusive file lock for cross-entrypoint protection.
@@ -56,4 +56,4 @@ The gate requires human approval of the exact prospect, recipient, subject, body
 
 ## Schedule
 
-The Windows task calls `Run-HiddenScheduledTask.vbs`, which resolves the manifest entry and launches the PowerShell entrypoint without a visible console. It creates local evidence and Gmail-ready draft packages only.
+The disabled Windows task still points through `Run-HiddenScheduledTask.vbs`, preserving a reversible hidden-launcher route. It must not be re-enabled until the source metadata, live snapshot, suppression contract, and a dry-run receipt all prove the authorized IMMOHRTAL source. The active 08:30 Codex heartbeat creates company-level evidence only and does not send or book.

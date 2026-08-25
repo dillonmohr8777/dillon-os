@@ -24,9 +24,10 @@ test('office snapshot derives five truthful seat states from the real command bo
   assert.ok(snapshot.roster.every((role) => role.runtime_state === 'NOT_OBSERVED'));
   assert.ok(snapshot.roster.every((role) => role.online_claim === false));
   assert.equal(snapshot.board.total_items, 13);
-  assert.equal(snapshot.board.status_counts.READY_FOR_REVIEW, 5);
+  assert.equal(snapshot.board.status_counts.READY_FOR_REVIEW, 4);
   assert.equal(snapshot.board.status_counts.BLOCKED, 3);
-  assert.equal(snapshot.board.status_counts.DEFERRED, 1);
+  assert.equal(snapshot.board.status_counts.IN_PROGRESS, 1);
+  assert.equal(snapshot.board.status_counts.DEFERRED ?? 0, 0);
   assert.equal(snapshot.office_lifecycle.current_state, 'CONFIGURED_WITH_RECORDED_BLOCKERS');
   assert.equal(snapshot.office_lifecycle.background_runtime_state, 'NOT_VERIFIED_RUNNING');
   assert.equal(snapshot.office_lifecycle.schedule_state, 'NOT_INSTALLED_OR_CHANGED_BY_THIS_RUNNER');
@@ -34,6 +35,13 @@ test('office snapshot derives five truthful seat states from the real command bo
   assert.equal(snapshot.standup.commercial_truth.gmail_drafts_created, 5);
   assert.equal(snapshot.standup.commercial_truth.gmail_drafts_directly_read_back, 5);
   assert.equal(snapshot.standup.commercial_truth.gmail_drafts_compliance_blocked, 5);
+  assert.equal(snapshot.standup.commercial_truth.researched_today, 8);
+  assert.equal(snapshot.standup.commercial_truth.qualified_today, 0);
+  assert.equal(snapshot.standup.commercial_truth.messages_sent, 0);
+  assert.equal(snapshot.standup.commercial_truth.replies, 0);
+  assert.equal(snapshot.standup.commercial_truth.meetings_booked, 0);
+  assert.equal(snapshot.standup.commercial_truth.active_clients, 0);
+  assert.equal(snapshot.standup.commercial_truth.verified_new_revenue_usd, 0);
   assert.ok(Object.values(snapshot.external_actions_performed_by_report_loop).every((value) => value === 0));
   assert.equal(snapshot.privacy.raw_communications_included, false);
   assert.equal(snapshot.privacy.secrets_included, false);
@@ -46,8 +54,10 @@ test('office snapshot consumes the latest real agency receipt without treating i
   assert.equal(snapshot.agency_run_evidence.run_id, '20260825-081000');
   assert.equal(snapshot.agency_run_evidence.counts.total, 25);
   assert.equal(snapshot.agency_run_evidence.counts.awaiting_approval, 25);
+  assert.equal(snapshot.agency_run_evidence.source_authority_state, 'legacy_excluded_source');
+  assert.equal(snapshot.agency_run_evidence.truth_state, 'confirmed_historical_legacy_excluded_source');
   assert.ok(Object.values(snapshot.agency_run_evidence.external_actions).every((value) => value === 0));
-  assert.match(snapshot.agency_run_evidence.does_not_prove, /does not prove the five internal office seats/i);
+  assert.match(snapshot.agency_run_evidence.does_not_prove, /contributes zero active pipeline records/i);
 });
 
 test('command-board parser fails closed when a required handoff field is missing', () => {
