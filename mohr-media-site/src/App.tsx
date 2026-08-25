@@ -1,6 +1,6 @@
 import { lazy, Suspense, useEffect, useMemo, useRef, useState, type KeyboardEvent } from 'react'
 import { SpineStage } from './components/SpineStage'
-import { clients, projects, videos } from './data'
+import { alignSignals, projects, videos } from './data'
 import { SPINE_SECTIONS, type SpineEngine } from './spine/config'
 
 const ParticleLogo = lazy(() => import('./components/ParticleLogo').then((module) => ({ default: module.ParticleLogo })))
@@ -114,9 +114,10 @@ function Navigation() {
   const [open, setOpen] = useState(false)
   const links = [
     ['Align HCM', '#align'],
-    ['Live work', '#work'],
+    ['Search proof', '#search-proof'],
+    ['Live systems', '#work'],
     ['Motion', '#motion'],
-    ['Documents', '#vault'],
+    ['Proof vault', '#vault'],
   ]
   useEffect(() => {
     if (!open) return
@@ -138,7 +139,7 @@ function Navigation() {
       </button>
       <nav id="primary-navigation" className={open ? 'is-open' : ''} aria-label="Primary navigation">
         {links.map(([label, href]) => <a key={href} href={href} onClick={() => setOpen(false)}>{label}</a>)}
-        <a className="nav-contact" href="mailto:hello@themohrmedia.com?subject=Portfolio%20inquiry">Open channel <ArrowIcon /></a>
+        <a className="nav-contact" href="mailto:dillonmohr8777@gmail.com?subject=Align%20HCM%20portfolio">Open channel <ArrowIcon /></a>
       </nav>
     </header>
   )
@@ -179,19 +180,19 @@ function SpineRail({ engineRef }: { engineRef: { current: SpineEngine | null } }
   )
 }
 
-function ClientTicker() {
-  const items = useMemo(() => [...clients, ...clients], [])
+function AlignSignalTicker() {
+  const items = useMemo(() => [...alignSignals, ...alignSignals], [])
   return (
     <section className="client-signal" aria-labelledby="client-signal-title">
       <div className="client-signal__meta">
-        <p id="client-signal-title">Selected client and partner work</p>
-        <span>Scope varied by engagement.</span>
+        <p id="client-signal-title">Align HCM // operating range</p>
+        <span>Strategy through proof.</span>
       </div>
       <div className="client-ticker">
         <div className="client-ticker__track">
-          {items.map(([name, image], index) => (
-            <figure key={`${name}-${index}`} aria-hidden={index >= clients.length}>
-              <img src={image} alt={index < clients.length ? name : ''} />
+          {items.map((signal, index) => (
+            <figure key={`${signal}-${index}`} aria-hidden={index >= alignSignals.length}>
+              <span>{signal}</span>
             </figure>
           ))}
         </div>
@@ -216,7 +217,7 @@ function ProjectRail() {
   return (
     <section className="work-section" id="work">
       <div className="section-heading" data-reveal>
-        <p>02 // Selected web systems</p>
+        <p>02 // Align HCM live systems</p>
         <h2>Built to be<br /><em>opened.</em></h2>
         <div className="rail-controls">
           <button type="button" onClick={() => move(-1)} aria-label="Previous projects"><ArrowIcon direction="left" /></button>
@@ -296,35 +297,47 @@ function VideoTheater() {
 function DocumentVault() {
   const documents = [
     {
-      code: 'ATS',
-      title: 'Dillon Mohr — ATS Résumé',
-      note: 'Selectable, searchable, and structured for recruiting systems.',
-      file: '/downloads/Dillon-Mohr-ATS-Resume.pdf',
+      code: 'LIVE',
+      title: 'Align HCM live experience',
+      note: 'The public site where service architecture, product stories, insights, and conversion paths come together.',
+      file: 'https://www.alignhcm.com/',
     },
     {
-      code: 'VIS',
-      title: 'Dillon Mohr — Visual Résumé',
-      note: 'The designed edition for hiring managers, partners, and collaborators.',
-      file: '/downloads/Dillon-Mohr-Visual-Resume.pdf',
+      code: 'PUB',
+      title: 'Align HCM public sector',
+      note: 'A focused vertical experience connecting workforce continuity, implementation pressure, and HCM outcomes.',
+      file: 'https://align-hcm-public-sector-expanded.netlify.app',
+    },
+    {
+      code: 'CODE',
+      title: 'Align HCM public repository',
+      note: 'Public-safe source and artifacts showing how the marketing system was structured and shipped.',
+      file: 'https://github.com/dillonmohr8777/align-hcm-public-content',
+    },
+    {
+      code: 'READ',
+      title: 'Align HCM insights library',
+      note: 'Long-form education built around implementation, optimization, support, integrations, and buyer readiness.',
+      file: 'https://www.alignhcm.com/blog',
     },
   ]
   return (
     <section className="vault-section" id="vault">
       <div className="section-heading section-heading--light" data-reveal>
-        <p>04 // Document vault</p>
-        <h2>Take the<br /><em>receipts.</em></h2>
-        <span>Approved public documents only. Additional case-study PDFs can drop into this system without changing the experience.</span>
+        <p>04 // Public proof vault</p>
+        <h2>Open the<br /><em>receipts.</em></h2>
+        <span>Only public-safe Align HCM work appears here. No confidential CRM records, internal reports, or private client material.</span>
       </div>
       <div className="document-grid">
         {documents.map((document) => (
-          <a href={document.file} download key={document.code} className="document-card" data-reveal data-tilt>
+          <a href={document.file} target="_blank" rel="noreferrer" key={document.code} className="document-card" data-reveal data-tilt>
             <span>{document.code}</span>
             <div>
-              <p>Portable document // PDF</p>
+              <p>Public Align HCM proof</p>
               <h3>{document.title}</h3>
               <em>{document.note}</em>
             </div>
-            <strong>Download <ArrowIcon direction="down" /></strong>
+            <strong>Open proof <ArrowIcon /></strong>
           </a>
         ))}
       </div>
@@ -347,12 +360,12 @@ export default function App() {
       <main>
         <section className="hero-section" id="top">
           <div className="hero-copy">
-            <p className="eyebrow">Dillon Mohr // marketing systems operator</p>
-            <h1><span>I build the</span><strong>signal.</strong><span>And the system</span><em>behind it.</em></h1>
-            <p className="hero-intro">Positioning, web, content, motion, paid media, CRM, analytics, and AI-assisted production—connected into work people can see, use, and act on.</p>
+            <p className="eyebrow">Dillon Mohr // Align HCM marketing systems</p>
+            <h1><span>I built the</span><strong>signal.</strong><span>And the system</span><em>behind Align HCM.</em></h1>
+            <p className="hero-intro">Strategy, website architecture, search and AI visibility, thought leadership, customer proof, sales enablement, HubSpot, attribution, and motion, connected into one hands-on marketing operation.</p>
             <div className="hero-actions">
               <a className="button button--primary" href="#align">Enter the work <ArrowIcon direction="down" /></a>
-              <a className="button button--glass" href="mailto:hello@themohrmedia.com?subject=Portfolio%20inquiry">Open a channel <ArrowIcon /></a>
+              <a className="button button--glass" href="mailto:dillonmohr8777@gmail.com?subject=Align%20HCM%20portfolio">Open a channel <ArrowIcon /></a>
             </div>
           </div>
           <div className="hero-logo-stage">
@@ -368,17 +381,17 @@ export default function App() {
           </div>
         </section>
 
-        <ClientTicker />
+        <AlignSignalTicker />
 
         <section className="operator-section">
           <div className="operator-manifesto" data-reveal>
-            <p>One operator.</p>
-            <h2>Strategy that can ship.<br />Design that can prove it.<br /><em>Systems that keep moving.</em></h2>
+            <p>One flagship body of work.</p>
+            <h2>Set the strategy.<br />Execute the system.<br /><em>Prove what moved.</em></h2>
           </div>
           <div className="operator-copy" data-reveal>
-            <span>Not a stack of disconnected services.</span>
-            <p>I work across the entire path—from what a brand needs to say, to the page that says it, the campaign that finds the right person, the system that captures the response, and the reporting that tells us what happened.</p>
-            <a href="https://github.com/dillonmohr8777" target="_blank" rel="noreferrer">Inspect public GitHub work <ArrowIcon /></a>
+            <span>Selected past work for Align HCM.</span>
+            <p>I worked across the full marketing path: positioning, writing, website architecture, search, executive and sales content, customer proof, video, event support, HubSpot operations, attribution, and competitive intelligence. This public-safe portfolio reflects my direct contribution and collaborative delivery.</p>
+            <a href="https://github.com/dillonmohr8777/align-hcm-public-content" target="_blank" rel="noreferrer">Inspect Align HCM public work <ArrowIcon /></a>
           </div>
         </section>
 
@@ -388,7 +401,7 @@ export default function App() {
               <p>01 // Flagship body of work</p>
               <img src="/clients/align-hcm.png" alt="Align HCM" />
               <h2>One brand.<br /><em>An entire operating surface.</em></h2>
-              <p>Strategy, repositioning, service architecture, public-sector experiences, SmartCare product storytelling, SEO, paid media, executive content, sales enablement, and motion—built as a connected body of work.</p>
+              <p>Strategy, website architecture, search and AI visibility, thought leadership, customer proof, executive content, sales enablement, HubSpot operations, attribution, competitive intelligence, and motion, built as one connected marketing system.</p>
               <div className="align-links">
                 <a className="button button--dark" href="https://www.alignhcm.com/" target="_blank" rel="noreferrer">Live Align HCM <ArrowIcon /></a>
                 <a className="button button--line" href="https://github.com/dillonmohr8777/align-hcm-public-content" target="_blank" rel="noreferrer">Public repository <ArrowIcon /></a>
@@ -400,26 +413,74 @@ export default function App() {
             </div>
           </div>
 
+          <div className="search-proof" id="search-proof" data-reveal>
+            <div className="search-proof__light" aria-hidden="true" />
+            <div className="search-proof__intro">
+              <p>Google AI Overviews // organic discovery</p>
+              <h3>Search became a living proof surface.</h3>
+              <span>I connected keyword intelligence, content architecture, technical SEO, buyer-intent writing, and AEO/GEO monitoring into an operating system that could be reviewed, prioritized, and improved.</span>
+            </div>
+            <div className="search-proof__metrics" aria-label="Verified Align HCM search and content snapshots">
+              <article>
+                <strong>436</strong>
+                <span>Tracked U.S. organic ranking positions<em>Verified Semrush snapshot // Aug 12, 2026</em></span>
+              </article>
+              <article>
+                <strong>6</strong>
+                <span>Google AI Overview cited pages<em>Verified Semrush snapshot // Aug 25, 2026</em></span>
+              </article>
+              <article>
+                <strong>85</strong>
+                <span>Total AI-search cited pages<em>Verified Semrush snapshot // Aug 25, 2026</em></span>
+              </article>
+              <article>
+                <strong>107</strong>
+                <span>Posts in the HubSpot content library<em>Verified portal inventory // Aug 25, 2026</em></span>
+              </article>
+            </div>
+            <p className="search-proof__note">Snapshot evidence, not a causal performance claim. Search and AI-result visibility varies by query, location, account, and time.</p>
+          </div>
+
           <div className="align-proof-grid">
             <article data-reveal data-tilt>
-              <span>Positioning // Architecture</span>
+              <span>Marketing strategy // Hands-on execution</span>
+              <h3>Set the plan. Then build every moving part.</h3>
+              <p>Connected positioning, quarterly priorities, channel plans, production systems, stakeholder feedback, and weekly execution instead of handing strategy off downstream.</p>
+            </article>
+            <article data-reveal data-tilt>
+              <span>Website // Service architecture</span>
               <h3>Turn complex HCM services into a decision path.</h3>
-              <p>Reframed the live site around high-intent implementation, optimization, support, compliance, integration, and post-launch needs.</p>
+              <p>Reframed implementation, optimization, support, compliance, integrations, and post-launch needs around the questions high-intent buyers actually ask.</p>
             </article>
             <article data-reveal data-tilt>
-              <span>Public sector // Experience</span>
-              <h3>Make each mission feel understood.</h3>
-              <p>Designed an industry-solutions system connecting operational pressure, platform reality, and implementation outcomes across public-service environments.</p>
+              <span>Thought leadership // Content engine</span>
+              <h3>Build an expert voice at production scale.</h3>
+              <p>Produced long-form articles, weekly social systems, executive-ready points of view, and search-led topic clusters grounded in real implementation questions.</p>
             </article>
             <article data-reveal data-tilt>
-              <span>SmartCare // Product story</span>
+              <span>Customer proof // Case-study engine</span>
+              <h3>Turn delivery stories into sales-ready evidence.</h3>
+              <p>Built customer-proof workflows spanning reference recruitment, interview direction, written stories, social carousels, one-pagers, and short-form video assets.</p>
+            </article>
+            <article data-reveal data-tilt>
+              <span>Lifecycle // Sales enablement</span>
+              <h3>Carry one idea through every buying moment.</h3>
+              <p>Extended core narratives across LinkedIn, email nurture, webinar and event content, landing pages, follow-up assets, and sales one-pagers.</p>
+            </article>
+            <article data-reveal data-tilt>
+              <span>Public sector // Vertical marketing</span>
+              <h3>Make regulated operators feel understood.</h3>
+              <p>Connected workforce continuity, compliance pressure, platform reality, and implementation outcomes across distinct public-service environments.</p>
+            </article>
+            <article data-reveal data-tilt>
+              <span>SmartCare // Product marketing</span>
               <h3>Give support after launch a product language.</h3>
-              <p>Built a content and product-marketing pillar around continuous HCM support, platform stewardship, and measurable operating confidence.</p>
+              <p>Built a content and conversion pillar around continuous HCM support, optimization, platform stewardship, and measurable operating confidence.</p>
             </article>
             <article data-reveal data-tilt>
-              <span>Campaign system // Motion</span>
-              <h3>Carry the same idea into every channel.</h3>
-              <p>Directed and produced cross-channel work spanning search, LinkedIn, email, thought leadership, one-pagers, case studies, and HTML motion.</p>
+              <span>HubSpot // Revenue intelligence</span>
+              <h3>Connect content, leads, deals, and decisions.</h3>
+              <p>Built defensible attribution logic, lead-intelligence dashboards, source QA, competitive monitoring, and executive reporting without overstating what the CRM could prove.</p>
             </article>
           </div>
 
@@ -444,18 +505,18 @@ export default function App() {
           </div>
           <div className="contact-copy" data-reveal>
             <p>05 // Open channel</p>
-            <h2>Bring me the<br /><em>hard one.</em></h2>
-            <span>If the work needs strategy, taste, systems thinking, and someone willing to build it, that is the conversation.</span>
-            <a className="contact-email" href="mailto:hello@themohrmedia.com?subject=Let%27s%20build%20something">hello@themohrmedia.com <ArrowIcon /></a>
+            <h2>Built for the<br /><em>head-of-marketing seat.</em></h2>
+            <span>If the role needs strategy, writing, customer proof, vertical marketing, systems thinking, and someone willing to execute the work directly, that is the conversation.</span>
+            <a className="contact-email" href="mailto:dillonmohr8777@gmail.com?subject=Align%20HCM%20portfolio">dillonmohr8777@gmail.com <ArrowIcon /></a>
           </div>
           <footer>
             <p>Dillon Mohr // Pittsburgh, Pennsylvania</p>
             <nav aria-label="Footer links">
-              <a href="https://github.com/dillonmohr8777" target="_blank" rel="noreferrer">GitHub</a>
-              <a href="/downloads/Dillon-Mohr-ATS-Resume.pdf" download>Résumé</a>
+              <a href="https://www.alignhcm.com/" target="_blank" rel="noreferrer">Align HCM</a>
+              <a href="https://github.com/dillonmohr8777/align-hcm-public-content" target="_blank" rel="noreferrer">Public work</a>
               <a href="#top">Back to signal</a>
             </nav>
-            <span>© 2026 Dillon Mohr // IMMOHRTAL</span>
+            <span>© 2026 Dillon Mohr // Selected Align HCM work</span>
           </footer>
         </section>
       </main>

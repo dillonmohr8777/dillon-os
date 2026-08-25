@@ -25,9 +25,9 @@ export interface SpineEngine {
 export const SPINE_SECTIONS: SpineSection[] = [
   { id: 'top', label: 'SIGNAL IN' },
   { id: 'align', label: 'ALIGN HCM' },
-  { id: 'work', label: 'LIVE WORK' },
+  { id: 'work', label: 'ALIGN SYSTEMS' },
   { id: 'motion', label: 'MOTION' },
-  { id: 'vault', label: 'DOCUMENTS' },
+  { id: 'vault', label: 'PUBLIC PROOF' },
   { id: 'contact', label: 'OPEN CHANNEL' },
 ]
 
