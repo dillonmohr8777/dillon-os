@@ -5,21 +5,20 @@
  *
  * ## Why this replaces the old rotation
  *
- * Discovery used to pick its target by day-of-year: seven slots, Philadelphia
- * taking one of them. The comment claimed that "keeps coverage even". It does
- * not, and the registry proves it — Montgomery County reached 389 rows against
- * Philadelphia's 175, a 2.2:1 skew *away* from the market this pipeline is
- * supposed to serve.
+ * Discovery used to concentrate on Philadelphia and a short list of nearby
+ * counties. That made the daily job look healthy while most of Pennsylvania
+ * never entered the candidate pool at all.
  *
  * The reason is that the rotation is even in *slots*, not in *rows*. Montgomery
  * is a large, densely-mapped county, so one Montgomery slot returns far more
  * businesses than one Philadelphia slot. Rotating fairly over unequal yields
  * produces unequal coverage, forever, with no feedback to correct it.
  *
- * So this plans from the registry instead. It compares what each county and
- * vertical actually holds against what it *should* hold, and spends the day's
- * budget on the largest deficits. That makes coverage self-correcting: the
- * thinner a cell is, the more of tomorrow it gets, until it is no longer thin.
+ * This planner covers all 67 Pennsylvania counties, grouped into six operating
+ * regions. Every daily run selects at least one under-covered county from each
+ * region, then spends any additional area slots on the largest remaining
+ * deficits. The result is a literal statewide sweep every day without sending
+ * one giant, abusive query to the community-run Overpass service.
  *
  * ## Why the budget is small
  *
@@ -40,26 +39,53 @@
 const { VERTICAL_GROUPS } = require('./discovery');
 
 /**
- * Target share of the registry per area.
- *
- * These are shares of the *whole* registry, not of a single day. Philadelphia
- * dominates because that is where local proof, own photography and a drivable
- * meeting actually exist — the same reasoning behind the geography weight in
- * radar.priorityScore, expressed as a coverage goal rather than a ranking nudge.
- *
- * Sums to 1.0.
+ * Statewide operating regions. These are coverage buckets, not political or
+ * tourism designations. Every county appears exactly once, and every region is
+ * represented in every default daily plan.
  */
-const AREA_TARGETS = [
-  { name: 'Philadelphia', adminLevel: 8, state: 'Pennsylvania', market: 'PHL', share: 0.34 },
-  { name: 'Delaware County', adminLevel: 6, state: 'Pennsylvania', market: 'PHL', share: 0.15 },
-  { name: 'Montgomery County', adminLevel: 6, state: 'Pennsylvania', market: 'PHL', share: 0.14 },
-  { name: 'Bucks County', adminLevel: 6, state: 'Pennsylvania', market: 'PHL', share: 0.13 },
-  { name: 'Chester County', adminLevel: 6, state: 'Pennsylvania', market: 'PHL', share: 0.12 },
-  { name: 'Lehigh County', adminLevel: 6, state: 'Pennsylvania', market: 'PA', share: 0.04 },
-  { name: 'Berks County', adminLevel: 6, state: 'Pennsylvania', market: 'PA', share: 0.03 },
-  { name: 'Lancaster County', adminLevel: 6, state: 'Pennsylvania', market: 'PA', share: 0.03 },
-  { name: 'Allegheny County', adminLevel: 6, state: 'Pennsylvania', market: 'PGH', share: 0.02 },
+const PA_REGIONS = [
+  {
+    key: 'southeast', label: 'Southeast',
+    counties: ['Philadelphia', 'Bucks', 'Chester', 'Delaware', 'Montgomery', 'Berks', 'Lehigh', 'Northampton'],
+  },
+  {
+    key: 'south-central', label: 'South Central',
+    counties: ['Lancaster', 'Lebanon', 'York', 'Adams', 'Cumberland', 'Dauphin', 'Franklin', 'Perry', 'Fulton', 'Juniata', 'Mifflin'],
+  },
+  {
+    key: 'northeast', label: 'Northeast',
+    counties: ['Lackawanna', 'Luzerne', 'Monroe', 'Pike', 'Wayne', 'Susquehanna', 'Wyoming', 'Schuylkill', 'Carbon', 'Columbia', 'Montour', 'Northumberland', 'Snyder', 'Union'],
+  },
+  {
+    key: 'north-central', label: 'North Central',
+    counties: ['Centre', 'Clinton', 'Lycoming', 'Tioga', 'Potter', 'McKean', 'Cameron', 'Elk', 'Clearfield', 'Sullivan', 'Bradford'],
+  },
+  {
+    key: 'southwest', label: 'Southwest',
+    counties: ['Allegheny', 'Armstrong', 'Beaver', 'Bedford', 'Blair', 'Cambria', 'Fayette', 'Greene', 'Huntingdon', 'Indiana', 'Somerset', 'Washington', 'Westmoreland'],
+  },
+  {
+    key: 'northwest', label: 'Northwest',
+    counties: ['Butler', 'Clarion', 'Crawford', 'Erie', 'Forest', 'Jefferson', 'Lawrence', 'Mercer', 'Venango', 'Warren'],
+  },
 ];
+
+/**
+ * Equal regional coverage, divided evenly among the counties in that region.
+ * This prevents the Philadelphia metro from dominating simply because it is
+ * densely mapped while still giving every part of the state a daily lane.
+ */
+const AREA_TARGETS = PA_REGIONS.flatMap((region) =>
+  region.counties.map((county) => ({
+    name: county === 'Philadelphia' ? 'Philadelphia' : `${county} County`,
+    adminLevel: county === 'Philadelphia' ? 8 : 6,
+    state: 'Pennsylvania',
+    market: 'PA',
+    region: region.key,
+    regionLabel: region.label,
+    share: (1 / PA_REGIONS.length) / region.counties.length,
+  }))
+);
 
 /**
  * Target share per vertical group.
@@ -129,22 +155,26 @@ function num(v, d = 0) {
  * @param {object} registry radar.load() output
  * @param {object} [opts]
  * @param {number} [opts.budget] rows to aim to add today; defaults to DAILY.discover
- * @param {number} [opts.maxAreas=3] how many areas to visit in one run — each
- *        area costs several Overpass queries, and that API is a free community
- *        service, so a run stays polite rather than sweeping everything nightly
+ * @param {number} [opts.maxAreas=6] how many counties to visit in one run. The
+ *        default is one county from each Pennsylvania operating region.
  * @param {number} [opts.groupsPerArea=3]
+ * @param {string} [opts.today] ISO date used to rotate equally thin counties
  * @returns {{targets:Array, budget:number, throttled:boolean, total:number,
  *            reason:string, areaDeficits:Array, groupDeficits:Array}}
  */
 function planDiscovery(registry, opts = {}) {
   const all = Object.values(registry?.prospects || {});
   const total = all.length;
-  const maxAreas = opts.maxAreas ?? 3;
+  const maxAreas = opts.maxAreas ?? PA_REGIONS.length;
   const groupsPerArea = opts.groupsPerArea ?? 3;
+  const today = /^\d{4}-\d{2}-\d{2}$/.test(String(opts.today || ''))
+    ? String(opts.today)
+    : new Date().toISOString().slice(0, 10);
+  const dayNumber = Math.floor(Date.parse(`${today}T00:00:00Z`) / 86400000);
 
   const requested = num(opts.budget, DAILY.discover);
   let budget = requested;
-  let reason = `targeting the thinnest cells against a ${total}-row registry`;
+  let reason = `statewide Pennsylvania coverage across ${PA_REGIONS.length} regions and ${AREA_TARGETS.length} counties`;
 
   // Throttle as the registry approaches the size where another unaudited row is
   // worth less than a rendered one. A linear ramp between the caps rather than a
@@ -188,7 +218,8 @@ function planDiscovery(registry, opts = {}) {
   const areaDeficits = AREA_TARGETS.map((a) => {
     const have = areaCount.get(a.name) || 0;
     const want = Math.round(projected * a.share);
-    return { ...a, have, want, deficit: want - have };
+    const lastAttempt = registry?.coverage_attempts?.[a.name]?.last_attempt || null;
+    return { ...a, have, want, deficit: want - have, lastAttempt };
   }).sort((x, y) => y.deficit - x.deficit);
 
   const groupDeficits = Object.entries(GROUP_TARGETS)
@@ -203,13 +234,44 @@ function planDiscovery(registry, opts = {}) {
     return { targets: [], budget, throttled, total, reason, areaDeficits, groupDeficits };
   }
 
-  // Only areas actually behind target are worth a query. If every area is at or
-  // above target the registry is balanced, so fall back to the single largest
-  // (least negative) deficit rather than querying nothing and reporting success.
-  let chosenAreas = areaDeficits.filter((a) => a.deficit > 0).slice(0, maxAreas);
+  // Give every region a daily lane. Within each region, choose the county with
+  // the largest deficit. If maxAreas is smaller than the region count (manual
+  // runs only), keep the regions with the largest top deficit. Extra slots go
+  // to the largest remaining county deficits statewide.
+  const regionalPicks = PA_REGIONS
+    .map((region) => {
+      const candidates = areaDeficits.filter((a) => a.region === region.key);
+      const order = AREA_TARGETS.filter((a) => a.region === region.key).map((a) => a.name);
+      const offset = ((dayNumber % order.length) + order.length) % order.length;
+      const rotatedRank = (name) => {
+        const index = order.indexOf(name);
+        return ((index - offset) % order.length + order.length) % order.length;
+      };
+      // Never-swept counties go first. After every county has been attempted,
+      // the oldest successful sweep goes first. Deficit then decides among
+      // equally fresh counties, with the date rotation as the final tie-break.
+      candidates.sort((a, b) => {
+        if (!a.lastAttempt && b.lastAttempt) return -1;
+        if (a.lastAttempt && !b.lastAttempt) return 1;
+        if (a.lastAttempt && b.lastAttempt && a.lastAttempt !== b.lastAttempt) {
+          return a.lastAttempt.localeCompare(b.lastAttempt);
+        }
+        return (b.deficit - a.deficit) || (rotatedRank(a.name) - rotatedRank(b.name));
+      });
+      return candidates[0];
+    })
+    .filter(Boolean)
+    .sort((a, b) => b.deficit - a.deficit);
+  let chosenAreas = regionalPicks.slice(0, Math.min(maxAreas, regionalPicks.length));
+  if (chosenAreas.length < maxAreas) {
+    const picked = new Set(chosenAreas.map((a) => a.name));
+    chosenAreas = chosenAreas.concat(
+      areaDeficits.filter((a) => !picked.has(a.name)).slice(0, maxAreas - chosenAreas.length)
+    );
+  }
   if (!chosenAreas.length) {
     chosenAreas = areaDeficits.slice(0, 1);
-    reason = `every area is at or above target; topping up ${chosenAreas[0].name}`;
+    reason = `statewide registry balanced; topping up ${chosenAreas[0].name}`;
   }
 
   const chosenGroups = (() => {
@@ -218,19 +280,37 @@ function planDiscovery(registry, opts = {}) {
     return pool.slice(0, groupsPerArea).map((g) => g.group).filter((g) => VERTICAL_GROUPS[g]);
   })();
 
-  // Split the budget across areas in proportion to how far behind each one is.
+  // Split the budget across areas in proportion to how far behind each one is,
+  // reserving at least one slot per selected region. Integer allocation sums
+  // exactly to the daily budget so an early county cannot consume the final
+  // region's reservation before its query runs.
   const deficitSum = chosenAreas.reduce((s, a) => s + Math.max(1, a.deficit), 0);
-  const targets = chosenAreas.map((a) => {
-    const weight = Math.max(1, a.deficit) / deficitSum;
+  const guaranteed = budget >= chosenAreas.length ? 1 : 0;
+  const caps = chosenAreas.map(() => guaranteed);
+  let remaining = Math.max(0, budget - guaranteed * chosenAreas.length);
+  const shares = chosenAreas.map((a) => (remaining * Math.max(1, a.deficit)) / deficitSum);
+  for (let i = 0; i < shares.length; i++) {
+    const whole = Math.floor(shares[i]);
+    caps[i] += whole;
+    remaining -= whole;
+  }
+  const remainderOrder = shares
+    .map((share, i) => ({ i, fraction: share - Math.floor(share) }))
+    .sort((a, b) => b.fraction - a.fraction);
+  for (let i = 0; i < remaining; i++) caps[remainderOrder[i % remainderOrder.length].i] += 1;
+
+  const targets = chosenAreas.map((a, index) => {
     return {
       name: a.name,
       adminLevel: a.adminLevel,
       state: a.state,
       market: a.market,
+      region: a.region,
+      regionLabel: a.regionLabel,
       groups: chosenGroups,
       // Per-area cap, so one dense county cannot absorb the whole day again —
       // which is exactly how the old rotation produced the Montgomery skew.
-      cap: Math.max(5, Math.round(budget * weight)),
+      cap: caps[index],
       have: a.have,
       want: a.want,
       deficit: a.deficit,
@@ -246,7 +326,7 @@ function planDiscovery(registry, opts = {}) {
 function describePlan(plan) {
   if (!plan.targets.length) return plan.reason;
   const parts = plan.targets.map(
-    (t) => `${t.name} +${t.cap} (has ${t.have}, wants ${t.want})`
+    (t) => `${t.regionLabel}: ${t.name} +${t.cap} (has ${t.have}, wants ${t.want})`
   );
   return `${parts.join(' · ')} — groups: ${plan.targets[0].groups.join(', ')}`;
 }
@@ -255,6 +335,7 @@ module.exports = {
   planDiscovery,
   describePlan,
   AREA_TARGETS,
+  PA_REGIONS,
   GROUP_TARGETS,
   DAILY,
   REGISTRY_SOFT_CAP,

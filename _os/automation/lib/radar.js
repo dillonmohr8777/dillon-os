@@ -52,28 +52,23 @@ const RECHECK_DAYS = {
 };
 
 /**
- * Geography weight. Momentum 360 is a Philadelphia agency: local proof carries
- * the cold open, Sean can shoot photography in the city, and drive-time meetings
- * are possible in the collar counties. A Pittsburgh prospect with an identical
- * site is genuinely worth less to this pipeline, and the ranking should say so
- * rather than pretending the state is uniform.
+ * Geography weight. Pennsylvania is now one operating market. A business in
+ * Erie, Scranton, Harrisburg, Pittsburgh, or Philadelphia receives the same
+ * geography score; website opportunity and lifecycle decide the ranking.
+ * Clearly labelled out-of-state rows remain lower so accidental imports cannot
+ * displace the Pennsylvania queue.
  */
-const GEO_WEIGHT = {
-  'Philadelphia': 1,
-  'Delaware County': 0.92,
-  'Montgomery County': 0.92,
-  'Bucks County': 0.88,
-  'Chester County': 0.88,
-};
-const GEO_WEIGHT_DEFAULT_PA = 0.62;
-const GEO_WEIGHT_PHL_MARKET = 0.9;
+const GEO_WEIGHT_PA = 1;
+const GEO_WEIGHT_OUT_OF_STATE = 0.7;
 
 function geoWeight(row) {
-  if (row.area && GEO_WEIGHT[row.area] != null) return GEO_WEIGHT[row.area];
-  if (row.county && GEO_WEIGHT[row.county] != null) return GEO_WEIGHT[row.county];
-  if (String(row.city || '').toLowerCase() === 'philadelphia') return 1;
-  if (String(row.market || '').toUpperCase() === 'PHL') return GEO_WEIGHT_PHL_MARKET;
-  return GEO_WEIGHT_DEFAULT_PA;
+  const state = String(row.state || '').trim().toUpperCase();
+  const market = String(row.market || '').trim().toUpperCase();
+  if (state && !['PA', 'PENNSYLVANIA'].includes(state)) return GEO_WEIGHT_OUT_OF_STATE;
+  if (market && !['PA', 'PHL', 'PGH', 'ERI', 'ALN', 'HBG', 'LAN', 'RDG', 'SCR', 'YRK', 'SCE'].includes(market)) {
+    return GEO_WEIGHT_OUT_OF_STATE;
+  }
+  return GEO_WEIGHT_PA;
 }
 
 function addDays(iso, days) {
@@ -264,9 +259,8 @@ function recordGrade(registry, domain, result, { today = todayISO() } = {}) {
 }
 
 /**
- * Ranking number the dashboard sorts by. Opportunity, scaled by how much a
- * Philadelphia-area win is worth to this pipeline, with a nudge for sites we can
- * see actively decaying.
+ * Ranking number the dashboard sorts by. Opportunity is statewide across
+ * Pennsylvania, with a nudge for sites we can see actively decaying.
  */
 function priorityScore(p) {
   const opp = Number(p.current?.opportunity);
@@ -328,6 +322,10 @@ function setLifecycle(registry, domain, lifecycle, { note = '', today = todayISO
 function summarize(registry, { today = todayISO() } = {}) {
   const all = Object.values(registry.prospects);
   const actionable = all.filter((p) => p.lifecycle !== 'client' && p.lifecycle !== 'excluded');
+  // Ranking policy can change independently of a site's last audit. Recompute
+  // every actionable row when the dashboard is built so the statewide policy
+  // takes effect immediately instead of waiting months for old rows to regrade.
+  for (const p of actionable) p.priority_score = priorityScore(p);
   const graded = actionable.filter((p) => p.current && p.current.sqs != null);
 
   const byVerdict = {};
@@ -470,6 +468,7 @@ module.exports = {
   addDays,
   daysBetween,
   RECHECK_DAYS,
-  GEO_WEIGHT,
+  GEO_WEIGHT_PA,
+  GEO_WEIGHT_OUT_OF_STATE,
   REGISTRY_PATH,
 };
