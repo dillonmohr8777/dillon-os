@@ -1,30 +1,33 @@
 {
   "automation_id": "radar-refresh",
-  "started_at": "2026-08-24T07:17:30.206Z",
+  "started_at": "2026-08-25T01:17:06.441Z",
   "status": "ok",
-  "date": "2026-08-24",
-  "rotation_slot": "PHL: Philadelphia, Delaware County, Bucks County",
+  "date": "2026-08-25",
+  "rotation_slot": "PA: Northampton County, Butler County, Mifflin County, Bradford County, Greene County, Snyder County",
   "run": {
-    "discovered_raw": 145,
-    "discovered_new": 0,
-    "regraded": 0,
+    "discovered_raw": 52,
+    "discovered_new": 32,
+    "regraded": 33,
     "enriched": 53,
     "enrich_no_match": 7,
     "enrich_skipped": 0,
     "errors": [],
-    "plan": "targeting the thinnest cells against a 1089-row registry",
-    "throttled": false
+    "plan": "statewide Pennsylvania coverage across 6 regions and 67 counties",
+    "throttled": false,
+    "rendered": 27,
+    "imagery_checked": 7,
+    "imagery_buildable": 1
   },
-  "tracked": 1089,
-  "build_queue_size": 207,
+  "tracked": 1121,
+  "build_queue_size": 214,
   "needs_render": 0,
   "mean_site_quality": 54,
   "by_verdict": {
-    "rebuild": 207,
-    "polish": 692,
-    "enrich": 21,
-    "nurture": 129,
-    "ads_seo": 26
+    "rebuild": 214,
+    "polish": 711,
+    "enrich": 24,
+    "nurture": 131,
+    "ads_seo": 27
   },
   "errors": []
 }
