@@ -1,23 +1,41 @@
 ---
-last_checked: 2026-04-15
-tags: [system, routines]
+last_checked: 2026-08-25
+last_orchestrator_run: pending
+tags: [system, routines, orchestrator]
+umbrella: competitive-task-orchestrator
+cron: "0 13 * * * America/New_York"
 ---
 
 # Routine Health Monitor
 
-All routines: initialized, first runs scheduled. Vault is seeded with frontmatter fields the routines expect (`client`, `last_touched`, `next_action`, `due`, `tags`, `status`, `division`, `cc_list`, `contact_email`).
+Umbrella workflow: **competitive-task-orchestrator** (1:00 PM ET daily).  
+Legacy seven Cursor crons are retired — see `System/competitive-task-definition.md`.
 
-## Routines expected to run
-- `nightly-client-pulse` — generates Daily-Briefs/pulse-today.md.
-- `gmail-to-vault-digest` — updates System/urgent-replies.md every 7:00 AM.
-- `vault-integrity-sync` — rewrites System/claude-memory-sync.md nightly at 2:00 AM.
-- `chat-to-vault-sync` — syncs conversation state every 2 hours.
-- `bok-law-social-content` — generates BOK Law weekly social content every Sunday 6:00 PM.
-- `linkedin-growth-engine` — reads 02_FullTimeJob/AlignHCM/linkedin-calendar.md every Sunday 9:00 PM.
-- `book-site-seo-sweep` — reads 05_Book/seo-strategy.md every Thursday.
+## Umbrella lanes (Phase 1 parallel)
 
-## Notes
-- First real test of the full routine stack begins 2026-04-16.
+| Lane | Agent | Expected artifact | Status |
+|------|-------|-------------------|--------|
+| Gmail | gmail-intel | `System/urgent-replies.md` | pending |
+| Slack | slack-intel | `System/slack-action-queue.md` | pending |
+| Vault | vault-pulse | consolidator section | pending |
+| Sessions | codex-session-sync | session promotions | pending |
+| Ads/SEO | domain-ads-seo | queue P0 summary | pending |
+| Content | content-routines | Sun/Thu drafts or skipped | pending |
+| Automation | automation-health | lane health summary | pending |
+
+Phase 2: `memory-consolidator` → `Daily-Briefs/competitive-task-today.md`
+
+## Local schedulers (surfaced, not replaced)
+
+| Scheduler | Cadence | Health signal |
+|-----------|---------|---------------|
+| Claude-Autonomous-Daily-Driver | Every 15 min | `12_Brain/queue/claude-loop-*.jsonl` |
+| DillonAgentOS-GmailBridge | ~15 min | `00_Inbox/` Gmail captures |
+| DillonAgentOS-SlackBridge | ~15 min | `00_Inbox/slack/` |
+| Prospect Radar Next 20 | Daily 5:20 AM ET | `automation/prospect-radar-next20/` logs |
+| Codex cron automations | Per `automation.toml` | ACTIVE vs PAUSED in workflow-estate |
 
 ## Brain layer
+
 - Canonical: [[12_Brain/README|12_Brain]] · [[12_Brain/System/Health Automation|Health Automation]]
+- Spec: [[11_Agents/competitive-task-orchestrator-spec]]

@@ -36,6 +36,7 @@ role; the contract is markdown + JSON, not a model feature.
 | Reporting | [[Reporting Agent]] | Monthly HTML performance reports | `/client-report`, `/metrics-pull` |
 | SEO/content | [[SEO Agent]] | GBP, blogs, Squarespace SEO | `/content-scan`, blog pipeline |
 | Comms triage | (built into intake) | Slack + inbox | `/slack-intake`, `/inbox-brief` |
+| Afternoon umbrella | [[competitive-task-orchestrator-spec]] | Daily 1 PM ET priority stack | `.cursor/agents/*` parallel lanes |
 
 ## Decision logic
 

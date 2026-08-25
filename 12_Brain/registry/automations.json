@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-07-29",
+  "updated": "2026-08-25",
   "contract": "00_Inbox/Automation Deep Analysis 2026-07-29.md",
   "dependency": "12_Brain/DEPENDENCY_PR226.md",
   "automations": [
@@ -409,6 +409,32 @@
       "external_actions": false,
       "status": "implemented",
       "note": "Split write/read: an MCP-capable agent records observed connector status; this CLI only validates freshness. It never contacts a provider and never invents a status."
+    },
+    {
+      "id": "competitive-task-orchestrator",
+      "name": "Afternoon umbrella — parallel intel lanes + daily brief",
+      "lane": "command",
+      "tier": 0,
+      "cadence": "daily at 1:00 PM America/New_York",
+      "command": "Cursor Automation competitive-task-orchestrator (see System/competitive-task-orchestrator-prompt.md)",
+      "inputs": [
+        "Gmail MCP when connected",
+        "Slack MCP when connected",
+        "01_Clients/",
+        "10_Sessions/",
+        "02_Campaigns/*Queue*.md",
+        "12_Brain/queue/claude-loop-*.jsonl"
+      ],
+      "outputs": [
+        "Daily-Briefs/competitive-task-today.md",
+        "System/urgent-replies.md",
+        "System/slack-action-queue.md",
+        "System/claude-memory-sync.md",
+        "System/routine-health.md"
+      ],
+      "external_actions": false,
+      "notes": "Replaces seven legacy Cursor crons. Seven parallel Phase-1 subagents plus memory-consolidator. Does not replace Windows Claude daily driver or Codex crons — surfaces their health. Codex/Marketing Chief owns execution.",
+      "status": "active-scheduled"
     },
     {
       "id": "browser-access",
