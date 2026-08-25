@@ -477,6 +477,7 @@ export function ClientParticleSequence({
   logoDurationMs = DEFAULT_LOGO_DURATION,
 }: ClientParticleSequenceProps) {
   const compact = useMediaQuery('(max-width: 760px)')
+  const narrow = useMediaQuery('(max-width: 480px)')
   const reducedMotion = useMediaQuery('(prefers-reduced-motion: reduce)')
   const brandSignature = brands.map((brand) => (
     isTupleBrand(brand) ? `${brand[0]}|${brand[1]}` : `${brand.name}|${brand.logo}|${brand.seed ?? ''}`
@@ -600,7 +601,7 @@ export function ClientParticleSequence({
           <Canvas
             className="client-particle-sequence__canvas"
             dpr={[1, 1.45]}
-            camera={{ position: [0, 0, compact ? 7.4 : 8], fov: compact ? 42 : 38 }}
+            camera={{ position: [0, 0, compact ? 7.4 : 8], fov: narrow ? 58 : compact ? 42 : 38 }}
             gl={{ antialias: false, alpha: true, powerPreference: 'high-performance' }}
           >
             {clouds && (
