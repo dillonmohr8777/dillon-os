@@ -7,6 +7,8 @@ import { fileURLToPath } from 'node:url';
 import { loadInput, loadSuppressions, parseCsv } from '../src/input-adapters.mjs';
 import { executeRun } from '../src/orchestrator.mjs';
 import { STATES, discovered, transition } from '../src/state-machine.mjs';
+import { buildDriveSnapshot } from '../src/drive-snapshot-adapter.mjs';
+import { extractHtmlEvidence } from '../src/evidence.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const config = JSON.parse(fs.readFileSync(path.join(root, 'config', 'default.json'), 'utf8'));
@@ -36,7 +38,8 @@ test('orchestrator is deterministic, suppresses opt-outs, and stops at approval'
   assert.equal(first.receipt.counts.suppressed, 1);
   assert.deepEqual(first.receipt.artifact_sha256, second.receipt.artifact_sha256);
   assert.ok(first.records.filter((record) => record.state === STATES.AWAITING_APPROVAL).every((record) => record.approval_gate.status === 'NOT_GRANTED'));
-  assert.deepEqual(first.receipt.external_actions, { sent: 0, published: 0, spend_changes: 0, crm_writes: 0, credential_accesses: 0 });
+  assert.deepEqual(first.receipt.external_actions, { gmail_drafts_created: 0, sent: 0, published: 0, spend_changes: 0, crm_writes: 0, credential_accesses: 0 });
+  assert.ok(fs.existsSync(path.join(first.runDir, 'gmail-draft-manifest.json')));
 });
 
 test('global suppression and within-run dedupe are fail-closed', () => {
@@ -61,3 +64,27 @@ test('Momentum 360 labeled sources and external-action config are rejected', () 
   assert.throws(() => executeRun({ config: unsafe, input: cleanInput, suppressions: [], runId: '20260824-120003', asOf, outputRoot }), /Fail-closed/);
 });
 
+test('Drive snapshot adapter imports only email-ready allowlist rows and builds hard suppressions', () => {
+  const metadata = {
+    source_id: 'drive', default_market: 'Philadelphia region',
+    sources: {
+      cleared: { sheet_id: 'allow', title: 'CALL LIST', tab: 'Untitled', modified_time: asOf },
+      hold: { sheet_id: 'hold' }, do_not_pitch: { sheet_id: 'dnc' }
+    }
+  };
+  const result = buildDriveSnapshot({
+    metadata, capturedAt: asOf,
+    clearedText: ',Business,Best email,Our concept,Vertical\n0,Alpha,hello@alpha.test,https://example.com/alpha,plumber\n1,Beta,,https://example.com/beta,roofing\n',
+    holdText: ',Business,Fix,Their site\n0,Hold Co,Needs review,https://hold.test\n',
+    doNotPitchText: ',Business,Why,Their site\n0,Skip Co,Closed,https://skip.test\n'
+  });
+  assert.equal(result.input.prospects.length, 1);
+  assert.equal(result.input.prospects[0].website_kind, 'prebuilt_concept');
+  assert.equal(result.suppressions.entries.filter((entry) => entry.type === 'company').length, 2);
+  assert.equal(result.counts.excluded_without_email_or_concept, 1);
+});
+
+test('HTML evidence extractor returns bounded title, h1, and description', () => {
+  const evidence = extractHtmlEvidence('<html><head><title> Alpha &amp; Co </title><meta name="description" content="Clear local service."></head><body><h1>Built for people</h1></body></html>');
+  assert.deepEqual(evidence, { title: 'Alpha & Co', h1: 'Built for people', meta_description: 'Clear local service.' });
+});

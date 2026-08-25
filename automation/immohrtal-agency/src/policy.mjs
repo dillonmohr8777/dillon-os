@@ -10,7 +10,10 @@ export function normalizeEmail(email = '') {
 }
 
 export function prospectKey(prospect) {
-  return normalizeDomain(prospect.website) || normalizeEmail(prospect.contact_email) || String(prospect.company_name || '').trim().toLowerCase();
+  if (prospect.website_kind === 'prebuilt_concept') {
+    return normalizeEmail(prospect.contact_email) || String(prospect.company_name || '').trim().toLowerCase();
+  }
+  return normalizeDomain(prospect.business_website || prospect.website) || normalizeEmail(prospect.contact_email) || String(prospect.company_name || '').trim().toLowerCase();
 }
 
 export function sha256(value) {
@@ -25,8 +28,18 @@ export function validateSource(source, config) {
   if (config.policy.forbidden_source_labels.some((blocked) => label.includes(blocked))) {
     throw new Error('Momentum 360 sources are forbidden for the IMMOHRTAL agency lane.');
   }
-  if (type === 'google_drive_discovery_reference') throw new Error('Google Drive source is metadata-only until a read-only requalification adapter exists.');
+  if (type === 'google_drive_snapshot' && source?.adapter_status !== 'live_snapshot') throw new Error('Google Drive input must come from a verified live snapshot adapter.');
   if (source?.requalified_for_immohrtal !== true) throw new Error('Input source must be explicitly requalified_for_immohrtal=true.');
+}
+
+export function assertSourceFreshness(source, config, asOf) {
+  if (source?.source_type !== 'google_drive_snapshot') return;
+  const captured = Date.parse(source.captured_at || '');
+  const current = Date.parse(asOf || '');
+  const maxAgeDays = Number(config.limits.max_source_age_days || 14);
+  if (Number.isNaN(captured) || Number.isNaN(current) || current - captured > maxAgeDays * 86400000) {
+    throw new Error(`Fail-closed: Google Drive snapshot is older than ${maxAgeDays} days.`);
+  }
 }
 
 export function validateProspect(prospect) {

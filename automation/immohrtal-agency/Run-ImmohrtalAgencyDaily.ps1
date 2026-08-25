@@ -11,8 +11,11 @@ param(
 $ErrorActionPreference = 'Stop'
 $node = (Get-Command node -ErrorAction Stop).Source
 $root = $PSScriptRoot
-$input = if ($InputPath) { (Resolve-Path -LiteralPath $InputPath).Path } else { Join-Path $root 'fixtures\prospects.json' }
-$suppression = if ($SuppressionPath) { (Resolve-Path -LiteralPath $SuppressionPath).Path } else { Join-Path $root 'fixtures\suppressions.json' }
+$runtime = Join-Path $root '.runtime'
+$defaultInput = Join-Path $runtime 'current-prospects.json'
+$defaultSuppression = Join-Path $runtime 'current-suppressions.json'
+$input = if ($InputPath) { (Resolve-Path -LiteralPath $InputPath).Path } elseif (Test-Path -LiteralPath $defaultInput) { $defaultInput } else { Join-Path $root 'fixtures\prospects.json' }
+$suppression = if ($SuppressionPath) { (Resolve-Path -LiteralPath $SuppressionPath).Path } elseif (Test-Path -LiteralPath $defaultSuppression) { $defaultSuppression } else { Join-Path $root 'fixtures\suppressions.json' }
 if ($RunId -and $RunId -notmatch '^\d{8}-\d{6}$') { throw 'RunId must use yyyyMMdd-HHmmss.' }
 $stamp = if ($RunId) { $RunId } else { Get-Date -Format 'yyyyMMdd-HHmmss' }
 $timestamp = if ($AsOf) { $AsOf } else { (Get-Date).ToUniversalTime().ToString('o') }

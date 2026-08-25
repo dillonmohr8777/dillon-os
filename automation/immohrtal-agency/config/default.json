@@ -6,10 +6,11 @@
   },
   "limits": {
     "max_prospects_per_run": 25,
-    "lock_stale_minutes": 180
+    "lock_stale_minutes": 180,
+    "max_source_age_days": 14
   },
   "policy": {
-    "allowed_input_sources": ["local_json", "local_csv", "google_drive_discovery_reference"],
+    "allowed_input_sources": ["local_json", "local_csv", "google_drive_snapshot"],
     "forbidden_source_labels": ["momentum 360", "momentum360", "momentum_360"],
     "external_actions": false,
     "delivery_mode": "draft_only"
@@ -24,5 +25,11 @@
     "model": "gpt-5.6-luna",
     "timeout_ms": 120000,
     "max_prospects_per_run": 3
+  },
+  "evidence": {
+    "live_fetch_enabled": true,
+    "timeout_ms": 12000,
+    "max_bytes": 524288,
+    "concurrency": 4
   }
 }

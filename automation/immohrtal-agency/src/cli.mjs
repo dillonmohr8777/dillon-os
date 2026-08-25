@@ -6,6 +6,7 @@ import { fileURLToPath } from 'node:url';
 import { loadInput, loadSuppressions } from './input-adapters.mjs';
 import { executeRun } from './orchestrator.mjs';
 import { prospectKey } from './policy.mjs';
+import { enrichWithWebsiteEvidence } from './evidence.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -63,13 +64,19 @@ try {
   const indexPath = path.join(stateDir, 'prospect-index.json');
   const index = fs.existsSync(indexPath) ? JSON.parse(fs.readFileSync(indexPath, 'utf8')) : { keys: [] };
   if (!Array.isArray(index.keys)) throw new Error('Persistent prospect index must contain a keys array.');
+  const prior = new Set(index.keys);
+  const remaining = input.prospects.filter((prospect) => !prior.has(prospectKey(prospect)));
+  const deferred = Math.max(0, remaining.length - config.limits.max_prospects_per_run);
+  input.prospects = remaining.slice(0, config.limits.max_prospects_per_run);
+  input.prospects = await enrichWithWebsiteEvidence(input.prospects, config.evidence, asOf);
+  input.source.batch = { selected: input.prospects.length, deferred, prior_index_keys: index.keys.length };
   atomicJson(path.join(stateDir, 'latest-state.json'), { status: 'running', run_id: runId, as_of: asOf, delivery: 'draft_only' });
   const result = executeRun({ config, input, suppressions, runId, asOf, outputRoot, priorKeys: index.keys, useModel, agencyRoot: root });
   if (!result.resumed && result.records) {
     const newlyQueued = result.records.filter((record) => record.state === 'AWAITING_APPROVAL').map((record) => prospectKey(record.prospect));
     atomicJson(indexPath, { updated_at: asOf, keys: [...new Set([...index.keys, ...newlyQueued])].sort() });
   }
-  atomicJson(path.join(stateDir, 'latest-state.json'), { status: result.receipt.status, run_id: runId, as_of: asOf, run_dir: result.runDir, resumed: result.resumed, delivery: 'draft_only', analysis_mode: useModel ? 'codex_cli_model_analysis' : 'deterministic_only' });
+  atomicJson(path.join(stateDir, 'latest-state.json'), { status: result.receipt.status, run_id: runId, as_of: asOf, run_dir: result.runDir, resumed: result.resumed, delivery: 'draft_only', analysis_mode: useModel ? 'codex_cli_model_analysis' : 'deterministic_only', batch: input.source.batch });
   process.stdout.write(`${JSON.stringify({ ok: true, run_dir: result.runDir, status: result.receipt.status, counts: result.receipt.counts, resumed: result.resumed })}\n`);
 } catch (error) {
   if (failureContext) {

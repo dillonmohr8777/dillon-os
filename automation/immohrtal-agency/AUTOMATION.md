@@ -2,11 +2,11 @@
 
 ## Entrypoint
 
-`Run-ImmohrtalAgencyDaily.ps1` is compatible with the existing hidden-task launcher pattern. It is intentionally **not installed or registered** by this change.
+`Run-ImmohrtalAgencyDaily.ps1` is registered through the existing hidden-task launcher pattern as `IMMOHRTAL Agency Daily`, weekdays at 8:10 AM local time.
 
 The PowerShell entrypoint:
 
-1. Resolves explicit local input and suppression files.
+1. Resolves the latest local snapshot of the verified Drive allowlist and suppression sheets.
 2. Acquires the named `Global\ImmohrtalAgencyDaily` mutex without waiting.
 3. Calls the Node orchestrator with a stable run ID and timestamp.
 4. Relies on a second exclusive file lock for cross-entrypoint protection.
@@ -23,7 +23,7 @@ Terminal policy branches are `SUPPRESSED`, `DUPLICATE`, and `BLOCKED`. No termin
 
 | Agent | Kind | Bounded job |
 |---|---|---|
-| Scout | Maker | Normalize supplied website intelligence and mark unknowns. No browsing. |
+| Scout | Maker | Fetch the referenced concept, record HTTP/title/H1 evidence, and mark unknowns. |
 | Atlas | Maker | Draft AEO and GEO hypotheses. No rank or AI Overview claims. |
 | Forge | Maker | Draft a website, search visibility, and agent-integration scope. No build or publish. |
 | Relay | Maker | Package one email draft and queue record. No Gmail or CRM access. |
@@ -37,7 +37,7 @@ Each accepted model result records the requested model, duration, sandbox, ephem
 
 ## Approval boundary
 
-The gate requires human approval of the exact prospect, recipient, subject, body, and channel. `adapter_handoff_enabled` is hardcoded false in the safe configuration and the application contains no sender. A future approval record must be immutable, fingerprint-bound, and single-use before any delivery adapter is designed.
+The gate requires human approval of the exact prospect, recipient, subject, body, and channel. `adapter_handoff_enabled` is hardcoded false and the application contains no sender. The Gmail manifest is fingerprint-bound but cannot create or send a message.
 
 ## Suppression and dedupe
 
@@ -50,10 +50,10 @@ The gate requires human approval of the exact prospect, recipient, subject, body
 
 - Unsafe delivery settings fail before prospect processing.
 - A local input must say `requalified_for_immohrtal: true` and cannot carry a Momentum 360 source label.
-- Google Drive metadata is discovery-only and cannot be used as row input.
+- The exact Drive allowlist snapshot is valid for 14 days. Older snapshots block the run until Codex refreshes them through the connected Drive account.
 - A completed matching run resumes from its receipt. Partial prospect-level checkpoint resume is not implemented; a blocked partial run must be inspected and restarted with a new run ID.
 - The Node lock is removed in `finally`. A machine crash can leave a stale lock; this version fails closed and requires an operator to inspect it before removal. It never auto-deletes a potentially live lock.
 
-## Proposed schedule after review
+## Schedule
 
-Use the existing `Run-HiddenScheduledTask.vbs` manifest pattern, once per weekday morning, with the PowerShell file as the only task action. Registration is deliberately left to the parent operator after code review and a decision on the real requalified input location.
+The Windows task calls `Run-HiddenScheduledTask.vbs`, which resolves the manifest entry and launches the PowerShell entrypoint without a visible console. It creates local evidence and Gmail-ready draft packages only.

@@ -1,11 +1,40 @@
 {
-  "source_id": "personal-drive-prospect-sheet",
-  "source_type": "google_drive_discovery_reference",
-  "sheet_id": "1S1jX-LSuK0pmNg8orJFsqNzhJu5nCzjQsPnoMq4jBXU",
-  "purpose": "discovery_only_pending_requalification",
-  "adapter_status": "not_configured",
+  "source_id": "immohrtal-drive-prospect-system",
+  "source_type": "google_drive_snapshot",
+  "purpose": "website_concept_outreach",
+  "adapter_status": "live_verified_2026-08-24",
   "embedded_rows": false,
-  "contains_momentum_360_data": "unknown_do_not_import_without_requalification",
-  "allowed_next_step": "A future read-only Google Drive adapter may copy explicitly requalified IMMOHRTAL rows into the local input schema."
+  "default_market": "Philadelphia region",
+  "sources": {
+    "cleared": {
+      "sheet_id": "1mK1di7eMV6SUI226pwEoFrA-7pBkV_3y2BG5PwDIiwY",
+      "title": "1 · CALL LIST — 133 cleared to show",
+      "tab": "Untitled",
+      "sheet_id_numeric": 1541541524,
+      "modified_time": "2026-08-19T20:32:21.910Z",
+      "role": "allowlist"
+    },
+    "hold": {
+      "sheet_id": "1JJL0X6LnOoQ8L3ZNoU1RGho4tX0rDq2W9t0cOLTB2D4",
+      "title": "2 · HOLD — 87 not cleared to show",
+      "tab": "Untitled",
+      "sheet_id_numeric": 840648453,
+      "modified_time": "2026-08-19T20:29:38.055Z",
+      "role": "hard_suppression"
+    },
+    "do_not_pitch": {
+      "sheet_id": "1FX2x_4W036eQwdDcuwnxdFKJrU2uW2ZPHqxmLVF7Mqk",
+      "title": "3 · DO NOT PITCH — 18 off the list",
+      "tab": "Untitled",
+      "sheet_id_numeric": 362104541,
+      "modified_time": "2026-08-19T20:27:38.742Z",
+      "role": "hard_suppression"
+    }
+  },
+  "gmail": {
+    "verified_sender": "dillonmohr8777@gmail.com",
+    "verified_on": "2026-08-24",
+    "delivery_mode": "draft_only",
+    "send_available": false
+  }
 }
-

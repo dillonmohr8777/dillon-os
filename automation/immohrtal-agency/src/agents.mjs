@@ -5,13 +5,18 @@ export const Scout = Object.freeze({
   role: 'Website intelligence maker',
   run(prospect) {
     const observations = Array.isArray(prospect.observations) ? prospect.observations.filter(Boolean) : [];
+    const evidence = prospect.live_evidence || null;
     return {
       agent: 'Scout',
-      evidence_mode: 'supplied_record_only',
+      evidence_mode: evidence?.ok ? 'live_http_evidence' : 'supplied_record_only',
       domain: normalizeDomain(prospect.website),
-      fit: observations.length ? 'review_candidate' : 'needs_manual_research',
+      fit: evidence?.ok || observations.length ? 'review_candidate' : 'needs_manual_research',
       observations,
-      unknowns: ['Current website behavior is not live-verified.', 'Analytics, search visibility, and conversion performance are unknown.']
+      live_evidence: evidence,
+      unknowns: [
+        ...(evidence?.ok ? [] : ['The referenced web page was not live-verified.']),
+        'Analytics, search visibility, and conversion performance are unknown.'
+      ]
     };
   }
 });
@@ -57,15 +62,15 @@ export const Relay = Object.freeze({
   role: 'Draft packaging maker',
   run(prospect, scout, forge, sender) {
     const firstName = String(prospect.contact_name || '').trim() || 'there';
-    const observation = String(scout.observations[0] || 'the mobile path and answer structure may be worth reviewing').replace(/\s+/g, ' ').slice(0, 240);
-    const subject = `A website idea for ${prospect.company_name}`;
-    const body = `Hi ${firstName},\n\nI was looking at the website information available for ${prospect.company_name}. One item in the source record stood out: ${observation}\n\nI run ${sender.business_name}, focused on website optimization, AEO and GEO visibility, and practical business agents. I drafted a short review framework for ${prospect.company_name}, but I would validate everything against the current site before making any recommendations.\n\nWould a concise, no-pressure website and AI search visibility review be useful?\n\n${sender.name}`;
+    const subject = `A homepage direction for ${prospect.company_name}`;
+    const body = `Hi ${firstName},\n\nI put together a homepage direction for ${prospect.company_name}:\n${prospect.concept_url || prospect.website}\n\nIt is a concept, not a live replacement. I focused it on clearer service positioning, a stronger mobile path, and answer-first content that can support both conversion and AI/search visibility.\n\nIf it is useful, I can send a concise breakdown of what I would keep, what I would change, and where AEO or GEO could fit.\n\n${sender.name}\n${sender.business_name}\nhttps://themohrmedia.com`;
     const packageValue = {
       channel: 'email',
       to: prospect.contact_email || null,
       subject,
       body,
       claims_status: 'hypothesis_only_pending_human_validation',
+      source_evidence: scout.live_evidence ? { captured_at: scout.live_evidence.captured_at, status: scout.live_evidence.status, content_sha256: scout.live_evidence.content_sha256 } : null,
       forge_scope: forge.workstreams.map((item) => item.name),
       delivery_status: 'DRAFT_ONLY_DO_NOT_SEND'
     };
@@ -84,6 +89,7 @@ export const Proof = Object.freeze({
     if (record.approval_gate.status !== 'NOT_GRANTED') failures.push('Approval gate is not closed.');
     if (!draft?.subject || !draft?.body) failures.push('Draft subject or body missing.');
     if (!draft?.to) failures.push('No validated draft recipient was supplied.');
+    if (record.prospect.website_kind === 'prebuilt_concept' && record.outputs.scout?.live_evidence?.ok !== true) failures.push('The prebuilt concept is not reachable in current live evidence.');
     if (!Array.isArray(record.prospect.allowed_channels) || !record.prospect.allowed_channels.includes('email')) failures.push('Email is not an allowed channel for this prospect.');
     if (/(guarantee|guaranteed|we increased|we grew|zero conversions)/i.test(`${draft?.subject || ''} ${draft?.body || ''}`)) failures.push('Unsupported or prohibited claim language detected.');
     if (record.prospect.opt_out === true || record.prospect.do_not_contact === true) failures.push('Opted-out prospect reached Proof.');

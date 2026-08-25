@@ -3,7 +3,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { discovered, STATES, transition } from './state-machine.mjs';
 import { Scout, Atlas, Forge, Relay, Proof } from './agents.mjs';
-import { assertDraftOnly, prospectKey, sha256, suppressionDecision, validateProspect, validateSource } from './policy.mjs';
+import { assertDraftOnly, assertSourceFreshness, prospectKey, sha256, suppressionDecision, validateProspect, validateSource } from './policy.mjs';
 import { runCodexModelLane } from './model-lane.mjs';
 
 const moduleRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -73,6 +73,7 @@ function processProspect(prospect, context) {
 export function executeRun({ config, input, suppressions, runId, asOf, outputRoot, priorKeys = [], useModel = false, agencyRoot = null }) {
   assertDraftOnly(config);
   validateSource(input.source, config);
+  assertSourceFreshness(input.source, config, asOf);
   if (!/^\d{8}-\d{6}$/.test(runId)) throw new Error('Run ID must use yyyyMMdd-HHmmss.');
   if (Number.isNaN(Date.parse(asOf))) throw new Error('asOf must be a valid ISO date.');
   if (input.prospects.length > config.limits.max_prospects_per_run) throw new Error(`Input exceeds max_prospects_per_run=${config.limits.max_prospects_per_run}.`);
@@ -115,8 +116,24 @@ export function executeRun({ config, input, suppressions, runId, asOf, outputRoo
   };
   const queuePath = path.join(runDir, 'prospect-queue.json');
   const packagePath = path.join(runDir, 'outreach-packages.json');
+  const gmailManifestPath = path.join(runDir, 'gmail-draft-manifest.json');
   writeJson(queuePath, { run_id: runId, as_of: asOf, states: Object.values(STATES), records });
   writeJson(packagePath, { run_id: runId, mode: 'DRAFT_ONLY_DO_NOT_SEND', packages });
+  writeJson(gmailManifestPath, {
+    run_id: runId,
+    sender_account: config.business.sender_email,
+    mode: 'GMAIL_DRAFT_CREATION_REQUIRES_OPERATOR_HANDOFF',
+    send_allowed: false,
+    drafts: packages.map((item) => ({
+      prospect_id: item.prospect_id,
+      company_name: item.company_name,
+      to: item.draft.to,
+      subject: item.draft.subject,
+      text_body: item.draft.body,
+      fingerprint: item.draft.fingerprint,
+      approval_status: 'NOT_GRANTED'
+    }))
+  });
   const draftDir = path.join(runDir, 'outreach-drafts');
   ensureDir(draftDir);
   for (const record of records.filter((item) => item.state === STATES.AWAITING_APPROVAL)) {
@@ -143,16 +160,22 @@ export function executeRun({ config, input, suppressions, runId, asOf, outputRoo
     ],
     approval: { required: true, granted: false, adapter_handoff_enabled: false },
     model_traces: records.filter((record) => record.outputs.model_trace).map((record) => ({ prospect_id: record.prospect.prospect_id, ...record.outputs.model_trace })),
-    external_actions: { sent: 0, published: 0, spend_changes: 0, crm_writes: 0, credential_accesses: 0 },
+    evidence: {
+      live_verified: records.filter((record) => record.outputs.scout?.live_evidence?.ok === true).length,
+      unavailable: records.filter((record) => record.outputs.scout && record.outputs.scout?.live_evidence?.ok !== true).length
+    },
+    external_actions: { gmail_drafts_created: 0, sent: 0, published: 0, spend_changes: 0, crm_writes: 0, credential_accesses: 0 },
     artifacts: {
       operator_brief: 'operator-brief.md',
       prospect_queue: 'prospect-queue.json',
       outreach_packages: 'outreach-packages.json',
+      gmail_draft_manifest: 'gmail-draft-manifest.json',
       draft_directory: 'outreach-drafts'
     },
     artifact_sha256: {
       prospect_queue: sha256(fs.readFileSync(queuePath)),
-      outreach_packages: sha256(fs.readFileSync(packagePath))
+      outreach_packages: sha256(fs.readFileSync(packagePath)),
+      gmail_draft_manifest: sha256(fs.readFileSync(gmailManifestPath))
     }
   };
   fs.writeFileSync(path.join(runDir, 'operator-brief.md'), briefMarkdown(context, records, receipt), 'utf8');

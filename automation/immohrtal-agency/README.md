@@ -34,21 +34,20 @@ The default remains deterministic. `-UseModel` runs Codex ephemerally in a read-
 
 JSON uses `{ "source": {...}, "prospects": [...] }`. CSV uses the fixture header. Required prospect fields are `prospect_id`, `company_name`, `website`, `market`, and `category`. Governance fields are `allowed_channels`, `opt_out`, `do_not_contact`, and `suppression_reason`. `observations` are source assertions, not verified facts.
 
-The personal Drive sheet ID is recorded only in `config/source-metadata.json` as `discovery_only_pending_requalification`. No personal rows are embedded here.
+The verified Drive allowlist, HOLD, and DO NOT PITCH sheet IDs live in `config/source-metadata.json`. Connector snapshots are written to the gitignored `.runtime/raw` directory, converted by `src/snapshot-cli.mjs`, and rejected after 14 days without a refresh.
 
 ## Current limitations
 
-- No live discovery, crawling, screenshotting, ranking research, email verification, or analytics access.
+- Scout live-checks the referenced concept URL and records HTTP, title, H1, content hash, and capture time. It does not claim analytics or rankings.
 - The local cross-run index stores normalized prospect keys, but it has no CRM reconciliation or externally verified contact history.
 - No partial prospect checkpoint resume. Matching completed receipts are idempotent.
-- No Gmail, Google Drive, HubSpot, publishing, ads, spend, or credential adapter.
-- Draft copy is generic and must be verified against the current website before approval.
-- The scheduler is not installed.
+- Google Drive intake is snapshot-based because local scheduled code cannot reuse the in-app connector token. Stale snapshots fail closed.
+- Gmail output is a fingerprinted draft manifest. A connected Codex operator can create drafts from it, but the local scheduler cannot send.
+- No HubSpot, publishing, ads, spend, or credential adapter exists.
+- The weekday 8:10 AM task is installed through the console-free launcher.
 
 ## Adapter path
 
-1. Add a read-only Google Drive adapter that selects only rows explicitly marked for IMMOHRTAL, strips unrelated columns, and writes the local schema with source timestamps and row hashes.
-2. Add live website evidence collection as a separate Scout input with URL, captured-at time, status, and content hash.
-3. Add a persistent local dedupe and suppression index with append-only receipts.
-4. Add a Gmail **draft creator**, not sender, bound to an exact approved fingerprint and verified personal account. Read back the Gmail draft and routing.
-5. Design sending only as a separate, one-time, human-approved command. Do not place it in the daily orchestrator.
+1. Refresh the three Drive snapshots through the connected Codex Drive tool when the freshness gate approaches 14 days.
+2. Review fingerprinted Gmail-ready packages and create Gmail drafts only after exact routing and body verification.
+3. Keep sending as a separate, one-time, human-approved command. It never belongs in the daily orchestrator.
