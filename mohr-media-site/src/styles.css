@@ -24,6 +24,20 @@
   font-weight: 500;
 }
 
+@font-face {
+  font-family: 'IMMOHRTAL Display';
+  src: url('/fonts/Unbounded-Variable-Latin.woff2') format('woff2');
+  font-display: swap;
+  font-weight: 200 900;
+}
+
+@font-face {
+  font-family: 'IMMOHRTAL Sans';
+  src: url('/fonts/Manrope-Variable-Latin.woff2') format('woff2');
+  font-display: swap;
+  font-weight: 200 800;
+}
+
 :root {
   --ink: #020711;
   --gunmetal: #07101f;
@@ -85,6 +99,10 @@ video,
 svg {
   display: block;
   max-width: 100%;
+}
+
+.brand-logo--chrome {
+  filter: grayscale(1) brightness(0) invert(1) drop-shadow(0 0 24px rgba(228, 241, 255, .16));
 }
 
 svg {
@@ -181,62 +199,6 @@ main,
   transform: none;
 }
 
-.loader {
-  position: fixed;
-  z-index: 999;
-  inset: 0;
-  display: grid;
-  place-content: center;
-  justify-items: center;
-  gap: 16px;
-  background: var(--paper);
-  color: #111722;
-  transition: opacity .6s var(--ease), visibility .6s;
-}
-
-.loader--done {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-
-.loader img {
-  width: 170px;
-  margin-bottom: 10px;
-}
-
-.loader p,
-.loader em {
-  margin: 0;
-  color: #6e7c8f;
-  font-family: 'Foundry Mono', monospace;
-  font-size: .65rem;
-  font-style: normal;
-  letter-spacing: .24em;
-  text-transform: uppercase;
-}
-
-.loader strong {
-  font-family: 'Foundry Mono', monospace;
-  font-size: 2rem;
-  font-weight: 400;
-  letter-spacing: .14em;
-}
-
-.loader > span {
-  width: 230px;
-  height: 2px;
-  background: #d8e0e8;
-}
-
-.loader > span i {
-  display: block;
-  width: 100%;
-  height: 100%;
-  transform-origin: left;
-  background: linear-gradient(90deg, var(--blue), var(--cyan), var(--mint));
-}
-
 .site-nav {
   position: fixed;
   z-index: 80;
@@ -262,17 +224,30 @@ main,
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  font-family: 'Foundry Mono', monospace;
-  font-size: .72rem;
-  letter-spacing: .14em;
-  text-transform: uppercase;
+  color: var(--paper);
 }
 
 .nav-mark img {
-  width: 42px;
-  height: 39px;
+  width: 54px;
+  height: 50px;
   object-fit: contain;
-  filter: drop-shadow(0 0 12px rgba(24, 200, 255, .15));
+}
+
+.nav-mark > span {
+  display: grid;
+  line-height: 1;
+}
+
+.nav-mark strong {
+  font: 720 .82rem/1 'IMMOHRTAL Display', sans-serif;
+  letter-spacing: -.025em;
+}
+
+.nav-mark small {
+  margin-top: 5px;
+  color: var(--cyan);
+  font: 650 .52rem/1 'IMMOHRTAL Sans', sans-serif;
+  letter-spacing: .08em;
 }
 
 .site-nav nav {
@@ -594,28 +569,20 @@ main,
   left: 50%;
   width: min(68%, 470px);
   transform: translate(-50%, -50%);
-  opacity: .09;
-  filter: invert(1) grayscale(.5) brightness(1.5) drop-shadow(0 0 30px rgba(24, 200, 255, .18));
-  animation: exactLogoPulse 12s ease-in-out infinite;
+  opacity: .16;
+  filter: grayscale(1) brightness(0) invert(1) drop-shadow(0 0 34px rgba(221, 239, 255, .2));
+  animation: exactLogoPulse 10s ease-in-out infinite;
 }
 
 .particle-logo--static > img {
   width: min(72%, 500px);
-  opacity: .94;
+  opacity: 1;
   animation: none;
-  filter: drop-shadow(0 28px 60px rgba(0, 0, 0, .45));
+  filter: grayscale(1) brightness(0) invert(1) drop-shadow(0 0 34px rgba(221, 239, 255, .2));
 }
 
 .particle-logo--static::before {
-  content: '';
-  position: absolute;
-  z-index: 1;
-  top: 50%;
-  left: 50%;
-  width: min(82%, 560px);
-  aspect-ratio: 1.08;
-  transform: translate(-50%, -50%);
-  background: radial-gradient(circle, rgba(243, 247, 251, .94) 0%, rgba(232, 242, 251, .78) 52%, rgba(232, 242, 251, 0) 73%);
+  content: none;
 }
 
 .hero-orbit {
@@ -1821,8 +1788,9 @@ main,
 }
 
 @keyframes exactLogoPulse {
-  0%, 12%, 86%, 100% { opacity: .04; }
-  30%, 72% { opacity: .14; }
+  0%, 35%, 100% { opacity: .16; }
+  45%, 88% { opacity: 0; }
+  95% { opacity: .1; }
 }
 
 @media (max-width: 1100px) {

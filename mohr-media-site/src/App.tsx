@@ -72,44 +72,6 @@ function useExperienceMotion() {
   }, [])
 }
 
-function Loader({ engineRef }: { engineRef: { current: SpineEngine | null } }) {
-  const [progress, setProgress] = useState(0)
-  const [done, setDone] = useState(false)
-
-  useEffect(() => {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      setProgress(100)
-      setDone(true)
-      return
-    }
-    const started = performance.now()
-    let frame = 0
-    const tick = (now: number) => {
-      const elapsed = now - started
-      const next = Math.min(100, Math.round((elapsed / 1500) * 100))
-      setProgress(next)
-      if (next >= 100) {
-        engineRef.current?.pulse(0)
-        window.setTimeout(() => setDone(true), 260)
-        return
-      }
-      frame = requestAnimationFrame(tick)
-    }
-    frame = requestAnimationFrame(tick)
-    return () => cancelAnimationFrame(frame)
-  }, [engineRef])
-
-  return (
-    <div className={`loader${done ? ' loader--done' : ''}`} aria-hidden={done}>
-      <img src="/brand/immohrtal-logo.png" alt="" />
-      <p>Signal foundry // cueing up</p>
-      <strong>{String(progress).padStart(3, '0')}</strong>
-      <span><i style={{ transform: `scaleX(${progress / 100})` }} /></span>
-      <em>Transmission // {progress < 100 ? 'assembling' : 'live'}</em>
-    </div>
-  )
-}
-
 function Navigation() {
   const [open, setOpen] = useState(false)
   const links = [
@@ -129,9 +91,9 @@ function Navigation() {
   }, [open])
   return (
     <header className="site-nav">
-      <a className="nav-mark" href="#top" aria-label="Dillon Mohr portfolio home">
-        <img src="/brand/immohrtal-logo.png" alt="" />
-        <span>Dillon Mohr</span>
+      <a className="nav-mark" href="#top" aria-label="IMMOHRTAL Marketing Solutions, Dillon Mohr portfolio home">
+        <img className="brand-logo--chrome" src="/brand/immohrtal-logo.png" alt="" />
+        <span><strong>IMMOHRTAL</strong><small>MARKETING SOLUTIONS</small></span>
       </a>
       <button className="nav-toggle" type="button" aria-expanded={open} aria-controls="primary-navigation" onClick={() => setOpen((value) => !value)}>
         <span>{open ? 'Close' : 'Menu'}</span>
@@ -352,7 +314,6 @@ export default function App() {
     <div className="site-shell">
       <a className="skip-link" href="#align">Skip to featured work</a>
       <SpineStage engineRef={engineRef} />
-      <Loader engineRef={engineRef} />
       <div className="scroll-progress" aria-hidden="true"><i /></div>
       <Navigation />
       <SpineRail engineRef={engineRef} />
@@ -369,7 +330,7 @@ export default function App() {
             </div>
           </div>
           <div className="hero-logo-stage">
-            <Suspense fallback={<div className="particle-logo particle-logo--static" role="img" aria-label="IMMOHRTAL logo"><img src="/brand/immohrtal-logo.png" alt="" /></div>}>
+            <Suspense fallback={<div className="particle-logo particle-logo--static" role="img" aria-label="IMMOHRTAL Marketing Solutions logo"><img className="brand-logo--chrome" src="/brand/immohrtal-logo.png" alt="" /></div>}>
               <ParticleLogo />
             </Suspense>
             <div className="hero-orbit hero-orbit--one" aria-hidden="true" />
@@ -500,7 +461,7 @@ export default function App() {
 
         <section className="contact-section" id="contact">
           <div className="contact-signal" aria-hidden="true">
-            <img src="/brand/immohrtal-logo.png" alt="" />
+            <img className="brand-logo--chrome" src="/brand/immohrtal-logo.png" alt="" />
             <i /><i /><i />
           </div>
           <div className="contact-copy" data-reveal>

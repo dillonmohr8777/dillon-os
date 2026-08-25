@@ -35,6 +35,18 @@ typography:
     fontWeight: 500
     lineHeight: 1.4
     letterSpacing: "0.15em"
+  brand-lockup:
+    fontFamily: "IMMOHRTAL Display, sans-serif"
+    fontSize: "0.82rem"
+    fontWeight: 720
+    lineHeight: 1
+    letterSpacing: "-0.025em"
+  brand-descriptor:
+    fontFamily: "IMMOHRTAL Sans, sans-serif"
+    fontSize: "0.52rem"
+    fontWeight: 650
+    lineHeight: 1
+    letterSpacing: "0.08em"
 rounded:
   control: "10px"
   surface: "16px"
@@ -114,6 +126,7 @@ The palette is a cold foundry: near-black operating space, cobalt and cyan energ
 **Body Font:** The platform UI sans stack.
 **Accent Font:** Foundry Serif, built from Instrument Serif.
 **Label/Mono Font:** Foundry Mono, built from IBM Plex Mono.
+**Brand Lockup Fonts:** IMMOHRTAL Display and IMMOHRTAL Sans, sourced from the authoritative IMMOHRTAL Marketing Solutions Unbounded and Manrope assets. These are reserved for the exact navigation lockup.
 
 **Character:** Condensed display type delivers force and compression; the italic serif introduces movement and human judgment; mono labels make the page feel instrumented without pretending to be a terminal.
 
