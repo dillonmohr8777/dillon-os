@@ -2,6 +2,7 @@ import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { renderLiveOfficeDashboard } from './live-office-dashboard.mjs';
 
 const ALLOWED_REPORT_MODES = new Set(['standup', 'eod', 'both']);
 const BLOCKING_STATES = new Set(['BLOCKED', 'FAILED_QA', 'WAITING_APPROVAL']);
@@ -26,6 +27,39 @@ const INTERNAL_EXTERNAL_ACTION_KEYS = [
   'new_hires_or_purchases'
 ];
 
+const FLOOR_STATIONS = Object.freeze([
+  { station_id: 'control', label: 'Control', short_label: 'CTRL', x: 50, y: 49, purpose: 'Dispatch, ownership, and operating control' },
+  { station_id: 'research', label: 'Research', short_label: 'RSCH', x: 18, y: 24, purpose: 'Identity, source, and market evidence' },
+  { station_id: 'revenue', label: 'Revenue', short_label: 'REV', x: 82, y: 24, purpose: 'Qualification, pipeline, and commercial movement' },
+  { station_id: 'delivery', label: 'Delivery', short_label: 'DLV', x: 18, y: 76, purpose: 'Offer systems and client-ready fulfillment' },
+  { station_id: 'qa', label: 'Quality', short_label: 'QA', x: 82, y: 76, purpose: 'Independent review and risk control' },
+  { station_id: 'blocker', label: 'Blocker dock', short_label: 'HOLD', x: 50, y: 18, purpose: 'Exact evidence, authority, or compliance holds' },
+  { station_id: 'evidence', label: 'Evidence', short_label: 'PROOF', x: 50, y: 82, purpose: 'Verified receipts and completed artifacts' }
+]);
+
+const ROLE_HOME_STATIONS = Object.freeze({
+  operations_finance_controller: 'control',
+  demand_intelligence_lead: 'research',
+  revenue_pipeline_manager: 'revenue',
+  delivery_client_success_lead: 'delivery',
+  quality_risk_auditor: 'qa'
+});
+
+const FLOOR_STATUS_PRIORITY = Object.freeze({
+  FAILED_QA: 0,
+  BLOCKED: 1,
+  WAITING_APPROVAL: 2,
+  READY_FOR_REVIEW: 3,
+  IN_PROGRESS: 4,
+  ASSIGNED: 5,
+  TRIAGED: 6,
+  INBOX: 7,
+  VERIFIED: 8,
+  DONE: 9,
+  DEFERRED: 10,
+  CANCELLED: 11
+});
+
 export const DEFAULT_REPO_ROOT = path.resolve(
   path.dirname(fileURLToPath(import.meta.url)),
   '..',
@@ -39,6 +73,7 @@ export const OFFICE_SOURCE_PATHS = Object.freeze({
   board: '11_Agents/IMMOHRTAL Business Crew/DAY-1-COMMAND-BOARD.md',
   scorecard: 'automation/immohrtal-agency/ops/DAY-1-SCORECARD.json',
   generator: 'automation/immohrtal-agency/ops/lib/office-report.mjs',
+  liveDashboard: 'automation/immohrtal-agency/ops/lib/live-office-dashboard.mjs',
   cli: 'automation/immohrtal-agency/ops/run-office-report.mjs',
   wrapper: 'automation/immohrtal-agency/ops/Run-ImmohrtalOfficeDaily.ps1',
   scheduleManifest: 'automation/immohrtal-agency/ops/office-daily.manifest.json'
@@ -247,6 +282,56 @@ function deriveRoleWorkState(assignments) {
   return 'MIXED_RECORDED_STATE';
 }
 
+function dominantFloorAssignment(assignments) {
+  return [...assignments].sort((left, right) => {
+    const priorityDifference = (FLOOR_STATUS_PRIORITY[left.status] ?? 99) - (FLOOR_STATUS_PRIORITY[right.status] ?? 99);
+    if (priorityDifference !== 0) return priorityDifference;
+    return Date.parse(right.updated_at) - Date.parse(left.updated_at);
+  })[0] || null;
+}
+
+function floorStationFor(roleId, assignment) {
+  if (!assignment) return ROLE_HOME_STATIONS[roleId] || 'control';
+  if (BLOCKING_STATES.has(assignment.status)) return 'blocker';
+  if (assignment.status === 'READY_FOR_REVIEW') return 'qa';
+  if (assignment.status === 'VERIFIED' || assignment.status === 'DONE') return 'evidence';
+  if (assignment.status === 'INBOX' || assignment.status === 'TRIAGED' || assignment.status === 'ASSIGNED') return 'control';
+  return ROLE_HOME_STATIONS[roleId] || 'control';
+}
+
+function buildFloorState(roster, sourceStateFingerprint) {
+  const targetCounts = new Map();
+  const actors = roster.map((role, index) => {
+    const dominantAssignment = dominantFloorAssignment(role.board_assignments);
+    const targetStationId = floorStationFor(role.role_id, dominantAssignment);
+    const stationSlot = targetCounts.get(targetStationId) || 0;
+    targetCounts.set(targetStationId, stationSlot + 1);
+    return {
+      role_id: role.role_id,
+      title: role.title,
+      work_state: role.work_state,
+      home_station_id: ROLE_HOME_STATIONS[role.role_id] || 'control',
+      target_station_id: targetStationId,
+      station_slot: stationSlot,
+      accent_index: index,
+      dominant_item_id: dominantAssignment?.item_id || null,
+      dominant_item_status: dominantAssignment?.status || null,
+      board_updated_at: dominantAssignment?.updated_at || null,
+      runtime_state: role.runtime_state,
+      online_claim: role.online_claim,
+      motion_semantics: 'BOARD_STATE_TRANSITION_OR_LABELED_RECEIPT_REPLAY_ONLY'
+    };
+  });
+  for (const actor of actors) actor.station_occupancy = targetCounts.get(actor.target_station_id) || 1;
+  return {
+    mode: 'RECORDED_SNAPSHOT',
+    source_state_fingerprint: sourceStateFingerprint,
+    motion_truth: 'Movement represents a recorded board transition or a labeled receipt replay. It does not prove an agent process is online.',
+    stations: FLOOR_STATIONS,
+    actors
+  };
+}
+
 function buildRosterState(crew, items) {
   return crew.roster.map((role) => {
     const assignments = items.filter((item) => item.owner_role_id === role.role_id);
@@ -260,6 +345,7 @@ function buildRosterState(crew, items) {
       board_assignments: assignments.map((item) => ({
         item_id: item.item_id,
         status: item.status,
+        updated_at: item.updated_at,
         due_at: item.due_at,
         blocker: item.blocker,
         next_action: item.next_action
@@ -278,16 +364,29 @@ function buildCommercialTruth(scorecard) {
   return {
     prepared_candidate_records: Number(current.prepared_candidate_records ?? 0),
     legacy_prepared_candidate_records_excluded: Number(current.legacy_prepared_candidate_records_excluded ?? 0),
+    authorized_source_populated_rows: Number(current.authorized_source_populated_rows ?? current.authorized_company_source_rows ?? 0),
     authorized_company_source_rows: Number(current.authorized_company_source_rows ?? 0),
+    invalid_non_company_source_rows: Number(current.invalid_non_company_source_rows ?? 0),
     researched_today: Number(current.researched_today ?? 0),
     identity_confirmed_today: Number(current.identity_confirmed_today ?? 0),
+    identity_provisional_today: Number(current.identity_provisional_today ?? 0),
     identity_blocked_today: Number(current.identity_blocked_today ?? 0),
+    remaining_authorized_source_rows: Number(current.remaining_authorized_source_rows ?? 0),
+    account_governance_cleared_current_exact_sources: Number(current.account_governance_cleared_current_exact_sources ?? 0),
+    account_governance_held_current_exact_sources: Number(current.account_governance_held_current_exact_sources ?? 0),
+    account_governance_pending_current_exact_sources: Number(current.account_governance_pending_current_exact_sources ?? 0),
     qualified_today: Number(current.qualified_today ?? 0),
     priority_draft_only_rows: Number(current.priority_draft_only_rows ?? 0),
     gmail_drafts_created: Number(current.gmail_drafts_created ?? 0),
     gmail_drafts_directly_read_back: Number(current.gmail_drafts_directly_read_back ?? 0),
     gmail_drafts_compliance_blocked: Number(current.gmail_drafts_compliance_blocked ?? 0),
     owner_status_updates_sent: Number(current.owner_status_updates_sent ?? 0),
+    social_post_ready_cards_created: Number(current.social_post_ready_cards_created ?? 0),
+    content_queue_items: Number(current.content_queue_items ?? 0),
+    social_posts_published: Number(current.social_posts_published ?? 0),
+    hubspot_blueprint_created: Number(current.hubspot_blueprint_created ?? 0),
+    hubspot_portal_route_verified: Boolean(current.hubspot_portal_route_verified),
+    hubspot_configuration_writes: Number(current.hubspot_configuration_writes ?? 0),
     ...values,
     truth_note: current.truth_note || 'Preparation counts do not prove commercial outcomes.'
   };
@@ -376,6 +475,7 @@ export function buildOfficeSnapshot(options = {}) {
   const boardPath = path.join(repoRoot, ...OFFICE_SOURCE_PATHS.board.split('/'));
   const scorecardPath = path.join(repoRoot, ...OFFICE_SOURCE_PATHS.scorecard.split('/'));
   const generatorPath = path.join(repoRoot, ...OFFICE_SOURCE_PATHS.generator.split('/'));
+  const liveDashboardPath = path.join(repoRoot, ...OFFICE_SOURCE_PATHS.liveDashboard.split('/'));
   const cliPath = path.join(repoRoot, ...OFFICE_SOURCE_PATHS.cli.split('/'));
   const wrapperPath = path.join(repoRoot, ...OFFICE_SOURCE_PATHS.wrapper.split('/'));
   const scheduleManifestPath = path.join(repoRoot, ...OFFICE_SOURCE_PATHS.scheduleManifest.split('/'));
@@ -384,6 +484,7 @@ export function buildOfficeSnapshot(options = {}) {
     board: boardPath,
     scorecard: scorecardPath,
     generator: generatorPath,
+    liveDashboard: liveDashboardPath,
     cli: cliPath,
     wrapper: wrapperPath,
     scheduleManifest: scheduleManifestPath
@@ -435,11 +536,20 @@ export function buildOfficeSnapshot(options = {}) {
     sourceEvidence(repoRoot, boardPath, 'command_board'),
     sourceEvidence(repoRoot, scorecardPath, 'machine_readable_scorecard'),
     sourceEvidence(repoRoot, generatorPath, 'report_generator'),
+    sourceEvidence(repoRoot, liveDashboardPath, 'live_dashboard_renderer'),
     sourceEvidence(repoRoot, cliPath, 'report_cli'),
     sourceEvidence(repoRoot, wrapperPath, 'powershell_entrypoint'),
     sourceEvidence(repoRoot, scheduleManifestPath, 'manifest_only_schedule_contract')
   ];
   if (selectedAgencyReceipt) evidence.push(sourceEvidence(repoRoot, selectedAgencyReceipt.receiptPath, 'agency_run_receipt'));
+
+  const sourceStateFingerprint = sha256(canonicalJson({
+    crew: evidence.find((item) => item.kind === 'machine_readable_roster')?.sha256,
+    board: evidence.find((item) => item.kind === 'command_board')?.sha256,
+    scorecard: evidence.find((item) => item.kind === 'machine_readable_scorecard')?.sha256,
+    agency_run_receipt: evidence.find((item) => item.kind === 'agency_run_receipt')?.sha256 || null
+  }));
+  const floor = buildFloorState(roster, sourceStateFingerprint);
 
   const objective = extractMarkdownSection(boardMarkdown, 'Day 1 objective') || 'Use the current command board objective.';
   const completedItems = items
@@ -451,13 +561,14 @@ export function buildOfficeSnapshot(options = {}) {
   const codexHeartbeat = scorecard.office_reporting?.codex_heartbeat || {};
 
   const snapshot = {
-    schema_version: '1.0.0',
+    schema_version: '1.2.0',
     report_type: 'immohrtal_office_daily_state',
     workflow_id: crew.workflow_id,
     business: crew.business,
     owner: crew.owner,
     orchestrator: crew.orchestrator,
     as_of: asOf,
+    receipt_generated_at: asOf,
     date_et: dateEt,
     timezone: 'America/New_York',
     report_mode: mode,
@@ -477,6 +588,7 @@ export function buildOfficeSnapshot(options = {}) {
       truth: 'This receipt proves one local report invocation. It does not prove persistent agents, a background service, or a scheduled task.'
     },
     roster,
+    floor,
     responsibility_authority: {
       internal_allowed: crew.authority.internally_allowed,
       prohibited_without_separate_exact_authority: crew.authority.prohibited_without_separate_exact_authority,
@@ -588,15 +700,28 @@ export function renderOfficeMarkdown(snapshot) {
   const commercialRows = [
     ['Active prepared candidate records', commercial.prepared_candidate_records],
     ['Legacy prepared records excluded', commercial.legacy_prepared_candidate_records_excluded],
+    ['Populated source rows', commercial.authorized_source_populated_rows],
     ['Authorized company source rows', commercial.authorized_company_source_rows],
+    ['Invalid non-company source rows', commercial.invalid_non_company_source_rows],
     ['Companies researched today', commercial.researched_today],
     ['Current identities confirmed today', commercial.identity_confirmed_today],
+    ['Provisional identities today', commercial.identity_provisional_today],
     ['Identities blocked today', commercial.identity_blocked_today],
+    ['Authorized company rows remaining', commercial.remaining_authorized_source_rows],
+    ['Full account-governance clears', commercial.account_governance_cleared_current_exact_sources],
+    ['Full account-governance holds', commercial.account_governance_held_current_exact_sources],
+    ['Full account-governance checks pending', commercial.account_governance_pending_current_exact_sources],
     ['Qualified today', commercial.qualified_today],
     ['Priority draft-only rows', commercial.priority_draft_only_rows],
     ['Gmail drafts created', commercial.gmail_drafts_created],
     ['Gmail drafts directly read back', commercial.gmail_drafts_directly_read_back],
     ['Gmail drafts on compliance hold', commercial.gmail_drafts_compliance_blocked],
+    ['Post-ready social cards created', commercial.social_post_ready_cards_created],
+    ['Content queue items prepared', commercial.content_queue_items],
+    ['Social posts published', commercial.social_posts_published],
+    ['HubSpot blueprint created', commercial.hubspot_blueprint_created],
+    ['HubSpot portal route verified', commercial.hubspot_portal_route_verified ? 'yes' : 'no'],
+    ['HubSpot configuration writes', commercial.hubspot_configuration_writes],
     ['Prospect messages sent', commercial.messages_sent],
     ['Internal owner status updates sent', commercial.owner_status_updates_sent],
     ['Replies', commercial.replies],
@@ -680,169 +805,10 @@ export function renderOfficeMarkdown(snapshot) {
   return `${sections.join('\n')}\n`;
 }
 
-function escapeHtml(value) {
-  return String(value ?? '')
-    .replaceAll('&', '&amp;')
-    .replaceAll('<', '&lt;')
-    .replaceAll('>', '&gt;')
-    .replaceAll('"', '&quot;')
-    .replaceAll("'", '&#39;');
+export function renderOfficeDashboard(snapshot, options = {}) {
+  return renderLiveOfficeDashboard(snapshot, options);
 }
 
-function statusTone(state) {
-  if (/BLOCKED|FAILED|ATTENTION|WAITING/.test(state)) return 'attention';
-  if (/VERIFIED|DONE|COMPLETE|CONFIGURED/.test(state)) return 'verified';
-  if (/READY|ASSIGNED|IN_PROGRESS/.test(state)) return 'active';
-  return 'neutral';
-}
-
-export function renderOfficeDashboard(snapshot) {
-  const rosterRows = snapshot.roster.map((role, index) => {
-    const assignmentRows = role.board_assignments.length
-      ? role.board_assignments.map((item) => `
-          <li class="assignment-row">
-            <div class="assignment-id"><strong>${escapeHtml(item.item_id)}</strong><span class="status-chip ${statusTone(item.status)}">${escapeHtml(item.status)}</span></div>
-            <div class="assignment-main"><p>${escapeHtml(item.next_action)}</p><dl><div><dt>Due</dt><dd>${escapeHtml(item.due_at)}</dd></div><div><dt>Blocker</dt><dd>${escapeHtml(item.blocker)}</dd></div></dl></div>
-          </li>`).join('')
-      : '<li class="assignment-empty">No board assignment is recorded. This seat is idle with reason.</li>';
-    return `
-      <article class="seat-row" aria-labelledby="seat-${escapeHtml(role.role_id)}">
-        <header class="seat-identity">
-          <span class="seat-index" aria-hidden="true">${String(index + 1).padStart(2, '0')}</span>
-          <div>
-            <h2 id="seat-${escapeHtml(role.role_id)}">${escapeHtml(role.title)}</h2>
-            <p>${escapeHtml(role.kind)} · reports to ${escapeHtml(role.reports_to)}</p>
-          </div>
-        </header>
-        <div class="seat-state">
-          <span class="status-chip ${statusTone(role.work_state)}">${escapeHtml(role.work_state)}</span>
-          <span class="runtime-truth"><b>Runtime</b> ${escapeHtml(role.runtime_state)}</span>
-          <p>${escapeHtml(role.runtime_truth)}</p>
-        </div>
-        <ol class="assignment-list" aria-label="Current assignments">${assignmentRows}</ol>
-      </article>`;
-  }).join('');
-
-  const lifecycleRows = [
-    ['Artifacts', snapshot.office_lifecycle.build_state, 'Roster, board, runner, and receipt contract'],
-    ['Configuration', snapshot.office_lifecycle.configuration_state, 'Current sources parsed and validated'],
-    ['This invocation', snapshot.office_lifecycle.current_invocation_state, snapshot.as_of],
-    ['Background runtime', snapshot.office_lifecycle.background_runtime_state, 'No persistent heartbeat supplied'],
-    ['Daily Codex heartbeat', snapshot.office_lifecycle.codex_heartbeat_state, `${snapshot.office_lifecycle.codex_heartbeat_id || 'not supplied'} · ${snapshot.office_lifecycle.codex_heartbeat_cadence || 'cadence unknown'}`],
-    ['Office manifest', snapshot.office_lifecycle.schedule_state === 'NOT_INSTALLED_OR_CHANGED_BY_THIS_RUNNER' ? 'NOT_INSTALLED_OR_CHANGED' : snapshot.office_lifecycle.schedule_state, 'No installation or task change']
-  ].map(([label, state, detail]) => `
-      <li><span>${escapeHtml(label)}</span><strong class="${statusTone(state)}-text">${escapeHtml(state)}</strong><small>${escapeHtml(detail)}</small></li>`).join('');
-
-  const boardBars = Object.entries(snapshot.board.status_counts)
-    .filter(([, count]) => count > 0)
-    .map(([state, count]) => `
-      <div class="board-count"><span>${escapeHtml(state)}</span><strong>${escapeHtml(count)}</strong></div>`).join('');
-
-  const blockerRows = snapshot.board.blocking_items.length
-    ? snapshot.board.blocking_items.map((item) => `
-      <tr><td><strong>${escapeHtml(item.item_id)}</strong><span>${escapeHtml(item.status)}</span></td><td>${escapeHtml(item.blocker)}</td><td>${escapeHtml(item.next_action)}</td></tr>`).join('')
-    : '<tr><td><strong>None</strong></td><td>No recorded blockers.</td><td>Continue the verified board flow.</td></tr>';
-
-  const completedRows = snapshot.end_of_day.completed_or_verified_items.length
-    ? snapshot.end_of_day.completed_or_verified_items.map((item) => `
-      <li><strong>${escapeHtml(item.item_id)}</strong><span>${escapeHtml(item.status)}</span><p>${escapeHtml(item.artifact_locator)}</p></li>`).join('')
-    : '<li><strong>None</strong><span>NO VERIFIED ITEM</span><p>No completed artifact is recorded.</p></li>';
-
-  const commercial = snapshot.end_of_day.commercial_truth;
-  const agency = snapshot.agency_run_evidence;
-  const legacyAgencyEvidence = agency.source_authority_state === 'legacy_excluded_source';
-  const agencyEvidence = agency.available
-    ? `<dl class="receipt-ledger">
-        <div><dt>Run</dt><dd>${escapeHtml(agency.run_id)}</dd></div>
-        <div><dt>Observed</dt><dd>${escapeHtml(agency.as_of)}</dd></div>
-        <div><dt>Status</dt><dd>${escapeHtml(agency.status)}</dd></div>
-        <div><dt>${legacyAgencyEvidence ? 'Legacy prepared' : 'Prepared'}</dt><dd>${escapeHtml(agency.counts?.total ?? 'unknown')}</dd></div>
-        <div><dt>${legacyAgencyEvidence ? 'Legacy awaiting' : 'Awaiting approval'}</dt><dd>${escapeHtml(agency.counts?.awaiting_approval ?? 'unknown')}</dd></div>
-        <div><dt>External actions</dt><dd>${Object.values(agency.external_actions || {}).every((value) => Number(value || 0) === 0) ? '0' : 'VERIFY'}</dd></div>
-      </dl>`
-    : '<p class="empty-copy">No usable agency run receipt was found.</p>';
-
-  return `<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
-  <meta name="color-scheme" content="dark">
-  <title>IMMOHRTAL Office · ${escapeHtml(snapshot.date_et)}</title>
-  <style>
-    :root{color-scheme:dark;--ink:#020711;--observatory:#07101f;--raised:#0b1729;--paper:#f3f7fb;--platinum:#dce4ed;--muted:#a7bbd1;--cyan:#18c8ff;--mint:#58edb2;--cobalt:#287dff;--attention:#ffc56e;--danger:#ff8d8d;--line:rgba(166,204,240,.22);--line-strong:rgba(181,218,250,.42);--body:"Segoe UI Variable","Segoe UI",Arial,sans-serif;--mono:"Cascadia Mono","SFMono-Regular",Consolas,monospace;--max:1480px}
-    *{box-sizing:border-box}html{min-width:320px;background:var(--ink);scroll-behavior:smooth}body{margin:0;background:var(--ink);color:var(--paper);font:400 1rem/1.55 var(--body);text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}a{color:inherit}h1,h2,h3,p{margin-top:0}:focus-visible{outline:3px solid var(--mint);outline-offset:4px}.skip-link{position:fixed;z-index:20;top:12px;left:12px;transform:translateY(-160%);padding:10px 14px;border-radius:10px;background:var(--paper);color:var(--ink)}.skip-link:focus{transform:none}
-    .shell{width:min(100% - 40px,var(--max));margin:0 auto}.masthead{padding:54px 0 38px;border-bottom:1px solid var(--line)}.masthead-grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(300px,.7fr);gap:70px;align-items:end}.masthead-grid>*{min-width:0}.brand-lockup{display:flex;align-items:center;gap:14px;margin-bottom:28px;color:var(--muted);font:600 .72rem/1.3 var(--mono);letter-spacing:.08em;text-transform:uppercase}.brand-mark{flex:0 0 auto;width:18px;height:18px;border:1px solid var(--cyan);border-radius:50%;box-shadow:inset 0 0 0 4px var(--ink),inset 0 0 0 6px var(--mint)}h1{max-width:16ch;margin-bottom:14px;font-size:clamp(2.25rem,5vw,5rem);font-weight:760;line-height:.98;letter-spacing:-.04em;text-wrap:balance}.masthead-copy{max-width:66ch;margin:0;color:var(--muted);font-size:1.05rem}.truth-plate{align-self:stretch;display:flex;flex-direction:column;justify-content:flex-end;padding:28px;border:1px solid var(--line-strong);border-radius:14px;background:var(--raised);box-shadow:0 24px 64px rgba(0,0,0,.3)}.truth-plate strong{display:block;margin-bottom:8px;color:var(--mint);font:650 .72rem/1.3 var(--mono);letter-spacing:.08em;text-transform:uppercase}.truth-plate p{margin:0;color:var(--platinum)}
-    .lifecycle{padding:24px 0 70px}.lifecycle-list{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));margin:0;padding:0;border-bottom:1px solid var(--line);list-style:none}.lifecycle-list li{min-width:0;padding:22px 20px 24px 0;border-top:1px solid var(--line)}.lifecycle-list li+li{padding-left:20px;border-left:1px solid var(--line)}.lifecycle-list span,.lifecycle-list small{display:block;color:var(--muted)}.lifecycle-list span{margin-bottom:8px;font-size:.78rem}.lifecycle-list strong{display:block;overflow-wrap:anywhere;font:600 .72rem/1.4 var(--mono)}.lifecycle-list small{margin-top:8px;font-size:.74rem;line-height:1.45}.verified-text{color:var(--mint)!important}.attention-text{color:var(--attention)!important}.active-text{color:var(--cyan)!important}.neutral-text{color:var(--muted)!important}
-    .section-head{display:grid;grid-template-columns:minmax(250px,.75fr) minmax(0,1.25fr);gap:70px;align-items:end;margin-bottom:34px}.section-head h2{margin:0;font-size:clamp(1.8rem,3vw,3rem);line-height:1.05;letter-spacing:-.035em}.section-head p{max-width:66ch;margin:0;color:var(--muted)}.roster{padding:52px 0 100px}.seat-row{display:grid;grid-template-columns:minmax(250px,.78fr) minmax(250px,.55fr) minmax(0,1.35fr);gap:38px;padding:34px 0 38px;border-top:1px solid var(--line)}.seat-row:last-child{border-bottom:1px solid var(--line)}.seat-identity{display:flex;gap:18px;align-items:flex-start}.seat-index{padding-top:5px;color:var(--cyan);font:600 .7rem/1 var(--mono)}.seat-identity h2{max-width:18ch;margin-bottom:9px;font-size:1.22rem;line-height:1.2;letter-spacing:-.025em}.seat-identity p{margin:0;color:var(--muted);font-size:.78rem}.seat-state{align-self:start}.seat-state>p{margin:15px 0 0;color:var(--muted);font-size:.78rem;line-height:1.55}.runtime-truth{display:block;margin-top:12px;color:var(--platinum);font-size:.78rem}.runtime-truth b{margin-right:7px;color:var(--muted);font:500 .66rem/1 var(--mono);letter-spacing:.06em;text-transform:uppercase}.status-chip{display:inline-flex;width:max-content;max-width:100%;padding:6px 9px;border:1px solid var(--line-strong);border-radius:999px;font:600 .64rem/1.2 var(--mono);letter-spacing:.04em;overflow-wrap:anywhere}.status-chip.verified{border-color:rgba(88,237,178,.48);color:var(--mint)}.status-chip.active{border-color:rgba(24,200,255,.5);color:var(--cyan)}.status-chip.attention{border-color:rgba(255,197,110,.52);color:var(--attention)}.status-chip.neutral{color:var(--muted)}.assignment-list{margin:0;padding:0;list-style:none}.assignment-row{display:grid;grid-template-columns:145px minmax(0,1fr);gap:22px;padding:0 0 22px}.assignment-row+.assignment-row{padding-top:22px;border-top:1px solid var(--line)}.assignment-id{display:flex;flex-direction:column;align-items:flex-start;gap:10px}.assignment-id strong{font:650 .78rem/1.2 var(--mono)}.assignment-main p{margin:0 0 15px;color:var(--platinum);font-size:.88rem}.assignment-main dl{display:grid;grid-template-columns:minmax(120px,.35fr) minmax(0,1fr);gap:16px;margin:0}.assignment-main dl>div{min-width:0}.assignment-main dt{margin-bottom:5px;color:var(--muted);font:500 .62rem/1.3 var(--mono);letter-spacing:.06em;text-transform:uppercase}.assignment-main dd{margin:0;color:var(--muted);font-size:.76rem;line-height:1.5}.assignment-empty{color:var(--muted);font-size:.84rem}
-    .control-floor{padding:96px 0;background:var(--observatory);border-block:1px solid var(--line)}.board-grid{display:grid;grid-template-columns:minmax(260px,.62fr) minmax(0,1.38fr);gap:72px;align-items:start}.board-counts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--line)}.board-count{display:flex;align-items:baseline;justify-content:space-between;gap:18px;padding:18px 0;border-bottom:1px solid var(--line)}.board-count:nth-child(odd){padding-right:18px}.board-count:nth-child(even){padding-left:18px;border-left:1px solid var(--line)}.board-count span{color:var(--muted);font:500 .65rem/1.3 var(--mono);overflow-wrap:anywhere}.board-count strong{font-size:1.55rem}.ledger-table{width:100%;border-collapse:collapse}.ledger-table th,.ledger-table td{padding:16px 14px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}.ledger-table th{color:var(--muted);font:500 .64rem/1.3 var(--mono);letter-spacing:.06em;text-transform:uppercase}.ledger-table td{color:var(--muted);font-size:.8rem;line-height:1.5}.ledger-table td:first-child{width:120px;color:var(--paper)}.ledger-table td strong,.ledger-table td span{display:block}.ledger-table td span{margin-top:5px;color:var(--attention);font:500 .62rem/1.2 var(--mono)}
-    .closeout{padding:100px 0}.closeout-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(300px,.8fr);gap:80px}.completed-list{margin:28px 0 0;padding:0;border-top:1px solid var(--line);list-style:none}.completed-list li{display:grid;grid-template-columns:90px 130px minmax(0,1fr);gap:18px;padding:18px 0;border-bottom:1px solid var(--line);align-items:start}.completed-list strong{font:650 .74rem/1.4 var(--mono)}.completed-list span{color:var(--mint);font:500 .62rem/1.4 var(--mono)}.completed-list p{margin:0;color:var(--muted);font-size:.8rem;overflow-wrap:anywhere}.receipt-panel{padding:28px;border-radius:14px;background:var(--raised);box-shadow:0 26px 70px rgba(0,0,0,.32)}.receipt-panel h2{margin-bottom:12px;font-size:1.25rem}.receipt-panel>p{color:var(--muted);font-size:.82rem}.receipt-ledger{margin:22px 0 0}.receipt-ledger>div{display:flex;justify-content:space-between;gap:24px;padding:11px 0;border-top:1px solid var(--line)}.receipt-ledger dt{color:var(--muted);font-size:.72rem}.receipt-ledger dd{margin:0;text-align:right;font:600 .7rem/1.35 var(--mono);overflow-wrap:anywhere}.outcome-line{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;margin-top:70px;border-block:1px solid var(--line)}.outcome-line div{padding:22px 18px}.outcome-line div+div{border-left:1px solid var(--line)}.outcome-line div:nth-child(5n+1){border-left:0}.outcome-line div:nth-child(n+6){border-top:1px solid var(--line)}.outcome-line span{display:block;color:var(--muted);font-size:.7rem}.outcome-line strong{display:block;margin-top:7px;font-size:1.5rem}.footer{padding:32px 0 50px;border-top:1px solid var(--line);color:var(--muted);font-size:.76rem}.footer p{max-width:90ch;margin:0}.empty-copy{color:var(--muted)}
-    @media(max-width:1100px){.masthead-grid,.section-head,.board-grid,.closeout-grid{grid-template-columns:1fr;gap:34px}.lifecycle-list{grid-template-columns:repeat(2,minmax(0,1fr))}.lifecycle-list li:nth-child(odd){padding-left:0;border-left:0}.lifecycle-list li:nth-child(even){padding-left:20px;border-left:1px solid var(--line)}.seat-row{grid-template-columns:minmax(230px,.75fr) minmax(0,1.25fr)}.seat-state{grid-column:1}.assignment-list{grid-column:2;grid-row:1/span 2}.outcome-line{grid-template-columns:repeat(2,minmax(0,1fr))}.outcome-line div:nth-child(odd){border-left:0}.outcome-line div:nth-child(n+3){border-top:1px solid var(--line)}}
-    @media(max-width:720px){.shell{width:min(100% - 28px,var(--max))}.masthead{padding-top:34px}.masthead-grid{gap:28px}.brand-lockup{align-items:flex-start;flex-wrap:wrap;overflow-wrap:anywhere}.truth-plate{padding:22px}.lifecycle{padding-bottom:48px}.lifecycle-list{display:block}.lifecycle-list li,.lifecycle-list li+li,.lifecycle-list li:nth-child(even){padding:18px 0;border-left:0}.roster{padding:30px 0 72px}.section-head{margin-bottom:20px}.seat-row{display:block;padding:28px 0}.seat-state{margin:22px 0 28px}.assignment-row{grid-template-columns:1fr}.assignment-id{flex-direction:row;align-items:center}.assignment-main dl{grid-template-columns:1fr}.control-floor,.closeout{padding:72px 0}.board-counts{display:block}.board-count,.board-count:nth-child(even),.board-count:nth-child(odd){padding:16px 0;border-left:0}.ledger-wrap{overflow-x:auto}.ledger-table{min-width:720px}.completed-list li{grid-template-columns:72px minmax(0,1fr)}.completed-list p{grid-column:1/-1}.outcome-line{display:block}.outcome-line div,.outcome-line div+div{border-top:1px solid var(--line);border-left:0}.outcome-line div:first-child{border-top:0}}
-    @media print{body{background:#fff;color:#111}.masthead,.control-floor{background:#fff}.truth-plate,.receipt-panel{border:1px solid #999;background:#fff;box-shadow:none}.masthead-copy,.section-head p,.seat-identity p,.seat-state>p,.assignment-main dd,.ledger-table td,.completed-list p,.receipt-panel>p,.footer{color:#333}.lifecycle-list,.seat-row,.seat-row:last-child,.control-floor,.completed-list,.completed-list li,.ledger-table th,.ledger-table td,.footer{border-color:#aaa}.status-chip{color:#111!important;border-color:#777}.shell{width:100%}}
-  </style>
-</head>
-<body>
-  <!--
-  THESIS: A real office is a control ledger of assignments, evidence, and exceptions, not simulated employee motion.
-  OWN-WORLD: IMMOHRTAL space ink, gunmetal, platinum, cyan, and mint in a restrained operating surface with station rows and receipt ledgers.
-  STORY: Dillon sees what is built, what each seat owns, what is blocked, what evidence exists, and what closed today.
-  FIRST VIEWPORT: Office truth and lifecycle states lead, followed by five accountable seat stations; no decorative activity indicator appears.
-  FORM: Established IMMOHRTAL control-ledger extension in Operate mode; direction seed not required for this narrow established-world surface.
-  FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
-  -->
-  <a class="skip-link" href="#office-roster">Skip to employee seats</a>
-  <header class="masthead">
-    <div class="shell masthead-grid">
-      <div>
-        <div class="brand-lockup"><span class="brand-mark" aria-hidden="true"></span>IMMOHRTAL Marketing Solutions · Internal office</div>
-        <h1>Work truth, without theater.</h1>
-        <p class="masthead-copy">Five accountable Codex job seats, one command board, and a dated evidence receipt. This private local view reports recorded work only.</p>
-      </div>
-      <aside class="truth-plate" aria-label="Runtime truth">
-        <strong>${escapeHtml(snapshot.office_lifecycle.current_state)}</strong>
-        <p>${escapeHtml(snapshot.office_lifecycle.truth)}</p>
-      </aside>
-    </div>
-  </header>
-  <main>
-    <section class="lifecycle" aria-labelledby="lifecycle-heading">
-      <div class="shell">
-        <h2 id="lifecycle-heading" hidden>Office lifecycle</h2>
-        <ul class="lifecycle-list">${lifecycleRows}</ul>
-      </div>
-    </section>
-    <section class="roster" id="office-roster" aria-labelledby="roster-heading">
-      <div class="shell">
-        <header class="section-head"><h2 id="roster-heading">The five-seat office</h2><p>Board state and runtime state are separate. A recorded assignment does not prove an agent is online. Each seat remains <strong>NOT_OBSERVED</strong> until a current process receipt exists.</p></header>
-        ${rosterRows.trimStart()}
-      </div>
-    </section>
-    <section class="control-floor" aria-labelledby="control-heading">
-      <div class="shell">
-        <header class="section-head"><h2 id="control-heading">Board and exceptions</h2><p>${escapeHtml(snapshot.board.total_items)} current items. ${escapeHtml(snapshot.board.active_items)} remain active. Exact blockers stay visible until their evidence or authority gate is resolved.</p></header>
-        <div class="board-grid">
-          <div class="board-counts">${boardBars}</div>
-          <div class="ledger-wrap"><table class="ledger-table"><thead><tr><th>Item</th><th>Exact blocker</th><th>Required next action</th></tr></thead><tbody>${blockerRows}</tbody></table></div>
-        </div>
-      </div>
-    </section>
-    <section class="closeout" aria-labelledby="closeout-heading">
-      <div class="shell">
-        <header class="section-head"><h2 id="closeout-heading">Daily closeout</h2><p>${escapeHtml(snapshot.end_of_day.process_correction)}</p></header>
-        <div class="closeout-grid">
-          <div><h2>Verified or done</h2><ul class="completed-list">${completedRows}</ul></div>
-          <aside class="receipt-panel"><h2>Latest agency evidence</h2><p>${escapeHtml(agency.does_not_prove)}</p>${agencyEvidence}</aside>
-        </div>
-        <div class="outcome-line" aria-label="Daily research and commercial outcomes"><div><span>Companies researched today</span><strong>${escapeHtml(commercial.researched_today)}</strong></div><div><span>Current identities confirmed today</span><strong>${escapeHtml(commercial.identity_confirmed_today)}</strong></div><div><span>Identities blocked today</span><strong>${escapeHtml(commercial.identity_blocked_today)}</strong></div><div><span>Qualified today</span><strong>${escapeHtml(commercial.qualified_today)}</strong></div><div><span>Drafts held</span><strong>${escapeHtml(commercial.gmail_drafts_compliance_blocked)}</strong></div><div><span>Prospect messages sent</span><strong>${escapeHtml(commercial.messages_sent)}</strong></div><div><span>Owner status updates sent</span><strong>${escapeHtml(commercial.owner_status_updates_sent)}</strong></div><div><span>Meetings booked</span><strong>${escapeHtml(commercial.meetings_booked)}</strong></div><div><span>Active IMMOHRTAL clients</span><strong>${escapeHtml(commercial.active_clients)}</strong></div><div><span>Closed won</span><strong>${escapeHtml(commercial.closed_won)}</strong></div><div><span>Verified new revenue</span><strong>$${escapeHtml(commercial.verified_new_revenue_usd)}</strong></div></div>
-      </div>
-    </section>
-  </main>
-  <footer class="footer"><div class="shell"><p>Generated ${escapeHtml(snapshot.as_of)} from hashed local roster, command-board, scorecard, and available run-receipt sources. This report invocation changed no messages, drafts, calendar events, CRM records, deployments, purchases, schedules, or credentials.</p></div></footer>
-</body>
-</html>\n`;
-}
 
 function writeJson(filePath, value) {
   fs.writeFileSync(filePath, `${JSON.stringify(value, null, 2)}\n`, { encoding: 'utf8', flag: 'wx' });

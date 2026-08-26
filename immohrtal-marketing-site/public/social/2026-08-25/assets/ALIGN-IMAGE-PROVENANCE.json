@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.1.0",
+  "business": "IMMOHRTAL Marketing Solutions",
+  "business_route": "/social/2026-08-25/",
+  "style_contract": "Align HCM Image Gen editorial grammar adapted by explicit user direction to the verified IMMOHRTAL palette and brand identity",
+  "generator": "built-in image_gen",
+  "model": "not_exposed_by_tool",
+  "generated_on": "2026-08-25",
+  "assets": [
+    {
+      "file": "immohrtal-build-system-studio.png",
+      "width": 1122,
+      "height": 1402,
+      "sha256": "204df44a7b105aa1ad296516f35d060cab7f72b3b68c4c3e4b08bc57ba4b231b",
+      "prompt": "Editorial 4:5 documentary photograph for IMMOHRTAL Marketing Solutions showing a real dark design studio worktable, one ultrawide monitor with a text-free website layout, a secondary search-answer screen, physical wireframe cards, and a compact machined-aluminum worker object. Use calm asymmetry, directional light, tactile materials, and the verified near-black, cobalt, cyan, mint, and platinum palette. No readable text, logos, fake metrics, generic gradients, neon cyberpunk, or Align HCM identity."
+    },
+    {
+      "file": "immohrtal-search-answer-map.png",
+      "width": 1122,
+      "height": 1402,
+      "sha256": "8829cc9b170ff0fb2b4a38397b7f168b8c9e9c99e0480eca5ac6dec77f66a9c3",
+      "prompt": "Editorial 4:5 still-life for IMMOHRTAL Marketing Solutions showing a physical map of translucent panels, structured content blocks, and machined paths converging on one clear answer tile as a metaphor for SEO, AEO, and GEO. Use pale platinum, ice blue, gunmetal, cobalt, cyan, and one mint confirmation accent. No readable text, logos, fake metrics, glossy plastic, or Align HCM identity."
+    },
+    {
+      "file": "immohrtal-ai-workforce-floor.png",
+      "width": 1122,
+      "height": 1402,
+      "sha256": "f792d1384a46964d94e73222ec2a11f364558b8a41d56f0671e1a3e556de42b5",
+      "prompt": "Editorial 4:5 macro photograph for IMMOHRTAL Marketing Solutions showing a physical architectural model with five supervised AI job stations around a dispatch table and one small machined-aluminum figure mid-step. Use tactile metal, paper, glass, matte gunmetal, cobalt task lights, cyan paths, mint verification, and platinum figures. Conceptual only, with no online claim, readable text, logos, fake metrics, cartoon robots, or Align HCM identity."
+    }
+  ],
+  "finished_cards": [
+    {
+      "file": "../immohrtal-social-01-next-step.png",
+      "width": 1080,
+      "height": 1350,
+      "sha256": "a8ddeb5d55a92e924dffddbba84b65a9410f30968302084e4781415f8024c840",
+      "source_card": "../social-cards.html?card=1"
+    },
+    {
+      "file": "../immohrtal-social-02-visibility-system.png",
+      "width": 1080,
+      "height": 1350,
+      "sha256": "8477bdd56621b0b531afed7c6fc7b098e11ffd46ed201a4845f6ab9f109c7025",
+      "source_card": "../social-cards.html?card=2"
+    },
+    {
+      "file": "../immohrtal-social-03-supervised-workers.png",
+      "width": 1080,
+      "height": 1350,
+      "sha256": "6dec417ade2368cd22bce039f9ac88c78ecc3885034d6c47d4af3aec58bbb7c9",
+      "source_card": "../social-cards.html?card=3"
+    }
+  ]
+}

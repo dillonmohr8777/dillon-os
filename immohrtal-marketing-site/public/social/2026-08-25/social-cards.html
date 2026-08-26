@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>IMMOHRTAL Social Campaign</title>
+  <style>
+    @font-face{font-family:Unbounded;src:url("../../fonts/Unbounded-Variable-Latin.woff2") format("woff2");font-display:block}
+    @font-face{font-family:Manrope;src:url("../../fonts/Manrope-Variable-Latin.woff2") format("woff2");font-display:block}
+    @font-face{font-family:Foundry Mono;src:url("../../fonts/FoundryMono-500.woff2") format("woff2");font-display:block;font-weight:500}
+    *{box-sizing:border-box}
+    html,body{margin:0;background:#020711}
+    body{width:1080px;height:1350px;overflow:hidden;color:#f3f7fb;font-family:Manrope,Arial,sans-serif}
+    .card{position:relative;display:none;width:1080px;height:1350px;overflow:hidden;isolation:isolate;background:#020711}
+    body[data-card="1"] .card--1,body[data-card="2"] .card--2,body[data-card="3"] .card--3{display:block}
+    .visual{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+    .grain{position:absolute;z-index:4;inset:0;background:url("assets/grain.svg") repeat;background-size:220px 220px;opacity:.18;mix-blend-mode:soft-light;pointer-events:none}
+    .topline{position:absolute;z-index:6;top:64px;left:72px;right:72px;display:flex;align-items:center;justify-content:space-between;border-top:2px solid rgba(243,247,251,.8);padding-top:20px}
+    .brand{font:500 18px/1 Foundry Mono,monospace;letter-spacing:.16em;text-transform:uppercase}
+    .index{font:500 16px/1 Foundry Mono,monospace;letter-spacing:.12em;color:#18c8ff}
+    .headline{position:absolute;z-index:6;margin:0;font:780 88px/.91 Unbounded,Arial,sans-serif;letter-spacing:-.055em;text-transform:uppercase;text-wrap:balance}
+    .subline{position:absolute;z-index:6;margin:0;font:620 24px/1.4 Manrope,Arial,sans-serif;letter-spacing:-.02em}
+    .footer{position:absolute;z-index:6;left:72px;right:72px;bottom:54px;display:flex;justify-content:space-between;align-items:center;padding-top:18px;border-top:1px solid rgba(243,247,251,.42);font:500 17px/1 Foundry Mono,monospace;letter-spacing:.08em;text-transform:uppercase}
+    .footer strong{color:#58edb2;font-weight:500}
+    .card--1::after{content:"";position:absolute;z-index:2;inset:0;background:linear-gradient(180deg,rgba(2,7,17,.55) 0%,rgba(2,7,17,.05) 35%,rgba(2,7,17,.88) 77%,#020711 100%)}
+    .card--1 .headline{left:68px;right:70px;bottom:174px;max-width:940px}
+    .card--1 .headline em{display:block;color:#18c8ff;font-style:normal}
+    .card--1 .subline{left:74px;bottom:112px;color:#dce4ed}
+    .card--2{color:#06101d;background:#f3f7fb}
+    .card--2::after{content:"";position:absolute;z-index:2;inset:0;background:linear-gradient(180deg,#f3f7fb 0%,rgba(243,247,251,.96) 24%,rgba(243,247,251,.08) 58%,rgba(2,7,17,.2) 100%)}
+    .card--2 .visual{top:350px;height:1000px;object-position:center bottom}
+    .card--2 .topline{border-color:rgba(6,16,29,.7)}
+    .card--2 .index{color:#096d8e}
+    .card--2 .headline{top:150px;left:68px;width:930px;font-size:76px}
+    .card--2 .headline em{color:#287dff;font-style:normal}
+    .card--2 .subline{top:448px;left:74px;width:700px;color:#40566b}
+    .card--2 .footer{color:#f3f7fb;border-color:rgba(243,247,251,.46);text-shadow:0 2px 14px rgba(2,7,17,.4)}
+    .card--3::after{content:"";position:absolute;z-index:2;inset:0;background:linear-gradient(180deg,rgba(2,7,17,.88) 0%,rgba(2,7,17,.22) 42%,rgba(2,7,17,.78) 100%)}
+    .card--3 .visual{object-position:center}
+    .card--3 .headline{top:150px;left:68px;width:920px;font-size:76px}
+    .card--3 .headline em{color:#58edb2;font-style:normal}
+    .card--3 .subline{top:452px;left:74px;width:600px;color:#dce4ed}
+    .card--3 .proof{position:absolute;z-index:6;right:72px;bottom:156px;display:grid;grid-template-columns:repeat(2,max-content);gap:12px 28px;padding:24px 26px;border:1px solid rgba(24,200,255,.5);background:rgba(2,7,17,.76);backdrop-filter:blur(12px);font:500 16px/1.25 Foundry Mono,monospace;letter-spacing:.06em;text-transform:uppercase}
+    .card--3 .proof span:nth-child(even){color:#58edb2}
+  </style>
+</head>
+<body data-card="1">
+  <article class="card card--1" aria-label="Your website should carry the next step">
+    <img class="visual" src="assets/immohrtal-build-system-studio.png" alt="">
+    <div class="grain"></div>
+    <header class="topline"><span class="brand">IMMOHRTAL // WEBSITE SYSTEMS</span><span class="index">FIELD 01</span></header>
+    <h1 class="headline">Your website should carry <em>the next step.</em></h1>
+    <p class="subline">Clear offer. Useful proof. Direct action.</p>
+    <footer class="footer"><span>immohrtalmarketing.com</span><strong>Build what works</strong></footer>
+  </article>
+
+  <article class="card card--2" aria-label="One business, one clear answer, more places to be found">
+    <img class="visual" src="assets/immohrtal-search-answer-map.png" alt="">
+    <div class="grain"></div>
+    <header class="topline"><span class="brand">IMMOHRTAL // VISIBILITY SYSTEMS</span><span class="index">FIELD 02</span></header>
+    <h1 class="headline">One business. One clear answer. <em>More places to be found.</em></h1>
+    <p class="subline">Technical SEO + AEO + GEO. One connected system.</p>
+    <footer class="footer"><span>immohrtalmarketing.com</span><strong>$1,500 monthly bundle</strong></footer>
+  </article>
+
+  <article class="card card--3" aria-label="AI workers need a job description and a stop button">
+    <img class="visual" src="assets/immohrtal-ai-workforce-floor.png" alt="">
+    <div class="grain"></div>
+    <header class="topline"><span class="brand">IMMOHRTAL // BUSINESS AGENTS</span><span class="index">FIELD 03</span></header>
+    <h1 class="headline">AI workers need a job description. <em>And a stop button.</em></h1>
+    <p class="subline">Defined jobs. Trusted inputs. Human approval where it matters.</p>
+    <div class="proof" aria-hidden="true"><span>Research</span><span>Observed</span><span>Revenue</span><span>Governed</span><span>Quality</span><span>Required</span></div>
+    <footer class="footer"><span>immohrtalmarketing.com</span><strong>Supervised systems</strong></footer>
+  </article>
+
+  <script>
+    const value = new URLSearchParams(location.search).get("card");
+    document.body.dataset.card = ["1","2","3"].includes(value) ? value : "1";
+  </script>
+</body>
+</html>

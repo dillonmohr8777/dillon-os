@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.0.0",
+  "brand": "IMMOHRTAL Marketing Solutions",
+  "state": "blocked_missing_exact_portal_and_reauthentication",
+  "as_of": "2026-08-25",
+  "portal": {
+    "hub_id": null,
+    "account_name": null,
+    "verified": false,
+    "excluded_hub_ids": [
+      "242825734",
+      "50612503",
+      "3389165"
+    ]
+  },
+  "deployment_authorized": false,
+  "objects": {
+    "company": {
+      "identity_key": "domain",
+      "required_properties": [
+        "name",
+        "domain",
+        "immohrtal_source_locator",
+        "immohrtal_observed_on",
+        "immohrtal_identity_state",
+        "immohrtal_service_lane",
+        "immohrtal_governance_state",
+        "immohrtal_suppression_state",
+        "immohrtal_next_action"
+      ]
+    },
+    "contact": {
+      "creation_gate": "verified_business_contact_source_and_separate_contact_authority",
+      "required_properties": [
+        "email",
+        "associatedcompanyid",
+        "immohrtal_source_locator",
+        "immohrtal_contact_basis",
+        "immohrtal_opt_out_state",
+        "immohrtal_last_verified_on"
+      ]
+    },
+    "deal": {
+      "creation_gate": "internally_qualified_and_qa_verified",
+      "required_properties": [
+        "dealname",
+        "pipeline",
+        "dealstage",
+        "amount",
+        "immohrtal_offer_lane",
+        "immohrtal_problem_evidence",
+        "immohrtal_exit_rule",
+        "immohrtal_next_action"
+      ]
+    }
+  },
+  "pipeline": {
+    "label": "IMMOHRTAL New Business",
+    "stages": [
+      "Research Only",
+      "Internally Qualified",
+      "Ready for Draft",
+      "Waiting Approval",
+      "Contacted",
+      "Replied",
+      "Meeting Scheduled",
+      "Proposal Prepared",
+      "Proposal Sent",
+      "Closed Won",
+      "Closed Lost",
+      "Suppressed"
+    ]
+  },
+  "workflows": [
+    {
+      "name": "Govern new company",
+      "trigger": "company created by approved import",
+      "actions": [
+        "set Research Only",
+        "require source locator and observation date",
+        "check duplicate and suppression state",
+        "create internal review task"
+      ],
+      "external_message_action": false
+    },
+    {
+      "name": "Approval before outreach",
+      "trigger": "deal enters Waiting Approval",
+      "actions": [
+        "require exact recipient and copy preview",
+        "require approved postal footer",
+        "require sender and suppression verification"
+      ],
+      "external_message_action": false
+    },
+    {
+      "name": "Reply and meeting handoff",
+      "trigger": "verified reply or meeting receipt",
+      "actions": [
+        "advance only from provider receipt",
+        "assign Dillon as owner",
+        "create a next-action task",
+        "preserve source thread locator"
+      ],
+      "external_message_action": false
+    }
+  ],
+  "release_gates": [
+    "exact IMMOHRTAL Hub ID confirmed",
+    "connector reauthenticated to that portal",
+    "object and property permissions read back",
+    "Dillon approves configuration write",
+    "test company uses non-contact fixture data",
+    "rollback and audit receipt verified"
+  ],
+  "truth": "This file is a local configuration blueprint. It does not prove a HubSpot portal exists, is authenticated, or has been changed."
+}

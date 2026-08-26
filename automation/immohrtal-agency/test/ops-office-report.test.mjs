@@ -11,6 +11,7 @@ import {
   renderOfficeDashboard,
   writeOfficeRun
 } from '../ops/lib/office-report.mjs';
+import { changedFloorActors } from '../ops/lib/live-office-dashboard.mjs';
 
 const agencyRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const repoRoot = path.resolve(agencyRoot, '..', '..');
@@ -23,6 +24,21 @@ test('office snapshot derives five truthful seat states from the real command bo
   assert.equal(new Set(snapshot.roster.map((role) => role.role_id)).size, 5);
   assert.ok(snapshot.roster.every((role) => role.runtime_state === 'NOT_OBSERVED'));
   assert.ok(snapshot.roster.every((role) => role.online_claim === false));
+  assert.equal(snapshot.floor.mode, 'RECORDED_SNAPSHOT');
+  assert.equal(snapshot.floor.actors.length, 5);
+  assert.equal(new Set(snapshot.floor.actors.map((actor) => actor.role_id)).size, 5);
+  assert.ok(snapshot.floor.actors.every((actor) => actor.runtime_state === 'NOT_OBSERVED'));
+  assert.ok(snapshot.floor.actors.every((actor) => actor.online_claim === false));
+  assert.deepEqual(
+    Object.fromEntries(snapshot.floor.actors.map((actor) => [actor.role_id, actor.target_station_id])),
+    {
+      operations_finance_controller: 'qa',
+      demand_intelligence_lead: 'evidence',
+      revenue_pipeline_manager: 'blocker',
+      delivery_client_success_lead: 'blocker',
+      quality_risk_auditor: 'evidence'
+    }
+  );
   assert.equal(snapshot.board.total_items, 13);
   assert.equal(snapshot.board.status_counts.READY_FOR_REVIEW, 4);
   assert.equal(snapshot.board.status_counts.BLOCKED, 2);
@@ -35,12 +51,26 @@ test('office snapshot derives five truthful seat states from the real command bo
   assert.equal(snapshot.office_lifecycle.schedule_state, 'NOT_INSTALLED_OR_CHANGED_BY_THIS_RUNNER');
   assert.equal(snapshot.office_lifecycle.codex_heartbeat_state, 'ACTIVE');
   assert.equal(snapshot.standup.commercial_truth.gmail_drafts_created, 5);
-  assert.equal(snapshot.standup.commercial_truth.gmail_drafts_directly_read_back, 5);
-  assert.equal(snapshot.standup.commercial_truth.gmail_drafts_compliance_blocked, 5);
-  assert.equal(snapshot.standup.commercial_truth.researched_today, 32);
-  assert.equal(snapshot.standup.commercial_truth.identity_confirmed_today, 28);
-  assert.equal(snapshot.standup.commercial_truth.identity_blocked_today, 4);
-  assert.equal(snapshot.standup.commercial_truth.qualified_today, 0);
+  assert.equal(snapshot.standup.commercial_truth.gmail_drafts_directly_read_back, 8);
+  assert.equal(snapshot.standup.commercial_truth.gmail_drafts_compliance_blocked, 8);
+  assert.equal(snapshot.standup.commercial_truth.researched_today, 46);
+  assert.equal(snapshot.standup.commercial_truth.authorized_source_populated_rows, 47);
+  assert.equal(snapshot.standup.commercial_truth.authorized_company_source_rows, 46);
+  assert.equal(snapshot.standup.commercial_truth.invalid_non_company_source_rows, 1);
+  assert.equal(snapshot.standup.commercial_truth.identity_confirmed_today, 40);
+  assert.equal(snapshot.standup.commercial_truth.identity_provisional_today, 1);
+  assert.equal(snapshot.standup.commercial_truth.identity_blocked_today, 5);
+  assert.equal(snapshot.standup.commercial_truth.remaining_authorized_source_rows, 0);
+  assert.equal(snapshot.standup.commercial_truth.account_governance_cleared_current_exact_sources, 15);
+  assert.equal(snapshot.standup.commercial_truth.account_governance_held_current_exact_sources, 1);
+  assert.equal(snapshot.standup.commercial_truth.account_governance_pending_current_exact_sources, 30);
+    assert.equal(snapshot.standup.commercial_truth.qualified_today, 0);
+  assert.equal(snapshot.standup.commercial_truth.social_post_ready_cards_created, 3);
+  assert.equal(snapshot.standup.commercial_truth.content_queue_items, 9);
+  assert.equal(snapshot.standup.commercial_truth.social_posts_published, 0);
+  assert.equal(snapshot.standup.commercial_truth.hubspot_blueprint_created, 1);
+  assert.equal(snapshot.standup.commercial_truth.hubspot_portal_route_verified, false);
+  assert.equal(snapshot.standup.commercial_truth.hubspot_configuration_writes, 0);
   assert.equal(snapshot.standup.commercial_truth.owner_status_updates_sent, 1);
   assert.equal(snapshot.standup.commercial_truth.messages_sent, 0);
   assert.equal(snapshot.standup.commercial_truth.replies, 0);
@@ -50,6 +80,29 @@ test('office snapshot derives five truthful seat states from the real command bo
   assert.ok(Object.values(snapshot.external_actions_performed_by_report_loop).every((value) => value === 0));
   assert.equal(snapshot.privacy.raw_communications_included, false);
   assert.equal(snapshot.privacy.secrets_included, false);
+});
+
+test('floor fingerprint is stable across report time and input fingerprint remains receipt-specific', () => {
+  const first = buildOfficeSnapshot({ repoRoot, asOf: fixedAsOf, mode: 'both' });
+  const second = buildOfficeSnapshot({ repoRoot, asOf: '2026-08-25T20:05:00.000Z', mode: 'both' });
+
+  assert.equal(first.floor.source_state_fingerprint, second.floor.source_state_fingerprint);
+  assert.notEqual(first.input_fingerprint, second.input_fingerprint);
+  assert.equal(first.receipt_generated_at, fixedAsOf);
+  assert.equal(first.source_evidence.find((item) => item.kind === 'live_dashboard_renderer')?.locator, 'automation/immohrtal-agency/ops/lib/live-office-dashboard.mjs');
+  assert.ok(first.roster.flatMap((role) => role.board_assignments).every((item) => !Number.isNaN(Date.parse(item.updated_at))));
+});
+
+test('floor motion diff ignores unrelated fingerprint updates and returns only changed actor fields', () => {
+  const previous = [
+    { role_id: 'ops', target_station_id: 'qa', dominant_item_id: 'OPS-1', dominant_item_status: 'READY_FOR_REVIEW', board_updated_at: '2026-08-25T12:00:00-04:00' },
+    { role_id: 'demand', target_station_id: 'evidence', dominant_item_id: 'DEMAND-1', dominant_item_status: 'DONE', board_updated_at: '2026-08-25T12:01:00-04:00' }
+  ];
+  const next = [
+    { ...previous[0], station_slot: 4 },
+    { ...previous[1], dominant_item_status: 'VERIFIED' }
+  ];
+  assert.deepEqual(changedFloorActors(previous, next).map((actor) => actor.role_id), ['demand']);
 });
 
 test('office snapshot consumes the latest real agency receipt without treating it as employee runtime', () => {
@@ -104,10 +157,21 @@ test('office writer emits hashed JSON, Markdown, and a private dashboard idempot
   const dashboard = fs.readFileSync(first.dashboardPath, 'utf8');
   assert.match(dashboard, /name="robots" content="noindex,nofollow,noarchive,nosnippet"/);
   assert.equal((dashboard.match(/<article class="seat-row"/g) || []).length, 5);
+  assert.equal((dashboard.match(/class="worker-track"/g) || []).length, 5);
   assert.match(dashboard, /NOT_OBSERVED/);
-  assert.match(dashboard, /Work truth, without theater/);
-  assert.doesNotMatch(dashboard, /animation\s*:/i);
-  assert.doesNotMatch(dashboard, /setInterval|WebSocket|EventSource/);
+  assert.match(dashboard, /The crew is on the floor/);
+  assert.match(dashboard, /RECEIPT REPLAY/);
+  assert.match(dashboard, /Local feed checked/);
+  assert.match(dashboard, /Static receipt evidence/);
+  assert.match(dashboard, /does not refresh from the local feed/);
+  assert.match(dashboard, /changedFloorActors/);
+  assert.match(dashboard, /Only those workers moved/);
+  assert.doesNotMatch(dashboard, /id="generated-at"/);
+  assert.match(dashboard, /prefers-reduced-motion:reduce/);
+  assert.match(dashboard, /BOARD_STATE_TRANSITION_OR_LABELED_RECEIPT_REPLAY_ONLY/);
+  assert.match(dashboard, /class="neutral-text">NOT_VERIFIED_RUNNING/);
+  assert.doesNotMatch(dashboard, /class="verified-text">NOT_VERIFIED_RUNNING/);
+  assert.doesNotMatch(dashboard, /WebSocket|EventSource/);
 
   const second = writeOfficeRun(snapshot, { outputRoot, runId: '20260825-160000-test' });
   assert.equal(second.reused, true);
@@ -127,8 +191,13 @@ test('dashboard renderer exposes exact due times and blockers with no secret or 
   assert.match(dashboard, /Legal seller, registrations, banking, payments/);
   assert.match(dashboard, /Prospect messages sent/);
   assert.match(dashboard, /Owner status updates sent/);
-  assert.match(dashboard, /Drafts held<\/span><strong>5<\/strong>/);
+  assert.match(dashboard, /<dt>Drafts held<\/dt><dd>8<\/dd>/);
+  assert.match(dashboard, /<dt>Post-ready social cards<\/dt><dd>3<\/dd>/);
+  assert.match(dashboard, /<dt>Content queue items<\/dt><dd>9<\/dd>/);
+  assert.match(dashboard, /<dt>HubSpot portal route<\/dt><dd>BLOCKED<\/dd>/);
   assert.match(dashboard, /Daily Codex heartbeat/);
+  assert.match(dashboard, /<caption>Current blockers and required next actions<\/caption>/);
+  assert.match(dashboard, /data-live-endpoint=""/);
   assert.doesNotMatch(dashboard, /contact_email|contact_name|sheet_id|sender_email/);
 });
 
