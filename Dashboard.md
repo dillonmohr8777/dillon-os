@@ -2,7 +2,7 @@
 note_type: dashboard
 status: active
 owner: Dillon Mohr
-updated: 2026-08-15
+updated: 2026-08-26
 review_cadence: daily
 tags:
   - dashboard
@@ -21,10 +21,9 @@ navigation is needed.
 Checkbox items only — `_os/vault-state.js` reads this section for the HUD
 directive feed and skips any other list format.
 
-- [ ] Process [[00_Inbox/Start Here|inbox]] material that affects current work.
-- [ ] Choose one finish line from the active-project view.
-- [ ] Verify facts before external or consequential action.
-- [ ] Record decisions, lessons, and outcome evidence before closing the loop.
+- [ ] Review **Dillon Command Center** approval board (`automation-runs/dillon-command/2026-08-26/`).
+- [ ] Draft approval-gated replies for four stale Jul 30 Slack asks (bot alert first).
+- [ ] Pull live Bar Crawl USA metrics and replace sample figures in June report.
 
 ## Active projects
 

@@ -1,0 +1,25 @@
+{
+  "automation_id": "dillon-command",
+  "started_at": "2026-08-26T13:05:38.685Z",
+  "finished_at": "2026-08-26T13:10:00.000Z",
+  "status": "ok",
+  "dry_run": false,
+  "summary": "Umbrella run 2026-08-26: 8 lanes (4 parallel scout agents), command synthesis, approval board",
+  "counts": {
+    "lanes": 8,
+    "lanes_ok": 4,
+    "lanes_degraded": 2,
+    "lanes_blocked": 1,
+    "lanes_skipped": 1,
+    "tier1_items": 5,
+    "tier2_items": 8,
+    "preflight_ok": 3
+  },
+  "artifact_paths": [
+    "automation-runs/dillon-command/2026-08-26/",
+    "Daily-Briefs/am-report-2026-08-26.md",
+    "Daily-Briefs/plan-2026-08-26.md",
+    "Daily-Briefs/pulse-today.md"
+  ],
+  "written_at": "2026-08-26T13:10:00.000Z"
+}

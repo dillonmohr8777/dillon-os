@@ -1,0 +1,79 @@
+{
+  "date": "2026-08-26",
+  "lanes": {
+    "comms": {
+      "lane": "comms",
+      "status": "ok",
+      "verified_facts": [
+        "4 Slack intake files status:new (all dated 2026-07-30, ~27d stale)",
+        "No inbox files modified in last 48h",
+        "No slack-intake or inbox-brief for 2026-08-26",
+        "Live Slack MCP unavailable in cloud agent"
+      ],
+      "blockers": ["Live Slack MCP unavailable", "Slack bridge sync lagging"],
+      "approval_required": ["All 4 Slack replies outbound-gated"],
+      "tier1_candidates": ["Stabilize bot case-status notifications", "CallRail status report", "Melissa guidelines follow-up"],
+      "tier2_candidates": ["Jenny brand direction reply"],
+      "recommended_next_action": "Run slack-intake from Windows bridge; draft urgent bot alert reply for approval"
+    },
+    "clients": {
+      "lane": "clients",
+      "status": "ok",
+      "verified_facts": ["40/40 frontmatter complete", "14 active roster", "pulse was stale until this run", "9+ overdue due dates"],
+      "blockers": ["Registry reconciliation for Capsule & Tonic, Everyday Life", "Status drift NKCDC/Fresh Blends/Replenish"],
+      "approval_required": ["Tags 2 Go Ads access", "Replenish billing", "Shadow Meta", "VA Claims demo"],
+      "tier1_candidates": ["Refresh pulse-today", "Reconcile overdue due dates", "Align paused/active status fields"],
+      "tier2_candidates": ["NKCDC follow-up send", "Replenish billing resume"],
+      "recommended_next_action": "pulse-today refreshed; tier1 overdue-due reconciliation next"
+    },
+    "intelligence": {
+      "lane": "intelligence",
+      "status": "skipped",
+      "verified_facts": ["No concrete research question for 2026-08-26"],
+      "recommended_next_action": "no sweep question"
+    },
+    "websites": {
+      "lane": "websites",
+      "status": "degraded",
+      "verified_facts": ["Site-health dry-run: 1 pass, 1 fail, 3 skipped", "fixture-broken-form fails viewport/tracking/form checks"],
+      "blockers": ["Live sites not HTTP-checked in dry-run"],
+      "tier1_candidates": ["Run site-health --live on 3 production URLs"],
+      "recommended_next_action": "Live site-health pass before trusting green status"
+    },
+    "outreach": {
+      "lane": "outreach",
+      "status": "ok",
+      "verified_facts": ["1161 tracked, +18 today, 222 rebuild queue", "Jarman HVAC live top rebuild candidate"],
+      "blockers": ["Netlify token", "mail vendor undecided", "stage 6 human approval"],
+      "tier1_candidates": ["Jarman HVAC rebuild brief", "Andorra Family Dentistry", "Dutton Road Vet"],
+      "tier2_candidates": ["Direct mail activation", "Outbound send"],
+      "recommended_next_action": "Package live-domain rebuild batch for Mac/Melissa stage-6 approval"
+    },
+    "ads": {
+      "lane": "ads",
+      "status": "blocked",
+      "verified_facts": ["9 high-risk paid-media items in approval-queue", "Google Ads/Meta MCP unavailable in cloud"],
+      "approval_required": ["Omega", "Shadow", "Replenish", "Fagan", "Capsule", "Revive", "Bar Crawl x2"],
+      "recommended_next_action": "Desktop session with authenticated Ads MCP for live reads"
+    },
+    "reporting": {
+      "lane": "reporting",
+      "status": "degraded",
+      "verified_facts": ["Only bar-crawl-usa-2026-06.html exists; sampleData=true"],
+      "approval_required": ["Bar Crawl June report delivery after live numbers"],
+      "tier1_candidates": ["Rebuild report JSON from live export"],
+      "recommended_next_action": "Refresh bar-crawl data file on desktop"
+    },
+    "command": {
+      "lane": "command",
+      "status": "ok",
+      "artifacts_created": [
+        "Daily-Briefs/am-report-2026-08-26.md",
+        "Daily-Briefs/plan-2026-08-26.md",
+        "Daily-Briefs/pulse-today.md",
+        "automation-runs/dillon-command/2026-08-26/approval-board.md"
+      ],
+      "recommended_next_action": "One PR push to Dillon"
+    }
+  }
+}

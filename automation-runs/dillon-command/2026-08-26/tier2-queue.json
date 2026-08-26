@@ -1,0 +1,54 @@
+{
+  "date": "2026-08-26",
+  "items": [
+    {
+      "id": "T2-1",
+      "lane": "comms",
+      "action": "Reply to Jason/Sean bot case-status alert",
+      "risk": "medium"
+    },
+    {
+      "id": "T2-2",
+      "lane": "comms",
+      "action": "Reply Sean CallRail status",
+      "risk": "medium"
+    },
+    {
+      "id": "T2-3",
+      "lane": "ads",
+      "action": "Replenish billing unblock with Mia",
+      "risk": "high"
+    },
+    {
+      "id": "T2-4",
+      "lane": "ads",
+      "action": "Bar Crawl disapproved ad clearance",
+      "risk": "high"
+    },
+    {
+      "id": "T2-5",
+      "lane": "ads",
+      "action": "Shadow Meta restore after access verify",
+      "risk": "high"
+    },
+    {
+      "id": "T2-6",
+      "lane": "reporting",
+      "action": "Send Bar Crawl June report to client",
+      "risk": "medium"
+    },
+    {
+      "id": "T2-7",
+      "lane": "outreach",
+      "action": "Direct mail / outbound activate",
+      "risk": "high"
+    },
+    {
+      "id": "T2-8",
+      "lane": "ads",
+      "action": "Omega / Fagan / Capsule / Revive account changes",
+      "risk": "high"
+    }
+  ],
+  "note": "Tier-2 outbound/deploy/spend — prepared only, never auto-executed."
+}

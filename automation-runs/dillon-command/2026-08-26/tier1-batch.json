@@ -1,0 +1,36 @@
+{
+  "date": "2026-08-26",
+  "items": [
+    {
+      "id": "T1-1",
+      "lane": "clients",
+      "action": "Bulk refresh overdue due/last_touched on nine Jul-15 client overviews",
+      "tier": 1
+    },
+    {
+      "id": "T1-2",
+      "lane": "clients",
+      "action": "Reconcile Replenish / NKCDC / Fresh Blends active vs paused status fields",
+      "tier": 1
+    },
+    {
+      "id": "T1-3",
+      "lane": "websites",
+      "action": "Run site-health.js --live on ironicineptocracy, mohr-media, immohrtal",
+      "tier": 1
+    },
+    {
+      "id": "T1-4",
+      "lane": "outreach",
+      "action": "Brief/build Jarman HVAC + 2 live dental rebuild candidates from radar queue",
+      "tier": 1
+    },
+    {
+      "id": "T1-5",
+      "lane": "reporting",
+      "action": "Regenerate Bar Crawl June report after live JSON swap on desktop",
+      "tier": 1
+    }
+  ],
+  "note": "Tier-1 reversible tweaks batched here after lane scouts complete."
+}
