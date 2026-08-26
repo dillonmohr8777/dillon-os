@@ -20,7 +20,7 @@ const registryPath = path.join(root, '12_Brain', 'state', 'radar', 'registry.jso
 const selectionPath = path.join(runDir, 'SELECTION-EVIDENCE.json');
 const generatedStockLibrary = path.join(__dirname, 'generated-stock-library');
 const targetCount = 20;
-const readinessPolicy = 'Current Radar rebuild at 0.90 confidence or higher, phone present, untouched domain and slug, reachable official HTML, identity match, exact transparent first-party logo or deterministic flat-background removal with unchanged geometry, at least one usable first-party visual reference, and an approved category-relevant generated-stock board. A provisional Radar grade is accepted only after this live source, identity, and stock-readiness preflight passes.';
+const readinessPolicy = 'Current Radar rebuild at 0.90 confidence or higher, untouched domain and slug, reachable official HTML, identity match, and a transparent first-party logo when available or a disclosed exact-name live-text fallback with no invented icon. Phone and contact fields remain pending unless verified from an official source. After selection and before build, every exact slug must receive a unique business-specific Align HCM Image Gen board; category or shared boards are prohibited. A provisional Radar grade is accepted only after this live source and identity preflight passes.';
 const generatedStockBoardHashes = new Map();
 
 const artifactNames = new Set([
@@ -577,6 +577,42 @@ async function downloadLogo(candidates, directory) {
   return { error: failures.length ? failures[0].reason : 'no first-party logo candidate', failures };
 }
 
+function createTypographicIdentity(candidate, directory, failures = []) {
+  const escapeXml = (value) => String(value || '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;');
+  const label = String(candidate.name || candidate.domain || 'Local business').trim();
+  const fontSize = label.length > 34 ? 54 : label.length > 24 ? 64 : 76;
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-label="${escapeXml(label)}"><text x="600" y="178" text-anchor="middle" dominant-baseline="middle" fill="#F4EFE7" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="${fontSize}" font-weight="800" letter-spacing="-1.5">${escapeXml(label)}</text><path d="M370 242H830" stroke="#F05A28" stroke-width="10" stroke-linecap="round"/></svg>`;
+  const bytes = Buffer.from(svg, 'utf8');
+  fs.mkdirSync(directory, { recursive: true });
+  const file = path.join(directory, 'logo.svg');
+  fs.writeFileSync(file, bytes);
+  return {
+    file,
+    fileName: 'logo.svg',
+    sourceUrl: candidate.website,
+    sourceEvidence: 'Exact business name from the verified official source; code-rendered transparent typographic fallback.',
+    type: 'svg',
+    dimensions: { width: 1200, height: 320 },
+    sha256: sha256Buffer(bytes),
+    sourceSha256: null,
+    sourceType: 'verified business name',
+    sourceFileName: null,
+    transformation: 'Disclosed exact-name typographic fallback; no icon, symbol, or first-party logo imitation.',
+    borderSpread: null,
+    alpha: { ok: true, reason: 'SVG has no background rectangle.' },
+    transparent: true,
+    identityFallback: true,
+    downloadFailures: failures.slice(0, 4),
+    bytes: bytes.length,
+    raw: bytes,
+  };
+}
+
 async function downloadReferences(candidates, directory, logoHash) {
   const references = [];
   const failures = [];
@@ -643,10 +679,9 @@ async function probe(candidate) {
     const identity = identityCheck(candidate, meta, html, response.url);
     if (!identity.ok) throw new Error(identity.reason);
     const assets = discoverAssetUrls(html, response.url);
-    const logo = await downloadLogo(assets.logos, directory);
-    if (logo.error) throw new Error(`exact transparent logo unavailable: ${logo.error}`);
+    let logo = await downloadLogo(assets.logos, directory);
+    if (logo.error) logo = createTypographicIdentity(candidate, directory, logo.failures);
     const referenceResult = await downloadReferences(assets.references, directory, logo.sha256);
-    if (!referenceResult.references.length) throw new Error('no usable first-party visual reference');
     const colors = extractBrandColors(html, logo.raw, logo.type);
     delete logo.raw;
     const source = {
@@ -661,6 +696,7 @@ async function probe(candidate) {
       identity,
       logo,
       references: referenceResult.references,
+      visualReferenceFallback: referenceResult.references.length ? null : 'No usable first-party photography was exposed by the legacy source. Use only disclosed Align Image Gen concept imagery.',
       referenceFailures: referenceResult.failures.slice(0, 4),
       brandColors: colors,
       checkedAt: new Date().toISOString(),

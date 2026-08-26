@@ -17,6 +17,14 @@ const path = require('path');
 const { assertSafeSlug } = require('./lib/validate.js');
 const { buildSkinCss, inferAttitude } = require('./lib/skins.js');
 
+const defaultGrainSvg = () => `<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <filter id="grain" x="0" y="0" width="100%" height="100%">
+    <feTurbulence type="fractalNoise" baseFrequency=".82" numOctaves="4" seed="17" stitchTiles="stitch"/>
+    <feColorMatrix type="saturate" values="0"/>
+  </filter>
+  <rect width="128" height="128" filter="url(#grain)" opacity=".72"/>
+</svg>\n`;
+
 /**
  * Render a brief into a finished site directory.
  * Returns { outDir, htmlBytes, sections, words, images, missingAssets }.
@@ -65,7 +73,7 @@ const fontFamilies = [brief.fonts.display, brief.fonts.text]
 // generated client site. Falls back to Google Fonts when the files are absent, so
 // a batch that ships no fonts behaves exactly as before.
 const localFontFiles = [
-  'font-display-400.woff2', 'font-display-700.woff2',
+  'font-display-400.woff2', 'font-display-800.woff2',
   'font-text-400.woff2', 'font-text-700.woff2',
 ];
 const localAssetsDir = path.join(outRoot, brief.slug, 'assets');
@@ -80,7 +88,7 @@ const face = (family, file, weight) => (family
 // font-family:'undefined'.
 const localFontCss = useLocalFonts ? [
   face(brief.fonts.display, 'font-display-400.woff2', 400),
-  face(brief.fonts.display, 'font-display-700.woff2', 700),
+  face(brief.fonts.display, 'font-display-800.woff2', 800),
   face(brief.fonts.text, 'font-text-400.woff2', 400),
   face(brief.fonts.text, 'font-text-700.woff2', 700),
 ].filter(Boolean).join('') : '';
@@ -246,9 +254,16 @@ const footerLinks = (brief.links || [])
   .map((l) => `<li><a href="${esc(l.href)}">${esc(l.label)} \u2197</a></li>`)
   .join('');
 
+const logoFile = brief.logoFile || 'logo.png';
 const brand = brief.logo === false
   ? `<span class="wordmark">${esc(brief.name)}</span>`
-  : `<img class="brand-logo" src="assets/logo.png" alt="${esc(brief.name)}">`;
+  : `<img class="brand-logo" src="assets/${esc(logoFile)}" alt="${esc(brief.name)}">`;
+
+const direction = brief.directionContract || {};
+const commentSafe = (value) => String(value || '').replace(/--/g, '—').replace(/[\r\n]+/g, ' ').trim();
+const directionComment = `<!-- THESIS: ${commentSafe(direction.thesis)}\nOWN-WORLD: ${commentSafe(direction.ownWorld)}\nSTORY: ${commentSafe(direction.story)}\nFIRST VIEWPORT: ${commentSafe(direction.firstViewport)}\nFORM: ${commentSafe(direction.form)}\nFINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md -->`;
+const grainCss = brief.filmGrain === false ? '' : `.film-grain{position:fixed;inset:0;z-index:60;pointer-events:none;background:url('assets/grain.svg') repeat;opacity:.13;mix-blend-mode:soft-light}.site-header,.mobile-action{z-index:70}@media(prefers-reduced-motion:reduce){.film-grain{opacity:.1}}`;
+const grainLayer = brief.filmGrain === false ? '' : '<div class="film-grain" aria-hidden="true"></div>';
 
 const jsonLd = JSON.stringify({
   '@context': 'https://schema.org',
@@ -278,13 +293,20 @@ const html = `<!doctype html><html lang="en" class="no-js"><head><meta charset="
 ${rootBlock}
 ${localFontCss}
 ${baseCss}
-${skinCss}</style></head><body class="profile-page slug-${esc(brief.slug)} attitude-${esc(attitude)}"><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><a class="brand" href="#top">${brand}</a><nav aria-label="Primary">${navLinks}</nav>${cta(primaryCta, 'button button-header')}</header><main id="main">${sections}</main><footer class="site-footer"><div class="footer-identity"><strong>${esc(brief.name)}</strong><span>${esc(brief.tagline || brief.category || '')}</span></div><div class="footer-contact"><h2>Contact</h2>${brief.address ? `<p>${esc(brief.address)}</p>` : ''}${brief.phone ? `<p><a href="tel:${(brief.phone || '').replace(/\D/g, '')}">${esc(brief.phone)}</a></p>` : ''}</div><div class="footer-hours"><h2>Visit</h2>${brief.hours ? `<p>${esc(brief.hours)}</p>` : ''}${brief.url ? `<a href="${esc(brief.url)}">Official website \u2197</a>` : ''}</div><nav class="footer-links" aria-label="Useful links"><h2>Links</h2><ul>${footerLinks}</ul></nav>${disclosure}</footer>${mobileBar}<script>${revealScript}</script></body></html>`;
+${skinCss}
+${grainCss}</style></head><body class="profile-page slug-${esc(brief.slug)} attitude-${esc(attitude)}">${directionComment}${grainLayer}<a class="skip-link" href="#main">Skip to content</a><header class="site-header"><a class="brand" href="#top">${brand}</a><nav aria-label="Primary">${navLinks}</nav>${cta(primaryCta, 'button button-header')}</header><main id="main">${sections}</main><footer class="site-footer"><div class="footer-identity"><strong>${esc(brief.name)}</strong><span>${esc(brief.tagline || brief.category || '')}</span></div><div class="footer-contact"><h2>Contact</h2>${brief.address ? `<p>${esc(brief.address)}</p>` : ''}${brief.phone ? `<p><a href="tel:${(brief.phone || '').replace(/\D/g, '')}">${esc(brief.phone)}</a></p>` : ''}</div><div class="footer-hours"><h2>Visit</h2>${brief.hours ? `<p>${esc(brief.hours)}</p>` : ''}${brief.url ? `<a href="${esc(brief.url)}">Official website \u2197</a>` : ''}</div><nav class="footer-links" aria-label="Useful links"><h2>Links</h2><ul>${footerLinks}</ul></nav>${disclosure}</footer>${mobileBar}<script>${revealScript}</script></body></html>`;
 
 const outDir = path.join(outRoot, brief.slug);
-fs.mkdirSync(path.join(outDir, 'assets'), { recursive: true });
+const outAssetsDir = path.join(outDir, 'assets');
+fs.mkdirSync(outAssetsDir, { recursive: true });
+const grainPath = path.join(outAssetsDir, 'grain.svg');
+if (brief.filmGrain !== false && !fs.existsSync(grainPath)) {
+  fs.writeFileSync(grainPath, defaultGrainSvg());
+}
 fs.writeFileSync(path.join(outDir, 'index.html'), html);
 
-const wanted = new Set(brief.logo === false ? [] : ['logo.png']);
+const wanted = new Set(brief.logo === false ? [] : [logoFile]);
+if (brief.filmGrain !== false) wanted.add('grain.svg');
 if (useLocalFonts) localFontFiles.forEach((f) => wanted.add(f));
 const usedImages = html.match(/assets\/[a-z0-9-]+\.(webp|png|jpg)/g) || [];
 usedImages.forEach((u) => wanted.add(u.replace('assets/', '')));

@@ -67,17 +67,23 @@ const rules = [
   [/\b(?:asian|chinese|thai|japanese|korean|sushi|ramen|hibachi)\b/, 'ban-ban-asian-bistro'],
   [/\b(?:cafe|kafe|brunch|breakfast)\b/, 'category-cafe-brunch'],
   [/\b(?:restaurant|dining|food)\b/, 'category-general-restaurant'],
-  [/(pub|ale|bar|tavern)/, 'category-pub'],
+  [/\b(?:pub|ale|bar|tavern)\b/, 'category-pub'],
   [/(orthodont)/, 'udis-conn-orthodontics'],
   [/(dentist|dental)/, 'germantown-dental-group'],
+  [/(chiropract|spine|mobility)/, 'category-chiropractic'],
+  [/(optometr|optical|eyecare|eye care|optician)/, 'category-optometry'],
+  [/(podiatr|foot care|pain|dermatolog)/, 'category-medical-clinic'],
   [/\b(?:urgent care|clinic|medical practice|healthcare|health care|physician|doctor)\b/, 'category-medical-clinic'],
-  [/(veterinar|animal|pet)/, 'category-veterinary'],
+  [/(veterinar|animal|\bpet\b)/, 'category-veterinary'],
   [/(pharm)/, 'ansaris-pharma'],
   [/(insurance)/, 'p-and-c-insurance'],
   [/(auto part|car part)/, 'e-and-s-autoparts'],
   [/\b(?:automotive|auto|car|vehicle|notary|tag|title)\b/, 'category-auto-service'],
+  [/(fitness|gym|strength|training)/, 'category-fitness'],
   [/(floor)/, 'category-flooring'],
+  [/(plumb|rooter|drain|sewer)/, 'category-plumbing'],
   [/(mason|construction|contractor|roof)/, 'category-construction-masonry'],
+  [/(manufactur|fabricat|equipment|machine|foam|industrial|\btrade\b)/, 'category-manufacturing'],
   [/(electric|pool|spa service|air condition|hvac|heating)/, 'category-electric-pool'],
   [/(kitchen|bath|cabinet)/, 'maclaren-kitchen-bath'],
   [/(architect|landscape design)/, 'category-architecture'],
@@ -90,7 +96,31 @@ const rules = [
   [/(supply|hardware|building material)/, 'elverson-supply'],
 ];
 
+const siteSpecificBoards = new Set([
+  'dental-dreams',
+  'abel-construction-co',
+  'about-all-floors',
+  'weathers-motors-and-auto-sales',
+  'fusion-gyms',
+  'upper-saucon-animal-hospital',
+  'agricultural-veterinary-associates',
+  'union-dental-specialties',
+  'better-homes-and-gardens-real-estate-community-realty',
+  'montgomery-and-zimmerer-llc',
+  'spring-ridge-family-eyecare',
+  'rodney-m-dobrowolski-dmd',
+  'hershey-surveying',
+  'cornerstone-chiropractic',
+  'john-h-funk-tax-service',
+  'sangillo-tire-center',
+  'hirshland-optical-co',
+  'len-ferber-real-estate',
+  'pennsylvania-pain-and-spine-institute',
+  'connolly-dermatology',
+]);
+
 function resolveGeneratedStockAssignment({ slug, name, category, vertical, verticalGroup }) {
+  if (siteSpecificBoards.has(slug)) return [slug, String(category || vertical || 'business').toLowerCase()];
   if (assignments[slug]) return assignments[slug];
   const signal = [slug, name, category, vertical, verticalGroup].filter(Boolean).join(' ').toLowerCase();
   const descriptor = String(category || vertical || 'business').toLowerCase();

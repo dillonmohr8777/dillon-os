@@ -147,6 +147,7 @@ async function runBatch(batchDir, options = {}) {
         for (const f of fs.readdirSync(assetsDir)) {
           const full = path.join(assetsDir, f);
           if (!fs.statSync(full).isFile()) continue;
+          if (!/\.(?:avif|gif|jpe?g|png|webp)$/i.test(f)) continue;
           const hash = crypto.createHash('sha1').update(fs.readFileSync(full)).digest('hex');
           const key = `${brief.slug}/${f}`;
           if (imageHashes.has(hash)) imageHashes.get(hash).push(key);

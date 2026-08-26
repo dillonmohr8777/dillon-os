@@ -95,23 +95,87 @@ async function runQa(siteDir, opts = {}) {
         fs.mkdirSync(shotsDir, { recursive: true });
         const browser = await chromium.launch();
         const url = 'file://' + path.resolve(siteDir, 'index.html');
-        for (const [name, width, height] of [
+        const viewports = [
+          ['small-phone', 320, 740],
           ['phone', 390, 844],
+          ['wide-phone', 430, 932],
           ['tablet', 850, 1100],
+          ['compact-desktop', 1024, 768],
           ['desktop', 1440, 900],
-        ]) {
+        ];
+        for (const [name, width, height] of viewports) {
           const page = await browser.newPage({ viewport: { width, height } });
+          const runtimeErrors = [];
+          page.on('pageerror', (error) => runtimeErrors.push(`pageerror: ${error.message}`));
+          page.on('console', (message) => {
+            if (message.type() === 'error') runtimeErrors.push(`console: ${message.text()}`);
+          });
           await page.goto(url, { waitUntil: 'networkidle' });
           await page.evaluate(() =>
             document.querySelectorAll('.reveal').forEach((n) => n.classList.add('visible', 'in-view'))
+          );
+          await page.screenshot({ path: path.join(shotsDir, `${name}-top.png`), fullPage: false });
+
+          if (name === 'small-phone') {
+            await page.keyboard.press('Tab');
+            const focus = await page.evaluate(() => {
+              const active = document.activeElement;
+              const rect = active?.getBoundingClientRect();
+              const style = active ? getComputedStyle(active) : null;
+              return {
+                className: active?.className || '',
+                visible: Boolean(rect && rect.bottom > 0 && rect.top < innerHeight),
+                outline: style?.outlineStyle || 'none',
+              };
+            });
+            if (!String(focus.className).includes('skip-link') || !focus.visible || focus.outline === 'none') {
+              failures.push(`Keyboard focus gate failed: ${JSON.stringify(focus)}`);
+            }
+          }
+          await page.evaluate(async () => {
+            const step = Math.max(320, Math.floor(innerHeight * 0.8));
+            for (let y = 0; y < document.documentElement.scrollHeight; y += step) {
+              scrollTo(0, y);
+              await new Promise((resolve) => setTimeout(resolve, 35));
+            }
+            scrollTo(0, document.documentElement.scrollHeight);
+          });
+          await page.waitForFunction(
+            () => [...document.images].every((image) => image.complete),
+            undefined,
+            { timeout: 10000 }
           );
           const overflow = await page.evaluate(
             () => document.documentElement.scrollWidth - document.documentElement.clientWidth
           );
           if (overflow > 1) failures.push(`Horizontal overflow of ${overflow}px at ${name} width (${width}px)`);
+          const brokenImages = await page.evaluate(() =>
+            [...document.images]
+              .filter((image) => !image.complete || image.naturalWidth < 1 || image.naturalHeight < 1)
+              .map((image) => image.getAttribute('src') || '(missing src)')
+          );
+          if (brokenImages.length) failures.push(`Broken images at ${name}: ${brokenImages.join(', ')}`);
+          if (runtimeErrors.length) failures.push(`Runtime errors at ${name}: ${runtimeErrors.join(' | ')}`);
+
+          await page.evaluate(() => document.querySelectorAll('.is-leaving').forEach((node) => node.classList.remove('is-leaving')));
           await page.screenshot({ path: path.join(shotsDir, `${name}.png`), fullPage: true });
           await page.close();
         }
+        const reducedPage = await browser.newPage({ viewport: { width: 390, height: 844 }, reducedMotion: 'reduce' });
+        await reducedPage.goto(url, { waitUntil: 'networkidle' });
+        const reducedMotion = await reducedPage.evaluate(() => {
+          const marquee = document.querySelector('.marquee-track');
+          const reveal = document.querySelector('.reveal');
+          return {
+            media: matchMedia('(prefers-reduced-motion: reduce)').matches,
+            marqueeAnimation: marquee ? getComputedStyle(marquee).animationName : 'none',
+            revealTransition: reveal ? getComputedStyle(reveal).transitionDuration : '0s',
+          };
+        });
+        if (!reducedMotion.media || reducedMotion.marqueeAnimation !== 'none' || reducedMotion.revealTransition !== '0s') {
+          failures.push(`Reduced-motion gate failed: ${JSON.stringify(reducedMotion)}`);
+        }
+        await reducedPage.close();
         await browser.close();
         visualQa = 'ran';
         visualReason = `screenshots written to ${shotsDir}`;
