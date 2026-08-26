@@ -1,6 +1,6 @@
 # IMMOHRTAL Founder Pitch
 
-Owner: Dillon Mohr  
+Owner: Dillon Mohr
 Status: Approved internal positioning language. External use still requires exact context and factual review.
 
 ## The one-line position
