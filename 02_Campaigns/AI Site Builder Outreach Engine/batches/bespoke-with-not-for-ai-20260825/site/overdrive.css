@@ -290,6 +290,349 @@ h3 {
 .intro-mark--drop span:nth-child(3),
 .intro-mark--drop span:nth-child(6) { --shuffle-x: 0.2em; --shuffle-r: -8deg; }
 
+/* The authored scrapbook state: six characters, six pieces of WNF's story. */
+.intro-mark--scrapbook {
+  display: grid;
+  grid-template-columns: 1.12fr 0.92fr 0.84fr 0.42fr 0.94fr 0.48fr;
+  gap: 0.035em;
+  align-items: center;
+  width: min(92vw, 72rem);
+  margin-top: clamp(9rem, 21vh, 12rem);
+  font-size: clamp(3.4rem, 12vw, 10rem);
+  letter-spacing: 0;
+  isolation: isolate;
+}
+
+.intro-mark--scrapbook::before {
+  position: absolute;
+  z-index: -2;
+  top: 50%;
+  left: 50%;
+  width: 112%;
+  height: 142%;
+  border: 0.006em solid rgba(15, 110, 86, 0.16);
+  border-radius: 50%;
+  box-shadow:
+    inset 0 0 0 0.018em rgba(255, 255, 255, 0.72),
+    0 0.16em 0.42em rgba(11, 24, 16, 0.08);
+  content: "";
+  transform: translate(-50%, -50%) rotate(-3deg);
+}
+
+.intro-mark--scrapbook::after {
+  position: absolute;
+  z-index: -1;
+  top: 7%;
+  left: 4%;
+  width: 92%;
+  height: 82%;
+  background:
+    linear-gradient(90deg, transparent 8%, rgba(15, 110, 86, 0.11) 8.4%, transparent 8.8%),
+    linear-gradient(0deg, transparent 72%, rgba(198, 90, 10, 0.08) 72.5%, transparent 73%);
+  content: "";
+  transform: rotate(1.2deg);
+}
+
+.scrap-glyph {
+  position: relative;
+  display: grid;
+  min-width: 0;
+  place-items: center;
+  transform-origin: 50% 70%;
+  opacity: 0;
+}
+
+.scrap-glyph__tile {
+  position: relative;
+  display: grid;
+  width: 100%;
+  min-height: 0.88em;
+  place-items: center;
+  overflow: visible;
+}
+
+.scrap-glyph__letter {
+  position: relative;
+  z-index: 2;
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1em;
+  font-weight: 850;
+  letter-spacing: -0.04em;
+  line-height: 0.82;
+}
+
+.scrap-glyph__caption,
+.scrap-ticket {
+  position: absolute;
+  z-index: 5;
+  display: block;
+  width: max-content;
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: 0.07em;
+  font-weight: 750;
+  letter-spacing: 0.055em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.scrap-glyph--w {
+  --entry-x: -1.35em;
+  --entry-y: -0.72em;
+  --entry-r: -18deg;
+}
+
+.scrap-glyph--w .scrap-glyph__tile {
+  padding: 0.04em 0.03em 0.08em;
+  background: #f7eedf;
+  box-shadow: 0 0.08em 0.16em rgba(11, 24, 16, 0.18), inset 0 0 0 0.008em rgba(11, 24, 16, 0.12);
+  clip-path: polygon(2% 5%, 98% 0, 94% 93%, 69% 96%, 50% 91%, 24% 98%, 4% 91%);
+  transform: rotate(-4deg);
+}
+
+.scrap-glyph--w .scrap-glyph__letter {
+  color: var(--ink);
+  text-shadow: 0.012em 0.018em rgba(15, 110, 86, 0.22);
+}
+
+.scrap-glyph__stitch {
+  position: absolute;
+  z-index: 4;
+  right: 0.08em;
+  bottom: 0.1em;
+  left: 0.07em;
+  height: 0.08em;
+  border-top: 0.014em dashed var(--green);
+  border-radius: 50%;
+  transform: rotate(-5deg);
+}
+
+.scrap-glyph--w .scrap-glyph__caption {
+  right: 0.05em;
+  bottom: 0.07em;
+  padding: 0.42em 0.68em;
+  background: var(--signal-green);
+  transform: rotate(4deg);
+}
+
+.scrap-glyph--n {
+  --entry-x: -0.48em;
+  --entry-y: 1.15em;
+  --entry-r: 11deg;
+}
+
+.scrap-glyph--n .scrap-glyph__tile {
+  min-height: 0.93em;
+  border-radius: var(--radius-sm);
+  background:
+    radial-gradient(circle at 24% 20%, rgba(243, 154, 80, 0.5), transparent 11%),
+    linear-gradient(145deg, var(--robot-highlight), var(--robot) 48%, #8f3605);
+  box-shadow: inset 0.018em 0.024em 0.055em rgba(243, 154, 80, 0.45), 0 0.09em 0.22em rgba(198, 90, 10, 0.24);
+  transform: rotate(2.2deg);
+}
+
+.scrap-glyph--n .scrap-glyph__letter {
+  color: var(--ink);
+  text-shadow: 0 0.015em rgba(243, 154, 80, 0.42);
+}
+
+.scrap-glyph__rivet {
+  position: absolute;
+  z-index: 4;
+  width: 0.055em;
+  aspect-ratio: 1;
+  border: 0.009em solid rgba(11, 24, 16, 0.72);
+  border-radius: 50%;
+  background: var(--robot-highlight);
+  box-shadow: inset 0.007em 0.009em rgba(255, 255, 255, 0.72);
+}
+
+.scrap-glyph__rivet--one { top: 0.075em; left: 0.08em; }
+.scrap-glyph__rivet--two { right: 0.075em; bottom: 0.08em; }
+.scrap-glyph--n .scrap-glyph__caption { right: 0.05em; bottom: 0.04em; color: var(--white); }
+
+.scrap-glyph--f {
+  --entry-x: 0.28em;
+  --entry-y: -1.2em;
+  --entry-r: -8deg;
+}
+
+.scrap-glyph--f .scrap-glyph__tile {
+  padding: 0.055em;
+  background: #fff;
+  box-shadow: 0 0.09em 0.2em rgba(11, 24, 16, 0.2);
+  transform: rotate(-2deg);
+}
+
+.scrap-glyph--f .scrap-glyph__letter {
+  background: url("assets/wnf-policy-workshop.webp") 54% 44% / 265% auto;
+  color: transparent;
+  filter: contrast(1.04) saturate(0.9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-stroke: 0.006em rgba(11, 24, 16, 0.24);
+}
+
+.scrap-glyph__tape {
+  position: absolute;
+  z-index: 4;
+  top: -0.055em;
+  left: 50%;
+  width: 0.38em;
+  height: 0.13em;
+  background: rgba(159, 232, 112, 0.68);
+  box-shadow: inset 0 0 0 0.008em rgba(255, 255, 255, 0.32);
+  transform: translateX(-50%) rotate(3deg);
+}
+
+.scrap-glyph--f .scrap-glyph__caption {
+  bottom: 0.01em;
+  left: 50%;
+  padding: 0.46em 0.66em;
+  background: var(--ink);
+  color: var(--white);
+  transform: translateX(-50%) rotate(2deg);
+}
+
+.scrap-glyph--dot {
+  --entry-x: 0.15em;
+  --entry-y: 1.45em;
+  --entry-r: 20deg;
+  align-self: end;
+  padding-bottom: 0.06em;
+}
+
+.scrap-glyph--dot .scrap-glyph__tile {
+  width: 0.32em;
+  min-height: 0.32em;
+  border-radius: 50%;
+  background: var(--forest);
+  box-shadow: inset 0.025em 0.025em 0.055em rgba(255, 255, 255, 0.28), 0 0.07em 0.16em rgba(11, 24, 16, 0.22);
+}
+
+.scrap-glyph--dot .scrap-glyph__letter {
+  color: var(--signal-green);
+  font-size: 0.54em;
+  line-height: 0.4;
+  transform: translateY(-0.18em);
+}
+
+.scrap-glyph--a {
+  --entry-x: 0.75em;
+  --entry-y: -1em;
+  --entry-r: 14deg;
+}
+
+.scrap-glyph--a .scrap-glyph__tile {
+  overflow: hidden;
+  border: 0.008em solid rgba(255, 255, 255, 0.78);
+  border-radius: var(--radius-sm);
+  background:
+    conic-gradient(from 42deg at 50% 48%, var(--signal-green), var(--material-mint), #d8f6eb, var(--robot-highlight), var(--signal-green));
+  box-shadow: inset 0 0 0.13em rgba(255, 255, 255, 0.76), 0 0.1em 0.24em rgba(15, 110, 86, 0.24);
+  transform: rotate(3deg);
+}
+
+.scrap-glyph--a .scrap-glyph__tile::before,
+.scrap-glyph--a .scrap-glyph__tile::after {
+  position: absolute;
+  inset: -35%;
+  background: conic-gradient(from 0deg, transparent, rgba(255, 255, 255, 0.68), transparent 24%);
+  content: "";
+  transform: rotate(24deg);
+}
+
+.scrap-glyph--a .scrap-glyph__tile::after { transform: rotate(116deg); }
+.scrap-glyph--a .scrap-glyph__letter { color: var(--ink); mix-blend-mode: multiply; }
+.scrap-glyph--a .scrap-glyph__caption { top: 0.04em; right: 0.04em; padding: 0.42em 0.62em; background: rgba(255, 255, 255, 0.7); }
+
+.scrap-glyph__prism {
+  position: absolute;
+  z-index: 4;
+  right: -0.08em;
+  bottom: 0.06em;
+  width: 0.28em;
+  aspect-ratio: 1;
+  border: 0.01em solid rgba(255, 255, 255, 0.88);
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  background: rgba(255, 255, 255, 0.25);
+  transform: rotate(12deg);
+}
+
+.scrap-glyph--i {
+  --entry-x: 1.25em;
+  --entry-y: 0.85em;
+  --entry-r: -18deg;
+}
+
+.scrap-glyph--i .scrap-glyph__tile {
+  min-height: 0.98em;
+  background: rgba(199, 232, 216, 0.72);
+  box-shadow: inset 0 0 0 0.008em rgba(255, 255, 255, 0.76), 0 0.07em 0.18em rgba(15, 110, 86, 0.14);
+  transform: rotate(-3deg);
+  -webkit-backdrop-filter: blur(0.05em) saturate(145%);
+  backdrop-filter: blur(0.05em) saturate(145%);
+}
+
+.scrap-glyph--i .scrap-glyph__letter { color: var(--green); }
+.scrap-glyph--i .scrap-glyph__caption {
+  bottom: 0.08em;
+  left: 50%;
+  color: var(--forest);
+  font-size: 0.055em;
+  transform: translateX(-50%) rotate(-90deg);
+}
+
+.scrap-ticket {
+  top: -0.3em;
+  left: -0.34em;
+  padding: 0.62em 0.9em;
+  border: 0.01em solid var(--green);
+  background: var(--paper);
+  color: var(--green);
+  transform: rotate(8deg);
+}
+
+.scrap-butterfly {
+  position: absolute;
+  z-index: 8;
+  overflow: visible;
+  filter: drop-shadow(0 0.035em 0.045em rgba(11, 24, 16, 0.18));
+  transform-origin: center;
+  opacity: 0;
+}
+
+.scrap-butterfly path:not(.scrap-butterfly__body) {
+  fill: currentColor;
+  fill-opacity: 0.88;
+  stroke: rgba(11, 24, 16, 0.3);
+  stroke-width: 1.2;
+}
+
+.scrap-butterfly__body {
+  fill: none;
+  stroke: var(--ink);
+  stroke-linecap: round;
+  stroke-width: 2.2;
+}
+
+.scrap-butterfly--mint {
+  top: -0.36em;
+  left: -0.22em;
+  width: 0.42em;
+  color: var(--material-mint);
+  transform: rotate(-18deg);
+}
+
+.scrap-butterfly--lime {
+  right: -0.28em;
+  bottom: -0.12em;
+  width: 0.38em;
+  color: var(--signal-green);
+  transform: rotate(22deg);
+}
+
 .product-mark {
   top: 24%;
   font-size: clamp(3.5rem, 11vw, 10rem);
@@ -437,6 +780,30 @@ h3 {
 .has-js .opening.is-playing .hero-microcard--systems { animation-delay: 0.08s; }
 .has-js .opening.is-playing .hero-microcard--training { animation-delay: 0.16s; }
 
+.has-js .opening.is-playing .scrap-glyph {
+  animation: scrapbook-glyph-assemble 7.8s var(--ease-expo) both;
+}
+
+.has-js .opening.is-playing .scrap-glyph:nth-child(2) { animation-delay: 0.05s; }
+.has-js .opening.is-playing .scrap-glyph:nth-child(3) { animation-delay: 0.1s; }
+.has-js .opening.is-playing .scrap-glyph:nth-child(4) { animation-delay: 0.15s; }
+.has-js .opening.is-playing .scrap-glyph:nth-child(5) { animation-delay: 0.2s; }
+.has-js .opening.is-playing .scrap-glyph:nth-child(6) { animation-delay: 0.25s; }
+
+.has-js .opening.is-playing .scrap-butterfly {
+  animation: scrapbook-butterfly-flight 7.8s var(--ease-expo) both;
+}
+
+.has-js .opening.is-playing .scrap-butterfly--lime { animation-delay: 0.16s; }
+
+.has-js .opening.is-playing .scrap-glyph--a .scrap-glyph__tile::before {
+  animation: scrapbook-prism-turn 7.8s ease-in-out both;
+}
+
+.has-js .opening.is-playing .scrap-glyph--a .scrap-glyph__tile::after {
+  animation: scrapbook-prism-turn-alt 7.8s ease-in-out both;
+}
+
 .has-js .opening.is-playing .intro-mark--drop span {
   animation: drop-glyph-shuffle 7.8s var(--ease-expo) both;
 }
@@ -466,9 +833,83 @@ h3 {
 }
 
 @keyframes intro-material-five {
-  0%, 36% { opacity: 0; transform: translate(-50%, -50%) scale(0.82); filter: blur(0.6rem); }
-  40%, 48% { opacity: 1; transform: translate(-50%, -50%) scale(1); filter: blur(0); }
-  52%, 100% { opacity: 0; transform: translate(-50%, -50%) scale(1.12); }
+  0%, 33% { opacity: 0; transform: translate(-50%, -50%) scale(0.82); filter: blur(0.6rem); }
+  38%, 50% { opacity: 1; transform: translate(-50%, -50%) scale(1); filter: blur(0); }
+  53%, 100% { opacity: 0; transform: translate(-50%, -50%) scale(1.08); filter: blur(0.08rem); }
+}
+
+@keyframes scrapbook-glyph-assemble {
+  0%, 32% {
+    opacity: 0;
+    transform: translate3d(var(--entry-x), var(--entry-y), 0) rotate(var(--entry-r)) scale(0.72);
+    filter: blur(0.12em);
+  }
+  38% {
+    opacity: 1;
+    transform: translate3d(-0.04em, 0.03em, 0) rotate(-1.5deg) scale(1.06);
+    filter: blur(0);
+  }
+  42%, 51% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) rotate(0) scale(1);
+    filter: blur(0);
+  }
+  55%, 100% {
+    opacity: 0;
+    transform: translate3d(0, 0.14em, 0) rotate(0) scale(0.94);
+    filter: blur(0.04em);
+  }
+}
+
+@keyframes scrapbook-butterfly-flight {
+  0%, 33% {
+    opacity: 0;
+    translate: -0.9em 0.9em;
+    rotate: -28deg;
+    scale: 0.55;
+  }
+  39% {
+    opacity: 1;
+    translate: 0.12em -0.08em;
+    rotate: 10deg;
+    scale: 1.08 0.72;
+  }
+  43% {
+    opacity: 1;
+    translate: 0 0;
+    rotate: 0deg;
+    scale: 1;
+  }
+  48% {
+    opacity: 1;
+    translate: 0.05em -0.06em;
+    rotate: 5deg;
+    scale: 0.92 1.08;
+  }
+  52% {
+    opacity: 1;
+    translate: 0 0;
+    rotate: 0deg;
+    scale: 1;
+  }
+  56%, 100% {
+    opacity: 0;
+    translate: 0.72em -0.86em;
+    rotate: 24deg;
+    scale: 0.7;
+  }
+}
+
+@keyframes scrapbook-prism-turn {
+  0%, 35% { transform: rotate(24deg); opacity: 0.25; }
+  41%, 49% { transform: rotate(204deg); opacity: 0.9; }
+  55%, 100% { transform: rotate(294deg); opacity: 0.2; }
+}
+
+@keyframes scrapbook-prism-turn-alt {
+  0%, 35% { transform: rotate(116deg); opacity: 0.2; }
+  41%, 49% { transform: rotate(-64deg); opacity: 0.82; }
+  55%, 100% { transform: rotate(-144deg); opacity: 0.15; }
 }
 
 @keyframes intro-drop-five {
@@ -1737,6 +2178,24 @@ h3 {
     font-size: clamp(3.5rem, 17vw, 6rem);
   }
 
+  .intro-mark--scrapbook {
+    top: 38%;
+    width: 96vw;
+    gap: 0.02em;
+    margin-top: clamp(6.5rem, 17vh, 8.5rem);
+    font-size: clamp(3rem, 15vw, 5.4rem);
+  }
+
+  .intro-mark--scrapbook::before {
+    width: 106%;
+    height: 132%;
+  }
+
+  .scrap-glyph__caption,
+  .scrap-ticket {
+    font-size: 0.075em;
+  }
+
   .intro-mark--glass { gap: 0.025em; }
   .glass-glyph { min-width: 0.68em; }
   .product-mark { top: 20%; font-size: clamp(3rem, 14vw, 5rem); }
@@ -2009,6 +2468,7 @@ h3 {
 @media (max-width: 22rem) {
   .robot-control { top: 26%; width: 12rem; }
   .hero-microcard { display: none; }
+  .intro-mark--scrapbook { font-size: 14.2vw; }
   .robot-theatre__copy h2,
   .robot-theatre__copy h3 { font-size: 2.65rem; }
   .capability-card { width: 9.2rem; }

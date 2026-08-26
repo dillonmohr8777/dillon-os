@@ -14,37 +14,37 @@
     {
       "from": "opening-700ms-mobile.png",
       "to": "opening-1500ms-mobile.png",
-      "mean_rgb_diff": 5.05411957710536
+      "mean_rgb_diff": 5.054119577105359
     },
     {
       "from": "opening-1500ms-mobile.png",
       "to": "opening-2400ms-mobile.png",
-      "mean_rgb_diff": 4.263075707862438
+      "mean_rgb_diff": 4.630525175193422
     },
     {
       "from": "opening-2400ms-mobile.png",
       "to": "opening-3300ms-mobile.png",
-      "mean_rgb_diff": 5.027773727062827
+      "mean_rgb_diff": 8.712685826548386
     },
     {
       "from": "opening-3300ms-mobile.png",
       "to": "opening-4200ms-mobile.png",
-      "mean_rgb_diff": 3.1869182160651355
+      "mean_rgb_diff": 10.364043828735772
     },
     {
       "from": "opening-4200ms-mobile.png",
       "to": "opening-5100ms-mobile.png",
-      "mean_rgb_diff": 26.974575687608862
+      "mean_rgb_diff": 27.972761979989468
     },
     {
       "from": "opening-5100ms-mobile.png",
       "to": "opening-6200ms-mobile.png",
-      "mean_rgb_diff": 29.37684003726658
+      "mean_rgb_diff": 31.051244582168753
     },
     {
       "from": "opening-6200ms-mobile.png",
       "to": "opening-7900ms-mobile.png",
-      "mean_rgb_diff": 6.4019868756835585
+      "mean_rgb_diff": 3.918754810224005
     }
   ],
   "warnings": []

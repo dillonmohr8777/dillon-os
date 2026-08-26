@@ -384,7 +384,7 @@ The header is a translucent paper bar with the exact official logo, small direct
 
 ### WNF.AI Opening
 
-Five wordmark transformations run over 7.8 seconds: plain, circuit-wire, liquid glass, robot material, and shuffled compression. A product mark bridges the compression into the isolated robot, which arrives above the palm, swaps to a matched closed-eye image to blink, follows the pointer within a restrained range, and nods on activation. The button itself remains motion-stable; breathing motion lives inside its visual frame. Reduced-motion users receive the final complete state immediately.
+Five wordmark transformations run over 7.8 seconds: plain, circuit-wire, liquid glass, an authored scrapbook tableau, and shuffled compression. The scrapbook state assigns one material story to every character: torn workflow paper and circuit stitching for W, orange robot material for N, real team photography for F, a dark wax-seal dot with a pressed butterfly, kaleidoscopic acetate for A, and translucent human-led tape for I. Two botanical specimens fly into the composition and settle without obscuring the word. A product mark bridges the compression into the isolated robot, which arrives above the palm, swaps to a matched closed-eye image to blink, follows the pointer within a restrained range, and nods on activation. The button itself remains motion-stable; breathing motion lives inside its visual frame. Reduced-motion users receive the final complete state immediately.
 
 ### Robot Product Theatre
 
@@ -412,7 +412,7 @@ Native ARIA tabs expose Needs You, Follow-ups, and Today. Arrow keys, Home, and 
 
 ### Do:
 
-- **Do** preserve the five approved wordmark transformations, product bridge, and measured 7.8-second pacing.
+- **Do** preserve the five approved wordmark transformations, six-character scrapbook tableau, product bridge, and measured 7.8-second pacing.
 - **Do** use the official logo, exact current homepage copy, and traceable routes.
 - **Do** keep the human visibly in control of the AI collaborator.
 - **Do** keep the robot to exactly three placements: opening, product theatre, and footer transformation.
@@ -425,7 +425,7 @@ Native ARIA tabs expose Needs You, Follow-ups, and Today. Arrow keys, Home, and 
 
 - **Don't** make this look like a generic AI SaaS template, a neon cyberpunk robot page, or a card-filled agency theme.
 - **Don't** copy Apple trademarks, Apple product media, Apple copy, Apple pricing, or Apple navigation branding.
-- **Don't** use gradient text outside the single robot-material opening state, generic purple-blue gradients, emoji icons, fake dashboards, or invented metrics.
+- **Don't** use gradient text outside the authored scrapbook opening state, generic purple-blue gradients, emoji icons, fake dashboards, or invented metrics.
 - **Don't** invent clients, results, testimonials, guarantees, or product capabilities.
 - **Don't** use a colored side stripe, nest cards, or hide essential meaning behind hover or animation.
 - **Don't** repeat the robot as a decorative icon; use the branded circuit reactors for policy, systems, and human-led states.

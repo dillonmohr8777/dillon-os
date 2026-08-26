@@ -2,11 +2,12 @@
 
 Status: **PASS — noindex review build**
 
-Report: `qa/report.json` — live target captured 2026-08-26T06:23:21Z
+Report: `qa/report.json` — live target captured 2026-08-26T13:31:13Z
 
 ## Verified
 
 - The complete 7.8-second opening captured at 700, 1500, 2400, 3300, 4200, 5100, 6200, and 7900 ms.
+- The 3300ms signature frame resolves all six scrapbook characters, the real team-photo F, the kaleidoscope A, and both butterfly specimens before the wordmark compresses into the robot bridge.
 - Final hero at 320×720, 390×844, 768×1024, and 1440×900.
 - Major desktop and 390px sections captured individually: belief, all three horizontal highlights, all three robot-theatre phases, all three adoption states, all three service chapters, Morning Briefing, human-led editorial people and reactor, closing CTA, plus particle travel and resolved-logo frames.
 - Zero console errors, page errors, or failed asset requests.
@@ -28,7 +29,7 @@ Report: `qa/report.json` — live target captured 2026-08-26T06:23:21Z
 ## Detector exceptions
 
 - `aphoristic-cadence` is narrowly waived because the flagged constructions are exact, source-backed With Not For copy that Dillon explicitly required us to preserve.
-- `gradient-text` is waived only for the authored orange-material glyph in the WNF.AI opening transformation; every readable heading and body block remains solid color.
+- `gradient-text` is waived only for the authored scrapbook transformation's photographic glyph treatment; every readable heading and body block remains solid color.
 - `dark-glow` is waived only for WNF circuit nodes, reactor status points, and the footer charge field, where the light communicates an active signal rather than supplying default decoration.
 - `cramped-padding` and `clipped-overflow-container` are waived on the full-bleed sticky scene wrappers. Their readable children use inset rails, the clipped layers contain artwork rather than menus or popovers, and the live QA reports zero clipped active text from 320 through 1440 pixels.
 
@@ -46,4 +47,4 @@ The `WNF.AI` product mark and single-idea viewport statements use responsive dis
 
 ## Publication
 
-Netlify deployment was explicitly authorized in the current task. The dedicated target is `https://with-not-for-ai-human-led-preview.netlify.app/` (site ID `7861d4b9-7ed9-436f-8c56-aaaa8738fc09`, deploy `6a8e85f7be072effa8143d4a`). The live URL passed the full responsive and interaction suite. Prospect outreach remains unsent.
+Netlify deployment was explicitly authorized in the current task. The dedicated target is `https://with-not-for-ai-human-led-preview.netlify.app/` (site ID `7861d4b9-7ed9-436f-8c56-aaaa8738fc09`, deploy `6a8eea59757d6042d0b24ece`). The live URL passed the full responsive and interaction suite. Prospect outreach remains unsent.

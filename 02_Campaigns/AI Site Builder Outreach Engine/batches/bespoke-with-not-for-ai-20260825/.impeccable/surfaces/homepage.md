@@ -37,7 +37,7 @@ Use the current Apple Mac mini page as the approved motion and layout reference.
 1. `WNF.AI` is centered alone on a light field.
 2. The wordmark becomes a circuit-wire outline.
 3. Each glyph becomes a liquid-glass lens with brand-specific material color.
-4. Letterforms acquire robot and brand material accents without gradient text.
+4. Each character becomes its own scrapbook artifact: torn workflow paper, orange robot material, real team photography, a wax-seal dot with pressed butterflies, kaleidoscopic acetate, and translucent human-led tape.
 5. Individual glyphs shuffle, align, compress, and drop toward the robot's center.
 6. A product mark bridges into the exact Grok robot above the existing transparent hand asset.
 7. The robot blinks, breathes inside a stable hit target, and follows pointer or touch position within a restrained range.
