@@ -1,0 +1,23 @@
+{
+  "capturedAt": "2026-08-25",
+  "publicationState": "private-noindex",
+  "sources": {
+    "brand": "https://withnotfor.ai/",
+    "logo": "https://withnotfor.ai/assets/LOGO.png",
+    "interactionReference": "https://www.apple.com/mac-mini/",
+    "openingReferenceFrames": "C:/Users/dillo/.codex/codex-remote-attachments/01a03baf-d29c-7e10-9234-500ff361b09c/40A19542-F3E8-4251-8793-92B260F641D3/",
+    "originalRobotRig": "C:/Users/dillo/Documents/Codex/2026-07-09/find-my-netlify-url-the-momentum/site/assets/claude-code-rig.webm"
+  },
+  "assets": [
+    { "file": "site/assets/wnf-logo.png", "sha256": "28944e2dfb77514b0d6e505000b5afd7746636dc010a3d59b09d4f384dbd6289", "role": "official current logo" },
+    { "file": "site/assets/robot-original-rig.webm", "sha256": "8e61853e0cd200cb2234bc4f8d262fcea3fc6121b81f0e7ea1391f900eb21a33", "role": "exact supplied Grok robot rig source" },
+    { "file": "site/assets/robot-open.png", "sha256": "70a2dd2d85331f5a7cc82672f92cd36ea716711187ede71516abd66c039cdf83", "role": "isolated exact-character open-eye sprite" },
+    { "file": "site/assets/robot-blink.png", "sha256": "6c3ef49a33fa666f21543ff53a2204b5ab73934eb6feda3d97a61f1b50a86090", "role": "matched closed-eye sprite" },
+    { "file": "site/assets/hand-palm.png", "sha256": "06a14a930aa0312e457386c8729c1f587bfd4afd22f7804974612cd5caafe071", "role": "original transparent supporting-palm asset" }
+  ],
+  "constraints": [
+    "No Apple trademark, product media, copy, price, or source code is shipped.",
+    "All claims and service copy are traceable to the current With Not For homepage.",
+    "No public deployment or prospect contact occurred."
+  ]
+}

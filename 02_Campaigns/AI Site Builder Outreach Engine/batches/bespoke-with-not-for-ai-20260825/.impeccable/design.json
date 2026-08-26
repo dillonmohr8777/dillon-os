@@ -1,0 +1,170 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-26T02:22:19.989Z",
+  "title": "Design System: With Not For AI — Human-Controlled Product Reveal",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Launch Paper",
+        "canonical": "#FAF9F8",
+        "tonalRamp": [
+          "#191918",
+          "#353432",
+          "#555451",
+          "#777572",
+          "#9A9895",
+          "#BDBBB8",
+          "#DDDCD9",
+          "#FAF9F8"
+        ]
+      },
+      "green": {
+        "role": "primary",
+        "displayName": "Working Forest",
+        "canonical": "#0F6E56",
+        "tonalRamp": [
+          "#08241D",
+          "#0A382C",
+          "#0C4B3B",
+          "#0E604B",
+          "#0F755B",
+          "#4C9A84",
+          "#91C2B3",
+          "#D8EEE7"
+        ]
+      },
+      "robot": {
+        "role": "secondary",
+        "displayName": "Robot Orange",
+        "canonical": "#C65A0A",
+        "tonalRamp": [
+          "#321B0C",
+          "#54280A",
+          "#773508",
+          "#9B4508",
+          "#C65A0A",
+          "#DA8542",
+          "#EAB783",
+          "#F8E4CF"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Launch Display",
+        "purpose": "Single-idea viewports, service chapters, and product-object scale."
+      },
+      "body": {
+        "displayName": "Direct Body",
+        "purpose": "Source-backed explanations and UI copy."
+      }
+    },
+    "shadows": [
+      {
+        "name": "briefing-ambient",
+        "value": "0 24px 80px rgba(11, 24, 16, 0.12)",
+        "purpose": "The Morning Briefing interface only."
+      },
+      {
+        "name": "interactive-lift",
+        "value": "0 4px 24px rgba(11, 24, 16, 0.08)",
+        "purpose": "Small controls responding above the page."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.22, 1, 0.36, 1)",
+        "purpose": "Product and content deceleration."
+      },
+      {
+        "name": "ease-expo",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "The decisive WNF.AI drop and robot arrival."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact",
+        "value": "320px"
+      },
+      {
+        "name": "wide-navigation",
+        "value": "768px"
+      },
+      {
+        "name": "large",
+        "value": "1200px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The single dominant conversation action.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">Work With Us</a>",
+      "css": ".ds-btn-primary { display:inline-flex; min-height:44px; align-items:center; padding:12px 24px; border-radius:999px; background:#0F6E56; color:#FFFFFF; font:600 15px/1 -apple-system,BlinkMacSystemFont,Segoe UI,sans-serif; text-decoration:none; transition:background-color .18s,transform .12s; } .ds-btn-primary:hover { background:#0B1810; transform:scale(1.025); } .ds-btn-primary:focus-visible { outline:3px solid #67A92E; outline-offset:4px; } .ds-btn-primary:active { transform:scale(.97); }"
+    },
+    {
+      "name": "Briefing Tab",
+      "kind": "button",
+      "description": "A compact native tab for the workflow example.",
+      "html": "<button class=\"ds-tab\" aria-selected=\"true\">Needs You</button>",
+      "css": ".ds-tab { min-height:44px; padding:8px 16px; border:0; border-radius:999px; background:#F5F8F6; color:#0F6E56; font:700 14px/1.2 -apple-system,BlinkMacSystemFont,Segoe UI,sans-serif; } .ds-tab:hover { background:#E8EFEA; } .ds-tab:focus-visible { outline:3px solid #67A92E; outline-offset:3px; }"
+    },
+    {
+      "name": "Highlight Panel",
+      "kind": "card",
+      "refersTo": "highlight-panel",
+      "description": "A full product chapter inside the horizontal highlights track.",
+      "html": "<article class=\"ds-highlight\"><h3>Get real adoption.</h3><p>Technology does not change behavior on its own.</p></article>",
+      "css": ".ds-highlight { width:520px; min-height:340px; padding:48px; border-radius:28px; background:#0F6E56; color:#FFFFFF; font-family:-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif; } .ds-highlight h3 { margin:0; max-width:10ch; font-size:48px; line-height:.98; letter-spacing:-.04em; } .ds-highlight p { max-width:34ch; margin-top:24px; font-size:18px; line-height:1.5; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The AI in the Palm",
+    "overview": "A product-launch experience in which WNF.AI becomes a tangible collaborator held in human control. One theatrical opening gives way to calm, source-backed chapters.",
+    "keyCharacteristics": [
+      "One rehearsed opening animation",
+      "Single-idea viewports",
+      "Forest and paper color fields",
+      "Human-controlled robot imagery",
+      "Complete accessible motion fallback"
+    ],
+    "rules": [
+      {
+        "name": "The Orange Is an Object Rule",
+        "body": "Robot orange belongs to the robot and its direct system pulse.",
+        "section": "colors"
+      },
+      {
+        "name": "The Scale Carries the Drama Rule",
+        "body": "Large type, space, and weight create the hierarchy.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat-Until-Physical Rule",
+        "body": "A shadow is allowed only when an object feels physically above the page or responds to interaction.",
+        "section": "elevation"
+      },
+      {
+        "name": "Launch-object scale",
+        "body": "The WNF.AI mark and short full-viewport statements may exceed the ordinary content-heading ceiling while support copy stays on the readable type ramp.",
+        "section": "typography"
+      }
+    ],
+    "dos": [
+      "Do preserve the four approved opening beats and measured five-second pacing.",
+      "Do use the official logo and exact current homepage copy.",
+      "Do keep the human visibly in control."
+    ],
+    "donts": [
+      "Don't copy Apple trademarks, product media, copy, pricing, or navigation branding.",
+      "Don't invent clients, results, testimonials, guarantees, or metrics.",
+      "Don't use gradient text, generic purple-blue gradients, or card-filled agency styling."
+    ]
+  }
+}
