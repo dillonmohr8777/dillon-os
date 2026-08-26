@@ -176,6 +176,7 @@ for (const route of expectedRoutes) {
   if (!metaContent(html, 'name', 'robots')?.includes('index,follow')) addError(route, 'missing index,follow robots directive')
   if (!html.includes('src="/_vercel/insights/script.js"')) addError(route, 'missing first-party Vercel Web Analytics script')
   if (!html.includes('src="/analytics.js"')) addError(route, 'missing governed GA4 analytics script')
+  if (!html.includes('href="/analytics-consent.css"')) addError(route, 'missing analytics consent styles')
   if (!title) addError(route, 'missing title')
   if (title.length < 20 || title.length > 80) addWarning(route, `title length is ${title.length}; target range is 20 to 80`)
   if (!description) addError(route, 'missing meta description')
@@ -298,9 +299,11 @@ if (/dillonmohr8777@gmail\.com/i.test(llms) || !llms.includes(site.email)) error
 
 const analytics = fileText(path.join(publicDir, 'analytics.js'))
 for (const requiredFragment of [
-  "window.location.hostname !== 'www.immohrtalmarketing.com'",
+  "window.location.hostname === 'www.immohrtalmarketing.com'",
   "const measurementId = 'G-25X07BBG4R'",
-  "analytics_storage: 'denied'",
+  "analytics_storage: storedConsent === 'granted' ? 'granted' : 'denied'",
+  "const consentKey = 'immohrtal_analytics_consent'",
+  "window.gtag('consent', 'update'",
   "allow_google_signals: false",
   "track('booking_started'",
   "track('email_clicked'",

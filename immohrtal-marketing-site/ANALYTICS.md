@@ -20,7 +20,7 @@ Enhanced Measurement owns ordinary scrolls and outbound clicks. The custom imple
 
 ## Privacy defaults
 
-The production tag defaults advertising, personalization, functionality, and analytics storage to denied. Google signals and ad personalization are disabled, and ads data redaction is enabled. Vercel Web Analytics remains the cookie-free first-party traffic baseline.
+The production tag defaults advertising, personalization, functionality, and analytics storage to denied. Google signals and ad personalization are disabled, and ads data redaction is enabled. A visitor can explicitly allow analytics through the on-page analytics control and reverse that choice later. Vercel Web Analytics remains the cookie-free first-party traffic baseline.
 
 ## Reporting interpretation
 

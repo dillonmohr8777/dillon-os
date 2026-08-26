@@ -1,0 +1,89 @@
+.analytics-consent {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 1000;
+  max-width: min(520px, calc(100vw - 36px));
+  color: #dce4ed;
+  font-family: "Manrope Variable", Manrope, sans-serif;
+}
+
+.analytics-consent__panel {
+  display: grid;
+  gap: 18px;
+  padding: 22px;
+  border: 1px solid rgba(181, 218, 250, 0.42);
+  border-radius: 14px;
+  background: #07101f;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.42);
+}
+
+.analytics-consent__panel[hidden] { display: none; }
+
+.analytics-consent__panel strong {
+  display: block;
+  margin-bottom: 7px;
+  color: #f3f7fb;
+  font-family: "Unbounded Variable", Unbounded, sans-serif;
+  font-size: 1rem;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.analytics-consent__panel p {
+  max-width: 54ch;
+  margin: 0;
+  color: #a7bbd1;
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+.analytics-consent__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.analytics-consent button {
+  min-height: 50px;
+  padding: 0 17px;
+  border: 1px solid rgba(181, 218, 250, 0.42);
+  border-radius: 12px;
+  background: #0b1729;
+  color: #f3f7fb;
+  font: 700 0.82rem/1 "Manrope Variable", Manrope, sans-serif;
+  cursor: pointer;
+}
+
+.analytics-consent [data-consent-choice="granted"] {
+  border-color: transparent;
+  background: linear-gradient(180deg, #58edb2, #18c8ff);
+  color: #020711;
+}
+
+.analytics-consent__manage {
+  display: none;
+  margin-left: auto;
+  min-height: 44px !important;
+  padding-inline: 14px !important;
+  background: rgba(7, 16, 31, 0.96) !important;
+  color: #a7bbd1 !important;
+  font-size: 0.67rem !important;
+}
+
+.analytics-consent[data-analytics-consent="closed"] .analytics-consent__manage { display: block; }
+
+.analytics-consent button:hover { border-color: #18c8ff; transform: translateY(-2px); }
+.analytics-consent button:focus-visible { outline: 3px solid #58edb2; outline-offset: 4px; }
+
+@media (max-width: 560px) {
+  .analytics-consent { right: 12px; bottom: 12px; left: 12px; max-width: none; }
+  .analytics-consent__panel { padding: 18px; }
+  .analytics-consent__actions { display: grid; grid-template-columns: 1fr; }
+  .analytics-consent__actions button { width: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .analytics-consent button { transition: none; }
+  .analytics-consent button:hover { transform: none; }
+}

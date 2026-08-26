@@ -220,6 +220,7 @@ const baseHead = ({ title, description, canonical, image = site.logo, imageAlt =
   <link rel="stylesheet" href="/static-site.css">
   <script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@graph': schemaGraph }).replaceAll('<', '\\u003c')}</script>
   <script defer src="/_vercel/insights/script.js"></script>
+  <link rel="stylesheet" href="/analytics-consent.css">
   <script defer src="/analytics.js"></script>
   <script src="/static-site.js" defer></script>`
 }
