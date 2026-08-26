@@ -36,6 +36,7 @@ const routes = [
 
 const articleRoutes = new Set(routes.filter((route) => route.startsWith('/insights/') && route !== '/insights/'))
 const expectedNav = ['Services', 'Pricing', 'Work', 'Guides', 'About']
+const isExpectedTelemetryRequest = (url) => /https:\/\/(?:www\.)?google-analytics\.com\/g\/collect/i.test(url)
 const serviceAssetDir = path.resolve('public', 'pressroom', 'services')
 const serviceAssets = (await fs.readdir(serviceAssetDir)).filter((file) => /\.(?:avif|jpe?g|png|webp)$/i.test(file))
 
@@ -58,7 +59,9 @@ for (const route of routes) {
   page.on('console', (message) => {
     if (message.type() === 'error') errors.push(`console: ${message.text()}`)
   })
-  page.on('requestfailed', (request) => errors.push(`requestfailed: ${request.url()} ${request.failure()?.errorText || ''}`))
+  page.on('requestfailed', (request) => {
+    if (!isExpectedTelemetryRequest(request.url())) errors.push(`requestfailed: ${request.url()} ${request.failure()?.errorText || ''}`)
+  })
 
   const response = await page.goto(new URL(route, baseUrl).toString(), { waitUntil: 'domcontentloaded' })
   await page.evaluate(async () => { await document.fonts.ready })
