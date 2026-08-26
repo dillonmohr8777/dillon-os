@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-26",
+  "business": {
+    "name": "With Not For",
+    "category": "AI adoption consulting",
+    "route": "withnotfor.ai homepage concept"
+  },
+  "generator": {
+    "tool": "image_gen.imagegen",
+    "model": "not exposed by the image generation tool response",
+    "styleContract": "Align HCM Image Gen editorial documentary workflow translated through the verified With Not For visual system"
+  },
+  "images": [
+    {
+      "id": "policy-workshop",
+      "prompt": "Create a premium editorial documentary photograph for With Not For, an AI adoption consulting firm. Show exactly three real adult business professionals arranged naturally across the left, center, and right thirds of a landscape frame during a practical small-group AI policy and training workshop: one experienced facilitator and two team members, diverse in age, gender, and ethnicity, focused and collaborating rather than posing. Upper bodies and faces are clearly visible; keep all arms naturally contained in frame and avoid isolated foreground hands. The scene should feel candid, tactile, and believable, with a dark forest-green and deep-navy workspace, warm-paper skin tones, a restrained orange structural detail, and very subtle mint or lime practical light. Calm asymmetric composition, directional soft light, crisp realistic skin and clothing, premium professional color grade, and fine monochrome film grain. Leave breathing room around each person so the image can be divided into three tall rounded web panels. No robot, no logos, no text, no legible screens, no fake UI, no generic stock-photo grin, no glossy plastic rendering, no centered template symmetry. 3:2 landscape aspect ratio.",
+      "dimensions": "1536x1024",
+      "sourceSha256": "7FD8E216559C58E9230868FE2A2F2EAD099C1A32FE0DA9AAD81DBEAB19904FE5",
+      "files": {
+        "png": "wnf-policy-workshop.png",
+        "pngSha256": "7FD8E216559C58E9230868FE2A2F2EAD099C1A32FE0DA9AAD81DBEAB19904FE5",
+        "webp": "wnf-policy-workshop.webp",
+        "webpSha256": "959BF7BED99A91327235AF6A6DF085C87C4F2CCF7A948AC4E5B1EBE5678E1461"
+      }
+    },
+    {
+      "id": "human-led-session",
+      "prompt": "Create a premium editorial documentary photograph for With Not For, an AI adoption consulting firm. Show two real adult business professionals working side by side in a hands-on AI implementation session: an experienced advisor and a client team lead, visibly collaborating as equals around a laptop or planning surface. Both people should be shown from the waist or chest up with complete natural arm silhouettes inside the frame; absolutely no isolated hand, giant foreground hand, cropped wrist, floating hand, or robot. Place the people primarily in the right two-thirds with calm negative space on the left for large web copy. Their expressions are attentive and candid, not posed or smiling at camera. Use a deep forest-green and midnight-navy workspace, warm-paper highlights, one restrained orange architectural accent, and subtle mint practical light. Documentary realism, tactile material detail, directional soft light, crisp realistic skin and clothing, premium professional color grade, subtle fine monochrome film grain. No logos, no text, no legible screens, no fake interface, no generic stock-photo energy, no glossy plastic render, no centered symmetry. 3:2 landscape aspect ratio.",
+      "dimensions": "1536x1024",
+      "sourceSha256": "A83DB600AC1606E50941ACD1F2CFE1258DBB2B7FEC5FC61FB4D2E780F047548F",
+      "files": {
+        "png": "wnf-human-led-session.png",
+        "pngSha256": "A83DB600AC1606E50941ACD1F2CFE1258DBB2B7FEC5FC61FB4D2E780F047548F",
+        "webp": "wnf-human-led-session.webp",
+        "webpSha256": "99D1270672F9E6A1CC68283BB3299AE3528E88DE2B3E10660303EE3801D1CC63"
+      }
+    }
+  ],
+  "grainOverlay": {
+    "file": "grain.svg",
+    "sha256": "F8B8B72EE2A84CF2AAA04CE069EDAAA459EE61650E76F307254572DB67EFB813",
+    "treatment": "deterministic low-opacity circle grain; no turbulence filter"
+  }
+}

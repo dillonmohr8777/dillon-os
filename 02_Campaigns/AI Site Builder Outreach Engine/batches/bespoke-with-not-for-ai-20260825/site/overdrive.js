@@ -178,6 +178,26 @@
 
   document.querySelectorAll('.highlight-panel, .briefing-shell').forEach((element) => addSurfaceTilt(element));
 
+  document.querySelectorAll('[data-glass-scene]').forEach((scene) => {
+    scene.addEventListener('pointermove', (event) => {
+      if (reducedMotion.matches || event.pointerType === 'touch') return;
+      const bounds = scene.getBoundingClientRect();
+      const x = clamp((event.clientX - bounds.left) / bounds.width, 0, 1) - 0.5;
+      const y = clamp((event.clientY - bounds.top) / bounds.height, 0, 1) - 0.5;
+      scene.style.setProperty('--glass-rx', `${(-y * 4.2).toFixed(2)}deg`);
+      scene.style.setProperty('--glass-ry', `${(x * 5.2).toFixed(2)}deg`);
+      scene.style.setProperty('--glass-tx', `${(x * 11).toFixed(2)}px`);
+      scene.style.setProperty('--glass-ty', `${(y * 8).toFixed(2)}px`);
+    });
+
+    scene.addEventListener('pointerleave', () => {
+      scene.style.setProperty('--glass-rx', '0deg');
+      scene.style.setProperty('--glass-ry', '0deg');
+      scene.style.setProperty('--glass-tx', '0px');
+      scene.style.setProperty('--glass-ty', '0px');
+    });
+  });
+
   window.addEventListener('scroll', requestScrollUpdate, { passive: true });
   window.addEventListener('resize', requestScrollUpdate, { passive: true });
   reducedMotion.addEventListener('change', requestScrollUpdate);

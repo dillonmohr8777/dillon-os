@@ -211,13 +211,19 @@
     const chargeProgress = clamp(progress / 0.17);
     const travelProgress = clamp((progress - 0.16) / 0.58);
     const settleProgress = clamp((progress - 0.74) / 0.26);
-    const dissolveProgress = clamp((progress - 0.1) / 0.48);
+    const dissolveProgress = clamp((progress - 0.08) / 0.14);
+    const sourceReveal = easeInOutCubic(dissolveProgress);
     const visualCharge = progress < 0.46
       ? chargeProgress
       : mix(1, 0.42, clamp((progress - 0.46) / 0.54));
 
     section.style.setProperty('--particle-charge', visualCharge.toFixed(4));
     section.style.setProperty('--particle-dissolve', dissolveProgress.toFixed(4));
+    section.dataset.particleSource = sourceReveal <= 0
+      ? 'robot'
+      : sourceReveal >= 1
+        ? 'particles'
+        : 'crossfade';
     context.clearRect(0, 0, bounds.width, bounds.height);
 
     if (travelProgress > 0.04 && travelProgress < 0.98) {
@@ -256,7 +262,7 @@
       const radius = particle.radius * mix(1.14, 0.92, settleProgress);
 
       context.beginPath();
-      context.fillStyle = `rgba(${red}, ${green}, ${blue}, ${Math.max(0.38, particle.alpha) * chargeFlicker * resolvedShimmer})`;
+      context.fillStyle = `rgba(${red}, ${green}, ${blue}, ${Math.max(0.38, particle.alpha) * chargeFlicker * resolvedShimmer * sourceReveal})`;
       context.arc(position.x, position.y, radius, 0, Math.PI * 2);
       context.fill();
     });
@@ -278,6 +284,7 @@
     resolved = false;
     section.classList.remove('is-resolved');
     section.dataset.particleState = 'playing';
+    section.dataset.particleSource = 'robot';
     section.style.setProperty('--particle-charge', '0');
     section.style.setProperty('--particle-dissolve', '0');
     startTime = performance.now();

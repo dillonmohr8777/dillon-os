@@ -274,7 +274,7 @@ After the 7.8-second opening, the page moves through single-idea viewports, a ho
 - One rehearsed five-state opening animation, supported by purposeful scroll choreography rather than repeated fade-and-rise effects.
 - Very large type, deliberate whitespace, and one dominant thought per fold.
 - Forest, paper, and black fields punctuated by the orange robot.
-- Human hand and robot imagery used as the physical expression of “with, not for.”
+- The opening palm plus editorial people photography make “with, not for” visibly human; the later human-led chapter contains no floating hand.
 - Exactly three authored robot appearances: opening collaborator, product-theatre breakdown, and footer transformation seed.
 - Brand-specific circuit, systems, team, policy, and adoption icons drawn from one stroke grammar, then animated with distinct motion signatures.
 - Liquid glass reserved for interactive controls, capability lenses, and literal interface surfaces.
@@ -333,7 +333,7 @@ The palette is committed rather than timid: With Not For forest owns long sectio
 
 The page uses a full-bleed chapter model with content held inside a 90rem maximum canvas. Global navigation uses a centered `min(100% - 2rem, 90rem)` rail; theatrical sections use fluid page gutters that never fall below 1.5rem. Sticky scenes are allowed to own the viewport, but readable copy remains inside the safe canvas and inactive horizontal panels remove their copy before they cross the viewport edge.
 
-Desktop compositions use asymmetrical two-column product staging: oversized copy owns one side while the robot, hand, workflow, or interface proves the claim on the other. At 75rem and above, the full product spacing opens; below 64rem, capability lenses tighten around the robot; below 48rem, every scene becomes a vertical composition and motion distances collapse. The 320px floor is structural: no heading may depend on clipping, off-canvas translation, or hidden first characters to create scale.
+Desktop compositions use asymmetrical two-column product staging: oversized copy owns one side while the robot, opening palm, editorial people, workflow, or interface proves the claim on the other. At 75rem and above, the full product spacing opens; below 64rem, capability lenses tighten around the robot; below 48rem, every scene becomes a vertical composition and motion distances collapse. The 320px floor is structural: no heading may depend on clipping, off-canvas translation, or hidden first characters to create scale.
 
 The spacing rhythm comes from 4, 8, 12, 16, 24, 32, 48, 64, 96, and 128px steps. Product stages can exceed the ordinary section step only when the extra distance carries a scroll transition or protects an oversized object.
 
@@ -360,7 +360,7 @@ The system is flat by default. Depth comes from scale, occlusion, product imager
 
 The form language contrasts disciplined interface geometry with one friendly physical character. Controls, tabs, status labels, and microcards use full pills; interface shells use 16px corners; feature panels and glass lenses use the 28px large radius. The oversized liquid wordmark uses a proportional `0.12em` glyph radius so its glass edges scale with the type. The robot remains visibly squared and articulated, while orbits, measurement guides, particles, and adoption paths use circles and rounded line terminals.
 
-Borders stay hairline and tonal. Glass surfaces pair a soft white edge with backdrop blur; opaque product fields use either no border or the Structure Line token. Large sections are never rounded simply to imitate cards, and the human hand is never clipped into a floating wrist or used as a decorative container edge.
+Borders stay hairline and tonal except on the two authored people-photo stages, where a thick WNF signal edge and offset outline translate the approved Align industry-page framing grammar. Glass surfaces pair a soft white edge with backdrop blur; opaque product fields use either no border or the Structure Line token. Large sections are never rounded simply to imitate cards, and the opening hand is never clipped into a floating wrist or reused in the later human-led chapter.
 
 ## Components
 
@@ -398,7 +398,11 @@ Each icon has a job-specific motion signature: workflow travels, systems compute
 
 ### Particle Finale
 
-The third and final robot is alpha-sampled as the particle source. Its orange silhouette charges, dissolves into deterministic points, travels through six circuit lanes, changes into the official green-and-gray palette, and settles against alpha-sampled target coordinates from the exact logo. The source image stays hidden during travel and appears only after the particles lock to the same stable pixels. A signal-meter button replays the sequence; the canvas pauses outside the viewport, provides a static fallback, and is omitted for reduced-motion users.
+The third and final robot is alpha-sampled as the particle source. One open-eye image is present in the footer seed; particles crossfade in only as that image fades out, so the robot never appears doubled. Its orange silhouette charges, dissolves into deterministic points, travels through six circuit lanes, changes into the official green-and-gray palette, and settles against alpha-sampled target coordinates from the exact logo. The source image stays hidden during travel and appears only after the particles lock to the same stable pixels. A signal-meter button replays the sequence; the canvas pauses outside the viewport, provides a static fallback, and is omitted for reduced-motion users.
+
+### Editorial People Stages
+
+Training & Policy uses a real three-person workshop divided by three liquid-glass apertures. Human Control uses a real advisor and business leader working side by side, with no floating hand and no additional robot. Both scenes use directional documentary light, deterministic grain, a thick WNF outline, one finite traveling refraction, and cursor-reactive depth; reduced-motion mode removes the scan and tilt while preserving the complete image.
 
 ### Morning Briefing
 

@@ -1,14 +1,14 @@
 # QA Result
 
-Status: **PASS — private local review build**
+Status: **PASS — noindex review build**
 
-Report: `qa/report.json`
+Report: `qa/report.json` — live target captured 2026-08-26T06:23:21Z
 
 ## Verified
 
 - The complete 7.8-second opening captured at 700, 1500, 2400, 3300, 4200, 5100, 6200, and 7900 ms.
 - Final hero at 320×720, 390×844, 768×1024, and 1440×900.
-- Major desktop and 390px sections captured individually: belief, all three horizontal highlights, all three robot-theatre phases, all three adoption states, all three service chapters, Morning Briefing, human-control palm and reactor, closing CTA, plus particle travel and resolved-logo frames.
+- Major desktop and 390px sections captured individually: belief, all three horizontal highlights, all three robot-theatre phases, all three adoption states, all three service chapters, Morning Briefing, human-led editorial people and reactor, closing CTA, plus particle travel and resolved-logo frames.
 - Zero console errors, page errors, or failed asset requests.
 - Zero horizontal overflow at every tested viewport.
 - Zero clipped active text nodes in every captured desktop and mobile chapter.
@@ -16,6 +16,8 @@ Report: `qa/report.json`
 - Mobile menu opens and closes through a native dialog.
 - Robot pointer tracking, click-to-nod, and true alternate-frame blink all execute in the live page.
 - The DOM contains exactly three robot placements: opening, product theatre, and footer transformation seed.
+- The footer seed contains exactly one robot image; its particle source crossfades against that image instead of rendering a second visible robot layer.
+- Training & Policy and Human Control load their optimized 1536×1024 WebP people scenes, with PNG fallbacks, deterministic grain, pointer depth, finite glass scans, and no hand image in the Human Control section.
 - The footer transformation reaches `data-particle-state="resolved"` on desktop and mobile, with the source logo excluded from generic reveal transforms so particles and final pixels stay aligned.
 - Briefing tabs support click plus Arrow Left, Arrow Right, Home, and End.
 - Reduced-motion mode loads the complete hero and converts sticky scroll scenes into static readable sections.
@@ -44,4 +46,4 @@ The `WNF.AI` product mark and single-idea viewport statements use responsive dis
 
 ## Publication
 
-No deployment and no prospect outreach occurred. The build remains local and private.
+Netlify deployment was explicitly authorized in the current task. The dedicated target is `https://with-not-for-ai-human-led-preview.netlify.app/` (site ID `7861d4b9-7ed9-436f-8c56-aaaa8738fc09`, deploy `6a8e85f7be072effa8143d4a`). The live URL passed the full responsive and interaction suite. Prospect outreach remains unsent.

@@ -382,11 +382,17 @@
               <p>Hands-on sessions for every level of your team, plus AI usage policies that protect the business while enabling the upside.</p>
               <a href="https://withnotfor.ai/services">View the service <span aria-hidden="true">→</span></a>
             </div>
-            <div class="training-visual" aria-hidden="true">
-              <div class="training-visual__person"><span></span></div>
-              <div class="training-visual__person"><span></span></div>
-              <div class="training-visual__person"><span></span></div>
-              <div class="training-visual__policy">Clear policy</div>
+            <div class="training-visual" aria-hidden="true" data-glass-scene>
+              <div class="training-visual__people">
+                <picture>
+                  <source srcset="assets/wnf-policy-workshop.webp" type="image/webp">
+                  <img src="assets/wnf-policy-workshop.png" width="1536" height="1024" alt="" loading="lazy">
+                </picture>
+                <div class="training-visual__frames">
+                  <span></span><span></span><span></span>
+                </div>
+              </div>
+              <div class="training-visual__policy"><svg class="brand-icon"><use href="#wnf-icon-policy"></use></svg><span>Clear policy</span></div>
             </div>
           </div>
         </article>
@@ -471,11 +477,10 @@
 
       <section class="human-control" aria-labelledby="human-control-title" data-human-control>
         <div class="human-control__sticky">
-          <div class="human-control__visual" data-character-stage>
-            <div class="human-control__glow" aria-hidden="true"></div>
-            <picture class="human-control__hand">
-              <source srcset="assets/hand-palm.webp" type="image/webp">
-              <img src="assets/hand-palm.png" width="1024" height="1536" alt="" loading="lazy">
+          <div class="human-control__visual" data-character-stage data-glass-scene>
+            <picture class="human-control__people">
+              <source srcset="assets/wnf-human-led-session.webp" type="image/webp">
+              <img src="assets/wnf-human-led-session.png" width="1536" height="1024" alt="An AI advisor and business leader working side by side" loading="lazy">
             </picture>
             <div class="human-control__signal brand-reactor brand-reactor--team" aria-hidden="true">
               <div class="brand-reactor__orbit brand-reactor__orbit--one"></div>
@@ -508,15 +513,11 @@
       <section class="particle-finale" aria-labelledby="particle-finale-title" data-particle-finale>
         <canvas class="particle-finale__canvas" data-particle-logo aria-hidden="true"></canvas>
         <div class="particle-finale__aura" aria-hidden="true"></div>
-        <div class="character-control particle-finale__seed" aria-hidden="true" data-character-control data-particle-seed>
+        <div class="particle-finale__seed" aria-hidden="true" data-particle-seed>
           <span class="character-shell">
             <picture class="character-frame character-frame--open">
               <source srcset="assets/robot-open.webp" type="image/webp">
               <img src="assets/robot-open.png" width="1254" height="1254" alt="" loading="lazy">
-            </picture>
-            <picture class="character-frame character-frame--blink" aria-hidden="true">
-              <source srcset="assets/robot-blink.webp" type="image/webp">
-              <img src="assets/robot-blink.png" width="1254" height="1254" alt="" loading="lazy">
             </picture>
           </span>
         </div>
