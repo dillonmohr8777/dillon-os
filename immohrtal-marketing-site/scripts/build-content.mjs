@@ -220,6 +220,7 @@ const baseHead = ({ title, description, canonical, image = site.logo, imageAlt =
   <link rel="stylesheet" href="/static-site.css">
   <script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@graph': schemaGraph }).replaceAll('<', '\\u003c')}</script>
   <script defer src="/_vercel/insights/script.js"></script>
+  <script defer src="/analytics.js"></script>
   <script src="/static-site.js" defer></script>`
 }
 
@@ -596,15 +597,15 @@ const renderArticle = (article) => {
       <div class="article-layout">
         <aside class="article-toc" aria-label="Article contents">
           <p>In this guide</p>
-          <ol>${toc}${article.faqs?.length ? '<li><a href="#faq">Frequently asked questions</a></li>' : ''}<li><a href="#sources">Academic sources</a></li></ol>
+          <ol>${toc}${article.faqs?.length ? '<li><a href="#faq">Frequently asked questions</a></li>' : ''}<li><a href="#sources">Sources and further reading</a></li></ol>
         </aside>
         <article class="article-body">
           <div class="direct-answer"><strong>Direct answer</strong>${escapeHtml(article.directAnswer)}</div>
           ${sections}
           ${faqHtml}
           <section id="sources">
-            <h2>Academic sources</h2>
-            <p>These peer reviewed papers, conference proceedings, and scholarly preprints support the research and implementation guidance in this article. Each link points to the publication or an academic repository.</p>
+            <h2>Sources and further reading</h2>
+            <p>These official platform references, standards, peer reviewed papers, conference proceedings, and clearly labeled preprints support the research and implementation guidance in this article.</p>
             <ul class="source-list">${sources}</ul>
           </section>
           <section>

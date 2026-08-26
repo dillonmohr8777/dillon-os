@@ -89,6 +89,7 @@ export const articles = [
       },
     ],
     sources: [
+      { title: 'AI features and your website', organization: 'Google Search Central', url: 'https://developers.google.com/search/docs/fundamentals/ai-optimization-guide', note: 'Official Google guidance confirming that the same foundational SEO practices apply to AI search features.' },
       { title: 'GEO: Generative Engine Optimization', organization: 'ACM SIGKDD / arXiv', url: 'https://arxiv.org/html/2311.09735v2', note: 'Foundational 2024 research defining GEO and evaluating visibility strategies across domains.' },
       { title: 'What Gets Cited: Competitive GEO in AI Answer Engines', organization: 'ACM SIGIR / arXiv', url: 'https://arxiv.org/html/2605.25517', note: 'Controlled 2026 study of content factors associated with first-citation selection.' },
       { title: 'Structural Feature Engineering for Generative Engine Optimization', organization: 'arXiv preprint', url: 'https://arxiv.org/html/2603.29979', note: 'Preprint research on how document architecture, chunking, and emphasis relate to citation behavior.' },
@@ -99,6 +100,8 @@ export const articles = [
       ['/insights/google-ai-overviews-service-businesses/', 'Optimize for Google AI Overviews'],
       ['/insights/measure-ai-search-visibility/', 'Measure AI search visibility'],
       ['/insights/schema-markup-service-businesses/', 'Use truthful structured data'],
+      ['/technical-seo/', 'Technical SEO services for crawl and index health'],
+      ['/content-schema/', 'Content and schema systems for answer-ready pages'],
     ],
   },
   {
@@ -194,6 +197,7 @@ export const articles = [
       },
     ],
     sources: [
+      { title: 'Succeeding in AI search', organization: 'Google Search Central', url: 'https://developers.google.com/search/blog/2025/05/succeeding-in-ai-search', note: 'Official Google guidance on valuable content, page experience, crawlability, and structured data for AI search experiences.' },
       { title: 'Measuring Google AI Overviews: Activation, Source Quality, Claim Fidelity, and Publisher Impact', organization: 'Washington University in St. Louis / arXiv preprint', url: 'https://doi.org/10.48550/arxiv.2605.14021', note: 'Large-scale 2026 longitudinal preprint studying AI Overview activation, citations, and claim support.' },
       { title: 'How Generative AI Disrupts Search', organization: 'New Jersey Institute of Technology et al. / arXiv preprint', url: 'https://arxiv.org/abs/2604.27790', note: 'Preprint comparing Google results, Gemini, and AI Overviews across a public query benchmark.' },
       { title: 'SourceBench: Can AI Answers Reference Quality Web Sources?', organization: 'UC San Diego / arXiv preprint', url: 'https://arxiv.org/html/2602.16942', note: 'Human-labeled preprint benchmark for source quality in search-augmented AI answers.' },
@@ -204,6 +208,8 @@ export const articles = [
       ['/insights/javascript-seo-react-crawlable-html/', 'JavaScript SEO for React websites'],
       ['/insights/entity-first-content-architecture/', 'Entity first content architecture'],
       ['/insights/measure-ai-search-visibility/', 'Measure AI search visibility'],
+      ['/technical-seo/', 'Technical SEO for Google search access'],
+      ['/content-schema/', 'Content and schema systems for AI search'],
     ],
   },
   {
@@ -297,6 +303,7 @@ export const articles = [
       },
     ],
     sources: [
+      { title: 'Web Vitals: essential metrics for a healthy site', organization: 'web.dev', url: 'https://web.dev/articles/vitals', note: 'Official practical guidance for measuring and improving user-centered website performance.' },
       { title: 'The Impact of Website Design on Users’ Trust', organization: 'ACM NordiCHI', url: 'https://dl.acm.org/doi/10.1145/3419249.3420086', note: 'Human-computer interaction research examining website design and user trust.' },
       { title: 'Do you agree? Contrasting Google’s Core Web Vitals with actual web QoE', organization: 'Quality and User Experience / Springer Nature', url: 'https://link.springer.com/article/10.1007/s41233-023-00058-3', note: 'Open-access study comparing technical web metrics with subjective quality-of-experience research.' },
       { title: 'Web Experience in Mobile Networks: Lessons from Two Million Page Visits', organization: 'The Web Conference / ACM', url: 'https://dl.acm.org/doi/10.1145/3308558.3313606', note: 'Large-scale study of webpage performance across mobile networks, browsers, and technologies.' },
@@ -307,6 +314,8 @@ export const articles = [
       ['/work/', 'Selected website work'],
       ['/insights/javascript-seo-react-crawlable-html/', 'JavaScript SEO for React websites'],
       ['/contact/', 'Plan a measurable website redesign'],
+      ['/web-design/', 'Website design services for service businesses'],
+      ['/technical-seo/', 'Technical SEO support for safe redesigns'],
     ],
   },
   {
@@ -402,6 +411,7 @@ export const articles = [
       },
     ],
     sources: [
+      { title: 'Understand how structured data works', organization: 'Google Search Central', url: 'https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data', note: 'Official Google documentation on structured data eligibility, implementation, and visible-content requirements.' },
       { title: 'The Snippets Taxonomy in Web Search Engines', organization: 'University of Economics in Katowice / Springer', url: 'https://arxiv.org/abs/1906.04497', note: 'Study of regular, rich, featured, news, and entity snippets across 50,000 search queries.' },
       { title: 'Entity-Duet Neural Ranking', organization: 'Association for Computational Linguistics', url: 'https://aclanthology.org/P18-1223/', note: 'Research integrating document words, entity annotations, and knowledge-graph semantics in retrieval.' },
       { title: 'Hypergraph-of-Entity: A General Model for Entity-Oriented Search', organization: 'INESC TEC and University of Porto / arXiv preprint', url: 'https://arxiv.org/abs/2109.00450', note: 'Entity-oriented retrieval research joining text, entities, and explicit relationships.' },
@@ -412,6 +422,8 @@ export const articles = [
       ['/insights/entity-first-content-architecture/', 'Entity first content architecture'],
       ['/insights/google-ai-overviews-service-businesses/', 'Google AI Overviews guide'],
       ['/contact/', 'Audit a service business content graph'],
+      ['/content-schema/', 'Content and schema implementation services'],
+      ['/technical-seo/', 'Technical SEO validation for structured data'],
     ],
   },
   {
@@ -504,6 +516,7 @@ export const articles = [
       },
     ],
     sources: [
+      { title: 'Introduction to robots.txt', organization: 'Google Search Central', url: 'https://developers.google.com/search/docs/crawling-indexing/robots/intro', note: 'Official Google documentation explaining what robots.txt controls and why it is not an indexing-removal mechanism.' },
       { title: 'Scrapers selectively respect robots.txt directives', organization: 'Duke University / arXiv preprint', url: 'https://arxiv.org/html/2505.21733', note: 'Large-scale empirical preprint studying crawler behavior under controlled robots.txt directives.' },
       { title: 'A Survey of Web Content Control for Generative AI', organization: 'University of Passau / arXiv', url: 'https://arxiv.org/html/2404.02309v1', note: 'Academic survey of technical standards and opt-out proposals for generative-AI web data use.' },
       { title: 'Sprinter: Speeding Up High-Fidelity Crawling of the Modern Web', organization: 'USENIX NSDI', url: 'https://www.usenix.org/system/files/nsdi24-goel.pdf', note: 'Systems research explaining the browser work required to crawl modern JavaScript-dependent pages.' },
@@ -514,6 +527,8 @@ export const articles = [
       ['/insights/measure-ai-search-visibility/', 'Measure AI search visibility'],
       ['/aeo-geo/', 'AEO and GEO services'],
       ['/insights/schema-markup-service-businesses/', 'Describe crawlable content accurately'],
+      ['/technical-seo/', 'Technical SEO for crawler access and indexability'],
+      ['/content-schema/', 'Content and schema systems for machine-readable pages'],
     ],
   },
   {
@@ -605,6 +620,7 @@ export const articles = [
       },
     ],
     sources: [
+      { title: 'Understand the JavaScript SEO basics', organization: 'Google Search Central', url: 'https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics', note: 'Official Google documentation for rendering, crawlable links, metadata, status codes, and JavaScript-powered sites.' },
       { title: 'Sprinter: Speeding Up High-Fidelity Crawling of the Modern Web', organization: 'USENIX NSDI', url: 'https://www.usenix.org/system/files/nsdi24-goel.pdf', note: 'Research on the computing cost and fidelity challenges of browser-based crawling.' },
       { title: 'Evaluating the Efficacy of Next.js: A Comparative Analysis with React.js', organization: 'New York University Abu Dhabi / arXiv preprint', url: 'https://arxiv.org/html/2502.15707v1', note: 'Preprint comparison of React and Next.js under performance, SEO, usability, and network conditions.' },
       { title: 'Web Experience in Mobile Networks: Lessons from Two Million Page Visits', organization: 'The Web Conference / ACM', url: 'https://dl.acm.org/doi/10.1145/3308558.3313606', note: 'Large-scale evidence on the effect of access networks, devices, browsers, and page composition.' },
@@ -615,6 +631,8 @@ export const articles = [
       ['/insights/ai-search-crawlers-discovery-citations/', 'How AI search crawlers discover pages'],
       ['/insights/google-ai-overviews-service-businesses/', 'Google AI Overviews guide'],
       ['/contact/', 'Plan a crawlable React build'],
+      ['/technical-seo/', 'Technical SEO services for JavaScript websites'],
+      ['/web-design/', 'Website design services with crawlable foundations'],
     ],
   },
   {
@@ -707,6 +725,7 @@ export const articles = [
       },
     ],
     sources: [
+      { title: 'Understanding the CRM APIs', organization: 'HubSpot Developer Documentation', url: 'https://developers.hubspot.com/docs/api-reference/latest/crm/understanding-the-crm', note: 'Official HubSpot documentation for CRM objects, records, associations, properties, schemas, search, and pipelines.' },
       { title: 'Artificial intelligence in customer relationship management', organization: 'Journal of Business Research / Elsevier', url: 'https://www.sciencedirect.com/science/article/pii/S0148296325003546', note: '2025 research framework for AI-CRM integration, including data centralization, ethics, and ongoing user involvement.' },
       { title: 'POLARIS: Typed Planning and Governed Execution for Agentic AI', organization: 'UC Irvine, UC San Diego, and Accenture / arXiv preprint', url: 'https://doi.org/10.48550/arxiv.2601.11816', note: 'Preprint research using typed plans, validation gates, bounded repair, and audit trails.' },
       { title: 'When combinations of humans and AI are useful', organization: 'Nature Human Behaviour', url: 'https://www.nature.com/articles/s41562-024-02024-1', note: 'Systematic review and meta-analysis of performance in human, AI, and combined systems.' },
@@ -717,6 +736,8 @@ export const articles = [
       ['/insights/human-approval-gates-for-marketing-agents/', 'Human approval gates'],
       ['/contact/', 'Map a website and CRM workflow'],
       ['/insights/entity-first-content-architecture/', 'Keep client and system entities distinct'],
+      ['/hubspot-crm-agents/', 'HubSpot CRM agent implementation services'],
+      ['/services/', 'Explore connected marketing and agent services'],
     ],
   },
   {
@@ -818,6 +839,7 @@ export const articles = [
       },
     ],
     sources: [
+      { title: 'Performance report in Search Console', organization: 'Google Search Console Help', url: 'https://support.google.com/webmasters/answer/7576553', note: 'Official Google documentation for interpreting query, page, country, device, impression, click, and position data.' },
       { title: 'Measuring Google AI Overviews: Activation, Source Quality, Claim Fidelity, and Publisher Impact', organization: 'Washington University in St. Louis / arXiv preprint', url: 'https://doi.org/10.48550/arxiv.2605.14021', note: 'Longitudinal preprint offering a measurement design and evidence on source selection and claim support.' },
       { title: 'GEO: Generative Engine Optimization', organization: 'ACM SIGKDD / arXiv', url: 'https://arxiv.org/html/2311.09735v2', note: 'Research introducing visibility metrics and a benchmark for generative-engine optimization.' },
       { title: 'What Gets Cited: Competitive GEO in AI Answer Engines', organization: 'ACM SIGIR / arXiv', url: 'https://arxiv.org/html/2605.25517', note: 'Controlled citation research showing why citation share is contextual rather than a fixed rank.' },
@@ -828,6 +850,8 @@ export const articles = [
       ['/insights/ai-search-crawlers-discovery-citations/', 'AI search crawlers and citations'],
       ['/insights/google-ai-overviews-service-businesses/', 'Google AI Overviews guide'],
       ['/contact/', 'Create an AI visibility measurement plan'],
+      ['/technical-seo/', 'Technical SEO measurement and index monitoring'],
+      ['/services/', 'Explore measurable search and growth services'],
     ],
   },
   {
@@ -921,6 +945,7 @@ export const articles = [
       },
     ],
     sources: [
+      { title: 'Understand how structured data works', organization: 'Google Search Central', url: 'https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data', note: 'Official Google guidance on representing visible page entities with accurate structured data.' },
       { title: 'Hypergraph-of-Entity: A General Model for Entity-Oriented Search', organization: 'INESC TEC and University of Porto / arXiv preprint', url: 'https://arxiv.org/abs/2109.00450', note: 'Joint representation research for text, entities, and explicit relationships.' },
       { title: 'Entity-Duet Neural Ranking', organization: 'Association for Computational Linguistics', url: 'https://aclanthology.org/P18-1223/', note: 'Evidence that entity annotations and knowledge-graph semantics can complement word-based retrieval.' },
       { title: 'Structural Feature Engineering for Generative Engine Optimization', organization: 'arXiv preprint', url: 'https://arxiv.org/html/2603.29979', note: 'Preprint connecting document architecture and information chunking to generative citation behavior.' },
@@ -931,6 +956,11 @@ export const articles = [
       ['/aeo-geo/', 'AEO and GEO services'],
       ['/insights/aeo-vs-geo-service-businesses/', 'AEO vs GEO'],
       ['/contact/', 'Design a durable content architecture'],
+      ['/content-schema/', 'Content and schema architecture services'],
+      ['/web-design/', 'Website design built around clear page jobs'],
+      ['/web-design-optimization/', 'Website optimization for connected content systems'],
+      ['/business-agents/', 'Business agents grounded in shared entity definitions'],
+      ['/hubspot-crm-agents/', 'HubSpot CRM agents using governed business entities'],
     ],
   },
   {
@@ -1037,6 +1067,7 @@ export const articles = [
       },
     ],
     sources: [
+      { title: 'AI Risk Management Framework', organization: 'National Institute of Standards and Technology', url: 'https://www.nist.gov/itl/ai-risk-management-framework', note: 'Official voluntary framework for managing AI risks and incorporating trustworthiness into design, deployment, use, and evaluation.' },
       { title: 'When combinations of humans and AI are useful', organization: 'Nature Human Behaviour', url: 'https://www.nature.com/articles/s41562-024-02024-1', note: 'Preregistered systematic review and meta-analysis of 106 human-AI experiments.' },
       { title: 'Human-AI collaboration is not very collaborative yet', organization: 'Frontiers in Computer Science', url: 'https://www.frontiersin.org/journals/computer-science/articles/10.3389/fcomp.2024.1521066/full', note: 'Systematic review of interaction patterns and gaps in AI-assisted decision making.' },
       { title: 'POLARIS: Typed Planning and Governed Execution for Agentic AI', organization: 'UC Irvine, UC San Diego, and Accenture / arXiv preprint', url: 'https://doi.org/10.48550/arxiv.2601.11816', note: 'Preprint research on policy-aware planning, validation gates, bounded repair, and execution traces.' },
@@ -1047,6 +1078,8 @@ export const articles = [
       ['/insights/hubspot-business-agents-safe-integration/', 'HubSpot and business agents'],
       ['/contact/', 'Map a bounded agent workflow'],
       ['/insights/entity-first-content-architecture/', 'Define entities and boundaries first'],
+      ['/hubspot-crm-agents/', 'HubSpot CRM agents with human approval boundaries'],
+      ['/services/', 'Explore governed marketing and agent services'],
     ],
   },
 ]

@@ -22,7 +22,7 @@ const expectedMonthlyPrices = [
   { id: 'paid-media-bundle', name: 'Google + Meta Ads management', price: '650' },
 ]
 
-const academicHosts = [
+const authorityHosts = [
   'aclanthology.org',
   'arxiv.org',
   'dl.acm.org',
@@ -32,6 +32,21 @@ const academicHosts = [
   'nature.com',
   'sciencedirect.com',
   'usenix.org',
+  'developers.google.com',
+  'developers.hubspot.com',
+  'nist.gov',
+  'schema.org',
+  'support.google.com',
+  'web.dev',
+]
+
+const officialHosts = [
+  'developers.google.com',
+  'developers.hubspot.com',
+  'nist.gov',
+  'schema.org',
+  'support.google.com',
+  'web.dev',
 ]
 
 const addError = (route, message) => errors.push(`${route}: ${message}`)
@@ -54,7 +69,8 @@ const canonicalHref = (html) => {
 }
 const localAssetFile = (urlPath) => path.join(publicDir, decodeURIComponent(urlPath).replace(/^\/+/, ''))
 const localAssetExists = (urlPath) => existsSync(localAssetFile(urlPath))
-const isAcademicHost = (hostname) => academicHosts.some((host) => hostname === host || hostname.endsWith(`.${host}`))
+const isAuthorityHost = (hostname) => authorityHosts.some((host) => hostname === host || hostname.endsWith(`.${host}`))
+const isOfficialHost = (hostname) => officialHosts.some((host) => hostname === host || hostname.endsWith(`.${host}`))
 const normalizeRoute = (pathname) => pathname === '/' ? '/' : `${pathname.replace(/\/+$/, '')}/`
 
 const schemaTypes = (html, route) => {
@@ -159,6 +175,7 @@ for (const route of expectedRoutes) {
   if (metaContent(html, 'name', 'twitter:description') !== description) addWarning(route, 'twitter:description differs from the meta description')
   if (!metaContent(html, 'name', 'robots')?.includes('index,follow')) addError(route, 'missing index,follow robots directive')
   if (!html.includes('src="/_vercel/insights/script.js"')) addError(route, 'missing first-party Vercel Web Analytics script')
+  if (!html.includes('src="/analytics.js"')) addError(route, 'missing governed GA4 analytics script')
   if (!title) addError(route, 'missing title')
   if (title.length < 20 || title.length > 80) addWarning(route, `title length is ${title.length}; target range is 20 to 80`)
   if (!description) addError(route, 'missing meta description')
@@ -206,7 +223,7 @@ for (const route of expectedRoutes) {
   if (article?.faqs?.length && !types.has('FAQPage')) addError(route, 'visible FAQs are missing FAQPage schema')
   if (!article?.faqs?.length && types.has('FAQPage')) addError(route, 'FAQPage schema exists without visible FAQ content')
   if (article?.faqs?.length && !/\sid=["']faq["']/i.test(html)) addError(route, 'FAQPage schema exists but the visible FAQ section is missing')
-  for (const source of article?.sources || []) if (!html.includes(`href="${source.url}"`)) addError(route, `academic source is not rendered as a link: ${source.url}`)
+  for (const source of article?.sources || []) if (!html.includes(`href="${source.url}"`)) addError(route, `authoritative source is not rendered as a link: ${source.url}`)
 
   validateImages(html, route)
   validateLinks(html, route, expectedCanonical)
@@ -215,8 +232,9 @@ for (const route of expectedRoutes) {
 
 for (const article of articles) {
   const route = `/insights/${article.slug}/`
-  if ((article.related || []).length < 4) addError(route, `needs at least four descriptive internal links; found ${article.related?.length || 0}`)
-  if ((article.sources || []).length < 3) addError(route, `needs at least three academic sources; found ${article.sources?.length || 0}`)
+  if ((article.related || []).length < 6) addError(route, `needs at least six descriptive internal links; found ${article.related?.length || 0}`)
+  if ((article.sources || []).length < 5) addError(route, `needs at least five authoritative sources; found ${article.sources?.length || 0}`)
+  let officialSourceCount = 0
   for (const source of article.sources || []) {
     let sourceUrl
     try {
@@ -226,14 +244,29 @@ for (const article of articles) {
       continue
     }
     if (sourceUrl.protocol !== 'https:') addError(route, `source must use HTTPS: ${source.url}`)
-    if (!isAcademicHost(sourceUrl.hostname)) addError(route, `external source is not on the academic allowlist: ${source.url}`)
+    if (!isAuthorityHost(sourceUrl.hostname)) addError(route, `external source is not on the authority allowlist: ${source.url}`)
+    if (isOfficialHost(sourceUrl.hostname)) officialSourceCount += 1
     if (!source.title || source.title.length < 12) addError(route, `source has weak link text: ${source.title || '(missing)'}`)
     if (!source.organization || !source.note) addError(route, `source metadata is incomplete: ${source.url}`)
   }
+  if (officialSourceCount < 1) addError(route, 'needs at least one official or standards source')
   for (const [href, label] of article.related || []) {
     if (!href.startsWith('/') || !routeSet.has(normalizeRoute(new URL(href, site.origin).pathname))) addError(route, `related link does not target a generated route: ${href}`)
     if (!label || label.length < 8 || /^(read more|learn more|click here)$/i.test(label.trim())) addError(route, `related link text is not descriptive: ${label || '(missing)'}`)
   }
+}
+
+const requiredServiceInboundLinks = {
+  '/technical-seo/': 6,
+  '/content-schema/': 5,
+  '/web-design/': 3,
+  '/web-design-optimization/': 3,
+  '/business-agents/': 3,
+  '/hubspot-crm-agents/': 3,
+}
+for (const [serviceRoute, requiredCount] of Object.entries(requiredServiceInboundLinks)) {
+  const inboundCount = articles.filter((article) => (article.related || []).some(([href]) => normalizeRoute(new URL(href, site.origin).pathname) === serviceRoute)).length
+  if (inboundCount < requiredCount) errors.push(`${serviceRoute}: needs contextual links from at least ${requiredCount} articles; found ${inboundCount}`)
 }
 
 const sitemap = fileText(path.join(publicDir, 'sitemap.xml'))
@@ -262,6 +295,19 @@ const llms = fileText(path.join(publicDir, 'llms.txt'))
 for (const url of expectedUrls) if (!llms.includes(url)) errors.push(`llms.txt is missing ${url}`)
 if (/themohrmedia\.com/i.test(llms)) errors.push('llms.txt contains the stale domain')
 if (/dillonmohr8777@gmail\.com/i.test(llms) || !llms.includes(site.email)) errors.push('llms.txt does not use the verified IMMOHRTAL business email')
+
+const analytics = fileText(path.join(publicDir, 'analytics.js'))
+for (const requiredFragment of [
+  "window.location.hostname !== 'www.immohrtalmarketing.com'",
+  "const measurementId = 'G-25X07BBG4R'",
+  "analytics_storage: 'denied'",
+  "allow_google_signals: false",
+  "track('booking_started'",
+  "track('email_clicked'",
+  "track('article_engaged'",
+]) {
+  if (!analytics.includes(requiredFragment)) errors.push(`analytics.js is missing governed configuration: ${requiredFragment}`)
+}
 
 const result = {
   ok: errors.length === 0,
