@@ -40,7 +40,7 @@
     "hiring_or_contracting": false,
     "crm_or_account_mutation": false,
     "scheduled_or_external_runtime": false,
-    "truth_note": "This local office runner cannot mutate provider drafts or schedules. The 08:30 Codex heartbeat is active. The separate 08:10 Windows task is disabled and its legacy source is excluded."
+    "truth_note": "The local office runner itself cannot mutate provider drafts or schedules. During the supervised launch run, Google Calendar saved one public IMMOHRTAL appointment schedule under Dillon's verified primary calendar. The 08:30 Codex heartbeat is active. The separate 08:10 Windows task is disabled and its legacy source is excluded."
   },
   "current_evidence": {
     "existing_runtime_kind": "canonical_company_requalification_with_legacy_source_isolation",
@@ -75,10 +75,17 @@
     "batch_06_invalid_source_rows_reviewed": 1,
     "calendar_primary_owner_verified": true,
     "local_booking_configuration_ready": true,
-    "booking_page_saved_or_published": false,
+    "booking_page_saved_or_published": true,
+    "booking_page_title": "IMMOHRTAL Growth Fit Call",
+    "booking_page_organizer_account": "dillonmohr8777@gmail.com",
+    "booking_page_duration_minutes": 30,
+    "booking_page_availability": "weekdays_9am_to_5pm_calendar_conflicts_blocked",
+    "booking_page_meeting_method": "Google Meet",
+    "booking_page_custom_questions": 1,
+    "booking_page_public_url_readback_state": "saved_and_visible_in_calendar_public_link_copy_control_present_url_value_not_yet_captured",
     "approved_business_postal_locator_found": false,
     "zoho_opaque_access_locator_found": false,
-    "activation_human_or_provider_gates_remaining": 6,
+    "activation_human_or_provider_gates_remaining": 5,
     "qualified_today": 0,
     "priority_draft_only_rows": 5,
     "gmail_drafts_created": 5,
@@ -117,7 +124,7 @@
     "active_clients": 0,
     "verified_new_revenue_usd": 0,
     "new_hires_or_purchases": 0,
-    "truth_note": "The old 25-record run used an excluded source and contributes zero active pipeline records. The authorized source has 47 populated rows: 46 company candidates and one rejected non-company sentinel. All 46 companies were researched today; 40 identities are current, one is provisional, five are blocked, zero are qualified, and zero company rows remain unreviewed. Batch 03 cleared eight accounts and Batch 04 cleared seven against current exact account-level duplicate, relationship, routed Gmail, and suppression sources. Batches 05 and 06 passed fresh independent QA after a schema repair; they add research evidence only and do not add governance clears. A separate owner-controlled Drive call list was imported into the private outreach lane with 133 rows and 51 syntactically valid email rows; the 18-row do-not-pitch sheet is loaded separately and no shared employer or client sheet was imported. Eight prospect Gmail drafts remain unsent under compliance hold, including three older HOLD drafts. The attempted business From update read back as personal Gmail with the business Reply-To, so the business sender alias is not verified. Three post-ready social cards and a nine-item content queue are prepared but unpublished, and seven profile links now point to the canonical domain. A 231-keyword list, brand voice system, and Reddit growth package were created. The keyword list was sent only to Dillon and read back with SENT and INBOX labels. One local IMMOHRTAL HubSpot blueprint exists. The connector requires reauthentication, the free portal signup is staged at the business email step, no portal route is verified, and no HubSpot configuration write occurred."
+    "truth_note": "The old 25-record run used an excluded source and contributes zero active pipeline records. The authorized source has 47 populated rows: 46 company candidates and one rejected non-company sentinel. All 46 companies were researched today; 40 identities are current, one is provisional, five are blocked, zero are qualified, and zero company rows remain unreviewed. Batch 03 cleared eight accounts and Batch 04 cleared seven against current exact account-level duplicate, relationship, routed Gmail, and suppression sources. Batches 05 and 06 passed fresh independent QA after a schema repair; they add research evidence only and do not add governance clears. A separate owner-controlled Drive call list was imported into the private outreach lane with 133 rows and 51 syntactically valid email rows; the 18-row do-not-pitch sheet is loaded separately and no shared employer or client sheet was imported. Eight prospect Gmail drafts remain unsent under compliance hold, including three older HOLD drafts. The attempted business From update read back as personal Gmail with the business Reply-To, so the business sender alias is not verified. Three post-ready social cards and a nine-item content queue are prepared but unpublished, and seven profile links now point to the canonical domain. A 231-keyword list, brand voice system, and Reddit growth package were created. The keyword list was sent only to Dillon and read back with SENT and INBOX labels. One public IMMOHRTAL Growth Fit Call schedule is saved on Dillon's primary Google Calendar with 30 minute weekday availability, Google Meet, calendar conflict protection, and one qualification question. The public link control was verified, but the URL value has not yet been captured. One local IMMOHRTAL HubSpot blueprint exists. HubSpot accepted the business email and is waiting at its one-time verification code gate; no portal route is verified and no HubSpot configuration write occurred."
   },
   "orchestrator": {
     "title": "Codex Marketing Chief",
@@ -537,6 +544,7 @@
       "reddit_growth_package_created": 1,
       "keyword_list_owner_email_sent": 1,
       "owner_status_updates_sent": 1,
+      "booking_pages_published": 1,
       "newly_qa_verified_accounts": 0,
       "internal_opportunity_records": 0,
       "workforce_audits_completed": 0,
@@ -564,7 +572,7 @@
     }
   },
   "authority": {
-    "current_exact_authority_used": "Create and read back the five reviewed unsent Gmail drafts requested on 2026-08-25, plus send and read back one exact internal owner status update to Dillon's connected Gmail when he requested updates be sent there. No prospect, client-acquisition, proposal, or booking send authority was granted.",
+    "current_exact_authority_used": "Create and read back the five reviewed unsent Gmail drafts requested on 2026-08-25, send and read back one exact internal owner status update to Dillon's connected Gmail, and create one public IMMOHRTAL appointment schedule after Dillon explicitly approved full business setup and automatic booking. No prospect, client-acquisition, or proposal send authority was used.",
     "internally_allowed": [
       "Read in-scope local files and public evidence",
       "Research and analyze",
