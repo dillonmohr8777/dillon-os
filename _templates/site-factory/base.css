@@ -129,7 +129,7 @@ figcaption{
 
 /* ----- marquee (long-page rhythm) ----- */
 .marquee-strip{
-  overflow:hidden;white-space:nowrap;
+  overflow-x:auto;white-space:nowrap;
   padding:18px 0;
   background:var(--deep);color:var(--on-deep);
   border-block:var(--border) solid color-mix(in srgb,var(--accent2) 55%,transparent);
@@ -137,11 +137,9 @@ figcaption{
 }
 .marquee-track{
   display:inline-flex;gap:3rem;min-width:100%;
-  animation:marquee-scroll 28s linear infinite;
 }
 .marquee-track span{display:inline-flex;align-items:center;gap:3rem}
 .marquee-track span::after{content:"•";opacity:.45}
-@media (prefers-reduced-motion:reduce){.marquee-track{animation:none}}
 
 /* ----- proof / offerings / grids ----- */
 .proof{padding-block:clamp(40px,6vw,72px)}
@@ -261,10 +259,6 @@ figcaption{
 .profile-page [data-hover] img,.profile-page figure img{transition:transform .85s cubic-bezier(.2,.75,.2,1),filter .6s ease}
 .profile-page figure:hover img,.profile-page figure:focus-within img{transform:scale(1.05)}
 
-@keyframes marquee-scroll{
-  from{transform:translateX(0)}
-  to{transform:translateX(-50%)}
-}
 @keyframes glass-orb{
   from{transform:translate(0,0) scale(1)}
   to{transform:translate(-18px,22px) scale(1.08)}

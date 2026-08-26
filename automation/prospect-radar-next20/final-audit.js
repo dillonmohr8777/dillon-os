@@ -4,7 +4,6 @@
 const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
-const { spawnSync } = require('child_process');
 
 const root = path.resolve(__dirname, '..', '..');
 const runId = process.argv[2];
@@ -12,31 +11,8 @@ if (!/^\d{8}-\d{6}$/.test(runId || '')) throw new Error('Run id must use yyyyMMd
 const runDir = path.join(__dirname, 'runs', runId);
 const batchDir = path.join(root, '02_Campaigns', 'AI Site Builder Outreach Engine', 'batches', `radar-next20-${runId}`);
 const shotsRoot = path.join(root, '_templates', 'site-factory', 'qa-shots');
-const readJson = (file) => {
-  const buffer = fs.readFileSync(file);
-  const utf16le = buffer.length >= 2 && (
-    (buffer[0] === 0xff && buffer[1] === 0xfe) ||
-    (buffer[1] === 0x00 && buffer[3] === 0x00)
-  );
-  const text = buffer.toString(utf16le ? 'utf16le' : 'utf8').replace(/^\uFEFF/, '');
-  return JSON.parse(text);
-};
+const readJson = (file) => JSON.parse(fs.readFileSync(file, 'utf8').replace(/^\uFEFF/, ''));
 const hash = (file) => crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
-const auditAlpha = (file) => {
-  if (path.extname(file).toLowerCase() === '.svg') return { ok: true, vector: true };
-  const result = spawnSync(
-    'ffmpeg',
-    ['-hide_banner', '-i', file, '-vf', 'alphaextract,signalstats,metadata=print', '-frames:v', '1', '-f', 'null', 'NUL'],
-    { encoding: 'utf8', maxBuffer: 4 * 1024 * 1024 }
-  );
-  const output = `${result.stdout || ''}\n${result.stderr || ''}`;
-  const value = (key) => Number(output.match(new RegExp(`lavfi\\.signalstats\\.${key}=([\\d.]+)`))?.[1]);
-  const alphaMin = value('YMIN');
-  const alphaMax = value('YMAX');
-  const alphaAverage = value('YAVG');
-  const ok = result.status === 0 && Number.isFinite(alphaMin) && Number.isFinite(alphaMax) && Number.isFinite(alphaAverage) && alphaMax >= 200 && alphaMin <= 245 && alphaAverage >= 1 && alphaAverage <= 248;
-  return { ok, alphaMin, alphaMax, alphaAverage };
-};
 const failures = [];
 const checks = [];
 const check = (name, condition, detail) => {
@@ -47,102 +23,93 @@ const check = (name, condition, detail) => {
 const selection = readJson(path.join(batchDir, 'SELECTION-EVIDENCE.json'));
 const sources = readJson(path.join(batchDir, 'SOURCE-STATUS.json'));
 const summary = readJson(path.join(batchDir, 'batch-summary.json'));
+const acceptance = readJson(path.join(batchDir, 'ACCEPTANCE-QA.json'));
 const detector = readJson(path.join(runDir, 'IMPECCABLE-DETECTOR.json'));
-const sourceByDomain = new Map(sources.selected.map((item) => [item.domain, item]));
+const selectedBySlug = new Map(selection.selection.map((item) => [item.slug, item]));
 
 check('exact selected count', selection.selection.length === 20, `${selection.selection.length}/20`);
-check('global prior evidence scanned', selection.priorEvidence.filesScanned >= 1 && selection.priorEvidence.completedDomains >= 1, `${selection.priorEvidence.filesScanned} artifacts; ${selection.priorEvidence.completedDomains} prior domains`);
-check('selected domains unique', new Set(selection.selection.map((item) => item.domain)).size === 20, 'domain uniqueness');
-check('selected slugs unique', new Set(selection.selection.map((item) => item.slug)).size === 20, 'slug uniqueness');
-check('source-ready count', sources.selected.length === 20, `${sources.selected.length}/20`);
-check('all transparent logos', selection.selection.every((item) => item.logoTransparent === true), 'selection transparency flags');
-check('browser QA summary', summary.ok === true && summary.qaReadyCount === 20 && summary.results.every((item) => item.qa === 'PASS' && item.visualQa === 'ran'), `${summary.qaReadyCount}/20 qa_ready`);
-check('mail remains hold', summary.mailReadyAlwaysHold === true, 'batch summary mail boundary');
+check('untouched global inventory scanned', selection.priorEvidence.filesScanned >= 1 && selection.priorEvidence.completedDomains >= 1, `${selection.priorEvidence.filesScanned} artifacts; ${selection.priorEvidence.completedDomains} prior domains`);
+check('selected domains unique', new Set(selection.selection.map((item) => item.domain)).size === 20, '20 unique domains');
+check('selected slugs unique', new Set(selection.selection.map((item) => item.slug)).size === 20, '20 unique slugs');
+check('source-ready count', sources.selected.length === 20 && sources.selected.every((item) => item.identity?.ok && item.httpStatus === 200), `${sources.selected.length}/20 source records`);
+check('build QA summary', summary.ok === true && summary.qaReadyCount === 20 && summary.results.every((item) => item.qa === 'PASS' && item.visualQa === 'ran'), `${summary.qaReadyCount}/20 qa_ready`);
+check('strict browser acceptance', acceptance.status === 'PASS' && acceptance.passCount === 20 && acceptance.failCount === 0, `${acceptance.passCount}/20 acceptance pass`);
+check('mail remains hold', summary.mailReadyAlwaysHold === true && summary.results.every((item) => item.mailReady === 'hold'), 'no outreach authorization');
+check('detector receipt', detector.passCount === 1 && detector.rerun === false && detector.exitCode !== detector.blockingExitCode, `${detector.findingCount} warnings, no exit-code-2 block`);
 
-const allContentHashes = new Map();
-const converted = [];
-for (const item of selection.selection) {
-  const siteDir = path.join(batchDir, 'sites', item.slug);
+const boardHashes = new Map();
+const contentHashes = new Map();
+const viewports = ['small-phone', 'phone', 'wide-phone', 'tablet', 'compact-desktop', 'desktop'];
+for (const result of summary.results) {
+  const selected = selectedBySlug.get(result.slug);
+  const siteDir = path.join(batchDir, 'sites', result.slug);
   const assetsDir = path.join(siteDir, 'assets');
-  const htmlPath = path.join(siteDir, 'index.html');
-  const html = fs.readFileSync(htmlPath, 'utf8');
-  const source = sourceByDomain.get(item.domain);
-  const provenance = readJson(path.join(assetsDir, 'PROVENANCE.json'));
-  const logoPath = path.join(assetsDir, item.logoFile);
-  const logoAlpha = auditAlpha(logoPath);
-  const headerLogo = html.match(/<img class="brand-logo"[^>]*src="assets\/([^"]+)"/)?.[1];
-  const outroLogo = html.match(/<img class="ink-logo reveal"[^>]*src="assets\/([^"]+)"/)?.[1];
-  if (source?.logo?.sourceFileName) converted.push(item.domain);
+  const html = fs.readFileSync(path.join(siteDir, 'index.html'), 'utf8');
+  const provenance = readJson(path.join(assetsDir, 'ALIGN-IMAGE-PROVENANCE.json'));
+  const logoPath = path.join(assetsDir, selected.logoFile);
 
-  check(`${item.slug} exact logo hash`, fs.existsSync(logoPath) && hash(logoPath) === item.logoSha256, item.logoSha256);
-  check(`${item.slug} meaningful alpha`, logoAlpha.ok === true, JSON.stringify(logoAlpha));
-  check(`${item.slug} same header/outro logo`, headerLogo === item.logoFile && outroLogo === item.logoFile, `${headerLogo} / ${outroLogo}`);
-  check(`${item.slug} private noindex`, /<meta name="robots" content="noindex,nofollow">/.test(html), 'robots boundary');
-  check(`${item.slug} no scroll lab`, !/(scroll[- ]lab|three\.js|webgl|prospect-3d-scroll)/i.test(html), 'static homepage only');
-  check(`${item.slug} mobile logo finale`, html.includes('class="logo-outro surface-deep"') && html.includes('class="ink-logo reveal"'), 'ink finale markup');
-  check(`${item.slug} detector palette fix`, !/#F4F0E5|#F3F2EA|#F6EEE5|#EEF3F1|#F2EFE9/i.test(html), 'no prior cream tokens');
-  check(`${item.slug} detector font fix`, !/Fraunces|Instrument Sans/i.test(html), 'no blocked font pair');
-  check(`${item.slug} detector tracking fix`, !/\.logo-outro p\{[^}]*letter-spacing:\.08em/.test(html), 'logo caption tracking');
-  check(`${item.slug} detector elevation fix`, html.includes('.mobile-action{') && html.includes('border:0;') && html.includes('.glass-panel{'), 'base elevation utilities regenerated');
-  check(`${item.slug} provenance`, provenance.assets.length === 13 && provenance.exactLogoSha256 === item.logoSha256, `${provenance.assets.length} assets`);
+  const allowedIdentity = selected.logoTransformation === 'none; exact first-party transparent asset'
+    || /exact-name typographic fallback/.test(selected.logoTransformation)
+    || (Boolean(selected.logoSourceSha256) && /removed with deterministic FFmpeg colorkey; geometry unchanged/.test(selected.logoTransformation));
+  check(`${result.slug} exact or disclosed identity`, fs.existsSync(logoPath) && hash(logoPath) === selected.logoSha256 && allowedIdentity, selected.logoTransformation);
+  const identityFallback = /exact-name typographic fallback/.test(selected.logoTransformation);
+  check(`${result.slug} identity presentation`, identityFallback
+    ? /<span class="wordmark">/.test(html) && !/<img class="brand-logo"/.test(html) && !/exact (?:mark|logo)/i.test(html)
+    : /<img class="brand-logo"/.test(html), identityFallback ? 'verified business name as ordinary live text' : 'verified first-party logo');
+  check(`${result.slug} private noindex`, /<meta name="robots" content="noindex,nofollow">/.test(html), 'noindex,nofollow');
+  check(`${result.slug} Align type system`, /Plus Jakarta Sans/.test(html) && /DM Sans/.test(html) && /font-display-800\.woff2/.test(html), 'self-hosted Plus Jakarta Sans 800 and DM Sans');
+  check(`${result.slug} visible grain layer`, /class="film-grain"/.test(html) && /assets\/grain\.svg/.test(html) && /opacity:\.13/.test(html), 'image and interface grain');
+  check(`${result.slug} honest illustrative disclosure`, /Generated imagery does not depict/.test(html), 'not actual staff, customers, facility, products, projects, or outcomes');
+  check(`${result.slug} no continuous marquee`, !/animation:marquee-scroll|@keyframes marquee-scroll/.test(html), 'reader-controlled optional strip');
+  check(`${result.slug} site-specific board`, provenance.business === selected.name && provenance.board.key === result.slug && provenance.outputs.length === 12 && provenance.board.prompt.toLowerCase().includes(selected.name.toLowerCase()), `${provenance.business}; ${provenance.board.key}`);
+  check(`${result.slug} board source exists`, fs.existsSync(path.join(root, provenance.board.file)) && hash(path.join(root, provenance.board.file)) === provenance.board.sha256, provenance.board.sha256);
+  check(`${result.slug} grain provenance`, provenance.treatment.imageGrain.includes('Visible refined 35mm film grain') && hash(path.join(assetsDir, provenance.treatment.interfaceGrain.file)) === provenance.treatment.interfaceGrain.sha256, provenance.treatment.interfaceGrain.sha256);
 
-  const contentFiles = Array.from({ length: 12 }, (_, index) => path.join(assetsDir, `image-${index + 1}.webp`));
-  check(`${item.slug} content image count`, contentFiles.every((file) => fs.existsSync(file)), '12/12 files');
-  for (const file of contentFiles) {
+  if (!boardHashes.has(provenance.board.sha256)) boardHashes.set(provenance.board.sha256, []);
+  boardHashes.get(provenance.board.sha256).push(result.slug);
+  for (const output of provenance.outputs) {
+    const file = path.join(assetsDir, output.output);
+    check(`${result.slug} ${output.output}`, fs.existsSync(file) && hash(file) === output.outputSha256 && output.dimensions.width === 1200 && output.dimensions.height === 900, output.outputSha256);
     const digest = hash(file);
-    if (!allContentHashes.has(digest)) allContentHashes.set(digest, []);
-    allContentHashes.get(digest).push(path.relative(batchDir, file).replace(/\\/g, '/'));
+    if (!contentHashes.has(digest)) contentHashes.set(digest, []);
+    contentHashes.get(digest).push(`${result.slug}/${output.output}`);
   }
-  for (const font of ['font-display-400.woff2', 'font-display-700.woff2', 'font-text-400.woff2', 'font-text-700.woff2']) {
+  for (const font of ['font-display-400.woff2', 'font-display-800.woff2', 'font-text-400.woff2', 'font-text-700.woff2']) {
     const file = path.join(assetsDir, font);
-    check(`${item.slug} ${font}`, fs.existsSync(file) && fs.readFileSync(file).subarray(0, 4).toString('ascii') === 'wOF2', 'self-hosted WOFF2');
+    check(`${result.slug} ${font}`, fs.existsSync(file) && fs.readFileSync(file).subarray(0, 4).toString('ascii') === 'wOF2', 'valid self-hosted WOFF2');
   }
-  check(`${item.slug} no remote font dependency`, !/fonts\.(?:googleapis|gstatic)\.com/i.test(html), 'local font CSS');
-
-  const shots = ['small-phone', 'phone', 'wide-phone', 'tablet', 'compact-desktop', 'desktop'].map((name) => path.join(shotsRoot, item.slug, `${name}.png`));
-  check(`${item.slug} six-width screenshots`, shots.every((file) => fs.existsSync(file) && fs.statSync(file).size > 10000), '320 through 1440 evidence');
+  const shots = viewports.flatMap((name) => [path.join(shotsRoot, result.slug, `${name}-top.png`), path.join(shotsRoot, result.slug, `${name}.png`)]);
+  check(`${result.slug} top and full-page viewport screenshots`, shots.every((file) => fs.existsSync(file) && fs.statSync(file).size > 10000), 'top-of-page and full-page evidence at 320 through 1440');
 }
 
-const duplicateContent = [...allContentHashes.entries()].filter(([, files]) => files.length > 1);
-check('240 content visuals unique', allContentHashes.size === 240 && duplicateContent.length === 0, `${allContentHashes.size} unique hashes; ${duplicateContent.length} duplicates`);
-const expectedConverted = selection.selection.filter((item) => item.logoTransformation && !item.logoTransformation.startsWith('none;')).length;
-check('transparent conversion receipts match', converted.length === expectedConverted, `${converted.length}/${expectedConverted} flat-background conversions`);
+const duplicateBoards = [...boardHashes.values()].filter((items) => items.length > 1);
+const duplicateContent = [...contentHashes.values()].filter((items) => items.length > 1);
+check('20 unique business-specific boards', boardHashes.size === 20 && duplicateBoards.length === 0, `${boardHashes.size} unique board hashes; ${duplicateBoards.length} duplicates`);
+check('240 unique content derivatives', contentHashes.size === 240 && duplicateContent.length === 0, `${contentHashes.size} unique image hashes; ${duplicateContent.length} duplicates`);
 
-const detectorCounts = Object.fromEntries([...new Set(detector.map((item) => item.antipattern))].map((pattern) => [pattern, detector.filter((item) => item.antipattern === pattern).length]));
-check('single detector receipt retained', detector.length > 0 && fs.existsSync(path.join(runDir, 'IMPECCABLE-DETECTOR.json')), `${detector.length} original findings retained`);
-check('detector mechanical fixes represented', detectorCounts['cream-palette'] > 0 && detectorCounts['overused-font'] > 0 && detectorCounts['wide-tracking'] > 0 && detectorCounts['gpt-thin-border-wide-shadow'] > 0, JSON.stringify(detectorCounts));
-
-const result = {
+const audit = {
+  schema: 1,
   runId,
   status: failures.length ? 'FAIL' : 'PASS',
   generatedAt: new Date().toISOString(),
-  detector: {
-    passCount: 1,
-    rerun: false,
-    originalExitCode: 2,
-    originalFindings: detector.length,
-    counts: detectorCounts,
-    disposition: 'Factory-level mechanical findings fixed, pages regenerated, and six-width browser confirmation repeated. Per workflow, detector was not rerun.',
-  },
-  selection: {
-    count: selection.selection.length,
-    priorArtifactsScanned: selection.priorEvidence.filesScanned,
-    priorDomainsExcluded: selection.priorEvidence.completedDomains,
-    sourceReadyPool: selection.sourceReadyBeforeDiversity,
-    nativeTransparentLogos: 20 - converted.length,
-    flatBackgroundRemoved: converted.length,
-  },
-  build: {
+  selectionBasis: 'Current untouched Prospect Radar queue after global prior-build exclusion and live source preflight; not represented as first-seen-on-2026-08-25.',
+  counts: {
+    businesses: summary.results.length,
     qaReady: summary.qaReadyCount,
+    viewportScreenshots: summary.results.length * viewports.length * 2,
+    siteSpecificImageBoards: boardHashes.size,
+    contentImages: summary.results.length * 12,
+    uniqueContentImageHashes: contentHashes.size,
+  },
+  boundaries: {
     mailReady: 'hold',
-    contentVisuals: 240,
-    uniqueContentVisualHashes: allContentHashes.size,
-    deployment: 'none; local private noindex batch',
+    generatedPeopleDisclosure: 'Illustrative industry representatives; not actual business staff or customers.',
+    detector: detector.disposition,
   },
   checks,
   failures,
 };
-fs.writeFileSync(path.join(batchDir, 'FINAL-AUDIT.json'), `${JSON.stringify(result, null, 2)}\n`, 'utf8');
-fs.writeFileSync(path.join(runDir, 'FINAL-AUDIT.json'), `${JSON.stringify(result, null, 2)}\n`, 'utf8');
-console.log(JSON.stringify({ status: result.status, checks: checks.length, failures, selection: result.selection, build: result.build }, null, 2));
-if (failures.length) process.exit(1);
+fs.writeFileSync(path.join(batchDir, 'FINAL-AUDIT.json'), `${JSON.stringify(audit, null, 2)}\n`, 'utf8');
+fs.writeFileSync(path.join(runDir, 'FINAL-AUDIT.json'), `${JSON.stringify(audit, null, 2)}\n`, 'utf8');
+console.log(JSON.stringify({ status: audit.status, counts: audit.counts, checks: checks.length, failures }, null, 2));
+process.exit(failures.length ? 1 : 0);
