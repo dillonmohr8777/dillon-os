@@ -200,7 +200,7 @@ const noGlBrowser = await chromium.launch({ headless: true, args: ['--disable-we
 const noGlContext = await noGlBrowser.newContext({ viewport: { width: 390, height: 844 } })
 const noGlPage = await noGlContext.newPage()
 await noGlPage.goto(baseUrl.toString(), { waitUntil: 'domcontentloaded' })
-await noGlPage.waitForTimeout(400)
+await noGlPage.waitForTimeout(1_800)
 const noWebGlFallback = await noGlPage.locator('.client-particle-sequence--reduced').count() > 0
 await noGlContext.close()
 await noGlBrowser.close()
