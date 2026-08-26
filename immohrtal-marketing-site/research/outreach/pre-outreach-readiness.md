@@ -1,26 +1,26 @@
 # Pre-outreach readiness gate
 
-Current status: **BLOCKED FOR USE UNTIL LIVE PROOF IS RECORDED**
+Current status: **WEBSITE AND BOOKING VERIFIED; OUTREACH BLOCKED ON SENDER, POSTAL, SUPPRESSION, AND EXACT APPROVAL GATES**
 
 This checklist is intentionally stricter than a successful local build. Every item that affects a recipient must be checked against the public website and the exact sending setup immediately before outreach begins.
 
 ## A. Brand and domain transfer
 
-- [ ] `https://www.immohrtalmarketing.com` resolves publicly over valid HTTPS and the apex redirects there in one hop.
-- [ ] The homepage, metadata, organization schema, logo, visible footer, and contact route say **IMMOHRTAL Marketing Solutions**.
-- [ ] Canonical URLs, Open Graph URLs, sitemap URLs, feed URLs, `robots.txt`, `llms.txt`, structured-data identifiers, and public asset URLs use `https://www.immohrtalmarketing.com`.
-- [ ] No public navigation, title, description, page body, form response, downloadable asset, or social preview presents the former brand as the current business.
+- [x] `https://www.immohrtalmarketing.com` resolves publicly over valid HTTPS and the apex redirects there in one hop.
+- [x] The homepage, metadata, organization schema, logo, visible footer, and contact route say **IMMOHRTAL Marketing Solutions**.
+- [x] Canonical URLs, Open Graph URLs, sitemap URLs, feed URLs, `robots.txt`, `llms.txt`, structured-data identifiers, and public asset URLs use `https://www.immohrtalmarketing.com`.
+- [x] No public navigation, title, description, page body, form response, downloadable asset, or social preview presents the former brand as the current business.
 - [ ] Any intended redirect from a former public origin is verified one hop at a time and lands on the equivalent IMMOHRTAL route without loops or chain damage.
-- [ ] The exact Vercel project and custom-domain mapping are recorded so a later deploy cannot update the wrong property. The unrelated Netlify artist site is excluded explicitly.
+- [x] The exact Vercel project and custom-domain mapping are recorded so a later deploy cannot update the wrong property. The unrelated Netlify artist site is excluded explicitly.
 
 Evidence record:
 
 | Check | URL or system | Checked UTC | Result | Evidence locator | Owner |
 |---|---|---|---|---|---|
-| Canonical domain and TLS | Pending | Pending | Pending | Pending | Pending |
-| Brand replacement | Pending | Pending | Pending | Pending | Pending |
+| Canonical domain and TLS | `https://www.immohrtalmarketing.com/` | 2026-08-26T01:09:00Z | Passed, HTTP 200, Vercel response | Vercel header and live response readback | Codex Marketing Chief |
+| Brand replacement | Production homepage and 23 generated routes | 2026-08-26T01:09:00Z | Passed local and live release QA | Commit `05133933`; Vercel production deployment | Codex Marketing Chief |
 | Redirect behavior | Pending | Pending | Pending | Pending | Pending |
-| Hosting target mapping | Pending | Pending | Pending | Pending | Pending |
+| Hosting target mapping | Vercel project `mohr-media-site` | 2026-08-26T01:10:00Z | Production deployment succeeded | GitHub deployment `6095088235` | Codex Marketing Chief |
 
 ## B. Page and link proof
 
@@ -88,9 +88,9 @@ This is operational guidance, not legal advice.
 
 | Field | Current value |
 |---|---|
-| Website status | Requires live verification |
-| Outreach copy | Staged drafts |
-| Prospect list | Not created |
+| Website status | Live verified on Vercel; booking CTA release deployed |
+| Outreach copy | Five reviewed Gmail drafts plus 50 nationwide review drafts in preparation; all unsent |
+| Prospect list | 137 unique public business emails across all 50 states plus DC; 0 send-authorized |
 | Sending domain | Not verified in this artifact |
 | Mailbox authentication | Not verified in this artifact |
 | Legal footer and address | Not verified in this artifact |

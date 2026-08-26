@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0.0",
+  "as_of": "2026-08-25",
+  "campaign": "IMMOHRTAL nationwide owner outreach review batch",
+  "contains_recipient_addresses": false,
+  "messages_prepared": 50,
+  "messages_sent": 0,
+  "unique_companies": 50,
+  "unique_domains": 50,
+  "unique_recipient_addresses": 50,
+  "jurisdictions_represented": 50,
+  "review_state": "DRAFT_ONLY_DO_NOT_SEND",
+  "validation": {
+    "state": "passed",
+    "validator": "automation/immohrtal-agency/ops/validate-outreach-review-batches.mjs",
+    "errors": 0,
+    "body_word_range": {
+      "minimum": 88,
+      "maximum": 99
+    },
+    "checks": [
+      "official public source and current observation present",
+      "unique recipient and company domain",
+      "60 to 110 words",
+      "one IMMOHRTAL service link maximum",
+      "one low-friction question",
+      "exact opt-out sentence",
+      "no unresolved placeholders",
+      "no fake reply or forward subject",
+      "no generic assistant language",
+      "no en dash or em dash",
+      "draft-only state",
+      "sender postal suppression and exact approval blocker"
+    ]
+  },
+  "private_batches": [
+    {
+      "file": "immohrtal-marketing-site/research/outreach/DAY-1-NATIONAL-REVIEW-BATCH-A.csv",
+      "sha256": "5a393a4d7602ba10be440497d607cd01dc7a46add5505f21fceb876fa9fc8fe1",
+      "messages": 25,
+      "jurisdictions": 25
+    },
+    {
+      "file": "immohrtal-marketing-site/research/outreach/DAY-1-NATIONAL-REVIEW-BATCH-B.csv",
+      "sha256": "897dd4a96aa3e9bf4f165fa96ce0585359e24fba80036d496b1c3a75bf6eedac",
+      "messages": 25,
+      "jurisdictions": 25
+    }
+  ],
+  "release_gates": [
+    "verify a dedicated IMMOHRTAL outbound From identity",
+    "verify SPF DKIM and DMARC for the exact sender",
+    "record the approved business postal address in a secure locator",
+    "run contact-level suppression relationship and conflict checks",
+    "verify bounce reply and opt-out handling",
+    "approve the exact recipient subject body and footer for each send"
+  ],
+  "truth": "This manifest proves that 50 personalized review messages were prepared and passed local validation. It does not authorize sending, CRM import, LinkedIn contact, follow-up scheduling, or any other external action."
+}
