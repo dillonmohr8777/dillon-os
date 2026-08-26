@@ -1,11 +1,11 @@
 {
-  "url": "http://127.0.0.1:51373/",
-  "capturedAt": "2026-08-26T02:26:13.700Z",
+  "url": "http://127.0.0.1:51302/",
+  "capturedAt": "2026-08-26T04:34:20.402Z",
   "opening": {
     "metrics": {
       "title": "With Not For — AI Adoption for Business",
       "noindex": "noindex, nofollow, noarchive",
-      "scrollHeight": 20876,
+      "scrollHeight": 26129,
       "scrollWidth": 390,
       "clientWidth": 390,
       "openingComplete": "true",
@@ -25,37 +25,37 @@
     {
       "name": "phone-320",
       "metrics": {
-        "scrollHeight": 8847,
+        "scrollHeight": 10509,
         "scrollWidth": 320,
         "clientWidth": 320,
         "heroRect": {
-          "x": 16,
-          "y": 146.28125,
-          "width": 288,
-          "height": 94.078125,
-          "top": 146.28125,
-          "right": 304,
-          "bottom": 240.359375,
-          "left": 16
+          "x": 9.6015625,
+          "y": 122.484375,
+          "width": 300.796875,
+          "height": 99.8125,
+          "top": 122.484375,
+          "right": 310.3984375,
+          "bottom": 222.296875,
+          "left": 9.6015625
         },
         "robotRect": {
-          "x": 74.390625,
-          "y": 302.765625,
-          "width": 184,
-          "height": 184,
-          "top": 302.765625,
-          "right": 258.390625,
-          "bottom": 486.765625,
-          "left": 74.390625
+          "x": 64,
+          "y": 291.28125,
+          "width": 192,
+          "height": 192,
+          "top": 291.28125,
+          "right": 256,
+          "bottom": 483.28125,
+          "left": 64
         },
         "detailRect": {
           "x": 12.8046875,
-          "y": 495.453125,
+          "y": 600.703125,
           "width": 294.390625,
-          "height": 215.640625,
-          "top": 495.453125,
+          "height": 210.59375,
+          "top": 600.703125,
           "right": 307.1953125,
-          "bottom": 711.09375,
+          "bottom": 811.296875,
           "left": 12.8046875
         }
       },
@@ -64,28 +64,28 @@
     {
       "name": "tablet",
       "metrics": {
-        "scrollHeight": 11679,
+        "scrollHeight": 13867,
         "scrollWidth": 768,
         "clientWidth": 768,
         "heroRect": {
           "x": 38.40625,
-          "y": 165.4375,
+          "y": 150.078125,
           "width": 691.1875,
-          "height": 135.46875,
-          "top": 165.4375,
+          "height": 96.71875,
+          "top": 150.078125,
           "right": 729.59375,
-          "bottom": 300.90625,
+          "bottom": 246.796875,
           "left": 38.40625
         },
         "robotRect": {
-          "x": 271.671875,
-          "y": 389.1875,
-          "width": 240,
-          "height": 240,
-          "top": 389.1875,
-          "right": 511.671875,
-          "bottom": 629.1875,
-          "left": 271.671875
+          "x": 256,
+          "y": 343.1875,
+          "width": 256,
+          "height": 256,
+          "top": 343.1875,
+          "right": 512,
+          "bottom": 599.1875,
+          "left": 256
         },
         "detailRect": {
           "x": 32,
@@ -103,37 +103,37 @@
     {
       "name": "desktop",
       "metrics": {
-        "scrollHeight": 10237,
+        "scrollHeight": 12162,
         "scrollWidth": 1440,
         "clientWidth": 1440,
         "heroRect": {
           "x": 200,
-          "y": 167,
+          "y": 144.5,
           "width": 1040,
-          "height": 148.9375,
-          "top": 167,
+          "height": 159.578125,
+          "top": 144.5,
           "right": 1240,
-          "bottom": 315.9375,
+          "bottom": 304.078125,
           "left": 200
         },
         "robotRect": {
-          "x": 561.59375,
-          "y": 334.828125,
-          "width": 345.59375,
-          "height": 345.59375,
-          "top": 334.828125,
-          "right": 907.1875,
-          "bottom": 680.421875,
-          "left": 561.59375
+          "x": 554.40625,
+          "y": 308,
+          "width": 331.1875,
+          "height": 331.1875,
+          "top": 308,
+          "right": 885.59375,
+          "bottom": 639.1875,
+          "left": 554.40625
         },
         "detailRect": {
           "x": 368,
-          "y": 692.6875,
+          "y": 696.6875,
           "width": 704,
           "height": 171.3125,
-          "top": 692.6875,
+          "top": 696.6875,
           "right": 1072,
-          "bottom": 864,
+          "bottom": 868,
           "left": 368
         }
       },
@@ -145,6 +145,15 @@
       "selected": "tab-today",
       "visiblePanel": "briefing-today"
     },
+    "clipping": [],
+    "errors": []
+  },
+  "mobileSections": {
+    "tabs": {
+      "selected": "tab-today",
+      "visiblePanel": "briefing-today"
+    },
+    "clipping": [],
     "errors": []
   },
   "pass": true

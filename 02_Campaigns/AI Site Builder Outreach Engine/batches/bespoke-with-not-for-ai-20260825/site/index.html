@@ -10,10 +10,37 @@
     <title>With Not For — AI Adoption for Business</title>
     <link rel="icon" href="assets/wnf-logo.png">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="overdrive.css">
     <script>document.documentElement.classList.add('has-js');</script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <svg class="brand-icon-defs" aria-hidden="true" focusable="false">
+      <defs>
+        <symbol id="wnf-icon-workflow" viewBox="0 0 48 48">
+          <path d="M8 11h10c4 0 6 2 6 6v14c0 4 2 6 6 6h10"/>
+          <path d="M24 24h12c3 0 5-2 5-5v-2"/>
+          <circle cx="8" cy="11" r="3"/><circle cx="40" cy="37" r="3"/><circle cx="41" cy="13" r="3"/><circle cx="24" cy="24" r="3"/>
+        </symbol>
+        <symbol id="wnf-icon-system" viewBox="0 0 48 48">
+          <path d="M8 15V8h13v8h7V8h12v13h-8v7h8v12H27v-8h-7v8H8V27h8v-7H8z"/>
+          <path d="M20 20h8v8h-8z"/>
+        </symbol>
+        <symbol id="wnf-icon-team" viewBox="0 0 48 48">
+          <circle cx="24" cy="15" r="6"/><circle cx="10.5" cy="20" r="4"/><circle cx="37.5" cy="20" r="4"/>
+          <path d="M13 39c1-8 5-12 11-12s10 4 11 12M3.5 39c.8-6 3.2-9 7-9 2.3 0 4.2 1 5.5 3M44.5 39c-.8-6-3.2-9-7-9-2.3 0-4.2 1-5.5 3"/>
+        </symbol>
+        <symbol id="wnf-icon-policy" viewBox="0 0 48 48">
+          <path d="M24 5 39 11v11c0 9.5-5.1 16.3-15 21-9.9-4.7-15-11.5-15-21V11z"/>
+          <path d="m17 24 5 5 10-11"/><circle cx="17" cy="14" r="2"/><path d="M17 16v4"/>
+        </symbol>
+        <symbol id="wnf-icon-adoption" viewBox="0 0 48 48">
+          <circle cx="8" cy="34" r="4"/><circle cx="24" cy="23" r="4"/><circle cx="40" cy="10" r="4"/>
+          <path d="m11 31 10-6m6-5 10-8M31 10h9v9"/>
+        </symbol>
+      </defs>
+    </svg>
 
     <header class="site-header" data-site-header>
       <div class="site-header__inner">
@@ -58,11 +85,22 @@
         <div class="opening__stage">
           <div class="intro-mark intro-mark--plain" aria-hidden="true">WNF.AI</div>
 
+          <div class="intro-mark intro-mark--wire" aria-hidden="true">
+            <span>WNF.AI</span>
+            <i class="wire-node wire-node--one"></i><i class="wire-node wire-node--two"></i><i class="wire-node wire-node--three"></i>
+          </div>
+
+          <div class="intro-mark intro-mark--glass" aria-hidden="true">
+            <span class="glass-glyph">W</span><span class="glass-glyph">N</span><span class="glass-glyph">F</span><span class="glass-glyph glass-glyph--dot">.</span><span class="glass-glyph">A</span><span class="glass-glyph">I</span>
+          </div>
+
           <div class="intro-mark intro-mark--material" aria-hidden="true">
             <span class="glyph glyph--ink">W</span><span class="glyph glyph--robot">N</span><span class="glyph glyph--green">F</span><span class="glyph glyph--dot">.</span><span class="glyph glyph--mint">A</span><span class="glyph glyph--ink">I</span>
           </div>
 
-          <div class="intro-mark intro-mark--drop" aria-hidden="true">WNF.AI</div>
+          <div class="intro-mark intro-mark--drop" aria-hidden="true">
+            <span>W</span><span>N</span><span>F</span><span>.</span><span>A</span><span>I</span>
+          </div>
           <div class="product-mark" aria-hidden="true">WNF.AI</div>
 
           <div class="hero-message">
@@ -70,6 +108,7 @@
           </div>
 
           <div class="hero-product" data-product-stage>
+            <div class="hero-aura" aria-hidden="true"></div>
             <picture class="hero-hand">
               <source srcset="assets/hand-palm.webp" type="image/webp">
               <img src="assets/hand-palm.png" width="1024" height="1536" alt="" fetchpriority="high">
@@ -87,6 +126,12 @@
                 </picture>
               </span>
             </button>
+
+            <div class="hero-microcards" aria-hidden="true">
+              <span class="hero-microcard hero-microcard--strategy"><svg class="brand-icon"><use href="#wnf-icon-workflow"></use></svg>Strategy</span>
+              <span class="hero-microcard hero-microcard--systems"><svg class="brand-icon"><use href="#wnf-icon-system"></use></svg>Builds</span>
+              <span class="hero-microcard hero-microcard--training"><svg class="brand-icon"><use href="#wnf-icon-team"></use></svg>Training</span>
+            </div>
           </div>
 
           <div class="hero-detail">
@@ -135,6 +180,7 @@
             <div class="highlight-track" data-highlight-track>
               <article class="highlight-panel highlight-panel--budget">
                 <div class="highlight-panel__copy">
+                  <span class="highlight-panel__icon" aria-hidden="true"><svg class="brand-icon"><use href="#wnf-icon-workflow"></use></svg></span>
                   <h3>Stop wasting the budget.</h3>
                   <p>Most AI subscriptions go untouched. Every dollar should translate into time saved and work done faster, for your specific business, not a generic use case.</p>
                 </div>
@@ -150,6 +196,7 @@
 
               <article class="highlight-panel highlight-panel--adoption">
                 <div class="highlight-panel__copy">
+                  <span class="highlight-panel__icon" aria-hidden="true"><svg class="brand-icon"><use href="#wnf-icon-adoption"></use></svg></span>
                   <h3>Get real adoption.</h3>
                   <p>Technology doesn't change behavior on its own. We build the workflows, train the team, and stay involved until AI is genuinely part of how the business runs.</p>
                 </div>
@@ -163,6 +210,7 @@
 
               <article class="highlight-panel highlight-panel--guardrails">
                 <div class="highlight-panel__copy">
+                  <span class="highlight-panel__icon" aria-hidden="true"><svg class="brand-icon"><use href="#wnf-icon-policy"></use></svg></span>
                   <h3>Done right from day one.</h3>
                   <p>Every engagement ships with clear policies, proper guardrails, and a team that knows how to use the tools, so you capture the upside without the risk.</p>
                 </div>
@@ -179,6 +227,62 @@
               </article>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section class="robot-theatre" aria-labelledby="robot-theatre-title" data-robot-theatre data-phase="0">
+        <div class="robot-theatre__sticky">
+          <div class="robot-theatre__copy robot-theatre__copy--design">
+            <p class="section-kicker">Built around your business.</p>
+            <h2 id="robot-theatre-title">Looks simple.<br><strong>Works deeply.</strong></h2>
+            <p>Signing up for tools isn't a strategy. Real results come from understanding your workflows, training your people, and building systems around how your business actually operates.</p>
+          </div>
+
+          <div class="robot-theatre__copy robot-theatre__copy--capabilities">
+            <p class="section-kicker">End to end.</p>
+            <h3>Strategy. Builds.<br><strong>Training.</strong></h3>
+            <p>AI adoption for businesses that are serious about it. Strategy, builds, and training. End to end.</p>
+          </div>
+
+          <div class="robot-theatre__stage" data-character-stage>
+            <div class="dimension-guide dimension-guide--horizontal" aria-hidden="true"><span>Your workflow</span></div>
+            <div class="dimension-guide dimension-guide--vertical" aria-hidden="true"><span>Your team</span></div>
+            <div class="robot-theatre__shadow" aria-hidden="true"></div>
+
+            <button class="character-control robot-theatre__robot" type="button" aria-label="Interact with the With Not For robot" data-character-control>
+              <span class="character-shell">
+                <picture class="character-frame character-frame--open">
+                  <source srcset="assets/robot-open.webp" type="image/webp">
+                  <img src="assets/robot-open.png" width="1254" height="1254" alt="">
+                </picture>
+                <picture class="character-frame character-frame--blink" aria-hidden="true">
+                  <source srcset="assets/robot-blink.webp" type="image/webp">
+                  <img src="assets/robot-blink.png" width="1254" height="1254" alt="">
+                </picture>
+              </span>
+            </button>
+
+            <div class="capability-orbit">
+              <article class="capability-card capability-card--workflow">
+                <svg class="brand-icon" aria-hidden="true"><use href="#wnf-icon-workflow"></use></svg>
+                <div><strong>Strategy</strong><span>Workflow assessment</span></div>
+              </article>
+              <article class="capability-card capability-card--systems">
+                <svg class="brand-icon" aria-hidden="true"><use href="#wnf-icon-system"></use></svg>
+                <div><strong>Systems</strong><span>Custom workflows</span></div>
+              </article>
+              <article class="capability-card capability-card--training">
+                <svg class="brand-icon" aria-hidden="true"><use href="#wnf-icon-team"></use></svg>
+                <div><strong>Training</strong><span>Hands-on sessions</span></div>
+              </article>
+              <article class="capability-card capability-card--policy">
+                <svg class="brand-icon" aria-hidden="true"><use href="#wnf-icon-policy"></use></svg>
+                <div><strong>Policy</strong><span>Clear guardrails</span></div>
+              </article>
+            </div>
+          </div>
+
+          <p class="robot-theatre__hint" aria-hidden="true">Move your pointer. Claude notices.</p>
         </div>
       </section>
 
@@ -229,6 +333,7 @@
         <article class="service-chapter service-chapter--rollout">
           <div class="service-chapter__sticky">
             <div class="service-chapter__copy">
+              <span class="service-icon" aria-hidden="true"><svg class="brand-icon"><use href="#wnf-icon-adoption"></use></svg></span>
               <h3>AI Adoption &amp; Rollout</h3>
               <p>Workflow assessment, tool selection, and a managed rollout that ensures your team actually adopts, not just has access.</p>
               <a href="https://withnotfor.ai/services">View the service <span aria-hidden="true">→</span></a>
@@ -242,6 +347,7 @@
         <article class="service-chapter service-chapter--systems">
           <div class="service-chapter__sticky">
             <div class="service-chapter__copy">
+              <span class="service-icon" aria-hidden="true"><svg class="brand-icon"><use href="#wnf-icon-system"></use></svg></span>
               <h3>Custom AI Systems</h3>
               <p>When off-the-shelf tools don't fit, we build something that does: custom workflows, internal tools, and AI-powered processes from scratch.</p>
               <a href="https://withnotfor.ai/services">View the service <span aria-hidden="true">→</span></a>
@@ -262,6 +368,7 @@
         <article class="service-chapter service-chapter--training">
           <div class="service-chapter__sticky">
             <div class="service-chapter__copy">
+              <span class="service-icon" aria-hidden="true"><svg class="brand-icon"><use href="#wnf-icon-team"></use></svg></span>
               <h3>Training &amp; Policy</h3>
               <p>Hands-on sessions for every level of your team, plus AI usage policies that protect the business while enabling the upside.</p>
               <a href="https://withnotfor.ai/services">View the service <span aria-hidden="true">→</span></a>
@@ -286,7 +393,7 @@
           <div class="briefing-shell">
             <div class="briefing-shell__topbar">
               <div>
-                <span class="briefing-logo" aria-hidden="true">W</span>
+                <span class="briefing-logo" aria-hidden="true"><svg class="brand-icon"><use href="#wnf-icon-workflow"></use></svg></span>
                 <div>
                   <strong>Morning Briefing</strong>
                   <span>Tuesday · 7:00 am · delivered automatically</span>
@@ -353,17 +460,27 @@
         </div>
       </section>
 
-      <section class="human-control" aria-labelledby="human-control-title">
+      <section class="human-control" aria-labelledby="human-control-title" data-human-control>
         <div class="human-control__sticky">
-          <div class="human-control__visual" aria-hidden="true">
+          <div class="human-control__visual" data-character-stage>
+            <div class="human-control__glow" aria-hidden="true"></div>
             <picture class="human-control__hand">
               <source srcset="assets/hand-palm.webp" type="image/webp">
               <img src="assets/hand-palm.png" width="1024" height="1536" alt="" loading="lazy">
             </picture>
-            <picture class="human-control__robot">
-              <source srcset="assets/robot-open.webp" type="image/webp">
-              <img src="assets/robot-open.png" width="1254" height="1254" alt="" loading="lazy">
-            </picture>
+            <button class="character-control human-control__robot" type="button" aria-label="Make the With Not For robot respond" data-character-control>
+              <span class="character-shell">
+                <picture class="character-frame character-frame--open">
+                  <source srcset="assets/robot-open.webp" type="image/webp">
+                  <img src="assets/robot-open.png" width="1254" height="1254" alt="" loading="lazy">
+                </picture>
+                <picture class="character-frame character-frame--blink" aria-hidden="true">
+                  <source srcset="assets/robot-blink.webp" type="image/webp">
+                  <img src="assets/robot-blink.png" width="1254" height="1254" alt="" loading="lazy">
+                </picture>
+              </span>
+            </button>
+            <span class="human-control__badge" aria-hidden="true"><svg class="brand-icon"><use href="#wnf-icon-team"></use></svg>Human-led</span>
           </div>
           <div class="human-control__copy">
             <h2>No agency layers.<br>No junior work.</h2>
@@ -385,21 +502,37 @@
     </main>
 
     <footer class="site-footer">
-      <div class="site-footer__brand">
-        <img src="assets/wnf-logo.png" width="467" height="143" alt="With Not For AI Consulting" loading="lazy">
-        <p>AI adoption for businesses that are serious about it. Strategy, builds, and training. End to end.</p>
+      <section class="particle-finale" aria-labelledby="particle-finale-title" data-particle-finale>
+        <canvas class="particle-finale__canvas" data-particle-logo aria-hidden="true"></canvas>
+        <div class="particle-finale__aura" aria-hidden="true"></div>
+        <div class="particle-finale__content">
+          <p class="section-kicker">Built with you. Never instead of you.</p>
+          <h2 id="particle-finale-title" class="sr-only">With Not For AI Consulting</h2>
+          <img class="particle-finale__logo" data-particle-fallback src="assets/wnf-logo.png" width="467" height="143" alt="With Not For AI Consulting" loading="lazy">
+          <p>AI adoption for businesses that are serious about it. Strategy, builds, and training. End to end.</p>
+        </div>
+        <div class="particle-finale__signal" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+      </section>
+
+      <div class="site-footer__meta">
+        <div class="site-footer__brand">
+          <img src="assets/wnf-logo.png" width="467" height="143" alt="" loading="lazy">
+          <p>AI that works with your team, not for them.</p>
+        </div>
+        <nav aria-label="Footer navigation">
+          <a href="https://withnotfor.ai/about">About</a>
+          <a href="https://withnotfor.ai/services">Services</a>
+          <a href="https://withnotfor.ai/use-cases">Marketplace</a>
+          <a href="https://withnotfor.ai/contact">Contact</a>
+          <a href="https://withnotfor.ai/privacy">Privacy</a>
+          <a href="https://withnotfor.ai/terms">Terms</a>
+        </nav>
+        <p class="site-footer__legal">Private homepage concept · Not indexed</p>
       </div>
-      <nav aria-label="Footer navigation">
-        <a href="https://withnotfor.ai/about">About</a>
-        <a href="https://withnotfor.ai/services">Services</a>
-        <a href="https://withnotfor.ai/use-cases">Marketplace</a>
-        <a href="https://withnotfor.ai/contact">Contact</a>
-        <a href="https://withnotfor.ai/privacy">Privacy</a>
-        <a href="https://withnotfor.ai/terms">Terms</a>
-      </nav>
-      <p class="site-footer__legal">Private homepage concept · Not indexed</p>
     </footer>
 
     <script src="app.js" defer></script>
+    <script src="overdrive.js" defer></script>
+    <script src="particle-logo.js" defer></script>
   </body>
 </html>

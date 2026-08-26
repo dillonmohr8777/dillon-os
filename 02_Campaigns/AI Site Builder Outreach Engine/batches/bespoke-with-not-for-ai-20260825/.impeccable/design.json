@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-08-26T02:22:19.989Z",
+  "generatedAt": "2026-08-26T04:32:13.5423292Z",
   "title": "Design System: With Not For AI — Human-Controlled Product Reveal",
   "extensions": {
     "colorMeta": {
@@ -8,46 +8,55 @@
         "role": "neutral",
         "displayName": "Launch Paper",
         "canonical": "#FAF9F8",
-        "tonalRamp": [
-          "#191918",
-          "#353432",
-          "#555451",
-          "#777572",
-          "#9A9895",
-          "#BDBBB8",
-          "#DDDCD9",
-          "#FAF9F8"
-        ]
+        "tonalRamp": ["#191918", "#353432", "#555451", "#777572", "#9A9895", "#BDBBB8", "#DDDCD9", "#FAF9F8"]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Operational Ink",
+        "canonical": "#0B1810",
+        "tonalRamp": ["#07100B", "#0B1810", "#263129", "#4B554E", "#727A74", "#9DA39F", "#CDD0CE", "#F4F5F4"]
+      },
+      "forest": {
+        "role": "secondary",
+        "displayName": "Deep Canopy",
+        "canonical": "#163F2E",
+        "tonalRamp": ["#081B13", "#0D2C20", "#163F2E", "#2D5B48", "#567B6B", "#83A092", "#B5C8BE", "#E7F0EB"]
       },
       "green": {
         "role": "primary",
         "displayName": "Working Forest",
         "canonical": "#0F6E56",
-        "tonalRamp": [
-          "#08241D",
-          "#0A382C",
-          "#0C4B3B",
-          "#0E604B",
-          "#0F755B",
-          "#4C9A84",
-          "#91C2B3",
-          "#D8EEE7"
-        ]
+        "tonalRamp": ["#08241D", "#0A382C", "#0C4B3B", "#0E604B", "#0F755B", "#4C9A84", "#91C2B3", "#D8EEE7"]
+      },
+      "mint": {
+        "role": "secondary",
+        "displayName": "Training Mint",
+        "canonical": "#C7E8D8",
+        "tonalRamp": ["#10251C", "#1D3D30", "#315B49", "#4E7B65", "#739E88", "#9FC4B1", "#C7E8D8", "#F0FAF5"]
+      },
+      "lime": {
+        "role": "accent",
+        "displayName": "Signal Lime",
+        "canonical": "#67A92E",
+        "tonalRamp": ["#17270B", "#294313", "#3D611C", "#538125", "#67A92E", "#8FC35F", "#BADB96", "#EAF3DC"]
+      },
+      "signal-green": {
+        "role": "accent",
+        "displayName": "Live Signal",
+        "canonical": "#9FE870",
+        "tonalRamp": ["#1A2B11", "#2D491D", "#456D2D", "#619541", "#80BE57", "#9FE870", "#C5F1A9", "#EEFAE5"]
+      },
+      "theatre-teal": {
+        "role": "accent",
+        "displayName": "Theatre Teal",
+        "canonical": "#13846D",
+        "tonalRamp": ["#06261F", "#093C31", "#0D5546", "#10705C", "#13846D", "#50A892", "#93CDBE", "#DDF2EC"]
       },
       "robot": {
         "role": "secondary",
         "displayName": "Robot Orange",
         "canonical": "#C65A0A",
-        "tonalRamp": [
-          "#321B0C",
-          "#54280A",
-          "#773508",
-          "#9B4508",
-          "#C65A0A",
-          "#DA8542",
-          "#EAB783",
-          "#F8E4CF"
-        ]
+        "tonalRamp": ["#321B0C", "#54280A", "#773508", "#9B4508", "#C65A0A", "#DA8542", "#EAB783", "#F8E4CF"]
       }
     },
     "typographyMeta": {
@@ -55,48 +64,35 @@
         "displayName": "Launch Display",
         "purpose": "Single-idea viewports, service chapters, and product-object scale."
       },
+      "headline": {
+        "displayName": "Product Headline",
+        "purpose": "Section claims that remain completely inside the safe viewport."
+      },
       "body": {
         "displayName": "Direct Body",
-        "purpose": "Source-backed explanations and UI copy."
+        "purpose": "Source-backed explanations and interface copy."
+      },
+      "label": {
+        "displayName": "Control Label",
+        "purpose": "Navigation, tabs, measurement guides, and compact state labels."
       }
     },
     "shadows": [
-      {
-        "name": "briefing-ambient",
-        "value": "0 24px 80px rgba(11, 24, 16, 0.12)",
-        "purpose": "The Morning Briefing interface only."
-      },
-      {
-        "name": "interactive-lift",
-        "value": "0 4px 24px rgba(11, 24, 16, 0.08)",
-        "purpose": "Small controls responding above the page."
-      }
+      { "name": "briefing-ambient", "value": "0 24px 80px rgba(11, 24, 16, 0.12)", "purpose": "The Morning Briefing interface only." },
+      { "name": "interactive-lift", "value": "0 4px 24px rgba(11, 24, 16, 0.08)", "purpose": "Small controls responding above the page." },
+      { "name": "glass-lift", "value": "0 24px 72px rgba(11, 24, 16, 0.14)", "purpose": "Capability lenses, active adoption states, and product panels." },
+      { "name": "dark-glass-lift", "value": "0 32px 96px rgba(0, 0, 0, 0.24)", "purpose": "Dark-field glass and the particle finale." }
     ],
     "motion": [
-      {
-        "name": "ease-out",
-        "value": "cubic-bezier(0.22, 1, 0.36, 1)",
-        "purpose": "Product and content deceleration."
-      },
-      {
-        "name": "ease-expo",
-        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
-        "purpose": "The decisive WNF.AI drop and robot arrival."
-      }
+      { "name": "ease-out", "value": "cubic-bezier(0.22, 1, 0.36, 1)", "purpose": "Product and content deceleration." },
+      { "name": "ease-expo", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Wordmark transformations, compression, and decisive robot movement." },
+      { "name": "opening-sequence", "value": "7.8s", "purpose": "Five wordmark states, product bridge, robot arrival, and final hero resolve." }
     ],
     "breakpoints": [
-      {
-        "name": "compact",
-        "value": "320px"
-      },
-      {
-        "name": "wide-navigation",
-        "value": "768px"
-      },
-      {
-        "name": "large",
-        "value": "1200px"
-      }
+      { "name": "compact-floor", "value": "320px" },
+      { "name": "stacked-scenes", "value": "768px" },
+      { "name": "tight-product-stage", "value": "1024px" },
+      { "name": "full-product-stage", "value": "1200px" }
     ]
   },
   "components": [
@@ -106,65 +102,78 @@
       "refersTo": "button-primary",
       "description": "The single dominant conversation action.",
       "html": "<a class=\"ds-btn-primary\" href=\"#\">Work With Us</a>",
-      "css": ".ds-btn-primary { display:inline-flex; min-height:44px; align-items:center; padding:12px 24px; border-radius:999px; background:#0F6E56; color:#FFFFFF; font:600 15px/1 -apple-system,BlinkMacSystemFont,Segoe UI,sans-serif; text-decoration:none; transition:background-color .18s,transform .12s; } .ds-btn-primary:hover { background:#0B1810; transform:scale(1.025); } .ds-btn-primary:focus-visible { outline:3px solid #67A92E; outline-offset:4px; } .ds-btn-primary:active { transform:scale(.97); }"
+      "css": ".ds-btn-primary { display:inline-flex; min-height:44px; align-items:center; justify-content:center; padding:12px 24px; border-radius:999px; background:#0F6E56; color:#FFFFFF; box-shadow:inset 0 1px rgba(255,255,255,.3),0 10px 26px rgba(15,110,86,.18); font:600 15px/1 -apple-system,BlinkMacSystemFont,Segoe UI,sans-serif; text-decoration:none; transition:background-color .18s,transform .12s; } .ds-btn-primary:hover { background:#0B1810; transform:scale(1.025); } .ds-btn-primary:focus-visible { outline:3px solid #67A92E; outline-offset:4px; } .ds-btn-primary:active { transform:scale(.97); }"
+    },
+    {
+      "name": "Glass Navigation",
+      "kind": "nav",
+      "description": "A translucent launch rail that keeps the official mark crisp while content moves beneath it.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Primary\"><strong>with not for</strong><span>About</span><span>Services</span><a href=\"#\">Get in Touch</a></nav>",
+      "css": ".ds-nav { display:flex; align-items:center; gap:28px; min-height:52px; padding:0 20px; border:1px solid rgba(255,255,255,.46); border-radius:16px; background:rgba(250,249,248,.70); box-shadow:0 12px 40px rgba(11,24,16,.07),inset 0 -1px rgba(255,255,255,.75); color:#0B1810; backdrop-filter:saturate(185%) blur(20px); font:500 14px/1.2 -apple-system,BlinkMacSystemFont,Segoe UI,sans-serif; } .ds-nav strong { margin-right:auto; color:#0F6E56; } .ds-nav a { padding:11px 18px; border-radius:999px; background:#0B1810; color:#fff; text-decoration:none; } .ds-nav a:focus-visible { outline:3px solid #67A92E; outline-offset:3px; }"
     },
     {
       "name": "Briefing Tab",
-      "kind": "button",
+      "kind": "chip",
       "description": "A compact native tab for the workflow example.",
       "html": "<button class=\"ds-tab\" aria-selected=\"true\">Needs You</button>",
-      "css": ".ds-tab { min-height:44px; padding:8px 16px; border:0; border-radius:999px; background:#F5F8F6; color:#0F6E56; font:700 14px/1.2 -apple-system,BlinkMacSystemFont,Segoe UI,sans-serif; } .ds-tab:hover { background:#E8EFEA; } .ds-tab:focus-visible { outline:3px solid #67A92E; outline-offset:3px; }"
+      "css": ".ds-tab { min-height:44px; padding:8px 16px; border:0; border-radius:999px; background:#F5F8F6; color:#0F6E56; font:700 14px/1.2 -apple-system,BlinkMacSystemFont,Segoe UI,sans-serif; transition:background-color .2s,transform .2s; } .ds-tab:hover { background:#E8EFEA; transform:translateY(-1px); } .ds-tab:focus-visible { outline:3px solid #67A92E; outline-offset:3px; }"
+    },
+    {
+      "name": "Capability Lens",
+      "kind": "card",
+      "description": "A liquid-glass product readout for one WNF capability.",
+      "html": "<article class=\"ds-lens\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M4 12h5l3-6 3 12 2-6h3\"/></svg><strong>Systems</strong><span>AI that fits the work.</span></article>",
+      "css": ".ds-lens { width:220px; padding:16px 18px; border:1px solid rgba(255,255,255,.72); border-radius:28px; background:rgba(255,255,255,.64); box-shadow:0 24px 72px rgba(11,24,16,.14),inset 0 1px rgba(255,255,255,.92); color:#0B1810; backdrop-filter:blur(22px) saturate(145%); font-family:-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif; } .ds-lens svg { width:24px; height:24px; fill:none; stroke:#0F6E56; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; } .ds-lens strong,.ds-lens span { display:block; } .ds-lens strong { margin-top:10px; font-size:15px; } .ds-lens span { margin-top:3px; color:#5A6B61; font-size:12px; }"
     },
     {
       "name": "Highlight Panel",
       "kind": "card",
       "refersTo": "highlight-panel",
-      "description": "A full product chapter inside the horizontal highlights track.",
+      "description": "A product chapter whose readable copy appears only while the panel is centered.",
       "html": "<article class=\"ds-highlight\"><h3>Get real adoption.</h3><p>Technology does not change behavior on its own.</p></article>",
-      "css": ".ds-highlight { width:520px; min-height:340px; padding:48px; border-radius:28px; background:#0F6E56; color:#FFFFFF; font-family:-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif; } .ds-highlight h3 { margin:0; max-width:10ch; font-size:48px; line-height:.98; letter-spacing:-.04em; } .ds-highlight p { max-width:34ch; margin-top:24px; font-size:18px; line-height:1.5; }"
+      "css": ".ds-highlight { width:520px; min-height:340px; padding:48px; border:1px solid rgba(255,255,255,.72); border-radius:28px; background:#F5F8F6; color:#0B1810; box-shadow:0 24px 72px rgba(11,24,16,.14); font-family:-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif; } .ds-highlight h3 { margin:0; max-width:10ch; font-size:48px; line-height:.98; letter-spacing:-.04em; text-wrap:balance; } .ds-highlight p { max-width:34ch; margin:24px 0 0; font-size:18px; line-height:1.5; }"
+    },
+    {
+      "name": "Human-led Badge",
+      "kind": "chip",
+      "description": "A dark-field glass status label that keeps human control explicit.",
+      "html": "<span class=\"ds-human-led\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"8\" cy=\"8\" r=\"2\"/><circle cx=\"16\" cy=\"8\" r=\"2\"/><path d=\"M4 18c0-3 2-5 4-5s4 2 4 5M12 18c0-3 2-5 4-5s4 2 4 5\"/></svg>Human-led</span>",
+      "css": ".ds-human-led { display:inline-flex; min-height:42px; align-items:center; gap:9px; padding:10px 16px; border:1px solid rgba(255,255,255,.18); border-radius:999px; background:rgba(21,29,24,.58); box-shadow:0 32px 96px rgba(0,0,0,.24),inset 0 1px rgba(255,255,255,.18); color:#fff; backdrop-filter:blur(18px); font:600 12px/1.2 -apple-system,BlinkMacSystemFont,Segoe UI,sans-serif; } .ds-human-led svg { width:18px; height:18px; fill:none; stroke:#9FE870; stroke-width:1.8; stroke-linecap:round; }"
     }
   ],
   "narrative": {
     "northStar": "The AI in the Palm",
-    "overview": "A product-launch experience in which WNF.AI becomes a tangible collaborator held in human control. One theatrical opening gives way to calm, source-backed chapters.",
+    "overview": "This system translates the current Apple Mac mini launch page's stillness, scale changes, and product-reveal choreography into With Not For's human-controlled AI worldview. WNF.AI arrives as the dominant object, moves through five authored material states, compresses into the exact orange robot, and resolves above a human palm before the source positioning line takes over. After the 7.8-second opening, the page moves through single-idea viewports, a horizontal highlights sequence, a dedicated robot product-theatre chapter, sticky service chapters, a realistic Morning Briefing interaction, and an exact-logo particle finale.",
     "keyCharacteristics": [
-      "One rehearsed opening animation",
-      "Single-idea viewports",
-      "Forest and paper color fields",
-      "Human-controlled robot imagery",
-      "Complete accessible motion fallback"
+      "One rehearsed five-state opening animation, supported by purposeful scroll choreography rather than repeated fade-and-rise effects.",
+      "Very large type, deliberate whitespace, and one dominant thought per fold.",
+      "Forest, paper, and black fields punctuated by the orange robot.",
+      "Human hand and robot imagery used as the physical expression of with, not for.",
+      "Brand-specific circuit, systems, team, policy, and adoption icons drawn from one stroke grammar.",
+      "Liquid glass reserved for interactive controls, capability lenses, and literal interface surfaces.",
+      "The official WNF logo resolves from deterministic alpha-sampled particles into the exact source image.",
+      "Full keyboard, touch, reduced-motion, and narrow-screen states."
     ],
     "rules": [
-      {
-        "name": "The Orange Is an Object Rule",
-        "body": "Robot orange belongs to the robot and its direct system pulse.",
-        "section": "colors"
-      },
-      {
-        "name": "The Scale Carries the Drama Rule",
-        "body": "Large type, space, and weight create the hierarchy.",
-        "section": "typography"
-      },
-      {
-        "name": "The Flat-Until-Physical Rule",
-        "body": "A shadow is allowed only when an object feels physically above the page or responds to interaction.",
-        "section": "elevation"
-      },
-      {
-        "name": "Launch-object scale",
-        "body": "The WNF.AI mark and short full-viewport statements may exceed the ordinary content-heading ceiling while support copy stays on the readable type ramp.",
-        "section": "typography"
-      }
+      { "name": "The Orange Is an Object Rule", "body": "Robot orange belongs to the robot and its direct system pulse. It is not sprayed across buttons, headings, or decorative gradients.", "section": "colors" },
+      { "name": "The Scale Carries the Drama Rule", "body": "Large type, space, and weight create the hierarchy. Gradient text, ornamental serif pairings, and repeated uppercase eyebrow labels are prohibited.", "section": "typography" },
+      { "name": "The Flat-Until-Physical Rule", "body": "A shadow is allowed only when an object is meant to feel physically above the page or responding to interaction.", "section": "elevation" }
     ],
     "dos": [
-      "Do preserve the four approved opening beats and measured five-second pacing.",
-      "Do use the official logo and exact current homepage copy.",
-      "Do keep the human visibly in control."
+      "Do preserve the five approved wordmark transformations, product bridge, and measured 7.8-second pacing.",
+      "Do use the official logo, exact current homepage copy, and traceable routes.",
+      "Do keep the human visibly in control of the AI collaborator.",
+      "Do use single-idea viewports and generous whitespace instead of shrinking everything into a dashboard.",
+      "Do keep every active text block fully inside the viewport at 320px through wide desktop sizes.",
+      "Do use liquid glass only for interactive or informational lenses and keep clickable motion on an inner visual layer.",
+      "Do load the complete final hero immediately for reduced-motion users."
     ],
     "donts": [
-      "Don't copy Apple trademarks, product media, copy, pricing, or navigation branding.",
-      "Don't invent clients, results, testimonials, guarantees, or metrics.",
-      "Don't use gradient text, generic purple-blue gradients, or card-filled agency styling."
+      "Don't make this look like a generic AI SaaS template, a neon cyberpunk robot page, or a card-filled agency theme.",
+      "Don't copy Apple trademarks, Apple product media, Apple copy, Apple pricing, or Apple navigation branding.",
+      "Don't use gradient text, generic purple-blue gradients, emoji icons, fake dashboards, or invented metrics.",
+      "Don't invent clients, results, testimonials, guarantees, or product capabilities.",
+      "Don't use a colored side stripe, nest cards, or hide essential meaning behind hover or animation."
     ]
   }
 }

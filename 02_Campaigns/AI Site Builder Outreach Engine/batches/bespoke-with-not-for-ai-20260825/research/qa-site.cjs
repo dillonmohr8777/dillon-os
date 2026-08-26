@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const { chromium } = require('playwright');
 
-const url = process.argv[2] || 'http://127.0.0.1:51373/';
+const url = process.argv[2] || process.env.WNF_QA_URL || 'http://127.0.0.1:51302/';
 const outDir = path.join(__dirname, '..', 'qa', 'shots');
 fs.mkdirSync(outDir, { recursive: true });
 
@@ -19,7 +19,7 @@ async function captureOpening(browser) {
   page.on('requestfailed', (request) => errors.push(`requestfailed: ${request.url()} ${request.failure()?.errorText || ''}`));
   await page.goto(url, { waitUntil: 'load', timeout: 90000 });
 
-  const frames = [750, 1250, 2250, 3250, 4500, 5500];
+  const frames = [700, 1500, 2400, 3300, 4200, 5100, 6200, 7900];
   let elapsed = 0;
   for (const frame of frames) {
     await wait(page, frame - elapsed);
@@ -78,7 +78,7 @@ async function captureViewport(browser, name, viewport, reducedMotion = 'reduce'
   page.on('pageerror', (error) => errors.push(`pageerror: ${error.message}`));
   page.on('requestfailed', (request) => errors.push(`requestfailed: ${request.url()} ${request.failure()?.errorText || ''}`));
   await page.goto(url, { waitUntil: 'load', timeout: 90000 });
-  await wait(page, reducedMotion === 'reduce' ? 150 : 5400);
+  await wait(page, reducedMotion === 'reduce' ? 150 : 8200);
   await page.screenshot({ path: path.join(outDir, `${name}-hero.png`) });
   const metrics = await page.evaluate(() => ({
     scrollHeight: document.documentElement.scrollHeight,
@@ -92,8 +92,8 @@ async function captureViewport(browser, name, viewport, reducedMotion = 'reduce'
   return { name, metrics, errors };
 }
 
-async function captureSections(browser) {
-  const context = await browser.newContext({ viewport: { width: 1440, height: 900 }, reducedMotion: 'no-preference' });
+async function captureSections(browser, mode, viewport) {
+  const context = await browser.newContext({ viewport, reducedMotion: 'no-preference' });
   const page = await context.newPage();
   const errors = [];
   page.on('console', (message) => {
@@ -102,7 +102,7 @@ async function captureSections(browser) {
   page.on('pageerror', (error) => errors.push(`pageerror: ${error.message}`));
   page.on('requestfailed', (request) => errors.push(`requestfailed: ${request.url()} ${request.failure()?.errorText || ''}`));
   await page.goto(url, { waitUntil: 'load', timeout: 90000 });
-  await wait(page, 5400);
+  await wait(page, 8200);
   await page.evaluate(() => {
     document.documentElement.style.scrollBehavior = 'auto';
   });
@@ -112,6 +112,9 @@ async function captureSections(browser) {
     ['highlights-one', '.highlights', 0.06],
     ['highlights-two', '.highlights', 0.52],
     ['highlights-three', '.highlights', 0.96],
+    ['robot-theatre-design', '.robot-theatre', 0.22],
+    ['robot-theatre-capabilities', '.robot-theatre', 0.58],
+    ['robot-theatre-exit', '.robot-theatre', 0.9],
     ['adoption-one', '.adoption-story', 0.1],
     ['adoption-two', '.adoption-story', 0.5],
     ['adoption-three', '.adoption-story', 0.9],
@@ -121,7 +124,10 @@ async function captureSections(browser) {
     ['briefing', '.briefing', 0.55],
     ['human-control', '.human-control', 0.45],
     ['closing', '.closing', 0.2],
+    ['particle-finale', '.particle-finale', 0.35],
   ];
+
+  const clipping = [];
 
   for (const [name, selector, progress] of targets) {
     const y = await page.evaluate(({ selector, progress }) => {
@@ -130,8 +136,39 @@ async function captureSections(browser) {
       return section.offsetTop + travel * progress;
     }, { selector, progress });
     await page.evaluate((top) => window.scrollTo({ top, behavior: 'auto' }), y);
-    await wait(page, 180);
-    await page.screenshot({ path: path.join(outDir, `${name}-desktop.png`) });
+    await wait(page, name === 'particle-finale' ? 2800 : 240);
+    await page.screenshot({ path: path.join(outDir, `${name}-${mode}.png`) });
+    const clipped = await page.evaluate(({ selector, name }) => {
+      const root = document.querySelector(selector);
+      if (!root) return [{ name, selector, reason: 'missing-root' }];
+      return [...root.querySelectorAll('h1, h2, h3, p, strong, a, button, span')]
+        .filter((element) => element.textContent.trim())
+        .filter((element) => !element.closest('.sr-only'))
+        .filter((element) => {
+          const panel = element.closest('.highlight-panel');
+          return !panel || panel.dataset.active === 'true';
+        })
+        .map((element) => {
+          const rect = element.getBoundingClientRect();
+          const style = getComputedStyle(element);
+          return {
+            name,
+            selector: `${element.tagName.toLowerCase()}.${element.className || ''}`,
+            text: element.textContent.trim().slice(0, 80),
+            left: Math.round(rect.left * 10) / 10,
+            right: Math.round(rect.right * 10) / 10,
+            top: Math.round(rect.top * 10) / 10,
+            bottom: Math.round(rect.bottom * 10) / 10,
+            opacity: Number.parseFloat(style.opacity),
+            display: style.display,
+            visibility: style.visibility,
+          };
+        })
+        .filter((entry) => entry.display !== 'none' && entry.visibility !== 'hidden' && entry.opacity > 0.08)
+        .filter((entry) => entry.bottom > 0 && entry.top < innerHeight)
+        .filter((entry) => entry.left < -1 || entry.right > innerWidth + 1);
+    }, { selector, name });
+    clipping.push(...clipped);
   }
 
   await page.evaluate(() => document.querySelector('#tab-followups').focus());
@@ -141,7 +178,7 @@ async function captureSections(browser) {
     visiblePanel: [...document.querySelectorAll('[role="tabpanel"]')].find((panel) => !panel.hidden)?.id,
   }));
   await context.close();
-  return { tabs, errors };
+  return { tabs, clipping, errors };
 }
 
 (async () => {
@@ -151,7 +188,8 @@ async function captureSections(browser) {
   responsive.push(await captureViewport(browser, 'phone-320', { width: 320, height: 720 }));
   responsive.push(await captureViewport(browser, 'tablet', { width: 768, height: 1024 }));
   responsive.push(await captureViewport(browser, 'desktop', { width: 1440, height: 900 }));
-  const sections = await captureSections(browser);
+  const sections = await captureSections(browser, 'desktop', { width: 1440, height: 900 });
+  const mobileSections = await captureSections(browser, 'mobile', { width: 390, height: 844 });
   await browser.close();
 
   const report = {
@@ -160,10 +198,12 @@ async function captureSections(browser) {
     opening,
     responsive,
     sections,
+    mobileSections,
     pass: [
       ...opening.errors,
       ...responsive.flatMap((entry) => entry.errors),
       ...sections.errors,
+      ...mobileSections.errors,
     ].length === 0 &&
       opening.metrics.scrollWidth === opening.metrics.clientWidth &&
       responsive.every((entry) => entry.metrics.scrollWidth === entry.metrics.clientWidth) &&
@@ -172,8 +212,12 @@ async function captureSections(browser) {
       opening.interaction.pointerTracked &&
       opening.interaction.nodded &&
       opening.interaction.blinked &&
+      sections.clipping.length === 0 &&
+      mobileSections.clipping.length === 0 &&
       sections.tabs.selected === 'tab-today' &&
-      sections.tabs.visiblePanel === 'briefing-today',
+      sections.tabs.visiblePanel === 'briefing-today' &&
+      mobileSections.tabs.selected === 'tab-today' &&
+      mobileSections.tabs.visiblePanel === 'briefing-today',
   };
   fs.writeFileSync(path.join(__dirname, '..', 'qa', 'report.json'), JSON.stringify(report, null, 2));
   console.log(JSON.stringify(report, null, 2));

@@ -31,7 +31,7 @@
 
     void opening.offsetWidth;
     opening.classList.add('is-playing');
-    openingTimer = window.setTimeout(finishOpening, 5260);
+    openingTimer = window.setTimeout(finishOpening, 7860);
   }
 
   function blink(doubleBlink = false) {
@@ -170,9 +170,16 @@
     if (highlights && highlightTrack) {
       const rawProgress = sectionProgress(highlights);
       const progress = clamp((rawProgress - highlightLead) / highlightRange);
-      const maxTranslate = Math.max(0, highlightTrack.scrollWidth - window.innerWidth + 16);
+      const firstPanel = highlightPanels[0];
+      const lastPanel = highlightPanels[highlightPanels.length - 1];
+      const maxTranslate = firstPanel && lastPanel
+        ? Math.max(0, lastPanel.offsetLeft - firstPanel.offsetLeft)
+        : Math.max(0, highlightTrack.scrollWidth - window.innerWidth + 16);
       highlightTrack.style.setProperty('--highlight-x', `${(-progress * maxTranslate).toFixed(2)}px`);
       currentHighlight = Math.round(progress * Math.max(0, highlightPanels.length - 1));
+      highlightPanels.forEach((panel, index) => {
+        panel.dataset.active = String(index === currentHighlight);
+      });
       if (highlightPrevious) highlightPrevious.disabled = currentHighlight <= 0;
       if (highlightNext) highlightNext.disabled = currentHighlight >= highlightPanels.length - 1;
     }

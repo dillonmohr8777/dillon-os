@@ -39,7 +39,7 @@ Do not make this look like a generic AI SaaS template, a neon cyberpunk robot pa
 ## Design Principles
 
 1. **Practice the positioning.** The human remains visibly in control; the robot is a collaborator, not an autonomous replacement.
-2. **Make one opening unforgettable.** Concentrate motion into the WNF.AI-to-robot sequence and keep the rest of the page calm.
+2. **Make the opening unforgettable and the rest responsive.** Concentrate the highest-energy motion into the WNF.AI-to-robot sequence; later movement must communicate scroll progress, product capability, character response, or system state rather than decorate the page.
 3. **Use proof before decoration.** Existing copy, services, and practical workflow examples carry the page; visuals clarify them.
 4. **Translate, do not costume.** Borrow the Mac mini page's pacing, spatial logic, and product-reveal choreography while preserving With Not For's identity.
 5. **No fictional confidence.** Every claim, CTA, and service description must be traceable to the current source.
