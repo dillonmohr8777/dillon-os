@@ -2,19 +2,39 @@
   const section = document.querySelector('[data-particle-finale]');
   const canvas = section?.querySelector('[data-particle-logo]');
   const fallback = section?.querySelector('[data-particle-fallback]');
-  if (!section || !(canvas instanceof HTMLCanvasElement) || !(fallback instanceof HTMLImageElement)) return;
+  const seed = section?.querySelector('[data-particle-seed]');
+  const replay = section?.querySelector('[data-particle-replay]');
+  const seedImage = seed?.querySelector('.character-frame--open img');
+
+  if (
+    !section ||
+    !(canvas instanceof HTMLCanvasElement) ||
+    !(fallback instanceof HTMLImageElement) ||
+    !(seed instanceof HTMLElement) ||
+    !(replay instanceof HTMLButtonElement) ||
+    !(seedImage instanceof HTMLImageElement)
+  ) return;
 
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const context = canvas.getContext('2d', { alpha: true });
-  if (!context || reducedMotion.matches) {
+  const sampler = document.createElement('canvas');
+  const samplerContext = sampler.getContext('2d', { willReadFrequently: true });
+
+  if (!context || !samplerContext || reducedMotion.matches) {
     section.dataset.particleState = 'fallback';
+    section.classList.add('is-resolved');
     return;
   }
 
+  const DURATION = 3700;
+  const HOLD_DURATION = 6000;
   const clamp = (value, minimum = 0, maximum = 1) => Math.min(maximum, Math.max(minimum, value));
+  const mix = (start, end, progress) => start + (end - start) * progress;
+  const easeInOutCubic = (value) => value < 0.5
+    ? 4 * value * value * value
+    : 1 - Math.pow(-2 * value + 2, 3) / 2;
   const easeOutExpo = (value) => value >= 1 ? 1 : 1 - Math.pow(2, -10 * value);
-  const offscreen = document.createElement('canvas');
-  const offscreenContext = offscreen.getContext('2d', { willReadFrequently: true });
+
   let particles = [];
   let animationFrame = 0;
   let startTime = 0;
@@ -24,8 +44,8 @@
   let pointerY = 0;
   let rebuildTimer = 0;
 
-  function seededRandom(seed) {
-    let value = seed >>> 0;
+  function seededRandom(seedValue) {
+    let value = seedValue >>> 0;
     return () => {
       value += 0x6d2b79f5;
       let result = value;
@@ -46,7 +66,7 @@
 
   function resizeCanvas() {
     const bounds = section.getBoundingClientRect();
-    const pixelRatio = Math.min(window.devicePixelRatio || 1, 1.6);
+    const pixelRatio = Math.min(window.devicePixelRatio || 1, 1.5);
     canvas.width = Math.max(1, Math.round(bounds.width * pixelRatio));
     canvas.height = Math.max(1, Math.round(bounds.height * pixelRatio));
     canvas.style.width = `${bounds.width}px`;
@@ -55,27 +75,20 @@
     return { width: bounds.width, height: bounds.height };
   }
 
-  function buildParticles() {
-    if (!offscreenContext || !fallback.complete || !fallback.naturalWidth) return false;
-    const { width, height } = resizeCanvas();
-    const sectionBounds = section.getBoundingClientRect();
-    const logoBounds = fallback.getBoundingClientRect();
-    const compact = width < 760;
-    const sampleWidth = compact ? 760 : 1100;
-    const sampleHeight = Math.max(1, Math.round(sampleWidth * fallback.naturalHeight / fallback.naturalWidth));
-    offscreen.width = sampleWidth;
-    offscreen.height = sampleHeight;
-    offscreenContext.clearRect(0, 0, sampleWidth, sampleHeight);
-    offscreenContext.drawImage(fallback, 0, 0, sampleWidth, sampleHeight);
-    const pixels = offscreenContext.getImageData(0, 0, sampleWidth, sampleHeight).data;
+  function sampleImage(image, sampleWidth, step, alphaThreshold) {
+    const sampleHeight = Math.max(1, Math.round(sampleWidth * image.naturalHeight / image.naturalWidth));
+    sampler.width = sampleWidth;
+    sampler.height = sampleHeight;
+    samplerContext.clearRect(0, 0, sampleWidth, sampleHeight);
+    samplerContext.drawImage(image, 0, 0, sampleWidth, sampleHeight);
+    const pixels = samplerContext.getImageData(0, 0, sampleWidth, sampleHeight).data;
     const candidates = [];
-    const step = compact ? 4 : 3;
 
     for (let y = 0; y < sampleHeight; y += step) {
       for (let x = 0; x < sampleWidth; x += step) {
         const offset = (y * sampleWidth + x) * 4;
         const alpha = pixels[offset + 3];
-        if (alpha < 52) continue;
+        if (alpha < alphaThreshold) continue;
         candidates.push({
           x,
           y,
@@ -87,94 +100,202 @@
       }
     }
 
-    if (!candidates.length) return false;
+    return { candidates, width: sampleWidth, height: sampleHeight };
+  }
+
+  function cubicPoint(start, controlOne, controlTwo, end, progress) {
+    const inverse = 1 - progress;
+    return (
+      inverse * inverse * inverse * start +
+      3 * inverse * inverse * progress * controlOne +
+      3 * inverse * progress * progress * controlTwo +
+      progress * progress * progress * end
+    );
+  }
+
+  function buildParticles() {
+    if (
+      !fallback.complete || !fallback.naturalWidth ||
+      !seedImage.complete || !seedImage.naturalWidth
+    ) return false;
+
+    const { width, height } = resizeCanvas();
+    const sectionBounds = section.getBoundingClientRect();
+    const logoBounds = fallback.getBoundingClientRect();
+    const seedBounds = seed.getBoundingClientRect();
+    const compact = width < 760;
+    const targetSamples = sampleImage(fallback, compact ? 820 : 1180, compact ? 4 : 3, 54);
+    const seedSamples = sampleImage(seedImage, compact ? 520 : 680, compact ? 4 : 3, 44);
+
+    if (!targetSamples.candidates.length || !seedSamples.candidates.length) return false;
+
     const random = seededRandom(87772026);
-    const order = shuffledIndices(candidates.length, random);
-    const count = Math.min(compact ? 3300 : 6400, candidates.length);
-    const targetLeft = logoBounds.left - sectionBounds.left;
-    const targetTop = logoBounds.top - sectionBounds.top;
-    const targetWidth = logoBounds.width;
-    const targetHeight = logoBounds.height;
-    const centerX = width / 2;
-    const centerY = targetTop + targetHeight / 2;
+    const targetOrder = shuffledIndices(targetSamples.candidates.length, random);
+    const seedOrder = shuffledIndices(seedSamples.candidates.length, random);
+    const count = Math.min(compact ? 4300 : 7800, targetSamples.candidates.length);
+    const logoLeft = logoBounds.left - sectionBounds.left;
+    const logoTop = logoBounds.top - sectionBounds.top;
+    const seedLeft = seedBounds.left - sectionBounds.left;
+    const seedTop = seedBounds.top - sectionBounds.top;
+    const centerX = seedLeft + seedBounds.width / 2;
+    const centerY = seedTop + seedBounds.height / 2;
+    const laneOffsets = [-0.27, -0.17, -0.07, 0.07, 0.17, 0.27];
 
     particles = Array.from({ length: count }, (_, index) => {
-      const sample = candidates[order[index]];
-      const angle = random() * Math.PI * 2;
-      const radiusX = width * (0.42 + random() * 0.34);
-      const radiusY = height * (0.26 + random() * 0.3);
-      const strand = index % 5;
+      const target = targetSamples.candidates[targetOrder[index]];
+      const source = seedSamples.candidates[seedOrder[index % seedOrder.length]];
+      const lane = index % laneOffsets.length;
+      const targetX = logoLeft + (target.x / targetSamples.width) * logoBounds.width;
+      const targetY = logoTop + (target.y / targetSamples.height) * logoBounds.height;
+      const startX = seedLeft + (source.x / seedSamples.width) * seedBounds.width;
+      const startY = seedTop + (source.y / seedSamples.height) * seedBounds.height;
+      const direction = targetX < centerX ? -1 : 1;
+      const laneY = centerY + laneOffsets[lane] * height;
+      const settleDistance = compact ? 9 : 14;
+
       return {
-        startX: centerX + Math.cos(angle + strand * 0.16) * radiusX + (random() - 0.5) * width * 0.18,
-        startY: centerY + Math.sin(angle * 1.17 + strand * 0.28) * radiusY + (random() - 0.5) * height * 0.13,
-        targetX: targetLeft + (sample.x / sampleWidth) * targetWidth,
-        targetY: targetTop + (sample.y / sampleHeight) * targetHeight,
-        red: sample.red,
-        green: sample.green,
-        blue: sample.blue,
-        alpha: sample.alpha,
-        radius: compact ? 0.72 + random() * 0.82 : 0.62 + random() * 0.76,
+        startX,
+        startY,
+        controlOneX: centerX + direction * width * (0.1 + random() * 0.17),
+        controlOneY: laneY + (random() - 0.5) * height * 0.035,
+        controlTwoX: targetX - direction * width * (0.07 + random() * 0.12),
+        controlTwoY: targetY + laneOffsets[lane] * height * 0.1,
+        settleX: targetX + (random() - 0.5) * settleDistance,
+        settleY: targetY + (random() - 0.5) * settleDistance,
+        targetX,
+        targetY,
+        sourceRed: source.red,
+        sourceGreen: source.green,
+        sourceBlue: source.blue,
+        red: target.red,
+        green: target.green,
+        blue: target.blue,
+        alpha: target.alpha,
+        radius: compact ? 0.68 + random() * 0.8 : 0.58 + random() * 0.72,
         phase: random() * Math.PI * 2,
-        curl: 0.55 + random() * 1.25,
+        pulse: 0.45 + random() * 0.75,
       };
     });
+
     return true;
+  }
+
+  function particlePosition(particle, travelProgress, settleProgress, time, chargeProgress) {
+    if (travelProgress <= 0) {
+      const chargeWave = Math.sin(time * 0.012 + particle.phase) * particle.pulse * chargeProgress * 2.8;
+      return {
+        x: particle.startX + Math.cos(particle.phase) * chargeWave,
+        y: particle.startY + Math.sin(particle.phase) * chargeWave,
+      };
+    }
+
+    const travel = easeInOutCubic(travelProgress);
+    const pathX = cubicPoint(particle.startX, particle.controlOneX, particle.controlTwoX, particle.settleX, travel);
+    const pathY = cubicPoint(particle.startY, particle.controlOneY, particle.controlTwoY, particle.settleY, travel);
+    const settle = easeOutExpo(settleProgress);
+    const pointerScale = settleProgress > 0.98 ? 0.42 : 0;
+
+    return {
+      x: mix(pathX, particle.targetX, settle) + pointerX * Math.sin(particle.phase) * pointerScale,
+      y: mix(pathY, particle.targetY, settle) + pointerY * Math.cos(particle.phase) * pointerScale,
+    };
   }
 
   function render(time) {
     animationFrame = 0;
     if (!visible || !particles.length) return;
+
     const bounds = section.getBoundingClientRect();
     const elapsed = time - startTime;
-    const rawProgress = clamp(elapsed / 2450);
-    const progress = easeOutExpo(rawProgress);
-    const freedom = 1 - progress;
-    context.clearRect(0, 0, bounds.width, bounds.height);
-    context.globalCompositeOperation = 'source-over';
+    const progress = clamp(elapsed / DURATION);
+    const chargeProgress = clamp(progress / 0.17);
+    const travelProgress = clamp((progress - 0.16) / 0.58);
+    const settleProgress = clamp((progress - 0.74) / 0.26);
+    const dissolveProgress = clamp((progress - 0.1) / 0.48);
+    const visualCharge = progress < 0.46
+      ? chargeProgress
+      : mix(1, 0.42, clamp((progress - 0.46) / 0.54));
 
+    section.style.setProperty('--particle-charge', visualCharge.toFixed(4));
+    section.style.setProperty('--particle-dissolve', dissolveProgress.toFixed(4));
+    context.clearRect(0, 0, bounds.width, bounds.height);
+
+    if (travelProgress > 0.04 && travelProgress < 0.98) {
+      context.globalCompositeOperation = 'lighter';
+      context.lineCap = 'round';
+      context.lineWidth = 0.55;
+      particles.forEach((particle, index) => {
+        if (index % 7 !== 0) return;
+        const current = particlePosition(particle, travelProgress, 0, time, chargeProgress);
+        const previous = particlePosition(particle, clamp(travelProgress - 0.032), 0, time - 20, chargeProgress);
+        const colorProgress = clamp((travelProgress - 0.08) / 0.74);
+        const red = Math.round(mix(particle.sourceRed, particle.red, colorProgress));
+        const green = Math.round(mix(particle.sourceGreen, particle.green, colorProgress));
+        const blue = Math.round(mix(particle.sourceBlue, particle.blue, colorProgress));
+        context.beginPath();
+        context.strokeStyle = `rgba(${red}, ${green}, ${blue}, ${0.08 + (1 - settleProgress) * 0.18})`;
+        context.moveTo(previous.x, previous.y);
+        context.lineTo(current.x, current.y);
+        context.stroke();
+      });
+    }
+
+    context.globalCompositeOperation = 'source-over';
     particles.forEach((particle, index) => {
-      const wave = Math.sin(time * 0.0011 + particle.phase + index * 0.002) * particle.curl * freedom * 22;
-      const curlX = Math.cos(particle.phase + rawProgress * Math.PI * 2.4) * freedom * 34;
-      const curlY = Math.sin(particle.phase * 1.3 + rawProgress * Math.PI * 2) * freedom * 24;
-      const pointerInfluence = freedom * 18 + (resolved ? 0.55 : 0);
-      const x = particle.startX + (particle.targetX - particle.startX) * progress + curlX + pointerX * pointerInfluence + wave * 0.18;
-      const y = particle.startY + (particle.targetY - particle.startY) * progress + curlY + pointerY * pointerInfluence + wave;
-      const radius = particle.radius * (0.82 + progress * 0.36);
+      const position = particlePosition(particle, travelProgress, settleProgress, time, chargeProgress);
+      const colorProgress = clamp(travelProgress * 0.88 + settleProgress * 0.2);
+      const red = Math.round(mix(particle.sourceRed, particle.red, colorProgress));
+      const green = Math.round(mix(particle.sourceGreen, particle.green, colorProgress));
+      const blue = Math.round(mix(particle.sourceBlue, particle.blue, colorProgress));
+      const chargeFlicker = travelProgress === 0
+        ? 0.7 + Math.sin(time * 0.008 + particle.phase + index * 0.003) * 0.24
+        : 1;
+      const resolvedShimmer = settleProgress >= 1
+        ? 0.94 + Math.sin(time * 0.0018 + particle.phase) * 0.06
+        : 1;
+      const radius = particle.radius * mix(1.14, 0.92, settleProgress);
+
       context.beginPath();
-      context.fillStyle = `rgba(${particle.red}, ${particle.green}, ${particle.blue}, ${Math.max(0.42, particle.alpha)})`;
-      context.arc(x, y, radius, 0, Math.PI * 2);
+      context.fillStyle = `rgba(${red}, ${green}, ${blue}, ${Math.max(0.38, particle.alpha) * chargeFlicker * resolvedShimmer})`;
+      context.arc(position.x, position.y, radius, 0, Math.PI * 2);
       context.fill();
     });
 
-    if (rawProgress > 0.86 && !resolved) {
+    if (progress > 0.9 && !resolved) {
       resolved = true;
       section.classList.add('is-resolved');
       section.dataset.particleState = 'resolved';
     }
 
-    if (rawProgress < 1 || elapsed < 4200) {
+    if (progress < 1 || elapsed < HOLD_DURATION) {
       animationFrame = window.requestAnimationFrame(render);
     }
   }
 
   function start() {
-    if (!particles.length && !buildParticles()) {
-      section.dataset.particleState = 'fallback';
-      return;
-    }
+    if (!particles.length && !buildParticles()) return;
     window.cancelAnimationFrame(animationFrame);
     resolved = false;
     section.classList.remove('is-resolved');
     section.dataset.particleState = 'playing';
+    section.style.setProperty('--particle-charge', '0');
+    section.style.setProperty('--particle-dissolve', '0');
     startTime = performance.now();
     animationFrame = window.requestAnimationFrame(render);
   }
 
   function prepare() {
+    if (
+      !fallback.complete || !fallback.naturalWidth ||
+      !seedImage.complete || !seedImage.naturalWidth
+    ) return;
+
     if (!buildParticles()) {
       section.dataset.particleState = 'fallback';
+      section.classList.add('is-resolved');
       return;
     }
+
     section.dataset.particleState = 'ready';
     if (visible) start();
   }
@@ -189,6 +310,10 @@
   }, { threshold: 0.16 });
 
   observer.observe(section);
+
+  replay.addEventListener('click', () => {
+    if (visible) start();
+  });
 
   section.addEventListener('pointermove', (event) => {
     if (event.pointerType === 'touch') return;
@@ -210,17 +335,29 @@
     }, 180);
   }, { passive: true });
 
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) window.cancelAnimationFrame(animationFrame);
+    else if (visible) start();
+  });
+
   reducedMotion.addEventListener('change', () => {
     if (reducedMotion.matches) {
       window.cancelAnimationFrame(animationFrame);
       section.dataset.particleState = 'fallback';
       section.classList.add('is-resolved');
     } else {
+      particles = [];
       prepare();
     }
   });
 
-  if (fallback.complete) prepare();
-  else fallback.addEventListener('load', prepare, { once: true });
-  fallback.addEventListener('error', () => { section.dataset.particleState = 'fallback'; }, { once: true });
+  [fallback, seedImage].forEach((image) => {
+    if (!image.complete) image.addEventListener('load', prepare, { once: true });
+    image.addEventListener('error', () => {
+      section.dataset.particleState = 'fallback';
+      section.classList.add('is-resolved');
+    }, { once: true });
+  });
+
+  prepare();
 })();

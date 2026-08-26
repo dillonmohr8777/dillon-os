@@ -36,6 +36,7 @@ async function captureOpening(browser) {
     openingComplete: document.querySelector('[data-opening]')?.dataset.complete,
     heroVisible: getComputedStyle(document.querySelector('.hero-message')).opacity,
     robotVisible: getComputedStyle(document.querySelector('[data-robot-control]')).opacity,
+    robotPlacements: document.querySelectorAll('[data-robot-control], .robot-theatre__robot, .particle-finale__seed').length,
     duplicateIds: [...document.querySelectorAll('[id]')]
       .map((node) => node.id)
       .filter((id, index, ids) => ids.indexOf(id) !== index),
@@ -124,7 +125,8 @@ async function captureSections(browser, mode, viewport) {
     ['briefing', '.briefing', 0.55],
     ['human-control', '.human-control', 0.45],
     ['closing', '.closing', 0.2],
-    ['particle-finale', '.particle-finale', 0.35],
+    ['particle-finale-travel', '.particle-finale', 0.35],
+    ['particle-finale-resolved', '.particle-finale', 0.35],
   ];
 
   const clipping = [];
@@ -136,7 +138,12 @@ async function captureSections(browser, mode, viewport) {
       return section.offsetTop + travel * progress;
     }, { selector, progress });
     await page.evaluate((top) => window.scrollTo({ top, behavior: 'auto' }), y);
-    await wait(page, name === 'particle-finale' ? 2800 : 240);
+    const sectionWait = name === 'particle-finale-travel'
+      ? 1450
+      : name === 'particle-finale-resolved'
+        ? 2850
+        : 240;
+    await wait(page, sectionWait);
     await page.screenshot({ path: path.join(outDir, `${name}-${mode}.png`) });
     const clipped = await page.evaluate(({ selector, name }) => {
       const root = document.querySelector(selector);
@@ -177,8 +184,9 @@ async function captureSections(browser, mode, viewport) {
     selected: document.querySelector('[role="tab"][aria-selected="true"]')?.id,
     visiblePanel: [...document.querySelectorAll('[role="tabpanel"]')].find((panel) => !panel.hidden)?.id,
   }));
+  const particleState = await page.evaluate(() => document.querySelector('[data-particle-finale]')?.dataset.particleState || 'missing');
   await context.close();
-  return { tabs, clipping, errors };
+  return { tabs, particleState, clipping, errors };
 }
 
 (async () => {
@@ -209,6 +217,7 @@ async function captureSections(browser, mode, viewport) {
       responsive.every((entry) => entry.metrics.scrollWidth === entry.metrics.clientWidth) &&
       opening.metrics.duplicateIds.length === 0 &&
       opening.metrics.missingAlts.length === 0 &&
+      opening.metrics.robotPlacements === 3 &&
       opening.interaction.pointerTracked &&
       opening.interaction.nodded &&
       opening.interaction.blinked &&
@@ -217,7 +226,9 @@ async function captureSections(browser, mode, viewport) {
       sections.tabs.selected === 'tab-today' &&
       sections.tabs.visiblePanel === 'briefing-today' &&
       mobileSections.tabs.selected === 'tab-today' &&
-      mobileSections.tabs.visiblePanel === 'briefing-today',
+      mobileSections.tabs.visiblePanel === 'briefing-today' &&
+      sections.particleState === 'resolved' &&
+      mobileSections.particleState === 'resolved',
   };
   fs.writeFileSync(path.join(__dirname, '..', 'qa', 'report.json'), JSON.stringify(report, null, 2));
   console.log(JSON.stringify(report, null, 2));

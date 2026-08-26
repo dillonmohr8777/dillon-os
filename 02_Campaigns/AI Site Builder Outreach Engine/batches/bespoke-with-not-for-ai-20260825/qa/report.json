@@ -1,16 +1,17 @@
 {
   "url": "http://127.0.0.1:51302/",
-  "capturedAt": "2026-08-26T04:34:20.402Z",
+  "capturedAt": "2026-08-26T05:48:29.442Z",
   "opening": {
     "metrics": {
       "title": "With Not For — AI Adoption for Business",
       "noindex": "noindex, nofollow, noarchive",
-      "scrollHeight": 26129,
+      "scrollHeight": 26197,
       "scrollWidth": 390,
       "clientWidth": 390,
       "openingComplete": "true",
       "heroVisible": "1",
       "robotVisible": "1",
+      "robotPlacements": 3,
       "duplicateIds": [],
       "missingAlts": []
     },
@@ -25,7 +26,7 @@
     {
       "name": "phone-320",
       "metrics": {
-        "scrollHeight": 10509,
+        "scrollHeight": 10566,
         "scrollWidth": 320,
         "clientWidth": 320,
         "heroRect": {
@@ -64,7 +65,7 @@
     {
       "name": "tablet",
       "metrics": {
-        "scrollHeight": 13867,
+        "scrollHeight": 13969,
         "scrollWidth": 768,
         "clientWidth": 768,
         "heroRect": {
@@ -103,7 +104,7 @@
     {
       "name": "desktop",
       "metrics": {
-        "scrollHeight": 12162,
+        "scrollHeight": 12252,
         "scrollWidth": 1440,
         "clientWidth": 1440,
         "heroRect": {
@@ -145,6 +146,7 @@
       "selected": "tab-today",
       "visiblePanel": "briefing-today"
     },
+    "particleState": "resolved",
     "clipping": [],
     "errors": []
   },
@@ -153,6 +155,7 @@
       "selected": "tab-today",
       "visiblePanel": "briefing-today"
     },
+    "particleState": "resolved",
     "clipping": [],
     "errors": []
   },

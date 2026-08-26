@@ -16,6 +16,7 @@ colors:
   signal-green: "#9FE870"
   theatre-teal: "#13846D"
   robot: "#C65A0A"
+  robot-highlight: "#F39A50"
   line: "#D9E0DC"
   muted: "#5A6B61"
   belief-muted: "#87938B"
@@ -274,9 +275,10 @@ After the 7.8-second opening, the page moves through single-idea viewports, a ho
 - Very large type, deliberate whitespace, and one dominant thought per fold.
 - Forest, paper, and black fields punctuated by the orange robot.
 - Human hand and robot imagery used as the physical expression of “with, not for.”
-- Brand-specific circuit, systems, team, policy, and adoption icons drawn from one stroke grammar.
+- Exactly three authored robot appearances: opening collaborator, product-theatre breakdown, and footer transformation seed.
+- Brand-specific circuit, systems, team, policy, and adoption icons drawn from one stroke grammar, then animated with distinct motion signatures.
 - Liquid glass reserved for interactive controls, capability lenses, and literal interface surfaces.
-- The official WNF logo resolves from deterministic alpha-sampled particles into the exact source image.
+- The footer robot dissolves through six circuit routes into deterministic alpha-sampled particles, then locks to the exact official WNF logo.
 - Full keyboard, touch, reduced-motion, and narrow-screen states.
 
 ## Colors
@@ -291,6 +293,7 @@ The palette is committed rather than timid: With Not For forest owns long sectio
 ### Secondary
 
 - **Robot Orange** (`robot`): reserved for the exact hero character and the moving adoption pulse.
+- **Robot Highlight** (`robot-highlight`): the single warm specular stop inside the authored robot-material wordmark state.
 - **Signal Lime** (`lime`): official-logo continuity, focus rings, and guardrail accents.
 - **Live Signal** (`signal-green`): the footer particle signal and rare high-energy states on dark fields.
 - **Theatre Teal** (`theatre-teal`): the product-theatre emphasis color for capability headlines and measurement guides.
@@ -391,9 +394,11 @@ The orange character is treated like a product, not a mascot sticker. A sticky c
 
 Workflow, systems, team, policy, and adoption icons use a custom 48px line system with rounded terminals and circuit-node details derived from the official brain-and-circuit mark. Emoji, icon fonts, and generic library glyphs are prohibited.
 
+Each icon has a job-specific motion signature: workflow travels, systems computes, team connects, policy guards, and adoption advances. Larger policy, systems, and human-led moments use orbital glass reactors instead of repeating the robot. Their moving nodes and circuit cores communicate an active system while preserving the robot as a scarce authored character.
+
 ### Particle Finale
 
-The exact official logo is alpha-sampled into deterministic green and gray particles. Particles settle into the source geometry and yield to the crisp source image for final clarity. The canvas pauses outside the viewport, provides a static fallback, and is omitted for reduced-motion users.
+The third and final robot is alpha-sampled as the particle source. Its orange silhouette charges, dissolves into deterministic points, travels through six circuit lanes, changes into the official green-and-gray palette, and settles against alpha-sampled target coordinates from the exact logo. The source image stays hidden during travel and appears only after the particles lock to the same stable pixels. A signal-meter button replays the sequence; the canvas pauses outside the viewport, provides a static fallback, and is omitted for reduced-motion users.
 
 ### Morning Briefing
 
@@ -406,6 +411,7 @@ Native ARIA tabs expose Needs You, Follow-ups, and Today. Arrow keys, Home, and 
 - **Do** preserve the five approved wordmark transformations, product bridge, and measured 7.8-second pacing.
 - **Do** use the official logo, exact current homepage copy, and traceable routes.
 - **Do** keep the human visibly in control of the AI collaborator.
+- **Do** keep the robot to exactly three placements: opening, product theatre, and footer transformation.
 - **Do** use single-idea viewports and generous whitespace instead of shrinking everything into a dashboard.
 - **Do** keep every active text block fully inside the viewport at 320px through wide desktop sizes.
 - **Do** use liquid glass only for interactive or informational lenses and keep clickable motion on an inner visual layer.
@@ -415,6 +421,7 @@ Native ARIA tabs expose Needs You, Follow-ups, and Today. Arrow keys, Home, and 
 
 - **Don't** make this look like a generic AI SaaS template, a neon cyberpunk robot page, or a card-filled agency theme.
 - **Don't** copy Apple trademarks, Apple product media, Apple copy, Apple pricing, or Apple navigation branding.
-- **Don't** use gradient text, generic purple-blue gradients, emoji icons, fake dashboards, or invented metrics.
+- **Don't** use gradient text outside the single robot-material opening state, generic purple-blue gradients, emoji icons, fake dashboards, or invented metrics.
 - **Don't** invent clients, results, testimonials, guarantees, or product capabilities.
 - **Don't** use a colored side stripe, nest cards, or hide essential meaning behind hover or animation.
+- **Don't** repeat the robot as a decorative icon; use the branded circuit reactors for policy, systems, and human-led states.

@@ -141,7 +141,7 @@
   });
 
   const revealTargets = [
-    ...document.querySelectorAll('.services__intro > *, .service-chapter__copy, .briefing__heading > *, .closing > div, .particle-finale__content > *'),
+    ...document.querySelectorAll('.services__intro > *, .service-chapter__copy, .briefing__heading > *, .closing > div, .particle-finale__content > :not(.particle-finale__logo)'),
   ];
 
   if ('IntersectionObserver' in window && !reducedMotion.matches) {
