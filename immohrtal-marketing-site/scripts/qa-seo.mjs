@@ -158,6 +158,7 @@ for (const route of expectedRoutes) {
   if (metaContent(html, 'name', 'twitter:title') !== title) addError(route, 'twitter:title does not match the page title')
   if (metaContent(html, 'name', 'twitter:description') !== description) addWarning(route, 'twitter:description differs from the meta description')
   if (!metaContent(html, 'name', 'robots')?.includes('index,follow')) addError(route, 'missing index,follow robots directive')
+  if (!html.includes('src="/_vercel/insights/script.js"')) addError(route, 'missing first-party Vercel Web Analytics script')
   if (!title) addError(route, 'missing title')
   if (title.length < 20 || title.length > 80) addWarning(route, `title length is ${title.length}; target range is 20 to 80`)
   if (!description) addError(route, 'missing meta description')

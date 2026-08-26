@@ -219,6 +219,7 @@ const baseHead = ({ title, description, canonical, image = site.logo, imageAlt =
   <meta name="twitter:image:alt" content="${escapeHtml(socialImageAlt)}">
   <link rel="stylesheet" href="/static-site.css">
   <script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@graph': schemaGraph }).replaceAll('<', '\\u003c')}</script>
+  <script defer src="/_vercel/insights/script.js"></script>
   <script src="/static-site.js" defer></script>`
 }
 
