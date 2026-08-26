@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url'
 import path from 'node:path'
 import { articles } from '../content/articles.mjs'
 import { allPressroomAssets, pressroom } from '../content/pressroom-assets.mjs'
+import { searchTargets, searchTopicsFor } from '../content/search-strategy.mjs'
 import { corePages, insightsPage, navigation, pricingCatalog, projects, serviceDirectory, site } from '../content/site-content.mjs'
 
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
@@ -255,7 +256,7 @@ const personSchema = () => ({
   worksFor: { '@id': `${site.origin}/#organization` },
 })
 
-const webPageSchema = ({ canonical, title, description, crumbs, type = 'WebPage', image, mainEntity }) => {
+const webPageSchema = ({ canonical, title, description, crumbs, type = 'WebPage', image, mainEntity, topics = [] }) => {
   const schema = {
     '@type': type,
     '@id': `${canonical}#webpage`,
@@ -264,6 +265,7 @@ const webPageSchema = ({ canonical, title, description, crumbs, type = 'WebPage'
     description,
     isPartOf: { '@id': `${site.origin}/#website` },
     about: { '@id': `${site.origin}/#organization` },
+    ...(topics.length ? { mentions: topics.map((topic) => ({ '@type': 'Thing', name: topic })) } : {}),
     breadcrumb: { '@id': `${canonical}#breadcrumb` },
     inLanguage: 'en-US',
     dateModified: site.modified,
@@ -457,6 +459,7 @@ const renderCorePage = (page) => {
       title: page.title,
       description: page.description,
       crumbs,
+      topics: searchTopicsFor(page.path),
       type: page.pageKind === 'services-hub' || page.pageKind === 'pricing' || page.path === '/work/' ? ['WebPage', 'CollectionPage'] : 'WebPage',
       image: page.media?.[0],
       mainEntity: page.pageKind === 'pricing' ? `${canonical}#offer-catalog` : undefined,
@@ -542,7 +545,7 @@ const renderArticle = (article) => {
     websiteSchema(),
     personSchema(),
     breadcrumbSchema(crumbs, canonical),
-    webPageSchema({ canonical, title: article.title, description: article.description, crumbs, type: 'WebPage', image: cover, mainEntity: `${canonical}#article` }),
+    webPageSchema({ canonical, title: article.title, description: article.description, crumbs, type: 'WebPage', image: cover, mainEntity: `${canonical}#article`, topics: searchTopicsFor(route) }),
     articleSchema(article, canonical),
   ]
   if (article.faqs?.length) schema.push(faqSchema(article.faqs, canonical))
@@ -626,7 +629,7 @@ const renderInsightsIndex = () => {
     organizationSchema(),
     websiteSchema(),
     breadcrumbSchema(crumbs, canonical),
-    webPageSchema({ canonical, title: page.title, description: page.description, crumbs, type: ['WebPage', 'CollectionPage'] }),
+    webPageSchema({ canonical, title: page.title, description: page.description, crumbs, type: ['WebPage', 'CollectionPage'], topics: searchTopicsFor(page.path) }),
   ]
   const cards = articles.map((article) => {
     const route = `/insights/${article.slug}/`
@@ -793,6 +796,12 @@ const build = async () => {
     throw new Error(`Expected 23 generated routes and 24 total pages, found ${generatedRoutes.length} and ${allRoutes.length}`)
   }
   if (new Set(allRoutes).size !== allRoutes.length) throw new Error('Duplicate canonical route detected')
+  const mappedRoutes = Object.keys(searchTargets)
+  const missingSearchTargets = allRoutes.filter((route) => !searchTargets[route])
+  const extraSearchTargets = mappedRoutes.filter((route) => !allRoutes.includes(route))
+  if (missingSearchTargets.length || extraSearchTargets.length) {
+    throw new Error(`Search intent map mismatch. Missing: ${missingSearchTargets.join(', ') || 'none'}. Extra: ${extraSearchTargets.join(', ') || 'none'}`)
+  }
 
   await mkdir(fontDir, { recursive: true })
   for (const [source, destination] of fontAssets) {

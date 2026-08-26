@@ -2,6 +2,7 @@ import { existsSync, readFileSync } from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { articles } from '../content/articles.mjs'
+import { searchTargets } from '../content/search-strategy.mjs'
 import { corePages, insightsPage, site } from '../content/site-content.mjs'
 
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
@@ -124,6 +125,13 @@ if (expectedRoutes.length !== 24 || routeSet.size !== 24) {
   errors.push(`route inventory must contain 24 unique pages; found ${expectedRoutes.length} total and ${routeSet.size} unique`)
 }
 
+const searchTargetRoutes = Object.keys(searchTargets)
+if (searchTargetRoutes.length !== expectedRoutes.length || searchTargetRoutes.some((route) => !routeSet.has(route))) {
+  errors.push(`search intent map must contain the exact ${expectedRoutes.length}-route canonical set`)
+}
+const normalizedPrimaryTargets = searchTargetRoutes.map((route) => searchTargets[route].primary.toLowerCase().trim())
+if (new Set(normalizedPrimaryTargets).size !== normalizedPrimaryTargets.length) errors.push('search intent map contains duplicate primary targets')
+
 const seenTitles = new Map()
 for (const route of expectedRoutes) {
   const file = routeFile(route)
@@ -138,6 +146,7 @@ for (const route of expectedRoutes) {
   const description = metaContent(html, 'name', 'description') || ''
   const h1Count = (html.match(/<h1\b/gi) || []).length
   const types = schemaTypes(html, route)
+  const searchTarget = searchTargets[route]
 
   if (/themohrmedia\.com|\bMohr Media\b/i.test(html)) addError(route, 'contains stale Mohr Media domain or brand text')
   if (/dillonmohr8777@gmail\.com/i.test(html)) addError(route, 'contains the retired personal Gmail address')
@@ -154,6 +163,8 @@ for (const route of expectedRoutes) {
   if (!description) addError(route, 'missing meta description')
   if (description.length < 110 || description.length > 180) addWarning(route, `description length is ${description.length}; target range is 110 to 180`)
   if (h1Count !== 1) addError(route, `expected exactly one h1; found ${h1Count}`)
+  if (!searchTarget?.primary || searchTarget.supporting?.length < 2) addError(route, 'missing a complete governed search target')
+  if (searchTarget && !html.toLowerCase().includes(searchTarget.primary.toLowerCase())) addError(route, `primary search target is not present in page content or structured topics: ${searchTarget.primary}`)
   if (seenTitles.has(title)) addError(route, `duplicates title used by ${seenTitles.get(title)}`)
   seenTitles.set(title, route)
 
