@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "brand": "IMMOHRTAL Marketing Solutions",
   "state": "blocked_missing_exact_portal_and_reauthentication",
   "as_of": "2026-08-25",
@@ -25,19 +25,20 @@
         "immohrtal_identity_state",
         "immohrtal_service_lane",
         "immohrtal_governance_state",
-        "immohrtal_suppression_state",
-        "immohrtal_next_action"
+        "immohrtal_suppression_state"
       ]
     },
     "contact": {
       "creation_gate": "verified_business_contact_source_and_separate_contact_authority",
       "required_properties": [
         "email",
-        "associatedcompanyid",
         "immohrtal_source_locator",
         "immohrtal_contact_basis",
         "immohrtal_opt_out_state",
         "immohrtal_last_verified_on"
+      ],
+      "required_associations": [
+        "company"
       ]
     },
     "deal": {
@@ -47,34 +48,63 @@
         "pipeline",
         "dealstage",
         "amount",
-        "immohrtal_offer_lane",
-        "immohrtal_problem_evidence",
-        "immohrtal_exit_rule",
-        "immohrtal_next_action"
+        "dealtype",
+        "description"
+      ],
+      "required_associations": [
+        "company",
+        "task"
       ]
     }
   },
+  "free_plan_adapter": {
+    "custom_property_limit": 10,
+    "custom_properties_used": 10,
+    "company_custom_properties": [
+      "immohrtal_source_locator",
+      "immohrtal_observed_on",
+      "immohrtal_identity_state",
+      "immohrtal_service_lane",
+      "immohrtal_governance_state",
+      "immohrtal_suppression_state"
+    ],
+    "contact_custom_properties": [
+      "immohrtal_source_locator",
+      "immohrtal_contact_basis",
+      "immohrtal_opt_out_state",
+      "immohrtal_last_verified_on"
+    ],
+    "deal_field_reuse": {
+      "offer_lane": "dealtype",
+      "problem_evidence_and_exit_rule": "description",
+      "next_action_owner_and_due_date": "associated_task"
+    },
+    "pipeline_strategy": "rename_and_reconfigure_default_deal_pipeline_only_after_zero-production-deal-readback",
+    "full_workflows_available": false,
+    "limited_stage_automation_only": true
+  },
   "pipeline": {
     "label": "IMMOHRTAL New Business",
+    "source": "default_deal_pipeline",
     "stages": [
-      "Research Only",
-      "Internally Qualified",
-      "Ready for Draft",
-      "Waiting Approval",
-      "Contacted",
-      "Replied",
-      "Meeting Scheduled",
-      "Proposal Prepared",
-      "Proposal Sent",
-      "Closed Won",
-      "Closed Lost",
-      "Suppressed"
+      { "label": "Account Research", "canonical_stage": "P00_ACCOUNT_RESEARCH" },
+      { "label": "Qualification Pending", "canonical_stage": "P10_QUALIFICATION_PENDING" },
+      { "label": "Qualified", "canonical_stage": "P20_QUALIFIED" },
+      { "label": "Discovery Confirmed", "canonical_stage": "P30_DISCOVERY_CONFIRMED" },
+      { "label": "Solution Scoped", "canonical_stage": "P40_SOLUTION_SCOPED" },
+      { "label": "Proposal Approved Internal", "canonical_stage": "P50_PROPOSAL_APPROVED_INTERNAL" },
+      { "label": "Proposal Sent", "canonical_stage": "P60_PROPOSAL_SENT" },
+      { "label": "Decision Pending", "canonical_stage": "P70_DECISION_PENDING" },
+      { "label": "Closed Won", "canonical_stage": "P80_CLOSED_WON" },
+      { "label": "Closed Lost", "canonical_stage": "P90_CLOSED_LOST" },
+      { "label": "Nurture", "canonical_stage": "P95_NURTURE" },
+      { "label": "Suppressed", "canonical_stage": "P99_SUPPRESSED" }
     ]
   },
   "workflows": [
     {
-      "name": "Govern new company",
-      "trigger": "company created by approved import",
+      "name": "Govern new company manually on Free",
+      "trigger": "company created by approved import and reviewed by Dillon",
       "actions": [
         "set Research Only",
         "require source locator and observation date",
@@ -84,8 +114,8 @@
       "external_message_action": false
     },
     {
-      "name": "Approval before outreach",
-      "trigger": "deal enters Waiting Approval",
+      "name": "Approval before proposal delivery",
+      "trigger": "deal enters Proposal Approved Internal",
       "actions": [
         "require exact recipient and copy preview",
         "require approved postal footer",
@@ -94,21 +124,25 @@
       "external_message_action": false
     },
     {
-      "name": "Reply and meeting handoff",
-      "trigger": "verified reply or meeting receipt",
+      "name": "Discovery handoff",
+      "trigger": "deal enters Discovery Confirmed from a verified meeting receipt",
       "actions": [
         "advance only from provider receipt",
         "assign Dillon as owner",
         "create a next-action task",
         "preserve source thread locator"
       ],
-      "external_message_action": false
+      "external_message_action": false,
+      "free_plan_implementation": "limited_deal_stage_automation"
     }
   ],
   "release_gates": [
     "exact IMMOHRTAL Hub ID confirmed",
     "connector reauthenticated to that portal",
     "object and property permissions read back",
+    "current custom property count leaves capacity for all 10 required properties",
+    "default pipeline has zero production deals or Dillon separately approves a reversible migration",
+    "CRM schema to HubSpot stage mapping verified",
     "Dillon approves configuration write",
     "test company uses non-contact fixture data",
     "rollback and audit receipt verified"

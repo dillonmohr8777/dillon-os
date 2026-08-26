@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0.0",
+  "as_of": "2026-08-25",
+  "purpose": "Private research inventory manifest for nationwide IMMOHRTAL lead qualification",
+  "contains_email_addresses": false,
+  "send_authority": false,
+  "total_records": 137,
+  "unique_emails": 137,
+  "unique_domains": 137,
+  "states_covered": 50,
+  "district_of_columbia_covered": true,
+  "structural_validation": {
+    "state": "passed",
+    "validator": "automation/immohrtal-agency/ops/validate-public-email-batches.mjs",
+    "checks": [
+      "exact schema",
+      "email syntax",
+      "company domain syntax",
+      "official HTTPS source host parity",
+      "unique email",
+      "unique company domain",
+      "two-letter state code",
+      "VERIFIED evidence label",
+      "no en dash or em dash"
+    ]
+  },
+  "independent_source_readback": {
+    "direct_live_page_confirmed": 107,
+    "rendered_or_indexed_official_source_confirmed": 3,
+    "fetch_blocked_pending_second_readback": 27,
+    "send_eligible_from_this_manifest": 0
+  },
+  "batches": [
+    {
+      "file": "2026-08-25-midwest-public-business-emails.csv",
+      "sha256": "3ef23f2cde0079eadd99a0275d93c665ae20d00f74a8f61c8f534764f510f463",
+      "records": 25,
+      "jurisdictions": ["IA", "IL", "IN", "KS", "MI", "MN", "MO", "ND", "NE", "OH", "SD", "WI"]
+    },
+    {
+      "file": "2026-08-25-northeast-public-business-emails.csv",
+      "sha256": "42f98327d5370b11d76b4f41358bb34daa60818a43af4572b3f74c9625de96d8",
+      "records": 25,
+      "jurisdictions": ["CT", "DC", "DE", "MA", "MD", "ME", "NH", "NJ", "NY", "RI", "VT"]
+    },
+    {
+      "file": "2026-08-25-philly-core-trades.csv",
+      "sha256": "92da5c56665b74b5e0bb4748d0427df8e3ccec40a7a66dec52dede50e649b458",
+      "records": 37,
+      "jurisdictions": ["PA"]
+    },
+    {
+      "file": "2026-08-25-south-public-business-emails.csv",
+      "sha256": "2d276e28148e438c2a02bab81c452a2f49d4179f475dcd6e5c85a143bbb9719a",
+      "records": 25,
+      "jurisdictions": ["AL", "AR", "FL", "GA", "KY", "LA", "MS", "NC", "OK", "SC", "TN", "TX", "VA", "WV"]
+    },
+    {
+      "file": "2026-08-25-west-public-business-emails.csv",
+      "sha256": "a50119b1219f73f2642ef4e831481e5c749ca697c81c97a45cc17171162a7e15",
+      "records": 25,
+      "jurisdictions": ["AK", "AZ", "CA", "CO", "HI", "ID", "MT", "NM", "NV", "OR", "UT", "WA", "WY"]
+    }
+  ],
+  "release_gates": [
+    "second source readback for the 27 fetch-blocked records",
+    "contact-level suppression and relationship checks",
+    "verified IMMOHRTAL outbound From identity",
+    "approved business postal address and commercial-email footer",
+    "exact recipient and exact copy approval",
+    "bounce and opt-out controls"
+  ],
+  "truth": "This manifest proves the research inventory shape and coverage. It does not authorize CRM import, drafting, sending, connection requests, calendar changes, or outreach."
+}
