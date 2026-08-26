@@ -1,7 +1,7 @@
 ---
 tags: [index, moc, brain]
 canonical: 12_Brain
-updated: 2026-08-15
+updated: 2026-08-26
 ---
 
 # INDEX — the front door
@@ -36,6 +36,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 ## Concepts
 
 - [[12_Brain/03_Concepts/Second Brain Architecture|Second Brain Architecture]] — vault-as-codebase: raw → compiled pages → linked graph.
+- [[12_Brain/03_Concepts/Dillon Command Center|Dillon Command Center]] — umbrella daily orchestrator; eight parallel scout lanes, one approval board.
 - [[12_Brain/03_Concepts/Context Economy|Context Economy]] — read by trail not sweep; tier model use.
 - [[12_Brain/03_Concepts/Research Verification Loop|Research Verification Loop]] — fan-out research with a skeptic gate.
 - [[12_Brain/03_Concepts/Truth Hierarchy|Truth Hierarchy]] — live surfaces beat memory beat artifacts.

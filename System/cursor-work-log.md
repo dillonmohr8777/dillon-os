@@ -1,6 +1,6 @@
 ---
 tags: [system, cursor, work-log]
-last_updated: 2026-07-12T19:40:00Z
+last_updated: 2026-08-26T13:10:00Z
 ---
 
 # Cursor Work Log
@@ -117,7 +117,33 @@ Autonomous loop session 2026-07-12. All work local and reversible unless noted.
 - Melissa invoicing reconciliation
 - Gateway soft-restart if heartbeat remains stale >30m (optional ops approval)
 
+---
+
+## Session 2026-08-26 — Dillon Command Center umbrella
+
+**Task:** Consolidate competitive-task / morning-loop automations into one umbrella workflow with parallel scout lanes.
+
+**Evidence:**
+- Vault audit: 15+ Codex automations, 54 Claude routines, duplicate competitive-task-consolidation branches (~80), Morning Loop 3-step cron
+- Unified branch `unified-competitive-task-workflow-57a6` had canonical `dillon-command` design — ported to main path
+- Preflight: frontmatter 40/40, site-health dry-run, queue-status ok
+- Four parallel scout subagents (comms, clients, websites+outreach, ads+reporting+intelligence)
+
+**Files created/updated:**
+- `_os/automation/bin/dillon-command.js`, `profiles/dillon-command.json`
+- `.claude/skills/dillon-command/SKILL.md`
+- `12_Brain/03_Concepts/Dillon Command Center.md`
+- `12_Brain/registry/automations.json` (umbrella entry)
+- `handoffs/Morning Loop Scheduled Agent Setup.md` (superseded prompt)
+- `Daily-Briefs/am-report-2026-08-26.md`, `plan-2026-08-26.md`, `pulse-today.md`
+- `automation-runs/dillon-command/2026-08-26/` full run artifacts
+
+**Tests:** `node --test _os/automation/tests/automation.test.js` 11/11; brain-hud + public-safety 19/19 pass.
+
+**Blockers:** Live Slack + Ads MCP unavailable in cloud; Tier 2 queue prepared only.
+
 ## Next Safe Task
 
+- Point Cursor cron automation at `dillon-command --agent-mode` prompt (see handoffs doc)
+- Close superseded competitive-task-consolidation branches after merge
 - **R1 prep:** Extend `_os/reporting/build-report.js` documentation or stub client template map (local only)
-- **G5:** Document Hermes cron job JSON for dillon-* jobs when cron API path confirmed
