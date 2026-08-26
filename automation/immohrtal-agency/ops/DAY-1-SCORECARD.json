@@ -40,7 +40,7 @@
     "hiring_or_contracting": false,
     "crm_or_account_mutation": false,
     "scheduled_or_external_runtime": false,
-    "truth_note": "The local office runner itself cannot mutate provider drafts or schedules. During the supervised launch run, Google Calendar saved one public IMMOHRTAL appointment schedule under Dillon's verified primary calendar. The 08:30 Codex heartbeat is active. The separate 08:10 Windows task is disabled and its legacy source is excluded."
+    "truth_note": "The local office runner itself cannot mutate provider drafts or schedules. During the supervised launch run, Google Calendar saved one public IMMOHRTAL appointment schedule under Dillon's verified primary calendar. Its exact public URL was captured and independently resolved to the live appointment page. The 08:30 Codex heartbeat is active. The separate 08:10 Windows task is disabled and its legacy source is excluded."
   },
   "current_evidence": {
     "existing_runtime_kind": "canonical_company_requalification_with_legacy_source_isolation",
@@ -82,7 +82,8 @@
     "booking_page_availability": "weekdays_9am_to_5pm_calendar_conflicts_blocked",
     "booking_page_meeting_method": "Google Meet",
     "booking_page_custom_questions": 1,
-    "booking_page_public_url_readback_state": "saved_and_visible_in_calendar_public_link_copy_control_present_url_value_not_yet_captured",
+    "booking_page_public_url": "https://calendar.app.google/CSD1BzHQJtCFhEdY9",
+    "booking_page_public_url_readback_state": "captured_and_live_verified",
     "approved_business_postal_locator_found": false,
     "zoho_opaque_access_locator_found": false,
     "activation_human_or_provider_gates_remaining": 5,

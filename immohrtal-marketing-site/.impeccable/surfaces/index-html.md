@@ -11,7 +11,7 @@ related_targets: ["src/App.tsx", "src/styles.css", "src/components/ClientParticl
 
 - Mode: Persuade.
 - Audience: Owners and marketing leaders at established service businesses whose website looks dated, is hard to find, explains the offer poorly, or creates avoidable busywork.
-- Primary action: Open a direct website conversation by email.
+- Primary action: Book the verified 30 minute IMMOHRTAL Growth Fit Call, with direct email retained as the fallback contact path.
 - Offer: A memorable website, stronger visibility in Google and AI answers, and useful AI workers that prepare repetitive work while Dillon keeps control.
 - Proof: 21 currently verified public-safe client and partner marks, seven public web projects, two dated Google AI Overview captures, named operating artifacts, and five bounded agent roles.
 - Risk boundary: Search placement can change, project scope varies, illustrative interfaces remain labeled, and consequential external actions stay human-gated.
@@ -35,7 +35,7 @@ related_targets: ["src/App.tsx", "src/styles.css", "src/components/ClientParticl
 | 4. Operating artifacts | See how website checks, business facts, and HubSpot connect | Website check, business map, and AI worker interfaces | Three independently drifting work windows; illustrative status is explicit |
 | 5. Workers | Connect the robots to five clear jobs | Scout, Atlas, Forge, Relay, and Proof | Five distinct personalities and silhouettes presented through one agent-station rhythm with shared WebGL workers and receipts |
 | 6. System | Understand how the company executes | Discover, diagnose, design, build, and operate | Pale ordered sequence ending in the human-authority approval line |
-| 7. Action | Start a focused conversation | Direct email channel | Centered IMMOHRTAL mark, concise promise, one primary CTA |
+| 7. Action | Start a focused conversation | Verified Google Calendar booking page with direct email fallback | Centered IMMOHRTAL mark, concise promise, one primary CTA |
 
 ## Signature interaction contract
 

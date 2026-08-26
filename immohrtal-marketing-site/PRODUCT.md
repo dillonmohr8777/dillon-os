@@ -50,6 +50,7 @@ The 10 launch guides cover AEO versus GEO, Google AI Overviews, website redesign
 - The exact public name is IMMOHRTAL Marketing Solutions.
 - The canonical public origin is `https://www.immohrtalmarketing.com`. The apex redirects permanently to this Vercel production host. Canonical links, social metadata, structured-data identifiers, sitemap entries, feeds, crawler directives, discovery summaries, and public asset URLs must resolve to the canonical origin.
 - Every current design decision, component, page pattern, interaction, asset treatment, particle sequence, agent station, evidence window, and responsive behavior in this project belongs to IMMOHRTAL Marketing Solutions. No former brand retains public ownership of this system.
+- The verified public booking destination is `https://calendar.app.google/CSD1BzHQJtCFhEdY9`. Primary conversion actions may open this 30 minute IMMOHRTAL Growth Fit Call in a new tab. Direct email remains available as the fallback contact path.
 - The primary visual authority is `https://dillon-mohr-primary-portfolio.netlify.app/`.
 - The source quarry for the 3D agents is the verified July 2026 MOHR MEDIA build at commit `05968bbe9f713d0a06fc1c638072f4ec6e93b3db`; that name may appear only as non-public historical provenance. Its old brand, domain, metrics, pricing, and ad-led positioning are not product truth and must never appear in public output.
 - Preserve the exact IMMOHRTAL logo artwork and its cobalt, cyan, mint, platinum, and gunmetal lineage.

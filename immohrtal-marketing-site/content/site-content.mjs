@@ -5,6 +5,7 @@ export const site = {
   name: 'IMMOHRTAL Marketing Solutions',
   shortName: 'IMMOHRTAL',
   email: 'dillon@immohrtalmarketing.com',
+  bookingUrl: 'https://calendar.app.google/CSD1BzHQJtCFhEdY9',
   logo: '/brand/immohrtal-logo.png',
   portrait: '/people/dillon-mohr.jpg',
   published: '2026-08-24',
@@ -414,8 +415,8 @@ const baseCorePages = [
     h1: 'Show me what is not working. I’ll help find the right first move.',
     lede: 'Send the current website, tell me where people get stuck, and explain what you need the site or your team to do better. You do not need to know the technical term for the problem.',
     actions: [
-      { label: 'Tell Dillon what is not working', href: `mailto:${site.email}?subject=IMMOHRTAL%20website%20help` },
-      { label: 'See Dillon’s work', href: '/work/', secondary: true },
+      { label: 'Book a 30 minute growth call', href: site.bookingUrl, external: true },
+      { label: 'Email Dillon instead', href: `mailto:${site.email}?subject=IMMOHRTAL%20website%20help`, secondary: true },
     ],
     sections: [
       {
@@ -425,11 +426,11 @@ const baseCorePages = [
         html: `<div class="portrait-layout">
           <img class="portrait" src="${site.portrait}" width="700" height="700" alt="Portrait of Dillon Mohr of IMMOHRTAL Marketing Solutions" loading="eager">
           <div>
-            <p>If your website needs to look better, explain your offer more clearly, get found more often, or hand less busywork to your team, email Dillon at <a href="mailto:${site.email}">${site.email}</a>.</p>
-            <p>The email link opens your own mail app. You see and control exactly what gets sent.</p>
+            <p>If your website needs to look better, explain your offer more clearly, get found more often, or hand less busywork to your team, book a focused 30 minute call or email Dillon at <a href="mailto:${site.email}">${site.email}</a>.</p>
+            <p>The booking page shows live availability and creates a Google Meet automatically. Email remains available when that is easier.</p>
             <div class="contact-channel">
-              <a class="button" href="mailto:${site.email}?subject=IMMOHRTAL%20website%20help">Tell Dillon what needs work</a>
-              <a class="button secondary" href="/about/">About the studio</a>
+              <a class="button" href="${site.bookingUrl}" target="_blank" rel="noreferrer">Book the growth call</a>
+              <a class="button secondary" href="mailto:${site.email}?subject=IMMOHRTAL%20website%20help">Email Dillon instead</a>
             </div>
           </div>
         </div>`,

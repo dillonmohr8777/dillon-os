@@ -2,6 +2,7 @@ import { lazy, Suspense, useEffect, useRef, useState, type CSSProperties } from 
 import { agentRoles, clients, projects, type Project } from './data'
 
 const ClientParticleSequence = lazy(() => import('./components/ClientParticleSequence').then((module) => ({ default: module.ClientParticleSequence })))
+const bookingUrl = 'https://calendar.app.google/CSD1BzHQJtCFhEdY9'
 
 const servicePlatforms = [
   { name: 'Google', logo: '/pressroom/brands/google.png', seed: 1001 },
@@ -76,7 +77,7 @@ function Navigation() {
         <a href="/insights/" onClick={() => setOpen(false)}>Guides</a>
         <a href="/about/" onClick={() => setOpen(false)}>About</a>
       </nav>
-      <a className="rail-cta" href="/contact/">Let’s talk <ArrowIcon /></a>
+      <a className="rail-cta" href={bookingUrl} target="_blank" rel="noreferrer" aria-label="Book an IMMOHRTAL growth call">Book a call <ArrowIcon /></a>
     </header>
   )
 }
@@ -390,7 +391,7 @@ function App() {
           <LogoMark className="closing-logo" />
           <h2>Your website should make it easier for the right customer to say yes.</h2>
           <p>Show me what feels broken. I’ll help you find the right first move.</p>
-          <a className="closing-cta" href="/contact/">Show me what to fix <ArrowIcon /></a>
+          <a className="closing-cta" href={bookingUrl} target="_blank" rel="noreferrer">Book the growth call <ArrowIcon /></a>
         </section>
       </main>
       <footer className="site-footer">
@@ -414,7 +415,7 @@ function App() {
           <a href="/about/">About</a>
           <a href="/contact/">Contact</a>
         </nav>
-        <a className="footer-action" href="/contact/">Fix my website <ArrowIcon /></a>
+        <a className="footer-action" href={bookingUrl} target="_blank" rel="noreferrer">Book a growth call <ArrowIcon /></a>
         <p className="trademark-note">Google, HubSpot, ChatGPT, Claude, and Perplexity are trademarks of their respective owners. Their appearance identifies platforms discussed in the work and does not imply endorsement.</p>
       </footer>
     </>

@@ -157,7 +157,7 @@ for (const testCase of cases) {
     || metrics.rowCount !== 7
     || metrics.offerCount !== 7
     || priceMismatch
-    || metrics.contactTargets.some((href) => href !== '/contact/' && href !== '/services/')
+    || metrics.contactTargets.some((href) => href !== '/contact/' && href !== '/services/' && href !== 'https://calendar.app.google/CSD1BzHQJtCFhEdY9')
     || metrics.scrollWidth > metrics.viewport
     || !metrics.bodyFont.includes('Manrope Variable')
     || !metrics.displayFont.includes('Unbounded Variable')
