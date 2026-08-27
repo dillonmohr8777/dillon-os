@@ -23,7 +23,7 @@ directive feed and skips any other list format.
 
 - [ ] Keep Omega / Onsite / KJB / Replenish Ads truth honest; no API mutation while developer quota is exhausted.
 - [ ] QA the preview-ready Shadow, KJB, and Omega landing pages; do not publish.
-- [ ] Brief the Onsite Divi hero repair from the live homepage; no WordPress deploy.
+- [ ] Map the Vercel source for https://www.immohrtalmarketing.com; do not deploy.
 - [ ] Capture the Cursor private-worker standing order into compiled notes, not a second queue.
 - [ ] Prove gateway idle vs stuck from receipts; do not restart Hermes.
 
