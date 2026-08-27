@@ -1,4 +1,4 @@
-# Codex image queue — generated 2026-08-26
+# Codex image queue — generated 2026-08-27
 
 100 rebuild targets own no usable photographs. Each has a brief in
 this directory specifying exactly what to generate, slot by slot.
@@ -87,37 +87,37 @@ this directory specifying exactly what to generate, slot by slot.
 | 64 | Saul's Landscaping | garden-centre | Palmyra | saul-s-landscaping.json |
 | 65 | Delong's Automotive | car-repair | Morgantown | delong-s-automotive.json |
 | 66 | Emergency Rooter Services | plumber | York | emergency-rooter-services.json |
-| 67 | Fortitude & Co | fitness-centre | Philadelphia | fortitude-and-co.json |
-| 68 | BG Electric Service LLC | electrician | Philadelphia | bg-electric-service-llc.json |
-| 69 | Chestnut Hill Animal Hospital | veterinary | Erdenheim | chestnut-hill-animal-hospital.json |
-| 70 | County Line Veterinary Hospital | veterinary | Hatboro | county-line-veterinary-hospital.json |
-| 71 | Hortense T. Moss Health Center | doctor | Philadelphia | hortense-t-moss-health-center.json |
-| 72 | Grand Sport Auto Body | car-repair | Collegeville | grand-sport-auto-body.json |
-| 73 | NewAge® Industries | works | Southampton | newage-industries.json |
-| 74 | Malvern Veterinary Hospital | veterinary |  | malvern-veterinary-hospital.json |
-| 75 | Bimbo Bakeries USA | bakery | Bethlehem | bimbo-bakeries-usa.json |
-| 76 | The Juice Merchant | restaurant | Narberth | the-juice-merchant.json |
-| 77 | Sciacca Service Center | car-repair |  | sciacca-service-center.json |
-| 78 | Clear Vision Auto Glass | car-repair | Chadds Ford | clear-vision-auto-glass.json |
-| 79 | Upscale Consignments Boutiques Maria Fe's | clothes |  | upscale-consignments-boutiques-maria-fe-s.json |
-| 80 | West Philadelphia VA Clinic | clinic |  | west-philadelphia-va-clinic.json |
-| 81 | Danger Salon | hairdresser | Philadelphia | danger-salon.json |
-| 82 | Schaeffer Floor Coverings | flooring | Bechtelsville | schaeffer-floor-coverings.json |
-| 83 | Bei Jing Chinese Food | restaurant | Norristown | bei-jing-chinese-food.json |
-| 84 | Golden Sea | restaurant | Blue Bell | golden-sea.json |
-| 85 | Gallo Insurance Agency | insurance | Philadelphia | gallo-insurance-agency.json |
-| 86 | Glocker and Co. Inc. Realtors | estate-agent | Boyertown | glocker-and-co-inc-realtors.json |
-| 87 | Accurate Temperature | hvac | Bensalem | accurate-temperature.json |
-| 88 | Wynnewood Eyecare | optometrist |  | wynnewood-eyecare.json |
-| 89 | BPM Fitness | fitness-centre |  | bpm-fitness.json |
-| 90 | First Class Auto Land | car | Philadelphia | first-class-auto-land.json |
-| 91 | Bar 31 | bar | Ambler | bar-31.json |
-| 92 | August Moon | restaurant | Norristown | august-moon.json |
-| 93 | Theory | clothes | Pottstown | theory.json |
-| 94 | Highline Motors | car-repair | Aston | highline-motors.json |
-| 95 | Fit4Mom | fitness-centre | Warrington | fit4mom.json |
-| 96 | Belle Palace Nail Spa | beauty | Warrington | belle-palace-nail-spa.json |
-| 97 | Anthropology | clothes | Devon | anthropology.json |
-| 98 | Barnes Financial Group | accountant | Media | barnes-financial-group.json |
-| 99 | Weathers Motors & Auto Sales | car | Media | weathers-motors-and-auto-sales.json |
-| 100 | Train and Nourish | fitness-centre | Philadelphia | train-and-nourish.json |
+| 67 | The Village II | jewelry |  | the-village-ii.json |
+| 68 | Summit Landscaping Inc. | gardener | Dallas | summit-landscaping-inc.json |
+| 69 | Fortitude & Co | fitness-centre | Philadelphia | fortitude-and-co.json |
+| 70 | BG Electric Service LLC | electrician | Philadelphia | bg-electric-service-llc.json |
+| 71 | Chestnut Hill Animal Hospital | veterinary | Erdenheim | chestnut-hill-animal-hospital.json |
+| 72 | County Line Veterinary Hospital | veterinary | Hatboro | county-line-veterinary-hospital.json |
+| 73 | Hortense T. Moss Health Center | doctor | Philadelphia | hortense-t-moss-health-center.json |
+| 74 | Grand Sport Auto Body | car-repair | Collegeville | grand-sport-auto-body.json |
+| 75 | NewAge® Industries | works | Southampton | newage-industries.json |
+| 76 | Malvern Veterinary Hospital | veterinary |  | malvern-veterinary-hospital.json |
+| 77 | Bimbo Bakeries USA | bakery | Bethlehem | bimbo-bakeries-usa.json |
+| 78 | The Juice Merchant | restaurant | Narberth | the-juice-merchant.json |
+| 79 | Sciacca Service Center | car-repair |  | sciacca-service-center.json |
+| 80 | Clear Vision Auto Glass | car-repair | Chadds Ford | clear-vision-auto-glass.json |
+| 81 | Upscale Consignments Boutiques Maria Fe's | clothes |  | upscale-consignments-boutiques-maria-fe-s.json |
+| 82 | West Philadelphia VA Clinic | clinic |  | west-philadelphia-va-clinic.json |
+| 83 | Danger Salon | hairdresser | Philadelphia | danger-salon.json |
+| 84 | Schaeffer Floor Coverings | flooring | Bechtelsville | schaeffer-floor-coverings.json |
+| 85 | Out-tac Outfitters | outdoor |  | out-tac-outfitters.json |
+| 86 | Bei Jing Chinese Food | restaurant | Norristown | bei-jing-chinese-food.json |
+| 87 | Golden Sea | restaurant | Blue Bell | golden-sea.json |
+| 88 | Gallo Insurance Agency | insurance | Philadelphia | gallo-insurance-agency.json |
+| 89 | Glocker and Co. Inc. Realtors | estate-agent | Boyertown | glocker-and-co-inc-realtors.json |
+| 90 | Accurate Temperature | hvac | Bensalem | accurate-temperature.json |
+| 91 | Wynnewood Eyecare | optometrist |  | wynnewood-eyecare.json |
+| 92 | BPM Fitness | fitness-centre |  | bpm-fitness.json |
+| 93 | First Class Auto Land | car | Philadelphia | first-class-auto-land.json |
+| 94 | Bar 31 | bar | Ambler | bar-31.json |
+| 95 | August Moon | restaurant | Norristown | august-moon.json |
+| 96 | Theory | clothes | Pottstown | theory.json |
+| 97 | Highline Motors | car-repair | Aston | highline-motors.json |
+| 98 | Fit4Mom | fitness-centre | Warrington | fit4mom.json |
+| 99 | Belle Palace Nail Spa | beauty | Warrington | belle-palace-nail-spa.json |
+| 100 | Anthropology | clothes | Devon | anthropology.json |
