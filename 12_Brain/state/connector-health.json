@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "recorded_by": "cursor/private-worker 2026-08-27 via Composio MCP",
-  "recorded_at_utc": "2026-08-27T10:05:00Z",
+  "recorded_at_utc": "2026-08-27T12:06:00Z",
   "note": "Written by an MCP-capable agent, read by _os/automation/bin/connector-health.js. Every status below was observed, not assumed. Do not hand-edit to open a gate.",
   "connectors": [
     {
@@ -59,7 +59,7 @@
       "toolkit": "googleads",
       "status": "active",
       "read_verified": false,
-      "last_verified_utc": "2026-08-27T01:08:11Z",
+      "last_verified_utc": "2026-08-27T12:06:00Z",
       "accounts": [
         {
           "id": "googleads_shover-norard",
@@ -68,14 +68,12 @@
         }
       ],
       "blocker": {
-        "http": 429,
-        "code": "RESOURCE_EXHAUSTED",
-        "rate_scope": "DEVELOPER",
-        "rate_name": "Number of operations for basic access",
-        "retry_delay_seconds": 34088,
-        "request_id": "8UURAZ1tirl0U6GDC23IQQ"
+        "http": 403,
+        "code": "USER_PERMISSION_DENIED",
+        "rate_scope": null,
+        "detail": "LIST_ACCESSIBLE_CUSTOMERS succeeded. GAQL searchStream needs a manager login-customer-id header that the Composio tool does not expose."
       },
-      "note": "Connection remains ACTIVE. LIST_ACCESSIBLE_CUSTOMERS returned 429 DEVELOPER basic-access quota with retry ~9.5h. LIST_SUB_ACCOUNTS hit CUSTOMER_NOT_ENABLED on the default customer. Do not treat this as a re-auth problem. No pause/enable/budget mutation was attempted."
+      "note": "Connection remains ACTIVE. LIST_ACCESSIBLE_CUSTOMERS returned 16 resource names (quota recovered; not 429). Child-account GAQL returned USER_PERMISSION_DENIED for login-customer-id. One listed customer returned CUSTOMER_NOT_ENABLED. Do not treat this as a re-auth problem. No pause/enable/budget. Replenish invite untouched."
     },
     {
       "toolkit": "google_analytics",

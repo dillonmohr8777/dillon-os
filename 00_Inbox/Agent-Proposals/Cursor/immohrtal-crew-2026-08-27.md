@@ -2,7 +2,7 @@
 note_type: proposal
 status: worked
 created: 2026-08-27
-verified_at: 2026-08-27T10:01:37.5140871Z
+verified_at: 2026-08-27T12:01:07.9674474Z
 agent: marketing-chief
 privacy: redacted
 external_action_attempted: none
@@ -13,9 +13,9 @@ source_refs:
 
 # Immohrtal crew - 2026-08-27
 
-cycle `CREW-20260827-060133842` outcome **worked**
+cycle `CREW-20260827-080104437` outcome **worked**
 
-Highest remaining automatic action this tick: Search Console read for Shadow, Onsite, KJB, and the agency site. Google Ads was not called. Retry remains 2026-08-27T10:36:19Z. `mail_ready=hold`.
+Highest remaining automatic action this tick: Google Ads LIST after the 429 window. LIST succeeded (16 customers). Campaign GAQL still needs a manager login-customer-id header, so no pause/enable/budget. Replenish invite untouched. `mail_ready=hold`.
 
 ## Lanes
 
