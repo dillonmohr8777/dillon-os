@@ -18,21 +18,21 @@ Four source-ready radar rows. No send. No Gmail draft create. No CRM write. No p
 
 Sender identity for later human approval: Dillon Mohr / IMMOHRTAL Marketing Solutions / https://www.immohrtalmarketing.com
 
-## Packet 1 - The Rouse Group Development Co.
+## Packet 1 - The Rouse Group Development Co. / suburbansolutions.com
 
-- Domain: suburbansolutions.com
-- Contact on file: none (phone and address empty in preflight)
-- Status: HOLD - missing official phone; SHOW requires an official-source-verified phone
-- Draft subject: A homepage direction for The Rouse Group Development Co.
-- Draft body: Hi there, I put together a homepage direction for The Rouse Group Development Co. It is a concept, not a live replacement. If it is useful, I can send a concise breakdown of what I would keep, what I would change, and where AEO or GEO could fit.
-- Channel: email
+- Domain in radar preflight: suburbansolutions.com
+- Live check 2026-08-27T08:02Z: HTTP 200
+- Live identity: Suburban Solutions, award-winning moving company since 2014 (Philadelphia / Washington DC). Not a development company.
+- Contact: no official published phone on the homepage; form fields only
+- Status: DO NOT PITCH this cycle - radar name/domain mismatch. Do not send a Rouse Group packet to a moving company.
 - delivery_status: DRAFT_ONLY_DO_NOT_SEND
 
 ## Packet 2 - Affordable Dentures & Implants
 
 - Domain: affordabledentures.com
-- Contact: phone from official JSON-LD; address Morrisville NC from official JSON-LD
-- Status: HOLD pending Dillon exact-recipient approval
+- Live check 2026-08-27T08:02Z: HTTP 429 / bot challenge. Do not treat the page as live-verified this tick.
+- Contact on file remains JSON-LD from preflight only
+- Status: HOLD pending live reverification and Dillon exact-recipient approval
 - Draft subject: A homepage direction for Affordable Dentures & Implants
 - Channel: email
 - delivery_status: DRAFT_ONLY_DO_NOT_SEND

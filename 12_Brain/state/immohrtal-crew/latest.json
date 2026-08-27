@@ -1,8 +1,8 @@
 {
     "schema":  1,
-    "cycle_id":  "CREW-20260827-020346300",
-    "started_at_utc":  "2026-08-27T06:03:46.3008974Z",
-    "finished_at_utc":  "2026-08-27T06:03:49.7266363Z",
+    "cycle_id":  "CREW-20260827-040513626",
+    "started_at_utc":  "2026-08-27T08:05:13.6260881Z",
+    "finished_at_utc":  "2026-08-27T08:05:19.9281451Z",
     "outcome":  "worked",
     "skip_reason":  null,
     "mail_ready":  "hold",
@@ -17,13 +17,13 @@
                       "id":  "reliability",
                       "agent":  "reliability-scout",
                       "status":  "ok",
-                      "summary":  "tasks healthy=4/4; daily-driver=worked_with_failures; loop-fail-lines=3; agency-lease-expired=True",
+                      "summary":  "tasks healthy=4/4; daily-driver=noop; loop-fail-lines=5; agency-lease-expired=True",
                       "evidence":  [
                                        "12_Brain/state/claude-daily-driver.json",
                                        "hidden-scheduled-tasks.tsv"
                                    ],
                       "detail":  {
-                                     "driver_outcome":  "worked_with_failures",
+                                     "driver_outcome":  "noop",
                                      "agency_lease":  {
                                                           "runtime_id":  "IMMOHRTAL-DAY2-20260826-191919-FINAL",
                                                           "expires_at":  "2026-08-27T01:19:19.718Z",
@@ -56,7 +56,7 @@
                                                        "healthy":  true
                                                    }
                                                ],
-                                     "loop_fail_lines":  3
+                                     "loop_fail_lines":  5
                                  }
                   },
                   {
@@ -72,7 +72,7 @@
                                                         "automation_id":  "connector-health",
                                                         "status":  "ok",
                                                         "window_hours":  48,
-                                                        "snapshot_age_hours":  4.86,
+                                                        "snapshot_age_hours":  6.89,
                                                         "counts":  {
                                                                        "connectors":  5,
                                                                        "usable":  1,
@@ -84,7 +84,7 @@
                                                                                "status":  "active",
                                                                                "read_verified":  true,
                                                                                "observed_at_utc":  "2026-08-27T01:12:34.000Z",
-                                                                               "age_hours":  4.85,
+                                                                               "age_hours":  6.88,
                                                                                "usable":  true,
                                                                                "note":  "Live and usable. Two accounts: pass the account id explicitly, since account_selection is required."
                                                                            },
@@ -93,7 +93,7 @@
                                                                                "status":  "active",
                                                                                "read_verified":  false,
                                                                                "observed_at_utc":  "2026-08-27T01:08:11.000Z",
-                                                                               "age_hours":  4.93,
+                                                                               "age_hours":  6.95,
                                                                                "usable":  false,
                                                                                "note":  "Connection remains ACTIVE. LIST_ACCESSIBLE_CUSTOMERS returned 429 DEVELOPER basic-access quota with retry ~9.5h. LIST_SUB_ACCOUNTS hit CUSTOMER_NOT_ENABLED on the default customer. Do not treat this as a re-auth problem. No pause/enable/budget mutation was attempted."
                                                                            },
@@ -102,7 +102,7 @@
                                                                                "status":  "active",
                                                                                "read_verified":  false,
                                                                                "observed_at_utc":  "2026-08-18T19:25:22.000Z",
-                                                                               "age_hours":  202.64,
+                                                                               "age_hours":  204.67,
                                                                                "usable":  false,
                                                                                "note":  "Connection reported active by COMPOSIO_MANAGE_CONNECTIONS but no read was executed this session, so read_verified stays false. Verify before relying on it."
                                                                            },
@@ -111,7 +111,7 @@
                                                                                "status":  "not_connected",
                                                                                "read_verified":  false,
                                                                                "observed_at_utc":  "2026-08-18T19:25:22.000Z",
-                                                                               "age_hours":  202.64,
+                                                                               "age_hours":  204.67,
                                                                                "usable":  false,
                                                                                "note":  "Not in the connected-toolkit list. `instagram` is connected, which is not the same as Meta Ads. Routines needing Meta delivery data stay blocked."
                                                                            },
@@ -120,7 +120,7 @@
                                                                                "status":  "not_connected",
                                                                                "read_verified":  false,
                                                                                "observed_at_utc":  "2026-08-18T19:25:22.000Z",
-                                                                               "age_hours":  202.64,
+                                                                               "age_hours":  204.67,
                                                                                "usable":  false,
                                                                                "note":  "Not connected via Composio. The jason-fallon-hubspot-agent repo holds a portal-guarded path; treat that as the route, not this connector."
                                                                            }
@@ -149,8 +149,8 @@
                   {
                       "id":  "qa",
                       "agent":  "qa-critic",
-                      "status":  "fail_publish",
-                      "summary":  "preview QA: 1/3 fail for publish; no artifact edits by critic",
+                      "status":  "ok",
+                      "summary":  "preview QA: 0/3 fail for publish; no artifact edits by critic",
                       "evidence":  [
                                        "_os/creative-factory/landing-pages/"
                                    ],
@@ -159,10 +159,10 @@
                                                    {
                                                        "client":  "Omega",
                                                        "path":  "_os/creative-factory/landing-pages/omega-outdoor-living.html",
-                                                       "ok":  false,
-                                                       "publish":  "fail",
+                                                       "ok":  true,
+                                                       "publish":  "hold",
                                                        "defects":  [
-                                                                       "no photos"
+
                                                                    ],
                                                        "checks":  [
                                                                       {
@@ -180,7 +180,7 @@
                                                                       },
                                                                       {
                                                                           "check":  "img",
-                                                                          "count":  0
+                                                                          "count":  3
                                                                       }
                                                                   ]
                                                    },
@@ -312,8 +312,8 @@
                                                        "rank":  3,
                                                        "item":  "Independent QA of preview LPs",
                                                        "lane":  "qa-critic",
-                                                       "status":  "fail_publish",
-                                                       "note":  "1 fail for publish"
+                                                       "status":  "ok",
+                                                       "note":  "0 fail for publish"
                                                    },
                                                    {
                                                        "rank":  4,
