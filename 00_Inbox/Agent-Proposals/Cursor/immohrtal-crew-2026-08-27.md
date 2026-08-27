@@ -2,7 +2,7 @@
 note_type: proposal
 status: worked
 created: 2026-08-27
-verified_at: 2026-08-27T08:05:19.9281451Z
+verified_at: 2026-08-27T08:07:19.2924445Z
 agent: marketing-chief
 privacy: redacted
 external_action_attempted: none
@@ -13,7 +13,9 @@ source_refs:
 
 # Immohrtal crew - 2026-08-27
 
-cycle `CREW-20260827-040513626` outcome **worked**
+cycle `CREW-20260827-040715684` outcome **worked**
+
+Highest remaining automatic action this tick: first-party photos on Shadow and KJB preview LPs, plus live outreach identity checks. Ads still 429 until 2026-08-27T10:36:19Z. `mail_ready=hold`.
 
 ## Lanes
 

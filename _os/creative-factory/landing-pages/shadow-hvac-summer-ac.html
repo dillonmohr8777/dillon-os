@@ -124,6 +124,21 @@
     }
     .benefit h3 { color: var(--ember); margin-bottom: .5rem; font-size: 1rem; }
     .benefit p { color: var(--muted); font-size: .9rem; }
+    .projects {
+      padding: 0 6vw 4rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+    @media (max-width: 800px) { .projects { grid-template-columns: 1fr; } }
+    .projects img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 16px;
+      display: block;
+      border: 1px solid rgba(255,255,255,.06);
+    }
     footer {
       padding: 2rem 6vw;
       text-align: center;
@@ -167,6 +182,12 @@
       <h3>Emergency Ready</h3>
       <p>Furnace out at 2 a.m.? We answer. Real technicians, not an answering machine.</p>
     </div>
+  </section>
+  <section class="projects" aria-label="Shadow Heating and Cooling service photos">
+    <!-- First-party WordPress uploads from shadowheatingandcooling.com, live HTTP 200 on 2026-08-27. -->
+    <img src="https://shadowheatingandcooling.com/wp-content/uploads/2025/03/air-conditioner-cleaning-and-man-with-electrical-machine-check-in-a-home-with-ac-repair-maintenan.jpg" alt="Shadow Heating and Cooling technician checking a home air conditioner" width="1280" height="854" />
+    <img src="https://shadowheatingandcooling.com/wp-content/uploads/2025/03/service-man-is-cleaning-repair-and-maintenance-of-air-conditioner-1-2.jpg" alt="Shadow technician performing AC cleaning and maintenance" width="1280" height="852" />
+    <img src="https://shadowheatingandcooling.com/wp-content/uploads/2025/03/male-technicians-service-for-repair-and-maintenance-of-air-conditioners.jpg" alt="Shadow Heating and Cooling AC repair and maintenance service" width="1280" height="852" />
   </section>
   <footer>
     Shadow Heating & Cooling · 334 E Grove, Hampshire, IL 60140<br>

@@ -107,6 +107,22 @@
       font-weight: 600;
     }
     .step p { color: var(--muted); line-height: 1.6; }
+    .projects {
+      max-width: 1100px;
+      margin: 0 auto 2rem;
+      padding: 0 1.5rem 3rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+    @media (max-width: 800px) { .projects { grid-template-columns: 1fr; } }
+    .projects img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 8px;
+      display: block;
+    }
     .concierge {
       background: var(--navy);
       color: var(--cream);
@@ -138,6 +154,12 @@
     <h1>Your Wedding Dress Timeline</h1>
     <p class="tagline">Month by month, from first appointment to final fitting. Boutique guidance without the rush.</p>
     <a class="btn" href="https://www.kimberlyjamesbridal.com/scheduling">Book Your Appointment</a>
+  </section>
+  <section class="projects" aria-label="Kimberly James Bridal gallery">
+    <!-- First-party Squarespace gallery images from kimberlyjamesbridal.com, live HTTP 200 on 2026-08-27. -->
+    <img src="https://images.squarespace-cdn.com/content/v1/5c61855af4e5311f3fff25bd/41954c35-721e-4bef-b761-37492e6942ff/DSC04627.jpg" alt="Kimberly James Bridal boutique gown detail" width="800" height="600" />
+    <img src="https://images.squarespace-cdn.com/content/v1/5c61855af4e5311f3fff25bd/8b37f3b5-6585-4e77-8038-18a1179eec5a/HCPTheKrauses-3541.jpg" alt="Bride styled through Kimberly James Bridal" width="800" height="600" />
+    <img src="https://images.squarespace-cdn.com/content/v1/5c61855af4e5311f3fff25bd/ec611afd-9da1-4e7b-8d2c-999c22e62a2d/2025-08-30+Rubin-Chaoui+Wedding-0009.JPG" alt="Recent Kimberly James Bridal wedding portrait" width="800" height="600" />
   </section>
   <section class="timeline">
     <h2>The Journey</h2>

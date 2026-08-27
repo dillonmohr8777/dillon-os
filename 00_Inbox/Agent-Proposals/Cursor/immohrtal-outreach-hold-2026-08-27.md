@@ -2,6 +2,7 @@
 note_type: proposal
 status: hold
 created: 2026-08-27
+updated: 2026-08-27T08:16:00Z
 agent: growth-content
 privacy: redacted
 external_action_attempted: none
@@ -21,41 +22,41 @@ Sender identity for later human approval: Dillon Mohr / IMMOHRTAL Marketing Solu
 ## Packet 1 - The Rouse Group Development Co. / suburbansolutions.com
 
 - Domain in radar preflight: suburbansolutions.com
-- Live check 2026-08-27T08:02Z: HTTP 200
-- Live identity: Suburban Solutions, award-winning moving company since 2014 (Philadelphia / Washington DC). Not a development company.
-- Contact: no official published phone on the homepage; form fields only
-- Status: DO NOT PITCH this cycle - radar name/domain mismatch. Do not send a Rouse Group packet to a moving company.
+- Live check 2026-08-27T08:12Z: HTTP 200
+- Live identity: Suburban Solutions, award-winning moving company since 2014. Not a development company.
+- Status: DO NOT PITCH this cycle - radar name/domain mismatch.
 - delivery_status: DRAFT_ONLY_DO_NOT_SEND
 
-## Packet 2 - Affordable Dentures & Implants
+## Packet 2 - Affordable Dentures and Implants
 
 - Domain: affordabledentures.com
-- Live check 2026-08-27T08:02Z: HTTP 429 / bot challenge. Do not treat the page as live-verified this tick.
-- Contact on file remains JSON-LD from preflight only
-- Status: HOLD pending live reverification and Dillon exact-recipient approval
-- Draft subject: A homepage direction for Affordable Dentures & Implants
+- Live check 2026-08-27T08:12Z: HTTP 429 again (www and apex). Still not live-verified.
+- Contact on file remains JSON-LD from preflight only.
+- Status: HOLD pending live reverification and Dillon exact-recipient approval.
+- Draft subject: A homepage direction for Affordable Dentures and Implants
 - Channel: email
 - delivery_status: DRAFT_ONLY_DO_NOT_SEND
 
 ## Packet 3 - Reading Hospital at Muhlenberg
 
 - Domain: reading.towerhealth.org
-- Contact: phone from official tel link; address empty
-- Status: HOLD - hospital system; do not pitch until Dillon names the exact recipient and relationship
+- Live check 2026-08-27T08:12Z: HTTP 403 on the radar host. Parent towerhealth.org returned HTTP 200 title "Homepage | Tower Health".
+- Status: HOLD - hospital system; hostname not verified this tick; do not pitch until Dillon names the exact recipient and relationship.
 - Channel: email
 - delivery_status: DRAFT_ONLY_DO_NOT_SEND
 
 ## Packet 4 - Physicians' Surgery Center
 
 - Domain: psclg.com
-- Contact: address element present; phone empty in structured field
-- Status: HOLD - missing verified phone for SHOW
+- Live check 2026-08-27T08:12Z: HTTP 200. Title matches radar name: Physicians' Surgery Center, Lancaster General Health.
+- Live phone on homepage: 717-735-3993 (was empty in the radar structured phone field).
+- Status: HOLD - identity matches, but this is a hospital-system surgery center. Extra hold until Dillon names the exact recipient.
 - Channel: email
 - delivery_status: DRAFT_ONLY_DO_NOT_SEND
 
 ## Inbox this cycle (redacted)
 
-Ordinary Gmail read, metadata only. Unread inbox newer than 1 day includes Coinbase no-reply, a connectingfunds outreach, GitHub notifications, Zillow alerts, and newsletters. No client send. No draft created. Align HCM Coinbase PR stay untouched.
+Ordinary Gmail read, metadata only. Unread inbox newer than 1 day includes calendar, Coinbase no-reply, a connectingfunds outreach, GitHub notifications, Zillow alerts, and newsletters. No client send. No draft created.
 
 ## Gates
 
