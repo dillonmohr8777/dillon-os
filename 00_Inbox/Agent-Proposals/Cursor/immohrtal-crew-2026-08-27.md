@@ -2,7 +2,7 @@
 note_type: proposal
 status: worked
 created: 2026-08-27
-verified_at: 2026-08-27T20:00:55.9350018Z
+verified_at: 2026-08-27T22:10:13.1138268Z
 agent: marketing-chief
 privacy: redacted
 external_action_attempted: none
@@ -13,13 +13,9 @@ source_refs:
 
 # Immohrtal crew - 2026-08-27
 
-cycle `CREW-20260827-160051965` outcome **worked**
+cycle `CREW-20260827-181008429` outcome **worked**
 
-## Highest automatic action
-
-Paid-media rank 1 stays blocked: Ads LIST recovered, child GAQL still 403 without login-customer-id. Schema re-inspected this tick (`GOOGLEADS_SEARCH_STREAM_GAQL` still has no login-customer-id). Did not call GAQL. Did not pause/enable/budget.
-
-Executed Search Console date totals for 2026-08-21..26 (26 empty). Shadow 1/26, Onsite 6/715, KJB 20/1964, agency 0/3. Shadow brand query "shadow heating and cooling" 1 click on 2026-08-25. Outreach remains hold. Preview LPs remain 0/3 fail for publish. mail_ready=hold.
+Highest safe automatic action: outreach live-verify. Rank 1 Ads stayed blocked (403, not 429). No send.
 
 ## Lanes
 
