@@ -228,3 +228,24 @@ routine that was still keying dedupe daily until the cadence fix landed on 08-18
 **How to apply.** Treat the brief's `unreliable` list as a queue to investigate, not a
 list of broken things. Read `last_completed` and the failure timestamps before concluding
 anything is currently failing.
+
+---
+
+## 2026-08-27 - A disabled agency task plus an 08:30 heartbeat is not a seven-agent crew
+
+**Lesson.** Autonomy is a wake plus a bounded dispatcher that still stops at send. A
+Disabled Windows task named after the company, an expired five-seat lease, and a daily
+Codex heartbeat that does not prove persistent agents are idle, not stuck, until a loop
+that actually runs is wired.
+
+**Evidence.** `IMMOHRTAL Agency Daily` is Disabled after the franchise/webinar source
+audit. The 2026-08-26 office receipt says the Codex heartbeat is ACTIVE at 08:30 ET and
+also says that receipt does not prove a background runtime. The five-seat
+`crew-runtime.json` lease expired at 2026-08-27T01:19:19Z. Cycle `CREW-20260827-013941994`
+registered `Immohrtal-Crew` (Ready, PT2H, hidden VBS host) and ran all seven lanes with
+`mail_ready=hold`. Live agency probes returned HTTP 200 on `/`, `robots.txt`, and
+`sitemap.xml`. Google Ads stayed blocked on developer-token 429 until 2026-08-27T10:36:19Z.
+
+**How to apply.** Keep the crew dispatcher on the hidden-task manifest. Wake the Cursor
+private worker for MCP work. Do not re-enable `IMMOHRTAL Agency Daily` until the source
+audit clears. Do not treat heartbeat configuration as proof the seven agents ran.

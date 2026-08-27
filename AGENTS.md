@@ -174,6 +174,7 @@ actions.
 | Task | Cadence | What it does |
 |---|---|---|
 | `Claude-Autonomous-Daily-Driver` | every 15 min | Runs `System/scripts/Invoke-ClaudeDailyDriver.ps1`, which gates the 54 routines in `11_Agents/claude-operating-team.json` through `Invoke-ClaudeLoop.ps1` and executes the eligible ones. |
+| `Immohrtal-Crew` | every 2 hours | Runs `System/scripts/Invoke-ImmohrtalCrew.ps1` for the seven Immohrtal agents (rank, local LP QA, connector health, agency-site probe, receipts). `mail_ready` is always `hold`. Does not send, publish, deploy, or write `client-operations/queue/work-items.json`. Do not re-enable `IMMOHRTAL Agency Daily` until its source audit clears. |
 | `Prospect Radar - Next 20 Daily Builder` | 05:20 daily | `automation/prospect-radar-next20/Run-ProspectRadarNext20Daily.ps1` — builds 20 local noindex sites, browser QA, generated imagery. `mail_ready` is always `hold`. |
 | `Claude Weekly Skills Research Brief` | weekly | Skills research brief. |
 | `Codex-AgentMemory-VaultSync` | hourly | Agent-memory and vault sync. |

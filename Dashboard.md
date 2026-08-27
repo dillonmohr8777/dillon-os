@@ -21,11 +21,12 @@ navigation is needed.
 Checkbox items only — `_os/vault-state.js` reads this section for the HUD
 directive feed and skips any other list format.
 
-- [ ] Keep Omega / Onsite / KJB / Replenish Ads truth honest; no API mutation while developer quota is exhausted.
-- [ ] QA the preview-ready Shadow, KJB, and Omega landing pages; do not publish.
+- [x] Arm Immohrtal-Crew every 2 hours; mail_ready=hold; do not send.
+- [ ] Keep Omega / Onsite / KJB / Replenish Ads truth honest; no mutation until developer quota retries after 2026-08-27T10:36:19Z.
+- [ ] Fix preview LP publish blockers (Omega photos, KJB homepage CTAs); do not publish.
+- [ ] Hold four radar outreach packets; Dillon names exact recipient before any Gmail draft.
 - [ ] Map the Vercel source for https://www.immohrtalmarketing.com; do not deploy.
-- [ ] Capture the Cursor private-worker standing order into compiled notes, not a second queue.
-- [ ] Prove gateway idle vs stuck from receipts; do not restart Hermes.
+- [ ] Leave IMMOHRTAL Agency Daily Disabled until the source audit clears; do not restart Hermes.
 
 ## Active projects
 
