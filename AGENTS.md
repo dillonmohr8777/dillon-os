@@ -139,13 +139,13 @@ remains the sole canonical queue writer and final synthesis authority.
 | `paid-media-analyst` | opus | Paid Media Auditor | Ads delivery inspection and account readbacks. Read-only on accounts. |
 | `revenue-ops-analyst` | opus | CRM/Revenue Ops + Reporting + Weekly Review | MRR truth prep, reports, executive readbacks, cost/capacity audits. |
 | `client-success-advisor` | sonnet | Client Context Router | Onboarding prep, retention signals, roster/separation audits. |
-| `client-comms-desk` | sonnet | Comms Draft Desk + Comms Intake | Draft-only replies and follow-ups from vault captures. Never sends. |
+| `prospect-intelligence-scout` | sonnet | Grok Research Scout | Ad-hoc pre-W05/W07 source readiness: identity, logo provenance, dedupe, classify ready/hold/do_not_pitch. Zero scheduled routines. Never builds or drafts outreach. |
 | `growth-content` | opus | SEO/AEO/GEO + Brand Voice + CRO | Content, experiments, calendars. |
 | `brain-curator` | sonnet | Knowledge and Obsidian Curator | Captures, compile, graph hygiene, synthesis. |
 | `reliability-scout` | sonnet | Automation Reliability Scout | Loop health, breakers, connector recovery evidence. |
 
-All 54 routines appear on exactly one exposed agent table; 29 remain Claude-executable
-through the loop. Internal `owner_bot` ownership stays in the registry — this table is
+All 54 routines appear on exactly one exposed agent table; `prospect-intelligence-scout`
+owns zero scheduled routine IDs by design. 29 remain Claude-executable through the loop. Internal `owner_bot` ownership stays in the registry — this table is
 the worker delegation view only.
 
 **Edit `System/scripts/Build-ClaudeAgents.py`, never the generated `.md` or `.toml` files.**

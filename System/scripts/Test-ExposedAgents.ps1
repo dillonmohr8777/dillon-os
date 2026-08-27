@@ -35,7 +35,7 @@ foreach ($p in @($builder, $registry)) {
 
 $expectedAgents = @(
     'marketing-chief', 'web-product-builder', 'qa-critic', 'paid-media-analyst',
-    'revenue-ops-analyst', 'client-success-advisor', 'client-comms-desk',
+    'revenue-ops-analyst', 'client-success-advisor', 'prospect-intelligence-scout',
     'growth-content', 'brain-curator', 'reliability-scout'
 )
 
@@ -90,16 +90,33 @@ Add-Check 'codex_names_match' '0 differences' $codexDrift.Count ($codexDrift.Cou
 
 $reg = Get-Content -LiteralPath $registry -Raw | ConvertFrom-Json
 $allRoutineIds = @($reg.routines | ForEach-Object { $_.routine_id } | Sort-Object -Unique)
-$found = New-Object System.Collections.Generic.List[string]
+$routineCounts = @{}
+foreach ($id in $allRoutineIds) { $routineCounts[$id] = 0 }
+$scoutPath = Join-Path $claudeDir 'prospect-intelligence-scout.md'
+$scoutText = if (Test-Path -LiteralPath $scoutPath) { Get-Content -LiteralPath $scoutPath -Raw } else { '' }
+$scoutRoutineRows = @([regex]::Matches($scoutText, '\|\s*`([A-Z][0-9]{2})`\s*\|') | ForEach-Object { $_.Groups[1].Value })
+Add-Check 'scout_zero_scheduled_routines' '0 rows' $scoutRoutineRows.Count ($scoutRoutineRows.Count -eq 0)
+
 foreach ($md in Get-ChildItem -LiteralPath $claudeDir -Filter '*.md' -File) {
     $text = Get-Content -LiteralPath $md.FullName -Raw
     foreach ($id in $allRoutineIds) {
-        if ($text -match ('\|\s*`' + [regex]::Escape($id) + '`\s*\|')) { $found.Add($id) }
+        if ($text -match ('\|\s*`' + [regex]::Escape($id) + '`\s*\|')) {
+            $routineCounts[$id] = $routineCounts[$id] + 1
+        }
     }
 }
-$foundUnique = @($found | Sort-Object -Unique)
-$partitionOk = ($foundUnique.Count -eq 54) -and (@(Compare-Object $allRoutineIds $foundUnique).Count -eq 0)
-Add-Check 'routine_partition_in_agents' '54/54' $foundUnique.Count $partitionOk
+$foundUnique = @($routineCounts.GetEnumerator() | Where-Object { $_.Value -gt 0 } | ForEach-Object { $_.Key } | Sort-Object -Unique)
+$missingIds = @($allRoutineIds | Where-Object { $routineCounts[$_] -eq 0 })
+$duplicateIds = @($routineCounts.GetEnumerator() | Where-Object { $_.Value -gt 1 } | ForEach-Object { $_.Key } | Sort-Object)
+$partitionOk = ($foundUnique.Count -eq 54) -and ($missingIds.Count -eq 0) -and ($duplicateIds.Count -eq 0)
+Add-Check 'routine_partition_in_agents' '54/54 unique' $foundUnique.Count $partitionOk
+Add-Check 'routine_exactly_once' '0 duplicates' $duplicateIds.Count ($duplicateIds.Count -eq 0)
+if ($duplicateIds.Count -gt 0) {
+    Add-Check 'routine_duplicate_ids' 'none' ($duplicateIds -join ', ') $false
+}
+if ($missingIds.Count -gt 0) {
+    Add-Check 'routine_missing_ids' 'none' ($missingIds -join ', ') $false
+}
 
 $failed = @($checks | Where-Object { -not $_.ok })
 $overall = $(if ($failed.Count -eq 0) { 'pass' } else { 'fail' })

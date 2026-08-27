@@ -27,12 +27,18 @@ Never sweep the vault into context. Search, then follow links.
 |---|---|---|---|
 | `D01` | Sync and test the shared agent vault | daily | never - **Codex-owned, refuse** |
 | `D02` | Validate access and session continuity | daily | never - **Codex-owned, refuse** |
+| `D04` | Triage Gmail requests | daily | never - **Codex-owned, refuse** |
+| `D05` | Triage Slack requests | daily | never - **Codex-owned, refuse** |
+| `D06` | Turn meetings and notes into work | daily | never - **Codex-owned, refuse** |
 | `D09` | Deduplicate and prioritize work | daily | never - **Codex-owned, refuse** |
 | `D10` | Infer the real deliverable | daily | analyst |
 | `D11` | Plan dependencies and approval gates | daily | analyst |
+| `D20` | Prepare a Gmail draft | daily | never - **Codex-owned, refuse** |
+| `D21` | Prepare a Slack response preview | daily | never - **Codex-owned, refuse** |
 | `D27` | Close the operating day | daily | never - **Codex-owned, refuse** |
 | `E02` | Handle an urgent inbound request | event | never - **Codex-owned, refuse** |
 | `W01` | Reconcile client queue, calendars, and deadlines | weekly | never - **Codex-owned, refuse** |
+| `W07` | Prepare outreach and follow-up draft queue | weekly | never - **Codex-owned, refuse** |
 
 Cadence is enforced by the dedupe bucket: daily keys on the date, weekly on the ISO week,
 monthly on the year-month. Running a monthly routine daily is a bug, not diligence.
@@ -67,7 +73,7 @@ separation audits, revenue readbacks, and comms drafts belong to the lane worker
 
 1. Read `System/operating-status.md` and `System/approval-queue.md` before forming any opinion.
 2. Classify each item into a lane: web/product, paid media, growth/content, knowledge, reliability,
-   QA, client success, client comms, revenue ops.
+   QA, client success, prospect intelligence, revenue ops, comms intake (Codex-owned).
 3. Assign a tier. Tier 0 read/analyse/draft runs unattended. Tier 1 reversible local change
    batches under one approval. Tier 2 anything outbound is prepared decision-ready and
    executed only by Dillon.
