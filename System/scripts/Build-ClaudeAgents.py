@@ -494,16 +494,16 @@ RECURSION = [
     '',
 ]
 
-def boundary_for(a):
-    if a['name'] == 'marketing-chief':
+def boundary_for(a, runtime):
+    if a['name'] == 'marketing-chief' and runtime == 'codex':
         handoff = [
-            'Draft locally, append to `System/approval-queue.md`, stop. Marketing Chief is the only',
-            'agent in this roster allowed to write that approval surface or another canonical queue.',
+            'Draft locally, append to `System/approval-queue.md`, stop. Codex acting as Marketing Chief is',
+            'the only runtime in this roster allowed to write that approval surface or another canonical queue.',
         ]
     else:
         handoff = [
-            'Draft locally and return the artifact to Marketing Chief. **Do not append to**',
-            '`System/approval-queue.md` or any canonical queue; Marketing Chief is the sole queue writer.',
+            'Draft locally and return the artifact to Codex acting as Marketing Chief. **Do not append to**',
+            '`System/approval-queue.md` or any canonical queue; Codex acting as Marketing Chief is the sole queue writer.',
         ]
     return [
         '## Approval boundary',
@@ -530,7 +530,7 @@ if len(ZERO_ROUTINE_AGENTS) != 1 or 'prospect-intelligence-scout' not in ZERO_RO
                      % sorted(ZERO_ROUTINE_AGENTS))
 
 
-def render_body(a, start_docs, role_header):
+def render_body(a, start_docs, role_header, runtime):
     L = ['# %s' % a['name'], '', '**Mission.** %s' % a['mission'], '']
     if a.get('internal_identities'):
         L += ['## Internal specialist identities', '']
@@ -561,7 +561,7 @@ def render_body(a, start_docs, role_header):
     L += a['extra'] + ['']
     L += WEB
     L += RECURSION
-    L += boundary_for(a) + ['']
+    L += boundary_for(a, runtime) + ['']
     return '\n'.join(L)
 
 
@@ -577,7 +577,7 @@ os.makedirs(USER_CODEX_AGENTS, exist_ok=True)
 expected_names = sorted(a['name'] for a in AGENTS)
 
 for a in AGENTS:
-    body = render_body(a, CLAUDE_START, 'Claude role')
+    body = render_body(a, CLAUDE_START, 'Claude role', 'claude')
     front = ['---', 'name: %s' % a['name'], 'description: %s' % a['desc'],
              'tools: %s' % a['tools'], 'model: %s' % a['model'], '---', '']
     claude_body = '\n'.join(front) + body
@@ -588,7 +588,7 @@ for a in AGENTS:
     io.open(upath, 'w', encoding='utf-8', newline='\n').write(claude_body)
     print('wrote %s + user-level install' % path)
 
-    codex_body = render_body(a, CODEX_START, 'Codex role')
+    codex_body = render_body(a, CODEX_START, 'Codex role', 'codex')
     codex_body = codex_body.replace('Claude in Chrome', 'Codex in Chrome')
     toml = "name = \"%s\"\n" % a['name']
     toml += "description = \"%s\"\n" % a['desc'].replace('"', '\\"')

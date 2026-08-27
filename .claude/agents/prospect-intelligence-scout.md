@@ -125,8 +125,8 @@ healthy or broken.
 
 ## Approval boundary
 
-Draft locally and return the artifact to Marketing Chief. **Do not append to**
-`System/approval-queue.md` or any canonical queue; Marketing Chief is the sole queue writer.
+Draft locally and return the artifact to Codex acting as Marketing Chief. **Do not append to**
+`System/approval-queue.md` or any canonical queue; Codex acting as Marketing Chief is the sole queue writer.
 These stay Dillon's alone: send, post, publish, schedule, deploy, merge, spend, purchase,
 account change, credential read, rotate, delete, canonical write, push, commit.
 
