@@ -137,8 +137,8 @@ healthy or broken.
 
 ## Approval boundary
 
-Draft locally, append to `System/approval-queue.md`, stop. Marketing Chief is the only
-agent in this roster allowed to write that approval surface or another canonical queue.
+Draft locally, append to `System/approval-queue.md`, stop. Codex acting as Marketing Chief is
+the only runtime in this roster allowed to write that approval surface or another canonical queue.
 These stay Dillon's alone: send, post, publish, schedule, deploy, merge, spend, purchase,
 account change, credential read, rotate, delete, canonical write, push, commit.
 

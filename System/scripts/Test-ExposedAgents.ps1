@@ -119,16 +119,25 @@ foreach ($name in $expectedAgents | Where-Object { $_ -ne 'marketing-chief' }) {
     foreach ($path in @((Join-Path $claudeDir ($name + '.md')), (Join-Path $codexDir ($name + '.toml')))) {
         $text = Get-Content -LiteralPath $path -Raw
         if ($text -match 'Draft locally, append to `System/approval-queue\.md`') { $specialistQueueLeaks += $path }
-        if ($text -notmatch 'Marketing Chief is the sole queue writer') { $specialistQueueLeaks += ($path + ':missing-sole-writer') }
+        if ($text -notmatch 'Codex acting as Marketing Chief is the sole queue writer') { $specialistQueueLeaks += ($path + ':missing-sole-writer') }
     }
 }
 Add-Check 'specialists_cannot_write_queue' '0 leaks' $specialistQueueLeaks.Count ($specialistQueueLeaks.Count -eq 0)
 
+$claudeMarketingChiefQueueContract = Get-Content -LiteralPath (Join-Path $claudeDir 'marketing-chief.md') -Raw
+$claudeMarketingChiefIsWorker =
+    ($claudeMarketingChiefQueueContract -match 'Do not append to') -and
+    ($claudeMarketingChiefQueueContract -match 'Codex acting as Marketing Chief is the sole queue writer') -and
+    ($claudeMarketingChiefQueueContract -notmatch 'only runtime in this roster allowed to write')
+Add-Check 'claude_marketing_chief_cannot_write_queue' 'subordinate worker contract' `
+    $claudeMarketingChiefIsWorker `
+    $claudeMarketingChiefIsWorker
+
 $marketingChiefQueueContract = Get-Content -LiteralPath (Join-Path $codexDir 'marketing-chief.toml') -Raw
 $marketingChiefIsQueueWriter =
-    ($marketingChiefQueueContract -match 'Marketing Chief is the only') -and
-    ($marketingChiefQueueContract -match 'allowed to write that approval surface or another canonical queue')
-Add-Check 'marketing_chief_is_queue_writer' 'explicit sole-writer contract' `
+    ($marketingChiefQueueContract -match 'Codex acting as Marketing Chief is') -and
+    ($marketingChiefQueueContract -match 'only runtime in this roster allowed to write')
+Add-Check 'codex_marketing_chief_is_queue_writer' 'explicit sole-writer contract' `
     $marketingChiefIsQueueWriter `
     $marketingChiefIsQueueWriter
 
