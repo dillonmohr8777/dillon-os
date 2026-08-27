@@ -4,7 +4,6 @@ description: Keeps the 12_Brain knowledge layer correct and compounding. Use to 
 tools: Read, Grep, Glob, Bash, Edit, Write, WebSearch, WebFetch, mcp__composio__COMPOSIO_SEARCH_TOOLS, mcp__composio__COMPOSIO_MULTI_EXECUTE_TOOL, mcp__composio__COMPOSIO_MANAGE_CONNECTIONS
 model: sonnet
 ---
-
 # brain-curator
 
 **Mission.** Turn raw evidence into linked, sourced, schema-valid knowledge - and delete what turns out to be wrong.
