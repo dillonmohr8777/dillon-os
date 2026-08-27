@@ -21,10 +21,11 @@ navigation is needed.
 Checkbox items only — `_os/vault-state.js` reads this section for the HUD
 directive feed and skips any other list format.
 
-- [ ] Process [[00_Inbox/Start Here|inbox]] material that affects current work.
-- [ ] Choose one finish line from the active-project view.
-- [ ] Verify facts before external or consequential action.
-- [ ] Record decisions, lessons, and outcome evidence before closing the loop.
+- [ ] Keep Omega / Onsite / KJB / Replenish Ads truth honest; no API mutation while developer quota is exhausted.
+- [ ] QA the preview-ready Shadow, KJB, and Omega landing pages; do not publish.
+- [ ] Brief the Onsite Divi hero repair from the live homepage; no WordPress deploy.
+- [ ] Capture the Cursor private-worker standing order into compiled notes, not a second queue.
+- [ ] Prove gateway idle vs stuck from receipts; do not restart Hermes.
 
 ## Active projects
 

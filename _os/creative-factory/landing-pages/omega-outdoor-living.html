@@ -51,6 +51,17 @@
       border-radius: 8px;
       font-size: .95rem;
     }
+    .services {
+      padding: 4rem 6vw;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    @media (max-width: 800px) {
+      .services { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
@@ -60,7 +71,7 @@
     <p class="sub">Landscaping, concrete, and hardscape built for Colorado seasons. Real projects. Real results.</p>
     <a class="btn" href="tel:7197612840">Get a Free Estimate</a>
   </section>
-  <section style="padding:4rem 6vw;display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:1100px;margin:0 auto">
+  <section class="services">
     <div style="padding:1.5rem;background:#fff;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,.06)">
       <h3 style="color:var(--green);margin-bottom:.5rem">Landscaping</h3>
       <p style="color:var(--muted);font-size:.9rem">Seasonal design, planting, and maintenance for curb appeal that lasts.</p>
