@@ -1,14 +1,14 @@
 {
   "schema": 1,
-  "recorded_by": "cursor/private-worker 2026-08-26 via Composio MCP",
-  "recorded_at_utc": "2026-08-27T01:12:00Z",
+  "recorded_by": "cursor/private-worker 2026-08-27 via Composio MCP",
+  "recorded_at_utc": "2026-08-27T10:05:00Z",
   "note": "Written by an MCP-capable agent, read by _os/automation/bin/connector-health.js. Every status below was observed, not assumed. Do not hand-edit to open a gate.",
   "connectors": [
     {
       "toolkit": "google_search_console",
       "status": "active",
       "read_verified": true,
-      "last_verified_utc": "2026-08-27T01:12:34Z",
+      "last_verified_utc": "2026-08-27T10:05:00Z",
       "accounts": [
         {
           "id": "google_search_console_mooner-urban",
@@ -21,7 +21,8 @@
             "sc-domain:ami-cleaning.com",
             "https://www.zenspatropicana.com/",
             "sc-domain:revive-systems.com",
-            "https://ironicineptocracy.com/"
+            "https://ironicineptocracy.com/",
+            "sc-domain:immohrtalmarketing.com"
           ]
         },
         {
@@ -40,13 +41,17 @@
       "read_proof": {
         "tool": "GOOGLE_SEARCH_CONSOLE_SEARCH_ANALYTICS_QUERY",
         "site_url": "sc-domain:shadow-heating.com",
-        "range": "2026-08-18..2026-08-24",
+        "range": "2026-08-20..2026-08-24",
         "clicks": 0,
-        "impressions": 24,
+        "impressions": 26,
         "second_site_url": "https://onsiteconcretelandscape.com/",
         "second_site_account": "google_search_console_kindle-spurt",
-        "second_site_clicks": 3,
-        "second_site_top_query": "onsite concrete"
+        "second_site_clicks": 6,
+        "second_site_top_query": "onsite concrete",
+        "kjb_site_url": "https://www.kimberlyjamesbridal.com/",
+        "kjb_clicks": 21,
+        "agency_site_url": "sc-domain:immohrtalmarketing.com",
+        "agency_query_rows": 0
       },
       "note": "Live and usable. Two accounts: pass the account id explicitly, since account_selection is required."
     },

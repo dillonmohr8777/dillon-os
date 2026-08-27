@@ -2,7 +2,7 @@
 note_type: proposal
 status: hold
 created: 2026-08-27
-updated: 2026-08-27T08:16:00Z
+updated: 2026-08-27T10:05:00Z
 agent: growth-content
 privacy: redacted
 external_action_attempted: none
@@ -22,7 +22,7 @@ Sender identity for later human approval: Dillon Mohr / IMMOHRTAL Marketing Solu
 ## Packet 1 - The Rouse Group Development Co. / suburbansolutions.com
 
 - Domain in radar preflight: suburbansolutions.com
-- Live check 2026-08-27T08:12Z: HTTP 200
+- Live check 2026-08-27T08:12Z: HTTP 200. Not re-fetched this tick; identity already mismatch-confirmed.
 - Live identity: Suburban Solutions, award-winning moving company since 2014. Not a development company.
 - Status: DO NOT PITCH this cycle - radar name/domain mismatch.
 - delivery_status: DRAFT_ONLY_DO_NOT_SEND
@@ -30,7 +30,7 @@ Sender identity for later human approval: Dillon Mohr / IMMOHRTAL Marketing Solu
 ## Packet 2 - Affordable Dentures and Implants
 
 - Domain: affordabledentures.com
-- Live check 2026-08-27T08:12Z: HTTP 429 again (www and apex). Still not live-verified.
+- Live check 2026-08-27T10:02Z: HTTP 429 again (www and apex). Still not live-verified.
 - Contact on file remains JSON-LD from preflight only.
 - Status: HOLD pending live reverification and Dillon exact-recipient approval.
 - Draft subject: A homepage direction for Affordable Dentures and Implants
@@ -40,7 +40,7 @@ Sender identity for later human approval: Dillon Mohr / IMMOHRTAL Marketing Solu
 ## Packet 3 - Reading Hospital at Muhlenberg
 
 - Domain: reading.towerhealth.org
-- Live check 2026-08-27T08:12Z: HTTP 403 on the radar host. Parent towerhealth.org returned HTTP 200 title "Homepage | Tower Health".
+- Live check 2026-08-27T10:02Z: HTTP 403 on the radar host again.
 - Status: HOLD - hospital system; hostname not verified this tick; do not pitch until Dillon names the exact recipient and relationship.
 - Channel: email
 - delivery_status: DRAFT_ONLY_DO_NOT_SEND
@@ -48,7 +48,7 @@ Sender identity for later human approval: Dillon Mohr / IMMOHRTAL Marketing Solu
 ## Packet 4 - Physicians' Surgery Center
 
 - Domain: psclg.com
-- Live check 2026-08-27T08:12Z: HTTP 200. Title matches radar name: Physicians' Surgery Center, Lancaster General Health.
+- Live check 2026-08-27T10:02Z: HTTP 200. Title still matches radar name.
 - Live phone on homepage: 717-735-3993 (was empty in the radar structured phone field).
 - Status: HOLD - identity matches, but this is a hospital-system surgery center. Extra hold until Dillon names the exact recipient.
 - Channel: email
