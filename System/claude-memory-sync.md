@@ -1,5 +1,5 @@
 ---
-last_sync: 2026-07-12
+last_sync: 2026-08-27
 evidence_window_start: 2026-06-21
 tags: [system, memory, sync]
 ---
@@ -15,6 +15,25 @@ Kimberly James Bridal; Omega Landscaping & Concrete; On-Site Concrete & Landscap
 ## Separate lane
 
 Align HCM is active full-time work and not a client.
+
+## Pending deliverables (umbrella 2026-08-27)
+
+- Revive Systems: 48-hour lead-recovery brief (urgent, overdue)
+- Shadow HVAC: catch-up report to Mike (gated)
+- Bar Crawl USA: June 2026 HTML report needs live numbers
+- Bridge: Tori discovery walkthrough package (gated)
+
+## Unanswered / urgent
+
+- Replenish billing block on Google Ads
+- M360 bot stability (Jason/Sean, 2026-07-30)
+- Sean CallRail verification (#calls)
+- Melissa guidelines/training prompt
+- Jenny NeedMomentum brand direction
+
+## Upcoming deadlines (7 days)
+
+- unverified — client notes lack consistent `due` frontmatter; run frontmatter-repair on stalled overviews
 
 ## Routing rules
 

@@ -11,7 +11,8 @@ verification_status: verified
 source_refs:
   - "[[_os/automation/docs/OPERATOR]]"
   - "[[_os/automation/evidence/VERIFICATION]]"
-  - "[[11_Agents/64gb Morning Orchestrator Spec 2026-07-08]]"
+  - "[[11_Agents/company-os-umbrella-spec]]"
+  - "[[04_SOPs/company-os-umbrella]]"
   - "[[02_Campaigns/AI Site Builder Outreach Engine/Pipeline Spec]]"
   - "[[12_Brain/04_Decisions/2026-07-30 - Adopt gated intelligence stack]]"
   - "[[04_SOPs/Communication Intelligence Ingestion]]"

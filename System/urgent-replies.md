@@ -1,28 +1,32 @@
 ---
-last_updated: 2026-07-12
+last_updated: 2026-08-27
 tags: [system, urgent]
+source: company-os-umbrella vault-fallback (Gmail MCP unavailable)
 ---
 
 # Urgent Client Work
 
-This file tracks current work, not April catch-up drafts.
+Synced from umbrella run 2026-08-27. Vault + Slack captures; live Gmail not read this cycle.
 
 ## Immediate
 
-- KJB: finish the desktop FAQ image crop and responsive QA; reconcile appointment routing.
-- Fagan Painting: repair attribution across Meta Lead event, form, phone, and lead delivery before scale.
-- Shadow: restore live Meta visibility and verify current-week delivery.
-- Revive Systems: complete the urgent 48-hour lead-recovery brief.
+- **Replenish:** Google Ads billing block — campaigns cannot run until billing update confirmed with Mia.
+- **Shadow HVAC:** restore live Meta visibility; verify current-week delivery; catch-up report to Mike still gated.
+- **Revive Systems:** complete the urgent 48-hour lead-recovery brief (approval-queue since 2026-07-13).
+- **Fagan Painting:** repair attribution across Meta Lead event, form, phone, and lead delivery before scale.
+- **KJB:** finish desktop FAQ image crop and responsive QA; reconcile appointment routing.
 
 ## This week
 
-- Bar Crawl USA: finish confirmed-event SEO and repair the current-event hub listing.
-- Onsite: run the allowlisted technical crawl and conversion-action audit.
-- Omega: reconcile call/form attribution and lead quality.
-- Replenish: verify store-level weekly reporting and confirm the recurring fifth dashboard slot.
-- Hope Wellness Center: complete request analysis and determine visual-resource needs.
-- VA Claims: reconcile the client prototype to the approved VACE design system.
-- Bridge: advance the Phase 1 implementation board and dependencies.
+- **M360 ops:** Jason/Sean bot stability + automatic reinstated-case alerts (unanswered since 2026-07-30).
+- **Sean:** verify CallRail activity and explain what changed (#calls, 2026-07-30).
+- **Melissa:** guidelines/training prompt status + Loom timing.
+- **Bar Crawl USA:** confirmed-event SEO and current-event hub; clear 2 disapproved ads when approved.
+- **Onsite:** allowlisted technical crawl and conversion-action audit.
+- **Omega:** call/form attribution and lead quality reconciliation.
+- **Hope Wellness Center:** request analysis and visual-resource needs.
+- **VA Claims:** reconcile portal to approved VACE design system.
+- **Bridge:** Phase 1 implementation board and Tori meeting prep.
 
 ## Boundary
 

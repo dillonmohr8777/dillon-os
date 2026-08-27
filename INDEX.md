@@ -25,6 +25,12 @@ links instead of loading the entire vault.
   truth.
 - [[System/approval-queue|Approval Queue]] — consequential actions waiting for
   Dillon.
+- [[Daily-Briefs/competitive-task-today|Competitive Task Today]] — daily P0 stack
+  from the Company OS Umbrella automation.
+- [[System/competitive-task-definition|Competitive Task Definition]] — scope and
+  retired-cron map for the umbrella workflow.
+- [[11_Agents/company-os-umbrella-spec|Company OS Umbrella Spec]] — parallel lane
+  architecture (11 scouts + consolidator).
 - [[System/revenue-scorecard|Revenue Scorecard]] — verified revenue state.
 
 - [[12_Brain/Bases/Strategy Library.base|Strategy Library]] - the compiled

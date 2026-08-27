@@ -1,0 +1,226 @@
+{
+  "workflow_id": "company-os-umbrella",
+  "run_id": "company-os-umbrella-2026-08-27",
+  "date": "2026-08-27",
+  "started_at": "2026-08-27T13:10:52.686Z",
+  "finished_at": null,
+  "status": "running",
+  "commander": "Master Agent",
+  "contract": "System/competitive-task-definition.md",
+  "lanes": [
+    {
+      "id": "gmail-intel",
+      "label": "Gmail / urgent replies",
+      "codex_lane": "gmail-intel",
+      "subagent": "gmail-intel",
+      "status": "pending",
+      "tier_default": 0,
+      "parallel_group": "intel",
+      "skills": [
+        "inbox-brief"
+      ],
+      "outputs": [
+        "System/urgent-replies.md"
+      ],
+      "worker": null
+    },
+    {
+      "id": "slack-intel",
+      "label": "Slack action queue",
+      "codex_lane": "slack-intel",
+      "subagent": "slack-intel",
+      "status": "pending",
+      "tier_default": 0,
+      "parallel_group": "intel",
+      "skills": [
+        "slack-intake"
+      ],
+      "outputs": [
+        "System/slack-action-queue.md",
+        "00_Inbox/slack/"
+      ],
+      "worker": null
+    },
+    {
+      "id": "vault-pulse",
+      "label": "Client roster pulse",
+      "codex_lane": "vault-pulse",
+      "subagent": "vault-pulse",
+      "status": "pending",
+      "tier_default": 0,
+      "parallel_group": "intel",
+      "skills": [
+        "client-pulse"
+      ],
+      "outputs": [
+        "Daily-Briefs/pulse-today.md"
+      ],
+      "worker": null
+    },
+    {
+      "id": "codex-session-sync",
+      "label": "Session promotions",
+      "codex_lane": "codex-session-sync",
+      "subagent": "codex-session-sync",
+      "status": "pending",
+      "tier_default": 0,
+      "parallel_group": "intel",
+      "skills": [],
+      "outputs": [
+        "10_Sessions/"
+      ],
+      "worker": null
+    },
+    {
+      "id": "domain-ads-seo",
+      "label": "Ads + SEO queues",
+      "codex_lane": "domain-ads-seo",
+      "subagent": "domain-ads-seo",
+      "status": "pending",
+      "tier_default": 0,
+      "parallel_group": "intel",
+      "skills": [
+        "metrics-pull"
+      ],
+      "outputs": [
+        "01_Clients/*/active-campaigns.md"
+      ],
+      "worker": null
+    },
+    {
+      "id": "content-routines",
+      "label": "Day-gated content",
+      "codex_lane": "content-routines",
+      "subagent": "content-routines",
+      "status": "pending",
+      "tier_default": 0,
+      "parallel_group": "intel",
+      "skills": [],
+      "outputs": [],
+      "worker": null
+    },
+    {
+      "id": "automation-health",
+      "label": "Scheduler + loop health",
+      "codex_lane": "automation-health",
+      "subagent": "automation-health",
+      "status": "pending",
+      "tier_default": 0,
+      "parallel_group": "intel",
+      "skills": [
+        "automation-ops"
+      ],
+      "outputs": [
+        "System/routine-health.md"
+      ],
+      "worker": null
+    },
+    {
+      "id": "websites-scout",
+      "label": "Site health sentinel",
+      "codex_lane": "websites-scout",
+      "subagent": "websites-scout",
+      "status": "pending",
+      "tier_default": 0,
+      "parallel_group": "scout",
+      "skills": [
+        "site-grade",
+        "ux-audit"
+      ],
+      "outputs": [
+        "Daily-Briefs/site-health-report.md"
+      ],
+      "worker": null
+    },
+    {
+      "id": "outreach-scout",
+      "label": "Prospect radar queue",
+      "codex_lane": "outreach-scout",
+      "subagent": "outreach-scout",
+      "status": "pending",
+      "tier_default": 0,
+      "parallel_group": "scout",
+      "skills": [
+        "site-factory",
+        "site-batch"
+      ],
+      "outputs": [
+        "Daily-Briefs/radar-*.md",
+        "12_Brain/queue/"
+      ],
+      "worker": null
+    },
+    {
+      "id": "ads-scout",
+      "label": "Paid media P0s",
+      "codex_lane": "ads-scout",
+      "subagent": "ads-scout",
+      "status": "pending",
+      "tier_default": 0,
+      "parallel_group": "scout",
+      "skills": [
+        "metrics-pull"
+      ],
+      "outputs": [
+        "01_Clients/*/Optimization Ledger.md"
+      ],
+      "worker": null
+    },
+    {
+      "id": "reporting-scout",
+      "label": "Report factory gaps",
+      "codex_lane": "reporting-scout",
+      "subagent": "reporting-scout",
+      "status": "pending",
+      "tier_default": 0,
+      "parallel_group": "scout",
+      "skills": [
+        "client-report"
+      ],
+      "outputs": [
+        "Daily-Briefs/reports/"
+      ],
+      "worker": null
+    },
+    {
+      "id": "memory-consolidator",
+      "label": "Brief + approval board synthesis",
+      "codex_lane": "memory-consolidator",
+      "subagent": "memory-consolidator",
+      "status": "pending",
+      "tier_default": 0,
+      "parallel_group": "command",
+      "skills": [
+        "am-report",
+        "plan-today"
+      ],
+      "outputs": [
+        "Daily-Briefs/competitive-task-today.md",
+        "System/claude-memory-sync.md",
+        "automation-runs/company-os-umbrella/YYYY-MM-DD/approval-board.md"
+      ],
+      "worker": null
+    }
+  ],
+  "gates": {
+    "obsidian_sync_cli": "pending-human",
+    "netlify_deploy_token": "pending-secret",
+    "landingfolio_token": "pending-secret",
+    "mail_vendor": "pending-decision",
+    "outreach_send": "hard-blocked"
+  },
+  "tier_policy": {
+    "0": "read, analyze, draft, vault writes, deterministic CLIs — unattended",
+    "1": "reversible platform tweaks — one approval executes the batch",
+    "2": "send, post, deploy, spend, credentials — prepared only, never autonomous"
+  },
+  "parallel_lane_cap": 12,
+  "artifacts": {
+    "run_dir": "/workspace/automation-runs/company-os-umbrella/2026-08-27",
+    "approval_board": "/workspace/automation-runs/company-os-umbrella/2026-08-27/approval-board.md",
+    "tier1_batch": "/workspace/automation-runs/company-os-umbrella/2026-08-27/tier1-batch.json",
+    "tier2_queue": "/workspace/automation-runs/company-os-umbrella/2026-08-27/tier2-queue.json",
+    "evidence_log": "/workspace/automation-runs/company-os-umbrella/2026-08-27/evidence-log.md",
+    "lane_results": "/workspace/automation-runs/company-os-umbrella/2026-08-27/lane-results.json"
+  }
+}

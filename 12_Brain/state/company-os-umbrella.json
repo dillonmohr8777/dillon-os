@@ -1,0 +1,16 @@
+{
+  "automation_id": "company-os-umbrella",
+  "started_at": "2026-08-27T13:10:59.754Z",
+  "status": "ok",
+  "dry_run": true,
+  "summary": "Scaffolded /workspace/automation-runs/company-os-umbrella/2099-01-16",
+  "counts": {
+    "lanes": 12,
+    "preflight_jobs": 3,
+    "preflight_ok": 3
+  },
+  "artifact_paths": [
+    "/workspace/automation-runs/company-os-umbrella/2099-01-16"
+  ],
+  "written_at": "2026-08-27T13:10:59.817Z"
+}
