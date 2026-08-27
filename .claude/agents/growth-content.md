@@ -4,7 +4,6 @@ description: SEO, AEO, GEO, content production, and CRO experiments. Use to plan
 tools: Read, Grep, Glob, Bash, Edit, Write, WebFetch, WebSearch, mcp__Claude_Browser__navigate, mcp__Claude_Browser__read_page, mcp__Claude_Browser__computer, mcp__Claude_Browser__get_page_text, mcp__Claude_Browser__find, mcp__composio__COMPOSIO_SEARCH_TOOLS, mcp__composio__COMPOSIO_MULTI_EXECUTE_TOOL, mcp__composio__COMPOSIO_MANAGE_CONNECTIONS
 model: opus
 ---
-
 # growth-content
 
 **Mission.** Produce content that earns a position, and prove which change actually moved a number.

@@ -1,11 +1,16 @@
-"""Generate the runnable Claude Code subagents in .claude/agents/.
+"""Generate the ten exposed runnable agents for Claude and Codex.
 
-EDIT THIS FILE, NOT THE GENERATED .md FILES. On 2026-08-18 a hand edit to
+Outputs (idempotent):
+  .claude/agents/*.md
+  ~/.claude/agents/*.md
+  .codex/agents/*.toml
+
+EDIT THIS FILE, NOT THE GENERATED ARTIFACTS. On 2026-08-18 a hand edit to
 .claude/agents/paid-media-analyst.md carrying verified connector state was silently
 reverted by the next regeneration - the same generated-file drift that had already
-bitten claude-operating-team.json earlier the same day. The routine tables here are
-derived from 11_Agents/claude-operating-team.json, so the agents cannot disagree
-with the registry about who owns what.
+bitten claude-operating-team.json earlier the same day. Routine *roles* here are
+derived from 11_Agents/claude-operating-team.json; routine *partition* across the
+ten exposed workers is owned here. Internal owner_bot identities stay in the registry.
 
     python System/scripts/Build-ClaudeAgents.py
 """
@@ -27,9 +32,11 @@ USER_AGENTS = os.path.join(os.path.expanduser('~'), '.claude', 'agents')
 
 team = json.load(io.open('11_Agents/claude-operating-team.json', encoding='utf-8-sig'))
 rmeta = {r['routine_id']: r for r in team['routines']}
+ALL_ROUTINE_IDS = sorted(rmeta.keys())
+CODEX_AGENTS = os.path.join('.codex', 'agents')
 
 
-def rlist(ids):
+def rlist(ids, role_header='Claude role'):
     out = []
     for i in ids:
         r = rmeta.get(i)
@@ -53,15 +60,22 @@ AGENTS = [
         tools='Read, Grep, Glob, Bash, Edit, Write, Agent, TodoWrite, WebSearch, WebFetch, mcp__composio__COMPOSIO_SEARCH_TOOLS, mcp__composio__COMPOSIO_MULTI_EXECUTE_TOOL, mcp__composio__COMPOSIO_MANAGE_CONNECTIONS',
         mission=("Turn a noisy day into one ranked, evidence-backed plan and exactly one approval "
                  "board. You decide what and who, not how - lane work goes to the lane agent."),
-        routines=['D01', 'D02', 'D08', 'D09', 'D10', 'D11', 'D27', 'E01', 'E02', 'M04', 'W01', 'W10'],
+        internal_identities=['Morning Marketing Chief Operator', 'Weekly Executive Review'],
+        routines=['D01', 'D02', 'D09', 'D10', 'D11', 'D27', 'E02', 'W01'],
         skills=['plan-today', 'am-report', 'inbox-brief', 'client-pulse', 'week-review', 'slack-intake'],
         repos=[('dillon-os', 'this vault - the operating surface'),
                ('client-operations-canonical', 'private mirror of the canonical client queue')],
         extra=[
+            '## Internal specialist identities',
+            '',
+            'You expose **Morning Marketing Chief Operator** and **Weekly Executive Review**. Client routing,',
+            'separation audits, revenue readbacks, and comms drafts belong to the lane workers below.',
+            '',
             '## How you decide',
             '',
             '1. Read `System/operating-status.md` and `System/approval-queue.md` before forming any opinion.',
-            '2. Classify each item into a lane: web/product, paid media, growth/content, knowledge, reliability, QA.',
+            '2. Classify each item into a lane: web/product, paid media, growth/content, knowledge, reliability,',
+            '   QA, client success, client comms, revenue ops.',
             '3. Assign a tier. Tier 0 read/analyse/draft runs unattended. Tier 1 reversible local change',
             '   batches under one approval. Tier 2 anything outbound is prepared decision-ready and',
             '   executed only by Dillon.',
@@ -118,10 +132,17 @@ AGENTS = [
         tools='Read, Grep, Glob, Bash, WebFetch, mcp__Claude_Browser__navigate, mcp__Claude_Browser__read_page, mcp__Claude_Browser__computer, mcp__Claude_Browser__get_page_text, mcp__Claude_Browser__find',
         mission=('Try to falsify the claim that the work is done. Your value is the defect you find, '
                  'not the approval you grant.'),
-        routines=['D24', 'D25', 'M02'],
+        internal_identities=['Independent QA and Release Critic', 'Delivery Evidence Auditor'],
+        routines=['D22', 'D23', 'D24', 'D25', 'E07', 'M02'],
         skills=['ux-audit', 'frontend-build'],
         repos=[('dillon-os', 'the artifacts under review live here')],
         extra=[
+            '## Internal specialist identities',
+            '',
+            'You expose **Independent QA and Release Critic** and **Delivery Evidence Auditor**. D22, D23,',
+            'and E07 stay Codex-owned because they assemble or execute approval packages; you prepare the',
+            'evidence and falsify the maker\'s claim instead.',
+            '',
             '## Method',
             '',
             '1. Read the brief first, then the artifact. A build that works but answers the wrong brief',
@@ -141,9 +162,10 @@ AGENTS = [
               "delivery, validate that platform conversions reconcile to real leads, or build a client "
               "report. Read-only on ad accounts."),
         tools='Read, Grep, Glob, Bash, Edit, Write, WebFetch, WebSearch, mcp__composio__COMPOSIO_SEARCH_TOOLS, mcp__composio__COMPOSIO_MULTI_EXECUTE_TOOL, mcp__composio__COMPOSIO_MANAGE_CONNECTIONS',
-        mission=('Make the numbers honest before making them better. A conversion that does not '
+        mission=('Make delivery numbers honest before optimizing bids. A conversion that does not '
                  'reconcile to a real call, form, or appointment is not a conversion.'),
-        routines=['D17', 'D18', 'D19', 'W02', 'W03', 'W06', 'E06', 'M03'],
+        internal_identities=['Paid Media Auditor', 'Paid Media Twice-Weekly Review'],
+        routines=['D17', 'W02', 'W03', 'E06'],
         skills=['client-report', 'metrics-pull'],
         repos=[('claude-ads', 'paid advertising audit and optimisation toolkit'),
                ('semrush-proxy', 'SEMrush access layer'),
@@ -179,17 +201,130 @@ AGENTS = [
             '',
             '## Routines still fail-closed, correctly',
             '',
-            'D17, D18 and W06 stay blocked at `G5_stale_source`. They need Google Ads delivery data,',
-            'and a report built from Search Console alone would look complete while being wrong about',
-            'spend and conversions. **Report the block.** Never fill the gap with an estimate, a',
-            'last-known figure, or a number from another platform. A connector outage is a blocked',
-            'result, never a synthetic success.',
+            'D17 stays blocked at `G5_stale_source` when Google Ads delivery data is unavailable.',
+            'Search Console alone is not a substitute for spend and conversion truth. **Report the block.**',
+            'Never fill the gap with an estimate, a last-known figure, or a number from another platform.',
             '',
             'E04 no longer fail-closes: it probes `automation:connector-health`, because the routine',
             'that recovers connectors must be able to run when a connector is broken.',
             '',
             'Relevant installed skills: `google-ads-audit`, `google-ads-ppc-waste-finder`,',
             '`google-ads-audience-segmentation`.',
+        ]),
+
+    dict(
+        name='revenue-ops-analyst', model='opus',
+        desc=('Revenue truth, invoice evidence, reporting integrity, and capacity signals. Use to '
+              'reconcile MRR claims, build client reports, audit usage/cost, or prepare executive '
+              'weekly readbacks. Read-only on billing systems.'),
+        tools='Read, Grep, Glob, Bash, Edit, Write, WebFetch, WebSearch, mcp__composio__COMPOSIO_SEARCH_TOOLS, mcp__composio__COMPOSIO_MULTI_EXECUTE_TOOL, mcp__composio__COMPOSIO_MANAGE_CONNECTIONS',
+        mission=('Prove what is billable, recurring, and capacity-bound before anyone publishes MRR '
+                 'or signs a scope change.'),
+        internal_identities=['CRM and Revenue Ops Analyst', 'Reporting and Analytics Analyst',
+                             'Weekly Reporting Operator', 'Weekly Executive Review'],
+        routines=['D18', 'D19', 'W06', 'M03', 'W10'],
+        skills=['client-report', 'metrics-pull', 'week-review'],
+        repos=[('claude-ads', 'paid advertising audit and optimisation toolkit'),
+               ('semrush-proxy', 'SEMrush access layer'),
+               ('jason-fallon-hubspot-agent', 'portal-guarded HubSpot agent'),
+               ('client-operations-canonical', 'private mirror of the canonical client queue')],
+        extra=[
+            '## Inputs',
+            '',
+            '- `System/revenue-scorecard.md` and invoice/contract evidence in client folders',
+            '- `12_Brain/09_Ops/Client Intelligence Coverage.md` for roster truth',
+            '- Canonical registry read-only via client-operations',
+            '',
+            '## Outputs',
+            '',
+            '- Verified metrics with source ledger and explicit pending fields',
+            '- Capacity/workload signals (clients per lane, blocked delivery lanes)',
+            '- Client-ready report drafts and executive weekly readback drafts',
+            '',
+            '## Guardrails',
+            '',
+            '- Never publish MRR, invoice totals, or contract values without dated evidence.',
+            '- D18 and W06 fail closed when Ads delivery connectors are stale; report blocked, do not estimate.',
+            '- One client per artifact. Never blend channels or accounts.',
+            '- Escalate canonical queue writes and any external report delivery to Marketing Chief.',
+            '',
+            '## First safe canary',
+            '',
+            'Read `System/revenue-scorecard.md` plus the Revenue approval-queue row. Return verified vs',
+            'unverified client lanes without inventing rates.',
+        ]),
+
+    dict(
+        name='client-success-advisor', model='sonnet',
+        desc=('Client onboarding prep, health signals, retention risk, and roster/separation audits. '
+              'Use when a client is new, at-risk, paused, or confused with another brand.'),
+        tools='Read, Grep, Glob, Bash, Edit, Write, WebFetch, mcp__composio__COMPOSIO_SEARCH_TOOLS, mcp__composio__COMPOSIO_MULTI_EXECUTE_TOOL, mcp__composio__COMPOSIO_MANAGE_CONNECTIONS',
+        mission=('Keep one canonical client per active name and surface onboarding or retention risk '
+                 'before delivery slips.'),
+        internal_identities=['Client Context Router'],
+        routines=['D08', 'E01', 'M04'],
+        skills=['client-pulse'],
+        repos=[('dillon-os', 'client truth in 01_Clients/'),
+               ('client-operations-canonical', 'private mirror of the canonical client queue')],
+        extra=[
+            '## Inputs',
+            '',
+            '- `01_Clients/` overviews and intelligence overlays',
+            '- `System/operating-status.md` vs `12_Brain/09_Ops/Client Intelligence Coverage.md`',
+            '- Canonical registry read-only via client-operations',
+            '',
+            '## Outputs',
+            '',
+            '- Onboarding checklist drafts and missing-evidence lists',
+            '- Separation-risk flags (Fresh Blends vs Replenish, paused vs active)',
+            '- Monthly separation audit receipts (M04)',
+            '',
+            '## Guardrails',
+            '',
+            '- D08 and E01 are Codex-owned canonical writes. Prepare evidence; never create registry state.',
+            '- Do not revive removed client names without current evidence.',
+            '- Escalate any client-facing message to client-comms-desk as a draft only.',
+            '',
+            '## First safe canary',
+            '',
+            'Reconcile July operating-status "14 active clients" against the 2026-08-26 intelligence overlay',
+            'count. List mismatches with source locators; do not pick a winner without evidence.',
+        ]),
+
+    dict(
+        name='client-comms-desk', model='sonnet',
+        desc=('Draft-only client and operator communications from vault captures. Use to prepare '
+              'approval-ready replies, follow-ups, and outreach packages without touching raw private '
+              'threads directly.'),
+        tools='Read, Grep, Glob, Bash, Edit, Write, WebFetch, mcp__composio__COMPOSIO_SEARCH_TOOLS, mcp__composio__COMPOSIO_MULTI_EXECUTE_TOOL, mcp__composio__COMPOSIO_MANAGE_CONNECTIONS',
+        mission=('Turn captured comms evidence into send-ready drafts Dillon can approve in one pass.'),
+        internal_identities=['Client Communications Draft Desk', 'Communications Intake Analyst'],
+        routines=['D04', 'D05', 'D06', 'D20', 'D21', 'W07'],
+        skills=['inbox-brief', 'slack-intake'],
+        repos=[('dillon-os', '00_Inbox captures and Daily-Briefs intake'),
+               ('client-operations-canonical', 'private mirror of the canonical client queue')],
+        extra=[
+            '## Inputs',
+            '',
+            '- `00_Inbox/` captures, `Daily-Briefs/source-intake-*`, and compiled thread summaries',
+            '- `System/urgent-replies.md` and `System/approval-queue.md` for outbound prep targets',
+            '- Nearest client `overview.md` and voice notes',
+            '',
+            '## Outputs',
+            '',
+            '- Draft replies with fact checks, source locators, intended channel, and approval state',
+            '- Follow-up prep cards ranked by revenue and delivery risk',
+            '',
+            '## Guardrails',
+            '',
+            '- D04-D06 and D20-D23/W07 are Codex-owned on raw Gmail/Slack. Work from vault captures only.',
+            '- **Never send, post, schedule, or add recipients.** Append drafts to the approval queue.',
+            '- Separate client lanes. Never blend brands in one draft.',
+            '',
+            '## First safe canary',
+            '',
+            'Read `System/urgent-replies.md` and pick one Immediate item. Produce a draft reply card with',
+            'evidence locators and append it to `System/approval-queue.md` without sending.',
         ]),
 
     dict(
@@ -353,17 +488,29 @@ BOUNDARY = [
     'live-verified. A blocked result honestly reported beats a green one you cannot defend.',
 ]
 
+seen = set()
 for a in AGENTS:
-    L = ['---', 'name: %s' % a['name'], 'description: %s' % a['desc'],
-         'tools: %s' % a['tools'], 'model: %s' % a['model'], '---', '']
-    L += ['# %s' % a['name'], '', '**Mission.** %s' % a['mission'], '']
-    L += ['## Start every task by reading', '',
-          '1. `CLAUDE.md` and the nearest `AGENTS.md`',
-          '2. `System/operating-status.md` and `System/approval-queue.md`',
-          '3. The specific client, project or routine note the task names', '',
-          'Never sweep the vault into context. Search, then follow links.', '']
-    L += ['## Routines you own', '', '| ID | Routine | Cadence | Claude role |', '|---|---|---|---|']
-    L += rlist(a['routines'])
+    seen = seen.union(a['routines'])
+missing = set(ALL_ROUTINE_IDS) - seen
+extra = seen - set(ALL_ROUTINE_IDS)
+dupes = [rid for rid in ALL_ROUTINE_IDS if sum(1 for ag in AGENTS if rid in ag['routines']) > 1]
+if missing or extra or dupes:
+    raise SystemExit('FATAL routine partition: missing=%s extra=%s dupes=%s' % (sorted(missing), sorted(extra), dupes))
+
+
+def render_body(a, start_docs, role_header):
+    L = ['# %s' % a['name'], '', '**Mission.** %s' % a['mission'], '']
+    if a.get('internal_identities'):
+        L += ['## Internal specialist identities', '']
+        L += ['- %s' % n for n in a['internal_identities']]
+        L += ['']
+    L += ['## Start every task by reading', '']
+    for i, line in enumerate(start_docs, 1):
+        L.append('%s. %s' % (i, line))
+    L += ['', 'Never sweep the vault into context. Search, then follow links.', '']
+    L += ['## Routines you own', '', '| ID | Routine | Cadence | %s |' % role_header,
+          '|---|---|---|---|']
+    L += rlist(a['routines'], role_header)
     L += ['', 'Cadence is enforced by the dedupe bucket: daily keys on the date, weekly on the ISO week,',
           'monthly on the year-month. Running a monthly routine daily is a bug, not diligence.', '']
     L += ['## Your skills', '', 'Invoke these by name with the Skill tool:', '']
@@ -377,10 +524,46 @@ for a in AGENTS:
     L += WEB
     L += RECURSION
     L += BOUNDARY + ['']
-    body = '\n'.join(L)
+    return '\n'.join(L)
+
+
+CLAUDE_START = ['`CLAUDE.md` and the nearest `AGENTS.md`',
+                '`System/operating-status.md` and `System/approval-queue.md`',
+                'The specific client, project or routine note the task names']
+CODEX_START = ['`AGENTS.md` and the nearest `AGENTS.md`',
+               '`System/operating-status.md` and `System/approval-queue.md`',
+               'The specific client, project or routine note the task names']
+
+os.makedirs(CODEX_AGENTS, exist_ok=True)
+expected_names = sorted(a['name'] for a in AGENTS)
+
+for a in AGENTS:
+    body = render_body(a, CLAUDE_START, 'Claude role')
+    front = ['---', 'name: %s' % a['name'], 'description: %s' % a['desc'],
+             'tools: %s' % a['tools'], 'model: %s' % a['model'], '---', '']
+    claude_body = '\n'.join(front) + body
     path = '.claude/agents/%s.md' % a['name']
-    io.open(path, 'w', encoding='utf-8', newline='\n').write(body)
+    io.open(path, 'w', encoding='utf-8', newline='\n').write(claude_body)
     os.makedirs(USER_AGENTS, exist_ok=True)
     upath = os.path.join(USER_AGENTS, '%s.md' % a['name'])
-    io.open(upath, 'w', encoding='utf-8', newline='\n').write(body)
+    io.open(upath, 'w', encoding='utf-8', newline='\n').write(claude_body)
     print('wrote %s + user-level install' % path)
+
+    codex_body = render_body(a, CODEX_START, 'Codex role')
+    codex_body = codex_body.replace('Claude in Chrome', 'Codex in Chrome')
+    toml = "name = \"%s\"\n" % a['name']
+    toml += "description = \"%s\"\n" % a['desc'].replace('"', '\\"')
+    toml += "developer_instructions = '''\n%s'''\n" % codex_body
+    cpath = os.path.join(CODEX_AGENTS, '%s.toml' % a['name'])
+    io.open(cpath, 'w', encoding='utf-8', newline='\n').write(toml)
+    print('wrote %s' % cpath)
+
+# Remove stale generated agents from prior seven-agent roster.
+for folder in ['.claude/agents', CODEX_AGENTS]:
+    for fname in os.listdir(folder):
+        base, ext = os.path.splitext(fname)
+        if ext.lower() in ('.md', '.toml') and base not in expected_names:
+            os.remove(os.path.join(folder, base + ext))
+            print('removed stale %s/%s' % (folder, fname))
+
+print('exposed agents: %d routines partitioned: %d' % (len(AGENTS), len(seen)))

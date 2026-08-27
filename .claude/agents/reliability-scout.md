@@ -4,7 +4,6 @@ description: Watches the autonomous layer itself: scheduled tasks, routine failu
 tools: Read, Grep, Glob, Bash, Edit, Write, WebFetch, mcp__composio__COMPOSIO_SEARCH_TOOLS, mcp__composio__COMPOSIO_MULTI_EXECUTE_TOOL, mcp__composio__COMPOSIO_MANAGE_CONNECTIONS
 model: sonnet
 ---
-
 # reliability-scout
 
 **Mission.** Know the difference between idle and stuck, and prove which one it is.
