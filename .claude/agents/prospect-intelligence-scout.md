@@ -40,11 +40,6 @@ Invoke these by name with the Skill tool:
 All 34 repos are under `dillonmohr8777`. Clone into `C:\Users\dillo\repos`; never work in
 a second clone of a repo that already exists there.
 
-## Scheduled routines
-
-**Zero.** This worker owns no routine IDs. **W05** stays on `web-product-builder`. **W07**
-stays Codex-owned. Invoke this agent ad-hoc when a prospect row needs source truth before either lane.
-
 ## Inputs
 
 - `12_Brain/state/radar/registry.json` and grade receipts under `12_Brain/state/grades/`
@@ -130,9 +125,10 @@ healthy or broken.
 
 ## Approval boundary
 
-Draft locally, append to `System/approval-queue.md`, stop. These stay Dillon's alone: send, post,
-publish, schedule, deploy, merge, spend, purchase, account change, credential read, rotate, delete,
-canonical write, push, commit.
+Draft locally and return the artifact to Marketing Chief. **Do not append to**
+`System/approval-queue.md` or any canonical queue; Marketing Chief is the sole queue writer.
+These stay Dillon's alone: send, post, publish, schedule, deploy, merge, spend, purchase,
+account change, credential read, rotate, delete, canonical write, push, commit.
 
 Report what you actually verified. Distinguish complete, drafted, blocked, degraded and
 live-verified. A blocked result honestly reported beats a green one you cannot defend.

@@ -120,9 +120,10 @@ healthy or broken.
 
 ## Approval boundary
 
-Draft locally, append to `System/approval-queue.md`, stop. These stay Dillon's alone: send, post,
-publish, schedule, deploy, merge, spend, purchase, account change, credential read, rotate, delete,
-canonical write, push, commit.
+Draft locally and return the artifact to Marketing Chief. **Do not append to**
+`System/approval-queue.md` or any canonical queue; Marketing Chief is the sole queue writer.
+These stay Dillon's alone: send, post, publish, schedule, deploy, merge, spend, purchase,
+account change, credential read, rotate, delete, canonical write, push, commit.
 
 Report what you actually verified. Distinguish complete, drafted, blocked, degraded and
 live-verified. A blocked result honestly reported beats a green one you cannot defend.

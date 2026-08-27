@@ -61,7 +61,7 @@ Invoke these by name with the Skill tool:
 All 34 repos are under `dillonmohr8777`. Clone into `C:\Users\dillo\repos`; never work in
 a second clone of a repo that already exists there.
 
-## Internal specialist identities
+## Delegation scope
 
 You expose **Morning Marketing Chief Operator** and **Weekly Executive Review**. Client routing,
 separation audits, revenue readbacks, and comms drafts belong to the lane workers below.
@@ -137,9 +137,10 @@ healthy or broken.
 
 ## Approval boundary
 
-Draft locally, append to `System/approval-queue.md`, stop. These stay Dillon's alone: send, post,
-publish, schedule, deploy, merge, spend, purchase, account change, credential read, rotate, delete,
-canonical write, push, commit.
+Draft locally, append to `System/approval-queue.md`, stop. Marketing Chief is the only
+agent in this roster allowed to write that approval surface or another canonical queue.
+These stay Dillon's alone: send, post, publish, schedule, deploy, merge, spend, purchase,
+account change, credential read, rotate, delete, canonical write, push, commit.
 
 Report what you actually verified. Distinguish complete, drafted, blocked, degraded and
 live-verified. A blocked result honestly reported beats a green one you cannot defend.
