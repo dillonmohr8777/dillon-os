@@ -29,6 +29,13 @@ os.chdir(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file_
 # too, which every session sees. ~/.claude/.gitignore already un-ignores /agents/, so
 # that copy is versioned in dillon-claude-config.
 USER_AGENTS = os.path.join(os.path.expanduser('~'), '.claude', 'agents')
+USER_CODEX_AGENTS = os.path.join(os.path.expanduser('~'), '.codex', 'agents')
+USER_CODEX_INSTALL_NAMES = {
+    'revenue-ops-analyst',
+    'client-success-advisor',
+    'prospect-intelligence-scout',
+}
+RETIRED_USER_AGENT_NAMES = {'client-comms-desk'}
 
 team = json.load(io.open('11_Agents/claude-operating-team.json', encoding='utf-8-sig'))
 rmeta = {r['routine_id']: r for r in team['routines']}
@@ -67,7 +74,7 @@ AGENTS = [
         repos=[('dillon-os', 'this vault - the operating surface'),
                ('client-operations-canonical', 'private mirror of the canonical client queue')],
         extra=[
-            '## Internal specialist identities',
+            '## Delegation scope',
             '',
             'You expose **Morning Marketing Chief Operator** and **Weekly Executive Review**. Client routing,',
             'separation audits, revenue readbacks, and comms drafts belong to the lane workers below.',
@@ -138,7 +145,7 @@ AGENTS = [
         skills=['ux-audit', 'frontend-build'],
         repos=[('dillon-os', 'the artifacts under review live here')],
         extra=[
-            '## Internal specialist identities',
+            '## Authority split',
             '',
             'You expose **Independent QA and Release Critic** and **Delivery Evidence Auditor**. D22, D23,',
             'and E07 stay Codex-owned because they assemble or execute approval packages; you prepare the',
@@ -307,11 +314,6 @@ AGENTS = [
         repos=[('dillon-os', '12_Brain/state/radar, prospect-radar runs, batch preflight evidence'),
                ('philadelphia-prospect-sites', 'prior batch artifacts for cross-batch dedupe')],
         extra=[
-            '## Scheduled routines',
-            '',
-            '**Zero.** This worker owns no routine IDs. **W05** stays on `web-product-builder`. **W07**',
-            'stays Codex-owned. Invoke this agent ad-hoc when a prospect row needs source truth before either lane.',
-            '',
             '## Inputs',
             '',
             '- `12_Brain/state/radar/registry.json` and grade receipts under `12_Brain/state/grades/`',
@@ -492,16 +494,27 @@ RECURSION = [
     '',
 ]
 
-BOUNDARY = [
-    '## Approval boundary',
-    '',
-    'Draft locally, append to `System/approval-queue.md`, stop. These stay Dillon\'s alone: send, post,',
-    'publish, schedule, deploy, merge, spend, purchase, account change, credential read, rotate, delete,',
-    'canonical write, push, commit.',
-    '',
-    'Report what you actually verified. Distinguish complete, drafted, blocked, degraded and',
-    'live-verified. A blocked result honestly reported beats a green one you cannot defend.',
-]
+def boundary_for(a):
+    if a['name'] == 'marketing-chief':
+        handoff = [
+            'Draft locally, append to `System/approval-queue.md`, stop. Marketing Chief is the only',
+            'agent in this roster allowed to write that approval surface or another canonical queue.',
+        ]
+    else:
+        handoff = [
+            'Draft locally and return the artifact to Marketing Chief. **Do not append to**',
+            '`System/approval-queue.md` or any canonical queue; Marketing Chief is the sole queue writer.',
+        ]
+    return [
+        '## Approval boundary',
+        '',
+        *handoff,
+        'These stay Dillon\'s alone: send, post, publish, schedule, deploy, merge, spend, purchase,',
+        'account change, credential read, rotate, delete, canonical write, push, commit.',
+        '',
+        'Report what you actually verified. Distinguish complete, drafted, blocked, degraded and',
+        'live-verified. A blocked result honestly reported beats a green one you cannot defend.',
+    ]
 
 ZERO_ROUTINE_AGENTS = {a['name'] for a in AGENTS if not a['routines']}
 seen = set()
@@ -548,7 +561,7 @@ def render_body(a, start_docs, role_header):
     L += a['extra'] + ['']
     L += WEB
     L += RECURSION
-    L += BOUNDARY + ['']
+    L += boundary_for(a) + ['']
     return '\n'.join(L)
 
 
@@ -560,6 +573,7 @@ CODEX_START = ['`AGENTS.md` and the nearest `AGENTS.md`',
                'The specific client, project or routine note the task names']
 
 os.makedirs(CODEX_AGENTS, exist_ok=True)
+os.makedirs(USER_CODEX_AGENTS, exist_ok=True)
 expected_names = sorted(a['name'] for a in AGENTS)
 
 for a in AGENTS:
@@ -582,6 +596,10 @@ for a in AGENTS:
     cpath = os.path.join(CODEX_AGENTS, '%s.toml' % a['name'])
     io.open(cpath, 'w', encoding='utf-8', newline='\n').write(toml)
     print('wrote %s' % cpath)
+    if a['name'] in USER_CODEX_INSTALL_NAMES:
+        ucpath = os.path.join(USER_CODEX_AGENTS, '%s.toml' % a['name'])
+        io.open(ucpath, 'w', encoding='utf-8', newline='\n').write(toml)
+        print('wrote user-level %s' % ucpath)
 
 # Remove stale generated agents from prior seven-agent roster.
 for folder in ['.claude/agents', CODEX_AGENTS]:
@@ -590,5 +608,14 @@ for folder in ['.claude/agents', CODEX_AGENTS]:
         if ext.lower() in ('.md', '.toml') and base not in expected_names:
             os.remove(os.path.join(folder, base + ext))
             print('removed stale %s/%s' % (folder, fname))
+
+# Remove only generator-owned retired identities at user level. Never sweep the
+# user agent directories because they contain unrelated global specialists.
+for retired in RETIRED_USER_AGENT_NAMES:
+    for folder, ext in [(USER_AGENTS, '.md'), (USER_CODEX_AGENTS, '.toml')]:
+        stale_path = os.path.join(folder, retired + ext)
+        if os.path.exists(stale_path):
+            os.remove(stale_path)
+            print('removed retired user-level %s' % stale_path)
 
 print('exposed agents: %d routines partitioned: %d' % (len(AGENTS), len(seen)))

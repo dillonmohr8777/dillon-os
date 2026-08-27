@@ -20,6 +20,9 @@ $builder = Join-Path $resolvedVault 'System/scripts/Build-ClaudeAgents.py'
 $registry = Join-Path $resolvedVault '11_Agents/claude-operating-team.json'
 $claudeDir = Join-Path $resolvedVault '.claude/agents'
 $codexDir = Join-Path $resolvedVault '.codex/agents'
+$userClaudeDir = Join-Path $env:USERPROFILE '.claude/agents'
+$userCodexDir = Join-Path $env:USERPROFILE '.codex/agents'
+$prospectCanary = Join-Path $resolvedVault '00_Inbox/Agent-Proposals/Cursor/2026-08-26-prospect-intelligence-scout-canary.md'
 
 $checks = New-Object System.Collections.Generic.List[object]
 function Add-Check {
@@ -88,6 +91,51 @@ $codexDrift = @(Compare-Object -ReferenceObject ($expectedAgents | Sort-Object) 
 Add-Check 'claude_names_match' '0 differences' $claudeDrift.Count ($claudeDrift.Count -eq 0)
 Add-Check 'codex_names_match' '0 differences' $codexDrift.Count ($codexDrift.Count -eq 0)
 
+$newUserAgents = @('revenue-ops-analyst', 'client-success-advisor', 'prospect-intelligence-scout')
+$userCodexDrift = @()
+foreach ($name in $newUserAgents) {
+    $projectHash = Get-FileSha -Path (Join-Path $codexDir ($name + '.toml'))
+    $userHash = Get-FileSha -Path (Join-Path $userCodexDir ($name + '.toml'))
+    if ($projectHash -ne $userHash) { $userCodexDrift += $name }
+}
+Add-Check 'user_codex_new_agents_match' '0 hash differences' $userCodexDrift.Count ($userCodexDrift.Count -eq 0)
+
+$retiredUserPaths = @(
+    (Join-Path $userClaudeDir 'client-comms-desk.md'),
+    (Join-Path $userCodexDir 'client-comms-desk.toml')
+)
+$retiredPresent = @($retiredUserPaths | Where-Object { Test-Path -LiteralPath $_ })
+Add-Check 'retired_user_agent_absent' '0 files' $retiredPresent.Count ($retiredPresent.Count -eq 0)
+
+$prospectClaudeText = Get-Content -LiteralPath (Join-Path $claudeDir 'prospect-intelligence-scout.md') -Raw
+$prospectCodexText = Get-Content -LiteralPath (Join-Path $codexDir 'prospect-intelligence-scout.toml') -Raw
+$scheduledHeadingCount = @([regex]::Matches($prospectClaudeText, '(?m)^## Scheduled routines\s*$')).Count
+$scheduledCodexHeadingCount = @([regex]::Matches($prospectCodexText, '(?m)^## Scheduled routines\s*$')).Count
+Add-Check 'scout_single_scheduled_heading_claude' '1' $scheduledHeadingCount ($scheduledHeadingCount -eq 1)
+Add-Check 'scout_single_scheduled_heading_codex' '1' $scheduledCodexHeadingCount ($scheduledCodexHeadingCount -eq 1)
+
+$specialistQueueLeaks = @()
+foreach ($name in $expectedAgents | Where-Object { $_ -ne 'marketing-chief' }) {
+    foreach ($path in @((Join-Path $claudeDir ($name + '.md')), (Join-Path $codexDir ($name + '.toml')))) {
+        $text = Get-Content -LiteralPath $path -Raw
+        if ($text -match 'Draft locally, append to `System/approval-queue\.md`') { $specialistQueueLeaks += $path }
+        if ($text -notmatch 'Marketing Chief is the sole queue writer') { $specialistQueueLeaks += ($path + ':missing-sole-writer') }
+    }
+}
+Add-Check 'specialists_cannot_write_queue' '0 leaks' $specialistQueueLeaks.Count ($specialistQueueLeaks.Count -eq 0)
+
+$marketingChiefQueueContract = Get-Content -LiteralPath (Join-Path $codexDir 'marketing-chief.toml') -Raw
+$marketingChiefIsQueueWriter =
+    ($marketingChiefQueueContract -match 'Marketing Chief is the only') -and
+    ($marketingChiefQueueContract -match 'allowed to write that approval surface or another canonical queue')
+Add-Check 'marketing_chief_is_queue_writer' 'explicit sole-writer contract' `
+    $marketingChiefIsQueueWriter `
+    $marketingChiefIsQueueWriter
+
+$canaryText = if (Test-Path -LiteralPath $prospectCanary) { Get-Content -LiteralPath $prospectCanary -Raw } else { '' }
+$canaryIdentityOk = ($canaryText -match '`registry:redrosefamilydental`') -and ($canaryText -notmatch '`domain:redrosefamilydental`')
+Add-Check 'canary_registry_fallback_key' 'registry fallback, no fake domain key' $canaryIdentityOk $canaryIdentityOk
+
 $reg = Get-Content -LiteralPath $registry -Raw | ConvertFrom-Json
 $allRoutineIds = @($reg.routines | ForEach-Object { $_.routine_id } | Sort-Object -Unique)
 $routineCounts = @{}
@@ -117,6 +165,21 @@ if ($duplicateIds.Count -gt 0) {
 if ($missingIds.Count -gt 0) {
     Add-Check 'routine_missing_ids' 'none' ($missingIds -join ', ') $false
 }
+
+$codexRoutineCounts = @{}
+foreach ($id in $allRoutineIds) { $codexRoutineCounts[$id] = 0 }
+foreach ($toml in Get-ChildItem -LiteralPath $codexDir -Filter '*.toml' -File) {
+    $text = Get-Content -LiteralPath $toml.FullName -Raw
+    foreach ($id in $allRoutineIds) {
+        if ($text -match ('\|\s*`' + [regex]::Escape($id) + '`\s*\|')) {
+            $codexRoutineCounts[$id] = $codexRoutineCounts[$id] + 1
+        }
+    }
+}
+$codexMissing = @($allRoutineIds | Where-Object { $codexRoutineCounts[$_] -eq 0 })
+$codexDuplicates = @($codexRoutineCounts.GetEnumerator() | Where-Object { $_.Value -gt 1 })
+$codexPartitionOk = ($codexMissing.Count -eq 0) -and ($codexDuplicates.Count -eq 0)
+Add-Check 'codex_routine_exactly_once' '54/54, no duplicates' $codexPartitionOk $codexPartitionOk
 
 $failed = @($checks | Where-Object { -not $_.ok })
 $overall = $(if ($failed.Count -eq 0) { 'pass' } else { 'fail' })

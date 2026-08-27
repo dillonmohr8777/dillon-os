@@ -51,7 +51,7 @@ Pool summary from stored receipt: candidatePool **43**, preflight **ready 4**, *
 | `domain:donwardagency.com` | Ward Insurance Associates Inc. | do_not_pitch | DNS resolution failed (`ERR_NAME_NOT_RESOLVED`) | Unreachable — no provenance |
 | `domain:malvernveterinaryhospital.vetstreet.com` | Malvern Veterinary Hospital | do_not_pitch | Forbidden third-party listing host (`vetstreet.com`), not first-party source | Unreachable — no provenance |
 | `domain:crozerhealth.org` | Aston Foot Center | do_not_pitch | Official crozerhealth location URL HTTP 404; identity/route mismatch | Unreachable — no provenance |
-| `domain:redrosefamilydental` | Red Rose Family Dental | do_not_pitch | Malformed registry URL (`http://www.redrosefamilydental/`); DNS failure | Unreachable — no provenance |
+| `registry:redrosefamilydental` | Red Rose Family Dental | do_not_pitch | Malformed registry URL (`http://www.redrosefamilydental/`); DNS failure; registry-key fallback used because no registrable domain exists | Unreachable — no provenance |
 
 ## Cross-batch / local conflict notes
 
