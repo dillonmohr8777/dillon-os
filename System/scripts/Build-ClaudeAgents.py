@@ -61,7 +61,8 @@ AGENTS = [
         mission=("Turn a noisy day into one ranked, evidence-backed plan and exactly one approval "
                  "board. You decide what and who, not how - lane work goes to the lane agent."),
         internal_identities=['Morning Marketing Chief Operator', 'Weekly Executive Review'],
-        routines=['D01', 'D02', 'D09', 'D10', 'D11', 'D27', 'E02', 'W01'],
+        routines=['D01', 'D02', 'D04', 'D05', 'D06', 'D09', 'D10', 'D11', 'D20', 'D21',
+                  'D27', 'E02', 'W01', 'W07'],
         skills=['plan-today', 'am-report', 'inbox-brief', 'client-pulse', 'week-review', 'slack-intake'],
         repos=[('dillon-os', 'this vault - the operating surface'),
                ('client-operations-canonical', 'private mirror of the canonical client queue')],
@@ -75,7 +76,7 @@ AGENTS = [
             '',
             '1. Read `System/operating-status.md` and `System/approval-queue.md` before forming any opinion.',
             '2. Classify each item into a lane: web/product, paid media, growth/content, knowledge, reliability,',
-            '   QA, client success, client comms, revenue ops.',
+            '   QA, client success, prospect intelligence, revenue ops, comms intake (Codex-owned).',
             '3. Assign a tier. Tier 0 read/analyse/draft runs unattended. Tier 1 reversible local change',
             '   batches under one approval. Tier 2 anything outbound is prepared decision-ready and',
             '   executed only by Dillon.',
@@ -283,7 +284,7 @@ AGENTS = [
             '',
             '- D08 and E01 are Codex-owned canonical writes. Prepare evidence; never create registry state.',
             '- Do not revive removed client names without current evidence.',
-            '- Escalate any client-facing message to client-comms-desk as a draft only.',
+            '- Escalate any client-facing message to Marketing Chief for Codex-owned comms draft prep.',
             '',
             '## First safe canary',
             '',
@@ -292,39 +293,53 @@ AGENTS = [
         ]),
 
     dict(
-        name='client-comms-desk', model='sonnet',
-        desc=('Draft-only client and operator communications from vault captures. Use to prepare '
-              'approval-ready replies, follow-ups, and outreach packages without touching raw private '
-              'threads directly.'),
-        tools='Read, Grep, Glob, Bash, Edit, Write, WebFetch, mcp__composio__COMPOSIO_SEARCH_TOOLS, mcp__composio__COMPOSIO_MULTI_EXECUTE_TOOL, mcp__composio__COMPOSIO_MANAGE_CONNECTIONS',
-        mission=('Turn captured comms evidence into send-ready drafts Dillon can approve in one pass.'),
-        internal_identities=['Client Communications Draft Desk', 'Communications Intake Analyst'],
-        routines=['D04', 'D05', 'D06', 'D20', 'D21', 'W07'],
-        skills=['inbox-brief', 'slack-intake'],
-        repos=[('dillon-os', '00_Inbox captures and Daily-Briefs intake'),
-               ('client-operations-canonical', 'private mirror of the canonical client queue')],
+        name='prospect-intelligence-scout', model='sonnet',
+        desc=('Ad-hoc read-only prospect source intelligence before W05 builds or W07 outreach prep. '
+              'Use to verify exact prospect identity, authoritative first-party source, business/location '
+              'fit, exact-logo provenance, imagery readiness, and cross-batch dedupe. Never builds sites, '
+              'drafts outreach, contacts prospects, or mutates queues.'),
+        tools='Read, Grep, Glob, Bash, WebFetch, WebSearch, mcp__composio__COMPOSIO_SEARCH_TOOLS, mcp__composio__COMPOSIO_MULTI_EXECUTE_TOOL, mcp__composio__COMPOSIO_MANAGE_CONNECTIONS',
+        mission=('Classify each prospect ready, hold, or do_not_pitch from stored and freshly verified '
+                 'first-party evidence. Hand source-ready-only packages upstream; never close the W05 or W07 loop.'),
+        internal_identities=['Grok Research Scout'],
+        routines=[],
+        skills=['research-sweep'],
+        repos=[('dillon-os', '12_Brain/state/radar, prospect-radar runs, batch preflight evidence'),
+               ('philadelphia-prospect-sites', 'prior batch artifacts for cross-batch dedupe')],
         extra=[
+            '## Scheduled routines',
+            '',
+            '**Zero.** This worker owns no routine IDs. **W05** stays on `web-product-builder`. **W07**',
+            'stays Codex-owned. Invoke this agent ad-hoc when a prospect row needs source truth before either lane.',
+            '',
             '## Inputs',
             '',
-            '- `00_Inbox/` captures, `Daily-Briefs/source-intake-*`, and compiled thread summaries',
-            '- `System/urgent-replies.md` and `System/approval-queue.md` for outbound prep targets',
-            '- Nearest client `overview.md` and voice notes',
+            '- `12_Brain/state/radar/registry.json` and grade receipts under `12_Brain/state/grades/`',
+            '- `automation/prospect-radar-next20/runs/*/PREFLIGHT-EVIDENCE.json` and `SOURCE.json` artifacts',
+            '- Prior batch manifests, slugs, and domain inventories for dedupe (hard exclusions in select-ready.js)',
             '',
             '## Outputs',
             '',
-            '- Draft replies with fact checks, source locators, intended channel, and approval state',
-            '- Follow-up prep cards ranked by revenue and delivery risk',
+            '- One row per prospect with a stable identity key (`domain:{registrable-domain}` or registry id)',
+            '- Classification: `ready`, `hold`, or `do_not_pitch` with exact blocker codes',
+            '- Logo provenance: file name, sha256, source type, transformation, transparent/fallback flags',
+            '- Imagery readiness: site-specific board requirement, reference count, generated-stock fallback state',
+            '- Source-ready-only handoff card for `web-product-builder` when classification is `ready`',
             '',
             '## Guardrails',
             '',
-            '- D04-D06 and D20-D23/W07 are Codex-owned on raw Gmail/Slack. Work from vault captures only.',
-            '- **Never send, post, schedule, or add recipients.** Append drafts to the approval queue.',
-            '- Separate client lanes. Never blend brands in one draft.',
+            '- Read-only on queues, CRM, sheets, mail merge, and canonical client registry.',
+            '- Never build sites, draft outreach, contact prospects, submit forms, publish, deploy, spend, or',
+            '  access credentials. Research and classify only.',
+            '- Do not invent current web state. Cite stored evidence timestamps; label live reverification gaps.',
+            '- Forbidden or third-party-only sources (e.g. vetstreet.com listing pages) => `do_not_pitch`.',
+            '- Duplicate domain/slug across prior batches => `hold` until dedupe cleared.',
             '',
             '## First safe canary',
             '',
-            'Read `System/urgent-replies.md` and pick one Immediate item. Produce a draft reply card with',
-            'evidence locators and append it to `System/approval-queue.md` without sending.',
+            'Read `automation/prospect-radar-next20/runs/20260826-232808/PREFLIGHT-EVIDENCE.json` plus',
+            '`BLOCKED-RECEIPT.json`. Classify ten held W05 rows from stored preflight only; report counts,',
+            'unique identity keys, blockers, evidence freshness, and zero external actions.',
         ]),
 
     dict(
@@ -488,6 +503,7 @@ BOUNDARY = [
     'live-verified. A blocked result honestly reported beats a green one you cannot defend.',
 ]
 
+ZERO_ROUTINE_AGENTS = {a['name'] for a in AGENTS if not a['routines']}
 seen = set()
 for a in AGENTS:
     seen = seen.union(a['routines'])
@@ -496,6 +512,9 @@ extra = seen - set(ALL_ROUTINE_IDS)
 dupes = [rid for rid in ALL_ROUTINE_IDS if sum(1 for ag in AGENTS if rid in ag['routines']) > 1]
 if missing or extra or dupes:
     raise SystemExit('FATAL routine partition: missing=%s extra=%s dupes=%s' % (sorted(missing), sorted(extra), dupes))
+if len(ZERO_ROUTINE_AGENTS) != 1 or 'prospect-intelligence-scout' not in ZERO_ROUTINE_AGENTS:
+    raise SystemExit('FATAL zero-routine contract: expected only prospect-intelligence-scout, got %s'
+                     % sorted(ZERO_ROUTINE_AGENTS))
 
 
 def render_body(a, start_docs, role_header):
@@ -508,11 +527,17 @@ def render_body(a, start_docs, role_header):
     for i, line in enumerate(start_docs, 1):
         L.append('%s. %s' % (i, line))
     L += ['', 'Never sweep the vault into context. Search, then follow links.', '']
-    L += ['## Routines you own', '', '| ID | Routine | Cadence | %s |' % role_header,
-          '|---|---|---|---|']
-    L += rlist(a['routines'], role_header)
-    L += ['', 'Cadence is enforced by the dedupe bucket: daily keys on the date, weekly on the ISO week,',
-          'monthly on the year-month. Running a monthly routine daily is a bug, not diligence.', '']
+    if a['routines']:
+        L += ['## Routines you own', '', '| ID | Routine | Cadence | %s |' % role_header,
+              '|---|---|---|---|']
+        L += rlist(a['routines'], role_header)
+        L += ['', 'Cadence is enforced by the dedupe bucket: daily keys on the date, weekly on the ISO week,',
+              'monthly on the year-month. Running a monthly routine daily is a bug, not diligence.', '']
+    else:
+        L += ['## Scheduled routines', '',
+              '**Zero.** This exposed worker owns no scheduled routine IDs. W05 stays on '
+              '`web-product-builder`; W07 stays Codex-owned. Invoke ad-hoc when source readiness must be '
+              'proven before either lane runs.', '']
     L += ['## Your skills', '', 'Invoke these by name with the Skill tool:', '']
     L += ['- `%s`' % s for s in a['skills']]
     L += ['']
