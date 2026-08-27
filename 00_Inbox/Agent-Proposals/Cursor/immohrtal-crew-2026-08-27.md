@@ -2,7 +2,7 @@
 note_type: proposal
 status: worked
 created: 2026-08-27
-verified_at: 2026-08-27T18:34:55.8411913Z
+verified_at: 2026-08-27T20:00:55.9350018Z
 agent: marketing-chief
 privacy: redacted
 external_action_attempted: none
@@ -13,13 +13,13 @@ source_refs:
 
 # Immohrtal crew - 2026-08-27
 
-cycle `CREW-20260827-143450538` outcome **worked**
+cycle `CREW-20260827-160051965` outcome **worked**
 
 ## Highest automatic action
 
-Paid-media rank 1 stays blocked: Ads LIST recovered, child GAQL still 403 without login-customer-id. Did not hammer Ads. Did not pause/enable/budget.
+Paid-media rank 1 stays blocked: Ads LIST recovered, child GAQL still 403 without login-customer-id. Schema re-inspected this tick (`GOOGLEADS_SEARCH_STREAM_GAQL` still has no login-customer-id). Did not call GAQL. Did not pause/enable/budget.
 
-Executed rank 2 local verify: IMMOHRTAL outreach live-verify. Packet 2 Firecrawl stealth HTTP 200 (national franchise extra hold). Packet 1 remains DO NOT PITCH (moving-company mismatch; therousegroup.com Coming Soon / noindex). Packet 4 HTTP 200 extra hold. Packet 3 last 403 extra hold. mail_ready=hold. No send. No Gmail draft.
+Executed Search Console date totals for 2026-08-21..26 (26 empty). Shadow 1/26, Onsite 6/715, KJB 20/1964, agency 0/3. Shadow brand query "shadow heating and cooling" 1 click on 2026-08-25. Outreach remains hold. Preview LPs remain 0/3 fail for publish. mail_ready=hold.
 
 ## Lanes
 

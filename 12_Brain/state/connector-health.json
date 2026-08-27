@@ -1,14 +1,14 @@
 {
   "schema": 1,
   "recorded_by": "cursor/private-worker 2026-08-27 via Composio MCP",
-  "recorded_at_utc": "2026-08-27T12:06:00Z",
+  "recorded_at_utc": "2026-08-27T20:02:00Z",
   "note": "Written by an MCP-capable agent, read by _os/automation/bin/connector-health.js. Every status below was observed, not assumed. Do not hand-edit to open a gate.",
   "connectors": [
     {
       "toolkit": "google_search_console",
       "status": "active",
       "read_verified": true,
-      "last_verified_utc": "2026-08-27T10:05:00Z",
+      "last_verified_utc": "2026-08-27T20:01:52Z",
       "accounts": [
         {
           "id": "google_search_console_mooner-urban",
@@ -41,16 +41,19 @@
       "read_proof": {
         "tool": "GOOGLE_SEARCH_CONSOLE_SEARCH_ANALYTICS_QUERY",
         "site_url": "sc-domain:shadow-heating.com",
-        "range": "2026-08-20..2026-08-24",
-        "clicks": 0,
+        "range": "2026-08-21..2026-08-25",
+        "clicks": 1,
         "impressions": 26,
         "second_site_url": "https://onsiteconcretelandscape.com/",
         "second_site_account": "google_search_console_kindle-spurt",
         "second_site_clicks": 6,
-        "second_site_top_query": "onsite concrete",
+        "second_site_impressions": 715,
         "kjb_site_url": "https://www.kimberlyjamesbridal.com/",
-        "kjb_clicks": 21,
+        "kjb_clicks": 20,
+        "kjb_impressions": 1964,
         "agency_site_url": "sc-domain:immohrtalmarketing.com",
+        "agency_clicks": 0,
+        "agency_impressions": 3,
         "agency_query_rows": 0
       },
       "note": "Live and usable. Two accounts: pass the account id explicitly, since account_selection is required."

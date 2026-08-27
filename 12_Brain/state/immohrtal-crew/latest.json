@@ -1,8 +1,8 @@
 {
     "schema":  1,
-    "cycle_id":  "CREW-20260827-143450538",
-    "started_at_utc":  "2026-08-27T18:34:50.5385378Z",
-    "finished_at_utc":  "2026-08-27T18:34:55.8411913Z",
+    "cycle_id":  "CREW-20260827-160051965",
+    "started_at_utc":  "2026-08-27T20:00:51.9657495Z",
+    "finished_at_utc":  "2026-08-27T20:00:55.9350018Z",
     "outcome":  "worked",
     "skip_reason":  null,
     "mail_ready":  "hold",
@@ -72,7 +72,7 @@
                                                         "automation_id":  "connector-health",
                                                         "status":  "ok",
                                                         "window_hours":  48,
-                                                        "snapshot_age_hours":  6.48,
+                                                        "snapshot_age_hours":  7.92,
                                                         "counts":  {
                                                                        "connectors":  5,
                                                                        "usable":  1,
@@ -84,7 +84,7 @@
                                                                                "status":  "active",
                                                                                "read_verified":  true,
                                                                                "observed_at_utc":  "2026-08-27T10:05:00.000Z",
-                                                                               "age_hours":  8.5,
+                                                                               "age_hours":  9.93,
                                                                                "usable":  true,
                                                                                "note":  "Live and usable. Two accounts: pass the account id explicitly, since account_selection is required."
                                                                            },
@@ -93,7 +93,7 @@
                                                                                "status":  "active",
                                                                                "read_verified":  false,
                                                                                "observed_at_utc":  "2026-08-27T12:06:00.000Z",
-                                                                               "age_hours":  6.48,
+                                                                               "age_hours":  7.92,
                                                                                "usable":  false,
                                                                                "note":  "Connection remains ACTIVE. LIST_ACCESSIBLE_CUSTOMERS returned 16 resource names (quota recovered; not 429). Child-account GAQL returned USER_PERMISSION_DENIED for login-customer-id. One listed customer returned CUSTOMER_NOT_ENABLED. Do not treat this as a re-auth problem. No pause/enable/budget. Replenish invite untouched."
                                                                            },
@@ -102,7 +102,7 @@
                                                                                "status":  "active",
                                                                                "read_verified":  false,
                                                                                "observed_at_utc":  "2026-08-18T19:25:22.000Z",
-                                                                               "age_hours":  215.16,
+                                                                               "age_hours":  216.59,
                                                                                "usable":  false,
                                                                                "note":  "Connection reported active by COMPOSIO_MANAGE_CONNECTIONS but no read was executed this session, so read_verified stays false. Verify before relying on it."
                                                                            },
@@ -111,7 +111,7 @@
                                                                                "status":  "not_connected",
                                                                                "read_verified":  false,
                                                                                "observed_at_utc":  "2026-08-18T19:25:22.000Z",
-                                                                               "age_hours":  215.16,
+                                                                               "age_hours":  216.59,
                                                                                "usable":  false,
                                                                                "note":  "Not in the connected-toolkit list. `instagram` is connected, which is not the same as Meta Ads. Routines needing Meta delivery data stay blocked."
                                                                            },
@@ -120,7 +120,7 @@
                                                                                "status":  "not_connected",
                                                                                "read_verified":  false,
                                                                                "observed_at_utc":  "2026-08-18T19:25:22.000Z",
-                                                                               "age_hours":  215.16,
+                                                                               "age_hours":  216.59,
                                                                                "usable":  false,
                                                                                "note":  "Not connected via Composio. The jason-fallon-hubspot-agent repo holds a portal-guarded path; treat that as the route, not this connector."
                                                                            }
