@@ -1,7 +1,7 @@
 ---
 note_type: index
 status: active
-updated: 2026-08-01
+updated: 2026-08-28
 tags:
   - index
   - brain
@@ -23,6 +23,10 @@ links instead of loading the entire vault.
 - [[Dashboard|D.I.L.L.O.N. Dashboard]] — current directives and operating HUD.
 - [[System/operating-status|Operating Status]] — current roster and reporting
   truth.
+- [[Daily-Briefs/competitive-task-today|Competitive Task Today]] — afternoon
+  operator priority stack (umbrella automation output).
+- [[System/competitive-task-definition|Competitive Task Definition]] — what
+  "competitive task" means and which crons it replaces.
 - [[System/approval-queue|Approval Queue]] — consequential actions waiting for
   Dillon.
 - [[System/revenue-scorecard|Revenue Scorecard]] — verified revenue state.

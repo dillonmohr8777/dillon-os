@@ -1,7 +1,11 @@
 ---
-last_sync: 2026-07-12
-evidence_window_start: 2026-06-21
+last_sync: 2026-08-28
+evidence_window_start: 2026-08-07
 tags: [system, memory, sync]
+source_refs:
+  - Daily-Briefs/competitive-task-today.md
+  - System/urgent-replies.md
+  - System/approval-queue.md
 ---
 
 # Claude Memory Sync
@@ -23,3 +27,24 @@ Align HCM is active full-time work and not a client.
 - Keep Replenish isolated by brand, campaign, conversion, UTM, and report.
 - Treat current rates and MRR as unknown until invoice or contract verification.
 - No send, publish, deploy, spend, or account mutation without approval.
+
+## Pending deliverables (from umbrella run 2026-08-28)
+
+- Shadow HVAC: verify Meta visibility and current-week leads.
+- KJB: FAQ desktop crop, responsive QA, appointment routing.
+- Bar Crawl USA: Boos & Booze QA + current-event hub repair.
+- Revive Systems: 48-hour lead-recovery brief + LSA verification.
+- Fagan Painting: attribution reconciliation before scale.
+
+## Unanswered / urgent
+
+See `System/urgent-replies.md` and `System/slack-action-queue.md`.
+
+## Upcoming deadlines (7 days)
+
+- Sunday 2026-08-30: BOK social + Align LinkedIn content-routines lane.
+- Approval queue: 180+ gated items — prune/archive per `System/approval-queue.md` ceiling rules.
+
+## Operator throughput note
+
+Competitive task = running ~25 accounts + Align + Mohr Media without dropping launches, billing, or comms. One afternoon brief: `Daily-Briefs/competitive-task-today.md`.
