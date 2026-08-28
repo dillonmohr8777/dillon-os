@@ -1,34 +1,34 @@
 {
   "automation_id": "radar-refresh",
-  "started_at": "2026-08-27T17:40:27.397Z",
+  "started_at": "2026-08-28T18:40:13.345Z",
   "status": "ok",
-  "date": "2026-08-27",
-  "rotation_slot": "PA: Erie County, Adams County, Lycoming County, Somerset County, Luzerne County, Chester County",
+  "date": "2026-08-28",
+  "rotation_slot": "PA: Forest County, Cumberland County, Tioga County, Washington County, Monroe County, Bucks County",
   "run": {
-    "discovered_raw": 87,
-    "discovered_new": 39,
-    "regraded": 37,
-    "enriched": 31,
-    "enrich_no_match": 8,
+    "discovered_raw": 180,
+    "discovered_new": 27,
+    "regraded": 29,
+    "enriched": 18,
+    "enrich_no_match": 9,
     "enrich_skipped": 0,
     "errors": [],
-    "plan": "statewide Pennsylvania coverage across 6 regions and 67 counties",
+    "plan": "registry is at 1200 rows, past the 1200 soft cap — discovery ramped from 60 to 60",
     "throttled": false,
-    "rendered": 30,
+    "rendered": 22,
     "imagery_checked": 4,
     "imagery_buildable": 0
   },
-  "tracked": 1200,
-  "build_queue_size": 226,
+  "tracked": 1227,
+  "build_queue_size": 230,
   "needs_render": 0,
   "mean_site_quality": 54,
   "by_verdict": {
-    "rebuild": 226,
-    "polish": 750,
-    "enrich": 24,
-    "nurture": 157,
-    "ads_seo": 27
+    "rebuild": 230,
+    "polish": 767,
+    "enrich": 23,
+    "nurture": 163,
+    "ads_seo": 28
   },
   "errors": [],
-  "written_at": "2026-08-27T17:40:27.419Z"
+  "written_at": "2026-08-28T18:40:13.372Z"
 }
