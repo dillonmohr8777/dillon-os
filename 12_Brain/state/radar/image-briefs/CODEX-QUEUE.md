@@ -1,4 +1,4 @@
-# Codex image queue — generated 2026-08-28
+# Codex image queue — generated 2026-08-29
 
 100 rebuild targets own no usable photographs. Each has a brief in
 this directory specifying exactly what to generate, slot by slot.
@@ -115,9 +115,9 @@ this directory specifying exactly what to generate, slot by slot.
 | 92 | Gallo Insurance Agency | insurance | Philadelphia | gallo-insurance-agency.json |
 | 93 | Glocker and Co. Inc. Realtors | estate-agent | Boyertown | glocker-and-co-inc-realtors.json |
 | 94 | Accurate Temperature | hvac | Bensalem | accurate-temperature.json |
-| 95 | Wynnewood Eyecare | optometrist |  | wynnewood-eyecare.json |
-| 96 | BPM Fitness | fitness-centre |  | bpm-fitness.json |
-| 97 | First Class Auto Land | car | Philadelphia | first-class-auto-land.json |
-| 98 | Bar 31 | bar | Ambler | bar-31.json |
-| 99 | August Moon | restaurant | Norristown | august-moon.json |
-| 100 | Theory | clothes | Pottstown | theory.json |
+| 95 | Hornung's True Value | hardware | Harrisburg | hornung-s-true-value.json |
+| 96 | Wynnewood Eyecare | optometrist |  | wynnewood-eyecare.json |
+| 97 | BPM Fitness | fitness-centre |  | bpm-fitness.json |
+| 98 | First Class Auto Land | car | Philadelphia | first-class-auto-land.json |
+| 99 | Bar 31 | bar | Ambler | bar-31.json |
+| 100 | August Moon | restaurant | Norristown | august-moon.json |
