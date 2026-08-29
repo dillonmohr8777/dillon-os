@@ -1,23 +1,51 @@
 ---
-last_checked: 2026-04-15
+last_checked: 2026-08-29
+last_orchestrator_run: 2026-08-29T13:10:00Z
 tags: [system, routines]
 ---
 
 # Routine Health Monitor
 
-All routines: initialized, first runs scheduled. Vault is seeded with frontmatter fields the routines expect (`client`, `last_touched`, `next_action`, `due`, `tags`, `status`, `division`, `cc_list`, `contact_email`).
+## Umbrella automation (canonical)
 
-## Routines expected to run
-- `nightly-client-pulse` — generates Daily-Briefs/pulse-today.md.
-- `gmail-to-vault-digest` — updates System/urgent-replies.md every 7:00 AM.
-- `vault-integrity-sync` — rewrites System/claude-memory-sync.md nightly at 2:00 AM.
-- `chat-to-vault-sync` — syncs conversation state every 2 hours.
-- `bok-law-social-content` — generates BOK Law weekly social content every Sunday 6:00 PM.
-- `linkedin-growth-engine` — reads 02_FullTimeJob/AlignHCM/linkedin-calendar.md every Sunday 9:00 PM.
-- `book-site-seo-sweep` — reads 05_Book/seo-strategy.md every Thursday.
+| Automation | Schedule | Status | Output |
+| --- | --- | --- | --- |
+| `competitive-task-orchestrator` | `0 13 * * *` ET | **active** | `Daily-Briefs/competitive-task-today.md` |
+
+Runbook: `04_SOPs/competitive-task-orchestrator.md` · Definition: `System/competitive-task-definition.md`
+
+### Phase 1 lanes (parallel)
+
+| Lane | Agent | 2026-08-29 | Notes |
+| --- | --- | --- | --- |
+| Gmail | `gmail-intel` | 🟡 fallback | Vault + approval queue; MCP not connected |
+| Slack | `slack-intel` | 🟡 fallback | `System/slack-action-queue.md` written |
+| Vault | `vault-pulse` | 🟢 ok | Full scan; portfolio stale 22–49d |
+| Sessions | `codex-session-sync` | 🟢 ok | Session Index updated |
+| Ads/SEO | `domain-ads-seo` | 🟢 ok | P0s surfaced from client notes |
+| Content | `content-routines` | ⚪ skipped | Saturday — Sun/Thu only |
+
+### Phase 2 (sequential)
+
+| Lane | Agent | 2026-08-29 |
+| --- | --- | --- |
+| Consolidation | `memory-consolidator` | 🟢 ok — brief + sync files updated |
+
+## Retired standalone crons (disable in Cursor UI)
+
+These seven legacy automations are superseded by the umbrella orchestrator:
+
+- `nightly-client-pulse`
+- `gmail-to-vault-digest`
+- `vault-integrity-sync`
+- `chat-to-vault-sync`
+- `bok-law-social-content`
+- `linkedin-growth-engine`
+- `book-site-seo-sweep`
+
+See `System/competitive-task-definition.md` for Codex/Rockbot tasks folded into Marketing Chief daily driver.
 
 ## Notes
-- First real test of the full routine stack begins 2026-04-16.
 
-## Brain layer
-- Canonical: [[12_Brain/README|12_Brain]] · [[12_Brain/System/Health Automation|Health Automation]]
+- First umbrella run on branch `cursor/competitive-task-consolidation-00b6`.
+- Connect Gmail + Slack MCP on the automation to turn fallback lanes green.
