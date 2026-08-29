@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-07-29",
+  "updated": "2026-08-29",
   "contract": "00_Inbox/Automation Deep Analysis 2026-07-29.md",
   "dependency": "12_Brain/DEPENDENCY_PR226.md",
   "automations": [
@@ -409,6 +409,34 @@
       "external_actions": false,
       "status": "implemented",
       "note": "Split write/read: an MCP-capable agent records observed connector status; this CLI only validates freshness. It never contacts a provider and never invents a status."
+    },
+    {
+      "id": "competitive-task-orchestrator",
+      "name": "Competitive task orchestrator (umbrella daily operator cycle)",
+      "lane": "command",
+      "tier": 0,
+      "cadence": "daily at 1:00 PM America/New_York",
+      "command": "Cursor automation competitive-task-orchestrator (see System/competitive-task-orchestrator-prompt.md)",
+      "inputs": [
+        "01_Clients/",
+        "10_Sessions/",
+        "00_Inbox/slack/",
+        "System/approval-queue.md",
+        "System/urgent-replies.md",
+        "Daily-Briefs/radar-*.md",
+        "Gmail MCP (optional)",
+        "Slack MCP (optional)"
+      ],
+      "outputs": [
+        "Daily-Briefs/competitive-task-today.md",
+        "System/claude-memory-sync.md",
+        "System/urgent-replies.md",
+        "System/slack-action-queue.md",
+        "System/routine-health.md"
+      ],
+      "external_actions": false,
+      "notes": "Replaces seven legacy Cursor crons plus folds Codex comms/intel tasks. Phase 1 parallel agents in .cursor/agents/; Phase 2 memory-consolidator. Vault-fallback when MCP unavailable.",
+      "status": "active-scheduled"
     },
     {
       "id": "browser-access",
