@@ -19,6 +19,14 @@ client truth.
 
 - [[Client Intelligence Overlay]]
 
+## Session sync — 2026-08-30
+
+- Jason & Sean bot stability + case-reinstated alerts still unanswered (`00_Inbox/slack/2026-07-30-jason-sean-bot-case-status-alert.md`)
+- Sean CallRail activity verification before status reply (`00_Inbox/slack/2026-07-30-sean-callrail-status.md`)
+- Melissa guidelines/training prompt + Loom follow-up (`00_Inbox/slack/2026-07-30-melissa-guidelines-training-prompt.md`)
+- Jenny NeedMomentum brand direction pending Mac/Sean (`00_Inbox/slack/2026-07-30-jenny-brand-direction.md`)
+- Reporting dashboard training: 5 open checkboxes in `10_Sessions/2026-07-29 Reporting Dashboard Training.md`
+
 ## Communication intelligence - 2026-08-01
 
 - Customer-agent corrections are required: collect name and phone, add Jason to chat alerts, expose missed calls and texts for daily HubSpot review, remove incorrect free-estimate and generic shoot routes, use the contact page unless shoot intent is explicit, and ground answers in the approved question sheet. Convert these into deterministic tests before claiming completion. [Source](https://momentum3d.slack.com/archives/C0B2N20A0SW/p1785511870286619)

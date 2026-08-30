@@ -103,6 +103,10 @@ Leave with decisions on:
 9. Asset/content owners and due dates
 10. Next review and approval method
 
+## Session sync — 2026-08-30
+
+Open items from `10_Sessions/Bridge Software Development - 2026-07-11.md`: Tori prototype walkthrough, official brand assets, role model, verification rules, visibility rules, priority filters, launch audience, MVP boundary, backend/API/RLS with Miraj, approval cadence. Next session: attach private GitHub repo + paste `CLAUDE_SESSION_PROMPT.md`.
+
 ## Linked notes
 
 - [[Agent Memory]]

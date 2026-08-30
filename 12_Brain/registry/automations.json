@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-07-29",
+  "updated": "2026-08-30",
   "contract": "00_Inbox/Automation Deep Analysis 2026-07-29.md",
   "dependency": "12_Brain/DEPENDENCY_PR226.md",
   "automations": [
@@ -20,6 +20,37 @@
       ],
       "external_actions": false,
       "status": "implemented"
+    },
+    {
+      "id": "competitive-task-orchestrator",
+      "name": "Competitive task umbrella orchestrator",
+      "lane": "command",
+      "tier": 0,
+      "cadence": "daily at 1:00 PM America/New_York",
+      "command": "Cursor automation competitive-task-orchestrator",
+      "inputs": [
+        "01_Clients/",
+        "10_Sessions/",
+        "00_Inbox/slack/",
+        "02_Campaigns/*Queue*.md",
+        "System/approval-queue.md",
+        "System/claude-memory-sync.md",
+        "Daily-Briefs/radar-*.md",
+        "Gmail MCP (optional)",
+        "Slack MCP (optional)"
+      ],
+      "outputs": [
+        "Daily-Briefs/competitive-task-today.md",
+        "System/claude-memory-sync.md",
+        "System/urgent-replies.md",
+        "System/slack-action-queue.md",
+        "System/routine-health.md",
+        "03_Content/BOK Law/* (Sunday)",
+        "02_FullTimeJob/AlignHCM/linkedin-drafts-* (Sunday)"
+      ],
+      "external_actions": false,
+      "notes": "Replaces seven legacy Cursor crons. Phase 1 parallel agents in .cursor/agents/; Phase 2 memory-consolidator. Definition: System/competitive-task-definition.md. SOP: 04_SOPs/competitive-task-orchestrator.md.",
+      "status": "active-scheduled"
     },
     {
       "id": "frontmatter-repair",
