@@ -6,6 +6,13 @@ gateway_pid: 20848
 
 # Automation Status
 
+## Umbrella automation (2026-08-30)
+
+- **Canonical daily operator cycle:** `competitive-task-orchestrator` — cron `0 13 * * *` America/New_York
+- **Output:** `Daily-Briefs/competitive-task-today.md`
+- **Definition:** `System/competitive-task-definition.md` · SOP: `04_SOPs/competitive-task-orchestrator.md`
+- **Retired:** seven legacy Cursor crons (`nightly-client-pulse`, `gmail-to-vault-digest`, `vault-integrity-sync`, `chat-to-vault-sync`, `bok-law-social-content`, `linkedin-growth-engine`, `book-site-seo-sweep`) — disable in Cursor UI
+
 ## Gateway (2026-07-12 19:45 UTC — Cursor takeover audit)
 
 - Current PID **20848** (restarted 15:16 local after conflict storm). Prior PID 37852 superseded.
