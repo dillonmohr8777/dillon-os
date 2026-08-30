@@ -11,7 +11,19 @@ import { prefersReducedMotion } from '../hooks/useReveal'
 export function SpineRail({ engineRef }: { engineRef: { current: SpineEngine | null } }) {
   const [waypoint, setWaypoint] = useState(0)
   const [live, setLive] = useState(false)
+  const [pastOpening, setPastOpening] = useState(false)
   const pctRef = useRef<HTMLSpanElement>(null)
+
+  useEffect(() => {
+    const update = () => setPastOpening(window.scrollY >= window.innerHeight * 0.72)
+    update()
+    window.addEventListener('scroll', update, { passive: true })
+    window.addEventListener('resize', update)
+    return () => {
+      window.removeEventListener('scroll', update)
+      window.removeEventListener('resize', update)
+    }
+  }, [])
 
   useEffect(() => {
     /* engine is created in a sibling effect, subscribe on next tick */
@@ -34,7 +46,7 @@ export function SpineRail({ engineRef }: { engineRef: { current: SpineEngine | n
   if (!live) return null
 
   return (
-    <nav id="rail" aria-label="Section waypoints" className="hidden lg:flex">
+    <nav id="rail" aria-label="Section waypoints" className={`hidden lg:flex${pastOpening ? ' is-visible' : ''}`}>
       {SPINE_SECTIONS.map((sec, i) => (
         <span key={sec.id} className="contents">
           <button
