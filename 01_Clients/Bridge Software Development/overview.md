@@ -123,3 +123,7 @@ Start a new Claude session with the GitHub repository explicitly attached. Paste
 - Phase 1 was defined as a $5,000 milestone with Dillon's 20 percent share recorded as $1,000 for July. Later phases remain milestone-based over the stated 10-to-14-week timeline.
 - The project channel reported Phase 1 payment complete, but the receipt and commission ledger still require authorized financial reconciliation.
 - Sources: [Gmail thread](gmail://thread/19f8101afe21e7e8), [milestone terms](https://momentum3d.slack.com/archives/C0B1Y5XDQMA/p1785513601951799), [payment report](https://momentum3d.slack.com/archives/C0BGWRK03B2/p1785602474763089)
+
+## Session sync
+
+- 2026-08-31 — From [[../../10_Sessions/Bridge Software Development - 2026-07-11|2026-07-11 build session]]: remaining client-dependent work — Tori prototype walkthrough; official brand assets or direction approval; exact role model; verification evidence and legal meaning; profile/contact visibility rules; priority filters; first launch audience/market; final MVP boundary; backend/API/RLS contracts with Miraj; approval and review cadence. Next session: open private GitHub repo in new Claude session with `CLAUDE_SESSION_PROMPT.md`.

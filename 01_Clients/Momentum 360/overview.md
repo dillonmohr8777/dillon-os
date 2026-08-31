@@ -26,3 +26,7 @@ client truth.
 - Rob committed to a Phase 1 website plan over the weekend; check for it next workday and convert it into owner-trigger-output-QA role cards. [Source](https://momentum3d.slack.com/archives/C1CFQBC79/p1785525137451239?thread_ts=1784812437.578939&cid=C1CFQBC79)
 - The GMBS lane reported its first premium close at $750. Verify the payment and HubSpot deal before updating financial truth or beginning document intake. [Source](https://momentum3d.slack.com/archives/C08PB4N3L6L/p1785526167428929)
 - A 28-second HeyGen snow-video preview exists; the free output is watermarked and final download requires a paid plan. Review first, and keep purchase and delivery approval-gated. [Source](gmail://message/19fbe5bf41663152)
+
+## Session sync
+
+- 2026-08-31 — From [[../../10_Sessions/2026-07-29 Reporting Dashboard Training|Reporting Dashboard Training]]: open commitments — Nick shares reusable dashboard template; Nick maintains dedicated Zaret dashboard conversation; Melissa shares Read AI and Dillon recordings; Dillon evaluates which clients need granular dashboards vs lighter reporting lane; independent checker validates source totals before client delivery.
