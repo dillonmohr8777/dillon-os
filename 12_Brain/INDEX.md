@@ -1,7 +1,7 @@
 ---
 tags: [index, moc, brain]
 canonical: 12_Brain
-updated: 2026-08-15
+updated: 2026-08-31
 ---
 
 # INDEX — the front door
@@ -87,7 +87,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 ## Folder indexes (working vault)
 
 - [[01_Clients/Client Index|Client Index]] — full roster.
-- [[04_SOPs/SOP Index|SOP Index]] — daily-lane SOPs.
+- [[04_SOPs/SOP Index|SOP Index]] — daily-lane SOPs; [[04_SOPs/competitive-task-orchestrator|Competitive Task Orchestrator]] (umbrella workflow).
 - [[10_Sessions/Session Index|Session Index]] — build logs.
 - `11_Agents/` — agent definitions (Master, Google Ads, SEO, Reporting, Web).
-- `System/` — [[System/OS Config|OS Config]]; brain ops in [[12_Brain/System/Second Brain Ops|Second Brain Ops]].
+- `System/` — [[System/OS Config|OS Config]]; brain ops in [[12_Brain/System/Second Brain Ops|Second Brain Ops]]; [[System/competitive-task-definition|Competitive Task Definition]] (umbrella daily orchestrator).
