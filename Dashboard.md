@@ -22,6 +22,7 @@ Checkbox items only — `_os/vault-state.js` reads this section for the HUD
 directive feed and skips any other list format.
 
 - [ ] Process [[00_Inbox/Start Here|inbox]] material that affects current work.
+- [ ] Open [[Daily-Briefs/competitive-task-today|today's competitive task brief]] and execute the P0 stack.
 - [ ] Choose one finish line from the active-project view.
 - [ ] Verify facts before external or consequential action.
 - [ ] Record decisions, lessons, and outcome evidence before closing the loop.

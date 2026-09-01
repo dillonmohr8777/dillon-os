@@ -1,6 +1,6 @@
 ---
-last_sync: 2026-07-12
-evidence_window_start: 2026-06-21
+last_sync: 2026-09-01
+evidence_window_start: 2026-08-12
 tags: [system, memory, sync]
 ---
 
@@ -23,3 +23,22 @@ Align HCM is active full-time work and not a client.
 - Keep Replenish isolated by brand, campaign, conversion, UTM, and report.
 - Treat current rates and MRR as unknown until invoice or contract verification.
 - No send, publish, deploy, spend, or account mutation without approval.
+
+## Pending deliverables (orchestrator 2026-09-01)
+
+- Cindy May Christmas — website launch dependencies due today.
+- Tags 2 Go — Google Ads access mapping (24 days overdue).
+- BigOrange Marketing — SEMrush pillar + Janice interview (22 days overdue).
+- KJB — FAQ desktop crop, appointment routing, pending Squarespace publishes.
+- Shadow HVAC — Meta visibility restore, catch-up report to Mike.
+- VA Claims — Phase 2 portal reconciliation (demo overdue).
+
+## Unanswered / urgent
+
+- Momentum Slack: bot/case-status (Jason/Sean), guidelines training (Melissa), brand direction (Jenny), CallRail status (Sean) — all from July 30 captures.
+- Replenish: Mia billing screen confirmation.
+
+## Upcoming deadlines (7 days)
+
+- None with fresh `due` frontmatter inside window except Cindy May Christmas (today).
+- Refresh stale `due` fields on roster notes — many carry July dates that no longer reflect current work.

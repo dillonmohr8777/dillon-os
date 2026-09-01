@@ -1,0 +1,140 @@
+{
+  "id": "competitive-task-orchestrator",
+  "name": "Competitive Task Orchestrator",
+  "version": 1,
+  "contract": "System/competitive-task-definition.md",
+  "morning_contract": "11_Agents/64gb Morning Orchestrator Spec 2026-07-08.md",
+  "parallel_lane_cap": 8,
+  "cron": "0 13 * * *",
+  "timezone": "America/New_York",
+  "tier_policy": {
+    "0": "read, analyze, draft, vault writes, deterministic CLIs — unattended",
+    "1": "reversible platform tweaks — one approval executes the batch",
+    "2": "send, post, deploy, spend, credentials — prepared only, never autonomous"
+  },
+  "lanes": [
+    {
+      "id": "gmail-intel",
+      "label": "Gmail threads and urgent replies",
+      "agent": ".cursor/agents/gmail-intel.md",
+      "parallel_group": "scout",
+      "tier_default": 0,
+      "skills": ["inbox-brief"],
+      "outputs": ["System/urgent-replies.md"],
+      "preflight": []
+    },
+    {
+      "id": "slack-intel",
+      "label": "Slack action queue",
+      "agent": ".cursor/agents/slack-intel.md",
+      "parallel_group": "scout",
+      "tier_default": 0,
+      "skills": ["slack-intake"],
+      "outputs": ["System/slack-action-queue.md", "00_Inbox/slack/"],
+      "preflight": []
+    },
+    {
+      "id": "vault-pulse",
+      "label": "Client roster pulse and frontmatter",
+      "agent": ".cursor/agents/vault-pulse.md",
+      "parallel_group": "scout",
+      "tier_default": 0,
+      "skills": ["client-pulse"],
+      "outputs": ["Daily-Briefs/pulse-today.md"],
+      "preflight": [
+        {
+          "script": "_os/automation/bin/frontmatter-validate.js",
+          "args": []
+        }
+      ]
+    },
+    {
+      "id": "codex-session-sync",
+      "label": "Codex and Cursor session carryover",
+      "agent": ".cursor/agents/codex-session-sync.md",
+      "parallel_group": "scout",
+      "tier_default": 0,
+      "skills": [],
+      "outputs": ["10_Sessions/Session Index.md"],
+      "preflight": []
+    },
+    {
+      "id": "domain-ads-seo",
+      "label": "Campaign queues and ad health",
+      "agent": ".cursor/agents/domain-ads-seo.md",
+      "parallel_group": "scout",
+      "tier_default": 0,
+      "skills": ["metrics-pull"],
+      "outputs": ["02_Campaigns/", "01_Clients/*/Optimization Ledger.md"],
+      "preflight": []
+    },
+    {
+      "id": "websites",
+      "label": "Site health sentinel",
+      "parallel_group": "scout",
+      "tier_default": 0,
+      "skills": ["site-grade", "ux-audit"],
+      "outputs": ["Daily-Briefs/site-health-report.md"],
+      "preflight": [
+        {
+          "script": "_os/automation/bin/site-health.js",
+          "args": ["--dry-run"]
+        }
+      ]
+    },
+    {
+      "id": "outreach",
+      "label": "Prospect radar and site-factory queue",
+      "parallel_group": "scout",
+      "tier_default": 0,
+      "skills": ["site-factory", "site-batch"],
+      "outputs": ["Daily-Briefs/radar-*.md", "12_Brain/state/radar/"],
+      "preflight": [
+        {
+          "script": "_os/automation/bin/queue-status.js",
+          "args": []
+        }
+      ]
+    },
+    {
+      "id": "content-routines",
+      "label": "Day-gated content (Bok, Align LinkedIn, book SEO)",
+      "agent": ".cursor/agents/content-routines.md",
+      "parallel_group": "scout",
+      "tier_default": 0,
+      "skills": [],
+      "outputs": [],
+      "preflight": [],
+      "day_gated": {
+        "0": ["bok-law-social", "align-linkedin"],
+        "4": ["book-seo-sweep"]
+      }
+    },
+    {
+      "id": "memory-consolidator",
+      "label": "Synthesis and operator brief",
+      "agent": ".cursor/agents/memory-consolidator.md",
+      "parallel_group": "command",
+      "tier_default": 0,
+      "skills": ["am-report", "plan-today"],
+      "outputs": [
+        "Daily-Briefs/competitive-task-today.md",
+        "System/claude-memory-sync.md",
+        "System/routine-health.md",
+        "automation-runs/competitive-task-orchestrator/YYYY-MM-DD/approval-board.md"
+      ],
+      "preflight": [],
+      "runs_after": "scout"
+    }
+  ],
+  "retired_crons": [
+    "nightly-client-pulse",
+    "gmail-to-vault-digest",
+    "vault-integrity-sync",
+    "chat-to-vault-sync",
+    "bok-law-social-content",
+    "linkedin-growth-engine",
+    "book-site-seo-sweep",
+    "dillon-command-morning-loop"
+  ]
+}

@@ -1,23 +1,46 @@
 ---
-last_checked: 2026-04-15
+last_checked: 2026-09-01
+last_orchestrator_run: 2026-09-01
 tags: [system, routines]
 ---
 
 # Routine Health Monitor
 
-All routines: initialized, first runs scheduled. Vault is seeded with frontmatter fields the routines expect (`client`, `last_touched`, `next_action`, `due`, `tags`, `status`, `division`, `cc_list`, `contact_email`).
+**Canonical automation:** `competitive-task-orchestrator` (cron `0 13 * * *` America/New_York).
 
-## Routines expected to run
-- `nightly-client-pulse` — generates Daily-Briefs/pulse-today.md.
-- `gmail-to-vault-digest` — updates System/urgent-replies.md every 7:00 AM.
-- `vault-integrity-sync` — rewrites System/claude-memory-sync.md nightly at 2:00 AM.
-- `chat-to-vault-sync` — syncs conversation state every 2 hours.
-- `bok-law-social-content` — generates BOK Law weekly social content every Sunday 6:00 PM.
-- `linkedin-growth-engine` — reads 02_FullTimeJob/AlignHCM/linkedin-calendar.md every Sunday 9:00 PM.
-- `book-site-seo-sweep` — reads 05_Book/seo-strategy.md every Thursday.
+Seven legacy crons are retired — see `System/competitive-task-definition.md`.
 
-## Notes
-- First real test of the full routine stack begins 2026-04-16.
+## Lane status — 2026-09-01
+
+| Lane | Status | Notes |
+| --- | --- | --- |
+| gmail-intel | yellow | Vault fallback — connect Gmail MCP |
+| slack-intel | yellow | Vault fallback — 4 open inbox captures |
+| vault-pulse | green | 40/40 frontmatter complete |
+| codex-session-sync | green | No pending session exports |
+| domain-ads-seo | yellow | Replenish billing + Bar Crawl disapprovals open |
+| websites | green | Fixture preflight ok |
+| outreach | green | Radar sweep current (2026-09-01) |
+| content-routines | skipped | Not day-gated (Tuesday) |
+| memory-consolidator | green | Brief written |
+
+## CLI
+
+```bash
+node _os/automation/bin/competitive-task-orchestrator.js --preflight --date 2026-09-01
+```
+
+## Retired (do not re-enable)
+
+- `nightly-client-pulse`
+- `gmail-to-vault-digest`
+- `vault-integrity-sync`
+- `chat-to-vault-sync`
+- `bok-law-social-content`
+- `linkedin-growth-engine`
+- `book-site-seo-sweep`
+- `dillon-command-morning-loop` (merged into umbrella)
 
 ## Brain layer
+
 - Canonical: [[12_Brain/README|12_Brain]] · [[12_Brain/System/Health Automation|Health Automation]]

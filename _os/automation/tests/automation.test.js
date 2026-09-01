@@ -157,3 +157,23 @@ test('analyzeHtml detects missing viewport on broken fixture', () => {
   const viewport = analyzed.checks.find((c) => c.id === 'viewport');
   assert.equal(viewport.ok, false);
 });
+
+test('competitive-task-orchestrator scaffolds run folder and profile', async () => {
+  const { spawnSync } = require('child_process');
+  const date = '2099-12-31';
+  const runDir = repoPath('automation-runs/competitive-task-orchestrator', date);
+  const result = spawnSync(process.execPath, [
+    repoPath('_os/automation/bin/competitive-task-orchestrator.js'),
+    '--preflight',
+    '--date',
+    date,
+  ], { encoding: 'utf8' });
+  assert.equal(result.status, 0, result.stderr || result.stdout);
+  const payload = JSON.parse(result.stdout);
+  assert.equal(payload.ok, true);
+  assert.ok(fs.existsSync(path.join(runDir, 'run-state.json')));
+  assert.ok(fs.existsSync(path.join(runDir, 'preflight-results.json')));
+  const profile = JSON.parse(fs.readFileSync(repoPath('_os/automation/profiles/competitive-task-orchestrator.json'), 'utf8'));
+  assert.equal(profile.id, 'competitive-task-orchestrator');
+  assert.ok(profile.lanes.length >= 8);
+});

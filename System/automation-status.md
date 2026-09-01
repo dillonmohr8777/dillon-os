@@ -1,10 +1,18 @@
 ---
 tags: [system, automation, health]
-last_updated: 2026-07-12
-gateway_pid: 20848
+last_updated: 2026-09-01
+gateway_pid: unverified-cloud
 ---
 
 # Automation Status
+
+## Competitive Task Orchestrator (2026-09-01)
+
+- **Canonical umbrella:** `competitive-task-orchestrator` — cron `0 13 * * *` (1 PM ET daily).
+- **CLI:** `node _os/automation/bin/competitive-task-orchestrator.js --preflight --date YYYY-MM-DD`
+- **Operator brief:** `Daily-Briefs/competitive-task-today.md`
+- **Retired:** seven legacy crons + `dillon-command-morning-loop` (merged).
+- **Today's lanes:** 8 scouts parallel, memory-consolidator sequential. Gmail/Slack on vault-fallback until MCP connected.
 
 ## Gateway (2026-07-12 19:45 UTC — Cursor takeover audit)
 

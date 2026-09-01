@@ -426,6 +426,30 @@
       "external_actions": false,
       "status": "implemented",
       "note": "Refuses forbidden port 9222 with exit 3 and marks chrome_isolated not-live unless the process on the port really runs a claude-chrome profile. probe/recommend describe agent-only rungs (WebFetch, WebSearch, Firecrawl) that a CLI cannot drive."
+    },
+    {
+      "id": "competitive-task-orchestrator",
+      "name": "Competitive Task Orchestrator (umbrella daily operator cycle)",
+      "lane": "command",
+      "tier": 0,
+      "cadence": "daily at 1:00 PM America/New_York (cron 0 13 * * *)",
+      "command": "node _os/automation/bin/competitive-task-orchestrator.js --preflight --agent-mode --date <YYYY-MM-DD>",
+      "inputs": [
+        "_os/automation/profiles/competitive-task-orchestrator.json",
+        "System/competitive-task-orchestrator-prompt.md",
+        ".cursor/agents/*.md",
+        "authorized Gmail and Slack MCP when available"
+      ],
+      "outputs": [
+        "Daily-Briefs/competitive-task-today.md",
+        "System/claude-memory-sync.md",
+        "System/routine-health.md",
+        "System/slack-action-queue.md",
+        "automation-runs/competitive-task-orchestrator/YYYY-MM-DD/"
+      ],
+      "external_actions": false,
+      "notes": "Replaces seven legacy crons plus dillon-command morning loop. Phase 1 runs up to eight parallel scout lanes; memory-consolidator synthesizes one operator brief. Gmail/Slack degrade to vault-fallback without failing the run.",
+      "status": "active-scheduled"
     }
   ],
   "gates": {

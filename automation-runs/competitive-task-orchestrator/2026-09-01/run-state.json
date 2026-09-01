@@ -1,0 +1,181 @@
+{
+  "workflow_id": "competitive-task-orchestrator",
+  "run_id": "competitive-task-orchestrator-2026-09-01",
+  "date": "2026-09-01",
+  "started_at": "2026-09-01T13:04:07.236Z",
+  "finished_at": null,
+  "status": "running",
+  "commander": "competitive-task-orchestrator",
+  "contract": "System/competitive-task-definition.md",
+  "lanes": [
+    {
+      "id": "gmail-intel",
+      "label": "Gmail threads and urgent replies",
+      "agent": ".cursor/agents/gmail-intel.md",
+      "status": "pending",
+      "tier_default": 0,
+      "parallel_group": "scout",
+      "skills": [
+        "inbox-brief"
+      ],
+      "outputs": [
+        "System/urgent-replies.md"
+      ],
+      "worker": null
+    },
+    {
+      "id": "slack-intel",
+      "label": "Slack action queue",
+      "agent": ".cursor/agents/slack-intel.md",
+      "status": "pending",
+      "tier_default": 0,
+      "parallel_group": "scout",
+      "skills": [
+        "slack-intake"
+      ],
+      "outputs": [
+        "System/slack-action-queue.md",
+        "00_Inbox/slack/"
+      ],
+      "worker": null
+    },
+    {
+      "id": "vault-pulse",
+      "label": "Client roster pulse and frontmatter",
+      "agent": ".cursor/agents/vault-pulse.md",
+      "status": "pending",
+      "tier_default": 0,
+      "parallel_group": "scout",
+      "skills": [
+        "client-pulse"
+      ],
+      "outputs": [
+        "Daily-Briefs/pulse-today.md"
+      ],
+      "worker": null
+    },
+    {
+      "id": "codex-session-sync",
+      "label": "Codex and Cursor session carryover",
+      "agent": ".cursor/agents/codex-session-sync.md",
+      "status": "pending",
+      "tier_default": 0,
+      "parallel_group": "scout",
+      "skills": [],
+      "outputs": [
+        "10_Sessions/Session Index.md"
+      ],
+      "worker": null
+    },
+    {
+      "id": "domain-ads-seo",
+      "label": "Campaign queues and ad health",
+      "agent": ".cursor/agents/domain-ads-seo.md",
+      "status": "pending",
+      "tier_default": 0,
+      "parallel_group": "scout",
+      "skills": [
+        "metrics-pull"
+      ],
+      "outputs": [
+        "02_Campaigns/",
+        "01_Clients/*/Optimization Ledger.md"
+      ],
+      "worker": null
+    },
+    {
+      "id": "websites",
+      "label": "Site health sentinel",
+      "agent": null,
+      "status": "pending",
+      "tier_default": 0,
+      "parallel_group": "scout",
+      "skills": [
+        "site-grade",
+        "ux-audit"
+      ],
+      "outputs": [
+        "Daily-Briefs/site-health-report.md"
+      ],
+      "worker": null
+    },
+    {
+      "id": "outreach",
+      "label": "Prospect radar and site-factory queue",
+      "agent": null,
+      "status": "pending",
+      "tier_default": 0,
+      "parallel_group": "scout",
+      "skills": [
+        "site-factory",
+        "site-batch"
+      ],
+      "outputs": [
+        "Daily-Briefs/radar-*.md",
+        "12_Brain/state/radar/"
+      ],
+      "worker": null
+    },
+    {
+      "id": "content-routines",
+      "label": "Day-gated content (Bok, Align LinkedIn, book SEO)",
+      "agent": ".cursor/agents/content-routines.md",
+      "status": "skipped-day-gate",
+      "tier_default": 0,
+      "parallel_group": "scout",
+      "skills": [],
+      "outputs": [],
+      "worker": null
+    },
+    {
+      "id": "memory-consolidator",
+      "label": "Synthesis and operator brief",
+      "agent": ".cursor/agents/memory-consolidator.md",
+      "status": "pending",
+      "tier_default": 0,
+      "parallel_group": "command",
+      "skills": [
+        "am-report",
+        "plan-today"
+      ],
+      "outputs": [
+        "Daily-Briefs/competitive-task-today.md",
+        "System/claude-memory-sync.md",
+        "System/routine-health.md",
+        "automation-runs/competitive-task-orchestrator/YYYY-MM-DD/approval-board.md"
+      ],
+      "worker": null
+    }
+  ],
+  "day_gated_active": [
+    "gmail-intel",
+    "slack-intel",
+    "vault-pulse",
+    "codex-session-sync",
+    "domain-ads-seo",
+    "websites",
+    "outreach",
+    "memory-consolidator"
+  ],
+  "gates": {
+    "obsidian_sync_cli": "pending-human",
+    "netlify_deploy_token": "pending-secret",
+    "landingfolio_token": "pending-secret",
+    "mail_vendor": "pending-decision",
+    "outreach_send": "hard-blocked"
+  },
+  "tier_policy": {
+    "0": "read, analyze, draft, vault writes, deterministic CLIs — unattended",
+    "1": "reversible platform tweaks — one approval executes the batch",
+    "2": "send, post, deploy, spend, credentials — prepared only, never autonomous"
+  },
+  "parallel_lane_cap": 8,
+  "artifacts": {
+    "run_dir": "/workspace/automation-runs/competitive-task-orchestrator/2026-09-01",
+    "approval_board": "/workspace/automation-runs/competitive-task-orchestrator/2026-09-01/approval-board.md",
+    "tier1_batch": "/workspace/automation-runs/competitive-task-orchestrator/2026-09-01/tier1-batch.json",
+    "tier2_queue": "/workspace/automation-runs/competitive-task-orchestrator/2026-09-01/tier2-queue.json",
+    "evidence_log": "/workspace/automation-runs/competitive-task-orchestrator/2026-09-01/evidence-log.md",
+    "lane_results": "/workspace/automation-runs/competitive-task-orchestrator/2026-09-01/lane-results.json"
+  }
+}
