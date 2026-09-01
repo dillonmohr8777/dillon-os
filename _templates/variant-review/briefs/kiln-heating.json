@@ -1,0 +1,183 @@
+{
+  "slug": "kiln-heating",
+  "name": "Kiln Heating Co",
+  "city": "Philadelphia",
+  "category": "Heating and Cooling",
+  "vertical": "Home Services",
+  "attitude": "industrial",
+  "url": "https://example.com/kiln-heating",
+  "phone": "215-555-0101",
+  "address": "4400 Demo Ave, Philadelphia, PA 19140",
+  "hours": "24/7 emergency dispatch, office 7am-6pm",
+  "description": "North Philly heating and cooling. Same-day AC rescue in summer, heat the same night in January.",
+  "noindex": true,
+  "schemaType": "HVACBusiness",
+  "tagline": "Emergency HVAC, measured twice",
+  "marquee": [
+    "Same-day AC",
+    "Heat tonight",
+    "Flat diagnostic",
+    "North Philly crew"
+  ],
+  "tokens": {
+    "paper": "#E7E2D6",
+    "ink": "#1A1C16",
+    "accent": "#C45C26",
+    "accent2": "#E2B84A",
+    "panel": "#C9C3B4",
+    "deep": "#14160F",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "3px",
+    "radius": "4px"
+  },
+  "fonts": {
+    "display": "Bebas Neue",
+    "displayFallback": "Impact,sans-serif",
+    "text": "IBM Plex Sans"
+  },
+  "logo": false,
+  "hero": {
+    "eyebrow": "Philadelphia | Heating and Cooling",
+    "headline": "The AC dies. We show up.",
+    "sub": "Kiln Heating Co runs emergency cooling and heat for rowhomes and small commercial. Diagnostic is flat. Repair is quoted before the panel goes back on.",
+    "ctaPrimary": {
+      "label": "Call the truck",
+      "href": "tel:2155550101"
+    },
+    "ctaSecondary": {
+      "label": "See services",
+      "href": "#offerings"
+    },
+    "glassFloat": {
+      "title": "Dispatch window",
+      "sub": "Most calls answered in under 20 minutes"
+    }
+  },
+  "offerings": {
+    "items": [
+      "Emergency AC and heat pump rescue with a flat diagnostic",
+      "Furnace and boiler repair for rowhomes that cannot wait overnight",
+      "Seasonal tune-ups with a written filter and airflow report"
+    ]
+  },
+  "proof": {
+    "items": [
+      "24/7 emergency line, no answering-service maze",
+      "Flat diagnostic credited toward the repair",
+      "NATE-trained techs, fully insured",
+      "North Philly to the near Northeast, same crew"
+    ]
+  },
+  "story": {
+    "heading": "About",
+    "paragraphs": [
+      "Kiln started as a night-shift rescue shop after too many summer calls got quoted in the morning.",
+      "The rule is still the same: if the house is hot or cold, the truck moves before the paperwork."
+    ]
+  },
+  "experience": {
+    "items": [
+      "Call, get an arrival window, get a text when the tech is 15 minutes out.",
+      "Diagnostic is one price. The repair is a second yes, not a surprise.",
+      "Photos of the failed part and the install stay in your job folder."
+    ]
+  },
+  "feature": {
+    "heading": "Cooling restored the same afternoon",
+    "text": "Most emergency AC calls close the same day when parts are on the truck. If they are not, you get the honest wait and a loaner fan, not a stall.",
+    "cta": {
+      "label": "Request dispatch",
+      "href": "tel:2155550101"
+    },
+    "imageIndex": 8
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Emergency service",
+        "href": "https://example.com/kiln-heating/emergency",
+        "imageIndex": 9
+      },
+      {
+        "title": "Tune-ups",
+        "href": "https://example.com/kiln-heating/tune-up",
+        "imageIndex": 10
+      },
+      {
+        "title": "Installs",
+        "href": "https://example.com/kiln-heating/install",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {},
+  "closing": {
+    "cta": {
+      "label": "Call the truck",
+      "href": "tel:2155550101"
+    }
+  },
+  "links": [
+    {
+      "label": "Emergency",
+      "href": "https://example.com/kiln-heating/emergency"
+    },
+    {
+      "label": "Tune-ups",
+      "href": "https://example.com/kiln-heating/tune-up"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Kiln Heating Co placeholder: Service van at a Philadelphia rowhome"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Kiln Heating Co placeholder: Outdoor condenser after a same-day repair"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Kiln Heating Co placeholder: Technician checking gauges on a condensing unit"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Kiln Heating Co placeholder: Furnace cabinet with a new filter"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Kiln Heating Co placeholder: Thermostat set after a heat restore"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Kiln Heating Co placeholder: Coil cleaning on an attic air handler"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Kiln Heating Co placeholder: Crew loading recovery tanks"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Kiln Heating Co placeholder: Finished outdoor unit with a level pad"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Kiln Heating Co placeholder: Close-up of a capacitor replacement"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Kiln Heating Co placeholder: Emergency night call on a porch"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Kiln Heating Co placeholder: Seasonal tune-up checklist"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Kiln Heating Co placeholder: Small commercial rooftop unit"
+    }
+  ]
+}

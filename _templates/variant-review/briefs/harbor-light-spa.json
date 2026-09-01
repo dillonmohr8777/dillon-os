@@ -1,0 +1,183 @@
+{
+  "slug": "harbor-light-spa",
+  "name": "Harbor Light Spa",
+  "city": "Philadelphia",
+  "category": "Wellness Spa",
+  "vertical": "Health",
+  "attitude": "glass",
+  "url": "https://example.com/harbor-light",
+  "phone": "215-555-0105",
+  "address": "1200 Demo Pier, Philadelphia, PA 19106",
+  "hours": "Tuesday-Sunday, 10am-8pm",
+  "description": "Calm spa bookings near the waterfront. Massage, skin, and a short menu you can actually finish.",
+  "noindex": true,
+  "schemaType": "DaySpa",
+  "tagline": "Book the hour. Keep the hour.",
+  "marquee": [
+    "Massage",
+    "Skin",
+    "Quiet rooms",
+    "Waterfront"
+  ],
+  "tokens": {
+    "paper": "#F6F3EE",
+    "ink": "#243038",
+    "accent": "#3D6B73",
+    "accent2": "#D4B48A",
+    "panel": "#E3E7E4",
+    "deep": "#1B2A30",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "28px"
+  },
+  "fonts": {
+    "display": "Cormorant Garamond",
+    "displayFallback": "Georgia,serif",
+    "text": "Outfit"
+  },
+  "logo": false,
+  "hero": {
+    "eyebrow": "Philadelphia | Wellness Spa",
+    "headline": "One primary action. Book the hour.",
+    "sub": "Harbor Light keeps the menu short on purpose. Massage, skin, and enough quiet that the appointment is the treatment.",
+    "ctaPrimary": {
+      "label": "Book now",
+      "href": "https://example.com/harbor-light/book"
+    },
+    "ctaSecondary": {
+      "label": "The menu",
+      "href": "#offerings"
+    },
+    "glassFloat": {
+      "title": "Open hours",
+      "sub": "Tuesday to Sunday, 10 to 8"
+    }
+  },
+  "offerings": {
+    "items": [
+      "Swedish and deep-tissue massage in 60 or 90 minutes",
+      "Facials for skin that lives in city air, not a 12-step kit",
+      "Add-ons that are actually 15 minutes, not a hidden upsell hour"
+    ]
+  },
+  "proof": {
+    "items": [
+      "Licensed therapists, private rooms, real sound control",
+      "Online booking with the remaining times shown",
+      "No membership maze to take a first appointment",
+      "Waterfront block with garage validation on file"
+    ]
+  },
+  "story": {
+    "heading": "About",
+    "paragraphs": [
+      "Harbor Light is a small spa because a packed floor is not rest.",
+      "The rooms stay few. The clock starts when you are on the table, not when the paperwork ends."
+    ]
+  },
+  "experience": {
+    "items": [
+      "Book the hour. Arrive 10 minutes early. Phones stay in the locker.",
+      "Intake is one page. Pressure and scent get a real yes or no.",
+      "You leave with water, a time of next availability, and nothing else to buy."
+    ]
+  },
+  "feature": {
+    "heading": "The hour is protected",
+    "text": "We do not stack appointments so tightly that your 60 becomes 48. If the room is running late, you still get the minutes you paid for.",
+    "cta": {
+      "label": "Book now",
+      "href": "https://example.com/harbor-light/book"
+    },
+    "imageIndex": 8
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Massage",
+        "href": "https://example.com/harbor-light/massage",
+        "imageIndex": 9
+      },
+      {
+        "title": "Skin",
+        "href": "https://example.com/harbor-light/skin",
+        "imageIndex": 10
+      },
+      {
+        "title": "Book",
+        "href": "https://example.com/harbor-light/book",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {},
+  "closing": {
+    "cta": {
+      "label": "Book now",
+      "href": "https://example.com/harbor-light/book"
+    }
+  },
+  "links": [
+    {
+      "label": "Book now",
+      "href": "https://example.com/harbor-light/book"
+    },
+    {
+      "label": "Massage",
+      "href": "https://example.com/harbor-light/massage"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Harbor Light Spa placeholder: Quiet treatment room with low light"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Harbor Light Spa placeholder: Linen stack and a single chair"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Harbor Light Spa placeholder: Reception with a small booking screen"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Harbor Light Spa placeholder: Massage table ready with folded towels"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Harbor Light Spa placeholder: Facial steamer beside a sink"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Harbor Light Spa placeholder: Hall with frosted glass doors"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Harbor Light Spa placeholder: Tea service on a sideboard"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Harbor Light Spa placeholder: Window with a muted waterfront view"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Harbor Light Spa placeholder: Detail of oils in amber bottles"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Harbor Light Spa placeholder: Locker alcove"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Harbor Light Spa placeholder: Soft hallway lighting"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Harbor Light Spa placeholder: Finished room after reset"
+    }
+  ]
+}

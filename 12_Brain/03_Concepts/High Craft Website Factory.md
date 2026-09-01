@@ -2,7 +2,7 @@
 note_type: concept
 status: active
 created: 2026-08-01
-updated: 2026-08-05
+updated: 2026-08-18
 domain: website production
 maturity: operational
 summary: A website factory scales reusable production and verification while preserving distinct art direction, factual accuracy, accessibility, performance, AEO, human taste, and purposeful interaction detail.
@@ -17,6 +17,9 @@ source_refs:
   - "C:\\Users\\dillo\\Documents\\Codex\\2026-08-04\\build-the-next-25-websites-based\\DESIGN.md"
   - "C:\\Users\\dillo\\Documents\\Codex\\2026-08-04\\build-the-next-25-websites-based\\batch-phl-2026-08-04-b3\\factory-report.json"
   - "https://www.designspells.com/"
+  - "[[12_Brain/06_Research/2026-08-18 - Variant.com template harvest]]"
+  - "[[12_Brain/02_Entities/Variant]]"
+  - "[[12_Brain/04_Decisions/2026-08-18 - Keep the existing factory as the template system]]"
 tags:
   - brain
   - concept
@@ -277,3 +280,15 @@ Do not hard-code one client's facts or style into the reusable system.
 - Indexing a prospect demo.
 - Adding motion without purpose or reduced-motion support.
 - Optimizing for AEO while the page is unclear or untrustworthy to people.
+
+## External ideation tools
+
+Variant, LandingFolio, and similar scroll-or-prompt galleries are optional
+layout reference. They are not the factory, not a paste library, and not
+permission to ship. A generated card can inform density, CTA placement, or
+attitude. Brand, facts, tokens, and markup still come from the brief and the
+design system. A Variant-shaped demo pack is not a new template tier; the
+existing attitudes and `example-brief.json` remain the production path.
+Account-gated HTML export stays outside the stack until a reviewer proves it
+against this contract and Dillon approves the account.
+

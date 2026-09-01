@@ -1,8 +1,8 @@
 ---
 tags: [system, approvals]
-last_updated: 2026-08-17T13:04:11Z
+last_updated: 2026-08-18T17:30:00Z
 status: active
-last_scan: 2026-08-17T13:04:11Z
+last_scan: 2026-08-18T17:30:00Z
 scan_sources: ["00_Inbox/", "01_Clients/ status at-risk/onboarding/blocked", "System/urgent-replies.md", "System/claude-memory-sync.md", "Daily-Briefs/ latest 3"]
 ---
 
@@ -26,6 +26,7 @@ Only current client and operating actions belong here. Nothing is sent, publishe
 - [ ] 2026-07-12 - VA Claims - Approve client review after VACE design reconciliation; backend and DNS changes remain gated - Risk: medium
 - [ ] 2026-07-12 - Bridge Software Development - Approve client-facing milestone after Phase 1 ownership board and compliance review - Risk: medium
 ## Operating actions
+- [x] 2026-08-18 -- [Variant.com / Website Factory] -- Closed without signup: factory already produces this class of local-service template; Variant stays outside the stack -- Source: 12_Brain/04_Decisions/2026-08-18 - Keep the existing factory as the template system.md -- Evidence: operator clarification that the harvest demos are templates we already create -- Risk: low
 - [ ] 2026-07-12 - Revenue - Verify current invoices or contracts for all 14 active clients before publishing MRR - Risk: low
 - [ ] 2026-07-12 - Cursor/MCP - Authenticate Composio, Slack, and WordPress connectors when live reads are required - Risk: low
 - [ ] 2026-07-12 - Book funnel - Configure and test lead-capture delivery before production deployment - Risk: high

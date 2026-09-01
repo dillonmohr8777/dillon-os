@@ -1,0 +1,183 @@
+{
+  "slug": "lot-line-landscape",
+  "name": "Lot Line Landscape",
+  "city": "Philadelphia",
+  "category": "Landscaping and Concrete",
+  "vertical": "Home Services",
+  "attitude": "warm",
+  "url": "https://example.com/lot-line",
+  "phone": "215-555-0102",
+  "address": "1800 Demo St, Philadelphia, PA 19148",
+  "hours": "Monday-Saturday, 7am-5pm",
+  "description": "South Philly landscaping, patios, and concrete that lasts a freeze-thaw winter.",
+  "noindex": true,
+  "schemaType": "HomeAndConstructionBusiness",
+  "tagline": "Yards, patios, and concrete that hold",
+  "marquee": [
+    "Patios",
+    "Walks",
+    "Planting",
+    "South Philly"
+  ],
+  "tokens": {
+    "paper": "#F3E6D0",
+    "ink": "#2A2218",
+    "accent": "#4F7A3C",
+    "accent2": "#C47A2C",
+    "panel": "#DCC9A8",
+    "deep": "#1E2818",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "2px",
+    "radius": "22px"
+  },
+  "fonts": {
+    "display": "Fraunces",
+    "displayFallback": "Georgia,serif",
+    "text": "Nunito Sans"
+  },
+  "logo": false,
+  "hero": {
+    "eyebrow": "Philadelphia | Landscaping and Concrete",
+    "headline": "The yard should work in August and in March.",
+    "sub": "Lot Line builds patios, walks, and planting beds for tight city lots. We quote drainage first, then the pretty layer.",
+    "ctaPrimary": {
+      "label": "Book a site walk",
+      "href": "https://example.com/lot-line/book"
+    },
+    "ctaSecondary": {
+      "label": "See the work",
+      "href": "#gallery"
+    },
+    "glassFloat": {
+      "title": "Site walks",
+      "sub": "South Philly, Passyunk, and the near suburbs"
+    }
+  },
+  "offerings": {
+    "items": [
+      "Patios and walks in paver or poured concrete with real pitch",
+      "Planting beds, privacy screens, and soil that is not leftover fill",
+      "Steps, walls, and small concrete that survives freeze-thaw"
+    ]
+  },
+  "proof": {
+    "items": [
+      "Every quote includes a drainage note, not just a pretty plan",
+      "Licensed and insured for residential exterior work",
+      "One crew from demo to plant, no mystery subs",
+      "Winter shutdown is honest. Spring dates are held."
+    ]
+  },
+  "story": {
+    "heading": "About",
+    "paragraphs": [
+      "Lot Line started on alleys where a patio had to share space with trash day and a basketball hoop.",
+      "The work still starts with where water goes, then with how the yard should feel on a Sunday."
+    ]
+  },
+  "experience": {
+    "items": [
+      "Site walk, measured sketch, and a written allowance for plants.",
+      "Demo week, then base, then finish. You get photos at each stage.",
+      "A one-year workmanship window on the hardscape we install."
+    ]
+  },
+  "feature": {
+    "heading": "Outdoor living that drains",
+    "text": "A pretty patio that ponds is a winter problem. We set pitch, joints, and a place for the water to leave before we talk furniture.",
+    "cta": {
+      "label": "Book a site walk",
+      "href": "https://example.com/lot-line/book"
+    },
+    "imageIndex": 8
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Patios",
+        "href": "https://example.com/lot-line/patios",
+        "imageIndex": 9
+      },
+      {
+        "title": "Planting",
+        "href": "https://example.com/lot-line/planting",
+        "imageIndex": 10
+      },
+      {
+        "title": "Concrete",
+        "href": "https://example.com/lot-line/concrete",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {},
+  "closing": {
+    "cta": {
+      "label": "Book a site walk",
+      "href": "https://example.com/lot-line/book"
+    }
+  },
+  "links": [
+    {
+      "label": "Book",
+      "href": "https://example.com/lot-line/book"
+    },
+    {
+      "label": "Patios",
+      "href": "https://example.com/lot-line/patios"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Lot Line Landscape placeholder: Finished paver patio on a tight city lot"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Lot Line Landscape placeholder: Fresh planting bed along a fence"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Lot Line Landscape placeholder: Concrete walk with a clean edge"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Lot Line Landscape placeholder: Crew setting base stone"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Lot Line Landscape placeholder: Privacy screen of evergreens"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Lot Line Landscape placeholder: Steps down to a small garden"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Lot Line Landscape placeholder: Before photo of a packed dirt yard"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Lot Line Landscape placeholder: After photo of the same yard with a patio"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Lot Line Landscape placeholder: Detail of a soldier-course paver edge"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Lot Line Landscape placeholder: Outdoor dining table on the new patio"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Lot Line Landscape placeholder: Rain the day after install, water leaving the pad"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Lot Line Landscape placeholder: Small concrete retaining wall"
+    }
+  ]
+}

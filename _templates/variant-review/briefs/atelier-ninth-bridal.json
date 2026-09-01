@@ -1,0 +1,183 @@
+{
+  "slug": "atelier-ninth-bridal",
+  "name": "Atelier Ninth Bridal",
+  "city": "Philadelphia",
+  "category": "Bridal Boutique",
+  "vertical": "Retail",
+  "attitude": "editorial",
+  "url": "https://example.com/atelier-ninth",
+  "phone": "215-555-0103",
+  "address": "900 Demo Blvd, Philadelphia, PA 19107",
+  "hours": "Tuesday-Saturday, 11am-6pm, appointments required",
+  "description": "Appointment-only bridal fittings in Center City. Gowns you can walk in, sit in, and still feel like yourself.",
+  "noindex": true,
+  "schemaType": "ClothingStore",
+  "tagline": "Fittings by appointment",
+  "marquee": [
+    "By appointment",
+    "Center City",
+    "Alterations on site",
+    "Private salon"
+  ],
+  "tokens": {
+    "paper": "#F7F1E8",
+    "ink": "#1C1714",
+    "accent": "#8A5A44",
+    "accent2": "#C9A36A",
+    "panel": "#E6D9CC",
+    "deep": "#2A211C",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "2px"
+  },
+  "fonts": {
+    "display": "Cormorant Garamond",
+    "displayFallback": "Georgia,serif",
+    "text": "Jost"
+  },
+  "logo": false,
+  "hero": {
+    "eyebrow": "Philadelphia | Bridal Boutique",
+    "headline": "Try the gown like you will wear it.",
+    "sub": "Atelier Ninth is appointment-only. Ninety quiet minutes, honest mirrors, and alterations that start from how you actually stand.",
+    "ctaPrimary": {
+      "label": "Book a fitting",
+      "href": "https://example.com/atelier-ninth/book"
+    },
+    "ctaSecondary": {
+      "label": "The salon",
+      "href": "#experience"
+    },
+    "glassFloat": {
+      "title": "Private salon",
+      "sub": "One party at a time"
+    }
+  },
+  "offerings": {
+    "items": [
+      "Private gown fittings with a 90-minute appointment block",
+      "On-site alterations from first pin to final hem",
+      "Veils, shoes, and a short list of pieces that earn the rack"
+    ]
+  },
+  "proof": {
+    "items": [
+      "Appointment only. No walk-in crush on the floor",
+      "One fitting room, one stylist, one party",
+      "Alterations stay in-house",
+      "Center City, two blocks from a paid garage"
+    ]
+  },
+  "story": {
+    "heading": "About",
+    "paragraphs": [
+      "Atelier Ninth opened because too many bridal floors treat a fitting like a queue.",
+      "The salon is small on purpose. If the gown cannot survive a sit-down dinner, it does not leave with you."
+    ]
+  },
+  "experience": {
+    "items": [
+      "Book online, arrive with the people who actually help you decide.",
+      "You try, sit, walk, and look in a full-length that is not flattering on purpose.",
+      "Pins get photographed. The alteration ticket is yours to keep."
+    ]
+  },
+  "feature": {
+    "heading": "The fitting is the product",
+    "text": "A gown that photographs well on a hanger can still fail at a table. We fit for the night you will actually have.",
+    "cta": {
+      "label": "Book a fitting",
+      "href": "https://example.com/atelier-ninth/book"
+    },
+    "imageIndex": 8
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Appointments",
+        "href": "https://example.com/atelier-ninth/book",
+        "imageIndex": 9
+      },
+      {
+        "title": "Alterations",
+        "href": "https://example.com/atelier-ninth/alterations",
+        "imageIndex": 10
+      },
+      {
+        "title": "The salon",
+        "href": "https://example.com/atelier-ninth/salon",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {},
+  "closing": {
+    "cta": {
+      "label": "Book a fitting",
+      "href": "https://example.com/atelier-ninth/book"
+    }
+  },
+  "links": [
+    {
+      "label": "Book a fitting",
+      "href": "https://example.com/atelier-ninth/book"
+    },
+    {
+      "label": "Alterations",
+      "href": "https://example.com/atelier-ninth/alterations"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Atelier Ninth Bridal placeholder: Quiet bridal salon with a single gown on a stand"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Atelier Ninth Bridal placeholder: Fitting room with a full-length mirror"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Atelier Ninth Bridal placeholder: Detail of a silk train on a dark wood floor"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Atelier Ninth Bridal placeholder: Pins along a hem during a fitting"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Atelier Ninth Bridal placeholder: Veil rack in soft window light"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Atelier Ninth Bridal placeholder: Stylist checking a shoulder seam"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Atelier Ninth Bridal placeholder: Champagne and black seating nook"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Atelier Ninth Bridal placeholder: Gown on a form after alterations"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Atelier Ninth Bridal placeholder: Close-up of a button row"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Atelier Ninth Bridal placeholder: Appointment desk with a date book"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Atelier Ninth Bridal placeholder: Street view of the salon door"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Atelier Ninth Bridal placeholder: Finished hem on a satin skirt"
+    }
+  ]
+}
