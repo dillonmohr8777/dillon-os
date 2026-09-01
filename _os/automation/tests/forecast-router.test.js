@@ -31,6 +31,47 @@ function chronosMultitargetFixture() {
   ));
 }
 
+function approvedClientChronosRequest() {
+  return {
+    schema_version: 1,
+    request_id: 'forecast-momentum-360-hubspot-contacts-weekly-20260901',
+    as_of: '2026-09-01T21:15:00.000Z',
+    cutoff_at: '2026-06-01T00:00:00.000Z',
+    source_observed_at: '2026-09-01T20:58:23.653Z',
+    max_source_age_hours: 24,
+    client_id: 'momentum-360',
+    route_verified: true,
+    cadence_verified: true,
+    leakage_checked: true,
+    series_id: 'momentum-360-hubspot-contacts-created-weekly',
+    frequency: 'week',
+    horizon: 12,
+    targets: [{
+      series_id: 'hubspot_contacts_created',
+      values: [
+        0, 0, 0, 5177, 20, 26, 28, 30, 7, 18, 41, 22, 30, 37, 5718, 119,
+        90, 114, 79, 164, 181, 134, 112, 138, 134, 190, 119, 114, 158, 184, 128, 140,
+      ],
+    }],
+    past_covariates: [],
+    past_future_covariates: [],
+    source_locators: [
+      'hubspot://portal/50612503/contacts/createdate/weekly?cutoff=2026-06-01',
+      'clients/momentum-360/deliverables/2026-09-01-hubspot-chronos-forecast-pilot/inputs/hubspot-forecast-evidence-manifest.json',
+    ],
+    contains_client_series: true,
+    client_experiment: {
+      experiment_id: 'EXP-JASON-HUBSPOT-CHRONOS-20260901',
+      approval_ref: 'direct-user-approval:2026-09-01-jason-hubspot-chronos-pilot',
+      data_class: 'sanitized-aggregate',
+      input_fingerprint: 'df776a927381ede70f376cee9a34ae4dd9fd42ace1976c9bde1a28ae75a8ff1e',
+    },
+    model_id: 'amazon/chronos-2',
+    license_lane: 'apache-2.0',
+    used_for: 'research',
+  };
+}
+
 function validRun() {
   const quantiles = {};
   for (let percentile = 10; percentile <= 90; percentile += 10) {
@@ -176,6 +217,68 @@ test('Chronos-2 multivariate canary preserves two targets and both covariate cla
   assert.equal(receipt.capabilities.past_future_covariates, true);
 });
 
+test('one fingerprint-bound Momentum 360 aggregate experiment is eligible without broad client promotion', () => {
+  const request = approvedClientChronosRequest();
+  assert.deepEqual(validateForecastRequest(request), { ok: true, errors: [] });
+  const receipt = routeForecastRequest(request);
+  assert.equal(receipt.status, 'sandbox-eligible');
+  assert.equal(receipt.client_experiment_authorized, true);
+  assert.equal(receipt.client_experiment_id, 'EXP-JASON-HUBSPOT-CHRONOS-20260901');
+  assert.equal(receipt.authority, 'evidence-only');
+
+  request.targets[0].values[0] = 1;
+  const altered = routeForecastRequest(request);
+  assert.equal(altered.status, 'blocked');
+  assert.equal(altered.client_experiment_authorized, false);
+  assert.ok(altered.reasons.some((reason) => reason.includes('input fingerprint')));
+  assert.ok(altered.reasons.some((reason) => reason.includes('may not receive client series')));
+
+  const foreignPortal = approvedClientChronosRequest();
+  foreignPortal.source_locators[0] = 'hubspot://portal/242825734/contacts/createdate/weekly?cutoff=2026-06-01';
+  const crossAccount = routeForecastRequest(foreignPortal);
+  assert.equal(crossAccount.status, 'blocked');
+  assert.equal(crossAccount.client_experiment_authorized, false);
+  assert.ok(crossAccount.reasons.some((reason) => reason.includes('source_locators')));
+  assert.ok(crossAccount.reasons.some((reason) => reason.includes('input fingerprint')));
+});
+
+test('approved client forecast output validates only with the exact experiment identity', () => {
+  const run = validRun();
+  run.request_id = 'forecast-momentum-360-hubspot-contacts-weekly-20260901';
+  run.run_id = `forecast-run-${run.request_id}`;
+  run.client_id = 'momentum-360';
+  run.series_id = 'momentum-360-hubspot-contacts-created-weekly';
+  run.model_id = 'amazon/chronos-2';
+  run.provider_id = 'amazon-science';
+  run.runtime_id = 'chronos-forecasting==2.3.1;torch==2.6.0+cpu';
+  run.license_lane = 'apache-2.0';
+  run.horizon = 12;
+  for (let percentile = 10; percentile <= 90; percentile += 10) {
+    run.target_outputs[0].quantiles[`p${percentile}`] = Array.from(
+      { length: 12 },
+      (_, index) => percentile / 10 + index,
+    );
+  }
+  run.target_outputs[0].point = [...run.target_outputs[0].quantiles.p50];
+  run.contains_client_series = true;
+  const approved = approvedClientChronosRequest();
+  run.client_experiment = approved.client_experiment;
+  run.source_locators = approved.source_locators;
+  assert.deepEqual(validateForecastRun(run), { ok: true, errors: [] });
+
+  run.source_locators[0] = 'hubspot://portal/242825734/contacts/createdate/weekly?cutoff=2026-06-01';
+  const crossAccount = validateForecastRun(run);
+  assert.equal(crossAccount.ok, false);
+  assert.ok(crossAccount.errors.some((error) => error.includes('source_locators')));
+  run.source_locators = approved.source_locators;
+
+  run.client_experiment.approval_ref = 'unapproved';
+  const invalid = validateForecastRun(run);
+  assert.equal(invalid.ok, false);
+  assert.ok(invalid.errors.some((error) => error.includes('approval_ref')));
+  assert.ok(invalid.errors.some((error) => error.includes('client series')));
+});
+
 test('model capability mismatches fail closed instead of implying TimesFM-3 parity', () => {
   const xreg = fixture();
   xreg.model_id = 'google/timesfm-2.5-200m-pytorch';
@@ -268,8 +371,10 @@ test('forecast-run JSON schema records all nine quantile keys', () => {
   ));
   assert.ok(requestSchema.properties.model_id.enum.includes('amazon/chronos-2'));
   assert.ok(requestSchema.properties.model_id.enum.includes('Datadog/Toto-2.0-22m'));
+  assert.ok(requestSchema.properties.client_experiment);
   assert.ok(schema.required.includes('provider_id'));
   assert.ok(schema.required.includes('runtime_id'));
+  assert.ok(schema.properties.client_experiment);
   const quantileProperties = schema.$defs.quantiles.properties;
   assert.deepEqual(Object.keys(quantileProperties).sort(), [
     'p10', 'p20', 'p30', 'p40', 'p50', 'p60', 'p70', 'p80', 'p90',

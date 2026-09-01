@@ -1,5 +1,7 @@
 'use strict';
 
+const crypto = require('node:crypto');
+
 const QUANTILE_KEYS = Object.freeze([
   'p10',
   'p20',
@@ -18,6 +20,24 @@ const FORBIDDEN_USES = Object.freeze([
   'publish',
   'conversion-claim',
 ]);
+
+const CLIENT_RESEARCH_APPROVALS = Object.freeze({
+  'EXP-JASON-HUBSPOT-CHRONOS-20260901': Object.freeze({
+    request_id: 'forecast-momentum-360-hubspot-contacts-weekly-20260901',
+    client_id: 'momentum-360',
+    series_id: 'momentum-360-hubspot-contacts-created-weekly',
+    horizon: 12,
+    model_id: 'amazon/chronos-2',
+    used_for: 'research',
+    data_class: 'sanitized-aggregate',
+    approval_ref: 'direct-user-approval:2026-09-01-jason-hubspot-chronos-pilot',
+    input_fingerprint: 'df776a927381ede70f376cee9a34ae4dd9fd42ace1976c9bde1a28ae75a8ff1e',
+    source_locators: Object.freeze([
+      'hubspot://portal/50612503/contacts/createdate/weekly?cutoff=2026-06-01',
+      'clients/momentum-360/deliverables/2026-09-01-hubspot-chronos-forecast-pilot/inputs/hubspot-forecast-evidence-manifest.json',
+    ]),
+  }),
+});
 
 const MODEL_ROUTES = Object.freeze({
   'amazon/chronos-2': Object.freeze({
@@ -141,6 +161,83 @@ function isIsoDateTime(value) {
   return isNonEmptyString(value)
     && value.includes('T')
     && Number.isFinite(Date.parse(value));
+}
+
+function requestInputFingerprint(request) {
+  const material = {
+    client_id: request?.client_id,
+    series_id: request?.series_id,
+    cutoff_at: request?.cutoff_at,
+    horizon: request?.horizon,
+    targets: request?.targets,
+    past_covariates: request?.past_covariates,
+    past_future_covariates: request?.past_future_covariates,
+    source_locators: request?.source_locators,
+    model_id: request?.model_id,
+  };
+  return crypto.createHash('sha256').update(JSON.stringify(material)).digest('hex');
+}
+
+function validateClientExperimentShape(value, label, errors) {
+  if (!isObject(value)) {
+    errors.push(`${label} must be an object`);
+    return false;
+  }
+  for (const key of ['experiment_id', 'approval_ref', 'data_class', 'input_fingerprint']) {
+    if (!isNonEmptyString(value[key])) errors.push(`${label}.${key} is required`);
+  }
+  return true;
+}
+
+function resolveClientRequestApproval(request) {
+  const reasons = [];
+  if (!request?.contains_client_series) return { ok: false, reasons };
+  if (!isObject(request.client_experiment)) {
+    return { ok: false, reasons: ['client_experiment is required for client series'] };
+  }
+  const approval = CLIENT_RESEARCH_APPROVALS[request.client_experiment.experiment_id];
+  if (!approval) {
+    return { ok: false, reasons: ['client_experiment is not registered for local research'] };
+  }
+  for (const key of ['request_id', 'client_id', 'series_id', 'horizon', 'model_id', 'used_for']) {
+    if (request[key] !== approval[key]) reasons.push(`client experiment ${key} does not match approval`);
+  }
+  for (const key of ['approval_ref', 'data_class', 'input_fingerprint']) {
+    if (request.client_experiment[key] !== approval[key]) {
+      reasons.push(`client experiment ${key} does not match approval`);
+    }
+  }
+  if (requestInputFingerprint(request) !== approval.input_fingerprint) {
+    reasons.push('client experiment input fingerprint does not match approval');
+  }
+  if (JSON.stringify(request.source_locators) !== JSON.stringify(approval.source_locators)) {
+    reasons.push('client experiment source_locators do not match approval');
+  }
+  return { ok: reasons.length === 0, reasons, experiment_id: request.client_experiment.experiment_id };
+}
+
+function resolveClientRunApproval(run) {
+  const reasons = [];
+  if (!run?.contains_client_series) return { ok: false, reasons };
+  if (!isObject(run.client_experiment)) {
+    return { ok: false, reasons: ['client_experiment is required for client forecast output'] };
+  }
+  const approval = CLIENT_RESEARCH_APPROVALS[run.client_experiment.experiment_id];
+  if (!approval) {
+    return { ok: false, reasons: ['client_experiment is not registered for local research'] };
+  }
+  for (const key of ['request_id', 'client_id', 'series_id', 'horizon', 'model_id', 'used_for']) {
+    if (run[key] !== approval[key]) reasons.push(`client experiment output ${key} does not match approval`);
+  }
+  for (const key of ['approval_ref', 'data_class', 'input_fingerprint']) {
+    if (run.client_experiment[key] !== approval[key]) {
+      reasons.push(`client experiment output ${key} does not match approval`);
+    }
+  }
+  if (JSON.stringify(run.source_locators) !== JSON.stringify(approval.source_locators)) {
+    reasons.push('client experiment output source_locators do not match approval');
+  }
+  return { ok: reasons.length === 0, reasons, experiment_id: run.client_experiment.experiment_id };
 }
 
 function validateNumericVector(value, label, errors, minimumLength = 1) {
@@ -271,6 +368,9 @@ function validateForecastRequest(request) {
     if (request.client_id === 'portfolio/system') {
       errors.push('client_id must be an exact client route when contains_client_series is true');
     }
+    validateClientExperimentShape(request.client_experiment, 'client_experiment', errors);
+  } else if (request.client_experiment !== undefined) {
+    errors.push('client_experiment is allowed only when contains_client_series is true');
   }
 
   return { ok: errors.length === 0, errors };
@@ -279,6 +379,8 @@ function validateForecastRequest(request) {
 function routeForecastRequest(request) {
   const validation = validateForecastRequest(request);
   const reasons = [...validation.errors];
+  const clientApproval = resolveClientRequestApproval(request);
+  reasons.push(...clientApproval.reasons);
   const model = MODEL_ROUTES[request?.model_id];
   const contextLength = Array.isArray(request?.targets)
     && Array.isArray(request.targets[0]?.values)
@@ -303,7 +405,7 @@ function routeForecastRequest(request) {
     if (model.availability === 'not-live') {
       reasons.push(`${request.model_id} is not live or verified for Dillon OS`);
     }
-    if (request.contains_client_series && !model.allows_client_series) {
+    if (request.contains_client_series && !model.allows_client_series && !clientApproval.ok) {
       reasons.push(`${request.model_id} may not receive client series in its current lane`);
     }
     if (!model.allowed_uses.includes(request.used_for)) {
@@ -342,6 +444,8 @@ function routeForecastRequest(request) {
     license_lane: request?.license_lane || null,
     used_for: request?.used_for || null,
     contains_client_series: request?.contains_client_series ?? null,
+    client_experiment_authorized: clientApproval.ok,
+    client_experiment_id: clientApproval.experiment_id || null,
     context_length: contextLength,
     target_count: targetCount,
     reasons,
@@ -374,6 +478,11 @@ function validateForecastRun(run) {
   if (typeof run.contains_client_series !== 'boolean') {
     errors.push('contains_client_series must be a boolean');
   }
+  if (run.contains_client_series) {
+    validateClientExperimentShape(run.client_experiment, 'client_experiment', errors);
+  } else if (run.client_experiment !== undefined) {
+    errors.push('client_experiment is allowed only when contains_client_series is true');
+  }
   if (!Array.isArray(run.source_locators)
     || run.source_locators.length === 0
     || run.source_locators.some((locator) => !isNonEmptyString(locator))) {
@@ -386,6 +495,8 @@ function validateForecastRun(run) {
   }
 
   const model = MODEL_ROUTES[run.model_id];
+  const clientApproval = resolveClientRunApproval(run);
+  errors.push(...clientApproval.reasons);
   if (!model) {
     errors.push(`model_id is not registered: ${run.model_id || '(missing)'}`);
   } else {
@@ -401,7 +512,7 @@ function validateForecastRun(run) {
     if (run.status === 'ok' && model.availability === 'not-live') {
       errors.push(`${run.model_id} may not produce an ok run before live verification`);
     }
-    if (run.contains_client_series && !model.allows_client_series) {
+    if (run.contains_client_series && !model.allows_client_series && !clientApproval.ok) {
       errors.push(`${run.model_id} output may not contain client series in its current lane`);
     }
     if (!model.allowed_uses.includes(run.used_for)) {
@@ -477,6 +588,7 @@ function validateForecastRun(run) {
 }
 
 module.exports = {
+  CLIENT_RESEARCH_APPROVALS,
   FORBIDDEN_USES,
   MODEL_ROUTES,
   QUANTILE_KEYS,

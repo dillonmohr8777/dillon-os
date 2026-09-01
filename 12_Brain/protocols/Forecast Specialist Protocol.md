@@ -60,21 +60,27 @@ If the lane is missing, refuse the forecast.
 4. Attach future covariates only when they are actually known (calendar,
    approved promo, remaining budget, scheduled webinar).
 5. Choose a license-legal model.
-6. Validate `12_Brain/schemas/forecast-request.json` with
+6. For client data, require an exact registered research approval bound to the
+   client, model, use, target, horizon, approval reference, sanitized data
+   class, and input fingerprint. A user-provided request field alone is not an
+   approval.
+7. Validate `12_Brain/schemas/forecast-request.json` with
    `_os/automation/bin/forecast-route.js route --from <request.json>`.
-7. Stop on `blocked`. `sandbox-eligible` is a policy receipt, not proof that
+8. Stop on `blocked`. `sandbox-eligible` is a policy receipt, not proof that
    a checkpoint ran or that its license was accepted.
-8. Write the forecast-run artifact. Include `as_of`, exact model, provider,
+9. Write the forecast-run artifact. Include `as_of`, exact model, provider,
    runtime, source locators, all p10-p90 bands, and whether client series were
    used.
-9. Validate it with `forecast-route.js validate-run --from <run.json>`.
-10. Let the LLM interpret p10 / p50 / p90 into one suggested next action.
-11. Stop. Do not spend, send, or publish from the band.
+10. Validate it with `forecast-route.js validate-run --from <run.json>`.
+11. Let the LLM interpret p10 / p50 / p90 into one suggested next action.
+12. Stop. Do not spend, send, or publish from the band.
 
 The router is intentionally fail-closed. As of 2026-09-01, all routes are
 research-only inside Dillon OS. TimesFM-3.0 is additionally restricted by its
 checkpoint license. Chronos-2 is the first legal canary, not a production
-default, until the experiment and human promotion gates pass.
+default, until the experiment and human promotion gates pass. The one active
+Momentum 360 pilot is an exact fingerprint-bound research exception; it does
+not authorize other client series or operational use.
 
 ## Reporting language
 

@@ -1,13 +1,14 @@
 ---
 note_type: experiment
-status: proposed
+status: active
 created: 2026-09-01
 updated: 2026-09-01
 owner: Dillon Mohr
 experiment_id: EXP-TIMESFM-FORECAST-ROUTER
-decision: sandbox-test
+decision: retain-shadow
 verification_status: partial
 human_gate: required
+pilot_human_gate: satisfied-for-exact-momentum-aggregate
 risk: medium
 source_refs:
   - "[[12_Brain/04_Decisions/2026-09-01 - Route numeric forecasts to a specialist]]"
@@ -17,6 +18,7 @@ source_refs:
   - "https://huggingface.co/amazon/chronos-2"
   - "https://github.com/amazon-science/chronos-forecasting"
   - "https://github.com/DataDog/toto"
+  - "client-operations://clients/momentum-360/deliverables/2026-09-01-hubspot-chronos-forecast-pilot/momentum-360-hubspot-chronos-forecast-pilot-report.md"
 tags:
   - brain
   - experiment
@@ -112,12 +114,23 @@ canary must abstain today. `System/routine-health.md` and
   then delegates only eligible work to the pinned machine launcher. The
   launcher performs an exact-version preflight and runs from the local model
   cache without routine network egress.
-- Blocked by data readiness: fewer than 32 contiguous daily observations in
-  both the tracked branch and active runtime history.
-- Pending: held-out scoring, calibration, cross-learning comparison, and
-  independent result review.
-- Not authorized: client data, agenda scoring, scheduled automation, or any
-  TimesFM-3.0 commercial decision support.
+- Complete: Dillon explicitly approved one read-only Momentum 360 HubSpot
+  pilot. The client series route is bound to the exact client, model, target,
+  request, horizon, approval reference, and input fingerprint. It does not
+  broadly promote client data.
+- Complete: the Jason-only portal `50612503` produced 44 complete weekly
+  contact-created observations with no missing weeks or invalid timestamps.
+  Two likely import/backfill weeks contain 73.39% of the records, so the raw
+  target carries a material data-quality warning.
+- Complete: Chronos-2 ran one 32-week-context, 12-week-held-out forecast. It
+  returned all nine quantiles but posted 25.75% WAPE versus 25.11% for
+  persistence. P10-p90 coverage was 58.33%, below the nominal 80% band.
+- Blocked by data readiness: the original automation-reliability canary still
+  has fewer than 32 contiguous daily observations.
+- Pending: rolling-origin scoring, import/backfill reconciliation, quantile
+  calibration, cross-learning comparison, and independent result review.
+- Not authorized: agenda scoring, scheduled automation, client-facing forecast
+  claims, or any TimesFM-3.0 client or commercial decision support.
 
 ## Acceptance contract
 
@@ -126,9 +139,11 @@ canary must abstain today. `System/routine-health.md` and
    hardware/runtime/license receipt, not a fake forecast.
 3. Output shapes match the documented contract (point plus quantiles, no
    NaNs).
-4. Router rejects client use of every unpromoted route, TimesFM-3.0 license
-   mismatches, incomplete past-future covariates, unsupported model
-   capabilities, and the not-yet-live managed route.
+4. Router rejects client use of every unpromoted route except an exact
+   registered, sanitized-aggregate, fingerprint-bound research experiment. It
+   still rejects TimesFM-3.0 client data, license mismatches, incomplete
+   past-future covariates, unsupported model capabilities, and the
+   not-yet-live managed route.
 5. Independent checker inspects license lane, input provenance, and that no
    automation registry entry was added.
 6. Rolling-origin point error beats persistence or seasonal-naive, empirical
