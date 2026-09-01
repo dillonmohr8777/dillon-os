@@ -2,7 +2,7 @@
 note_type: concept
 status: active
 created: 2026-08-01
-updated: 2026-08-10
+updated: 2026-09-01
 domain: knowledge operations
 maturity: operational
 summary: Durable learning joins immutable evidence to canonical knowledge, decisions, outcomes, rule versions, and future precedent without confusing capture with truth.
@@ -15,6 +15,8 @@ source_refs:
   - "[[12_Brain/09_Ops/Schema]]"
   - "[[04_SOPs/Communication Intelligence Ingestion]]"
   - "[[12_Brain/05_Projects/2026-07-29 - Complete Dillon OS second brain]]"
+  - "[[12_Brain/03_Concepts/Specialist Forecast Router]]"
+  - "[[12_Brain/04_Decisions/2026-09-01 - Route numeric forecasts to a specialist]]"
 tags:
   - brain
   - concept
@@ -133,6 +135,10 @@ result: "pending"
 ```
 
 Research proposes experiments. It does not auto-change production strategy.
+Numeric futures follow the same loop: a specialist forecast is evidence, not
+an adopted operating change, until
+[[12_Brain/05_Projects/Experiments/EXP-TIMESFM-FORECAST-ROUTER|EXP-TIMESFM-FORECAST-ROUTER]]
+passes and a human gate promotes it.
 
 ## Daily brain growth protocol
 

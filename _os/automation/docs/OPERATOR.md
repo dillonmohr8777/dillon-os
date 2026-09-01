@@ -135,6 +135,24 @@ placeholder copy. A failing result blocks deployment. A pass must still be follo
 by visual review, functional QA, maker/checker review, and exact Netlify target
 verification.
 
+## Forecast specialist sandbox
+
+Route and run the Apache-licensed Chronos-2 canary with the verified local
+Windows runtime:
+
+```powershell
+_os/automation/bin/forecast-chronos2.ps1 `
+  -RequestPath _os/automation/fixtures/forecast/synthetic-chronos2-multitarget-request.json `
+  -OutputPath "$env:LOCALAPPDATA/Codex/Forecasting/chronos2-run.json"
+```
+
+The command validates the request before loading the model, pins the exact
+trusted Python and Torch stack, and reads the checkpoint from the local cache.
+It remains research-only and fails closed on client series, stale or unverified
+inputs, incomplete known-future covariates, runtime drift, or an unpromoted use.
+Its point and p10-p90 output is evidence only; it cannot send, publish, spend,
+or make a conversion claim.
+
 ## Other existing commands
 
 ```powershell
