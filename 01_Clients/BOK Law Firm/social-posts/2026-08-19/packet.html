@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>This Week With BOK | August 19-22, 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --teal: #0d5558;
+      --ink: #163738;
+      --gold: #c5a075;
+      --cream: #fdf8f0;
+      --muted: #4e6567;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: #d5dfdf; }
+    body { font-family: "Source Sans 3", Arial, sans-serif; color: var(--ink); }
+    body[data-page] { background: transparent; }
+    body[data-page="cover"] .page:not(.cover),
+    body[data-page="wed"] .page:not(.wed),
+    body[data-page="fri"] .page:not(.fri),
+    body[data-page="sat"] .page:not(.sat) { display: none; }
+    .page {
+      position: relative;
+      width: 1275px;
+      height: 1650px;
+      overflow: hidden;
+      background: var(--cream);
+      page-break-after: always;
+    }
+    .page:last-child { page-break-after: auto; }
+    .footer {
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      height: 78px;
+      display: grid;
+      place-items: center;
+      background: var(--teal);
+      color: #fff;
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: .28em;
+    }
+    .cover-rings, .cover-rings span {
+      position: absolute;
+      border: 1.5px solid rgba(197, 160, 117, .28);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .cover-rings .a { width: 620px; height: 620px; top: 210px; right: -160px; }
+    .cover-rings .b { width: 470px; height: 470px; top: 286px; right: -86px; }
+    .cover-rings .c { width: 540px; height: 540px; bottom: 80px; left: -180px; }
+    .cover-logo {
+      display: block;
+      width: 196px;
+      height: 196px;
+      margin: 78px auto 28px;
+      object-fit: contain;
+    }
+    .kicker {
+      margin: 0;
+      text-align: center;
+      color: var(--gold);
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: .42em;
+      text-transform: uppercase;
+    }
+    .cover h1 {
+      margin: 14px 0 8px;
+      text-align: center;
+      color: var(--teal);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 86px;
+      font-weight: 700;
+      line-height: .98;
+      letter-spacing: -.03em;
+    }
+    .cover .sub {
+      margin: 0 0 48px;
+      text-align: center;
+      color: var(--teal);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 26px;
+      font-style: italic;
+      font-weight: 600;
+    }
+    .toc {
+      width: 820px;
+      margin: 0 auto;
+    }
+    .toc-row {
+      display: grid;
+      grid-template-columns: 78px 1fr;
+      gap: 18px;
+      align-items: start;
+      padding: 22px 0 20px;
+      border-top: 1px solid var(--gold);
+    }
+    .toc-row:last-child { border-bottom: 1px solid var(--gold); }
+    .toc-num {
+      color: var(--gold);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 42px;
+      font-weight: 700;
+      line-height: 1;
+    }
+    .toc-series {
+      margin: 4px 0 4px;
+      color: var(--teal);
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+    }
+    .toc-title {
+      margin: 0;
+      color: var(--ink);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 1.12;
+    }
+    .cover-legal {
+      position: absolute;
+      left: 70px; right: 70px;
+      bottom: 118px;
+      text-align: center;
+      color: var(--teal);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+    }
+    .mast {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 36px 54px 16px;
+    }
+    .mast-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .mast-logo {
+      width: 92px;
+      height: 92px;
+      object-fit: contain;
+    }
+    .mast-name {
+      margin: 0;
+      color: var(--teal);
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: .18em;
+    }
+    .mast-service {
+      margin: 4px 0 0;
+      color: var(--gold);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .22em;
+    }
+    .mast-post {
+      color: var(--teal);
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: .22em;
+    }
+    .gold-line {
+      height: 1.5px;
+      margin: 0 54px 28px;
+      background: var(--gold);
+    }
+    .headline-block { padding: 0 54px 18px; }
+    .series-pill {
+      display: inline-block;
+      margin-bottom: 10px;
+      padding: 8px 18px 7px;
+      background: var(--teal);
+      color: #fff;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
+    .headline-block h1 {
+      margin: 0;
+      max-width: 920px;
+      color: var(--ink);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 52px;
+      font-weight: 700;
+      line-height: 1.02;
+      letter-spacing: -.025em;
+    }
+    .split {
+      display: grid;
+      grid-template-columns: 532px 1fr;
+      gap: 36px;
+      padding: 8px 54px 0;
+      min-height: 1120px;
+    }
+    .col-label {
+      margin: 0 0 10px;
+      color: var(--gold);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .28em;
+    }
+    .graphic {
+      width: 532px;
+      height: 665px;
+      object-fit: cover;
+      object-position: top;
+      background: #fff;
+      border: 1px solid rgba(13, 85, 88, .12);
+      box-shadow: 0 16px 32px rgba(22, 55, 56, .12);
+    }
+    .meta {
+      margin-top: 16px;
+      padding: 14px 16px 12px;
+      background: rgba(13, 85, 88, .06);
+      border-left: 4px solid var(--gold);
+    }
+    .meta p {
+      margin: 0 0 8px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.35;
+    }
+    .meta p:last-child { margin-bottom: 0; }
+    .meta strong { color: var(--teal); }
+    .post-copy { padding-top: 2px; }
+    .post-copy p {
+      margin: 0 0 14px;
+      color: var(--ink);
+      font-size: 20px;
+      line-height: 1.42;
+    }
+    .post-copy ul {
+      margin: 0 0 16px;
+      padding: 0 0 0 4px;
+      list-style: none;
+    }
+    .post-copy li {
+      position: relative;
+      margin: 0 0 8px;
+      padding-left: 18px;
+      font-size: 20px;
+      line-height: 1.38;
+    }
+    .post-copy li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-weight: 800;
+    }
+    .quote {
+      display: grid;
+      grid-template-columns: 5px 1fr;
+      gap: 14px;
+      margin: 18px 0 18px;
+    }
+    .quote span { background: var(--gold); }
+    .quote p {
+      margin: 0;
+      color: var(--gold);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 24px;
+      font-style: italic;
+      font-weight: 600;
+      line-height: 1.28;
+    }
+    .tags {
+      margin: 0 0 16px;
+      color: var(--teal);
+      font-size: 16px;
+      font-weight: 800;
+      line-height: 1.45;
+    }
+    .disclaimer {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 16px;
+      font-style: italic;
+      line-height: 1.35;
+    }
+    .cta {
+      display: inline-block;
+      margin-bottom: 18px;
+      padding: 12px 22px 11px;
+      background: var(--teal);
+      color: #fff;
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: .16em;
+      text-decoration: none;
+    }
+    .fill-block {
+      margin-top: 8px;
+      padding: 14px 16px 12px;
+      border: 1px solid rgba(197, 160, 117, .55);
+      background: rgba(253, 248, 240, .9);
+    }
+    .fill-block p {
+      margin: 0 0 8px;
+      font-size: 16px;
+      line-height: 1.38;
+    }
+    .fill-block p:last-child { margin-bottom: 0; }
+  </style>
+</head>
+<body>
+  <section class="page cover" aria-label="This Week With BOK cover">
+    <div class="cover-rings" aria-hidden="true"><span class="a"></span><span class="b"></span><span class="c"></span></div>
+    <img class="cover-logo" src="assets/bok-logo-exact.png" alt="BOK Law and Mediation Services">
+    <p class="kicker">Social Content Series</p>
+    <h1>This Week<br>With BOK</h1>
+    <p class="sub">Family Law &amp; Mediation · August 19-22, 2026</p>
+    <div class="toc">
+      <div class="toc-row">
+        <div class="toc-num">01</div>
+        <div>
+          <p class="toc-series">Wednesday Wisdom</p>
+          <p class="toc-title">Therapy Should Not Feel Like a Mystery</p>
+        </div>
+      </div>
+      <div class="toc-row">
+        <div class="toc-num">02</div>
+        <div>
+          <p class="toc-series">Family Friday</p>
+          <p class="toc-title">Kids Need Room to Feel the Change</p>
+        </div>
+      </div>
+      <div class="toc-row">
+        <div class="toc-num">03</div>
+        <div>
+          <p class="toc-series">Saturday Solutions</p>
+          <p class="toc-title">Questions to Bring Before Child Therapy</p>
+        </div>
+      </div>
+    </div>
+    <p class="cover-legal">Bowe · O'Neil · Kocelko &nbsp;|&nbsp; Law &amp; Mediation Services</p>
+    <footer class="footer">BOKLAWFIRM.COM</footer>
+  </section>
+
+  <section class="page wed" aria-label="Wednesday Wisdom packet page">
+    <header class="mast">
+      <div class="mast-left">
+        <img class="mast-logo" src="assets/bok-logo-exact.png" alt="">
+        <div>
+          <p class="mast-name">BOWE O'NEIL KOCELKO</p>
+          <p class="mast-service">LAW &amp; MEDIATION SERVICES</p>
+        </div>
+      </div>
+      <div class="mast-post">POST 01 · WEDNESDAY</div>
+    </header>
+    <div class="gold-line"></div>
+    <div class="headline-block">
+      <div class="series-pill">Wednesday Wisdom</div>
+      <h1>Therapy Should Not Feel Like a Mystery</h1>
+    </div>
+    <div class="split">
+      <div>
+        <p class="col-label">Finished Graphic</p>
+        <img class="graphic" src="final/wednesday-wisdom.png" alt="Wednesday Wisdom finished graphic">
+        <div class="meta">
+          <p><strong>Feed size:</strong> 1080 × 1350</p>
+          <p><strong>Still:</strong> final/wednesday-wisdom.png</p>
+          <p><strong>Motion:</strong> video/BOK-Wednesday-Wisdom.mp4 · 8 seconds · Ken Burns on the hero, chrome locked</p>
+          <p><strong>Post date:</strong> Wednesday, August 19, 2026</p>
+          <p><strong>Logo:</strong> exact BOK seal extracted from the July weekly packet</p>
+        </div>
+      </div>
+      <article class="post-copy">
+        <p class="col-label">The Post</p>
+        <p>Child therapy during family change can stay clearer when parents know what to ask. Kids rely on structure and routine. When one home becomes two, that rhythm can feel interrupted.</p>
+        <p>Big feelings are allowed, even when words are hard. A calm conversation with a qualified professional can help you decide if extra support fits your child right now.</p>
+        <p>This week on Donuts and Divorce, Dorothy talks with Dr. Allyson Casey-Jovanovich about what every parent needs to know before starting child therapy. The episode is educational. It is not a recommendation of any specific provider.</p>
+        <p>Listen to episode 58:<br><strong>https://www.buzzsprout.com/2136014/episodes/19653032</strong></p>
+        <ul>
+          <li>Kids rely on routine when one home becomes two.</li>
+          <li>Big feelings are allowed, even when words are hard.</li>
+          <li>A calm conversation can help you decide if support fits.</li>
+        </ul>
+        <p>At BOK Law &amp; Mediation Services, we help Western PA families keep children at the center while the adults work through the legal pieces.</p>
+        <div class="quote"><span></span><p>Listen to Donuts and Divorce, episode 58.</p></div>
+        <p class="disclaimer">This post is for general educational purposes only and is not legal advice.</p>
+        <p class="tags">#WednesdayWisdom &nbsp; #DonutsAndDivorce &nbsp; #ChildTherapy<br>#WesternPA &nbsp; #FamilyLaw &nbsp; #Mediation &nbsp; #BOKLaw</p>
+        <a class="cta" href="https://boklawfirm.com">VISIT BOKLAWFIRM.COM</a>
+        <div class="fill-block">
+          <p class="col-label">Alt text and hold</p>
+          <p>Alt text: A BOK Wednesday Wisdom graphic. A mediation conversation sits above three notes about routine, feelings, and asking whether child therapy fits. Exact BOK seal at lower left. BOKLAWFIRM.COM in the footer.</p>
+          <p>Hold for Dorothy or Rachael. Educational only. Western PA, not Pittsburgh-only. Pair with episode 58. Use the still in feed or the 8-second motion cut, not both in one slot unless they want a carousel.</p>
+        </div>
+      </article>
+    </div>
+    <footer class="footer">BOKLAWFIRM.COM</footer>
+  </section>
+
+  <section class="page fri" aria-label="Family Friday packet page">
+    <header class="mast">
+      <div class="mast-left">
+        <img class="mast-logo" src="assets/bok-logo-exact.png" alt="">
+        <div>
+          <p class="mast-name">BOWE O'NEIL KOCELKO</p>
+          <p class="mast-service">LAW &amp; MEDIATION SERVICES</p>
+        </div>
+      </div>
+      <div class="mast-post">POST 02 · FRIDAY</div>
+    </header>
+    <div class="gold-line"></div>
+    <div class="headline-block">
+      <div class="series-pill">Family Friday</div>
+      <h1>Kids Need Room to Feel the Change</h1>
+    </div>
+    <div class="split">
+      <div>
+        <p class="col-label">Finished Graphic</p>
+        <img class="graphic" src="final/family-friday.png" alt="Family Friday finished graphic">
+        <div class="meta">
+          <p><strong>Feed size:</strong> 1080 × 1350</p>
+          <p><strong>Still:</strong> final/family-friday.png</p>
+          <p><strong>Motion:</strong> video/BOK-Family-Friday.mp4 · 8 seconds · Ken Burns on the hero, chrome locked</p>
+          <p><strong>Post date:</strong> Friday, August 21, 2026</p>
+          <p><strong>Logo:</strong> exact BOK seal extracted from the July weekly packet</p>
+        </div>
+      </div>
+      <article class="post-copy">
+        <p class="col-label">The Post</p>
+        <p>A quiet evening at home can matter more than a packed weekend plan. When a family is changing, small steady moments help children feel safe.</p>
+        <p>There is no prize for a perfect Friday. A familiar meal, a short walk, or ten quiet minutes together can be enough. Green space, a board game, or the same bedtime story in both homes can do more than a crowded calendar.</p>
+        <ul>
+          <li>Keep one small routine the same in both homes.</li>
+          <li>Let kids have questions without rushing the answers.</li>
+          <li>Celebrate ordinary time, not a perfect schedule.</li>
+        </ul>
+        <p>Children do not need a highlight reel. They need to know the adults are paying attention, the plan is clear enough for tonight, and their feelings still have a place to land.</p>
+        <p>At BOK Law &amp; Mediation Services, we help Western PA families move forward while keeping what matters most at the center.</p>
+        <div class="quote"><span></span><p>Steady moments help children feel safe during family change.</p></div>
+        <p class="disclaimer">This post is for general educational purposes only and is not legal advice.</p>
+        <p class="tags">#FamilyFriday &nbsp; #CoParenting &nbsp; #WesternPA<br>#FamilyLaw &nbsp; #Mediation &nbsp; #BOKLaw</p>
+        <a class="cta" href="https://boklawfirm.com">VISIT BOKLAWFIRM.COM</a>
+        <div class="fill-block">
+          <p class="col-label">Alt text and hold</p>
+          <p>Alt text: A BOK Family Friday graphic. A family sits together at home above three notes about routine, questions, and ordinary time. Exact BOK seal at lower left. BOKLAWFIRM.COM in the footer.</p>
+          <p>Hold for Dorothy or Rachael. Educational only. Western PA, not Pittsburgh-only. Use the still in feed or the 8-second motion cut, not both in one slot unless they want a carousel.</p>
+        </div>
+      </article>
+    </div>
+    <footer class="footer">BOKLAWFIRM.COM</footer>
+  </section>
+
+  <section class="page sat" aria-label="Saturday Solutions packet page">
+    <header class="mast">
+      <div class="mast-left">
+        <img class="mast-logo" src="assets/bok-logo-exact.png" alt="">
+        <div>
+          <p class="mast-name">BOWE O'NEIL KOCELKO</p>
+          <p class="mast-service">LAW &amp; MEDIATION SERVICES</p>
+        </div>
+      </div>
+      <div class="mast-post">POST 03 · SATURDAY</div>
+    </header>
+    <div class="gold-line"></div>
+    <div class="headline-block">
+      <div class="series-pill">Saturday Solutions</div>
+      <h1>Questions to Bring Before Child Therapy</h1>
+    </div>
+    <div class="split">
+      <div>
+        <p class="col-label">Finished Graphic</p>
+        <img class="graphic" src="final/saturday-solutions.png" alt="Saturday Solutions finished graphic">
+        <div class="meta">
+          <p><strong>Feed size:</strong> 1080 × 1350</p>
+          <p><strong>Still:</strong> final/saturday-solutions.png</p>
+          <p><strong>Motion:</strong> video/BOK-Saturday-Solutions.mp4 · 8 seconds · Ken Burns on the hero, chrome locked</p>
+          <p><strong>Post date:</strong> Saturday, August 22, 2026</p>
+          <p><strong>Logo:</strong> exact BOK seal extracted from the July weekly packet</p>
+        </div>
+      </div>
+      <article class="post-copy">
+        <p class="col-label">The Post</p>
+        <p>If you are thinking about child therapy, you do not need every answer before you ask for guidance. A short list can make the first conversation feel less overwhelming.</p>
+        <p>Bring notes. Ask how the work is explained to children. Ask how parents stay informed without turning the child into a messenger. Ask what ordinary signs suggest extra support may help.</p>
+        <ul>
+          <li>What will sessions look like for my child?</li>
+          <li>How are parents involved without putting kids in the middle?</li>
+          <li>What signs suggest extra support may help?</li>
+        </ul>
+        <p>These questions are for learning, not for building a court strategy. Every child and every family is different. A therapist's job is care. A lawyer's job is the legal plan. Keep those lanes clear.</p>
+        <p>At BOK Law &amp; Mediation Services, we help Western PA families gather the right questions before the next hard conversation.</p>
+        <div class="quote"><span></span><p>These questions are for learning, not for building a court strategy.</p></div>
+        <p class="disclaimer">This post is for general educational purposes only and is not legal advice.</p>
+        <p class="tags">#SaturdaySolutions &nbsp; #ChildTherapy &nbsp; #CoParenting<br>#WesternPA &nbsp; #FamilyLaw &nbsp; #Mediation &nbsp; #BOKLaw</p>
+        <a class="cta" href="https://boklawfirm.com">VISIT BOKLAWFIRM.COM</a>
+        <div class="fill-block">
+          <p class="col-label">Alt text and hold</p>
+          <p>Alt text: A BOK Saturday Solutions graphic. A parent sits with a notebook above three questions to bring before child therapy. Exact BOK seal at lower left. BOKLAWFIRM.COM in the footer.</p>
+          <p>Hold for Dorothy or Rachael. Educational only. Western PA, not Pittsburgh-only. These questions are for learning, not court strategy. Use the still in feed or the 8-second motion cut, not both in one slot unless they want a carousel.</p>
+        </div>
+      </article>
+    </div>
+    <footer class="footer">BOKLAWFIRM.COM</footer>
+  </section>
+
+  <script>
+    const page = new URLSearchParams(window.location.search).get("page");
+    if (["cover", "wed", "fri", "sat"].includes(page)) document.body.dataset.page = page;
+  </script>
+</body>
+</html>

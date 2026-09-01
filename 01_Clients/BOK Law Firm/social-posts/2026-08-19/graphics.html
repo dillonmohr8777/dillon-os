@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BOK Law Social Graphics | August 19-22, 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Source+Sans+3:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --teal: #0d5558;
+      --ink: #163738;
+      --muted: #5a6e70;
+      --cream: #fdf8f0;
+      --gold: #c5a075;
+      --icon: #e7f1f1;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: #cbd7d7; }
+    body { display: grid; gap: 36px; justify-content: center; padding: 36px; }
+    body[data-post] { display: block; padding: 0; background: transparent; }
+    body[data-post="wed"] .card:not(.wed),
+    body[data-post="fri"] .card:not(.fri),
+    body[data-post="sat"] .card:not(.sat) { display: none; }
+    .card {
+      position: relative;
+      width: 1080px;
+      height: 1350px;
+      overflow: hidden;
+      background: var(--cream);
+      color: var(--ink);
+      font-family: "Source Sans 3", Arial, sans-serif;
+    }
+    .hero {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 538px;
+      width: 100%;
+      object-fit: cover;
+    }
+    .wed .hero { object-position: center 32%; }
+    .fri .hero { object-position: center 28%; }
+    .sat .hero { object-position: center 38%; }
+    .wave {
+      position: absolute;
+      top: 472px;
+      left: 0;
+      width: 1080px;
+      height: 128px;
+      z-index: 3;
+    }
+    .series {
+      position: absolute;
+      z-index: 5;
+      top: 498px;
+      left: 50%;
+      transform: translateX(-50%);
+      min-width: 428px;
+      padding: 13px 36px 11px;
+      background: var(--teal);
+      color: #fff;
+      text-align: center;
+      font-size: 25px;
+      font-weight: 800;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      border-radius: 8px;
+      box-shadow: 0 10px 20px rgba(13, 85, 88, .16);
+    }
+    .series.long { min-width: 508px; letter-spacing: .14em; }
+    .sprig {
+      position: absolute;
+      z-index: 5;
+      top: 518px;
+      width: 62px;
+      height: 26px;
+      color: var(--gold);
+    }
+    .sprig.l { left: 148px; }
+    .sprig.r { right: 148px; transform: scaleX(-1); }
+    .sat .sprig.l { left: 86px; }
+    .sat .sprig.r { right: 86px; }
+    .content {
+      position: absolute;
+      z-index: 4;
+      top: 586px;
+      left: 52px;
+      right: 52px;
+      text-align: center;
+    }
+    h1 {
+      margin: 0 auto 14px;
+      max-width: 968px;
+      color: var(--teal);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 52px;
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: -.028em;
+      text-wrap: balance;
+    }
+    h1.small { font-size: 46px; }
+    .subhead {
+      margin: 0 auto 26px;
+      max-width: 860px;
+      color: var(--muted);
+      font-size: 26px;
+      font-weight: 600;
+      line-height: 1.28;
+      text-wrap: balance;
+    }
+    .tips {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px 22px;
+      align-items: start;
+    }
+    .tip {
+      display: grid;
+      justify-items: center;
+      gap: 12px;
+    }
+    .icon {
+      width: 72px;
+      height: 72px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--icon);
+      color: var(--ink);
+    }
+    .icon svg { width: 32px; height: 32px; stroke: var(--ink); fill: none; stroke-width: 2.05; stroke-linecap: round; stroke-linejoin: round; }
+    .tip p {
+      margin: 0;
+      max-width: 286px;
+      color: var(--ink);
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 1.18;
+    }
+    .gold-heart {
+      margin: 20px 0 6px;
+      color: var(--gold);
+      font-size: 18px;
+      letter-spacing: .12em;
+    }
+    .closer {
+      margin: 0 auto;
+      max-width: 780px;
+      color: var(--teal);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 24px;
+      font-weight: 600;
+      font-style: italic;
+      line-height: 1.28;
+    }
+    .logo {
+      position: absolute;
+      z-index: 6;
+      left: 18px;
+      bottom: 78px;
+      width: 152px;
+      height: 152px;
+      object-fit: contain;
+      background: var(--cream);
+      border-radius: 50%;
+      padding: 3px;
+    }
+    .footer {
+      position: absolute;
+      z-index: 8;
+      left: 0; right: 0; bottom: 0;
+      height: 72px;
+      display: grid;
+      place-items: center;
+      background: var(--teal);
+      color: #fff;
+      font-size: 27px;
+      font-weight: 800;
+      letter-spacing: .2em;
+    }
+  </style>
+</head>
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+    <symbol id="sprig" viewBox="0 0 54 22">
+      <g fill="#c5a075">
+        <path d="M6.2 14.2c4.8-8.6 12.6-10.4 20.6-3.2 1.2 1.1 2.4 1.6 3.6 1.7-7.6-6.8-16.8-5.8-23.2 2.8-.4.6.3 1.2.9.9z"/>
+        <ellipse transform="rotate(-38 16.5 7.8)" cx="16.5" cy="7.8" rx="3.1" ry="5.4"/>
+        <ellipse transform="rotate(-18 24.2 8.6)" cx="24.2" cy="8.6" rx="2.5" ry="4.6"/>
+        <ellipse transform="rotate(12 31.8 11.2)" cx="31.8" cy="11.2" rx="2.1" ry="3.8"/>
+      </g>
+    </symbol>
+  </svg>
+
+  <article class="card wed" aria-label="Wednesday Wisdom social graphic">
+    <img class="hero" src="heroes/wednesday-wisdom.jpg" alt="">
+    <svg class="wave" viewBox="0 0 1080 128" preserveAspectRatio="none" aria-hidden="true">
+      <path fill="#0d5558" d="M0,42 C160,86 280,10 440,46 C600,84 750,14 910,50 C990,66 1048,42 1080,48 L1080,128 L0,128 Z"/>
+    </svg>
+    <svg class="sprig l" aria-hidden="true"><use href="#sprig"/></svg>
+    <div class="series">Wednesday Wisdom</div>
+    <svg class="sprig r" aria-hidden="true"><use href="#sprig"/></svg>
+    <div class="content">
+      <h1 class="small">Therapy Should Not Feel Like a Mystery</h1>
+      <p class="subhead">Child therapy during family change can stay clearer when parents know what to ask.</p>
+      <div class="tips">
+        <div class="tip">
+          <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 3h10v4H7z"/><path d="M5 7h14v14H5z"/><path d="M9 11h6M9 15h4"/></svg></div>
+          <p>Kids rely on routine when one home becomes two.</p>
+        </div>
+        <div class="tip">
+          <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 19V7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H9l-5 4z"/></svg></div>
+          <p>Big feelings are allowed, even when words are hard.</p>
+        </div>
+        <div class="tip">
+          <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v4"/><circle cx="12" cy="16" r=".7" fill="#163738" stroke="none"/></svg></div>
+          <p>A calm conversation can help you decide if support fits.</p>
+        </div>
+      </div>
+      <div class="gold-heart" aria-hidden="true">♥</div>
+      <p class="closer">Listen to Donuts and Divorce, episode 58.</p>
+    </div>
+    <img class="logo" src="assets/bok-logo-exact.png" alt="BOK Law and Mediation Services">
+    <footer class="footer">BOKLAWFIRM.COM</footer>
+  </article>
+
+  <article class="card fri" aria-label="Family Friday social graphic">
+    <img class="hero" src="heroes/family-friday.jpg" alt="">
+    <svg class="wave" viewBox="0 0 1080 128" preserveAspectRatio="none" aria-hidden="true">
+      <path fill="#0d5558" d="M0,42 C160,86 280,10 440,46 C600,84 750,14 910,50 C990,66 1048,42 1080,48 L1080,128 L0,128 Z"/>
+    </svg>
+    <svg class="sprig l" aria-hidden="true"><use href="#sprig"/></svg>
+    <div class="series">Family Friday</div>
+    <svg class="sprig r" aria-hidden="true"><use href="#sprig"/></svg>
+    <div class="content">
+      <h1>Kids Need Room to Feel the Change</h1>
+      <p class="subhead">A quiet evening at home can matter more than a packed weekend plan.</p>
+      <div class="tips">
+        <div class="tip">
+          <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7"/><path d="M6 10.5V20h12v-9.5"/></svg></div>
+          <p>Keep one small routine the same in both homes.</p>
+        </div>
+        <div class="tip">
+          <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.6-7-10a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 5.4-7 10-7 10z"/></svg></div>
+          <p>Let kids have questions without rushing the answers.</p>
+        </div>
+        <div class="tip">
+          <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+          <p>Celebrate ordinary time, not a perfect schedule.</p>
+        </div>
+      </div>
+      <div class="gold-heart" aria-hidden="true">♥</div>
+      <p class="closer">Steady moments help children feel safe during family change.</p>
+    </div>
+    <img class="logo" src="assets/bok-logo-exact.png" alt="BOK Law and Mediation Services">
+    <footer class="footer">BOKLAWFIRM.COM</footer>
+  </article>
+
+  <article class="card sat" aria-label="Saturday Solutions social graphic">
+    <img class="hero" src="heroes/saturday-solutions.jpg" alt="">
+    <svg class="wave" viewBox="0 0 1080 128" preserveAspectRatio="none" aria-hidden="true">
+      <path fill="#0d5558" d="M0,42 C160,86 280,10 440,46 C600,84 750,14 910,50 C990,66 1048,42 1080,48 L1080,128 L0,128 Z"/>
+    </svg>
+    <svg class="sprig l" aria-hidden="true"><use href="#sprig"/></svg>
+    <div class="series long">Saturday Solutions</div>
+    <svg class="sprig r" aria-hidden="true"><use href="#sprig"/></svg>
+    <div class="content">
+      <h1 class="small">Questions to Bring Before Child Therapy</h1>
+      <p class="subhead">A short list can make the first conversation feel less overwhelming.</p>
+      <div class="tips">
+        <div class="tip">
+          <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 7h8M8 12h8M8 17h5"/><path d="M5 4h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1z"/></svg></div>
+          <p>What will sessions look like for my child?</p>
+        </div>
+        <div class="tip">
+          <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/><path d="M3 19a5 5 0 0 1 10 0M11 19a5 5 0 0 1 10 0"/></svg></div>
+          <p>How are parents involved without putting kids in the middle?</p>
+        </div>
+        <div class="tip">
+          <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l2.2 6.6H21l-5.4 4 2.1 6.4L12 16.8 6.3 20l2.1-6.4L3 9.6h6.8z"/></svg></div>
+          <p>What signs suggest extra support may help?</p>
+        </div>
+      </div>
+      <div class="gold-heart" aria-hidden="true">♥</div>
+      <p class="closer">These questions are for learning, not for building a court strategy.</p>
+    </div>
+    <img class="logo" src="assets/bok-logo-exact.png" alt="BOK Law and Mediation Services">
+    <footer class="footer">BOKLAWFIRM.COM</footer>
+  </article>
+
+  <script>
+    const post = new URLSearchParams(window.location.search).get("post");
+    if (["wed", "fri", "sat"].includes(post)) document.body.dataset.post = post;
+  </script>
+</body>
+</html>

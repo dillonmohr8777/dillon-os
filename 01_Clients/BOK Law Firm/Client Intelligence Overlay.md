@@ -6,8 +6,8 @@ client_id: bok-law-firm
 relationship: client
 division: Direct
 created: 2026-08-01
-updated: 2026-08-01
-evidence_as_of: 2026-07-28
+updated: 2026-08-18
+evidence_as_of: 2026-08-18
 verification_status: dated-evidence
 intelligence_maturity: developing
 keyword_state: developing
@@ -16,10 +16,13 @@ pipeline_state: developing
 reporting_state: developing
 workflow_state: operational
 priority: medium
-next_action: "Connect the approved content calendar to legal-service demand, geographic accuracy, consultation paths, and outcome-safe reporting."
-review_on: 2026-08-08
+next_action: "Hold the August 19-22 Wed/Fri/Sat packet for Dillon review. Last-weeks wave chrome plus July portrait PDF. Exact extracted seal. Do not send to BOK until approved."
+review_on: 2026-08-25
 source_refs:
   - "[[overview]]"
+  - "[[12_Brain/01_Captures/2026-08-16 - BOK Dorothy Donuts and Divorce episode 58]]"
+  - "[[12_Brain/01_Captures/2026-08-18 - BOK weekly chrome last-weeks plus July packet]]"
+  - "[[12_Brain/08_Memory/current/BOK social graphics are not cartoon]]"
   - "C:/Users/dillo/Documents/Codex/projects/client-operations/clients/bok-law-firm/context/operating-context.md"
   - "C:/Users/dillo/Documents/Codex/projects/client-operations/clients/bok-law-firm/deliverables/2026-07-28-august-september-social-content/copy/content-calendar.md"
 tags: [client-intelligence, bok-law, legal, content, seo, social]
@@ -39,6 +42,12 @@ consultation path while preserving legal review and embargo rules.
 - Weekly social, blogs, legal service pages, podcast pages, website updates,
   awards, and presentations are recurring work.
 - A complete August/September social-content package and QA artifacts exist.
+- Dorothy asked on 2026-08-16 for social posts for Donuts and Divorce episode 58
+  and offered a talking-head video that was not attached before her August 25
+  out-of-office return. Rebuilt packet (official cover, no cartoon characters):
+  `01_Clients/BOK Law Firm/social-posts/2026-08-20/`. Wednesday Wisdom,
+  Family Friday, and Saturday Solutions rebuilt to last-weeks Instagram chrome
+  with the exact July-packet seal: `01_Clients/BOK Law Firm/social-posts/2026-08-19/`.
 - Western Pennsylvania wording and attorney-specific recognition distinctions
   are known factual guardrails.
 - Current query visibility, AI citations, consultation sources, case outcomes,

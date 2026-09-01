@@ -4,8 +4,8 @@ client_id: bok-law-firm
 role: Content and digital marketing
 division: Direct
 status: active
-last_touched: 2026-08-01
-next_action: Maintain the approved weekly content workflow, resolve geographic and embargo guardrails, and establish search-to-consultation measurement.
+last_touched: 2026-08-18
+next_action: Hold the August 19-22 Wed/Fri/Sat packet for Dillon review. Do not send to BOK until approved.
 due: none
 tags: [client, legal, content, social, seo]
 ---

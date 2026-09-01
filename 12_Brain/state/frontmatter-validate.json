@@ -1,6 +1,6 @@
 {
   "automation_id": "frontmatter-validate",
-  "started_at": "2026-08-18T06:53:19.966Z",
+  "started_at": "2026-08-18T20:28:28.431Z",
   "status": "ok",
   "counts": {
     "files": 40,
@@ -9,16 +9,7 @@
   },
   "rows": [
     {
-      "file": "01_Clients\\Align HCM.md",
-      "ok": true,
-      "missing": [],
-      "warnings": [],
-      "status": "active",
-      "last_touched": "2026-07-29",
-      "due": "none"
-    },
-    {
-      "file": "01_Clients\\AMI Cleaning\\overview.md",
+      "file": "01_Clients/AMI Cleaning/overview.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -27,7 +18,7 @@
       "due": "none"
     },
     {
-      "file": "01_Clients\\AWCI.md",
+      "file": "01_Clients/AWCI.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -36,7 +27,25 @@
       "due": "none"
     },
     {
-      "file": "01_Clients\\Bar Crawl USA\\overview.md",
+      "file": "01_Clients/Align HCM.md",
+      "ok": true,
+      "missing": [],
+      "warnings": [],
+      "status": "active",
+      "last_touched": "2026-07-29",
+      "due": "none"
+    },
+    {
+      "file": "01_Clients/BOK Law Firm/overview.md",
+      "ok": true,
+      "missing": [],
+      "warnings": [],
+      "status": "active",
+      "last_touched": "2026-08-18",
+      "due": "none"
+    },
+    {
+      "file": "01_Clients/Bar Crawl USA/overview.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -45,7 +54,7 @@
       "due": "2026-07-15"
     },
     {
-      "file": "01_Clients\\Bend Plastic Surgery.md",
+      "file": "01_Clients/Bend Plastic Surgery.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -54,7 +63,7 @@
       "due": "none"
     },
     {
-      "file": "01_Clients\\Bercos Popcorn\\overview.md",
+      "file": "01_Clients/Bercos Popcorn/overview.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -63,7 +72,7 @@
       "due": "none"
     },
     {
-      "file": "01_Clients\\BigOrange Marketing\\overview.md",
+      "file": "01_Clients/BigOrange Marketing/overview.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -72,7 +81,7 @@
       "due": "2026-08-10"
     },
     {
-      "file": "01_Clients\\Blissful Events.md",
+      "file": "01_Clients/Blissful Events.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -81,7 +90,7 @@
       "due": "none"
     },
     {
-      "file": "01_Clients\\Bluegrass Janitorial.md",
+      "file": "01_Clients/Bluegrass Janitorial.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -90,25 +99,7 @@
       "due": "none"
     },
     {
-      "file": "01_Clients\\BOK Law Firm\\overview.md",
-      "ok": true,
-      "missing": [],
-      "warnings": [],
-      "status": "active",
-      "last_touched": "2026-08-01",
-      "due": "none"
-    },
-    {
-      "file": "01_Clients\\Bridge of Hope OTC.md",
-      "ok": true,
-      "missing": [],
-      "warnings": [],
-      "status": "active",
-      "last_touched": "2026-07-29",
-      "due": "none"
-    },
-    {
-      "file": "01_Clients\\Bridge Software Development\\overview.md",
+      "file": "01_Clients/Bridge Software Development/overview.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -117,7 +108,7 @@
       "due": "none"
     },
     {
-      "file": "01_Clients\\Buzz Bull.md",
+      "file": "01_Clients/Bridge of Hope OTC.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -126,7 +117,16 @@
       "due": "none"
     },
     {
-      "file": "01_Clients\\Capsule & Tonic\\overview.md",
+      "file": "01_Clients/Buzz Bull.md",
+      "ok": true,
+      "missing": [],
+      "warnings": [],
+      "status": "active",
+      "last_touched": "2026-07-29",
+      "due": "none"
+    },
+    {
+      "file": "01_Clients/Capsule & Tonic/overview.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -135,7 +135,7 @@
       "due": "none"
     },
     {
-      "file": "01_Clients\\Cindy May Christmas\\overview.md",
+      "file": "01_Clients/Cindy May Christmas/overview.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -144,7 +144,7 @@
       "due": "2026-09-01"
     },
     {
-      "file": "01_Clients\\Coach B.md",
+      "file": "01_Clients/Coach B.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -153,7 +153,7 @@
       "due": "none"
     },
     {
-      "file": "01_Clients\\Commercial Cleaners Alliance.md",
+      "file": "01_Clients/Commercial Cleaners Alliance.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -162,7 +162,7 @@
       "due": "none"
     },
     {
-      "file": "01_Clients\\Everyday Life Insurance\\overview.md",
+      "file": "01_Clients/Everyday Life Insurance/overview.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -171,7 +171,7 @@
       "due": "none"
     },
     {
-      "file": "01_Clients\\Fagan Painting\\overview.md",
+      "file": "01_Clients/Fagan Painting/overview.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -180,7 +180,7 @@
       "due": "none"
     },
     {
-      "file": "01_Clients\\Florecita.md",
+      "file": "01_Clients/Florecita.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -189,7 +189,7 @@
       "due": "none"
     },
     {
-      "file": "01_Clients\\Fresh Blends\\overview.md",
+      "file": "01_Clients/Fresh Blends/overview.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -198,7 +198,7 @@
       "due": "none"
     },
     {
-      "file": "01_Clients\\Hardwood Artisan.md",
+      "file": "01_Clients/Hardwood Artisan.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -207,7 +207,7 @@
       "due": "none"
     },
     {
-      "file": "01_Clients\\Hope Wellness Center\\overview.md",
+      "file": "01_Clients/Hope Wellness Center/overview.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -216,7 +216,7 @@
       "due": "2026-07-15"
     },
     {
-      "file": "01_Clients\\Jeff Hozias.md",
+      "file": "01_Clients/Jeff Hozias.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -225,7 +225,7 @@
       "due": "none"
     },
     {
-      "file": "01_Clients\\Kimberly James Bridal\\overview.md",
+      "file": "01_Clients/Kimberly James Bridal/overview.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -234,7 +234,7 @@
       "due": "2026-07-15"
     },
     {
-      "file": "01_Clients\\Link Eze.md",
+      "file": "01_Clients/Link Eze.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -243,7 +243,7 @@
       "due": "none"
     },
     {
-      "file": "01_Clients\\Momentum 360\\overview.md",
+      "file": "01_Clients/Momentum 360/overview.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -252,7 +252,16 @@
       "due": "none"
     },
     {
-      "file": "01_Clients\\Next Gen Solutions.md",
+      "file": "01_Clients/NKCDC/overview.md",
+      "ok": true,
+      "missing": [],
+      "warnings": [],
+      "status": "active",
+      "last_touched": "2026-08-01",
+      "due": "none"
+    },
+    {
+      "file": "01_Clients/Next Gen Solutions.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -261,16 +270,7 @@
       "due": "none"
     },
     {
-      "file": "01_Clients\\NKCDC\\overview.md",
-      "ok": true,
-      "missing": [],
-      "warnings": [],
-      "status": "active",
-      "last_touched": "2026-08-01",
-      "due": "none"
-    },
-    {
-      "file": "01_Clients\\Omega Landscaping\\overview.md",
+      "file": "01_Clients/Omega Landscaping/overview.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -279,7 +279,7 @@
       "due": "2026-07-15"
     },
     {
-      "file": "01_Clients\\Onsite Concrete\\overview.md",
+      "file": "01_Clients/Onsite Concrete/overview.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -288,7 +288,7 @@
       "due": "2026-07-15"
     },
     {
-      "file": "01_Clients\\PNW Pro Clean.md",
+      "file": "01_Clients/PNW Pro Clean.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -297,7 +297,7 @@
       "due": "none"
     },
     {
-      "file": "01_Clients\\Pritzker Law Group\\overview.md",
+      "file": "01_Clients/Pritzker Law Group/overview.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -306,7 +306,7 @@
       "due": "none"
     },
     {
-      "file": "01_Clients\\Pro Fence & Deck\\overview.md",
+      "file": "01_Clients/Pro Fence & Deck/overview.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -315,7 +315,7 @@
       "due": "none"
     },
     {
-      "file": "01_Clients\\Replenish\\overview.md",
+      "file": "01_Clients/Replenish/overview.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -324,7 +324,7 @@
       "due": "2026-07-15"
     },
     {
-      "file": "01_Clients\\Revive Systems\\overview.md",
+      "file": "01_Clients/Revive Systems/overview.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -333,7 +333,7 @@
       "due": "none"
     },
     {
-      "file": "01_Clients\\Shadow HVAC\\overview.md",
+      "file": "01_Clients/Shadow HVAC/overview.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -342,7 +342,7 @@
       "due": "2026-07-15"
     },
     {
-      "file": "01_Clients\\Tags 2 Go\\overview.md",
+      "file": "01_Clients/Tags 2 Go/overview.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -351,7 +351,7 @@
       "due": "2026-08-08"
     },
     {
-      "file": "01_Clients\\VA Claims\\overview.md",
+      "file": "01_Clients/VA Claims/overview.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -360,7 +360,7 @@
       "due": "none"
     },
     {
-      "file": "01_Clients\\Vanessa.md",
+      "file": "01_Clients/Vanessa.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -369,5 +369,5 @@
       "due": "none"
     }
   ],
-  "written_at": "2026-08-18T06:53:19.967Z"
+  "written_at": "2026-08-18T20:28:28.431Z"
 }
