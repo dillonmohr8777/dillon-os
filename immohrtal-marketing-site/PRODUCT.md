@@ -48,6 +48,8 @@ The 10 launch guides cover AEO versus GEO, Google AI Overviews, website redesign
 ## Brand Commitments
 
 - The exact public name is IMMOHRTAL Marketing Solutions.
+- The public founder is Dillon Mohr. The verified public contact path is `dillon@immohrtalmarketing.com`, `814.873.5333`, and `127 Muirfield Dr. Pittsburgh PA 15229`.
+- The studio is not Immohrtal Media Inc and not Immortal Marketing. Public pages, structured data, and discovery files must keep that distinction explicit when the brand name is defined.
 - The canonical public origin is `https://www.immohrtalmarketing.com`. The apex redirects permanently to this Vercel production host. Canonical links, social metadata, structured-data identifiers, sitemap entries, feeds, crawler directives, discovery summaries, and public asset URLs must resolve to the canonical origin.
 - Every current design decision, component, page pattern, interaction, asset treatment, particle sequence, agent station, evidence window, and responsive behavior in this project belongs to IMMOHRTAL Marketing Solutions. No former brand retains public ownership of this system.
 - The verified public booking destination is `https://calendar.app.google/CSD1BzHQJtCFhEdY9`. Primary conversion actions may open this 30 minute IMMOHRTAL Growth Fit Call in a new tab. Direct email remains available as the fallback contact path.

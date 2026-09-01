@@ -143,7 +143,12 @@ const footerHtml = () => `<footer class="site-footer">
       <img class="brand-logo--white" src="${site.logo}" width="600" height="160" alt="">
       <span><strong>IMMOHRTAL</strong><small>MARKETING SOLUTIONS</small></span>
     </a>
-    <p>Websites that stand out, get found, and hand less busywork to your team. Built by Dillon Mohr.</p>
+    <p>Websites that stand out, get found, and hand less busywork to your team. Built by Dillon Mohr in Pittsburgh.</p>
+    <address class="studio-nap footer-nap">
+      <span>127 Muirfield Dr. Pittsburgh PA 15229</span>
+      <a href="tel:+18148735333">814.873.5333</a>
+      <a href="mailto:${site.email}">${site.email}</a>
+    </address>
   </div>
   <nav class="footer-directory" aria-label="Services">${serviceDirectory.map((service) => `<a href="${service.href}">${escapeHtml(service.title)}</a>`).join('')}</nav>
   <nav class="footer-directory footer-directory--company" aria-label="Company">
@@ -169,11 +174,11 @@ const breadcrumbsFor = (page, article = false) => article
     ? [
         ['Home', '/'],
         ['Services', '/services/'],
-        [page.h1, page.path],
+        [page.crumb || page.h1, page.path],
       ]
   : [
       ['Home', '/'],
-      [page.h1, page.path],
+      [page.crumb || page.h1, page.path],
     ]
 
 const breadcrumbHtml = (crumbs) => `<nav class="breadcrumbs" aria-label="Breadcrumb"><ol>${crumbs.map(([label, href], index) => `<li>${index === crumbs.length - 1 ? `<span aria-current="page">${escapeHtml(label)}</span>` : `<a href="${href}">${escapeHtml(label)}</a>`}</li>`).join('')}</ol></nav>`
@@ -225,18 +230,57 @@ const baseHead = ({ title, description, canonical, image = site.logo, imageAlt =
   <script src="/static-site.js" defer></script>`
 }
 
+const postalAddressSchema = () => ({
+  '@type': 'PostalAddress',
+  streetAddress: site.address.streetAddress,
+  addressLocality: site.address.addressLocality,
+  addressRegion: site.address.addressRegion,
+  postalCode: site.address.postalCode,
+  addressCountry: site.address.addressCountry,
+})
+
 const organizationSchema = () => ({
-  '@type': 'Organization',
+  '@type': ['Organization', 'ProfessionalService'],
   '@id': `${site.origin}/#organization`,
   name: site.name,
   alternateName: site.shortName,
+  legalName: site.name,
   url: `${site.origin}/`,
   logo: {
     '@type': 'ImageObject',
     url: absoluteUrl(site.logo),
   },
+  image: absoluteUrl(site.logo),
   email: site.email,
+  telephone: site.phone,
+  address: postalAddressSchema(),
+  areaServed: {
+    '@type': 'Country',
+    name: 'United States',
+  },
+  foundingLocation: {
+    '@type': 'Place',
+    name: 'Pittsburgh, Pennsylvania',
+    address: postalAddressSchema(),
+  },
+  contactPoint: {
+    '@type': 'ContactPoint',
+    contactType: 'customer service',
+    email: site.email,
+    telephone: site.phone,
+    areaServed: 'US',
+    availableLanguage: 'English',
+  },
   founder: { '@id': `${site.origin}/about/#dillon-mohr` },
+  knowsAbout: [
+    'website marketing solutions',
+    'website design for service businesses',
+    'technical SEO',
+    'answer engine optimization',
+    'generative engine optimization',
+    'AI search visibility',
+  ],
+  disambiguatingDescription: 'Pittsburgh website and AI implementation studio founded by Dillon Mohr. Not Immohrtal Media Inc and not Immortal Marketing.',
 })
 
 const websiteSchema = () => ({
@@ -257,6 +301,10 @@ const personSchema = () => ({
   image: absoluteUrl(site.portrait),
   jobTitle: 'Founder and website strategist',
   worksFor: { '@id': `${site.origin}/#organization` },
+  email: site.email,
+  telephone: site.phone,
+  address: postalAddressSchema(),
+  sameAs: site.personSameAs,
 })
 
 const webPageSchema = ({ canonical, title, description, crumbs, type = 'WebPage', image, mainEntity, topics = [] }) => {
@@ -754,6 +802,9 @@ ${articles.map((article) => `- ${article.title}: ${site.origin}/insights/${artic
 
 ## Contact
 Email: ${site.email}
+Phone: ${site.phoneDisplay}
+Address: ${site.address.streetAddress} ${site.address.addressLocality} ${site.address.addressRegion} ${site.address.postalCode}
+Founder: Dillon Mohr
 
 ## Discovery files
 - XML sitemap: ${site.origin}/sitemap.xml
