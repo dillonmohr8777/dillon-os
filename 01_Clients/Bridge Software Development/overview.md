@@ -2,14 +2,14 @@
 client: Bridge Software
 client_id: bridge-software
 project: Bridge Software Development
-status: active-discovery
+status: active-build
 confidentiality: private-nda
 github: "https://github.com/dillonmohr8777/bridge-discovery-prototype"
 tags: [client, bridge-software, product, ux, frontend, nextjs, cannabis]
-updated: 2026-07-11
-last_touched: 2026-08-01
-next_action: TBD — needs human next action
-due: none
+updated: 2026-08-19
+last_touched: 2026-08-19
+next_action: Hold Slack and client email. Unified review URL is the original 3D suite with a live Maps loader. Phase 2 payment is promised, not receipted. Draft PR #6 stays internal. Do not bind a live API origin until Miraj staging is inspectable.
+due: 2026-08-22
 ---
 
 
@@ -20,12 +20,31 @@ due: none
 
 ## Source of truth
 
-- Private GitHub: [dillonmohr8777/bridge-discovery-prototype](https://github.com/dillonmohr8777/bridge-discovery-prototype)
+- GitHub: [dillonmohr8777/bridge-discovery-prototype](https://github.com/dillonmohr8777/bridge-discovery-prototype)
 - Default branch: `main`
-- Current handoff commit as of 2026-07-11: `d1e554c`
+- Phase 2 unified review URL: https://bridge-connected-signal.netlify.app
+- Phase 3 branch: `cursor/phase-three-vertical-slice-acda`
+- Phase 3 draft PR: https://github.com/dillonmohr8777/bridge-discovery-prototype/pull/6
 - Claude entrypoint: `CLAUDE.md`
-- Claude reset prompt: `CLAUDE_SESSION_PROMPT.md`
 - Local checkout: `C:\Users\dillo\Documents\Codex\2026-07-10\find-what-we-need-to-do\bridge-discovery-prototype`
+
+## Current phase
+
+**Phase 3 frontend lock remains in draft PR #6.** The unified review visual is the original Connected Industry Prototype Suite (dark plum, photography, 3D theater), not the Next.js Modern Network restyle and not Trusted Current navy/teal.
+
+| Layer | Status |
+|---|---|
+| Original five-route review suite | Live at the unified noindex URL |
+| Google Maps loader | Live function 302; Explore `data-live-map="enabled"`; Google JS error overlay in browser QA |
+| Phase 3 adapter + Create / My Profile journeys | Draft PR #6 (not on the unified URL) |
+| Tori route-by-route written boxes | Still pending |
+| Phase 2 payment | Promised 2026-08-19; no receipt as of 21:17Z |
+| Miraj Milestone 2 | Self-reported done, tests remaining as of 2026-08-17 |
+| Live `/api/v1` bind | Blocked on inspectable staging origin |
+| Unified Netlify update | Live original suite; Maps function restored 2026-08-19 (GHA 32301424038, 32302080731) |
+| Slack / client comms | Held until Dillon asks |
+
+Out of slice without a written change order: expanded ecosystem directory, algorithmic ranking, subscriptions/payments, in-platform ordering.
 
 ## Product
 
@@ -61,14 +80,15 @@ This is a hypothesis for Tori to approve, not final public copy.
 
 The discovery prototype is implemented and verified. Routes:
 
-- `/` — landing/value proposition
-- `/directory` — working search, role, and verification filters
-- `/join` — role-selection onboarding direction
-- `/profile/cascade-canna` — member profile and permission-based contact request
-- `/dashboard` — member dashboard
-- `/admin/verification` — admin verification queue with responsive mobile cards
-- `/directions` — three switchable visual directions
-- `/design-system` — provisional design tokens, typography, controls, states, and voice principles
+- `/` — Home (Connected Industry Prototype Suite)
+- `/community` — Community News (News Grid + Classic)
+- `/studio` — Create / Campaign Studio
+- `/business` — My Profile (Public vs verified-business)
+- `/signal` — Explore (nationwide filters, favorites, five-view 3D theater)
+
+Legacy compatibility redirects after the 2026-08-19 restore: `/create` → Create/Studio, `/my-profile` → My Profile, `/explore` → Explore.
+
+The Next.js discovery prototype also still has `/directory`, `/join`, `/profile/cascade-canna`, `/dashboard`, `/admin/verification`, `/directions`, and `/design-system` in draft PR #6. Those are not the unified review visual.
 
 The prototype uses fictional profiles and metrics. It has no production backend, authentication, persistence, outbound email, or real license verification.
 
@@ -78,15 +98,9 @@ No approved Bridge logo, color palette, font system, or downloadable Tori protot
 
 The green/gold proposal styling is Momentum presentation branding, not Bridge branding.
 
-Default provisional direction: **Trusted Current**
+Default provisional direction for the unified review URL: **original Connected Industry Prototype Suite** (dark plum, photography, 3D theater). Not Modern Network token restyle. Not Trusted Current.
 
-- Navy `#12324A`
-- Teal `#0A766E`
-- Amber `#D9820F`
-- Canvas `#F5F8F7`
-- Primary text `#14232E`
-
-Alternates: Modern Network and Botanical Ledger. All require Tori's approval.
+Trusted Current navy/teal remains an alternate at `https://bridge-preview-current.netlify.app`. Tori still owns formal brand acceptance.
 
 ## Monday/Tori meeting objective
 
@@ -112,10 +126,20 @@ Leave with decisions on:
 - [[Source Audit]]
 - [[Client Intelligence Overlay]]
 - [[../../10_Sessions/Bridge Software Development - 2026-07-11|2026-07-11 build session]]
+- [[../../10_Sessions/Bridge Software Development - 2026-08-19|2026-08-19 Phase 3 session]]
+- [[../../12_Brain/05_Projects/2026-08-19 - Bridge Phase 3 promotion and protected profile|Phase 3 project]]
+- [[../../12_Brain/04_Decisions/2026-08-19 - Bridge Phase 3 slice is open|Phase 3 slice decision]]
+- [[../../12_Brain/04_Decisions/2026-08-19 - Bridge unified review is the original 3D suite|Original 3D suite review decision]]
+- [[../../12_Brain/01_Captures/2026-08-19 - Bridge live URL must be the original 3D suite|Original 3D suite restore capture]]
+- [[../../12_Brain/01_Captures/2026-08-19 - Bridge Phase 2 payment promised not receipted|Phase 2 payment promised, not receipted]]
+- [[../../12_Brain/01_Captures/2026-08-19 - Bridge Google Maps loader is live on the unified URL|Maps loader live on unified URL]]
+- [[../../12_Brain/01_Captures/2026-08-19 - Bridge Phase 3 hold on Slack and client send|Comms hold]]
+- [[../../12_Brain/01_Captures/2026-08-19 - Bridge restore Connected purple on Phase 1-2 product|Restore Connected purple capture]]
+- [[../../12_Brain/01_Captures/2026-08-19 - Bridge full approval to publish Connected purple|Publish approval capture]]
 
 ## Immediate next action
 
-Start a new Claude session with the GitHub repository explicitly attached. Paste `CLAUDE_SESSION_PROMPT.md`. Claude must prove it can read the repository before planning or editing.
+Hold Slack and client email. Unified review URL is the original 3D suite at https://bridge-connected-signal.netlify.app with a live Maps loader. Phase 2 payment is promised, not receipted. Draft PR https://github.com/dillonmohr8777/bridge-discovery-prototype/pull/6 stays internal. Do not bind `NEXT_PUBLIC_BRIDGE_API_BASE` until Miraj publishes an inspectable staging origin.
 
 ## Communication intelligence - 2026-08-01
 

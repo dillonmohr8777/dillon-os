@@ -1,8 +1,8 @@
 ---
 tags: [system, approvals]
-last_updated: 2026-08-17T13:04:11Z
+last_updated: 2026-08-19T21:12:00Z
 status: active
-last_scan: 2026-08-17T13:04:11Z
+last_scan: 2026-08-19T19:10:00Z
 scan_sources: ["00_Inbox/", "01_Clients/ status at-risk/onboarding/blocked", "System/urgent-replies.md", "System/claude-memory-sync.md", "Daily-Briefs/ latest 3"]
 ---
 
@@ -11,6 +11,9 @@ scan_sources: ["00_Inbox/", "01_Clients/ status at-risk/onboarding/blocked", "Sy
 Only current client and operating actions belong here. Nothing is sent, published, deployed, purchased, or changed in a client account automatically.
 
 ## Current client actions
+- [x] 2026-08-19 - Bridge Software Development - Restore original Connected Industry Prototype Suite (dark plum, 3D theater, `/community` `/studio` `/business` `/signal`) to https://bridge-connected-signal.netlify.app. Live-verified 2026-08-19 (title `Bridge | Connected Industry Prototype Suite`). Maps loader 302. - Risk: medium
+- [ ] 2026-08-19 - Bridge Software Development - Do not Slack, email Tori/Melissa/Mac/Miraj, or bind a live API origin until Dillon asks and Miraj staging is inspectable. Internal review of draft PR #6 can continue. Phase 2 payment is promised, not receipted. - Risk: medium
+- [ ] 2026-08-19 - Bridge Software Development - Operator console only: allow https://bridge-connected-signal.netlify.app/* on the existing Maps browser key if Dillon wants the Live Google 3D overlay instead of the webp theater. Do not invent a key. - Risk: medium
 - [ ] 2026-07-12 - Kimberly James Bridal - Approve completion update after FAQ desktop image crop and responsive QA; verify appointment-source reconciliation first - Risk: low
 - [ ] 2026-07-12 - Omega Landscaping & Concrete - Approve account changes only after Google/Meta call, form, and lead-quality attribution is verified - Risk: high
 - [ ] 2026-07-12 - On-Site Concrete & Landscape - Approve technical or campaign changes after allowlisted crawl and conversion-action audit - Risk: medium

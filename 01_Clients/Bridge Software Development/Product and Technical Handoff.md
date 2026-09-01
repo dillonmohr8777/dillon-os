@@ -1,8 +1,8 @@
 ---
 project: Bridge Software Development
 type: product-technical-handoff
-status: discovery
-updated: 2026-07-11
+status: phase3-slice
+updated: 2026-08-19
 tags: [product, technical, nextjs, supabase, handoff]
 ---
 
@@ -72,7 +72,8 @@ Open: retailer and dispensary may be separate account types or one organization 
 - Theme switcher with `current`, `network`, and `botanical`
 - Reusable components: brand mark, site header, profile card, status chip, theme switcher
 - Fictional mock profiles in `lib/data.ts`
-- Static routes and no server-side data integration yet
+- Static routes plus Phase 3 typed adapters in `lib/phase3/`
+- Default adapter is in-memory; live `/api/v1` bind requires `NEXT_PUBLIC_BRIDGE_API_BASE` and Miraj's inspectable staging origin
 
 ## Backend boundary for Miraj
 
@@ -92,7 +93,7 @@ Before front-end integration, agree on:
 - Environment and secret ownership
 - Deployment and rollback responsibilities
 
-Do not add production Supabase code until those contracts are reviewed.
+Do not add production Supabase code until those contracts are reviewed and an inspectable staging origin exists. The Phase 3 frontend adapter is the proposed client for session, upload intent, post persistence, profile projection, and contact confirmation.
 
 ## Candidate entities
 

@@ -1,7 +1,7 @@
 ---
 tags: [index, moc, brain]
 canonical: 12_Brain
-updated: 2026-08-15
+updated: 2026-08-19
 ---
 
 # INDEX — the front door
@@ -42,7 +42,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/03_Concepts/Draft-First Operating Rules|Draft-First Operating Rules]] — draft unless explicitly told to send.
 - [[12_Brain/03_Concepts/Access Verification Discipline|Access Verification Discipline]] — confirmed access needs direct proof (no inventories here).
 - [[12_Brain/03_Concepts/Evidence Boundaries in Reporting|Evidence Boundaries in Reporting]] — claim only what sources prove.
-- [[12_Brain/03_Concepts/Netlify Deploy Safety|Netlify Deploy Safety]] — pin site on every deploy; verify statically.
+- [[12_Brain/03_Concepts/Netlify Deploy Safety|Netlify Deploy Safety]] — pin site on every deploy; purge Durable cache; verify `/`.
 - [[12_Brain/03_Concepts/Google Docs Sharding Pattern|Google Docs Sharding Pattern]] — sub-MB shards → Docs → index.
 - [[12_Brain/03_Concepts/Leading Indicators|Leading Indicators]] — churn/growth signals for `/synthesize`.
 - [[12_Brain/03_Concepts/Conversion Tracking Setup 2026|Conversion Tracking Setup 2026]] — generic setup patterns (no account IDs).
@@ -58,14 +58,21 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/01_Captures/research/2026-08-14 Franchise Send-Ready Harvest|2026-08-14 Franchise Send-Ready Harvest]] — 720 send-ready franchisee mailboxes; UPS store inboxes dropped.
 - [[12_Brain/01_Captures/research/2026-08-15 Franchise Lanes A-C-D Receipts|2026-08-15 Franchise Lanes A-C-D Receipts]] — FDD portals, directories, CAN-SPAM, OSM keep-chains flip (no contact rows).
 - [[12_Brain/01_Captures/research/2026-08-15 Franchise Lane A Portal Probe|2026-08-15 Franchise Lane A Portal Probe]] — MN/WI still free FDD PDFs; CA DocQNet is not (no contact rows).
+- [[12_Brain/01_Captures/2026-08-19 - Bridge full approval to publish Connected purple|2026-08-19 Bridge full approval to publish Connected purple]] — Dillon approved a unified-URL republish; the Next.js restyle that landed was later rejected.
+- [[12_Brain/01_Captures/2026-08-19 - Bridge live URL must be the original 3D suite|2026-08-19 Bridge live URL must be the original 3D suite]] — Dillon rejected the Next.js restyle and asked for the old purple 3D frontend.
+- [[12_Brain/01_Captures/2026-08-19 - Bridge Phase 2 payment promised not receipted|2026-08-19 Bridge Phase 2 payment promised not receipted]] — Tori said payment tomorrow on 2026-08-18; no receipt on 2026-08-19.
+- [[12_Brain/01_Captures/2026-08-19 - Bridge Google Maps loader is live on the unified URL|2026-08-19 Bridge Google Maps loader is live]] — function 302 and live-map flag; Google JS error overlay remains.
+- [[12_Brain/01_Captures/sessions/2026-08-19 - bridge-maps-and-phase-two|2026-08-19 Bridge Maps and Phase 2 session mine]] — zip-root, SHA256, `{name}.js`, live-map flag, payment promised not receipted.
 - Sensitive captures → [[12_Brain/private/README|12_Brain/private/]] (not in Git).
 
 ## Projects · Decisions · Research · Memory · Protocols
 
 - [[12_Brain/05_Projects/README|Projects]] — active delivery threads and goals.
+- [[12_Brain/05_Projects/2026-08-19 - Bridge Phase 3 promotion and protected profile|Bridge Phase 3 promotion and protected profile]] — Next.js Phase 3 lock stays in draft PR #6; unified URL is the original 3D suite.
+- [[12_Brain/04_Decisions/README|Decisions]] — bi-temporal decision log.
+- [[12_Brain/04_Decisions/2026-08-19 - Bridge unified review is the original 3D suite|Bridge unified review is the original 3D suite]] — dark-plum Connected Industry Prototype Suite on the live review URL.
 - [[12_Brain/05_Projects/Prospect Radar V2|Prospect Radar V2]] — Momentum audit engine wrapping the existing radar.
 - [[12_Brain/05_Projects/Growth Workshop Franchise Pilot|Growth Workshop Franchise Pilot]] — Sean's Aug 27 webinar + free franchise-email engine; canonical Google event + Meet live.
-- [[12_Brain/04_Decisions/README|Decisions]] — bi-temporal decision log.
 - [[12_Brain/06_Research/README|Research]] — compiled research landing.
 - [[12_Brain/06_Research/Franchise Email Sourcing|Franchise Email Sourcing]] — 720 send-ready franchisee mailboxes; UPS store inboxes are not the send list (expires 2026-11-15).
 - [[12_Brain/08_Memory/README|Memory]] — `current/` + `as-of/` bi-temporal memory.

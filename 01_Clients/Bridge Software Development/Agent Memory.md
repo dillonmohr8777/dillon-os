@@ -2,7 +2,7 @@
 project: Bridge Software Development
 type: agent-memory
 status: active
-updated: 2026-07-11
+updated: 2026-08-19
 tags: [agent-memory, bridge-software, claude, codex]
 ---
 
@@ -26,7 +26,10 @@ Before acting, report:
 
 Expected repository: `dillonmohr8777/bridge-discovery-prototype`
 Expected default branch: `main`
-Known handoff commit: `d1e554c` as of 2026-07-11
+Known Phase 2 unified-review commit: `a951723` as of 2026-08-16
+Phase 3 branch: `cursor/phase-three-vertical-slice-acda`
+Phase 3 draft PR: https://github.com/dillonmohr8777/bridge-discovery-prototype/pull/6
+Comms: do not Slack or send to the client unless Dillon asks.
 
 ## What happened on 2026-07-11
 
@@ -58,25 +61,18 @@ The repository was updated to prevent recurrence:
 - Responsive Next.js App Router application
 - React + strict TypeScript
 - CSS token system with three runtime visual themes
-- Mock profiles and dashboard metrics only
-- Functional directory search/role/verified filters
-- Role-selection onboarding direction
-- Profile and permission-based contact request
-- Member dashboard
-- Admin verification direction
-- Mobile admin table converted to stacked cards to eliminate page overflow
-- Design directions and component/design-system pages
+- Phase 2 five-route Trusted Current frontend live at the unified noindex URL
+- Phase 3 typed adapters in `lib/phase3/` for session claims, upload intent, posts, and profile projections
+- `/create` publishes a Promotion through the adapter, including protected-detail audience rules
+- `/my-profile` loads public vs protected projections and records 90-day contact confirmation
+- Default adapter is in-memory; live `/api/v1` requires `NEXT_PUBLIC_BRIDGE_API_BASE`
 
-Quality evidence from 2026-07-11:
+Quality evidence from 2026-08-19:
 
+- `npm run test:phase3` passed (8)
 - `npm run typecheck` passed
 - `npm run lint` passed
-- `npm run build` passed across all routes
-- `npm audit` returned zero vulnerabilities after PostCSS override
-- Desktop and 390px mobile browser checks completed
-- Theme switching worked and persisted
-- Directory filter interaction returned the correct single New Jersey verified brand
-- Browser console showed no errors or warnings
+- `npm run build` passed, including `/create` and `/my-profile`
 
 ## Human approval boundaries
 
@@ -118,13 +114,11 @@ Out of scope without a documented change:
 
 ## Safe next implementation sequence
 
-1. Reconcile this prototype with Tori's original walkthrough.
-2. Freeze role model, visibility rules, verification meaning, and core filters.
-3. Convert decisions into stories and acceptance criteria.
-4. Agree with Miraj on entities, auth claims, RLS intent, API/query contracts, uploads, validation, and error shapes.
-5. Implement Supabase integration as small reviewed vertical slices.
-6. Add automated component and end-to-end tests.
-7. Complete accessibility, security, performance, and launch-readiness reviews.
+1. Review draft PR https://github.com/dillonmohr8777/bridge-discovery-prototype/pull/6 internally.
+2. Do not Slack, email Tori/Melissa, or update Netlify until Dillon asks.
+3. Keep the live API unbound until Miraj's staging origin is inspectable.
+4. Bind session, upload, post, and projection one contract at a time after that origin exists.
+5. Leave expanded directory, ranking, payments, and ordering in later/change-order work.
 
 ## Files to read first in GitHub
 

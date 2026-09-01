@@ -1,7 +1,7 @@
 ---
 note_type: index
 status: active
-updated: 2026-08-01
+updated: 2026-08-19
 tags:
   - index
   - brain
@@ -45,6 +45,8 @@ links instead of loading the entire vault.
 - `02_Campaigns/` — campaign plans and delivery.
 - `02_FullTimeJob/` — Align HCM work, kept separate from client revenue.
 - `03_Content/` — content plans and drafts.
+- [[12_Brain/05_Projects/2026-08-19 - Bridge Phase 3 promotion and protected profile|Bridge Phase 3 promotion and protected profile]] — Phase 3 Next.js lock stays in draft PR #6. Unified review URL is the original dark-plum 3D suite with Maps loader 302. Payment promised, not receipted. Slack and client send still held.
+- [[12_Brain/04_Decisions/2026-08-19 - Bridge unified review is the original 3D suite|Bridge unified review is the original 3D suite]] — live URL is `latest-signal-app/site`, not the Next.js Modern Network restyle.
 - [[12_Brain/05_Projects/2026-08-04 - Philadelphia 25 Site Factory Batch 3|Philadelphia 25-site factory Batch 3]] — private prospect previews and evidence.
 - [[12_Brain/05_Projects/2026-08-04 - Philadelphia 25 Site Factory Batch 4|Philadelphia 25-site factory Batch 4]] — separate real-business cohort with first-party logo evidence.
 - [[04_SOPs/SOP Index|SOP Index]] — repeatable operating procedures.
