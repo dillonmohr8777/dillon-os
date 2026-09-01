@@ -6,7 +6,7 @@ updated: 2026-09-01
 owner: Dillon Mohr
 review_cadence: ad-hoc
 verification_status: live-verified
-summary: A live connector probe and a Slack and Calendar sweep on 2026-09-01 found six usable claude.ai connectors, an autonomous loop that has not run since 2026-08-19, and five active client routes missing from the canonical registry. The missing routes are why the next-action predictor has nothing automatic to hand out.
+summary: Three of six repositories are public, mohr-vault with a personal phone number in a tracked note. A live connector probe and a Slack and Calendar sweep on 2026-09-01 found six usable claude.ai connectors, an autonomous loop that has not run since 2026-08-19, and five active client routes missing from the canonical registry. The missing routes are why the next-action predictor has nothing automatic to hand out.
 source_refs:
   - "[[System/tool-access-catalog]]"
   - "[[System/operating-status]]"
@@ -69,7 +69,7 @@ Slack channels with client activity in the last 14 days, compared with the canon
 
 | Slack channel | Registry | Vault folder | What the channel shows | Action |
 |---------------|----------|--------------|------------------------|--------|
-| #puttery | missing | missing | Channel opened 2026-08-27. Quote sent 2026-08-27, payment before 2026-09-01. Dillon is delivering a branded dashboard plus reservation attribution in a two-week build; August progress report posted 2026-08-31. Access packet still open: Tock API and webhook, GA4 and GTM, Google Ads and Meta, CMS. Integration kickoff call 2026-09-01 15:00 ET. | Register as `puttery`, tier critical. Open a work item for the access packet and the two-venue-day booking validation. |
+| #puttery | missing | missing | Channel opened 2026-08-27. Quote sent 2026-08-27, payment before 2026-09-01. Dillon is delivering a branded dashboard plus reservation attribution in a two-week build; August progress report posted 2026-08-31. Access packet still open: Tock API and webhook, GA4 and GTM, Google Ads and Meta, CMS. Integration kickoff call 2026-09-01 15:00 ET. | Register as `puttery-nyc` (the desktop already uses `clients/puttery-nyc`), tier critical. Open a work item for the access packet and the two-venue-day booking validation. |
 | #nexla | missing | missing | Onboarded 2026-08-20. Dillon is Account Manager, Sean is Operations Manager. Google Ads management; August report posted 2026-08-31 with spend, clicks, and CPC. Next is confirming the primary conversion and valid-lead criteria. | Register as `nexla`, tier strategic. Open a work item for conversion definition. |
 | #deborah-mara | missing | missing | New quote signed 2026-08-18: Meta lead ads with landing pages, Google search campaign, ChatGPT ads test, site maintenance. Beth is AM, Sean and Muhammad build. New site targeted live 2026-09-01. Dillon invited to the internal "new ads" call 2026-09-02 15:00 ET. | Register as `deborah-mara`, tier standard, with Dillon's role confirmed at the 2026-09-02 call. |
 | #capsule-and-tonic | missing | present | Beth is AM. Google Ads bidding and location change on 2026-08-18 lifted weekly conversions from 1 to 5 at a lower cost per conversion. September GBP calendar drafted. | Register as `capsule-tonic`. Confirm whether Dillon owns the ads lane. |
@@ -91,11 +91,11 @@ To be applied on the desktop by the canonical writer, then validated with `Test-
 ```json
 [
   {
-    "id": "puttery",
+    "id": "puttery-nyc",
     "displayName": "Puttery",
-    "aliases": ["Puttery NYC", "puttery"],
+    "aliases": ["Puttery", "Puttery NYC", "puttery", "puttery-nyc"],
     "status": "active",
-    "folder": "clients/puttery",
+    "folder": "clients/puttery-nyc",
     "emailDomains": [],
     "contacts": [],
     "slackChannels": ["puttery"],
@@ -184,6 +184,27 @@ To be applied on the desktop by the canonical writer, then validated with `Test-
 ```
 
 Also add `"onsite-construction"` to the `slackChannels` of `onsite-concrete-landscape`.
+
+## Repository visibility
+
+Checked through the GitHub API on 2026-09-01. Three of the six repositories are public.
+
+| Repository | Visibility | Why it matters |
+|------------|-----------|----------------|
+| dillon-os | private | correct |
+| client-operations-canonical | private | correct |
+| dillon-claude-config | private | correct |
+| mohr-vault | **public** | `vault/00_Memory_File.md` carries a personal phone number and email; `vault/01_Clients` and `11_Agents` hold historical client notes and the system prompt |
+| claude-skills-repo | **public** | deliberately public for the credential-free Align marketplace install (commit 24e6c5f), but it also ships Hope Wellness client media under `vault/01_Clients` |
+| bridge-software-frontend | **public** | a client's pre-launch product source and decision logs |
+
+Recommended: flip mohr-vault to private now; it is historical and nothing installs from it. Decide separately whether claude-skills-repo stays public, and if so move the client media out. Confirm with Tori and Miraj whether Bridge should be public before launch.
+
+## Puttery Tock integration
+
+Codex reported on 2026-09-01: credentials protected in Windows Credential Manager and Access Broker; Puttery NYC bound to Business Group 28086 and Business ID 37824; receiver tests 13/13; protected end-to-end passed; a credentialed Tock API check at 20:31Z returned HTTP 503, so the credential is unvalidated; a durable public webhook host, vendor registration, a rotated credential, and a controlled real reservation are still required.
+
+Unauthenticated probes at 20:50Z show the Tock host alive (docs 200, unknown paths 400), so the 503 is scoped, not global. The durable public host now exists as a deploy-ready Netlify relay with a drain client, on branch `claude/repo-analysis-1bien2` of client-operations-canonical under `clients/puttery-nyc/deliverables/2026-09-01-tock-reservation-webhook/public-relay/`, with the 503 triage protocol, vendor registration draft, rotation runbook, and controlled-test protocol in its `PRODUCTION_PLAN.md`. Deployment, the vendor request, and the rotation stay gated.
 
 ## Next actions, ranked
 
