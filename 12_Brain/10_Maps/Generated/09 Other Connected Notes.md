@@ -4,7 +4,7 @@ status: active
 generated: true
 generated_by: Update-SecondBrainMaps
 map_type: domain
-updated: 2026-08-18
+updated: 2026-09-01
 tags:
   - brain
   - map
@@ -18,16 +18,6 @@ tags:
 > renaming notes. Edit source notes, not this generated file.
 
 Visible notes that do not yet belong to a stable operating domain.
-
-## Vault front doors
-
-- [[GROK-HANDOFF-DILLON-OS|GROK-HANDOFF-DILLON-OS]]
-
-## .github
-
-- [[.github/skills/dillon-frontend-maker/SKILL|SKILL]]
-- [[.github/skills/dillon-independent-web-checker/SKILL|SKILL]]
-- [[.github/skills/dillon-plan-grill/SKILL|SKILL]]
 
 ## _archive
 
@@ -44,6 +34,16 @@ Visible notes that do not yet belong to a stable operating domain.
 - [[_archive/07_DBA/overview|overview]]
 - [[_archive/09_Transcripts/Transcript Index|Transcript Index]]
 - [[_archive/README|README]]
+
+## .github
+
+- [[.github/skills/dillon-frontend-maker/SKILL|SKILL]]
+- [[.github/skills/dillon-independent-web-checker/SKILL|SKILL]]
+- [[.github/skills/dillon-plan-grill/SKILL|SKILL]]
+
+## Vault front doors
+
+- [[GROK-HANDOFF-DILLON-OS|GROK-HANDOFF-DILLON-OS]]
 
 ## 08_Prospects
 

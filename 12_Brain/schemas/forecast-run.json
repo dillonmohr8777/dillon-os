@@ -1,0 +1,160 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "dillon-os/forecast-run",
+  "title": "ForecastRun",
+  "description": "Evidence-only numeric forecast artifact. Semantic dimension, quantile-order, and license checks are enforced by _os/automation/bin/forecast-route.js.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "run_id",
+    "request_id",
+    "as_of",
+    "client_id",
+    "series_id",
+    "model_id",
+    "provider_id",
+    "runtime_id",
+    "license_lane",
+    "used_for",
+    "horizon",
+    "contains_client_series",
+    "source_locators",
+    "status",
+    "forbidden_uses"
+  ],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "run_id": { "type": "string", "minLength": 1 },
+    "request_id": { "type": "string", "minLength": 1 },
+    "as_of": { "type": "string", "format": "date-time" },
+    "client_id": { "type": "string", "minLength": 1 },
+    "series_id": { "type": "string", "minLength": 1 },
+    "frequency": {
+      "type": "string",
+      "enum": ["hour", "day", "week", "month", "quarter"]
+    },
+    "model_id": {
+      "type": "string",
+      "enum": [
+        "amazon/chronos-2",
+        "google/timesfm-2.5-200m-pytorch",
+        "google/timesfm-3.0-pytorch",
+        "bigquery/timesfm-3-managed",
+        "Datadog/Toto-2.0-22m"
+      ]
+    },
+    "provider_id": { "type": "string", "minLength": 1 },
+    "runtime_id": { "type": "string", "minLength": 1 },
+    "license_lane": {
+      "type": "string",
+      "enum": ["apache-2.0", "research-only", "commercial-managed"]
+    },
+    "used_for": {
+      "type": "string",
+      "enum": ["agenda-feature", "automation-evidence", "research"]
+    },
+    "horizon": { "type": "integer", "minimum": 1 },
+    "contains_client_series": { "type": "boolean" },
+    "source_locators": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "status": {
+      "type": "string",
+      "enum": ["ok", "blocked", "error", "dry-run"]
+    },
+    "forbidden_uses": {
+      "type": "array",
+      "minItems": 4,
+      "uniqueItems": true,
+      "allOf": [
+        { "contains": { "const": "spend" } },
+        { "contains": { "const": "send" } },
+        { "contains": { "const": "publish" } },
+        { "contains": { "const": "conversion-claim" } }
+      ],
+      "items": {
+        "type": "string",
+        "enum": ["spend", "send", "publish", "conversion-claim"]
+      }
+    },
+    "target_outputs": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/target_output" }
+    },
+    "block_reasons": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "summary": { "type": "string" },
+    "artifact_paths": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "status": { "const": "ok" } } },
+      "then": { "required": ["target_outputs"] }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": { "enum": ["blocked", "error"] }
+        }
+      },
+      "then": { "required": ["block_reasons"] }
+    },
+    {
+      "if": {
+        "properties": {
+          "model_id": { "const": "google/timesfm-3.0-pytorch" }
+        }
+      },
+      "then": {
+        "properties": {
+          "license_lane": { "const": "research-only" },
+          "contains_client_series": { "const": false },
+          "used_for": { "const": "research" }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "vector": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "number" }
+    },
+    "quantiles": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["p10", "p20", "p30", "p40", "p50", "p60", "p70", "p80", "p90"],
+      "properties": {
+        "p10": { "$ref": "#/$defs/vector" },
+        "p20": { "$ref": "#/$defs/vector" },
+        "p30": { "$ref": "#/$defs/vector" },
+        "p40": { "$ref": "#/$defs/vector" },
+        "p50": { "$ref": "#/$defs/vector" },
+        "p60": { "$ref": "#/$defs/vector" },
+        "p70": { "$ref": "#/$defs/vector" },
+        "p80": { "$ref": "#/$defs/vector" },
+        "p90": { "$ref": "#/$defs/vector" }
+      }
+    },
+    "target_output": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["series_id", "point", "quantiles"],
+      "properties": {
+        "series_id": { "type": "string", "minLength": 1 },
+        "point": { "$ref": "#/$defs/vector" },
+        "quantiles": { "$ref": "#/$defs/quantiles" }
+      }
+    }
+  }
+}

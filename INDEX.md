@@ -1,7 +1,7 @@
 ---
 note_type: index
 status: active
-updated: 2026-08-01
+updated: 2026-09-01
 tags:
   - index
   - brain
@@ -38,6 +38,8 @@ links instead of loading the entire vault.
 - [[12_Brain/Bases/Daily Communication Intelligence.base|Daily Communication Intelligence]]
   - daily Gmail and Slack decisions, commitments, blockers, deliverables, and
     unresolved routing.
+- [[12_Brain/03_Concepts/Specialist Forecast Router|Specialist Forecast Router]]
+  - numeric futures go to a forecast specialist; LLMs do not guess trends.
 
 ## Work
 

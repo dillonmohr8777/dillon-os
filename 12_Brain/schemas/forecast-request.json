@@ -1,0 +1,165 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "dillon-os/forecast-request",
+  "title": "ForecastRequest",
+  "description": "Source-bound request envelope for the Dillon OS forecast specialist router.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "request_id",
+    "as_of",
+    "cutoff_at",
+    "source_observed_at",
+    "max_source_age_hours",
+    "client_id",
+    "route_verified",
+    "cadence_verified",
+    "leakage_checked",
+    "series_id",
+    "frequency",
+    "horizon",
+    "targets",
+    "past_covariates",
+    "past_future_covariates",
+    "source_locators",
+    "contains_client_series",
+    "model_id",
+    "license_lane",
+    "used_for"
+  ],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "request_id": { "type": "string", "minLength": 1 },
+    "as_of": { "type": "string", "format": "date-time" },
+    "cutoff_at": { "type": "string", "format": "date-time" },
+    "source_observed_at": { "type": "string", "format": "date-time" },
+    "max_source_age_hours": { "type": "number", "exclusiveMinimum": 0 },
+    "client_id": { "type": "string", "minLength": 1 },
+    "route_verified": { "const": true },
+    "cadence_verified": { "const": true },
+    "leakage_checked": { "const": true },
+    "series_id": { "type": "string", "minLength": 1 },
+    "frequency": {
+      "type": "string",
+      "enum": ["hour", "day", "week", "month", "quarter"]
+    },
+    "horizon": { "type": "integer", "minimum": 1 },
+    "targets": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/named_series" }
+    },
+    "past_covariates": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/named_series" }
+    },
+    "past_future_covariates": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/named_series" }
+    },
+    "source_locators": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "contains_client_series": { "type": "boolean" },
+    "model_id": {
+      "type": "string",
+      "enum": [
+        "amazon/chronos-2",
+        "google/timesfm-2.5-200m-pytorch",
+        "google/timesfm-3.0-pytorch",
+        "bigquery/timesfm-3-managed",
+        "Datadog/Toto-2.0-22m"
+      ]
+    },
+    "license_lane": {
+      "type": "string",
+      "enum": ["apache-2.0", "research-only", "commercial-managed"]
+    },
+    "used_for": {
+      "type": "string",
+      "enum": ["agenda-feature", "automation-evidence", "research"]
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "model_id": { "const": "amazon/chronos-2" }
+        }
+      },
+      "then": {
+        "properties": {
+          "license_lane": { "const": "apache-2.0" }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "model_id": { "const": "google/timesfm-3.0-pytorch" }
+        }
+      },
+      "then": {
+        "properties": {
+          "license_lane": { "const": "research-only" },
+          "contains_client_series": { "const": false },
+          "used_for": { "const": "research" }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "model_id": { "const": "google/timesfm-2.5-200m-pytorch" }
+        }
+      },
+      "then": {
+        "properties": {
+          "license_lane": { "const": "apache-2.0" }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "model_id": { "const": "bigquery/timesfm-3-managed" }
+        }
+      },
+      "then": {
+        "properties": {
+          "license_lane": { "const": "commercial-managed" }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "model_id": { "const": "Datadog/Toto-2.0-22m" }
+        }
+      },
+      "then": {
+        "properties": {
+          "license_lane": { "const": "apache-2.0" }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "named_series": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["series_id", "values"],
+      "properties": {
+        "series_id": { "type": "string", "minLength": 1 },
+        "values": {
+          "type": "array",
+          "minItems": 32,
+          "items": { "type": "number" }
+        }
+      }
+    }
+  }
+}
