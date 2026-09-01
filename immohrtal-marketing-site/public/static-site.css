@@ -85,6 +85,10 @@
 .site-footer{min-height:0;grid-template-columns:minmax(240px,1.1fr) minmax(170px,.75fr) minmax(130px,.55fr) auto;align-items:start;gap:clamp(34px,5vw,76px);padding-block:72px}
 .footer-intro{display:grid;gap:22px}
 .footer-intro p{max-width:48ch}
+.studio-nap{display:grid;gap:6px;margin:22px 0 0;font-style:normal;color:var(--muted);font-size:.86rem;line-height:1.5}
+.studio-nap strong{color:inherit}
+.studio-nap a{color:var(--cyan)}
+.footer-nap{margin:0}
 .footer-directory{display:grid;gap:12px}
 .footer-directory a{color:var(--muted);font-size:.79rem;line-height:1.4}
 .footer-directory a:hover{color:var(--cyan)}

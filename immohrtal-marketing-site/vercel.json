@@ -13,6 +13,21 @@
       "has": [{ "type": "host", "value": "www.themohrmedia.com" }],
       "destination": "https://www.immohrtalmarketing.com/:path*",
       "permanent": true
+    },
+    {
+      "source": "/insights/schema-markup-that-llms-can-use/",
+      "destination": "/insights/schema-markup-service-businesses/",
+      "permanent": true
+    },
+    {
+      "source": "/insights/aeo-vs-seo/",
+      "destination": "/insights/aeo-vs-geo-service-businesses/",
+      "permanent": true
+    },
+    {
+      "source": "/insights/what-is-ai-search-visibility/",
+      "destination": "/insights/measure-ai-search-visibility/",
+      "permanent": true
     }
   ],
   "headers": [

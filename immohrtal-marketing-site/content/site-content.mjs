@@ -5,11 +5,23 @@ export const site = {
   name: 'IMMOHRTAL Marketing Solutions',
   shortName: 'IMMOHRTAL',
   email: 'dillon@immohrtalmarketing.com',
+  phone: '+18148735333',
+  phoneDisplay: '814.873.5333',
   bookingUrl: 'https://calendar.app.google/CSD1BzHQJtCFhEdY9',
   logo: '/brand/immohrtal-logo.png',
   portrait: '/people/dillon-mohr.jpg',
   published: '2026-08-24',
-  modified: '2026-08-25',
+  modified: '2026-09-01',
+  address: {
+    streetAddress: '127 Muirfield Dr.',
+    addressLocality: 'Pittsburgh',
+    addressRegion: 'PA',
+    postalCode: '15229',
+    addressCountry: 'US',
+  },
+  personSameAs: [
+    'https://dillon-mohr-primary-portfolio.netlify.app/',
+  ],
 }
 
 export const navigation = [
@@ -140,8 +152,9 @@ const baseCorePages = [
   {
     path: '/about/',
     navSection: 'about',
+    crumb: 'About',
     title: 'About Dillon Mohr and IMMOHRTAL Marketing Solutions',
-    description: 'Meet Dillon Mohr and learn how IMMOHRTAL builds memorable websites, helps businesses get found, and creates useful AI workers.',
+    description: 'Meet Dillon Mohr, founder of IMMOHRTAL Marketing Solutions in Pittsburgh. He builds memorable websites, helps businesses get found, and creates useful AI workers.',
     eyebrow: 'Built by Dillon Mohr',
     h1: 'One person accountable for the website and the work behind it.',
     lede: 'Dillon designs the website, improves how people find it, and connects it to the tools that keep the business moving. You always know who is responsible and why a change is being made.',
@@ -160,6 +173,7 @@ const baseCorePages = [
           <div>
             <p>Dillon designs and builds websites, writes the pages people need, and connects the finished experience to search, HubSpot, and useful AI workers. The goal is not to add an AI label to ordinary agency work. The goal is to make the business easier to understand, trust, and contact.</p>
             <p>The process starts with what a customer actually sees: what the business offers, why it is credible, what feels confusing, and what happens after someone reaches out. Design, content, search visibility, measurement, and follow-up are treated as one connected experience.</p>
+            <p>IMMOHRTAL Marketing Solutions is Dillon Mohr's Pittsburgh studio. The public name, the website, and the person doing the work are the same on every page.</p>
             <div class="callout"><strong>What accountability means here</strong>Every recommendation points back to a real page, a source, a browser test, or a clearly labeled idea to test. No mystery numbers. No made-up proof.</div>
           </div>
         </div>`,
@@ -194,6 +208,20 @@ const baseCorePages = [
         html: `<p>AI workers can research, inspect websites, organize proof, draft content, check a build, and prepare the next step. Important actions still need the right approval. That includes sending outreach, publishing outside an approved website, changing ad spend, choosing an unclear account, or crossing a login challenge.</p>
         <p>A useful worker should be able to explain what it checked, which client it served, what evidence it used, and where a person approved the work. If it cannot, it is not ready to act for a business.</p>
         <p>Meet the <a href="/business-agents/">AI worker crew</a>, read how <a href="/insights/human-approval-gates-for-marketing-agents/">approval keeps automation safe</a>, or <a href="/contact/">show me the repeated task you want off your plate</a>.</p>`,
+      },
+      {
+        eyebrow: 'Who this is',
+        title: 'The Pittsburgh studio behind the name',
+        tone: 'paper',
+        html: `<p>IMMOHRTAL Marketing Solutions is a website and AI implementation studio founded by Dillon Mohr in Pittsburgh, Pennsylvania. The official website is <a href="${site.origin}/">immohrtalmarketing.com</a>.</p>
+        <p>This is not Immohrtal Media Inc of Fort Walton Beach, Florida. It is not Immortal Marketing or another similarly named firm. If a search result points to a different company, a different city, or a different website, it is not this studio.</p>
+        <address class="studio-nap">
+          <strong>IMMOHRTAL Marketing Solutions</strong>
+          <span>127 Muirfield Dr. Pittsburgh PA 15229</span>
+          <a href="tel:+18148735333">814.873.5333</a>
+          <a href="mailto:${site.email}">${site.email}</a>
+        </address>
+        <p>Book a <a href="${site.bookingUrl}" target="_blank" rel="noreferrer">30 minute growth call</a> or email Dillon directly. The same name, address, phone, and mailbox appear in the public contact path and the business email signature.</p>`,
       },
     ],
   },
@@ -409,6 +437,7 @@ const baseCorePages = [
   {
     path: '/contact/',
     navSection: 'contact',
+    crumb: 'Contact',
     title: 'Contact IMMOHRTAL Marketing Solutions | Website and AI Search Projects',
     description: 'Contact Dillon Mohr about website redesign, web optimization, AEO and GEO, HubSpot integration, or a bounded business agent workflow.',
     eyebrow: 'Tell me what needs to work better',
@@ -428,6 +457,12 @@ const baseCorePages = [
           <div>
             <p>If your website needs to look better, explain your offer more clearly, get found more often, or hand less busywork to your team, book a focused 30 minute call or email Dillon at <a href="mailto:${site.email}">${site.email}</a>.</p>
             <p>The booking page shows live availability and creates a Google Meet automatically. Email remains available when that is easier.</p>
+            <address class="studio-nap">
+              <strong>IMMOHRTAL Marketing Solutions</strong>
+              <span>127 Muirfield Dr. Pittsburgh PA 15229</span>
+              <a href="tel:+18148735333">814.873.5333</a>
+              <a href="mailto:${site.email}">${site.email}</a>
+            </address>
             <div class="contact-channel">
               <a class="button" href="${site.bookingUrl}" target="_blank" rel="noreferrer">Book the growth call</a>
               <a class="button secondary" href="mailto:${site.email}?subject=IMMOHRTAL%20website%20help">Email Dillon instead</a>
