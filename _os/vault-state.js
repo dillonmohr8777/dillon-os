@@ -223,6 +223,135 @@ function assertBrainStructure(vault) {
   return { ok: missing.length === 0 && !rival, missing, forbiddenRival: rival };
 }
 
+// ---------------------------------------------------------------------------
+// Loop health — how long since each automation last wrote its state file.
+// ---------------------------------------------------------------------------
+
+const STATE_DIR = path.join(BRAIN, 'state');
+const REGISTRY_FILE = path.join(BRAIN, 'registry', 'automations.json');
+const CONNECTOR_FILE = path.join(STATE_DIR, 'connector-health.json');
+
+/** Timestamp fields the automations actually write, checked in this order. */
+const STAMP_KEYS = [
+  'written_at', 'recorded_at_utc', 'last_cycle_utc', 'updated_utc', 'updated_at',
+  'updated', 'last_run', 'checked_at', 'started_at', 'asOf', 'generatedAtUtc',
+  'last_successful_run', 'verifiedAt',
+];
+
+/** Age bands. 48h matches connector-health.js; a week is one missed weekly cadence. */
+const LOOP_BANDS = { FRESH_H: 48, STALE_H: 168 };
+
+function readJsonFile(vault, rel) {
+  const text = readText(vault, rel);
+  if (text == null) return null;
+  try { return JSON.parse(text.replace(/^﻿/, '')); } catch { return null; }
+}
+
+/** Newest parseable timestamp among STAMP_KEYS, top level first, then one level down. */
+function newestStamp(obj) {
+  if (!obj || typeof obj !== 'object') return null;
+  let best = null;
+  const take = (v) => {
+    if (typeof v !== 'string') return;
+    const ms = Date.parse(v);
+    if (Number.isFinite(ms) && (best === null || ms > best)) best = ms;
+  };
+  for (const k of STAMP_KEYS) take(obj[k]);
+  if (best !== null) return best;
+  for (const v of Object.values(obj)) {
+    if (v && typeof v === 'object' && !Array.isArray(v)) for (const k of STAMP_KEYS) take(v[k]);
+  }
+  return best;
+}
+
+function loopBand(ageHours) {
+  if (ageHours == null) return 'unknown';
+  if (ageHours <= LOOP_BANDS.FRESH_H) return 'fresh';
+  if (ageHours <= LOOP_BANDS.STALE_H) return 'stale';
+  return 'dead';
+}
+
+const BAND_RANK = { dead: 0, stale: 1, unknown: 2, fresh: 3 };
+
+/**
+ * One row per automation: registry entries joined to their state file by id,
+ * plus loose state files no registry entry claims (still real loops, just
+ * unregistered). Age comes from the timestamp the automation wrote, never the
+ * file mtime — a fresh clone would otherwise make every loop look alive.
+ */
+function getLoopHealth(vault, now = Date.now()) {
+  const registry = readJsonFile(vault, REGISTRY_FILE);
+  const automations = Array.isArray(registry) ? registry : (registry && registry.automations) || [];
+  const stateDir = path.join(vault, STATE_DIR);
+  let files = [];
+  try { files = fs.readdirSync(stateDir).filter((f) => f.endsWith('.json')); } catch { /* no state yet */ }
+  const stamps = new Map();
+  for (const f of files) {
+    const id = f.replace(/\.json$/, '');
+    if (id === 'connector-health') continue;            // reported separately
+    stamps.set(id, newestStamp(readJsonFile(vault, path.join(STATE_DIR, f))));
+  }
+
+  const rows = [];
+  const claimed = new Set();
+  for (const a of automations) {
+    if (!a || !a.id) continue;
+    // A registry entry owns <id>.json plus every state file it names among its
+    // outputs. Claim them all so a second output never surfaces as "unregistered",
+    // and read the newest stamp across them.
+    const keys = [a.id, ...(a.outputs || []).map((o) => path.basename(String(o), '.json'))]
+      .filter((k) => stamps.has(k));
+    let stamp = null;
+    for (const k of keys) {
+      claimed.add(k);
+      const v = stamps.get(k);
+      if (v != null && (stamp === null || v > stamp)) stamp = v;
+    }
+    const ageHours = stamp == null ? null : Math.max(0, (now - stamp) / 3.6e6);
+    rows.push({
+      id: a.id, name: a.name || a.id, cadence: a.cadence || '', registryStatus: a.status || '',
+      registered: true, lastRun: stamp == null ? null : new Date(stamp).toISOString(),
+      ageHours: ageHours == null ? null : Number(ageHours.toFixed(1)), band: loopBand(ageHours),
+    });
+  }
+  for (const [id, stamp] of stamps) {
+    if (claimed.has(id)) continue;
+    const ageHours = stamp == null ? null : Math.max(0, (now - stamp) / 3.6e6);
+    rows.push({
+      id, name: id.replace(/-/g, ' '), cadence: '', registryStatus: 'unregistered',
+      registered: false, lastRun: stamp == null ? null : new Date(stamp).toISOString(),
+      ageHours: ageHours == null ? null : Number(ageHours.toFixed(1)), band: loopBand(ageHours),
+    });
+  }
+  rows.sort((a, b) => (BAND_RANK[a.band] - BAND_RANK[b.band]) || ((b.ageHours ?? -1) - (a.ageHours ?? -1)) || a.id.localeCompare(b.id));
+
+  const counts = { fresh: 0, stale: 0, dead: 0, unknown: 0 };
+  for (const r of rows) counts[r.band]++;
+  const worst = rows.length ? rows[0].band : 'unknown';
+  return { rows, counts, worst, total: rows.length };
+}
+
+/** Connector observations recorded by an MCP-capable agent (see connector-health.js). */
+function getConnectorHealth(vault, now = Date.now()) {
+  const state = readJsonFile(vault, CONNECTOR_FILE);
+  const list = state && Array.isArray(state.connectors) ? state.connectors : [];
+  const rows = list.map((c) => {
+    const seen = Date.parse(c.last_verified_utc || '');
+    const ageHours = Number.isFinite(seen) ? Math.max(0, (now - seen) / 3.6e6) : null;
+    const usable = c.status === 'active' && c.read_verified === true && ageHours != null && ageHours <= LOOP_BANDS.FRESH_H;
+    return {
+      toolkit: c.toolkit, status: c.status || 'unknown', readVerified: c.read_verified === true,
+      ageHours: ageHours == null ? null : Number(ageHours.toFixed(1)), usable, note: c.note || '',
+    };
+  });
+  rows.sort((a, b) => Number(b.usable) - Number(a.usable) || a.toolkit.localeCompare(b.toolkit));
+  return {
+    recordedAt: state && state.recorded_at_utc ? state.recorded_at_utc : null,
+    recordedBy: state && state.recorded_by ? state.recorded_by : null,
+    rows, usable: rows.filter((r) => r.usable).length, total: rows.length,
+  };
+}
+
 function buildState(vault) {
   const notes = walkNotes(vault);
   let open = 0, done = 0;
@@ -257,6 +386,8 @@ function buildState(vault) {
     docs: recent.slice(0, 7).map((n) => ({ rel: n.rel, name: path.basename(n.rel, '.md'), ago: relTime(n.mtime) })),
     wire: recent.slice(0, 12).map((n) => ({ text: `${path.basename(n.rel, '.md')} touched`, ago: relTime(n.mtime) })),
     skills: getSkills(vault),
+    loops: getLoopHealth(vault),
+    connectors: getConnectorHealth(vault),
   };
 }
 
@@ -274,6 +405,11 @@ module.exports = {
   getDirectives,
   getSkills,
   getBrainVitals,
+  getLoopHealth,
+  getConnectorHealth,
+  newestStamp,
+  loopBand,
+  LOOP_BANDS,
   requiredBrainPaths,
   assertBrainStructure,
   buildState,

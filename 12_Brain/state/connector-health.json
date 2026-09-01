@@ -1,96 +1,245 @@
 {
-  "schema": 1,
-  "recorded_by": "claude/session 2026-08-18 via Composio MCP",
-  "recorded_at_utc": "2026-08-18T19:25:22Z",
-  "note": "Written by an MCP-capable agent, read by _os/automation/bin/connector-health.js. Every status below was observed, not assumed. Do not hand-edit to open a gate.",
-  "connectors": [
+ "schema": 1,
+ "recorded_by": "claude/session 2026-09-01 via claude.ai connectors and the Claude Code remote environment",
+ "recorded_at_utc": "2026-09-01T20:34:49Z",
+ "note": "Written by an MCP-capable agent, read by _os/automation/bin/connector-health.js and the HUD Loop Health panel. Every status below was observed, not assumed. Composio-observed rows from 2026-08-18 are kept as history and read as expired until re-verified. Do not hand-edit to open a gate.",
+ "connectors": [
+  {
+   "toolkit": "google_search_console",
+   "status": "active",
+   "read_verified": true,
+   "last_verified_utc": "2026-08-18T19:25:22Z",
+   "accounts": [
     {
-      "toolkit": "google_search_console",
-      "status": "active",
-      "read_verified": true,
-      "last_verified_utc": "2026-08-18T19:25:22Z",
-      "accounts": [
-        {
-          "id": "google_search_console_mooner-urban",
-          "scope": "client portfolio",
-          "sites": [
-            "https://www.alignhcm.com/",
-            "sc-domain:shadow-heating.com",
-            "sc-domain:barcrawlusa.com",
-            "https://bigorange.marketing/",
-            "sc-domain:ami-cleaning.com",
-            "https://www.zenspatropicana.com/",
-            "sc-domain:revive-systems.com",
-            "https://ironicineptocracy.com/"
-          ]
-        },
-        {
-          "id": "google_search_console_kindle-spurt",
-          "scope": "prospect portfolio, ~165 properties",
-          "sites": [
-            "sc-domain:faganpainting.com",
-            "https://www.kimberlyjamesbridal.com/",
-            "https://onsiteconcretelandscape.com/",
-            "sc-domain:vaclaimsedge.com",
-            "sc-domain:everydaylifeinsurance.com",
-            "https://www.needmomentum.com/"
-          ]
-        }
-      ],
-      "read_proof": {
-        "tool": "GOOGLE_SEARCH_CONSOLE_SEARCH_ANALYTICS_QUERY",
-        "site_url": "sc-domain:shadow-heating.com",
-        "range": "2026-07-19..2026-08-15",
-        "clicks": 3,
-        "impressions": 164,
-        "ctr": 0.0183,
-        "avg_position": 13.41
-      },
-      "note": "Live and usable. Two accounts: pass the account id explicitly, since account_selection is required."
+     "id": "google_search_console_mooner-urban",
+     "scope": "client portfolio",
+     "sites": [
+      "https://www.alignhcm.com/",
+      "sc-domain:shadow-heating.com",
+      "sc-domain:barcrawlusa.com",
+      "https://bigorange.marketing/",
+      "sc-domain:ami-cleaning.com",
+      "https://www.zenspatropicana.com/",
+      "sc-domain:revive-systems.com",
+      "https://ironicineptocracy.com/"
+     ]
     },
     {
-      "toolkit": "googleads",
-      "status": "active",
-      "read_verified": false,
-      "last_verified_utc": "2026-08-18T19:25:22Z",
-      "accounts": [
-        {
-          "id": "googleads_shover-norard",
-          "alias": "Dillon",
-          "customer_count": 16
-        }
-      ],
-      "blocker": {
-        "http": 429,
-        "code": "RESOURCE_EXHAUSTED",
-        "rate_scope": "DEVELOPER",
-        "rate_name": "Number of operations for basic access",
-        "retry_delay_seconds": 54858,
-        "request_id": "T9XdqxH4RWn5UB_4ACRV_w"
-      },
-      "note": "OAuth is fine and 16 customer accounts are reachable in principle. The block is the DEVELOPER-scope quota on a Basic-access developer token, exhausted at the time of writing with a ~15h retry. Nothing in this repo or in hidden-scheduled-tasks.tsv calls the Ads API, so the quota is being consumed by another client sharing that token. Fix is quota headroom or Standard access, not re-auth."
-    },
-    {
-      "toolkit": "google_analytics",
-      "status": "active",
-      "read_verified": false,
-      "last_verified_utc": "2026-08-18T19:25:22Z",
-      "accounts": [{ "id": "google_analytics_carlin-enlife" }],
-      "note": "Connection reported active by COMPOSIO_MANAGE_CONNECTIONS but no read was executed this session, so read_verified stays false. Verify before relying on it."
-    },
-    {
-      "toolkit": "meta_ads",
-      "status": "not_connected",
-      "read_verified": false,
-      "last_verified_utc": "2026-08-18T19:25:22Z",
-      "note": "Not in the connected-toolkit list. `instagram` is connected, which is not the same as Meta Ads. Routines needing Meta delivery data stay blocked."
-    },
-    {
-      "toolkit": "hubspot",
-      "status": "not_connected",
-      "read_verified": false,
-      "last_verified_utc": "2026-08-18T19:25:22Z",
-      "note": "Not connected via Composio. The jason-fallon-hubspot-agent repo holds a portal-guarded path; treat that as the route, not this connector."
+     "id": "google_search_console_kindle-spurt",
+     "scope": "prospect portfolio, ~165 properties",
+     "sites": [
+      "sc-domain:faganpainting.com",
+      "https://www.kimberlyjamesbridal.com/",
+      "https://onsiteconcretelandscape.com/",
+      "sc-domain:vaclaimsedge.com",
+      "sc-domain:everydaylifeinsurance.com",
+      "https://www.needmomentum.com/"
+     ]
     }
-  ]
+   ],
+   "read_proof": {
+    "tool": "GOOGLE_SEARCH_CONSOLE_SEARCH_ANALYTICS_QUERY",
+    "site_url": "sc-domain:shadow-heating.com",
+    "range": "2026-07-19..2026-08-15",
+    "clicks": 3,
+    "impressions": 164,
+    "ctr": 0.0183,
+    "avg_position": 13.41
+   },
+   "note": "Live and usable. Two accounts: pass the account id explicitly, since account_selection is required."
+  },
+  {
+   "toolkit": "googleads",
+   "status": "active",
+   "read_verified": false,
+   "last_verified_utc": "2026-08-18T19:25:22Z",
+   "accounts": [
+    {
+     "id": "googleads_shover-norard",
+     "alias": "Dillon",
+     "customer_count": 16
+    }
+   ],
+   "blocker": {
+    "http": 429,
+    "code": "RESOURCE_EXHAUSTED",
+    "rate_scope": "DEVELOPER",
+    "rate_name": "Number of operations for basic access",
+    "retry_delay_seconds": 54858,
+    "request_id": "T9XdqxH4RWn5UB_4ACRV_w"
+   },
+   "note": "OAuth is fine and 16 customer accounts are reachable in principle. The block is the DEVELOPER-scope quota on a Basic-access developer token, exhausted at the time of writing with a ~15h retry. Nothing in this repo or in hidden-scheduled-tasks.tsv calls the Ads API, so the quota is being consumed by another client sharing that token. Fix is quota headroom or Standard access, not re-auth."
+  },
+  {
+   "toolkit": "google_analytics",
+   "status": "active",
+   "read_verified": false,
+   "last_verified_utc": "2026-08-18T19:25:22Z",
+   "accounts": [
+    {
+     "id": "google_analytics_carlin-enlife"
+    }
+   ],
+   "note": "Connection reported active by COMPOSIO_MANAGE_CONNECTIONS but no read was executed this session, so read_verified stays false. Verify before relying on it."
+  },
+  {
+   "toolkit": "meta_ads",
+   "status": "not_connected",
+   "read_verified": false,
+   "last_verified_utc": "2026-08-18T19:25:22Z",
+   "note": "Not in the connected-toolkit list. `instagram` is connected, which is not the same as Meta Ads. Routines needing Meta delivery data stay blocked."
+  },
+  {
+   "toolkit": "hubspot",
+   "status": "not_connected",
+   "read_verified": false,
+   "last_verified_utc": "2026-08-18T19:25:22Z",
+   "note": "Not connected via Composio. The jason-fallon-hubspot-agent repo holds a portal-guarded path; treat that as the route, not this connector."
+  },
+  {
+   "toolkit": "slack",
+   "status": "active",
+   "read_verified": true,
+   "last_verified_utc": "2026-09-01T20:34:49Z",
+   "accounts": [
+    {
+     "id": "momentum-360-workspace",
+     "scope": "34 member channels; 24 are client channels"
+    }
+   ],
+   "read_proof": {
+    "tool": "slack_list_user_channels",
+    "channels": 34,
+    "client_channels_read": 10,
+    "window": "2026-08-18..2026-09-01"
+   },
+   "note": "Live via the claude.ai Slack connector. Read verified on ten client and ops channels. Sending stays approval-gated."
+  },
+  {
+   "toolkit": "gmail",
+   "status": "active",
+   "read_verified": true,
+   "last_verified_utc": "2026-09-01T20:34:49Z",
+   "accounts": [
+    {
+     "id": "primary-mailbox",
+     "scope": "owner mailbox"
+    }
+   ],
+   "read_proof": {
+    "tool": "search_threads",
+    "query": "newer_than:3d",
+    "result_count_estimate": 201
+   },
+   "note": "Live via the claude.ai Gmail connector. 2026-09-01 inbox is dominated by automated notifications; client threads need a from: or label filter. Sending stays approval-gated."
+  },
+  {
+   "toolkit": "google_calendar",
+   "status": "active",
+   "read_verified": true,
+   "last_verified_utc": "2026-09-01T20:34:49Z",
+   "accounts": [
+    {
+     "id": "primary-calendar",
+     "scope": "owner calendar plus US holidays"
+    }
+   ],
+   "read_proof": {
+    "tool": "list_events",
+    "window": "2026-09-01..2026-09-08",
+    "events_returned": 25
+   },
+   "note": "Client meetings visible: Puttery x Momentum integration kickoff 2026-09-01 15:00 ET; Deb Mara new-ads internal 2026-09-02 15:00 ET."
+  },
+  {
+   "toolkit": "google_drive",
+   "status": "active",
+   "read_verified": true,
+   "last_verified_utc": "2026-09-01T20:34:49Z",
+   "accounts": [
+    {
+     "id": "owner-drive",
+     "scope": "My Drive"
+    }
+   ],
+   "read_proof": {
+    "tool": "list_recent_files",
+    "files_returned": 6
+   },
+   "note": "Live. Recent files on 2026-09-01: BOK Law September content pack, Hope Wellness video, franchisee outreach sheet."
+  },
+  {
+   "toolkit": "github",
+   "status": "active",
+   "read_verified": true,
+   "last_verified_utc": "2026-09-01T20:34:49Z",
+   "accounts": [
+    {
+     "id": "dillonmohr8777",
+     "scope": "six repositories in the remote session"
+    }
+   ],
+   "read_proof": {
+    "tool": "get_me",
+    "open_prs_seen": {
+     "dillon-os": 30,
+     "client-operations-canonical": 30,
+     "claude-skills-repo": 19,
+     "mohr-vault": 10,
+     "bridge-software-frontend": 1
+    }
+   },
+   "note": "Live via the GitHub MCP. Merges and PR closes stay approval-gated."
+  },
+  {
+   "toolkit": "hyperframes_heygen",
+   "status": "active",
+   "read_verified": true,
+   "last_verified_utc": "2026-09-01T20:34:49Z",
+   "read_proof": {
+    "tool": "list_projects",
+    "projects": 0
+   },
+   "note": "Connected 2026-09-01. No projects yet; compose and render are cloud actions."
+  },
+  {
+   "toolkit": "indeed",
+   "status": "active",
+   "read_verified": false,
+   "last_verified_utc": "2026-09-01T20:34:49Z",
+   "note": "Connected at org level and enabled in chat; not probed this pass."
+  },
+  {
+   "toolkit": "netlify_claude_connector",
+   "status": "installed-not-enabled",
+   "read_verified": false,
+   "last_verified_utc": "2026-09-01T20:34:49Z",
+   "note": "Installed for the org, install state unknown, not enabled in the chat. Enable it in the chat connector settings to use it."
+  },
+  {
+   "toolkit": "wordpress_com_claude_connector",
+   "status": "installed-not-enabled",
+   "read_verified": false,
+   "last_verified_utc": "2026-09-01T20:34:49Z",
+   "note": "Installed for the org, install state unknown, not enabled in the chat."
+  },
+  {
+   "toolkit": "netlify_env_token",
+   "status": "error",
+   "read_verified": false,
+   "last_verified_utc": "2026-09-01T20:34:49Z",
+   "blocker": {
+    "http": 401,
+    "code": "Access Denied"
+   },
+   "note": "The Netlify token in the Claude Code remote environment is rejected. The radar dashboard deploy uses the GitHub Actions secret, which is separate and still working (run 29 on 2026-09-01)."
+  },
+  {
+   "toolkit": "openai_api_key",
+   "status": "missing",
+   "read_verified": false,
+   "last_verified_utc": "2026-09-01T20:34:49Z",
+   "note": "OPENAI_API_KEY is present but empty in the remote environment. Codex CLI 0.152.0 installs fine but cannot authenticate."
+  }
+ ]
 }

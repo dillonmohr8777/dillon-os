@@ -14,6 +14,7 @@
     --green-dim: #3f8f5c;
     --amber: #fbbf24;
     --cyan: #67e8f9;
+    --red: #f87171;
     --mono: "SF Mono", "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -77,6 +78,21 @@
   .li .tx.done { text-decoration: line-through; color: var(--ink-3); }
   .li .ago { color: var(--ink-3); font-size: 10px; flex: none; }
 
+  /* ---------- loop + connector health ---------- */
+  .chip { flex: none; font-size: 9px; letter-spacing: .1em; text-transform: uppercase; padding: 1px 6px; border-radius: 3px; border: 1px solid var(--edge-hi); color: var(--ink-2); min-width: 54px; text-align: center; }
+  .chip.fresh { color: var(--green); border-color: var(--green-dim); }
+  .chip.stale { color: var(--amber); border-color: #7a5a12; }
+  .chip.dead { color: var(--red); border-color: #7a2e2e; }
+  .chip.unknown { color: var(--ink-3); border-style: dashed; }
+  .dot.red { background: var(--red); box-shadow: 0 0 6px var(--red); }
+  .bands { display: flex; gap: 6px; margin-bottom: 8px; }
+  .bands span { flex: 1; text-align: center; font-size: 9px; letter-spacing: .1em; text-transform: uppercase; padding: 4px 0 3px; border: 1px solid var(--edge); border-radius: 3px; color: var(--ink-3); }
+  .bands span b { display: block; font-size: 16px; font-weight: 700; color: var(--ink); letter-spacing: 0; }
+  .bands .fresh b { color: var(--green); } .bands .stale b { color: var(--amber); } .bands .dead b { color: var(--red); }
+  .conn { display: flex; flex-wrap: wrap; gap: 6px; }
+  .conn .chip { min-width: 0; padding: 3px 8px; letter-spacing: .04em; text-transform: none; font-size: 10px; }
+  .conn .chip i { font-style: normal; color: var(--ink-3); margin-left: 6px; }
+
   /* ---------- center ---------- */
   .core { flex: 1; position: relative; display: flex; flex-direction: column; min-height: 0; border: 1px solid var(--edge); border-radius: 6px; background: radial-gradient(ellipse at 50% 45%, #0e1a12 0%, var(--surface) 70%); overflow: hidden; }
   #orb { flex: 1; width: 100%; min-height: 0; }
@@ -129,6 +145,7 @@
       <span class="pill"><span class="dot" id="dot-core"></span>CORE · <b id="pill-core">IDLE</b></span>
       <span class="pill"><span class="dot cyan" id="dot-link"></span>LINK · <b id="pill-link">ONLINE</b></span>
       <span class="pill"><span class="dot" id="dot-vault"></span>VAULT · <b id="pill-vault">—</b></span>
+      <span class="pill"><span class="dot off" id="dot-loop"></span>LOOPS · <b id="pill-loop">—</b></span>
     </div>
     <div class="clock">
       <div class="time" id="time">--:--<small>:--</small></div>
@@ -164,6 +181,11 @@
           <div class="row"><span class="value" id="v-brain">—</span><span class="delta" id="v-brain-detail">canonical</span></div>
         </div>
       </div>
+      <div class="panel scroll" style="max-height:250px">
+        <h2>Loop Health <span class="tag" id="loop-tag"></span></h2>
+        <div class="bands" id="loop-bands"></div>
+        <div id="loops"></div>
+      </div>
       <div class="panel scroll" style="flex:1">
         <h2>Directives <span class="tag" id="dir-src"></span></h2>
         <div id="directives"></div>
@@ -190,6 +212,10 @@
       <div class="panel">
         <h2>Command Deck <span class="tag" id="deck-count"></span></h2>
         <div class="deck" id="deck"></div>
+      </div>
+      <div class="panel">
+        <h2>Connectors <span class="tag" id="conn-tag"></span></h2>
+        <div class="conn" id="connectors"></div>
       </div>
       <div class="panel scroll" style="max-height:150px">
         <h2>Schedule <span class="tag">os config</span></h2>
@@ -293,6 +319,27 @@ function render() {
     `<button data-skill="${esc(s.name)}" title="${esc(s.description)}" class="${running.has(s.name) ? 'running' : ''}">${esc(s.name.replace(/-/g, ' '))}</button>`).join('');
   $('deck-count').textContent = `${skills.length} skills`;
   for (const b of document.querySelectorAll('.deck button')) b.onclick = () => run(b.dataset.skill);
+
+  // loop health — age from the stamp each automation wrote, never file mtime
+  const L = state.loops || { rows: [], counts: {}, total: 0, worst: 'unknown' };
+  const age = (hrs) => hrs == null ? 'never' : hrs < 1 ? '<1h' : hrs < 48 ? `${Math.round(hrs)}h` : `${Math.round(hrs / 24)}d`;
+  $('loop-bands').innerHTML = ['fresh', 'stale', 'dead', 'unknown'].map((band) =>
+    `<span class="${band}"><b>${L.counts[band] || 0}</b>${band}</span>`).join('');
+  $('loops').innerHTML = L.rows.map((r) =>
+    `<div class="li"><span class="chip ${r.band}">${r.band}</span>` +
+    `<span class="tx" title="${esc(r.name || r.id)}${r.cadence ? ' · ' + esc(r.cadence) : ''}${r.registered ? '' : ' · not in registry'}">${esc(r.id)}</span>` +
+    `<span class="ago">${age(r.ageHours)}</span></div>`).join('') ||
+    '<div class="li"><span class="tx">no automation state recorded yet</span></div>';
+  $('loop-tag').textContent = `${L.counts.fresh || 0}/${L.total} fresh`;
+  $('pill-loop').textContent = `${L.counts.fresh || 0}/${L.total} FRESH`;
+  $('dot-loop').className = 'dot' + (L.worst === 'dead' ? ' red' : L.worst === 'stale' ? ' amber' : L.worst === 'unknown' ? ' off' : '');
+
+  // connectors — observed by an MCP-capable agent, validated by connector-health.js
+  const C = state.connectors || { rows: [], usable: 0, total: 0 };
+  $('connectors').innerHTML = C.rows.map((c) =>
+    `<span class="chip ${c.usable ? 'fresh' : c.status === 'active' ? 'stale' : 'dead'}" title="${esc(c.status)}${c.note ? ' · ' + esc(c.note) : ''}">${esc(c.toolkit)}<i>${age(c.ageHours)}</i></span>`).join('') ||
+    '<span class="chip unknown">no connector observations</span>';
+  $('conn-tag').textContent = C.total ? `${C.usable}/${C.total} usable` : 'unrecorded';
 
   // schedule
   $('schedule').innerHTML = state.config.schedule.map((s) =>

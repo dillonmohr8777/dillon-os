@@ -1,7 +1,7 @@
 ---
 note_type: index
 status: active
-updated: 2026-08-01
+updated: 2026-09-01
 tags:
   - index
   - brain
@@ -79,6 +79,7 @@ links instead of loading the entire vault.
 - [[12_Brain/09_Ops/AGENT_PROTOCOL|Agent Protocol]]
 - [[12_Brain/09_Ops/Runbook|Second Brain Runbook]]
 - [[12_Brain/09_Ops/Health|Brain Health]]
+- [[12_Brain/07_Reviews/2026-09-01 - Connector and Roster Reconciliation|Connector and Roster Reconciliation (2026-09-01)]]
 - [[12_Brain/09_Ops/Knowledge Coverage|Knowledge Coverage]]
 - [[12_Brain/Bases/Strategy Library.base|Strategy Library Base]]
 - [[12_Brain/Bases/Client Strategy Overlays.base|Client Strategy Overlays Base]]
