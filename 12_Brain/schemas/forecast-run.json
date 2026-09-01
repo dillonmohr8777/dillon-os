@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "dillon-os/forecast-run",
+  "title": "ForecastRun",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "run_id",
+    "as_of",
+    "model_id",
+    "license_lane",
+    "series_id",
+    "horizon",
+    "contains_client_series",
+    "status"
+  ],
+  "properties": {
+    "schema_version": { "type": "integer", "minimum": 1 },
+    "run_id": { "type": "string" },
+    "as_of": { "type": "string" },
+    "client_id": { "type": ["string", "null"] },
+    "series_id": { "type": "string" },
+    "frequency": { "type": "string" },
+    "model_id": { "type": "string" },
+    "license_lane": {
+      "type": "string",
+      "enum": ["apache-2.0", "research-only", "commercial-managed"]
+    },
+    "horizon": { "type": "integer", "minimum": 1 },
+    "contains_client_series": { "type": "boolean" },
+    "source_locators": { "type": "array", "items": { "type": "string" } },
+    "used_for": {
+      "type": "string",
+      "enum": ["agenda-feature", "automation-evidence", "research"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["ok", "blocked", "error", "dry-run"]
+    },
+    "point": { "type": "array", "items": { "type": "number" } },
+    "quantiles": { "type": "object" },
+    "summary": { "type": "string" },
+    "artifact_paths": { "type": "array", "items": { "type": "string" } }
+  }
+}

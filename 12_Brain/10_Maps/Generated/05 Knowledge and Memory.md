@@ -4,7 +4,7 @@ status: active
 generated: true
 generated_by: Update-SecondBrainMaps
 map_type: domain
-updated: 2026-08-18
+updated: 2026-09-01
 tags:
   - brain
   - map
@@ -55,6 +55,7 @@ Concepts, decisions, projects, research, reviews, memory, and brain operations.
 - [[12_Brain/01_Captures/Slack/2026-07-30 Live Slack Scan|2026-07-30 Live Slack Scan]]
 - [[12_Brain/01_Captures/Slack/2026-07-30 Slack Open Loops|2026-07-30 Slack Open Loops]]
 - [[12_Brain/01_Captures/X/2026-07-31 - landingfolio-mcp-launch|2026-07-31 - landingfolio-mcp-launch]]
+- [[12_Brain/01_Captures/X/2026-08-31 - analogalok-timesfm3-agent-forecast-router|2026-08-31 - analogalok-timesfm3-agent-forecast-router]]
 - [[12_Brain/02_Entities/Claude in Chrome|Claude in Chrome]]
 - [[12_Brain/02_Entities/Codex Workspace (Legacy)|Codex Workspace (Legacy)]]
 - [[12_Brain/02_Entities/Hermes|Hermes]]
@@ -63,6 +64,7 @@ Concepts, decisions, projects, research, reviews, memory, and brain operations.
 - [[12_Brain/02_Entities/Momentum 360|Momentum 360]]
 - [[12_Brain/02_Entities/Ops Box (EliteDesk 800 G4)|Ops Box (EliteDesk 800 G4)]]
 - [[12_Brain/02_Entities/README|README]]
+- [[12_Brain/02_Entities/TimesFM|TimesFM]]
 - [[12_Brain/02_Entities/Website Factory|Website Factory]]
 - [[12_Brain/03_Concepts/Access Verification Discipline|Access Verification Discipline]]
 - [[12_Brain/03_Concepts/AEO GEO and AI Discovery|AEO GEO and AI Discovery]]
@@ -70,6 +72,7 @@ Concepts, decisions, projects, research, reviews, memory, and brain operations.
 - [[12_Brain/03_Concepts/AI Visibility Measurement|AI Visibility Measurement]]
 - [[12_Brain/03_Concepts/Automation and Workflow Engineering|Automation and Workflow Engineering]]
 - [[12_Brain/03_Concepts/Client Reporting and Outcome Scoreboards|Client Reporting and Outcome Scoreboards]]
+- [[12_Brain/03_Concepts/Confirm the Artifact Not the Action|Confirm the Artifact Not the Action]]
 - [[12_Brain/03_Concepts/Content Systems and Distribution|Content Systems and Distribution]]
 - [[12_Brain/03_Concepts/Context Economy|Context Economy]]
 - [[12_Brain/03_Concepts/Conversion Tracking Setup 2026|Conversion Tracking Setup 2026]]
@@ -93,6 +96,7 @@ Concepts, decisions, projects, research, reviews, memory, and brain operations.
 - [[12_Brain/03_Concepts/Research Verification Loop|Research Verification Loop]]
 - [[12_Brain/03_Concepts/Search Intent and Topic Architecture|Search Intent and Topic Architecture]]
 - [[12_Brain/03_Concepts/Second Brain Architecture|Second Brain Architecture]]
+- [[12_Brain/03_Concepts/Specialist Forecast Router|Specialist Forecast Router]]
 - [[12_Brain/03_Concepts/Truth Hierarchy|Truth Hierarchy]]
 - [[12_Brain/04_Decisions/2026-07-29 - 12_Brain is the canonical brain layer|2026-07-29 - 12_Brain is the canonical brain layer]]
 - [[12_Brain/04_Decisions/2026-07-29 - Use Obsidian Sync plus Git checkpoints|2026-07-29 - Use Obsidian Sync plus Git checkpoints]]
@@ -102,6 +106,7 @@ Concepts, decisions, projects, research, reviews, memory, and brain operations.
 - [[12_Brain/04_Decisions/2026-08-12 - Adopt isolated local agent memory|2026-08-12 - Adopt isolated local agent memory]]
 - [[12_Brain/04_Decisions/2026-08-13 - Prospect Radar V2 audit engine|2026-08-13 - Prospect Radar V2 audit engine]]
 - [[12_Brain/04_Decisions/2026-08-15 - Use Slack as intake and Codex as execution|2026-08-15 - Use Slack as intake and Codex as execution]]
+- [[12_Brain/04_Decisions/2026-09-01 - Route numeric forecasts to a specialist|2026-09-01 - Route numeric forecasts to a specialist]]
 - [[12_Brain/04_Decisions/README|README]]
 - [[12_Brain/05_Projects/2026-07-29 - Complete Dillon OS second brain|2026-07-29 - Complete Dillon OS second brain]]
 - [[12_Brain/05_Projects/2026-07-30 - Agentic workflow capability closure|2026-07-30 - Agentic workflow capability closure]]
@@ -132,6 +137,7 @@ Concepts, decisions, projects, research, reviews, memory, and brain operations.
 - [[12_Brain/05_Projects/Experiments/EXP-FE8DB259 - parallel-git-worktree-agent-runner-scape-parallel-code-pattern|EXP-FE8DB259 - parallel-git-worktree-agent-runner-scape-parallel-code-pattern]]
 - [[12_Brain/05_Projects/Experiments/EXP-FF75F5FB - persistent-memory-file-independent-assume-broken-verifier-loop|EXP-FF75F5FB - persistent-memory-file-independent-assume-broken-verifier-loop]]
 - [[12_Brain/05_Projects/Experiments/EXP-SKI-VOICE-SANDBOX|EXP-SKI-VOICE-SANDBOX]]
+- [[12_Brain/05_Projects/Experiments/EXP-TIMESFM-FORECAST-ROUTER|EXP-TIMESFM-FORECAST-ROUTER]]
 - [[12_Brain/05_Projects/Growth Workshop Franchise Pilot|Growth Workshop Franchise Pilot]]
 - [[12_Brain/05_Projects/Prospect Radar V2|Prospect Radar V2]]
 - [[12_Brain/05_Projects/README|README]]
@@ -147,6 +153,7 @@ Concepts, decisions, projects, research, reviews, memory, and brain operations.
 - [[12_Brain/06_Research/2026-08-04 - Pennsylvania website-gap candidate universe|2026-08-04 - Pennsylvania website-gap candidate universe]]
 - [[12_Brain/06_Research/2026-08-05 - DesignSpells interaction reference|2026-08-05 - DesignSpells interaction reference]]
 - [[12_Brain/06_Research/2026-08-05 - Grok daily intelligence|2026-08-05 - Grok daily intelligence]]
+- [[12_Brain/06_Research/2026-09-01 - TimesFM-3 multivariate forecast specialist|2026-09-01 - TimesFM-3 multivariate forecast specialist]]
 - [[12_Brain/06_Research/Franchise Email Sourcing|Franchise Email Sourcing]]
 - [[12_Brain/06_Research/README|README]]
 - [[12_Brain/06_Research/References/2026-07-30 - agentlogparser audit pattern|2026-07-30 - agentlogparser audit pattern]]
@@ -207,13 +214,17 @@ Concepts, decisions, projects, research, reviews, memory, and brain operations.
 - [[12_Brain/09_Ops/Netlify Credits Suspension 2026-07-30|Netlify Credits Suspension 2026-07-30]]
 - [[12_Brain/09_Ops/Runbook|Runbook]]
 - [[12_Brain/09_Ops/Schema|Schema]]
+- [[12_Brain/09_Ops/Web Escalation Architecture|Web Escalation Architecture]]
 - [[12_Brain/11_Craft/00_Index|00_Index]]
 - [[12_Brain/11_Craft/2026-08-18 - operating brief|2026-08-18 - operating brief]]
+- [[12_Brain/11_Craft/2026-08-19 - operating brief|2026-08-19 - operating brief]]
+- [[12_Brain/11_Craft/earned-lessons|earned-lessons]]
 - [[12_Brain/DEPENDENCY_PR226|DEPENDENCY_PR226]]
 - [[12_Brain/INDEX|INDEX]]
 - [[12_Brain/private/README|README]]
 - [[12_Brain/protocols/approval-tiers|approval-tiers]]
 - [[12_Brain/protocols/Compiler Protocol|Compiler Protocol]]
+- [[12_Brain/protocols/Forecast Specialist Protocol|Forecast Specialist Protocol]]
 - [[12_Brain/protocols/HUD Protocol|HUD Protocol]]
 - [[12_Brain/protocols/README|README]]
 - [[12_Brain/queue/README|README]]
