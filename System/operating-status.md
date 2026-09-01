@@ -1,6 +1,6 @@
 ---
 tags: [system, operating-status]
-last_updated: 2026-07-19
+last_updated: 2026-08-19
 callsign: D.I.L.L.O.N.
 operator: Dillon Mohr
 goal_label: ACTIVE CLIENTS
@@ -38,3 +38,5 @@ The vault was reconciled on 2026-07-12 against current work from the rolling thr
 - Refresh the roster weekly using current Slack, Gmail, Ads, project, and delivery evidence.
 - Do not revive a removed name from historical notes without current evidence.
 - No send, publish, deploy, campaign mutation, spend change, or client-account change without explicit approval.
+- Material code and site work uses the grill → spec → tdd → two-axis review loop in `12_Brain/09_Ops/engineering-skills.md`. A plan checklist is not a grill.
+- Agent-authored marketing copy uses the `unslop` skill before it is called ship-ready. Do not treat unslop as always-on, and do not rewrite captures or harvested client nouns.

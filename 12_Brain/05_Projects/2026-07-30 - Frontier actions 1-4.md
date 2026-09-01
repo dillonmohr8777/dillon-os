@@ -2,11 +2,12 @@
 note_type: project
 status: active
 created: 2026-07-30
-updated: 2026-07-30
+updated: 2026-08-19
 owner: Dillon Mohr
 verification_status: verified
 source_refs:
   - "https://github.com/dillonmohr8777/dillon-os/pull/234"
+  - "[[12_Brain/04_Decisions/2026-08-19 - Adopt adapted Matt Pocock engineering skills]]"
 tags:
   - brain
   - project
@@ -30,8 +31,11 @@ Supporting records:
 2. Three repo-local skills: plan grill, frontend maker, and independent web checker.
 3. SKI voice companion queued as a gated sandbox experiment; no installation occurred.
 4. agentlogparser and Casepoint permission-aware MCP patterns saved as references.
-5. Website-factory evaluator requires a hashed screen recording and independent visual
-   review before a checker can pass.
+5. Website-factory evaluator requires a hashed screen recording and independent visual review
+   before a checker can pass.
+6. 2026-08-19: `dillon-plan-grill` now runs the actual grilling interview. Copilot also has
+   `dillon-code-review`. The Claude pack is in `.claude/skills/` (grill, spec, tdd, review).
+   See [[12_Brain/04_Decisions/2026-08-19 - Adopt adapted Matt Pocock engineering skills]].
 
 ## Verification
 

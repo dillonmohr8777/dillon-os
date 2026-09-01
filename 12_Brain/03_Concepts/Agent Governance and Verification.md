@@ -2,7 +2,7 @@
 note_type: concept
 status: active
 created: 2026-08-01
-updated: 2026-08-01
+updated: 2026-08-19
 domain: agent governance
 maturity: operational
 summary: One accountable orchestrator routes bounded work to specialists, requires evidence and independent checking, and preserves human approval for consequential actions.
@@ -14,6 +14,7 @@ source_refs:
   - "[[11_Agents/64gb Morning Orchestrator Spec 2026-07-08]]"
   - "[[12_Brain/09_Ops/AGENT_PROTOCOL]]"
   - "[[_os/automation/docs/OPERATOR]]"
+  - "[[12_Brain/03_Concepts/Grill Spec Verify Loop]]"
 tags:
   - brain
   - concept
@@ -175,6 +176,10 @@ research log.
 - **Successful:** the intended outcome occurred, not merely the action.
 
 Do not blur these stages.
+
+## Engineering loop
+
+Material code and site work uses the [[Grill Spec Verify Loop]]: grill the frontier, write a spec, build at agreed seams, then review **Standards** and **Spec** as separate axes. The interview is the alignment step. A thin plan checklist is not a grill. Operator map: [[12_Brain/09_Ops/engineering-skills]].
 
 ## Failure modes
 

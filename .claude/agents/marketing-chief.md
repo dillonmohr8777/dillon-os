@@ -47,6 +47,9 @@ Invoke these by name with the Skill tool:
 - `client-pulse`
 - `week-review`
 - `slack-intake`
+- `ask-dillon-skills`
+- `grill-with-docs`
+- `unslop`
 
 ## Repos in your scope
 

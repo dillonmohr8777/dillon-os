@@ -1,7 +1,7 @@
 ---
 note_type: index
 status: active
-updated: 2026-08-01
+updated: 2026-08-19
 tags: [brain, concepts, index]
 created: 2026-08-01
 source_refs: []
@@ -39,6 +39,7 @@ into reusable systems rather than leaving the learning trapped in source notes.
 - [[Automation and Workflow Engineering]]
 - [[Agent Governance and Verification]]
 - [[Evidence Context and Learning Loops]]
+- [[Grill Spec Verify Loop]]
 
 ## Operating rules
 

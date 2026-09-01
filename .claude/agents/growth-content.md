@@ -35,6 +35,7 @@ Invoke these by name with the Skill tool:
 
 - `content-scan`
 - `research-sweep`
+- `unslop`
 
 ## Repos in your scope
 
@@ -55,6 +56,8 @@ a second clone of a repo that already exists there.
 - Validate one H1, canonical, schema and entity consistency, NAP, internal links, alt text,
   indexation, sitemap and 404 behaviour where relevant.
 - Every experiment gets a hypothesis, one metric, and a stop condition **before** it ships.
+- Before calling copy ship-ready, run `unslop` on agent-authored sentences. Harvested client
+  nouns stay. Captures stay. Do not treat unslop as always-on.
 - No publish, deploy, paid link, or client-account mutation without approval.
 
 Relevant installed skills: the `searchfit-seo` set - `on-page-seo`, `keyword-clustering`,

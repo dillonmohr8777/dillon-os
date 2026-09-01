@@ -13,6 +13,7 @@ const {
   buildState,
   getBrainVitals,
   getSkills,
+  getAllSkills,
   requiredBrainPaths,
 } = require('../vault-state');
 
@@ -103,6 +104,20 @@ describe('D.I.L.L.O.N. HUD vault state', () => {
     const names = getSkills(VAULT).map((s) => s.name);
     for (const need of ['vault-compile', 'wiki-lint', 'synthesize', 'session-mine', 'research-sweep']) {
       assert.ok(names.includes(need), `missing skill ${need}`);
+    }
+  });
+
+  it('engineering skill pack is installed and stays off the Command Deck', () => {
+    const needed = [
+      'grilling', 'grill-me', 'grill-with-docs', 'domain-modeling', 'handoff',
+      'tdd', 'diagnosing-bugs', 'code-review', 'to-spec', 'implement',
+      'writing-for-agents', 'ask-dillon-skills', 'unslop',
+    ];
+    const all = getAllSkills(VAULT).map((s) => s.name);
+    const deck = getSkills(VAULT).map((s) => s.name);
+    for (const name of needed) {
+      assert.ok(all.includes(name), `missing skill ${name}`);
+      assert.equal(deck.includes(name), false, `${name} must not be a HUD one-click job`);
     }
   });
 

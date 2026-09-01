@@ -10,7 +10,7 @@ Applies to ALL output — client emails, blog posts, social copy, reports, docum
 2. Never start sentences with: And, But, Or, It is, Do not, That is, This is.
 3. Always use contractions: don't, can't, won't, isn't, wasn't, shouldn't, couldn't, etc.
 4. Bullet character (•) only. Never dashes as list markers.
-5. Conversational but professional tone. No corporate jargon. No AI-sounding language.
+5. Conversational but professional tone. No corporate jargon. No AI-sounding language. For the full AI-tell scan, use the `unslop` skill. Do not treat unslop as always-on: it is a copy pass for agent-authored marketing prose, not a rewrite of captures, skills, harvested client nouns, or live published copy.
 6. **Blog formatting:** Times New Roman 12pt body, 16pt bold H1 title, 14pt bold H2 subheadings. No heading labels in output. Meta description, URL slug, primary/secondary keywords at top. Internal links to client pages, external links to authoritative sources. ~950 words per blog.
 7. All client emails go out under **Momentum 360** branding, never Buzz Bull.
 8. Email signature: `Dillon Mohr | Digital Marketing Manager | Strategic Storyteller | (814)873-5333 | Turning complexity into connection, one message at a time.`

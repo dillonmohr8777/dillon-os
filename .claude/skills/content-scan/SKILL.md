@@ -20,3 +20,5 @@ Write `Daily-Briefs/content-scan-YYYY-MM-DD.md` (today's date):
 - **Kill list** — stale drafts to archive
 
 Be opinionated. Rank, don't enumerate.
+
+A piece is not ship-ready if the prose still reads as LLM output. Run `unslop` on agent-authored drafts first. Do not treat unslop as always-on, and do not rewrite harvested client nouns.

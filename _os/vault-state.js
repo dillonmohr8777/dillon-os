@@ -112,7 +112,23 @@ function getDirectives(vault) {
   return out.slice(0, 8);
 }
 
-function getSkills(vault) {
+function truthyFlag(value) {
+  const v = String(value || '').trim().toLowerCase();
+  return v === 'true' || v === '1' || v === 'yes';
+}
+
+function falsyFlag(value) {
+  const v = String(value || '').trim().toLowerCase();
+  return v === 'false' || v === '0' || v === 'no';
+}
+
+function skillOnCommandDeck(fm) {
+  if (falsyFlag(fm.command_deck)) return false;
+  if (truthyFlag(fm['disable-model-invocation'])) return false;
+  return true;
+}
+
+function listClaudeSkills(vault) {
   const dir = path.join(vault, '.claude', 'skills');
   const skills = [];
   let entries;
@@ -122,7 +138,12 @@ function getSkills(vault) {
     const text = readText(vault, path.join('.claude', 'skills', e.name, 'SKILL.md'));
     if (!text) continue;
     const fm = frontmatter(text);
-    skills.push({ name: fm.name || e.name, description: fm.description || '' });
+    const name = fm.name || e.name;
+    skills.push({
+      name,
+      description: fm.description || '',
+      commandDeck: skillOnCommandDeck(fm),
+    });
   }
   const order = [
     'am-report', 'inbox-brief', 'plan-today', 'client-pulse',
@@ -134,6 +155,14 @@ function getSkills(vault) {
     return (ai === -1 ? 99 : ai) - (bi === -1 ? 99 : bi) || a.name.localeCompare(b.name);
   });
   return skills;
+}
+
+function getAllSkills(vault) {
+  return listClaudeSkills(vault);
+}
+
+function getSkills(vault) {
+  return listClaudeSkills(vault).filter((s) => s.commandDeck);
 }
 
 function relTime(ms) {
@@ -273,6 +302,7 @@ module.exports = {
   getConfig,
   getDirectives,
   getSkills,
+  getAllSkills,
   getBrainVitals,
   requiredBrainPaths,
   assertBrainStructure,

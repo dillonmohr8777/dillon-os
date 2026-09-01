@@ -2,7 +2,7 @@
 note_type: dashboard
 status: active
 owner: Dillon Mohr
-updated: 2026-08-01
+updated: 2026-08-19
 review_cadence: daily
 tags:
   - brain
@@ -97,6 +97,7 @@ and reusable memory.
 - [[09_Ops/Architecture|Architecture]]
 - [[09_Ops/Claude Target Architecture Proposal|Claude Target Architecture Proposal]]
 - [[09_Ops/AGENT_PROTOCOL|Agent Protocol]]
+- [[09_Ops/engineering-skills|Engineering skills]]
 - [[09_Ops/Runbook|Runbook]]
 - [[09_Ops/Health|Health]]
 - [[09_Ops/Knowledge Coverage|Knowledge Coverage]]
