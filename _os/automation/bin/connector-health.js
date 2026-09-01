@@ -59,9 +59,12 @@ function main() {
     // Age from the connector's own observation stamp, not the file mtime: one
     // stale connector inside a freshly-rewritten file must still read as stale.
     const seen = Date.parse(c.last_verified_utc || '');
-    const ageH = Number.isFinite(seen) ? Number(((nowMs - seen) / 3.6e6).toFixed(2)) : null;
+    // Compare on the unrounded age. Rounding first let an observation written
+    // seconds before the file read as 0.00h and slip through a zero-hour window.
+    const ageExact = Number.isFinite(seen) ? (nowMs - seen) / 3.6e6 : null;
+    const ageH = ageExact === null ? null : Number(ageExact.toFixed(2));
     const usable = c.status === 'active' && c.read_verified === true
-      && ageH !== null && ageH <= windowHours;
+      && ageExact !== null && ageExact > 0 && ageExact <= windowHours;
     return {
       toolkit: c.toolkit,
       status: c.status,

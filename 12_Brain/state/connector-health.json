@@ -1,7 +1,7 @@
 {
  "schema": 1,
  "recorded_by": "claude/session 2026-09-01 via claude.ai connectors and the Claude Code remote environment",
- "recorded_at_utc": "2026-09-01T20:34:49Z",
+ "recorded_at_utc": "2026-09-01T20:15:00Z",
  "note": "Written by an MCP-capable agent, read by _os/automation/bin/connector-health.js and the HUD Loop Health panel. Every status below was observed, not assumed. Composio-observed rows from 2026-08-18 are kept as history and read as expired until re-verified. Do not hand-edit to open a gate.",
  "connectors": [
   {
@@ -100,7 +100,7 @@
    "toolkit": "slack",
    "status": "active",
    "read_verified": true,
-   "last_verified_utc": "2026-09-01T20:34:49Z",
+   "last_verified_utc": "2026-09-01T20:15:00Z",
    "accounts": [
     {
      "id": "momentum-360-workspace",
@@ -119,7 +119,7 @@
    "toolkit": "gmail",
    "status": "active",
    "read_verified": true,
-   "last_verified_utc": "2026-09-01T20:34:49Z",
+   "last_verified_utc": "2026-09-01T20:15:00Z",
    "accounts": [
     {
      "id": "primary-mailbox",
@@ -137,7 +137,7 @@
    "toolkit": "google_calendar",
    "status": "active",
    "read_verified": true,
-   "last_verified_utc": "2026-09-01T20:34:49Z",
+   "last_verified_utc": "2026-09-01T20:15:00Z",
    "accounts": [
     {
      "id": "primary-calendar",
@@ -155,7 +155,7 @@
    "toolkit": "google_drive",
    "status": "active",
    "read_verified": true,
-   "last_verified_utc": "2026-09-01T20:34:49Z",
+   "last_verified_utc": "2026-09-01T20:15:00Z",
    "accounts": [
     {
      "id": "owner-drive",
@@ -172,7 +172,7 @@
    "toolkit": "github",
    "status": "active",
    "read_verified": true,
-   "last_verified_utc": "2026-09-01T20:34:49Z",
+   "last_verified_utc": "2026-09-01T20:15:00Z",
    "accounts": [
     {
      "id": "dillonmohr8777",
@@ -195,7 +195,7 @@
    "toolkit": "hyperframes_heygen",
    "status": "active",
    "read_verified": true,
-   "last_verified_utc": "2026-09-01T20:34:49Z",
+   "last_verified_utc": "2026-09-01T20:15:00Z",
    "read_proof": {
     "tool": "list_projects",
     "projects": 0
@@ -206,28 +206,28 @@
    "toolkit": "indeed",
    "status": "active",
    "read_verified": false,
-   "last_verified_utc": "2026-09-01T20:34:49Z",
+   "last_verified_utc": "2026-09-01T20:15:00Z",
    "note": "Connected at org level and enabled in chat; not probed this pass."
   },
   {
    "toolkit": "netlify_claude_connector",
    "status": "installed-not-enabled",
    "read_verified": false,
-   "last_verified_utc": "2026-09-01T20:34:49Z",
+   "last_verified_utc": "2026-09-01T20:15:00Z",
    "note": "Installed for the org, install state unknown, not enabled in the chat. Enable it in the chat connector settings to use it."
   },
   {
    "toolkit": "wordpress_com_claude_connector",
    "status": "installed-not-enabled",
    "read_verified": false,
-   "last_verified_utc": "2026-09-01T20:34:49Z",
+   "last_verified_utc": "2026-09-01T20:15:00Z",
    "note": "Installed for the org, install state unknown, not enabled in the chat."
   },
   {
    "toolkit": "netlify_env_token",
    "status": "error",
    "read_verified": false,
-   "last_verified_utc": "2026-09-01T20:34:49Z",
+   "last_verified_utc": "2026-09-01T20:15:00Z",
    "blocker": {
     "http": 401,
     "code": "Access Denied"
@@ -238,7 +238,7 @@
    "toolkit": "openai_api_key",
    "status": "missing",
    "read_verified": false,
-   "last_verified_utc": "2026-09-01T20:34:49Z",
+   "last_verified_utc": "2026-09-01T20:15:00Z",
    "note": "OPENAI_API_KEY is present but empty in the remote environment. Codex CLI 0.152.0 installs fine but cannot authenticate."
   }
  ]
