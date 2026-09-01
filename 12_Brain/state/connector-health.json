@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "recorded_by": "claude/session 2026-08-18 via Composio MCP",
-  "recorded_at_utc": "2026-08-18T19:25:22Z",
+  "recorded_by": "cursor/grok-4.5 session 2026-08-19 via Composio MCP",
+  "recorded_at_utc": "2026-08-19T16:00:00Z",
   "note": "Written by an MCP-capable agent, read by _os/automation/bin/connector-health.js. Every status below was observed, not assumed. Do not hand-edit to open a gate.",
   "connectors": [
     {
@@ -51,8 +51,8 @@
     {
       "toolkit": "googleads",
       "status": "active",
-      "read_verified": false,
-      "last_verified_utc": "2026-08-18T19:25:22Z",
+      "read_verified": true,
+      "last_verified_utc": "2026-08-19T16:00:00Z",
       "accounts": [
         {
           "id": "googleads_shover-norard",
@@ -60,15 +60,21 @@
           "customer_count": 16
         }
       ],
-      "blocker": {
-        "http": 429,
-        "code": "RESOURCE_EXHAUSTED",
-        "rate_scope": "DEVELOPER",
-        "rate_name": "Number of operations for basic access",
-        "retry_delay_seconds": 54858,
-        "request_id": "T9XdqxH4RWn5UB_4ACRV_w"
+      "read_proof": {
+        "tool": "proxy_execute POST /v23/customers/{cid}/googleAds:search",
+        "range": "2026-08-17..2026-08-19",
+        "customers": ["1033715894", "2853981364", "8145506229", "9214292423"],
+        "four_client_cost_usd": 101.61,
+        "four_client_clicks": 135,
+        "four_client_conversions": 3
       },
-      "note": "OAuth is fine and 16 customer accounts are reachable in principle. The block is the DEVELOPER-scope quota on a Basic-access developer token, exhausted at the time of writing with a ~15h retry. Nothing in this repo or in hidden-scheduled-tasks.tsv calls the Ads API, so the quota is being consumed by another client sharing that token. Fix is quota headroom or Standard access, not re-auth."
+      "wrapper_blocker": {
+        "http": 403,
+        "code": "USER_PERMISSION_DENIED",
+        "authorization_error": "CUSTOMER_NOT_ENABLED on default manager 6908592139",
+        "note": "GOOGLEADS_SEARCH_STREAM_GAQL still fails. Use proxy_execute against the child CID. Do not stall a spend pull on MCC reconnect."
+      },
+      "note": "Dated customer-level metrics returned for Onsite, Omega, KJB, and Tags 2 Go (CID 9214292423, unnamed in Ads). Wrapped GAQL remains broken."
     },
     {
       "toolkit": "google_analytics",

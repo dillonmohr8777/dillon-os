@@ -2,7 +2,7 @@
 note_type: concept
 status: active
 created: 2026-08-18
-updated: 2026-08-18
+updated: 2026-08-19
 source_refs: ["12_Brain/11_Craft/00_Index.md", "System/browser-access.policy.json"]
 tags: [craft, agent-infrastructure, lessons]
 ---
@@ -228,3 +228,40 @@ routine that was still keying dedupe daily until the cadence fix landed on 08-18
 **How to apply.** Treat the brief's `unreliable` list as a queue to investigate, not a
 list of broken things. Read `last_completed` and the failure timestamps before concluding
 anything is currently failing.
+
+---
+
+## 2026-08-19 — Listing Google Ads customers is not a metric read
+
+**Lesson.** An active Google Ads OAuth session that can list customer IDs is still
+unusable for spend until a child-account GAQL query succeeds with a live manager
+`login-customer-id`. Do not fill the gap with last week's numbers.
+
+**Evidence.** On 2026-08-19, `GOOGLEADS_LIST_ACCESSIBLE_CUSTOMERS` returned 16 IDs
+including KJB `8145506229` and Omega `2853981364`. The same session's
+`GOOGLEADS_SEARCH_STREAM_GAQL` calls failed with `USER_PERMISSION_DENIED` because
+Composio sent deactivated MCC `6908592139` (`CUSTOMER_NOT_ENABLED`). The Aug 18
+429 quota block was not reproduced. No Aug 17 to 19 cost, clicks, or conversions
+were returned.
+
+**How to apply.** Record `read_verified: false` until a dated GAQL row comes back.
+Keep the last verified week labeled as a different period. Wrapped GAQL is not
+the only read path; see the 2026-08-19 proxy lesson.
+
+---
+
+## 2026-08-19 — Wrapped Google Ads GAQL is not the only read path
+
+**Lesson.** When Composio's `GOOGLEADS_SEARCH_STREAM_GAQL` injects a dead MCC,
+`proxy_execute` `POST /v23/customers/{cid}/googleAds:search` against the child
+CID can still return dated spend. Do not stall the pull on a reconnect.
+
+**Evidence.** Same OAuth session (`googleads_shover-norard`) that failed wrapped
+GAQL on 2026-08-19 returned customer-level Aug 17 to 19 metrics for Onsite
+`1033715894`, Omega `2853981364`, KJB `8145506229`, and unnamed CID
+`9214292423` (Tags 2 Go via `tags2go.pro` final URL). Four-client spend
+$101.61. Extra `login_customer_id` args on the wrapped tool were ignored.
+
+**How to apply.** Use proxy search for Google Ads KPIs. Set `read_verified: true`
+only after a dated metric row returns. MCC reconnect is optional hygiene.
+

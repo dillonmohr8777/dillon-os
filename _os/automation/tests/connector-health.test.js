@@ -41,21 +41,24 @@ test('reports the recorded state and marks only verified connectors usable', () 
     if (c.usable) {
       assert.equal(c.status, 'active', `${c.toolkit} usable without active status`);
       assert.equal(c.read_verified, true, `${c.toolkit} usable without a verified read`);
-      assert.ok(c.age_hours <= 48, `${c.toolkit} usable while stale`);
+      assert.ok(
+        Number.isFinite(c.age_hours) && c.age_hours >= 0 && c.age_hours <= 48,
+        `${c.toolkit} usable while stale or future-dated`
+      );
     }
   }
   assert.equal(out.counts.usable + out.counts.unusable, out.counts.connectors);
 });
 
 test('a connector that is active but unread is NOT usable', () => {
-  // googleads is active (OAuth fine) but its read failed on a 429 quota error.
-  // Active-but-unread must not clear the gate; that is the whole point.
+  // google_analytics is active (OAuth reported connected) but this session did
+  // not execute a metric read. Active-but-unread must not clear the gate.
   const { out } = run(['--window-hours', '48']);
-  const ads = out.connectors.find((c) => c.toolkit === 'googleads');
-  if (ads) {
-    assert.equal(ads.status, 'active');
-    assert.equal(ads.read_verified, false);
-    assert.equal(ads.usable, false, 'active without a verified read must stay unusable');
+  const ga = out.connectors.find((c) => c.toolkit === 'google_analytics');
+  if (ga) {
+    assert.equal(ga.status, 'active');
+    assert.equal(ga.read_verified, false);
+    assert.equal(ga.usable, false, 'active without a verified read must stay unusable');
   }
 });
 
@@ -70,4 +73,17 @@ test('exit 0 only when at least one connector is usable', () => {
   const { code, out } = run(['--window-hours', '48']);
   assert.equal(code === 0, out.counts.usable > 0);
   assert.equal(out.status, out.counts.usable ? 'ok' : 'blocked');
+});
+
+test('googleads is usable only after a dated metric read', () => {
+  const { out } = run(['--window-hours', '48']);
+  const ads = out.connectors.find((c) => c.toolkit === 'googleads');
+  if (!ads) return;
+  assert.equal(ads.status, 'active');
+  if (ads.read_verified) {
+    assert.equal(ads.usable, true, 'verified googleads inside the window must be usable');
+    assert.ok(ads.age_hours >= 0 && ads.age_hours <= 48);
+  } else {
+    assert.equal(ads.usable, false);
+  }
 });

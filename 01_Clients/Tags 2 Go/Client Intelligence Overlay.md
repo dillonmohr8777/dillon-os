@@ -6,8 +6,8 @@ client_id: tags-2-go
 relationship: client
 division: Momentum 360
 created: 2026-08-07
-updated: 2026-08-07
-evidence_as_of: 2026-08-07
+updated: 2026-08-19
+evidence_as_of: 2026-08-19
 verification_status: dated-evidence
 intelligence_maturity: developing
 keyword_state: developing
@@ -16,14 +16,13 @@ pipeline_state: developing
 reporting_state: developing
 workflow_state: developing
 priority: standard
-next_action: "Map Google Ads access through Access Broker/Bitwarden and confirm whether an agency admin invite is already active before any audit rebuild."
-review_on: 2026-08-14
+next_action: "Confirm the two Aug 18 ~11am calls with the client. Do not raise the $15/day cap. Pause leftover insurance exact keywords after approval."
+review_on: 2026-08-26
 source_refs:
   - "[[overview]]"
   - "[[Google Ads Client Slack Reports/tags-2-go-slack-channel-read]]"
+  - "[[12_Brain/01_Captures/2026-08-19 - Tags 2 Go call quality and CTR check]]"
   - "C:/Users/dillo/Documents/Codex/projects/client-operations/clients/tags-2-go/CLIENT.md"
-  - "C:/Users/dillo/Documents/Codex/projects/client-operations/clients/tags-2-go/context/operating-context.md"
-  - "C:/Users/dillo/Documents/Codex/projects/client-operations/clients/tags-2-go/evidence/2026-08-07-slack-handoff-redacted.md"
 tags: [client-intelligence, tags-2-go, google-ads, momentum360, auto-tags]
 ---
 
@@ -31,15 +30,19 @@ tags: [client-intelligence, tags-2-go, google-ads, momentum360, auto-tags]
 
 ## Executive operating thesis
 
-Tags 2 Go needs a compliance-first Google Ads rebuild. The commercial opportunity is real, but the previous account was shut down for government-related keywords, access was shared insecurely in Slack, and Dillon just accepted the handoff. Access mapping and a redacted audit baseline come before any campaign construction or spend.
+Tags 2 Go is live on Google Search at $15/day. Two counted conversions were 3-minute and 4-minute mobile ad-calls on Aug 18. CTR ~10% is real local "near me" demand on 17% impression share; quality score on `auto tags near me` is 1. Do not raise budget. Confirm those two calls with the client. Insurance exact keywords still enabled and still not spending.
 
 ## Current evidence snapshot
 
 - Exact Slack channel `#tags-2-go` exists and Dillon accepted the account on 2026-08-07.
 - Public website confirmed as `https://tags2go.pro/`.
 - Scope confirmed as Google Ads only; SEO is contextual background, not current paid work.
-- Prior Google Ads delivery was flagged and shut down for government keywords.
-- Commission discussion referenced $300 to start; Adem declined and left; Sean handed to Dillon.
+- Google Ads CID `921-429-2423` identified 2026-08-19; campaign `Search-1` ENABLED at $15/day.
+- Live window Aug 17 to 19 (later pull): $34.97, 52 clicks, 500 impr, 10.4% CTR, 2 Calls from ads.
+- Counted calls were 187s and 253s on Aug 18 ~11am Eastern. Six other ad-calls were under 60s.
+- Search IS 16.7% with 83% rank-lost. QS 1 on `auto tags near me`.
+- RSA assets are `APPROVED_LIMITED` for government documents and official services.
+- Leftover ENABLED exact keywords include `car insurance` and `auto insurance`.
 - Login identity `tags2go.pro@gmail.com` was shared in-channel; secrets must stay out of vault/canonical state.
 
 ## Strategy-system coverage
@@ -50,9 +53,9 @@ Tags 2 Go needs a compliance-first Google Ads rebuild. The commercial opportunit
 | Intent architecture | Developing | Public site exists | Landing-page conversion path unverified | Audit site conversion path once access is mapped |
 | AEO/GEO | Not in scope | SEO mentioned historically as weak/new | No SEO retainer | Keep out unless Dillon expands scope |
 | Content | Not in scope | No content calendar | No content lane | Hold |
-| Acquisition | Developing | Google Ads is the paid lane | Account mapping and rebuild authority missing | Map access, then draft rebuild packet |
-| Pipeline | Developing | Lead quality systems not yet observed | No CRM/call disposition evidence | Capture after first live readback |
-| Reporting | Developing | Adem reports exist historically with Sean | No Dillon-owned scoreboard | Create baseline after audit |
+| Acquisition | Live | Search-1 live at $15/day; CID 921-429-2423 | Insurance exact keywords still enabled | Pause after approval |
+| Pipeline | Developing | Two Calls-from-ads conversions on Aug 18 | Not matched to call recordings | Capture after first live readback |
+| Reporting | Developing | Live Aug 17-19 KPI read in Daily-Briefs | Ads account name still blank | Set descriptive name after approval |
 | Workflow | Developing | Exact Slack route and canonical folder now exist | Access Broker route and standing authority missing | Finish access mapping and approval envelope |
 
 ## Demand and answer map
@@ -61,11 +64,11 @@ Start from verified auto-tag / specialty plate service intent only after live ac
 
 ## Next evidence sprint
 
-1. Resolve Google Ads access through Access Broker/Bitwarden or an agency admin invite.
-2. Confirm whether Adem's prior admin invite is still active for an authorized identity.
-3. Capture a redacted account health baseline: campaign state, policy flags, conversion setup, billing.
-4. Draft a compliance-safe rebuild plan; do not enable spend without exact approval.
-5. Keep Elite Auto Tags proof separate; use it only as category analogy.
+1. Ask the client about two inbound calls Monday Aug 18 around 11:00–11:30am Eastern (about 3 minutes and 4 minutes).
+2. Do not raise the $15/day cap until quality score on `auto tags near me` moves off 1.
+3. Approve pause of leftover ENABLED exact `car insurance` / `auto insurance`.
+4. Optional: add competitor negative `jack rabbit` after approval.
+5. Keep Elite Auto Tags proof separate.
 
 ## Shared systems
 

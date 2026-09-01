@@ -61,7 +61,8 @@ function main() {
     const seen = Date.parse(c.last_verified_utc || '');
     const ageH = Number.isFinite(seen) ? Number(((nowMs - seen) / 3.6e6).toFixed(2)) : null;
     const usable = c.status === 'active' && c.read_verified === true
-      && ageH !== null && ageH <= windowHours;
+      && windowHours > 0
+      && ageH !== null && ageH >= 0 && ageH <= windowHours;
     return {
       toolkit: c.toolkit,
       status: c.status,
