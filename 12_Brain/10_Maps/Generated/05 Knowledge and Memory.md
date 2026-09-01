@@ -162,6 +162,7 @@ Concepts, decisions, projects, research, reviews, memory, and brain operations.
 - [[12_Brain/07_Reviews/2026-07-29 - Second brain foundation|2026-07-29 - Second brain foundation]]
 - [[12_Brain/07_Reviews/2026-08-15 - 120-Day Slack Operating System Audit|2026-08-15 - 120-Day Slack Operating System Audit]]
 - [[12_Brain/07_Reviews/2026-08-16 - Weekly Brain Synthesis|2026-08-16 - Weekly Brain Synthesis]]
+- [[12_Brain/07_Reviews/2026-09-01 - Connector and Roster Reconciliation|2026-09-01 - Connector and Roster Reconciliation]]
 - [[12_Brain/07_Reviews/Automation Runs/RUN-2026-07-30-0C310011 - build-and-independently-verify-a-fixture-landing-page|RUN-2026-07-30-0C310011 - build-and-independently-verify-a-fixture-landing-page]]
 - [[12_Brain/07_Reviews/Daily Intelligence/2026-08-01 - Communication Intelligence|2026-08-01 - Communication Intelligence]]
 - [[12_Brain/07_Reviews/Daily Intelligence/2026-08-05 - Communication Intelligence|2026-08-05 - Communication Intelligence]]
