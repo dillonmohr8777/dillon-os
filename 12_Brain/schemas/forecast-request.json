@@ -64,6 +64,9 @@
       "items": { "type": "string", "minLength": 1 }
     },
     "contains_client_series": { "type": "boolean" },
+    "client_experiment": {
+      "$ref": "#/$defs/client_experiment"
+    },
     "model_id": {
       "type": "string",
       "enum": [
@@ -145,9 +148,29 @@
           "license_lane": { "const": "apache-2.0" }
         }
       }
+    },
+    {
+      "if": {
+        "properties": {
+          "contains_client_series": { "const": true }
+        }
+      },
+      "then": { "required": ["client_experiment"] },
+      "else": { "not": { "required": ["client_experiment"] } }
     }
   ],
   "$defs": {
+    "client_experiment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["experiment_id", "approval_ref", "data_class", "input_fingerprint"],
+      "properties": {
+        "experiment_id": { "type": "string", "minLength": 1 },
+        "approval_ref": { "type": "string", "minLength": 1 },
+        "data_class": { "const": "sanitized-aggregate" },
+        "input_fingerprint": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+      }
+    },
     "named_series": {
       "type": "object",
       "additionalProperties": false,
