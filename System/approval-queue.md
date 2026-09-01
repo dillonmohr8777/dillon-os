@@ -1,8 +1,8 @@
 ---
 tags: [system, approvals]
-last_updated: 2026-08-17T13:04:11Z
+last_updated: 2026-08-19T21:54:00Z
 status: active
-last_scan: 2026-08-17T13:04:11Z
+last_scan: 2026-08-19T21:54:00Z
 scan_sources: ["00_Inbox/", "01_Clients/ status at-risk/onboarding/blocked", "System/urgent-replies.md", "System/claude-memory-sync.md", "Daily-Briefs/ latest 3"]
 ---
 
@@ -11,6 +11,7 @@ scan_sources: ["00_Inbox/", "01_Clients/ status at-risk/onboarding/blocked", "Sy
 Only current client and operating actions belong here. Nothing is sent, published, deployed, purchased, or changed in a client account automatically.
 
 ## Current client actions
+- [ ] 2026-08-19 - Nexla - Phone: Accept the starred unread Google Ads Read-only invite for CID `791-780-2207`. Computer: sign into Momentum Ads Manager `743-802-1996` and send a manager-link to that CID (same MCC that linked KJB/Replenish on 2026-04-10; do not use the Hermes Agent MCC). Do not wait on Ads API quota or Jayashree's Admin passkey — this environment cannot set `login-customer-id`. Her reply stays a Gmail draft, not sent. Source: [[12_Brain/05_Projects/2026-08-19 - Nexla Google Ads onboarding]]. Risk: medium
 - [ ] 2026-07-12 - Kimberly James Bridal - Approve completion update after FAQ desktop image crop and responsive QA; verify appointment-source reconciliation first - Risk: low
 - [ ] 2026-07-12 - Omega Landscaping & Concrete - Approve account changes only after Google/Meta call, form, and lead-quality attribution is verified - Risk: high
 - [ ] 2026-07-12 - On-Site Concrete & Landscape - Approve technical or campaign changes after allowlisted crawl and conversion-action audit - Risk: medium

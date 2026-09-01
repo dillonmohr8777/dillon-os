@@ -1,6 +1,6 @@
 ---
 tags: [system, operating-status]
-last_updated: 2026-07-19
+last_updated: 2026-08-19
 callsign: D.I.L.L.O.N.
 operator: Dillon Mohr
 goal_label: ACTIVE CLIENTS
@@ -18,6 +18,10 @@ The vault was reconciled on 2026-07-12 against current work from the rolling thr
 - Paid media and growth: Kimberly James Bridal, Omega Landscaping & Concrete, On-Site Concrete & Landscape, Shadow Heating & Cooling, Replenish, Fagan Painting, Capsule & Tonic.
 - Web, SEO, product, and delivery: Bar Crawl USA, Revive Systems, Hope Wellness Center, Pro Fence & Deck, Everyday Life Insurance, VA Claims, Bridge Software Development.
 - Full-time, excluded from client count: Align HCM.
+
+## Current onboarding
+
+- Nexla is a new Momentum 360 Google Ads engagement and is **not** in the 14-client count until the canonical registry includes the route. Live check 2026-08-19T21:54Z: Read-only invite for CID `791-780-2207` is still UNREAD; Jayashree reply is still a Gmail draft, not sent. GAQL still `USER_PERMISSION_DENIED`. Google Task + 7:30pm ET calendar block are on Dillon's account for Accept + MCC-link from `743-802-1996`. See [[12_Brain/05_Projects/2026-08-19 - Nexla Google Ads onboarding]].
 
 ## Current reporting truth
 
