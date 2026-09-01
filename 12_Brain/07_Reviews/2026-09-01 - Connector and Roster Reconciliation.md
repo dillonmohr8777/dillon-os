@@ -64,11 +64,11 @@ Windows Task Scheduler was verified again on 2026-09-01 at 18:38 ET. The Claude 
 | client-operations training checkpoint | 2026-08-05 |
 | Prospect radar (GitHub Actions) | 2026-09-01, green, 29 runs |
 
-The HUD's Loop Health panel correctly reports semantic artifact freshness rather than scheduled-task existence: 33 loops tracked, 2 fresh, 18 dead, 13 never recorded. Read those counts as stale outputs and missing receipts, not proof that every wrapper is stopped.
+At 2026-09-01 22:42Z, the HUD's Loop Health panel reported 32 loops tracked: 2 fresh, 17 dead, and 13 never recorded. Read those counts as stale outputs and missing receipts, not proof that every wrapper is stopped.
 
 ## Roster drift
 
-Slack channels with client activity in the last 14 days, compared with the canonical registry (24 records) and the vault's `01_Clients/` folders.
+Slack channels with client activity in the last 14 days, compared with the canonical registry (26 records) and the vault's `01_Clients/` folders.
 
 | Slack channel | Registry | Vault folder | What the channel shows | Action |
 |---------------|----------|--------------|------------------------|--------|

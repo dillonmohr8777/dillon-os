@@ -18,6 +18,7 @@ const {
   LOOP_BANDS,
   buildState,
 } = require('../vault-state');
+const { buildReport } = require('../automation/bin/connector-health');
 
 const VAULT = path.resolve(__dirname, '..', '..');
 const NOW = Date.parse('2026-09-01T20:00:00Z');
@@ -74,6 +75,16 @@ describe('loop health primitives', () => {
     assert.equal(loopBand(LOOP_BANDS.FRESH_H + 0.1), 'stale');
     assert.equal(loopBand(LOOP_BANDS.STALE_H), 'stale');
     assert.equal(loopBand(LOOP_BANDS.STALE_H + 0.1), 'dead');
+  });
+});
+
+describe('connector-health CLI report', () => {
+  it('expires an untouched observation after the 48-hour window', () => {
+    const state = {
+      connectors: [{ toolkit: 'slack', status: 'active', read_verified: true, last_verified_utc: iso(1) }],
+    };
+    assert.equal(buildReport(state, 48, NOW).connectors[0].usable, true);
+    assert.equal(buildReport(state, 48, NOW + 48 * H).connectors[0].usable, false);
   });
 });
 

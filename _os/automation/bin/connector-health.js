@@ -27,7 +27,6 @@
  * Exit 0 = at least one connector fresh. Exit 2 = none fresh (blocked, not failed).
  */
 
-const fs = require('fs');
 const { repoPath, readJson } = require('../lib/fsutil');
 
 const STATE = repoPath('12_Brain/state/connector-health.json');
@@ -39,22 +38,7 @@ function argInt(flag, dflt) {
   return Number.isFinite(n) ? n : dflt;
 }
 
-function main() {
-  const windowHours = argInt('--window-hours', 48);
-  const state = readJson(STATE, null);
-
-  if (!state || !Array.isArray(state.connectors)) {
-    const out = {
-      automation_id: 'connector-health',
-      status: 'blocked',
-      detail: 'no connector-health state recorded; an MCP-capable agent must write it first',
-      state_path: '12_Brain/state/connector-health.json',
-    };
-    process.stdout.write(`${JSON.stringify(out, null, 2)}\n`);
-    process.exit(2);
-  }
-
-  const nowMs = fs.statSync(STATE).mtimeMs;
+function buildReport(state, windowHours, nowMs = Date.now()) {
   const rows = state.connectors.map((c) => {
     // Age from the connector's own observation stamp, not the file mtime: one
     // stale connector inside a freshly-rewritten file must still read as stale.
@@ -85,8 +69,29 @@ function main() {
     recorded_by: state.recorded_by || 'unknown',
     recorded_at_utc: state.recorded_at_utc || null,
   };
-  process.stdout.write(`${JSON.stringify(out, null, 2)}\n`);
-  process.exit(fresh.length ? 0 : 2);
+  return out;
 }
 
-main();
+function main() {
+  const windowHours = argInt('--window-hours', 48);
+  const state = readJson(STATE, null);
+
+  if (!state || !Array.isArray(state.connectors)) {
+    const out = {
+      automation_id: 'connector-health',
+      status: 'blocked',
+      detail: 'no connector-health state recorded; an MCP-capable agent must write it first',
+      state_path: '12_Brain/state/connector-health.json',
+    };
+    process.stdout.write(`${JSON.stringify(out, null, 2)}\n`);
+    process.exit(2);
+  }
+
+  const out = buildReport(state, windowHours);
+  process.stdout.write(`${JSON.stringify(out, null, 2)}\n`);
+  process.exit(out.status === 'ok' ? 0 : 2);
+}
+
+if (require.main === module) main();
+
+module.exports = { buildReport };
