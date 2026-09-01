@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>SATURDAY SOLUTIONS — BOK Law & Mediation Services</title>
+<style>
+@font-face { font-family: 'Playfair Display'; font-weight: 600; src: url('assets/PlayfairDisplay-600.ttf') format('truetype'); }
+@font-face { font-family: 'Playfair Display'; font-weight: 700; src: url('assets/PlayfairDisplay-700.ttf') format('truetype'); }
+@font-face { font-family: 'Source Sans 3'; font-weight: 400; src: url('assets/SourceSans3-400.ttf') format('truetype'); }
+@font-face { font-family: 'Source Sans 3'; font-weight: 600; src: url('assets/SourceSans3-600.ttf') format('truetype'); }
+@font-face { font-family: 'Source Sans 3'; font-weight: 700; src: url('assets/SourceSans3-700.ttf') format('truetype'); }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1350px; overflow: hidden; background: #F4EEE4; }
+.card {
+  width: 1080px; height: 1350px;
+  display: flex; flex-direction: column;
+  background: #F7F3EB;
+  color: #1A3F46;
+}
+.hero {
+  height: 392px;
+  flex: 0 0 392px;
+  overflow: hidden;
+}
+.hero img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center 45%;
+  display: block;
+}
+.banner {
+  position: relative;
+  height: 78px;
+  background: #1B4A53;
+  color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: 0.22em;
+}
+.banner::before {
+  content: '';
+  position: absolute;
+  top: -12px; left: 50%;
+  transform: translateX(-50%);
+  width: 0; height: 0;
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-bottom: 12px solid #1B4A53;
+}
+.body {
+  flex: 1;
+  padding: 42px 52px 18px;
+  display: flex;
+  flex-direction: column;
+}
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 46px;
+  line-height: 1.16;
+  color: #1B4A53;
+  text-wrap: balance;
+  letter-spacing: -0.01em;
+}
+.sub {
+  margin-top: 16px;
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 1.35;
+  color: #3A555A;
+  max-width: 920px;
+}
+.cols {
+  margin-top: 34px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 18px;
+}
+.col {
+  background: #E8E4DB;
+  border-radius: 10px;
+  padding: 26px 20px 22px;
+  text-align: center;
+  min-height: 278px;
+}
+.icon {
+  width: 52px; height: 52px;
+  margin: 0 auto 14px;
+  color: #4FA3B0;
+}
+.icon svg { width: 100%; height: 100%; }
+.col h2 {
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.16em;
+  color: #1B4A53;
+  margin-bottom: 12px;
+}
+.col p {
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.38;
+  color: #33484C;
+}
+.close {
+  margin-top: auto;
+  padding: 28px 8px 8px;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-style: italic;
+  font-size: 22px;
+  color: #1B4A53;
+  line-height: 1.35;
+}
+.footer {
+  position: relative;
+  height: 158px;
+  background: #F3ECE1;
+  display: flex;
+  align-items: center;
+  padding: 0 48px 10px;
+  overflow: hidden;
+}
+.footer::after {
+  content: '';
+  position: absolute;
+  left: -40px; right: -40px; bottom: -28px;
+  height: 78px;
+  background:
+    radial-gradient(120px 40px at 18% 40%, rgba(79,163,176,.28), transparent 70%),
+    radial-gradient(180px 50px at 58% 55%, rgba(79,163,176,.22), transparent 72%),
+    radial-gradient(140px 38px at 88% 30%, rgba(27,74,83,.16), transparent 70%);
+  pointer-events: none;
+}
+.logo-wrap {
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+.logo-wrap img {
+  height: 128px;
+  width: auto;
+  display: block;
+}
+.rule {
+  width: 1px;
+  height: 72px;
+  background: #C9C2B6;
+  margin: 0 36px;
+  z-index: 1;
+}
+.url {
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: 0.12em;
+  color: #1B4A53;
+  z-index: 1;
+}
+</style>
+</head>
+<body>
+  <article class="card">
+    <div class="hero"><img src="assets/saturday-hero.jpg" alt="" /></div>
+    <div class="banner">SATURDAY SOLUTIONS</div>
+    <div class="body">
+      <h1>Write Down the Weekend Exchange Plan</h1>
+      <p class="sub">Saturday handoffs go smoother when time, place, and a backup are already agreed.</p>
+      <div class="cols">
+        <article class="col">
+          <div class="icon"><svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><circle cx="24" cy="24" r="16" stroke="currentColor" stroke-width="2.4"/><path d="M24 14v11l7 4" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h2>TIME</h2>
+          <p>Confirm the exact window, not “sometime in the afternoon.”</p>
+        </article><article class="col">
+          <div class="icon"><svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M24 38s12-11.2 12-19a12 12 0 1 0-24 0c0 7.8 12 19 12 19z" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><circle cx="24" cy="19" r="4" stroke="currentColor" stroke-width="2.4"/></svg></div>
+          <h2>PLACE</h2>
+          <p>Choose one regular spot both homes can rely on.</p>
+        </article><article class="col">
+          <div class="icon"><svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M18 16h18M18 24h18M18 32h14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><circle cx="12" cy="16" r="2.2" fill="currentColor"/><circle cx="12" cy="24" r="2.2" fill="currentColor"/><circle cx="12" cy="32" r="2.2" fill="currentColor"/></svg></div>
+          <h2>BACKUP</h2>
+          <p>Name the rain plan so a delay does not turn into a dispute.</p>
+        </article>
+      </div>
+      <p class="close">A written exchange plan keeps the weekend about the child.</p>
+    </div>
+    <footer class="footer">
+      <div class="logo-wrap"><img src="assets/bok-logo-footer.png" alt="BOK Law & Mediation Services" /></div>
+      <div class="rule"></div>
+      <div class="url">BOKLAWFIRM.COM</div>
+    </footer>
+  </article>
+</body>
+</html>

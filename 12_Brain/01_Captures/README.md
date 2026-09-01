@@ -1,7 +1,7 @@
 ---
 note_type: index
 status: active
-updated: 2026-07-29
+updated: 2026-08-19
 tags: [brain, captures, index]
 created: 2026-07-29
 source_refs: []
@@ -19,3 +19,5 @@ threads, screenshots with extracted text, and research evidence.
 - Mark `status: compiled` only after durable facts and lessons have been
   reflected in canonical notes.
 - Redact secrets and unnecessary personal data before saving.
+
+- [[12_Brain/01_Captures/2026-08-19 - BOK series graphics request|2026-08-19 BOK series graphics request]] — operator brief for the 2026-08-19 weekly packet.
