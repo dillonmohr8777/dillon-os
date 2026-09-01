@@ -97,14 +97,25 @@ canary must abstain today. `System/routine-health.md` and
   Python 3.11, no NVIDIA GPU).
 - Complete: GitHub/license/capability audit. Chronos-2 is the first legal
   canary; TimesFM 2.5 and Toto 2.0 have explicit capability limits.
-- Blocked by local runtime policy: the bounded Chronos-2 CPU smoke resolved
-  dependencies in an isolated `uv` cache, then Windows Application Control
-  blocked a pandas native DLL during import. No checkpoint loaded and no
-  forecast ran. Do not interpret this as a model or memory failure.
+- Complete: the first isolated `uv` route was abandoned after Windows Smart
+  App Control blocked a pandas native DLL. A persistent trusted runtime based
+  on Codex Python 3.12.13 now pins `chronos-forecasting==2.3.1` and
+  `torch==2.6.0+cpu`; Smart App Control and Defender remain enabled.
+- Complete: the official `amazon/chronos-2` checkpoint loaded on CPU and ran a
+  synthetic 32-step-context, four-step forecast with past and known-future
+  covariates and all p10-p90 bands. Model load was 24.4923 seconds and forecast
+  execution was 0.2927 seconds with cross-learning disabled.
+- Complete: a second synthetic canary jointly forecast two targets with both
+  covariate classes and cross-learning enabled. It returned point plus all nine
+  quantiles for both targets in 0.2251 seconds after warm-cache model loading.
+- Complete: `_os/automation/bin/forecast-chronos2.ps1` routes the request first,
+  then delegates only eligible work to the pinned machine launcher. The
+  launcher performs an exact-version preflight and runs from the local model
+  cache without routine network egress.
 - Blocked by data readiness: fewer than 32 contiguous daily observations in
   both the tracked branch and active runtime history.
-- Pending: approved Chronos-2 runtime path, checkpoint download, inference,
-  held-out scoring, calibration, and independent result review.
+- Pending: held-out scoring, calibration, cross-learning comparison, and
+  independent result review.
 - Not authorized: client data, agenda scoring, scheduled automation, or any
   TimesFM-3.0 commercial decision support.
 

@@ -34,7 +34,7 @@ synthetic research use and records:
 
 ```yaml
 provider_id: amazon-science
-runtime_id: chronos-forecasting>=2.0
+runtime_id: chronos-forecasting==2.3.1;torch==2.6.0+cpu
 license_lane: apache-2.0
 capabilities:
   multivariate_targets: true
@@ -52,11 +52,17 @@ particular dataset.
 ## Runtime status
 
 Amazon documents CPU and GPU inference, an 8,192-step maximum context, and a
-1,024-step maximum prediction length. On 2026-09-01, a bounded local CPU smoke
-attempt resolved the Python dependencies in an isolated `uv` cache, but
-Windows Application Control blocked a pandas native DLL during import. No
-checkpoint loaded and no forecast ran. Local performance is therefore
-**unverified**, not failed.
+1,024-step maximum prediction length. On 2026-09-01, the first isolated `uv`
+attempt was blocked when Windows Smart App Control rejected a pandas native
+DLL. The working route now uses the trusted Codex Python 3.12 runtime and pins
+`chronos-forecasting==2.3.1` with `torch==2.6.0+cpu`; Smart App Control remains
+enabled. The official `amazon/chronos-2` checkpoint loaded on CPU and completed
+a synthetic 32-step-context, four-step forecast with past and known-future
+covariates plus p10-p90 bands. Model load took 24.4923 seconds and inference
+took 0.2927 seconds. A second canary jointly forecast two targets with both
+covariate classes and cross-learning enabled; its warm-cache inference took
+0.2251 seconds. These runs verify the local runtime and output contract, not
+forecast quality or production readiness.
 
 See [[12_Brain/05_Projects/Experiments/EXP-TIMESFM-FORECAST-ROUTER|the forecast-router experiment]]
 and [[12_Brain/03_Concepts/Specialist Forecast Router|Specialist Forecast Router]].

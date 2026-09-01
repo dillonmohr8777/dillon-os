@@ -24,6 +24,13 @@ function chronosFixture() {
   ));
 }
 
+function chronosMultitargetFixture() {
+  return JSON.parse(fs.readFileSync(
+    repoPath('_os/automation/fixtures/forecast/synthetic-chronos2-multitarget-request.json'),
+    'utf8',
+  ));
+}
+
 function validRun() {
   const quantiles = {};
   for (let percentile = 10; percentile <= 90; percentile += 10) {
@@ -140,7 +147,7 @@ test('Chronos-2 is the license-permissive native-covariate canary, not a promote
   const receipt = routeForecastRequest(request);
   assert.equal(receipt.status, 'sandbox-eligible');
   assert.equal(receipt.provider_id, 'amazon-science');
-  assert.equal(receipt.runtime_id, 'chronos-forecasting>=2.0');
+  assert.equal(receipt.runtime_id, 'chronos-forecasting==2.3.1;torch==2.6.0+cpu');
   assert.deepEqual(receipt.capabilities, {
     multivariate_targets: true,
     past_covariates: true,
@@ -158,6 +165,15 @@ test('Chronos-2 is the license-permissive native-covariate canary, not a promote
   assert.equal(blocked.status, 'blocked');
   assert.ok(blocked.reasons.some((reason) => reason.includes('may not receive client series')));
   assert.ok(blocked.reasons.some((reason) => reason.includes('used_for=automation-evidence')));
+});
+
+test('Chronos-2 multivariate canary preserves two targets and both covariate classes', () => {
+  const receipt = routeForecastRequest(chronosMultitargetFixture());
+  assert.equal(receipt.status, 'sandbox-eligible');
+  assert.equal(receipt.target_count, 2);
+  assert.equal(receipt.capabilities.multivariate_targets, true);
+  assert.equal(receipt.capabilities.past_covariates, true);
+  assert.equal(receipt.capabilities.past_future_covariates, true);
 });
 
 test('model capability mismatches fail closed instead of implying TimesFM-3 parity', () => {

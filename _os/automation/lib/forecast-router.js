@@ -22,7 +22,7 @@ const FORBIDDEN_USES = Object.freeze([
 const MODEL_ROUTES = Object.freeze({
   'amazon/chronos-2': Object.freeze({
     provider_id: 'amazon-science',
-    runtime_id: 'chronos-forecasting>=2.0',
+    runtime_id: 'chronos-forecasting==2.3.1;torch==2.6.0+cpu',
     license_lane: 'apache-2.0',
     availability: 'sandbox-only',
     minimum_context: 32,
