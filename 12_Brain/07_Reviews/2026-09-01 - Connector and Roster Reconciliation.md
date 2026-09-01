@@ -20,6 +20,7 @@ source_refs:
   - "Slack #onsite-construction, 2026-08-24 to 2026-08-27 (channel C087GM7SEJF)"
   - "Google Calendar primary, events 2026-09-01 to 2026-09-08"
   - "client-operations-canonical registry/clients.json (24 records) and queue/work-items.json revision 423"
+  - "client-operations-canonical claude/repo-analysis-1bien2-local commits 7bee8d8 and b41a027; Puttery VERIFICATION_2026-09-01.md"
 tags:
   - brain
   - review
@@ -205,6 +206,13 @@ Recommended: flip mohr-vault to private now; it is historical and nothing instal
 Codex reported on 2026-09-01: credentials protected in Windows Credential Manager and Access Broker; Puttery NYC bound to Business Group 28086 and Business ID 37824; receiver tests 13/13; protected end-to-end passed; a credentialed Tock API check at 20:31Z returned HTTP 503, so the credential is unvalidated; a durable public webhook host, vendor registration, a rotated credential, and a controlled real reservation are still required.
 
 Unauthenticated probes at 20:50Z show the Tock host alive (docs 200, unknown paths 400), so the 503 is scoped, not global. The durable public host now exists as a deploy-ready Netlify relay with a drain client, on branch `claude/repo-analysis-1bien2` of client-operations-canonical under `clients/puttery-nyc/deliverables/2026-09-01-tock-reservation-webhook/public-relay/`, with the 503 triage protocol, vendor registration draft, rotation runbook, and controlled-test protocol in its `PRODUCTION_PLAN.md`. Deployment, the vendor request, and the rotation stay gated.
+
+Local follow-up on the desktop, 2026-09-01 21:35Z to 21:48Z (branch `claude/repo-analysis-1bien2-local`):
+
+- 503 triage through the redacted credential wrapper: no credential answers 403 with an empty body; a random wrong credential answers 503 with the same 9,102-byte Cloudflare origin-error response shape the stored credential gets on three five-minute probes, with no `Retry-After`. This strongly indicates a failure upstream of credential validation. The stored credential is neither validated nor rejected; the next step is the vendor question in the existing Resy API Integrations thread, still a draft.
+- Relay defects fixed before deploy: the webhook header now matches the receiver's `PutteryWebhookAuth` contract; the drain client posts each stored body to the receiver instead of writing an unread inbox; acknowledged blobs keep only a PII-free dedupe marker; both Netlify Functions use strong Blobs consistency; and only permanent payload errors (`400`, `413`, `415`, `422`) are dead-lettered while authentication, routing, rate-limit, server, and connection failures remain pending.
+- Verified: relay suite 16/16 including the real drain script against a loopback fake; receiver suite 13/13; both Netlify adapters import with `@netlify/blobs` 11.0.2; production dependency audit reports 0 vulnerabilities; both PowerShell scripts parse in Windows PowerShell 5.1. The canonical Puttery package was reconciled into the clean worktree and repaired there without touching the dirty desktop canonical checkout, whose existing `puttery-nyc` registry record and queue revision 430 were read only.
+- Git state: the Claude worker pushed branch commit `7bee8d8` before its session limit surfaced. Final reviewed hardening commit `b41a027` is local only and has not been pushed. No deploy, vendor message, credential rotation, repository visibility change, or canonical queue or registry write was performed.
 
 ## Next actions, ranked
 
