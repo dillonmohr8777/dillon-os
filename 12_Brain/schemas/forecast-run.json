@@ -13,6 +13,8 @@
     "client_id",
     "series_id",
     "model_id",
+    "provider_id",
+    "runtime_id",
     "license_lane",
     "used_for",
     "horizon",
@@ -35,11 +37,15 @@
     "model_id": {
       "type": "string",
       "enum": [
+        "amazon/chronos-2",
         "google/timesfm-2.5-200m-pytorch",
         "google/timesfm-3.0-pytorch",
-        "bigquery/timesfm-3-managed"
+        "bigquery/timesfm-3-managed",
+        "Datadog/Toto-2.0-22m"
       ]
     },
+    "provider_id": { "type": "string", "minLength": 1 },
+    "runtime_id": { "type": "string", "minLength": 1 },
     "license_lane": {
       "type": "string",
       "enum": ["apache-2.0", "research-only", "commercial-managed"]

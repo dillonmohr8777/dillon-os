@@ -20,12 +20,42 @@ const FORBIDDEN_USES = Object.freeze([
 ]);
 
 const MODEL_ROUTES = Object.freeze({
-  'google/timesfm-2.5-200m-pytorch': Object.freeze({
+  'amazon/chronos-2': Object.freeze({
+    provider_id: 'amazon-science',
+    runtime_id: 'chronos-forecasting>=2.0',
     license_lane: 'apache-2.0',
     availability: 'sandbox-only',
     minimum_context: 32,
     allowed_uses: Object.freeze(['research']),
     allows_client_series: false,
+    capabilities: Object.freeze({
+      multivariate_targets: true,
+      past_covariates: true,
+      past_future_covariates: true,
+      covariate_mode: 'native',
+    }),
+    required_gates: Object.freeze([
+      'hardware-preflight',
+      'walk-forward-baseline',
+      'quantile-calibration',
+      'experiment-acceptance',
+      'human-promotion-gate',
+    ]),
+  }),
+  'google/timesfm-2.5-200m-pytorch': Object.freeze({
+    provider_id: 'google-research',
+    runtime_id: 'timesfm[torch]',
+    license_lane: 'apache-2.0',
+    availability: 'sandbox-only',
+    minimum_context: 32,
+    allowed_uses: Object.freeze(['research']),
+    allows_client_series: false,
+    capabilities: Object.freeze({
+      multivariate_targets: false,
+      past_covariates: false,
+      past_future_covariates: true,
+      covariate_mode: 'external-xreg',
+    }),
     required_gates: Object.freeze([
       'hardware-preflight',
       'experiment-acceptance',
@@ -33,11 +63,19 @@ const MODEL_ROUTES = Object.freeze({
     ]),
   }),
   'google/timesfm-3.0-pytorch': Object.freeze({
+    provider_id: 'google-research',
+    runtime_id: 'timesfm[torch]==3.0.0',
     license_lane: 'research-only',
     availability: 'sandbox-only',
     minimum_context: 32,
     allowed_uses: Object.freeze(['research']),
     allows_client_series: false,
+    capabilities: Object.freeze({
+      multivariate_targets: true,
+      past_covariates: true,
+      past_future_covariates: true,
+      covariate_mode: 'native',
+    }),
     required_gates: Object.freeze([
       'license-acceptance-authority',
       'hardware-preflight',
@@ -45,14 +83,45 @@ const MODEL_ROUTES = Object.freeze({
     ]),
   }),
   'bigquery/timesfm-3-managed': Object.freeze({
+    provider_id: 'google-cloud-bigquery',
+    runtime_id: 'bigquery-ai.forecast',
     license_lane: 'commercial-managed',
     availability: 'not-live',
     minimum_context: 32,
     allowed_uses: Object.freeze([]),
     allows_client_series: false,
+    capabilities: Object.freeze({
+      multivariate_targets: false,
+      past_covariates: false,
+      past_future_covariates: false,
+      covariate_mode: 'none',
+    }),
     required_gates: Object.freeze([
       'managed-service-live-verification',
       'scoped-project-approval',
+    ]),
+  }),
+  'Datadog/Toto-2.0-22m': Object.freeze({
+    provider_id: 'datadog',
+    runtime_id: 'toto',
+    license_lane: 'apache-2.0',
+    availability: 'sandbox-only',
+    minimum_context: 32,
+    allowed_uses: Object.freeze(['research']),
+    allows_client_series: false,
+    capabilities: Object.freeze({
+      multivariate_targets: true,
+      past_covariates: false,
+      past_future_covariates: false,
+      covariate_mode: 'none',
+    }),
+    required_gates: Object.freeze([
+      'python-3.12-runtime',
+      'hardware-preflight',
+      'walk-forward-baseline',
+      'quantile-calibration',
+      'experiment-acceptance',
+      'human-promotion-gate',
     ]),
   }),
 });
@@ -215,6 +284,13 @@ function routeForecastRequest(request) {
     && Array.isArray(request.targets[0]?.values)
     ? request.targets[0].values.length
     : null;
+  const targetCount = Array.isArray(request?.targets) ? request.targets.length : null;
+  const pastCovariateCount = Array.isArray(request?.past_covariates)
+    ? request.past_covariates.length
+    : null;
+  const pastFutureCovariateCount = Array.isArray(request?.past_future_covariates)
+    ? request.past_future_covariates.length
+    : null;
 
   if (!model) {
     reasons.push(`model_id is not registered: ${request?.model_id || '(missing)'}`);
@@ -238,6 +314,21 @@ function routeForecastRequest(request) {
         `${request.model_id} requires at least ${model.minimum_context} contiguous observations for this Dillon OS lane`,
       );
     }
+    if (Number.isInteger(targetCount)
+      && targetCount > 1
+      && !model.capabilities.multivariate_targets) {
+      reasons.push(`${request.model_id} does not support joint multivariate targets`);
+    }
+    if (Number.isInteger(pastCovariateCount)
+      && pastCovariateCount > 0
+      && !model.capabilities.past_covariates) {
+      reasons.push(`${request.model_id} does not support past-only covariates`);
+    }
+    if (Number.isInteger(pastFutureCovariateCount)
+      && pastFutureCovariateCount > 0
+      && !model.capabilities.past_future_covariates) {
+      reasons.push(`${request.model_id} does not support known-future covariates`);
+    }
   }
 
   return {
@@ -246,12 +337,16 @@ function routeForecastRequest(request) {
     evaluated_at: new Date().toISOString(),
     status: reasons.length === 0 ? 'sandbox-eligible' : 'blocked',
     model_id: request?.model_id || null,
+    provider_id: model?.provider_id || null,
+    runtime_id: model?.runtime_id || null,
     license_lane: request?.license_lane || null,
     used_for: request?.used_for || null,
     contains_client_series: request?.contains_client_series ?? null,
     context_length: contextLength,
+    target_count: targetCount,
     reasons,
     required_gates: model ? [...model.required_gates] : [],
+    capabilities: model ? { ...model.capabilities } : null,
     forbidden_uses: [...FORBIDDEN_USES],
     authority: 'evidence-only',
     model_executed: false,
@@ -263,7 +358,7 @@ function validateForecastRun(run) {
   if (!isObject(run)) return { ok: false, errors: ['run must be an object'] };
 
   if (run.schema_version !== 1) errors.push('schema_version must equal 1');
-  for (const key of ['run_id', 'request_id', 'series_id', 'client_id', 'model_id', 'license_lane', 'used_for', 'status']) {
+  for (const key of ['run_id', 'request_id', 'series_id', 'client_id', 'model_id', 'provider_id', 'runtime_id', 'license_lane', 'used_for', 'status']) {
     if (!isNonEmptyString(run[key])) errors.push(`${key} is required`);
   }
   if (!isIsoDateTime(run.as_of)) errors.push('as_of must be an ISO-8601 date-time');
@@ -296,6 +391,12 @@ function validateForecastRun(run) {
   } else {
     if (run.license_lane !== model.license_lane) {
       errors.push(`license_lane does not match ${run.model_id}`);
+    }
+    if (run.provider_id !== model.provider_id) {
+      errors.push(`provider_id does not match ${run.model_id}`);
+    }
+    if (run.runtime_id !== model.runtime_id) {
+      errors.push(`runtime_id does not match ${run.model_id}`);
     }
     if (run.status === 'ok' && model.availability === 'not-live') {
       errors.push(`${run.model_id} may not produce an ok run before live verification`);

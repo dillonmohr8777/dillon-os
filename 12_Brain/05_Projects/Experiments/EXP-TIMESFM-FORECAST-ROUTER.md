@@ -14,6 +14,9 @@ source_refs:
   - "[[12_Brain/06_Research/2026-09-01 - TimesFM-3 multivariate forecast specialist]]"
   - "[[12_Brain/02_Entities/TimesFM]]"
   - "https://github.com/google-research/timesfm"
+  - "https://huggingface.co/amazon/chronos-2"
+  - "https://github.com/amazon-science/chronos-forecasting"
+  - "https://github.com/DataDog/toto"
 tags:
   - brain
   - experiment
@@ -22,7 +25,7 @@ tags:
   - predictors
 ---
 
-# TimesFM forecast-router sandbox
+# Forecast-router sandbox
 
 Evaluate a local forecast specialist beside the LLM stack. Nothing is
 installed into production automations, the canonical queue, or client
@@ -65,18 +68,25 @@ canary must abstain today. `System/routine-health.md` and
 ## Intervention
 
 1. Run the Dillon OS request router against the synthetic fixture. It must
-   return `sandbox-eligible` without model execution or network access.
-2. Preflight RAM, disk, and GPU with the TimesFM 2.5 system checker before
-   any weight download.
-3. Load **TimesFM 2.5** on public or synthetic series only for the first
-   pass.
-4. Optionally load **TimesFM-3.0** only on synthetic or public non-client
+   return `sandbox-eligible` for
+   `_os/automation/fixtures/forecast/synthetic-chronos2-request.json` without
+   model execution or network access.
+2. Preflight RAM, disk, Python, native-library policy, and available compute
+   before any weight download.
+3. Load **Chronos-2** on public or synthetic series for the first functional
+   pass because it natively supports both covariate classes and multivariate
+   targets under Apache-2.0.
+4. Compare **TimesFM 2.5** as an independent-univariate/XReg baseline and
+   **Toto 2.0 22M** as a no-covariate multivariate challenger.
+5. Optionally load **TimesFM-3.0** only on synthetic or public non-client
    series, labeled `license_lane: research-only`.
-5. Compare LLM-guessed continuation vs specialist bands on the same held-out
+6. Compare LLM-guessed continuation vs specialist bands on the same held-out
    window.
-6. Compare against persistence and seasonal-naive baselines with rolling-origin
+7. Compare against persistence and seasonal-naive baselines with rolling-origin
    backtests. Record point error plus empirical p10-p90 coverage.
-7. Write one forecast-run artifact that matches
+8. Run Chronos-2 cross-learning both enabled and disabled. Retain it only when
+   the measured dataset benefits.
+9. Write one forecast-run artifact that matches
    [[12_Brain/protocols/Forecast Specialist Protocol|the protocol]].
 
 ## Implementation status
@@ -85,22 +95,29 @@ canary must abstain today. `System/routine-health.md` and
   synthetic fixture, and fail-closed regression tests.
 - Complete: baseline machine inventory (63.8 GB RAM, 446.9 GB free disk,
   Python 3.11, no NVIDIA GPU).
+- Complete: GitHub/license/capability audit. Chronos-2 is the first legal
+  canary; TimesFM 2.5 and Toto 2.0 have explicit capability limits.
+- Blocked by local runtime policy: the bounded Chronos-2 CPU smoke resolved
+  dependencies in an isolated `uv` cache, then Windows Application Control
+  blocked a pandas native DLL during import. No checkpoint loaded and no
+  forecast ran. Do not interpret this as a model or memory failure.
 - Blocked by data readiness: fewer than 32 contiguous daily observations in
   both the tracked branch and active runtime history.
-- Pending: official TimesFM 2.5 preflight, checkpoint download, inference,
-  held-out scoring, and independent result review.
+- Pending: approved Chronos-2 runtime path, checkpoint download, inference,
+  held-out scoring, calibration, and independent result review.
 - Not authorized: client data, agenda scoring, scheduled automation, or any
   TimesFM-3.0 commercial decision support.
 
 ## Acceptance contract
 
 1. No client Ads, HubSpot, Gmail, revenue, or roster series enter TimesFM-3.0.
-2. 2.5 load succeeds or the run stops with a hardware/license receipt, not a
-   fake forecast.
+2. The selected legal checkpoint loads or the run stops with a
+   hardware/runtime/license receipt, not a fake forecast.
 3. Output shapes match the documented contract (point plus quantiles, no
    NaNs).
-4. Router rejects client use of TimesFM-3.0, license mismatches, incomplete
-   past-future covariates, and the not-yet-live managed route.
+4. Router rejects client use of every unpromoted route, TimesFM-3.0 license
+   mismatches, incomplete past-future covariates, unsupported model
+   capabilities, and the not-yet-live managed route.
 5. Independent checker inspects license lane, input provenance, and that no
    automation registry entry was added.
 6. Rolling-origin point error beats persistence or seasonal-naive, empirical
@@ -121,5 +138,6 @@ canary must abstain today. `System/routine-health.md` and
 
 ## Rollback
 
-Uninstall the local package, delete cached weights if Dillon wants them gone,
-and keep only the redacted evaluation record in this experiment note.
+Remove the isolated runtime and cached weights if Dillon wants them gone,
+disable the model route, and keep only the redacted evaluation record in this
+experiment note.

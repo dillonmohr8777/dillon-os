@@ -56,6 +56,7 @@ Concepts, decisions, projects, research, reviews, memory, and brain operations.
 - [[12_Brain/01_Captures/Slack/2026-07-30 Slack Open Loops|2026-07-30 Slack Open Loops]]
 - [[12_Brain/01_Captures/X/2026-07-31 - landingfolio-mcp-launch|2026-07-31 - landingfolio-mcp-launch]]
 - [[12_Brain/01_Captures/X/2026-08-31 - analogalok-timesfm3-agent-forecast-router|2026-08-31 - analogalok-timesfm3-agent-forecast-router]]
+- [[12_Brain/02_Entities/Chronos-2|Chronos-2]]
 - [[12_Brain/02_Entities/Claude in Chrome|Claude in Chrome]]
 - [[12_Brain/02_Entities/Codex Workspace (Legacy)|Codex Workspace (Legacy)]]
 - [[12_Brain/02_Entities/Hermes|Hermes]]

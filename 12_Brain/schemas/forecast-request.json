@@ -67,9 +67,11 @@
     "model_id": {
       "type": "string",
       "enum": [
+        "amazon/chronos-2",
         "google/timesfm-2.5-200m-pytorch",
         "google/timesfm-3.0-pytorch",
-        "bigquery/timesfm-3-managed"
+        "bigquery/timesfm-3-managed",
+        "Datadog/Toto-2.0-22m"
       ]
     },
     "license_lane": {
@@ -82,6 +84,18 @@
     }
   },
   "allOf": [
+    {
+      "if": {
+        "properties": {
+          "model_id": { "const": "amazon/chronos-2" }
+        }
+      },
+      "then": {
+        "properties": {
+          "license_lane": { "const": "apache-2.0" }
+        }
+      }
+    },
     {
       "if": {
         "properties": {
@@ -117,6 +131,18 @@
       "then": {
         "properties": {
           "license_lane": { "const": "commercial-managed" }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "model_id": { "const": "Datadog/Toto-2.0-22m" }
+        }
+      },
+      "then": {
+        "properties": {
+          "license_lane": { "const": "apache-2.0" }
         }
       }
     }

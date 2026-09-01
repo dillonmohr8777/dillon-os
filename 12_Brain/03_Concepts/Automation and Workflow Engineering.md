@@ -49,8 +49,9 @@ flowchart LR
 
 Every stage should be inspectable and resumable. The forecast stage is
 optional evidence. It follows [[Specialist Forecast Router]] and never
-authorizes send, spend, publish, or account changes. TimesFM-3.0 weights stay
-off client series until a commercial license path exists.
+authorizes send, spend, publish, or account changes. Chronos-2 is the first
+licensed sandbox canary but remains unpromoted; TimesFM-3.0 weights stay off
+client series until a commercial license path exists.
 
 ## Workflow contract
 

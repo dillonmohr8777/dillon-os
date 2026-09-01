@@ -17,6 +17,13 @@ function fixture() {
   ));
 }
 
+function chronosFixture() {
+  return JSON.parse(fs.readFileSync(
+    repoPath('_os/automation/fixtures/forecast/synthetic-chronos2-request.json'),
+    'utf8',
+  ));
+}
+
 function validRun() {
   const quantiles = {};
   for (let percentile = 10; percentile <= 90; percentile += 10) {
@@ -35,6 +42,8 @@ function validRun() {
     client_id: 'portfolio/system',
     series_id: 'synthetic-promotion-demand',
     model_id: 'google/timesfm-3.0-pytorch',
+    provider_id: 'google-research',
+    runtime_id: 'timesfm[torch]==3.0.0',
     license_lane: 'research-only',
     used_for: 'research',
     horizon: 4,
@@ -122,6 +131,61 @@ test('TimesFM 2.5 remains research-only until the experiment promotion gate pass
   const receipt = routeForecastRequest(request);
   assert.equal(receipt.status, 'blocked');
   assert.ok(receipt.required_gates.includes('experiment-acceptance'));
+  assert.ok(receipt.reasons.some((reason) => reason.includes('past-only covariates')));
+});
+
+test('Chronos-2 is the license-permissive native-covariate canary, not a promoted production route', () => {
+  const request = chronosFixture();
+  assert.deepEqual(validateForecastRequest(request), { ok: true, errors: [] });
+  const receipt = routeForecastRequest(request);
+  assert.equal(receipt.status, 'sandbox-eligible');
+  assert.equal(receipt.provider_id, 'amazon-science');
+  assert.equal(receipt.runtime_id, 'chronos-forecasting>=2.0');
+  assert.deepEqual(receipt.capabilities, {
+    multivariate_targets: true,
+    past_covariates: true,
+    past_future_covariates: true,
+    covariate_mode: 'native',
+  });
+  assert.ok(receipt.required_gates.includes('walk-forward-baseline'));
+  assert.ok(receipt.required_gates.includes('quantile-calibration'));
+  assert.equal(receipt.model_executed, false);
+
+  request.client_id = 'align-hcm';
+  request.contains_client_series = true;
+  request.used_for = 'automation-evidence';
+  const blocked = routeForecastRequest(request);
+  assert.equal(blocked.status, 'blocked');
+  assert.ok(blocked.reasons.some((reason) => reason.includes('may not receive client series')));
+  assert.ok(blocked.reasons.some((reason) => reason.includes('used_for=automation-evidence')));
+});
+
+test('model capability mismatches fail closed instead of implying TimesFM-3 parity', () => {
+  const xreg = fixture();
+  xreg.model_id = 'google/timesfm-2.5-200m-pytorch';
+  xreg.license_lane = 'apache-2.0';
+  xreg.targets.push({
+    series_id: 'synthetic-replies',
+    values: [...xreg.targets[0].values],
+  });
+  const xregReceipt = routeForecastRequest(xreg);
+  assert.equal(xregReceipt.status, 'blocked');
+  assert.ok(xregReceipt.reasons.some((reason) => reason.includes('joint multivariate targets')));
+  assert.ok(xregReceipt.reasons.some((reason) => reason.includes('past-only covariates')));
+
+  const toto = fixture();
+  toto.model_id = 'Datadog/Toto-2.0-22m';
+  toto.license_lane = 'apache-2.0';
+  const covariateReceipt = routeForecastRequest(toto);
+  assert.equal(covariateReceipt.status, 'blocked');
+  assert.ok(covariateReceipt.reasons.some((reason) => reason.includes('past-only covariates')));
+  assert.ok(covariateReceipt.reasons.some((reason) => reason.includes('known-future covariates')));
+
+  toto.past_covariates = [];
+  toto.past_future_covariates = [];
+  const noCovariateReceipt = routeForecastRequest(toto);
+  assert.equal(noCovariateReceipt.status, 'sandbox-eligible');
+  assert.equal(noCovariateReceipt.capabilities.covariate_mode, 'none');
 });
 
 test('managed TimesFM-3 route stays blocked until it is live-verified', () => {
@@ -136,6 +200,8 @@ test('managed TimesFM-3 route stays blocked until it is live-verified', () => {
 test('run validation cannot bypass model availability, use, or client-data gates', () => {
   const clientRun = validRun();
   clientRun.model_id = 'google/timesfm-2.5-200m-pytorch';
+  clientRun.provider_id = 'google-research';
+  clientRun.runtime_id = 'timesfm[torch]';
   clientRun.license_lane = 'apache-2.0';
   clientRun.used_for = 'automation-evidence';
   clientRun.contains_client_series = true;
@@ -146,11 +212,21 @@ test('run validation cannot bypass model availability, use, or client-data gates
 
   const managedRun = validRun();
   managedRun.model_id = 'bigquery/timesfm-3-managed';
+  managedRun.provider_id = 'google-cloud-bigquery';
+  managedRun.runtime_id = 'bigquery-ai.forecast';
   managedRun.license_lane = 'commercial-managed';
   managedRun.used_for = 'research';
   const managedResult = validateForecastRun(managedRun);
   assert.equal(managedResult.ok, false);
   assert.ok(managedResult.errors.some((error) => error.includes('before live verification')));
+
+  const mismatchedRuntime = validRun();
+  mismatchedRuntime.provider_id = 'unknown-provider';
+  mismatchedRuntime.runtime_id = 'unknown-runtime';
+  const mismatchResult = validateForecastRun(mismatchedRuntime);
+  assert.equal(mismatchResult.ok, false);
+  assert.ok(mismatchResult.errors.some((error) => error.includes('provider_id does not match')));
+  assert.ok(mismatchResult.errors.some((error) => error.includes('runtime_id does not match')));
 });
 
 test('forecast output requires full monotonic p10-p90 bands and TimesFM point equals p50', () => {
@@ -166,10 +242,18 @@ test('forecast output requires full monotonic p10-p90 bands and TimesFM point eq
 });
 
 test('forecast-run JSON schema records all nine quantile keys', () => {
+  const requestSchema = JSON.parse(fs.readFileSync(
+    repoPath('12_Brain/schemas/forecast-request.json'),
+    'utf8',
+  ));
   const schema = JSON.parse(fs.readFileSync(
     repoPath('12_Brain/schemas/forecast-run.json'),
     'utf8',
   ));
+  assert.ok(requestSchema.properties.model_id.enum.includes('amazon/chronos-2'));
+  assert.ok(requestSchema.properties.model_id.enum.includes('Datadog/Toto-2.0-22m'));
+  assert.ok(schema.required.includes('provider_id'));
+  assert.ok(schema.required.includes('runtime_id'));
   const quantileProperties = schema.$defs.quantiles.properties;
   assert.deepEqual(Object.keys(quantileProperties).sort(), [
     'p10', 'p20', 'p30', 'p40', 'p50', 'p60', 'p70', 'p80', 'p90',

@@ -12,6 +12,7 @@ source_refs:
   - "[[12_Brain/01_Captures/X/2026-08-31 - analogalok-timesfm3-agent-forecast-router]]"
   - "[[12_Brain/06_Research/2026-09-01 - TimesFM-3 multivariate forecast specialist]]"
   - "[[12_Brain/04_Decisions/2026-09-01 - Route numeric forecasts to a specialist]]"
+  - "[[12_Brain/02_Entities/Chronos-2]]"
   - "[[12_Brain/03_Concepts/Leading Indicators]]"
   - "[[12_Brain/03_Concepts/Evidence Context and Learning Loops]]"
 tags:
@@ -74,6 +75,9 @@ Reject the call when the client route is ambiguous, the series source is
 stale, future covariates do not cover the horizon, or `license_lane` does not
 match `model_id`.
 
+The router derives `provider_id`, `runtime_id`, and capability metadata from
+the registered `model_id`; callers may not self-assert them.
+
 ## Output contract
 
 ```yaml
@@ -85,6 +89,8 @@ target_outputs:
 horizon: 0
 as_of: ""
 model_id: ""
+provider_id: ""
+runtime_id: ""
 license_lane: ""
 used_for: "agenda-feature | automation-evidence | research"
 forbidden_uses:
@@ -109,7 +115,9 @@ node _os/automation/bin/forecast-route.js route `
 The router performs no model inference and no network call. It validates
 source freshness, route/cadence/leakage attestations, context and horizon
 dimensions, model-to-license mapping, client-data restrictions, and allowed
-use. Its only successful current state
+use. It also refuses target, covariate, or cross-series features the selected
+model cannot actually perform and emits exact provider/runtime metadata. Its
+only successful current state
 is `sandbox-eligible`; that status still requires the listed human, license,
 hardware, and experiment gates. Run artifacts are checked against
 `12_Brain/schemas/forecast-run.json`, including all nine non-crossing
@@ -150,8 +158,9 @@ Rules:
   effect.
 - Paid-media, HubSpot, morning-orchestrator, and report automations may
   attach bands. They may not enable campaigns from a band.
-- Client series never enter TimesFM-3.0 until the license lane is
-  commercial-managed.
+- Client series never enter TimesFM-3.0. Chronos-2, TimesFM 2.5, and Toto 2.0
+  also remain synthetic/public research-only until their experiment and human
+  promotion gates pass.
 
 ## How predictors use it
 
@@ -170,6 +179,10 @@ proof that next week's spend will land inside p50.
 - Asking Codex, Claude, or Grok to "project next month's leads" from a
   paragraph of Slack.
 - Feeding TimesFM-3.0 a client Ads or HubSpot series.
+- Treating an MIT wrapper around restricted weights as a commercially licensed
+  model.
+- Sending past or future covariates to Toto 2.0, or calling independent
+  TimesFM 2.5 batches joint multivariate forecasting.
 - Treating p10 as a conversion floor in a client email.
 - Scheduling an unattended forecast job before the experiment acceptance
   contract passes.
