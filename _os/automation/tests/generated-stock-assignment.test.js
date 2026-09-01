@@ -26,10 +26,26 @@ test('a known vertical resolves to an approved board', () => {
   assert.equal(board, 'germantown-dental-group');
 });
 
+test('advertising agency resolves to the approved board', () => {
+  const [board] = resolveGeneratedStockAssignment({
+    slug: 'digital-marketing-service-pro-west-chester-pa',
+    name: 'Digital Marketing Service Pro West Chester PA',
+    category: 'advertising agency',
+  });
+  assert.equal(board, 'category-advertising-agency');
+});
+
+test('smart-signs resolves to the signage board', () => {
+  const [board] = resolveGeneratedStockAssignment({
+    slug: 'smart-signs', name: 'Smart Signs', category: 'signage',
+  });
+  assert.equal(board, 'category-signage');
+});
+
 test('an unknown vertical refuses rather than guessing', () => {
   assert.throws(
     () => resolveGeneratedStockAssignment({
-      slug: 'some-ad-agency', name: 'Some Ad Agency', category: 'advertising agency',
+      slug: 'lasting-impressions', name: 'Lasting Impressions', category: 'unknown-vertical',
     }),
     /No relevant generated-stock category is approved/,
   );
@@ -50,18 +66,18 @@ test('one unapproved vertical does not sink the batch', () => {
   const batch = [
     { slug: 'a-pizza', category: 'pizzeria' },
     { slug: 'b-dental', category: 'dental' },
-    { slug: 'c-ad-agency', category: 'advertising agency' },
+    { slug: 'c-observatory', category: 'observatory' },
   ];
   const { assigned, unassigned } = partitionBatch(batch);
   assert.equal(Object.keys(assigned).length, 2, 'resolvable sites must survive');
   assert.equal(unassigned.length, 1);
-  assert.equal(unassigned[0].slug, 'c-ad-agency');
+  assert.equal(unassigned[0].slug, 'c-observatory');
   // Expected asset count follows the assigned sites, not the batch size.
   assert.equal(Object.keys(assigned).length * 4, 8);
 });
 
 test('a batch with nothing resolvable still fails loudly', () => {
-  const { assigned, unassigned } = partitionBatch([{ slug: 'x', category: 'advertising agency' }]);
+  const { assigned, unassigned } = partitionBatch([{ slug: 'x', category: 'observatory' }]);
   assert.equal(Object.keys(assigned).length, 0);
   assert.equal(unassigned.length, 1);
 });

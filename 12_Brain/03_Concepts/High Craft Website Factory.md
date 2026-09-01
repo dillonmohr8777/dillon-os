@@ -2,7 +2,7 @@
 note_type: concept
 status: active
 created: 2026-08-01
-updated: 2026-08-05
+updated: 2026-08-19
 domain: website production
 maturity: operational
 summary: A website factory scales reusable production and verification while preserving distinct art direction, factual accuracy, accessibility, performance, AEO, human taste, and purposeful interaction detail.
@@ -13,6 +13,7 @@ source_refs:
   - "[[02_Campaigns/AI Site Builder Outreach Engine/AI Site Builder Outreach Engine]]"
   - "[[02_Campaigns/AI Site Builder Outreach Engine/Pipeline Spec]]"
   - "[[12_Brain/05_Projects/2026-07-30 - Dillon OS five-goal operating plan]]"
+  - "[[12_Brain/04_Decisions/2026-08-19 - Site factory lineages]]"
   - "[[Daily-Briefs/aeo-trust-report]]"
   - "C:\\Users\\dillo\\Documents\\Codex\\2026-08-04\\build-the-next-25-websites-based\\DESIGN.md"
   - "C:\\Users\\dillo\\Documents\\Codex\\2026-08-04\\build-the-next-25-websites-based\\batch-phl-2026-08-04-b3\\factory-report.json"
@@ -47,6 +48,11 @@ ventures.
 
 Do not spend Tier B effort on unqualified cold volume. Do not present Tier A as
 bespoke craft when it is not.
+
+Lineage split (2026-08-19): weekly mail/QR batches use `_templates/site-factory/`.
+Daily private concepts use `automation/prospect-radar-next20/`. Radar V2 grades.
+Cloud homepage PRs are not a third factory.
+[[12_Brain/04_Decisions/2026-08-19 - Site factory lineages]]
 
 ## Factory loop
 

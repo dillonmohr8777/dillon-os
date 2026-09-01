@@ -1,7 +1,7 @@
 ---
 note_type: index
 status: active
-updated: 2026-08-01
+updated: 2026-08-19
 tags: [brain, concepts, index]
 created: 2026-08-01
 source_refs: []
@@ -32,6 +32,7 @@ into reusable systems rather than leaving the learning trapped in source notes.
 - [[Local Search and Maps Site Parity]]
 - [[AI Visibility Measurement]]
 - [[Qualified Pipeline Measurement]]
+- [[CMO Lane Cost Discipline]]
 - [[Client Reporting and Outcome Scoreboards]]
 - [[Content Systems and Distribution]]
 - [[High Craft Website Factory]]

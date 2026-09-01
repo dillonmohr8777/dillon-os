@@ -105,7 +105,7 @@ Any new MCP goes through `_os/automation/bin/mcp-gate.js` first.
 ### Tests / lint
 
 ```
-node --test _os/test/brain-hud.test.js _os/test/public-safety.test.js _os/test/workshop-calendar.test.js
+node --test _os/test/brain-hud.test.js _os/test/public-safety.test.js _os/test/workshop-calendar.test.js _os/test/cmo-lane.test.js
 ```
 
 - Deterministic tests cover `12_Brain` structure, HUD brain vitals, skill path
