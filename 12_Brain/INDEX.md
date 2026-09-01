@@ -1,7 +1,7 @@
 ---
 tags: [index, moc, brain]
 canonical: 12_Brain
-updated: 2026-08-15
+updated: 2026-08-19
 ---
 
 # INDEX — the front door
@@ -15,7 +15,8 @@ in the same change.
 >
 > **This GitHub repository is PRIVATE** (since 2026-08-18). Credentials and
 > access inventories still live under
-> [[12_Brain/private/README|12_Brain/private/]] (gitignored).
+> [[12_Brain/private/README|12_Brain/private/]] (gitignored). Decision:
+> [[12_Brain/04_Decisions/2026-08-18 - Keep dillon-os private|Keep dillon-os private]].
 
 > [!tip] Visual views: [[12_Brain/Brain Map.canvas|Brain Map]] ·
 > [[12_Brain/Bases/Clients.base|Clients table]] · [[Dashboard|Dashboard]]
@@ -52,6 +53,9 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 ## Raw captures (Git-safe)
 
 - [[12_Brain/01_Captures/2026-07-04 - obsidian-second-brain-article|2026-07-04 obsidian-second-brain-article]] — blueprint this brain layer was built from.
+- [[12_Brain/01_Captures/2026-08-19 - request to make dillon-os public|2026-08-19 request to make dillon-os public]] — operator asked to publish; visibility was not changed.
+- [[12_Brain/01_Captures/2026-08-19 - claude dual machine full access|2026-08-19 Claude dual-machine full access]] — access path is git auth + shared settings, not public GitHub.
+- [[12_Brain/01_Captures/2026-08-19 - dillon-os briefly public then reverted|2026-08-19 dillon-os briefly public then reverted]] — unauthenticated HTTP 200, then set private again.
 - `12_Brain/01_Captures/sessions/session-log.md` — public cadence stub only.
 - [[12_Brain/01_Captures/X/2026-07-31 - landingfolio-mcp-launch|2026-07-31 landingfolio-mcp-launch]] — untrusted vendor claims plus directly verified endpoint behaviour.
 - [[12_Brain/01_Captures/research/2026-08-14 Franchise Email Sourcing Receipts|2026-08-14 Franchise Email Sourcing Receipts]] — afternoon locator dumps, dead ends, counts (no contact rows).
@@ -66,6 +70,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/05_Projects/Prospect Radar V2|Prospect Radar V2]] — Momentum audit engine wrapping the existing radar.
 - [[12_Brain/05_Projects/Growth Workshop Franchise Pilot|Growth Workshop Franchise Pilot]] — Sean's Aug 27 webinar + free franchise-email engine; canonical Google event + Meet live.
 - [[12_Brain/04_Decisions/README|Decisions]] — bi-temporal decision log.
+- [[12_Brain/04_Decisions/2026-08-18 - Keep dillon-os private|Keep dillon-os private]] — do not flip this vault public while client evidence lives in Git.
 - [[12_Brain/06_Research/README|Research]] — compiled research landing.
 - [[12_Brain/06_Research/Franchise Email Sourcing|Franchise Email Sourcing]] — 720 send-ready franchisee mailboxes; UPS store inboxes are not the send list (expires 2026-11-15).
 - [[12_Brain/08_Memory/README|Memory]] — `current/` + `as-of/` bi-temporal memory.
@@ -88,6 +93,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 
 - [[01_Clients/Client Index|Client Index]] — full roster.
 - [[04_SOPs/SOP Index|SOP Index]] — daily-lane SOPs.
+- [[04_SOPs/Claude Dual Machine Access|Claude Dual Machine Access]] — `gh auth login` on each box; do not make `dillon-os` public.
 - [[10_Sessions/Session Index|Session Index]] — build logs.
 - `11_Agents/` — agent definitions (Master, Google Ads, SEO, Reporting, Web).
 - `System/` — [[System/OS Config|OS Config]]; brain ops in [[12_Brain/System/Second Brain Ops|Second Brain Ops]].

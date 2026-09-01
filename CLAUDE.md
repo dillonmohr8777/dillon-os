@@ -9,6 +9,9 @@ transcripts, and reports belong in the vault — that is what lets the brain
 compound. Credentials, access inventories, Bitwarden locators, and recovery codes
 still go in `12_Brain/private/` (gitignored) and never into tracked files;
 `_os/test/public-safety.test.js` fails the build on any secret-shaped value.
+Claude Code on both operator machines uses `gh auth login` plus tracked
+`.claude/settings.json` (`bypassPermissions`). Do not make this repo public to
+give Claude access.
 
 ## Who this vault serves
 

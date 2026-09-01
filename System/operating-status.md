@@ -1,6 +1,6 @@
 ---
 tags: [system, operating-status]
-last_updated: 2026-07-19
+last_updated: 2026-08-19
 callsign: D.I.L.L.O.N.
 operator: Dillon Mohr
 goal_label: ACTIVE CLIENTS
@@ -31,6 +31,12 @@ The vault was reconciled on 2026-07-12 against current work from the rolling thr
 - Fresh Blends has meetings on the 2026-07-20 calendar, but no current contract evidence was found. Calendar presence alone does not reactivate it or merge it with Replenish.
 - Replenish has current live evidence (getreplenish.com GA4 traffic and a store-specific Miami 56 direction-action email) and remains the active 7-Eleven reporting lane.
 - Align HCM GitHub repository `align-hcm-august-2026-content` contains an unrelated open draft Coinbase paper-trading PR #8. Do not merge it; migration to a dedicated repository and closure are approval-gated.
+
+## Current holds — 2026-08-19
+
+- `dillon-os` stays **private**. A 2026-08-19 request to make this vault public was refused because the tree holds client evidence. See [[12_Brain/04_Decisions/2026-08-18 - Keep dillon-os private]].
+- 2026-08-19T19:14Z: the repo was live-public (unauthenticated HTTP 200). It was set private again immediately. Capture: [[12_Brain/01_Captures/2026-08-19 - dillon-os briefly public then reverted]].
+- Claude Code full access on both machines is `gh auth login` plus tracked `.claude/settings.json` (`bypassPermissions`). SOP: [[04_SOPs/Claude Dual Machine Access]].
 
 ## Operating rules
 
