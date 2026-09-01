@@ -35,10 +35,10 @@ tags:
 3. **TimesFM-3.0 weights are research-only.** They are non-commercial and
    non-production. Do not load client Ads, HubSpot, Gmail, or revenue series
    into that checkpoint.
-4. **TimesFM 2.5 is the production-legal local candidate** for univariate
-   series plus XReg covariates, and only after
+4. **TimesFM 2.5 is the license-permissive local candidate** for univariate
+   series plus XReg covariates. Production promotion still happens only after
    [[12_Brain/05_Projects/Experiments/EXP-TIMESFM-FORECAST-ROUTER|the experiment]]
-   passes.
+   passes and Dillon approves the exact use.
 5. **A forecast never authorizes send, spend, publish, or account changes.**
    It is evidence, like a QA report.
 

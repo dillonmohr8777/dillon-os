@@ -29,18 +29,20 @@ reporting voice.
 
 | Version | Params | Native job | Weight license | Dillon OS lane |
 |---|---|---|---|---|
-| 2.5 | 200M | Univariate, up to 16k context, XReg covariates | Apache-2.0 | Allowed for local, non-external evaluation and later production-legal univariate forecasts |
-| 3.0 | 330M | Multivariate + native past and past-future covariates, one-pass horizon | `timesfm-non-commercial-license-v1.0` | Research only. No client series. No production automations. |
+| 2.5 | 200M | Univariate, up to 16k context, XReg covariates | Apache-2.0 | License-permissive sandbox candidate. Production promotion still requires experiment and human gates. |
+| 3.0 | 330M | Multivariate + native past and past-future covariates, 32-step context patches, 64-step forecast patches, one-pass horizon | `timesfm-non-commercial-license-v1.0` | Research only. No client series. No production automations. |
 | BigQuery `AI.FORECAST` | managed | Univariate today; 3.0 "coming weeks" as of 2026-08-31 | Google Cloud commercial | Blocked until the 3.0 integration is live and a scoped project is approved |
 
 Code lives at `google-research/timesfm`. PyTorch 3.0 weights live at
 `google/timesfm-3.0-pytorch`. First-party agent skill:
 `timesfm-forecasting/SKILL.md` (still 2.5-centric).
 
-## Status: not installed here
+## Status: router implemented; checkpoints not installed
 
-No checkpoint load, GPU probe, or client-series forecast was run for this
-entity page. Installation remains behind
+The source-bound router, request/run schemas, synthetic fixture, and regression
+tests are implemented under `_os/automation/`. A 2026-09-01 machine inventory
+found ample RAM and disk but no NVIDIA GPU. No checkpoint was downloaded or
+loaded, and no client-series forecast ran. Installation remains behind
 [[12_Brain/05_Projects/Experiments/EXP-TIMESFM-FORECAST-ROUTER|EXP-TIMESFM-FORECAST-ROUTER]].
 
 ## How agents must use it

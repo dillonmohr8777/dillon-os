@@ -45,18 +45,29 @@ conversions, and unauthorized launches get into the agenda.
 Every specialist call needs:
 
 ```yaml
+request_id: ""
 client_id: ""          # exact registry route, or portfolio/system if not client work
+route_verified: false
+cadence_verified: false
+leakage_checked: false
 series_id: ""
-frequency: ""          # day / week / month
-targets: []            # past values only, from a named source
-past_covariates: []    # history-only helpers
-future_covariates: []  # known future: promos, holidays, budgets, webinars, posts
+frequency: ""          # hour / day / week / month / quarter
+targets:               # past values only, from a named source
+  - { series_id: "", values: [] }
+past_covariates:       # history-only helpers; each vector matches target context
+  - { series_id: "", values: [] }
+past_future_covariates: # known past + future; each vector is context + horizon
+  - { series_id: "", values: [] }
 horizon: 0
 as_of: ""
+cutoff_at: ""
+source_observed_at: ""
+max_source_age_hours: 0
 source_locators: []
 contains_client_series: false
-model_id: ""           # timesfm-2.5-200m | timesfm-3.0-research | bigquery-timesfm
+model_id: ""           # exact checkpoint or managed-route id
 license_lane: ""       # apache-2.0 | research-only | commercial-managed
+used_for: ""           # agenda-feature | automation-evidence | research
 ```
 
 Reject the call when the client route is ambiguous, the series source is
@@ -66,8 +77,11 @@ match `model_id`.
 ## Output contract
 
 ```yaml
-point: []
-quantiles: { p10: [], p50: [], p90: [] }
+target_outputs:
+  - series_id: ""
+    point: []
+    quantiles:
+      { p10: [], p20: [], p30: [], p40: [], p50: [], p60: [], p70: [], p80: [], p90: [] }
 horizon: 0
 as_of: ""
 model_id: ""
@@ -82,6 +96,24 @@ forbidden_uses:
 
 Store the artifact. Do not paste raw arrays into client copy. Interpret
 bands as "likely range given this history," never as a booked result.
+
+## Enforced router
+
+The contract is executable, not just prose:
+
+```powershell
+node _os/automation/bin/forecast-route.js route `
+  --from _os/automation/fixtures/forecast/synthetic-timesfm3-request.json
+```
+
+The router performs no model inference and no network call. It validates
+source freshness, route/cadence/leakage attestations, context and horizon
+dimensions, model-to-license mapping, client-data restrictions, and allowed
+use. Its only successful current state
+is `sandbox-eligible`; that status still requires the listed human, license,
+hardware, and experiment gates. Run artifacts are checked against
+`12_Brain/schemas/forecast-run.json`, including all nine non-crossing
+quantiles and TimesFM point = p50.
 
 ## How agenda uses it
 

@@ -34,6 +34,7 @@ Agent roles, system state, tooling, automation, and operating infrastructure.
 - [[_os/radar-engine/README|README]]
 - [[_os/README|README]]
 - [[_os/reporting/am-dashboard-build-prompt|am-dashboard-build-prompt]]
+- [[_os/test/fixtures/public-safety-allowlisted|public-safety-allowlisted]]
 
 ## 11_Agents
 
