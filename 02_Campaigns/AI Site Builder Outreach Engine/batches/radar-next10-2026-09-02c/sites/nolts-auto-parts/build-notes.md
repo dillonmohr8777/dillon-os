@@ -189,3 +189,7 @@ order, exact class names from `sections-v2.html`.
 - **Not done / could not verify**: no live browser render this pass (390/1440
   viewport, rendered-font contrast, keyboard trap) — static/code-level review
   only. Hand off to `qa-critic` before this leaves draft status.
+
+## Logo motion (v2, 2026-09-02)
+
+Applied `_kit/v2/elements/logo-motion.css` + `.js`. Header `img.brandmark` (inside the existing `.chip`) and footer `img` (inside its own chip) wrapped in `<span class="logo-motion">` / `logo-motion-foot`. Hero plate at default top-left; the warehouse racking pattern fills most of the frame on both sides so there is no clean corner, but top-left is a repeating background shelf pattern rather than a distinct object. File 77.9 KB. QA harness re-run clean.

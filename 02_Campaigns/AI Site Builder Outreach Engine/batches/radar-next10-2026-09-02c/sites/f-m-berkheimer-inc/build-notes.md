@@ -229,3 +229,7 @@ authored here).
 - **Not verified this pass**: live browser rendering at 390/1440, real
   screen-reader pass, visual QA of the seal/doodle placement. Hand to
   `qa-critic`.
+
+## Logo motion (v2, 2026-09-02)
+
+Applied `_kit/v2/elements/logo-motion.css` + `.js`. Header `img.brandmark` and footer `img` wrapped in `<span class="logo-motion">` / `logo-motion-foot`. Hero plate added at the default top-left position (the hero art's thermostat/condenser/plume elements sit center-right; top-left is empty background). Same header data URI reused for the plate img. File 89.2 KB. QA harness re-run clean.

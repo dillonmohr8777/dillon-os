@@ -191,3 +191,7 @@ authored here).
 - **Not verified this pass**: live browser rendering at 390/1440, real
   screen-reader pass, visual QA of the seal/doodle placement. Hand to
   `qa-critic`.
+
+## Logo motion (v2, 2026-09-02)
+
+Applied `_kit/v2/elements/logo-motion.css` + `.js`. Header `img.brandmark` (inside `.chip`) and footer `img` (bare, no chip) wrapped in `<span class="logo-motion">` / `logo-motion-foot`. Hero plate at default top-left; the equipment casing starts at roughly 17% from the left/top, leaving the actual top-left corner as empty background hatch. File 80.8 KB. QA harness re-run clean.

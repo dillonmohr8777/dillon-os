@@ -207,3 +207,7 @@ Assembly only — no new design elements authored.
 - Not done / could not verify: no headless-browser render check (390/1440
   visual QA); no way to obtain a real logo or real contact info this pass
   (source site still bot-walled). Hands off to `qa-critic`.
+
+## Logo motion (v2, 2026-09-02)
+
+Applied `_kit/v2/elements/logo-motion.css` + `.js`. Header and footer logo are this site's inline SVG wordmark/mark (no `img.brandmark`, so the header shrink-on-scroll rule tied to `.brandmark` does not apply here — pre-existing, unrelated to this pass); both wrapped in `<span class="logo-motion">`. Hero: per the markup contract's designed-logo exception, duplicated the same inline SVG wordmark (not an `<img>`) into a `.hero-logo-plate` inside `.hero-art`. Plate moved to bottom-left (`style="top:auto;bottom:22px"`) because the hero SVG's cloud/rain group sits top-left. File 66.1 KB, under the 120 KB cap. QA harness re-run clean (pass, new logo-motion check green).

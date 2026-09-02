@@ -432,6 +432,54 @@ h3{font-size:var(--fs-h3);letter-spacing:.01em;line-height:1.2}
 /* reduced motion */
 @media (prefers-reduced-motion:reduce){.marquee .track{animation:none}.btn,.card{transition:none}}
 
+
+/* logo-motion.css: appended by logo-motion module pass */
+/* logo-motion.css: motion for the EXACT real logo (raster or svg), never recolored.
+   Markup:
+   header:  <a class="brand"><span class="logo-motion"><img class="brandmark" ...></span></a>
+   hero:    <div class="hero-logo-plate" data-tilt><span class="logo-motion logo-motion-hero"><img ...></span></div>
+            placed inside .hero-art, top-left, above the hero SVG
+   footer:  <span class="logo-motion logo-motion-foot"><img ...></span>
+   Everything stops under prefers-reduced-motion. */
+
+.logo-motion{position:relative;display:inline-block;line-height:0;overflow:hidden;border-radius:6px}
+.logo-motion img,.logo-motion svg{display:block;height:100%;width:auto}
+
+/* 1. entrance: wipe in from the left, tiny rise, settle */
+.logo-motion{clip-path:inset(0 100% 0 0);animation:lm-wipe .9s var(--pa-ease) .15s forwards}
+.logo-motion img,.logo-motion svg{transform:translateY(6px);opacity:0;animation:lm-rise .8s var(--pa-ease) .25s forwards}
+@keyframes lm-wipe{to{clip-path:inset(0 0 0 0)}}
+@keyframes lm-rise{to{transform:translateY(0);opacity:1}}
+
+/* 2. sheen: a soft diagonal light sweeps across every 7 s */
+.logo-motion::after{content:"";position:absolute;inset:-40% -60%;background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.55) 50%,transparent 60%);transform:translateX(-120%) rotate(8deg);animation:lm-sheen 7s ease-in-out 1.6s infinite;pointer-events:none;mix-blend-mode:screen}
+@keyframes lm-sheen{0%{transform:translateX(-120%) rotate(8deg)}18%{transform:translateX(120%) rotate(8deg)}100%{transform:translateX(120%) rotate(8deg)}}
+
+/* 3. header: shrink on scroll (JS toggles .is-scrolled on .site-head) */
+.site-head .brand .brandmark{height:40px;transition:height .35s var(--pa-ease)}
+.site-head.is-scrolled .brand .brandmark{height:32px}
+.site-head .brand:hover .logo-motion::after{animation-duration:1.6s}
+
+/* 4. hero lockup plate: floats, idles, tilts to the pointer */
+.hero-logo-plate{position:absolute;top:22px;left:22px;z-index:2;background:var(--paper);padding:14px 18px;border-radius:12px;box-shadow:0 18px 40px -18px rgba(0,0,0,.5);transform-style:preserve-3d;will-change:transform;animation:lm-float 6s ease-in-out 1.2s infinite}
+.hero-logo-plate .logo-motion-hero img,.hero-logo-plate .logo-motion-hero svg{height:56px}
+@media (min-width:900px){.hero-logo-plate{top:28px;left:28px;padding:18px 24px}.hero-logo-plate .logo-motion-hero img,.hero-logo-plate .logo-motion-hero svg{height:72px}}
+@keyframes lm-float{0%,100%{translate:0 0}50%{translate:0 -7px}}
+.hero-logo-plate[data-tilt]{transition:transform .25s ease-out}
+
+/* 5. footer: rise on reveal */
+.logo-motion-foot{animation-delay:.05s}
+.logo-motion-foot img,.logo-motion-foot svg{height:28px}
+
+/* 6. reduced motion: show everything, move nothing */
+@media (prefers-reduced-motion:reduce){
+  .logo-motion{clip-path:none;animation:none}
+  .logo-motion img,.logo-motion svg{transform:none;opacity:1;animation:none}
+  .logo-motion::after{animation:none;display:none}
+  .hero-logo-plate{animation:none}
+  .site-head .brand .brandmark{transition:none}
+}
+
 :root{
   --brand:#4f7a23;
   --brand-2:#182410;
@@ -557,7 +605,7 @@ h3{font-size:var(--fs-h3);letter-spacing:.01em;line-height:1.2}
 
 <header class="site-head" role="banner">
   <div class="container head-row">
-    <a class="brand" href="#top" aria-label="The Juice Merchant"><span class="chip"><svg viewBox="0 0 270 88" height="40" role="img" aria-label="The Juice Merchant" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    <a class="brand" href="#top" aria-label="The Juice Merchant"><span class="chip"><span class="logo-motion"><svg viewBox="0 0 270 88" height="40" role="img" aria-label="The Juice Merchant" focusable="false" xmlns="http://www.w3.org/2000/svg">
   <g transform="translate(14,16.0)">
     <rect x="0" y="0" width="56" height="56" rx="12" fill="#4f7a23"/>
     <g transform="translate(9.0,9.0) scale(1.587)" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -566,7 +614,7 @@ h3{font-size:var(--fs-h3);letter-spacing:.01em;line-height:1.2}
   </g>
   <text x="84" y="46" font-family="Georgia,'Times New Roman',serif" font-weight="700" letter-spacing="0" font-size="34" fill="#1b2011">The Juice Merchant</text>
   <text x="84" y="70" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" font-weight="600" letter-spacing="0.14em" fill="#1b2011">COLD-PRESSED · NARBERTH</text>
-</svg></span></a>
+</svg></span></span></a>
     <nav class="head-nav" aria-label="Sections">
       <a href="#services">Services</a><a href="#process">How it works</a><a href="#about">About</a><a href="#faq">FAQ</a>
     </nav>
@@ -591,6 +639,16 @@ h3{font-size:var(--fs-h3);letter-spacing:.01em;line-height:1.2}
       </div>
     </div>
     <div class="hero-art" data-parallax>
+      <div class="hero-logo-plate" data-tilt style="top:auto;bottom:22px"><span class="logo-motion logo-motion-hero"><svg viewBox="0 0 270 88" height="40" role="img" aria-label="The Juice Merchant" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(14,16.0)">
+    <rect x="0" y="0" width="56" height="56" rx="12" fill="#4f7a23"/>
+    <g transform="translate(9.0,9.0) scale(1.587)" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="13" r="6.5"/><path d="M12 6.5V13M12 13 8.6 9.6M12 13l3.6-3M12 13 8 16M12 13l4 3"/><path d="M12 3.2c1 1 1.6 2 1.6 3.3"/>
+    </g>
+  </g>
+  <text x="84" y="46" font-family="Georgia,'Times New Roman',serif" font-weight="700" letter-spacing="0" font-size="34" fill="#1b2011">The Juice Merchant</text>
+  <text x="84" y="70" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" font-weight="600" letter-spacing="0.14em" fill="#1b2011">COLD-PRESSED · NARBERTH</text>
+</svg></span></div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" class="pa-hero pa-hero-juice" role="img" aria-label="Cold-pressed juice being pressed and poured">
   <style>
     .pa-hero-juice .plate{animation:ju-press 6s ease-in-out infinite}
@@ -799,12 +857,12 @@ h3{font-size:var(--fs-h3);letter-spacing:.01em;line-height:1.2}
 <footer class="site-foot surface-deep" role="contentinfo">
   <div class="container foot-grid">
     <div class="foot-brand">
-      <svg class="foot-mark" viewBox="0 0 84 88" aria-hidden="true" focusable="false" style="height:28px;width:auto;display:block;margin-bottom:.75rem" xmlns="http://www.w3.org/2000/svg"><g transform="translate(14,16.0)">
+      <span class="logo-motion logo-motion-foot"><svg class="foot-mark" viewBox="0 0 84 88" aria-hidden="true" focusable="false" style="height:28px;width:auto;display:block;margin-bottom:.75rem" xmlns="http://www.w3.org/2000/svg"><g transform="translate(14,16.0)">
     <rect x="0" y="0" width="56" height="56" rx="12" fill="#4f7a23"/>
     <g transform="translate(9.0,9.0) scale(1.587)" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
       <circle cx="12" cy="13" r="6.5"/><path d="M12 6.5V13M12 13 8.6 9.6M12 13l3.6-3M12 13 8 16M12 13l4 3"/><path d="M12 3.2c1 1 1.6 2 1.6 3.3"/>
     </g>
-  </g></svg>
+  </g></svg></span>
       <p>The Juice Merchant serves cold-pressed juice, smoothies, and bowls in Narberth, PA.</p>
     </div>
     <address class="foot-contact">
@@ -915,6 +973,34 @@ h3{font-size:var(--fs-h3);letter-spacing:.01em;line-height:1.2}
   });
 })();
 
+
+/* logo-motion.js: appended by logo-motion module pass */
+/* logo-motion.js: header shrink on scroll + pointer tilt for the hero logo plate.
+   No dependencies. No-op under prefers-reduced-motion. Append after kit.js. */
+(function(){
+  var rm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var head = document.querySelector('.site-head');
+  if (head) {
+    var last = false;
+    var onScroll = function(){
+      var s = (window.scrollY || document.documentElement.scrollTop) > 40;
+      if (s !== last) { head.classList.toggle('is-scrolled', s); last = s; }
+    };
+    window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+  }
+  if (rm) return;
+  var plate = document.querySelector('.hero-logo-plate[data-tilt]');
+  var art = plate && plate.closest('.hero-art');
+  if (!plate || !art) return;
+  var raf = null, tx = 0, ty = 0;
+  function apply(){ plate.style.transform = 'perspective(700px) rotateX(' + (-ty*6) + 'deg) rotateY(' + (tx*8) + 'deg) translateZ(6px)'; raf = null; }
+  art.addEventListener('pointermove', function(e){
+    var r = art.getBoundingClientRect();
+    tx = ((e.clientX - r.left) / r.width - .5); ty = ((e.clientY - r.top) / r.height - .5);
+    if (!raf) raf = requestAnimationFrame(apply);
+  });
+  art.addEventListener('pointerleave', function(){ tx = 0; ty = 0; if (!raf) raf = requestAnimationFrame(apply); });
+})();
 </script>
 </body>
 </html>

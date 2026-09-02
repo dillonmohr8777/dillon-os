@@ -200,3 +200,7 @@ v1 `:root` value per instructions, not the manifest), `--on-brand/--on-deep/
 - Not verified this session: live-browser 390/1440px overflow render and
   actual rendered font contrast (computed via formula, not a Lighthouse/axe
   pass) — flagging for `qa-critic`.
+
+## Logo motion (v2, 2026-09-02)
+
+Applied `_kit/v2/elements/logo-motion.css` + `.js`. Header logo is this site's inline SVG lockup inside `<span class="chip">` and footer is a mark-only inline SVG (`.foot-mark`); both wrapped in `<span class="logo-motion">` / `logo-motion-foot` with the chip kept outside. Hero: per the designed-logo exception, duplicated the same inline SVG lockup (not an `<img>`) into the `.hero-logo-plate`. Plate moved to bottom-left (`top:auto;bottom:22px`) because the citrus press wheel sits top-left in the hero art; bottom-left is clear. File 68 KB. QA harness re-run clean.

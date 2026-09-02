@@ -146,3 +146,7 @@ authored; every SVG, icon, doodle, divider, and seal came from `_kit/v2/elements
   "house" during assembly — text-only, no functional change). `node --check`
   passes on the extracted inline script. Every `href="#..."` and `<use
   href="#...">` resolves. No two art-only sections are adjacent.
+
+## Logo motion (v2, 2026-09-02)
+
+Applied `_kit/v2/elements/logo-motion.css` + `.js`. Header `img.brandmark` (inside `.chip`) and footer `img` (inside its own span chip) wrapped in `<span class="logo-motion">` / `logo-motion-foot`. Hero plate moved to bottom-left (`top:auto;bottom:22px`) because the roadside sign board — the hero's primary subject — occupies the top-left quadrant; the sign pole crosses through the bottom-left area too but is a thin 22px-wide line, an acceptable minor overlap versus covering the sign itself. Seal (`.seal-float`, bottom-right) does not collide with the bottom-left plate, so it stays. File 100.7 KB. QA harness re-run clean.

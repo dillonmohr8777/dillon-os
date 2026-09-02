@@ -138,3 +138,7 @@ footer chip) and the same identity tokens lifted from v1 `:root`
 - Not verified this session: live-browser 390/1440px overflow render and
   actual rendered font contrast (computed via formula, not a Lighthouse/axe
   pass) — flagging for `qa-critic`.
+
+## Logo motion (v2, 2026-09-02)
+
+Applied `_kit/v2/elements/logo-motion.css` + `.js`. Header `img.brandmark` and footer `img` wrapped in `<span class="logo-motion">` / `logo-motion-foot`. Hero plate at default top-left; the wok/steam focal subject is centered/bottom and the paper lanterns near the top corners are secondary decoration, not the focal subject, so no repositioning needed. File 97 KB. QA harness re-run clean.

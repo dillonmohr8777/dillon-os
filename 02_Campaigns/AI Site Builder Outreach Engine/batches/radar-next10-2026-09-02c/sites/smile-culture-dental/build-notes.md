@@ -179,3 +179,7 @@ icon, doodle, divider came from `_kit/v2/elements/`.
   functional change). `node --check` passes on the extracted inline script.
   Every `href="#..."` and `<use href="#...">` resolves. No two art-only
   sections are adjacent.
+
+## Logo motion (v2, 2026-09-02)
+
+Applied `_kit/v2/elements/logo-motion.css` + `.js`. Header `img.brandmark` (inside `.chip`) and footer `img` (inside its own span chip) wrapped in `<span class="logo-motion">` / `logo-motion-foot`. Hero plate at default top-left; the molar illustration and sparkle sit center/right, arcs run along the bottom, top-left is empty. File 109.3 KB. QA harness re-run clean.

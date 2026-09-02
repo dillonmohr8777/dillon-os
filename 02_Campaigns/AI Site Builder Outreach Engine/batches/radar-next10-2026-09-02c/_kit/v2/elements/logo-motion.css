@@ -1,0 +1,45 @@
+/* logo-motion.css: motion for the EXACT real logo (raster or svg), never recolored.
+   Markup:
+   header:  <a class="brand"><span class="logo-motion"><img class="brandmark" ...></span></a>
+   hero:    <div class="hero-logo-plate" data-tilt><span class="logo-motion logo-motion-hero"><img ...></span></div>
+            placed inside .hero-art, top-left, above the hero SVG
+   footer:  <span class="logo-motion logo-motion-foot"><img ...></span>
+   Everything stops under prefers-reduced-motion. */
+
+.logo-motion{position:relative;display:inline-block;line-height:0;overflow:hidden;border-radius:6px}
+.logo-motion img,.logo-motion svg{display:block;height:100%;width:auto}
+
+/* 1. entrance: wipe in from the left, tiny rise, settle */
+.logo-motion{clip-path:inset(0 100% 0 0);animation:lm-wipe .9s var(--pa-ease) .15s forwards}
+.logo-motion img,.logo-motion svg{transform:translateY(6px);opacity:0;animation:lm-rise .8s var(--pa-ease) .25s forwards}
+@keyframes lm-wipe{to{clip-path:inset(0 0 0 0)}}
+@keyframes lm-rise{to{transform:translateY(0);opacity:1}}
+
+/* 2. sheen: a soft diagonal light sweeps across every 7 s */
+.logo-motion::after{content:"";position:absolute;inset:-40% -60%;background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.55) 50%,transparent 60%);transform:translateX(-120%) rotate(8deg);animation:lm-sheen 7s ease-in-out 1.6s infinite;pointer-events:none;mix-blend-mode:screen}
+@keyframes lm-sheen{0%{transform:translateX(-120%) rotate(8deg)}18%{transform:translateX(120%) rotate(8deg)}100%{transform:translateX(120%) rotate(8deg)}}
+
+/* 3. header: shrink on scroll (JS toggles .is-scrolled on .site-head) */
+.site-head .brand .brandmark{height:40px;transition:height .35s var(--pa-ease)}
+.site-head.is-scrolled .brand .brandmark{height:32px}
+.site-head .brand:hover .logo-motion::after{animation-duration:1.6s}
+
+/* 4. hero lockup plate: floats, idles, tilts to the pointer */
+.hero-logo-plate{position:absolute;top:22px;left:22px;z-index:2;background:var(--paper);padding:14px 18px;border-radius:12px;box-shadow:0 18px 40px -18px rgba(0,0,0,.5);transform-style:preserve-3d;will-change:transform;animation:lm-float 6s ease-in-out 1.2s infinite}
+.hero-logo-plate .logo-motion-hero img,.hero-logo-plate .logo-motion-hero svg{height:56px}
+@media (min-width:900px){.hero-logo-plate{top:28px;left:28px;padding:18px 24px}.hero-logo-plate .logo-motion-hero img,.hero-logo-plate .logo-motion-hero svg{height:72px}}
+@keyframes lm-float{0%,100%{translate:0 0}50%{translate:0 -7px}}
+.hero-logo-plate[data-tilt]{transition:transform .25s ease-out}
+
+/* 5. footer: rise on reveal */
+.logo-motion-foot{animation-delay:.05s}
+.logo-motion-foot img,.logo-motion-foot svg{height:28px}
+
+/* 6. reduced motion: show everything, move nothing */
+@media (prefers-reduced-motion:reduce){
+  .logo-motion{clip-path:none;animation:none}
+  .logo-motion img,.logo-motion svg{transform:none;opacity:1;animation:none}
+  .logo-motion::after{animation:none;display:none}
+  .hero-logo-plate{animation:none}
+  .site-head .brand .brandmark{transition:none}
+}

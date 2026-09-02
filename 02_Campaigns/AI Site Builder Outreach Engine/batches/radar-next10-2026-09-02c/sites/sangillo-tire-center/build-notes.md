@@ -154,3 +154,7 @@ Assembly only — no new design elements authored.
 - Not done / could not verify: no headless-browser render check (390/1440
   visual QA), so layout claims above are static-review only, not
   screenshot-verified. Hands off to `qa-critic` for that pass.
+
+## Logo motion (v2, 2026-09-02)
+
+Applied `_kit/v2/elements/logo-motion.css` + `.js`. Header `img` (no chip) and footer `img` (in its own div chip) wrapped in `<span class="logo-motion">` / `logo-motion-foot`. Hero plate moved to bottom-left (`top:auto;bottom:22px`) because the lug-wrench group in the hero art reaches up toward the top-left corner; bottom-left is clear background. Deviation: this site's logo is a large ~16.6 KB base64 PNG already embedded twice (header + footer); a third literal copy in the hero plate would have pushed the file to ~130 KB, over the 120 KB cap. Instead the plate `<img data-clone-logo>` starts with no `src`, and a small inline script (appended after `logo-motion.js`, not a change to the shared module) clones `src`/`alt` from the already-rendered header logo at runtime — same bytes, no duplication, degrades to an empty plate only if JS is disabled. File 114.2 KB, under budget. QA harness re-run clean.
