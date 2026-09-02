@@ -98,6 +98,7 @@ then `claude mcp add` for Higgsfield, then `/mcp` login.
 ## Dated preflight log
 
 - 2026-09-01 (session 2, `ListConnectors`): live Gmail, Slack, Google Drive, Google Calendar, HyperFrames, Indeed, Higgsfield. Degraded Netlify and WordPress.com (installed, `installState: unknown`, not enabled in chat; deploys drafted to approval queue). Blocked Composio, Claude Browser, HubSpot, Ads/GA4/Meta, Semrush (absent from workspace). Higgsfield moved from pending to live.
+- 2026-09-02 (Composio MCP): `google_search_console` active, read_verified true (28-day proof on shadow-heating.com). `googleads` active, read_verified false (429 RESOURCE_EXHAUSTED, DEVELOPER-scope quota, retry ~6.7h). `google_analytics` active, read_verified true (7-day sessions proof on Align HCM GA4, 89 sessions). `meta_ads` initiated, read_verified false (no completed OAuth). `hubspot` initiated, read_verified false (no completed OAuth). `slack` active, read_verified false (status checked only, not probed). `gmail` initiated, read_verified false (status checked only, not probed).
 
 ## Rules
 

@@ -1,14 +1,14 @@
 {
   "schema": 1,
-  "recorded_by": "claude/session 2026-08-18 via Composio MCP",
-  "recorded_at_utc": "2026-08-18T19:25:22Z",
+  "recorded_by": "claude/session 2026-09-02 via Composio MCP",
+  "recorded_at_utc": "2026-09-02T03:58:21Z",
   "note": "Written by an MCP-capable agent, read by _os/automation/bin/connector-health.js. Every status below was observed, not assumed. Do not hand-edit to open a gate.",
   "connectors": [
     {
       "toolkit": "google_search_console",
       "status": "active",
       "read_verified": true,
-      "last_verified_utc": "2026-08-18T19:25:22Z",
+      "last_verified_utc": "2026-09-02T03:58:21Z",
       "accounts": [
         {
           "id": "google_search_console_mooner-urban",
@@ -40,19 +40,27 @@
       "read_proof": {
         "tool": "GOOGLE_SEARCH_CONSOLE_SEARCH_ANALYTICS_QUERY",
         "site_url": "sc-domain:shadow-heating.com",
-        "range": "2026-07-19..2026-08-15",
-        "clicks": 3,
-        "impressions": 164,
-        "ctr": 0.0183,
-        "avg_position": 13.41
+        "account": "google_search_console_mooner-urban",
+        "range": "2026-08-04..2026-08-31",
+        "dimensions": ["date"],
+        "row_limit": 5,
+        "rows": [
+          { "date": "2026-08-04", "clicks": 0, "impressions": 7, "ctr": 0, "position": 4.86 },
+          { "date": "2026-08-05", "clicks": 0, "impressions": 7, "ctr": 0, "position": 9.57 },
+          { "date": "2026-08-06", "clicks": 0, "impressions": 6, "ctr": 0, "position": 19.67 },
+          { "date": "2026-08-07", "clicks": 0, "impressions": 0, "ctr": 0, "position": 0 },
+          { "date": "2026-08-08", "clicks": 0, "impressions": 7, "ctr": 0, "position": 48.57 }
+        ],
+        "clicks_total": 0,
+        "impressions_total": 27
       },
-      "note": "Live and usable. Two accounts: pass the account id explicitly, since account_selection is required."
+      "note": "Live and usable. Two accounts: pass the account id explicitly, since account_selection is required. Site lists are carried forward unchanged from the 2026-08-18 record; a fresh COMPOSIO_MANAGE_CONNECTIONS list on 2026-09-02 confirms every site in both lists is still present on its account (mooner-urban's live property set also now shows sc-domain:immohrtalmarketing.com; kindle-spurt's live set is 165+ properties, sampled list unchanged). Per the requested query shape (dimensions:['date'], row_limit:5), this proof returns the first 5 days of the 28-day window, not a period aggregate, so clicks_total/impressions_total sum only those 5 rows."
     },
     {
       "toolkit": "googleads",
       "status": "active",
       "read_verified": false,
-      "last_verified_utc": "2026-08-18T19:25:22Z",
+      "last_verified_utc": "2026-09-02T03:58:21Z",
       "accounts": [
         {
           "id": "googleads_shover-norard",
@@ -65,32 +73,82 @@
         "code": "RESOURCE_EXHAUSTED",
         "rate_scope": "DEVELOPER",
         "rate_name": "Number of operations for basic access",
-        "retry_delay_seconds": 54858,
-        "request_id": "T9XdqxH4RWn5UB_4ACRV_w"
+        "retry_delay_seconds": 24244,
+        "request_id": "m-b1o1j9a0WdGW3j1KxssA"
       },
-      "note": "OAuth is fine and 16 customer accounts are reachable in principle. The block is the DEVELOPER-scope quota on a Basic-access developer token, exhausted at the time of writing with a ~15h retry. Nothing in this repo or in hidden-scheduled-tasks.tsv calls the Ads API, so the quota is being consumed by another client sharing that token. Fix is quota headroom or Standard access, not re-auth."
+      "note": "OAuth is fine; connection is active with the same 16-customer manager account. GOOGLEADS_LIST_ACCESSIBLE_CUSTOMERS on 2026-09-02 hit the identical DEVELOPER-scope quota seen on 2026-08-18: 429 RESOURCE_EXHAUSTED, 'Number of operations for basic access' (retry ~24244s / ~6.7h this time, vs ~54858s / ~15h then) — same Basic-access developer-token ceiling, still shared across another client's usage, still not a re-auth problem. customer_count is carried forward from the last successful listing; this session's list call errored before it could refresh that number."
     },
     {
       "toolkit": "google_analytics",
       "status": "active",
-      "read_verified": false,
-      "last_verified_utc": "2026-08-18T19:25:22Z",
-      "accounts": [{ "id": "google_analytics_carlin-enlife" }],
-      "note": "Connection reported active by COMPOSIO_MANAGE_CONNECTIONS but no read was executed this session, so read_verified stays false. Verify before relying on it."
+      "read_verified": true,
+      "last_verified_utc": "2026-09-02T03:58:21Z",
+      "accounts": [
+        {
+          "id": "google_analytics_carlin-enlife",
+          "properties": [
+            { "property": "properties/360663315", "label": "barcrawlusa.com/ GA4 - MonsterInsights", "account": "Bar Crawl USA Google Ad #" },
+            { "property": "properties/390008448", "label": "uglysweaterbarcrawls.com - GA4", "account": "Bar Crawl USA Google Ad #" },
+            { "property": "properties/299086253", "label": "BigOrange Marketing - GA4", "account": "BigOrange Marketing" },
+            { "property": "properties/352113918", "label": "Clutch", "account": "BigOrange Marketing" },
+            { "property": "properties/320235048", "label": "Align HCM - GA4", "account": "Align HCM" },
+            { "property": "properties/425431390", "label": "DataStrike", "account": "DataStrike" },
+            { "property": "properties/486650928", "label": "getreplenish.com", "account": "Replenish" },
+            { "property": "properties/515687285", "label": "LinkEZE", "account": "LinkEZE" },
+            { "property": "properties/532537300", "label": "ironicineptocracy.com", "account": "Ironic Ineptocracy" },
+            { "property": "properties/544090354", "label": "AMI Website GA4", "account": "AMI Commercial Cleaning" },
+            { "property": "properties/551783374", "label": "IMMOHRTAL Marketing Solutions Website", "account": "IMMOHRTAL Marketing Solutions" }
+          ]
+        }
+      ],
+      "read_proof": {
+        "tool": "GOOGLE_ANALYTICS_RUN_REPORT",
+        "property": "properties/320235048",
+        "property_label": "Align HCM - GA4",
+        "range": "2026-08-25..2026-08-31",
+        "metric": "sessions",
+        "sessions": 89
+      },
+      "note": "Connection is active and now read-verified. GOOGLE_ANALYTICS_LIST_ACCOUNT_SUMMARIES discovered 10 GA4 accounts / 11 properties, so property ids ARE discoverable from the connection — the 2026-08-18 blocker (no property id, no read executed) is closed. Ran a 7-day sessions total on properties/320235048 (Align HCM - GA4): 89 sessions, 2026-08-25..2026-08-31."
     },
     {
       "toolkit": "meta_ads",
-      "status": "not_connected",
+      "status": "initiated",
       "read_verified": false,
-      "last_verified_utc": "2026-08-18T19:25:22Z",
-      "note": "Not in the connected-toolkit list. `instagram` is connected, which is not the same as Meta Ads. Routines needing Meta delivery data stay blocked."
+      "last_verified_utc": "2026-09-02T03:58:21Z",
+      "accounts": [],
+      "note": "COMPOSIO_MANAGE_CONNECTIONS list on 2026-09-02: status 'initiated', 0 accounts — an auth flow exists but never completed, so there is no active connected account. No OAuth attempted, per instruction. Routines needing Meta delivery data stay blocked."
     },
     {
       "toolkit": "hubspot",
-      "status": "not_connected",
+      "status": "initiated",
       "read_verified": false,
-      "last_verified_utc": "2026-08-18T19:25:22Z",
-      "note": "Not connected via Composio. The jason-fallon-hubspot-agent repo holds a portal-guarded path; treat that as the route, not this connector."
+      "last_verified_utc": "2026-09-02T03:58:21Z",
+      "accounts": [],
+      "note": "COMPOSIO_MANAGE_CONNECTIONS list on 2026-09-02: status 'initiated', 0 accounts. No OAuth attempted, per instruction. The jason-fallon-hubspot-agent repo holds a portal-guarded path; treat that as the route, not this connector."
+    },
+    {
+      "toolkit": "slack",
+      "status": "active",
+      "read_verified": false,
+      "last_verified_utc": "2026-09-02T03:58:21Z",
+      "accounts": [
+        {
+          "id": "slack_blite-troft",
+          "alias": "momentum-digital-agency",
+          "team": "Momentum Digital Agency",
+          "user": "dillonmohr8777"
+        }
+      ],
+      "note": "Connection status only, per task scope for this run — no read probe attempted. Recorded here for a complete Composio picture; D17/D18/W06 do not depend on Slack."
+    },
+    {
+      "toolkit": "gmail",
+      "status": "initiated",
+      "read_verified": false,
+      "last_verified_utc": "2026-09-02T03:58:21Z",
+      "accounts": [],
+      "note": "COMPOSIO_MANAGE_CONNECTIONS list on 2026-09-02: status 'initiated', 0 accounts — no completed OAuth. This differs from the 2026-08-18 memory note, which listed gmail among Composio's connected apps; live state today shows it not active. Connection status only, per task scope — no read probe attempted. D17/D18/W06 do not depend on Gmail."
     }
   ]
 }
