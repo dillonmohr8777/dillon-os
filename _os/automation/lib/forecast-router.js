@@ -37,6 +37,30 @@ const CLIENT_RESEARCH_APPROVALS = Object.freeze({
       'clients/momentum-360/deliverables/2026-09-01-hubspot-chronos-forecast-pilot/inputs/hubspot-forecast-evidence-manifest.json',
     ]),
   }),
+  // Rolling-origin backtest on the same frozen 44-week series. Each origin k
+  // must submit exactly the first k approved values; nothing else is admitted.
+  'EXP-JASON-HUBSPOT-CHRONOS-BACKTEST-20260902': Object.freeze({
+    rolling: true,
+    request_id_prefix: 'forecast-momentum-360-hubspot-contacts-weekly-backtest-20260902',
+    client_id: 'momentum-360',
+    series_id: 'momentum-360-hubspot-contacts-created-weekly',
+    horizon: 4,
+    min_context: 32,
+    model_id: 'amazon/chronos-2',
+    used_for: 'research',
+    data_class: 'sanitized-aggregate',
+    approval_ref: 'direct-user-approval:2026-09-02-jason-hubspot-chronos-rolling-backtest',
+    series_week_starts_from: '2025-10-27',
+    series_values: Object.freeze([
+      0, 0, 0, 5177, 20, 26, 28, 30, 7, 18, 41, 22, 30, 37, 5718, 119,
+      90, 114, 79, 164, 181, 134, 112, 138, 134, 190, 119, 114, 158, 184, 128, 140,
+      149, 160, 143, 89, 91, 94, 115, 133, 87, 107, 137, 89,
+    ]),
+    source_locators: Object.freeze([
+      'hubspot://portal/50612503/contacts/createdate/weekly?cutoff=2026-08-31',
+      'clients/momentum-360/deliverables/2026-09-01-hubspot-chronos-forecast-pilot/inputs/hubspot-contacts-created-weekly.csv',
+    ]),
+  }),
 });
 
 const MODEL_ROUTES = Object.freeze({
@@ -189,6 +213,51 @@ function validateClientExperimentShape(value, label, errors) {
   return true;
 }
 
+function resolveRollingIdentity(subject, approval, label) {
+  const reasons = [];
+  const origin = subject?.client_experiment?.backtest_origin;
+  if (!Number.isInteger(origin)) {
+    reasons.push(`${label} backtest_origin must be an integer for a rolling approval`);
+    return { reasons, origin: null };
+  }
+  const maxOrigin = approval.series_values.length - approval.horizon;
+  if (origin < approval.min_context || origin > maxOrigin) {
+    reasons.push(`${label} backtest_origin ${origin} is outside ${approval.min_context}..${maxOrigin}`);
+  }
+  if (subject.request_id !== `${approval.request_id_prefix}-origin-${origin}`) {
+    reasons.push(`${label} request_id does not match the rolling approval pattern`);
+  }
+  for (const key of ['client_id', 'series_id', 'horizon', 'model_id', 'used_for']) {
+    if (subject[key] !== approval[key]) reasons.push(`${label} ${key} does not match approval`);
+  }
+  for (const key of ['approval_ref', 'data_class']) {
+    if (subject.client_experiment[key] !== approval[key]) {
+      reasons.push(`${label} ${key} does not match approval`);
+    }
+  }
+  if (JSON.stringify(subject.source_locators) !== JSON.stringify(approval.source_locators)) {
+    reasons.push(`${label} source_locators do not match approval`);
+  }
+  return { reasons, origin };
+}
+
+function resolveRollingRequestApproval(request, approval) {
+  const { reasons, origin } = resolveRollingIdentity(request, approval, 'client experiment');
+  if (request.client_experiment.input_fingerprint !== requestInputFingerprint(request)) {
+    reasons.push('client experiment input fingerprint does not match the request');
+  }
+  const expected = Number.isInteger(origin) ? approval.series_values.slice(0, origin) : null;
+  const targets = Array.isArray(request.targets) ? request.targets : [];
+  if (!expected || targets.length !== 1
+    || JSON.stringify(targets[0]?.values) !== JSON.stringify(expected)) {
+    reasons.push('client experiment targets must equal the approved series prefix for this origin');
+  }
+  if ((request.past_covariates || []).length || (request.past_future_covariates || []).length) {
+    reasons.push('client experiment rolling backtest allows no covariates');
+  }
+  return { ok: reasons.length === 0, reasons, experiment_id: request.client_experiment.experiment_id };
+}
+
 function resolveClientRequestApproval(request) {
   const reasons = [];
   if (!request?.contains_client_series) return { ok: false, reasons };
@@ -199,6 +268,7 @@ function resolveClientRequestApproval(request) {
   if (!approval) {
     return { ok: false, reasons: ['client_experiment is not registered for local research'] };
   }
+  if (approval.rolling) return resolveRollingRequestApproval(request, approval);
   for (const key of ['request_id', 'client_id', 'series_id', 'horizon', 'model_id', 'used_for']) {
     if (request[key] !== approval[key]) reasons.push(`client experiment ${key} does not match approval`);
   }
@@ -225,6 +295,13 @@ function resolveClientRunApproval(run) {
   const approval = CLIENT_RESEARCH_APPROVALS[run.client_experiment.experiment_id];
   if (!approval) {
     return { ok: false, reasons: ['client_experiment is not registered for local research'] };
+  }
+  if (approval.rolling) {
+    const rolling = resolveRollingIdentity(run, approval, 'client experiment output');
+    if (!isNonEmptyString(run.client_experiment.input_fingerprint)) {
+      rolling.reasons.push('client experiment output input_fingerprint is required');
+    }
+    return { ok: rolling.reasons.length === 0, reasons: rolling.reasons, experiment_id: run.client_experiment.experiment_id };
   }
   for (const key of ['request_id', 'client_id', 'series_id', 'horizon', 'model_id', 'used_for']) {
     if (run[key] !== approval[key]) reasons.push(`client experiment output ${key} does not match approval`);
@@ -592,6 +669,7 @@ module.exports = {
   FORBIDDEN_USES,
   MODEL_ROUTES,
   QUANTILE_KEYS,
+  requestInputFingerprint,
   routeForecastRequest,
   validateForecastRequest,
   validateForecastRun,
