@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-07-29",
+  "updated": "2026-09-01",
   "contract": "00_Inbox/Automation Deep Analysis 2026-07-29.md",
   "dependency": "12_Brain/DEPENDENCY_PR226.md",
   "automations": [
@@ -114,7 +114,7 @@
       "cadence": "daily/3x week",
       "command": "node _os/automation/bin/qualify.js --adapter indeed --from <signals.json>",
       "external_actions": false,
-      "notes": "Normalizes hiring signals into the shared prospect schema. Does not scrape Indeed live in this PR (fixture/import only \u2014 live scrape is a credential/ToS gate).",
+      "notes": "Normalizes hiring signals into the shared prospect schema. Does not scrape Indeed live in this PR (fixture/import only — live scrape is a credential/ToS gate).",
       "status": "implemented"
     },
     {
@@ -323,7 +323,41 @@
       ],
       "external_actions": false,
       "notes": "Read-only source collection. Curated summaries and locators only; no raw archives, secrets, cross-client writes, sends, posts, labels, archives, publishing, spend, or account changes. Failed connectors do not advance their checkpoint. Registered through the supported Codex scheduler on 2026-08-03.",
-      "status": "active-scheduled"
+      "status": "active-scheduled",
+      "owner": "codex-windows",
+      "owner_note": "Single owner since 2026-09-01: Codex scheduled automation on the Windows box. See 12_Brain/04_Decisions/2026-09-01 - Daily comms single owner.md"
+    },
+    {
+      "id": "daily-communications-brain-workflow-def",
+      "name": "Daily communications brain — Dillon OS workflow definition (reference)",
+      "lane": "intelligence",
+      "tier": 0,
+      "cadence": "not scheduled",
+      "command": "node _os/automation/bin/communication-ingest.js --from <communication-run.json>",
+      "path": "_os/automation/workflows/daily-communications-brain.json",
+      "inputs": [
+        "12_Brain/schemas/daily-communication-run.json"
+      ],
+      "outputs": [],
+      "external_actions": false,
+      "superseded_by": "daily-communications-brain",
+      "notes": "kept as reference definition, not scheduled",
+      "status": "deprecated"
+    },
+    {
+      "id": "daily-morning-orchestrator-dry-board",
+      "name": "Daily morning orchestrator (dry board)",
+      "lane": "intelligence",
+      "tier": 0,
+      "cadence": "not scheduled",
+      "command": "Codex heartbeat automation daily-morning-orchestrator-dry-board",
+      "path": "11_Agents/Rockbot Operating System/workflow-estate/codex-automations/daily-morning-orchestrator-dry-board/memory.md",
+      "inputs": [],
+      "outputs": [],
+      "external_actions": false,
+      "superseded_by": "daily-communications-brain",
+      "notes": "morning dry board folded into the Codex daily-comms run",
+      "status": "deprecated"
     },
     {
       "id": "obsidian-guard-dog",
@@ -426,6 +460,57 @@
       "external_actions": false,
       "status": "implemented",
       "note": "Refuses forbidden port 9222 with exit 3 and marks chrome_isolated not-live unless the process on the port really runs a claude-chrome profile. probe/recommend describe agent-only rungs (WebFetch, WebSearch, Firecrawl) that a CLI cannot drive."
+    },
+    {
+      "id": "marketing-chief-twice-daily-brief",
+      "name": "Marketing Chief 9 AM and 5 PM operational brief (OmniRoute + Sites health)",
+      "lane": "infrastructure",
+      "tier": 0,
+      "cadence": "daily at 9:00 AM and 5:00 PM America/New_York",
+      "command": "Codex heartbeat automation marketing-chief-twice-daily-brief",
+      "path": "11_Agents/Rockbot Operating System/workflow-estate/codex-automations/marketing-chief-twice-daily-brief/memory.md",
+      "inputs": [
+        "C:/Users/dillo/.codex/skills/omniroute-gateway/SKILL.md",
+        "ChatGPT Sites connector project appgprj_6a61488852308191ba5cfb03ff59178f",
+        "MarketingChief-SitesBridge scheduled task state",
+        "C:/Users/dillo/Documents/Codex/projects/client-operations/AGENTS.md"
+      ],
+      "outputs": [
+        "read-only evidence brief (not delivered to Marketing Chief chat)",
+        "11_Agents/Rockbot Operating System/workflow-estate/codex-automations/marketing-chief-twice-daily-brief/memory.md run log"
+      ],
+      "external_actions": false,
+      "owner": "codex-windows",
+      "notes": "automation.toml status=ACTIVE with a real DAILY BYHOUR=9,17 rrule and dated run history through 2026-08-12; this is the twice-daily brief that actually runs on schedule. Read-only OmniRoute + ChatGPT Sites/SitesBridge health check, not an inbox/client/content brief.",
+      "status": "active-scheduled",
+      "note": "Codex scheduled automation (09:00/17:00) checking OmniRoute/ChatGPT-Sites infra health. Reviewed 2026-09-01 against am-report: not a duplicate; kept separate pending Dillon's confirmation."
+    },
+    {
+      "id": "am-report",
+      "name": "AM report (Claude Code skill: inbox, client pulse, directives, content pipeline)",
+      "lane": "intelligence",
+      "tier": 0,
+      "cadence": "on-demand, intended each morning",
+      "command": "/am-report",
+      "path": ".claude/skills/am-report/SKILL.md",
+      "inputs": [
+        "Dashboard.md",
+        "Daily-Briefs/ (newest file)",
+        "System/OS Config.md",
+        "00_Inbox/ including 00_Inbox/slack/",
+        "01_Clients/",
+        "03_Content/"
+      ],
+      "outputs": [
+        "Daily-Briefs/am-report-YYYY-MM-DD.md",
+        "Dashboard.md ## Today section"
+      ],
+      "external_actions": false,
+      "superseded_by": null,
+      "notes": "No automation/cron registration and no Daily-Briefs/am-report-*.md file has ever been produced as of 2026-09-01, so it has no schedule evidence to claim active-scheduled. NOTE: content is not a duplicate of marketing-chief-twice-daily-brief (inbox/client/content vs. OmniRoute/Sites infra health) -- flagged for human review of this pairing, not a functional replacement. Kept as an on-demand skill.",
+      "status": "implemented",
+      "owner": "claude-code-skill",
+      "note": "On-demand Claude Code skill, run by Dillon; never cron-scheduled. Reviewed 2026-09-01 against marketing-chief-twice-daily-brief: different content (morning inbox/client/content brief vs infra health), so not collapsed. Dillon to confirm whether one should absorb the other."
     }
   ],
   "gates": {

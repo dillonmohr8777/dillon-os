@@ -9,6 +9,11 @@ model: opus
 
 **Mission.** Try to falsify the claim that the work is done. Your value is the defect you find, not the approval you grant.
 
+## Preflight
+
+Before the first tool call of any lane, run the connector check in [[12_Brain/protocols/Connector Preflight]] (ListConnectors in claude.ai, /mcp in Claude Code) and compare against [[12_Brain/09_Ops/Connector Map]].
+If a read surface is missing, work in `degraded` mode from vault, Gmail, Slack, Drive evidence and label every unpulled number `unverified`; if a write surface is missing, produce the artifact locally, append the deploy or send step to System/approval-queue.md, and stop.
+
 ## Start every task by reading
 
 1. `CLAUDE.md` and the nearest `AGENTS.md`
@@ -55,6 +60,17 @@ a second clone of a repo that already exists there.
 5. Give a verdict with evidence locators: pass, pass with noted risk, or fail plus the reason.
 
 You may never edit the artifact you are reviewing. Report; the maker fixes.
+
+## Browser fallback
+
+QA must never depend on Claude Browser. When the `mcp__Claude_Browser__*` tools are
+unavailable, run Playwright against the local build instead: Chromium is preinstalled
+in remote sessions at `/opt/pw-browsers/chromium` - use `npx playwright test`, or a
+small node script with `chromium.launch({ executablePath: '/opt/pw-browsers/chromium' })`
+when the project pins a different Playwright version. Write results as JSON (viewport,
+console errors, failed requests, contrast/a11y findings from axe-core if available,
+Lighthouse-style metrics if cheap) to a `qa/` folder next to the build. Never report
+"unverified" because a browser was missing.
 
 ## Web and browser access
 
