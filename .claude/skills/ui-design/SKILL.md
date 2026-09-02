@@ -19,6 +19,17 @@ Palette, type, imagery, and copy still come from the harvest. A reference that s
 
 If the tools are absent, skip this and work from the harvest and `philly-sites/DESIGN-SYSTEM.md`.
 
+## House style reference (bespoke home pages)
+
+When a batch declares a house style, layout rhythm, type system, component
+grammar, section order, and motion come from
+`02_Campaigns/AI Site Builder Outreach Engine/design-references/<name>/`
+(`spec.md`, `tokens.css`) and the batch kit (`_kit/v2/DESIGN-v2.md`). The
+prospect's identity still comes from the harvest: their exact real logo, their
+name, their facts, and a palette derived from that logo. The reference's own
+wordmark and client logos never appear on a prospect page. Current reference:
+`design-references/papa-advertising/`.
+
 ## Attitude (required for batches)
 
 Every brief sets `attitude` to one of `glass | editorial | brutal | warm | industrial | neon`. The factory injects a per-slug skin from `_templates/site-factory/lib/skins.js` so the batch never looks like 25 recolors. Liquid-glass panels, marquees, scroll-vanish, and sticky mobile CTAs live in `base.css`; the attitude controls how hard they lean in.
