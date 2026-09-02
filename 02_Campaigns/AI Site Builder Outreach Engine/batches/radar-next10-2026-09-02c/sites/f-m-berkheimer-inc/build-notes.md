@@ -112,3 +112,51 @@ alpha bounding box, quantized to a 16-color palette, resized to 102x88.
 Embedded as a base64 data URI in header (`height:40px`) and a white-chip footer
 copy (`height:28px`). Final asset 5.8 KB; page weight 31.1 KB → 45.3 KB.
 `alt`/`aria-label` set to "F.M. Berkheimer". QA harness re-run: pass.
+
+## Live-site copy mirror (2026-09-02, corrects the "parked domain" pass above)
+
+`fmberkinc.com` is still parked, but their real live site at
+`https://fmberkheimer.com/` (Squarespace) is reachable and was harvested via
+`curl -sL` with a browser UA plus `WebFetch` on home, `/about-us`, and
+`/contact`. `copy/f-m-berkheimer-inc.json` was rewritten from trade-generic
+placeholder copy to their actual copy, and `harvest_status` moved from
+`failed` to `ok`; `copy_basis` removed.
+
+Facts pulled and cited with `source_urls`: founded 1950 by Foster Berkheimer,
+third-generation family owned, "old-fashioned values with modern technology"
+tagline, "we don't oversell / don't cut corners / don't disappear" line, 6
+services (routine maintenance, new installation, repair, upgrades &
+replacements, indoor air quality, water heaters — up from the prior 5), full
+service-area list, PA license #PA006087, NATE certification, brand
+partnerships (Mitsubishi, Carrier, Generac, AprilAire), phone 717-766-6152,
+address 1400 Williams Grove Road Mechanicsburg PA 17055, hours Mon-Fri
+7:00 AM-4:30 PM + 24/7 emergency. No email address is published anywhere on
+their site (checked home + contact page HTML directly); `contact.email` stays
+the only placeholder. No reviews, ratings, or prices were pulled or invented.
+
+`palette_hint.brand_color_seen` stays `#2f6e94` (matches this batch's already-
+harvested `logo.svg`) — their live custom CSS/color tweaks render at runtime
+via Squarespace and were not resolvable from the fetched static HTML/CSS
+(`custom.css` came back empty; the versioned `site.css` returned only generic
+Squarespace theme defaults). No CSS or icon files were touched in this pass.
+
+### HTML port
+
+- Nav CTA, hero H1/subhead/both CTAs, intro copy, services heading + all 6
+  service cards (duplicated the 5th card block using `#icon-1` again for the
+  new "Water Heaters" card since no 6th icon exists in `icons.svg` — icon
+  markup itself untouched), split-section copy, About heading/body (surface
+  class swapped `surface-deep` → `surface-panel` since the new proof strip
+  now owns the deep surface directly above it — no CSS edited, existing
+  utility class only), FAQ (3 questions → 4, all from their site), marquee (5
+  items → 7), CTA band, footer address/contact list and copyright line.
+- Added a proof strip (`id="proof"`, `surface-deep`) using the `.stats` /
+  `.stat` / `.stat-n` / `.stat-l` markup and CSS ported verbatim from
+  `../sangillo-tire-center/index.html`, plus its `[data-count]` count-up JS
+  ported into this page's script block (was previously trimmed out as
+  unused). Three stats: 75+ years (since 1950), address, 24/7 emergency.
+- Logo, hero art, icon sprite, and all other CSS left untouched.
+- Verified: `node --check` on the extracted `<script>` block passes; every
+  `href="#..."` anchor (`about`, `contact`, `faq`, `get-estimate`, `main`,
+  `services`, `top`, `icon-1..5`) resolves to a matching `id` in the file
+  (grep-diffed both sets).

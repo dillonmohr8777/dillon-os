@@ -15,7 +15,7 @@ source_refs:
 
 | Slug | Verdict | Reason |
 |---|---|---|
-| f-m-berkheimer-inc | approve | passes; parked domain so contact fields are placeholders, best pitch in the batch |
+| f-m-berkheimer-inc | approve | passes; real logo and copy from fmberkheimer.com, 3 proof items, email placeholder only |
 | the-juice-merchant | approve | passes; parked domain, trade-generic copy, contact placeholders |
 | golden-sea | approve | passes; fully sourced copy, zero placeholders |
 | specks-broasted-chicken | approve | passes; sourced copy, email placeholder only |
@@ -33,5 +33,5 @@ Conditions carried into the deploy line:
 - Webfont rendering unverified in the sandbox.
 - Three sites carry contact placeholders; confirm phone and address before any mailer.
 - Logos: real logos harvested from live sites for 8 of 10 (source URLs in _kit/design/manifest.json); designed placeholders remain for the-juice-merchant and advance-exterior-solutions.
-- f-m-berkheimer-inc: the radar graded the parked fmberkinc.com, but the business has a live site at fmberkheimer.com. Its copy here is trade-generic; re-harvest from the live site before mailing.
+- f-m-berkheimer-inc: the radar graded the parked fmberkinc.com, but the business has a live site at fmberkheimer.com. Copy re-harvested from the live site on 2026-09-02; harvest ok, email is the only placeholder.
 - the-juice-merchant: the Narberth location is reportedly closed (unverified, from search results). Confirm the business is operating before mailing.
