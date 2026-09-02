@@ -1,0 +1,110 @@
+{
+  "slug": "union-chill-mat-company",
+  "business_name": "Union Chill Mat Company",
+  "vertical": "hvac",
+  "town": "Zelienople, Butler County",
+  "source_urls": [
+    "https://www.unionchill.com/",
+    "https://unionchill.com/about/",
+    "https://unionchill.com/rentals/",
+    "https://unionchill.com/products/"
+  ],
+  "palette_hint": {
+    "brand_color_seen": null,
+    "notes": "WebFetch returned rendered text content only, no CSS or hex values captured. No brand color confirmed."
+  },
+  "voice": "Plainspoken industrial-supplier voice, built around product names and specs rather than persuasion. Talks in equipment terms (indirect-fired, ducted, ton capacity) and acquisition options, not sales language.",
+  "headline": "Industrial Heating And Cooling Equipment Since 1946",
+  "subhead": "Union Chill Mat Company manufactures, rents, and sells Ultramatic indirect-fired heaters, Red Rocket radiant heaters, portable air conditioners, and industrial fans out of Zelienople, Pennsylvania. Purchase, rent, lease, or refurbish equipment sized to the job.",
+  "cta_primary": {
+    "label": "Request Rental Info",
+    "note": "Routes to the site's existing rentals/contact request; source is listed on unionchill.com/rentals/ ('for rental information and pricing')."
+  },
+  "cta_secondary": {
+    "label": "Call (800) 432-8441",
+    "note": "Their published toll-free number from unionchill.com."
+  },
+  "intro": "Union Chill Mat Company has built temperature-control equipment since 1946, starting with cooling mats for steel mills before expanding into the Red Rocket radiant heater, the Clayton Fan, and the Ultramatic indirect-fired heater for construction and aviation work. Today the line covers vented and ducted heaters, portable air conditioning from 1 to 50 tons, generators, dehumidifiers, and industrial fans, available to purchase, rent, lease, or refurbish out of the Zelienople Industrial Park.",
+  "services": [
+    {
+      "title": "Ultramatic Indirect-Fired Heaters",
+      "blurb": "Vented, ducted heaters that provide safe, 100% uncontaminated heat for construction and industrial sites. Available for purchase, rental, lease, or refurbishment.",
+      "icon_hint": "flame"
+    },
+    {
+      "title": "Red Rocket Radiant Heaters",
+      "blurb": "Industrial radiant heating equipment developed from the company's original steel-mill work. Built for job-site and plant-floor use.",
+      "icon_hint": "heater"
+    },
+    {
+      "title": "Portable Air Conditioning Systems",
+      "blurb": "Customizable A/C systems from 1 to 50 tons of capacity. Sized to the job, not sold off a fixed shelf.",
+      "icon_hint": "snowflake"
+    },
+    {
+      "title": "Industrial Fans",
+      "blurb": "Industrial-duty fans for ventilation and air movement on construction and manufacturing sites.",
+      "icon_hint": "fan"
+    },
+    {
+      "title": "Generators",
+      "blurb": "Portable generator equipment offered alongside the heating and cooling line, available for purchase or rental.",
+      "icon_hint": "bolt"
+    },
+    {
+      "title": "Dehumidifiers",
+      "blurb": "Industrial dehumidification equipment offered as part of the full temperature-control lineup.",
+      "icon_hint": "droplet"
+    }
+  ],
+  "proof": [
+    {
+      "label": "In business since",
+      "value": "1946",
+      "source_url": "https://unionchill.com/about/"
+    },
+    {
+      "label": "Acquisition options",
+      "value": "Purchase, rent, lease, or refurbish",
+      "source_url": "https://unionchill.com/about/"
+    },
+    {
+      "label": "Portable A/C capacity range",
+      "value": "1 to 50 tons, customizable",
+      "source_url": "https://unionchill.com/about/"
+    }
+  ],
+  "about": "Union Chill Mat Company started in 1946 producing cooling mats for steel mills. That work led to the Red Rocket radiant heater and the Clayton Fan for industrial use, then the Ultramatic indirect-fired heater built for construction and aviation sectors. In the 1980s the company added portable air conditioning systems to the line. The equipment ships from the Zelienople Industrial Park in Zelienople, Pennsylvania, and serves industrial and commercial customers including aircraft manufacturers, power plants, and steel mills. Every product line is available to purchase, rent, lease, or have refurbished rather than only sold new.",
+  "faq": [
+    {
+      "q": "Can equipment be rented instead of purchased?",
+      "a": "Yes. Union Chill Mat Company offers its heaters, air conditioners, generators, and dehumidifiers for purchase, rent, lease, or refurbishment."
+    },
+    {
+      "q": "What size air conditioning systems are available?",
+      "a": "Portable A/C systems are available from 1 to 50 tons of capacity, sized to the job."
+    },
+    {
+      "q": "What kind of heat does the Ultramatic provide?",
+      "a": "The Ultramatic is a vented, indirect-fired, ducted heater that provides safe, 100% uncontaminated heat."
+    }
+  ],
+  "marquee": [
+    "Ultramatic Indirect-Fired Heaters",
+    "Red Rocket Radiant Heaters",
+    "Portable A/C Systems, 1-50 Tons",
+    "Industrial Fans",
+    "Generators",
+    "Dehumidifiers",
+    "Purchase, Rent, Lease, or Refurbish",
+    "Serving Steel, Aviation, and Power Plants Since 1946"
+  ],
+  "contact": {
+    "phone": "(800) 432-8441 / (724) 452-6400",
+    "address": "P.O. Box 250, Zelienople Industrial Park, Zelienople, PA 16063",
+    "hours": "PLACEHOLDER",
+    "email": "PLACEHOLDER"
+  },
+  "placeholders": ["contact.hours", "contact.email"],
+  "harvest_status": "ok"
+}

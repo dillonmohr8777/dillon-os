@@ -1,0 +1,49 @@
+<!-- arcs-professional.svg — clean concentric geometric arcs.
+     Vertical: dental, medical, legal, insurance, any quiet professional brand.
+     Paste inline, keep aria-hidden="true". currentColor only; transform and
+     opacity only, so it stays effectively free on an idle tab. -->
+<svg class="art art-arcs" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice"
+     role="presentation" aria-hidden="true" focusable="false"
+     xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .art-arcs .ring{transform-box:fill-box;transform-origin:50% 50%;
+      animation:aa-turn 90s linear infinite;will-change:transform}
+    .art-arcs .r2{animation-duration:120s;animation-direction:reverse}
+    .art-arcs .r3{animation-duration:64s}
+    .art-arcs .r4{animation-duration:150s;animation-direction:reverse}
+    /* Full 360deg rotations and a symmetric breathe: both end where they
+       began, so there is no seam at loop restart. */
+    .art-arcs .breathe{transform-box:fill-box;transform-origin:50% 50%;
+      animation:aa-breathe 14s ease-in-out infinite}
+    .art-arcs .dot{animation:aa-fade 11s ease-in-out infinite}
+    .art-arcs .d2{animation-delay:-3.6s}
+    .art-arcs .d3{animation-delay:-7.2s}
+    @keyframes aa-turn{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+    @keyframes aa-breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.035)}}
+    @keyframes aa-fade{0%,100%{opacity:.2}50%{opacity:.55}}
+    @media (prefers-reduced-motion:reduce){
+      .art-arcs .ring,.art-arcs .breathe,.art-arcs .dot{animation:none}}
+  </style>
+  <g class="breathe" transform="translate(860 380)" fill="none"
+     stroke="currentColor">
+    <circle class="ring r1" r="330" stroke-width="1.6" opacity=".35"
+            stroke-dasharray="620 1450"/>
+    <circle class="ring r2" r="268" stroke-width="3" opacity=".55"
+            stroke-dasharray="420 1260"/>
+    <circle class="ring r3" r="205" stroke-width="1.4" opacity=".4"
+            stroke-dasharray="180 1110"/>
+    <circle class="ring r4" r="142" stroke-width="6" opacity=".28"
+            stroke-dasharray="300 590"/>
+    <circle r="84" stroke-width="1.2" opacity=".3"/>
+  </g>
+  <g fill="none" stroke="currentColor" stroke-linecap="round">
+    <path class="ring r2" d="M120 690 A420 420 0 0 1 540 270" stroke-width="2"
+          opacity=".3"/>
+    <path d="M0 745 A520 520 0 0 1 520 225" stroke-width="1.2" opacity=".22"/>
+  </g>
+  <g fill="currentColor">
+    <circle class="dot d1" cx="540" cy="270" r="7"/>
+    <circle class="dot d2" cx="860" cy="50" r="5"/>
+    <circle class="dot d3" cx="1148" cy="380" r="6"/>
+  </g>
+</svg>

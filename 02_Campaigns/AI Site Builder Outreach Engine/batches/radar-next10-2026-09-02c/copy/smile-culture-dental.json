@@ -1,0 +1,108 @@
+{
+  "slug": "smile-culture-dental",
+  "business_name": "Smile Culture Dental",
+  "vertical": "dentist",
+  "town": "Huntingdon Valley, PA",
+  "source_urls": [
+    "https://smileculture.com/",
+    "https://smileculture.com/huntingdon-valley/",
+    "https://smileculture.com/huntingdon-valley/meet-the-doctors/"
+  ],
+  "palette_hint": {
+    "brand_color_seen": null,
+    "notes": "Not confirmed by fetch (text-only extraction, no rendered screenshot); leave palette derivation to a visual harvest pass rather than guessing."
+  },
+  "voice": "Warm and reassurance-forward, leaning on words like kindness, comfort, and transparency rather than clinical jargon. Confident about credentials but frames everything around how the patient will feel, not just what's done.",
+  "headline": "Smiles Elevated By Kindness In Huntingdon Valley",
+  "subhead": "Exceptional dentistry, transparent care, from a Huntingdon Valley team that accepts all PPO insurance and offers virtual consultations.",
+  "cta_primary": {
+    "label": "Book a Consultation",
+    "note": "Directs to their existing consultation/contact flow; no new booking system implied."
+  },
+  "cta_secondary": {
+    "label": "Call the Office",
+    "note": "Click-to-call using their published Huntingdon Valley number."
+  },
+  "intro": "Smile Culture Dental in Huntingdon Valley is built around three words: kindness, comfort, and transparency. The team, led by Dr. Harshil Boghara and Dr. Kushal Parikh alongside general dentists, an orthodontist, and specialists, offers everything from routine exams and cleanings to implants, veneers, Invisalign, and emergency care. Every PPO insurance plan is accepted, and virtual consultations are available for patients who want to start the conversation before coming in. The practice was recognized among Top Dentists 2025.",
+  "services": [
+    {
+      "title": "Preventative & General Care",
+      "blurb": "Dental exams, professional teeth cleanings, tooth-colored fillings, and preventative care to keep small problems from becoming big ones.",
+      "icon_hint": "tooth-check"
+    },
+    {
+      "title": "Dental Implants",
+      "blurb": "Implant treatment from a team with advanced implantology training, including doctors completing fellowships with the International Congress of Oral Implantology.",
+      "icon_hint": "implant"
+    },
+    {
+      "title": "Veneers & Cosmetic Dentistry",
+      "blurb": "Veneers and cosmetic treatments handled by doctors with advanced cosmetic dentistry training and American Academy of Cosmetic Dentistry membership.",
+      "icon_hint": "smile"
+    },
+    {
+      "title": "Orthodontics & Invisalign",
+      "blurb": "Orthodontic services and Invisalign clear aligners from Dr. Adam Taee, a top Invisalign provider since 2017.",
+      "icon_hint": "aligner"
+    },
+    {
+      "title": "Emergency Dental Care",
+      "blurb": "Emergency dental care for unexpected pain or damage, without waiting weeks for an opening.",
+      "icon_hint": "emergency"
+    },
+    {
+      "title": "Facial Aesthetics",
+      "blurb": "Facial rejuvenation and injectables, Morpheus8, Lumecca IPL treatments, and laser hair removal offered alongside dental care.",
+      "icon_hint": "aesthetics"
+    }
+  ],
+  "proof": [
+    {
+      "label": "Recognition",
+      "value": "Top Dentists 2025",
+      "source_url": "https://smileculture.com/huntingdon-valley/"
+    },
+    {
+      "label": "Dr. Boghara recognition",
+      "value": "Top Doctor in Philadelphia for four consecutive years",
+      "source_url": "https://smileculture.com/huntingdon-valley/meet-the-doctors/"
+    },
+    {
+      "label": "Insurance",
+      "value": "Accepts all PPO insurance",
+      "source_url": "https://smileculture.com/huntingdon-valley/"
+    }
+  ],
+  "about": "Smile Culture Dental's Huntingdon Valley team is led by Dr. Harshil Boghara, CEO and Clinical Director, a Temple University Kornberg School of Dentistry graduate with advanced training in cosmetic dentistry and implantology, recognized as a Top Doctor in Philadelphia for four consecutive years. Co-Owner Dr. Kushal Parikh graduated Summa Cum Laude from Temple with the Dean's Award for Clinical Excellence in Patient Care and holds advanced implantology and full-mouth rehabilitation certification. General dentists Dr. Tony Tharakan and Dr. Miraj Dudhat and orthodontist Dr. Adam Taee, a top Invisalign provider since 2017 with a research fellowship at Harvard School of Dental Medicine, round out the clinical team. The office describes its approach as bringing transparency, technology, and trust together, with a philosophy that merging cutting-edge technology with a highly trained team is the key to delivering top-tier dentistry in a warm, welcoming environment. Located at 2150 E County Line Rd. alongside Smile Culture's Trooper, Trevose, Glen Mills, and Fairless Hills offices, and a member of the Pennsylvania Dental Association, American Dental Association, and International Congress of Oral Implantologists.",
+  "faq": [
+    {
+      "q": "Does Smile Culture Dental accept my insurance?",
+      "a": "The Huntingdon Valley office accepts all PPO insurance plans."
+    },
+    {
+      "q": "Can I start with a virtual consultation?",
+      "a": "Yes. Virtual consultations are available for orthodontic and implant questions before you come in."
+    },
+    {
+      "q": "What are the office hours?",
+      "a": "Monday 9AM-7PM, Tuesday 9AM-5PM, Wednesday-Thursday 8AM-5PM, and Friday 8AM-2PM."
+    }
+  ],
+  "marquee": [
+    "Smiles Elevated By Kindness",
+    "Exceptional Dentistry",
+    "Transparent Care",
+    "All PPO Insurance Accepted",
+    "Virtual Consultations Available",
+    "Top Dentists 2025",
+    "Comfort & Communication First"
+  ],
+  "contact": {
+    "phone": "267-715-7373",
+    "address": "2150 E County Line Rd., Huntingdon Valley, PA 19006",
+    "hours": "Mon 9AM-7PM, Tue 9AM-5PM, Wed-Thu 8AM-5PM, Fri 8AM-2PM",
+    "email": "PLACEHOLDER"
+  },
+  "placeholders": ["email", "palette_hint.brand_color_seen"],
+  "harvest_status": "ok"
+}

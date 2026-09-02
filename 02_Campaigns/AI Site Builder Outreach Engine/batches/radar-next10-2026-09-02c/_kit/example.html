@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="Structure demo for the radar-next10-2026-09-02c kit. Not a real business.">
+<title>Kit demo — radar-next10-2026-09-02c</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<!-- Ship one self-contained index.html per site: inline kit.css in a <style>
+     and kit.js in a <script>. This demo links them so the kit stays editable. -->
+<link rel="stylesheet" href="kit.css">
+<style>
+  /* Per-site skin. This is the ONLY block a builder edits. Never fork kit.css. */
+  .slug-demo{
+    --brand:#1f5f5b;      /* sampled from their live site */
+    --brand-2:#10201f;    /* deep neutral, tinted toward brand */
+    --ink:#151b1a;
+    --paper:#faf7f1;
+    --accent:#e07a35;
+    --on-brand:#ffffff; --on-deep:#f3efe8; --on-accent:#12100e;
+    --font-display:"Fraunces",Georgia,"Times New Roman",serif;
+    --font-text:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  }
+</style>
+</head>
+<body class="slug-demo">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap bar">
+    <a class="brandmark" href="#top">Example Trade Co.</a>
+    <nav class="nav" aria-label="Primary">
+      <a class="nav-link" href="#services">Services</a>
+      <a class="nav-link" href="#proof">Why us</a>
+      <a class="btn btn-primary" href="#contact">Request a quote</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO — the one loud motion moment on the page. The art is decorative and
+       sits behind the copy in a full-bleed slot. Swap in any file from art/. -->
+  <section class="hero" id="top">
+    <div class="hero-art" data-parallax="12">
+<svg class="art art-arcs" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice"
+     role="presentation" aria-hidden="true" focusable="false"
+     xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .art-arcs .ring{transform-box:fill-box;transform-origin:50% 50%;
+      animation:aa-turn 90s linear infinite;will-change:transform}
+    .art-arcs .r2{animation-duration:120s;animation-direction:reverse}
+    .art-arcs .r3{animation-duration:64s}
+    .art-arcs .r4{animation-duration:150s;animation-direction:reverse}
+    .art-arcs .breathe{transform-box:fill-box;transform-origin:50% 50%;
+      animation:aa-breathe 14s ease-in-out infinite}
+    .art-arcs .dot{animation:aa-fade 11s ease-in-out infinite}
+    .art-arcs .d2{animation-delay:-3.6s}
+    .art-arcs .d3{animation-delay:-7.2s}
+    @keyframes aa-turn{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+    @keyframes aa-breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.035)}}
+    @keyframes aa-fade{0%,100%{opacity:.2}50%{opacity:.55}}
+    @media (prefers-reduced-motion:reduce){
+      .art-arcs .ring,.art-arcs .breathe,.art-arcs .dot{animation:none}}
+  </style>
+  <g class="breathe" transform="translate(860 380)" fill="none" stroke="currentColor">
+    <circle class="ring r1" r="330" stroke-width="1.6" opacity=".35" stroke-dasharray="620 1450"/>
+    <circle class="ring r2" r="268" stroke-width="3" opacity=".55" stroke-dasharray="420 1260"/>
+    <circle class="ring r3" r="205" stroke-width="1.4" opacity=".4" stroke-dasharray="180 1110"/>
+    <circle class="ring r4" r="142" stroke-width="6" opacity=".28" stroke-dasharray="300 590"/>
+    <circle r="84" stroke-width="1.2" opacity=".3"/>
+  </g>
+  <g fill="none" stroke="currentColor" stroke-linecap="round">
+    <path class="ring r2" d="M120 690 A420 420 0 0 1 540 270" stroke-width="2" opacity=".3"/>
+    <path d="M0 745 A520 520 0 0 1 520 225" stroke-width="1.2" opacity=".22"/>
+  </g>
+  <g fill="currentColor">
+    <circle class="dot d1" cx="540" cy="270" r="7"/>
+    <circle class="dot d2" cx="860" cy="50" r="5"/>
+    <circle class="dot d3" cx="1148" cy="380" r="6"/>
+  </g>
+</svg>
+    </div>
+    <div class="wrap hero-copy">
+      <!-- No data-reveal on the h1: the headline is readable at first paint. -->
+      <p class="eyebrow">Placeholder eyebrow</p>
+      <h1>One claim, in their words, in under nine words.</h1>
+      <p class="lead">A single supporting line. No adjectives standing in for
+        facts, and never an invented phone number, price, or review.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#contact">Request a quote</a>
+        <a class="btn btn-ghost" href="#services">See what we do</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE — duplicate the item list exactly twice; second copy hidden. -->
+  <div class="marquee surface-panel" tabindex="0" aria-label="Service areas">
+    <div class="marquee-track">
+      <span class="marquee-item">Placeholder town</span>
+      <span class="marquee-item">Placeholder town</span>
+      <span class="marquee-item">Placeholder town</span>
+      <span class="marquee-item">Placeholder town</span>
+      <span class="marquee-item" aria-hidden="true">Placeholder town</span>
+      <span class="marquee-item" aria-hidden="true">Placeholder town</span>
+      <span class="marquee-item" aria-hidden="true">Placeholder town</span>
+      <span class="marquee-item" aria-hidden="true">Placeholder town</span>
+    </div>
+  </div>
+
+  <!-- SPLIT — art panel, not a photo. aspect-ratio holds the box: no shift. -->
+  <section class="surface-paper">
+    <div class="wrap split">
+      <div class="split-copy" data-reveal="left">
+        <p class="eyebrow">Who we are</p>
+        <h2>A second claim, grounded in something checkable.</h2>
+        <p>Two short paragraphs at most. Body copy stays inside the 68ch
+          measure so the line length never fights the reader.</p>
+        <p><a href="#contact">A quiet inline link</a> beats a second button.</p>
+      </div>
+      <div class="split-art" data-reveal="right" data-parallax="8">
+        <svg viewBox="0 0 400 300" aria-hidden="true" focusable="false"
+             xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor">
+          <circle cx="200" cy="150" r="110" stroke-width="1.5" opacity=".5"/>
+          <circle cx="200" cy="150" r="72" stroke-width="4" opacity=".3"/>
+          <path d="M40 260 A200 200 0 0 1 240 60" stroke-width="2" opacity=".4"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS — the real number is already in the HTML; JS only animates to it. -->
+  <section class="surface-deep" id="proof">
+    <div class="wrap">
+      <h2 data-reveal>Proof, stated as facts.</h2>
+      <div class="stats" data-stagger>
+        <div class="stat" data-reveal>
+          <span class="stat-n" data-count="38" data-suffix="+">38+</span>
+          <span class="stat-l">Placeholder metric</span>
+        </div>
+        <div class="stat" data-reveal>
+          <span class="stat-n" data-count="1500" data-suffix="">1500</span>
+          <span class="stat-l">Placeholder metric</span>
+        </div>
+        <div class="stat" data-reveal>
+          <span class="stat-n" data-count="4.9" data-decimals="1">4.9</span>
+          <span class="stat-l">Placeholder metric</span>
+        </div>
+        <div class="stat" data-reveal>
+          <span class="stat-n" data-count="24" data-suffix="/7">24/7</span>
+          <span class="stat-l">Placeholder metric</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES — surface alternates again; never two the same in a row. -->
+  <section class="surface-panel" id="services">
+    <div class="wrap">
+      <p class="eyebrow">What we do</p>
+      <h2 data-reveal>Three or six services, never five.</h2>
+      <div class="services mt-6" data-stagger>
+        <article class="card" data-reveal>
+          <svg class="card-icon" viewBox="0 0 44 44" aria-hidden="true" fill="none"
+               stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="22" cy="22" r="16"/><path d="M22 12v10l7 5"/>
+          </svg>
+          <h3>Service name</h3>
+          <p>One sentence that says what it is, not how great it is.</p>
+        </article>
+        <article class="card" data-reveal>
+          <svg class="card-icon" viewBox="0 0 44 44" aria-hidden="true" fill="none"
+               stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 30h28M12 30V16l10-8 10 8v14"/>
+          </svg>
+          <h3>Service name</h3>
+          <p>One sentence that says what it is, not how great it is.</p>
+        </article>
+        <article class="card" data-reveal>
+          <svg class="card-icon" viewBox="0 0 44 44" aria-hidden="true" fill="none"
+               stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
+            <rect x="9" y="9" width="26" height="26" rx="6"/><path d="M16 22h12"/>
+          </svg>
+          <h3>Service name</h3>
+          <p>One sentence that says what it is, not how great it is.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND — one primary action, nothing competing with it. -->
+  <section class="cta surface-accent" id="contact">
+    <div class="wrap">
+      <h2 data-reveal>One action, asked for plainly.</h2>
+      <p data-reveal>Phone and address stay placeholders until the brief
+        supplies them.</p>
+      <div class="cta-actions">
+        <a class="btn btn-solid" href="#contact">Request a quote</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>Example Trade Co.</h4>
+        <address>Placeholder address<br>Placeholder, PA</address>
+      </div>
+      <nav aria-label="Footer">
+        <h4>Site</h4>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#proof">Why us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h4>Hours</h4>
+        <ul><li>Placeholder hours</li></ul>
+      </div>
+    </div>
+    <p class="foot-note">
+      <span>Demo layout for radar-next10-2026-09-02c. Not a live business.</span>
+      <span>No photography: all art is CSS and inline SVG.</span>
+    </p>
+  </div>
+</footer>
+
+<script src="kit.js" defer></script>
+</body>
+</html>

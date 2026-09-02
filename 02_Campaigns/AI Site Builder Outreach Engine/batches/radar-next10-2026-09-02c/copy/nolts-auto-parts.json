@@ -1,0 +1,104 @@
+{
+  "slug": "nolts-auto-parts",
+  "business_name": "Nolt's Auto Parts #2",
+  "vertical": "car-parts",
+  "town": "Denver, Lancaster County, PA",
+  "source_urls": [
+    "http://noltsautoparts.com/index.shtml",
+    "http://noltsautoparts.com/location.shtml",
+    "http://noltsautoparts.com/linecard.shtml",
+    "http://noltsautoparts.com/aboutus.shtml"
+  ],
+  "palette_hint": {
+    "brand_color_seen": null,
+    "notes": "Site is a legacy frames/shtml build (copyright 2002) fetched via curl through the proxy after WebFetch returned HTTP 503 twice; no rendered screenshot taken, so no palette confirmed."
+  },
+  "voice": "Plain and trade-focused, written for the automotive dealer rather than a retail shopper. No sales language, just a tagline about steady growth since 1959 and a straight list of the manufacturer lines carried.",
+  "headline": "Serving Lancaster County's Auto Dealers Since 1959",
+  "subhead": "Nolt's Auto Parts #2 in Denver, PA is one of nine Nolt's Factory Warehouse stores stocking parts for the automotive dealer trade.",
+  "cta_primary": {
+    "label": "Request the Parts Catalog",
+    "note": "Mirrors their existing 'Parts Catalog' nav link; routes to a catalog request, not a live e-commerce cart."
+  },
+  "cta_secondary": {
+    "label": "Call the Denver Store",
+    "note": "Click-to-call using the Denver, PA location's published number."
+  },
+  "intro": "Nolt's Auto Parts #2 in Denver, PA is one of nine Nolt's Factory Warehouse locations that has been, in the company's own words, \"steadily growing to serve the automotive dealer since 1959.\" The stores carry ignition parts, brake components, filters, batteries, cooling system parts, and chassis parts from a long list of manufacturer lines, plus a hard-to-find parts service for less common requests. The Denver store is part of a network stretching from Ephrata to Lancaster, Manheim, New Holland, Myerstown, Quarryville, Elizabethtown, and Harrisburg.",
+  "services": [
+    {
+      "title": "Ignition & Electrical",
+      "blurb": "Spark plugs, wire sets, starters, and alternators for keeping a customer's vehicle running and starting reliably.",
+      "icon_hint": "spark-plug"
+    },
+    {
+      "title": "Brake Parts",
+      "blurb": "Brake pads, shoes, rotors, drums, hydraulics, cables, and hardware stocked for common and less common jobs alike.",
+      "icon_hint": "brake-disc"
+    },
+    {
+      "title": "Filters & Fluids",
+      "blurb": "Oil, air, and fuel filters alongside motor oils, power steering fluid, and brake fluid.",
+      "icon_hint": "oil-filter"
+    },
+    {
+      "title": "Batteries",
+      "blurb": "Automotive, truck, industrial, deep cycle, gel, and sealed lead acid batteries in a range of sizes.",
+      "icon_hint": "battery"
+    },
+    {
+      "title": "Cooling & Climate",
+      "blurb": "Radiators, heater cores, water pumps, fan clutches, and air conditioning parts including hoses and fittings.",
+      "icon_hint": "radiator"
+    },
+    {
+      "title": "Chassis & Suspension",
+      "blurb": "Shocks, struts, CV boots and joints, bearings, seals, and coil springs for suspension repair work.",
+      "icon_hint": "suspension"
+    }
+  ],
+  "proof": [
+    {
+      "label": "Years in business",
+      "value": "Steadily growing to serve the automotive dealer since 1959",
+      "source_url": "http://noltsautoparts.com/index.shtml"
+    },
+    {
+      "label": "Network size",
+      "value": "Nine Nolt's Factory Warehouse / Nolt's Auto Parts locations across Lancaster, Berks, Lebanon, and Dauphin counties",
+      "source_url": "http://noltsautoparts.com/location.shtml"
+    }
+  ],
+  "about": "Nolt's Auto Parts #2 sits at 1016 Dry Tavern Road in Denver, PA, one of nine stores in the Nolt's Factory Warehouse network that has been serving the automotive dealer trade since 1959. The flagship warehouse and call center is in Ephrata, with sister stores in Manheim, New Holland, Myerstown, Quarryville, Lancaster, Elizabethtown, and Harrisburg. The company stocks a broad manufacturer line card covering ignition and electrical parts, brakes, filters, batteries, cooling and climate parts, and chassis and suspension components, plus a hard-to-find parts line for requests outside the standard catalog. The business is built around supplying shops and dealers rather than walk-in retail, with a parts catalog available on request.",
+  "faq": [
+    {
+      "q": "What area does Nolt's Auto Parts #2 serve?",
+      "a": "The Denver, PA store serves Lancaster County as part of the nine-location Nolt's Factory Warehouse network across Lancaster, Berks, Lebanon, and Dauphin counties."
+    },
+    {
+      "q": "What kind of parts does Nolt's Auto Parts carry?",
+      "a": "Ignition and electrical parts, brake components, filters, batteries, cooling and climate parts, and chassis and suspension parts, plus a hard-to-find parts service."
+    },
+    {
+      "q": "How long has Nolt's been in business?",
+      "a": "Since 1959, growing from the original Ephrata warehouse to nine locations across central Pennsylvania."
+    }
+  ],
+  "marquee": [
+    "Serving The Automotive Dealer Since 1959",
+    "Nine Locations Across Central PA",
+    "Ignition, Brakes & Filters",
+    "Batteries In Every Size",
+    "Hard-To-Find Parts",
+    "Cooling & Chassis Parts",
+    "Parts Catalog On Request"
+  ],
+  "contact": {
+    "phone": "717-445-6714",
+    "address": "1016 Dry Tavern Road, Denver, PA 17517",
+    "hours": "PLACEHOLDER",
+    "email": "PLACEHOLDER"
+  },
+  "placeholders": ["hours", "email", "palette_hint.brand_color_seen"],
+  "harvest_status": "partial"
+}

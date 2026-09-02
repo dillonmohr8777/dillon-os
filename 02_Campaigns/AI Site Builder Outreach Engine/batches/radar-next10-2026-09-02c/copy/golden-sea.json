@@ -1,0 +1,105 @@
+{
+  "slug": "golden-sea",
+  "business_name": "Golden Sea Chinese Restaurant",
+  "vertical": "restaurant",
+  "town": "Blue Bell, PA",
+  "source_urls": [
+    "http://goldenseabluebell.com/",
+    "http://goldenseabluebell.com/about_us.html",
+    "http://goldenseabluebell.com/contact_us.html",
+    "http://goldenseabluebell.com/Golden_Sea_Take_Out_Menu.pdf"
+  ],
+  "palette_hint": {
+    "brand_color_seen": "#EAA41E",
+    "notes": "Site body background-color is #EAA41E (gold/orange); the logo/header is an image file (images/header.gif) that was not independently color-sampled."
+  },
+  "voice": "Warm and family-first, told in the plain, proud language of a small family business that has run the same kitchen since 1992. They lean on their own history and community recognition rather than hype.",
+  "headline": "Family-Run Chinese Cooking in Blue Bell Since 1992",
+  "subhead": "Golden Sea has served the community exceptional Chinese cuisine made with fresh ingredients and smiling service since 1992.",
+  "cta_primary": {
+    "label": "Order Takeout",
+    "note": "Call (610)-292-8881 or (610)-292-8882; site states currently open for take out only."
+  },
+  "cta_secondary": {
+    "label": "See the Menu",
+    "note": "Links to the take-out and dine-in PDF menus on their own site."
+  },
+  "intro": "Since 1992, the team at Golden Sea has strived to provide dear patrons with exceptional Chinese cuisine prepared with the freshest ingredients and delivered with smiling service. Family owned by Jack and Amy Chung, the restaurant's chef, Ka Yam Yip, an experienced chef from Hong Kong, spices up the regular menu with recurring specials. Golden Sea was voted Best Chinese Restaurant by The Reporter and The Times Herald.",
+  "services": [
+    {
+      "title": "Special Appetizers",
+      "blurb": "Starters straight off their own menu: egg rolls, shrimp toast, spring rolls, chicken lettuce wraps, and B.B.Q. spare ribs. A short list built for sharing before the main course.",
+      "icon_hint": "appetizer"
+    },
+    {
+      "title": "Chow Mein",
+      "blurb": "Served with dry noodles and rice in chicken, roast pork, shrimp, beef, and vegetable versions, plus the house Golden Sea Special Chow Mein. A menu staple since the restaurant opened.",
+      "icon_hint": "noodles"
+    },
+    {
+      "title": "Lo Mein",
+      "blurb": "Soft noodles in vegetable, roast pork, chicken, beef, shrimp, and a House Special version. Ordered by the pint or quart, their own menu's terms.",
+      "icon_hint": "noodles"
+    },
+    {
+      "title": "Sweet & Sour",
+      "blurb": "Sweet & Sour Pork, Chicken, or Shrimp, served with rice. A dine-in and take-out standard on their printed menu.",
+      "icon_hint": "wok"
+    },
+    {
+      "title": "Chef's Suggestions",
+      "blurb": "Chef Ka Yam Yip's own specials, including Golden Sea Special Chicken, Seafood Special, Four Seasons, and Szechuan Seafood Deluxe. Their menu calls this section out by name.",
+      "icon_hint": "chef-special"
+    }
+  ],
+  "proof": [
+    {
+      "label": "Family owned since",
+      "value": "1992",
+      "source_url": "http://goldenseabluebell.com/about_us.html"
+    },
+    {
+      "label": "Recognition",
+      "value": "Voted Best Chinese Restaurant by The Reporter and The Times Herald",
+      "source_url": "http://goldenseabluebell.com/"
+    },
+    {
+      "label": "Chef",
+      "value": "Ka Yam Yip, an experienced chef from Hong Kong",
+      "source_url": "http://goldenseabluebell.com/about_us.html"
+    }
+  ],
+  "about": "Golden Sea opened in 1992, run by Jack and Amy Chung, who first opened a restaurant called Golden Light in Horsham before moving to Blue Bell. Jack came from mainland China by way of Hong Kong and Newark; Amy escaped from Canton by sea in 1974. Their son Andrew grew up in the business and often serves as the restaurant's spokesperson. Chef Ka Yam Yip, trained in Hong Kong, spices up the regular menu with recurring specials like Soft-Shell Crabs and whole Chinese Style Sea Bass. Jack Chung sums up the philosophy plainly: serve good, fresh food and treat people well, and the rest follows. Golden Sea has been voted Best Chinese Restaurant by The Reporter and The Times Herald.",
+  "faq": [
+    {
+      "q": "Is Golden Sea open for dine-in or takeout?",
+      "a": "Their site currently states they are open for take out only."
+    },
+    {
+      "q": "What are Golden Sea's hours?",
+      "a": "Closed Mondays. Tuesday to Thursday 11:30am to 9:30pm, Friday to Saturday 11:30am to 10:30pm, Sunday 12:00pm to 9:30pm."
+    },
+    {
+      "q": "Where is Golden Sea located?",
+      "a": "1301 Skippack Pike, Blue Bell, PA 19422."
+    }
+  ],
+  "marquee": [
+    "Family Owned Since 1992",
+    "Voted Best Chinese Restaurant",
+    "Fresh Ingredients, Smiling Service",
+    "Chef Ka Yam Yip's Specials",
+    "Now Open For Takeout",
+    "Closed Mondays",
+    "Blue Bell's Golden Sea",
+    "The Smile Is The International Language"
+  ],
+  "contact": {
+    "phone": "(610)-292-8881 / (610)-292-8882",
+    "address": "1301 Skippack Pike, Blue Bell, PA 19422",
+    "hours": "Closed Mondays. Tue-Thu 11:30am-9:30pm, Fri-Sat 11:30am-10:30pm, Sun 12:00pm-9:30pm.",
+    "email": "contact@goldenseabluebell.com"
+  },
+  "placeholders": [],
+  "harvest_status": "ok"
+}

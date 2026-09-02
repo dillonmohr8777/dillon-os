@@ -1,0 +1,57 @@
+<!-- tread-road-auto.svg — rotating tyre tread + scrolling road.
+     Vertical: auto sales / tyres / parts / repair. Paste inline, keep
+     aria-hidden="true". currentColor only; transform + opacity only. -->
+<svg class="art art-road" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice"
+     role="presentation" aria-hidden="true" focusable="false"
+     xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .art-road .ln{stroke:currentColor;fill:none;vector-effect:non-scaling-stroke}
+    /* The dash pattern repeats every 160 units, so translating -160 loops
+       with no seam. Tread groups rotate a whole 360deg for the same reason. */
+    .art-road .road{animation:ar-scroll 2.6s linear infinite;will-change:transform}
+    .art-road .road-slow{animation-duration:5.2s}
+    .art-road .tread{transform-box:fill-box;transform-origin:50% 50%;
+      animation:ar-spin 12s linear infinite}
+    .art-road .tread-b{animation-duration:20s;animation-direction:reverse}
+    .art-road .haze{animation:ar-haze 6s ease-in-out infinite}
+    @keyframes ar-scroll{from{transform:translate3d(0,0,0)}
+      to{transform:translate3d(-160px,0,0)}}
+    @keyframes ar-spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+    @keyframes ar-haze{0%,100%{opacity:.12}50%{opacity:.3}}
+    @media (prefers-reduced-motion:reduce){
+      .art-road .road,.art-road .tread,.art-road .haze{animation:none}}
+  </style>
+  <defs>
+    <g id="ar-tread">
+      <circle r="250" fill="none" stroke="currentColor" stroke-width="46" opacity=".18"/>
+      <circle r="250" fill="none" stroke="currentColor" stroke-width="3"/>
+      <circle r="204" fill="none" stroke="currentColor" stroke-width="3" opacity=".8"/>
+      <circle r="227" fill="none" stroke="currentColor" stroke-width="30"
+              stroke-dasharray="18 30" opacity=".55"/>
+      <circle r="150" fill="none" stroke="currentColor" stroke-width="1.6"
+              stroke-dasharray="4 22" opacity=".5"/>
+    </g>
+  </defs>
+  <g class="road-lines">
+    <g class="road">
+      <path class="ln" d="M-200 560H1400" stroke-width="10"
+            stroke-dasharray="90 70" opacity=".55"/>
+    </g>
+    <g class="road road-slow">
+      <path class="ln" d="M-200 648H1400" stroke-width="5"
+            stroke-dasharray="60 100" opacity=".32"/>
+    </g>
+    <g class="road road-slow">
+      <path class="ln" d="M-200 470H1400" stroke-width="3"
+            stroke-dasharray="30 130" opacity=".22"/>
+    </g>
+  </g>
+  <path class="ln" d="M-200 700H1400" stroke-width="2" opacity=".25"/>
+  <g transform="translate(940 300)">
+    <use href="#ar-tread" class="tread tread-a"/>
+  </g>
+  <g transform="translate(200 660) scale(.55)" opacity=".75">
+    <use href="#ar-tread" class="tread tread-b"/>
+  </g>
+  <ellipse class="haze" cx="600" cy="612" rx="520" ry="46" fill="currentColor"/>
+</svg>

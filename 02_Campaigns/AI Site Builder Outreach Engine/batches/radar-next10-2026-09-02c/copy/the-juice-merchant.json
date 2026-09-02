@@ -1,0 +1,91 @@
+{
+  "slug": "the-juice-merchant",
+  "business_name": "The Juice Merchant",
+  "vertical": "restaurant",
+  "town": "Narberth, PA",
+  "source_urls": [
+    "http://www.thejuicemerchant.com/"
+  ],
+  "palette_hint": {
+    "brand_color_seen": null,
+    "notes": "The live domain currently serves a generic third-party domain-parking page (dark navy #101c36 background, fingerprint-tracking redirect script, 'This domain may be for sale' notice). That color belongs to the parking-page vendor (abovedomains.com), not to the business, and was not used."
+  },
+  "voice": "No live site to mirror. Copy below is trade-generic and town-specific for a juice bar in Narberth, written the way an independent juice and smoothie counter talks to regulars - fresh, simple, no invented facts, no fabricated history, no numbers.",
+  "headline": "Narberth's Cold-Pressed Juice & Smoothie Bar",
+  "subhead": "Fresh juice, smoothies, and bowls made to order in Narberth, PA.",
+  "cta_primary": {
+    "label": "See the Menu",
+    "note": "Placeholder CTA - no verified menu link harvested from a live source."
+  },
+  "cta_secondary": {
+    "label": "Order for Pickup",
+    "note": "Placeholder CTA - no verified ordering link harvested from a live source."
+  },
+  "intro": "The Juice Merchant is a juice bar in Narberth built around fresh, simple food: cold-pressed juices, smoothies, and bowls made to order for anyone looking for something clean on the way to work or after a workout. The menu is built for regulars who want the same reliable order every time, and for anyone trying a cleanse or a reset for the first time.",
+  "services": [
+    {
+      "title": "Cold-Pressed Juices",
+      "blurb": "Fresh cold-pressed juice blends made from fruits and vegetables, pressed to order rather than sitting on a shelf.",
+      "icon_hint": "juice"
+    },
+    {
+      "title": "Smoothies",
+      "blurb": "Fruit and vegetable smoothies blended to order, built for a quick breakfast, a post-workout refuel, or an afternoon pick-me-up.",
+      "icon_hint": "smoothie"
+    },
+    {
+      "title": "Juice & Smoothie Bowls",
+      "blurb": "Thick smoothie bases topped with fruit, granola, and other toppings for a sit-down or grab-and-go bowl.",
+      "icon_hint": "bowl"
+    },
+    {
+      "title": "Cleanses",
+      "blurb": "Multi-day juice cleanse packages for anyone looking to reset with fresh-pressed juice instead of solid food for a stretch.",
+      "icon_hint": "cleanse"
+    },
+    {
+      "title": "Catering",
+      "blurb": "Juice, smoothie, and bowl trays available for local events, meetings, and gatherings around Narberth.",
+      "icon_hint": "catering"
+    }
+  ],
+  "proof": [],
+  "about": "The Juice Merchant is an independent juice bar serving Narberth with cold-pressed juices, smoothies, and bowls made fresh to order. The focus stays on simple, clean ingredients rather than anything overcomplicated, whether it's a quick juice on the way out the door or a full cleanse package. Catering trays are also available for local events and gatherings.",
+  "faq": [
+    {
+      "q": "What does The Juice Merchant serve?",
+      "a": "Cold-pressed juices, smoothies, smoothie and juice bowls, cleanse packages, and catering trays."
+    },
+    {
+      "q": "Does The Juice Merchant offer juice cleanses?",
+      "a": "Yes, multi-day cleanse packages are available for anyone looking to reset with fresh-pressed juice."
+    },
+    {
+      "q": "Can The Juice Merchant cater an event?",
+      "a": "Yes, juice, smoothie, and bowl trays are available for local events and gatherings around Narberth."
+    }
+  ],
+  "marquee": [
+    "Cold-Pressed Juices",
+    "Fresh Smoothies & Bowls",
+    "Juice Cleanses",
+    "Serving Narberth, PA",
+    "Catering Available"
+  ],
+  "contact": {
+    "phone": "PLACEHOLDER",
+    "address": "PLACEHOLDER",
+    "hours": "PLACEHOLDER",
+    "email": "PLACEHOLDER"
+  },
+  "placeholders": [
+    "cta_primary.label",
+    "cta_secondary.label",
+    "contact.phone",
+    "contact.address",
+    "contact.hours",
+    "contact.email"
+  ],
+  "harvest_status": "failed",
+  "copy_basis": "trade-generic, town-specific; no source site reachable"
+}

@@ -1,0 +1,56 @@
+<!-- airstream-hvac.svg — flowing airstream lines. Vertical: HVAC / air / mechanical.
+     Paste inline. Colour comes from the parent (currentColor), so it repaints
+     with the site palette. Decorative only: keep aria-hidden="true".
+     Motion: transform + opacity only, seamless -240 x-loop, ~0 layout cost. -->
+<svg class="art art-airstream" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice"
+     role="presentation" aria-hidden="true" focusable="false"
+     xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .art-airstream{color:inherit}
+    .art-airstream .fl{fill:none;stroke:currentColor;stroke-linecap:round;
+      vector-effect:non-scaling-stroke}
+    .art-airstream .band{animation:as-drift 18s linear infinite;
+      will-change:transform}
+    .art-airstream .b2{animation-duration:24s}
+    .art-airstream .b3{animation-duration:31s}
+    .art-airstream .puff{transform-box:fill-box;transform-origin:50% 50%;
+      animation:as-pulse 7s ease-in-out infinite}
+    .art-airstream .p2{animation-delay:-2.4s}
+    .art-airstream .p3{animation-delay:-4.8s}
+    /* -240 is exactly one repeat of the 240-unit path pattern, so the loop
+       has no visible seam. */
+    @keyframes as-drift{from{transform:translate3d(0,0,0)}
+      to{transform:translate3d(-240px,0,0)}}
+    @keyframes as-pulse{0%,100%{opacity:.16;transform:scale(1)}
+      50%{opacity:.4;transform:scale(1.12)}}
+    @media (prefers-reduced-motion:reduce){
+      .art-airstream .band,.art-airstream .puff{animation:none}}
+  </style>
+  <defs>
+    <path id="as-a" d="M-260 210 q60 -52 120 0 t120 0 t120 0 t120 0 t120 0 t120 0
+      t120 0 t120 0 t120 0 t120 0 t120 0 t120 0"/>
+    <path id="as-b" d="M-260 400 q60 -66 120 0 t120 0 t120 0 t120 0 t120 0 t120 0
+      t120 0 t120 0 t120 0 t120 0 t120 0 t120 0"/>
+    <path id="as-c" d="M-260 600 q60 -44 120 0 t120 0 t120 0 t120 0 t120 0 t120 0
+      t120 0 t120 0 t120 0 t120 0 t120 0 t120 0"/>
+  </defs>
+  <g class="band b1" opacity=".5">
+    <use href="#as-a" class="fl" stroke-width="2"/>
+    <use href="#as-a" class="fl" stroke-width="1.2" y="34" opacity=".7"/>
+    <use href="#as-a" class="fl" stroke-width="1.2" y="66" opacity=".45"/>
+  </g>
+  <g class="band b2" opacity=".72">
+    <use href="#as-b" class="fl" stroke-width="3"/>
+    <use href="#as-b" class="fl" stroke-width="1.6" y="42" opacity=".6"/>
+    <use href="#as-b" class="fl" stroke-width="1.1" y="80" opacity=".38"/>
+  </g>
+  <g class="band b3" opacity=".38">
+    <use href="#as-c" class="fl" stroke-width="2.2"/>
+    <use href="#as-c" class="fl" stroke-width="1.2" y="38" opacity=".6"/>
+  </g>
+  <g fill="currentColor">
+    <circle class="puff p1" cx="235" cy="300" r="52"/>
+    <circle class="puff p2" cx="760" cy="180" r="76"/>
+    <circle class="puff p3" cx="1010" cy="530" r="62"/>
+  </g>
+</svg>

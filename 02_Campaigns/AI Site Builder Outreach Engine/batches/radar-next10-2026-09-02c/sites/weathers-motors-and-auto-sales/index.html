@@ -1,0 +1,619 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="Weathers Motors — family-owned dealership in Media, PA since 1922. Pre-owned vehicle sales, service, parts, tires, body shop and financing.">
+<title>Weathers Motors — Media's Family Dealership Since 1922</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231c3a5e'/%3E%3Cpath d='M14 40 L32 16 L50 40' fill='none' stroke='%23f7f3e9' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='32' cy='46' r='4' fill='%23b3312c'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ==== kit.css (trimmed) — radar-next10-2026-09-02c shared kit ==== */
+:root{
+  --brand:#1c3a5e;
+  --brand-2:#0d1f33;
+  --ink:#14212c;
+  --paper:#f7f3e9;
+  --accent:#b3312c;
+  --panel:color-mix(in srgb,var(--brand) 12%,var(--paper));
+  --line:color-mix(in srgb,var(--ink) 16%,transparent);
+  --line-strong:color-mix(in srgb,var(--ink) 34%,transparent);
+  --muted:color-mix(in srgb,var(--ink) 66%,var(--paper));
+  --on-brand:#ffffff;
+  --on-deep:#f3ede0;
+  --on-accent:#ffffff;
+  --on-paper:var(--ink);
+  --font-display:"Playfair Display",Georgia,"Times New Roman",serif;
+  --font-text:"Public Sans",system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --fs-xs:clamp(.76rem,.72rem + .18vw,.86rem);
+  --fs-sm:clamp(.88rem,.84rem + .2vw,.98rem);
+  --fs-base:clamp(1rem,.95rem + .3vw,1.14rem);
+  --fs-lead:clamp(1.12rem,1.02rem + .55vw,1.42rem);
+  --fs-h3:clamp(1.28rem,1.1rem + .85vw,1.72rem);
+  --fs-h2:clamp(2rem,1.5rem + 2.6vw,3.5rem);
+  --fs-h1:clamp(2.6rem,1.8rem + 4.4vw,5.4rem);
+  --fs-display:clamp(3.2rem,2rem + 6vw,7rem);
+  --lh-tight:1.04; --lh-head:1.12; --lh-body:1.6;
+  --track-tight:-.02em; --track-caps:.14em;
+  --s-1:.25rem; --s-2:.5rem;  --s-3:.75rem; --s-4:1rem;
+  --s-5:1.5rem; --s-6:2rem;   --s-7:3rem;   --s-8:4rem;
+  --s-9:6rem;   --s-10:8rem;
+  --section-y:clamp(4.5rem,9vw,9rem);
+  --gutter:clamp(1.25rem,4vw,3rem);
+  --measure:68ch;
+  --maxw:1240px;
+  --r-sm:6px; --r-md:14px; --r-lg:26px; --r-pill:999px;
+  --border:1px;
+  --shadow-1:0 1px 2px color-mix(in srgb,var(--brand-2) 12%,transparent),
+             0 6px 18px color-mix(in srgb,var(--brand-2) 8%,transparent);
+  --shadow-2:0 2px 6px color-mix(in srgb,var(--brand-2) 14%,transparent),
+             0 22px 52px color-mix(in srgb,var(--brand-2) 16%,transparent);
+  --ring:3px solid var(--accent);
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --dur:.6s;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;overflow-x:hidden;background:var(--paper);color:var(--ink);
+  font:400 var(--fs-base)/var(--lh-body) var(--font-text);
+  font-synthesis-weight:none;-webkit-font-smoothing:antialiased;text-wrap:pretty}
+img,svg,video{display:block;max-width:100%}
+svg{height:auto}
+h1,h2,h3,h4{margin:0 0 var(--s-4);font-family:var(--font-display);
+  font-weight:700;line-height:var(--lh-head);letter-spacing:var(--track-tight);
+  text-wrap:balance}
+h1{font-size:var(--fs-h1);line-height:var(--lh-tight)}
+h2{font-size:var(--fs-h2)}
+h3{font-size:var(--fs-h3)}
+p{margin:0 0 var(--s-4);max-width:var(--measure)}
+ul,ol{margin:0 0 var(--s-4);padding-left:1.15em}
+:where(a){color:inherit}
+.wrap{width:min(100% - var(--gutter)*2,var(--maxw));margin-inline:auto}
+section{padding-block:var(--section-y);position:relative}
+.surface-paper{background:var(--paper);color:var(--ink)}
+.surface-panel{background:var(--panel);color:var(--ink)}
+.surface-brand{background:var(--brand);color:var(--on-brand)}
+.surface-deep{background:var(--brand-2);color:var(--on-deep)}
+.surface-accent{background:var(--accent);color:var(--on-accent)}
+.eyebrow{font:600 var(--fs-xs)/1.2 var(--font-text);text-transform:uppercase;
+  letter-spacing:var(--track-caps);color:var(--accent);margin:0 0 var(--s-3)}
+.surface-deep .eyebrow,.surface-brand .eyebrow{color:color-mix(in srgb,var(--accent) 78%,#fff)}
+.lead{font-size:var(--fs-lead);line-height:1.45;color:var(--muted);max-width:56ch}
+.surface-deep .lead,.surface-brand .lead{color:color-mix(in srgb,currentColor 82%,transparent)}
+a{color:var(--brand);text-underline-offset:.18em;
+  text-decoration-thickness:from-font;transition:color .2s var(--ease)}
+.surface-deep a:hover,.surface-brand a:hover{color:#fff}
+a:hover{color:var(--accent)}
+:focus-visible{outline:var(--ring);outline-offset:3px;border-radius:var(--r-sm)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:var(--s-2);
+  padding:var(--s-3) var(--s-5);min-height:48px;border-radius:var(--r-pill);
+  border:var(--border) solid transparent;font:600 var(--fs-sm)/1 var(--font-text);
+  letter-spacing:.01em;text-decoration:none;cursor:pointer;
+  transition:transform .22s var(--ease),background-color .22s var(--ease),
+             color .22s var(--ease),border-color .22s var(--ease)}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--accent);color:var(--on-accent);box-shadow:var(--shadow-1)}
+.btn-primary:hover{background:color-mix(in srgb,var(--accent) 86%,var(--brand-2))}
+.btn-solid{background:var(--brand);color:var(--on-brand)}
+.btn-ghost{background:transparent;color:inherit;border-color:currentColor}
+.btn-ghost:hover{background:color-mix(in srgb,currentColor 12%,transparent);color:inherit}
+.skip{position:absolute;left:-9999px;top:0;padding:var(--s-3) var(--s-4);
+  background:var(--brand-2);color:var(--on-deep);z-index:99}
+.skip:focus{left:var(--s-4);top:var(--s-4)}
+.site-head{position:sticky;top:0;z-index:40;
+  background:color-mix(in srgb,var(--paper) 88%,transparent);
+  backdrop-filter:blur(10px);border-bottom:var(--border) solid var(--line)}
+.site-head .bar{display:flex;align-items:center;justify-content:space-between;
+  gap:var(--s-5);min-height:70px}
+.brandmark{font:700 1.08rem/1 var(--font-display);letter-spacing:-.01em;
+  text-decoration:none;color:var(--ink)}
+.nav{display:flex;align-items:center;gap:var(--s-5)}
+.nav a{font-size:var(--fs-sm);text-decoration:none;color:var(--muted)}
+@media (max-width:860px){ .nav .nav-link{display:none} }
+.hero{position:relative;isolation:isolate;overflow:hidden;
+  padding-block:clamp(5rem,12vw,10rem) clamp(4rem,9vw,8rem)}
+.hero-art{position:absolute;inset:0;z-index:-1;pointer-events:none;
+  color:var(--brand);opacity:.9;overflow:hidden}
+.hero-art>svg{width:100%;height:100%;min-height:100%;object-fit:cover;display:block}
+.hero-art::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,
+    color-mix(in srgb,var(--paper) 20%,transparent) 0%,
+    color-mix(in srgb,var(--paper) 62%,transparent) 62%,
+    var(--paper) 100%)}
+.hero-copy{position:relative;z-index:1;max-width:24ch}
+.hero-copy p{max-width:52ch}
+.hero h1{margin-bottom:var(--s-5)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:var(--s-3);margin-top:var(--s-6)}
+.split{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));
+  gap:clamp(1.5rem,4vw,4rem);align-items:center}
+.split>.split-copy{grid-column:span 6}
+.split>.split-art{grid-column:span 6}
+.split-art{position:relative;border-radius:var(--r-lg);overflow:hidden;
+  background:var(--panel);border:var(--border) solid var(--line);
+  aspect-ratio:4/3;color:var(--brand);box-shadow:var(--shadow-1)}
+.split-art>svg{width:100%;height:100%}
+@media (max-width:900px){
+  .split>.split-copy,.split>.split-art{grid-column:span 12}
+}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+  gap:var(--s-5) var(--s-6);border-top:var(--border) solid var(--line);
+  border-bottom:var(--border) solid var(--line);padding-block:var(--s-6)}
+.surface-deep .stats,.surface-brand .stats{border-color:color-mix(in srgb,currentColor 28%,transparent)}
+.stat{min-width:0}
+.stat-n{display:block;font:700 clamp(2.2rem,4.5vw,3.6rem)/1 var(--font-display);
+  letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.stat-l{display:block;margin-top:var(--s-2);font-size:var(--fs-xs);
+  text-transform:uppercase;letter-spacing:var(--track-caps);opacity:.75}
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:clamp(1rem,2vw,1.75rem)}
+.card{padding:clamp(1.5rem,2.6vw,2.25rem);border-radius:var(--r-md);
+  background:var(--paper);border:var(--border) solid var(--line);
+  transition:transform .3s var(--ease),box-shadow .3s var(--ease),
+             border-color .3s var(--ease)}
+.surface-panel .card{background:var(--paper)}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-2);
+  border-color:var(--line-strong)}
+.card p{margin:0;font-size:var(--fs-sm);color:inherit;opacity:.86}
+.card-icon{width:44px;height:44px;margin-bottom:var(--s-4);color:var(--accent)}
+.marquee{--marquee-dur:34s;overflow:hidden;padding-block:var(--s-4);
+  border-block:var(--border) solid var(--line);
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
+  mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.marquee-track{display:flex;width:max-content;gap:var(--s-6);
+  will-change:transform;animation:kit-marquee var(--marquee-dur) linear infinite}
+.marquee[data-paused] .marquee-track,
+.marquee:hover .marquee-track{animation-play-state:paused}
+.marquee-item{display:flex;align-items:center;gap:var(--s-4);white-space:nowrap;
+  font:600 var(--fs-sm)/1 var(--font-text);text-transform:uppercase;
+  letter-spacing:var(--track-caps);opacity:.8}
+.marquee-item::after{content:"";width:6px;height:6px;border-radius:50%;
+  background:var(--accent)}
+@keyframes kit-marquee{from{transform:translate3d(0,0,0)}
+  to{transform:translate3d(-50%,0,0)}}
+.cta{text-align:center}
+.cta .wrap{display:flex;flex-direction:column;align-items:center;gap:var(--s-4)}
+.cta h2{max-width:20ch;margin-bottom:0}
+.cta p{max-width:52ch;margin:0}
+.cta-actions{display:flex;flex-wrap:wrap;gap:var(--s-3);justify-content:center;
+  margin-top:var(--s-3)}
+.site-foot{padding-block:var(--s-8) var(--s-6);
+  background:var(--brand-2);color:var(--on-deep)}
+.site-foot a{color:inherit;opacity:.82;text-decoration:none}
+.site-foot a:hover{opacity:1;text-decoration:underline}
+.foot-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+  gap:var(--s-6)}
+.foot-grid h4{font-size:var(--fs-xs);text-transform:uppercase;
+  letter-spacing:var(--track-caps);opacity:.65;margin-bottom:var(--s-3)}
+.foot-grid ul{list-style:none;padding:0;margin:0;display:grid;gap:var(--s-2);
+  font-size:var(--fs-sm)}
+.foot-note{margin-top:var(--s-7);padding-top:var(--s-4);
+  border-top:var(--border) solid color-mix(in srgb,currentColor 22%,transparent);
+  font-size:var(--fs-xs);opacity:.62;display:flex;flex-wrap:wrap;
+  gap:var(--s-4);justify-content:space-between}
+address{font-style:normal}
+.center{text-align:center;margin-inline:auto}
+.center p,.center .lead{margin-inline:auto}
+.stack>*+*{margin-top:var(--s-4)}
+.muted{color:var(--muted)}
+.mt-6{margin-top:var(--s-6)}
+.pill{display:inline-flex;align-items:center;gap:var(--s-2);
+  padding:var(--s-2) var(--s-4);border-radius:var(--r-pill);
+  border:var(--border) solid var(--line-strong);font-size:var(--fs-xs);
+  text-transform:uppercase;letter-spacing:var(--track-caps)}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;
+  overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+/* FAQ */
+.faq{max-width:var(--maxw);margin-inline:auto;display:grid;gap:var(--s-4)}
+.faq details{border:var(--border) solid var(--line);border-radius:var(--r-md);
+  padding:var(--s-4) var(--s-5);background:var(--paper)}
+.faq summary{cursor:pointer;font:600 var(--fs-base)/1.3 var(--font-text);
+  list-style:none;display:flex;align-items:center;justify-content:space-between;gap:var(--s-3)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:1.3em;color:var(--accent);flex:none}
+.faq details[open] summary::after{content:"\2212"}
+.faq p{margin:var(--s-3) 0 0;color:var(--muted)}
+/* Timeline strip */
+.timeline-wrap{color:var(--brand)}
+.timeline-wrap .tl-line{stroke:currentColor;stroke-width:2;opacity:.5}
+.timeline-wrap .tl-dot{fill:var(--accent)}
+.timeline-wrap .tl-fill{stroke:var(--accent);stroke-width:3;stroke-dasharray:640;
+  stroke-dashoffset:640;animation:tl-draw 1.6s var(--ease) forwards;animation-play-state:paused}
+.timeline-wrap.is-visible .tl-fill{animation-play-state:running}
+@media (prefers-reduced-motion:reduce){
+  .timeline-wrap .tl-fill{animation:none;stroke-dashoffset:0}
+}
+/* 15. Motion: reveals + parallax */
+[data-reveal]{opacity:1;transform:none}
+.js [data-reveal]{opacity:0;transform:translate3d(0,26px,0);
+  transition:opacity var(--dur) var(--ease),transform var(--dur) var(--ease)}
+.js [data-reveal="left"]{transform:translate3d(-28px,0,0)}
+.js [data-reveal="right"]{transform:translate3d(28px,0,0)}
+.js [data-reveal].is-visible{opacity:1;transform:none}
+.js [data-reveal][style*="--d"]{transition-delay:var(--d)}
+[data-parallax]{will-change:transform;
+  transform:translate3d(calc(var(--px,0)*1px),calc(var(--py,0)*1px),0);
+  transition:transform .5s var(--ease)}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js [data-reveal],.js [data-reveal].is-visible{
+    opacity:1!important;transform:none!important;transition:none!important}
+  [data-parallax]{transform:none!important}
+  .marquee-track{animation:none!important;transform:none!important}
+  *,*::before,*::after{
+    animation-duration:.01ms!important;animation-iteration-count:1!important;
+    transition-duration:.01ms!important;scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap bar">
+    <a class="brandmark" href="#top">Weathers Motors</a>
+    <nav class="nav" aria-label="Primary">
+      <a class="nav-link" href="#departments">Departments</a>
+      <a class="nav-link" href="#history">History</a>
+      <a class="nav-link" href="#faq">FAQ</a>
+      <a class="btn btn-primary" href="#contact">Visit or Call</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO — road-horizon animation, distinct from tread-focused compositions:
+       converging lane lines plus a rising horizon arc, no tyre tread circles. -->
+  <section class="hero" id="top">
+    <div class="hero-art" data-parallax="10">
+<svg class="art art-horizon" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice"
+     role="presentation" aria-hidden="true" focusable="false"
+     xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .art-horizon .lane{stroke:currentColor;fill:none;vector-effect:non-scaling-stroke;
+      animation:ah-scroll 3.4s linear infinite;will-change:transform}
+    .art-horizon .lane-slow{animation-duration:6.8s}
+    .art-horizon .arc{transform-box:fill-box;transform-origin:50% 100%;
+      animation:ah-breathe 9s ease-in-out infinite}
+    .art-horizon .badge{transform-box:fill-box;transform-origin:50% 50%;
+      animation:ah-fade 7s ease-in-out infinite}
+    @keyframes ah-scroll{from{transform:translate3d(0,0,0)}to{transform:translate3d(0,180px,0)}}
+    @keyframes ah-breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.02)}}
+    @keyframes ah-fade{0%,100%{opacity:.5}50%{opacity:.85}}
+    @media (prefers-reduced-motion:reduce){
+      .art-horizon .lane,.art-horizon .arc,.art-horizon .badge{animation:none}}
+  </style>
+  <path class="arc" d="M-100 560 A700 700 0 0 1 1300 560" fill="none" stroke="currentColor" stroke-width="2" opacity=".3"/>
+  <path class="arc" d="M-40 620 A640 640 0 0 1 1240 620" fill="none" stroke="currentColor" stroke-width="1.4" opacity=".2"/>
+  <g clip-path="inset(0)">
+    <path class="lane" d="M560 800 L520 260 M640 800 L680 260" stroke-width="6" stroke-dasharray="60 90" opacity=".5"/>
+    <path class="lane lane-slow" d="M330 800 L470 240 M870 800 L730 240" stroke-width="4" stroke-dasharray="46 96" opacity=".32"/>
+    <path class="lane lane-slow" d="M60 800 L400 220 M1140 800 L800 220" stroke-width="3" stroke-dasharray="30 110" opacity=".2"/>
+  </g>
+  <g class="badge" fill="currentColor">
+    <circle cx="600" cy="210" r="46" opacity=".14"/>
+    <path d="M600 178 L616 206 L648 210 L624 232 L630 264 L600 248 L570 264 L576 232 L552 210 L584 206 Z" opacity=".55"/>
+  </g>
+</svg>
+    </div>
+    <div class="wrap hero-copy">
+      <p class="eyebrow">Media, Delaware County, PA · Family-Owned</p>
+      <h1>Media's Family Dealership Since 1922</h1>
+      <p class="lead">Weathers Motors buys and sells quality pre-owned vehicles and runs a full-service shop for sales, service, parts, and financing.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://www.weathersmotors.com/" target="_blank" rel="noopener">Browse Pre-Owned Inventory</a>
+        <a class="btn btn-ghost" href="tel:6105665475">Call the Dealership</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE — one per page, list duplicated exactly twice. -->
+  <div class="marquee surface-panel" tabindex="0" aria-label="Highlights">
+    <div class="marquee-track">
+      <span class="marquee-item">Family-Owned Since 1922</span>
+      <span class="marquee-item">Over a Century in Media, PA</span>
+      <span class="marquee-item">Quality Pre-Owned Vehicles</span>
+      <span class="marquee-item">Full-Service Sales, Parts &amp; Repair</span>
+      <span class="marquee-item">PA State Inspection &amp; Tires</span>
+      <span class="marquee-item">Federated Dealer of the Year</span>
+      <span class="marquee-item">Financing for Every Credit Range</span>
+      <span class="marquee-item">We Buy Cars, Trucks, Vans &amp; SUVs</span>
+      <span class="marquee-item" aria-hidden="true">Family-Owned Since 1922</span>
+      <span class="marquee-item" aria-hidden="true">Over a Century in Media, PA</span>
+      <span class="marquee-item" aria-hidden="true">Quality Pre-Owned Vehicles</span>
+      <span class="marquee-item" aria-hidden="true">Full-Service Sales, Parts &amp; Repair</span>
+      <span class="marquee-item" aria-hidden="true">PA State Inspection &amp; Tires</span>
+      <span class="marquee-item" aria-hidden="true">Federated Dealer of the Year</span>
+      <span class="marquee-item" aria-hidden="true">Financing for Every Credit Range</span>
+      <span class="marquee-item" aria-hidden="true">We Buy Cars, Trucks, Vans &amp; SUVs</span>
+    </div>
+  </div>
+
+  <!-- INTRO -->
+  <section class="surface-paper">
+    <div class="wrap center" style="max-width:78ch">
+      <p class="eyebrow">A century in Media</p>
+      <h2 data-reveal>One dealership, every department a car needs.</h2>
+      <p data-reveal>Weathers Motors has operated as a family-owned dealership in Media, PA since 1922, over a century of buying, selling, and servicing cars, trucks, vans, and SUVs. The dealership runs as a full-service operation: quality pre-owned vehicle sales, a service and repair center, a parts center, tire sales, PA state inspection, a body shop, and in-house financing for shoppers across the credit spectrum. Remote options include video walkarounds, at-home test drives, home delivery, and maintenance pick-up within a 15-mile radius. The team serves Media and surrounding Delaware County, with customers coming from as far as West Chester to Allentown.</p>
+    </div>
+  </section>
+
+  <!-- DEPARTMENTS -->
+  <section class="surface-panel" id="departments">
+    <div class="wrap">
+      <p class="eyebrow">What the dealership runs</p>
+      <h2 data-reveal>Six departments under one roof.</h2>
+      <div class="services mt-6" data-stagger>
+        <article class="card" data-reveal>
+          <svg class="card-icon" viewBox="0 0 44 44" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="16" cy="28" r="7"/><path d="M23 28h13l5-8M27 20h9"/>
+          </svg>
+          <h3>Pre-Owned Vehicle Sales</h3>
+          <p>Quality pre-owned cars, trucks, vans, and SUVs across domestic and import brands. Every vehicle is inspected before it's offered for sale.</p>
+        </article>
+        <article class="card" data-reveal>
+          <svg class="card-icon" viewBox="0 0 44 44" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
+            <path d="M27 9 32 14 18 28 13 30 15 25 29 11Z"/><path d="M10 34h24"/>
+          </svg>
+          <h3>Service &amp; Repair Center</h3>
+          <p>Oil changes, brake work, tire rotations, alignments, and general auto and truck repair. The shop services all makes and models since the dealership isn't tied to one brand.</p>
+        </article>
+        <article class="card" data-reveal>
+          <svg class="card-icon" viewBox="0 0 44 44" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="22" cy="22" r="6"/><path d="M22 6v4M22 34v4M6 22h4M34 22h4M11 11l3 3M30 30l3 3M11 33l3-3M30 14l3-3"/>
+          </svg>
+          <h3>Parts Center</h3>
+          <p>A parts department stocked to support the service shop and walk-in customers looking for the right part for their vehicle.</p>
+        </article>
+        <article class="card" data-reveal>
+          <svg class="card-icon" viewBox="0 0 44 44" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="22" cy="22" r="15"/><circle cx="22" cy="22" r="6"/><path d="M22 7v6M22 33v6M7 22h6M33 22h6"/>
+          </svg>
+          <h3>PA State Inspection &amp; Tires</h3>
+          <p>State inspection and tire sales and service done on-site, part of keeping vehicles road-ready year-round.</p>
+        </article>
+        <article class="card" data-reveal>
+          <svg class="card-icon" viewBox="0 0 44 44" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 26 12 14h20l4 12v8H8Z"/><circle cx="15" cy="30" r="3"/><circle cx="29" cy="30" r="3"/>
+          </svg>
+          <h3>Body Shop</h3>
+          <p>Collision and body repair handled in-house rather than farmed out to a third party.</p>
+        </article>
+        <article class="card" data-reveal>
+          <svg class="card-icon" viewBox="0 0 44 44" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 20l8-2 6 6-6 6-8-2Z"/><path d="M38 20l-8-2-6 6 6 6 8-2Z"/><path d="M20 24h4"/>
+          </svg>
+          <h3>Financing</h3>
+          <p>A finance center that works with shoppers across the credit spectrum, plus a we-buy-cars program for anyone looking to sell or trade.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROOF STRIP -->
+  <section class="surface-deep" id="proof">
+    <div class="wrap">
+      <p class="eyebrow">Why families still come back</p>
+      <h2 data-reveal>Facts, not superlatives.</h2>
+      <div class="stats" data-stagger>
+        <div class="stat" data-reveal>
+          <span class="stat-n" data-count="104" data-suffix="+">104+</span>
+          <span class="stat-l">Years in continuous, family-owned operation</span>
+        </div>
+        <div class="stat" data-reveal>
+          <span class="stat-n">1922</span>
+          <span class="stat-l">Year the dealership opened in Media, PA</span>
+        </div>
+        <div class="stat" data-reveal>
+          <span class="stat-n" style="font-size:clamp(1.4rem,3vw,2.1rem)">Federated Dealer of the Year</span>
+          <span class="stat-l">Award for outstanding service</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPLIT — history copy + century timeline strip (separate art from hero) -->
+  <section class="surface-paper" id="history">
+    <div class="wrap split">
+      <div class="split-copy" data-reveal="left">
+        <p class="eyebrow">Who we are</p>
+        <h2>A dealership that never changed hands outside the family.</h2>
+        <p>Weathers Motors has been a family-owned and operated dealership in Media, PA since 1922, over a century of serving Delaware County. The dealership buys, sells, and services cars, trucks, vans, and SUVs across domestic brands like Ford, Chevy, and GMC alongside imports like Honda, Hyundai, and Kia. Because the shop doesn't sell one particular brand, its service experts work on all makes and models, backed by state-of-the-art equipment and ongoing technician training.</p>
+        <p>The service department earned the Federated Dealer of the Year Award for its work. Every pre-owned vehicle passes inspection before it reaches the lot, and Carfax One Owner vehicles are available for buyers who want that added history. The dealership's finance center works with shoppers across the credit spectrum, and remote services — video walkaround, at-home test drive, home delivery, and maintenance pick-up — are available within a 15-mile radius for customers who can't make it into Media.</p>
+        <p><a href="#contact">Get directions and hours</a></p>
+      </div>
+      <div class="split-art timeline-wrap" data-reveal="right" data-parallax="6" aria-hidden="true">
+        <svg viewBox="0 0 400 300" focusable="false" xmlns="http://www.w3.org/2000/svg">
+          <line class="tl-line" x1="40" y1="150" x2="360" y2="150"/>
+          <line class="tl-fill" x1="40" y1="150" x2="360" y2="150" fill="none"/>
+          <circle class="tl-dot" cx="40" cy="150" r="7"/>
+          <circle class="tl-dot" cx="360" cy="150" r="7"/>
+          <text x="40" y="120" fill="currentColor" font-size="15" font-family="Public Sans, sans-serif" font-weight="700">1922</text>
+          <text x="40" y="182" fill="currentColor" font-size="11" font-family="Public Sans, sans-serif" opacity=".75">Family dealership founded in Media, PA</text>
+          <text x="278" y="120" fill="currentColor" font-size="15" font-family="Public Sans, sans-serif" font-weight="700">Today</text>
+          <text x="240" y="182" fill="currentColor" font-size="11" font-family="Public Sans, sans-serif" opacity=".75">Sales, service, parts, tires, body shop &amp; financing</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="surface-panel" id="faq">
+    <div class="wrap">
+      <p class="eyebrow">Common questions</p>
+      <h2 data-reveal>Straight answers.</h2>
+      <div class="faq mt-6" data-stagger>
+        <details data-reveal>
+          <summary>What areas does Weathers Motors serve?</summary>
+          <p>The dealership is based in Media, PA and serves Delaware County, with customers coming from as far as West Chester to Allentown.</p>
+        </details>
+        <details data-reveal>
+          <summary>Does Weathers Motors work on vehicles it didn't sell?</summary>
+          <p>Yes. The service center works on all makes and models, not just the brands sold on the lot.</p>
+        </details>
+        <details data-reveal>
+          <summary>Can I sell or trade my car to Weathers Motors?</summary>
+          <p>Yes. Weathers Motors buys cars, trucks, vans, and SUVs, and offers a we-buy-vehicles program alongside its trade and finance options.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta surface-accent" id="cta">
+    <div class="wrap">
+      <h2 data-reveal>See what's on the lot, or talk to the team first.</h2>
+      <p data-reveal>Sales, service, parts, tires, body shop, and financing — all in Media, PA.</p>
+      <div class="cta-actions">
+        <a class="btn btn-solid" href="https://www.weathersmotors.com/" target="_blank" rel="noopener">Browse Pre-Owned Inventory</a>
+        <a class="btn btn-ghost" href="tel:6105665475">Call 610-566-5475</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot" id="contact">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>Weathers Motors</h4>
+        <address>1187 West Baltimore Pike<br>Media, PA 19063<br><a href="tel:6105665475">610-566-5475</a></address>
+      </div>
+      <nav aria-label="Footer">
+        <h4>Site</h4>
+        <ul>
+          <li><a href="#departments">Departments</a></li>
+          <li><a href="#history">History</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h4>Hours</h4>
+        <ul>
+          <li>Sales: Mon–Thu 9AM–6PM</li>
+          <li>Sales: Fri–Sat 9AM–5PM, Sun Closed</li>
+          <li>Service: Mon–Fri 7AM–4:30PM</li>
+          <li>Service: Sat–Sun Closed</li>
+        </ul>
+      </div>
+    </div>
+    <p class="foot-note">
+      <span>Prospect preview built for Weathers Motors. Not a live production site.</span>
+      <span>No photography: all art is CSS and inline SVG.</span>
+    </p>
+  </div>
+</footer>
+
+<script>
+/* ==== kit.js (unmodified) ==== */
+(function () {
+  "use strict";
+  var doc = document, root = doc.documentElement;
+  var still = !window.matchMedia ||
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!still && "IntersectionObserver" in window) root.classList.add("js");
+
+  function ready(fn) {
+    if (doc.readyState !== "loading") fn();
+    else doc.addEventListener("DOMContentLoaded", fn);
+  }
+  ready(function () {
+    if (!still && "IntersectionObserver" in window) {
+      [].forEach.call(doc.querySelectorAll("[data-stagger]"), function (g) {
+        var kids = g.querySelectorAll("[data-reveal]");
+        for (var i = 0; i < kids.length; i++)
+          kids[i].style.setProperty("--d", Math.min(i, 6) * 90 + "ms");
+      });
+      var io = new IntersectionObserver(function (es) {
+        es.forEach(function (e) {
+          if (!e.isIntersecting) return;
+          e.target.classList.add("is-visible");
+          io.unobserve(e.target);
+        });
+      }, { rootMargin: "0px 0px -12% 0px", threshold: 0.12 });
+      [].forEach.call(doc.querySelectorAll("[data-reveal]"), function (el) {
+        io.observe(el);
+      });
+
+      var nums = doc.querySelectorAll("[data-count]");
+      var cio = new IntersectionObserver(function (es) {
+        es.forEach(function (e) {
+          if (!e.isIntersecting) return;
+          cio.unobserve(e.target);
+          count(e.target);
+        });
+      }, { threshold: 0.5 });
+      [].forEach.call(nums, function (el) { cio.observe(el); });
+    }
+
+    function count(el) {
+      var target = parseFloat(el.getAttribute("data-count"));
+      if (isNaN(target)) return;
+      var dec = el.getAttribute("data-decimals") | 0, t0 = 0;
+      var pre = el.getAttribute("data-prefix") || "";
+      var suf = el.getAttribute("data-suffix") || "";
+      function step(now) {
+        if (!t0) t0 = now;
+        var p = Math.min((now - t0) / 1100, 1);
+        var eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = pre + (target * eased).toFixed(dec) + suf;
+        if (p < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
+
+    [].forEach.call(doc.querySelectorAll(".marquee"), function (m) {
+      function hold() { m.setAttribute("data-paused", ""); }
+      function go() { m.removeAttribute("data-paused"); }
+      var t = { passive: true };
+      m.addEventListener("focusin", hold);
+      m.addEventListener("focusout", go);
+      m.addEventListener("touchstart", hold, t);
+      m.addEventListener("touchend", go, t);
+      if (still) hold();
+    });
+
+    var px = doc.querySelectorAll("[data-parallax]");
+    if (!still && px.length && window.matchMedia("(pointer: fine)").matches) {
+      var pending = false, mx = 0, my = 0;
+      window.addEventListener("pointermove", function (ev) {
+        mx = ev.clientX / window.innerWidth - 0.5;
+        my = ev.clientY / window.innerHeight - 0.5;
+        if (pending) return;
+        pending = true;
+        requestAnimationFrame(function () {
+          pending = false;
+          [].forEach.call(px, function (el) {
+            var d = parseFloat(el.getAttribute("data-parallax")) || 10;
+            el.style.setProperty("--px", (mx * d).toFixed(2));
+            el.style.setProperty("--py", (my * d).toFixed(2));
+          });
+        });
+      }, { passive: true });
+    }
+
+    /* Site-specific: trigger the timeline draw-in once its box is visible. */
+    var tl = doc.querySelector(".timeline-wrap");
+    if (tl) {
+      if (still || !("IntersectionObserver" in window)) {
+        tl.classList.add("is-visible");
+      } else {
+        var tio = new IntersectionObserver(function (es) {
+          es.forEach(function (e) {
+            if (!e.isIntersecting) return;
+            e.target.classList.add("is-visible");
+            tio.unobserve(e.target);
+          });
+        }, { threshold: 0.4 });
+        tio.observe(tl);
+      }
+    }
+  });
+})();
+</script>
+</body>
+</html>

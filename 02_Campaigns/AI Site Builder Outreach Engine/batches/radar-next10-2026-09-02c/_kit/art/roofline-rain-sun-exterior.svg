@@ -1,0 +1,62 @@
+<!-- roofline-rain-sun-exterior.svg — roof line with rain resolving into sun.
+     Vertical: roofing / siding / gutters / exterior. Paste inline, keep
+     aria-hidden="true". currentColor only; transform + opacity only. -->
+<svg class="art art-roof" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice"
+     role="presentation" aria-hidden="true" focusable="false"
+     xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .art-roof .ln{fill:none;stroke:currentColor;stroke-linecap:round;
+      vector-effect:non-scaling-stroke}
+    /* One rain column is 120 units tall and the drops repeat every 120, so a
+       -120 translate restarts identically. Rain and sun cross-fade on the same
+       24s clock, so the weather "turns" once per loop and never jumps. */
+    .art-roof .rain{animation:rf-fall 1.5s linear infinite,
+      rf-clear 24s ease-in-out infinite;will-change:transform}
+    .art-roof .rain-b{animation-duration:2.1s,24s;animation-delay:-.7s,-2s}
+    .art-roof .rain-c{animation-duration:1.8s,24s;animation-delay:-1.1s,-4s}
+    .art-roof .sun{transform-box:fill-box;transform-origin:50% 50%;
+      animation:rf-turn 60s linear infinite,rf-shine 24s ease-in-out infinite}
+    .art-roof .glow{transform-box:fill-box;transform-origin:50% 50%;
+      animation:rf-glow 24s ease-in-out infinite}
+    @keyframes rf-fall{from{transform:translate3d(0,0,0)}
+      to{transform:translate3d(0,120px,0)}}
+    @keyframes rf-clear{0%,34%{opacity:.6}58%,88%{opacity:0}100%{opacity:.6}}
+    @keyframes rf-turn{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+    @keyframes rf-shine{0%,30%{opacity:0}56%,86%{opacity:.9}100%{opacity:0}}
+    @keyframes rf-glow{0%,30%{opacity:0;transform:scale(.9)}
+      58%,84%{opacity:.2;transform:scale(1)}100%{opacity:0;transform:scale(.9)}}
+    @media (prefers-reduced-motion:reduce){
+      .art-roof .rain,.art-roof .sun,.art-roof .glow{animation:none;opacity:.45}}
+  </style>
+  <defs>
+    <g id="rf-col" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+      <path d="M0 -120v18M0 -60v18M0 0v18M0 60v18M0 120v18M0 180v18M0 240v18
+               M0 300v18M0 360v18M0 420v18M0 480v18M0 540v18M0 600v18"/>
+    </g>
+  </defs>
+  <g class="glow"><circle cx="905" cy="215" r="215" fill="currentColor"/></g>
+  <g class="sun" opacity="0">
+    <circle cx="905" cy="215" r="96" fill="none" stroke="currentColor" stroke-width="4"/>
+    <circle cx="905" cy="215" r="72" fill="currentColor" opacity=".2"/>
+    <g stroke="currentColor" stroke-width="4" stroke-linecap="round"
+       transform="translate(905 215)">
+      <path d="M0 -142v-40M0 142v40M-142 0h-40M142 0h40
+               M-100 -100l-28 -28M100 100l28 28M-100 100l-28 28M100 -100l28 -28"/>
+    </g>
+  </g>
+  <!-- Per-column opacity would be overwritten by the rf-clear keyframes, so
+       depth comes from stroke width and offset instead. -->
+  <g opacity=".6">
+    <use href="#rf-col" class="rain rain-a" x="180" y="0"/>
+    <use href="#rf-col" class="rain rain-b" x="330" y="-40"/>
+    <use href="#rf-col" class="rain rain-c" x="480" y="-90"/>
+    <use href="#rf-col" class="rain rain-b" x="640" y="-20"/>
+    <use href="#rf-col" class="rain rain-a" x="790" y="-70"/>
+    <use href="#rf-col" class="rain rain-c" x="1050" y="-30"/>
+  </g>
+  <g class="ln" stroke-width="4">
+    <path d="M-60 700L300 470l300 190l320 -220l340 220" opacity=".9"/>
+    <path d="M-60 760L300 530l300 190l320 -220l340 220" opacity=".45"
+          stroke-width="2.4"/>
+  </g>
+</svg>

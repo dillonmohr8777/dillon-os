@@ -1,0 +1,99 @@
+{
+  "slug": "specks-broasted-chicken",
+  "business_name": "Speck's Broasted Chicken",
+  "vertical": "restaurant",
+  "town": "Collegeville, PA",
+  "source_urls": [
+    "http://speckschicken.com/",
+    "http://speckschicken.com/history.html",
+    "http://speckschicken.com/menu.pdf",
+    "http://speckschicken.com/mascot.html"
+  ],
+  "palette_hint": {
+    "brand_color_seen": "#fffcd7",
+    "notes": "Site background is a warm pale yellow (#fffcd7) with black/red text and a hand-drawn script logo. Reads diner/roadside classic, not modern fast-food."
+  },
+  "voice": "Plainspoken small-town diner talk, proud of family ownership and a single signature product rather than a big menu. Every line reads like something Randy would actually say behind the counter, not marketing copy.",
+  "headline": "Collegeville's Broasted Chicken Since 1953",
+  "subhead": "Family owned and operated since 1953, still serving Speck's award-winning Broasted chicken, sandwiches, and homemade coleslaw in Collegeville.",
+  "cta_primary": {
+    "label": "Order for Pickup",
+    "note": "Links to their existing online-ordering page (specks.dine.online) - no new ordering system implied."
+  },
+  "cta_secondary": {
+    "label": "Get Directions",
+    "note": "Links to their existing Google Maps listing at 3969 Ridge Pike, Collegeville, PA 19426."
+  },
+  "intro": "In 1953, Stanley B. Landis, aka Speck, started the original Speck's Drive-In on Ridge Pike based on the idea of Pipin' Hot Sandwiches and good, affordable fast food. The Collegeville location has stayed in the family ever since, with Speck's son Randy still running daily operations. The restaurant is still renowned for its sandwiches, but the Broasted chicken and homemade coleslaw remain the draw. Fast, affordable, and a Collegeville landmark for anyone returning to the area.",
+  "services": [
+    {
+      "title": "Broasted Chicken",
+      "blurb": "Speck's award-winning Broasted chicken by the piece, bucket, or combo, in equal assortments of breasts, legs, thighs, and wings. Large party orders welcome with 3 days' notice.",
+      "icon_hint": "drumstick"
+    },
+    {
+      "title": "Sandwiches & Hoagies",
+      "blurb": "Burgers made like homemade with fresh ground beef, hot dogs, fish and crab cake sandwiches, and hoagies dressed with provolone, onion, tomato, oil, and oregano.",
+      "icon_hint": "sandwich"
+    },
+    {
+      "title": "Steak Sandwiches",
+      "blurb": "Chicken or beef steak sandwiches on a long roll, plain, cheese steak, or a full steak hoagie, in three sizes.",
+      "icon_hint": "steak"
+    },
+    {
+      "title": "Sides & Soups",
+      "blurb": "Coleslaw, macaroni salad, potato salad, garden salad, and a hot vegetable of the day, plus daily soups and chowders and Wednesday chili.",
+      "icon_hint": "bowl"
+    },
+    {
+      "title": "Kids Meals & Milkshakes",
+      "blurb": "Kids meals with applesauce, a kiddie side, and a choice of juice or milk, plus milkshakes in nine flavors.",
+      "icon_hint": "milkshake"
+    }
+  ],
+  "proof": [
+    {
+      "label": "Family owned and operated since",
+      "value": "1953",
+      "source_url": "http://speckschicken.com/history.html"
+    },
+    {
+      "label": "Same family running it today",
+      "value": "Founder's son Randy still owns and manages the restaurant",
+      "source_url": "http://speckschicken.com/history.html"
+    }
+  ],
+  "about": "In 1953, Stanley B. Landis, known as Speck, started the original Speck's Drive-In on Ridge Pike in Limerick on the idea of Pipin' Hot Sandwiches and good, affordable fast food, years before fast-food franchises defined the American landscape. After a fire at the Big Pixie location at Ridge and Germantown Pikes, Speck acquired the property and ran both locations. The Limerick spot changed hands over the years, but the Collegeville location has stayed in the family, with Speck's children, their spouses, and his grandchildren holding roles over the decades. Today Speck's son Randy still owns the restaurant and is heavily involved in daily operations. The restaurant remains known for its sandwiches, with the Broasted chicken and homemade coleslaw as the primary draw. Speck's is a Collegeville landmark and often the first stop for people coming back to the area.",
+  "faq": [
+    {
+      "q": "How long has Speck's been in Collegeville?",
+      "a": "Speck's Drive-In has been a family owned and operated establishment since 1953, and the Collegeville location has stayed in the family ever since."
+    },
+    {
+      "q": "Do you take large party orders?",
+      "a": "Yes. Large party orders are welcome for chicken buckets of 24 pieces or more; call 3 days ahead to ensure availability."
+    },
+    {
+      "q": "Can I order online or get delivery?",
+      "a": "Yes. Order for pickup online, or get delivery through the restaurant's listed delivery partners."
+    }
+  ],
+  "marquee": [
+    "Broasted Chicken Since 1953",
+    "Family Owned & Operated",
+    "Award-Winning Broasted Chicken",
+    "Secret Recipe Coleslaw",
+    "A Collegeville Landmark",
+    "Pipin' Hot Sandwiches",
+    "Fast, Affordable, Family Dinners"
+  ],
+  "contact": {
+    "phone": "(610) 489-2110",
+    "address": "3969 Ridge Pike, Collegeville, PA 19426",
+    "hours": "Mon-Fri 10am-9pm, Sat 11am-9pm, Sun 12pm-9pm",
+    "email": "PLACEHOLDER"
+  },
+  "placeholders": ["email"],
+  "harvest_status": "ok"
+}

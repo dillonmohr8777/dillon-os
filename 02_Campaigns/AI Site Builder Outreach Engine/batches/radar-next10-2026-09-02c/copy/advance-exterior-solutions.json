@@ -1,0 +1,93 @@
+{
+  "slug": "advance-exterior-solutions",
+  "business_name": "Advance Exterior Solutions",
+  "vertical": "roofer",
+  "town": "Macungie, Lehigh County, PA",
+  "source_urls": [
+    "https://advanceexteriorsolutions.com/",
+    "https://advanceexteriorsolutions.com/about/"
+  ],
+  "palette_hint": {
+    "brand_color_seen": null,
+    "notes": "Every fetch attempt (WebFetch on the home and about page, curl through the proxy with two different user agents) returned HTTP 202 with a redirect to their own /.well-known/sgcaptcha/ bot-check wall. No page content, CSS, or imagery was ever rendered, so no palette was seen."
+  },
+  "voice": "No live site to mirror. Copy below is trade-generic and town-specific for roofing and exteriors in Macungie, written the way a local contractor talks to homeowners about a roof or siding job - plain, practical, no invented facts, no fabricated history, no numbers.",
+  "headline": "Macungie Roofing & Exterior Contractor",
+  "subhead": "Roof repair, replacement, and exterior work for homes in Macungie and the Lehigh Valley.",
+  "cta_primary": {
+    "label": "Request a Roof Inspection",
+    "note": "Placeholder CTA - no verified phone number harvested from a live source."
+  },
+  "cta_secondary": {
+    "label": "Get an Exterior Estimate",
+    "note": "Placeholder CTA - no verified contact form harvested from a live source."
+  },
+  "intro": "A roof or exterior problem in the Lehigh Valley usually shows up after a storm or during a routine inspection, and it rarely waits for a convenient time to get fixed. Advance Exterior Solutions works on homes in and around Macungie, handling roofing, siding, and other exterior repairs and replacements. The focus stays on a clear inspection, an honest explanation of what's needed, and work that holds up through the next season of weather.",
+  "services": [
+    {
+      "title": "Roof Repair",
+      "blurb": "Repair work for leaks, missing shingles, and storm damage, starting with a straightforward inspection of the actual problem area.",
+      "icon_hint": "roof-repair"
+    },
+    {
+      "title": "Roof Replacement",
+      "blurb": "Full roof replacement for homeowners dealing with an aging or failing roof, using materials suited to the Lehigh Valley climate.",
+      "icon_hint": "roof-replace"
+    },
+    {
+      "title": "Siding Installation & Repair",
+      "blurb": "Siding repair and installation to protect a home's exterior and keep it looking sharp from the street.",
+      "icon_hint": "siding"
+    },
+    {
+      "title": "Storm Damage Assessment",
+      "blurb": "Inspections after wind, hail, or storm events to identify roof and exterior damage before it turns into a bigger repair.",
+      "icon_hint": "storm"
+    },
+    {
+      "title": "Gutters & Exterior Trim",
+      "blurb": "Gutter and trim work to round out an exterior project and keep water moving away from the home properly.",
+      "icon_hint": "gutters"
+    }
+  ],
+  "proof": [],
+  "about": "Advance Exterior Solutions is a roofing and exterior contractor working on homes in and around Macungie in the Lehigh Valley. The work covers roof repair and replacement, siding, storm damage assessment, and exterior trim and gutter work. Every project starts with an honest inspection so homeowners know exactly what's needed before any work begins.",
+  "faq": [
+    {
+      "q": "What areas does Advance Exterior Solutions serve?",
+      "a": "Macungie and the surrounding Lehigh Valley area."
+    },
+    {
+      "q": "Does Advance Exterior Solutions handle storm damage?",
+      "a": "Yes, the team assesses roof and exterior damage after wind, hail, or storm events."
+    },
+    {
+      "q": "Does Advance Exterior Solutions do siding as well as roofing?",
+      "a": "Yes, siding installation and repair is offered alongside roof repair and replacement."
+    }
+  ],
+  "marquee": [
+    "Roofing Contractor",
+    "Serving Macungie & the Lehigh Valley",
+    "Roof Repair & Replacement",
+    "Siding Installation",
+    "Storm Damage Assessment"
+  ],
+  "contact": {
+    "phone": "PLACEHOLDER",
+    "address": "PLACEHOLDER",
+    "hours": "PLACEHOLDER",
+    "email": "PLACEHOLDER"
+  },
+  "placeholders": [
+    "cta_primary.label",
+    "cta_secondary.label",
+    "palette_hint.brand_color_seen",
+    "contact.phone",
+    "contact.address",
+    "contact.hours",
+    "contact.email"
+  ],
+  "harvest_status": "failed",
+  "copy_basis": "trade-generic, town-specific; no source site reachable"
+}

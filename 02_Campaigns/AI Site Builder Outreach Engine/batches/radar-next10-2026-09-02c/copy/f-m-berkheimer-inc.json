@@ -1,0 +1,92 @@
+{
+  "slug": "f-m-berkheimer-inc",
+  "business_name": "F M Berkheimer Inc",
+  "vertical": "hvac",
+  "town": "Mechanicsburg, Cumberland County",
+  "source_urls": [
+    "https://fmberkinc.com/",
+    "https://fmberkinc.com/lander"
+  ],
+  "palette_hint": {
+    "brand_color_seen": null,
+    "notes": "fmberkinc.com resolves to a GoDaddy domain-parking lander page (window.location redirect to /lander, empty root div, wsimg.com parking-lander bundle). No brand colors, logo, or copy visible on either URL."
+  },
+  "voice": "No live site to mirror. Copy below is trade-generic and town-specific for HVAC in Mechanicsburg, written plain and practical the way a heating and cooling contractor talks to homeowners - no invented facts, no fabricated history, no numbers.",
+  "headline": "Mechanicsburg Heating & Cooling You Can Call",
+  "subhead": "Local HVAC service, repair, and installation for homes and businesses in Mechanicsburg and Cumberland County.",
+  "cta_primary": {
+    "label": "Call for HVAC Service",
+    "note": "Placeholder CTA - no verified phone number harvested from a live source."
+  },
+  "cta_secondary": {
+    "label": "Request a Service Estimate",
+    "note": "Placeholder CTA - no verified contact form or booking path harvested from a live source."
+  },
+  "intro": "Heating and cooling systems in Cumberland County work hard through hot summers and cold winters, and when a furnace or AC unit fails it rarely picks a convenient time. F M Berkheimer serves homes and businesses around Mechanicsburg with repair, maintenance, and installation for the systems that keep a house comfortable year-round. The approach is straightforward: diagnose the actual problem, explain the options, and do the work right the first time.",
+  "services": [
+    {
+      "title": "Furnace Repair & Service",
+      "blurb": "Diagnostic and repair work for furnaces that are short-cycling, blowing cold air, or failing to start, with straightforward explanations of what's wrong before any work begins.",
+      "icon_hint": "furnace"
+    },
+    {
+      "title": "AC Repair & Service",
+      "blurb": "Air conditioning repair and tune-ups for homes and businesses, addressing weak airflow, refrigerant issues, and units that won't cool on the hottest days.",
+      "icon_hint": "ac-unit"
+    },
+    {
+      "title": "System Installation & Replacement",
+      "blurb": "Installation of new furnaces, air conditioners, and full HVAC systems for homeowners upgrading from an aging or failing unit.",
+      "icon_hint": "install"
+    },
+    {
+      "title": "Preventive Maintenance",
+      "blurb": "Seasonal tune-ups and inspections designed to catch small issues before they turn into a mid-season breakdown.",
+      "icon_hint": "maintenance"
+    },
+    {
+      "title": "Indoor Air Quality",
+      "blurb": "Filtration, humidity control, and ventilation options for households looking to improve the air moving through their HVAC system.",
+      "icon_hint": "air-quality"
+    }
+  ],
+  "proof": [],
+  "about": "F M Berkheimer is a heating and cooling contractor serving Mechanicsburg and the surrounding Cumberland County area. The work covers furnace and air conditioner repair, routine maintenance, and full system installation for homeowners and local businesses. Every job starts with a real diagnosis rather than a guess, and the goal on every call is a system that runs reliably through the next season, not just a quick patch.",
+  "faq": [
+    {
+      "q": "Does F M Berkheimer work on both furnaces and air conditioners?",
+      "a": "Yes. The team handles repair, maintenance, and installation for both heating and cooling systems."
+    },
+    {
+      "q": "What areas does F M Berkheimer serve?",
+      "a": "Mechanicsburg and the surrounding Cumberland County area."
+    },
+    {
+      "q": "Does F M Berkheimer offer routine maintenance, or only repairs?",
+      "a": "Both. Seasonal tune-ups are available to help catch problems before they become a breakdown, alongside on-call repair service."
+    }
+  ],
+  "marquee": [
+    "Serving Mechanicsburg & Cumberland County",
+    "Furnace & AC Repair",
+    "Heating & Cooling Installation",
+    "Seasonal Maintenance Tune-Ups",
+    "Local HVAC Service"
+  ],
+  "contact": {
+    "phone": "PLACEHOLDER",
+    "address": "PLACEHOLDER",
+    "hours": "PLACEHOLDER",
+    "email": "PLACEHOLDER"
+  },
+  "placeholders": [
+    "cta_primary.label",
+    "cta_secondary.label",
+    "contact.phone",
+    "contact.address",
+    "contact.hours",
+    "contact.email"
+  ],
+  "harvest_status": "failed",
+  "copy_basis": "trade-generic, town-specific; no source site reachable"
+}

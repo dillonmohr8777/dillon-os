@@ -1,0 +1,59 @@
+<!-- steam-citrus-food.svg — rising steam ribbons + citrus wheels.
+     Vertical: restaurant / juice / food. Paste inline, keep aria-hidden="true".
+     currentColor throughout; transform + opacity animation only. -->
+<svg class="art art-steam" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice"
+     role="presentation" aria-hidden="true" focusable="false"
+     xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .art-steam .st{fill:none;stroke:currentColor;stroke-linecap:round;
+      vector-effect:non-scaling-stroke}
+    /* Steam rises exactly 200 units, which is one full wave of the path, so
+       the restart is invisible. Opacity fades in and out inside the cycle. */
+    .art-steam .rise{animation:sc-rise 9s linear infinite;will-change:transform}
+    .art-steam .r2{animation-duration:12s;animation-delay:-3s}
+    .art-steam .r3{animation-duration:15s;animation-delay:-7s}
+    .art-steam .wheel{transform-box:fill-box;transform-origin:50% 50%;
+      animation:sc-spin 46s linear infinite}
+    .art-steam .w2{animation-duration:64s;animation-direction:reverse}
+    .art-steam .w3{animation-duration:38s}
+    .art-steam .bob{animation:sc-bob 8s ease-in-out infinite}
+    @keyframes sc-rise{from{transform:translate3d(0,0,0)}
+      to{transform:translate3d(0,-200px,0)}}
+    @keyframes sc-spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+    @keyframes sc-bob{0%,100%{transform:translate3d(0,0,0)}
+      50%{transform:translate3d(0,-16px,0)}}
+    @media (prefers-reduced-motion:reduce){
+      .art-steam .rise,.art-steam .wheel,.art-steam .bob{animation:none}}
+  </style>
+  <defs>
+    <path id="sc-s" d="M0 900 c-46 -50 46 -100 0 -150 s46 -100 0 -150
+      s46 -100 0 -150 s46 -100 0 -150 s46 -100 0 -150 s46 -100 0 -150"/>
+    <g id="sc-w">
+      <circle r="86" fill="currentColor" opacity=".16"/>
+      <circle r="86" fill="none" stroke="currentColor" stroke-width="3"/>
+      <circle r="62" fill="none" stroke="currentColor" stroke-width="1.6" opacity=".7"/>
+      <g stroke="currentColor" stroke-width="2" opacity=".65">
+        <path d="M0 -60V60M-60 0H60M-42 -42L42 42M-42 42L42 -42"/>
+        <path d="M0 -62 A62 62 0 0 1 44 -44M44 44 A62 62 0 0 1 0 62" opacity=".4"/>
+      </g>
+    </g>
+  </defs>
+  <g opacity=".55">
+    <g class="rise r1"><use href="#sc-s" class="st" stroke-width="2.4" x="210"/></g>
+    <g class="rise r2"><use href="#sc-s" class="st" stroke-width="3.2" x="600"/></g>
+    <g class="rise r3"><use href="#sc-s" class="st" stroke-width="2" x="940"/></g>
+    <g class="rise r2"><use href="#sc-s" class="st" stroke-width="1.4" x="380" opacity=".6"/></g>
+    <g class="rise r1"><use href="#sc-s" class="st" stroke-width="1.4" x="800" opacity=".6"/></g>
+  </g>
+  <g class="bob">
+    <use href="#sc-w" class="wheel w1" x="180" y="620"/>
+    <!-- Scale lives on a wrapper <g>: a CSS transform animation on the element
+         itself would replace any transform attribute set on it. -->
+    <g transform="translate(1030 230) scale(.72)">
+      <use href="#sc-w" class="wheel w2"/>
+    </g>
+  </g>
+  <g transform="translate(700 700) scale(1.25)" opacity=".7">
+    <use href="#sc-w" class="wheel w3"/>
+  </g>
+</svg>

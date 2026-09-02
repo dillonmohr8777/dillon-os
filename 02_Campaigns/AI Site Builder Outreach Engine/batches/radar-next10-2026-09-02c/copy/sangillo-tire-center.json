@@ -1,0 +1,99 @@
+{
+  "slug": "sangillo-tire-center",
+  "business_name": "Sangillo Tire Center",
+  "vertical": "tyres",
+  "town": "Folsom, Delaware County, PA",
+  "source_urls": [
+    "http://www.sangillos.com/",
+    "http://www.sangillos.com/services.html",
+    "http://www.sangillos.com/tire_care.html",
+    "http://www.sangillos.com/tire_brands.html"
+  ],
+  "palette_hint": {
+    "brand_color_seen": "#583E7D",
+    "notes": "Pulled from their own stylesheet (css/style.css) - deep purple used for headings/accents against a grey (#999999) page background."
+  },
+  "voice": "Plain and matter-of-fact, built around family ownership and decades of steady service rather than sales pressure. Talks about tires the way a shop counter would: rotation, balancing, repair, disposal, no hype.",
+  "headline": "Folsom's Family Tire Shop for 60 Years",
+  "subhead": "Sangillo Tire Center is family owned and operated, selling and servicing most major tire brands for cars and light trucks in Folsom, PA.",
+  "cta_primary": {
+    "label": "Call (610) 586-3340",
+    "note": "Click-to-call using their published shop number."
+  },
+  "cta_secondary": {
+    "label": "Get Directions to Folsom",
+    "note": "Routes to their published MacDade Blvd address."
+  },
+  "intro": "Sangillo Tire Center has been serving the Delaware Valley for more than 60 years, selling and repairing tires for cars and light trucks out of Folsom. Family owned and operated, the shop carries most major tire brands and can usually get a size that isn't on hand within 24 hours. Every purchase includes free tire disposal, and every visit includes a check for damage, proper inflation, tire rotation, and wheel balancing. In many cases the shop can repair a tire instead of selling a replacement.",
+  "services": [
+    {
+      "title": "Tire Sales",
+      "blurb": "Sangillo's sells most major brands of tires for automobiles and light trucks. If a size isn't in stock, they can normally get it within 24 hours.",
+      "icon_hint": "tire"
+    },
+    {
+      "title": "Tire Rotation",
+      "blurb": "Rotating tires on a regular basis saves money through more mileage and fewer replacements. Staff check for damage and proper inflation at every rotation.",
+      "icon_hint": "rotate"
+    },
+    {
+      "title": "Tire Repair",
+      "blurb": "In many cases Sangillo's is able to repair a tire instead of replacing it. The shop inspects for punctures, cracks, and uneven wear first.",
+      "icon_hint": "wrench"
+    },
+    {
+      "title": "Wheel Balancing",
+      "blurb": "Every tire purchase includes balancing on state-of-the-art computer balancing machines. Improperly balanced tires cause vibration that increases with speed.",
+      "icon_hint": "gauge"
+    },
+    {
+      "title": "Free Tire Disposal",
+      "blurb": "Every tire purchase comes with free disposal of the old tire. Sangillo's recycles its scrap tires rather than sending them to landfill.",
+      "icon_hint": "recycle"
+    }
+  ],
+  "proof": [
+    {
+      "label": "Years serving the Delaware Valley",
+      "value": "More than 60 years",
+      "source_url": "http://www.sangillos.com/"
+    },
+    {
+      "label": "Location",
+      "value": "1114 MacDade Blvd, Folsom, PA 19033",
+      "source_url": "http://www.sangillos.com/services.html"
+    }
+  ],
+  "about": "Sangillo Tire Center is a family owned and operated tire shop on MacDade Blvd in Folsom, serving the Delaware Valley for more than 60 years. The shop sells most major tire brands for cars and light trucks and can usually source a size that isn't in stock within 24 hours. Every rotation includes a check for tire damage and proper inflation, and every purchase includes computer wheel balancing plus free disposal of the old tire. In many cases the team can repair a tire instead of selling a new one, and scrap tires are recycled rather than landfilled. The shop is open six days a week: Monday through Friday from 8:00 to 5:00 and Saturday mornings until noon, closed Sundays.",
+  "faq": [
+    {
+      "q": "What tire brands does Sangillo's carry?",
+      "a": "Most major brands for cars and light trucks. If a specific size isn't in stock, Sangillo's can normally get it within 24 hours."
+    },
+    {
+      "q": "Do you repair tires or only replace them?",
+      "a": "In many cases they are able to repair a tire instead of replacing it, after checking for punctures, cracks, or uneven wear."
+    },
+    {
+      "q": "What are Sangillo's hours?",
+      "a": "Monday through Friday 8:00 to 5:00, Saturday 8:00 to 12:00, closed Sunday."
+    }
+  ],
+  "marquee": [
+    "Family Owned & Operated",
+    "Selling Tires Over 60 Years",
+    "Most Major Tire Brands",
+    "Free Tire Disposal With Purchase",
+    "Tire Rotation & Wheel Balancing",
+    "Serving Folsom & Delaware County",
+    "Same-Visit Tire Repair When Possible"
+  ],
+  "contact": {
+    "phone": "(610) 586-3340",
+    "address": "1114 MacDade Blvd, Folsom, PA 19033",
+    "hours": "Mon-Fri 8:00-5:00, Sat 8:00-12:00, Sun Closed",
+    "email": "PLACEHOLDER"
+  },
+  "placeholders": ["contact.email"],
+  "harvest_status": "ok"
+}
