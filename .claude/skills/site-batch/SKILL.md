@@ -45,3 +45,18 @@ cd /workspace && npm i --no-save playwright && npx playwright install chromium -
 - Facts come from the harvest or verified research. Unverifiable fields stay empty.
 - Never reuse a photo within a site or across the batch; the runner enforces this by content hash.
 - Slugs must match `^[a-z0-9]+(?:-[a-z0-9]+)*$`. Harvest URLs must be public http(s).
+- Keep changes to what the task asks. Report nearby problems as follow-ups, do not fix them in the same pass.
+- Edit surgically; never rewrite a whole file when a targeted edit does the job.
+
+## Cost
+
+- Step 1 Scope: Haiku (haiku)
+- Step 2 Scaffold: Haiku (haiku)
+- Step 3 Harvest: Sonnet (sonnet)
+- Step 4 Mirror each prospect: Sonnet (sonnet)
+- Step 5 Build and QA the batch: Sonnet (sonnet)
+- Step 6 Taste pass: Fable 5.1 (claude-fable-5-1)
+- Step 7 Package for approval: Sonnet (sonnet)
+- Step 8 Log: Sonnet (sonnet)
+- Subagent return caps: scouts 150 words, builders 250 words, researchers 250 words plus receipts as file paths; no tables, no transcripts in returns.
+- Lead reads reports and diffs only; it never fetches pages, reads images, or sweeps folders.
