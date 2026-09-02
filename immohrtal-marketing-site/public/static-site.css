@@ -88,6 +88,7 @@
 .studio-nap{display:grid;gap:6px;margin:22px 0 0;font-style:normal;color:var(--muted);font-size:.86rem;line-height:1.5}
 .studio-nap strong{color:inherit}
 .studio-nap a{color:var(--cyan)}
+.tone-paper .studio-nap,.tone-blue .studio-nap{color:#40566b}
 .footer-nap{margin:0}
 .footer-directory{display:grid;gap:12px}
 .footer-directory a{color:var(--muted);font-size:.79rem;line-height:1.4}
