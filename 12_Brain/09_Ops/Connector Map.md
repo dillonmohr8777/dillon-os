@@ -39,7 +39,7 @@ connection here proves nothing there (see `System/tool-access-catalog.md`).
 | Google Calendar | scheduling context | rarely called |
 | HyperFrames by HeyGen | code-driven motion video | compose/render disabled from CLI agents; use the local skill |
 | Indeed | job search | not part of any workflow; candidate for removal |
-| Higgsfield | image, video, 3D, audio generation for hero loops and boards | connected and enabled 2026-09-01 (second session); generation spend stays approval-gated |
+| Higgsfield | image, video, 3D, audio generation for hero loops and boards; also `.cursor/mcp.json` | **connected 2026-09-01** (claude.ai workspace, Ultra plan); 80+ tools incl. generate_image/video/audio, video_analysis, website builder, TikTok publish. Every generate_* call spends credits: approval-gated |
 
 ## 2. Installed but not enabled in chat
 
