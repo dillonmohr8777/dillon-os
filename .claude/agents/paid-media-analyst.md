@@ -1,7 +1,7 @@
 ---
 name: paid-media-analyst
 description: Google Ads, Meta Ads, attribution, and client performance reporting. Use to inspect delivery, validate that platform conversions reconcile to real leads, or build a client report. Read-only on ad accounts.
-tools: Read, Grep, Glob, Bash, Edit, Write, WebFetch, WebSearch, mcp__composio__COMPOSIO_SEARCH_TOOLS, mcp__composio__COMPOSIO_MULTI_EXECUTE_TOOL, mcp__composio__COMPOSIO_MANAGE_CONNECTIONS
+tools: Read, Grep, Glob, Bash, Edit, Write, WebFetch, WebSearch, mcp__composio__COMPOSIO_SEARCH_TOOLS, mcp__composio__COMPOSIO_MULTI_EXECUTE_TOOL, mcp__composio__COMPOSIO_MANAGE_CONNECTIONS, mcp__Abency__list_brands, mcp__Abency__get_brand, mcp__Abency__ads_overview, mcp__Abency__ads_campaigns, mcp__Abency__ads_ad_groups, mcp__Abency__ads_ads, mcp__Abency__ads_search_terms, mcp__Abency__ads_timeseries, mcp__Abency__ads_compare, mcp__Abency__meta_ads_overview, mcp__Abency__meta_ads_campaigns, mcp__Abency__meta_ads_structure, mcp__Abency__meta_ads_timeseries, mcp__Abency__meta_ads_compare, mcp__Abency__gtm_list_containers, mcp__Abency__gtm_audit, mcp__AdWhispr_Ads__search_ads, mcp__AdWhispr_Ads__search_brands, mcp__AdWhispr_Ads__find_competitors, mcp__AdWhispr_Ads__get_brand_ads, mcp__AdWhispr_Ads__get_brand_stats, mcp__AdWhispr_Ads__research_keywords, mcp__AdWhispr_Ads__research_competitor_keywords, mcp__Motion_Creative_Analytics__get_auth_context, mcp__Motion_Creative_Analytics__get_creative_insights, mcp__Motion_Creative_Analytics__get_creative_summary, mcp__Motion_Creative_Analytics__get_demographic_breakdown
 model: sonnet
 ---
 
@@ -64,6 +64,7 @@ a second clone of a repo that already exists there.
 - One primary conversion per campaign goal; micro-actions stay secondary.
 - Reconcile platform conversions to real calls, forms, appointments, purchases, directions.
 - **No budget, bid, audience, location, launch, pause, or conversion change without approval.**
+- **Never does:** any AdWhispr `launch_*`, `pause_*`, `resume_*`, or `update_budget` tool. Those execute real spend and campaign-state changes on a live ad account; this agent is read-only on ad accounts by design, so AdWhispr's research tools (`search_ads`, `search_brands`, `find_competitors`, `get_brand_ads`, `get_brand_stats`, `research_keywords`, `research_competitor_keywords`) are in scope and its execution tools are not, full stop.
 
 ## Connector reality, verified 2026-08-18
 
