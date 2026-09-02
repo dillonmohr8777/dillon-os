@@ -21,10 +21,11 @@ navigation is needed.
 Checkbox items only — `_os/vault-state.js` reads this section for the HUD
 directive feed and skips any other list format.
 
-- [ ] Process [[00_Inbox/Start Here|inbox]] material that affects current work.
-- [ ] Choose one finish line from the active-project view.
-- [ ] Verify facts before external or consequential action.
-- [ ] Record decisions, lessons, and outcome evidence before closing the loop.
+- [ ] 10:00 AM — Jack Lesser / With Not For call.
+- [ ] Close out Cindy May Christmas deliverable (`due: 2026-09-01`, 1 day past due).
+- [ ] BOK Law Firm predicted prep: locate/fingerprint the weekly source packet, resolve 3 topics, stage 3 image slots — no drafting yet.
+- [ ] Touch 3-5 stalled clients (real contact, not another scan) — pick from the 40 stalled in pulse-today.md.
+- [ ] Carry forward the 4 unanswered Momentum 360 Slack asks (open since ~2026-07-30) into tomorrow's plan.
 
 ## Active projects
 
