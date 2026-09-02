@@ -160,3 +160,72 @@ Squarespace theme defaults). No CSS or icon files were touched in this pass.
   `href="#..."` anchor (`about`, `contact`, `faq`, `get-estimate`, `main`,
   `services`, `top`, `icon-1..5`) resolves to a matching `id` in the file
   (grep-diffed both sets).
+
+## v2 rebuild (2026-09-02, sections-v2.html grammar)
+
+Rebuilt `index.html` from scratch per `_kit/v2/DESIGN-v2.md` and
+`_kit/v2/sections-v2.html`, assembling only (no new copy, art, or icons
+authored here).
+
+- **Fonts**: Archivo Black (display) + Nunito Sans 400/700/800 (text) +
+  Caveat 700 (script), Google Fonts `display=swap`, per the house v2 kit.
+- **Tokens lifted from v1** `index.html` `:root`: `--brand:#2f6e94`,
+  `--brand-2:#12242f`, `--ink:#1a2226`, `--paper:#f7f4ee`, `--on-brand:#fff`,
+  `--on-deep:#f3ede4`, `--on-accent:#fff`, `--on-paper:var(--ink)`.
+  `--accent` further darkened from v1's `#ad5819` to `#9c4f16` (see contrast
+  note below) — a second darkening pass on top of v1's own `#e17a2e` →
+  `#ad5819` pass.
+- **Logo**: header (40px) and footer (28px) `<img>` tags copied
+  byte-identical from the v1 file (same base64 PNG, F.M. Berkheimer's real
+  harvested badge). Header sits on a `.chip` (paper background) per the
+  design rule for a dark header. Favicon `<link>` copied byte-identical too.
+- **Icons mapped** (`icon_hint` → sprite id, from `_kit/v2/elements/icons.svg`):
+  maintenance→`ic-calendar`, install→`ic-gauge`, wrench→`ic-wrench`,
+  upgrade→`ic-refresh`, air-quality→`ic-leaf`, water-heater→`ic-furnace`.
+  No `icon_hint` fell back to `ic-spark`.
+- **Doodles**: `dd-underline` under the services `h2`; one `dd-arrow` in the
+  hero art pointing at the primary CTA.
+- **Seal**: yes — proof includes a sourced year ("Family owned since 1950",
+  `source_urls`: fmberkheimer.com/about-us). Seal used in the hero
+  (`seal-float`, small) and again large (240px) as the split-section art on a
+  `--brand-2` panel, with ring text "F.M. BERKHEIMER INC" and year 1950.
+- **Script line**: "Family Owned Since 1950", lifted verbatim from the
+  `marquee[]` array (not invented).
+- **Process rail**: `--steps:4` (4 items from `copy.process`).
+- **Stats**: rendered (proof array non-empty), 4 items, numeric `data-count`
+  extracted from each `proof[].value` where a number was present.
+- **Placeholders**: `contact.email` (`PLACEHOLDER` in source JSON) rendered
+  as "Email on request" in the footer contact block. No email invented.
+- **Structural checks (this pass)**: `node -e` parsed the inline `<script>`
+  cleanly; every `href="#..."` anchor and every `<use href="#...">` resolves
+  (checked programmatically, zero missing); file size 78,484 bytes (well
+  under the 120 KB ceiling); `grep -i papa` returns nothing (CSS/SVG
+  attribution comments stripped during assembly — the `pa-*` class/id prefix
+  itself is untouched, only the literal word "Papa" in comments was removed);
+  surface sequence hero(brand)→services(paper)→stats(brand)→process(panel)→
+  split(paper)→faq(panel)→marquee(deep)→cta(accent)→footer(deep), no two
+  adjacent sections share a surface; no two art-only sections are adjacent
+  (hero and split both pair art with copy, and are separated by four
+  sections).
+- **Contrast** (WCAG relative-luminance, computed programmatically for every
+  real text/background pair that appears in the markup):
+  - ink on paper 14.71:1, accent on paper 5.40:1 (after darkening), accent on
+    panel 4.61:1 (after darkening; was 3.90:1 at v1's `#ad5819`, failing for
+    the small "How it works" eyebrow), on_brand on brand 5.56:1, on_deep on
+    brand2 13.68:1, paper on brand2 14.5:1, on_accent on accent 5.93:1 (after
+    darkening).
+  - **Fixed**: hero eyebrow ("{town} · HVAC") was accent-on-brand at 1.11:1
+    (fail). Since the kit's `.hero .eyebrow{color:var(--accent)}` rule leaves
+    no per-token way to fix this without breaking accent's other uses, added
+    a scoped inline `style="color:var(--on-brand)"` on that one `<p
+    class="eyebrow">` (white on brand, 5.56:1) rather than edit `kit-v2.css`.
+  - **Known, not fixed (kit-level, out of scope for an assembler)**:
+    `.btn-ghost:hover` sets `background:currentColor;color:var(--paper)` —
+    on the hero and CTA band, `currentColor` is `on-brand`/`on-accent`
+    (white), so ghost-button hover renders near-white text on a near-white
+    hover background (contrast ≈1:1). This is authored in `kit.css`/
+    `kit-v2.css` shared across the batch, not a per-site token; flagging for
+    qa-critic rather than patching the shared kit file.
+- **Not verified this pass**: live browser rendering at 390/1440, real
+  screen-reader pass, visual QA of the seal/doodle placement. Hand to
+  `qa-critic`.

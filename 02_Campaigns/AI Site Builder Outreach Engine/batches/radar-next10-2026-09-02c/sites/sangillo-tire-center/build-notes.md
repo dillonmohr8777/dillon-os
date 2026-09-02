@@ -87,3 +87,70 @@ and the cyan/black wordmark needs a light backing — the logo itself was never
 recolored). Final asset 12.2 KB; page weight 33.7 KB → 65.0 KB (largest of the
 batch — still well under the 120 KB ceiling). `alt`/`aria-label` set to
 "Sangillo Tire Center". QA harness re-run: pass.
+
+## v2 (house-style rebuild, 2026-09-02)
+
+Rebuilt `index.html` from scratch against `_kit/v2/sections-v2.html` +
+`_kit/v2/kit-v2.css` + `_kit/kit.css`, replacing the v1 build entirely.
+Assembly only — no new design elements authored.
+
+- **Identity tokens**: lifted byte-for-byte from the v1 `:root` block —
+  `--brand:#583E7D`, `--brand-2:#241a34`, `--ink:#211a2b`, `--paper:#f8f4f7`,
+  `--accent:#9d620a`, `--on-brand:#ffffff`, `--on-deep:#f3eef7`,
+  `--on-accent:#ffffff`. Note the v1 accent (`#9d620a`) differs from the
+  design manifest's accent (`#f2a93b`); per instructions the v1 file, not the
+  manifest, was the source of truth for this pass.
+- **Logo**: header `<img>` (40px) and footer `<img>` (28px, on the same white
+  chip div) extracted verbatim (identical base64 payload) from the v1 file.
+  Favicon reuses the same base64 PNG.
+- **Hero art**: `_kit/v2/elements/hero-sangillo-tire-center.svg` inlined as
+  supplied. Split-section art is a cropped variant of the same SVG
+  (`viewBox="300 60 600 450"`, style block stripped to avoid duplicate
+  `@keyframes`) so it reads as a distinct detail shot, not a repeated
+  composition — no seal was available (see below).
+- **Icons**: tire→`ic-tire`, rotation→`ic-refresh` (no rotate-specific icon in
+  the sprite), repair→`ic-wrench`, balancing→`ic-gauge`, alignment→
+  `ic-alignment`, free disposal→`ic-truck` (no recycle icon in the sprite;
+  truck was the closest semantic fit for "hauled away").
+- **Stats**: `proof[]` has two entries. Only the first ("More than 60 years")
+  converts to a `data-count` stat (`60+`, "Years Serving the Delaware
+  Valley"). The second proof entry is the street address, which isn't a
+  countable stat — it's already surfaced in the footer contact block and was
+  not force-fit into the stats strip.
+- **Seal**: omitted on both hero and split. `proof[]` gives a duration ("more
+  than 60 years"), not a sourced founding year, so per DESIGN-v2 ("seal only
+  when the year is a sourced fact") no seal was rendered; the split section
+  uses the cropped hero-art fallback instead.
+- **Fields not present in `sangillo-tire-center.json`** (authored as neutral,
+  non-factual copy, not sourced from the JSON):
+  - `about_heading`: "A Family Tire Shop in Folsom"
+  - hero/header `cta_primary`/`cta_secondary`: reused the already-approved
+    `cta_band.button` / `cta_band.secondary` strings verbatim ("Call (610)
+    586-3340" / "Get Directions to Folsom") rather than inventing new labels,
+    since the JSON has no separate `cta_primary`/`cta_secondary` object.
+  - Hero `.script` line: "Family Owned & Operated", pulled verbatim from
+    `marquee[0]`.
+  - `vertical_label`: "Tire Shop"; short town form for the eyebrow: "Folsom,
+    PA" (derived from the full `town` field "Folsom, Delaware County, PA").
+  - `services_heading`: first sentence of `intro`, verbatim, per the
+    template's `services_heading_or_intro_first_sentence` field (no
+    `services_heading` key exists in the JSON).
+- **Placeholders**: `contact.email` is `PLACEHOLDER` in the JSON; it isn't
+  used anywhere in the v2 template, so no neutral substitute was needed.
+- **Contrast fixes** (added as two small scoped CSS overrides after the
+  identity `:root` block, values unchanged): `.hero .eyebrow{color:var(
+  --on-brand)}` — the kit-v2 default (`--accent` on `--brand`) measured
+  1.74:1, a hard fail; on-brand measures 8.75:1. `.surface-panel .eyebrow
+  {color:color-mix(in srgb,var(--accent) 70%,var(--ink) 30%)}` — plain
+  `--accent` on the process/FAQ panel surface measured 3.81:1 (fail for small
+  text); the 70/30 mix measures 5.6:1 while staying visibly accent-colored.
+  No other text pair on any surface fell below 4.5:1 (checked by script:
+  ink/paper, on-brand/brand, on-accent/accent, accent/paper, paper/ink,
+  on-deep/brand-2, paper/brand-2 all pass at 4.6–15.5:1).
+- **File size**: 111,703 bytes (109.1 KB), under the 120 KB v2 ceiling.
+- `grep -i papa` returns nothing (stripped all kit/doc comments on embed).
+  No `PLACEHOLDER` strings remain in the shipped file. JS parses
+  (`node --check`). Every in-page `#anchor` and `use href="#..."` resolves.
+- Not done / could not verify: no headless-browser render check (390/1440
+  visual QA), so layout claims above are static-review only, not
+  screenshot-verified. Hands off to `qa-critic` for that pass.

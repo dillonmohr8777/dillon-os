@@ -117,3 +117,93 @@ Solutions" businesses in the Macungie area with no reliable way to verify which
 one (if any) is this company's current, owned page. Not verifiable with
 confidence, so no real logo was pulled. Kept the Opus-designed `logo.svg`
 placeholder unchanged.
+
+## v2 (house-style rebuild, 2026-09-02)
+
+Rebuilt `index.html` from scratch against `_kit/v2/sections-v2.html` +
+`_kit/v2/kit-v2.css` + `_kit/kit.css`, replacing the v1 build entirely.
+Assembly only — no new design elements authored.
+
+- **Logo placeholder confirmed**: still no verifiable real logo (see harvest
+  note above). Kept the exact designed mark from the v1 file, extracted
+  verbatim — header wordmark SVG (36px) and the icon-only footer mark SVG
+  (28px), both byte-identical to v1 except the two `<text>` `font-family`
+  attributes inside the header wordmark, which were updated from `'Arial
+  Black','Helvetica Neue',sans-serif` / `system-ui,...` to `'Archivo
+  Black','Arial Black',sans-serif` / `'Nunito Sans',system-ui,sans-serif` so
+  the logo's own type matches the v2 house faces used everywhere else on the
+  page, per instruction. Favicon rebuilt as a matching inline SVG data URI
+  (same square mark, same hardcoded colors `#3d4b52`/`#ffffff`) since there's
+  no raster asset to reuse. **Logo placeholder — not a real business logo.**
+- **Identity tokens**: lifted byte-for-byte from the v1 `:root` block —
+  `--brand:#1d4e6d`, `--brand-2:#12212b`, `--ink:#1a1d20`, `--paper:#fbf8f4`,
+  `--accent:#aa5e22`, `--on-brand:#ffffff`, `--on-deep:#f6f2ec`,
+  `--on-accent:#12100e`. Note this blue/slate-brown pairing differs from both
+  the v1 build-notes' stated "slate/charcoal/copper" intent and the design
+  manifest's `#3d4b52` slate — the v1 file's actual `:root` values (not its
+  prose) were the source of truth per instructions.
+- **Fonts**: `--font-display`/`--font-text` come from `kit-v2.css`'s house
+  layer (Archivo Black / Nunito Sans), already correct without per-site
+  override — this satisfies the "Archivo Black / Nunito Sans like the rest"
+  requirement for the site's running text and headings.
+- **Hero art**: `_kit/v2/elements/hero-advance-exterior-solutions.svg`
+  inlined as supplied. Split-section art is a cropped variant of the same
+  SVG (`viewBox="130 0 680 510"`, style block stripped to avoid duplicate
+  `@keyframes`) focused on the roofline/sun rather than repeating the full
+  hero framing — no seal was available (see below).
+- **Icons**: roof repair→`ic-shingle`, roof replacement→`ic-roof`, siding→
+  `ic-siding`, storm damage→`ic-storm`, gutters/trim→`ic-gutter` — all direct
+  matches in the sprite, no fallback needed.
+- **Stats**: `proof: []` in the JSON, so the stats section was omitted
+  entirely, per the template's own instruction ("only if proof[] is
+  non-empty").
+- **Seal**: omitted — no proof/year data exists at all for this prospect
+  (bot-walled source site, `harvest_status: "failed"`). Split section uses
+  the cropped hero-art fallback.
+- **PLACEHOLDER fields → neutral phrasing** (per `placeholders[]` in the
+  JSON):
+  - `cta_band.button` → "Request an Inspection" (also reused for the
+    header/hero primary CTA, since the JSON has no separate `cta_primary`
+    field)
+  - `cta_band.secondary` → "View Our Services" (also reused for header/hero
+    secondary CTA)
+  - `contact.phone` → no digits exist to link; the header `.tel` link and
+    footer phone link both point to `#contact` instead of a `tel:` href, with
+    display text "Contact Us" — no phone number was invented
+  - `contact.address` → "Macungie, PA" (the real town from the JSON's `town`
+    field, not a fabricated street address)
+  - `contact.hours` → "Call for hours"
+  - `contact.email` → not used anywhere in the v2 template, so no substitute
+    needed
+  - `palette_hint.brand_color_seen` → not used directly (identity tokens
+    come from the v1 file per the assembly instructions, see above)
+- **Fields not present in `advance-exterior-solutions.json`** (authored as
+  neutral, non-factual copy):
+  - `about_heading`: "Local Roofing You Can Count On"
+  - Hero `.script` line: "Local Exterior Work", pulled verbatim from
+    `marquee[6]`.
+  - `vertical_label`: "Roofing & Exteriors"; short town form for the eyebrow:
+    "Macungie, PA" (derived from the full `town` field "Macungie, Lehigh
+    County, PA").
+  - `services_heading`: first sentence of `intro`, verbatim, per the
+    template's `services_heading_or_intro_first_sentence` field.
+- **CTA band self-link caveat**: because there's no real phone/contact
+  channel yet, the CTA band's "Request an Inspection" button links to the
+  in-page `#contact` anchor (the CTA band's own section id) rather than a
+  `tel:`/`mailto:` — it resolves and doesn't 404, but it isn't a functional
+  lead-capture path. Flagging so this isn't mistaken for a working contact
+  method.
+- **Contrast fix**: `.surface-panel .eyebrow{color:color-mix(in srgb,var(
+  --accent) 70%,var(--ink) 30%)}` added as a scoped override (see sangillo's
+  v2 notes for the shared rationale/measurements — plain `--accent` on this
+  site's process/FAQ panel measured 3.77:1, the mix measures 5.61:1). The
+  hero eyebrow also needed `.hero .eyebrow{color:var(--on-brand)}` (plain
+  accent-on-brand measured 1.83:1; on-brand measures 8.89:1). All other
+  checked text pairs pass at 4.5:1+ without changes.
+- **File size**: 62,010 bytes (60.6 KB), under the 120 KB v2 ceiling.
+- `grep -i papa` returns nothing. No `PLACEHOLDER` strings remain in the
+  shipped file. JS parses (`node --check`). Every in-page `#anchor` and `use
+  href="#..."` resolves.
+- Not done / could not verify: no headless-browser render check (390/1440
+  visual QA); no way to obtain a real logo or real contact info this pass
+  (source site still bot-walled). Hands off to `qa-critic`.

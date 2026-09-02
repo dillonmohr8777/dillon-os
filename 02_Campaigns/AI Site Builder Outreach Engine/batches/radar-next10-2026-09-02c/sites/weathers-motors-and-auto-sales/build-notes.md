@@ -91,3 +91,59 @@ one). Trimmed the white margin, quantized to a 48-color palette PNG, resized to
 applied; embedded directly in the light header, and with a white background
 chip in the dark footer. Final asset 7.4 KB; page weight 32.3 KB → 53.0 KB.
 `alt`/`aria-label` set to "Weathers Motors". QA harness re-run: pass.
+
+## v2 (2026-09-02) — house-style rebuild
+
+Rebuilt `index.html` from scratch per `_kit/v2/sections-v2.html` and
+`_kit/v2/DESIGN-v2.md`, assembly-only (no new design elements authored).
+Structure: header → hero → tear divider → services → stats → process rail →
+split (about) → faq → marquee → slant divider → cta → footer, in the fixed
+order, exact class names from `sections-v2.html`.
+
+- **Identity tokens**: `--brand #1c3a5e`, `--brand-2 #0d1f33`, `--accent
+  #b3312c`, `--paper #f7f3e9`, `--ink #14212c`, `--on-brand #ffffff`,
+  `--on-deep #f3ede0`, `--on-accent #ffffff` — lifted byte-for-byte from the
+  prior build's `:root` block.
+- **Logo**: the real Weathers Motors PNG data URI (header 40px on a paper
+  chip, footer 28px on a paper chip, unmodified base64 payload) and the
+  existing SVG favicon, all carried over byte-identical.
+- **Fonts**: Archivo Black (display) + Nunito Sans 400/700/800 (text) +
+  Caveat 700 (script line), one Google Fonts request, `display=swap`, system
+  fallbacks in the stack.
+- **Hero**: `elements/hero-weathers-motors-and-auto-sales.svg` inlined in
+  `.hero-art`; script line "Media's family dealership"; `dd-arrow` doodle
+  pointing at the primary CTA; seal used (sourced year 1922, ring text "EST.
+  1922 · MEDIA PA") since `proof[]` names a sourced founding year.
+- **Services**: 6 cards, icon_hint → sprite id: car-key→ic-car,
+  wrench→ic-wrench, gear→ic-parts, tire→ic-tire, car-repair→ic-spark
+  (fallback, no direct match), handshake→ic-handshake.
+- **Stats**: `proof[]` non-empty (2 items) → stats strip rendered,
+  `data-count` set from the digits found in each proof value (1922, 104).
+- **Process**: 4 steps, `--steps:4` on the rail.
+- **Split/about**: seal reused at 240×240 on the brand-2 panel (no second
+  composition invented).
+- **FAQ**: all 4 items from the brief, verbatim.
+- **Marquee**: all 8 items joined with " · ", duplicated once for the loop.
+- **Contrast**: checked every text/background pair with a local WCAG script.
+  Lowest pair is `.hero .eyebrow` (accent `#b3312c` on brand `#1c3a5e`) at
+  **1.87:1** — this selector is fixed in `kit-v2.css` (`.hero
+  .eyebrow{color:var(--accent)}`) and cannot be raised into AA range without
+  either breaking the accent's other roles (CTA background contrast, accent-
+  on-paper contrast) or editing the shared kit file, which is out of scope
+  for an assembly pass. The kit's own default sample palette
+  (`#d4762a`/`#1d4e6d`) fails the same pair at 2.72:1, so this looks like a
+  known kit limitation rather than a per-site error — flagged, not patched.
+  Every other pair checked (nav on header, body on paper, CTA button text,
+  footer text, process numerals, FAQ questions) clears 4.5:1, several above
+  10:1.
+- **File size**: 80,811 bytes, under the 120 KB budget.
+- **Verified**: `grep -i papa` returns 0 matches (stripped all HTML/CSS
+  comments from kit assets before inlining); inline `<script>` parses via
+  `node -e "new Function(...)"`; every `#anchor` href resolves to a real id;
+  every `<use href="#...">` resolves to a `<symbol>` in the inlined sprites;
+  surface sequence has no adjacent repeats (deep → paper → brand → panel →
+  paper → panel → deep → accent); no two art-only sections are adjacent
+  (hero and split both pair art with copy).
+- **Not done / could not verify**: no live browser render this pass (390/1440
+  viewport, rendered-font contrast, keyboard trap) — static/code-level review
+  only. Hand off to `qa-critic` before this leaves draft status.

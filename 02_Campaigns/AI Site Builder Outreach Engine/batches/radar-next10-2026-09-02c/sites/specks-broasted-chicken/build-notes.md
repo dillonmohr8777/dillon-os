@@ -90,3 +90,59 @@ as a base64 data URI in header (`height:40px`) and a white-chip footer copy
 (`height:28px`) since the footer is dark and the asset carries its own cream
 background. Final asset 8.2 KB; page weight 35.2 KB → 55.9 KB. `alt`/`aria-label`
 set to "Speck's Broasted Chicken". QA harness re-run: pass.
+
+## v2 (house-style rebuild, 2026-09-02)
+
+`index.html` was rebuilt from scratch on `_kit/v2` (Papa-derived house grammar,
+`kit.css` → `kit-v2.css` → per-site `:root` tokens), replacing the v1 file at the
+same path. This is an assembly pass only — no new design elements were
+authored; every SVG, icon, doodle, divider, and seal came from `_kit/v2/elements/`.
+
+- **Identity tokens** lifted byte-identical from the v1 `.slug-specks` override
+  block (not the older `_kit/design/manifest.json` palette, which had drifted):
+  `--brand:#c1272d`, `--brand-2:#2b1210`, `--ink:#241512`, `--paper:#fdf6df`,
+  `--on-brand:#ffffff`, `--on-deep:#f7ecd9`, `--on-accent:#ffffff`.
+- **`--accent` darkened** from the v1 value `#94681a` to `#7e5816` (same hue,
+  lower lightness). The v1 value passed 4.5:1 against `--paper` (5.9:1) but
+  failed against `--panel` (3.79:1, used as the `.eyebrow` color on
+  `surface-panel` — the process and FAQ sections). The darkened value clears
+  paper (5.9:1), panel (4.89:1), and the process numerals/service icons
+  (5.9:1, same pairing).
+- **Hero eyebrow contrast bug caught and fixed locally, not in `_kit/`.**
+  `kit-v2.css`'s `.hero{background:var(--brand);color:var(--on-brand)}` rule
+  loads after `kit.css`'s `.surface-deep{background:var(--brand-2)...}` rule
+  and wins the cascade tie (equal specificity, later source order), so the
+  hero section actually paints on `--brand`, not `--brand-2`. Its eyebrow
+  (`.hero .eyebrow{color:var(--accent)}`) then sat at ~1.18:1 against that
+  brand-red background — effectively invisible. Fixed with two rules appended
+  after this site's `:root` block (kit files untouched):
+  `.hero .eyebrow{color:var(--on-brand)}` (now 5.84:1) and a defensive
+  `.surface-deep .eyebrow,.surface-brand .eyebrow{color:color-mix(in srgb,
+  var(--accent) 50%,white)}` for any future dark-surface eyebrow.
+- **Seal used** (proof includes a sourced founding year, 1953): the shared
+  `elements/seal.svg` inlined twice — 104px `.seal-float` in the hero art
+  corner (`SEAL_YEAR`→`1953`, `SEAL_RING_TEXT`→`COLLEGEVILLE, PA`, both sourced
+  from `copy/specks-broasted-chicken.json`) and again at 240px filling
+  `.split-art` on the brand-2 panel, per the v2 spec's split-art rule.
+- **Icons** (`elements/icons.svg`, `icon_hint` → sprite id): `drumstick`→
+  `ic-chicken` (direct match), `bowl`→`ic-bowl` (direct), `milkshake`→
+  `ic-glass` (closest available), `sandwich`→`ic-bag` and `steak`→`ic-spark`
+  (no sandwich/steak icon exists in the shared sprite; `sandwich` used the
+  next-closest food-takeaway glyph, `steak` fell back to the spec's documented
+  `ic-spark` default).
+- **Script line**: `"Family Owned & Operated"` (verbatim `marquee[1]`), placed
+  above the `h1`.
+- **Stats**: both `proof[]` entries rendered. `proof[0]` (`"1953"`) is a pure
+  digit string, so it got `data-count="1953"` for the count-up. `proof[1]`
+  (`"Founder's son Randy still owns and manages the restaurant"`) is not a
+  bare number, so it renders as static text with no `data-count` attribute —
+  count-up is only wired to values that are digits-only end to end, per kit.js's
+  "final value must already be in the HTML" rule.
+- **Placeholders**: `contact.email` is `"PLACEHOLDER"` in the copy brief; it is
+  not rendered anywhere in the v2 footer template (phone/address/hours only),
+  so no on-page neutral phrasing was required — noted here instead.
+- File size: 87,180 bytes (~85 KB), under the 120 KB v2 ceiling. `grep -i papa`
+  returns nothing (kit doc-comments referencing "Papa" were neutralized to
+  "house" during assembly — text-only, no functional change). `node --check`
+  passes on the extracted inline script. Every `href="#..."` and `<use
+  href="#...">` resolves. No two art-only sections are adjacent.

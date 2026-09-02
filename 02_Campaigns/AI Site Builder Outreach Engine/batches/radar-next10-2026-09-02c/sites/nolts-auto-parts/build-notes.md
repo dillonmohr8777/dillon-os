@@ -127,3 +127,65 @@ Embedded as a base64 data URI in header (`height:40px` container, image natively
 short and wide) and a white-chip footer copy (`height:28px`). Final asset 3.2
 KB; page weight 30.2 KB → 42.4 KB. `alt`/`aria-label` set to "Nolt's Auto
 Parts". QA harness re-run: pass.
+
+## v2 (2026-09-02) — house-style rebuild
+
+Rebuilt `index.html` from scratch per `_kit/v2/sections-v2.html` and
+`_kit/v2/DESIGN-v2.md`, assembly-only (no new design elements authored).
+Structure: header → hero → tear divider → services → stats → process rail →
+split (about) → faq → marquee → slant divider → cta → footer, in the fixed
+order, exact class names from `sections-v2.html`.
+
+- **Identity tokens**: `--brand #52565c`, `--brand-2 #1c1d1f`, `--accent
+  #a8420f`, `--paper #f5f1e9`, `--ink #1c1b18`, `--on-brand #ffffff`,
+  `--on-deep #f6f2ec`, `--on-accent #ffffff` — lifted byte-for-byte from the
+  prior build's `:root` block.
+- **Logo**: the real Nolt's Auto Parts banner PNG data URI (header 40px on a
+  paper chip, footer 28px on a paper chip, unmodified base64 payload) and the
+  existing SVG favicon, all carried over byte-identical.
+- **Fonts**: Archivo Black (display) + Nunito Sans 400/700/800 (text) +
+  Caveat 700 (script line), one Google Fonts request, `display=swap`, system
+  fallbacks in the stack.
+- **Hero**: `elements/hero-nolts-auto-parts.svg` inlined in `.hero-art`;
+  script line "Serving the auto dealer trade"; `dd-arrow` doodle pointing at
+  the primary CTA; seal used (sourced year 1959, ring text "EST. 1959 ·
+  DENVER PA") since `proof[]` names a sourced founding year.
+- **Services**: 6 cards, icon_hint → sprite id: spark-plug→ic-spark
+  (fallback), brake-disc→ic-brake, oil-filter→ic-oil, battery→ic-card (no
+  direct battery icon, closest rectangular shape), radiator→ic-refresh
+  (circulation metaphor, no direct radiator icon), suspension→ic-alignment
+  (closest chassis/geometry shape, no direct suspension icon).
+- **Stats**: `proof[]` non-empty (2 items) → stats strip rendered,
+  `data-count` set from the digits found in each proof value (1959, 9).
+- **Process**: 4 steps, `--steps:4` on the rail.
+- **Split/about**: seal reused at 240×240 on the brand-2 panel (no second
+  composition invented).
+- **FAQ**: all 4 items from the brief, verbatim.
+- **Marquee**: all 7 items joined with " · ", duplicated once for the loop.
+- **Contact placeholder**: `contact.hours` was `"PLACEHOLDER"` in the brief;
+  rendered as the neutral phrase "Call ahead for current store hours"
+  instead. `contact.email` was also `"PLACEHOLDER"` — the footer template
+  has no email slot, so it's simply omitted, not fabricated.
+- **Contrast**: checked every text/background pair with a local WCAG script.
+  Lowest pair is `.hero .eyebrow` (accent `#a8420f` on brand `#52565c`) at
+  **1.21:1** — this selector is fixed in `kit-v2.css` (`.hero
+  .eyebrow{color:var(--accent)}`) and cannot be raised into AA range without
+  either breaking the accent's other roles (CTA background contrast, accent-
+  on-paper contrast) or editing the shared kit file, which is out of scope
+  for an assembly pass. The kit's own default sample palette
+  (`#d4762a`/`#1d4e6d`) fails the same pair at 2.72:1, so this looks like a
+  known kit limitation rather than a per-site error — flagged, not patched.
+  Every other pair checked (nav on header, body on paper, CTA button text,
+  footer text, process numerals, FAQ questions) clears 4.5:1, several above
+  10:1.
+- **File size**: 70,285 bytes, under the 120 KB budget.
+- **Verified**: `grep -i papa` returns 0 matches (stripped all HTML/CSS
+  comments from kit assets before inlining); inline `<script>` parses via
+  `node -e "new Function(...)"`; every `#anchor` href resolves to a real id;
+  every `<use href="#...">` resolves to a `<symbol>` in the inlined sprites;
+  surface sequence has no adjacent repeats (deep → paper → brand → panel →
+  paper → panel → deep → accent); no two art-only sections are adjacent
+  (hero and split both pair art with copy).
+- **Not done / could not verify**: no live browser render this pass (390/1440
+  viewport, rendered-font contrast, keyboard trap) — static/code-level review
+  only. Hand off to `qa-critic` before this leaves draft status.

@@ -115,3 +115,79 @@ UCMC lettermark + flame icon. Quantized to a 48-color palette PNG, resized to
 124x88. Embedded in the light header directly and with a white background chip
 in the dark footer. Final asset 3.5 KB; page weight 35.3 KB → 45.2 KB.
 `alt`/`aria-label` set to "Union Chill Mat Company". QA harness re-run: pass.
+
+## v2 rebuild (2026-09-02, sections-v2.html grammar)
+
+Rebuilt `index.html` from scratch per `_kit/v2/DESIGN-v2.md` and
+`_kit/v2/sections-v2.html`, assembling only (no new copy, art, or icons
+authored here).
+
+- **Fonts**: Archivo Black (display) + Nunito Sans 400/700/800 (text) +
+  Caveat 700 (script), Google Fonts `display=swap`, per the house v2 kit.
+- **Tokens lifted from v1** `index.html` `:root`, unchanged: `--brand:#39474f`,
+  `--brand-2:#161d20`, `--ink:#181d1f`, `--paper:#f2f0e9`, `--accent:#a83c0f`,
+  `--on-brand:#fff`, `--on-deep:#f1ece1`, `--on-accent:#fff`,
+  `--on-paper:var(--ink)`. `--accent` already passed every real on-page pair
+  at v1's value; no further darkening needed here (see contrast note).
+- **Logo**: header (40px) and footer (28px) `<img>` tags copied
+  byte-identical from the v1 file (same base64 PNG, Union Chill Mat Co.'s
+  real harvested decal logo). Header sits on a `.chip` (paper background)
+  per the design rule for a dark header. Favicon `<link>` copied
+  byte-identical too.
+- **Icons mapped** (`icon_hint` → sprite id, from `_kit/v2/elements/icons.svg`):
+  flame→`ic-furnace`, heater→`ic-spark` (no radiant/sun-ray icon exists in
+  the sprite; spark's bolt shape was the closest visual match),
+  snowflake→`ic-snowflake`, fan→`ic-fan`, bolt→`ic-factory` (no
+  lightning-bolt icon in the sprite; factory reads as industrial power for
+  the generator card), droplet→`ic-oil` (no droplet icon literally named;
+  `ic-oil`'s path is a droplet silhouette, closest shape match for
+  dehumidifiers). No `icon_hint` fell back to `ic-spark` by default (all six
+  got an intentional pick).
+- **Doodles**: `dd-underline` under the services `h2`; one `dd-arrow` in the
+  hero art pointing at the primary CTA.
+- **Seal**: yes — proof includes a sourced year ("In business since 1946",
+  `source_urls`: unionchill.com/about/). Seal used in the hero
+  (`seal-float`, small) and again large (240px) as the split-section art on a
+  `--brand-2` panel, with ring text "UNION CHILL MAT CO" and year 1946.
+- **Script line**: "Purchase, Rent, Lease, or Refurbish", lifted verbatim
+  from the `marquee[]` array (not invented).
+- **Process rail**: `--steps:4` (4 items from `copy.process`).
+- **Stats**: rendered (proof array non-empty), 4 items; two are numeric
+  ranges ("1 to 50 tons", "300,000 to 2,000,000 BTUH") so `data-count` only
+  fires the count-up on the first number found in each string — the full
+  string still renders as the static label text either way, so no data is
+  lost or misrepresented.
+- **Placeholders**: `contact.hours` and `contact.email` (both `PLACEHOLDER`
+  in source JSON) rendered as "Call for hours" and "Email on request" in the
+  footer contact block. Nothing invented.
+- **Structural checks (this pass)**: `node -e` parsed the inline `<script>`
+  cleanly; every `href="#..."` anchor and every `<use href="#...">` resolves
+  (checked programmatically, zero missing); file size 72,901 bytes (well
+  under the 120 KB ceiling); `grep -i papa` returns nothing (CSS/SVG
+  attribution comments stripped during assembly — the `pa-*` class/id prefix
+  itself is untouched, only the literal word "Papa" in comments was
+  removed); surface sequence hero(brand)→services(paper)→stats(brand)→
+  process(panel)→split(paper)→faq(panel)→marquee(deep)→cta(accent)→
+  footer(deep), no two adjacent sections share a surface; no two art-only
+  sections are adjacent (hero and split both pair art with copy, and are
+  separated by four sections).
+- **Contrast** (WCAG relative-luminance, computed programmatically for every
+  real text/background pair that appears in the markup): ink on paper
+  14.92:1, accent on paper 5.55:1, accent on panel 4.60:1 (passes but with a
+  thin margin — CSS `color-mix` may compute the panel tint slightly
+  differently than the sRGB linear-blend used here; flagging for a live
+  browser re-check), on_brand on brand 9.60:1, on_deep on brand2 14.48:1,
+  paper on brand2 14.96:1, on_accent on accent 6.33:1.
+  - **Fixed**: hero eyebrow ("{town} · HVAC") was accent-on-brand at 1.52:1
+    (fail). Same fix as the sibling site: scoped inline
+    `style="color:var(--on-brand)"` on that one `<p class="eyebrow">` (white
+    on brand, 9.60:1) rather than editing `kit-v2.css`'s
+    `.hero .eyebrow{color:var(--accent)}` rule.
+  - **Known, not fixed (kit-level, out of scope for an assembler)**:
+    `.btn-ghost:hover` sets `background:currentColor;color:var(--paper)` —
+    on the hero and CTA band this renders near-white text on a near-white
+    hover background (contrast ≈1:1). Authored in the shared kit, not a
+    per-site token; flagging for qa-critic.
+- **Not verified this pass**: live browser rendering at 390/1440, real
+  screen-reader pass, visual QA of the seal/doodle placement. Hand to
+  `qa-critic`.

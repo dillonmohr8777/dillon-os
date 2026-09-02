@@ -125,3 +125,78 @@ tagged to a Phoenixville location, and two other conflicting Facebook page IDs
 turned up in search with no way to confirm which (if any) is the same ownership
 as the Narberth prospect. Not verifiable with confidence, so no real logo was
 pulled. Kept the Opus-designed `logo.svg` placeholder unchanged.
+
+## v2
+
+Rebuilt `index.html` from scratch per `_kit/v2/sections-v2.html` grammar and
+`_kit/v2/kit-v2.css`, replacing the prior build entirely. **Logo placeholder**:
+this slug has no verifiable real logo (see harvest pass above — parked domain,
+no confirmable business-owned social presence); kept the same designed inline
+SVG mark from the v1 file byte-identical (rounded-square citrus-drop icon +
+wordmark in the header, icon-only crop in the footer), per the brief's
+instruction to keep the designed logo and flag it here. Identity tokens
+lifted from v1 `:root`: `--brand:#4f7a23`, `--brand-2:#182410`,
+`--ink:#1b2011`, `--paper:#faf7ec`, `--accent:#b15819` (the v1 file's actual
+accent differs from `_kit/design/manifest.json`'s `#e2792e`; used the live
+v1 `:root` value per instructions, not the manifest), `--on-brand/--on-deep/
+--on-accent:#fff/#f3efe8/#fff`.
+
+- **Head**: title from headline, meta description = subhead verbatim,
+  favicon = a standalone SVG data URI of the logo's icon mark only (the v1
+  logo is an inline SVG wordmark, not a single croppable raster, so the
+  icon-only group was reused as the favicon shape rather than inventing a
+  new mark), Google Fonts link for Archivo Black + Nunito Sans
+  (400/700/800) + Caveat (700), `display=swap`.
+- **Header**: dark `site-head`; the designed logo's wordmark text is baked
+  in as fixed dark hex (`#1b2011`) rather than `currentColor`, so it was
+  wrapped in a white `.chip` per the DESIGN-v2 rule ("if the logo is dark
+  and the header is dark, put it on a paper chip").
+- **Hero**: eyebrow "Narberth, PA · Juice & Smoothie Bar"; `.script` line
+  "Made Fresh To Order" (lifted verbatim from `marquee[]`); hero art =
+  `hero-the-juice-merchant.svg` inlined; one `dd-arrow` doodle pointing at
+  the primary CTA. No seal — `proof: []` in the copy JSON, so no sourced
+  year exists to put in one.
+- **Services**: h2 "Fresh, Made To Order" with `dd-underline`; 5 cards,
+  icons mapped by exact match to `icon_hint` — juice→`ic-citrus`,
+  smoothie→`ic-blender`, bowl→`ic-bowl`, cleanse→`ic-leaf`,
+  catering→`ic-catering`. All five hit direct or near-direct matches; none
+  fell back to `ic-spark`.
+- **Stats**: omitted entirely — `proof: []` in the copy JSON, and the
+  DESIGN-v2 rule is explicit that the stats section only ships when proof
+  is non-empty.
+- **Process**: 3 steps (`--steps:3`), verbatim from `process[]`.
+- **Split/about**: cropped-and-scaled reuse of `hero-the-juice-merchant.svg`
+  (`transform:scale(2.3) translate(8%,-4%)` inside an `overflow:hidden`
+  wrapper), a different crop/zoom than the hero's own framing so it reads
+  as a second, distinct art moment rather than the same composition.
+- **FAQ**: all 4 items verbatim.
+- **Marquee**: all 6 lines joined with " · ", duplicated once for the loop.
+- **CTA/footer**: verbatim from `cta_band` / `footer_line`. All contact
+  fields were `PLACEHOLDER` in the source JSON (`placeholders: ["contact.phone",
+  "contact.address", "contact.hours", "contact.email"]`); rendered as neutral
+  phrasing ("Serving Narberth, PA" / "Phone and hours to be confirmed with
+  the business") rather than fabricated data, and the header/CTA "tel"-style
+  action was changed to an in-page anchor ("Visit Narberth, PA" → `#contact`)
+  since no real phone number exists to make a `tel:` link truthful.
+- **Contrast fix**: same issue as `golden-sea` — `.hero .eyebrow` on
+  `--brand` computed 1.03:1 against `--accent` (leafy green vs burnt-orange,
+  near-identical luminance). Added `.hero .eyebrow{color:var(--paper)}`
+  (paper vs brand = 4.73:1, AA pass) rather than touching `--accent`
+  globally, since every other pair already cleared 4.5:1 (accent/paper
+  4.58:1, accent/white 4.91:1, on-brand/brand 5.07:1, on-deep/brand-2
+  14.11:1).
+- `grep -i papa` initially caught three lines of *comment text* inside the
+  inlined `kit-v2.css` itself; reworded those three comments in the
+  assembled file only (no functional change) so the non-negotiable grep
+  check passes.
+- File size: 63,817 bytes, under the 120 KB v2 budget. `node -e` extracted
+  and parsed the inline `<script>` clean. Every `href="#..."` anchor and
+  `<use href="#...">` resolves against an `id` in the same file. No
+  duplicate ids. Surface sequence: deep(hero) → paper(services) →
+  panel(process) → paper(split) → panel(faq) → deep(marquee) →
+  accent(cta) → deep(footer) — no two adjacent sections repeat a surface,
+  and hero/split (the only art-carrying sections) both pair art with real
+  copy.
+- Not verified this session: live-browser 390/1440px overflow render and
+  actual rendered font contrast (computed via formula, not a Lighthouse/axe
+  pass) — flagging for `qa-critic`.

@@ -118,3 +118,64 @@ a white-chip footer copy (`height:28px`, chip added since the footer is dark
 and the logo's blue-gray text is transparent). Final asset 10.3 KB; page weight
 34.3 KB → 60.6 KB. `alt`/`aria-label` set to "Smile Culture Dental". QA harness
 re-run: pass.
+
+## v2 (house-style rebuild, 2026-09-02)
+
+`index.html` was rebuilt from scratch on `_kit/v2` (Papa-derived house grammar,
+`kit.css` → `kit-v2.css` → per-site `:root` tokens), replacing the v1 file at
+the same path. Assembly only — no new design elements authored; every SVG,
+icon, doodle, divider came from `_kit/v2/elements/`.
+
+- **Identity tokens** lifted byte-identical from the v1 `:root` block (which
+  already carried the tuned identity, unlike `_kit/design/manifest.json`'s
+  earlier-pass accent): `--brand:#3f6b64`, `--brand-2:#172b27`,
+  `--ink:#211f1b`, `--paper:#faf6ef`, `--on-brand:#ffffff`,
+  `--on-deep:#f6f2ea`, `--on-accent:#ffffff`.
+- **`--accent` darkened** from the v1 value `#9a642e` to `#835527` (same hue,
+  lower lightness), for the same reason as the sister build: the v1 value
+  passed 4.5:1 against `--paper` (4.60:1) but failed against `--panel`
+  (3.91:1, the `.eyebrow` color on `surface-panel` — process and FAQ). The
+  darkened value clears paper (5.92:1) and panel (5.03:1).
+- **Hero eyebrow contrast bug caught and fixed locally, not in `_kit/`.**
+  Same root cause as the sister build: `kit-v2.css`'s `.hero{background:
+  var(--brand)}` rule beats `kit.css`'s `.surface-deep{background:
+  var(--brand-2)}` in the cascade (equal specificity, later source order), so
+  the hero paints on `--brand`, and its accent eyebrow sat at ~1.21:1 against
+  it. Fixed with `.hero .eyebrow{color:var(--on-brand)}` (now 6.0:1) and a
+  defensive `.surface-deep .eyebrow,.surface-brand .eyebrow{color:color-mix(in
+  srgb,var(--accent) 50%,white)}`, appended after this site's `:root` block.
+- **No seal.** `proof[]` is non-empty (4 items — recognition, a doctor award,
+  insurance acceptance, location count) but none is a sourced founding/
+  established year, so the seal element was omitted entirely per the v2 spec
+  ("seal only when the year is a sourced fact"). `.split-art` instead reuses a
+  cropped, rescaled region of `hero-smile-culture-dental.svg` (transform
+  `scale(1.7) translate(-4%,6%)`), a different crop/composition than the
+  full hero so the same art moment isn't repeated verbatim.
+- **Icons** (`elements/icons.svg`, `icon_hint` → sprite id): `tooth-check`→
+  `ic-tooth` (direct), `smile`→`ic-smile` (direct), `aligner`→`ic-alignment`
+  (repurposed from the sprite's auto/wheel-alignment glyph — conceptually the
+  closest fit for orthodontic alignment), `aesthetics`→`ic-sparkle` (direct),
+  `implant`→`ic-shield` (no implant-specific glyph; used for the
+  durability/protection association) and `emergency`→`ic-heart` (no
+  urgent-care glyph; used for the care/attention association). None of the
+  six needed the `ic-spark` default fallback.
+- **Script line**: `"Comfort & Communication First"` (verbatim `marquee[6]`),
+  placed above the `h1`. No clinical-guarantee language was introduced
+  anywhere in the copy — all wording is verbatim from `copy/
+  smile-culture-dental.json`.
+- **Stats**: all 4 `proof[]` entries rendered. None qualified for
+  `data-count` (kit.js only wires the count-up when the value is a bare digit
+  string end to end, so the JS-driven number always matches the no-JS/
+  reduced-motion HTML exactly) — `"Top Dentists 2025"`, `"Top Doctor in
+  Philadelphia for four consecutive years"`, `"Accepts all PPO insurance"`,
+  and `"Five offices: ..."` all mix words with (or spell out) numbers, so all
+  four render as static text.
+- **Placeholders**: `contact.email` (`"PLACEHOLDER"`) is not rendered in the
+  v2 footer template, so no on-page neutral phrasing was needed.
+  `palette_hint.brand_color_seen` (`null`) was likewise not used — identity
+  came from the already-tuned v1 tokens, not a guess.
+- File size: 93,105 bytes (~91 KB), under the 120 KB v2 ceiling. `grep -i
+  papa` returns nothing (kit doc-comments neutralized to "house", no
+  functional change). `node --check` passes on the extracted inline script.
+  Every `href="#..."` and `<use href="#...">` resolves. No two art-only
+  sections are adjacent.
