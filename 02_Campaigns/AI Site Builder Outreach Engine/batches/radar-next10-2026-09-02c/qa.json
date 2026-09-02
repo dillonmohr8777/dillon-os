@@ -1,128 +1,7 @@
 {
-  "batch": "radar-next10-2026-09-02c",
-  "checked_at": "2026-09-02T21:33:55.000Z",
-  "viewports": [
-    390,
-    1440
-  ],
   "results": [
     {
       "slug": "advance-exterior-solutions",
-      "pass": true,
-      "weight_kb": 31.2,
-      "overflow": {
-        "390": false,
-        "1440": false
-      },
-      "h1_visible_0ms": true,
-      "console_errors": [],
-      "contrast_h1": 15.33,
-      "contrast_body": 5.09,
-      "dangling_anchors": 0,
-      "focus_issues": 0,
-      "reduced_motion_ok": true,
-      "nojs_ok": true,
-      "height_jump_pct": 0,
-      "icons_ok": true,
-      "logo_ok": true,
-      "hero_art_ok": true,
-      "accent_pairs_under_4_5": 0,
-      "top_issue": "none"
-    },
-    {
-      "slug": "f-m-berkheimer-inc",
-      "pass": true,
-      "weight_kb": 48.9,
-      "overflow": {
-        "390": false,
-        "1440": false
-      },
-      "h1_visible_0ms": true,
-      "console_errors": [],
-      "contrast_h1": 14.71,
-      "contrast_body": 5.03,
-      "dangling_anchors": 0,
-      "focus_issues": 0,
-      "reduced_motion_ok": true,
-      "nojs_ok": true,
-      "height_jump_pct": 0,
-      "icons_ok": true,
-      "logo_ok": true,
-      "hero_art_ok": true,
-      "accent_pairs_under_4_5": 0,
-      "top_issue": "none"
-    },
-    {
-      "slug": "golden-sea",
-      "pass": true,
-      "weight_kb": 44.7,
-      "overflow": {
-        "390": false,
-        "1440": false
-      },
-      "h1_visible_0ms": true,
-      "console_errors": [],
-      "contrast_h1": 15.11,
-      "contrast_body": 5.17,
-      "dangling_anchors": 0,
-      "focus_issues": 0,
-      "reduced_motion_ok": true,
-      "nojs_ok": true,
-      "height_jump_pct": 0,
-      "icons_ok": true,
-      "logo_ok": true,
-      "hero_art_ok": true,
-      "accent_pairs_under_4_5": 0,
-      "top_issue": "none"
-    },
-    {
-      "slug": "nolts-auto-parts",
-      "pass": true,
-      "weight_kb": 42.4,
-      "overflow": {
-        "390": false,
-        "1440": false
-      },
-      "h1_visible_0ms": true,
-      "console_errors": [],
-      "contrast_h1": 15.29,
-      "contrast_body": 5.26,
-      "dangling_anchors": 0,
-      "focus_issues": 0,
-      "reduced_motion_ok": true,
-      "nojs_ok": true,
-      "height_jump_pct": 0,
-      "icons_ok": true,
-      "logo_ok": true,
-      "hero_art_ok": true,
-      "accent_pairs_under_4_5": 0,
-      "top_issue": "none"
-    },
-    {
-      "slug": "sangillo-tire-center",
-      "pass": true,
-      "weight_kb": 65,
-      "overflow": {
-        "390": false,
-        "1440": false
-      },
-      "h1_visible_0ms": true,
-      "console_errors": [],
-      "contrast_h1": 15.45,
-      "contrast_body": 5.24,
-      "dangling_anchors": 0,
-      "focus_issues": 0,
-      "reduced_motion_ok": true,
-      "nojs_ok": true,
-      "height_jump_pct": 0,
-      "icons_ok": true,
-      "logo_ok": true,
-      "hero_art_ok": true,
-      "accent_pairs_under_4_5": 0,
-      "top_issue": "none"
-    },
-    {
-      "slug": "smile-culture-dental",
       "pass": true,
       "weight_kb": 60.6,
       "overflow": {
@@ -131,8 +10,8 @@
       },
       "h1_visible_0ms": true,
       "console_errors": [],
-      "contrast_h1": 15.27,
-      "contrast_body": 5.15,
+      "contrast_h1": 8.89,
+      "contrast_body": 8.89,
       "dangling_anchors": 0,
       "focus_issues": 0,
       "reduced_motion_ok": true,
@@ -142,20 +21,153 @@
       "logo_ok": true,
       "hero_art_ok": true,
       "accent_pairs_under_4_5": 0,
-      "top_issue": "none"
+      "top_issue": "none",
+      "section_order_ok": true,
+      "papa_string_absent": true,
+      "pairs_under_4_5": []
+    },
+    {
+      "slug": "f-m-berkheimer-inc",
+      "pass": true,
+      "weight_kb": 76.9,
+      "overflow": {
+        "390": false,
+        "1440": false
+      },
+      "h1_visible_0ms": true,
+      "console_errors": [],
+      "contrast_h1": 5.56,
+      "contrast_body": 5.56,
+      "dangling_anchors": 0,
+      "focus_issues": 0,
+      "reduced_motion_ok": true,
+      "nojs_ok": true,
+      "height_jump_pct": 0,
+      "icons_ok": true,
+      "logo_ok": true,
+      "hero_art_ok": true,
+      "accent_pairs_under_4_5": 0,
+      "top_issue": "none",
+      "section_order_ok": true,
+      "papa_string_absent": true,
+      "pairs_under_4_5": []
+    },
+    {
+      "slug": "golden-sea",
+      "pass": true,
+      "weight_kb": 85.4,
+      "overflow": {
+        "390": false,
+        "1440": false
+      },
+      "h1_visible_0ms": true,
+      "console_errors": [],
+      "contrast_h1": 6.28,
+      "contrast_body": 5.69,
+      "dangling_anchors": 0,
+      "focus_issues": 0,
+      "reduced_motion_ok": true,
+      "nojs_ok": true,
+      "height_jump_pct": 0,
+      "icons_ok": true,
+      "logo_ok": true,
+      "hero_art_ok": true,
+      "accent_pairs_under_4_5": 0,
+      "top_issue": "none",
+      "section_order_ok": true,
+      "papa_string_absent": true,
+      "pairs_under_4_5": []
+    },
+    {
+      "slug": "nolts-auto-parts",
+      "pass": true,
+      "weight_kb": 69,
+      "overflow": {
+        "390": false,
+        "1440": false
+      },
+      "h1_visible_0ms": true,
+      "console_errors": [],
+      "contrast_h1": 8.89,
+      "contrast_body": 8.89,
+      "dangling_anchors": 0,
+      "focus_issues": 0,
+      "reduced_motion_ok": true,
+      "nojs_ok": true,
+      "height_jump_pct": 0,
+      "icons_ok": true,
+      "logo_ok": true,
+      "hero_art_ok": true,
+      "accent_pairs_under_4_5": 0,
+      "top_issue": "none",
+      "section_order_ok": true,
+      "papa_string_absent": true,
+      "pairs_under_4_5": []
+    },
+    {
+      "slug": "sangillo-tire-center",
+      "pass": true,
+      "weight_kb": 109.1,
+      "overflow": {
+        "390": false,
+        "1440": false
+      },
+      "h1_visible_0ms": true,
+      "console_errors": [],
+      "contrast_h1": 8.75,
+      "contrast_body": 8.75,
+      "dangling_anchors": 0,
+      "focus_issues": 0,
+      "reduced_motion_ok": true,
+      "nojs_ok": true,
+      "height_jump_pct": 0,
+      "icons_ok": true,
+      "logo_ok": true,
+      "hero_art_ok": true,
+      "accent_pairs_under_4_5": 0,
+      "top_issue": "none",
+      "section_order_ok": true,
+      "papa_string_absent": true,
+      "pairs_under_4_5": []
+    },
+    {
+      "slug": "smile-culture-dental",
+      "pass": true,
+      "weight_kb": 90.9,
+      "overflow": {
+        "390": false,
+        "1440": false
+      },
+      "h1_visible_0ms": true,
+      "console_errors": [],
+      "contrast_h1": 6,
+      "contrast_body": 6,
+      "dangling_anchors": 0,
+      "focus_issues": 0,
+      "reduced_motion_ok": true,
+      "nojs_ok": true,
+      "height_jump_pct": 0,
+      "icons_ok": true,
+      "logo_ok": true,
+      "hero_art_ok": true,
+      "accent_pairs_under_4_5": 0,
+      "top_issue": "none",
+      "section_order_ok": true,
+      "papa_string_absent": true,
+      "pairs_under_4_5": []
     },
     {
       "slug": "specks-broasted-chicken",
       "pass": true,
-      "weight_kb": 55.9,
+      "weight_kb": 85.2,
       "overflow": {
         "390": false,
         "1440": false
       },
       "h1_visible_0ms": true,
       "console_errors": [],
-      "contrast_h1": 16.31,
-      "contrast_body": 5.21,
+      "contrast_h1": 5.84,
+      "contrast_body": 5.84,
       "dangling_anchors": 0,
       "focus_issues": 0,
       "reduced_motion_ok": true,
@@ -165,20 +177,23 @@
       "logo_ok": true,
       "hero_art_ok": true,
       "accent_pairs_under_4_5": 0,
-      "top_issue": "none"
+      "top_issue": "none",
+      "section_order_ok": true,
+      "papa_string_absent": true,
+      "pairs_under_4_5": []
     },
     {
       "slug": "the-juice-merchant",
       "pass": true,
-      "weight_kb": 31.1,
+      "weight_kb": 62.5,
       "overflow": {
         "390": false,
         "1440": false
       },
       "h1_visible_0ms": true,
       "console_errors": [],
-      "contrast_h1": 15.52,
-      "contrast_body": 5.22,
+      "contrast_h1": 5.07,
+      "contrast_body": 5.07,
       "dangling_anchors": 0,
       "focus_issues": 0,
       "reduced_motion_ok": true,
@@ -188,20 +203,23 @@
       "logo_ok": true,
       "hero_art_ok": true,
       "accent_pairs_under_4_5": 0,
-      "top_issue": "none"
+      "top_issue": "none",
+      "section_order_ok": true,
+      "papa_string_absent": true,
+      "pairs_under_4_5": []
     },
     {
       "slug": "union-chill-mat-company",
       "pass": true,
-      "weight_kb": 45.2,
+      "weight_kb": 71.4,
       "overflow": {
         "390": false,
         "1440": false
       },
       "h1_visible_0ms": true,
       "console_errors": [],
-      "contrast_h1": 14.92,
-      "contrast_body": 5.18,
+      "contrast_h1": 9.6,
+      "contrast_body": 8.42,
       "dangling_anchors": 0,
       "focus_issues": 0,
       "reduced_motion_ok": true,
@@ -211,20 +229,23 @@
       "logo_ok": true,
       "hero_art_ok": true,
       "accent_pairs_under_4_5": 0,
-      "top_issue": "none"
+      "top_issue": "none",
+      "section_order_ok": true,
+      "papa_string_absent": true,
+      "pairs_under_4_5": []
     },
     {
       "slug": "weathers-motors-and-auto-sales",
       "pass": true,
-      "weight_kb": 53,
+      "weight_kb": 79.3,
       "overflow": {
         "390": false,
         "1440": false
       },
       "h1_visible_0ms": true,
       "console_errors": [],
-      "contrast_h1": 14.76,
-      "contrast_body": 5.09,
+      "contrast_h1": 8.89,
+      "contrast_body": 8.89,
       "dangling_anchors": 0,
       "focus_issues": 0,
       "reduced_motion_ok": true,
@@ -234,7 +255,10 @@
       "logo_ok": true,
       "hero_art_ok": true,
       "accent_pairs_under_4_5": 0,
-      "top_issue": "none"
+      "top_issue": "none",
+      "section_order_ok": true,
+      "papa_string_absent": true,
+      "pairs_under_4_5": []
     }
   ]
 }
