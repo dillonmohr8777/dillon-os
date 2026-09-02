@@ -57,7 +57,7 @@ Toggle them on in this chat's connector settings and re-run `ListConnectors`.
 | Composio MCP | 6 of 7 `.claude/agents` | Windows-box MCP with its own OAuth. Not in the claude.ai registry. Agents that run in the cloud silently lose HubSpot, Ads, GA4, Meta, Search Console, Semrush. |
 | Claude Browser | web-product-builder, qa-critic, growth-content | local extension; unavailable remotely, Playwright substitutes |
 | LandingFolio | `.mcp.json` | token-gated, sandbox-only per its entity page |
-| Higgsfield | `.cursor/mcp.json` | wired 2026-09-01, OAuth pending |
+| Higgsfield | claude.ai workspace connector + `.cursor/mcp.json` | **connected 2026-09-01**; 80+ tools incl. generate_image/video/audio, video_analysis, website builder, TikTok publish. Every generate_* call spends credits: approval-gated |
 
 ## 4. Gaps mapped to blocked work
 
