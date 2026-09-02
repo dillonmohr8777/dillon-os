@@ -136,7 +136,8 @@ a:hover{color:var(--accent)}
   aspect-ratio:4/3;color:var(--on-deep);box-shadow:var(--shadow-1)}
 .split-art>svg{width:100%;height:100%}
 @media (max-width:900px){
-  .split>.split-copy,.split>.split-art{grid-column:span 12}
+  .split{grid-template-columns:1fr}
+  .split>.split-copy,.split>.split-art{grid-column:auto}
 }
 .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
   gap:clamp(1rem,2vw,1.75rem)}

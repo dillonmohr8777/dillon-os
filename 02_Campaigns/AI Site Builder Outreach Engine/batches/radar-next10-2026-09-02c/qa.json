@@ -1,0 +1,224 @@
+{
+  "batch": "radar-next10-2026-09-02c",
+  "checked_at": "2026-09-02T17:35:29.562439Z",
+  "viewports": [
+    390,
+    1440
+  ],
+  "results": [
+    {
+      "slug": "advance-exterior-solutions",
+      "pass": true,
+      "weight_kb": 28.9,
+      "overflow": {
+        "390": false,
+        "1440": false
+      },
+      "h1_visible_0ms": true,
+      "console_errors": [],
+      "contrast_h1": 15.33,
+      "contrast_body": 5.09,
+      "dangling_anchors": 0,
+      "focus_issues": 0,
+      "reduced_motion_ok": true,
+      "nojs_ok": true,
+      "height_jump_pct": 0,
+      "top_issue": "none"
+    },
+    {
+      "slug": "f-m-berkheimer-inc",
+      "pass": true,
+      "weight_kb": 29.2,
+      "overflow": {
+        "390": false,
+        "1440": false
+      },
+      "h1_visible_0ms": true,
+      "console_errors": [],
+      "contrast_h1": 14.71,
+      "contrast_body": 5.03,
+      "dangling_anchors": 0,
+      "focus_issues": 0,
+      "reduced_motion_ok": true,
+      "nojs_ok": true,
+      "height_jump_pct": 0,
+      "top_issue": "none"
+    },
+    {
+      "slug": "golden-sea",
+      "pass": true,
+      "weight_kb": 30.3,
+      "overflow": {
+        "390": false,
+        "1440": false
+      },
+      "h1_visible_0ms": true,
+      "console_errors": [],
+      "contrast_h1": 15.11,
+      "contrast_body": 5.17,
+      "dangling_anchors": 0,
+      "focus_issues": 0,
+      "reduced_motion_ok": true,
+      "nojs_ok": true,
+      "height_jump_pct": 0,
+      "top_issue": "none"
+    },
+    {
+      "slug": "nolts-auto-parts",
+      "pass": true,
+      "weight_kb": 30.2,
+      "overflow": {
+        "390": false,
+        "1440": false
+      },
+      "h1_visible_0ms": true,
+      "console_errors": [],
+      "contrast_h1": 15.29,
+      "contrast_body": 5.26,
+      "dangling_anchors": 0,
+      "focus_issues": 0,
+      "reduced_motion_ok": true,
+      "nojs_ok": true,
+      "height_jump_pct": 0,
+      "top_issue": "none"
+    },
+    {
+      "slug": "sangillo-tire-center",
+      "pass": true,
+      "weight_kb": 31,
+      "overflow": {
+        "390": false,
+        "1440": false
+      },
+      "h1_visible_0ms": true,
+      "console_errors": [],
+      "contrast_h1": 15.45,
+      "contrast_body": 5.24,
+      "dangling_anchors": 0,
+      "focus_issues": 0,
+      "reduced_motion_ok": true,
+      "nojs_ok": true,
+      "height_jump_pct": 0,
+      "top_issue": "none"
+    },
+    {
+      "slug": "smile-culture-dental",
+      "pass": true,
+      "weight_kb": 31.1,
+      "overflow": {
+        "390": false,
+        "1440": false
+      },
+      "h1_visible_0ms": true,
+      "console_errors": [],
+      "contrast_h1": 15.27,
+      "contrast_body": 5.15,
+      "dangling_anchors": 0,
+      "focus_issues": 0,
+      "reduced_motion_ok": true,
+      "nojs_ok": true,
+      "height_jump_pct": 0,
+      "top_issue": "none"
+    },
+    {
+      "slug": "specks-broasted-chicken",
+      "pass": true,
+      "weight_kb": 33,
+      "overflow": {
+        "390": false,
+        "1440": false
+      },
+      "h1_visible_0ms": true,
+      "console_errors": [],
+      "contrast_h1": 16.31,
+      "contrast_body": 5.21,
+      "dangling_anchors": 0,
+      "focus_issues": 0,
+      "reduced_motion_ok": true,
+      "nojs_ok": true,
+      "height_jump_pct": 0,
+      "top_issue": "none"
+    },
+    {
+      "slug": "the-juice-merchant",
+      "pass": true,
+      "weight_kb": 30.1,
+      "overflow": {
+        "390": false,
+        "1440": false
+      },
+      "h1_visible_0ms": true,
+      "console_errors": [],
+      "contrast_h1": 15.52,
+      "contrast_body": 5.22,
+      "dangling_anchors": 0,
+      "focus_issues": 0,
+      "reduced_motion_ok": true,
+      "nojs_ok": true,
+      "height_jump_pct": 0,
+      "top_issue": "none"
+    },
+    {
+      "slug": "union-chill-mat-company",
+      "pass": true,
+      "weight_kb": 35.3,
+      "overflow": {
+        "390": false,
+        "1440": false
+      },
+      "h1_visible_0ms": true,
+      "console_errors": [],
+      "contrast_h1": 14.92,
+      "contrast_body": 5.18,
+      "dangling_anchors": 0,
+      "focus_issues": 0,
+      "reduced_motion_ok": true,
+      "nojs_ok": true,
+      "height_jump_pct": 0,
+      "top_issue": "none"
+    },
+    {
+      "slug": "weathers-motors-and-auto-sales",
+      "pass": true,
+      "weight_kb": 32.3,
+      "overflow": {
+        "390": false,
+        "1440": false
+      },
+      "h1_visible_0ms": true,
+      "console_errors": [],
+      "contrast_h1": 14.76,
+      "contrast_body": 5.09,
+      "dangling_anchors": 0,
+      "focus_issues": 0,
+      "reduced_motion_ok": true,
+      "nojs_ok": true,
+      "height_jump_pct": 0,
+      "top_issue": "none"
+    }
+  ],
+  "fixes": [
+    {
+      "file": "_kit/kit.css",
+      "issue": "12-column .split grid kept repeat(12,minmax(0,1fr)) with a >=24px gap inside the mobile media query (max-width:900px), only setting grid-column:span 12 on the two children. At narrow viewports (390px) this left 12 real columns ~7px wide each plus gaps, and floating-point rounding in Chromium's grid track sizing pushed .split-copy/.split-art off their intended position by up to 28px (matching the data-reveal transform distance), producing real horizontal scroll capacity and left-clipped content pre-reveal.",
+      "fix": "Media query now also resets .split{grid-template-columns:1fr} and grid-column:auto on the children instead of just spanning all 12 narrow columns.",
+      "applied_to": [
+        "_kit/kit.css",
+        "sites/advance-exterior-solutions/index.html",
+        "sites/f-m-berkheimer-inc/index.html",
+        "sites/golden-sea/index.html",
+        "sites/nolts-auto-parts/index.html",
+        "sites/sangillo-tire-center/index.html",
+        "sites/smile-culture-dental/index.html",
+        "sites/specks-broasted-chicken/index.html",
+        "sites/the-juice-merchant/index.html",
+        "sites/union-chill-mat-company/index.html",
+        "sites/weathers-motors-and-auto-sales/index.html"
+      ]
+    }
+  ],
+  "unverified": [
+    "Webfont rendering (Google Fonts) not verified \u2014 fonts.googleapis.com/fonts.gstatic.com requests were aborted per no-egress sandbox rules; all sites correctly fall back to system fonts per their font-stack, but actual webfont appearance is unconfirmed.",
+    "impeccable detector flagged 'low-contrast' and 'gray-on-color' antipatterns (6-16 hits per site, all 10 sites) on accent/eyebrow/pill-style text-background CSS pairs found by static scan. In-browser measured contrast for h1 and primary body copy (the two required checks) passed 4.5:1+ on every site (h1 14.7-16.3:1, body 5.0-5.3:1), but the detector's flagged pairs (e.g. accent #c2703a text on paper/panel backgrounds, ~2.9-4.4:1) were not individually re-verified against actual rendered DOM co-occurrence and may represent real secondary defects (small eyebrow/label text, links) outside the two elements this QA pass was scoped to measure."
+  ]
+}
