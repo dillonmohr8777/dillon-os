@@ -1,0 +1,96 @@
+/*
+  Papa Advertising — design-reference tokens
+  Derived from a mobile screen recording of papaadvertising.com (1440px-wide
+  portrait frames). Design GRAMMAR reference only — see spec.md "Usage
+  boundary". Do not reuse Papa's wordmark, logo device, or client logos.
+
+  Font stacks below cite the visual-match Google Fonts candidates from
+  spec.md; these are visual matches, not verified against Papa's actual
+  webfont files.
+*/
+
+:root {
+  /* ---- Palette ---- */
+  --pa-blue-brand: #0468b6;      /* hero background / CTA-band gradient top */
+  --pa-blue-brand-dark: #005d9f; /* CTA-band gradient bottom */
+  --pa-blue-ink: #005a9d;        /* display headings, statement copy */
+  --pa-blue-mid: #1491cc;        /* accordion chevron circle, secondary accent */
+  --pa-orange-accent: #e17f1e;   /* doodle lines, pill-in-A device, icon accents */
+  --pa-orange-button: #d96f12;   /* solid button fill */
+  --pa-charcoal: #363f45;        /* sticky nav bar background */
+  --pa-surface: #e3e8ec;         /* pale band: client-logo wall */
+  --pa-ink: #1a1a1a;             /* body copy on white */
+  --pa-muted: #6a7274;           /* secondary/caption text (client names) */
+  --pa-white: #ffffff;
+  --pa-border: #d7dde1;          /* thin accordion dividing rules */
+
+  /* ---- Type: font stacks (visual match, not verified) ---- */
+  --pa-font-display: "Archivo Black", "Anton", "Arial Black", sans-serif;
+  --pa-font-script: "Caveat", "Kalam", "Segoe Script", cursive;
+  --pa-font-body: "Nunito Sans", "Poppins", -apple-system, "Segoe UI", sans-serif;
+
+  /* ---- Type scale: fluid clamp, 390px -> 1440px viewport ---- */
+  /* min = mobile-observed size; max estimated at ~1.6x for desktop (not observed) */
+  --pa-text-hero-wordmark: clamp(2.6rem, 1.4rem + 6.5vw, 5.5rem);
+  --pa-text-h1: clamp(2rem, 1.2rem + 4.3vw, 3.75rem);      /* RECENT WORK / OUR SERVICES */
+  --pa-text-h2: clamp(1.5rem, 1rem + 2.7vw, 2.5rem);
+  --pa-text-statement: clamp(1.15rem, 0.95rem + 1.1vw, 1.75rem); /* hero-B bold statement */
+  --pa-text-body: clamp(1rem, 0.92rem + 0.4vw, 1.15rem);
+  --pa-text-button: clamp(0.95rem, 0.88rem + 0.35vw, 1.05rem);
+  --pa-text-accordion-label: clamp(1.1rem, 1rem + 0.5vw, 1.3rem);
+  --pa-text-caption: clamp(0.85rem, 0.8rem + 0.25vw, 0.95rem);
+
+  --pa-line-height-body: 1.5;
+  --pa-line-height-heading: 1.1;
+  --pa-tracking-button: 0.02em;
+  --pa-tracking-display: -0.01em; /* tight tracking on the heavy display face */
+
+  /* ---- Spacing ---- */
+  --pa-container-max: 1200px;
+  --pa-gutter: clamp(1.25rem, 4vw, 2.5rem);
+  --pa-section-padding-y: clamp(3.5rem, 6vw + 1rem, 7.5rem);
+  --pa-card-gap: clamp(1.5rem, 3vw, 2.5rem);
+  --pa-space-1: 0.5rem;
+  --pa-space-2: 1rem;
+  --pa-space-3: 1.5rem;
+  --pa-space-4: 2rem;
+  --pa-space-5: 3rem;
+
+  /* ---- Radii ---- */
+  --pa-radius-button: 999px;   /* full pill / stadium shape */
+  --pa-radius-card-image: 0.625rem; /* ~10px on work-grid card images */
+  --pa-radius-chevron: 999px;  /* circular accordion toggle */
+
+  /* ---- Shadows ---- */
+  --pa-shadow-card: 0 12px 28px -12px rgba(20, 30, 40, 0.28);
+  --pa-shadow-button: 0 6px 16px -4px rgba(217, 111, 18, 0.45);
+  --pa-shadow-photo-inset: 0 18px 32px -10px rgba(10, 20, 35, 0.4); /* rotated hero product photo */
+
+  /* ---- Motion ---- */
+  /* Only a fixed nav bar and plain scroll were confirmed in the recording;
+     durations/easings below are house defaults for reproducing the same
+     restrained feel, not measured from the source. */
+  --pa-duration-fast: 150ms;
+  --pa-duration-base: 250ms;
+  --pa-duration-slow: 450ms;
+  --pa-ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --pa-ease-out: cubic-bezier(0, 0, 0.2, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --pa-white: #12181c;
+    --pa-ink: #eef2f4;
+    --pa-surface: #1c262c;
+    --pa-border: #2c383f;
+    --pa-muted: #9aa7ac;
+  }
+}
+
+:root[data-theme="dark"] {
+  --pa-white: #12181c;
+  --pa-ink: #eef2f4;
+  --pa-surface: #1c262c;
+  --pa-border: #2c383f;
+  --pa-muted: #9aa7ac;
+}

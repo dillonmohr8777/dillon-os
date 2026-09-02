@@ -1,0 +1,11 @@
+<!-- Hand-drawn accent doodles, Papa's orange overlays. Stroke currentColor, set
+     color:var(dash dash accent). Use at most three per page: one on the hero art,
+     one under a heading (underline), one arrow pointing at a CTA. -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <symbol id="dd-underline" viewBox="0 0 300 24"><path d="M4,14 C60,4 120,20 180,10 C230,3 270,14 296,8" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><path d="M20,20 C90,12 160,22 280,16" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" opacity=".7"/></symbol>
+  <symbol id="dd-circle" viewBox="0 0 200 90"><path d="M30,45 C20,10 170,2 185,38 C198,72 60,92 22,62 C8,50 24,30 60,26" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></symbol>
+  <symbol id="dd-arrow" viewBox="0 0 160 100"><path d="M10,80 C40,20 100,10 150,30" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><path d="M128,16 L152,30 L132,48" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="dd-burst" viewBox="0 0 120 120"><g fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"><path d="M60,8 L60,30"/><path d="M60,90 L60,112"/><path d="M8,60 L30,60"/><path d="M90,60 L112,60"/><path d="M24,24 L38,38"/><path d="M82,82 L96,96"/><path d="M96,24 L82,38"/><path d="M38,82 L24,96"/></g></symbol>
+  <symbol id="dd-star" viewBox="0 0 100 100"><path d="M50,8 L58,40 L92,42 L64,60 L74,92 L50,72 L26,92 L36,60 L8,42 L42,40 Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/></symbol>
+  <symbol id="dd-squiggle" viewBox="0 0 200 40"><path d="M6,28 C26,4 40,4 60,28 C80,52 94,4 114,28 C134,52 148,4 168,28 C180,42 188,32 194,26" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></symbol>
+</svg>
