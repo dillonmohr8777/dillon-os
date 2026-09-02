@@ -1,0 +1,248 @@
+{
+  "batch": "radar-next10-2026-09-02",
+  "checked_at": "2026-09-02T15:14:26.860Z",
+  "viewports": [
+    390,
+    1440
+  ],
+  "results": [
+    {
+      "slug": "advanced-air-services",
+      "pass": true,
+      "weight_kb": 199.1,
+      "overflow": {
+        "390": false,
+        "1440": false
+      },
+      "h1_visible": {
+        "390": true,
+        "1440": true
+      },
+      "console_errors": [],
+      "broken_images": 0,
+      "contrast_hero": 15.63,
+      "hero_on_image": false,
+      "imagery": "generated-higgsfield",
+      "top_issue": "none"
+    },
+    {
+      "slug": "b-and-m-construction-hvac",
+      "pass": true,
+      "weight_kb": 189.9,
+      "overflow": {
+        "390": false,
+        "1440": false
+      },
+      "h1_visible": {
+        "390": true,
+        "1440": true
+      },
+      "console_errors": [],
+      "broken_images": 0,
+      "contrast_hero": 15.63,
+      "hero_on_image": false,
+      "imagery": "generated-higgsfield",
+      "top_issue": "none"
+    },
+    {
+      "slug": "bradco-heating-and-cooling",
+      "pass": true,
+      "weight_kb": 170.7,
+      "overflow": {
+        "390": false,
+        "1440": false
+      },
+      "h1_visible": {
+        "390": true,
+        "1440": true
+      },
+      "console_errors": [],
+      "broken_images": 0,
+      "contrast_hero": 15.73,
+      "hero_on_image": false,
+      "imagery": "generated-higgsfield",
+      "top_issue": "none"
+    },
+    {
+      "slug": "casey-williams-dmd",
+      "pass": true,
+      "weight_kb": 65.8,
+      "overflow": {
+        "390": false,
+        "1440": false
+      },
+      "h1_visible": {
+        "390": true,
+        "1440": true
+      },
+      "console_errors": [],
+      "broken_images": 0,
+      "contrast_hero": 14.87,
+      "hero_on_image": false,
+      "imagery": "generated-higgsfield",
+      "top_issue": "none"
+    },
+    {
+      "slug": "colonial-animal-hospital",
+      "pass": true,
+      "weight_kb": 78.7,
+      "overflow": {
+        "390": false,
+        "1440": false
+      },
+      "h1_visible": {
+        "390": true,
+        "1440": true
+      },
+      "console_errors": [],
+      "broken_images": 0,
+      "contrast_hero": 12.38,
+      "hero_on_image": true,
+      "imagery": "generated-higgsfield",
+      "top_issue": "none"
+    },
+    {
+      "slug": "germantown-dental-group",
+      "pass": true,
+      "weight_kb": 71.9,
+      "overflow": {
+        "390": false,
+        "1440": false
+      },
+      "h1_visible": {
+        "390": true,
+        "1440": true
+      },
+      "console_errors": [],
+      "broken_images": 0,
+      "contrast_hero": 14.16,
+      "hero_on_image": false,
+      "imagery": "generated-higgsfield",
+      "top_issue": "none"
+    },
+    {
+      "slug": "jt1-electric",
+      "pass": true,
+      "weight_kb": 84.4,
+      "overflow": {
+        "390": false,
+        "1440": false
+      },
+      "h1_visible": {
+        "390": true,
+        "1440": true
+      },
+      "console_errors": [],
+      "broken_images": 0,
+      "contrast_hero": 15.6,
+      "hero_on_image": false,
+      "imagery": "generated-higgsfield",
+      "top_issue": "none"
+    },
+    {
+      "slug": "lees-hoagie-house",
+      "pass": true,
+      "weight_kb": 122.9,
+      "overflow": {
+        "390": false,
+        "1440": false
+      },
+      "h1_visible": {
+        "390": true,
+        "1440": true
+      },
+      "console_errors": [],
+      "broken_images": 0,
+      "contrast_hero": 15.04,
+      "hero_on_image": true,
+      "imagery": "generated-higgsfield",
+      "top_issue": "none"
+    },
+    {
+      "slug": "pearl-dental",
+      "pass": true,
+      "weight_kb": 59.1,
+      "overflow": {
+        "390": false,
+        "1440": false
+      },
+      "h1_visible": {
+        "390": true,
+        "1440": true
+      },
+      "console_errors": [],
+      "broken_images": 0,
+      "contrast_hero": 14.86,
+      "hero_on_image": false,
+      "imagery": "generated-higgsfield",
+      "top_issue": "none"
+    },
+    {
+      "slug": "udis-conn-orthodontics",
+      "pass": true,
+      "weight_kb": 79.7,
+      "overflow": {
+        "390": false,
+        "1440": false
+      },
+      "h1_visible": {
+        "390": true,
+        "1440": true
+      },
+      "console_errors": [],
+      "broken_images": 0,
+      "contrast_hero": 15.69,
+      "hero_on_image": false,
+      "imagery": "generated-higgsfield",
+      "top_issue": "none"
+    }
+  ],
+  "unverified": [
+    {
+      "slug": "advanced-air-services",
+      "note": "font requests to fonts.googleapis.com/fonts.gstatic.com failed - sandbox has no egress"
+    },
+    {
+      "slug": "b-and-m-construction-hvac",
+      "note": "font requests to fonts.googleapis.com/fonts.gstatic.com failed - sandbox has no egress"
+    },
+    {
+      "slug": "bradco-heating-and-cooling",
+      "note": "font requests to fonts.googleapis.com/fonts.gstatic.com failed - sandbox has no egress"
+    },
+    {
+      "slug": "casey-williams-dmd",
+      "note": "font requests to fonts.googleapis.com/fonts.gstatic.com failed - sandbox has no egress"
+    },
+    {
+      "slug": "colonial-animal-hospital",
+      "note": "font requests to fonts.googleapis.com/fonts.gstatic.com failed - sandbox has no egress"
+    },
+    {
+      "slug": "germantown-dental-group",
+      "note": "font requests to fonts.googleapis.com/fonts.gstatic.com failed - sandbox has no egress"
+    },
+    {
+      "slug": "jt1-electric",
+      "note": "font requests to fonts.googleapis.com/fonts.gstatic.com failed - sandbox has no egress"
+    },
+    {
+      "slug": "lees-hoagie-house",
+      "note": "font requests to fonts.googleapis.com/fonts.gstatic.com failed - sandbox has no egress"
+    },
+    {
+      "slug": "pearl-dental",
+      "note": "font requests to fonts.googleapis.com/fonts.gstatic.com failed - sandbox has no egress"
+    },
+    {
+      "slug": "udis-conn-orthodontics",
+      "note": "font requests to fonts.googleapis.com/fonts.gstatic.com failed - sandbox has no egress"
+    }
+  ],
+  "template_fixes": [
+    {
+      "file": "_templates/site-factory/build-site.js",
+      "reason": "no favicon link in <head> caused browser default GET /favicon.ico -> 404, tripping the non-font console-error fail threshold on advanced-air-services (first-loaded origin); added <link rel=\"icon\" href=\"data:,\"> to suppress the request across all generated sites, then rebuilt the batch with build-batch.js --allow-partial"
+    }
+  ]
+}

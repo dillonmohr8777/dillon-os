@@ -228,3 +228,24 @@ routine that was still keying dedupe daily until the cadence fix landed on 08-18
 **How to apply.** Treat the brief's `unreliable` list as a queue to investigate, not a
 list of broken things. Read `last_completed` and the failure timestamps before concluding
 anything is currently failing.
+
+## Sandboxed Playwright QA against Google Fonts hangs the run, not just the assertion
+
+**What happened.** QA on the radar-next10-2026-09-02 site batch used Playwright with
+`waitUntil: 'networkidle'` while the sandbox has no egress to `fonts.googleapis.com`.
+Instead of failing fast, each blocked font request retried through the agent proxy for
+the full page timeout, and a 10-site loop blew the 2-minute command budget before a
+single result was written.
+
+**How to apply.** When QA-ing pages that call out to Google Fonts (or any external host)
+from a no-egress sandbox: (1) `page.route()` to abort those hosts immediately rather than
+letting requests hang on the proxy, (2) use `waitUntil: 'load'` plus a short
+`waitForLoadState('networkidle', { timeout })` that is allowed to fail, not a bare
+`networkidle` wait, and (3) read the failing resource's URL off `msg.location().url` for
+console-error messages, not `msg.text()` — the text is identical ("Failed to load
+resource: net::ERR_FAILED") whether the culprit is a blocked font or a real broken local
+asset, so text-matching alone will misclassify one as the other. This also caught a real
+defect: a template missing `<link rel="icon">` produced a favicon 404 that only surfaced
+as a console error on the first site tested per browser process (shared disk cache
+suppressed the repeat request on the other 9), which would have been invisible to a
+per-site-in-isolation review.
