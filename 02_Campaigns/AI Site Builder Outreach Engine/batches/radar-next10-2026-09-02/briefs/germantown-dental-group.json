@@ -1,0 +1,215 @@
+{
+  "slug": "germantown-dental-group",
+  "name": "Germantown Dental Group",
+  "city": "Philadelphia",
+  "category": "General & Family Dentistry",
+  "vertical": "dentist",
+  "attitude": "glass",
+  "url": "http://germantowndental.us/",
+  "phone": "",
+  "address": "",
+  "hours": "",
+  "description": "A family dental practice in the Germantown section of Philadelphia offering general and preventive care.",
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "marquee": [
+    "Family dentistry",
+    "Germantown, Philadelphia",
+    "Preventive first",
+    "Same practice, every visit"
+  ],
+  "tokens": {
+    "paper": "#F5F8F7",
+    "ink": "#122A28",
+    "accent": "#146B63",
+    "accent2": "#B08D57",
+    "panel": "#DEE9E6",
+    "deep": "#0D211F",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#1A1400",
+    "onPanel": "#0D211F",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "20px"
+  },
+  "fonts": {
+    "display": "Fraunces",
+    "displayFallback": "Georgia,serif",
+    "text": "Source Sans 3"
+  },
+  "logo": false,
+  "hero": {
+    "eyebrow": "Philadelphia | General & Family Dentistry",
+    "headline": "Germantown Dental Group",
+    "sub": "General and family dentistry for the Germantown community, built on prevention and plain-language treatment plans.",
+    "ctaPrimary": {
+      "label": "Get in touch",
+      "href": "#visit"
+    },
+    "ctaSecondary": {
+      "label": "See services",
+      "href": "#offerings"
+    },
+    "glassFloat": {
+      "title": "General & Family Dentistry",
+      "sub": "Philadelphia"
+    },
+    "marquee": [
+      "Family dentistry",
+      "Germantown, Philadelphia",
+      "Preventive first",
+      "Same practice, every visit"
+    ]
+  },
+  "offerings": {
+    "items": [
+      "Family and general dentistry for patients of every age",
+      "Preventive cleanings and periodic exams",
+      "Restorative treatment for cavities and worn teeth"
+    ]
+  },
+  "proof": {
+    "items": [
+      "Rooted in the Germantown, Philadelphia community",
+      "Family-friendly scheduling for parents and kids together",
+      "Preventive-first approach to keep visits simple",
+      "Treatment plans explained in plain language"
+    ]
+  },
+  "gallery": {
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "About",
+    "paragraphs": [
+      "Germantown Dental Group has served families in the neighborhood, focusing on care that keeps people coming back for checkups, not emergencies.",
+      "The practice keeps scheduling flexible for families who need to bring more than one patient in at a time."
+    ]
+  },
+  "experience": {
+    "items": [
+      "Family scheduling means siblings and parents can often be seen back to back.",
+      "Every visit starts with a conversation about what you actually need, not a sales pitch.",
+      "Preventive care is the default recommendation whenever it is an option."
+    ]
+  },
+  "feature": {
+    "heading": "Family dentistry built for busy schedules",
+    "text": "Coordinated appointments mean fewer trips back and forth for parents managing more than one patient.",
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Preventive care, prioritized",
+    "text": "Cleanings and exams are positioned as the first line of defense, before restorative work is ever needed.",
+    "imageIndex": 10
+  },
+  "social": {
+    "heading": "From the shop and the feed",
+    "kicker": "Reference imagery -- placeholder pending real photography",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "captions": [
+      "On site",
+      "Team at work",
+      "Detail shot",
+      "Storefront",
+      "In progress",
+      "Finished result"
+    ]
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Family Dentistry",
+        "href": "#offerings",
+        "imageIndex": 9
+      },
+      {
+        "title": "Preventive Care",
+        "href": "#offerings",
+        "imageIndex": 10
+      },
+      {
+        "title": "Restorative Treatment",
+        "href": "#offerings",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {},
+  "closing": {
+    "cta": {
+      "label": "Get in touch",
+      "href": "#visit"
+    }
+  },
+  "links": [
+    {
+      "label": "Official website",
+      "href": "http://germantowndental.us/"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "General & Family Dentistry concept image 1 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "General & Family Dentistry concept image 2 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "General & Family Dentistry concept image 3 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "General & Family Dentistry concept image 4 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "General & Family Dentistry concept image 5 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "General & Family Dentistry concept image 6 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "General & Family Dentistry concept image 7 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "General & Family Dentistry concept image 8 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "General & Family Dentistry concept image 9 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "General & Family Dentistry concept image 10 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "General & Family Dentistry concept image 11 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "General & Family Dentistry concept image 12 (placeholder -- real photography not yet sourced)"
+    }
+  ]
+}

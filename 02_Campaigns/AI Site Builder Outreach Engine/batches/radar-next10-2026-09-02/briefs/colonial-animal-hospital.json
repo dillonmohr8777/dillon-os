@@ -1,0 +1,215 @@
+{
+  "slug": "colonial-animal-hospital",
+  "name": "Colonial Animal Hospital",
+  "city": "Newtown Square",
+  "category": "Veterinary Care",
+  "vertical": "veterinary",
+  "attitude": "warm",
+  "url": "http://www.colonialnewtownsquare.com/",
+  "phone": "",
+  "address": "",
+  "hours": "",
+  "description": "A veterinary hospital in Newtown Square providing wellness and medical care for cats and dogs.",
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "marquee": [
+    "Newtown Square vets",
+    "Wellness care",
+    "Cats and dogs",
+    "Trusted checkups"
+  ],
+  "tokens": {
+    "paper": "#F6F1E4",
+    "ink": "#20301F",
+    "accent": "#3F7D53",
+    "accent2": "#E0A33B",
+    "panel": "#E4DEC8",
+    "deep": "#152119",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#241300",
+    "onPanel": "#152119",
+    "onDeep": "#FFFFFF",
+    "border": "2px",
+    "radius": "18px"
+  },
+  "fonts": {
+    "display": "Fraunces",
+    "displayFallback": "Georgia,serif",
+    "text": "Nunito Sans"
+  },
+  "logo": false,
+  "hero": {
+    "eyebrow": "Newtown Square | Veterinary Care",
+    "headline": "Colonial Animal Hospital",
+    "sub": "Wellness exams, vaccinations, and medical care for the pets of Newtown Square.",
+    "ctaPrimary": {
+      "label": "Get in touch",
+      "href": "#visit"
+    },
+    "ctaSecondary": {
+      "label": "See services",
+      "href": "#offerings"
+    },
+    "glassFloat": {
+      "title": "Veterinary Care",
+      "sub": "Newtown Square"
+    },
+    "marquee": [
+      "Newtown Square vets",
+      "Wellness care",
+      "Cats and dogs",
+      "Trusted checkups"
+    ]
+  },
+  "offerings": {
+    "items": [
+      "Wellness exams and vaccination schedules for cats and dogs",
+      "Diagnostic and medical care for sick or injured pets",
+      "Guidance on nutrition, weight, and preventive health"
+    ]
+  },
+  "proof": {
+    "items": [
+      "Serving Newtown Square and the surrounding area",
+      "Wellness-first approach to keep pets out of the sick room",
+      "Vaccination schedules tracked visit to visit",
+      "Straightforward explanations of any recommended treatment"
+    ]
+  },
+  "gallery": {
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "About",
+    "paragraphs": [
+      "Colonial Animal Hospital treats every visit as a chance to catch a problem early, not just react once a pet is already sick.",
+      "The team works with owners on the basics -- diet, weight, and vaccination timing -- that keep pets healthier between visits."
+    ]
+  },
+  "experience": {
+    "items": [
+      "A wellness visit covers a full exam plus whatever vaccinations are due.",
+      "Sick visits get a clear explanation of what is being tested and why.",
+      "Follow-up guidance comes home with you, not just in a folder you never open."
+    ]
+  },
+  "feature": {
+    "heading": "Wellness care that catches problems early",
+    "text": "Routine exams and vaccination tracking are the foundation, so medical visits stay the exception, not the rule.",
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "When your pet is actually sick",
+    "text": "Diagnostic visits come with a plain explanation of what is being checked and what the options are.",
+    "imageIndex": 10
+  },
+  "social": {
+    "heading": "From the shop and the feed",
+    "kicker": "Reference imagery -- placeholder pending real photography",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "captions": [
+      "On site",
+      "Team at work",
+      "Detail shot",
+      "Storefront",
+      "In progress",
+      "Finished result"
+    ]
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Wellness Exams",
+        "href": "#offerings",
+        "imageIndex": 9
+      },
+      {
+        "title": "Vaccinations",
+        "href": "#offerings",
+        "imageIndex": 10
+      },
+      {
+        "title": "Sick Pet Visits",
+        "href": "#offerings",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {},
+  "closing": {
+    "cta": {
+      "label": "Get in touch",
+      "href": "#visit"
+    }
+  },
+  "links": [
+    {
+      "label": "Official website",
+      "href": "http://www.colonialnewtownsquare.com/"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Veterinary Care concept image 1 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Veterinary Care concept image 2 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Veterinary Care concept image 3 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Veterinary Care concept image 4 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Veterinary Care concept image 5 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Veterinary Care concept image 6 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Veterinary Care concept image 7 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Veterinary Care concept image 8 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Veterinary Care concept image 9 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Veterinary Care concept image 10 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Veterinary Care concept image 11 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Veterinary Care concept image 12 (placeholder -- real photography not yet sourced)"
+    }
+  ]
+}

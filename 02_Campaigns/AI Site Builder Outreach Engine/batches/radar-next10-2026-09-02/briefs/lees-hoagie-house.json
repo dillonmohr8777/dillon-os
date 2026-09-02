@@ -1,0 +1,215 @@
+{
+  "slug": "lees-hoagie-house",
+  "name": "Lee's Hoagie House",
+  "city": "Horsham",
+  "category": "Hoagie & Sandwich Shop",
+  "vertical": "restaurant",
+  "attitude": "warm",
+  "url": "http://www.leeshoagieshorsham.com/",
+  "phone": "",
+  "address": "",
+  "hours": "",
+  "description": "A Horsham hoagie shop serving made-to-order hoagies and sandwiches.",
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "marquee": [
+    "Hoagies made to order",
+    "Horsham, PA",
+    "Eat local",
+    "Order ahead"
+  ],
+  "tokens": {
+    "paper": "#FBF3E5",
+    "ink": "#2B1B10",
+    "accent": "#B23A2E",
+    "accent2": "#D98A2B",
+    "panel": "#EEE0C7",
+    "deep": "#211208",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#211200",
+    "onPanel": "#211208",
+    "onDeep": "#FFFFFF",
+    "border": "2px",
+    "radius": "14px"
+  },
+  "fonts": {
+    "display": "Fraunces",
+    "displayFallback": "Georgia,serif",
+    "text": "Nunito Sans"
+  },
+  "logo": false,
+  "hero": {
+    "eyebrow": "Horsham | Hoagie & Sandwich Shop",
+    "headline": "Lee's Hoagie House",
+    "sub": "Made-to-order hoagies and sandwiches, built the way Montgomery County likes them.",
+    "ctaPrimary": {
+      "label": "Get in touch",
+      "href": "#visit"
+    },
+    "ctaSecondary": {
+      "label": "See services",
+      "href": "#offerings"
+    },
+    "glassFloat": {
+      "title": "Hoagie & Sandwich Shop",
+      "sub": "Horsham"
+    },
+    "marquee": [
+      "Hoagies made to order",
+      "Horsham, PA",
+      "Eat local",
+      "Order ahead"
+    ]
+  },
+  "offerings": {
+    "items": [
+      "Classic and specialty hoagies made to order",
+      "Sandwich platters for group and office orders",
+      "Sides and drinks to round out an order"
+    ]
+  },
+  "proof": {
+    "items": [
+      "Serving the Horsham and Montgomery County area",
+      "Made-to-order hoagies, no pre-made shortcuts",
+      "Platters available for offices and groups",
+      "A neighborhood shop, not a chain"
+    ]
+  },
+  "gallery": {
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "About",
+    "paragraphs": [
+      "Lee’s Hoagie House has stuck to one thing: making a hoagie to order instead of pre-building them for a case.",
+      "The menu stays focused on classic hoagie combinations, built the way regulars expect them."
+    ]
+  },
+  "experience": {
+    "items": [
+      "Orders are built fresh when they come in, not assembled ahead of time.",
+      "Platter orders can be arranged for offices and groups.",
+      "Regulars can call ahead to skip the wait at pickup."
+    ]
+  },
+  "feature": {
+    "heading": "Made to order, every time",
+    "text": "Nothing sits pre-built in a case -- every hoagie is built after the order comes in.",
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Platters for the whole office",
+    "text": "Group and office orders get the same made-to-order approach, just scaled up.",
+    "imageIndex": 10
+  },
+  "social": {
+    "heading": "From the shop and the feed",
+    "kicker": "Reference imagery -- placeholder pending real photography",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "captions": [
+      "On site",
+      "Team at work",
+      "Detail shot",
+      "Storefront",
+      "In progress",
+      "Finished result"
+    ]
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Classic Hoagies",
+        "href": "#offerings",
+        "imageIndex": 9
+      },
+      {
+        "title": "Specialty Hoagies",
+        "href": "#offerings",
+        "imageIndex": 10
+      },
+      {
+        "title": "Group Platters",
+        "href": "#offerings",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {},
+  "closing": {
+    "cta": {
+      "label": "Get in touch",
+      "href": "#visit"
+    }
+  },
+  "links": [
+    {
+      "label": "Official website",
+      "href": "http://www.leeshoagieshorsham.com/"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Hoagie & Sandwich Shop concept image 1 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Hoagie & Sandwich Shop concept image 2 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Hoagie & Sandwich Shop concept image 3 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Hoagie & Sandwich Shop concept image 4 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Hoagie & Sandwich Shop concept image 5 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Hoagie & Sandwich Shop concept image 6 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Hoagie & Sandwich Shop concept image 7 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Hoagie & Sandwich Shop concept image 8 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Hoagie & Sandwich Shop concept image 9 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Hoagie & Sandwich Shop concept image 10 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Hoagie & Sandwich Shop concept image 11 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Hoagie & Sandwich Shop concept image 12 (placeholder -- real photography not yet sourced)"
+    }
+  ]
+}
