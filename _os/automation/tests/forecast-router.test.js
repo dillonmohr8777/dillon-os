@@ -5,10 +5,33 @@ const assert = require('node:assert/strict');
 const fs = require('fs');
 const { repoPath } = require('../lib/fsutil');
 const {
+  CLIENT_RESEARCH_APPROVALS,
+  requestInputFingerprint,
   routeForecastRequest,
   validateForecastRequest,
   validateForecastRun,
 } = require('../lib/forecast-router');
+
+const ROLLING_ID = 'EXP-JASON-HUBSPOT-CHRONOS-BACKTEST-20260902';
+
+function rollingRequest(origin) {
+  const approval = CLIENT_RESEARCH_APPROVALS[ROLLING_ID];
+  const request = {
+    ...approvedClientChronosRequest(),
+    request_id: `${approval.request_id_prefix}-origin-${origin}`,
+    horizon: approval.horizon,
+    targets: [{ series_id: 'hubspot_contacts_created', values: approval.series_values.slice(0, origin) }],
+    source_locators: [...approval.source_locators],
+  };
+  request.client_experiment = {
+    experiment_id: ROLLING_ID,
+    approval_ref: approval.approval_ref,
+    data_class: approval.data_class,
+    backtest_origin: origin,
+    input_fingerprint: requestInputFingerprint(request),
+  };
+  return request;
+}
 
 function fixture() {
   return JSON.parse(fs.readFileSync(
@@ -358,6 +381,65 @@ test('forecast output requires full monotonic p10-p90 bands and TimesFM point eq
   assert.equal(invalid.ok, false);
   assert.ok(invalid.errors.some((error) => error.includes('quantiles cross')));
   assert.ok(invalid.errors.some((error) => error.includes('point must equal p50')));
+});
+
+test('rolling backtest origins are eligible only on the exact approved series prefix', () => {
+  for (const origin of [32, 36, 40]) {
+    const receipt = routeForecastRequest(rollingRequest(origin));
+    assert.equal(receipt.status, 'sandbox-eligible', receipt.reasons.join('; '));
+    assert.equal(receipt.client_experiment_id, ROLLING_ID);
+  }
+  assert.equal(routeForecastRequest(rollingRequest(31)).status, 'blocked');
+  assert.equal(routeForecastRequest(rollingRequest(41)).status, 'blocked');
+
+  const tampered = rollingRequest(36);
+  tampered.targets[0].values[10] += 1;
+  tampered.client_experiment.input_fingerprint = requestInputFingerprint(tampered);
+  const tamperedReceipt = routeForecastRequest(tampered);
+  assert.equal(tamperedReceipt.status, 'blocked');
+  assert.ok(tamperedReceipt.reasons.some((reason) => reason.includes('approved series prefix')));
+
+  const staleFingerprint = rollingRequest(36);
+  staleFingerprint.as_of = '2026-09-03T00:00:00.000Z';
+  staleFingerprint.cutoff_at = '2026-06-08T00:00:00.000Z';
+  const fingerprintReceipt = routeForecastRequest(staleFingerprint);
+  assert.equal(fingerprintReceipt.status, 'blocked');
+  assert.ok(fingerprintReceipt.reasons.some((reason) => reason.includes('fingerprint does not match the request')));
+
+  const covariates = rollingRequest(36);
+  covariates.past_covariates = [{ series_id: 'x', values: covariates.targets[0].values.map(() => 1) }];
+  covariates.client_experiment.input_fingerprint = requestInputFingerprint(covariates);
+  assert.equal(routeForecastRequest(covariates).status, 'blocked');
+});
+
+test('rolling backtest run output validates only with a matching origin identity', () => {
+  const approval = CLIENT_RESEARCH_APPROVALS[ROLLING_ID];
+  const request = rollingRequest(36);
+  const quantiles = {};
+  for (let percentile = 10; percentile <= 90; percentile += 10) {
+    quantiles[`p${percentile}`] = [percentile, percentile + 1, percentile + 2, percentile + 3];
+  }
+  const run = {
+    ...validRun(),
+    run_id: `forecast-run-${request.request_id}`,
+    request_id: request.request_id,
+    client_id: 'momentum-360',
+    series_id: approval.series_id,
+    model_id: 'amazon/chronos-2',
+    provider_id: 'amazon-science',
+    runtime_id: 'chronos-forecasting==2.3.1;torch==2.6.0+cpu',
+    license_lane: 'apache-2.0',
+    horizon: 4,
+    contains_client_series: true,
+    source_locators: [...approval.source_locators],
+    client_experiment: request.client_experiment,
+    target_outputs: [{ series_id: 'hubspot_contacts_created', point: [...quantiles.p50], quantiles }],
+  };
+  assert.deepEqual(validateForecastRun(run), { ok: true, errors: [] });
+  const wrongOrigin = { ...run, request_id: `${approval.request_id_prefix}-origin-37` };
+  assert.equal(validateForecastRun(wrongOrigin).ok, false);
+  const wrongHorizon = { ...run, horizon: 12 };
+  assert.equal(validateForecastRun(wrongHorizon).ok, false);
 });
 
 test('forecast-run JSON schema records all nine quantile keys', () => {
