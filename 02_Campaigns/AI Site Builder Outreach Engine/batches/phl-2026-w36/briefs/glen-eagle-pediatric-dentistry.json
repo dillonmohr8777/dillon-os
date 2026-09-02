@@ -1,0 +1,239 @@
+{
+  "slug": "glen-eagle-pediatric-dentistry",
+  "name": "Glen Eagle Pediatric Dentistry",
+  "city": "Glen Mills",
+  "category": "Pediatric dentist",
+  "vertical": "Medical & Healthcare",
+  "attitude": "neon",
+  "url": "https://gleneaglepediatricdentistry.com/",
+  "phone": "(484) 639-9066",
+  "address": "589 Wilmington West Chester Pike, Glen Mills, PA 19342",
+  "hours": "Mon to Fri 8 am to 5 pm.",
+  "description": "Glen Eagle Pediatric Dentistry in Glen Mills, PA is a dental home for children led by Dr. Marc Virtue, a Board Certified Pediatric Dentist, in the Glen Eagle Square Shopping Center.",
+  "tagline": "A dental home for your child",
+  "noindex": true,
+  "imageDisclosure": true,
+  "schemaType": "LocalBusiness",
+  "marquee": [
+    "We know kids",
+    "Board certified",
+    "First visit",
+    "Prevention first",
+    "Glen Eagle Square"
+  ],
+  "tokens": {
+    "paper": "#F4F8FC",
+    "ink": "#14273A",
+    "accent": "#2A7DB8",
+    "accent2": "#FF8FB1",
+    "panel": "#D3E4F0",
+    "deep": "#143A5C",
+    "onPaper": "#090909",
+    "onAccent": "#090909",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "2px",
+    "radius": "24px"
+  },
+  "fonts": {
+    "display": "Baloo 2",
+    "text": "Nunito",
+    "displayFallback": "Arial,sans-serif"
+  },
+  "logo": false,
+  "nav": [
+    {
+      "label": "Services",
+      "href": "#offerings"
+    },
+    {
+      "label": "Office",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Glen Mills, PA | Pediatric dentist",
+    "headline": "We know kids",
+    "sub": "A dental home for your child, where oral health care is comprehensive, accessible, and family-centered, led by Dr. Marc Virtue, Board Certified Pediatric Dentist.",
+    "ctaPrimary": {
+      "label": "Request an appointment",
+      "href": "https://gleneaglepediatricdentistry.com/request-an-appointment/"
+    },
+    "ctaSecondary": {
+      "label": "Call (484) 639-9066",
+      "href": "tel:4846399066"
+    },
+    "glassFloat": {
+      "title": "Mon to Fri 8 to 5",
+      "sub": "Glen Eagle Square Shopping Center"
+    },
+    "marquee": [
+      "We know kids",
+      "Board certified",
+      "First visit",
+      "Prevention first",
+      "Glen Eagle Square"
+    ]
+  },
+  "offerings": {
+    "heading": "What a dental home <mark>includes.</mark>",
+    "items": [
+      "Preventive visits, cleanings, and sealants that keep small problems small",
+      "Education for families on great oral hygiene and a healthy diet at every visit",
+      "Care for infants, kids, and teens, including a first visit built to be easy"
+    ]
+  },
+  "proof": {
+    "items": [
+      "Dr. Marc Virtue, Board Certified Pediatric Dentist",
+      "Glen Eagle Square Shopping Center",
+      "Mon to Fri 8 am to 5 pm",
+      "(484) 639-9066"
+    ]
+  },
+  "gallery": {
+    "heading": "Bright rooms, <mark>small chairs.</mark>",
+    "imageIndexes": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "story": {
+    "heading": "Prevention is the practice",
+    "paragraphs": [
+      "Glen Eagle Pediatric Dentistry focuses on preventing dental problems by educating families about great oral hygiene and a healthy diet, so most visits stay short and calm.",
+      "The office is a dental home in the true sense: one team that knows the child from the first visit through the teenage years."
+    ],
+    "imageIndex": 8
+  },
+  "experience": {
+    "heading": "The first visit",
+    "items": [
+      "Request an appointment online or call; the team explains what to expect.",
+      "A tour of the room and a gentle first exam, at the child's pace.",
+      "A plan for home care that parents can actually follow."
+    ]
+  },
+  "feature": {
+    "heading": "Board certified, kid focused",
+    "text": "Dr. Virtue's training is in pediatric dentistry specifically, which changes how a nervous four-year-old experiences the chair.",
+    "cta": {
+      "label": "Meet us",
+      "href": "https://gleneaglepediatricdentistry.com/meet-us/"
+    },
+    "imageIndex": 9
+  },
+  "catalog": {
+    "heading": "Before you <mark>come in.</mark>",
+    "items": [
+      {
+        "title": "First visit",
+        "href": "https://gleneaglepediatricdentistry.com/first-visit/",
+        "imageIndex": 10
+      },
+      {
+        "title": "Services",
+        "href": "https://gleneaglepediatricdentistry.com/services/",
+        "imageIndex": 11
+      },
+      {
+        "title": "Dental Q&A",
+        "href": "https://gleneaglepediatricdentistry.com/dental-qa/",
+        "imageIndex": 12
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Glen Eagle Square, <mark>Glen Mills.</mark>"
+  },
+  "closing": {
+    "heading": "A dental home for your child",
+    "kicker": "Glen Mills, Delaware County",
+    "cta": {
+      "label": "Request an appointment",
+      "href": "https://gleneaglepediatricdentistry.com/request-an-appointment/"
+    }
+  },
+  "links": [
+    {
+      "label": "Contact us",
+      "href": "https://gleneaglepediatricdentistry.com/contact-us/"
+    },
+    {
+      "label": "Facebook",
+      "href": "https://www.facebook.com/gleneaglepediatricdentistry/"
+    }
+  ],
+  "sections": [
+    "hero",
+    "offerings",
+    "proof",
+    "gallery",
+    "story",
+    "experience",
+    "feature",
+    "spotlight",
+    "catalog",
+    "contact",
+    "closing"
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Illustrative concept: a colorful pediatric dental exam room with a small chair, a ceiling mural of clouds, and a window"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Illustrative concept: a child's hands holding a toothbrush and a toy dinosaur on a bright counter, face out of frame"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Illustrative concept: a playroom corner in a dental office with a reading nook and blue beanbags"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Illustrative concept: a tray of kid-sized dental mirrors and a pink flavored polish cup"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Illustrative concept: a smiling toy tooth mascot on a reception desk beside a bowl of stickers"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Illustrative concept: a wall of framed cartoon animal prints in a pastel hallway"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Illustrative concept: a pediatric dentist's gloved hands showing a model of teeth, face out of frame"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Illustrative concept: a bright waiting room with a fish tank and low benches"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Illustrative concept: a shopping center storefront with glass doors and blue trim on a sunny day"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Illustrative concept: a pair of small sneakers dangling from a dental chair"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Illustrative concept: a sink station with tiny cups and a step stool"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Illustrative concept: a balloon and a treasure chest of prizes on a shelf"
+    }
+  ]
+}

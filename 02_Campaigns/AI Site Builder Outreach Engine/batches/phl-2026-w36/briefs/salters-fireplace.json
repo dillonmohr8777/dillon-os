@@ -1,0 +1,241 @@
+{
+  "slug": "salters-fireplace",
+  "name": "Salter's Fireplace & Outdoor Living",
+  "city": "Eagleville and Hatfield",
+  "category": "Fireplace and outdoor living showrooms",
+  "vertical": "Home Services",
+  "attitude": "warm",
+  "url": "https://saltersfireplace.com/",
+  "phone": "(610) 631-9372",
+  "address": "3076 Ridge Pike, Eagleville, PA 19403",
+  "hours": "Tue to Fri 10 to 6. Sat 10 to 4.",
+  "description": "Salter's Fireplace & Outdoor Living has warmed Southeastern PA since 1974 with fireplaces, stoves, inserts, grills, fire pits, patio furniture, and outdoor kitchens across two showrooms in Eagleville and Hatfield.",
+  "tagline": "Warming Southeastern PA since 1974",
+  "noindex": true,
+  "imageDisclosure": true,
+  "schemaType": "LocalBusiness",
+  "marquee": [
+    "Fireplaces",
+    "Stoves and inserts",
+    "Outdoor kitchens",
+    "Since 1974"
+  ],
+  "tokens": {
+    "paper": "#F7F0E6",
+    "ink": "#221713",
+    "accent": "#C2461B",
+    "accent2": "#E8B14A",
+    "panel": "#E4D5C3",
+    "deep": "#1C120E",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "2px",
+    "radius": "10px"
+  },
+  "fonts": {
+    "display": "DM Serif Display",
+    "text": "Work Sans",
+    "displayFallback": "Georgia,serif"
+  },
+  "logo": false,
+  "nav": [
+    {
+      "label": "Products",
+      "href": "#offerings"
+    },
+    {
+      "label": "Our work",
+      "href": "#gallery"
+    },
+    {
+      "label": "Showrooms",
+      "href": "#visit"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Eagleville and Hatfield, PA | Since 1974",
+    "headline": "Fireplaces and outdoor living, from two showrooms",
+    "sub": "Over 50 years of fireplaces, stoves, inserts, grills, fire pits, patio furniture, and outdoor kitchens, on display in Eagleville and Hatfield.",
+    "ctaPrimary": {
+      "label": "Call Eagleville (610) 631-9372",
+      "href": "tel:6106319372"
+    },
+    "ctaSecondary": {
+      "label": "Hatfield (215) 362-2443",
+      "href": "tel:2153622443"
+    },
+    "glassFloat": {
+      "title": "Over 50 years",
+      "sub": "Tue to Sat, both showrooms"
+    },
+    "marquee": [
+      "Fireplaces",
+      "Stoves and inserts",
+      "Outdoor kitchens",
+      "Since 1974"
+    ]
+  },
+  "offerings": {
+    "heading": "Inside the house and <mark>out back.</mark>",
+    "items": [
+      "Fireplaces, stoves, and inserts in gas, wood, and electric",
+      "Grills, fire pits, patio furniture, and full outdoor kitchens",
+      "Service and repair for the fireplaces Salter's sells and the ones it did not"
+    ]
+  },
+  "proof": {
+    "items": [
+      "Warming Southeastern PA since 1974",
+      "Eagleville showroom, 3076 Ridge Pike",
+      "Hatfield showroom, 56 E Broad St, in the 1924 firehouse",
+      "Tue to Fri 10 to 6, Sat 10 to 4"
+    ]
+  },
+  "gallery": {
+    "heading": "Fire, stone, and <mark>the rooms around them.</mark>",
+    "imageIndexes": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "story": {
+    "heading": "Fifty years of Pennsylvania winters",
+    "paragraphs": [
+      "Salter's opened in 1974 and never left Montgomery County. Eagleville on Ridge Pike is where most first visits start; Hatfield fills the original 1924 firehouse.",
+      "Both floors exist so a family can stand in front of a burning unit before buying it."
+    ],
+    "imageIndex": 8
+  },
+  "experience": {
+    "heading": "How a project runs",
+    "items": [
+      "Visit either showroom Tuesday through Saturday and see the units lit.",
+      "Salter's measures the room or patio and quotes the install with the product.",
+      "Service and repair stay in-house."
+    ]
+  },
+  "feature": {
+    "heading": "The Hatfield Firehouse showroom",
+    "text": "Eight thousand six hundred square feet inside the 1924 firehouse at 56 E Broad Street, filled with fireplaces, grills, and outdoor living.",
+    "cta": {
+      "label": "Hatfield showroom",
+      "href": "https://saltersfireplace.com/hatfield-showroom/"
+    },
+    "imageIndex": 9
+  },
+  "catalog": {
+    "heading": "Products, projects, <mark>service.</mark>",
+    "items": [
+      {
+        "title": "Browse products",
+        "href": "https://saltersfireplace.com/products/",
+        "imageIndex": 10
+      },
+      {
+        "title": "Our work",
+        "href": "https://saltersfireplace.com/our-work/",
+        "imageIndex": 11
+      },
+      {
+        "title": "Service and repair",
+        "href": "https://saltersfireplace.com/service/",
+        "imageIndex": 12
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Two showrooms, <mark>one family.</mark>"
+  },
+  "closing": {
+    "heading": "Warming Southeastern PA since 1974",
+    "kicker": "Eagleville and Hatfield",
+    "cta": {
+      "label": "Call Eagleville (610) 631-9372",
+      "href": "tel:6106319372"
+    }
+  },
+  "links": [
+    {
+      "label": "Eagleville showroom",
+      "href": "https://saltersfireplace.com/eagleville-showroom/"
+    },
+    {
+      "label": "Hatfield showroom",
+      "href": "https://saltersfireplace.com/hatfield-showroom/"
+    },
+    {
+      "label": "Service area",
+      "href": "https://saltersfireplace.com/service-area/"
+    }
+  ],
+  "sections": [
+    "hero",
+    "offerings",
+    "proof",
+    "gallery",
+    "story",
+    "experience",
+    "feature",
+    "spotlight",
+    "catalog",
+    "contact",
+    "closing"
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Illustrative concept: a lit gas fireplace with a stone surround and a wooden mantel in a warm living room"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Illustrative concept: a cast-iron wood stove burning in a showroom corner with stacked split logs"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Illustrative concept: a built-in stainless grill in a stone outdoor kitchen with a granite counter at dusk"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Illustrative concept: a backyard fire pit ringed with Adirondack chairs, flames glowing at twilight"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Illustrative concept: a fireplace showroom floor with several lit units in a row and a brick wall"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Illustrative concept: an outdoor patio set with cushioned sofas under a pergola with string lights"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Illustrative concept: a fireplace insert installed in an old brick hearth, close-up of flames and logs"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Illustrative concept: a historic red-brick firehouse building converted to a showroom, tall arched doors"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Illustrative concept: a technician's hands servicing a gas fireplace valve, face out of frame"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Illustrative concept: a covered porch with a linear fire feature and a view of autumn trees"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Illustrative concept: a ceramic kamado grill smoking on a flagstone patio"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Illustrative concept: a wall of grill accessories, tongs, and wood pellets in a showroom"
+    }
+  ]
+}

@@ -1,0 +1,237 @@
+{
+  "slug": "eastern-dragon",
+  "name": "Eastern Dragon",
+  "city": "North Wales",
+  "category": "Chinese and Japanese restaurant",
+  "vertical": "Restaurants & Food",
+  "attitude": "neon",
+  "url": "http://easterndragonfood.com/",
+  "phone": "(215) 855-0366",
+  "address": "830 Upper State Rd, North Wales, PA 19454",
+  "hours": "Sun to Thu 11:00 am to 9:30 pm. Fri and Sat hours on the official site.",
+  "description": "Eastern Dragon serves authentic Chinese and Japanese food in North Wales, PA 19454, from Szechuan Chicken and Mongolian Beef to Shrimp Tempura and the Dragon Roll, for dine-in, take-out, and online ordering.",
+  "tagline": "Chinese and Japanese, take out and online order",
+  "noindex": true,
+  "imageDisclosure": true,
+  "schemaType": "LocalBusiness",
+  "marquee": [
+    "Szechuan Chicken",
+    "Dragon Roll",
+    "Shrimp Tempura Lunch",
+    "Online order"
+  ],
+  "tokens": {
+    "paper": "#F7EFE6",
+    "ink": "#1A0A0A",
+    "accent": "#CC0000",
+    "accent2": "#E0A93E",
+    "panel": "#F0DAC6",
+    "deep": "#140707",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "6px"
+  },
+  "fonts": {
+    "display": "Oswald",
+    "text": "Inter",
+    "displayFallback": "Impact,sans-serif"
+  },
+  "logo": false,
+  "nav": [
+    {
+      "label": "Menu",
+      "href": "#offerings"
+    },
+    {
+      "label": "Kitchen",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "hero": {
+    "eyebrow": "North Wales, PA 19454 | Chinese and Japanese",
+    "headline": "Authentic Chinese and Japanese food on Upper State Road",
+    "sub": "A wide array of authentic Chinese and Japanese dishes, cooked to order for dine-in, take-out, and online ordering.",
+    "ctaPrimary": {
+      "label": "Order and menu",
+      "href": "http://easterndragonfood.com/catalog.aspx?cid=37"
+    },
+    "ctaSecondary": {
+      "label": "Call (215) 855-0366",
+      "href": "tel:2158550366"
+    },
+    "glassFloat": {
+      "title": "Open 7 days",
+      "sub": "Sun to Thu until 9:30 pm"
+    },
+    "marquee": [
+      "Szechuan Chicken",
+      "Dragon Roll",
+      "Shrimp Tempura Lunch",
+      "Online order"
+    ]
+  },
+  "offerings": {
+    "heading": "From the wok and the <mark>sushi bar.</mark>",
+    "items": [
+      "Szechuan Chicken, Mongolian Beef, and Moo Goo Gai Pan",
+      "Shrimp Tempura Lunch, Shumai, and the Dragon Roll",
+      "Lunch specials, family dinners, and online ordering with coupons"
+    ]
+  },
+  "proof": {
+    "items": [
+      "830 Upper State Rd, North Wales, PA 19454",
+      "Sunday to Thursday, 11:00 am to 9:30 pm",
+      "Two order lines: (215) 855-0366 and (215) 855-0368",
+      "Take out, dine in, and online order"
+    ]
+  },
+  "gallery": {
+    "heading": "Red lacquer, hot oil, <mark>fresh rice.</mark>",
+    "imageIndexes": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "story": {
+    "heading": "One kitchen, two cuisines",
+    "paragraphs": [
+      "Eastern Dragon serves North Wales from Upper State Road with a menu that refuses to pick a side: Chinese classics on one page, sushi and tempura on the next.",
+      "Call one of the two lines, order online, or walk in and read the coupon board, then take it home while it is still steaming."
+    ],
+    "imageIndex": 8
+  },
+  "experience": {
+    "heading": "The fast way to dinner",
+    "items": [
+      "Order online or call ahead, then pick up at the counter.",
+      "Lunch specials move quickly, so the kitchen keeps them simple and hot.",
+      "Feedback and coupons both live on the official site."
+    ]
+  },
+  "feature": {
+    "heading": "The Dragon Roll",
+    "text": "The house roll is the reason the name is on the sign. Order it beside Mongolian Beef and the menu makes sense.",
+    "cta": {
+      "label": "See the menu",
+      "href": "http://easterndragonfood.com/catalog.aspx?cid=37"
+    },
+    "imageIndex": 9
+  },
+  "catalog": {
+    "heading": "Menu, coupons, <mark>feedback.</mark>",
+    "items": [
+      {
+        "title": "Full menu",
+        "href": "http://easterndragonfood.com/catalog.aspx?cid=37",
+        "imageIndex": 10
+      },
+      {
+        "title": "Coupons",
+        "href": "http://easterndragonfood.com/coupon.aspx",
+        "imageIndex": 11
+      },
+      {
+        "title": "Leave feedback",
+        "href": "http://easterndragonfood.com/feedback.aspx",
+        "imageIndex": 12
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Two lines, one <mark>counter.</mark>"
+  },
+  "closing": {
+    "heading": "Order online or call (215) 855-0366",
+    "kicker": "North Wales, on Upper State Road",
+    "cta": {
+      "label": "Order and menu",
+      "href": "http://easterndragonfood.com/catalog.aspx?cid=37"
+    }
+  },
+  "links": [
+    {
+      "label": "Online order",
+      "href": "http://easterndragonfood.com/catalog.aspx?cid=37"
+    },
+    {
+      "label": "Coupons",
+      "href": "http://easterndragonfood.com/coupon.aspx"
+    }
+  ],
+  "sections": [
+    "hero",
+    "offerings",
+    "proof",
+    "gallery",
+    "story",
+    "experience",
+    "feature",
+    "spotlight",
+    "catalog",
+    "contact",
+    "closing"
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Illustrative concept: a plate of Szechuan chicken with dried chilies and scallions on a black lacquer table, steam rising"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Illustrative concept: a dragon roll sushi with avocado scales and eel sauce on a slate board"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Illustrative concept: Mongolian beef with onions in a wok over a blue flame, motion blur of tossing"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Illustrative concept: shrimp tempura and a small bowl of dipping sauce on a red tray"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Illustrative concept: a bamboo steamer of shumai dumplings with a sprig of cilantro"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Illustrative concept: a bowl of moo goo gai pan with mushrooms and snow peas, chopsticks resting on the rim"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Illustrative concept: a take-out counter with stacked white containers and brown paper bags under warm red pendant lights"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Illustrative concept: a red lantern and gold trim detail inside a suburban Chinese restaurant dining room"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Illustrative concept: a sushi chef's hands slicing salmon on a hinoki cutting board, face out of frame"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Illustrative concept: a wall of glossy menu boards with red and gold panels, shot from below"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Illustrative concept: a printed take-out menu and a stapled coupon on a wooden counter"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Illustrative concept: a family dinner spread of rice, lo mein, and General Tso's chicken in white boxes"
+    }
+  ]
+}

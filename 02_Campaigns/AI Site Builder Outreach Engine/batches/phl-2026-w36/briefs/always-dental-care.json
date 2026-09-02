@@ -1,0 +1,237 @@
+{
+  "slug": "always-dental-care",
+  "name": "Always Dental Care",
+  "city": "Phoenixville",
+  "category": "Family and cosmetic dentistry",
+  "vertical": "Medical & Healthcare",
+  "attitude": "glass",
+  "url": "https://www.facebook.com/AlwaysDentalCare/",
+  "phone": "(484) 392-7687",
+  "address": "1570 Egypt Rd, Ste 210, Phoenixville, PA 19460",
+  "hours": "Mon, Tue, Thu 9 am to 6 pm. Wed 9 am to 5 pm. Fri 9 am to 1 pm. Closed Sat and Sun.",
+  "description": "Always Dental Care is Dr. Truong Nguyen's general and cosmetic dental practice in Phoenixville, PA, offering cleanings, Invisalign, whitening, veneers, root canals, extractions, and wisdom teeth removal.",
+  "tagline": "Dentist in Phoenixville, PA",
+  "noindex": true,
+  "imageDisclosure": true,
+  "schemaType": "LocalBusiness",
+  "marquee": [
+    "Teeth cleaning",
+    "Invisalign",
+    "Whitening",
+    "Veneers"
+  ],
+  "tokens": {
+    "paper": "#F2F8F8",
+    "ink": "#12303A",
+    "accent": "#178791",
+    "accent2": "#BFE9EC",
+    "panel": "#D6E9EA",
+    "deep": "#0E2A30",
+    "onPaper": "#090909",
+    "onAccent": "#090909",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "20px"
+  },
+  "fonts": {
+    "display": "Poppins",
+    "text": "Mulish",
+    "displayFallback": "Arial,sans-serif"
+  },
+  "logo": false,
+  "nav": [
+    {
+      "label": "Services",
+      "href": "#offerings"
+    },
+    {
+      "label": "Office",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Phoenixville, PA | Family and cosmetic dentistry",
+    "headline": "Dentist in Phoenixville, PA",
+    "sub": "Dr. Truong Nguyen, DDS, has cared for Phoenixville for 11 years, from routine cleanings to Invisalign and veneers, on Egypt Road.",
+    "ctaPrimary": {
+      "label": "Call (484) 392-7687",
+      "href": "tel:4843927687"
+    },
+    "ctaSecondary": {
+      "label": "Hours and directions",
+      "href": "#visit"
+    },
+    "glassFloat": {
+      "title": "Rated 4.7 stars",
+      "sub": "1570 Egypt Rd, Suite 210"
+    },
+    "marquee": [
+      "Teeth cleaning",
+      "Invisalign",
+      "Whitening",
+      "Veneers"
+    ]
+  },
+  "offerings": {
+    "heading": "General care and <mark>cosmetic work.</mark>",
+    "items": [
+      "General dentistry: exams, cleanings, fillings, and preventive care",
+      "Invisalign, teeth whitening, and veneers",
+      "Root canals, extractions, and wisdom teeth removal"
+    ]
+  },
+  "proof": {
+    "items": [
+      "Dr. Truong Nguyen, DDS",
+      "11 years caring for Phoenixville",
+      "Evening hours until 6 pm three days a week",
+      "1570 Egypt Rd, Suite 210, Phoenixville"
+    ]
+  },
+  "gallery": {
+    "heading": "A calm office, <mark>close to home.</mark>",
+    "imageIndexes": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "story": {
+    "heading": "One dentist, eleven years",
+    "paragraphs": [
+      "Always Dental Care is a single-dentist practice led by Dr. Truong Nguyen, DDS, treating Phoenixville families for 11 years from 1570 Egypt Road.",
+      "The visits people put off and the ones they look forward to happen in the same chair."
+    ],
+    "imageIndex": 8
+  },
+  "experience": {
+    "heading": "What a visit is like",
+    "items": [
+      "Call to book; evening slots Monday, Tuesday, and Thursday.",
+      "Suite 210 on Egypt Road, parking outside the building.",
+      "Treatment plans explained before anything starts."
+    ]
+  },
+  "feature": {
+    "heading": "Invisalign and whitening, in the same chair",
+    "text": "Straightening and brightening are both done here, so a better smile does not require a second office.",
+    "cta": {
+      "label": "Ask about Invisalign",
+      "href": "tel:4843927687"
+    },
+    "imageIndex": 9
+  },
+  "catalog": {
+    "heading": "Reviews and <mark>directions.</mark>",
+    "items": [
+      {
+        "title": "Facebook page",
+        "href": "https://www.facebook.com/AlwaysDentalCare/",
+        "imageIndex": 10
+      },
+      {
+        "title": "Reviews on Healthgrades",
+        "href": "https://www.healthgrades.com/group-directory/pa-pennsylvania/phoenixville/always-dental-care-xbjxgl",
+        "imageIndex": 11
+      },
+      {
+        "title": "Directions",
+        "href": "https://www.google.com/maps/search/?api=1&query=1570%20Egypt%20Rd%20Ste%20210%20Phoenixville%20PA%2019460",
+        "imageIndex": 12
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Egypt Road, <mark>Suite 210.</mark>"
+  },
+  "closing": {
+    "heading": "Family and cosmetic dentistry in Phoenixville",
+    "kicker": "Phoenixville, Chester County",
+    "cta": {
+      "label": "Call (484) 392-7687",
+      "href": "tel:4843927687"
+    }
+  },
+  "links": [
+    {
+      "label": "Facebook",
+      "href": "https://www.facebook.com/AlwaysDentalCare/"
+    },
+    {
+      "label": "Yelp",
+      "href": "https://www.yelp.com/biz/always-dental-care-phoenixville-2"
+    }
+  ],
+  "sections": [
+    "hero",
+    "offerings",
+    "proof",
+    "gallery",
+    "story",
+    "experience",
+    "feature",
+    "spotlight",
+    "catalog",
+    "contact",
+    "closing"
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Illustrative concept: a modern dental operatory with a reclined chair, overhead light, and a window view of trees"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Illustrative concept: a close-up of a clear aligner tray on a white surface with soft teal light"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Illustrative concept: a dental hygienist's gloved hands holding a mirror and scaler, face out of frame"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Illustrative concept: a bright waiting room with pale aqua chairs, a plant, and a water dispenser"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Illustrative concept: a tray of sterilized instruments in sealed pouches on a clean counter"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Illustrative concept: a whitening lamp positioned over an empty dental chair"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Illustrative concept: a suburban medical office building entrance with glass doors and a suite directory blurred"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Illustrative concept: a panoramic x-ray on a wall monitor in a consultation room, no readable text"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Illustrative concept: a child's toothbrush and a small cup on a sink ledge in a family dental office"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Illustrative concept: a close-up of porcelain veneer shade tabs held against a white background"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Illustrative concept: a reception desk with a tablet and a bowl of mints in a teal-accented office"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Illustrative concept: a dentist's stool and a rolling cabinet under warm morning light"
+    }
+  ]
+}

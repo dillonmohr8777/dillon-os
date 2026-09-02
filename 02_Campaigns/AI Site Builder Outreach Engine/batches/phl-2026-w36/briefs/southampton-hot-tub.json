@@ -1,0 +1,245 @@
+{
+  "slug": "southampton-hot-tub",
+  "name": "Southampton Hot Tub",
+  "city": "Exton and Huntingdon Valley",
+  "category": "Hot tubs, swim spas, and saunas",
+  "vertical": "Home Services",
+  "attitude": "glass",
+  "url": "https://southamptonhottub.com/",
+  "phone": "(215) 791-6170",
+  "address": "344 N Pottstown Pike, Suite 100, Exton, PA 19341 (also 725 County Line Rd, Huntingdon Valley, PA 19006)",
+  "hours": "",
+  "description": "Southampton Hot Tub is a family-owned and operated dealer with showrooms in Exton and Huntingdon Valley, an authorized retailer of Jacuzzi, Bullfrog Spas, Sundance, and Artesian Spas, plus saunas and cold plunges.",
+  "tagline": "Hot tubs, swim spas, and saunas, two showrooms",
+  "noindex": true,
+  "imageDisclosure": true,
+  "schemaType": "LocalBusiness",
+  "marquee": [
+    "Jacuzzi",
+    "Bullfrog Spas",
+    "Sundance",
+    "Saunas and cold plunges"
+  ],
+  "tokens": {
+    "paper": "#F0F6F8",
+    "ink": "#0E2A36",
+    "accent": "#0F7DA8",
+    "accent2": "#8ADAEA",
+    "panel": "#D3E6ED",
+    "deep": "#0B2230",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "24px"
+  },
+  "fonts": {
+    "display": "Sora",
+    "text": "Inter",
+    "displayFallback": "Arial,sans-serif"
+  },
+  "logo": false,
+  "nav": [
+    {
+      "label": "Spas",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Showrooms",
+      "href": "#visit"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Exton and Huntingdon Valley, PA | Family owned",
+    "headline": "Hot tubs and saunas, two showrooms",
+    "sub": "Family-owned and operated, an authorized Jacuzzi, Bullfrog, Sundance, and Artesian retailer, with saunas, swim spas, and cold plunges on the same floors.",
+    "ctaPrimary": {
+      "label": "Call (215) 791-6170",
+      "href": "tel:2157916170"
+    },
+    "ctaSecondary": {
+      "label": "See the showrooms",
+      "href": "#visit"
+    },
+    "glassFloat": {
+      "title": "Two showrooms",
+      "sub": "Exton and Huntingdon Valley"
+    },
+    "marquee": [
+      "Jacuzzi",
+      "Bullfrog Spas",
+      "Sundance",
+      "Saunas and cold plunges"
+    ]
+  },
+  "offerings": {
+    "heading": "Everything that holds <mark>warm water.</mark>",
+    "items": [
+      "Hot tubs from Jacuzzi, Bullfrog Spas, Sundance, and Artesian Spas",
+      "Swim spas, LeisureCraft and Sun & Soul saunas, and Kodiak cold plunges",
+      "Maintenance, winterization, repairs, and relocation by certified technicians"
+    ]
+  },
+  "proof": {
+    "items": [
+      "Family-owned and operated",
+      "Authorized Jacuzzi, Bullfrog, Sundance, and Artesian retailer",
+      "Serving Bucks, Montgomery, Chester, and Delaware counties",
+      "Showrooms in Exton and Huntingdon Valley"
+    ]
+  },
+  "gallery": {
+    "heading": "Steam, cedar, and <mark>still water.</mark>",
+    "imageIndexes": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ]
+  },
+  "story": {
+    "heading": "A family business in two counties",
+    "paragraphs": [
+      "Southampton Hot Tub started as a family operation and still runs like one, with showrooms in Exton and Huntingdon Valley.",
+      "The brands on the floor are the ones the family would put in its own backyard."
+    ],
+    "imageIndex": 7
+  },
+  "experience": {
+    "heading": "Buying and owning",
+    "items": [
+      "Wet-test and compare models in a showroom.",
+      "Delivery, placement, and relocations by the same team.",
+      "Winterization in the fall, restarts in spring, repairs in between."
+    ]
+  },
+  "feature": {
+    "heading": "Saunas and cold plunges",
+    "text": "LeisureCraft and Sun & Soul saunas sit beside Kodiak cold plunges, so a backyard can run hot and cold in the same corner.",
+    "cta": {
+      "label": "Saunas",
+      "href": "https://southamptonhottub.com/saunas/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Service and relocation",
+    "text": "Certified technicians handle maintenance, seasonal service, repairs, and relocations across four counties.",
+    "cta": {
+      "label": "Areas covered",
+      "href": "https://southamptonhottub.com/areas-covered/"
+    },
+    "imageIndex": 9
+  },
+  "catalog": {
+    "heading": "Pick a floor to <mark>stand on.</mark>",
+    "items": [
+      {
+        "title": "All locations",
+        "href": "https://southamptonhottub.com/locations/",
+        "imageIndex": 10
+      },
+      {
+        "title": "Strong Spas",
+        "href": "https://southamptonhottub.com/strong-spas/",
+        "imageIndex": 11
+      },
+      {
+        "title": "Areas covered",
+        "href": "https://southamptonhottub.com/areas-covered/",
+        "imageIndex": 12
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Exton or <mark>Huntingdon Valley.</mark>"
+  },
+  "closing": {
+    "heading": "Family-owned, two showrooms, every major spa brand",
+    "kicker": "Chester County and Montgomery County",
+    "cta": {
+      "label": "Call (215) 791-6170",
+      "href": "tel:2157916170"
+    }
+  },
+  "links": [
+    {
+      "label": "Saunas",
+      "href": "https://southamptonhottub.com/saunas/"
+    },
+    {
+      "label": "Locations",
+      "href": "https://southamptonhottub.com/locations/"
+    }
+  ],
+  "sections": [
+    "hero",
+    "offerings",
+    "proof",
+    "gallery",
+    "story",
+    "experience",
+    "feature",
+    "spotlight",
+    "catalog",
+    "contact",
+    "closing"
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Illustrative concept: a hot tub steaming on a stone patio at dusk with string lights and bare trees behind"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Illustrative concept: a spa showroom floor with several hot tubs on display under skylights"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Illustrative concept: close-up of hot tub jets churning clear water with blue underwater lighting"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Illustrative concept: a cedar barrel sauna in a snowy backyard with warm light through the door"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Illustrative concept: a swim spa with a person swimming in place, seen from behind"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Illustrative concept: a cold plunge tub on a wooden deck with mist rising in morning light"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Illustrative concept: a technician's hands checking a spa filter cartridge, face out of frame"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Illustrative concept: the interior of a sauna with cedar benches and a bucket of stones"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Illustrative concept: a delivery crane lowering a wrapped hot tub over a suburban fence"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Illustrative concept: a covered hot tub with a lifted cover and a towel folded on the steps"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Illustrative concept: a showroom entrance on a suburban pike with glass doors and spa displays inside"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Illustrative concept: a family backyard with a hot tub, fire pit, and Adirondack chairs, faces turned away"
+    }
+  ]
+}

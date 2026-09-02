@@ -1,0 +1,237 @@
+{
+  "slug": "jarman-hvac",
+  "name": "Jarman Sales & Service, Inc.",
+  "city": "Philadelphia",
+  "category": "Air conditioning sales, installation, and service",
+  "vertical": "Home Services",
+  "attitude": "brutal",
+  "url": "https://jarmansalesandservice.com/",
+  "phone": "(215) 389-2345",
+  "address": "2041 Point Breeze Ave, Philadelphia, PA 19145",
+  "hours": "Mon to Fri 8 am to 4:30 pm. Sat 8 am to noon. Closed Sun.",
+  "description": "Jarman Sales & Service has been family-owned and operated in South Philadelphia since 1951, the leading Friedrich dealer for window units, through-the-wall units, custom installations, retrofits, maintenance, and winter storage.",
+  "tagline": "Family-owned since 1951, Friedrich's Philadelphia dealer",
+  "noindex": true,
+  "imageDisclosure": true,
+  "schemaType": "LocalBusiness",
+  "marquee": [
+    "Since 1951",
+    "Friedrich dealer",
+    "Window and wall units",
+    "Winter storage"
+  ],
+  "tokens": {
+    "paper": "#F3F1EC",
+    "ink": "#101418",
+    "accent": "#0B4F9C",
+    "accent2": "#E8462B",
+    "panel": "#D9DCDF",
+    "deep": "#101418",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "5px",
+    "radius": "0px"
+  },
+  "fonts": {
+    "display": "Big Shoulders Display",
+    "text": "Rubik",
+    "displayFallback": "Impact,sans-serif"
+  },
+  "logo": false,
+  "nav": [
+    {
+      "label": "Services",
+      "href": "#offerings"
+    },
+    {
+      "label": "Shop",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Point Breeze, Philadelphia | Since 1951",
+    "headline": "Window and wall units for Philadelphia, since 1951",
+    "sub": "Family-owned for 75 years and the leading Philadelphia dealer for Friedrich, America's best air conditioner.",
+    "ctaPrimary": {
+      "label": "Call (215) 389-2345",
+      "href": "tel:2153892345"
+    },
+    "ctaSecondary": {
+      "label": "Book online",
+      "href": "https://jarman-sales-service-inc.reservio.com/"
+    },
+    "glassFloat": {
+      "title": "75 years",
+      "sub": "2041 Point Breeze Ave"
+    },
+    "marquee": [
+      "Since 1951",
+      "Friedrich dealer",
+      "Window and wall units",
+      "Winter storage"
+    ]
+  },
+  "offerings": {
+    "heading": "What Jarman <mark>installs and keeps running.</mark>",
+    "items": [
+      "Window units and through-the-wall units, sold and installed",
+      "Custom installations and retrofitting for rowhomes and apartments",
+      "Heat pumps, electric heat, and PTAC models, plus offseason maintenance and winter storage"
+    ]
+  },
+  "proof": {
+    "items": [
+      "Family-owned and operated since 1951",
+      "Leading Friedrich dealer in the Philadelphia area",
+      "Mon to Fri 8 to 4:30, Sat 8 to noon",
+      "2041 Point Breeze Ave, 19145"
+    ]
+  },
+  "gallery": {
+    "heading": "Seventy-five summers on <mark>Point Breeze Avenue.</mark>",
+    "imageIndexes": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "story": {
+    "heading": "The shop that outlasted central air",
+    "paragraphs": [
+      "Jarman opened on Point Breeze Avenue in 1951 and is still family-owned. Rowhomes need window and wall units, and Jarman installs them right.",
+      "Offseason maintenance, retrofits, and winter storage are why customers stay."
+    ],
+    "imageIndex": 8
+  },
+  "experience": {
+    "heading": "How it works",
+    "items": [
+      "Call or book online; Jarman measures.",
+      "Pick the Friedrich model; the shop's crew installs it.",
+      "Maintenance and winter storage on request."
+    ]
+  },
+  "feature": {
+    "heading": "Through-the-wall units, retrofitted",
+    "text": "Old sleeves, odd sizes, and brick walls are the specialty. Jarman retrofits the opening and fits the unit so it looks like it was always there.",
+    "cta": {
+      "label": "Book a visit",
+      "href": "https://jarman-sales-service-inc.reservio.com/"
+    },
+    "imageIndex": 9
+  },
+  "catalog": {
+    "heading": "Book, verify, <mark>find the shop.</mark>",
+    "items": [
+      {
+        "title": "Online booking",
+        "href": "https://jarman-sales-service-inc.reservio.com/",
+        "imageIndex": 10
+      },
+      {
+        "title": "BBB profile",
+        "href": "https://www.bbb.org/us/pa/philadelphia/profile/air-conditioning-contractor/jarman-sales-service-inc-0241-80001145",
+        "imageIndex": 11
+      },
+      {
+        "title": "Directions",
+        "href": "https://www.google.com/maps/search/?api=1&query=2041%20Point%20Breeze%20Ave%20Philadelphia%20PA%2019145",
+        "imageIndex": 12
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Point Breeze Avenue, <mark>six days.</mark>"
+  },
+  "closing": {
+    "heading": "Family-owned since 1951, Friedrich's Philadelphia dealer",
+    "kicker": "South Philadelphia",
+    "cta": {
+      "label": "Call (215) 389-2345",
+      "href": "tel:2153892345"
+    }
+  },
+  "links": [
+    {
+      "label": "Official site",
+      "href": "https://jarmansalesandservice.com/"
+    },
+    {
+      "label": "Book online",
+      "href": "https://jarman-sales-service-inc.reservio.com/"
+    }
+  ],
+  "sections": [
+    "hero",
+    "offerings",
+    "proof",
+    "gallery",
+    "story",
+    "experience",
+    "feature",
+    "spotlight",
+    "catalog",
+    "contact",
+    "closing"
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Illustrative concept: a window air conditioner installed in a South Philadelphia brick rowhouse window with a green awning above"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Illustrative concept: a technician's hands sliding a through-the-wall unit into a brick sleeve, face out of frame"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Illustrative concept: an old family appliance storefront on a Philadelphia avenue with units in the window, sign blurred"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Illustrative concept: a row of boxed air conditioners stacked in a warehouse with a hand truck"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Illustrative concept: a close-up of a clean air conditioner front grille and controls, no readable text"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Illustrative concept: a Philadelphia rowhouse block on a hot summer afternoon with awnings and stoops"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Illustrative concept: a service van parked on a narrow city street with a ladder, no lettering"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Illustrative concept: a workshop bench with a coil cleaner, screwdrivers, and a unit opened for maintenance"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Illustrative concept: a PTAC unit installed beneath an apartment window with a radiator cover"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Illustrative concept: a wall of stored air conditioners wrapped and labeled in a winter storage room, no readable text"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Illustrative concept: a heat pump wall unit in a renovated rowhome living room"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Illustrative concept: an installer measuring a window opening with a tape, face out of frame"
+    }
+  ]
+}

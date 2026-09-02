@@ -1,0 +1,237 @@
+{
+  "slug": "wja-landscaping",
+  "name": "WJA Landscaping",
+  "city": "Collegeville",
+  "category": "Landscaping and hardscaping",
+  "vertical": "Home Services",
+  "attitude": "industrial",
+  "url": "https://wjalandscaping.com/",
+  "phone": "(610) 831-3819",
+  "address": "138 Pennapacker Rd, Collegeville, PA 19426",
+  "hours": "Mon to Sat 7 am to 5 pm. Closed Sun.",
+  "description": "WJA Landscaping designs and builds outdoor living spaces, patios, outdoor kitchens, driveways, pavilions, and retaining walls for Collegeville, Limerick Township, Gilbertsville, and Chester and Montgomery counties.",
+  "tagline": "Landscaping design and installation, Collegeville PA",
+  "noindex": true,
+  "imageDisclosure": true,
+  "schemaType": "LocalBusiness",
+  "marquee": [
+    "Patios",
+    "Outdoor kitchens",
+    "Pavilions",
+    "Driveways"
+  ],
+  "tokens": {
+    "paper": "#F2F4EC",
+    "ink": "#17201A",
+    "accent": "#2E6B3A",
+    "accent2": "#C9A24D",
+    "panel": "#D9DDCF",
+    "deep": "#14201A",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "3px",
+    "radius": "0px"
+  },
+  "fonts": {
+    "display": "Bebas Neue",
+    "text": "Source Sans 3",
+    "displayFallback": "Impact,sans-serif"
+  },
+  "logo": false,
+  "nav": [
+    {
+      "label": "Services",
+      "href": "#offerings"
+    },
+    {
+      "label": "Projects",
+      "href": "#gallery"
+    },
+    {
+      "label": "Estimate",
+      "href": "#visit"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Collegeville, PA | Design and build",
+    "headline": "Outdoor living spaces, built to last in Collegeville",
+    "sub": "Patios, outdoor kitchens, driveways, and hardscaping for Collegeville, Limerick, and Gilbertsville, with personalized service and transparent communication.",
+    "ctaPrimary": {
+      "label": "Call (610) 831-3819",
+      "href": "tel:6108313819"
+    },
+    "ctaSecondary": {
+      "label": "See the services",
+      "href": "https://wjalandscaping.com/services/"
+    },
+    "glassFloat": {
+      "title": "Rated 5 out of 5",
+      "sub": "Locally owned and operated"
+    },
+    "marquee": [
+      "Patios",
+      "Outdoor kitchens",
+      "Pavilions",
+      "Driveways"
+    ]
+  },
+  "offerings": {
+    "heading": "Hardscape that <mark>holds.</mark>",
+    "items": [
+      "Patios, walkways, steps, and pool decks in pavers and stone",
+      "Outdoor kitchens, fireplaces, fire pits, and seating walls",
+      "Pergolas, pavilions, driveways, retaining walls, and paver sealing"
+    ]
+  },
+  "proof": {
+    "items": [
+      "Locally owned and operated in Collegeville",
+      "Serving Limerick Township, Gilbertsville, and Chester and Montgomery counties",
+      "Rated 5 out of 5 by clients",
+      "Mon to Sat 7 am to 5 pm"
+    ]
+  },
+  "gallery": {
+    "heading": "Stone, timber, and <mark>fire.</mark>",
+    "imageIndexes": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "story": {
+    "heading": "Personalized service, transparent communication",
+    "paragraphs": [
+      "WJA Landscaping is locally owned and operated in Collegeville, and takes pride in personalized service, transparent communication, and high-quality craftsmanship in every project.",
+      "Patios, kitchens, and pavilions get drawn for the property they will sit on, then built by the crew that quoted them."
+    ],
+    "imageIndex": 8
+  },
+  "experience": {
+    "heading": "From estimate to first fire",
+    "items": [
+      "A site visit and a clear quote with materials and schedule.",
+      "Design and installation by one team.",
+      "A walk-through when finished, sealing when it is time."
+    ]
+  },
+  "feature": {
+    "heading": "Custom pavilions",
+    "text": "A pavilion turns a patio into a room with weather, built to match the house with the kitchen and lighting planned underneath.",
+    "cta": {
+      "label": "Pavilions",
+      "href": "https://wjalandscaping.com/hardscape/pavilions/"
+    },
+    "imageIndex": 9
+  },
+  "catalog": {
+    "heading": "See the <mark>work first.</mark>",
+    "items": [
+      {
+        "title": "Service list",
+        "href": "https://wjalandscaping.com/services/",
+        "imageIndex": 10
+      },
+      {
+        "title": "Hardscaping",
+        "href": "https://wjalandscaping.com/hardscape/",
+        "imageIndex": 11
+      },
+      {
+        "title": "Driveways",
+        "href": "https://wjalandscaping.com/hardscape/driveways/",
+        "imageIndex": 12
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Pennapacker Road, <mark>Collegeville.</mark>"
+  },
+  "closing": {
+    "heading": "Design and installation for Collegeville, Limerick, and Gilbertsville",
+    "kicker": "Montgomery County, PA",
+    "cta": {
+      "label": "Call (610) 831-3819",
+      "href": "tel:6108313819"
+    }
+  },
+  "links": [
+    {
+      "label": "Contact",
+      "href": "https://wjalandscaping.com/contact/"
+    },
+    {
+      "label": "Collegeville services",
+      "href": "https://wjalandscaping.com/collegeville-pa/"
+    }
+  ],
+  "sections": [
+    "hero",
+    "offerings",
+    "proof",
+    "gallery",
+    "story",
+    "experience",
+    "feature",
+    "spotlight",
+    "catalog",
+    "contact",
+    "closing"
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Illustrative concept: a paver patio with a stone fire pit and seating wall at dusk, string lights overhead"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Illustrative concept: an outdoor kitchen with a stone veneer island, built-in grill, and granite counter"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Illustrative concept: a timber-frame pavilion over a patio with a ceiling fan and a dining table"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Illustrative concept: a curved retaining wall of stacked stone with fresh plantings and mulch"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Illustrative concept: a paver driveway sweeping up to a brick colonial house"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Illustrative concept: a crew member's gloved hands setting a paver with a rubber mallet, face out of frame"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Illustrative concept: a flagstone walkway with lantern lights winding through a green lawn"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Illustrative concept: a pool deck in travertine with lounge chairs and a pergola"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Illustrative concept: a stone outdoor fireplace with a wood mantel beside an evergreen hedge"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Illustrative concept: a small waterfall feature spilling into a pond edged with boulders"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Illustrative concept: a skid steer loading gravel on a residential job site at sunrise"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Illustrative concept: a freshly sealed paver patio glistening after rain with a garden bed border"
+    }
+  ]
+}

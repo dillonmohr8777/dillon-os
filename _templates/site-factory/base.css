@@ -189,7 +189,7 @@ figcaption{
 .catalog-card figure{height:330px}
 .catalog-card h3{font-size:1.4rem}
 
-/* Social strip — harvested / mirrored imagery captions */
+/* Social strip: harvested or mirrored imagery captions */
 .social-strip{padding-block:clamp(60px,8vw,110px)}
 .social-strip .section-head{margin-bottom:36px}
 .social-rail{

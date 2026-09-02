@@ -1,0 +1,237 @@
+{
+  "slug": "thr-insurance",
+  "name": "THR Insurance Agency",
+  "city": "Telford",
+  "category": "Independent insurance agency",
+  "vertical": "Professional Services",
+  "attitude": "editorial",
+  "url": "http://www.thrinsurance.com/",
+  "phone": "(610) 426-0007",
+  "address": "97 Ridge Road, Telford, PA 18969",
+  "hours": "",
+  "description": "THR Insurance Agency in Telford, PA is the easy, trusted way to buy insurance: business insurance, home and auto insurance, and human resources support, serving Telford and Lansdale.",
+  "tagline": "The easy, trusted way to buy insurance",
+  "noindex": true,
+  "imageDisclosure": true,
+  "schemaType": "LocalBusiness",
+  "marquee": [
+    "Business insurance",
+    "Home and auto",
+    "Human resources",
+    "Request a quote"
+  ],
+  "tokens": {
+    "paper": "#F3F1EA",
+    "ink": "#1F2A1F",
+    "accent": "#4F6B3A",
+    "accent2": "#C9B27A",
+    "panel": "#DFDED1",
+    "deep": "#1A241A",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "8px"
+  },
+  "fonts": {
+    "display": "Fraunces",
+    "text": "Manrope",
+    "displayFallback": "Georgia,serif"
+  },
+  "logo": false,
+  "nav": [
+    {
+      "label": "Coverage",
+      "href": "#offerings"
+    },
+    {
+      "label": "Agency",
+      "href": "#gallery"
+    },
+    {
+      "label": "Contact",
+      "href": "#visit"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Telford, PA | Independent agency",
+    "headline": "The easy, trusted way to buy insurance",
+    "sub": "Business, home, and auto coverage placed with featured insurance partners, plus human resources support most agencies do not offer.",
+    "ctaPrimary": {
+      "label": "Request a quote",
+      "href": "http://www.thrinsurance.com/request-a-quote.html"
+    },
+    "ctaSecondary": {
+      "label": "Call (610) 426-0007",
+      "href": "tel:6104260007"
+    },
+    "glassFloat": {
+      "title": "Independent",
+      "sub": "97 Ridge Road, Telford"
+    },
+    "marquee": [
+      "Business insurance",
+      "Home and auto",
+      "Human resources",
+      "Request a quote"
+    ]
+  },
+  "offerings": {
+    "heading": "Three things THR <mark>does well.</mark>",
+    "items": [
+      "Business insurance quoted across several carriers",
+      "Home and auto insurance bundled and reviewed at renewal",
+      "Human resources support and a client portal for documents"
+    ]
+  },
+  "proof": {
+    "items": [
+      "Independent agency with featured insurance partners",
+      "Serving Telford and Lansdale",
+      "Rated 5 stars across 29 Google reviews",
+      "97 Ridge Road, Telford, PA 18969"
+    ]
+  },
+  "gallery": {
+    "heading": "Paperwork made <mark>plain.</mark>",
+    "imageIndexes": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "story": {
+    "heading": "Why an independent agency",
+    "paragraphs": [
+      "THR Insurance Agency sits on Ridge Road in Telford and shops a sample of featured insurance partners for you, then explains the difference in plain language.",
+      "The human resources side grew from business clients asking the same questions about hiring and compliance."
+    ],
+    "imageIndex": 8
+  },
+  "experience": {
+    "heading": "Getting covered",
+    "items": [
+      "Request a quote online or call; THR shops it across carriers.",
+      "Choose coverage with an agent who explains what changes.",
+      "Manage documents through the client portal after you bind."
+    ]
+  },
+  "feature": {
+    "heading": "Business insurance and HR, together",
+    "text": "One agency for general liability, commercial auto, workers' comp, and the human resources questions that come with a payroll.",
+    "cta": {
+      "label": "Human resources",
+      "href": "http://www.thrinsurance.com/human-resources.html"
+    },
+    "imageIndex": 9
+  },
+  "catalog": {
+    "heading": "Quote, coverage, <mark>portal.</mark>",
+    "items": [
+      {
+        "title": "Request a quote",
+        "href": "http://www.thrinsurance.com/request-a-quote.html",
+        "imageIndex": 10
+      },
+      {
+        "title": "Insurance",
+        "href": "http://www.thrinsurance.com/insurance.html",
+        "imageIndex": 11
+      },
+      {
+        "title": "Client portal",
+        "href": "https://insurlink.vertafore.com/",
+        "imageIndex": 12
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Ridge Road, <mark>Telford.</mark>"
+  },
+  "closing": {
+    "heading": "The easy, trusted way to buy insurance",
+    "kicker": "Telford and Lansdale, PA",
+    "cta": {
+      "label": "Request a quote",
+      "href": "http://www.thrinsurance.com/request-a-quote.html"
+    }
+  },
+  "links": [
+    {
+      "label": "About us",
+      "href": "http://www.thrinsurance.com/about-us.html"
+    },
+    {
+      "label": "Contact",
+      "href": "http://www.thrinsurance.com/contact.html"
+    }
+  ],
+  "sections": [
+    "hero",
+    "offerings",
+    "proof",
+    "gallery",
+    "story",
+    "experience",
+    "feature",
+    "spotlight",
+    "catalog",
+    "contact",
+    "closing"
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Illustrative concept: a tidy small-town agency office desk with a leather folio, pen, and a potted olive plant by a window"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Illustrative concept: a red-brick main street storefront row in a Pennsylvania borough at golden hour"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Illustrative concept: a contractor's work van parked outside a house with ladders on the roof rack, no lettering"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Illustrative concept: a suburban family home with a covered porch and a sedan in the driveway"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Illustrative concept: an agent's hands pointing at a policy document across a wooden table, faces out of frame"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Illustrative concept: a machine shop floor with a lathe and safety cones, empty and clean"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Illustrative concept: a set of car keys and a house key on a kitchen counter beside a coffee cup"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Illustrative concept: a conference room with a wheat-colored wall and a laptop open on a walnut table"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Illustrative concept: a farmhouse on a Bucks County road with a split-rail fence and autumn trees"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Illustrative concept: a retail shop interior with a counter and shelves of goods, morning light"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Illustrative concept: a stack of neatly labeled folders in an olive filing cabinet"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Illustrative concept: a handshake across a desk in an office with green plants, faces cropped"
+    }
+  ]
+}

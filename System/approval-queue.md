@@ -26,6 +26,8 @@ Only current client and operating actions belong here. Nothing is sent, publishe
 - [ ] 2026-07-12 - VA Claims - Approve client review after VACE design reconciliation; backend and DNS changes remain gated - Risk: medium
 - [ ] 2026-07-12 - Bridge Software Development - Approve client-facing milestone after Phase 1 ownership board and compliance review - Risk: medium
 ## Operating actions
+- [ ] 2026-09-01 - Momentum 360 / Jesse call sheet - Deploy the phl-2026-w36 Wave 4 previews (25 noindex sites) to a new Netlify site after build-batch.js passes; verify 200 + noindex on samples - Risk: low
+- [ ] 2026-09-01 - Momentum 360 / Jesse call sheet - Send Jesse the Wave 4 hub link and sheet rows (draft in batches/phl-2026-w36/HANDOFF.md); no calls or outreach - Risk: low
 - [ ] 2026-07-12 - Revenue - Verify current invoices or contracts for all 14 active clients before publishing MRR - Risk: low
 - [ ] 2026-07-12 - Cursor/MCP - Authenticate Composio, Slack, and WordPress connectors when live reads are required - Risk: low
 - [ ] 2026-07-12 - Book funnel - Configure and test lead-capture delivery before production deployment - Risk: high

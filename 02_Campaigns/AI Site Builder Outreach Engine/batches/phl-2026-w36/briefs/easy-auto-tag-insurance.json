@@ -1,0 +1,235 @@
+{
+  "slug": "easy-auto-tag-insurance",
+  "name": "Easy Auto Tag & Insurance",
+  "city": "Philadelphia",
+  "category": "Auto tags, title, insurance, and notary",
+  "vertical": "Professional Services",
+  "attitude": "brutal",
+  "url": "http://easyautotag.com/",
+  "phone": "(267) 239-0692",
+  "address": "538 E Girard Ave, Philadelphia, PA 19125",
+  "hours": "Mon to Fri 10 am to 5 pm. Sat 11 am to 4 pm.",
+  "description": "Easy Auto Tag & Insurance on East Girard Avenue in Philadelphia handles tag and title service, registration renewals, car insurance, notary work, and instant registrations for ATVs, boats, and motorcycles.",
+  "tagline": "Tags, title, insurance, notary",
+  "noindex": true,
+  "imageDisclosure": true,
+  "schemaType": "LocalBusiness",
+  "marquee": [
+    "Tags and title",
+    "Registration renewal",
+    "Car insurance",
+    "Notary",
+    "Open Saturdays"
+  ],
+  "tokens": {
+    "paper": "#F2F5FA",
+    "ink": "#121A28",
+    "accent": "#1F4FA3",
+    "accent2": "#F2A900",
+    "panel": "#D6DEEA",
+    "deep": "#0F1F3D",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "5px",
+    "radius": "0px"
+  },
+  "fonts": {
+    "display": "Archivo Black",
+    "text": "Archivo",
+    "displayFallback": "Impact,sans-serif"
+  },
+  "logo": false,
+  "nav": [
+    {
+      "label": "Services",
+      "href": "#offerings"
+    },
+    {
+      "label": "Desk",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Fishtown, Philadelphia | Walk-in desk",
+    "headline": "Tags, insurance, a desk that is open",
+    "sub": "Tag and title work, registration renewals, car insurance, and notary service at 538 E Girard Ave, six days a week.",
+    "ctaPrimary": {
+      "label": "Call (267) 239-0692",
+      "href": "tel:2672390692"
+    },
+    "ctaSecondary": {
+      "label": "Hours and directions",
+      "href": "#visit"
+    },
+    "glassFloat": {
+      "title": "Open Saturdays",
+      "sub": "538 E Girard Ave"
+    },
+    "marquee": [
+      "Tags and title",
+      "Registration renewal",
+      "Car insurance",
+      "Notary",
+      "Open Saturdays"
+    ]
+  },
+  "offerings": {
+    "heading": "Done at the <mark>counter.</mark>",
+    "items": [
+      "Tag and title service, transfers, and vehicle registration renewal",
+      "Car insurance quoted and bound while you wait",
+      "Notary public, driver's license renewal, and instant registrations for ATVs, boats, and motorcycles"
+    ]
+  },
+  "proof": {
+    "items": [
+      "538 E Girard Ave, Philadelphia 19125",
+      "Mon to Fri 10 to 5, Sat 11 to 4",
+      "Serves all of Pennsylvania",
+      "Walk in, no appointment"
+    ]
+  },
+  "gallery": {
+    "heading": "Girard Avenue, <mark>paperwork solved.</mark>",
+    "imageIndexes": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "story": {
+    "heading": "The desk that finishes the errand",
+    "paragraphs": [
+      "Easy Auto Tag & Insurance sits on East Girard Avenue in Fishtown, where a title transfer, a plate, and an insurance card can all get done in one stop instead of three.",
+      "Saturday hours exist because most people cannot take a weekday off for a registration. Bring the documents, leave with the tag."
+    ],
+    "imageIndex": 8
+  },
+  "experience": {
+    "heading": "What to bring",
+    "items": [
+      "Title or current registration, ID, and proof of insurance.",
+      "For a new policy, the vehicle details; quotes happen at the desk.",
+      "Notary work for auto and personal documents, same visit."
+    ]
+  },
+  "feature": {
+    "heading": "Instant registrations",
+    "text": "ATVs, boats, and motorcycles get registered on the spot, along with cars and trucks, for anyone in Pennsylvania.",
+    "cta": {
+      "label": "Call the desk",
+      "href": "tel:2672390692"
+    },
+    "imageIndex": 9
+  },
+  "catalog": {
+    "heading": "Check, then <mark>come in.</mark>",
+    "items": [
+      {
+        "title": "Official site",
+        "href": "http://easyautotag.com/",
+        "imageIndex": 10
+      },
+      {
+        "title": "Reviews on Yelp",
+        "href": "https://www.yelp.com/biz/easy-auto-tag-and-insurance-philadelphia",
+        "imageIndex": 11
+      },
+      {
+        "title": "Directions",
+        "href": "https://www.google.com/maps/search/?api=1&query=538%20E%20Girard%20Ave%20Philadelphia%20PA%2019125",
+        "imageIndex": 12
+      }
+    ]
+  },
+  "contact": {
+    "heading": "East Girard, <mark>six days.</mark>"
+  },
+  "closing": {
+    "heading": "Tags, title, insurance, and notary on Girard Avenue",
+    "kicker": "Fishtown, Philadelphia",
+    "cta": {
+      "label": "Call (267) 239-0692",
+      "href": "tel:2672390692"
+    }
+  },
+  "links": [
+    {
+      "label": "Official site",
+      "href": "http://easyautotag.com/"
+    }
+  ],
+  "sections": [
+    "hero",
+    "offerings",
+    "proof",
+    "gallery",
+    "story",
+    "experience",
+    "feature",
+    "spotlight",
+    "catalog",
+    "contact",
+    "closing"
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Illustrative concept: a Philadelphia rowhouse commercial block with a tag and insurance storefront, blue awning, morning light"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Illustrative concept: a stack of vehicle title folders and a notary stamp on a counter, no readable text"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Illustrative concept: a fresh license plate and a registration sticker on a wooden desk"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Illustrative concept: a customer's hands signing a form at a service counter, face out of frame"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Illustrative concept: a row of motorcycles parked on a city street beside a brick wall"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Illustrative concept: a boat on a trailer in a driveway, ready to be registered"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Illustrative concept: an ATV in a garage with a helmet on the seat"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Illustrative concept: a service desk with a card reader and a bell, blue and yellow accents"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Illustrative concept: a Girard Avenue streetscape with the elevated train line overhead"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Illustrative concept: car keys, an insurance card holder, and a pen on a blue counter"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Illustrative concept: a sedan parked at a curb with a temporary paper tag in the rear window, no readable text"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Illustrative concept: a waiting bench beneath a window with afternoon light and a potted plant"
+    }
+  ]
+}

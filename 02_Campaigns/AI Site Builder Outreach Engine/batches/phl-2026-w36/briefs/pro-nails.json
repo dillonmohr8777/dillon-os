@@ -1,0 +1,237 @@
+{
+  "slug": "pro-nails",
+  "name": "Pro-Nails Nailery",
+  "city": "Willow Grove",
+  "category": "Nail salon in Willow Grove Park Mall",
+  "vertical": "Spas & Wellness",
+  "attitude": "glass",
+  "url": "https://willowgroveparkmall.com/store/pro-nails",
+  "phone": "(215) 657-6245",
+  "address": "Willow Grove Park Mall, 2500 W Moreland Rd, Willow Grove, PA 19090",
+  "hours": "Open daily 11 am to 6 pm. Confirm mall hours before visiting.",
+  "description": "Pro-Nails Nailery is the nail salon inside Willow Grove Park Mall, offering manicures, pedicures, and waxing at 2500 W Moreland Rd in Willow Grove, PA.",
+  "tagline": "Manicures, pedicures, and waxing in Willow Grove Park Mall",
+  "noindex": true,
+  "imageDisclosure": true,
+  "schemaType": "LocalBusiness",
+  "marquee": [
+    "Manicures",
+    "Pedicures",
+    "Waxing",
+    "Willow Grove Park"
+  ],
+  "tokens": {
+    "paper": "#FBF6F4",
+    "ink": "#3A2A30",
+    "accent": "#B94D6E",
+    "accent2": "#F3D6DE",
+    "panel": "#EFE1E6",
+    "deep": "#3A2A30",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "28px"
+  },
+  "fonts": {
+    "display": "Bodoni Moda",
+    "text": "Nunito Sans",
+    "displayFallback": "Georgia,serif"
+  },
+  "logo": false,
+  "nav": [
+    {
+      "label": "Services",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Find us",
+      "href": "#visit"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Willow Grove Park Mall | Nail salon",
+    "headline": "Professional nails, right inside the mall",
+    "sub": "Manicures, pedicures, and waxing a short walk from the stores at Willow Grove Park, open daily 11 am to 6 pm.",
+    "ctaPrimary": {
+      "label": "Call (215) 657-6245",
+      "href": "tel:2156576245"
+    },
+    "ctaSecondary": {
+      "label": "Find the salon",
+      "href": "#visit"
+    },
+    "glassFloat": {
+      "title": "Open daily 11 to 6",
+      "sub": "Inside Willow Grove Park Mall"
+    },
+    "marquee": [
+      "Manicures",
+      "Pedicures",
+      "Waxing",
+      "Willow Grove Park"
+    ]
+  },
+  "offerings": {
+    "heading": "The <mark>service menu.</mark>",
+    "items": [
+      "Manicures, classic polish to gel",
+      "Pedicures with time for the soak",
+      "Waxing, booked with a nail service or on its own"
+    ]
+  },
+  "proof": {
+    "items": [
+      "Inside Willow Grove Park Mall",
+      "Open daily 11 am to 6 pm",
+      "Manicures, pedicures, and waxing",
+      "(215) 657-6245"
+    ]
+  },
+  "gallery": {
+    "heading": "Clean chairs, steady hands, <mark>fresh color.</mark>",
+    "imageIndexes": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "story": {
+    "heading": "A salon that fits into the trip",
+    "paragraphs": [
+      "Pro-Nails Nailery has been part of Willow Grove Park Mall for years, the salon people find between stores and come back to on purpose.",
+      "Professional work, a menu that covers hands, feet, and waxing, and hours that match the mall."
+    ],
+    "imageIndex": 8
+  },
+  "experience": {
+    "heading": "How a visit goes",
+    "items": [
+      "Walk in from the concourse or call ahead to hold a chair.",
+      "Pick the service and the color, then settle in.",
+      "Pay by card and walk back out to the shopping trip."
+    ]
+  },
+  "feature": {
+    "heading": "Pedicures with the soak built in",
+    "text": "A proper soak, careful cuticle work, and polish that is dry before you reach the parking garage.",
+    "cta": {
+      "label": "Call ahead",
+      "href": "tel:2156576245"
+    },
+    "imageIndex": 9
+  },
+  "catalog": {
+    "heading": "Find the salon <mark>fast.</mark>",
+    "items": [
+      {
+        "title": "Mall directory listing",
+        "href": "https://willowgroveparkmall.com/store/pro-nails",
+        "imageIndex": 10
+      },
+      {
+        "title": "Reviews on Yelp",
+        "href": "https://www.yelp.com/biz/pro-nails-nailery-willow-gove-park-mall-willow-grove",
+        "imageIndex": 11
+      },
+      {
+        "title": "Directions to the mall",
+        "href": "https://www.google.com/maps/search/?api=1&query=Willow%20Grove%20Park%20Mall%202500%20W%20Moreland%20Rd%20Willow%20Grove%20PA%2019090",
+        "imageIndex": 12
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Willow Grove Park, <mark>daily.</mark>"
+  },
+  "closing": {
+    "heading": "Manicures, pedicures, and waxing, inside the mall",
+    "kicker": "Willow Grove, Montgomery County",
+    "cta": {
+      "label": "Call (215) 657-6245",
+      "href": "tel:2156576245"
+    }
+  },
+  "links": [
+    {
+      "label": "Mall directory",
+      "href": "https://willowgroveparkmall.com/store/pro-nails"
+    },
+    {
+      "label": "Yelp",
+      "href": "https://www.yelp.com/biz/pro-nails-nailery-willow-gove-park-mall-willow-grove"
+    }
+  ],
+  "sections": [
+    "hero",
+    "offerings",
+    "proof",
+    "gallery",
+    "story",
+    "experience",
+    "feature",
+    "spotlight",
+    "catalog",
+    "contact",
+    "closing"
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Illustrative concept: a manicure station with a bottle of rose polish, a nail file, and a folded white towel under bright light"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Illustrative concept: a row of white pedicure chairs with foot basins in a bright salon"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Illustrative concept: a wall display of nail polish bottles arranged by color from blush to deep red"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Illustrative concept: close-up of freshly painted almond-shaped nails in a soft pink gel, hands resting on marble"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Illustrative concept: a technician's gloved hands shaping nails with a file, faces out of frame"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Illustrative concept: a spa pedicure basin with rose petals floating in warm water"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Illustrative concept: a glass salon storefront opening onto a bright mall concourse with planters"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Illustrative concept: a tray of cuticle oil, buffer, and orange sticks on a rose-colored towel"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Illustrative concept: a waxing room with a padded table, warm wax pot, and folded linens"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Illustrative concept: french tip nails held over a latte on a marble cafe table"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Illustrative concept: a salon reception desk with orchids and a card reader"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Illustrative concept: a shelf of hand creams and sugar scrubs in pastel packaging"
+    }
+  ]
+}

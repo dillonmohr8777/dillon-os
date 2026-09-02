@@ -1,0 +1,494 @@
+[
+  {
+    "slug": "dutton-road-veterinary-clinic",
+    "name": "Dutton Road Veterinary Clinic",
+    "city": "Northeast Philadelphia",
+    "category": "Veterinary clinic and surgical facility",
+    "vertical": "Medical & Healthcare",
+    "attitude": "warm",
+    "url": "http://duttonroadvetclinic.com/",
+    "phone": "(215) 331-2968",
+    "address": "10901 Dutton Rd, Philadelphia, PA 19154",
+    "hours": "Mon, Tue, Thu 9 am to 7 pm. Wed and Fri 9 am to 5 pm. Closed Sat and Sun.",
+    "description": "Dutton Road Veterinary Clinic is a full-service, state-of-the-art veterinary clinic and surgical facility in Northeast Philadelphia, run as a non-profit general practice for dogs and cats.",
+    "tagline": "Full-service clinic and surgical facility",
+    "marquee": ["Call to make an appointment today", "Non-profit general practice", "Dogs and cats", "Surgery on site", "Northeast Philadelphia"],
+    "tokens": { "paper": "#F6F0E8", "ink": "#2B1D15", "accent": "#B65F33", "accent2": "#E9C79E", "panel": "#DCCFC1", "deep": "#2E1A12", "border": "2px", "radius": "18px" },
+    "fonts": { "display": "Lora", "text": "Work Sans", "displayFallback": "Georgia,serif" },
+    "primary": { "label": "Call (215) 331-2968", "href": "tel:2153312968" },
+    "hero": {
+      "eyebrow": "Northeast Philadelphia | Pet clinic and kennel",
+      "headline": "A full-service clinic and surgical facility, run as a non-profit",
+      "sub": "Dutton Road Veterinary Clinic treats dogs and cats in one state-of-the-art building on Dutton Road, with surgery, dentistry, and boarding under the same roof.",
+      "ctaSecondary": { "label": "Get directions", "href": "#visit" },
+      "glassFloat": { "title": "Open five days", "sub": "Evening hours Mon, Tue, and Thu" }
+    },
+    "offerings": {
+      "heading": "What the clinic <mark>does.</mark>",
+      "items": [
+        "General procedures, from wellness visits and vaccines to sick-pet exams for dogs and cats",
+        "Surgical procedures performed in the on-site surgical facility",
+        "Pet dentistry, cleanings, and extractions",
+        "Boarding in the clinic's own kennel, so a vet is never far away"
+      ]
+    },
+    "proof": {
+      "items": [
+        "Non-profit general practice for all dogs and cats",
+        "Full-service, state-of-the-art clinic and surgical facility",
+        "10901 Dutton Rd, Northeast Philadelphia, 19154",
+        "Appointments by phone: (215) 331-2968"
+      ]
+    },
+    "gallery": { "heading": "Inside the clinic, <mark>one visit at a time.</mark>" },
+    "story": {
+      "heading": "Caring and knowledgeable, on purpose",
+      "paragraphs": [
+        "Dutton Road Veterinary Clinic is a full-service veterinary clinic and surgical facility in Northeast Philadelphia. Its staff are committed to the health and well-being of the animals in their care, and they say so in plain words.",
+        "Running as a non-profit changes the math. The clinic exists to treat dogs and cats well, not to sell them extras, and the phone number sits at the top of everything because a call is still the fastest way in."
+      ]
+    },
+    "experience": {
+      "heading": "How a visit works",
+      "items": [
+        "Call to make an appointment today. The clinic books by phone, so one call sets the whole visit.",
+        "Bring your dog or cat to Dutton Road, with parking at the building and directions on the site.",
+        "Surgery, dentistry, and boarding stay in-house, so follow-ups happen with the same team."
+      ]
+    },
+    "feature": {
+      "heading": "Surgery without a second address",
+      "text": "The surgical facility is part of the clinic, so a diagnosis, the procedure, and the recheck all happen with the people who already know your pet.",
+      "cta": { "label": "Surgical procedures", "href": "http://duttonroadvetclinic.com/surgical-procedures-y503.html" }
+    },
+    "catalog": {
+      "heading": "Straight to the <mark>right page.</mark>",
+      "items": [
+        { "title": "Services", "href": "http://duttonroadvetclinic.com/drvc-services-y659.html" },
+        { "title": "Boarding", "href": "http://duttonroadvetclinic.com/boarding-y363.html" },
+        { "title": "Directions", "href": "http://duttonroadvetclinic.com/drvc-directions-y664.html" }
+      ]
+    },
+    "contact": { "heading": "Call, then <mark>come in.</mark>" },
+    "closing": { "heading": "Call to make an appointment today", "kicker": "Dutton Road, Northeast Philadelphia" },
+    "links": [
+      { "label": "Meet the staff", "href": "http://duttonroadvetclinic.com/drvc-staff-y658.html" },
+      { "label": "Pet dentistry", "href": "http://duttonroadvetclinic.com/pet-dentistry-y364.html" },
+      { "label": "Facebook", "href": "https://www.facebook.com/p/Dutton-Road-Veterinary-Clinic-100063781851061/" }
+    ],
+    "imageStyle": "Warm terracotta and cream tones, a modest brick veterinary clinic in a Northeast Philadelphia neighborhood.",
+    "images": [
+      "a calm golden retriever sitting on a stainless exam table in a bright veterinary exam room, terracotta accent wall",
+      "a tabby cat resting in a soft blanket inside a clean clinic kennel run",
+      "veterinary surgical suite with a draped table, overhead light, and monitors, empty and ready",
+      "a dental scaler tray and a canine dental x-ray on a lightbox",
+      "a small brick veterinary clinic entrance with a wooden bench and a planter of marigolds",
+      "a technician's gloved hands holding a puppy paw during a nail trim, face out of frame",
+      "a row of pet carriers and leashes waiting in a warm reception area with cream walls",
+      "a beagle walking beside a person's legs on a leash outside a clinic on a suburban road",
+      "a clinic recovery room with padded kennels and a fleece blanket, soft morning light",
+      "a scale, stethoscope, and vaccine vials arranged on a clinic counter",
+      "a boarding kennel with a raised cot, water bowl, and a window onto trees",
+      "a veterinary pharmacy shelf with labeled amber bottles and a prescription pad",
+      "an exterior parking lot view of a one-story clinic with a green lawn at dusk"
+    ]
+  },
+  {
+    "slug": "eastern-dragon",
+    "name": "Eastern Dragon",
+    "city": "North Wales",
+    "category": "Chinese and Japanese restaurant",
+    "vertical": "Restaurants & Food",
+    "attitude": "neon",
+    "url": "http://easterndragonfood.com/",
+    "phone": "(215) 855-0366",
+    "address": "830 Upper State Rd, North Wales, PA 19454",
+    "hours": "Sun to Thu 11:00 am to 9:30 pm. Fri and Sat hours on the official site.",
+    "description": "Eastern Dragon serves authentic Chinese and Japanese food in North Wales, PA 19454, from Szechuan Chicken and Mongolian Beef to Shrimp Tempura and the Dragon Roll, for dine-in, take-out, and online ordering.",
+    "tagline": "Chinese and Japanese, take out and online order",
+    "marquee": ["Szechuan Chicken", "Mongolian Beef", "Moo Goo Gai Pan", "Shrimp Tempura Lunch", "Shumai", "Dragon Roll", "Online order and take out"],
+    "tokens": { "paper": "#F7EFE6", "ink": "#1A0A0A", "accent": "#CC0000", "accent2": "#E0A93E", "panel": "#F0DAC6", "deep": "#140707", "border": "1px", "radius": "6px" },
+    "fonts": { "display": "Oswald", "text": "Inter", "displayFallback": "Impact,sans-serif" },
+    "primary": { "label": "Order and menu", "href": "http://easterndragonfood.com/catalog.aspx?cid=37" },
+    "nav": [
+      { "label": "Menu", "href": "#offerings" },
+      { "label": "Kitchen", "href": "#gallery" },
+      { "label": "Visit", "href": "#visit" }
+    ],
+    "hero": {
+      "eyebrow": "North Wales, PA 19454 | Chinese and Japanese",
+      "headline": "Authentic Chinese and Japanese food on Upper State Road",
+      "sub": "A wide array of dishes, Szechuan Chicken to Dragon Roll, cooked to order for dine-in, take-out, and online ordering at 830 Upper State Rd.",
+      "ctaSecondary": { "label": "Call (215) 855-0366", "href": "tel:2158550366" },
+      "glassFloat": { "title": "Open 7 days", "sub": "Sun to Thu until 9:30 pm" }
+    },
+    "offerings": {
+      "heading": "From the wok and the <mark>sushi bar.</mark>",
+      "items": [
+        "Szechuan Chicken, Mongolian Beef, and Moo Goo Gai Pan from the Chinese kitchen",
+        "Shrimp Tempura Lunch, Shumai, and the Dragon Roll from the Japanese side of the menu",
+        "Lunch specials, family dinners, and take-out packed hot for the drive home",
+        "Online ordering and coupons through the official site"
+      ]
+    },
+    "proof": {
+      "items": [
+        "830 Upper State Rd, North Wales, PA 19454",
+        "Sunday to Thursday, 11:00 am to 9:30 pm",
+        "Two order lines: (215) 855-0366 and (215) 855-0368",
+        "Take out, dine in, and online order"
+      ]
+    },
+    "gallery": { "heading": "Red lacquer, hot oil, <mark>fresh rice.</mark>" },
+    "story": {
+      "heading": "One kitchen, two cuisines",
+      "paragraphs": [
+        "Eastern Dragon has served North Wales from Upper State Road with a menu that refuses to pick a side: authentic Chinese classics on one page, sushi rolls and tempura on the next.",
+        "The order counter runs the way regulars like it. Call one of the two lines, order online, or walk in and read the coupon board, then take it home while it is still steaming."
+      ]
+    },
+    "experience": {
+      "heading": "The fast way to dinner",
+      "items": [
+        "Order online from the menu or call ahead, then pick up at the counter on Upper State Road.",
+        "Lunch specials like the Shrimp Tempura Lunch move quickly, so the kitchen keeps them simple and hot.",
+        "Feedback goes straight to the restaurant through the site, and coupons post there too."
+      ]
+    },
+    "feature": {
+      "heading": "The Dragon Roll",
+      "text": "The house roll is the reason the name is on the sign. Order it beside a plate of Mongolian Beef and the table understands why one menu covers both kitchens.",
+      "cta": { "label": "See the menu", "href": "http://easterndragonfood.com/catalog.aspx?cid=37" }
+    },
+    "catalog": {
+      "heading": "Menu, coupons, <mark>feedback.</mark>",
+      "items": [
+        { "title": "Full menu", "href": "http://easterndragonfood.com/catalog.aspx?cid=37" },
+        { "title": "Coupons", "href": "http://easterndragonfood.com/coupon.aspx" },
+        { "title": "Leave feedback", "href": "http://easterndragonfood.com/feedback.aspx" }
+      ]
+    },
+    "contact": { "heading": "Two lines, one <mark>counter.</mark>" },
+    "closing": { "heading": "Order online or call (215) 855-0366", "kicker": "North Wales, on Upper State Road" },
+    "links": [
+      { "label": "Online order", "href": "http://easterndragonfood.com/catalog.aspx?cid=37" },
+      { "label": "Coupons", "href": "http://easterndragonfood.com/coupon.aspx" }
+    ],
+    "imageStyle": "Deep red, black, and gold palette, glossy lacquer, steam, close food photography in a suburban Chinese-Japanese restaurant.",
+    "images": [
+      "a plate of Szechuan chicken with dried chilies and scallions on a black lacquer table, steam rising",
+      "a dragon roll sushi with avocado scales and eel sauce on a slate board",
+      "Mongolian beef with onions in a wok over a blue flame, motion blur of tossing",
+      "shrimp tempura and a small bowl of dipping sauce on a red tray",
+      "a bamboo steamer of shumai dumplings with a sprig of cilantro",
+      "a bowl of moo goo gai pan with mushrooms and snow peas, chopsticks resting on the rim",
+      "a take-out counter with stacked white containers and brown paper bags under warm red pendant lights",
+      "a red lantern and gold trim detail inside a suburban Chinese restaurant dining room",
+      "a sushi chef's hands slicing salmon on a hinoki cutting board, face out of frame",
+      "a wall of glossy menu boards with red and gold panels, shot from below",
+      "a printed take-out menu and a stapled coupon on a wooden counter",
+      "a family dinner spread of rice, lo mein, and General Tso's chicken in white boxes",
+      "the glowing entrance of a strip-mall restaurant at dusk with red neon reflections on wet pavement"
+    ]
+  },
+  {
+    "slug": "go2tech",
+    "name": "GO2 Tech",
+    "city": "Springfield",
+    "category": "Managed IT and security provider",
+    "vertical": "Professional Services",
+    "attitude": "glass",
+    "url": "https://www.go2tech.com/",
+    "phone": "(610) 567-3462",
+    "address": "606 Baltimore Pike, Springfield, PA 19064",
+    "hours": "Mon to Fri 8:30 am to 5:00 pm. Closed Sat and Sun.",
+    "description": "GO2 Tech is Philadelphia's award-winning managed IT and security provider, empowering Greater Philadelphia businesses since 2002 with cybersecurity, network infrastructure, cloud services, business communications, and physical security.",
+    "tagline": "Award-winning managed IT and security provider",
+    "marquee": ["Cybersecurity", "Network infrastructure", "Cloud services", "Business communications", "Physical security", "Since 2002"],
+    "tokens": { "paper": "#F3F6EE", "ink": "#0B0F0A", "accent": "#79B02E", "accent2": "#1B3A6B", "panel": "#DCE4D0", "deep": "#0B0F0A", "border": "1px", "radius": "14px" },
+    "fonts": { "display": "Space Grotesk", "text": "IBM Plex Sans", "displayFallback": "Arial,sans-serif" },
+    "primary": { "label": "Call (610) 567-3462", "href": "tel:6105673462" },
+    "nav": [
+      { "label": "Services", "href": "#offerings" },
+      { "label": "Work", "href": "#gallery" },
+      { "label": "Contact", "href": "#visit" }
+    ],
+    "hero": {
+      "eyebrow": "Springfield, PA | Managed IT and security",
+      "headline": "Philadelphia's award-winning managed IT and security provider",
+      "sub": "GO2 Tech has been empowering businesses in the Greater Philadelphia area for over 20 years with innovative IT and security solutions, from the server room to the front door.",
+      "ctaSecondary": { "label": "See the services", "href": "#offerings" },
+      "glassFloat": { "title": "Established 2002", "sub": "606 Baltimore Pike, Springfield" }
+    },
+    "offerings": {
+      "heading": "Five lines of <mark>service.</mark>",
+      "items": [
+        "Cybersecurity, managed IT, and remote desktop support that keep a business running quietly",
+        "Network infrastructure, network administration, and voice and data cabling",
+        "Cloud services and business communications built for offices that work from anywhere",
+        "Physical security: video surveillance, camera systems, and security system installation"
+      ]
+    },
+    "proof": {
+      "items": [
+        "Over 20 years serving the Greater Philadelphia area",
+        "Established in 2002",
+        "Mon to Fri 8:30 am to 5:00 pm",
+        "606 Baltimore Pike, Springfield, PA 19064"
+      ]
+    },
+    "gallery": { "heading": "The work is in the <mark>racks and the walls.</mark>" },
+    "story": {
+      "heading": "One provider for IT and security",
+      "paragraphs": [
+        "Most businesses call one company for computers and another for cameras. GO2 Tech has handled both from Springfield since 2002, which is why the phrase managed IT and security provider sits in its own description.",
+        "The award-winning part is earned on ordinary days: patched networks, backups that restore, cabling that is labeled, and a surveillance system someone can actually pull footage from."
+      ]
+    },
+    "experience": {
+      "heading": "What working with GO2 looks like",
+      "items": [
+        "A consultation on site at your office, not a quote generated from a form.",
+        "Managed services with remote support first and a technician on Baltimore Pike when hands are needed.",
+        "Data recovery and disaster recovery plans written down before anything goes wrong."
+      ]
+    },
+    "feature": {
+      "heading": "Security you can see and security you cannot",
+      "text": "Camera systems and access control on one side, firewalls and endpoint protection on the other. GO2 Tech designs both together so the gaps between vendors disappear.",
+      "cta": { "label": "Talk to GO2 Tech", "href": "tel:6105673462" }
+    },
+    "catalog": {
+      "heading": "Where to <mark>verify.</mark>",
+      "items": [
+        { "title": "Official site", "href": "https://www.go2tech.com/" },
+        { "title": "LinkedIn", "href": "https://www.linkedin.com/company/go2tech" },
+        { "title": "BBB profile", "href": "https://www.bbb.org/us/pa/springfield/profile/computer-consultant/go2-tech-0241-236092314" }
+      ]
+    },
+    "contact": { "heading": "Start with a <mark>call.</mark>" },
+    "closing": { "heading": "Innovative IT and security solutions, since 2002", "kicker": "Springfield, serving Greater Philadelphia" },
+    "links": [
+      { "label": "Official site", "href": "https://www.go2tech.com/" },
+      { "label": "LinkedIn", "href": "https://www.linkedin.com/company/go2tech" }
+    ],
+    "imageStyle": "Clean lime green and charcoal palette, modern small-office technology, glass and brushed metal, Delaware County suburbs.",
+    "images": [
+      "a tidy server rack with green status lights and neatly bundled patch cables in a small business closet",
+      "a technician's hands crimping an ethernet cable at a labeled patch panel",
+      "a dome security camera mounted on the corner of a brick commercial building",
+      "a modern office desk with a laptop, docking station, and a desk phone under soft daylight",
+      "a wall-mounted network switch with color-coded cables in a clean equipment room",
+      "a small-business conference room with a video bar and a large display, empty",
+      "a close-up of an access control card reader beside a glass office door",
+      "a cloud of fiber optic strands glowing green against dark charcoal",
+      "a storefront office on a suburban pike with a glass facade at golden hour",
+      "a workstation with two monitors showing abstract green network graphs, no readable text",
+      "a laptop on a desk beside a coffee mug and a notepad, morning light through blinds",
+      "a monitoring wall of blurred camera feeds in a security office",
+      "a technician's service van parked outside a brick office building, no lettering on the van"
+    ]
+  },
+  {
+    "slug": "home-furnishings-consignment",
+    "name": "Home Furnishing Consignment",
+    "city": "Wayne",
+    "category": "Upscale furniture consignment",
+    "vertical": "Retail",
+    "attitude": "editorial",
+    "url": "http://www.hfconsignment.com/",
+    "phone": "(610) 964-1903",
+    "address": "Gateway Shopping Center, 139 E Swedesford Rd, Wayne, PA 19087",
+    "hours": "Mon to Sat 10 am to 6 pm. Sun 11 am to 5 pm.",
+    "description": "Home Furnishing Consignment is the first choice for furniture consignment on the Main Line: new or used furniture, one-of-a-kind collectibles, and eclectic accents in the Gateway Shopping Center in Wayne.",
+    "tagline": "The first choice for furniture consignment on the Main Line",
+    "marquee": ["Shop early and often", "New arrivals daily", "One-of-a-kind collectibles", "Eclectic accents", "Why consign?", "Gateway Shopping Center"],
+    "tokens": { "paper": "#F8F4EC", "ink": "#2A2620", "accent": "#8A6D3B", "accent2": "#BFA97D", "panel": "#E6DCC8", "deep": "#2A2620", "border": "1px", "radius": "2px" },
+    "fonts": { "display": "Cormorant Garamond", "text": "Jost", "displayFallback": "Georgia,serif" },
+    "primary": { "label": "Plan a visit", "href": "#visit" },
+    "nav": [
+      { "label": "Shop", "href": "#offerings" },
+      { "label": "Gallery", "href": "#gallery" },
+      { "label": "Consign", "href": "#visit" }
+    ],
+    "hero": {
+      "eyebrow": "Wayne, PA | Gateway Shopping Center",
+      "headline": "The first choice for furniture consignment on the Main Line",
+      "sub": "New or used furniture, one-of-a-kind collectibles, and eclectic accents, with a large influx of items daily. Shop early and often.",
+      "ctaSecondary": { "label": "Why consign?", "href": "http://www.hfconsignment.com/why-consign/" },
+      "glassFloat": { "title": "Open 7 days", "sub": "139 E Swedesford Rd, Wayne" }
+    },
+    "offerings": {
+      "heading": "What walks in the <mark>door.</mark>",
+      "items": [
+        "Sofas, dining sets, bedroom furniture, and case goods, new or gently used",
+        "One-of-a-kind collectibles, art, mirrors, and lamps",
+        "Eclectic accents and decor that change with every drop-off",
+        "Consignment for sellers who want a fair price and a showroom, not a listing"
+      ]
+    },
+    "proof": {
+      "items": [
+        "The Main Line's premier upscale consignment marketplace",
+        "A large influx of items daily",
+        "Reasonable return policy",
+        "Mon to Sat 10 to 6, Sun 11 to 5"
+      ]
+    },
+    "gallery": { "heading": "The floor changes <mark>every day.</mark>" },
+    "story": {
+      "heading": "Why the Main Line consigns here",
+      "paragraphs": [
+        "Home Furnishing Consignment sits in the Gateway Shopping Center on East Swedesford Road, where a steady stream of Main Line households drop off the furniture they have outgrown and pick up the pieces someone else did.",
+        "The store's own advice is the whole business model: shop early and often. Items arrive daily, prices stay appealing, and the return policy stays reasonable so nobody has to gamble on a sofa."
+      ]
+    },
+    "experience": {
+      "heading": "Shopping and consigning",
+      "items": [
+        "Walk the floor in Wayne seven days a week; the best pieces rarely last the weekend.",
+        "Consigning starts with a call or a visit, then a showroom spot in front of real buyers.",
+        "Buy with confidence: appealing prices and a reasonable return policy on every purchase."
+      ]
+    },
+    "feature": {
+      "heading": "Consign the piece, keep the profit",
+      "text": "A dining table in a garage earns nothing. On the floor at Home Furnishing Consignment it meets the Main Line buyers who are already looking for it.",
+      "cta": { "label": "Why consign?", "href": "http://www.hfconsignment.com/why-consign/" }
+    },
+    "catalog": {
+      "heading": "See it, then <mark>come see it.</mark>",
+      "items": [
+        { "title": "Gallery", "href": "http://www.hfconsignment.com/gallery/" },
+        { "title": "Why consign?", "href": "http://www.hfconsignment.com/why-consign/" },
+        { "title": "Location and contact", "href": "http://www.hfconsignment.com/contact/" }
+      ]
+    },
+    "contact": { "heading": "Gateway Shopping Center, <mark>Wayne.</mark>" },
+    "closing": { "heading": "Shop early and often", "kicker": "Wayne, on the Main Line" },
+    "links": [
+      { "label": "Gallery", "href": "http://www.hfconsignment.com/gallery/" },
+      { "label": "Contact", "href": "http://www.hfconsignment.com/contact/" }
+    ],
+    "imageStyle": "Muted brass, linen, and walnut tones, editorial interiors photography inside a bright upscale consignment showroom on the Main Line.",
+    "images": [
+      "a curated consignment showroom with a tufted velvet sofa, brass lamp, and a gilt mirror, soft daylight",
+      "a walnut mid-century sideboard with a ceramic vase and stacked art books",
+      "a mahogany dining table set with candlesticks under a crystal chandelier in a showroom vignette",
+      "an antique writing desk beside a leather armchair and a floor lamp",
+      "a wall of framed oil paintings and gilded mirrors leaning in a gallery row",
+      "a pair of porcelain ginger jar lamps on a marble-top console",
+      "a wingback chair upholstered in linen beside a stack of vintage suitcases",
+      "a bedroom vignette with a four-poster bed, quilt, and matching nightstands",
+      "a storefront in a suburban shopping center with large display windows and a wreath on the door",
+      "a close-up of dovetail joinery on a cherry drawer, warm light",
+      "a collection of crystal decanters and silver trays on a glass shelf",
+      "a Persian rug rolled beside a carved oak bench in a showroom aisle",
+      "a delivery hand truck and moving blankets at a loading door with a sofa wrapped for pickup"
+    ]
+  },
+  {
+    "slug": "johnnys-pizza",
+    "name": "Johnny's Pizza & Pasta Ristorante Italiano",
+    "city": "Spring Mount",
+    "category": "BYO Italian restaurant and pizzeria",
+    "vertical": "Restaurants & Food",
+    "attitude": "warm",
+    "url": "http://johnnysitaliano.com/",
+    "phone": "(610) 287-4771",
+    "address": "5 Main Street, Spring Mount, PA 19473",
+    "hours": "Tue to Thu 11:30 am to 9:30 pm. Fri and Sat 11 am to 10 pm. Closed Mon. Sunday hours on the official site.",
+    "description": "Johnny's Pizza & Pasta Ristorante Italiano in Spring Mount serves fine Italian cuisine, BYO comfort at reasonable family pricing: pizza, stromboli, grinders, and pasta, seafood, steak, and veal cooked one dish at a time.",
+    "tagline": "Fine Italian cuisine, BYO comfort, reasonable family pricing",
+    "marquee": ["It's all about the food and service", "BYO", "Regular Stromboli", "Chef's Recommendations", "Take-out specials", "Delivery zone", "Party trays"],
+    "tokens": { "paper": "#F6EFE3", "ink": "#2E1A10", "accent": "#A62F1E", "accent2": "#E3B95E", "panel": "#E9D9C3", "deep": "#2E1A10", "border": "3px", "radius": "12px" },
+    "fonts": { "display": "Alfa Slab One", "text": "Karla", "displayFallback": "Georgia,serif" },
+    "primary": { "label": "Call 610.287.4771", "href": "tel:6102874771" },
+    "nav": [
+      { "label": "Menu", "href": "#offerings" },
+      { "label": "Kitchen", "href": "#gallery" },
+      { "label": "Hours", "href": "#visit" }
+    ],
+    "hero": {
+      "eyebrow": "Spring Mount, PA | Ristorante Italiano",
+      "headline": "It's all about the food and service at Johnny's BYO",
+      "sub": "Fine Italian cuisine, BYO comfort at reasonable family pricing. Yes, Johnny's sells a lot of pizza, stromboli, and grinders, but it is truly a Ristorante Italiano, with every dish prepared one at a time.",
+      "ctaSecondary": { "label": "See the menu", "href": "http://johnnysitaliano.com/jonnys-menu/" },
+      "glassFloat": { "title": "Bring your own", "sub": "5 Main Street, Spring Mount" }
+    },
+    "offerings": {
+      "heading": "Pizza on one page, <mark>ristorante on the next.</mark>",
+      "items": [
+        "Pizza, the Regular Stromboli, calzones, grinders, hoagies, and cheesesteaks",
+        "The finest pasta, seafood, and choicest cuts of steak and veal available",
+        "Chef's Recommendations and Chefs Specials that change with the kitchen",
+        "Home dining, delivery inside the delivery zone, take-out, and special arrangements"
+      ]
+    },
+    "proof": {
+      "items": [
+        "BYO, with reasonable family pricing",
+        "Dishes carefully prepared one at a time",
+        "If your favorite dish is not on the menu, just ask",
+        "Tue to Thu 11:30 to 9:30, Fri and Sat 11 to 10"
+      ]
+    },
+    "gallery": { "heading": "From the oven and the <mark>saute pan.</mark>" },
+    "story": {
+      "heading": "Truly a Ristorante Italiano",
+      "paragraphs": [
+        "Johnny's takes great pride in the fact that it only serves the finest pasta, seafood, and choicest cuts of steak and veal available. Dishes are carefully prepared one at a time to assure quality, which is a promise most pizzerias stopped making.",
+        "The kitchen is flexible on purpose. If your favorite dish is not on the menu, just ask, and they will accommodate whenever possible. Then bring a bottle, because the comfort is BYO."
+      ]
+    },
+    "experience": {
+      "heading": "How dinner happens here",
+      "items": [
+        "Call 610.287.4771 for home dining, delivery, take-out, or special arrangements.",
+        "Sit down on Main Street with your own wine, or check the delivery zone map before you order in.",
+        "Join the newsletter for exclusive party tray promotions, coupons, and specials, including buy two and get the third half off."
+      ]
+    },
+    "feature": {
+      "heading": "The Regular Stromboli",
+      "text": "The stromboli is an Italian-American creation with its roots in the wonderful world of pizzacraft. Johnny's version is the one Spring Mount orders by name.",
+      "cta": { "label": "About the Regular", "href": "http://johnnysitaliano.com/johnnys-italiano/regular/" }
+    },
+    "spotlight": {
+      "heading": "Shrimp and scallops in lobster cream",
+      "text": "Chef's Recommendations start with shrimp and scallops sauteed in lobster cream, and the Johnny's Salad of spring mix greens with goat cheese and red onion sits beside it.",
+      "cta": { "label": "Chef's Recommendations", "href": "http://johnnysitaliano.com/BYO-Pizza-Pasta/chefs-recommendations/" }
+    },
+    "catalog": {
+      "heading": "Menu, specials, <mark>delivery zone.</mark>",
+      "items": [
+        { "title": "Johnny's menu", "href": "http://johnnysitaliano.com/jonnys-menu/" },
+        { "title": "Take-out specials", "href": "http://johnnysitaliano.com/BYO-Pizza-Pasta/take-out-specials/" },
+        { "title": "Delivery zone", "href": "http://johnnysitaliano.com/hours-directions/delivery-zone/" }
+      ]
+    },
+    "contact": { "heading": "Main Street, <mark>Spring Mount.</mark>" },
+    "closing": { "heading": "Fine Italian cuisine, BYO comfort at reasonable family pricing", "kicker": "Spring Mount, Montgomery County" },
+    "links": [
+      { "label": "Mobile coupons", "href": "http://johnnysitaliano.com/all-specials/mobile-coupons-online/" },
+      { "label": "BYOB", "href": "http://johnnysitaliano.com/byob/" },
+      { "label": "Hours and directions", "href": "http://johnnysitaliano.com/hours-directions/" }
+    ],
+    "imageStyle": "Rustic Italian-American warmth, tomato red and crust gold, checkered cloth, brick oven glow in a small-town Pennsylvania restaurant.",
+    "images": [
+      "a wood-fired pizza with blistered crust and fresh basil on a rustic wooden board",
+      "a sliced stromboli showing layers of ham, salami, and melted cheese on parchment",
+      "shrimp and scallops in a lobster cream sauce over fettuccine in a white bowl",
+      "a spring mix salad with goat cheese, red onion, and balsamic in a ceramic bowl",
+      "a veal cutlet with lemon and capers plated beside roasted potatoes",
+      "an overstuffed Italian hoagie on a seeded roll with a pickle spear",
+      "a small-town Italian dining room with red-checked tablecloths and a bottle of wine brought by guests",
+      "a chef's hands stretching pizza dough in a flour-dusted kitchen, face out of frame",
+      "a brick pizza oven glowing orange with a wooden peel resting against it",
+      "a take-out counter with stacked pizza boxes and a paper bag of garlic knots",
+      "a family sharing a large pizza and pasta at a wooden table, faces turned away",
+      "a delivery car parked on a quiet Main Street at dusk with pizza boxes on the passenger seat",
+      "a cannoli and an espresso on a saucer at the end of a meal"
+    ]
+  }
+]

@@ -1,0 +1,237 @@
+{
+  "slug": "home-furnishings-consignment",
+  "name": "Home Furnishing Consignment",
+  "city": "Wayne",
+  "category": "Upscale furniture consignment",
+  "vertical": "Retail",
+  "attitude": "editorial",
+  "url": "http://www.hfconsignment.com/",
+  "phone": "(610) 964-1903",
+  "address": "Gateway Shopping Center, 139 E Swedesford Rd, Wayne, PA 19087",
+  "hours": "Mon to Sat 10 am to 6 pm. Sun 11 am to 5 pm.",
+  "description": "Home Furnishing Consignment is the first choice for furniture consignment on the Main Line: new or used furniture, one-of-a-kind collectibles, and eclectic accents in the Gateway Shopping Center in Wayne.",
+  "tagline": "The first choice for furniture consignment on the Main Line",
+  "noindex": true,
+  "imageDisclosure": true,
+  "schemaType": "LocalBusiness",
+  "marquee": [
+    "Shop early and often",
+    "New arrivals daily",
+    "One-of-a-kind collectibles",
+    "Why consign?"
+  ],
+  "tokens": {
+    "paper": "#F8F4EC",
+    "ink": "#2A2620",
+    "accent": "#8A6D3B",
+    "accent2": "#BFA97D",
+    "panel": "#E6DCC8",
+    "deep": "#2A2620",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "2px"
+  },
+  "fonts": {
+    "display": "Cormorant Garamond",
+    "text": "Jost",
+    "displayFallback": "Georgia,serif"
+  },
+  "logo": false,
+  "nav": [
+    {
+      "label": "Shop",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Consign",
+      "href": "#visit"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Wayne, PA | Gateway Shopping Center",
+    "headline": "The first choice for furniture consignment on the Main Line",
+    "sub": "New or used furniture, one-of-a-kind collectibles, and eclectic accents, with a large influx of items daily. Shop early and often.",
+    "ctaPrimary": {
+      "label": "Plan a visit",
+      "href": "#visit"
+    },
+    "ctaSecondary": {
+      "label": "Why consign?",
+      "href": "http://www.hfconsignment.com/why-consign/"
+    },
+    "glassFloat": {
+      "title": "Open 7 days",
+      "sub": "139 E Swedesford Rd, Wayne"
+    },
+    "marquee": [
+      "Shop early and often",
+      "New arrivals daily",
+      "One-of-a-kind collectibles",
+      "Why consign?"
+    ]
+  },
+  "offerings": {
+    "heading": "What walks in the <mark>door.</mark>",
+    "items": [
+      "Sofas, dining sets, bedroom furniture, and case goods",
+      "One-of-a-kind collectibles, art, mirrors, and lamps",
+      "Consignment for sellers who want a showroom, not a listing"
+    ]
+  },
+  "proof": {
+    "items": [
+      "The Main Line's premier upscale consignment marketplace",
+      "A large influx of items daily",
+      "Reasonable return policy",
+      "Mon to Sat 10 to 6, Sun 11 to 5"
+    ]
+  },
+  "gallery": {
+    "heading": "The floor changes <mark>every day.</mark>",
+    "imageIndexes": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "story": {
+    "heading": "Why the Main Line consigns here",
+    "paragraphs": [
+      "Home Furnishing Consignment sits in the Gateway Shopping Center on East Swedesford Road, where Main Line households drop off the furniture they have outgrown.",
+      "The store's own advice is the business model: shop early and often. Items arrive daily and the return policy stays reasonable."
+    ],
+    "imageIndex": 8
+  },
+  "experience": {
+    "heading": "Shopping and consigning",
+    "items": [
+      "Walk the floor in Wayne seven days a week.",
+      "Consigning starts with a call, then a showroom spot in front of real buyers.",
+      "Appealing prices and a reasonable return policy on every purchase."
+    ]
+  },
+  "feature": {
+    "heading": "Consign the piece, keep the profit",
+    "text": "A dining table in a garage earns nothing. On the floor in Wayne it meets the Main Line buyers already looking for it.",
+    "cta": {
+      "label": "Why consign?",
+      "href": "http://www.hfconsignment.com/why-consign/"
+    },
+    "imageIndex": 9
+  },
+  "catalog": {
+    "heading": "See it, then <mark>come see it.</mark>",
+    "items": [
+      {
+        "title": "Gallery",
+        "href": "http://www.hfconsignment.com/gallery/",
+        "imageIndex": 10
+      },
+      {
+        "title": "Why consign?",
+        "href": "http://www.hfconsignment.com/why-consign/",
+        "imageIndex": 11
+      },
+      {
+        "title": "Location and contact",
+        "href": "http://www.hfconsignment.com/contact/",
+        "imageIndex": 12
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Gateway Shopping Center, <mark>Wayne.</mark>"
+  },
+  "closing": {
+    "heading": "Shop early and often",
+    "kicker": "Wayne, on the Main Line",
+    "cta": {
+      "label": "Plan a visit",
+      "href": "#visit"
+    }
+  },
+  "links": [
+    {
+      "label": "Gallery",
+      "href": "http://www.hfconsignment.com/gallery/"
+    },
+    {
+      "label": "Contact",
+      "href": "http://www.hfconsignment.com/contact/"
+    }
+  ],
+  "sections": [
+    "hero",
+    "offerings",
+    "proof",
+    "gallery",
+    "story",
+    "experience",
+    "feature",
+    "spotlight",
+    "catalog",
+    "contact",
+    "closing"
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Illustrative concept: a curated consignment showroom with a tufted velvet sofa, brass lamp, and a gilt mirror, soft daylight"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Illustrative concept: a walnut mid-century sideboard with a ceramic vase and stacked art books"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Illustrative concept: a mahogany dining table set with candlesticks under a crystal chandelier in a showroom vignette"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Illustrative concept: an antique writing desk beside a leather armchair and a floor lamp"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Illustrative concept: a wall of framed oil paintings and gilded mirrors leaning in a gallery row"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Illustrative concept: a pair of porcelain ginger jar lamps on a marble-top console"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Illustrative concept: a wingback chair upholstered in linen beside a stack of vintage suitcases"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Illustrative concept: a bedroom vignette with a four-poster bed, quilt, and matching nightstands"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Illustrative concept: a storefront in a suburban shopping center with large display windows and a wreath on the door"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Illustrative concept: a close-up of dovetail joinery on a cherry drawer, warm light"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Illustrative concept: a collection of crystal decanters and silver trays on a glass shelf"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Illustrative concept: a Persian rug rolled beside a carved oak bench in a showroom aisle"
+    }
+  ]
+}

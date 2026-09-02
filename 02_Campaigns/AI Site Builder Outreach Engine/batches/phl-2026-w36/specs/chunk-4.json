@@ -1,0 +1,486 @@
+[
+  {
+    "slug": "dreammaker-bath-kitchen",
+    "name": "DreamMaker Bath & Kitchen of Chester County",
+    "city": "Chester Springs",
+    "category": "Kitchen and bath remodeling",
+    "vertical": "Home Services",
+    "attitude": "editorial",
+    "url": "https://www.dreammaker-remodel.com/chester-county/",
+    "phone": "(610) 484-2000",
+    "address": "12 Pottstown Pike, Chester Springs, PA 19425",
+    "hours": "Mon to Fri 9 am to 5 pm.",
+    "description": "DreamMaker Bath & Kitchen of Chester County is a full-service remodeler in Chester Springs, PA, handling design, selections, and installation with its in-house team for kitchens, baths, basements, and more.",
+    "tagline": "Full-service remodeling, design through installation",
+    "marquee": ["Kitchens", "Bathrooms", "Basements", "In-house team", "BBB A+"],
+    "tokens": { "paper": "#F7F4F9", "ink": "#1F1B2B", "accent": "#5C3D82", "accent2": "#C9A75B", "panel": "#DCD3E6", "deep": "#1E1630", "border": "1px", "radius": "10px" },
+    "fonts": { "display": "Playfair Display", "text": "Hind", "displayFallback": "Georgia,serif" },
+    "primary": { "label": "Call (610) 484-2000", "href": "tel:6104842000" },
+    "nav": [
+      { "label": "Remodels", "href": "#offerings" },
+      { "label": "Work", "href": "#gallery" },
+      { "label": "Contact", "href": "#visit" }
+    ],
+    "hero": {
+      "eyebrow": "Chester Springs, PA | Design through installation",
+      "headline": "Remodel the rooms you actually use",
+      "sub": "Full-service kitchen and bath remodeling for Chester County, with design, selections, and every trade handled by DreamMaker's in-house team.",
+      "ctaSecondary": { "label": "Kitchen remodeling", "href": "https://www.dreammaker-remodel.com/chester-county/services/kitchen-remodeling/" },
+      "glassFloat": { "title": "BBB accredited, A+", "sub": "12 Pottstown Pike" }
+    },
+    "offerings": {
+      "heading": "Rooms DreamMaker <mark>rebuilds.</mark>",
+      "items": [
+        "Kitchens, from layout and cabinetry to counters and lighting",
+        "Bathrooms, showers, and accessible baths built for daily use",
+        "Basements, home offices, closets, laundry rooms, and finish carpentry"
+      ]
+    },
+    "proof": {
+      "items": [
+        "Design, selections, and installation in-house",
+        "BBB accredited with an A+ rating",
+        "Independently, locally owned",
+        "Cabinetry from several vendors"
+      ]
+    },
+    "gallery": { "heading": "Finished rooms, <mark>Chester County.</mark>" },
+    "story": {
+      "heading": "One team from concept to completion",
+      "paragraphs": [
+        "DreamMaker of Chester County is an independently, locally owned remodeler that keeps design, product selections, and installation with its own team, so nothing gets lost between a designer and a contractor.",
+        "Being part of a national organization adds annual training on the latest products and techniques. The showroom on Pottstown Pike is where the plan starts."
+      ]
+    },
+    "experience": {
+      "heading": "How a remodel runs",
+      "items": [
+        "Meet at the Chester Springs showroom and walk the cabinet and surface options.",
+        "Get a design and a fixed scope before demolition starts.",
+        "One in-house crew finishes the room, then walks it with you."
+      ]
+    },
+    "feature": {
+      "heading": "Bathrooms built to be lived in",
+      "text": "Walk-in showers, better storage, and lighting that works at 6 am, designed for how the family uses the room.",
+      "cta": { "label": "Bathroom remodeling", "href": "https://dreammaker-remodel.com/chester-county/services/bathroom-remodeling/" }
+    },
+    "catalog": {
+      "heading": "See the <mark>services.</mark>",
+      "items": [
+        { "title": "Kitchen remodeling", "href": "https://www.dreammaker-remodel.com/chester-county/services/kitchen-remodeling/" },
+        { "title": "Bathroom remodeling", "href": "https://dreammaker-remodel.com/chester-county/services/bathroom-remodeling/" },
+        { "title": "Commercial remodeling", "href": "https://www.dreammaker-remodel.com/chester-county/services/commercial-remodeling/" }
+      ]
+    },
+    "contact": { "heading": "Pottstown Pike, <mark>Chester Springs.</mark>" },
+    "closing": { "heading": "Full-service remodeling for Chester County", "kicker": "Chester Springs, PA" },
+    "links": [
+      { "label": "About", "href": "https://www.dreammaker-remodel.com/chester-county/about/" },
+      { "label": "Facebook", "href": "https://www.facebook.com/DMBKChesterCounty/" }
+    ],
+    "imageStyle": "Plum, brass, and warm white palette, high-end residential remodel photography in Chester County, Pennsylvania.",
+    "images": [
+      "a remodeled kitchen with white shaker cabinets, a plum-toned island, brass pulls, and quartz counters",
+      "a walk-in shower with large-format tile, a glass panel, and a brass rain head",
+      "a finished basement with a built-in bar, warm wood floors, and recessed lighting",
+      "a designer's hands laying cabinet door samples and stone chips on a table, face out of frame",
+      "a laundry room with stacked machines, a folding counter, and open shelves",
+      "a home office nook with built-in cabinetry and a window seat",
+      "a bathroom vanity with a marble top, brass faucet, and a round mirror",
+      "a kitchen mid-remodel with new cabinets installed and a drop cloth on the floor",
+      "a remodeling showroom with cabinet displays and countertop samples under soft light",
+      "a farmhouse kitchen with a range hood, subway tile, and a wide window over the sink",
+      "a walk-in closet with custom shelving and a bench",
+      "a stone colonial house in Chester County with a fresh porch, dusk light",
+      "a set of brass cabinet pulls and a level on a plywood workbench"
+    ]
+  },
+  {
+    "slug": "easy-auto-tag-insurance",
+    "name": "Easy Auto Tag & Insurance",
+    "city": "Philadelphia",
+    "category": "Auto tags, title, insurance, and notary",
+    "vertical": "Professional Services",
+    "attitude": "brutal",
+    "url": "http://easyautotag.com/",
+    "phone": "(267) 239-0692",
+    "address": "538 E Girard Ave, Philadelphia, PA 19125",
+    "hours": "Mon to Fri 10 am to 5 pm. Sat 11 am to 4 pm.",
+    "description": "Easy Auto Tag & Insurance on East Girard Avenue in Philadelphia handles tag and title service, registration renewals, car insurance, notary work, and instant registrations for ATVs, boats, and motorcycles.",
+    "tagline": "Tags, title, insurance, notary",
+    "marquee": ["Tags and title", "Registration renewal", "Car insurance", "Notary", "Open Saturdays"],
+    "tokens": { "paper": "#F2F5FA", "ink": "#121A28", "accent": "#1F4FA3", "accent2": "#F2A900", "panel": "#D6DEEA", "deep": "#0F1F3D", "border": "5px", "radius": "0px" },
+    "fonts": { "display": "Archivo Black", "text": "Archivo", "displayFallback": "Impact,sans-serif" },
+    "primary": { "label": "Call (267) 239-0692", "href": "tel:2672390692" },
+    "nav": [
+      { "label": "Services", "href": "#offerings" },
+      { "label": "Desk", "href": "#gallery" },
+      { "label": "Visit", "href": "#visit" }
+    ],
+    "hero": {
+      "eyebrow": "Fishtown, Philadelphia | Walk-in desk",
+      "headline": "Tags, insurance, a desk that is open",
+      "sub": "Tag and title work, registration renewals, car insurance, and notary service at 538 E Girard Ave, six days a week.",
+      "ctaSecondary": { "label": "Hours and directions", "href": "#visit" },
+      "glassFloat": { "title": "Open Saturdays", "sub": "538 E Girard Ave" }
+    },
+    "offerings": {
+      "heading": "Done at the <mark>counter.</mark>",
+      "items": [
+        "Tag and title service, transfers, and vehicle registration renewal",
+        "Car insurance quoted and bound while you wait",
+        "Notary public, driver's license renewal, and instant registrations for ATVs, boats, and motorcycles"
+      ]
+    },
+    "proof": {
+      "items": [
+        "538 E Girard Ave, Philadelphia 19125",
+        "Mon to Fri 10 to 5, Sat 11 to 4",
+        "Serves all of Pennsylvania",
+        "Walk in, no appointment"
+      ]
+    },
+    "gallery": { "heading": "Girard Avenue, <mark>paperwork solved.</mark>" },
+    "story": {
+      "heading": "The desk that finishes the errand",
+      "paragraphs": [
+        "Easy Auto Tag & Insurance sits on East Girard Avenue in Fishtown, where a title transfer, a plate, and an insurance card can all get done in one stop instead of three.",
+        "Saturday hours exist because most people cannot take a weekday off for a registration. Bring the documents, leave with the tag."
+      ]
+    },
+    "experience": {
+      "heading": "What to bring",
+      "items": [
+        "Title or current registration, ID, and proof of insurance.",
+        "For a new policy, the vehicle details; quotes happen at the desk.",
+        "Notary work for auto and personal documents, same visit."
+      ]
+    },
+    "feature": {
+      "heading": "Instant registrations",
+      "text": "ATVs, boats, and motorcycles get registered on the spot, along with cars and trucks, for anyone in Pennsylvania.",
+      "cta": { "label": "Call the desk", "href": "tel:2672390692" }
+    },
+    "catalog": {
+      "heading": "Check, then <mark>come in.</mark>",
+      "items": [
+        { "title": "Official site", "href": "http://easyautotag.com/" },
+        { "title": "Reviews on Yelp", "href": "https://www.yelp.com/biz/easy-auto-tag-and-insurance-philadelphia" },
+        { "title": "Directions", "href": "https://www.google.com/maps/search/?api=1&query=538%20E%20Girard%20Ave%20Philadelphia%20PA%2019125" }
+      ]
+    },
+    "contact": { "heading": "East Girard, <mark>six days.</mark>" },
+    "closing": { "heading": "Tags, title, insurance, and notary on Girard Avenue", "kicker": "Fishtown, Philadelphia" },
+    "links": [
+      { "label": "Official site", "href": "http://easyautotag.com/" }
+    ],
+    "imageStyle": "PennDOT blue, plate yellow, and concrete gray, bold street-level photography in Fishtown, Philadelphia.",
+    "images": [
+      "a Philadelphia rowhouse commercial block with a tag and insurance storefront, blue awning, morning light",
+      "a stack of vehicle title folders and a notary stamp on a counter, no readable text",
+      "a fresh license plate and a registration sticker on a wooden desk",
+      "a customer's hands signing a form at a service counter, face out of frame",
+      "a row of motorcycles parked on a city street beside a brick wall",
+      "a boat on a trailer in a driveway, ready to be registered",
+      "an ATV in a garage with a helmet on the seat",
+      "a service desk with a card reader and a bell, blue and yellow accents",
+      "a Girard Avenue streetscape with the elevated train line overhead",
+      "car keys, an insurance card holder, and a pen on a blue counter",
+      "a sedan parked at a curb with a temporary paper tag in the rear window, no readable text",
+      "a waiting bench beneath a window with afternoon light and a potted plant",
+      "a Philadelphia corner at dusk with rowhouses and a lit storefront"
+    ]
+  },
+  {
+    "slug": "eisenberg-rothweiler",
+    "name": "Eisenberg, Rothweiler, Winkler, Eisenberg & Jeck, P.C.",
+    "city": "Philadelphia",
+    "category": "Personal injury and medical malpractice law firm",
+    "vertical": "Legal & Law Firms",
+    "attitude": "editorial",
+    "url": "https://www.erlegal.com/",
+    "phone": "(215) 546-6636",
+    "address": "1634 Spruce Street, Philadelphia, PA 19103",
+    "hours": "",
+    "description": "Eisenberg, Rothweiler, Winkler, Eisenberg & Jeck is a Philadelphia trial firm for catastrophic injury, medical malpractice, and products liability cases, with more than $4 billion recovered through verdicts and settlements.",
+    "tagline": "Catastrophic injury and medical malpractice trial lawyers",
+    "marquee": ["Catastrophic injury", "Medical malpractice", "Products liability", "Premises liability", "Over $4 billion recovered"],
+    "tokens": { "paper": "#F4F1EA", "ink": "#14181D", "accent": "#1C2B4A", "accent2": "#B08D57", "panel": "#D9D6CF", "deep": "#0F141C", "border": "1px", "radius": "0px" },
+    "fonts": { "display": "EB Garamond", "text": "Libre Franklin", "displayFallback": "Georgia,serif" },
+    "primary": { "label": "Call (215) 546-6636", "href": "tel:2155466636" },
+    "nav": [
+      { "label": "Practice", "href": "#offerings" },
+      { "label": "Firm", "href": "#gallery" },
+      { "label": "Contact", "href": "#visit" }
+    ],
+    "hero": {
+      "eyebrow": "Philadelphia, PA | Trial lawyers",
+      "headline": "Philadelphia personal injury and malpractice trial lawyers",
+      "sub": "Aggressive representation for people who have suffered serious injury or death through another party's negligence, from a firm with more than $4 billion recovered.",
+      "ctaSecondary": { "label": "Practice areas", "href": "#offerings" },
+      "glassFloat": { "title": "Over $4 billion recovered", "sub": "Verdicts and settlements" }
+    },
+    "offerings": {
+      "heading": "Cases the firm <mark>tries.</mark>",
+      "items": [
+        "Catastrophic injuries and medical malpractice",
+        "Automotive products liability and premises liability",
+        "Construction accidents and pharmaceutical litigation"
+      ]
+    },
+    "proof": {
+      "items": [
+        "More than $4 billion recovered",
+        "300 years of combined experience",
+        "Offices in Philadelphia and Cherry Hill",
+        "1634 Spruce Street, Philadelphia"
+      ]
+    },
+    "gallery": { "heading": "Spruce Street, <mark>Center City.</mark>" },
+    "story": {
+      "heading": "Built to take on the largest defendants",
+      "paragraphs": [
+        "The firm was founded to provide aggressive legal representation to those seriously injured by another party's negligence or wrongdoing, and its trial attorneys represent clients against the largest corporations in the world.",
+        "The record is public: more than $4 billion recovered through verdicts and settlements in complex catastrophic injury cases."
+      ]
+    },
+    "experience": {
+      "heading": "Working with the firm",
+      "items": [
+        "A consultation about what happened and what the case would need.",
+        "Investigation and experts assembled by attorneys who try cases, not just settle them.",
+        "Regular contact from the team handling the matter."
+      ]
+    },
+    "feature": {
+      "heading": "Medical malpractice, taken to verdict",
+      "text": "Birth injuries, surgical errors, and missed diagnoses require attorneys who understand medicine and are prepared for trial.",
+      "cta": { "label": "Speak with the firm", "href": "tel:2155466636" }
+    },
+    "catalog": {
+      "heading": "Verify the <mark>firm.</mark>",
+      "items": [
+        { "title": "Official site", "href": "https://www.erlegal.com/" },
+        { "title": "Super Lawyers profile", "href": "https://profiles.superlawyers.com/pennsylvania/philadelphia/lawfirm/eisenberg-rothweiler-winkler-eisenberg-and-jeck-pc/fa951f62-7aa7-4c2e-8ec3-59c9a1e03193.html" },
+        { "title": "U.S. News profile", "href": "https://law.usnews.com/law-firms/eisenberg-rothweiler-winkler-eisenberg-&-jeck-pc-160527" }
+      ]
+    },
+    "contact": { "heading": "Spruce Street, <mark>Philadelphia.</mark>" },
+    "closing": { "heading": "Serious injury cases, tried by trial lawyers", "kicker": "Philadelphia and Cherry Hill" },
+    "links": [
+      { "label": "Official site", "href": "https://www.erlegal.com/" },
+      { "label": "Martindale listing", "href": "https://www.martindale.com/organization/eisenberg-rothweiler-winkler-eisenberg-jeck-p-c-3014365/philadelphia-pennsylvania-5012552-f/" }
+    ],
+    "imageStyle": "Deep navy, bronze, and parchment palette, formal editorial photography of a Center City Philadelphia law office and courthouse surroundings.",
+    "images": [
+      "a Center City Philadelphia brownstone law office facade with a bronze plaque blurred, tree-lined street",
+      "a mahogany conference table with leather chairs and a window onto rowhouses",
+      "a wall of law books with bronze lettering blurred, warm lamp light",
+      "an attorney's hands reviewing a document with a fountain pen, face out of frame",
+      "the columns of a stone courthouse in Philadelphia at dawn",
+      "a leather briefcase and a legal pad on a walnut desk",
+      "a quiet office library corner with a green banker's lamp",
+      "a hospital corridor with soft light, empty, seen from a distance",
+      "an intersection in Philadelphia with traffic light trails at dusk",
+      "a construction site with a crane and safety fencing under gray sky",
+      "a stack of medical records folders on a desk, no readable text",
+      "a formal reception area with navy walls, brass sconces, and an orchid",
+      "Spruce Street rowhouses with wrought iron railings in autumn light"
+    ]
+  },
+  {
+    "slug": "fillman-and-sons-floors",
+    "name": "Fillman & Sons Floors and More",
+    "city": "Emmaus",
+    "category": "Flooring, remodeling, and decorating",
+    "vertical": "Home Services",
+    "attitude": "industrial",
+    "url": "http://www.fillmanandsons.com/",
+    "phone": "(610) 928-1515",
+    "address": "4030 Chestnut St, Unit 3, Emmaus, PA 18049",
+    "hours": "Mon to Fri 10 am to 4 pm. Closed Sat and Sun.",
+    "description": "Fillman & Sons Floors and More is a family-owned flooring, remodeling, and decorating retailer in Emmaus, PA, with free estimates on carpet, hardwood, laminate, vinyl, tile, refinishing, countertops, window treatments, and custom bathrooms.",
+    "tagline": "Family-owned flooring, remodeling, and decorating",
+    "marquee": ["Carpet", "Hardwood", "Laminate and vinyl", "Refinishing", "Custom showers", "Free estimates"],
+    "tokens": { "paper": "#F5EFE6", "ink": "#26191A", "accent": "#7A1F2B", "accent2": "#B7A588", "panel": "#DCCFC2", "deep": "#2A1416", "border": "3px", "radius": "2px" },
+    "fonts": { "display": "Roboto Slab", "text": "Roboto", "displayFallback": "Georgia,serif" },
+    "primary": { "label": "Call (610) 928-1515", "href": "tel:6109281515" },
+    "nav": [
+      { "label": "Floors", "href": "#offerings" },
+      { "label": "Work", "href": "#gallery" },
+      { "label": "Estimate", "href": "#visit" }
+    ],
+    "hero": {
+      "eyebrow": "Emmaus, PA | Family owned",
+      "headline": "Floors, and the work around them",
+      "sub": "A family-owned flooring, remodeling, and decorating retailer in Emmaus, with a complete line of floors and free estimates.",
+      "ctaSecondary": { "label": "Free estimate", "href": "http://www.fillmanandsons.com/contact_1.html" },
+      "glassFloat": { "title": "Free estimates", "sub": "4030 Chestnut St, Emmaus" }
+    },
+    "offerings": {
+      "heading": "The complete <mark>line.</mark>",
+      "items": [
+        "Carpet, ceramic, hardwood, laminate, and vinyl flooring",
+        "Hardwood refinishing that brings old floors back",
+        "Countertops, window treatments, painting and paper hanging, and full custom showers and bathrooms"
+      ]
+    },
+    "proof": {
+      "items": [
+        "Family-owned in Emmaus",
+        "Free estimates",
+        "Authorized Mirage hardwood dealer",
+        "Mon to Fri 10 to 4"
+      ]
+    },
+    "gallery": { "heading": "Wood, tile, and <mark>finished rooms.</mark>" },
+    "story": {
+      "heading": "Floors and More means more",
+      "paragraphs": [
+        "Fillman & Sons started with floors and grew into the rooms around them: countertops, window treatments, painting, paper hanging, and full bathroom remodels, all from the shop on Chestnut Street in Emmaus.",
+        "It is still a family business, which is why the estimate is free and the person who quotes the job is the person who answers the phone."
+      ]
+    },
+    "experience": {
+      "heading": "How a floor gets done",
+      "items": [
+        "Call for a free estimate, then pick samples at the shop or at home.",
+        "Installation scheduled around the household, furniture moved and replaced.",
+        "Refinishing and repairs years later, from the same family."
+      ]
+    },
+    "feature": {
+      "heading": "Full custom showers and bathrooms",
+      "text": "Tile, glass, vanities, and floors come from one shop, so the bathroom is designed and installed as one job.",
+      "cta": { "label": "Ask about a bathroom", "href": "tel:6109281515" }
+    },
+    "catalog": {
+      "heading": "Samples and <mark>proof.</mark>",
+      "items": [
+        { "title": "Contact the shop", "href": "http://www.fillmanandsons.com/contact_1.html" },
+        { "title": "Mirage Floors dealer page", "href": "https://www.miragefloors.com/pro/en-us/fillman-sons-floors-and-more-emmaus-pa-RC0028460/" },
+        { "title": "Facebook", "href": "https://www.facebook.com/FillmanFloors/" }
+      ]
+    },
+    "contact": { "heading": "Chestnut Street, <mark>Emmaus.</mark>" },
+    "closing": { "heading": "Family-owned floors, remodeling, and decorating", "kicker": "Emmaus, Lehigh Valley" },
+    "links": [
+      { "label": "Official site", "href": "http://www.fillmanandsons.com/" },
+      { "label": "Facebook", "href": "https://www.facebook.com/FillmanFloors/" }
+    ],
+    "imageStyle": "Burgundy, oak, and tan palette, honest trade photography of flooring and bathroom work in a Lehigh Valley home.",
+    "images": [
+      "a freshly installed wide-plank oak hardwood floor in a sunlit living room with a burgundy rug",
+      "an installer's hands nailing a hardwood plank with a flooring nailer, face out of frame",
+      "a flooring showroom wall of carpet samples and wood plank displays",
+      "a herringbone tile bathroom floor with a walk-in shower and glass door",
+      "a hardwood floor mid-refinish, half sanded raw and half sealed glossy",
+      "a kitchen with luxury vinyl plank flooring and a quartz countertop",
+      "a roll of carpet and padding on a van floor with a knee kicker tool",
+      "a bathroom vanity with a new countertop, faucet, and window treatment",
+      "a small family shop storefront on a Pennsylvania borough street",
+      "a close-up of laminate planks clicking together on underlayment",
+      "a painter's tray and roller beside a freshly papered accent wall",
+      "a stack of ceramic tile boxes and a wet saw in a garage workshop",
+      "a farmhouse in the Lehigh Valley with a wraparound porch at golden hour"
+    ]
+  },
+  {
+    "slug": "glen-eagle-pediatric-dentistry",
+    "name": "Glen Eagle Pediatric Dentistry",
+    "city": "Glen Mills",
+    "category": "Pediatric dentist",
+    "vertical": "Medical & Healthcare",
+    "attitude": "neon",
+    "url": "https://gleneaglepediatricdentistry.com/",
+    "phone": "(484) 639-9066",
+    "address": "589 Wilmington West Chester Pike, Glen Mills, PA 19342",
+    "hours": "Mon to Fri 8 am to 5 pm.",
+    "description": "Glen Eagle Pediatric Dentistry in Glen Mills, PA is a dental home for children led by Dr. Marc Virtue, a Board Certified Pediatric Dentist, in the Glen Eagle Square Shopping Center.",
+    "tagline": "A dental home for your child",
+    "marquee": ["We know kids", "Board certified", "First visit", "Prevention first", "Glen Eagle Square"],
+    "tokens": { "paper": "#F4F8FC", "ink": "#14273A", "accent": "#2A7DB8", "accent2": "#FF8FB1", "panel": "#D3E4F0", "deep": "#143A5C", "border": "2px", "radius": "24px" },
+    "fonts": { "display": "Baloo 2", "text": "Nunito", "displayFallback": "Arial,sans-serif" },
+    "primary": { "label": "Request an appointment", "href": "https://gleneaglepediatricdentistry.com/request-an-appointment/" },
+    "nav": [
+      { "label": "Services", "href": "#offerings" },
+      { "label": "Office", "href": "#gallery" },
+      { "label": "Visit", "href": "#visit" }
+    ],
+    "hero": {
+      "eyebrow": "Glen Mills, PA | Pediatric dentist",
+      "headline": "We know kids",
+      "sub": "A dental home for your child, where oral health care is comprehensive, accessible, and family-centered, led by Dr. Marc Virtue, Board Certified Pediatric Dentist.",
+      "ctaSecondary": { "label": "Call (484) 639-9066", "href": "tel:4846399066" },
+      "glassFloat": { "title": "Mon to Fri 8 to 5", "sub": "Glen Eagle Square Shopping Center" }
+    },
+    "offerings": {
+      "heading": "What a dental home <mark>includes.</mark>",
+      "items": [
+        "Preventive visits, cleanings, and sealants that keep small problems small",
+        "Education for families on great oral hygiene and a healthy diet at every visit",
+        "Care for infants, kids, and teens, including a first visit built to be easy"
+      ]
+    },
+    "proof": {
+      "items": [
+        "Dr. Marc Virtue, Board Certified Pediatric Dentist",
+        "Glen Eagle Square Shopping Center",
+        "Mon to Fri 8 am to 5 pm",
+        "(484) 639-9066"
+      ]
+    },
+    "gallery": { "heading": "Bright rooms, <mark>small chairs.</mark>" },
+    "story": {
+      "heading": "Prevention is the practice",
+      "paragraphs": [
+        "Glen Eagle Pediatric Dentistry focuses on preventing dental problems by educating families about great oral hygiene and a healthy diet, so most visits stay short and calm.",
+        "The office is a dental home in the true sense: one team that knows the child from the first visit through the teenage years."
+      ]
+    },
+    "experience": {
+      "heading": "The first visit",
+      "items": [
+        "Request an appointment online or call; the team explains what to expect.",
+        "A tour of the room and a gentle first exam, at the child's pace.",
+        "A plan for home care that parents can actually follow."
+      ]
+    },
+    "feature": {
+      "heading": "Board certified, kid focused",
+      "text": "Dr. Virtue's training is in pediatric dentistry specifically, which changes how a nervous four-year-old experiences the chair.",
+      "cta": { "label": "Meet us", "href": "https://gleneaglepediatricdentistry.com/meet-us/" }
+    },
+    "catalog": {
+      "heading": "Before you <mark>come in.</mark>",
+      "items": [
+        { "title": "First visit", "href": "https://gleneaglepediatricdentistry.com/first-visit/" },
+        { "title": "Services", "href": "https://gleneaglepediatricdentistry.com/services/" },
+        { "title": "Dental Q&A", "href": "https://gleneaglepediatricdentistry.com/dental-qa/" }
+      ]
+    },
+    "contact": { "heading": "Glen Eagle Square, <mark>Glen Mills.</mark>" },
+    "closing": { "heading": "A dental home for your child", "kicker": "Glen Mills, Delaware County" },
+    "links": [
+      { "label": "Contact us", "href": "https://gleneaglepediatricdentistry.com/contact-us/" },
+      { "label": "Facebook", "href": "https://www.facebook.com/gleneaglepediatricdentistry/" }
+    ],
+    "imageStyle": "Bright sky blue, pink, and white palette, cheerful pediatric dental office photography, playful but clean, no faces.",
+    "images": [
+      "a colorful pediatric dental exam room with a small chair, a ceiling mural of clouds, and a window",
+      "a child's hands holding a toothbrush and a toy dinosaur on a bright counter, face out of frame",
+      "a playroom corner in a dental office with a reading nook and blue beanbags",
+      "a tray of kid-sized dental mirrors and a pink flavored polish cup",
+      "a smiling toy tooth mascot on a reception desk beside a bowl of stickers",
+      "a wall of framed cartoon animal prints in a pastel hallway",
+      "a pediatric dentist's gloved hands showing a model of teeth, face out of frame",
+      "a bright waiting room with a fish tank and low benches",
+      "a shopping center storefront with glass doors and blue trim on a sunny day",
+      "a pair of small sneakers dangling from a dental chair",
+      "a sink station with tiny cups and a step stool",
+      "a balloon and a treasure chest of prizes on a shelf",
+      "a Delaware County suburban road with a shopping center sign blurred at dusk"
+    ]
+  }
+]

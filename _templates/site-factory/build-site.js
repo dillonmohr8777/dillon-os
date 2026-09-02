@@ -260,8 +260,11 @@ const jsonLd = JSON.stringify({
 });
 
 const noindex = brief.noindex !== false ? '<meta name="robots" content="noindex,nofollow">' : '';
+const imageDisclosure = brief.imageDisclosure === true
+  ? 'Illustrative concept imagery plus any photographs harvested from the official site. These visuals do not claim to depict current staff, customers, or completed work.'
+  : (typeof brief.imageDisclosure === 'string' ? brief.imageDisclosure : '');
 const disclosure = brief.noindex !== false
-  ? '<div class="footer-disclosure"><span>Private staging concept</span><p>Noindex preview for review. Details and availability should be reconfirmed on the official website before publication.</p></div>'
+  ? `<div class="footer-disclosure"><span>Private staging concept</span><p>Noindex preview for review. Details and availability should be reconfirmed on the official website before publication.${imageDisclosure ? ' ' + esc(imageDisclosure) : ''} Services, hours, and pricing stay with the business.</p></div>`
   : `<div class="footer-disclosure"><span>${esc(brief.name)}</span><p>\u00a9 ${new Date().getFullYear()} ${esc(brief.name)}. All rights reserved.</p></div>`;
 
 const primaryCta = brief.headerCta || (brief.hero && brief.hero.ctaPrimary);

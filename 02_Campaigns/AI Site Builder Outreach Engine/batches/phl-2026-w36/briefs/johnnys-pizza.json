@@ -1,0 +1,237 @@
+{
+  "slug": "johnnys-pizza",
+  "name": "Johnny's Pizza & Pasta Ristorante Italiano",
+  "city": "Spring Mount",
+  "category": "BYO Italian restaurant and pizzeria",
+  "vertical": "Restaurants & Food",
+  "attitude": "warm",
+  "url": "http://johnnysitaliano.com/",
+  "phone": "(610) 287-4771",
+  "address": "5 Main Street, Spring Mount, PA 19473",
+  "hours": "Tue to Thu 11:30 to 9:30. Fri and Sat 11 to 10. Closed Mon.",
+  "description": "Johnny's Pizza & Pasta Ristorante Italiano in Spring Mount serves fine Italian cuisine, BYO comfort at reasonable family pricing: pizza, stromboli, grinders, and pasta, seafood, steak, and veal cooked one dish at a time.",
+  "tagline": "Fine Italian cuisine, BYO comfort, reasonable family pricing",
+  "noindex": true,
+  "imageDisclosure": true,
+  "schemaType": "LocalBusiness",
+  "marquee": [
+    "It's all about the food and service",
+    "BYO",
+    "Regular Stromboli",
+    "Chef's Recommendations"
+  ],
+  "tokens": {
+    "paper": "#F6EFE3",
+    "ink": "#2E1A10",
+    "accent": "#A62F1E",
+    "accent2": "#E3B95E",
+    "panel": "#E9D9C3",
+    "deep": "#2E1A10",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "3px",
+    "radius": "12px"
+  },
+  "fonts": {
+    "display": "Alfa Slab One",
+    "text": "Karla",
+    "displayFallback": "Georgia,serif"
+  },
+  "logo": false,
+  "nav": [
+    {
+      "label": "Menu",
+      "href": "#offerings"
+    },
+    {
+      "label": "Kitchen",
+      "href": "#gallery"
+    },
+    {
+      "label": "Hours",
+      "href": "#visit"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Spring Mount, PA | Ristorante Italiano",
+    "headline": "It's all about the food and service at Johnny's BYO",
+    "sub": "Fine Italian cuisine, BYO comfort at reasonable family pricing. Pizza and stromboli, yes, but truly a Ristorante Italiano.",
+    "ctaPrimary": {
+      "label": "Call 610.287.4771",
+      "href": "tel:6102874771"
+    },
+    "ctaSecondary": {
+      "label": "See the menu",
+      "href": "http://johnnysitaliano.com/jonnys-menu/"
+    },
+    "glassFloat": {
+      "title": "Bring your own",
+      "sub": "5 Main Street, Spring Mount"
+    },
+    "marquee": [
+      "It's all about the food and service",
+      "BYO",
+      "Regular Stromboli",
+      "Chef's Recommendations"
+    ]
+  },
+  "offerings": {
+    "heading": "Pizza on one page, <mark>ristorante on the next.</mark>",
+    "items": [
+      "Pizza, the Regular Stromboli, calzones, and grinders",
+      "The finest pasta, seafood, and choicest cuts of steak and veal",
+      "Home dining, delivery, and take-out"
+    ]
+  },
+  "proof": {
+    "items": [
+      "BYO, with reasonable family pricing",
+      "Dishes carefully prepared one at a time",
+      "If your favorite dish is not on the menu, just ask",
+      "Tue to Thu 11:30 to 9:30, Fri and Sat 11 to 10"
+    ]
+  },
+  "gallery": {
+    "heading": "From the oven and the <mark>saute pan.</mark>",
+    "imageIndexes": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "story": {
+    "heading": "Truly a Ristorante Italiano",
+    "paragraphs": [
+      "Johnny's takes pride in serving the finest pasta, seafood, and choicest cuts of steak and veal available, with dishes prepared one at a time to assure quality.",
+      "If your favorite dish is not on the menu, just ask. The comfort is BYO."
+    ],
+    "imageIndex": 8
+  },
+  "experience": {
+    "heading": "How dinner happens here",
+    "items": [
+      "Call 610.287.4771 for home dining, delivery, take-out, or special arrangements.",
+      "Sit down on Main Street with your own wine, or check the delivery zone.",
+      "Join the newsletter for party tray promotions and coupons."
+    ]
+  },
+  "feature": {
+    "heading": "The Regular Stromboli",
+    "text": "The stromboli is an Italian-American creation with roots in the world of pizzacraft. Johnny's version is the one Spring Mount orders by name.",
+    "cta": {
+      "label": "About the Regular",
+      "href": "http://johnnysitaliano.com/johnnys-italiano/regular/"
+    },
+    "imageIndex": 9
+  },
+  "catalog": {
+    "heading": "Menu, specials, <mark>delivery zone.</mark>",
+    "items": [
+      {
+        "title": "Johnny's menu",
+        "href": "http://johnnysitaliano.com/jonnys-menu/",
+        "imageIndex": 10
+      },
+      {
+        "title": "Take-out specials",
+        "href": "http://johnnysitaliano.com/BYO-Pizza-Pasta/take-out-specials/",
+        "imageIndex": 11
+      },
+      {
+        "title": "Delivery zone",
+        "href": "http://johnnysitaliano.com/hours-directions/delivery-zone/",
+        "imageIndex": 12
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Main Street, <mark>Spring Mount.</mark>"
+  },
+  "closing": {
+    "heading": "Fine Italian cuisine, BYO comfort at reasonable family pricing",
+    "kicker": "Spring Mount, Montgomery County",
+    "cta": {
+      "label": "Call 610.287.4771",
+      "href": "tel:6102874771"
+    }
+  },
+  "links": [
+    {
+      "label": "Mobile coupons",
+      "href": "http://johnnysitaliano.com/all-specials/mobile-coupons-online/"
+    },
+    {
+      "label": "Hours and directions",
+      "href": "http://johnnysitaliano.com/hours-directions/"
+    }
+  ],
+  "sections": [
+    "hero",
+    "offerings",
+    "proof",
+    "gallery",
+    "story",
+    "experience",
+    "feature",
+    "spotlight",
+    "catalog",
+    "contact",
+    "closing"
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Illustrative concept: a wood-fired pizza with blistered crust and fresh basil on a rustic wooden board"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Illustrative concept: a sliced stromboli showing layers of ham, salami, and melted cheese on parchment"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Illustrative concept: shrimp and scallops in a lobster cream sauce over fettuccine in a white bowl"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Illustrative concept: a spring mix salad with goat cheese, red onion, and balsamic in a ceramic bowl"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Illustrative concept: a veal cutlet with lemon and capers plated beside roasted potatoes"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Illustrative concept: an overstuffed Italian hoagie on a seeded roll with a pickle spear"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Illustrative concept: a small-town Italian dining room with red-checked tablecloths and a bottle of wine brought by guests"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Illustrative concept: a chef's hands stretching pizza dough in a flour-dusted kitchen, face out of frame"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Illustrative concept: a brick pizza oven glowing orange with a wooden peel resting against it"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Illustrative concept: a take-out counter with stacked pizza boxes and a paper bag of garlic knots"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Illustrative concept: a family sharing a large pizza and pasta at a wooden table, faces turned away"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Illustrative concept: a delivery car parked on a quiet Main Street at dusk with pizza boxes on the passenger seat"
+    }
+  ]
+}

@@ -1,0 +1,235 @@
+{
+  "slug": "verruni-landscaping",
+  "name": "L. A. Verruni Landscaping",
+  "city": "Pottstown",
+  "category": "Landscaping, hardscape, and holiday decor",
+  "vertical": "Home Services",
+  "attitude": "industrial",
+  "url": "http://www.verrunilandscaping.com/",
+  "phone": "(610) 327-2622",
+  "address": "1357 Farmington Ave, Pottstown, PA 19464",
+  "hours": "",
+  "description": "L. A. Verruni Landscaping in Pottstown, PA has provided lawn services, hardscape construction, lawn mowing, holiday decorating, and bulk mulch for 41 years.",
+  "tagline": "Lawn, hardscape, and holiday decor for 41 years",
+  "noindex": true,
+  "imageDisclosure": true,
+  "schemaType": "LocalBusiness",
+  "marquee": [
+    "Lawn services",
+    "Hardscape",
+    "Bulk mulch",
+    "Holiday decorating",
+    "41 years"
+  ],
+  "tokens": {
+    "paper": "#FBF8EA",
+    "ink": "#2A2410",
+    "accent": "#2F6B2F",
+    "accent2": "#F5C400",
+    "panel": "#EDE6BF",
+    "deep": "#1B1F12",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "4px",
+    "radius": "0px"
+  },
+  "fonts": {
+    "display": "Barlow Condensed",
+    "text": "Barlow",
+    "displayFallback": "Arial Narrow,sans-serif"
+  },
+  "logo": false,
+  "nav": [
+    {
+      "label": "Services",
+      "href": "#offerings"
+    },
+    {
+      "label": "Work",
+      "href": "#gallery"
+    },
+    {
+      "label": "Contact",
+      "href": "#visit"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Pottstown, PA | 41 years",
+    "headline": "The property still needs a crew",
+    "sub": "Lawn services, hardscape construction, mowing, bulk mulch, and holiday decorating from a Pottstown crew that has done it for 41 years.",
+    "ctaPrimary": {
+      "label": "Call (610) 327-2622",
+      "href": "tel:6103272622"
+    },
+    "ctaSecondary": {
+      "label": "See the services",
+      "href": "#offerings"
+    },
+    "glassFloat": {
+      "title": "41 years in business",
+      "sub": "1357 Farmington Ave"
+    },
+    "marquee": [
+      "Lawn services",
+      "Hardscape",
+      "Bulk mulch",
+      "Holiday decorating",
+      "41 years"
+    ]
+  },
+  "offerings": {
+    "heading": "Four seasons of <mark>work.</mark>",
+    "items": [
+      "Lawn services and weekly mowing for homes and businesses",
+      "Hardscape construction: patios, walkways, walls, and stone masonry",
+      "Bulk mulch delivered, and holiday decorating and Christmas lighting"
+    ]
+  },
+  "proof": {
+    "items": [
+      "41 years in business",
+      "Owner Lisa Bickel",
+      "Insured, $1,000,000 policy",
+      "1357 Farmington Ave, Pottstown"
+    ]
+  },
+  "gallery": {
+    "heading": "Mulch, stone, and <mark>lights.</mark>",
+    "imageIndexes": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "story": {
+    "heading": "Built on repeat customers",
+    "paragraphs": [
+      "L. A. Verruni Landscaping has run out of Farmington Avenue in Pottstown for 41 years, long enough that the same properties call for mowing in April, a patio in June, and lights in November.",
+      "Customers mention the speed of the stone work and the Christmas lighting by name. Both come from a small crew that has done the same jobs for decades."
+    ],
+    "imageIndex": 8
+  },
+  "experience": {
+    "heading": "Working with Verruni",
+    "items": [
+      "Call for an estimate on mowing, mulch, or a hardscape project.",
+      "Bulk mulch delivered to the driveway, spread if you want it.",
+      "Holiday decor installed before Thanksgiving and taken down after."
+    ]
+  },
+  "feature": {
+    "heading": "Stone patios, done quickly",
+    "text": "Hardscape construction is the crew's strong suit: patios, steps, and walls in stone, finished on a schedule people notice.",
+    "cta": {
+      "label": "Ask about a patio",
+      "href": "tel:6103272622"
+    },
+    "imageIndex": 9
+  },
+  "catalog": {
+    "heading": "Verify, then <mark>call.</mark>",
+    "items": [
+      {
+        "title": "Official site",
+        "href": "http://www.verrunilandscaping.com/",
+        "imageIndex": 10
+      },
+      {
+        "title": "Reviews on Yelp",
+        "href": "https://www.yelp.com/biz/l-a-verruni-landscaping-pottstown",
+        "imageIndex": 11
+      },
+      {
+        "title": "Directions",
+        "href": "https://www.google.com/maps/search/?api=1&query=1357%20Farmington%20Ave%20Pottstown%20PA%2019464",
+        "imageIndex": 12
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Farmington Avenue, <mark>Pottstown.</mark>"
+  },
+  "closing": {
+    "heading": "Lawn, hardscape, mulch, and holiday decor for 41 years",
+    "kicker": "Pottstown, Montgomery County",
+    "cta": {
+      "label": "Call (610) 327-2622",
+      "href": "tel:6103272622"
+    }
+  },
+  "links": [
+    {
+      "label": "Official site",
+      "href": "http://www.verrunilandscaping.com/"
+    }
+  ],
+  "sections": [
+    "hero",
+    "offerings",
+    "proof",
+    "gallery",
+    "story",
+    "experience",
+    "feature",
+    "spotlight",
+    "catalog",
+    "contact",
+    "closing"
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Illustrative concept: a freshly mowed lawn with crisp stripes in front of a stone house, yellow mower at the edge"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Illustrative concept: a crew member's gloved hands setting a bluestone patio slab, face out of frame"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Illustrative concept: a pile of dark bulk mulch beside a wheelbarrow in a driveway"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Illustrative concept: a house outlined in warm white Christmas lights with a wreath and snow"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Illustrative concept: a stone retaining wall with a new garden bed and evergreen shrubs"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Illustrative concept: a landscape trailer loaded with mowers and trimmers behind a green pickup, no lettering"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Illustrative concept: a flagstone walkway curving to a front porch through fresh mulch beds"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Illustrative concept: a stone patio with a fire pit and a view of Montgomery County fields"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Illustrative concept: a close-up of a string trimmer edging a sidewalk, face out of frame"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Illustrative concept: a front yard with tulips, fresh mulch, and a mowed lawn in spring"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Illustrative concept: a garland and lights wrapped around a porch column at dusk"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Illustrative concept: a dump truck bed of mulch at a small landscaping yard, morning light"
+    }
+  ]
+}

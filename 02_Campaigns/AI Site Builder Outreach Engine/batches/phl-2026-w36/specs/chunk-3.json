@@ -1,0 +1,493 @@
+[
+  {
+    "slug": "wja-landscaping",
+    "name": "WJA Landscaping",
+    "city": "Collegeville",
+    "category": "Landscaping and hardscaping",
+    "vertical": "Home Services",
+    "attitude": "industrial",
+    "url": "https://wjalandscaping.com/",
+    "phone": "(610) 831-3819",
+    "address": "138 Pennapacker Rd, Collegeville, PA 19426",
+    "hours": "Mon to Sat 7 am to 5 pm. Closed Sun.",
+    "description": "WJA Landscaping designs and builds outdoor living spaces, patios, outdoor kitchens, driveways, pavilions, and retaining walls for Collegeville, Limerick Township, Gilbertsville, and Chester and Montgomery counties.",
+    "tagline": "Landscaping design and installation, Collegeville PA",
+    "marquee": ["Patios", "Outdoor kitchens", "Fire pits", "Pavilions", "Driveways", "Retaining walls", "Locally owned and operated"],
+    "tokens": { "paper": "#F2F4EC", "ink": "#17201A", "accent": "#2E6B3A", "accent2": "#C9A24D", "panel": "#D9DDCF", "deep": "#14201A", "border": "3px", "radius": "0px" },
+    "fonts": { "display": "Bebas Neue", "text": "Source Sans 3", "displayFallback": "Impact,sans-serif" },
+    "primary": { "label": "Call (610) 831-3819", "href": "tel:6108313819" },
+    "nav": [
+      { "label": "Services", "href": "#offerings" },
+      { "label": "Projects", "href": "#gallery" },
+      { "label": "Estimate", "href": "#visit" }
+    ],
+    "hero": {
+      "eyebrow": "Collegeville, PA | Design and build",
+      "headline": "Outdoor living spaces, built to last in Collegeville",
+      "sub": "WJA Landscaping designs and installs patios, outdoor kitchens, decks, driveways, and hardscaping for Collegeville, Limerick, and Gilbertsville, with personalized service and transparent communication.",
+      "ctaSecondary": { "label": "See the services", "href": "https://wjalandscaping.com/services/" },
+      "glassFloat": { "title": "Rated 5 out of 5", "sub": "Locally owned and operated" }
+    },
+    "offerings": {
+      "heading": "Hardscape that <mark>holds.</mark>",
+      "items": [
+        "Patios, walkways, steps, and pool decks in pavers and natural stone",
+        "Outdoor kitchens, fireplaces, fire pits, and seating walls",
+        "Pergolas, pavilions, and gazebos that give a yard a roof",
+        "Driveways, retaining walls, water features, and paver cleaning, repair, and sealing"
+      ]
+    },
+    "proof": {
+      "items": [
+        "Locally owned and operated in Collegeville",
+        "Serving Limerick Township, Gilbertsville, and Chester and Montgomery counties",
+        "Rated 5 out of 5 by clients",
+        "Mon to Sat 7 am to 5 pm"
+      ]
+    },
+    "gallery": { "heading": "Stone, timber, and <mark>fire.</mark>" },
+    "story": {
+      "heading": "Personalized service, transparent communication",
+      "paragraphs": [
+        "WJA Landscaping is a locally owned and operated contractor on Pennapacker Road in Collegeville. It takes pride in delivering personalized service, transparent communication, and high-quality craftsmanship in every project.",
+        "The design side matters as much as the install. Patios, kitchens, and pavilions get drawn for the property they will sit on, then built by the same crew that quoted them."
+      ]
+    },
+    "experience": {
+      "heading": "From estimate to first fire",
+      "items": [
+        "A site visit and a clear quote, with the materials and the schedule spelled out.",
+        "Design and installation by one team, so the plan does not get lost between vendors.",
+        "A walk-through when it is finished, and paver cleaning and sealing when it is time."
+      ]
+    },
+    "feature": {
+      "heading": "Custom pavilions",
+      "text": "A pavilion turns a patio into a room with weather. WJA builds them to match the house, with the outdoor kitchen and lighting planned underneath.",
+      "cta": { "label": "Pavilions", "href": "https://wjalandscaping.com/hardscape/pavilions/" }
+    },
+    "catalog": {
+      "heading": "See the <mark>work first.</mark>",
+      "items": [
+        { "title": "Service list", "href": "https://wjalandscaping.com/services/" },
+        { "title": "Hardscaping", "href": "https://wjalandscaping.com/hardscape/" },
+        { "title": "Driveways", "href": "https://wjalandscaping.com/hardscape/driveways/" }
+      ]
+    },
+    "contact": { "heading": "Pennapacker Road, <mark>Collegeville.</mark>" },
+    "closing": { "heading": "Design and installation for Collegeville, Limerick, and Gilbertsville", "kicker": "Montgomery County, PA" },
+    "links": [
+      { "label": "Contact", "href": "https://wjalandscaping.com/contact/" },
+      { "label": "Collegeville services", "href": "https://wjalandscaping.com/collegeville-pa/" }
+    ],
+    "imageStyle": "Deep green, stone gray, and warm gold tones, high-end backyard hardscape photography in Montgomery County, Pennsylvania.",
+    "images": [
+      "a paver patio with a stone fire pit and seating wall at dusk, string lights overhead",
+      "an outdoor kitchen with a stone veneer island, built-in grill, and granite counter",
+      "a timber-frame pavilion over a patio with a ceiling fan and a dining table",
+      "a curved retaining wall of stacked stone with fresh plantings and mulch",
+      "a paver driveway sweeping up to a brick colonial house",
+      "a crew member's gloved hands setting a paver with a rubber mallet, face out of frame",
+      "a flagstone walkway with lantern lights winding through a green lawn",
+      "a pool deck in travertine with lounge chairs and a pergola",
+      "a stone outdoor fireplace with a wood mantel beside an evergreen hedge",
+      "a small waterfall feature spilling into a pond edged with boulders",
+      "a skid steer loading gravel on a residential job site at sunrise",
+      "a freshly sealed paver patio glistening after rain with a garden bed border",
+      "a farmhouse backyard with a gazebo and a lawn stretching to trees"
+    ]
+  },
+  {
+    "slug": "always-dental-care",
+    "name": "Always Dental Care",
+    "city": "Phoenixville",
+    "category": "Family and cosmetic dentistry",
+    "vertical": "Medical & Healthcare",
+    "attitude": "glass",
+    "url": "https://www.facebook.com/AlwaysDentalCare/",
+    "phone": "(484) 392-7687",
+    "address": "1570 Egypt Rd, Ste 210, Phoenixville, PA 19460",
+    "hours": "Mon, Tue, Thu 9 am to 6 pm. Wed 9 am to 5 pm. Fri 9 am to 1 pm. Closed Sat and Sun.",
+    "description": "Always Dental Care is Dr. Truong Nguyen's general and cosmetic dental practice in Phoenixville, PA, offering cleanings, Invisalign, whitening, veneers, root canals, extractions, and wisdom teeth removal.",
+    "tagline": "Dentist in Phoenixville, PA",
+    "marquee": ["Teeth cleaning", "Invisalign", "Whitening", "Veneers", "Root canals", "Extractions", "Wisdom teeth"],
+    "tokens": { "paper": "#F2F8F8", "ink": "#12303A", "accent": "#178791", "accent2": "#BFE9EC", "panel": "#D6E9EA", "deep": "#0E2A30", "border": "1px", "radius": "20px" },
+    "fonts": { "display": "Poppins", "text": "Mulish", "displayFallback": "Arial,sans-serif" },
+    "primary": { "label": "Call (484) 392-7687", "href": "tel:4843927687" },
+    "nav": [
+      { "label": "Services", "href": "#offerings" },
+      { "label": "Office", "href": "#gallery" },
+      { "label": "Visit", "href": "#visit" }
+    ],
+    "hero": {
+      "eyebrow": "Phoenixville, PA | Family and cosmetic dentistry",
+      "headline": "Dentist in Phoenixville, PA",
+      "sub": "Dr. Truong Nguyen, DDS, has provided dental care in Phoenixville and the surrounding areas for 11 years, from routine cleanings to Invisalign and veneers, on Egypt Road.",
+      "ctaSecondary": { "label": "Hours and directions", "href": "#visit" },
+      "glassFloat": { "title": "Rated 4.7 stars", "sub": "1570 Egypt Rd, Suite 210" }
+    },
+    "offerings": {
+      "heading": "General care and <mark>cosmetic work.</mark>",
+      "items": [
+        "General dentistry: exams, teeth cleaning, fillings, and preventive care for the family",
+        "Invisalign clear aligners and teeth whitening",
+        "Veneers for the smile you actually want to show",
+        "Root canals, tooth extractions, and wisdom teeth removal, handled in the office"
+      ]
+    },
+    "proof": {
+      "items": [
+        "Dr. Truong Nguyen, DDS",
+        "11 years caring for Phoenixville",
+        "Evening hours until 6 pm three days a week",
+        "1570 Egypt Rd, Suite 210, Phoenixville"
+      ]
+    },
+    "gallery": { "heading": "A calm office, <mark>close to home.</mark>" },
+    "story": {
+      "heading": "One dentist, eleven years",
+      "paragraphs": [
+        "Always Dental Care is a single-dentist practice led by Dr. Truong Nguyen, DDS, who has treated Phoenixville families for 11 years from the office at 1570 Egypt Road.",
+        "The practice covers the visits people put off and the ones they look forward to: routine cleanings, extractions and root canals when they are needed, and Invisalign, whitening, and veneers when they are wanted."
+      ]
+    },
+    "experience": {
+      "heading": "What a visit is like",
+      "items": [
+        "Call to book; the front desk keeps evening slots Monday, Tuesday, and Thursday.",
+        "Suite 210 is on Egypt Road with parking outside the building.",
+        "Treatment plans are explained before anything starts, including what insurance is likely to cover."
+      ]
+    },
+    "feature": {
+      "heading": "Invisalign and whitening, in the same chair",
+      "text": "Straightening and brightening are both done here, so the plan for a better smile does not require a second office.",
+      "cta": { "label": "Ask about Invisalign", "href": "tel:4843927687" }
+    },
+    "catalog": {
+      "heading": "Reviews and <mark>directions.</mark>",
+      "items": [
+        { "title": "Facebook page", "href": "https://www.facebook.com/AlwaysDentalCare/" },
+        { "title": "Reviews on Healthgrades", "href": "https://www.healthgrades.com/group-directory/pa-pennsylvania/phoenixville/always-dental-care-xbjxgl" },
+        { "title": "Directions", "href": "https://www.google.com/maps/search/?api=1&query=1570%20Egypt%20Rd%20Ste%20210%20Phoenixville%20PA%2019460" }
+      ]
+    },
+    "contact": { "heading": "Egypt Road, <mark>Suite 210.</mark>" },
+    "closing": { "heading": "Family and cosmetic dentistry in Phoenixville", "kicker": "Phoenixville, Chester County" },
+    "links": [
+      { "label": "Facebook", "href": "https://www.facebook.com/AlwaysDentalCare/" },
+      { "label": "Yelp", "href": "https://www.yelp.com/biz/always-dental-care-phoenixville-2" }
+    ],
+    "imageStyle": "Clean teal, white, and pale aqua palette, bright modern dental office photography, calm and clinical.",
+    "images": [
+      "a modern dental operatory with a reclined chair, overhead light, and a window view of trees",
+      "a close-up of a clear aligner tray on a white surface with soft teal light",
+      "a dental hygienist's gloved hands holding a mirror and scaler, face out of frame",
+      "a bright waiting room with pale aqua chairs, a plant, and a water dispenser",
+      "a tray of sterilized instruments in sealed pouches on a clean counter",
+      "a whitening lamp positioned over an empty dental chair",
+      "a suburban medical office building entrance with glass doors and a suite directory blurred",
+      "a panoramic x-ray on a wall monitor in a consultation room, no readable text",
+      "a child's toothbrush and a small cup on a sink ledge in a family dental office",
+      "a close-up of porcelain veneer shade tabs held against a white background",
+      "a reception desk with a tablet and a bowl of mints in a teal-accented office",
+      "a dentist's stool and a rolling cabinet under warm morning light",
+      "a parking lot and lawn outside a two-story office park in Chester County"
+    ]
+  },
+  {
+    "slug": "barnes-financial-group",
+    "name": "Barnes Financial Group",
+    "city": "Media",
+    "category": "Accounting, tax, insurance, and investments",
+    "vertical": "Professional Services",
+    "attitude": "editorial",
+    "url": "http://barnesfinancialgroupinc.com/",
+    "phone": "(610) 627-2340",
+    "address": "11 S New Middletown Rd, Media, PA 19063",
+    "hours": "Mon to Fri 9 am to 6 pm. Closed Sat and Sun.",
+    "description": "Barnes Financial Group is a family-run regional accounting and insurance agency in Media, PA, established in 1981, handling accounting, taxes, insurance, and investments under one roof.",
+    "tagline": "Accounting, taxes, insurance, and investments since 1981",
+    "marquee": ["Accounting", "Taxes", "Insurance", "Investments", "Family run since 1981", "Media, PA"],
+    "tokens": { "paper": "#F7F4EA", "ink": "#141E29", "accent": "#1F4E79", "accent2": "#C4A35A", "panel": "#D5D9D6", "deep": "#0E2438", "border": "1px", "radius": "6px" },
+    "fonts": { "display": "Libre Baskerville", "text": "DM Sans", "displayFallback": "Georgia,serif" },
+    "primary": { "label": "Call (610) 627-2340", "href": "tel:6106272340" },
+    "nav": [
+      { "label": "Services", "href": "#offerings" },
+      { "label": "Office", "href": "#gallery" },
+      { "label": "Contact", "href": "#visit" }
+    ],
+    "hero": {
+      "eyebrow": "Media, PA | Established 1981",
+      "headline": "A regional accounting and insurance agency, family run since 1981",
+      "sub": "Barnes Financial Group handles accounting, taxes, insurance, and investments for Delaware County families and businesses from one office on New Middletown Road.",
+      "ctaSecondary": { "label": "See the services", "href": "#offerings" },
+      "glassFloat": { "title": "Since 1981", "sub": "Richard W. Barnes, President" }
+    },
+    "offerings": {
+      "heading": "Four services, <mark>one relationship.</mark>",
+      "items": [
+        "Accounting and bookkeeping for small businesses that want the numbers right every month",
+        "Tax preparation and planning for individuals and businesses",
+        "Insurance brokered across carriers, including home, auto, and business coverage",
+        "Investment options and financial planning tailored to the household"
+      ]
+    },
+    "proof": {
+      "items": [
+        "Established in 1981",
+        "Family-run financial services business",
+        "Mon to Fri 9 am to 6 pm",
+        "11 S New Middletown Rd, Media, PA 19063"
+      ]
+    },
+    "gallery": { "heading": "The office on <mark>New Middletown Road.</mark>" },
+    "story": {
+      "heading": "Why one office handles all four",
+      "paragraphs": [
+        "Barnes Financial Group was established in 1981 and is still run by the Barnes family, with Richard W. Barnes as president. The agency describes itself plainly: a regional accounting and insurance agency handling accounting, taxes, insurance, and investments.",
+        "The advantage of one office is that the tax return, the insurance renewal, and the investment plan are reviewed by people who have seen all three."
+      ]
+    },
+    "experience": {
+      "heading": "Working with Barnes",
+      "items": [
+        "Call or stop in on New Middletown Road; the office keeps weekday hours until 6 pm.",
+        "Bring last year's return and the current policies; the first meeting maps what is missing.",
+        "Ongoing accounting, annual taxes, and renewals run on a calendar the office keeps for you."
+      ]
+    },
+    "feature": {
+      "heading": "Tax season, without the scramble",
+      "text": "A family-run tax office that also keeps the books means the return is built from records that are already in order by January.",
+      "cta": { "label": "Book a tax meeting", "href": "tel:6106272340" }
+    },
+    "catalog": {
+      "heading": "Verify, then <mark>call.</mark>",
+      "items": [
+        { "title": "Official site", "href": "http://barnesfinancialgroupinc.com/" },
+        { "title": "Liberty Mutual agent listing", "href": "https://agents.libertymutual.com/barnes-financial-group-inc_pl_4533305456" },
+        { "title": "BBB profile", "href": "https://www.bbb.org/us/pa/media/profile/financial-services/barnes-financial-group-inc-0241-235985925" }
+      ]
+    },
+    "contact": { "heading": "Media, <mark>Delaware County.</mark>" },
+    "closing": { "heading": "Accounting, taxes, insurance, and investments since 1981", "kicker": "Media, PA" },
+    "links": [
+      { "label": "Official site", "href": "http://barnesfinancialgroupinc.com/" },
+      { "label": "Facebook", "href": "https://www.facebook.com/barnesfinancialgroupinc/" }
+    ],
+    "imageStyle": "Navy, gold, and cream palette, traditional professional office photography in a Pennsylvania borough, quiet and trustworthy.",
+    "images": [
+      "a traditional accounting office with a mahogany desk, brass lamp, and leather chairs, morning light",
+      "a close-up of a calculator, pen, and a stack of tax forms on a walnut desk, no readable text",
+      "a brick storefront office on a tree-lined street in a small Pennsylvania borough",
+      "a conference table with two coffee cups and a folder, navy chairs, sunlit window",
+      "an insurance policy binder and a set of house keys on a desk blotter",
+      "bookshelves of tax code volumes with gold lettering blurred, warm light",
+      "a family home in Delaware County with a porch and mature trees",
+      "a small business owner's shop counter with a ledger and a laptop, hands only",
+      "a framed diploma wall and a potted fern in an office corner",
+      "a retirement planning chart on a tablet beside reading glasses, no readable text",
+      "a quiet office lobby with a wooden bench and a brass nameplate blurred",
+      "a courthouse-style stone building on a Media street at golden hour",
+      "a desk calendar and a fountain pen under a green banker's lamp"
+    ]
+  },
+  {
+    "slug": "be-balanced-hormone",
+    "name": "BeBalanced Hormone Weight Loss Centers, Royersford",
+    "city": "Royersford",
+    "category": "Natural hormone balancing and weight loss",
+    "vertical": "Spas & Wellness",
+    "attitude": "warm",
+    "url": "https://bebalancedcenters.com/location/royersford/",
+    "phone": "(610) 968-2322",
+    "address": "519 Main St, Royersford, PA 19468",
+    "hours": "Mon and Thu 10 am to 6 pm. Fri 10 am to 4 pm. Sat by appointment.",
+    "description": "BeBalanced Royersford uses natural hormone balancing to help women lose weight and improve mood, sleep, energy, and menopausal symptoms, from the center at 519 Main Street.",
+    "tagline": "Natural hormone balancing and weight loss",
+    "marquee": ["Balance first, weight follows", "Natural hormone balancing", "Mood, sleep, energy", "Peri and menopause", "519 Main Street"],
+    "tokens": { "paper": "#F9F1EC", "ink": "#3A2A2C", "accent": "#C4655A", "accent2": "#F2D3CB", "panel": "#EFDBD3", "deep": "#2E1D1F", "border": "1px", "radius": "32px" },
+    "fonts": { "display": "Marcellus", "text": "Figtree", "displayFallback": "Georgia,serif" },
+    "primary": { "label": "Call (610) 968-2322", "href": "tel:6109682322" },
+    "nav": [
+      { "label": "Program", "href": "#offerings" },
+      { "label": "Center", "href": "#gallery" },
+      { "label": "Visit", "href": "#visit" }
+    ],
+    "hero": {
+      "eyebrow": "Royersford, PA | Women's hormone health",
+      "headline": "Balance first. Weight follows.",
+      "sub": "BeBalanced Royersford works with your body to correct key hormone imbalances naturally, which BeBalanced reports leads to fast weight loss and better mood, sleep, and energy.",
+      "ctaSecondary": { "label": "Book a consultation", "href": "https://bebalancedcenters.com/location/royersford/" },
+      "glassFloat": { "title": "Main Street, Royersford", "sub": "Saturdays by appointment" }
+    },
+    "offerings": {
+      "heading": "What the program <mark>covers.</mark>",
+      "items": [
+        "A natural hormone balancing program that works with the body instead of against it",
+        "Support for PMS, perimenopause, and menopause symptoms like hot flashes and night sweats",
+        "Weight loss driven by balance: BeBalanced reports clients lose 15 to 21 pounds in 30 days on average",
+        "Improvements in mood, sleep, energy, and bloating that most clients describe"
+      ]
+    },
+    "proof": {
+      "items": [
+        "519 Main St, Royersford, PA 19468",
+        "Mon and Thu 10 to 6, Fri 10 to 4",
+        "Saturday by appointment only",
+        "(610) 968-2322"
+      ]
+    },
+    "gallery": { "heading": "A calm center on <mark>Main Street.</mark>" },
+    "story": {
+      "heading": "Why balance comes first",
+      "paragraphs": [
+        "BeBalanced's method starts with hormones, not calories. The Royersford center uses the power of natural hormone balancing to correct the key imbalances that keep weight on and sleep off.",
+        "The center says the majority of clients see improvement in mood, sleep, energy, hot flashes, night sweats, and bloating, and that most keep the weight off once it goes."
+      ]
+    },
+    "experience": {
+      "heading": "The first thirty days",
+      "items": [
+        "A consultation on Main Street to review symptoms and goals.",
+        "A personalized program with coaching visits at the center during the week.",
+        "Check-ins that track the scale and the symptoms, not just one of them."
+      ]
+    },
+    "feature": {
+      "heading": "Built for peri and menopause",
+      "text": "The program was designed for the years when the old diets stop working. Hormone balancing addresses the cause, and the results BeBalanced reports follow from it.",
+      "cta": { "label": "Talk to the center", "href": "tel:6109682322" }
+    },
+    "catalog": {
+      "heading": "Learn more, <mark>then call.</mark>",
+      "items": [
+        { "title": "Royersford center page", "href": "https://bebalancedcenters.com/location/royersford/" },
+        { "title": "The BeBalanced method", "href": "https://bebalancedcenters.com/home/" },
+        { "title": "Reviews on Yelp", "href": "https://www.yelp.com/biz/bebalanced-hormone-weight-loss-centers-royersford" }
+      ]
+    },
+    "contact": { "heading": "Main Street, <mark>Royersford.</mark>" },
+    "closing": { "heading": "Balance first. Weight follows.", "kicker": "Royersford, Montgomery County" },
+    "links": [
+      { "label": "Royersford center", "href": "https://bebalancedcenters.com/location/royersford/" },
+      { "label": "Facebook", "href": "https://www.facebook.com/bebalancedcenterscollegeville/" }
+    ],
+    "imageStyle": "Soft coral, blush, and warm neutral palette, calm wellness studio photography, natural light, no faces.",
+    "images": [
+      "a calm wellness center consultation room with a linen chair, a fern, and soft coral wall",
+      "a glass of water with lemon and a small bowl of berries on a white table",
+      "a woman's hands holding a warm mug on a cozy sofa, face out of frame",
+      "a bright storefront window on a small-town Main Street with plants and sheer curtains",
+      "a yoga mat and a folded blanket in a sunlit room",
+      "a notebook and pen beside a scale on a wooden floor, no readable text",
+      "a walking path in a park with morning light through trees",
+      "a tray of leafy greens, salmon, and avocado on a marble counter",
+      "a neatly made bed with linen sheets and soft morning light, restful",
+      "a reception desk with a vase of peonies and a candle",
+      "a pair of walking shoes by a door with a leash and keys",
+      "a coral-toned hallway with framed botanical prints",
+      "a small-town brick building with a shop awning at dusk"
+    ]
+  },
+  {
+    "slug": "county-line-veterinary-hospital",
+    "name": "County Line Veterinary Hospital",
+    "city": "Hatboro",
+    "category": "Full-service veterinary hospital",
+    "vertical": "Medical & Healthcare",
+    "attitude": "editorial",
+    "url": "https://countylineveterinary.com/",
+    "phone": "(215) 675-0533",
+    "address": "325 West County Line Road, Hatboro, PA 19040",
+    "hours": "Mon to Fri 9 am to 8 pm. Sat 9 am to 1 pm. Closed Sun.",
+    "description": "Since 1956, County Line Veterinary Hospital in Hatboro has provided pet owners of Montgomery and Bucks Counties with compassionate, high-quality care within a state-of-the-art, full-service veterinary hospital.",
+    "tagline": "Professional pet care with a personal touch",
+    "marquee": ["Since 1956", "Professional pet care with a personal touch", "Montgomery and Bucks Counties", "Urgent care coming in 2026", "Online pharmacy"],
+    "tokens": { "paper": "#F6F1E8", "ink": "#111822", "accent": "#0A2C4F", "accent2": "#B4232C", "panel": "#D6D9D6", "deep": "#06182C", "border": "2px", "radius": "8px" },
+    "fonts": { "display": "Merriweather", "text": "Lato", "displayFallback": "Georgia,serif" },
+    "primary": { "label": "Call (215) 675-0533", "href": "tel:2156750533" },
+    "nav": [
+      { "label": "Services", "href": "#offerings" },
+      { "label": "Hospital", "href": "#gallery" },
+      { "label": "Visit", "href": "#visit" }
+    ],
+    "hero": {
+      "eyebrow": "Hatboro, PA | Since 1956",
+      "headline": "Professional pet care with a personal touch",
+      "sub": "Since 1956, County Line Veterinary Hospital has strived to give pet owners of Montgomery and Bucks Counties compassionate, high-quality care within a state-of-the-art, full-service veterinary hospital.",
+      "ctaSecondary": { "label": "Meet the doctors", "href": "https://countylineveterinary.com/team/hatboro-veterinarians.php" },
+      "glassFloat": { "title": "Open until 8 pm weekdays", "sub": "Urgent care services coming in 2026" }
+    },
+    "offerings": {
+      "heading": "Hospital care, <mark>every stage.</mark>",
+      "items": [
+        "Wellness exams, vaccinations, and preventive care for dogs and cats",
+        "Diagnostics, surgery, and dentistry inside a full-service hospital",
+        "Hours by appointment until 8 pm on weekdays and Saturday mornings",
+        "An online pharmacy for refills, delivered to the door"
+      ]
+    },
+    "proof": {
+      "items": [
+        "Serving Montgomery and Bucks Counties since 1956",
+        "State-of-the-art, full-service veterinary hospital",
+        "Urgent care services coming in 2026",
+        "325 West County Line Road, Hatboro"
+      ]
+    },
+    "gallery": { "heading": "Seventy years on <mark>County Line Road.</mark>" },
+    "story": {
+      "heading": "A hospital, not just a clinic",
+      "paragraphs": [
+        "County Line Veterinary Hospital has treated the pets of Hatboro and the surrounding counties since 1956. The building on West County Line Road is a full-service hospital with the doctors and staff to match.",
+        "The invitation on the official site is the right one: take a look around, learn about the services, meet the doctors and staff, and call with any question or to set up an appointment."
+      ]
+    },
+    "experience": {
+      "heading": "Visiting the hospital",
+      "items": [
+        "Call (215) 675-0533 to set up an appointment; weekday hours run until 8 pm.",
+        "Tour the hospital online before your first visit, then meet the veterinarians and staff.",
+        "Refill through the online pharmacy between visits."
+      ]
+    },
+    "feature": {
+      "heading": "Urgent care services coming in 2026",
+      "text": "The hospital is adding urgent care, so the same team that knows your pet will be there when the problem cannot wait for Monday.",
+      "cta": { "label": "Hospital news", "href": "https://countylineveterinary.com/vnf_news.php" }
+    },
+    "catalog": {
+      "heading": "Meet the team, <mark>tour the building.</mark>",
+      "items": [
+        { "title": "Veterinarians", "href": "https://countylineveterinary.com/team/hatboro-veterinarians.php" },
+        { "title": "Hospital tour", "href": "https://countylineveterinary.com/about/county-line-veterinary-hospital-tour.php" },
+        { "title": "Online pharmacy", "href": "https://countylineveterinary.covetruspharmacy.com" }
+      ]
+    },
+    "contact": { "heading": "West County Line Road, <mark>Hatboro.</mark>" },
+    "closing": { "heading": "Professional pet care with a personal touch, since 1956", "kicker": "Hatboro, Montgomery County" },
+    "links": [
+      { "label": "Wellness services", "href": "https://countylineveterinary.com/services/hatboro-pet-wellness-services.php" },
+      { "label": "Location", "href": "https://countylineveterinary.com/about/hatboro-veterinary-location.php" },
+      { "label": "Staff", "href": "https://countylineveterinary.com/team/hatboro-veterinary-staff.php" }
+    ],
+    "imageStyle": "Navy, brick red, and cream palette, established veterinary hospital photography in suburban Pennsylvania, warm and professional.",
+    "images": [
+      "a veterinary hospital exam room with a navy accent wall, stainless table, and a black labrador sitting calmly",
+      "a veterinarian's hands with a stethoscope on a tabby cat's side, face out of frame",
+      "a brick veterinary hospital building with a white cupola and a flag on a suburban road",
+      "a surgical suite with monitors and a draped table, ready and empty",
+      "a hospital pharmacy shelf with labeled bottles and a refill counter",
+      "a golden retriever puppy on a scale in a bright clinic hallway",
+      "a waiting room with wooden benches, a fish tank, and a cat carrier",
+      "a dental cleaning tray and a canine dental x-ray on a monitor, no readable text",
+      "a technician walking a dog on a leash across a hospital parking lot, face turned away",
+      "a lab bench with a microscope and sample tubes in a clinic",
+      "a recovery kennel with a fleece blanket and a water bowl, soft light",
+      "an old framed black-and-white photo of a brick building beside a modern sign blurred",
+      "a cat on a windowsill in a clinic office with a plant"
+    ]
+  }
+]

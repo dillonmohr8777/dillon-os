@@ -1,0 +1,241 @@
+{
+  "slug": "fillman-and-sons-floors",
+  "name": "Fillman & Sons Floors and More",
+  "city": "Emmaus",
+  "category": "Flooring, remodeling, and decorating",
+  "vertical": "Home Services",
+  "attitude": "industrial",
+  "url": "http://www.fillmanandsons.com/",
+  "phone": "(610) 928-1515",
+  "address": "4030 Chestnut St, Unit 3, Emmaus, PA 18049",
+  "hours": "Mon to Fri 10 am to 4 pm. Closed Sat and Sun.",
+  "description": "Fillman & Sons Floors and More is a family-owned flooring, remodeling, and decorating retailer in Emmaus, PA, with free estimates on carpet, hardwood, laminate, vinyl, tile, refinishing, countertops, window treatments, and custom bathrooms.",
+  "tagline": "Family-owned flooring, remodeling, and decorating",
+  "noindex": true,
+  "imageDisclosure": true,
+  "schemaType": "LocalBusiness",
+  "marquee": [
+    "Carpet",
+    "Hardwood",
+    "Laminate and vinyl",
+    "Refinishing",
+    "Custom showers",
+    "Free estimates"
+  ],
+  "tokens": {
+    "paper": "#F5EFE6",
+    "ink": "#26191A",
+    "accent": "#7A1F2B",
+    "accent2": "#B7A588",
+    "panel": "#DCCFC2",
+    "deep": "#2A1416",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "3px",
+    "radius": "2px"
+  },
+  "fonts": {
+    "display": "Roboto Slab",
+    "text": "Roboto",
+    "displayFallback": "Georgia,serif"
+  },
+  "logo": false,
+  "nav": [
+    {
+      "label": "Floors",
+      "href": "#offerings"
+    },
+    {
+      "label": "Work",
+      "href": "#gallery"
+    },
+    {
+      "label": "Estimate",
+      "href": "#visit"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Emmaus, PA | Family owned",
+    "headline": "Floors, and the work around them",
+    "sub": "A family-owned flooring, remodeling, and decorating retailer in Emmaus, with a complete line of floors and free estimates.",
+    "ctaPrimary": {
+      "label": "Call (610) 928-1515",
+      "href": "tel:6109281515"
+    },
+    "ctaSecondary": {
+      "label": "Free estimate",
+      "href": "http://www.fillmanandsons.com/contact_1.html"
+    },
+    "glassFloat": {
+      "title": "Free estimates",
+      "sub": "4030 Chestnut St, Emmaus"
+    },
+    "marquee": [
+      "Carpet",
+      "Hardwood",
+      "Laminate and vinyl",
+      "Refinishing",
+      "Custom showers",
+      "Free estimates"
+    ]
+  },
+  "offerings": {
+    "heading": "The complete <mark>line.</mark>",
+    "items": [
+      "Carpet, ceramic, hardwood, laminate, and vinyl flooring",
+      "Hardwood refinishing that brings old floors back",
+      "Countertops, window treatments, painting and paper hanging, and full custom showers and bathrooms"
+    ]
+  },
+  "proof": {
+    "items": [
+      "Family-owned in Emmaus",
+      "Free estimates",
+      "Authorized Mirage hardwood dealer",
+      "Mon to Fri 10 to 4"
+    ]
+  },
+  "gallery": {
+    "heading": "Wood, tile, and <mark>finished rooms.</mark>",
+    "imageIndexes": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "story": {
+    "heading": "Floors and More means more",
+    "paragraphs": [
+      "Fillman & Sons started with floors and grew into the rooms around them: countertops, window treatments, painting, paper hanging, and full bathroom remodels, all from the shop on Chestnut Street in Emmaus.",
+      "It is still a family business, which is why the estimate is free and the person who quotes the job is the person who answers the phone."
+    ],
+    "imageIndex": 8
+  },
+  "experience": {
+    "heading": "How a floor gets done",
+    "items": [
+      "Call for a free estimate, then pick samples at the shop or at home.",
+      "Installation scheduled around the household, furniture moved and replaced.",
+      "Refinishing and repairs years later, from the same family."
+    ]
+  },
+  "feature": {
+    "heading": "Full custom showers and bathrooms",
+    "text": "Tile, glass, vanities, and floors come from one shop, so the bathroom is designed and installed as one job.",
+    "cta": {
+      "label": "Ask about a bathroom",
+      "href": "tel:6109281515"
+    },
+    "imageIndex": 9
+  },
+  "catalog": {
+    "heading": "Samples and <mark>proof.</mark>",
+    "items": [
+      {
+        "title": "Contact the shop",
+        "href": "http://www.fillmanandsons.com/contact_1.html",
+        "imageIndex": 10
+      },
+      {
+        "title": "Mirage Floors dealer page",
+        "href": "https://www.miragefloors.com/pro/en-us/fillman-sons-floors-and-more-emmaus-pa-RC0028460/",
+        "imageIndex": 11
+      },
+      {
+        "title": "Facebook",
+        "href": "https://www.facebook.com/FillmanFloors/",
+        "imageIndex": 12
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Chestnut Street, <mark>Emmaus.</mark>"
+  },
+  "closing": {
+    "heading": "Family-owned floors, remodeling, and decorating",
+    "kicker": "Emmaus, Lehigh Valley",
+    "cta": {
+      "label": "Call (610) 928-1515",
+      "href": "tel:6109281515"
+    }
+  },
+  "links": [
+    {
+      "label": "Official site",
+      "href": "http://www.fillmanandsons.com/"
+    },
+    {
+      "label": "Facebook",
+      "href": "https://www.facebook.com/FillmanFloors/"
+    }
+  ],
+  "sections": [
+    "hero",
+    "offerings",
+    "proof",
+    "gallery",
+    "story",
+    "experience",
+    "feature",
+    "spotlight",
+    "catalog",
+    "contact",
+    "closing"
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Illustrative concept: a freshly installed wide-plank oak hardwood floor in a sunlit living room with a burgundy rug"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Illustrative concept: an installer's hands nailing a hardwood plank with a flooring nailer, face out of frame"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Illustrative concept: a flooring showroom wall of carpet samples and wood plank displays"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Illustrative concept: a herringbone tile bathroom floor with a walk-in shower and glass door"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Illustrative concept: a hardwood floor mid-refinish, half sanded raw and half sealed glossy"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Illustrative concept: a kitchen with luxury vinyl plank flooring and a quartz countertop"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Illustrative concept: a roll of carpet and padding on a van floor with a knee kicker tool"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Illustrative concept: a bathroom vanity with a new countertop, faucet, and window treatment"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Illustrative concept: a small family shop storefront on a Pennsylvania borough street"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Illustrative concept: a close-up of laminate planks clicking together on underlayment"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Illustrative concept: a painter's tray and roller beside a freshly papered accent wall"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Illustrative concept: a stack of ceramic tile boxes and a wet saw in a garage workshop"
+    }
+  ]
+}

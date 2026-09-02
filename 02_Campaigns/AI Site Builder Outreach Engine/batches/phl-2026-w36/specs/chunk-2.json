@@ -1,0 +1,502 @@
+[
+  {
+    "slug": "philadelphia-garage",
+    "name": "Philadelphia Garage",
+    "city": "West Chester",
+    "category": "Garage floors and organization",
+    "vertical": "Home Services",
+    "attitude": "industrial",
+    "url": "https://philadelphiagarage.com/",
+    "phone": "(610) 788-2242",
+    "address": "11 Hagerty Blvd, Suite 8, West Chester, PA 19382",
+    "hours": "",
+    "description": "Philadelphia Garage builds award-winning garage floor and organization solutions from West Chester, PA, with high-grade materials, concierge-level service, and more than 20 years of experience.",
+    "tagline": "Garage floors and organization, West Chester PA",
+    "marquee": ["Award-winning garage floors", "Over 800 five-star reviews", "Concierge level of service", "More than 20 years", "Cabinets, slatwall, overhead storage"],
+    "tokens": { "paper": "#F4F4F1", "ink": "#151515", "accent": "#B3121F", "accent2": "#FFC53D", "panel": "#DDDDD8", "deep": "#151515", "border": "4px", "radius": "4px" },
+    "fonts": { "display": "Anton", "text": "Public Sans", "displayFallback": "Impact,sans-serif" },
+    "primary": { "label": "Call (610) 788-2242", "href": "tel:6107882242" },
+    "nav": [
+      { "label": "Floors", "href": "#offerings" },
+      { "label": "Projects", "href": "#gallery" },
+      { "label": "Quote", "href": "#visit" }
+    ],
+    "hero": {
+      "eyebrow": "West Chester, PA | Garage floors and organization",
+      "headline": "The absolute authority in garage makeovers",
+      "sub": "Award-winning garage floor and organization solutions, installed by a team that has spent more than 20 years hiring the best installers and using quality materials.",
+      "ctaSecondary": { "label": "See the floors", "href": "#offerings" },
+      "glassFloat": { "title": "800+ five-star reviews", "sub": "Concierge level of service" }
+    },
+    "offerings": {
+      "heading": "Floors first, then <mark>everything off the floor.</mark>",
+      "items": [
+        "Garage floor coatings in high-grade materials, chosen for durability and the look you want",
+        "Cabinets, slatwall, and overhead storage that turn a garage into a room",
+        "Personalized solutions depending on functionality and style, planned at your house",
+        "One crew from measurement to the final wipe-down"
+      ]
+    },
+    "proof": {
+      "items": [
+        "Over 800 five-star reviews",
+        "More than 20 years of experience",
+        "Award-winning floor and organization solutions",
+        "Concierge level of service from the whole team"
+      ]
+    },
+    "gallery": { "heading": "Before was concrete. <mark>After is this.</mark>" },
+    "story": {
+      "heading": "Why the reviews say the same thing",
+      "paragraphs": [
+        "Philadelphia Garage has built its reputation on two decisions repeated for more than 20 years: hire the best installers and use quality materials. The result is a garage floor that still looks beautiful after the winter salt and the summer tires.",
+        "The concierge level of service is the other half. One team walks the space with you, finds the personalized solution that fits how you actually use the garage, and installs it without turning your week upside down."
+      ]
+    },
+    "experience": {
+      "heading": "How a makeover runs",
+      "items": [
+        "A visit to the garage in West Chester or anywhere in the Philadelphia area, with real measurements and real samples.",
+        "A plan for the floor and the storage together, so the coating and the cabinets are designed for each other.",
+        "Installation by the same experienced crew, then a walk-through before anyone leaves."
+      ]
+    },
+    "feature": {
+      "heading": "Beautiful, durable garage floors",
+      "text": "High-grade coatings resist hot tires, road salt, and dropped tools, and they wipe clean. The finish is chosen with you, from flake blends to solid color.",
+      "cta": { "label": "Plan a floor", "href": "tel:6107882242" }
+    },
+    "catalog": {
+      "heading": "Get the <mark>real thing.</mark>",
+      "items": [
+        { "title": "Official site", "href": "https://philadelphiagarage.com/" },
+        { "title": "Call for a quote", "href": "tel:6107882242" },
+        { "title": "Directions to the shop", "href": "https://www.google.com/maps/search/?api=1&query=11%20Hagerty%20Blvd%20Suite%208%20West%20Chester%20PA%2019382" }
+      ]
+    },
+    "contact": { "heading": "Hagerty Boulevard, <mark>West Chester.</mark>" },
+    "closing": { "heading": "Award-winning garage floors and organization", "kicker": "West Chester, serving the Philadelphia area" },
+    "links": [
+      { "label": "Official site", "href": "https://philadelphiagarage.com/" }
+    ],
+    "imageStyle": "Bold red, black, and safety-yellow palette, glossy epoxy floors, crisp cabinetry, suburban Pennsylvania garages.",
+    "images": [
+      "a two-car garage with a glossy gray flake epoxy floor, red metal cabinets, and a clean workbench",
+      "close-up of a freshly coated garage floor with reflective flake finish and a car tire at the edge",
+      "a garage wall of slatwall panels holding bikes, tools, and hoses in neat rows",
+      "overhead garage storage racks holding labeled bins above a parked SUV",
+      "an installer's gloved hands rolling epoxy coating across a concrete slab, face out of frame",
+      "a black and red cabinet set with a stainless countertop under bright LED shop lights",
+      "a raw concrete garage floor mid-prep with a diamond grinder and dust extractor",
+      "a finished garage doubling as a home gym with rubber tiles and a squat rack",
+      "a detailed view of a solid red epoxy floor meeting a white garage door",
+      "a mudroom-style garage entry with lockers and a bench on a flake floor",
+      "a suburban stone house with the garage door open showing a bright organized interior",
+      "a pegboard wall with outlined tools and a rolling toolbox",
+      "a technician's truck bed loaded with coating buckets and rollers at dawn"
+    ]
+  },
+  {
+    "slug": "pro-nails",
+    "name": "Pro-Nails Nailery",
+    "city": "Willow Grove",
+    "category": "Nail salon in Willow Grove Park Mall",
+    "vertical": "Spas & Wellness",
+    "attitude": "glass",
+    "url": "https://willowgroveparkmall.com/store/pro-nails",
+    "phone": "(215) 657-6245",
+    "address": "Willow Grove Park Mall, 2500 W Moreland Rd, Willow Grove, PA 19090",
+    "hours": "Open daily 11 am to 6 pm. Confirm mall hours before visiting.",
+    "description": "Pro-Nails Nailery is the nail salon inside Willow Grove Park Mall, offering manicures, pedicures, and waxing at 2500 W Moreland Rd in Willow Grove, PA.",
+    "tagline": "Manicures, pedicures, and waxing in Willow Grove Park Mall",
+    "marquee": ["Manicures", "Pedicures", "Waxing", "Walk in from the mall", "Credit cards accepted", "Willow Grove Park"],
+    "tokens": { "paper": "#FBF6F4", "ink": "#3A2A30", "accent": "#B94D6E", "accent2": "#F3D6DE", "panel": "#EFE1E6", "deep": "#3A2A30", "border": "1px", "radius": "28px" },
+    "fonts": { "display": "Bodoni Moda", "text": "Nunito Sans", "displayFallback": "Georgia,serif" },
+    "primary": { "label": "Call (215) 657-6245", "href": "tel:2156576245" },
+    "nav": [
+      { "label": "Services", "href": "#offerings" },
+      { "label": "Gallery", "href": "#gallery" },
+      { "label": "Find us", "href": "#visit" }
+    ],
+    "hero": {
+      "eyebrow": "Willow Grove Park Mall | Nail salon",
+      "headline": "Professional nails, right inside the mall",
+      "sub": "Pro-Nails Nailery keeps manicures, pedicures, and waxing a short walk from the stores at Willow Grove Park, open daily from 11 am to 6 pm.",
+      "ctaSecondary": { "label": "Find the salon", "href": "#visit" },
+      "glassFloat": { "title": "Open daily 11 to 6", "sub": "Inside Willow Grove Park Mall" }
+    },
+    "offerings": {
+      "heading": "The <mark>service menu.</mark>",
+      "items": [
+        "Manicures, from a classic polish to gel that survives the week",
+        "Pedicures in the salon's chairs, with time for the soak",
+        "Waxing for brows and more, booked with a nail service or on its own",
+        "Credit cards accepted, walk-ins welcome between errands"
+      ]
+    },
+    "proof": {
+      "items": [
+        "Inside Willow Grove Park Mall",
+        "Open daily 11 am to 6 pm",
+        "Manicures, pedicures, and waxing",
+        "(215) 657-6245"
+      ]
+    },
+    "gallery": { "heading": "Clean chairs, steady hands, <mark>fresh color.</mark>" },
+    "story": {
+      "heading": "A salon that fits into the trip",
+      "paragraphs": [
+        "Pro-Nails Nailery has been part of the Willow Grove Park Mall for years, the salon people find between the department stores and the food court and then come back to on purpose.",
+        "The pitch is simple: professional work, a menu that covers hands and feet and waxing, and hours that match the mall so a manicure fits around the rest of the day."
+      ]
+    },
+    "experience": {
+      "heading": "How a visit goes",
+      "items": [
+        "Walk in from the mall concourse or call ahead to hold a chair at a busy hour.",
+        "Pick the service, pick the color, and settle in; pedicure chairs take the long soak seriously.",
+        "Pay by card and walk back out to the rest of the shopping trip."
+      ]
+    },
+    "feature": {
+      "heading": "Pedicures with the soak built in",
+      "text": "The pedicure is the salon's signature: a proper soak, careful cuticle work, and polish that is dry before you reach the parking garage.",
+      "cta": { "label": "Call ahead", "href": "tel:2156576245" }
+    },
+    "catalog": {
+      "heading": "Find the salon <mark>fast.</mark>",
+      "items": [
+        { "title": "Mall directory listing", "href": "https://willowgroveparkmall.com/store/pro-nails" },
+        { "title": "Reviews on Yelp", "href": "https://www.yelp.com/biz/pro-nails-nailery-willow-gove-park-mall-willow-grove" },
+        { "title": "Directions to the mall", "href": "https://www.google.com/maps/search/?api=1&query=Willow%20Grove%20Park%20Mall%202500%20W%20Moreland%20Rd%20Willow%20Grove%20PA%2019090" }
+      ]
+    },
+    "contact": { "heading": "Willow Grove Park, <mark>daily.</mark>" },
+    "closing": { "heading": "Manicures, pedicures, and waxing, inside the mall", "kicker": "Willow Grove, Montgomery County" },
+    "links": [
+      { "label": "Mall directory", "href": "https://willowgroveparkmall.com/store/pro-nails" },
+      { "label": "Yelp", "href": "https://www.yelp.com/biz/pro-nails-nailery-willow-gove-park-mall-willow-grove" }
+    ],
+    "imageStyle": "Soft rose, blush, and white palette, glossy salon surfaces, bright mall daylight, clean beauty photography.",
+    "images": [
+      "a manicure station with a bottle of rose polish, a nail file, and a folded white towel under bright light",
+      "a row of white pedicure chairs with foot basins in a bright salon",
+      "a wall display of nail polish bottles arranged by color from blush to deep red",
+      "close-up of freshly painted almond-shaped nails in a soft pink gel, hands resting on marble",
+      "a technician's gloved hands shaping nails with a file, faces out of frame",
+      "a spa pedicure basin with rose petals floating in warm water",
+      "a glass salon storefront opening onto a bright mall concourse with planters",
+      "a tray of cuticle oil, buffer, and orange sticks on a rose-colored towel",
+      "a waxing room with a padded table, warm wax pot, and folded linens",
+      "french tip nails held over a latte on a marble cafe table",
+      "a salon reception desk with orchids and a card reader",
+      "a shelf of hand creams and sugar scrubs in pastel packaging",
+      "a mall parking garage entrance at dusk with soft pink sky"
+    ]
+  },
+  {
+    "slug": "salters-fireplace",
+    "name": "Salter's Fireplace & Outdoor Living",
+    "city": "Eagleville and Hatfield",
+    "category": "Fireplace and outdoor living showrooms",
+    "vertical": "Home Services",
+    "attitude": "warm",
+    "url": "https://saltersfireplace.com/",
+    "phone": "(610) 631-9372",
+    "address": "3076 Ridge Pike, Eagleville, PA 19403 (also 56 E Broad St, Hatfield, PA 19440)",
+    "hours": "Tue to Fri 10 am to 6 pm. Sat 10 am to 4 pm. Closed Sun and Mon.",
+    "description": "Salter's Fireplace & Outdoor Living has warmed Southeastern PA since 1974 with fireplaces, stoves, inserts, grills, fire pits, patio furniture, and outdoor kitchens across two showrooms in Eagleville and Hatfield.",
+    "tagline": "Warming Southeastern PA since 1974",
+    "marquee": ["Fireplaces", "Stoves and inserts", "Grills", "Fire pits", "Outdoor kitchens", "Patio furniture", "Two showrooms"],
+    "tokens": { "paper": "#F7F0E6", "ink": "#221713", "accent": "#C2461B", "accent2": "#E8B14A", "panel": "#E4D5C3", "deep": "#1C120E", "border": "2px", "radius": "10px" },
+    "fonts": { "display": "DM Serif Display", "text": "Work Sans", "displayFallback": "Georgia,serif" },
+    "primary": { "label": "Call Eagleville (610) 631-9372", "href": "tel:6106319372" },
+    "nav": [
+      { "label": "Products", "href": "#offerings" },
+      { "label": "Our work", "href": "#gallery" },
+      { "label": "Showrooms", "href": "#visit" }
+    ],
+    "hero": {
+      "eyebrow": "Eagleville and Hatfield, PA | Since 1974",
+      "headline": "Fireplaces and outdoor living, from two showrooms",
+      "sub": "Salter's has helped families across Southeastern PA for over 50 years, with fireplaces, stoves, inserts, grills, fire pits, patio furniture, and outdoor kitchens on display in Eagleville and Hatfield.",
+      "ctaSecondary": { "label": "Hatfield (215) 362-2443", "href": "tel:2153622443" },
+      "glassFloat": { "title": "Over 50 years", "sub": "Tue to Sat, both showrooms" }
+    },
+    "offerings": {
+      "heading": "Inside the house and <mark>out back.</mark>",
+      "items": [
+        "Fireplaces, stoves, and inserts in gas, wood, and electric",
+        "Grills and full outdoor kitchens, planned around the patio you have",
+        "Fire pits and patio furniture that turn a yard into a second living room",
+        "Service and repair for the fireplaces Salter's sells and the ones it did not"
+      ]
+    },
+    "proof": {
+      "items": [
+        "Warming Southeastern PA since 1974",
+        "Eagleville showroom at 3076 Ridge Pike",
+        "Hatfield showroom in the original 1924 Hatfield Firehouse, 8,600 sq ft",
+        "Tue to Fri 10 to 6, Sat 10 to 4"
+      ]
+    },
+    "gallery": { "heading": "Fire, stone, and <mark>the rooms around them.</mark>" },
+    "story": {
+      "heading": "Fifty years of Pennsylvania winters",
+      "paragraphs": [
+        "Salter's opened in 1974 and never left Montgomery County. The Eagleville showroom on Ridge Pike is where most first visits start, and the Hatfield showroom fills the original 1924 Hatfield Firehouse in the heart of town.",
+        "Both floors exist so a family can stand in front of a burning unit before buying it. Outdoor living grew out of the same idea: see the grill, the fire pit, and the furniture together, then build the backyard around them."
+      ]
+    },
+    "experience": {
+      "heading": "How a project runs",
+      "items": [
+        "Visit either showroom Tuesday through Saturday and see the units lit, not just pictured.",
+        "Salter's measures the room or the patio and quotes the install with the product.",
+        "Service and repair stay in-house, so the people who installed it are the people who come back."
+      ]
+    },
+    "feature": {
+      "heading": "The Hatfield Firehouse showroom",
+      "text": "Eight thousand six hundred square feet inside the 1924 firehouse at 56 E Broad Street, filled with fireplaces, stoves, grills, patio furniture, fire pits, and outdoor kitchens.",
+      "cta": { "label": "Hatfield showroom", "href": "https://saltersfireplace.com/hatfield-showroom/" }
+    },
+    "spotlight": {
+      "heading": "Outdoor kitchens and fire pits",
+      "text": "The outdoor living side is a full department, from built-in grills to the seating that surrounds a fire pit, designed to last through Southeastern PA seasons.",
+      "cta": { "label": "Browse products", "href": "https://saltersfireplace.com/products/" }
+    },
+    "catalog": {
+      "heading": "Products, projects, <mark>service.</mark>",
+      "items": [
+        { "title": "Browse products", "href": "https://saltersfireplace.com/products/" },
+        { "title": "Our work", "href": "https://saltersfireplace.com/our-work/" },
+        { "title": "Service and repair", "href": "https://saltersfireplace.com/service/" }
+      ]
+    },
+    "contact": { "heading": "Two showrooms, <mark>one family.</mark>" },
+    "closing": { "heading": "Warming Southeastern PA since 1974", "kicker": "Eagleville and Hatfield" },
+    "links": [
+      { "label": "Eagleville showroom", "href": "https://saltersfireplace.com/eagleville-showroom/" },
+      { "label": "Hatfield showroom", "href": "https://saltersfireplace.com/hatfield-showroom/" },
+      { "label": "Service area", "href": "https://saltersfireplace.com/service-area/" }
+    ],
+    "imageStyle": "Ember orange, brass, and dark stone tones, cozy showroom and backyard photography in Montgomery County, Pennsylvania.",
+    "images": [
+      "a lit gas fireplace with a stone surround and a wooden mantel in a warm living room",
+      "a cast-iron wood stove burning in a showroom corner with stacked split logs",
+      "a built-in stainless grill in a stone outdoor kitchen with a granite counter at dusk",
+      "a backyard fire pit ringed with Adirondack chairs, flames glowing at twilight",
+      "a fireplace showroom floor with several lit units in a row and a brick wall",
+      "an outdoor patio set with cushioned sofas under a pergola with string lights",
+      "a fireplace insert installed in an old brick hearth, close-up of flames and logs",
+      "a historic red-brick firehouse building converted to a showroom, tall arched doors",
+      "a technician's hands servicing a gas fireplace valve, face out of frame",
+      "a covered porch with a linear fire feature and a view of autumn trees",
+      "a ceramic kamado grill smoking on a flagstone patio",
+      "a wall of grill accessories, tongs, and wood pellets in a showroom",
+      "a suburban ranch house at night with a lit fireplace visible through the window"
+    ]
+  },
+  {
+    "slug": "southampton-hot-tub",
+    "name": "Southampton Hot Tub",
+    "city": "Exton and Huntingdon Valley",
+    "category": "Hot tubs, swim spas, and saunas",
+    "vertical": "Home Services",
+    "attitude": "glass",
+    "url": "https://southamptonhottub.com/",
+    "phone": "(215) 791-6170",
+    "address": "344 N Pottstown Pike, Suite 100, Exton, PA 19341 (also 725 County Line Rd, Huntingdon Valley, PA 19006)",
+    "hours": "",
+    "description": "Southampton Hot Tub is a family-owned and operated dealer with showrooms in Exton and Huntingdon Valley, an authorized retailer of Jacuzzi, Bullfrog Spas, Sundance, and Artesian Spas, plus saunas and cold plunges.",
+    "tagline": "Hot tubs, swim spas, and saunas, two showrooms",
+    "marquee": ["Jacuzzi", "Bullfrog Spas", "Sundance", "Artesian Spas", "Saunas", "Cold plunges", "Service and relocation"],
+    "tokens": { "paper": "#F0F6F8", "ink": "#0E2A36", "accent": "#0F7DA8", "accent2": "#8ADAEA", "panel": "#D3E6ED", "deep": "#0B2230", "border": "1px", "radius": "24px" },
+    "fonts": { "display": "Sora", "text": "Inter", "displayFallback": "Arial,sans-serif" },
+    "primary": { "label": "Call (215) 791-6170", "href": "tel:2157916170" },
+    "nav": [
+      { "label": "Spas", "href": "#offerings" },
+      { "label": "Gallery", "href": "#gallery" },
+      { "label": "Showrooms", "href": "#visit" }
+    ],
+    "hero": {
+      "eyebrow": "Exton and Huntingdon Valley, PA | Family owned",
+      "headline": "Hot tubs and saunas, two showrooms",
+      "sub": "Southampton Hot Tub is family-owned and operated, an authorized retailer of Jacuzzi, Bullfrog Spas, Sundance, and Artesian Spas, with saunas, swim spas, and cold plunges on the same floors.",
+      "ctaSecondary": { "label": "See the showrooms", "href": "#visit" },
+      "glassFloat": { "title": "Two showrooms", "sub": "Exton and Huntingdon Valley" }
+    },
+    "offerings": {
+      "heading": "Everything that holds <mark>warm water.</mark>",
+      "items": [
+        "Hot tubs from Jacuzzi, Bullfrog Spas, Sundance, and Artesian Spas",
+        "Swim spas for year-round training and family use",
+        "LeisureCraft and Sun & Soul saunas, plus Kodiak cold plunges",
+        "Maintenance, winterization, spring restarts, repairs, and spa relocation by certified technicians"
+      ]
+    },
+    "proof": {
+      "items": [
+        "Family-owned and operated",
+        "Authorized Jacuzzi, Bullfrog, Sundance, and Artesian retailer",
+        "Serving Bucks, Montgomery, Chester, and Delaware counties",
+        "Showrooms in Exton and Huntingdon Valley"
+      ]
+    },
+    "gallery": { "heading": "Steam, cedar, and <mark>still water.</mark>" },
+    "story": {
+      "heading": "A family business in two counties",
+      "paragraphs": [
+        "Southampton Hot Tub started as a family operation and still runs like one, with a showroom in Exton on Pottstown Pike and a second in Huntingdon Valley on County Line Road.",
+        "The brands on the floor are the ones the family would put in its own backyard. Jacuzzi, Bullfrog, Sundance, and Artesian hot tubs, swim spas, LeisureCraft and Sun & Soul saunas, and Kodiak cold plunges."
+      ]
+    },
+    "experience": {
+      "heading": "Buying and owning",
+      "items": [
+        "Wet-test and compare models in a showroom instead of guessing from a catalog.",
+        "Delivery and placement handled by the same team, including relocations when you move.",
+        "Seasonal service from certified technicians: winterization in the fall, restarts in spring, repairs in between."
+      ]
+    },
+    "feature": {
+      "heading": "Saunas and cold plunges",
+      "text": "Contrast therapy lives here too. LeisureCraft and Sun & Soul saunas sit beside Kodiak cold plunges, so a backyard can run hot and cold in the same corner.",
+      "cta": { "label": "Saunas", "href": "https://southamptonhottub.com/saunas/" }
+    },
+    "spotlight": {
+      "heading": "Service and relocation",
+      "text": "Certified technicians handle hot tub maintenance, seasonal services, repairs, and relocations across Bucks, Montgomery, Chester, and Delaware counties.",
+      "cta": { "label": "Areas covered", "href": "https://southamptonhottub.com/areas-covered/" }
+    },
+    "catalog": {
+      "heading": "Pick a floor to <mark>stand on.</mark>",
+      "items": [
+        { "title": "All locations", "href": "https://southamptonhottub.com/locations/" },
+        { "title": "Strong Spas", "href": "https://southamptonhottub.com/strong-spas/" },
+        { "title": "Areas covered", "href": "https://southamptonhottub.com/areas-covered/" }
+      ]
+    },
+    "contact": { "heading": "Exton or <mark>Huntingdon Valley.</mark>" },
+    "closing": { "heading": "Family-owned, two showrooms, every major spa brand", "kicker": "Chester County and Montgomery County" },
+    "links": [
+      { "label": "Saunas", "href": "https://southamptonhottub.com/saunas/" },
+      { "label": "Locations", "href": "https://southamptonhottub.com/locations/" }
+    ],
+    "imageStyle": "Cool aqua, cedar, and slate tones, spa and backyard photography with steam and water reflections, Pennsylvania suburbs.",
+    "images": [
+      "a hot tub steaming on a stone patio at dusk with string lights and bare trees behind",
+      "a spa showroom floor with several hot tubs on display under skylights",
+      "close-up of hot tub jets churning clear water with blue underwater lighting",
+      "a cedar barrel sauna in a snowy backyard with warm light through the door",
+      "a swim spa with a person swimming in place, seen from behind",
+      "a cold plunge tub on a wooden deck with mist rising in morning light",
+      "a technician's hands checking a spa filter cartridge, face out of frame",
+      "the interior of a sauna with cedar benches and a bucket of stones",
+      "a delivery crane lowering a wrapped hot tub over a suburban fence",
+      "a covered hot tub with a lifted cover and a towel folded on the steps",
+      "a showroom entrance on a suburban pike with glass doors and spa displays inside",
+      "a family backyard with a hot tub, fire pit, and Adirondack chairs, faces turned away",
+      "a spa control panel and water test strips on the edge of a tub"
+    ]
+  },
+  {
+    "slug": "thr-insurance",
+    "name": "THR Insurance Agency",
+    "city": "Telford",
+    "category": "Independent insurance agency",
+    "vertical": "Professional Services",
+    "attitude": "editorial",
+    "url": "http://www.thrinsurance.com/",
+    "phone": "(610) 426-0007",
+    "address": "97 Ridge Road, Telford, PA 18969",
+    "hours": "",
+    "description": "THR Insurance Agency in Telford, PA is the easy, trusted way to buy insurance: business insurance, home and auto insurance, and human resources support, serving Telford and Lansdale.",
+    "tagline": "The easy, trusted way to buy insurance",
+    "marquee": ["Business insurance", "Home and auto", "Human resources", "Request a quote", "Telford and Lansdale", "Five stars on Google"],
+    "tokens": { "paper": "#F3F1EA", "ink": "#1F2A1F", "accent": "#4F6B3A", "accent2": "#C9B27A", "panel": "#DFDED1", "deep": "#1A241A", "border": "1px", "radius": "8px" },
+    "fonts": { "display": "Fraunces", "text": "Manrope", "displayFallback": "Georgia,serif" },
+    "primary": { "label": "Request a quote", "href": "http://www.thrinsurance.com/request-a-quote.html" },
+    "nav": [
+      { "label": "Coverage", "href": "#offerings" },
+      { "label": "Agency", "href": "#gallery" },
+      { "label": "Contact", "href": "#visit" }
+    ],
+    "hero": {
+      "eyebrow": "Telford, PA | Independent agency",
+      "headline": "The easy, trusted way to buy insurance",
+      "sub": "THR Insurance Agency places business, home, and auto coverage with featured insurance partners, and adds human resources support most agencies do not offer.",
+      "ctaSecondary": { "label": "Call (610) 426-0007", "href": "tel:6104260007" },
+      "glassFloat": { "title": "Independent", "sub": "97 Ridge Road, Telford" }
+    },
+    "offerings": {
+      "heading": "Three things THR <mark>does well.</mark>",
+      "items": [
+        "Business insurance for contractors, shops, and offices, quoted across several carriers",
+        "Home and auto insurance bundled and reviewed at renewal, not just sold once",
+        "Human resources support for small employers who need policies, compliance, and answers",
+        "A client portal for ID cards, certificates, and policy documents"
+      ]
+    },
+    "proof": {
+      "items": [
+        "Independent agency with featured insurance partners",
+        "Serving Telford and Lansdale",
+        "Rated 5 stars across 29 Google reviews",
+        "97 Ridge Road, Telford, PA 18969"
+      ]
+    },
+    "gallery": { "heading": "Paperwork made <mark>plain.</mark>" },
+    "story": {
+      "heading": "Why an independent agency",
+      "paragraphs": [
+        "THR Insurance Agency sits on Ridge Road in Telford and works the way an independent agency should: it shops a sample of featured insurance partners for you, then explains the difference in plain language.",
+        "The human resources side grew from business clients asking the same questions about hiring and compliance. THR answered them, then made it a service."
+      ]
+    },
+    "experience": {
+      "heading": "Getting covered",
+      "items": [
+        "Request a quote online or call; THR gathers the details once and shops them across carriers.",
+        "Choose coverage with an agent who explains what changes and what does not.",
+        "Manage documents and requests through the client portal after you bind."
+      ]
+    },
+    "feature": {
+      "heading": "Business insurance and HR, together",
+      "text": "A business owner gets one agency for general liability, commercial auto, workers' comp, and the human resources questions that come with a payroll.",
+      "cta": { "label": "Human resources", "href": "http://www.thrinsurance.com/human-resources.html" }
+    },
+    "catalog": {
+      "heading": "Quote, coverage, <mark>portal.</mark>",
+      "items": [
+        { "title": "Request a quote", "href": "http://www.thrinsurance.com/request-a-quote.html" },
+        { "title": "Insurance", "href": "http://www.thrinsurance.com/insurance.html" },
+        { "title": "Client portal", "href": "https://insurlink.vertafore.com/" }
+      ]
+    },
+    "contact": { "heading": "Ridge Road, <mark>Telford.</mark>" },
+    "closing": { "heading": "The easy, trusted way to buy insurance", "kicker": "Telford and Lansdale, PA" },
+    "links": [
+      { "label": "About us", "href": "http://www.thrinsurance.com/about-us.html" },
+      { "label": "Contact", "href": "http://www.thrinsurance.com/contact.html" }
+    ],
+    "imageStyle": "Olive green, wheat, and cream palette, calm editorial photography of a small-town Pennsylvania agency office and the homes and businesses it insures.",
+    "images": [
+      "a tidy small-town agency office desk with a leather folio, pen, and a potted olive plant by a window",
+      "a red-brick main street storefront row in a Pennsylvania borough at golden hour",
+      "a contractor's work van parked outside a house with ladders on the roof rack, no lettering",
+      "a suburban family home with a covered porch and a sedan in the driveway",
+      "an agent's hands pointing at a policy document across a wooden table, faces out of frame",
+      "a machine shop floor with a lathe and safety cones, empty and clean",
+      "a set of car keys and a house key on a kitchen counter beside a coffee cup",
+      "a conference room with a wheat-colored wall and a laptop open on a walnut table",
+      "a farmhouse on a Bucks County road with a split-rail fence and autumn trees",
+      "a retail shop interior with a counter and shelves of goods, morning light",
+      "a stack of neatly labeled folders in an olive filing cabinet",
+      "a handshake across a desk in an office with green plants, faces cropped",
+      "a quiet Ridge Road view with a brick office building and a sidewalk"
+    ]
+  }
+]

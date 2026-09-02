@@ -1,0 +1,241 @@
+{
+  "slug": "county-line-veterinary-hospital",
+  "name": "County Line Veterinary Hospital",
+  "city": "Hatboro",
+  "category": "Full-service veterinary hospital",
+  "vertical": "Medical & Healthcare",
+  "attitude": "editorial",
+  "url": "https://countylineveterinary.com/",
+  "phone": "(215) 675-0533",
+  "address": "325 West County Line Road, Hatboro, PA 19040",
+  "hours": "Mon to Fri 9 am to 8 pm. Sat 9 am to 1 pm. Closed Sun.",
+  "description": "Since 1956, County Line Veterinary Hospital in Hatboro has provided pet owners of Montgomery and Bucks Counties with compassionate, high-quality care within a state-of-the-art, full-service veterinary hospital.",
+  "tagline": "Professional pet care with a personal touch",
+  "noindex": true,
+  "imageDisclosure": true,
+  "schemaType": "LocalBusiness",
+  "marquee": [
+    "Since 1956",
+    "Personal touch",
+    "Urgent care coming 2026",
+    "Online pharmacy"
+  ],
+  "tokens": {
+    "paper": "#F6F1E8",
+    "ink": "#111822",
+    "accent": "#0A2C4F",
+    "accent2": "#B4232C",
+    "panel": "#D6D9D6",
+    "deep": "#06182C",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#FFFFFF",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "2px",
+    "radius": "8px"
+  },
+  "fonts": {
+    "display": "Merriweather",
+    "text": "Lato",
+    "displayFallback": "Georgia,serif"
+  },
+  "logo": false,
+  "nav": [
+    {
+      "label": "Services",
+      "href": "#offerings"
+    },
+    {
+      "label": "Hospital",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Hatboro, PA | Since 1956",
+    "headline": "Professional pet care with a personal touch",
+    "sub": "Since 1956, compassionate, high-quality care for the pets of Montgomery and Bucks Counties in a state-of-the-art, full-service veterinary hospital.",
+    "ctaPrimary": {
+      "label": "Call (215) 675-0533",
+      "href": "tel:2156750533"
+    },
+    "ctaSecondary": {
+      "label": "Meet the doctors",
+      "href": "https://countylineveterinary.com/team/hatboro-veterinarians.php"
+    },
+    "glassFloat": {
+      "title": "Open until 8 pm weekdays",
+      "sub": "Urgent care services coming in 2026"
+    },
+    "marquee": [
+      "Since 1956",
+      "Personal touch",
+      "Urgent care coming 2026",
+      "Online pharmacy"
+    ]
+  },
+  "offerings": {
+    "heading": "Hospital care, <mark>every stage.</mark>",
+    "items": [
+      "Wellness exams, vaccinations, and preventive care",
+      "Diagnostics, surgery, and dentistry inside a full-service hospital",
+      "Weekday hours until 8 pm and an online pharmacy"
+    ]
+  },
+  "proof": {
+    "items": [
+      "Serving Montgomery and Bucks Counties since 1956",
+      "State-of-the-art, full-service veterinary hospital",
+      "Urgent care services coming in 2026",
+      "325 West County Line Road, Hatboro"
+    ]
+  },
+  "gallery": {
+    "heading": "Seventy years on <mark>County Line Road.</mark>",
+    "imageIndexes": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "story": {
+    "heading": "A hospital, not just a clinic",
+    "paragraphs": [
+      "County Line Veterinary Hospital has treated the pets of Hatboro since 1956, a full-service hospital with the doctors and staff to match.",
+      "Take a look around, meet the doctors and staff, and call to set up an appointment."
+    ],
+    "imageIndex": 8
+  },
+  "experience": {
+    "heading": "Visiting the hospital",
+    "items": [
+      "Call (215) 675-0533; weekday hours run until 8 pm.",
+      "Tour the hospital online, then meet the veterinarians.",
+      "Refill through the online pharmacy between visits."
+    ]
+  },
+  "feature": {
+    "heading": "Urgent care services coming in 2026",
+    "text": "The hospital is adding urgent care, so the team that knows your pet is there when it cannot wait for Monday.",
+    "cta": {
+      "label": "Hospital news",
+      "href": "https://countylineveterinary.com/vnf_news.php"
+    },
+    "imageIndex": 9
+  },
+  "catalog": {
+    "heading": "Meet the team, <mark>tour the building.</mark>",
+    "items": [
+      {
+        "title": "Veterinarians",
+        "href": "https://countylineveterinary.com/team/hatboro-veterinarians.php",
+        "imageIndex": 10
+      },
+      {
+        "title": "Hospital tour",
+        "href": "https://countylineveterinary.com/about/county-line-veterinary-hospital-tour.php",
+        "imageIndex": 11
+      },
+      {
+        "title": "Online pharmacy",
+        "href": "https://countylineveterinary.covetruspharmacy.com",
+        "imageIndex": 12
+      }
+    ]
+  },
+  "contact": {
+    "heading": "West County Line Road, <mark>Hatboro.</mark>"
+  },
+  "closing": {
+    "heading": "Professional pet care with a personal touch, since 1956",
+    "kicker": "Hatboro, Montgomery County",
+    "cta": {
+      "label": "Call (215) 675-0533",
+      "href": "tel:2156750533"
+    }
+  },
+  "links": [
+    {
+      "label": "Wellness services",
+      "href": "https://countylineveterinary.com/services/hatboro-pet-wellness-services.php"
+    },
+    {
+      "label": "Location",
+      "href": "https://countylineveterinary.com/about/hatboro-veterinary-location.php"
+    },
+    {
+      "label": "Staff",
+      "href": "https://countylineveterinary.com/team/hatboro-veterinary-staff.php"
+    }
+  ],
+  "sections": [
+    "hero",
+    "offerings",
+    "proof",
+    "gallery",
+    "story",
+    "experience",
+    "feature",
+    "spotlight",
+    "catalog",
+    "contact",
+    "closing"
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Illustrative concept: a veterinary hospital exam room with a navy accent wall, stainless table, and a black labrador sitting calmly"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Illustrative concept: a veterinarian's hands with a stethoscope on a tabby cat's side, face out of frame"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Illustrative concept: a brick veterinary hospital building with a white cupola and a flag on a suburban road"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Illustrative concept: a surgical suite with monitors and a draped table, ready and empty"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Illustrative concept: a hospital pharmacy shelf with labeled bottles and a refill counter"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Illustrative concept: a golden retriever puppy on a scale in a bright clinic hallway"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Illustrative concept: a waiting room with wooden benches, a fish tank, and a cat carrier"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Illustrative concept: a dental cleaning tray and a canine dental x-ray on a monitor, no readable text"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Illustrative concept: a technician walking a dog on a leash across a hospital parking lot, face turned away"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Illustrative concept: a lab bench with a microscope and sample tubes in a clinic"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Illustrative concept: a recovery kennel with a fleece blanket and a water bowl, soft light"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Illustrative concept: an old framed black-and-white photo of a brick building beside a modern sign blurred"
+    }
+  ]
+}

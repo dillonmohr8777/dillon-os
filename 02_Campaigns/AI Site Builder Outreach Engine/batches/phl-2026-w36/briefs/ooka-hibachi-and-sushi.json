@@ -1,0 +1,237 @@
+{
+  "slug": "ooka-hibachi-and-sushi",
+  "name": "Ooka Sushi & Hibachi Steak House, Willow Grove",
+  "city": "Willow Grove",
+  "category": "Japanese sushi and hibachi restaurant",
+  "vertical": "Restaurants & Food",
+  "attitude": "editorial",
+  "url": "http://ookasushi.com/willow-grove.html",
+  "phone": "(215) 659-7688",
+  "address": "1109 Easton Rd, Willow Grove, PA 19090",
+  "hours": "Lunch and dinner daily. Sunday is dinner menu only.",
+  "description": "Ooka in Willow Grove is a BYOB sushi and hibachi steak house on Easton Road, with lunch and dinner seven days a week.",
+  "tagline": "Sushi and hibachi, BYOB, Easton Road",
+  "noindex": true,
+  "imageDisclosure": true,
+  "schemaType": "LocalBusiness",
+  "marquee": [
+    "Sushi bar",
+    "Hibachi tables",
+    "BYOB",
+    "Willow Grove"
+  ],
+  "tokens": {
+    "paper": "#F6F2EC",
+    "ink": "#1B1B1B",
+    "accent": "#C8322B",
+    "accent2": "#D9B26F",
+    "panel": "#E4DCD2",
+    "deep": "#141414",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "4px"
+  },
+  "fonts": {
+    "display": "Prata",
+    "text": "Inter",
+    "displayFallback": "Georgia,serif"
+  },
+  "logo": false,
+  "nav": [
+    {
+      "label": "Menu",
+      "href": "#offerings"
+    },
+    {
+      "label": "Room",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Willow Grove, PA | Sushi and hibachi",
+    "headline": "Sushi bar on one side, hibachi fire on the other",
+    "sub": "Ooka's Willow Grove steak house serves sushi and hibachi for lunch and dinner seven days a week, and it is BYOB.",
+    "ctaPrimary": {
+      "label": "Call (215) 659-7688",
+      "href": "tel:2156597688"
+    },
+    "ctaSecondary": {
+      "label": "See the menu",
+      "href": "http://www.ookasushi.com/willow-grove-menu.html"
+    },
+    "glassFloat": {
+      "title": "BYOB",
+      "sub": "1109 Easton Rd"
+    },
+    "marquee": [
+      "Sushi bar",
+      "Hibachi tables",
+      "BYOB",
+      "Willow Grove"
+    ]
+  },
+  "offerings": {
+    "heading": "Two ways to <mark>eat here.</mark>",
+    "items": [
+      "Sushi and sashimi from the bar, rolls built to share",
+      "Hibachi steak, chicken, shrimp, and scallops cooked at the table",
+      "Lunch specials on weekdays and a Sunday dinner menu"
+    ]
+  },
+  "proof": {
+    "items": [
+      "BYOB",
+      "Open 7 days, lunch and dinner",
+      "1109 Easton Rd, Willow Grove",
+      "(215) 659-7688"
+    ]
+  },
+  "gallery": {
+    "heading": "Flame, rice, and <mark>lacquer.</mark>",
+    "imageIndexes": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "story": {
+    "heading": "The hibachi room and the sushi bar",
+    "paragraphs": [
+      "Ooka's Willow Grove location on Easton Road runs two rooms: a sushi bar with the chef in view, and a hibachi room where dinner is cooked at the table.",
+      "Bring your own bottle. Lunch runs weekdays and Saturday, dinner every night."
+    ],
+    "imageIndex": 8
+  },
+  "experience": {
+    "heading": "Planning dinner",
+    "items": [
+      "Call ahead for a hibachi table on weekend nights.",
+      "Bring wine or sake; the restaurant is BYOB.",
+      "Lunch specials are the fast way in on a weekday."
+    ]
+  },
+  "feature": {
+    "heading": "Hibachi for the table",
+    "text": "Steak, chicken, shrimp, and scallops on the flat-top grill, with fried rice and vegetables, cooked in front of the group.",
+    "cta": {
+      "label": "Call for a table",
+      "href": "tel:2156597688"
+    },
+    "imageIndex": 9
+  },
+  "catalog": {
+    "heading": "Menu and <mark>directions.</mark>",
+    "items": [
+      {
+        "title": "Willow Grove menu",
+        "href": "http://www.ookasushi.com/willow-grove-menu.html",
+        "imageIndex": 10
+      },
+      {
+        "title": "Contact the restaurant",
+        "href": "http://ookasushi.com/willow-grove-contact-us.html",
+        "imageIndex": 11
+      },
+      {
+        "title": "Reviews on Yelp",
+        "href": "https://www.yelp.com/biz/ooka-willow-grove-willow-grove",
+        "imageIndex": 12
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Easton Road, <mark>Willow Grove.</mark>"
+  },
+  "closing": {
+    "heading": "Sushi and hibachi, BYOB, seven days a week",
+    "kicker": "Willow Grove, Montgomery County",
+    "cta": {
+      "label": "Call (215) 659-7688",
+      "href": "tel:2156597688"
+    }
+  },
+  "links": [
+    {
+      "label": "Willow Grove page",
+      "href": "http://ookasushi.com/willow-grove.html"
+    },
+    {
+      "label": "Menu",
+      "href": "http://www.ookasushi.com/willow-grove-menu.html"
+    }
+  ],
+  "sections": [
+    "hero",
+    "offerings",
+    "proof",
+    "gallery",
+    "story",
+    "experience",
+    "feature",
+    "spotlight",
+    "catalog",
+    "contact",
+    "closing"
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Illustrative concept: a hibachi chef's flat-top grill with a tower of flame and sliced steak, chef out of frame"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Illustrative concept: a platter of assorted sushi rolls and nigiri on a black lacquer board with pickled ginger"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Illustrative concept: a hibachi table set with plates around the grill in a dark wood dining room"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Illustrative concept: a sushi chef's hands pressing nigiri behind a glass case, face out of frame"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Illustrative concept: a bowl of miso soup and a small salad with ginger dressing on a tray"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Illustrative concept: shrimp and scallops searing on a flat-top with a spatula, close-up"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Illustrative concept: a bottle of wine brought by guests beside two glasses on a dark table"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Illustrative concept: a spicy tuna roll cut and plated with a drizzle of sauce and sesame"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Illustrative concept: the restaurant's dining room with red paper lanterns and warm gold light"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Illustrative concept: a fried rice mound with vegetables on the grill, steam rising"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Illustrative concept: a suburban restaurant entrance on a busy road at dusk with warm lights"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Illustrative concept: a plate of hibachi steak, chicken, and vegetables with a small bowl of sauce"
+    }
+  ]
+}

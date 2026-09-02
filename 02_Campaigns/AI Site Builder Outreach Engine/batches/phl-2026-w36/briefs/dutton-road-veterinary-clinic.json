@@ -1,0 +1,237 @@
+{
+  "slug": "dutton-road-veterinary-clinic",
+  "name": "Dutton Road Veterinary Clinic",
+  "city": "Northeast Philadelphia",
+  "category": "Veterinary clinic and surgical facility",
+  "vertical": "Medical & Healthcare",
+  "attitude": "warm",
+  "url": "http://duttonroadvetclinic.com/",
+  "phone": "(215) 331-2968",
+  "address": "10901 Dutton Rd, Philadelphia, PA 19154",
+  "hours": "Mon, Tue, Thu 9 to 7. Wed and Fri 9 to 5.",
+  "description": "Dutton Road Veterinary Clinic is a full-service, state-of-the-art veterinary clinic and surgical facility in Northeast Philadelphia, run as a non-profit general practice for dogs and cats.",
+  "tagline": "Full-service clinic and surgical facility",
+  "noindex": true,
+  "imageDisclosure": true,
+  "schemaType": "LocalBusiness",
+  "marquee": [
+    "Call for an appointment",
+    "Non-profit practice",
+    "Dogs and cats",
+    "Surgery on site"
+  ],
+  "tokens": {
+    "paper": "#F6F0E8",
+    "ink": "#2B1D15",
+    "accent": "#B65F33",
+    "accent2": "#E9C79E",
+    "panel": "#DCCFC1",
+    "deep": "#2E1A12",
+    "onPaper": "#090909",
+    "onAccent": "#090909",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "2px",
+    "radius": "18px"
+  },
+  "fonts": {
+    "display": "Lora",
+    "text": "Work Sans",
+    "displayFallback": "Georgia,serif"
+  },
+  "logo": false,
+  "nav": [
+    {
+      "label": "Explore",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Northeast Philadelphia | Pet clinic and kennel",
+    "headline": "A full-service clinic and surgical facility, run as a non-profit",
+    "sub": "A non-profit general practice for dogs and cats, with surgery, dentistry, and boarding in one building on Dutton Road.",
+    "ctaPrimary": {
+      "label": "Call (215) 331-2968",
+      "href": "tel:2153312968"
+    },
+    "ctaSecondary": {
+      "label": "Get directions",
+      "href": "#visit"
+    },
+    "glassFloat": {
+      "title": "Open five days",
+      "sub": "Evening hours Mon, Tue, and Thu"
+    },
+    "marquee": [
+      "Call for an appointment",
+      "Non-profit practice",
+      "Dogs and cats",
+      "Surgery on site"
+    ]
+  },
+  "offerings": {
+    "heading": "What the clinic <mark>does.</mark>",
+    "items": [
+      "General procedures, from wellness visits to sick-pet exams",
+      "Surgical procedures in the on-site facility",
+      "Pet dentistry and boarding in the clinic's own kennel"
+    ]
+  },
+  "proof": {
+    "items": [
+      "Non-profit general practice for all dogs and cats",
+      "Full-service, state-of-the-art clinic and surgical facility",
+      "10901 Dutton Rd, Northeast Philadelphia, 19154",
+      "Appointments by phone: (215) 331-2968"
+    ]
+  },
+  "gallery": {
+    "heading": "Inside the clinic, <mark>one visit at a time.</mark>",
+    "imageIndexes": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "story": {
+    "heading": "Caring and knowledgeable, on purpose",
+    "paragraphs": [
+      "Dutton Road Veterinary Clinic is a full-service clinic and surgical facility in Northeast Philadelphia, with staff committed to the health and well-being of the animals in their care.",
+      "Running as a non-profit changes the math: the clinic exists to treat dogs and cats well, and a phone call is still the fastest way in."
+    ],
+    "imageIndex": 8
+  },
+  "experience": {
+    "heading": "How a visit works",
+    "items": [
+      "Call to make an appointment; the clinic books by phone.",
+      "Bring your dog or cat to Dutton Road, with parking at the building.",
+      "Surgery, dentistry, and boarding stay in-house with the same team."
+    ]
+  },
+  "feature": {
+    "heading": "Surgery without a second address",
+    "text": "The surgical facility is part of the clinic, so the diagnosis, the procedure, and the recheck happen with people who already know your pet.",
+    "cta": {
+      "label": "Surgical procedures",
+      "href": "http://duttonroadvetclinic.com/surgical-procedures-y503.html"
+    },
+    "imageIndex": 9
+  },
+  "catalog": {
+    "heading": "Straight to the <mark>right page.</mark>",
+    "items": [
+      {
+        "title": "Services",
+        "href": "http://duttonroadvetclinic.com/drvc-services-y659.html",
+        "imageIndex": 10
+      },
+      {
+        "title": "Boarding",
+        "href": "http://duttonroadvetclinic.com/boarding-y363.html",
+        "imageIndex": 11
+      },
+      {
+        "title": "Directions",
+        "href": "http://duttonroadvetclinic.com/drvc-directions-y664.html",
+        "imageIndex": 12
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Call, then <mark>come in.</mark>"
+  },
+  "closing": {
+    "heading": "Call to make an appointment today",
+    "kicker": "Dutton Road, Northeast Philadelphia",
+    "cta": {
+      "label": "Call (215) 331-2968",
+      "href": "tel:2153312968"
+    }
+  },
+  "links": [
+    {
+      "label": "Meet the staff",
+      "href": "http://duttonroadvetclinic.com/drvc-staff-y658.html"
+    },
+    {
+      "label": "Facebook",
+      "href": "https://www.facebook.com/p/Dutton-Road-Veterinary-Clinic-100063781851061/"
+    }
+  ],
+  "sections": [
+    "hero",
+    "offerings",
+    "proof",
+    "gallery",
+    "story",
+    "experience",
+    "feature",
+    "spotlight",
+    "catalog",
+    "contact",
+    "closing"
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Illustrative concept: a calm golden retriever sitting on a stainless exam table in a bright veterinary exam room, terracotta accent wall"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Illustrative concept: a tabby cat resting in a soft blanket inside a clean clinic kennel run"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Illustrative concept: veterinary surgical suite with a draped table, overhead light, and monitors, empty and ready"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Illustrative concept: a dental scaler tray and a canine dental x-ray on a lightbox"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Illustrative concept: a small brick veterinary clinic entrance with a wooden bench and a planter of marigolds"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Illustrative concept: a technician's gloved hands holding a puppy paw during a nail trim, face out of frame"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Illustrative concept: a row of pet carriers and leashes waiting in a warm reception area with cream walls"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Illustrative concept: a beagle walking beside a person's legs on a leash outside a clinic on a suburban road"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Illustrative concept: a clinic recovery room with padded kennels and a fleece blanket, soft morning light"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Illustrative concept: a scale, stethoscope, and vaccine vials arranged on a clinic counter"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Illustrative concept: a boarding kennel with a raised cot, water bowl, and a window onto trees"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Illustrative concept: a veterinary pharmacy shelf with labeled amber bottles and a prescription pad"
+    }
+  ]
+}

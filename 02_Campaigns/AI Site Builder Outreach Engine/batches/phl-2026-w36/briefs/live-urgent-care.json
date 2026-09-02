@@ -1,0 +1,237 @@
+{
+  "slug": "live-urgent-care",
+  "name": "Live Urgent Care King of Prussia",
+  "city": "King of Prussia",
+  "category": "Urgent care and walk-in clinic",
+  "vertical": "Medical & Healthcare",
+  "attitude": "glass",
+  "url": "https://liveurgentcare.com/locations/kingofprussia/",
+  "phone": "(484) 750-5212",
+  "address": "Town Center Road, King of Prussia, PA 19406",
+  "hours": "Open 7 days a week.",
+  "description": "Live Urgent Care in King of Prussia is a walk-in clinic open 7 days a week for pediatric and adult patients, with sick visits, injuries and on-site x-rays, lab testing, physicals, occupational medicine, and telehealth.",
+  "tagline": "Walk-in urgent care, open 7 days a week",
+  "noindex": true,
+  "imageDisclosure": true,
+  "schemaType": "LocalBusiness",
+  "marquee": [
+    "Open 7 days",
+    "Walk in or book ahead",
+    "On-site x-rays",
+    "Physicals"
+  ],
+  "tokens": {
+    "paper": "#F8F3F1",
+    "ink": "#33131C",
+    "accent": "#C8102E",
+    "accent2": "#062F42",
+    "panel": "#EDD5D9",
+    "deep": "#062F42",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#FFFFFF",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "14px"
+  },
+  "fonts": {
+    "display": "Plus Jakarta Sans",
+    "text": "Inter",
+    "displayFallback": "Arial,sans-serif"
+  },
+  "logo": false,
+  "nav": [
+    {
+      "label": "Services",
+      "href": "#offerings"
+    },
+    {
+      "label": "Clinic",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "hero": {
+    "eyebrow": "King of Prussia, PA | Urgent care",
+    "headline": "Care when the calendar will not give",
+    "sub": "Don't let sickness slow you down. Walk in or book ahead for same-day treatment, 7 days a week, pediatric and adult.",
+    "ctaPrimary": {
+      "label": "Book an appointment",
+      "href": "https://book.liveurgentcare.com"
+    },
+    "ctaSecondary": {
+      "label": "Call (484) 750-5212",
+      "href": "tel:4847505212"
+    },
+    "glassFloat": {
+      "title": "Open 7 days a week",
+      "sub": "Town Center Road, via DeKalb Road"
+    },
+    "marquee": [
+      "Open 7 days",
+      "Walk in or book ahead",
+      "On-site x-rays",
+      "Physicals"
+    ]
+  },
+  "offerings": {
+    "heading": "Walk in for <mark>any of these.</mark>",
+    "items": [
+      "Sick visits: colds, flu, COVID, strep, UTIs, ear infections, and more",
+      "Injuries and x-rays: sprains, fractures, cuts, and burns, with on-site imaging",
+      "Lab work and testing, physicals, occupational medicine, women's health, skin care, and telehealth"
+    ]
+  },
+  "proof": {
+    "items": [
+      "Open 7 days a week",
+      "Pediatric patients from 6 months and adults",
+      "No referral needed",
+      "Parking in front on the Town Center Road side"
+    ]
+  },
+  "gallery": {
+    "heading": "The clinic on <mark>Town Center Road.</mark>",
+    "imageIndexes": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "story": {
+    "heading": "Same-day care for the whole area",
+    "paragraphs": [
+      "The King of Prussia clinic sits on Town Center Road, accessible via DeKalb Road, serving Norristown, Bridgeport, Wayne, Conshohocken, and Valley Forge.",
+      "Walk in or book ahead, no referral needed, children from 6 months and adults."
+    ],
+    "imageIndex": 8
+  },
+  "experience": {
+    "heading": "How a visit goes",
+    "items": [
+      "Book online or walk in; parking is in front.",
+      "Imaging and lab work on site, answers the same visit.",
+      "Follow up through the portal or by telehealth."
+    ]
+  },
+  "feature": {
+    "heading": "Physicals and occupational medicine",
+    "text": "DOT, sports, school, and pre-employment physicals, plus drug testing, workers' comp, and screenings for local employers.",
+    "cta": {
+      "label": "Physicals",
+      "href": "https://liveurgentcare.com/physicals/"
+    },
+    "imageIndex": 9
+  },
+  "catalog": {
+    "heading": "Book, check coverage, <mark>see services.</mark>",
+    "items": [
+      {
+        "title": "Book an appointment",
+        "href": "https://book.liveurgentcare.com",
+        "imageIndex": 10
+      },
+      {
+        "title": "Insurance and pricing",
+        "href": "https://liveurgentcare.com/insurance-pricing/",
+        "imageIndex": 11
+      },
+      {
+        "title": "All services",
+        "href": "https://liveurgentcare.com/services/",
+        "imageIndex": 12
+      }
+    ]
+  },
+  "contact": {
+    "heading": "King of Prussia, <mark>7 days.</mark>"
+  },
+  "closing": {
+    "heading": "Walk in or book ahead, 7 days a week",
+    "kicker": "King of Prussia, Montgomery County",
+    "cta": {
+      "label": "Book an appointment",
+      "href": "https://book.liveurgentcare.com"
+    }
+  },
+  "links": [
+    {
+      "label": "Patient portal",
+      "href": "https://23060.portal.athenahealth.com/"
+    },
+    {
+      "label": "Occupational medicine",
+      "href": "https://liveurgentcare.com/occupational-medicine/"
+    }
+  ],
+  "sections": [
+    "hero",
+    "offerings",
+    "proof",
+    "gallery",
+    "story",
+    "experience",
+    "feature",
+    "spotlight",
+    "catalog",
+    "contact",
+    "closing"
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Illustrative concept: a modern urgent care reception with a glass partition, navy chairs, and red accent wall"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Illustrative concept: an exam room with a paper-covered table, a wall-mounted otoscope, and a window"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Illustrative concept: a digital x-ray machine in a bright imaging room, empty"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Illustrative concept: a nurse's gloved hands preparing a lab sample tube, face out of frame"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Illustrative concept: a suburban office park entrance with glass doors and a parking lot in front"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Illustrative concept: a pediatric exam corner with a colorful chair and a stuffed animal"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Illustrative concept: a laptop showing a blurred telehealth video call on a kitchen table"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Illustrative concept: a stack of sports physical forms and a stethoscope, no readable text"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Illustrative concept: a wrist being wrapped in a splint by a provider, faces out of frame"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Illustrative concept: a clean supply cabinet with bandages and vials, glass doors"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Illustrative concept: a waiting area with a water dispenser and morning light"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Illustrative concept: a highway interchange near King of Prussia at dusk with light trails"
+    }
+  ]
+}

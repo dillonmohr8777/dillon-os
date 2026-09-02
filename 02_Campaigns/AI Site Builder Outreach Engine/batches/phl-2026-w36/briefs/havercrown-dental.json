@@ -1,0 +1,241 @@
+{
+  "slug": "havercrown-dental",
+  "name": "HaverCrown Dental",
+  "city": "Havertown",
+  "category": "General, cosmetic, and specialty dentistry",
+  "vertical": "Medical & Healthcare",
+  "attitude": "warm",
+  "url": "",
+  "phone": "(610) 446-6688",
+  "address": "100 S Eagle Rd, Havertown, PA 19083",
+  "hours": "",
+  "description": "HaverCrown Dental on Eagle Road in Havertown offers preventive, cosmetic, and restorative dentistry, including implants, Invisalign, root canals, orthodontics, periodontics, and prosthodontics.",
+  "tagline": "Preventive, cosmetic, and restorative dentistry on Eagle Road",
+  "noindex": true,
+  "imageDisclosure": true,
+  "schemaType": "LocalBusiness",
+  "marquee": [
+    "Implants",
+    "Invisalign",
+    "Root canals",
+    "Orthodontics",
+    "Periodontics",
+    "Prosthodontics"
+  ],
+  "tokens": {
+    "paper": "#F3F6EE",
+    "ink": "#14211E",
+    "accent": "#1F5C3A",
+    "accent2": "#C9A75B",
+    "panel": "#CFDCD1",
+    "deep": "#102418",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "16px"
+  },
+  "fonts": {
+    "display": "Spectral",
+    "text": "Rubik",
+    "displayFallback": "Georgia,serif"
+  },
+  "logo": false,
+  "nav": [
+    {
+      "label": "Services",
+      "href": "#offerings"
+    },
+    {
+      "label": "Office",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Havertown, PA | Multi-specialty dental office",
+    "headline": "Your best interests, on Eagle Road",
+    "sub": "A comprehensive selection of preventive, cosmetic, and restorative dentistry from a team of dentists at 100 S Eagle Rd in Havertown.",
+    "ctaPrimary": {
+      "label": "Call (610) 446-6688",
+      "href": "tel:6104466688"
+    },
+    "ctaSecondary": {
+      "label": "Read the reviews",
+      "href": "https://reviews.birdeye.com/havercrown-dental-169064291949314"
+    },
+    "glassFloat": {
+      "title": "5-star average",
+      "sub": "171 reviews on Birdeye"
+    },
+    "marquee": [
+      "Implants",
+      "Invisalign",
+      "Root canals",
+      "Orthodontics",
+      "Periodontics",
+      "Prosthodontics"
+    ]
+  },
+  "offerings": {
+    "heading": "Every specialty, <mark>one office.</mark>",
+    "items": [
+      "General dentistry, cleanings, and preventive care for the family",
+      "Cosmetic dentistry and Invisalign",
+      "Dental implants, root canals, orthodontics, periodontics, and prosthodontics"
+    ]
+  },
+  "proof": {
+    "items": [
+      "Preventive, cosmetic, and restorative care",
+      "A team of dentists, not a single chair",
+      "5-star average across 171 reviews",
+      "100 S Eagle Rd, Havertown"
+    ]
+  },
+  "gallery": {
+    "heading": "Eagle Road, <mark>inside.</mark>",
+    "imageIndexes": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "story": {
+    "heading": "Why one office covers so much",
+    "paragraphs": [
+      "HaverCrown Dental brought general dentists and specialists under one roof in Havertown, so an implant, a root canal, or braces do not mean a referral across the county.",
+      "The reviews describe the same thing from the patient side: a team that explains the plan and finishes it in the same building."
+    ],
+    "imageIndex": 8
+  },
+  "experience": {
+    "heading": "A visit at HaverCrown",
+    "items": [
+      "Call to book; new patients start with an exam and a plan.",
+      "Specialty care scheduled in the same office when it is needed.",
+      "Financing through CareCredit for larger treatment."
+    ]
+  },
+  "feature": {
+    "heading": "Implants and prosthodontics",
+    "text": "Missing teeth are restored by the specialists on staff, from the implant to the crown, without leaving Eagle Road.",
+    "cta": {
+      "label": "Ask about implants",
+      "href": "tel:6104466688"
+    },
+    "imageIndex": 9
+  },
+  "catalog": {
+    "heading": "Reviews and <mark>listings.</mark>",
+    "items": [
+      {
+        "title": "Birdeye reviews",
+        "href": "https://reviews.birdeye.com/havercrown-dental-169064291949314",
+        "imageIndex": 10
+      },
+      {
+        "title": "Healthgrades profile",
+        "href": "https://www.healthgrades.com/group-directory/pa-pennsylvania/havertown/havercrown-dental-xb5cw8",
+        "imageIndex": 11
+      },
+      {
+        "title": "CareCredit listing",
+        "href": "https://www.carecredit.com/doctor-locator/havertown-pa/havercrown-dental-llc-jjp258/",
+        "imageIndex": 12
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Eagle Road, <mark>Havertown.</mark>"
+  },
+  "closing": {
+    "heading": "Preventive, cosmetic, and restorative dentistry in Havertown",
+    "kicker": "Havertown, Delaware County",
+    "cta": {
+      "label": "Call (610) 446-6688",
+      "href": "tel:6104466688"
+    }
+  },
+  "links": [
+    {
+      "label": "LinkedIn",
+      "href": "https://www.linkedin.com/company/havercrown-dental"
+    },
+    {
+      "label": "Yelp",
+      "href": "https://www.yelp.com/biz/havercrown-dental-havertown"
+    }
+  ],
+  "sections": [
+    "hero",
+    "offerings",
+    "proof",
+    "gallery",
+    "story",
+    "experience",
+    "feature",
+    "spotlight",
+    "catalog",
+    "contact",
+    "closing"
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Illustrative concept: a refined dental treatment room with a green accent wall, a modern chair, and a window onto trees"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Illustrative concept: a close-up of a dental implant model and a ceramic crown on a white tray"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Illustrative concept: a dentist's gloved hands adjusting an overhead light, face out of frame"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Illustrative concept: a bright waiting room with ivory chairs, a wood coffee table, and a fern"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Illustrative concept: a set of clear aligners in a case on a marble counter"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Illustrative concept: a sterilization room with sealed instrument pouches and a steel counter"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Illustrative concept: a two-story brick building on a suburban Pennsylvania road with a green awning"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Illustrative concept: a panoramic x-ray glowing on a wall monitor, no readable text"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Illustrative concept: a hygienist's tray with polishing cups and a mirror under warm light"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Illustrative concept: a consultation desk with a tablet and a gold-toned lamp"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Illustrative concept: an orthodontic model with brackets beside a set of tools"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Illustrative concept: a reception counter with orchids and a leather bench"
+    }
+  ]
+}

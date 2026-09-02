@@ -1,0 +1,486 @@
+[
+  {
+    "slug": "havercrown-dental",
+    "name": "HaverCrown Dental",
+    "city": "Havertown",
+    "category": "General, cosmetic, and specialty dentistry",
+    "vertical": "Medical & Healthcare",
+    "attitude": "warm",
+    "url": "",
+    "phone": "(610) 446-6688",
+    "address": "100 S Eagle Rd, Havertown, PA 19083",
+    "hours": "",
+    "description": "HaverCrown Dental on Eagle Road in Havertown offers preventive, cosmetic, and restorative dentistry, including implants, Invisalign, root canals, orthodontics, periodontics, and prosthodontics.",
+    "tagline": "Preventive, cosmetic, and restorative dentistry on Eagle Road",
+    "marquee": ["Implants", "Invisalign", "Root canals", "Orthodontics", "Periodontics", "Prosthodontics"],
+    "tokens": { "paper": "#F3F6EE", "ink": "#14211E", "accent": "#1F5C3A", "accent2": "#C9A75B", "panel": "#CFDCD1", "deep": "#102418", "border": "1px", "radius": "16px" },
+    "fonts": { "display": "Spectral", "text": "Rubik", "displayFallback": "Georgia,serif" },
+    "primary": { "label": "Call (610) 446-6688", "href": "tel:6104466688" },
+    "nav": [
+      { "label": "Services", "href": "#offerings" },
+      { "label": "Office", "href": "#gallery" },
+      { "label": "Visit", "href": "#visit" }
+    ],
+    "hero": {
+      "eyebrow": "Havertown, PA | Multi-specialty dental office",
+      "headline": "Your best interests, on Eagle Road",
+      "sub": "A comprehensive selection of preventive, cosmetic, and restorative dentistry from a team of dentists at 100 S Eagle Rd in Havertown.",
+      "ctaSecondary": { "label": "Read the reviews", "href": "https://reviews.birdeye.com/havercrown-dental-169064291949314" },
+      "glassFloat": { "title": "5-star average", "sub": "171 reviews on Birdeye" }
+    },
+    "offerings": {
+      "heading": "Every specialty, <mark>one office.</mark>",
+      "items": [
+        "General dentistry, cleanings, and preventive care for the family",
+        "Cosmetic dentistry and Invisalign",
+        "Dental implants, root canals, orthodontics, periodontics, and prosthodontics"
+      ]
+    },
+    "proof": {
+      "items": [
+        "Preventive, cosmetic, and restorative care",
+        "A team of dentists, not a single chair",
+        "5-star average across 171 reviews",
+        "100 S Eagle Rd, Havertown"
+      ]
+    },
+    "gallery": { "heading": "Eagle Road, <mark>inside.</mark>" },
+    "story": {
+      "heading": "Why one office covers so much",
+      "paragraphs": [
+        "HaverCrown Dental brought general dentists and specialists under one roof in Havertown, so an implant, a root canal, or braces do not mean a referral across the county.",
+        "The reviews describe the same thing from the patient side: a team that explains the plan and finishes it in the same building."
+      ]
+    },
+    "experience": {
+      "heading": "A visit at HaverCrown",
+      "items": [
+        "Call to book; new patients start with an exam and a plan.",
+        "Specialty care scheduled in the same office when it is needed.",
+        "Financing through CareCredit for larger treatment."
+      ]
+    },
+    "feature": {
+      "heading": "Implants and prosthodontics",
+      "text": "Missing teeth are restored by the specialists on staff, from the implant to the crown, without leaving Eagle Road.",
+      "cta": { "label": "Ask about implants", "href": "tel:6104466688" }
+    },
+    "catalog": {
+      "heading": "Reviews and <mark>listings.</mark>",
+      "items": [
+        { "title": "Birdeye reviews", "href": "https://reviews.birdeye.com/havercrown-dental-169064291949314" },
+        { "title": "Healthgrades profile", "href": "https://www.healthgrades.com/group-directory/pa-pennsylvania/havertown/havercrown-dental-xb5cw8" },
+        { "title": "CareCredit listing", "href": "https://www.carecredit.com/doctor-locator/havertown-pa/havercrown-dental-llc-jjp258/" }
+      ]
+    },
+    "contact": { "heading": "Eagle Road, <mark>Havertown.</mark>" },
+    "closing": { "heading": "Preventive, cosmetic, and restorative dentistry in Havertown", "kicker": "Havertown, Delaware County" },
+    "links": [
+      { "label": "LinkedIn", "href": "https://www.linkedin.com/company/havercrown-dental" },
+      { "label": "Yelp", "href": "https://www.yelp.com/biz/havercrown-dental-havertown" }
+    ],
+    "imageStyle": "Forest green, gold, and ivory palette, refined dental office photography in a Delaware County suburb, calm and precise.",
+    "images": [
+      "a refined dental treatment room with a green accent wall, a modern chair, and a window onto trees",
+      "a close-up of a dental implant model and a ceramic crown on a white tray",
+      "a dentist's gloved hands adjusting an overhead light, face out of frame",
+      "a bright waiting room with ivory chairs, a wood coffee table, and a fern",
+      "a set of clear aligners in a case on a marble counter",
+      "a sterilization room with sealed instrument pouches and a steel counter",
+      "a two-story brick building on a suburban Pennsylvania road with a green awning",
+      "a panoramic x-ray glowing on a wall monitor, no readable text",
+      "a hygienist's tray with polishing cups and a mirror under warm light",
+      "a consultation desk with a tablet and a gold-toned lamp",
+      "an orthodontic model with brackets beside a set of tools",
+      "a reception counter with orchids and a leather bench",
+      "a quiet parking lot outside a dental office at golden hour"
+    ]
+  },
+  {
+    "slug": "jarman-hvac",
+    "name": "Jarman Sales & Service, Inc.",
+    "city": "Philadelphia",
+    "category": "Air conditioning sales, installation, and service",
+    "vertical": "Home Services",
+    "attitude": "brutal",
+    "url": "https://jarmansalesandservice.com/",
+    "phone": "(215) 389-2345",
+    "address": "2041 Point Breeze Ave, Philadelphia, PA 19145",
+    "hours": "Mon to Fri 8 am to 4:30 pm. Sat 8 am to noon. Closed Sun.",
+    "description": "Jarman Sales & Service has been family-owned and operated in South Philadelphia since 1951, the leading Friedrich dealer for window units, through-the-wall units, custom installations, retrofits, maintenance, and winter storage.",
+    "tagline": "Family-owned since 1951, Friedrich's Philadelphia dealer",
+    "marquee": ["Since 1951", "Friedrich dealer", "Window units", "Through-the-wall units", "Winter storage"],
+    "tokens": { "paper": "#F3F1EC", "ink": "#101418", "accent": "#0B4F9C", "accent2": "#E8462B", "panel": "#D9DCDF", "deep": "#101418", "border": "5px", "radius": "0px" },
+    "fonts": { "display": "Big Shoulders Display", "text": "Rubik", "displayFallback": "Impact,sans-serif" },
+    "primary": { "label": "Call (215) 389-2345", "href": "tel:2153892345" },
+    "nav": [
+      { "label": "Services", "href": "#offerings" },
+      { "label": "Shop", "href": "#gallery" },
+      { "label": "Visit", "href": "#visit" }
+    ],
+    "hero": {
+      "eyebrow": "Point Breeze, Philadelphia | Since 1951",
+      "headline": "Window and wall units for Philadelphia, since 1951",
+      "sub": "Family-owned and operated for 75 years, Jarman is the leading dealer and service provider in the Philadelphia area for Friedrich, America's best air conditioner.",
+      "ctaSecondary": { "label": "Book online", "href": "https://jarman-sales-service-inc.reservio.com/" },
+      "glassFloat": { "title": "75 years", "sub": "2041 Point Breeze Ave" }
+    },
+    "offerings": {
+      "heading": "What Jarman <mark>installs and keeps running.</mark>",
+      "items": [
+        "Window units and through-the-wall units, sold and installed",
+        "Custom installations and retrofitting for rowhomes and apartments",
+        "Heat pumps, electric heat, and PTAC models, plus offseason maintenance and winter storage"
+      ]
+    },
+    "proof": {
+      "items": [
+        "Family-owned and operated since 1951",
+        "Leading Friedrich dealer in the Philadelphia area",
+        "Mon to Fri 8 to 4:30, Sat 8 to noon",
+        "2041 Point Breeze Ave, 19145"
+      ]
+    },
+    "gallery": { "heading": "Seventy-five summers on <mark>Point Breeze Avenue.</mark>" },
+    "story": {
+      "heading": "The shop that outlasted central air",
+      "paragraphs": [
+        "Jarman Sales & Service opened on Point Breeze Avenue in 1951 and is still family-owned and operated. Rowhomes need window and wall units, and Jarman became the leading Friedrich dealer in the Philadelphia area by installing them right.",
+        "The service side is the reason customers stay: offseason maintenance, retrofits when the sleeve changes, and winter storage so the unit is not in the window in January."
+      ]
+    },
+    "experience": {
+      "heading": "How it works",
+      "items": [
+        "Call or book online, then bring the measurements or have Jarman measure.",
+        "Pick the Friedrich model; installation is scheduled by the shop's own crew.",
+        "Maintenance in the offseason and storage over the winter, on request."
+      ]
+    },
+    "feature": {
+      "heading": "Through-the-wall units, retrofitted",
+      "text": "Old sleeves, odd sizes, and brick walls are the specialty. Jarman retrofits the opening and fits the unit so it looks like it was always there.",
+      "cta": { "label": "Book a visit", "href": "https://jarman-sales-service-inc.reservio.com/" }
+    },
+    "catalog": {
+      "heading": "Book, verify, <mark>find the shop.</mark>",
+      "items": [
+        { "title": "Online booking", "href": "https://jarman-sales-service-inc.reservio.com/" },
+        { "title": "BBB profile", "href": "https://www.bbb.org/us/pa/philadelphia/profile/air-conditioning-contractor/jarman-sales-service-inc-0241-80001145" },
+        { "title": "Directions", "href": "https://www.google.com/maps/search/?api=1&query=2041%20Point%20Breeze%20Ave%20Philadelphia%20PA%2019145" }
+      ]
+    },
+    "contact": { "heading": "Point Breeze Avenue, <mark>six days.</mark>" },
+    "closing": { "heading": "Family-owned since 1951, Friedrich's Philadelphia dealer", "kicker": "South Philadelphia" },
+    "links": [
+      { "label": "Official site", "href": "https://jarmansalesandservice.com/" },
+      { "label": "Book online", "href": "https://jarman-sales-service-inc.reservio.com/" }
+    ],
+    "imageStyle": "Cobalt blue, heat orange, and brick red palette, honest South Philadelphia rowhouse and workshop photography, sunny and direct.",
+    "images": [
+      "a window air conditioner installed in a South Philadelphia brick rowhouse window with a green awning above",
+      "a technician's hands sliding a through-the-wall unit into a brick sleeve, face out of frame",
+      "an old family appliance storefront on a Philadelphia avenue with units in the window, sign blurred",
+      "a row of boxed air conditioners stacked in a warehouse with a hand truck",
+      "a close-up of a clean air conditioner front grille and controls, no readable text",
+      "a Philadelphia rowhouse block on a hot summer afternoon with awnings and stoops",
+      "a service van parked on a narrow city street with a ladder, no lettering",
+      "a workshop bench with a coil cleaner, screwdrivers, and a unit opened for maintenance",
+      "a PTAC unit installed beneath an apartment window with a radiator cover",
+      "a wall of stored air conditioners wrapped and labeled in a winter storage room, no readable text",
+      "a heat pump wall unit in a renovated rowhome living room",
+      "an installer measuring a window opening with a tape, face out of frame",
+      "Point Breeze Avenue at dusk with lit storefronts and a trolley wire"
+    ]
+  },
+  {
+    "slug": "verruni-landscaping",
+    "name": "L. A. Verruni Landscaping",
+    "city": "Pottstown",
+    "category": "Landscaping, hardscape, and holiday decor",
+    "vertical": "Home Services",
+    "attitude": "industrial",
+    "url": "http://www.verrunilandscaping.com/",
+    "phone": "(610) 327-2622",
+    "address": "1357 Farmington Ave, Pottstown, PA 19464",
+    "hours": "",
+    "description": "L. A. Verruni Landscaping in Pottstown, PA has provided lawn services, hardscape construction, lawn mowing, holiday decorating, and bulk mulch for 41 years.",
+    "tagline": "Lawn, hardscape, and holiday decor for 41 years",
+    "marquee": ["Lawn services", "Hardscape", "Bulk mulch", "Holiday decorating", "41 years"],
+    "tokens": { "paper": "#FBF8EA", "ink": "#2A2410", "accent": "#2F6B2F", "accent2": "#F5C400", "panel": "#EDE6BF", "deep": "#1B1F12", "border": "4px", "radius": "0px" },
+    "fonts": { "display": "Barlow Condensed", "text": "Barlow", "displayFallback": "Arial Narrow,sans-serif" },
+    "primary": { "label": "Call (610) 327-2622", "href": "tel:6103272622" },
+    "nav": [
+      { "label": "Services", "href": "#offerings" },
+      { "label": "Work", "href": "#gallery" },
+      { "label": "Contact", "href": "#visit" }
+    ],
+    "hero": {
+      "eyebrow": "Pottstown, PA | 41 years",
+      "headline": "The property still needs a crew",
+      "sub": "Lawn services, hardscape construction, mowing, bulk mulch, and holiday decorating from a Pottstown crew that has done it for 41 years.",
+      "ctaSecondary": { "label": "See the services", "href": "#offerings" },
+      "glassFloat": { "title": "41 years in business", "sub": "1357 Farmington Ave" }
+    },
+    "offerings": {
+      "heading": "Four seasons of <mark>work.</mark>",
+      "items": [
+        "Lawn services and weekly mowing for homes and businesses",
+        "Hardscape construction: patios, walkways, walls, and stone masonry",
+        "Bulk mulch delivered, and holiday decorating and Christmas lighting"
+      ]
+    },
+    "proof": {
+      "items": [
+        "41 years in business",
+        "Owner Lisa Bickel",
+        "Insured, $1,000,000 policy",
+        "1357 Farmington Ave, Pottstown"
+      ]
+    },
+    "gallery": { "heading": "Mulch, stone, and <mark>lights.</mark>" },
+    "story": {
+      "heading": "Built on repeat customers",
+      "paragraphs": [
+        "L. A. Verruni Landscaping has run out of Farmington Avenue in Pottstown for 41 years, long enough that the same properties call for mowing in April, a patio in June, and lights in November.",
+        "Customers mention the speed of the stone work and the Christmas lighting by name. Both come from a small crew that has done the same jobs for decades."
+      ]
+    },
+    "experience": {
+      "heading": "Working with Verruni",
+      "items": [
+        "Call for an estimate on mowing, mulch, or a hardscape project.",
+        "Bulk mulch delivered to the driveway, spread if you want it.",
+        "Holiday decor installed before Thanksgiving and taken down after."
+      ]
+    },
+    "feature": {
+      "heading": "Stone patios, done quickly",
+      "text": "Hardscape construction is the crew's strong suit: patios, steps, and walls in stone, finished on a schedule people notice.",
+      "cta": { "label": "Ask about a patio", "href": "tel:6103272622" }
+    },
+    "catalog": {
+      "heading": "Verify, then <mark>call.</mark>",
+      "items": [
+        { "title": "Official site", "href": "http://www.verrunilandscaping.com/" },
+        { "title": "Reviews on Yelp", "href": "https://www.yelp.com/biz/l-a-verruni-landscaping-pottstown" },
+        { "title": "Directions", "href": "https://www.google.com/maps/search/?api=1&query=1357%20Farmington%20Ave%20Pottstown%20PA%2019464" }
+      ]
+    },
+    "contact": { "heading": "Farmington Avenue, <mark>Pottstown.</mark>" },
+    "closing": { "heading": "Lawn, hardscape, mulch, and holiday decor for 41 years", "kicker": "Pottstown, Montgomery County" },
+    "links": [
+      { "label": "Official site", "href": "http://www.verrunilandscaping.com/" }
+    ],
+    "imageStyle": "Deep green, safety yellow, and slate palette, straightforward landscaping crew photography around Pottstown, Pennsylvania.",
+    "images": [
+      "a freshly mowed lawn with crisp stripes in front of a stone house, yellow mower at the edge",
+      "a crew member's gloved hands setting a bluestone patio slab, face out of frame",
+      "a pile of dark bulk mulch beside a wheelbarrow in a driveway",
+      "a house outlined in warm white Christmas lights with a wreath and snow",
+      "a stone retaining wall with a new garden bed and evergreen shrubs",
+      "a landscape trailer loaded with mowers and trimmers behind a green pickup, no lettering",
+      "a flagstone walkway curving to a front porch through fresh mulch beds",
+      "a stone patio with a fire pit and a view of Montgomery County fields",
+      "a close-up of a string trimmer edging a sidewalk, face out of frame",
+      "a front yard with tulips, fresh mulch, and a mowed lawn in spring",
+      "a garland and lights wrapped around a porch column at dusk",
+      "a dump truck bed of mulch at a small landscaping yard, morning light",
+      "a rural road in Pottstown with a farmhouse and a freshly landscaped lawn"
+    ]
+  },
+  {
+    "slug": "live-urgent-care",
+    "name": "Live Urgent Care King of Prussia",
+    "city": "King of Prussia",
+    "category": "Urgent care and walk-in clinic",
+    "vertical": "Medical & Healthcare",
+    "attitude": "glass",
+    "url": "https://liveurgentcare.com/locations/kingofprussia/",
+    "phone": "(484) 750-5212",
+    "address": "Town Center Road, King of Prussia, PA 19406",
+    "hours": "Open 7 days a week. Hours on the official site.",
+    "description": "Live Urgent Care in King of Prussia is a walk-in clinic open 7 days a week for pediatric and adult patients, with sick visits, injuries and on-site x-rays, lab testing, physicals, occupational medicine, and telehealth.",
+    "tagline": "Walk-in urgent care, open 7 days a week",
+    "marquee": ["Open 7 days", "Walk in or book ahead", "On-site x-rays", "Lab testing", "Physicals", "Telehealth"],
+    "tokens": { "paper": "#F8F3F1", "ink": "#33131C", "accent": "#C8102E", "accent2": "#062F42", "panel": "#EDD5D9", "deep": "#062F42", "border": "1px", "radius": "14px" },
+    "fonts": { "display": "Plus Jakarta Sans", "text": "Inter", "displayFallback": "Arial,sans-serif" },
+    "primary": { "label": "Book an appointment", "href": "https://book.liveurgentcare.com" },
+    "nav": [
+      { "label": "Services", "href": "#offerings" },
+      { "label": "Clinic", "href": "#gallery" },
+      { "label": "Visit", "href": "#visit" }
+    ],
+    "hero": {
+      "eyebrow": "King of Prussia, PA | Urgent care",
+      "headline": "Care when the calendar will not give",
+      "sub": "Don't let sickness slow you down. Walk in or book ahead for same-day treatment for illness, minor injuries, and more, 7 days a week, pediatric and adult.",
+      "ctaSecondary": { "label": "Call (484) 750-5212", "href": "tel:4847505212" },
+      "glassFloat": { "title": "Open 7 days a week", "sub": "Town Center Road, via DeKalb Road" }
+    },
+    "offerings": {
+      "heading": "Walk in for <mark>any of these.</mark>",
+      "items": [
+        "Sick visits: colds, flu, COVID, strep, UTIs, ear infections, and more",
+        "Injuries and x-rays: sprains, fractures, cuts, and burns, with on-site imaging",
+        "Lab work and testing, physicals, occupational medicine, women's health, skin care, and telehealth"
+      ]
+    },
+    "proof": {
+      "items": [
+        "Open 7 days a week",
+        "Pediatric patients from 6 months and adults",
+        "No referral needed",
+        "Parking in front on the Town Center Road side"
+      ]
+    },
+    "gallery": { "heading": "The clinic on <mark>Town Center Road.</mark>" },
+    "story": {
+      "heading": "Same-day care for the whole area",
+      "paragraphs": [
+        "Live Urgent Care's King of Prussia clinic sits on Town Center Road, easily accessible via DeKalb Road, and serves Norristown, Bridgeport, Wayne, Conshohocken, and Valley Forge.",
+        "Walk in or book ahead for any service, no referral needed. Providers see children ages 6 months and up alongside adults, every day of the week."
+      ]
+    },
+    "experience": {
+      "heading": "How a visit goes",
+      "items": [
+        "Book online to hold a spot, or walk in; parking is in front of the clinic.",
+        "Imaging and lab work happen on site, so most answers arrive the same visit.",
+        "Follow up through the patient portal, or see a provider from home by telehealth."
+      ]
+    },
+    "feature": {
+      "heading": "Physicals and occupational medicine",
+      "text": "DOT, sports, school, and pre-employment physicals, plus drug testing, workers' comp, and screenings for local employers.",
+      "cta": { "label": "Physicals", "href": "https://liveurgentcare.com/physicals/" }
+    },
+    "catalog": {
+      "heading": "Book, check coverage, <mark>see services.</mark>",
+      "items": [
+        { "title": "Book an appointment", "href": "https://book.liveurgentcare.com" },
+        { "title": "Insurance and pricing", "href": "https://liveurgentcare.com/insurance-pricing/" },
+        { "title": "All services", "href": "https://liveurgentcare.com/services/" }
+      ]
+    },
+    "contact": { "heading": "King of Prussia, <mark>7 days.</mark>" },
+    "closing": { "heading": "Walk in or book ahead, 7 days a week", "kicker": "King of Prussia, Montgomery County" },
+    "links": [
+      { "label": "Patient portal", "href": "https://23060.portal.athenahealth.com/" },
+      { "label": "Occupational medicine", "href": "https://liveurgentcare.com/occupational-medicine/" }
+    ],
+    "imageStyle": "Clinical red, navy, and white palette, bright modern urgent care photography in a suburban office park, clean and reassuring.",
+    "images": [
+      "a modern urgent care reception with a glass partition, navy chairs, and red accent wall",
+      "an exam room with a paper-covered table, a wall-mounted otoscope, and a window",
+      "a digital x-ray machine in a bright imaging room, empty",
+      "a nurse's gloved hands preparing a lab sample tube, face out of frame",
+      "a suburban office park entrance with glass doors and a parking lot in front",
+      "a pediatric exam corner with a colorful chair and a stuffed animal",
+      "a laptop showing a blurred telehealth video call on a kitchen table",
+      "a stack of sports physical forms and a stethoscope, no readable text",
+      "a wrist being wrapped in a splint by a provider, faces out of frame",
+      "a clean supply cabinet with bandages and vials, glass doors",
+      "a waiting area with a water dispenser and morning light",
+      "a highway interchange near King of Prussia at dusk with light trails",
+      "a family car parked in front of a clinic entrance, no lettering"
+    ]
+  },
+  {
+    "slug": "ooka-hibachi-and-sushi",
+    "name": "Ooka Sushi & Hibachi Steak House, Willow Grove",
+    "city": "Willow Grove",
+    "category": "Japanese sushi and hibachi restaurant",
+    "vertical": "Restaurants & Food",
+    "attitude": "editorial",
+    "url": "http://ookasushi.com/willow-grove.html",
+    "phone": "(215) 659-7688",
+    "address": "1109 Easton Rd, Willow Grove, PA 19090",
+    "hours": "Mon to Fri lunch 11 am to 3 pm, dinner 4:30 to 10 pm. Sat lunch noon to 3, dinner 4:30 to 11. Sun noon to 10 pm, dinner menu only.",
+    "description": "Ooka in Willow Grove is a BYOB sushi and hibachi steak house on Easton Road, with lunch and dinner seven days a week.",
+    "tagline": "Sushi and hibachi, BYOB, Easton Road",
+    "marquee": ["Sushi bar", "Hibachi tables", "BYOB", "Lunch and dinner", "Willow Grove"],
+    "tokens": { "paper": "#F6F2EC", "ink": "#1B1B1B", "accent": "#C8322B", "accent2": "#D9B26F", "panel": "#E4DCD2", "deep": "#141414", "border": "1px", "radius": "4px" },
+    "fonts": { "display": "Prata", "text": "Inter", "displayFallback": "Georgia,serif" },
+    "primary": { "label": "Call (215) 659-7688", "href": "tel:2156597688" },
+    "nav": [
+      { "label": "Menu", "href": "#offerings" },
+      { "label": "Room", "href": "#gallery" },
+      { "label": "Visit", "href": "#visit" }
+    ],
+    "hero": {
+      "eyebrow": "Willow Grove, PA | Sushi and hibachi",
+      "headline": "Sushi bar on one side, hibachi fire on the other",
+      "sub": "Ooka's Willow Grove steak house serves sushi and hibachi for lunch and dinner seven days a week, and it is BYOB.",
+      "ctaSecondary": { "label": "See the menu", "href": "http://www.ookasushi.com/willow-grove-menu.html" },
+      "glassFloat": { "title": "BYOB", "sub": "1109 Easton Rd" }
+    },
+    "offerings": {
+      "heading": "Two ways to <mark>eat here.</mark>",
+      "items": [
+        "Sushi and sashimi from the bar, rolls built to share",
+        "Hibachi steak, chicken, shrimp, and scallops cooked at the table",
+        "Lunch specials on weekdays and a Sunday dinner menu"
+      ]
+    },
+    "proof": {
+      "items": [
+        "BYOB",
+        "Open 7 days, lunch and dinner",
+        "1109 Easton Rd, Willow Grove",
+        "(215) 659-7688"
+      ]
+    },
+    "gallery": { "heading": "Flame, rice, and <mark>lacquer.</mark>" },
+    "story": {
+      "heading": "The hibachi room and the sushi bar",
+      "paragraphs": [
+        "Ooka's Willow Grove location on Easton Road has run the same two rooms for years: a sushi bar with a chef in view, and a hibachi room where dinner is cooked on the grill in front of the table.",
+        "Bring your own bottle. Lunch runs weekdays and Saturday, dinner every night, and Sunday is dinner menu only."
+      ]
+    },
+    "experience": {
+      "heading": "Planning dinner",
+      "items": [
+        "Call ahead for a hibachi table, especially on weekend nights.",
+        "Bring wine or sake; the restaurant is BYOB.",
+        "Lunch specials are the fast way in on a weekday."
+      ]
+    },
+    "feature": {
+      "heading": "Hibachi for the table",
+      "text": "Steak, chicken, shrimp, and scallops on the flat-top grill, with fried rice and vegetables, cooked in front of the group.",
+      "cta": { "label": "Call for a table", "href": "tel:2156597688" }
+    },
+    "catalog": {
+      "heading": "Menu and <mark>directions.</mark>",
+      "items": [
+        { "title": "Willow Grove menu", "href": "http://www.ookasushi.com/willow-grove-menu.html" },
+        { "title": "Contact the restaurant", "href": "http://ookasushi.com/willow-grove-contact-us.html" },
+        { "title": "Reviews on Yelp", "href": "https://www.yelp.com/biz/ooka-willow-grove-willow-grove" }
+      ]
+    },
+    "contact": { "heading": "Easton Road, <mark>Willow Grove.</mark>" },
+    "closing": { "heading": "Sushi and hibachi, BYOB, seven days a week", "kicker": "Willow Grove, Montgomery County" },
+    "links": [
+      { "label": "Willow Grove page", "href": "http://ookasushi.com/willow-grove.html" },
+      { "label": "Menu", "href": "http://www.ookasushi.com/willow-grove-menu.html" }
+    ],
+    "imageStyle": "Charcoal, vermilion, and gold palette, dramatic Japanese steak house photography with flame and lacquer, suburban Pennsylvania.",
+    "images": [
+      "a hibachi chef's flat-top grill with a tower of flame and sliced steak, chef out of frame",
+      "a platter of assorted sushi rolls and nigiri on a black lacquer board with pickled ginger",
+      "a hibachi table set with plates around the grill in a dark wood dining room",
+      "a sushi chef's hands pressing nigiri behind a glass case, face out of frame",
+      "a bowl of miso soup and a small salad with ginger dressing on a tray",
+      "shrimp and scallops searing on a flat-top with a spatula, close-up",
+      "a bottle of wine brought by guests beside two glasses on a dark table",
+      "a spicy tuna roll cut and plated with a drizzle of sauce and sesame",
+      "the restaurant's dining room with red paper lanterns and warm gold light",
+      "a fried rice mound with vegetables on the grill, steam rising",
+      "a suburban restaurant entrance on a busy road at dusk with warm lights",
+      "a plate of hibachi steak, chicken, and vegetables with a small bowl of sauce",
+      "a lunch bento tray with tempura, rice, and a California roll"
+    ]
+  }
+]

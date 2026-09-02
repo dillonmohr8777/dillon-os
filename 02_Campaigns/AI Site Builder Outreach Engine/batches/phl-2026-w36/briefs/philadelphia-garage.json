@@ -1,0 +1,233 @@
+{
+  "slug": "philadelphia-garage",
+  "name": "Philadelphia Garage",
+  "city": "West Chester",
+  "category": "Garage floors and organization",
+  "vertical": "Home Services",
+  "attitude": "industrial",
+  "url": "https://philadelphiagarage.com/",
+  "phone": "(610) 788-2242",
+  "address": "11 Hagerty Blvd, Suite 8, West Chester, PA 19382",
+  "hours": "",
+  "description": "Philadelphia Garage builds award-winning garage floor and organization solutions from West Chester, PA, with high-grade materials, concierge-level service, and more than 20 years of experience.",
+  "tagline": "Garage floors and organization, West Chester PA",
+  "noindex": true,
+  "imageDisclosure": true,
+  "schemaType": "LocalBusiness",
+  "marquee": [
+    "Award-winning garage floors",
+    "800+ five-star reviews",
+    "Concierge service",
+    "20+ years"
+  ],
+  "tokens": {
+    "paper": "#F4F4F1",
+    "ink": "#151515",
+    "accent": "#B3121F",
+    "accent2": "#FFC53D",
+    "panel": "#DDDDD8",
+    "deep": "#151515",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "4px",
+    "radius": "4px"
+  },
+  "fonts": {
+    "display": "Anton",
+    "text": "Public Sans",
+    "displayFallback": "Impact,sans-serif"
+  },
+  "logo": false,
+  "nav": [
+    {
+      "label": "Floors",
+      "href": "#offerings"
+    },
+    {
+      "label": "Projects",
+      "href": "#gallery"
+    },
+    {
+      "label": "Quote",
+      "href": "#visit"
+    }
+  ],
+  "hero": {
+    "eyebrow": "West Chester, PA | Garage floors and organization",
+    "headline": "The absolute authority in garage makeovers",
+    "sub": "Award-winning garage floor and organization solutions from a team that has spent more than 20 years hiring the best installers and using quality materials.",
+    "ctaPrimary": {
+      "label": "Call (610) 788-2242",
+      "href": "tel:6107882242"
+    },
+    "ctaSecondary": {
+      "label": "See the floors",
+      "href": "#offerings"
+    },
+    "glassFloat": {
+      "title": "800+ five-star reviews",
+      "sub": "Concierge level of service"
+    },
+    "marquee": [
+      "Award-winning garage floors",
+      "800+ five-star reviews",
+      "Concierge service",
+      "20+ years"
+    ]
+  },
+  "offerings": {
+    "heading": "Floors first, then <mark>everything off the floor.</mark>",
+    "items": [
+      "Garage floor coatings in high-grade, durable materials",
+      "Cabinets, slatwall, and overhead storage",
+      "Personalized solutions depending on functionality and style"
+    ]
+  },
+  "proof": {
+    "items": [
+      "Over 800 five-star reviews",
+      "More than 20 years of experience",
+      "Award-winning floor and organization solutions",
+      "Concierge level of service from the whole team"
+    ]
+  },
+  "gallery": {
+    "heading": "Before was concrete. <mark>After is this.</mark>",
+    "imageIndexes": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "story": {
+    "heading": "Why the reviews say the same thing",
+    "paragraphs": [
+      "Philadelphia Garage built its reputation on two decisions repeated for more than 20 years: hire the best installers and use quality materials.",
+      "The concierge level of service is the other half. One team plans the floor and the storage together, then installs without upending your week."
+    ],
+    "imageIndex": 8
+  },
+  "experience": {
+    "heading": "How a makeover runs",
+    "items": [
+      "A visit to the garage with real measurements and real samples.",
+      "Floor and storage designed for each other.",
+      "Installation by the same crew, then a walk-through."
+    ]
+  },
+  "feature": {
+    "heading": "Beautiful, durable garage floors",
+    "text": "High-grade coatings resist hot tires, road salt, and dropped tools, and they wipe clean. The finish is chosen with you.",
+    "cta": {
+      "label": "Plan a floor",
+      "href": "tel:6107882242"
+    },
+    "imageIndex": 9
+  },
+  "catalog": {
+    "heading": "Get the <mark>real thing.</mark>",
+    "items": [
+      {
+        "title": "Official site",
+        "href": "https://philadelphiagarage.com/",
+        "imageIndex": 10
+      },
+      {
+        "title": "Call for a quote",
+        "href": "tel:6107882242",
+        "imageIndex": 11
+      },
+      {
+        "title": "Directions to the shop",
+        "href": "https://www.google.com/maps/search/?api=1&query=11%20Hagerty%20Blvd%20Suite%208%20West%20Chester%20PA%2019382",
+        "imageIndex": 12
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Hagerty Boulevard, <mark>West Chester.</mark>"
+  },
+  "closing": {
+    "heading": "Award-winning garage floors and organization",
+    "kicker": "West Chester, serving the Philadelphia area",
+    "cta": {
+      "label": "Call (610) 788-2242",
+      "href": "tel:6107882242"
+    }
+  },
+  "links": [
+    {
+      "label": "Official site",
+      "href": "https://philadelphiagarage.com/"
+    }
+  ],
+  "sections": [
+    "hero",
+    "offerings",
+    "proof",
+    "gallery",
+    "story",
+    "experience",
+    "feature",
+    "spotlight",
+    "catalog",
+    "contact",
+    "closing"
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Illustrative concept: a two-car garage with a glossy gray flake epoxy floor, red metal cabinets, and a clean workbench"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Illustrative concept: close-up of a freshly coated garage floor with reflective flake finish and a car tire at the edge"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Illustrative concept: a garage wall of slatwall panels holding bikes, tools, and hoses in neat rows"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Illustrative concept: overhead garage storage racks holding labeled bins above a parked SUV"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Illustrative concept: an installer's gloved hands rolling epoxy coating across a concrete slab, face out of frame"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Illustrative concept: a black and red cabinet set with a stainless countertop under bright LED shop lights"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Illustrative concept: a raw concrete garage floor mid-prep with a diamond grinder and dust extractor"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Illustrative concept: a finished garage doubling as a home gym with rubber tiles and a squat rack"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Illustrative concept: a detailed view of a solid red epoxy floor meeting a white garage door"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Illustrative concept: a mudroom-style garage entry with lockers and a bench on a flake floor"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Illustrative concept: a suburban stone house with the garage door open showing a bright organized interior"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Illustrative concept: a pegboard wall with outlined tools and a rolling toolbox"
+    }
+  ]
+}

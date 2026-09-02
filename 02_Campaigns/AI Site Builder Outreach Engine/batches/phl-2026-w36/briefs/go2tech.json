@@ -1,0 +1,237 @@
+{
+  "slug": "go2tech",
+  "name": "GO2 Tech",
+  "city": "Springfield",
+  "category": "Managed IT and security provider",
+  "vertical": "Professional Services",
+  "attitude": "glass",
+  "url": "https://www.go2tech.com/",
+  "phone": "(610) 567-3462",
+  "address": "606 Baltimore Pike, Springfield, PA 19064",
+  "hours": "Mon to Fri 8:30 am to 5:00 pm. Closed Sat and Sun.",
+  "description": "GO2 Tech is Philadelphia's award-winning managed IT and security provider, empowering Greater Philadelphia businesses since 2002 with cybersecurity, network infrastructure, cloud services, business communications, and physical security.",
+  "tagline": "Award-winning managed IT and security provider",
+  "noindex": true,
+  "imageDisclosure": true,
+  "schemaType": "LocalBusiness",
+  "marquee": [
+    "Cybersecurity",
+    "Network infrastructure",
+    "Cloud services",
+    "Physical security"
+  ],
+  "tokens": {
+    "paper": "#F3F6EE",
+    "ink": "#0B0F0A",
+    "accent": "#79B02E",
+    "accent2": "#1B3A6B",
+    "panel": "#DCE4D0",
+    "deep": "#0B0F0A",
+    "onPaper": "#090909",
+    "onAccent": "#090909",
+    "onAccent2": "#FFFFFF",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "14px"
+  },
+  "fonts": {
+    "display": "Space Grotesk",
+    "text": "IBM Plex Sans",
+    "displayFallback": "Arial,sans-serif"
+  },
+  "logo": false,
+  "nav": [
+    {
+      "label": "Services",
+      "href": "#offerings"
+    },
+    {
+      "label": "Work",
+      "href": "#gallery"
+    },
+    {
+      "label": "Contact",
+      "href": "#visit"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Springfield, PA | Managed IT and security",
+    "headline": "Philadelphia's award-winning managed IT and security provider",
+    "sub": "Over 20 years of innovative IT and security solutions for Greater Philadelphia businesses, from the server room to the front door.",
+    "ctaPrimary": {
+      "label": "Call (610) 567-3462",
+      "href": "tel:6105673462"
+    },
+    "ctaSecondary": {
+      "label": "See the services",
+      "href": "#offerings"
+    },
+    "glassFloat": {
+      "title": "Established 2002",
+      "sub": "606 Baltimore Pike, Springfield"
+    },
+    "marquee": [
+      "Cybersecurity",
+      "Network infrastructure",
+      "Cloud services",
+      "Physical security"
+    ]
+  },
+  "offerings": {
+    "heading": "Five lines of <mark>service.</mark>",
+    "items": [
+      "Cybersecurity, managed IT, and remote desktop support",
+      "Network infrastructure, administration, and voice and data cabling",
+      "Cloud services, business communications, and physical security systems"
+    ]
+  },
+  "proof": {
+    "items": [
+      "Over 20 years serving the Greater Philadelphia area",
+      "Established in 2002",
+      "Mon to Fri 8:30 am to 5:00 pm",
+      "606 Baltimore Pike, Springfield, PA 19064"
+    ]
+  },
+  "gallery": {
+    "heading": "The work is in the <mark>racks and the walls.</mark>",
+    "imageIndexes": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "story": {
+    "heading": "One provider for IT and security",
+    "paragraphs": [
+      "Most businesses call one company for computers and another for cameras. GO2 Tech has handled both from Springfield since 2002.",
+      "The award-winning part is earned on ordinary days: patched networks, backups that restore, and surveillance footage someone can actually pull."
+    ],
+    "imageIndex": 8
+  },
+  "experience": {
+    "heading": "What working with GO2 looks like",
+    "items": [
+      "A consultation at your office, not a quote from a form.",
+      "Remote support first, a technician from Baltimore Pike when hands are needed.",
+      "Disaster recovery plans written down before anything goes wrong."
+    ]
+  },
+  "feature": {
+    "heading": "Security you can see and security you cannot",
+    "text": "Cameras and access control on one side, firewalls and endpoint protection on the other, designed together so the gaps between vendors disappear.",
+    "cta": {
+      "label": "Talk to GO2 Tech",
+      "href": "tel:6105673462"
+    },
+    "imageIndex": 9
+  },
+  "catalog": {
+    "heading": "Where to <mark>verify.</mark>",
+    "items": [
+      {
+        "title": "Official site",
+        "href": "https://www.go2tech.com/",
+        "imageIndex": 10
+      },
+      {
+        "title": "LinkedIn",
+        "href": "https://www.linkedin.com/company/go2tech",
+        "imageIndex": 11
+      },
+      {
+        "title": "BBB profile",
+        "href": "https://www.bbb.org/us/pa/springfield/profile/computer-consultant/go2-tech-0241-236092314",
+        "imageIndex": 12
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Start with a <mark>call.</mark>"
+  },
+  "closing": {
+    "heading": "Innovative IT and security solutions, since 2002",
+    "kicker": "Springfield, serving Greater Philadelphia",
+    "cta": {
+      "label": "Call (610) 567-3462",
+      "href": "tel:6105673462"
+    }
+  },
+  "links": [
+    {
+      "label": "Official site",
+      "href": "https://www.go2tech.com/"
+    },
+    {
+      "label": "LinkedIn",
+      "href": "https://www.linkedin.com/company/go2tech"
+    }
+  ],
+  "sections": [
+    "hero",
+    "offerings",
+    "proof",
+    "gallery",
+    "story",
+    "experience",
+    "feature",
+    "spotlight",
+    "catalog",
+    "contact",
+    "closing"
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Illustrative concept: a tidy server rack with green status lights and neatly bundled patch cables in a small business closet"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Illustrative concept: a technician's hands crimping an ethernet cable at a labeled patch panel"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Illustrative concept: a dome security camera mounted on the corner of a brick commercial building"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Illustrative concept: a modern office desk with a laptop, docking station, and a desk phone under soft daylight"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Illustrative concept: a wall-mounted network switch with color-coded cables in a clean equipment room"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Illustrative concept: a small-business conference room with a video bar and a large display, empty"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Illustrative concept: a close-up of an access control card reader beside a glass office door"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Illustrative concept: a cloud of fiber optic strands glowing green against dark charcoal"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Illustrative concept: a storefront office on a suburban pike with a glass facade at golden hour"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Illustrative concept: a workstation with two monitors showing abstract green network graphs, no readable text"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Illustrative concept: a laptop on a desk beside a coffee mug and a notepad, morning light through blinds"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Illustrative concept: a monitoring wall of blurred camera feeds in a security office"
+    }
+  ]
+}

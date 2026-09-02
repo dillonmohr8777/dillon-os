@@ -1,0 +1,237 @@
+{
+  "slug": "barnes-financial-group",
+  "name": "Barnes Financial Group",
+  "city": "Media",
+  "category": "Accounting, tax, insurance, and investments",
+  "vertical": "Professional Services",
+  "attitude": "editorial",
+  "url": "http://barnesfinancialgroupinc.com/",
+  "phone": "(610) 627-2340",
+  "address": "11 S New Middletown Rd, Media, PA 19063",
+  "hours": "Mon to Fri 9 am to 6 pm. Closed Sat and Sun.",
+  "description": "Barnes Financial Group is a family-run regional accounting and insurance agency in Media, PA, established in 1981, handling accounting, taxes, insurance, and investments under one roof.",
+  "tagline": "Accounting, taxes, insurance, and investments since 1981",
+  "noindex": true,
+  "imageDisclosure": true,
+  "schemaType": "LocalBusiness",
+  "marquee": [
+    "Accounting",
+    "Taxes",
+    "Insurance",
+    "Investments"
+  ],
+  "tokens": {
+    "paper": "#F7F4EA",
+    "ink": "#141E29",
+    "accent": "#1F4E79",
+    "accent2": "#C4A35A",
+    "panel": "#D5D9D6",
+    "deep": "#0E2438",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "6px"
+  },
+  "fonts": {
+    "display": "Libre Baskerville",
+    "text": "DM Sans",
+    "displayFallback": "Georgia,serif"
+  },
+  "logo": false,
+  "nav": [
+    {
+      "label": "Services",
+      "href": "#offerings"
+    },
+    {
+      "label": "Office",
+      "href": "#gallery"
+    },
+    {
+      "label": "Contact",
+      "href": "#visit"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Media, PA | Established 1981",
+    "headline": "A regional accounting and insurance agency, family run since 1981",
+    "sub": "Accounting, taxes, insurance, and investments for Delaware County families and businesses, from one office on New Middletown Road.",
+    "ctaPrimary": {
+      "label": "Call (610) 627-2340",
+      "href": "tel:6106272340"
+    },
+    "ctaSecondary": {
+      "label": "See the services",
+      "href": "#offerings"
+    },
+    "glassFloat": {
+      "title": "Since 1981",
+      "sub": "Richard W. Barnes, President"
+    },
+    "marquee": [
+      "Accounting",
+      "Taxes",
+      "Insurance",
+      "Investments"
+    ]
+  },
+  "offerings": {
+    "heading": "Four services, <mark>one relationship.</mark>",
+    "items": [
+      "Accounting and bookkeeping for small businesses",
+      "Tax preparation and planning for individuals and businesses",
+      "Insurance brokered across carriers, plus investment options"
+    ]
+  },
+  "proof": {
+    "items": [
+      "Established in 1981",
+      "Family-run financial services business",
+      "Mon to Fri 9 am to 6 pm",
+      "11 S New Middletown Rd, Media, PA 19063"
+    ]
+  },
+  "gallery": {
+    "heading": "The office on <mark>New Middletown Road.</mark>",
+    "imageIndexes": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "story": {
+    "heading": "Why one office handles all four",
+    "paragraphs": [
+      "Barnes Financial Group was established in 1981 and is still run by the Barnes family, with Richard W. Barnes as president.",
+      "One office means the tax return, the insurance renewal, and the investment plan are reviewed by people who have seen all three."
+    ],
+    "imageIndex": 8
+  },
+  "experience": {
+    "heading": "Working with Barnes",
+    "items": [
+      "Call or stop in; weekday hours run until 6 pm.",
+      "Bring last year's return and the current policies.",
+      "Accounting, taxes, and renewals run on a calendar the office keeps."
+    ]
+  },
+  "feature": {
+    "heading": "Tax season, without the scramble",
+    "text": "A family-run tax office that also keeps the books means the return is built from records already in order by January.",
+    "cta": {
+      "label": "Book a tax meeting",
+      "href": "tel:6106272340"
+    },
+    "imageIndex": 9
+  },
+  "catalog": {
+    "heading": "Verify, then <mark>call.</mark>",
+    "items": [
+      {
+        "title": "Official site",
+        "href": "http://barnesfinancialgroupinc.com/",
+        "imageIndex": 10
+      },
+      {
+        "title": "Liberty Mutual agent listing",
+        "href": "https://agents.libertymutual.com/barnes-financial-group-inc_pl_4533305456",
+        "imageIndex": 11
+      },
+      {
+        "title": "BBB profile",
+        "href": "https://www.bbb.org/us/pa/media/profile/financial-services/barnes-financial-group-inc-0241-235985925",
+        "imageIndex": 12
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Media, <mark>Delaware County.</mark>"
+  },
+  "closing": {
+    "heading": "Accounting, taxes, insurance, and investments since 1981",
+    "kicker": "Media, PA",
+    "cta": {
+      "label": "Call (610) 627-2340",
+      "href": "tel:6106272340"
+    }
+  },
+  "links": [
+    {
+      "label": "Official site",
+      "href": "http://barnesfinancialgroupinc.com/"
+    },
+    {
+      "label": "Facebook",
+      "href": "https://www.facebook.com/barnesfinancialgroupinc/"
+    }
+  ],
+  "sections": [
+    "hero",
+    "offerings",
+    "proof",
+    "gallery",
+    "story",
+    "experience",
+    "feature",
+    "spotlight",
+    "catalog",
+    "contact",
+    "closing"
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Illustrative concept: a traditional accounting office with a mahogany desk, brass lamp, and leather chairs, morning light"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Illustrative concept: a close-up of a calculator, pen, and a stack of tax forms on a walnut desk, no readable text"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Illustrative concept: a brick storefront office on a tree-lined street in a small Pennsylvania borough"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Illustrative concept: a conference table with two coffee cups and a folder, navy chairs, sunlit window"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Illustrative concept: an insurance policy binder and a set of house keys on a desk blotter"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Illustrative concept: bookshelves of tax code volumes with gold lettering blurred, warm light"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Illustrative concept: a family home in Delaware County with a porch and mature trees"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Illustrative concept: a small business owner's shop counter with a ledger and a laptop, hands only"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Illustrative concept: a framed diploma wall and a potted fern in an office corner"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Illustrative concept: a retirement planning chart on a tablet beside reading glasses, no readable text"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Illustrative concept: a quiet office lobby with a wooden bench and a brass nameplate blurred"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Illustrative concept: a courthouse-style stone building on a Media street at golden hour"
+    }
+  ]
+}

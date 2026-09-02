@@ -1,0 +1,239 @@
+{
+  "slug": "dreammaker-bath-kitchen",
+  "name": "DreamMaker Bath & Kitchen of Chester County",
+  "city": "Chester Springs",
+  "category": "Kitchen and bath remodeling",
+  "vertical": "Home Services",
+  "attitude": "editorial",
+  "url": "https://www.dreammaker-remodel.com/chester-county/",
+  "phone": "(610) 484-2000",
+  "address": "12 Pottstown Pike, Chester Springs, PA 19425",
+  "hours": "Mon to Fri 9 am to 5 pm.",
+  "description": "DreamMaker Bath & Kitchen of Chester County is a full-service remodeler in Chester Springs, PA, handling design, selections, and installation with its in-house team for kitchens, baths, basements, and more.",
+  "tagline": "Full-service remodeling, design through installation",
+  "noindex": true,
+  "imageDisclosure": true,
+  "schemaType": "LocalBusiness",
+  "marquee": [
+    "Kitchens",
+    "Bathrooms",
+    "Basements",
+    "In-house team",
+    "BBB A+"
+  ],
+  "tokens": {
+    "paper": "#F7F4F9",
+    "ink": "#1F1B2B",
+    "accent": "#5C3D82",
+    "accent2": "#C9A75B",
+    "panel": "#DCD3E6",
+    "deep": "#1E1630",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "10px"
+  },
+  "fonts": {
+    "display": "Playfair Display",
+    "text": "Hind",
+    "displayFallback": "Georgia,serif"
+  },
+  "logo": false,
+  "nav": [
+    {
+      "label": "Remodels",
+      "href": "#offerings"
+    },
+    {
+      "label": "Work",
+      "href": "#gallery"
+    },
+    {
+      "label": "Contact",
+      "href": "#visit"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Chester Springs, PA | Design through installation",
+    "headline": "Remodel the rooms you actually use",
+    "sub": "Full-service kitchen and bath remodeling for Chester County, with design, selections, and every trade handled by DreamMaker's in-house team.",
+    "ctaPrimary": {
+      "label": "Call (610) 484-2000",
+      "href": "tel:6104842000"
+    },
+    "ctaSecondary": {
+      "label": "Kitchen remodeling",
+      "href": "https://www.dreammaker-remodel.com/chester-county/services/kitchen-remodeling/"
+    },
+    "glassFloat": {
+      "title": "BBB accredited, A+",
+      "sub": "12 Pottstown Pike"
+    },
+    "marquee": [
+      "Kitchens",
+      "Bathrooms",
+      "Basements",
+      "In-house team",
+      "BBB A+"
+    ]
+  },
+  "offerings": {
+    "heading": "Rooms DreamMaker <mark>rebuilds.</mark>",
+    "items": [
+      "Kitchens, from layout and cabinetry to counters and lighting",
+      "Bathrooms, showers, and accessible baths built for daily use",
+      "Basements, home offices, closets, laundry rooms, and finish carpentry"
+    ]
+  },
+  "proof": {
+    "items": [
+      "Design, selections, and installation in-house",
+      "BBB accredited with an A+ rating",
+      "Independently, locally owned",
+      "Cabinetry from several vendors"
+    ]
+  },
+  "gallery": {
+    "heading": "Finished rooms, <mark>Chester County.</mark>",
+    "imageIndexes": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "story": {
+    "heading": "One team from concept to completion",
+    "paragraphs": [
+      "DreamMaker of Chester County is an independently, locally owned remodeler that keeps design, product selections, and installation with its own team, so nothing gets lost between a designer and a contractor.",
+      "Being part of a national organization adds annual training on the latest products and techniques. The showroom on Pottstown Pike is where the plan starts."
+    ],
+    "imageIndex": 8
+  },
+  "experience": {
+    "heading": "How a remodel runs",
+    "items": [
+      "Meet at the Chester Springs showroom and walk the cabinet and surface options.",
+      "Get a design and a fixed scope before demolition starts.",
+      "One in-house crew finishes the room, then walks it with you."
+    ]
+  },
+  "feature": {
+    "heading": "Bathrooms built to be lived in",
+    "text": "Walk-in showers, better storage, and lighting that works at 6 am, designed for how the family uses the room.",
+    "cta": {
+      "label": "Bathroom remodeling",
+      "href": "https://dreammaker-remodel.com/chester-county/services/bathroom-remodeling/"
+    },
+    "imageIndex": 9
+  },
+  "catalog": {
+    "heading": "See the <mark>services.</mark>",
+    "items": [
+      {
+        "title": "Kitchen remodeling",
+        "href": "https://www.dreammaker-remodel.com/chester-county/services/kitchen-remodeling/",
+        "imageIndex": 10
+      },
+      {
+        "title": "Bathroom remodeling",
+        "href": "https://dreammaker-remodel.com/chester-county/services/bathroom-remodeling/",
+        "imageIndex": 11
+      },
+      {
+        "title": "Commercial remodeling",
+        "href": "https://www.dreammaker-remodel.com/chester-county/services/commercial-remodeling/",
+        "imageIndex": 12
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Pottstown Pike, <mark>Chester Springs.</mark>"
+  },
+  "closing": {
+    "heading": "Full-service remodeling for Chester County",
+    "kicker": "Chester Springs, PA",
+    "cta": {
+      "label": "Call (610) 484-2000",
+      "href": "tel:6104842000"
+    }
+  },
+  "links": [
+    {
+      "label": "About",
+      "href": "https://www.dreammaker-remodel.com/chester-county/about/"
+    },
+    {
+      "label": "Facebook",
+      "href": "https://www.facebook.com/DMBKChesterCounty/"
+    }
+  ],
+  "sections": [
+    "hero",
+    "offerings",
+    "proof",
+    "gallery",
+    "story",
+    "experience",
+    "feature",
+    "spotlight",
+    "catalog",
+    "contact",
+    "closing"
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Illustrative concept: a remodeled kitchen with white shaker cabinets, a plum-toned island, brass pulls, and quartz counters"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Illustrative concept: a walk-in shower with large-format tile, a glass panel, and a brass rain head"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Illustrative concept: a finished basement with a built-in bar, warm wood floors, and recessed lighting"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Illustrative concept: a designer's hands laying cabinet door samples and stone chips on a table, face out of frame"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Illustrative concept: a laundry room with stacked machines, a folding counter, and open shelves"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Illustrative concept: a home office nook with built-in cabinetry and a window seat"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Illustrative concept: a bathroom vanity with a marble top, brass faucet, and a round mirror"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Illustrative concept: a kitchen mid-remodel with new cabinets installed and a drop cloth on the floor"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Illustrative concept: a remodeling showroom with cabinet displays and countertop samples under soft light"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Illustrative concept: a farmhouse kitchen with a range hood, subway tile, and a wide window over the sink"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Illustrative concept: a walk-in closet with custom shelving and a bench"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Illustrative concept: a stone colonial house in Chester County with a fresh porch, dusk light"
+    }
+  ]
+}
