@@ -72,6 +72,7 @@ links instead of loading the entire vault.
   Latest: [[12_Brain/06_Research/2026-09-01 - Fable 5.1 launch signal sweep|Fable 5.1 launch signal sweep]]
   and [[12_Brain/02_Entities/Higgsfield MCP|Higgsfield MCP]] (wired, OAuth pending).
   Prospect build: [[02_Campaigns/With Not For/With Not For|With Not For (Jack Lesser)]].
+  Access: [[12_Brain/09_Ops/Connector Map|Connector Map]] (what is live, what is missing, connect order).
 - [[12_Brain/07_Reviews/README|Reviews]] — daily, weekly, and quarterly
   synthesis.
 - [[12_Brain/08_Memory/README|Memory Ledger]] — corrections, preferences, and
