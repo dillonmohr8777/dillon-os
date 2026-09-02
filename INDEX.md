@@ -70,7 +70,7 @@ links instead of loading the entire vault.
   finish lines.
 - [[12_Brain/06_Research/README|Research]] — sourced, dated, expiring findings.
   Latest: [[12_Brain/06_Research/2026-09-01 - Fable 5.1 launch signal sweep|Fable 5.1 launch signal sweep]]
-  and [[12_Brain/02_Entities/Higgsfield MCP|Higgsfield MCP]] (wired, OAuth pending).
+  and [[12_Brain/02_Entities/Higgsfield MCP|Higgsfield MCP]] (connected, Ultra plan, spend-gated).
   Prospect build: [[02_Campaigns/With Not For/With Not For|With Not For (Jack Lesser)]].
   Backend: [[12_Brain/02_Entities/Cloudflare D1 Radar|Cloudflare D1 Radar]] (database live, Worker deploy approval-gated).
   Access: [[12_Brain/09_Ops/Connector Map|Connector Map]] (what is live, what is missing, connect order).
