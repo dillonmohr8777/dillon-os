@@ -21,7 +21,7 @@ Write `Daily-Briefs/synthesis-YYYY-MM-DD.md`:
    pages contradicting reality, loops that didn't run (check
    `12_Brain/01_Captures/sessions/session-log.md` cadence).
 3. **What deserves attention** — the 3 highest-leverage moves for next week,
-   grounded in vault pages ([[link]] each one). Tie back to the primary
+   grounded in vault pages (`[[link]]` each one). Tie back to the primary
    directive in `System/OS Config.md` (ROAD TO 100 CLIENTS).
 4. **Predictions** — check every active client and open thread against
    `12_Brain/03_Concepts/Leading Indicators.md` and make explicit calls: who is at churn
