@@ -178,7 +178,10 @@ foreach ($record in $noteRecords) {
 
     # _archive holds retired sections. They stay in the vault and in git, but they
     # are not live knowledge, so they must not generate link or schema warnings.
-    if ($record.relativePath -match '^\.(?:claude|cursor|hermes)/' -or $record.relativePath -match '^_archive/') {
+    # Tool-harness folders (.claude, .agents for Codex, .codex, .cursor, .hermes) hold skill
+    # and agent definitions with placeholder links like [[01_Clients/<Client>]]; they are
+    # not vault knowledge and must not raise link warnings.
+    if ($record.relativePath -match '^\.(?:claude|agents|codex|cursor|hermes)/' -or $record.relativePath -match '^_archive/') {
         continue
     }
 

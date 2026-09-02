@@ -197,10 +197,21 @@ today's receipt log opens it).
 Receipts land in `12_Brain/queue/claude-loop-<date>.jsonl`; per-routine state in
 `12_Brain/state/claude-routines/`.
 
-Build steps come from an execution allowlist in `Invoke-ClaudeLoop.ps1`. A
+Build steps come from an execution allowlist in
+`_os/automation/bin/claude-loop.js`, the Node dispatcher; `Invoke-ClaudeLoop.ps1`
+is a thin wrapper that keeps the scheduled task and the driver working. A
 routine whose build command fails three times opens its breaker, so one broken
 health script silently stops several routines while the loop still looks idle.
 Check the receipt log for `failed` outcomes before concluding nothing is eligible.
+
+Every executed routine records a `learn` output in its receipt: a concrete
+lesson (a failed stage, or a stage whose state changed since the last
+checkpoint) or an explicit no-finding. The craft brief counts them and lists
+lessons seen on two or more days as promotion candidates; promoting one into
+`12_Brain/11_Craft/earned-lessons.md` and then `12_Brain/03_Concepts/` stays an
+agent step. Routine and automation state carries `generated_at` (schema
+`12_Brain/schemas/automation-run.json`); `node _os/automation/bin/queue-status.js`
+reports staleness from it.
 
 ### Automation source vs artifacts
 

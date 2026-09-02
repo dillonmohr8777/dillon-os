@@ -61,6 +61,9 @@ function analyse(days) {
   const perRoutine = new Map();
   const gateBlocks = new Map();
   const failReasons = new Map();
+  // `learn` is a required output of every executed routine: a concrete lesson or an
+  // explicit no-finding. An executed receipt without one predates the contract.
+  const learn = { lessons: [], no_findings: 0, missing: 0 };
 
   for (const { day, rows } of days) {
     for (const r of rows) {
@@ -68,6 +71,12 @@ function analyse(days) {
       if (!id) continue;
       if (!perRoutine.has(id)) perRoutine.set(id, { id, done: [], failed: [], blocked: [] });
       const rec = perRoutine.get(id);
+      if (DONE.has(r.outcome) || FAILED.has(r.outcome)) {
+        const l = r.learn;
+        if (l && l.kind === 'lesson') learn.lessons.push({ day, id, key: l.key || `${id}:?`, text: l.text || '', run_id: r.run_id || null });
+        else if (l && l.kind === 'no_finding') learn.no_findings += 1;
+        else learn.missing += 1;
+      }
       if (DONE.has(r.outcome)) {
         rec.done.push(day);
       } else if (FAILED.has(r.outcome)) {
@@ -82,7 +91,24 @@ function analyse(days) {
       }
     }
   }
-  return { perRoutine, gateBlocks, failReasons };
+  return { perRoutine, gateBlocks, failReasons, learn };
+}
+
+/**
+ * The promotion rule, applied to loop-earned lessons: one that recurs on two or more days
+ * is a candidate for earned-lessons.md (and from there 03_Concepts). The brief only lists
+ * candidates; writing the lesson stays an agent step, so the curated file is never
+ * machine-appended.
+ */
+function promotionCandidates(lessons) {
+  const byKey = new Map();
+  for (const l of lessons) {
+    if (!byKey.has(l.key)) byKey.set(l.key, { key: l.key, id: l.id, text: l.text, days: new Set() });
+    byKey.get(l.key).days.add(l.day);
+  }
+  return [...byKey.values()]
+    .filter((c) => c.days.size >= 2)
+    .map((c) => ({ key: c.key, id: c.id, text: c.text, days: [...c.days].sort() }));
 }
 
 
@@ -140,7 +166,8 @@ function main() {
     process.exit(2);
   }
 
-  const { perRoutine, gateBlocks, failReasons } = analyse(days);
+  const { perRoutine, gateBlocks, failReasons, learn } = analyse(days);
+  const candidates = promotionCandidates(learn.lessons);
   const dayList = days.map((d) => d.day);
   const span = dayList.length;
 
@@ -190,6 +217,10 @@ function main() {
       cadence_drift: drift.length,
       authorized_never_ran: neverRan.length,
       earned_lessons: lessons.count,
+      loop_lessons: learn.lessons.length,
+      loop_no_findings: learn.no_findings,
+      loop_learn_missing: learn.missing,
+      promotion_candidates: candidates.length,
     },
     gate_blocks: [...gateBlocks.entries()]
       .sort((a, b) => b[1] - a[1])
@@ -198,6 +229,8 @@ function main() {
     unreliable,
     cadence_drift: drift,
     authorized_never_ran: neverRan,
+    loop_lessons: learn.lessons.slice(-20),
+    promotion_candidates: candidates,
     dry_run: !write,
   };
 
@@ -215,6 +248,9 @@ function main() {
         cadence_drift: drift.length,
         authorized_never_ran: neverRan.length,
         earned_lessons: lessons.count,
+        loop_lessons: learn.lessons.length,
+        loop_no_findings: learn.no_findings,
+        promotion_candidates: candidates.length,
         worst_reliability: unreliable.length
           ? `${unreliable[0].id} ${unreliable[0].reliability}` : 'none',
       });
@@ -290,6 +326,30 @@ function main() {
     L.push('`12_Brain/03_Concepts/` with `source_refs` pointing at both briefs, and link it');
     L.push('from the craft index. That promotion is the compounding step.');
     L.push('');
+    L.push('## Loop learn output');
+    L.push('');
+    L.push('Every executed routine records a `learn` output in its receipt: a concrete lesson');
+    L.push('(a failed stage, or a stage whose state changed since the last checkpoint) or an');
+    L.push('explicit no-finding. Silence is not an option the dispatcher has.');
+    L.push('');
+    L.push(`In this window: **${learn.lessons.length}** concrete, **${learn.no_findings}** no-finding, `
+      + `**${learn.missing}** executions without a learn record (receipts written before the contract).`);
+    if (learn.lessons.length) {
+      L.push('');
+      for (const l of learn.lessons.slice(-10).reverse()) L.push(`- ${l.day} ${l.id} - ${l.text}`);
+    }
+    L.push('');
+    L.push('### Promotion candidates');
+    L.push('');
+    if (candidates.length) {
+      L.push('Seen on two or more days. An agent writes each into `earned-lessons.md` with its');
+      L.push('evidence, and on to `12_Brain/03_Concepts/` when it recurs there too:');
+      L.push('');
+      for (const c of candidates) L.push(`- ${c.id} (${c.days.join(', ')}) - ${c.text}`);
+    } else {
+      L.push('_None yet: no concrete loop lesson has recurred on two days._');
+    }
+    L.push('');
     fs.writeFileSync(briefPath, `${L.join('\n')}\n`);
 
     // Rolling index, so the section compounds instead of becoming a pile of dates.
@@ -311,6 +371,10 @@ function main() {
     idx.push(`[[12_Brain/11_Craft/earned-lessons|earned-lessons]] - **${lessons.count}** recorded, append-only.`);
     idx.push('Agents write there. Never into a generated brief.');
     idx.push('');
+    idx.push(`Loop learn output, last ${span} day(s): **${learn.lessons.length}** concrete lesson(s), `
+      + `**${learn.no_findings}** explicit no-finding(s), **${candidates.length}** promotion candidate(s). `
+      + 'Recorded per execution in the loop receipts; the latest brief lists them.');
+    idx.push('');
     idx.push('## Briefs');
     idx.push('');
     for (const b of briefs) {
@@ -330,4 +394,6 @@ function main() {
   process.stdout.write(`${JSON.stringify(result, null, 2)}\n`);
 }
 
-main();
+if (require.main === module) main();
+
+module.exports = { analyse, promotionCandidates, readLessons };

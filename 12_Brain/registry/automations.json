@@ -375,6 +375,27 @@
       "status": "active-scheduled"
     },
     {
+      "id": "claude-loop",
+      "name": "Claude operating-team dispatcher (Tier-0 read-only allowlist)",
+      "lane": "infrastructure",
+      "tier": 0,
+      "cadence": "every 15 min via Claude-Autonomous-Daily-Driver",
+      "stale_after_hours": 2,
+      "command": "node _os/automation/bin/claude-loop.js [--routine ID] [--execute] [--fixture] [--json] [--no-evidence]",
+      "inputs": [
+        "11_Agents/claude-operating-team.json",
+        "12_Brain/queue/claude-loop-*.jsonl"
+      ],
+      "outputs": [
+        "12_Brain/queue/claude-loop-<date>.jsonl",
+        "12_Brain/state/claude-routines/<ID>.json",
+        "12_Brain/state/claude-loop.json"
+      ],
+      "external_actions": false,
+      "notes": "Node port of System/scripts/Invoke-ClaudeLoop.ps1 (now a thin wrapper). 8 fail-closed gates, 9 stages, receipts, cadence-scoped dedupe, checkpoints with generated_at, lease, circuit breaker. `learn` is a required output: every executed routine records a concrete lesson or an explicit no-finding in its receipt. Never sends, publishes, deploys, spends, commits, or writes canonical client state.",
+      "status": "implemented"
+    },
+    {
       "id": "agent-craft-brief",
       "name": "Agent craft brief (recursive infrastructure learning)",
       "lane": "infrastructure",

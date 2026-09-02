@@ -414,6 +414,7 @@ function ingestCommunicationRun(envelope, options = {}) {
     written_at: nowISO(),
   };
   state.updated_at = nowISO();
+  state.generated_at = state.updated_at; // timestamp contract: 12_Brain/schemas/automation-run.json
   writeJson(STATE_FILE, state);
 
   return {

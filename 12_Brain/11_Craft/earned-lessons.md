@@ -249,3 +249,30 @@ registered `Immohrtal-Crew` (Ready, PT2H, hidden VBS host) and ran all seven lan
 **How to apply.** Keep the crew dispatcher on the hidden-task manifest. Wake the Cursor
 private worker for MCP work. Do not re-enable `IMMOHRTAL Agency Daily` until the source
 audit clears. Do not treat heartbeat configuration as proof the seven agents ran.
+
+---
+
+## 2026-09-02 - A learn stage that only says "receipt assembled" is silence with a checkmark
+
+**Lesson.** A stage named `learn` that cannot emit a finding is not learning; it is a
+ninth green box. Make the learn output required and two-valued: a concrete lesson, or an
+explicit no-finding that names what was compared. Then the absence of lessons is itself
+evidence instead of an unknown.
+
+**Evidence.** All 26 receipts in `12_Brain/queue/claude-loop-2026-09-02.jsonl` recorded
+stage 9 as `emit_receipt` / `receipt assembled`. No routine execution had ever produced a
+lesson or a no-finding; every one of the 12 entries in this file was hand-written. In the
+same pass, `12_Brain/state` carried five different timestamp names (`updated`,
+`written_at`, `updated_utc`, `last_cycle_utc`, `recorded_at_utc`), so the `registry_state`
+freshness probe fell back to file mtimes, and the dispatcher was 606 lines of PowerShell
+with `C:\Users\dillo` paths baked in, so nothing about the loop ran off this box.
+
+**How to apply.** The dispatcher is now `_os/automation/bin/claude-loop.js`;
+`Invoke-ClaudeLoop.ps1` is a wrapper. Every executed routine writes `learn` into its
+receipt: a failed stage or a stage whose state changed since the last checkpoint is a
+lesson; an unchanged run is `no_finding` with the comparison named. The craft brief lists
+lessons seen on two days as promotion candidates; writing them here stays an agent step.
+Routine and automation state carries `generated_at` (`12_Brain/schemas/automation-run.json`),
+and `queue-status.js` measures staleness from it. Same family as
+[[12_Brain/03_Concepts/Confirm the Artifact Not the Action|confirm the artifact, not the
+action]]: a stage that passes is not a stage that did anything.
