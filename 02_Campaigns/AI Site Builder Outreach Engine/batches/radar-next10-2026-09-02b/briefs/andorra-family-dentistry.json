@@ -1,0 +1,222 @@
+{
+  "slug": "andorra-family-dentistry",
+  "name": "Andorra Family Dentistry",
+  "city": "Philadelphia",
+  "category": "Family Dentistry",
+  "vertical": "dentist",
+  "attitude": "glass",
+  "url": "https://www.andorradental.com/",
+  "phone": "",
+  "address": "",
+  "hours": "",
+  "description": "A Philadelphia family dental practice offering checkups, cleanings, and restorative care for patients of all ages.",
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "marquee": [
+    "Family dentistry",
+    "Philadelphia practice",
+    "All ages welcome",
+    "Preventive-first care"
+  ],
+  "tokens": {
+    "paper": "#F4F7F8",
+    "ink": "#10262A",
+    "accent": "#2C6E8C",
+    "accent2": "#A9793D",
+    "panel": "#DCE6E7",
+    "deep": "#0B1E22",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#1D1200",
+    "onPanel": "#0B1E22",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "22px"
+  },
+  "fonts": {
+    "display": "Fraunces",
+    "displayFallback": "Georgia,serif",
+    "text": "Source Sans 3"
+  },
+  "logo": false,
+  "hero": {
+    "eyebrow": "Philadelphia | Family Dentistry",
+    "headline": "Andorra Family Dentistry",
+    "sub": "Checkups, cleanings, and restorative care for every member of the family, in one practice.",
+    "ctaPrimary": {
+      "label": "Get in touch",
+      "href": "#visit"
+    },
+    "ctaSecondary": {
+      "label": "See services",
+      "href": "#offerings"
+    },
+    "glassFloat": {
+      "title": "Family Dentistry",
+      "sub": "Philadelphia"
+    },
+    "marquee": [
+      "Family dentistry",
+      "Philadelphia practice",
+      "All ages welcome",
+      "Preventive-first care"
+    ]
+  },
+  "offerings": {
+    "items": [
+      "Routine exams and cleanings for kids, adults, and everyone in between",
+      "Restorative dentistry including fillings and crowns",
+      "Preventive guidance tailored to each patient’s age and needs"
+    ]
+  },
+  "proof": {
+    "items": [
+      "A family practice serving the Philadelphia community",
+      "New patients of all ages welcome",
+      "Treatment plans explained clearly before any work begins",
+      "A comfortable office built for repeat family visits"
+    ]
+  },
+  "gallery": {
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "About",
+    "paragraphs": [
+      "Andorra Family Dentistry treats patients across every age group, from a child’s first cleaning to routine adult care.",
+      "The practice leans on prevention first, so appointments stay simple and small issues do not become bigger ones."
+    ]
+  },
+  "experience": {
+    "items": [
+      "Book an appointment for any member of the family under one roof.",
+      "Treatment plans are reviewed with you before anything is scheduled.",
+      "A calm, modern office designed for patients of every age."
+    ]
+  },
+  "feature": {
+    "heading": "One practice for the whole family",
+    "text": "From a first child’s checkup to routine adult cleanings, care is scoped to the patient in the chair.",
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Restorative care when it is needed",
+    "text": "Fillings, crowns, and other restorative work are explained plainly before any treatment starts.",
+    "imageIndex": 10
+  },
+  "social": {
+    "heading": "From the shop and the feed",
+    "kicker": "Reference imagery -- placeholder pending real photography",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "captions": [
+      "On site",
+      "Team at work",
+      "Detail shot",
+      "Front desk",
+      "In progress",
+      "Finished result"
+    ]
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Family Checkups",
+        "href": "#offerings",
+        "imageIndex": 9
+      },
+      {
+        "title": "Restorative Dentistry",
+        "href": "#offerings",
+        "imageIndex": 10
+      },
+      {
+        "title": "Preventive Care",
+        "href": "#offerings",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {},
+  "closing": {
+    "kicker": "Philadelphia, in full",
+    "cta": {
+      "label": "Get in touch",
+      "href": "#visit"
+    }
+  },
+  "links": [
+    {
+      "label": "Official website",
+      "href": "https://www.andorradental.com/"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Family Dentistry concept image 1 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Family Dentistry concept image 2 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Family Dentistry concept image 3 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Family Dentistry concept image 4 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Family Dentistry concept image 5 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Family Dentistry concept image 6 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Family Dentistry concept image 7 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Family Dentistry concept image 8 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Family Dentistry concept image 9 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Family Dentistry concept image 10 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Family Dentistry concept image 11 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Family Dentistry concept image 12 (placeholder -- real photography not yet sourced)"
+    }
+  ],
+  "placeholders": [
+    "phone: not sourced from radar/build-queue data -- left empty, no number invented",
+    "address: not sourced from radar/build-queue data -- left empty, no address invented",
+    "hours: not sourced from radar/build-queue data -- left empty, no hours invented",
+    "images: all 12 image-N.webp slots are placeholders pending real photography/generated-stock imagery (see images[].alt)"
+  ]
+}

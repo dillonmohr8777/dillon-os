@@ -1,0 +1,222 @@
+{
+  "slug": "dutton-road-veterinary-clinic",
+  "name": "Dutton Road Veterinary Clinic",
+  "city": "Philadelphia",
+  "category": "Veterinary Clinic",
+  "vertical": "veterinary",
+  "attitude": "warm",
+  "url": "http://duttonroadvetclinic.com/",
+  "phone": "",
+  "address": "",
+  "hours": "",
+  "description": "A Philadelphia veterinary clinic offering wellness exams, vaccinations, and general care for dogs and cats.",
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "marquee": [
+    "Wellness care for pets",
+    "Philadelphia veterinary clinic",
+    "Dogs and cats welcome",
+    "Preventive-first medicine"
+  ],
+  "tokens": {
+    "paper": "#F5F3EA",
+    "ink": "#1E2A22",
+    "accent": "#2F6B5E",
+    "accent2": "#C97A3D",
+    "panel": "#E6E1D0",
+    "deep": "#131C17",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#241200",
+    "onPanel": "#131C17",
+    "onDeep": "#FFFFFF",
+    "border": "2px",
+    "radius": "16px"
+  },
+  "fonts": {
+    "display": "Fraunces",
+    "displayFallback": "Georgia,serif",
+    "text": "Nunito Sans"
+  },
+  "logo": false,
+  "hero": {
+    "eyebrow": "Philadelphia | Veterinary Clinic",
+    "headline": "Dutton Road Veterinary Clinic",
+    "sub": "Wellness exams, vaccinations, and everyday care for the pets that count on you.",
+    "ctaPrimary": {
+      "label": "Get in touch",
+      "href": "#visit"
+    },
+    "ctaSecondary": {
+      "label": "See services",
+      "href": "#offerings"
+    },
+    "glassFloat": {
+      "title": "Veterinary Clinic",
+      "sub": "Philadelphia"
+    },
+    "marquee": [
+      "Wellness care for pets",
+      "Philadelphia veterinary clinic",
+      "Dogs and cats welcome",
+      "Preventive-first medicine"
+    ]
+  },
+  "offerings": {
+    "items": [
+      "Wellness exams and vaccinations for dogs and cats",
+      "Diagnosis and treatment for everyday illness and injury",
+      "Guidance on nutrition, parasite prevention, and long-term care"
+    ]
+  },
+  "proof": {
+    "items": [
+      "Serving pet owners across Philadelphia",
+      "Preventive-first approach to catch issues early",
+      "Calm, patient handling for anxious animals",
+      "Straightforward explanations before any treatment begins"
+    ]
+  },
+  "gallery": {
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "About",
+    "paragraphs": [
+      "Dutton Road Veterinary Clinic treats pets the way owners want them treated -- carefully, and with a clear explanation of what is actually needed.",
+      "The clinic focuses on wellness and prevention, so small issues get caught before they turn into emergencies."
+    ]
+  },
+  "experience": {
+    "items": [
+      "Book a wellness visit and get a clear plan before any procedure.",
+      "No pressure toward add-on services -- recommendations are explained, not upsold.",
+      "A calm exam room built to keep nervous pets (and owners) at ease."
+    ]
+  },
+  "feature": {
+    "heading": "Preventive care, explained simply",
+    "text": "Regular wellness exams catch small problems before they become expensive emergencies -- and they are far less stressful for your pet.",
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Vaccinations and everyday medicine",
+    "text": "From core vaccinations to treating a limp or an upset stomach, care is scoped to what your pet actually needs.",
+    "imageIndex": 10
+  },
+  "social": {
+    "heading": "From the shop and the feed",
+    "kicker": "Reference imagery -- placeholder pending real photography",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "captions": [
+      "On site",
+      "Exam room",
+      "Detail shot",
+      "Front desk",
+      "In progress",
+      "Happy patient"
+    ]
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Wellness Exams",
+        "href": "#offerings",
+        "imageIndex": 9
+      },
+      {
+        "title": "Vaccinations",
+        "href": "#offerings",
+        "imageIndex": 10
+      },
+      {
+        "title": "Illness & Injury Care",
+        "href": "#offerings",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {},
+  "closing": {
+    "kicker": "Philadelphia, in full",
+    "cta": {
+      "label": "Get in touch",
+      "href": "#visit"
+    }
+  },
+  "links": [
+    {
+      "label": "Official website",
+      "href": "http://duttonroadvetclinic.com/"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Veterinary Clinic concept image 1 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Veterinary Clinic concept image 2 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Veterinary Clinic concept image 3 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Veterinary Clinic concept image 4 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Veterinary Clinic concept image 5 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Veterinary Clinic concept image 6 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Veterinary Clinic concept image 7 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Veterinary Clinic concept image 8 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Veterinary Clinic concept image 9 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Veterinary Clinic concept image 10 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Veterinary Clinic concept image 11 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Veterinary Clinic concept image 12 (placeholder -- real photography not yet sourced)"
+    }
+  ],
+  "placeholders": [
+    "phone: not sourced from radar/build-queue data -- left empty, no number invented",
+    "address: not sourced from radar/build-queue data -- left empty, no address invented",
+    "hours: not sourced from radar/build-queue data -- left empty, no hours invented",
+    "images: all 12 image-N.webp slots are placeholders pending real photography/generated-stock imagery (see images[].alt)"
+  ]
+}

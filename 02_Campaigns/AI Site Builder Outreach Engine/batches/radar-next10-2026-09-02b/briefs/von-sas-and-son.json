@@ -1,0 +1,222 @@
+{
+  "slug": "von-sas-and-son",
+  "name": "Harry M. Von Sas & Son",
+  "city": "McSherrystown",
+  "category": "HVAC & Electrical Services",
+  "vertical": "hvac",
+  "attitude": "industrial",
+  "url": "http://vonsaselectric.com/",
+  "phone": "",
+  "address": "",
+  "hours": "",
+  "description": "A McSherrystown HVAC and electrical contractor serving Adams County homes and businesses.",
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "marquee": [
+    "HVAC & electrical service",
+    "Adams County contractor",
+    "Family-run since day one",
+    "Licensed and insured"
+  ],
+  "tokens": {
+    "paper": "#EEF1F0",
+    "ink": "#121A17",
+    "accent": "#3F8F5B",
+    "accent2": "#D97D2B",
+    "panel": "#D8DED9",
+    "deep": "#0C1210",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#1D0D00",
+    "onPanel": "#0C1210",
+    "onDeep": "#FFFFFF",
+    "border": "4px",
+    "radius": "6px"
+  },
+  "fonts": {
+    "display": "Archivo Black",
+    "displayFallback": "Impact,sans-serif",
+    "text": "Work Sans"
+  },
+  "logo": false,
+  "hero": {
+    "eyebrow": "McSherrystown | HVAC & Electrical Services",
+    "headline": "Harry M. Von Sas & Son",
+    "sub": "Heating, cooling, and electrical work for Adams County homes and businesses.",
+    "ctaPrimary": {
+      "label": "Get in touch",
+      "href": "#visit"
+    },
+    "ctaSecondary": {
+      "label": "See services",
+      "href": "#offerings"
+    },
+    "glassFloat": {
+      "title": "HVAC & Electrical",
+      "sub": "McSherrystown"
+    },
+    "marquee": [
+      "HVAC & electrical service",
+      "Adams County contractor",
+      "Family-run since day one",
+      "Licensed and insured"
+    ]
+  },
+  "offerings": {
+    "items": [
+      "HVAC installation, repair, and maintenance",
+      "Residential and light commercial electrical work",
+      "Emergency service calls for heating and cooling failures"
+    ]
+  },
+  "proof": {
+    "items": [
+      "Serving McSherrystown and the surrounding Adams County area",
+      "Licensed for both HVAC and electrical work",
+      "Straightforward quotes before any job starts",
+      "Comfortable working in homes and small commercial spaces alike"
+    ]
+  },
+  "gallery": {
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "About",
+    "paragraphs": [
+      "Harry M. Von Sas & Son handles the two systems every property depends on: heating and cooling, and the electrical work behind them.",
+      "The crew shows up, diagnoses the actual problem, and quotes it plainly before starting any work."
+    ]
+  },
+  "experience": {
+    "items": [
+      "Call for a quote and get a clear price before any work begins.",
+      "Licensed technicians handle both HVAC and electrical jobs.",
+      "Straight answers on what needs fixing now versus what can wait."
+    ]
+  },
+  "feature": {
+    "heading": "Heating and cooling that actually works",
+    "text": "From a dead furnace to a failing AC unit, the fix starts with an honest diagnosis, not a guess.",
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Electrical work, done to code",
+    "text": "Panel upgrades, wiring, and repairs handled by licensed electricians who know the local code.",
+    "imageIndex": 10
+  },
+  "social": {
+    "heading": "From the shop and the feed",
+    "kicker": "Reference imagery -- placeholder pending real photography",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "captions": [
+      "On site",
+      "Crew at work",
+      "Detail shot",
+      "Service van",
+      "In progress",
+      "Finished job"
+    ]
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "HVAC Installation & Repair",
+        "href": "#offerings",
+        "imageIndex": 9
+      },
+      {
+        "title": "Electrical Services",
+        "href": "#offerings",
+        "imageIndex": 10
+      },
+      {
+        "title": "Emergency Calls",
+        "href": "#offerings",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {},
+  "closing": {
+    "kicker": "McSherrystown, in full",
+    "cta": {
+      "label": "Get in touch",
+      "href": "#visit"
+    }
+  },
+  "links": [
+    {
+      "label": "Official website",
+      "href": "http://vonsaselectric.com/"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "HVAC & Electrical Services concept image 1 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "HVAC & Electrical Services concept image 2 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "HVAC & Electrical Services concept image 3 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "HVAC & Electrical Services concept image 4 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "HVAC & Electrical Services concept image 5 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "HVAC & Electrical Services concept image 6 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "HVAC & Electrical Services concept image 7 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "HVAC & Electrical Services concept image 8 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "HVAC & Electrical Services concept image 9 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "HVAC & Electrical Services concept image 10 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "HVAC & Electrical Services concept image 11 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "HVAC & Electrical Services concept image 12 (placeholder -- real photography not yet sourced)"
+    }
+  ],
+  "placeholders": [
+    "phone: not sourced from radar/build-queue data -- left empty, no number invented",
+    "address: not sourced from radar/build-queue data -- left empty, no address invented",
+    "hours: not sourced from radar/build-queue data -- left empty, no hours invented",
+    "images: all 12 image-N.webp slots are placeholders pending real photography/generated-stock imagery (see images[].alt)"
+  ]
+}

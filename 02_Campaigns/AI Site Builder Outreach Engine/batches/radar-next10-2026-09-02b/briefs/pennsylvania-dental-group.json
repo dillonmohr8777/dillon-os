@@ -1,0 +1,222 @@
+{
+  "slug": "pennsylvania-dental-group",
+  "name": "Pennsylvania Dental Group",
+  "city": "Philadelphia",
+  "category": "General Dentistry",
+  "vertical": "dentist",
+  "attitude": "glass",
+  "url": "https://www.padentalgroup.com/",
+  "phone": "",
+  "address": "",
+  "hours": "",
+  "description": "A Philadelphia general dentistry practice offering checkups, cleanings, and restorative care.",
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "marquee": [
+    "General dentistry",
+    "Philadelphia practice",
+    "New patients welcome",
+    "Preventive-first care"
+  ],
+  "tokens": {
+    "paper": "#F6F7F5",
+    "ink": "#1C231D",
+    "accent": "#4C7A3E",
+    "accent2": "#C98A2E",
+    "panel": "#E1E6DD",
+    "deep": "#10150F",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#211300",
+    "onPanel": "#10150F",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "22px"
+  },
+  "fonts": {
+    "display": "Fraunces",
+    "displayFallback": "Georgia,serif",
+    "text": "Source Sans 3"
+  },
+  "logo": false,
+  "hero": {
+    "eyebrow": "Philadelphia | General Dentistry",
+    "headline": "Pennsylvania Dental Group",
+    "sub": "Checkups, cleanings, and restorative care with a team that explains every step.",
+    "ctaPrimary": {
+      "label": "Get in touch",
+      "href": "#visit"
+    },
+    "ctaSecondary": {
+      "label": "See services",
+      "href": "#offerings"
+    },
+    "glassFloat": {
+      "title": "General Dentistry",
+      "sub": "Philadelphia"
+    },
+    "marquee": [
+      "General dentistry",
+      "Philadelphia practice",
+      "New patients welcome",
+      "Preventive-first care"
+    ]
+  },
+  "offerings": {
+    "items": [
+      "Routine exams and professional cleanings",
+      "Restorative dentistry including fillings and crowns",
+      "Cosmetic consultations for whitening and smile improvements"
+    ]
+  },
+  "proof": {
+    "items": [
+      "Serving the Philadelphia community",
+      "New patients welcome, most insurance accepted",
+      "Modern equipment and a comfort-first exam room",
+      "Clear treatment plans explained before any work begins"
+    ]
+  },
+  "gallery": {
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "About",
+    "paragraphs": [
+      "Pennsylvania Dental Group focuses on the basics done well: prevention, clear communication, and treatment scoped to what a patient actually needs.",
+      "Small issues get caught early, so visits stay simple and predictable."
+    ]
+  },
+  "experience": {
+    "items": [
+      "Book an appointment and get a plain explanation of what the visit involves.",
+      "No surprise upsells -- treatment plans are reviewed before anything is scheduled.",
+      "A calm, modern office designed to make routine visits easy."
+    ]
+  },
+  "feature": {
+    "heading": "Preventive care that catches problems early",
+    "text": "Regular cleanings and exams cost less than emergency work down the road -- and hurt a lot less too.",
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Restorative and cosmetic options",
+    "text": "From a simple filling to a smile consultation, treatment is scoped to what you actually need.",
+    "imageIndex": 10
+  },
+  "social": {
+    "heading": "From the shop and the feed",
+    "kicker": "Reference imagery -- placeholder pending real photography",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "captions": [
+      "On site",
+      "Team at work",
+      "Detail shot",
+      "Storefront",
+      "In progress",
+      "Finished result"
+    ]
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "General Checkups",
+        "href": "#offerings",
+        "imageIndex": 9
+      },
+      {
+        "title": "Restorative Dentistry",
+        "href": "#offerings",
+        "imageIndex": 10
+      },
+      {
+        "title": "Cosmetic Consultations",
+        "href": "#offerings",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {},
+  "closing": {
+    "kicker": "Philadelphia, in full",
+    "cta": {
+      "label": "Get in touch",
+      "href": "#visit"
+    }
+  },
+  "links": [
+    {
+      "label": "Official website",
+      "href": "https://www.padentalgroup.com/"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "General Dentistry concept image 1 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "General Dentistry concept image 2 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "General Dentistry concept image 3 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "General Dentistry concept image 4 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "General Dentistry concept image 5 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "General Dentistry concept image 6 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "General Dentistry concept image 7 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "General Dentistry concept image 8 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "General Dentistry concept image 9 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "General Dentistry concept image 10 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "General Dentistry concept image 11 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "General Dentistry concept image 12 (placeholder -- real photography not yet sourced)"
+    }
+  ],
+  "placeholders": [
+    "phone: not sourced from radar/build-queue data -- left empty, no number invented",
+    "address: not sourced from radar/build-queue data -- left empty, no address invented",
+    "hours: not sourced from radar/build-queue data -- left empty, no hours invented",
+    "images: all 12 image-N.webp slots are placeholders pending real photography/generated-stock imagery (see images[].alt)"
+  ]
+}

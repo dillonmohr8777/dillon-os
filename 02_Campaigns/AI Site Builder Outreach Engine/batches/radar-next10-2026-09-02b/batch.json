@@ -1,0 +1,10 @@
+{
+  "id": "radar-next10-2026-09-02b",
+  "title": "Prospect Radar Next-10, 2026-09-02b",
+  "market": "Philadelphia metro / South-Central PA",
+  "week": "2026-09-02",
+  "idPrefix": "RN10B",
+  "targetCount": 10,
+  "deployBaseUrl": "https://radar-next10-2026-09-02b.netlify.app",
+  "note": "Second next-10 batch of the day. Top table in Daily-Briefs/radar-2026-09-01.md (scores 89-94) was already fully consumed by batch radar-next10-2026-09-02, so this batch pulls the next-highest-scoring unbuilt rows (scores 74-78) from 12_Brain/state/radar/build-queue.csv. Unlike the prior batch, these 10 source domains resolve (302/503/202/200 on recheck) but are graded broken/decayed for mobile-viewport and reliability faults -- rebuild candidates, not dead-domain candidates. Fitness-centre vertical (Go Vertical - Indoor Rock Climbing Gym, score 75) was skipped: no approved generated-stock board resolves for that vertical. Generated-stock image library is gitignored and not present locally, so imagery is degraded (placeholder alt-text only, no real photos) pending a separate imagery-generation pass."
+}

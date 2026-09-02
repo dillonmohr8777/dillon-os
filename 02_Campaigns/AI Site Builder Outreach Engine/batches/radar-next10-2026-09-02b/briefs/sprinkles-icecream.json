@@ -1,0 +1,222 @@
+{
+  "slug": "sprinkles-icecream",
+  "name": "Sprinkles Icecream",
+  "city": "Elkins Park",
+  "category": "Ice Cream Shop",
+  "vertical": "ice-cream",
+  "attitude": "warm",
+  "url": "http://www.sprinklesicecreamelkinspark.com/",
+  "phone": "",
+  "address": "",
+  "hours": "",
+  "description": "An Elkins Park ice cream shop serving hand-scooped flavors, sundaes, and cold treats for the whole family.",
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "marquee": [
+    "Hand-scooped ice cream",
+    "Elkins Park favorite",
+    "Cool down, sweeten up",
+    "Family treat stop"
+  ],
+  "tokens": {
+    "paper": "#FDF3F6",
+    "ink": "#2B1620",
+    "accent": "#E8598B",
+    "accent2": "#4FB8A5",
+    "panel": "#F5DEE6",
+    "deep": "#1D0E14",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#06211D",
+    "onPanel": "#1D0E14",
+    "onDeep": "#FFFFFF",
+    "border": "2px",
+    "radius": "20px"
+  },
+  "fonts": {
+    "display": "Fraunces",
+    "displayFallback": "Georgia,serif",
+    "text": "Nunito Sans"
+  },
+  "logo": false,
+  "hero": {
+    "eyebrow": "Elkins Park | Ice Cream Shop",
+    "headline": "Sprinkles Icecream",
+    "sub": "Scoops, sundaes, and cold treats made for a quick stop or a slow summer evening.",
+    "ctaPrimary": {
+      "label": "Get in touch",
+      "href": "#visit"
+    },
+    "ctaSecondary": {
+      "label": "See services",
+      "href": "#offerings"
+    },
+    "glassFloat": {
+      "title": "Ice Cream Shop",
+      "sub": "Elkins Park"
+    },
+    "marquee": [
+      "Hand-scooped ice cream",
+      "Elkins Park favorite",
+      "Cool down, sweeten up",
+      "Family treat stop"
+    ]
+  },
+  "offerings": {
+    "items": [
+      "Hand-scooped ice cream in a rotating lineup of classic and seasonal flavors",
+      "Sundaes, shakes, and toppings bars built for kids and adults alike",
+      "Take-home pints for the freezer when the craving hits later"
+    ]
+  },
+  "proof": {
+    "items": [
+      "A neighborhood stop in Elkins Park for cones, cups, and sundaes",
+      "Flavor lineup rotates with the season",
+      "Easy in-and-out counter service, no reservation needed",
+      "A regular stop for families after dinner or a walk around town"
+    ]
+  },
+  "gallery": {
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "About",
+    "paragraphs": [
+      "Sprinkles Icecream keeps things simple: real ice cream, generous scoops, and a counter that moves fast on a hot afternoon.",
+      "It is the kind of stop a neighborhood builds a routine around -- after Little League, after dinner, or just because."
+    ]
+  },
+  "experience": {
+    "items": [
+      "Walk up, pick a flavor, and get a scoop without a long wait.",
+      "Ask about the daily flavor lineup -- it changes with the season.",
+      "Bring the whole family; there is something for every age at the counter."
+    ]
+  },
+  "feature": {
+    "heading": "Hand-scooped, not soft-serve",
+    "text": "Every cone and cup starts with real hand-scooped ice cream -- the kind that holds its shape and its flavor.",
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Sundaes and shakes worth the trip",
+    "text": "Build a sundae with classic toppings or go straight for a thick shake -- either way, it is a treat worth the drive.",
+    "imageIndex": 10
+  },
+  "social": {
+    "heading": "From the shop and the feed",
+    "kicker": "Reference imagery -- placeholder pending real photography",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "captions": [
+      "On site",
+      "Behind the counter",
+      "Detail shot",
+      "Storefront",
+      "In progress",
+      "Finished result"
+    ]
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Hand-Scooped Cones & Cups",
+        "href": "#offerings",
+        "imageIndex": 9
+      },
+      {
+        "title": "Sundaes & Shakes",
+        "href": "#offerings",
+        "imageIndex": 10
+      },
+      {
+        "title": "Take-Home Pints",
+        "href": "#offerings",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {},
+  "closing": {
+    "kicker": "Elkins Park, in full",
+    "cta": {
+      "label": "Get in touch",
+      "href": "#visit"
+    }
+  },
+  "links": [
+    {
+      "label": "Official website",
+      "href": "http://www.sprinklesicecreamelkinspark.com/"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Ice Cream Shop concept image 1 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Ice Cream Shop concept image 2 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Ice Cream Shop concept image 3 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Ice Cream Shop concept image 4 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Ice Cream Shop concept image 5 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Ice Cream Shop concept image 6 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Ice Cream Shop concept image 7 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Ice Cream Shop concept image 8 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Ice Cream Shop concept image 9 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Ice Cream Shop concept image 10 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Ice Cream Shop concept image 11 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Ice Cream Shop concept image 12 (placeholder -- real photography not yet sourced)"
+    }
+  ],
+  "placeholders": [
+    "phone: not sourced from radar/build-queue data -- left empty, no number invented",
+    "address: not sourced from radar/build-queue data -- left empty, no address invented",
+    "hours: not sourced from radar/build-queue data -- left empty, no hours invented",
+    "images: all 12 image-N.webp slots are placeholders pending real photography/generated-stock imagery (see images[].alt)"
+  ]
+}

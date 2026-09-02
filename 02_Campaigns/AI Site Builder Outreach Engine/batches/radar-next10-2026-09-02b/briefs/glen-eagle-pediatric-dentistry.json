@@ -1,0 +1,223 @@
+{
+  "slug": "glen-eagle-pediatric-dentistry",
+  "name": "Glen Eagle Pediatric Dentistry",
+  "city": "Delaware County",
+  "category": "Pediatric Dentistry",
+  "vertical": "dentist",
+  "attitude": "glass",
+  "url": "https://gleneaglepediatricdentistry.com/",
+  "phone": "",
+  "address": "",
+  "hours": "",
+  "description": "A Delaware County pediatric dental practice offering gentle checkups and cleanings for children.",
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "marquee": [
+    "Kid-friendly dentistry",
+    "Delaware County pediatric practice",
+    "Gentle first visits",
+    "New patients welcome"
+  ],
+  "tokens": {
+    "paper": "#F7F5FB",
+    "ink": "#221B33",
+    "accent": "#7C5CE0",
+    "accent2": "#3FBFA0",
+    "panel": "#E7E1F3",
+    "deep": "#171129",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#05231C",
+    "onPanel": "#171129",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "28px"
+  },
+  "fonts": {
+    "display": "Fraunces",
+    "displayFallback": "Georgia,serif",
+    "text": "Inter"
+  },
+  "logo": false,
+  "hero": {
+    "eyebrow": "Delaware County | Pediatric Dentistry",
+    "headline": "Glen Eagle Pediatric Dentistry",
+    "sub": "Checkups, cleanings, and a gentle first-visit experience built around kids.",
+    "ctaPrimary": {
+      "label": "Get in touch",
+      "href": "#visit"
+    },
+    "ctaSecondary": {
+      "label": "See services",
+      "href": "#offerings"
+    },
+    "glassFloat": {
+      "title": "Pediatric Dentistry",
+      "sub": "Delaware County"
+    },
+    "marquee": [
+      "Kid-friendly dentistry",
+      "Delaware County pediatric practice",
+      "Gentle first visits",
+      "New patients welcome"
+    ]
+  },
+  "offerings": {
+    "items": [
+      "Routine checkups and cleanings sized for kids",
+      "Gentle first-visit experience to build comfort early",
+      "Preventive care including sealants and fluoride treatments"
+    ]
+  },
+  "proof": {
+    "items": [
+      "Serving families across Delaware County",
+      "New patients welcome, most insurance accepted",
+      "A comfort-first exam room designed with kids in mind",
+      "Clear explanations for parents before any treatment"
+    ]
+  },
+  "gallery": {
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "About",
+    "paragraphs": [
+      "Glen Eagle Pediatric Dentistry was built around one goal: make a child’s first dental visits calm instead of scary.",
+      "The practice leans on prevention, so small issues get caught early and treatment stays simple."
+    ]
+  },
+  "experience": {
+    "items": [
+      "Book a visit and get a walkthrough of what to expect before you arrive.",
+      "No surprise procedures -- every treatment plan is explained to parents first.",
+      "A bright, kid-focused office designed to keep first visits low-stress."
+    ]
+  },
+  "feature": {
+    "heading": "Prevention that starts early",
+    "text": "Regular checkups and sealants catch problems while they are still small and simple to treat.",
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "A gentler kind of first visit",
+    "text": "From the first hello to the last checkup, the goal is a visit kids do not dread.",
+    "imageIndex": 10
+  },
+  "social": {
+    "heading": "From the shop and the feed",
+    "kicker": "Reference imagery -- placeholder pending real photography",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "captions": [
+      "On site",
+      "Team at work",
+      "Detail shot",
+      "Waiting area",
+      "In progress",
+      "Finished result"
+    ]
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Checkups & Cleanings",
+        "href": "#offerings",
+        "imageIndex": 9
+      },
+      {
+        "title": "Preventive Sealants",
+        "href": "#offerings",
+        "imageIndex": 10
+      },
+      {
+        "title": "First-Visit Care",
+        "href": "#offerings",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {},
+  "closing": {
+    "kicker": "Serving Delaware County",
+    "cta": {
+      "label": "Get in touch",
+      "href": "#visit"
+    }
+  },
+  "links": [
+    {
+      "label": "Official website",
+      "href": "https://gleneaglepediatricdentistry.com/"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Pediatric Dentistry concept image 1 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Pediatric Dentistry concept image 2 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Pediatric Dentistry concept image 3 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Pediatric Dentistry concept image 4 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Pediatric Dentistry concept image 5 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Pediatric Dentistry concept image 6 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Pediatric Dentistry concept image 7 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Pediatric Dentistry concept image 8 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Pediatric Dentistry concept image 9 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Pediatric Dentistry concept image 10 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Pediatric Dentistry concept image 11 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Pediatric Dentistry concept image 12 (placeholder -- real photography not yet sourced)"
+    }
+  ],
+  "placeholders": [
+    "phone: not sourced from radar/build-queue data -- left empty, no number invented",
+    "address: not sourced from radar/build-queue data -- left empty, no address invented",
+    "hours: not sourced from radar/build-queue data -- left empty, no hours invented",
+    "images: all 12 image-N.webp slots are placeholders pending real photography/generated-stock imagery (see images[].alt)",
+    "city: source row left city blank -- used the source’s Delaware County area value, not invented"
+  ]
+}

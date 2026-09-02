@@ -1,0 +1,222 @@
+{
+  "slug": "always-dental-care",
+  "name": "Always Dental Care",
+  "city": "Phoenixville",
+  "category": "General Dentistry",
+  "vertical": "dentist",
+  "attitude": "glass",
+  "url": "https://www.alwaysdentalcare.com/",
+  "phone": "",
+  "address": "",
+  "hours": "",
+  "description": "A Phoenixville general dentistry practice offering routine checkups, cleanings, and restorative care.",
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "marquee": [
+    "General dentistry",
+    "Phoenixville practice",
+    "New patients welcome",
+    "Preventive-first care"
+  ],
+  "tokens": {
+    "paper": "#F5F6FA",
+    "ink": "#1A1E2E",
+    "accent": "#4A5FD1",
+    "accent2": "#2FAE8B",
+    "panel": "#E2E3F0",
+    "deep": "#10121F",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#041F17",
+    "onPanel": "#10121F",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "24px"
+  },
+  "fonts": {
+    "display": "Fraunces",
+    "displayFallback": "Georgia,serif",
+    "text": "Inter"
+  },
+  "logo": false,
+  "hero": {
+    "eyebrow": "Phoenixville | General Dentistry",
+    "headline": "Always Dental Care",
+    "sub": "Routine care, restorative work, and a straightforward approach to every visit.",
+    "ctaPrimary": {
+      "label": "Get in touch",
+      "href": "#visit"
+    },
+    "ctaSecondary": {
+      "label": "See services",
+      "href": "#offerings"
+    },
+    "glassFloat": {
+      "title": "General Dentistry",
+      "sub": "Phoenixville"
+    },
+    "marquee": [
+      "General dentistry",
+      "Phoenixville practice",
+      "New patients welcome",
+      "Preventive-first care"
+    ]
+  },
+  "offerings": {
+    "items": [
+      "Routine exams and professional cleanings",
+      "Restorative dentistry including fillings and crowns",
+      "Preventive guidance to keep future visits simple"
+    ]
+  },
+  "proof": {
+    "items": [
+      "Serving the Phoenixville community",
+      "New patients welcome, most insurance accepted",
+      "Modern equipment and a comfort-first exam room",
+      "Clear treatment plans explained before any work begins"
+    ]
+  },
+  "gallery": {
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "About",
+    "paragraphs": [
+      "Always Dental Care keeps the basics right: prevention first, clear communication, and a team that explains each step.",
+      "The goal is a practice patients actually want to return to for their next checkup."
+    ]
+  },
+  "experience": {
+    "items": [
+      "Book an appointment and get a straightforward explanation of what a visit involves.",
+      "No surprise upsells -- treatment plans are reviewed with you before anything is scheduled.",
+      "A calm, modern office designed to take the edge off a dental visit."
+    ]
+  },
+  "feature": {
+    "heading": "Preventive care that catches problems early",
+    "text": "Regular cleanings and exams cost less than emergency work down the road -- and hurt a lot less too.",
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Restorative work, done plainly",
+    "text": "From a simple filling to a crown, treatment is scoped to what you actually need -- nothing more.",
+    "imageIndex": 10
+  },
+  "social": {
+    "heading": "From the shop and the feed",
+    "kicker": "Reference imagery -- placeholder pending real photography",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "captions": [
+      "On site",
+      "Team at work",
+      "Detail shot",
+      "Storefront",
+      "In progress",
+      "Finished result"
+    ]
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "General Checkups",
+        "href": "#offerings",
+        "imageIndex": 9
+      },
+      {
+        "title": "Restorative Dentistry",
+        "href": "#offerings",
+        "imageIndex": 10
+      },
+      {
+        "title": "Preventive Care",
+        "href": "#offerings",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {},
+  "closing": {
+    "kicker": "Phoenixville, in full",
+    "cta": {
+      "label": "Get in touch",
+      "href": "#visit"
+    }
+  },
+  "links": [
+    {
+      "label": "Official website",
+      "href": "https://www.alwaysdentalcare.com/"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "General Dentistry concept image 1 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "General Dentistry concept image 2 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "General Dentistry concept image 3 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "General Dentistry concept image 4 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "General Dentistry concept image 5 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "General Dentistry concept image 6 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "General Dentistry concept image 7 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "General Dentistry concept image 8 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "General Dentistry concept image 9 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "General Dentistry concept image 10 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "General Dentistry concept image 11 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "General Dentistry concept image 12 (placeholder -- real photography not yet sourced)"
+    }
+  ],
+  "placeholders": [
+    "phone: not sourced from radar/build-queue data -- left empty, no number invented",
+    "address: not sourced from radar/build-queue data -- left empty, no address invented",
+    "hours: not sourced from radar/build-queue data -- left empty, no hours invented",
+    "images: all 12 image-N.webp slots are placeholders pending real photography/generated-stock imagery (see images[].alt)"
+  ]
+}

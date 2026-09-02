@@ -204,6 +204,11 @@ const builders = {
 };
 
 // Long homepage structure matching Philly-25 depth. social/spotlight only render when brief has content.
+// `contact` moved ahead of `social`/`catalog` (2026-09-02, radar-next10-2026-09-02b template
+// fix): feature+spotlight+social+catalog used to run back to back as four consecutive
+// image-led sections. contact has no imagery, so it now breaks that run into two pairs
+// (gallery+story, feature+spotlight, social+catalog) with a text/CTA section between each
+// pair, per Dillon's feedback that PREV batches had "too many consecutive images."
 const defaultOrder = [
   'hero',
   'offerings',
@@ -213,9 +218,9 @@ const defaultOrder = [
   'experience',
   'feature',
   'spotlight',
+  'contact',
   'social',
   'catalog',
-  'contact',
   'closing',
 ];
 const sections = (brief.sections || defaultOrder)
