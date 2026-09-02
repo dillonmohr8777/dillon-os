@@ -6,7 +6,7 @@
 <meta name="robots" content="noindex,nofollow">
 <meta name="description" content="The Juice Merchant — cold-pressed juice, smoothies, and bowls made to order in Narberth, PA. Prospect demo, not a live site.">
 <title>The Juice Merchant — Cold-Pressed Juice &amp; Smoothie Bar, Narberth PA</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%234f7a23'/%3E%3Ccircle cx='32' cy='32' r='20' fill='none' stroke='%23faf7ec' stroke-width='3'/%3E%3Cpath d='M32 12v40M12 32h40M18 18l28 28M18 46l28-28' stroke='%23faf7ec' stroke-width='2' opacity='.8'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2084%2088%22%3E%3Cg%20transform%3D%22translate%2814%2C16.0%29%22%3E%0A%20%20%20%20%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%2256%22%20height%3D%2256%22%20rx%3D%2212%22%20fill%3D%22%234f7a23%22%2F%3E%0A%20%20%20%20%3Cg%20transform%3D%22translate%289.0%2C9.0%29%20scale%281.587%29%22%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%2212%22%20cy%3D%2213%22%20r%3D%226.5%22%2F%3E%3Cpath%20d%3D%22M12%206.5V13M12%2013%208.6%209.6M12%2013l3.6-3M12%2013%208%2016M12%2013l4%203%22%2F%3E%3Cpath%20d%3D%22M12%203.2c1%201%201.6%202%201.6%203.3%22%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%3C%2Fg%3E%3C%2Fsvg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
@@ -152,7 +152,7 @@ a:hover{color:var(--accent)}
   display:flex;align-items:center;justify-content:center;margin-bottom:var(--s-4);
   background:color-mix(in srgb,var(--accent) 18%,var(--paper));
   filter:hue-rotate(var(--hue,0deg))}
-.card-icon{width:28px;height:28px;color:var(--accent)}
+.ico{width:28px;height:28px;color:var(--accent)}
 .menu-card:nth-child(1){--hue:0deg}
 .menu-card:nth-child(2){--hue:300deg}
 .menu-card:nth-child(3){--hue:130deg}
@@ -236,11 +236,29 @@ address{font-style:normal}
 </style>
 </head>
 <body>
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true" focusable="false">
+  <style>symbol{fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}</style>
+  <symbol id="icon-1" viewBox="0 0 24 24"><circle cx="12" cy="13" r="6.5"/><path d="M12 6.5V13M12 13 8.6 9.6M12 13l3.6-3M12 13 8 16M12 13l4 3"/><path d="M12 3.2c1 1 1.6 2 1.6 3.3"/></symbol>
+  <symbol id="icon-2" viewBox="0 0 24 24"><path d="M8 3h8l-1 8h-6z"/><rect x="7" y="11" width="10" height="9" rx="2"/><path d="M9 14h6M9 17h6"/></symbol>
+  <symbol id="icon-3" viewBox="0 0 24 24"><path d="M4 11h16a8 8 0 0 1-16 0z"/><circle cx="9" cy="8" r="1.3"/><circle cx="13" cy="7" r="1.3"/><circle cx="16" cy="9" r="1.3"/></symbol>
+  <symbol id="icon-4" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 9.5h17M8 3v4M16 3v4M12 12c-1.6 2-1.7 4.1-.4 5.3 1.6-.2 2.9-1.6 2.9-3.5 0-1-.7-1.8-2.5-1.8z"/></symbol>
+  <symbol id="icon-5" viewBox="0 0 24 24"><rect x="3" y="14" width="18" height="4" rx="1"/><path d="M6 14V9a6 6 0 0 1 12 0v5"/></symbol>
+</svg>
+
 <a class="skip" href="#main">Skip to content</a>
 
 <header class="site-head">
   <div class="wrap bar">
-    <a class="brandmark" href="#top">The Juice Merchant</a>
+    <a class="brandmark" href="#top" aria-label="The Juice Merchant"><svg viewBox="0 0 270 88" height="34" role="img" aria-hidden="true" focusable="false" style="height:34px;width:auto;display:block" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(14,16.0)">
+    <rect x="0" y="0" width="56" height="56" rx="12" fill="#4f7a23"/>
+    <g transform="translate(9.0,9.0) scale(1.587)" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="13" r="6.5"/><path d="M12 6.5V13M12 13 8.6 9.6M12 13l3.6-3M12 13 8 16M12 13l4 3"/><path d="M12 3.2c1 1 1.6 2 1.6 3.3"/>
+    </g>
+  </g>
+  <text x="84" y="46" font-family="Georgia,'Times New Roman',serif" font-weight="700" letter-spacing="0" font-size="34" fill="#1b2011">The Juice Merchant</text>
+  <text x="84" y="70" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" font-weight="600" letter-spacing="0.14em" fill="#1b2011">COLD-PRESSED · NARBERTH</text>
+</svg></a>
     <nav class="nav" aria-label="Primary">
       <a class="nav-link" href="#menu">Menu</a>
       <a class="nav-link" href="#how">How it's pressed</a>
@@ -255,73 +273,44 @@ address{font-style:normal}
   <!-- HERO — citrus wheels + rising leaves, the one loud motion moment. -->
   <section class="hero" id="top">
     <div class="hero-art" data-parallax="10">
-<svg class="art art-citrus" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice"
-     role="presentation" aria-hidden="true" focusable="false"
-     xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice">
   <style>
-    .art-citrus .st{fill:none;stroke:currentColor;stroke-linecap:round;
-      vector-effect:non-scaling-stroke}
-    .art-citrus .rise{animation:jc-rise 11s linear infinite;will-change:transform}
-    .art-citrus .r2{animation-duration:15s;animation-delay:-4s}
-    .art-citrus .r3{animation-duration:19s;animation-delay:-9s}
-    .art-citrus .wheel{transform-box:fill-box;transform-origin:50% 50%;
-      animation:jc-spin 52s linear infinite}
-    .art-citrus .w2{animation-duration:70s;animation-direction:reverse}
-    .art-citrus .w3{animation-duration:40s}
-    .art-citrus .bob{animation:jc-bob 9s ease-in-out infinite}
-    .art-citrus .drop{animation:jc-drop 6s ease-in-out infinite}
-    .art-citrus .d2{animation-delay:-2s}
-    .art-citrus .d3{animation-delay:-4s}
-    @keyframes jc-rise{from{transform:translate3d(0,0,0) rotate(0)}
-      to{transform:translate3d(0,-220px,0) rotate(14deg)}}
-    @keyframes jc-spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
-    @keyframes jc-bob{0%,100%{transform:translate3d(0,0,0)}
-      50%{transform:translate3d(0,-14px,0)}}
-    @keyframes jc-drop{0%,100%{opacity:.25;transform:translate3d(0,0,0)}
-      50%{opacity:.6;transform:translate3d(0,10px,0)}}
-    @media (prefers-reduced-motion:reduce){
-      .art-citrus .rise,.art-citrus .wheel,.art-citrus .bob,.art-citrus .drop{animation:none}}
+    @media (prefers-reduced-motion: no-preference) {
+      @keyframes jc-rise{0%{transform:translateY(0);opacity:.7}100%{transform:translateY(-90px);opacity:0}}
+      @keyframes jc-press{0%,100%{transform:translateY(0)}50%{transform:translateY(10px)}}
+      @keyframes jc-fill{0%,100%{transform:scaleY(.7)}50%{transform:scaleY(1)}}
+      @keyframes jc-spin{to{transform:rotate(360deg)}}
+      .jc-leaf{animation:jc-rise 5s ease-in infinite}
+      .jc-leaf2{animation:jc-rise 6.5s ease-in infinite 1.5s}
+      .jc-press{animation:jc-press 3.2s ease-in-out infinite;transform-origin:660px 300px}
+      .jc-fill{animation:jc-fill 3.2s ease-in-out infinite;transform-origin:660px 460px}
+      .jc-wheel{animation:jc-spin 30s linear infinite;transform-origin:210px 320px}
+    }
   </style>
-  <defs>
-    <path id="jc-leaf" d="M0 0 C 26 -10 46 -34 46 -66 C 46 -34 66 -10 92 0
-      C 66 10 46 34 46 66 C 46 34 26 10 0 0 Z M46 -60 V60"/>
-    <g id="jc-wheel">
-      <circle r="86" fill="currentColor" opacity=".14"/>
-      <circle r="86" fill="none" stroke="currentColor" stroke-width="3"/>
-      <circle r="60" fill="none" stroke="currentColor" stroke-width="1.6" opacity=".7"/>
-      <g stroke="currentColor" stroke-width="2" opacity=".6">
-        <path d="M0 -58 A58 58 0 0 1 50 -29"/>
-        <path d="M50 29 A58 58 0 0 1 0 58"/>
-        <path d="M0 58 A58 58 0 0 1 -50 29"/>
-        <path d="M-50 -29 A58 58 0 0 1 0 -58"/>
-        <path d="M-50 -29 A58 58 0 0 1 -50 29" opacity=".5"/>
-        <path d="M50 -29 A58 58 0 0 1 50 29" opacity=".5"/>
-      </g>
-      <circle r="10" fill="none" stroke="currentColor" stroke-width="1.4" opacity=".6"/>
-    </g>
-  </defs>
-  <g opacity=".55">
-    <g class="rise r1"><use href="#jc-leaf" class="st" stroke-width="2" x="150" y="700"/></g>
-    <g class="rise r2"><use href="#jc-leaf" class="st" stroke-width="2.4" x="520" y="760"/></g>
-    <g class="rise r3"><use href="#jc-leaf" class="st" stroke-width="1.6" x="330" y="640" opacity=".6"/></g>
-    <g class="rise r1"><use href="#jc-leaf" class="st" stroke-width="1.6" x="70" y="560" opacity=".6"/></g>
+  <defs><radialGradient id="jc-bg" cx="30%" cy="20%" r="90%">
+    <stop offset="0" stop-color="#faf7ec"/><stop offset="1" stop-color="#4f7a23" stop-opacity=".15"/>
+  </radialGradient></defs>
+  <rect width="900" height="600" fill="url(#jc-bg)"/>
+  <g class="jc-wheel" fill="none" stroke="#e2792e" stroke-width="5">
+    <circle cx="210" cy="320" r="110"/>
+    <circle cx="210" cy="320" r="34" fill="#e2792e" fill-opacity=".18"/>
+    <path d="M210 210v220M100 320h220M138 248l144 144M282 248 138 392"/>
   </g>
-  <g class="bob">
-    <g transform="translate(980 260) scale(1.15)">
-      <use href="#jc-wheel" class="wheel w1"/>
-    </g>
-    <g transform="translate(1120 520) scale(.65)">
-      <use href="#jc-wheel" class="wheel w2"/>
-    </g>
+  <g fill="none" stroke="#4f7a23" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="120" cy="150" r="46"/>
+    <path d="M120 104v92M74 150h92M90 120l60 60M150 120l-60 60"/>
   </g>
-  <g transform="translate(760 620) scale(.85)" opacity=".65">
-    <use href="#jc-wheel" class="wheel w3"/>
+  <g class="jc-leaf" fill="#4f7a23" opacity=".55"><path d="M600 190c26 8 40 26 40 48-24 4-44-8-52-30-3-8-2-14 12-18z"/></g>
+  <g class="jc-leaf2" fill="#e2792e" opacity=".5"><path d="M640 150c22 10 32 28 28 50-24 0-40-14-46-36-2-8 0-14 18-14z"/></g>
+  <g class="jc-press" fill="none" stroke="#1b2011" stroke-width="6" stroke-linecap="round">
+    <rect x="610" y="220" width="100" height="18" rx="4" fill="#1b2011" opacity=".85" stroke="none"/>
+    <line x1="660" y1="238" x2="660" y2="300" stroke-width="10"/>
   </g>
-  <g fill="currentColor">
-    <circle class="drop d1" cx="880" cy="120" r="6"/>
-    <circle class="drop d2" cx="1080" cy="700" r="5"/>
-    <circle class="drop d3" cx="640" cy="180" r="4"/>
+  <rect x="630" y="300" width="60" height="30" rx="4" fill="#182410"/>
+  <g class="jc-fill">
+    <rect x="636" y="330" width="48" height="130" fill="#e2792e" fill-opacity=".55"/>
   </g>
+  <rect x="628" y="330" width="64" height="140" rx="6" fill="none" stroke="#1b2011" stroke-width="5"/>
 </svg>
     </div>
     <div class="wrap hero-copy">
@@ -352,54 +341,35 @@ address{font-style:normal}
       <div class="services mt-6" data-stagger>
         <article class="card menu-card" data-reveal>
           <div class="menu-icon-wrap">
-            <svg class="card-icon" viewBox="0 0 44 44" aria-hidden="true" fill="none"
-                 stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
-              <path d="M22 6 22 20"/><path d="M14 20h16l3 18H11z"/><path d="M17 26h10"/>
-            </svg>
+            <svg class="ico" aria-hidden="true" focusable="false"><use href="#icon-1"/></svg>
           </div>
           <h3>Cold-Pressed Juices</h3>
           <p>Fresh cold-pressed juice blends made from fruits and vegetables, pressed to order rather than sitting on a shelf.</p>
         </article>
         <article class="card menu-card" data-reveal>
           <div class="menu-icon-wrap">
-            <svg class="card-icon" viewBox="0 0 44 44" aria-hidden="true" fill="none"
-                 stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
-              <path d="M13 16h18l-2 20a4 4 0 0 1-4 4H19a4 4 0 0 1-4-4z"/>
-              <path d="M22 8v8M17 12l10 0"/>
-            </svg>
+            <svg class="ico" aria-hidden="true" focusable="false"><use href="#icon-2"/></svg>
           </div>
           <h3>Smoothies</h3>
           <p>Fruit and vegetable smoothies blended to order, built for a quick breakfast, a post-workout refuel, or an afternoon pick-me-up.</p>
         </article>
         <article class="card menu-card" data-reveal>
           <div class="menu-icon-wrap">
-            <svg class="card-icon" viewBox="0 0 44 44" aria-hidden="true" fill="none"
-                 stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8 20h28a14 14 0 0 1-28 0z"/><path d="M15 20l1-6M22 20l0-8M29 20l-1-6"/>
-            </svg>
+            <svg class="ico" aria-hidden="true" focusable="false"><use href="#icon-3"/></svg>
           </div>
           <h3>Juice &amp; Smoothie Bowls</h3>
           <p>Thick smoothie bases topped with fruit, granola, and other toppings for a sit-down or grab-and-go bowl.</p>
         </article>
         <article class="card menu-card" data-reveal>
           <div class="menu-icon-wrap">
-            <svg class="card-icon" viewBox="0 0 44 44" aria-hidden="true" fill="none"
-                 stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
-              <rect x="10" y="10" width="6" height="24" rx="2"/>
-              <rect x="19" y="10" width="6" height="24" rx="2"/>
-              <rect x="28" y="10" width="6" height="24" rx="2"/>
-            </svg>
+            <svg class="ico" aria-hidden="true" focusable="false"><use href="#icon-4"/></svg>
           </div>
           <h3>Cleanses</h3>
           <p>Multi-day juice cleanse packages for anyone looking to reset with fresh-pressed juice instead of solid food for a stretch.</p>
         </article>
         <article class="card menu-card" data-reveal>
           <div class="menu-icon-wrap">
-            <svg class="card-icon" viewBox="0 0 44 44" aria-hidden="true" fill="none"
-                 stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
-              <ellipse cx="22" cy="30" rx="16" ry="5"/>
-              <path d="M10 30V22a12 12 0 0 1 24 0v8"/>
-            </svg>
+            <svg class="ico" aria-hidden="true" focusable="false"><use href="#icon-5"/></svg>
           </div>
           <h3>Catering</h3>
           <p>Juice, smoothie, and bowl trays available for local events, meetings, and gatherings around Narberth.</p>
@@ -533,6 +503,12 @@ address{font-style:normal}
   <div class="wrap">
     <div class="foot-grid">
       <div>
+        <svg class="foot-mark" viewBox="0 0 84 88" aria-hidden="true" focusable="false" style="height:28px;width:auto;display:block;margin-bottom:var(--s-3)" xmlns="http://www.w3.org/2000/svg"><g transform="translate(14,16.0)">
+    <rect x="0" y="0" width="56" height="56" rx="12" fill="#4f7a23"/>
+    <g transform="translate(9.0,9.0) scale(1.587)" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="13" r="6.5"/><path d="M12 6.5V13M12 13 8.6 9.6M12 13l3.6-3M12 13 8 16M12 13l4 3"/><path d="M12 3.2c1 1 1.6 2 1.6 3.3"/>
+    </g>
+  </g></svg>
         <h4>The Juice Merchant</h4>
         <address>Narberth, PA<br>Address to be confirmed</address>
       </div>

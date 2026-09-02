@@ -89,3 +89,28 @@ non-invented phrasing rather than fake data:
 - Whether `golden-sea` / `specks-broasted-chicken` (the batch's other two
   restaurant slugs) end up sharing this `--brand` green once built — both were
   empty directories at build time.
+
+## Design layer (Claude Design port)
+
+Ported the shared `_kit/design/the-juice-merchant/` assets into `index.html`:
+
+- **Header**: replaced the text-only `.brandmark` with an inline `logo.svg`
+  (viewBox `0 0 270 88`, 34px height, width auto), `aria-label="The Juice
+  Merchant"` on the link. Wordmark + "COLD-PRESSED · NARBERTH" subline stay
+  readable at that height (Georgia serif display font, no embedded webfont).
+- **Footer**: added the mark alone (rounded-square citrus-drop icon, cropped
+  to `viewBox 0 0 84 88`) at 28px above the business name.
+- **Hero**: swapped the inline citrus SVG for the kit's `hero-art.svg`
+  (`viewBox 0 0 900 600`, matches the original 1200x800 3:2 ratio) — direct
+  fit. Copy and reveal timing untouched; h1 paints at 0ms.
+- **Services grid ("On the menu")**: inlined `icons.svg` as a hidden sprite
+  after `<body>`, replaced each menu card's inline SVG (inside its
+  `.menu-icon-wrap`) with `<use href="#icon-N"/>` per the manifest mapping
+  (citrus-drop, blender, bowl-berries, calendar-leaf, tray). Fixed the page's
+  own `.card-icon` rule (it was already 28px in this build) to `.ico`,
+  `color:var(--accent)`.
+- **Favicon**: rebuilt as an SVG data URI from the same cropped logo mark, no
+  raster.
+- Text-node diff before/after: only the old plain-text brandmark node was
+  removed (now SVG `<text>`); all other copy identical. File size 30,831 →
+  31,897 bytes. JS parses, all anchors resolve, no adjacent art-only sections.

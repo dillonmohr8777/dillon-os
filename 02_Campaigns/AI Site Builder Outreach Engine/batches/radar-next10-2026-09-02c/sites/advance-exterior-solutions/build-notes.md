@@ -74,3 +74,34 @@ All CTAs on the page anchor to real in-page targets (`#contact`, `#services`, `#
 
 - Live-browser render check (390px/1440px actual screenshots, real focus-order tab-through, computed contrast ratios) — only a static/code-level pass was run here. Flagging per instructions rather than claiming a visual QA that wasn't performed.
 - No brand color was ever observed from the prospect's live site (confirmed bot-walled per the brief); the palette is a DESIGN.md-compliant derivation from vertical + explicit task direction, not a sampled color.
+
+
+## Design layer (ported from `_kit/design/advance-exterior-solutions/`)
+
+- Header brand mark: replaced the text-only `.brandmark` anchor with the kit's
+  inline `logo.svg` (36px tall, `role="img"` + `aria-label` carried over from the
+  asset, wordmark still legible at that height).
+- Footer mark: extracted the icon-only portion of `logo.svg` (the rounded-square
+  glyph, no wordmark text) into a standalone 28px `<svg>` placed above the
+  business name in the first footer column.
+- Hero: swapped the kit-demo inline art inside `.hero-art` for the site-specific
+  `hero-art.svg`, keeping the same wrapping `<div class="hero-art" data-parallax>`
+  and the existing `.hero-art>svg{width:100%;height:100%;object-fit:cover}` rule,
+  so no CSS/viewBox change was needed for it to fill the slot. `h1`/subhead/CTAs
+  and their positions were untouched; `h1` still carries no `data-reveal` and
+  renders at 0ms.
+- Services grid: inlined `icons.svg` once as a hidden `<svg style="display:none">`
+  sprite immediately after `<body>`, then swapped each service card's bespoke
+  inline icon for `<svg class="card-icon ico" style="width:28px;height:28px">
+  <use href="#icon-N"/></svg>` in manifest order (`.card-icon` still supplies
+  `color:var(--accent)` and the existing margin).
+- Favicon: regenerated the `<link rel="icon">` as an SVG data URI built from the
+  same footer mark markup (no raster asset).
+- Verified: `node --check` on the extracted inline `<script>` passed; every
+  in-page `#anchor` (including the new `#icon-N` sprite ids) resolves; file size
+  before 29,606 B / after 31,906 B, both well under the 60 KB ceiling; a
+  text-only diff of `<main>`/`<footer>` copy (all tags and decorative SVG
+  stripped) matched byte-for-byte before and after this pass — no copy was
+  changed, only the header/footer/hero/icon/favicon assets.
+
+Also fixed the known font-variable bug: the dead `:root` block declared `--font-display:"Fraunces"...` and `--font-text:"Inter"...` while the page imports Archivo Black and Work Sans from Google Fonts and the `.brand-skin` override (which the `<body class="brand-skin">` already activates) correctly used Archivo Black / Work Sans. The rendered site was never visually affected since `.brand-skin` won the cascade, but the dead `:root` values were wrong and misleading. Updated the `:root` block to `--font-display:"Archivo Black","Arial Black","Helvetica Neue",sans-serif` and `--font-text:"Work Sans",system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif` to match the imported faces and the working override.

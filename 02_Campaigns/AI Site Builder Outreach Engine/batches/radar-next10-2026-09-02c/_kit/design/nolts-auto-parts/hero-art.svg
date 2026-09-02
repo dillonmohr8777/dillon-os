@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice">
+  <style>
+    @media (prefers-reduced-motion: no-preference) {
+      @keyframes np-scroll{0%{transform:translateX(0)}100%{transform:translateX(-80px)}}
+      @keyframes np-scroll-r{0%{transform:translateX(-80px)}100%{transform:translateX(0)}}
+      @keyframes np-spin{to{transform:rotate(360deg)}}
+      .np-belt1{animation:np-scroll 3s linear infinite}
+      .np-belt2{animation:np-scroll-r 4s linear infinite}
+      .np-belt3{animation:np-scroll 2.4s linear infinite}
+      .np-hex{animation:np-spin 18s linear infinite;transform-origin:730px 460px}
+      .np-hex2{animation:np-spin 24s linear infinite reverse;transform-origin:170px 150px}
+    }
+  </style>
+  <rect width="900" height="600" fill="#f5f1e9"/>
+  <g stroke="#52565c" stroke-width="2" opacity=".28">
+    <line x1="60" y1="40" x2="60" y2="560"/><line x1="120" y1="40" x2="120" y2="560"/><line x1="180" y1="40" x2="180" y2="560"/><line x1="240" y1="40" x2="240" y2="560"/><line x1="300" y1="40" x2="300" y2="560"/><line x1="360" y1="40" x2="360" y2="560"/><line x1="420" y1="40" x2="420" y2="560"/><line x1="480" y1="40" x2="480" y2="560"/><line x1="540" y1="40" x2="540" y2="560"/><line x1="600" y1="40" x2="600" y2="560"/><line x1="660" y1="40" x2="660" y2="560"/><line x1="720" y1="40" x2="720" y2="560"/><line x1="780" y1="40" x2="780" y2="560"/><line x1="840" y1="40" x2="840" y2="560"/>
+    <line x1="20" y1="80" x2="880" y2="80"/><line x1="20" y1="140" x2="880" y2="140"/><line x1="20" y1="200" x2="880" y2="200"/><line x1="20" y1="260" x2="880" y2="260"/><line x1="20" y1="320" x2="880" y2="320"/><line x1="20" y1="380" x2="880" y2="380"/><line x1="20" y1="440" x2="880" y2="440"/><line x1="20" y1="500" x2="880" y2="500"/>
+  </g>
+  <g clip-path="url(#np-clip)">
+    <defs><clipPath id="np-clip"><rect x="60" y="200" width="780" height="200"/></clipPath></defs>
+    <g class="np-belt1"><rect x="0" y="220" width="34" height="16" rx="3" fill="#52565c"/><rect x="60" y="220" width="34" height="16" rx="3" fill="#52565c"/><rect x="120" y="220" width="34" height="16" rx="3" fill="#52565c"/><rect x="180" y="220" width="34" height="16" rx="3" fill="#52565c"/><rect x="240" y="220" width="34" height="16" rx="3" fill="#52565c"/><rect x="300" y="220" width="34" height="16" rx="3" fill="#52565c"/><rect x="360" y="220" width="34" height="16" rx="3" fill="#52565c"/><rect x="420" y="220" width="34" height="16" rx="3" fill="#52565c"/><rect x="480" y="220" width="34" height="16" rx="3" fill="#52565c"/><rect x="540" y="220" width="34" height="16" rx="3" fill="#52565c"/><rect x="600" y="220" width="34" height="16" rx="3" fill="#52565c"/><rect x="660" y="220" width="34" height="16" rx="3" fill="#52565c"/><rect x="720" y="220" width="34" height="16" rx="3" fill="#52565c"/><rect x="780" y="220" width="34" height="16" rx="3" fill="#52565c"/><rect x="840" y="220" width="34" height="16" rx="3" fill="#52565c"/></g>
+    <g class="np-belt2"><rect x="0" y="290" width="34" height="16" rx="3" fill="#a8420f"/><rect x="60" y="290" width="34" height="16" rx="3" fill="#a8420f"/><rect x="120" y="290" width="34" height="16" rx="3" fill="#a8420f"/><rect x="180" y="290" width="34" height="16" rx="3" fill="#a8420f"/><rect x="240" y="290" width="34" height="16" rx="3" fill="#a8420f"/><rect x="300" y="290" width="34" height="16" rx="3" fill="#a8420f"/><rect x="360" y="290" width="34" height="16" rx="3" fill="#a8420f"/><rect x="420" y="290" width="34" height="16" rx="3" fill="#a8420f"/><rect x="480" y="290" width="34" height="16" rx="3" fill="#a8420f"/><rect x="540" y="290" width="34" height="16" rx="3" fill="#a8420f"/><rect x="600" y="290" width="34" height="16" rx="3" fill="#a8420f"/><rect x="660" y="290" width="34" height="16" rx="3" fill="#a8420f"/><rect x="720" y="290" width="34" height="16" rx="3" fill="#a8420f"/><rect x="780" y="290" width="34" height="16" rx="3" fill="#a8420f"/><rect x="840" y="290" width="34" height="16" rx="3" fill="#a8420f"/></g>
+    <g class="np-belt3"><rect x="0" y="360" width="34" height="16" rx="3" fill="#52565c"/><rect x="60" y="360" width="34" height="16" rx="3" fill="#52565c"/><rect x="120" y="360" width="34" height="16" rx="3" fill="#52565c"/><rect x="180" y="360" width="34" height="16" rx="3" fill="#52565c"/><rect x="240" y="360" width="34" height="16" rx="3" fill="#52565c"/><rect x="300" y="360" width="34" height="16" rx="3" fill="#52565c"/><rect x="360" y="360" width="34" height="16" rx="3" fill="#52565c"/><rect x="420" y="360" width="34" height="16" rx="3" fill="#52565c"/><rect x="480" y="360" width="34" height="16" rx="3" fill="#52565c"/><rect x="540" y="360" width="34" height="16" rx="3" fill="#52565c"/><rect x="600" y="360" width="34" height="16" rx="3" fill="#52565c"/><rect x="660" y="360" width="34" height="16" rx="3" fill="#52565c"/><rect x="720" y="360" width="34" height="16" rx="3" fill="#52565c"/><rect x="780" y="360" width="34" height="16" rx="3" fill="#52565c"/><rect x="840" y="360" width="34" height="16" rx="3" fill="#52565c"/></g>
+  </g>
+  <g class="np-hex" fill="none" stroke="#a8420f" stroke-width="6" stroke-linejoin="round">
+    <path d="M730 410 l38 22 v44 l-38 22 -38-22 v-44 z"/>
+    <circle cx="730" cy="460" r="16"/>
+  </g>
+  <g class="np-hex2" fill="none" stroke="#52565c" stroke-width="5" stroke-linejoin="round" opacity=".8">
+    <path d="M170 108 l32 18 v36 l-32 18 -32-18 v-36 z"/>
+  </g>
+</svg>

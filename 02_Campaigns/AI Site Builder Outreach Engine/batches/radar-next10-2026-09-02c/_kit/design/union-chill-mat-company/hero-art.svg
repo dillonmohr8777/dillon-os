@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice">
+  <style>
+    @media (prefers-reduced-motion: no-preference) {
+      @keyframes uc-drift{0%,100%{transform:translateX(-10px)}50%{transform:translateX(10px)}}
+      @keyframes uc-pulse{0%,100%{opacity:.4}50%{opacity:1}}
+      @keyframes uc-spin{to{transform:rotate(360deg)}}
+      .uc-band{animation:uc-drift 6s ease-in-out infinite}
+      .uc-rivet{animation:uc-pulse 2.4s ease-in-out infinite}
+      .uc-fan{animation:uc-spin 4s linear infinite;transform-origin:700px 200px}
+    }
+  </style>
+  <rect width="900" height="600" fill="#f2f0e9"/>
+  <rect x="30" y="30" width="840" height="540" rx="8" fill="none" stroke="#181d1f" stroke-width="10" opacity=".18"/>
+  <g fill="#a83c0f" class="uc-rivet">
+    <circle cx="60" cy="30" r="6"/><circle cx="180" cy="30" r="6"/><circle cx="300" cy="30" r="6"/><circle cx="420" cy="30" r="6"/><circle cx="540" cy="30" r="6"/><circle cx="660" cy="30" r="6"/><circle cx="780" cy="30" r="6"/>
+    <circle cx="60" cy="570" r="6"/><circle cx="180" cy="570" r="6"/><circle cx="300" cy="570" r="6"/><circle cx="420" cy="570" r="6"/><circle cx="540" cy="570" r="6"/><circle cx="660" cy="570" r="6"/><circle cx="780" cy="570" r="6"/>
+  </g>
+  <g fill="none" stroke="#39474f" stroke-width="9" stroke-linecap="round">
+    <path class="uc-band" d="M60 250 C 260 210, 520 210, 840 250"/>
+    <path class="uc-band" d="M60 330 C 260 300, 520 300, 840 330" style="animation-delay:1.2s"/>
+    <path class="uc-band" d="M60 410 C 260 380, 520 380, 840 410" style="animation-delay:2.4s"/>
+  </g>
+  <g class="uc-fan" fill="none" stroke="#181d1f" stroke-width="4">
+    <circle cx="0" cy="0" r="4" fill="#181d1f"/>
+    <path d="M0 -4c0-30 16-54 40-54 16 0 24 14 14 28-10 14-30 22-54 26zM4 0c30 0 54 16 54 40 0 16-14 24-28 14-14-10-22-30-26-54zM0 4c0 30-16 54-40 54-16 0-24-14-14-28 10-14 30-22 54-26zM-4 0c-30 0-54-16-54-40 0-16 14-24 28-14 14 10 22 30 26 54z"/>
+  </g>
+  <circle cx="700" cy="200" r="70" fill="none" stroke="#181d1f" stroke-width="5" opacity=".35"/>
+  <g fill="none" stroke="#a83c0f" stroke-width="5" stroke-linecap="round">
+    <path d="M150 470c0-16 12-28 28-28h60c16 0 28 12 28 28v40h-116z"/>
+  </g>
+</svg>

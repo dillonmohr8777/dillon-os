@@ -6,7 +6,7 @@
 <meta name="robots" content="noindex,nofollow">
 <meta name="description" content="Golden Sea Chinese Restaurant — family-run in Blue Bell, PA since 1992. Preview build, not the live site.">
 <title>Golden Sea Chinese Restaurant — Blue Bell, PA</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23132018'/%3E%3Cpath d='M32 12c-13 8-13 18-13 24 0 8 6 16 13 16s13-8 13-16c0-6 0-16-13-24z' fill='none' stroke='%238a5215' stroke-width='3'/%3E%3Ccircle cx='32' cy='34' r='4' fill='%238a5215'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2084%2088%22%3E%3Cg%20transform%3D%22translate%2814%2C16.0%29%22%3E%0A%20%20%20%20%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%2256%22%20height%3D%2256%22%20rx%3D%2212%22%20fill%3D%22%232f6b52%22%2F%3E%0A%20%20%20%20%3Cg%20transform%3D%22translate%289.0%2C9.0%29%20scale%281.587%29%22%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M7%2020V13.2C5%2012.4%204%2010.6%204.6%208.8%205.2%207%207%206%208.8%206.4%209.6%204.6%2011.6%203.5%2013.6%204c1.8.4%203%202%203.2%203.8%201.8-.4%203.6.8%204%202.6.4%201.8-.6%203.6-2.4%204.2V20z%22%2F%3E%3Cpath%20d%3D%22M7%2020h10%22%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%3C%2Fg%3E%3C%2Fsvg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
@@ -159,7 +159,7 @@ a:hover{color:var(--accent)}
 .card:hover{transform:translateY(-4px);box-shadow:var(--shadow-2);
   border-color:var(--line-strong)}
 .card p{margin:0;font-size:var(--fs-sm);color:inherit;opacity:.86}
-.card-icon{width:40px;height:40px;margin-bottom:var(--s-4);color:var(--accent)}
+.ico{width:28px;height:28px;margin-bottom:var(--s-4);color:var(--accent)}
 .marquee{--marquee-dur:34s;overflow:hidden;padding-block:var(--s-4);
   border-block:var(--border) solid var(--line);
   -webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
@@ -235,11 +235,29 @@ address{font-style:normal}
 </style>
 </head>
 <body class="slug-golden-sea">
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true" focusable="false">
+  <style>symbol{fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}</style>
+  <symbol id="icon-1" viewBox="0 0 24 24"><path d="M4 14c0-4 3.6-7 8-7s8 3 8 7"/><path d="M4 14h16v1.4a3.6 3.6 0 0 1-3.6 3.6h-8.8A3.6 3.6 0 0 1 4 15.4z"/><path d="M12 7V4.3"/></symbol>
+  <symbol id="icon-2" viewBox="0 0 24 24"><path d="M4 12h16a8 8 0 0 1-16 0z"/><path d="M7.5 12c0-3 1-5 1-7M12 12c0-3 .6-5.4.6-7.4M16.5 12c0-3-1-5.4-1-7"/></symbol>
+  <symbol id="icon-3" viewBox="0 0 24 24"><path d="M4 13h16a8 8 0 0 1-16 0z"/><path d="M9 4 6.5 20M15 4l1.4 16"/></symbol>
+  <symbol id="icon-4" viewBox="0 0 24 24"><path d="M4 12c3-4 8-5 12-2.5-1 1.6-1 3.4 0 5C12 17 7 16 4 12z"/><path d="M16 9.5 20 7M16 14.5 20 17"/></symbol>
+  <symbol id="icon-5" viewBox="0 0 24 24"><path d="M7 20V13.2C5 12.4 4 10.6 4.6 8.8 5.2 7 7 6 8.8 6.4 9.6 4.6 11.6 3.5 13.6 4c1.8.4 3 2 3.2 3.8 1.8-.4 3.6.8 4 2.6.4 1.8-.6 3.6-2.4 4.2V20z"/><path d="M7 20h10"/></symbol>
+</svg>
+
 <a class="skip" href="#main">Skip to content</a>
 
 <header class="site-head">
   <div class="wrap bar">
-    <a class="brandmark" href="#top">Golden Sea</a>
+    <a class="brandmark" href="#top" aria-label="Golden Sea"><svg viewBox="0 0 218 88" height="34" role="img" aria-hidden="true" focusable="false" style="height:34px;width:auto;display:block" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(14,16.0)">
+    <rect x="0" y="0" width="56" height="56" rx="12" fill="#2f6b52"/>
+    <g transform="translate(9.0,9.0) scale(1.587)" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M7 20V13.2C5 12.4 4 10.6 4.6 8.8 5.2 7 7 6 8.8 6.4 9.6 4.6 11.6 3.5 13.6 4c1.8.4 3 2 3.2 3.8 1.8-.4 3.6.8 4 2.6.4 1.8-.6 3.6-2.4 4.2V20z"/><path d="M7 20h10"/>
+    </g>
+  </g>
+  <text x="84" y="46" font-family="'Bricolage Grotesque', system-ui, sans-serif" font-weight="700" letter-spacing="-0.005em" font-size="34" fill="#17201b">Golden Sea</text>
+  <text x="84" y="70" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" font-weight="600" letter-spacing="0.14em" fill="#17201b">CHINESE RESTAURANT · BLUE BELL</text>
+</svg></a>
     <nav class="nav" aria-label="Primary">
       <a class="nav-link" href="#menu">Menu</a>
       <a class="nav-link" href="#about">About</a>
@@ -254,50 +272,45 @@ address{font-style:normal}
   <!-- HERO: wok steam rising past two paper lanterns. -->
   <section class="hero" id="top">
     <div class="hero-art" data-parallax="10">
-<svg class="art art-steam" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice"
-     role="presentation" aria-hidden="true" focusable="false"
-     xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice">
   <style>
-    .art-steam .st{fill:none;stroke:currentColor;stroke-linecap:round;vector-effect:non-scaling-stroke}
-    .art-steam .rise{animation:gs-rise 9s linear infinite;will-change:transform}
-    .art-steam .r2{animation-duration:12s;animation-delay:-3s}
-    .art-steam .r3{animation-duration:15s;animation-delay:-7s}
-    .art-steam .sway{transform-box:fill-box;transform-origin:50% 4%;
-      animation:gs-sway 7s ease-in-out infinite}
-    .art-steam .s2{animation-duration:9s;animation-delay:-2.4s}
-    .art-steam .bob{animation:gs-bob 8s ease-in-out infinite}
-    @keyframes gs-rise{from{transform:translate3d(0,0,0)}to{transform:translate3d(0,-200px,0)}}
-    @keyframes gs-sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
-    @keyframes gs-bob{0%,100%{transform:translate3d(0,0,0)}50%{transform:translate3d(0,-14px,0)}}
-    @media (prefers-reduced-motion:reduce){
-      .art-steam .rise,.art-steam .sway,.art-steam .bob{animation:none}}
+    @media (prefers-reduced-motion: no-preference) {
+      @keyframes gs-sway{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}
+      @keyframes gs-rise{0%{transform:translateY(0);opacity:.6}100%{transform:translateY(-100px);opacity:0}}
+      @keyframes gs-glow{0%,100%{opacity:.5}50%{opacity:1}}
+      .gs-lantern{animation:gs-sway 4.5s ease-in-out infinite;transform-origin:top center}
+      .gs-lantern2{animation:gs-sway 3.6s ease-in-out infinite .6s;transform-origin:top center}
+      .gs-steam{animation:gs-rise 5.2s ease-in infinite}
+      .gs-steam2{animation:gs-rise 6.4s ease-in infinite 1.4s}
+      .gs-glow{animation:gs-glow 3s ease-in-out infinite}
+    }
   </style>
-  <defs>
-    <path id="gs-s" d="M0 900 c-46 -50 46 -100 0 -150 s46 -100 0 -150
-      s46 -100 0 -150 s46 -100 0 -150 s46 -100 0 -150 s46 -100 0 -150"/>
-    <g id="gs-lantern">
-      <line x1="0" y1="-96" x2="0" y2="-72" stroke-width="2" opacity=".55"/>
-      <rect x="-14" y="-76" width="28" height="10" rx="3" fill="none" stroke-width="2"/>
-      <path d="M-58 -60 C-58 8 -58 8 0 66 C58 8 58 8 58 -60 Z" fill="currentColor" opacity=".14"/>
-      <path d="M-58 -60 C-58 8 -58 8 0 66 C58 8 58 8 58 -60 Z" fill="none" stroke-width="2.4"/>
-      <path d="M-44 -58 C-44 6 -44 6 0 60 C44 6 44 6 44 -58" fill="none" stroke-width="1" opacity=".45"/>
-      <line x1="-58" y1="-28" x2="58" y2="-28" stroke-width="1" opacity=".35"/>
-      <line x1="-52" y1="20" x2="52" y2="20" stroke-width="1" opacity=".35"/>
-      <rect x="-14" y="66" width="28" height="8" rx="3" fill="none" stroke-width="2"/>
-      <line x1="0" y1="74" x2="0" y2="92" stroke-width="1.6" opacity=".55"/>
-      <circle cx="0" cy="96" r="4" fill="currentColor" opacity=".5"/>
-    </g>
-  </defs>
-  <g opacity=".5">
-    <g class="rise r1"><use href="#gs-s" class="st" stroke-width="2.4" x="230"/></g>
-    <g class="rise r2"><use href="#gs-s" class="st" stroke-width="3.2" x="600"/></g>
-    <g class="rise r3"><use href="#gs-s" class="st" stroke-width="2" x="960"/></g>
-    <g class="rise r2"><use href="#gs-s" class="st" stroke-width="1.4" x="400" opacity=".6"/></g>
-    <g class="rise r1"><use href="#gs-s" class="st" stroke-width="1.4" x="820" opacity=".6"/></g>
+  <rect width="900" height="600" fill="#faf3e6"/>
+  <g class="gs-glow"><circle cx="700" cy="150" r="140" fill="#8a5215" opacity=".08"/></g>
+  <g class="gs-lantern" transform="translate(150,90)">
+    <line x1="0" y1="-40" x2="0" y2="0" stroke="#17201b" stroke-width="3"/>
+    <ellipse cx="0" cy="46" rx="34" ry="46" fill="#8a5215"/>
+    <ellipse cx="0" cy="46" rx="34" ry="46" fill="none" stroke="#132018" stroke-width="4"/>
+    <line x1="-34" y1="46" x2="34" y2="46" stroke="#132018" stroke-width="3"/>
+    <line x1="0" y1="92" x2="0" y2="112" stroke="#17201b" stroke-width="3"/>
   </g>
-  <g class="bob">
-    <g class="sway s1" transform="translate(190 220)"><use href="#gs-lantern"/></g>
-    <g class="sway s2" transform="translate(1030 170) scale(.82)"><use href="#gs-lantern"/></g>
+  <g class="gs-lantern2" transform="translate(260,60)">
+    <line x1="0" y1="-30" x2="0" y2="0" stroke="#17201b" stroke-width="3"/>
+    <ellipse cx="0" cy="34" rx="24" ry="34" fill="#8a5215" opacity=".85"/>
+    <ellipse cx="0" cy="34" rx="24" ry="34" fill="none" stroke="#132018" stroke-width="3"/>
+  </g>
+  <g fill="none" stroke="#2f6b52" stroke-width="7" stroke-linecap="round">
+    <path d="M560 470c0-70 60-96 140-96s140 26 140 96" />
+    <ellipse cx="700" cy="470" rx="200" ry="26"/>
+  </g>
+  <g class="gs-steam" fill="none" stroke="#2f6b52" stroke-width="6" stroke-linecap="round" opacity=".6">
+    <path d="M650 380c-14-20 14-30 0-50"/>
+  </g>
+  <g class="gs-steam2" fill="none" stroke="#2f6b52" stroke-width="6" stroke-linecap="round" opacity=".5">
+    <path d="M700 370c-14-20 14-32 0-52"/>
+  </g>
+  <g class="gs-steam" fill="none" stroke="#2f6b52" stroke-width="6" stroke-linecap="round" opacity=".55" style="animation-delay:2.2s">
+    <path d="M750 380c-14-20 14-30 0-50"/>
   </g>
 </svg>
     </div>
@@ -328,37 +341,27 @@ address{font-style:normal}
       <h2 data-reveal>Five sections, straight off the printed menu</h2>
       <div class="services mt-6" data-stagger>
         <article class="card" data-reveal>
-          <svg class="card-icon" viewBox="0 0 44 44" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
-            <rect x="9" y="18" width="26" height="8" rx="4"/><path d="M13 18v-4h18v4M22 26v6"/>
-          </svg>
+          <svg class="ico" aria-hidden="true" focusable="false"><use href="#icon-1"/></svg>
           <h3>Special Appetizers</h3>
           <p>Starters straight off their own menu: egg rolls, shrimp toast, spring rolls, chicken lettuce wraps, and B.B.Q. spare ribs. A short list built for sharing before the main course.</p>
         </article>
         <article class="card" data-reveal>
-          <svg class="card-icon" viewBox="0 0 44 44" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
-            <path d="M8 30c4-10 8-10 12-10s8 0 12 10M9 33h26"/><circle cx="22" cy="12" r="4"/>
-          </svg>
+          <svg class="ico" aria-hidden="true" focusable="false"><use href="#icon-2"/></svg>
           <h3>Chow Mein</h3>
           <p>Served with dry noodles and rice in chicken, roast pork, shrimp, beef, and vegetable versions, plus the house Golden Sea Special Chow Mein. A menu staple since the restaurant opened.</p>
         </article>
         <article class="card" data-reveal>
-          <svg class="card-icon" viewBox="0 0 44 44" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
-            <path d="M10 16h24M13 16c0 10 3 16 9 16s9-6 9-16" stroke-linecap="round"/><path d="M9 30h26"/>
-          </svg>
+          <svg class="ico" aria-hidden="true" focusable="false"><use href="#icon-3"/></svg>
           <h3>Lo Mein</h3>
           <p>Soft noodles in vegetable, roast pork, chicken, beef, shrimp, and a House Special version. Ordered by the pint or quart, their own menu's terms.</p>
         </article>
         <article class="card" data-reveal>
-          <svg class="card-icon" viewBox="0 0 44 44" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="22" cy="22" r="13"/><path d="M22 13v9l7 4"/>
-          </svg>
+          <svg class="ico" aria-hidden="true" focusable="false"><use href="#icon-4"/></svg>
           <h3>Sweet &amp; Sour</h3>
           <p>Sweet &amp; Sour Pork, Chicken, or Shrimp, served with rice. A dine-in and take-out standard on their printed menu.</p>
         </article>
         <article class="card" data-reveal>
-          <svg class="card-icon" viewBox="0 0 44 44" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 22c0-7 4-12 10-12s10 5 10 12" stroke-linecap="round"/><path d="M10 22h24l-2 10H12z"/>
-          </svg>
+          <svg class="ico" aria-hidden="true" focusable="false"><use href="#icon-5"/></svg>
           <h3>Chef's Suggestions</h3>
           <p>Chef Ka Yam Yip's own specials, including Golden Sea Special Chicken, Seafood Special, Four Seasons, and Szechuan Seafood Deluxe. Their menu calls this section out by name.</p>
         </article>
@@ -491,6 +494,12 @@ address{font-style:normal}
   <div class="wrap">
     <div class="foot-grid">
       <div>
+        <svg class="foot-mark" viewBox="0 0 84 88" aria-hidden="true" focusable="false" style="height:28px;width:auto;display:block;margin-bottom:var(--s-3)" xmlns="http://www.w3.org/2000/svg"><g transform="translate(14,16.0)">
+    <rect x="0" y="0" width="56" height="56" rx="12" fill="#2f6b52"/>
+    <g transform="translate(9.0,9.0) scale(1.587)" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M7 20V13.2C5 12.4 4 10.6 4.6 8.8 5.2 7 7 6 8.8 6.4 9.6 4.6 11.6 3.5 13.6 4c1.8.4 3 2 3.2 3.8 1.8-.4 3.6.8 4 2.6.4 1.8-.6 3.6-2.4 4.2V20z"/><path d="M7 20h10"/>
+    </g>
+  </g></svg>
         <h4>Golden Sea</h4>
         <address>1301 Skippack Pike<br>Blue Bell, PA 19422</address>
         <p style="margin-top:var(--s-3)"><a href="mailto:contact@goldenseabluebell.com">contact@goldenseabluebell.com</a></p>

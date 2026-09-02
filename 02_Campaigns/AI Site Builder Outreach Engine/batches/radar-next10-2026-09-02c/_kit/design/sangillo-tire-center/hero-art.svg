@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice">
+  <style>
+    @media (prefers-reduced-motion: no-preference) {
+      @keyframes st-spin{to{transform:rotate(360deg)}}
+      @keyframes st-scroll{0%{transform:translateX(0)}100%{transform:translateX(-60px)}}
+      @keyframes st-pulse{0%,100%{opacity:.5}50%{opacity:1}}
+      .st-wheel{animation:st-spin 14s linear infinite;transform-origin:640px 230px}
+      .st-road{animation:st-scroll 1.4s linear infinite}
+      .st-haze{animation:st-pulse 3.4s ease-in-out infinite}
+    }
+  </style>
+  <rect width="900" height="600" fill="#f8f4f7"/>
+  <ellipse class="st-haze" cx="640" cy="230" rx="240" ry="220" fill="#583E7D" opacity=".08"/>
+  <g class="st-wheel" fill="none" stroke="#583E7D" stroke-width="10">
+    <circle cx="640" cy="230" r="210"/>
+  </g>
+  <g class="st-wheel" fill="none" stroke="#583E7D" stroke-width="5" opacity=".85">
+    <circle cx="640" cy="230" r="150"/>
+    <circle cx="640" cy="230" r="60"/>
+    <path d="M640 80v90M640 290v90M490 230h90M700 230h90M540 130l64 64M676 266l64 64M740 130l-64 64M604 266l-64 64"/>
+  </g>
+  <g fill="none" stroke="#211a2b" stroke-width="14" opacity=".22">
+    <path d="M420 470h420"/>
+  </g>
+  <g class="st-road" fill="#f2a93b">
+    <rect x="0" y="462" width="34" height="16" rx="3"/><rect x="80" y="462" width="34" height="16" rx="3"/><rect x="160" y="462" width="34" height="16" rx="3"/><rect x="240" y="462" width="34" height="16" rx="3"/><rect x="320" y="462" width="34" height="16" rx="3"/><rect x="400" y="462" width="34" height="16" rx="3"/><rect x="480" y="462" width="34" height="16" rx="3"/><rect x="560" y="462" width="34" height="16" rx="3"/><rect x="640" y="462" width="34" height="16" rx="3"/><rect x="720" y="462" width="34" height="16" rx="3"/><rect x="800" y="462" width="34" height="16" rx="3"/><rect x="880" y="462" width="34" height="16" rx="3"/>
+  </g>
+  <g fill="none" stroke="#211a2b" stroke-width="6" stroke-linecap="round" opacity=".7">
+    <circle cx="150" cy="470" r="46"/>
+    <path d="M150 424v20M150 496v20M104 470h20M176 470h20"/>
+    <circle cx="150" cy="470" r="6" fill="#f2a93b"/>
+  </g>
+</svg>

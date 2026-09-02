@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice">
+  <style>
+    @media (prefers-reduced-motion: no-preference) {
+      @keyframes gs-sway{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}
+      @keyframes gs-rise{0%{transform:translateY(0);opacity:.6}100%{transform:translateY(-100px);opacity:0}}
+      @keyframes gs-glow{0%,100%{opacity:.5}50%{opacity:1}}
+      .gs-lantern{animation:gs-sway 4.5s ease-in-out infinite;transform-origin:top center}
+      .gs-lantern2{animation:gs-sway 3.6s ease-in-out infinite .6s;transform-origin:top center}
+      .gs-steam{animation:gs-rise 5.2s ease-in infinite}
+      .gs-steam2{animation:gs-rise 6.4s ease-in infinite 1.4s}
+      .gs-glow{animation:gs-glow 3s ease-in-out infinite}
+    }
+  </style>
+  <rect width="900" height="600" fill="#faf3e6"/>
+  <g class="gs-glow"><circle cx="700" cy="150" r="140" fill="#8a5215" opacity=".08"/></g>
+  <g class="gs-lantern" transform="translate(150,90)">
+    <line x1="0" y1="-40" x2="0" y2="0" stroke="#17201b" stroke-width="3"/>
+    <ellipse cx="0" cy="46" rx="34" ry="46" fill="#8a5215"/>
+    <ellipse cx="0" cy="46" rx="34" ry="46" fill="none" stroke="#132018" stroke-width="4"/>
+    <line x1="-34" y1="46" x2="34" y2="46" stroke="#132018" stroke-width="3"/>
+    <line x1="0" y1="92" x2="0" y2="112" stroke="#17201b" stroke-width="3"/>
+  </g>
+  <g class="gs-lantern2" transform="translate(260,60)">
+    <line x1="0" y1="-30" x2="0" y2="0" stroke="#17201b" stroke-width="3"/>
+    <ellipse cx="0" cy="34" rx="24" ry="34" fill="#8a5215" opacity=".85"/>
+    <ellipse cx="0" cy="34" rx="24" ry="34" fill="none" stroke="#132018" stroke-width="3"/>
+  </g>
+  <g fill="none" stroke="#2f6b52" stroke-width="7" stroke-linecap="round">
+    <path d="M560 470c0-70 60-96 140-96s140 26 140 96" />
+    <ellipse cx="700" cy="470" rx="200" ry="26"/>
+  </g>
+  <g class="gs-steam" fill="none" stroke="#2f6b52" stroke-width="6" stroke-linecap="round" opacity=".6">
+    <path d="M650 380c-14-20 14-30 0-50"/>
+  </g>
+  <g class="gs-steam2" fill="none" stroke="#2f6b52" stroke-width="6" stroke-linecap="round" opacity=".5">
+    <path d="M700 370c-14-20 14-32 0-52"/>
+  </g>
+  <g class="gs-steam" fill="none" stroke="#2f6b52" stroke-width="6" stroke-linecap="round" opacity=".55" style="animation-delay:2.2s">
+    <path d="M750 380c-14-20 14-30 0-50"/>
+  </g>
+</svg>

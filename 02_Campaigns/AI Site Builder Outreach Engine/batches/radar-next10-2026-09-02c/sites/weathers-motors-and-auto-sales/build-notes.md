@@ -51,3 +51,30 @@ source_refs:
 ## Unverified
 - Real on-site brand color (no screenshot/harvest available this pass) — palette is DESIGN.md-derived, not sampled.
 - Rendered visual QA (browser screenshot, live contrast tool, actual 390px/1440px viewport check) has not been run — the above is a static/code-level review only. Recommend `qa-critic` / `site-grade` pass before this leaves draft status.
+
+## Design layer (Claude Design port)
+
+Ported the shared `_kit/design/weathers-motors-and-auto-sales/` assets into
+`index.html`:
+
+- **Header**: replaced the text-only `.brandmark` with an inline `logo.svg`
+  (viewBox `0 0 242 88`, 34px height, width auto), `aria-label="Weathers
+  Motors"` on the link. Wordmark (Georgia serif) + "MEDIA'S FAMILY DEALERSHIP
+  · EST. 1922" subline legible at that height.
+- **Footer**: added the mark alone (rounded-square key-fob icon, cropped
+  `viewBox 0 0 84 88`) at 28px above the address/phone block.
+- **Hero**: swapped the inline horizon-art SVG for the kit's `hero-art.svg`
+  (`viewBox 0 0 900 600`, same 3:2 ratio as the original 1200x800 art) —
+  direct fit into the existing `.hero-art` slot. Copy/CTA markup and reveal
+  timing untouched.
+- **Services grid (six departments)**: inlined `icons.svg` as a hidden sprite
+  after `<body>` (six symbols — this is the one slug with a 6-item grid),
+  replaced each card's inline SVG with `<use href="#icon-N"/>` per manifest
+  mapping (car-key, wrench2, gear-box, shield-check, spray-can,
+  handshake-dollar). Renamed `.card-icon` to `.ico`, resized to 28px,
+  `color:var(--accent)` kept.
+- **Favicon**: rebuilt as an SVG data URI from the cropped logo mark, no
+  raster.
+- Text-node diff: only the old plain-text brandmark removed (now SVG
+  `<text>`); rest of copy byte-identical. File size 33,025 → 35,104 bytes. JS
+  parses, anchors resolve, no adjacent art-only sections.

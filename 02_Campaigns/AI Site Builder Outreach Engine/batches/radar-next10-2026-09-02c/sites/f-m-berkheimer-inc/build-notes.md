@@ -67,3 +67,33 @@ industrial/mechanical sibling site built from the same source art.
 - Mobile-width rendering and keyboard/focus trap pass were reasoned from the
   unmodified kit CSS (nav collapses under 860px, `:focus-visible` ring intact)
   but **not visually verified in a browser** — unverified, hand to qa-critic.
+
+## Design layer (Claude Design port)
+
+Ported the shared `_kit/design/f-m-berkheimer-inc/` assets into `index.html`:
+
+- **Header**: replaced the text-only `.brandmark` with an inline `logo.svg`
+  (viewBox `0 0 251 88`, rendered at 34px height, width auto), `aria-label="F.M.
+  Berkheimer"` on the wrapping link. Wordmark ("F.M. Berkheimer" + "HEATING &
+  COOLING") stays legible at that height since the source SVG uses a
+  system-safe display font stack.
+- **Footer**: added the logo mark alone (rounded-square flame-in-box icon,
+  cropped to `viewBox 0 0 84 88`, no wordmark) at 28px above the business name
+  heading.
+- **Hero**: swapped the page's inline airstream SVG for the kit's
+  `hero-art.svg` (`viewBox 0 0 900 600`, same 3:2 aspect ratio as the original
+  1200x800 art, `preserveAspectRatio="xMidYMid slice"`) — drop-in fit, no
+  rescale needed. H1/subhead/CTA markup and reveal behavior untouched; h1 has
+  no `data-reveal`, so it still paints at 0ms.
+- **Services grid**: inlined `icons.svg` once as a hidden `<symbol>` sprite
+  right after `<body>`, replaced each card's inline path SVG with
+  `<svg class="ico"><use href="#icon-N"/></svg>` per the manifest's title-to-key
+  mapping (flame-box, snowflake, gear-wrench, calendar-check, leaf-wind).
+  Renamed `.card-icon` to `.ico` in the page's inlined kit CSS, sized to 28px,
+  `color:var(--accent)` (unchanged from prior icon color).
+- **Favicon**: regenerated as an SVG data URI built directly from the logo
+  mark (same 84x88 crop used in the footer), no raster.
+- Byte-identical copy confirmed via text-node diff (only removed node: the old
+  plain-text "F M Berkheimer" brandmark, now rendered as SVG `<text>` inside
+  the logo). File size 29,856 → 31,800 bytes, well under 60KB. JS parses clean,
+  all `#anchor` links resolve, no adjacent art-only sections.

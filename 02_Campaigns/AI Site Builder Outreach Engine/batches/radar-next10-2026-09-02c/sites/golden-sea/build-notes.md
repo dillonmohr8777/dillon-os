@@ -37,3 +37,27 @@
   Not verified in a live browser: actual 390px/1440px pixel-level overflow
   and rendered-font contrast — recommend qa-critic do a browser pass before
   approval.
+
+## Design layer (Claude Design port)
+
+Ported the shared `_kit/design/golden-sea/` assets into `index.html`:
+
+- **Header**: replaced the text-only `.brandmark` with an inline `logo.svg`
+  (viewBox `0 0 218 88`, 34px height, width auto), `aria-label="Golden Sea"` on
+  the link. Wordmark + "CHINESE RESTAURANT · BLUE BELL" subline legible at
+  34px (Bricolage Grotesque display stack).
+- **Footer**: added the mark alone (rounded-square dumpling-steam icon,
+  cropped `viewBox 0 0 84 88`) at 28px above the address block.
+- **Hero**: swapped the inline steam-art SVG for the kit's `hero-art.svg`
+  (`viewBox 0 0 900 600`, same 3:2 ratio as the prior 1200x800 art) — clean
+  drop-in fit, no rescale. Copy/CTA markup and reveal behavior untouched.
+- **Services grid ("Five ways to order" / menu)**: inlined `icons.svg` as a
+  hidden sprite after `<body>`, replaced each card's inline SVG with
+  `<use href="#icon-N"/>` per manifest mapping (dumpling, noodles-bowl,
+  chopsticks-bowl, fish, chef-hat). This build's `.card-icon` was 40px;
+  renamed to `.ico` and resized to 28px, `color:var(--accent)` kept.
+- **Favicon**: rebuilt as an SVG data URI from the cropped logo mark, no
+  raster.
+- Text-node diff: only the old plain-text brandmark removed (now SVG
+  `<text>`); rest of copy byte-identical. File size 30,994 → 32,846 bytes. JS
+  parses, anchors resolve, no adjacent art-only sections.

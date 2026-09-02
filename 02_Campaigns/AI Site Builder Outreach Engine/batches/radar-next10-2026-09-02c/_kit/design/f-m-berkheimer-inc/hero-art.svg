@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice">
+  <style>
+    @media (prefers-reduced-motion: no-preference) {
+      @keyframes fmb-drift{0%{transform:translateX(-14px)}50%{transform:translateX(14px)}100%{transform:translateX(-14px)}}
+      @keyframes fmb-flame{0%,100%{transform:scaleY(1)}50%{transform:scaleY(1.12)}}
+      @keyframes fmb-spin{to{transform:rotate(360deg)}}
+      @keyframes fmb-fade{0%,100%{opacity:.55}50%{opacity:1}}
+      .fmb-band{animation:fmb-drift 7s ease-in-out infinite}
+      .fmb-band2{animation:fmb-drift 9s ease-in-out infinite reverse}
+      .fmb-flame{animation:fmb-flame 2.6s ease-in-out infinite;transform-origin:620px 430px}
+      .fmb-dial{animation:fmb-spin 24s linear infinite;transform-origin:230px 300px}
+      .fmb-glow{animation:fmb-fade 3.4s ease-in-out infinite}
+    }
+  </style>
+  <defs>
+    <linearGradient id="fmb-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f7f4ee"/><stop offset="1" stop-color="#2f6e94" stop-opacity=".18"/>
+    </linearGradient>
+    <linearGradient id="fmb-flow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2f6e94"/><stop offset="1" stop-color="#e17a2e"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="600" fill="url(#fmb-sky)"/>
+  <g class="fmb-glow" opacity=".5"><circle cx="230" cy="300" r="150" fill="#2f6e94" opacity=".08"/></g>
+  <g fill="none" stroke="url(#fmb-flow)" stroke-width="10" stroke-linecap="round">
+    <path class="fmb-band" d="M60 190 C 260 150, 500 150, 840 190"/>
+    <path class="fmb-band2" d="M60 260 C 260 230, 500 230, 840 260"/>
+    <path class="fmb-band" d="M60 330 C 260 300, 500 300, 840 330"/>
+  </g>
+  <g class="fmb-dial" fill="none" stroke="#1a2226" stroke-width="3" opacity=".55">
+    <circle cx="230" cy="300" r="86"/>
+    <path d="M230 214v18M230 368v18M144 300h18M298 300h18M186 244l13 13M271 356l13 13M274 244l-13 13M189 356l-13 13"/>
+  </g>
+  <circle cx="230" cy="300" r="14" fill="#1a2226"/>
+  <line x1="230" y1="300" x2="270" y2="270" stroke="#e17a2e" stroke-width="4" stroke-linecap="round"/>
+  <g class="fmb-flame" fill="none" stroke="#e17a2e" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M610 470c-14 20-22 32-22 45a22 22 0 0 0 44 0c0-7-3-13-7-18 1 7-2 12-7 15 2-14-3-27-8-42z" fill="#e17a2e" fill-opacity=".18"/>
+  </g>
+  <g fill="none" stroke="#2f6e94" stroke-width="6" stroke-linecap="round">
+    <path d="M700 460v-70a30 30 0 0 1 60 0v70"/>
+  </g>
+</svg>

@@ -44,3 +44,32 @@ source_refs:
 
 ## Unverified / not independently confirmed
 - All facts (60+ years, address, phone, hours, services, brand color) are as supplied in the copy brief, sourced from the client's own site (`source_urls`); not independently re-verified live during this build.
+
+
+## Design layer (ported from `_kit/design/sangillo-tire-center/`)
+
+- Header brand mark: replaced the text-only `.brandmark` anchor with the kit's
+  inline `logo.svg` (36px tall, `role="img"` + `aria-label` carried over from the
+  asset, wordmark still legible at that height).
+- Footer mark: extracted the icon-only portion of `logo.svg` (the rounded-square
+  glyph, no wordmark text) into a standalone 28px `<svg>` placed above the
+  business name in the first footer column.
+- Hero: swapped the kit-demo inline art inside `.hero-art` for the site-specific
+  `hero-art.svg`, keeping the same wrapping `<div class="hero-art" data-parallax>`
+  and the existing `.hero-art>svg{width:100%;height:100%;object-fit:cover}` rule,
+  so no CSS/viewBox change was needed for it to fill the slot. `h1`/subhead/CTAs
+  and their positions were untouched; `h1` still carries no `data-reveal` and
+  renders at 0ms.
+- Services grid: inlined `icons.svg` once as a hidden `<svg style="display:none">`
+  sprite immediately after `<body>`, then swapped each service card's bespoke
+  inline icon for `<svg class="card-icon ico" style="width:28px;height:28px">
+  <use href="#icon-N"/></svg>` in manifest order (`.card-icon` still supplies
+  `color:var(--accent)` and the existing margin).
+- Favicon: regenerated the `<link rel="icon">` as an SVG data URI built from the
+  same footer mark markup (no raster asset).
+- Verified: `node --check` on the extracted inline `<script>` passed; every
+  in-page `#anchor` (including the new `#icon-N` sprite ids) resolves; file size
+  before 31,719 B / after 34,538 B, both well under the 60 KB ceiling; a
+  text-only diff of `<main>`/`<footer>` copy (all tags and decorative SVG
+  stripped) matched byte-for-byte before and after this pass — no copy was
+  changed, only the header/footer/hero/icon/favicon assets.

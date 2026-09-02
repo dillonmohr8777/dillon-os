@@ -1,0 +1,452 @@
+{
+  "f-m-berkheimer-inc": {
+    "name": "F.M. Berkheimer",
+    "palette": {
+      "brand": "#2f6e94",
+      "brand2": "#12242f",
+      "accent": "#e17a2e",
+      "paper": "#f7f4ee",
+      "ink": "#1a2226"
+    },
+    "icons": [
+      {
+        "id": "icon-1",
+        "title": "Furnace Repair & Service",
+        "key": "flame-box"
+      },
+      {
+        "id": "icon-2",
+        "title": "AC Repair & Service",
+        "key": "snowflake"
+      },
+      {
+        "id": "icon-3",
+        "title": "System Installation & Replacement",
+        "key": "gear-wrench"
+      },
+      {
+        "id": "icon-4",
+        "title": "Preventive Maintenance",
+        "key": "calendar-check"
+      },
+      {
+        "id": "icon-5",
+        "title": "Indoor Air Quality",
+        "key": "leaf-wind"
+      }
+    ],
+    "sizes_bytes": {
+      "logo.svg": 906,
+      "hero-art.svg": 2553,
+      "icons.svg": 1120
+    },
+    "notes": "logo.svg uses a system-safe font stack (no embedded webfont) matching the site's display font category; hero-art.svg animations are transform/opacity only, wrapped in @media (prefers-reduced-motion: no-preference); icons.svg is a <symbol> sprite, 24px grid, 1.75 stroke, currentColor \u2014 reference with <use href=\"icons.svg#icon-N\"/> and set color on the wrapping element."
+  },
+  "the-juice-merchant": {
+    "name": "The Juice Merchant",
+    "palette": {
+      "brand": "#4f7a23",
+      "brand2": "#182410",
+      "accent": "#e2792e",
+      "paper": "#faf7ec",
+      "ink": "#1b2011"
+    },
+    "icons": [
+      {
+        "id": "icon-1",
+        "title": "Cold-Pressed Juices",
+        "key": "citrus-drop"
+      },
+      {
+        "id": "icon-2",
+        "title": "Smoothies",
+        "key": "blender"
+      },
+      {
+        "id": "icon-3",
+        "title": "Juice & Smoothie Bowls",
+        "key": "bowl-berries"
+      },
+      {
+        "id": "icon-4",
+        "title": "Cleanses",
+        "key": "calendar-leaf"
+      },
+      {
+        "id": "icon-5",
+        "title": "Catering",
+        "key": "tray"
+      }
+    ],
+    "sizes_bytes": {
+      "logo.svg": 880,
+      "hero-art.svg": 2462,
+      "icons.svg": 1097
+    },
+    "notes": "logo.svg uses a system-safe font stack (no embedded webfont) matching the site's display font category; hero-art.svg animations are transform/opacity only, wrapped in @media (prefers-reduced-motion: no-preference); icons.svg is a <symbol> sprite, 24px grid, 1.75 stroke, currentColor \u2014 reference with <use href=\"icons.svg#icon-N\"/> and set color on the wrapping element."
+  },
+  "golden-sea": {
+    "name": "Golden Sea",
+    "palette": {
+      "brand": "#2f6b52",
+      "brand2": "#132018",
+      "accent": "#8a5215",
+      "paper": "#faf3e6",
+      "ink": "#17201b"
+    },
+    "icons": [
+      {
+        "id": "icon-1",
+        "title": "Special Appetizers",
+        "key": "dumpling"
+      },
+      {
+        "id": "icon-2",
+        "title": "Chow Mein",
+        "key": "noodles-bowl"
+      },
+      {
+        "id": "icon-3",
+        "title": "Lo Mein",
+        "key": "chopsticks-bowl"
+      },
+      {
+        "id": "icon-4",
+        "title": "Sweet & Sour",
+        "key": "fish"
+      },
+      {
+        "id": "icon-5",
+        "title": "Chef's Suggestions",
+        "key": "chef-hat"
+      }
+    ],
+    "sizes_bytes": {
+      "logo.svg": 920,
+      "hero-art.svg": 2423,
+      "icons.svg": 1069
+    },
+    "notes": "logo.svg uses a system-safe font stack (no embedded webfont) matching the site's display font category; hero-art.svg animations are transform/opacity only, wrapped in @media (prefers-reduced-motion: no-preference); icons.svg is a <symbol> sprite, 24px grid, 1.75 stroke, currentColor \u2014 reference with <use href=\"icons.svg#icon-N\"/> and set color on the wrapping element."
+  },
+  "specks-broasted-chicken": {
+    "name": "Speck's",
+    "palette": {
+      "brand": "#c1272d",
+      "brand2": "#2b1210",
+      "accent": "#d99a2b",
+      "paper": "#fdf6df",
+      "ink": "#241512"
+    },
+    "icons": [
+      {
+        "id": "icon-1",
+        "title": "Broasted Chicken",
+        "key": "drumstick"
+      },
+      {
+        "id": "icon-2",
+        "title": "Sandwiches & Hoagies",
+        "key": "sandwich"
+      },
+      {
+        "id": "icon-3",
+        "title": "Steak Sandwiches",
+        "key": "steak"
+      },
+      {
+        "id": "icon-4",
+        "title": "Sides & Soups",
+        "key": "bowl-soup"
+      },
+      {
+        "id": "icon-5",
+        "title": "Kids Meals & Milkshakes",
+        "key": "milkshake-star"
+      }
+    ],
+    "sizes_bytes": {
+      "logo.svg": 895,
+      "hero-art.svg": 2141,
+      "icons.svg": 1181
+    },
+    "notes": "logo.svg uses a system-safe font stack (no embedded webfont) matching the site's display font category; hero-art.svg animations are transform/opacity only, wrapped in @media (prefers-reduced-motion: no-preference); icons.svg is a <symbol> sprite, 24px grid, 1.75 stroke, currentColor \u2014 reference with <use href=\"icons.svg#icon-N\"/> and set color on the wrapping element."
+  },
+  "weathers-motors-and-auto-sales": {
+    "name": "Weathers Motors",
+    "palette": {
+      "brand": "#1c3a5e",
+      "brand2": "#0d1f33",
+      "accent": "#b3312c",
+      "paper": "#f7f3e9",
+      "ink": "#14212c"
+    },
+    "icons": [
+      {
+        "id": "icon-1",
+        "title": "Pre-Owned Vehicle Sales",
+        "key": "car-key"
+      },
+      {
+        "id": "icon-2",
+        "title": "Service & Repair Center",
+        "key": "wrench2"
+      },
+      {
+        "id": "icon-3",
+        "title": "Parts Center",
+        "key": "gear-box"
+      },
+      {
+        "id": "icon-4",
+        "title": "PA State Inspection & Tires",
+        "key": "shield-check"
+      },
+      {
+        "id": "icon-5",
+        "title": "Body Shop",
+        "key": "spray-can"
+      },
+      {
+        "id": "icon-6",
+        "title": "Financing",
+        "key": "handshake-dollar"
+      }
+    ],
+    "sizes_bytes": {
+      "logo.svg": 839,
+      "hero-art.svg": 2105,
+      "icons.svg": 1145
+    },
+    "notes": "logo.svg uses a system-safe font stack (no embedded webfont) matching the site's display font category; hero-art.svg animations are transform/opacity only, wrapped in @media (prefers-reduced-motion: no-preference); icons.svg is a <symbol> sprite, 24px grid, 1.75 stroke, currentColor \u2014 reference with <use href=\"icons.svg#icon-N\"/> and set color on the wrapping element."
+  },
+  "nolts-auto-parts": {
+    "name": "Nolt's Auto Parts",
+    "palette": {
+      "brand": "#52565c",
+      "brand2": "#1c1d1f",
+      "accent": "#a8420f",
+      "paper": "#f5f1e9",
+      "ink": "#1c1b18"
+    },
+    "icons": [
+      {
+        "id": "icon-1",
+        "title": "Ignition & Electrical",
+        "key": "bolt"
+      },
+      {
+        "id": "icon-2",
+        "title": "Brake Parts",
+        "key": "disc-brake"
+      },
+      {
+        "id": "icon-3",
+        "title": "Filters & Fluids",
+        "key": "filter-funnel"
+      },
+      {
+        "id": "icon-4",
+        "title": "Batteries",
+        "key": "battery"
+      },
+      {
+        "id": "icon-5",
+        "title": "Cooling & Climate",
+        "key": "thermometer-drop"
+      },
+      {
+        "id": "icon-6",
+        "title": "Chassis & Suspension",
+        "key": "car-frame"
+      }
+    ],
+    "sizes_bytes": {
+      "logo.svg": 807,
+      "hero-art.svg": 5486,
+      "icons.svg": 1094
+    },
+    "notes": "logo.svg uses a system-safe font stack (no embedded webfont) matching the site's display font category; hero-art.svg animations are transform/opacity only, wrapped in @media (prefers-reduced-motion: no-preference); icons.svg is a <symbol> sprite, 24px grid, 1.75 stroke, currentColor \u2014 reference with <use href=\"icons.svg#icon-N\"/> and set color on the wrapping element."
+  },
+  "union-chill-mat-company": {
+    "name": "Union Chill Mat Co.",
+    "palette": {
+      "brand": "#39474f",
+      "brand2": "#161d20",
+      "accent": "#a83c0f",
+      "paper": "#f2f0e9",
+      "ink": "#181d1f"
+    },
+    "icons": [
+      {
+        "id": "icon-1",
+        "title": "Ultramatic Indirect-Fired Heaters",
+        "key": "flame-box"
+      },
+      {
+        "id": "icon-2",
+        "title": "Red Rocket Radiant Heaters",
+        "key": "sun-rays"
+      },
+      {
+        "id": "icon-3",
+        "title": "Portable Air Conditioning Systems",
+        "key": "snowflake"
+      },
+      {
+        "id": "icon-4",
+        "title": "Industrial Fans",
+        "key": "fan-blades"
+      },
+      {
+        "id": "icon-5",
+        "title": "Generators",
+        "key": "bolt-box"
+      },
+      {
+        "id": "icon-6",
+        "title": "Dehumidifiers",
+        "key": "droplet-arrow"
+      }
+    ],
+    "sizes_bytes": {
+      "logo.svg": 942,
+      "hero-art.svg": 2277,
+      "icons.svg": 1480
+    },
+    "notes": "logo.svg uses a system-safe font stack (no embedded webfont) matching the site's display font category; hero-art.svg animations are transform/opacity only, wrapped in @media (prefers-reduced-motion: no-preference); icons.svg is a <symbol> sprite, 24px grid, 1.75 stroke, currentColor \u2014 reference with <use href=\"icons.svg#icon-N\"/> and set color on the wrapping element."
+  },
+  "sangillo-tire-center": {
+    "name": "Sangillo Tire Center",
+    "palette": {
+      "brand": "#583E7D",
+      "brand2": "#241a34",
+      "accent": "#f2a93b",
+      "paper": "#f8f4f7",
+      "ink": "#211a2b"
+    },
+    "icons": [
+      {
+        "id": "icon-1",
+        "title": "Tire Sales",
+        "key": "tire"
+      },
+      {
+        "id": "icon-2",
+        "title": "Tire Rotation",
+        "key": "rotate-arrows"
+      },
+      {
+        "id": "icon-3",
+        "title": "Tire Repair",
+        "key": "patch-wrench"
+      },
+      {
+        "id": "icon-4",
+        "title": "Wheel Balancing",
+        "key": "scale-wheel"
+      },
+      {
+        "id": "icon-5",
+        "title": "Free Tire Disposal",
+        "key": "trash-tire"
+      }
+    ],
+    "sizes_bytes": {
+      "logo.svg": 952,
+      "hero-art.svg": 2212,
+      "icons.svg": 1103
+    },
+    "notes": "logo.svg uses a system-safe font stack (no embedded webfont) matching the site's display font category; hero-art.svg animations are transform/opacity only, wrapped in @media (prefers-reduced-motion: no-preference); icons.svg is a <symbol> sprite, 24px grid, 1.75 stroke, currentColor \u2014 reference with <use href=\"icons.svg#icon-N\"/> and set color on the wrapping element."
+  },
+  "smile-culture-dental": {
+    "name": "Smile Culture Dental",
+    "palette": {
+      "brand": "#3f6b64",
+      "brand2": "#172b27",
+      "accent": "#c98a4b",
+      "paper": "#faf6ef",
+      "ink": "#211f1b"
+    },
+    "icons": [
+      {
+        "id": "icon-1",
+        "title": "Preventative & General Care",
+        "key": "tooth-check"
+      },
+      {
+        "id": "icon-2",
+        "title": "Dental Implants",
+        "key": "tooth-screw"
+      },
+      {
+        "id": "icon-3",
+        "title": "Veneers & Cosmetic Dentistry",
+        "key": "tooth-sparkle"
+      },
+      {
+        "id": "icon-4",
+        "title": "Orthodontics & Invisalign",
+        "key": "braces"
+      },
+      {
+        "id": "icon-5",
+        "title": "Emergency Dental Care",
+        "key": "tooth-cross"
+      },
+      {
+        "id": "icon-6",
+        "title": "Facial Aesthetics",
+        "key": "face-sparkle"
+      }
+    ],
+    "sizes_bytes": {
+      "logo.svg": 932,
+      "hero-art.svg": 1481,
+      "icons.svg": 1780
+    },
+    "notes": "logo.svg uses a system-safe font stack (no embedded webfont) matching the site's display font category; hero-art.svg animations are transform/opacity only, wrapped in @media (prefers-reduced-motion: no-preference); icons.svg is a <symbol> sprite, 24px grid, 1.75 stroke, currentColor \u2014 reference with <use href=\"icons.svg#icon-N\"/> and set color on the wrapping element."
+  },
+  "advance-exterior-solutions": {
+    "name": "Advance Exterior Solutions",
+    "palette": {
+      "brand": "#3d4b52",
+      "brand2": "#1b2226",
+      "accent": "#c2703a",
+      "paper": "#f6f3ee",
+      "ink": "#1a1d1d"
+    },
+    "icons": [
+      {
+        "id": "icon-1",
+        "title": "Roof Repair",
+        "key": "roof-wrench"
+      },
+      {
+        "id": "icon-2",
+        "title": "Roof Replacement",
+        "key": "roof-arrow"
+      },
+      {
+        "id": "icon-3",
+        "title": "Siding Installation & Repair",
+        "key": "panel-lines"
+      },
+      {
+        "id": "icon-4",
+        "title": "Storm Damage Assessment",
+        "key": "cloud-lightning"
+      },
+      {
+        "id": "icon-5",
+        "title": "Gutters & Exterior Trim",
+        "key": "gutter-drop"
+      }
+    ],
+    "sizes_bytes": {
+      "logo.svg": 911,
+      "hero-art.svg": 2825,
+      "icons.svg": 1039
+    },
+    "notes": "logo.svg uses a system-safe font stack (no embedded webfont) matching the site's display font category; hero-art.svg animations are transform/opacity only, wrapped in @media (prefers-reduced-motion: no-preference); icons.svg is a <symbol> sprite, 24px grid, 1.75 stroke, currentColor \u2014 reference with <use href=\"icons.svg#icon-N\"/> and set color on the wrapping element."
+  }
+}

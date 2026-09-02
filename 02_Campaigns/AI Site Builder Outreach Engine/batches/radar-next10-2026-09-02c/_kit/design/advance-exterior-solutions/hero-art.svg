@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice">
+  <style>
+    @media (prefers-reduced-motion: no-preference) {
+      @keyframes ex-rain{0%{transform:translateY(-20px);opacity:.6}100%{transform:translateY(40px);opacity:0}}
+      @keyframes ex-clear{0%,100%{opacity:.15}50%{opacity:.55}}
+      @keyframes ex-rise{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+      .ex-drop{animation:ex-rain 1.6s linear infinite}
+      .ex-sun{animation:ex-clear 5s ease-in-out infinite}
+      .ex-layer{animation:ex-rise 6s ease-in-out infinite}
+    }
+  </style>
+  <defs><linearGradient id="ex-sky" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#3d4b52" stop-opacity=".18"/><stop offset="1" stop-color="#c2703a" stop-opacity=".18"/>
+  </linearGradient></defs>
+  <rect width="900" height="600" fill="#f6f3ee"/>
+  <rect width="900" height="600" fill="url(#ex-sky)"/>
+  <circle class="ex-sun" cx="700" cy="140" r="80" fill="#c2703a"/>
+  <path d="M120 380 L450 200 L780 380 Z" fill="#3d4b52" stroke="#1a1d1d" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M120 380 H780 V420 H120 Z" fill="#1b2226"/>
+  <line class="ex-drop" x1="140" y1="60" x2="126" y2="120" stroke="#3d4b52" stroke-width="4" stroke-linecap="round" style="animation-delay:0.0s" opacity=".5"/><line class="ex-drop" x1="166" y1="60" x2="152" y2="120" stroke="#3d4b52" stroke-width="4" stroke-linecap="round" style="animation-delay:0.3s" opacity=".5"/><line class="ex-drop" x1="192" y1="60" x2="178" y2="120" stroke="#3d4b52" stroke-width="4" stroke-linecap="round" style="animation-delay:0.6s" opacity=".5"/><line class="ex-drop" x1="218" y1="60" x2="204" y2="120" stroke="#3d4b52" stroke-width="4" stroke-linecap="round" style="animation-delay:0.8999999999999999s" opacity=".5"/><line class="ex-drop" x1="244" y1="60" x2="230" y2="120" stroke="#3d4b52" stroke-width="4" stroke-linecap="round" style="animation-delay:1.2s" opacity=".5"/><line class="ex-drop" x1="270" y1="60" x2="256" y2="120" stroke="#3d4b52" stroke-width="4" stroke-linecap="round" style="animation-delay:0.0s" opacity=".5"/><line class="ex-drop" x1="296" y1="60" x2="282" y2="120" stroke="#3d4b52" stroke-width="4" stroke-linecap="round" style="animation-delay:0.3s" opacity=".5"/>
+  <g class="ex-layer" transform="translate(560,300)">
+    <path d="M0 0 l180 -40 v20 l-180 40z" fill="#1a1d1d" opacity=".85"/>
+    <path d="M0 40 l180 -40 v20 l-180 40z" fill="#1a1d1d" opacity=".55" style="animation-delay:.4s"/>
+    <path d="M0 80 l180 -40 v20 l-180 40z" fill="#1a1d1d" opacity=".3" style="animation-delay:.8s"/>
+    <path d="M0 120 l180 -40 v20 l-180 40z" fill="#c2703a" opacity=".9" style="animation-delay:1.2s"/>
+    <circle cx="90" cy="80" r="7" fill="#c2703a"/>
+  </g>
+</svg>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice">
+  <style>
+    @media (prefers-reduced-motion: no-preference) {
+      @keyframes sb-rise{0%{transform:translateY(0);opacity:.6}100%{transform:translateY(-90px);opacity:0}}
+      @keyframes sb-spin{to{transform:rotate(360deg)}}
+      @keyframes sb-spin-rev{to{transform:rotate(-360deg)}}
+      @keyframes sb-bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+      .sb-steam{animation:sb-rise 4.6s ease-in infinite}
+      .sb-steam2{animation:sb-rise 5.8s ease-in infinite 1.3s}
+      .sb-ring{animation:sb-spin 40s linear infinite;transform-origin:730px 150px}
+      .sb-ring-sm{animation:sb-spin-rev 26s linear infinite;transform-origin:150px 470px}
+      .sb-bucket{animation:sb-bounce 3s ease-in-out infinite}
+    }
+  </style>
+  <rect width="900" height="600" fill="#fdf6df"/>
+  <g class="sb-bucket" transform="translate(430,300)">
+    <path d="M-90 -40 L90 -40 L70 160 L-70 160 Z" fill="#d99a2b" stroke="#241512" stroke-width="5" stroke-linejoin="round"/>
+    <ellipse cx="0" cy="-40" rx="90" ry="16" fill="#c1272d" stroke="#241512" stroke-width="5"/>
+    <path d="M-60 -56c20-30 100-30 120 0" fill="none" stroke="#241512" stroke-width="6" stroke-linecap="round"/>
+  </g>
+  <g class="sb-steam" fill="none" stroke="#c1272d" stroke-width="7" stroke-linecap="round" opacity=".55">
+    <path d="M390 230c-16-22 16-34 0-56"/>
+  </g>
+  <g class="sb-steam2" fill="none" stroke="#c1272d" stroke-width="7" stroke-linecap="round" opacity=".5">
+    <path d="M470 220c-16-22 16-36 0-58"/>
+  </g>
+  <g class="sb-ring" fill="none" stroke="#c1272d" stroke-width="5" opacity=".7">
+    <circle cx="730" cy="150" r="90"/>
+    <circle cx="730" cy="150" r="70"/>
+  </g>
+  <text class="sb-ring" x="730" y="150" text-anchor="middle" font-family="Impact,sans-serif" font-size="14" fill="#c1272d" opacity=".8">SINCE 1953</text>
+  <g class="sb-ring-sm" fill="none" stroke="#d99a2b" stroke-width="4" opacity=".7">
+    <circle cx="150" cy="470" r="60"/>
+    <circle cx="150" cy="470" r="44"/>
+  </g>
+</svg>

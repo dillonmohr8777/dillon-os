@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice">
+  <style>
+    @media (prefers-reduced-motion: no-preference) {
+      @keyframes ar-breathe{0%,100%{transform:scale(1);opacity:.5}50%{transform:scale(1.05);opacity:.9}}
+      @keyframes ar-spin{to{transform:rotate(360deg)}}
+      @keyframes ar-fade{0%,100%{opacity:.3}50%{opacity:.85}}
+      .ar-ring1{animation:ar-breathe 4.5s ease-in-out infinite;transform-origin:450px 300px}
+      .ar-ring2{animation:ar-breathe 5.5s ease-in-out infinite .6s;transform-origin:450px 300px}
+      .ar-spin{animation:ar-spin 40s linear infinite;transform-origin:450px 300px}
+      .ar-spark{animation:ar-fade 3s ease-in-out infinite}
+    }
+  </style>
+  <rect width="900" height="600" fill="#faf6ef"/>
+  <g fill="none" stroke="#3f6b64" stroke-width="3" class="ar-spin" opacity=".35">
+    <circle cx="450" cy="300" r="220"/>
+  </g>
+  <g fill="none" stroke="#3f6b64" stroke-width="4" class="ar-ring1">
+    <circle cx="450" cy="300" r="150"/>
+  </g>
+  <g fill="none" stroke="#c98a4b" stroke-width="4" class="ar-ring2">
+    <circle cx="450" cy="300" r="95"/>
+  </g>
+  <circle cx="450" cy="300" r="10" fill="#211f1b"/>
+  <g class="ar-spark" fill="#c98a4b">
+    <path d="M620 190l6 14 14 6-14 6-6 14-6-14-14-6 14-6z"/>
+  </g>
+  <g class="ar-spark" fill="#3f6b64" style="animation-delay:1.5s">
+    <path d="M280 420l5 12 12 5-12 5-5 12-5-12-12-5 12-5z"/>
+  </g>
+</svg>
