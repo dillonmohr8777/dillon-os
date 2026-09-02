@@ -15,3 +15,4 @@ Sensitive session mines go to `12_Brain/private/sessions/` (gitignored).
 - 2026-07-29 — 12_Brain public-safety cleanup (mined)
 - 2026-08-14 — Google RSVP rail (mined)
 - 2026-09-02 — Radar next-10 Higgsfield imagery + favicon fix (mined)
+- 2026-09-02 — Radar next-10 batches 02/02b/02c sheet cross-check + bespoke build path (mined)
