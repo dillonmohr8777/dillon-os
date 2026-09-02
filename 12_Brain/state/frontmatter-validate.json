@@ -1,6 +1,6 @@
 {
   "automation_id": "frontmatter-validate",
-  "started_at": "2026-09-02T02:34:56.032Z",
+  "started_at": "2026-09-02T17:57:29.355Z",
   "status": "ok",
   "counts": {
     "files": 40,
@@ -77,7 +77,7 @@
       "missing": [],
       "warnings": [],
       "status": "active",
-      "last_touched": "2026-07-30",
+      "last_touched": "2026-09-02",
       "due": "2026-08-10"
     },
     {
@@ -369,5 +369,5 @@
       "due": "none"
     }
   ],
-  "written_at": "2026-09-02T02:34:56.032Z"
+  "written_at": "2026-09-02T17:57:29.355Z"
 }

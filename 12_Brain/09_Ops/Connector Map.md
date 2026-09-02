@@ -47,6 +47,7 @@ connection here proves nothing there (see `System/tool-access-catalog.md`).
 |---|---|---|
 | Netlify | With Not For preview and every prospect site deploy | enable in chat settings, then re-auth if state is stale |
 | WordPress.com | BigOrange pilot review state, client WP sites | enable; note most client sites are self-hosted WP, not WP.com |
+| WordPress (self-hosted, bigorange.marketing) | `bigorange-client-radar` roster discovery, draft-only blog staging | Public REST works today (read-only). Ask BigOrange for a role-based Application Password (request text in `claude-skills-repo/skills/bigorange-client-radar/references/access-request.md`), or connect bigorange.marketing as a brand in Abency so `mcp__Abency__wp_list_posts` and `wp_create_draft` work. Publishing stays approval-gated. |
 
 Both show `installState: unknown`, which means the auth check did not resolve.
 Toggle them on in this chat's connector settings and re-run `ListConnectors`.

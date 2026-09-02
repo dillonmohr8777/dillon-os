@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-09-01",
+  "updated": "2026-09-02",
   "contract": "00_Inbox/Automation Deep Analysis 2026-07-29.md",
   "dependency": "12_Brain/DEPENDENCY_PR226.md",
   "automations": [
@@ -114,7 +114,7 @@
       "cadence": "daily/3x week",
       "command": "node _os/automation/bin/qualify.js --adapter indeed --from <signals.json>",
       "external_actions": false,
-      "notes": "Normalizes hiring signals into the shared prospect schema. Does not scrape Indeed live in this PR (fixture/import only — live scrape is a credential/ToS gate).",
+      "notes": "Normalizes hiring signals into the shared prospect schema. Does not scrape Indeed live in this PR (fixture/import only \u2014 live scrape is a credential/ToS gate).",
       "status": "implemented"
     },
     {
@@ -329,7 +329,7 @@
     },
     {
       "id": "daily-communications-brain-workflow-def",
-      "name": "Daily communications brain — Dillon OS workflow definition (reference)",
+      "name": "Daily communications brain \u2014 Dillon OS workflow definition (reference)",
       "lane": "intelligence",
       "tier": 0,
       "cadence": "not scheduled",
@@ -511,6 +511,27 @@
       "status": "implemented",
       "owner": "claude-code-skill",
       "note": "On-demand Claude Code skill, run by Dillon; never cron-scheduled. Reviewed 2026-09-01 against marketing-chief-twice-daily-brief: different content (morning inbox/client/content brief vs infra health), so not collapsed. Dillon to confirm whether one should absorb the other."
+    },
+    {
+      "id": "bigorange-client-radar",
+      "name": "BigOrange client radar",
+      "lane": "intelligence",
+      "tier": 1,
+      "cadence": "daily",
+      "command": "python3 ../claude-skills-repo/skills/bigorange-client-radar/scripts/discover_clients.py --diff 12_Brain/state/bigorange-client-roster.json --out 12_Brain/state/bigorange-client-roster.json",
+      "inputs": [
+        "https://bigorange.marketing/wp-json/",
+        "../client-operations-canonical/registry/clients.json"
+      ],
+      "outputs": [
+        "12_Brain/state/bigorange-client-roster.json",
+        "12_Brain/state/bigorange-client-events.json",
+        "System/approval-queue.md (one line per new_client, appended by a human or the runner)"
+      ],
+      "external_actions": false,
+      "notes": "Public site and WordPress REST only, read-only. Authenticated mode needs BIGORANGE_WP_USER and BIGORANGE_WP_APP_PASSWORD (role-based, revocable). On a high-confidence new_client, a human runs bigorange-client-decks recipe client-kickoff with sampleData true. Never sends or publishes.",
+      "status": "implemented",
+      "depends_on": []
     }
   ],
   "gates": {

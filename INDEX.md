@@ -53,6 +53,7 @@ links instead of loading the entire vault.
 - [[12_Brain/05_Projects/2026-08-04 - Philadelphia 25 Site Factory Batch 3|Philadelphia 25-site factory Batch 3]] — private prospect previews and evidence.
 - [[12_Brain/05_Projects/2026-08-04 - Philadelphia 25 Site Factory Batch 4|Philadelphia 25-site factory Batch 4]] — separate real-business cohort with first-party logo evidence.
 - [[04_SOPs/SOP Index|SOP Index]] — repeatable operating procedures.
+- [[12_Brain/04_Decisions/2026-09-02 - BigOrange skills package and per-surface brand rule|BigOrange skills package]] — brand system, deck engine, client radar and four vertical playbooks in `claude-skills-repo/skills/bigorange-*`.
 - `05_Offers/` — products, packages, and pricing.
 - `10_Sessions/` — working-session records.
 - `11_Agents/` — domain-agent definitions.

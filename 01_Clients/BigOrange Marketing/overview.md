@@ -4,7 +4,7 @@ client_id: bigorange-marketing
 role: Project owner
 division: Direct
 status: active
-last_touched: 2026-07-30
+last_touched: 2026-09-02
 next_action: Prepare the Custom Home Builder pillar audit and Janice interview for the August 10 review.
 due: 2026-08-10
 source_refs:
@@ -35,3 +35,9 @@ BigOrange Marketing has an approved Custom Home Builder Marketing pillar-page pr
 1. [[Custom Home Builder Pillar Project]]
 2. [[Communication Intelligence Map]]
 3. [Gmail thread](https://mail.google.com/mail/u/0/#all/19fa4cb8f6812394)
+
+## Skills and automations
+
+1. Brand system, deck engine, client radar and vertical playbooks: `claude-skills-repo/skills/bigorange-*` (decision: [[12_Brain/04_Decisions/2026-09-02 - BigOrange skills package and per-surface brand rule|BigOrange skills package]]).
+2. Client roster state: `12_Brain/state/bigorange-client-roster.json`, events in `12_Brain/state/bigorange-client-events.json`, automation id `bigorange-client-radar`.
+3. Review package (six PDFs, Thursday deck, Brand Voice Guide): `client-operations-canonical/clients/bigorange-marketing/deliverables/2026-09-02-wordpress-growth-package-redesign/`.
