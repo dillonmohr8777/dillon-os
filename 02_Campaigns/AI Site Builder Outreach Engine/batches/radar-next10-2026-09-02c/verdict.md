@@ -11,7 +11,7 @@ source_refs:
 
 # Verdict: radar-next10-2026-09-02c (bespoke cut)
 
-**Summary:** 10 of 10 approved. Bespoke single-file builds, Sonnet-written copy, animated SVG art, no photos, 29-35 KB each. QA round 2 clean at 390 and 1440 px after one kit fix (mobile split grid).
+**Summary:** 10 of 10 approved. Bespoke single-file builds, Sonnet-written copy, animated SVG art, no photos, 29-35 KB each. QA round 3 clean at 390 and 1440 px: kit mobile-split fix, then Claude Design layer (logos, hero art, icon sprites) ported into all 10, then accent and on-accent contrast retuned so every measured text pair is 4.5 or better.
 
 | Slug | Verdict | Reason |
 |---|---|---|
@@ -29,6 +29,6 @@ source_refs:
 Rejected: none. Retry rounds: 0 (QA fixed the shared kit in its own round).
 
 Conditions carried into the deploy line:
-- Secondary text pairs (eyebrows, pills, accent labels) were flagged by a static scan at 2.9 to 4.4 contrast; h1 and body pass. Spot-check one site live and darken accents if needed before mailing.
+- Accent pairs retuned and live-measured on all 10; no open contrast findings.
 - Webfont rendering unverified in the sandbox.
 - Three sites carry contact placeholders; confirm phone and address before any mailer.
