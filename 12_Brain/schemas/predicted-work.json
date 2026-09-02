@@ -1,0 +1,174 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "dillon-os/predicted-work",
+  "title": "PredictedWorkBrief",
+  "description": "Evidence-only work-package predictions plus a research-only numeric workload shadow.",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "schema_version",
+    "generated_at",
+    "as_of",
+    "lookahead_days",
+    "authority",
+    "pattern",
+    "sources",
+    "candidates",
+    "workload_series",
+    "chronos_shadow",
+    "blind_spots",
+    "forbidden_actions"
+  ],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "as_of": { "type": "string", "format": "date" },
+    "lookahead_days": { "type": "integer", "minimum": 1 },
+    "authority": { "const": "planning-evidence-only" },
+    "pattern": { "const": "router-plus-evaluator" },
+    "sources": { "type": "object" },
+    "candidates": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/candidate" }
+    },
+    "workload_series": { "$ref": "#/$defs/workload_series" },
+    "chronos_shadow": { "$ref": "#/$defs/chronos_shadow" },
+    "blind_spots": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "forbidden_actions": {
+      "type": "array",
+      "uniqueItems": true,
+      "allOf": [
+        { "contains": { "const": "send" } },
+        { "contains": { "const": "publish" } },
+        { "contains": { "const": "spend" } },
+        { "contains": { "const": "account-change" } },
+        { "contains": { "const": "canonical-queue-mutation" } }
+      ]
+    }
+  },
+  "$defs": {
+    "candidate": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": [
+        "candidate_id",
+        "work_package_id",
+        "work_package_label",
+        "state",
+        "confidence",
+        "confidence_label",
+        "evidence_tier",
+        "predicted_window",
+        "reason",
+        "source_refs",
+        "artifact_manifest",
+        "prepare_now",
+        "human_gates",
+        "handoff"
+      ],
+      "properties": {
+        "candidate_id": { "type": "string", "minLength": 1 },
+        "client_id": { "type": ["string", "null"] },
+        "work_package_id": { "type": "string", "minLength": 1 },
+        "work_package_label": { "type": "string", "minLength": 1 },
+        "state": { "type": "string", "minLength": 1 },
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+        "confidence_label": {
+          "enum": ["confirmed-pattern", "likely", "watch", "weak-signal"]
+        },
+        "evidence_tier": {
+          "enum": ["owner-verified-recurrence", "canonical-queue", "historical-cadence"]
+        },
+        "predicted_window": {
+          "type": "object",
+          "required": ["start", "end", "basis"],
+          "properties": {
+            "start": { "type": ["string", "null"] },
+            "end": { "type": ["string", "null"] },
+            "basis": { "type": "string", "minLength": 1 }
+          }
+        },
+        "source_refs": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "artifact_manifest": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "handoff": {
+          "type": "object",
+          "required": [
+            "workflow_id",
+            "step_id",
+            "task",
+            "constraints",
+            "upstream_artifacts",
+            "budget_tokens",
+            "timeout_seconds"
+          ]
+        }
+      }
+    },
+    "workload_series": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "frequency",
+        "start_date",
+        "end_date",
+        "observations",
+        "event_count",
+        "source_fingerprint",
+        "dates",
+        "series"
+      ],
+      "properties": {
+        "schema_version": { "const": 1 },
+        "frequency": { "const": "day" },
+        "observations": { "type": "integer", "minimum": 1 },
+        "event_count": { "type": "integer", "minimum": 0 },
+        "source_fingerprint": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "dates": {
+          "type": "array",
+          "items": { "type": "string", "format": "date" }
+        },
+        "series": { "type": "array", "minItems": 1 }
+      }
+    },
+    "chronos_shadow": {
+      "type": "object",
+      "required": [
+        "status",
+        "authority",
+        "planner_consumption_gate",
+        "reason",
+        "sparse_series_withheld",
+        "request"
+      ],
+      "properties": {
+        "status": {
+          "enum": ["request-ready", "insufficient-history", "evaluated-shadow"]
+        },
+        "authority": { "const": "research-evidence-only" },
+        "planner_consumption_gate": { "const": false },
+        "reason": { "type": "string", "minLength": 1 },
+        "sparse_series_withheld": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["series_id", "reason"],
+            "properties": {
+              "series_id": { "type": "string", "minLength": 1 },
+              "reason": { "type": "string", "minLength": 1 }
+            }
+          }
+        },
+        "request": { "type": ["object", "null"] }
+      }
+    }
+  }
+}

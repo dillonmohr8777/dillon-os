@@ -17,10 +17,29 @@ Count and report:
 - Inbox depth in `00_Inbox/`
 - Progress on the `goal_current` / `goal_target` in `System/OS Config.md`
 
+Then run
+`node _os/automation/bin/predict-work.js --lookahead-days 35 --history-days 90`
+to refresh the contiguous workload-arrival series and work-package
+classification snapshot. This is a read-only projection of canonical
+`client-operations` evidence; it may write only Dillon OS brief/state artifacts.
+Do not run Chronos from the daily metrics pull. The weekly forecast evaluator
+owns model execution.
+
 Write `Daily-Briefs/metrics-YYYY-MM-DD.md` (today's date) with a compact table
 of metric → value → 7-day delta (compare against the previous `metrics-*.md`
 snapshot if one exists; say "first snapshot" if not), then 3 bullet
 observations — what's trending well, what's decaying, one concrete fix.
+
+Add a compact **Workload mix** block with:
+
+- dated packages observed in the 90-day window;
+- counts by work-package type;
+- classifier coverage and excluded stale queue rows;
+- the latest matching Chronos receipt decision and gates, if one exists.
+
+Chronos output is shadow evidence only. If its fingerprint is stale or its
+planner-consumption gate is false, say so and do not convert its band into a
+commitment, staffing claim, or plan priority.
 
 If `goal_current` in `System/OS Config.md` is out of date versus what the vault
 shows, say so explicitly and state the corrected number (do not edit OS Config).

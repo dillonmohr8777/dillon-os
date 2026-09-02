@@ -2,7 +2,7 @@
 note_type: decision
 status: active
 created: 2026-09-01
-updated: 2026-09-01
+updated: 2026-09-02
 owner: Dillon Mohr
 decision: "Adopt a provider-neutral specialist forecast router. Benchmark Chronos-2 first; keep TimesFM-3.0 weights research-only until a commercial license path exists."
 verification_status: verified
@@ -12,6 +12,7 @@ source_refs:
   - "[[12_Brain/06_Research/2026-09-01 - TimesFM-3 multivariate forecast specialist]]"
   - "[[12_Brain/03_Concepts/Specialist Forecast Router]]"
   - "[[12_Brain/04_Decisions/2026-07-30 - Adopt gated intelligence stack]]"
+  - "[[12_Brain/04_Decisions/2026-09-02 - Separate deliverable prediction from workload forecasting]]"
   - "https://github.com/google-research/timesfm"
   - "https://huggingface.co/amazon/chronos-2"
   - "https://github.com/DataDog/toto"
@@ -62,6 +63,12 @@ several thin wrappers, notebooks, and services. Every TimesFM-3 implementation
 still uses the same restricted checkpoint. Chronos-2 is therefore the first
 commercially permissible model to evaluate, not an automatic production
 selection.
+
+The first 2026-09-02 portfolio-workload canary reinforced the decision. Sparse
+per-package series were rejected after invalid crossed quantiles. The total
+workload run was valid but failed the best-baseline and calibration gates, so
+it remained shadow evidence. The router and evaluator prevented a weak model
+result from changing the plan.
 
 ## Options considered
 

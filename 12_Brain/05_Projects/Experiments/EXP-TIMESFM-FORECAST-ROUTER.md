@@ -2,7 +2,7 @@
 note_type: experiment
 status: active
 created: 2026-09-01
-updated: 2026-09-01
+updated: 2026-09-02
 owner: Dillon Mohr
 experiment_id: EXP-TIMESFM-FORECAST-ROUTER
 decision: retain-shadow
@@ -19,6 +19,8 @@ source_refs:
   - "https://github.com/amazon-science/chronos-forecasting"
   - "https://github.com/DataDog/toto"
   - "client-operations://clients/momentum-360/deliverables/2026-09-01-hubspot-chronos-forecast-pilot/momentum-360-hubspot-chronos-forecast-pilot-report.md"
+  - "[[12_Brain/04_Decisions/2026-09-02 - Separate deliverable prediction from workload forecasting]]"
+  - "12_Brain/state/work-predictor/chronos-2026-09-02-total-v1/workload-forecast-receipt.json"
 tags:
   - brain
   - experiment
@@ -125,12 +127,24 @@ canary must abstain today. `System/routine-health.md` and
 - Complete: Chronos-2 ran one 32-week-context, 12-week-held-out forecast. It
   returned all nine quantiles but posted 25.75% WAPE versus 25.11% for
   persistence. P10-p90 coverage was 58.33%, below the nominal 80% band.
+- Complete: the predictive-work router produced a contiguous 90-day portfolio
+  count series from 118 dated work-package folders while keeping client names,
+  content, revenue, messages, and queue mutations outside the model request.
+- Complete: sparse package-type targets were rejected after crossed quantiles
+  and are now withheld until each has at least 24 nonzero days and 32 packages.
+- Complete: the portfolio-total workload canary ran a 14-day holdout. Chronos
+  posted 93.57% WAPE versus 100% persistence and 85.71% for the trailing-seven
+  mean; p10-p90 coverage was 57.1%. It failed the best-baseline and calibration
+  gates, so the deterministic planner remains primary.
 - Blocked by data readiness: the original automation-reliability canary still
   has fewer than 32 contiguous daily observations.
-- Pending: rolling-origin scoring, import/backfill reconciliation, quantile
-  calibration, cross-learning comparison, and independent result review.
-- Not authorized: agenda scoring, scheduled automation, client-facing forecast
-  claims, or any TimesFM-3.0 client or commercial decision support.
+- Pending: rolling-origin scoring, import/backfill reconciliation, intermittent
+  count baselines, quantile calibration, cross-learning comparison, and
+  independent result review.
+- Authorized: one weekly evidence-only rerun of the registered canaries. It may
+  refresh receipts but may not promote a model or alter the agenda.
+- Not authorized: agenda scoring, automatic plan reordering, client-facing
+  forecast claims, or any TimesFM-3.0 client or commercial decision support.
 
 ## Acceptance contract
 

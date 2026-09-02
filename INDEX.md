@@ -1,7 +1,7 @@
 ---
 note_type: index
 status: active
-updated: 2026-09-01
+updated: 2026-09-02
 tags:
   - index
   - brain
@@ -40,6 +40,9 @@ links instead of loading the entire vault.
     unresolved routing.
 - [[12_Brain/03_Concepts/Specialist Forecast Router|Specialist Forecast Router]]
   - numeric futures go to a forecast specialist; LLMs do not guess trends.
+- [[12_Brain/03_Concepts/Predictive Work Planner|Predictive Work Planner]]
+  - likely deliverables, required preparation, and numeric workload are
+  predicted in separate evidence and authority lanes.
 
 ## Work
 

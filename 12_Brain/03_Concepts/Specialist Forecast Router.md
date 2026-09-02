@@ -2,7 +2,7 @@
 note_type: concept
 status: active
 created: 2026-09-01
-updated: 2026-09-01
+updated: 2026-09-02
 domain: prediction
 maturity: proposed
 summary: Do not make an LLM guess numeric business trends. Route time series to a dedicated forecast specialist, then let the LLM interpret quantile bands into one gated next action.
@@ -15,6 +15,8 @@ source_refs:
   - "[[12_Brain/02_Entities/Chronos-2]]"
   - "[[12_Brain/03_Concepts/Leading Indicators]]"
   - "[[12_Brain/03_Concepts/Evidence Context and Learning Loops]]"
+  - "[[12_Brain/03_Concepts/Predictive Work Planner]]"
+  - "[[12_Brain/04_Decisions/2026-09-02 - Separate deliverable prediction from workload forecasting]]"
 tags:
   - brain
   - concept
@@ -32,14 +34,16 @@ number. When the question is a timeline, call a forecast specialist.
 ## The split
 
 ```text
-language question  -> LLM / Marketing Chief
-numeric future     -> forecast specialist
-discrete outcome   -> existing prediction ledger (accept / modify / defer / reject)
-consequential act  -> human or standing envelope
+language question       -> LLM / Marketing Chief
+likely work package     -> evidence router + explicit artifact contract
+numeric future          -> forecast specialist
+discrete action outcome -> existing prediction ledger (accept / modify / defer / reject)
+consequential act       -> human or standing envelope
 ```
 
-These four loops stay separate. Mixing them is how invented spend, fake
-conversions, and unauthorized launches get into the agenda.
+These five loops stay separate. Mixing them is how invented deadlines,
+deliverables, spend, conversions, and unauthorized launches get into the
+agenda.
 
 ## Input contract
 
@@ -159,20 +163,26 @@ Rules:
 - Paid-media, HubSpot, morning-orchestrator, and report automations may
   attach bands. They may not enable campaigns from a band.
 - Client series never enter TimesFM-3.0. Chronos-2, TimesFM 2.5, and Toto 2.0
-  also remain synthetic/public research-only until their experiment and human
-  promotion gates pass.
+  also remain synthetic/public research-only unless the exact route is
+  registered, sanitized, fingerprint-bound, evidence-only, and approved for a
+  named experiment. Experiment success still does not promote another dataset.
 
 ## How predictors use it
 
-There are now two predictor classes:
+There are now three predictor classes:
 
 1. **Action predictors** — will Dillon accept this next action? Ledger:
    `client-operations/state/prediction-outcomes.jsonl`.
-2. **Series predictors** — where does this number probably go? Ledger: a
+2. **Work-package predictors** — what kind of artifact is likely next, what
+   inputs and QA it needs, and which preparation is safe? Artifact:
+   `Daily-Briefs/predicted-work-YYYY-MM-DD.json`, with source evidence and no
+   authority to create a deadline or queue item.
+3. **Series predictors** — where does this number probably go? Ledger: a
    forecast-run artifact with quantiles and source locators.
 
 Do not score one with the other's metric. An accepted local draft is not
-proof that next week's spend will land inside p50.
+proof that next week's spend will land inside p50, and a repeated website
+folder is not proof that a client has ordered another website.
 
 ## Failure modes
 
