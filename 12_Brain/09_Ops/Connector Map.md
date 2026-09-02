@@ -39,6 +39,7 @@ connection here proves nothing there (see `System/tool-access-catalog.md`).
 | Google Calendar | scheduling context | rarely called |
 | HyperFrames by HeyGen | code-driven motion video | compose/render disabled from CLI agents; use the local skill |
 | Indeed | job search | not part of any workflow; candidate for removal |
+| Higgsfield | image, video, 3D, audio generation for hero loops and boards | connected and enabled 2026-09-01 (second session); generation spend stays approval-gated |
 
 ## 2. Installed but not enabled in chat
 
@@ -57,7 +58,6 @@ Toggle them on in this chat's connector settings and re-run `ListConnectors`.
 | Composio MCP | 6 of 7 `.claude/agents` | Windows-box MCP with its own OAuth. Not in the claude.ai registry. Agents that run in the cloud silently lose HubSpot, Ads, GA4, Meta, Search Console, Semrush. |
 | Claude Browser | web-product-builder, qa-critic, growth-content | local extension; unavailable remotely, Playwright substitutes |
 | LandingFolio | `.mcp.json` | token-gated, sandbox-only per its entity page |
-| Higgsfield | `.cursor/mcp.json` | wired 2026-09-01, OAuth pending |
 
 ## 4. Gaps mapped to blocked work
 
@@ -94,6 +94,10 @@ Per `System/tool-access-catalog.md`, Cursor's `user-composio`,
 check. Cursor gets its own OAuth; the list above does not carry over. Sequence
 for the Windows box: Composio OAuth in Cursor, then Slack, then WordPress.com,
 then `claude mcp add` for Higgsfield, then `/mcp` login.
+
+## Dated preflight log
+
+- 2026-09-01 (session 2, `ListConnectors`): live Gmail, Slack, Google Drive, Google Calendar, HyperFrames, Indeed, Higgsfield. Degraded Netlify and WordPress.com (installed, `installState: unknown`, not enabled in chat; deploys drafted to approval queue). Blocked Composio, Claude Browser, HubSpot, Ads/GA4/Meta, Semrush (absent from workspace). Higgsfield moved from pending to live.
 
 ## Rules
 
