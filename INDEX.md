@@ -69,6 +69,8 @@ links instead of loading the entire vault.
 - [[12_Brain/05_Projects/README|Projects]] — finite outcomes with owners and
   finish lines.
 - [[12_Brain/06_Research/README|Research]] — sourced, dated, expiring findings.
+  Latest: [[12_Brain/06_Research/2026-09-01 - Fable 5.1 launch signal sweep|Fable 5.1 launch signal sweep]]
+  and [[12_Brain/02_Entities/Higgsfield MCP|Higgsfield MCP]] (candidate, not wired).
 - [[12_Brain/07_Reviews/README|Reviews]] — daily, weekly, and quarterly
   synthesis.
 - [[12_Brain/08_Memory/README|Memory Ledger]] — corrections, preferences, and
