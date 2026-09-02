@@ -19,6 +19,16 @@ tags:
 
 Visible notes that do not yet belong to a stable operating domain.
 
+## Vault front doors
+
+- [[GROK-HANDOFF-DILLON-OS|GROK-HANDOFF-DILLON-OS]]
+
+## .github
+
+- [[.github/skills/dillon-frontend-maker/SKILL|SKILL]]
+- [[.github/skills/dillon-independent-web-checker/SKILL|SKILL]]
+- [[.github/skills/dillon-plan-grill/SKILL|SKILL]]
+
 ## _archive
 
 - [[_archive/05_Book/characters|characters]]
@@ -34,16 +44,6 @@ Visible notes that do not yet belong to a stable operating domain.
 - [[_archive/07_DBA/overview|overview]]
 - [[_archive/09_Transcripts/Transcript Index|Transcript Index]]
 - [[_archive/README|README]]
-
-## .github
-
-- [[.github/skills/dillon-frontend-maker/SKILL|SKILL]]
-- [[.github/skills/dillon-independent-web-checker/SKILL|SKILL]]
-- [[.github/skills/dillon-plan-grill/SKILL|SKILL]]
-
-## Vault front doors
-
-- [[GROK-HANDOFF-DILLON-OS|GROK-HANDOFF-DILLON-OS]]
 
 ## 08_Prospects
 

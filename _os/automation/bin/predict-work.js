@@ -31,9 +31,13 @@ function integerArg(name, fallback, { min = 1, max = 365 } = {}) {
 
 function discoverClientOpsRoot() {
   const explicit = argValue('--client-ops-root') || process.env.DILLON_CLIENT_OPERATIONS_ROOT;
+  // Cloud routines clone repositories side by side under /home/user; the
+  // Windows box keeps the canonical checkout under Documents/Codex.
   const candidates = [
     explicit,
     path.join(os.homedir(), 'Documents', 'Codex', 'projects', 'client-operations'),
+    path.resolve(repoPath(), '..', 'client-operations-canonical'),
+    path.resolve(repoPath(), '..', 'client-operations'),
   ].filter(Boolean);
   return candidates.find((candidate) => fs.existsSync(path.join(candidate, 'registry', 'clients.json')))
     || explicit
@@ -65,11 +69,13 @@ function main() {
   if (chronosReceipt && chronosReceipt.source_fingerprint === prediction.sources.source_fingerprint) {
     prediction.chronos_shadow.status = 'evaluated-shadow';
     prediction.chronos_shadow.latest_receipt = {
+      schema_version: chronosReceipt.schema_version || 1,
       generated_at: chronosReceipt.generated_at,
       decision: chronosReceipt.decision,
       authority: chronosReceipt.authority,
       gates: chronosReceipt.gates,
       holdout: chronosReceipt.holdout,
+      aggregate: chronosReceipt.aggregate,
       forecast: chronosReceipt.forecast,
       source_ref: '12_Brain/state/work-predictor/latest-chronos.json',
     };
@@ -96,9 +102,16 @@ function main() {
 
   console.log(JSON.stringify({
     status: 'ok',
+    prediction_status: prediction.status,
     dry_run: dryRun,
     as_of: prediction.as_of,
+    client_operations_checkout: prediction.sources.client_operations_checkout,
     candidates: prediction.candidates.length,
+    plan_inputs: {
+      hard_commitments: prediction.plan_inputs.hard_commitments.length,
+      predicted_preparation: prediction.plan_inputs.predicted_preparation.length,
+      gated: prediction.plan_inputs.gated.length,
+    },
     deliverable_events_scanned: prediction.sources.deliverable_events_scanned,
     active_queue_items_scanned: prediction.sources.active_queue_items_scanned,
     chronos_shadow_status: prediction.chronos_shadow.status,

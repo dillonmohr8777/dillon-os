@@ -19,6 +19,11 @@ tags:
 
 SOPs, reusable templates, and the rules that keep agent work consistent.
 
+## Vault front doors
+
+- [[AGENTS|AGENTS]]
+- [[CLAUDE|CLAUDE]]
+
 ## _templates
 
 - [[_templates/AEO GEO Strategy|AEO GEO Strategy]]
@@ -44,11 +49,6 @@ SOPs, reusable templates, and the rules that keep agent work consistent.
 - [[_templates/site-factory/README|README]]
 - [[_templates/SOP|SOP]]
 - [[_templates/Transcript|Transcript]]
-
-## Vault front doors
-
-- [[AGENTS|AGENTS]]
-- [[CLAUDE|CLAUDE]]
 
 ## 04_SOPs
 

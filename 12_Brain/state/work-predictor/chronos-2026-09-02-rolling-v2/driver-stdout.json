@@ -1,0 +1,36 @@
+{
+  "status": "ok",
+  "out_dir": "C:\\Users\\dillo\\Claude\\worktrees\\dillon-os-predictive-v2\\12_Brain\\state\\work-predictor\\chronos-2026-09-02-rolling-v2",
+  "receipt": "C:\\Users\\dillo\\Claude\\worktrees\\dillon-os-predictive-v2\\12_Brain\\state\\work-predictor\\chronos-2026-09-02-rolling-v2\\workload-forecast-receipt.json",
+  "summary": "C:\\Users\\dillo\\Claude\\worktrees\\dillon-os-predictive-v2\\12_Brain\\state\\work-predictor\\chronos-2026-09-02-rolling-v2\\workload-forecast-summary.md",
+  "latest_receipt": "C:\\Users\\dillo\\Claude\\worktrees\\dillon-os-predictive-v2\\12_Brain\\state\\work-predictor\\latest-chronos.json",
+  "decision": "retain-deterministic-baseline-primary",
+  "aggregate": {
+    "origins_planned": 4,
+    "origins_scored": 4,
+    "origins_rejected": 0,
+    "chronos_wins_vs_best_baseline": 1,
+    "mean_p10_p90_coverage": 0.5357,
+    "mean_empirical_band_coverage": 0.6785,
+    "mean_chronos_mae": 2.5357,
+    "mean_best_baseline_mae": 2.2962,
+    "gates": {
+      "all_origins_valid": true,
+      "repeated_holdouts_beat_best_baseline": false,
+      "repeated_holdouts_quantile_calibration": false,
+      "planner_consumption": false,
+      "repeated_holdouts": false
+    },
+    "planner_consumption_reason": "Software never sets planner_consumption. A human promotion decision must be recorded separately, and only after repeated holdouts pass."
+  },
+  "forecast": [
+    {
+      "series_id": "work-packages-total",
+      "horizon": 14,
+      "point_total": 14.98,
+      "p10_total": 1.34,
+      "p50_total": 14.98,
+      "p90_total": 96.92
+    }
+  ]
+}

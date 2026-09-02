@@ -166,6 +166,26 @@ canary must abstain today. `System/routine-health.md` and
 7. Human gate required before any later promotion into paid-media review,
    HubSpot pulse, or `Get-NextActions` scoring.
 
+## Rolling-origin workload evaluation, 2026-09-02
+
+Acceptance item 6 was exercised on the de-identified daily portfolio total
+with `_os/automation/bin/forecast-workload.js --horizon 7 --origins 4`:
+
+| Origin cutoff | Chronos MAE | Best baseline (MAE) | Croston-SBA MAE | Chronos coverage | Weekday band coverage |
+| --- | ---: | --- | ---: | ---: | ---: |
+| 2026-08-26 | 3.04 | trailing-28 mean (2.47) | 2.48 | 42.9% | 57.1% |
+| 2026-08-19 | 3.29 | day-of-week mean (2.86) | 3.07 | 57.1% | 57.1% |
+| 2026-08-12 | 0.66 | zero (0.71) | 1.87 | 57.1% | 85.7% |
+| 2026-08-05 | 3.15 | persistence (3.14) | 3.48 | 57.1% | 71.4% |
+
+Chronos won one of four origins; no single baseline won twice, which is
+itself evidence that the series is too short and spiky for any method to be
+trusted yet. Mean coverage 53.6% against the nominal 80%. Gates:
+`all_origins_valid` PASS, `repeated_holdouts_beat_best_baseline` FAIL,
+`repeated_holdouts_quantile_calibration` FAIL, `planner_consumption` FAIL
+(software never sets it). Decision: retain-deterministic-baseline-primary.
+Receipt: `12_Brain/state/work-predictor/chronos-2026-09-02-rolling-v2/`.
+
 ## Stop conditions
 
 - attempt to use 3.0 weights on client or production data

@@ -3,8 +3,16 @@
 const crypto = require('crypto');
 const fs = require('fs');
 const path = require('path');
+const { spawnSync } = require('child_process');
 
 const { readJson, repoPath } = require('./fsutil');
+
+// Calibration multipliers never push a tier below these floors; the tiers are
+// evidence classes, and hindcast misses lower confidence without erasing them.
+const TIER_CALIBRATION_FLOOR = Object.freeze({
+  'owner-verified-recurrence': 0.75,
+  'historical-cadence': 0.6,
+});
 
 const CLOSED_STATUSES = new Set([
   'done',
@@ -242,6 +250,7 @@ function buildHandoff(candidate) {
       'Stop on cross-client ambiguity, missing primary evidence, or a human-only authentication gate.',
     ],
     upstream_artifacts: [...candidate.source_refs],
+    preparation_contract: candidate.preparation_contract,
     budget_tokens: 12000,
     timeout_seconds: 1800,
   };
@@ -261,6 +270,8 @@ function makeCandidate({
   sourceRefs,
   secondary = [],
   blockers = [],
+  confirmedRequest = false,
+  confirmedDeadline = false,
 }) {
   const candidate = {
     candidate_id: id,
@@ -271,6 +282,11 @@ function makeCandidate({
     work_package_label: profile?.label || 'Unclassified work package',
     secondary_work_packages: secondary,
     state,
+    // A candidate is always a prediction. Only a canonical queue row is a
+    // confirmed request, and only its recorded dueAt is a confirmed deadline.
+    claim_type: 'prediction',
+    confirmed_request: confirmedRequest,
+    confirmed_deadline: confirmedDeadline,
     confidence: +clamp(confidence, 0, 1).toFixed(2),
     confidence_label: confidenceLabel(confidence),
     evidence_tier: evidenceTier,
@@ -280,6 +296,8 @@ function makeCandidate({
     artifact_manifest: profile ? [...profile.artifact_manifest] : [],
     prepare_now: profile ? [...profile.prepare_now] : [],
     human_gates: unique([...(profile?.human_gates || []), ...blockers]),
+    preparation_contract: profile?.preparation_contract || null,
+    calibration: null,
   };
   candidate.handoff = buildHandoff(candidate);
   return candidate;
@@ -354,6 +372,8 @@ function candidateFromWorkItem(item, catalog, asOf) {
     ]),
     secondary: classification.secondary,
     blockers,
+    confirmedRequest: true,
+    confirmedDeadline: Boolean(futureDue),
   });
 }
 
@@ -381,7 +401,7 @@ function nextRecurrenceDate(anchorDate, cadence, asOf) {
   throw new Error(`Unsupported recurrence cadence: ${cadence}`);
 }
 
-function candidatesFromVerifiedRecurrences(catalog, asOf, lookaheadDays) {
+function candidatesFromVerifiedRecurrences(catalog, asOf, lookaheadDays, events = []) {
   const current = dayDate(asOf);
   const last = addDays(current, lookaheadDays);
   const candidates = [];
@@ -390,7 +410,10 @@ function candidatesFromVerifiedRecurrences(catalog, asOf, lookaheadDays) {
     if (next > last) continue;
     const profile = profileById(catalog, recurrence.profile_id);
     const nextDay = isoDay(next);
-    candidates.push(makeCandidate({
+    const support = events.filter((event) => event.client_id === recurrence.client_id
+      && event.work_package_id === recurrence.profile_id
+      && event.date <= isoDay(current)).length;
+    const candidate = makeCandidate({
       id: candidateId(['recurrence', recurrence.id, nextDay]),
       profile,
       clientId: recurrence.client_id,
@@ -403,9 +426,11 @@ function candidatesFromVerifiedRecurrences(catalog, asOf, lookaheadDays) {
         end: isoDay(addDays(next, Math.min(2, lookaheadDays))),
         basis: recurrence.cadence,
       },
-      reason: recurrence.note || `${recurrence.cadence} owner-verified recurrence.`,
+      reason: `${recurrence.note || `${recurrence.cadence} owner-verified recurrence.`} ${support} matching dated package${support === 1 ? '' : 's'} observed in the history window.`,
       sourceRefs: recurrence.source_refs || [],
-    }));
+    });
+    candidate.history_support = support;
+    candidates.push(candidate);
   }
   return candidates;
 }
@@ -650,6 +675,182 @@ function buildForecastRequest(workloadSeries, { generatedAt, horizon = 14 } = {}
   };
 }
 
+function gitOutput(root, args) {
+  const result = spawnSync('git', ['-C', root, ...args], { encoding: 'utf8', timeout: 15000 });
+  return result.status === 0 ? result.stdout.trim() : null;
+}
+
+// Records which client-operations checkout the prediction was read from. A
+// dirty or non-main checkout is still usable, but the brief must say so.
+function checkoutProvenance(root) {
+  if (!root || !fs.existsSync(root)) return { available: false };
+  const head = gitOutput(root, ['rev-parse', '--short', 'HEAD']);
+  if (!head) return { available: true, git: false };
+  const branch = gitOutput(root, ['rev-parse', '--abbrev-ref', 'HEAD']);
+  const porcelain = gitOutput(root, ['status', '--porcelain']);
+  const dirtyFiles = porcelain ? porcelain.split(/\r?\n/).filter(Boolean).length : 0;
+  const counts = gitOutput(root, ['rev-list', '--left-right', '--count', 'origin/main...HEAD']);
+  const [behind, ahead] = counts ? counts.split(/\s+/).map(Number) : [null, null];
+  return {
+    available: true,
+    git: true,
+    branch,
+    head,
+    dirty_files: dirtyFiles,
+    ahead_of_origin_main: ahead,
+    behind_origin_main: behind,
+    canonical_main: branch === 'main' && ahead === 0 && behind === 0 && dirtyFiles === 0,
+  };
+}
+
+// Re-runs the deterministic predictors from several past origins and checks
+// whether a matching dated package actually landed inside each predicted
+// window. Produces per-tier and per-profile hit rates that are applied as
+// bounded confidence multipliers once a tier has at least three judgements.
+function hindcastCalibration(events, catalog, asOf, {
+  origins = [7, 14, 21, 28],
+  lookaheadDays = 14,
+  tolerance = 2,
+} = {}) {
+  const today = dayDate(asOf);
+  const tiers = {};
+  const profiles = {};
+  const bump = (bucket, key, hit) => {
+    if (!bucket[key]) bucket[key] = { predicted: 0, hit: 0 };
+    bucket[key].predicted += 1;
+    if (hit) bucket[key].hit += 1;
+  };
+  for (const offset of origins) {
+    const pastAsOf = isoDay(addDays(today, -offset));
+    const pastEvents = events.filter((event) => event.date <= pastAsOf);
+    const predicted = [
+      ...candidatesFromVerifiedRecurrences(catalog, pastAsOf, lookaheadDays, pastEvents),
+      ...candidatesFromHistory(pastEvents, catalog, pastAsOf, lookaheadDays),
+    ];
+    for (const candidate of predicted) {
+      const { start, end } = candidate.predicted_window;
+      if (!start || !end) continue;
+      const lastJudgeable = addDays(end, tolerance);
+      if (lastJudgeable > today) continue;
+      const windowStart = isoDay(addDays(start, -tolerance));
+      const windowEnd = isoDay(lastJudgeable);
+      const hit = events.some((event) => event.client_id === candidate.client_id
+        && event.work_package_id === candidate.work_package_id
+        && event.date >= windowStart
+        && event.date <= windowEnd);
+      bump(tiers, candidate.evidence_tier, hit);
+      bump(profiles, candidate.work_package_id, hit);
+    }
+  }
+  const finish = (bucket, floors) => Object.fromEntries(Object.entries(bucket).map(([key, row]) => {
+    const hitRate = row.predicted ? +(row.hit / row.predicted).toFixed(3) : null;
+    const sufficient = row.predicted >= 3;
+    const floor = floors ? (floors[key] ?? 0.5) : 0.5;
+    const multiplier = sufficient ? +clamp(0.6 + 0.4 * hitRate, floor, 1).toFixed(3) : 1;
+    return [key, { ...row, hit_rate: hitRate, sample_sufficient: sufficient, multiplier }];
+  }));
+  return {
+    basis: 'hindcast',
+    origins_days: [...origins],
+    lookahead_days: lookaheadDays,
+    tolerance_days: tolerance,
+    judged_through: isoDay(today),
+    tiers: finish(tiers, TIER_CALIBRATION_FLOOR),
+    profiles: finish(profiles, null),
+  };
+}
+
+function applyCalibration(candidates, calibration) {
+  for (const candidate of candidates) {
+    if (!(candidate.evidence_tier in TIER_CALIBRATION_FLOOR)) continue;
+    const row = calibration.tiers[candidate.evidence_tier];
+    if (!row) continue;
+    const raw = candidate.confidence;
+    const adjusted = row.sample_sufficient ? +clamp(raw * row.multiplier, 0, 1).toFixed(2) : raw;
+    candidate.calibration = {
+      basis: calibration.basis,
+      tier: candidate.evidence_tier,
+      predicted: row.predicted,
+      hit: row.hit,
+      hit_rate: row.hit_rate,
+      multiplier: row.multiplier,
+      applied: row.sample_sufficient,
+      raw_confidence: raw,
+    };
+    candidate.confidence = adjusted;
+    candidate.confidence_label = confidenceLabel(adjusted);
+  }
+  return candidates;
+}
+
+const GATED_STATES = new Set(['blocked', 'deferred', 'needs_approval', 'verification']);
+
+function planSummary(candidate) {
+  return {
+    candidate_id: candidate.candidate_id,
+    client_id: candidate.client_id,
+    work_package_id: candidate.work_package_id,
+    work_package_label: candidate.work_package_label,
+    window: candidate.predicted_window,
+    confidence: candidate.confidence,
+    confidence_label: candidate.confidence_label,
+    claim_type: candidate.claim_type,
+    confirmed_request: candidate.confirmed_request,
+    confirmed_deadline: candidate.confirmed_deadline,
+    state: candidate.state,
+    evidence_tier: candidate.evidence_tier,
+  };
+}
+
+// Mechanical inputs for plan-today so the ordering rules are enforced here,
+// not re-interpreted from prose by whichever model runs the morning brief.
+function buildPlanInputs(candidates, asOf, status) {
+  const today = isoDay(asOf);
+  const soon = isoDay(addDays(today, 7));
+  const hardCommitments = candidates
+    .filter((candidate) => candidate.confirmed_deadline
+      && candidate.predicted_window.start
+      && candidate.predicted_window.start >= today)
+    .sort((a, b) => a.predicted_window.start.localeCompare(b.predicted_window.start))
+    .map(planSummary);
+  const gated = candidates
+    .filter((candidate) => candidate.evidence_tier === 'canonical-queue' && GATED_STATES.has(candidate.state))
+    .map(planSummary);
+  const eligible = status === 'ok'
+    ? candidates.filter((candidate) => (candidate.evidence_tier === 'owner-verified-recurrence'
+      || candidate.evidence_tier === 'historical-cadence')
+      && candidate.confidence >= 0.6
+      && candidate.predicted_window.start
+      && candidate.predicted_window.start <= soon
+      && !GATED_STATES.has(candidate.state))
+    : [];
+  const predictedPreparation = eligible.slice(0, 2).map((candidate) => ({
+    ...planSummary(candidate),
+    label: 'predicted preparation',
+    budget_minutes: 45,
+    first_artifacts: candidate.artifact_manifest.slice(0, 3),
+    first_step: candidate.prepare_now[0] || null,
+  }));
+  let withheldReason = null;
+  if (status !== 'ok') withheldReason = 'Prediction status is degraded, so no predicted preparation is offered today.';
+  else if (!eligible.length) withheldReason = 'No prediction met the 0.60 confidence and seven-day window rule.';
+  return {
+    as_of: today,
+    rules: [
+      'Hard commitments come only from canonical queue rows with a recorded future dueAt.',
+      'Predicted preparation is capped at two blocks of 45 minutes, needs confidence 0.60 or higher and a window starting within seven days, and never outranks a hard commitment.',
+      'Gated rows (blocked, deferred, needs_approval, verification) belong under Deliberately not doing.',
+      'The capacity shadow is context only; software never sets planner_consumption.',
+      'Keep the five-task WIP limit; predicted preparation is the first thing cut.',
+    ],
+    hard_commitments: hardCommitments,
+    predicted_preparation: predictedPreparation,
+    predicted_preparation_withheld_reason: withheldReason,
+    gated,
+    wip_limit: 5,
+  };
+}
+
 function candidateSort(a, b) {
   const dateA = a.predicted_window.start || '9999-12-31';
   const dateB = b.predicted_window.start || '9999-12-31';
@@ -690,12 +891,14 @@ function buildPrediction({
   const queueCandidates = workItems.items
     .map((item) => candidateFromWorkItem(item, catalog, asOfDay))
     .filter(Boolean);
-  const verifiedCandidates = candidatesFromVerifiedRecurrences(catalog, asOfDay, lookaheadDays);
+  const verifiedCandidates = candidatesFromVerifiedRecurrences(catalog, asOfDay, lookaheadDays, events);
   const historicalCandidates = candidatesFromHistory(events, catalog, asOfDay, lookaheadDays);
   let candidates = consolidatePortfolioBatches(
     [...verifiedCandidates, ...queueCandidates, ...historicalCandidates],
     catalog,
   );
+  const calibration = hindcastCalibration(events, catalog, asOfDay);
+  applyCalibration(candidates, calibration);
   const deduped = new Map();
   for (const candidate of candidates.sort(candidateSort)) {
     const key = `${candidate.client_id}|${candidate.work_package_id}|${candidate.predicted_window.start || candidate.state}`;
@@ -705,19 +908,27 @@ function buildPrediction({
   candidates = [...deduped.values()].sort(candidateSort).slice(0, maxCandidates);
   const workloadSeries = buildWorkloadSeries(events, catalog, { asOf: asOfDay, historyDays });
   const forecastRequest = buildForecastRequest(workloadSeries, { generatedAt: generated, horizon: 14 });
+  const provenance = checkoutProvenance(clientOpsRoot);
+  const status = provenance.available && workItems.available ? 'ok' : 'degraded';
+  const planInputs = buildPlanInputs(candidates, asOfDay, status);
 
   const unclassified = events.filter((event) => event.work_package_id === 'unclassified');
   const activeItems = workItems.items.filter((item) => !CLOSED_STATUSES.has(normalizeText(item.status).replace(/ /g, '_')));
   const staleQueueItemsExcluded = Math.max(0, activeItems.length - queueCandidates.length);
+  const insufficientTiers = Object.entries(calibration.tiers)
+    .filter(([, row]) => !row.sample_sufficient)
+    .map(([tier]) => tier);
   return {
     schema_version: 1,
     generated_at: generated,
     as_of: asOfDay,
+    status,
     lookahead_days: lookaheadDays,
     authority: 'planning-evidence-only',
     pattern: 'router-plus-evaluator',
     sources: {
       client_operations_root_available: Boolean(clientOpsRoot && fs.existsSync(clientOpsRoot)),
+      client_operations_checkout: provenance,
       canonical_queue_available: workItems.available,
       canonical_queue_source: workItems.available ? 'client-operations://queue/work-items.json' : null,
       deliverable_events_scanned: events.length,
@@ -728,6 +939,8 @@ function buildPrediction({
       history_end: workloadSeries.end_date,
       source_fingerprint: workloadSeries.source_fingerprint,
     },
+    calibration,
+    plan_inputs: planInputs,
     candidates,
     workload_series: workloadSeries,
     chronos_shadow: {
@@ -746,7 +959,14 @@ function buildPrediction({
       request: forecastRequest,
     },
     blind_spots: unique([
+      status === 'degraded' ? 'STATUS DEGRADED: canonical client-operations sources were unavailable, so this brief offers no predicted preparation.' : null,
       !workItems.available ? 'The canonical client-operations queue was unavailable.' : null,
+      provenance.git && !provenance.canonical_main
+        ? `Predictions were read from a client-operations checkout on branch ${provenance.branch} at ${provenance.head} with ${provenance.dirty_files} modified file(s), ${provenance.ahead_of_origin_main ?? '?'} ahead and ${provenance.behind_origin_main ?? '?'} behind origin/main. Canonical main may differ.`
+        : null,
+      insufficientTiers.length
+        ? `Hindcast calibration has fewer than three judged predictions for ${insufficientTiers.join(', ')}; raw confidence is shown unadjusted for those tiers.`
+        : null,
       unclassified.length ? `${unclassified.length} of ${events.length} historical deliverable directories were not confidently classified.` : null,
       staleQueueItemsExcluded ? `${staleQueueItemsExcluded} open queue items were excluded from the predictive stack because their evidence was older than the status-specific freshness window.` : null,
       'Folder dates are work-package evidence, not measured effort hours or guaranteed completion dates.',
@@ -762,70 +982,155 @@ function windowLabel(window) {
   return window.start || window.basis || 'undated';
 }
 
+function claimLabel(candidate) {
+  if (candidate.confirmed_deadline) return 'confirmed request, recorded due date';
+  if (candidate.confirmed_request) return 'confirmed request, undated';
+  return 'prediction only';
+}
+
+function provenanceLine(sources) {
+  const checkout = sources.client_operations_checkout;
+  if (!checkout || !checkout.available) return 'Client-operations source: unavailable.';
+  if (!checkout.git) return 'Client-operations source: folder present, not a git checkout.';
+  const state = checkout.canonical_main
+    ? 'clean canonical main'
+    : `branch ${checkout.branch} at ${checkout.head}, ${checkout.dirty_files} modified file(s), ${checkout.ahead_of_origin_main ?? '?'} ahead / ${checkout.behind_origin_main ?? '?'} behind origin/main`;
+  return `Client-operations source: ${state}.`;
+}
+
+function chronosLines(prediction) {
+  const receipt = prediction.chronos_shadow.latest_receipt;
+  const lines = [
+    '## Chronos workload shadow',
+    '',
+    `Status: **${prediction.chronos_shadow.status}**. ${prediction.chronos_shadow.reason}`,
+    '',
+  ];
+  if (!receipt) return lines;
+  lines.push(`Latest decision: **${receipt.decision}**. Planner-consumption gate: **${receipt.gates?.planner_consumption ? 'PASS' : 'FAIL'}**.`, '');
+  if (receipt.aggregate) {
+    const a = receipt.aggregate;
+    const pct = (value) => (value === null || value === undefined ? 'n/a' : `${(value * 100).toFixed(1)}%`);
+    lines.push(`Rolling origins: Chronos beat the best deterministic baseline on ${a.chronos_wins_vs_best_baseline} of ${a.origins_scored} scored origins (${a.origins_rejected} rejected). Mean MAE Chronos ${a.mean_chronos_mae ?? 'n/a'} vs best baseline ${a.mean_best_baseline_mae ?? 'n/a'} (${unique(a.best_baseline_methods || []).join(', ') || 'n/a'}). Mean p10-p90 coverage ${pct(a.mean_p10_p90_coverage)} against a free weekday band at ${pct(a.mean_empirical_band_coverage)}.`, '');
+  } else {
+    const total = receipt.holdout?.evaluations?.find((row) => row.series_id === 'work-packages-total');
+    if (total) {
+      lines.push(`Single holdout WAPE: Chronos ${total.chronos.wape ?? 'n/a'}%, persistence ${total.persistence.wape ?? 'n/a'}%, trailing-seven-day mean ${total.trailing_seven_day_mean.wape ?? 'n/a'}%. P10-p90 coverage ${(total.p10_p90_coverage * 100).toFixed(1)}%.`, '');
+    }
+  }
+  const band = receipt.forecast?.summary?.find((row) => row.series_id === 'work-packages-total');
+  if (band) {
+    lines.push(`Next-${band.horizon}-day total-workload shadow: point ${band.point_total}, p10 ${band.p10_total}, p50 ${band.p50_total}, p90 ${band.p90_total}. Capacity context only.`, '');
+  } else if (receipt.forecast?.status === 'rejected') {
+    lines.push(`Forward forecast was rejected and abstained: ${receipt.forecast.rejected_reasons.join('; ')}`, '');
+  }
+  return lines;
+}
+
+function contractLines(contract) {
+  if (!contract) return [];
+  const first = (values, count = 2) => (values || []).slice(0, count);
+  const lines = [];
+  for (const [label, values] of [
+    ['Inputs', first(contract.inputs)],
+    ['Templates', first(contract.templates)],
+    ['Outputs', first(contract.output_formats)],
+    ['QA', first(contract.qa)],
+  ]) {
+    if (values.length) lines.push(`- ${label}: ${values.join('; ')}`);
+  }
+  return lines;
+}
+
 function renderMarkdown(prediction) {
-  const latestChronos = prediction.chronos_shadow.latest_receipt;
-  const totalEvaluation = latestChronos?.holdout?.evaluations?.find((row) => row.series_id === 'work-packages-total');
-  const totalForecast = latestChronos?.forecast?.summary?.find((row) => row.series_id === 'work-packages-total');
+  const plan = prediction.plan_inputs;
   const lines = [
     '---',
     'tags: [brief, predictive-work, forecasting]',
     `date: ${prediction.as_of}`,
     `lookahead_days: ${prediction.lookahead_days}`,
     `authority: ${prediction.authority}`,
+    `status: ${prediction.status || 'ok'}`,
     '---',
     '',
     `# Predictive work brief — ${prediction.as_of}`,
     '',
+  ];
+  if (prediction.status === 'degraded') {
+    lines.push('> **STATUS: DEGRADED.** Canonical client-operations sources were unavailable. Nothing below may be used as predicted preparation today.', '');
+  }
+  lines.push(
     `Evidence window: ${prediction.sources.history_start} through ${prediction.sources.history_end}. `
       + `${prediction.sources.deliverable_events_scanned} dated work packages and `
-      + `${prediction.sources.active_queue_items_scanned} active canonical queue items were scanned.`,
+      + `${prediction.sources.active_queue_items_scanned} active canonical queue items were scanned. `
+      + provenanceLine(prediction.sources),
+    '',
+    'Every row below is a prediction unless its Kind column says otherwise. Only canonical queue rows are confirmed requests, and only a recorded dueAt is a confirmed deadline.',
     '',
     '## What is likely to come next',
     '',
-    'For verified recurrences and historical cadence, confidence estimates recurrence strength. For canonical queue rows, it estimates source and work-package classification confidence; the recorded state still controls whether work may proceed.',
+    'For verified recurrences and historical cadence, confidence estimates recurrence strength after hindcast calibration. For canonical queue rows, it estimates source and work-package classification confidence; the recorded state still controls whether work may proceed.',
     '',
-    '| Window | Confidence | Client or lane | Expected deliverable | Evidence |',
-    '| --- | --- | --- | --- | --- |',
-  ];
+    '| Window | Kind | Confidence | Client or lane | Expected deliverable | Evidence |',
+    '| --- | --- | --- | --- | --- | --- |',
+  );
   if (!prediction.candidates.length) {
-    lines.push('| — | — | — | No evidence-backed upcoming package found | Sources may be unavailable or too sparse |');
+    lines.push('| — | — | — | — | No evidence-backed upcoming package found | Sources may be unavailable or too sparse |');
   } else {
     for (const candidate of prediction.candidates) {
       const clients = candidate.clients?.length
         ? `${candidate.client_id} (${candidate.clients.length} routes)`
         : (candidate.client_id || 'unresolved');
-      lines.push(`| ${windowLabel(candidate.predicted_window)} | ${(candidate.confidence * 100).toFixed(0)}% ${candidate.confidence_label} | ${clients} | ${candidate.work_package_label} | ${candidate.evidence_tier}: ${candidate.reason.replace(/\|/g, '\\|')} |`);
+      const calibrated = candidate.calibration?.applied
+        ? ` (raw ${(candidate.calibration.raw_confidence * 100).toFixed(0)}%, hit-rate ${(candidate.calibration.hit_rate * 100).toFixed(0)}%)`
+        : '';
+      lines.push(`| ${windowLabel(candidate.predicted_window)} | ${claimLabel(candidate)} | ${(candidate.confidence * 100).toFixed(0)}% ${candidate.confidence_label}${calibrated} | ${clients} | ${candidate.work_package_label} | ${candidate.evidence_tier}: ${candidate.reason.replace(/\|/g, '\\|')} |`);
     }
+  }
+
+  if (plan) {
+    lines.push('', '## Plan inputs for today', '');
+    lines.push(`Hard commitments (recorded due dates): ${plan.hard_commitments.length ? plan.hard_commitments.map((row) => `${row.client_id || 'portfolio'} ${row.work_package_label} due ${row.window.start}`).join('; ') : 'none in the lookahead window'}.`);
+    if (plan.predicted_preparation.length) {
+      lines.push(`Predicted preparation (max two, ${plan.predicted_preparation[0].budget_minutes} minutes each, after hard commitments): ${plan.predicted_preparation.map((row) => `${row.client_id || 'portfolio'} ${row.work_package_label} from ${row.window.start} at ${(row.confidence * 100).toFixed(0)}%`).join('; ')}.`);
+    } else {
+      lines.push(`Predicted preparation: none. ${plan.predicted_preparation_withheld_reason || ''}`.trim());
+    }
+    lines.push(`Gated rows for Deliberately not doing: ${plan.gated.length ? plan.gated.map((row) => `${row.client_id || 'portfolio'} ${row.work_package_label} (${row.state})`).join('; ') : 'none'}.`);
   }
 
   lines.push('', '## Prepare now', '');
   for (const candidate of prediction.candidates.slice(0, 8)) {
     lines.push(`### ${candidate.work_package_label} — ${candidate.client_id || 'unresolved'}`, '');
-    lines.push(`Signal: **${candidate.confidence_label} (${(candidate.confidence * 100).toFixed(0)}%)**. ${candidate.reason}`, '');
+    lines.push(`Signal: **${candidate.confidence_label} (${(candidate.confidence * 100).toFixed(0)}%)**, ${claimLabel(candidate)}. ${candidate.reason}`, '');
     for (const action of candidate.prepare_now.slice(0, 3)) lines.push(`- ${action}`);
+    const contract = contractLines(candidate.preparation_contract);
+    if (contract.length) {
+      lines.push('', 'Preparation contract:', ...contract);
+    }
     if (candidate.human_gates.length) {
       lines.push('', `Gate: ${candidate.human_gates.join(' ')}`);
     }
     lines.push('');
   }
 
-  lines.push(
-    '## Chronos workload shadow',
-    '',
-    `Status: **${prediction.chronos_shadow.status}**. ${prediction.chronos_shadow.reason}`,
-    '',
-  );
-  if (latestChronos) {
-    lines.push(`Latest decision: **${latestChronos.decision}**. Planner-consumption gate: **${latestChronos.gates?.planner_consumption ? 'PASS' : 'FAIL'}**.`, '');
-    if (totalEvaluation) {
-      lines.push(`Fourteen-day holdout WAPE: Chronos ${totalEvaluation.chronos.wape ?? 'n/a'}%, persistence ${totalEvaluation.persistence.wape ?? 'n/a'}%, trailing-seven-day mean ${totalEvaluation.trailing_seven_day_mean.wape ?? 'n/a'}%. P10-p90 coverage ${(totalEvaluation.p10_p90_coverage * 100).toFixed(1)}%.`, '');
-    }
-    if (totalForecast) {
-      lines.push(`Next-${totalForecast.horizon}-day total-workload shadow: point ${totalForecast.point_total}, p10 ${totalForecast.p10_total}, p50 ${totalForecast.p50_total}, p90 ${totalForecast.p90_total}.`, '');
+  if (prediction.calibration) {
+    const tierRows = Object.entries(prediction.calibration.tiers);
+    lines.push('## Calibration', '');
+    if (!tierRows.length) {
+      lines.push('No judgeable hindcast predictions yet; confidence is shown unadjusted.', '');
+    } else {
+      lines.push('| Evidence tier | Judged | Hit | Hit rate | Multiplier | Applied |', '| --- | ---: | ---: | ---: | ---: | --- |');
+      for (const [tier, row] of tierRows) {
+        lines.push(`| ${tier} | ${row.predicted} | ${row.hit} | ${row.hit_rate === null ? 'n/a' : `${(row.hit_rate * 100).toFixed(0)}%`} | ${row.multiplier} | ${row.sample_sufficient ? 'yes' : 'no, sample under 3'} |`);
+      }
+      lines.push('', `Hindcast origins ${prediction.calibration.origins_days.join(', ')} days back, ${prediction.calibration.lookahead_days}-day lookahead, ±${prediction.calibration.tolerance_days} days tolerance, judged through ${prediction.calibration.judged_through}.`, '');
     }
   }
+
+  lines.push(...chronosLines(prediction));
   lines.push(
-    'Chronos forecasts numeric arrival counts and ranges. The deterministic evidence router predicts the actual deliverable and preparation contract. Sparse per-type series remain withheld from Chronos. The daily plan may show the total band, but it may not reorder work until the evaluator gate passes.',
+    'Chronos forecasts numeric arrival counts and ranges. The deterministic evidence router predicts the actual deliverable and preparation contract. Sparse per-type series remain withheld from Chronos. The daily plan may show the total band, but it may not reorder work until a human records a promotion after the repeated-holdout gate passes.',
     '',
     '## Blind spots and limits',
     '',
@@ -841,10 +1146,15 @@ function renderMarkdown(prediction) {
 
 module.exports = {
   CLOSED_STATUSES,
+  TIER_CALIBRATION_FLOOR,
   addDays,
+  applyCalibration,
   buildForecastRequest,
+  buildPlanInputs,
   buildPrediction,
   buildWorkloadSeries,
+  checkoutProvenance,
+  hindcastCalibration,
   candidatesFromHistory,
   candidatesFromVerifiedRecurrences,
   classifyWork,
