@@ -18,11 +18,14 @@ tags:
 
 # Agent Roster
 
-**Summary:** 13 agents, one per lane, Command through Voice. 7 are live today as `.claude/agents/*.md`
-files; 6 (seo-aeo-analyst, client-success, video-director, radar-operator,
-deploy-engineer, voice-agent-builder) are mapped here — lane, model, connectors,
-skills — but not yet instantiated as agent files, which is why
-`verification_status` on this note is `partial`. Model tiers follow
+**Summary:** 13 agents, one per lane, Command through Voice, all live today as
+`.claude/agents/*.md` files. `verification_status` on this note stays `partial`
+because the newest three skills this same round adds —
+[[.claude/skills/ad-teardown|ad-teardown]], [[.claude/skills/aeo-report|aeo-report]],
+[[.claude/skills/client-status|client-status]] — postdate seo-aeo-analyst,
+client-success, video-director, radar-operator, deploy-engineer, and
+voice-agent-builder, so none of those agent files has run its own skill yet to
+confirm the wiring in the table below. Model tiers follow
 [[12_Brain/04_Decisions/2026-09-01 - Fable 5.1 routing and effort defaults|the 2026-09-01 routing decision]]:
 opus stays pinned to exactly three agents, everything else is sonnet or haiku.
 
@@ -37,12 +40,12 @@ opus stays pinned to exactly three agents, everything else is sonnet or haiku.
 | reliability-scout | Ops | haiku | None required (vault + automation registry internal) | `automation-ops` | `.claude/agents/reliability-scout.md` |
 | growth-content | Content | sonnet | Claude Browser (local only; Playwright fallback remote); WebSearch | `content-scan` | `.claude/agents/growth-content.md` |
 | paid-media-analyst | Paid | sonnet | Abency + AdWhispr Ads + Motion Creative Analytics | `client-report` | `.claude/agents/paid-media-analyst.md` |
-| seo-aeo-analyst | SEO/AEO | sonnet | OpenRush + Abency | `aeo-report` | *proposed here — no `.claude/agents/seo-aeo-analyst.md` yet* |
-| client-success | Accounts | sonnet | Slack + Gmail + Google Calendar + Composio HubSpot (read only) | `client-status` | *proposed here — no `.claude/agents/client-success.md` yet* |
-| video-director | A films | sonnet | [[12_Brain/02_Entities/Higgsfield MCP|Higgsfield MCP]] + HyperFrames by HeyGen + Motion Creative Analytics + vidIQ | `scroll-hero`, `ad-teardown` | *proposed here — no `.claude/agents/video-director.md` yet* |
-| radar-operator | B prospects | sonnet | [[12_Brain/02_Entities/Cloudflare D1 Radar|Cloudflare D1]] + OpenRush + [[12_Brain/02_Entities/Vibe Prospecting|Vibe Prospecting]] | `site-grade`, `franchise-list`, `site-batch` | *proposed here — no `.claude/agents/radar-operator.md` yet* |
-| deploy-engineer | Deploy | sonnet | Vercel + Cloudflare Developer Platform | None dedicated yet — takes an approved build from web-product-builder/qa-critic to production | *proposed here — no `.claude/agents/deploy-engineer.md` yet* |
-| voice-agent-builder | Voice | sonnet | Speko | None dedicated yet | *proposed here — no `.claude/agents/voice-agent-builder.md` yet* |
+| seo-aeo-analyst | SEO/AEO | sonnet | OpenRush + Abency | `aeo-report` (new this round; not yet run by this agent) | `.claude/agents/seo-aeo-analyst.md` |
+| client-success | Accounts | sonnet | Slack + Gmail + Google Calendar + Composio HubSpot (read only) | `client-status` (new this round; not yet run by this agent) | `.claude/agents/client-success.md` |
+| video-director | A films | sonnet | [[12_Brain/02_Entities/Higgsfield MCP|Higgsfield MCP]] + HyperFrames by HeyGen + Motion Creative Analytics + vidIQ | `scroll-hero`, `ad-teardown` (new this round; not yet run by this agent) | `.claude/agents/video-director.md` |
+| radar-operator | B prospects | sonnet | [[12_Brain/02_Entities/Cloudflare D1 Radar|Cloudflare D1]] + OpenRush + [[12_Brain/02_Entities/Vibe Prospecting|Vibe Prospecting]]; read-only Vercel for build-queue status | `site-grade`, `franchise-list`, `site-batch` | `.claude/agents/radar-operator.md` |
+| deploy-engineer | Deploy | sonnet | Vercel + Cloudflare Developer Platform | None dedicated yet — takes an approved build from web-product-builder/qa-critic to production | `.claude/agents/deploy-engineer.md` |
+| voice-agent-builder | Voice | sonnet | Speko | None dedicated yet | `.claude/agents/voice-agent-builder.md` |
 
 ## Routing rules
 
