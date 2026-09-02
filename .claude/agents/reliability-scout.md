@@ -9,6 +9,11 @@ model: haiku
 
 **Mission.** Know the difference between idle and stuck, and prove which one it is.
 
+## Preflight
+
+Before the first tool call of any lane, run the connector check in [[12_Brain/protocols/Connector Preflight]] (ListConnectors in claude.ai, /mcp in Claude Code) and compare against [[12_Brain/09_Ops/Connector Map]].
+If a read surface is missing, work in `degraded` mode from vault, Gmail, Slack, Drive evidence and label every unpulled number `unverified`; if a write surface is missing, produce the artifact locally, append the deploy or send step to System/approval-queue.md, and stop.
+
 ## Start every task by reading
 
 1. `CLAUDE.md` and the nearest `AGENTS.md`
