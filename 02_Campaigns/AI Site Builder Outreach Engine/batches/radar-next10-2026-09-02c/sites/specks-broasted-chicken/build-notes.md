@@ -79,3 +79,14 @@ Ported the shared `_kit/design/specks-broasted-chicken/` assets into
 - Text-node diff: only the old plain-text brandmark removed (now SVG
   `<text>`); rest of copy byte-identical. File size 33,776 → 36,074 bytes. JS
   parses, anchors resolve, no adjacent art-only sections.
+
+## Real logo (harvest pass, 2026-09-02)
+
+Replaced the designed `logo.svg` with Speck's actual logo, harvested from
+`http://speckschicken.com/images/v3_01.gif` (the site's top banner). Cropped to
+the wordmark + Broasted Foods badge, dropped the "Chicken at its finest!"
+tagline row, quantized to a 48-color palette PNG, resized to 350x88. Embedded
+as a base64 data URI in header (`height:40px`) and a white-chip footer copy
+(`height:28px`) since the footer is dark and the asset carries its own cream
+background. Final asset 8.2 KB; page weight 35.2 KB → 55.9 KB. `alt`/`aria-label`
+set to "Speck's Broasted Chicken". QA harness re-run: pass.

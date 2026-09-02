@@ -116,3 +116,14 @@ one CTA routing decision)
   text-only diff of `<main>`/`<footer>` copy (all tags and decorative SVG
   stripped) matched byte-for-byte before and after this pass — no copy was
   changed, only the header/footer/hero/icon/favicon assets.
+
+## Real logo (harvest pass, 2026-09-02)
+
+Replaced the designed icon+wordmark `logo.svg` with Nolt's actual banner logo,
+harvested from `http://noltsautoparts.com/banner.gif` on their live homepage
+(black bar under the header table). Trimmed the white margin, quantized to a
+48-color palette PNG, resized to 400x29 (width-capped per the 400px max).
+Embedded as a base64 data URI in header (`height:40px` container, image natively
+short and wide) and a white-chip footer copy (`height:28px`). Final asset 3.2
+KB; page weight 30.2 KB → 42.4 KB. `alt`/`aria-label` set to "Nolt's Auto
+Parts". QA harness re-run: pass.

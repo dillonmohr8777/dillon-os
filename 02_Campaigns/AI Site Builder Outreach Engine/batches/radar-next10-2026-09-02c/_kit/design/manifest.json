@@ -40,7 +40,9 @@
       "hero-art.svg": 2553,
       "icons.svg": 1120
     },
-    "notes": "logo.svg uses a system-safe font stack (no embedded webfont) matching the site's display font category; hero-art.svg animations are transform/opacity only, wrapped in @media (prefers-reduced-motion: no-preference); icons.svg is a <symbol> sprite, 24px grid, 1.75 stroke, currentColor \u2014 reference with <use href=\"icons.svg#icon-N\"/> and set color on the wrapping element."
+    "notes": "logo.svg uses a system-safe font stack (no embedded webfont) matching the site's display font category; hero-art.svg animations are transform/opacity only, wrapped in @media (prefers-reduced-motion: no-preference); icons.svg is a <symbol> sprite, 24px grid, 1.75 stroke, currentColor \u2014 reference with <use href=\"icons.svg#icon-N\"/> and set color on the wrapping element.",
+    "logo_source": "https://images.squarespace-cdn.com/content/v1/691cc583e4acd2780e884437/fa0c46be-7569-4caa-b590-efe7d60a4893/fm-berkheimer-heating-cooling-logo.png",
+    "logo_type": "real"
   },
   "the-juice-merchant": {
     "name": "The Juice Merchant",
@@ -83,7 +85,9 @@
       "hero-art.svg": 2462,
       "icons.svg": 1097
     },
-    "notes": "logo.svg uses a system-safe font stack (no embedded webfont) matching the site's display font category; hero-art.svg animations are transform/opacity only, wrapped in @media (prefers-reduced-motion: no-preference); icons.svg is a <symbol> sprite, 24px grid, 1.75 stroke, currentColor \u2014 reference with <use href=\"icons.svg#icon-N\"/> and set color on the wrapping element."
+    "notes": "logo.svg uses a system-safe font stack (no embedded webfont) matching the site's display font category; hero-art.svg animations are transform/opacity only, wrapped in @media (prefers-reduced-motion: no-preference); icons.svg is a <symbol> sprite, 24px grid, 1.75 stroke, currentColor \u2014 reference with <use href=\"icons.svg#icon-N\"/> and set color on the wrapping element.",
+    "logo_source": null,
+    "logo_type": "designed"
   },
   "golden-sea": {
     "name": "Golden Sea",
@@ -126,7 +130,9 @@
       "hero-art.svg": 2423,
       "icons.svg": 1069
     },
-    "notes": "logo.svg uses a system-safe font stack (no embedded webfont) matching the site's display font category; hero-art.svg animations are transform/opacity only, wrapped in @media (prefers-reduced-motion: no-preference); icons.svg is a <symbol> sprite, 24px grid, 1.75 stroke, currentColor \u2014 reference with <use href=\"icons.svg#icon-N\"/> and set color on the wrapping element."
+    "notes": "logo.svg uses a system-safe font stack (no embedded webfont) matching the site's display font category; hero-art.svg animations are transform/opacity only, wrapped in @media (prefers-reduced-motion: no-preference); icons.svg is a <symbol> sprite, 24px grid, 1.75 stroke, currentColor \u2014 reference with <use href=\"icons.svg#icon-N\"/> and set color on the wrapping element.",
+    "logo_source": "http://goldenseabluebell.com/images/header.gif",
+    "logo_type": "real"
   },
   "specks-broasted-chicken": {
     "name": "Speck's",
@@ -169,7 +175,9 @@
       "hero-art.svg": 2141,
       "icons.svg": 1181
     },
-    "notes": "logo.svg uses a system-safe font stack (no embedded webfont) matching the site's display font category; hero-art.svg animations are transform/opacity only, wrapped in @media (prefers-reduced-motion: no-preference); icons.svg is a <symbol> sprite, 24px grid, 1.75 stroke, currentColor \u2014 reference with <use href=\"icons.svg#icon-N\"/> and set color on the wrapping element."
+    "notes": "logo.svg uses a system-safe font stack (no embedded webfont) matching the site's display font category; hero-art.svg animations are transform/opacity only, wrapped in @media (prefers-reduced-motion: no-preference); icons.svg is a <symbol> sprite, 24px grid, 1.75 stroke, currentColor \u2014 reference with <use href=\"icons.svg#icon-N\"/> and set color on the wrapping element.",
+    "logo_source": "http://speckschicken.com/images/v3_01.gif",
+    "logo_type": "real"
   },
   "weathers-motors-and-auto-sales": {
     "name": "Weathers Motors",
@@ -217,7 +225,9 @@
       "hero-art.svg": 2105,
       "icons.svg": 1145
     },
-    "notes": "logo.svg uses a system-safe font stack (no embedded webfont) matching the site's display font category; hero-art.svg animations are transform/opacity only, wrapped in @media (prefers-reduced-motion: no-preference); icons.svg is a <symbol> sprite, 24px grid, 1.75 stroke, currentColor \u2014 reference with <use href=\"icons.svg#icon-N\"/> and set color on the wrapping element."
+    "notes": "logo.svg uses a system-safe font stack (no embedded webfont) matching the site's display font category; hero-art.svg animations are transform/opacity only, wrapped in @media (prefers-reduced-motion: no-preference); icons.svg is a <symbol> sprite, 24px grid, 1.75 stroke, currentColor \u2014 reference with <use href=\"icons.svg#icon-N\"/> and set color on the wrapping element.",
+    "logo_source": "https://pictures.dealer.com/w/weathersshift/1610/7bb3fe9c4d2c3fe3aee876c8ba832f77x.jpg",
+    "logo_type": "real"
   },
   "nolts-auto-parts": {
     "name": "Nolt's Auto Parts",
@@ -265,7 +275,9 @@
       "hero-art.svg": 5486,
       "icons.svg": 1094
     },
-    "notes": "logo.svg uses a system-safe font stack (no embedded webfont) matching the site's display font category; hero-art.svg animations are transform/opacity only, wrapped in @media (prefers-reduced-motion: no-preference); icons.svg is a <symbol> sprite, 24px grid, 1.75 stroke, currentColor \u2014 reference with <use href=\"icons.svg#icon-N\"/> and set color on the wrapping element."
+    "notes": "logo.svg uses a system-safe font stack (no embedded webfont) matching the site's display font category; hero-art.svg animations are transform/opacity only, wrapped in @media (prefers-reduced-motion: no-preference); icons.svg is a <symbol> sprite, 24px grid, 1.75 stroke, currentColor \u2014 reference with <use href=\"icons.svg#icon-N\"/> and set color on the wrapping element.",
+    "logo_source": "http://noltsautoparts.com/banner.gif",
+    "logo_type": "real"
   },
   "union-chill-mat-company": {
     "name": "Union Chill Mat Co.",
@@ -313,7 +325,9 @@
       "hero-art.svg": 2277,
       "icons.svg": 1480
     },
-    "notes": "logo.svg uses a system-safe font stack (no embedded webfont) matching the site's display font category; hero-art.svg animations are transform/opacity only, wrapped in @media (prefers-reduced-motion: no-preference); icons.svg is a <symbol> sprite, 24px grid, 1.75 stroke, currentColor \u2014 reference with <use href=\"icons.svg#icon-N\"/> and set color on the wrapping element."
+    "notes": "logo.svg uses a system-safe font stack (no embedded webfont) matching the site's display font category; hero-art.svg animations are transform/opacity only, wrapped in @media (prefers-reduced-motion: no-preference); icons.svg is a <symbol> sprite, 24px grid, 1.75 stroke, currentColor \u2014 reference with <use href=\"icons.svg#icon-N\"/> and set color on the wrapping element.",
+    "logo_source": "http://unionchill.com/wp-content/uploads/2013/06/union-chill-mat-company-logo.jpg",
+    "logo_type": "real"
   },
   "sangillo-tire-center": {
     "name": "Sangillo Tire Center",
@@ -356,7 +370,9 @@
       "hero-art.svg": 2212,
       "icons.svg": 1103
     },
-    "notes": "logo.svg uses a system-safe font stack (no embedded webfont) matching the site's display font category; hero-art.svg animations are transform/opacity only, wrapped in @media (prefers-reduced-motion: no-preference); icons.svg is a <symbol> sprite, 24px grid, 1.75 stroke, currentColor \u2014 reference with <use href=\"icons.svg#icon-N\"/> and set color on the wrapping element."
+    "notes": "logo.svg uses a system-safe font stack (no embedded webfont) matching the site's display font category; hero-art.svg animations are transform/opacity only, wrapped in @media (prefers-reduced-motion: no-preference); icons.svg is a <symbol> sprite, 24px grid, 1.75 stroke, currentColor \u2014 reference with <use href=\"icons.svg#icon-N\"/> and set color on the wrapping element.",
+    "logo_source": "http://www.sangillos.com/images/logo4.png",
+    "logo_type": "real"
   },
   "smile-culture-dental": {
     "name": "Smile Culture Dental",
@@ -404,7 +420,9 @@
       "hero-art.svg": 1481,
       "icons.svg": 1780
     },
-    "notes": "logo.svg uses a system-safe font stack (no embedded webfont) matching the site's display font category; hero-art.svg animations are transform/opacity only, wrapped in @media (prefers-reduced-motion: no-preference); icons.svg is a <symbol> sprite, 24px grid, 1.75 stroke, currentColor \u2014 reference with <use href=\"icons.svg#icon-N\"/> and set color on the wrapping element."
+    "notes": "logo.svg uses a system-safe font stack (no embedded webfont) matching the site's display font category; hero-art.svg animations are transform/opacity only, wrapped in @media (prefers-reduced-motion: no-preference); icons.svg is a <symbol> sprite, 24px grid, 1.75 stroke, currentColor \u2014 reference with <use href=\"icons.svg#icon-N\"/> and set color on the wrapping element.",
+    "logo_source": "https://smileculture.com/wp-content/uploads/2020/02/Smile-Culture-Dental_Horizontal_Logo2-e1747350391153.png",
+    "logo_type": "real"
   },
   "advance-exterior-solutions": {
     "name": "Advance Exterior Solutions",
@@ -447,6 +465,8 @@
       "hero-art.svg": 2825,
       "icons.svg": 1039
     },
-    "notes": "logo.svg uses a system-safe font stack (no embedded webfont) matching the site's display font category; hero-art.svg animations are transform/opacity only, wrapped in @media (prefers-reduced-motion: no-preference); icons.svg is a <symbol> sprite, 24px grid, 1.75 stroke, currentColor \u2014 reference with <use href=\"icons.svg#icon-N\"/> and set color on the wrapping element."
+    "notes": "logo.svg uses a system-safe font stack (no embedded webfont) matching the site's display font category; hero-art.svg animations are transform/opacity only, wrapped in @media (prefers-reduced-motion: no-preference); icons.svg is a <symbol> sprite, 24px grid, 1.75 stroke, currentColor \u2014 reference with <use href=\"icons.svg#icon-N\"/> and set color on the wrapping element.",
+    "logo_source": null,
+    "logo_type": "designed"
   }
 }

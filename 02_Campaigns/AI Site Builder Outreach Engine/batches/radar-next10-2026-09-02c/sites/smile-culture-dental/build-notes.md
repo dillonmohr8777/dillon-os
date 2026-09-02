@@ -105,3 +105,16 @@ rendering at 390px/1440px, actual axe/contrast tooling pass, real
   text-only diff of `<main>`/`<footer>` copy (all tags and decorative SVG
   stripped) matched byte-for-byte before and after this pass — no copy was
   changed, only the header/footer/hero/icon/favicon assets.
+
+## Real logo (harvest pass, 2026-09-02)
+
+Replaced the designed icon+wordmark `logo.svg` with Smile Culture Dental's
+actual wordmark, harvested from
+`https://smileculture.com/wp-content/uploads/2020/02/Smile-Culture-Dental_Horizontal_Logo2-e1747350391153.png`
+on their live homepage (the WordPress site header logo, a real transparent
+PNG). Trimmed to the alpha bounding box, quantized to a 48-color palette PNG,
+resized to 400x23. Embedded as a base64 data URI in header (`height:40px`) and
+a white-chip footer copy (`height:28px`, chip added since the footer is dark
+and the logo's blue-gray text is transparent). Final asset 10.3 KB; page weight
+34.3 KB → 60.6 KB. `alt`/`aria-label` set to "Smile Culture Dental". QA harness
+re-run: pass.

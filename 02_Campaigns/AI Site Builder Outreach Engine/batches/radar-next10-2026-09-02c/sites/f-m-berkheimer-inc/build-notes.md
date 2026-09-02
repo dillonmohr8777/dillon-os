@@ -97,3 +97,18 @@ Ported the shared `_kit/design/f-m-berkheimer-inc/` assets into `index.html`:
   plain-text "F M Berkheimer" brandmark, now rendered as SVG `<text>` inside
   the logo). File size 29,856 → 31,800 bytes, well under 60KB. JS parses clean,
   all `#anchor` links resolve, no adjacent art-only sections.
+
+## Real logo (harvest pass, 2026-09-02)
+
+The batch's `source_urls` domain (`fmberkinc.com`) is parked, confirmed again
+on this pass (200 OK, 114-byte stub body). However the company has a separate,
+current, live Squarespace site at `https://www.fmberkheimer.com/` — same
+company name, same Mechanicsburg PA address and phone, matching this
+prospect — so it was treated as a verified source. Harvested their real hexagon
+badge logo from
+`https://images.squarespace-cdn.com/content/v1/691cc583e4acd2780e884437/fa0c46be-7569-4caa-b590-efe7d60a4893/fm-berkheimer-heating-cooling-logo.png`
+(served as WebP, converted to PNG), a real transparent asset. Trimmed to the
+alpha bounding box, quantized to a 16-color palette, resized to 102x88.
+Embedded as a base64 data URI in header (`height:40px`) and a white-chip footer
+copy (`height:28px`). Final asset 5.8 KB; page weight 31.1 KB → 45.3 KB.
+`alt`/`aria-label` set to "F.M. Berkheimer". QA harness re-run: pass.

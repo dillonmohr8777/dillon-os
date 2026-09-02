@@ -61,3 +61,16 @@ Ported the shared `_kit/design/golden-sea/` assets into `index.html`:
 - Text-node diff: only the old plain-text brandmark removed (now SVG
   `<text>`); rest of copy byte-identical. File size 30,994 → 32,846 bytes. JS
   parses, anchors resolve, no adjacent art-only sections.
+
+## Real logo (harvest pass, 2026-09-02)
+
+Replaced the Opus-designed `logo.svg` with the actual Golden Sea logo, harvested
+from `http://goldenseabluebell.com/images/header.gif` (their live homepage
+header). Cropped to the logo band (dropped the baked-in nav row), converted GIF
+to PNG, quantized to a 48-color palette, resized to 285x88 (2x of a 40-44px
+header display height). Embedded as a `data:image/png;base64` URI in the header
+(`height:40px`) and a matching chip-backed copy in the footer (`height:28px`,
+white background chip since the site footer is dark and this raster asset has
+its own light card background). Final asset 5.2 KB; page weight 30.3 KB → 44.7
+KB. `alt`/`aria-label` set to "Golden Sea Chinese Restaurant". QA harness
+(`qa2c.js`) re-run clean: pass, logo accessible-name check green.

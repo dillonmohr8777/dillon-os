@@ -101,3 +101,17 @@ were invented.
   text-only diff of `<main>`/`<footer>` copy (all tags and decorative SVG
   stripped) matched byte-for-byte before and after this pass — no copy was
   changed, only the header/footer/hero/icon/favicon assets.
+
+## Real logo (harvest pass, 2026-09-02)
+
+Replaced the designed icon+wordmark `logo.svg` with Union Chill Mat Company's
+actual decal logo, harvested from
+`http://unionchill.com/wp-content/uploads/2013/06/union-chill-mat-company-logo.jpg`
+on their live WordPress homepage. This is a JPEG on a white box with a thin
+black border, so no fake transparency was applied — cropped out the outer
+border and the baked-in "ZELIENOPLE, PA / 724-452-6400" address row (redundant
+with the page's own contact block, and illegible at logo scale), keeping the
+UCMC lettermark + flame icon. Quantized to a 48-color palette PNG, resized to
+124x88. Embedded in the light header directly and with a white background chip
+in the dark footer. Final asset 3.5 KB; page weight 35.3 KB → 45.2 KB.
+`alt`/`aria-label` set to "Union Chill Mat Company". QA harness re-run: pass.

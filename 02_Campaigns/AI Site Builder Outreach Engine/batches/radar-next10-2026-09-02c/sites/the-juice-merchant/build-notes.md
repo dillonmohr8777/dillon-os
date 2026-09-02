@@ -114,3 +114,14 @@ Ported the shared `_kit/design/the-juice-merchant/` assets into `index.html`:
 - Text-node diff before/after: only the old plain-text brandmark node was
   removed (now SVG `<text>`); all other copy identical. File size 30,831 →
   31,897 bytes. JS parses, all anchors resolve, no adjacent art-only sections.
+
+## Logo harvest pass (2026-09-02): logo placeholder
+
+`thejuicemerchant.com` (the batch's `source_urls` domain) confirmed parked — a
+fingerprinting/redirect stub, not a real site. Searched for a business-controlled
+alternative: Yelp indicates the Narberth location has closed; the only live
+Facebook page found for "The Juice Merchant" (facebook.com/TheJuiceMerchant) is
+tagged to a Phoenixville location, and two other conflicting Facebook page IDs
+turned up in search with no way to confirm which (if any) is the same ownership
+as the Narberth prospect. Not verifiable with confidence, so no real logo was
+pulled. Kept the Opus-designed `logo.svg` placeholder unchanged.

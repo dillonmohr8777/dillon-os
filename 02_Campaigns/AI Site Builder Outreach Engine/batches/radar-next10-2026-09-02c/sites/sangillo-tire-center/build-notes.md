@@ -73,3 +73,17 @@ source_refs:
   text-only diff of `<main>`/`<footer>` copy (all tags and decorative SVG
   stripped) matched byte-for-byte before and after this pass — no copy was
   changed, only the header/footer/hero/icon/favicon assets.
+
+## Real logo (harvest pass, 2026-09-02)
+
+Replaced the designed icon+wordmark `logo.svg` with Sangillo's actual logo,
+harvested from `http://www.sangillos.com/images/logo4.png` on their live
+homepage. The source PNG had a flat near-white (253,253,253) background, not a
+photographed white box, so it was safely color-keyed to transparent, trimmed,
+then re-binarized to a hard alpha mask and quantized to a 16-color palette PNG,
+resized to 400x41. Embedded as a base64 data URI in header (`height:40px`) and
+a white-chip footer copy (`height:28px`, chip added because the footer is dark
+and the cyan/black wordmark needs a light backing — the logo itself was never
+recolored). Final asset 12.2 KB; page weight 33.7 KB → 65.0 KB (largest of the
+batch — still well under the 120 KB ceiling). `alt`/`aria-label` set to
+"Sangillo Tire Center". QA harness re-run: pass.

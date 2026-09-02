@@ -105,3 +105,15 @@ All CTAs on the page anchor to real in-page targets (`#contact`, `#services`, `#
   changed, only the header/footer/hero/icon/favicon assets.
 
 Also fixed the known font-variable bug: the dead `:root` block declared `--font-display:"Fraunces"...` and `--font-text:"Inter"...` while the page imports Archivo Black and Work Sans from Google Fonts and the `.brand-skin` override (which the `<body class="brand-skin">` already activates) correctly used Archivo Black / Work Sans. The rendered site was never visually affected since `.brand-skin` won the cascade, but the dead `:root` values were wrong and misleading. Updated the `:root` block to `--font-display:"Archivo Black","Arial Black","Helvetica Neue",sans-serif` and `--font-text:"Work Sans",system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif` to match the imported faces and the working override.
+
+## Logo harvest pass (2026-09-02): logo placeholder
+
+`advanceexteriorsolutions.com` returned HTTP 202 (bot-challenge, no body) on
+three separate attempts with a browser user agent — consistent with this
+prospect's existing "bot-walled" note. Checked their GAF residential-roofer
+directory listing (403 to fetch) and searched for a Facebook page: three
+different, unconfirmed Facebook page IDs surfaced for "Advance Exterior
+Solutions" businesses in the Macungie area with no reliable way to verify which
+one (if any) is this company's current, owned page. Not verifiable with
+confidence, so no real logo was pulled. Kept the Opus-designed `logo.svg`
+placeholder unchanged.

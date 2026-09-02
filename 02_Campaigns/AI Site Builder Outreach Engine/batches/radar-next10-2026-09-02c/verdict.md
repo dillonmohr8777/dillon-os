@@ -32,3 +32,6 @@ Conditions carried into the deploy line:
 - Accent pairs retuned and live-measured on all 10; no open contrast findings.
 - Webfont rendering unverified in the sandbox.
 - Three sites carry contact placeholders; confirm phone and address before any mailer.
+- Logos: real logos harvested from live sites for 8 of 10 (source URLs in _kit/design/manifest.json); designed placeholders remain for the-juice-merchant and advance-exterior-solutions.
+- f-m-berkheimer-inc: the radar graded the parked fmberkinc.com, but the business has a live site at fmberkheimer.com. Its copy here is trade-generic; re-harvest from the live site before mailing.
+- the-juice-merchant: the Narberth location is reportedly closed (unverified, from search results). Confirm the business is operating before mailing.

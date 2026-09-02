@@ -78,3 +78,16 @@ Ported the shared `_kit/design/weathers-motors-and-auto-sales/` assets into
 - Text-node diff: only the old plain-text brandmark removed (now SVG
   `<text>`); rest of copy byte-identical. File size 33,025 → 35,104 bytes. JS
   parses, anchors resolve, no adjacent art-only sections.
+
+## Real logo (harvest pass, 2026-09-02)
+
+Replaced the designed `logo.svg` with the real Weathers Motors oval logo,
+harvested from their live Dealer.com site
+(`https://pictures.dealer.com/w/weathersshift/1610/7bb3fe9c4d2c3fe3aee876c8ba832f77x.jpg`),
+found in the `.header-logo` image tag (the generic "preowned" franchise icon
+next to it was a stock Dealer.com asset, not their real mark — skipped that
+one). Trimmed the white margin, quantized to a 48-color palette PNG, resized to
+184x88. This is a JPEG logo on a white oval/box so no fake transparency was
+applied; embedded directly in the light header, and with a white background
+chip in the dark footer. Final asset 7.4 KB; page weight 32.3 KB → 53.0 KB.
+`alt`/`aria-label` set to "Weathers Motors". QA harness re-run: pass.
