@@ -4,7 +4,7 @@ status: active
 generated: true
 generated_by: Update-SecondBrainMaps
 map_type: domain
-updated: 2026-09-01
+updated: 2026-09-02
 tags:
   - brain
   - map
@@ -37,6 +37,7 @@ Inbox material, sessions, daily briefs, dashboards, and dated operating context.
 - [[00_Inbox/Agent-Proposals/Claude/2026-08-16-daily-driver-approval-package|2026-08-16-daily-driver-approval-package]]
 - [[00_Inbox/Agent-Proposals/Claude/2026-08-17-daily-driver-approval-package|2026-08-17-daily-driver-approval-package]]
 - [[00_Inbox/Agent-Proposals/Claude/2026-08-18-daily-driver-approval-package|2026-08-18-daily-driver-approval-package]]
+- [[00_Inbox/Agent-Proposals/Claude/2026-09-01-puttery-wnf-reply-drafts|2026-09-01-puttery-wnf-reply-drafts]]
 - [[00_Inbox/Agent-Proposals/Grok/2026-08-12-active-vault-access-canary|2026-08-12-active-vault-access-canary]]
 - [[00_Inbox/Automation Deep Analysis 2026-07-29|Automation Deep Analysis 2026-07-29]]
 - [[00_Inbox/Dryer Vent John|Dryer Vent John]]
@@ -71,6 +72,7 @@ Inbox material, sessions, daily briefs, dashboards, and dated operating context.
 - [[Daily-Briefs/artifacts/2026-07-20-meeting-risk-workpack|2026-07-20-meeting-risk-workpack]]
 - [[Daily-Briefs/frontmatter-report|frontmatter-report]]
 - [[Daily-Briefs/operator-2026-07-19|operator-2026-07-19]]
+- [[Daily-Briefs/predicted-work-2026-09-02|predicted-work-2026-09-02]]
 - [[Daily-Briefs/pulse-today|pulse-today]]
 - [[Daily-Briefs/radar-2026-08-06|radar-2026-08-06]]
 - [[Daily-Briefs/radar-2026-08-07|radar-2026-08-07]]

@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "request_id": "forecast-dillon-workload-daily-2026-09-02",
+  "evaluated_at": "2026-09-02T05:37:53.903Z",
+  "status": "sandbox-eligible",
+  "model_id": "amazon/chronos-2",
+  "provider_id": "amazon-science",
+  "runtime_id": "chronos-forecasting==2.3.1;torch==2.6.0+cpu",
+  "license_lane": "apache-2.0",
+  "used_for": "research",
+  "contains_client_series": false,
+  "client_experiment_authorized": false,
+  "client_experiment_id": null,
+  "context_length": 90,
+  "target_count": 1,
+  "reasons": [],
+  "required_gates": [
+    "hardware-preflight",
+    "walk-forward-baseline",
+    "quantile-calibration",
+    "experiment-acceptance",
+    "human-promotion-gate"
+  ],
+  "capabilities": {
+    "multivariate_targets": true,
+    "past_covariates": true,
+    "past_future_covariates": true,
+    "covariate_mode": "native"
+  },
+  "forbidden_uses": [
+    "spend",
+    "send",
+    "publish",
+    "conversion-claim"
+  ],
+  "authority": "evidence-only",
+  "model_executed": false
+}

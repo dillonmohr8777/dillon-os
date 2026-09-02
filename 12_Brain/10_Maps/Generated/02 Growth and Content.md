@@ -4,7 +4,7 @@ status: active
 generated: true
 generated_by: Update-SecondBrainMaps
 map_type: domain
-updated: 2026-09-01
+updated: 2026-09-02
 tags:
   - brain
   - map
@@ -68,6 +68,8 @@ Campaigns, content, SEO, offers, and the assets that turn strategy into demand.
 - [[02_Campaigns/IMMOHRTAL/Tracks/Raw Transcripts (to correct)|Raw Transcripts (to correct)]]
 - [[02_Campaigns/Landing Page Build Queue|Landing Page Build Queue]]
 - [[02_Campaigns/Search Terms Review Queue|Search Terms Review Queue]]
+- [[02_Campaigns/With Not For/site/README|README]]
+- [[02_Campaigns/With Not For/With Not For|With Not For]]
 
 ## 03_Content
 
