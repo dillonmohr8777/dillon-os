@@ -1,6 +1,6 @@
 ---
 tags: [system, operating-status]
-last_updated: 2026-07-19
+last_updated: 2026-09-02
 callsign: D.I.L.L.O.N.
 operator: Dillon Mohr
 goal_label: ACTIVE CLIENTS
@@ -31,6 +31,15 @@ The vault was reconciled on 2026-07-12 against current work from the rolling thr
 - Fresh Blends has meetings on the 2026-07-20 calendar, but no current contract evidence was found. Calendar presence alone does not reactivate it or merge it with Replenish.
 - Replenish has current live evidence (getreplenish.com GA4 traffic and a store-specific Miami 56 direction-action email) and remains the active 7-Eleven reporting lane.
 - Align HCM GitHub repository `align-hcm-august-2026-content` contains an unrelated open draft Coinbase paper-trading PR #8. Do not merge it; migration to a dedicated repository and closure are approval-gated.
+
+## Current automation truth (2026-09-02)
+
+- **Operator umbrella:** `competitive-task-orchestrator` — one Cursor automation at 1 PM ET,
+  eight parallel intel lanes, brief at `Daily-Briefs/competitive-task-today.md`.
+  See `04_SOPs/competitive-task-orchestrator.md`.
+- **Windows feeders (not duplicates):** daily-communications-brain (7 AM), Claude daily driver,
+  Prospect Radar (5:20 AM), obsidian-guard-dog (8:30 AM).
+- Disable legacy Cursor crons listed in `System/competitive-task-definition.md` after three green umbrella runs.
 
 ## Operating rules
 

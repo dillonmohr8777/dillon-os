@@ -4,6 +4,11 @@ tags: [handoff, automation, slack]
 
 # Morning Loop: Scheduled Agent Setup
 
+> **Superseded 2026-09-02** by the competitive-task umbrella workflow.
+> Use [[04_SOPs/competitive-task-orchestrator]] instead of creating a separate morning-loop
+> automation. The umbrella Phase 1 lanes cover slack-intake, pulse, and inbox intel in one
+> 1 PM ET run (or move cron to morning after three green runs if preferred).
+
 This wires the daily loop: every morning a cloud agent reads Slack, files boss requests into the vault, and writes the morning brief. Dillon does this once; it runs forever after.
 
 ## One-time setup (Dillon, ~3 minutes)

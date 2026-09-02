@@ -1,6 +1,6 @@
 ---
-last_sync: 2026-07-12
-evidence_window_start: 2026-06-21
+last_sync: 2026-09-02
+evidence_window_start: 2026-08-05
 tags: [system, memory, sync]
 ---
 
@@ -15,6 +15,13 @@ Kimberly James Bridal; Omega Landscaping & Concrete; On-Site Concrete & Landscap
 ## Separate lane
 
 Align HCM is active full-time work and not a client.
+
+## Competitive task umbrella (2026-09-02)
+
+- One Cursor automation (`competitive-task-orchestrator`, 1 PM ET) runs eight parallel
+  intel lanes + consolidator. See `System/competitive-task-definition.md`.
+- Operator brief: `Daily-Briefs/competitive-task-today.md`.
+- Windows Codex jobs (daily-comms, daily driver, radar) are **feeders**, not parallel command centers.
 
 ## Routing rules
 
