@@ -53,6 +53,20 @@ The predictive workflow has two different jobs and two different evaluators:
    briefs, source manifests, asset lists, schemas, repository maps, and QA
    plans. It cannot create a deadline, mutate the canonical queue, send,
    publish, spend, or change an account.
+6. **Every candidate is labeled.** `claim_type` is always `prediction`; only a
+   canonical queue row is `confirmed_request`, and only its recorded `dueAt`
+   is `confirmed_deadline`. The brief prints this as a Kind column.
+7. **Calibrate against what actually landed.** Pattern-tier confidence is
+   multiplied by a bounded hindcast hit rate once a tier has three judged
+   predictions, and every calibrated number keeps its raw value, sample, hit
+   rate, and multiplier beside it.
+8. **Compare Chronos to stronger deterministic methods, repeatedly.** The
+   evaluator runs rolling-origin holdouts against persistence, trailing means,
+   zero, seasonal-naive-7, day-of-week mean, and Croston-SBA, keeps invalid
+   output as rejected evidence, and never sets `planner_consumption` itself.
+9. **Say where the evidence came from.** The prediction records the
+   client-operations checkout's branch, head, and dirty-file count, and
+   degrades to no predicted preparation when canonical sources are missing.
 
 ## Evidence from the first live run
 
@@ -80,6 +94,23 @@ Chronos WAPE was 93.57%, persistence was 100%, the trailing-seven-day mean was
 85.71%, and empirical p10-p90 coverage was 57.1%. It therefore failed both
 the best-baseline and calibration gates. The deterministic baseline remains
 primary.
+
+## Evidence from the rolling-origin rerun
+
+The same day, four rolling seven-day origins (cutoffs 2026-08-05 through
+2026-08-26) were scored against persistence, trailing 7- and 28-day means,
+zero, seasonal-naive-7, day-of-week mean, and Croston-SBA. Chronos beat the
+best baseline on one origin of four; mean MAE was 2.54 versus 2.30 for the
+best baseline, and mean p10-p90 coverage was 53.6% where a free same-weekday
+band reached 67.8%. All origins were valid. Every repeated-holdout gate stayed
+closed, so the deterministic planner remains primary.
+
+The rerun also read the local client-operations checkout on branch
+`cursor/bigorange-aeo-geo-seo-991e` with 633 modified files, 18 ahead and 18
+behind `origin/main`; the brief now says so in its first paragraph. Hindcast
+calibration judged 14 historical-cadence predictions across four past origins
+and all 14 landed, so that tier's multiplier is 1.0; the owner-verified BOK
+recurrence has no closed window yet and is shown unadjusted.
 
 ## Why
 

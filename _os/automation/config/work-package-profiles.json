@@ -36,7 +36,36 @@
       ],
       "human_gates": [
         "New public site, ambiguous deployment target, client sign-off, credentials, or non-Netlify publication"
-      ]
+      ],
+      "preparation_contract": {
+        "inputs": [
+          "Exact client route from client-operations registry/clients.json and the current live URL",
+          "Approved logo, photography, palette source, and copy facts (address, phone, hours, offerings) with source locators",
+          "Deployment mapping: Netlify site or client folder, noindex state, and custom-domain owner"
+        ],
+        "templates": [
+          "philly-sites/DESIGN-SYSTEM.md as the design contract",
+          "_templates/site-factory/example-brief.json and _templates/site-factory/build-site.js",
+          ".claude/skills site-factory, ui-design, frontend-build, and site-grade"
+        ],
+        "readiness": {
+          "assets": ["Logo as SVG or PNG; hero and proof photos converted to webp with honest alt text"],
+          "data": ["Verified business facts only; an empty field beats an invented one"],
+          "repository": ["Clean branch in dillon-os or the client repo; output under philly-sites/<slug> or 01_Clients/<Client>/website"]
+        },
+        "output_formats": [
+          "One self-contained index.html inside the 27 to 37 KB budget plus assets/",
+          "Reviewable Netlify preview URL, or the exact mapped live URL when standing approval applies"
+        ],
+        "qa": [
+          "qa-critic pass: contrast, keyboard focus, links, forms, console errors, mobile overflow",
+          "LocalBusiness JSON-LD and the noindex flag match the deployment intent",
+          "AEO and trust gate before any live publication"
+        ],
+        "gates": [
+          "New public site, custom-domain change, client sign-off, credential entry, or publication outside standing Netlify approval"
+        ]
+      }
     },
     {
       "id": "branded-client-report",
@@ -75,7 +104,36 @@
       ],
       "human_gates": [
         "Unverified conversion definitions, inaccessible source fields, external delivery, or a client/account mismatch"
-      ]
+      ],
+      "preparation_contract": {
+        "inputs": [
+          "Client route, exact reporting period, and the source-of-truth ledger (platform exports, CRM, booking, call logs) with freshness dates",
+          "The prior approved report for the same client as the structural and visual baseline",
+          "Conversion definitions confirmed per client; anything unverified is marked pending validation"
+        ],
+        "templates": [
+          "_os/reporting/data/bar-crawl-usa-2026-06.json for the data shape and _os/reporting/build-report.js as the renderer",
+          ".claude/skills client-report and am-report",
+          "clients/momentum-360/deliverables/2026-07-26-paid-media-dashboard-run/DESIGN.md as the Momentum visual authority"
+        ],
+        "readiness": {
+          "assets": ["Client logo and palette tokens taken from the client folder, never redrawn"],
+          "data": ["Whole-integer lead and event counts; sampleData stays true until every figure is real"],
+          "repository": ["Output under Daily-Briefs/reports or the client-operations deliverables folder for that period"]
+        },
+        "output_formats": [
+          "Self-contained HTML report",
+          "Rendered PDF with page-render QA screenshots"
+        ],
+        "qa": [
+          "KPI math recomputed from the ledger",
+          "Brand separation: one client per document, no cross-client numbers",
+          "Dates, periods, and claims match sources; never a zero-conversion claim without a validated definition"
+        ],
+        "gates": [
+          "External delivery, inaccessible source fields, unverified conversion definitions, or a client/account mismatch"
+        ]
+      }
     },
     {
       "id": "bok-weekly-designed-content-kit",
@@ -108,7 +166,39 @@
       ],
       "human_gates": [
         "Missing or conflicting packet, legal/geographic ambiguity, wrong Facebook page, duplicate schedule, or any content outside the exact approved source"
-      ]
+      ],
+      "preparation_contract": {
+        "inputs": [
+          "Newest attorney-approved weekly packet PDF, for example clients/bok-law-firm/deliverables/<date>-*/pdf/BOK_Corrected_Weekly_Social_Content.pdf, fingerprinted before any drafting",
+          "Three topic and copy records in drafts/01-*.md, 02-*.md, and 03-*.md derived only from that packet",
+          "The approved BOK designed template and brand tokens from the client folder"
+        ],
+        "templates": [
+          "clients/bok-law-firm/deliverables/2026-09-01-three-blogs/build_social_packet.py and build_pdfs.py as the current generators",
+          "qa/pdf-verification.json and qa/social-final from the prior week as the acceptance reference"
+        ],
+        "readiness": {
+          "assets": [
+            "Three ChatGPT-generated topic backgrounds, one per topic, with no legal text baked into the art",
+            "BOK logo and template layers available offline"
+          ],
+          "data": ["Exact topic titles, attorney names and distinctions, dates, and western Pennsylvania service-area language from the packet"],
+          "repository": ["A new dated deliverable folder in client-operations for the week; a prior week is never overwritten"]
+        },
+        "output_formats": [
+          "Three branded graphics as PNG and JPG at the template's native size",
+          "Source and final PDFs plus a contact sheet or rendered-page inspection set"
+        ],
+        "qa": [
+          "Copy matches the packet verbatim; no invented legal claims",
+          "Geography reads as western Pennsylvania, not Pittsburgh-only",
+          "Image count equals topic count (expected three); a mismatch stops the run",
+          "Facebook page identity and duplicate-schedule check recorded"
+        ],
+        "gates": [
+          "Missing or conflicting packet, legal or geographic ambiguity, wrong Facebook page, duplicate schedule, or any content outside the approved source"
+        ]
+      }
     },
     {
       "id": "prototype-wireframe",
@@ -138,7 +228,35 @@
       ],
       "human_gates": [
         "Client sign-off, production implementation, public sharing, or scope changes inferred from a visual alone"
-      ]
+      ],
+      "preparation_contract": {
+        "inputs": [
+          "The one decision the prototype must unlock, its audience, and its non-goals",
+          "Verified product and brand constraints from the client folder",
+          "Realistic content for the primary flow, not placeholder text"
+        ],
+        "templates": [
+          "philly-sites/DESIGN-SYSTEM.md tokens when the prototype is for a Momentum-built surface",
+          ".claude/skills ui-design and ux-audit; the anti-ui-slop finish gate when available"
+        ],
+        "readiness": {
+          "assets": ["Logo, palette, and any existing screens as reference"],
+          "data": ["Primary flow states covered: empty, loading, error, success"],
+          "repository": ["Prototype folder under the client deliverables or 01_Clients/<Client>/prototype"]
+        },
+        "output_formats": [
+          "Static HTML prototype or rendered PNG boards at the agreed fidelity",
+          "Decision log with assumptions and open questions"
+        ],
+        "qa": [
+          "Every screen names the decision it serves",
+          "Contrast, focus, and responsive checks appropriate to the fidelity",
+          "No implementation scope inferred from a visual alone"
+        ],
+        "gates": [
+          "Client sign-off, production build, public sharing, or scope change inferred from the prototype"
+        ]
+      }
     },
     {
       "id": "data-source-integration",
@@ -178,7 +296,35 @@
       ],
       "human_gates": [
         "MFA, CAPTCHA, new consent, credentials, billing, production writes, or account changes"
-      ]
+      ],
+      "preparation_contract": {
+        "inputs": [
+          "Exact client, source account, environment, source owner, and destination consumer",
+          "Identifier and field map with privacy, consent, and retention boundaries",
+          "Secret locators only (Windows Credential Manager entry or Netlify variable names); never secret values"
+        ],
+        "templates": [
+          "clients/puttery-nyc/deliverables/2026-09-01-tock-reservation-webhook/WEBHOOK_RECEIVER_CONTRACT.md",
+          "account-binding.template.json and acceptance-cases.json from that same package"
+        ],
+        "readiness": {
+          "assets": [],
+          "data": ["A read-only or synthetic sample payload per event type"],
+          "repository": ["Receiver or connector code with node --test coverage and a dry-run drain path"]
+        },
+        "output_formats": [
+          "Contract markdown, field-map JSON, and acceptance-cases JSON",
+          "Verification receipt with sample identifiers redacted"
+        ],
+        "qa": [
+          "Acceptance cases pass against the receiver",
+          "Idempotency and version handling verified with a replayed payload",
+          "No secret value appears in any artifact"
+        ],
+        "gates": [
+          "MFA, CAPTCHA, new consent, credential entry, billing, production writes, or account changes"
+        ]
+      }
     },
     {
       "id": "repository-environment-configuration",
@@ -214,7 +360,35 @@
       ],
       "human_gates": [
         "New repository visibility, account permissions, production deployment outside standing approval, billing, or secret entry"
-      ]
+      ],
+      "preparation_contract": {
+        "inputs": [
+          "Canonical project and client route plus the current repository inventory (gh repo list)",
+          "Target branch policy, worktree location, runtime versions, and connector ownership",
+          "Non-secret account and access mapping"
+        ],
+        "templates": [
+          "_os/automation/docs/OPERATOR.md and 12_Brain/protocols/Connector Preflight.md",
+          "Clean worktree pattern: git worktree add <path> -b <branch> origin/main"
+        ],
+        "readiness": {
+          "assets": [],
+          "data": ["Required environment variable names and their secret locators"],
+          "repository": ["A clean worktree from origin/main; never edit inside a dirty checkout"]
+        },
+        "output_formats": [
+          "Configuration diff with reversible defaults",
+          "Verification receipt: node --test, Test-SecondBrain, connector health"
+        ],
+        "qa": [
+          "Secret scan shows no embedded secrets",
+          "Tests green before and after the change",
+          "Handoff states what is live, staged, blocked, or approval-gated"
+        ],
+        "gates": [
+          "New repository visibility, permission changes, production deployment outside standing approval, billing, or secret entry"
+        ]
+      }
     },
     {
       "id": "content-seo-package",
@@ -473,7 +647,8 @@
         "user://2026-09-02/predictive-work-planner-scope",
         "client-operations://registry/clients.json#bok-law-firm",
         "client-operations://clients/bok-law-firm/context/operating-context.md#recurring-work-patterns",
-        "client-operations://clients/bok-law-firm/deliverables/2026-09-01-three-blogs"
+        "client-operations://clients/bok-law-firm/deliverables/2026-09-01-three-blogs",
+        "client-operations://clients/bok-law-firm/deliverables/2026-09-01-three-blogs/pdf/BOK_Corrected_Weekly_Social_Content.pdf"
       ],
       "note": "Three designed topics and generated image backgrounds are expected from the latest verified pattern and Dillon's instruction; the exact current packet overrides the count."
     }

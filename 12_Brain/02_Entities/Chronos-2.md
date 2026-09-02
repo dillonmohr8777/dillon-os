@@ -77,6 +77,18 @@ trailing-seven-day mean, with 57.1% p10-p90 coverage. It failed both the
 best-baseline and calibration gates, so the deterministic work planner remains
 primary. This is a successful safety result, not a model-quality promotion.
 
+Later on 2026-09-02 the evaluator was rerun as four rolling seven-day origins
+(cutoffs 2026-08-05, 08-12, 08-19, 08-26; context 62 to 83 days) against
+seven deterministic baselines, including seasonal-naive-7, day-of-week mean,
+and Croston-SBA for intermittent counts. Chronos won one origin of four, the
+week where the best method was simply zero; a different baseline won each of
+the other three. Mean MAE was 2.54 for Chronos against 2.30 for the best
+baseline, MASE ranged from 0.61 to 4.03, and mean p10-p90 coverage was 53.6%
+while a free same-weekday empirical band covered 67.8%. All four runs were
+valid, so nothing was rejected. Every repeated-holdout gate stayed closed and
+the deterministic planner remains primary. Evidence:
+`12_Brain/state/work-predictor/chronos-2026-09-02-rolling-v2/`.
+
 See [[12_Brain/05_Projects/Experiments/EXP-TIMESFM-FORECAST-ROUTER|the forecast-router experiment]]
 and [[12_Brain/03_Concepts/Specialist Forecast Router|Specialist Forecast Router]],
 plus [[12_Brain/03_Concepts/Predictive Work Planner|Predictive Work Planner]]

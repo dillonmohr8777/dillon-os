@@ -71,7 +71,10 @@ Inbox material, sessions, daily briefs, dashboards, and dated operating context.
 - [[Daily-Briefs/aeo-trust-report|aeo-trust-report]]
 - [[Daily-Briefs/artifacts/2026-07-20-meeting-risk-workpack|2026-07-20-meeting-risk-workpack]]
 - [[Daily-Briefs/frontmatter-report|frontmatter-report]]
+- [[Daily-Briefs/inbox-brief-2026-09-02|inbox-brief-2026-09-02]]
+- [[Daily-Briefs/metrics-2026-09-02|metrics-2026-09-02]]
 - [[Daily-Briefs/operator-2026-07-19|operator-2026-07-19]]
+- [[Daily-Briefs/plan-2026-09-02|plan-2026-09-02]]
 - [[Daily-Briefs/predicted-work-2026-09-02|predicted-work-2026-09-02]]
 - [[Daily-Briefs/pulse-today|pulse-today]]
 - [[Daily-Briefs/radar-2026-08-06|radar-2026-08-06]]
@@ -100,6 +103,7 @@ Inbox material, sessions, daily briefs, dashboards, and dated operating context.
 - [[Daily-Briefs/radar-2026-08-30|radar-2026-08-30]]
 - [[Daily-Briefs/radar-2026-08-31|radar-2026-08-31]]
 - [[Daily-Briefs/radar-2026-09-01|radar-2026-09-01]]
+- [[Daily-Briefs/radar-2026-09-02|radar-2026-09-02]]
 - [[Daily-Briefs/site-health-report|site-health-report]]
 - [[Daily-Briefs/source-intake-2026-07-30|source-intake-2026-07-30]]
 

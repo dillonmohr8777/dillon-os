@@ -175,6 +175,42 @@ at least two-thirds of origins and mean p10-p90 coverage sits between 70% and
 `~/.codex/tools/chronos2-forecast.py` carries a mirror of the approval table
 and must be updated together with the router.
 
+## Predictive work planner
+
+Deterministic, evidence-only prediction of the next work packages plus a
+research-only Chronos workload shadow. It reads the canonical
+`client-operations` checkout (never writes it) and records that checkout's
+branch, head, and dirty-file count in `sources.client_operations_checkout`.
+
+```powershell
+node _os/automation/bin/predict-work.js --lookahead-days 35 --history-days 90 `
+  [--client-ops-root <path>] [--dry-run]
+node _os/automation/bin/forecast-workload.js --from Daily-Briefs/predicted-work-<date>.json `
+  [--horizon 7] [--origins 4] [--dry-run]
+```
+
+`predict-work.js` writes `Daily-Briefs/predicted-work-<date>.{json,md}` and
+`12_Brain/state/work-predictor/latest.json`. Every candidate carries
+`claim_type: prediction`, and only canonical queue rows can be
+`confirmed_request`; only a recorded `dueAt` makes `confirmed_deadline` true.
+Owner-verified and historical-cadence confidence is multiplied by a bounded
+hindcast hit rate (`calibration`) once a tier has three judged predictions.
+`plan_inputs` gives `plan-today` its hard commitments, at most two 45-minute
+predicted-preparation blocks, and the gated rows, and goes empty when
+`status` is `degraded`. Six profiles ship a `preparation_contract` with exact
+inputs, templates, readiness, output formats, QA, and gates.
+
+`forecast-workload.js` runs Chronos-2 on the contiguous portfolio total as
+repeated rolling-origin holdouts (default four origins, seven-day horizon) and
+scores each against persistence, trailing means, zero, seasonal-naive-7,
+day-of-week mean, and Croston-SBA, reporting MAE, WAPE, MASE, p10-p90
+coverage, and the coverage of a free weekday empirical band. Invalid or
+crossed-quantile runs are kept as rejected origins, not repaired. The receipt
+(`schema_version` 2) passes `repeated_holdouts` only when every origin is
+valid, Chronos beats the best baseline on two-thirds of at least three
+origins, and mean coverage sits in 70 to 90 percent. `planner_consumption`
+is always false in software; a human promotion must be recorded separately.
+
 ## Other existing commands
 
 ```powershell

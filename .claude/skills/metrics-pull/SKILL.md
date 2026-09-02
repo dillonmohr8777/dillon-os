@@ -35,7 +35,11 @@ Add a compact **Workload mix** block with:
 - dated packages observed in the 90-day window;
 - counts by work-package type;
 - classifier coverage and excluded stale queue rows;
-- the latest matching Chronos receipt decision and gates, if one exists.
+- hindcast calibration per evidence tier (judged, hit, hit rate, applied or
+  sample under three);
+- the latest matching Chronos receipt decision and gates, if one exists, with
+  the rolling-origin aggregate (wins versus the best deterministic baseline,
+  origins rejected, mean coverage) when the receipt is schema version 2.
 
 Chronos output is shadow evidence only. If its fingerprint is stale or its
 planner-consumption gate is false, say so and do not convert its band into a

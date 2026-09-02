@@ -23,10 +23,52 @@
     "schema_version": { "const": 1 },
     "generated_at": { "type": "string", "format": "date-time" },
     "as_of": { "type": "string", "format": "date" },
+    "status": { "enum": ["ok", "degraded"] },
     "lookahead_days": { "type": "integer", "minimum": 1 },
     "authority": { "const": "planning-evidence-only" },
     "pattern": { "const": "router-plus-evaluator" },
-    "sources": { "type": "object" },
+    "sources": {
+      "type": "object",
+      "properties": {
+        "client_operations_checkout": {
+          "type": "object",
+          "description": "Git provenance of the client-operations checkout the prediction was read from.",
+          "properties": {
+            "available": { "type": "boolean" },
+            "git": { "type": "boolean" },
+            "branch": { "type": "string" },
+            "head": { "type": "string" },
+            "dirty_files": { "type": "integer", "minimum": 0 },
+            "canonical_main": { "type": "boolean" }
+          }
+        }
+      }
+    },
+    "calibration": {
+      "type": "object",
+      "required": ["basis", "origins_days", "lookahead_days", "tolerance_days", "judged_through", "tiers", "profiles"],
+      "properties": {
+        "basis": { "const": "hindcast" },
+        "tiers": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "required": ["predicted", "hit", "hit_rate", "sample_sufficient", "multiplier"],
+            "properties": {
+              "multiplier": { "type": "number", "minimum": 0.5, "maximum": 1 }
+            }
+          }
+        }
+      }
+    },
+    "plan_inputs": {
+      "type": "object",
+      "required": ["as_of", "rules", "hard_commitments", "predicted_preparation", "gated", "wip_limit"],
+      "properties": {
+        "predicted_preparation": { "type": "array", "maxItems": 2 },
+        "wip_limit": { "const": 5 }
+      }
+    },
     "candidates": {
       "type": "array",
       "items": { "$ref": "#/$defs/candidate" }
@@ -58,6 +100,9 @@
         "work_package_id",
         "work_package_label",
         "state",
+        "claim_type",
+        "confirmed_request",
+        "confirmed_deadline",
         "confidence",
         "confidence_label",
         "evidence_tier",
@@ -75,6 +120,21 @@
         "work_package_id": { "type": "string", "minLength": 1 },
         "work_package_label": { "type": "string", "minLength": 1 },
         "state": { "type": "string", "minLength": 1 },
+        "claim_type": { "const": "prediction" },
+        "confirmed_request": { "type": "boolean" },
+        "confirmed_deadline": { "type": "boolean" },
+        "preparation_contract": {
+          "type": ["object", "null"],
+          "properties": {
+            "inputs": { "type": "array" },
+            "templates": { "type": "array" },
+            "readiness": { "type": "object" },
+            "output_formats": { "type": "array" },
+            "qa": { "type": "array" },
+            "gates": { "type": "array" }
+          }
+        },
+        "calibration": { "type": ["object", "null"] },
         "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
         "confidence_label": {
           "enum": ["confirmed-pattern", "likely", "watch", "weak-signal"]

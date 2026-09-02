@@ -19,8 +19,13 @@ Sweep the client roster for state changes. Work only from this vault.
    **stalled** (7+ days untouched).
 4. Read `12_Brain/state/work-predictor/latest.json` and include upcoming work
    packages only with their exact evidence tier, confidence, predicted window,
-   required artifact manifest, and gates. A prediction is not proof of a new
-   request or deadline.
+   `claim_type`, required artifact manifest, and gates. A prediction is not
+   proof of a new request or deadline; only `confirmed_request: true` rows are
+   requests and only `confirmed_deadline: true` rows have a recorded due date.
+   Quote the `sources.client_operations_checkout` line (branch, head, dirty
+   files) so the reader knows which checkout the evidence came from, and quote
+   the `calibration` hit rates when a tier's sample is sufficient. Use
+   `plan_inputs.gated` as the gate list instead of re-deriving it.
 5. Read `12_Brain/state/work-predictor/latest-chronos.json` only when its source
    fingerprint matches the current prediction. Show the total-workload band as
    a shadow capacity warning. Do not use it to rank clients while
