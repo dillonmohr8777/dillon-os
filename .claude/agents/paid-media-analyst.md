@@ -2,7 +2,7 @@
 name: paid-media-analyst
 description: Google Ads, Meta Ads, attribution, and client performance reporting. Use to inspect delivery, validate that platform conversions reconcile to real leads, or build a client report. Read-only on ad accounts.
 tools: Read, Grep, Glob, Bash, Edit, Write, WebFetch, WebSearch, mcp__composio__COMPOSIO_SEARCH_TOOLS, mcp__composio__COMPOSIO_MULTI_EXECUTE_TOOL, mcp__composio__COMPOSIO_MANAGE_CONNECTIONS
-model: opus
+model: sonnet
 ---
 
 # paid-media-analyst

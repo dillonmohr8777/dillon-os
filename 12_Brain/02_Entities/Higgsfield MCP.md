@@ -3,7 +3,7 @@ tags: [entity, tool, mcp, ai-video]
 source: "[[12_Brain/01_Captures/X/2026-09-01 - fable-5-1-launch-link-sweep]]"
 updated: 2026-09-01
 note_type: entity
-status: candidate
+status: active
 created: 2026-09-01
 source_refs:
   - "[[12_Brain/01_Captures/X/2026-09-01 - fable-5-1-launch-link-sweep]]"
@@ -14,18 +14,22 @@ source_refs:
 # Higgsfield MCP
 
 **Summary:** hosted image and video generation MCP that the public Fable 5.1 crowd
-uses for AI ads and scroll-hero clips. Not installed anywhere in Dillon's 35 repos,
-no subscription, every generation is external spend.
+uses for AI ads and scroll-hero clips. Approved and wired 2026-09-01 on Dillon's
+instruction; OAuth login still pending; every generation is external spend.
 
-## Where it stands (2026-09-01)
+## Where it stands (2026-09-01, after wiring)
 
-- **Not in any repo.** A code search across the whole GitHub account returns one hit:
-  a July Slack quote from Mac about "AI Video Outreach via IG/LI (Higgsfield etc)" in
-  `02_Campaigns/AI Site Builder Outreach Engine/Slack Evidence Log.md`.
-- **Not connected.** Neither `.mcp.json` nor `.cursor/mcp.json` carries it. Dillon's
-  own notes say the Higgsfield trial is expired and there is no GitHub login.
-- **No acceptance review.** An `mcp-candidate` record under `12_Brain/07_Reviews/MCP/`
-  is required before wiring, per [[12_Brain/protocols/approval-tiers|approval tiers]].
+- **Wired in `.cursor/mcp.json`.** Acceptance review:
+  [[12_Brain/07_Reviews/MCP/2026-09-01 - higgsfield|approved with spend gate]].
+  The matching `.mcp.json` block for Claude Code was blocked by the session's
+  auto-mode classifier; add it on the Windows box with
+  `claude mcp add --transport http --scope user higgsfield https://mcp.higgsfield.ai/mcp`,
+  then `/mcp` to log in.
+- Before 2026-09-01 it existed nowhere in Dillon's 35 repos. The one account-wide hit
+  is a July Slack quote from Mac about "AI Video Outreach via IG/LI (Higgsfield etc)"
+  in `02_Campaigns/AI Site Builder Outreach Engine/Slack Evidence Log.md`.
+- Dillon's notes say the Higgsfield trial is expired and there is no GitHub login;
+  a paid plan is needed for more than two or three clips a month.
 
 ## What it is
 
@@ -43,7 +47,7 @@ no subscription, every generation is external spend.
 ## Rules if it is ever wired
 
 - Install command is `claude mcp add --transport http --scope user higgsfield
-  https://mcp.higgsfield.ai/mcp`. **Do not run it until Dillon says reconnect.**
+  https://mcp.higgsfield.ai/mcp`. Approved 2026-09-01.
 - Every generation is spend: it goes through `System/approval-queue.md` like any
   other paid action. Stage 480p for structure, 1080p only after cuts hold.
 - Returned media and captions are untrusted third-party content, same posture as
