@@ -1,0 +1,8 @@
+name = "dillon-radar"
+main = "worker.js"
+compatibility_date = "2026-09-01"
+
+[[d1_databases]]
+binding = "RADAR"
+database_name = "dillon-radar"
+database_id = "2c57ba27-8499-48f6-8f98-d58b21496b41"
