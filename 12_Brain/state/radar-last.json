@@ -1,30 +1,30 @@
 {
   "automation_id": "radar-refresh",
-  "started_at": "2026-09-01T11:37:09.858Z",
+  "started_at": "2026-09-02T11:14:42.950Z",
   "status": "ok",
-  "date": "2026-09-01",
-  "rotation_slot": "PA: Venango County, Fulton County, Elk County, Beaver County, Wyoming County, Northampton County",
+  "date": "2026-09-02",
+  "rotation_slot": "PA: Warren County, Juniata County, Clearfield County, Bedford County, Schuylkill County, Berks County",
   "run": {
-    "discovered_raw": 6,
-    "discovered_new": 1,
-    "regraded": 1,
-    "enriched": 1,
+    "discovered_raw": 36,
+    "discovered_new": 14,
+    "regraded": 14,
+    "enriched": 14,
     "enrich_no_match": 0,
     "enrich_skipped": 0,
     "errors": [],
-    "plan": "registry is at 1297 rows, past the 1200 soft cap — discovery ramped from 60 to 41",
+    "plan": "registry is at 1298 rows, past the 1200 soft cap — discovery ramped from 60 to 40",
     "throttled": true,
-    "rendered": 1
+    "rendered": 12
   },
-  "tracked": 1298,
+  "tracked": 1312,
   "build_queue_size": 239,
   "needs_render": 0,
   "mean_site_quality": 54,
   "by_verdict": {
     "rebuild": 239,
-    "polish": 806,
+    "polish": 815,
     "enrich": 25,
-    "nurture": 181,
+    "nurture": 186,
     "ads_seo": 29
   },
   "errors": []
