@@ -1,11 +1,12 @@
 ---
 tags: [concept, ops-rule]
-source: "[[12_Brain/01_Captures/2026-06-26 - intel-core-7-master-operating-transfer]]"
-updated: 2026-07-04
+source: "12_Brain/01_Captures/2026-06-26 - intel-core-7-master-operating-transfer (capture never landed; unverified)"
+updated: 2026-09-02
 note_type: concept
 status: active
+verification_status: unverified
 created: 2026-07-04
-source_refs: ["[[12_Brain/01_Captures/2026-06-26 - intel-core-7-master-operating-transfer]]"]
+source_refs: ["12_Brain/01_Captures/2026-06-26 - intel-core-7-master-operating-transfer (capture never landed; unverified)"]
 ---
 
 
@@ -17,7 +18,7 @@ Order of authority for any "what's true right now" question:
 
 1. **Live surfaces** — Gmail, Slack, HubSpot, Google Ads, Netlify, current local files.
 2. **Persistent memory / wiki pages** — routes you to prior decisions and proven patterns (this vault's `entities/` and `concepts/`).
-3. **Session artifacts** — durable raw history (`raw/`, session logs).
+3. **Session artifacts** — durable raw history (`12_Brain/01_Captures/`, session logs).
 4. **Handoffs/briefs** — packaged narrative for transfer; useful map, weakest for current state.
 
 Corollary for this vault: pages carry `updated:` dates precisely so the reader knows how far down this hierarchy they're operating. A stale page loses to a live check every time — and gets corrected afterward.

@@ -38,7 +38,7 @@ channel: "#momentumsites"
 requested_by: Mac Frederick
 permalink: <message permalink>
 type: website-build
-client: "[[01_Clients/<Client>|<Client>]]"
+client: "[[01_Clients/<Client>/overview|<Client>]]"
 status: new
 due:
 ---

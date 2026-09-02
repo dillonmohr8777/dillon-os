@@ -11,13 +11,13 @@ source_refs: ["[[12_Brain/01_Captures/2026-07-04 - obsidian-second-brain-article
 
 # Second Brain Architecture
 
-**Summary:** the vault is a codebase — the canonical brain lives under `12_Brain/` (never `1Z_Brain/`). raw/ is ground truth, entities/ and
-concepts/ are compiled pages, INDEX.md is the front door, and every [[link]]
+**Summary:** the vault is a codebase — the canonical brain lives under `12_Brain/` (never `1Z_Brain/`). `01_Captures/` is ground truth, entities/ and
+concepts/ are compiled pages, INDEX.md is the front door, and every `[[link]]`
 is an edge in a graph that gets stronger as it grows.
 
 The agent's job is compiling: read new material in `12_Brain/01_Captures/`, update the entity
 and concept pages, link as it goes. Four writing rules (one lesson per file,
-update don't duplicate, delete what's wrong, never touch raw/) live in the
+update don't duplicate, delete what's wrong, never touch `01_Captures/`) live in the
 root `CLAUDE.md` + `12_Brain/` layer.
 
 Why it works: a search-based knowledge base gets noisier as it grows; a linked

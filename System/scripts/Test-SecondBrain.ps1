@@ -150,6 +150,18 @@ foreach ($baseFile in $baseFiles) {
     $notesByStem[$baseRelativeStem.ToLowerInvariant()] = $true
 }
 
+# Canvas files are link targets too ([[12_Brain/Brain Map.canvas]]); without this the
+# front door's own visual-view link is reported as unresolved every run.
+$canvasFiles = @(
+    Get-ChildItem -LiteralPath $resolvedVault -Recurse -Filter '*.canvas' -File |
+        Where-Object { $_.FullName -notmatch '\\.git\\' }
+)
+foreach ($canvasFile in $canvasFiles) {
+    $canvasRelativePath = Get-RelativeVaultPath -FullName $canvasFile.FullName
+    $notesByStem[$canvasRelativePath.ToLowerInvariant()] = $true
+    $notesByStem[$canvasRelativePath.Substring(0, $canvasRelativePath.Length - 7).ToLowerInvariant()] = $true
+}
+
 $compiledFolders = @(
     '12_Brain/02_Entities/',
     '12_Brain/03_Concepts/',

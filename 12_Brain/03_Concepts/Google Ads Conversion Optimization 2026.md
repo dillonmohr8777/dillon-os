@@ -1,19 +1,20 @@
 ---
 tags: [concept, ads-research]
-source: "[[12_Brain/01_Captures/2026-07-04 - full-autonomy-directive]]"
-updated: 2026-07-05
+source: "12_Brain/01_Captures/2026-07-04 - full-autonomy-directive (capture never landed; unverified)"
+updated: 2026-09-02
 expires: 2026-08-04
 note_type: concept
-status: active
+status: expired
+verification_status: unverified
 created: 2026-07-05
-source_refs: ["[[12_Brain/01_Captures/2026-07-04 - full-autonomy-directive]]"]
+source_refs: ["12_Brain/01_Captures/2026-07-04 - full-autonomy-directive (capture never landed; unverified)"]
 ---
 
 
 # Google Ads Conversion Optimization — 2026 tactics
 
 One-line: how to bid, structure PMax, and diagnose no-spend for conversion-goal
-Search + PMax accounts, verified July 2026. Feeds [[02_Campaigns/Ads Ops/Ads Ops Hub]].
+Search + PMax accounts, verified July 2026. Feeds [[02_Campaigns/Campaign Index]].
 
 ## Bid strategy by conversion volume
 - **Conversion-starved line ≈ 30 conv / 30 days per campaign.** Below that,

@@ -1,7 +1,7 @@
 ---
 tags: [index, moc, brain]
 canonical: 12_Brain
-updated: 2026-08-15
+updated: 2026-09-02
 ---
 
 # INDEX — the front door
@@ -48,6 +48,23 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/03_Concepts/Conversion Tracking Setup 2026|Conversion Tracking Setup 2026]] — generic setup patterns (no account IDs).
 - [[12_Brain/03_Concepts/Google Ads Conversion Optimization 2026|Google Ads Conversion Optimization 2026]] — generic optimization patterns.
 - [[12_Brain/03_Concepts/Meta Lead Ads Optimization 2026|Meta Lead Ads Optimization 2026]] — generic Lead Ads patterns.
+- [[12_Brain/03_Concepts/Marketing Intelligence Operating System|Marketing Intelligence Operating System]] — canonical strategy map of what Dillon OS has learned.
+- [[12_Brain/03_Concepts/AEO GEO and AI Discovery|AEO, GEO, and AI Discovery]] — answer-engine and generative-engine optimization.
+- [[12_Brain/03_Concepts/AI Visibility Measurement|AI Visibility Measurement]] — AI answers vary by engine, model, location, and wording; measure accordingly.
+- [[12_Brain/03_Concepts/Entity Authority and Citation Readiness|Entity Authority and Citation Readiness]] — make entities specific and citable.
+- [[12_Brain/03_Concepts/Search Intent and Topic Architecture|Search Intent and Topic Architecture]] — intent is the job to complete; topics are the map.
+- [[12_Brain/03_Concepts/Keyword Research and Search Demand|Keyword Research and Search Demand]] — turn market language into a demand model.
+- [[12_Brain/03_Concepts/Local Search and Maps Site Parity|Local Search and Maps-to-Site Parity]] — local search is trust and availability before keywords.
+- [[12_Brain/03_Concepts/Content Systems and Distribution|Content Systems and Distribution]] — content as an evidence-backed asset system, not a pile of posts.
+- [[12_Brain/03_Concepts/Client Reporting and Outcome Scoreboards|Client Reporting and Outcome Scoreboards]] — a report is complete when it explains what happened and why.
+- [[12_Brain/03_Concepts/Qualified Pipeline Measurement|Qualified Pipeline Measurement]] — optimize toward the closest trustworthy business outcome.
+- [[12_Brain/03_Concepts/Prospect to Build to Outreach Pipeline|Prospect-to-Build-to-Outreach Pipeline]] — create value before the sales call while preserving identity.
+- [[12_Brain/03_Concepts/High Craft Website Factory|High-Craft Website Factory]] — remove repeated setup and predictable defects, not judgment.
+- [[12_Brain/03_Concepts/Automation and Workflow Engineering|Automation and Workflow Engineering]] — automation is a controlled state machine, not "make the model do it".
+- [[12_Brain/03_Concepts/Agent Governance and Verification|Agent Governance and Verification]] — division of work without division of accountability.
+- [[12_Brain/03_Concepts/Evidence Context and Learning Loops|Evidence, Context, and Learning Loops]] — the brain improves when an observation changes a supported model.
+- [[12_Brain/03_Concepts/Living Second Brain|Living Second Brain]] — a living brain improves its current model rather than accumulating files.
+- [[12_Brain/03_Concepts/Confirm the Artifact Not the Action|Confirm the Artifact, Not the Action]] — promoted craft lesson: a change you believe you made is the dangerous one.
 
 ## Raw captures (Git-safe)
 

@@ -1,12 +1,13 @@
 ---
 tags: [concept, ads-research]
-source: "[[12_Brain/01_Captures/2026-07-04 - full-autonomy-directive]]"
-updated: 2026-07-05
+source: "12_Brain/01_Captures/2026-07-04 - full-autonomy-directive (capture never landed; unverified)"
+updated: 2026-09-02
 expires: 2026-08-04
 note_type: concept
-status: active
+status: expired
+verification_status: unverified
 created: 2026-07-05
-source_refs: ["[[12_Brain/01_Captures/2026-07-04 - full-autonomy-directive]]"]
+source_refs: ["12_Brain/01_Captures/2026-07-04 - full-autonomy-directive (capture never landed; unverified)"]
 ---
 
 
@@ -14,7 +15,7 @@ source_refs: ["[[12_Brain/01_Captures/2026-07-04 - full-autonomy-directive]]"]
 
 One-line: optimization goal, Advantage+ behavior, pixel/CAPI, creative, and
 rejection traps for local lead-gen, verified July 2026. Feeds
-[[02_Campaigns/Ads Ops/Ads Ops Hub]] and the instant-form/website-lead specs.
+[[02_Campaigns/Campaign Index]] and the instant-form/website-lead specs.
 
 ## Optimization goal (lead quality lever)
 - **Instant forms** = cheap volume, lowest intent (~2-3x more leads, 30-50%

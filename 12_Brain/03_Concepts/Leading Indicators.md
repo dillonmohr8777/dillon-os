@@ -1,11 +1,12 @@
 ---
 tags: [concept, prediction]
-source: "[[12_Brain/01_Captures/2026-07-04 - lost-clients-confirmation-2]]"
-updated: 2026-07-04
+source: "12_Brain/01_Captures/2026-07-04 - lost-clients-confirmation-2 (capture never landed; unverified)"
+updated: 2026-09-02
 note_type: concept
 status: active
+verification_status: unverified
 created: 2026-07-04
-source_refs: ["[[12_Brain/01_Captures/2026-07-04 - lost-clients-confirmation-2]]"]
+source_refs: ["12_Brain/01_Captures/2026-07-04 - lost-clients-confirmation-2 (capture never landed; unverified)"]
 ---
 
 
