@@ -1,0 +1,40 @@
+<!-- Smile Culture Dental, kindness-led practice in Huntingdon Valley.
+     Concept: calm concentric arcs like a morning sky, a single clean molar form in
+     the lower third built from two overlapping rounded shapes, a soft sparkle and
+     a "first visit" path of three dots. Sage, sand, cream. Motion: arcs breathe,
+     sparkle blinks, the path dots light in sequence. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" class="pa-hero pa-hero-smile" role="img" aria-label="A calm, welcoming dental visit">
+  <style>
+    .pa-hero-smile .arc{transform-origin:450px 620px;animation:sm-breathe 8s ease-in-out infinite}
+    .pa-hero-smile .arc.b{animation-delay:-2.6s}.pa-hero-smile .arc.c{animation-delay:-5.2s}
+    .pa-hero-smile .spark{transform-origin:600px 300px;animation:sm-blink 4s ease-in-out infinite}
+    .pa-hero-smile .dot{animation:sm-light 4.5s ease-in-out infinite}
+    .pa-hero-smile .dot.b{animation-delay:1.5s}.pa-hero-smile .dot.c{animation-delay:3s}
+    @keyframes sm-breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.03)}}
+    @keyframes sm-blink{0%,80%,100%{opacity:.35;transform:scale(.8) rotate(0)}90%{opacity:1;transform:scale(1.1) rotate(20deg)}}
+    @keyframes sm-light{0%,70%,100%{opacity:.35}20%,50%{opacity:1}}
+    @media (prefers-reduced-motion:reduce){.pa-hero-smile *{animation:none!important}.pa-hero-smile .dot,.pa-hero-smile .spark{opacity:1}}
+  </style>
+  <rect width="900" height="600" fill="var(--paper)"/>
+  <g fill="none" stroke-linecap="round">
+    <path class="arc a" d="M-80,620 A530,530 0 0 1 980,620" stroke="var(--brand)" stroke-width="90" opacity=".14"/>
+    <path class="arc b" d="M40,620 A410,410 0 0 1 860,620" stroke="var(--brand)" stroke-width="70" opacity=".2"/>
+    <path class="arc c" d="M150,620 A300,300 0 0 1 750,620" stroke="var(--accent)" stroke-width="50" opacity=".28"/>
+  </g>
+  <!-- molar form -->
+  <g filter="url(#pa-plate)" transform="translate(340,300)">
+    <path d="M30,60 C30,10 80,0 110,0 C140,0 190,10 190,60 C190,110 170,140 160,190 C154,222 130,226 120,196 C114,176 106,176 100,196 C90,226 66,222 60,190 C50,140 30,110 30,60 Z" fill="var(--paper)" stroke="var(--brand)" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M70,52 C90,36 130,36 150,52" fill="none" stroke="var(--brand)" stroke-width="6" stroke-linecap="round" opacity=".6"/>
+  </g>
+  <!-- sparkle -->
+  <g class="spark">
+    <polygon points="600,262 610,292 640,300 610,308 600,338 590,308 560,300 590,292" fill="var(--accent)"/>
+  </g>
+  <!-- first-visit path -->
+  <path d="M120,470 C260,420 420,520 560,460 C660,418 740,440 800,470" fill="none" stroke="var(--brand)" stroke-width="3" stroke-dasharray="2 10" stroke-linecap="round" opacity=".6"/>
+  <g fill="var(--brand)">
+    <circle class="dot a" cx="120" cy="470" r="14"/><circle class="dot b" cx="470" cy="486" r="14"/><circle class="dot c" cx="800" cy="470" r="14"/>
+  </g>
+  <g fill="var(--paper)"><circle cx="120" cy="470" r="5"/><circle cx="470" cy="486" r="5"/><circle cx="800" cy="470" r="5"/></g>
+  <rect width="900" height="600" fill="var(--brand-2)" filter="url(#pa-grain)" opacity=".18" style="mix-blend-mode:multiply"/>
+</svg>

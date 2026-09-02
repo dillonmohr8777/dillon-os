@@ -1,0 +1,62 @@
+<!-- Golden Sea, family-run Chinese restaurant, Blue Bell, since 1992.
+     Concept: a wok on a high flame, three steam ribbons, two paper lanterns on a
+     line, a rice bowl and chopsticks in the foreground. Jade and gold on cream.
+     Motion: flame flickers, steam rises, lanterns sway. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" class="pa-hero pa-hero-gsea" role="img" aria-label="Wok cooking with fresh steam">
+  <style>
+    .pa-hero-gsea .steam{animation:gs-rise 6s ease-in-out infinite}
+    .pa-hero-gsea .steam.b{animation-delay:-2s}.pa-hero-gsea .steam.c{animation-delay:-4s}
+    .pa-hero-gsea .flame{transform-origin:450px 470px;animation:gs-flick .9s ease-in-out infinite alternate}
+    .pa-hero-gsea .lantern{transform-origin:top center;animation:gs-sway 5s ease-in-out infinite}
+    .pa-hero-gsea .lantern.b{animation-delay:-2.5s}
+    @keyframes gs-rise{0%{transform:translateY(0);opacity:0}25%{opacity:.8}100%{transform:translateY(-120px);opacity:0}}
+    @keyframes gs-flick{from{transform:scaleY(.92) scaleX(1.03)}to{transform:scaleY(1.06) scaleX(.97)}}
+    @keyframes gs-sway{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}
+    @media (prefers-reduced-motion:reduce){.pa-hero-gsea *{animation:none!important}.pa-hero-gsea .steam{opacity:.5}}
+  </style>
+  <rect width="900" height="600" fill="var(--brand-2)"/>
+  <circle cx="450" cy="330" r="300" fill="url(#pa-glow)"/>
+  <!-- lantern line -->
+  <path d="M0,60 C300,110 600,110 900,60" fill="none" stroke="var(--paper)" stroke-width="2" opacity=".5"/>
+  <g class="lantern a" style="transform-box:fill-box">
+    <line x1="240" y1="92" x2="240" y2="120" stroke="var(--accent)" stroke-width="3"/>
+    <rect x="200" y="120" width="80" height="110" rx="34" fill="var(--accent)"/>
+    <g stroke="var(--brand-2)" stroke-width="2" opacity=".35"><line x1="220" y1="122" x2="220" y2="228"/><line x1="240" y1="120" x2="240" y2="230"/><line x1="260" y1="122" x2="260" y2="228"/></g>
+    <rect x="228" y="230" width="24" height="10" fill="var(--accent)"/>
+    <line x1="240" y1="240" x2="240" y2="268" stroke="var(--accent)" stroke-width="3"/>
+  </g>
+  <g class="lantern b" style="transform-box:fill-box">
+    <line x1="690" y1="92" x2="690" y2="112" stroke="var(--accent)" stroke-width="3"/>
+    <rect x="658" y="112" width="64" height="88" rx="28" fill="var(--accent)"/>
+    <g stroke="var(--brand-2)" stroke-width="2" opacity=".35"><line x1="674" y1="114" x2="674" y2="198"/><line x1="690" y1="112" x2="690" y2="200"/><line x1="706" y1="114" x2="706" y2="198"/></g>
+    <rect x="680" y="200" width="20" height="8" fill="var(--accent)"/>
+    <line x1="690" y1="208" x2="690" y2="232" stroke="var(--accent)" stroke-width="3"/>
+  </g>
+  <!-- flame -->
+  <g class="flame" fill="var(--accent)">
+    <path d="M400,470 C400,430 430,420 440,380 C460,420 470,410 480,380 C500,420 500,450 500,470 Z"/>
+    <path d="M425,470 C425,450 440,440 450,420 C462,440 472,452 475,470 Z" fill="var(--paper)" opacity=".85"/>
+  </g>
+  <!-- wok -->
+  <g filter="url(#pa-plate)">
+    <path d="M250,360 C260,470 640,470 650,360 Z" fill="var(--ink)"/>
+    <path d="M250,360 L650,360" stroke="var(--paper)" stroke-width="6" stroke-linecap="round"/>
+    <path d="M650,352 L760,320" stroke="var(--ink)" stroke-width="16" stroke-linecap="round"/>
+    <path d="M270,372 C300,430 600,430 630,372" fill="var(--brand)" opacity=".9"/>
+    <g fill="var(--accent)"><circle cx="360" cy="392" r="9"/><circle cx="430" cy="404" r="7"/><circle cx="520" cy="398" r="10"/><circle cx="580" cy="386" r="6"/></g>
+    <g fill="var(--paper)" opacity=".9"><rect x="390" y="380" width="26" height="12" rx="6" transform="rotate(-20 403 386)"/><rect x="470" y="386" width="30" height="12" rx="6" transform="rotate(15 485 392)"/></g>
+  </g>
+  <!-- steam -->
+  <g fill="none" stroke="var(--paper)" stroke-width="10" stroke-linecap="round">
+    <path class="steam a" d="M400,340 C420,300 380,280 400,240 C420,200 384,178 404,140"/>
+    <path class="steam b" d="M460,340 C480,300 440,280 460,240 C480,200 444,178 464,140"/>
+    <path class="steam c" d="M520,340 C540,300 500,280 520,240 C540,200 504,178 524,140"/>
+  </g>
+  <!-- bowl and chopsticks -->
+  <g filter="url(#pa-plate)">
+    <path d="M100,500 C104,556 236,556 240,500 Z" fill="var(--paper)"/>
+    <ellipse cx="170" cy="500" rx="70" ry="12" fill="var(--brand)"/>
+    <path d="M150,470 L260,420 M162,478 L272,428" stroke="var(--accent)" stroke-width="6" stroke-linecap="round"/>
+  </g>
+  <rect width="900" height="600" fill="var(--brand-2)" filter="url(#pa-grain)" opacity=".35" style="mix-blend-mode:multiply"/>
+</svg>

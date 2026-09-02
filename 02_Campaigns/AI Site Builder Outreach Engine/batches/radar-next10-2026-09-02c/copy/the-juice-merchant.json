@@ -21,7 +21,7 @@
     "label": "Order for Pickup",
     "note": "Placeholder CTA - no verified ordering link harvested from a live source."
   },
-  "intro": "The Juice Merchant is a juice bar in Narberth built around fresh, simple food: cold-pressed juices, smoothies, and bowls made to order for anyone looking for something clean on the way to work or after a workout. The menu is built for regulars who want the same reliable order every time, and for anyone trying a cleanse or a reset for the first time.",
+  "intro": "The Juice Merchant is a juice bar in Narberth built around fresh, simple food: cold-pressed juices, smoothies, and bowls made to order for anyone looking for something clean on the way to work or after a workout. The menu suits regulars who want the same reliable order every time, and first-timers trying a cleanse or reset. Everything is made fresh rather than sitting bottled on a shelf, from a single juice to a full catering tray for a local event.",
   "services": [
     {
       "title": "Cold-Pressed Juices",
@@ -49,8 +49,22 @@
       "icon_hint": "catering"
     }
   ],
+  "process": [
+    {
+      "title": "Pick Your Order",
+      "blurb": "Choose a cold-pressed juice, a smoothie, or a bowl, or ask about a multi-day cleanse package."
+    },
+    {
+      "title": "It's Made When You Order It",
+      "blurb": "Juices and smoothies are pressed and blended fresh rather than pulled from a bottle that has been sitting."
+    },
+    {
+      "title": "Grab It Or Book Catering",
+      "blurb": "Pick up a single order on the way out the door, or ask about a juice, smoothie, and bowl tray for a local event."
+    }
+  ],
   "proof": [],
-  "about": "The Juice Merchant is an independent juice bar serving Narberth with cold-pressed juices, smoothies, and bowls made fresh to order. The focus stays on simple, clean ingredients rather than anything overcomplicated, whether it's a quick juice on the way out the door or a full cleanse package. Catering trays are also available for local events and gatherings.",
+  "about": "The Juice Merchant is an independent juice bar serving Narberth with cold-pressed juices, smoothies, and bowls made fresh to order. The focus stays on simple, clean ingredients rather than anything overcomplicated, whether it is a quick juice on the way out the door, a smoothie bowl to sit down with, or a full multi-day cleanse package for a reset. Catering trays are also available for local events and gatherings around Narberth, built from the same juice, smoothie, and bowl menu regulars already order. Every order is made when it is ordered, not poured from a bottle that has been waiting on a shelf, which keeps the ingredients and the routine simple for anyone stopping in on the way to work, after a workout, or on the way home.",
   "faq": [
     {
       "q": "What does The Juice Merchant serve?",
@@ -63,6 +77,10 @@
     {
       "q": "Can The Juice Merchant cater an event?",
       "a": "Yes, juice, smoothie, and bowl trays are available for local events and gatherings around Narberth."
+    },
+    {
+      "q": "Is the juice made fresh or bottled ahead of time?",
+      "a": "Juices and smoothies are made to order, not poured from a bottle that has been sitting on a shelf."
     }
   ],
   "marquee": [
@@ -70,8 +88,16 @@
     "Fresh Smoothies & Bowls",
     "Juice Cleanses",
     "Serving Narberth, PA",
-    "Catering Available"
+    "Catering Available",
+    "Made Fresh To Order"
   ],
+  "cta_band": {
+    "headline": "Ready For Something Fresh?",
+    "support": "Stop in for a cold-pressed juice, a smoothie, or a bowl made when you order it.",
+    "button": "See The Menu",
+    "secondary": "Ask About Catering"
+  },
+  "footer_line": "The Juice Merchant serves cold-pressed juice, smoothies, and bowls in Narberth, PA.",
   "contact": {
     "phone": "PLACEHOLDER",
     "address": "PLACEHOLDER",

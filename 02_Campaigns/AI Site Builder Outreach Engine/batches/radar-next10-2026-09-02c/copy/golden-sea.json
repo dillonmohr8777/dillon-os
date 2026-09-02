@@ -14,8 +14,8 @@
     "notes": "Site body background-color is #EAA41E (gold/orange); the logo/header is an image file (images/header.gif) that was not independently color-sampled."
   },
   "voice": "Warm and family-first, told in the plain, proud language of a small family business that has run the same kitchen since 1992. They lean on their own history and community recognition rather than hype.",
-  "headline": "Family-Run Chinese Cooking in Blue Bell Since 1992",
-  "subhead": "Golden Sea has served the community exceptional Chinese cuisine made with fresh ingredients and smiling service since 1992.",
+  "headline": "Blue Bell's Family Chinese Kitchen Since 1992",
+  "subhead": "Golden Sea has served Blue Bell exceptional Chinese cuisine made with fresh ingredients and smiling service since 1992.",
   "cta_primary": {
     "label": "Order Takeout",
     "note": "Call (610)-292-8881 or (610)-292-8882; site states currently open for take out only."
@@ -24,7 +24,7 @@
     "label": "See the Menu",
     "note": "Links to the take-out and dine-in PDF menus on their own site."
   },
-  "intro": "Since 1992, the team at Golden Sea has strived to provide dear patrons with exceptional Chinese cuisine prepared with the freshest ingredients and delivered with smiling service. Family owned by Jack and Amy Chung, the restaurant's chef, Ka Yam Yip, an experienced chef from Hong Kong, spices up the regular menu with recurring specials. Golden Sea was voted Best Chinese Restaurant by The Reporter and The Times Herald.",
+  "intro": "Golden Sea Chinese Restaurant has served Blue Bell, PA since 1992, when Jack and Amy Chung opened it after running Golden Light in Horsham. Chef Ka Yam Yip, trained in Hong Kong, spices up the regular menu with recurring specials like Soft-Shell Crabs and whole Chinese Style Sea Bass. The Reporter and The Times Herald voted Golden Sea Best Chinese Restaurant. Regulars can order the full printed menu or one of sixteen numbered combination plates, each paired with an egg roll and fried rice, simply by calling the numbers in.",
   "services": [
     {
       "title": "Special Appetizers",
@@ -47,9 +47,28 @@
       "icon_hint": "wok"
     },
     {
+      "title": "Seafood",
+      "blurb": "Shrimp and scallops prepared with lobster sauce, bean sprouts, Chinese vegetables, snow peas, or black bean sauce, plus a Walnut Shrimp listed on its own. Their menu marks several with an asterisk for hot and spicy.",
+      "icon_hint": "shrimp"
+    },
+    {
       "title": "Chef's Suggestions",
       "blurb": "Chef Ka Yam Yip's own specials, including Golden Sea Special Chicken, Seafood Special, Four Seasons, and Szechuan Seafood Deluxe. Their menu calls this section out by name.",
       "icon_hint": "chef-special"
+    }
+  ],
+  "process": [
+    {
+      "title": "Call In Your Order",
+      "blurb": "Dial (610)-292-8881 or (610)-292-8882 and order off the printed menu, or reference one of the sixteen numbered Special Combination Plates for a faster call."
+    },
+    {
+      "title": "The Kitchen Cooks It Fresh",
+      "blurb": "Chef Ka Yam Yip's kitchen prepares each dish to order, from Chow Mein and Lo Mein staples to the Chef's Suggestions specials."
+    },
+    {
+      "title": "Pick Up During Hours",
+      "blurb": "Golden Sea is currently open for take out only, Tuesday through Sunday, closed Mondays."
     }
   ],
   "proof": [
@@ -67,9 +86,14 @@
       "label": "Chef",
       "value": "Ka Yam Yip, an experienced chef from Hong Kong",
       "source_url": "http://goldenseabluebell.com/about_us.html"
+    },
+    {
+      "label": "Menu size",
+      "value": "126 numbered dishes plus 16 numbered combination plates",
+      "source_url": "http://goldenseabluebell.com/Golden_Sea_Take_Out_Menu.pdf"
     }
   ],
-  "about": "Golden Sea opened in 1992, run by Jack and Amy Chung, who first opened a restaurant called Golden Light in Horsham before moving to Blue Bell. Jack came from mainland China by way of Hong Kong and Newark; Amy escaped from Canton by sea in 1974. Their son Andrew grew up in the business and often serves as the restaurant's spokesperson. Chef Ka Yam Yip, trained in Hong Kong, spices up the regular menu with recurring specials like Soft-Shell Crabs and whole Chinese Style Sea Bass. Jack Chung sums up the philosophy plainly: serve good, fresh food and treat people well, and the rest follows. Golden Sea has been voted Best Chinese Restaurant by The Reporter and The Times Herald.",
+  "about": "Golden Sea opened in 1992, run by Jack and Amy Chung, who first opened a restaurant called Golden Light in Horsham before moving to Blue Bell. Jack came from mainland China by way of Hong Kong and Newark, working as a seaman before settling down. Amy escaped from Canton by sea in 1974, a seven-hour crossing with her brother Joe and three friends. Their son Andrew grew up in the business and often serves as its spokesperson. Chef Ka Yam Yip, trained in Hong Kong, spices up the regular menu with recurring specials like Soft-Shell Crabs and whole Chinese Style Sea Bass. Jack Chung sums up the philosophy plainly: serve good, fresh food and treat people well, and the rest follows. Golden Sea has been voted Best Chinese Restaurant by The Reporter and The Times Herald.",
   "faq": [
     {
       "q": "Is Golden Sea open for dine-in or takeout?",
@@ -82,6 +106,10 @@
     {
       "q": "Where is Golden Sea located?",
       "a": "1301 Skippack Pike, Blue Bell, PA 19422."
+    },
+    {
+      "q": "How do I place an order?",
+      "a": "Call (610)-292-8881 or (610)-292-8882. Their printed menu also lists sixteen numbered Special Combination Plates, each with an egg roll and fried rice, so regulars can order by number."
     }
   ],
   "marquee": [
@@ -94,6 +122,13 @@
     "Blue Bell's Golden Sea",
     "The Smile Is The International Language"
   ],
+  "cta_band": {
+    "headline": "Ready For Pickup?",
+    "support": "Call ahead and Golden Sea has your order ready when you get there.",
+    "button": "Call Golden Sea",
+    "secondary": "See The Full Menu"
+  },
+  "footer_line": "Golden Sea Chinese Restaurant has served Blue Bell, PA takeout since 1992.",
   "contact": {
     "phone": "(610)-292-8881 / (610)-292-8882",
     "address": "1301 Skippack Pike, Blue Bell, PA 19422",

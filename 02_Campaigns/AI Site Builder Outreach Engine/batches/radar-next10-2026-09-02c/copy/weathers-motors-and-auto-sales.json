@@ -23,7 +23,7 @@
     "label": "Call the Dealership",
     "note": "Click-to-call using their published sales/service/parts number."
   },
-  "intro": "Weathers Motors has operated as a family-owned dealership in Media, PA since 1922, over a century of buying, selling, and servicing cars, trucks, vans, and SUVs. The dealership runs as a full-service operation: quality pre-owned vehicle sales, a service and repair center, a parts center, tire sales, PA state inspection, a body shop, and in-house financing for shoppers across the credit spectrum. Remote options include video walkarounds, at-home test drives, home delivery, and maintenance pick-up within a 15-mile radius. The team serves Media and surrounding Delaware County, with customers coming from as far as West Chester to Allentown.",
+  "intro": "Weathers Motors has run as a family-owned dealership in Media, PA since 1922, over a century of buying, selling, and servicing cars, trucks, vans, and SUVs. The team stocks quality pre-owned vehicles across domestic and import brands, then backs every sale with a full-service shop: ASE-certified technicians, a parts center, tire sales, PA state inspection, and an in-house body shop. Financing runs through a finance center built for shoppers across the credit spectrum, with online pre-approval and a trade-in appraisal tool. Customers outside Media get a video walkaround, an at-home test drive, home delivery, or maintenance pick-up within 15 miles.",
   "services": [
     {
       "title": "Pre-Owned Vehicle Sales",
@@ -32,7 +32,7 @@
     },
     {
       "title": "Service & Repair Center",
-      "blurb": "Oil changes, brake work, tire rotations, alignments, and general auto and truck repair. The shop services all makes and models since the dealership isn't tied to one brand.",
+      "blurb": "ASE-certified technicians handle oil changes, brake work, tire rotations, wheel alignments, transmission service, and general auto and truck repair. The shop services all makes and models since the dealership isn't tied to one brand.",
       "icon_hint": "wrench"
     },
     {
@@ -42,7 +42,7 @@
     },
     {
       "title": "PA State Inspection & Tires",
-      "blurb": "State inspection and tire sales and service done on-site, part of keeping vehicles road-ready year-round.",
+      "blurb": "State inspection and a tire center with discount pricing, done on-site as part of keeping vehicles road-ready year-round.",
       "icon_hint": "tire"
     },
     {
@@ -51,9 +51,27 @@
       "icon_hint": "car-repair"
     },
     {
-      "title": "Financing",
-      "blurb": "A finance center that works with shoppers across the credit spectrum, plus a we-buy-cars program for anyone looking to sell or trade.",
+      "title": "Financing & Trade-In",
+      "blurb": "A finance center with online pre-approval for shoppers across the credit spectrum. Sellers can get a KBB instant cash offer and a trade-in appraisal, or sell outright through the we-buy-cars program.",
       "icon_hint": "handshake"
+    }
+  ],
+  "process": [
+    {
+      "title": "Find Your Vehicle",
+      "blurb": "Browse the pre-owned lot in Media or request a video walkaround from home. Every vehicle has already passed inspection."
+    },
+    {
+      "title": "Test Drive Your Way",
+      "blurb": "Drive it on the lot, or request an at-home test drive within 15 miles of Media."
+    },
+    {
+      "title": "Finance or Trade",
+      "blurb": "Apply for pre-approval online, get a KBB instant cash offer on a trade-in, or work with the finance center across the credit spectrum."
+    },
+    {
+      "title": "Drive Off or Have It Delivered",
+      "blurb": "Pick up in Media or get home delivery, then keep the vehicle running through service, parts, tires, and the body shop."
     }
   ],
   "proof": [
@@ -68,7 +86,7 @@
       "source_url": "https://www.weathersmotors.com/service/index.htm"
     }
   ],
-  "about": "Weathers Motors has been a family-owned and operated dealership in Media, PA since 1922, over a century of serving Delaware County. The dealership buys, sells, and services cars, trucks, vans, and SUVs across domestic brands like Ford, Chevy, and GMC alongside imports like Honda, Hyundai, and Kia. Because the shop doesn't sell one particular brand, its service experts work on all makes and models, backed by state-of-the-art equipment and ongoing technician training. The service department earned the Federated Dealer of the Year Award for its work. Every pre-owned vehicle passes inspection before it reaches the lot, and Carfax One Owner vehicles are available for buyers who want that added history. The dealership's finance center works with shoppers across the credit spectrum, and remote services (video walkaround, at-home test drive, home delivery, and maintenance pick-up) are available within a 15-mile radius for customers who can't make it into Media.",
+  "about": "Weathers Motors has been family-owned and operated in Media, PA since 1922, over a century of serving Delaware County. The dealership buys, sells, and services cars, trucks, vans, and SUVs across domestic brands like Ford, Chevy, and GMC alongside imports like Honda, Hyundai, and Kia. Because the shop isn't tied to one brand, its ASE-certified technicians work on all makes and models. The service department earned the Federated Dealer of the Year Award for its work. Every pre-owned vehicle passes inspection before it reaches the lot, and Carfax One Owner vehicles are available for buyers who want that history. Sellers get a KBB instant cash offer and a trade-in appraisal tool. The finance center works with shoppers across the credit spectrum, and remote services reach customers within 15 miles of Media.",
   "faq": [
     {
       "q": "What areas does Weathers Motors serve?",
@@ -76,11 +94,15 @@
     },
     {
       "q": "Does Weathers Motors work on vehicles it didn't sell?",
-      "a": "Yes. The service center works on all makes and models, not just the brands sold on the lot."
+      "a": "Yes. ASE-certified technicians work on all makes and models, not just the brands sold on the lot."
     },
     {
       "q": "Can I sell or trade my car to Weathers Motors?",
-      "a": "Yes. Weathers Motors buys cars, trucks, vans, and SUVs, and offers a we-buy-vehicles program alongside its trade and finance options."
+      "a": "Yes. The dealership buys cars, trucks, vans, and SUVs, and offers a KBB instant cash offer, a trade-in appraisal tool, and a we-buy-vehicles program."
+    },
+    {
+      "q": "Do I have to visit the lot to test drive or buy a car?",
+      "a": "No. Customers within 15 miles of Media can request a video walkaround, an at-home test drive, home delivery, or maintenance pick-up."
     }
   ],
   "marquee": [
@@ -93,6 +115,13 @@
     "Financing for Every Credit Range",
     "We Buy Cars, Trucks, Vans & SUVs"
   ],
+  "cta_band": {
+    "headline": "Ready to Find Your Next Car",
+    "support": "Browse the pre-owned lot or call the dealership to talk sales, service, or financing.",
+    "button": "Browse Pre-Owned Inventory",
+    "secondary": "Call the Dealership"
+  },
+  "footer_line": "Weathers Motors serves Media and Delaware County with pre-owned sales, service, parts, and financing since 1922.",
   "contact": {
     "phone": "610-566-5475",
     "address": "1187 West Baltimore Pike, Media, PA 19063",

@@ -1,0 +1,39 @@
+<!-- Shared defs, inlined once per page inside a hidden <svg> at the top of <body>.
+     Everything is token-driven: var(dash dash brand), var(dash dash brand-2), var(dash dash accent),
+     var(dash dash paper), var(dash dash ink). Nothing here carries a business identity. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <!-- Film grain: fine, warm, low opacity. Apply as filter="url(#pa-grain)" on a rect over art. -->
+    <filter id="pa-grain" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7" stitchTiles="stitch" result="n"/>
+      <feColorMatrix in="n" type="saturate" values="0" result="g"/>
+      <feComponentTransfer in="g" result="c"><feFuncA type="table" tableValues="0 0 .16 .16"/></feComponentTransfer>
+      <feBlend in="SourceGraphic" in2="c" mode="multiply"/>
+    </filter>
+    <!-- Soft ink shadow under art plates -->
+    <filter id="pa-plate" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="var(--ink)" flood-opacity=".18"/>
+    </filter>
+    <!-- Diagonal hatch, Papa print-shop texture -->
+    <pattern id="pa-hatch" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(-25)">
+      <rect width="10" height="10" fill="none"/>
+      <line x1="0" y1="0" x2="0" y2="10" stroke="currentColor" stroke-width="1.2" opacity=".28"/>
+    </pattern>
+    <!-- Dot grid for panels -->
+    <pattern id="pa-dots" width="18" height="18" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.3" fill="currentColor" opacity=".22"/>
+    </pattern>
+    <!-- Brand to deep vertical wash -->
+    <linearGradient id="pa-wash" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="var(--brand)"/>
+      <stop offset="1" stop-color="var(--brand-2)"/>
+    </linearGradient>
+    <!-- Accent glow -->
+    <radialGradient id="pa-glow" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="var(--accent)" stop-opacity=".55"/>
+      <stop offset="1" stop-color="var(--accent)" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Seal ring path for textPath, radius 46 centered at 60,60 -->
+    <path id="pa-seal-ring" d="M60,14 a46,46 0 1,1 -0.01,0" fill="none"/>
+  </defs>
+</svg>

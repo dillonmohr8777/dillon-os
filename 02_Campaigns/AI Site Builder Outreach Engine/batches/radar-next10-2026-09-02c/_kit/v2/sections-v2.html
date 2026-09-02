@@ -1,0 +1,131 @@
+<!-- sections-v2.html: the home-page grammar. Builders copy this order and these
+     class names exactly, inline kit.css + kit-v2.css + kit.js, then fill from
+     copy/<slug>.json. Tokens {{like_this}} are copy fields. Comments say what
+     is optional. -->
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- shared SVG defs, dividers sprite, icons sprite: paste the three hidden svgs here -->
+
+<header class="site-head" role="banner">
+  <div class="container head-row">
+    <a class="brand" href="#top" aria-label="{{business_name}}">
+      <!-- EXACT real logo: <img src="data:..." alt="{{business_name}}" height="40"> -->
+    </a>
+    <nav class="head-nav" aria-label="Sections">
+      <a href="#services">Services</a><a href="#process">How it works</a><a href="#about">About</a><a href="#faq">FAQ</a>
+    </nav>
+    <div class="head-actions">
+      <a class="tel" href="tel:{{contact.phone_digits}}">{{contact.phone}}</a>
+      <a class="btn btn-solid" href="#contact">{{cta_primary.label}}</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero surface-deep" id="top">
+  <div class="container hero-grid">
+    <div class="hero-copy" data-reveal>
+      <p class="eyebrow">{{town}} · {{vertical_label}}</p>
+      <h1>{{headline}}</h1>
+      <p class="lede">{{subhead}}</p>
+      <div class="actions">
+        <a class="btn btn-solid" href="#contact">{{cta_primary.label}}</a>
+        <a class="btn btn-ghost" href="#services">{{cta_secondary.label}}</a>
+      </div>
+    </div>
+    <div class="hero-art" data-parallax>
+      <!-- elements/hero-<slug>.svg inline -->
+      <!-- optional, only with a sourced year: elements/seal.svg inline, class="seal-float" -->
+    </div>
+  </div>
+</section>
+<svg class="pa-divider" viewBox="0 0 1440 48" preserveAspectRatio="none" aria-hidden="true" style="color:var(--paper)"><use href="#pa-div-tear"/></svg>
+
+<section class="services surface-paper" id="services">
+  <div class="container">
+    <p class="eyebrow" data-reveal>What we do</p>
+    <h2 data-reveal>{{services_heading_or_intro_first_sentence}}</h2>
+    <p class="intro" data-reveal>{{intro}}</p>
+    <div class="grid cards" data-reveal data-stagger>
+      <!-- repeat per services[] -->
+      <article class="card">
+        <svg class="ico" aria-hidden="true"><use href="#ic-{{icon_id}}"/></svg>
+        <h3>{{services[i].title}}</h3>
+        <p>{{services[i].blurb}}</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- optional: only when proof[] is non-empty -->
+<section class="stats surface-brand" aria-label="At a glance">
+  <div class="container stats-row" data-reveal data-stagger>
+    <div class="stat"><span class="num" data-count="{{proof[i].number}}">{{proof[i].number}}</span><span class="lbl">{{proof[i].label}}</span></div>
+  </div>
+</section>
+
+<section class="process surface-panel" id="process">
+  <div class="container">
+    <p class="eyebrow" data-reveal>How it works</p>
+    <ol class="rail" data-reveal data-stagger>
+      <!-- repeat per process[] -->
+      <li class="step"><span class="numeral">01</span><h3>{{process[i].title}}</h3><p>{{process[i].blurb}}</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="split surface-paper" id="about">
+  <div class="container split-grid">
+    <div class="split-copy" data-reveal>
+      <p class="eyebrow">About {{business_name}}</p>
+      <h2>{{about_heading}}</h2>
+      <p>{{about}}</p>
+    </div>
+    <div class="split-art" data-reveal>
+      <!-- second art moment: a cropped detail of the hero art on a panel, or the seal large -->
+    </div>
+  </div>
+</section>
+
+<section class="faq surface-panel" id="faq">
+  <div class="container narrow">
+    <p class="eyebrow" data-reveal>Questions</p>
+    <!-- repeat per faq[] -->
+    <details data-reveal><summary>{{faq[i].q}}</summary><p>{{faq[i].a}}</p></details>
+  </div>
+</section>
+
+<section class="marquee surface-deep" aria-hidden="true">
+  <div class="track"><!-- marquee[] joined with · , duplicated once for the loop --></div>
+</section>
+
+<svg class="pa-divider" viewBox="0 0 1440 48" preserveAspectRatio="none" aria-hidden="true" style="color:var(--accent)"><use href="#pa-div-slant"/></svg>
+<section class="cta surface-accent" id="contact">
+  <div class="container cta-row" data-reveal>
+    <div>
+      <h2>{{cta_band.headline}}</h2>
+      <p>{{cta_band.support}}</p>
+    </div>
+    <div class="actions">
+      <a class="btn btn-solid" href="tel:{{contact.phone_digits}}">{{cta_band.button}}</a>
+      <a class="btn btn-ghost" href="#services">{{cta_band.secondary}}</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-foot surface-deep" role="contentinfo">
+  <div class="container foot-grid">
+    <div class="foot-brand">
+      <!-- EXACT real logo mark or lockup at 28 px -->
+      <p>{{footer_line}}</p>
+    </div>
+    <address class="foot-contact">
+      <a href="tel:{{contact.phone_digits}}">{{contact.phone}}</a>
+      <span>{{contact.address}}</span>
+      <span>{{contact.hours}}</span>
+    </address>
+    <nav class="foot-nav" aria-label="Footer"><a href="#services">Services</a><a href="#process">How it works</a><a href="#about">About</a><a href="#faq">FAQ</a></nav>
+  </div>
+  <p class="container legal">© {{year}} {{business_name}}. Preview build; not the business's live site.</p>
+</footer>

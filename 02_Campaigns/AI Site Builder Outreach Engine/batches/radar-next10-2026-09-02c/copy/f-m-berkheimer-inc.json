@@ -24,43 +24,61 @@
     "label": "Request a Free Estimate",
     "note": "Routes to the contact section; site offers free in-home estimates for new installation and free indoor air quality consultations."
   },
-  "intro": "F.M. Berkheimer has kept Central Pennsylvania homes and businesses comfortable since 1950, when founder Foster Berkheimer started the company on hard work and honesty. Now in its third generation of family ownership, the company blends those old-fashioned values with modern HVAC technology: real load calculations, NATE-certified technicians, and straightforward recommendations. The approach hasn't changed - no overselling, no cut corners, and no disappearing when the job is finished.",
+  "intro": "F.M. Berkheimer has kept Central Pennsylvania homes and businesses comfortable since 1950, when founder Foster Berkheimer started the company on two simple principles: hard work and honesty. Now in its third generation of family ownership, the shop serves Mechanicsburg, Camp Hill, Carlisle, Harrisburg, Hershey, and more than twenty surrounding communities. NATE-certified technicians run real load calculations before recommending anything, and the company holds Mitsubishi Electric Diamond Contractor and Carrier Factory Authorized Dealer status. The approach hasn't changed since 1950: no overselling, no cut corners, no disappearing once the job is finished.",
   "services": [
     {
       "title": "Routine Maintenance",
-      "blurb": "Regular HVAC upkeep to improve efficiency, extend equipment life, reduce utility bills, cut down on repairs, and keep indoor comfort consistent.",
+      "blurb": "Regular HVAC upkeep to improve efficiency, extend equipment life, and reduce utility bills. Scheduled visits catch small problems before they turn into repairs.",
       "icon_hint": "maintenance"
     },
     {
       "title": "New Installation",
-      "blurb": "Free in-home estimates with expert load calculations and system recommendations for homeowners installing a new furnace, AC, or full HVAC system.",
+      "blurb": "Free in-home estimates with real load calculations for homeowners installing a new furnace, AC, or full HVAC system. Recommendations are sized to the home, not upsold.",
       "icon_hint": "install"
     },
     {
       "title": "Repair Services",
-      "blurb": "Technicians trained on the latest technology diagnose the real problem and give honest, straightforward recommendations before any work begins.",
+      "blurb": "Technicians trained on current equipment diagnose the actual problem first. Straightforward recommendations come before any work begins, on any brand.",
       "icon_hint": "wrench"
     },
     {
       "title": "Upgrades & Replacements",
-      "blurb": "Informed guidance for homeowners deciding whether to repair or replace an aging system, focused on long-term comfort and efficiency.",
+      "blurb": "Honest guidance on whether to repair or replace an aging system. The call is based on long-term comfort and efficiency, not the easiest sale.",
       "icon_hint": "upgrade"
     },
     {
       "title": "Indoor Air Quality",
-      "blurb": "Free consultations on filtration, humidity control, and ventilation for today's more tightly sealed homes.",
+      "blurb": "Free consultations on filtration, humidity control, and ventilation for today's more tightly sealed homes. AprilAire products install alongside existing systems.",
       "icon_hint": "air-quality"
     },
     {
       "title": "Water Heaters",
-      "blurb": "Installation, maintenance, and repair for gas, electric, and tankless water heaters.",
+      "blurb": "Installation, maintenance, and repair for gas, electric, and tankless water heaters. One call covers the whole mechanical side of the home.",
       "icon_hint": "water-heater"
+    }
+  ],
+  "process": [
+    {
+      "title": "Call or request an estimate",
+      "blurb": "Reach the shop at 717-766-6152 during business hours, or after hours for an emergency. New installations get a free in-home estimate scheduled first."
+    },
+    {
+      "title": "A technician diagnoses the real problem",
+      "blurb": "For repairs, a NATE-certified technician inspects the system and finds the actual issue before recommending anything. No guessing, no upsell."
+    },
+    {
+      "title": "You get a straightforward recommendation",
+      "blurb": "The technician explains what needs fixing, what it costs, and what the options are, including repair-versus-replace when the system is aging."
+    },
+    {
+      "title": "The work gets done right",
+      "blurb": "Installations, repairs, and maintenance visits are completed to code, with 24/7 emergency service available if something goes wrong after."
     }
   ],
   "proof": [
     {
-      "label": "Serving Central PA since 1950",
-      "value": "75+ Years",
+      "label": "Family owned since",
+      "value": "1950",
       "source_url": "https://fmberkheimer.com/about-us"
     },
     {
@@ -72,9 +90,14 @@
       "label": "Beyond normal business hours",
       "value": "24/7 Emergency Service",
       "source_url": "https://fmberkheimer.com/"
+    },
+    {
+      "label": "Licensing",
+      "value": "Bonded, Licensed & Insured (PA006087)",
+      "source_url": "https://fmberkheimer.com/about-us"
     }
   ],
-  "about": "F.M. Berkheimer is a third-generation, family-owned heating and cooling company founded by Foster Berkheimer in 1950 and still serving Mechanicsburg, Camp Hill, New Cumberland, Carlisle, Enola, Harrisburg, Hershey, and the surrounding Central Pennsylvania communities. The company is bonded, licensed, and insured (PA006087), staffed by NATE-certified technicians, and partners with Mitsubishi Electric, Carrier, Generac, and AprilAire. Every call starts with a real diagnosis, not a guess, and the company holds to its founding principles: honest, reliable, professional heating and cooling service, with no overselling and no cut corners.",
+  "about": "F.M. Berkheimer is a third-generation, family-owned heating and cooling company founded by Foster Berkheimer in 1950 on two principles: hard work and honesty. The shop still serves Mechanicsburg, Camp Hill, New Cumberland, Carlisle, Enola, Harrisburg, Hershey, and more than twenty surrounding Central Pennsylvania communities. The company is bonded, licensed, and insured (PA006087), staffed by NATE-certified technicians, and holds Mitsubishi Electric Diamond Contractor and Carrier Factory Authorized Dealer status alongside partnerships with Generac and AprilAire. It is accredited by the Better Business Bureau and works with NEIF on financing for new installations. Every call starts with a real diagnosis, not a guess, and the company holds to its founding principles: honest, reliable, professional service, with no overselling and no cut corners.",
   "faq": [
     {
       "q": "What areas does F.M. Berkheimer serve?",
@@ -100,8 +123,16 @@
     "Bonded, Licensed & Insured",
     "24/7 Emergency Service",
     "Serving Mechanicsburg & Central PA",
-    "Carrier Factory Authorized Dealer"
+    "Carrier Factory Authorized Dealer",
+    "Mitsubishi Electric Diamond Contractor"
   ],
+  "cta_band": {
+    "headline": "Ready for a straight answer?",
+    "support": "Call the shop or request a free estimate on a new system.",
+    "button": "Call 717-766-6152",
+    "secondary": "Request a Free Estimate"
+  },
+  "footer_line": "F.M. Berkheimer Inc, family-owned heating and cooling for Mechanicsburg and Central Pennsylvania since 1950.",
   "contact": {
     "phone": "717-766-6152",
     "address": "1400 Williams Grove Road, Mechanicsburg, PA 17055",

@@ -1,0 +1,54 @@
+<!-- Speck's Broasted Chicken, Collegeville, since 1953.
+     Concept: a roadside sign on a pole with a chevron arrow, a broaster bucket
+     with steam, sun rays behind. Retro Americana, tomato red, mustard, cream.
+     Motion: arrow bulbs chase, steam rises, sun rays turn slowly. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" class="pa-hero pa-hero-specks" role="img" aria-label="Roadside broasted chicken sign">
+  <style>
+    .pa-hero-specks .rays{transform-origin:640px 250px;animation:sp-turn 60s linear infinite}
+    .pa-hero-specks .bulb{animation:sp-chase 1.2s steps(1) infinite}
+    .pa-hero-specks .bulb:nth-child(2){animation-delay:.4s}.pa-hero-specks .bulb:nth-child(3){animation-delay:.8s}
+    .pa-hero-specks .steam{animation:sp-rise 5s ease-in-out infinite}.pa-hero-specks .steam.b{animation-delay:-2.5s}
+    @keyframes sp-turn{to{transform:rotate(360deg)}}
+    @keyframes sp-chase{0%{opacity:1}33%{opacity:.25}100%{opacity:.25}}
+    @keyframes sp-rise{0%{transform:translateY(0);opacity:0}30%{opacity:.8}100%{transform:translateY(-90px);opacity:0}}
+    @media (prefers-reduced-motion:reduce){.pa-hero-specks *{animation:none!important}.pa-hero-specks .steam{opacity:.5}.pa-hero-specks .bulb{opacity:1}}
+  </style>
+  <rect width="900" height="600" fill="var(--paper)"/>
+  <g class="rays" fill="var(--accent)" opacity=".28">
+    <path d="M640,250 L900,90 L900,170 Z"/><path d="M640,250 L900,330 L900,410 Z"/><path d="M640,250 L560,0 L700,0 Z"/>
+    <path d="M640,250 L360,60 L440,10 Z"/><path d="M640,250 L900,520 L900,600 L840,600 Z"/><path d="M640,250 L520,600 L640,600 Z"/>
+    <path d="M640,250 L340,420 L380,500 Z"/>
+  </g>
+  <circle cx="640" cy="250" r="120" fill="var(--accent)"/>
+  <!-- ground -->
+  <path d="M0,520 L900,500 L900,600 L0,600 Z" fill="var(--brand-2)"/>
+  <!-- sign pole and board -->
+  <rect x="216" y="260" width="22" height="270" fill="var(--ink)"/>
+  <g filter="url(#pa-plate)">
+    <rect x="80" y="110" width="300" height="160" rx="18" fill="var(--brand)"/>
+    <rect x="94" y="124" width="272" height="132" rx="12" fill="none" stroke="var(--paper)" stroke-width="4"/>
+    <text x="230" y="176" text-anchor="middle" font-family="var(--font-display)" font-size="34" font-weight="900" fill="var(--paper)" letter-spacing="2">BROASTED</text>
+    <text x="230" y="222" text-anchor="middle" font-family="var(--font-display)" font-size="42" font-weight="900" fill="var(--accent)" letter-spacing="3">CHICKEN</text>
+  </g>
+  <!-- chevron arrow with bulbs -->
+  <g transform="translate(380,150)">
+    <path d="M0,20 L120,20 L120,0 L180,40 L120,80 L120,60 L0,60 Z" fill="var(--accent)" stroke="var(--ink)" stroke-width="4"/>
+    <g fill="var(--paper)">
+      <circle class="bulb" cx="30" cy="40" r="7"/><circle class="bulb" cx="70" cy="40" r="7"/><circle class="bulb" cx="110" cy="40" r="7"/>
+    </g>
+  </g>
+  <!-- bucket -->
+  <g filter="url(#pa-plate)">
+    <path d="M470,320 L700,320 L672,520 L498,520 Z" fill="var(--paper)"/>
+    <path d="M470,320 L700,320 L672,520 L498,520 Z" fill="url(#pa-hatch)" style="color:var(--brand)" opacity=".9"/>
+    <rect x="462" y="304" width="246" height="30" rx="6" fill="var(--brand)"/>
+    <rect x="530" y="380" width="110" height="70" rx="8" fill="var(--paper)"/>
+    <text x="585" y="425" text-anchor="middle" font-family="var(--font-display)" font-size="26" font-weight="900" fill="var(--brand)">1953</text>
+    <g fill="var(--accent)"><ellipse cx="520" cy="300" rx="34" ry="20"/><ellipse cx="585" cy="286" rx="38" ry="22"/><ellipse cx="650" cy="300" rx="34" ry="20"/></g>
+  </g>
+  <g fill="none" stroke="var(--ink)" stroke-width="8" stroke-linecap="round" opacity=".55">
+    <path class="steam a" d="M550,270 C566,240 534,224 550,192"/>
+    <path class="steam b" d="M620,270 C636,240 604,224 620,192"/>
+  </g>
+  <rect width="900" height="600" fill="var(--brand-2)" filter="url(#pa-grain)" opacity=".3" style="mix-blend-mode:multiply"/>
+</svg>

@@ -24,32 +24,50 @@
     "label": "Get Directions",
     "note": "Links to their existing Google Maps listing at 3969 Ridge Pike, Collegeville, PA 19426."
   },
-  "intro": "In 1953, Stanley B. Landis, aka Speck, started the original Speck's Drive-In on Ridge Pike based on the idea of Pipin' Hot Sandwiches and good, affordable fast food. The Collegeville location has stayed in the family ever since, with Speck's son Randy still running daily operations. The restaurant is still renowned for its sandwiches, but the Broasted chicken and homemade coleslaw remain the draw. Fast, affordable, and a Collegeville landmark for anyone returning to the area.",
+  "intro": "Speck's Broasted Chicken has served Collegeville from the same spot on Ridge Pike since 1953, when Stanley B. Landis, known as Speck, opened Speck's Drive-In on the idea of Pipin' Hot Sandwiches and honest, affordable food. His son Randy still owns the restaurant and runs it day to day. The menu covers award-winning Broasted chicken, hand-dressed hoagies, and homemade coleslaw, plus soups, salads, and milkshakes in nine flavors. Order at the counter, call ahead, or pick up online for a fast, family dinner that has stayed a Collegeville landmark for over seventy years.",
   "services": [
     {
       "title": "Broasted Chicken",
-      "blurb": "Speck's award-winning Broasted chicken by the piece, bucket, or combo, in equal assortments of breasts, legs, thighs, and wings. Large party orders welcome with 3 days' notice.",
+      "blurb": "Speck's award-winning Broasted chicken comes by the piece, in dinners, or in buckets from 4 to 100 pieces, in an equal assortment of breasts, legs, thighs, and wings. Dinners include french fries, a small side, and a roll. Large party orders are welcome with three days' notice.",
       "icon_hint": "drumstick"
     },
     {
       "title": "Sandwiches & Hoagies",
-      "blurb": "Burgers made like homemade with fresh ground beef, hot dogs, fish and crab cake sandwiches, and hoagies dressed with provolone, onion, tomato, oil, and oregano.",
+      "blurb": "Burgers are made like homemade with fresh ground beef, alongside hot dogs, a chicken salad sandwich, and a fried fish filet or crab cake. Hoagies come dressed with provolone, onion, tomato, oil, and oregano, with lettuce and peppers on request.",
       "icon_hint": "sandwich"
     },
     {
       "title": "Steak Sandwiches",
-      "blurb": "Chicken or beef steak sandwiches on a long roll, plain, cheese steak, or a full steak hoagie, in three sizes.",
+      "blurb": "Chicken or beef steak sandwiches come on a long roll, plain, as a cheese steak, or piled into a full steak hoagie. Every option comes in small, medium, and large sizes to match the appetite.",
       "icon_hint": "steak"
     },
     {
       "title": "Sides & Soups",
-      "blurb": "Coleslaw, macaroni salad, potato salad, garden salad, and a hot vegetable of the day, plus daily soups and chowders and Wednesday chili.",
+      "blurb": "Coleslaw, macaroni salad, potato salad, pasta salad, and garden salad round out the counter, along with baked beans, mashed potatoes, and a hot vegetable of the day. Daily soups and chowders rotate through the week, with chili served every Wednesday.",
       "icon_hint": "bowl"
     },
     {
       "title": "Kids Meals & Milkshakes",
-      "blurb": "Kids meals with applesauce, a kiddie side, and a choice of juice or milk, plus milkshakes in nine flavors.",
+      "blurb": "Kids meals come with applesauce, a kiddie side, and a choice of juice or milk, with a hot dog, chicken nuggets, or a chicken leg as the main. Milkshakes come in nine flavors, plus fountain soda, coffee, and bottled drinks for the rest of the table.",
       "icon_hint": "milkshake"
+    }
+  ],
+  "process": [
+    {
+      "title": "Order your way",
+      "blurb": "Call ahead, order online, or walk up to the counter on Ridge Pike and pick straight from the menu."
+    },
+    {
+      "title": "Broasted fresh",
+      "blurb": "Chicken goes into the broaster to order, and sides like coleslaw and macaroni salad are made in-house."
+    },
+    {
+      "title": "Pick up or dine in",
+      "blurb": "Grab your order for pickup or eat in at the Collegeville location."
+    },
+    {
+      "title": "Planning a party",
+      "blurb": "Call three days ahead for chicken buckets of 24 pieces or more, so the kitchen can get the count right."
     }
   ],
   "proof": [
@@ -64,7 +82,7 @@
       "source_url": "http://speckschicken.com/history.html"
     }
   ],
-  "about": "In 1953, Stanley B. Landis, known as Speck, started the original Speck's Drive-In on Ridge Pike in Limerick on the idea of Pipin' Hot Sandwiches and good, affordable fast food, years before fast-food franchises defined the American landscape. After a fire at the Big Pixie location at Ridge and Germantown Pikes, Speck acquired the property and ran both locations. The Limerick spot changed hands over the years, but the Collegeville location has stayed in the family, with Speck's children, their spouses, and his grandchildren holding roles over the decades. Today Speck's son Randy still owns the restaurant and is heavily involved in daily operations. The restaurant remains known for its sandwiches, with the Broasted chicken and homemade coleslaw as the primary draw. Speck's is a Collegeville landmark and often the first stop for people coming back to the area.",
+  "about": "In 1953, Stanley B. Landis, known as Speck, opened the original Speck's Drive-In on Ridge Pike in Limerick, built on the idea of Pipin' Hot Sandwiches and honest, affordable fast food, years before national fast-food chains reached the area. After a fire at the nearby Big Pixie location at Ridge and Germantown Pikes, Speck bought the property and ran both spots at once. The Limerick location changed hands over the years, but the Collegeville restaurant stayed with the family, with Speck's children, their spouses, and his grandchildren taking on roles over the decades. Today his son Randy still owns Speck's and runs daily operations. The restaurant remains known for its sandwiches, with the Broasted chicken and homemade coleslaw as the main draw, and mascot Speckle still appears at community events around town.",
   "faq": [
     {
       "q": "How long has Speck's been in Collegeville?",
@@ -76,7 +94,11 @@
     },
     {
       "q": "Can I order online or get delivery?",
-      "a": "Yes. Order for pickup online, or get delivery through the restaurant's listed delivery partners."
+      "a": "Yes. Order for pickup online, or arrange delivery through the restaurant's listed delivery partners."
+    },
+    {
+      "q": "Can Speckle make an appearance at our event?",
+      "a": "Yes. Speck's mascot, Speckle, appears at community events. Call the restaurant to schedule an appearance."
     }
   ],
   "marquee": [
@@ -86,12 +108,20 @@
     "Secret Recipe Coleslaw",
     "A Collegeville Landmark",
     "Pipin' Hot Sandwiches",
-    "Fast, Affordable, Family Dinners"
+    "Milkshakes in Nine Flavors",
+    "Party Orders Welcome"
   ],
+  "cta_band": {
+    "headline": "Ready for a bucket?",
+    "support": "Order ahead or swing by Ridge Pike today.",
+    "button": "Order for Pickup",
+    "secondary": "Get Directions"
+  },
+  "footer_line": "Speck's Broasted Chicken has served Collegeville, PA from Ridge Pike since 1953.",
   "contact": {
     "phone": "(610) 489-2110",
     "address": "3969 Ridge Pike, Collegeville, PA 19426",
-    "hours": "Mon-Fri 10am-9pm, Sat 11am-9pm, Sun 12pm-9pm",
+    "hours": "Mon-Fri 10am-9pm, Sat 11am-9pm, Sun 12pm-8pm",
     "email": "PLACEHOLDER"
   },
   "placeholders": ["email"],

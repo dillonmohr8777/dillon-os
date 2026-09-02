@@ -1,0 +1,48 @@
+<!-- Weathers Motors and Auto Sales, family dealership in Media PA since 1922.
+     Concept: a two-lane road running to a low sun over a Delaware County ridge,
+     a period sedan silhouette in the foreground lane, a dealership pennant string
+     across the top. Navy, cream, one red pennant. Motion: road dashes travel,
+     pennants ripple, sun haze breathes. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" class="pa-hero pa-hero-weathers" role="img" aria-label="A road toward the dealership at dusk">
+  <style>
+    .pa-hero-weathers .dash{stroke-dasharray:40 40;animation:wm-road 1.6s linear infinite}
+    .pa-hero-weathers .flag{transform-origin:center top;animation:wm-ripple 2.4s ease-in-out infinite}
+    .pa-hero-weathers .flag:nth-child(even){animation-delay:-1.2s}
+    .pa-hero-weathers .haze{animation:wm-breathe 6s ease-in-out infinite}
+    @keyframes wm-road{to{stroke-dashoffset:-80}}
+    @keyframes wm-ripple{0%,100%{transform:skewX(0deg)}50%{transform:skewX(-8deg)}}
+    @keyframes wm-breathe{0%,100%{opacity:.5}50%{opacity:.9}}
+    @media (prefers-reduced-motion:reduce){.pa-hero-weathers *{animation:none!important}}
+  </style>
+  <rect width="900" height="600" fill="url(#pa-wash)"/>
+  <circle class="haze" cx="450" cy="300" r="260" fill="url(#pa-glow)"/>
+  <circle cx="450" cy="290" r="90" fill="var(--accent)"/>
+  <!-- ridge -->
+  <path d="M0,330 C140,290 240,330 380,300 C520,270 620,320 760,290 C830,276 870,290 900,284 L900,600 L0,600 Z" fill="var(--brand-2)"/>
+  <!-- road -->
+  <path d="M450,300 L150,600 L750,600 Z" fill="var(--ink)" opacity=".95"/>
+  <line class="dash" x1="450" y1="300" x2="450" y2="600" stroke="var(--paper)" stroke-width="6" stroke-linecap="round"/>
+  <path d="M450,300 L150,600 M450,300 L750,600" stroke="var(--paper)" stroke-width="4" opacity=".6"/>
+  <!-- pennant string -->
+  <path d="M0,70 C300,130 600,130 900,70" fill="none" stroke="var(--paper)" stroke-width="3" opacity=".8"/>
+  <g>
+    <polygon class="flag" points="90,86 130,92 110,140" fill="var(--paper)"/>
+    <polygon class="flag" points="200,103 240,106 220,156" fill="var(--accent)"/>
+    <polygon class="flag" points="320,113 360,114 340,164" fill="var(--paper)"/>
+    <polygon class="flag" points="440,117 480,117 460,167" fill="var(--paper)"/>
+    <polygon class="flag" points="560,114 600,112 580,163" fill="var(--accent)"/>
+    <polygon class="flag" points="680,106 720,102 700,153" fill="var(--paper)"/>
+    <polygon class="flag" points="790,92 830,86 810,138" fill="var(--paper)"/>
+  </g>
+  <!-- sedan silhouette -->
+  <g filter="url(#pa-plate)" transform="translate(120,400)">
+    <path d="M40,120 L60,70 C90,40 130,30 200,30 L300,30 C350,30 400,60 430,90 L520,100 C540,102 550,112 550,124 L550,150 L40,150 Z" fill="var(--paper)"/>
+    <path d="M110,70 C140,46 170,44 220,44 L220,90 L100,90 Z" fill="var(--brand-2)"/>
+    <path d="M240,44 L300,44 C340,44 380,64 400,88 L240,88 Z" fill="var(--brand-2)"/>
+    <rect x="40" y="128" width="510" height="8" fill="var(--brand-2)" opacity=".3"/>
+    <circle cx="140" cy="150" r="40" fill="var(--ink)"/><circle cx="140" cy="150" r="18" fill="var(--paper)"/>
+    <circle cx="440" cy="150" r="40" fill="var(--ink)"/><circle cx="440" cy="150" r="18" fill="var(--paper)"/>
+    <circle cx="540" cy="118" r="8" fill="var(--accent)"/>
+  </g>
+  <rect width="900" height="600" fill="var(--brand-2)" filter="url(#pa-grain)" opacity=".35" style="mix-blend-mode:multiply"/>
+</svg>

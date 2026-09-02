@@ -1,0 +1,18 @@
+<!-- Section dividers as symbols. Use: <svg class="pa-divider" viewBox="0 0 1440 48" preserveAspectRatio="none"><use href="#pa-div-tear"/></svg>
+     Height 48px at 1440, 28px at 390 via CSS. Fill is currentColor: set it to the color of the section BELOW so the edge reads as a cut.
+     Use one between the hero and the first section and one before the CTA band. Never stack two. -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <symbol id="pa-div-tear" viewBox="0 0 1440 48" preserveAspectRatio="none">
+    <path fill="currentColor" d="M0,48 L0,22 L38,30 L84,14 L130,28 L176,10 L222,26 L268,18 L314,32 L360,12 L406,24 L452,16 L498,30 L544,8 L590,22 L636,18 L682,30 L728,12 L774,26 L820,16 L866,28 L912,10 L958,24 L1004,18 L1050,32 L1096,14 L1142,26 L1188,12 L1234,28 L1280,18 L1326,30 L1372,10 L1418,22 L1440,26 L1440,48 Z"/>
+  </symbol>
+  <symbol id="pa-div-slant" viewBox="0 0 1440 48" preserveAspectRatio="none">
+    <polygon fill="currentColor" points="0,48 1440,0 1440,48"/>
+  </symbol>
+  <symbol id="pa-div-marks" viewBox="0 0 1440 48" preserveAspectRatio="none">
+    <line x1="0" y1="24" x2="1440" y2="24" stroke="currentColor" stroke-width="1" opacity=".35"/>
+    <g stroke="currentColor" stroke-width="1.5" opacity=".6" fill="none">
+      <path d="M40,14 v20 M30,24 h20"/><path d="M1400,14 v20 M1390,24 h20"/>
+      <circle cx="40" cy="24" r="6"/><circle cx="1400" cy="24" r="6"/>
+    </g>
+  </symbol>
+</svg>

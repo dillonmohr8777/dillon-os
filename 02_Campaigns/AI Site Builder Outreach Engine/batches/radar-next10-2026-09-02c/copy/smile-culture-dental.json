@@ -23,37 +23,55 @@
     "label": "Call the Office",
     "note": "Click-to-call using their published Huntingdon Valley number."
   },
-  "intro": "Smile Culture Dental in Huntingdon Valley is built around three words: kindness, comfort, and transparency. The team, led by Dr. Harshil Boghara and Dr. Kushal Parikh alongside general dentists, an orthodontist, and specialists, offers everything from routine exams and cleanings to implants, veneers, Invisalign, and emergency care. Every PPO insurance plan is accepted, and virtual consultations are available for patients who want to start the conversation before coming in. The practice was recognized among Top Dentists 2025.",
+  "intro": "Smile Culture Dental in Huntingdon Valley is built on three words: kindness, comfort, and transparency. The team, led by Dr. Harshil Boghara and Dr. Kushal Parikh alongside general dentists Dr. Tony Tharakan and Dr. Miraj Dudhat and orthodontist Dr. Adam Taee, covers routine exams and cleanings through implants, veneers, Invisalign, and emergency care. All PPO insurance plans are accepted, and virtual consultations are available for patients who want to start the conversation before coming in. The office is one of five Smile Culture locations across the Philadelphia area and was recognized among Top Dentists 2025.",
   "services": [
     {
       "title": "Preventative & General Care",
-      "blurb": "Dental exams, professional teeth cleanings, tooth-colored fillings, and preventative care to keep small problems from becoming big ones.",
+      "blurb": "Dental exams, professional teeth cleanings, and tooth-colored fillings catch small problems before they grow. Preventative care visits keep the whole mouth on track between appointments.",
       "icon_hint": "tooth-check"
     },
     {
       "title": "Dental Implants",
-      "blurb": "Implant treatment from a team with advanced implantology training, including doctors completing fellowships with the International Congress of Oral Implantology.",
+      "blurb": "Implant treatment comes from doctors with advanced implantology training, including continuing education at the Misch Implant Institute and Implant Pathways. Dr. Boghara is completing a fellowship with the International Congress of Oral Implantology.",
       "icon_hint": "implant"
     },
     {
       "title": "Veneers & Cosmetic Dentistry",
-      "blurb": "Veneers and cosmetic treatments handled by doctors with advanced cosmetic dentistry training and American Academy of Cosmetic Dentistry membership.",
+      "blurb": "Veneers and cosmetic treatments are handled by doctors with advanced cosmetic dentistry training and membership in the American Academy of Cosmetic Dentistry. Dr. Boghara also trained with the International Association of Facial Aesthetics.",
       "icon_hint": "smile"
     },
     {
       "title": "Orthodontics & Invisalign",
-      "blurb": "Orthodontic services and Invisalign clear aligners from Dr. Adam Taee, a top Invisalign provider since 2017.",
+      "blurb": "Orthodontic care and Invisalign clear aligners come from Dr. Adam Taee, a top Invisalign provider since 2017 with an orthodontics degree from Boston University. Dr. Taee also treats TMJ disorder and dental sleep medicine.",
       "icon_hint": "aligner"
     },
     {
       "title": "Emergency Dental Care",
-      "blurb": "Emergency dental care for unexpected pain or damage, without waiting weeks for an opening.",
+      "blurb": "Emergency dental care covers unexpected pain or damage without a weeks-long wait for an opening. The team fits urgent visits in alongside the regular schedule.",
       "icon_hint": "emergency"
     },
     {
       "title": "Facial Aesthetics",
-      "blurb": "Facial rejuvenation and injectables, Morpheus8, Lumecca IPL treatments, and laser hair removal offered alongside dental care.",
+      "blurb": "Facial rejuvenation and injectables, Morpheus8 microneedling, Lumecca IPL, and Diolaze laser hair removal are offered alongside dental care at the same office. These treatments are handled by doctors with training in facial aesthetics, not referred out to a separate spa.",
       "icon_hint": "aesthetics"
+    }
+  ],
+  "process": [
+    {
+      "title": "Book a visit",
+      "blurb": "Schedule in person or start with a virtual consultation for orthodontic or implant questions before you come in."
+    },
+    {
+      "title": "Exam and plan",
+      "blurb": "A dentist reviews your smile and outlines options, from a cleaning to implants, veneers, or Invisalign."
+    },
+    {
+      "title": "Treatment with the right doctor",
+      "blurb": "General dentists, an orthodontist, or a specialist handle the work, with your PPO insurance applied at the office."
+    },
+    {
+      "title": "Follow-up care",
+      "blurb": "Return for cleanings, adjustments, or the next phase of treatment as your plan calls for it."
     }
   ],
   "proof": [
@@ -71,9 +89,14 @@
       "label": "Insurance",
       "value": "Accepts all PPO insurance",
       "source_url": "https://smileculture.com/huntingdon-valley/"
+    },
+    {
+      "label": "Locations",
+      "value": "Five offices: Huntingdon Valley, Trooper, Trevose, Glen Mills, and Fairless Hills",
+      "source_url": "https://smileculture.com/"
     }
   ],
-  "about": "Smile Culture Dental's Huntingdon Valley team is led by Dr. Harshil Boghara, CEO and Clinical Director, a Temple University Kornberg School of Dentistry graduate with advanced training in cosmetic dentistry and implantology, recognized as a Top Doctor in Philadelphia for four consecutive years. Co-Owner Dr. Kushal Parikh graduated Summa Cum Laude from Temple with the Dean's Award for Clinical Excellence in Patient Care and holds advanced implantology and full-mouth rehabilitation certification. General dentists Dr. Tony Tharakan and Dr. Miraj Dudhat and orthodontist Dr. Adam Taee, a top Invisalign provider since 2017 with a research fellowship at Harvard School of Dental Medicine, round out the clinical team. The office describes its approach as bringing transparency, technology, and trust together, with a philosophy that merging cutting-edge technology with a highly trained team is the key to delivering top-tier dentistry in a warm, welcoming environment. Located at 2150 E County Line Rd. alongside Smile Culture's Trooper, Trevose, Glen Mills, and Fairless Hills offices, and a member of the Pennsylvania Dental Association, American Dental Association, and International Congress of Oral Implantologists.",
+  "about": "Smile Culture Dental's Huntingdon Valley team is led by Dr. Harshil Boghara, CEO and Clinical Director, a Temple University Kornberg School of Dentistry graduate with advanced training in cosmetic dentistry and implantology, recognized as a Top Doctor in Philadelphia for four consecutive years. Co-owner Dr. Kushal Parikh graduated Summa Cum Laude from Temple with the Dean's Award for Clinical Excellence in Patient Care and holds advanced certification in implantology and full-mouth rehabilitation. General dentists Dr. Tony Tharakan and Dr. Miraj Dudhat round out daily care, alongside orthodontist Dr. Adam Taee, a top Invisalign provider since 2017 with a research fellowship at Harvard School of Dental Medicine. The office sits at 2150 E County Line Rd., one of five Smile Culture locations, and its doctors hold membership in the Pennsylvania Dental Association, American Dental Association, and International Congress of Oral Implantology.",
   "faq": [
     {
       "q": "Does Smile Culture Dental accept my insurance?",
@@ -86,6 +109,10 @@
     {
       "q": "What are the office hours?",
       "a": "Monday 9AM-7PM, Tuesday 9AM-5PM, Wednesday-Thursday 8AM-5PM, and Friday 8AM-2PM."
+    },
+    {
+      "q": "How many Smile Culture locations are there?",
+      "a": "Five, in Huntingdon Valley, Trooper, Trevose, Glen Mills, and Fairless Hills, all staffed by the same team of general dentists and specialists."
     }
   ],
   "marquee": [
@@ -95,8 +122,16 @@
     "All PPO Insurance Accepted",
     "Virtual Consultations Available",
     "Top Dentists 2025",
-    "Comfort & Communication First"
+    "Comfort & Communication First",
+    "Five Philadelphia-Area Locations"
   ],
+  "cta_band": {
+    "headline": "Ready to book your visit?",
+    "support": "Start with a virtual consult or call the office directly.",
+    "button": "Book a Consultation",
+    "secondary": "Call the Office"
+  },
+  "footer_line": "Smile Culture Dental serves Huntingdon Valley, PA and the greater Philadelphia area.",
   "contact": {
     "phone": "267-715-7373",
     "address": "2150 E County Line Rd., Huntingdon Valley, PA 19006",
