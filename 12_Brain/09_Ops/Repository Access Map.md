@@ -45,6 +45,15 @@ relying on them.
 | Not in the listing | `vaclaims-dev/vace-platform` (organization-owned; verify separately) |
 | Local tooling in the container | Node 22, Python 3.11, git over the HTTPS proxy. No `gh`, no PowerShell, no `agent-memory` MCP |
 
+**Two GitHub MCP servers can be connected at once, and `get_me` does not tell
+them apart.** On 2026-09-02 both returned login `dillonmohr8777`, but only one
+carried private-repository scope. The other read a public repository normally
+and answered `404 Not Found` for every private one, which reads as "this
+repository does not exist" rather than "this token cannot see it". Prove scope
+with an actual private read before believing a 404: the session's own
+repository-scoped server is the one that works; the account-level connector is
+the one that does not.
+
 ## 2. Canonical roots, machine by machine
 
 Windows paths are written with `%USERPROFILE%`; remote paths are relative to
@@ -134,7 +143,10 @@ and a half weeks before the queue's last write.
 The Linux equivalent of the PowerShell checklist. Run it before declaring a
 repository unavailable.
 
-1. Identity: GitHub MCP `get_me` must return `dillonmohr8777`.
+1. Identity **and scope**: `get_me` must return `dillonmohr8777`, then read a
+   known private repository (its branches or a pull request) to prove that
+   server has private scope. A 404 on a private repository from a server whose
+   `get_me` looks correct means the wrong server, not a missing repository.
 2. Inventory: the session's `list_repos`; attach anything missing with
    `add_repo` rather than reporting it unreachable.
 3. Local clones: `ls ~`; then per repo `git remote -v`, `git branch -vv`,
