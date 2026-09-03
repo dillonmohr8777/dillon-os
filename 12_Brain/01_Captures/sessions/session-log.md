@@ -15,3 +15,4 @@ Sensitive session mines go to `12_Brain/private/sessions/` (gitignored).
 - 2026-07-29 — 12_Brain public-safety cleanup (mined)
 - 2026-08-14 — Google RSVP rail (mined)
 - 2026-09-03 14:15 — session ended (run /session-mine if decisions were made)
+- 2026-09-03 15:02 — session ended (run /session-mine if decisions were made)
