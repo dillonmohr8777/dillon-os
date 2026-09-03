@@ -42,7 +42,8 @@ that can become contracts or appointments.
 1. Recover Omega, Onsite, and KJB lead quality and measurement.
 2. Keep Bridge Software and VA Claims as the first two portfolio priorities.
 3. Elevate Pritzker and Align as named strategic priorities without mixing
-   Align's full-time lane into client revenue.
+   Align's full-time lane into client revenue. Pritzker deep integration:
+   [[12_Brain/05_Projects/2026-09-03 - Pritzker Law Group deep-integration goal]].
 
 **Scoreboard**
 

@@ -1,6 +1,6 @@
 ---
 tags: [system, approvals]
-last_updated: 2026-08-17T13:04:11Z
+last_updated: 2026-09-03T00:00:00Z
 status: active
 last_scan: 2026-08-17T13:04:11Z
 scan_sources: ["00_Inbox/", "01_Clients/ status at-risk/onboarding/blocked", "System/urgent-replies.md", "System/claude-memory-sync.md", "Daily-Briefs/ latest 3"]
@@ -25,6 +25,10 @@ Only current client and operating actions belong here. Nothing is sent, publishe
 - [ ] 2026-07-12 - Everyday Life Insurance - Approve launch changes after 404 and site QA; approve links before acquisition - Risk: medium
 - [ ] 2026-07-12 - VA Claims - Approve client review after VACE design reconciliation; backend and DNS changes remain gated - Risk: medium
 - [ ] 2026-07-12 - Bridge Software Development - Approve client-facing milestone after Phase 1 ownership board and compliance review - Risk: medium
+- [ ] 2026-09-03 -- [Pritzker Law Group] -- Approve deployment of the podcast landing page and stand-up of the live Speko/ManyChat intake agent; deployment + account change -- Source: .claude/skills/podcast-intake-loop/SKILL.md -- Evidence: "Never deploy the landing page or stand up a live Speko/ManyChat agent, phone number, or session without approval. Drafts only." -- Risk: high
+- [ ] 2026-09-03 -- [Pritzker Law Group] -- Approve publish of episode-derived blog / GBP / social assets after attorney sign-off; publishing -- Source: .claude/skills/episode-content-pipeline/SKILL.md -- Evidence: "Attorney sign-off before any publish. Drafts only; nothing posts." -- Risk: high
+- [ ] 2026-09-03 -- [Pritzker Law Group] -- Approve delivery of the sponsorship ROI report after real analytics replaces sample data; publishing / client message -- Source: .claude/skills/sponsorship-roi-report/SKILL.md -- Evidence: "The report stays a draft. Sharing or sending is Tier 2, approval-gated." -- Risk: high
+- [ ] 2026-09-03 -- [Pritzker Law Group] -- Approve posting of review / GBP / brand-mention responses before any live post or outreach; publishing / client message -- Source: .claude/skills/reputation-engine/SKILL.md -- Evidence: "Never post a review response, GBP reply, or contact anyone live without approval. Drafts only." -- Risk: high
 ## Operating actions
 - [ ] 2026-07-12 - Revenue - Verify current invoices or contracts for all 14 active clients before publishing MRR - Risk: low
 - [ ] 2026-07-12 - Cursor/MCP - Authenticate Composio, Slack, and WordPress connectors when live reads are required - Risk: low
