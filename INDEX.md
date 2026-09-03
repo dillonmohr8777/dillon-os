@@ -80,6 +80,7 @@ links instead of loading the entire vault.
   New skill: [[.claude/skills/franchise-list|franchise-list]] on [[12_Brain/02_Entities/Vibe Prospecting|Vibe Prospecting]] (spend-gated franchise location pulls).
 - [[12_Brain/07_Reviews/README|Reviews]] — daily, weekly, and quarterly
   synthesis.
+  Latest: [[12_Brain/07_Reviews/2026-09-02 - Slack open-loop sweep|Slack open-loop sweep 2026-09-02]] — every open ask across 109 channels, with the three time-sensitive ones named.
 - [[12_Brain/08_Memory/README|Memory Ledger]] — corrections, preferences, and
   facts with observation and validity dates.
 
