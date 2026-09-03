@@ -52,7 +52,8 @@ links instead of loading the entire vault.
 - `03_Content/` — content plans and drafts.
 - [[12_Brain/05_Projects/2026-08-04 - Philadelphia 25 Site Factory Batch 3|Philadelphia 25-site factory Batch 3]] — private prospect previews and evidence.
 - [[12_Brain/05_Projects/2026-08-04 - Philadelphia 25 Site Factory Batch 4|Philadelphia 25-site factory Batch 4]] — separate real-business cohort with first-party logo evidence.
-- [[12_Brain/05_Projects/2026-09-03 - Pritzker Law Group deep-integration goal|Pritzker Law Group deep-integration goal]] — firm-voiced, attorney-gated automation system (intake, episode content, ROI reporting, reputation).
+- [[12_Brain/05_Projects/2026-09-03 - Pritzker Law Group deep-integration goal|Pritzker Law Group deep-integration goal]] — firm-voiced, approval-gated automation scaffolding (intake, episode content, ROI reporting, reputation); all four halt at their first gate.
+- [[12_Brain/05_Projects/2026-09-03 - Pritzker Law Group podcast sponsor landing page SEO-AEO-GEO plan|Pritzker podcast sponsor landing SEO/AEO/GEO plan]] — fact-safe, human-voiced search + conversion plan; execution held behind six client confirmations.
 - [[04_SOPs/SOP Index|SOP Index]] — repeatable operating procedures.
 - `05_Offers/` — products, packages, and pricing.
 - `10_Sessions/` — working-session records.
@@ -79,7 +80,7 @@ links instead of loading the entire vault.
   Backend: [[12_Brain/02_Entities/Cloudflare D1 Radar|Cloudflare D1 Radar]] (database live, Worker deploy approval-gated).
   Access: [[12_Brain/09_Ops/Connector Map|Connector Map]] (what is live, what is missing, connect order).
   New skill: [[.claude/skills/franchise-list|franchise-list]] on [[12_Brain/02_Entities/Vibe Prospecting|Vibe Prospecting]] (spend-gated franchise location pulls).
-  Pritzker automation system: [[.claude/skills/pritzker-ops|pritzker-ops]] routes [[.claude/skills/podcast-intake-loop|podcast-intake-loop]], [[.claude/skills/episode-content-pipeline|episode-content-pipeline]], [[.claude/skills/sponsorship-roi-report|sponsorship-roi-report]], and [[.claude/skills/reputation-engine|reputation-engine]] (all approval-gated, drafts only).
+  Pritzker automation system: `.claude/skills/pritzker-ops/SKILL.md` routes `.claude/skills/podcast-intake-loop/SKILL.md`, `.claude/skills/episode-content-pipeline/SKILL.md`, `.claude/skills/sponsorship-roi-report/SKILL.md`, and `.claude/skills/reputation-engine/SKILL.md` (all approval-gated, drafts only; `.claude/` is a dot-folder Obsidian excludes, so these are paths, not wikilinks). Operating model: [[12_Brain/03_Concepts/Anti-AI Client Operating Model|Anti-AI Client Operating Model]]. Directive receipt: [[12_Brain/01_Captures/Communications/2026-09-03 - Pritzker anti-AI stance and SEO directive|Pritzker anti-AI stance and SEO directive]].
 - [[12_Brain/07_Reviews/README|Reviews]] — daily, weekly, and quarterly
   synthesis.
 - [[12_Brain/08_Memory/README|Memory Ledger]] — corrections, preferences, and

@@ -6,7 +6,7 @@ updated: 2026-09-03
 owner: Dillon Mohr
 area: client delivery
 priority: high
-outcome: A fact-safe, attorney-approved sponsor landing page for Pritzker Law Group's premium sponsorship of Love, Philadelphia — The Podcast, built in the firm's authentic human voice and instrumented for search, AEO/GEO, and one measurable conversion goal.
+outcome: A fact-safe, client-approved sponsor landing page for Pritzker Law Group's premium sponsorship of Love, Philadelphia — The Podcast, built in the firm's authentic human voice and instrumented for search, AEO/GEO, and one measurable conversion goal.
 next_action: Confirm the six open confirmations (conversion goal, production host, form destination, analytics property, launch facts, final approval owner) before any search execution or publish.
 review_on: 2026-09-17
 source_refs:
@@ -15,6 +15,7 @@ source_refs:
   - "[[01_Clients/Pritzker Law Group/Client Intelligence Overlay]]"
   - "[[12_Brain/03_Concepts/Keyword Research and Search Demand]]"
   - "[[12_Brain/03_Concepts/Search Intent and Topic Architecture]]"
+  - "[[12_Brain/03_Concepts/Anti-AI Client Operating Model]]"
   - "[[12_Brain/03_Concepts/AEO GEO and AI Discovery]]"
   - "[[12_Brain/03_Concepts/Entity Authority and Citation Readiness]]"
   - "[[12_Brain/03_Concepts/Local Search and Maps Site Parity]]"
@@ -26,7 +27,7 @@ tags: [brain, project, client, seo, aeo, geo, pritzker, landing-page]
 
 # Pritzker Law Group podcast sponsor landing page SEO-AEO-GEO plan
 
-Fact-safe, attorney-approved, human-voiced sponsor landing page for Pritzker Law
+Fact-safe, client-approved, human-voiced sponsor landing page for Pritzker Law
 Group — with keyword research, search-intent architecture, internal linking, and
 AEO/GEO — all gated behind six open confirmations.
 
@@ -34,7 +35,7 @@ AEO/GEO — all gated behind six open confirmations.
 
 Plan the search, answer-engine, and conversion layer for Pritzker Law Group's
 Love, Philadelphia — The Podcast sponsor landing page so it ships in the firm's
-authentic voice, survives attorney review, and can be measured — with **no
+authentic voice, survives the firm's own review, and can be measured — with **no
 execution until the open confirmations land**.
 
 ## 2. Context & constraints
@@ -52,33 +53,30 @@ execution until the open confirmations land**.
 - **Anti-AI directive (honest framing):** per
   [[12_Brain/01_Captures/Communications/2026-09-03 - Pritzker anti-AI stance and SEO directive]],
   the client-side decision-maker is reported as very anti-AI. The response is
-  human-voiced drafting + attorney sign-off + high craft — genuine human-owned
-  quality, not concealment. This attribute is **Dillon's reported directive, not
-  independently verified against the client's own words.**
+  human-voiced drafting + human approval + high craft — genuine human-owned
+  quality, not concealment (see
+  [[12_Brain/03_Concepts/Anti-AI Client Operating Model]]). This attribute is
+  **Dillon's reported directive, not independently verified against the client's
+  own words.**
 - **Gating:** execution (search work, publishing, instrumentation) begins only
-  after the open confirmations in §10 are answered and attorney sign-off is in
-  hand.
+  after the open confirmations in §10 are answered and the final approval
+  owner's sign-off is in hand.
 
 ## 3. Operating model for an anti-AI client + a law firm
 
-The anti-AI client and the law firm's fact-safety needs point at the same
-practice:
+Authentic firm voice + human approval before publish + fact-safety + high craft.
+**Not** concealment. Canonical definition:
+[[12_Brain/03_Concepts/Anti-AI Client Operating Model]].
 
-- **Voice-capture profile.** Build the page copy from a real capture of the
-  firm's authentic voice (intake call, prior firm writing, founder phrasing) so
-  the draft reads as the firm, not as a generic template.
-- **Attorney sign-off before publish.** Every claim, disclaimer, and CTA passes
-  named attorney review before anything goes live. This is an approval gate, not
-  a formality.
-- **Fact-safe.** Only claims verifiable from the firm site or supplied sponsor
-  identity ship. Everything else stays visibly draft-level.
-- **Disclaimer preserved.** The firm disclaimer stays intact; nothing implies an
-  attorney-client relationship.
-- **High craft.** Held to a quality bar that makes it genuinely human-owned
-  work.
+Two page-specific consequences:
 
-Stated plainly: this is about producing authentic, high-quality, human-owned
-work — **not** about deceiving the client or hiding tooling.
+- **Disclaimer is a blocking input.** The firm's verbatim disclaimer text is NOT
+  captured anywhere in the vault. It must be obtained verbatim from the firm and
+  recorded in [[01_Clients/Pritzker Law Group/voice-profile]] before this page
+  publishes. If it is absent, STOP and flag — never invent or paraphrase it.
+- **Approval owner is role-neutral.** Sign-off belongs to the client's **final
+  approval owner (role TO CONFIRM — client evidence says "final approval owner",
+  not necessarily an attorney)**.
 
 ## 4. Keyword research plan
 
@@ -193,14 +191,19 @@ Per [[12_Brain/03_Concepts/Conversion Tracking Setup 2026]] and
 ## 10. Open confirmations / approval boundary
 
 Nothing publishes and no search execution begins until these land, and nothing
-goes live without **attorney sign-off (approval-gated)**:
+goes live without sign-off from the **final approval owner (approval-gated)**:
 
 1. Conversion goal (the one measurable action).
 2. Production host.
 3. Form destination.
 4. Analytics property.
 5. Launch facts (date, listening destinations, source channels).
-6. Final approval owner (named attorney reviewer).
+6. Final approval owner (role TO CONFIRM — client evidence says "final approval
+   owner", not necessarily an attorney).
+
+Also blocking, identified by the automation build rather than stated by the
+client: the firm's **verbatim disclaimer text** (not captured anywhere in the
+vault) and **three approved firm writing samples** for the voice profile.
 
 Also unverified: Manychat implementation was targeted but not confirmed. External
 sending, publishing, deployment, and account changes remain approval-gated —
