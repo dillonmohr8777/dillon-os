@@ -1,29 +1,41 @@
 ---
-last_updated: 2026-07-12
+last_updated: 2026-09-03
 tags: [system, urgent]
+source_refs:
+  - Daily-Briefs/inbox-brief-2026-09-03.md
+  - Daily-Briefs/plan-2026-09-03.md
+  - 01_Clients/Cindy May Christmas/overview.md
 ---
 
 # Urgent Client Work
 
-This file tracks current work, not April catch-up drafts.
+Vault-fallback refresh from morning briefs (Gmail MCP not connected this run).
 
 ## Immediate
 
-- KJB: finish the desktop FAQ image crop and responsive QA; reconcile appointment routing.
-- Fagan Painting: repair attribution across Meta Lead event, form, phone, and lead delivery before scale.
-- Shadow: restore live Meta visibility and verify current-week delivery.
-- Revive Systems: complete the urgent 48-hour lead-recovery brief.
+- **Cindy May Christmas** — `due: 2026-09-01` now **2 days overdue**. Site build
+  approved; blocked on video destination, newsletter connection, photo map, and
+  Shopify prerequisites. Close today or get explicit reschedule.
+- **Momentum 360 Slack quartet** — four unanswered asks since ~2026-07-30 (Jason/Sean
+  bot alerts, Jenny brand direction, Melissa guidelines/Loom, Sean CallRail status).
+  See `System/slack-action-queue.md`.
+- **Bar Crawl USA** — paid-media optimization at `needs-approval` in canonical queue
+  (wi-20260808-0003). Surface yes/no for billing path before any account change.
+- **BigOrange Marketing** — website build at `needs-approval` (wi-20260718-0001).
+  Private pilot complete; needs factual sign-off + invoice details before publish.
 
 ## This week
 
-- Bar Crawl USA: finish confirmed-event SEO and repair the current-event hub listing.
-- Onsite: run the allowlisted technical crawl and conversion-action audit.
-- Omega: reconcile call/form attribution and lead quality.
-- Replenish: verify store-level weekly reporting and confirm the recurring fifth dashboard slot.
-- Hope Wellness Center: complete request analysis and determine visual-resource needs.
-- VA Claims: reconcile the client prototype to the approved VACE design system.
-- Bridge: advance the Phase 1 implementation board and dependencies.
+- **BOK Law Firm** — weekly three-topic content kit window **2026-09-08 to 2026-09-10**
+  (96% recurrence). Prep step today: locate and fingerprint source packet only.
+- **40-client stall** — all clients `last_touched` 27+ days stale; pick 3–5 for real
+  contact today (plan suggests Bar Crawl + BigOrange approvals, then oldest `due:` dates).
+- **Credential follow-ups** — Resy plain-text credential rotation unconfirmed; git-exposed
+  secret item open since 2026-08-13 (approval-gated, not today's execution).
 
-## Boundary
+## Operator rules
 
-Drafting and internal QA may proceed. External replies, publishing, deployment, spend, and client-account changes require approval.
+- **KJB emails** CC: mjfrederick334@gmail.com, sean@needmomentum.com,
+  melissarobinn@gmail.com
+- Drafting and internal QA may proceed. External replies, publishing, deployment,
+  spend, and client-account changes require approval.

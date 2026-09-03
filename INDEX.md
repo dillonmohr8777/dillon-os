@@ -25,6 +25,8 @@ links instead of loading the entire vault.
   truth.
 - [[System/approval-queue|Approval Queue]] — consequential actions waiting for
   Dillon.
+- [[Daily-Briefs/competitive-task-today|Competitive Task Today]] — afternoon P0
+  stack from the umbrella orchestrator (1 PM ET).
 - [[System/revenue-scorecard|Revenue Scorecard]] — verified revenue state.
 
 - [[12_Brain/Bases/Strategy Library.base|Strategy Library]] - the compiled
