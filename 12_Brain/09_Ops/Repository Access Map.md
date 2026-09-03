@@ -157,9 +157,28 @@ repository unavailable.
 4. Canonical state: read `~/client-operations-canonical/registry/clients.json`
    and `queue/work-items.json`; note the revision; never edit them or
    `CONTROL.md` from a remote session.
-5. Automation that needs the queue: export
-   `DILLON_CLIENT_OPERATIONS_ROOT=~/client-operations-canonical` (or pass
-   `--client-ops-root`) before `node _os/automation/bin/predict-work.js`.
+5. Automation that reads client-operations takes two different environment
+   variables, both verified from this container on 2026-09-02:
+
+   | Automation | Variable | Shape |
+   |---|---|---|
+   | `bin/predict-work.js` | `DILLON_CLIENT_OPERATIONS_ROOT` | one path (or pass `--client-ops-root`) |
+   | `bin/report-ingest.js` (`lib/reports.js`) | `DILLON_REPORT_SOURCE_ROOTS` | `;`-separated list that **replaces** the defaults, so re-list the vault's own `Daily-Briefs/reports` alongside the clone |
+
+   ```bash
+   export DILLON_CLIENT_OPERATIONS_ROOT=~/client-operations-canonical
+   export DILLON_REPORT_SOURCE_ROOTS="$HOME/client-operations-canonical/clients;$HOME/dillon-os/Daily-Briefs/reports"
+   ```
+
+   Measured: `predict-work.js` without the first variable produced 1 candidate
+   and a null `sources.canonical_queue_source`, reproducing the degraded
+   2026-09-02 brief exactly; with it, 7 candidates and
+   `client-operations://queue/work-items.json`. Neither variable is set by the
+   remote morning-brief routine today.
+
+   The failure is silent by construction: on Linux `path.resolve()` turns the
+   Windows default `C:/Users/...` into a nonexistent path *under the vault*
+   rather than raising, so the root is skipped with no error.
 6. Pull requests: `list_pull_requests` per repository. A cross-repository
    search must carry `repo:` qualifiers for the session scope only.
 7. Ship: `git push -u origin <task-branch>`, then a draft PR. Record the branch,
@@ -172,11 +191,10 @@ repository unavailable.
 
 ## 6. Follow-ups (report, not fixed here)
 
-- `_os/automation/lib/reports.js` hardcodes the Windows client-operations
-  path in `DEFAULT_SOURCE_ROOTS` with no override; `predict-work.js` already
-  honours `DILLON_CLIENT_OPERATIONS_ROOT`. The remote morning-brief routine
-  should set that variable, or the discovery should also try the sibling
-  clone.
+- The remote morning-brief routine sets neither client-operations environment
+  variable (section 5), so it silently degrades. This needs a routine config
+  change, **not** a code change: both automations already support an override,
+  and no vault code should be patched for it.
 - 199 open PRs across the ten repositories, most of them drafts. The daily
   `cursor[bot]` umbrella-orchestrator drafts on `dillon-os` need a keep-one,
   close-the-rest decision.
