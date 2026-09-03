@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-09-01",
+  "updated": "2026-09-03",
   "contract": "00_Inbox/Automation Deep Analysis 2026-07-29.md",
   "dependency": "12_Brain/DEPENDENCY_PR226.md",
   "automations": [
@@ -511,6 +511,143 @@
       "status": "implemented",
       "owner": "claude-code-skill",
       "note": "On-demand Claude Code skill, run by Dillon; never cron-scheduled. Reviewed 2026-09-01 against marketing-chief-twice-daily-brief: different content (morning inbox/client/content brief vs infra health), so not collapsed. Dillon to confirm whether one should absorb the other."
+    },
+    {
+      "id": "pritzker-ops",
+      "name": "Pritzker Law Group umbrella router (operating model + gating confirmations)",
+      "lane": "intelligence",
+      "tier": 0,
+      "cadence": "on-demand, whenever a Pritzker request arrives",
+      "command": "/pritzker-ops",
+      "path": ".claude/skills/pritzker-ops/SKILL.md",
+      "inputs": [
+        "01_Clients/Pritzker Law Group/overview.md",
+        "01_Clients/Pritzker Law Group/Client Intelligence Overlay.md",
+        "01_Clients/Pritzker Law Group/voice-profile.md",
+        "12_Brain/03_Concepts/Anti-AI Client Operating Model.md",
+        "12_Brain/05_Projects/2026-09-03 - Pritzker Law Group deep-integration goal.md"
+      ],
+      "outputs": [
+        "lane routing decision",
+        "re-anchored operating model and gating confirmations"
+      ],
+      "external_actions": false,
+      "depends_on": [],
+      "status": "implemented",
+      "owner": "claude-code-skill",
+      "notes": "Routing and drafts only; takes no external action itself. Routes to the four tier-2 Pritzker automations, each of which carries its own gates."
+    },
+    {
+      "id": "pritzker-podcast-intake-loop",
+      "name": "Pritzker podcast landing-page contact capture (form + ManyChat)",
+      "lane": "outreach",
+      "tier": 2,
+      "cadence": "on-demand drafts; the capture form runs continuously only once approved and live",
+      "command": "/podcast-intake-loop",
+      "path": ".claude/skills/podcast-intake-loop/SKILL.md",
+      "inputs": [
+        "01_Clients/Pritzker Law Group/overview.md",
+        "01_Clients/Pritzker Law Group/voice-profile.md",
+        "confirmed conversion goal and form destination (six confirmations)"
+      ],
+      "outputs": [
+        "intake conversation spec draft",
+        "plain non-AI-forward capture form draft (primary)",
+        "ManyChat flow draft (primary)",
+        "Speko voice-agent SessionConfig draft (optional; only with explicit client consent)",
+        "System/approval-queue.md go-live item, appended only when a concrete artifact is ready"
+      ],
+      "external_actions": true,
+      "depends_on": [
+        "human-approval",
+        "pritzker-six-confirmations",
+        "speko-manychat-provisioning"
+      ],
+      "status": "pending-gate",
+      "notes": "PRIMARY path is a plain, non-AI-forward capture form plus a ManyChat flow -- ManyChat is the only client-evidenced tool here (overview.md: 'Manychat implementation is targeted for Monday', marked unverified). A Speko AI voice agent is an OPTIONAL path requiring explicit client consent; proposing one to this reported-anti-AI decision-maker is a known relationship risk flagged by review. Vendor tools are allow-listed to read/inspect only; no upload of firm or client material to a vendor. Routing firm content through any vendor is a client confidentiality and data-processing decision needing explicit consent. Drafts only until approved; never deploys the page or stands up a live agent, phone number, or session. No legal advice in the flow; disclaimer preserved (text not yet captured -- blocking); fact-safe."
+    },
+    {
+      "id": "pritzker-episode-content-pipeline",
+      "name": "Pritzker episode transcript to firm-voiced content assets",
+      "lane": "reporting",
+      "tier": 2,
+      "cadence": "per new episode transcript",
+      "command": "/episode-content-pipeline",
+      "path": ".claude/skills/episode-content-pipeline/SKILL.md",
+      "inputs": [
+        "episode transcript",
+        "01_Clients/Pritzker Law Group/voice-profile.md",
+        "System/writing-rules.md"
+      ],
+      "outputs": [
+        "immutable transcript capture",
+        "AEO/GEO blog post draft, GBP post draft, social caption draft",
+        "12_Brain/state/workflow-runs/*.json maker/checker record",
+        "System/approval-queue.md publish item"
+      ],
+      "external_actions": true,
+      "depends_on": [
+        "human-approval",
+        "final-approval-owner",
+        "maker-checker",
+        "pritzker-voice-profile"
+      ],
+      "status": "pending-gate",
+      "notes": "Drafts only until the final approval owner signs off (role TO CONFIRM -- client evidence says 'final approval owner', not necessarily an attorney). Voice must come from real approved firm writing, never fabricated. No invented facts, guests, dates, episode numbers, metrics, or outcomes; disclaimer preserved (text not yet captured -- blocking)."
+    },
+    {
+      "id": "pritzker-sponsorship-roi-report",
+      "name": "Pritzker podcast sponsorship performance recap",
+      "lane": "reporting",
+      "tier": 2,
+      "cadence": "monthly (or per campaign period) once analytics is connected",
+      "command": "/sponsorship-roi-report",
+      "path": ".claude/skills/sponsorship-roi-report/SKILL.md",
+      "inputs": [
+        "_os/reporting/data/pritzker-<period>.json",
+        "01_Clients/Pritzker Law Group/overview.md",
+        "confirmed analytics property (six confirmations)"
+      ],
+      "outputs": [
+        "Daily-Briefs/reports/pritzker-<period>.html (draft)",
+        "client note ## Reports log line",
+        "System/approval-queue.md delivery item"
+      ],
+      "external_actions": true,
+      "depends_on": [
+        "human-approval",
+        "pritzker-analytics-property"
+      ],
+      "status": "pending-gate",
+      "notes": "Drafts only until approved for delivery. sampleData stays true until real analytics is connected; no fabricated metrics. Sharing/sending is Tier 2 approval-gated."
+    },
+    {
+      "id": "pritzker-reputation-engine",
+      "name": "Pritzker reviews, GBP, and brand-mention response engine",
+      "lane": "intelligence",
+      "tier": 2,
+      "cadence": "continuous monitoring; drafts on new signal",
+      "command": "/reputation-engine",
+      "path": ".claude/skills/reputation-engine/SKILL.md",
+      "inputs": [
+        "review / GBP item / brand mention",
+        "01_Clients/Pritzker Law Group/voice-profile.md",
+        "radar/site-grade signals and measurement concept notes"
+      ],
+      "outputs": [
+        "firm-voiced response draft",
+        "12_Brain/state/workflow-runs/*.json maker/checker record",
+        "System/approval-queue.md posting/contact item"
+      ],
+      "external_actions": true,
+      "depends_on": [
+        "human-approval",
+        "maker-checker",
+        "pritzker-voice-profile",
+        "gbp-ownership-confirmation"
+      ],
+      "status": "pending-gate",
+      "notes": "Drafts only until approved. Never posts a review/GBP reply or contacts anyone live without approval. No legal advice; disclaimer preserved; fact-safe. GBP existence/ownership unconfirmed."
     }
   ],
   "gates": {
@@ -518,6 +655,12 @@
     "netlify_deploy_token": "pending-secret",
     "landingfolio_token": "pending-secret",
     "mail_vendor": "pending-decision",
-    "outreach_send": "hard-blocked"
+    "outreach_send": "hard-blocked",
+    "pritzker_six_confirmations": "pending-client",
+    "speko_manychat_provisioning": "pending-client-consent",
+    "final_approval_owner": "pending-client",
+    "pritzker_voice_profile": "pending-client",
+    "pritzker_analytics_property": "pending-client",
+    "gbp_ownership_confirmation": "pending-client"
   }
 }

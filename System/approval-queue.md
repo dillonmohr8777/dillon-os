@@ -1,6 +1,6 @@
 ---
 tags: [system, approvals]
-last_updated: 2026-08-17T13:04:11Z
+last_updated: 2026-09-03T18:42:15Z
 status: active
 last_scan: 2026-08-17T13:04:11Z
 scan_sources: ["00_Inbox/", "01_Clients/ status at-risk/onboarding/blocked", "System/urgent-replies.md", "System/claude-memory-sync.md", "Daily-Briefs/ latest 3"]

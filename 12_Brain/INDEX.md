@@ -48,6 +48,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/03_Concepts/Conversion Tracking Setup 2026|Conversion Tracking Setup 2026]] — generic setup patterns (no account IDs).
 - [[12_Brain/03_Concepts/Google Ads Conversion Optimization 2026|Google Ads Conversion Optimization 2026]] — generic optimization patterns.
 - [[12_Brain/03_Concepts/Meta Lead Ads Optimization 2026|Meta Lead Ads Optimization 2026]] — generic Lead Ads patterns.
+- [[12_Brain/03_Concepts/Anti-AI Client Operating Model|Anti-AI Client Operating Model]] — authentic client voice + human approval + high craft, never concealment.
 
 ## Raw captures (Git-safe)
 
@@ -58,6 +59,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/01_Captures/research/2026-08-14 Franchise Send-Ready Harvest|2026-08-14 Franchise Send-Ready Harvest]] — 720 send-ready franchisee mailboxes; UPS store inboxes dropped.
 - [[12_Brain/01_Captures/research/2026-08-15 Franchise Lanes A-C-D Receipts|2026-08-15 Franchise Lanes A-C-D Receipts]] — FDD portals, directories, CAN-SPAM, OSM keep-chains flip (no contact rows).
 - [[12_Brain/01_Captures/research/2026-08-15 Franchise Lane A Portal Probe|2026-08-15 Franchise Lane A Portal Probe]] — MN/WI still free FDD PDFs; CA DocQNet is not (no contact rows).
+- [[12_Brain/01_Captures/Communications/2026-09-03 - Pritzker anti-AI stance and SEO directive|2026-09-03 Pritzker anti-AI stance and SEO directive]] — Dillon-reported directive: human voice + attorney sign-off + high craft (not concealment); SEO must include AEO/GEO, internal linking, keyword research.
 - Sensitive captures → [[12_Brain/private/README|12_Brain/private/]] (not in Git).
 
 ## Projects · Decisions · Research · Memory · Protocols
@@ -65,6 +67,8 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/05_Projects/README|Projects]] — active delivery threads and goals.
 - [[12_Brain/05_Projects/Prospect Radar V2|Prospect Radar V2]] — Momentum audit engine wrapping the existing radar.
 - [[12_Brain/05_Projects/Growth Workshop Franchise Pilot|Growth Workshop Franchise Pilot]] — Sean's Aug 27 webinar + free franchise-email engine; canonical Google event + Meet live.
+- [[12_Brain/05_Projects/2026-09-03 - Pritzker Law Group podcast sponsor landing page SEO-AEO-GEO plan|Pritzker podcast sponsor landing SEO/AEO/GEO plan]] — fact-safe, human-voiced, approval-gated search + conversion plan; execution held behind six client confirmations.
+- [[12_Brain/05_Projects/2026-09-03 - Pritzker Law Group deep-integration goal|Pritzker Law Group deep-integration goal]] — automation scaffolding plus the blockers still owed by the client; all four automations halt at their first gate. Skills (paths, not wikilinks — Obsidian excludes `.claude/`): `.claude/skills/pritzker-ops/SKILL.md`, `.claude/skills/podcast-intake-loop/SKILL.md`, `.claude/skills/episode-content-pipeline/SKILL.md`, `.claude/skills/sponsorship-roi-report/SKILL.md`, `.claude/skills/reputation-engine/SKILL.md`.
 - [[12_Brain/04_Decisions/README|Decisions]] — bi-temporal decision log.
 - [[12_Brain/06_Research/README|Research]] — compiled research landing.
 - [[12_Brain/06_Research/Franchise Email Sourcing|Franchise Email Sourcing]] — 720 send-ready franchisee mailboxes; UPS store inboxes are not the send list (expires 2026-11-15).
