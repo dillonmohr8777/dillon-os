@@ -192,9 +192,15 @@ repository unavailable.
 ## 6. Follow-ups (report, not fixed here)
 
 - The remote morning-brief routine sets neither client-operations environment
-  variable (section 5), so it silently degrades. This needs a routine config
-  change, **not** a code change: both automations already support an override,
-  and no vault code should be patched for it.
+  variable (section 5), and the result is **intermittent, not reliably broken**.
+  With the routine config unchanged between the two runs, the committed
+  artifacts differ: `predicted-work-2026-09-02.json` resolved no queue and
+  produced 1 candidate, while `predicted-work-2026-09-03.json` resolved
+  `client-operations://queue/work-items.json` and produced 7. A brief that only
+  works when the running agent happens to route around the missing variable is
+  the argument for setting it explicitly, not against it. This is a routine
+  config change, **not** a code change: both automations already support an
+  override, and no vault code should be patched for it.
 - 199 open PRs across the ten repositories, most of them drafts. The daily
   `cursor[bot]` umbrella-orchestrator drafts on `dillon-os` need a keep-one,
   close-the-rest decision.
