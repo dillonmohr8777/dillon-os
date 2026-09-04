@@ -1,0 +1,118 @@
+{
+  "slug": "county-line-veterinary-hospital",
+  "name": "County Line Veterinary Hospital",
+  "city": "Hatboro",
+  "category": "Veterinary",
+  "family": "veterinary",
+  "mode": "people",
+  "url": "https://countylineveterinary.com/",
+  "phone": "(215) 675-0533",
+  "address": "325 West County Line Road",
+  "hours": "Monday - Friday: 9 a.m",
+  "logo": true,
+  "logoSrc": "assets/logo.png",
+  "tokens": {
+    "paper": "#e0b0b0",
+    "ink": "#c03020",
+    "accent": "#c03020",
+    "accent2": "#204090",
+    "panel": "#db9e9b",
+    "deep": "#691a11",
+    "border": "4px",
+    "radius": "0px",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onDeep": "#FFFFFF"
+  },
+  "fonts": {
+    "display": "Syne",
+    "text": "Figtree",
+    "displayFallback": "Arial,sans-serif"
+  },
+  "attitude": "brutal",
+  "marquee": [
+    "County Line Veterinary Hospital",
+    "Hatboro",
+    "The work"
+  ],
+  "imageAlts": [
+    "The people photograph for County Line Veterinary Hospital: people at work",
+    "The process photograph for County Line Veterinary Hospital: hands on the job",
+    "The conversation photograph for County Line Veterinary Hospital: a real conversation",
+    "The place photograph for County Line Veterinary Hospital: the place",
+    "The craft photograph for County Line Veterinary Hospital: the craft",
+    "The shop photograph for County Line Veterinary Hospital: The room where the work lives.",
+    "Hands photograph for County Line Veterinary Hospital: A closer look at the job.",
+    "The bay photograph for County Line Veterinary Hospital: Tools and the person using them.",
+    "The crew photograph for County Line Veterinary Hospital: People mid-job, not posed.",
+    "Detail photograph for County Line Veterinary Hospital: Skill you only get up close."
+  ],
+  "imageDisclosure": "Photographs harvested from the official site and recomposed as concept collages. They are not a claim about current staff or completed jobs.",
+  "headline": "Professional Pet Care With a Personal Touch",
+  "sub": "$(document).ready( function(){ $('ul#flash').innerfade({ speed: 5000, timeout: 5000, type: 'sequence', containerheight: 'auto' }); }); var _userway_config = { // position below will override position set via widget // position: 3, // uncomment the following line to override.",
+  "points": [
+    "Animals first",
+    "A calm exam",
+    "You confirm with the clinic"
+  ],
+  "offerings": [
+    {
+      "title": "County Line Veterinary Hospital",
+      "body": "325 West County Line Road, Hatboro, PA 19040"
+    },
+    {
+      "title": "Hours (Hours by appointment)",
+      "body": "Since 1956, County Line Veterinary Hospital in Hatboro, Pa., has strived to provide pet owners of Montgomery and Bucks Counties with compassionate, high-quality care and service within a state-of-the-art, full-service veterinary hospital. Proud of the reputation we have earned, Dr. Tracy Heitzman and her staff work hard to ensure you and your pets receive the care, service and welcoming atmosphere they would want for their own."
+    },
+    {
+      "title": "Open Today!",
+      "body": "Please take a look around to learn about the Montgomery County veterinary services offered, meet the doctors and staff and more. If you have any questions or would like to set up an appointment, give us a call at (215) 675-0533."
+    }
+  ],
+  "experience": [
+    {
+      "title": "Arrive with your pet",
+      "body": "The homepage should feel like a clinic, not a stock farm."
+    },
+    {
+      "title": "See the care",
+      "body": "Exam table, gentle hands, a tech who is actually working."
+    },
+    {
+      "title": "Call the desk",
+      "body": "Hours and emergencies belong on their official line."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "https://countylineveterinary.com/"
+    },
+    {
+      "title": "Call",
+      "body": "(215) 675-0533",
+      "href": "tel:2156750533"
+    },
+    {
+      "title": "Find them",
+      "body": "325 West County Line Road",
+      "href": "https://www.google.com/maps/search/?api=1&query=325%20West%20County%20Line%20Road"
+    }
+  ],
+  "story": "$(document).ready( function(){ $('ul#flash').innerfade({ speed: 5000, timeout: 5000, type: 'sequence', containerheight: 'auto' }); }); var _userway_config = { // position below will override position set via widget // position: 3, // uncomment the following line to override color set via widget //color: '#053e67', account: 'T7WkNh1wip' }; (215) 675, 0533 325 West County Line Road, Hatboro, PA 19040 Since 1956, County Line Veterinary Hospital in Hatboro, Pa., has strived to provide pet owners of Montgomery and Bucks Counties with compassionate, high-quality care and service within a state-of-the-art, full-service veterinary hospital. Proud of the reputation we have earned, Dr. Tracy Heitzman and her staff work.",
+  "storyMore": "Please take a look around to learn about the Montgomery County veterinary services offered, meet the doctors and staff and more. If you have any questions or would like to set up an appointment, give us a call at (215) 675-0533.",
+  "featureBody": "Monday - Friday: 9 a.m. - 8 p.m. Saturday: 9 a.m. - 1 p.m. Sunday*: Closed *Central Veterinary Center is open from 8AM - 1PM on Sundays and can be called for questions or medications.",
+  "workHeading": "Care that looks like a real clinic.",
+  "galleryHeading": "Animals and the people who treat them.",
+  "storyHeading": "A hospital for pets, named.",
+  "featureHeading": "Hands on the animal, not the slogan.",
+  "contactHeading": "Reach the clinic.",
+  "closing": "County Line Veterinary Hospital should make the next appointment feel obvious.",
+  "navWork": "VetNetwork, LLC",
+  "navStory": "Sitemap",
+  "navVisit": "Visit",
+  "primaryCtaFallback": "Contact Us",
+  "description": "County Line Veterinary Hospital in Hatboro. Private concept preview.",
+  "wordCount": 460
+}

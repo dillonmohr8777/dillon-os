@@ -1,0 +1,150 @@
+{
+  "id": 55,
+  "slug": "frazer-antiques",
+  "name": "Frazer Antiques",
+  "family": "retail",
+  "mode": "people",
+  "issue": "webgl",
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "cinematic",
+      "ok": true
+    },
+    {
+      "check": "moments",
+      "ok": true
+    },
+    {
+      "check": "story-body-photo",
+      "ok": true
+    },
+    {
+      "check": "feature-body-photo",
+      "ok": true
+    },
+    {
+      "check": "hero-only-swipe",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
+      "check": "collage-6.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-7.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-8.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-9.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-10.webp",
+      "ok": true
+    }
+  ],
+  "browser": "ok",
+  "harvestCached": true,
+  "hasLogo": false,
+  "logoSrc": "",
+  "photoCount": 5,
+  "sourceCount": 5,
+  "officialPhotos": 0,
+  "genFills": 5,
+  "url": "http://www.frazer-antiques.com/",
+  "city": "Frazer",
+  "rerender": true,
+  "hashes": [
+    "9f712355df0c578240ebdc96f21b9511e8852073f727666c2abdac6f3272b55c",
+    "b1888ac0a5225c9aee4bd8ee1a80f6cb27166232aa2dd1f380aa5efef736cc65",
+    "60a3844aed71975e9e0f03e214c084f21782e335d8a9a7ffd069ce0a964bc6c6",
+    "e1bd1aca22829c683fe470bb7e73fe43d21a10e6955fbb9d77f5f61134e47689",
+    "56d4bef2ace53223eea0768aaf71cb9b4d1aac1e72076c8c69d92ca87f2a334f",
+    "2e8cd163c494157785d2bf38f3280e85107753e63ab4ebb370daa2d449865e5e",
+    "27c137c947bbeb13befadd3a76c5bb3433d2a970d86b40bd065965ebc749dc04",
+    "51b2a5421d510e18b08a12db413e174055ecccc3ffc627cd4460679763f70d3a",
+    "fc7fa6fa05df0f618ed1a5292636afd488640dd952e3f0ff05db1d33f01a3498",
+    "219af1df5af3b13d9fd14a138943b15f2f8cd6e30b5e0789d651057148fa3b9a"
+  ],
+  "copyWords": 326,
+  "treatedPrint": true,
+  "printPass": "v1",
+  "bodyPass": "v1"
+}

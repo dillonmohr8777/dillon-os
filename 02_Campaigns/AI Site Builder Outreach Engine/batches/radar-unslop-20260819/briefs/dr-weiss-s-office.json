@@ -1,0 +1,108 @@
+{
+  "slug": "dr-weiss-s-office",
+  "name": "Orthodontic Associates of Collegeville",
+  "city": "Collegeville",
+  "category": "Dental",
+  "family": "dental",
+  "mode": "people",
+  "url": "https://orthodontists.com/",
+  "phone": "",
+  "address": "",
+  "hours": "",
+  "logo": true,
+  "logoSrc": "assets/logo.png",
+  "tokens": {
+    "paper": "#b0c0d0",
+    "ink": "#002050",
+    "accent": "#002050",
+    "accent2": "#0040a0",
+    "panel": "#97a9be",
+    "deep": "#00112c",
+    "border": "1px",
+    "radius": "22px",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onDeep": "#FFFFFF"
+  },
+  "fonts": {
+    "display": "Newsreader",
+    "text": "Figtree",
+    "displayFallback": "Georgia,serif"
+  },
+  "attitude": "warm",
+  "marquee": [
+    "Orthodontic Associates of Collegeville",
+    "Collegeville",
+    "The work"
+  ],
+  "imageAlts": [
+    "The people photograph for Orthodontic Associates of Collegeville: people at work",
+    "The process photograph for Orthodontic Associates of Collegeville: hands on the job",
+    "The conversation photograph for Orthodontic Associates of Collegeville: a real conversation",
+    "The place photograph for Orthodontic Associates of Collegeville: the place",
+    "The craft photograph for Orthodontic Associates of Collegeville: the craft",
+    "The shop photograph for Orthodontic Associates of Collegeville: The room where the work lives.",
+    "Hands photograph for Orthodontic Associates of Collegeville: A closer look at the job.",
+    "The bay photograph for Orthodontic Associates of Collegeville: Tools and the person using them.",
+    "The crew photograph for Orthodontic Associates of Collegeville: People mid-job, not posed.",
+    "Detail photograph for Orthodontic Associates of Collegeville: Skill you only get up close."
+  ],
+  "imageDisclosure": "Photographs harvested from the official site and recomposed as concept collages. They are not a claim about current staff or completed jobs.",
+  "headline": "Adam Weiss D.M.D.",
+  "sub": "“If you cannot see where you are going, ask someone who has been there before.”, J Loren Norris",
+  "points": [
+    "The chair is calm",
+    "Hands on real care",
+    "You book with them"
+  ],
+  "offerings": [
+    {
+      "title": "Mentoring and Coaching the Next Generation",
+      "body": "A bit about me: my name is Dr. Adam Weiss and I have been privately practicing Orthodontics for the past 32 years. I am board-certified and currently own/manage 8 Orthodontic/Pediatric Dental practices across the Philadelphia region. I have experience developing all models of private practice and have been employed as a faculty member at Albert Einstein Medical Center’s Department of Orthodontics since 2020."
+    },
+    {
+      "title": "Don't Go It Alone",
+      "body": "Core Areas of Guidance: Practice Model Selection, Case Reviews and Clinical Discussions, Customer Handling, Contract negotiations, Work/Life balance"
+    },
+    {
+      "title": "Start your Mentorship Journey",
+      "body": "Case Reviews and Clinical Discussion: The focus of this guidance is not intended to help you with another way to correct something such as a Class II, but instead is intended to offer you a sounding board and second opinion as you work through difficult cases or review clinical Orthodontics."
+    }
+  ],
+  "experience": [
+    {
+      "title": "Walk in knowing who they are",
+      "body": "Name, place, and a clear call path above the fold."
+    },
+    {
+      "title": "See the room",
+      "body": "Treatment, reception, and careful hands. Not a handshake in an atrium."
+    },
+    {
+      "title": "Book with them",
+      "body": "Hours and insurance questions stay on their official site."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "https://orthodontists.com/"
+    }
+  ],
+  "story": "“If you cannot see where you are going, ask someone who has been there before.”, J Loren Norris A bit about me: my name is Dr. Adam Weiss and I have been privately practicing Orthodontics for the past 32 years. I am board-certified and currently own/manage 8 Orthodontic/Pediatric Dental practices across the Philadelphia region. I have experience developing all models of private practice and have been employed as a faculty member at Albert Einstein Medical Center’s Department of Orthodontics since 2020. Core Areas of Guidance: Practice Model Selection, Case Reviews and Clinical Discussions, Customer Handling, Contract negotiations, Work/Life balance",
+  "storyMore": "Case Reviews and Clinical Discussion: The focus of this guidance is not intended to help you with another way to correct something such as a Class II, but instead is intended to offer you a sounding board and second opinion as you work through difficult cases or review clinical Orthodontics.",
+  "featureBody": "Contract Negotiations: Negotiating a contract that is fair to both you and the practice hiring you is integral to a successful working relationship. Reviewing your concerns, and offering an owner/employer perspective can help make for a smoother negotiation.",
+  "workHeading": "Care that looks like the actual chair.",
+  "galleryHeading": "People doing the work.",
+  "storyHeading": "A practice, not a template.",
+  "featureHeading": "Close on the skill.",
+  "contactHeading": "Start the visit.",
+  "closing": "Orthodontic Associates of Collegeville should feel easy to call before anyone scrolls twice.",
+  "navWork": "Login",
+  "navStory": "Back to Dashboard",
+  "navVisit": "Visit",
+  "primaryCtaFallback": "Get Started",
+  "description": "Orthodontic Associates of Collegeville in Collegeville. Private concept preview.",
+  "wordCount": 458
+}

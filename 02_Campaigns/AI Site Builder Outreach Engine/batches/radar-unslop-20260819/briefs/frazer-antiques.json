@@ -1,0 +1,108 @@
+{
+  "slug": "frazer-antiques",
+  "name": "Frazer Antiques",
+  "city": "Frazer",
+  "category": "Retail",
+  "family": "retail",
+  "mode": "people",
+  "url": "http://www.frazer-antiques.com/",
+  "phone": "",
+  "address": "",
+  "hours": "",
+  "logo": false,
+  "logoSrc": "assets/logo.png",
+  "tokens": {
+    "paper": "#F5F1EA",
+    "ink": "#1A1612",
+    "accent": "#B45309",
+    "accent2": "#F5D0A6",
+    "panel": "#E8DCCB",
+    "deep": "#22180E",
+    "border": "1px",
+    "radius": "18px",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onDeep": "#FFFFFF"
+  },
+  "fonts": {
+    "display": "Newsreader",
+    "text": "Figtree",
+    "displayFallback": "Georgia,serif"
+  },
+  "attitude": "neon",
+  "marquee": [
+    "Frazer Antiques",
+    "Frazer",
+    "The work"
+  ],
+  "imageAlts": [
+    "The people photograph for Frazer Antiques: people at work",
+    "The process photograph for Frazer Antiques: hands on the job",
+    "The conversation photograph for Frazer Antiques: a real conversation",
+    "The place photograph for Frazer Antiques: the place",
+    "The craft photograph for Frazer Antiques: the craft",
+    "The shop photograph for Frazer Antiques: The room where the work lives.",
+    "Hands photograph for Frazer Antiques: A closer look at the job.",
+    "The bay photograph for Frazer Antiques: Tools and the person using them.",
+    "The crew photograph for Frazer Antiques: People mid-job, not posed.",
+    "Detail photograph for Frazer Antiques: Skill you only get up close."
+  ],
+  "imageDisclosure": "Illustrative concept imagery plus any photographs harvested from the official site. These visuals do not claim to depict current staff, customers, or completed work.",
+  "headline": "Frazer Antiques",
+  "sub": "Frazer Antiques in Frazer. A private concept homepage: their mark when we have it, industry photography, and a clearer visit path.",
+  "points": [
+    "The shop is the product",
+    "Hands on the goods",
+    "Visit or call them"
+  ],
+  "offerings": [
+    {
+      "title": "The floor",
+      "body": "Frazer Antiques is a shop you can walk. The preview shows the goods and the people."
+    },
+    {
+      "title": "The counter",
+      "body": "A conversation over the thing they sell, not a mall stock set."
+    },
+    {
+      "title": "The visit",
+      "body": "Hours stay official. Nothing here invents inventory."
+    }
+  ],
+  "experience": [
+    {
+      "title": "Browse",
+      "body": "The homepage should look like the shop, not a catalog template."
+    },
+    {
+      "title": "Ask",
+      "body": "An associate in the frame, handling the product."
+    },
+    {
+      "title": "Take it home",
+      "body": "Pricing and stock stay on their official site."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "http://www.frazer-antiques.com/"
+    }
+  ],
+  "story": "Frazer Antiques gets a private concept homepage, not a mailed pitch. The page keeps their name in the header, puts industry photography in a 4:5 frame, and makes the next step a call or their official site. Nothing here invents hours, a menu, an award, or a person who does not appear in a first-party photo. When harvest can read their live copy, those nouns come back onto the page. When the live site blocks the harvest, the preview stays honest and a little quieter instead of padding fake specifics. The collages stay in the work: people on the job, or food on the plate, never a logo baked into a photograph. Frazer Antiques is a shop you can walk. The preview shows the goods and the people.",
+  "storyMore": "The homepage should look like the shop, not a catalog template. An associate in the frame, handling the product.",
+  "featureBody": "A conversation over the thing they sell, not a mall stock set. Hours stay official. Nothing here invents inventory.",
+  "workHeading": "A shop that looks like a shop.",
+  "galleryHeading": "People and the product.",
+  "storyHeading": "A storefront with a name.",
+  "featureHeading": "Close on what they sell.",
+  "contactHeading": "Plan the visit.",
+  "closing": "Frazer Antiques should feel like a counter you would walk up to.",
+  "navWork": "Work",
+  "navStory": "Story",
+  "navVisit": "Visit",
+  "primaryCtaFallback": "",
+  "description": "Frazer Antiques in Frazer. Private concept preview.",
+  "wordCount": 326
+}

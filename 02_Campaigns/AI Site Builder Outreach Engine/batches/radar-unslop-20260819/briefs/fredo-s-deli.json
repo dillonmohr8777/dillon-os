@@ -1,0 +1,118 @@
+{
+  "slug": "fredo-s-deli",
+  "name": "Fredo's Deli",
+  "city": "Pittsburgh",
+  "category": "Food",
+  "family": "food",
+  "mode": "food",
+  "url": "http://fredosdeli.com/",
+  "phone": "412-344-1060",
+  "address": "1451 Potomac Ave Pittsburgh",
+  "hours": "satta, imported DiLusso Genoa salam",
+  "logo": true,
+  "logoSrc": "assets/logo.png",
+  "tokens": {
+    "paper": "#f0c000",
+    "ink": "#001080",
+    "accent": "#f0c000",
+    "accent2": "#001080",
+    "panel": "#f0c000",
+    "deep": "#000846",
+    "border": "1px",
+    "radius": "22px",
+    "onPaper": "#090909",
+    "onAccent": "#090909",
+    "onDeep": "#FFFFFF"
+  },
+  "fonts": {
+    "display": "Newsreader",
+    "text": "Figtree",
+    "displayFallback": "Georgia,serif"
+  },
+  "attitude": "warm",
+  "marquee": [
+    "Fredo's Deli",
+    "Pittsburgh",
+    "The plate"
+  ],
+  "imageAlts": [
+    "Plated food from a Fredo's Deli kitchen concept",
+    "Chef plating at the pass for Fredo's Deli",
+    "Prep and ingredients for Fredo's Deli",
+    "Dining setting for Fredo's Deli",
+    "Close food texture for Fredo's Deli",
+    "The room photograph for Fredo's Deli: The dining room, pulled wide.",
+    "Closer photograph for Fredo's Deli: A second look at the plate.",
+    "Service photograph for Fredo's Deli: Hands moving at the pass.",
+    "Heat photograph for Fredo's Deli: The line when tickets stack.",
+    "Last look photograph for Fredo's Deli: What you see before you sit."
+  ],
+  "imageDisclosure": "Illustrative concept imagery plus any photographs harvested from the official site. These visuals do not claim to depict current staff, customers, or completed work.",
+  "headline": "MARKET & CATERING, TOO!",
+  "sub": "Fredo's Deli is famous for serving the finest in hearty sandwiches with a back to the basics mentality. You can create your own sandwich using the finest prosciutto, roast beef, corn beef, pastrami, sopressata or turkey breast then top it off with an assortment of different.",
+  "points": [
+    "The plate leads",
+    "The kitchen stays in the picture",
+    "Hours live on their official site"
+  ],
+  "offerings": [
+    {
+      "title": "The plate",
+      "body": "Fredo's Deli is a kitchen first. The preview leads with food, not a stock dining room."
+    },
+    {
+      "title": "The pass",
+      "body": "Hands, heat, and the ticket. You see the work behind the dish."
+    },
+    {
+      "title": "The room",
+      "body": "A table worth sitting down for. Reservations and tonight's menu stay with them."
+    }
+  ],
+  "experience": [
+    {
+      "title": "Arrive hungry",
+      "body": "The homepage should make the food obvious before anyone hunts a PDF menu."
+    },
+    {
+      "title": "See the work",
+      "body": "Prep, the pass, and the plate. Not random people in a sunlit atrium."
+    },
+    {
+      "title": "Confirm with them",
+      "body": "Call, hours, and ordering stay on the official source so nothing here is guessed."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "http://fredosdeli.com/"
+    },
+    {
+      "title": "Call",
+      "body": "412-344-1060",
+      "href": "tel:4123441060"
+    },
+    {
+      "title": "Find them",
+      "body": "1451 Potomac Ave Pittsburgh",
+      "href": "https://www.google.com/maps/search/?api=1&query=1451%20Potomac%20Ave%20Pittsburgh"
+    }
+  ],
+  "story": "Fredo's Deli is famous for serving the finest in hearty sandwiches with a back to the basics mentality. You can create your own sandwich using the finest prosciutto, roast beef, corn beef, pastrami, sopressata or turkey breast then top it off with an assortment of different cheeses between fresh Italian, marble rye, wheat, French, baguette, ciabata or pita bread from fresh Bread Works Bread. You can dine-in, take out, or have your meal delivered. Ask us about our uncomparable catering services. Book your next party or watch the next big game in our back party room. You may bring your own beverage in the back room. Fredo's Deli is sure to please both meat lovers and vegetarians. Our famous Godfather sandwich is.",
+  "storyMore": "We're just off West Liberty Ave., in picturesque Pittsburgh's Dormont ( map ). Turn on Potomac Avenue and look left. Plenty of parking in front or across the street.",
+  "featureBody": "ENJOY OUR OUTDOOR CAFE OR BOOK OUR PARTY ROOM FOR YOUR NEXT BUSINESS MEETING!",
+  "workHeading": "What comes out of this kitchen.",
+  "galleryHeading": "Food worth sitting down for.",
+  "storyHeading": "A kitchen with a name on the door.",
+  "featureHeading": "Close enough to taste the work.",
+  "contactHeading": "Make the next visit easy.",
+  "closing": "Fredo's Deli should feel like a place you can taste from the first screen.",
+  "navWork": "MARKET",
+  "navStory": "CATERING",
+  "navVisit": "Visit",
+  "primaryCtaFallback": "Order Catering Now",
+  "description": "Fredo's Deli in Pittsburgh. Private concept preview.",
+  "wordCount": 392
+}

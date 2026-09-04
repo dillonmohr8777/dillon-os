@@ -1,0 +1,108 @@
+{
+  "slug": "barnes-financial-group",
+  "name": "Barnes Financial Group",
+  "city": "Media",
+  "category": "Legal",
+  "family": "legal",
+  "mode": "people",
+  "url": "http://www.barnesfinancial.com/",
+  "phone": "",
+  "address": "",
+  "hours": "",
+  "logo": true,
+  "logoSrc": "assets/logo.png",
+  "tokens": {
+    "paper": "#e0d0b0",
+    "ink": "#306080",
+    "accent": "#306080",
+    "accent2": "#405060",
+    "panel": "#c7c0a9",
+    "deep": "#1a3446",
+    "border": "1px",
+    "radius": "2px",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onDeep": "#FFFFFF"
+  },
+  "fonts": {
+    "display": "Newsreader",
+    "text": "Figtree",
+    "displayFallback": "Georgia,serif"
+  },
+  "attitude": "editorial",
+  "marquee": [
+    "Barnes Financial Group",
+    "Media",
+    "The work"
+  ],
+  "imageAlts": [
+    "The people photograph for Barnes Financial Group: people at work",
+    "The process photograph for Barnes Financial Group: hands on the job",
+    "The conversation photograph for Barnes Financial Group: a real conversation",
+    "The place photograph for Barnes Financial Group: the place",
+    "The craft photograph for Barnes Financial Group: the craft",
+    "The shop photograph for Barnes Financial Group: The room where the work lives.",
+    "Hands photograph for Barnes Financial Group: A closer look at the job.",
+    "The bay photograph for Barnes Financial Group: Tools and the person using them.",
+    "The crew photograph for Barnes Financial Group: People mid-job, not posed.",
+    "Detail photograph for Barnes Financial Group: Skill you only get up close."
+  ],
+  "imageDisclosure": "Illustrative concept imagery plus any photographs harvested from the official site. These visuals do not claim to depict current staff, customers, or completed work.",
+  "headline": "We're sorry...",
+  "sub": "Barnes Financial Group in Media. A private concept homepage: their mark when we have it, industry photography, and a clearer visit path.",
+  "points": [
+    "A real consultation",
+    "Documents in the room",
+    "You call their office"
+  ],
+  "offerings": [
+    {
+      "title": "The conversation",
+      "body": "Barnes Financial Group is counsel in a room, not a marble-column stock photo."
+    },
+    {
+      "title": "The work",
+      "body": "Files, listening, the next step written down."
+    },
+    {
+      "title": "The office",
+      "body": "A place you can actually visit. Hours stay official."
+    }
+  ],
+  "experience": [
+    {
+      "title": "Reach them",
+      "body": "Phone and the official site are the path. Nothing here invents a retainer."
+    },
+    {
+      "title": "Sit down",
+      "body": "A consultation looks like two people at a table, not a skyline mural."
+    },
+    {
+      "title": "Leave with a next step",
+      "body": "What they handle is their language. We keep their nouns when harvest has them."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "http://www.barnesfinancial.com/"
+    }
+  ],
+  "story": "Barnes Financial Group gets a private concept homepage, not a mailed pitch. The page keeps their name in the header, puts industry photography in a 4:5 frame, and makes the next step a call or their official site. Nothing here invents hours, a menu, an award, or a person who does not appear in a first-party photo. When harvest can read their live copy, those nouns come back onto the page. When the live site blocks the harvest, the preview stays honest and a little quieter instead of padding fake specifics. The collages stay in the work: people on the job, or food on the plate, never a logo baked into a photograph. Barnes Financial Group is counsel in a room, not a marble-column stock photo.",
+  "storyMore": "Phone and the official site are the path. Nothing here invents a retainer. A consultation looks like two people at a table, not a skyline mural.",
+  "featureBody": "Files, listening, the next step written down. A place you can actually visit. Hours stay official.",
+  "workHeading": "Counsel that looks like the actual office.",
+  "galleryHeading": "People in the work.",
+  "storyHeading": "A firm with a name you can say out loud.",
+  "featureHeading": "Close on the meeting, not the slogan.",
+  "contactHeading": "Start the conversation.",
+  "closing": "Barnes Financial Group should feel like an office you can call today.",
+  "navWork": "Work",
+  "navStory": "Story",
+  "navVisit": "Visit",
+  "primaryCtaFallback": "",
+  "description": "Barnes Financial Group in Media. Private concept preview.",
+  "wordCount": 345
+}

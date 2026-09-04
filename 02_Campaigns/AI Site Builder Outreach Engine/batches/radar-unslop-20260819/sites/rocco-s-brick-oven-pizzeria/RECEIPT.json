@@ -1,0 +1,148 @@
+{
+  "id": 36,
+  "slug": "rocco-s-brick-oven-pizzeria",
+  "name": "Rocco's Brick Oven Pizzeria",
+  "family": "food",
+  "mode": "food",
+  "issue": "placeholder",
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "cinematic",
+      "ok": true
+    },
+    {
+      "check": "moments",
+      "ok": true
+    },
+    {
+      "check": "story-body-photo",
+      "ok": true
+    },
+    {
+      "check": "feature-body-photo",
+      "ok": true
+    },
+    {
+      "check": "hero-only-swipe",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
+      "check": "collage-6.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-7.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-8.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-9.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-10.webp",
+      "ok": true
+    }
+  ],
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
+  "photoCount": 13,
+  "sourceCount": 13,
+  "officialPhotos": 8,
+  "genFills": 5,
+  "url": "https://www.roccosbrickoven.net/",
+  "city": "Collegeville",
+  "rerender": true,
+  "hashes": [
+    "4431b855c98c25a0ca72d95a3022fe837a50ab26ce330f7f19b0d2ce3aafdfca",
+    "a23e9feb11f77c2910b6d4997610a7efe4d8f727248e21addd77813f1a52526d",
+    "2c7fbfba3f3bd8166d487114b882653c06b852d370d2817480ce3bae00ded655",
+    "abbe154cb37820db4bfb24accddca5da83f1badfa82f4c8932fa573239ef75ca",
+    "25de9a6f1c8b8fe249da8add3100f5ff7e09b84314c9eb581543129be3bf7fe7",
+    "bc50001bc0fac9bf9f09178273fd7a82fcbb9b8924af7369fdfd4d299fbaf7e9",
+    "28645c6ae7f6790808d352750870695ae092a79cac4c523ec85b8d10015b0999",
+    "7366f86e1fa7cbbe74de8904f473bd6f18b985ff7aa6d6461d9b82f83de5a286",
+    "e8fbdee2dccdb17d2af7ef281d7f47ad6b6d2bf4a783bb2678f2a7ecfed15a75",
+    "01229c63833b1480ac0b84365d88ec75181877ef413b874be81ed7aad168ac3a"
+  ],
+  "copyWords": 339,
+  "treatedPrint": true,
+  "printPass": "v1",
+  "bodyPass": "v1"
+}

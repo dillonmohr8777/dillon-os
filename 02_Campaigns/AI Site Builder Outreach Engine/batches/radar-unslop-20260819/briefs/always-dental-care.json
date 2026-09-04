@@ -1,0 +1,118 @@
+{
+  "slug": "always-dental-care",
+  "name": "Always Dental Care",
+  "city": "Phoenixville",
+  "category": "Dental",
+  "family": "dental",
+  "mode": "people",
+  "url": "https://www.alwaysdentalcare.com/",
+  "phone": "484.392.7687",
+  "address": "1570 Egypt Rd #210, Phoenixville, Pennsylvania, 19460",
+  "hours": "",
+  "logo": true,
+  "logoSrc": "assets/logo.png",
+  "tokens": {
+    "paper": "#a0d0f0",
+    "ink": "#004070",
+    "accent": "#0090d0",
+    "accent2": "#004070",
+    "panel": "#89c7eb",
+    "deep": "#00233d",
+    "border": "1px",
+    "radius": "28px",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onDeep": "#FFFFFF"
+  },
+  "fonts": {
+    "display": "Fraunces",
+    "text": "Source Sans 3",
+    "displayFallback": "Georgia,serif"
+  },
+  "attitude": "glass",
+  "marquee": [
+    "Always Dental Care",
+    "Phoenixville",
+    "The work"
+  ],
+  "imageAlts": [
+    "The people photograph for Always Dental Care: people at work",
+    "The process photograph for Always Dental Care: hands on the job",
+    "The conversation photograph for Always Dental Care: a real conversation",
+    "The place photograph for Always Dental Care: the place",
+    "The craft photograph for Always Dental Care: the craft",
+    "The shop photograph for Always Dental Care: The room where the work lives.",
+    "Hands photograph for Always Dental Care: A closer look at the job.",
+    "The bay photograph for Always Dental Care: Tools and the person using them.",
+    "The crew photograph for Always Dental Care: People mid-job, not posed.",
+    "Detail photograph for Always Dental Care: Skill you only get up close."
+  ],
+  "imageDisclosure": "Illustrative concept imagery plus any photographs harvested from the official site. These visuals do not claim to depict current staff, customers, or completed work.",
+  "headline": "Family & Cosmetic Dentistry",
+  "sub": "Services Cosmetic Dentistry Dental Veneers",
+  "points": [
+    "The chair is calm",
+    "Hands on real care",
+    "You book with them"
+  ],
+  "offerings": [
+    {
+      "title": "The visit",
+      "body": "Always Dental Care is about a real operatory, not a stock smile collage."
+    },
+    {
+      "title": "The team",
+      "body": "People who do the work: exam, cleaning, the conversation at the chair."
+    },
+    {
+      "title": "The next step",
+      "body": "Call or book on their official line. Nothing here invents an opening."
+    }
+  ],
+  "experience": [
+    {
+      "title": "Walk in knowing who they are",
+      "body": "Name, place, and a clear call path above the fold."
+    },
+    {
+      "title": "See the room",
+      "body": "Treatment, reception, and careful hands. Not a handshake in an atrium."
+    },
+    {
+      "title": "Book with them",
+      "body": "Hours and insurance questions stay on their official site."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "https://www.alwaysdentalcare.com/"
+    },
+    {
+      "title": "Call",
+      "body": "484.392.7687",
+      "href": "tel:4843927687"
+    },
+    {
+      "title": "Find them",
+      "body": "1570 Egypt Rd #210, Phoenixville, Pennsylvania, 19460",
+      "href": "https://www.google.com/maps/search/?api=1&query=1570%20Egypt%20Rd%20%23210%2C%20Phoenixville%2C%20Pennsylvania%2C%2019460"
+    }
+  ],
+  "story": "Services Cosmetic Dentistry Dental Veneers General &#038; Family Dentistry Dental Crowns Review Directions Call Us Request Appointment 484.392.7687 1570 Egypt Rd #210 Phoenixville, PA 19460 (Behind WAWA, next to Hand & Stone Massage) Always Dental Care gets a private concept homepage, not a mailed pitch. The page keeps their name in the header, puts industry photography in a 4:5 frame, and makes the next step a call or their official site. Nothing here invents hours, a menu, an award, or a person who does not appear in a first-party photo. When harvest can read their live copy, those nouns come back onto the page. When the live site blocks the harvest, the preview stays honest and a little quieter instead of.",
+  "storyMore": "Are you missing one or more of your natural teeth? Ask Dr. Nguyen about dental implants. Dental implants replace your tooth and root and become a permanent part of your smile.",
+  "featureBody": "Our team at Always Dental Care is thrilled to treat patients of all ages. We will provide you and your family with all of the dental care you need to reach healthy, functional smiles.",
+  "workHeading": "Care that looks like the actual chair.",
+  "galleryHeading": "People doing the work.",
+  "storyHeading": "A practice, not a template.",
+  "featureHeading": "Close on the skill.",
+  "contactHeading": "Start the visit.",
+  "closing": "Always Dental Care should feel easy to call before anyone scrolls twice.",
+  "navWork": "About Us",
+  "navStory": "Services",
+  "navVisit": "Contact",
+  "primaryCtaFallback": "Contact",
+  "description": "Always Dental Care in Phoenixville. Private concept preview.",
+  "wordCount": 354
+}

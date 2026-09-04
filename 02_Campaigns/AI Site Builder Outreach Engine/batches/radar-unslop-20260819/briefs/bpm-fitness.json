@@ -1,0 +1,108 @@
+{
+  "slug": "bpm-fitness",
+  "name": "BPM Fitness",
+  "city": "Philadelphia",
+  "category": "Fitness",
+  "family": "fitness",
+  "mode": "people",
+  "url": "https://bpmfitnessphl.com/",
+  "phone": "",
+  "address": "",
+  "hours": "",
+  "logo": true,
+  "logoSrc": "assets/logo.png",
+  "tokens": {
+    "paper": "#f4efe7",
+    "ink": "#111820",
+    "accent": "#4080f0",
+    "accent2": "#e04030",
+    "panel": "#dadfe8",
+    "deep": "#090d11",
+    "border": "1px",
+    "radius": "2px",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onDeep": "#FFFFFF"
+  },
+  "fonts": {
+    "display": "Syne",
+    "text": "Figtree",
+    "displayFallback": "Arial,sans-serif"
+  },
+  "attitude": "editorial",
+  "marquee": [
+    "BPM Fitness",
+    "Philadelphia",
+    "The work"
+  ],
+  "imageAlts": [
+    "The people photograph for BPM Fitness: people at work",
+    "The process photograph for BPM Fitness: hands on the job",
+    "The conversation photograph for BPM Fitness: a real conversation",
+    "The place photograph for BPM Fitness: the place",
+    "The craft photograph for BPM Fitness: the craft",
+    "The shop photograph for BPM Fitness: The room where the work lives.",
+    "Hands photograph for BPM Fitness: A closer look at the job.",
+    "The bay photograph for BPM Fitness: Tools and the person using them.",
+    "The crew photograph for BPM Fitness: People mid-job, not posed.",
+    "Detail photograph for BPM Fitness: Skill you only get up close."
+  ],
+  "imageDisclosure": "Illustrative concept imagery plus any photographs harvested from the official site. These visuals do not claim to depict current staff, customers, or completed work.",
+  "headline": "BPM Fitness",
+  "sub": "BPM Fitness in Philadelphia. A private concept homepage: their mark when we have it, industry photography, and a clearer visit path.",
+  "points": [
+    "The floor is real",
+    "Coaching in the room",
+    "You train with them"
+  ],
+  "offerings": [
+    {
+      "title": "The session",
+      "body": "BPM Fitness is coaching, a floor, and a plan. Not a stock high-five."
+    },
+    {
+      "title": "The work",
+      "body": "Lifts, stretches, a therapist or trainer actually spotting the movement."
+    },
+    {
+      "title": "The next visit",
+      "body": "Membership and hours stay on their official site."
+    }
+  ],
+  "experience": [
+    {
+      "title": "Walk the floor",
+      "body": "The homepage should look like a gym or clinic you can enter."
+    },
+    {
+      "title": "Train with someone",
+      "body": "A coach in the frame, not a disconnected abs collage."
+    },
+    {
+      "title": "Come back",
+      "body": "Schedules stay official. Nothing here invents a class time."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "https://bpmfitnessphl.com/"
+    }
+  ],
+  "story": "BPM Fitness gets a private concept homepage, not a mailed pitch. The page keeps their name in the header, puts industry photography in a 4:5 frame, and makes the next step a call or their official site. Nothing here invents hours, a menu, an award, or a person who does not appear in a first-party photo. When harvest can read their live copy, those nouns come back onto the page. When the live site blocks the harvest, the preview stays honest and a little quieter instead of padding fake specifics. The collages stay in the work: people on the job, or food on the plate, never a logo baked into a photograph. BPM Fitness is coaching, a floor, and a plan. Not a stock high-five.",
+  "storyMore": "The homepage should look like a gym or clinic you can enter. A coach in the frame, not a disconnected abs collage.",
+  "featureBody": "Lifts, stretches, a therapist or trainer actually spotting the movement. Membership and hours stay on their official site.",
+  "workHeading": "Training that looks like the floor.",
+  "galleryHeading": "People in the work.",
+  "storyHeading": "A gym or clinic with a name.",
+  "featureHeading": "Close on the spot.",
+  "contactHeading": "Start a session.",
+  "closing": "BPM Fitness should feel like a floor you would actually train on.",
+  "navWork": "Work",
+  "navStory": "Story",
+  "navVisit": "Visit",
+  "primaryCtaFallback": "",
+  "description": "BPM Fitness in Philadelphia. Private concept preview.",
+  "wordCount": 328
+}

@@ -1,0 +1,150 @@
+{
+  "id": 59,
+  "slug": "lees-hoagie-house",
+  "name": "Lee's Hoagie House of Horsham",
+  "family": "food",
+  "mode": "food",
+  "issue": "webgl",
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "cinematic",
+      "ok": true
+    },
+    {
+      "check": "moments",
+      "ok": true
+    },
+    {
+      "check": "story-body-photo",
+      "ok": true
+    },
+    {
+      "check": "feature-body-photo",
+      "ok": true
+    },
+    {
+      "check": "hero-only-swipe",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
+      "check": "collage-6.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-7.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-8.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-9.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-10.webp",
+      "ok": true
+    }
+  ],
+  "browser": "page.goto: net::ERR_NAME_NOT_RESOLVED at https://leeshoagieshorsham.com/\nCall log:\n  - navigating to \"https://leeshoagieshorsham.com/\", waiting until \"domcontentloaded\"\n",
+  "harvestCached": true,
+  "hasLogo": false,
+  "logoSrc": "",
+  "photoCount": 5,
+  "sourceCount": 5,
+  "officialPhotos": 0,
+  "genFills": 5,
+  "url": "https://leeshoagieshorsham.com",
+  "city": "Horsham",
+  "rerender": true,
+  "hashes": [
+    "d0ce329684ad46674f86251850ed496509cd61fcc26e20128596d2520ffd8091",
+    "61cf2671df991bea57149c27d756c6c81549bd6ea91eef5502f5b64d131d4d01",
+    "a2229cc8a575853c6310f356b227198d16c5659753cad5e0d4ae662f604f44aa",
+    "4fdf69347d7656a1a370cacf8bb20017166fa83b14001b9c815acca4f65aeb18",
+    "634b747505342c2aa4a9499b358f8be530abbe2f65f6cb1e5b8cfb8a274dde8a",
+    "ed664309bce9a9937b63ce96be8fc29a0d6b9c6e8043a5259432cf941dc4dac3",
+    "9ad5d5d76d9391f29ed4d3ab10834909be8d45cad9368fd2bc5da902c300a633",
+    "7d4cc9eecdc91551528303a621706d4db5b44daf9e284000a0db37f8883fb9b2",
+    "5f752d36267a535c39e60334fa2808490b11c6b30383c687fe8dd165a7c61451",
+    "3977abcdc0eac66559c78e89e35cea632bea5695f13c1a8b03c1c8b18fca5e33"
+  ],
+  "copyWords": 387,
+  "treatedPrint": true,
+  "printPass": "v1",
+  "bodyPass": "v1"
+}

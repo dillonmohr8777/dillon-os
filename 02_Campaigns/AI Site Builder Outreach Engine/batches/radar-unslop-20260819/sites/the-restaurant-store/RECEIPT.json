@@ -1,0 +1,150 @@
+{
+  "id": 40,
+  "slug": "the-restaurant-store",
+  "name": "The Restaurant Store Plymouth Meeting",
+  "family": "trade",
+  "mode": "people",
+  "issue": "placeholder",
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "cinematic",
+      "ok": true
+    },
+    {
+      "check": "moments",
+      "ok": true
+    },
+    {
+      "check": "story-body-photo",
+      "ok": true
+    },
+    {
+      "check": "feature-body-photo",
+      "ok": true
+    },
+    {
+      "check": "hero-only-swipe",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
+      "check": "collage-6.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-7.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-8.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-9.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-10.webp",
+      "ok": true
+    }
+  ],
+  "browser": "cloudflare-challenge",
+  "harvestCached": true,
+  "hasLogo": false,
+  "logoSrc": "",
+  "photoCount": 5,
+  "sourceCount": 5,
+  "officialPhotos": 0,
+  "genFills": 5,
+  "url": "https://www.therestaurantstore.com/stores/Plymouth-Meeting",
+  "city": "Norristown",
+  "rerender": true,
+  "hashes": [
+    "11f06e4a878e884d96e7e7104382f8a0cac537704fd4c85a84d76da92a9071f0",
+    "62af642f30e0e2b85678e8b70ec02f719560127d2ef92ac7d6cb8e20d57a0442",
+    "9860ef1604e66d305735d7d14854efe959ba4eb253b57c8dbbdf844feb878b70",
+    "985e70cb31d21c3caed660e37f958bc30fae4272a79361900864577a53b71fdf",
+    "f21befc7680de92e5f5913cee12524ebd7c1bd2f3de53231b1f8fec2fd43b074",
+    "12f020bd0afb89848b9c13fc9a7f0914056d988c0cc5833d6215fa042944ef86",
+    "f81deff6b6d91aed387d5406ecd3e88176dc514306f46ff857d7620616a166df",
+    "2330e3a043f7218d6e76cee282dd05f0b811625b6fdd1d1242ae7011444d393b",
+    "0e96894615c8a902c7409bfd81dbe2778325729cbbd38a191cb749bfe5264665",
+    "8b76e71c70817307692317612a343d2c23965462a512ed002e18c2a1e42dc5fa"
+  ],
+  "copyWords": 350,
+  "treatedPrint": true,
+  "printPass": "v1",
+  "bodyPass": "v1"
+}

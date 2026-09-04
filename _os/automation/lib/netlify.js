@@ -51,13 +51,27 @@ async function api(pathname, { method = 'GET', body = null, tok, contentType = '
   } catch {
     parsed = null;
   }
+  const headers = res.headers || {};
+  const retryAfterRaw = headers['retry-after'];
+  const retryAfterSec = Number(retryAfterRaw);
   return {
     ok: res.status >= 200 && res.status < 300,
     status: res.status,
     body: parsed,
     // Truncated so a token or a huge HTML error page never lands in a log.
     raw: parsed ? null : String(res.body || '').slice(0, 300),
+    retryAfterMs: Number.isFinite(retryAfterSec) && retryAfterSec > 0 ? retryAfterSec * 1000 : 0,
   };
+}
+
+function isRetryableUpload(put) {
+  if (!put || put.ok) return false;
+  if (put.status === 429 || put.status === 0 || put.status >= 500) return true;
+  return /ECONNRESET|ETIMEDOUT|ECONNREFUSED|socket hang up|429/i.test(String(put.error || put.raw || ''));
+}
+
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 const sha1 = (buf) => crypto.createHash('sha1').update(buf).digest('hex');
@@ -65,7 +79,7 @@ const sha1 = (buf) => crypto.createHash('sha1').update(buf).digest('hex');
 /** Find a site by exact name, or create it. */
 async function ensureSite(name, opts = {}) {
   const tok = token(opts.token);
-  const list = await api(`/sites?per_page=100&filter=all`, { tok });
+  const list = await api(`/sites?name=${encodeURIComponent(name)}&per_page=100&filter=all`, { tok });
   if (!list.ok) throw new Error(`listing sites failed: ${list.status} ${list.raw || list.error || ''}`);
   const found = (list.body || []).find((s) => s.name === name);
   if (found) return { id: found.id, name: found.name, url: found.ssl_url || found.url, created: false };
@@ -135,18 +149,44 @@ async function deployFiles(siteId, files, opts = {}) {
   }
 
   const uploaded = [];
-  for (const shaNeeded of required) {
+  const failed = [];
+  let cursor = 0;
+  // Netlify file PUTs 429 and reset sockets when eight land at once.
+  const workers = Math.min(3, Math.max(1, required.length));
+  async function uploadOne(shaNeeded) {
     const p = bySha.get(shaNeeded);
-    if (!p) continue;
-    const put = await api(`/deploys/${deployId}/files${p}`, {
-      method: 'PUT',
-      tok,
-      body: buffers.get(p),
-      contentType: 'application/octet-stream',
-      timeoutMs: 120000,
-    });
-    if (!put.ok) throw new Error(`uploading ${p} failed: ${put.status} ${put.raw || ''}`);
-    uploaded.push(p);
+    if (!p) return;
+    let last = null;
+    for (let attempt = 0; attempt < 8; attempt += 1) {
+      last = await api(`/deploys/${deployId}/files${p}`, {
+        method: 'PUT',
+        tok,
+        body: buffers.get(p),
+        contentType: 'application/octet-stream',
+        timeoutMs: 120000,
+      });
+      if (last.ok) {
+        uploaded.push(p);
+        return;
+      }
+      if (!isRetryableUpload(last)) break;
+      const wait = Math.max(last.retryAfterMs || 0, Math.min(30000, 1500 * 2 ** attempt));
+      await sleep(wait);
+    }
+    failed.push(`${p} (${last?.status} ${last?.raw || last?.error || ''})`);
+  }
+  async function worker() {
+    while (cursor < required.length) {
+      const shaNeeded = required[cursor++];
+      await uploadOne(shaNeeded);
+      await sleep(80);
+    }
+  }
+  if (required.length) {
+    await Promise.all(Array.from({ length: workers }, worker));
+  }
+  if (failed.length) {
+    throw new Error(`uploading failed for ${failed.length} file(s): ${failed.slice(0, 8).join('; ')}`);
   }
 
   return {
@@ -176,4 +216,4 @@ async function waitForDeploy(deployId, opts = {}) {
   return { ok: false, state: last?.state || 'timeout', error: 'timed out waiting for deploy' };
 }
 
-module.exports = { ensureSite, findSite, deployFiles, waitForDeploy, sha1, api };
+module.exports = { ensureSite, findSite, deployFiles, waitForDeploy, sha1, api, isRetryableUpload };

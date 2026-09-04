@@ -1,0 +1,118 @@
+{
+  "slug": "benjamin-lovell-shoes",
+  "name": "Benjamin Lovell Shoes",
+  "city": "Philadelphia",
+  "category": "Retail",
+  "family": "retail",
+  "mode": "people",
+  "url": "https://www.blshoes.com/",
+  "phone": "215.564.4655",
+  "address": "1728 Chestnut Street",
+  "hours": "",
+  "logo": true,
+  "logoSrc": "assets/logo.png",
+  "tokens": {
+    "paper": "#F5F1EA",
+    "ink": "#1A1612",
+    "accent": "#B45309",
+    "accent2": "#F5D0A6",
+    "panel": "#E8DCCB",
+    "deep": "#22180E",
+    "border": "1px",
+    "radius": "2px",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onDeep": "#FFFFFF"
+  },
+  "fonts": {
+    "display": "Fraunces",
+    "text": "Source Sans 3",
+    "displayFallback": "Georgia,serif"
+  },
+  "attitude": "editorial",
+  "marquee": [
+    "Benjamin Lovell Shoes",
+    "Philadelphia",
+    "The work"
+  ],
+  "imageAlts": [
+    "The people photograph for Benjamin Lovell Shoes: people at work",
+    "The process photograph for Benjamin Lovell Shoes: hands on the job",
+    "The conversation photograph for Benjamin Lovell Shoes: a real conversation",
+    "The place photograph for Benjamin Lovell Shoes: the place",
+    "The craft photograph for Benjamin Lovell Shoes: the craft",
+    "The shop photograph for Benjamin Lovell Shoes: The room where the work lives.",
+    "Hands photograph for Benjamin Lovell Shoes: A closer look at the job.",
+    "The bay photograph for Benjamin Lovell Shoes: Tools and the person using them.",
+    "The crew photograph for Benjamin Lovell Shoes: People mid-job, not posed.",
+    "Detail photograph for Benjamin Lovell Shoes: Skill you only get up close."
+  ],
+  "imageDisclosure": "Photographs harvested from the official site and recomposed as concept collages. They are not a claim about current staff or completed jobs.",
+  "headline": "RITTENHOUSE",
+  "sub": "1728 Chestnut Street, Philadelphia, PA 19103",
+  "points": [
+    "The shop is the product",
+    "Hands on the goods",
+    "Visit or call them"
+  ],
+  "offerings": [
+    {
+      "title": "GLEN EAGLE",
+      "body": "525 Glen Eagle Square, Glen Mills, PA 19342"
+    },
+    {
+      "title": "SPRING HOUSE",
+      "body": "Hours: Mon-Wed & Sat 10-6, Thurs-Fri 10-7, Sun 11-5"
+    },
+    {
+      "title": "ALLEN'S SHOES",
+      "body": "901 N Bethlehem Pike #4, Spring House, PA 19477"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Browse",
+      "body": "The homepage should look like the shop, not a catalog template."
+    },
+    {
+      "title": "Ask",
+      "body": "An associate in the frame, handling the product."
+    },
+    {
+      "title": "Take it home",
+      "body": "Pricing and stock stay on their official site."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "https://www.blshoes.com/"
+    },
+    {
+      "title": "Call",
+      "body": "215.564.4655",
+      "href": "tel:2155644655"
+    },
+    {
+      "title": "Find them",
+      "body": "1728 Chestnut Street",
+      "href": "https://www.google.com/maps/search/?api=1&query=1728%20Chestnut%20Street"
+    }
+  ],
+  "story": "1728 Chestnut Street, Philadelphia, PA 19103 525 Glen Eagle Square, Glen Mills, PA 19342 Hours: Mon-Wed & Sat 10-6, Thurs-Fri 10-7, Sun 11-5 Benjamin Lovell Shoes gets a private concept homepage, not a mailed pitch. The page keeps their name in the header, puts industry photography in a 4:5 frame, and makes the next step a call or their official site. Nothing here invents hours, a menu, an award, or a person who does not appear in a first-party photo. When harvest can read their live copy, those nouns come back onto the page. When the live site blocks the harvest, the preview stays honest and a little quieter instead of padding fake specifics. The collages stay in the work: people on the job, or food on the.",
+  "storyMore": "901 N Bethlehem Pike #4, Spring House, PA 19477",
+  "featureBody": "Join our mailing list to learn about the hottest new styles, promotions, & events.",
+  "workHeading": "A shop that looks like a shop.",
+  "galleryHeading": "People and the product.",
+  "storyHeading": "A storefront with a name.",
+  "featureHeading": "Close on what they sell.",
+  "contactHeading": "Plan the visit.",
+  "closing": "Benjamin Lovell Shoes should feel like a counter you would walk up to.",
+  "navWork": "Locations",
+  "navStory": "Events",
+  "navVisit": "Visit",
+  "primaryCtaFallback": "Shop Now",
+  "description": "Benjamin Lovell Shoes in Philadelphia. Private concept preview.",
+  "wordCount": 294
+}

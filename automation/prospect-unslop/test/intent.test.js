@@ -1,0 +1,81 @@
+'use strict';
+const { test } = require('node:test');
+const assert = require('node:assert/strict');
+const { familyFor, modeFor, scenesFor } = require('../intent');
+
+test('food businesses get food mode, not people stock', () => {
+  assert.equal(familyFor("Al Tacos Locos"), 'food');
+  assert.equal(modeFor('food'), 'food');
+  assert.equal(familyFor("Harry's Hotdogs"), 'food');
+  assert.equal(familyFor('Nottingham Creamery'), 'food');
+  assert.equal(familyFor("Rocco's Brick Oven Pizzeria"), 'food');
+  assert.equal(familyFor('Katana Pittsburgh', 'katana'), 'food');
+  assert.equal(familyFor('Eastern Dragon', 'eastern-dragon'), 'food');
+  assert.equal(familyFor('Artisan Wine and Cheese Cellars'), 'food');
+  assert.equal(familyFor('Manatawny Still Works'), 'food');
+  assert.notEqual(familyFor('MacLaren Kitchen and Bath'), 'food');
+  assert.notEqual(familyFor('The Restaurant Store Plymouth Meeting'), 'food');
+  assert.equal(familyFor('Wholly Grounds Coffeehouse'), 'food');
+  assert.equal(familyFor('Borsello Landscaping'), 'trade');
+  assert.equal(familyFor('Udis & Conn Orthodontics'), 'dental');
+  assert.equal(familyFor('Colmar Dentistry For Kids'), 'dental');
+  assert.equal(familyFor('J-Pro Pools Inc'), 'trade');
+});
+
+test('pool-and-spa trade is not a nail salon', () => {
+  assert.equal(familyFor('Morton Electric Pool & Spa'), 'trade');
+});
+
+test('service businesses stay people-focused', () => {
+  assert.equal(modeFor(familyFor('Always Dental Care')), 'people');
+  assert.equal(modeFor(familyFor('Art City Vets & Urgent Care')), 'people');
+  assert.equal(modeFor(familyFor("Kehan's Auto Service")), 'people');
+  assert.equal(familyFor('Always Dental Care'), 'dental');
+  assert.equal(familyFor('Art City Vets & Urgent Care'), 'veterinary');
+  assert.equal(
+    familyFor('Philadelphia Auto Accident Injury Attorney', 'philadelphia-auto-accident-injury-attorney'),
+    'legal'
+  );
+  assert.equal(familyFor('McMenamin & Margiotti', 'mcmenamin-margiotti'), 'legal');
+});
+
+test('official URLs must look like the business, not a random neighbor', () => {
+  const { urlLooksLikeBusiness, pickOfficialUrl } = require('../intent');
+  assert.equal(urlLooksLikeBusiness('Narberth Pizza and Steaks', 'narberth-pizza', 'https://www.narberthpizza.com/'), true);
+  assert.equal(urlLooksLikeBusiness('Narberth Pizza and Steaks', 'narberth-pizza', 'https://newmainstreeteatery.com/'), false);
+  assert.equal(
+    pickOfficialUrl('Narberth Pizza and Steaks', 'narberth-pizza', [
+      'https://newmainstreeteatery.com/',
+      'https://www.narberthpizza.com/',
+    ]),
+    'https://www.narberthpizza.com/'
+  );
+});
+
+test('five unique scene prompts per family', () => {
+  for (const family of ['food', 'dental', 'veterinary', 'auto', 'bridal']) {
+    const scenes = scenesFor(family, 'Test Biz');
+    assert.equal(scenes.length, 5);
+    assert.equal(new Set(scenes).size, 5);
+    for (const scene of scenes) {
+      assert.match(scene, /no text|no logos/i);
+    }
+  }
+  const food = scenesFor('food', 'Al Tacos Locos').join(' ');
+  assert.match(food, /taco|dish|kitchen|plate|ingredient|food/i);
+  assert.doesNotMatch(food, /handshake in a sunlit atrium/i);
+  const pizza = scenesFor('food', "Rocco's Brick Oven Pizzeria").join(' ');
+  assert.match(pizza, /pizza/i);
+});
+
+test('body captions are five new lines, not a copy of the hero swipe', () => {
+  const { captionsFor, bodyCaptionsFor } = require('../intent');
+  const hero = captionsFor('food').map((c) => c.line).join(' ');
+  const body = bodyCaptionsFor('food');
+  assert.equal(body.length, 5);
+  assert.equal(new Set(body.map((c) => c.line)).size, 5);
+  for (const cap of body) {
+    assert.equal(hero.includes(cap.line), false);
+  }
+  assert.equal(bodyCaptionsFor('people').length, 5);
+});

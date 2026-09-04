@@ -1,0 +1,150 @@
+{
+  "id": 112,
+  "slug": "malvern-vision-care",
+  "name": "Malvern Vision Care",
+  "family": "medical",
+  "mode": "people",
+  "issue": "design",
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "cinematic",
+      "ok": true
+    },
+    {
+      "check": "moments",
+      "ok": true
+    },
+    {
+      "check": "story-body-photo",
+      "ok": true
+    },
+    {
+      "check": "feature-body-photo",
+      "ok": true
+    },
+    {
+      "check": "hero-only-swipe",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
+      "check": "collage-6.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-7.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-8.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-9.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-10.webp",
+      "ok": true
+    }
+  ],
+  "browser": "ok",
+  "harvestCached": true,
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
+  "photoCount": 6,
+  "sourceCount": 6,
+  "officialPhotos": 1,
+  "genFills": 5,
+  "url": "https://www.malvernvision.com/",
+  "city": "Malvern",
+  "rerender": true,
+  "hashes": [
+    "aa1dd3b815af3aba76acde796be4a42620f4a1e5d18a43d9a5e29d2b3859d56a",
+    "17316f3397876e06ce84268e90a09ffabf686071ea88498413f6f1e8fe373ca6",
+    "dd16d411acf720d698e89c2cc0986a5b1834c7436de329a159cdfbfd48acb2dc",
+    "f1ff58eda7ceacaff6ceaa8da9ed2c4e2cdd7796202aeca03674db0235a2527a",
+    "0177d209ae45a9faee3e28e469ac0cba0aa63045bbe6f260d9471392d3faf885",
+    "719b66602d3bbf44247066159478a82632567d8e0d79ffe69ea44d3fc615d1ba",
+    "ad083f7f65a898f07a333bb440eab97b2df0667d1a9ff2f9b2e791df479325d3",
+    "86b5c8eaa97286b76225472c8a62d9721266357118b47454ce9a3abd22b14b18",
+    "1e779c643465715431589529b4a75f6ca7dd3280933d2ed7fb2a1fb0a07ef35d",
+    "7e1c97fa20de426678e6901199056c8ae96e4c13b03f3e244e72bec79366b7c7"
+  ],
+  "copyWords": 320,
+  "treatedPrint": true,
+  "printPass": "v1",
+  "bodyPass": "v1"
+}

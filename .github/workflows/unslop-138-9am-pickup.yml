@@ -1,0 +1,32 @@
+name: Unslop 138 9am pickup ping
+
+# One-shot: Thursday 2026-08-20 9:00 AM America/New_York (13:00 UTC during EDT).
+# This cannot launch a Cursor cloud agent. It comments on PR 326 so the pickup
+# is visible if the scheduled Cursor agent was not armed.
+on:
+  schedule:
+    - cron: '0 13 20 8 *'
+  workflow_dispatch:
+
+permissions:
+  pull-requests: write
+  contents: read
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comment pickup reminder on PR 326
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh pr comment 326 --repo dillonmohr8777/dillon-os --body "$(cat <<'EOF'
+          **9:00 AM Eastern pickup ping (2026-08-20).**
+
+          Finish the 138-site unslop on \`cursor/prospect-unslop-collages-56f2\`.
+          Read \`handoffs/unslop-138-9am-pickup.md\` and \`automation/prospect-unslop/PICKUP.md\`.
+
+          State at pause: 45 QA-ready, 91 need industry photographs, 2 duplicates dropped.
+          Sheet \`Fixed?\` only after QA green. Do not deploy.
+          EOF
+          )"

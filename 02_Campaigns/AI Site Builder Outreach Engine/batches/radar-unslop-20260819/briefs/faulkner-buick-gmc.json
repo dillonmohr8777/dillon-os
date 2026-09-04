@@ -1,0 +1,118 @@
+{
+  "slug": "faulkner-buick-gmc",
+  "name": "Faulkner Buick GMC",
+  "city": "WEST CHESTER",
+  "category": "Auto",
+  "family": "auto",
+  "mode": "people",
+  "url": "https://www.faulknerauto.com/",
+  "phone": "(610) 674-0610",
+  "address": "705 AUTOPARK BLVD, WEST CHESTER, PA, 19382",
+  "hours": "Monday 9:00 am - 7:00 pm Tuesday 9:00 am - 7:00 pm Wednesday 9:00 am",
+  "logo": true,
+  "logoSrc": "assets/logo.png",
+  "tokens": {
+    "paper": "#c0d0d0",
+    "ink": "#c01020",
+    "accent": "#c01020",
+    "accent2": "#800000",
+    "panel": "#c0b5b7",
+    "deep": "#690811",
+    "border": "2px",
+    "radius": "4px",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onDeep": "#FFFFFF"
+  },
+  "fonts": {
+    "display": "Newsreader",
+    "text": "Figtree",
+    "displayFallback": "Georgia,serif"
+  },
+  "attitude": "industrial",
+  "marquee": [
+    "Faulkner Buick GMC",
+    "WEST CHESTER",
+    "The work"
+  ],
+  "imageAlts": [
+    "The people photograph for Faulkner Buick GMC: people at work",
+    "The process photograph for Faulkner Buick GMC: hands on the job",
+    "The conversation photograph for Faulkner Buick GMC: a real conversation",
+    "The place photograph for Faulkner Buick GMC: the place",
+    "The craft photograph for Faulkner Buick GMC: the craft",
+    "The shop photograph for Faulkner Buick GMC: The room where the work lives.",
+    "Hands photograph for Faulkner Buick GMC: A closer look at the job.",
+    "The bay photograph for Faulkner Buick GMC: Tools and the person using them.",
+    "The crew photograph for Faulkner Buick GMC: People mid-job, not posed.",
+    "Detail photograph for Faulkner Buick GMC: Skill you only get up close."
+  ],
+  "imageDisclosure": "Photographs harvested from the official site and recomposed as concept collages. They are not a claim about current staff or completed jobs.",
+  "headline": "Faulkner Buick GMC West Chester",
+  "sub": "705 AUTOPARK BLVD Directions WEST CHESTER, PA 19382",
+  "points": [
+    "The bay is real",
+    "Hands on the car",
+    "Service starts with a call"
+  ],
+  "offerings": [
+    {
+      "title": "Browse new models",
+      "body": "Used Inventory Used Inventory Shop Used Inventory"
+    },
+    {
+      "title": "Featured Vehicles",
+      "body": "Value your Vehicle with 2 Steps and 10 Seconds"
+    },
+    {
+      "title": "2026 Buick Envista Preferred",
+      "body": "VIN Badges: {Bonus Cash=[com.dealer.inventory.entity.VinBadge@59a342b9]}"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Pull in",
+      "body": "The homepage should look like a shop you can drive to."
+    },
+    {
+      "title": "Talk to the person doing the work",
+      "body": "Inspection, the hood, the tablet in the lane."
+    },
+    {
+      "title": "Leave with a plan",
+      "body": "Confirm wait times and pricing with them, not with guessed copy."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "https://www.faulknerauto.com/"
+    },
+    {
+      "title": "Call",
+      "body": "(610) 674-0610",
+      "href": "tel:6106740610"
+    },
+    {
+      "title": "Find them",
+      "body": "705 AUTOPARK BLVD, WEST CHESTER, PA, 19382",
+      "href": "https://www.google.com/maps/search/?api=1&query=705%20AUTOPARK%20BLVD%2C%20WEST%20CHESTER%2C%20PA%2C%2019382"
+    }
+  ],
+  "story": "705 AUTOPARK BLVD Directions WEST CHESTER, PA 19382 Used Inventory Used Inventory Shop Used Inventory Value your Vehicle with 2 Steps and 10 Seconds Faulkner Buick GMC gets a private concept homepage, not a mailed pitch. The page keeps their name in the header, puts industry photography in a 4:5 frame, and makes the next step a call or their official site. Nothing here invents hours, a menu, an award, or a person who does not appear in a first-party photo. When harvest can read their live copy, those nouns come back onto the page. When the live site blocks the harvest, the preview stays honest and a little quieter instead of padding fake specifics. The collages stay in the work: people on the job, or food on.",
+  "storyMore": "VIN Badges: {Bonus Cash=[com.dealer.inventory.entity.VinBadge@59a342b9]}",
+  "featureBody": "VIN Badges: {Bonus Cash=[com.dealer.inventory.entity.VinBadge@3e611190]}",
+  "workHeading": "The work, in the bay where it happens.",
+  "galleryHeading": "People on the actual job.",
+  "storyHeading": "A shop with a name over the door.",
+  "featureHeading": "Close on the tool in the hand.",
+  "contactHeading": "Get the car in.",
+  "closing": "Faulkner Buick GMC should feel like a shop you can trust from the first scroll.",
+  "navWork": "New Inventory",
+  "navStory": "New Vehicles",
+  "navVisit": "Visit",
+  "primaryCtaFallback": "Shop Electric Vehicles",
+  "description": "Faulkner Buick GMC in WEST CHESTER. Private concept preview.",
+  "wordCount": 308
+}

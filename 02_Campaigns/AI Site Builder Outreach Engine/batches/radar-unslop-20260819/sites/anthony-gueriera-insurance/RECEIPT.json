@@ -1,0 +1,150 @@
+{
+  "id": 48,
+  "slug": "anthony-gueriera-insurance",
+  "name": "Anthony Gueriera Jr. Insurance Agency LLC",
+  "family": "legal",
+  "mode": "people",
+  "issue": "webgl",
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "cinematic",
+      "ok": true
+    },
+    {
+      "check": "moments",
+      "ok": true
+    },
+    {
+      "check": "story-body-photo",
+      "ok": true
+    },
+    {
+      "check": "feature-body-photo",
+      "ok": true
+    },
+    {
+      "check": "hero-only-swipe",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
+      "check": "collage-6.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-7.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-8.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-9.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-10.webp",
+      "ok": true
+    }
+  ],
+  "browser": "page.goto: net::ERR_NAME_NOT_RESOLVED at https://broomallinsuranceagency.com/\nCall log:\n  - navigating to \"https://broomallinsuranceagency.com/\", waiting until \"domcontentloaded\"\n",
+  "harvestCached": true,
+  "hasLogo": false,
+  "logoSrc": "",
+  "photoCount": 5,
+  "sourceCount": 5,
+  "officialPhotos": 0,
+  "genFills": 5,
+  "url": "https://broomallinsuranceagency.com",
+  "city": "Broomall",
+  "rerender": true,
+  "hashes": [
+    "38722c5be4dbcc007adc1aab410842c5207750ec328badd9246bdab3e0990460",
+    "9d1ed8b89ef1ad81f971b1b05bb07e36480aca16015c710e6c2b0d5053345a80",
+    "34e38dcf860f56693844e1d952529dd639902e875921030d6d927e670245b255",
+    "8415fad68b680ae443b62cd40647d5272473713d3c4c0b169b3e3a07d99dd69c",
+    "aebcdf6fe76d1d0543e49bd03e487dc7cd65bc03e75ddd22a6e81388ad57b294",
+    "40b1d470a8faf446a9082d19bcbcfb931bd81b56bf2bdefb6d472ca0a6fcb024",
+    "7b9e4950ae87b12f0a384895abb6440901916cc3a51dfbeb8c09886fc039db69",
+    "a6f2e105d3de58d9ac03a5388731db71510e9513951fe425d99adf33e4e9f11c",
+    "1ba3d0ac71cde021683dabd993b6dc23dc71d41848b6d48ef8041ff4ad4f0830",
+    "fd40b06fbfa222ae5c765e592e262d232047ab4e7de471b98795c3ba8fc2616c"
+  ],
+  "copyWords": 361,
+  "treatedPrint": true,
+  "printPass": "v1",
+  "bodyPass": "v1"
+}

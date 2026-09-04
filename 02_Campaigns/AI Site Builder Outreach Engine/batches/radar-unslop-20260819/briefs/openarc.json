@@ -1,0 +1,118 @@
+{
+  "slug": "openarc",
+  "name": "OpenArc",
+  "city": "Pittsburgh",
+  "category": "Professional",
+  "family": "professional",
+  "mode": "people",
+  "url": "https://www.openarc.net/",
+  "phone": "724-602-0286",
+  "address": "100 Global View Drive",
+  "hours": "",
+  "logo": true,
+  "logoSrc": "assets/logo.png",
+  "tokens": {
+    "paper": "#f4efe7",
+    "ink": "#111820",
+    "accent": "#0080c0",
+    "accent2": "#f08030",
+    "panel": "#d1dfe1",
+    "deep": "#090d11",
+    "border": "1px",
+    "radius": "22px",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onDeep": "#FFFFFF"
+  },
+  "fonts": {
+    "display": "Alegreya",
+    "text": "Karla",
+    "displayFallback": "Georgia,serif"
+  },
+  "attitude": "warm",
+  "marquee": [
+    "OpenArc",
+    "Pittsburgh",
+    "The work"
+  ],
+  "imageAlts": [
+    "The people photograph for OpenArc: people at work",
+    "The process photograph for OpenArc: hands on the job",
+    "The conversation photograph for OpenArc: a real conversation",
+    "The place photograph for OpenArc: the place",
+    "The craft photograph for OpenArc: the craft",
+    "The shop photograph for OpenArc: The room where the work lives.",
+    "Hands photograph for OpenArc: A closer look at the job.",
+    "The bay photograph for OpenArc: Tools and the person using them.",
+    "The crew photograph for OpenArc: People mid-job, not posed.",
+    "Detail photograph for OpenArc: Skill you only get up close."
+  ],
+  "imageDisclosure": "Photographs harvested from the official site and recomposed as concept collages. They are not a claim about current staff or completed jobs.",
+  "headline": "We’re OpenArc. We build things.",
+  "sub": "Staffing &#038; Recruiting Staffing & Recruiting Home",
+  "points": [
+    "The work is specific",
+    "People at the tools",
+    "You reach them directly"
+  ],
+  "offerings": [
+    {
+      "title": "What can we build for you?",
+      "body": "We’re OpenArc. We build things. What can we build for you? Custom Software Build Awesome Products Staffing &#038; Recruiting Build Awesome Teams .uk-navbar-container .uk-navbar .uk-navbar-nav > li:first-child, .uk-navbar-container .uk-navbar .uk-navbar-nav, .uk-navbar-right, .uk-navbar, .oa-c2a-button{ display:none } #footer\\#0 .uk-nav-sub{padding:0;} Custom Software What We Build"
+    },
+    {
+      "title": "Custom Software",
+      "body": "100 Global View Drive, Suite 500, Warrendale, PA"
+    },
+    {
+      "title": "Staffing &#038; Recruiting",
+      "body": "100 S. Commons, Suite 102 Pittsburgh, PA 15212"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Find them",
+      "body": "Name, place, and a clear path above the fold."
+    },
+    {
+      "title": "See the work",
+      "body": "A workstation, a meeting, hands on the tools of the trade."
+    },
+    {
+      "title": "Follow up",
+      "body": "Hours and scope stay official."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "https://www.openarc.net/"
+    },
+    {
+      "title": "Call",
+      "body": "724-602-0286",
+      "href": "tel:7246020286"
+    },
+    {
+      "title": "Find them",
+      "body": "100 Global View Drive",
+      "href": "https://www.google.com/maps/search/?api=1&query=100%20Global%20View%20Drive"
+    }
+  ],
+  "story": "Staffing &#038; Recruiting Staffing & Recruiting Home We’re OpenArc. We build things. What can we build for you? Custom Software Build Awesome Products Staffing &#038; Recruiting Build Awesome Teams .uk-navbar-container .uk-navbar .uk-navbar-nav > li:first-child, .uk-navbar-container .uk-navbar .uk-navbar-nav, .uk-navbar-right, .uk-navbar, .oa-c2a-button{ display:none } #footer\\#0 .uk-nav-sub{padding:0;} Custom Software What We Build 100 Global View Drive, Suite 500, Warrendale, PA OpenArc gets a private concept homepage, not a mailed pitch. The page keeps their name in the header, puts industry photography in a 4:5 frame, and makes the next step a call or their official site. Nothing here invents hours, a.",
+  "storyMore": "100 S. Commons, Suite 102 Pittsburgh, PA 15212",
+  "featureBody": "A plan on the table. Their nouns, when harvest has them. Call or visit the official source. Nothing here invents a retainer.",
+  "workHeading": "The work, in the room where it happens.",
+  "galleryHeading": "People, not stock extras.",
+  "storyHeading": "A studio or office with a name.",
+  "featureHeading": "Close on the craft.",
+  "contactHeading": "Start the conversation.",
+  "closing": "OpenArc should feel like a team you can actually reach.",
+  "navWork": "Custom Software",
+  "navStory": "Custom Software Home",
+  "navVisit": "Visit",
+  "primaryCtaFallback": "Schedule a Call",
+  "description": "OpenArc in Pittsburgh. Private concept preview.",
+  "wordCount": 312
+}

@@ -1,0 +1,118 @@
+{
+  "slug": "art-city-vets",
+  "name": "Art City Vets & Urgent Care",
+  "city": "Philadelphia",
+  "category": "Veterinary",
+  "family": "veterinary",
+  "mode": "people",
+  "url": "https://www.artcityvets.com/",
+  "phone": "215-563-8387",
+  "address": "2001 Hamilton Street, Philadelphia, PA, 19130-4201",
+  "hours": "Sat: 8am-5pm Sun: 8am-3pm M-F: 8am-7pm Sat: CLOSED Sun: CLOSED",
+  "logo": true,
+  "logoSrc": "assets/logo.png",
+  "tokens": {
+    "paper": "#F3F6F1",
+    "ink": "#1C2A1A",
+    "accent": "#3F6F4A",
+    "accent2": "#D4A017",
+    "panel": "#DDE6D4",
+    "deep": "#16301C",
+    "border": "1px",
+    "radius": "28px",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onDeep": "#FFFFFF"
+  },
+  "fonts": {
+    "display": "Syne",
+    "text": "Figtree",
+    "displayFallback": "Arial,sans-serif"
+  },
+  "attitude": "glass",
+  "marquee": [
+    "Art City Vets & Urgent Care",
+    "Philadelphia",
+    "The work"
+  ],
+  "imageAlts": [
+    "The people photograph for Art City Vets & Urgent Care: people at work",
+    "The process photograph for Art City Vets & Urgent Care: hands on the job",
+    "The conversation photograph for Art City Vets & Urgent Care: a real conversation",
+    "The place photograph for Art City Vets & Urgent Care: the place",
+    "The craft photograph for Art City Vets & Urgent Care: the craft",
+    "The shop photograph for Art City Vets & Urgent Care: The room where the work lives.",
+    "Hands photograph for Art City Vets & Urgent Care: A closer look at the job.",
+    "The bay photograph for Art City Vets & Urgent Care: Tools and the person using them.",
+    "The crew photograph for Art City Vets & Urgent Care: People mid-job, not posed.",
+    "Detail photograph for Art City Vets & Urgent Care: Skill you only get up close."
+  ],
+  "imageDisclosure": "Photographs harvested from the official site and recomposed as concept collages. They are not a claim about current staff or completed jobs.",
+  "headline": "Urgent Care Open 7-Days a Week",
+  "sub": "So grateful to have found the best vet clinic in the city when I first moved to philly. I've come in for emergency visits and well-checks always impressed. The receptionists are amazing, patient with clients & loving with the furry fam. When my senior cat (Macy 💚) was diagnosed.",
+  "points": [
+    "Animals first",
+    "A calm exam",
+    "You confirm with the clinic"
+  ],
+  "offerings": [
+    {
+      "title": "Walk-Ins Welcome for Our Urgent Care Services",
+      "body": "Want to join our Philadelphia Veterinary team?"
+    },
+    {
+      "title": "Wellness Hours",
+      "body": "See what exciting opportunities are available!"
+    },
+    {
+      "title": "Get To Know Us",
+      "body": "Art City Vets works with the best pet-friendly partners in Philadelphia and beyond!"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Arrive with your pet",
+      "body": "The homepage should feel like a clinic, not a stock farm."
+    },
+    {
+      "title": "See the care",
+      "body": "Exam table, gentle hands, a tech who is actually working."
+    },
+    {
+      "title": "Call the desk",
+      "body": "Hours and emergencies belong on their official line."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "https://www.artcityvets.com/"
+    },
+    {
+      "title": "Call",
+      "body": "215-563-8387",
+      "href": "tel:2155638387"
+    },
+    {
+      "title": "Find them",
+      "body": "2001 Hamilton Street, Philadelphia, PA, 19130-4201",
+      "href": "https://www.google.com/maps/search/?api=1&query=2001%20Hamilton%20Street%2C%20Philadelphia%2C%20PA%2C%2019130-4201"
+    }
+  ],
+  "story": "So grateful to have found the best vet clinic in the city when I first moved to philly. I've come in for emergency visits and well-checks always impressed. The receptionists are amazing, patient with clients & loving with the furry fam. When my senior cat (Macy 💚) was diagnosed with kidney disease Dr Ball was thorough & kind in helping me understand how to care for her. Prices are reasonable for the exceptional service. Mitch P. Want to join our Philadelphia Veterinary team? See what exciting opportunities are available!",
+  "storyMore": "Art City Vets works with the best pet-friendly partners in Philadelphia and beyond!",
+  "featureBody": "Make sure to check out our up-coming events so you don't miss a thing.",
+  "workHeading": "Care that looks like a real clinic.",
+  "galleryHeading": "Animals and the people who treat them.",
+  "storyHeading": "A hospital for pets, named.",
+  "featureHeading": "Hands on the animal, not the slogan.",
+  "contactHeading": "Reach the clinic.",
+  "closing": "Art City Vets & Urgent Care should make the next appointment feel obvious.",
+  "navWork": "About",
+  "navStory": "Our Hospital",
+  "navVisit": "Hours",
+  "primaryCtaFallback": "Forms & Contacts",
+  "description": "Art City Vets & Urgent Care in Philadelphia. Private concept preview.",
+  "wordCount": 326
+}

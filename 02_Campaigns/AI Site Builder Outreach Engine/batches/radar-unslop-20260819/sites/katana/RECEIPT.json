@@ -1,0 +1,149 @@
+{
+  "id": 107,
+  "slug": "katana",
+  "name": "Katana Pittsburgh",
+  "family": "food",
+  "mode": "food",
+  "issue": "design",
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "cinematic",
+      "ok": true
+    },
+    {
+      "check": "moments",
+      "ok": true
+    },
+    {
+      "check": "story-body-photo",
+      "ok": true
+    },
+    {
+      "check": "feature-body-photo",
+      "ok": true
+    },
+    {
+      "check": "hero-only-swipe",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
+      "check": "collage-6.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-7.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-8.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-9.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-10.webp",
+      "ok": true
+    }
+  ],
+  "browser": "ok",
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
+  "photoCount": 5,
+  "sourceCount": 5,
+  "officialPhotos": 5,
+  "genFills": 0,
+  "url": "https://katanapittsburgh.com/",
+  "city": "Dormont",
+  "rerender": true,
+  "hashes": [
+    "045c60f0d90271716484b0a6bddcc70997efea41023aa4024e04c1a375eda583",
+    "b8f0953e0f8b51a99ab17bdb7df440bfa3a39b8d4f7e0e95d82fdf38068f539b",
+    "3e5ab5e0b4391eeaf8b8c689e9b886ec1ad162b4117b2489323553979ffef25f",
+    "e19715cbd5349f8f332eccb66574be48206d2e67ee35955e99349f798e5fcec6",
+    "dba6468a26516fc174743c11f681e0048996f24844fa25b1d50c88dd6a113d87",
+    "611ace8a99168f31d99d941e2569fc164d00c3e4c86f1c9116d6a8047e5498c5",
+    "5432bab9cd717b2f5a949d104259bf55715592748b2b85b6ebec6f88d660bc68",
+    "1d26923c77b9de8591192c62b80d2b12de689695c0ae7e37ef18bb7a827a0883",
+    "4d87d9e64a4058827a97205241f10d882719be5a5213e1b14edcee58b5af99d7",
+    "a06213d5a45762f9d803a1947d9a974989e1febb16e713ea19170f14f60144d8"
+  ],
+  "copyWords": 378,
+  "treatedPrint": true,
+  "printPass": "v1",
+  "bodyPass": "v1"
+}

@@ -1,0 +1,149 @@
+{
+  "id": 11,
+  "slug": "ember-ale",
+  "name": "Ember & Ale",
+  "family": "food",
+  "mode": "food",
+  "issue": "placeholder",
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "cinematic",
+      "ok": true
+    },
+    {
+      "check": "moments",
+      "ok": true
+    },
+    {
+      "check": "story-body-photo",
+      "ok": true
+    },
+    {
+      "check": "feature-body-photo",
+      "ok": true
+    },
+    {
+      "check": "hero-only-swipe",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
+      "check": "collage-6.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-7.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-8.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-9.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-10.webp",
+      "ok": true
+    }
+  ],
+  "browser": "ok",
+  "hasLogo": false,
+  "logoSrc": "",
+  "photoCount": 5,
+  "sourceCount": 5,
+  "officialPhotos": 5,
+  "genFills": 0,
+  "url": "https://emberandale.com/",
+  "city": "Collegeville",
+  "rerender": true,
+  "hashes": [
+    "90aa0e02a9902b5f0ed9642f16954908e9fb88316b8e22f3ed246eb95d9f1328",
+    "adda6ad6bf492a08074ce14c0fab3e0b2125d6ce86d890291b7ed4fb195560b4",
+    "e2f11470347aa28f590f166c551a1141ebfb09a440184ee3b68da6f61f95c13e",
+    "0772e541809373e653f8392cc7614acd67fbd504ce5dae506f7ade6c4c279c5a",
+    "666bb2185fac72c71299b813dc763ead682442af84abf14509ea046811c5bb54",
+    "53284c8c2e34208f808a48948550b048e9d32ea5a9d015b2bb56f69ece4b1041",
+    "233e5639d34863f63a9f7fa0b901dc0446ff74325071976881fa8bdac9c62a5a",
+    "82f2caa1ceee5fe0d4140c6554d2c425ba8da71c1c6532ffaacfca62aa3b4528",
+    "61d9235cfd727ceb8f98cce02ff0607c50e2edcc999d60afed40ca005f63bc6f",
+    "78b7e60b1c2a098d292364513cedd224469a63753c574e418135ab2ab1299bb5"
+  ],
+  "copyWords": 378,
+  "treatedPrint": true,
+  "printPass": "v1",
+  "bodyPass": "v1"
+}

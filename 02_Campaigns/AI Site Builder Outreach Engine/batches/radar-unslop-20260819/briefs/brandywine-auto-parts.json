@@ -1,0 +1,118 @@
+{
+  "slug": "brandywine-auto-parts",
+  "name": "Brandywine Auto Parts",
+  "city": "Chester",
+  "category": "Auto",
+  "family": "auto",
+  "mode": "people",
+  "url": "http://www.brandywine-ap.com/",
+  "phone": "302.429.0643",
+  "address": "2200 Rodman Road Elsmere",
+  "hours": "Mon-Fri 8am-5:30pm Sat 8:30am - 4pm Sun - Closed",
+  "logo": false,
+  "logoSrc": "assets/logo.png",
+  "tokens": {
+    "paper": "#EEF0F3",
+    "ink": "#14181E",
+    "accent": "#B42318",
+    "accent2": "#F2C14E",
+    "panel": "#D5DAE0",
+    "deep": "#10141A",
+    "border": "4px",
+    "radius": "0px",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onDeep": "#FFFFFF"
+  },
+  "fonts": {
+    "display": "Alegreya",
+    "text": "Karla",
+    "displayFallback": "Georgia,serif"
+  },
+  "attitude": "brutal",
+  "marquee": [
+    "Brandywine Auto Parts",
+    "Chester",
+    "The work"
+  ],
+  "imageAlts": [
+    "The people photograph for Brandywine Auto Parts: people at work",
+    "The process photograph for Brandywine Auto Parts: hands on the job",
+    "The conversation photograph for Brandywine Auto Parts: a real conversation",
+    "The place photograph for Brandywine Auto Parts: the place",
+    "The craft photograph for Brandywine Auto Parts: the craft",
+    "The shop photograph for Brandywine Auto Parts: The room where the work lives.",
+    "Hands photograph for Brandywine Auto Parts: A closer look at the job.",
+    "The bay photograph for Brandywine Auto Parts: Tools and the person using them.",
+    "The crew photograph for Brandywine Auto Parts: People mid-job, not posed.",
+    "Detail photograph for Brandywine Auto Parts: Skill you only get up close."
+  ],
+  "imageDisclosure": "Photographs harvested from the official site and recomposed as concept collages. They are not a claim about current staff or completed jobs.",
+  "headline": "LOCATIONS & HOURS",
+  "sub": "368 Wilmington-West Chester Pk Glen Mills, PA 19342",
+  "points": [
+    "The bay is real",
+    "Hands on the car",
+    "Service starts with a call"
+  ],
+  "offerings": [
+    {
+      "title": "The shop",
+      "body": "Brandywine Auto Parts is a working floor: cars, tools, and people who know the bay."
+    },
+    {
+      "title": "The visit",
+      "body": "Advisor and driver in the lane. Not a handshake in a glass lobby."
+    },
+    {
+      "title": "The next step",
+      "body": "Hours, estimates, and parts stay on their official site."
+    }
+  ],
+  "experience": [
+    {
+      "title": "Pull in",
+      "body": "The homepage should look like a shop you can drive to."
+    },
+    {
+      "title": "Talk to the person doing the work",
+      "body": "Inspection, the hood, the tablet in the lane."
+    },
+    {
+      "title": "Leave with a plan",
+      "body": "Confirm wait times and pricing with them, not with guessed copy."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "http://www.brandywine-ap.com/"
+    },
+    {
+      "title": "Call",
+      "body": "302.429.0643",
+      "href": "tel:3024290643"
+    },
+    {
+      "title": "Find them",
+      "body": "2200 Rodman Road Elsmere",
+      "href": "https://www.google.com/maps/search/?api=1&query=2200%20Rodman%20Road%20Elsmere"
+    }
+  ],
+  "story": "368 Wilmington-West Chester Pk Glen Mills, PA 19342 Brandywine Auto Parts gets a private concept homepage, not a mailed pitch. The page keeps their name in the header, puts industry photography in a 4:5 frame, and makes the next step a call or their official site. Nothing here invents hours, a menu, an award, or a person who does not appear in a first-party photo. When harvest can read their live copy, those nouns come back onto the page. When the live site blocks the harvest, the preview stays honest and a little quieter instead of padding fake specifics. The collages stay in the work: people on the job, or food on the plate, never a logo baked into a photograph. Brandywine Auto Parts is a working floor:.",
+  "storyMore": "The homepage should look like a shop you can drive to. Inspection, the hood, the tablet in the lane.",
+  "featureBody": "Advisor and driver in the lane. Not a handshake in a glass lobby. Hours, estimates, and parts stay on their official site.",
+  "workHeading": "The work, in the bay where it happens.",
+  "galleryHeading": "People on the actual job.",
+  "storyHeading": "A shop with a name over the door.",
+  "featureHeading": "Close on the tool in the hand.",
+  "contactHeading": "Get the car in.",
+  "closing": "Brandywine Auto Parts should feel like a shop you can trust from the first scroll.",
+  "navWork": "About Us",
+  "navStory": "Brands",
+  "navVisit": "Visit",
+  "primaryCtaFallback": "",
+  "description": "Brandywine Auto Parts in Chester. Private concept preview.",
+  "wordCount": 350
+}

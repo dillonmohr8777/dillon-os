@@ -1,0 +1,118 @@
+{
+  "slug": "home-furnishings-consignment",
+  "name": "Home Furnishing Consignment",
+  "city": "Wayne",
+  "category": "Retail",
+  "family": "retail",
+  "mode": "people",
+  "url": "http://www.hfconsignment.com/",
+  "phone": "610.964.1903",
+  "address": "139 East Swedesford Road",
+  "hours": "friendly staff, browse our extensive inventory, and find some am",
+  "logo": true,
+  "logoSrc": "assets/logo.png",
+  "tokens": {
+    "paper": "#e0d0b0",
+    "ink": "#111820",
+    "accent": "#609020",
+    "accent2": "#70a030",
+    "panel": "#cec79b",
+    "deep": "#090d11",
+    "border": "1px",
+    "radius": "2px",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onDeep": "#FFFFFF"
+  },
+  "fonts": {
+    "display": "Syne",
+    "text": "Figtree",
+    "displayFallback": "Arial,sans-serif"
+  },
+  "attitude": "editorial",
+  "marquee": [
+    "Home Furnishing Consignment",
+    "Wayne",
+    "The work"
+  ],
+  "imageAlts": [
+    "The people photograph for Home Furnishing Consignment: people at work",
+    "The process photograph for Home Furnishing Consignment: hands on the job",
+    "The conversation photograph for Home Furnishing Consignment: a real conversation",
+    "The place photograph for Home Furnishing Consignment: the place",
+    "The craft photograph for Home Furnishing Consignment: the craft",
+    "The shop photograph for Home Furnishing Consignment: The room where the work lives.",
+    "Hands photograph for Home Furnishing Consignment: A closer look at the job.",
+    "The bay photograph for Home Furnishing Consignment: Tools and the person using them.",
+    "The crew photograph for Home Furnishing Consignment: People mid-job, not posed.",
+    "Detail photograph for Home Furnishing Consignment: Skill you only get up close."
+  ],
+  "imageDisclosure": "Photographs harvested from the official site and recomposed as concept collages. They are not a claim about current staff or completed jobs.",
+  "headline": "Home Furnishing Consignment",
+  "sub": "Come meet our experienced and friendly staff, browse our extensive inventory, and find some amazing deals!",
+  "points": [
+    "The shop is the product",
+    "Hands on the goods",
+    "Visit or call them"
+  ],
+  "offerings": [
+    {
+      "title": "The floor",
+      "body": "Home Furnishing Consignment is a shop you can walk. The preview shows the goods and the people."
+    },
+    {
+      "title": "The counter",
+      "body": "A conversation over the thing they sell, not a mall stock set."
+    },
+    {
+      "title": "The visit",
+      "body": "Hours stay official. Nothing here invents inventory."
+    }
+  ],
+  "experience": [
+    {
+      "title": "Browse",
+      "body": "The homepage should look like the shop, not a catalog template."
+    },
+    {
+      "title": "Ask",
+      "body": "An associate in the frame, handling the product."
+    },
+    {
+      "title": "Take it home",
+      "body": "Pricing and stock stay on their official site."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "http://www.hfconsignment.com/"
+    },
+    {
+      "title": "Call",
+      "body": "610.964.1903",
+      "href": "tel:6109641903"
+    },
+    {
+      "title": "Find them",
+      "body": "139 East Swedesford Road",
+      "href": "https://www.google.com/maps/search/?api=1&query=139%20East%20Swedesford%20Road"
+    }
+  ],
+  "story": "Come meet our experienced and friendly staff, browse our extensive inventory, and find some amazing deals! Consign With Us! It’s the smart and easy way to sell! We take care of everything from pricing, merchandising, marketing, as well as third party delivery options. Conveniently located on the Mainline in Wayne, in the bustling Gateway Shopping Center, we&#8217;re closer than you think. Home Furnishing Consignment gets a private concept homepage, not a mailed pitch. The page keeps their name in the header, puts industry photography in a 4:5 frame, and makes the next step a call or their official site. Nothing here invents hours, a menu, an award, or a person who does not appear in a first-party photo. When.",
+  "storyMore": "\"Shhh! Best kept secret around. While searching for items for our school's silent auction, I found Baker and other top name furniture, and now that I've redone our living room for a fraction of what our decorator budgeted, I can let you know about this find.\"",
+  "featureBody": "\"Great store! Was looking for Barrister bookcases and they did not have any, left my number and a couple of days later they called to let me know a set had come in. Stopped in and they had a great pair of bookcases at a great price. Service and convenience was great. I'll keep going back. Terrific furniture consignment store!\"",
+  "workHeading": "A shop that looks like a shop.",
+  "galleryHeading": "People and the product.",
+  "storyHeading": "A storefront with a name.",
+  "featureHeading": "Close on what they sell.",
+  "contactHeading": "Plan the visit.",
+  "closing": "Home Furnishing Consignment should feel like a counter you would walk up to.",
+  "navWork": "Our Store &#038; Services",
+  "navStory": "Consign With Us",
+  "navVisit": "Location &#038; Contact",
+  "primaryCtaFallback": "Location &#038; Contact",
+  "description": "Home Furnishing Consignment in Wayne. Private concept preview.",
+  "wordCount": 391
+}

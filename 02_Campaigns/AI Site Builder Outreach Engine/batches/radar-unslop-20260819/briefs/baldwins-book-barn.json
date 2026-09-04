@@ -1,0 +1,118 @@
+{
+  "slug": "baldwins-book-barn",
+  "name": "Baldwin's Book Barn",
+  "city": "west chester",
+  "category": "Retail",
+  "family": "retail",
+  "mode": "people",
+  "url": "https://bookbarn.com/",
+  "phone": "610-696-0816",
+  "address": "865 Lenape road, west chester, Pennsylvania, 19382",
+  "hours": "",
+  "logo": true,
+  "logoSrc": "assets/logo.svg",
+  "tokens": {
+    "paper": "#F5F1EA",
+    "ink": "#1A1612",
+    "accent": "#B45309",
+    "accent2": "#F5D0A6",
+    "panel": "#E8DCCB",
+    "deep": "#22180E",
+    "border": "1px",
+    "radius": "28px",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onDeep": "#FFFFFF"
+  },
+  "fonts": {
+    "display": "Alegreya",
+    "text": "Karla",
+    "displayFallback": "Georgia,serif"
+  },
+  "attitude": "glass",
+  "marquee": [
+    "Baldwin's Book Barn",
+    "west chester",
+    "The work"
+  ],
+  "imageAlts": [
+    "The people photograph for Baldwin's Book Barn: people at work",
+    "The process photograph for Baldwin's Book Barn: hands on the job",
+    "The conversation photograph for Baldwin's Book Barn: a real conversation",
+    "The place photograph for Baldwin's Book Barn: the place",
+    "The craft photograph for Baldwin's Book Barn: the craft",
+    "The shop photograph for Baldwin's Book Barn: The room where the work lives.",
+    "Hands photograph for Baldwin's Book Barn: A closer look at the job.",
+    "The bay photograph for Baldwin's Book Barn: Tools and the person using them.",
+    "The crew photograph for Baldwin's Book Barn: People mid-job, not posed.",
+    "Detail photograph for Baldwin's Book Barn: Skill you only get up close."
+  ],
+  "imageDisclosure": "Photographs harvested from the official site and recomposed as concept collages. They are not a claim about current staff or completed jobs.",
+  "headline": "News & Events",
+  "sub": "The Book Barn was built in 1822 and is a five-story building which exudes bookish charm with its cozy nooks, stone walls, friendly atmosphere, wood-burning stove, and shelf upon shelf of books, maps, and prints. Baldwin&#8217;s Book Barn is an inveterate and unique institution.",
+  "points": [
+    "The shop is the product",
+    "Hands on the goods",
+    "Visit or call them"
+  ],
+  "offerings": [
+    {
+      "title": "The floor",
+      "body": "Baldwin's Book Barn is a shop you can walk. The preview shows the goods and the people."
+    },
+    {
+      "title": "The counter",
+      "body": "A conversation over the thing they sell, not a mall stock set."
+    },
+    {
+      "title": "The visit",
+      "body": "Hours stay official. Nothing here invents inventory."
+    }
+  ],
+  "experience": [
+    {
+      "title": "Browse",
+      "body": "The homepage should look like the shop, not a catalog template."
+    },
+    {
+      "title": "Ask",
+      "body": "An associate in the frame, handling the product."
+    },
+    {
+      "title": "Take it home",
+      "body": "Pricing and stock stay on their official site."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "https://bookbarn.com/"
+    },
+    {
+      "title": "Call",
+      "body": "610-696-0816",
+      "href": "tel:6106960816"
+    },
+    {
+      "title": "Find them",
+      "body": "865 Lenape road, west chester, Pennsylvania, 19382",
+      "href": "https://www.google.com/maps/search/?api=1&query=865%20Lenape%20road%2C%20west%20chester%2C%20Pennsylvania%2C%2019382"
+    }
+  ],
+  "story": "The Book Barn was built in 1822 and is a five-story building which exudes bookish charm with its cozy nooks, stone walls, friendly atmosphere, wood-burning stove, and shelf upon shelf of books, maps, and prints. Baldwin&#8217;s Book Barn is an inveterate and unique institution of Chester County, Pennsylvania where people have come for decades to buy and sell books. Discover what&#8217;s new at Baldwin&#8217;s Book Barn. From updates, special collections, and exclusive recommendations, we&#8217;ve got you covered. Baldwin&#8217;s Book Barn: A Literary Legacy Thomas Baldwin, the longtime proprietor of Baldwin&#8217;s Book Barn in West Chester, Pennsylvania, was a guardian of literary tradition.",
+  "storyMore": "The Book Barn was built in 1822 and is a five-story building which exudes bookish charm with its cozy nooks, stone walls, friendly atmosphere, wood-burning stove, and shelf upon shelf of books, maps, and prints.",
+  "featureBody": "A : 865 Lenape road, west chester, PA 19382",
+  "workHeading": "A shop that looks like a shop.",
+  "galleryHeading": "People and the product.",
+  "storyHeading": "A storefront with a name.",
+  "featureHeading": "Close on what they sell.",
+  "contactHeading": "Plan the visit.",
+  "closing": "Baldwin's Book Barn should feel like a counter you would walk up to.",
+  "navWork": "610-696-0816",
+  "navStory": "Facebook-f",
+  "navVisit": "Facebook-f",
+  "primaryCtaFallback": "Facebook-f",
+  "description": "Baldwin's Book Barn in west chester. Private concept preview.",
+  "wordCount": 343
+}

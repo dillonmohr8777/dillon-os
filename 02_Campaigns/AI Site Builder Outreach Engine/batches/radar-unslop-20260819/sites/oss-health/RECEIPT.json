@@ -1,0 +1,148 @@
+{
+  "id": 119,
+  "slug": "oss-health",
+  "name": "OSS Health",
+  "family": "medical",
+  "mode": "people",
+  "issue": "design",
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "cinematic",
+      "ok": true
+    },
+    {
+      "check": "moments",
+      "ok": true
+    },
+    {
+      "check": "story-body-photo",
+      "ok": true
+    },
+    {
+      "check": "feature-body-photo",
+      "ok": true
+    },
+    {
+      "check": "hero-only-swipe",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
+      "check": "collage-6.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-7.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-8.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-9.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-10.webp",
+      "ok": true
+    }
+  ],
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
+  "photoCount": 8,
+  "sourceCount": 8,
+  "officialPhotos": 8,
+  "genFills": 0,
+  "url": "https://osshealth.com/locations/oss-health-hanover",
+  "city": "Hanover",
+  "rerender": true,
+  "hashes": [
+    "dd9428916a557032a9bc46f2e9cc613c1b82b99d08662c3064c09969ed39eff8",
+    "e2d6e4a02653c2322a34a051c06b6af636893db9e212f9b3a8c58abf20290eee",
+    "c8c247f48517c3c343a7c4f49c37552554499c7e9163ee56101e47a6ef730a9f",
+    "34dfff2ec6df773363ace663f30f7fd707fed93f2c0fb701193adc4a9dccf8f1",
+    "3fa0bc813989c11c63bfb356f34c9574775d30a8a1b9cbbd3af2d3df0d54309f",
+    "d8510ded7c5d57a5feaf70eebf9dd251c1a32fbcd29420730f7bf7eda2eb71b6",
+    "54d3eeabc722442ffbb1601bc86048531a2a9713691231c5b9de432cd0ac22ec",
+    "1c6599d2c4bf7c7ea890308448ae609bf9bc0f4345694deca00c0a51d86c864a",
+    "282459fb39f59ecd4f69d9ad4ab448479ecd6793362a75810225e4ce138701bb",
+    "cfde440d2b4163b9d564511d0e4a54167b9eb6371c160eb9487a6140b20e8d78"
+  ],
+  "copyWords": 305,
+  "treatedPrint": true,
+  "printPass": "v1",
+  "bodyPass": "v1"
+}

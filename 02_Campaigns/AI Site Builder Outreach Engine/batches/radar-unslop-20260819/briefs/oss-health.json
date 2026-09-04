@@ -1,0 +1,118 @@
+{
+  "slug": "oss-health",
+  "name": "OSS Health",
+  "city": "Hanover",
+  "category": "Medical",
+  "family": "medical",
+  "mode": "people",
+  "url": "https://osshealth.com/locations/oss-health-hanover",
+  "phone": "(717) 848-4800",
+  "address": "470 Eisenhower Dr, Hanover, PA, 17331",
+  "hours": "Monday 8:00 AM - 5:00 PM Tuesday 8:00 AM - 5:00 PM Wednesday 8:00 AM",
+  "logo": true,
+  "logoSrc": "assets/logo.png",
+  "tokens": {
+    "paper": "#d0b0d0",
+    "ink": "#602060",
+    "accent": "#602060",
+    "accent2": "#702060",
+    "panel": "#c09bc0",
+    "deep": "#341134",
+    "border": "1px",
+    "radius": "28px",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onDeep": "#FFFFFF"
+  },
+  "fonts": {
+    "display": "Alegreya",
+    "text": "Karla",
+    "displayFallback": "Georgia,serif"
+  },
+  "attitude": "glass",
+  "marquee": [
+    "OSS Health",
+    "Hanover",
+    "The work"
+  ],
+  "imageAlts": [
+    "The people photograph for OSS Health: people at work",
+    "The process photograph for OSS Health: hands on the job",
+    "The conversation photograph for OSS Health: a real conversation",
+    "The place photograph for OSS Health: the place",
+    "The craft photograph for OSS Health: the craft",
+    "The shop photograph for OSS Health: The room where the work lives.",
+    "Hands photograph for OSS Health: A closer look at the job.",
+    "The bay photograph for OSS Health: Tools and the person using them.",
+    "The crew photograph for OSS Health: People mid-job, not posed.",
+    "Detail photograph for OSS Health: Skill you only get up close."
+  ],
+  "imageDisclosure": "Photographs harvested from the official site and recomposed as concept collages. They are not a claim about current staff or completed jobs.",
+  "headline": "OSS Health Hanover",
+  "sub": "Patient Portal Log-in to visit your patient portal account.",
+  "points": [
+    "A calm exam",
+    "Clinicians at work",
+    "You call the desk"
+  ],
+  "offerings": [
+    {
+      "title": "Location Overview",
+      "body": "&nbsp Schedule An Appointment Schedule an appointment online today."
+    },
+    {
+      "title": "Hours of Operation",
+      "body": "Find A Provider Provider Selection Anesthesia"
+    },
+    {
+      "title": "About Hanover",
+      "body": "Knee Pain Don’t let knee pain limit your ability to do the activities you enjoy."
+    }
+  ],
+  "experience": [
+    {
+      "title": "Check in",
+      "body": "The homepage should make the clinic obvious."
+    },
+    {
+      "title": "See the room",
+      "body": "A provider in the work, not a marble lobby."
+    },
+    {
+      "title": "Follow up",
+      "body": "Appointments stay official. Nothing here invents availability."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "https://osshealth.com/locations/oss-health-hanover"
+    },
+    {
+      "title": "Call",
+      "body": "(717) 848-4800",
+      "href": "tel:7178484800"
+    },
+    {
+      "title": "Find them",
+      "body": "470 Eisenhower Dr, Hanover, PA, 17331",
+      "href": "https://www.google.com/maps/search/?api=1&query=470%20Eisenhower%20Dr%2C%20Hanover%2C%20PA%2C%2017331"
+    }
+  ],
+  "story": "Patient Portal Log-in to visit your patient portal account. &nbsp Schedule An Appointment Schedule an appointment online today. Find A Provider Provider Selection Anesthesia OSS Health gets a private concept homepage, not a mailed pitch. The page keeps their name in the header, puts industry photography in a 4:5 frame, and makes the next step a call or their official site. Nothing here invents hours, a menu, an award, or a person who does not appear in a first-party photo. When harvest can read their live copy, those nouns come back onto the page. When the live site blocks the harvest, the preview stays honest and a little quieter instead of padding fake specifics. The collages stay in the work: people on the.",
+  "storyMore": "Knee Pain Don’t let knee pain limit your ability to do the activities you enjoy.",
+  "featureBody": "&nbsp Back Pain Get the right diagnosis and treatment plan just for you.",
+  "workHeading": "Care in the actual room.",
+  "galleryHeading": "People doing the work.",
+  "storyHeading": "A clinic with a name on the door.",
+  "featureHeading": "Close on the tray, not the slogan.",
+  "contactHeading": "Reach the desk.",
+  "closing": "OSS Health should feel easy to call before the fold is gone.",
+  "navWork": "Access Patient Portal",
+  "navStory": "Online Bill Pay",
+  "navVisit": "Visit",
+  "primaryCtaFallback": "Schedule An Appointment",
+  "description": "OSS Health in Hanover. Private concept preview.",
+  "wordCount": 305
+}

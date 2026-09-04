@@ -1,0 +1,148 @@
+{
+  "id": 101,
+  "slug": "hamburg-animal-hospital",
+  "name": "Hamburg Animal Hospital",
+  "family": "veterinary",
+  "mode": "people",
+  "issue": "design",
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "cinematic",
+      "ok": true
+    },
+    {
+      "check": "moments",
+      "ok": true
+    },
+    {
+      "check": "story-body-photo",
+      "ok": true
+    },
+    {
+      "check": "feature-body-photo",
+      "ok": true
+    },
+    {
+      "check": "hero-only-swipe",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
+      "check": "collage-6.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-7.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-8.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-9.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-10.webp",
+      "ok": true
+    }
+  ],
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
+  "photoCount": 4,
+  "sourceCount": 4,
+  "officialPhotos": 4,
+  "genFills": 0,
+  "url": "https://www.hamburganimalhospital.com/",
+  "city": "Hamburg Animal Hospital is a full service veterinary practice in Hamburg",
+  "rerender": true,
+  "hashes": [
+    "634d10f665c964af245a6a6cd5cbae2df432df32828932333b6b69536a386d85",
+    "76b9f6b66eb9bc28ed1e21a5a3bf06987507529a91f20a55dec6cb1e01ccf96c",
+    "80abb0a5e9859f43c3f7def28592adf3dc1d47c9546546024f0d10773cd3dad8",
+    "6686fd29b7e264ed514979a9492d901dcc9741f11e0c29f9ec9d6e118970087e",
+    "b76741a525405bc8f2f118a07fb7dc2df4071091d7a16716aa6b045d090e1f53",
+    "b5f2d692fb34eab9f4fb894d417a2650c5ab73241c5992d8750608d24c73a11b",
+    "9b1ba074c8d67c4d0395e58fefd971df20b2f374cc00256886bca1285faf0e4e",
+    "06a969cf802f49c28d1311b9718bd9342268fdaa9fbebae42b1bc3164b4dd1a6",
+    "f896c7a705d0a93bf24c3efe3bc0d48512d534fb061e3b8f538b085051ddb0f2",
+    "e04b3a9ae81a74b37026dd1cbd2d274d8f8dd47653623cfb47ce543410389fda"
+  ],
+  "copyWords": 401,
+  "treatedPrint": true,
+  "printPass": "v1",
+  "bodyPass": "v1"
+}

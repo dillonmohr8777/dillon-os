@@ -1,0 +1,108 @@
+{
+  "slug": "ming-s-chinese",
+  "name": "Ming's Chinese Restaurant",
+  "city": "Hatboro",
+  "category": "Food",
+  "family": "food",
+  "mode": "food",
+  "url": "https://mings-restaurant.com/",
+  "phone": "",
+  "address": "",
+  "hours": "",
+  "logo": false,
+  "logoSrc": "assets/logo.png",
+  "tokens": {
+    "paper": "#F4EFE7",
+    "ink": "#1A1410",
+    "accent": "#C2410C",
+    "accent2": "#E7A843",
+    "panel": "#E8D9C8",
+    "deep": "#2A1810",
+    "border": "1px",
+    "radius": "2px",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onDeep": "#FFFFFF"
+  },
+  "fonts": {
+    "display": "Newsreader",
+    "text": "Figtree",
+    "displayFallback": "Georgia,serif"
+  },
+  "attitude": "editorial",
+  "marquee": [
+    "Ming's Chinese Restaurant",
+    "Hatboro",
+    "The plate"
+  ],
+  "imageAlts": [
+    "Plated food from a Ming's Chinese Restaurant kitchen concept",
+    "Chef plating at the pass for Ming's Chinese Restaurant",
+    "Prep and ingredients for Ming's Chinese Restaurant",
+    "Dining setting for Ming's Chinese Restaurant",
+    "Close food texture for Ming's Chinese Restaurant",
+    "The room photograph for Ming's Chinese Restaurant: The dining room, pulled wide.",
+    "Closer photograph for Ming's Chinese Restaurant: A second look at the plate.",
+    "Service photograph for Ming's Chinese Restaurant: Hands moving at the pass.",
+    "Heat photograph for Ming's Chinese Restaurant: The line when tickets stack.",
+    "Last look photograph for Ming's Chinese Restaurant: What you see before you sit."
+  ],
+  "imageDisclosure": "Illustrative concept imagery plus any photographs harvested from the official site. These visuals do not claim to depict current staff, customers, or completed work.",
+  "headline": "Best Chinese Food in Hatboro",
+  "sub": "Ming",
+  "points": [
+    "The plate leads",
+    "The kitchen stays in the picture",
+    "Hours live on their official site"
+  ],
+  "offerings": [
+    {
+      "title": "The plate",
+      "body": "Ming's Chinese Restaurant is a kitchen first. The preview leads with food, not a stock dining room."
+    },
+    {
+      "title": "The pass",
+      "body": "Hands, heat, and the ticket. You see the work behind the dish."
+    },
+    {
+      "title": "The room",
+      "body": "A table worth sitting down for. Reservations and tonight's menu stay with them."
+    }
+  ],
+  "experience": [
+    {
+      "title": "Arrive hungry",
+      "body": "The homepage should make the food obvious before anyone hunts a PDF menu."
+    },
+    {
+      "title": "See the work",
+      "body": "Prep, the pass, and the plate. Not random people in a sunlit atrium."
+    },
+    {
+      "title": "Confirm with them",
+      "body": "Call, hours, and ordering stay on the official source so nothing here is guessed."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "https://mings-restaurant.com/"
+    }
+  ],
+  "story": "Ming's Chinese Restaurant gets a private concept homepage, not a mailed pitch. The page keeps their name in the header, puts industry photography in a 4:5 frame, and makes the next step a call or their official site. Nothing here invents hours, a menu, an award, or a person who does not appear in a first-party photo. When harvest can read their live copy, those nouns come back onto the page. When the live site blocks the harvest, the preview stays honest and a little quieter instead of padding fake specifics. The collages stay in the work: people on the job, or food on the plate, never a logo baked into a photograph. Ming's Chinese Restaurant is a kitchen first. The preview leads with food, not a stock dining.",
+  "storyMore": "The homepage should make the food obvious before anyone hunts a PDF menu. Prep, the pass, and the plate. Not random people in a sunlit atrium.",
+  "featureBody": "Hands, heat, and the ticket. You see the work behind the dish. A table worth sitting down for. Reservations and tonight's menu stay with them.",
+  "workHeading": "What comes out of this kitchen.",
+  "galleryHeading": "Food worth sitting down for.",
+  "storyHeading": "A kitchen with a name on the door.",
+  "featureHeading": "Close enough to taste the work.",
+  "contactHeading": "Make the next visit easy.",
+  "closing": "Ming's Chinese Restaurant should feel like a place you can taste from the first screen.",
+  "navWork": "Our Story",
+  "navStory": "Events",
+  "navVisit": "Visit",
+  "primaryCtaFallback": "Contact Us",
+  "description": "Ming's Chinese Restaurant in Hatboro. Private concept preview.",
+  "wordCount": 357
+}

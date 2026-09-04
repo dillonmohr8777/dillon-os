@@ -1,0 +1,148 @@
+{
+  "id": 14,
+  "slug": "ferrari-philadelphia",
+  "name": "Ferrari Philadelphia",
+  "family": "auto",
+  "mode": "people",
+  "issue": "placeholder",
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "cinematic",
+      "ok": true
+    },
+    {
+      "check": "moments",
+      "ok": true
+    },
+    {
+      "check": "story-body-photo",
+      "ok": true
+    },
+    {
+      "check": "feature-body-photo",
+      "ok": true
+    },
+    {
+      "check": "hero-only-swipe",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
+      "check": "collage-6.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-7.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-8.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-9.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-10.webp",
+      "ok": true
+    }
+  ],
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
+  "photoCount": 8,
+  "sourceCount": 8,
+  "officialPhotos": 8,
+  "genFills": 0,
+  "url": "https://ferrariphiladelphia.com/",
+  "city": "Newtown Square",
+  "rerender": true,
+  "hashes": [
+    "da97ebb95f6857baec5665d55dbf9b843188a3eef977f2fd7ca578a446cf3686",
+    "8b8e8c930fbb07f0b8b8a19353a63bf89c27da96d7dedaf77243fa50b63fb3a7",
+    "ffd7085c8433c711ca6993f77c1cb3e6197cc7c8cf3219bea7396ee14ff00eff",
+    "43d57f7060d80fcdb25fab85e8932b9f547d339a63ae37ff8736314ccedaa86e",
+    "19318ed01401036fa2adcf89ba56c1f22a0e82830b1036d989ef1e79e33374c1",
+    "d1f0c714fe0e38d2edfe4e7c55e490e53b68f0e9b45d400a719349d1ad6bdb9c",
+    "7f982586b043f1e1fb94434eacb5732612433786d7c0dc79e73a5a487f4264cc",
+    "9612c13087dd870a07b9588e2bb4a4466560b9b928a8d7ff2692b2f3065b204f",
+    "0a72a847dbcbbe34d9a5abda8aac28fa128efe04d16076a7229e0d5c1f02d2b5",
+    "42664164c8a55c3768a9d25c852957a47269134b4b4e238c51dcab2ecba6a457"
+  ],
+  "copyWords": 313,
+  "treatedPrint": true,
+  "printPass": "v1",
+  "bodyPass": "v1"
+}

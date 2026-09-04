@@ -1,0 +1,108 @@
+{
+  "slug": "thr-insurance",
+  "name": "THR Insurance",
+  "city": "Telford",
+  "category": "Legal",
+  "family": "legal",
+  "mode": "people",
+  "url": "http://www.thrinsurance.com/",
+  "phone": "",
+  "address": "",
+  "hours": "",
+  "logo": true,
+  "logoSrc": "assets/logo.png",
+  "tokens": {
+    "paper": "#d0c0d0",
+    "ink": "#602070",
+    "accent": "#602070",
+    "accent2": "#704080",
+    "panel": "#c0a9c2",
+    "deep": "#34113d",
+    "border": "1px",
+    "radius": "28px",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onDeep": "#FFFFFF"
+  },
+  "fonts": {
+    "display": "Bricolage Grotesque",
+    "text": "Manrope",
+    "displayFallback": "Arial,sans-serif"
+  },
+  "attitude": "glass",
+  "marquee": [
+    "THR Insurance",
+    "Telford",
+    "The work"
+  ],
+  "imageAlts": [
+    "The people photograph for THR Insurance: people at work",
+    "The process photograph for THR Insurance: hands on the job",
+    "The conversation photograph for THR Insurance: a real conversation",
+    "The place photograph for THR Insurance: the place",
+    "The craft photograph for THR Insurance: the craft",
+    "The shop photograph for THR Insurance: The room where the work lives.",
+    "Hands photograph for THR Insurance: A closer look at the job.",
+    "The bay photograph for THR Insurance: Tools and the person using them.",
+    "The crew photograph for THR Insurance: People mid-job, not posed.",
+    "Detail photograph for THR Insurance: Skill you only get up close."
+  ],
+  "imageDisclosure": "Photographs harvested from the official site and recomposed as concept collages. They are not a claim about current staff or completed jobs.",
+  "headline": "The easy, trusted way to buy insurance.",
+  "sub": "Business Insurance Specialists",
+  "points": [
+    "A real consultation",
+    "Documents in the room",
+    "You call their office"
+  ],
+  "offerings": [
+    {
+      "title": "BUSINESS INSURANCE",
+      "body": "THR Insurance is counsel in a room, not a marble-column stock photo."
+    },
+    {
+      "title": "HUMAN RESOURCES",
+      "body": "Files, listening, the next step written down."
+    },
+    {
+      "title": "A Sample Of Our Featured Insurance Partners",
+      "body": "A place you can actually visit. Hours stay official."
+    }
+  ],
+  "experience": [
+    {
+      "title": "Reach them",
+      "body": "Phone and the official site are the path. Nothing here invents a retainer."
+    },
+    {
+      "title": "Sit down",
+      "body": "A consultation looks like two people at a table, not a skyline mural."
+    },
+    {
+      "title": "Leave with a next step",
+      "body": "What they handle is their language. We keep their nouns when harvest has them."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "http://www.thrinsurance.com/"
+    }
+  ],
+  "story": "THR Insurance gets a private concept homepage, not a mailed pitch. The page keeps their name in the header, puts industry photography in a 4:5 frame, and makes the next step a call or their official site. Nothing here invents hours, a menu, an award, or a person who does not appear in a first-party photo. When harvest can read their live copy, those nouns come back onto the page. When the live site blocks the harvest, the preview stays honest and a little quieter instead of padding fake specifics. The collages stay in the work: people on the job, or food on the plate, never a logo baked into a photograph. THR Insurance is counsel in a room, not a marble-column stock photo.",
+  "storyMore": "Phone and the official site are the path. Nothing here invents a retainer. A consultation looks like two people at a table, not a skyline mural.",
+  "featureBody": "Files, listening, the next step written down. A place you can actually visit. Hours stay official.",
+  "workHeading": "Counsel that looks like the actual office.",
+  "galleryHeading": "People in the work.",
+  "storyHeading": "A firm with a name you can say out loud.",
+  "featureHeading": "Close on the meeting, not the slogan.",
+  "contactHeading": "Start the conversation.",
+  "closing": "THR Insurance should feel like an office you can call today.",
+  "navWork": "About Us",
+  "navStory": "Insurance",
+  "navVisit": "Contact",
+  "primaryCtaFallback": "Contact",
+  "description": "THR Insurance in Telford. Private concept preview.",
+  "wordCount": 332
+}

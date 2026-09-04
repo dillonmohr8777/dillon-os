@@ -1,0 +1,148 @@
+{
+  "id": 94,
+  "slug": "faulkner-buick-gmc",
+  "name": "Faulkner Buick GMC",
+  "family": "auto",
+  "mode": "people",
+  "issue": "design",
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "cinematic",
+      "ok": true
+    },
+    {
+      "check": "moments",
+      "ok": true
+    },
+    {
+      "check": "story-body-photo",
+      "ok": true
+    },
+    {
+      "check": "feature-body-photo",
+      "ok": true
+    },
+    {
+      "check": "hero-only-swipe",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
+      "check": "collage-6.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-7.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-8.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-9.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-10.webp",
+      "ok": true
+    }
+  ],
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
+  "photoCount": 8,
+  "sourceCount": 8,
+  "officialPhotos": 8,
+  "genFills": 0,
+  "url": "https://www.faulknerauto.com/",
+  "city": "WEST CHESTER",
+  "rerender": true,
+  "hashes": [
+    "2e4d34b388920cf183e55b579c667d5e3220ff89c2f67ecb945759998e6124f2",
+    "9b724b724bcd507034f2af998d24d1fef802021cce5ada20d4de13e83103a815",
+    "2cf71b14ceefe819295b8ad0a40b99ea51cdec7939959477a026c550a70f37c6",
+    "1ab7eaaf837f50c28e2f1d9106dd2026c4b5b13b1cb9dbbac9f31520e4ce9043",
+    "d5e9c367e738a63062373a8447a437df42bbd2710965e8925da4c68bf09c12b5",
+    "9af33c12a550ce606bccc0c2519595e7fef3bac5d7da9eefb84cc7144834f82c",
+    "50137ffb4a225c15b092806803a39d6273bccfa2e030eca9edfb26c083008587",
+    "352206cd0ecf0e4ec7537c14f175caee2b29af5b777ea4ba8e4d3a6ba250488e",
+    "923fb2456ae796de9e8471e407f9bca246a58196347027ab03d27e3af93ee815",
+    "f469e6c15fa1099433a8ac536847251edd1ef688460f56b564a04a4c8e4592eb"
+  ],
+  "copyWords": 308,
+  "treatedPrint": true,
+  "printPass": "v1",
+  "bodyPass": "v1"
+}

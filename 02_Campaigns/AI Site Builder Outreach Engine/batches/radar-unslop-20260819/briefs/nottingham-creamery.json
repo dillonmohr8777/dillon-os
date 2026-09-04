@@ -1,0 +1,113 @@
+{
+  "slug": "nottingham-creamery",
+  "name": "Nottingham Creamery",
+  "city": "Nottingham Creamery",
+  "category": "Food",
+  "family": "food",
+  "mode": "food",
+  "url": "https://www.nottinghaminn.com/kitchenandcreamery/",
+  "phone": "610-932-0825",
+  "address": "",
+  "hours": "friendly, the Kitchen & Cream",
+  "logo": true,
+  "logoSrc": "assets/logo.png",
+  "tokens": {
+    "paper": "#d0c090",
+    "ink": "#802020",
+    "accent": "#802020",
+    "accent2": "#d0c090",
+    "panel": "#c4a980",
+    "deep": "#461111",
+    "border": "4px",
+    "radius": "0px",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onDeep": "#FFFFFF"
+  },
+  "fonts": {
+    "display": "Fraunces",
+    "text": "Source Sans 3",
+    "displayFallback": "Georgia,serif"
+  },
+  "attitude": "brutal",
+  "marquee": [
+    "Nottingham Creamery",
+    "Nottingham Creamery",
+    "The plate"
+  ],
+  "imageAlts": [
+    "Plated food from a Nottingham Creamery kitchen concept",
+    "Chef plating at the pass for Nottingham Creamery",
+    "Prep and ingredients for Nottingham Creamery",
+    "Dining setting for Nottingham Creamery",
+    "Close food texture for Nottingham Creamery",
+    "The room photograph for Nottingham Creamery: The dining room, pulled wide.",
+    "Closer photograph for Nottingham Creamery: A second look at the plate.",
+    "Service photograph for Nottingham Creamery: Hands moving at the pass.",
+    "Heat photograph for Nottingham Creamery: The line when tickets stack.",
+    "Last look photograph for Nottingham Creamery: What you see before you sit."
+  ],
+  "imageDisclosure": "Illustrative concept imagery plus any photographs harvested from the official site. These visuals do not claim to depict current staff, customers, or completed work.",
+  "headline": "Where Casual",
+  "sub": "At the Nottingham Inn Kitchen & Creamery you find a warm, inviting atmosphere with great food, exceptional service and a setting that truly lets you relax. Always family-friendly, the Kitchen & Creamery is casual, full-service dining at its best. We feature delicious, satisfying.",
+  "points": [
+    "The plate leads",
+    "The kitchen stays in the picture",
+    "Hours live on their official site"
+  ],
+  "offerings": [
+    {
+      "title": "The plate",
+      "body": "Nottingham Creamery is a kitchen first. The preview leads with food, not a stock dining room."
+    },
+    {
+      "title": "The pass",
+      "body": "Hands, heat, and the ticket. You see the work behind the dish."
+    },
+    {
+      "title": "The room",
+      "body": "A table worth sitting down for. Reservations and tonight's menu stay with them."
+    }
+  ],
+  "experience": [
+    {
+      "title": "Arrive hungry",
+      "body": "The homepage should make the food obvious before anyone hunts a PDF menu."
+    },
+    {
+      "title": "See the work",
+      "body": "Prep, the pass, and the plate. Not random people in a sunlit atrium."
+    },
+    {
+      "title": "Confirm with them",
+      "body": "Call, hours, and ordering stay on the official source so nothing here is guessed."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "https://www.nottinghaminn.com/kitchenandcreamery/"
+    },
+    {
+      "title": "Call",
+      "body": "610-932-0825",
+      "href": "tel:6109320825"
+    }
+  ],
+  "story": "At the Nottingham Inn Kitchen & Creamery you find a warm, inviting atmosphere with great food, exceptional service and a setting that truly lets you relax. Always family-friendly, the Kitchen & Creamery is casual, full-service dining at its best. We feature delicious, satisfying American heartland cuisine at moderate prices with fresh products and produce from local farms and dairies. And don’t forget to finish your meal with one of our old-fashioned ice cream treats! Nottingham Creamery gets a private concept homepage, not a mailed pitch. The page keeps their name in the header, puts industry photography in a 4:5 frame, and makes the next step a call or their official site. Nothing here invents hours, a menu,.",
+  "storyMore": "The homepage should make the food obvious before anyone hunts a PDF menu. Prep, the pass, and the plate. Not random people in a sunlit atrium.",
+  "featureBody": "Hands, heat, and the ticket. You see the work behind the dish. A table worth sitting down for. Reservations and tonight's menu stay with them.",
+  "workHeading": "What comes out of this kitchen.",
+  "galleryHeading": "Food worth sitting down for.",
+  "storyHeading": "A kitchen with a name on the door.",
+  "featureHeading": "Close enough to taste the work.",
+  "contactHeading": "Make the next visit easy.",
+  "closing": "Nottingham Creamery should feel like a place you can taste from the first screen.",
+  "navWork": "About Us",
+  "navStory": "Our Menu",
+  "navVisit": "Visit",
+  "primaryCtaFallback": "Contact Us",
+  "description": "Nottingham Creamery in Nottingham Creamery. Private concept preview.",
+  "wordCount": 384
+}

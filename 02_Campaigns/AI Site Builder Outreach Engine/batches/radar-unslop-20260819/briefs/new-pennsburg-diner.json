@@ -1,0 +1,113 @@
+{
+  "slug": "new-pennsburg-diner",
+  "name": "The New Pennsburg Diner",
+  "city": "Pennsburg",
+  "category": "Food",
+  "family": "food",
+  "mode": "food",
+  "url": "https://pennsburgdiner.com/",
+  "phone": "2156792190",
+  "address": "",
+  "hours": "fries and a choice of coleslaw or guacam",
+  "logo": true,
+  "logoSrc": "assets/logo.png",
+  "tokens": {
+    "paper": "#e0d000",
+    "ink": "#600000",
+    "accent": "#600000",
+    "accent2": "#605040",
+    "panel": "#ceb200",
+    "deep": "#340000",
+    "border": "1px",
+    "radius": "2px",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onDeep": "#FFFFFF"
+  },
+  "fonts": {
+    "display": "Fraunces",
+    "text": "Source Sans 3",
+    "displayFallback": "Georgia,serif"
+  },
+  "attitude": "editorial",
+  "marquee": [
+    "The New Pennsburg Diner",
+    "Pennsburg",
+    "The plate"
+  ],
+  "imageAlts": [
+    "Plated food from a The New Pennsburg Diner kitchen concept",
+    "Chef plating at the pass for The New Pennsburg Diner",
+    "Prep and ingredients for The New Pennsburg Diner",
+    "Dining setting for The New Pennsburg Diner",
+    "Close food texture for The New Pennsburg Diner",
+    "The room photograph for The New Pennsburg Diner: The dining room, pulled wide.",
+    "Closer photograph for The New Pennsburg Diner: A second look at the plate.",
+    "Service photograph for The New Pennsburg Diner: Hands moving at the pass.",
+    "Heat photograph for The New Pennsburg Diner: The line when tickets stack.",
+    "Last look photograph for The New Pennsburg Diner: What you see before you sit."
+  ],
+  "imageDisclosure": "Illustrative concept imagery plus any photographs harvested from the official site. These visuals do not claim to depict current staff, customers, or completed work.",
+  "headline": "Our Story",
+  "sub": "Our family owned business has been serving the local community and new faces alike since 1981, providing a warm family atmosphere. You will be pleased with our menu variety. From breakfast served all day, lunch specials, steaks & seafood to homemade comfort food. Always with a.",
+  "points": [
+    "The plate leads",
+    "The kitchen stays in the picture",
+    "Hours live on their official site"
+  ],
+  "offerings": [
+    {
+      "title": "The New Pennsburg Diner.",
+      "body": "Come enjoy your family & friends with us. Schedule your events. We can accommodate almost every request."
+    },
+    {
+      "title": "Only the Best",
+      "body": "Our signature fresh 1/2 lb burgers are served with steak fries and a choice of coleslaw or guacamole."
+    },
+    {
+      "title": "Fresh Ingredients, Tasty Homemade Meals",
+      "body": "Stay tuned for upcoming events. Sign up to our newsletter."
+    }
+  ],
+  "experience": [
+    {
+      "title": "Arrive hungry",
+      "body": "The homepage should make the food obvious before anyone hunts a PDF menu."
+    },
+    {
+      "title": "See the work",
+      "body": "Prep, the pass, and the plate. Not random people in a sunlit atrium."
+    },
+    {
+      "title": "Confirm with them",
+      "body": "Call, hours, and ordering stay on the official source so nothing here is guessed."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "https://pennsburgdiner.com/"
+    },
+    {
+      "title": "Call",
+      "body": "2156792190",
+      "href": "tel:2156792190"
+    }
+  ],
+  "story": "Our family owned business has been serving the local community and new faces alike since 1981, providing a warm family atmosphere. You will be pleased with our menu variety. From breakfast served all day, lunch specials, steaks & seafood to homemade comfort food. Always with a smile and a warm heart. Come enjoy your family & friends with us. Schedule your events. We can accommodate almost every request. Our signature fresh 1/2 lb burgers are served with steak fries and a choice of coleslaw or guacamole.",
+  "storyMore": "Stay tuned for upcoming events. Sign up to our newsletter.",
+  "featureBody": "Don't be shy. Let us know if you have any questions!",
+  "workHeading": "What comes out of this kitchen.",
+  "galleryHeading": "Food worth sitting down for.",
+  "storyHeading": "A kitchen with a name on the door.",
+  "featureHeading": "Close enough to taste the work.",
+  "contactHeading": "Make the next visit easy.",
+  "closing": "The New Pennsburg Diner should feel like a place you can taste from the first screen.",
+  "navWork": "Menus",
+  "navStory": "Breakfast",
+  "navVisit": "Visit",
+  "primaryCtaFallback": "Order Online",
+  "description": "The New Pennsburg Diner in Pennsburg. Private concept preview.",
+  "wordCount": 338
+}

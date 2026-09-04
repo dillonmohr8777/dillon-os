@@ -1,0 +1,118 @@
+{
+  "slug": "ferrari-philadelphia",
+  "name": "Ferrari Philadelphia",
+  "city": "Newtown Square",
+  "category": "Auto",
+  "family": "auto",
+  "mode": "people",
+  "url": "https://ferrariphiladelphia.com/",
+  "phone": "6105271100",
+  "address": "4005 W. Chester Pike, Newtown Square, Philadelphia, 19073",
+  "hours": "mon - fri 09:00 AM - 06:00 PM sat 10:00 AM - 05:00 PM sun Closed",
+  "logo": true,
+  "logoSrc": "assets/logo.png",
+  "tokens": {
+    "paper": "#EEF0F3",
+    "ink": "#14181E",
+    "accent": "#B42318",
+    "accent2": "#F2C14E",
+    "panel": "#D5DAE0",
+    "deep": "#10141A",
+    "border": "4px",
+    "radius": "0px",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onDeep": "#FFFFFF"
+  },
+  "fonts": {
+    "display": "Bricolage Grotesque",
+    "text": "Manrope",
+    "displayFallback": "Arial,sans-serif"
+  },
+  "attitude": "brutal",
+  "marquee": [
+    "Ferrari Philadelphia",
+    "Newtown Square",
+    "The work"
+  ],
+  "imageAlts": [
+    "The people photograph for Ferrari Philadelphia: people at work",
+    "The process photograph for Ferrari Philadelphia: hands on the job",
+    "The conversation photograph for Ferrari Philadelphia: a real conversation",
+    "The place photograph for Ferrari Philadelphia: the place",
+    "The craft photograph for Ferrari Philadelphia: the craft",
+    "The shop photograph for Ferrari Philadelphia: The room where the work lives.",
+    "Hands photograph for Ferrari Philadelphia: A closer look at the job.",
+    "The bay photograph for Ferrari Philadelphia: Tools and the person using them.",
+    "The crew photograph for Ferrari Philadelphia: People mid-job, not posed.",
+    "Detail photograph for Ferrari Philadelphia: Skill you only get up close."
+  ],
+  "imageDisclosure": "Photographs harvested from the official site and recomposed as concept collages. They are not a claim about current staff or completed jobs.",
+  "headline": "Ferrari Philadelphia Our Certified Suggestions",
+  "sub": "Ferrari Philadelphia (610) 527-1100 Karosserie Body Shop (610) 995-9300 Contact us",
+  "points": [
+    "The bay is real",
+    "Hands on the car",
+    "Service starts with a call"
+  ],
+  "offerings": [
+    {
+      "title": "New Model Range",
+      "body": "Ferrari Philadelphia Wins The World’s Greenest Ferrari Dealer Award"
+    },
+    {
+      "title": "Experience Ferrari Excellence in Philadelphia",
+      "body": "Ferrari Philadelphia New Location Now Open!"
+    },
+    {
+      "title": "A FORETASTE OF OUR AFTER SALES SERVICES",
+      "body": "Ferrari Philadelphia: 2023-24 Cavallino Award Winner"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Pull in",
+      "body": "The homepage should look like a shop you can drive to."
+    },
+    {
+      "title": "Talk to the person doing the work",
+      "body": "Inspection, the hood, the tablet in the lane."
+    },
+    {
+      "title": "Leave with a plan",
+      "body": "Confirm wait times and pricing with them, not with guessed copy."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "https://ferrariphiladelphia.com/"
+    },
+    {
+      "title": "Call",
+      "body": "6105271100",
+      "href": "tel:6105271100"
+    },
+    {
+      "title": "Find them",
+      "body": "4005 W. Chester Pike, Newtown Square, Philadelphia, 19073",
+      "href": "https://www.google.com/maps/search/?api=1&query=4005%20W.%20Chester%20Pike%2C%20Newtown%20Square%2C%20Philadelphia%2C%2019073"
+    }
+  ],
+  "story": "Ferrari Philadelphia (610) 527-1100 Karosserie Body Shop (610) 995-9300 Contact us Ferrari Philadelphia Wins The World’s Greenest Ferrari Dealer Award Ferrari Philadelphia New Location Now Open! Ferrari Philadelphia gets a private concept homepage, not a mailed pitch. The page keeps their name in the header, puts industry photography in a 4:5 frame, and makes the next step a call or their official site. Nothing here invents hours, a menu, an award, or a person who does not appear in a first-party photo. When harvest can read their live copy, those nouns come back onto the page. When the live site blocks the harvest, the preview stays honest and a little quieter instead of padding fake specifics. The collages.",
+  "storyMore": "Ferrari Philadelphia: 2023-24 Cavallino Award Winner",
+  "featureBody": "Maximum Driving Thrills Even With The Roof Open",
+  "workHeading": "The work, in the bay where it happens.",
+  "galleryHeading": "People on the actual job.",
+  "storyHeading": "A shop with a name over the door.",
+  "featureHeading": "Close on the tool in the hand.",
+  "contactHeading": "Get the car in.",
+  "closing": "Ferrari Philadelphia should feel like a shop you can trust from the first scroll.",
+  "navWork": "(610) 527-1100",
+  "navStory": "(610) 995-9300",
+  "navVisit": "Visit",
+  "primaryCtaFallback": "Contact us",
+  "description": "Ferrari Philadelphia in Newtown Square. Private concept preview.",
+  "wordCount": 313
+}

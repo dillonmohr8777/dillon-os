@@ -1,0 +1,149 @@
+{
+  "id": 73,
+  "slug": "barnes-financial-group",
+  "name": "Barnes Financial Group",
+  "family": "legal",
+  "mode": "people",
+  "issue": "design",
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "cinematic",
+      "ok": true
+    },
+    {
+      "check": "moments",
+      "ok": true
+    },
+    {
+      "check": "story-body-photo",
+      "ok": true
+    },
+    {
+      "check": "feature-body-photo",
+      "ok": true
+    },
+    {
+      "check": "hero-only-swipe",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
+      "check": "collage-6.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-7.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-8.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-9.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-10.webp",
+      "ok": true
+    }
+  ],
+  "browser": "ok",
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
+  "photoCount": 7,
+  "sourceCount": 7,
+  "officialPhotos": 2,
+  "genFills": 5,
+  "url": "http://www.barnesfinancial.com/",
+  "city": "Media",
+  "rerender": true,
+  "hashes": [
+    "eb402b8f90fdb46393b21bec51df8502090f9ba6ee13c7d9964a0ab542bf41e9",
+    "b3de2a4b7af91b6c35d1a843fa62100e2bd22420697460fe3882dd122a556891",
+    "255a6ba14c68ff256a26b9f243d90c3854755dc4a0bcd4273d1cd17c9ff3f645",
+    "fe33c277a8154ddf58227310fbb781e7f535251d044970167fbce626d05f09c3",
+    "5298ed09adc13adccf7f8b0884685cb48c6a278017f7a598584a7433d48faa5f",
+    "2d8c1f8f858ea74b18c9241d334b011a2540d16de87b93bd60a2c74a74511be2",
+    "d2d2dd4abcc557524b7e1b0ec95b30d3189ee7488b6c60398d385de481c45ba8",
+    "0a6daa4dc74b288670fa12ba1edf8a340ada60edd58ec9a6dd2c7cb6a912b30b",
+    "9a267bc5e8ad705addda7dc9518046e03e085f3666cd98a1cd99359226fccfdf",
+    "084a4e10fe0efab769c34be4a62a6f434dbfeb8d61cea912389a15ab6a06f40b"
+  ],
+  "copyWords": 345,
+  "treatedPrint": true,
+  "printPass": "v1",
+  "bodyPass": "v1"
+}

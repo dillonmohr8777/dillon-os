@@ -1,0 +1,8 @@
+{
+  "name": "prospect-unslop",
+  "private": true,
+  "description": "138-site unslop factory. Playwright harvests official photography when fetch-only hits Cloudflare.",
+  "dependencies": {
+    "playwright": "^1.55.0"
+  }
+}

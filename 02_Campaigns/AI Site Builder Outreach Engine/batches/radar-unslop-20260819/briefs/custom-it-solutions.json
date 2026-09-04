@@ -1,0 +1,118 @@
+{
+  "slug": "custom-it-solutions",
+  "name": "Custom IT Solutions",
+  "city": "Address",
+  "category": "Professional",
+  "family": "professional",
+  "mode": "people",
+  "url": "https://customitsolutions.com/",
+  "phone": "973-726-0202",
+  "address": "96 Clinton Ave Newark",
+  "hours": "",
+  "logo": true,
+  "logoSrc": "assets/logo.png",
+  "tokens": {
+    "paper": "#f4efe7",
+    "ink": "#111820",
+    "accent": "#20c0d0",
+    "accent2": "#20d0d0",
+    "panel": "#d6e8e3",
+    "deep": "#090d11",
+    "border": "1px",
+    "radius": "28px",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onDeep": "#FFFFFF"
+  },
+  "fonts": {
+    "display": "Alegreya",
+    "text": "Karla",
+    "displayFallback": "Georgia,serif"
+  },
+  "attitude": "glass",
+  "marquee": [
+    "Custom IT Solutions",
+    "Address",
+    "The work"
+  ],
+  "imageAlts": [
+    "The people photograph for Custom IT Solutions: people at work",
+    "The process photograph for Custom IT Solutions: hands on the job",
+    "The conversation photograph for Custom IT Solutions: a real conversation",
+    "The place photograph for Custom IT Solutions: the place",
+    "The craft photograph for Custom IT Solutions: the craft",
+    "The shop photograph for Custom IT Solutions: The room where the work lives.",
+    "Hands photograph for Custom IT Solutions: A closer look at the job.",
+    "The bay photograph for Custom IT Solutions: Tools and the person using them.",
+    "The crew photograph for Custom IT Solutions: People mid-job, not posed.",
+    "Detail photograph for Custom IT Solutions: Skill you only get up close."
+  ],
+  "imageDisclosure": "Photographs harvested from the official site and recomposed as concept collages. They are not a claim about current staff or completed jobs.",
+  "headline": "See IT Flourish ™",
+  "sub": "Custom IT Solutions (CIT) is a trusted services and consulting company known for cultivating lasting partnerships and business-technology alignment. We tailor plans to your budget and challenges, fueling maximum return on IT investments and putting company goals on an.",
+  "points": [
+    "The work is specific",
+    "People at the tools",
+    "You reach them directly"
+  ],
+  "offerings": [
+    {
+      "title": "See IT Flourish™",
+      "body": "Comprehensive managed services, ensuring peak IT system performance and compliance. From EDR to tailored service plans, we align technology with your business needs"
+    },
+    {
+      "title": "Managed Security Services & Security",
+      "body": "Expert guidance on Microsoft 365. From tailored transitions to maximizing potential, we empower businesses with 24/7 serverless cloud computing and robust collaboration tools."
+    },
+    {
+      "title": "Microsoft 365 Business Products",
+      "body": "Specialized Infor XA consulting and services. From EDI integration to custom software development and self-service portals, we enhance operational efficiency and maximize ROI."
+    }
+  ],
+  "experience": [
+    {
+      "title": "Find them",
+      "body": "Name, place, and a clear path above the fold."
+    },
+    {
+      "title": "See the work",
+      "body": "A workstation, a meeting, hands on the tools of the trade."
+    },
+    {
+      "title": "Follow up",
+      "body": "Hours and scope stay official."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "https://customitsolutions.com/"
+    },
+    {
+      "title": "Call",
+      "body": "973-726-0202",
+      "href": "tel:9737260202"
+    },
+    {
+      "title": "Find them",
+      "body": "96 Clinton Ave Newark",
+      "href": "https://www.google.com/maps/search/?api=1&query=96%20Clinton%20Ave%20Newark"
+    }
+  ],
+  "story": "Custom IT Solutions (CIT) is a trusted services and consulting company known for cultivating lasting partnerships and business-technology alignment. We tailor plans to your budget and challenges, fueling maximum return on IT investments and putting company goals on an accelerated path to success. Comprehensive managed services, ensuring peak IT system performance and compliance. From EDR to tailored service plans, we align technology with your business needs Expert guidance on Microsoft 365. From tailored transitions to maximizing potential, we empower businesses with 24/7 serverless cloud computing and robust collaboration tools.",
+  "storyMore": "Specialized Infor XA consulting and services. From EDI integration to custom software development and self-service portals, we enhance operational efficiency and maximize ROI.",
+  "featureBody": "A secure, customizable B2B platform on IBM. Enhance communication, control, and user experience with real-time updates, multi-factor authentication, and tailored design.",
+  "workHeading": "The work, in the room where it happens.",
+  "galleryHeading": "People, not stock extras.",
+  "storyHeading": "A studio or office with a name.",
+  "featureHeading": "Close on the craft.",
+  "contactHeading": "Start the conversation.",
+  "closing": "Custom IT Solutions should feel like a team you can actually reach.",
+  "navWork": "Solutions",
+  "navStory": "About",
+  "navVisit": "Contact",
+  "primaryCtaFallback": "Contact",
+  "description": "Custom IT Solutions in Address. Private concept preview.",
+  "wordCount": 362
+}

@@ -1,0 +1,108 @@
+{
+  "slug": "scott-lot",
+  "name": "Scott Lot",
+  "city": "Scott Lot",
+  "category": "Auto",
+  "family": "auto",
+  "mode": "people",
+  "url": "https://www.scottcars.com/",
+  "phone": "",
+  "address": "",
+  "hours": "",
+  "logo": true,
+  "logoSrc": "assets/logo.png",
+  "tokens": {
+    "paper": "#f4efe7",
+    "ink": "#203090",
+    "accent": "#203090",
+    "accent2": "#2030a0",
+    "panel": "#d6d4da",
+    "deep": "#111a4f",
+    "border": "4px",
+    "radius": "0px",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onDeep": "#FFFFFF"
+  },
+  "fonts": {
+    "display": "Bricolage Grotesque",
+    "text": "Manrope",
+    "displayFallback": "Arial,sans-serif"
+  },
+  "attitude": "brutal",
+  "marquee": [
+    "Scott Lot",
+    "Scott Lot",
+    "The work"
+  ],
+  "imageAlts": [
+    "The people photograph for Scott Lot: people at work",
+    "The process photograph for Scott Lot: hands on the job",
+    "The conversation photograph for Scott Lot: a real conversation",
+    "The place photograph for Scott Lot: the place",
+    "The craft photograph for Scott Lot: the craft",
+    "The shop photograph for Scott Lot: The room where the work lives.",
+    "Hands photograph for Scott Lot: A closer look at the job.",
+    "The bay photograph for Scott Lot: Tools and the person using them.",
+    "The crew photograph for Scott Lot: People mid-job, not posed.",
+    "Detail photograph for Scott Lot: Skill you only get up close."
+  ],
+  "imageDisclosure": "Photographs harvested from the official site and recomposed as concept collages. They are not a claim about current staff or completed jobs.",
+  "headline": "Scott Family of Dealerships",
+  "sub": "3333 Lehigh St Directions Allentown, PA 18103",
+  "points": [
+    "The bay is real",
+    "Hands on the car",
+    "Service starts with a call"
+  ],
+  "offerings": [
+    {
+      "title": "We buy cars.",
+      "body": "Pre-Owned Vehicles Pre-Owned Vehicles All Pre-Owned Vehicles"
+    },
+    {
+      "title": "Shop by Brand",
+      "body": "Parts & Service Parts & Service Schedule Service Appointment"
+    },
+    {
+      "title": "Browse new models",
+      "body": "About About our Dealership Meet The Staff"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Pull in",
+      "body": "The homepage should look like a shop you can drive to."
+    },
+    {
+      "title": "Talk to the person doing the work",
+      "body": "Inspection, the hood, the tablet in the lane."
+    },
+    {
+      "title": "Leave with a plan",
+      "body": "Confirm wait times and pricing with them, not with guessed copy."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "https://www.scottcars.com/"
+    }
+  ],
+  "story": "3333 Lehigh St Directions Allentown, PA 18103 Pre-Owned Vehicles Pre-Owned Vehicles All Pre-Owned Vehicles Parts & Service Parts & Service Schedule Service Appointment Scott Lot gets a private concept homepage, not a mailed pitch. The page keeps their name in the header, puts industry photography in a 4:5 frame, and makes the next step a call or their official site. Nothing here invents hours, a menu, an award, or a person who does not appear in a first-party photo. When harvest can read their live copy, those nouns come back onto the page. When the live site blocks the harvest, the preview stays honest and a little quieter instead of padding fake specifics. The collages stay in the work: people on the job, or.",
+  "storyMore": "About About our Dealership Meet The Staff",
+  "featureBody": "When it comes to buying a vehicle in Allentown, PA, you've got options. But if you're looking for a team that treats you like family, has a wide selection of vehicles, and actually enjoys helping people find their perfect ride, you've landed in the right place. At Scott Family of Dealerships, we make the whole process better, from your first click to your.",
+  "workHeading": "The work, in the bay where it happens.",
+  "galleryHeading": "People on the actual job.",
+  "storyHeading": "A shop with a name over the door.",
+  "featureHeading": "Close on the tool in the hand.",
+  "contactHeading": "Get the car in.",
+  "closing": "Scott Lot should feel like a shop you can trust from the first scroll.",
+  "navWork": "New Vehicles",
+  "navStory": "Featured New Vehicles",
+  "navVisit": "Visit",
+  "primaryCtaFallback": "Schedule Service Appointment",
+  "description": "Scott Lot in Scott Lot. Private concept preview.",
+  "wordCount": 354
+}

@@ -1,0 +1,118 @@
+{
+  "slug": "theory",
+  "name": "Theory Outlet at Philadelphia Premium Outlets",
+  "city": "Suite #1245",
+  "category": "Retail",
+  "family": "retail",
+  "mode": "people",
+  "url": "https://www.theory.com/storedetail/?StoreID=280075",
+  "phone": "(610) 326-5040",
+  "address": "18 West Lightcap Road, Suite #1245, Limerick, PA, 19464",
+  "hours": "Monday - Thursday 10:00AM-8:00PM Friday & Saturday 10:00AM-9:00PM",
+  "logo": true,
+  "logoSrc": "assets/logo.png",
+  "tokens": {
+    "paper": "#F5F1EA",
+    "ink": "#1A1612",
+    "accent": "#B45309",
+    "accent2": "#F5D0A6",
+    "panel": "#E8DCCB",
+    "deep": "#22180E",
+    "border": "2px",
+    "radius": "4px",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onDeep": "#FFFFFF"
+  },
+  "fonts": {
+    "display": "Newsreader",
+    "text": "Figtree",
+    "displayFallback": "Georgia,serif"
+  },
+  "attitude": "industrial",
+  "marquee": [
+    "Theory Outlet at Philadelphia Premium Outlets",
+    "Suite #1245",
+    "The work"
+  ],
+  "imageAlts": [
+    "The people photograph for Theory Outlet at Philadelphia Premium Outlets: people at work",
+    "The process photograph for Theory Outlet at Philadelphia Premium Outlets: hands on the job",
+    "The conversation photograph for Theory Outlet at Philadelphia Premium Outlets: a real conversation",
+    "The place photograph for Theory Outlet at Philadelphia Premium Outlets: the place",
+    "The craft photograph for Theory Outlet at Philadelphia Premium Outlets: the craft",
+    "The shop photograph for Theory Outlet at Philadelphia Premium Outlets: The room where the work lives.",
+    "Hands photograph for Theory Outlet at Philadelphia Premium Outlets: A closer look at the job.",
+    "The bay photograph for Theory Outlet at Philadelphia Premium Outlets: Tools and the person using them.",
+    "The crew photograph for Theory Outlet at Philadelphia Premium Outlets: People mid-job, not posed.",
+    "Detail photograph for Theory Outlet at Philadelphia Premium Outlets: Skill you only get up close."
+  ],
+  "imageDisclosure": "Photographs harvested from the official site and recomposed as concept collages. They are not a claim about current staff or completed jobs.",
+  "headline": ".st0 { fill: #1D1D1B; shape-rendering: geometricPrecision }",
+  "sub": "Your updated pant guide is here. SHOP WOMEN | SHOP MEN",
+  "points": [
+    "The shop is the product",
+    "Hands on the goods",
+    "Visit or call them"
+  ],
+  "offerings": [
+    {
+      "title": "Theory Philadelphia",
+      "body": "New Arrivals Back Women Shop All New Arrivals"
+    },
+    {
+      "title": "Shop Top Categories",
+      "body": "Pant Guide Back Women's Pant Guide View All"
+    },
+    {
+      "title": "Holiday Shipping Cutoffs",
+      "body": "Editorial Back Features Theories Magazine"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Browse",
+      "body": "The homepage should look like the shop, not a catalog template."
+    },
+    {
+      "title": "Ask",
+      "body": "An associate in the frame, handling the product."
+    },
+    {
+      "title": "Take it home",
+      "body": "Pricing and stock stay on their official site."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "https://www.theory.com/storedetail/?StoreID=280075"
+    },
+    {
+      "title": "Call",
+      "body": "(610) 326-5040",
+      "href": "tel:6103265040"
+    },
+    {
+      "title": "Find them",
+      "body": "18 West Lightcap Road, Suite #1245, Limerick, PA, 19464",
+      "href": "https://www.google.com/maps/search/?api=1&query=18%20West%20Lightcap%20Road%2C%20Suite%20%231245%2C%20Limerick%2C%20PA%2C%2019464"
+    }
+  ],
+  "story": "Your updated pant guide is here. SHOP WOMEN | SHOP MEN New Arrivals Back Women Shop All New Arrivals Pant Guide Back Women's Pant Guide View All Theory Outlet at Philadelphia Premium Outlets gets a private concept homepage, not a mailed pitch. The page keeps their name in the header, puts industry photography in a 4:5 frame, and makes the next step a call or their official site. Nothing here invents hours, a menu, an award, or a person who does not appear in a first-party photo. When harvest can read their live copy, those nouns come back onto the page. When the live site blocks the harvest, the preview stays honest and a little quieter instead of padding fake specifics. The collages stay in the work: people.",
+  "storyMore": "Editorial Back Features Theories Magazine",
+  "featureBody": "Women's Best of Sale Classic Straight Pull-On Pant",
+  "workHeading": "A shop that looks like a shop.",
+  "galleryHeading": "People and the product.",
+  "storyHeading": "A storefront with a name.",
+  "featureHeading": "Close on what they sell.",
+  "contactHeading": "Plan the visit.",
+  "closing": "Theory Outlet at Philadelphia Premium Outlets should feel like a counter you would walk up to.",
+  "navWork": "Skip to footer content",
+  "navStory": "SHOP WOMEN",
+  "navVisit": "Visit",
+  "primaryCtaFallback": "SHOP WOMEN",
+  "description": "Theory Outlet at Philadelphia Premium Outlets in Suite #1245. Private concept preview.",
+  "wordCount": 302
+}

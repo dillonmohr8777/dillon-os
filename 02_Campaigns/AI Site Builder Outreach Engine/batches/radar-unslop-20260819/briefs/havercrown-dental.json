@@ -1,0 +1,108 @@
+{
+  "slug": "havercrown-dental",
+  "name": "HaverCrown Dental",
+  "city": "Havertown",
+  "category": "Dental",
+  "family": "dental",
+  "mode": "people",
+  "url": "https://www.havercrowndental.com/",
+  "phone": "",
+  "address": "",
+  "hours": "",
+  "logo": true,
+  "logoSrc": "assets/logo.png",
+  "tokens": {
+    "paper": "#f4efe7",
+    "ink": "#111820",
+    "accent": "#40b0c0",
+    "accent2": "#30b0c0",
+    "panel": "#dae6e1",
+    "deep": "#090d11",
+    "border": "1px",
+    "radius": "2px",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onDeep": "#FFFFFF"
+  },
+  "fonts": {
+    "display": "Alegreya",
+    "text": "Karla",
+    "displayFallback": "Georgia,serif"
+  },
+  "attitude": "editorial",
+  "marquee": [
+    "HaverCrown Dental",
+    "Havertown",
+    "The work"
+  ],
+  "imageAlts": [
+    "The people photograph for HaverCrown Dental: people at work",
+    "The process photograph for HaverCrown Dental: hands on the job",
+    "The conversation photograph for HaverCrown Dental: a real conversation",
+    "The place photograph for HaverCrown Dental: the place",
+    "The craft photograph for HaverCrown Dental: the craft",
+    "The shop photograph for HaverCrown Dental: The room where the work lives.",
+    "Hands photograph for HaverCrown Dental: A closer look at the job.",
+    "The bay photograph for HaverCrown Dental: Tools and the person using them.",
+    "The crew photograph for HaverCrown Dental: People mid-job, not posed.",
+    "Detail photograph for HaverCrown Dental: Skill you only get up close."
+  ],
+  "imageDisclosure": "Illustrative concept imagery plus any photographs harvested from the official site. These visuals do not claim to depict current staff, customers, or completed work.",
+  "headline": "Site is not available",
+  "sub": "The domain name in the URL is not associated with any active site on the WP Engine platform.",
+  "points": [
+    "The chair is calm",
+    "Hands on real care",
+    "You book with them"
+  ],
+  "offerings": [
+    {
+      "title": "The visit",
+      "body": "HaverCrown Dental is about a real operatory, not a stock smile collage."
+    },
+    {
+      "title": "The team",
+      "body": "People who do the work: exam, cleaning, the conversation at the chair."
+    },
+    {
+      "title": "The next step",
+      "body": "Call or book on their official line. Nothing here invents an opening."
+    }
+  ],
+  "experience": [
+    {
+      "title": "Walk in knowing who they are",
+      "body": "Name, place, and a clear call path above the fold."
+    },
+    {
+      "title": "See the room",
+      "body": "Treatment, reception, and careful hands. Not a handshake in an atrium."
+    },
+    {
+      "title": "Book with them",
+      "body": "Hours and insurance questions stay on their official site."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "https://www.havercrowndental.com/"
+    }
+  ],
+  "story": "The domain name in the URL is not associated with any active site on the WP Engine platform. If this is your site, please visit your User Portal to ensure that your domain mapping and DNS records are configured correctly. HaverCrown Dental gets a private concept homepage, not a mailed pitch. The page keeps their name in the header, puts industry photography in a 4:5 frame, and makes the next step a call or their official site. Nothing here invents hours, a menu, an award, or a person who does not appear in a first-party photo. When harvest can read their live copy, those nouns come back onto the page. When the live site blocks the harvest, the preview stays honest and a little quieter instead of padding fake.",
+  "storyMore": "Name, place, and a clear call path above the fold. Treatment, reception, and careful hands. Not a handshake in an atrium.",
+  "featureBody": "People who do the work: exam, cleaning, the conversation at the chair. Call or book on their official line. Nothing here invents an opening.",
+  "workHeading": "Care that looks like the actual chair.",
+  "galleryHeading": "People doing the work.",
+  "storyHeading": "A practice, not a template.",
+  "featureHeading": "Close on the skill.",
+  "contactHeading": "Start the visit.",
+  "closing": "HaverCrown Dental should feel easy to call before anyone scrolls twice.",
+  "navWork": "Work",
+  "navStory": "Story",
+  "navVisit": "Visit",
+  "primaryCtaFallback": "Contact Us",
+  "description": "HaverCrown Dental in Havertown. Private concept preview.",
+  "wordCount": 342
+}

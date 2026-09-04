@@ -1,0 +1,48 @@
+name: Deploy unslop noindex hub
+
+# One-shot publish of the 136-site unslop batch to a NEW Netlify site named
+# radar-unslop-20260819. Never overwrites client sites or the next20 hub.
+# Triggered only when deploy.trigger changes on this branch.
+on:
+  push:
+    branches:
+      - cursor/prospect-unslop-collages-56f2
+    paths:
+      - 'automation/prospect-unslop/deploy.trigger'
+  workflow_dispatch:
+
+concurrency:
+  group: unslop-netlify-hub
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: false
+          fetch-depth: 1
+          # Full clone is a 3.5GB pack. Only the hub payload is needed.
+          sparse-checkout: |
+            automation/prospect-unslop
+            _os/automation
+            02_Campaigns/AI Site Builder Outreach Engine/batches/radar-unslop-20260819
+          sparse-checkout-cone-mode: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Publish noindex hub
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NODE_OPTIONS: --max-old-space-size=4096
+        run: |
+          if [ -z "$NETLIFY_AUTH_TOKEN" ]; then
+            echo "NETLIFY_AUTH_TOKEN is not set on this repo."
+            exit 1
+          fi
+          node automation/prospect-unslop/deploy.js

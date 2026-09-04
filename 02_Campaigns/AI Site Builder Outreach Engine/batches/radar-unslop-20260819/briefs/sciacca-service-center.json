@@ -1,0 +1,118 @@
+{
+  "slug": "sciacca-service-center",
+  "name": "Sciacca Service Center",
+  "city": "Montgomery County",
+  "category": "Auto",
+  "family": "auto",
+  "mode": "people",
+  "url": "http://sciaccaservicecenter.com/",
+  "phone": "(610) 277-7744",
+  "address": "409 E Lafayette St",
+  "hours": "Monday &#8211; Friday: 8:00 AM to 5:00 PM",
+  "logo": true,
+  "logoSrc": "assets/logo.png",
+  "tokens": {
+    "paper": "#a0c0e0",
+    "ink": "#103050",
+    "accent": "#3080c0",
+    "accent2": "#80b0d0",
+    "panel": "#90b7db",
+    "deep": "#081a2c",
+    "border": "4px",
+    "radius": "0px",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onDeep": "#FFFFFF"
+  },
+  "fonts": {
+    "display": "Bodoni Moda",
+    "text": "Urbanist",
+    "displayFallback": "Georgia,serif"
+  },
+  "attitude": "brutal",
+  "marquee": [
+    "Sciacca Service Center",
+    "Montgomery County",
+    "The work"
+  ],
+  "imageAlts": [
+    "The people photograph for Sciacca Service Center: people at work",
+    "The process photograph for Sciacca Service Center: hands on the job",
+    "The conversation photograph for Sciacca Service Center: a real conversation",
+    "The place photograph for Sciacca Service Center: the place",
+    "The craft photograph for Sciacca Service Center: the craft",
+    "The shop photograph for Sciacca Service Center: The room where the work lives.",
+    "Hands photograph for Sciacca Service Center: A closer look at the job.",
+    "The bay photograph for Sciacca Service Center: Tools and the person using them.",
+    "The crew photograph for Sciacca Service Center: People mid-job, not posed.",
+    "Detail photograph for Sciacca Service Center: Skill you only get up close."
+  ],
+  "imageDisclosure": "Photographs harvested from the official site and recomposed as concept collages. They are not a claim about current staff or completed jobs.",
+  "headline": "Sciacca Service Center",
+  "sub": "A no-nonsense diagnosis that you can trust | We offer the lowest rates with the highest quality | Over 25 years of experience so you know you&#8217;re in good hands",
+  "points": [
+    "The bay is real",
+    "Hands on the car",
+    "Service starts with a call"
+  ],
+  "offerings": [
+    {
+      "title": "Honesty | Affordable Pricing | Knowledgeable",
+      "body": "Sciacca Service Center has been servicing vehicles in the Norristown, PA area for more than 25 years. First opened in 1989, owner Charlie Interrante named the shop after his hometown in Sciacca, Italy. It is a family-oriented shop with fair prices that you can feel at home with. Take comfort in knowing that you&#8217;ll receive an honest opinion rather than an extensive list of repairs to be done. Come visit us and see what a difference an honest, personalized consultation can make!"
+    },
+    {
+      "title": "Business Hours",
+      "body": "Monday &#8211; Friday: 8:00 AM to 5:00 PM"
+    },
+    {
+      "title": "Our Services",
+      "body": "Having issues with your vehicle? Our knowledgeable staff will be happy to assist."
+    }
+  ],
+  "experience": [
+    {
+      "title": "Pull in",
+      "body": "The homepage should look like a shop you can drive to."
+    },
+    {
+      "title": "Talk to the person doing the work",
+      "body": "Inspection, the hood, the tablet in the lane."
+    },
+    {
+      "title": "Leave with a plan",
+      "body": "Confirm wait times and pricing with them, not with guessed copy."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "http://sciaccaservicecenter.com/"
+    },
+    {
+      "title": "Call",
+      "body": "(610) 277-7744",
+      "href": "tel:6102777744"
+    },
+    {
+      "title": "Find them",
+      "body": "409 E Lafayette St",
+      "href": "https://www.google.com/maps/search/?api=1&query=409%20E%20Lafayette%20St"
+    }
+  ],
+  "story": "A no-nonsense diagnosis that you can trust | We offer the lowest rates with the highest quality | Over 25 years of experience so you know you&#8217;re in good hands Sciacca Service Center has been servicing vehicles in the Norristown, PA area for more than 25 years. First opened in 1989, owner Charlie Interrante named the shop after his hometown in Sciacca, Italy. It is a family-oriented shop with fair prices that you can feel at home with. Take comfort in knowing that you&#8217;ll receive an honest opinion rather than an extensive list of repairs to be done. Come visit us and see what a difference an honest, personalized consultation can make! Monday &#8211; Friday: 8:00 AM to 5:00 PM",
+  "storyMore": "Having issues with your vehicle? Our knowledgeable staff will be happy to assist.",
+  "featureBody": "Contact us today to schedule an appointment!",
+  "workHeading": "The work, in the bay where it happens.",
+  "galleryHeading": "People on the actual job.",
+  "storyHeading": "A shop with a name over the door.",
+  "featureHeading": "Close on the tool in the hand.",
+  "contactHeading": "Get the car in.",
+  "closing": "Sciacca Service Center should feel like a shop you can trust from the first scroll.",
+  "navWork": "Sciacca Service Center",
+  "navStory": "About",
+  "navVisit": "Visit",
+  "primaryCtaFallback": "Contact Us",
+  "description": "Sciacca Service Center in Montgomery County. Private concept preview.",
+  "wordCount": 413
+}

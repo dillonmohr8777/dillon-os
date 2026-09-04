@@ -1,0 +1,108 @@
+{
+  "slug": "the-restaurant-store",
+  "name": "The Restaurant Store Plymouth Meeting",
+  "city": "Norristown",
+  "category": "Trade",
+  "family": "trade",
+  "mode": "people",
+  "url": "https://www.therestaurantstore.com/stores/Plymouth-Meeting",
+  "phone": "",
+  "address": "",
+  "hours": "",
+  "logo": false,
+  "logoSrc": "assets/logo.png",
+  "tokens": {
+    "paper": "#F0EDE6",
+    "ink": "#1A1C16",
+    "accent": "#C2410C",
+    "accent2": "#F5C451",
+    "panel": "#DDD8CC",
+    "deep": "#1F2118",
+    "border": "4px",
+    "radius": "0px",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onDeep": "#FFFFFF"
+  },
+  "fonts": {
+    "display": "Syne",
+    "text": "Figtree",
+    "displayFallback": "Arial,sans-serif"
+  },
+  "attitude": "brutal",
+  "marquee": [
+    "The Restaurant Store Plymouth Meeting",
+    "Norristown",
+    "The work"
+  ],
+  "imageAlts": [
+    "The people photograph for The Restaurant Store Plymouth Meeting: people at work",
+    "The process photograph for The Restaurant Store Plymouth Meeting: hands on the job",
+    "The conversation photograph for The Restaurant Store Plymouth Meeting: a real conversation",
+    "The place photograph for The Restaurant Store Plymouth Meeting: the place",
+    "The craft photograph for The Restaurant Store Plymouth Meeting: the craft",
+    "The shop photograph for The Restaurant Store Plymouth Meeting: The room where the work lives.",
+    "Hands photograph for The Restaurant Store Plymouth Meeting: A closer look at the job.",
+    "The bay photograph for The Restaurant Store Plymouth Meeting: Tools and the person using them.",
+    "The crew photograph for The Restaurant Store Plymouth Meeting: People mid-job, not posed.",
+    "Detail photograph for The Restaurant Store Plymouth Meeting: Skill you only get up close."
+  ],
+  "imageDisclosure": "Illustrative concept imagery plus any photographs harvested from the official site. These visuals do not claim to depict current staff, customers, or completed work.",
+  "headline": "The Restaurant Store Plymouth Meeting",
+  "sub": "The Restaurant Store Plymouth Meeting in Norristown. A private concept homepage: their mark when we have it, industry photography, and a clearer visit path.",
+  "points": [
+    "Job site first",
+    "Hands on the trade",
+    "Estimates stay official"
+  ],
+  "offerings": [
+    {
+      "title": "The job",
+      "body": "The Restaurant Store Plymouth Meeting is tools, vans, and people on the work. Not a stock handshake."
+    },
+    {
+      "title": "The crew",
+      "body": "Loading materials, talking with a homeowner, finishing the install."
+    },
+    {
+      "title": "The ask",
+      "body": "Call for an estimate. We don't invent a price."
+    }
+  ],
+  "experience": [
+    {
+      "title": "See the trade",
+      "body": "The homepage should look like the work they actually do."
+    },
+    {
+      "title": "Talk to the lead",
+      "body": "A conversation at the door or in the shop, not a fake testimonial wall."
+    },
+    {
+      "title": "Book the visit",
+      "body": "Hours and service area stay on their official site."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "https://www.therestaurantstore.com/stores/Plymouth-Meeting"
+    }
+  ],
+  "story": "The Restaurant Store Plymouth Meeting gets a private concept homepage, not a mailed pitch. The page keeps their name in the header, puts industry photography in a 4:5 frame, and makes the next step a call or their official site. Nothing here invents hours, a menu, an award, or a person who does not appear in a first-party photo. When harvest can read their live copy, those nouns come back onto the page. When the live site blocks the harvest, the preview stays honest and a little quieter instead of padding fake specifics. The collages stay in the work: people on the job, or food on the plate, never a logo baked into a photograph. The Restaurant Store Plymouth Meeting is tools, vans, and people on the work. Not.",
+  "storyMore": "The homepage should look like the work they actually do. A conversation at the door or in the shop, not a fake testimonial wall.",
+  "featureBody": "Loading materials, talking with a homeowner, finishing the install. Call for an estimate. We don't invent a price.",
+  "workHeading": "The work, on the job.",
+  "galleryHeading": "People doing the trade.",
+  "storyHeading": "A crew with a name on the van.",
+  "featureHeading": "Close on the hands.",
+  "contactHeading": "Ask for the visit.",
+  "closing": "The Restaurant Store Plymouth Meeting should look like a crew you would let in the house.",
+  "navWork": "Work",
+  "navStory": "Story",
+  "navVisit": "Visit",
+  "primaryCtaFallback": "",
+  "description": "The Restaurant Store Plymouth Meeting in Norristown. Private concept preview.",
+  "wordCount": 350
+}

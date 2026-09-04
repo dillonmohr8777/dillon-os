@@ -1,0 +1,118 @@
+{
+  "slug": "johnnys-pizza",
+  "name": "Johnny's Pizza & Pasta",
+  "city": "Spring Mount",
+  "category": "Food",
+  "family": "food",
+  "mode": "food",
+  "url": "http://johnnysitaliano.com/",
+  "phone": "610.287.4771",
+  "address": "19525 Green Lane PA 18054 Harleysville PA 19438 Harleysv",
+  "hours": "",
+  "logo": true,
+  "logoSrc": "assets/logo.png",
+  "tokens": {
+    "paper": "#e0c070",
+    "ink": "#605030",
+    "accent": "#e0c070",
+    "accent2": "#e0c080",
+    "panel": "#e0c070",
+    "deep": "#342c1a",
+    "border": "1px",
+    "radius": "2px",
+    "onPaper": "#090909",
+    "onAccent": "#090909",
+    "onDeep": "#FFFFFF"
+  },
+  "fonts": {
+    "display": "Fraunces",
+    "text": "Source Sans 3",
+    "displayFallback": "Georgia,serif"
+  },
+  "attitude": "editorial",
+  "marquee": [
+    "Johnny's Pizza & Pasta",
+    "Spring Mount",
+    "The plate"
+  ],
+  "imageAlts": [
+    "Plated food from a Johnny's Pizza & Pasta kitchen concept",
+    "Chef plating at the pass for Johnny's Pizza & Pasta",
+    "Prep and ingredients for Johnny's Pizza & Pasta",
+    "Dining setting for Johnny's Pizza & Pasta",
+    "Close food texture for Johnny's Pizza & Pasta",
+    "The room photograph for Johnny's Pizza & Pasta: The dining room, pulled wide.",
+    "Closer photograph for Johnny's Pizza & Pasta: A second look at the plate.",
+    "Service photograph for Johnny's Pizza & Pasta: Hands moving at the pass.",
+    "Heat photograph for Johnny's Pizza & Pasta: The line when tickets stack.",
+    "Last look photograph for Johnny's Pizza & Pasta: What you see before you sit."
+  ],
+  "imageDisclosure": "Photographs harvested from the official site and recomposed as concept collages. They are not a claim about current staff or completed jobs.",
+  "headline": "It&#8217;s all about the food &#038; Service at Johnny&#8217;s BYO",
+  "sub": "Yes we sell allot of Pizza, Stromboli and Grinders, but we are truly a \"Ristorante Italiano\". Our dishes are carefully prepared one at a time to assure our quality. If your favorite dish is not on our menu, just ask.",
+  "points": [
+    "The plate leads",
+    "The kitchen stays in the picture",
+    "Hours live on their official site"
+  ],
+  "offerings": [
+    {
+      "title": "Johnny&#8217;s Pizza &#038; Pasta Ristorante Italiano",
+      "body": "The stromboli is an Italian-American creation and type of turnover with its roots in the wonderful world of pizzacraft."
+    },
+    {
+      "title": "&#8220;Regular&#8221; Stromboli",
+      "body": "\"Fine Italian Cuisine, BYO Comfort at Reasonable Family Pricing\""
+    },
+    {
+      "title": "Chef&#039;s Recommendations",
+      "body": "Call 610.287.4771 For Home Dinning / Delivery, Takeout or Special Arrangements."
+    }
+  ],
+  "experience": [
+    {
+      "title": "Arrive hungry",
+      "body": "The homepage should make the food obvious before anyone hunts a PDF menu."
+    },
+    {
+      "title": "See the work",
+      "body": "Prep, the pass, and the plate. Not random people in a sunlit atrium."
+    },
+    {
+      "title": "Confirm with them",
+      "body": "Call, hours, and ordering stay on the official source so nothing here is guessed."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "http://johnnysitaliano.com/"
+    },
+    {
+      "title": "Call",
+      "body": "610.287.4771",
+      "href": "tel:6102874771"
+    },
+    {
+      "title": "Find them",
+      "body": "19525 Green Lane PA 18054 Harleysville PA 19438 Harleysv",
+      "href": "https://www.google.com/maps/search/?api=1&query=19525%20Green%20Lane%20PA%2018054%20Harleysville%20PA%2019438%20Harleysv"
+    }
+  ],
+  "story": "Yes we sell allot of Pizza, Stromboli and Grinders, but we are truly a \"Ristorante Italiano\". Our dishes are carefully prepared one at a time to assure our quality. If your favorite dish is not on our menu, just ask. The stromboli is an Italian-American creation and type of turnover with its roots in the wonderful world of pizzacraft. \"Fine Italian Cuisine, BYO Comfort at Reasonable Family Pricing\" Johnny's Pizza & Pasta gets a private concept homepage, not a mailed pitch. The page keeps their name in the header, puts industry photography in a 4:5 frame, and makes the next step a call or their official site. Nothing here invents hours, a menu, an award, or a person who does not appear in a first-party photo..",
+  "storyMore": "Call 610.287.4771 For Home Dinning / Delivery, Takeout or Special Arrangements.",
+  "featureBody": "Johnny&#8217;s Mobile Website is LIVE! Peek at...",
+  "workHeading": "What comes out of this kitchen.",
+  "galleryHeading": "Food worth sitting down for.",
+  "storyHeading": "A kitchen with a name on the door.",
+  "featureHeading": "Close enough to taste the work.",
+  "contactHeading": "Make the next visit easy.",
+  "closing": "Johnny's Pizza & Pasta should feel like a place you can taste from the first screen.",
+  "navWork": "Read More",
+  "navStory": "Hours",
+  "navVisit": "Hours",
+  "primaryCtaFallback": "Shrimp and Scallops",
+  "description": "Johnny's Pizza & Pasta in Spring Mount. Private concept preview.",
+  "wordCount": 380
+}

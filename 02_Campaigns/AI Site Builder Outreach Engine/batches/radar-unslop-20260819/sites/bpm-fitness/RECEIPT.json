@@ -1,0 +1,150 @@
+{
+  "id": 77,
+  "slug": "bpm-fitness",
+  "name": "BPM Fitness",
+  "family": "fitness",
+  "mode": "people",
+  "issue": "design",
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "cinematic",
+      "ok": true
+    },
+    {
+      "check": "moments",
+      "ok": true
+    },
+    {
+      "check": "story-body-photo",
+      "ok": true
+    },
+    {
+      "check": "feature-body-photo",
+      "ok": true
+    },
+    {
+      "check": "hero-only-swipe",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
+      "check": "collage-6.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-7.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-8.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-9.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-10.webp",
+      "ok": true
+    }
+  ],
+  "browser": "ok",
+  "harvestCached": true,
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
+  "photoCount": 5,
+  "sourceCount": 5,
+  "officialPhotos": 0,
+  "genFills": 5,
+  "url": "https://bpmfitnessphl.com/",
+  "city": "Philadelphia",
+  "rerender": true,
+  "hashes": [
+    "79dd500d4239b22f705e4babe70a34b3bc9d75e6946ce7d4b84bc686a9ce3830",
+    "555d49765dce2e71b68040c3d934a1fbd7a25f6170717901483d27061a8ae6ab",
+    "501c3bc3749804295c6fce300e61e925646bcb81215fba60e7e4e88cfd4addcd",
+    "e1a2be9f447b6fda17e1aa74ea469f4926872284d73be42f41ab3fd519001970",
+    "78ba8dad38915daa6bfb05fb1d72c1557cc054fcda4e356ae0eec4ba0fbc6ad7",
+    "b884bb5d8022ffd065759efcc42f9360bfe9eb5b337b447f80da7aa977bae2c1",
+    "486ae7fd073e9a6ef0bbe6e78a8a0cfe228d256f31a457f2e75103e76d8512b5",
+    "7012eb08fb577bbc32de5c7996cd3496d6f2da0d89275b0db4d1dd9c42aa7d8d",
+    "81e7726dbec1a1f0994e24c541bd0da5d41cdff73e7787ffa64518626ebce854",
+    "8ccdc5ed97a5c3e81bcf6c805f8648ed704a5797486fd9dd5df1480554c94234"
+  ],
+  "copyWords": 328,
+  "treatedPrint": true,
+  "printPass": "v1",
+  "bodyPass": "v1"
+}

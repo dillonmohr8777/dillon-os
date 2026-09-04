@@ -1,0 +1,108 @@
+{
+  "slug": "captain-car-wash",
+  "name": "Captain Car Wash",
+  "city": "Norristown",
+  "category": "Auto",
+  "family": "auto",
+  "mode": "people",
+  "url": "https://captaincarwashpa.com/",
+  "phone": "",
+  "address": "",
+  "hours": "",
+  "logo": true,
+  "logoSrc": "assets/logo.png",
+  "tokens": {
+    "paper": "#f0c010",
+    "ink": "#006080",
+    "accent": "#006080",
+    "accent2": "#0080b0",
+    "panel": "#ceb21f",
+    "deep": "#003446",
+    "border": "4px",
+    "radius": "0px",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onDeep": "#FFFFFF"
+  },
+  "fonts": {
+    "display": "Newsreader",
+    "text": "Figtree",
+    "displayFallback": "Georgia,serif"
+  },
+  "attitude": "brutal",
+  "marquee": [
+    "Captain Car Wash",
+    "Norristown",
+    "The work"
+  ],
+  "imageAlts": [
+    "The people photograph for Captain Car Wash: people at work",
+    "The process photograph for Captain Car Wash: hands on the job",
+    "The conversation photograph for Captain Car Wash: a real conversation",
+    "The place photograph for Captain Car Wash: the place",
+    "The craft photograph for Captain Car Wash: the craft",
+    "The shop photograph for Captain Car Wash: The room where the work lives.",
+    "Hands photograph for Captain Car Wash: A closer look at the job.",
+    "The bay photograph for Captain Car Wash: Tools and the person using them.",
+    "The crew photograph for Captain Car Wash: People mid-job, not posed.",
+    "Detail photograph for Captain Car Wash: Skill you only get up close."
+  ],
+  "imageDisclosure": "Photographs harvested from the official site and recomposed as concept collages. They are not a claim about current staff or completed jobs.",
+  "headline": "Where a Quality Wash Meets Happiness Every Time!",
+  "sub": "Getting your car cleaned shouldn't be an inconvenient and frustrating experience. At Captain Car Wash, we understand that your vehicle is not just a mode of transportation; it's a reflection of your personality and style. That's why we are committed to providing more than just a.",
+  "points": [
+    "The bay is real",
+    "Hands on the car",
+    "Service starts with a call"
+  ],
+  "offerings": [
+    {
+      "title": "Cleanliness Fuels Happiness",
+      "body": "At Captain Car Wash, we understand that your vehicle is not just a mode of transportation; it's a reflection of your personality and style. That's why we are committed to providing more than just a wash, we deliver an experience that leaves your car looking immaculate and radiant."
+    },
+    {
+      "title": "Manage Your Plan Online",
+      "body": "Best car wash. Gets my car totally dry. My car has never been so clean. I highly recommend this car wash. Just think of it as maintenance for your vehicle."
+    },
+    {
+      "title": "Manage Your Plan Online",
+      "body": "Great family owned local business. Very friendly staff and my car always looks great!"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Pull in",
+      "body": "The homepage should look like a shop you can drive to."
+    },
+    {
+      "title": "Talk to the person doing the work",
+      "body": "Inspection, the hood, the tablet in the lane."
+    },
+    {
+      "title": "Leave with a plan",
+      "body": "Confirm wait times and pricing with them, not with guessed copy."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "https://captaincarwashpa.com/"
+    }
+  ],
+  "story": "Getting your car cleaned shouldn't be an inconvenient and frustrating experience. At Captain Car Wash, we understand that your vehicle is not just a mode of transportation; it's a reflection of your personality and style. That's why we are committed to providing more than just a wash, we deliver an experience that leaves your car looking immaculate and radiant. At Captain Car Wash, we understand that your vehicle is not just a mode of transportation; it's a reflection of your personality and style. That's why we are committed to providing more than just a wash, we deliver an experience that leaves your car looking immaculate and radiant. Best car wash. Gets my car totally dry. My car has never been so clean. I.",
+  "storyMore": "Great family owned local business. Very friendly staff and my car always looks great!",
+  "featureBody": "Great place and now my car is always clean!!!!!",
+  "workHeading": "The work, in the bay where it happens.",
+  "galleryHeading": "People on the actual job.",
+  "storyHeading": "A shop with a name over the door.",
+  "featureHeading": "Close on the tool in the hand.",
+  "contactHeading": "Get the car in.",
+  "closing": "Captain Car Wash should feel like a shop you can trust from the first scroll.",
+  "navWork": "Manage My Plan",
+  "navStory": "Aston",
+  "navVisit": "Visit",
+  "primaryCtaFallback": "Contact Us",
+  "description": "Captain Car Wash in Norristown. Private concept preview.",
+  "wordCount": 421
+}

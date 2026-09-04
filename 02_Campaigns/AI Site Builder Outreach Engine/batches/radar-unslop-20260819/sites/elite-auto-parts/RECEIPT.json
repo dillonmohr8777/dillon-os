@@ -1,0 +1,150 @@
+{
+  "id": 54,
+  "slug": "elite-auto-parts",
+  "name": "Elite Philly Auto Parts",
+  "family": "auto",
+  "mode": "people",
+  "issue": "webgl",
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "cinematic",
+      "ok": true
+    },
+    {
+      "check": "moments",
+      "ok": true
+    },
+    {
+      "check": "story-body-photo",
+      "ok": true
+    },
+    {
+      "check": "feature-body-photo",
+      "ok": true
+    },
+    {
+      "check": "hero-only-swipe",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
+      "check": "collage-6.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-7.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-8.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-9.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-10.webp",
+      "ok": true
+    }
+  ],
+  "browser": "page.goto: net::ERR_NAME_NOT_RESOLVED at https://cecarparts.com/\nCall log:\n  - navigating to \"https://cecarparts.com/\", waiting until \"domcontentloaded\"\n",
+  "harvestCached": true,
+  "hasLogo": false,
+  "logoSrc": "",
+  "photoCount": 5,
+  "sourceCount": 5,
+  "officialPhotos": 0,
+  "genFills": 5,
+  "url": "https://cecarparts.com",
+  "city": "Philadelphia",
+  "rerender": true,
+  "hashes": [
+    "c305f0c0a08449ff39dc8ce21c6208ef4bae0c553181ae2a32c657a7db814ae7",
+    "e90142bc2e2108b9576c0f049acfce83ebbe061691b987fb613fbc54eccd5cb4",
+    "fd35fa035c8ff860fe34bf1730db39202d2e5be8771951cebb7d95f317946f65",
+    "a3d498ceaa0498485254695c76e067d864cc723fc5a199e276686bbb17037f91",
+    "586be89bb9ae634ab3f5df97ccfa0dc79934f8f4f4b9d9f040c1c9b5820ebc24",
+    "52fab3cdd71cf25354d9c8c392ec8a742746772e55faeddee040c7f31f00546c",
+    "f7875aa430d921bc9482465c24b1377cffbd6d4b6f577ebb5ba3f746d2b245df",
+    "0057a65e3226812b1a4a928f8c9cf7d9dc5ab0946de5ad4e9f7adc5aacce48cf",
+    "9a3327c344e543df9a454e2f120aadbb486ef00dbeee21a87c18c0a104b11f12",
+    "b0a6c391a8b44283b420b933d4786bd09e93cba2a73efc63777fe79f4c7076fd"
+  ],
+  "copyWords": 362,
+  "treatedPrint": true,
+  "printPass": "v1",
+  "bodyPass": "v1"
+}

@@ -1,0 +1,113 @@
+{
+  "slug": "del-chevrolet",
+  "name": "Del Chevrolet",
+  "city": "Del Chevrolet",
+  "category": "Auto",
+  "family": "auto",
+  "mode": "people",
+  "url": "https://www.delchevrolet.com/",
+  "phone": "(484) 324-4266",
+  "address": "",
+  "hours": "friendly team",
+  "logo": true,
+  "logoSrc": "assets/logo.png",
+  "tokens": {
+    "paper": "#e0c050",
+    "ink": "#111820",
+    "accent": "#e0c050",
+    "accent2": "#e0b040",
+    "panel": "#e0c050",
+    "deep": "#090d11",
+    "border": "4px",
+    "radius": "0px",
+    "onPaper": "#090909",
+    "onAccent": "#090909",
+    "onDeep": "#FFFFFF"
+  },
+  "fonts": {
+    "display": "Alegreya",
+    "text": "Karla",
+    "displayFallback": "Georgia,serif"
+  },
+  "attitude": "brutal",
+  "marquee": [
+    "Del Chevrolet",
+    "Del Chevrolet",
+    "The work"
+  ],
+  "imageAlts": [
+    "The people photograph for Del Chevrolet: people at work",
+    "The process photograph for Del Chevrolet: hands on the job",
+    "The conversation photograph for Del Chevrolet: a real conversation",
+    "The place photograph for Del Chevrolet: the place",
+    "The craft photograph for Del Chevrolet: the craft",
+    "The shop photograph for Del Chevrolet: The room where the work lives.",
+    "Hands photograph for Del Chevrolet: A closer look at the job.",
+    "The bay photograph for Del Chevrolet: Tools and the person using them.",
+    "The crew photograph for Del Chevrolet: People mid-job, not posed.",
+    "Detail photograph for Del Chevrolet: Skill you only get up close."
+  ],
+  "imageDisclosure": "Photographs harvested from the official site and recomposed as concept collages. They are not a claim about current staff or completed jobs.",
+  "headline": "DEL CHEVROLET, INC.",
+  "sub": "1644 LANCASTER AVE Directions PAOLI, PA 19301",
+  "points": [
+    "The bay is real",
+    "Hands on the car",
+    "Service starts with a call"
+  ],
+  "offerings": [
+    {
+      "title": "Browse new models",
+      "body": "New Inventory New Inventory Shop New Vehicles"
+    },
+    {
+      "title": "Why Choose Us?",
+      "body": "Pre-Owned Inventory Pre-Owned Inventory Pre-Owned Vehicles"
+    },
+    {
+      "title": "Fast Trade-in Value",
+      "body": "Work Trucks Work Trucks All Work Truck Inventory"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Pull in",
+      "body": "The homepage should look like a shop you can drive to."
+    },
+    {
+      "title": "Talk to the person doing the work",
+      "body": "Inspection, the hood, the tablet in the lane."
+    },
+    {
+      "title": "Leave with a plan",
+      "body": "Confirm wait times and pricing with them, not with guessed copy."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "https://www.delchevrolet.com/"
+    },
+    {
+      "title": "Call",
+      "body": "(484) 324-4266",
+      "href": "tel:4843244266"
+    }
+  ],
+  "story": "1644 LANCASTER AVE Directions PAOLI, PA 19301 New Inventory New Inventory Shop New Vehicles Pre-Owned Inventory Pre-Owned Inventory Pre-Owned Vehicles Del Chevrolet gets a private concept homepage, not a mailed pitch. The page keeps their name in the header, puts industry photography in a 4:5 frame, and makes the next step a call or their official site. Nothing here invents hours, a menu, an award, or a person who does not appear in a first-party photo. When harvest can read their live copy, those nouns come back onto the page. When the live site blocks the harvest, the preview stays honest and a little quieter instead of padding fake specifics. The collages stay in the work: people on the job, or food on the.",
+  "storyMore": "Work Trucks Work Trucks All Work Truck Inventory",
+  "featureBody": "Finance & Specials Finance Finance Application",
+  "workHeading": "The work, in the bay where it happens.",
+  "galleryHeading": "People on the actual job.",
+  "storyHeading": "A shop with a name over the door.",
+  "featureHeading": "Close on the tool in the hand.",
+  "contactHeading": "Get the car in.",
+  "closing": "Del Chevrolet should feel like a shop you can trust from the first scroll.",
+  "navWork": "Espa ol",
+  "navStory": "New Inventory",
+  "navVisit": "Visit",
+  "primaryCtaFallback": "Shop New Vehicles",
+  "description": "Del Chevrolet in Del Chevrolet. Private concept preview.",
+  "wordCount": 298
+}

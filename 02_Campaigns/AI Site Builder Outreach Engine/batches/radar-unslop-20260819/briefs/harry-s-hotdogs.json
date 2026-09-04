@@ -1,0 +1,118 @@
+{
+  "slug": "harry-s-hotdogs",
+  "name": "Harry's Hotdogs",
+  "city": "Sadsburyville",
+  "category": "Food",
+  "family": "food",
+  "mode": "food",
+  "url": "https://harryshotdogs.com/",
+  "phone": "610-857-2331",
+  "address": "2949 Lincoln Hwy",
+  "hours": "",
+  "logo": true,
+  "logoSrc": "assets/logo.png",
+  "tokens": {
+    "paper": "#d0b0b0",
+    "ink": "#b00000",
+    "accent": "#b00000",
+    "accent2": "#a00000",
+    "panel": "#cb9797",
+    "deep": "#600000",
+    "border": "4px",
+    "radius": "0px",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onDeep": "#FFFFFF"
+  },
+  "fonts": {
+    "display": "Newsreader",
+    "text": "Figtree",
+    "displayFallback": "Georgia,serif"
+  },
+  "attitude": "brutal",
+  "marquee": [
+    "Harry's Hotdogs",
+    "Sadsburyville",
+    "The plate"
+  ],
+  "imageAlts": [
+    "Plated food from a Harry's Hotdogs kitchen concept",
+    "Chef plating at the pass for Harry's Hotdogs",
+    "Prep and ingredients for Harry's Hotdogs",
+    "Dining setting for Harry's Hotdogs",
+    "Close food texture for Harry's Hotdogs",
+    "The room photograph for Harry's Hotdogs: The dining room, pulled wide.",
+    "Closer photograph for Harry's Hotdogs: A second look at the plate.",
+    "Service photograph for Harry's Hotdogs: Hands moving at the pass.",
+    "Heat photograph for Harry's Hotdogs: The line when tickets stack.",
+    "Last look photograph for Harry's Hotdogs: What you see before you sit."
+  ],
+  "imageDisclosure": "Illustrative concept imagery plus any photographs harvested from the official site. These visuals do not claim to depict current staff, customers, or completed work.",
+  "headline": "Need an Answer?",
+  "sub": "Please subscribe to our newsletter to recive the latest news and offers about our products. Your e-mail address will not be revealed to anyone.",
+  "points": [
+    "The plate leads",
+    "The kitchen stays in the picture",
+    "Hours live on their official site"
+  ],
+  "offerings": [
+    {
+      "title": "Online Survey",
+      "body": "Our famous hotdogs topped with Harry's special secret-recipe meat-sauce, mustard & chopped onions."
+    },
+    {
+      "title": "Join Our Email Club!",
+      "body": "Five sizzling breaded cheese sticks served with homemade marinara sauce."
+    },
+    {
+      "title": "The reservation has been send, we will contact you soon!",
+      "body": "HARRY’S BEST SELLER! Fresh-grilled chicken strips with bacon, lettuce and tomato."
+    }
+  ],
+  "experience": [
+    {
+      "title": "Arrive hungry",
+      "body": "The homepage should make the food obvious before anyone hunts a PDF menu."
+    },
+    {
+      "title": "See the work",
+      "body": "Prep, the pass, and the plate. Not random people in a sunlit atrium."
+    },
+    {
+      "title": "Confirm with them",
+      "body": "Call, hours, and ordering stay on the official source so nothing here is guessed."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "https://harryshotdogs.com/"
+    },
+    {
+      "title": "Call",
+      "body": "610-857-2331",
+      "href": "tel:6108572331"
+    },
+    {
+      "title": "Find them",
+      "body": "2949 Lincoln Hwy",
+      "href": "https://www.google.com/maps/search/?api=1&query=2949%20Lincoln%20Hwy"
+    }
+  ],
+  "story": "Please subscribe to our newsletter to recive the latest news and offers about our products. Your e-mail address will not be revealed to anyone. Our famous hotdogs topped with Harry's special secret-recipe meat-sauce, mustard & chopped onions. Five sizzling breaded cheese sticks served with homemade marinara sauce. Harry's Hotdogs gets a private concept homepage, not a mailed pitch. The page keeps their name in the header, puts industry photography in a 4:5 frame, and makes the next step a call or their official site. Nothing here invents hours, a menu, an award, or a person who does not appear in a first-party photo. When harvest can read their live copy, those nouns come back onto the page. When the live site.",
+  "storyMore": "HARRY’S BEST SELLER! Fresh-grilled chicken strips with bacon, lettuce and tomato.",
+  "featureBody": "Barbecue sauce, bacon and Cheddar cheese on a golden seasame seed bun.",
+  "workHeading": "What comes out of this kitchen.",
+  "galleryHeading": "Food worth sitting down for.",
+  "storyHeading": "A kitchen with a name on the door.",
+  "featureHeading": "Close enough to taste the work.",
+  "contactHeading": "Make the next visit easy.",
+  "closing": "Harry's Hotdogs should feel like a place you can taste from the first screen.",
+  "navWork": "Submit",
+  "navStory": "Get in touch !",
+  "navVisit": "Bookmark!",
+  "primaryCtaFallback": "Bookmark!",
+  "description": "Harry's Hotdogs in Sadsburyville. Private concept preview.",
+  "wordCount": 350
+}

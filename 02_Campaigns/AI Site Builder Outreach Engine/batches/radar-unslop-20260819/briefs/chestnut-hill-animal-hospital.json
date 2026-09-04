@@ -1,0 +1,118 @@
+{
+  "slug": "chestnut-hill-animal-hospital",
+  "name": "Chestnut Hill Animal Hospital",
+  "city": "Erdenheim",
+  "category": "Veterinary",
+  "family": "veterinary",
+  "mode": "people",
+  "url": "http://chestnuthillvet.com/",
+  "phone": "215-836-2950",
+  "address": "903 Bethlehem Pike &#183",
+  "hours": "",
+  "logo": true,
+  "logoSrc": "assets/logo.png",
+  "tokens": {
+    "paper": "#c0d0a0",
+    "ink": "#304020",
+    "accent": "#a0b080",
+    "accent2": "#609040",
+    "panel": "#bbcb9b",
+    "deep": "#1a2311",
+    "border": "1px",
+    "radius": "2px",
+    "onPaper": "#090909",
+    "onAccent": "#090909",
+    "onDeep": "#FFFFFF"
+  },
+  "fonts": {
+    "display": "Fraunces",
+    "text": "Source Sans 3",
+    "displayFallback": "Georgia,serif"
+  },
+  "attitude": "editorial",
+  "marquee": [
+    "Chestnut Hill Animal Hospital",
+    "Erdenheim",
+    "The work"
+  ],
+  "imageAlts": [
+    "The people photograph for Chestnut Hill Animal Hospital: people at work",
+    "The process photograph for Chestnut Hill Animal Hospital: hands on the job",
+    "The conversation photograph for Chestnut Hill Animal Hospital: a real conversation",
+    "The place photograph for Chestnut Hill Animal Hospital: the place",
+    "The craft photograph for Chestnut Hill Animal Hospital: the craft",
+    "The shop photograph for Chestnut Hill Animal Hospital: The room where the work lives.",
+    "Hands photograph for Chestnut Hill Animal Hospital: A closer look at the job.",
+    "The bay photograph for Chestnut Hill Animal Hospital: Tools and the person using them.",
+    "The crew photograph for Chestnut Hill Animal Hospital: People mid-job, not posed.",
+    "Detail photograph for Chestnut Hill Animal Hospital: Skill you only get up close."
+  ],
+  "imageDisclosure": "Illustrative concept imagery plus any photographs harvested from the official site. These visuals do not claim to depict current staff, customers, or completed work.",
+  "headline": "Chestnut Hill Animal Hospital",
+  "sub": "Chestnut Hill Animal Hospital in Erdenheim. A private concept homepage: their mark when we have it, industry photography, and a clearer visit path.",
+  "points": [
+    "Animals first",
+    "A calm exam",
+    "You confirm with the clinic"
+  ],
+  "offerings": [
+    {
+      "title": "215-836-2950 &#183; 903 Bethlehem Pike &#183; Erdenheim, PA 19038",
+      "body": "Chestnut Hill Animal Hospital is a clinic for pets. The preview shows the work, not clip-art paws."
+    },
+    {
+      "title": "Emergency Information",
+      "body": "Veterinarians and techs at the table, with the animal in the frame."
+    },
+    {
+      "title": "Rehabilitation & Fitness",
+      "body": "Reception, the leash, the next appointment. Details stay official."
+    }
+  ],
+  "experience": [
+    {
+      "title": "Arrive with your pet",
+      "body": "The homepage should feel like a clinic, not a stock farm."
+    },
+    {
+      "title": "See the care",
+      "body": "Exam table, gentle hands, a tech who is actually working."
+    },
+    {
+      "title": "Call the desk",
+      "body": "Hours and emergencies belong on their official line."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "http://chestnuthillvet.com/"
+    },
+    {
+      "title": "Call",
+      "body": "215-836-2950",
+      "href": "tel:2158362950"
+    },
+    {
+      "title": "Find them",
+      "body": "903 Bethlehem Pike &#183",
+      "href": "https://www.google.com/maps/search/?api=1&query=903%20Bethlehem%20Pike%20%26%23183"
+    }
+  ],
+  "story": "Chestnut Hill Animal Hospital gets a private concept homepage, not a mailed pitch. The page keeps their name in the header, puts industry photography in a 4:5 frame, and makes the next step a call or their official site. Nothing here invents hours, a menu, an award, or a person who does not appear in a first-party photo. When harvest can read their live copy, those nouns come back onto the page. When the live site blocks the harvest, the preview stays honest and a little quieter instead of padding fake specifics. The collages stay in the work: people on the job, or food on the plate, never a logo baked into a photograph. Chestnut Hill Animal Hospital is a clinic for pets. The preview shows the work, not.",
+  "storyMore": "The homepage should feel like a clinic, not a stock farm. Exam table, gentle hands, a tech who is actually working.",
+  "featureBody": "Veterinarians and techs at the table, with the animal in the frame. Reception, the leash, the next appointment. Details stay official.",
+  "workHeading": "Care that looks like a real clinic.",
+  "galleryHeading": "Animals and the people who treat them.",
+  "storyHeading": "A hospital for pets, named.",
+  "featureHeading": "Hands on the animal, not the slogan.",
+  "contactHeading": "Reach the clinic.",
+  "closing": "Chestnut Hill Animal Hospital should make the next appointment feel obvious.",
+  "navWork": "Emergency Information",
+  "navStory": "Team",
+  "navVisit": "Visit",
+  "primaryCtaFallback": "Contact Us",
+  "description": "Chestnut Hill Animal Hospital in Erdenheim. Private concept preview.",
+  "wordCount": 362
+}

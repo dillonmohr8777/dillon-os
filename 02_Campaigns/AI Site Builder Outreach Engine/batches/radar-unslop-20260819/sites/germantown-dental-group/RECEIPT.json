@@ -1,0 +1,150 @@
+{
+  "id": 56,
+  "slug": "germantown-dental-group",
+  "name": "Germantown Dental Group",
+  "family": "dental",
+  "mode": "people",
+  "issue": "webgl",
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "cinematic",
+      "ok": true
+    },
+    {
+      "check": "moments",
+      "ok": true
+    },
+    {
+      "check": "story-body-photo",
+      "ok": true
+    },
+    {
+      "check": "feature-body-photo",
+      "ok": true
+    },
+    {
+      "check": "hero-only-swipe",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
+      "check": "collage-6.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-7.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-8.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-9.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-10.webp",
+      "ok": true
+    }
+  ],
+  "browser": "page.goto: net::ERR_NAME_NOT_RESOLVED at https://germantowndental.us/\nCall log:\n  - navigating to \"https://germantowndental.us/\", waiting until \"domcontentloaded\"\n",
+  "harvestCached": true,
+  "hasLogo": false,
+  "logoSrc": "",
+  "photoCount": 5,
+  "sourceCount": 5,
+  "officialPhotos": 0,
+  "genFills": 5,
+  "url": "https://germantowndental.us",
+  "city": "Philadelphia",
+  "rerender": true,
+  "hashes": [
+    "3671025f67476ad3ee0e5ce68d260aca8f2fffb9630005e8988cc5b554c8413f",
+    "6069d84a6c9f18c3f03d10f0737e4ff892230535baac2cf7334aa3e3906b42d2",
+    "6d6263fad590e3fcbf8eca5f35f8845c29bf4ea648f376da8c563009fb87c057",
+    "e8dd6e664d3250659c21655a28794f3ad4f3e93f839a963c760c3a96ec9f8d56",
+    "0cd415417870fe213718bd97292f380a0f7011e1fe00016295c05f6e95fb0450",
+    "a2d854b5249714ed133f9b330be790038259cb869d31e9b1ff6c55767d8bc75f",
+    "d4d4bfc6ef928df3580f3337470f54164d9af279030a674bf5977497f4dfdaf0",
+    "0000b2bc88b3722d72c5d5174b82ebac1778d05c3aedf660c0d62a50016f5d2c",
+    "4d9867407f097d2da682e2fa3598d57b24cb0a9d42f2db3e5c1169daede86c43",
+    "80e11ac1ebf2ac304c9f5c02702c1c47e1baef58c7a06605106b4a3cfe26d66d"
+  ],
+  "copyWords": 344,
+  "treatedPrint": true,
+  "printPass": "v1",
+  "bodyPass": "v1"
+}

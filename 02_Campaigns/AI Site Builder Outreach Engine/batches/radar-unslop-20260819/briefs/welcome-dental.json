@@ -1,0 +1,118 @@
+{
+  "slug": "welcome-dental",
+  "name": "Welcome Dental",
+  "city": "West Chester",
+  "category": "Dental",
+  "family": "dental",
+  "mode": "people",
+  "url": "https://welcomedental.com/",
+  "phone": "610-692-7868",
+  "address": "1129 West Chester Pike West Chester",
+  "hours": "friendly and well-trained team",
+  "logo": true,
+  "logoSrc": "assets/logo.png",
+  "tokens": {
+    "paper": "#f4efe7",
+    "ink": "#111820",
+    "accent": "#e03030",
+    "accent2": "#e04040",
+    "panel": "#f1d4cd",
+    "deep": "#090d11",
+    "border": "1px",
+    "radius": "18px",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onDeep": "#FFFFFF"
+  },
+  "fonts": {
+    "display": "Newsreader",
+    "text": "Figtree",
+    "displayFallback": "Georgia,serif"
+  },
+  "attitude": "neon",
+  "marquee": [
+    "Welcome Dental",
+    "West Chester",
+    "The work"
+  ],
+  "imageAlts": [
+    "The people photograph for Welcome Dental: people at work",
+    "The process photograph for Welcome Dental: hands on the job",
+    "The conversation photograph for Welcome Dental: a real conversation",
+    "The place photograph for Welcome Dental: the place",
+    "The craft photograph for Welcome Dental: the craft",
+    "The shop photograph for Welcome Dental: The room where the work lives.",
+    "Hands photograph for Welcome Dental: A closer look at the job.",
+    "The bay photograph for Welcome Dental: Tools and the person using them.",
+    "The crew photograph for Welcome Dental: People mid-job, not posed.",
+    "Detail photograph for Welcome Dental: Skill you only get up close."
+  ],
+  "imageDisclosure": "Illustrative concept imagery plus any photographs harvested from the official site. These visuals do not claim to depict current staff, customers, or completed work.",
+  "headline": "Make An Appointment",
+  "sub": "We know that our office is only as effective and as welcoming as the people who work in it, which is why we take pride in our friendly and well-trained team members! We put your needs first to achieve efficient and comprehensive treatment in a supportive and nurturing.",
+  "points": [
+    "The chair is calm",
+    "Hands on real care",
+    "You book with them"
+  ],
+  "offerings": [
+    {
+      "title": "Directions To Our Office",
+      "body": "Our staff is uniquely trained and highly skilled, and we strive to provide energetic and fun-loving service to each patient. We put your needs first."
+    },
+    {
+      "title": "Patient Forms",
+      "body": "No more putty impressions! Our 3M True Definition Scanner is more accurate than traditional impressions without the bad taste or mess."
+    },
+    {
+      "title": "Efficient and Comprehensive Treatment",
+      "body": "We are pleased to offer an In House Discount Plan for patients with no dental insurance that makes your treatment more affordable."
+    }
+  ],
+  "experience": [
+    {
+      "title": "Walk in knowing who they are",
+      "body": "Name, place, and a clear call path above the fold."
+    },
+    {
+      "title": "See the room",
+      "body": "Treatment, reception, and careful hands. Not a handshake in an atrium."
+    },
+    {
+      "title": "Book with them",
+      "body": "Hours and insurance questions stay on their official site."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "https://welcomedental.com/"
+    },
+    {
+      "title": "Call",
+      "body": "610-692-7868",
+      "href": "tel:6106927868"
+    },
+    {
+      "title": "Find them",
+      "body": "1129 West Chester Pike West Chester",
+      "href": "https://www.google.com/maps/search/?api=1&query=1129%20West%20Chester%20Pike%20West%20Chester"
+    }
+  ],
+  "story": "We know that our office is only as effective and as welcoming as the people who work in it, which is why we take pride in our friendly and well-trained team members! We put your needs first to achieve efficient and comprehensive treatment in a supportive and nurturing environment. We promise to speak candidly with you about possible treatments as well as any risks and associated costs of treatment, and how treatment can address your individual needs. Our staff is uniquely trained and highly skilled, and we strive to provide energetic and fun-loving service to each patient. We put your needs first. No more putty impressions! Our 3M True Definition Scanner is more accurate than traditional impressions without.",
+  "storyMore": "We are pleased to offer an In House Discount Plan for patients with no dental insurance that makes your treatment more affordable.",
+  "featureBody": "A. The American Dental Association (ADA) recommends visiting a dentist at least twice a year for a check-up and a professional cleaning. Our office also recommends a minimum of two visits per year.",
+  "workHeading": "Care that looks like the actual chair.",
+  "galleryHeading": "People doing the work.",
+  "storyHeading": "A practice, not a template.",
+  "featureHeading": "Close on the skill.",
+  "contactHeading": "Start the visit.",
+  "closing": "Welcome Dental should feel easy to call before anyone scrolls twice.",
+  "navWork": "Office Info",
+  "navStory": "About The Doctors",
+  "navVisit": "First Visit",
+  "primaryCtaFallback": "Contact Us",
+  "description": "Welcome Dental in West Chester. Private concept preview.",
+  "wordCount": 415
+}

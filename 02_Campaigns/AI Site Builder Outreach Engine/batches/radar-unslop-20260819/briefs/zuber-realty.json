@@ -1,0 +1,118 @@
+{
+  "slug": "zuber-realty",
+  "name": "Zuber Realty",
+  "city": "Boyertown",
+  "category": "Professional",
+  "family": "professional",
+  "mode": "people",
+  "url": "https://www.zuberrealty.com/agents-offices/",
+  "phone": "(610) 369-0303",
+  "address": "201 East Philadelphia Ave, Boyertown, PA, 19512",
+  "hours": "Friedensburg Gilbertsville Green Lane Graterford Ham",
+  "logo": true,
+  "logoSrc": "assets/logo.png",
+  "tokens": {
+    "paper": "#b0c0d0",
+    "ink": "#e02010",
+    "accent": "#e02010",
+    "accent2": "#f02010",
+    "panel": "#b6a9b5",
+    "deep": "#7b1108",
+    "border": "1px",
+    "radius": "28px",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onDeep": "#FFFFFF"
+  },
+  "fonts": {
+    "display": "Syne",
+    "text": "Figtree",
+    "displayFallback": "Arial,sans-serif"
+  },
+  "attitude": "glass",
+  "marquee": [
+    "Zuber Realty",
+    "Boyertown",
+    "The work"
+  ],
+  "imageAlts": [
+    "The people photograph for Zuber Realty: people at work",
+    "The process photograph for Zuber Realty: hands on the job",
+    "The conversation photograph for Zuber Realty: a real conversation",
+    "The place photograph for Zuber Realty: the place",
+    "The craft photograph for Zuber Realty: the craft",
+    "The shop photograph for Zuber Realty: The room where the work lives.",
+    "Hands photograph for Zuber Realty: A closer look at the job.",
+    "The bay photograph for Zuber Realty: Tools and the person using them.",
+    "The crew photograph for Zuber Realty: People mid-job, not posed.",
+    "Detail photograph for Zuber Realty: Skill you only get up close."
+  ],
+  "imageDisclosure": "Photographs harvested from the official site and recomposed as concept collages. They are not a claim about current staff or completed jobs.",
+  "headline": "Agents &#038; Office",
+  "sub": "Our experienced and knowledgeable staff of full-time sales associates and our superior full-time support staff, combined with our conveniently located offices allow us to better serve your real estate needs.",
+  "points": [
+    "The work is specific",
+    "People at the tools",
+    "You reach them directly"
+  ],
+  "offerings": [
+    {
+      "title": "Coventry and Vincent Townships",
+      "body": "Our marketing area covers six counties: Berks, Bucks, Montgomery, Chester, Lancaster and Lehigh, and we have an office located in Boyertown."
+    },
+    {
+      "title": "Phoenixville",
+      "body": "When you create an account with us, you can save searches and properties, and receive email updates whenever new or changed listings meet your saved searches!"
+    },
+    {
+      "title": "Morgantown",
+      "body": "Northern Chester County is a rural area with rolling hills, scenic views and horse farms. The area provides a variety of ideal living experiences. The Coventry and Vincent Townships are comprised of North Coventry, South Coventry, East Coventry, East Vincent, and West Vincent Townships. They are communities with a rural feel with rolling hills, scenic&#8230; [Read more]"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Find them",
+      "body": "Name, place, and a clear path above the fold."
+    },
+    {
+      "title": "See the work",
+      "body": "A workstation, a meeting, hands on the tools of the trade."
+    },
+    {
+      "title": "Follow up",
+      "body": "Hours and scope stay official."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "https://www.zuberrealty.com/agents-offices/"
+    },
+    {
+      "title": "Call",
+      "body": "(610) 369-0303",
+      "href": "tel:6103690303"
+    },
+    {
+      "title": "Find them",
+      "body": "201 East Philadelphia Ave, Boyertown, PA, 19512",
+      "href": "https://www.google.com/maps/search/?api=1&query=201%20East%20Philadelphia%20Ave%2C%20Boyertown%2C%20PA%2C%2019512"
+    }
+  ],
+  "story": "Our experienced and knowledgeable staff of full-time sales associates and our superior full-time support staff, combined with our conveniently located offices allow us to better serve your real estate needs. Our marketing area covers six counties: Berks, Bucks, Montgomery, Chester, Lancaster and Lehigh, and we have an office located in Boyertown. When you create an account with us, you can save searches and properties, and receive email updates whenever new or changed listings meet your saved searches! Zuber Realty gets a private concept homepage, not a mailed pitch. The page keeps their name in the header, puts industry photography in a 4:5 frame, and makes the next step a call or their official site. Nothing.",
+  "storyMore": "Northern Chester County is a rural area with rolling hills, scenic views and horse farms. The area provides a variety of ideal living experiences. The Coventry and Vincent Townships are comprised of North Coventry, South Coventry, East Coventry, East Vincent, and West Vincent Townships. They are communities with a rural feel with rolling hills,.",
+  "featureBody": "Phoenixville is an old mill town in Chester County that has gone through a total revitalization of its downtown. Beyond the main streets is a variety of attractive and well-kept housing options. Hometown Fun Main and Bridge Streets provide multiple eating establishments and shops. From restaurants, micro-breweries, a distillery, and wine tasting rooms to.",
+  "workHeading": "The work, in the room where it happens.",
+  "galleryHeading": "People, not stock extras.",
+  "storyHeading": "A studio or office with a name.",
+  "featureHeading": "Close on the craft.",
+  "contactHeading": "Start the conversation.",
+  "closing": "Zuber Realty should feel like a team you can actually reach.",
+  "navWork": "Zuber Realty",
+  "navStory": "Selling",
+  "navVisit": "Facebook",
+  "primaryCtaFallback": "Contact Us",
+  "description": "Zuber Realty in Boyertown. Private concept preview.",
+  "wordCount": 474
+}
