@@ -1,4 +1,4 @@
-# Codex image queue — generated 2026-09-03
+# Codex image queue — generated 2026-09-04
 
 100 rebuild targets own no usable photographs. Each has a brief in
 this directory specifying exactly what to generate, slot by slot.
@@ -99,25 +99,25 @@ this directory specifying exactly what to generate, slot by slot.
 | 76 | Urban Gardner | garden-centre | Pittsburgh | urban-gardner.json |
 | 77 | Advanced Specialty Flooring | floorer | Kittanning | advanced-specialty-flooring.json |
 | 78 | William G. Schwab & Associates | lawyer | Lehighton | william-g-schwab-and-associates.json |
-| 79 | Fortitude & Co | fitness-centre | Philadelphia | fortitude-and-co.json |
-| 80 | BG Electric Service LLC | electrician | Philadelphia | bg-electric-service-llc.json |
-| 81 | Chestnut Hill Animal Hospital | veterinary | Erdenheim | chestnut-hill-animal-hospital.json |
-| 82 | County Line Veterinary Hospital | veterinary | Hatboro | county-line-veterinary-hospital.json |
-| 83 | F M Berkheimer Inc | hvac | Mechanicsburg | f-m-berkheimer-inc.json |
-| 84 | Hortense T. Moss Health Center | doctor | Philadelphia | hortense-t-moss-health-center.json |
-| 85 | Grand Sport Auto Body | car-repair | Collegeville | grand-sport-auto-body.json |
-| 86 | NewAge® Industries | works | Southampton | newage-industries.json |
-| 87 | Malvern Veterinary Hospital | veterinary |  | malvern-veterinary-hospital.json |
-| 88 | Bimbo Bakeries USA | bakery | Bethlehem | bimbo-bakeries-usa.json |
-| 89 | The Juice Merchant | restaurant | Narberth | the-juice-merchant.json |
-| 90 | Sciacca Service Center | car-repair |  | sciacca-service-center.json |
-| 91 | Clear Vision Auto Glass | car-repair | Chadds Ford | clear-vision-auto-glass.json |
-| 92 | Upscale Consignments Boutiques Maria Fe's | clothes |  | upscale-consignments-boutiques-maria-fe-s.json |
-| 93 | West Philadelphia VA Clinic | clinic |  | west-philadelphia-va-clinic.json |
-| 94 | Danger Salon | hairdresser | Philadelphia | danger-salon.json |
-| 95 | Schaeffer Floor Coverings | flooring | Bechtelsville | schaeffer-floor-coverings.json |
-| 96 | Out-tac Outfitters | outdoor |  | out-tac-outfitters.json |
-| 97 | Bei Jing Chinese Food | restaurant | Norristown | bei-jing-chinese-food.json |
-| 98 | Golden Sea | restaurant | Blue Bell | golden-sea.json |
-| 99 | Gallo Insurance Agency | insurance | Philadelphia | gallo-insurance-agency.json |
-| 100 | Glocker and Co. Inc. Realtors | estate-agent | Boyertown | glocker-and-co-inc-realtors.json |
+| 79 | Professional Opticians | optician | Reedsville | professional-opticians.json |
+| 80 | Fortitude & Co | fitness-centre | Philadelphia | fortitude-and-co.json |
+| 81 | BG Electric Service LLC | electrician | Philadelphia | bg-electric-service-llc.json |
+| 82 | Chestnut Hill Animal Hospital | veterinary | Erdenheim | chestnut-hill-animal-hospital.json |
+| 83 | County Line Veterinary Hospital | veterinary | Hatboro | county-line-veterinary-hospital.json |
+| 84 | F M Berkheimer Inc | hvac | Mechanicsburg | f-m-berkheimer-inc.json |
+| 85 | Hortense T. Moss Health Center | doctor | Philadelphia | hortense-t-moss-health-center.json |
+| 86 | Grand Sport Auto Body | car-repair | Collegeville | grand-sport-auto-body.json |
+| 87 | NewAge® Industries | works | Southampton | newage-industries.json |
+| 88 | Malvern Veterinary Hospital | veterinary |  | malvern-veterinary-hospital.json |
+| 89 | Bimbo Bakeries USA | bakery | Bethlehem | bimbo-bakeries-usa.json |
+| 90 | The Juice Merchant | restaurant | Narberth | the-juice-merchant.json |
+| 91 | Sciacca Service Center | car-repair |  | sciacca-service-center.json |
+| 92 | Clear Vision Auto Glass | car-repair | Chadds Ford | clear-vision-auto-glass.json |
+| 93 | Upscale Consignments Boutiques Maria Fe's | clothes |  | upscale-consignments-boutiques-maria-fe-s.json |
+| 94 | West Philadelphia VA Clinic | clinic |  | west-philadelphia-va-clinic.json |
+| 95 | Danger Salon | hairdresser | Philadelphia | danger-salon.json |
+| 96 | Schaeffer Floor Coverings | flooring | Bechtelsville | schaeffer-floor-coverings.json |
+| 97 | Out-tac Outfitters | outdoor |  | out-tac-outfitters.json |
+| 98 | Bei Jing Chinese Food | restaurant | Norristown | bei-jing-chinese-food.json |
+| 99 | Golden Sea | restaurant | Blue Bell | golden-sea.json |
+| 100 | Gallo Insurance Agency | insurance | Philadelphia | gallo-insurance-agency.json |
