@@ -21,7 +21,7 @@ navigation is needed.
 Checkbox items only — `_os/vault-state.js` reads this section for the HUD
 directive feed and skips any other list format.
 
-- [ ] Close out Cindy May Christmas deliverable (`due: 2026-09-01`, now 2 days past due).
+- [ ] Close out Cindy May Christmas deliverable (`due: 2026-09-01`, now 3 days past due — third day carried forward).
 - [ ] BOK Law Firm predicted prep: locate/fingerprint the weekly source packet, resolve 3 topics, stage 3 image slots — no drafting yet.
 - [ ] Get yes/no on the two needs-approval queue items: BigOrange Marketing website build, Bar Crawl USA paid-media optimization.
 - [ ] Touch 3-5 stalled clients (real contact, not another scan) — pick from the 40 stalled in pulse-today.md.
