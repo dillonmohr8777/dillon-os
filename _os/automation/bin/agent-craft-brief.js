@@ -30,6 +30,10 @@ const TEAM = repoPath('11_Agents/claude-operating-team.json');
 const DONE = new Set(['complete', 'complete_degraded']);
 const FAILED = new Set(['failed', 'verification_failed']);
 
+// The driver writes a receipt log every day it runs. Two days of slack absorbs a
+// missed run or a clock skew; past that the source is dead, not quiet.
+const MAX_RECEIPT_AGE_DAYS = 2;
+
 function argInt(flag, dflt) {
   const i = process.argv.indexOf(flag);
   if (i < 0) return dflt;
@@ -133,11 +137,35 @@ function frontmatter(noteType, created, tags, sources, extra = {}) {
 function main() {
   const write = process.argv.includes('--write');
   const days = loadDays(argInt('--days', 14));
-  if (!days.length) {
-    process.stdout.write(`${JSON.stringify({
-      automation_id: 'agent-craft-brief', status: 'blocked', detail: 'no receipt logs found',
-    }, null, 2)}\n`);
+  // The run state file is the durable signal other tooling reads, so a
+  // fail-closed exit has to overwrite it. Otherwise the last successful run's
+  // `ok` sits on disk indefinitely while the routine is failing.
+  const abort = (state) => {
+    const result = { automation_id: 'agent-craft-brief', ...state };
+    try { writeRunState('agent-craft-brief', result); } catch { /* registry optional */ }
+    process.stdout.write(`${JSON.stringify(result, null, 2)}\n`);
     process.exit(2);
+  };
+
+  if (!days.length) {
+    abort({ status: 'blocked', detail: 'no receipt logs found' });
+  }
+
+  // Receipt files are only ever found by name, so the newest one on disk stays
+  // analysable forever. Without this the brief reports `ok` against a source
+  // nothing has written to in weeks - the estate's own standing lesson about a
+  // probe pointed at a dead source, applied to the probe itself.
+  const newest = days[days.length - 1].day;
+  const staleDays = Math.round(
+    (Date.parse(`${todayISO()}T00:00:00Z`) - Date.parse(`${newest}T00:00:00Z`)) / 86400000,
+  );
+  if (staleDays > MAX_RECEIPT_AGE_DAYS) {
+    abort({
+      status: 'stale',
+      detail: `newest receipt log is ${newest}, ${staleDays} day(s) old; the driver has stopped writing receipts`,
+      newest_receipt: newest,
+      stale_days: staleDays,
+    });
   }
 
   const { perRoutine, gateBlocks, failReasons } = analyse(days);

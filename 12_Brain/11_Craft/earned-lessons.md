@@ -2,7 +2,7 @@
 note_type: concept
 status: active
 created: 2026-08-18
-updated: 2026-08-18
+updated: 2026-09-04
 source_refs: ["12_Brain/11_Craft/00_Index.md", "System/browser-access.policy.json"]
 tags: [craft, agent-infrastructure, lessons]
 ---
@@ -228,3 +228,28 @@ routine that was still keying dedupe daily until the cadence fix landed on 08-18
 **How to apply.** Treat the brief's `unreliable` list as a queue to investigate, not a
 list of broken things. Read `last_completed` and the failure timestamps before concluding
 anything is currently failing.
+
+---
+
+## 2026-09-04 — A routine that only fails on an empty source never notices a dead one
+
+**Lesson.** A collector that finds its input by name will keep finding yesterday's
+input forever. Fail-closed on "nothing there" is not the same check as fail-closed on
+"nothing new there," and only the second one detects an upstream that stopped.
+
+**Evidence.** `agent-craft-brief.js` reads one receipt file per driver day out of
+`12_Brain/queue/`, sorts by filename, and takes the last N. Its only guard was
+`!days.length`. The driver stopped writing on 2026-08-18; the run recorded in
+`12_Brain/state/agent-craft-brief.json` for 2026-09-02 still reported `"status": "ok"`
+over `["2026-08-16","2026-08-17","2026-08-18"]` — a window that closed 15 days before
+the run. Seventeen days passed with no craft brief and no alert, while the delivery
+automations (radar `7fc48ba`, morning brief `e7cb0fc`, hygiene `12c2b5e`) all ran
+normally on 2026-09-03. The estate kept executing and stopped learning, and the
+instrument built to catch exactly that was the thing that was broken.
+
+**How to apply.** Every collector that reads a dated or sequenced source compares its
+newest input against the clock and reports `stale` with the age, not `ok`. The status
+a routine reports must be falsifiable by something outside the routine's own input.
+Corollary: this is the standing lesson *a fail-closed probe pointed at a source nothing
+writes is not caution, it is a dead routine* — it applies to the probes too, so an
+observability tool needs its own liveness check.
