@@ -1,7 +1,7 @@
 ---
 note_type: index
 status: active
-updated: 2026-09-01
+updated: 2026-08-01
 tags:
   - index
   - brain
@@ -38,8 +38,6 @@ links instead of loading the entire vault.
 - [[12_Brain/Bases/Daily Communication Intelligence.base|Daily Communication Intelligence]]
   - daily Gmail and Slack decisions, commitments, blockers, deliverables, and
     unresolved routing.
-- [[12_Brain/03_Concepts/Specialist Forecast Router|Specialist Forecast Router]]
-  - numeric futures go to a forecast specialist; LLMs do not guess trends.
 
 ## Work
 
@@ -71,6 +69,10 @@ links instead of loading the entire vault.
 - [[12_Brain/06_Research/README|Research]] — sourced, dated, expiring findings.
 - [[12_Brain/07_Reviews/README|Reviews]] — daily, weekly, and quarterly
   synthesis.
+- [[12_Brain/07_Reviews/2026-09-03 - Year Quarter Month Alignment|Year, Quarter,
+  Month — One Alignment]] — 2026-09-03 filesystem-verified planning review across
+  42 repos: strengths, flaws, time waste, dependability ledger, the one upskill,
+  and the reorganization.
 - [[12_Brain/08_Memory/README|Memory Ledger]] — corrections, preferences, and
   facts with observation and validity dates.
 
