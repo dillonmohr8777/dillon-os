@@ -1,0 +1,105 @@
+{
+  "name": "competitive-task-orchestrator",
+  "pattern": "orchestrator",
+  "workflow_id": "competitive-task-orchestrator",
+  "purpose": "One daily umbrella cycle: parallel intel lanes (Gmail, Slack, vault, sessions, ads/SEO, content) then a single consolidated operator brief.",
+  "cron": "0 13 * * *",
+  "timezone": "America/New_York",
+  "orchestrator": {
+    "prompt_source": "System/competitive-task-orchestrator-prompt.md",
+    "skill": ".claude/skills/competitive-task-orchestrator/SKILL.md",
+    "deterministic_runner": "node _os/automation/bin/competitive-task-run.js",
+    "run_dir": "automation-runs/competitive-task-orchestrator/YYYY-MM-DD",
+    "daily_brief": "Daily-Briefs/competitive-task-today.md"
+  },
+  "phase_1_parallel": [
+    {
+      "id": "gmail-intel",
+      "agent": ".cursor/agents/gmail-intel.md",
+      "lane": "email",
+      "budget_tokens": 8000,
+      "timeout_seconds": 480
+    },
+    {
+      "id": "slack-intel",
+      "agent": ".cursor/agents/slack-intel.md",
+      "lane": "slack",
+      "budget_tokens": 8000,
+      "timeout_seconds": 480
+    },
+    {
+      "id": "vault-pulse",
+      "agent": ".cursor/agents/vault-pulse.md",
+      "lane": "vault",
+      "budget_tokens": 10000,
+      "timeout_seconds": 600
+    },
+    {
+      "id": "codex-session-sync",
+      "agent": ".cursor/agents/codex-session-sync.md",
+      "lane": "sessions",
+      "budget_tokens": 8000,
+      "timeout_seconds": 480
+    },
+    {
+      "id": "domain-ads-seo",
+      "agent": ".cursor/agents/domain-ads-seo.md",
+      "lane": "ads-seo",
+      "budget_tokens": 8000,
+      "timeout_seconds": 480
+    },
+    {
+      "id": "content-routines",
+      "agent": ".cursor/agents/content-routines.md",
+      "lane": "content",
+      "budget_tokens": 12000,
+      "timeout_seconds": 900,
+      "day_gated": true
+    }
+  ],
+  "phase_2_sequential": [
+    {
+      "id": "memory-consolidator",
+      "agent": ".cursor/agents/memory-consolidator.md",
+      "lane": "consolidation",
+      "budget_tokens": 12000,
+      "timeout_seconds": 900,
+      "requires": [
+        "gmail-intel",
+        "slack-intel",
+        "vault-pulse",
+        "codex-session-sync",
+        "domain-ads-seo",
+        "content-routines"
+      ]
+    }
+  ],
+  "supersedes": [
+    "nightly-client-pulse",
+    "gmail-to-vault-digest",
+    "vault-integrity-sync",
+    "chat-to-vault-sync",
+    "bok-law-social-content",
+    "linkedin-growth-engine",
+    "book-site-seo-sweep",
+    "daily-morning-orchestrator-dry-board"
+  ],
+  "excludes": [
+    "weekly-client-marketing-reports",
+    "report-brain-reconciliation",
+    "daily-communications-brain",
+    "marketing-chief-twice-daily-brief",
+    "daily-grok-dillon-os-intelligence",
+    "obsidian-guard-dog",
+    "prospect-radar-next20"
+  ],
+  "handoff_contract": {
+    "required_outputs": [
+      "Daily-Briefs/competitive-task-today.md",
+      "automation-runs/competitive-task-orchestrator/YYYY-MM-DD/run-state.json",
+      "automation-runs/competitive-task-orchestrator/YYYY-MM-DD/lane-outputs/*.md",
+      "System/routine-health.md",
+      "System/claude-memory-sync.md"
+    ]
+  }
+}

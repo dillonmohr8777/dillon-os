@@ -35,7 +35,7 @@ role; the contract is markdown + JSON, not a model feature.
 | Paid ads | [[Google Ads Agent]] | Google Ads, PMax, LSA | campaign analysis, ledger updates |
 | Reporting | [[Reporting Agent]] | Monthly HTML performance reports | `/client-report`, `/metrics-pull` |
 | SEO/content | [[SEO Agent]] | GBP, blogs, Squarespace SEO | `/content-scan`, blog pipeline |
-| Comms triage | (built into intake) | Slack + inbox | `/slack-intake`, `/inbox-brief` |
+| Comms triage | (built into intake) | Slack + inbox | `/competitive-task-orchestrator` (umbrella), `/slack-intake`, `/inbox-brief` |
 
 ## Decision logic
 

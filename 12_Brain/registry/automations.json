@@ -510,7 +510,58 @@
       "notes": "No automation/cron registration and no Daily-Briefs/am-report-*.md file has ever been produced as of 2026-09-01, so it has no schedule evidence to claim active-scheduled. NOTE: content is not a duplicate of marketing-chief-twice-daily-brief (inbox/client/content vs. OmniRoute/Sites infra health) -- flagged for human review of this pairing, not a functional replacement. Kept as an on-demand skill.",
       "status": "implemented",
       "owner": "claude-code-skill",
-      "note": "On-demand Claude Code skill, run by Dillon; never cron-scheduled. Reviewed 2026-09-01 against marketing-chief-twice-daily-brief: different content (morning inbox/client/content brief vs infra health), so not collapsed. Dillon to confirm whether one should absorb the other."
+      "note": "On-demand Claude Code skill, run by Dillon; never cron-scheduled. Reviewed 2026-09-01 against marketing-chief-twice-daily-brief: different content (morning inbox/client/content brief vs infra health), so not collapsed. Dillon to confirm whether one should absorb the other.",
+      "superseded_by": "competitive-task-orchestrator"
+    },
+    {
+      "id": "competitive-task-orchestrator",
+      "name": "Competitive task umbrella orchestrator",
+      "lane": "intelligence",
+      "tier": 0,
+      "cadence": "daily 0 13 * * * America/New_York",
+      "command": "node _os/automation/bin/competitive-task-run.js",
+      "skill": "/competitive-task-orchestrator",
+      "workflow": "_os/automation/workflows/competitive-task-orchestrator.json",
+      "inputs": [
+        "Gmail MCP (optional)",
+        "Slack MCP (optional)",
+        "01_Clients/",
+        "00_Inbox/slack/",
+        "10_Sessions/",
+        "02_Campaigns/",
+        "Daily-Briefs/"
+      ],
+      "outputs": [
+        "Daily-Briefs/competitive-task-today.md",
+        "automation-runs/competitive-task-orchestrator/YYYY-MM-DD/run-state.json",
+        "automation-runs/competitive-task-orchestrator/YYYY-MM-DD/lane-outputs/*.md",
+        "12_Brain/state/competitive-task-orchestrator.json",
+        "System/routine-health.md",
+        "System/claude-memory-sync.md"
+      ],
+      "agents": [
+        ".cursor/agents/gmail-intel.md",
+        ".cursor/agents/slack-intel.md",
+        ".cursor/agents/vault-pulse.md",
+        ".cursor/agents/codex-session-sync.md",
+        ".cursor/agents/domain-ads-seo.md",
+        ".cursor/agents/content-routines.md",
+        ".cursor/agents/memory-consolidator.md"
+      ],
+      "supersedes": [
+        "nightly-client-pulse",
+        "gmail-to-vault-digest",
+        "vault-integrity-sync",
+        "chat-to-vault-sync",
+        "bok-law-social-content",
+        "linkedin-growth-engine",
+        "book-site-seo-sweep",
+        "daily-morning-orchestrator-dry-board"
+      ],
+      "external_actions": false,
+      "owner": "cursor-automation",
+      "notes": "One umbrella daily cycle with six parallel intel scouts and a sequential memory-consolidator. Cloud automation uses System/competitive-task-orchestrator-prompt.md; deterministic vault fallback via competitive-task-run.js when MCP unavailable.",
+      "status": "implemented"
     }
   ],
   "gates": {
