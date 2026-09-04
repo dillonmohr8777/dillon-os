@@ -25,6 +25,8 @@ links instead of loading the entire vault.
   truth.
 - [[System/approval-queue|Approval Queue]] — consequential actions waiting for
   Dillon.
+- [[System/approval-queue-archive|Approval Queue Archive]] — resolved and
+  superseded entries moved out of the live queue.
 - [[System/revenue-scorecard|Revenue Scorecard]] — verified revenue state.
 
 - [[12_Brain/Bases/Strategy Library.base|Strategy Library]] - the compiled
@@ -85,7 +87,7 @@ links instead of loading the entire vault.
 
 ## Operating system
 
-- [[12_Brain/09_Ops/Architecture|Second Brain Architecture]]
+- [[12_Brain/09_Ops/Architecture|Second Brain Architecture (Ops)]]
 - [[12_Brain/09_Ops/Schema|Canonical Properties]]
 - [[12_Brain/09_Ops/AGENT_PROTOCOL|Agent Protocol]]
 - [[12_Brain/09_Ops/Runbook|Second Brain Runbook]]
