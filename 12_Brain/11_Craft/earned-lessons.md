@@ -228,3 +228,61 @@ routine that was still keying dedupe daily until the cadence fix landed on 08-18
 **How to apply.** Treat the brief's `unreliable` list as a queue to investigate, not a
 list of broken things. Read `last_completed` and the failure timestamps before concluding
 anything is currently failing.
+---
+
+## 2026-09-03 — A routine whose only output is an unmerged PR has no output
+
+**Lesson.** Generating a file into a branch nobody merges is indistinguishable from
+not generating it. Before adding a routine that writes a brief, name the surface a
+human actually reads and make the routine land there — or accept that its findings
+are write-only.
+
+**Evidence.** `cursor/competitive-task-consolidation` opened 13 pull requests
+between 2026-08-21 (#333) and 2026-09-03 (#360), one per day, +16,843/-509 lines,
+none merged. Each regenerates `System/slack-action-queue.md`, a file that
+**does not exist on `origin/main`** — `git show origin/main:System/slack-action-queue.md`
+returns `fatal: path ... does not exist`. PR #360 describes that file as holding an
+"M360 Slack quartet (~5 weeks unanswered)". Thirteen days of a client-facing
+escalation were computed correctly and discarded on the branch. The wider estate
+tells the same story: 127 open PRs, 116 draft, 22 older than 30 days, oldest 37.
+
+The tell was available the whole time and was itself unread: `11_Craft/00_Index.md`
+reported **0 concrete lessons and 9 no-findings over 14 days** while the backlog
+tripled. A learn stage reading a source that cannot carry the evidence reports
+health, not health.
+
+**How to apply.** For any routine that emits a file, assert the destination exists
+on the branch a human reads before trusting the routine — `git show <base>:<path>`
+is the whole check. If the routine cannot merge on its own, it must write somewhere
+unmerged work still surfaces (the approval queue, a brief on `main`), not only into
+its own branch. And when a learn stage returns `no_finding` repeatedly while
+observable state moves, treat the empty result as a broken probe, not a clean bill —
+the same failure mode as *a fail-closed probe pointed at a source nothing writes*,
+one rung up.
+
+---
+
+## 2026-09-03 — Harvest the transcript with the filesystem's rules, not the data's
+
+**Lesson.** Code that walks a real session store fails on the filesystem long before
+it fails on the JSON. Budget for path limits, console encoding, and records the
+harness wrote to itself — all three break at 2am, none appear in a small test.
+
+**Evidence.** Building `_os/automation/bin/harvest-sessions.py` against
+`~\.claude\projects` (282 files, 271 MB, 180 touched in 36h) hit three failures in
+sequence, each fatal and each invisible until run against the full tree:
+`FileNotFoundError [WinError 3]` from `os.path.getmtime` on the long
+`C--Users-dillo-Documents-Codex-2026-08-09-client-prospect-radar-...` paths, needing
+the `\?\` prefix; `UnicodeEncodeError: 'charmap' codec` on a `\u276f` in a prompt,
+because Python's stdout defaults to cp1252 on this machine; and a harvest polluted
+by `<task-notification>`, `<bash-input>`, `<bash-stdout>` and `<scheduled-task>`
+records, which are the harness talking, not Dillon. Filtered and fixed, the same
+tree yields 147 human turns across 10 workspaces in a few KB.
+
+**How to apply.** Three defaults for anything reading this estate's own logs:
+wrap every path in `\?\` on Windows and let `getmtime`/`open` fail soft per file
+with a counter, not an exception; force
+`io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')`;
+and filter harness-authored records by prefix before counting anything as user
+intent. Then check the totals against a known day — a harvester that silently
+returns fewer asks than the day contained is worse than one that crashes.

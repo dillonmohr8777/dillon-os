@@ -4,7 +4,7 @@ status: active
 generated: true
 generated_by: Update-SecondBrainMaps
 map_type: domain
-updated: 2026-09-02
+updated: 2026-09-03
 tags:
   - brain
   - map
@@ -34,6 +34,7 @@ Concepts, decisions, projects, research, reviews, memory, and brain operations.
 - [[12_Brain/01_Captures/Communications/2026-08-12 - daily-communications-comms-2026-08-12-day-1|2026-08-12 - daily-communications-comms-2026-08-12-day-1]]
 - [[12_Brain/01_Captures/Communications/2026-08-15 - daily-communications-comms-2026-08-15-day-1|2026-08-15 - daily-communications-comms-2026-08-15-day-1]]
 - [[12_Brain/01_Captures/Communications/2026-08-17 - daily-communications-comms-2026-08-17-day-1|2026-08-17 - daily-communications-comms-2026-08-17-day-1]]
+- [[12_Brain/01_Captures/GROK-HANDOFF-DILLON-OS|GROK-HANDOFF-DILLON-OS]]
 - [[12_Brain/01_Captures/Grok/2026-07-30 - agent-workflow-and-design-tools|2026-07-30 - agent-workflow-and-design-tools]]
 - [[12_Brain/01_Captures/Grok/2026-07-30 - daily-ai-workflow-design-and-consumer-pulse|2026-07-30 - daily-ai-workflow-design-and-consumer-pulse]]
 - [[12_Brain/01_Captures/Grok/2026-07-30 - daily-marketing-agent-workflow-mcp-plugin-and-web-build-frontier|2026-07-30 - daily-marketing-agent-workflow-mcp-plugin-and-web-build-frontier]]
@@ -52,6 +53,7 @@ Concepts, decisions, projects, research, reviews, memory, and brain operations.
 - [[12_Brain/01_Captures/sessions/2026-08-14 - google-rsvp-rail|2026-08-14 - google-rsvp-rail]]
 - [[12_Brain/01_Captures/sessions/2026-08-14 - send-ready-emails|2026-08-14 - send-ready-emails]]
 - [[12_Brain/01_Captures/sessions/2026-09-01 - fable-5-1-integration-session|2026-09-01 - fable-5-1-integration-session]]
+- [[12_Brain/01_Captures/sessions/2026-09-03 - daily-learning-loop-first-run|2026-09-03 - daily-learning-loop-first-run]]
 - [[12_Brain/01_Captures/sessions/session-log|session-log]]
 - [[12_Brain/01_Captures/Slack/2026-07-30 Live Slack Scan|2026-07-30 Live Slack Scan]]
 - [[12_Brain/01_Captures/Slack/2026-07-30 Slack Open Loops|2026-07-30 Slack Open Loops]]

@@ -4,7 +4,7 @@ status: active
 generated: true
 generated_by: Update-SecondBrainMaps
 map_type: domain
-updated: 2026-09-02
+updated: 2026-09-03
 tags:
   - brain
   - map
@@ -39,6 +39,7 @@ Agent roles, system state, tooling, automation, and operating infrastructure.
 ## 11_Agents
 
 - [[11_Agents/64gb Morning Orchestrator Spec 2026-07-08|64gb Morning Orchestrator Spec 2026-07-08]]
+- [[11_Agents/Daily Learning Loop (Local)|Daily Learning Loop (Local)]]
 - [[11_Agents/Google Ads Agent|Google Ads Agent]]
 - [[11_Agents/Master Agent|Master Agent]]
 - [[11_Agents/Reporting Agent|Reporting Agent]]
