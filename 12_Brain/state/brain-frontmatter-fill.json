@@ -1,115 +1,114 @@
 {
   "automation_id": "brain-frontmatter-fill",
   "status": "ok",
-  "dry_run": false,
+  "dry_run": true,
   "counts": {
-    "changed": 47
+    "changed": 13
   },
   "changes": [
     {
-      "file": "12_Brain\\01_Captures\\2026-07-04 - obsidian-second-brain-article.md",
+      "file": "12_Brain/01_Captures/Communications/2026-09-01-puttery-wnf-reply-drafts.md",
+      "applied": [
+        "note_type=\"capture\"",
+        "updated=\"2026-09-01\""
+      ],
+      "dry_run": true
+    },
+    {
+      "file": "12_Brain/01_Captures/GROK-HANDOFF-DILLON-OS.md",
       "applied": [
         "note_type=\"capture\"",
         "status=\"unprocessed\"",
-        "created=\"2026-07-04\"",
-        "updated=\"2026-07-04\"",
+        "created=\"2026-09-04\"",
+        "updated=\"2026-09-04\"",
         "source_refs=[]",
         "tags=[\"capture\"]"
       ],
-      "dry_run": false
+      "dry_run": true
     },
     {
-      "file": "12_Brain\\01_Captures\\2026-07-30 - Dillon operating goals and revenue-first delegation.md",
+      "file": "12_Brain/01_Captures/agent-runs/2026-08-12-active-vault-access-canary.md",
       "applied": [
-        "source_refs=[]"
+        "updated=\"2026-08-12\"",
+        "source_refs=[\"marketing-chief-files-mcp\"]",
+        "tags=[\"capture\"]"
       ],
-      "dry_run": false
+      "dry_run": true
     },
     {
-      "file": "12_Brain\\01_Captures\\2026-08-15 - Chase AI Obsidian command center.md",
+      "file": "12_Brain/01_Captures/agent-runs/2026-08-12-daily-driver-approval-package.md",
       "applied": [
-        "source_refs=[]"
+        "note_type=\"capture\"",
+        "status=\"unprocessed\"",
+        "created=\"2026-08-12\"",
+        "updated=\"2026-08-12\"",
+        "source_refs=[]",
+        "tags=[\"capture\"]"
       ],
-      "dry_run": false
+      "dry_run": true
     },
     {
-      "file": "12_Brain\\01_Captures\\README.md",
+      "file": "12_Brain/01_Captures/agent-runs/2026-08-13-daily-driver-approval-package.md",
       "applied": [
-        "created=\"2026-07-29\"",
-        "source_refs=[]"
+        "note_type=\"capture\"",
+        "status=\"unprocessed\"",
+        "created=\"2026-08-13\"",
+        "updated=\"2026-08-13\"",
+        "source_refs=[]",
+        "tags=[\"capture\"]"
       ],
-      "dry_run": false
+      "dry_run": true
     },
     {
-      "file": "12_Brain\\01_Captures\\research\\2026-08-14 Franchise Email Sourcing Receipts.md",
+      "file": "12_Brain/01_Captures/agent-runs/2026-08-13-frontier-synthesis.md",
+      "applied": [
+        "note_type=\"capture\"",
+        "status=\"unprocessed\"",
+        "created=\"2026-08-13\"",
+        "updated=\"2026-08-13\"",
+        "source_refs=[]",
+        "tags=[\"capture\"]"
+      ],
+      "dry_run": true
+    },
+    {
+      "file": "12_Brain/01_Captures/agent-runs/2026-08-14-daily-driver-approval-package.md",
       "applied": [
         "note_type=\"capture\"",
         "status=\"unprocessed\"",
         "created=\"2026-08-14\"",
         "updated=\"2026-08-14\"",
-        "source_refs=[]"
+        "source_refs=[]",
+        "tags=[\"capture\"]"
       ],
-      "dry_run": false
+      "dry_run": true
     },
     {
-      "file": "12_Brain\\01_Captures\\research\\2026-08-14 Franchise Send-Ready Harvest.md",
-      "applied": [
-        "note_type=\"capture\"",
-        "status=\"unprocessed\"",
-        "created=\"2026-08-14\"",
-        "updated=\"2026-08-14\"",
-        "source_refs=[]"
-      ],
-      "dry_run": false
-    },
-    {
-      "file": "12_Brain\\01_Captures\\research\\2026-08-15 Franchise Lane A Portal Probe.md",
+      "file": "12_Brain/01_Captures/agent-runs/2026-08-15-daily-driver-approval-package.md",
       "applied": [
         "note_type=\"capture\"",
         "status=\"unprocessed\"",
         "created=\"2026-08-15\"",
         "updated=\"2026-08-15\"",
-        "source_refs=[]"
-      ],
-      "dry_run": false
-    },
-    {
-      "file": "12_Brain\\01_Captures\\research\\2026-08-15 Franchise Lanes A-C-D Receipts.md",
-      "applied": [
-        "note_type=\"capture\"",
-        "status=\"unprocessed\"",
-        "created=\"2026-08-15\"",
-        "updated=\"2026-08-15\"",
-        "source_refs=[]"
-      ],
-      "dry_run": false
-    },
-    {
-      "file": "12_Brain\\01_Captures\\sessions\\2026-08-14 - google-rsvp-rail.md",
-      "applied": [
-        "note_type=\"capture\"",
-        "status=\"unprocessed\"",
-        "created=\"2026-08-14\"",
-        "updated=\"2026-08-14\"",
         "source_refs=[]",
         "tags=[\"capture\"]"
       ],
-      "dry_run": false
+      "dry_run": true
     },
     {
-      "file": "12_Brain\\01_Captures\\sessions\\2026-08-14 - send-ready-emails.md",
+      "file": "12_Brain/01_Captures/agent-runs/2026-08-16-daily-driver-approval-package.md",
       "applied": [
         "note_type=\"capture\"",
         "status=\"unprocessed\"",
-        "created=\"2026-08-14\"",
-        "updated=\"2026-08-14\"",
+        "created=\"2026-08-16\"",
+        "updated=\"2026-08-16\"",
         "source_refs=[]",
         "tags=[\"capture\"]"
       ],
-      "dry_run": false
+      "dry_run": true
     },
     {
-      "file": "12_Brain\\01_Captures\\sessions\\session-log.md",
+      "file": "12_Brain/01_Captures/agent-runs/2026-08-17-daily-driver-approval-package.md",
       "applied": [
         "note_type=\"capture\"",
         "status=\"unprocessed\"",
@@ -118,344 +117,37 @@
         "source_refs=[]",
         "tags=[\"capture\"]"
       ],
-      "dry_run": false
+      "dry_run": true
     },
     {
-      "file": "12_Brain\\01_Captures\\Slack\\2026-07-30 Slack Open Loops.md",
+      "file": "12_Brain/01_Captures/agent-runs/2026-08-18-daily-driver-approval-package.md",
       "applied": [
-        "source_refs=[]"
+        "note_type=\"capture\"",
+        "status=\"unprocessed\"",
+        "created=\"2026-08-18\"",
+        "updated=\"2026-08-18\"",
+        "source_refs=[]",
+        "tags=[\"capture\"]"
       ],
-      "dry_run": false
+      "dry_run": true
     },
     {
-      "file": "12_Brain\\02_Entities\\Claude in Chrome.md",
-      "applied": [
-        "note_type=\"entity\"",
-        "status=\"active\"",
-        "created=\"2026-07-04\"",
-        "source_refs=[\"session 2026-07-04 (claude-code-guide research, code.claude.com/docs/en/chrome)\"]"
-      ],
-      "dry_run": false
-    },
-    {
-      "file": "12_Brain\\02_Entities\\Codex Workspace (Legacy).md",
-      "applied": [
-        "note_type=\"entity\"",
-        "status=\"active\"",
-        "created=\"2026-07-29\"",
-        "source_refs=[\"[[12_Brain/01_Captures/2026-07-04 - obsidian-second-brain-article]]\"]"
-      ],
-      "dry_run": false
-    },
-    {
-      "file": "12_Brain\\02_Entities\\Hermes.md",
-      "applied": [
-        "note_type=\"entity\"",
-        "status=\"active\"",
-        "created=\"2026-07-04\"",
-        "source_refs=[\"[[12_Brain/01_Captures/2026-06-26 - intel-core-7-master-operating-transfer]]\"]"
-      ],
-      "dry_run": false
-    },
-    {
-      "file": "12_Brain\\02_Entities\\King Agent OS.md",
-      "applied": [
-        "note_type=\"entity\"",
-        "status=\"active\"",
-        "created=\"2026-07-04\"",
-        "source_refs=[\"[[12_Brain/01_Captures/2026-06-26 - intel-core-7-master-operating-transfer]]\"]"
-      ],
-      "dry_run": false
-    },
-    {
-      "file": "12_Brain\\02_Entities\\LandingFolio MCP.md",
-      "applied": [
-        "note_type=\"entity\"",
-        "status=\"active\"",
-        "created=\"2026-07-31\"",
-        "source_refs=[\"[[12_Brain/01_Captures/X/2026-07-31 - landingfolio-mcp-launch]]\"]"
-      ],
-      "dry_run": false
-    },
-    {
-      "file": "12_Brain\\02_Entities\\Momentum 360.md",
-      "applied": [
-        "note_type=\"entity\"",
-        "status=\"active\"",
-        "created=\"2026-07-29\"",
-        "source_refs=[\"[[12_Brain/01_Captures/2026-07-04 - obsidian-second-brain-article]]\"]"
-      ],
-      "dry_run": false
-    },
-    {
-      "file": "12_Brain\\02_Entities\\Ops Box (EliteDesk 800 G4).md",
-      "applied": [
-        "note_type=\"entity\"",
-        "status=\"active\"",
-        "created=\"2026-07-29\"",
-        "source_refs=[\"[[12_Brain/01_Captures/2026-07-04 - obsidian-second-brain-article]]\"]"
-      ],
-      "dry_run": false
-    },
-    {
-      "file": "12_Brain\\02_Entities\\README.md",
-      "applied": [
-        "created=\"2026-07-29\"",
-        "source_refs=[]"
-      ],
-      "dry_run": false
-    },
-    {
-      "file": "12_Brain\\02_Entities\\Website Factory.md",
-      "applied": [
-        "note_type=\"entity\"",
-        "status=\"active\"",
-        "created=\"2026-07-29\"",
-        "source_refs=[\"[[12_Brain/01_Captures/2026-07-04 - obsidian-second-brain-article]]\"]"
-      ],
-      "dry_run": false
-    },
-    {
-      "file": "12_Brain\\03_Concepts\\Access Verification Discipline.md",
-      "applied": [
-        "note_type=\"concept\"",
-        "status=\"active\"",
-        "created=\"2026-07-04\"",
-        "source_refs=[\"[[12_Brain/01_Captures/2026-06-26 - intel-core-7-master-operating-transfer]]\"]"
-      ],
-      "dry_run": false
-    },
-    {
-      "file": "12_Brain\\03_Concepts\\Context Economy.md",
-      "applied": [
-        "note_type=\"concept\"",
-        "status=\"active\"",
-        "created=\"2026-07-04\"",
-        "source_refs=[\"[[12_Brain/01_Captures/2026-07-04 - obsidian-second-brain-article]]\"]"
-      ],
-      "dry_run": false
-    },
-    {
-      "file": "12_Brain\\03_Concepts\\Conversion Tracking Setup 2026.md",
-      "applied": [
-        "note_type=\"concept\"",
-        "status=\"active\"",
-        "created=\"2026-07-05\"",
-        "source_refs=[\"[[12_Brain/01_Captures/2026-07-04 - full-autonomy-directive]]\"]"
-      ],
-      "dry_run": false
-    },
-    {
-      "file": "12_Brain\\03_Concepts\\Draft-First Operating Rules.md",
-      "applied": [
-        "note_type=\"concept\"",
-        "status=\"active\"",
-        "created=\"2026-07-04\"",
-        "source_refs=[\"[[12_Brain/01_Captures/2026-06-26 - intel-core-7-master-operating-transfer]]\"]"
-      ],
-      "dry_run": false
-    },
-    {
-      "file": "12_Brain\\03_Concepts\\Evidence Boundaries in Reporting.md",
-      "applied": [
-        "note_type=\"concept\"",
-        "status=\"active\"",
-        "created=\"2026-07-04\"",
-        "source_refs=[\"[[12_Brain/01_Captures/2026-06-26 - intel-core-7-master-operating-transfer]]\"]"
-      ],
-      "dry_run": false
-    },
-    {
-      "file": "12_Brain\\03_Concepts\\Google Ads Conversion Optimization 2026.md",
-      "applied": [
-        "note_type=\"concept\"",
-        "status=\"active\"",
-        "created=\"2026-07-05\"",
-        "source_refs=[\"[[12_Brain/01_Captures/2026-07-04 - full-autonomy-directive]]\"]"
-      ],
-      "dry_run": false
-    },
-    {
-      "file": "12_Brain\\03_Concepts\\Google Docs Sharding Pattern.md",
-      "applied": [
-        "note_type=\"concept\"",
-        "status=\"active\"",
-        "created=\"2026-07-04\"",
-        "source_refs=[\"[[12_Brain/01_Captures/2026-06-26 - intel-core-7-master-operating-transfer]]\"]"
-      ],
-      "dry_run": false
-    },
-    {
-      "file": "12_Brain\\03_Concepts\\Leading Indicators.md",
-      "applied": [
-        "note_type=\"concept\"",
-        "status=\"active\"",
-        "created=\"2026-07-04\"",
-        "source_refs=[\"[[12_Brain/01_Captures/2026-07-04 - lost-clients-confirmation-2]]\"]"
-      ],
-      "dry_run": false
-    },
-    {
-      "file": "12_Brain\\03_Concepts\\Meta Lead Ads Optimization 2026.md",
-      "applied": [
-        "note_type=\"concept\"",
-        "status=\"active\"",
-        "created=\"2026-07-05\"",
-        "source_refs=[\"[[12_Brain/01_Captures/2026-07-04 - full-autonomy-directive]]\"]"
-      ],
-      "dry_run": false
-    },
-    {
-      "file": "12_Brain\\03_Concepts\\Netlify Deploy Safety.md",
-      "applied": [
-        "note_type=\"concept\"",
-        "status=\"active\"",
-        "created=\"2026-07-04\"",
-        "source_refs=[\"[[12_Brain/01_Captures/2026-06-26 - intel-core-7-master-operating-transfer]]\"]"
-      ],
-      "dry_run": false
-    },
-    {
-      "file": "12_Brain\\03_Concepts\\README.md",
-      "applied": [
-        "created=\"2026-08-01\"",
-        "source_refs=[]"
-      ],
-      "dry_run": false
-    },
-    {
-      "file": "12_Brain\\03_Concepts\\Research Verification Loop.md",
-      "applied": [
-        "note_type=\"concept\"",
-        "status=\"active\"",
-        "created=\"2026-07-04\"",
-        "source_refs=[\"[[12_Brain/01_Captures/2026-07-04 - obsidian-second-brain-article]]\"]"
-      ],
-      "dry_run": false
-    },
-    {
-      "file": "12_Brain\\03_Concepts\\Second Brain Architecture.md",
-      "applied": [
-        "note_type=\"concept\"",
-        "status=\"active\"",
-        "created=\"2026-07-04\"",
-        "source_refs=[\"[[12_Brain/01_Captures/2026-07-04 - obsidian-second-brain-article]]\"]"
-      ],
-      "dry_run": false
-    },
-    {
-      "file": "12_Brain\\03_Concepts\\Truth Hierarchy.md",
-      "applied": [
-        "note_type=\"concept\"",
-        "status=\"active\"",
-        "created=\"2026-07-04\"",
-        "source_refs=[\"[[12_Brain/01_Captures/2026-06-26 - intel-core-7-master-operating-transfer]]\"]"
-      ],
-      "dry_run": false
-    },
-    {
-      "file": "12_Brain\\04_Decisions\\2026-07-29 - 12_Brain is the canonical brain layer.md",
-      "applied": [
-        "note_type=\"decision\"",
-        "created=\"2026-07-29\"",
-        "source_refs=[\"[[12_Brain/README]]\"]"
-      ],
-      "dry_run": false
-    },
-    {
-      "file": "12_Brain\\04_Decisions\\2026-08-13 - Prospect Radar V2 audit engine.md",
-      "applied": [
-        "note_type=\"decision\"",
-        "created=\"2026-08-13\"",
-        "source_refs=[\"[[_os/automation/docs/RADAR-SETUP]]\"]"
-      ],
-      "dry_run": false
-    },
-    {
-      "file": "12_Brain\\04_Decisions\\README.md",
-      "applied": [
-        "created=\"2026-07-29\"",
-        "source_refs=[]"
-      ],
-      "dry_run": false
-    },
-    {
-      "file": "12_Brain\\05_Projects\\Growth Workshop Franchise Pilot.md",
+      "file": "12_Brain/05_Projects/Automation Deep Analysis 2026-07-29.md",
       "applied": [
         "note_type=\"project\"",
-        "created=\"2026-08-15\"",
-        "source_refs=[\"https://momentum3d.slack.com/archives/D0A6ECLQ0S1/p1786129058687979\"]"
+        "source_refs=[\"Deep cross-reference of the vault + sibling agent PR #226 (site factory / outreach engine) + DESKTOP-4AHKEC4 12_Brain build report\"]"
       ],
-      "dry_run": false
+      "dry_run": true
     },
     {
-      "file": "12_Brain\\05_Projects\\Prospect Radar V2.md",
+      "file": "12_Brain/05_Projects/Top 15 Opportunities 2026-07-02.md",
       "applied": [
         "note_type=\"project\"",
-        "created=\"2026-08-13\"",
-        "source_refs=[\"[[12_Brain/04_Decisions/2026-08-13 - Prospect Radar V2 audit engine]]\"]"
+        "updated=\"2026-09-04\"",
+        "source_refs=[\"Cross-reference of the vault, the Intel Core 7 Master Operating Transfer brief, the book site repo, the skills repo, and the mohr-vault MCP project\"]"
       ],
-      "dry_run": false
-    },
-    {
-      "file": "12_Brain\\05_Projects\\README.md",
-      "applied": [
-        "created=\"2026-07-29\"",
-        "source_refs=[]"
-      ],
-      "dry_run": false
-    },
-    {
-      "file": "12_Brain\\06_Research\\Franchise Email Sourcing.md",
-      "applied": [
-        "note_type=\"research\"",
-        "status=\"draft\"",
-        "source_refs=[\"[[12_Brain/01_Captures/research/2026-08-14 Franchise Send-Ready Harvest]]\"]"
-      ],
-      "dry_run": false
-    },
-    {
-      "file": "12_Brain\\06_Research\\README.md",
-      "applied": [
-        "created=\"2026-07-29\"",
-        "source_refs=[]"
-      ],
-      "dry_run": false
-    },
-    {
-      "file": "12_Brain\\07_Reviews\\2026-08-15 - 120-Day Slack Operating System Audit.md",
-      "applied": [
-        "created=\"2026-08-15\"",
-        "updated=\"2026-08-15\""
-      ],
-      "dry_run": false
-    },
-    {
-      "file": "12_Brain\\07_Reviews\\README.md",
-      "applied": [
-        "created=\"2026-07-29\"",
-        "source_refs=[]"
-      ],
-      "dry_run": false
-    },
-    {
-      "file": "12_Brain\\08_Memory\\current\\Brain Layer Canonical.md",
-      "applied": [
-        "note_type=\"memory\"",
-        "status=\"active\"",
-        "created=\"2026-07-29\"",
-        "source_refs=[]"
-      ],
-      "dry_run": false
-    },
-    {
-      "file": "12_Brain\\08_Memory\\README.md",
-      "applied": [
-        "created=\"2026-07-29\"",
-        "source_refs=[]"
-      ],
-      "dry_run": false
+      "dry_run": true
     }
   ],
-  "written_at": "2026-08-17T22:41:45.003Z"
+  "written_at": "2026-09-04T04:40:05.630Z"
 }

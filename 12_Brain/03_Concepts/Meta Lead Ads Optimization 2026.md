@@ -1,19 +1,20 @@
 ---
 tags: [concept, ads-research]
 source: "[[12_Brain/01_Captures/2026-07-04 - full-autonomy-directive]]"
-updated: 2026-07-05
-expires: 2026-08-04
+updated: 2026-09-04
+expires: 2026-10-04
 note_type: concept
 status: active
 created: 2026-07-05
-source_refs: ["[[12_Brain/01_Captures/2026-07-04 - full-autonomy-directive]]"]
+source_refs: ["[[12_Brain/01_Captures/2026-07-04 - full-autonomy-directive]]", "https://www.socialmediatoday.com/news/meta-lead-gen-ad-updates-ai-targeting-verification-crm-expansion/804301/", "https://embryo.com/industry-updates/meta-ads-update-messenger-inbox-placement-removed/"]
 ---
 
 
 # Meta Lead Ads + Advantage+ — 2026 tactics
 
 One-line: optimization goal, Advantage+ behavior, pixel/CAPI, creative, and
-rejection traps for local lead-gen, verified July 2026. Feeds
+rejection traps for local lead-gen, verified July 2026, reviewed Sept 2026 —
+core tactics unchanged, one placement removal to plan around. Feeds
 [[02_Campaigns/Ads Ops/Ads Ops Hub]] and the instant-form/website-lead specs.
 
 ## Optimization goal (lead quality lever)
@@ -39,6 +40,10 @@ rejection traps for local lead-gen, verified July 2026. Feeds
   Purchase/App-Install dropped to ~10). Budget ≈ (Target CPA × 50) ÷ 7 per day;
   floors $50-100/day/campaign or $30-50/day/ad-set. Consolidate, don't fragment.
 - Don't make significant edits in first 7 days (resets learning).
+- **Messenger inbox placement is being removed Nov 11, 2026** — campaigns keep
+  running (incl. Advantage+ placements) but without that slot. If Messenger
+  inbox has been a meaningful share of lead volume, watch CPL/delivery from
+  early Nov and be ready to shift budget to remaining placements.
 
 ## Pixel + Lead event + CAPI
 - **CAPI is the setup, not an add-on** in 2026 — pixel-only loses 30-40% of iOS
@@ -66,3 +71,8 @@ rejection traps for local lead-gen, verified July 2026. Feeds
 Sources: Meta for Developers (Conversion Leads gates, CAPI/CRM), Meta
 Transparency Center (IP), conversios/1ClickReport/AdStellar/edgedigital/benly/
 dataally 2026. Killed: unsourced "$50 CPL / 10-15% form CVR" benchmarks.
+Sept 2026 review: no changes to optimization-goal gates, learning-phase floor,
+CAPI/dedup setup, or rejection traps found in this window — those held up.
+Only new item: Messenger inbox placement removal (Social Media Today
+2026, Embryo industry-updates 2026 — no direct Meta announcement text found,
+verify against the in-account notification banner before acting).
