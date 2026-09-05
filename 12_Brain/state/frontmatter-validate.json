@@ -1,11 +1,11 @@
 {
   "automation_id": "frontmatter-validate",
-  "started_at": "2026-09-02T02:34:56.032Z",
+  "started_at": "2026-09-05T19:49:11.883Z",
   "status": "ok",
   "counts": {
-    "files": 40,
+    "files": 37,
     "incomplete": 0,
-    "complete": 40
+    "complete": 37
   },
   "rows": [
     {
@@ -171,15 +171,6 @@
       "due": "none"
     },
     {
-      "file": "01_Clients/Fagan Painting/overview.md",
-      "ok": true,
-      "missing": [],
-      "warnings": [],
-      "status": "active",
-      "last_touched": "2026-08-01",
-      "due": "none"
-    },
-    {
       "file": "01_Clients/Florecita.md",
       "ok": true,
       "missing": [],
@@ -214,15 +205,6 @@
       "status": "active",
       "last_touched": "2026-07-12",
       "due": "2026-07-15"
-    },
-    {
-      "file": "01_Clients/Jeff Hozias.md",
-      "ok": true,
-      "missing": [],
-      "warnings": [],
-      "status": "active",
-      "last_touched": "2026-07-29",
-      "due": "none"
     },
     {
       "file": "01_Clients/Kimberly James Bridal/overview.md",
@@ -333,15 +315,6 @@
       "due": "none"
     },
     {
-      "file": "01_Clients/Shadow HVAC/overview.md",
-      "ok": true,
-      "missing": [],
-      "warnings": [],
-      "status": "active",
-      "last_touched": "2026-07-12",
-      "due": "2026-07-15"
-    },
-    {
       "file": "01_Clients/Tags 2 Go/overview.md",
       "ok": true,
       "missing": [],
@@ -369,5 +342,5 @@
       "due": "none"
     }
   ],
-  "written_at": "2026-09-02T02:34:56.032Z"
+  "written_at": "2026-09-05T19:49:11.900Z"
 }

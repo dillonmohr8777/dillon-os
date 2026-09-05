@@ -4,7 +4,9 @@ client_id: shadow-heating-cooling
 website: shadowheatingandcooling.com
 role: Account Manager
 division: Momentum 360
-status: active
+status: former
+retired: 2026-09-05
+retired_reason: owner-confirmed retired client, no active work (2026-09-05 sweep)
 last_touched: 2026-07-12
 next_action: Restore live Meta visibility, verify current-week lead delivery, and reconcile the website deployment and reporting status.
 due: 2026-07-15

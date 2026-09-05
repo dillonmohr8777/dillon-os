@@ -38,7 +38,6 @@ tags:
 | [[01_Clients/BOK Law Firm/Client Intelligence Overlay|BOK Law Firm]] | client | developing | 2026-07-28 | developing | developing | developing | developing | operational |
 | [[01_Clients/Bridge Software Development/Client Intelligence Overlay|Bridge Software]] | client | operational | 2026-07-30 | deferred | deferred | developing | developing | operational |
 | [[01_Clients/Cindy May Christmas/Client Intelligence Overlay|Cindy May Christmas]] | client | developing | 2026-07-13 | developing | developing | blocked | blocked | developing |
-| [[01_Clients/Fagan Painting/Client Intelligence Overlay|Fagan Painting]] | client | operational | 2026-07-31 | operational | operational | blocked | developing | operational |
 | [[01_Clients/Fresh Blends/Client Intelligence Overlay|Fresh Blends / Kwik Trip]] | client | operational | 2026-07-26 | developing | developing | developing | operational | operational |
 | [[01_Clients/Hope Wellness Center/Client Intelligence Overlay|Hope Wellness Center]] | client | operational | 2026-07-15 | developing | developing | blocked | blocked | developing |
 | [[01_Clients/Kimberly James Bridal/Client Intelligence Overlay|Kimberly James Bridal]] | client | operational | 2026-07-27 | developing | developing | developing | developing | operational |
@@ -50,7 +49,6 @@ tags:
 | [[01_Clients/Pro Fence & Deck/Client Intelligence Overlay|Pro Fence & Deck]] | client | developing | 2026-07-28 | developing | blocked | blocked | blocked | developing |
 | [[01_Clients/Replenish/Client Intelligence Overlay|Replenish / 7-Eleven]] | client | operational | 2026-07-26 | operational | developing | developing | operational | operational |
 | [[01_Clients/Revive Systems/Client Intelligence Overlay|Revive Systems]] | client | operational | 2026-07-17 | operational | operational | blocked | blocked | developing |
-| [[01_Clients/Shadow HVAC/Client Intelligence Overlay|Shadow Heating and Cooling]] | client | operational | 2026-07-26 | developing | developing | blocked | operational | operational |
 | [[01_Clients/Tags 2 Go/Client Intelligence Overlay|Tags 2 Go]] | client | developing | 2026-08-07 | developing | not-in-scope | developing | developing | developing |
 | [[01_Clients/VA Claims/Client Intelligence Overlay|VA Claims Edge]] | client | operational | 2026-07-17 | deferred | deferred | developing | developing | operational |
 

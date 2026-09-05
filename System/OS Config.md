@@ -5,7 +5,7 @@ subtitle: Daily Intelligence & Lifecycle Layer for Obsidian Notes
 operator: Dillon Mohr
 primary_directive: ROAD TO 100 CLIENTS
 goal_label: ACTIVE CLIENTS
-goal_current: 14
+goal_current: 12
 goal_target: 100
 last_updated: 2026-07-12
 ---

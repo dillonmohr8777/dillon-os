@@ -84,7 +84,7 @@ AGENTS = [
         routines=['D12', 'D13', 'D14', 'D15', 'W05', 'E03', 'E05'],
         skills=['site-factory', 'site-batch', 'frontend-build', 'ui-design', 'ux-audit',
                 'motion-design', 'mirror-and-improve', 'site-grade'],
-        repos=[('shadow-heating-website', 'Next.js production client site'),
+        repos=[('shadow-heating-website', 'Former client, retired 2026-09-05; site frozen on Netlify, do not build'),
                ('immohrtal-website', 'Vite/React public preview'),
                ('immohrtal-kimi-redesign', 'isolated redesign preview'),
                ('bigorange-marketing-homepage', 'cinematic editorial homepage'),

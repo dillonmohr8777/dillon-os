@@ -2,7 +2,7 @@
 note_type: ops
 status: active
 created: 2026-09-02
-updated: 2026-09-02
+updated: 2026-09-05
 owner: Dillon Mohr
 verification_status: verified
 review_on: 2026-10-02
@@ -138,6 +138,33 @@ Canonical queue at the same moment: revision 423, updated 2026-09-01T17:32Z by
 `staleWritePolicy: reject`. The registry file was generated 2026-08-07, three
 and a half weeks before the queue's last write.
 
+### After the 2026-09-05 sweep
+
+Measured before the sweep: 475 pull requests all-time across the ten readable
+repositories, 68 merged, 215 open, 192 closed unmerged (dillon-os alone 365 / 41 /
+135 / 189; nothing open predated #174 from July 13, so a bulk close had happened
+before). The sweep closed 46 and merged 3 (#358, dillon-claude-config #1 and #2);
+every close kept its branch and carries a comment. Receipt:
+[[12_Brain/01_Captures/sessions/2026-09-05 - pr-sweep-and-client-archive]].
+
+| Repository | Open before | Closed | Merged | Open after |
+|---|---|---|---|---|
+| dillon-os | 135 | 30 | 1 | 104 (+1 for the sweep PR) |
+| client-operations-canonical | 50 | 6 | 0 | 44 |
+| claude-skills-repo | 19 | 10 | 0 | 9 |
+| dillon-claude-config | 2 | 0 | 2 | 0 |
+| bridge-software-frontend | 4 | 0 | 0 | 4 |
+| bridge-discovery-prototype | 2 | 0 | 0 | 2 |
+| align-hcm-public-content, align-hcm-lead-intelligence, jason-fallon-hubspot-agent | 1 each | 0 | 0 | 1 each |
+| agent-vault | 0 | 0 | 0 | 0 |
+
+What did not close: the 51 pull requests older than 30 days that carry client or
+Align collateral. A file-level check (`git diff` against merge-base, every touched
+path looked up on `origin/main`) found **none of their files on main at any path**,
+so each holds unique content (Align films, PDFs, case studies, the Hope Wellness
+and Pro Fence deliverables, BOK Law graphics, Momentum pages). They stay open for
+the owner's merge-or-discard call; the receipt lists them with folders.
+
 ## 5. Discovery protocol for a remote session
 
 The Linux equivalent of the PowerShell checklist. Run it before declaring a
@@ -191,19 +218,23 @@ repository unavailable.
 
 ## 6. Follow-ups (report, not fixed here)
 
-- The remote morning-brief routine sets neither client-operations environment
-  variable (section 5), and the result is **intermittent, not reliably broken**.
-  With the routine config unchanged between the two runs, the committed
-  artifacts differ: `predicted-work-2026-09-02.json` resolved no queue and
-  produced 1 candidate, while `predicted-work-2026-09-03.json` resolved
-  `client-operations://queue/work-items.json` and produced 7. A brief that only
-  works when the running agent happens to route around the missing variable is
-  the argument for setting it explicitly, not against it. This is a routine
-  config change, **not** a code change: both automations already support an
-  override, and no vault code should be patched for it.
-- 199 open PRs across the ten repositories, most of them drafts. The daily
-  `cursor[bot]` umbrella-orchestrator drafts on `dillon-os` need a keep-one,
-  close-the-rest decision.
+- The remote morning-brief routine still sets neither client-operations environment
+  variable (section 5), so `predict-work.js` resolves the canonical queue only
+  intermittently (measured: 1 candidate and a null queue source without it, 7 with
+  it). The fix is a prompt change, not code, and an agent session cannot edit a
+  Routine created through the HTTP API: the replacement prompt is in
+  [[11_Agents/Cloud Routine Prompts 2026-09-05]] for the owner to paste.
+- Three automations open a pull request a day and nothing closes them (the Cursor
+  "competitive task consolidation" umbrella, the daily learning loop, the nightly
+  hygiene pass). The 2026-09-05 sweep closed the backlog and removed the hygiene
+  root cause (seven empty scratch files at the vault root); the self-closing
+  prompts for the two Routines are in the same note, and the Cursor automation
+  has to be switched off inside Cursor.
+- `mohr-vault` is public and, per the commit notes on dillon-os #348, its tracked
+  memory file carries a personal phone number; the owner should flip it private.
+- The `brain-hud` test suite is red on `main` (missing
+  `12_Brain/03_Concepts/Second Brain Architecture.md`, deleted by `62d05c5`);
+  dillon-os #365 restores the file.
 - Registry projection (2026-08-07) lags the queue (2026-09-01); the roster in
   [[System/operating-status]] names Capsule & Tonic and Everyday Life
   Insurance, which the registry does not carry.

@@ -1,7 +1,9 @@
 ---
 client: Fagan Painting
 client_id: fagan-painting
-status: active
+status: former
+retired: 2026-09-05
+retired_reason: owner-confirmed retired client, no active work (2026-09-05 sweep)
 last_touched: 2026-08-01
 next_action: Settle the internal AEO and GEO scope and price, verify the boundary with Phil's SEO and GBP work, then prepare the exact proposal for approval before sending.
 tags: [client, momentum360, meta-ads, landing-page, seo]

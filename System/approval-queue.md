@@ -1,6 +1,6 @@
 ---
 tags: [system, approvals]
-last_updated: 2026-08-17T13:04:11Z
+last_updated: 2026-09-05T21:30:00Z
 status: active
 last_scan: 2026-08-17T13:04:11Z
 scan_sources: ["00_Inbox/", "01_Clients/ status at-risk/onboarding/blocked", "System/urgent-replies.md", "System/claude-memory-sync.md", "Daily-Briefs/ latest 3"]
@@ -14,9 +14,9 @@ Only current client and operating actions belong here. Nothing is sent, publishe
 - [ ] 2026-07-12 - Kimberly James Bridal - Approve completion update after FAQ desktop image crop and responsive QA; verify appointment-source reconciliation first - Risk: low
 - [ ] 2026-07-12 - Omega Landscaping & Concrete - Approve account changes only after Google/Meta call, form, and lead-quality attribution is verified - Risk: high
 - [ ] 2026-07-12 - On-Site Concrete & Landscape - Approve technical or campaign changes after allowlisted crawl and conversion-action audit - Risk: medium
-- [ ] 2026-07-12 - Shadow Heating & Cooling - Approve site deployment and any spend change after Meta access and current lead delivery are verified - Risk: high
+- [x] 2026-07-12 - Shadow Heating & Cooling - Approve site deployment and any spend change after Meta access and current lead delivery are verified - Risk: high -- Closed 2026-09-05: client retired, no action (System/client-roster-reconciliation-2026-09-05.md)
 - [ ] 2026-07-12 - Replenish - Confirm recurring fifth dashboard slot; approve any new location, budget, or campaign change - Risk: high
-- [ ] 2026-07-12 - Fagan Painting - Approve scaling only after Meta Lead event, form, phone, and lead delivery reconcile - Risk: high
+- [x] 2026-07-12 - Fagan Painting - Approve scaling only after Meta Lead event, form, phone, and lead delivery reconcile - Risk: high -- Closed 2026-09-05: client retired, no action (System/client-roster-reconciliation-2026-09-05.md)
 - [ ] 2026-07-12 - Capsule & Tonic - Approve optimization only after platform conversions reconcile to real leads - Risk: high
 - [ ] 2026-07-12 - Bar Crawl USA - Approve publish after current-event hub and Boos & Booze SEO QA; do not alter ticketing or source data - Risk: medium
 - [ ] 2026-07-12 - Revive Systems - Approve paid-media option and any publish action after the 48-hour recovery brief - Risk: high
@@ -26,6 +26,8 @@ Only current client and operating actions belong here. Nothing is sent, publishe
 - [ ] 2026-07-12 - VA Claims - Approve client review after VACE design reconciliation; backend and DNS changes remain gated - Risk: medium
 - [ ] 2026-07-12 - Bridge Software Development - Approve client-facing milestone after Phase 1 ownership board and compliance review - Risk: medium
 ## Operating actions
+- [ ] 2026-09-05 -- [Client Operations / registry] -- Apply the retirement patch on the desktop canonical writer: set `fagan-painting` and `shadow-heating-cooling` to status "inactive" with inactiveAt "2026-09-05", inactiveReason "owner-confirmed retired client, no active work", retentionPolicy "preserve-history-do-not-promote-or-rank" (the zen-spa-tropicana precedent); cancel wi-20260715-0002 (Fagan, blocked); revoke Fagan accessRefs wordpress-production and access-broker:fagan-painting/meta-ads-production; leave both client folders in place -- Source: System/client-roster-reconciliation-2026-09-05.md -- Evidence: registry/clients.json still lists both as active on 2026-09-05; queue revision 423 -- Risk: low
+- [ ] 2026-09-05 -- [Netlify / Shadow HVAC] -- Delete the 10 stale shadow-hvac-* report and concept sites in the Netlify UI (names in System/client-roster-reconciliation-2026-09-05.md); keep shadow-hvac-website serving shadow-heating.com until the client moves hosting -- Source: Netlify get-projects 2026-09-05 -- Evidence: 11 shadow sites on team nf_team_dev, only shadow-hvac-website carries the custom domain -- Risk: low
 - [ ] 2026-07-12 - Revenue - Verify current invoices or contracts for all 14 active clients before publishing MRR - Risk: low
 - [ ] 2026-07-12 - Cursor/MCP - Authenticate Composio, Slack, and WordPress connectors when live reads are required - Risk: low
 - [ ] 2026-07-12 - Book funnel - Configure and test lead-capture delivery before production deployment - Risk: high
@@ -36,7 +38,7 @@ Only current client and operating actions belong here. Nothing is sent, publishe
 - [ ] 2026-07-12 -- [Ironic Ineptocracy Book / ironicineptocracy.com] -- Fix broken /api/dossier-leads endpoint with Vercel serverless function and verify lead-magnet delivery; deployment -- Source: 00_Inbox/Top 15 Opportunities 2026-07-02.md -- Evidence: "The signup form posts to `/api/dossier-leads` and that endpoint doesn't exist in the repo. The SPA rewrite swallows every submission." -- Risk: high
 - [ ] 2026-07-12 -- [Book / Guest Posts] -- Approve and send guest-post pitches to CrimeReads, Spybrary, Independent Book Review -- Source: 00_Inbox/Top 15 Opportunities 2026-07-02.md -- Evidence: "Run the guest-post pipeline: draft the CrimeReads, Spybrary, and Independent Book Review pitches that are defined but never sent." -- Risk: low
 - [ ] 2026-07-12 -- [Bar Crawl USA] -- Approve clearance of 2 disapproved ads (Halloween/Fall Cocktail) and audit PMax for Presence Only + tCPA guardrail; ad change -- Source: 01_Clients/Bar Crawl USA/active-campaigns.md -- Evidence: "2 ads were disapproved 2026-04-14 and 2026-04-15 based on a 'Halloween Cocktail Crawl' / 'Fall Cocktail Crawl' email getting indexed by policy review." -- Risk: high
-- [ ] 2026-07-12 -- [Shadow HVAC] -- Approve catch-up report to Mike after LSA verification post-Evident reset; client message -- Source: 01_Clients/Shadow HVAC/active-campaigns.md -- Evidence: "Background check was blocked in February, reset on Evident portal 2026-03-02 with help from Yetunde Sotimirin... Send a catch-up report to Mike." -- Risk: medium
+- [x] 2026-07-12 -- [Shadow HVAC] -- Approve catch-up report to Mike after LSA verification post-Evident reset; client message -- Source: 01_Clients/Shadow HVAC/active-campaigns.md -- Evidence: "Background check was blocked in February, reset on Evident portal 2026-03-02 with help from Yetunde Sotimirin... Send a catch-up report to Mike." -- Risk: medium -- Closed 2026-09-05: client retired, no send (System/client-roster-reconciliation-2026-09-05.md)
 - [ ] 2026-07-12 -- [Bridge Software Development / Tori] -- Approve NDA-safe discovery prototype walkthrough for Tori meeting; publishing/client message -- Source: 01_Clients/Bridge Software Development/Meeting Prep - Tori.md -- Evidence: "Confirm the product and brand decisions needed to convert the discovery prototype into implementation-ready work. Do not treat the meeting as a visual presentation only." -- Risk: medium
 - [ ] 2026-07-13 -- [Revive Systems] -- Approve external delivery of 48-hour lead-recovery brief (GBP, AEO/GEO, conversion paths, 3-in-30 plan); client message, publishing gated -- Source: 01_Clients/Revive Systems/overview.md -- Evidence: "Produce the 48-hour lead-recovery brief covering GBP, AEO/GEO, conversion paths, a three-in-30-days plan, and approval-gated budget options." -- Risk: medium
 - [ ] 2026-07-15 -- [Hermes Gateway / System] -- Approve local-only soft-restart of Hermes Gateway PID 22684 after 7.7h heartbeat freeze (Stop-Process + Startup/Hermes_Gateway.vbs); no token rotation, no broadcast -- Source: System/gateway-health.md -- Evidence: "heartbeat 27680s (7.69h) CRITICAL, log frozen at kanban dispatcher embedded, PID 22684 ALIVE but event-loop DEAD" -- Risk: low

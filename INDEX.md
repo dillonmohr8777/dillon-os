@@ -96,3 +96,5 @@ links instead of loading the entire vault.
 - [[12_Brain/Bases/Client Strategy Overlays.base|Client Strategy Overlays Base]]
 - [[12_Brain/09_Ops/Client Intelligence Coverage|Client Intelligence Coverage]]
 - [[12_Brain/09_Ops/Repository Access Map|Repository Access Map]]
+- [[System/client-roster-reconciliation-2026-09-05|Client Roster Reconciliation 2026-09-05]] (Fagan Painting, Shadow HVAC, Jeff Hozias retired to `_archive/01_Clients/`)
+- [[11_Agents/Cloud Routine Prompts 2026-09-05|Cloud Routine Prompts 2026-09-05]] (replacement prompts for hygiene, daily learning loop, morning brief)

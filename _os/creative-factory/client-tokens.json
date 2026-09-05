@@ -2,25 +2,6 @@
   "version": 1,
   "agency": "Momentum 360",
   "clients": {
-    "shadow-hvac": {
-      "name": "Shadow Heating & Cooling",
-      "slug": "shadow-hvac",
-      "domain": "shadowheatingandcooling.com",
-      "phone": "(847) 757-9450",
-      "cta": "Book Service",
-      "bookingUrl": "https://book.housecallpro.com/book/Shadow-Heating--Cooling/",
-      "colors": {
-        "bg": "#05070c",
-        "bgCard": "#121826",
-        "ember": "#ff5a1f",
-        "ice": "#38bdf8",
-        "gold": "#f4b740",
-        "text": "#f1f5f9",
-        "muted": "#94a3b8"
-      },
-      "fonts": { "display": "system-ui", "body": "system-ui" },
-      "tone": "Trustworthy local HVAC. Emergency-ready. Hampshire IL."
-    },
     "kjb": {
       "name": "Kimberly James Bridal",
       "slug": "kjb",
@@ -34,7 +15,11 @@
         "text": "#1a1a1a",
         "muted": "#5c5c5c"
       },
-      "fonts": { "display": "Georgia, serif", "script": "cursive", "body": "Georgia, serif" },
+      "fonts": {
+        "display": "Georgia, serif",
+        "script": "cursive",
+        "body": "Georgia, serif"
+      },
       "tone": "Elegant boutique bridal. Chestnut Hill Philadelphia. Never discount-driven."
     },
     "omega-landscaping": {
@@ -51,7 +36,10 @@
         "cream": "#f8f6f1",
         "text": "#1f2937"
       },
-      "fonts": { "display": "system-ui", "body": "system-ui" },
+      "fonts": {
+        "display": "system-ui",
+        "body": "system-ui"
+      },
       "tone": "Colorado Springs landscaping. 3000+ homeowners proof framing."
     },
     "bar-crawl-usa": {
@@ -65,7 +53,10 @@
         "white": "#ffffff",
         "navy": "#0f172a"
       },
-      "fonts": { "display": "system-ui", "body": "system-ui" },
+      "fonts": {
+        "display": "system-ui",
+        "body": "system-ui"
+      },
       "tone": "High-energy city events. No alcohol language in ads.",
       "compliance": "zero-alcohol-copy"
     },
