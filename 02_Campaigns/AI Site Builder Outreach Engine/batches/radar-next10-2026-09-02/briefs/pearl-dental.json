@@ -1,0 +1,215 @@
+{
+  "slug": "pearl-dental",
+  "name": "Pearl Dental",
+  "city": "Philadelphia",
+  "category": "General Dentistry",
+  "vertical": "dentist",
+  "attitude": "glass",
+  "url": "https://www.pearldentalphilly.com/",
+  "phone": "",
+  "address": "",
+  "hours": "",
+  "description": "A Philadelphia general dentistry practice offering routine checkups, cleanings, and restorative care.",
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "marquee": [
+    "Healthy smiles",
+    "Gentle care",
+    "Philadelphia dentistry",
+    "New patients welcome"
+  ],
+  "tokens": {
+    "paper": "#F4F7F9",
+    "ink": "#0E2430",
+    "accent": "#0E7C86",
+    "accent2": "#C9A227",
+    "panel": "#DCE6E8",
+    "deep": "#0B1F27",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#1A1400",
+    "onPanel": "#0B1F27",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "24px"
+  },
+  "fonts": {
+    "display": "Fraunces",
+    "displayFallback": "Georgia,serif",
+    "text": "Inter"
+  },
+  "logo": false,
+  "hero": {
+    "eyebrow": "Philadelphia | General Dentistry",
+    "headline": "Pearl Dental",
+    "sub": "Routine care, restorative work, and a team that explains every step before doing it.",
+    "ctaPrimary": {
+      "label": "Get in touch",
+      "href": "#visit"
+    },
+    "ctaSecondary": {
+      "label": "See services",
+      "href": "#offerings"
+    },
+    "glassFloat": {
+      "title": "General Dentistry",
+      "sub": "Philadelphia"
+    },
+    "marquee": [
+      "Healthy smiles",
+      "Gentle care",
+      "Philadelphia dentistry",
+      "New patients welcome"
+    ]
+  },
+  "offerings": {
+    "items": [
+      "Routine exams and professional cleanings for the whole family",
+      "Restorative dentistry including fillings and crowns",
+      "Cosmetic consultations for whitening and smile improvements"
+    ]
+  },
+  "proof": {
+    "items": [
+      "Serving the Philadelphia community",
+      "New patients welcome, most insurance accepted",
+      "Modern equipment and a comfort-first exam room",
+      "Clear treatment plans explained before any work begins"
+    ]
+  },
+  "gallery": {
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "About",
+    "paragraphs": [
+      "Pearl Dental was built around a simple idea: dental visits should not be something patients dread.",
+      "The practice focuses on prevention first, so small issues get caught before they become expensive ones."
+    ]
+  },
+  "experience": {
+    "items": [
+      "Book an appointment and get a straightforward explanation of what a visit involves.",
+      "No surprise upsells -- treatment plans are reviewed with you before anything is scheduled.",
+      "A calm, modern office designed to take the edge off a dental visit."
+    ]
+  },
+  "feature": {
+    "heading": "Preventive care that catches problems early",
+    "text": "Regular cleanings and exams cost less than emergency work down the road -- and they hurt a lot less too.",
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Restorative and cosmetic options",
+    "text": "From a simple filling to a full smile consultation, treatment is scoped to what you actually need.",
+    "imageIndex": 10
+  },
+  "social": {
+    "heading": "From the shop and the feed",
+    "kicker": "Reference imagery -- placeholder pending real photography",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "captions": [
+      "On site",
+      "Team at work",
+      "Detail shot",
+      "Storefront",
+      "In progress",
+      "Finished result"
+    ]
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "General Checkups",
+        "href": "#offerings",
+        "imageIndex": 9
+      },
+      {
+        "title": "Restorative Dentistry",
+        "href": "#offerings",
+        "imageIndex": 10
+      },
+      {
+        "title": "Cosmetic Consultations",
+        "href": "#offerings",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {},
+  "closing": {
+    "cta": {
+      "label": "Get in touch",
+      "href": "#visit"
+    }
+  },
+  "links": [
+    {
+      "label": "Official website",
+      "href": "https://www.pearldentalphilly.com/"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "General Dentistry concept image 1 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "General Dentistry concept image 2 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "General Dentistry concept image 3 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "General Dentistry concept image 4 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "General Dentistry concept image 5 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "General Dentistry concept image 6 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "General Dentistry concept image 7 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "General Dentistry concept image 8 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "General Dentistry concept image 9 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "General Dentistry concept image 10 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "General Dentistry concept image 11 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "General Dentistry concept image 12 (placeholder -- real photography not yet sourced)"
+    }
+  ]
+}

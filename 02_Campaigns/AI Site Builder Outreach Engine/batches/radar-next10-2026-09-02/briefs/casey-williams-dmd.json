@@ -1,0 +1,215 @@
+{
+  "slug": "casey-williams-dmd",
+  "name": "Casey Williams, DMD",
+  "city": "Boiling Springs",
+  "category": "General Dentistry",
+  "vertical": "dentist",
+  "attitude": "glass",
+  "url": "http://www.caseywilliamsdental.com/index.html",
+  "phone": "",
+  "address": "",
+  "hours": "",
+  "description": "A general dentistry practice in Boiling Springs providing routine and restorative dental care.",
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "marquee": [
+    "Boiling Springs dentistry",
+    "Routine and restorative care",
+    "New patients welcome",
+    "Gentle exams"
+  ],
+  "tokens": {
+    "paper": "#F5F7F8",
+    "ink": "#10242E",
+    "accent": "#1E7A8C",
+    "accent2": "#B8925A",
+    "panel": "#DCE5E8",
+    "deep": "#0B1D24",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#221400",
+    "onPanel": "#0B1D24",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "22px"
+  },
+  "fonts": {
+    "display": "Fraunces",
+    "displayFallback": "Georgia,serif",
+    "text": "Inter"
+  },
+  "logo": false,
+  "hero": {
+    "eyebrow": "Boiling Springs | General Dentistry",
+    "headline": "Casey Williams, DMD",
+    "sub": "General dentistry for Boiling Springs, focused on prevention and clear treatment plans.",
+    "ctaPrimary": {
+      "label": "Get in touch",
+      "href": "#visit"
+    },
+    "ctaSecondary": {
+      "label": "See services",
+      "href": "#offerings"
+    },
+    "glassFloat": {
+      "title": "General Dentistry",
+      "sub": "Boiling Springs"
+    },
+    "marquee": [
+      "Boiling Springs dentistry",
+      "Routine and restorative care",
+      "New patients welcome",
+      "Gentle exams"
+    ]
+  },
+  "offerings": {
+    "items": [
+      "Routine exams, cleanings, and x-rays",
+      "Restorative dentistry including fillings and crowns",
+      "Guidance on at-home care between visits"
+    ]
+  },
+  "proof": {
+    "items": [
+      "Serving Boiling Springs and the surrounding area",
+      "New patients welcome",
+      "Prevention-first approach to every exam",
+      "Treatment plans explained before work is scheduled"
+    ]
+  },
+  "gallery": {
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "About",
+    "paragraphs": [
+      "Dr. Casey Williams runs a general dentistry practice built around straightforward, prevention-first care.",
+      "The practice keeps exams unhurried, so small issues get flagged before they turn into bigger appointments."
+    ]
+  },
+  "experience": {
+    "items": [
+      "A first visit includes a full exam and a plain-language rundown of any findings.",
+      "Cleanings and checkups are scheduled on a predictable cadence.",
+      "Restorative work is scoped and quoted before it is booked."
+    ]
+  },
+  "feature": {
+    "heading": "Unhurried exams, fewer surprises",
+    "text": "Taking the time on routine exams means fewer surprise appointments for problems that could have been caught earlier.",
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Restorative care, explained plainly",
+    "text": "Fillings, crowns, and other restorative work come with a clear explanation before anything is scheduled.",
+    "imageIndex": 10
+  },
+  "social": {
+    "heading": "From the shop and the feed",
+    "kicker": "Reference imagery -- placeholder pending real photography",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "captions": [
+      "On site",
+      "Team at work",
+      "Detail shot",
+      "Storefront",
+      "In progress",
+      "Finished result"
+    ]
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Routine Exams",
+        "href": "#offerings",
+        "imageIndex": 9
+      },
+      {
+        "title": "Restorative Dentistry",
+        "href": "#offerings",
+        "imageIndex": 10
+      },
+      {
+        "title": "At-Home Care Guidance",
+        "href": "#offerings",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {},
+  "closing": {
+    "cta": {
+      "label": "Get in touch",
+      "href": "#visit"
+    }
+  },
+  "links": [
+    {
+      "label": "Official website",
+      "href": "http://www.caseywilliamsdental.com/index.html"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "General Dentistry concept image 1 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "General Dentistry concept image 2 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "General Dentistry concept image 3 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "General Dentistry concept image 4 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "General Dentistry concept image 5 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "General Dentistry concept image 6 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "General Dentistry concept image 7 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "General Dentistry concept image 8 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "General Dentistry concept image 9 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "General Dentistry concept image 10 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "General Dentistry concept image 11 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "General Dentistry concept image 12 (placeholder -- real photography not yet sourced)"
+    }
+  ]
+}

@@ -38,6 +38,7 @@ and reusable memory.
 - [[05_Projects/Experiments/EXP-TIMESFM-FORECAST-ROUTER|TimesFM forecast-router experiment]]
 - [[04_Decisions/2026-09-01 - Fable 5.1 routing and effort defaults|Fable 5.1 routing and effort defaults]]
 - [[06_Research/2026-09-01 - Fable 5.1 launch signal sweep|Fable 5.1 launch signal sweep]]
+- [[09_Ops/Agent Roster|Agent Roster]]
 
 ## Strategy brain
 

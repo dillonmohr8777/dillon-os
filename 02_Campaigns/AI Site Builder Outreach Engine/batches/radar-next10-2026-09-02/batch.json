@@ -1,0 +1,10 @@
+{
+  "id": "radar-next10-2026-09-02",
+  "title": "Prospect Radar Next-10, 2026-09-02",
+  "market": "Philadelphia metro / South-Central PA",
+  "week": "2026-09-02",
+  "idPrefix": "RN10",
+  "targetCount": 10,
+  "deployBaseUrl": "https://radar-next10-2026-09-02.netlify.app",
+  "note": "Top 10 highest-scoring un-built prospects from Daily-Briefs/radar-2026-09-01.md top-suggestions table (scores 89-94), all preferred verticals (dentist, hvac, electrician, veterinary, restaurant) with approved generated-stock boards. All 10 domains failed to resolve or redirect to a dead host on curl re-check (2026-09-02) -- no existing decent site to protect. Generated-stock image library is gitignored and not present locally, so imagery is degraded (placeholder alt-text only, no real photos)."
+}

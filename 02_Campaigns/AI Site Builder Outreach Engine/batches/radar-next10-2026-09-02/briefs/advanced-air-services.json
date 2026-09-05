@@ -1,0 +1,215 @@
+{
+  "slug": "advanced-air-services",
+  "name": "Advanced Air Services LLC",
+  "city": "Waynesboro",
+  "category": "HVAC Services",
+  "vertical": "hvac",
+  "attitude": "industrial",
+  "url": "https://www.heatingandcoolingwaynesboropa.com/",
+  "phone": "",
+  "address": "",
+  "hours": "",
+  "description": "A heating and air conditioning company serving Waynesboro and the surrounding area.",
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "marquee": [
+    "Heating and cooling",
+    "Waynesboro, PA",
+    "Repair and install",
+    "Book a visit"
+  ],
+  "tokens": {
+    "paper": "#EDF0F2",
+    "ink": "#101820",
+    "accent": "#2A6FB0",
+    "accent2": "#D9722B",
+    "panel": "#D6DEE2",
+    "deep": "#0B1218",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#1D0D00",
+    "onPanel": "#0B1218",
+    "onDeep": "#FFFFFF",
+    "border": "4px",
+    "radius": "6px"
+  },
+  "fonts": {
+    "display": "Archivo Black",
+    "displayFallback": "Impact,sans-serif",
+    "text": "Work Sans"
+  },
+  "logo": false,
+  "hero": {
+    "eyebrow": "Waynesboro | HVAC Services",
+    "headline": "Advanced Air Services LLC",
+    "sub": "Furnace and air conditioning installation, repair, and maintenance for Waynesboro homes.",
+    "ctaPrimary": {
+      "label": "Get in touch",
+      "href": "#visit"
+    },
+    "ctaSecondary": {
+      "label": "See services",
+      "href": "#offerings"
+    },
+    "glassFloat": {
+      "title": "HVAC Services",
+      "sub": "Waynesboro"
+    },
+    "marquee": [
+      "Heating and cooling",
+      "Waynesboro, PA",
+      "Repair and install",
+      "Book a visit"
+    ]
+  },
+  "offerings": {
+    "items": [
+      "Furnace and heating system installation and repair",
+      "Central air conditioning installation and service",
+      "Seasonal maintenance and tune-up plans"
+    ]
+  },
+  "proof": {
+    "items": [
+      "Serving Waynesboro and the surrounding area",
+      "Installation and repair on both heating and cooling systems",
+      "Maintenance plans built around the local heating and cooling seasons",
+      "Quotes provided before any work begins"
+    ]
+  },
+  "gallery": {
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "About",
+    "paragraphs": [
+      "Advanced Air Services works on both furnaces and air conditioning systems across Waynesboro, handling everything from repair calls to full installations.",
+      "The business leans on seasonal maintenance to keep systems from failing at the worst possible time."
+    ]
+  },
+  "experience": {
+    "items": [
+      "A repair call starts with a diagnosis before a fix is quoted.",
+      "Installations come with a walkthrough of the new system’s controls.",
+      "Maintenance visits are scheduled ahead of the heating and cooling seasons."
+    ]
+  },
+  "feature": {
+    "heading": "Maintenance ahead of the season",
+    "text": "A pre-season tune-up catches the small issues that turn into a no-heat or no-AC call later.",
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Repair or replace, either way",
+    "text": "When a system is past the point of a cost-effective repair, the options for replacement are laid out plainly.",
+    "imageIndex": 10
+  },
+  "social": {
+    "heading": "From the shop and the feed",
+    "kicker": "Reference imagery -- placeholder pending real photography",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "captions": [
+      "On site",
+      "Team at work",
+      "Detail shot",
+      "Storefront",
+      "In progress",
+      "Finished result"
+    ]
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Furnace Installation",
+        "href": "#offerings",
+        "imageIndex": 9
+      },
+      {
+        "title": "Air Conditioning Service",
+        "href": "#offerings",
+        "imageIndex": 10
+      },
+      {
+        "title": "Maintenance Plans",
+        "href": "#offerings",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {},
+  "closing": {
+    "cta": {
+      "label": "Get in touch",
+      "href": "#visit"
+    }
+  },
+  "links": [
+    {
+      "label": "Official website",
+      "href": "https://www.heatingandcoolingwaynesboropa.com/"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "HVAC Services concept image 1 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "HVAC Services concept image 2 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "HVAC Services concept image 3 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "HVAC Services concept image 4 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "HVAC Services concept image 5 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "HVAC Services concept image 6 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "HVAC Services concept image 7 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "HVAC Services concept image 8 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "HVAC Services concept image 9 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "HVAC Services concept image 10 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "HVAC Services concept image 11 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "HVAC Services concept image 12 (placeholder -- real photography not yet sourced)"
+    }
+  ]
+}

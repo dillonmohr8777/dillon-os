@@ -1,0 +1,215 @@
+{
+  "slug": "udis-conn-orthodontics",
+  "name": "Udis & Conn Orthodontics",
+  "city": "Jenkintown",
+  "category": "Orthodontic Care",
+  "vertical": "dentist",
+  "attitude": "glass",
+  "url": "http://www.udisandconnorthodontics.com/",
+  "phone": "",
+  "address": "",
+  "hours": "",
+  "description": "An orthodontic practice in Jenkintown providing braces and orthodontic treatment for children, teens, and adults.",
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "marquee": [
+    "Straighter smiles",
+    "Jenkintown orthodontics",
+    "Kids, teens, adults",
+    "Confident results"
+  ],
+  "tokens": {
+    "paper": "#F6F5FA",
+    "ink": "#1B1A2E",
+    "accent": "#5B4FE0",
+    "accent2": "#2FBF9F",
+    "panel": "#E1DEF2",
+    "deep": "#131226",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#052018",
+    "onPanel": "#131226",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "28px"
+  },
+  "fonts": {
+    "display": "Fraunces",
+    "displayFallback": "Georgia,serif",
+    "text": "Inter"
+  },
+  "logo": false,
+  "hero": {
+    "eyebrow": "Jenkintown | Orthodontic Care",
+    "headline": "Udis & Conn Orthodontics",
+    "sub": "Orthodontic treatment for every age, from a first evaluation through the final retainer.",
+    "ctaPrimary": {
+      "label": "Get in touch",
+      "href": "#visit"
+    },
+    "ctaSecondary": {
+      "label": "See services",
+      "href": "#offerings"
+    },
+    "glassFloat": {
+      "title": "Orthodontic Care",
+      "sub": "Jenkintown"
+    },
+    "marquee": [
+      "Straighter smiles",
+      "Jenkintown orthodontics",
+      "Kids, teens, adults",
+      "Confident results"
+    ]
+  },
+  "offerings": {
+    "items": [
+      "Traditional braces for children, teens, and adults",
+      "Orthodontic evaluations and treatment planning",
+      "Retention care after active treatment ends"
+    ]
+  },
+  "proof": {
+    "items": [
+      "Serving Jenkintown and the surrounding area",
+      "Treatment plans built around each patient’s bite and timeline",
+      "Care for kids, teens, and adult patients alike",
+      "Clear explanation of each phase of treatment before it starts"
+    ]
+  },
+  "gallery": {
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "About",
+    "paragraphs": [
+      "Udis & Conn Orthodontics focuses on getting each patient a bite and a smile that actually works for them, not a one-size-fits-all treatment plan.",
+      "The practice treats patients across a wide age range, from a child’s first evaluation to adult orthodontic care."
+    ]
+  },
+  "experience": {
+    "items": [
+      "A first evaluation lays out whether treatment is needed and what it would involve.",
+      "Progress checks happen on a predictable schedule through active treatment.",
+      "Retention guidance continues after braces come off, so results hold."
+    ]
+  },
+  "feature": {
+    "heading": "Orthodontic care for every stage",
+    "text": "From a child’s first evaluation to adult treatment, the plan is built around the patient in the chair.",
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "What happens after the braces come off",
+    "text": "Retention is part of the plan from day one, not an afterthought once treatment ends.",
+    "imageIndex": 10
+  },
+  "social": {
+    "heading": "From the shop and the feed",
+    "kicker": "Reference imagery -- placeholder pending real photography",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "captions": [
+      "On site",
+      "Team at work",
+      "Detail shot",
+      "Storefront",
+      "In progress",
+      "Finished result"
+    ]
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Braces for Kids & Teens",
+        "href": "#offerings",
+        "imageIndex": 9
+      },
+      {
+        "title": "Adult Orthodontics",
+        "href": "#offerings",
+        "imageIndex": 10
+      },
+      {
+        "title": "Retention Care",
+        "href": "#offerings",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {},
+  "closing": {
+    "cta": {
+      "label": "Get in touch",
+      "href": "#visit"
+    }
+  },
+  "links": [
+    {
+      "label": "Official website",
+      "href": "http://www.udisandconnorthodontics.com/"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Orthodontic Care concept image 1 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Orthodontic Care concept image 2 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Orthodontic Care concept image 3 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Orthodontic Care concept image 4 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Orthodontic Care concept image 5 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Orthodontic Care concept image 6 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Orthodontic Care concept image 7 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Orthodontic Care concept image 8 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Orthodontic Care concept image 9 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Orthodontic Care concept image 10 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Orthodontic Care concept image 11 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Orthodontic Care concept image 12 (placeholder -- real photography not yet sourced)"
+    }
+  ]
+}

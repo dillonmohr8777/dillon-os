@@ -1,0 +1,215 @@
+{
+  "slug": "jt1-electric",
+  "name": "JT1 Electric Inc.",
+  "city": "Pocono Lake",
+  "category": "Electrical Services",
+  "vertical": "electrician",
+  "attitude": "industrial",
+  "url": "http://jt1electricinc.com/",
+  "phone": "",
+  "address": "",
+  "hours": "",
+  "description": "An electrical contractor serving Pocono Lake and the surrounding Poconos area.",
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "marquee": [
+    "Licensed electrician",
+    "Pocono Lake, PA",
+    "Residential and light commercial",
+    "Book a visit"
+  ],
+  "tokens": {
+    "paper": "#EEF0F1",
+    "ink": "#14181C",
+    "accent": "#E0A417",
+    "accent2": "#1E5AA8",
+    "panel": "#D9DCDF",
+    "deep": "#0D1013",
+    "onAccent": "#1A1400",
+    "onAccent2": "#FFFFFF",
+    "onPanel": "#0D1013",
+    "onDeep": "#FFFFFF",
+    "border": "4px",
+    "radius": "4px"
+  },
+  "fonts": {
+    "display": "Archivo Black",
+    "displayFallback": "Impact,sans-serif",
+    "text": "Work Sans"
+  },
+  "logo": false,
+  "hero": {
+    "eyebrow": "Pocono Lake | Electrical Services",
+    "headline": "JT1 Electric Inc.",
+    "sub": "Wiring, panel upgrades, and electrical repair for homes and small businesses in the Poconos.",
+    "ctaPrimary": {
+      "label": "Get in touch",
+      "href": "#visit"
+    },
+    "ctaSecondary": {
+      "label": "See services",
+      "href": "#offerings"
+    },
+    "glassFloat": {
+      "title": "Electrical Services",
+      "sub": "Pocono Lake"
+    },
+    "marquee": [
+      "Licensed electrician",
+      "Pocono Lake, PA",
+      "Residential and light commercial",
+      "Book a visit"
+    ]
+  },
+  "offerings": {
+    "items": [
+      "Electrical panel upgrades and inspections",
+      "Wiring for renovations and new construction",
+      "Troubleshooting and repair for outlets, switches, and fixtures"
+    ]
+  },
+  "proof": {
+    "items": [
+      "Serving Pocono Lake and the surrounding Poconos area",
+      "Licensed electrical work, residential and light commercial",
+      "Panel and wiring work scoped and quoted up front",
+      "Troubleshooting calls handled without unnecessary upselling"
+    ]
+  },
+  "gallery": {
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "About",
+    "paragraphs": [
+      "JT1 Electric handles everything from a single tripped breaker to a full panel upgrade for homes across the Poconos.",
+      "The shop’s focus stays on getting the wiring right the first time, since a callback in this area means a long drive."
+    ]
+  },
+  "experience": {
+    "items": [
+      "A service call starts with a diagnosis before any repair is quoted.",
+      "Panel upgrades come with an inspection of the existing wiring first.",
+      "New construction wiring is coordinated with the builder’s timeline."
+    ]
+  },
+  "feature": {
+    "heading": "Panel upgrades done right the first time",
+    "text": "An outdated panel is both a safety issue and a bottleneck for anything added to the house later -- it gets checked properly before the upgrade.",
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Built for the Poconos service area",
+    "text": "Covering a wide rural area means being ready to travel for both routine wiring and urgent repairs.",
+    "imageIndex": 10
+  },
+  "social": {
+    "heading": "From the shop and the feed",
+    "kicker": "Reference imagery -- placeholder pending real photography",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "captions": [
+      "On site",
+      "Team at work",
+      "Detail shot",
+      "Storefront",
+      "In progress",
+      "Finished result"
+    ]
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Panel Upgrades",
+        "href": "#offerings",
+        "imageIndex": 9
+      },
+      {
+        "title": "Renovation Wiring",
+        "href": "#offerings",
+        "imageIndex": 10
+      },
+      {
+        "title": "Troubleshooting & Repair",
+        "href": "#offerings",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {},
+  "closing": {
+    "cta": {
+      "label": "Get in touch",
+      "href": "#visit"
+    }
+  },
+  "links": [
+    {
+      "label": "Official website",
+      "href": "http://jt1electricinc.com/"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Electrical Services concept image 1 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Electrical Services concept image 2 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Electrical Services concept image 3 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Electrical Services concept image 4 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Electrical Services concept image 5 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Electrical Services concept image 6 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Electrical Services concept image 7 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Electrical Services concept image 8 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Electrical Services concept image 9 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Electrical Services concept image 10 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Electrical Services concept image 11 (placeholder -- real photography not yet sourced)"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Electrical Services concept image 12 (placeholder -- real photography not yet sourced)"
+    }
+  ]
+}
