@@ -1,19 +1,21 @@
 ---
 tags: [concept, ads-research]
 source: "[[12_Brain/01_Captures/2026-07-04 - full-autonomy-directive]]"
-updated: 2026-07-05
-expires: 2026-08-04
+updated: 2026-09-04
+expires: 2026-10-04
 note_type: concept
 status: active
 created: 2026-07-05
-source_refs: ["[[12_Brain/01_Captures/2026-07-04 - full-autonomy-directive]]"]
+source_refs: ["[[12_Brain/01_Captures/2026-07-04 - full-autonomy-directive]]", "https://support.google.com/google-ads/answer/17061251?hl=en", "https://support.google.com/google-ads/answer/17125145?hl=en"]
 ---
 
 
 # Google Ads Conversion Optimization — 2026 tactics
 
 One-line: how to bid, structure PMax, and diagnose no-spend for conversion-goal
-Search + PMax accounts, verified July 2026. Feeds [[02_Campaigns/Ads Ops/Ads Ops Hub]].
+Search + PMax accounts, verified July 2026, reviewed Sept 2026 — one material
+bidding-behavior change landed (Aug 17 2026, see below), rest held up.
+Feeds [[02_Campaigns/Ads Ops/Ads Ops Hub]].
 
 ## Bid strategy by conversion volume
 - **Conversion-starved line ≈ 30 conv / 30 days per campaign.** Below that,
@@ -29,6 +31,24 @@ Search + PMax accounts, verified July 2026. Feeds [[02_Campaigns/Ads Ops/Ads Ops
   clock; set-and-leave ~1-2 weeks.
 - **June 2026 renames:** "Max conv w/ tCPA" → **"Target CPA"**; "Max conv value
   w/ tROAS" → **"Target ROAS"**. Same mechanics, new labels.
+- **Aug 17 2026 — target-based bidding ends "overperformance" (act on this):**
+  Google changed how budget-limited Target CPA / Target ROAS campaigns (and
+  Target CPC for Demand Gen) bid, across Search, Shopping, PMax, Demand Gen,
+  Display, Hotel, Travel. Previously a "Limited by budget" campaign could
+  quietly beat its stated target (e.g. $10 target actually delivering $5-6
+  CPA). Now bidding pursues the literal number you typed, even across budget
+  changes — so CPA/ROAS on any budget-capped target campaign can drift toward
+  the stated target and look "worse" with no creative or targeting change
+  behind it. Daily/monthly budget caps are still respected; this doesn't
+  auto-increase spend. Only Target Impression Share, Manual CPC, and
+  non-budget-limited campaigns are unaffected.
+  **Do before reading a CPA/ROAS swing as real:** check the notification
+  banner "Review your campaign targets" (or Campaign → Settings → Bidding →
+  Review campaigns) for the **Bid Target Adjustment Tool** (live since July 6
+  2026) and either (a) accept the shift, (b) reset the target to recent actual
+  performance, (c) set a custom target reflecting the real goal, or
+  (d) switch to Maximize Conversions/Conversion Value if you want volume back.
+  Source: support.google.com/google-ads/answer/17061251 and /17125145.
 
 ## PMax
 - Fill every asset slot: 10-15 headlines, all 3 image ratios, both logo ratios,
@@ -47,9 +67,10 @@ Search + PMax accounts, verified July 2026. Feeds [[02_Campaigns/Ads Ops/Ads Ops
   better Smart Bidding signal. Foundation now cookies are dead.
 - **Requires accepting Customer Data Terms** (Goals → Settings → Customer data
   use) — the toggle does nothing until terms accepted.
-- **April 2026**: web + leads unified; can send via tag + Data Manager + API
-  simultaneously. **June 2026**: UI collapses to a single switch. Existing
-  accounts auto-migrated.
+- **April 2026 (live)**: web + leads unified; can send via tag + Data Manager +
+  API simultaneously. **June 2026 (live)**: UI collapsed to a single switch.
+  Existing accounts auto-migrated — confirm the single-toggle UI is what you
+  see before assuming legacy per-method screens still apply.
 
 ## NO-SPEND diagnostic order (cheapest/most common first)
 1. **Ads disapproved / under review** — can't serve. Check first.
@@ -63,7 +84,14 @@ Search + PMax accounts, verified July 2026. Feeds [[02_Campaigns/Ads Ops/Ads Ops
 - 30-conv floor is operator consensus, not official (Google says 15).
 - Confirm the EC single-toggle rollout is actually live in each account before
   assuming the new UI.
+- Aug 17 2026 target-bidding change: confirm whether each budget-limited
+  tCPA/tROAS campaign got the Bid Target Adjustment Tool prompt and whether
+  anyone has acted on it — don't diagnose a CPA rise as a targeting/creative
+  problem until this is ruled out first.
 
 Sources: Search Engine Land (EC unification 2026-04-10; PMax tips 2025-09-12),
 Google Ads Help (tCPA, EC, primary/secondary), growthspree/groas/blackpropeller/
-digitalapplied 2026 benchmarks.
+digitalapplied 2026 benchmarks. Sept 2026 review added: Google Ads Help
+answer/17061251 and answer/17125145 (target-based bid strategy change,
+2026-08-17, fetched directly), corroborated by Search Engine Journal and
+Search Engine Land coverage of the same change.

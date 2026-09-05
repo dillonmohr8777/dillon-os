@@ -1,28 +1,39 @@
 ---
 tags: [concept, ads-research]
 source: "[[12_Brain/01_Captures/2026-07-04 - full-autonomy-directive]]"
-updated: 2026-07-05
-expires: 2026-08-04
+updated: 2026-09-04
+expires: 2026-10-04
 note_type: concept
 status: active
 created: 2026-07-05
-source_refs: ["[[12_Brain/01_Captures/2026-07-04 - full-autonomy-directive]]"]
+source_refs: ["[[12_Brain/01_Captures/2026-07-04 - full-autonomy-directive]]", "https://developers.google.com/tag-platform/security/guides/consent", "https://support.google.com/google-ads/answer/10000067?hl=en", "https://developers.facebook.com/docs/marketing-api/gateway-products/signals-gateway/"]
 ---
 
 
 # Conversion Tracking Setup — 2026 (Google + Meta)
 
 One-line: enhanced conversions, GA4 double-counting, gclid/fbclid offline
-stitching, verification order, and primary/secondary — verified July 2026.
+stitching, verification order, and primary/secondary — verified July 2026,
+reviewed Sept 2026 (added the consent-mode deadline below).
 Feeds every [[02_Campaigns/Ads Ops/Ads Ops Hub|Ads Ops]] conversion audit.
 
-## Three 2026 deadlines
+## 2026 deadlines
 - **April 2026 (live):** Google unified user-provided data — tag + Data Manager
   + API can send hashed first-party data simultaneously; existing accounts
   auto-migrated. Re-audit any account untouched since March.
-- **June 15 2026:** legacy offline-import API (`UploadClickConversions`)
+- **June 15 2026 (live):** legacy offline-import API (`UploadClickConversions`)
   deprecated → **Data Manager API**. Custom offline uploads must migrate.
-- **June 2026:** bid-strategy renames (see [[Google Ads Conversion Optimization 2026]]).
+- **June 2026 (live):** bid-strategy renames (see [[Google Ads Conversion Optimization 2026]]).
+- **June 15 2026 (reported, verify in-account):** Google Consent Mode's
+  `ad_storage` signal is reported to have become the sole gate on whether
+  advertising cookies/IDs reach Google Ads, decoupled from the GA4 "Google
+  Signals" setting (which narrows to signed-in reporting only inside GA4).
+  Google's own consent-mode help page does not yet spell this mechanism out in
+  as many words, but it is independently and consistently described by
+  multiple consent-management vendors. Action either way: confirm `ad_storage`
+  is set to **granted** by default/on-consent wherever conversion tracking or
+  remarketing must keep working, and don't rely on the GA4 Google Signals
+  toggle to gate Ads data anymore.
 
 ## Enhanced conversions (Google)
 - SHA-256-hashed email/name/address/phone matched to signed-in Google accounts.
@@ -47,6 +58,11 @@ Feeds every [[02_Campaigns/Ads Ops/Ads Ops Hub|Ads Ops]] conversion audit.
   events now via standard **CAPI** (`action_source: "system_generated"`).
   Capture `fbclid` → convert to `fbc` (`fb.1.[ts].[fbclid]`) → store → send on
   downstream events. Don't hash fbc/fbp; DO hash email/phone/name.
+  Note: Events Manager now labels the pixel a **Dataset** (Dataset ID) — same
+  ID, cosmetic rename, don't be thrown by the new label when auditing setups.
+  Meta also now offers **Signals Gateway** as an official no-code path to
+  redundant pixel+CAPI delivery — worth checking on new builds instead of
+  hand-rolling server-side CAPI.
 
 ## Verification order
 **Google:** (1) Tag Assistant on thank-you page — fires exactly once;
@@ -64,4 +80,10 @@ within 48h; (4) check Event Match Quality.
 - Account (customer) goals apply to all campaigns; campaign-level goals override.
 
 Sources: Google Ads Help + Google Ads API docs (primary), Farsiight/groas/
-dataally (2026-02-22)/Adswerve/Measure Marketing Pro 2026.
+dataally (2026-02-22)/Adswerve/Measure Marketing Pro 2026. Sept 2026 review
+added: developers.google.com/tag-platform/security/guides/consent,
+support.google.com/google-ads/answer/10000067 (consent mode basics — does not
+itself confirm the Google Signals decoupling, flagged as reported not
+confirmed), corroborated by uniconsent.com and usercentrics.com (2026);
+developers.facebook.com/docs/marketing-api/gateway-products/signals-gateway/
+(Signals Gateway, official Meta docs).
