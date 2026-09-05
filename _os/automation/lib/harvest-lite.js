@@ -287,6 +287,16 @@ async function harvestLite(url, opts = {}) {
   }
 
   const facts = extractFacts(html, text);
+  // JSON-LD often carries the only explicit first-party logo declaration while
+  // the visible header uses a client-rendered component. Feed that declaration
+  // through the same byte-fetch/provenance path as <img> assets.
+  const addJsonLdLogos = (value) => {
+    if (!value || typeof value !== 'object') return;
+    if (typeof value.logo === 'string') pushImage(value.logo, 'logo');
+    else if (value.logo && typeof value.logo === 'object') pushImage(value.logo.url || value.logo.contentUrl, 'logo');
+    for (const child of Object.values(value)) addJsonLdLogos(child);
+  };
+  for (const block of facts.jsonLd || []) addJsonLdLogos(block);
   const wordCount = text ? text.split(/\s+/).filter(Boolean).length : 0;
 
   const limitations = [
@@ -307,6 +317,9 @@ async function harvestLite(url, opts = {}) {
     source: 'harvest-lite',
     siteUrl: url,
     finalUrl: audit.finalUrl || url,
+    officialSocialUrls: [...html.matchAll(/<a\b[^>]*\bhref=["']([^"']+)["']/gi)]
+      .map(m => { try { return new URL(m[1], audit.finalUrl || url).href; } catch { return ''; } })
+      .filter(Boolean),
     ok: true,
     harvestedAt: new Date().toISOString().slice(0, 10),
     renderPending: audit.renderPending === true,

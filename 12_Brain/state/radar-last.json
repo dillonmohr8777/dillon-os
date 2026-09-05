@@ -19,7 +19,7 @@
     "imagery_buildable": 0
   },
   "tracked": 1364,
-  "build_queue_size": 245,
+  "build_queue_size": 0,
   "needs_render": 0,
   "mean_site_quality": 54,
   "by_verdict": {
@@ -29,5 +29,14 @@
     "nurture": 197,
     "ads_seo": 29
   },
-  "errors": []
+  "errors": [],
+  "active": 0,
+  "logo_holds": 1346,
+  "logo_hold_reasons": {
+    "logo_provenance_missing": 1207,
+    "previous_homepage_exists": 139
+  },
+  "by_verdict_active": {},
+  "eligibility_reconciled_at": "2026-09-05T17:27:49.148Z",
+  "completed_primary_reference_homepages": 20
 }

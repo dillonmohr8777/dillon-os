@@ -28,6 +28,7 @@
 const { DIMENSIONS } = require('./site-grader');
 const { BRAND, TOKENS, cssVariables, lockup, LOCKUP_CSS } = require('./brand');
 const { HOMEPAGE_IMAGE_SLOTS } = require('./imagery');
+const { assessLogoEligibility } = require('./logo-eligibility');
 
 const BAND_COLORS = {
   broken: 'var(--s-broken)',
@@ -57,6 +58,7 @@ const QUEUES = [
   { key: 'polish', label: 'Polish', verdicts: ['polish'], sort: 'p', desc: 'Working sites with fixable gaps. A retainer or a paid tune-up, not a rebuild pitch.' },
   { key: 'traffic', label: 'Traffic', verdicts: ['ads_seo', 'nurture'], sort: 'q', desc: 'Sorted by site quality, best first. A genuinely good site means sell traffic, not a redesign.' },
   { key: 'enrich', label: 'Re-audit', verdicts: ['enrich'], sort: 'p', desc: 'Not enough signal to route. These need another pass before they mean anything.' },
+  { key: 'logo_hold', label: 'Held prospects', logoHeld: true, sort: 'n', desc: 'Audit history only: missing logo proof, duplicate businesses, and companies with an existing homepage stay outside active queues.' },
   { key: 'all', label: 'Everything', verdicts: null, sort: 'p', desc: 'The whole registry. Search and filter to find anything the queues do not surface.' },
 ];
 
@@ -169,7 +171,8 @@ function coverageBar(label, total, rebuild, max) {
  * tr trend · tl trend delta · hp has phone · f faults · hl headline
  * of offer · na next action · dm dimensions [score, evidenceCode]
  * gh grade history [date, sqs, band]
- * bd buildable · iu usable images · il has logo
+ * bd buildable · iu usable images · il has logo · ra active exact-logo eligibility
+ * ls logo status · lr logo hold reason
  * ce has email · cfm has contact form · cn named contacts · cg agency incumbent
  *
  * Every key is listed above for one reason: `cf` was once used for both
@@ -181,6 +184,8 @@ function coverageBar(label, total, rebuild, max) {
 function projectRows(prospects) {
   return (prospects || []).map((p) => {
     const c = p.current || {};
+    const proof = assessLogoEligibility(p);
+    const le = p.radar_eligibility?.eligible === false ? p.radar_eligibility : proof;
     const dm = {};
     for (const [key, d] of Object.entries(c.dimensions || {})) {
       dm[key] = [Number.isFinite(Number(d?.score)) ? Math.round(Number(d.score)) : null, EVIDENCE_CODE[d?.evidence] ?? 0];
@@ -211,9 +216,13 @@ function projectRows(prospects) {
       hp: p.has_phone ? 1 : 0,
       // Imagery: bd = buildable, iu = usable image count, il = has a logo.
       // Absent means never checked, which is different from "checked and empty".
-      bd: p.imagery ? (p.imagery.buildable ? 1 : 0) : null,
+      bd: p.imagery ? (p.imagery.buildable && le.eligible ? 1 : 0) : null,
       iu: p.imagery ? Number(p.imagery.usable) || 0 : null,
-      il: p.imagery?.logo ? 1 : 0,
+      il: le.eligible ? 1 : 0,
+      ra: le.eligible ? 1 : 0,
+      ls: le.status,
+      lr: le.reason,
+      le: proof.eligible ? proof : null,
       // Contact routes as flags only. The addresses live in the gitignored
       // private store; this page is published and must never carry one.
       ce: p.contact ? (p.contact.has_email ? 1 : 0) : null,
@@ -283,7 +292,7 @@ function crossTab(rows) {
     const g = r.g || 'unknown';
     areas.set(a, (areas.get(a) || 0) + 1);
     groups.set(g, (groups.get(g) || 0) + 1);
-    const k = `${a} ${g}`;
+    const k = `${a}\0${g}`;
     const cur = cells.get(k) || { n: 0, rebuild: 0 };
     cur.n += 1;
     if (r.r === 'rebuild') cur.rebuild += 1;
@@ -395,6 +404,10 @@ function clientScript() {
 
   function matches(r) {
     var qd = queueDef(state.queue);
+    if (qd.logoHeld && r.ra === 1) return false;
+    // Held history remains searchable in Everything, but never leaks into an
+    // active verdict queue or a buildable count.
+    if (!qd.logoHeld && qd.key !== 'all' && r.ra !== 1) return false;
     if (qd.verdicts && qd.verdicts.indexOf(r.r) < 0) return false;
     if (qd.buildableOnly && r.bd !== 1) return false;
     var f = state.filters;
@@ -478,6 +491,7 @@ function clientScript() {
       '<td class="c-trend">' + trendHtml(r) + '</td>' +
       '<td class="c-prio"><strong>' + n(r.p) + '</strong>' +
         (r.bd === 1 ? '<span class="ready" title="owns enough imagery for a homepage concept">ready</span>' : '') +
+        (r.ra !== 1 ? '<span class="hold" title="' + esc(r.lr || 'logo verification pending') + '">' + (r.lr === 'previous_homepage_exists' ? 'already built' : 'held') + '</span>' : '') +
         (r.cg === 1 ? '<span class="agency" title="their published contact goes to a marketing agency — there is an incumbent">agency</span>' : '') +
       '</td>' +
       '<td class="c-why">' + esc((r.f && r.f.length ? S(r.f[0]) : '') || S(r.hl)) + '</td>' +
@@ -525,7 +539,8 @@ function clientScript() {
             .filter(Boolean).join(', ') || 'none published'],
       ['Own imagery', r.bd === null ? 'not checked yet'
         : (r.bd ? 'enough for a homepage' : 'not enough') +
-          ' — ' + r.iu + ' usable' + (r.il ? ', logo found' : ', no logo')],
+           ' — ' + r.iu + ' usable' + (r.il ? ', logo found' : ', no logo')],
+      ['Logo eligibility', r.ra === 1 ? 'verified exact first-party logo' : 'held — ' + (r.lr || 'provenance pending')],
     ];
     var faults = (r.f || []).length
       ? '<ul class="det__faults">' + r.f.map(function (f) { return '<li>' + esc(S(f)) + '</li>'; }).join('') + '</ul>'
@@ -760,14 +775,16 @@ function renderDashboard(summary, opts = {}) {
   // Queue counts come from the projected rows so the tab numbers can never
   // disagree with what clicking the tab actually shows.
   // Counted from the projected rows so the stat and the queue tab agree.
-  const buildableNow = rows.filter((r) => r.r === 'rebuild' && r.bd === 1).length;
+  const buildableNow = rows.filter((r) => r.ra === 1 && r.r === 'rebuild' && r.bd === 1).length;
   const imageryChecked = rows.filter((r) => r.bd !== null).length;
 
   const queueCounts = {};
   for (const q of QUEUES) {
-    queueCounts[q.key] = q.verdicts
-      ? rows.filter((r) => q.verdicts.includes(r.r) && (!q.buildableOnly || r.bd === 1)).length
-      : rows.length;
+    queueCounts[q.key] = q.logoHeld
+      ? rows.filter((r) => r.ra !== 1).length
+      : q.verdicts
+        ? rows.filter((r) => r.ra === 1 && q.verdicts.includes(r.r) && (!q.buildableOnly || r.bd === 1)).length
+        : rows.length;
   }
 
   const lifecycleOrder = ['new', 'graded', 'queued_build', 'built', 'mailed', 'client', 'excluded'];
@@ -1310,7 +1327,7 @@ ${changeFeed(s)}
           .map((a) => {
             const tds = ct.groupKeys
               .map((g) => {
-                const cell = ct.cells.get(`${a} ${g}`) || { n: 0, rebuild: 0 };
+                const cell = ct.cells.get(`${a}\0${g}`) || { n: 0, rebuild: 0 };
                 const shade = cell.n > 0 ? 0.08 + (cell.n / cellMax) * 0.5 : 0;
                 const rr = cell.n > 0 ? (cell.rebuild / cell.n) * 100 : 0;
                 return `<td><span class="mx__c${cell.n ? '' : ' mx__z'}" style="background:rgba(76,107,138,${shade.toFixed(2)})" title="${esc(a)} · ${esc(g)}: ${cell.n} prospects, ${cell.rebuild} rebuild">${cell.n || '·'}${cell.n ? `<i style="width:${rr.toFixed(0)}%"></i>` : ''}</span></td>`;

@@ -29,6 +29,7 @@
 const path = require('path');
 const { repoPath, readJson, writeJson, ensureDir, todayISO } = require('./fsutil');
 const { sanitizeForGit } = require('./discovery');
+const { assessLogoEligibility, applyLogoEligibility, dedupeDecisions } = require('./logo-eligibility');
 
 const REGISTRY_PATH = '12_Brain/state/radar/registry.json';
 
@@ -117,6 +118,15 @@ function save(registry, file = REGISTRY_PATH) {
   return abs;
 }
 
+function logoEligibility(prospect) {
+  return assessLogoEligibility(prospect);
+}
+
+function isRadarEligible(prospect) {
+  if (!prospect) return false;
+  return dedupeDecisions([prospect])[0].eligible === true;
+}
+
 /**
  * Add newly discovered candidates. Existing entries keep their history and
  * lifecycle state — discovery must never clobber what we already know, or a
@@ -141,6 +151,8 @@ function upsertDiscovered(registry, candidates, { today = todayISO() } = {}) {
       existing.area = existing.area || c.area || '';
       existing.vertical = existing.vertical || c.vertical || '';
       existing.vertical_group = existing.vertical_group || c.vertical_group || '';
+      existing.official_social_urls = existing.official_social_urls || c.official_social_urls || [];
+      if (c.logo_eligibility || c.logo_provenance) existing.logo_eligibility = c.logo_eligibility || c.logo_provenance;
       existing.last_seen_in_discovery = today;
       existing.times_discovered = (existing.times_discovered || 1) + 1;
       stats.refreshed += 1;
@@ -160,6 +172,13 @@ function upsertDiscovered(registry, candidates, { today = todayISO() } = {}) {
       // Presence only — the number itself never enters a tracked file.
       has_phone: !!c.phone || !!c.has_phone,
       source: c.source || 'unknown',
+      official_social_urls: Array.isArray(c.official_social_urls) ? c.official_social_urls : [],
+      // Discovery is allowed to find a business before its first-party logo is
+      // verified. The row stays in history, but cannot enter active queues.
+      logo_eligibility: c.logo_eligibility || c.logo_provenance || {
+        status: 'pending',
+        reason: 'logo_verification_pending',
+      },
       lifecycle: 'new',
       first_seen: today,
       last_seen_in_discovery: today,
@@ -318,10 +337,36 @@ function setLifecycle(registry, domain, lifecycle, { note = '', today = todayISO
   return p;
 }
 
+/** Record a logo decision without dropping the prospect or its grade history. */
+function setLogoEligibility(registry, domain, evidence, { today = todayISO() } = {}) {
+  const p = registry.prospects[domain];
+  if (!p) return null;
+  const result = applyLogoEligibility(p, evidence, { today });
+  p.priority_score = priorityScore(p);
+  return result;
+}
+
 /** Everything the dashboard and the daily digest need, computed in one pass. */
 function summarize(registry, { today = todayISO() } = {}) {
   const all = Object.values(registry.prospects);
   const actionable = all.filter((p) => p.lifecycle !== 'client' && p.lifecycle !== 'excluded');
+  // Logo verification is a hard active-radar gate. Keep held rows in the
+  // returned registry projection so operators can audit and resolve them, but
+  // only verified rows feed queues, rankings, or active movers.
+  const logoDecisions = new Map();
+  const decisions = dedupeDecisions(actionable);
+  for (const [index, p] of actionable.entries()) {
+    const decision = decisions[index];
+    logoDecisions.set(p.domain, decision);
+    p.radar_eligibility = decision;
+    p.logo_status = decision.status;
+    p.logo_hold_reason = decision.eligible ? '' : decision.reason;
+    if (!p.logo_eligibility) {
+      p.logo_eligibility = { status: decision.status, reason: decision.reason };
+    }
+  }
+  const active = actionable.filter((p) => logoDecisions.get(p.domain)?.eligible === true);
+  const held = actionable.filter((p) => logoDecisions.get(p.domain)?.eligible !== true);
   // Ranking policy can change independently of a site's last audit. Recompute
   // every actionable row when the dashboard is built so the statewide policy
   // takes effect immediately instead of waiting months for old rows to regrade.
@@ -329,6 +374,7 @@ function summarize(registry, { today = todayISO() } = {}) {
   const graded = actionable.filter((p) => p.current && p.current.sqs != null);
 
   const byVerdict = {};
+  const byVerdictActive = {};
   const byGroup = {};
   const byArea = {};
   const byBand = {};
@@ -345,17 +391,27 @@ function summarize(registry, { today = todayISO() } = {}) {
     if (v === 'rebuild') byArea[a].rebuild += 1;
     if (p.current?.band) byBand[p.current.band] = (byBand[p.current.band] || 0) + 1;
   }
+  for (const p of active) {
+    const v = p.current?.verdict || 'ungraded';
+    byVerdictActive[v] = (byVerdictActive[v] || 0) + 1;
+  }
 
-  const buildQueue = actionable
+  const logoHoldReasons = {};
+  for (const p of held) {
+    const reason = logoDecisions.get(p.domain)?.reason || 'logo_provenance_missing';
+    logoHoldReasons[reason] = (logoHoldReasons[reason] || 0) + 1;
+  }
+
+  const buildQueue = active
     .filter((p) => p.current?.verdict === 'rebuild')
     .sort((a, b) => (b.priority_score || 0) - (a.priority_score || 0));
 
-  const trafficQueue = actionable
+  const trafficQueue = active
     .filter((p) => p.current?.verdict === 'ads_seo' || p.current?.verdict === 'nurture')
     .sort((a, b) => (b.current?.sqs || 0) - (a.current?.sqs || 0));
 
-  const needsRender = actionable.filter((p) => p.current?.verdict === 'verify');
-  const movers = actionable
+  const needsRender = active.filter((p) => p.current?.verdict === 'verify');
+  const movers = active
     .filter((p) => p.trend === 'declined' || p.trend === 'improved')
     .sort((a, b) => Math.abs(b.trend_delta || 0) - Math.abs(a.trend_delta || 0));
   const newToday = all.filter((p) => p.first_seen === today);
@@ -371,10 +427,16 @@ function summarize(registry, { today = todayISO() } = {}) {
       ? Math.round(graded.reduce((s, p) => s + p.current.sqs, 0) / graded.length)
       : null,
     by_verdict: byVerdict,
+    by_verdict_active: byVerdictActive,
     by_vertical_group: byGroup,
     by_area: byArea,
     by_band: byBand,
     build_queue_size: buildQueue.length,
+    active: active.length,
+    held: held.length,
+    logo_eligible: active.length,
+    logo_holds: held.length,
+    logo_hold_reasons: logoHoldReasons,
     build_queue: buildQueue,
     traffic_queue: trafficQueue,
     needs_render: needsRender,
@@ -447,6 +509,8 @@ function summarize(registry, { today = todayISO() } = {}) {
     // can be searched and filtered rather than merely read. Callers that persist
     // a summary (radar-last.json) cherry-pick fields and never see this.
     prospects: actionable,
+    active_prospects: active,
+    held_prospects: held,
     lifecycle: all.reduce((acc, p) => {
       acc[p.lifecycle] = (acc[p.lifecycle] || 0) + 1;
       return acc;
@@ -462,7 +526,10 @@ module.exports = {
   slimDimensions,
   dueForRecheck,
   setLifecycle,
+  setLogoEligibility,
   summarize,
+  logoEligibility,
+  isRadarEligible,
   priorityScore,
   geoWeight,
   addDays,

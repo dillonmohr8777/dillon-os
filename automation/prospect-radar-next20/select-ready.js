@@ -6,6 +6,7 @@ const path = require('path');
 const crypto = require('crypto');
 const { spawnSync } = require('child_process');
 const { resolveGeneratedStockAssignment } = require('./generated-stock-categories');
+const { dedupeDecisions } = require('../../_os/automation/lib/logo-eligibility');
 
 const root = path.resolve(__dirname, '..', '..');
 const codexRoot = path.resolve(root, '..', '..');
@@ -623,18 +624,8 @@ async function probe(candidate) {
   const startedAt = new Date().toISOString();
   try {
     const generatedStock = generatedStockEvidence(candidate, slug);
-    const cachedSource = path.join(directory, 'SOURCE.json');
-    if (fs.existsSync(cachedSource)) {
-      const source = JSON.parse(fs.readFileSync(cachedSource, 'utf8'));
-      const cachedFiles = [source.logo?.fileName, ...(source.references || []).map((item) => item.fileName)].filter(Boolean);
-      const cachedLogo = source.logo?.fileName ? path.join(directory, source.logo.fileName) : null;
-      const cachedAlpha = cachedLogo && fs.existsSync(cachedLogo) ? rasterAlphaAudit(cachedLogo, source.logo.type) : { ok: false };
-      const cachedReferences = (source.references || []).map((item) => path.join(directory, item.fileName));
-      const cachedVisualsOk = cachedReferences.length > 0 && cachedReferences.every((file) => fs.existsSync(file) && rasterVisualAudit(file).ok);
-      if (cachedFiles.length >= 2 && cachedFiles.every((file) => fs.existsSync(path.join(directory, file))) && cachedAlpha.ok && cachedVisualsOk) {
-        return { candidate, slug, ready: true, source, generatedStock, startedAt, finishedAt: new Date().toISOString(), cached: true };
-      }
-    }
+    // Re-fetch on every selection attempt. Cached files cannot prove that the
+    // current official source still serves the reviewed business logo.
     const { response, bytes } = await fetchWithLimit(candidate.website, { accept: 'text/html,application/xhtml+xml;q=0.9,*/*;q=0.2', maxBytes: 4 * 1024 * 1024, timeoutMs: 16000 });
     const contentType = response.headers.get('content-type') || '';
     if (!/html|xhtml/i.test(contentType) && !/<html[\s>]/i.test(bytes.toString('utf8', 0, 1024))) throw new Error('official source did not return HTML');
@@ -645,6 +636,10 @@ async function probe(candidate) {
     const assets = discoverAssetUrls(html, response.url);
     const logo = await downloadLogo(assets.logos, directory);
     if (logo.error) throw new Error(`exact transparent logo unavailable: ${logo.error}`);
+    if (logo.sourceUrl !== candidate.logoEligibility.source_url ||
+        (logo.sourceSha256 || logo.sha256) !== candidate.logoEligibility.source_sha256) {
+      throw new Error('Fetched logo differs from the reviewed exact business logo');
+    }
     const referenceResult = await downloadReferences(assets.references, directory, logo.sha256);
     if (!referenceResult.references.length) throw new Error('no usable first-party visual reference');
     const colors = extractBrandColors(html, logo.raw, logo.type);
@@ -745,12 +740,18 @@ async function main() {
   fs.mkdirSync(batchDir, { recursive: true });
   const registry = JSON.parse(fs.readFileSync(registryPath, 'utf8'));
   const prior = scanPriorEvidence();
-  const rawCandidates = Object.values(registry.prospects || {})
+  const rows = Object.values(registry.prospects || {});
+  const logoDecisions = dedupeDecisions(rows);
+  writeBoth('LOGO-HOLDS.json', rows.flatMap((row, index) => logoDecisions[index].eligible ? [] :
+    [{ domain: row.domain, name: row.business_name, ...logoDecisions[index] }]));
+  const rawCandidates = rows
+    .filter((row, index) => logoDecisions[index].eligible)
     .map((prospect) => {
       const domain = normalizeDomain(prospect.domain || prospect.website);
       return {
         domain,
         website: prospect.website,
+        logoEligibility: prospect.logo_eligibility || prospect.logo_provenance || prospect.imagery?.logo_eligibility,
         name: prospect.business_name,
         city: prospect.city || '',
         area: prospect.area || '',

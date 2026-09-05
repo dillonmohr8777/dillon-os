@@ -6,6 +6,7 @@ const path = require('path');
 const crypto = require('crypto');
 const { spawnSync } = require('child_process');
 const { runBatch } = require('../../_templates/site-factory/build-batch.js');
+const { assessLogoEligibility, dedupeDecisions } = require('../../_os/automation/lib/logo-eligibility');
 
 const root = path.resolve(__dirname, '..', '..');
 const runId = process.env.PROSPECT_RADAR_RUN_ID || process.argv[2];
@@ -242,6 +243,10 @@ async function prepare() {
   if (selection.selection?.length !== 20 || sourceStatus.selected?.length !== 20) throw new Error('Exactly 20 selected and source-ready rows are required.');
 
   const sourceByDomain = new Map(sourceStatus.selected.map((source) => [source.domain, source]));
+  const eligibility = dedupeDecisions(selection.selection.map(item => ({
+    ...(registry.prospects[item.domain] || {}), slug: item.slug,
+  })));
+  if (eligibility.some(result => !result.eligible)) throw new Error('Selected batch contains an unverified or duplicate business logo');
   const fontDirectories = new Map();
   for (const pair of fontPairs) fontDirectories.set(pair.id, await ensureFontPair(pair));
 
@@ -250,6 +255,11 @@ async function prepare() {
     const source = sourceByDomain.get(item.domain);
     if (!source) throw new Error(`Missing source evidence for ${item.domain}`);
     const prospect = registry.prospects[item.domain] || {};
+    const reviewedLogo = assessLogoEligibility(prospect);
+    if (!reviewedLogo.eligible || source.logo.sourceUrl !== reviewedLogo.source_url ||
+        (source.logo.sourceSha256 || item.logoSha256) !== reviewedLogo.source_sha256) {
+      throw new Error(`Logo review no longer matches selected source for ${item.domain}`);
+    }
     const rank = item.rank;
     const pair = fontPairs[(rank - 1) % fontPairs.length];
     const palette = palettes[(rank - 1) % palettes.length];

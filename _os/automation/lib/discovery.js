@@ -444,6 +444,14 @@ function toCandidates(elements, opts = {}) {
     const cls = classify(tags);
     const city = tags['addr:city'] || '';
     const street = [tags['addr:housenumber'], tags['addr:street']].filter(Boolean).join(' ');
+    const officialSocialUrls = [
+      tags['contact:facebook'], tags.facebook,
+      tags['contact:instagram'], tags.instagram,
+      tags['contact:twitter'], tags.twitter,
+      tags['contact:x'], tags.x,
+      tags['contact:linkedin'], tags.linkedin,
+      tags['contact:tiktok'], tags.tiktok,
+    ].filter(Boolean);
     seen.set(domain, {
       prospect_id: `osm:${el.type}/${el.id}`,
       business_name: tags.name || tags['name:en'] || domain,
@@ -461,6 +469,9 @@ function toCandidates(elements, opts = {}) {
       phone: tags.phone || tags['contact:phone'] || '',
       location_count: 1,
       is_service_franchise: isServiceFranchise(tags),
+      // These are discovery hints only. They do not make a logo eligible until
+      // an exact account match and official-site link are explicitly validated.
+      official_social_urls: [...new Set(officialSocialUrls)],
       osm_type: el.type,
       osm_id: el.id,
       lat: el.lat ?? (el.center ? el.center.lat : null),
