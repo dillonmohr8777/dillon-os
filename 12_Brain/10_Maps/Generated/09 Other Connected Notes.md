@@ -4,7 +4,7 @@ status: active
 generated: true
 generated_by: Update-SecondBrainMaps
 map_type: domain
-updated: 2026-09-02
+updated: 2026-09-03
 tags:
   - brain
   - map
@@ -40,10 +40,6 @@ Visible notes that do not yet belong to a stable operating domain.
 - [[.github/skills/dillon-frontend-maker/SKILL|SKILL]]
 - [[.github/skills/dillon-independent-web-checker/SKILL|SKILL]]
 - [[.github/skills/dillon-plan-grill/SKILL|SKILL]]
-
-## Vault front doors
-
-- [[GROK-HANDOFF-DILLON-OS|GROK-HANDOFF-DILLON-OS]]
 
 ## 08_Prospects
 
