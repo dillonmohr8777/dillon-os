@@ -1,25 +1,28 @@
 ---
-last_sync: 2026-07-12
-evidence_window_start: 2026-06-21
-tags: [system, memory, sync]
+last_sync: 2099-01-15
+tags: [system, memory]
 ---
 
 # Claude Memory Sync
 
-Use `01_Clients/Client Index.md` as the canonical current roster. Do not use April notes or file modified timestamps to infer active status.
+Operator snapshot for cross-session continuity. Updated by competitive-task-orchestrator.
 
-## Active clients
+## Pending deliverables
 
-Kimberly James Bridal; Omega Landscaping & Concrete; On-Site Concrete & Landscape; Shadow Heating & Cooling; Replenish; Fagan Painting; Capsule & Tonic; Bar Crawl USA; Revive Systems; Hope Wellness Center; Pro Fence & Deck; Everyday Life Insurance; VA Claims; Bridge Software Development.
+- Cindy May Christmas — site build approved; blocked on video destination, newsletter, photo map, Shopify (`due: 2026-09-01`, overdue).
+- BOK Law Firm — weekly three-topic content kit predicted 2026-09-08–09-10; prep only until source packet fingerprinted.
 
-## Separate lane
+## Unanswered / urgent
 
-Align HCM is active full-time work and not a client.
+- 4 Momentum 360 Slack asks in `00_Inbox/slack/` (since ~2026-07-30).
+- BigOrange Marketing website build — `needs_approval` on canonical queue.
+- Bar Crawl USA paid-media optimization — `needs_approval` on canonical queue.
 
-## Routing rules
+## Upcoming deadlines (7 days)
 
-- Require current evidence inside the rolling 21-day window before adding a client.
-- Never restore a removed name from old Gmail or historical notes alone.
-- Keep Replenish isolated by brand, campaign, conversion, UTM, and report.
-- Treat current rates and MRR as unknown until invoice or contract verification.
-- No send, publish, deploy, spend, or account mutation without approval.
+- None with due dates in the next 48h on vault scan.
+
+## Vault health
+
+- 40 / 40 client files stalled 7+ days on `last_touched`.
+- Latest inbox brief: inbox-brief-2026-09-04.md.

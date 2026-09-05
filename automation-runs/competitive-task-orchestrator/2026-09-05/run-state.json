@@ -1,0 +1,25 @@
+{
+  "workflow_id": "competitive-task-orchestrator",
+  "date": "2026-09-05",
+  "started_at": "2026-09-05T13:07:28.407Z",
+  "completed_at": "2026-09-05T13:07:28.407Z",
+  "mode": "vault-fallback",
+  "lanes": {
+    "gmail": "vault-fallback",
+    "slack": "vault-fallback",
+    "vault": "ok",
+    "sessions": "ok",
+    "ads": "signals",
+    "content": "skipped"
+  },
+  "lane_outputs": {
+    "vault-pulse": "automation-runs/competitive-task-orchestrator/2026-09-05/lane-outputs/vault-pulse.md",
+    "codex-session-sync": "automation-runs/competitive-task-orchestrator/2026-09-05/lane-outputs/codex-session-sync.md",
+    "domain-ads-seo": "automation-runs/competitive-task-orchestrator/2026-09-05/lane-outputs/domain-ads-seo.md",
+    "gmail-intel": "automation-runs/competitive-task-orchestrator/2026-09-05/lane-outputs/gmail-intel.md",
+    "slack-intel": "automation-runs/competitive-task-orchestrator/2026-09-05/lane-outputs/slack-intel.md",
+    "content-routines": "automation-runs/competitive-task-orchestrator/2026-09-05/lane-outputs/content-routines.md"
+  },
+  "p0_count": 5,
+  "stalled_clients": 40
+}

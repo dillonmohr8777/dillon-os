@@ -1,0 +1,13 @@
+version = 1
+id = "competitive-task-orchestrator"
+kind = "cron"
+name = "Competitive Task Umbrella Orchestrator"
+prompt = "Run the Dillon OS competitive-task-orchestrator umbrella cycle. Read System/competitive-task-orchestrator-prompt.md and System/competitive-task-definition.md. Phase 1: launch gmail-intel, slack-intel, vault-pulse, codex-session-sync, domain-ads-seo, and content-routines (if day-gated) in parallel via subagents under .cursor/agents/. Phase 2: run memory-consolidator sequentially. Required outputs: Daily-Briefs/competitive-task-today.md, automation-runs/competitive-task-orchestrator/YYYY-MM-DD/run-state.json and lane-outputs/*.md, System/routine-health.md, System/claude-memory-sync.md. Vault fallback is acceptable when Gmail/Slack MCP is unavailable — do not fail the run. Tier 0 only: no send, publish, deploy, spend, or account mutation."
+status = "ACTIVE"
+rrule = "DTSTART;TZID=America/New_York:20260904T130000\nRRULE:FREQ=DAILY"
+model = "inherit"
+execution_environment = "cloud"
+target = { type = "repository", repository = "dillonmohr8777/dillon-os" }
+notes = "Supersedes daily-morning-orchestrator-dry-board and seven legacy morning crons. See 04_SOPs/competitive-task-orchestrator.md."
+created_at = 1756992000000
+updated_at = 1756992000000

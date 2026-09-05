@@ -37,6 +37,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 
 - [[12_Brain/03_Concepts/Second Brain Architecture|Second Brain Architecture]] — vault-as-codebase: raw → compiled pages → linked graph.
 - [[12_Brain/03_Concepts/Context Economy|Context Economy]] — read by trail not sweep; tier model use.
+- [[12_Brain/03_Concepts/Competitive Task|Competitive Task]] — one umbrella daily orchestrator with parallel intel lanes.
 - [[12_Brain/03_Concepts/Research Verification Loop|Research Verification Loop]] — fan-out research with a skeptic gate.
 - [[12_Brain/03_Concepts/Truth Hierarchy|Truth Hierarchy]] — live surfaces beat memory beat artifacts.
 - [[12_Brain/03_Concepts/Draft-First Operating Rules|Draft-First Operating Rules]] — draft unless explicitly told to send.

@@ -1,6 +1,6 @@
 ---
 tags: [system, operating-status]
-last_updated: 2026-07-19
+last_updated: 2026-09-05
 callsign: D.I.L.L.O.N.
 operator: Dillon Mohr
 goal_label: ACTIVE CLIENTS
@@ -38,3 +38,10 @@ The vault was reconciled on 2026-07-12 against current work from the rolling thr
 - Refresh the roster weekly using current Slack, Gmail, Ads, project, and delivery evidence.
 - Do not revive a removed name from historical notes without current evidence.
 - No send, publish, deploy, campaign mutation, spend change, or client-account change without explicit approval.
+
+## Daily operator cycle (2026-09-05)
+
+- **Umbrella automation:** `competitive-task-orchestrator` — cron `0 13 * * *` ET.
+- **Today's brief:** `Daily-Briefs/competitive-task-today.md` (6 parallel intel lanes + memory consolidator).
+- **MCP status:** Gmail/Slack yellow (vault-fallback); connect Composio to go green.
+- **P0:** Cindy May Christmas overdue; 4 stale M360 Slack asks; BigOrange + Bar Crawl approval gates.
