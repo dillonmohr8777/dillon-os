@@ -6,7 +6,7 @@ created: 2026-08-03
 updated: 2026-08-03
 owner: Dillon Mohr
 client_id: "fagan-painting"
-client: "[[01_Clients/Fagan Painting/overview]]"
+client: "[[_archive/01_Clients/Fagan Painting/overview]]"
 period_start: 2026-07-01
 period_end: 2026-07-31
 generated_at: "2026-08-03T15:42:46.330Z"
@@ -15,7 +15,7 @@ delivery_status: "slack-draft-only-unsent"
 archived_artifact: "12_Brain/01_Captures/Reports/2026-07/fagan-painting/momentum-360-july-2026-fagan-painting-lead-accounting-r1-e5dd1481.pdf"
 artifact_sha256: e5dd14811e0810ece91c9bc268c4bbe6d65efd8cfaceb560b7840b7fa9266f2c
 source_refs:
-  - "[[01_Clients/Fagan Painting/overview]]"
+  - "[[_archive/01_Clients/Fagan Painting/overview]]"
   - "C:/Users/dillo/Documents/Codex/projects/client-operations/clients/momentum-360/deliverables/2026-08-02-july-2026-client-monthly-reports/email-pdfs/Momentum-360-July-2026-Fagan-Painting.pdf"
   - "C:/Users/dillo/Documents/Codex/projects/client-operations/clients/momentum-360/deliverables/2026-08-02-july-2026-client-monthly-reports/README.md"
   - "C:/Users/dillo/Documents/Codex/projects/client-operations/clients/momentum-360/deliverables/2026-08-02-july-2026-client-monthly-reports/qa-checklist.json"
@@ -41,7 +41,7 @@ tags:
 - [[12_Brain/07_Reviews/Reports/README|Report Archive]]
 - [[12_Brain/03_Concepts/Client Reporting and Outcome Scoreboards|Client reporting and outcome scoreboards]]
 - [[11_Agents/Reporting Agent|Reporting Agent]]
-- [[01_Clients/Fagan Painting/overview|Fagan Painting]]
+- [[_archive/01_Clients/Fagan Painting/overview|Fagan Painting]]
 
 ## Report
 

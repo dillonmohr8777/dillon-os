@@ -54,7 +54,7 @@ Invoke these by name with the Skill tool:
 
 | Repo | What it is |
 |---|---|
-| `shadow-heating-website` | Next.js production client site |
+| `shadow-heating-website` | Former client, retired 2026-09-05; site frozen on Netlify, do not build |
 | `immohrtal-website` | Vite/React public preview |
 | `immohrtal-kimi-redesign` | isolated redesign preview |
 | `bigorange-marketing-homepage` | cinematic editorial homepage |

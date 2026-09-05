@@ -1,6 +1,8 @@
 ---
 tags: [client, momentum360]
-status: active
+status: former
+retired: 2026-09-05
+retired_reason: owner-confirmed retired client, no active work (2026-09-05 sweep)
 industry: real estate
 start_date: 2026-03-01
 rate: $200/mo

@@ -86,7 +86,6 @@ for the two npm-based sites below.
 |---|---|---|---|---|
 | D.I.L.L.O.N. OS (HUD) — flagship | `_os/` | `node _os/server.js` | http://127.0.0.1:4242 | Reads the vault + `12_Brain` live. `GET /api/state` includes `brain` vitals. |
 | IMMOHRTAL site | `immohrtal-site/` | `npm run dev` | http://localhost:5173 | Vite 6 + React 19. Append `?forcegl` in headless/VM browsers. |
-| Shadow HVAC site | `01_Clients/Shadow HVAC/website/` | `npm run dev` | http://localhost:3000 | Next.js 15. First route compile is slow. |
 | Mohr Media site | `mohr-media-site/` | `python3 -m http.server 8080` | http://localhost:8080 | Static HTML/JS/WebGL. |
 | Philly 25 gallery | `philly-sites/` | `python3 -m http.server 8080` | http://localhost:8080 | Static HTML. |
 | Client report builder (CLI) | `_os/reporting/` | `node _os/reporting/build-report.js <data.json>` | — | Writes HTML into `Daily-Briefs/reports/`. |
@@ -110,7 +109,7 @@ node --test _os/test/brain-hud.test.js _os/test/public-safety.test.js _os/test/w
 
 - Deterministic tests cover `12_Brain` structure, HUD brain vitals, skill path
   wiring, and public-safety scanning.
-- `01_Clients/Shadow HVAC/website` declares `npm run lint` (`next lint`) but has
+- `_archive/01_Clients/Shadow HVAC/website` (archived client site) declares `npm run lint` (`next lint`) but has
   no ESLint config — interactive only; do not run non-interactively.
 - `immohrtal-site` has no lint script.
 

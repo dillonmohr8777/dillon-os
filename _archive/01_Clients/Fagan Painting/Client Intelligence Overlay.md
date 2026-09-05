@@ -1,6 +1,8 @@
 ---
 note_type: client_intelligence
-status: active
+status: former
+retired: 2026-09-05
+retired_reason: owner-confirmed retired client, no active work (2026-09-05 sweep)
 client: Fagan Painting
 client_id: fagan-painting
 relationship: client
