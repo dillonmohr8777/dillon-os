@@ -2,8 +2,8 @@
 note_type: concept
 status: active
 created: 2026-08-18
-updated: 2026-08-18
-source_refs: ["12_Brain/11_Craft/00_Index.md", "System/browser-access.policy.json"]
+updated: 2026-09-05
+source_refs: ["12_Brain/11_Craft/00_Index.md", "System/browser-access.policy.json", "12_Brain/state/agent-craft-brief.json", "_os/automation/bin/agent-craft-brief.js"]
 tags: [craft, agent-infrastructure, lessons]
 ---
 
@@ -228,3 +228,52 @@ routine that was still keying dedupe daily until the cadence fix landed on 08-18
 **How to apply.** Treat the brief's `unreliable` list as a queue to investigate, not a
 list of broken things. Read `last_completed` and the failure timestamps before concluding
 anything is currently failing.
+
+---
+
+## 2026-09-05 — A window measured in files, not days, cannot go stale
+
+**Lesson.** When a routine selects its input by taking the last N files, its reported
+window keeps its shape forever after the writer stops. The window number stays right
+while the window itself rots, so nothing downstream — the state ledger, the HUD, the
+next reader — has any signal that the routine is measuring a corpse.
+
+**Evidence.** `_os/automation/bin/agent-craft-brief.js` `loadDays()` does
+`.sort().slice(-limit)` over `12_Brain/queue/claude-loop-*.jsonl` with no date filter.
+The receipt writer, `System/scripts/Invoke-ClaudeLoop.ps1`, last produced a file for
+2026-08-18. `12_Brain/state/agent-craft-brief.json` as committed recorded
+`generated_for: 2026-09-02`, `window_days: 3`, `status: "ok"` — over receipt days
+`2026-08-16..2026-08-18`, already 15 days old. Re-running it on 2026-09-05 returned a
+byte-identical analysis with `generated_for` moved forward 3 days: same `days` array,
+same 22 routines, same 10 workhorses. Three days of "successful" runs, zero new
+information. The last brief in `12_Brain/11_Craft/` is dated 2026-08-19.
+
+**How to apply.** Any routine that picks input by filename must also report the age of
+its newest input, and any state ledger entry must carry that age next to `status`.
+`status: "ok"` answers "did the code finish", never "was there anything to read". The
+schema at `12_Brain/schemas/automation-run.json` already offers `"dry-run"` in its
+status enum; a run that wrote nothing should use it instead of `"ok"`.
+
+---
+
+## 2026-09-05 — Separate the gates a human must open from the gates a human must answer
+
+**Lesson.** A fail-closed run that stops on a mixed set of blockers will re-run against
+the same set forever. Access blockers need a session; data blockers need a sentence.
+They are not the same escalation and must not be batched into one "blocked" state.
+
+**Evidence.** `wi-20260718-0003` (Momentum caller auto-response) failed closed twice on
+2026-09-03 — `7d7c612` at 03:03 and `faee50b` at 22:08, ~19 hours apart — with an
+identical blocker list in
+`evidence/2026-09-03-caller-auto-response-acceptance-blocker.md`. Three of the four
+blockers genuinely need Dillon at a keyboard (CallRail membership, locked Bitwarden
+vault, browser-control runtime). The fourth — "the exact Track 360 and Google Suspension
+test destinations are not recorded in the canonical work item" — needs two phone numbers
+typed into the canonical record. The second run re-verified the HubSpot portal, re-read
+CallRail ingestion, and re-derived the same four blockers rather than raising the one
+cheap gate on its own.
+
+**How to apply.** Classify each blocker as `needs-access` or `needs-data` when writing
+the evidence note. Raise `needs-data` as its own line in
+`System/approval-queue.md` with the exact field and the exact file it belongs in, and do
+not re-run the full acceptance attempt while an unanswered `needs-data` gate stands.
