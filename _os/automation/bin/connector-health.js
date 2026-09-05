@@ -27,7 +27,6 @@
  * Exit 0 = at least one connector fresh. Exit 2 = none fresh (blocked, not failed).
  */
 
-const fs = require('fs');
 const { repoPath, readJson } = require('../lib/fsutil');
 
 const STATE = repoPath('12_Brain/state/connector-health.json');
@@ -39,29 +38,17 @@ function argInt(flag, dflt) {
   return Number.isFinite(n) ? n : dflt;
 }
 
-function main() {
-  const windowHours = argInt('--window-hours', 48);
-  const state = readJson(STATE, null);
-
-  if (!state || !Array.isArray(state.connectors)) {
-    const out = {
-      automation_id: 'connector-health',
-      status: 'blocked',
-      detail: 'no connector-health state recorded; an MCP-capable agent must write it first',
-      state_path: '12_Brain/state/connector-health.json',
-    };
-    process.stdout.write(`${JSON.stringify(out, null, 2)}\n`);
-    process.exit(2);
-  }
-
-  const nowMs = fs.statSync(STATE).mtimeMs;
+function buildReport(state, windowHours, nowMs = Date.now()) {
   const rows = state.connectors.map((c) => {
     // Age from the connector's own observation stamp, not the file mtime: one
     // stale connector inside a freshly-rewritten file must still read as stale.
     const seen = Date.parse(c.last_verified_utc || '');
-    const ageH = Number.isFinite(seen) ? Number(((nowMs - seen) / 3.6e6).toFixed(2)) : null;
+    // Compare on the unrounded age. Rounding first let an observation written
+    // seconds before the file read as 0.00h and slip through a zero-hour window.
+    const ageExact = Number.isFinite(seen) ? (nowMs - seen) / 3.6e6 : null;
+    const ageH = ageExact === null ? null : Number(ageExact.toFixed(2));
     const usable = c.status === 'active' && c.read_verified === true
-      && ageH !== null && ageH <= windowHours;
+      && ageExact !== null && ageExact > 0 && ageExact <= windowHours;
     return {
       toolkit: c.toolkit,
       status: c.status,
@@ -82,8 +69,29 @@ function main() {
     recorded_by: state.recorded_by || 'unknown',
     recorded_at_utc: state.recorded_at_utc || null,
   };
-  process.stdout.write(`${JSON.stringify(out, null, 2)}\n`);
-  process.exit(fresh.length ? 0 : 2);
+  return out;
 }
 
-main();
+function main() {
+  const windowHours = argInt('--window-hours', 48);
+  const state = readJson(STATE, null);
+
+  if (!state || !Array.isArray(state.connectors)) {
+    const out = {
+      automation_id: 'connector-health',
+      status: 'blocked',
+      detail: 'no connector-health state recorded; an MCP-capable agent must write it first',
+      state_path: '12_Brain/state/connector-health.json',
+    };
+    process.stdout.write(`${JSON.stringify(out, null, 2)}\n`);
+    process.exit(2);
+  }
+
+  const out = buildReport(state, windowHours);
+  process.stdout.write(`${JSON.stringify(out, null, 2)}\n`);
+  process.exit(out.status === 'ok' ? 0 : 2);
+}
+
+if (require.main === module) main();
+
+module.exports = { buildReport };

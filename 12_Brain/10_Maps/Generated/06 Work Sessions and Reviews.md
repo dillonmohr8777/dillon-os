@@ -21,7 +21,6 @@ Inbox material, sessions, daily briefs, dashboards, and dated operating context.
 
 ## Vault front doors
 
-- [[2026-06-04|2026-06-04]]
 - [[Dashboard|Dashboard]]
 - [[INDEX|INDEX]]
 

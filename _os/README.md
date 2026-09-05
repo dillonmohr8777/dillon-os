@@ -20,6 +20,8 @@ Deck buttons; the dashboard itself works without it).
 | **Directives** | `## Today` checkboxes in `Dashboard.md`, topped up from the latest daily brief's priority stack |
 | **Documents** | most recently modified notes |
 | **Core + hero number** | `System/OS Config.md` frontmatter — `primary_directive`, `goal_current`, `goal_target` |
+| **Loop Health** | one row per automation in `12_Brain/registry/automations.json` joined to its `12_Brain/state/<id>.json` by the timestamp the run wrote (never file mtime); fresh ≤48h, stale ≤7d, dead beyond; loose state files show as *not in registry* |
+| **Connectors** | `12_Brain/state/connector-health.json` as recorded by an MCP-capable agent; a chip is usable only when active, read-verified, and observed within 48h |
 | **Command Deck** | one button per skill in `.claude/skills/` — daily ops plus brain loops (`session-mine`, `vault-compile`, `wiki-lint`, `synthesize`, `research-sweep`) |
 | **Schedule** | the `## Schedule` list in `System/OS Config.md` |
 | **AI Wire** | recent vault activity when idle; live Claude output while a skill runs |
@@ -42,7 +44,7 @@ They also work straight from a terminal: `claude "/am-report"`.
 ## Tests
 
 ```
-node --test _os/test/brain-hud.test.js _os/test/public-safety.test.js
+node --test _os/test/brain-hud.test.js _os/test/loop-health.test.js _os/test/public-safety.test.js
 ```
 
 Deterministic checks for `12_Brain` structure, no `1Z_Brain` rival, skill path
