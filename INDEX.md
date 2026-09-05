@@ -77,6 +77,7 @@ links instead of loading the entire vault.
   Prospect build: [[02_Campaigns/With Not For/With Not For|With Not For (Jack Lesser)]].
   Backend: [[12_Brain/02_Entities/Cloudflare D1 Radar|Cloudflare D1 Radar]] (database live, Worker deploy approval-gated).
   Access: [[12_Brain/09_Ops/Connector Map|Connector Map]] (what is live, what is missing, connect order).
+  Repos: [[12_Brain/09_Ops/Repository Access Map|Repository Access Map]] (48 GitHub repos, 10 reachable remotely, path map, write boundaries).
   New skill: [[.claude/skills/franchise-list|franchise-list]] on [[12_Brain/02_Entities/Vibe Prospecting|Vibe Prospecting]] (spend-gated franchise location pulls).
 - [[12_Brain/07_Reviews/README|Reviews]] — daily, weekly, and quarterly
   synthesis.
@@ -94,3 +95,4 @@ links instead of loading the entire vault.
 - [[12_Brain/Bases/Strategy Library.base|Strategy Library Base]]
 - [[12_Brain/Bases/Client Strategy Overlays.base|Client Strategy Overlays Base]]
 - [[12_Brain/09_Ops/Client Intelligence Coverage|Client Intelligence Coverage]]
+- [[12_Brain/09_Ops/Repository Access Map|Repository Access Map]]
