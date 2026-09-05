@@ -218,6 +218,7 @@ function digest(summary, run) {
   L.push(`# Prospect Radar — ${summary.generated}`);
   L.push('');
   L.push(`Tracking **${summary.total}** businesses. Found ${run.discovered_new} new today, re-audited ${run.regraded}.`);
+  L.push(`**${summary.active}** are active with a verified exact logo; **${summary.logo_holds}** remain held for logo verification.`);
   L.push(`**${summary.build_queue_size}** qualify for a rebuild right now; ${(summary.needs_render || []).length} are blocked on a render pass.`);
   L.push('');
   L.push(`Dashboard: \`${DASHBOARD_PATH}\` · queue CSV: \`${CSV_PATH}\``);
@@ -443,20 +444,27 @@ async function main() {
   // they own enough photographs to replace it with.
   if (args.imagery > 0) {
     const needCheck = Object.values(registry.prospects)
-      .filter((p) => p.current?.verdict === 'rebuild' && p.website)
-      .filter((p) => imageryStale(p, { today }))
+      // Logo verification is a Radar-wide active-eligibility gate. Work through
+      // every unresolved row, not only rebuild targets, while keeping the daily
+      // network budget bounded and leaving clients/excluded history untouched.
+      .filter((p) => p.lifecycle !== 'client' && p.lifecycle !== 'excluded' && p.website)
+      .filter((p) => !radar.isRadarEligible(p) || imageryStale(p, { today }))
       .sort((a, b) => (b.priority_score || 0) - (a.priority_score || 0))
       .slice(0, args.imagery);
 
     if (needCheck.length) {
-      process.stderr.write(`  imagery: checking ${needCheck.length} rebuild target(s)\n`);
+      process.stderr.write(`  imagery: checking ${needCheck.length} radar row(s)\n`);
       const st = await surveyImagery(registry, needCheck, {
         today, concurrency: Math.min(6, args.concurrency), need: HOMEPAGE_IMAGE_SLOTS,
       });
       run.imagery_checked = st.checked;
       run.imagery_buildable = st.buildable;
+      run.logo_verified = st.logo_verified;
+      run.logo_pending = st.logo_pending;
+      run.logo_rejected = st.logo_rejected;
       process.stderr.write(
-        `  imagery: ${st.buildable} buildable now, ${st.partial} partial, ${st.none} with nothing usable\n`
+        `  imagery: ${st.buildable} buildable now, ${st.logo_verified} exact logos verified, ` +
+        `${st.logo_pending} pending, ${st.logo_rejected} rejected; ${st.partial} partial, ${st.none} with nothing usable\n`
       );
     }
   }
@@ -482,10 +490,14 @@ async function main() {
     rotation_slot: `${slot.market}: ${areaLabel}`,
     run,
     tracked: summary.total,
+    active: summary.active,
+    logo_holds: summary.logo_holds,
+    logo_hold_reasons: summary.logo_hold_reasons,
     build_queue_size: summary.build_queue_size,
     needs_render: (summary.needs_render || []).length,
     mean_site_quality: summary.mean_site_quality,
     by_verdict: summary.by_verdict,
+    by_verdict_active: summary.by_verdict_active,
     errors: run.errors,
   };
 
@@ -510,17 +522,18 @@ async function main() {
     ['queue csv', () => {
       const f = repoPath(CSV_PATH);
       ensureDir(path.dirname(f));
-      // Operator rule: we do not build for sites with no photographs. A row
+       // Operator rule: we do not build for sites without a verified exact logo
+       // or photographs. A row
       // whose imagery was checked and came back empty stays a rebuild target in
       // the registry (their site is still bad), but is held out of the working
       // queue, because a homepage concept with broken-image slots pitches
       // nothing. Unchecked rows stay in: absence of a check is not evidence of
       // absence of photos.
-      const buildable = summary.build_queue.filter(
-        (p) => !(p.imagery && p.imagery.checked && p.imagery.usable === 0)
-      );
-      const excluded = summary.build_queue.length - buildable.length;
-      if (excluded > 0) process.stderr.write(`  build queue: ${excluded} row(s) held out pending generated imagery (briefs in 12_Brain/state/radar/image-briefs)\n`);
+       const buildable = summary.build_queue.filter(
+         (p) => radar.isRadarEligible(p) && !(p.imagery && p.imagery.checked && p.imagery.usable === 0)
+       );
+       const excluded = summary.build_queue.length - buildable.length;
+       if (excluded > 0) process.stderr.write(`  build queue: ${excluded} row(s) held pending first-party imagery (briefs in 12_Brain/state/radar/image-briefs)\n`);
       fs.writeFileSync(f, toCsv(buildable));
     }],
     ['digest', () => {
@@ -549,11 +562,14 @@ async function main() {
         rotation: state.rotation_slot,
         discovered_new: run.discovered_new,
         regraded: run.regraded,
-        enriched: run.enriched,
-        tracked: summary.total,
-        build_queue: summary.build_queue_size,
+         enriched: run.enriched,
+         tracked: summary.total,
+         active: summary.active,
+         logo_holds: summary.logo_holds,
+         build_queue: summary.build_queue_size,
         needs_render: state.needs_render,
-        by_verdict: summary.by_verdict,
+         by_verdict: summary.by_verdict,
+         by_verdict_active: summary.by_verdict_active,
         dashboard: DASHBOARD_PATH,
         digest: `Daily-Briefs/radar-${today}.md`,
         errors: run.errors,
