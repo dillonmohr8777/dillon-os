@@ -1,7 +1,8 @@
 # Real Philadelphia for Grand Theft Bureaucracy
 
 A drop-in world builder that replaces the invented district with a real one:
-449 building footprints at their LiDAR-measured heights and 216 street
+449 building footprints at their LiDAR-measured heights, 12 sourced crown
+tiers restoring the towers the survey cannot see, and 216 street
 centrelines, straight from the City of Philadelphia survey.
 
 ## Why this fits without a rewrite
@@ -64,10 +65,23 @@ scale, stone through the pre-war midrise, curtain wall above - and anything
 more specific would be invention. Window rhythm, parapets, cornices and lit
 windows are procedural, as in the shipped builder.
 
+**Sourced separately:** the crowns. The LiDAR measures the dominant roof mass,
+so a slender tower or spire returns too few points to register. Five buildings
+therefore arrive short — City Hall as its 170 ft cornice rather than its 548 ft
+tower. Their published architectural heights live in
+`../data/philly-crowns.json` and export as extra rows flagged `crown: true`,
+stacked on top of the measured mass, never replacing it. `_build_crown_tier`
+draws them: no `_building_rects` entry, so a tier never blocks a spawn or a
+pedestrian route at street level; material taken from the building below rather
+than from the tier's own 24 m; and no punched windows on a spire.
+
+The heights are sourced. The shape of the stack is not: tier widths read in
+silhouette, and tiers are centred on the footprint, so City Hall's tower rises
+from the middle of the block rather than over one portal.
+
 **Not modelled:** roof shape. `approx_hgt` is a single number, so every
-building is a flat-topped extrusion. City Hall reads as its 170 ft cornice,
-not its 548 ft tower. See `../docs/SOURCES.md` for the full table of where the
-survey understates a landmark.
+building is a flat-topped extrusion. See `../docs/SOURCES.md` for the full
+table of where the survey understates a landmark.
 
 ## Landmarks
 
@@ -92,5 +106,7 @@ district. The shipped GTB district is 248 m square; this one is 840 m.
 
 `npm test` covers the export: frame declaration, physical plausibility, id
 uniqueness, grid alignment, the real tower heights, road classes, landmark
-sites, City Hall's position under the rotation, and a guard that the GDScript
-only calls `civic_kit` helpers and materials that actually exist.
+sites, City Hall's position under the rotation, that every crown tier stacks on
+a real building without gap or overlap and narrows as it rises, that City Hall
+reaches exactly 548 ft above its own grade, and a guard that the GDScript only
+calls `civic_kit` helpers and materials that actually exist.

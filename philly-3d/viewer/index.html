@@ -165,6 +165,7 @@ the city, plus and minus zoom. Hold shift for larger steps.</p>
 <script src="js/gl.js"></script>
 <script src="js/phlbin.js"></script>
 <script src="js/mesh.js"></script>
+<script src="js/crowns.js"></script>
 <script src="js/sun.js"></script>
 <script src="js/camera.js"></script>
 <script src="js/collision.js"></script>
@@ -183,6 +184,7 @@ the city, plus and minus zoom. Hold shift for larger steps.</p>
   let viewer;
   try {
     viewer = new Viewer(canvas, statusEl);
+    window.__viewer = viewer;      // handle for headless capture and debugging
   } catch (err) {
     document.body.classList.add('no-webgl');
     if (String(err.message) !== 'WEBGL2_UNAVAILABLE') {
@@ -248,6 +250,7 @@ the city, plus and minus zoom. Hold shift for larger steps.</p>
   });
 
   try {
+    await viewer.loadCrowns('../data/philly-crowns.json');
     await viewer.load('../data/philly-buildings.bin');
     await viewer.loadGround('../data/philly-ground.bin');
     await viewer.loadWater('../data/philly-water.bin');

@@ -24,6 +24,7 @@ class Viewer {
     this.camera = new Camera({ target: [0, 0, 30], distance: 3200,
       azimuth: 232, elevation: 24 });
     this.city = null;
+    this.crowns = new Map();         // objectid -> crown entry, see crowns.js
     this.tiles = new Map();          // "tx,ty" -> {vao, vbo, count, bounds}
     this.pending = new Set();
     this.triCount = 0;
@@ -139,6 +140,19 @@ class Viewer {
     this.status(`${this.city.buildingCount.toLocaleString()} buildings`);
     this.setTime(this.date);
     return this.city;
+  }
+
+  // The crown table: skyline the LiDAR survey cannot see. Optional — the city
+  // renders correctly without it, just with flat-topped towers.
+  async loadCrowns(url) {
+    try {
+      const res = await fetch(url);
+      if (!res.ok) return 0;
+      this.crowns = indexCrowns(await res.json());
+    } catch (err) {
+      this.crowns = new Map();
+    }
+    return this.crowns.size;
   }
 
   // Parks and street centrelines, one flat inlay just above the ground plane.
@@ -257,6 +271,10 @@ class Viewer {
       if (!want.has(key) || want.get(key).minH !== entry.minH) {
         this.gl.deleteVertexArray(entry.vao);
         this.gl.deleteBuffer(entry.vbo);
+        if (entry.crownVao) {
+          this.gl.deleteVertexArray(entry.crownVao);
+          this.gl.deleteBuffer(entry.crownVbo);
+        }
         this.triCount -= entry.tris;
         this.tiles.delete(key);
       }
@@ -282,24 +300,49 @@ class Viewer {
       `${this.city.buildingCount.toLocaleString()} buildings in the dataset`);
   }
 
-  uploadTile(key, mesh, decoded, minH) {
+  // One city-format VAO: position, height, packed tint/kind.
+  cityVao(data) {
     const gl = this.gl;
     const vao = gl.createVertexArray();
     gl.bindVertexArray(vao);
     const vbo = gl.createBuffer();
     gl.bindBuffer(gl.ARRAY_BUFFER, vbo);
-    gl.bufferData(gl.ARRAY_BUFFER, mesh.data, gl.STATIC_DRAW);
+    gl.bufferData(gl.ARRAY_BUFFER, data, gl.STATIC_DRAW);
     const stride = VERTEX_FLOATS * 4;
     const pos = gl.getAttribLocation(this.progCity, 'aPos');
     const hgt = gl.getAttribLocation(this.progCity, 'aHeight');
+    const top = gl.getAttribLocation(this.progCity, 'aTop');
     const tk = gl.getAttribLocation(this.progCity, 'aTintKind');
     gl.enableVertexAttribArray(pos);
     gl.vertexAttribPointer(pos, 3, gl.FLOAT, false, stride, 0);
     gl.enableVertexAttribArray(hgt);
     gl.vertexAttribPointer(hgt, 1, gl.FLOAT, false, stride, 12);
+    gl.enableVertexAttribArray(top);
+    gl.vertexAttribPointer(top, 1, gl.FLOAT, false, stride, 16);
     gl.enableVertexAttribArray(tk);
-    gl.vertexAttribPointer(tk, 1, gl.FLOAT, false, stride, 16);
+    gl.vertexAttribPointer(tk, 1, gl.FLOAT, false, stride, 20);
     gl.bindVertexArray(null);
+    return { vao, vbo };
+  }
+
+  uploadTile(key, mesh, decoded, minH) {
+    const { vao, vbo } = this.cityVao(mesh.data);
+
+    // Crowns ride with the tile they belong to so they are evicted with it.
+    // They ignore the LOD height filter: a spire is the whole reason its
+    // building is worth drawing from three kilometres away.
+    let crownVao = null, crownVbo = null, crownCount = 0, crownTris = 0;
+    let crownTile = null;
+    const crowned = buildCrownTile(decoded, this.crowns);
+    if (crowned) {
+      const cm = buildTileMesh(crowned, null);
+      if (cm.vertexCount) {
+        const b = this.cityVao(cm.data);
+        crownVao = b.vao; crownVbo = b.vbo;
+        crownCount = cm.vertexCount; crownTris = cm.triCount;
+        crownTile = crowned;
+      }
+    }
 
     let minx = Infinity, miny = Infinity, maxx = -Infinity, maxy = -Infinity, maxz = 0;
     for (let i = 0; i < decoded.total; i++) {
@@ -312,10 +355,18 @@ class Viewer {
       const top = decoded.base[i] + decoded.height[i];
       if (top > maxz) maxz = top;
     }
+    if (crownTile) {
+      for (let i = 0; i < crownTile.n; i++) {
+        const top = crownTile.base[i] + crownTile.height[i];
+        if (top > maxz) maxz = top;
+      }
+    }
     this.collider.addTile(decoded);
-    this.tiles.set(key, { vao, vbo, count: mesh.vertexCount, tris: mesh.triCount,
+    this.tiles.set(key, { vao, vbo, count: mesh.vertexCount,
+      tris: mesh.triCount + crownTris,
+      crownVao, crownVbo, crownCount, crownTile,
       minH, decoded, bounds: [minx, miny, -30, maxx, maxy, maxz + 5] });
-    this.triCount += mesh.triCount;
+    this.triCount += mesh.triCount + crownTris;
   }
 
   rebuildShadows() {
@@ -327,7 +378,10 @@ class Viewer {
     this.shadowOrigin = [ox, oy];
     this.heightGrid.fill(0);
     const tiles = [];
-    for (const e of this.tiles.values()) if (e.decoded) tiles.push(e.decoded);
+    for (const e of this.tiles.values()) {
+      if (e.decoded) tiles.push(e.decoded);
+      if (e.crownTile) tiles.push(e.crownTile);   // a 378 ft tower casts a real shadow
+    }
     rasterizeHeights(this.heightGrid, SHADOW_SIZE, SHADOW_SIZE,
       ox, oy, SHADOW_CELL, tiles);
     this.shadowGrid = shadowCeiling(this.heightGrid, SHADOW_SIZE, SHADOW_SIZE,
@@ -507,6 +561,10 @@ class Viewer {
       if (!boxInFrustum(planes, b[0], b[1], b[2], b[3], b[4], b[5])) continue;
       gl.bindVertexArray(e.vao);
       gl.drawArrays(gl.TRIANGLES, 0, e.count);
+      if (e.crownCount) {
+        gl.bindVertexArray(e.crownVao);
+        gl.drawArrays(gl.TRIANGLES, 0, e.crownCount);
+      }
       drawn++;
     }
     if (this.beamCount && this.showPins) {

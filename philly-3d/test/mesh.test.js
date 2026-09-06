@@ -105,4 +105,15 @@ test('tint is deterministic and in range', () => {
   assert.strictEqual(a, b);
   assert.ok(a >= 0 && a <= 1);
   assert.notStrictEqual(ctx.tintFor(1), ctx.tintFor(2));
+
+  // The tint is packed alongside integer kind flags and used as a mix factor,
+  // so it has to stay inside [0, 1]. It did not: ^= returns a signed int32.
+  let lo = Infinity, hi = -Infinity;
+  for (let id = 1; id < 200000; id++) {
+    const t = ctx.tintFor(id);
+    if (t < lo) lo = t;
+    if (t > hi) hi = t;
+  }
+  assert.ok(lo >= 0, `tint went negative: ${lo}`);
+  assert.ok(hi <= 1, `tint went over one: ${hi}`);
 });

@@ -9,7 +9,12 @@ const path = require('node:path');
 
 const DIR = path.join(__dirname, '..', 'godot', 'data');
 const district = JSON.parse(fs.readFileSync(path.join(DIR, 'philadelphia_district.json'), 'utf8'));
-const buildings = JSON.parse(fs.readFileSync(path.join(DIR, 'philadelphia_buildings.json'), 'utf8')).buildings;
+const rows = JSON.parse(fs.readFileSync(path.join(DIR, 'philadelphia_buildings.json'), 'utf8')).buildings;
+// Crown tiers ride in the same array so the engine's build loop needs no new
+// plumbing, but they are not footprints: no ring, no unique id, no street
+// presence. Every invariant below that is about footprints excludes them.
+const crowns = rows.filter((r) => r.crown);
+const buildings = rows.filter((r) => !r.crown);
 
 test('the district declares its frame and bearing', () => {
   assert.strictEqual(district.frame.up, '+Y');
@@ -31,6 +36,55 @@ test('every building is physically plausible', () => {
     assert.ok(Number.isFinite(b.rot_y));
     assert.ok(Array.isArray(b.ring) && b.ring.length >= 3, `ring on ${b.id}`);
   }
+});
+
+test('crown tiers stack on a real building without replacing it', () => {
+  assert.ok(crowns.length > 0, 'no crown tiers were exported');
+  assert.strictEqual(district.crown_count, crowns.length);
+  const byId = new Map(buildings.map((b) => [b.id, b]));
+  const stackTop = new Map();
+  for (const c of crowns) {
+    const mass = byId.get(c.id);
+    assert.ok(mass, `crown for ${c.of} has no surveyed building under it`);
+    assert.ok(c.height > 0 && c.height < 200, `tier height ${c.height} on ${c.of}`);
+    assert.ok(c.size[0] > 0 && c.size[1] > 0);
+    assert.strictEqual(c.rot_y, mass.rot_y, `${c.of}: tier is not on the block axes`);
+    assert.ok(typeof c.solid === 'boolean');
+    // the mass is drawn exactly as surveyed; the tier starts where it ends
+    const massTop = mass.centre[1] + mass.height;
+    const floorOf = stackTop.get(c.id) ?? massTop;
+    assert.ok(Math.abs(c.centre[1] - floorOf) < 0.05,
+      `${c.of} ${c.kind}: tier floor ${c.centre[1]} but the stack reached ${floorOf}`);
+    assert.ok(c.size[0] <= mass.size[0] + 0.01 && c.size[1] <= mass.size[1] + 0.01,
+      `${c.of} ${c.kind}: tier is wider than the building`);
+    stackTop.set(c.id, c.centre[1] + c.height);
+  }
+  // and every tier is narrower than the one below it
+  const seen = new Map();
+  for (const c of crowns) {
+    const prev = seen.get(c.id);
+    if (prev) {
+      assert.ok(Math.max(c.size[0], c.size[1]) < Math.max(prev[0], prev[1]) + 0.01,
+        `${c.of} ${c.kind}: the stack widens as it rises`);
+    }
+    seen.set(c.id, c.size);
+  }
+});
+
+test('City Hall gets its tower back, to the published height', () => {
+  const tiers = crowns.filter((c) => c.of === 'City Hall');
+  assert.strictEqual(tiers.length, 4, 'City Hall should have four tiers');
+  const mass = buildings.find((b) => tiers[0].id === b.id);
+  const top = tiers[tiers.length - 1];
+  const aboveGrade = (top.centre[1] + top.height - mass.centre[1]) / 0.3048;
+  assert.ok(Math.abs(aboveGrade - 548) < 0.5,
+    `City Hall reaches ${aboveGrade.toFixed(1)} ft above its grade, not 548`);
+  // the tower is squared to the block, near its real 30 m width
+  const tower = tiers[0];
+  assert.ok(Math.abs(tower.size[0] - tower.size[1]) < 0.01, 'the tower is not square');
+  assert.ok(tower.size[0] > 24 && tower.size[0] < 36,
+    `tower is ${tower.size[0]} m across`);
+  assert.ok(tiers.every((t) => t.solid), 'the granite tower should not be curtain wall');
 });
 
 test('nothing escapes the district window', () => {

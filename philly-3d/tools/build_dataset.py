@@ -31,6 +31,7 @@ import pack                                                           # noqa: E4
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(HERE, "buildings.ndjson")
 OUT = os.path.join(HERE, "dist")
+CROWNS = os.path.join(HERE, "data", "philly-crowns.json")   # authored, not generated
 
 SIMPLIFY_TOL = 0.25       # metres
 MIN_AREA = 8.0            # m^2 - below this is survey noise, not a building
@@ -47,13 +48,21 @@ FLAG_EST_HEIGHT = 16
 # because the crown or spire is too slender for the return. Recorded here with
 # the published architectural height so the renderer can add a labelled crown
 # instead of silently rewriting the measurement. See docs/SOURCES.md.
-CROWNED = {
-    "City Hall": 548.0,
-    "One Liberty Place": 945.0,
-    "Two Liberty Place": 848.0,
-    "Comcast Innovation and Technology Center": 1121.0,
-    "BNY Mellon Center": 792.0,
-}
+# Published architectural heights for buildings whose crown the LiDAR survey
+# cannot see. Read from data/philly-crowns.json rather than duplicated here, so
+# the table the renderer draws and the table this pipeline records are the same
+# table and cannot drift apart.
+def _load_crowns():
+    path = CROWNS
+    try:
+        with open(path, encoding="utf-8") as fh:
+            doc = json.load(fh)
+    except FileNotFoundError:
+        return {}
+    return {c["name"]: float(c["architectural_ft"]) for c in doc.get("crowns", [])}
+
+
+CROWNED = _load_crowns()
 
 
 def main():

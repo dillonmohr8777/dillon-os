@@ -36,10 +36,48 @@ City Hall is the sharpest case: 170 ft with a 153,719 sq ft footprint is the
 main building's cornice line, and the tower that actually defines the skyline
 is missing entirely.
 
-**How this is handled.** The measured value is never overwritten. Landmarks
-whose silhouette is understated are listed in `tools/build_dataset.py` under
-`CROWNED` with their published height in a separate `crown_ft` field, so a
-renderer can add a labelled crown and a reader can always see both numbers.
+### Crowns
+
+**The measured value is never overwritten.** The five buildings whose published
+architectural height exceeds their measured roof mass carry a separate crown
+entry in `data/philly-crowns.json`, keyed by `objectid` so a crown can never
+attach to the wrong building. `tools/build_dataset.py` reads that same file into
+the `crown_ft` field of `philly-landmarks.json`, so the table the renderer draws
+and the table the pipeline records cannot drift apart. A reader always sees both
+numbers.
+
+The renderer draws the surveyed mass exactly as surveyed, then stacks the crown
+above it as separately sourced geometry (`viewer/js/crowns.js`,
+`viewer/js/mesh.js`). The Godot export emits the same tiers as rows flagged
+`crown: true` (`tools/export_godot.py`).
+
+| Building | Measured | Published | Tiers | Added |
+|---|---:|---:|---:|---:|
+| Comcast Technology Center | 914 ft | 1,121 ft | 2 | +207 ft |
+| One Liberty Place | 677 ft | 945 ft | 3 | +268 ft |
+| Two Liberty Place | 754 ft | 848 ft | 2 | +94 ft |
+| BNY Mellon Center | 744 ft | 792 ft | 1 | +48 ft |
+| City Hall | 170 ft | 548 ft | 4 | +378 ft |
+
+Three Logan Square (+12 ft) and the FMC Tower (+14 ft) are within the survey's
+own noise and have no crown entry: the difference would not be visible, and
+nothing in the layer sources those two figures.
+
+**What is sourced and what is approximated.** The heights are published
+architectural heights, and they are what the top tier reaches. The *shape* of
+the stack is not surveyed: tier widths and the intermediate heights are chosen
+to read correctly in silhouette. Two approximations are worth naming:
+
+- Tiers are centred on the footprint. City Hall's tower therefore rises from
+  the middle of the block rather than over one portal — a horizontal error of
+  a few tens of metres on a 548 ft tower.
+- City Hall's surveyed footprint is the whole 152 x 148 m block, so its tiers
+  are squared to the block's own axes rather than scaled from its outline;
+  scaling the outline would wrap the tower around the courtyard.
+
+`to_ft` shares `approx_hgt`'s datum: height above the building's own grade. The
+footprint's `base_elevation` is added back when the tier is placed, so City
+Hall's 34.5 ft grade is not silently swallowed.
 
 ## Supporting layers
 

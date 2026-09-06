@@ -12,7 +12,8 @@ extends RefCounted
 ## keep working untouched.
 ##
 ## Where the shipped builder invents a district, this one reads one: 449 real
-## building footprints at their LiDAR-measured heights and 216 real street
+## building footprints at their LiDAR-measured heights, 12 sourced crown tiers
+## restoring the towers the survey cannot see, and 216 real street
 ## centrelines, exported from the City of Philadelphia survey by
 ## philly-3d/tools/export_godot.py.
 ##
@@ -182,10 +183,18 @@ func _build_one(root: Node3D, entry: Dictionary, index: int) -> void:
 	var height := maxf(3.0, float(entry.get("height", 9.0)))
 	var base := float(c[1])
 	var yaw := float(entry.get("rot_y", 0.0))
+	var is_crown: bool = bool(entry.get("crown", false))
 
-	var footprint := Vector2(maxf(4.0, float(s[0])), maxf(4.0, float(s[1])))
+	# A crown tier can legitimately be a 4 m mast; only real footprints get the
+	# 4 m floor that keeps a collapsed survey polygon from vanishing.
+	var floor_size := 1.0 if is_crown else 4.0
+	var footprint := Vector2(maxf(floor_size, float(s[0])), maxf(floor_size, float(s[1])))
 	var centre := Vector2(float(c[0]), float(c[2]))
 	var position := Vector3(centre.x, base + height * 0.5, centre.y)
+
+	if is_crown:
+		_build_crown_tier(root, entry, centre, footprint, height, base, yaw, index)
+		return
 
 	var facade := _facade_for(height, index)
 	kit.box(root, "Building", position, Vector3(footprint.x, height, footprint.y),
@@ -200,6 +209,40 @@ func _build_one(root: Node3D, entry: Dictionary, index: int) -> void:
 			kit.mat("stone_pale"), Vector3(centre.x, top - 0.9, centre.y), yaw)
 	if facade != "glass_tower" and facade != "glass_office":
 		_punch_windows(centre, footprint, height, base, yaw, index)
+
+
+## A crown tier: published architectural height stacked on the surveyed mass.
+##
+## The LiDAR survey measures the dominant roof mass, so a slender tower, spire
+## or mast returns too few points to register and City Hall arrives as its
+## 170 ft cornice. These rows come from philly-3d/data/philly-crowns.json and
+## are drawn ABOVE the measured mass, never in place of it.
+##
+## Three things a tier must not inherit from the normal path: it is not a
+## footprint, so it never enters _building_rects and never blocks a spawn or a
+## pedestrian route at street level; its own height is small, so the height
+## band would call a 24 m spire a rowhouse; and a spire with punched office
+## windows looks wrong in a way a plain shaft does not.
+func _build_crown_tier(root: Node3D, entry: Dictionary, centre: Vector2,
+		footprint: Vector2, height: float, base: float, yaw: float, index: int) -> void:
+	var solid: bool = bool(entry.get("solid", false))
+	var facade := "stone_pale" if solid else _facade_for(_mass_height(entry, height), index)
+	var position := Vector3(centre.x, base + height * 0.5, centre.y)
+	kit.box(root, "Crown", position, Vector3(footprint.x, height, footprint.y),
+		kit.mat(facade), true, yaw)
+	if not solid and footprint.x > 6.0 and footprint.y > 6.0:
+		_punch_windows(centre, footprint, height, base, yaw, index)
+
+
+## Material for a framed crown tier comes from the building it sits on, not from
+## the tier's own height: One Liberty's setback is curtain wall like the shaft
+## below it, whatever its own 24 m would otherwise say.
+func _mass_height(entry: Dictionary, fallback: float) -> float:
+	var id: int = int(entry.get("id", -1))
+	for other in _buildings:
+		if int(other.get("id", -2)) == id and not bool(other.get("crown", false)):
+			return float(other.get("height", fallback))
+	return fallback
 
 
 ## Philadelphia is brick at rowhouse scale, stone through the pre-war midrise,

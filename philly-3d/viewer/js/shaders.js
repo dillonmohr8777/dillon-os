@@ -3,18 +3,25 @@
 
 const CITY_VS = `#version 300 es
 in vec3 aPos;
-in float aHeight;
-in float aTintKind;      // fractional part is the tint; >=500 marks a roof
+in float aHeight;        // shading height: picks the material
+in float aTop;           // world z of the top of this piece: places the cornice
+in float aTintKind;      // tint + 1000*roof + 2000*solid
 uniform mat4 uViewProj;
 out vec3 vWorld;
 out float vHeight;
+out float vTop;
 out float vTint;
 out float vIsRoof;
+out float vIsSolid;
 void main() {
   vWorld = aPos;
   vHeight = aHeight;
-  vIsRoof = aTintKind >= 500.0 ? 1.0 : 0.0;
-  vTint = aTintKind - vIsRoof * 1000.0;
+  vTop = aTop;
+  float k = aTintKind;
+  vIsSolid = k >= 2000.0 ? 1.0 : 0.0;
+  k -= vIsSolid * 2000.0;
+  vIsRoof = k >= 500.0 ? 1.0 : 0.0;
+  vTint = k - vIsRoof * 1000.0;
   gl_Position = uViewProj * vec4(aPos, 1.0);
 }`;
 
@@ -37,13 +44,18 @@ float shadowAt(vec3 p) {
   return clamp((p.z - (ceilH - 1.2)) / 1.6, 0.0, 1.0);
 }
 
-vec3 surfaceColor(float h, float tint, float isRoof) {
+vec3 surfaceColor(float h, float tint, float isRoof, float isSolid) {
   vec3 brick  = mix(vec3(0.300, 0.150, 0.110), vec3(0.520, 0.300, 0.210), tint);
   vec3 stone  = mix(vec3(0.430, 0.370, 0.300), vec3(0.680, 0.640, 0.560), tint);
   vec3 glass  = mix(vec3(0.055, 0.080, 0.105), vec3(0.090, 0.130, 0.150), tint);
   vec3 c = mix(brick, stone, smoothstep(12.0, 30.0, h));
   c = mix(c, glass, smoothstep(38.0, 55.0, h));
-  return mix(c, c * 0.34 + vec3(0.030), isRoof);
+  // Spires, masts and statues are dressed stone or weathered metal, never the
+  // curtain wall the height rule would otherwise pick for them.
+  vec3 dressed = mix(vec3(0.330, 0.312, 0.278), vec3(0.470, 0.448, 0.402), tint);
+  c = mix(c, dressed, isSolid);
+  return mix(c, c * 0.34 + vec3(0.030), isRoof * (1.0 - isSolid))
+       * mix(1.0, 0.88, isRoof * isSolid);
 }
 
 float hash11(float p) {
@@ -69,10 +81,10 @@ float hash21(vec2 p) {
 // as a building rather than a box.
 struct Facade { float shade; float window; float lit; };
 
-Facade facade(vec3 world, vec3 n, float h, float tint, float isRoof) {
+Facade facade(vec3 world, vec3 n, float h, float top, float tint, float isRoof, float isSolid) {
   Facade f;
   f.shade = 1.0; f.window = 0.0; f.lit = 0.0;
-  if (isRoof > 0.5) return f;
+  if (isRoof > 0.5 || isSolid > 0.5) return f;
 
   float storey = mix(3.15, 4.05, smoothstep(10.0, 70.0, h)) + tint * 0.25;
   float ground = storey * 1.55;
@@ -105,8 +117,10 @@ Facade facade(vec3 world, vec3 n, float h, float tint, float isRoof) {
   float pier = 1.0 - 0.10 * smoothstep(0.46, 0.5, abs(col - 0.5));
   f.shade = line * pier;
 
-  // cornice: a bright lip just under the roof, dark shadow just below it
-  float underRoof = h - (v - 0.0);
+  // cornice: a bright lip just under the roof, dark shadow just below it.
+  // Measured down from this piece's own top, so it lands correctly on a
+  // building whose base is not at z = 0 and on a stacked crown tier.
+  float underRoof = top - v;
   f.shade *= 1.0 + 0.55 * smoothstep(1.3, 0.35, underRoof)
                  - 0.30 * smoothstep(3.4, 1.5, underRoof);
   // plinth at the pavement
@@ -122,8 +136,10 @@ const CITY_FS = `#version 300 es
 precision highp float;
 in vec3 vWorld;
 in float vHeight;
+in float vTop;
 in float vTint;
 in float vIsRoof;
+in float vIsSolid;
 uniform vec3 uEye;
 uniform vec3 uSunDir;         // unit vector pointing at the sun
 uniform vec3 uSunColor;
@@ -146,11 +162,11 @@ void main() {
 
   float lam = max(dot(n, uSunDir), 0.0) * shadowAt(vWorld + n * 0.35);
   float sky = 0.30 + 0.50 * max(n.z, 0.0);          // hemisphere fill
-  vec3 base = surfaceColor(vHeight, vTint, vIsRoof);
+  vec3 base = surfaceColor(vHeight, vTint, vIsRoof, vIsSolid);
 
   // Facade detail fades out with distance so the far skyline stays clean
   // instead of aliasing into noise.
-  Facade fa = facade(vWorld, n, vHeight, vTint, vIsRoof);
+  Facade fa = facade(vWorld, n, vHeight, vTop, vTint, vIsRoof, vIsSolid);
   float detail = 1.0 - smoothstep(700.0, 2200.0, dist);
   float shade = mix(1.0, fa.shade, detail);
   float win = fa.window * detail;
@@ -162,7 +178,7 @@ void main() {
   vec3 col = base * (uSkyColor * sky + uSunColor * lam);
 
   // Curtain wall picks up a sharp sun glint; masonry does not.
-  float glassy = smoothstep(38.0, 55.0, vHeight) * (1.0 - vIsRoof);
+  float glassy = smoothstep(38.0, 55.0, vHeight) * (1.0 - vIsRoof) * (1.0 - vIsSolid);
   vec3 H = normalize(uSunDir + V);
   col += uSunColor * glassy * lam * pow(max(dot(n, H), 0.0), 60.0) * 1.6;
   // windows catch a sharper reflection than the wall around them

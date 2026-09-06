@@ -38,6 +38,7 @@ import pack                                                        # noqa: E402
 from geo import to_local, FEET_TO_M                                # noqa: E402
 
 BIN = os.path.join(HERE, "data", "philly-buildings.bin")
+CROWNS = os.path.join(HERE, "data", "philly-crowns.json")
 PROSPECTS = os.path.join(HERE, "data", "philly-prospects.json")
 STREETS = os.environ.get("PHL_STREETS", "/home/user/work/phl-data/streets.ndjson")
 OUT = os.path.join(HERE, "dist", "godot")
@@ -149,6 +150,59 @@ def obb(ring):
     return cx, cy, w, d, ang
 
 
+def crown_rows(b, crown, base_cx, base_cy):
+    """Tier boxes for one crowned building, in the same row shape the engine's
+    _build_building already consumes.
+
+    The survey measures the dominant roof mass, so City Hall arrives as its
+    170 ft cornice. The crown table carries the published architectural height
+    and how it steps up to it; each tier becomes one more box. to_ft is measured
+    from the building's own grade, the same datum as approx_hgt, so the
+    footprint's base elevation is added back."""
+    ox, oy, w, d, ang = obb(b["ring"])
+    grade = b["base"]
+    z = grade + b["h"]
+    rows = []
+    for t in crown["tiers"]:
+        top = grade + float(t["to_ft"]) * FEET_TO_M
+        if top <= z + 0.05:
+            continue
+        frac = float(t["frac"])
+        if t.get("shape") == "square":
+            side = frac * min(w, d)
+            size = [side, side]
+        else:
+            size = [w * frac, d * frac]
+        solid = t.get("solid")
+        if solid is None:
+            solid = t.get("kind") in SOLID_KINDS
+        rows.append({
+            "id": b["id"],
+            "centre": gd(ox - base_cx, oy - base_cy, z),
+            "size": [round(size[0], 2), round(size[1], 2)],
+            "height": round(top - z, 2),
+            "rot_y": round(-(ang + _ROT), 4),
+            "crown": True,
+            "kind": t.get("kind", "crown"),
+            "solid": bool(solid),
+            "of": crown["name"],
+        })
+        z = top
+    return rows
+
+
+SOLID_KINDS = {"spire", "mast", "statue", "finial", "belfry"}
+
+
+def load_crowns():
+    try:
+        with open(CROWNS, encoding="utf-8") as fh:
+            doc = json.load(fh)
+    except FileNotFoundError:
+        return {}
+    return {int(c["objectid"]): c for c in doc.get("crowns", [])}
+
+
 def load_roads(cx, cy, half):
     roads = []
     if not os.path.exists(STREETS):
@@ -196,6 +250,16 @@ def main():
             "ring": [gd(px - cx, py - cy) for px, py in b["ring"]],
         })
 
+    crowns = load_crowns()
+    crown_count = 0
+    for b in buildings:
+        c = crowns.get(b["id"])
+        if not c:
+            continue
+        for row in crown_rows(b, c, cx, cy):
+            rows.append(row)
+            crown_count += 1
+
     landmarks = {}
     if os.path.exists(PROSPECTS):
         doc = json.load(open(PROSPECTS))
@@ -231,6 +295,10 @@ def main():
         "roads": roads,
         "landmarks": landmarks,
         "building_count": len(rows),
+        "crown_count": crown_count,
+        "crown_note": "rows flagged crown:true are published architectural height "
+                      "stacked above the LiDAR-measured roof mass, from "
+                      "data/philly-crowns.json; the measured mass is unchanged",
     }
 
     json.dump(district, open(os.path.join(OUT, "philadelphia_district.json"), "w"), indent=1)
@@ -250,6 +318,7 @@ def main():
     tallest = sorted(rows, key=lambda r: -r["height"])[:6]
     print(f"district: {HALF*2:.0f} m square centred on ENU {CENTRE}")
     print(f"buildings: {len(rows)}   roads: {len(roads)}   landmarks: {len(landmarks)}")
+    print(f"crown tiers: {crown_count} on {len(set(r['id'] for r in rows if r.get('crown')))} buildings")
     print("tallest in frame:")
     for t in tallest:
         print(f"   {t['height']:6.1f} m  {t['size'][0]:5.1f} x {t['size'][1]:5.1f} m  id {t['id']}")

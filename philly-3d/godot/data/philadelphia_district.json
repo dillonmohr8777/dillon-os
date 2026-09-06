@@ -3733,5 +3733,7 @@
    "site": null
   }
  },
- "building_count": 449
+ "building_count": 461,
+ "crown_count": 12,
+ "crown_note": "rows flagged crown:true are published architectural height stacked above the LiDAR-measured roof mass, from data/philly-crowns.json; the measured mass is unchanged"
 }
