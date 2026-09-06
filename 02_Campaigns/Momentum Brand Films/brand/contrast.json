@@ -211,6 +211,116 @@
       "note": "keylines and rules on paper"
     },
     {
+      "fg": "warm-ink",
+      "fg_hex": "#173C2C",
+      "bg": "warm-canvas",
+      "bg_hex": "#F6F5EF",
+      "role": "text",
+      "ratio": 11.18,
+      "passes": true,
+      "note": "editorial serif and body on the warm paper ground"
+    },
+    {
+      "fg": "warm-ink",
+      "fg_hex": "#173C2C",
+      "bg": "warm-surface",
+      "bg_hex": "#FFFEFA",
+      "role": "text",
+      "ratio": 12.1,
+      "passes": true,
+      "note": "text on a plate/card surface"
+    },
+    {
+      "fg": "warm-ink",
+      "fg_hex": "#173C2C",
+      "bg": "warm-panel",
+      "bg_hex": "#EBECE1",
+      "role": "text",
+      "ratio": 10.25,
+      "passes": true,
+      "note": "text on the warm panel"
+    },
+    {
+      "fg": "warm-muted",
+      "fg_hex": "#647067",
+      "bg": "warm-canvas",
+      "bg_hex": "#F6F5EF",
+      "role": "text",
+      "ratio": 4.74,
+      "passes": true,
+      "note": "captions and figure labels on warm paper"
+    },
+    {
+      "fg": "warm-signal",
+      "fg_hex": "#B45F2A",
+      "bg": "warm-canvas",
+      "bg_hex": "#F6F5EF",
+      "role": "graphic",
+      "ratio": 4.17,
+      "passes": true,
+      "note": "burnt orange is a FILL on warm paper \u2014 4.17 as text, under 4.5; use signal-ink for orange text there"
+    },
+    {
+      "fg": "warm-signal",
+      "fg_hex": "#B45F2A",
+      "bg": "warm-surface",
+      "bg_hex": "#FFFEFA",
+      "role": "graphic",
+      "ratio": 4.51,
+      "passes": true,
+      "note": "burnt orange fill on a plate surface"
+    },
+    {
+      "fg": "brand",
+      "fg_hex": "#155E86",
+      "bg": "warm-canvas",
+      "bg_hex": "#F6F5EF",
+      "role": "text",
+      "ratio": 6.46,
+      "passes": true,
+      "note": "Momentum blue as text on the warm ground"
+    },
+    {
+      "fg": "signal-ink",
+      "fg_hex": "#A35309",
+      "bg": "warm-canvas",
+      "bg_hex": "#F6F5EF",
+      "role": "text",
+      "ratio": 5.06,
+      "passes": true,
+      "note": "signal-ink on the warm ground"
+    },
+    {
+      "fg": "ink",
+      "fg_hex": "#14181B",
+      "bg": "warm-canvas",
+      "bg_hex": "#F6F5EF",
+      "role": "text",
+      "ratio": 16.35,
+      "passes": true,
+      "note": "ink on the warm ground"
+    },
+    {
+      "fg": "mark",
+      "fg_hex": "#2A80C2",
+      "bg": "warm-canvas",
+      "bg_hex": "#F6F5EF",
+      "role": "graphic",
+      "ratio": 3.87,
+      "passes": true,
+      "note": "the logo blue on the warm ground \u2014 mark artwork"
+    },
+    {
+      "fg": "warm-line",
+      "fg_hex": "#D4D9CD",
+      "bg": "warm-canvas",
+      "bg_hex": "#F6F5EF",
+      "role": "decorative",
+      "ratio": 1.32,
+      "passes": true,
+      "note": "warm keylines \u2014 decorative only, never text"
+    },
+    {
       "fg": "line",
       "fg_hex": "#DCD6CC",
       "bg": "paper",

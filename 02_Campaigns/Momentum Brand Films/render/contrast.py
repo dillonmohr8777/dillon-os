@@ -13,6 +13,9 @@ T = {
     "deep": "#0E1417", "deep-raised": "#1A2226", "on-deep": "#F4F1EC", "on-deep-muted": "#8A9296",
     "brand": "#155E86", "brand-lift": "#3897CC", "on-brand": "#FFFFFF", "mark": "#2A80C2",
     "signal": "#E27113", "signal-ink": "#A35309", "on-signal": "#14181B", "white": "#FFFFFF",
+    "warm-canvas": "#F6F5EF", "warm-surface": "#FFFEFA", "warm-panel": "#EBECE1",
+    "warm-ink": "#173C2C", "warm-muted": "#647067", "warm-line": "#D4D9CD",
+    "warm-signal": "#B45F2A",
 }
 
 def lum(h):
@@ -50,6 +53,17 @@ PAIRS = [
     ("white", "signal", "banned", "white on signal — never"),
     ("on-deep", "deep-raised", "text", "text on the raised dark surface"),
     ("line-strong", "paper", "graphic", "keylines and rules on paper"),
+    ("warm-ink", "warm-canvas", "text", "editorial serif and body on the warm paper ground"),
+    ("warm-ink", "warm-surface", "text", "text on a plate/card surface"),
+    ("warm-ink", "warm-panel", "text", "text on the warm panel"),
+    ("warm-muted", "warm-canvas", "text", "captions and figure labels on warm paper"),
+    ("warm-signal", "warm-canvas", "graphic", "burnt orange is a FILL on warm paper — 4.17 as text, under 4.5; use signal-ink for orange text there"),
+    ("warm-signal", "warm-surface", "graphic", "burnt orange fill on a plate surface"),
+    ("brand", "warm-canvas", "text", "Momentum blue as text on the warm ground"),
+    ("signal-ink", "warm-canvas", "text", "signal-ink on the warm ground"),
+    ("ink", "warm-canvas", "text", "ink on the warm ground"),
+    ("mark", "warm-canvas", "graphic", "the logo blue on the warm ground — mark artwork"),
+    ("warm-line", "warm-canvas", "decorative", "warm keylines — decorative only, never text"),
     ("line", "paper", "decorative", "decorative hairlines only — the system marks this token not-AA; never carries text"),
 ]
 

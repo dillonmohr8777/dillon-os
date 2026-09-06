@@ -245,3 +245,105 @@ export function contrast(hexA, hexB) {
   const a = lum(hexA), b = lum(hexB);
   return (Math.max(a, b) + 0.05) / (Math.min(a, b) + 0.05);
 }
+
+/* ── the collage layer ─────────────────────────────────────────────────────
+ * The slate's material language: cut paper, tape, engraved plates. Four
+ * devices, shared by all six films so they read as one system.
+ * Material lives in brand/material/ — see MATERIAL below. Everything here is
+ * a pure function of its arguments; nothing reads the clock.
+ */
+
+/** The cut-out material, by role. Paths are relative to a film in films/<slug>/. */
+export const MATERIAL = {
+  tornStrip:  '../../brand/material/cut-torn-strip.png',
+  tapeSet:    '../../brand/material/cut-tape-set.png',
+  fasteners:  '../../brand/material/cut-fasteners.png',
+  birds:     ['../../brand/material/cut-bird-a.png',
+              '../../brand/material/cut-bird-b.png',
+              '../../brand/material/cut-bird-c.png'],
+  botanical:  '../../brand/material/cut-botanical.png',
+  celestial:  '../../brand/material/cut-celestial.png',
+  manila:     '../../brand/material/03-manila.png',
+  graph:      '../../brand/material/06-graph.png',
+};
+
+/**
+ * DEVICE 01 — TORN WIPE.
+ * A ragged paper edge travelling across the frame. Returns a clip-path
+ * polygon revealing everything behind the tear. `p` 0..1 sweeps it across;
+ * `seed` fixes the tear's shape so it is identical on every re-render.
+ * Apply to the OUTGOING layer: it is clipped away as the tear passes.
+ */
+export function tornWipe(p, { seed = 7, teeth = 22, jag = 0.035, dir = 'ltr' } = {}) {
+  const r = rng(seed);
+  const offs = Array.from({ length: teeth + 1 }, () => (r() - 0.5) * 2 * jag);
+  const x = (v) => clamp(v, -0.2, 1.2) * 100;
+  const pts = [];
+  if (dir === 'ltr') {
+    pts.push('100% 0%', '100% 100%');
+    for (let i = teeth; i >= 0; i--) pts.push(`${x(p + offs[i]).toFixed(2)}% ${(i / teeth * 100).toFixed(2)}%`);
+  } else {
+    pts.push('0% 0%', '0% 100%');
+    for (let i = teeth; i >= 0; i--) pts.push(`${x(1 - p + offs[i]).toFixed(2)}% ${(i / teeth * 100).toFixed(2)}%`);
+  }
+  return `polygon(${pts.join(',')})`;
+}
+
+/**
+ * DEVICE 02 — TAPED CARD.
+ * A card arrives slightly off-axis and taped. Tilt stays in 1.5–3 degrees:
+ * beyond that it stops reading as placed by hand and starts reading as a
+ * template. `i` varies the tilt deterministically per card.
+ */
+export function tapedCard(p, i = 0, { rise = 26, tilt = null } = {}) {
+  const deg = tilt ?? (i % 2 ? 1 : -1) * (1.6 + ((i * 0.7) % 1.3));
+  const e = easeEntrance(clamp(p));
+  return {
+    transform: `translateY(${(1 - e) * rise}px) rotate(${(deg * (0.35 + 0.65 * e)).toFixed(2)}deg)`,
+    opacity: e,
+    boxShadow: `${(8 * e).toFixed(1)}px ${(9 * e).toFixed(1)}px 0 rgba(226,113,19,${(0.2 * e).toFixed(3)})`,
+  };
+}
+
+/**
+ * DEVICE 03 — BIRDS SCATTER.
+ * The engraved birds cut loose and leave the frame, taking the beat with
+ * them. Returns a pose for bird `i` of `n` at progress `p`. Each bird gets
+ * its own eased path, so they do not move as a block.
+ */
+export function scatterPose(p, i, n = 3, { seed = 19, spread = 1 } = {}) {
+  const r = rng(seed + i * 977);
+  const ang = (-70 + r() * 90) * Math.PI / 180;     // up and outward
+  const dist = (560 + r() * 460) * spread;
+  const spin = (r() - 0.5) * 46;
+  const lag = i * 0.07;
+  const e = easeEntrance(clamp((p - lag) / (1 - lag * 0.9)));
+  return {
+    transform: `translate(${(Math.cos(ang) * dist * e).toFixed(1)}px, ${(Math.sin(ang) * dist * e).toFixed(1)}px)`
+             + ` rotate(${(spin * e).toFixed(1)}deg) scale(${(1 - 0.22 * e).toFixed(3)})`,
+    opacity: 1 - clamp((e - 0.55) / 0.45),
+  };
+}
+
+/**
+ * DEVICE 04 — PLATE UNDER LENS.
+ * A hard circular mask holds still while a horizontal strip of plates travels
+ * beneath it. The lens never cuts — it travels. Returns the strip offset in
+ * px for a strip of `count` plates each `pitch` px wide, at plate index
+ * `idx` (fractional between plates gives the travel).
+ */
+export const plateStrip = (idx, pitch) => `translateX(${(-idx * pitch).toFixed(1)}px)`;
+
+/** A hard-edged circular lens mask. No blur, no glass, no vignette. */
+export const lens = (cx, cy, r) => `circle(${r.toFixed(1)}px at ${cx.toFixed(1)}px ${cy.toFixed(1)}px)`;
+
+/**
+ * Variable-font cuts, matching the --m-vf-* tokens. Use these rather than
+ * remembering axis numbers.
+ */
+export const VF = {
+  display:   '"wdth" 112, "wght" 800',
+  expanded:  '"wdth" 125, "wght" 900',
+  condensed: '"wdth" 70, "wght" 700',
+  light:     '"wdth" 100, "wght" 300',
+};
