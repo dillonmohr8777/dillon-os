@@ -237,6 +237,127 @@ against the real references (Dillon studio portrait `765eb5fe`, Sean front
 Mac-and-Sean-03, which need two new Kling 3.0 pro clips (about 28 credits).
 Everything else in film 2 still comes from clips that already exist.
 
+## Style bible (per film: look, type, movement, swipes, tool)
+
+Every film uses the same five transitions and nothing else, so the set reads
+as one family. Dissolves are allowed only on type, never on footage.
+
+| Swipe | Taken from | What it looks like |
+|-------|-----------|--------------------|
+| Iris | ChatCut / Fable 5.1 | a circle opens or closes over the frame, one cut per beat |
+| Screen slide | folk | the whole frame slides up or sideways like a phone screen |
+| Grid pan | Tejas | a plane of cards in perspective pans past camera |
+| Metamorphosis | float | dots orbit, collapse into a sphere, the sphere becomes the mark |
+| Hard cut on beat | NBA / ChatCut | no transition, cut lands on the music hit |
+
+Type is fixed across all five: Archivo Black, caps, tight, for names and
+title stacks (the globe reference's condensed caps, in our face); Nunito Sans,
+sentence case, for every sentence beat and role line (the Tejas / float
+grotesk register, and its rounded terminals nod to folk); Caveat once per
+film at most, as a handwritten note or arrow (the Guide film only). Keyword
+colour inside a sentence is always brand blue `#2A80C2`; bars, rings and
+slams are gold `#FFC63B`.
+
+Entrances follow one rule: words rise 28 px and fade in on an expo-out curve,
+word by word for stacks (globe), line by line for sentences (Tejas); objects
+pop with a 1.06 overshoot (Tejas icons, folk bubbles); nothing slides in from
+off-screen except lower-thirds, which slam up from a mask (NBA).
+
+### Film 1 "Momentum" — broadcast launch film, 50 s, 16:9 master + 9:16
+
+- **Look:** photographic Philadelphia footage cut against two graphic fields,
+  deep `#101823` for the logo device and end card, paper `#F4F7FA` for the
+  sentence beats. Sections alternate dark / footage / white so no two
+  neighbours share a skeleton.
+- **Movement, in order:** dots assemble into the rotating dotted sphere and a
+  gold ring draws around it (globe + float); "NEED MOMENTUM / AI DIVISION"
+  stacks word by word with the gold bar; iris opens onto the City Hall
+  push-in, iris again to the Parkway aerial; three player reveals on a slow
+  Kling push with name slams and roles; white field, "Not just views.
+  Momentum." with the keyword swap, then seven service cards fly onto a
+  perspective plane and grid-pan left; the three on the Art Museum steps with
+  the Guide, a UI card pops beside the Guide and its content slides (folk);
+  the mark's dots scatter into a Philadelphia map and collapse back into the
+  M (float); end card, mark overshoots in, URL, closing word stack "Ads.
+  Search. Sites. Momentum." (Tejas).
+- **Pace:** 2 s per graphic beat, 4 s per reveal, one 10 s hero shot. Music
+  bed, no voice.
+- **Tools:** Higgsfield for every frame and clip (Nano Banana Pro frames,
+  Kling 3.0 pro motion, Seedance 2.0 for the three-person shot), 3D Jutsu for
+  the sphere turntable, higgsedit for all type, masks, the 2.5D card plane and
+  the render. Vertical is a second higgsedit project at 1080x1920.
+
+### Film 2 "Sean & Mac" — founders walk-and-talk, 30 s, 9:16 first
+
+- **Look:** pure footage, the six Kling two-shots, colour-graded to one
+  warm-blue Philadelphia. No graphic fields except the last three seconds.
+- **Movement:** open on the Art Museum steps walk; names slam up from a mask
+  as they walk (NBA); screen-slide up into Broad Street, roles slam; hard
+  cuts on beat through whiteboard and studio table with service words popping
+  one at a time (Tejas icon pops); screen-slide into the Parkway lateral for
+  "Not just views. Momentum."; Reading Terminal walk to close; iris closes to
+  the mark and URL.
+- **Pace:** 4 to 5 s per clip, cuts on the downbeat. Music bed.
+- **Tools:** existing Kling clips plus two new ones (Mac-and-Sean-06 and 03),
+  higgsedit for slams, slides, iris and render. HyperFrames on the Windows box
+  is an equal option for the lower-third if Dillon wants it as a reusable
+  GSAP component.
+
+### Film 3 "Meet the Guide" — mascot in the world, 35 s, 16:9
+
+- **Look:** folk's grammar on photographic plates: the blue-and-gold Guide
+  walks real Philadelphia, and product UI lives in the air beside them as
+  white rounded cards with soft shadow, never glass.
+- **Movement:** Guide walks in from the Italian Market still (Kling from the
+  Codex frame); a chat bubble pops beside the Guide with a spring; typed text
+  with a caret and a reply (float); word swap "Most AI is a tool." to "The
+  Guide is a teammate." with the second word scrambling into place (folk);
+  camera zooms into a floating card until it fills the frame, which becomes
+  the next scene (folk's phone zoom); screen slides between doorway, café and
+  Broad Street; one handwritten Caveat arrow points at the Guide; iris to the
+  mark.
+- **Pace:** slower, 3 s per beat, room for the character to move.
+- **Tools:** Higgsfield for Guide clips (Kling from the Codex stills) and
+  `remove_background` for the alpha layer; higgsedit for the UI cards, typing,
+  zooms and slides. HyperFrames is the alternative for the UI compositions.
+- **Copy is placeholder** until Dillon writes it; every line is an editable
+  overlay.
+
+### Film 4 "What we do" — continuous line-drawing explainer, 30 s, 16:9 + 1:1
+
+- **Look:** paper-white field, one continuous brand-blue line with gold
+  fills, the Capita / Kong / Diplomat register from the illustrated
+  references. Nunito Sans sentence beats with the service name in blue.
+- **Movement:** the line draws each service icon on (stroke reveal), then
+  redraws itself into the next icon without a cut (Capita's continuous
+  transitions): search bar to map pin to storefront to browser window to
+  landing page to WordPress mark; after each icon the real deliverable cuts in
+  for one second inside an iris (a Google Ads chart, a GBP post, a spec
+  homepage from the site factory); the final icon becomes the mark.
+- **Pace:** 4 s per service, seven services, 2 s close.
+- **Tools:** HyperFrames (GSAP, SVG stroke and morph) is the primary tool for
+  this film, run from the Windows box with the local skill; it is exactly what
+  the references were built in. higgsedit path masks are the fallback if it
+  stays in the cloud. Two or three Seedance 2.5 flat-vector loops only where a
+  scene is too rich to draw by hand. Remotion is not needed.
+
+### Film 5 "Fifteen" — teaser, 15 s, 9:16
+
+- **Look and movement:** the sphere logo device (3 s); three face holds with
+  name slams, hard cuts on beat (6 s); "Not just views. Momentum." on paper
+  (3 s); mark and URL (3 s). One iris, otherwise cuts.
+- **Tools:** cut from film 1 assets in higgsedit, reframed to vertical.
+
+### Tool split, in one line each
+
+- **Higgsfield:** every photographic frame and clip, the 3D logo, the Guide
+  alpha, assembly and render for films 1, 2, 3 and 5, upscale, music bed.
+- **HeyGen HyperFrames:** film 4 in full, and any typography or UI beat
+  Dillon would rather own as GSAP code on his box. Its cloud compose tool is
+  disabled for CLI agents, so it runs locally, not from this session.
+- **Remotion:** not used. HyperFrames covers the same ground and matches the
+  references' own toolchain.
+
 ## How the Higgsfield MCP does this (verified surface, 2026-09-06)
 
 The server exposes far more than the five tools the entity note lists. What this
