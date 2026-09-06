@@ -101,6 +101,20 @@ covering 27.9 by 29.6 km, quantised to uint16 with a worst-case error of
 Spot checks against the height field: City Hall 42 ft, the Art Museum 62 ft on
 Faire Mount, Penn's Landing 23 ft, Manayunk 188 ft.
 
+**Where the terrain and a building disagree.** The height field is interpolated
+from the bases, so it does not reproduce any single one of them exactly.
+Measured against the 5,586 landmarks: the terrain sits above the building's own
+base on 29.6% of them by more than half a metre, which is harmless because the
+ground hides the bottom of the wall, and below it on 17.6%, which would show a
+gap under a building on a slope. 139 disagree by more than 2 m and the worst is
+9.7 m.
+
+The measured base is not moved. Instead the walls are extruded 12 m below it
+(`SKIRT` in `viewer/js/mesh.js`), which costs no extra triangles and changes
+neither the roof, the height attribute nor the cornice. Where the terrain is
+higher the skirt is buried; where it is lower the wall continues to the ground,
+which is what a real building on a slope does.
+
 **The bug this fixed.** The viewer drew its ground as a plane at z = 0 while
 every building started at its own base elevation. The median base in Center City
 is 12 m, so the whole city floated twelve metres above its own ground and a

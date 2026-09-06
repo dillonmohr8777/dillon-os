@@ -68,6 +68,20 @@ const VERTEX_FLOATS = 6;    // x, y, z, height, top, tintKind
 const ROOF_BIAS = 1000;
 const SOLID_BIAS = 2000;
 
+// How far the walls run below the building's own base elevation.
+//
+// The survey gives each footprint a base, and the terrain is a 50 m field
+// interpolated from those same bases, so the two disagree building by building:
+// measured against 5,586 landmarks the terrain sits below the base by more than
+// half a metre on 17.6% of them, and by more than two metres on 139. Wherever
+// it does, a building on a slope shows a gap under it.
+//
+// Extending the walls down costs nothing, no extra triangles and no change to
+// the roof, the height attribute or the cornice. Where the terrain is higher
+// the skirt is simply buried. 12 m covers the worst case measured, which is
+// 9.7 m.
+const SKIRT = 12.0;
+
 // Deterministic per-building variation. Same building, same colour, every run.
 //
 // The final `>>> 0` is not decoration. JavaScript's ^= yields a SIGNED int32,
@@ -89,6 +103,9 @@ function buildTileMesh(tile, select) {
   // They come apart for a crown tier, whose own 20 m span must not make it
   // read as a 20 m brick building sitting on top of a glass tower.
   const shade = tile.shadeHeight || height;
+  // Crown tiers stack on a surveyed roof, so there is never a gap to fill and
+  // a skirt would just bury geometry inside the mass below.
+  const skirt = tile.noSkirt ? 0 : SKIRT;
 
   let verts = 0;
   const keep = new Uint8Array(n);
@@ -110,7 +127,7 @@ function buildTileMesh(tile, select) {
   for (let i = 0; i < n; i++) {
     if (!keep[i]) continue;
     const s = starts[i], c = npts[i];
-    const z0 = base[i], z1 = base[i] + height[i], h = shade[i];
+    const z0 = base[i] - skirt, z1 = base[i] + height[i], h = shade[i];
     const tint = tintFor(ids[i]) + (solid && solid[i] ? SOLID_BIAS : 0);
 
     // Ring winding is not consistent in the source, so normalise here too.
@@ -152,3 +169,4 @@ globalThis.tintFor = tintFor;
 globalThis.VERTEX_FLOATS = VERTEX_FLOATS;
 globalThis.ROOF_BIAS = ROOF_BIAS;
 globalThis.SOLID_BIAS = SOLID_BIAS;
+globalThis.SKIRT = SKIRT;

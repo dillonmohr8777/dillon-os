@@ -158,6 +158,7 @@ function buildCrownTile(tile, byId) {
     ids: new Int32Array(rings.length),
     solid: new Uint8Array(rings.length),
     shadeHeight: new Float32Array(rings.length),
+    noSkirt: true,
   };
   let o = 0;
   for (let i = 0; i < rings.length; i++) {

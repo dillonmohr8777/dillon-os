@@ -117,3 +117,57 @@ test('tint is deterministic and in range', () => {
   assert.ok(lo >= 0, `tint went negative: ${lo}`);
   assert.ok(hi <= 1, `tint went over one: ${hi}`);
 });
+
+test('walls run below the base so a slope cannot show a gap under a building', () => {
+  const { buildTileMesh, VERTEX_FLOATS, SKIRT } = ctx;
+  const tile = {
+    n: 1, total: 4, starts: new Int32Array([0]), npts: new Int32Array([4]),
+    x: new Float32Array([0, 10, 10, 0]),
+    y: new Float32Array([0, 0, 10, 10]),
+    base: new Float32Array([20]), height: new Float32Array([30]),
+    ids: new Int32Array([1]),
+  };
+  const mesh = buildTileMesh(tile, null);
+  let lo = Infinity, hi = -Infinity;
+  for (let v = 0; v < mesh.vertexCount; v++) {
+    const z = mesh.data[v * VERTEX_FLOATS + 2];
+    if (z < lo) lo = z;
+    if (z > hi) hi = z;
+  }
+  assert.ok(SKIRT >= 10, `a ${SKIRT} m skirt does not cover the 9.7 m worst case`);
+  assert.strictEqual(hi, 50, 'the roof moved');
+  assert.strictEqual(lo, 20 - SKIRT, `walls stop at ${lo}, not ${20 - SKIRT}`);
+
+  // the cornice must still be measured from the real top, not the skirted bottom
+  for (let v = 0; v < mesh.vertexCount; v++) {
+    assert.strictEqual(mesh.data[v * VERTEX_FLOATS + 4], 50,
+      'the skirt moved the cornice reference');
+  }
+  // and the roof cap is still at the surveyed top
+  const roofZ = [];
+  for (let v = 0; v < mesh.vertexCount; v++) {
+    if (mesh.data[v * VERTEX_FLOATS + 5] >= 500) roofZ.push(mesh.data[v * VERTEX_FLOATS + 2]);
+  }
+  assert.ok(roofZ.length >= 6 && roofZ.every((z) => z === 50));
+});
+
+test('a crown tier gets no skirt, because it stacks on a roof', () => {
+  const c = loadViewer(['mesh.js', 'crowns.js']);
+  const tile = {
+    n: 1, total: 4, starts: new Int32Array([0]), npts: new Int32Array([4]),
+    x: new Float32Array([0, 40, 40, 0]),
+    y: new Float32Array([0, 0, 40, 40]),
+    base: new Float32Array([10]), height: new Float32Array([50]),
+    ids: new Int32Array([9]),
+  };
+  const byId = c.indexCrowns({ crowns: [{ objectid: 9,
+    tiers: [{ frac: 0.5, to_ft: 300, kind: 'tower' }] }] });
+  const crowned = c.buildCrownTile(tile, byId);
+  assert.strictEqual(crowned.noSkirt, true);
+  const mesh = c.buildTileMesh(crowned, null);
+  let lo = Infinity;
+  for (let v = 0; v < mesh.vertexCount; v++) {
+    lo = Math.min(lo, mesh.data[v * c.VERTEX_FLOATS + 2]);
+  }
+  assert.strictEqual(lo, 60, `crown starts at ${lo}, not on the roof at 60`);
+});
