@@ -625,42 +625,58 @@ window.seek = function (t) {
 
   /* --- the strip under the lens ---------------------------------------- */
   const idx = stripX(t);
-  const rise = -22 * Math.sin(Math.PI * clamp((t - 7.20) / 0.98));      // the II→III drift lifts
+  const p4 = p4at(t);
+  const rise = -22 * Math.sin(Math.PI * clamp((t - 6.74) / 0.94));      // the II→III drift lifts
   const driftX = osc(t, 9.0) * 3.5, driftY = osc(t, 6.4, 0.35) * 2.6;   // held by hand, not bolted
   els.wrap.style.transform =
     `translate(${(CX - 500 - idx * W + driftX).toFixed(2)}px,${(rise + driftY).toFixed(2)}px)`;
 
-  let sc = 1 + 0.0042 * Math.min(t, 15.4);                              // a slow, constant push
-  sc *= 1 + 0.42 * Math.sin(Math.PI * clamp((t - 13.00) / 1.06));       // IV→V punches through
-  sc = lerp(sc, 3.60, at(t, 15.40, 2.40, easeStandard));                // the release expands it
+  const sc = 1 + 0.0048 * Math.min(t, 14.2);                            // a slow, constant push
   els.scale.style.transform = `scale(${sc.toFixed(4)})`;
 
-  const stripOut = 1 - at(t, 15.95, 1.60, easeStandard);
-  els.wrap.style.opacity = stripOut;
-  els.grid.style.opacity = 0.85 * (1 - at(t, 15.45, 1.30, easeStandard));
-  els.panel.style.opacity = 1 - at(t, 15.50, 1.60, easeStandard);
+  /* the plates leave together as the traveller puts a pen on the page */
+  const platesOut = 1 - at(t, 13.54, 0.58, easeStandard);
+  els.grid.style.opacity = 0.85 * (1 - at(t, 14.30, 1.20, easeStandard));
+  els.panel.style.opacity = 1 - at(t, 14.85, 1.35, easeStandard);
 
   /* --- the plates draw themselves in ----------------------------------- */
   for (let i = 0; i < NP; i++) {
     const p = at(t, DRAW[i][0], DRAW[i][1], easeStandard);
-    if (p === G[i].__last) continue;                     // cheap: skip settled plates
-    G[i].__last = p;
-    for (const e of plate[i]) {
-      if (e.__s) {
-        const q = easeStandard(clamp((p - e.__o * 0.56) / 0.44));
-        e.style.strokeDashoffset = (e.__L * (1 - q)).toFixed(2);
-      } else {
-        e.style.opacity = easeStandard(clamp((p - 0.26 - e.__o * 0.46) / 0.30));
+    if (p !== G[i].__last) {
+      G[i].__last = p;
+      for (const e of plate[i]) {
+        if (e.__late) continue;                          // posed on its own clock below
+        if (e.__s) {
+          const q = easeStandard(clamp((p - e.__o * 0.56) / 0.44));
+          e.style.strokeDashoffset = (e.__L * (1 - q)).toFixed(2);
+        } else {
+          e.style.opacity = easeStandard(clamp((p - 0.26 - e.__o * 0.46) / 0.30));
+        }
       }
     }
+    G[i].style.opacity = platesOut.toFixed(3);
   }
+  /* the late accents: the move that lands after each plate has settled */
+  for (const e of lateList) {
+    const q = at(t, e.__late[0], e.__late[1], easeStandard);
+    if (e.__s) e.style.strokeDashoffset = (e.__L * (1 - q)).toFixed(2);
+    else e.style.opacity = q.toFixed(3);
+  }
+
+  /* Plate IV is pinned in screen space and driven through the viewer's eye from
+     its own centre, so the manuscript is never carved by the mask arc. */
+  const p4s = at(t, T_IV_V, 0.42, easeStandard);
+  G[3].setAttribute('transform',
+    `translate(${(3 * W + p4 * W).toFixed(2)},0) translate(500,498) ` +
+    `scale(${(1 + 0.92 * p4s).toFixed(4)}) translate(-500,-498)`);
+  G[3].style.opacity = ((1 - p4s) * platesOut).toFixed(3);
 
   /* --- Plate V: the traveller on the ORGANIC ring ----------------------- */
   {
-    const live = at(t, 14.00, 0.5) * (1 - at(t, 15.70, 0.7));
+    const live = at(t, 12.70, 0.45) * (1 - at(t, 13.62, 0.30));
     const cx = 500, cy = 496, r = 162;
     const a0 = Math.PI * 0.17, a1 = a0 - Math.PI * 0.80;   // right → top → upper left
-    const a = lerp(a0, a1, easeInOut(clamp((t - 14.00) / 1.70)));
+    const a = lerp(a0, a1, easeInOut(clamp((t - 12.70) / 1.05)));
     const b = Math.min(a0, a + 0.70);
     const large = 0, sweep = 0;
     TRAIL.setAttribute('d',
@@ -672,35 +688,58 @@ window.seek = function (t) {
     DOT.setAttribute('opacity', live.toFixed(3));
   }
 
-  /* --- surround furniture ---------------------------------------------- */
-  const tlP = at(t, 1.55, 0.8) * (1 - at(t, 15.40, 0.7));
-  els.tl.style.opacity = tlP;
-  els.tl.style.transform = `translateX(${((1 - at(t, 1.55, 0.8)) * -18).toFixed(2)}px)`;
-  const trP = at(t, 1.85, 0.8) * (1 - at(t, 15.40, 0.7));
-  els.tr.style.opacity = trP;
-  els.fr.style.opacity = at(t, 1.95, 0.6) * (1 - at(t, 15.40, 0.7));
-  els.fr.style.transform = `scaleX(${at(t, 1.95, 0.8, easeEmphatic).toFixed(3)})`;
-  els.fr.style.transformOrigin = 'left center';
+  /* --- the release: one recorded trace, wider than the lens ------------- */
+  {
+    const tp = traceAt(t);
+    const out = 1 - at(t, 20.15, 0.60, easeStandard);
+    tracePath.style.strokeDashoffset = (tracePath.__L * (1 - tp.u)).toFixed(2);
+    tracePath.style.opacity = out.toFixed(3);
+    const penOn = at(t, 12.95, 0.02) * (1 - at(t, 16.58, 0.42, easeStandard));
+    pen.setAttribute('cx', tp.x.toFixed(1));
+    pen.setAttribute('cy', tp.y.toFixed(1));
+    pen.setAttribute('opacity', (penOn * out).toFixed(3));
+    // then it is read: the peaks are dropped to a datum and the datum is ruled
+    ticks.forEach((e, i) => {
+      e.style.strokeDashoffset = (e.__L * (1 - at(t, 17.55 + i * 0.25, 0.36, easeStandard))).toFixed(2);
+      e.style.opacity = out.toFixed(3);
+    });
+    datum.style.strokeDashoffset =
+      (datum.__L * (1 - at(t, 18.45, 1.00, easeStandard))).toFixed(2);
+    datum.style.opacity = out.toFixed(3);
+  }
 
+  /* --- surround furniture ---------------------------------------------- */
+  const surOut = 1 - at(t, T_OPEN, 0.70);
+  const tlP = at(t, 1.40, 0.8) * surOut;
+  els.tl.style.opacity = tlP;
+  els.tl.style.transform = `translateX(${((1 - at(t, 1.40, 0.8)) * -18).toFixed(2)}px)`;
+  els.tr.style.opacity = at(t, 1.70, 0.8) * surOut;
+
+  /* the Fig. rule and the Fig. label share one envelope — they never separate */
+  let figMax = 0;
   figEls.forEach((el, i) => {
     const [a, b] = FIGWIN[i];
-    const p = at(t, a, 0.55) * (1 - at(t, b, 0.34, easeStandard));
+    const p = at(t, a, 0.55) * (1 - at(t, b, 0.30, easeStandard));
     el.style.opacity = p;
     el.style.transform = `translateY(${((1 - at(t, a, 0.55)) * 15).toFixed(2)}px)`;
+    if (p > figMax) figMax = p;
   });
+  els.fr.style.opacity = (figMax * surOut).toFixed(3);
+  els.fr.style.transform = `scaleX(${at(t, 1.45, 0.8, easeEmphatic).toFixed(3)})`;
+  els.fr.style.transformOrigin = 'left center';
 
   /* --- the statement --------------------------------------------------- */
-  const sOut = at(t, 21.15, 0.50, easeEmphatic);
-  revealWords(els.s1, t, 17.28, 0.90, 0.085, 34);
-  revealWords(els.s2, t, 17.92, 0.90, 0.085, 34);
+  const sOut = at(t, 20.15, 0.50, easeEmphatic);
+  revealWords(els.s1, t, 16.10, 0.90, 0.085, 34);
+  revealWords(els.s2, t, 16.72, 0.90, 0.085, 34);
   els.stmt.style.opacity = 1 - sOut;
   els.stmt.style.transform = `translateY(${(-sOut * 46).toFixed(2)}px)`;
 
   /* --- the credit ------------------------------------------------------ */
-  const cOut = 1 - at(t, 22.90, 0.45, easeStandard);
-  els.crule.style.width = `${(at(t, 21.05, 0.85, easeEmphatic) * 862).toFixed(1)}px`;
+  const cOut = 1 - at(t, 22.95, 0.45, easeStandard);
+  els.crule.style.width = `${(at(t, 20.55, 0.85, easeEmphatic) * 980).toFixed(1)}px`;
   els.credit.style.opacity = cOut;
-  const caP = at(t, 21.55, 0.65), cbP = at(t, 21.85, 0.65);
+  const caP = at(t, 21.05, 0.65), cbP = at(t, 21.35, 0.65);
   els.ca.style.opacity = caP; els.ca.style.transform = `translateY(${((1 - caP) * 14).toFixed(2)}px)`;
   els.cb.style.opacity = cbP; els.cb.style.transform = `translateY(${((1 - cbP) * 14).toFixed(2)}px)`;
 
