@@ -167,9 +167,9 @@
 
   <!-- ══ beat 8 ════════════════════════════════════════════════ -->
   <svg id="conn" width="1920" height="1080" viewBox="0 0 1920 1080">
-    <line id="cn0" x1="872" y1="440" x2="600" y2="348" pathLength="1" stroke-dasharray="1 1"/>
-    <line id="cn1" x1="1048" y1="444" x2="1320" y2="356" pathLength="1" stroke-dasharray="1 1"/>
-    <line id="cn2" x1="960" y1="628" x2="960" y2="828" pathLength="1" stroke-dasharray="1 1"/>
+    <line id="cn0" x1="852" y1="428" x2="600" y2="348" pathLength="1" stroke-dasharray="1 1"/>
+    <line id="cn1" x1="1066" y1="432" x2="1320" y2="356" pathLength="1" stroke-dasharray="1 1"/>
+    <line id="cn2" x1="960" y1="672" x2="960" y2="826" pathLength="1" stroke-dasharray="1 1"/>
   </svg>
   <div class="lab" id="lab0"><b>SEO</b><i>— search engines</i></div>
   <div class="lab" id="lab1"><b>AEO</b><i>— answer engines</i></div>
@@ -265,10 +265,10 @@ const TRACK = [
   [20.75, P.listen   ],
   [23.52, P.surprise ],
   [24.20, P.delight  ],
-  [26.42, P.lookL    ],
-  [27.08, P.lookR    ],
-  [27.76, P.lookD    ],
-  [28.60, P.warm     ],
+  [26.18, P.lookL    ],
+  [26.76, P.lookR    ],
+  [27.32, P.lookD    ],
+  [28.40, P.warm     ],
   [31.55, P.lockup   ]
 ];
 function trackPose(t, xf = 0.30) {
@@ -337,16 +337,16 @@ const HX = 600 + 14 + 30 + 64, HY = 34 + 14 + 690 + 64, HS = 128;
 /* where the bot stands in each beat: [t it arrives, centreX, centreY, size] */
 const WALK = [
   [HANDOFF, HX,  HY,  HS ],
-  [12.35,   636, 548, 330],   /* climbs up and out as the phone tips away */
-  [13.60,   960, 540, 445],   /* then comes forward, large and centred    */
-  [14.90,   516, 602, 524],   /* left, for the statement           */
-  [18.30,  1500, 616, 400],   /* right, on the deep surface        */
-  [21.60,   334, 754, 442],   /* lower left, beside its own answer */
-  [26.25,   960, 486, 350],   /* centred, for the three labels     */
-  [29.50,   960, 330, 232],   /* small and high, for the last line */
-  [32.55,   548, 546, 232]    /* settled beside the mark           */
+  [12.35,   636, 556, 380],   /* climbs up and out as the phone tips away */
+  [13.60,   960, 542, 720],   /* then comes forward, large and centred    */
+  [14.90,   516, 596, 640],   /* left, for the statement           */
+  [18.30,  1500, 606, 480],   /* right, on the deep surface        */
+  [21.60,   320, 752, 470],   /* lower left, beside its own answer */
+  [26.00,   960, 486, 430],   /* centred, for the three labels     */
+  [29.50,   960, 320, 250],   /* small and high, for the last line */
+  [32.55,   540, 548, 250]    /* settled beside the mark           */
 ];
-const WALK_DUR = [0, 1.50, 1.25, 1.30, 0.95, 1.25, 0.80, 0.95, 1.15];
+const WALK_DUR = [0, 1.50, 1.25, 1.30, 0.95, 1.25, 0.75, 0.95, 1.15];
 function walk(t) {
   /* a leg is live from (arrival - duration) to arrival, so the bot is moving
      through the beat, not waiting at one end of it */
@@ -511,24 +511,24 @@ window.seek = function (t) {
 
   /* ═══ BEAT 8 · 25.4–29.2 — three names for the same job ════════════ */
   {
-    const out = at(t, 28.55, 0.40, easeStandard);
-    const T = [26.32, 26.98, 27.66];
+    const out = at(t, 28.72, 0.40, easeStandard);
+    const T = [26.06, 26.62, 27.18];
     const DX = [46, -46, 0], DY = [18, 18, -24];
     T.forEach((ts, i) => {
-      const p = at(t, ts + 0.26, 0.72);
+      const p = at(t, ts + 0.24, 0.62);
       const el = $('lab' + i);
       el.style.opacity = p * (1 - out);
       el.style.transform = `translate(${(1 - p) * DX[i]}px, ${(1 - p) * DY[i] - out * 22}px)`;
       $('cn' + i).setAttribute('stroke-dashoffset',
         (1 - at(t, ts, 0.46, easeEmphatic)).toFixed(4));
     });
-    $('conn').style.opacity = at(t, 26.26, 0.10, easeStandard) * (1 - out);
+    $('conn').style.opacity = at(t, 26.00, 0.10, easeStandard) * (1 - out);
   }
 
   /* ═══ BEAT 9 · 29.0–31.6 — the one script line, and the answer ═════ */
   {
     const out = at(t, 31.28, 0.40, easeStandard);
-    const sp = at(t, 29.54, 0.86, easeStandard);
+    const sp = at(t, 29.58, 0.86, easeStandard);
     const sc = $('script');
     sc.style.opacity = (sp > 0 ? 1 : 0) * (1 - out);
     /* the script is written, not faded: a left-to-right wipe with a small rise */

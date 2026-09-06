@@ -323,7 +323,7 @@ const $ = (id) => document.getElementById(id);
 
 /* ── palette literals, matched to tokens.css ─────────────────────────────── */
 const INK = '#14181B', BRAND = '#155E86', SIGNAL = '#E27113',
-      SIGNAL_INK = '#A35309', MARK = '#2A80C2';
+      SIGNAL_INK = '#A35309';
 
 /* ═══ beat 1 · the wordmark run, drawn on canvas ═════════════════════════ */
 const RUN_A = 'MOMENTUM ';                 // ink
@@ -650,7 +650,7 @@ window.seek = function (t) {
       `translateY(${LN2_DY * settle}px) scale(${lerp(1, LN2_SCALE, settle)})`;
   }
 
-  /* ═══ BEAT 8 · 21.55–24.00 — lockup, and the pills come to rest ═════ */
+  /* ═══ BEAT 8 · 21.70–24.00 — lockup, and the pills come to rest ═════ */
   if (lock) lock.pose(at(t, 21.70, 1.10));
 
   /* ── the pills, one continuous thread from beat 2 to the last frame ─── */
