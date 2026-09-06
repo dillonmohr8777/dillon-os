@@ -95,6 +95,41 @@ var url := builder.landmark_site("reading_terminal")
 which is what lets a mission reward open the real site for the business you
 just saved.
 
+## It has actually been run
+
+`test/philly_smoke.gd` builds the district in a real headless Godot 4.2.2 and
+asserts what comes out. The Node suite in `../test` only reads the exported JSON
+and greps this GDScript; it executes nothing, so until this existed the builder
+had never run at all.
+
+```bash
+cp scripts/philadelphia_world_builder.gd  <gtb>/godot/scripts/
+cp data/philadelphia_*.json               <gtb>/godot/data/
+cp test/philly_smoke.gd                   <gtb>/godot/
+godot --headless --path <gtb>/godot --script philly_smoke.gd
+```
+
+Last run, Godot 4.2.2-stable: 22 checks passed. 462 MeshInstance3D and 462
+StaticBody3D built in 247 ms, no mesh instance without a mesh, City Hall
+44.7 m off the district centre where the projection puts it, 22 street axes,
+both in-window prospects carrying their spec homepage.
+
+Two things that run taught, which reading the code did not:
+
+- `road_coords()` returns street AXIS coordinates, matching
+  `District.ROAD_COORDS` in the shipped builder, not the road polylines. An
+  840 m square of Penn's grid holds 22 of them.
+- Only landmarks inside the 840 m window are exported, so the district carries
+  City Hall plus two of the Philadelphia 25, not all 25.
+
+Expect a wall of `Parameter "m" is null` from `mesh_get_surface_count`. That is
+Godot's dummy renderer under `--headless`, one line per uniquely sized
+`BoxMesh`, and it is not this builder: 462 identically sized boxes through stock
+`civic_kit.box` produce one such line, 462 uniquely sized ones produce 462. Real
+footprints are all different sizes, so `civic_kit`'s `box_mesh` cache never
+hits. Quantising the sizes to reclaim it is not worth it either: 461 distinct
+meshes only falls to 443 at a metre of rounding, so the cache is left alone.
+
 ## Regenerating
 
 ```bash
