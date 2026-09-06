@@ -30,4 +30,4 @@ Rules:
 
 ## Links
 
-- [[Second Brain Architecture]] · [[12_Brain/System/Second Brain Ops|Second Brain Ops]]
+- [[12_Brain/09_Ops/Architecture|Second Brain Architecture]] · [[12_Brain/System/Second Brain Ops|Second Brain Ops]]

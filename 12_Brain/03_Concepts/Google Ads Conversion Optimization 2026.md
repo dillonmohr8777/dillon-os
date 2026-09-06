@@ -12,6 +12,8 @@ source_refs: ["[[12_Brain/01_Captures/2026-07-04 - full-autonomy-directive]]"]
 
 # Google Ads Conversion Optimization — 2026 tactics
 
+> [!warning] Expired 2026-08-04 (wiki-lint 2026-09-06) — content below is unverified against current Google Ads docs. Re-verify before using in a live audit.
+
 One-line: how to bid, structure PMax, and diagnose no-spend for conversion-goal
 Search + PMax accounts, verified July 2026. Feeds [[02_Campaigns/Ads Ops/Ads Ops Hub]].
 

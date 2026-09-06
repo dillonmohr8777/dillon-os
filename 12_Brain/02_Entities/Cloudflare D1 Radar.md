@@ -10,7 +10,7 @@ source_refs: ["[[System/approval-queue.md]]", "[[Daily-Briefs/radar-2026-09-01]]
 
 # Cloudflare D1 Radar
 
-**Summary:** the live backend for [[Prospect Radar]] — a Cloudflare D1 database
+**Summary:** the live backend for [[12_Brain/05_Projects/Prospect Radar V2|Prospect Radar]] — a Cloudflare D1 database
 plus a read-only Worker that serves the prospect queue as JSON and an HTML
 dashboard.
 
