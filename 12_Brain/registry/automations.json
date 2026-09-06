@@ -486,6 +486,37 @@
       "note": "Codex scheduled automation (09:00/17:00) checking OmniRoute/ChatGPT-Sites infra health. Reviewed 2026-09-01 against am-report: not a duplicate; kept separate pending Dillon's confirmation."
     },
     {
+      "id": "competitive-task-orchestrator",
+      "name": "Competitive task umbrella orchestrator",
+      "lane": "intelligence",
+      "tier": 0,
+      "cadence": "daily at 13:00 UTC (Cursor automation cron)",
+      "command": "node _os/automation/bin/competitive-task-run.js --refresh-predictions",
+      "path": "_os/automation/workflows/competitive-task-orchestrator.json",
+      "inputs": [
+        "01_Clients/",
+        "00_Inbox/slack/",
+        "10_Sessions/",
+        "00_Inbox/Agent-Proposals/",
+        "12_Brain/state/work-predictor/latest.json",
+        "System/approval-queue.md",
+        "optional Gmail and Slack read connectors"
+      ],
+      "outputs": [
+        "Daily-Briefs/competitive-task-today.md",
+        "12_Brain/state/competitive-task-orchestrator.json",
+        "System/slack-action-queue.md",
+        "Dashboard.md ## Today (via memory-consolidator phase)"
+      ],
+      "external_actions": false,
+      "owner": "cursor-automation",
+      "notes": "One umbrella pass with parallel Phase 1 agents (.cursor/agents/) and sequential memory-consolidator. Replaces scattered morning crons; does not replace daily-communications-brain, grok ingest, obsidian-guard-dog, or Prospect Radar. Prompt: System/competitive-task-orchestrator-prompt.md. Definition: System/competitive-task-definition.md.",
+      "status": "active-scheduled",
+      "supersedes": [
+        "daily-morning-orchestrator-dry-board"
+      ]
+    },
+    {
       "id": "am-report",
       "name": "AM report (Claude Code skill: inbox, client pulse, directives, content pipeline)",
       "lane": "intelligence",
