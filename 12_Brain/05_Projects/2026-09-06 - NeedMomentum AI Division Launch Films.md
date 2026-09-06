@@ -423,6 +423,44 @@ then `/mcp` to log in; in this remote session it is already connected.
 Balance on 2026-09-06: 3,640 credits on the `max` plan. Films 2 and 5 cost
 nothing new. Nothing is generated until the queue line is approved.
 
+## Production log
+
+### Stage A, 2026-09-06 18:55Z to 19:03Z (approved cap 700; spent 45.0; balance 3,594.95)
+
+Elements created (free): `b4ecb258-34a4-4eea-bdef-2be9a43223f3` Sean-Boyle-launch
+(cropped from Mac-and-Sean-10, clean-shaven to match the footage),
+`726804d5-ac2f-4c83-b33d-414348b0a78c` Mac-Frederick-launch (cropped from D05).
+Dillon uses the existing `967e2123-51ac-431f-9717-2219e9631aeb` Dillon-Mohr.
+
+| # | Job | What | Credits | Verdict |
+|---|-----|------|---------|---------|
+| 1 | `ff6bd784` | Dillon reveal, Broad St golden, right third, from D01 reference | 2 | keep |
+| 2 | `80a5be2f` | Dillon reveal, Broad St golden, left third | 2 | keep |
+| 3 | `7811c83b` | Dillon reveal, Parkway blue hour, centered | 2 | keep |
+| 4 | `f18514a6` | Sphere plate, one gold ring and arc band | 2 | keep, animated below |
+| 5 | `52fea0b8` | Sphere plate, two rings, latitude rows | 2 | keep as alt |
+| 6 | `02f97c7d` | Sean reveal, Art Museum steps, right third | 2 | keep |
+| 7 | `661c9229` | Sean reveal, Broad St golden, left third | 2 | keep, best Sean |
+| 8 | `1d4601c1` | Sean tight, Reading Terminal | 2 | usable, stare is hard |
+| 9 | `3594d031` | Mac reveal, Art Museum steps, left third | 2 | keep |
+| 10 | `2fd04bbb` | Mac reveal, Parkway blue hour, right third | 2 | keep |
+| 11 | `bf856604` | Mac tight, Boathouse Row golden | 2 | keep, best Mac |
+| 12 | `9a97345c` | Trio walking up the Art Museum steps | 2 | keep, faces small |
+| 13 | `d8efac08` | Trio on the Parkway | 2 | reject, two Dillons, no Mac |
+| 14 | `65e5fd01` | Trio on the Parkway, retry with explicit order | 2 | keep, hero frame candidate |
+| 15 | `3cb6473c` | Kling 3.0 std 5 s 9:16 push-in on D01 | 7.5 | keep, blink and hair natural |
+| 16 | `59f88fb4` | Kling 3.0 std 5 s 16:9 on sphere plate 4 | 7.5 | keep, ring orbits and arc travels |
+
+Lesson: with three Elements in one prompt, name the order and the wardrobe
+explicitly and pass the approved group still as the reference, or the model
+duplicates the strongest identity. Kling standard from a still animates the
+logo plate convincingly at 7.5 credits, so the 3D Jutsu turntable is now
+optional rather than required.
+
+Waiting on Dillon: pick one reveal frame each (Dillon 1/2/3, Sean 6/7/8, Mac
+9/10/11), sphere 4 or 5, and confirm trio 14 as the film 1 hero frame. Stage
+B (standard-mode animatic clips) starts on those picks.
+
 ## Missing inputs
 
 1. The Guide stills (the blue-and-gold figure scenes) and their JSON specs
