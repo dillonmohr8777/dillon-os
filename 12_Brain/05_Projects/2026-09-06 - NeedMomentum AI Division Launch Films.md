@@ -6,7 +6,7 @@ updated: 2026-09-06
 owner: Dillon Mohr
 area: NeedMomentum brand launch
 finish_line: Five approved launch films delivered as 1080p masters with editable overlays, 16:9 and 9:16, and published only after Dillon's approval
-next_action: Dillon approves the staged credit budget in System/approval-queue.md and rules on Sean's beard before film 2 locks
+next_action: Dillon reviews the 47 s hero film and the six bot clips; then fix Mac's lower-third contrast and cut films 2 and 5
 review_date: 2026-09-13
 source_refs:
   - "[[12_Brain/01_Captures/X/2026-09-06 - brand-launch-video-references]]"
@@ -460,6 +460,68 @@ optional rather than required.
 Waiting on Dillon: pick one reveal frame each (Dillon 1/2/3, Sean 6/7/8, Mac
 9/10/11), sphere 4 or 5, and confirm trio 14 as the film 1 hero frame. Stage
 B (standard-mode animatic clips) starts on those picks.
+
+### Stage B + C, 2026-09-06 18:55Z to 19:40Z (spent 305 of the approved 700; balance 3,334.95)
+
+Dillon approved 700 in session ("700 first go"), then asked for finished videos
+rather than another approval round. Picks were made on his behalf and recorded
+here: Dillon reveal 3 (Parkway blue hour), Sean 7 (Broad St golden), Mac 11
+(Boathouse Row golden), sphere plate 4 (one ring), trio retry 14 as the hero frame.
+
+**Eight Kling 3.0 pro clips, 8 s, 1080p, silent (14 credits each, 112 total)**
+
+| Job | Shot | Aspect |
+|-----|------|--------|
+| `9b5ec4f4` | Dillon push-in, Parkway blue hour | 16:9 |
+| `f2de6f73` | Sean push-in, Broad St golden | 16:9 |
+| `23af0a6d` | Mac push-in, Boathouse Row golden | 16:9 |
+| `f12eeae8` | Trio dolly-in, Parkway with City Hall | 16:9 |
+| `f167265d` | Trio walking up the Art Museum steps | 16:9 |
+| `1c8e175d` | Sphere logo device, ring orbit | 16:9 |
+| `3ff8a465` | Mac + Sean, Reading Terminal walk | 9:16 |
+| `bfac732a` | Mac + Sean, arcade walk | 9:16 |
+
+**The bot films.** Dillon supplied the orange blocky agent mascot plus two
+Momentum headshots mid-session and asked for "videos of this bot / us giving
+agents to business people". Ten Nano Banana Pro frames (20 credits, one 503 and
+four re-runs because the first pass omitted the bot as an image reference), then
+six Kling 3.0 pro 8 s clips (84 credits):
+
+| Job | Scene |
+|-----|-------|
+| `70ae41d1` | Dillon hands the bot to a shop owner, she takes its weight |
+| `16b8e292` | Dillon and a restaurant owner, bot turns between them |
+| `bd7bc962` | Bot walks a diner counter toward a laughing owner |
+| `b4dfdbd4` | Bot rides shotgun with a contractor (still rendering at log time) |
+| `66f4ce22` | Five bots on a table, heads turn in a wave |
+| `9531837a` | Bot walking away down a Philadelphia sidewalk |
+
+Frame source: `f0d006ba` (bot), `88e451eb` (Dillon tee), `810b4bf2` (Dillon
+blazer). Lesson: the bot must be passed as `image_references` in every prompt or
+the model invents a different robot; and "rigid physical object, stiff toy-robot
+steps, no morphing, no glowing" is what keeps Kling from turning it into a
+glowing CGI creature.
+
+**Film 1 assembled and rendered.** `edit.jsx` in the higgsedit sandbox: 47 s,
+1920x1080, 30 fps, 1410 frames, h264, 29.7 MB, rendered on the Node engine at
+43 ms/frame. Beats: sphere logo with the word-by-word title stack and gold bar
+(0-8), City Hall and Parkway plates with a sentence beat (8-15), three player
+reveals with name slams and gold bars (15-30), "Not just views. Momentum."
+(30-35), the seven services over a left gradient scrim (35-41), end card with
+the exact mark, URL and word stack (41-47). Every title, name, role and the
+mark are native nodes, so all of it stays editable.
+
+Two build lessons: `compose` refuses an `animate` object and requires an array,
+even for a single track; and the sandbox is recycled between tool calls, so the
+whole pipeline (download, init, fonts, build, render, upload) has to run as one
+chained background job or the project directory disappears mid-flight.
+
+**Known defect, not yet fixed.** Mac's lower third is white type over a bright
+golden-hour background and reads washed out; Dillon's and Sean's are fine. The
+fix is a bottom scrim behind the lower third, one re-render, no new credits.
+
+**Not yet done:** films 2 to 5, the vertical 1080x1920 versions, music, and the
+Guide film (still waiting on the Codex Guide stills).
 
 ## Missing inputs
 
