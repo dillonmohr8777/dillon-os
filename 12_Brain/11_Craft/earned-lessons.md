@@ -2,7 +2,7 @@
 note_type: concept
 status: active
 created: 2026-08-18
-updated: 2026-08-18
+updated: 2026-09-06
 source_refs: ["12_Brain/11_Craft/00_Index.md", "System/browser-access.policy.json"]
 tags: [craft, agent-infrastructure, lessons]
 ---
@@ -228,3 +228,53 @@ routine that was still keying dedupe daily until the cadence fix landed on 08-18
 **How to apply.** Treat the brief's `unreliable` list as a queue to investigate, not a
 list of broken things. Read `last_completed` and the failure timestamps before concluding
 anything is currently failing.
+
+---
+
+## 2026-09-06 — Take the last N days, never the last N files
+
+**Lesson.** A window built by taking the newest N *files* is not a window in time. It
+keeps returning a full-looking result forever after the producer dies, so the report
+that is supposed to catch a dead routine becomes one. Age the newest input against
+today and put that age in the output.
+
+**Evidence.** `agent-craft-brief.js` — the estate's only self-referential report — ran
+today, 2026-09-06, and returned `"status": "ok"` over `2026-08-16` to `2026-08-18`.
+`loadDays()` did `.sort().slice(-limit)` over `12_Brain/queue/claude-loop-*.jsonl`,
+whose newest file is `claude-loop-2026-08-18.jsonl`; nothing had written a receipt for
+19 days. `status: 'ok'` was a hardcoded literal and the only `blocked` path required an
+*empty* directory, so a queue frozen in August was indistinguishable from a live one.
+`12_Brain/state/agent-craft-brief.json` shows the 2026-09-02 run getting the same green
+light on 15-day-old data and writing no brief; `12_Brain/11_Craft/` still ended at
+2026-08-19 while `00_Index.md` claimed "briefs are generated daily". The test suite
+asserted `status === 'ok'` unconditionally, so it certified the blindness.
+
+**How to apply.** Every window-based reader emits `newest_input` and `input_age_days`,
+and downgrades its own status when the newest input is older than the window it claims.
+Never assert a green status in a test — assert the contract that maps input age to
+status. Inverse of the standing lesson about fail-closed probes: this one failed
+**open**, and a dead routine that reports green teaches the estate it is healthy.
+
+---
+
+## 2026-09-06 — An alert that appends is an alert that buries
+
+**Lesson.** A recurring probe must update one standing item, never append a fresh one
+per run. Append-per-probe turns a decision queue into a log, and the human gate it
+feeds stops working long before anyone calls it broken.
+
+**Evidence.** `System/approval-queue.md` held 182 unchecked items on 2026-09-06. 132 of
+them — 72% — were `[Hermes Gateway / System]` conflict-storm entries dated 2026-07-15
+to 2026-08-10, each a near-verbatim restatement of the last with a new PID and conflict
+count, all asking for the same scoped shutdown of the same external Telegram poller.
+The 50 real client and operating asks sat underneath, including the 2026-09-05 registry
+retirement patch. The incident was over: `System/gateway-health.md` carries
+`last_updated: 2026-08-17T13:31:06.524Z` with `conflicts_1h/6h/24h` all `0` and its last
+commit `113f58e` on 2026-08-17 — the source stopped writing 20 days before, and its own
+final entry says there is nothing to approve.
+
+**How to apply.** Keyed upsert, not append: one item per (incident, subject), rewritten
+in place with a `last_seen` and an occurrence count. Give any auto-appended item a
+closing condition that the same probe can satisfy — here, `conflicts_1h == 0` sustained
+should have retired its own ask. Same family as the date-keyed generator lesson: a
+routine that writes somewhere new every run is not recording state, it is losing it.

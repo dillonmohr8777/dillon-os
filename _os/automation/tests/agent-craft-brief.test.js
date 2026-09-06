@@ -15,13 +15,17 @@ const { execFileSync } = require('node:child_process');
 const CLI = path.resolve(__dirname, '../bin/agent-craft-brief.js');
 
 function run(args = []) {
-  const out = execFileSync(process.execPath, [CLI, ...args], { encoding: 'utf8' });
+  const out = execFileSync(process.execPath, [CLI, ...args],
+    { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] });
   return JSON.parse(out);
 }
 
 test('counts completions, failures, and reliability from real receipt logs', () => {
   const r = run(['--days', '14']);
-  assert.equal(r.status, 'ok');
+  // Not asserted as 'ok': the receipt queue can go stale, and the point of the
+  // status field is to say so. Asserting 'ok' unconditionally is what let the
+  // brief report green on a source nothing had written to for 19 days.
+  assert.ok(['ok', 'stale'].includes(r.status), `unexpected status ${r.status}`);
   assert.ok(r.window_days >= 1, 'must find at least one receipt log');
   assert.ok(Array.isArray(r.workhorses));
   for (const w of r.workhorses) {
@@ -46,6 +50,17 @@ test('cadence drift only flags weekly/monthly routines completing every day', ()
     assert.ok(['weekly', 'weekly-twice', 'monthly'].includes(d.cadence), `${d.id} is ${d.cadence}`);
     assert.ok(d.completions >= r.window_days);
   }
+});
+
+test('ages the newest receipt and reports stale rather than ok', () => {
+  const r = run(['--days', '3']);
+  assert.match(r.newest_receipt, /^\d{4}-\d{2}-\d{2}$/, 'must name the newest receipt day');
+  assert.ok(Number.isInteger(r.receipt_age_days) && r.receipt_age_days >= 0);
+  // loadDays() takes the last N files present, not the last N calendar days, so
+  // age is the only thing separating a live queue from an abandoned one.
+  const shouldBeStale = r.receipt_age_days > r.window_days;
+  assert.equal(r.status, shouldBeStale ? 'stale' : 'ok',
+    `receipt ${r.newest_receipt} is ${r.receipt_age_days}d old over a ${r.window_days}d window`);
 });
 
 test('dry run writes nothing', () => {
