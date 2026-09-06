@@ -166,6 +166,48 @@ footprints are all different sizes, so `civic_kit`'s `box_mesh` cache never
 hits. Quantising the sizes to reclaim it is not worth it either: 461 distinct
 meshes only falls to 443 at a metre of rounding, so the cache is left alone.
 
+## Four districts
+
+Each is a window on the same survey, centred on a real cluster of the
+Philadelphia 25 so a mission has somewhere to be. Set `district` on the builder
+before `build()`, or from the hub profile.
+
+| slug | where | footprints | bearing | grid strength | prospects |
+|---|---|---:|---:|---:|---:|
+| `philadelphia` | Centre City, Penn Square | 461 | +9.35 deg | 0.94 | 2 |
+| `market_east` | Reading Terminal, Filbert Street | 579 | +9.35 deg | 0.92 | 2 |
+| `south_philly` | the 9th Street corridor | 3,500 | +10.80 deg | 0.66 | 5 |
+| `fishtown` | Frankford Avenue | 3,238 | +10.40 deg | 0.51 | 5 |
+
+**Penn's 9.21 degrees is Centre City's grid and it does not hold across the
+county.** Each district measures its own bearing, and `grid_strength` is the
+share of footprint edge length that bearing brings within 5 degrees of an axis.
+Centre City and Market East are near-perfect grids. South Philadelphia is
+looser. Fishtown is 0.51: Frankford Avenue is an old turnpike and the blocks are
+built off it, so half the district is not square to anything and the engine's
+axis-aligned systems will fit it loosely. That is reported rather than papered
+over.
+
+Measuring the bearing is harder than it looks. From street centrelines it fails
+in exactly the districts where it matters, because South Philadelphia has
+Passyunk Avenue and Fishtown has Frankford Avenue, long diagonals cutting the
+grid, and a length-weighted mean over street segments amplifies precisely the
+streets that break it: South Philadelphia came out at 12.52 degrees and aligned
+68% of its footprints, worse than simply borrowing Centre City's 9.21. It is
+measured from the FOOTPRINTS now, with a von Mises kernel over a 0.05 degree
+sweep, which finds the dominant mode instead of the mean. A plain "within 5
+degrees" count does not work either: it makes a plateau wherever the grid is
+strong and the sweep then picks arbitrarily inside it, which put Centre City a
+degree off its own measured bearing.
+
+South Philadelphia is the densest fabric in the city: 3,500 footprints in an
+840 m square, against 461 in the same square of Centre City. All four build in
+Godot, the slowest in 872 ms.
+
+```bash
+godot --headless --path <gtb>/godot --script all_districts.gd
+```
+
 ## Regenerating
 
 ```bash

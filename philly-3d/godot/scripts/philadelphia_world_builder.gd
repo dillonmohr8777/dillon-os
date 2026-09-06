@@ -29,8 +29,21 @@ extends RefCounted
 
 const CivicKit := preload("res://scripts/civic_kit.gd")
 
-const DISTRICT_PATH := "res://data/philadelphia_district.json"
-const BUILDINGS_PATH := "res://data/philadelphia_buildings.json"
+## Which district to build. Four are exported, each a window on the same survey
+## centred on a real cluster of the Philadelphia 25:
+##
+##   philadelphia   Centre City, Penn Square. City Hall and the Liberty towers.
+##   market_east    Reading Terminal and the Filbert Street corridor.
+##   south_philly   the 9th Street corridor. 3,500 footprints, the densest here.
+##   fishtown       Frankford Avenue. Half of it is not on any grid.
+##
+## Set it before build(), or from the hub profile:
+##     var b = load("res://scripts/philadelphia_world_builder.gd").new()
+##     b.district = "fishtown"
+var district: String = "philadelphia"
+
+const DISTRICT_SUFFIX := "_district.json"
+const BUILDINGS_SUFFIX := "_buildings.json"
 
 # Height bands, metres. Philadelphia reads as brick below the cornice line,
 # stone through the pre-war midrise, and curtain wall above it.
@@ -62,8 +75,8 @@ func _init(seed_value: int = 20260906) -> void:
 func _load() -> bool:
 	if _loaded:
 		return true
-	var district_text := _read(DISTRICT_PATH)
-	var buildings_text := _read(BUILDINGS_PATH)
+	var district_text := _read(("res://data/" + district + DISTRICT_SUFFIX))
+	var buildings_text := _read(("res://data/" + district + BUILDINGS_SUFFIX))
 	if district_text == "" or buildings_text == "":
 		push_error("philadelphia_world_builder: district data missing. Run "
 			+ "philly-3d/tools/export_godot.py and copy dist/godot/*.json to res://data/")

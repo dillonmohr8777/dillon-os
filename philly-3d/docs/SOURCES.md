@@ -186,6 +186,21 @@ over Center City segments longer than 40 m:
 agree to within 0.25 degrees of each other, and Broad Street is perpendicular
 to them to within 0.3 degrees.
 
+**It is Centre City's grid, not the city's.** Measured independently from the
+footprints in each exported district:
+
+| District | Bearing | Footprints within 5 deg of an axis |
+|---|---:|---:|
+| Centre City | +9.35 deg | 94% |
+| Market East | +9.35 deg | 92% |
+| South Philadelphia | +10.80 deg | 66% |
+| Fishtown | +10.40 deg | 51% |
+
+Fishtown is the outlier and the reason is Frankford Avenue, an old turnpike that
+cuts diagonally, with the blocks built off it rather than off Penn's grid. Half
+that district is not square to anything. South Philadelphia has the same problem
+in milder form with Passyunk Avenue.
+
 ## Solar geometry
 
 NOAA Solar Calculator equations (Meeus low-precision form), `tools/solar.py`.

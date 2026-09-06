@@ -20,7 +20,12 @@ test('the district declares its frame and bearing', () => {
   assert.strictEqual(district.frame.up, '+Y');
   assert.strictEqual(district.frame.east, '+X');
   assert.strictEqual(district.frame.north, '-Z');
-  assert.ok(Math.abs(district.grid_bearing_deg - 9.21) < 0.01);
+  // Measured from Centre City's own footprints rather than hard-coded, so it
+  // lands near the 9.21 degrees docs/SOURCES.md derives from the six named
+  // streets without being expected to match it exactly. The per-district
+  // bearings live in districts.test.js.
+  assert.ok(Math.abs(district.grid_bearing_deg - 9.21) < 0.5,
+    `bearing ${district.grid_bearing_deg}`);
   assert.ok(district.world_half > 0);
 });
 
