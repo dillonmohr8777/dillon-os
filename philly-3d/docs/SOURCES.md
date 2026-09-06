@@ -88,7 +88,7 @@ Same publisher and ArcGIS organisation, downloaded 2026-09-06:
 | Hydrography (rivers, water bodies) | `Hydrographic_Features_Poly` layer 1 | 7,979 |
 | Street centrelines | `Street_Centerline` layer 0 | 41,271 |
 | City boundary | `City_Limits` layer 0 | 1 |
-| Parks | `PPR_Properties` layer 0 | pending, see Known gaps |
+| Parks | `PPR_Properties` layer 0 | 507 |
 
 ## Projection
 
@@ -151,9 +151,10 @@ above; anyone can recompute it with `python3 tools/solar.py`.
 
 ## Known gaps
 
-- `PPR_Properties` (parks) paginates on a field other than `objectid`; the
-  fetch returned 0 features and needs a different key. Parks are therefore not
-  yet in the model.
+- ~~`PPR_Properties` (parks) returned 0 features.~~ Resolved: the request
+  omitted `objectid` from `outFields`, so keyset pagination had no key to page
+  on. Refetched with the key included: 507 parks, now in
+  `data/philly-ground.bin` alongside the street centrelines.
 - 2,989 buildings of 546,459 (0.55%) have no measured height. They are given
   the citywide rowhouse median of 22 ft and flagged `FLAG_EST_HEIGHT` in the
   binary so they can be excluded or styled differently.
