@@ -87,6 +87,21 @@ python3 tools/export_godot.py        # the Centre City district
 Requires `numpy`. `tools/fetch_buildings.py` resumes from where it stopped if
 interrupted.
 
+## Checking it
+
+Every number in this README is re-derived from the shipped files, not asserted:
+
+```bash
+python3 tools/verify.py     # about a second, no network
+npm test                    # 112 tests, no dependencies
+```
+
+`verify.py` checksums all seven artifacts against `data/manifest.json`, walks
+every tile of the binary and counts what is really in it, confirms each crown
+attaches to the building it names and reaches its published height, and checks
+that City Hall still carries both of its numbers: 170 ft measured, 548 ft
+published.
+
 ## Previews
 
 ```bash
