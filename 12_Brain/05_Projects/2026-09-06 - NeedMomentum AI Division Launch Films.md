@@ -5,15 +5,18 @@ created: 2026-09-06
 updated: 2026-09-06
 owner: Dillon Mohr
 area: NeedMomentum brand launch
-finish_line: Five approved launch films delivered as 1080p masters with editable overlays, 16:9 and 9:16, and published only after Dillon's approval
-next_action: Dillon reviews the 47 s hero film and the six bot clips; then fix Mac's lower-third contrast and cut films 2 and 5
+finish_line: Six approved launch films delivered as 1080p masters with editable overlays, 16:9 and 9:16, published only after Dillon's approval
+next_action: Dillon reviews the six recreations; then swap or cut every illustrative figure, and derive the 9:16 and 15 s cutdowns
 review_date: 2026-09-13
 source_refs:
   - "[[12_Brain/01_Captures/X/2026-09-06 - brand-launch-video-references]]"
+  - "[[12_Brain/01_Captures/X/2026-09-06 - motion-astra-launch-video-reference]]"
+  - "[[03_Content/momentum-launch-films/README]]"
   - "[[12_Brain/02_Entities/Higgsfield MCP]]"
   - "[[12_Brain/07_Reviews/MCP/2026-09-01 - higgsfield]]"
   - "_os/automation/lib/brand.js"
   - "_os/automation/assets/needmomentum-mark.png"
+  - "_os/automation/assets/needmomentum-mark-2048.png"
   - "System/m360-leadership-notes.md"
   - "gmail:thread:1a077c51a0b9fd4d"
   - "gmail:thread:1a077fa7dcc4b71a"
@@ -523,6 +526,75 @@ fix is a bottom scrim behind the lower third, one re-render, no new credits.
 **Not yet done:** films 2 to 5, the vertical 1080x1920 versions, music, and the
 Guide film (still waiting on the Codex Guide stills).
 
+## Redirect, 2026-09-06 — the six-film system (supersedes "The five films")
+
+Dillon rejected the first delivery outright ("These are so bad. Come on. We can do
+way better.") and reset the brief in one message. The new constraints, verbatim
+where they matter:
+
+- **All six** references recreated, branded for Momentum only. The sixth is
+  Motion's "Astra" post, receipted at
+  [[12_Brain/01_Captures/X/2026-09-06 - motion-astra-launch-video-reference|the Astra capture]].
+- "I want exact logos, everything." Spin on the logo is fine; data elements in the
+  background are welcome.
+- **"let's not use any pictures that we created"** — no generated people, no
+  reuse of the 32 Codex stills, no Philadelphia plates.
+- A **Momentum bot** with the same character energy as the mascot in the `folk`
+  reference, branded blue and white.
+- **"we're not doing MCPs"** — the MCP film is out of scope.
+- Message: we manage your ads inside ChatGPT, plus AEO / SEO / GEO.
+
+### What shipped
+
+| # | Film | Recreates | Length | Source |
+|---|---|---|---|---|
+| 1 | Momentum for ChatGPT Ads | Motion "Astra" | 26.0 s | `03_Content/momentum-launch-films/01-chatgpt-ads.jsx` |
+| 2 | Meet Momo | folk mascot spot | 29.0 s | `02-meet-momo.jsx` |
+| 3 | They started asking | float / HyperFrames | 27.8 s | `03-answer-engine.jsx` |
+| 4 | Everywhere they ask | Higgsfield GPT-6 ASTRA | 26.2 s | `04-everywhere-they-ask.jsx` |
+| 5 | Great ads compound | Atomik launch-video co. | 29.0 s | `05-ads-compound.jsx` |
+| 6 | Same market. Different answer. | ChatCut / Fable 5.1 | 23.2 s | `06-same-market.jsx` |
+
+All six are 1920 × 1080, 30 fps, and cost **zero Higgsfield credits** — every
+frame is drawn from vector primitives in higgsedit. 305 of the approved 700 remain
+spent from the earlier stage; 395 are still unspent.
+
+### The exact logo problem, solved
+
+`_os/automation/assets/needmomentum-mark.png` is a 192 px raster and goes to mush
+above ~400 px on screen. Fix: flatten it on white, trace it with `potrace`
+(threshold 180, turdSize 8), and render the resulting curves at 2048 px with
+`sharp`. That produced
+`_os/automation/assets/needmomentum-mark-2048.png` (brand blue, transparent `m`)
+and `needmomentum-mark-white-2048.png` (knockout). Both are committed and are now
+the mark to use for any surface larger than a favicon.
+
+Third-party marks are **exact**, not approximations: `simple-icons` path data
+pulled from jsDelivr and rasterised in the needed colour — OpenAI, Perplexity,
+Gemini, Google, Claude.
+
+### Momo
+
+Blue `#2A80C2` squircle body, two white capsule eyes, gold `#FFC63B` antenna dot
+on a blue stem, all inside one `<group>` so he pops, bobs and tilts as one piece.
+Defined by the `momo()` helper in films 2 and 3; `blink()` snaps the eyes with a
+`scaleY` track. Pure vector, so he redraws crisp at any size and costs nothing.
+
+### Every number on screen is illustrative
+
+The `$60`/`$41` cost-per-lead exchange, the ranked roofer list, the answer
+coverage board, the service progress bars and the cited firm are dramatisations of
+an interface, not measured Momentum results. Swap them for real figures or cut the
+frames before any of this runs as an ad.
+
+### Google Drive, checked
+
+Drive holds an earlier set — `momentum-{bridge,capita,marlow,notion}-recreation-*.mp4`
+plus `momentum-founders-*` and `momentum-city-launch-*`, all uploaded 2026-09-06
+20:58–21:14Z. Nothing from that set was reused. The only Momentum brand assets in
+Drive are `mohr-media-*` (a different mark) and the Align logo pack; the
+needmomentum mark still lives only in this repo.
+
 ## Missing inputs
 
 1. The Guide stills (the blue-and-gold figure scenes) and their JSON specs
@@ -552,3 +624,5 @@ Guide film (still waiting on the Codex Guide stills).
 - [[12_Brain/02_Entities/Momentum 360|Momentum 360]]
 - [[12_Brain/01_Captures/X/2026-09-06 - brand-launch-video-references|Reference receipt]]
 - [[System/approval-queue|Approval queue]]
+- [[03_Content/momentum-launch-films/README|higgsedit sources for the six films]]
+- [[12_Brain/01_Captures/X/2026-09-06 - motion-astra-launch-video-reference|Astra reference receipt]]
