@@ -51,3 +51,26 @@ test('the rule this test enforces still says what it says', () => {
   assert.ok(/No em dashes anywhere/i.test(text),
     'System/writing-rules.md no longer bans em dashes; delete this test');
 });
+
+test('the provenance states the licence and separates measured from generated', () => {
+  // The source is published under terms that reserve all rights. Describing it
+  // as unrestricted, or describing generated geometry as survey capture, is the
+  // specific failure this guards.
+  const src = fs.readFileSync(path.join(ROOT, 'docs', 'SOURCES.md'), 'utf8');
+  assert.ok(/reserves all rights in the database/.test(src),
+    'the licence terms are not quoted');
+  assert.ok(/opendataphilly\.org\/datasets\/building-footprints/.test(src),
+    'no link to the catalogue record the terms were read from');
+  assert.ok(/not established/i.test(src),
+    'redistribution and commercial use must be recorded as unestablished');
+  assert.ok(/## What is measured and what is generated/.test(src),
+    'the measured/generated split is not stated');
+  for (const generated of ['crown tier shapes', 'terrain height field',
+    'skirt', 'facade']) {
+    assert.ok(new RegExp(generated, 'i').test(src),
+      `${generated} is not declared as generated`);
+  }
+  const readme = fs.readFileSync(path.join(ROOT, 'README.md'), 'utf8');
+  assert.ok(/not public domain/i.test(readme),
+    'the README still implies the data is freely usable');
+});

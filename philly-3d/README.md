@@ -2,9 +2,18 @@
 
 A real 3D model of Philadelphia, built from the city's own LiDAR survey.
 
-545,451 buildings. Every one is a real footprint at its measured height. No
-procedural city, no AI-generated skyline, no stock model. Comcast Center is
-976 ft here because the City of Philadelphia measured it at 976 ft.
+545,451 buildings. Every one is a real footprint at the height the City's
+published survey records for it. No procedural city, no AI-generated skyline, no
+stock model. Comcast Center is 976 ft here because `LI_BUILDING_FOOTPRINTS`
+records it at 976 ft.
+
+**The footprints and heights are measured. Everything else is generated**, and
+`docs/SOURCES.md` says which is which: the crown tier shapes, the terrain fill,
+the wall skirts and every facade are this project's work, not survey capture.
+The source data is published by the City of Philadelphia under terms that
+**reserve all rights in the database**. It is not public domain. Redistribution
+of the derived geometry and any commercial use are **not established** and must
+be confirmed before publishing.
 
 ![Philadelphia from the east at golden hour: the Center City tower cluster with
 its restored crowns, the rowhouse grid running out to the horizon, parks in
