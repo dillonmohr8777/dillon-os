@@ -57,7 +57,7 @@
   .clab { position:absolute; font-size:19px; font-weight:800; letter-spacing:.24em;
           color:var(--m-muted); opacity:0; }
   #labA { left:98px;   top:824px; }
-  #labB { left:552px;  top:674px; }
+  #labB { left:684px;  top:674px; }
   #labC { left:1322px; top:602px; }
 
   /* card A — a results page */
@@ -80,7 +80,7 @@
   #cB .ans > * { margin-top:16px; }
   #cB .ans > *:first-child { margin-top:0; }
   #cB .inl { display:flex; align-items:center; gap:13px; }
-  #cB .cites { display:flex; gap:10px; margin-top:34px; }
+  #cB .cites { display:flex; gap:10px; margin-top:22px; }
   #cB .cites b { width:32px; height:32px; border-radius:8px; background:var(--m-panel);
                  border:1px solid var(--m-line); display:flex; align-items:center;
                  justify-content:center; font-size:15px; font-weight:800; color:var(--m-muted); }
@@ -138,8 +138,8 @@
   .sec .in { }
   #s1 { background:var(--m-brand); }
   #s1 .in { padding:40px 46px 42px; }
-  #s1 .h { height:24px; border-radius:6px; background:#FFFFFF; opacity:.92; width:420px; }
-  #s1 .h2{ height:14px; border-radius:7px; background:#FFFFFF; opacity:.5; width:300px; margin-top:18px; }
+  #s1 .h { height:24px; border-radius:6px; background:var(--m-on-brand); opacity:.92; width:420px; }
+  #s1 .h2{ height:14px; border-radius:7px; background:var(--m-on-brand); opacity:.5; width:300px; margin-top:18px; }
   #s1 .cta { margin-top:26px; height:48px; width:212px; border-radius:999px;
              background:var(--m-signal); display:flex; align-items:center; padding:0 22px; }
   #s1 .cta i { display:block; height:11px; width:132px; border-radius:6px;
@@ -177,7 +177,7 @@
          font-size:104px; color:var(--m-signal-ink); }
 
   /* ── beat 8 · lockup ─────────────────────────────────────────────────── */
-  #lock { position:absolute; left:0; top:388px; width:1920px; opacity:0; }
+  #lock { position:absolute; left:0; top:356px; width:1920px; opacity:0; }
 
   /* ── pills — the thread that runs the whole film ─────────────────────── */
   #pills { position:absolute; inset:0; }
@@ -240,9 +240,9 @@
           <span class="chip" id="chipB">Your business</span>
           <i class="gb" style="width:88px"></i>
         </div>
-        <i class="gb" style="width:598px"></i>
-        <i class="gb" style="width:522px"></i>
-        <i class="gb" style="width:392px"></i>
+        <i class="gb" style="width:640px"></i>
+        <i class="gb" style="width:580px"></i>
+        <i class="gb" style="width:430px"></i>
       </div>
       <div class="cites"><b>1</b><b>2</b><b>3</b></div>
     </div>
@@ -259,7 +259,7 @@
     <div id="ptools"><i></i><i></i></div>
     <div id="send">
       <svg viewBox="0 0 24 24"><path d="M12 20V5.4M12 5.4l-6.5 6.5M12 5.4l6.5 6.5"
-        fill="none" stroke="#14181B" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        fill="none" style="stroke:var(--m-on-signal)" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </div>
   </div>
 
@@ -313,7 +313,7 @@
 
 <script type="module">
 import { at, clamp, lerp, easeEntrance, easeEmphatic, easeStandard, easeInOut,
-         osc, blink, typed, words, revealWords, Lockup, markSVG }
+         blink, typed, words, revealWords, Lockup, markSVG }
   from '../../brand/film-kit.js';
 
 window.FILM = { width: 1920, height: 1080, fps: 30, duration: 24.0 };
@@ -328,7 +328,7 @@ const INK = '#14181B', BRAND = '#155E86', SIGNAL = '#E27113',
 /* ═══ beat 1 · the wordmark run, drawn on canvas ═════════════════════════ */
 const RUN_A = 'MOMENTUM ';                 // ink
 const RUN_B = 'for local search.';         // brand blue
-const RUN_FS = 1300;                       // too big to read comfortably
+const RUN_FS = 1650;                       // overruns 1080 top and bottom
 const cv = $('runcv'), cx = cv.getContext('2d');
 let RUN = { wA: 0, W: 0, cap: 0, send: 0.07 };
 
@@ -346,12 +346,13 @@ function measureRun() {
 
 /* ═══ beat 4 · the checklist, built once ═════════════════════════════════ */
 const LIST = [
-  ['Ranking the site.',            'technical SEO, pages that answer the question', MARK],
-  ['Feeding the answer engines.',  'structured data, entities, citations',          SIGNAL],
-  ['Showing up in AI results.',    'the sources those answers are built from',      BRAND],
-  ['Running the ads.',             'search, performance max, retargeting',          SIGNAL_INK],
+  ['Ranking the site.',            'technical SEO, pages that answer the question'],
+  ['Feeding the answer engines.',  'structured data, entities, citations'],
+  ['Showing up in AI results.',    'the sources those answers are built from'],
+  ['Running the ads.',             'search, performance max, retargeting'],
 ];
-const CI = LIST.map(([h, p, c], i) => {
+const CI = LIST.map(([h, p], i) => {
+  const c = SIGNAL_INK;                    // one accent: four dots, no false system
   const d = document.createElement('div');
   d.className = 'ci';
   d.style.top = `${i * 132}px`;
@@ -364,7 +365,7 @@ const CI = LIST.map(([h, p, c], i) => {
 /* ═══ pins (drawn, never imported) ══════════════════════════════════════ */
 const PIN = (fill, w = 26) => `<svg viewBox="0 0 34 46" width="${w}" height="${w * 46 / 34}"
   style="display:block"><path d="M17 46 C 4 27, 0 21, 0 15 A 17 17 0 1 1 34 15 C 34 21, 30 27, 17 46 Z"
-  fill="${fill}"/><circle cx="17" cy="15" r="6.2" fill="#FBF8F4"/></svg>`;
+  fill="${fill}"/><circle cx="17" cy="15" r="6.2" style="fill:var(--m-paper)"/></svg>`;
 
 /* card C map plate: fixed roads + three pins, laid out once */
 (() => {
@@ -384,15 +385,17 @@ $('s2').querySelector('.pin').innerHTML = PIN(SIGNAL, 26);
 
 /* ═══ the pills ═════════════════════════════════════════════════════════ */
 const PILL_TEXT = ['GOOGLE', 'CHATGPT', 'MAPS', 'PERPLEXITY'];
-/* five stations: scatter → margins → right column → margins → the closing row */
+/* five stations: scatter → margins → right column → a low staging line → the
+   closing row. The staging line exists so the last move approaches the row from
+   below and no pill path ever crosses the lockup. */
 const PILL_POS = [
-  /* GOOGLE     */[[352, 350, -6], [300, 148, -3], null, null],
-  /* CHATGPT    */[[1596, 396, 5], [880, 942, 2], null, null],
-  /* MAPS       */[[430, 748, 4], [1690, 726, -3], null, null],
-  /* PERPLEXITY */[[1462, 796, -4], [330, 950, 3], null, null],
+  /* GOOGLE     */[[352, 350, -6], [300, 148, -3], null, null, null],
+  /* CHATGPT    */[[1596, 396, 5], [880, 942, 2], null, null, null],
+  /* MAPS       */[[430, 748, 4], [1690, 726, -3], null, null, null],
+  /* PERPLEXITY */[[1462, 796, -4], [330, 950, 3], null, null, null],
 ];
-const PILL_SCALE = [1, 0.84, 0.86, 1];
-const PILL_HOP = [[5.95, 0.95], [9.50, 0.92], [21.62, 1.05]];
+const PILL_SCALE = [1, 0.84, 0.86, 0.86, 1];
+const PILL_HOP = [[5.95, 0.95], [9.50, 0.92], [21.86, 0.46], [22.30, 0.80]];
 const COL_JIT = [-14, 8, -6, 12];
 const PILLS = PILL_TEXT.map((txt) => {
   const el = document.createElement('div');
@@ -416,15 +419,21 @@ const wLn2 = words($('ln2'));
 
   measureRun();
   lock = await Lockup($('lock'), { markSize: 124, wordSize: 96 });
+  /* beat 7's second line resolves into the lockup's line slot, so reserve it */
+  lock.el.querySelector('.lk-domain').style.marginTop = '96px';
 
   /* the closing row: measured, centred, gap 26 */
   const ws = PILLS.map((p) => p.offsetWidth);
   /* station 3: a right-aligned column that balances the checklist beat */
   ws.forEach((w, i) => { PILL_POS[i][2] = [1766 + COL_JIT[i] - w / 2, 404 + i * 106, (i % 2 ? 1.4 : -1.4)]; });
-  /* station 4: the neat closing row, the scatter finally resolved */
+  /* station 5: the neat closing row, the scatter finally resolved */
   const total = ws.reduce((a, b) => a + b, 0) + 26 * (ws.length - 1);
   let x = 960 - total / 2;
-  ws.forEach((w, i) => { PILL_POS[i][3] = [x + w / 2, 692, 0]; x += w + 26; });
+  ws.forEach((w, i) => { PILL_POS[i][4] = [x + w / 2, 700, 0]; x += w + 26; });
+  /* station 4: the row's x, but parked low — so the column fans out under the
+     lockup and then rises into place. No pill path crosses the mark, the
+     wordmark, the line or the URL. */
+  ws.forEach((w, i) => { PILL_POS[i][3] = [PILL_POS[i][4][0], 872, (i % 2 ? 1.4 : -1.4)]; });
 
   window.seek(0);
   window.__ready = true;
@@ -446,11 +455,11 @@ const poseCard = (el, rest, ccx, ccy, s, rot, o) => {
 
 const CARDS = [
   { el: $('cA'), lab: $('labA'), x: 96,   y: 370, w: 540, h: 430, rot: -1.7,
-    birth: 5.98, sx: 600,  strip: [1546, 152, 0.34, 1.6], ph: 0.0 },
+    birth: 5.98, sx: 600,  strip: [1546, 152, 0.34, 1.6] },
   { el: $('cB'), lab: $('labB'), x: 550,  y: 250, w: 720, h: 400, rot: 0.9,
-    birth: 5.86, sx: 960,  strip: [1300, 150, 0.28, -1.2], ph: 0.4 },
+    birth: 5.86, sx: 960,  strip: [1300, 150, 0.28, -1.2] },
   { el: $('cC'), lab: $('labC'), x: 1320, y: 168, w: 470, h: 410, rot: 2.3,
-    birth: 6.12, sx: 1320, strip: [1748, 146, 0.32, 2.4], ph: 0.75 },
+    birth: 6.12, sx: 1320, strip: [1748, 146, 0.32, 2.4] },
 ];
 const SECS = ['s1', 's2', 's3', 's4'].map((id) => {
   const el = $(id), inr = el.querySelector('.in');
@@ -465,6 +474,11 @@ const CHIPS = [
 
 const QUERY = "who's the best roofer in Fishtown?";
 
+/* beat 7 → 8. #ln2 does not exit; it scales and travels into the lockup's line
+   slot, so the close is mark + MOMENTUM + one line + needmomentum.com. Its box
+   rests centred on y 612; the slot's centre is y 527. */
+const LN2_DY = -85, LN2_SCALE = 0.33;
+
 /* ═══ the timeline ══════════════════════════════════════════════════════ */
 window.seek = function (t) {
 
@@ -478,11 +492,13 @@ window.seek = function (t) {
       /* one continuous move: the read head races down the string and the whole
          line collapses into legibility underneath it. Already moving at t=0. */
       const run = Math.pow(easeInOut(clamp((t + 0.62) / 3.22)), 1.85);
-      const f = lerp(0.021, 0.5, run);
+      /* the read head starts past the M, so frame 0 is already mid-letter */
+      const f = lerp(0.058, 0.5, run);
       const col = at(t, 1.20, 1.15, easeEmphatic);
       const s = lerp(1, RUN.send, col);
       const tx = 960 - s * RUN.W * f;
-      const ty = 540 + lerp(92, 0, col) - 96 * gone;
+      /* cap centre pinned to the frame centre: the crop is equal top and bottom */
+      const ty = 540 - 96 * gone;
 
       cx.save();
       cx.globalAlpha = alpha;
@@ -502,12 +518,11 @@ window.seek = function (t) {
   {
     const inP = at(t, 3.18, 0.92, easeEntrance);
     const split = at(t, 5.86, 0.34, easeStandard);
-    const bob = 5 * osc(t, 5.6) * inP * (1 - split);
     const press = at(t, 5.80, 0.16, easeStandard) * (1 - at(t, 5.96, 0.2, easeStandard));
     const p = $('prompt');
     p.style.opacity = inP * (1 - split);
     p.style.transform =
-      `translateY(${lerp(268, 0, inP) + bob + 26 * split}px) scale(${lerp(0.955, 1, inP) * (1 - 0.05 * split)})`;
+      `translateY(${lerp(268, 0, inP) + 26 * split}px) scale(${lerp(0.955, 1, inP) * (1 - 0.05 * split)})`;
 
     /* the ghost placeholder greys out as the query types itself in */
     $('ghostq').style.opacity = (1 - at(t, 3.98, 0.30, easeStandard)) * inP;
@@ -525,7 +540,7 @@ window.seek = function (t) {
 
   /* ═══ BEAT 3 · 5.85–9.50 — three surfaces ════════════════════════════ */
   {
-    const wipe = at(t, 12.62, 0.42, easeStandard);          // the whole set leaves
+    const wipe = at(t, 12.92, 0.30, easeStandard);          // behind the deep edge
     CARDS.forEach((c, i) => {
       const born = at(t, c.birth, 1.06, easeEntrance);
       const toStrip = at(t, 9.46 + i * 0.07, 0.92, easeEmphatic);
@@ -536,7 +551,7 @@ window.seek = function (t) {
       let s = lerp(216 / c.h, 1, born);
       let rot = lerp(0, c.rot, born);
       ccx = lerp(ccx, c.strip[0], toStrip);
-      ccy = lerp(ccy, c.strip[1], toStrip) + 5 * osc(t, 5.4, c.ph) * born * (1 - toStrip);
+      ccy = lerp(ccy, c.strip[1], toStrip);
       s = lerp(s, c.strip[2], toStrip);
       rot = lerp(rot, c.strip[3], toStrip);
       poseCard(c.el, c, ccx, ccy, s, rot, born * (1 - wipe));
@@ -557,46 +572,50 @@ window.seek = function (t) {
 
   /* ═══ BEAT 4 · 9.45–13.10 — the checklist ════════════════════════════ */
   {
-    const out = at(t, 12.66, 0.40, easeStandard);
+    const out = at(t, 12.92, 0.30, easeStandard);        // behind the deep edge
     CI.forEach((it, i) => {
-      const p = at(t, 9.96 + i * 0.50, 0.70);
+      const p = at(t, 9.86 + i * 0.46, 0.70);
       it.el.style.opacity = p * (1 - out);
       it.el.style.transform = `translateY(${(1 - p) * 26 - 22 * out}px)`;
-      it.rule.style.width = `${at(t, 10.08 + i * 0.50, 0.72, easeEmphatic) * 660}px`;
+      it.rule.style.width = `${at(t, 9.96 + i * 0.46, 0.62, easeEmphatic) * 660}px`;
     });
   }
 
-  /* ═══ BEAT 5 · 12.95–16.80 — SEO · AEO · GEO ════════════════════════ */
+  /* ═══ BEAT 5 · 12.55–16.10 — SEO · AEO · GEO ════════════════════════ */
   {
-    const inP = at(t, 12.88, 0.42, easeEmphatic);           // wipes in from the left
-    const outP = at(t, 15.90, 0.46, easeEmphatic);          // and keeps going, off right
+    const inP = at(t, 12.58, 0.50, easeEmphatic);           // wipes in from the left
+    const outP = at(t, 15.62, 0.46, easeEmphatic);          // and keeps going, off right
     $('deep').style.opacity = inP > 0 ? 1 : 0;
     $('deep').style.clipPath =
       `inset(0 ${(1 - inP) * 100}% 0 ${outP * 100}%)`;
 
+    /* a hard swap, not a cross-dissolve: every word is fully gone before the
+       next one starts, so the three never share a pixel. */
     const T = [
-      { el: $('t1'), in: 13.24, out: 13.98 },
-      { el: $('t2'), in: 14.02, out: 14.76 },
-      { el: $('t3'), in: 14.80, out: 15.92 },   // the third holds longest
+      { el: $('t1'), in: 12.86, out: 13.64 },   // rides in on the wipe
+      { el: $('t2'), in: 13.86, out: 14.64 },
+      { el: $('t3'), in: 14.86, out: 15.80 },   // the third holds longest
     ];
     T.forEach((s) => {
-      const a = at(t, s.in, 0.52, easeEntrance);
-      const b = at(t, s.out, 0.30, easeStandard);
+      const a = at(t, s.in, 0.42, easeEntrance);
+      const b = at(t, s.out, 0.18, easeStandard);
       const w = s.el.querySelector('.w'), big = s.el.querySelector('b'), sub = s.el.querySelector('i');
       rise(w, big, a, 96);
       s.el.style.opacity = a * (1 - b);
       s.el.style.transform = `translateY(${-56 * b}px)`;
-      const sp = at(t, s.in + 0.26, 0.44);
+      const sp = at(t, s.in + 0.10, 0.26);   // the expansion lands early — AEO needs the read
       sub.style.opacity = sp;
       sub.style.transform = `translateY(${(1 - sp) * 16}px)`;
     });
-    const step = (at(t, 13.24, 0.4) + at(t, 14.02, 0.4) + at(t, 14.80, 0.4)) / 3;
+    const step = (at(t, 12.86, 0.4) + at(t, 13.86, 0.4) + at(t, 14.86, 0.4)) / 3;
     $('deepfill').style.width = `${step * 300}px`;
   }
 
-  /* ═══ BEAT 6 · 16.55–19.95 — the deliverable ════════════════════════ */
+  /* ═══ BEAT 6 · 15.65–19.95 — the deliverable ════════════════════════ */
   {
-    const inP = at(t, 16.12, 0.80, easeEntrance);
+    /* it arrives under the deep layer, so the exit wipe reveals a card that is
+       already there and already rendering — never an empty white rectangle */
+    const inP = at(t, 15.50, 0.72, easeEntrance);
     const outP = at(t, 18.94, 0.46, easeStandard);
     const b = $('browser');
     b.style.opacity = inP * (1 - outP);
@@ -605,7 +624,7 @@ window.seek = function (t) {
 
     /* the page renders itself, section by section */
     SECS.forEach((sc, i) => {
-      const p = at(t, 16.44 + i * 0.32, 0.52, easeEntrance);
+      const p = at(t, 15.72 + i * 0.24, 0.46, easeEntrance);
       sc.el.style.height = `${p * sc.h}px`;
       sc.in.style.transform = `translateY(${(1 - p) * -26}px)`;
     });
@@ -615,20 +634,24 @@ window.seek = function (t) {
     $('live').style.transform = `scale(${lerp(0.62, 1, lv)}) translateY(${54 * outP}px)`;
   }
 
-  /* ═══ BEAT 7 · 19.45–21.85 — the line ═══════════════════════════════ */
+  /* ═══ BEAT 7 · 19.45–22.30 — the line, resolving into the lockup ════ */
   {
-    const out = at(t, 21.42, 0.52, easeStandard);
+    const out1 = at(t, 21.10, 0.44, easeStandard);        // 'One agency.' leaves
+    const settle = at(t, 21.28, 0.58, easeEmphatic);      // the second line stays
     $('sweep').style.width = `${at(t, 19.16, 1.00, easeStandard) * 1920}px`;
-    $('sweep').style.opacity = 1 - out;
+    $('sweep').style.opacity = 1 - at(t, 21.02, 0.42, easeStandard);
     revealWords($('ln1'), t, 19.62, 0.66, 0.08, 40);
     revealWords($('ln2'), t, 19.96, 0.66, 0.07, 40);
-    const li = $('line');
-    li.style.opacity = 1 - out;
-    li.style.transform = `translateY(${-46 * out}px)`;
+    $('ln1').style.opacity = 1 - out1;
+    $('ln1').style.transform = `translateY(${-46 * out1}px)`;
+    /* 'Every place they look.' is not exited — it scales and travels down into
+       the lockup's line slot, so beat 7's copy becomes beat 8's line. */
+    $('ln2').style.transform =
+      `translateY(${LN2_DY * settle}px) scale(${lerp(1, LN2_SCALE, settle)})`;
   }
 
-  /* ═══ BEAT 8 · 21.50–24.00 — lockup, and the pills come to rest ═════ */
-  if (lock) lock.pose(at(t, 21.66, 1.15));
+  /* ═══ BEAT 8 · 21.55–24.00 — lockup, and the pills come to rest ═════ */
+  if (lock) lock.pose(at(t, 21.70, 1.10));
 
   /* ── the pills, one continuous thread from beat 2 to the last frame ─── */
   PILLS.forEach((el, i) => {

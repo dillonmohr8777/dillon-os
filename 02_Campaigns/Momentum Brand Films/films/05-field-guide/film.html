@@ -225,10 +225,10 @@ function leafPath(x, y, deg, len, wid) {
   // not as debris. They arrive last — the growing tip is the last thing drawn.
   const BUD_T = [3.34, 3.48];
   [[494, 520, -26, -13], [506, 478, 27, -12]].forEach((b, i) => {
-    const sx = b[0], sy = b[1], tx = sx + b[2] * 1.34, ty = sy + b[3] * 1.34;
+    const sx = b[0], sy = b[1], tx = sx + b[2] * 1.12, ty = sy + b[3] * 1.12;
     LATE(S(P, .48 + i * .03, 'line', { x1: sx, y1: sy, x2: tx, y2: ty, stroke: INK,
       'stroke-width': 2.0, 'stroke-linecap': 'round' }, g), BUD_T[i], 0.30);
-    LATE(S(P, .51 + i * .03, 'ellipse', { cx: tx + b[2] * .40, cy: ty + b[3] * .40, rx: 9.5, ry: 6.5,
+    LATE(S(P, .51 + i * .03, 'ellipse', { cx: tx + b[2] * .40, cy: ty + b[3] * .40, rx: 8, ry: 5.5,
       fill: 'none', stroke: INK, 'stroke-width': 1.8,
       transform: `rotate(${b[2] > 0 ? -24 : 24} ${tx + b[2] * .40} ${ty + b[3] * .40})` }, g),
       BUD_T[i] + 0.10, 0.30);
@@ -257,11 +257,11 @@ function leafPath(x, y, deg, len, wid) {
      drawing does not have to make them the same shape to say so. */
   const beds = [
     { x0: 236, x1: 766, y: 296, h:  94, ph: 0.0, num: 66, px: 300, pd: 62,
-      bars: [[188, 40]] },
+      bars: [[188, 40, 44]] },
     { x0: 208, x1: 792, y: 410, h: 150, ph: 2.1, num: 96, px: 266, pd: 112,
-      bars: [[232, 28], [154, 56], [516, 92]] },
+      bars: [[232, 28, 44], [154, 56, 98], [516, 92, 30]] },
     { x0: 254, x1: 750, y: 592, h: 104, ph: 4.2, num: 70, px: 404, pd: 70,
-      bars: [[126, 34], [206, 62]] },
+      bars: [[126, 34, 52], [206, 62, 34]] },
   ];
   function wavy(b, amp) {
     let d = `M ${b.x0},${b.y + Math.sin(b.ph) * amp}`;
@@ -295,7 +295,7 @@ function leafPath(x, y, deg, len, wid) {
       'font-size': 34, 'font-weight': 700, fill: BRAND }, g);
     // bars: unequal counts and lengths; the long one runs into the bed edge and is cut by it
     b.bars.forEach((bar, k) =>
-      F(P, .64 + i * .07 + k * .02, 'rect', { x: b.px + 44, y: y + bar[1], width: bar[0],
+      F(P, .64 + i * .07 + k * .02, 'rect', { x: b.px + bar[2], y: y + bar[1], width: bar[0],
         height: 9, rx: 4.5, fill: LSTRONG, 'fill-opacity': .8,
         'clip-path': `url(#${cid})` }, g));
     // the pins seat one after another, after the beds have settled
@@ -336,8 +336,8 @@ function leafPath(x, y, deg, len, wid) {
     S(P, .46 + i * .04, 'circle', { cx: e.x, cy: e.y, r: 10, fill: 'none', stroke: INK,
                                     'stroke-width': 2 }, g);
     // the hand numbering happens after the branches land — the classifying act
-    LATE(T(P, .60 + i * .04, e.n, { x: e.x - 22, y: e.y - 18, 'text-anchor': 'middle',
-      'font-size': 15, 'font-weight': 700, fill: MUTED }, g), 8.66 + i * 0.07, 0.30);
+    LATE(T(P, .60 + i * .04, e.n, { x: e.x - 24, y: e.y - 19, 'text-anchor': 'middle',
+      'font-size': 19, 'font-weight': 700, fill: BRAND }, g), 8.66 + i * 0.08, 0.30);
     T(P, .66 + i * .04, e.s, { x: e.x + 24, y: e.y + 7, 'font-size': 22, 'font-weight': 400,
       fill: INK, 'letter-spacing': '.01em' }, g);
   });
@@ -474,13 +474,13 @@ const TLEN = TCUM[TCUM.length - 1];
 
 const DATUM_Y = 892, DATUM_X0 = 96, DATUM_X1 = 1824;
 const datum = E('path', { d: `M ${DATUM_X0},${DATUM_Y} H ${DATUM_X1}`, fill: 'none',
-  stroke: LSTRONG, 'stroke-width': 1.2 }, traceSvg);
+  stroke: LSTRONG, 'stroke-width': 1.4 }, traceSvg);
 const TICK_X = [470, 1180, 1660];
 const ticks = TICK_X.map(x => E('path', { d: `M ${x},${traceY(x).toFixed(1)} V ${DATUM_Y}`,
-  fill: 'none', stroke: LSTRONG, 'stroke-width': 1.3 }, traceSvg));
+  fill: 'none', stroke: LSTRONG, 'stroke-width': 1.5 }, traceSvg));
 const tracePath = E('path', {
   d: TP.map((p, i) => (i ? 'L' : 'M') + p[0] + ',' + p[1].toFixed(1)).join(' '),
-  fill: 'none', stroke: INK, 'stroke-width': 2.8,
+  fill: 'none', stroke: INK, 'stroke-width': 3.0,
   'stroke-linecap': 'round', 'stroke-linejoin': 'round' }, traceSvg);
 const pen = E('circle', { r: 8, fill: SIGNAL, opacity: 0 }, traceSvg);
 for (const e of [datum, ...ticks, tracePath]) {
@@ -490,9 +490,9 @@ for (const e of [datum, ...ticks, tracePath]) {
 }
 /** Pen position and arc-length fraction at t. Constant speed once it is visible. */
 function traceAt(t) {
-  const x = t < 13.62
-    ? lerp(TR_X0, TR_ENTER, easeStandard(clamp((t - 12.95) / 0.67)))
-    : lerp(TR_ENTER, TR_X1, clamp((t - 13.62) / 2.98));
+  const x = t < 13.80
+    ? lerp(TR_X0, TR_ENTER, easeStandard(clamp((t - 13.10) / 0.70)))
+    : lerp(TR_ENTER, TR_X1, clamp((t - 13.80) / 2.98));
   const fi = clamp((x - TR_X0) / TR_DX, 0, TP.length - 1.001);
   const i = Math.floor(fi), f = fi - i;
   return { x, y: lerp(TP[i][1], TP[i + 1][1], f), u: lerp(TCUM[i], TCUM[i + 1], f) / TLEN };
@@ -536,7 +536,7 @@ const figEls = FIG.map(s => {
   const d = document.createElement('span');
   d.textContent = s; document.getElementById('figs').appendChild(d); return d;
 });
-const FIGWIN = [[1.50, 3.94], [4.40, 6.62], [7.08, 9.28], [9.80, 11.76], [12.22, 13.60]];
+const FIGWIN = [[1.50, 3.94], [4.40, 6.62], [7.08, 9.28], [9.80, 11.68], [12.32, 13.72]];
 
 /* ── grain: one seeded texture, generated once, never resampled ───────────── */
 document.getElementById('grain').style.background = `url(${grainURL(190, 0.052, 23)}) repeat`;
@@ -571,9 +571,9 @@ Promise.all([markSVG(), Lockup(document.getElementById('lock'), {
 });
 
 /* ── timeline helpers ─────────────────────────────────────────────────────── */
-const DRAW = [[1.35, 1.96], [4.20, 1.82], [6.88, 1.82], [9.60, 1.76], [12.02, 1.48]];
+const DRAW = [[1.35, 1.96], [4.20, 1.82], [6.88, 1.82], [9.60, 1.76], [12.00, 1.42]];
 
-const T_IV_V = 11.88;                                  // the scale-through
+const T_IV_V = 11.80;                                  // the scale-through
 const T_OPEN = 14.40;                                  // the mask races past the frame
 
 function lensR(t) {
@@ -581,14 +581,14 @@ function lensR(t) {
   R = lerp(R, 274, at(t, 9.40, 0.78, easeEmphatic));   // it narrows for the manuscript
   R = lerp(R, 452, at(t, T_IV_V, 0.92, easeEmphatic)); // and widens for the celestial chart
   R = lerp(R, 1560, at(t, T_OPEN, 1.05, easeEmphatic));// then races past the frame
-  R = lerp(R, 424, at(t, 23.30, 1.65, easeEmphatic));  // and closes back to frame the lockup
+  R = lerp(R, 424, at(t, 23.05, 1.65, easeEmphatic));  // and closes back to frame the lockup
   return R;
 }
 
 /* IV → V is the one transition that is not a slide: Plate IV is pinned in screen
    space and scaled through the viewer's eye while the strip travels under it, so
    nothing is carved by the mask arc. p4 is that travel. */
-const p4at = (t) => at(t, T_IV_V, 0.88, easeEmphatic);
+const p4at = (t) => at(t, T_IV_V, 0.62, easeEmphatic);
 
 function stripX(t) {
   return at(t, 4.06, 0.62, easeEmphatic)      // I → II : a decisive slide
@@ -604,7 +604,7 @@ window.seek = function (t) {
   const R = lensR(t);
   els.lens.style.clipPath = `circle(${R.toFixed(2)}px at ${CX}px ${CY}px)`;
 
-  const surround = Math.max(at(t, 0.25, 0.9) * (1 - at(t, T_OPEN, 0.80)), at(t, 23.90, 0.9));
+  const surround = Math.max(at(t, 0.25, 0.9) * (1 - at(t, T_OPEN, 0.80)), at(t, 23.65, 0.9));
   gRing.setAttribute('transform', `translate(${CX},${CY}) scale(${(R + 2.4).toFixed(3)})`);
   gTicks.setAttribute('transform', `translate(${CX},${CY}) scale(${R.toFixed(3)})`);
   ring.style.opacity = surround;
@@ -635,8 +635,8 @@ window.seek = function (t) {
   els.scale.style.transform = `scale(${sc.toFixed(4)})`;
 
   /* the plates leave together as the traveller puts a pen on the page */
-  const platesOut = 1 - at(t, 13.70, 0.95, easeStandard);
-  els.grid.style.opacity = 0.85 * (1 - at(t, 13.90, 1.20, easeStandard));
+  const platesOut = 1 - at(t, 13.90, 1.05, easeStandard);
+  els.grid.style.opacity = 0.85 * (1 - at(t, 14.05, 1.20, easeStandard));
   els.panel.style.opacity = 1 - at(t, 14.40, 1.35, easeStandard);
 
   /* --- the plates draw themselves in ----------------------------------- */
@@ -665,18 +665,25 @@ window.seek = function (t) {
 
   /* Plate IV is pinned in screen space and driven through the viewer's eye from
      its own centre, so the manuscript is never carved by the mask arc. */
-  const p4s = at(t, T_IV_V, 0.42, easeStandard);
+  const p4s = at(t, T_IV_V, 0.50, easeInOut);
+  const p4f = at(t, T_IV_V + 0.05, 0.34, easeInOut);
   G[3].setAttribute('transform',
     `translate(${(3 * W + p4 * W).toFixed(2)},0) translate(500,498) ` +
     `scale(${(1 + 0.92 * p4s).toFixed(4)}) translate(-500,-498)`);
-  G[3].style.opacity = ((1 - p4s) * platesOut).toFixed(3);
+  G[3].style.opacity = ((1 - p4f) * platesOut).toFixed(3);
+  /* Plate V closes inward as the traveller leaves it — the chart shuts, the
+     record opens. A dissolve with a direction, not a fade to nothing. */
+  const p5o = at(t, 13.90, 1.05, easeStandard);
+  G[4].setAttribute('transform',
+    `translate(${4 * W},0) translate(500,496) ` +
+    `scale(${(1 - 0.26 * p5o).toFixed(4)}) translate(-500,-496)`);
 
   /* --- Plate V: the traveller on the ORGANIC ring ----------------------- */
   {
-    const live = at(t, 12.70, 0.45) * (1 - at(t, 13.62, 0.30));
+    const live = at(t, 12.85, 0.42) * (1 - at(t, 13.62, 0.24));
     const cx = 500, cy = 496, r = 162;
     const a0 = Math.PI * 0.17, a1 = a0 - Math.PI * 0.80;   // right → top → upper left
-    const a = lerp(a0, a1, easeInOut(clamp((t - 12.70) / 1.05)));
+    const a = lerp(a0, a1, easeInOut(clamp((t - 12.85) / 1.05)));
     const b = Math.min(a0, a + 0.70);
     const large = 0, sweep = 0;
     TRAIL.setAttribute('d',
@@ -691,20 +698,20 @@ window.seek = function (t) {
   /* --- the release: one recorded trace, wider than the lens ------------- */
   {
     const tp = traceAt(t);
-    const out = 1 - at(t, 19.95, 0.60, easeStandard);
+    const out = 1 - at(t, 20.15, 0.60, easeStandard);
     tracePath.style.strokeDashoffset = (tracePath.__L * (1 - tp.u)).toFixed(2);
     tracePath.style.opacity = out.toFixed(3);
-    const penOn = at(t, 12.95, 0.02) * (1 - at(t, 16.58, 0.42, easeStandard));
+    const penOn = at(t, 13.10, 0.02) * (1 - at(t, 16.76, 0.42, easeStandard));
     pen.setAttribute('cx', tp.x.toFixed(1));
     pen.setAttribute('cy', tp.y.toFixed(1));
     pen.setAttribute('opacity', (penOn * out).toFixed(3));
     // then it is read: the peaks are dropped to a datum and the datum is ruled
     ticks.forEach((e, i) => {
-      e.style.strokeDashoffset = (e.__L * (1 - at(t, 17.30 + i * 0.25, 0.36, easeStandard))).toFixed(2);
+      e.style.strokeDashoffset = (e.__L * (1 - at(t, 16.95 + i * 0.25, 0.36, easeStandard))).toFixed(2);
       e.style.opacity = out.toFixed(3);
     });
     datum.style.strokeDashoffset =
-      (datum.__L * (1 - at(t, 18.20, 1.00, easeStandard))).toFixed(2);
+      (datum.__L * (1 - at(t, 17.95, 1.80, easeStandard))).toFixed(2);
     datum.style.opacity = out.toFixed(3);
   }
 
@@ -729,22 +736,22 @@ window.seek = function (t) {
   els.fr.style.transformOrigin = 'left center';
 
   /* --- the statement --------------------------------------------------- */
-  const sOut = at(t, 19.95, 0.50, easeEmphatic);
-  revealWords(els.s1, t, 15.75, 0.90, 0.085, 34);
-  revealWords(els.s2, t, 16.38, 0.90, 0.085, 34);
+  const sOut = at(t, 20.15, 0.50, easeEmphatic);
+  revealWords(els.s1, t, 15.00, 0.90, 0.085, 34);
+  revealWords(els.s2, t, 15.62, 0.90, 0.085, 34);
   els.stmt.style.opacity = 1 - sOut;
   els.stmt.style.transform = `translateY(${(-sOut * 46).toFixed(2)}px)`;
 
   /* --- the credit ------------------------------------------------------ */
-  const cOut = 1 - at(t, 22.95, 0.45, easeStandard);
-  els.crule.style.width = `${(at(t, 20.30, 0.80, easeEmphatic) * 980).toFixed(1)}px`;
+  const cOut = 1 - at(t, 22.55, 0.40, easeStandard);
+  els.crule.style.width = `${(at(t, 20.15, 1.20, easeEntrance) * 980).toFixed(1)}px`;
   els.credit.style.opacity = cOut;
-  const caP = at(t, 20.80, 0.65), cbP = at(t, 21.10, 0.65);
+  const caP = at(t, 20.55, 0.60), cbP = at(t, 20.95, 0.60);
   els.ca.style.opacity = caP; els.ca.style.transform = `translateY(${((1 - caP) * 14).toFixed(2)}px)`;
   els.cb.style.opacity = cbP; els.cb.style.transform = `translateY(${((1 - cbP) * 14).toFixed(2)}px)`;
 
   /* --- the lockup ------------------------------------------------------ */
-  if (lock) lock.pose(at(t, 23.10, 1.45));
+  if (lock) lock.pose(at(t, 22.55, 1.45));
 };
 
 window.seek(0);

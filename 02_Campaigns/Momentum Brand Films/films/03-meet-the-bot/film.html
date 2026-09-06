@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Momentum — Meet the Bot</title>
+<link rel="stylesheet" href="../../brand/tokens.css">
+<style>
+  html,body { background:var(--m-paper); }
+  .stage {
+    position:relative; width:1920px; height:1080px; overflow:hidden;
+    background:var(--m-paper); color:var(--m-ink);
+    font-family:var(--m-font-text); -webkit-font-smoothing:antialiased;
+  }
+  .d    { font-family:var(--m-font-display); letter-spacing:-.024em; line-height:1; }
+  .clip { display:block; overflow:hidden; padding:.13em 0 .22em; }
+
+  /* ── the deep inversion (beat 6) ─────────────────────────────── */
+  #deep { position:absolute; inset:0; background:var(--m-deep); z-index:5; }
+
+  /* ── the phone (beats 1–4) ───────────────────────────────────── */
+  #phoneWrap { position:absolute; inset:0; perspective:1900px;
+               perspective-origin:882px 540px; z-index:3; }
+  #phone { position:absolute; left:600px; top:34px; width:564px; height:1012px;
+           border:14px solid var(--m-ink); border-radius:62px; background:var(--m-ink);
+           transform-origin:50% 50%; will-change:transform,opacity; }
+  #screen { position:absolute; inset:0; border-radius:48px; overflow:hidden;
+            background:var(--m-paper); }
+
+  #island { position:absolute; left:50%; top:12px; width:112px; height:29px;
+            margin-left:-56px; border-radius:15px; background:var(--m-ink); z-index:6; }
+
+  #phHead { position:absolute; left:0; right:0; top:46px; height:92px;
+            background:var(--m-panel); border-bottom:1.5px solid var(--m-line-strong);
+            display:flex; align-items:center; gap:16px; padding:0 26px; z-index:4; }
+  #phHead .av { width:46px; height:46px; flex:0 0 auto; }
+  #phHead .nm { font-size:27px; font-weight:800; color:var(--m-ink); letter-spacing:-.012em; }
+
+  #threadClip { position:absolute; left:0; right:0; top:138px; height:744px;
+                overflow:hidden; z-index:2; }
+  #threadInner { position:absolute; left:0; right:0; top:0; padding:0 24px;
+                 will-change:transform; }
+  .row      { display:flex; margin-top:16px; }
+  .row.out  { justify-content:flex-end; }
+  .row.in   { justify-content:flex-start; }
+  .bub      { max-width:424px; padding:16px 24px 18px; border-radius:26px;
+              font-size:27px; line-height:1.3; font-weight:600; will-change:transform,opacity; }
+  .bub.out  { background:var(--m-brand); color:var(--m-on-brand); border-bottom-right-radius:10px; }
+  .bub.in   { background:var(--m-panel); color:var(--m-ink);
+              border:1.5px solid var(--m-line-strong); border-bottom-left-radius:10px; }
+  .bub .n   { color:var(--m-signal-ink); font-weight:800; }
+  #stamp    { text-align:center; padding-top:26px; font-size:19px; font-weight:800;
+              letter-spacing:.22em; color:var(--m-muted); }
+
+  #threadBot { position:absolute; left:30px; top:690px; width:128px; height:128px; z-index:1;
+               will-change:transform; }
+
+  #composer { position:absolute; left:0; right:0; bottom:0; z-index:4;
+              background:var(--m-paper); border-top:1.5px solid var(--m-line-strong);
+              padding:16px 22px 20px; }
+  #pill { min-height:58px; border-radius:29px; background:var(--m-panel);
+          border:1.5px solid var(--m-line-strong); padding:12px 22px 14px;
+          font-size:23px; line-height:1.36; font-weight:600; color:var(--m-ink); }
+  #caret { display:inline-block; width:2.5px; height:24px; margin-left:2px;
+           vertical-align:-4px; background:var(--m-signal-ink); }
+
+  /* the right margin is not empty paper, it is the annotation on the numbers */
+  #cap { position:absolute; left:1318px; top:472px; width:470px; z-index:3; }
+  #capRule { height:2px; background:var(--m-line-strong); width:0; }
+  #capTxt { margin-top:20px; font-size:25px; font-weight:600; line-height:1.35;
+            letter-spacing:.01em; color:var(--m-muted); }
+
+  /* ── the bot in the room (beats 4–10) ────────────────────────── */
+  #roomBot { position:absolute; left:0; top:0; width:128px; height:128px; z-index:7;
+             will-change:transform,width,height; }
+
+  /* ── beat 5 · the statement ──────────────────────────────────── */
+  #stmt { position:absolute; left:958px; top:418px; width:912px; z-index:4; }
+  #stmt .d { font-size:88px; }
+  #stmt .g { color:var(--m-muted); }
+
+  /* ── beat 6 · the turn ───────────────────────────────────────── */
+  #turn { position:absolute; left:190px; top:408px; width:1010px; z-index:6; }
+  #turn .d { font-size:100px; color:var(--m-on-deep); }
+  #turn .sig { color:var(--m-signal); }
+  #turnRule { position:absolute; left:192px; top:362px; width:0; height:6px;
+              background:var(--m-signal); z-index:6; }
+
+  /* ── beat 7 · the second exchange ────────────────────────────── */
+  .fbub { position:absolute; border-radius:38px; font-weight:600; z-index:4;
+          will-change:transform,opacity; }
+  #fq { left:640px; top:244px; width:1060px; padding:36px 52px 40px;
+        background:var(--m-brand); color:var(--m-on-brand);
+        font-size:52px; line-height:1.26; border-bottom-right-radius:16px; }
+  #fa { left:540px; top:592px; padding:32px 52px 36px;
+        background:var(--m-panel); color:var(--m-ink);
+        border:2px solid var(--m-line-strong); font-size:58px; line-height:1.22;
+        border-bottom-left-radius:16px; white-space:nowrap; }
+
+  /* ── beat 8 · what that's called ─────────────────────────────── */
+  #conn { position:absolute; left:0; top:0; z-index:3; }
+  #conn line { stroke:var(--m-line-strong); stroke-width:2; fill:none; }
+  .lab { position:absolute; z-index:4; will-change:transform,opacity; }
+  .lab b { display:block; font-family:var(--m-font-display); font-size:80px;
+           letter-spacing:-.02em; line-height:1; color:var(--m-ink); }
+  .lab i { display:block; font-style:normal; font-size:27px; font-weight:700;
+           letter-spacing:.05em; color:var(--m-muted); margin-top:16px; }
+  #lab0 { left:160px; top:252px; width:420px; text-align:right; }
+  #lab1 { left:1340px; top:268px; width:420px; text-align:left; }
+  #lab2 { left:750px; top:832px; width:420px; text-align:center; }
+
+  /* ── beat 9 · the line ───────────────────────────────────────── */
+  #script { position:absolute; left:0; top:474px; width:1920px; text-align:center;
+            font-family:var(--m-font-script); font-weight:700; font-size:92px;
+            color:var(--m-muted); z-index:4; }
+  #side { position:absolute; left:0; top:606px; width:1920px; text-align:center; z-index:4; }
+  #side .d { font-size:86px; }
+
+  /* ── beat 10 · the lockup ────────────────────────────────────── */
+  #lock { position:absolute; left:606px; top:448px; width:1000px; z-index:8; }
+</style></head>
+<body>
+<div class="stage" id="stage">
+
+  <div id="deep"></div>
+
+  <!-- ══ beats 1–4 · the thread ═════════════════════════════════ -->
+  <div id="phoneWrap">
+    <div id="phone">
+      <div id="screen">
+        <div id="island"></div>
+
+        <div id="phHead"><span class="av" id="avatar"></span><span class="nm">Momentum</span></div>
+
+        <div id="threadBot"></div>
+
+        <div id="threadClip"><div id="threadInner">
+          <div id="stamp">TODAY</div>
+          <div class="row out" id="m0"><div class="bub out">did anyone actually call from the ads last month?</div></div>
+          <div class="row in"  id="m1"><div class="bub in"><span class="n">11</span> calls.</div></div>
+          <div class="row in"  id="m2"><div class="bub in"><span class="n">9</span> were real people.</div></div>
+          <div class="row in"  id="m3"><div class="bub in"><span class="n">2</span> were the same wrong number.</div></div>
+        </div></div>
+
+        <div id="composer"><div id="pill"><span id="ctext"></span><i id="caret"></i></div></div>
+      </div>
+    </div>
+  </div>
+  <div id="cap"><div id="capRule"></div><div id="capTxt">Illustrative.<br>Not client data.</div></div>
+
+  <!-- the same character, once it is out of the phone and in the room -->
+  <div id="roomBot"></div>
+
+  <!-- ══ beat 5 ════════════════════════════════════════════════ -->
+  <div id="stmt">
+    <span class="clip"><span class="d" id="st1">Most agencies</span></span>
+    <span class="clip"><span class="d g" id="st2">send a report.</span></span>
+  </div>
+
+  <!-- ══ beat 6 ════════════════════════════════════════════════ -->
+  <div id="turnRule"></div>
+  <div id="turn">
+    <span class="clip"><span class="d" id="tn1">Momentum sends</span></span>
+    <span class="clip"><span class="d" id="tn2">the answer.</span></span>
+  </div>
+
+  <!-- ══ beat 7 ════════════════════════════════════════════════ -->
+  <div class="fbub" id="fq">what happens when someone asks AI for a plumber?</div>
+  <div class="fbub" id="fa">we make sure it says your name.</div>
+
+  <!-- ══ beat 8 ════════════════════════════════════════════════ -->
+  <svg id="conn" width="1920" height="1080" viewBox="0 0 1920 1080">
+    <line id="cn0" x1="872" y1="440" x2="600" y2="348" pathLength="1" stroke-dasharray="1 1"/>
+    <line id="cn1" x1="1048" y1="444" x2="1320" y2="356" pathLength="1" stroke-dasharray="1 1"/>
+    <line id="cn2" x1="960" y1="628" x2="960" y2="828" pathLength="1" stroke-dasharray="1 1"/>
+  </svg>
+  <div class="lab" id="lab0"><b>SEO</b><i>— search engines</i></div>
+  <div class="lab" id="lab1"><b>AEO</b><i>— answer engines</i></div>
+  <div class="lab" id="lab2"><b>GEO</b><i>— generative search</i></div>
+
+  <!-- ══ beat 9 ════════════════════════════════════════════════ -->
+  <div id="script">most agencies are vendors.</div>
+  <div id="side"><span class="clip"><span class="d" id="sd1">Momentum is on your side.</span></span></div>
+
+  <!-- ══ beat 10 ═══════════════════════════════════════════════ -->
+  <div id="lock"></div>
+</div>
+
+<script type="module">
+import { at, clamp, lerp, easeEntrance, easeEmphatic, easeStandard,
+         typed, blink, words, Lockup } from '../../brand/film-kit.js';
+import { mountBot, poseBot, idleBot, POSES } from '../../brand/bot-rig.js';
+
+window.FILM = { width: 1920, height: 1080, fps: 30, duration: 34.0 };
+window.__ready = false;
+
+const $ = (id) => document.getElementById(id);
+const TOK = (n) => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const MARK_BLUE = TOK('--m-mark');        /* the bot's blue on paper */
+const LIFT_BLUE = TOK('--m-brand-lift');  /* the blue that speaks on dark */
+
+/* ── small motion helpers ─────────────────────────────────────────────────
+   settle() overshoots once and rests — the spring a committed bubble needs.
+   riseLine() is the slate's clip reveal. win() is a fade-in / fade-out gate. */
+const settle = (p) => (p <= 0 ? 0 : p >= 1 ? 1 : 1 - Math.pow(1 - p, 2.4) * Math.cos(p * Math.PI * 1.6));
+const riseLine = (clipEl, innerEl, p, rise = 52) => {
+  clipEl.style.clipPath = `inset(${(1 - p) * 116}% 0 0 0)`;
+  innerEl.style.transform = `translateY(${(1 - p) * rise}px)`;
+};
+const win = (t, a, aIn, b, bOut) => at(t, a, aIn, easeStandard) * (1 - at(t, b, bOut, easeStandard));
+
+/* ── bot posing ───────────────────────────────────────────────────────────
+   Every expression below is numbers on the one shape set: no second drawing,
+   no props, no limbs. blend() lerps the numeric dials and hard-switches the
+   mouth at the halfway mark, because an expression should land, not smear. */
+const DEF = { blink:0, talk:0.5, tilt:0, bob:0, scale:1, squash:0, mouthShift:0,
+              eyeArc:0, lid:0, eyeRot:0, brow:0, sway:0, mFlex:0, mSkew:0,
+              signal:0, catchlight:0 };
+const NUM = Object.keys(DEF);
+const P = {
+  /* rising from behind the composer, eyes up on the message just sent */
+  peek:     { look:[4, -4], tilt:-4.5, bob:-1, mouth:'neutral', brow:0.35,
+              sway:-9, mFlex:0.06, squash:0.02 },
+  reading:  { look:[3, 1], tilt:1.5, mouth:'neutral', sway:4 },
+  focused:  POSES.focused,
+  pleased:  POSES.pleased,
+  /* caught leaving the screen — the spark is on */
+  lifted:   { tilt:6, bob:-6, squash:-0.05, eyeArc:-1, look:[0,-1.5], mouth:'o',
+              brow:0.85, sway:-12, signal:1, mFlex:0.05, mSkew:-4 },
+  present:  { tilt:-1.5, bob:0, mouth:'neutral', look:[1, 0], sway:3, eyeArc:0.2 },
+  /* the deadpan: flat mouth shoved to a cheek, heavy lid */
+  deadpan:  { mouth:'flat', mouthShift:-6.8, lid:0.38, look:[-3.5, 1.5], tilt:3.5,
+              brow:-0.2, sway:8, mFlex:-0.12, squash:0.03 },
+  talking:  { mouth:'talk', talk:0.7, tilt:-2.5, bob:-2, look:[-2, 0], sway:6, brow:0.25 },
+  /* listening up and to the right, at the question floating above it */
+  listen:   { look:[6, -3], tilt:-6, lid:0.2, mouth:'neutral', sway:-11,
+              mFlex:-0.08, brow:-0.1 },
+  surprise: { tilt:6, bob:-6.4, squash:-0.05, eyeArc:-1, look:[0,-1.5], mouth:'o',
+              brow:0.85, sway:-12, signal:1, mFlex:0.05, mSkew:-4 },
+  delight:  { tilt:5, bob:-4, squash:-0.03, eyeArc:1, mouth:'smile', sway:-10,
+              mFlex:0.17, mSkew:-2 },
+  lookL:    { look:[-7, -3], tilt:-5, mouth:'neutral', sway:9, eyeArc:0.15 },
+  lookR:    { look:[7, -2.5], tilt:5, mouth:'neutral', sway:-9, eyeArc:0.15 },
+  lookD:    { look:[0, 6], tilt:0, bob:1.5, squash:0.035, lid:0.12, mouth:'neutral' },
+  warm:     { look:[0, 0], eyeArc:0.55, mouth:'neutral', tilt:1, bob:-1.5, sway:2 },
+  lockup:   { look:[2, 0], eyeArc:0.3, mouth:'neutral', tilt:-1.5, sway:-3 }
+};
+function blend(a, b, p) {
+  const o = {};
+  for (const k of NUM) o[k] = lerp(a[k] === undefined ? DEF[k] : a[k],
+                                   b[k] === undefined ? DEF[k] : b[k], p);
+  const la = a.look || [0, 0], lb = b.look || [0, 0];
+  o.look = [lerp(la[0], lb[0], p), lerp(la[1], lb[1], p)];
+  o.mouth = p < 0.5 ? (a.mouth || 'neutral') : (b.mouth || 'neutral');
+  return o;
+}
+/* the expression track: the last key at or before t, cross-faded from the one
+   before it. Pure in t, so the render can scrub. */
+const TRACK = [
+  [ 0.00, P.peek     ],
+  [ 6.60, P.reading  ],
+  [ 7.80, P.focused  ],
+  [ 9.05, P.pleased  ],
+  [11.05, P.lifted   ],
+  [12.80, P.present  ],
+  [14.70, P.deadpan  ],
+  [17.60, P.talking  ],
+  [20.75, P.listen   ],
+  [23.52, P.surprise ],
+  [24.20, P.delight  ],
+  [26.42, P.lookL    ],
+  [27.08, P.lookR    ],
+  [27.76, P.lookD    ],
+  [28.60, P.warm     ],
+  [31.55, P.lockup   ]
+];
+function trackPose(t, xf = 0.30) {
+  let i = 0;
+  while (i + 1 < TRACK.length && t >= TRACK[i + 1][0]) i++;
+  if (i === 0) return TRACK[0][1];
+  return blend(TRACK[i - 1][1], TRACK[i][1], easeStandard(clamp((t - TRACK[i][0]) / xf)));
+}
+/* idleBot(t) laid over the posed frame: breathe, lean, sway, blink. Clamped
+   back inside the rig's measured envelope so a lift never stacks on a lift
+   and walks the m off the top of the artboard. */
+function alive(t, base, k = 1, blinkK = 1, phase = 0) {
+  const i = idleBot(t, phase);
+  const o = Object.assign({}, base);
+  o.bob = clamp((base.bob || 0) + i.bob * k, -8, 8);
+  o.tilt = clamp((base.tilt || 0) + i.tilt * k, -14, 14);
+  o.sway = clamp((base.sway || 0) + i.sway * k, -22, 22);
+  o.mFlex = clamp((base.mFlex || 0) + i.mFlex * k, -0.25, 0.20);
+  const sqCap = o.bob < -6 ? 0.05 : 0.09;
+  o.squash = clamp((base.squash || 0) + i.squash * k, -sqCap, sqCap);
+  o.blink = Math.max(base.blink || 0, i.blink * blinkK);
+  return o;
+}
+
+/* ── boot ─────────────────────────────────────────────────────────────── */
+let avatarBot = null, threadBot = null, roomBot = null, lock = null;
+let MSG = [], STAMP = 0;            /* measured bubble bottoms, for the scroll */
+const ANCHOR = 526;                 /* where the newest bubble's bottom rests  */
+const QUESTION = 'did anyone actually call from the ads last month?';
+
+(async () => {
+  const markup = await (await fetch('../../brand/momentum-bot.svg')).text();
+  avatarBot = mountBot($('avatar'), { markup, size: '100%' });
+  threadBot = mountBot($('threadBot'), { markup, size: '100%' });
+  roomBot   = mountBot($('roomBot'),   { markup, size: '100%' });
+  lock = await Lockup($('lock'), {
+    line: 'Philadelphia. Since 2015.', markSize: 116, wordSize: 86
+  });
+  try { await document.fonts.ready; } catch (e) { /* headless fallback */ }
+  /* measure the thread once, with the real font metrics, so the scroll lands
+     every message's bottom edge on the same line */
+  MSG = ['m0', 'm1', 'm2', 'm3'].map((id) => $(id).offsetTop + $(id).offsetHeight);
+  STAMP = $('stamp').offsetTop + $('stamp').offsetHeight;
+  window.seek(0);
+  window.__ready = true;
+})();
+
+/* ── the camera on the phone ──────────────────────────────────────────── */
+const CAM = {
+  a:   { s: 0.898, ry: -9.5, rx: 3.6, x: 0,   y: 16, z: 0 },   /* slightly off-axis */
+  b:   { s: 0.972, ry: -4.2, rx: 1.6, x: 0,   y: 4,  z: 0 },
+  c:   { s: 1.000, ry:  0.0, rx: 0.0, x: 0,   y: 0,  z: 0 },   /* square, for the handoff */
+  out: { s: 0.270, ry: 48.0, rx: 15.0, x: 780, y: 104, z: -880 }
+};
+const mixCam = (u, v, p) => ({
+  s: lerp(u.s, v.s, p), ry: lerp(u.ry, v.ry, p), rx: lerp(u.rx, v.rx, p),
+  x: lerp(u.x, v.x, p), y: lerp(u.y, v.y, p), z: lerp(u.z, v.z, p)
+});
+
+/* the thread bot's rect at the handoff, in stage coordinates. The camera is
+   dead square at 10.85 (CAM.c: scale 1, no rotation, no offset), so the big
+   bot starts life on exactly the pixels the small one left. */
+const HANDOFF = 10.85;
+const HX = 600 + 14 + 30 + 64, HY = 34 + 14 + 690 + 64, HS = 128;
+
+/* where the bot stands in each beat: [t it arrives, centreX, centreY, size] */
+const WALK = [
+  [HANDOFF, HX,  HY,  HS ],
+  [12.35,   636, 548, 330],   /* climbs up and out as the phone tips away */
+  [13.60,   960, 540, 445],   /* then comes forward, large and centred    */
+  [14.90,   516, 602, 524],   /* left, for the statement           */
+  [18.30,  1500, 616, 400],   /* right, on the deep surface        */
+  [21.60,   334, 754, 442],   /* lower left, beside its own answer */
+  [26.25,   960, 486, 350],   /* centred, for the three labels     */
+  [29.50,   960, 330, 232],   /* small and high, for the last line */
+  [32.55,   548, 546, 232]    /* settled beside the mark           */
+];
+const WALK_DUR = [0, 1.50, 1.25, 1.30, 0.95, 1.25, 0.80, 0.95, 1.15];
+function walk(t) {
+  /* a leg is live from (arrival - duration) to arrival, so the bot is moving
+     through the beat, not waiting at one end of it */
+  let i = 0;
+  for (let k = 1; k < WALK.length; k++) if (t >= WALK[k][0] - WALK_DUR[k]) i = k;
+  if (i === 0) return { x: WALK[0][1], y: WALK[0][2], s: WALK[0][3] };
+  const k = WALK[i], j = WALK[i - 1];
+  const p = easeEntrance(clamp((t - (k[0] - WALK_DUR[i])) / WALK_DUR[i]));
+  return { x: lerp(j[1], k[1], p), y: lerp(j[2], k[2], p), s: lerp(j[3], k[3], p) };
+}
+const place = (el, x, y, s) => {
+  el.style.width = el.style.height = `${s.toFixed(1)}px`;
+  el.style.transform = `translate(${(x - s / 2).toFixed(2)}px, ${(y - s / 2).toFixed(2)}px)`;
+};
+
+/* word runs coloured once, at load */
+const wTurn2 = words($('tn2'));       /* the / answer. */
+wTurn2[1].classList.add('sig');
+
+/* ── the timeline ─────────────────────────────────────────────────────── */
+window.seek = function (t) {
+
+  /* ═══ CAMERA · the phone, from off-axis wide to square, then away ════ */
+  {
+    let c = mixCam(CAM.a, CAM.b, at(t, 0.05, 2.45, easeStandard));
+    c = mixCam(c, CAM.c, at(t, 4.55, 1.70, easeStandard));
+    c = mixCam(c, CAM.out, at(t, HANDOFF, 1.30, easeEmphatic));
+    const ph = $('phone');
+    ph.style.opacity = 1 - at(t, 11.42, 0.66, easeStandard);
+    ph.style.transform =
+      `translate3d(${c.x.toFixed(2)}px,${c.y.toFixed(2)}px,${c.z.toFixed(1)}px)` +
+      ` rotateY(${c.ry.toFixed(2)}deg) rotateX(${c.rx.toFixed(2)}deg) scale(${c.s.toFixed(4)})`;
+  }
+
+  /* ═══ BEAT 1 · 0.0–2.4 — the thread, empty, waiting ═════════════════ */
+  {
+    /* the field takes focus: the keyline warms and the caret arrives. Frame 0
+       is a settled phone, not a phone caught mid-entrance. */
+    const focus = at(t, 1.20, 0.55, easeStandard);
+    $('pill').style.borderColor = focus > 0.5 ? 'var(--m-focus)' : 'var(--m-line-strong)';
+    const typing = t >= 2.35 && t < 4.62;
+    $('ctext').textContent = typing ? typed(QUESTION, t, 2.35, 2.20) : 'Message Momentum';
+    $('pill').style.color = typing ? 'var(--m-ink)' : 'var(--m-muted)';
+    $('pill').style.fontWeight = typing ? 600 : 400;
+    /* the caret blinks off a t-derived square wave and holds solid while keys
+       are landing, which is what a real caret does */
+    $('caret').style.opacity = focus < 0.5 ? 0 : (typing ? 1 : blink(t));
+  }
+
+  /* ═══ BEAT 2 · 2.2–6.4 — the first message commits ═════════════════ */
+  {
+    const cm = settle(clamp((t - 4.62) / 0.66));
+    const b0 = $('m0').firstElementChild;
+    b0.style.opacity = at(t, 4.62, 0.16, easeStandard);
+    b0.style.transform = `translateY(${(1 - cm) * 82}px) scale(${lerp(0.84, 1, cm)})`;
+    b0.style.transformOrigin = '100% 100%';
+
+    /* the bot rises out from behind the composer, under the bubble it is
+       reacting to. It never teleports: it grows out of something. */
+    const rise = at(t, 4.90, 1.05, easeEntrance);
+    $('threadBot').style.transform = `translateY(${((1 - rise) * 212).toFixed(2)}px)`;
+  }
+
+  /* ═══ BEAT 3 · 6.2–11.0 — three answers, three expressions ═════════ */
+  {
+    const IN = [6.58, 7.78, 9.00];
+    IN.forEach((ts, i) => {
+      const p = settle(clamp((t - ts) / 0.56));
+      const b = $('m' + (i + 1)).firstElementChild;
+      b.style.opacity = at(t, ts, 0.15, easeStandard);
+      b.style.transform = `translateY(${(1 - p) * 46}px) scale(${lerp(0.9, 1, p)})`;
+      b.style.transformOrigin = '0% 100%';
+    });
+    /* the stack slides so the newest message always lands on the same line */
+    let scroll = 0;
+    if (MSG.length) {
+      scroll = ANCHOR - STAMP;                                     /* empty thread */
+      scroll = lerp(scroll, ANCHOR - MSG[0], at(t, 4.62, 0.62, easeStandard));
+      IN.forEach((ts, i) => {
+        scroll = lerp(scroll, ANCHOR - MSG[i + 1], at(t, ts, 0.62, easeStandard));
+      });
+    }
+    $('threadInner').style.transform = `translateY(${scroll.toFixed(2)}px)`;
+
+    const cp = 1 - at(t, 10.86, 0.34, easeStandard);
+    $('cap').style.opacity = cp;
+    $('capRule').style.width = `${(at(t, 9.30, 0.60, easeEmphatic) * 132).toFixed(1)}px`;
+    const ct = at(t, 9.62, 0.60);
+    $('capTxt').style.opacity = ct;
+    $('capTxt').style.transform = `translateY(${(1 - ct) * 16}px)`;
+  }
+
+  /* ═══ BEAT 4 · 10.8–14.4 — the bot leaves the screen ═══════════════ */
+  /* the biggest skeleton change in the film: the phone rotates away in
+     perspective while the character it was holding scales up into the room.
+     One object, handed from the small instance to the large one on a single
+     frame — never two bots alive at once. */
+  {
+    const w = walk(t);
+    $('threadBot').style.opacity = t < HANDOFF ? 1 : 0;
+    $('roomBot').style.opacity = t >= HANDOFF ? 1 : 0;
+    place($('roomBot'), w.x, w.y, w.s);
+  }
+
+  /* ═══ BEAT 5 · 14.2–17.4 — most agencies send a report ═════════════ */
+  {
+    const out = at(t, 17.00, 0.35, easeStandard);
+    const s = $('stmt');
+    s.style.opacity = at(t, 14.54, 0.16, easeStandard) * (1 - out);
+    s.style.transform = `translateY(${-46 * out}px)`;
+    riseLine(s.children[0], $('st1'), at(t, 14.62, 0.78), 58);
+    riseLine(s.children[1], $('st2'), at(t, 14.92, 0.78), 58);
+  }
+
+  /* ═══ BEAT 6 · 17.2–20.4 — the hard inversion ══════════════════════ */
+  {
+    const inP = at(t, 17.15, 0.70, easeEmphatic);   /* sweeps in from the right */
+    const outP = at(t, 20.15, 0.62, easeEmphatic);  /* and leaves to the left   */
+    const dk = $('deep');
+    dk.style.clipPath = `inset(0 ${(outP * 100).toFixed(2)}% 0 ${((1 - inP) * 100).toFixed(2)}%)`;
+    dk.style.opacity = inP > 0 && outP < 1 ? 1 : 0;
+
+    /* the wipe front, in stage pixels; the bot is re-lit the moment it is
+       standing on the deep surface rather than on paper */
+    const front = 1920 * (1 - inP);
+    const w = walk(t);
+    const onDeep = inP > 0 && outP < 1 && front < w.x - w.s * 0.30;
+    $('roomBot').style.setProperty('--m-bot-body', onDeep ? LIFT_BLUE : MARK_BLUE);
+
+    const tOut = at(t, 20.00, 0.30, easeStandard);
+    const g = $('turn');
+    g.style.opacity = at(t, 17.90, 0.16, easeStandard) * (1 - tOut);
+    g.style.transform = `translateY(${-40 * tOut}px)`;
+    riseLine(g.children[0], $('tn1'), at(t, 17.96, 0.80), 64);
+    /* the second line arrives word by word, so "answer" lands on its own */
+    g.children[1].style.clipPath = `inset(${(1 - at(t, 18.28, 0.34)) * 116}% 0 0 0)`;
+    wTurn2.forEach((sp, i) => {
+      const p = at(t, 18.30 + i * 0.17, 0.72);
+      sp.style.opacity = p;
+      sp.style.transform = `translateY(${(1 - p) * 58}px)`;
+    });
+    const rl = at(t, 17.74, 0.70, easeEmphatic) * (1 - tOut);
+    $('turnRule').style.width = `${(rl * 252).toFixed(1)}px`;
+    $('turnRule').style.opacity = rl > 0 ? 1 : 0;
+  }
+
+  /* ═══ BEAT 7 · 20.2–25.6 — bubbles off the phone, at full size ═════ */
+  {
+    const q = $('fq'), a = $('fa');
+    const qp = settle(clamp((t - 20.95) / 0.80));
+    const qOut = at(t, 24.80, 0.40, easeStandard);
+    q.style.opacity = at(t, 20.95, 0.18, easeStandard) * (1 - qOut);
+    q.style.transform = `translate(${(1 - qp) * 92}px, ${(1 - qp) * 36 - qOut * 44}px) scale(${lerp(0.93, 1, qp)})`;
+    q.style.transformOrigin = '100% 100%';
+
+    const ap = settle(clamp((t - 23.35) / 0.78));
+    const aOut = at(t, 24.90, 0.40, easeStandard);
+    a.style.opacity = at(t, 23.35, 0.18, easeStandard) * (1 - aOut);
+    a.style.transform = `translate(${(1 - ap) * -80}px, ${(1 - ap) * 32 - aOut * 36}px) scale(${lerp(0.92, 1, ap)})`;
+    a.style.transformOrigin = '0% 100%';
+  }
+
+  /* ═══ BEAT 8 · 25.4–29.2 — three names for the same job ════════════ */
+  {
+    const out = at(t, 28.55, 0.40, easeStandard);
+    const T = [26.32, 26.98, 27.66];
+    const DX = [46, -46, 0], DY = [18, 18, -24];
+    T.forEach((ts, i) => {
+      const p = at(t, ts + 0.26, 0.72);
+      const el = $('lab' + i);
+      el.style.opacity = p * (1 - out);
+      el.style.transform = `translate(${(1 - p) * DX[i]}px, ${(1 - p) * DY[i] - out * 22}px)`;
+      $('cn' + i).setAttribute('stroke-dashoffset',
+        (1 - at(t, ts, 0.46, easeEmphatic)).toFixed(4));
+    });
+    $('conn').style.opacity = at(t, 26.26, 0.10, easeStandard) * (1 - out);
+  }
+
+  /* ═══ BEAT 9 · 29.0–31.6 — the one script line, and the answer ═════ */
+  {
+    const out = at(t, 31.28, 0.40, easeStandard);
+    const sp = at(t, 29.54, 0.86, easeStandard);
+    const sc = $('script');
+    sc.style.opacity = (sp > 0 ? 1 : 0) * (1 - out);
+    /* the script is written, not faded: a left-to-right wipe with a small rise */
+    sc.style.clipPath = `inset(0 ${((1 - sp) * 100).toFixed(2)}% 0 0)`;
+    sc.style.transform = `translateY(${(1 - sp) * 14 - out * 28}px)`;
+
+    const sd = $('side');
+    sd.style.opacity = at(t, 30.30, 0.16, easeStandard) * (1 - out);
+    sd.style.transform = `translateY(${-32 * out}px)`;
+    riseLine(sd.children[0], $('sd1'), at(t, 30.34, 0.82), 60);
+  }
+
+  /* ═══ BEAT 10 · 31.4–34.0 — the lockup, and one slow blink ═════════ */
+  if (lock) {
+    const p = clamp((t - 31.70) / 1.38);
+    lock.pose(p);
+    $('lock').style.opacity = p > 0 ? 1 : 0;
+  }
+
+  /* ═══ THE BOT — one track, three instances, never two alive ════════ */
+  if (roomBot) {
+    let pose = trackPose(t);
+    /* the mouth is driven only while it is actually saying the line */
+    if (t >= 17.85 && t <= 20.05) {
+      pose = Object.assign({}, pose);
+      pose.talk = clamp(0.5 + 0.40 * Math.sin(t * 12.1) + 0.16 * Math.sin(t * 7.3), 0.06, 0.96);
+    }
+    /* the film's last event: one slow, deliberate blink, held open after */
+    const bl = t < 32.90 ? 0 : t < 33.30 ? (t - 32.90) / 0.40
+             : t < 33.78 ? 1 - (t - 33.30) / 0.48 : 0;
+    const live = alive(t, pose, t > 31.60 ? 0.55 : 1, t > 31.60 ? 0 : 1);
+    if (bl > 0) live.blink = Math.max(live.blink, bl);
+    poseBot(roomBot, live);
+    poseBot(threadBot, live);
+    /* the avatar in the header is only ever present: its own idle, off phase */
+    poseBot(avatarBot, alive(t, { look: [1, 0], mouth: 'neutral' }, 1, 1, 1.7));
+  }
+};
+
+window.seek(0);
+</script>
+</body></html>

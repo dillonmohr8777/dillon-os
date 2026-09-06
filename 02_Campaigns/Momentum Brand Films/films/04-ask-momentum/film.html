@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Momentum — Ask Momentum</title>
+<link rel="stylesheet" href="../../brand/tokens.css">
+<style>
+  html,body { background:var(--m-paper); }
+  .stage {
+    position:relative; width:1080px; height:1350px; overflow:hidden;
+    background:var(--m-paper); color:var(--m-ink);
+    font-family:var(--m-font-text); -webkit-font-smoothing:antialiased;
+  }
+
+  /* ── kinetic type ──────────────────────────────────────────────────── */
+  .ln  { position:absolute; left:120px; width:840px; text-align:center;
+         font-weight:700; letter-spacing:-.012em; line-height:1; white-space:nowrap; }
+  .ln.l { text-align:left; }
+
+  #k1a { top:540px; font-size:62px; }
+  #k1b { top:628px; font-size:62px; }
+  #k2  { top:632px; font-size:92px; letter-spacing:-.02em; }
+  #k3a { top:560px; font-size:76px; }
+  #k3b { top:652px; font-size:76px; }
+  #k3c { top:744px; font-size:76px; }
+  #k9  { top:634px; font-size:72px; }
+
+  /* ── the merge ─────────────────────────────────────────────────────── */
+  .dot  { position:absolute; left:0; top:0; border-radius:50%;
+          background:var(--m-mark); will-change:transform; }
+  #disc { position:absolute; left:0; top:0; border-radius:50%;
+          background:var(--m-mark); will-change:transform; }
+
+  /* ── the bot ───────────────────────────────────────────────────────── */
+  #bot  { position:absolute; left:0; top:0; width:420px; height:420px; z-index:6; }
+  #bot svg { display:block; width:100%; height:100%; }
+
+  /* ── the input bar ─────────────────────────────────────────────────── */
+  #bar  { position:absolute; left:120px; background:var(--m-panel);
+          border:1.5px solid var(--m-line-strong); border-radius:34px; overflow:hidden;
+          z-index:5; will-change:transform,width,height; }
+  #barText { position:absolute; left:132px; right:112px; top:0; bottom:0;
+             display:flex; flex-direction:column; justify-content:center; }
+  .bl   { font-size:42px; font-weight:700; color:var(--m-ink); line-height:1.36;
+          white-space:pre; letter-spacing:-.01em; }
+  .cr   { display:inline-block; width:3px; height:40px; background:var(--m-ink);
+          vertical-align:-6px; margin:0 1px; }
+  #ph   { font-size:40px; font-weight:400; color:var(--m-muted); letter-spacing:-.005em;
+          margin-left:10px; }
+  #send { position:absolute; width:66px; height:66px; border-radius:50%;
+          background:var(--m-signal); display:flex; align-items:center;
+          justify-content:center; z-index:7; will-change:transform; }
+  #send svg { width:32px; height:32px; display:block; }
+
+  /* ── the conversation ──────────────────────────────────────────────── */
+  #bubble { position:absolute; right:120px; top:348px; max-width:640px;
+            background:var(--m-brand); color:var(--m-on-brand);
+            font-size:36px; font-weight:700; line-height:1.34; letter-spacing:-.008em;
+            padding:26px 34px 30px; border-radius:30px 30px 8px 30px; text-align:left; }
+  #ans   { position:absolute; left:236px; top:528px; width:664px; }
+  #ans p { margin:0; color:var(--m-ink); }
+  #a1    { font-size:54px; font-weight:800; letter-spacing:-.02em; line-height:1.1; }
+  #a2, #a3 { font-size:36px; font-weight:400; line-height:1.44; letter-spacing:-.002em; }
+  #a2    { margin-top:28px !important; }
+  #a3    { margin-top:24px !important; }
+
+  /* ── the dashboard card ────────────────────────────────────────────── */
+  #card { position:absolute; left:120px; top:388px; width:840px; height:762px;
+          background:var(--m-deep); border-radius:var(--m-r-lg);
+          box-shadow:var(--m-block-md); overflow:hidden; will-change:transform; }
+  #card .hd { position:absolute; left:56px; top:52px; font-size:22px; font-weight:800;
+              letter-spacing:.3em; color:var(--m-on-deep-muted); }
+  #card .sp { position:absolute; left:52px; top:108px; width:736px; height:196px; }
+  #card .row { position:absolute; left:56px; width:728px; height:104px;
+               border-top:1px solid rgba(244,241,236,.13);
+               display:flex; align-items:center; justify-content:space-between; }
+  #card .row .rl { font-size:34px; font-weight:700; color:var(--m-on-deep); letter-spacing:-.01em; }
+  #card .row .rt { position:relative; width:250px; height:12px; border-radius:6px;
+                   background:rgba(244,241,236,.12); overflow:hidden; }
+  #card .row .rt i { position:absolute; left:0; top:0; bottom:0; border-radius:6px;
+                     background:var(--m-brand-lift); }
+  #card .row.acc .rt i { background:var(--m-signal); }
+  #card .cap { position:absolute; left:56px; bottom:46px; font-size:23px; font-weight:700;
+               letter-spacing:.2em; color:var(--m-on-deep-muted); }
+
+  /* ── the lockup ────────────────────────────────────────────────────── */
+  #lock { position:absolute; left:0; width:1080px; top:598px; }
+</style></head>
+<body>
+<div class="stage" id="stage">
+
+  <!-- beat 1 -->
+  <div class="ln" id="k1a">You don’t think about</div>
+  <div class="ln" id="k1b">finding a plumber.</div>
+
+  <!-- beat 2 -->
+  <div class="ln" id="k2">You just search.</div>
+
+  <!-- beat 3 -->
+  <div class="ln l" id="k3a">Getting found</div>
+  <div class="ln l" id="k3b">should feel</div>
+  <div class="ln l" id="k3c">that natural.</div>
+
+  <!-- beat 4 -->
+  <i class="dot" id="d0"></i><i class="dot" id="d1"></i>
+  <i class="dot" id="d2"></i><i class="dot" id="d3"></i>
+  <div id="disc"></div>
+  <div id="bot"></div>
+
+  <!-- beats 5–6 -->
+  <div id="bar">
+    <div id="barText">
+      <div class="bl" id="bl1"><span id="bt1"></span><i class="cr" id="cr1"></i><span id="ph">Ask Momentum anything…</span></div>
+      <div class="bl" id="bl2"><span id="bt2"></span><i class="cr" id="cr2"></i></div>
+    </div>
+  </div>
+  <div id="send">
+    <svg viewBox="0 0 24 24" fill="none"><path d="M12 19.5V5.6M12 5.6l-6.4 6.4M12 5.6l6.4 6.4"
+      stroke="var(--m-on-signal)" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </div>
+
+  <!-- beat 7 -->
+  <div id="bubble">should I raise my Google Ads budget?</div>
+  <div id="ans">
+    <p id="a1">Not this month.</p>
+    <p id="a2">Your top campaign is capped by conversion rate, not budget.</p>
+    <p id="a3">Fix the landing page first — I’d rather spend $400 there than $400 more on clicks.</p>
+  </div>
+
+  <!-- beat 8 -->
+  <div id="card">
+    <div class="hd">THIS MONTH</div>
+    <svg class="sp" id="spark" viewBox="0 0 736 212" preserveAspectRatio="none" fill="none"></svg>
+    <div class="row"     id="r0" style="top:336px"><span class="rl">Calls</span><span class="rt"><i style="width:64%"></i></span></div>
+    <div class="row"     id="r1" style="top:440px"><span class="rl">Forms</span><span class="rt"><i style="width:41%"></i></span></div>
+    <div class="row acc" id="r2" style="top:544px"><span class="rl">Named leads matched</span><span class="rt"><i style="width:78%"></i></span></div>
+    <div class="cap" id="rcap">ILLUSTRATIVE.</div>
+  </div>
+
+  <!-- beat 9 -->
+  <div class="ln" id="k9">Then most of it, handled.</div>
+
+  <!-- beat 10 -->
+  <div id="lock"></div>
+</div>
+
+<script type="module">
+import { at, clamp, lerp, easeEntrance, easeEmphatic, easeStandard,
+         blink, typed, words, rng, markSVG, Lockup } from '../../brand/film-kit.js';
+import { mountBot, poseBot, idleBot, POSES } from '../../brand/bot-rig.js';
+
+window.FILM = { width: 1080, height: 1350, fps: 30, duration: 30.0 };
+window.__ready = false;
+
+const $ = (id) => document.getElementById(id);
+const TOK = (n) => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+
+/* colour comes from the token layer, never from a remembered hex */
+const INK = TOK('--m-ink'), MUTED = TOK('--m-muted'), SIGINK = TOK('--m-signal-ink');
+const rgbOf = (hex) => [parseInt(hex.slice(1, 3), 16), parseInt(hex.slice(3, 5), 16), parseInt(hex.slice(5, 7), 16)];
+const mixCol = (a, b, p) => {
+  const A = rgbOf(a), B = rgbOf(b);
+  return `rgb(${Math.round(lerp(A[0], B[0], p))},${Math.round(lerp(A[1], B[1], p))},${Math.round(lerp(A[2], B[2], p))})`;
+};
+
+/* ── word runs, split once at load ───────────────────────────────────────── */
+const W1a = words($('k1a'));                 // You / don’t / think / about
+const W1b = words($('k1b'));                 // finding / a / plumber.
+const W2  = words($('k2'));                  // You / just / search.
+const W3  = [...words($('k3a')), ...words($('k3b')), ...words($('k3c'))];
+W3[1].style.color = SIGINK;                  // "found" — the only accent in the type
+const W9  = words($('k9'));                  // Then / most / of / it, / handled.
+
+/* a word run driven as one line: rise-in on a stagger, then a colour drop */
+function line(spans, t, inAt, step, grey, rise = 26) {
+  spans.forEach((s, i) => {
+    const p = at(t, inAt + i * step, 0.62);
+    s.style.opacity = p;
+    s.style.transform = `translateY(${(1 - p) * rise}px)`;
+    s.style.color = grey > 0 ? mixCol(INK, MUTED, grey) : INK;
+  });
+}
+const setOut = (el, p, rise = 34) => {
+  el.style.opacity = 1 - p;
+  el.style.transform = `translateY(${-rise * p}px)`;
+};
+
+/* ── the sparkline, generated once ───────────────────────────────────────── */
+{
+  const r = rng(0x5eed04);
+  const N = 30, pts = [];
+  for (let i = 0; i < N; i++) {
+    const x = 8 + (i / (N - 1)) * 720;
+    const trend = 168 - (i / (N - 1)) * 96;
+    const y = clamp(trend + (r() - 0.5) * 54, 18, 196);
+    pts.push([x, y]);
+  }
+  const d = pts.map(([x, y], i) => `${i ? 'L' : 'M'}${x.toFixed(1)} ${y.toFixed(1)}`).join(' ');
+  const last = pts[N - 1];
+  $('spark').innerHTML =
+    `<path id="spk" d="${d}" stroke="${TOK('--m-brand-lift')}" stroke-width="3.6"
+       stroke-linecap="round" stroke-linejoin="round" pathLength="100"/>
+     <circle id="spkdot" cx="${last[0].toFixed(1)}" cy="${last[1].toFixed(1)}" r="6.5"
+       fill="${TOK('--m-signal')}"/>`;
+}
+const spk = $('spark').querySelector('#spk'), spkDot = $('spark').querySelector('#spkdot');
+
+/* ── the bot: one instance, moved and scaled by its container ────────────── */
+const BOX = 420;                       /* the host's unscaled size */
+const BIG = 620;                       /* the size it owns the frame at, beat 4 */
+const BODY = { x: 208.9, y: 241.8, r: 128.7 };   /* body centroid + radius, in box units,
+                                                    after the artwork's 88% #mb-fit */
+const IDLE_PH = 1.68;                  /* phases idleBot so its blink lands at 11.52 */
+let bot = null;
+
+/** Place the bot so its body centre sits at (cx, cy) and the host reads `size` px wide.
+    The host is resized rather than CSS-scaled: the SVG then rasterises at its true size,
+    which is what keeps two renders of the same t pixel-identical. */
+function botAt(cx, cy, size, opacity) {
+  const s = size / BOX;
+  const el = $('bot');
+  el.style.opacity = opacity;
+  el.style.width = el.style.height = `${size.toFixed(2)}px`;
+  el.style.left = `${(cx - BODY.x * s).toFixed(2)}px`;
+  el.style.top = `${(cy - BODY.y * s).toFixed(2)}px`;
+}
+
+/** merge two pose objects numerically; mouth snaps at the halfway point */
+function poseMix(a, b, p) {
+  const out = {};
+  for (const k of new Set([...Object.keys(a), ...Object.keys(b)])) {
+    if (k === 'mouth') { out[k] = (p < 0.5 ? a[k] : b[k]) || 'neutral'; continue; }
+    if (k === 'look') {
+      const A = a.look || [0, 0], B = b.look || [0, 0];
+      out[k] = [lerp(A[0], B[0], p), lerp(A[1], B[1], p)];
+      continue;
+    }
+    out[k] = lerp(a[k] || 0, b[k] || 0, p);
+  }
+  return out;
+}
+/** lay idleBot's breathing over a held pose so an expression never freezes */
+function alive(t, pose, k = 1) {
+  const i = idleBot(t, IDLE_PH), o = Object.assign({}, pose);
+  o.bob    = (o.bob || 0)    + i.bob    * 0.60 * k;
+  o.squash = (o.squash || 0) + i.squash * 0.60 * k;
+  o.tilt   = (o.tilt || 0)   + i.tilt   * 0.70 * k;
+  o.sway   = (o.sway || 0)   + i.sway   * 0.70 * k;
+  o.mFlex  = (o.mFlex || 0)  + i.mFlex  * 0.60 * k;
+  o.blink  = Math.max(o.blink || 0, i.blink);
+  return o;
+}
+
+/* the poses this film uses — numbers on the one shape set, nothing new drawn */
+const P_REST   = {};
+const P_WATCH  = { look: [4.5, 0.5], lid: 0.16, tilt: -2, mouth: 'neutral', sway: 6 };
+const P_REACT  = { look: [1, -1.5], eyeArc: -0.75, brow: 0.7, mouth: 'o',
+                   tilt: 4, bob: -4.5, squash: -0.04, sway: -10, mFlex: 0.08 };
+const P_FOCUS  = POSES.focused;
+const P_SETTLE = { look: [-1, 0.5], eyeArc: 0.5, mouth: 'neutral',
+                   tilt: 2.5, bob: -2, sway: -6, mFlex: 0.08 };
+const P_PEEK   = { look: [0, -2], eyeArc: 0.7, mouth: 'smile', tilt: -3.5,
+                   sway: 12, mFlex: 0.1, mSkew: -3 };
+
+/* ── the merge's four dots ───────────────────────────────────────────────── */
+const BOT_CX = 540, BOT_CY = 700;
+const DOTS = [
+  { el: $('d0'), size: 80, o: .96, from: [-190, 250],  to: [-132, -74] },
+  { el: $('d1'), size: 58, o: .76, from: [1272, 150],  to: [ 118, -96] },
+  { el: $('d2'), size: 70, o: .88, from: [-170, 1230], to: [-104, 100] },
+  { el: $('d3'), size: 48, o: .66, from: [1256, 1290], to: [ 112,  84] },
+];
+DOTS.forEach((d) => {
+  d.el.style.width = d.el.style.height = `${d.size}px`;
+  d.el.style.marginLeft = d.el.style.marginTop = `${-d.size / 2}px`;
+});
+
+/* ── the typed question ──────────────────────────────────────────────────── */
+const Q = 'should I raise my Google Ads budget?';
+const QBREAK = 17;                       /* "should I raise my" | "Google Ads budget?" */
+const TYPE_IN = 16.05, TYPE_DUR = 2.30;
+
+/* ── bar + send geometry ─────────────────────────────────────────────────── */
+const BAR_L = 120, BAR_CY = 676, BAR_W0 = 136, BAR_W1 = 840, BAR_H0 = 104, BAR_H1 = 178;
+
+/* ── thread geometry ─────────────────────────────────────────────────────── */
+const AV_CX = 172, AV_CY = 562, AV_SIZE = 104;   /* the bot answering, well above the floor */
+const DOCK_CX = 186, DOCK_SIZE = 78;             /* the bot docked into the bar */
+
+/* ── boot ────────────────────────────────────────────────────────────────── */
+let lock = null;
+(async () => {
+  const [botSVG] = await Promise.all([
+    fetch('../../brand/momentum-bot.svg').then((r) => r.text()),
+    markSVG(),
+  ]);
+  bot = mountBot($('bot'), { markup: botSVG });
+  lock = await Lockup($('lock'), { markSize: 92, wordSize: 62 });
+  try { await document.fonts.ready; } catch (e) { /* headless fallback */ }
+  window.seek(0);
+  window.__ready = true;
+})();
+
+/* ── the timeline ────────────────────────────────────────────────────────── */
+window.seek = function (t) {
+
+  /* ═══ BEAT 1 · 0.0–4.2 — one line, resolving and dissolving ═══════════ */
+  {
+    /* frame 0 is deliberate: "You don’t think about" already set, still, in ink */
+    const g1 = at(t, 0.60, 0.66, easeStandard);            // greys as "finding" lands
+    const g2 = at(t, 1.92, 0.66, easeStandard);            // greys as "a plumber." lands
+    const out = at(t, 3.58, 0.42, easeStandard);
+    W1a.forEach((s) => { s.style.opacity = 1; s.style.transform = 'none';
+                         s.style.color = mixCol(INK, MUTED, g1); });
+    line([W1b[0]], t, 0.62, 0, g2);                        // finding
+    line(W1b.slice(1), t, 1.94, 0.09, 0);                  // a plumber.
+    setOut($('k1a'), out, 30); setOut($('k1b'), out, 30);
+  }
+
+  /* ═══ BEAT 2 · 4.0–6.8 — two words, and a long empty hold ═════════════ */
+  {
+    const out = at(t, 6.40, 0.40, easeStandard);
+    W2.forEach((s, i) => {
+      const p = at(t, 4.24 + i * 0.10, 0.72, easeEmphatic);
+      s.style.opacity = p;
+      s.style.transform = `translateY(${(1 - p) * 44}px)`;
+      s.style.color = INK;
+    });
+    setOut($('k2'), out, 26);
+  }
+
+  /* ═══ BEAT 3 · 6.6–9.6 — the thesis, left-set, three lines ════════════ */
+  {
+    const out = at(t, 9.20, 0.42, easeStandard);
+    W3.forEach((s, i) => {
+      const p = at(t, 6.62 + i * 0.11, 0.70);
+      s.style.opacity = p;
+      s.style.transform = `translateY(${(1 - p) * 30}px)`;
+    });
+    [$('k3a'), $('k3b'), $('k3c')].forEach((el) => setOut(el, out, 34));
+  }
+
+  /* ═══ BEAT 4 · 9.4–12.6 — four dots become the bot ════════════════════ */
+  {
+    const travel = (i) => at(t, 9.30 + i * 0.09, 0.92);         // drift in from the edges
+    const pull   = at(t, 10.40, 0.52, easeEmphatic);            // converge
+    const fade   = 1 - at(t, 10.70, 0.26, easeStandard);
+    DOTS.forEach((d, i) => {
+      const p = travel(i);
+      const x = lerp(d.from[0], BOT_CX + d.to[0], p);
+      const y = lerp(d.from[1], BOT_CY + d.to[1], p);
+      const cx = lerp(x, BOT_CX, pull), cy = lerp(y, BOT_CY, pull);
+      d.el.style.opacity = (p > 0 ? lerp(d.o, 1, pull) : 0) * fade;
+      d.el.style.transform = `translate(${cx.toFixed(1)}px,${cy.toFixed(1)}px) scale(${lerp(1, 1.4, pull).toFixed(3)})`;
+    });
+
+    /* the disc grows out of the cluster; the bot resolves on top of it, so the
+       keyline ring is the last thing to close around the shape */
+    const grow = 0.78 * at(t, 10.46, 0.52, easeEmphatic) + 0.22 * at(t, 10.94, 0.58, easeEmphatic);
+    const dR = BODY.r * grow * (BIG / BOX);
+    $('disc').style.width = $('disc').style.height = `${(dR * 2).toFixed(1)}px`;
+    $('disc').style.opacity = (grow > 0 ? 1 : 0) * (1 - at(t, 11.02, 0.24, easeStandard));
+    $('disc').style.transform = `translate(${(BOT_CX - dR).toFixed(1)}px,${(BOT_CY - dR).toFixed(1)}px)`;
+    var botIn = at(t, 10.96, 0.30, easeStandard);
+    var botSize = BIG * grow;
+    var botCX = BOT_CX, botCY = BOT_CY, botOp = botIn;
+    var pose = alive(t, P_REST);
+  }
+
+  /* ═══ BEAT 5 · 12.4–16.0 — the bot docks; the bar draws itself ════════ */
+  {
+    const dock = at(t, 12.46, 1.10, easeEmphatic);
+    if (dock > 0) {
+      botCX = lerp(BOT_CX, DOCK_CX, dock);
+      botCY = lerp(BOT_CY, BAR_CY, dock);
+      botSize = lerp(BIG, DOCK_SIZE, dock);
+      botOp = 1;
+      pose = alive(t, poseMix(P_REST, P_WATCH, at(t, 13.90, 0.70)), 1);
+    }
+    const w = lerp(BAR_W0, BAR_W1, at(t, 13.36, 1.02, easeEmphatic));
+    const h = lerp(BAR_H0, BAR_H1, at(t, 17.06, 0.34, easeStandard));
+    const barIn = at(t, 13.30, 0.22, easeStandard);
+    const barOut = at(t, 19.30, 0.30, easeStandard);
+    const bar = $('bar');
+    bar.style.width = `${w.toFixed(1)}px`;
+    bar.style.height = `${h.toFixed(1)}px`;
+    bar.style.top = `${(BAR_CY - h / 2).toFixed(1)}px`;
+    bar.style.opacity = barIn * (1 - barOut);
+    bar.style.transform = `translateY(${(-42 * barOut).toFixed(1)}px)`;
+
+    /* the send button: in, then a lift once there is something to send */
+    const sIn = at(t, 14.28, 0.32, easeEmphatic);
+    const lift = at(t, 18.44, 0.34, easeEmphatic) * (1 - at(t, 19.16, 0.16, easeStandard));
+    const send = $('send');
+    send.style.left = `${(BAR_L + w - 90).toFixed(1)}px`;
+    send.style.top = `${(BAR_CY - 33 - 6 * lift).toFixed(1)}px`;
+    send.style.opacity = sIn * (1 - barOut);
+    send.style.transform = `scale(${(0.6 + 0.4 * sIn + 0.09 * lift).toFixed(3)})`;
+  }
+
+  /* ═══ BEAT 6 · 15.8–19.4 — the question is typed ══════════════════════ */
+  {
+    const phOut = at(t, 15.86, 0.22, easeStandard);
+    $('ph').style.opacity = at(t, 14.42, 0.46) * (1 - phOut);
+    $('ph').style.display = phOut > 0.98 ? 'none' : 'inline';
+
+    const vis = typed(Q, t, TYPE_IN, TYPE_DUR);
+    const two = vis.length > QBREAK;                      /* the wrap has been reached */
+    $('bt1').textContent = vis.slice(0, QBREAK);
+    $('bt2').textContent = two ? vis.slice(QBREAK + 1) : '';
+    $('bl2').style.display = two ? 'block' : 'none';
+
+    const caretOn = at(t, 14.56, 0.2) * (1 - at(t, 19.22, 0.14, easeStandard)) * blink(t, 1.06);
+    $('cr1').style.opacity = two ? 0 : caretOn;
+    $('cr2').style.opacity = two ? caretOn : 0;
+
+    /* the bot watches the text land, then takes the question in */
+    if (t >= 15.9) {
+      const react = at(t, 18.42, 0.30, easeEmphatic) * (1 - at(t, 18.94, 0.40, easeStandard));
+      pose = alive(t, poseMix(P_WATCH, P_REACT, react), 1 - 0.5 * react);
+    }
+  }
+
+  /* ═══ BEAT 7 · 19.2–24.0 — the answer ═════════════════════════════════ */
+  {
+    const move = at(t, 19.30, 0.66, easeEmphatic);
+    const gone = at(t, 23.82, 0.34, easeStandard);
+    if (move > 0) {
+      botCX = lerp(DOCK_CX, AV_CX, move);
+      botCY = lerp(BAR_CY, AV_CY, move);
+      botSize = lerp(DOCK_SIZE, AV_SIZE, move);
+      const fo = at(t, 19.54, 0.52, easeStandard) * (1 - at(t, 21.34, 0.80, easeStandard));
+      const se = at(t, 21.60, 0.80, easeStandard);
+      pose = alive(t, poseMix(poseMix(P_WATCH, P_FOCUS, fo), P_SETTLE, se));
+      botOp = 1 - gone;
+    }
+
+    const bIn = at(t, 19.48, 0.58);
+    $('bubble').style.opacity = bIn * (1 - gone);
+    $('bubble').style.transform = `translateY(${((1 - bIn) * 36 - 38 * gone).toFixed(1)}px)`;
+
+    [[$('a1'), 20.16, 0.62], [$('a2'), 21.06, 0.70], [$('a3'), 22.14, 0.78]].forEach(([el, s, d]) => {
+      const p = at(t, s, d);
+      el.style.opacity = p * (1 - gone);
+      el.style.transform = `translateY(${((1 - p) * 26 - 38 * gone).toFixed(1)}px)`;
+    });
+    $('ans').style.opacity = 1;
+  }
+
+  /* ═══ BEAT 8 · 23.8–26.4 — a dark card, the only surface change ═══════ */
+  {
+    const up = at(t, 23.96, 0.82, easeEntrance);
+    const down = at(t, 26.30, 0.62, easeEmphatic);
+    const card = $('card');
+    card.style.opacity = up > 0 ? 1 : 0;
+    card.style.transform = `translateY(${(lerp(1000, 0, up) + 1080 * down).toFixed(1)}px)`;
+
+    const hd = at(t, 24.06, 0.40);
+    card.querySelector('.hd').style.opacity = hd;
+    const dr = at(t, 24.30, 0.92, easeStandard);
+    spk.setAttribute('stroke-dasharray', `${(dr * 100).toFixed(2)} 100`);
+    spk.setAttribute('opacity', dr > 0 ? 1 : 0);
+    spkDot.setAttribute('opacity', at(t, 25.16, 0.28).toFixed(3));
+    [0, 1, 2].forEach((i) => {
+      const p = at(t, 24.72 + i * 0.16, 0.56);
+      const row = $('r' + i);
+      row.style.opacity = p;
+      row.style.transform = `translateX(${((1 - p) * 22).toFixed(1)}px)`;
+      row.querySelector('.rt i').style.transform = `scaleX(${at(t, 24.86 + i * 0.16, 0.68, easeEmphatic).toFixed(3)})`;
+      row.querySelector('.rt i').style.transformOrigin = '0 50%';
+    });
+    $('rcap').style.opacity = at(t, 25.46, 0.44);
+  }
+
+  /* ═══ BEAT 9 · 26.2–28.4 — back to paper, one line ════════════════════ */
+  {
+    const grey = at(t, 27.40, 0.46, easeStandard);
+    const out = at(t, 28.34, 0.34, easeStandard);
+    W9.forEach((s, i) => {
+      const last = i === W9.length - 1;
+      const p = at(t, (last ? 27.46 : 26.70 + i * 0.09), 0.62);
+      s.style.opacity = p;
+      s.style.transform = `translateY(${(1 - p) * 28}px)`;
+      s.style.color = last ? INK : mixCol(INK, MUTED, grey);
+    });
+    setOut($('k9'), out, 30);
+  }
+
+  /* ═══ BEAT 10 · 28.2–30.0 — the lockup, and the one wink ══════════════ */
+  {
+    if (lock) lock.pose(at(t, 28.50, 1.06));
+    const peek = at(t, 29.34, 0.52, easeEntrance);
+    if (peek > 0) {
+      botCX = 812;
+      botCY = lerp(1444, 1296, peek);
+      botSize = 220;
+      botOp = 1;
+      pose = alive(t, P_PEEK, 0.8);
+    }
+  }
+
+  /* ── one bot, posed once per frame ────────────────────────────────────── */
+  botAt(botCX, botCY, botSize, botOp);
+  if (bot && botOp > 0) poseBot(bot, pose);
+};
+
+window.seek(0);
+</script>
+</body></html>
