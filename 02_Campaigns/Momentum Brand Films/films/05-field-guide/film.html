@@ -24,14 +24,17 @@
   #stmt div { font-weight:400; font-size:88px; letter-spacing:.05em;
               line-height:1.42; color:var(--m-ink); }
 
-  #credit { position:absolute; left:150px; top:648px; }
+  #credit { position:absolute; left:150px; top:608px; }
   #credit .rule { height:2px; background:var(--m-line-strong); width:0; }
-  #credit .a { margin-top:30px; font-weight:700; font-size:23px; letter-spacing:.30em;
+  #credit .a { margin-top:32px; font-weight:700; font-size:28px; letter-spacing:.30em;
                color:var(--m-muted); }
-  #credit .b { margin-top:19px; font-weight:400; font-size:19px; letter-spacing:.26em;
+  #credit .b { margin-top:21px; font-weight:400; font-size:22px; letter-spacing:.26em;
                color:var(--m-signal-ink); }
 
-  #lock { position:absolute; left:0; right:0; top:392px; text-align:center;
+  /* the release beat's subject: one recorded trace across open paper */
+  #trace { position:absolute; inset:0; }
+
+  #lock { position:absolute; left:0; right:0; top:436px; text-align:center;
           display:flex; flex-direction:column; align-items:center; opacity:0; }
 
   /* ── the optic: ring, graduations, reticle, registration. Above the mask. ─ */
@@ -39,7 +42,9 @@
 
   /* ── surround furniture ─────────────────────────────────────────────────── */
   .tl { position:absolute; left:100px; top:88px; display:flex; align-items:center; gap:13px; }
-  .tl .mk { width:34px; height:34px; color:var(--m-brand-lift); display:block; }
+  /* the mark is never recoloured: --m-mark on every surface in this film.
+     contrast.json rates mark-on-deep at 4.39, role graphic — legal as-is. */
+  .tl .mk { width:34px; height:34px; color:var(--m-mark); display:block; }
   .tl .wd { font-family:var(--m-font-display); font-size:20px; letter-spacing:-.01em;
             line-height:1; color:var(--m-on-deep); }
   .tr { position:absolute; right:100px; top:94px; font-weight:700; font-size:15px;
@@ -63,6 +68,7 @@
     <div id="stripScale"><div id="stripWrap"></div></div>
 
     <div id="page">
+      <svg id="trace" width="1920" height="1080" viewBox="0 0 1920 1080"></svg>
       <div id="stmt"><div id="s1">Demand leaves traces.</div><div id="s2">We read them.</div></div>
       <div id="credit">
         <div class="rule" id="crule"></div>
@@ -128,6 +134,11 @@ function T(pi, o, str, a, p) {
   const e = F(pi, o, 'text', Object.assign({ 'font-family': 'Nunito Sans', fill: INK }, a), p);
   e.textContent = str; return e;
 }
+/* Late accents. One element per plate arrives *after* the plate has settled, on
+   its own clock — the move that answers "what is this revealing". Elements
+   marked late are skipped by the draw pass and posed from t directly. */
+const lateList = [];
+function LATE(e, start, dur = 0.34) { e.__late = [start, dur]; lateList.push(e); return e; }
 
 /* ── the strip ────────────────────────────────────────────────────────────── */
 const strip = E('svg', { width: W * NP, height: 1080, viewBox: `0 0 ${W * NP} 1080` });
@@ -161,7 +172,9 @@ const G = [];
 for (let i = 0; i < NP; i++) G.push(E('g', { transform: `translate(${i * W},0)` }, strip));
 
 /* helpers ─────────────────────────────────────────────────────────────────── */
-const IT = { 'font-style': 'italic', 'font-size': 16, fill: MUTED, 'letter-spacing': '.02em' };
+/* Naturalist caption. Roman, not italic: Nunito Sans ships no italic and
+   Chromium's synthesized oblique reads as a rendering fault at this size. */
+const IT = { 'font-size': 17, 'font-weight': 400, fill: MUTED, 'letter-spacing': '.10em' };
 function leafPath(x, y, deg, len, wid) {
   const a = deg * Math.PI / 180, dx = Math.cos(a) * len, dy = Math.sin(a) * len;
   const px = -Math.sin(a) * wid, py = Math.cos(a) * wid;
@@ -208,14 +221,17 @@ function leafPath(x, y, deg, len, wid) {
         stroke: INK, 'stroke-width': .9, 'stroke-opacity': .45 }, g);
     });
   });
-  // two buds on short stalks
-  [[-1, 496, -20, -8], [1, 462, 22, -7]].forEach((b, i) => {
-    const sx = 500 + b[0] * 6, sy = b[1];
-    S(P, .48 + i * .03, 'line', { x1: sx, y1: sy, x2: sx + b[2], y2: sy + b[3], stroke: INK,
-      'stroke-width': 1.3 }, g);
-    S(P, .51 + i * .03, 'ellipse', { cx: sx + b[2] * 1.55, cy: sy + b[3] * 1.7, rx: 9, ry: 6,
-      fill: 'none', stroke: INK, 'stroke-width': 1.6,
-      transform: `rotate(${b[2] > 0 ? -22 : 22} ${sx + b[2] * 1.55} ${sy + b[3] * 1.7})` }, g);
+  // two buds, each seated on a stalk of petiole weight so they read as growth,
+  // not as debris. They arrive last — the growing tip is the last thing drawn.
+  const BUD_T = [3.34, 3.48];
+  [[494, 520, -26, -13], [506, 478, 27, -12]].forEach((b, i) => {
+    const sx = b[0], sy = b[1], tx = sx + b[2] * 1.34, ty = sy + b[3] * 1.34;
+    LATE(S(P, .48 + i * .03, 'line', { x1: sx, y1: sy, x2: tx, y2: ty, stroke: INK,
+      'stroke-width': 2.0, 'stroke-linecap': 'round' }, g), BUD_T[i], 0.30);
+    LATE(S(P, .51 + i * .03, 'ellipse', { cx: tx + b[2] * .40, cy: ty + b[3] * .40, rx: 9.5, ry: 6.5,
+      fill: 'none', stroke: INK, 'stroke-width': 1.8,
+      transform: `rotate(${b[2] > 0 ? -24 : 24} ${tx + b[2] * .40} ${ty + b[3] * .40})` }, g),
+      BUD_T[i] + 0.10, 0.30);
   });
   // the query field, drawn as the specimen's flower head
   S(P, .56, 'rect', { x: 320, y: 354, width: 360, height: 68, rx: 34, fill: 'none',
