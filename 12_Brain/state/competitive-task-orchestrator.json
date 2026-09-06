@@ -1,0 +1,1269 @@
+{
+  "workflow_id": "competitive-task-orchestrator",
+  "generated_at": "2026-09-06T13:04:42.177Z",
+  "as_of": "2026-09-06",
+  "mode": "vault-fallback",
+  "competitive_win": {
+    "title": "Close Cindy May Christmas",
+    "reason": "due 2026-09-01 (5d overdue)",
+    "evidence": "01_Clients/Cindy May Christmas/overview.md",
+    "tier": 1
+  },
+  "clients": [
+    {
+      "name": "AMI Cleaning",
+      "client_id": "ami-cleaning",
+      "path": "01_Clients/AMI Cleaning/Client Intelligence Overlay.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": "Verify secure HubSpot form routing and a named production-lead owner before expanding acquisition.",
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "BOK Law Firm",
+      "client_id": "bok-law-firm",
+      "path": "01_Clients/BOK Law Firm/Client Intelligence Overlay.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": "Connect the approved content calendar to legal-service demand, geographic accuracy, consultation paths, and outcome-safe reporting.",
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Agent Memory",
+      "client_id": null,
+      "path": "01_Clients/Bar Crawl USA/Agent Memory.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": null,
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Bar Crawl USA",
+      "client_id": "bar-crawl-usa",
+      "path": "01_Clients/Bar Crawl USA/Client Intelligence Overlay.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": "Repair confirmed-event schema and hub inventory, then connect city and theme demand to verified ticket outcomes.",
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Reporting Log",
+      "client_id": null,
+      "path": "01_Clients/Bar Crawl USA/Reporting Log.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": null,
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Bar Crawl USA",
+      "client_id": null,
+      "path": "01_Clients/Bar Crawl USA/brand-guidelines.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": null,
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Bar Crawl USA",
+      "client_id": null,
+      "path": "01_Clients/Bar Crawl USA/contact-info.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": null,
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Bar Crawl USA",
+      "client_id": null,
+      "path": "01_Clients/Bar Crawl USA/content-calendar.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": null,
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Bar Crawl USA",
+      "client_id": null,
+      "path": "01_Clients/Bar Crawl USA/notes.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": null,
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Bercos Popcorn",
+      "client_id": "bercos-popcorn",
+      "path": "01_Clients/Bercos Popcorn/Client Intelligence Overlay.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": "Obtain the current Shopify build and confirmed engagement scope before creating the launch demand and measurement plan.",
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "BigOrange Marketing",
+      "client_id": "bigorange-marketing",
+      "path": "01_Clients/BigOrange Marketing/Client Intelligence Overlay.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": "Complete the custom-home-builder pillar audit and define the authorized WordPress, Semrush, analytics, and production workflow.",
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "[[01_Clients/BigOrange Marketing/overview|BigOrange Marketing]]",
+      "client_id": null,
+      "path": "01_Clients/BigOrange Marketing/Custom Home Builder Pillar Project.md",
+      "last_touched": null,
+      "due": "2026-08-10",
+      "next_action": "Build the audit checklist and schedule the Janice interview.",
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": 27
+    },
+    {
+      "name": "Agent Memory",
+      "client_id": null,
+      "path": "01_Clients/Bridge Software Development/Agent Memory.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": null,
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Brand Guidelines - Provisional",
+      "client_id": null,
+      "path": "01_Clients/Bridge Software Development/Brand Guidelines - Provisional.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": null,
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Bridge Software",
+      "client_id": "bridge-software",
+      "path": "01_Clients/Bridge Software Development/Client Intelligence Overlay.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": "Approve Phase 1 roles, verification meaning, priority journeys, ownership, and acceptance criteria before production expansion.",
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Meeting Prep - Tori",
+      "client_id": null,
+      "path": "01_Clients/Bridge Software Development/Meeting Prep - Tori.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": null,
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Product and Technical Handoff",
+      "client_id": null,
+      "path": "01_Clients/Bridge Software Development/Product and Technical Handoff.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": null,
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Source Audit",
+      "client_id": null,
+      "path": "01_Clients/Bridge Software Development/Source Audit.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": null,
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Cindy May Christmas",
+      "client_id": "cindy-may-christmas",
+      "path": "01_Clients/Cindy May Christmas/Client Intelligence Overlay.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": "Resolve remaining video, newsletter, image, Shopify, and destination dependencies, then build and instrument the approved website package.",
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Fresh Blends / Kwik Trip",
+      "client_id": "fresh-blends-kwik-trip",
+      "path": "01_Clients/Fresh Blends/Client Intelligence Overlay.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": "Keep all four Ice Box campaigns paused until restart authority, store scope, and measurement definitions are confirmed.",
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Hope Wellness Center",
+      "client_id": "hope-wellness-center",
+      "path": "01_Clients/Hope Wellness Center/Client Intelligence Overlay.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": "Obtain leadership and clinical decisions, then repair contact, eligibility, homepage, and analytics foundations before acquisition expansion.",
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Agent Memory",
+      "client_id": null,
+      "path": "01_Clients/Kimberly James Bridal/Agent Memory.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": null,
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Kimberly James Bridal",
+      "client_id": "kimberly-james-bridal",
+      "path": "01_Clients/Kimberly James Bridal/Client Intelligence Overlay.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": "Reconcile the qualified Meta form through stylist contact and booked appointment, then refresh channel state before reporting or scaling.",
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Reporting Log",
+      "client_id": null,
+      "path": "01_Clients/Kimberly James Bridal/Reporting Log.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": null,
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Kimberly James Bridal",
+      "client_id": null,
+      "path": "01_Clients/Kimberly James Bridal/brand-guidelines.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": null,
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Kimberly James Bridal",
+      "client_id": null,
+      "path": "01_Clients/Kimberly James Bridal/contact-info.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": null,
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Kimberly James Bridal",
+      "client_id": null,
+      "path": "01_Clients/Kimberly James Bridal/content-calendar.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": null,
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Kimberly James Bridal",
+      "client_id": null,
+      "path": "01_Clients/Kimberly James Bridal/notes.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": null,
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Momentum 360",
+      "client_id": "momentum-360",
+      "path": "01_Clients/Momentum 360/Client Intelligence Overlay.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": "Create the agency-level operating scoreboard and decision ledger while preserving every underlying client, account, and reporting period separately.",
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "NKCDC",
+      "client_id": "nkcdc",
+      "path": "01_Clients/NKCDC/Client Intelligence Overlay.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": "Secure leadership selection of two or three Phase Two priorities and define the exact audience, offer, owner, path, and outcome for each.",
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Agent Memory",
+      "client_id": null,
+      "path": "01_Clients/Omega Landscaping/Agent Memory.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": null,
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Omega Landscaping and Concrete",
+      "client_id": "omega-landscaping",
+      "path": "01_Clients/Omega Landscaping/Client Intelligence Overlay.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": "Reconcile the Google-counted event to a named call, form, inbox, or CRM record before budget or Search changes.",
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Reporting Log",
+      "client_id": null,
+      "path": "01_Clients/Omega Landscaping/Reporting Log.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": null,
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Omega Landscaping",
+      "client_id": null,
+      "path": "01_Clients/Omega Landscaping/active-campaigns.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": null,
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Omega Landscaping",
+      "client_id": null,
+      "path": "01_Clients/Omega Landscaping/brand-guidelines.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": null,
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Omega Landscaping",
+      "client_id": null,
+      "path": "01_Clients/Omega Landscaping/contact-info.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": null,
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Omega Landscaping",
+      "client_id": null,
+      "path": "01_Clients/Omega Landscaping/content-calendar.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": null,
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Omega Landscaping",
+      "client_id": null,
+      "path": "01_Clients/Omega Landscaping/notes.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": null,
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Agent Memory",
+      "client_id": null,
+      "path": "01_Clients/Onsite Concrete/Agent Memory.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": null,
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Onsite Concrete & Landscape",
+      "client_id": "onsite-concrete-landscape",
+      "path": "01_Clients/Onsite Concrete/Client Intelligence Overlay.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": "Reconcile six Google-counted events to named contacts and qualified estimates before reallocating budget.",
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Reporting Log",
+      "client_id": null,
+      "path": "01_Clients/Onsite Concrete/Reporting Log.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": null,
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Onsite Concrete & Landscape",
+      "client_id": null,
+      "path": "01_Clients/Onsite Concrete/active-campaigns.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": null,
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Onsite Concrete & Landscape",
+      "client_id": null,
+      "path": "01_Clients/Onsite Concrete/brand-guidelines.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": null,
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Onsite Concrete & Landscape",
+      "client_id": null,
+      "path": "01_Clients/Onsite Concrete/contact-info.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": null,
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Onsite Concrete & Landscape",
+      "client_id": null,
+      "path": "01_Clients/Onsite Concrete/content-calendar.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": null,
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Onsite Concrete & Landscape",
+      "client_id": null,
+      "path": "01_Clients/Onsite Concrete/notes.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": null,
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Pritzker Law Group",
+      "client_id": "pritzker-law-group",
+      "path": "01_Clients/Pritzker Law Group/Client Intelligence Overlay.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": "Confirm approved podcast facts, conversion goal, form destination, analytics property, production host, and final reviewer.",
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Pro Fence & Deck",
+      "client_id": "pro-fence-deck",
+      "path": "01_Clients/Pro Fence & Deck/Client Intelligence Overlay.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": "Verify the production website, logo, service area, offer, CTA, contact route, and real project media before expanding SEO or video.",
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Replenish / 7-Eleven",
+      "client_id": "replenish-7-eleven",
+      "path": "01_Clients/Replenish/Client Intelligence Overlay.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": "Preserve store-level separation and validate direction intent against approved business outcomes before city budget changes.",
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "[[01_Clients/Replenish/overview|Replenish]]",
+      "client_id": null,
+      "path": "01_Clients/Replenish/Google Ads Billing Block 2026-07-30.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": "Confirm Mia reached the Google Ads payment screen and completed the account-side update.",
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Replenish",
+      "client_id": null,
+      "path": "01_Clients/Replenish/active-campaigns.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": null,
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Revive Systems",
+      "client_id": null,
+      "path": "01_Clients/Revive Systems/48-hour-lead-recovery-brief-draft.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": null,
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Revive Systems",
+      "client_id": "revive-systems",
+      "path": "01_Clients/Revive Systems/Client Intelligence Overlay.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": "Map authorized HighLevel access, then implement and verify the entry-offer-to-VIP journey without changing paid media.",
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Agent Memory",
+      "client_id": null,
+      "path": "01_Clients/Tags 2 Go/Agent Memory.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": null,
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Tags 2 Go",
+      "client_id": "tags-2-go",
+      "path": "01_Clients/Tags 2 Go/Client Intelligence Overlay.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": "Map Google Ads access through Access Broker/Bitwarden and confirm whether an agency admin invite is already active before any audit rebuild.",
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Tags 2 Go",
+      "client_id": "tags-2-go",
+      "path": "01_Clients/Tags 2 Go/Google Ads Client Slack Reports/tags-2-go-slack-channel-read.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": null,
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Tags 2 Go",
+      "client_id": "tags-2-go",
+      "path": "01_Clients/Tags 2 Go/Reporting Log.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": null,
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Tags 2 Go",
+      "client_id": "tags-2-go",
+      "path": "01_Clients/Tags 2 Go/active-campaigns.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": null,
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Tags 2 Go",
+      "client_id": "tags-2-go",
+      "path": "01_Clients/Tags 2 Go/brand-guidelines.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": null,
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Tags 2 Go",
+      "client_id": "tags-2-go",
+      "path": "01_Clients/Tags 2 Go/contact-info.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": null,
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Tags 2 Go",
+      "client_id": "tags-2-go",
+      "path": "01_Clients/Tags 2 Go/content-calendar.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": null,
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Tags 2 Go",
+      "client_id": "tags-2-go",
+      "path": "01_Clients/Tags 2 Go/notes.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": null,
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "VA Claims Edge",
+      "client_id": "va-claims-edge",
+      "path": "01_Clients/VA Claims/Client Intelligence Overlay.md",
+      "last_touched": null,
+      "due": null,
+      "next_action": "Refresh Phase 2 backend and decision status, then reconcile the portal with the approved VACE design system and secure workflow requirements.",
+      "stale_days": null,
+      "bucket": "unknown",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Bar Crawl USA",
+      "client_id": null,
+      "path": "01_Clients/Bar Crawl USA/active-campaigns.md",
+      "last_touched": "2026-04-15",
+      "due": null,
+      "next_action": null,
+      "stale_days": 144,
+      "bucket": "stalled",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Kimberly James Bridal",
+      "client_id": null,
+      "path": "01_Clients/Kimberly James Bridal/active-campaigns.md",
+      "last_touched": "2026-04-15",
+      "due": null,
+      "next_action": null,
+      "stale_days": 144,
+      "bucket": "stalled",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Bar Crawl USA",
+      "client_id": "bar-crawl-usa",
+      "path": "01_Clients/Bar Crawl USA/overview.md",
+      "last_touched": "2026-07-11",
+      "due": "2026-07-15",
+      "next_action": "Complete QA and cleanup for the confirmed Boos & Booze city and event pages and repair the current-event hub listing.",
+      "stale_days": 57,
+      "bucket": "stalled",
+      "due_overdue_days": 53
+    },
+    {
+      "name": "Hope Wellness Center",
+      "client_id": "hope-wellness-center",
+      "path": "01_Clients/Hope Wellness Center/overview.md",
+      "last_touched": "2026-07-12",
+      "due": "2026-07-15",
+      "next_action": "Complete the deeper request analysis, decide whether graphic-design support is needed, and close the GBP/reporting follow-up.",
+      "stale_days": 56,
+      "bucket": "stalled",
+      "due_overdue_days": 53
+    },
+    {
+      "name": "Kimberly James Bridal",
+      "client_id": "kimberly-james-bridal",
+      "path": "01_Clients/Kimberly James Bridal/overview.md",
+      "last_touched": "2026-07-12",
+      "due": "2026-07-15",
+      "next_action": "Fix the desktop FAQ image crop, QA all breakpoints, and reconcile appointment routing before reporting qualified appointments.",
+      "stale_days": 56,
+      "bucket": "stalled",
+      "due_overdue_days": 53
+    },
+    {
+      "name": "On-Site Concrete & Landscape",
+      "client_id": "onsite-concrete-landscape",
+      "path": "01_Clients/Onsite Concrete/overview.md",
+      "last_touched": "2026-07-12",
+      "due": "2026-07-15",
+      "next_action": "Complete an allowlisted technical crawl, standardize entity and NAP signals, and reconcile primary conversion actions.",
+      "stale_days": 56,
+      "bucket": "stalled",
+      "due_overdue_days": 53
+    },
+    {
+      "name": "AWCI",
+      "client_id": null,
+      "path": "01_Clients/AWCI.md",
+      "last_touched": "2026-07-29",
+      "due": "none",
+      "next_action": "TBD — needs human next action",
+      "stale_days": 39,
+      "bucket": "stalled",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Align HCM",
+      "client_id": null,
+      "path": "01_Clients/Align HCM.md",
+      "last_touched": "2026-07-29",
+      "due": "none",
+      "next_action": "TBD — needs human next action",
+      "stale_days": 39,
+      "bucket": "stalled",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Bend Plastic Surgery",
+      "client_id": null,
+      "path": "01_Clients/Bend Plastic Surgery.md",
+      "last_touched": "2026-07-29",
+      "due": "none",
+      "next_action": "TBD — needs human next action",
+      "stale_days": 39,
+      "bucket": "stalled",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Blissful Events",
+      "client_id": null,
+      "path": "01_Clients/Blissful Events.md",
+      "last_touched": "2026-07-29",
+      "due": "none",
+      "next_action": "TBD — needs human next action",
+      "stale_days": 39,
+      "bucket": "stalled",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Bluegrass Janitorial",
+      "client_id": null,
+      "path": "01_Clients/Bluegrass Janitorial.md",
+      "last_touched": "2026-07-29",
+      "due": "none",
+      "next_action": "TBD — needs human next action",
+      "stale_days": 39,
+      "bucket": "stalled",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Bridge of Hope OTC",
+      "client_id": null,
+      "path": "01_Clients/Bridge of Hope OTC.md",
+      "last_touched": "2026-07-29",
+      "due": "none",
+      "next_action": "TBD — needs human next action",
+      "stale_days": 39,
+      "bucket": "stalled",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Buzz Bull",
+      "client_id": null,
+      "path": "01_Clients/Buzz Bull.md",
+      "last_touched": "2026-07-29",
+      "due": "none",
+      "next_action": "TBD — needs human next action",
+      "stale_days": 39,
+      "bucket": "stalled",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Coach B",
+      "client_id": null,
+      "path": "01_Clients/Coach B.md",
+      "last_touched": "2026-07-29",
+      "due": "none",
+      "next_action": "TBD — needs human next action",
+      "stale_days": 39,
+      "bucket": "stalled",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Commercial Cleaners Alliance",
+      "client_id": null,
+      "path": "01_Clients/Commercial Cleaners Alliance.md",
+      "last_touched": "2026-07-29",
+      "due": "none",
+      "next_action": "TBD — needs human next action",
+      "stale_days": 39,
+      "bucket": "stalled",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Florecita",
+      "client_id": null,
+      "path": "01_Clients/Florecita.md",
+      "last_touched": "2026-07-29",
+      "due": "none",
+      "next_action": "TBD — needs human next action",
+      "stale_days": 39,
+      "bucket": "stalled",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Hardwood Artisan",
+      "client_id": null,
+      "path": "01_Clients/Hardwood Artisan.md",
+      "last_touched": "2026-07-29",
+      "due": "none",
+      "next_action": "TBD — needs human next action",
+      "stale_days": 39,
+      "bucket": "stalled",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Link Eze",
+      "client_id": null,
+      "path": "01_Clients/Link Eze.md",
+      "last_touched": "2026-07-29",
+      "due": "none",
+      "next_action": "TBD — needs human next action",
+      "stale_days": 39,
+      "bucket": "stalled",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Next Gen Solutions",
+      "client_id": null,
+      "path": "01_Clients/Next Gen Solutions.md",
+      "last_touched": "2026-07-29",
+      "due": "none",
+      "next_action": "TBD — needs human next action",
+      "stale_days": 39,
+      "bucket": "stalled",
+      "due_overdue_days": null
+    },
+    {
+      "name": "PNW Pro Clean",
+      "client_id": null,
+      "path": "01_Clients/PNW Pro Clean.md",
+      "last_touched": "2026-07-29",
+      "due": "none",
+      "next_action": "TBD — needs human next action",
+      "stale_days": 39,
+      "bucket": "stalled",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Vanessa",
+      "client_id": null,
+      "path": "01_Clients/Vanessa.md",
+      "last_touched": "2026-07-29",
+      "due": "none",
+      "next_action": "TBD — needs human next action",
+      "stale_days": 39,
+      "bucket": "stalled",
+      "due_overdue_days": null
+    },
+    {
+      "name": "BigOrange Marketing",
+      "client_id": "bigorange-marketing",
+      "path": "01_Clients/BigOrange Marketing/overview.md",
+      "last_touched": "2026-07-30",
+      "due": "2026-08-10",
+      "next_action": "Prepare the Custom Home Builder pillar audit and Janice interview for the August 10 review.",
+      "stale_days": 38,
+      "bucket": "stalled",
+      "due_overdue_days": 27
+    },
+    {
+      "name": "AMI Cleaning",
+      "client_id": "ami-cleaning",
+      "path": "01_Clients/AMI Cleaning/overview.md",
+      "last_touched": "2026-08-01",
+      "due": "none",
+      "next_action": "Verify HubSpot form routing and the first production lead owner, then establish the Search Console and qualified-lead baseline.",
+      "stale_days": 36,
+      "bucket": "stalled",
+      "due_overdue_days": null
+    },
+    {
+      "name": "BOK Law Firm",
+      "client_id": "bok-law-firm",
+      "path": "01_Clients/BOK Law Firm/overview.md",
+      "last_touched": "2026-08-01",
+      "due": "none",
+      "next_action": "Maintain the approved weekly content workflow, resolve geographic and embargo guardrails, and establish search-to-consultation measurement.",
+      "stale_days": 36,
+      "bucket": "stalled",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Bercos Popcorn",
+      "client_id": "bercos-popcorn",
+      "path": "01_Clients/Bercos Popcorn/overview.md",
+      "last_touched": "2026-08-01",
+      "due": "none",
+      "next_action": "Obtain the finished Shopify site or staging handoff, then run launch, SEO, conversion, analytics, and GBP-readiness QA.",
+      "stale_days": 36,
+      "bucket": "stalled",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Bridge Software",
+      "client_id": "bridge-software",
+      "path": "01_Clients/Bridge Software Development/overview.md",
+      "last_touched": "2026-08-01",
+      "due": "none",
+      "next_action": "TBD — needs human next action",
+      "stale_days": 36,
+      "bucket": "stalled",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Capsule & Tonic",
+      "client_id": null,
+      "path": "01_Clients/Capsule & Tonic/overview.md",
+      "last_touched": "2026-08-01",
+      "due": "none",
+      "next_action": "Confirm Capsule and Tonic's canonical registry disposition before promoting any dated campaign evidence into active delivery.",
+      "stale_days": 36,
+      "bucket": "stalled",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Cindy May Christmas",
+      "client_id": "cindy-may-christmas",
+      "path": "01_Clients/Cindy May Christmas/overview.md",
+      "last_touched": "2026-08-01",
+      "due": "2026-09-01",
+      "next_action": "Build from the approved website package after resolving the video destination, newsletter connection, photo map, and Shopify prerequisites.",
+      "stale_days": 36,
+      "bucket": "stalled",
+      "due_overdue_days": 5
+    },
+    {
+      "name": "Everyday Life Insurance",
+      "client_id": null,
+      "path": "01_Clients/Everyday Life Insurance/overview.md",
+      "last_touched": "2026-08-01",
+      "due": "none",
+      "next_action": "Resolve the missing decision context and confirm Everyday Life Insurance's canonical registry disposition before promoting any work into active delivery.",
+      "stale_days": 36,
+      "bucket": "stalled",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Fresh Blends / Kwik Trip",
+      "client_id": "fresh-blends-kwik-trip",
+      "path": "01_Clients/Fresh Blends/overview.md",
+      "last_touched": "2026-08-01",
+      "due": "none",
+      "next_action": "Verify the live Google Ads pause or restart state and restore separate store-level reporting only from a complete source window.",
+      "stale_days": 36,
+      "bucket": "stalled",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Momentum 360",
+      "client_id": "momentum-360",
+      "path": "01_Clients/Momentum 360/overview.md",
+      "last_touched": "2026-08-01",
+      "due": "none",
+      "next_action": "Reconcile the agency-level operating scorecard while preserving separate client records, then resolve the open AI, CRM, call-attribution, and product rollout decisions.",
+      "stale_days": 36,
+      "bucket": "stalled",
+      "due_overdue_days": null
+    },
+    {
+      "name": "NKCDC",
+      "client_id": "nkcdc",
+      "path": "01_Clients/NKCDC/overview.md",
+      "last_touched": "2026-08-01",
+      "due": "none",
+      "next_action": "Obtain leadership selection of two or three Phase Two priorities, then define each audience, offer, owner, conversion path, and 90-day outcome baseline.",
+      "stale_days": 36,
+      "bucket": "stalled",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Omega Landscaping & Concrete",
+      "client_id": "omega-landscaping",
+      "path": "01_Clients/Omega Landscaping/overview.md",
+      "last_touched": "2026-08-01",
+      "due": "2026-07-15",
+      "next_action": "Verify the current Wix, Google Ads, and Omega GoHighLevel roles, then prepare the exact access request for approval before sending.",
+      "stale_days": 36,
+      "bucket": "stalled",
+      "due_overdue_days": 53
+    },
+    {
+      "name": "Pritzker Law Group",
+      "client_id": "pritzker-law-group",
+      "path": "01_Clients/Pritzker Law Group/overview.md",
+      "last_touched": "2026-08-01",
+      "due": "none",
+      "next_action": "Confirm the podcast landing-page conversion goal, production host, form destination, analytics property, launch facts, and final approval owner.",
+      "stale_days": 36,
+      "bucket": "stalled",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Pro Fence & Deck",
+      "client_id": "pro-fence-deck",
+      "path": "01_Clients/Pro Fence & Deck/overview.md",
+      "last_touched": "2026-08-01",
+      "due": "none",
+      "next_action": "Recheck Yelp and Apple Maps verification after the wait period, capture the exact platform response, and escalate through the authorized account owner if still blocked.",
+      "stale_days": 36,
+      "bucket": "stalled",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Replenish",
+      "client_id": "replenish-7-eleven",
+      "path": "01_Clients/Replenish/overview.md",
+      "last_touched": "2026-08-01",
+      "due": "2026-07-15",
+      "next_action": "Reconcile the Google Ads billing owner and wait for a verified San Diego expansion decision before resuming work or charging August.",
+      "stale_days": 36,
+      "bucket": "stalled",
+      "due_overdue_days": 53
+    },
+    {
+      "name": "Revive Systems",
+      "client_id": "revive-systems",
+      "path": "01_Clients/Revive Systems/overview.md",
+      "last_touched": "2026-08-01",
+      "due": "none",
+      "next_action": "Inspect the exact authorized Local Services Ads account and record its verification stage, owner, blocker, and next dated checkpoint.",
+      "stale_days": 36,
+      "bucket": "stalled",
+      "due_overdue_days": null
+    },
+    {
+      "name": "VA Claims Edge",
+      "client_id": "va-claims-edge",
+      "path": "01_Clients/VA Claims/overview.md",
+      "last_touched": "2026-08-01",
+      "due": "none",
+      "next_action": "Convert David's approved direction and revision requests into a prioritized Phase 2 backlog with data dependencies, acceptance tests, and a client review checkpoint.",
+      "stale_days": 36,
+      "bucket": "stalled",
+      "due_overdue_days": null
+    },
+    {
+      "name": "Tags 2 Go",
+      "client_id": "tags-2-go",
+      "path": "01_Clients/Tags 2 Go/overview.md",
+      "last_touched": "2026-08-07",
+      "due": "2026-08-08",
+      "next_action": "Map Google Ads access through Access Broker/Bitwarden, confirm admin invite status, then produce a redacted audit baseline before any rebuild.",
+      "stale_days": 30,
+      "bucket": "stalled",
+      "due_overdue_days": 29
+    }
+  ],
+  "slack_loops": [
+    {
+      "file": "00_Inbox/slack/2026-07-30-jason-sean-bot-case-status-alert.md",
+      "captured": "2026-07-30",
+      "title": "2026-07-30-jason-sean-bot-case-status-alert",
+      "status": "new"
+    },
+    {
+      "file": "00_Inbox/slack/2026-07-30-jenny-brand-direction.md",
+      "captured": "2026-07-30",
+      "title": "2026-07-30-jenny-brand-direction",
+      "status": "new"
+    },
+    {
+      "file": "00_Inbox/slack/2026-07-30-melissa-guidelines-training-prompt.md",
+      "captured": "2026-07-30",
+      "title": "2026-07-30-melissa-guidelines-training-prompt",
+      "status": "new"
+    },
+    {
+      "file": "00_Inbox/slack/2026-07-30-sean-callrail-status.md",
+      "captured": "2026-07-30",
+      "title": "2026-07-30-sean-callrail-status",
+      "status": "new"
+    }
+  ],
+  "codex_sessions": [
+    {
+      "file": "10_Sessions/Facebook Ads System Build Log.md",
+      "kind": "session"
+    },
+    {
+      "file": "10_Sessions/Session Index.md",
+      "kind": "session"
+    },
+    {
+      "file": "00_Inbox/Agent-Proposals/Claude/2026-08-12-claude-loop-corrections.md",
+      "kind": "agent-proposal"
+    },
+    {
+      "file": "00_Inbox/Agent-Proposals/Claude/2026-08-12-daily-driver-approval-package.md",
+      "kind": "agent-proposal"
+    },
+    {
+      "file": "00_Inbox/Agent-Proposals/Claude/2026-08-13-daily-driver-approval-package.md",
+      "kind": "agent-proposal"
+    },
+    {
+      "file": "00_Inbox/Agent-Proposals/Claude/2026-08-13-frontier-synthesis.md",
+      "kind": "agent-proposal"
+    },
+    {
+      "file": "00_Inbox/Agent-Proposals/Claude/2026-08-14-daily-driver-approval-package.md",
+      "kind": "agent-proposal"
+    },
+    {
+      "file": "00_Inbox/Agent-Proposals/Claude/2026-08-15-daily-driver-approval-package.md",
+      "kind": "agent-proposal"
+    },
+    {
+      "file": "00_Inbox/Agent-Proposals/Claude/2026-08-16-daily-driver-approval-package.md",
+      "kind": "agent-proposal"
+    },
+    {
+      "file": "00_Inbox/Agent-Proposals/Claude/2026-08-17-daily-driver-approval-package.md",
+      "kind": "agent-proposal"
+    },
+    {
+      "file": "00_Inbox/Agent-Proposals/Claude/2026-08-18-daily-driver-approval-package.md",
+      "kind": "agent-proposal"
+    },
+    {
+      "file": "00_Inbox/Agent-Proposals/Claude/2026-09-01-puttery-wnf-reply-drafts.md",
+      "kind": "agent-proposal"
+    }
+  ],
+  "predictions": {
+    "as_of": "2026-09-06",
+    "degraded": true,
+    "candidates": [
+      {
+        "client_id": "bok-law-firm",
+        "work_package_id": "bok-weekly-designed-content-kit",
+        "title": "BOK weekly three-topic designed content kit expected around 2026-09-08",
+        "confidence": 0.96,
+        "confidence_label": "confirmed-pattern"
+      }
+    ]
+  },
+  "parallel_lanes": [
+    {
+      "title": "BOK weekly content prep",
+      "action": "Locate/fingerprint source packet; stage 3 topic image slots — no drafting",
+      "evidence": "12_Brain/state/work-predictor/latest.json"
+    },
+    {
+      "title": "Client pulse touch subset",
+      "action": "Real contact with 3–5 stalled clients (not another scan)",
+      "evidence": "Daily-Briefs/pulse-today.md"
+    },
+    {
+      "title": "M360 Slack draft replies",
+      "action": "Draft status replies for Melissa, Jenny, Sean, Jason — approval-gated send",
+      "evidence": "System/slack-action-queue.md"
+    }
+  ],
+  "approval_cards": [
+    {
+      "title": "BigOrange Marketing website build",
+      "reason": "needs_approval on canonical queue",
+      "evidence": "System/approval-queue.md"
+    },
+    {
+      "title": "Bar Crawl USA paid-media optimization",
+      "reason": "needs_approval — budget/billing gated",
+      "evidence": "System/approval-queue.md"
+    }
+  ],
+  "automations": {
+    "supersedes": [
+      "daily-morning-orchestrator-dry-board",
+      "legacy-hermes-dillon-daily-brief",
+      "legacy-hermes-dillon-approval-queue"
+    ],
+    "still_separate": [
+      "daily-communications-brain",
+      "report-brain-ingest",
+      "marketing-chief-twice-daily-brief",
+      "grok-intelligence-ingest",
+      "obsidian-guard-dog",
+      "prospect-radar-next20"
+    ]
+  }
+}

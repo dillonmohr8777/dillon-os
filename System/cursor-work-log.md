@@ -1,9 +1,32 @@
 ---
 tags: [system, cursor, work-log]
-last_updated: 2026-07-12T19:40:00Z
+last_updated: 2026-09-06T13:15:00Z
 ---
 
 # Cursor Work Log
+
+## Session 2026-09-06 — Competitive task umbrella orchestrator
+
+**Task:** Consolidate scattered morning automations into one Cursor cron with parallel agents.
+
+**Deliverables:**
+- `System/competitive-task-definition.md` — operator throughput definition
+- `System/competitive-task-orchestrator-prompt.md` — automation prompt
+- `_os/automation/workflows/competitive-task-orchestrator.json` — parallel-then-sequential workflow
+- `_os/automation/bin/competitive-task-run.js` — deterministic vault-fallback runner
+- `.cursor/agents/{gmail-intel,slack-intel,vault-pulse,codex-session-sync,domain-ads-seo,content-routines,memory-consolidator}.md`
+- `Daily-Briefs/competitive-task-today.md` — today's operator board
+- `System/slack-action-queue.md` — M360 open loops
+- `12_Brain/registry/automations.json` — registered `competitive-task-orchestrator`
+
+**Verification:**
+- `node _os/automation/bin/competitive-task-run.js --refresh-predictions` exit 0
+- P0 competitive win: Cindy May Christmas (5d overdue)
+- Mode: vault-fallback (Gmail/Slack connectors not authenticated in cloud)
+
+**Next safe action:** Authenticate Composio Gmail/Slack on Dillon's box so Phase 1 agents merge live comms into the 13:00 pass.
+
+---
 
 Autonomous loop session 2026-07-12. All work local and reversible unless noted.
 

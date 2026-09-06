@@ -1,0 +1,153 @@
+{
+  "name": "competitive-task-orchestrator",
+  "workflow_id": "competitive-task-orchestrator",
+  "pattern": "parallel-then-sequential",
+  "purpose": "One umbrella daily pass that fans out parallel intel agents across vault, mail, Slack, Codex sessions, and client pulse, then consolidates into a single competitive operator board.",
+  "schedule": "0 13 * * *",
+  "timezone": "UTC",
+  "phase_0": {
+    "id": "deterministic_baseline",
+    "task": "Run competitive-task-run.js and load prior state checkpoint.",
+    "command": "node _os/automation/bin/competitive-task-run.js --refresh-predictions",
+    "outputs": [
+      "12_Brain/state/competitive-task-orchestrator.json",
+      "Daily-Briefs/competitive-task-today.md"
+    ]
+  },
+  "phase_1_parallel": [
+    {
+      "id": "gmail_intel",
+      "agent": "gmail-intel",
+      "task": "Extract commitments, overdue replies, and approval-relevant threads from the last 36 hours.",
+      "constraints": [
+        "read-only connector",
+        "vault-fallback when Gmail unavailable",
+        "no raw body archives in vault"
+      ],
+      "upstream_artifacts": [
+        "12_Brain/state/daily-communications-brain.json",
+        "12_Brain/01_Captures/Communications/"
+      ],
+      "budget_tokens": 8000,
+      "timeout_seconds": 480
+    },
+    {
+      "id": "slack_intel",
+      "agent": "slack-intel",
+      "task": "Rank open Slack asks and update the slack action queue.",
+      "constraints": [
+        "read-only connector",
+        "vault-fallback to 00_Inbox/slack/",
+        "one client per item"
+      ],
+      "upstream_artifacts": [
+        "00_Inbox/slack/",
+        "System/slack-action-queue.md"
+      ],
+      "budget_tokens": 8000,
+      "timeout_seconds": 480
+    },
+    {
+      "id": "vault_pulse",
+      "agent": "vault-pulse",
+      "task": "Classify client movement, stalls, due dates, and predicted work packages.",
+      "constraints": [
+        "refresh predict-work when stale",
+        "label canonical queue unavailable explicitly"
+      ],
+      "upstream_artifacts": [
+        "01_Clients/",
+        "12_Brain/state/work-predictor/latest.json",
+        "Daily-Briefs/pulse-today.md"
+      ],
+      "budget_tokens": 10000,
+      "timeout_seconds": 600
+    },
+    {
+      "id": "codex_session_sync",
+      "agent": "codex-session-sync",
+      "task": "Surface open loops from Codex sessions and Claude daily-driver receipts.",
+      "constraints": [
+        "read-only",
+        "capture receipts immutable"
+      ],
+      "upstream_artifacts": [
+        "10_Sessions/",
+        "00_Inbox/Agent-Proposals/"
+      ],
+      "budget_tokens": 6000,
+      "timeout_seconds": 300
+    },
+    {
+      "id": "domain_ads_seo",
+      "agent": "domain-ads-seo",
+      "task": "Flag ads, SEO, and tracking blockers from client notes and metrics briefs.",
+      "constraints": [
+        "read-only on ad accounts",
+        "unverified metrics labeled"
+      ],
+      "upstream_artifacts": [
+        "01_Clients/",
+        "Daily-Briefs/metrics-*.md"
+      ],
+      "budget_tokens": 8000,
+      "timeout_seconds": 480
+    },
+    {
+      "id": "content_routines",
+      "agent": "content-routines",
+      "task": "On Sun/Thu only, expand BOK and Align content prep contracts.",
+      "constraints": [
+        "skip on other weekdays unless forced",
+        "prep only, no publish"
+      ],
+      "gate": "weekday in [0, 4]",
+      "upstream_artifacts": [
+        "12_Brain/state/work-predictor/latest.json"
+      ],
+      "budget_tokens": 6000,
+      "timeout_seconds": 300
+    }
+  ],
+  "phase_2_sequential": [
+    {
+      "id": "memory_consolidator",
+      "agent": "memory-consolidator",
+      "task": "Merge parallel receipts, write competitive-task-today.md, refresh Dashboard Today, update slack-action-queue.",
+      "constraints": [
+        "no external sends",
+        "max 5 dashboard tasks",
+        "every rank cites evidence"
+      ],
+      "upstream_artifacts": [
+        "phase_1 receipts",
+        "12_Brain/state/competitive-task-orchestrator.json"
+      ],
+      "budget_tokens": 12000,
+      "timeout_seconds": 600,
+      "skills": [
+        "plan-today",
+        "client-pulse",
+        "inbox-brief"
+      ]
+    }
+  ],
+  "supersedes": [
+    "daily-morning-orchestrator-dry-board",
+    "legacy-hermes-dillon-daily-brief",
+    "legacy-hermes-dillon-approval-queue"
+  ],
+  "does_not_replace": [
+    "daily-communications-brain",
+    "report-brain-ingest",
+    "marketing-chief-twice-daily-brief",
+    "grok-intelligence-ingest",
+    "obsidian-guard-dog",
+    "prospect-radar-next20"
+  ],
+  "failure_policy": {
+    "single_agent_failed": "Continue with vault-fallback receipt; mark run degraded.",
+    "all_agents_failed": "Emit deterministic baseline only from competitive-task-run.js.",
+    "connector_auth_required": "Append approval item; do not stall the vault pass."
+  }
+}
