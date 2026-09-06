@@ -1,0 +1,609 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Field Guide to Local Demand — Momentum</title>
+<link rel="stylesheet" href="../../brand/tokens.css">
+<style>
+  html,body { background:#000; }
+  .stage {
+    position:relative; width:1920px; height:1080px; overflow:hidden;
+    background:var(--m-deep); font-family:var(--m-font-text);
+    -webkit-font-smoothing:antialiased;
+  }
+
+  /* ── the lens: a hard circular mask. No blur, no bevel, no glass. ───────── */
+  #lens { position:absolute; inset:0; }
+  #paperbg { position:absolute; inset:0; background:var(--m-paper); }
+  #panelbg { position:absolute; inset:0; background:var(--m-panel); }
+  #stripScale { position:absolute; inset:0; transform-origin:960px 496px; }
+  #stripWrap  { position:absolute; left:0; top:0; }
+
+  /* ── the page layer: statement, credit, lockup. Also inside the mask. ──── */
+  #page { position:absolute; inset:0; }
+
+  #stmt { position:absolute; left:0; right:0; top:352px; text-align:center; }
+  #stmt div { font-weight:400; font-size:88px; letter-spacing:.05em;
+              line-height:1.42; color:var(--m-ink); }
+
+  #credit { position:absolute; left:150px; top:806px; }
+  #credit .rule { height:2px; background:var(--m-line-strong); width:0; }
+  #credit .a { margin-top:30px; font-weight:700; font-size:23px; letter-spacing:.30em;
+               color:var(--m-muted); }
+  #credit .b { margin-top:19px; font-weight:400; font-size:19px; letter-spacing:.26em;
+               color:var(--m-signal-ink); }
+
+  #lock { position:absolute; left:0; right:0; top:392px; text-align:center;
+          display:flex; flex-direction:column; align-items:center; opacity:0; }
+
+  /* ── the optic: ring, graduations, reticle, registration. Above the mask. ─ */
+  #optic { position:absolute; inset:0; }
+
+  /* ── surround furniture ─────────────────────────────────────────────────── */
+  .tl { position:absolute; left:100px; top:88px; display:flex; align-items:center; gap:13px; }
+  .tl .mk { width:34px; height:34px; color:var(--m-brand-lift); display:block; }
+  .tl .wd { font-family:var(--m-font-display); font-size:20px; letter-spacing:-.01em;
+            line-height:1; color:var(--m-on-deep); }
+  .tr { position:absolute; right:100px; top:94px; font-weight:700; font-size:15px;
+        letter-spacing:.24em; color:var(--m-on-deep-muted); text-align:right; }
+
+  .figs { position:absolute; left:100px; bottom:92px; height:34px; }
+  .figs .fr { position:absolute; left:0; bottom:60px; width:62px; height:2px;
+              background:var(--m-brand-lift); }
+  .figs span { position:absolute; left:0; bottom:0; white-space:nowrap;
+               font-weight:400; font-size:23px; letter-spacing:.05em;
+               color:var(--m-on-deep-muted); }
+
+  #grain { position:absolute; inset:0; pointer-events:none; }
+</style></head>
+<body>
+<div class="stage">
+
+  <div id="lens">
+    <div id="paperbg"></div>
+    <div id="panelbg"></div>
+    <div id="stripScale"><div id="stripWrap"></div></div>
+
+    <div id="page">
+      <div id="stmt"><div id="s1">Demand leaves traces.</div><div id="s2">We read them.</div></div>
+      <div id="credit">
+        <div class="rule" id="crule"></div>
+        <div class="a" id="ca">FIELD GUIDE TO LOCAL DEMAND</div>
+        <div class="b" id="cb">SEO · AEO · GEO · PAID</div>
+      </div>
+      <div id="lock"></div>
+    </div>
+  </div>
+
+  <svg id="optic" width="1920" height="1080" viewBox="0 0 1920 1080"></svg>
+
+  <div class="tl" id="tl"><span class="mk" id="mk"></span><span class="wd">MOMENTUM</span></div>
+  <div class="tr" id="tr">PHILADELPHIA · 39.95° N</div>
+
+  <div class="figs" id="figs"><div class="fr" id="fr"></div></div>
+
+  <div id="grain"></div>
+</div>
+
+<script type="module">
+import { at, clamp, lerp, easeEntrance, easeEmphatic, easeStandard, easeInOut,
+         osc, revealWords, grainURL, markSVG, Lockup }
+  from '../../brand/film-kit.js';
+
+window.FILM = { width: 1920, height: 1080, fps: 30, duration: 26.0 };
+window.__ready = false;
+
+/* ── palette: literals matched to tokens.css ──────────────────────────────── */
+const PAPER = '#FBF8F4', PANEL = '#F0ECE5', INK = '#14181B', MUTED = '#636465',
+      LINE  = '#DCD6CC', LSTRONG = '#8E8578', BRAND = '#155E86',
+      SIGNAL = '#E27113', SIGINK = '#A35309', ONDEEPMUTED = '#8A9296',
+      LIFT = '#3897CC', WHITE = '#FFFFFF';
+
+/* ── stage geometry ───────────────────────────────────────────────────────── */
+const CX = 960, CY = 496;          // the lens never moves; only its radius does
+const W  = 1000;                   // one plate cell on the strip
+const NP = 5;
+
+/* ── tiny SVG DSL ─────────────────────────────────────────────────────────── */
+const NS = 'http://www.w3.org/2000/svg';
+function E(tag, a, parent) {
+  const e = document.createElementNS(NS, tag);
+  for (const k in a) e.setAttribute(k, a[k]);
+  if (parent) parent.appendChild(e);
+  return e;
+}
+/* Every plate element is registered with an order o in [0,1]: strokes draw on
+   that order, fills and type arrive just behind them. */
+const plate = [[], [], [], [], []];
+function S(pi, o, tag, a, p) { const e = E(tag, a, p); e.__o = o; e.__s = 1; plate[pi].push(e); return e; }
+function F(pi, o, tag, a, p) { const e = E(tag, a, p); e.__o = o; e.__s = 0; plate[pi].push(e); return e; }
+function T(pi, o, str, a, p) {
+  const e = F(pi, o, 'text', Object.assign({ 'font-family': 'Nunito Sans', fill: INK }, a), p);
+  e.textContent = str; return e;
+}
+
+/* ── the strip ────────────────────────────────────────────────────────────── */
+const strip = E('svg', { width: W * NP, height: 1080, viewBox: `0 0 ${W * NP} 1080` });
+document.getElementById('stripWrap').appendChild(strip);
+const defs = E('defs', {}, strip);
+
+/* field-notebook grid, travelling with the specimens */
+const gp = E('pattern', { id: 'grid', width: 46, height: 46, patternUnits: 'userSpaceOnUse' }, defs);
+E('path', { d: 'M46 0 H0 V46', fill: 'none', stroke: LINE, 'stroke-width': 1 }, gp);
+const gridRect = E('rect', { x: 0, y: 0, width: W * NP, height: 1080, fill: 'url(#grid)' }, strip);
+
+/* three geological hatches for Plate II */
+function hatch(id, build) {
+  const p = E('pattern', { id, width: 14, height: 14, patternUnits: 'userSpaceOnUse' }, defs);
+  build(p); return `url(#${id})`;
+}
+const H_STIPPLE = hatch('hStip', p => {
+  E('circle', { cx: 3.5, cy: 3.5, r: 1.5, fill: LSTRONG, 'fill-opacity': .75 }, p);
+  E('circle', { cx: 10.5, cy: 10.5, r: 1.5, fill: LSTRONG, 'fill-opacity': .75 }, p);
+});
+const H_HACHURE = hatch('hHach', p => {
+  E('path', { d: 'M-4 4 L4 -4 M0 14 L14 0 M10 18 L18 10', stroke: LSTRONG,
+              'stroke-width': 1.2, 'stroke-opacity': .8 }, p);
+});
+const H_DASH = hatch('hDash', p => {
+  E('path', { d: 'M0 4 H8 M6 11 H14', stroke: LSTRONG, 'stroke-width': 1.3, 'stroke-opacity': .8 }, p);
+});
+
+/* one group per plate, so opacity can be posed per plate */
+const G = [];
+for (let i = 0; i < NP; i++) G.push(E('g', { transform: `translate(${i * W},0)` }, strip));
+
+/* helpers ─────────────────────────────────────────────────────────────────── */
+const IT = { 'font-style': 'italic', 'font-size': 16, fill: MUTED, 'letter-spacing': '.02em' };
+function leafPath(x, y, deg, len, wid) {
+  const a = deg * Math.PI / 180, dx = Math.cos(a) * len, dy = Math.sin(a) * len;
+  const px = -Math.sin(a) * wid, py = Math.cos(a) * wid;
+  return `M ${x},${y} Q ${x + dx * .42 + px},${y + dy * .42 + py} ${x + dx},${y + dy}`
+       + ` Q ${x + dx * .42 - px},${y + dy * .42 - py} ${x},${y} Z`;
+}
+
+/* ══ PLATE I — the query ══════════════════════════════════════════════════ */
+{
+  const g = G[0], P = 0;
+  // stem
+  S(P, .08, 'path', { d: 'M 500,776 C 486,700 512,596 500,456', fill: 'none',
+                      stroke: INK, 'stroke-width': 2.8, 'stroke-linecap': 'round' }, g);
+  // roots, then finer root hairs
+  const roots = [[-104, 52], [-58, 62], [-8, 60], [44, 58], [96, 46]];
+  roots.forEach((r, i) => S(P, .13 + i * .025, 'path', {
+    d: `M 500,776 C ${500 + r[0] * .32},${796} ${500 + r[0] * .78},${788 + r[1] * .4} ${500 + r[0]},${776 + r[1]}`,
+    fill: 'none', stroke: INK, 'stroke-width': 1.4, 'stroke-opacity': .82,
+    'stroke-linecap': 'round' }, g));
+  [[-72, 30], [-30, 40], [24, 38], [66, 26]].forEach((r, i) => S(P, .19 + i * .02, 'path', {
+    d: `M 500,776 Q ${500 + r[0] * .6},${790} ${500 + r[0]},${776 + r[1]}`,
+    fill: 'none', stroke: INK, 'stroke-width': .9, 'stroke-opacity': .5 }, g));
+  // three leaves, each with a midrib and veins that land exactly on the edge
+  const leaves = [
+    { x: 502, y: 560, d: -6,  l: 178, w: 48 },
+    { x: 498, y: 648, d: 187, l: 190, w: 50 },
+    { x: 502, y: 712, d: -16, l: 150, w: 40 },
+  ];
+  leaves.forEach((lf, i) => {
+    const a = lf.d * Math.PI / 180, ca = Math.cos(a), sa = Math.sin(a);
+    const ex = lf.x + ca * lf.l, ey = lf.y + sa * lf.l;
+    S(P, .26 + i * .075, 'path', { d: leafPath(lf.x, lf.y, lf.d, lf.l, lf.w), fill: 'none',
+                                   stroke: INK, 'stroke-width': 2 }, g);
+    S(P, .31 + i * .075, 'line', { x1: lf.x, y1: lf.y, x2: ex, y2: ey, stroke: INK,
+                                   'stroke-width': 1.1, 'stroke-opacity': .7 }, g);
+    [.24, .46, .70].forEach((u, v) => {
+      const along = 2 * u * (1 - u) * .42 * lf.l + u * u * lf.l;
+      const off   = 2 * u * (1 - u) * lf.w;
+      const bx = lf.x + ca * along, by = lf.y + sa * along;
+      const nx = -sa * off, ny = ca * off;
+      S(P, .35 + i * .075 + v * .01, 'line', { x1: bx, y1: by, x2: bx + nx, y2: by + ny,
+        stroke: INK, 'stroke-width': .9, 'stroke-opacity': .45 }, g);
+      S(P, .36 + i * .075 + v * .01, 'line', { x1: bx, y1: by, x2: bx - nx, y2: by - ny,
+        stroke: INK, 'stroke-width': .9, 'stroke-opacity': .45 }, g);
+    });
+  });
+  // two buds
+  [[494, 522], [506, 486]].forEach((b, i) =>
+    S(P, .50 + i * .03, 'circle', { cx: b[0], cy: b[1], r: 7, fill: 'none',
+                                    stroke: INK, 'stroke-width': 1.6 }, g));
+  // the query field, drawn as the specimen's flower head
+  S(P, .56, 'rect', { x: 320, y: 380, width: 360, height: 68, rx: 34, fill: 'none',
+                      stroke: INK, 'stroke-width': 2.4 }, g);
+  F(P, .62, 'rect', { x: 322, y: 382, width: 356, height: 64, rx: 32, fill: PAPER }, g);
+  S(P, .64, 'circle', { cx: 364, cy: 414, r: 11, fill: 'none', stroke: INK, 'stroke-width': 2 }, g);
+  S(P, .66, 'line', { x1: 372, y1: 422, x2: 380, y2: 430, stroke: INK,
+                      'stroke-width': 2, 'stroke-linecap': 'round' }, g);
+  T(P, .72, '"roofer near me"', { x: 398, y: 424, 'font-size': 28, 'font-weight': 400 }, g);
+  // naturalist captions with leader hairlines
+  const caps = [
+    { tx: 706, ty: 388, an: 'start', s: 'intentio', lx: 700, ly: 392, ex: 686, ey: 406 },
+    { tx: 296, ty: 640, an: 'end',   s: 'folium',   lx: 302, ly: 634, ex: 352, ey: 626 },
+    { tx: 548, ty: 822, an: 'start', s: 'radix',    lx: 542, ly: 816, ex: 512, ey: 796 },
+  ];
+  caps.forEach((c, i) => {
+    S(P, .78 + i * .04, 'line', { x1: c.lx, y1: c.ly, x2: c.ex, y2: c.ey, stroke: LSTRONG,
+                                  'stroke-width': 1 }, g);
+    T(P, .82 + i * .04, c.s, Object.assign({ x: c.tx, y: c.ty, 'text-anchor': c.an }, IT), g);
+  });
+}
+
+/* ══ PLATE II — the map pack ═════════════════════════════════════════════ */
+{
+  const g = G[1], P = 1;
+  const X0 = 228, X1 = 772, fills = [H_STIPPLE, H_HACHURE, H_DASH];
+  const tops = [308, 438, 568], H = 116;
+  function wavy(y, amp, ph) {
+    let d = `M ${X0},${y + Math.sin(ph) * amp}`;
+    for (let i = 1; i <= 36; i++) {
+      const x = X0 + (X1 - X0) * i / 36;
+      d += ` L ${x},${y + Math.sin(i * .42 + ph) * amp}`;
+    }
+    return d;
+  }
+  // a map pin, pressed in like a fossil
+  function pin(px, py, r) {
+    const h = r * 0.87;
+    return `M ${px},${py} L ${px - h},${py - r * 1.38} A ${r},${r} 0 1 1 ${px + h},${py - r * 1.38} Z`;
+  }
+  tops.forEach((y, i) => {
+    const cid = `st${i}`;
+    const cp = E('clipPath', { id: cid }, defs);
+    E('path', { d: wavy(y, 7, i * 2.1) + ` L ${X1},${y + H} L ${X0},${y + H} Z` }, cp);
+    F(P, .30 + i * .10, 'rect', { x: X0, y: y - 12, width: X1 - X0, height: H + 14,
+                                  fill: fills[i], 'clip-path': `url(#${cid})` }, g);
+    S(P, .06 + i * .09, 'path', { d: wavy(y, 7, i * 2.1), fill: 'none', stroke: INK,
+                                  'stroke-width': 2.2 }, g);
+    S(P, .12 + i * .09, 'line', { x1: X0, y1: y + H, x2: X1, y2: y + H, stroke: INK,
+                                  'stroke-width': 1.2, 'stroke-opacity': .5 }, g);
+    S(P, .10 + i * .09, 'line', { x1: X0, y1: y, x2: X0, y2: y + H, stroke: INK,
+                                  'stroke-width': 1.4 }, g);
+    S(P, .11 + i * .09, 'line', { x1: X1, y1: y, x2: X1, y2: y + H, stroke: INK,
+                                  'stroke-width': 1.4 }, g);
+    T(P, .48 + i * .07, String(i + 1), { x: 198, y: y + 78, 'text-anchor': 'end',
+      'font-size': 34, 'font-weight': 700, fill: BRAND }, g);
+    const px = [292, 356, 320][i], py = y + 96;
+    F(P, .54 + i * .07, 'path', { d: pin(px, py, 17), fill: SIGNAL }, g);
+    S(P, .58 + i * .07, 'path', { d: pin(px, py, 17), fill: 'none', stroke: INK,
+                                  'stroke-width': 1.8, 'stroke-linejoin': 'round' }, g);
+    F(P, .60 + i * .07, 'circle', { cx: px, cy: py - 23.5, r: 6, fill: PANEL }, g);
+    [[204, 0], [136, 26]].forEach((bar, k) =>
+      F(P, .64 + i * .07 + k * .02, 'rect', { x: px + 44, y: y + 40 + bar[1], width: bar[0],
+        height: 9, rx: 4.5, fill: LSTRONG, 'fill-opacity': .8 }, g));
+  });
+  // a scale bar, where a field plate would put one
+  S(P, .80, 'line', { x1: 340, y1: 724, x2: 660, y2: 724, stroke: LSTRONG, 'stroke-width': 1.4 }, g);
+  for (let k = 0; k <= 4; k++)
+    S(P, .82 + k * .012, 'line', { x1: 340 + k * 80, y1: 724, x2: 340 + k * 80,
+      y2: 724 + (k % 2 ? 6 : 12), stroke: LSTRONG, 'stroke-width': 1.4 }, g);
+  T(P, .90, 'scala', Object.assign({ x: 500, y: 758, 'text-anchor': 'middle' }, IT), g);
+  T(P, .92, 'sectio localis', Object.assign({ x: 500, y: 262, 'text-anchor': 'middle' }, IT), g);
+}
+
+/* ══ PLATE III — intent ══════════════════════════════════════════════════ */
+{
+  const g = G[2], P = 2;
+  const hx = 250, hy = 496;
+  S(P, .04, 'circle', { cx: hx, cy: hy, r: 25, fill: 'none', stroke: INK, 'stroke-width': 2.4 }, g);
+  F(P, .10, 'circle', { cx: hx, cy: hy, r: 22, fill: PAPER }, g);
+  T(P, .14, '"roofer"', { x: hx, y: hy - 46, 'text-anchor': 'middle', 'font-size': 21,
+                          'font-weight': 700, fill: BRAND, 'letter-spacing': '.02em' }, g);
+  const ends = [
+    { x: 600, y: 252, n: '1', s: 'near me' },
+    { x: 642, y: 374, n: '2', s: 'cost' },
+    { x: 666, y: 496, n: '3', s: 'emergency' },
+    { x: 642, y: 620, n: '4', s: 'repair' },
+    { x: 600, y: 742, n: '5', s: 'best' },
+  ];
+  ends.forEach((e, i) => {
+    S(P, .18 + i * .06, 'path', {
+      d: `M ${hx + 27},${hy} C ${hx + 150},${hy} ${e.x - 150},${e.y} ${e.x - 14},${e.y}`,
+      fill: 'none', stroke: INK, 'stroke-width': 1.7, 'stroke-opacity': .85 }, g);
+    S(P, .46 + i * .04, 'circle', { cx: e.x, cy: e.y, r: 10, fill: 'none', stroke: INK,
+                                    'stroke-width': 2 }, g);
+    T(P, .60 + i * .04, e.n, { x: e.x - 22, y: e.y - 18, 'text-anchor': 'middle',
+      'font-size': 15, 'font-weight': 700, fill: MUTED }, g);
+    T(P, .66 + i * .04, e.s, { x: e.x + 24, y: e.y + 7, 'font-size': 22, 'font-weight': 400,
+      fill: INK, 'letter-spacing': '.01em' }, g);
+  });
+  // second-order twigs, unlabelled — a classification chart keeps going
+  const twigs = [[600, 252, 566, 190], [600, 252, 654, 196], [642, 620, 596, 700], [642, 620, 700, 690]];
+  twigs.forEach((w, i) => {
+    S(P, .72 + i * .03, 'path', { d: `M ${w[0]},${w[1]} Q ${(w[0] + w[2]) / 2 + 8},${(w[1] + w[3]) / 2} ${w[2]},${w[3]}`,
+      fill: 'none', stroke: INK, 'stroke-width': 1.2, 'stroke-opacity': .6 }, g);
+    S(P, .80 + i * .03, 'circle', { cx: w[2], cy: w[3], r: 7, fill: 'none', stroke: INK,
+      'stroke-width': 1.5, 'stroke-opacity': .75 }, g);
+  });
+  T(P, .92, 'classis intentionis', Object.assign({ x: 300, y: 722 }, IT), g);
+}
+
+/* ══ PLATE IV — the answer engine ════════════════════════════════════════ */
+{
+  const g = G[3], P = 3;
+  const x0 = 332, y0 = 352, w = 336, h = 292;
+  S(P, .04, 'rect', { x: x0, y: y0, width: w, height: h, fill: 'none', stroke: INK,
+                      'stroke-width': 2.6 }, g);
+  S(P, .14, 'rect', { x: x0 + 9, y: y0 + 9, width: w - 18, height: h - 18, fill: 'none',
+                      stroke: LSTRONG, 'stroke-width': 1 }, g);
+  [[x0 + 9, y0 + 9, 1, 1], [x0 + w - 9, y0 + 9, -1, 1],
+   [x0 + 9, y0 + h - 9, 1, -1], [x0 + w - 9, y0 + h - 9, -1, -1]].forEach((c, i) =>
+    S(P, .20 + i * .02, 'path', { d: `M ${c[0]},${c[1] + 22 * c[3]} Q ${c[0]},${c[1]} ${c[0] + 22 * c[2]},${c[1]}`,
+      fill: 'none', stroke: SIGINK, 'stroke-width': 1.6 }, g));
+  // the illuminated initial
+  F(P, .32, 'rect', { x: x0 + 24, y: y0 + 28, width: 68, height: 68, fill: BRAND }, g);
+  T(P, .40, 'A', { x: x0 + 58, y: y0 + 82, 'text-anchor': 'middle', 'font-family': 'Archivo Black',
+                   'font-size': 48, fill: WHITE }, g);
+  S(P, .44, 'path', { d: `M ${x0 + 20},${y0 + 102} q -14,10 -4,24 q 12,10 22,-4`, fill: 'none',
+                      stroke: SIGINK, 'stroke-width': 1.6 }, g);
+  S(P, .46, 'path', { d: `M ${x0 + 96},${y0 + 22} q 16,-10 26,2 q 8,12 -6,20`, fill: 'none',
+                      stroke: SIGINK, 'stroke-width': 1.6 }, g);
+  // the answer, redacted to hairlines — illustrative UI, never a claim
+  [[x0 + 106, y0 + 46, 190], [x0 + 106, y0 + 74, 154]].forEach((r, i) =>
+    F(P, .52 + i * .03, 'rect', { x: r[0], y: r[1], width: r[2], height: 8, rx: 4,
+      fill: LSTRONG, 'fill-opacity': .68 }, g));
+  [[x0 + 26, y0 + 126, 284], [x0 + 26, y0 + 152, 284], [x0 + 26, y0 + 178, 198]].forEach((r, i) =>
+    F(P, .58 + i * .03, 'rect', { x: r[0], y: r[1], width: r[2], height: 8, rx: 4,
+      fill: LSTRONG, 'fill-opacity': .68 }, g));
+  S(P, .68, 'line', { x1: x0 + 26, y1: y0 + 208, x2: x0 + w - 26, y2: y0 + 208,
+                      stroke: LSTRONG, 'stroke-width': 1 }, g);
+  // the film's single script accent
+  T(P, .76, 'Answer Engine Optimization', { x: 500, y: y0 + 252, 'text-anchor': 'middle',
+    'font-family': 'Caveat', 'font-weight': 700, 'font-size': 29, fill: SIGINK }, g);
+  // marginalia
+  T(P, .88, 'nota bene', Object.assign({ x: 500, y: y0 + 322, 'text-anchor': 'middle' }, IT), g);
+  S(P, .84, 'path', { d: `M ${x0 - 20},${y0 + 56} l 0,26 m -7,-13 l 14,0`, fill: 'none',
+                      stroke: SIGINK, 'stroke-width': 1.4 }, g);
+}
+
+/* ══ PLATE V — where they look ═══════════════════════════════════════════ */
+{
+  const g = G[4], P = 4;
+  const cx = 500, cy = 496;
+  for (let k = 0; k < 12; k++) {
+    const a = k * Math.PI / 6;
+    S(P, .04 + k * .008, 'line', { x1: cx + Math.cos(a) * 58, y1: cy + Math.sin(a) * 58,
+      x2: cx + Math.cos(a) * 322, y2: cy + Math.sin(a) * 322, stroke: LINE, 'stroke-width': 1 }, g);
+  }
+  const rings = [
+    { r: 92,  s: 'MAP',     ang: 90 },
+    { r: 162, s: 'ORGANIC', ang: -90 },
+    { r: 232, s: 'PAID',    ang: 0 },
+    { r: 300, s: 'AI',      ang: 180 },
+  ];
+  rings.forEach((rg, i) => {
+    S(P, .14 + i * .10, 'circle', { cx, cy, r: rg.r, fill: 'none', stroke: LSTRONG,
+      'stroke-width': i === 3 ? 1.9 : 1.4 }, g);
+  });
+  // one tilted hairline, so the chart reads celestial and not diagrammatic
+  S(P, .56, 'ellipse', { cx, cy, rx: 268, ry: 94, fill: 'none', stroke: LSTRONG,
+    'stroke-width': 1, 'stroke-dasharray': '7 7', transform: `rotate(-19 ${cx} ${cy})` }, g);
+  for (let k = 0; k < 24; k++) {
+    const a = k * Math.PI / 12;
+    S(P, .60 + k * .004, 'line', { x1: cx + Math.cos(a) * 300, y1: cy + Math.sin(a) * 300,
+      x2: cx + Math.cos(a) * (k % 2 ? 311 : 318), y2: cy + Math.sin(a) * (k % 2 ? 311 : 318),
+      stroke: LSTRONG, 'stroke-width': 1.3 }, g);
+  }
+  rings.forEach((rg, i) => {
+    const a = rg.ang * Math.PI / 180;
+    const lx = cx + Math.cos(a) * rg.r, ly = cy + Math.sin(a) * rg.r;
+    const wid = rg.s.length * 13 + 26;
+    F(P, .70 + i * .04, 'rect', { x: lx - wid / 2, y: ly - 15, width: wid, height: 30, fill: PANEL }, g);
+    T(P, .74 + i * .04, rg.s, { x: lx, y: ly + 7, 'text-anchor': 'middle', 'font-size': 19,
+      'font-weight': 700, 'letter-spacing': '.16em', fill: INK }, g);
+  });
+  S(P, .10, 'path', { d: `M ${cx - 15},${cy} h 30 M ${cx},${cy - 15} v 30`, stroke: INK,
+    'stroke-width': 1.4 }, g);
+  F(P, .18, 'circle', { cx, cy, r: 5, fill: INK }, g);
+  T(P, .92, 'orbis quaerendi', Object.assign({ x: 628, y: 742 }, IT), g);
+  // the traveller — posed from seek(t), so it is registered but never dash-drawn
+  var travTrail = E('path', { fill: 'none', stroke: SIGNAL, 'stroke-width': 2.6,
+    'stroke-linecap': 'round', opacity: 0 }, g);
+  var travDot = E('circle', { r: 9, fill: SIGNAL, opacity: 0 }, g);
+}
+const TRAIL = travTrail, DOT = travDot;
+
+/* ── measure every stroked element once, at load ──────────────────────────── */
+for (const list of plate) for (const e of list) {
+  if (e.__s) {
+    const L = e.getTotalLength ? e.getTotalLength() : 0;
+    e.__L = L || 1;
+    e.style.strokeDasharray = `${e.__L} ${e.__L}`;
+    e.style.strokeDashoffset = e.__L;
+  } else {
+    e.style.opacity = 0;
+  }
+}
+
+/* ── the optic: ring, graduations, reticle, registration marks ────────────── */
+const optic = document.getElementById('optic');
+const gRing = E('g', { transform: `translate(${CX},${CY})` }, optic);
+const ring = E('circle', { cx: 0, cy: 0, r: 1, fill: 'none', stroke: LSTRONG,
+                           'stroke-width': 3, 'vector-effect': 'non-scaling-stroke' }, gRing);
+const gTicks = E('g', { transform: `translate(${CX},${CY})` }, optic);
+for (let k = 0; k < 36; k++) {
+  const a = k * Math.PI / 18, big = k % 3 === 0;
+  E('line', { x1: Math.cos(a), y1: Math.sin(a),
+              x2: Math.cos(a) * (big ? 1.055 : 1.03), y2: Math.sin(a) * (big ? 1.055 : 1.03),
+              stroke: ONDEEPMUTED, 'stroke-width': big ? 1.8 : 1.1,
+              'vector-effect': 'non-scaling-stroke' }, gTicks);
+}
+const gRet = E('g', {}, optic);
+E('path', { d: `M ${CX - 460},${CY} h 920 M ${CX},${CY - 452} v 904`, stroke: ONDEEPMUTED,
+            'stroke-width': 1.1 }, gRet);
+for (let k = -10; k <= 10; k++) {
+  if (!k) continue;
+  const d = k * 42, len = k % 5 === 0 ? 11 : 6;
+  E('line', { x1: CX + d, y1: CY - len, x2: CX + d, y2: CY + len, stroke: ONDEEPMUTED,
+              'stroke-width': 1.1 }, gRet);
+  E('line', { x1: CX - len, y1: CY + d, x2: CX + len, y2: CY + d, stroke: ONDEEPMUTED,
+              'stroke-width': 1.1 }, gRet);
+}
+E('circle', { cx: CX, cy: CY, r: 372, fill: 'none', stroke: ONDEEPMUTED, 'stroke-width': 1.4,
+              'stroke-dasharray': '5 11' }, gRet);
+const gReg = E('g', {}, optic);
+[[92, 92], [1828, 92], [92, 988], [1828, 988]].forEach(c =>
+  E('path', { d: `M ${c[0] - 13},${c[1]} h 26 M ${c[0]},${c[1] - 13} v 26`, stroke: ONDEEPMUTED,
+              'stroke-width': 1.4 }, gReg));
+
+/* ── plate labels in the surround ─────────────────────────────────────────── */
+const FIG = ['Fig. I — the query', 'Fig. II — the map pack', 'Fig. III — intent',
+             'Fig. IV — the answer engine', 'Fig. V — where they look'];
+const figEls = FIG.map(s => {
+  const d = document.createElement('span');
+  d.textContent = s; document.getElementById('figs').appendChild(d); return d;
+});
+const FIGWIN = [[2.15, 4.32], [4.78, 7.12], [7.60, 9.92], [10.40, 12.92], [13.62, 15.42]];
+
+/* ── grain: one seeded texture, generated once, never resampled ───────────── */
+document.getElementById('grain').style.background = `url(${grainURL(190, 0.052, 23)}) repeat`;
+
+/* ── boot ─────────────────────────────────────────────────────────────────── */
+const els = {
+  lens: document.getElementById('lens'),
+  panel: document.getElementById('panelbg'),
+  scale: document.getElementById('stripScale'),
+  wrap: document.getElementById('stripWrap'),
+  grid: gridRect,
+  stmt: document.getElementById('stmt'),
+  s1: document.getElementById('s1'), s2: document.getElementById('s2'),
+  credit: document.getElementById('credit'), crule: document.getElementById('crule'),
+  ca: document.getElementById('ca'), cb: document.getElementById('cb'),
+  tl: document.getElementById('tl'), tr: document.getElementById('tr'),
+  fr: document.getElementById('fr'), mk: document.getElementById('mk'),
+  lock: document.getElementById('lock'),
+};
+let lock = null;
+
+Promise.all([markSVG(), Lockup(document.getElementById('lock'), {
+  line: 'Philadelphia. Since 2015.', markSize: 104, wordSize: 72,
+})]).then(([svg, lk]) => {
+  els.mk.innerHTML = svg;
+  const s = els.mk.querySelector('svg');
+  s.setAttribute('width', '100%'); s.setAttribute('height', '100%'); s.style.display = 'block';
+  lock = lk;
+  window.seek(0);
+  window.__ready = true;
+});
+
+/* ── timeline helpers ─────────────────────────────────────────────────────── */
+const DRAW = [[2.05, 1.95], [4.62, 1.98], [7.42, 1.98], [10.28, 1.92], [13.34, 1.86]];
+
+function lensR(t) {
+  let R = 372 * at(t, 0.00, 1.50, easeEmphatic);       // the aperture irises open
+  R = lerp(R, 250, at(t, 10.00, 0.78, easeEmphatic));  // it narrows for the manuscript
+  R = lerp(R, 412, at(t, 13.00, 0.92, easeEmphatic));  // and widens for the celestial chart
+  R = lerp(R, 1560, at(t, 15.40, 2.00, easeEmphatic)); // then opens past the frame
+  R = lerp(R, 424, at(t, 23.70, 1.60, easeEmphatic));  // and closes back to frame the lockup
+  return R;
+}
+
+function stripX(t) {
+  return at(t, 4.40, 0.62, easeEmphatic)      // I → II : a decisive slide
+       + at(t, 7.20, 0.98, easeStandard)      // II → III: a slower drift with a rise
+       + at(t, 10.00, 0.74, easeEmphatic)     // III → IV: under a narrowing iris
+       + at(t, 13.00, 0.92, easeEmphatic);    // IV → V : a punch-through
+}
+
+/* ── the timeline ─────────────────────────────────────────────────────────── */
+window.seek = function (t) {
+
+  /* --- the instrument -------------------------------------------------- */
+  const R = lensR(t);
+  els.lens.style.clipPath = `circle(${R.toFixed(2)}px at ${CX}px ${CY}px)`;
+
+  const surround = Math.max(at(t, 0.25, 0.9) * (1 - at(t, 15.40, 0.85)), at(t, 24.30, 0.9));
+  gRing.setAttribute('transform', `translate(${CX},${CY}) scale(${(R + 2.4).toFixed(3)})`);
+  gTicks.setAttribute('transform', `translate(${CX},${CY}) scale(${R.toFixed(3)})`);
+  ring.style.opacity = surround;
+  gTicks.style.opacity = surround * 0.85;
+  gReg.style.opacity = surround * 0.55;
+
+  /* the reticle: present on the first frame, drifting, gone once the iris lands */
+  const ret = 0.52 * (1 - at(t, 1.00, 0.95, easeStandard));
+  gRet.style.opacity = ret;
+  gRet.setAttribute('transform', `translate(${(osc(t, 5.2) * 7).toFixed(2)},${(osc(t, 3.7, .3) * 5).toFixed(2)})`);
+
+  /* --- the strip under the lens ---------------------------------------- */
+  const idx = stripX(t);
+  const rise = -22 * Math.sin(Math.PI * clamp((t - 7.20) / 0.98));      // the II→III drift lifts
+  const driftX = osc(t, 9.0) * 3.5, driftY = osc(t, 6.4, 0.35) * 2.6;   // held by hand, not bolted
+  els.wrap.style.transform =
+    `translate(${(CX - 500 - idx * W + driftX).toFixed(2)}px,${(rise + driftY).toFixed(2)}px)`;
+
+  let sc = 1 + 0.0042 * Math.min(t, 15.4);                              // a slow, constant push
+  sc *= 1 + 0.42 * Math.sin(Math.PI * clamp((t - 13.00) / 1.06));       // IV→V punches through
+  sc = lerp(sc, 2.35, at(t, 15.40, 2.00, easeEmphatic));                // the release expands it
+  els.scale.style.transform = `scale(${sc.toFixed(4)})`;
+
+  const stripOut = 1 - at(t, 15.55, 1.35, easeStandard);
+  els.wrap.style.opacity = stripOut;
+  els.grid.style.opacity = 0.85 * (1 - at(t, 15.40, 1.10, easeStandard));
+  els.panel.style.opacity = 1 - at(t, 15.50, 1.60, easeStandard);
+
+  /* --- the plates draw themselves in ----------------------------------- */
+  for (let i = 0; i < NP; i++) {
+    const p = at(t, DRAW[i][0], DRAW[i][1], easeStandard);
+    if (p === G[i].__last) continue;                     // cheap: skip settled plates
+    G[i].__last = p;
+    for (const e of plate[i]) {
+      if (e.__s) {
+        const q = easeStandard(clamp((p - e.__o * 0.56) / 0.44));
+        e.style.strokeDashoffset = (e.__L * (1 - q)).toFixed(2);
+      } else {
+        e.style.opacity = easeStandard(clamp((p - 0.26 - e.__o * 0.46) / 0.30));
+      }
+    }
+  }
+
+  /* --- Plate V: the traveller on the ORGANIC ring ----------------------- */
+  {
+    const live = at(t, 14.05, 0.5) * (1 - at(t, 15.45, 0.6));
+    const cx = 500, cy = 496, r = 162;
+    const a0 = -Math.PI * 0.62, a1 = a0 + Math.PI * 1.22;
+    const a = lerp(a0, a1, easeInOut(clamp((t - 14.05) / 1.55)));
+    const b = Math.max(a0, a - 0.72);
+    const large = 0 , sweep = 1;
+    TRAIL.setAttribute('d',
+      `M ${(cx + Math.cos(b) * r).toFixed(1)},${(cy + Math.sin(b) * r).toFixed(1)}` +
+      ` A ${r},${r} 0 ${large} ${sweep} ${(cx + Math.cos(a) * r).toFixed(1)},${(cy + Math.sin(a) * r).toFixed(1)}`);
+    TRAIL.setAttribute('opacity', (live * 0.55).toFixed(3));
+    DOT.setAttribute('cx', (cx + Math.cos(a) * r).toFixed(1));
+    DOT.setAttribute('cy', (cy + Math.sin(a) * r).toFixed(1));
+    DOT.setAttribute('opacity', live.toFixed(3));
+  }
+
+  /* --- surround furniture ---------------------------------------------- */
+  const tlP = at(t, 1.55, 0.8) * (1 - at(t, 15.40, 0.7));
+  els.tl.style.opacity = tlP;
+  els.tl.style.transform = `translateX(${((1 - at(t, 1.55, 0.8)) * -18).toFixed(2)}px)`;
+  const trP = at(t, 1.85, 0.8) * (1 - at(t, 15.40, 0.7));
+  els.tr.style.opacity = trP;
+  els.fr.style.opacity = at(t, 1.95, 0.6) * (1 - at(t, 15.40, 0.7));
+  els.fr.style.transform = `scaleX(${at(t, 1.95, 0.8, easeEmphatic).toFixed(3)})`;
+  els.fr.style.transformOrigin = 'left center';
+
+  figEls.forEach((el, i) => {
+    const [a, b] = FIGWIN[i];
+    const p = at(t, a, 0.55) * (1 - at(t, b, 0.34, easeStandard));
+    el.style.opacity = p;
+    el.style.transform = `translateY(${((1 - at(t, a, 0.55)) * 15).toFixed(2)}px)`;
+  });
+
+  /* --- the statement --------------------------------------------------- */
+  const sOut = at(t, 21.20, 0.7, easeStandard);
+  revealWords(els.s1, t, 17.95, 0.85, 0.085, 34);
+  revealWords(els.s2, t, 18.55, 0.85, 0.085, 34);
+  els.stmt.style.opacity = 1 - sOut;
+  els.stmt.style.transform = `translateY(${(-sOut * 30).toFixed(2)}px)`;
+
+  /* --- the credit ------------------------------------------------------ */
+  const cOut = 1 - at(t, 23.15, 0.65, easeStandard);
+  els.crule.style.width = `${(at(t, 21.55, 0.95, easeEmphatic) * 716).toFixed(1)}px`;
+  els.credit.style.opacity = cOut;
+  const caP = at(t, 22.00, 0.7), cbP = at(t, 22.30, 0.7);
+  els.ca.style.opacity = caP; els.ca.style.transform = `translateY(${((1 - caP) * 14).toFixed(2)}px)`;
+  els.cb.style.opacity = cbP; els.cb.style.transform = `translateY(${((1 - cbP) * 14).toFixed(2)}px)`;
+
+  /* --- the lockup ------------------------------------------------------ */
+  if (lock) lock.pose(at(t, 23.95, 1.35));
+};
+
+window.seek(0);
+</script>
+</body></html>
