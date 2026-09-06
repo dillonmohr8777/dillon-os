@@ -462,7 +462,7 @@ window.seek = function (t) {
 
   /* ═══ BEAT 1 · 0.0–2.6 — one centred line on empty paper ═══════════════ */
   {
-    const out = at(t, 2.30, 0.36, easeStandard);
+    const out = at(t, 2.20, 0.30, easeStandard);
     revealWords($('l1'), t, 0.16, 0.60, 0.07, 34);
     $('l1').style.opacity = 1 - out;
     $('l1').style.transform = `translateY(${-40 * out}px)`;
@@ -478,9 +478,9 @@ window.seek = function (t) {
     const pin = at(t, 4.86, 0.86, easeEmphatic);          // shrink + pin to upper third
     const gone = at(t, 8.15, 0.42, easeStandard);
     const l2 = $('l2');
-    l2.style.opacity = at(t, 2.42, 0.30, easeStandard) * (1 - gone);
+    l2.style.opacity = at(t, 2.46, 0.20, easeStandard) * (1 - gone);
     l2.style.transform = `translateY(${-260 * pin - 18 * gone}px) scale(${lerp(1, 0.40, pin)})`;
-    riseLine($('l2').children[0], $('l2a'), at(t, 2.46, 0.62), 40);
+    riseLine($('l2').children[0], $('l2a'), at(t, 2.48, 0.62), 40);
     w2b.forEach((s, i) => {
       const p = at(t, 2.70 + i * 0.16, 0.72);
       s.style.opacity = p;
@@ -537,7 +537,7 @@ window.seek = function (t) {
   /* ═══ BEAT 5 · 11.2–14.6 — hard vertical split; map left, ranking right ═ */
   {
     const inP = at(t, 11.22, 0.62, easeEmphatic);
-    const outP = at(t, 14.34, 0.50, easeEmphatic);
+    const outP = at(t, 14.26, 0.42, easeEmphatic);
     $('half').style.clipPath = `inset(0 ${(1 - inP) * 100 + outP * 100}% 0 0)`;
 
     const cardP = at(t, 11.46, 0.80);
@@ -660,13 +660,13 @@ window.seek = function (t) {
   /* ═══ BEAT 9 · 24.2–27.0 — the dart ════════════════════════════════════ */
   {
     ctx.clearRect(0, 0, 1920, 1080);
-    const live = t > 24.20 && t < 26.95;
-    const p = at(t, 24.40, 1.80, easeStandard);
+    const live = t > 24.20 && t < 26.78;
+    const p = at(t, 24.40, 2.05, easeStandard);
     const appear = at(t, 24.34, 0.26, easeStandard);
     const dm = $('dartmark');
 
     if (live && PATH) {
-      const fade = 1 - at(t, 26.36, 0.62, easeStandard);
+      const fade = 1 - at(t, 26.10, 0.66, easeStandard);
       const s0 = Math.max(0, p - 0.86);
       /* stop the trail at the mark's rim so it never draws across the logo */
       const headSize = lerp(40, MARK_SIZE, Math.pow(p, 0.8));
@@ -709,7 +709,7 @@ window.seek = function (t) {
 
   /* ═══ BEAT 10 · 27.0–30.0 — the lockup, held ═══════════════════════════ */
   if (lock) {
-    const p = at(t, 26.95, 1.30);
+    const p = clamp((t - 26.72) / 1.30);
     lock.pose(p);
     /* the mark already flew here in beat 9 — hold it, don't re-scale it */
     const mk = $('lock').querySelector('.lk-mark');
