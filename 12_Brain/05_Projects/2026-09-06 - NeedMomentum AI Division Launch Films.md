@@ -6,7 +6,7 @@ updated: 2026-09-06
 owner: Dillon Mohr
 area: NeedMomentum brand launch
 finish_line: Five approved launch films delivered as 1080p masters with editable overlays, 16:9 and 9:16, and published only after Dillon's approval
-next_action: Dillon approves the staged credit budget in System/approval-queue.md and ships the Codex Guide stills into the vault or Higgsfield
+next_action: Dillon approves the staged credit budget in System/approval-queue.md and rules on Sean's beard before film 2 locks
 review_date: 2026-09-13
 source_refs:
   - "[[12_Brain/01_Captures/X/2026-09-06 - brand-launch-video-references]]"
@@ -16,6 +16,7 @@ source_refs:
   - "_os/automation/assets/needmomentum-mark.png"
   - "System/m360-leadership-notes.md"
   - "gmail:thread:1a077c51a0b9fd4d"
+  - "gmail:thread:1a077fa7dcc4b71a"
   - "https://claude.ai/code/artifact/843f5b96-9596-4e1f-87cb-6b4c7c485899"
 tags: [brain, project, needmomentum, brand-launch, video, higgsfield, momentum360]
 ---
@@ -138,10 +139,11 @@ natural and consistent (wardrobe, faces and framing hold in every clip):
 3. Parkway lateral dolly at blue hour (`37a0eed3`), "Not just views. Momentum."
 4. Whiteboard (`2c7b4c86`) and studio table (`47acea84`) as a fast work montage
    with service words popping.
-5. Schuylkill golden hour (`b1de320a`) for the close, mark and URL.
+5. Reading Terminal walk and the arcade walk (Mac-and-Sean-06 and 03, two new
+   Kling clips) for the close, mark and URL.
 
-Unused: monitor (`d2471e1f`, the screen glow reads as a prop) and desk
-(`960371b3`, a duplicate of the studio-table energy). New generation: zero,
+Unused: monitor (`d2471e1f`), desk (`960371b3`) and Schuylkill (`b1de320a`);
+see Selected stills below for why. New generation: zero,
 unless Dillon wants a 16:9 version of the steps walk (one Kling clip, 14 credits).
 The two Codex stills Dillon rejected as unnatural are not used anywhere.
 
@@ -169,6 +171,71 @@ generated loops.
 
 Sphere logo (0-3), three face holds with names (3-9), "Not just views.
 Momentum." (9-12), mark and URL (12-15). Zero new generation; all from film 1.
+
+## Selected stills (2026-09-06, from the 32 Codex images on Drive)
+
+Source: Dillon's email "Your images with Mac and Sean, plus solo images" (gmail
+thread 1a077fa7dcc4b71a), Drive folder `1h79yzkgkr_7Nwe19dI6nkJK1jQfRnc3D`. All
+32 were downloaded and reviewed at full resolution, faces cropped and compared
+against the real references (Dillon studio portrait `765eb5fe`, Sean front
+`2a588fe6`, Mac front `33ea7b65`).
+
+**Tier 1, animate first**
+
+| Still | Drive id | Use |
+|-------|----------|-----|
+| Dillon-and-team-D01 | `1mVT0pJePfQau_ilxJY3urnbaxiRp8qv8` | Dillon player reveal, City Hall behind |
+| Dillon-and-team-D08 | `1E88aXh22Me8kgfkuPDOn1I4-1ggITZTD` | Dillon second reveal / teaser, brick and warm light |
+| Dillon-and-team-D05 | `194GptLEBWVW2XE0By-3WdwxMGMe-p_Vq` | Team hero frame, Parkway with City Hall |
+| Mac-and-Sean-10 | `19dMISoluGqNwxRqP9pbC506xDQ6kOpIv` | Sean & Mac hero, Art Museum steps (Kling clip `8bcb3117` exists) |
+| Mac-and-Sean-06 | `1aBem9E5MQ4bjgs1Z9hv1sPA6UK5oUaAu` | Reading Terminal walk, best energy in the set |
+| Mac-and-Sean-03 | `1medNndYF6NNksxOi_akRZ7XW4j3fQkAm` | Arcade walk, the one candid frame |
+| Dillon-and-team-D06 | `1BD49tWU6PFyKZXZUgiXHv6FCtfoTEd4h` | Dillon + Sean, Reading Terminal |
+
+**Tier 2, montage**
+
+| Still | Drive id | Note |
+|-------|----------|------|
+| Mac-and-Sean-09 | `1-iazgD6RqVO9yvvDLjytdPcTXz-7DEIv` | Whiteboard, clip `2c7b4c86` exists |
+| Mac-and-Sean-11 | `1-CCOtPIkhFFfEYYeMD7QIH7O37BDJpRS` | Studio table, clip `47acea84` exists |
+| Mac-and-Sean-01 | `1D6IdcsIWxocm2K2MlOzXmUeMuE_g9MbO` | City Hall day, clip `c134e121` exists |
+| Mac-and-Sean-15 | `1TA4JKuHL4hhwKcsflz44KrqqDqAlGCFf` | City Hall night, clip `37a0eed3` exists; Sean flat |
+| Mac-and-Sean-14 | `1JnsgSwxrNs9NmfzY04EENgAKYUSnkgYx` | Office, magazines |
+| Dillon-and-team-D02 | `1lPQraFGBRk_BMIbfygREosNqH8nhazWI` | Dillon café, laptop |
+| dillon-portrait-three-quarter-v02 | `1v2z0zasVE-aAMXtX77v74vsKxjK58oC0` | Studio, alternate reveal card |
+
+**Higgsfield media ids (uploaded 2026-09-06 ~18:40Z, no credits spent).** Dillon-and-team-D01 `e08e617d`; Dillon-and-team-D08 `9d35c51f`; Dillon-and-team-D05 `ce75cc98`; Dillon-and-team-D06 `b3feb1ea`; Dillon-and-team-D02 `7a951406`; Mac-and-Sean-03 `3917257c`; Mac-and-Sean-06 `6441066a`; Mac-and-Sean-14 `3c378720`; dillon-portrait-three-quarter-v02 `c4ab9274`. Mac-and-Sean-10, 09, 11, 01 and 15 were already in the library as the Kling start images (`d9c7779a`, `9ac637fc`, `67130282`, `3cb2e964`, `469ac3c5`).
+
+**Cut (11 of the 26 scene stills)**
+
+- D03, D04: Dillon's likeness is the weakest of the set (rounder, younger);
+  D04 catches him mid-gesture with an open mouth and Sean's hand is wrong.
+- D07: Dillon is not in it and both faces are too small to hold a reveal.
+- Mac-and-Sean-02: Mac's expression is off leaning over the laptop.
+- Mac-and-Sean-04: both faces off, Mac squinting, Sean stiff (the desk Kling
+  clip `960371b3` came from this frame; dropped).
+- Mac-and-Sean-05: Sean's face is wrong, flat backlight (the Schuylkill Kling
+  clip `b1de320a` came from this frame; dropped from film 2).
+- Mac-and-Sean-07: Sean's open-arm gesture and face are distorted.
+- Mac-and-Sean-08: Sean looking down, unnatural (monitor clip `d2471e1f`; dropped).
+- Mac-and-Sean-12: camera-and-bottles props read as a different business;
+  Sean's hand is wrong.
+- Mac-and-Sean-13: Sean's blank stare, cluttered board.
+- All six "Earlier" versions are superseded by their D-number finals;
+  `dillon-front-v01` and `dillon-full-body-front-v02` are identity references,
+  not shots.
+
+**Two systemic notes**
+
+1. Sean is clean-shaven in all 32 images; his real front reference has a
+   trimmed beard. If that reference is current, every Sean shot needs a
+   regeneration pass from a bearded Element before film 2 locks. Dillon decides.
+2. Mac is consistent across the whole set. Dillon reads truest in D01, D08,
+   D05 and D06.
+
+**Film 2 revision.** The Schuylkill close is replaced by Mac-and-Sean-06 and
+Mac-and-Sean-03, which need two new Kling 3.0 pro clips (about 28 credits).
+Everything else in film 2 still comes from clips that already exist.
 
 ## How the Higgsfield MCP does this (verified surface, 2026-09-06)
 
@@ -237,9 +304,9 @@ nothing new. Nothing is generated until the queue line is approved.
 
 ## Missing inputs
 
-1. The Codex Guide stills and their JSON specs (`codex-stills-A01-v3.json`,
-   `D05-v2`, `D06-v2`) from DESKTOP-4AHKEC4, plus which two are rejected.
-   Commit them under `03_Content/Brand Launch/stills/` or upload to Higgsfield.
+1. The Guide stills (the blue-and-gold figure scenes) and their JSON specs
+   from DESKTOP-4AHKEC4; the 2026-09-06 Drive folder holds only the people
+   shots, and its email says the Guide stills were excluded on purpose.
 2. A vector or 1024 px NeedMomentum mark.
 3. Exact titles for Dillon, Sean and Mac.
 4. Three or four verified proof numbers for the stat beat (or the beat is cut).
