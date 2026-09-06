@@ -215,6 +215,7 @@ the city, plus and minus zoom. Hold shift for larger steps.</p>
 
   try {
     await viewer.load('../data/philly-buildings.bin');
+    await viewer.loadGround('../data/philly-ground.bin');
     await viewer.loadWater('../data/philly-water.bin');
 
   const prospects = new Prospects(viewer.gl, document.getElementById('pins'),

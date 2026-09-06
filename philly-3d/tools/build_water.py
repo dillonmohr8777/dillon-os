@@ -20,6 +20,7 @@ HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(HERE, "tools"))
 from geo import to_local                                           # noqa: E402
 from simplify import area, clean_ring                              # noqa: E402
+from geom2d import clip_rect, earclip                              # noqa: E402
 
 SRC = os.environ.get("PHL_WATER", "/home/user/work/phl-data/water.ndjson")
 OUT = os.path.join(HERE, "data", "philly-water.bin")
@@ -28,72 +29,6 @@ MIN_AREA = 4000.0         # drop ponds too small to read
 SIMPLIFY = 3.0            # metres; rivers do not need centimetre edges
 WATER_Z = 0.0             # mean tide
 
-
-def clip(poly, half):
-    """Sutherland-Hodgman against the square window."""
-    def half_plane(pts, keep, inter):
-        out = []
-        n = len(pts)
-        for i in range(n):
-            a, b = pts[i], pts[(i + 1) % n]
-            ain, bin_ = keep(a), keep(b)
-            if ain:
-                out.append(a)
-            if ain != bin_:
-                out.append(inter(a, b))
-        return out
-
-    def lerp(a, b, t):
-        return (a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * t)
-
-    p = poly
-    for keep, inter in (
-        (lambda q: q[0] >= -half, lambda a, b: lerp(a, b, (-half - a[0]) / (b[0] - a[0]))),
-        (lambda q: q[0] <= half,  lambda a, b: lerp(a, b, (half - a[0]) / (b[0] - a[0]))),
-        (lambda q: q[1] >= -half, lambda a, b: lerp(a, b, (-half - a[1]) / (b[1] - a[1]))),
-        (lambda q: q[1] <= half,  lambda a, b: lerp(a, b, (half - a[1]) / (b[1] - a[1]))),
-    ):
-        if not p:
-            return []
-        p = half_plane(p, keep, inter)
-    return p
-
-
-def earclip(pts):
-    """O(n^2) ear clipping. Input must be counter-clockwise."""
-    n = len(pts)
-    if n < 3:
-        return []
-    idx = list(range(n))
-    tris = []
-
-    def cross(a, b, c):
-        return ((pts[b][0] - pts[a][0]) * (pts[c][1] - pts[a][1])
-                - (pts[b][1] - pts[a][1]) * (pts[c][0] - pts[a][0]))
-
-    def inside(a, b, c, p):
-        return (cross(a, b, p) >= 0 and cross(b, c, p) >= 0 and cross(c, a, p) >= 0)
-
-    guard = 0
-    while len(idx) > 3 and guard < 4 * n:
-        guard += 1
-        for i in range(len(idx)):
-            a = idx[i - 1]
-            b = idx[i]
-            c = idx[(i + 1) % len(idx)]
-            if cross(a, b, c) <= 0:
-                continue
-            if any(inside(a, b, c, k) for k in idx if k not in (a, b, c)):
-                continue
-            tris.append((a, b, c))
-            idx.pop(i)
-            guard = 0
-            break
-        else:
-            break
-    if len(idx) == 3:
-        tris.append(tuple(idx))
-    return tris
 
 
 def main():
@@ -115,7 +50,7 @@ def main():
             ys = [p[1] for p in ring]
             if min(xs) > HALF or max(xs) < -HALF or min(ys) > HALF or max(ys) < -HALF:
                 continue
-            ring = clip(ring, HALF)
+            ring = clip_rect(ring, HALF)
             if len(ring) < 3:
                 continue
             ring = clean_ring(ring, tol=SIMPLIFY, collinear_tol=0.5)

@@ -59,6 +59,9 @@ class Viewer {
     this.progWater = createProgram(gl, WATER_VS, WATER_FS, 'water');
     this.uWater = uniformMap(gl, this.progWater);
     this.waterCount = 0;
+    this.progDetail = createProgram(gl, DETAIL_VS, DETAIL_FS, 'detail');
+    this.uDetail = uniformMap(gl, this.progDetail);
+    this.detailCount = 0;
     this.progBeam = createProgram(gl, BEAM_VS, BEAM_FS, 'beam');
     this.uBeam = uniformMap(gl, this.progBeam);
     this.beamCount = 0;
@@ -126,6 +129,39 @@ class Viewer {
     this.status(`${this.city.buildingCount.toLocaleString()} buildings`);
     this.setTime(this.date);
     return this.city;
+  }
+
+  // Parks and street centrelines, one flat inlay just above the ground plane.
+  async loadGround(url) {
+    try {
+      const res = await fetch(url);
+      if (!res.ok) return;
+      const buf = new Uint8Array(await res.arrayBuffer());
+      const dv = new DataView(buf.buffer);
+      let magic = '';
+      for (let i = 0; i < 8; i++) magic += String.fromCharCode(dv.getUint8(i));
+      if (magic !== 'PHLGRND1') throw new Error(`bad ground magic: ${magic}`);
+      const raw = await inflateBrowser(buf.subarray(16));
+      const rv = new DataView(raw.buffer, raw.byteOffset, raw.byteLength);
+      const n = rv.getUint32(0, true);
+      const data = new Float32Array(n * 9);
+      for (let i = 0; i < n * 9; i++) data[i] = rv.getFloat32(4 + i * 4, true);
+
+      const gl = this.gl;
+      this.detailVao = gl.createVertexArray();
+      gl.bindVertexArray(this.detailVao);
+      const vb = gl.createBuffer();
+      gl.bindBuffer(gl.ARRAY_BUFFER, vb);
+      gl.bufferData(gl.ARRAY_BUFFER, data, gl.STATIC_DRAW);
+      const loc = gl.getAttribLocation(this.progDetail, 'aXYK');
+      gl.enableVertexAttribArray(loc);
+      gl.vertexAttribPointer(loc, 3, gl.FLOAT, false, 0, 0);
+      gl.bindVertexArray(null);
+      this.detailCount = n * 3;
+    } catch (err) {
+      console.warn('ground detail unavailable:', err.message);
+      this.detailCount = 0;
+    }
   }
 
   // Water arrives as a flat triangle soup: 7,000 triangles is small enough
@@ -371,6 +407,7 @@ class Viewer {
       gl.uniform1f(u.uShadowCell, SHADOW_CELL);
       gl.uniform1f(u.uShadowSize, SHADOW_SIZE);
       gl.uniform1f(u.uFogDist, fogDist);
+      if (u.uSunElev) gl.uniform1f(u.uSunElev, this.sun.elevation);
       gl.activeTexture(gl.TEXTURE0);
       gl.bindTexture(gl.TEXTURE_2D, this.shadowTex);
       gl.uniform1i(u.uShadow, 0);
@@ -380,6 +417,29 @@ class Viewer {
     bindCommon(this.uGround);
     gl.bindVertexArray(this.groundVao);
     gl.drawArrays(gl.TRIANGLES, 0, 6);
+
+    if (this.detailCount) {
+      gl.useProgram(this.progDetail);
+      const u = this.uDetail;
+      gl.uniformMatrix4fv(u.uViewProj, false, this.mvp);
+      gl.uniform1f(u.uZ, 0.25);
+      gl.uniform3fv(u.uEye, eye);
+      gl.uniform3fv(u.uSunDir, sd);
+      gl.uniform3fv(u.uSunColor, c.sun);
+      gl.uniform3fv(u.uSkyColor, c.sky);
+      gl.uniform3fv(u.uHorizon, c.horizon);
+      gl.uniform2fv(u.uShadowOrigin, this.shadowOrigin);
+      gl.uniform1f(u.uShadowCell, SHADOW_CELL);
+      gl.uniform1f(u.uShadowSize, SHADOW_SIZE);
+      gl.uniform1f(u.uFogDist, fogDist);
+      gl.activeTexture(gl.TEXTURE0);
+      gl.bindTexture(gl.TEXTURE_2D, this.shadowTex);
+      gl.uniform1i(u.uShadow, 0);
+      gl.bindVertexArray(this.detailVao);
+      gl.disable(gl.CULL_FACE);
+      gl.drawArrays(gl.TRIANGLES, 0, this.detailCount);
+      gl.enable(gl.CULL_FACE);
+    }
 
     if (this.waterCount) {
       gl.useProgram(this.progWater);

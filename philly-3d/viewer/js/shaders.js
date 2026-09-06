@@ -44,6 +44,78 @@ vec3 surfaceColor(float h, float tint, float isRoof) {
   vec3 c = mix(brick, stone, smoothstep(12.0, 30.0, h));
   c = mix(c, glass, smoothstep(38.0, 55.0, h));
   return mix(c, c * 0.34 + vec3(0.030), isRoof);
+}
+
+float hash11(float p) {
+  p = fract(p * 0.1031);
+  p *= p + 33.33;
+  p *= p + p;
+  return fract(p);
+}
+float hash21(vec2 p) {
+  vec3 p3 = fract(vec3(p.xyx) * 0.1031);
+  p3 += dot(p3, p3.yzx + 33.33);
+  return fract((p3.x + p3.y) * p3.z);
+}
+
+// Facade detail without a texture. The wall's own plane gives the UVs: u runs
+// along the wall from a stable origin, v is height above the pavement. From
+// that we get floor bands, a window grid, a taller ground floor with
+// storefronts, and a cornice. Storey height and bay spacing come from the
+// building's height and tint, so a rowhouse and a tower do not get the same
+// rhythm, and every building keeps its own rhythm between frames.
+//
+// A flat extrusion will never be a real roof, but this is what makes it read
+// as a building rather than a box.
+struct Facade { float shade; float window; float lit; };
+
+Facade facade(vec3 world, vec3 n, float h, float tint, float isRoof) {
+  Facade f;
+  f.shade = 1.0; f.window = 0.0; f.lit = 0.0;
+  if (isRoof > 0.5) return f;
+
+  float storey = mix(3.15, 4.05, smoothstep(10.0, 70.0, h)) + tint * 0.25;
+  float ground = storey * 1.55;
+
+  // stable horizontal coordinate along the wall plane
+  vec2 tang = normalize(vec2(-n.y, n.x));
+  float u = dot(world.xy, tang);
+  float v = world.z;
+
+  float bay = mix(2.55, 3.35, tint);
+  float seedU = floor(u / bay);
+  float col = fract(u / bay);
+
+  bool isGround = v < ground;
+  float fv = isGround ? v / ground : (v - ground) / storey;
+  float floorIdx = isGround ? 0.0 : floor((v - ground) / storey) + 1.0;
+  float row = fract(fv);
+
+  // spandrel band between storeys
+  float band = smoothstep(0.0, 0.06, row) * (1.0 - smoothstep(0.80, 0.92, row));
+  // window opening, inset from the bay edges
+  float wcol = smoothstep(0.20, 0.28, col) * (1.0 - smoothstep(0.72, 0.80, col));
+  float wrow = isGround
+    ? smoothstep(0.14, 0.22, row) * (1.0 - smoothstep(0.74, 0.84, row))
+    : smoothstep(0.16, 0.26, row) * (1.0 - smoothstep(0.72, 0.82, row));
+  f.window = clamp(wcol * wrow, 0.0, 1.0);
+
+  // mortar/floor lines and a little vertical relief between bays
+  float line = 1.0 - 0.30 * (1.0 - band);
+  float pier = 1.0 - 0.10 * smoothstep(0.46, 0.5, abs(col - 0.5));
+  f.shade = line * pier;
+
+  // cornice: a bright lip just under the roof, dark shadow just below it
+  float underRoof = h - (v - 0.0);
+  f.shade *= 1.0 + 0.55 * smoothstep(1.3, 0.35, underRoof)
+                 - 0.30 * smoothstep(3.4, 1.5, underRoof);
+  // plinth at the pavement
+  f.shade *= 1.0 - 0.22 * (1.0 - smoothstep(0.0, 1.1, v));
+
+  // which windows have a light on: stable per bay, per floor, per building
+  float occupancy = mix(0.16, 0.62, tint);
+  f.lit = step(1.0 - occupancy, hash21(vec2(seedU * 7.13 + tint * 91.7, floorIdx)));
+  return f;
 }`;
 
 const CITY_FS = `#version 300 es
@@ -62,6 +134,7 @@ uniform vec2 uShadowOrigin;
 uniform float uShadowCell;
 uniform float uShadowSize;
 uniform float uFogDist;
+uniform float uSunElev;
 out vec4 frag;
 ${SHADING}
 void main() {
@@ -75,12 +148,31 @@ void main() {
   float sky = 0.30 + 0.50 * max(n.z, 0.0);          // hemisphere fill
   vec3 base = surfaceColor(vHeight, vTint, vIsRoof);
 
+  // Facade detail fades out with distance so the far skyline stays clean
+  // instead of aliasing into noise.
+  Facade fa = facade(vWorld, n, vHeight, vTint, vIsRoof);
+  float detail = 1.0 - smoothstep(700.0, 2200.0, dist);
+  float shade = mix(1.0, fa.shade, detail);
+  float win = fa.window * detail;
+
+  // glass darkens into the opening; masonry recesses it
+  vec3 glassy3 = mix(vec3(0.045, 0.062, 0.080), vec3(0.10, 0.13, 0.16), vTint);
+  base = mix(base * shade, mix(base * 0.42, glassy3, 0.65), win);
+
   vec3 col = base * (uSkyColor * sky + uSunColor * lam);
 
   // Curtain wall picks up a sharp sun glint; masonry does not.
   float glassy = smoothstep(38.0, 55.0, vHeight) * (1.0 - vIsRoof);
   vec3 H = normalize(uSunDir + V);
   col += uSunColor * glassy * lam * pow(max(dot(n, H), 0.0), 60.0) * 1.6;
+  // windows catch a sharper reflection than the wall around them
+  col += uSunColor * win * lam * pow(max(dot(n, H), 0.0), 120.0) * 1.1;
+
+  // Lights come on as the sun goes down. This is what makes the city read at
+  // night, when there is no sun term left to shape it.
+  float night = clamp(1.0 - (uSunElev + 2.0) / 8.0, 0.0, 1.0);
+  vec3 warm = mix(vec3(1.0, 0.80, 0.50), vec3(0.85, 0.92, 1.0), vTint * 0.55);
+  col += warm * win * fa.lit * night * 1.35;
 
   float fog = 1.0 - exp(-dist / uFogDist);
   col = mix(col, uHorizon, fog * fog);
@@ -223,6 +315,50 @@ uniform vec3 uColor;
 out vec4 frag;
 void main() { frag = vec4(uColor, 1.0); }`;
 
+// Parks and roads as one flat inlay. A class byte per vertex picks the
+// palette, so both draw in a single pass.
+const DETAIL_VS = `#version 300 es
+in vec3 aXYK;
+uniform mat4 uViewProj;
+uniform float uZ;
+out vec3 vWorld;
+out float vKind;
+void main() {
+  vWorld = vec3(aXYK.xy, uZ);
+  vKind = aXYK.z;
+  gl_Position = uViewProj * vec4(vWorld, 1.0);
+}`;
+
+const DETAIL_FS = `#version 300 es
+precision highp float;
+in vec3 vWorld;
+in float vKind;
+uniform vec3 uEye;
+uniform vec3 uSunDir;
+uniform vec3 uSunColor;
+uniform vec3 uSkyColor;
+uniform vec3 uHorizon;
+uniform sampler2D uShadow;
+uniform vec2 uShadowOrigin;
+uniform float uShadowCell;
+uniform float uShadowSize;
+uniform float uFogDist;
+out vec4 frag;
+${SHADING}
+void main() {
+  float dist = length(uEye - vWorld);
+  float lam = max(uSunDir.z, 0.0) * shadowAt(vWorld + vec3(0.0, 0.0, 0.3));
+  vec3 park = vec3(0.052, 0.094, 0.048);
+  vec3 road = vec3(0.104, 0.103, 0.107);
+  vec3 base = mix(park, road, step(0.5, vKind));
+  vec3 col = base * (uSkyColor * 0.85 + uSunColor * lam);
+  float fog = 1.0 - exp(-dist / uFogDist);
+  col = mix(col, uHorizon, fog * fog);
+  frag = vec4(pow(clamp(col, 0.0, 1.0), vec3(1.0 / 2.2)), 1.0);
+}`;
+
+globalThis.DETAIL_VS = DETAIL_VS;
+globalThis.DETAIL_FS = DETAIL_FS;
 globalThis.BEAM_VS = BEAM_VS;
 globalThis.BEAM_FS = BEAM_FS;
 globalThis.WATER_VS = WATER_VS;
