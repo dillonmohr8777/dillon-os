@@ -504,7 +504,7 @@ function lensR(t) {
   R = lerp(R, 274, at(t, 10.00, 0.78, easeEmphatic));  // it narrows for the manuscript
   R = lerp(R, 412, at(t, 13.00, 0.92, easeEmphatic));  // and widens for the celestial chart
   R = lerp(R, 1560, at(t, 15.40, 2.10, easeEmphatic)); // then opens past the frame
-  R = lerp(R, 424, at(t, 23.40, 1.60, easeEmphatic));  // and closes back to frame the lockup
+  R = lerp(R, 424, at(t, 23.30, 1.65, easeEmphatic));  // and closes back to frame the lockup
   return R;
 }
 
@@ -522,7 +522,7 @@ window.seek = function (t) {
   const R = lensR(t);
   els.lens.style.clipPath = `circle(${R.toFixed(2)}px at ${CX}px ${CY}px)`;
 
-  const surround = Math.max(at(t, 0.25, 0.9) * (1 - at(t, 15.40, 0.85)), at(t, 24.00, 0.9));
+  const surround = Math.max(at(t, 0.25, 0.9) * (1 - at(t, 15.40, 0.85)), at(t, 23.90, 0.9));
   gRing.setAttribute('transform', `translate(${CX},${CY}) scale(${(R + 2.4).toFixed(3)})`);
   gTicks.setAttribute('transform', `translate(${CX},${CY}) scale(${R.toFixed(3)})`);
   ring.style.opacity = surround;
@@ -607,22 +607,22 @@ window.seek = function (t) {
   });
 
   /* --- the statement --------------------------------------------------- */
-  const sOut = at(t, 20.95, 0.55, easeEmphatic);
+  const sOut = at(t, 21.15, 0.50, easeEmphatic);
   revealWords(els.s1, t, 17.28, 0.90, 0.085, 34);
   revealWords(els.s2, t, 17.92, 0.90, 0.085, 34);
   els.stmt.style.opacity = 1 - sOut;
   els.stmt.style.transform = `translateY(${(-sOut * 46).toFixed(2)}px)`;
 
   /* --- the credit ------------------------------------------------------ */
-  const cOut = 1 - at(t, 23.05, 0.6, easeStandard);
-  els.crule.style.width = `${(at(t, 21.30, 0.95, easeEmphatic) * 862).toFixed(1)}px`;
+  const cOut = 1 - at(t, 22.90, 0.45, easeStandard);
+  els.crule.style.width = `${(at(t, 21.05, 0.85, easeEmphatic) * 862).toFixed(1)}px`;
   els.credit.style.opacity = cOut;
-  const caP = at(t, 21.75, 0.7), cbP = at(t, 22.05, 0.7);
+  const caP = at(t, 21.55, 0.65), cbP = at(t, 21.85, 0.65);
   els.ca.style.opacity = caP; els.ca.style.transform = `translateY(${((1 - caP) * 14).toFixed(2)}px)`;
   els.cb.style.opacity = cbP; els.cb.style.transform = `translateY(${((1 - cbP) * 14).toFixed(2)}px)`;
 
   /* --- the lockup ------------------------------------------------------ */
-  if (lock) lock.pose(at(t, 23.80, 1.35));
+  if (lock) lock.pose(at(t, 23.10, 1.45));
 };
 
 window.seek(0);
