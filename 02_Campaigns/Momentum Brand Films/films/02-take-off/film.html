@@ -572,7 +572,7 @@ window.seek = function (t) {
     const front = 864 * (inP - outP);
     const edge = $('halfedge');
     edge.style.transform = `translateX(${front - 3 - 861}px)`;
-    edge.style.opacity = front > 5 ? 1 : 0;
+    edge.style.opacity = clamp(front / 24);
 
     const cardP = at(t, 11.20, 0.56);
     const cardOut = at(t, 14.34, 0.44, easeStandard);
