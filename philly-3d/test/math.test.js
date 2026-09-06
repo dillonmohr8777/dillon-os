@@ -62,3 +62,44 @@ test('multiply composes in the expected order', () => {
   const r = M4.multiply(M4.create(), a, b);
   for (let i = 0; i < 16; i++) assert.ok(Math.abs(r[i] - b[i]) < 1e-9);
 });
+
+test('invert round-trips a view-projection matrix', () => {
+  const p = M4.perspective(M4.create(), Math.PI / 3, 16 / 9, 1, 20000);
+  const v = M4.lookAt(M4.create(), [1200, -900, 400], [0, 0, 30], [0, 0, 1]);
+  const vp = M4.multiply(M4.create(), p, v);
+  const inv = M4.invert(M4.create(), vp);
+  assert.ok(inv, 'matrix is invertible');
+  const id = M4.multiply(M4.create(), vp, inv);
+  for (let i = 0; i < 16; i++) {
+    const want = i % 5 === 0 ? 1 : 0;
+    assert.ok(Math.abs(id[i] - want) < 1e-4, `identity[${i}] = ${id[i]}`);
+  }
+});
+
+test('the inverse turns a screen position back into a view ray', () => {
+  // This is what puts the sky horizon in the right place.
+  const eye = [0, -1000, 300];
+  const p = M4.perspective(M4.create(), Math.PI / 3, 1, 1, 20000);
+  const v = M4.lookAt(M4.create(), eye, [0, 0, 300], [0, 0, 1]);
+  const inv = M4.invert(M4.create(), M4.multiply(M4.create(), p, v));
+  const unproject = (nx, ny) => {
+    const w = inv[3] * nx + inv[7] * ny + inv[11] + inv[15];
+    const x = (inv[0] * nx + inv[4] * ny + inv[8] + inv[12]) / w - eye[0];
+    const y = (inv[1] * nx + inv[5] * ny + inv[9] + inv[13]) / w - eye[1];
+    const z = (inv[2] * nx + inv[6] * ny + inv[10] + inv[14]) / w - eye[2];
+    const l = Math.hypot(x, y, z);
+    return [x / l, y / l, z / l];
+  };
+  const centre = unproject(0, 0);
+  assert.ok(centre[1] > 0.99, 'screen centre looks due north');
+  assert.ok(Math.abs(centre[2]) < 0.02, 'and level, since the camera is level');
+  const top = unproject(0, 1);
+  assert.ok(top[2] > 0.4, 'the top of the screen looks upward');
+  const bottom = unproject(0, -1);
+  assert.ok(bottom[2] < -0.4, 'the bottom looks downward');
+});
+
+test('invert reports failure on a singular matrix', () => {
+  const zero = M4.create();
+  assert.strictEqual(M4.invert(M4.create(), zero), null);
+});
