@@ -67,7 +67,7 @@ windows are procedural, as in the shipped builder.
 
 **Sourced separately:** the crowns. The LiDAR measures the dominant roof mass,
 so a slender tower or spire returns too few points to register. Five buildings
-therefore arrive short — City Hall as its 170 ft cornice rather than its 548 ft
+therefore arrive short: City Hall as its 170 ft cornice rather than its 548 ft
 tower. Their published architectural heights live in
 `../data/philly-crowns.json` and export as extra rows flagged `crown: true`,
 stacked on top of the measured mass, never replacing it. `_build_crown_tier`

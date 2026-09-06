@@ -18,6 +18,7 @@ procedural city, no AI-generated skyline, no stock model. Comcast Center is
 | `data/philly-crowns.json` | The five towers the survey cannot see, and how they step up |
 | `data/philly-ground.bin` | Parks and street centrelines, as a flat inlay |
 | `data/philly-water.bin` | The Delaware, the Schuylkill and the city's water bodies |
+| `data/philly-terrain.bin` | The ground itself, from 546,415 measured base elevations |
 | `data/philly-prospects.json` | The Philadelphia 25: real local businesses, pinned in the model |
 | `data/manifest.json` | Counts, extents, checksums, processing parameters |
 | `tools/` | The pipeline, from download to renderable geometry |
@@ -37,11 +38,11 @@ npm test                           # 93 tests, no dependencies
 
 Hand-rolled WebGL2, no libraries. Tiles stream by distance from the camera in
 three LOD bands; the far band keeps only buildings over 25 m, which is what
-lets half a million footprints hold a frame rate. Facades are procedural — floor
-bands, a window grid, a taller ground floor, a cornice, lights that come on as
-the sun goes down — derived from each building's own height and a stable
-per-building hash, so nothing is textured and every building keeps its own
-rhythm between frames.
+lets half a million footprints hold a frame rate. Facades are procedural: floor
+bands, a window grid, a taller ground floor, a cornice, and lights that come on
+as the sun goes down. All of it derives from each building's own height and a
+stable per-building hash, so nothing is textured and every building keeps its
+own rhythm between frames.
 
 Shadows are a horizon sweep rather than a ray march: one pass along the sun
 azimuth carrying a running maximum, `ceiling[n] = max(height[n], ceiling[n-1] -
@@ -58,13 +59,13 @@ tunnel through a rowhouse at a sprint.
 
 ## Into a game engine
 
-`tools/export_godot.py` cuts an 840 m square of Centre City — 449 real
-footprints, 12 crown tiers and 216 real street centrelines — into exactly the
-shape the Grand Theft Bureaucracy engine's `world_builder.gd` already consumes,
-plus a drop-in `godot/scripts/philadelphia_world_builder.gd`. The district is
-pre-rotated by Penn's 9.21 degree bearing on the way out, so 94% of footprints
-land within 5 degrees of an axis and every axis-aligned system in that engine —
-traffic lanes, minimap, window punching — keeps working on a real city. See
+`tools/export_godot.py` cuts an 840 m square of Centre City, 449 real footprints,
+12 crown tiers and 216 real street centrelines, into exactly the shape the Grand
+Theft Bureaucracy engine's `world_builder.gd` already consumes, plus a drop-in
+`godot/scripts/philadelphia_world_builder.gd`. The district is pre-rotated by
+Penn's 9.21 degree bearing on the way out, so 94% of footprints land within
+5 degrees of an axis. That is what keeps every axis-aligned system in that
+engine working on a real city: traffic lanes, minimap, window punching. See
 `godot/README.md`.
 
 ## Reproducing the dataset
@@ -77,6 +78,7 @@ python3 tools/fetch_layers.py        # water, streets, city boundary
 python3 tools/build_dataset.py       # -> data/philly-buildings.bin, about 70 s
 python3 tools/build_ground.py        # parks and street centrelines
 python3 tools/build_water.py         # rivers and water bodies
+python3 tools/build_terrain.py       # the ground, from base_elevation
 python3 tools/export_godot.py        # the Centre City district
 ```
 
@@ -92,8 +94,8 @@ python3 tools/render_preview.py
 
 A dependency-free software renderer: painter's algorithm, near-plane clipping,
 backface culling, flat shading against the true solar vector, Beer-Lambert
-distance haze. It has **no shadows, no global illumination and no reflections** —
-it exists to prove the data is right, not to be the finished image.
+distance haze. It has **no shadows, no global illumination and no reflections**.
+It exists to prove the data is right, not to be the finished image.
 
 ## Two facts this dataset produced
 
@@ -124,13 +126,28 @@ keyed by `objectid` so it can never attach to the wrong building. The renderer
 draws the surveyed mass exactly as surveyed and stacks the crown above it as
 separately sourced geometry, in dressed stone rather than curtain wall where the
 real thing is masonry. City Hall gets its 30 m granite tower, its belfry, its
-spire and William Penn back — 378 ft the LiDAR never saw.
+spire and William Penn back: 378 ft the LiDAR never saw.
 
 The heights are sourced. The *shape* of the stack is not: tier widths are chosen
 to read in silhouette, and tiers are centred on the footprint, so City Hall's
 tower rises from the middle of its block rather than over one portal. Both
 approximations are stated in `docs/SOURCES.md` alongside the full comparison
 table.
+
+## The ground it stands on
+
+Philadelphia is not flat. It runs from tidal river level to 442 ft in the
+north-west, and the survey already knows: every footprint carries a
+`base_elevation`, so the layer contains 546,415 measured ground samples. That is
+a digital elevation model this project already owned, and
+`tools/build_terrain.py` turns it into a 50 m height field the ground plane, the
+street inlay and the walking player all sample from the same function.
+
+Before it existed the ground was a plane at z = 0 while buildings started at
+their own base elevation. The median base in Center City is 12 m, so the city
+floated twelve metres above its own ground and walk mode put you in a pit
+looking up at the undersides. 23.2% of the grid is measured directly; the rest
+is interpolated and `docs/SOURCES.md` says so.
 
 ## Coordinates
 

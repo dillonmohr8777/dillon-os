@@ -69,7 +69,7 @@ the stack is not surveyed: tier widths and the intermediate heights are chosen
 to read correctly in silhouette. Two approximations are worth naming:
 
 - Tiers are centred on the footprint. City Hall's tower therefore rises from
-  the middle of the block rather than over one portal — a horizontal error of
+  the middle of the block rather than over one portal, a horizontal error of
   a few tens of metres on a 548 ft tower.
 - City Hall's surveyed footprint is the whole 152 x 148 m block, so its tiers
   are squared to the block's own axes rather than scaled from its outline;
@@ -78,6 +78,35 @@ to read correctly in silhouette. Two approximations are worth naming:
 `to_ft` shares `approx_hgt`'s datum: height above the building's own grade. The
 footprint's `base_elevation` is added back when the tier is placed, so City
 Hall's 34.5 ft grade is not silently swallowed.
+
+## Terrain
+
+The building layer carries `base_elevation` per footprint: the ground the
+building stands on, in feet, on the same vertical datum as the heights. That is
+546,415 measured ground samples across the county, so the terrain comes from the
+survey itself rather than from a second dataset with a second projection to
+reconcile.
+
+`tools/build_terrain.py` rasterises them to a 50 m grid, 559 by 593 cells
+covering 27.9 by 29.6 km, quantised to uint16 with a worst-case error of
+0.106 cm. 300 KB compressed.
+
+- 23.2% of cells contain at least one building and are measured directly.
+- The rest are water, parkland, rail yards and street, and are filled by
+  nearest neighbour, then smoothed once. **They are interpolated, not
+  measured**, and the share is printed by the build script rather than hidden.
+- Range: -3.97 m at the tidal riverfront to 134.77 m, which is 442 ft, in the
+  north-west of the county.
+
+Spot checks against the height field: City Hall 42 ft, the Art Museum 62 ft on
+Faire Mount, Penn's Landing 23 ft, Manayunk 188 ft.
+
+**The bug this fixed.** The viewer drew its ground as a plane at z = 0 while
+every building started at its own base elevation. The median base in Center City
+is 12 m, so the whole city floated twelve metres above its own ground and a
+player walking at eye height stood in a pit looking up at the undersides. The
+test `terrain.test.js` now samples the height field at 400 landmarks and fails
+on a systematic offset from their recorded bases.
 
 ## Supporting layers
 
@@ -94,8 +123,8 @@ Same publisher and ArcGIS organisation, downloaded 2026-09-06:
 
 Local ENU tangent plane, WGS-84 ellipsoid, so one scene unit is one real metre.
 
-- Origin: **39.952583 N, -75.165222 W** — Philadelphia City Hall, the origin of
-  the city's own street-numbering grid
+- Origin: **39.952583 N, -75.165222 W**, Philadelphia City Hall, which is the
+  origin of the city's own street-numbering grid
 - Metres per degree longitude at origin: 85,452.8936
 - Metres per degree latitude at origin: 111,033.7215
 - Implementation and round-trip test: `tools/geo.py`
@@ -141,7 +170,7 @@ setting sun aligns with the east-west street corridors (compass azimuth
 - **6 - 21 April**
 - **20 August - 5 September**
 
-Best single frame: **2026-08-28, 19:14 EDT** — sun elevation 3.921 degrees,
+Best single frame: **2026-08-28, 19:14 EDT**, sun elevation 3.921 degrees,
 azimuth 279.195 degrees, 0.01 degrees off the street axis.
 
 The sunrise counterpart (azimuth 80.79 degrees) falls on the same date ranges.

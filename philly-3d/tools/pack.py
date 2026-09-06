@@ -1,4 +1,4 @@
-"""PHLCITY1 — a tiled, quantized binary format for city building massing.
+"""PHLCITY1, a tiled, quantized binary format for city building massing.
 
 Why a custom format: 546k real footprints is too much JSON for a browser and
 too much churn for a git repo. Tiling gives frustum culling and streaming for

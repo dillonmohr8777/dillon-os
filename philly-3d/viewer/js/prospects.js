@@ -56,7 +56,7 @@ class Prospects {
         `<span class="pin-dot" aria-hidden="true"></span>` +
         `<span class="pin-body"><b>${p.name}</b>` +
         `<span class="pin-sub">${p.address.split(',')[0]} · ${detail}</span></span>`;
-      a.title = `${p.name} — open the spec homepage`;
+      a.title = `${p.name}: open the spec homepage`;
       a.addEventListener('click', (ev) => {
         if (this.onSelect) this.onSelect(p, ev);
       });

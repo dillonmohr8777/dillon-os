@@ -205,6 +205,7 @@ the city, plus and minus zoom. Hold shift for larger steps.</p>
 <script src="js/phlbin.js"></script>
 <script src="js/mesh.js"></script>
 <script src="js/crowns.js"></script>
+<script src="js/terrain.js"></script>
 <script src="js/sun.js"></script>
 <script src="js/camera.js"></script>
 <script src="js/collision.js"></script>
@@ -290,6 +291,7 @@ the city, plus and minus zoom. Hold shift for larger steps.</p>
 
   try {
     await viewer.loadCrowns('../data/philly-crowns.json');
+    await viewer.loadTerrain('../data/philly-terrain.bin');
     await viewer.load('../data/philly-buildings.bin');
     await viewer.loadGround('../data/philly-ground.bin');
     await viewer.loadWater('../data/philly-water.bin');

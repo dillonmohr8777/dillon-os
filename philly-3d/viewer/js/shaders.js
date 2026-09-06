@@ -1,6 +1,38 @@
 // GLSL for the city pass and the ground pass.
 'use strict';
 
+// GLSL shared by every pass that has to sit on the ground.
+const TERRAIN = `
+// Terrain lookup, shared by the ground plane and the road/park inlay.
+//
+// The height field is 546,415 base_elevation samples from the building survey
+// itself, rasterised to a 50 m grid and held in an R32F texture in metres.
+// Sampling it in the VERTEX shader is what lets the ground stay a cheap grid
+// that follows the camera instead of a baked city-sized mesh.
+//
+// texelFetch plus a hand-written bilinear rather than a linear sampler: R32F
+// filtering needs OES_texture_float_linear, and a silently-unfiltered terrain
+// would look like a staircase on every hill.
+uniform sampler2D uTerrain;
+uniform vec3 uTerrainRect;    // x0, y0, cell
+uniform vec2 uTerrainSize;    // nx, ny
+float terrainAt(vec2 p) {
+  vec2 t = (p - uTerrainRect.xy) / uTerrainRect.z - 0.5;
+  // Perlin's fade curve on the interpolant. Plain bilinear is only C0, so the
+  // surface creases along every 50 m cell edge and a hillside reads as a fan
+  // of flat facets. This makes the first derivative continuous for one mul.
+  vec2 raw = fract(t);
+  vec2 f = raw * raw * (3.0 - 2.0 * raw);
+  ivec2 b = ivec2(floor(t));
+  ivec2 hi = ivec2(uTerrainSize) - ivec2(1);
+  float s00 = texelFetch(uTerrain, clamp(b,                ivec2(0), hi), 0).r;
+  float s10 = texelFetch(uTerrain, clamp(b + ivec2(1, 0), ivec2(0), hi), 0).r;
+  float s01 = texelFetch(uTerrain, clamp(b + ivec2(0, 1), ivec2(0), hi), 0).r;
+  float s11 = texelFetch(uTerrain, clamp(b + ivec2(1, 1), ivec2(0), hi), 0).r;
+  return mix(mix(s00, s10, f.x), mix(s01, s11, f.x), f.y);
+}
+`;
+
 const CITY_VS = `#version 300 es
 in vec3 aPos;
 in float aHeight;        // shading height: picks the material
@@ -205,10 +237,15 @@ uniform mat4 uViewProj;
 uniform vec2 uGroundCentre;
 uniform float uGroundScale;
 out vec3 vWorld;
-void main() {
-  vec2 p = uGroundCentre + aXY * uGroundScale;
-  vWorld = vec3(p, 0.0);
-  gl_Position = uViewProj * vec4(p, 0.0, 1.0);
+
+${TERRAIN}void main() {
+  // The grid is denser near the camera: squaring the unit coordinate pulls
+  // vertices inward, so the hill you are standing on gets the resolution and
+  // the horizon does not waste it.
+  vec2 c = sign(aXY) * aXY * aXY;
+  vec2 p = uGroundCentre + c * uGroundScale;
+  vWorld = vec3(p, terrainAt(p));
+  gl_Position = uViewProj * vec4(vWorld, 1.0);
 }`;
 
 const GROUND_FS = `#version 300 es
@@ -225,12 +262,23 @@ uniform float uShadowCell;
 uniform float uShadowSize;
 uniform float uFogDist;
 out vec4 frag;
+${TERRAIN}
 ${SHADING}
 void main() {
   float dist = length(uEye - vWorld);
-  float lam = max(uSunDir.z, 0.0) * shadowAt(vWorld + vec3(0.0, 0.0, 0.25));
+  // Analytic normal from the height field, NOT screen-space derivatives. The
+  // ground grid is warped toward the camera, so the triangles under your feet
+  // are metres wide and nearly edge-on; their derivative normal points
+  // sideways and paints the pavement black. Central differences over the
+  // terrain give the true slope at any tessellation.
+  float e = uTerrainRect.z * 0.5;
+  float hx = terrainAt(vWorld.xy + vec2(e, 0.0)) - terrainAt(vWorld.xy - vec2(e, 0.0));
+  float hy = terrainAt(vWorld.xy + vec2(0.0, e)) - terrainAt(vWorld.xy - vec2(0.0, e));
+  vec3 n = normalize(vec3(-hx, -hy, 2.0 * e));
+  float lam = max(dot(n, uSunDir), 0.0) * shadowAt(vWorld + vec3(0.0, 0.0, 0.25));
+  float sky = 0.55 + 0.45 * n.z;
   vec3 base = vec3(0.062, 0.064, 0.068);
-  vec3 col = base * (uSkyColor * 0.80 + uSunColor * lam);
+  vec3 col = base * (uSkyColor * 0.80 * sky + uSunColor * lam);
   float fog = 1.0 - exp(-dist / uFogDist);
   col = mix(col, uHorizon, fog * fog);
   frag = vec4(pow(clamp(col, 0.0, 1.0), vec3(1.0 / 2.2)), 1.0);
@@ -346,8 +394,11 @@ uniform mat4 uViewProj;
 uniform float uZ;
 out vec3 vWorld;
 out float vKind;
-void main() {
-  vWorld = vec3(aXYK.xy, uZ);
+
+${TERRAIN}void main() {
+  // Streets and parks lie ON the ground, so they take the same height field
+  // plus a small bias to win the depth test against it.
+  vWorld = vec3(aXYK.xy, terrainAt(aXYK.xy) + uZ);
   vKind = aXYK.z;
   gl_Position = uViewProj * vec4(vWorld, 1.0);
 }`;

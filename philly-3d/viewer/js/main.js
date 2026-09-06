@@ -24,6 +24,7 @@ class Viewer {
     this.camera = new Camera({ target: [0, 0, 30], distance: 3200,
       azimuth: 232, elevation: 24 });
     this.city = null;
+    this.terrain = null;             // see terrain.js; null means a flat city
     this.crowns = new Map();         // objectid -> crown entry, see crowns.js
     this.tiles = new Map();          // "tx,ty" -> {vao, vbo, count, bounds}
     this.pending = new Set();
@@ -89,16 +90,47 @@ class Viewer {
     gl.enableVertexAttribArray(skyLoc);
     gl.vertexAttribPointer(skyLoc, 2, gl.FLOAT, false, 0, 0);
 
+    // The ground used to be two triangles, which is all a flat plane needs.
+    // It carries terrain now, so it has to be tessellated: a 96 x 96 grid in
+    // unit space, warped toward the camera in the vertex shader.
+    const G = 96;
+    const grid = new Float32Array(G * G * 12);
+    let gi = 0;
+    for (let j = 0; j < G; j++) {
+      for (let i = 0; i < G; i++) {
+        const u0 = (i / G) * 2 - 1, u1 = ((i + 1) / G) * 2 - 1;
+        const v0 = (j / G) * 2 - 1, v1 = ((j + 1) / G) * 2 - 1;
+        grid[gi++] = u0; grid[gi++] = v0;
+        grid[gi++] = u1; grid[gi++] = v0;
+        grid[gi++] = u1; grid[gi++] = v1;
+        grid[gi++] = u0; grid[gi++] = v0;
+        grid[gi++] = u1; grid[gi++] = v1;
+        grid[gi++] = u0; grid[gi++] = v1;
+      }
+    }
+    this.groundVerts = gi / 2;
     this.groundVao = gl.createVertexArray();
     gl.bindVertexArray(this.groundVao);
     const gb = gl.createBuffer();
     gl.bindBuffer(gl.ARRAY_BUFFER, gb);
-    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([
-      -1, -1, 1, -1, 1, 1, -1, -1, 1, 1, -1, 1]), gl.STATIC_DRAW);
+    gl.bufferData(gl.ARRAY_BUFFER, grid, gl.STATIC_DRAW);
     const gLoc = gl.getAttribLocation(this.progGround, 'aXY');
     gl.enableVertexAttribArray(gLoc);
     gl.vertexAttribPointer(gLoc, 2, gl.FLOAT, false, 0, 0);
     gl.bindVertexArray(null);
+
+    // A 1x1 flat texture so the terrain lookup is valid before the real height
+    // field arrives, and stays valid if it never does.
+    this.terrainTex = gl.createTexture();
+    gl.bindTexture(gl.TEXTURE_2D, this.terrainTex);
+    gl.texImage2D(gl.TEXTURE_2D, 0, gl.R32F, 1, 1, 0, gl.RED, gl.FLOAT,
+      new Float32Array([0]));
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.NEAREST);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.NEAREST);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+    this.terrainRect = [0, 0, 1];
+    this.terrainSize = [1, 1];
 
     this.shadowTex = gl.createTexture();
     gl.bindTexture(gl.TEXTURE_2D, this.shadowTex);
@@ -142,7 +174,36 @@ class Viewer {
     return this.city;
   }
 
-  // The crown table: skyline the LiDAR survey cannot see. Optional — the city
+  // The terrain the city stands on. Optional: without it the ground is a plane
+  // at z = 0 and Center City floats twelve metres above it, which is the bug
+  // this file exists to fix, so a failure here is warned about rather than
+  // swallowed.
+  async loadTerrain(url) {
+    try {
+      const res = await fetch(url);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const buf = new Uint8Array(await res.arrayBuffer());
+      const t = new Terrain(buf.buffer.slice(buf.byteOffset,
+        buf.byteOffset + buf.byteLength));
+      const heights = t.decode(await inflateBrowser(buf.subarray(t.payloadOffset)));
+      const gl = this.gl;
+      gl.bindTexture(gl.TEXTURE_2D, this.terrainTex);
+      gl.pixelStorei(gl.UNPACK_ALIGNMENT, 1);
+      gl.texImage2D(gl.TEXTURE_2D, 0, gl.R32F, t.nx, t.ny, 0,
+        gl.RED, gl.FLOAT, heights);
+      this.terrain = t;
+      this.terrainRect = [t.x0, t.y0, t.cell];
+      this.terrainSize = [t.nx, t.ny];
+      this.player.groundZ = t.heightAt(this.player.x, this.player.y);
+      return t;
+    } catch (err) {
+      console.warn('terrain unavailable, the city will sit on a flat plane:',
+        err.message);
+      return null;
+    }
+  }
+
+  // The crown table: skyline the LiDAR survey cannot see. Optional. The city
   // renders correctly without it, just with flat-topped towers.
   async loadCrowns(url) {
     try {
@@ -255,7 +316,7 @@ class Viewer {
   async updateTiles() {
     if (!this.city) return;
     const t = this.mode === 'walk'
-      ? [this.player.x, this.player.y, 0]
+      ? [this.player.x, this.player.y, this.player.groundZ]
       : this.camera.target;
     const want = new Map();
     const ts = this.city.tileSize;
@@ -439,6 +500,12 @@ class Viewer {
       const rgt = (this.keys.d ? 1 : 0) - (this.keys.a ? 1 : 0);
       this.player.running = !!this.keys.shift;
       this.player.step(dt, fwd, rgt, this.collider);
+      // Follow the ground rather than a plane. Sampled after the step so the
+      // eye height is measured at the position actually reached this frame.
+      if (this.terrain) {
+        this.player.groundZ =
+          this.terrain.heightAt(this.player.x, this.player.y);
+      }
       eye = this.player.eye();
       lookAt = this.player.target();
       near = 0.12;
@@ -502,13 +569,25 @@ class Viewer {
       gl.uniform1i(u.uShadow, 0);
     };
 
+    // Terrain lives on unit 1; the shadow field owns unit 0.
+    const bindTerrain = (u) => {
+      if (!u.uTerrain) return;
+      gl.activeTexture(gl.TEXTURE1);
+      gl.bindTexture(gl.TEXTURE_2D, this.terrainTex);
+      gl.uniform1i(u.uTerrain, 1);
+      gl.uniform3fv(u.uTerrainRect, this.terrainRect);
+      gl.uniform2fv(u.uTerrainSize, this.terrainSize);
+      gl.activeTexture(gl.TEXTURE0);
+    };
+
     gl.useProgram(this.progGround);
     bindCommon(this.uGround);
+    bindTerrain(this.uGround);
     // sized to sit just inside the far plane, centred under the viewer
     gl.uniform2fv(this.uGround.uGroundCentre, [eye[0], eye[1]]);
     gl.uniform1f(this.uGround.uGroundScale, far * 0.62);
     gl.bindVertexArray(this.groundVao);
-    gl.drawArrays(gl.TRIANGLES, 0, 6);
+    gl.drawArrays(gl.TRIANGLES, 0, this.groundVerts);
 
     if (this.detailCount) {
       gl.useProgram(this.progDetail);
@@ -527,6 +606,7 @@ class Viewer {
       gl.activeTexture(gl.TEXTURE0);
       gl.bindTexture(gl.TEXTURE_2D, this.shadowTex);
       gl.uniform1i(u.uShadow, 0);
+      bindTerrain(u);
       gl.bindVertexArray(this.detailVao);
       gl.disable(gl.CULL_FACE);
       gl.drawArrays(gl.TRIANGLES, 0, this.detailCount);
@@ -603,6 +683,8 @@ class Viewer {
     const fixed = this.collider.unstick(t[0], t[1], BODY_RADIUS);
     this.player.x = fixed.x;
     this.player.y = fixed.y;
+    this.player.groundZ = this.terrain
+      ? this.terrain.heightAt(fixed.x, fixed.y) : 0;
     this.player.vx = this.player.vy = 0;
     this.player.yaw = spawn
       ? (this.camera.azimuth + 180) * Math.PI / 180
