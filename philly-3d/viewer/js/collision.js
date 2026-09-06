@@ -96,7 +96,7 @@ class Collider {
   // Place the circle outside every wall it overlaps. Iterated so inside
   // corners settle instead of ping-ponging between two edges.
   resolve(px, py, radius, iterations = 4) {
-    let x = px, y = py, hit = false;
+    let x = px, y = py, hit = false, hnx = 0, hny = 0;
     for (let it = 0; it < iterations; it++) {
       let moved = false;
       const cx = Math.floor(x / this.cell), cy = Math.floor(y / this.cell);
@@ -115,13 +115,14 @@ class Collider {
             if (s >= radius) continue;
             x = c.qx + nx * radius;
             y = c.qy + ny * radius;
+            hnx = nx; hny = ny;
             moved = true; hit = true;
           }
         }
       }
       if (!moved) break;
     }
-    return { x, y, hit };
+    return { x, y, hit, nx: hnx, ny: hny };
   }
 
   // Does the movement segment cross a wall? Proximity at the destination is
@@ -162,7 +163,8 @@ class Collider {
     const sweep = this._sweep(px, py, dx, dy, radius);
     if (sweep.t >= 1) {
       const settled = this.resolve(px + dx, py + dy, radius);
-      return { x: settled.x, y: settled.y, hit: settled.hit };
+      return { x: settled.x, y: settled.y, hit: settled.hit,
+               nx: settled.nx, ny: settled.ny };
     }
     // advance to just before contact
     const skin = 0.02;
@@ -176,7 +178,8 @@ class Collider {
     const st = Math.max(0, slide.t - skin);
     x += sx * st; y += sy * st;
     const settled = this.resolve(x, y, radius);
-    return { x: settled.x, y: settled.y, hit: true };
+    return { x: settled.x, y: settled.y, hit: true,
+             nx: sweep.nx, ny: sweep.ny };
   }
 
   // Is the point inside a footprint? Horizontal ray cast counting wall

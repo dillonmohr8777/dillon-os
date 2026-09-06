@@ -179,13 +179,20 @@ void main() {
   frag = vec4(pow(clamp(col, 0.0, 1.0), vec3(1.0 / 2.2)), 1.0);
 }`;
 
+// The ground quad is unit-sized and placed around the camera at draw time.
+// A fixed 90 km quad is simpler and wrong: walk mode uses a 22 km far plane,
+// so its corners fall outside the frustum, the whole quad is clipped, and the
+// bottom half of the screen becomes sky.
 const GROUND_VS = `#version 300 es
 in vec2 aXY;
 uniform mat4 uViewProj;
+uniform vec2 uGroundCentre;
+uniform float uGroundScale;
 out vec3 vWorld;
 void main() {
-  vWorld = vec3(aXY, 0.0);
-  gl_Position = uViewProj * vec4(aXY, 0.0, 1.0);
+  vec2 p = uGroundCentre + aXY * uGroundScale;
+  vWorld = vec3(p, 0.0);
+  gl_Position = uViewProj * vec4(p, 0.0, 1.0);
 }`;
 
 const GROUND_FS = `#version 300 es

@@ -55,6 +55,7 @@ button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);
   color:var(--ink);text-decoration:none;white-space:nowrap;
   backdrop-filter:blur(10px);opacity:calc(.45 + .55 * var(--near,1));
   transition:border-color .15s ease,background .15s ease}
+.pin[hidden]{display:none!important}
 .pin:hover,.pin:focus-visible{border-color:var(--accent);background:#ffffff1a;opacity:1}
 .pin-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);
   box-shadow:0 0 0 3px #ffb2573d;flex:none}
@@ -84,6 +85,16 @@ button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);
 #sites p.note{margin:8px 0 0;font-size:.66rem;color:var(--muted);line-height:1.4}
 @media (max-width:980px){#sites{display:none}}
 
+#walkhud{position:absolute;left:50%;bottom:96px;transform:translateX(-50%);
+  padding:9px 16px;border-radius:999px;border:1px solid var(--line);
+  background:var(--panel);backdrop-filter:blur(12px);font-size:.78rem;
+  color:var(--muted);white-space:nowrap;pointer-events:none}
+#walkhud b{color:var(--ink);font-weight:600}
+#walkhud[hidden]{display:none}
+#crosshair{position:absolute;left:50%;top:50%;width:6px;height:6px;margin:-3px 0 0 -3px;
+  border-radius:50%;background:#ffffffcc;box-shadow:0 0 0 1px #0006;pointer-events:none}
+#crosshair[hidden]{display:none}
+
 #fallback{position:absolute;inset:0;display:none;place-content:center;
   padding:32px;text-align:center}
 #fallback div{max-width:52ch;margin:auto}
@@ -105,7 +116,7 @@ body.no-webgl #stage,body.no-webgl #controls,body.no-webgl #head{display:none}
 </head>
 <body>
 
-<div id="stage"><div id="pins"></div><canvas id="c" aria-label="Interactive 3D map of Philadelphia. Drag to orbit, shift-drag to pan, scroll to zoom. Arrow keys orbit, W A S D pan, plus and minus zoom." role="application"></canvas></div>
+<div id="stage"><div id="pins"></div><div id="crosshair" hidden></div><canvas id="c" aria-label="Interactive 3D map of Philadelphia. Drag to orbit, shift-drag to pan, scroll to zoom. Arrow keys orbit, W A S D pan, plus and minus zoom." role="application"></canvas></div>
 
 <div id="head" class="panel">
   <h1>Philadelphia, actual size</h1>
@@ -129,10 +140,13 @@ body.no-webgl #stage,body.no-webgl #controls,body.no-webgl #head{display:none}
   <button id="noon">Midday</button>
   <button id="reset">Reset view</button>
   <button id="pins-toggle" aria-pressed="true">Hide pins</button>
+  <button id="walk" aria-pressed="false">Walk the city</button>
   <div id="readout" role="status" aria-live="polite">
     <b id="status">Starting…</b><br><span id="perf"></span>
   </div>
 </div>
+
+<div id="walkhud" hidden><b>W A S D</b> walk · <b>Shift</b> run · <b>mouse</b> look · <b>Esc</b> back to the map</div>
 
 <div id="fallback">
   <div>
@@ -153,6 +167,8 @@ the city, plus and minus zoom. Hold shift for larger steps.</p>
 <script src="js/mesh.js"></script>
 <script src="js/sun.js"></script>
 <script src="js/camera.js"></script>
+<script src="js/collision.js"></script>
+<script src="js/player.js"></script>
 <script src="js/prospects.js"></script>
 <script src="js/shaders.js"></script>
 <script src="js/main.js"></script>
@@ -208,6 +224,24 @@ the city, plus and minus zoom. Hold shift for larger steps.</p>
   document.getElementById('noon').addEventListener('click', () => {
     timeEl.value = 780; applyTime(780);
   });
+  const walkBtn = document.getElementById('walk');
+  const walkHud = document.getElementById('walkhud');
+  const crosshair = document.getElementById('crosshair');
+  function syncMode() {
+    const walking = viewer.mode === 'walk';
+    walkBtn.setAttribute('aria-pressed', String(walking));
+    walkBtn.textContent = walking ? 'Back to the map' : 'Walk the city';
+    walkHud.hidden = !walking;
+    crosshair.hidden = !walking;
+    document.getElementById('sites').hidden = walking;
+  }
+  walkBtn.addEventListener('click', () => {
+    if (viewer.mode === 'walk') viewer.exitWalk(); else viewer.enterWalk();
+    syncMode();
+    canvas.focus();
+  });
+  document.addEventListener('pointerlockchange', () => setTimeout(syncMode, 0));
+
   document.getElementById('reset').addEventListener('click', () => {
     viewer.camera.flyTo([0, 0, 30], 3200, 232, 24);
     viewer.needsRebuild = true;
@@ -274,9 +308,11 @@ the city, plus and minus zoom. Hold shift for larger steps.</p>
       viewer.needsRebuild = false;
       viewer.updateTiles();
     }
-    perfEl.textContent =
-      `${viewer.fps} fps · ${viewer.drawnTiles || 0} tiles drawn · sun ` +
-      `${viewer.sun.elevation.toFixed(1)}° elev, ${viewer.sun.azimuth.toFixed(1)}° az`;
+    perfEl.textContent = viewer.mode === 'walk'
+      ? `${viewer.fps} fps · ${viewer.collider.segmentCount().toLocaleString()} wall segments · ` +
+        `${viewer.player.speed().toFixed(1)} m/s`
+      : `${viewer.fps} fps · ${viewer.drawnTiles || 0} tiles drawn · sun ` +
+        `${viewer.sun.elevation.toFixed(1)}° elev, ${viewer.sun.azimuth.toFixed(1)}° az`;
     requestAnimationFrame(frame);
   }
   requestAnimationFrame(frame);

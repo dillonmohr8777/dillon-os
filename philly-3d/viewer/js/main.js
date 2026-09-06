@@ -36,6 +36,17 @@ class Viewer {
     this.fps = 0;
     this.needsRebuild = true;
 
+    // Walk mode
+    this.mode = 'orbit';
+    this.collider = new Collider();
+    this.player = new Player({
+      x: 380, y: -70, yaw: Math.PI * 1.5,        // Market St, looking west
+      reducedMotion: typeof matchMedia === 'function'
+        && matchMedia('(prefers-reduced-motion: reduce)').matches,
+    });
+    this.keys = Object.create(null);
+    this.pointerLocked = false;
+
     this.initGL();
     this.initInput();
   }
@@ -77,13 +88,12 @@ class Viewer {
     gl.enableVertexAttribArray(skyLoc);
     gl.vertexAttribPointer(skyLoc, 2, gl.FLOAT, false, 0, 0);
 
-    const G = 90000;
     this.groundVao = gl.createVertexArray();
     gl.bindVertexArray(this.groundVao);
     const gb = gl.createBuffer();
     gl.bindBuffer(gl.ARRAY_BUFFER, gb);
     gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([
-      -G, -G, G, -G, G, G, -G, -G, G, G, -G, G]), gl.STATIC_DRAW);
+      -1, -1, 1, -1, 1, 1, -1, -1, 1, 1, -1, 1]), gl.STATIC_DRAW);
     const gLoc = gl.getAttribLocation(this.progGround, 'aXY');
     gl.enableVertexAttribArray(gLoc);
     gl.vertexAttribPointer(gLoc, 2, gl.FLOAT, false, 0, 0);
@@ -230,7 +240,9 @@ class Viewer {
   // Decide which tiles should be resident, then load and drop to match.
   async updateTiles() {
     if (!this.city) return;
-    const t = this.camera.target;
+    const t = this.mode === 'walk'
+      ? [this.player.x, this.player.y, 0]
+      : this.camera.target;
     const want = new Map();
     const ts = this.city.tileSize;
     for (const tile of this.city.tiles.values()) {
@@ -300,13 +312,15 @@ class Viewer {
       const top = decoded.base[i] + decoded.height[i];
       if (top > maxz) maxz = top;
     }
+    this.collider.addTile(decoded);
     this.tiles.set(key, { vao, vbo, count: mesh.vertexCount, tris: mesh.triCount,
       minH, decoded, bounds: [minx, miny, -30, maxx, maxy, maxz + 5] });
     this.triCount += mesh.triCount;
   }
 
   rebuildShadows() {
-    const t = this.camera.target;
+    const t = this.mode === 'walk'
+      ? [this.player.x, this.player.y, 0] : this.camera.target;
     const half = SHADOW_SIZE * SHADOW_CELL / 2;
     const ox = Math.round((t[0] - half) / SHADOW_CELL) * SHADOW_CELL;
     const oy = Math.round((t[1] - half) / SHADOW_CELL) * SHADOW_CELL;
@@ -365,21 +379,42 @@ class Viewer {
     }
     gl.viewport(0, 0, w, h);
 
-    const eye = this.camera.eye();
-    const [near, far] = this.camera.clip();
-    M4.perspective(this.proj, this.camera.fov * Math.PI / 180, w / h, near, far);
-    M4.lookAt(this.view, eye, this.camera.target, [0, 0, 1]);
+    let eye, lookAt, near, far, fov;
+    if (this.mode === 'walk') {
+      const fwd = (this.keys.w ? 1 : 0) - (this.keys.s ? 1 : 0);
+      const rgt = (this.keys.d ? 1 : 0) - (this.keys.a ? 1 : 0);
+      this.player.running = !!this.keys.shift;
+      this.player.step(dt, fwd, rgt, this.collider);
+      eye = this.player.eye();
+      lookAt = this.player.target();
+      near = 0.12;
+      far = 22000;
+      // a slightly wider lens while running reads as speed without motion blur
+      fov = 68 + Math.min(8, this.player.speed() * 1.1);
+    } else {
+      eye = this.camera.eye();
+      lookAt = this.camera.target;
+      const c = this.camera.clip();
+      near = c[0]; far = c[1];
+      fov = this.camera.fov;
+    }
+    M4.perspective(this.proj, fov * Math.PI / 180, w / h, near, far);
+    M4.lookAt(this.view, eye, lookAt, [0, 0, 1]);
     M4.multiply(this.mvp, this.proj, this.view);
 
-    if (Math.hypot(this.camera.target[0] - this.shadowCentre[0],
-      this.camera.target[1] - this.shadowCentre[1]) > SHADOW_SIZE * SHADOW_CELL * 0.22) {
+    const focus = this.mode === 'walk'
+      ? [this.player.x, this.player.y] : this.camera.target;
+    if (Math.hypot(focus[0] - this.shadowCentre[0],
+      focus[1] - this.shadowCentre[1]) > SHADOW_SIZE * SHADOW_CELL * 0.22) {
       this.shadowDirty = true;
     }
     if (this.shadowDirty) this.rebuildShadows();
 
     const c = this.skyColours();
     const sd = sunVector(this.sun.elevation, this.sun.azimuth);
-    const fogDist = 16000 + this.camera.distance * 5.5;
+    const fogDist = this.mode === 'walk'
+      ? 3200
+      : 16000 + this.camera.distance * 5.5;
 
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 
@@ -415,6 +450,9 @@ class Viewer {
 
     gl.useProgram(this.progGround);
     bindCommon(this.uGround);
+    // sized to sit just inside the far plane, centred under the viewer
+    gl.uniform2fv(this.uGround.uGroundCentre, [eye[0], eye[1]]);
+    gl.uniform1f(this.uGround.uGroundScale, far * 0.62);
     gl.bindVertexArray(this.groundVao);
     gl.drawArrays(gl.TRIANGLES, 0, 6);
 
@@ -483,7 +521,8 @@ class Viewer {
       gl.enable(gl.CULL_FACE);
     }
     if (this.prospects && this.showPins) {
-      this.prospects.update(this.mvp, eye, 9000,
+      this.prospects.update(this.mvp, eye,
+        this.mode === 'walk' ? 900 : 9000,
         this.canvas.clientWidth, this.canvas.clientHeight);
     }
 
@@ -497,16 +536,65 @@ class Viewer {
     }
   }
 
+  enterWalk(spawn) {
+    if (this.mode === 'walk') return;
+    // Default drop-in is the Market Street axis east of City Hall, looking
+    // west down the street. Dropping at the camera target instead puts you
+    // inside City Hall, whose footprint is 153,719 square feet.
+    const t = spawn || [900, -142, 0];
+    const fixed = this.collider.unstick(t[0], t[1], BODY_RADIUS);
+    this.player.x = fixed.x;
+    this.player.y = fixed.y;
+    this.player.vx = this.player.vy = 0;
+    this.player.yaw = spawn
+      ? (this.camera.azimuth + 180) * Math.PI / 180
+      : -Math.PI / 2 - 0.161;                 // west along Market, grid-aligned
+    this.player.pitch = 0.0;
+    this.mode = 'walk';
+    this.needsRebuild = true;
+    this.shadowDirty = true;
+    if (this.canvas.requestPointerLock) this.canvas.requestPointerLock();
+  }
+
+  exitWalk() {
+    if (this.mode !== 'walk') return;
+    this.mode = 'orbit';
+    this.camera.goal.target = [this.player.x, this.player.y, 30];
+    this.camera.target = [this.player.x, this.player.y, 30];
+    this.camera.goal.distance = 900;
+    this.camera.goal.azimuth = (this.player.yaw * 180 / Math.PI) + 180;
+    this.camera.goal.elevation = 28;
+    this.needsRebuild = true;
+    this.shadowDirty = true;
+    if (typeof document !== 'undefined' && document.exitPointerLock) {
+      document.exitPointerLock();
+    }
+  }
+
   initInput() {
     const el = this.canvas;
     let dragging = null, lastX = 0, lastY = 0;
 
+    document.addEventListener('pointerlockchange', () => {
+      this.pointerLocked = document.pointerLockElement === el;
+      if (!this.pointerLocked && this.mode === 'walk') this.exitWalk();
+    });
+
     el.addEventListener('pointerdown', (ev) => {
+      if (this.mode === 'walk') {
+        if (!this.pointerLocked && el.requestPointerLock) el.requestPointerLock();
+        return;
+      }
       el.setPointerCapture(ev.pointerId);
       dragging = (ev.button === 2 || ev.shiftKey) ? 'pan' : 'orbit';
       lastX = ev.clientX; lastY = ev.clientY;
     });
     el.addEventListener('pointermove', (ev) => {
+      if (this.mode === 'walk') {
+        if (!this.pointerLocked) return;
+        this.player.look(ev.movementX * 0.0022, -ev.movementY * 0.0022);
+        return;
+      }
       if (!dragging) return;
       const dx = ev.clientX - lastX, dy = ev.clientY - lastY;
       lastX = ev.clientX; lastY = ev.clientY;
@@ -524,13 +612,36 @@ class Viewer {
 
     el.addEventListener('wheel', (ev) => {
       ev.preventDefault();
+      if (this.mode === 'walk') return;
       this.camera.zoom(Math.exp(ev.deltaY * 0.0012));
       this.needsRebuild = true;
     }, { passive: false });
 
     // Keyboard: the whole viewer must be usable without a pointer.
     el.setAttribute('tabindex', '0');
+    const track = (ev, down) => {
+      const k = ev.key.toLowerCase();
+      if (k === 'shift') { this.keys.shift = down; return true; }
+      if (k === 'w' || k === 'a' || k === 's' || k === 'd') {
+        this.keys[k] = down;
+        return true;
+      }
+      if (k === 'arrowup') { this.keys.w = down; return true; }
+      if (k === 'arrowdown') { this.keys.s = down; return true; }
+      if (k === 'arrowleft') { this.keys.a = down; return true; }
+      if (k === 'arrowright') { this.keys.d = down; return true; }
+      return false;
+    };
+    el.addEventListener('keyup', (ev) => {
+      if (this.mode === 'walk' && track(ev, false)) ev.preventDefault();
+    });
+
     el.addEventListener('keydown', (ev) => {
+      if (ev.key === 'Escape' && this.mode === 'walk') { this.exitWalk(); return; }
+      if (this.mode === 'walk') {
+        if (track(ev, true)) { ev.preventDefault(); this.needsRebuild = true; }
+        return;
+      }
       const step = ev.shiftKey ? 3 : 1;
       switch (ev.key) {
         case 'ArrowLeft':  this.camera.orbit(-6 * step, 0); break;
