@@ -1,0 +1,225 @@
+{
+  "pairs": [
+    {
+      "fg": "ink",
+      "fg_hex": "#14181B",
+      "bg": "paper",
+      "bg_hex": "#FBF8F4",
+      "role": "text",
+      "ratio": 16.86,
+      "passes": true,
+      "note": "body and display on the paper surface"
+    },
+    {
+      "fg": "ink",
+      "fg_hex": "#14181B",
+      "bg": "panel",
+      "bg_hex": "#F0ECE5",
+      "role": "text",
+      "ratio": 15.16,
+      "passes": true,
+      "note": "body and display on the panel surface"
+    },
+    {
+      "fg": "muted",
+      "fg_hex": "#636465",
+      "bg": "paper",
+      "bg_hex": "#FBF8F4",
+      "role": "text",
+      "ratio": 5.6,
+      "passes": true,
+      "note": "secondary text on paper"
+    },
+    {
+      "fg": "muted",
+      "fg_hex": "#636465",
+      "bg": "panel",
+      "bg_hex": "#F0ECE5",
+      "role": "text",
+      "ratio": 5.04,
+      "passes": true,
+      "note": "secondary text on panel"
+    },
+    {
+      "fg": "brand",
+      "fg_hex": "#155E86",
+      "bg": "paper",
+      "bg_hex": "#FBF8F4",
+      "role": "text",
+      "ratio": 6.66,
+      "passes": true,
+      "note": "brand blue as text on light \u2014 legal"
+    },
+    {
+      "fg": "brand",
+      "fg_hex": "#155E86",
+      "bg": "panel",
+      "bg_hex": "#F0ECE5",
+      "role": "text",
+      "ratio": 5.99,
+      "passes": true,
+      "note": "brand blue as text on panel"
+    },
+    {
+      "fg": "signal-ink",
+      "fg_hex": "#A35309",
+      "bg": "paper",
+      "bg_hex": "#FBF8F4",
+      "role": "text",
+      "ratio": 5.22,
+      "passes": true,
+      "note": "the orange that speaks on light"
+    },
+    {
+      "fg": "signal-ink",
+      "fg_hex": "#A35309",
+      "bg": "panel",
+      "bg_hex": "#F0ECE5",
+      "role": "text",
+      "ratio": 4.7,
+      "passes": true,
+      "note": "the orange that speaks on panel"
+    },
+    {
+      "fg": "signal",
+      "fg_hex": "#E27113",
+      "bg": "paper",
+      "bg_hex": "#FBF8F4",
+      "role": "banned",
+      "ratio": 3.0,
+      "passes": true,
+      "note": "signal as TEXT on paper \u2014 illegal, fill only (measured 3.0)"
+    },
+    {
+      "fg": "mark",
+      "fg_hex": "#2A80C2",
+      "bg": "paper",
+      "bg_hex": "#FBF8F4",
+      "role": "graphic",
+      "ratio": 3.99,
+      "passes": true,
+      "note": "the logo blue on paper \u2014 mark artwork, not text"
+    },
+    {
+      "fg": "on-deep",
+      "fg_hex": "#F4F1EC",
+      "bg": "deep",
+      "bg_hex": "#0E1417",
+      "role": "text",
+      "ratio": 16.48,
+      "passes": true,
+      "note": "body and display on the deep surface"
+    },
+    {
+      "fg": "on-deep-muted",
+      "fg_hex": "#8A9296",
+      "bg": "deep",
+      "bg_hex": "#0E1417",
+      "role": "text",
+      "ratio": 5.86,
+      "passes": true,
+      "note": "secondary text on deep"
+    },
+    {
+      "fg": "brand-lift",
+      "fg_hex": "#3897CC",
+      "bg": "deep",
+      "bg_hex": "#0E1417",
+      "role": "text",
+      "ratio": 5.72,
+      "passes": true,
+      "note": "the blue that speaks on dark"
+    },
+    {
+      "fg": "signal",
+      "fg_hex": "#E27113",
+      "bg": "deep",
+      "bg_hex": "#0E1417",
+      "role": "text",
+      "ratio": 5.84,
+      "passes": true,
+      "note": "signal as text on dark \u2014 legal"
+    },
+    {
+      "fg": "brand",
+      "fg_hex": "#155E86",
+      "bg": "deep",
+      "bg_hex": "#0E1417",
+      "role": "banned",
+      "ratio": 2.63,
+      "passes": true,
+      "note": "brand blue on deep \u2014 2.63, fails even 3.0 (measured 2.63)"
+    },
+    {
+      "fg": "mark",
+      "fg_hex": "#2A80C2",
+      "bg": "deep",
+      "bg_hex": "#0E1417",
+      "role": "graphic",
+      "ratio": 4.39,
+      "passes": true,
+      "note": "the logo blue on deep \u2014 mark artwork only"
+    },
+    {
+      "fg": "on-brand",
+      "fg_hex": "#FFFFFF",
+      "bg": "brand",
+      "bg_hex": "#155E86",
+      "role": "text",
+      "ratio": 7.05,
+      "passes": true,
+      "note": "white on the brand fill"
+    },
+    {
+      "fg": "on-signal",
+      "fg_hex": "#14181B",
+      "bg": "signal",
+      "bg_hex": "#E27113",
+      "role": "text",
+      "ratio": 5.62,
+      "passes": true,
+      "note": "ink on the signal fill"
+    },
+    {
+      "fg": "white",
+      "fg_hex": "#FFFFFF",
+      "bg": "signal",
+      "bg_hex": "#E27113",
+      "role": "banned",
+      "ratio": 3.18,
+      "passes": true,
+      "note": "white on signal \u2014 never (measured 3.18)"
+    },
+    {
+      "fg": "on-deep",
+      "fg_hex": "#F4F1EC",
+      "bg": "deep-raised",
+      "bg_hex": "#1A2226",
+      "role": "text",
+      "ratio": 14.33,
+      "passes": true,
+      "note": "text on the raised dark surface"
+    },
+    {
+      "fg": "line-strong",
+      "fg_hex": "#8E8578",
+      "bg": "paper",
+      "bg_hex": "#FBF8F4",
+      "role": "graphic",
+      "ratio": 3.43,
+      "passes": true,
+      "note": "keylines and rules on paper"
+    },
+    {
+      "fg": "line",
+      "fg_hex": "#DCD6CC",
+      "bg": "paper",
+      "bg_hex": "#FBF8F4",
+      "role": "decorative",
+      "ratio": 1.36,
+      "passes": true,
+      "note": "decorative hairlines only \u2014 the system marks this token not-AA; never carries text"
+    }
+  ],
+  "failures": []
+}

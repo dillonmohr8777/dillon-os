@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Momentum Signal — broadcast opener</title>
+<link rel="stylesheet" href="../../brand/tokens.css">
+<style>
+  html,body { background:#000; }
+  .stage {
+    position:relative; width:1080px; height:1080px; overflow:hidden;
+    background:var(--m-deep); color:var(--m-on-deep);
+    font-family:var(--m-font-text); -webkit-font-smoothing:antialiased;
+  }
+  #globe { position:absolute; inset:0; }
+
+  /* corner furniture */
+  .tl { position:absolute; left:56px; top:52px; display:flex; align-items:center; gap:14px; }
+  .tl .mk { width:44px; height:44px; color:var(--m-brand-lift); display:block; }
+  .tl .wd { font-family:var(--m-font-display); font-size:26px; letter-spacing:-.01em; line-height:1; }
+  .tr { position:absolute; right:56px; top:52px; background:var(--m-signal); color:var(--m-on-signal);
+        padding:10px 16px 11px; border-radius:var(--m-r-sm); text-align:right; }
+  .tr b { display:block; font-weight:800; font-size:17px; letter-spacing:.14em; line-height:1.15; }
+  .tr i { display:block; font-style:normal; font-weight:700; font-size:12px; letter-spacing:.2em; opacity:.72; }
+
+  /* title block */
+  .title { position:absolute; left:70px; top:404px; }
+  .title .l1 { font-family:var(--m-font-display); font-size:112px; line-height:.86;
+               letter-spacing:-.028em; color:var(--m-on-deep); }
+  .title .l2 { font-family:var(--m-font-display); font-size:172px; line-height:.86;
+               letter-spacing:-.032em; color:var(--m-signal); margin-top:6px; }
+  .clip { overflow:hidden; display:block; }
+
+  .rule { position:absolute; left:74px; top:742px; height:2px; background:var(--m-brand-lift); width:0; }
+  .cap  { position:absolute; left:74px; top:762px; font-weight:700; font-size:19px;
+          letter-spacing:.34em; color:var(--m-on-deep-muted); }
+
+  /* ticker */
+  .tick { position:absolute; left:0; right:0; bottom:56px; height:34px; overflow:hidden; }
+  .tick .strip { position:absolute; left:0; top:0; display:flex; gap:52px; white-space:nowrap;
+                 font-weight:700; font-size:17px; letter-spacing:.2em; color:var(--m-on-deep-muted); }
+  .tick .strip span.hot { color:var(--m-signal); }
+  .tick::before, .tick::after { content:""; position:absolute; top:0; bottom:0; width:120px; z-index:2; }
+  .tick::before { left:0;  background:linear-gradient(90deg,  rgba(14,20,23,1) 12%, rgba(14,20,23,0) 100%); }
+  .tick::after  { right:0; background:linear-gradient(270deg, rgba(14,20,23,1) 12%, rgba(14,20,23,0) 100%); }
+
+  .sign { position:absolute; right:56px; bottom:58px; font-weight:700; font-size:19px;
+          letter-spacing:.1em; color:var(--m-on-deep-muted); }
+</style></head>
+<body>
+<div class="stage">
+  <canvas id="globe" width="1080" height="1080"></canvas>
+
+  <div class="tl" id="tl"><span class="mk" id="mk"></span><span class="wd">MOMENTUM</span></div>
+  <div class="tr" id="tr"><b>LOCAL SEARCH</b><i>PHILADELPHIA</i></div>
+
+  <div class="title">
+    <span class="clip" id="c1"><span class="l1" id="l1">MOMENTUM</span></span>
+    <span class="clip" id="c2"><span class="l2" id="l2">SIGNAL</span></span>
+  </div>
+
+  <div class="rule" id="rule"></div>
+  <div class="cap"  id="cap">THE MONTH IN LOCAL DEMAND</div>
+
+  <div class="tick" id="tick"><div class="strip" id="strip"></div></div>
+  <div class="sign" id="sign">needmomentum.com</div>
+</div>
+
+<script type="module">
+import { at, clamp, lerp, easeEntrance, easeEmphatic, easeStandard, osc, markSVG }
+  from '../../brand/film-kit.js';
+
+window.FILM = { width: 1080, height: 1080, fps: 30, duration: 12.0 };
+window.__ready = false;
+
+/* ── palette, as literals matched to tokens.css ───────────────────────────── */
+const DEEP = '#0E1417', LIFT = '#3897CC', SIGNAL = '#E27113', ONDEEP = '#F4F1EC';
+
+/* ── stage geometry ───────────────────────────────────────────────────────── */
+const cv = document.getElementById('globe');
+const ctx = cv.getContext('2d');
+const CX0 = 540, CY0 = 470, R0 = 352;
+
+/* ── land mask → a fixed list of surface points, built once ───────────────── */
+let POINTS = [];            // {lat, lon, land, r0} — r0 = normalised distance from grid centre
+async function buildPoints() {
+  const txt = await fetch('../../brand/land-mask.txt').then(r => r.text());
+  const [head, b64] = txt.trim().split('\n');
+  const [NX, NY] = head.split(' ').map(Number);
+  const bin = atob(b64);
+  const bit = (i) => (bin.charCodeAt(i >> 3) >> (i & 7)) & 1;
+  const STEP = 2;                                  // sample every 2nd cell — ~10k points
+  const pts = [];
+  for (let j = 0; j < NY; j += STEP) {
+    const lat = 90 - (j + 0.5) * 180 / NY;
+    const cosl = Math.cos(lat * Math.PI / 180);
+    // keep dots roughly evenly spaced on the sphere: thin the longitude row near the poles
+    const stride = Math.max(STEP, Math.round(STEP / Math.max(0.12, cosl)));
+    for (let i = 0; i < NX; i += stride) {
+      const lon = -180 + (i + 0.5) * 360 / NX;
+      pts.push({ lat, lon, land: bit(j * NX + i) === 1 });
+    }
+  }
+  POINTS = pts;
+}
+
+/* ── projection ───────────────────────────────────────────────────────────── */
+const D2R = Math.PI / 180;
+function project(lat, lon, rot, cx, cy, R) {
+  const a = (lon + rot) * D2R, b = lat * D2R;
+  const cb = Math.cos(b);
+  const x = cb * Math.sin(a);
+  const y = -Math.sin(b);
+  const z = cb * Math.cos(a);                       // >0 = facing us
+  return { x: cx + x * R, y: cy + y * R, z, limb: Math.hypot(x, y) };
+}
+
+/* great-circle interpolation between two lat/lon points */
+function slerp(p, q, f) {
+  const [la1, lo1] = p.map(v => v * D2R), [la2, lo2] = q.map(v => v * D2R);
+  const A = [Math.cos(la1) * Math.cos(lo1), Math.cos(la1) * Math.sin(lo1), Math.sin(la1)];
+  const B = [Math.cos(la2) * Math.cos(lo2), Math.cos(la2) * Math.sin(lo2), Math.sin(la2)];
+  let d = A[0] * B[0] + A[1] * B[1] + A[2] * B[2];
+  d = Math.max(-1, Math.min(1, d));
+  const w = Math.acos(d), s = Math.sin(w);
+  const k1 = s < 1e-6 ? 1 - f : Math.sin((1 - f) * w) / s;
+  const k2 = s < 1e-6 ? f : Math.sin(f * w) / s;
+  const v = [A[0] * k1 + B[0] * k2, A[1] * k1 + B[1] * k2, A[2] * k1 + B[2] * k2];
+  const n = Math.hypot(...v);
+  return [Math.asin(v[2] / n) / D2R, Math.atan2(v[1], v[0]) / D2R];
+}
+
+const PHL = [39.95, -75.16];
+const DESTS = [
+  [51.51,  -0.13], [-23.55, -46.63], [35.68, 139.69], [-33.87, 151.21],
+  [ 6.52,   3.38], [34.05, -118.24], [41.88, -87.63], [43.65, -79.38],
+  [53.35,  -6.26], [19.08,  72.88],
+];
+const ARC_PTS = DESTS.map(d => Array.from({ length: 64 }, (_, i) => slerp(PHL, d, i / 63)));
+
+/* ── ticker, laid out once ────────────────────────────────────────────────── */
+const TICK = ['"roofer near me"', 'MAP PACK', 'AI ANSWERS', 'ORGANIC', 'PAID', 'GBP'];
+const strip = document.getElementById('strip');
+for (let rep = 0; rep < 4; rep++) {
+  for (const w of TICK) {
+    const s = document.createElement('span');
+    s.textContent = w;
+    if (w.startsWith('"')) s.className = 'hot';
+    strip.appendChild(s);
+  }
+}
+
+/* ── boot ─────────────────────────────────────────────────────────────────── */
+const els = {
+  tl: document.getElementById('tl'), tr: document.getElementById('tr'),
+  c1: document.getElementById('c1'), c2: document.getElementById('c2'),
+  l1: document.getElementById('l1'), l2: document.getElementById('l2'),
+  rule: document.getElementById('rule'), cap: document.getElementById('cap'),
+  tick: document.getElementById('tick'), sign: document.getElementById('sign'),
+  mk: document.getElementById('mk'),
+};
+let stripW = 0;
+
+Promise.all([buildPoints(), markSVG()]).then(([, svg]) => {
+  els.mk.innerHTML = svg;
+  const s = els.mk.querySelector('svg');
+  s.setAttribute('width', '100%'); s.setAttribute('height', '100%'); s.style.display = 'block';
+  stripW = strip.scrollWidth / 4;
+  window.seek(0);
+  window.__ready = true;
+});
+
+/* ── the timeline ─────────────────────────────────────────────────────────── */
+window.seek = function (t) {
+  /* --- globe transform: the title beat displaces it, it does not just sit --- */
+  const push = at(t, 4.6, 1.6, easeEmphatic);            // globe moves right + back
+  const cx = lerp(CX0, 752, push);
+  const cy = lerp(CY0, 358, push);
+  const R  = lerp(R0, 292, push);
+  const rot = -18 + t * 11.5;                            // slow, continuous, never stops
+
+  ctx.fillStyle = DEEP;
+  ctx.fillRect(0, 0, 1080, 1080);
+
+  /* --- orbital rings sweep in first --- */
+  const ringP = at(t, 0.0, 1.3, easeEmphatic);
+  if (ringP > 0) {
+    const rings = [
+      { tilt: -0.30, sq: 0.30, w: 2.0, a: 0.55, sp: 1.00 },
+      { tilt:  0.46, sq: 0.17, w: 1.4, a: 0.34, sp: -0.7 },
+      { tilt:  0.10, sq: 0.46, w: 1.2, a: 0.24, sp: 0.55 },
+    ];
+    rings.forEach((rg, i) => {
+      const p = at(t, i * 0.13, 1.25, easeEmphatic);
+      if (p <= 0) return;
+      ctx.save();
+      ctx.translate(cx, cy);
+      ctx.rotate(rg.tilt + t * 0.02 * rg.sp);
+      ctx.beginPath();
+      ctx.ellipse(0, 0, R * 1.17, R * 1.17 * rg.sq, 0, -Math.PI / 2, -Math.PI / 2 + p * Math.PI * 2);
+      ctx.strokeStyle = LIFT;
+      ctx.globalAlpha = rg.a * (0.35 + 0.65 * p);
+      ctx.lineWidth = rg.w;
+      ctx.stroke();
+      ctx.restore();
+    });
+    ctx.globalAlpha = 1;
+  }
+
+  /* --- the sphere resolves out of nothing, centre outward --- */
+  const born = at(t, 0.12, 1.35, easeStandard);
+  if (born > 0) {
+    // the sphere has mass: a flat raised-surface disc, no gradient, no glow
+    ctx.globalAlpha = 0.85 * born;
+    ctx.fillStyle = '#1A2226';
+    ctx.beginPath(); ctx.arc(cx, cy, R * born, 0, 6.2832); ctx.fill();
+    ctx.globalAlpha = 0.22 * born;
+    ctx.strokeStyle = LIFT; ctx.lineWidth = 1.4;
+    ctx.beginPath(); ctx.arc(cx, cy, R * born, 0, 6.2832); ctx.stroke();
+    ctx.globalAlpha = 1;
+    for (const p of POINTS) {
+      const q = project(p.lat, p.lon, rot, cx, cy, R);
+      if (q.z <= 0.02) continue;                        // cull the far side
+      if (q.limb > born * 1.08) continue;               // resolve centre → limb
+      const depth = q.z;                                // 0 at limb, 1 facing us
+      const edge = 1 - Math.pow(q.limb, 3.2);           // soften the very rim
+      if (p.land) {
+        ctx.globalAlpha = (0.44 + 0.56 * depth) * edge;
+        ctx.fillStyle = LIFT;
+        const r = (1.05 + 1.75 * depth) * (R / R0);
+        ctx.beginPath(); ctx.arc(q.x, q.y, r, 0, 6.2832); ctx.fill();
+      } else {
+        ctx.globalAlpha = (0.10 + 0.20 * depth) * edge;
+        ctx.fillStyle = ONDEEP;
+        const s2 = 1.5 * (R / R0);
+        ctx.fillRect(q.x - s2 / 2, q.y - s2 / 2, s2, s2);
+      }
+    }
+    ctx.globalAlpha = 1;
+  }
+
+  /* --- demand arcs spring out of Philadelphia --- */
+  ARC_PTS.forEach((path, i) => {
+    const start = 2.4 + i * 0.17;
+    const draw = at(t, start, 0.9, easeEntrance);
+    if (draw <= 0) return;
+    const fade = 1 - 0.62 * at(t, start + 1.5, 1.6, easeStandard);   // dims to a trace
+    const n = Math.max(2, Math.round(draw * path.length));
+    ctx.beginPath();
+    let pen = false;
+    for (let k = 0; k < n; k++) {
+      const q = project(path[k][0], path[k][1], rot, cx, cy, R * 1.005);
+      if (q.z <= 0) { pen = false; continue; }
+      if (!pen) { ctx.moveTo(q.x, q.y); pen = true; } else ctx.lineTo(q.x, q.y);
+    }
+    ctx.strokeStyle = SIGNAL;
+    ctx.globalAlpha = 0.9 * fade;
+    ctx.lineWidth = 2.1 * (R / R0);
+    ctx.lineCap = 'round';
+    ctx.stroke();
+
+    if (draw >= 1) {                                     // the destination pin
+      const q = project(path[path.length - 1][0], path[path.length - 1][1], rot, cx, cy, R * 1.01);
+      if (q.z > 0) {
+        ctx.globalAlpha = 0.95 * fade;
+        ctx.fillStyle = SIGNAL;
+        ctx.beginPath(); ctx.arc(q.x, q.y, 3.4 * (R / R0), 0, 6.2832); ctx.fill();
+      }
+    }
+    ctx.globalAlpha = 1;
+  });
+
+  /* --- the origin pin, always alive --- */
+  if (born > 0.4) {
+    const q = project(PHL[0], PHL[1], rot, cx, cy, R * 1.01);
+    if (q.z > 0) {
+      const beat = 0.5 + 0.5 * osc(t, 1.9);
+      ctx.globalAlpha = 0.30 * beat;
+      ctx.fillStyle = SIGNAL;
+      ctx.beginPath(); ctx.arc(q.x, q.y, (7 + 5 * beat) * (R / R0), 0, 6.2832); ctx.fill();
+      ctx.globalAlpha = 1;
+      ctx.beginPath(); ctx.arc(q.x, q.y, 4.4 * (R / R0), 0, 6.2832); ctx.fill();
+    }
+  }
+
+  /* --- corner furniture --- */
+  const tlP = at(t, 1.2, 0.9);
+  els.tl.style.opacity = tlP;
+  els.tl.style.transform = `translateX(${(1 - tlP) * -22}px)`;
+  const trP = at(t, 1.5, 0.8);
+  els.tr.style.opacity = trP;
+  els.tr.style.clipPath = `inset(0 0 ${(1 - trP) * 100}% 0)`;
+
+  /* --- the title --- */
+  const t1 = at(t, 4.6, 1.0, easeEntrance);
+  els.c1.style.clipPath = `inset(${(1 - t1) * 105}% 0 0 0)`;
+  els.l1.style.transform = `translateY(${(1 - t1) * 34}px)`;
+  const t2 = at(t, 5.5, 0.85, easeEmphatic);
+  els.c2.style.clipPath = `inset(${(1 - t2) * 105}% 0 0 0)`;
+  els.l2.style.transform = `translateY(${(1 - t2) * 46}px) scale(${lerp(1.06, 1, t2)})`;
+  els.c2.style.transformOrigin = 'left bottom';
+
+  /* --- rule + caption --- */
+  els.rule.style.width = `${at(t, 7.4, 1.0, easeEmphatic) * 452}px`;
+  const capP = at(t, 7.9, 0.9);
+  els.cap.style.opacity = capP;
+  els.cap.style.transform = `translateY(${(1 - capP) * 12}px)`;
+
+  /* --- ticker: constant speed, fades out before the sign-off --- */
+  const tkIn = at(t, 8.2, 0.8);
+  const tkOut = 1 - at(t, 11.1, 0.6, easeStandard);
+  els.tick.style.opacity = tkIn * tkOut;
+  if (stripW) strip.style.transform = `translateX(${-((t * 96) % stripW)}px)`;
+
+  /* --- sign-off --- */
+  const sgP = at(t, 11.2, 0.7);
+  els.sign.style.opacity = sgP;
+  els.sign.style.transform = `translateY(${(1 - sgP) * 10}px)`;
+};
+
+window.seek(0);
+</script>
+</body></html>

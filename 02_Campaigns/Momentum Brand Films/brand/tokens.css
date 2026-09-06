@@ -1,0 +1,74 @@
+/* Momentum Brand Films — token layer.
+   Colour, type, space, motion for every film in this slate.
+   Values are literals from the Momentum design system (momentum-brand-system skill,
+   reference table) plus --m-mark, sampled from the official mark PNG.
+   Nothing is derived at runtime. Measured ratios live in brand/contrast.json. */
+
+@import url("./fonts/fonts.css");
+
+:root {
+  /* Surfaces — light */
+  --m-paper:        #FBF8F4;
+  --m-panel:        #F0ECE5;
+  --m-ink:          #14181B;
+  --m-muted:        #636465;
+  --m-line:         #DCD6CC;   /* decorative only, not AA */
+  --m-line-strong:  #8E8578;
+
+  /* Surfaces — dark */
+  --m-deep:         #0E1417;
+  --m-deep-raised:  #1A2226;
+  --m-on-deep:      #F4F1EC;
+  --m-on-deep-muted:#8A9296;
+
+  /* Brand */
+  --m-brand:        #155E86;   /* speaks on light */
+  --m-brand-lift:   #3897CC;   /* speaks on dark */
+  --m-on-brand:     #FFFFFF;
+  --m-mark:         #2A80C2;   /* the literal logo blue, sampled from the official mark */
+
+  /* Signal */
+  --m-signal:       #E27113;   /* fills; speaks on dark */
+  --m-signal-ink:   #A35309;   /* speaks on light */
+  --m-on-signal:    #14181B;   /* never white on signal */
+  --m-focus:        #A35309;
+
+  /* Type */
+  --m-font-display: "Archivo Black", "Arial Black", sans-serif;
+  --m-font-text:    "Nunito Sans", system-ui, -apple-system, sans-serif;
+  --m-font-script:  "Caveat", cursive;
+
+  /* Space */
+  --m-s-1: .25rem; --m-s-2: .5rem;  --m-s-3: .75rem; --m-s-4: 1rem;
+  --m-s-5: 1.5rem; --m-s-6: 2rem;   --m-s-7: 3rem;   --m-s-8: 4rem;
+  --m-s-9: 6rem;   --m-s-10: 8rem;
+
+  /* Radius */
+  --m-r-sm: 8px; --m-r-md: 16px; --m-r-lg: 26px; --m-r-pill: 999px;
+
+  /* Elevation — soft */
+  --m-soft-1: 0 1px 2px rgba(14,20,23,.08), 0 6px 18px rgba(14,20,23,.06);
+  --m-soft-2: 0 18px 40px -22px rgba(14,20,23,.45);
+  --m-soft-3: 0 38px 90px -30px rgba(14,20,23,.5);
+  /* Elevation — block (hard offset, zero blur; the anti-glow lift) */
+  --m-block-sm: 8px 10px 0 rgba(226,113,19,.28);
+  --m-block-md: 14px 16px 0 rgba(226,113,19,.28);
+  --m-block-lg: 24px 28px 0 rgba(226,113,19,.28);
+
+  /* Motion */
+  --m-instant: 120ms; --m-fast: 220ms; --m-base: 500ms; --m-slow: 800ms;
+  --m-ease-standard: cubic-bezier(.2,.7,.2,1);
+  --m-ease-entrance: cubic-bezier(.16,1,.3,1);
+  --m-ease-emphatic: cubic-bezier(.85,0,.15,1);
+  --m-stagger: 70ms;
+}
+
+/* Films are rendered frame-by-frame by render/capture.py, which drives
+   window.seek(t). No CSS transitions or keyframes may run: every visual state
+   must be a pure function of t, or frames will tear. */
+*, *::before, *::after {
+  animation: none !important;
+  transition: none !important;
+  box-sizing: border-box;
+}
+html, body { margin: 0; padding: 0; background: var(--m-paper); }
