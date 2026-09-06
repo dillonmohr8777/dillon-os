@@ -44,6 +44,8 @@ var _district: Dictionary = {}
 var _buildings: Array = []
 var _landmarks: Dictionary = {}
 var _road_lines: Array = []
+var _ground_z: Array = []
+var _ground_step: float = 30.0
 var _road_coords: Array[float] = []
 var _building_rects: Array[Rect2] = []
 var _world_half := 420.0
@@ -79,6 +81,9 @@ func _load() -> bool:
 	_road_lines = _district.get("roads", [])
 	_world_half = float(_district.get("world_half", 420.0))
 	_road_coords = _derive_road_coords()
+	var grid: Dictionary = _district.get("ground_grid", {})
+	_ground_z = grid.get("z", [])
+	_ground_step = float(grid.get("step_m", 30.0))
 	_loaded = true
 	return true
 
@@ -139,14 +144,90 @@ func build(root: Node3D) -> void:
 		% [_buildings.size(), _road_lines.size(), flushed])
 
 
+## Philadelphia is not flat, and neither is this district.
+##
+## The export carries a ground grid: one height per cell, taken from the same
+## base_elevation field the buildings stand on and expressed relative to the
+## district's own ground datum. Without it the engine's single slab sat at y = 0
+## while every footprint sat on its measured base, median 13.4 m, and the whole
+## district floated thirteen metres above its own floor.
+##
+## The grid is laid as one slab per cell, in the district's pre-rotation frame,
+## rotated as a whole by the grid bearing so it lines up with everything else.
+## A skirt below each slab means the seam between two cells at different heights
+## is never a hole. One apron slab underneath covers everything beyond the grid.
 func _build_terrain(root: Node3D) -> void:
 	var span := _world_half * 2.0 + 240.0
-	kit.flat(root, "Ground", Vector3.ZERO, Vector3(span, 0.4, span), kit.mat("sidewalk"), true)
+	var rows: Array = _ground_z
+	if rows.is_empty():
+		kit.flat(root, "Ground", Vector3.ZERO, Vector3(span, 0.4, span),
+			kit.mat("sidewalk"), true)
+		return
+
+	var n: int = rows.size()
+	var step: float = _ground_step
+	var yaw := deg_to_rad(float(_district.get("grid_bearing_deg", 0.0)))
+	var ca := cos(yaw)
+	var sa := sin(yaw)
+	var low := INF
+	for j in range(n):
+		for i in range(n):
+			low = minf(low, float(rows[j][i]))
+
+	for j in range(n):
+		for i in range(n):
+			var h: float = float(rows[j][i])
+			# Local ENU offset from the district centre, then the same rotation
+			# the footprints already went through on export.
+			var ex: float = -_world_half + (float(i) + 0.5) * step
+			var ey: float = -_world_half + (float(j) + 0.5) * step
+			var ax := ex * ca - ey * sa
+			var ay := ex * sa + ey * ca
+			# Thick enough to reach below the lowest cell, so no seam opens up.
+			var thick: float = (h - low) + 6.0
+			kit.flat(root, "Ground", Vector3(ax, h - thick * 0.5, -ay),
+				Vector3(step + 0.6, thick, step + 0.6), kit.mat("sidewalk"), true,
+				-yaw)
+
+	# Everything outside the sampled grid, so the district does not end in a void.
+	kit.flat(root, "GroundApron", Vector3(0.0, low - 3.2, 0.0),
+		Vector3(span, 0.4, span), kit.mat("sidewalk"), false)
 
 
 ## Real street centrelines, laid as a ribbon per segment. Width comes from the
 ## city's own road class, which is what makes Broad Street read as Broad Street
 ## instead of one more side street.
+## Ground height at a point, from the same grid _build_terrain lays down.
+##
+## The grid is stored in the district's PRE-rotation frame, so a Godot point has
+## to be turned back through the grid bearing before it can be looked up. Roads
+## and anything else that lies on the ground needs this: they used to sit at a
+## fixed y = 0.06, which was correct only while the ground was one flat slab.
+func _ground_at(gx: float, gz: float) -> float:
+	if _ground_z.is_empty():
+		return 0.0
+	var n := _ground_z.size()
+	var yaw := deg_to_rad(float(_district.get("grid_bearing_deg", 0.0)))
+	var ay := -gz
+	var ca := cos(-yaw)
+	var sa := sin(-yaw)
+	var ex := gx * ca - ay * sa
+	var ey := gx * sa + ay * ca
+	var tx: float = (ex + _world_half) / _ground_step - 0.5
+	var ty: float = (ey + _world_half) / _ground_step - 0.5
+	var bx := int(floor(tx))
+	var by := int(floor(ty))
+	var fx := tx - float(bx)
+	var fy := ty - float(by)
+	var g := func(i: int, j: int) -> float:
+		return float(_ground_z[clampi(j, 0, n - 1)][clampi(i, 0, n - 1)])
+	var s00: float = g.call(bx, by)
+	var s10: float = g.call(bx + 1, by)
+	var s01: float = g.call(bx, by + 1)
+	var s11: float = g.call(bx + 1, by + 1)
+	return (s00 + (s10 - s00) * fx) * (1.0 - fy) + (s01 + (s11 - s01) * fx) * fy
+
+
 func _build_roads(root: Node3D) -> void:
 	for road in _road_lines:
 		var pts: Array = road.get("points", [])
@@ -163,7 +244,10 @@ func _build_roads(root: Node3D) -> void:
 			var length := sqrt(dx * dx + dz * dz)
 			if length < 1.5:
 				continue
-			var centre := Vector3((ax + bx) * 0.5, 0.06, (az + bz) * 0.5)
+			var mx := (ax + bx) * 0.5
+			var mz := (az + bz) * 0.5
+			# Lie on the ground, not at a fixed height above the old flat slab.
+			var centre := Vector3(mx, _ground_at(mx, mz) + 0.10, mz)
 			var yaw := atan2(dx, dz)
 			kit.batch_box("roadway", Vector3(width, 0.12, length + width * 0.5),
 				kit.mat("asphalt"), centre, yaw, false)

@@ -191,3 +191,50 @@ test('the builder exposes the surface the rest of the game calls', () => {
     assert.ok(new RegExp(`func ${fn}\\(`).test(src), `missing func ${fn}()`);
   }
 });
+
+test('the district sits on the engine floor, not thirteen metres above it', () => {
+  // The engine draws its ground as one slab at y = 0. Exporting absolute
+  // base_elevation left every footprint floating at its measured elevation:
+  // median 13.4 m across this window.
+  assert.ok(typeof district.ground_datum_m === 'number',
+    'the district records no ground datum');
+  assert.ok(district.ground_datum_m > 1,
+    `a ${district.ground_datum_m} m datum means nothing was shifted`);
+  const ys = buildings.map((b) => b.centre[1]).sort((a, b) => a - b);
+  const median = ys[Math.floor(ys.length / 2)];
+  assert.ok(Math.abs(median) < 1.5,
+    `median building base is ${median.toFixed(1)} m off the floor`);
+  // and the real relief between footprints survives the shift
+  assert.ok(ys[ys.length - 1] - ys[0] > 5,
+    'every building landed at the same height, so the relief was flattened');
+});
+
+test('the ground grid covers the district and matches the buildings on it', () => {
+  const g = district.ground_grid;
+  assert.ok(g && Array.isArray(g.z) && g.z.length > 8, 'no ground grid');
+  assert.strictEqual(g.z.length, g.cells);
+  for (const row of g.z) {
+    assert.strictEqual(row.length, g.cells, 'the grid is not square');
+    for (const v of row) assert.ok(Number.isFinite(v), `bad cell ${v}`);
+  }
+  assert.ok(Math.abs(g.cells * g.step_m - district.world_half * 2) < 1,
+    `${g.cells} cells of ${g.step_m} m do not span the ${district.world_half * 2} m district`);
+  const flat = g.z.flat();
+  const lo = Math.min(...flat), hi = Math.max(...flat);
+  assert.ok(hi - lo > 2, `only ${(hi - lo).toFixed(1)} m of relief, is the grid real?`);
+  assert.ok(hi - lo < 60, `${(hi - lo).toFixed(1)} m of relief in 840 m is not Center City`);
+  // the ground and the buildings must be on the same datum
+  const ys = buildings.map((b) => b.centre[1]);
+  const median = ys.sort((a, b) => a - b)[Math.floor(ys.length / 2)];
+  assert.ok(median > lo - 3 && median < hi + 3,
+    `buildings sit at ${median.toFixed(1)} m but the ground runs ${lo.toFixed(1)} to ${hi.toFixed(1)}`);
+});
+
+test('the GDScript lays the ground grid and puts roads on it', () => {
+  const gd = fs.readFileSync(path.join(__dirname, '..', 'godot', 'scripts',
+    'philadelphia_world_builder.gd'), 'utf8');
+  assert.ok(/func _ground_at\(/.test(gd), 'no ground sampler');
+  assert.ok(/_ground_at\(mx, mz\)/.test(gd),
+    'roads still sit at a fixed height above a flat slab');
+  assert.ok(/ground_grid/.test(gd), 'the builder never reads the ground grid');
+});

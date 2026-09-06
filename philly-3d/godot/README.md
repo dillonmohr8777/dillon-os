@@ -109,12 +109,41 @@ cp test/philly_smoke.gd                   <gtb>/godot/
 godot --headless --path <gtb>/godot --script philly_smoke.gd
 ```
 
-Last run, Godot 4.2.2-stable: 22 checks passed. 462 MeshInstance3D and 462
-StaticBody3D built in 247 ms, no mesh instance without a mesh, City Hall
+Last run, Godot 4.2.2-stable: 22 checks passed. 1,246 MeshInstance3D and 1,245
+StaticBody3D built in 312 ms, no mesh instance without a mesh, City Hall
 44.7 m off the district centre where the projection puts it, 22 street axes,
 both in-window prospects carrying their spec homepage.
 
-Two things that run taught, which reading the code did not:
+It also renders. `test/philly_shot.gd` puts a camera and a sun in the district
+and saves PNGs, which needs a real GL context rather than `--headless`:
+
+```bash
+SHOT_DIR=<out> SUN_ELEV=31 SUN_AZ=246 CAM_NEAR=0.6 CAM_FAR=2400 \
+  xvfb-run -a -s "-screen 0 1600x900x24" \
+  godot --path <gtb>/godot --rendering-driver opengl3 \
+        --resolution 1600x900 --script philly_shot.gd
+```
+
+`renders/godot-01-district.png`, `godot-02-street.png` and `godot-03-aerial.png`
+are its output: real Philadelphia in the Grand Theft Bureaucracy engine, drawn
+with that engine's own glass shader, lit windows, parapets and cornices.
+
+Three things that run taught, which reading the code did not:
+
+- **The district floated.** The engine draws its ground as one slab at y = 0
+  while the export put every footprint on its measured `base_elevation`, which
+  across this window runs 0.7 to 14.7 m with a median of 13.4. The whole
+  district sat thirteen metres above its own floor. It is shifted onto y = 0 by
+  its own ground datum now, recorded as `ground_datum_m` so the shift is never
+  silent, and the real relief between footprints survives it.
+- **Making the ground real broke the roads.** They were laid at a fixed
+  `y = 0.06`, correct only while the ground was one flat slab. `_ground_at()`
+  samples the same grid, so they lie on it.
+- The first camera used a 0.05 near plane against a 4000 far plane, a ratio of
+  80,000, which tore the pavement apart at street level. Both planes are set per
+  shot.
+
+Two more things that run taught:
 
 - `road_coords()` returns street AXIS coordinates, matching
   `District.ROAD_COORDS` in the shipped builder, not the road polylines. An

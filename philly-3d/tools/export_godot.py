@@ -39,6 +39,15 @@ from geo import to_local, FEET_TO_M                                # noqa: E402
 
 BIN = os.path.join(HERE, "data", "philly-buildings.bin")
 CROWNS = os.path.join(HERE, "data", "philly-crowns.json")
+TERRAIN = os.path.join(HERE, "data", "philly-terrain.bin")
+
+# The engine draws its ground as one flat slab at y = 0. The survey puts every
+# footprint on its own base elevation, which across this district runs 0.7 to
+# 14.7 m with a median of 13.4, so exporting those absolutely left the whole
+# district floating thirteen metres above the floor it stands on. The district
+# is shifted onto y = 0 by its own ground datum instead, and the real relief is
+# kept as a terrain grid the builder lays down under it.
+GROUND_CELLS = 28              # over the 840 m district, so 30 m per cell
 PROSPECTS = os.path.join(HERE, "data", "philly-prospects.json")
 STREETS = os.environ.get("PHL_STREETS", "/home/user/work/phl-data/streets.ndjson")
 OUT = os.path.join(HERE, "dist", "godot")
@@ -56,6 +65,7 @@ MAX_BUILDINGS = 4000
 # every existing system - traffic lanes, pedestrian routes, minimap, window
 # punching - keeps working untouched.
 GRID_BEARING_DEG = 9.21
+DATUM = 0.0
 _ROT = math.radians(GRID_BEARING_DEG)
 _COS, _SIN = math.cos(_ROT), math.sin(_ROT)
 
@@ -150,6 +160,35 @@ def obb(ring):
     return cx, cy, w, d, ang
 
 
+def read_terrain():
+    """The 50 m height field from build_terrain.py, as a sampler in local ENU."""
+    if not os.path.exists(TERRAIN):
+        return None
+    raw = open(TERRAIN, "rb").read()
+    if raw[:8] != b"PHLTERR1":
+        return None
+    nx, ny = struct.unpack_from("<II", raw, 8)
+    x0, y0 = struct.unpack_from("<ff", raw, 16)
+    cell = struct.unpack_from("<f", raw, 24)[0]
+    zmin, zscale = struct.unpack_from("<ff", raw, 28)
+    q = struct.unpack(f"<{nx * ny}H", zlib.decompress(raw[36:]))
+
+    def at(x, y):
+        tx = (x - x0) / cell - 0.5
+        ty = (y - y0) / cell - 0.5
+        bx, by = int(math.floor(tx)), int(math.floor(ty))
+        rx, ry = tx - bx, ty - by
+        fx = rx * rx * (3 - 2 * rx)        # the same fade the viewer uses
+        fy = ry * ry * (3 - 2 * ry)
+        def g(i, j):
+            i = min(max(i, 0), nx - 1)
+            j = min(max(j, 0), ny - 1)
+            return zmin + q[j * nx + i] * zscale
+        return ((g(bx, by) + (g(bx + 1, by) - g(bx, by)) * fx) * (1 - fy)
+                + (g(bx, by + 1) + (g(bx + 1, by + 1) - g(bx, by + 1)) * fx) * fy)
+    return at
+
+
 def crown_rows(b, crown, base_cx, base_cy):
     """Tier boxes for one crowned building, in the same row shape the engine's
     _build_building already consumes.
@@ -178,7 +217,7 @@ def crown_rows(b, crown, base_cx, base_cy):
             solid = t.get("kind") in SOLID_KINDS
         rows.append({
             "id": b["id"],
-            "centre": gd(ox - base_cx, oy - base_cy, z),
+            "centre": gd(ox - base_cx, oy - base_cy, z - DATUM),
             "size": [round(size[0], 2), round(size[1], 2)],
             "height": round(top - z, 2),
             "rot_y": round(-(ang + _ROT), 4),
@@ -234,12 +273,30 @@ def main():
     buildings = load_buildings(cx, cy, HALF)
     roads = load_roads(cx, cy, HALF)
 
+    # The datum that puts this district on the engine's floor: the median base
+    # of the real footprints in it. Recorded in the district file, never silent.
+    global DATUM
+    bases = sorted(b["base"] for b in buildings)
+    DATUM = bases[len(bases) // 2] if bases else 0.0
+
+    terrain = read_terrain()
+    ground = []
+    if terrain is not None:
+        step = (HALF * 2.0) / GROUND_CELLS
+        for j in range(GROUND_CELLS):
+            row = []
+            for i in range(GROUND_CELLS):
+                px = cx - HALF + (i + 0.5) * step
+                py = cy - HALF + (j + 0.5) * step
+                row.append(round(terrain(px, py) - DATUM, 2))
+            ground.append(row)
+
     rows = []
     for b in buildings:
         bx, by, w, d, ang = obb(b["ring"])
         rows.append({
             "id": b["id"],
-            "centre": gd(bx - cx, by - cy, b["base"]),
+            "centre": gd(bx - cx, by - cy, b["base"] - DATUM),
             "size": [round(w, 2), round(d, 2)],
             "height": round(b["h"], 2),
             # Godot rotates about Y; a bearing measured counter-clockwise from
@@ -292,6 +349,19 @@ def main():
         "frame_note": "district rotated by grid_bearing_deg so Penn's streets "
                       "align to the Godot axes",
         "spawn": gd(900 - cx, -142 - cy, 0) if abs(900 - cx) <= HALF else gd(0, 0, 0),
+        "ground_datum_m": round(DATUM, 2),
+        "ground_datum_note": "median base_elevation of the footprints in this "
+                             "window, subtracted from every y so the district "
+                             "sits on the engine's floor instead of thirteen "
+                             "metres above it",
+        "ground_grid": {
+            "cells": GROUND_CELLS,
+            "step_m": round((HALF * 2.0) / GROUND_CELLS, 2),
+            "note": "terrain height per cell relative to ground_datum_m, "
+                    "row-major from the south-west corner of the district, "
+                    "in the district's pre-rotation frame",
+            "z": ground,
+        },
         "roads": roads,
         "landmarks": landmarks,
         "building_count": len(rows),
