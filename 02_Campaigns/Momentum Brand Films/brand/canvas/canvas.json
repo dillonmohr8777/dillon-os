@@ -1,0 +1,51 @@
+{
+ "artboards": [
+  {
+   "file": "Main.dc.html",
+   "x": 0,
+   "y": 0,
+   "w": 1400,
+   "h": 900
+  },
+  {
+   "file": "Material.dc.html",
+   "x": 1520,
+   "y": 0,
+   "w": 1400,
+   "h": 900
+  },
+  {
+   "file": "Type.dc.html",
+   "x": 0,
+   "y": 1060,
+   "w": 1240,
+   "h": 900
+  },
+  {
+   "file": "Transitions.dc.html",
+   "x": 1400,
+   "y": 1060,
+   "w": 1400,
+   "h": 820
+  },
+  {
+   "file": "Identity.dc.html",
+   "x": 0,
+   "y": 2100,
+   "w": 1240,
+   "h": 760
+  }
+ ],
+ "annotations": [
+  {
+   "id": "note-direction",
+   "x": 2960,
+   "y": 40,
+   "w": 300,
+   "text": "Direction: cut paper, not flat vector.\\n\\nEvery logo, word and UI element stays code-drawn and frame-exact. Only the grounds, plates and transitions are generated material.\\n\\nTilt stays between 1.5 and 3 degrees. Any more and it reads as a template."
+  }
+ ],
+ "launch": {
+  "view": "canvas"
+ }
+}
