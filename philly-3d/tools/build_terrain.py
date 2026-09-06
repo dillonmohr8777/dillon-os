@@ -44,7 +44,16 @@ from geo import to_local, FEET_TO_M                                # noqa: E402
 
 SRC = os.environ.get("PHL_BUILDINGS",
                      "/home/user/work/phl-data/buildings.ndjson")
+WATER = os.environ.get("PHL_WATER", "/home/user/work/phl-data/water.ndjson")
 OUT = os.path.join(HERE, "dist")
+
+# Mean tide, matching WATER_Z in build_water.py. Cells covered by water are
+# pushed below it so the river surface is the thing you see, not the riverbank
+# elevation that nearest-neighbour fill would otherwise spread across the
+# channel. Without this the Schuylkill at Boathouse Row came out as 22 m of
+# solid ground and both rivers vanished under the terrain.
+WATER_Z = 0.0
+WATER_DEPTH = 2.0
 
 CELL = 50.0          # metres. Terrain is smooth; the samples are not dense.
 PAD = 4              # cells of margin around the sampled extent
@@ -78,6 +87,59 @@ def read_samples(path):
             zs.append(float(mb.group(1)) * FEET_TO_M)
     return (np.array(xs, dtype=np.float64), np.array(ys, dtype=np.float64),
             np.array(zs, dtype=np.float32), n, skipped)
+
+
+def water_mask(nx, ny, x0, y0, cell):
+    """Grid cells covered by the hydrography layer.
+
+    A point-in-polygon test per cell would be far too slow over 331,487 cells
+    and 7,979 polygons. Instead each polygon is scanline-filled straight into
+    the grid, which is the same approach the shadow rasteriser uses.
+    """
+    mask = np.zeros((ny, nx), dtype=bool)
+    if not os.path.exists(WATER):
+        return mask, 0
+    n_poly = 0
+    for line in open(WATER, encoding="utf-8"):
+        try:
+            feat = json.loads(line)
+        except json.JSONDecodeError:
+            continue
+        geom = feat.get("geometry") or {}
+        kind = geom.get("type")
+        if kind == "Polygon":
+            rings = [geom["coordinates"][0]]
+        elif kind == "MultiPolygon":
+            rings = [poly[0] for poly in geom["coordinates"]]
+        else:
+            continue
+        for ring in rings:
+            pts = [to_local(lon, lat) for lon, lat in ring]
+            if len(pts) < 3:
+                continue
+            n_poly += 1
+            gy = [(p[1] - y0) / cell for p in pts]
+            gx = [(p[0] - x0) / cell for p in pts]
+            r0 = max(0, int(math.ceil(min(gy) - 0.5)))
+            r1 = min(ny - 1, int(math.floor(max(gy) - 0.5)))
+            for r in range(r0, r1 + 1):
+                sy = r + 0.5
+                xs = []
+                for k in range(len(pts)):
+                    k2 = (k + 1) % len(pts)
+                    ay, by = gy[k], gy[k2]
+                    if (ay <= sy < by) or (by <= sy < ay):
+                        t = (sy - ay) / (by - ay)
+                        xs.append(gx[k] + t * (gx[k2] - gx[k]))
+                if len(xs) < 2:
+                    continue
+                xs.sort()
+                for i in range(0, len(xs) - 1, 2):
+                    c0 = max(0, int(math.ceil(xs[i] - 0.5)))
+                    c1 = min(nx - 1, int(math.floor(xs[i + 1] - 0.5)))
+                    if c1 >= c0:
+                        mask[r, c0:c1 + 1] = True
+    return mask, n_poly
 
 
 def nearest_fill(grid, have):
@@ -146,8 +208,19 @@ def main():
     sampled = int(have.sum())
     grid = grid.reshape(ny, nx)
     have = have.reshape(ny, nx)
+
+    # Fill and smooth from the BUILDING samples only. Seeding the fill with
+    # water cells as well flooded the map: every park, rail yard and empty
+    # block that happened to be nearer a creek than a building filled to river
+    # level, and the median dry cell came out at the water plane.
     rounds = nearest_fill(grid, have.copy())
     grid = smooth(grid)
+
+    # Then carve. Water is stamped last so nothing can lift it back out of the
+    # channel, and only downward, so a cell that is genuinely high stays high.
+    wet, n_poly = water_mask(nx, ny, x0, y0, CELL)
+    wet_only = wet & ~have
+    grid[wet_only] = np.minimum(grid[wet_only], WATER_Z - WATER_DEPTH)
 
     zmin = float(grid.min())
     zmax = float(grid.max())
@@ -171,6 +244,8 @@ def main():
     print(f"sampled cells {sampled} of {nx * ny} "
           f"({100 * sampled / (nx * ny):.1f}%), filled by nearest neighbour in "
           f"{rounds} rounds")
+    print(f"water cells {int(wet_only.sum())} from {n_poly} polygons, "
+          f"stamped to {WATER_Z - WATER_DEPTH:.1f} m so the river surface wins")
     print(f"elevation {zmin:.2f} to {zmax:.2f} m, quantisation error <= {err * 100:.3f} cm")
     print(f"{os.path.getsize(path) / 1024:.0f} KB in {time.time() - t0:.0f}s -> {path}")
 

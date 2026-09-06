@@ -111,3 +111,39 @@ test('a bad magic is rejected rather than decoded as noise', () => {
   const bad = new Uint8Array(64);
   assert.throws(() => new Terrain(bad.buffer), /magic/);
 });
+
+test('the rivers are carved out of the terrain, not buried under it', () => {
+  // The height field is interpolated from building bases, and there are no
+  // buildings on a river. Nearest-neighbour fill therefore spread the riverbank
+  // straight across the channel: the Schuylkill at Boathouse Row came out as
+  // 22 m of solid ground, and the water plane at z = 0 was buried under it.
+  // build_terrain.py now stamps the hydrography layer down to -2 m.
+  //
+  // Sampled here as the fraction of the whole grid that sits below the water
+  // plane, which no purely building-derived field would ever produce.
+  let below = 0;
+  for (const h of terrain.heights) if (h < -1.5) below++;
+  const share = below / terrain.heights.length;
+  assert.ok(share > 0.02,
+    `only ${(share * 100).toFixed(2)}% of the grid is below the water plane; ` +
+    'the channels were not carved');
+  assert.ok(share < 0.20,
+    `${(share * 100).toFixed(1)}% of the grid is underwater, which is a flood`);
+  assert.ok(terrain.min < -1.5 && terrain.min > -6,
+    `deepest cell ${terrain.min} m`);
+});
+
+test('carving the rivers did not flood the land', () => {
+  // The first attempt seeded the nearest-neighbour fill with the water cells as
+  // well as the buildings. Every park, rail yard and empty block that happened
+  // to sit nearer a creek than a building filled to river level, and the median
+  // cell in the whole county came out at the water plane.
+  const sorted = Array.from(terrain.heights).sort((a, b) => a - b);
+  const median = sorted[Math.floor(sorted.length / 2)];
+  assert.ok(median > 5,
+    `median ground across the county is ${median.toFixed(2)} m, which means ` +
+    'the fill spread the water level over the land');
+  // and the high ground survives
+  assert.ok(sorted[Math.floor(sorted.length * 0.9)] > 40,
+    'the north-west high ground was flattened');
+});

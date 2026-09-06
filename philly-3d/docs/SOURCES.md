@@ -101,6 +101,22 @@ covering 27.9 by 29.6 km, quantised to uint16 with a worst-case error of
 Spot checks against the height field: City Hall 42 ft, the Art Museum 62 ft on
 Faire Mount, Penn's Landing 23 ft, Manayunk 188 ft.
 
+**The rivers had to be carved.** The height field is interpolated from building
+bases, and there are no buildings on a river, so the nearest-neighbour fill
+spread the riverbank straight across the channel: the Schuylkill at Boathouse
+Row came out as 22 m of solid ground, and the water plane at z = 0 was buried
+under it. `build_terrain.py` scanline-fills the hydrography polygons into the
+grid and stamps those 16,864 cells down to -2 m, so the river surface is what
+you see.
+
+Order matters, and getting it wrong the first time flooded the map. Seeding the
+fill with the water cells as well as the buildings meant every park, rail yard
+and empty block that happened to sit nearer a creek than a building filled to
+river level, and the median cell in the whole county came out at the water
+plane. The fill runs on building samples only; water is stamped afterwards, and
+only downward, so a cell that is genuinely high stays high. Median dry ground is
+30.87 m, and 99.5% of water cells sit at or below the plane.
+
 **Where the terrain and a building disagree.** The height field is interpolated
 from the bases, so it does not reproduce any single one of them exactly.
 Measured against the 5,586 landmarks: the terrain sits above the building's own
