@@ -15,19 +15,21 @@
   .full { position:absolute; left:0; width:1920px; text-align:center; }
 
   /* ── beat 1 ─────────────────────────────────────────────── */
-  #l1 { top:466px; font-size:88px; }
-  #r1 { position:absolute; top:614px; left:960px; height:4px; background:var(--m-signal-ink); }
+  #l1 { top:430px; font-size:88px; }
+  #r1 { position:absolute; top:578px; left:960px; width:244px; margin-left:-122px;
+        height:5px; background:var(--m-signal-ink); }
 
   /* ── beat 2 ─────────────────────────────────────────────── */
-  #l2 { top:380px; transform-origin:50% 0; }
-  #l2 .a { font-size:72px; }
-  #l2 .b { font-size:132px; }
+  #l2 { top:576px; left:120px; width:1740px; text-align:left; transform-origin:0 0; }
+  #l2 .clip { white-space:nowrap; }
+  #l2 .a { font-size:76px; }
+  #l2 .b { font-size:172px; }
 
   /* ── device cards (beats 3–4) ───────────────────────────── */
   #cards { position:absolute; inset:0; perspective:1500px; perspective-origin:52% 46%; }
   .card { position:absolute; transform-origin:50% 50%; will-change:transform,opacity;
           background:var(--m-paper); border:1px solid var(--m-line);
-          box-shadow:var(--m-soft-2); overflow:hidden; }
+          box-shadow:var(--m-block-sm); overflow:hidden; }
 
   #browser { left:150px; top:230px; width:900px; height:600px; border-radius:var(--m-r-md); z-index:2; }
   .chrome { height:52px; background:var(--m-panel); border-bottom:1px solid var(--m-line);
@@ -91,16 +93,19 @@
 
   /* ── beat 5 ─────────────────────────────────────────────── */
   #half { position:absolute; left:0; top:0; width:864px; height:1080px; background:var(--m-panel); }
+  #halfedge { position:absolute; left:861px; top:0; width:3px; height:1080px;
+              background:var(--m-line-strong); transform-origin:50% 0; }
   #mapcard { position:absolute; left:96px; top:250px; width:672px; height:560px;
              background:var(--m-paper); border:1px solid var(--m-line-strong);
              border-radius:var(--m-r-md); box-shadow:var(--m-block-sm); overflow:hidden; }
-  .pin { position:absolute; width:34px; height:46px; margin-left:-17px; margin-top:-46px; }
+  .pin { position:absolute; width:34px; height:46px; margin-left:-17px; margin-top:-46px;
+         transform-origin:50% 100%; }
   #mapHead { position:absolute; left:944px; top:242px; width:860px; }
   #mapHead .d { font-size:96px; }
   #pack { position:absolute; left:944px; top:552px; width:700px; }
   .prow { position:absolute; left:0; width:700px; height:96px; display:flex; align-items:center;
           gap:22px; padding:0 22px; background:var(--m-paper);
-          border:1px solid var(--m-line); border-radius:var(--m-r-sm); box-shadow:var(--m-soft-1); }
+          border:1px solid var(--m-line); border-radius:var(--m-r-sm); }
   .prow .rank { width:38px; height:38px; border-radius:50%; background:var(--m-panel);
                 display:flex; align-items:center; justify-content:center;
                 font-size:19px; font-weight:800; color:var(--m-ink); flex:0 0 auto; }
@@ -174,6 +179,7 @@
 
   <!-- beat 5 ground -->
   <div id="half"></div>
+  <div id="halfedge"></div>
 
   <!-- beat 1 -->
   <div class="full d" id="l1">Most local businesses run ads.</div>
@@ -194,12 +200,12 @@
         <div class="rail"><i></i><i></i><i></i><i></i></div>
         <div class="hd"></div><div class="hd2"></div>
         <svg class="chart" viewBox="0 0 720 230" preserveAspectRatio="none">
-          <line x1="0" y1="229" x2="720" y2="229" stroke="#DCD6CC" stroke-width="2"/>
-          <line x1="0" y1="153" x2="720" y2="153" stroke="#DCD6CC" stroke-width="1"/>
-          <line x1="0" y1="77"  x2="720" y2="77"  stroke="#DCD6CC" stroke-width="1"/>
+          <line x1="0" y1="229" x2="720" y2="229" style="stroke:var(--m-line)" stroke-width="2"/>
+          <line x1="0" y1="153" x2="720" y2="153" style="stroke:var(--m-line)" stroke-width="1"/>
+          <line x1="0" y1="77"  x2="720" y2="77"  style="stroke:var(--m-line)" stroke-width="1"/>
           <polyline points="0,206 90,192 180,198 270,160 360,148 450,110 540,96 630,58 720,26"
-                    fill="none" stroke="#155E86" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
-          <circle cx="720" cy="26" r="9" fill="#E27113"/>
+                    fill="none" style="stroke:var(--m-brand)" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+          <circle cx="720" cy="26" r="9" style="fill:var(--m-signal)"/>
         </svg>
         <div class="row" style="top:376px;width:560px"></div>
         <div class="row" style="top:410px;width:430px"></div>
@@ -235,19 +241,19 @@
 
     <div class="card" id="mapc">
       <svg viewBox="0 0 400 300" width="444" height="334" preserveAspectRatio="none">
-        <rect width="400" height="300" fill="#F0ECE5"/>
-        <path d="M0 210 C 90 190, 130 240, 210 224 S 340 196, 400 210 L400 300 L0 300 Z" fill="#155E86" opacity=".10"/>
-        <g stroke="#DCD6CC" stroke-width="7">
+        <rect width="400" height="300" style="fill:var(--m-panel)"/>
+        <path d="M0 210 C 90 190, 130 240, 210 224 S 340 196, 400 210 L400 300 L0 300 Z" style="fill:var(--m-brand)" opacity=".10"/>
+        <g style="stroke:var(--m-line)" stroke-width="7">
           <line x1="-10" y1="72" x2="410" y2="72"/><line x1="-10" y1="168" x2="410" y2="168"/>
           <line x1="96" y1="-10" x2="96" y2="310"/><line x1="268" y1="-10" x2="268" y2="310"/>
         </g>
-        <g stroke="#8E8578" stroke-width="3" opacity=".5">
+        <g style="stroke:var(--m-line-strong)" stroke-width="3" opacity=".5">
           <line x1="-10" y1="120" x2="410" y2="120"/><line x1="186" y1="-10" x2="186" y2="310"/>
         </g>
         <path d="M268 120 l0 -10" stroke="none"/>
         <g transform="translate(268,120)">
-          <path d="M0 0 C -13 -17, -17 -22, -17 -31 A 17 17 0 1 1 17 -31 C 17 -22, 13 -17, 0 0 Z" fill="#E27113"/>
-          <circle cx="0" cy="-31" r="6" fill="#FBF8F4"/>
+          <path d="M0 0 C -13 -17, -17 -22, -17 -31 A 17 17 0 1 1 17 -31 C 17 -22, 13 -17, 0 0 Z" style="fill:var(--m-signal)"/>
+          <circle cx="0" cy="-31" r="6" style="fill:var(--m-paper)"/>
         </g>
       </svg>
     </div>
@@ -264,23 +270,23 @@
   <!-- beat 5 -->
   <div id="mapcard">
     <svg viewBox="0 0 672 560" width="672" height="560" id="mapsvg">
-      <rect width="672" height="560" fill="#FBF8F4"/>
+      <rect width="672" height="560" style="fill:var(--m-paper)"/>
       <path d="M0 400 C 130 372, 210 448, 330 424 S 560 372, 672 396 L672 560 L0 560 Z"
-            fill="#155E86" opacity=".09"/>
+            style="fill:var(--m-brand)" opacity=".09"/>
       <path d="M112 -10 C 150 130, 96 240, 148 360 S 210 520, 190 570"
-            fill="none" stroke="#155E86" stroke-width="16" opacity=".14"/>
-      <g stroke="#DCD6CC" stroke-width="11">
+            fill="none" style="stroke:var(--m-brand)" stroke-width="16" opacity=".14"/>
+      <g style="stroke:var(--m-line)" stroke-width="11">
         <line x1="-10" y1="118" x2="682" y2="118"/><line x1="-10" y1="272" x2="682" y2="272"/>
         <line x1="-10" y1="432" x2="682" y2="432"/>
         <line x1="152" y1="-10" x2="152" y2="570"/><line x1="352" y1="-10" x2="352" y2="570"/>
         <line x1="540" y1="-10" x2="540" y2="570"/>
       </g>
-      <g stroke="#8E8578" stroke-width="4" opacity=".45">
+      <g style="stroke:var(--m-line-strong)" stroke-width="4" opacity=".45">
         <line x1="-10" y1="196" x2="682" y2="196"/><line x1="-10" y1="352" x2="682" y2="352"/>
         <line x1="252" y1="-10" x2="252" y2="570"/><line x1="450" y1="-10" x2="450" y2="570"/>
       </g>
-      <rect x="384" y="290" width="130" height="118" fill="#155E86" opacity=".07"/>
-      <rect x="176" y="140" width="60" height="40" fill="#8E8578" opacity=".16"/>
+      <rect x="384" y="290" width="130" height="118" style="fill:var(--m-brand)" opacity=".07"/>
+      <rect x="176" y="140" width="60" height="40" style="fill:var(--m-line-strong)" opacity=".16"/>
     </svg>
     <div class="pin" id="pin0" style="left:252px; top:196px"></div>
     <div class="pin" id="pin1" style="left:540px; top:432px"></div>
@@ -333,8 +339,8 @@
     </div>
   </div>
   <div id="pgType">
-    <span class="clip g" style="left:-40px;top:278px"><span class="d" id="pg1">We write</span></span>
-    <span class="clip g" style="left:-12px;top:452px"><span class="d" id="pg2">the pages</span></span>
+    <span class="clip g" style="left:-26px;top:278px"><span class="d" id="pg1">We write</span></span>
+    <span class="clip g" style="left:-26px;top:452px"><span class="d" id="pg2">the pages</span></span>
     <span class="s" id="pg3">that answer <span class="acc">the question.</span></span>
   </div>
 
@@ -367,13 +373,16 @@
 
 <script type="module">
 import { at, clamp, lerp, words, revealWords, easeEntrance, easeEmphatic, easeStandard,
-         osc, markSVG, Lockup } from '../../brand/film-kit.js';
+         easeInOut, osc, markSVG, Lockup } from '../../brand/film-kit.js';
 
 window.FILM = { width: 1920, height: 1080, fps: 30, duration: 30.0 };
 window.__ready = false;
 
 const $ = (id) => document.getElementById(id);
-const SIGNAL = '#E27113';
+/* colour comes from the token layer, never from memory */
+const TOK = (name) =>
+  getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+const SIGNAL = TOK('--m-signal');
 
 /* ── helpers ─────────────────────────────────────────────────────────────── */
 const K = (o = {}) => Object.assign({ x: 0, y: 0, s: 1, ry: 0, rx: 0, tz: 0, o: 1 }, o);
@@ -398,10 +407,10 @@ const win = (t, a, aIn, b, bOut) => at(t, a, aIn, easeStandard) * (1 - at(t, b, 
 /* ── pin artwork (drawn, not imported) ───────────────────────────────────── */
 const PIN = (fill) => `<svg viewBox="0 0 34 46" width="34" height="46">
   <path d="M17 46 C 4 27, 0 21, 0 15 A 17 17 0 1 1 34 15 C 34 21, 30 27, 17 46 Z" fill="${fill}"/>
-  <circle cx="17" cy="15" r="6.4" fill="#FBF8F4"/></svg>`;
-$('pin0').innerHTML = PIN('#155E86');
-$('pin1').innerHTML = PIN('#155E86');
-$('pin2').innerHTML = PIN('#E27113');
+  <circle cx="17" cy="15" r="6.4" fill="${TOK('--m-paper')}"/></svg>`;
+$('pin0').innerHTML = PIN(TOK('--m-brand'));
+$('pin1').innerHTML = PIN(TOK('--m-brand'));
+$('pin2').innerHTML = PIN(SIGNAL);
 
 /* ── word runs, coloured once ────────────────────────────────────────────── */
 const w1 = words($('l1'));            // Most local businesses run ads.
@@ -412,12 +421,21 @@ w2b[1].classList.add('acc');
 /* ── beat-6 page stack, measured once ────────────────────────────────────── */
 const pageStack = $('pagestack');
 
+/* ── beat-1 rule: measured to the headline it underlines, so frame 0 is a
+      settled mark rather than a stray dash ───────────────────────────────── */
+let RULEW = 244;
+const measureRule = () => {
+  const a = w1[0].getBoundingClientRect();
+  const b = w1[w1.length - 1].getBoundingClientRect();
+  if (b.right > a.left) RULEW = Math.round(b.right - a.left);
+};
+
 /* ── the dart path ───────────────────────────────────────────────────────── */
 const ctx = $('trail').getContext('2d');
 let MARKC = { x: 830, y: 482 };       // replaced by the measured lockup mark centre
 let PATH = null;
 const buildPath = () => {
-  PATH = [[64, 1016], [676, 1044], [1046, 742], [MARKC.x, MARKC.y]];
+  PATH = [[64, 1016], [560, 1000], [320, 610], [MARKC.x, MARKC.y]];
 };
 const bez = (p) => {
   const u = 1 - p, a = u * u * u, b = 3 * u * u * p, c = 3 * u * p * p, d = p * p * p;
@@ -426,7 +444,11 @@ const bez = (p) => {
 };
 
 /* ── boot ────────────────────────────────────────────────────────────────── */
-const MARK_SIZE = 128;
+const MARK_SIZE = 128;      // the mark's size inside the closing lockup
+const DART_SIZE = 300;      // the size it owns the frame at when it lands
+const LAND = 25.86;         // the dart is home
+const SETTLE = 0.34;        // …and shrinks into the lockup over this
+const LOCK_IN = 25.96;      // the lockup starts wiping while the mark settles
 let lock = null;
 
 (async () => {
@@ -436,6 +458,7 @@ let lock = null;
     line: 'Philadelphia. Since 2015.', markSize: MARK_SIZE, wordSize: 92,
   });
   try { await document.fonts.ready; } catch (e) { /* headless fallback */ }
+  measureRule();
   const st = $('stage').getBoundingClientRect();
   const mr = $('lock').querySelector('.lk-mark').getBoundingClientRect();
   MARKC = { x: mr.left - st.left + mr.width / 2, y: mr.top - st.top + mr.height / 2 };
@@ -447,17 +470,17 @@ buildPath();
 
 /* ── card keyframes ──────────────────────────────────────────────────────── */
 /* browser: 900x600 at (150,230); centre (600,530) */
-const BR_IN   = K({ x: -486, y: 232, s: .44, ry: -42, rx: 18, tz: -420, o: 0 });
-const BR_REST = K({ x:   84, y:  82, s: .72, ry: -11, rx:  7, tz:    0 });
+const BR_IN   = K({ x: -560, y: 430, s: .48, ry: -42, rx: 18, tz: -420, o: 0 });
+const BR_REST = K({ x: -190, y:  90, s: .95, ry: -11, rx:  7, tz:    0 });
 const BR_BIG  = K({ x:    0, y:   0, s:   1, ry:  -3, rx:1.5, tz:   40 });
 const BR_OUT  = K({ x: -260, y: -40, s:  .9, ry:  16, rx:  6, tz: -260, o: 0 });
 
-const PH_IN   = K({ x: 540, y: 268, s: .58, ry:  48, rx: -15, tz: -440, o: 0 });
-const PH_REST = K({ x:   0, y:   0, s:   1, ry:  15, rx:  -5, tz:   60 });
+const PH_IN   = K({ x: 900, y: 120, s: .96, ry:  48, rx: -15, tz: -440, o: 0 });
+const PH_REST = K({ x: 380, y: -66, s: 1.95, ry:  12, rx:  -4, tz:   60 });
 const PH_OUT  = K({ x: -1780, y: -70, s: .82, ry: -34, rx: -2, tz: -140, o: 0 });
 
-const MP_IN   = K({ x: -52, y: 470, s: .70, ry:  2, rx: 44, tz: -280, o: 0 });
-const MP_REST = K({ x:   0, y:   0, s:   1, ry:  7, rx: 13, tz:  -90 });
+const MP_IN   = K({ x:  -30, y: 590, s: .84, ry:  2, rx: 44, tz: -280, o: 0 });
+const MP_REST = K({ x:   20, y: 150, s: 1.26, ry:  7, rx: 13, tz:  -90 });
 const MP_OUT  = K({ x: -1560, y: 130, s: .86, ry: -26, rx: 6, tz: -200, o: 0 });
 
 /* ── the timeline ────────────────────────────────────────────────────────── */
@@ -465,70 +488,72 @@ window.seek = function (t) {
 
   /* ═══ BEAT 1 · 0.0–2.6 — one centred line on empty paper ═══════════════ */
   {
-    const out = at(t, 2.20, 0.30, easeStandard);
-    revealWords($('l1'), t, 0.16, 0.60, 0.07, 34);
+    const out = at(t, 2.30, 0.18, easeStandard);
+    revealWords($('l1'), t, 0.10, 0.58, 0.07, 34);
     $('l1').style.opacity = 1 - out;
     $('l1').style.transform = `translateY(${-40 * out}px)`;
-    const rw = lerp(58, 244, at(t, 0.12, 1.0, easeEmphatic)) * (1 - out);
+    /* frame 0 is the rule already settled, at the width of the line it
+       underlines; the words rise off it. Nothing about it animates. */
     const r1 = $('r1');
-    r1.style.width = `${rw}px`;
-    r1.style.marginLeft = `${-rw / 2}px`;
+    r1.style.width = `${RULEW}px`;
+    r1.style.marginLeft = `${-RULEW / 2}px`;
     r1.style.opacity = 1 - out;
   }
 
   /* ═══ BEAT 2 · 2.4–5.0 — two stacked lines, an escalation ══════════════ */
   {
-    const pin = at(t, 4.86, 0.86, easeEmphatic);          // shrink + pin to upper third
+    /* the pin is finished before the browser card starts arriving at 5.16 */
+    const pin = at(t, 4.78, 0.36, easeEmphatic);          // shrink + pin to upper left
     const gone = at(t, 8.15, 0.42, easeStandard);
     const l2 = $('l2');
-    l2.style.opacity = at(t, 2.46, 0.20, easeStandard) * (1 - gone);
-    l2.style.transform = `translateY(${-260 * pin - 18 * gone}px) scale(${lerp(1, 0.40, pin)})`;
-    riseLine($('l2').children[0], $('l2a'), at(t, 2.48, 0.62), 40);
+    l2.style.opacity = at(t, 2.26, 0.22, easeStandard) * (1 - gone);
+    l2.style.transform = `translateY(${-444 * pin - 18 * gone}px) scale(${lerp(1, 0.55, pin)})`;
+    riseLine($('l2').children[0], $('l2a'), at(t, 2.28, 0.56), 40);
     w2b.forEach((s, i) => {
-      const p = at(t, 2.70 + i * 0.16, 0.72);
+      const p = at(t, 2.46 + i * 0.14, 0.70);
       s.style.opacity = p;
       s.style.transform = `translateY(${(1 - p) * 40}px) scale(${lerp(i === 1 ? 1.16 : 1.04, 1, p)})`;
     });
-    $('l2').children[1].style.clipPath = `inset(${(1 - at(t, 2.66, 0.3)) * 112}% 0 0 0)`;
+    $('l2').children[1].style.clipPath = `inset(${(1 - at(t, 2.42, 0.3)) * 112}% 0 0 0)`;
   }
 
   /* ═══ BEAT 3 · 4.8–8.4 — pinned title over a loose 3D card stack ═══════ */
   {
-    const drift = (per, ph) => 5.5 * osc(t, per, ph) * at(t, 6.3, 0.8);
+    const drift = (per, ph) => 5.5 * osc(t, per, ph) * at(t, 6.6, 0.8);
 
     /* browser: arrives, rests, then flies to its beat-4 hero position */
-    const inP = at(t, 5.00, 1.20);
+    const inP = at(t, 5.06, 1.12);
     const bigP = at(t, 8.20, 0.90, easeEmphatic);
     let bk = mixK(BR_IN, BR_REST, inP);
     bk = mixK(bk, BR_BIG, bigP);
     bk.y += drift(5.2, 0.0) * (1 - bigP);
-    bk.o *= (1 - at(t, 11.20, 0.42, easeStandard));
+    bk.o *= (1 - at(t, 11.14, 0.30, easeStandard));
     applyK($('browser'), bk);
     $('bodyA').style.opacity = 1 - at(t, 8.45, 0.55, easeStandard);
     $('bodyB').style.opacity = at(t, 8.70, 0.60, easeStandard);
 
     /* phone + map card: arrive on their own arcs, leave to the left */
-    const pIn = at(t, 5.24, 1.20), pOut = at(t, 8.20, 0.75, easeEmphatic);
+    const pIn = at(t, 5.28, 1.12), pOut = at(t, 8.20, 0.75, easeEmphatic);
     let pk = mixK(mixK(PH_IN, PH_REST, pIn), PH_OUT, pOut);
     pk.y += drift(4.3, 0.35) * (1 - pOut);
     applyK($('phone'), pk);
 
-    const mIn = at(t, 5.48, 1.20), mOut = at(t, 8.28, 0.75, easeEmphatic);
+    const mIn = at(t, 5.48, 1.12), mOut = at(t, 8.28, 0.75, easeEmphatic);
     let mk = mixK(mixK(MP_IN, MP_REST, mIn), MP_OUT, mOut);
     mk.y += drift(6.1, 0.7) * (1 - mOut);
     applyK($('mapc'), mk);
 
     /* the footnote sits under the whole UI section */
-    const cp = win(t, 5.90, 0.55, 14.30, 0.40);
+    const cp = win(t, 6.10, 0.55, 14.30, 0.40);
     $('cap').style.opacity = cp;
-    $('cap').style.transform = `translateY(${(1 - at(t, 5.90, 0.55)) * 14}px)`;
+    $('cap').style.transform = `translateY(${(1 - at(t, 6.10, 0.55)) * 14}px)`;
   }
 
   /* ═══ BEAT 4 · 8.2–11.4 — hero browser left, headline right ════════════ */
   {
-    const out = at(t, 11.16, 0.38, easeStandard);
+    const out = at(t, 11.10, 0.28, easeStandard);
     const h = $('serpHead');
-    h.style.opacity = (t > 8.5 ? 1 : 0) * (1 - out);
+    h.style.opacity = at(t, 8.50, 0.18) * (1 - out);
     h.style.transform = `translateY(${-26 * out}px)`;
     riseLine(h.children[0], $('sh1'), at(t, 9.00, 0.72), 52);
     riseLine(h.children[1], $('sh2'), at(t, 9.16, 0.72), 52);
@@ -539,32 +564,41 @@ window.seek = function (t) {
 
   /* ═══ BEAT 5 · 11.2–14.6 — hard vertical split; map left, ranking right ═ */
   {
-    const inP = at(t, 11.22, 0.62, easeEmphatic);
+    const inP = at(t, 11.02, 0.60, easeEntrance);
     const outP = at(t, 14.26, 0.42, easeEmphatic);
     $('half').style.clipPath = `inset(0 ${(1 - inP) * 100 + outP * 100}% 0 0)`;
+    /* the split is carried by a hard rule, not by a 1.09:1 tint difference:
+       the rule is the wipe front, and it parks on the edge it created */
+    const front = 864 * (inP - outP);
+    const edge = $('halfedge');
+    edge.style.transform = `translateX(${front - 3 - 861}px)`;
+    edge.style.opacity = front > 5 ? 1 : 0;
 
-    const cardP = at(t, 11.46, 0.80);
+    const cardP = at(t, 11.20, 0.56);
     const cardOut = at(t, 14.34, 0.44, easeStandard);
     const mc = $('mapcard');
     mc.style.opacity = cardP * (1 - cardOut);
     mc.style.transform = `translateY(${(1 - cardP) * 46 - cardOut * 30}px) scale(${lerp(0.94, 1, cardP)})`;
 
-    [['pin0', 12.02], ['pin1', 12.36], ['pin2', 12.72]].forEach(([id, ts]) => {
+    /* the promotion is one event: the pack reorders and the map answers */
+    const promote = at(t, 13.40, 0.78, easeEmphatic);
+    [['pin0', 11.82], ['pin1', 12.16], ['pin2', 12.52]].forEach(([id, ts], i) => {
       const d = at(t, ts, 0.52, easeEntrance);
       const el = $(id);
-      el.style.opacity = d;
-      el.style.transform = `translateY(${(1 - d) * -120}px) scale(${lerp(0.7, 1, d)})`;
+      const winner = i === 2;
+      el.style.opacity = d * (winner ? 1 : lerp(1, 0.45, promote));
+      el.style.transform =
+        `translateY(${(1 - d) * -120}px) scale(${lerp(0.7, 1, d) * (winner ? lerp(1, 1.25, promote) : 1)})`;
+      el.style.zIndex = winner ? 3 : 1;
     });
 
     const hOut = at(t, 14.30, 0.40, easeStandard);
     const mh = $('mapHead');
-    mh.style.opacity = (t > 11.4 ? 1 : 0) * (1 - hOut);
+    mh.style.opacity = at(t, 11.30, 0.18) * (1 - hOut);
     mh.style.transform = `translateY(${-24 * hOut}px)`;
-    riseLine(mh.children[0], $('mh1'), at(t, 11.62, 0.72), 50);
-    riseLine(mh.children[1], $('mh2'), at(t, 11.78, 0.72), 50);
+    riseLine(mh.children[0], $('mh1'), at(t, 11.42, 0.72), 50);
+    riseLine(mh.children[1], $('mh2'), at(t, 11.58, 0.72), 50);
 
-    /* the pack: three rows, then the third promotes to the top */
-    const promote = at(t, 13.40, 0.78, easeEmphatic);
     const SLOT = [0, 108, 216];
     const order = [
       lerp(0, 1, promote),      // row 0 drops 1st → 2nd
@@ -572,7 +606,7 @@ window.seek = function (t) {
       lerp(2, 0, promote),      // the winner rises 3rd → 1st
     ];
     ['pr0', 'pr1', 'pr2'].forEach((id, i) => {
-      const rp = at(t, 12.16 + i * 0.12, 0.66);
+      const rp = at(t, 11.96 + i * 0.12, 0.66);
       const el = $(id);
       const y = lerp(SLOT[0], SLOT[2], order[i] / 2);
       el.style.opacity = rp * (1 - at(t, 14.30, 0.40, easeStandard));
@@ -594,7 +628,7 @@ window.seek = function (t) {
     pageStack.style.transform = `translateY(${lerp(118, -650, scroll) + (1 - inP) * 90}px)`;
 
     const ty = $('pgType');
-    ty.style.opacity = (t > 14.4 ? 1 : 0) * (1 - outP);
+    ty.style.opacity = at(t, 14.50, 0.18) * (1 - outP);
     ty.style.transform = `translateY(${-30 * outP}px)`;
     const g = ty.children;
     riseLine(g[0], $('pg1'), at(t, 14.62, 0.78), 64);
@@ -606,19 +640,19 @@ window.seek = function (t) {
 
   /* ═══ BEAT 7 · 17.8–21.6 — full-bleed brand, white type, SEO/AEO/GEO ═══ */
   {
-    const inP = at(t, 17.82, 0.62, easeEmphatic);
+    const inP = at(t, 17.60, 0.58, easeEntrance);
     const outP = at(t, 21.36, 0.58, easeEmphatic);
     const b = $('blue');
     b.style.clipPath = `inset(${(1 - inP) * 100}% 0 ${outP * 100}% 0)`;
     b.style.opacity = inP > 0 ? 1 : 0;
 
     const lift = -70 * outP;
-    riseLine($('bh1').children[0], $('bh1i'), at(t, 18.30, 0.76), 58);
-    riseLine($('bh2').children[0], $('bh2i'), at(t, 18.46, 0.76), 58);
+    riseLine($('bh1').children[0], $('bh1i'), at(t, 18.04, 0.76), 58);
+    riseLine($('bh2').children[0], $('bh2i'), at(t, 18.20, 0.76), 58);
     $('bh1').style.transform = `translateY(${lift}px)`;
     $('bh2').style.transform = `translateY(${lift}px)`;
 
-    [['lb0', 19.20, -46], ['lb1', 19.42, 0], ['lb2', 19.64, 46]].forEach(([id, ts, dx]) => {
+    [['lb0', 19.00, -46], ['lb1', 19.22, 0], ['lb2', 19.44, 46]].forEach(([id, ts, dx]) => {
       const p = at(t, ts, 0.82);
       const el = $(id);
       el.style.opacity = p;
@@ -631,13 +665,13 @@ window.seek = function (t) {
 
   /* ═══ BEAT 8 · 21.4–24.4 — one bar, three segments, hard offset ════════ */
   {
-    const out = at(t, 24.10, 0.40, easeStandard);
-    const hp = at(t, 21.72, 0.70);
+    const out = at(t, 24.06, 0.34, easeStandard);
+    const hp = at(t, 21.40, 0.62);
     const mh = $('mHead');
     mh.style.opacity = hp * (1 - out);
     mh.style.transform = `translateY(${(1 - hp) * 30 - 26 * out}px)`;
 
-    const wrapP = at(t, 21.96, 0.55, easeEmphatic);
+    const wrapP = at(t, 21.66, 0.55, easeEmphatic);
     const wrap = $('barwrap');
     wrap.style.opacity = wrapP * (1 - out);
     wrap.style.transform = `translateY(${(1 - wrapP) * 26}px) scaleY(${lerp(0.6, 1, wrapP)})`;
@@ -646,38 +680,41 @@ window.seek = function (t) {
     const W = 1200, wid = [0.46, 0.32, 0.22];
     let acc = 0;
     ['segA', 'segB', 'segC'].forEach((id, i) => {
-      const p = at(t, 22.20 + i * 0.24, 0.72, easeEmphatic) * (1 - out);
+      const p = at(t, 21.94 + i * 0.22, 0.70, easeEmphatic) * (1 - out);
       const el = $(id);
       el.style.left = `${acc}px`;
       el.style.width = `${W * wid[i] * p}px`;
       acc += W * wid[i];
     });
     ['sl0', 'sl1', 'sl2'].forEach((id, i) => {
-      const p = at(t, 22.82 + i * 0.15, 0.60);
+      const p = at(t, 22.52 + i * 0.15, 0.60);
       const el = $(id);
       el.style.opacity = p * (1 - out) * 1;
       el.style.transform = `translateY(${(1 - p) * 12}px)`;
     });
   }
 
-  /* ═══ BEAT 9 · 24.2–27.0 — the dart ════════════════════════════════════ */
+  /* ═══ BEAT 9 · 24.2–26.4 — the dart ════════════════════════════════════ */
   {
     ctx.clearRect(0, 0, 1920, 1080);
-    const live = t > 24.20 && t < 26.78;
-    const p = at(t, 24.40, 2.05, easeStandard);
-    const appear = at(t, 24.34, 0.26, easeStandard);
+    const handoff = LAND + SETTLE;                       // the dart stops existing here
+    const live = t > 24.10 && t < handoff;
+    const p = at(t, 24.24, LAND - 24.24, easeInOut);     // launches, then settles in
+    const appear = at(t, 24.16, 0.20, easeStandard);
+    /* it owns the frame, then settles into the lockup — no cross-dissolve */
+    const settle = at(t, LAND, SETTLE, easeEmphatic);
     const dm = $('dartmark');
 
     if (live && PATH) {
-      const fade = 1 - at(t, 26.10, 0.66, easeStandard);
-      const s0 = Math.max(0, p - 0.86);
+      const fade = 1 - at(t, LAND - 0.10, 0.52, easeStandard);
+      const s0 = Math.max(0, p - 0.62);                  // a comet, not a long taper
+      const size = lerp(lerp(96, DART_SIZE, Math.pow(p, 0.55)), MARK_SIZE, settle);
       /* stop the trail at the mark's rim so it never draws across the logo */
-      const headSize = lerp(40, MARK_SIZE, Math.pow(p, 0.8));
       const hx = bez(p);
       let pEnd = p;
-      for (let k = 0; k < 40; k++) {
+      for (let k = 0; k < 60; k++) {
         const q = bez(pEnd);
-        if (Math.hypot(q[0] - hx[0], q[1] - hx[1]) >= headSize * 0.46) break;
+        if (Math.hypot(q[0] - hx[0], q[1] - hx[1]) >= size * 0.46) break;
         pEnd -= 0.006;
       }
       pEnd = Math.max(s0, pEnd);
@@ -693,13 +730,12 @@ window.seek = function (t) {
           ctx.moveTo(a[0], a[1]); ctx.lineTo(b[0], b[1]);
           ctx.strokeStyle = SIGNAL;
           ctx.globalAlpha = Math.pow(frac, 1.9) * 0.92 * fade * appear;
-          ctx.lineWidth = lerp(0.6, 7.0, Math.pow(frac, 1.35));
+          ctx.lineWidth = lerp(0.6, 9.0, Math.pow(frac, 1.35));
           ctx.stroke();
         }
         ctx.globalAlpha = 1;
       }
       const [mx, my] = bez(p);
-      const size = lerp(40, MARK_SIZE, Math.pow(p, 0.8));
       dm.style.width = `${size}px`;
       dm.style.height = `${size}px`;
       dm.style.opacity = appear;
@@ -710,13 +746,16 @@ window.seek = function (t) {
     }
   }
 
-  /* ═══ BEAT 10 · 27.0–30.0 — the lockup, held ═══════════════════════════ */
+  /* ═══ BEAT 10 · 26.2–30.0 — the lockup, held ═══════════════════════════ */
   if (lock) {
-    const p = clamp((t - 26.72) / 1.30);
+    const p = clamp((t - LOCK_IN) / 1.34);
     lock.pose(p);
-    /* the mark already flew here in beat 9 — hold it, don't re-scale it */
+    /* the wordmark wipes in beside the settling mark; the mark itself is the
+       dart until the handoff frame, then it is the lockup's. Never both. */
     const mk = $('lock').querySelector('.lk-mark');
-    if (p > 0) { mk.style.opacity = 1; mk.style.transform = 'scale(1)'; }
+    const held = t >= LAND + SETTLE;
+    mk.style.opacity = held ? 1 : 0;
+    mk.style.transform = 'scale(1)';
     $('lock').style.opacity = p > 0 ? 1 : 0;
   }
 };

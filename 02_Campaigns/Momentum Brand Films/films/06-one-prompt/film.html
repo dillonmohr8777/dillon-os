@@ -51,12 +51,12 @@
   .scard { position:absolute; background:var(--m-paper);
            border:1.5px solid var(--m-line-strong); border-radius:18px;
            overflow:hidden; opacity:0; will-change:transform,opacity; }
-  #cA { left:110px;  top:370px; width:540px; height:430px; box-shadow:var(--m-soft-1); }
+  #cA { left:96px;   top:370px; width:540px; height:430px; box-shadow:var(--m-soft-1); }
   #cB { left:550px;  top:250px; width:720px; height:400px; box-shadow:var(--m-block-sm); }
   #cC { left:1320px; top:168px; width:470px; height:410px; box-shadow:var(--m-soft-1); }
   .clab { position:absolute; font-size:19px; font-weight:800; letter-spacing:.24em;
           color:var(--m-muted); opacity:0; }
-  #labA { left:112px;  top:824px; }
+  #labA { left:98px;   top:824px; }
   #labB { left:552px;  top:674px; }
   #labC { left:1322px; top:602px; }
 
@@ -70,7 +70,7 @@
                 background:var(--m-muted); transform:rotate(45deg); }
   #cA .res { position:relative; margin-top:30px; }
   #cA .res .gb + .gb { margin-top:11px; }
-  #cA .res.win { margin-top:38px; }
+  #cA .res.win { margin-top:38px; width:392px; }
 
   /* card B — an answer engine */
   #cB .pad { padding:30px 30px 0; }
@@ -392,7 +392,7 @@ const PILL_POS = [
   /* PERPLEXITY */[[1462, 796, -4], [330, 950, 3], null, null],
 ];
 const PILL_SCALE = [1, 0.84, 0.86, 1];
-const PILL_HOP = [[5.95, 0.95], [9.50, 0.92], [21.58, 1.05]];
+const PILL_HOP = [[5.95, 0.95], [9.50, 0.92], [21.62, 1.05]];
 const COL_JIT = [-14, 8, -6, 12];
 const PILLS = PILL_TEXT.map((txt) => {
   const el = document.createElement('div');
@@ -445,7 +445,7 @@ const poseCard = (el, rest, ccx, ccy, s, rot, o) => {
 };
 
 const CARDS = [
-  { el: $('cA'), lab: $('labA'), x: 110,  y: 370, w: 540, h: 430, rot: -1.7,
+  { el: $('cA'), lab: $('labA'), x: 96,   y: 370, w: 540, h: 430, rot: -1.7,
     birth: 5.98, sx: 600,  strip: [1546, 152, 0.34, 1.6], ph: 0.0 },
   { el: $('cB'), lab: $('labB'), x: 550,  y: 250, w: 720, h: 400, rot: 0.9,
     birth: 5.86, sx: 960,  strip: [1300, 150, 0.28, -1.2], ph: 0.4 },
@@ -479,7 +479,7 @@ window.seek = function (t) {
          line collapses into legibility underneath it. Already moving at t=0. */
       const run = Math.pow(easeInOut(clamp((t + 0.62) / 3.22)), 1.85);
       const f = lerp(0.021, 0.5, run);
-      const col = at(t, 1.22, 1.40, easeEmphatic);
+      const col = at(t, 1.20, 1.15, easeEmphatic);
       const s = lerp(1, RUN.send, col);
       const tx = 960 - s * RUN.W * f;
       const ty = 540 + lerp(92, 0, col) - 96 * gone;
@@ -568,16 +568,16 @@ window.seek = function (t) {
 
   /* ═══ BEAT 5 · 12.95–16.80 — SEO · AEO · GEO ════════════════════════ */
   {
-    const inP = at(t, 12.90, 0.44, easeEmphatic);           // wipes in from the left
-    const outP = at(t, 16.02, 0.48, easeEmphatic);          // retreats upward
+    const inP = at(t, 12.88, 0.42, easeEmphatic);           // wipes in from the left
+    const outP = at(t, 15.90, 0.46, easeEmphatic);          // and keeps going, off right
     $('deep').style.opacity = inP > 0 ? 1 : 0;
     $('deep').style.clipPath =
-      `inset(${outP * 100}% ${(1 - inP) * 100}% 0 0)`;
+      `inset(0 ${(1 - inP) * 100}% 0 ${outP * 100}%)`;
 
     const T = [
-      { el: $('t1'), in: 13.30, out: 14.12 },
-      { el: $('t2'), in: 14.16, out: 14.98 },
-      { el: $('t3'), in: 15.02, out: 16.10 },   // the third holds longest
+      { el: $('t1'), in: 13.24, out: 13.98 },
+      { el: $('t2'), in: 14.02, out: 14.76 },
+      { el: $('t3'), in: 14.80, out: 15.92 },   // the third holds longest
     ];
     T.forEach((s) => {
       const a = at(t, s.in, 0.52, easeEntrance);
@@ -590,14 +590,14 @@ window.seek = function (t) {
       sub.style.opacity = sp;
       sub.style.transform = `translateY(${(1 - sp) * 16}px)`;
     });
-    const step = (at(t, 13.30, 0.4) + at(t, 14.16, 0.4) + at(t, 15.02, 0.4)) / 3;
+    const step = (at(t, 13.24, 0.4) + at(t, 14.02, 0.4) + at(t, 14.80, 0.4)) / 3;
     $('deepfill').style.width = `${step * 300}px`;
   }
 
   /* ═══ BEAT 6 · 16.55–19.95 — the deliverable ════════════════════════ */
   {
-    const inP = at(t, 16.28, 0.80, easeEntrance);
-    const outP = at(t, 19.06, 0.56, easeStandard);
+    const inP = at(t, 16.12, 0.80, easeEntrance);
+    const outP = at(t, 18.94, 0.46, easeStandard);
     const b = $('browser');
     b.style.opacity = inP * (1 - outP);
     b.style.transform =
@@ -605,12 +605,12 @@ window.seek = function (t) {
 
     /* the page renders itself, section by section */
     SECS.forEach((sc, i) => {
-      const p = at(t, 16.72 + i * 0.36, 0.54, easeEntrance);
+      const p = at(t, 16.44 + i * 0.32, 0.52, easeEntrance);
       sc.el.style.height = `${p * sc.h}px`;
       sc.in.style.transform = `translateY(${(1 - p) * -26}px)`;
     });
 
-    const lv = at(t, 18.52, 0.34, easeEmphatic);
+    const lv = at(t, 18.16, 0.32, easeEmphatic);
     $('live').style.opacity = lv * (1 - outP);
     $('live').style.transform = `scale(${lerp(0.62, 1, lv)}) translateY(${54 * outP}px)`;
   }
@@ -618,10 +618,10 @@ window.seek = function (t) {
   /* ═══ BEAT 7 · 19.45–21.85 — the line ═══════════════════════════════ */
   {
     const out = at(t, 21.42, 0.52, easeStandard);
-    $('sweep').style.width = `${at(t, 19.50, 0.90, easeEmphatic) * 1920}px`;
+    $('sweep').style.width = `${at(t, 19.16, 1.00, easeStandard) * 1920}px`;
     $('sweep').style.opacity = 1 - out;
-    revealWords($('ln1'), t, 19.80, 0.66, 0.08, 40);
-    revealWords($('ln2'), t, 20.14, 0.66, 0.07, 40);
+    revealWords($('ln1'), t, 19.62, 0.66, 0.08, 40);
+    revealWords($('ln2'), t, 19.96, 0.66, 0.07, 40);
     const li = $('line');
     li.style.opacity = 1 - out;
     li.style.transform = `translateY(${-46 * out}px)`;

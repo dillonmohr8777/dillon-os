@@ -1,0 +1,170 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Momentum Bot — character sheet</title>
+<link rel="stylesheet" href="./tokens.css">
+<style>
+  html,body{background:var(--m-paper);color:var(--m-ink);font-family:var(--m-font-text)}
+  body{width:1700px;height:1150px;padding:14px 14px;display:flex;flex-direction:column;gap:10px;overflow:hidden}
+  header{display:flex;gap:24px;align-items:flex-start;height:74px}
+  h1{font-family:var(--m-font-display);font-size:29px;letter-spacing:-.02em;margin:2px 0 0;line-height:1;white-space:nowrap}
+  .lede{font-size:13.5px;line-height:1.52;margin:0;max-width:1310px}
+  .lede b{color:var(--m-brand)}
+  .row{display:flex;gap:12px}
+  .panel{background:var(--m-panel);border-radius:var(--m-r-lg);padding:13px 16px;display:flex;flex-direction:column}
+  .panel.deep{background:var(--m-deep);color:var(--m-on-deep)}
+  .cap{font-family:var(--m-font-display);font-size:10px;letter-spacing:.085em;text-transform:uppercase;color:var(--m-muted);margin:0 0 auto;flex:0 0 auto}
+  .deep .cap{color:var(--m-on-deep-muted)}
+  .bot{color:var(--m-mark);display:block}
+  .lab{font-family:var(--m-font-display);font-size:9px;letter-spacing:.07em;text-transform:uppercase;color:var(--m-muted);text-align:center;margin-top:6px}
+  .deep .lab{color:var(--m-on-deep-muted)}
+  .item{display:flex;flex-direction:column;align-items:center;justify-content:flex-end}
+  .note{font-size:11.5px;line-height:1.5;margin:0}
+  .note b{color:var(--m-brand);font-weight:800}
+  .num{font-variant-numeric:tabular-nums;font-weight:700}
+
+  .ov{position:relative;width:150px;height:150px}
+  .ov>*{position:absolute;inset:0;width:150px;height:150px}
+  .ov .mark{color:var(--m-mark)}
+  .ov .ghost{--m-bot-body:rgba(163,83,9,.13);--m-bot-key:#A35309;--m-bot-ink:transparent;
+             transform-origin:49.7% 58.2%;transform:translate(.3%,-8.2%) scale(1.361)}
+
+  .thread{background:var(--m-paper);border-radius:22px;padding:14px;display:flex;flex-direction:column;gap:8px;box-shadow:var(--m-block-sm)}
+  .bub{max-width:80%;padding:8px 13px;border-radius:17px;font-size:13px;line-height:1.34}
+  .me{align-self:flex-end;background:var(--m-brand);color:#fff;border-bottom-right-radius:5px}
+  .them{align-self:flex-start;background:var(--m-panel);color:var(--m-ink);border-bottom-left-radius:5px}
+  .withbot{display:flex;align-items:flex-end;gap:8px;align-self:flex-start;max-width:92%}
+  .field{margin-top:2px;border:1.5px solid var(--m-line);border-radius:var(--m-r-pill);padding:7px 14px;font-size:12.5px;color:var(--m-muted)}
+  .floor{font-size:11.5px;line-height:1.5;color:var(--m-signal-ink);font-weight:800;margin:0}
+  .rule{border-top:1.5px solid var(--m-line);margin:11px 0 9px}
+</style>
+
+<header>
+  <h1>MOMENTUM&nbsp;BOT</h1>
+  <p class="lede"><b>The mark, alive.</b> The <b>disc</b> is the body — a true disc modulated ±8%, so it sits down into the frame
+  instead of floating. The <b>keyline ring</b> is inset at the mark's own traced stack — band <span class="num">0.819R→0.921R</span>,
+  blue rim <span class="num">0.079R</span> — and is open at the crown. The <b>script m</b> stands in that opening as the antenna.
+  Both eyes and the mouth are three instances of one primitive, <span class="num">blob(w, up, down)</span>: that function is the
+  entire face rig, and every expression below is numbers on it. Six painted shapes at rest — brows, lids, catchlights and the
+  signal spark stay at zero until a film asks.</p>
+</header>
+
+<div class="row" style="height:540px;flex:0 0 auto">
+  <div class="panel" style="width:530px">
+    <p class="cap">Neutral — 480 px on paper</p>
+    <div id="hero" style="display:flex;justify-content:center;align-items:center;flex:1"></div>
+  </div>
+
+  <div class="panel" style="width:634px">
+    <p class="cap">DNA — inherited from the mark, measured, not eyeballed</p>
+    <div class="row" style="justify-content:space-between;align-items:flex-end;flex:0 0 auto;margin-top:36px">
+      <div class="item"><div id="dna-mark" style="width:150px;height:150px;color:var(--m-mark)"></div><div class="lab">Official mark</div></div>
+      <div class="item"><div id="dna-bot" style="width:150px;height:150px"></div><div class="lab">The bot</div></div>
+      <div class="item"><div id="dna-sil" style="width:150px;height:150px"></div><div class="lab">Silhouette</div></div>
+      <div class="item"><div class="ov"><div class="mark" id="dna-ov-mark"></div><div class="ghost" id="dna-ov-bot"></div></div><div class="lab">Bot over the mark</div></div>
+    </div>
+    <div class="rule"></div>
+    <div class="row" style="gap:26px;flex:1">
+      <p class="note" style="width:180px"><b>Disc → body.</b><br>Mean radius <span class="num">69.65</span>,
+        min <span class="num">64.3</span>, max <span class="num">74.4</span> — ±8%. It is the mark's circle with a
+        low centre of gravity, not a free-form blob.</p>
+      <p class="note" style="width:180px"><b>Ring → ring.</b><br>Band <span class="num">0.819R</span> to
+        <span class="num">0.921R</span>, blue rim <span class="num">0.079R</span> outside it. The same three-part stack
+        the official mark uses, held as hard numbers.</p>
+      <p class="note" style="width:186px"><b>Script m → antenna.</b><br>The ring opens at <span class="num">94.5%</span>
+        of its length and the m's tail stands in the opening. The letterform is written, never stretched: the official
+        mark is never redrawn or distorted to make the character work.</p>
+    </div>
+  </div>
+
+  <div class="panel" style="width:474px">
+    <p class="cap">In a message thread — films 3 &amp; 4</p>
+    <div class="thread" style="margin-top:10px">
+      <div class="bub me">how did the ads do this week</div>
+      <div class="withbot">
+        <div id="chatbot" style="width:40px;height:40px;flex:0 0 40px"></div>
+        <div class="bub them" style="max-width:none">On budget. Search is carrying it — want the call log?</div>
+      </div>
+      <div class="bub me">yes, and check the map pack</div>
+      <div class="withbot">
+        <div id="chatbot2" style="width:40px;height:40px;flex:0 0 40px"></div>
+        <div class="bub them" style="max-width:none">Looking. Give me a second.</div>
+      </div>
+      <div class="field">Message Momentum</div>
+    </div>
+    <p class="note" style="margin-top:auto"><b>40 px, unaltered.</b> No simplified small-size variant exists and none is
+      needed above the floor: the disc, the ring's white band and both eyes still separate. The mouth is the first thing
+      to go.</p>
+  </div>
+</div>
+
+<div class="panel" style="height:200px;flex:0 0 auto">
+  <p class="cap">Expression range — one shape set, different numbers. No alternate artwork, no props.</p>
+  <div class="row" id="poses" style="justify-content:space-between;padding:0 10px;align-items:flex-end;flex:1"></div>
+</div>
+
+<div class="row" style="height:224px;flex:0 0 auto">
+  <div class="panel" style="width:846px">
+    <p class="cap">Scale on paper — and where it breaks</p>
+    <div class="row" style="align-items:flex-end;flex:1;gap:30px;padding-left:8px">
+      <div class="row" id="ramp-l" style="align-items:flex-end;gap:30px"></div>
+      <p class="floor" style="width:196px;margin-bottom:14px">Floor: 32&nbsp;px.<br>Below it the mouth goes, then the
+        ring's opening. What is left is a blue disc with a white keyline, two ink eyes and a sprout — which is still
+        the mark.</p>
+    </div>
+  </div>
+  <div class="panel deep" style="flex:1">
+    <p class="cap">The same ramp, and three poses, on deep</p>
+    <div class="row" style="align-items:flex-end;flex:1;gap:18px;padding-left:6px;justify-content:space-between">
+      <div class="row" id="ramp-d" style="align-items:flex-end;gap:20px"></div>
+      <div class="row" id="poses-d" style="align-items:flex-end;gap:14px;padding-right:4px"></div>
+    </div>
+  </div>
+</div>
+
+<script type="module">
+import { mountBot, poseBot } from "./bot-rig.js";
+
+const markup  = await (await fetch("./momentum-bot.svg")).text();
+const markSvg = await (await fetch("./momentum-mark.svg")).text();
+
+const el = (t, c, s) => { const n = document.createElement(t); if (c) n.className = c; if (s) n.style.cssText = s; return n; };
+function bot(host, px, pose) {
+  const box = el("div", null, `width:${px}px;height:${px}px`);
+  host.appendChild(box);
+  const h = mountBot(box, { markup, size: px + "px" });
+  h.svg.classList.add("bot");
+  poseBot(h, pose || {});
+  return h;
+}
+function labelled(host, px, pose, label) {
+  const cell = el("div", "item");
+  host.appendChild(cell);
+  bot(cell, px, pose);
+  const l = el("div", "lab"); l.textContent = label; cell.appendChild(l);
+}
+
+bot(document.getElementById("hero"), 480, "neutral");
+
+document.getElementById("dna-mark").innerHTML = markSvg;
+document.getElementById("dna-ov-mark").innerHTML = markSvg;
+bot(document.getElementById("dna-bot"), 150, "neutral");
+bot(document.getElementById("dna-ov-bot"), 150, "neutral");
+/* silhouette: one flat blue mass — the shape you must recognise with the face removed */
+const sil = bot(document.getElementById("dna-sil"), 150, "neutral");
+sil.svg.style.cssText += ";--m-bot-key:#2A80C2;--m-bot-ink:#2A80C2";
+
+bot(document.getElementById("chatbot"),  40, { mouth: "smile", eyeArc: .5, look: [1.5, 0], tilt: -3 });
+bot(document.getElementById("chatbot2"), 40, { mouth: "flat", lid: .38, look: [4, -4], tilt: -5, mouthShift: -6 });
+
+const P = document.getElementById("poses");
+[["neutral","Neutral"],["thinking","Thinking"],["pleased","Pleased"],["focused","Focused"],
+ ["surprised","Surprised"],["talking","Talking"],["blink","Blink"]].forEach(([k, n]) => labelled(P, 118, k, n));
+
+const sizes = [[160,"160px"],[104,"104px"],[72,"72px"],[48,"48px"],[32,"32px"]];
+sizes.forEach(([px, n]) => labelled(document.getElementById("ramp-l"), px, "neutral", n));
+sizes.forEach(([px, n]) => labelled(document.getElementById("ramp-d"), px, "neutral", n));
+[["pleased","Pleased"],["thinking","Thinking"],["surprised","Surprised"]]
+  .forEach(([k, n]) => labelled(document.getElementById("poses-d"), 92, k, n));
+
+window.__ready = true;
+</script>

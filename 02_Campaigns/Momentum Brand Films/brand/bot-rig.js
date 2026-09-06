@@ -30,23 +30,33 @@
                       leans like a weeble instead of spinning about its middle.
                       Beyond ~14 it reads as falling over. Default 0.
      bob     units    -10..10, negative is up. Whole body. Default 0.
-     scale   number   0.55..1.6, about the same base pivot. Default 1.
+     scale   number   0.55..1, about the same base pivot. Default 1. Above 1 the artwork
+                      leaves the artboard — to render the bot larger, size the container
+                      (the <svg> element), do not scale past 1 here.
 
    EXTENSIONS (optional; safe to ignore, all default to the neutral pose)
      talk     0..1    Mouth openness when mouth === 'talk'. Drive it from t.
                       Default 0.5.
      squash   -0.09..0.09  + is wide-and-short (impact, settle), - is tall-and-thin
-                      (anticipation, lift). Volume is preserved by construction.
+                      (anticipation, lift). Volume is preserved by construction. Measured
+                      envelope: safe alone across the full range and safe with bob alone,
+                      but a lift stacked on a lift is not — with bob below -6, keep
+                      |squash| at or under 0.05 or the m clears the top of the artboard.
      eyeArc   -1..1   +1 pleased crescent (lower lid up), 0 round, -1 wide-open.
-     lid      0..1    Upper lid drawn DOWN over the eye. Different from blink:
-                      blink closes symmetrically, lid closes from the top, which is
-                      what reads as heavy / sceptical / half-asleep.
+     lid      0..1    A body-coloured plate, clipped to the live eye, drawn DOWN from
+                      the top. Different from blink: blink collapses the eye about its
+                      own centre and leaves an ink line; lid cuts a straight edge across
+                      it, which is what reads as heavy / sceptical / concentrating.
      eyeRot   deg     -14..14, mirrored. + drops the inner corners = stern.
      brow     -1..1   0 = brows absent (they are opacity 0 and cost nothing at rest).
                       + raised (open, surprised), - furrowed (concentrating).
      sway     deg     -22..22. The script m about its root in the ring's opening.
-     mFlex    -0.3..0.3   The m stretches about its baseline. Use with sway.
+     mFlex    -0.25..0.20 The m stretches about its root. Safe across that whole range,
+                      including with bob at -10. The rig does not clamp; past +0.20 the
+                      first arch eventually clears the artboard.
      mSkew    deg     -8..8. The m leans.
+     mouthShift units  -9..9. Slides the mouth sideways on the face. A flat mouth
+                      pushed to one cheek is the cheapest deadpan in the rig.
      signal   0..1    >0.5 shows the orange spark at the m's exit flick. Hidden by
                       default so the neutral shape count never pays for an accent.
      catchlight 0..1  >0.5 shows two white specks in the eyes. Off by default; the
@@ -54,9 +64,10 @@
    ------------------------------------------------------------------------------ */
 
 const K = 0.5523;                        /* circle constant: blob(r, r, r) is a true circle */
-const EYE_R = 18, EYE_LX = 77.5, EYE_RX = 122.5, EYE_Y = 111;
-const MOUTH_X = 100, MOUTH_Y = 143;
-const ANT_X = 85, ANT_Y = 56;            /* the m's root, in the ring's opening */
+const EYE_R = 19, EYE_ASYM = 0.942;               /* the right eye is 6% smaller and sits 1.2 lower */
+const EYE_LX = 77, EYE_LY = 110.4, EYE_RX = 123, EYE_RY = 111.6;
+const MOUTH_X = 100, MOUTH_Y = 141;
+const ANT_X = 86, ANT_Y = 68;            /* the m's root, in the ring's opening */
 const PIVOT_X = 94, PIVOT_Y = 181;       /* base pivot: the bot leans, it does not spin */
 
 /* THE ONE PRIMITIVE.
@@ -75,16 +86,16 @@ export function blob(w, up, down) {
 /* Mouth shapes, as [halfWidth, rise, drop]. A negative rise tucks the top lip below
    the baseline and gives the flat-topped ink crescent; a positive rise opens it. */
 export const MOUTHS = {
-  neutral: [9.5, -1.5, 8],     /* small closed smile, flat on top */
-  smile:   [13.5, -0.5, 14],   /* open grin */
-  flat:    [10.5, 0.9, 0.9],   /* a closed line. this is the deadpan */
+  neutral: [10.5, -1.6, 8.6],  /* small closed smile, flat on top */
+  smile:   [14, -0.4, 14.5],   /* open grin */
+  flat:    [11, 1, 1],         /* a closed line. this is the deadpan */
   o:       [6.6, 7.4, 7.4],    /* round, surprised */
   talk:    null                /* computed from params.talk */
 };
 
 const DEFAULTS = {
   look: [0, 0], blink: 0, mouth: "neutral", talk: 0.5,
-  tilt: 0, bob: 0, scale: 1, squash: 0,
+  tilt: 0, bob: 0, scale: 1, squash: 0, mouthShift: 0,
   eyeArc: 0, lid: 0, eyeRot: 0, brow: 0,
   sway: 0, mFlex: 0, mSkew: 0, signal: 0, catchlight: 0
 };
@@ -92,15 +103,15 @@ const DEFAULTS = {
 /* Named poses. Presets are a convenience only — a film may pass raw numbers. */
 export const POSES = {
   neutral:   {},
-  thinking:  { tilt: -5, bob: -2, squash: 0.02, lid: 0.34, look: [4.5, -4.5],
-               mouth: "flat", brow: -0.35, sway: 15, mFlex: -0.14, mSkew: 3 },
+  thinking:  { tilt: -5, bob: -2, squash: 0.02, lid: 0.42, look: [5, -5],
+               mouth: "flat", mouthShift: -6.5, brow: -0.25, sway: 15, mFlex: -0.14, mSkew: 3 },
   pleased:   { tilt: 4, bob: -4.5, squash: -0.035, eyeArc: 1, mouth: "smile",
                sway: -9, mFlex: 0.16, mSkew: -2 },
-  focused:   { tilt: 0, bob: 1.5, squash: 0.035, lid: 0.52, eyeRot: 11,
-               look: [0, 1.5], mouth: "flat", brow: -0.8, sway: 4, mFlex: -0.2 },
+  focused:   { tilt: 0, bob: 1.5, squash: 0.04, lid: 0.16, eyeRot: 13,
+               look: [0, 1], mouth: "flat", brow: -0.8, sway: 3, mFlex: -0.2 },
   surprised: { tilt: 6, bob: -7, squash: -0.055, eyeArc: -1, look: [0, -1.5],
-               mouth: "o", brow: 0.9, sway: -19, signal: 1, mFlex: 0.24, mSkew: -4 },
-  talking:   { tilt: -2, bob: -1, mouth: "talk", talk: 0.7, sway: 6, brow: 0.2 },
+               mouth: "o", brow: 0.85, sway: -12, signal: 1, mFlex: 0.05, mSkew: -4 },
+  talking:   { tilt: -2, bob: -1, mouth: "talk", talk: 0.7, look: [1.5, 0], sway: 6, brow: 0.25 },
   blink:     { blink: 1 }
 };
 
@@ -135,7 +146,7 @@ export function mountBot(host, opts = {}) {
   const p = svg.__mbPrefix;
   const g = (n) => svg.querySelector(`[id="${p}${n}"]`);
   svg.__mbRefs = {
-    root: g("root"), body: g("body"), ring: g("ring"),
+    fit: g("fit"), root: g("root"), body: g("body"), ring: g("ring"),
     antenna: g("antenna"), mStroke: g("m-stroke"), spark: g("spark"),
     eyeL: g("eye-l"), eyeR: g("eye-r"),
     clipL: g("clipshape-l"), clipR: g("clipshape-r"),
@@ -174,14 +185,13 @@ function merge(params) {
 /* Eye shape from the arc / lid / blink numbers. One primitive, three dials.
    eyeArc  > 0 lifts the lower contour past the baseline  -> pleased crescent
    eyeArc  < 0 inflates both contours                     -> wide-open
-   lid         eats the upper contour only                -> heavy / sceptical
-   blink       collapses both toward a 1.6-unit line      -> shut */
+   blink       collapses both toward a 1.6-unit line      -> shut
+   The lid is NOT here: it is a clipped plate applied over the finished eye, so the
+   eye keeps its round lower contour and gains a straight upper edge. */
 function eyeGeom(p) {
   const pos = Math.max(0, p.eyeArc), neg = Math.max(0, -p.eyeArc);
   let up = EYE_R * (1 + 0.20 * neg - 0.05 * pos);
   let down = EYE_R * (1 + 0.20 * neg - 1.28 * pos);
-  up *= (1 - 0.62 * p.lid);
-  down *= (1 - 0.18 * p.lid);
   const shut = 0.8;
   const open = 1 - Math.max(0, Math.min(1, p.blink));
   up = shut + (up - shut) * open;
@@ -192,7 +202,7 @@ function eyeGeom(p) {
 function mouthGeom(p) {
   if (p.mouth === "talk") {
     const a = Math.max(0, Math.min(1, p.talk));
-    return [9.6 - 3.2 * a, -1.3 + 8.0 * a, 3.2 + 4.6 * a];
+    return [10.4 - 3.6 * a, -1.4 + 8.4 * a, 3.4 + 4.8 * a];
   }
   return MOUTHS[p.mouth] || MOUTHS.neutral;
 }
@@ -210,21 +220,25 @@ export function poseBot(target, params) {
     ` rotate(${p.tilt.toFixed(3)}) scale(${(sc * (1 + s)).toFixed(5)},${(sc * (1 - s)).toFixed(5)})` +
     ` translate(${-PIVOT_X},${-PIVOT_Y})`);
 
-  /* eyes */
-  const e = eyeGeom(p), d = blob(e.w, e.up, e.down);
-  const tl = `translate(${(EYE_LX + p.look[0]).toFixed(3)},${(EYE_Y + p.look[1]).toFixed(3)}) rotate(${p.eyeRot.toFixed(2)})`;
-  const tr = `translate(${(EYE_RX + p.look[0]).toFixed(3)},${(EYE_Y + p.look[1]).toFixed(3)}) rotate(${(-p.eyeRot).toFixed(2)})`;
-  r.eyeL.setAttribute("d", d); r.eyeL.setAttribute("transform", tl);
-  r.eyeR.setAttribute("d", d); r.eyeR.setAttribute("transform", tr);
+  /* eyes — same primitive twice, the right one 6% smaller and 1.2 lower.
+     That deliberate inequality is what makes the pair read as looking, not staring. */
+  const e = eyeGeom(p);
+  const dL = blob(e.w, e.up, e.down);
+  const dR = blob(e.w * EYE_ASYM, e.up * EYE_ASYM, e.down * EYE_ASYM);
+  const tl = `translate(${(EYE_LX + p.look[0]).toFixed(3)},${(EYE_LY + p.look[1]).toFixed(3)}) rotate(${p.eyeRot.toFixed(2)})`;
+  const tr = `translate(${(EYE_RX + p.look[0]).toFixed(3)},${(EYE_RY + p.look[1]).toFixed(3)}) rotate(${(-p.eyeRot).toFixed(2)})`;
+  r.eyeL.setAttribute("d", dL); r.eyeL.setAttribute("transform", tl);
+  r.eyeR.setAttribute("d", dR); r.eyeR.setAttribute("transform", tr);
 
   /* lid: a body-coloured plate clipped to the live eye shape, parked above it at 0 */
-  if (r.clipL) { r.clipL.setAttribute("d", d); r.clipL.setAttribute("transform", tl); }
-  if (r.clipR) { r.clipR.setAttribute("d", d); r.clipR.setAttribute("transform", tr); }
+  if (r.clipL) { r.clipL.setAttribute("d", dL); r.clipL.setAttribute("transform", tl); }
+  if (r.clipR) { r.clipR.setAttribute("d", dR); r.clipR.setAttribute("transform", tr); }
   if (r.lidL) {
-    const ty = -e.up + Math.max(0, Math.min(1, p.lid)) * (e.up + e.down);
-    const lidT = (t) => `${t} translate(0,${ty.toFixed(3)})`;
-    r.lidL.setAttribute("transform", lidT(tl));
-    r.lidR.setAttribute("transform", lidT(tr));
+    const k = Math.max(0, Math.min(1, p.lid));
+    const tyL = -e.up + k * (e.up + e.down);
+    const tyR = tyL * EYE_ASYM;
+    r.lidL.setAttribute("transform", `${tl} translate(0,${tyL.toFixed(3)})`);
+    r.lidR.setAttribute("transform", `${tr} translate(0,${tyR.toFixed(3)})`);
   }
 
   /* catchlights — off unless a film asks */
@@ -232,8 +246,8 @@ export function poseBot(target, params) {
     const on = p.catchlight > 0.5 ? 1 : 0;
     r.pupilL.setAttribute("opacity", on); r.pupilR.setAttribute("opacity", on);
     if (on) {
-      r.pupilL.setAttribute("transform", `translate(${p.look[0].toFixed(2)},${p.look[1].toFixed(2)})`);
-      r.pupilR.setAttribute("transform", `translate(${p.look[0].toFixed(2)},${p.look[1].toFixed(2)})`);
+      const t = `translate(${p.look[0].toFixed(2)},${p.look[1].toFixed(2)})`;
+      r.pupilL.setAttribute("transform", t); r.pupilR.setAttribute("transform", t);
     }
   }
 
@@ -241,7 +255,7 @@ export function poseBot(target, params) {
   const m = mouthGeom(p);
   r.mouth.setAttribute("d", blob(m[0], m[1], m[2]));
   r.mouth.setAttribute("transform",
-    `translate(${(MOUTH_X + p.look[0] * 0.45).toFixed(3)},${(MOUTH_Y + p.look[1] * 0.25).toFixed(3)})`);
+    `translate(${(MOUTH_X + p.mouthShift + p.look[0] * 0.45).toFixed(3)},${(MOUTH_Y + p.look[1] * 0.25).toFixed(3)})`);
 
   /* brows — absent at rest, so the neutral pose is six painted shapes */
   if (r.browL) {
@@ -249,12 +263,13 @@ export function poseBot(target, params) {
     const o = Math.abs(b);
     r.browL.setAttribute("opacity", o.toFixed(3));
     r.browR.setAttribute("opacity", o.toFixed(3));
-    const dy = -6 * b + p.look[1];
-    const rot = -13 * Math.min(0, b);
+    /* furrow drops the INNER ends, raise lifts them: one signed rotation, mirrored */
+    const dy = -4 * b + p.look[1] * 0.8;
+    const rot = b < 0 ? -16 * b : -6 * b;
     r.browL.setAttribute("transform",
-      `translate(${(EYE_LX + p.look[0]).toFixed(2)},${(EYE_Y + dy).toFixed(2)}) rotate(${(-rot).toFixed(2)})`);
+      `translate(${(EYE_LX + p.look[0]).toFixed(2)},${(EYE_LY + dy).toFixed(2)}) rotate(${rot.toFixed(2)})`);
     r.browR.setAttribute("transform",
-      `translate(${(EYE_RX + p.look[0]).toFixed(2)},${(EYE_Y + dy).toFixed(2)}) rotate(${rot.toFixed(2)})`);
+      `translate(${(EYE_RX + p.look[0]).toFixed(2)},${(EYE_RY + dy).toFixed(2)}) rotate(${(-rot).toFixed(2)})`);
   }
 
   /* the script m */

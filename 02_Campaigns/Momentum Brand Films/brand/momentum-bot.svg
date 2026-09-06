@@ -9,13 +9,14 @@
 
     COLOUR. Every value below is a LITERAL HEX that matches brand/tokens.css exactly.
     An inlined SVG cannot read a stylesheet's custom properties unless the consumer
-    defines them, so each paint is written as var(--token, #LITERAL): it renders
+    defines them, so each paint is written as var(PROPERTY, #LITERAL): it renders
     correctly standalone, and a film may override it by setting the property on any
-    ancestor. The mapping is one-to-one:
-        --m-bot-body  #2A80C2  = --m-mark      (the literal logo blue)
-        --m-bot-key   #FFFFFF  = --m-on-brand  (the mark's white keyline / knockouts)
-        --m-bot-ink   #14181B  = --m-ink       (eyes, mouth, brows)
-        --m-bot-sig   #E27113  = --m-signal    (accent spark; hidden at neutral)
+    ancestor. Property names below are written without their two leading dashes,
+    because XML comments may not contain a double hyphen. The mapping is one-to-one:
+        m-bot-body   #2A80C2  = token m-mark      (the literal logo blue)
+        m-bot-key    #FFFFFF  = token m-on-brand  (the mark's white keyline)
+        m-bot-ink    #14181B  = token m-ink       (eyes, mouth, brows)
+        m-bot-sig    #E27113  = token m-signal    (accent spark; hidden at neutral)
     Do not substitute any other hex. Never add a gradient, blur, glow or filter.
 
     GEOMETRY. viewBox 200x200. Body centroid (99.4, 116.4), mean radius 69.65,
@@ -23,24 +24,28 @@
     free-form blob. The ring is the body path scaled 0.870 about that centroid and
     stroked 8.16 wide, which lands its band at 0.819R -> 0.921R with a 0.079R blue
     rim outside it: the official mark's traced ring stack, held as hard numbers.
-    The ring is open at 94.6% of its own length; the script m stands in that opening.
+    The ring is open at 94.5% of its own length; the script m stands in that opening.
 
     RIG. Every id below is addressable. brand/bot-rig.js rewrites the "mb-" prefix
     to a per-instance one on mount, so many bots can share one page.
   -->
 
   <defs>
-    <clipPath id="mb-clip-l"><path id="mb-clipshape-l" d="M-18 0C-18 -9.941 -9.941 -18 0 -18C9.941 -18 18 -9.941 18 0C18 9.941 9.941 18 0 18C-9.941 18 -18 9.941 -18 0Z" transform="translate(77.5 111)"/></clipPath>
-    <clipPath id="mb-clip-r"><path id="mb-clipshape-r" d="M-18 0C-18 -9.941 -9.941 -18 0 -18C9.941 -18 18 -9.941 18 0C18 9.941 9.941 18 0 18C-9.941 18 -18 9.941 -18 0Z" transform="translate(122.5 111)"/></clipPath>
+    <clipPath id="mb-clip-l"><path id="mb-clipshape-l" d="M-19 0C-19 -10.494 -10.494 -19 0 -19C10.494 -19 19 -10.494 19 0C19 10.494 10.494 19 0 19C-10.494 19 -19 10.494 -19 0Z" transform="translate(77 110.4)"/></clipPath>
+    <clipPath id="mb-clip-r"><path id="mb-clipshape-r" d="M-17.9 0C-17.9 -9.886 -9.886 -17.9 0 -17.9C9.886 -17.9 17.9 -9.886 17.9 0C17.9 9.886 9.886 17.9 0 17.9C-9.886 17.9 -17.9 9.886 -17.9 0Z" transform="translate(123 111.6)"/></clipPath>
   </defs>
 
+  <!-- mb-fit is the safe area: the artwork is drawn at full size and then held at 88%
+       about (100,106), which keeps the m inside the artboard through the rig's whole
+       range (bob + squash + mFlex + sway together). The rig never writes to this group. -->
+  <g id="mb-fit" transform="translate(100,106) scale(0.88) translate(-100,-106)">
   <g id="mb-root">
 
     <!-- the script m — the mark's letterform, written in the air, rooted in the ring's opening -->
     <g id="mb-antenna">
-      <path id="mb-m-stroke" d="M85 56C78 37 82 12 97 12C110 12 114 25 114 40C114 28 120 20 131 20C141 20 145 29 144 39C144 46 151 49 161 42"
-            stroke="var(--m-bot-body,#2A80C2)" stroke-width="6.4"/>
-      <circle id="mb-spark" cx="166" cy="34" r="5" fill="var(--m-bot-sig,#E27113)" opacity="0"/>
+      <path id="mb-m-stroke" d="M86 68C85.6 62 85.2 54 85 46C87 6 110 8 112 40C114 14.7 136 14 138 42C138 48 145 47 152 39"
+            stroke="var(--m-bot-body,#2A80C2)" stroke-width="7"/>
+      <circle id="mb-spark" cx="157" cy="33" r="5" fill="var(--m-bot-sig,#E27113)" opacity="0"/>
     </g>
 
     <!-- the disc -->
@@ -50,26 +55,27 @@
     <!-- the keyline ring, opened where the m stands -->
     <path id="mb-ring" d="M109 52C143 52 163 70 169 96C175 122 167 156 143 170C119 183 81 184 61 175C39 167 28 148 28 126C28 99 39 72 59 60C73 52 93 52 109 52Z"
           transform="translate(99.4 116.4) scale(0.87) translate(-99.4 -116.4)"
-          stroke="var(--m-bot-key,#FFFFFF)" stroke-width="8.16"
-          pathLength="100" stroke-dasharray="92.5 7.5" stroke-dashoffset="1.4"/>
+          stroke="var(--m-bot-key,#FFFFFF)" stroke-width="7.97"
+          pathLength="100" stroke-dasharray="94.5 5.5" stroke-dashoffset="2.75"/>
 
     <g id="mb-face">
       <g id="mb-eyes" fill="var(--m-bot-ink,#14181B)">
-        <path id="mb-eye-l" transform="translate(77.5 111)" d="M-18 0C-18 -9.941 -9.941 -18 0 -18C9.941 -18 18 -9.941 18 0C18 9.941 9.941 18 0 18C-9.941 18 -18 9.941 -18 0Z"/>
-        <path id="mb-eye-r" transform="translate(122.5 111)" d="M-18 0C-18 -9.941 -9.941 -18 0 -18C9.941 -18 18 -9.941 18 0C18 9.941 9.941 18 0 18C-9.941 18 -18 9.941 -18 0Z"/>
-        <g clip-path="url(#mb-clip-l)"><rect id="mb-lid-l" x="45.5" y="13" width="64" height="80" fill="var(--m-bot-body,#2A80C2)"/></g>
-        <g clip-path="url(#mb-clip-r)"><rect id="mb-lid-r" x="90.5" y="13" width="64" height="80" fill="var(--m-bot-body,#2A80C2)"/></g>
-        <circle id="mb-pupil-l" cx="83" cy="104" r="4.6" fill="var(--m-bot-key,#FFFFFF)" opacity="0"/>
-        <circle id="mb-pupil-r" cx="128" cy="104" r="4.6" fill="var(--m-bot-key,#FFFFFF)" opacity="0"/>
+        <path id="mb-eye-l" transform="translate(77 110.4)" d="M-19 0C-19 -10.494 -10.494 -19 0 -19C10.494 -19 19 -10.494 19 0C19 10.494 10.494 19 0 19C-10.494 19 -19 10.494 -19 0Z"/>
+        <path id="mb-eye-r" transform="translate(123 111.6)" d="M-17.9 0C-17.9 -9.886 -9.886 -17.9 0 -17.9C9.886 -17.9 17.9 -9.886 17.9 0C17.9 9.886 9.886 17.9 0 17.9C-9.886 17.9 -17.9 9.886 -17.9 0Z"/>
+        <g clip-path="url(#mb-clip-l)"><rect id="mb-lid-l" x="-34" y="-86" width="68" height="86" fill="var(--m-bot-body,#2A80C2)"/></g>
+        <g clip-path="url(#mb-clip-r)"><rect id="mb-lid-r" x="-34" y="-86" width="68" height="86" fill="var(--m-bot-body,#2A80C2)"/></g>
+        <circle id="mb-pupil-l" cx="83" cy="103" r="4.6" fill="var(--m-bot-key,#FFFFFF)" opacity="0"/>
+        <circle id="mb-pupil-r" cx="129" cy="104" r="4.6" fill="var(--m-bot-key,#FFFFFF)" opacity="0"/>
       </g>
 
-      <path id="mb-mouth" transform="translate(100 143)" d="M-9.5 0C-9.5 0.828 -5.246 1.5 0 1.5C5.246 1.5 9.5 0.828 9.5 0C9.5 4.418 5.246 8 0 8C-5.246 8 -9.5 4.418 -9.5 0Z"
+      <path id="mb-mouth" transform="translate(100 141)" d="M-9.5 0C-9.5 0.828 -5.246 1.5 0 1.5C5.246 1.5 9.5 0.828 9.5 0C9.5 4.418 5.246 8 0 8C-5.246 8 -9.5 4.418 -9.5 0Z"
             fill="var(--m-bot-ink,#14181B)"/>
 
-      <path id="mb-brow-l" transform="translate(77.5 111)" d="M-13 -25L13 -25"
+      <path id="mb-brow-l" transform="translate(77 110.4)" d="M-12.5 -33L12.5 -33"
             stroke="var(--m-bot-ink,#14181B)" stroke-width="5" opacity="0"/>
-      <path id="mb-brow-r" transform="translate(122.5 111)" d="M-13 -25L13 -25"
+      <path id="mb-brow-r" transform="translate(123 111.6)" d="M-12.5 -33L12.5 -33"
             stroke="var(--m-bot-ink,#14181B)" stroke-width="5" opacity="0"/>
     </g>
+  </g>
   </g>
 </svg>
