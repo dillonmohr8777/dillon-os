@@ -111,3 +111,14 @@ test('the no-WebGL fallback says what happened and shows the model anyway', () =
   assert.ok(alt && alt[1].length > 40,
     'the fallback image needs alt text that describes the city, not a filename');
 });
+
+test('the prospect layer says these businesses are not clients', () => {
+  // 25 real, named Philadelphia businesses are pinned inside a branded 3D
+  // world. Without a disclosure that reads as a client roster. The 25 concept
+  // pages carry the same statement in their footers.
+  assert.ok(/None is a `? *\+?\s*`?client|none is a client/i.test(html),
+    'the site note does not say these are not clients');
+  assert.ok(/[Uu]nsolicited concept pages/.test(html),
+    'the site note does not say the pages are unsolicited');
+  assert.ok(/noindex/.test(html), 'the note does not mention the pages are noindex');
+});

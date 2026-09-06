@@ -323,10 +323,17 @@ the city, plus and minus zoom. Hold shift for larger steps.</p>
       list.appendChild(li);
     }
     const m = prospects.meta;
+    // The pins name 25 real Philadelphia businesses that have no relationship
+    // with anyone here. Saying so is not optional: a branded 3D world with 25
+    // named businesses pinned in it reads as a client roster unless it says
+    // otherwise, and the spec pages themselves carry the same disclosure.
     document.getElementById('sitenote').textContent =
-      `${m.withBuilding} of ${m.count} bound to a real building footprint: ` +
-      `${m.byContainment} the address falls inside, ${m.byProximity} the nearest ` +
-      `within 25 m. Click a pin to open its homepage.`;
+      `Unsolicited concept pages for 25 real Philadelphia businesses. None is a ` +
+      `client and none has been contacted; each page is a private staging ` +
+      `concept, noindex, and its details should be reconfirmed on the official ` +
+      `website. ${m.withBuilding} of ${m.count} are bound to a real building ` +
+      `footprint: ${m.byContainment} the address falls inside, ${m.byProximity} ` +
+      `the nearest within 25 m. Click a pin to open its concept page.`;
     document.getElementById('pins-toggle').addEventListener('click', (e) => {
       viewer.showPins = !viewer.showPins;
       e.target.setAttribute('aria-pressed', String(viewer.showPins));
