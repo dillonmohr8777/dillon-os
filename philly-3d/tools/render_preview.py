@@ -22,6 +22,7 @@ HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(HERE, "tools"))
 import pack                                                        # noqa: E402
 from solar import sun_position                                     # noqa: E402
+import shadow as shadowmod                                         # noqa: E402
 import datetime as dt                                              # noqa: E402
 
 BIN = os.path.join(HERE, "dist", "philly-buildings.bin")
@@ -95,23 +96,34 @@ def render(path, eye, target, fov_deg=48, W=1600, H=900, max_km=6.0,
         d.line([(0, y), (W, y)], fill=tuple(int(v) for v in c))
 
     # Ground is drawn before every building rather than sorted with them.
-    # A 700 m ground quad's centroid can be nearer than a building standing in
+    # A large ground quad's centroid can be nearer than a building standing in
     # front of it, so a single depth sort puts slabs of pavement over the city.
+    # Resolution is adaptive: fine near the camera so a 4 km shadow reads as a
+    # shadow rather than a checkerboard, coarse in the far field where it costs
+    # nothing to be wrong.
     ground_faces = []
-    G, STEP = 16000.0, 800.0
-    gx = np.arange(-G, G, STEP)
-    for x0 in gx:
-        for y0 in gx:
-            ground_faces.append((np.array([[x0, y0, 0], [x0 + STEP, y0, 0],
-                                           [x0 + STEP, y0 + STEP, 0], [x0, y0 + STEP, 0]]),
-                                 np.array([0.0, 0.0, 1.0]), -1.0))
+    ex, ey = e[0], e[1]
+    for half, step in ((2200.0, 14.0), (9000.0, 220.0)):
+        gx = np.arange(-half, half, step)
+        for x0 in gx:
+            for y0 in gx:
+                if half > 3000 and abs(x0) < 2200 and abs(y0) < 2200:
+                    continue                      # already covered by the fine grid
+                px, py = x0 + ex, y0 + ey
+                ground_faces.append((np.array([[px, py, 0], [px + step, py, 0],
+                                               [px + step, py + step, 0],
+                                               [px, py + step, 0]]),
+                                     np.array([0.0, 0.0, 1.0]), -1.0))
     faces = []
+    hf_polys, hf_heights = [], []
     for X, Y, hh, bb, npts, starts in load(max_km):
         keep = hh >= hmin
         for i in np.flatnonzero(keep):
             s, c = int(starts[i]), int(npts[i])
             xs, ys = X[s:s + c], Y[s:s + c]
             z0, z1 = bb[i], bb[i] + hh[i]
+            hf_polys.append((xs.copy(), ys.copy()))
+            hf_heights.append(float(z1))
             ring = np.stack([xs, ys], axis=1)
             # normalise to CCW
             sh = np.sum(xs * np.roll(ys, -1) - np.roll(xs, -1) * ys)
@@ -129,6 +141,16 @@ def render(path, eye, target, fov_deg=48, W=1600, H=900, max_km=6.0,
                 quad = np.array([[xs[j], ys[j], z0], [nx[j], ny[j], z0],
                                  [nx[j], ny[j], z1], [xs[j], ys[j], z1]])
                 faces.append((quad, np.array([dy[j] / L[j], -dx[j] / L[j], 0.0]), hh[i]))
+
+    # ---- cast shadows -----------------------------------------------------
+    hf_heights = np.array(hf_heights, dtype=np.float32)
+    pad = 600.0
+    allx = np.concatenate([p[0] for p in hf_polys]) if hf_polys else np.array([0.0])
+    ally = np.concatenate([p[1] for p in hf_polys]) if hf_polys else np.array([0.0])
+    bounds = (float(allx.min()) - pad, float(ally.min()) - pad,
+              float(allx.max()) + pad, float(ally.max()) + pad)
+    hfield, gmeta = shadowmod.build_height_field(hf_polys, hf_heights, bounds, cell=4.0)
+    ceiling = shadowmod.shadow_ceiling(hfield, 4.0, sun_elev, sun_az)
 
     # transform, clip against the near plane, cull, sort
     NEAR = 1.5
@@ -173,21 +195,32 @@ def render(path, eye, target, fov_deg=48, W=1600, H=900, max_km=6.0,
             sy = H / 2 - fl * cam[:, 1] * inv
             if sx.max() < 0 or sx.min() > W or sy.max() < 0 or sy.min() > H:
                 continue
-            acc.append((depth, sx, sy, nrm, bh))
+            c3 = verts.mean(axis=0)
+            acc.append((depth, sx, sy, nrm, bh, float(c3[0]), float(c3[1]), float(c3[2])))
         acc.sort(key=lambda t: -t[0])
         return acc
 
     ground_drawable = project(ground_faces)
     drawable = project(faces)
 
-    amb_sky = np.array([0.33, 0.40, 0.55])
-    sunc = np.array([1.00, 0.86, 0.70])
-    skyc = np.array([0.78, 0.72, 0.68])
-    for depth, sx, sy, nrm, bh in ground_drawable + drawable:
-        lam = max(0.0, float(np.dot(nrm, sun)))
+    amb_sky = np.array([0.20, 0.26, 0.40])      # sky fill only, shadows must read
+    sunc = np.array([1.35, 1.14, 0.90])        # direct sun, warm
+    skyc = np.array([0.72, 0.70, 0.70])
+    allf = ground_drawable + drawable
+    if allf:
+        fx = np.array([f[5] for f in allf]); fy = np.array([f[6] for f in allf])
+        fz = np.array([f[7] for f in allf])
+        ceil_at = shadowmod.sample(ceiling, gmeta, fx, fy)
+        # soft edge over 1.5 m so shadow boundaries are not stair-stepped
+        shade = np.clip((fz - (ceil_at - 1.5)) / 1.5, 0.0, 1.0)
+    else:
+        shade = np.zeros(0)
+
+    for k, (depth, sx, sy, nrm, bh, cxw, cyw, czw) in enumerate(allf):
+        lam = max(0.0, float(np.dot(nrm, sun))) * float(shade[k])
         up = max(0.0, float(nrm[2]))
         if bh < 0:                                   # ground
-            base = np.array([0.115, 0.120, 0.112])
+            base = np.array([0.085, 0.088, 0.086])
         elif bh >= 45:
             base = np.array([0.185, 0.235, 0.290])   # curtain wall
         elif bh >= 18:
@@ -196,10 +229,10 @@ def render(path, eye, target, fov_deg=48, W=1600, H=900, max_km=6.0,
             base = np.array([0.430, 0.235, 0.170])   # Philadelphia brick
         if bh > 0 and up > 0.5:
             base = base * 0.42 + np.array([0.055, 0.055, 0.060])   # tar roof
-        col = base * (amb_sky * (0.30 + 0.45 * up) + sunc * lam * 1.35)
+        col = base * (amb_sky * (0.26 + 0.50 * up) + sunc * lam)
         # Beer-Lambert extinction rather than a power curve, so near buildings
         # stay saturated and only the far skyline goes milky.
-        haze = 1.0 - math.exp(-depth / 7000.0)
+        haze = 1.0 - math.exp(-depth / 15000.0)
         col = col * (1 - haze) + skyc * haze
         col = np.clip(col, 0, 1) ** (1 / 2.2)
         d.polygon(list(zip(sx.tolist(), sy.tolist())),
