@@ -70,6 +70,15 @@
         <div class="b" id="cb">SEO · AEO · GEO · PAID</div>
       </div>
       <div id="lock"></div>
+      <svg id="xh" width="1920" height="1080" viewBox="0 0 1920 1080" style="position:absolute;inset:0;opacity:0">
+        <g id="xhg">
+          <path d="M 900,496 h 120 M 960,436 v 120" stroke="#8E8578" stroke-width="1.2"/>
+          <circle cx="960" cy="496" r="26" fill="none" stroke="#8E8578" stroke-width="1.2"
+                  stroke-dasharray="3 7"/>
+          <path d="M 828,496 h 26 M 1066,496 h 26 M 960,364 v 26 M 960,602 v 26"
+                stroke="#8E8578" stroke-width="1.2" stroke-opacity=".7"/>
+        </g>
+      </svg>
     </div>
   </div>
 
@@ -453,7 +462,7 @@ const figEls = FIG.map(s => {
   const d = document.createElement('span');
   d.textContent = s; document.getElementById('figs').appendChild(d); return d;
 });
-const FIGWIN = [[2.15, 4.32], [4.78, 7.12], [7.60, 9.92], [10.40, 12.92], [13.62, 15.42]];
+const FIGWIN = [[2.05, 4.32], [4.78, 7.12], [7.60, 9.92], [10.40, 12.92], [13.62, 15.42]];
 
 /* ── grain: one seeded texture, generated once, never resampled ───────────── */
 document.getElementById('grain').style.background = `url(${grainURL(190, 0.052, 23)}) repeat`;
@@ -472,6 +481,7 @@ const els = {
   tl: document.getElementById('tl'), tr: document.getElementById('tr'),
   fr: document.getElementById('fr'), mk: document.getElementById('mk'),
   lock: document.getElementById('lock'),
+  xh: document.getElementById('xh'), xhg: document.getElementById('xhg'),
 };
 let lock = null;
 
@@ -487,7 +497,7 @@ Promise.all([markSVG(), Lockup(document.getElementById('lock'), {
 });
 
 /* ── timeline helpers ─────────────────────────────────────────────────────── */
-const DRAW = [[2.05, 1.95], [4.62, 1.98], [7.42, 1.98], [10.28, 1.92], [13.34, 1.86]];
+const DRAW = [[1.92, 2.05], [4.62, 1.98], [7.42, 1.98], [10.28, 1.92], [13.34, 1.86]];
 
 function lensR(t) {
   let R = 372 * at(t, 0.00, 1.50, easeEmphatic);       // the aperture irises open
@@ -524,6 +534,12 @@ window.seek = function (t) {
   gRet.style.opacity = ret;
   gRet.setAttribute('transform', `translate(${(osc(t, 5.2) * 7).toFixed(2)},${(osc(t, 3.7, .3) * 5).toFixed(2)})`);
 
+  /* the plate is empty at first: a hairline crosshair holds it while the iris lands */
+  const xhP = at(t, 0.80, 0.65) * (1 - at(t, 2.05, 0.55, easeStandard));
+  els.xh.style.opacity = xhP * 0.85;
+  els.xhg.setAttribute('transform',
+    `translate(${(osc(t, 4.4) * 13).toFixed(2)},${(osc(t, 3.1, .2) * 9).toFixed(2)})`);
+
   /* --- the strip under the lens ---------------------------------------- */
   const idx = stripX(t);
   const rise = -22 * Math.sin(Math.PI * clamp((t - 7.20) / 0.98));      // the II→III drift lifts
@@ -536,7 +552,7 @@ window.seek = function (t) {
   sc = lerp(sc, 3.60, at(t, 15.40, 2.40, easeStandard));                // the release expands it
   els.scale.style.transform = `scale(${sc.toFixed(4)})`;
 
-  const stripOut = 1 - at(t, 16.05, 1.75, easeStandard);
+  const stripOut = 1 - at(t, 15.95, 1.60, easeStandard);
   els.wrap.style.opacity = stripOut;
   els.grid.style.opacity = 0.85 * (1 - at(t, 15.45, 1.30, easeStandard));
   els.panel.style.opacity = 1 - at(t, 15.50, 1.60, easeStandard);
@@ -591,17 +607,17 @@ window.seek = function (t) {
   });
 
   /* --- the statement --------------------------------------------------- */
-  const sOut = at(t, 21.05, 0.7, easeStandard);
-  revealWords(els.s1, t, 17.80, 0.85, 0.085, 34);
-  revealWords(els.s2, t, 18.40, 0.85, 0.085, 34);
+  const sOut = at(t, 20.95, 0.55, easeEmphatic);
+  revealWords(els.s1, t, 17.28, 0.90, 0.085, 34);
+  revealWords(els.s2, t, 17.92, 0.90, 0.085, 34);
   els.stmt.style.opacity = 1 - sOut;
-  els.stmt.style.transform = `translateY(${(-sOut * 30).toFixed(2)}px)`;
+  els.stmt.style.transform = `translateY(${(-sOut * 46).toFixed(2)}px)`;
 
   /* --- the credit ------------------------------------------------------ */
   const cOut = 1 - at(t, 23.05, 0.6, easeStandard);
-  els.crule.style.width = `${(at(t, 21.40, 0.95, easeEmphatic) * 862).toFixed(1)}px`;
+  els.crule.style.width = `${(at(t, 21.30, 0.95, easeEmphatic) * 862).toFixed(1)}px`;
   els.credit.style.opacity = cOut;
-  const caP = at(t, 21.85, 0.7), cbP = at(t, 22.15, 0.7);
+  const caP = at(t, 21.75, 0.7), cbP = at(t, 22.05, 0.7);
   els.ca.style.opacity = caP; els.ca.style.transform = `translateY(${((1 - caP) * 14).toFixed(2)}px)`;
   els.cb.style.opacity = cbP; els.cb.style.transform = `translateY(${((1 - cbP) * 14).toFixed(2)}px)`;
 
