@@ -150,6 +150,56 @@ void main() {
   frag = vec4(pow(clamp(c, 0.0, 1.0), vec3(1.0 / 2.2)), 1.0);
 }`;
 
+const WATER_VS = `#version 300 es
+in vec2 aXY;
+uniform mat4 uViewProj;
+uniform float uWaterZ;
+out vec3 vWorld;
+void main() {
+  vWorld = vec3(aXY, uWaterZ);
+  gl_Position = uViewProj * vec4(vWorld, 1.0);
+}`;
+
+// Water is the one surface where the sky matters more than the albedo. A
+// Schlick fresnel raises reflectance at grazing angles, the reflected ray
+// picks up the sky gradient, and a broad specular lobe gives the sun path
+// that shows up on the Schuylkill at low sun.
+const WATER_FS = `#version 300 es
+precision highp float;
+in vec3 vWorld;
+uniform vec3 uEye;
+uniform vec3 uSunDir;
+uniform vec3 uSunColor;
+uniform vec3 uSkyColor;
+uniform vec3 uZenith;
+uniform vec3 uHorizon;
+uniform float uFogDist;
+out vec4 frag;
+void main() {
+  vec3 toEye = uEye - vWorld;
+  float dist = length(toEye);
+  vec3 V = toEye / dist;
+  vec3 N = vec3(0.0, 0.0, 1.0);
+
+  float f = 0.02 + 0.98 * pow(1.0 - max(dot(N, V), 0.0), 5.0);
+  vec3 R = reflect(-V, N);
+  vec3 skyRefl = mix(uHorizon, uZenith, pow(clamp(R.z, 0.0, 1.0), 0.55));
+
+  vec3 deep = vec3(0.013, 0.026, 0.034) * (uSkyColor * 0.9);
+  vec3 col = mix(deep, skyRefl, f);
+
+  vec3 H = normalize(uSunDir + V);
+  float spec = pow(max(dot(N, H), 0.0), 220.0);
+  float glint = pow(max(dot(N, H), 0.0), 18.0) * 0.10;
+  col += uSunColor * (spec * 2.2 + glint) * step(0.0, uSunDir.z);
+
+  float fog = 1.0 - exp(-dist / uFogDist);
+  col = mix(col, uHorizon, fog * fog);
+  frag = vec4(pow(clamp(col, 0.0, 1.0), vec3(1.0 / 2.2)), 1.0);
+}`;
+
+globalThis.WATER_VS = WATER_VS;
+globalThis.WATER_FS = WATER_FS;
 globalThis.CITY_VS = CITY_VS;
 globalThis.CITY_FS = CITY_FS;
 globalThis.GROUND_VS = GROUND_VS;

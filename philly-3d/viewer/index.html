@@ -171,6 +171,7 @@ the city, plus and minus zoom. Hold shift for larger steps.</p>
 
   try {
     await viewer.load('../data/philly-buildings.bin');
+    await viewer.loadWater('../data/philly-water.bin');
   } catch (err) {
     statusEl.textContent = 'Could not load the city data: ' + err.message;
     console.error(err);

@@ -56,6 +56,9 @@ class Viewer {
     this.uGround = uniformMap(gl, this.progGround);
     this.progSky = createProgram(gl, SKY_VS, SKY_FS, 'sky');
     this.uSky = uniformMap(gl, this.progSky);
+    this.progWater = createProgram(gl, WATER_VS, WATER_FS, 'water');
+    this.uWater = uniformMap(gl, this.progWater);
+    this.waterCount = 0;
 
     const quad = new Float32Array([-1, -1, 3, -1, -1, 3]);
     this.skyVao = gl.createVertexArray();
@@ -119,6 +122,43 @@ class Viewer {
     this.status(`${this.city.buildingCount.toLocaleString()} buildings`);
     this.setTime(this.date);
     return this.city;
+  }
+
+  // Water arrives as a flat triangle soup: 7,000 triangles is small enough
+  // that an index buffer would cost more than it saves.
+  async loadWater(url) {
+    try {
+      const res = await fetch(url);
+      if (!res.ok) return;
+      const buf = new Uint8Array(await res.arrayBuffer());
+      const dv = new DataView(buf.buffer);
+      let magic = '';
+      for (let i = 0; i < 8; i++) magic += String.fromCharCode(dv.getUint8(i));
+      if (magic !== 'PHLWATR1') throw new Error(`bad water magic: ${magic}`);
+      const triCount = dv.getUint32(12, true);
+      this.waterZ = dv.getFloat32(16, true);
+      const raw = await inflateBrowser(buf.subarray(20));
+      const rv = new DataView(raw.buffer, raw.byteOffset, raw.byteLength);
+      const n = rv.getUint32(0, true);
+      const xy = new Float32Array(n * 6);
+      for (let i = 0; i < n * 6; i++) xy[i] = rv.getFloat32(4 + i * 4, true);
+
+      const gl = this.gl;
+      this.waterVao = gl.createVertexArray();
+      gl.bindVertexArray(this.waterVao);
+      const vb = gl.createBuffer();
+      gl.bindBuffer(gl.ARRAY_BUFFER, vb);
+      gl.bufferData(gl.ARRAY_BUFFER, xy, gl.STATIC_DRAW);
+      const loc = gl.getAttribLocation(this.progWater, 'aXY');
+      gl.enableVertexAttribArray(loc);
+      gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
+      gl.bindVertexArray(null);
+      this.waterCount = n * 3;
+      if (n !== triCount) console.warn(`water triangle count ${n} != header ${triCount}`);
+    } catch (err) {
+      console.warn('water layer unavailable:', err.message);
+      this.waterCount = 0;
+    }
   }
 
   setTime(date) {
@@ -321,6 +361,24 @@ class Viewer {
     bindCommon(this.uGround);
     gl.bindVertexArray(this.groundVao);
     gl.drawArrays(gl.TRIANGLES, 0, 6);
+
+    if (this.waterCount) {
+      gl.useProgram(this.progWater);
+      const u = this.uWater;
+      gl.uniformMatrix4fv(u.uViewProj, false, this.mvp);
+      gl.uniform1f(u.uWaterZ, this.waterZ || 0);
+      gl.uniform3fv(u.uEye, eye);
+      gl.uniform3fv(u.uSunDir, sd);
+      gl.uniform3fv(u.uSunColor, c.sun);
+      gl.uniform3fv(u.uSkyColor, c.sky);
+      gl.uniform3fv(u.uZenith, c.zenith);
+      gl.uniform3fv(u.uHorizon, c.horizon);
+      gl.uniform1f(u.uFogDist, fogDist);
+      gl.bindVertexArray(this.waterVao);
+      gl.disable(gl.CULL_FACE);
+      gl.drawArrays(gl.TRIANGLES, 0, this.waterCount);
+      gl.enable(gl.CULL_FACE);
+    }
 
     gl.useProgram(this.progCity);
     bindCommon(this.uCity);
