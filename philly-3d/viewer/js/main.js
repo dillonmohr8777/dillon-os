@@ -59,6 +59,10 @@ class Viewer {
     this.progWater = createProgram(gl, WATER_VS, WATER_FS, 'water');
     this.uWater = uniformMap(gl, this.progWater);
     this.waterCount = 0;
+    this.progBeam = createProgram(gl, BEAM_VS, BEAM_FS, 'beam');
+    this.uBeam = uniformMap(gl, this.progBeam);
+    this.beamCount = 0;
+    this.showPins = true;
 
     const quad = new Float32Array([-1, -1, 3, -1, -1, 3]);
     this.skyVao = gl.createVertexArray();
@@ -159,6 +163,21 @@ class Viewer {
       console.warn('water layer unavailable:', err.message);
       this.waterCount = 0;
     }
+  }
+
+  attachProspects(prospects) {
+    this.prospects = prospects;
+    const gl = this.gl;
+    this.beamVao = gl.createVertexArray();
+    gl.bindVertexArray(this.beamVao);
+    const vb = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER, vb);
+    gl.bufferData(gl.ARRAY_BUFFER, prospects.beamData, gl.STATIC_DRAW);
+    const loc = gl.getAttribLocation(this.progBeam, 'aPosSide');
+    gl.enableVertexAttribArray(loc);
+    gl.vertexAttribPointer(loc, 4, gl.FLOAT, false, 0, 0);
+    gl.bindVertexArray(null);
+    this.beamCount = prospects.beamCount;
   }
 
   setTime(date) {
@@ -392,6 +411,22 @@ class Viewer {
       gl.drawArrays(gl.TRIANGLES, 0, e.count);
       drawn++;
     }
+    if (this.beamCount && this.showPins) {
+      gl.useProgram(this.progBeam);
+      gl.uniformMatrix4fv(this.uBeam.uViewProj, false, this.mvp);
+      gl.uniform3fv(this.uBeam.uEye, eye);
+      gl.uniform1f(this.uBeam.uWidth, 1.0);
+      gl.uniform3fv(this.uBeam.uColor, [1.0, 0.62, 0.24]);
+      gl.bindVertexArray(this.beamVao);
+      gl.disable(gl.CULL_FACE);
+      gl.drawArrays(gl.TRIANGLES, 0, this.beamCount);
+      gl.enable(gl.CULL_FACE);
+    }
+    if (this.prospects && this.showPins) {
+      this.prospects.update(this.mvp, eye, 9000,
+        this.canvas.clientWidth, this.canvas.clientHeight);
+    }
+
     gl.bindVertexArray(null);
     this.drawnTiles = drawn;
 

@@ -198,6 +198,33 @@ void main() {
   frag = vec4(pow(clamp(col, 0.0, 1.0), vec3(1.0 / 2.2)), 1.0);
 }`;
 
+// Camera-facing beam: the quad is a degenerate line in the buffer, expanded
+// sideways in view space so it keeps a constant on-screen width at any zoom.
+const BEAM_VS = `#version 300 es
+in vec4 aPosSide;
+uniform mat4 uViewProj;
+uniform vec3 uEye;
+uniform float uWidth;
+out float vT;
+void main() {
+  vec3 p = aPosSide.xyz;
+  vec3 toEye = normalize(uEye - p);
+  vec3 side = normalize(cross(toEye, vec3(0.0, 0.0, 1.0)));
+  float dist = length(uEye - p);
+  p += side * aPosSide.w * uWidth * dist * 0.0016;
+  vT = clamp((aPosSide.z - 0.0) / 1.0, 0.0, 1.0);
+  gl_Position = uViewProj * vec4(p, 1.0);
+}`;
+
+const BEAM_FS = `#version 300 es
+precision highp float;
+in float vT;
+uniform vec3 uColor;
+out vec4 frag;
+void main() { frag = vec4(uColor, 1.0); }`;
+
+globalThis.BEAM_VS = BEAM_VS;
+globalThis.BEAM_FS = BEAM_FS;
 globalThis.WATER_VS = WATER_VS;
 globalThis.WATER_FS = WATER_FS;
 globalThis.CITY_VS = CITY_VS;
