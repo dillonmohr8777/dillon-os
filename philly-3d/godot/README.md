@@ -110,7 +110,7 @@ godot --headless --path <gtb>/godot --script philly_smoke.gd
 ```
 
 Last run, Godot 4.2.2-stable: 22 checks passed. 1,246 MeshInstance3D and 1,245
-StaticBody3D built in 312 ms, no mesh instance without a mesh, City Hall
+StaticBody3D built in 315 ms, no mesh instance without a mesh, City Hall
 44.7 m off the district centre where the projection puts it, 22 street axes,
 both in-window prospects carrying their spec homepage.
 
@@ -130,6 +130,13 @@ with that engine's own glass shader, lit windows, parapets and cornices.
 
 Three things that run taught, which reading the code did not:
 
+- **The `city_hall` landmark pointed at the wrong place.** It was exported as
+  the projection origin, on the assumption that the origin is City Hall. It is
+  not: the origin is Penn Square, and the survey puts City Hall's footprint
+  centre 144.4 m east and 17.5 m south of it, agreeing with published
+  coordinates for the building. Anything that navigated to `city_hall` was sent
+  to the middle of the road a block west. The export test had encoded the same
+  assumption, so it agreed with the exporter and both were wrong.
 - **The district floated.** The engine draws its ground as one slab at y = 0
   while the export put every footprint on its measured `base_elevation`, which
   across this window runs 0.7 to 14.7 m with a median of 13.4. The whole

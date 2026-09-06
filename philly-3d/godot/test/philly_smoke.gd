@@ -87,11 +87,14 @@ func _initialize() -> void:
 	var ch = b.landmark("city_hall")
 	check("landmark('city_hall') resolves", ch is Vector3, str(ch))
 	if ch is Vector3:
-		# City Hall is the projection origin and the district centre is the ENU
-		# point (-40, -20), so it must sit a short, specific distance off centre.
+		# The district centre is the ENU point (-40, -20) and the survey puts
+		# City Hall's footprint centre at (144.4, -17.5), so the building sits
+		# 184.4 m off centre. This bound used to be 20 to 120 m, derived from
+		# the assumption that City Hall IS the projection origin. It is not:
+		# the origin is Penn Square, 145 m west of the building.
 		var d: float = Vector3(ch.x, 0.0, ch.z).length()
-		check("City Hall lands where the projection says",
-			d > 20.0 and d < 120.0, "%.1f m off the district centre" % d)
+		check("City Hall lands where the survey puts it",
+			d > 150.0 and d < 220.0, "%.1f m off the district centre" % d)
 
 	# Only the prospects that fall inside the 840 m window are exported, so this
 	# checks whichever ones did rather than assuming a particular business.

@@ -168,5 +168,9 @@ is interpolated and `docs/SOURCES.md` says so.
 
 ## Coordinates
 
-Local ENU tangent plane in metres, origin at City Hall (39.952583, -75.165222),
+Local ENU tangent plane in metres, origin at Penn Square (39.952583,
+-75.165222), where Market meets Broad and the city's street numbering begins.
 +X east, +Y north, +Z up. One unit is one metre anywhere in the scene.
+
+The origin is not the centre of the City Hall building: the survey puts that
+144.4 m east and 17.5 m south, at 39.952425, -75.163533. See `docs/SOURCES.md`.

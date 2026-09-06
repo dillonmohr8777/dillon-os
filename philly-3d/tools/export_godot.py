@@ -333,9 +333,20 @@ def main():
                 "vertical": p["vertical"],
                 "site": f"philly-sites/{p['slug']}/index.html",
             }
-    landmarks["city_hall"] = {"position": gd(-cx, -cy), "label": "City Hall",
+    # The surveyed footprint, NOT the projection origin. The two are 145 m
+    # apart: the origin sits at 39.952583, -75.165222 while the survey puts
+    # City Hall's own footprint centre at 39.952425, -75.163533, which is what
+    # published coordinates for the building agree with. Pointing this landmark
+    # at the origin sent anything that navigated to "city_hall" to the middle of
+    # the road a block west of it.
+    ch = next((b for b in buildings if b["id"] == 489794), None)
+    ch_x, ch_y = (ch["cx"], ch["cy"]) if ch else (0.0, 0.0)
+    landmarks["city_hall"] = {"position": gd(ch_x - cx, ch_y - cy),
+                              "label": "City Hall",
                               "address": "1400 John F Kennedy Blvd",
-                              "vertical": "Civic", "site": None}
+                              "vertical": "Civic", "site": None,
+                              "note": "surveyed footprint centre; the projection "
+                                      "origin is 145 m west of it"}
 
     district = {
         "generated_by": "philly-3d/tools/export_godot.py",

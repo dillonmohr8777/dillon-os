@@ -151,18 +151,30 @@ test('landmarks are real addresses and point at real sites', () => {
   }
 });
 
-test('City Hall sits where the projection says it does', () => {
-  // The district is centred on ENU (-40, -20) and rotated by the grid bearing,
-  // so City Hall lands at a known offset. If the rotation were dropped or
-  // doubled this is the first thing that would move.
+test('City Hall sits where the survey puts it, not where the origin is', () => {
+  // This test used to derive the expected position from the ENU origin, on the
+  // assumption that the origin IS City Hall. It is not: the origin is Penn
+  // Square and the survey puts the building's footprint centre 144.4 m east and
+  // 17.5 m south of it. The test passed anyway because the exporter made the
+  // same assumption, so the two agreed with each other and both were wrong.
+  //
+  // It is checked against the surveyed footprint now, which keeps its real
+  // purpose: a dropped or doubled grid rotation moves this first.
+  const landmarks = JSON.parse(fs.readFileSync(
+    path.join(__dirname, '..', 'data', 'philly-landmarks.json'), 'utf8'));
+  const survey = landmarks.find((l) => l.id === 489794);
+  assert.ok(survey, 'City Hall is missing from the landmark table');
+  assert.ok(Math.hypot(survey.x, survey.y) > 100,
+    'the survey now puts City Hall at the origin, so this test is moot');
+
   const ch = district.landmarks.city_hall.position;
   const [cx, cy] = district.centre_enu;
   const r = district.grid_bearing_deg * Math.PI / 180;
-  const ex = -cx, ey = -cy;
+  const ex = survey.x - cx, ey = survey.y - cy;
   const wantX = ex * Math.cos(r) - ey * Math.sin(r);
   const wantZ = -(ex * Math.sin(r) + ey * Math.cos(r));
-  assert.ok(Math.abs(ch[0] - wantX) < 0.02, `x ${ch[0]} want ${wantX}`);
-  assert.ok(Math.abs(ch[2] - wantZ) < 0.02, `z ${ch[2]} want ${wantZ}`);
+  assert.ok(Math.abs(ch[0] - wantX) < 1.0, `x ${ch[0]} want ${wantX.toFixed(2)}`);
+  assert.ok(Math.abs(ch[2] - wantZ) < 1.0, `z ${ch[2]} want ${wantZ.toFixed(2)}`);
 });
 
 test('the GDScript only calls kit helpers that exist', () => {

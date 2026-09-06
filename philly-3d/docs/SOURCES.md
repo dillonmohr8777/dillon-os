@@ -153,8 +153,14 @@ Same publisher and ArcGIS organisation, downloaded 2026-09-06:
 
 Local ENU tangent plane, WGS-84 ellipsoid, so one scene unit is one real metre.
 
-- Origin: **39.952583 N, -75.165222 W**, Philadelphia City Hall, which is the
-  origin of the city's own street-numbering grid
+- Origin: **39.952583 N, -75.165222 W**, Penn Square, where Market Street meets
+  Broad Street and the city's own street numbering begins.
+
+  This is **not** the centre of the City Hall building. The survey puts City
+  Hall's own footprint centre at 39.952425, -75.163533, which is 144.4 m east
+  and 17.5 m south of the origin and agrees with published coordinates for the
+  building. The origin is kept where it is because every number in this project
+  derives from it; the difference is recorded rather than smoothed away.
 - Metres per degree longitude at origin: 85,452.8936
 - Metres per degree latitude at origin: 111,033.7215
 - Implementation and round-trip test: `tools/geo.py`

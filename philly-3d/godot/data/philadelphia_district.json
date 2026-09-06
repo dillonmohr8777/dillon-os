@@ -4572,14 +4572,15 @@
   },
   "city_hall": {
    "position": [
-    36.28,
+    181.59,
     0.0,
-    -26.14
+    -31.94
    ],
    "label": "City Hall",
    "address": "1400 John F Kennedy Blvd",
    "vertical": "Civic",
-   "site": null
+   "site": null,
+   "note": "surveyed footprint centre; the projection origin is 145 m west of it"
   }
  },
  "building_count": 461,
