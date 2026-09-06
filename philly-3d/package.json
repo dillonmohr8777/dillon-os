@@ -1,0 +1,10 @@
+{
+  "name": "philly-3d",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A real 3D model of Philadelphia built from the city's LiDAR building survey",
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "serve": "python3 -m http.server 8080 --directory ."
+  }
+}
