@@ -16,8 +16,8 @@
   .gb.t{ height:16px; background:var(--m-brand); opacity:.72; }
   .gb.u{ height:10px; background:var(--m-line-strong); opacity:.42; }
   .chip { display:inline-block; background:var(--m-signal); color:var(--m-on-signal);
-          font-size:17px; font-weight:800; letter-spacing:.005em; line-height:1;
-          padding:7px 12px 8px; border-radius:6px; white-space:nowrap; }
+          font-size:19px; font-weight:800; letter-spacing:.005em; line-height:1;
+          padding:8px 13px 9px; border-radius:6px; white-space:nowrap; }
   .winbox { position:absolute; left:-14px; right:-14px; top:-12px; bottom:-12px;
             border:2px solid var(--m-signal-ink); border-radius:10px; pointer-events:none; }
 
@@ -25,16 +25,23 @@
   #prompt { position:absolute; left:420px; top:432px; width:1080px; height:216px;
             background:var(--m-paper); border:1.5px solid var(--m-line-strong);
             border-radius:26px; box-shadow:var(--m-block-md); opacity:0; }
-  #qline { position:absolute; left:46px; top:44px; right:130px; height:56px;
-           font-size:40px; font-weight:700; color:var(--m-ink); letter-spacing:-.005em;
+  #qline { position:absolute; left:48px; top:40px; right:130px; height:64px;
+           font-size:46px; font-weight:700; color:var(--m-ink); letter-spacing:-.008em;
            white-space:nowrap; }
-  #caret { display:inline-block; width:3px; height:40px; background:var(--m-ink);
-           vertical-align:-6px; margin-left:4px; }
-  #ghostq { position:absolute; left:46px; top:56px; width:520px; height:20px;
-            border-radius:10px; background:var(--m-line); }
-  #ptools { position:absolute; left:46px; bottom:34px; display:flex; gap:12px; }
+  #caret { display:inline-block; width:4px; height:46px; background:var(--m-ink);
+           vertical-align:-8px; margin-left:5px; }
+  #ghostq { position:absolute; left:48px; top:56px; width:520px; height:22px;
+            border-radius:11px; background:var(--m-line); }
+  #ptools { position:absolute; left:48px; bottom:34px; display:flex; gap:14px;
+            align-items:center; }
   #ptools i { display:block; width:34px; height:34px; border-radius:9px;
-              border:1.5px solid var(--m-line); }
+              border:1.5px solid var(--m-line-strong); opacity:.5; position:relative; }
+  #ptools i::before, #ptools i::after { content:""; position:absolute; background:var(--m-line-strong);
+            left:50%; top:50%; transform:translate(-50%,-50%); }
+  #ptools i::before { width:14px; height:2px; }
+  #ptools i:first-child::after { width:2px; height:14px; }
+  #ptools i:last-child::before { width:15px; height:11px; background:none;
+            border:2px solid var(--m-line-strong); border-radius:3px; }
   #send { position:absolute; right:26px; bottom:26px; width:68px; height:68px;
           border-radius:50%; background:var(--m-signal);
           display:flex; align-items:center; justify-content:center; }
@@ -44,14 +51,14 @@
   .scard { position:absolute; background:var(--m-paper);
            border:1.5px solid var(--m-line-strong); border-radius:18px;
            overflow:hidden; opacity:0; will-change:transform,opacity; }
-  #cA { left:120px;  top:370px; width:540px; height:430px; box-shadow:var(--m-soft-1); }
-  #cB { left:560px;  top:250px; width:680px; height:510px; box-shadow:var(--m-block-sm); }
-  #cC { left:1290px; top:190px; width:490px; height:410px; box-shadow:var(--m-soft-1); }
+  #cA { left:110px;  top:370px; width:540px; height:430px; box-shadow:var(--m-soft-1); }
+  #cB { left:550px;  top:250px; width:720px; height:400px; box-shadow:var(--m-block-sm); }
+  #cC { left:1320px; top:168px; width:470px; height:410px; box-shadow:var(--m-soft-1); }
   .clab { position:absolute; font-size:19px; font-weight:800; letter-spacing:.24em;
           color:var(--m-muted); opacity:0; }
-  #labA { left:122px;  top:824px; }
-  #labB { left:562px;  top:784px; }
-  #labC { left:1292px; top:624px; }
+  #labA { left:112px;  top:824px; }
+  #labB { left:552px;  top:674px; }
+  #labC { left:1322px; top:602px; }
 
   /* card A — a results page */
   #cA .pad { padding:26px 26px 0; }
@@ -89,7 +96,7 @@
   #cC .lrow:first-child { margin-top:0; }
 
   /* ── beat 4 · the checklist ──────────────────────────────────────────── */
-  #check { position:absolute; left:196px; top:348px; width:1040px; }
+  #check { position:absolute; left:196px; top:302px; width:1040px; }
   .ci { position:absolute; left:0; width:1040px; opacity:0; }
   .ci .dot { position:absolute; left:0; top:19px; width:15px; height:15px; border-radius:50%; }
   .ci h3 { margin:0; font-size:44px; font-weight:800; letter-spacing:-.012em;
@@ -321,7 +328,7 @@ const INK = '#14181B', BRAND = '#155E86', SIGNAL = '#E27113',
 /* ═══ beat 1 · the wordmark run, drawn on canvas ═════════════════════════ */
 const RUN_A = 'MOMENTUM ';                 // ink
 const RUN_B = 'for local search.';         // brand blue
-const RUN_FS = 1400;                       // too big to read comfortably
+const RUN_FS = 1300;                       // too big to read comfortably
 const cv = $('runcv'), cx = cv.getContext('2d');
 let RUN = { wA: 0, W: 0, cap: 0, send: 0.07 };
 
@@ -347,7 +354,7 @@ const LIST = [
 const CI = LIST.map(([h, p, c], i) => {
   const d = document.createElement('div');
   d.className = 'ci';
-  d.style.top = `${i * 130}px`;
+  d.style.top = `${i * 132}px`;
   d.innerHTML = `<span class="dot" style="background:${c}"></span>
     <div class="body"><h3>${h}</h3><p>${p}</p></div><div class="rule"></div>`;
   $('check').appendChild(d);
@@ -379,13 +386,14 @@ $('s2').querySelector('.pin').innerHTML = PIN(SIGNAL, 26);
 const PILL_TEXT = ['GOOGLE', 'CHATGPT', 'MAPS', 'PERPLEXITY'];
 /* five stations: scatter → margins → right column → margins → the closing row */
 const PILL_POS = [
-  /* GOOGLE     */[[352, 350, -6], [300, 148, -3], [1362, 428, -2], [204, 250, -4], null],
-  /* CHATGPT    */[[1596, 396, 5], [880, 942, 2], [1622, 532, 3], [1716, 330, 3], null],
-  /* MAPS       */[[430, 748, 4], [1690, 726, -3], [1344, 636, -3], [188, 830, 3], null],
-  /* PERPLEXITY */[[1462, 796, -4], [330, 950, 3], [1642, 738, 2], [1712, 790, -3], null],
+  /* GOOGLE     */[[352, 350, -6], [300, 148, -3], null, null],
+  /* CHATGPT    */[[1596, 396, 5], [880, 942, 2], null, null],
+  /* MAPS       */[[430, 748, 4], [1690, 726, -3], null, null],
+  /* PERPLEXITY */[[1462, 796, -4], [330, 950, 3], null, null],
 ];
-const PILL_SCALE = [1, 0.84, 0.84, 0.84, 1];
-const PILL_HOP = [[5.95, 0.95], [9.50, 0.90], [16.45, 0.85], [21.55, 1.05]];
+const PILL_SCALE = [1, 0.84, 0.86, 1];
+const PILL_HOP = [[5.95, 0.95], [9.50, 0.92], [21.55, 1.05]];
+const COL_JIT = [-14, 8, -6, 12];
 const PILLS = PILL_TEXT.map((txt) => {
   const el = document.createElement('div');
   el.className = 'pill';
@@ -411,9 +419,12 @@ const wLn2 = words($('ln2'));
 
   /* the closing row: measured, centred, gap 26 */
   const ws = PILLS.map((p) => p.offsetWidth);
+  /* station 3: a right-aligned column that balances the checklist beat */
+  ws.forEach((w, i) => { PILL_POS[i][2] = [1766 + COL_JIT[i] - w / 2, 404 + i * 106, (i % 2 ? 1.4 : -1.4)]; });
+  /* station 4: the neat closing row, the scatter finally resolved */
   const total = ws.reduce((a, b) => a + b, 0) + 26 * (ws.length - 1);
   let x = 960 - total / 2;
-  ws.forEach((w, i) => { PILL_POS[i][4] = [x + w / 2, 662, 0]; x += w + 26; });
+  ws.forEach((w, i) => { PILL_POS[i][3] = [x + w / 2, 662, 0]; x += w + 26; });
 
   window.seek(0);
   window.__ready = true;
@@ -434,12 +445,12 @@ const poseCard = (el, rest, ccx, ccy, s, rot, o) => {
 };
 
 const CARDS = [
-  { el: $('cA'), lab: $('labA'), x: 120,  y: 370, w: 540, h: 430, rot: -1.7,
+  { el: $('cA'), lab: $('labA'), x: 110,  y: 370, w: 540, h: 430, rot: -1.7,
     birth: 5.98, sx: 600,  strip: [1546, 152, 0.34, 1.6], ph: 0.0 },
-  { el: $('cB'), lab: $('labB'), x: 560,  y: 250, w: 680, h: 510, rot: 0.9,
-    birth: 5.86, sx: 960,  strip: [1320, 150, 0.30, -1.2], ph: 0.4 },
-  { el: $('cC'), lab: $('labC'), x: 1290, y: 190, w: 490, h: 410, rot: 2.3,
-    birth: 6.12, sx: 1320, strip: [1750, 148, 0.32, 2.4], ph: 0.75 },
+  { el: $('cB'), lab: $('labB'), x: 550,  y: 250, w: 720, h: 400, rot: 0.9,
+    birth: 5.86, sx: 960,  strip: [1300, 150, 0.28, -1.2], ph: 0.4 },
+  { el: $('cC'), lab: $('labC'), x: 1320, y: 168, w: 470, h: 410, rot: 2.3,
+    birth: 6.12, sx: 1320, strip: [1748, 146, 0.32, 2.4], ph: 0.75 },
 ];
 const SECS = ['s1', 's2', 's3', 's4'].map((id) => {
   const el = $(id), inr = el.querySelector('.in');
@@ -447,9 +458,9 @@ const SECS = ['s1', 's2', 's3', 's4'].map((id) => {
 });
 
 const CHIPS = [
-  { chip: $('chipA'), box: $('boxA'), at: 7.58 },
-  { chip: $('chipB'), box: null,      at: 7.94 },
-  { chip: $('chipC'), box: $('boxC'), at: 8.30 },
+  { chip: $('chipA'), box: $('boxA'), at: 7.26 },
+  { chip: $('chipB'), box: null,      at: 7.58 },
+  { chip: $('chipC'), box: $('boxC'), at: 7.90 },
 ];
 
 const QUERY = "who's the best roofer in Fishtown?";
@@ -471,7 +482,7 @@ window.seek = function (t) {
       const col = at(t, 1.52, 1.12, easeEmphatic);
       const s = lerp(1, RUN.send, col);
       const tx = 960 - s * RUN.W * f;
-      const ty = 540 + lerp(74, 0, col) - 96 * gone;
+      const ty = 540 + lerp(92, 0, col) - 96 * gone;
 
       cx.save();
       cx.globalAlpha = alpha;
@@ -548,10 +559,10 @@ window.seek = function (t) {
   {
     const out = at(t, 12.66, 0.40, easeStandard);
     CI.forEach((it, i) => {
-      const p = at(t, 10.18 + i * 0.54, 0.70);
+      const p = at(t, 9.96 + i * 0.50, 0.70);
       it.el.style.opacity = p * (1 - out);
       it.el.style.transform = `translateY(${(1 - p) * 26 - 22 * out}px)`;
-      it.rule.style.width = `${at(t, 10.30 + i * 0.54, 0.72, easeEmphatic) * 660}px`;
+      it.rule.style.width = `${at(t, 10.08 + i * 0.50, 0.72, easeEmphatic) * 660}px`;
     });
   }
 
