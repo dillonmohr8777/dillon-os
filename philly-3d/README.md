@@ -6,7 +6,9 @@ A real 3D model of Philadelphia, built from the city's own LiDAR survey.
 procedural city, no AI-generated skyline, no stock model. Comcast Center is
 976 ft here because the City of Philadelphia measured it at 976 ft.
 
-![Center City from the southwest](renders/shot-02-center-city.jpg)
+![Philadelphia from the east at golden hour: the Center City tower cluster with
+its restored crowns, the rowhouse grid running out to the horizon, parks in
+green and the real street centrelines cut through it](renders/hero-01-skyline.jpg)
 
 ## What is here
 
