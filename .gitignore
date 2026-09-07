@@ -61,3 +61,9 @@ automation/*/font-cache/
 automation/*/.impeccable/
 automation/*/*.log
 automation/*/latest-daily-state.json
+
+# Video stack runtime state: spend ledger, gateway offsets, rendered jobs.
+# Regenerable, and video-jobs/ holds large MP4s that must never reach the repo.
+_os/automation/state/video-ledger.jsonl
+_os/automation/state/video-telegram.json
+_os/automation/state/video-jobs/
