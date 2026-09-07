@@ -44,6 +44,12 @@ tags:
 - Use separate collector, maker, checker, compiler, and observer roles. For
   consequential work, the checker must be a different model family from the
   maker and must inspect the actual artifact or live result.
+- Executor/Advisor is a separate mechanism from maker/checker: the Executor
+  (whichever agent is driving the task, turn by turn) may call the `advisor`
+  subagent mid-task, zero-to-many times, for a second opinion on a plan or a
+  stuck decision. Advisor is read-only, hands back an opinion rather than an
+  edit, and never signs off - that stays the maker/checker gate's job once,
+  at handoff (`qa-critic` against `web-product-builder` and similar pairs).
 - Pass the minimum exact context. Public or free routes never receive secrets,
   raw private communications, sensitive client evidence, or cross-client
   context.
