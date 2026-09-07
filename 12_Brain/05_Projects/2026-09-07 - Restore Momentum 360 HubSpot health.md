@@ -2,7 +2,7 @@
 note_type: project
 status: active
 created: 2026-09-07
-updated: 2026-09-07
+updated: 2026-09-07T23:20:00Z
 owner: Dillon Mohr
 area: Momentum 360 / Jason Fallon HubSpot (portal 50612503)
 priority: high
@@ -64,6 +64,34 @@ Dillon and Nick fixed the segment filters and UTM fields same day
 (`#360marketing`, thread `1786986784.428959`). That thread is closed; it is
 evidence of the account's fragility, not an open item.
 
+## Live verification - 2026-09-07 23:13 UTC
+
+Ran the repo's `Jason HubSpot Live Audit` GitHub Action (`all`) directly
+against portal 50612503 using the protected read-only token — no login
+required, nothing sent to Jason. Confirms the account is still live and
+functioning, just still degraded for the same reason:
+
+- **Status: still `degraded`.** Same single cause as every prior report:
+  `conversations` optional probe fails with `HubSpot 403 MISSING_SCOPES`.
+  The browser-session block that was in every Slack report through Sep 1
+  isn't part of this token-based check (that only affects browser-UI
+  verification, not the API), so this run can't confirm whether that part
+  is still broken — only Jason logging in resolves that question.
+- **No data loss.** Object totals grew normally since the 2026-07-23
+  baseline: contacts 14,262 → 14,977, companies 6,730 → 6,913, deals 1,574 →
+  1,690, calls 2,948 → 3,521. Today's window (Sep 6-7) shows 8 new contacts,
+  4 new companies, 17 updated contacts.
+- **New/worse symptom:** the CallRail date-window aggregate calls (calls,
+  meetings, tasks, CallRail ingestion counts) now fail with `HubSpot 400:
+  There was a problem with the request` instead of returning counts. Prior
+  Slack reports (through Sep 1) got CallRail ingestion counts fine via this
+  same code path — this is a regression worth a closer look, separate from
+  the known conversations-scope and browser-session issues.
+- Attribution audit: 14,977 contacts audited, 22.54% deterministic channel
+  mapping coverage (up slightly from 19.29% on 2026-07-23), 11,601 still
+  "Needs Review." Qualification, revenue attribution, and spend/ROI remain
+  explicitly blocked pending business-definition approval — unchanged.
+
 ## Next actions
 
 - [ ] Send Jason the drafted message (queued in `System/approval-queue.md`)
@@ -77,6 +105,9 @@ evidence of the account's fragility, not an open item.
       `npm run health` / the `Jason HubSpot Live Audit` GitHub Action manually.
 - [ ] Once Jason acts, re-verify with `verify-ready` / `daily-health` and
       confirm three consecutive READY days before closing this project.
+- [ ] Investigate the new CallRail date-window HTTP 400 (found in the
+      2026-09-07 live audit) separately from the three known blockers — it's
+      a regression from the counts that worked through Sep 1.
 
 ## Completion boundary
 
