@@ -1,0 +1,172 @@
+{
+  "date": "2026-09-07",
+  "lanes": {
+    "gmail-intel": {
+      "lane": "gmail-intel",
+      "source": "vault-fallback",
+      "verified_facts": [
+        "00_Inbox/ unchanged since 2026-09-01 (23 notes, 6-day freeze)",
+        "inbox-brief-2026-09-07.md completed this morning",
+        "Puttery Jesse conditional dashboard promise still open"
+      ],
+      "artifacts_created": ["System/urgent-replies.md"],
+      "blockers": ["Gmail MCP not authenticated"],
+      "approval_required": [],
+      "tier1_candidates": [],
+      "tier2_candidates": ["Momentum 360 Slack reply drafts"],
+      "recommended_next_action": "Authenticate Composio Gmail; until then use inbox-brief captures"
+    },
+    "slack-intel": {
+      "lane": "slack-intel",
+      "source": "vault-fallback",
+      "verified_facts": [
+        "Four Momentum 360 Slack captures dated 2026-07-30",
+        "No slack notes in last 24h",
+        "All four tracked in approval-queue"
+      ],
+      "artifacts_created": ["System/slack-action-queue.md"],
+      "blockers": ["Slack MCP not authenticated"],
+      "approval_required": ["All four M360 replies before send"],
+      "tier1_candidates": [],
+      "tier2_candidates": [
+        "Jason/Sean bot stability reply",
+        "Sean CallRail status reply",
+        "Melissa guidelines/Loom reply",
+        "Jenny brand direction reply"
+      ],
+      "recommended_next_action": "Draft four replies for approval queue"
+    },
+    "vault-pulse": {
+      "lane": "vault-pulse",
+      "source": "vault",
+      "verified_facts": [
+        "37/37 clients stalled 7+ days",
+        "frontmatter-validate: 37/37 complete",
+        "Cindy May Christmas due 2026-09-01 (6d overdue)",
+        "predict-work canonical queue available (fingerprint b0d9571b)"
+      ],
+      "artifacts_created": [],
+      "blockers": [],
+      "approval_required": ["Bar Crawl paid-media", "BigOrange website"],
+      "tier1_candidates": ["Touch 3-5 stalled clients with real contact"],
+      "tier2_candidates": [],
+      "recommended_next_action": "Lead pulse touches with Bar Crawl + BigOrange approval asks"
+    },
+    "codex-session-sync": {
+      "lane": "codex-session-sync",
+      "source": "vault",
+      "verified_facts": [
+        "10_Sessions/ contains 7 notes",
+        "2026-09-05 PR sweep session compiled",
+        "No unprocessed session promotions flagged"
+      ],
+      "artifacts_created": [],
+      "blockers": [],
+      "approval_required": [],
+      "tier1_candidates": [],
+      "tier2_candidates": [],
+      "recommended_next_action": "No session promotions needed today"
+    },
+    "domain-ads-seo": {
+      "lane": "domain-ads-seo",
+      "source": "vault+queue",
+      "verified_facts": [
+        "Bar Crawl wi-20260808-0003 needs-approval",
+        "Two disapproved Halloween/Fall Cocktail ads on record",
+        "Book site /api/dossier-leads missing per sentinel fixture"
+      ],
+      "artifacts_created": [],
+      "blockers": ["Billing account approval for Bar Crawl"],
+      "approval_required": ["Bar Crawl billing path", "Book funnel endpoint deploy"],
+      "tier1_candidates": [],
+      "tier2_candidates": ["Bar Crawl ad disapproval clearance"],
+      "recommended_next_action": "Surface Bar Crawl yes/no on billing accounts"
+    },
+    "content-routines": {
+      "lane": "content-routines",
+      "source": "calendar",
+      "verified_facts": [
+        "Monday 2026-09-07 — no Sunday BOK or Align LinkedIn gate",
+        "BOK weekly window opens 2026-09-08 (96% recurrence)"
+      ],
+      "artifacts_created": [],
+      "blockers": [],
+      "approval_required": [],
+      "tier1_candidates": ["Fingerprint BOK source packet today"],
+      "tier2_candidates": [],
+      "recommended_next_action": "Prep BOK packet; skip Sunday routines"
+    },
+    "automation-health": {
+      "lane": "automation-health",
+      "source": "local-state",
+      "verified_facts": [
+        "Claude loop receipts end 2026-08-18",
+        "company-os-umbrella preflight: 3/3 OK",
+        "Registry gates unchanged (obsidian_sync, netlify_token, mail_vendor)"
+      ],
+      "artifacts_created": ["System/routine-health.md"],
+      "blockers": ["Cloud clone cannot run Windows Task Scheduler"],
+      "approval_required": [],
+      "tier1_candidates": [],
+      "tier2_candidates": [],
+      "recommended_next_action": "Refresh automation-status.md on desktop"
+    },
+    "websites-scout": {
+      "lane": "websites-scout",
+      "source": "preflight",
+      "verified_facts": [
+        "site-health dry-run: 1 pass, 1 fail, 3 skipped",
+        "book-ironicineptocracy form endpoint fails fixture check"
+      ],
+      "artifacts_created": [],
+      "blockers": ["Live site checks need --live flag"],
+      "approval_required": ["Book /api/dossier-leads Vercel deploy"],
+      "tier1_candidates": [],
+      "tier2_candidates": [],
+      "recommended_next_action": "Keep book form fix in approval queue"
+    },
+    "outreach-scout": {
+      "lane": "outreach-scout",
+      "source": "preflight",
+      "verified_facts": [
+        "queue-status OK",
+        "radar sweep 2026-09-06 current",
+        "outreach-activate tier 2 gated"
+      ],
+      "artifacts_created": [],
+      "blockers": ["mail_vendor pending-decision"],
+      "approval_required": [],
+      "tier1_candidates": [],
+      "tier2_candidates": [],
+      "recommended_next_action": "No outreach activation today"
+    },
+    "ads-scout": {
+      "lane": "ads-scout",
+      "source": "vault",
+      "verified_facts": [
+        "Replenish fifth dashboard slot unconfirmed",
+        "Omega/Onsite attribution audits still approval-gated"
+      ],
+      "artifacts_created": [],
+      "blockers": ["No live Ads MCP in cloud session"],
+      "approval_required": ["Replenish budget/campaign changes"],
+      "tier1_candidates": [],
+      "tier2_candidates": [],
+      "recommended_next_action": "Defer ads execution; approvals only"
+    },
+    "reporting-scout": {
+      "lane": "reporting-scout",
+      "source": "vault",
+      "verified_facts": [
+        "Bar Crawl June HTML report still sample figures",
+        "Last report-brain-ingest 2026-08-11"
+      ],
+      "artifacts_created": [],
+      "blockers": [],
+      "approval_required": ["Bar Crawl report delivery after live numbers"],
+      "tier1_candidates": [],
+      "tier2_candidates": [],
+      "recommended_next_action": "Replace sample metrics before client send"
+    }
+  }
+}

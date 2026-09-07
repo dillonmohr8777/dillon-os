@@ -1,6 +1,6 @@
 ---
 tags: [system, operating-status]
-last_updated: 2026-07-19
+last_updated: 2026-09-07
 callsign: D.I.L.L.O.N.
 operator: Dillon Mohr
 goal_label: ACTIVE CLIENTS
@@ -34,6 +34,7 @@ The vault was reconciled on 2026-07-12 against current work from the rolling thr
 
 ## Operating rules
 
+- **Company OS Umbrella** (`company-os-umbrella`, daily 1:00 PM ET) is the single Cursor automation for competitive-task sensing — eleven parallel intel lanes + one consolidator. See `System/competitive-task-definition.md` and `Daily-Briefs/competitive-task-today.md`.
 - Keep one canonical client record per active name.
 - Refresh the roster weekly using current Slack, Gmail, Ads, project, and delivery evidence.
 - Do not revive a removed name from historical notes without current evidence.
