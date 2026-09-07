@@ -21,11 +21,11 @@ navigation is needed.
 Checkbox items only — `_os/vault-state.js` reads this section for the HUD
 directive feed and skips any other list format.
 
-- [ ] Close out Cindy May Christmas deliverable (`due: 2026-09-01`, now 3 days past due — third day carried forward).
-- [ ] BOK Law Firm predicted prep: locate/fingerprint the weekly source packet, resolve 3 topics, stage 3 image slots — no drafting yet.
+- [ ] Close out Cindy May Christmas deliverable (`due: 2026-09-01`, now 6 days past due — carried forward again).
+- [ ] BOK Law Firm predicted prep: locate/fingerprint the weekly source packet, resolve 3 topics, stage 3 image slots — window opens tomorrow (2026-09-08), no drafting yet.
 - [ ] Get yes/no on the two needs-approval queue items: BigOrange Marketing website build, Bar Crawl USA paid-media optimization.
-- [ ] Touch 3-5 stalled clients (real contact, not another scan) — pick from the 40 stalled in pulse-today.md.
-- [ ] Carry forward the 4 unanswered Momentum 360 Slack asks (open since ~2026-07-30, now 5+ weeks) into tomorrow's plan.
+- [ ] Touch 3-5 stalled clients (real contact, not another scan) — pick from the 37 stalled in pulse-today.md.
+- [ ] Carry forward the 4 unanswered Momentum 360 Slack asks (open since ~2026-07-30, now 5.5+ weeks) into tomorrow's plan.
 
 ## Active projects
 
