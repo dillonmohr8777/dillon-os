@@ -109,10 +109,17 @@ cp test/philly_smoke.gd                   <gtb>/godot/
 godot --headless --path <gtb>/godot --script philly_smoke.gd
 ```
 
-Last run, Godot 4.2.2-stable: 22 checks passed. 1,246 MeshInstance3D and 1,245
-StaticBody3D built in 315 ms, no mesh instance without a mesh, City Hall
-44.7 m off the district centre where the projection puts it, 22 street axes,
+Last run, Godot 4.2.2-stable: 21 checks passed. 1,246 MeshInstance3D and 1,245
+StaticBody3D built in 282 ms, no mesh instance without a mesh, City Hall
+184.4 m off the district centre where the survey puts it, 22 street axes,
 both in-window prospects carrying their spec homepage.
+
+The 44.7 m this paragraph used to claim was the pre-fix number, measured while
+the exporter still assumed City Hall sits at the projection origin. It does
+not: the origin is Penn Square, and the survey puts the building 144.4 m east
+and 17.5 m south of it, which against the district centre at (-40, -20) is
+184.4 m. The fix corrected the exporter and the test bound and left this line
+behind, so the doc kept quoting a number the code no longer produces.
 
 It also renders. `test/philly_shot.gd` puts a camera and a sun in the district
 and saves PNGs, which needs a real GL context rather than `--headless`:
