@@ -29,6 +29,7 @@ Agents write there. Never into a generated brief.
 
 ## Briefs
 
+- [[12_Brain/11_Craft/2026-09-07 - daily learning review|2026-09-07 - daily learning review]]
 - [[12_Brain/11_Craft/2026-08-19 - operating brief|2026-08-19 - operating brief]]
 - [[12_Brain/11_Craft/2026-08-18 - operating brief|2026-08-18 - operating brief]]
 
