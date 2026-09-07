@@ -43,6 +43,7 @@ def main():
     n = int(np.frombuffer(raw, "<u4", 1, o)[0]); o += 4 + 4 * n
     h = np.frombuffer(raw, "<u2", n, o).astype(np.float64) * 0.1; o += 2 * n
     b = np.frombuffer(raw, "<i2", n, o).astype(np.float64) * 0.1; o += 2 * n
+    r = np.frombuffer(raw, "<u2", n, o).astype(np.float64) * 0.1; o += 2 * n
     o += n
     npts = np.frombuffer(raw, "u1", n, o).astype(np.int64); o += n
     tot = int(npts.sum())
@@ -62,6 +63,7 @@ def main():
     sample = [{"i": int(i), "x": round(float(X[starts[i]]), 4),
                "y": round(float(Y[starts[i]]), 4),
                "h": round(float(h[i]), 4), "b": round(float(b[i]), 4),
+               "r": round(float(r[i]), 4),
                "npts": int(npts[i])}
               for i in range(0, n, step)]
 

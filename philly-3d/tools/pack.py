@@ -16,8 +16,8 @@ import zlib
 
 import numpy as np
 
-MAGIC = b"PHLCITY2"
-VERSION = 2
+MAGIC = b"PHLCITY3"
+VERSION = 3
 TILE_SIZE = 1024.0        # metres
 QUANT = 1.0 / 32.0        # metres per quantum -> 3.125 cm
 COORD_OFFSET = -512.0     # tile-local coords span [-512, +1536] m
@@ -71,7 +71,7 @@ def undelta_rings(deltas, npts):
     return out.astype(np.uint16)
 
 
-def pack_tile(ids, height_dm, base_dm, flags, npts, xs, ys) -> bytes:
+def pack_tile(ids, height_dm, base_dm, roof_dm, flags, npts, xs, ys) -> bytes:
     order = np.argsort(np.asarray(ids, dtype=np.int64), kind="stable")
     ids = np.asarray(ids, dtype=np.int64)[order]
     npts_a = np.asarray(npts, dtype=np.int64)
@@ -93,6 +93,7 @@ def pack_tile(ids, height_dm, base_dm, flags, npts, xs, ys) -> bytes:
         id_delta.tobytes(),
         np.asarray(height_dm, dtype="<u2")[order].tobytes(),
         np.asarray(base_dm, dtype="<i2")[order].tobytes(),
+        np.asarray(roof_dm, dtype="<u2")[order].tobytes(),
         np.asarray(flags, dtype="u1")[order].tobytes(),
         npts_s.astype("u1").tobytes(),
         delta_rings(xs_s, npts_s).tobytes(),

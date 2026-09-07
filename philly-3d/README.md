@@ -24,7 +24,7 @@ green and the real street centrelines cut through it](renders/hero-01-skyline.jp
 | Path | What it is |
 |---|---|
 | `viewer/` | The WebGL2 viewer. Open `viewer/index.html` over any static server |
-| `data/philly-buildings.bin` | The whole city, 14.6 MB, tiled binary. Format in `docs/FORMAT.md` |
+| `data/philly-buildings.bin` | The whole city, 14.8 MB, tiled binary. Format in `docs/FORMAT.md` |
 | `data/philly-landmarks.json` | 5,586 named or tall buildings with heights and addresses |
 | `data/philly-crowns.json` | The five towers the survey cannot see, and how they step up |
 | `data/philly-ground.bin` | Parks and street centrelines, as a flat inlay |
@@ -159,6 +159,12 @@ to read in silhouette, and tiers are centred on the footprint, so City Hall's
 tower rises from the middle of its block rather than over one portal. Both
 approximations are stated in `docs/SOURCES.md` alongside the full comparison
 table.
+
+The survey also carries `max_hgt`, a second LiDAR height per footprint. Past a
+noise floor, the gap between it and `approx_hgt` becomes a generated pitched
+cap in the WebGL viewer instead of a taller flat box: a hip fan to one apex
+over the footprint's centroid, since two scalar heights cannot recover a real
+ridge line or slope direction. See "Roof profiles" in `docs/SOURCES.md`.
 
 ## The ground it stands on
 

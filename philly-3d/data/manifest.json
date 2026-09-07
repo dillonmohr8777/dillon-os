@@ -1,10 +1,11 @@
 {
-  "generated_utc": "2026-09-06T18:51:05Z",
+  "generated_utc": "2026-09-07T18:29:02Z",
   "source": {
     "name": "LI_BUILDING_FOOTPRINTS",
     "publisher": "City of Philadelphia, Department of Licenses & Inspections",
     "endpoint": "https://services.arcgis.com/fLeGjb7u4uXqeF9q/arcgis/rest/services/LI_BUILDING_FOOTPRINTS/FeatureServer/0",
     "height_field": "approx_hgt (feet, LiDAR-derived)",
+    "roof_field": "max_hgt (feet, LiDAR-derived, second measured height)",
     "features_downloaded": 546459
   },
   "projection": {
@@ -30,7 +31,16 @@
     "skipped_too_small": 1075,
     "height_estimated": 2989,
     "rings_decimated": 15,
-    "landmarks": 5586
+    "landmarks": 5586,
+    "roof_profiled": 102101
+  },
+  "roof_ft": {
+    "min_gap_drawn": 3.0,
+    "max_gap_drawn": 100.0,
+    "buildings_with_profile": 102101,
+    "fraction_with_profile": 0.1872,
+    "mean_ft": 7.82,
+    "max_ft": 100.0
   },
   "extent_local_m": {
     "min_x": -9759.7,
@@ -49,8 +59,8 @@
   },
   "artifacts": {
     "philly-buildings.bin": {
-      "bytes": 14601923,
-      "sha256": "745af4f086eaa78e1d2996c9188cfeecfa8febd9c8e552b6f645467dadef529a"
+      "bytes": 14804423,
+      "sha256": "cbd8f5fb173a0621b54703db156b49f32309e057c854f2ea9d95d9877b506c93"
     },
     "philly-terrain.bin": {
       "bytes": 304607,

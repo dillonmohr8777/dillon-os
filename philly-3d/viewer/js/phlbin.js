@@ -1,9 +1,9 @@
-// Reader for the PHLCITY2 container. This is the exact mirror of
+// Reader for the PHLCITY3 container. This is the exact mirror of
 // tools/pack.py; docs/FORMAT.md is the contract between them and
 // test/phlbin.test.js checks a real tile round-trips.
 'use strict';
 
-const PHL_MAGIC = 'PHLCITY2';
+const PHL_MAGIC = 'PHLCITY3';
 const PHL_HEADER_SIZE = 64;
 const PHL_INDEX_ENTRY = 20;
 
@@ -79,6 +79,12 @@ class PhlCity {
     for (let i = 0; i < n; i++) base[i] = dv.getInt16(o + i * 2, true) * 0.1;
     o += 2 * n;
 
+    // roof: generated pitched-cap height above the flat top; 0 = flat roof.
+    // See docs/FORMAT.md and viewer/js/mesh.js.
+    const roof = new Float32Array(n);
+    for (let i = 0; i < n; i++) roof[i] = dv.getUint16(o + i * 2, true) * 0.1;
+    o += 2 * n;
+
     const flags = new Uint8Array(raw.buffer, raw.byteOffset + o, n).slice();
     o += n;
     const npts = new Uint8Array(raw.buffer, raw.byteOffset + o, n).slice();
@@ -109,7 +115,7 @@ class PhlCity {
       }
     }
 
-    const out = { tx, ty, n, ids, height, base, flags, npts, starts, x, y, total };
+    const out = { tx, ty, n, ids, height, base, roof, flags, npts, starts, x, y, total };
     this.cache.set(key, out);
     return out;
   }

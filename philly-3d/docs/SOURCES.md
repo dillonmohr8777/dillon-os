@@ -149,6 +149,36 @@ to read correctly in silhouette. Two approximations are worth naming:
 footprint's `base_elevation` is added back when the tier is placed, so City
 Hall's 34.5 ft grade is not silently swallowed.
 
+### Roof profiles
+
+`max_hgt` is a second LiDAR height per footprint: the highest return, against
+`approx_hgt`'s dominant mass. The two usually agree: across the shipped data the
+median gap is under 2 ft, which is survey noise on a flat roof, not a missed
+shape. `tools/build_dataset.py` drops any gap under `ROOF_MIN_FT` (3 ft) for
+exactly that reason, so the large majority of buildings keep the flat-topped
+extrusion this project has always drawn.
+
+Where the gap clears that floor, `viewer/js/mesh.js` draws a generated pitched
+cap: every wall edge fans up to a single apex over the footprint's centroid, at
+`approx_hgt + min(max_hgt - approx_hgt, ROOF_MAX_FT)`. The 100 ft cap
+(`ROOF_MAX_FT`) exists for the same reason the crown table exists: LiDAR can
+return a single wild point (an antenna, a mechanical penthouse corner, a bad
+return), and this project would rather flatten the top of an implausible spike
+than draw it.
+
+**What is sourced and what is generated, stated the same way as the crowns
+above.** The extra height is measured: `max_hgt` is the publisher's own second
+LiDAR return, not an invention. The *shape* it takes is not: a real pitched
+roof has a ridge line and a slope direction that two scalar heights cannot
+recover, so the cap is a direction-agnostic hip fan to a centroid apex rather
+than a guessed gable. This reads as a roof in silhouette without asserting an
+orientation the data does not contain.
+
+This is drawn in `philly-3d/viewer/` only. The Godot builder
+(`godot/scripts/philadelphia_world_builder.gd`) still extrudes every building
+flat to `approx_hgt`; its own README already states "not modelled: roof shape"
+as a known scope limit, and this change does not extend that surface.
+
 ## Terrain
 
 The building layer carries `base_elevation` per footprint: the ground the

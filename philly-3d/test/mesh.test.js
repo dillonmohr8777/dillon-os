@@ -74,7 +74,10 @@ test('a real tile builds a mesh with the expected vertex count', async () => {
 
   let expectVerts = 0;
   for (let i = 0; i < tile.n; i++) {
-    expectVerts += tile.npts[i] * 6 + Math.max(0, tile.npts[i] - 2) * 3;
+    expectVerts += tile.npts[i] * 6;
+    expectVerts += tile.roof[i] > 0
+      ? tile.npts[i] * 3
+      : Math.max(0, tile.npts[i] - 2) * 3;
   }
   assert.strictEqual(mesh.data.length % VERTEX_FLOATS, 0);
   // ear clipping can bail on a degenerate ring, so allow at or below the cap
@@ -149,6 +152,63 @@ test('walls run below the base so a slope cannot show a gap under a building', (
     if (mesh.data[v * VERTEX_FLOATS + 5] >= 500) roofZ.push(mesh.data[v * VERTEX_FLOATS + 2]);
   }
   assert.ok(roofZ.length >= 6 && roofZ.every((z) => z === 50));
+});
+
+test('a building with no roof gap keeps the flat cap, unaffected by the roof field', () => {
+  const tile = {
+    n: 1, total: 4, starts: new Int32Array([0]), npts: new Int32Array([4]),
+    x: new Float32Array([0, 10, 10, 0]),
+    y: new Float32Array([0, 0, 10, 10]),
+    base: new Float32Array([0]), height: new Float32Array([30]),
+    roof: new Float32Array([0]),
+    ids: new Int32Array([1]),
+  };
+  const flat = buildTileMesh(tile, null);
+  const noField = buildTileMesh({ ...tile, roof: undefined }, null);
+  assert.strictEqual(flat.vertexCount, noField.vertexCount,
+    'roof: 0 must render identically to no roof field at all');
+  for (let v = 0; v < flat.vertexCount; v++) {
+    assert.ok(flat.data[v * VERTEX_FLOATS + 2] <= 30 + 1e-6, 'flat roof must not exceed the surveyed top');
+  }
+});
+
+test('max_hgt past the noise floor becomes a pitched cap, not a taller box', () => {
+  const tile = {
+    n: 1, total: 4, starts: new Int32Array([0]), npts: new Int32Array([4]),
+    x: new Float32Array([0, 10, 10, 0]),
+    y: new Float32Array([0, 0, 10, 10]),
+    base: new Float32Array([0]), height: new Float32Array([30]),
+    roof: new Float32Array([6]),          // generated cap reaching 36 m
+    ids: new Int32Array([1]),
+  };
+  const flat = buildTileMesh({ ...tile, roof: new Float32Array([0]) }, null);
+  const capped = buildTileMesh(tile, null);
+
+  // a hip fan over a 4-gon is 4 triangles (one per edge), against 2 for the
+  // ear-clipped flat cap, so it costs one extra triangle's worth of vertices
+  assert.strictEqual(capped.vertexCount, flat.vertexCount + (4 - 2) * 3,
+    'a 4-edge hip fan (4 tris) against a 4-gon flat cap (2 tris)');
+
+  let capMinZ = Infinity, capMaxZ = -Infinity;
+  let apexes = 0;
+  for (let v = 0; v < capped.vertexCount; v++) {
+    if (capped.data[v * VERTEX_FLOATS + 5] < 1000) continue;   // walls, not roof
+    const z = capped.data[v * VERTEX_FLOATS + 2];
+    capMinZ = Math.min(capMinZ, z);
+    capMaxZ = Math.max(capMaxZ, z);
+    if (Math.abs(z - 36) < 1e-4) apexes++;
+  }
+  // every roof-tagged vertex sits between the flat top and the roof-field top
+  assert.ok(capMinZ >= 30 - 1e-6, `a cap vertex sank below the flat top: ${capMinZ}`);
+  assert.ok(capMaxZ <= 36 + 1e-6, `a cap vertex rose above max_hgt's cap: ${capMaxZ}`);
+  // the apex itself (footprint centroid at the roof-field height) must appear,
+  // once per fan triangle
+  assert.strictEqual(apexes, 4, `expected 4 apex vertices at z=36, got ${apexes}`);
+
+  // no wall or apex vertex may exceed what max_hgt actually measured
+  for (let v = 0; v < capped.vertexCount; v++) {
+    assert.ok(capped.data[v * VERTEX_FLOATS + 2] <= 36 + 1e-6, 'geometry exceeded the roof field');
+  }
 });
 
 test('a crown tier gets no skirt, because it stacks on a roof', () => {

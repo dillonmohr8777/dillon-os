@@ -99,6 +99,10 @@ function tintFor(id) {
 function buildTileMesh(tile, select) {
   const { n, npts, starts, x, y, height, base, ids } = tile;
   const solid = tile.solid || null;
+  // roof[i] > 0: a generated pitched cap from max_hgt, not a surveyed shape.
+  // See docs/FORMAT.md and docs/SOURCES.md. Absent on hand-built tiles (tests,
+  // crown tiers), which keep the flat cap this format has always drawn.
+  const roof = tile.roof || null;
   // Geometry height and shading height are the same for a surveyed building.
   // They come apart for a crown tier, whose own 20 m span must not make it
   // read as a 20 m brick building sitting on top of a glass tower.
@@ -113,7 +117,9 @@ function buildTileMesh(tile, select) {
     if (select && !select(i)) continue;
     keep[i] = 1;
     verts += npts[i] * 6;                   // walls: two triangles per edge
-    verts += Math.max(0, npts[i] - 2) * 3;  // roof: n-2 triangles
+    verts += (roof && roof[i] > 0)
+      ? npts[i] * 3                          // pitched cap: n triangles to one apex
+      : Math.max(0, npts[i] - 2) * 3;        // flat roof: n-2 triangles
   }
   const out = new Float32Array(verts * VERTEX_FLOATS);
   let o = 0;
@@ -153,11 +159,30 @@ function buildTileMesh(tile, select) {
       triCount += 2;
     }
 
-    triCount += triangulateRing(x, y, s, c, (a, b, cc) => {
-      push(x[s + a], y[s + a], z1, h, z1, tint + ROOF_BIAS);
-      push(x[s + b], y[s + b], z1, h, z1, tint + ROOF_BIAS);
-      push(x[s + cc], y[s + cc], z1, h, z1, tint + ROOF_BIAS);
-    });
+    if (roof && roof[i] > 0) {
+      // Pitched cap: fan every wall edge up to one apex over the footprint's
+      // centroid, at the top of the roof field. This is a hip-style shape
+      // this project generates, not a surveyed one: max_hgt sources the
+      // extra height, not the ridge line or slope. See docs/SOURCES.md.
+      let acx = 0, acy = 0;
+      for (let k = 0; k < c; k++) { acx += x[s + k]; acy += y[s + k]; }
+      acx /= c; acy /= c;
+      const zApex = z1 + roof[i];
+      for (let k = 0; k < c; k++) {
+        const k0 = ccw ? k : (c - 1 - k);
+        const k1 = ccw ? (k + 1) % c : (c - 1 - ((k + 1) % c));
+        push(x[s + k0], y[s + k0], z1, h, z1, tint + ROOF_BIAS);
+        push(x[s + k1], y[s + k1], z1, h, z1, tint + ROOF_BIAS);
+        push(acx, acy, zApex, h, z1, tint + ROOF_BIAS);
+        triCount++;
+      }
+    } else {
+      triCount += triangulateRing(x, y, s, c, (a, b, cc) => {
+        push(x[s + a], y[s + a], z1, h, z1, tint + ROOF_BIAS);
+        push(x[s + b], y[s + b], z1, h, z1, tint + ROOF_BIAS);
+        push(x[s + cc], y[s + cc], z1, h, z1, tint + ROOF_BIAS);
+      });
+    }
   }
 
   return { data: out.subarray(0, o), vertexCount: o / VERTEX_FLOATS, triCount };

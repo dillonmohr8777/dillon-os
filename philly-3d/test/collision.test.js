@@ -110,6 +110,53 @@ test('real Center City footprints index and block', async () => {
   assert.ok(blocked < 400, 'and is not blocked everywhere - streets exist');
 });
 
+test('a swept walk along Market Street\'s own bearing never tunnels or ends inside a building', async () => {
+  // Penn's grid runs 9.21 degrees off cardinal (docs/SOURCES.md, districts.test.js),
+  // so this is the Center City corridor's own axis, not an axis-aligned line
+  // through it. Real footprints from the City Hall tile; a walk-mode player
+  // (radius 0.4 m) takes many small steps down it via move(), the same call
+  // walk mode makes every frame, rather than teleporting to sample points.
+  const f = fs.readFileSync(path.join(__dirname, '..', 'data', 'philly-buildings.bin'));
+  const ab = f.buffer.slice(f.byteOffset, f.byteOffset + f.byteLength);
+  const city = new ctx.PhlCity(ab, async (b) => new Uint8Array(zlib.inflateSync(Buffer.from(b))));
+  const tile = await city.decode(0, 0);
+  const c = new Collider();
+  c.addTile(tile);
+
+  const bearing = 9.21 * Math.PI / 180;
+  const dirx = Math.cos(bearing), diry = Math.sin(bearing);
+  const radius = 0.4;
+  const step = 0.6;                 // metres per tick, finer than the radius
+  const nsteps = 1600;              // ~960 m, well past the 748-building tile
+
+  let x = -500, y = 40;             // west edge of the tile, off the corridor's centre
+  let hits = 0;
+  for (let s = 0; s < nsteps; s++) {
+    const before = { x, y };
+    const out = c.move(x, y, dirx * step, diry * step, radius);
+    x = out.x; y = out.y;
+    if (out.hit) hits++;
+
+    assert.ok(!c.inside(x, y), `step ${s}: walked inside a building at ${x},${y}`);
+    // swept: a single tick's own motion is bounded by the tick length, plus
+    // whatever unstick-style corner correction move()'s final resolve() adds
+    // (bounded by its own iteration count and radius). A tunnelling bug jumps
+    // the whole remaining segment, several metres, not a few tenths of one.
+    const advanced = Math.hypot(x - before.x, y - before.y);
+    const bound = step + 4 * radius;
+    assert.ok(advanced <= bound + 1e-6,
+      `step ${s}: advanced ${advanced} m in one ${step} m tick (bound ${bound})`);
+    // a reported hit normal, when present, must be a unit vector: collision.js
+    // never emits a non-normalised or zero normal
+    if (out.hit && (out.nx !== 0 || out.ny !== 0)) {
+      const len = Math.hypot(out.nx, out.ny);
+      assert.ok(Math.abs(len - 1) < 1e-6, `step ${s}: normal length ${len}`);
+    }
+  }
+  assert.ok(hits > 0, 'Center City is dense enough that 960 m must hit something');
+  assert.ok(hits < nsteps, 'and open enough that it is not blocked on every tick');
+});
+
 test('a long step cannot tunnel through a wall', () => {
   const c = new Collider();
   c.addTile(squareTile(0, 0, 10));

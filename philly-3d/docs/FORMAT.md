@@ -1,18 +1,18 @@
-# PHLCITY2 binary format
+# PHLCITY3 binary format
 
 A tiled, quantised container for city building massing. All integers are
 little-endian.
 
 Why not GeoJSON: 545,451 real footprints is roughly 277 MB of GeoJSON. The same
-data here is 14.6 MB, or 26.8 bytes per building, and arrives pre-tiled so a
+data here is 14.8 MB, or 27.1 bytes per building, and arrives pre-tiled so a
 renderer can frustum-cull and stream without parsing the whole city first.
 
 ## Header, 64 bytes
 
 | Offset | Type | Field |
 |---:|---|---|
-| 0 | char[8] | magic, `PHLCITY2` |
-| 8 | uint32 | version, currently 2 |
+| 0 | char[8] | magic, `PHLCITY3` |
+| 8 | uint32 | version, currently 3 |
 | 12 | uint32 | flags, reserved |
 | 16 | float64 | origin latitude |
 | 24 | float64 | origin longitude |
@@ -45,11 +45,23 @@ uint32              n
 uint32[n]           objectid, delta-coded against the previous entry
 uint16[n]           height above base, decimetres
 int16[n]            base elevation, decimetres
+uint16[n]           roof cap height above the flat top, decimetres (0 = flat roof)
 uint8[n]            flags
 uint8[n]            ring point count
 int16[total_points] x, per-ring delta-coded
 int16[total_points] y, per-ring delta-coded
 ```
+
+### Roof field
+
+`roof` is 0 for the large majority of buildings, which keep the flat-topped
+extrusion this format has always drawn: `height` (from `approx_hgt`) is the
+whole story. Where `max_hgt`, a second LiDAR height per footprint, exceeds
+`approx_hgt` by more than the survey's own noise floor, `tools/build_dataset.py`
+packs that gap here instead of folding it into `height`. A reader that sees
+`roof[i] > 0` should draw a generated pitched cap from `height` up to
+`height + roof`, not a taller flat box: the extra height is measured, the
+pitched shape it takes is not. See docs/SOURCES.md.
 
 Buildings within a tile are sorted by `objectid`, so the id deltas are small
 and positive.

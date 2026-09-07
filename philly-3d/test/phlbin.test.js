@@ -20,7 +20,7 @@ test('header matches the manifest the build wrote', () => {
   const c = city();
   const m = JSON.parse(fs.readFileSync(
     path.join(__dirname, '..', 'data', 'manifest.json'), 'utf8'));
-  assert.strictEqual(c.version, 2);
+  assert.strictEqual(c.version, 3);
   assert.strictEqual(c.buildingCount, m.counts.buildings_written);
   assert.strictEqual(c.tileCount, m.counts.tiles);
   assert.strictEqual(c.tiles.size, m.counts.tiles);
@@ -62,6 +62,14 @@ test('the City Hall tile decodes to real coordinates', async () => {
   for (let i = 0; i < t.n; i++) {
     assert.ok(t.height[i] > 0 && t.height[i] < 400, `height ${t.height[i]}`);
   }
+
+  // roof is 0 (flat) or a bounded generated cap, never negative or absurd
+  let roofed = 0;
+  for (let i = 0; i < t.n; i++) {
+    assert.ok(t.roof[i] >= 0 && t.roof[i] <= 31, `roof ${t.roof[i]}`);
+    if (t.roof[i] > 0) roofed++;
+  }
+  assert.ok(roofed > 0, 'the City Hall tile has at least one roofed building');
 });
 
 test('decoded geometry matches an independent Python decode', async () => {
@@ -79,7 +87,8 @@ test('decoded geometry matches an independent Python decode', async () => {
     const idx = t.starts[s.i];
     worst = Math.max(worst,
       Math.abs(t.x[idx] - s.x), Math.abs(t.y[idx] - s.y),
-      Math.abs(t.height[s.i] - s.h));
+      Math.abs(t.height[s.i] - s.h),
+      Math.abs(t.roof[s.i] - (s.r ?? 0)));
   }
   assert.ok(worst < 1e-3, `worst disagreement ${worst}`);
 });

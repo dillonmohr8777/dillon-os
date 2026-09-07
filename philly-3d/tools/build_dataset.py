@@ -9,7 +9,9 @@ Output: dist/philly-buildings.bin   tiled massing, every real footprint
 
 Heights come from approx_hgt (feet, LiDAR-derived). We never invent one; a
 building with no measured height is flagged so the renderer and the docs can
-say so.
+say so. Where max_hgt, a second measured height, exceeds approx_hgt past the
+survey's own noise floor, the gap is packed as a roof field the renderer turns
+into a generated pitched cap instead of a taller flat box; see ROOF_MIN_FT.
 """
 from __future__ import annotations
 
@@ -37,6 +39,16 @@ SIMPLIFY_TOL = 0.25       # metres
 MIN_AREA = 8.0            # m^2 - below this is survey noise, not a building
 MAX_PTS = 200             # ring points kept per footprint
 TALL_FT = 120.0           # flagged as skyline-defining
+
+# max_hgt is a second LiDAR height per footprint: the highest return, against
+# approx_hgt's dominant mass. On the shipped data the median of the two
+# disagreeing is under 2 ft, which is survey noise, not a roof. Below
+# ROOF_MIN_FT the disagreement is dropped rather than drawn. Above it, the gap
+# becomes a generated pitched cap (see build_tile below and docs/SOURCES.md);
+# ROOF_MAX_FT bounds how tall that cap can read, so one bad return cannot spike
+# into an ahistorical spire the way a crown-less landmark's mass understates one.
+ROOF_MIN_FT = 3.0
+ROOF_MAX_FT = 100.0
 
 FLAG_NAMED = 1
 FLAG_LANDMARK = 2
@@ -70,11 +82,12 @@ def main():
     t0 = time.time()
 
     tiles = collections.defaultdict(lambda: {
-        "ids": [], "h": [], "b": [], "f": [], "n": [], "xs": [], "ys": []})
+        "ids": [], "h": [], "b": [], "r": [], "f": [], "n": [], "xs": [], "ys": []})
 
-    n_in = n_out = n_skip_geom = n_skip_area = n_est = n_trunc = 0
+    n_in = n_out = n_skip_geom = n_skip_area = n_est = n_trunc = n_roof = 0
     pts_total = 0
     heights_ft = []
+    roof_ft_capped = []
     landmarks = []
     minx = miny = 1e18
     maxx = maxy = -1e18
@@ -105,6 +118,16 @@ def main():
             n_est += 1
         h_m = float(h_ft) * FEET_TO_M
         base_m = float(props.get("base_elevation") or 0.0) * FEET_TO_M
+
+        # max_hgt above approx_hgt, past the noise floor and capped, becomes a
+        # generated pitched cap rather than a taller flat box. See ROOF_MIN_FT.
+        roof_ft = 0.0
+        mx = props.get("max_hgt")
+        if mx and mx > h_ft + ROOF_MIN_FT:
+            roof_ft = min(float(mx) - float(h_ft), ROOF_MAX_FT)
+            n_roof += 1
+            roof_ft_capped.append(roof_ft)
+        roof_m = roof_ft * FEET_TO_M
 
         name = props.get("building_name")
         flags = 0
@@ -138,6 +161,7 @@ def main():
             t["ids"].append(int(props["objectid"]))
             t["h"].append(min(65535, int(round(h_m * 10))))
             t["b"].append(max(-32768, min(32767, int(round(base_m * 10)))))
+            t["r"].append(min(65535, int(round(roof_m * 10))))
             t["f"].append(flags)
             t["n"].append(len(cleaned))
             t["xs"].append(pack.quantize(xs - tx * pack.TILE_SIZE))
@@ -171,7 +195,7 @@ def main():
     packed = {}
     for key, t in tiles.items():
         blob = pack.pack_tile(
-            t["ids"], t["h"], t["b"], t["f"], t["n"],
+            t["ids"], t["h"], t["b"], t["r"], t["f"], t["n"],
             np.concatenate(t["xs"]), np.concatenate(t["ys"]))
         packed[key] = {"blob": blob, "count": len(t["ids"])}
 
@@ -192,6 +216,7 @@ def main():
             "endpoint": ("https://services.arcgis.com/fLeGjb7u4uXqeF9q/arcgis/rest/"
                          "services/LI_BUILDING_FOOTPRINTS/FeatureServer/0"),
             "height_field": "approx_hgt (feet, LiDAR-derived)",
+            "roof_field": "max_hgt (feet, LiDAR-derived, second measured height)",
             "features_downloaded": n_in,
         },
         "projection": {
@@ -217,6 +242,15 @@ def main():
             "height_estimated": n_est,
             "rings_decimated": n_trunc,
             "landmarks": len(landmarks),
+            "roof_profiled": n_roof,
+        },
+        "roof_ft": {
+            "min_gap_drawn": ROOF_MIN_FT,
+            "max_gap_drawn": ROOF_MAX_FT,
+            "buildings_with_profile": n_roof,
+            "fraction_with_profile": round(n_roof / max(n_out, 1), 4),
+            "mean_ft": round(float(np.mean(roof_ft_capped)), 2) if roof_ft_capped else 0.0,
+            "max_ft": round(float(np.max(roof_ft_capped)), 2) if roof_ft_capped else 0.0,
         },
         "extent_local_m": {
             "min_x": round(minx, 1), "max_x": round(maxx, 1),
