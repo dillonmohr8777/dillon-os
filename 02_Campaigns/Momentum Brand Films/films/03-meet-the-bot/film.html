@@ -3,189 +3,368 @@
 <title>Momentum — Meet the Bot</title>
 <link rel="stylesheet" href="../../brand/tokens.css">
 <style>
-  html,body { background:var(--m-paper); }
-  .stage {
-    position:relative; width:1920px; height:1080px; overflow:hidden;
-    background:var(--m-paper); color:var(--m-ink);
-    font-family:var(--m-font-text); -webkit-font-smoothing:antialiased;
-  }
-  .d    { font-family:var(--m-font-display); letter-spacing:-.024em; line-height:1; }
-  .clip { display:block; overflow:hidden; padding:.13em 0 .22em; }
+  html,body { background:var(--m-warm-canvas); }
+  .stage { position:relative; width:1920px; height:1080px; overflow:hidden;
+           background:var(--m-warm-canvas); color:var(--m-warm-ink);
+           font-family:var(--m-font-text); -webkit-font-smoothing:antialiased; }
 
-  /* ── the deep inversion (beat 6) ─────────────────────────────── */
-  #deep { position:absolute; inset:0; background:var(--m-deep); z-index:5; }
+  /* ── layers ──────────────────────────────────────────────────────────────
+     Every beat break is an opaque sheet torn away to reveal the sheet under
+     it. There is not one cross-fade in this film. ─────────────────────── */
+  .layer { position:absolute; inset:0; overflow:hidden; isolation:isolate;
+           will-change:clip-path; }
+  #L1 { z-index:94; background:var(--m-warm-canvas); }   /* the desk, with a phone on it */
+  #L2 { z-index:90; background:var(--m-warm-canvas); }   /* the desk of cards */
+  #L3 { z-index:86; background:var(--m-deep); }          /* the turn */
+  #L4 { z-index:82; background:var(--m-warm-surface); }  /* the second exchange */
+  #L5 { z-index:78; background:var(--m-warm-canvas); }   /* the three tabs */
+  #L6 { z-index:74; background:var(--m-warm-canvas); }   /* the line, then the lockup */
 
-  /* ── the phone (beats 1–4) ───────────────────────────────────── */
-  #phoneWrap { position:absolute; inset:0; perspective:1900px;
-               perspective-origin:882px 540px; z-index:3; }
-  #phone { position:absolute; left:600px; top:34px; width:564px; height:1012px;
-           border:14px solid var(--m-ink); border-radius:62px; background:var(--m-ink);
-           transform-origin:50% 50%; will-change:transform,opacity; }
-  #screen { position:absolute; inset:0; border-radius:48px; overflow:hidden;
-            background:var(--m-paper); }
+  /* the flight deck: birds and the bot live above every sheet, so they cross
+     the torn edge instead of being cut by it */
+  #flight { position:absolute; inset:0; z-index:96; pointer-events:none; }
+  #grain  { position:absolute; inset:0; z-index:99; pointer-events:none;
+            mix-blend-mode:multiply; opacity:.9; }
 
-  #island { position:absolute; left:50%; top:12px; width:112px; height:29px;
-            margin-left:-56px; border-radius:15px; background:var(--m-ink); z-index:6; }
+  /* ── three voices, four cuts ─────────────────────────────────────────── */
+  .dx { font-family:var(--m-font-display); font-variation-settings:var(--m-vf-expanded);
+        letter-spacing:-.03em; line-height:.9; }
+  .dd { font-family:var(--m-font-display); font-variation-settings:var(--m-vf-display);
+        letter-spacing:-.025em; line-height:.92; }
+  .dc { font-family:var(--m-font-display); font-variation-settings:var(--m-vf-condensed);
+        letter-spacing:.2em; text-transform:uppercase; line-height:1; }
+  .ed { font-family:var(--m-font-editorial); font-weight:400; line-height:1.06; }
+  .ei { font-family:var(--m-font-editorial); font-weight:400; font-style:italic; line-height:1.1; }
+  .ui { font-family:var(--m-font-text); }              /* software only */
+  .clip { display:block; overflow:hidden; padding:.13em 0 .2em; }
 
-  #phHead { position:absolute; left:0; right:0; top:46px; height:92px;
+  /* ── material ────────────────────────────────────────────────────────── */
+  .tex  { position:absolute; inset:0; background-repeat:no-repeat;
+          background-position:center; background-size:cover;
+          mix-blend-mode:multiply; pointer-events:none;
+          filter:saturate(.5) brightness(1.07); }
+  .tape { position:absolute; background-repeat:no-repeat; opacity:.93;
+          filter:saturate(.84); pointer-events:none; }
+  .fast { position:absolute; background-repeat:no-repeat; pointer-events:none; }
+  .bird { position:absolute; will-change:transform,opacity;
+          filter:contrast(1.12) brightness(1.14); }
+  /* a real torn edge, thresholded to alpha at load so it can carry a token
+     colour instead of arriving as a translucent wash */
+  .torn { position:absolute; -webkit-mask-repeat:no-repeat; mask-repeat:no-repeat;
+          -webkit-mask-size:117.7% 160.4%; mask-size:117.7% 160.4%;
+          -webkit-mask-position:-8.76% 0%; mask-position:-8.76% 0%; }
+  /* the plate: warm surface, hairline, hard offset. Never a blur, never a glow. */
+  .plate { background:var(--m-warm-surface); border:1px solid var(--m-warm-line);
+           box-shadow:13px 15px 0 rgba(226,113,19,.20); }
+  .figno { font-family:var(--m-font-display); font-variation-settings:var(--m-vf-condensed);
+           letter-spacing:.22em; text-transform:uppercase; font-size:18px;
+           color:var(--m-warm-muted); }
+
+  /* ═══ L1 · THE DESK, WITH A PHONE ON IT ═══════════════════════════════ */
+  #d1tex { background-size:118% 118%; background-position:26% 38%; opacity:.19; }
+  #graphSlip { position:absolute; left:1180px; top:812px; width:620px; height:268px;
+               transform:rotate(2.2deg); transform-origin:0 0;
+               background-color:var(--m-warm-panel); background-repeat:no-repeat;
+               background-size:cover; background-position:40% 30%;
+               background-blend-mode:multiply;
+               border:1px solid var(--m-warm-line); z-index:6; }
+  #d1fig { position:absolute; left:1240px; top:132px; z-index:4; }
+  #d1rule { position:absolute; left:1240px; top:166px; width:500px; height:1px;
+            background:var(--m-warm-line); z-index:4; }
+  /* the answer that has not come yet: a blank ruled index card, pinned */
+  #blank { position:absolute; left:1240px; top:200px; width:500px; height:318px;
+           transform:rotate(-1.7deg); transform-origin:50% 0; z-index:4; }
+  #blank .rl { position:absolute; left:34px; right:34px; height:1px;
+               background:var(--m-warm-line); }
+  #blank .hd { position:absolute; left:34px; right:34px; top:62px; height:2px;
+               background:rgba(180,95,42,.34); }
+
+  /* the phone, as a photographic print taped to the desk */
+  #print { position:absolute; left:470px; top:62px; width:566px; height:920px;
+           transform:rotate(-2.1deg); transform-origin:50% 40%; z-index:8; }
+  #screen { position:absolute; left:22px; top:22px; width:522px; height:792px;
+            background:var(--m-paper); overflow:hidden; }
+  #printCap { position:absolute; left:22px; right:22px; bottom:26px; text-align:center;
+              font-size:17px; color:var(--m-warm-muted); }
+  #phHead { position:absolute; left:0; right:0; top:0; height:74px;
             background:var(--m-panel); border-bottom:1.5px solid var(--m-line-strong);
-            display:flex; align-items:center; gap:16px; padding:0 26px; z-index:4; }
-  #phHead .av { width:46px; height:46px; flex:0 0 auto; }
-  #phHead .nm { font-size:27px; font-weight:800; color:var(--m-ink); letter-spacing:-.012em; }
-
-  #threadClip { position:absolute; left:0; right:0; top:138px; height:744px;
-                overflow:hidden; z-index:2; }
-  #threadInner { position:absolute; left:0; right:0; top:0; padding:0 24px;
+            display:flex; align-items:center; gap:14px; padding:0 22px; }
+  #phHead .av { width:40px; height:40px; flex:0 0 auto; }
+  #phHead .nm { font-size:23px; font-weight:800; color:var(--m-ink);
+                letter-spacing:-.012em; font-family:var(--m-font-text); }
+  #threadClip { position:absolute; left:0; right:0; top:74px; height:620px; overflow:hidden; }
+  #threadInner { position:absolute; left:0; right:0; top:0; padding:0 22px;
                  will-change:transform; }
-  .row      { display:flex; margin-top:16px; }
-  .row.out  { justify-content:flex-end; }
-  .row.in   { justify-content:flex-start; }
-  .bub      { max-width:424px; padding:16px 24px 18px; border-radius:26px;
-              font-size:27px; line-height:1.3; font-weight:600; will-change:transform,opacity; }
-  .bub.out  { background:var(--m-brand); color:var(--m-on-brand); border-bottom-right-radius:10px; }
-  .bub.in   { background:var(--m-panel); color:var(--m-ink);
-              border:1.5px solid var(--m-line-strong); border-bottom-left-radius:10px; }
-  .bub .n   { color:var(--m-signal-ink); font-weight:800; }
-  #stamp    { text-align:center; padding-top:26px; font-size:19px; font-weight:800;
-              letter-spacing:.22em; color:var(--m-muted); }
-
-  #threadBot { position:absolute; left:30px; top:690px; width:128px; height:128px; z-index:1;
-               will-change:transform; }
-
-  #composer { position:absolute; left:0; right:0; bottom:0; z-index:4;
+  #stamp { text-align:center; padding-top:26px; font-size:15px; font-weight:800;
+           letter-spacing:.22em; color:var(--m-muted); font-family:var(--m-font-text); }
+  #m0 { display:flex; justify-content:flex-end; margin-top:22px; }
+  #m0 .bub { max-width:396px; padding:15px 22px 17px; border-radius:24px;
+             border-bottom-right-radius:9px; background:var(--m-brand);
+             color:var(--m-on-brand); font-size:24px; line-height:1.3; font-weight:600;
+             font-family:var(--m-font-text); will-change:transform,opacity; }
+  #composer { position:absolute; left:0; right:0; top:694px; height:98px;
               background:var(--m-paper); border-top:1.5px solid var(--m-line-strong);
-              padding:16px 22px 20px; }
-  #pill { min-height:58px; border-radius:29px; background:var(--m-panel);
-          border:1.5px solid var(--m-line-strong); padding:12px 22px 14px;
-          font-size:23px; line-height:1.36; font-weight:600; color:var(--m-ink); }
-  #caret { display:inline-block; width:2.5px; height:24px; margin-left:2px;
+              padding:16px 20px; }
+  #pill { min-height:56px; border-radius:28px; background:var(--m-panel);
+          border:1.5px solid var(--m-line-strong); padding:12px 20px 14px;
+          font-size:21px; line-height:1.36; color:var(--m-ink);
+          font-family:var(--m-font-text); }
+  #caret { display:inline-block; width:2.5px; height:22px; margin-left:2px;
            vertical-align:-4px; background:var(--m-signal-ink); }
 
-  /* the right margin is not empty paper, it is the annotation on the numbers */
-  #cap { position:absolute; left:1318px; top:472px; width:470px; z-index:3; }
-  #capRule { height:2px; background:var(--m-line-strong); width:0; }
-  #capTxt { margin-top:20px; font-size:25px; font-weight:600; line-height:1.35;
-            letter-spacing:.01em; color:var(--m-muted); }
+  /* ═══ L2 · THE DESK OF CARDS ══════════════════════════════════════════ */
+  #d2tex { background-size:134% 134%; background-position:74% 66%; opacity:.16;
+           transform:scaleX(-1); }
+  #qcard { position:absolute; left:128px; top:120px; width:812px;
+           padding:32px 44px 36px; border-radius:22px; border-bottom-right-radius:8px;
+           background:var(--m-brand); color:var(--m-on-brand);
+           font-size:38px; line-height:1.24; font-weight:600;
+           font-family:var(--m-font-text); z-index:4;
+           will-change:transform,opacity; }
+  #qfig { position:absolute; left:132px; top:78px; z-index:4; }
+  .acard { position:absolute; z-index:4; will-change:transform,opacity; }
+  .acard .in { position:absolute; inset:0; padding:34px 36px 0; }
+  .acard .num { font-family:var(--m-font-display);
+                font-variation-settings:var(--m-vf-expanded);
+                font-size:132px; line-height:.84; letter-spacing:-.04em;
+                color:var(--m-signal-ink); display:block; margin-top:26px; }
+  .acard .wd { font-family:var(--m-font-editorial); font-size:41px; line-height:1.08;
+               color:var(--m-warm-ink); display:block; margin-top:18px; }
+  #ac0 { left:132px; top:556px; width:398px; height:326px; }
+  #ac1 { left:576px; top:588px; width:492px; height:326px; }
+  #ac2 { left:1116px; top:548px; width:624px; height:350px; }
+  #capSlip { position:absolute; left:132px; top:938px; width:556px; height:96px;
+             background:var(--m-warm-panel); z-index:4; will-change:opacity; }
+  #capTxt { position:absolute; left:160px; top:958px; width:520px; font-size:27px;
+            color:var(--m-warm-ink); z-index:5; }
 
-  /* ── the bot in the room (beats 4–10) ────────────────────────── */
-  #roomBot { position:absolute; left:0; top:0; width:128px; height:128px; z-index:7;
-             will-change:transform,width,height; }
+  /* beat 5 — the statement, and the thing being dismissed */
+  #stmt { position:absolute; left:884px; top:392px; width:960px; z-index:5; }
+  #stmt .l { font-size:112px; color:var(--m-warm-ink); display:block; }
+  #stmt .g { color:var(--m-warm-muted); }
+  #report { position:absolute; left:1216px; top:706px; width:392px; height:306px;
+            transform:rotate(2.7deg); transform-origin:50% 0; z-index:4;
+            filter:saturate(.12); }
+  #report .rr { position:absolute; left:30px; height:9px; background:var(--m-warm-line); }
+  #report .bar { position:absolute; bottom:34px; width:34px; background:var(--m-warm-line); }
+  #report .cap { position:absolute; left:30px; top:26px; }
 
-  /* ── beat 5 · the statement ──────────────────────────────────── */
-  #stmt { position:absolute; left:958px; top:418px; width:912px; z-index:4; }
-  #stmt .d { font-size:88px; }
-  #stmt .g { color:var(--m-muted); }
-
-  /* ── beat 6 · the turn ───────────────────────────────────────── */
-  #turn { position:absolute; left:190px; top:408px; width:1010px; z-index:6; }
-  #turn .d { font-size:100px; color:var(--m-on-deep); }
+  /* ═══ L3 · THE TURN ═══════════════════════════════════════════════════ */
+  #d3tex { background-size:74% 74%; background-position:96% 4%; opacity:.17;
+           mix-blend-mode:screen; filter:invert(1) contrast(1.3); }
+  #turnRule { position:absolute; left:182px; top:352px; width:0; height:7px;
+              background:var(--m-signal); z-index:5; }
+  #turn { position:absolute; left:180px; top:398px; width:1120px; z-index:5; }
+  #turn .l { font-size:106px; color:var(--m-on-deep); display:block; }
   #turn .sig { color:var(--m-signal); }
-  #turnRule { position:absolute; left:192px; top:362px; width:0; height:6px;
-              background:var(--m-signal); z-index:6; }
+  #turnStrip { left:180px; top:0; height:26px; background:var(--m-signal); z-index:4;
+               opacity:.9; }
+  #turnFig { position:absolute; left:182px; top:262px; color:var(--m-on-deep-muted);
+             z-index:5; }
 
-  /* ── beat 7 · the second exchange ────────────────────────────── */
-  .fbub { position:absolute; border-radius:38px; font-weight:600; z-index:4;
-          will-change:transform,opacity; }
-  #fq { left:640px; top:244px; width:1060px; padding:36px 52px 40px;
+  /* ═══ L4 · THE SECOND EXCHANGE ════════════════════════════════════════ */
+  #d4tex { background-size:126% 126%; background-position:18% 76%; opacity:.15; }
+  #fq { position:absolute; left:700px; top:186px; width:1078px;
+        padding:38px 54px 42px; border-radius:34px; border-bottom-right-radius:12px;
         background:var(--m-brand); color:var(--m-on-brand);
-        font-size:52px; line-height:1.26; border-bottom-right-radius:16px; }
-  #fa { left:540px; top:592px; padding:32px 52px 36px;
-        background:var(--m-panel); color:var(--m-ink);
-        border:2px solid var(--m-line-strong); font-size:58px; line-height:1.22;
-        border-bottom-left-radius:16px; white-space:nowrap; }
+        font-family:var(--m-font-text); font-size:50px; line-height:1.24; font-weight:600;
+        z-index:4; will-change:transform,opacity; }
+  #fa { position:absolute; left:614px; top:604px; width:1016px;
+        padding:36px 54px 40px; border-radius:34px; border-bottom-left-radius:12px;
+        background:var(--m-warm-surface); color:var(--m-warm-ink);
+        border:1px solid var(--m-warm-line); box-shadow:13px 15px 0 rgba(226,113,19,.20);
+        font-family:var(--m-font-text); font-size:54px; line-height:1.2; font-weight:600;
+        z-index:4; will-change:transform,opacity; }
+  #b7fig { position:absolute; left:704px; top:138px; z-index:4; }
 
-  /* ── beat 8 · what that's called ─────────────────────────────── */
+  /* ═══ L5 · THREE NAMES FOR THE SAME JOB ═══════════════════════════════ */
+  #d5tex { background-size:112% 112%; background-position:56% 22%; opacity:.16; }
   #conn { position:absolute; left:0; top:0; z-index:3; }
-  #conn line { stroke:var(--m-line-strong); stroke-width:2; fill:none; }
-  .lab { position:absolute; z-index:4; will-change:transform,opacity; }
-  .lab b { display:block; font-family:var(--m-font-display); font-size:80px;
-           letter-spacing:-.02em; line-height:1; color:var(--m-ink); }
-  .lab i { display:block; font-style:normal; font-size:27px; font-weight:700;
-           letter-spacing:.05em; color:var(--m-muted); margin-top:16px; }
-  #lab0 { left:160px; top:252px; width:420px; text-align:right; }
-  #lab1 { left:1340px; top:268px; width:420px; text-align:left; }
-  #lab2 { left:750px; top:832px; width:420px; text-align:center; }
+  #conn line { stroke:var(--m-warm-muted); stroke-width:2.4; fill:none;
+               stroke-linecap:round; }
+  .tab { position:absolute; z-index:4; will-change:transform,opacity; }
+  .tab .face { position:relative; background:var(--m-warm-surface);
+               border:1px solid var(--m-warm-line); border-bottom:0;
+               padding:30px 34px 26px; }
+  .tab .edge { position:absolute; left:0; right:0; top:100%; height:40px;
+               background:var(--m-warm-surface); }
+  .tab b { display:block; font-family:var(--m-font-display);
+           font-variation-settings:var(--m-vf-expanded);
+           font-size:88px; line-height:.86; letter-spacing:-.03em; color:var(--m-warm-ink); }
+  .tab i { display:block; font-family:var(--m-font-editorial); font-style:italic;
+           font-size:32px; color:var(--m-warm-muted); margin-top:16px; }
+  #tab0 { left:150px; top:244px; width:436px; }
+  #tab1 { left:1330px; top:258px; width:436px; }
+  #tab2 { left:742px; top:788px; width:436px; }
+  #tab1 b { color:var(--m-signal-ink); }
 
-  /* ── beat 9 · the line ───────────────────────────────────────── */
-  #script { position:absolute; left:0; top:474px; width:1920px; text-align:center;
-            font-family:var(--m-font-script); font-weight:700; font-size:92px;
-            color:var(--m-muted); z-index:4; }
+  /* ═══ L6 · THE LINE, THEN THE LOCKUP ══════════════════════════════════ */
+  #d6tex { background-size:128% 128%; background-position:34% 58%; opacity:.15;
+           transform:scale(-1,1); }
+  #script { position:absolute; left:0; top:470px; width:1920px; text-align:center;
+            font-size:88px; color:var(--m-warm-muted); z-index:4; }
   #side { position:absolute; left:0; top:606px; width:1920px; text-align:center; z-index:4; }
-  #side .d { font-size:86px; }
+  #side .l { font-size:88px; color:var(--m-warm-ink); display:block; }
+  #cardPlate { position:absolute; left:700px; top:398px; width:1088px; height:330px;
+               transform:rotate(-1.5deg); transform-origin:50% 50%; z-index:5;
+               will-change:transform,opacity; }
+  #lock { position:absolute; left:764px; top:452px; width:980px; z-index:6; }
 
-  /* ── beat 10 · the lockup ────────────────────────────────────── */
-  #lock { position:absolute; left:606px; top:448px; width:1000px; z-index:8; }
+  /* ── the bot ─────────────────────────────────────────────────────────── */
+  #threadBot { position:absolute; left:1200px; top:590px; width:220px; height:220px;
+               z-index:5; will-change:transform; }
+  #roomBot { position:absolute; left:0; top:0; width:220px; height:220px;
+             z-index:8; will-change:transform,width,height; }
 </style></head>
 <body>
 <div class="stage" id="stage">
 
-  <div id="deep"></div>
+  <!-- ══ L6 · the line, then the lockup ═══════════════════════════════ -->
+  <div class="layer" id="L6">
+    <div class="tex" id="d6tex"></div>
+    <div id="script" class="ei">most agencies are vendors.</div>
+    <div id="side"><span class="clip"><span class="l dx" id="sd1">Momentum is on your side.</span></span></div>
+    <div id="cardPlate" class="plate"></div>
+    <div class="tape" id="tpL6" data-tape="1" data-w="250"
+         style="left:660px; top:372px; transform:rotate(-28deg)"></div>
+    <div class="fast" id="fsL6" data-fast="2" data-w="66" style="left:1720px; top:660px"></div>
+    <div id="lock"></div>
+  </div>
 
-  <!-- ══ beats 1–4 · the thread ═════════════════════════════════ -->
-  <div id="phoneWrap">
-    <div id="phone">
-      <div id="screen">
-        <div id="island"></div>
+  <!-- ══ L5 · three names for the same job ════════════════════════════ -->
+  <div class="layer" id="L5">
+    <div class="tex" id="d5tex"></div>
+    <svg id="conn" width="1920" height="1080" viewBox="0 0 1920 1080">
+      <line id="cn0" x1="800" y1="430" x2="600" y2="370" pathLength="1" stroke-dasharray="1 1"/>
+      <line id="cn1" x1="1120" y1="432" x2="1318" y2="374" pathLength="1" stroke-dasharray="1 1"/>
+      <line id="cn2" x1="960" y1="672" x2="960" y2="782" pathLength="1" stroke-dasharray="1 1"/>
+    </svg>
+    <div class="tab" id="tab0">
+      <div class="face"><b>SEO</b><i>— search engines</i></div><div class="edge torn"></div>
+    </div>
+    <div class="tab" id="tab1">
+      <div class="face"><b>AEO</b><i>— answer engines</i></div><div class="edge torn"></div>
+    </div>
+    <div class="tab" id="tab2">
+      <div class="face"><b>GEO</b><i>— generative search</i></div><div class="edge torn"></div>
+    </div>
+    <div class="tape" id="tp50" data-tape="3" data-w="182" style="left:196px; top:212px; transform:rotate(-6deg)"></div>
+    <div class="tape" id="tp51" data-tape="0" data-w="196" style="left:1408px; top:224px; transform:rotate(5deg)"></div>
+    <div class="fast" id="fs52" data-fast="1" data-w="72" style="left:928px; top:754px"></div>
+  </div>
 
-        <div id="phHead"><span class="av" id="avatar"></span><span class="nm">Momentum</span></div>
+  <!-- ══ L4 · the second exchange ═════════════════════════════════════ -->
+  <div class="layer" id="L4">
+    <div class="tex" id="d4tex"></div>
+    <div class="figno" id="b7fig">FIG. 04</div>
+    <div id="fq" class="ui">what happens when someone asks AI for a plumber?</div>
+    <div id="fa" class="ui">we make sure it says your name.</div>
+    <div class="tape" id="tp40" data-tape="4" data-w="216" style="left:664px; top:158px; transform:rotate(-24deg)"></div>
+    <div class="fast" id="fs41" data-fast="0" data-w="46" style="left:1568px; top:566px; transform:rotate(12deg)"></div>
+  </div>
 
-        <div id="threadBot"></div>
-
-        <div id="threadClip"><div id="threadInner">
-          <div id="stamp">TODAY</div>
-          <div class="row out" id="m0"><div class="bub out">did anyone actually call from the ads last month?</div></div>
-          <div class="row in"  id="m1"><div class="bub in"><span class="n">11</span> calls.</div></div>
-          <div class="row in"  id="m2"><div class="bub in"><span class="n">9</span> were real people.</div></div>
-          <div class="row in"  id="m3"><div class="bub in"><span class="n">2</span> were the same wrong number.</div></div>
-        </div></div>
-
-        <div id="composer"><div id="pill"><span id="ctext"></span><i id="caret"></i></div></div>
-      </div>
+  <!-- ══ L3 · the turn ════════════════════════════════════════════════ -->
+  <div class="layer" id="L3">
+    <div class="tex" id="d3tex"></div>
+    <div class="figno" id="turnFig">FIG. 03</div>
+    <div id="turnRule"></div>
+    <div class="torn" id="turnStrip"></div>
+    <div id="turn">
+      <span class="clip"><span class="l dx" id="tn1">Momentum sends</span></span>
+      <span class="clip"><span class="l dx" id="tn2">the answer.</span></span>
     </div>
   </div>
-  <div id="cap"><div id="capRule"></div><div id="capTxt">Illustrative.<br>Not client data.</div></div>
 
-  <!-- the same character, once it is out of the phone and in the room -->
-  <div id="roomBot"></div>
+  <!-- ══ L2 · the desk of cards ═══════════════════════════════════════ -->
+  <div class="layer" id="L2">
+    <div class="tex" id="d2tex"></div>
 
-  <!-- ══ beat 5 ════════════════════════════════════════════════ -->
-  <div id="stmt">
-    <span class="clip"><span class="d" id="st1">Most agencies</span></span>
-    <span class="clip"><span class="d g" id="st2">send a report.</span></span>
+    <div class="figno" id="qfig">FIG. 02 — THE QUESTION, OFF THE SCREEN</div>
+    <div id="qcard" class="ui">did anyone actually call from the ads last month?</div>
+    <div class="tape" id="tp20" data-tape="1" data-w="238" style="left:96px; top:92px; transform:rotate(-21deg)"></div>
+    <div class="fast" id="fs20" data-fast="0" data-w="44" style="left:892px; top:96px; transform:rotate(-8deg)"></div>
+
+    <div class="acard plate" id="ac0"><div class="in">
+      <span class="figno">A</span><span class="num">11</span><span class="wd">calls.</span></div></div>
+    <div class="acard plate" id="ac1"><div class="in">
+      <span class="figno">B</span><span class="num">9</span><span class="wd">were real people.</span></div></div>
+    <div class="acard plate" id="ac2"><div class="in">
+      <span class="figno">C</span><span class="num">2</span><span class="wd">were the same wrong number.</span></div></div>
+    <div class="fast" id="fs21" data-fast="2" data-w="70" style="left:296px; top:528px"></div>
+    <div class="fast" id="fs22" data-fast="1" data-w="70" style="left:786px; top:560px"></div>
+    <div class="fast" id="fs23" data-fast="2" data-w="70" style="left:1392px; top:520px"></div>
+
+    <div class="torn" id="capSlip"></div>
+    <div id="capTxt" class="ei">Illustrative. Not client data.</div>
+
+    <div id="stmt">
+      <span class="clip"><span class="l dx" id="st1">Most agencies</span></span>
+      <span class="clip"><span class="l dx g" id="st2">send a report.</span></span>
+    </div>
+    <div id="report" class="plate">
+      <div class="cap figno">REPORT</div>
+      <div class="rr" style="top:78px;  width:300px"></div>
+      <div class="rr" style="top:102px; width:262px"></div>
+      <div class="rr" style="top:126px; width:288px"></div>
+      <div class="bar" style="left:34px;  height:66px"></div>
+      <div class="bar" style="left:84px;  height:104px"></div>
+      <div class="bar" style="left:134px; height:48px"></div>
+      <div class="bar" style="left:184px; height:88px"></div>
+      <div class="bar" style="left:234px; height:36px"></div>
+    </div>
   </div>
 
-  <!-- ══ beat 6 ════════════════════════════════════════════════ -->
-  <div id="turnRule"></div>
-  <div id="turn">
-    <span class="clip"><span class="d" id="tn1">Momentum sends</span></span>
-    <span class="clip"><span class="d" id="tn2">the answer.</span></span>
+  <!-- ══ L1 · the desk, with a phone on it ════════════════════════════ -->
+  <div class="layer" id="L1">
+    <div class="tex" id="d1tex"></div>
+
+    <div class="figno" id="d1fig">FIG. 01</div>
+    <div id="d1rule"></div>
+    <div id="blank" class="plate">
+      <div class="hd"></div>
+      <div class="rl" style="top:118px"></div>
+      <div class="rl" style="top:166px"></div>
+      <div class="rl" style="top:214px"></div>
+      <div class="rl" style="top:262px"></div>
+    </div>
+    <div class="fast" id="fs10" data-fast="1" data-w="72" style="left:1452px; top:172px"></div>
+    <img class="bird" id="bdStill" src="../../brand/material/cut-bird-b.png" alt=""
+         style="left:1596px; top:26px; width:142px; transform:rotate(3deg)">
+
+    <div id="threadBot"></div>
+    <div id="graphSlip"></div>
+    <div class="tape" id="tp12" data-tape="5" data-w="150" style="left:1156px; top:788px; transform:rotate(-9deg)"></div>
+
+    <div id="print" class="plate">
+      <div id="screen">
+        <div id="phHead"><span class="av" id="avatar"></span><span class="nm">Momentum</span></div>
+        <div id="threadClip"><div id="threadInner">
+          <div id="stamp">TODAY</div>
+          <div id="m0"><div class="bub">did anyone actually call from the ads last month?</div></div>
+        </div></div>
+        <div id="composer"><div id="pill"><span id="ctext"></span><i id="caret"></i></div></div>
+      </div>
+      <div id="printCap" class="dc">TODAY</div>
+    </div>
+    <div class="tape" id="tp10" data-tape="2" data-w="232" style="left:404px; top:34px; transform:rotate(-31deg)"></div>
+    <div class="tape" id="tp11" data-tape="4" data-w="204" style="left:938px; top:918px; transform:rotate(13deg)"></div>
   </div>
 
-  <!-- ══ beat 7 ════════════════════════════════════════════════ -->
-  <div class="fbub" id="fq">what happens when someone asks AI for a plumber?</div>
-  <div class="fbub" id="fa">we make sure it says your name.</div>
+  <!-- ══ the flight deck ══════════════════════════════════════════════ -->
+  <div id="flight">
+    <img class="bird" id="bd0" src="../../brand/material/cut-bird-a.png" alt="" style="width:250px">
+    <img class="bird" id="bd1" src="../../brand/material/cut-bird-b.png" alt="" style="width:150px">
+    <img class="bird" id="bd2" src="../../brand/material/cut-bird-c.png" alt="" style="width:164px">
+    <div id="roomBot"></div>
+  </div>
 
-  <!-- ══ beat 8 ════════════════════════════════════════════════ -->
-  <svg id="conn" width="1920" height="1080" viewBox="0 0 1920 1080">
-    <line id="cn0" x1="852" y1="428" x2="600" y2="348" pathLength="1" stroke-dasharray="1 1"/>
-    <line id="cn1" x1="1066" y1="432" x2="1320" y2="356" pathLength="1" stroke-dasharray="1 1"/>
-    <line id="cn2" x1="960" y1="672" x2="960" y2="826" pathLength="1" stroke-dasharray="1 1"/>
-  </svg>
-  <div class="lab" id="lab0"><b>SEO</b><i>— search engines</i></div>
-  <div class="lab" id="lab1"><b>AEO</b><i>— answer engines</i></div>
-  <div class="lab" id="lab2"><b>GEO</b><i>— generative search</i></div>
-
-  <!-- ══ beat 9 ════════════════════════════════════════════════ -->
-  <div id="script">most agencies are vendors.</div>
-  <div id="side"><span class="clip"><span class="d" id="sd1">Momentum is on your side.</span></span></div>
-
-  <!-- ══ beat 10 ═══════════════════════════════════════════════ -->
-  <div id="lock"></div>
+  <div id="grain"></div>
 </div>
 
 <script type="module">
 import { at, clamp, lerp, easeEntrance, easeEmphatic, easeStandard,
-         typed, blink, words, Lockup } from '../../brand/film-kit.js';
+         typed, blink, words, grainURL, Lockup,
+         MATERIAL, tornWipe, tapedCard, scatterPose, VF } from '../../brand/film-kit.js';
 import { mountBot, poseBot, idleBot, POSES } from '../../brand/bot-rig.js';
 
 window.FILM = { width: 1920, height: 1080, fps: 30, duration: 34.0 };
@@ -196,15 +375,51 @@ const TOK = (n) => getComputedStyle(document.documentElement).getPropertyValue(n
 const MARK_BLUE = TOK('--m-mark');        /* the bot's blue on paper */
 const LIFT_BLUE = TOK('--m-brand-lift');  /* the blue that speaks on dark */
 
-/* ── small motion helpers ─────────────────────────────────────────────────
-   settle() overshoots once and rests — the spring a committed bubble needs.
-   riseLine() is the slate's clip reveal. win() is a fade-in / fade-out gate. */
+/* ── material sprites ────────────────────────────────────────────────────
+   The tape sheet and the fastener sheet are cut plates holding several
+   objects. These are their measured alpha boxes, so one piece can be pulled
+   without the sheet's rectangle coming with it. */
+const TAPE = { w: 1434, h: 736, box: [[512,275,867,184],[21,1,779,187],[744,541,688,181],
+                                      [1,551,641,184],[876,5,538,190],[21,278,353,188]] };
+const FAST = { w: 1328, h: 737, box: [[1170,75,157,591],[684,338,203,140],[789,278,202,143]] };
+
+function dress(el, sheet, url, i, w) {
+  const b = sheet.box[i], k = w / b[2];
+  el.style.width = `${b[2] * k}px`;
+  el.style.height = `${b[3] * k}px`;
+  el.style.backgroundImage = `url(${url})`;
+  el.style.backgroundSize = `${sheet.w * k}px ${sheet.h * k}px`;
+  el.style.backgroundPosition = `${-b[0] * k}px ${-b[1] * k}px`;
+}
+
+/* the torn edge, thresholded to a hard cut once at load, so a masked element
+   carries a token colour instead of a translucent wash */
+async function hardMask(url, cut = 46) {
+  const img = new Image();
+  img.src = url;
+  await img.decode();
+  try {
+    const c = document.createElement('canvas');
+    c.width = img.naturalWidth; c.height = img.naturalHeight;
+    const x = c.getContext('2d');
+    x.drawImage(img, 0, 0);
+    const d = x.getImageData(0, 0, c.width, c.height);
+    const p = d.data;
+    for (let i = 0; i < p.length; i += 4) {
+      p[i] = p[i + 1] = p[i + 2] = 0;
+      p[i + 3] = p[i + 3] > cut ? 255 : 0;
+    }
+    x.putImageData(d, 0, 0);
+    return c.toDataURL();
+  } catch (e) { return url; }   /* tainted canvas: fall back to the soft plate */
+}
+
+/* ── small motion helpers ──────────────────────────────────────────────── */
 const settle = (p) => (p <= 0 ? 0 : p >= 1 ? 1 : 1 - Math.pow(1 - p, 2.4) * Math.cos(p * Math.PI * 1.6));
 const riseLine = (clipEl, innerEl, p, rise = 52) => {
   clipEl.style.clipPath = `inset(${(1 - p) * 116}% 0 0 0)`;
   innerEl.style.transform = `translateY(${(1 - p) * rise}px)`;
 };
-const win = (t, a, aIn, b, bOut) => at(t, a, aIn, easeStandard) * (1 - at(t, b, bOut, easeStandard));
 
 /* ── bot posing ───────────────────────────────────────────────────────────
    Every expression below is numbers on the one shape set: no second drawing,
@@ -215,15 +430,16 @@ const DEF = { blink:0, talk:0.5, tilt:0, bob:0, scale:1, squash:0, mouthShift:0,
               signal:0, catchlight:0 };
 const NUM = Object.keys(DEF);
 const P = {
-  /* rising from behind the composer, eyes up on the message just sent */
+  /* behind the print, eyes up on the field it is waiting for */
   peek:     { look:[4, -4], tilt:-4.5, bob:-1, mouth:'neutral', brow:0.35,
               sway:-9, mFlex:0.06, squash:0.02 },
-  reading:  { look:[3, 1], tilt:1.5, mouth:'neutral', sway:4 },
+  /* down and left, on the first card as it lands */
+  reading:  { look:[-4, 4], tilt:2.5, lid:0.14, mouth:'neutral', sway:6, bob:1 },
   focused:  POSES.focused,
   pleased:  POSES.pleased,
-  /* caught leaving the screen — the spark is on */
-  lifted:   { tilt:6, bob:-6, squash:-0.05, eyeArc:-1, look:[0,-1.5], mouth:'o',
-              brow:0.85, sway:-12, signal:1, mFlex:0.05, mSkew:-4 },
+  /* the climb out of the desk: tall, stretched, spark on, mouth still shut */
+  lifted:   { tilt:-7, bob:-8, squash:-0.05, eyeArc:-0.8, look:[0,-2],
+              mouth:'neutral', brow:0.6, sway:-16, signal:1, mFlex:0.13, mSkew:-5 },
   present:  { tilt:-1.5, bob:0, mouth:'neutral', look:[1, 0], sway:3, eyeArc:0.2 },
   /* the deadpan: flat mouth shoved to a cheek, heavy lid */
   deadpan:  { mouth:'flat', mouthShift:-6.8, lid:0.38, look:[-3.5, 1.5], tilt:3.5,
@@ -255,19 +471,19 @@ function blend(a, b, p) {
    before it. Pure in t, so the render can scrub. */
 const TRACK = [
   [ 0.00, P.peek     ],
-  [ 6.60, P.reading  ],
-  [ 7.80, P.focused  ],
-  [ 9.05, P.pleased  ],
-  [11.05, P.lifted   ],
-  [12.80, P.present  ],
+  [ 6.72, P.reading  ],
+  [ 7.94, P.focused  ],
+  [ 9.16, P.pleased  ],
+  [11.00, P.lifted   ],
+  [12.90, P.present  ],
   [14.70, P.deadpan  ],
   [17.60, P.talking  ],
   [20.75, P.listen   ],
-  [23.52, P.surprise ],
-  [24.20, P.delight  ],
-  [26.18, P.lookL    ],
-  [26.76, P.lookR    ],
-  [27.32, P.lookD    ],
+  [23.55, P.surprise ],
+  [24.24, P.delight  ],
+  [26.20, P.lookL    ],
+  [26.78, P.lookR    ],
+  [27.34, P.lookD    ],
   [28.40, P.warm     ],
   [31.55, P.lockup   ]
 ];
@@ -293,63 +509,35 @@ function alive(t, base, k = 1, blinkK = 1, phase = 0) {
   return o;
 }
 
-/* ── boot ─────────────────────────────────────────────────────────────── */
-let avatarBot = null, threadBot = null, roomBot = null, lock = null;
-let MSG = [], STAMP = 0;            /* measured bubble bottoms, for the scroll */
-const ANCHOR = 526;                 /* where the newest bubble's bottom rests  */
-const QUESTION = 'did anyone actually call from the ads last month?';
-
-(async () => {
-  const markup = await (await fetch('../../brand/momentum-bot.svg')).text();
-  avatarBot = mountBot($('avatar'), { markup, size: '100%' });
-  threadBot = mountBot($('threadBot'), { markup, size: '100%' });
-  roomBot   = mountBot($('roomBot'),   { markup, size: '100%' });
-  lock = await Lockup($('lock'), {
-    line: 'Philadelphia. Since 2015.', markSize: 116, wordSize: 86
-  });
-  try { await document.fonts.ready; } catch (e) { /* headless fallback */ }
-  /* measure the thread once, with the real font metrics, so the scroll lands
-     every message's bottom edge on the same line */
-  MSG = ['m0', 'm1', 'm2', 'm3'].map((id) => $(id).offsetTop + $(id).offsetHeight);
-  STAMP = $('stamp').offsetTop + $('stamp').offsetHeight;
-  window.seek(0);
-  window.__ready = true;
-})();
-
-/* ── the camera on the phone ──────────────────────────────────────────── */
-const CAM = {
-  a:   { s: 0.898, ry: -9.5, rx: 3.6, x: 0,   y: 16, z: 0 },   /* slightly off-axis */
-  b:   { s: 0.972, ry: -4.2, rx: 1.6, x: 0,   y: 4,  z: 0 },
-  c:   { s: 1.000, ry:  0.0, rx: 0.0, x: 0,   y: 0,  z: 0 },   /* square, for the handoff */
-  out: { s: 0.270, ry: 48.0, rx: 15.0, x: 780, y: 104, z: -880 }
-};
-const mixCam = (u, v, p) => ({
-  s: lerp(u.s, v.s, p), ry: lerp(u.ry, v.ry, p), rx: lerp(u.rx, v.rx, p),
-  x: lerp(u.x, v.x, p), y: lerp(u.y, v.y, p), z: lerp(u.z, v.z, p)
-});
-
-/* the thread bot's rect at the handoff, in stage coordinates. The camera is
-   dead square at 10.85 (CAM.c: scale 1, no rotation, no offset), so the big
-   bot starts life on exactly the pixels the small one left. */
-const HANDOFF = 10.85;
-const HX = 600 + 14 + 30 + 64, HY = 34 + 14 + 690 + 64, HS = 128;
-
-/* where the bot stands in each beat: [t it arrives, centreX, centreY, size] */
-const WALK = [
-  [HANDOFF, HX,  HY,  HS ],
-  [12.35,   636, 556, 380],   /* climbs up and out as the phone tips away */
-  [13.60,   960, 542, 720],   /* then comes forward, large and centred    */
-  [14.90,   516, 596, 640],   /* left, for the statement           */
-  [18.30,  1500, 606, 480],   /* right, on the deep surface        */
-  [21.60,   320, 752, 470],   /* lower left, beside its own answer */
-  [26.00,   960, 486, 430],   /* centred, for the three labels     */
-  [29.50,   960, 320, 250],   /* small and high, for the last line */
-  [32.55,   540, 548, 250]    /* settled beside the mark           */
+/* ── the tear schedule ───────────────────────────────────────────────────
+   Every beat break in this film is a torn paper edge travelling across the
+   frame. There is not one cross-fade. */
+const TEARS = [
+  ['L1',  6.06, 0.46, 'rtl', 13, 21, 0.046],
+  ['L2', 17.12, 0.52, 'ltr', 31, 26, 0.034],
+  ['L3', 20.14, 0.48, 'rtl', 47, 18, 0.050],
+  ['L4', 25.48, 0.44, 'ltr', 59, 24, 0.038],
+  ['L5', 29.02, 0.46, 'rtl', 71, 20, 0.044],
 ];
-const WALK_DUR = [0, 1.50, 1.25, 1.30, 0.95, 1.25, 0.75, 0.95, 1.15];
+
+/* ── the walk: [t it arrives, centreX, centreY, size] ───────────────────── */
+const HANDOFF = 6.06;
+const WALK = [
+  [HANDOFF, 1310, 700, 220],   /* where it stood behind the graph slip     */
+  [ 7.10,   1090, 356, 268],   /* up beside the question, as card A lands  */
+  [ 8.40,   1352, 344, 276],   /* slides right with card B                 */
+  [ 9.60,   1584, 340, 288],   /* right, over card C                       */
+  [12.30,   1140, 520, 470],   /* forward as the desk empties              */
+  [13.70,    960, 546, 660],   /* large and centred                        */
+  [15.10,    470, 596, 600],   /* left, for the statement                  */
+  [18.45,   1470, 580, 470],   /* right, riding the deep tear              */
+  [21.75,    350, 742, 440],   /* lower left, beside its own answer        */
+  [26.15,    960, 470, 380],   /* centred, for the three tabs              */
+  [29.65,    960, 300, 236],   /* small and high, for the last line        */
+  [32.60,    600, 560, 300]    /* settled against the card                 */
+];
+const WALK_DUR = [0, 0.85, 1.05, 1.00, 1.55, 1.25, 1.30, 1.05, 1.35, 0.85, 1.00, 1.20];
 function walk(t) {
-  /* a leg is live from (arrival - duration) to arrival, so the bot is moving
-     through the beat, not waiting at one end of it */
   let i = 0;
   for (let k = 1; k < WALK.length; k++) if (t >= WALK[k][0] - WALK_DUR[k]) i = k;
   if (i === 0) return { x: WALK[0][1], y: WALK[0][2], s: WALK[0][3] };
@@ -362,29 +550,99 @@ const place = (el, x, y, s) => {
   el.style.transform = `translate(${(x - s / 2).toFixed(2)}px, ${(y - s / 2).toFixed(2)}px)`;
 };
 
+/* ── the two bird flights ────────────────────────────────────────────────
+   Flight 1 lands on the desk of cards and takes that beat away with it.
+   Flight 2 comes back for the second exchange and breaks that one up too.
+   Each bird has its own eased path; they never move as a block. */
+const HOME1 = [[1548, 118], [150, 414], [1298, 386]];
+const HOME2 = [[ 300, 168], [1004,  40], [1414, 388]];
+const LAND1 = [7.42, 7.86, 8.28], LAND2 = [24.12, 24.34, 24.56];
+
 /* word runs coloured once, at load */
 const wTurn2 = words($('tn2'));       /* the / answer. */
 wTurn2[1].classList.add('sig');
 
+/* ── boot ─────────────────────────────────────────────────────────────── */
+let avatarBot = null, threadBot = null, roomBot = null, lock = null;
+let M0 = 0, STAMP = 0;
+const ANCHOR = 560;                 /* where the message's bottom edge rests */
+const QUESTION = 'did anyone actually call from the ads last month?';
+
+(async () => {
+  /* material */
+  document.querySelectorAll('[data-tape]').forEach((el) =>
+    dress(el, TAPE, MATERIAL.tapeSet, +el.dataset.tape, +el.dataset.w));
+  document.querySelectorAll('[data-fast]').forEach((el) =>
+    dress(el, FAST, MATERIAL.fasteners, +el.dataset.fast, +el.dataset.w));
+
+  ['d1tex', 'd2tex', 'd4tex', 'd5tex', 'd6tex'].forEach((id) => {
+    $(id).style.backgroundImage = `url(${MATERIAL.manila})`;
+  });
+  $('d3tex').style.backgroundImage = `url(${MATERIAL.celestial})`;
+  $('graphSlip').style.backgroundImage = `url(${MATERIAL.graph})`;
+
+  const tornURL = await hardMask(MATERIAL.tornStrip, 46);
+  ['capSlip', 'turnStrip'].forEach((id) => {
+    const el = $(id);
+    el.style.webkitMaskImage = `url(${tornURL})`;
+    el.style.maskImage = `url(${tornURL})`;
+  });
+  /* the three tabs are torn along their bottom edge, not cut square */
+  document.querySelectorAll('.tab .edge').forEach((el, i) => {
+    el.style.webkitMaskImage = `url(${tornURL})`;
+    el.style.maskImage = `url(${tornURL})`;
+    el.style.webkitMaskSize = el.style.maskSize = '117.7% 160.4%';
+    el.style.webkitMaskPosition = el.style.maskPosition = `${-8.76 - i * 6}% 0%`;
+    el.style.transform = i === 1 ? 'scaleX(-1)' : 'none';
+  });
+
+  $('grain').style.backgroundImage = `url(${grainURL(180, 0.030, 7)})`;
+  $('grain').style.backgroundRepeat = 'repeat';
+
+  /* the bot: three instances of one drawing, never two alive at once */
+  const markup = await (await fetch('../../brand/momentum-bot.svg')).text();
+  avatarBot = mountBot($('avatar'), { markup, size: '100%' });
+  threadBot = mountBot($('threadBot'), { markup, size: '100%' });
+  roomBot   = mountBot($('roomBot'),   { markup, size: '100%' });
+  lock = await Lockup($('lock'), {
+    line: 'Philadelphia. Since 2015.', markSize: 104, wordSize: 80, align: 'left'
+  });
+
+  /* preload everything painted from CSS, so frame 0 is a complete desk */
+  await Promise.all([MATERIAL.manila, MATERIAL.graph, MATERIAL.tapeSet, MATERIAL.fasteners,
+                     MATERIAL.celestial, MATERIAL.tornStrip, ...MATERIAL.birds]
+    .map((u) => { const i = new Image(); i.src = u; return i.decode().catch(() => {}); }));
+
+  try { await document.fonts.ready; } catch (e) { /* headless fallback */ }
+
+  /* measure the thread once, with the real font metrics */
+  M0 = $('m0').offsetTop + $('m0').offsetHeight;
+  STAMP = $('stamp').offsetTop + $('stamp').offsetHeight;
+
+  window.seek(0);
+  window.__ready = true;
+})();
+
 /* ── the timeline ─────────────────────────────────────────────────────── */
 window.seek = function (t) {
 
-  /* ═══ CAMERA · the phone, from off-axis wide to square, then away ════ */
-  {
-    let c = mixCam(CAM.a, CAM.b, at(t, 0.05, 2.45, easeStandard));
-    c = mixCam(c, CAM.c, at(t, 4.55, 1.70, easeStandard));
-    c = mixCam(c, CAM.out, at(t, HANDOFF, 1.30, easeEmphatic));
-    const ph = $('phone');
-    ph.style.opacity = 1 - at(t, 11.42, 0.66, easeStandard);
-    ph.style.transform =
-      `translate3d(${c.x.toFixed(2)}px,${c.y.toFixed(2)}px,${c.z.toFixed(1)}px)` +
-      ` rotateY(${c.ry.toFixed(2)}deg) rotateX(${c.rx.toFixed(2)}deg) scale(${c.s.toFixed(4)})`;
+  /* ═══ THE TEARS ═════════════════════════════════════════════════════ */
+  for (const [id, s, dur, dir, seed, teeth, jag] of TEARS) {
+    const el = $(id);
+    const p = at(t, s, dur, easeEmphatic);
+    if (p <= 0) { el.style.clipPath = 'none'; el.style.visibility = 'visible'; }
+    else if (p >= 1) { el.style.visibility = 'hidden'; }
+    else { el.style.visibility = 'visible'; el.style.clipPath = tornWipe(p, { seed, dir, teeth, jag }); }
   }
+  /* the tear fronts, in stage pixels — used to re-light the bot when it is
+     standing on the deep surface rather than on paper */
+  const f2 = at(t, 17.12, 0.52, easeEmphatic) * 1920;          /* deep arrives from the left */
+  const f3 = (1 - at(t, 20.14, 0.48, easeEmphatic)) * 1920;    /* and is torn away from the right */
 
-  /* ═══ BEAT 1 · 0.0–2.4 — the thread, empty, waiting ═════════════════ */
+  /* ═══ BEAT 1 · 0.0–2.4 — the desk, the print, the empty card ════════
+     Frame 0 is a finished desk: tape stuck, card pinned, bird perched. The
+     only motion is the field taking focus and the caret arriving. */
   {
-    /* the field takes focus: the keyline warms and the caret arrives. Frame 0
-       is a settled phone, not a phone caught mid-entrance. */
     const focus = at(t, 1.20, 0.55, easeStandard);
     $('pill').style.borderColor = focus > 0.5 ? 'var(--m-focus)' : 'var(--m-line-strong)';
     const typing = t >= 2.35 && t < 4.62;
@@ -396,91 +654,117 @@ window.seek = function (t) {
     $('caret').style.opacity = focus < 0.5 ? 0 : (typing ? 1 : blink(t));
   }
 
-  /* ═══ BEAT 2 · 2.2–6.4 — the first message commits ═════════════════ */
+  /* ═══ BEAT 2 · 2.2–6.4 — the message commits, the bot comes up ══════ */
   {
     const cm = settle(clamp((t - 4.62) / 0.66));
     const b0 = $('m0').firstElementChild;
     b0.style.opacity = at(t, 4.62, 0.16, easeStandard);
-    b0.style.transform = `translateY(${(1 - cm) * 82}px) scale(${lerp(0.84, 1, cm)})`;
+    b0.style.transform = `translateY(${(1 - cm) * 74}px) scale(${lerp(0.84, 1, cm)})`;
     b0.style.transformOrigin = '100% 100%';
 
-    /* the bot rises out from behind the composer, under the bubble it is
-       reacting to. It never teleports: it grows out of something. */
-    const rise = at(t, 4.90, 1.05, easeEntrance);
-    $('threadBot').style.transform = `translateY(${((1 - rise) * 212).toFixed(2)}px)`;
-  }
-
-  /* ═══ BEAT 3 · 6.2–11.0 — three answers, three expressions ═════════ */
-  {
-    const IN = [6.58, 7.78, 9.00];
-    IN.forEach((ts, i) => {
-      const p = settle(clamp((t - ts) / 0.56));
-      const b = $('m' + (i + 1)).firstElementChild;
-      b.style.opacity = at(t, ts, 0.15, easeStandard);
-      b.style.transform = `translateY(${(1 - p) * 46}px) scale(${lerp(0.9, 1, p)})`;
-      b.style.transformOrigin = '0% 100%';
-    });
-    /* the stack slides so the newest message always lands on the same line */
-    let scroll = 0;
-    if (MSG.length) {
-      scroll = ANCHOR - STAMP;                                     /* empty thread */
-      scroll = lerp(scroll, ANCHOR - MSG[0], at(t, 4.62, 0.62, easeStandard));
-      IN.forEach((ts, i) => {
-        scroll = lerp(scroll, ANCHOR - MSG[i + 1], at(t, ts, 0.62, easeStandard));
-      });
-    }
+    /* the thread slides so the message's bottom edge lands on one line */
+    let scroll = ANCHOR - STAMP;
+    scroll = lerp(scroll, ANCHOR - M0, at(t, 4.62, 0.62, easeStandard));
     $('threadInner').style.transform = `translateY(${scroll.toFixed(2)}px)`;
 
-    const cp = 1 - at(t, 10.86, 0.34, easeStandard);
-    $('cap').style.opacity = cp;
-    $('capRule').style.width = `${(at(t, 9.30, 0.60, easeEmphatic) * 132).toFixed(1)}px`;
-    const ct = at(t, 9.62, 0.60);
-    $('capTxt').style.opacity = ct;
-    $('capTxt').style.transform = `translateY(${(1 - ct) * 16}px)`;
+    /* the bot rises out from behind the graph slip — it never teleports,
+       it grows out of something already on the desk */
+    const rise = at(t, 4.86, 1.05, easeEntrance);
+    $('threadBot').style.transform = `translateY(${((1 - rise) * 240).toFixed(2)}px)`;
   }
 
-  /* ═══ BEAT 4 · 10.8–14.4 — the bot leaves the screen ═══════════════ */
-  /* the biggest skeleton change in the film: the phone rotates away in
-     perspective while the character it was holding scales up into the room.
-     One object, handed from the small instance to the large one on a single
-     frame — never two bots alive at once. */
+  /* ═══ BEAT 3 · 6.2–11.0 — the answer, pinned to the desk ════════════
+     The tear takes the phone and the question is already on the desk. The
+     answer is never a screen: it is three separate cards under fasteners. */
   {
-    const w = walk(t);
-    $('threadBot').style.opacity = t < HANDOFF ? 1 : 0;
-    $('roomBot').style.opacity = t >= HANDOFF ? 1 : 0;
-    place($('roomBot'), w.x, w.y, w.s);
+    /* the question card lands with the tear that reveals it */
+    const qp = at(t, 6.12, 0.66, easeEntrance);
+    const qOut = 1 - at(t, 10.86, 0.34, easeStandard);
+    const q = $('qcard');
+    q.style.opacity = qp * qOut;
+    q.style.transform = `translate(${(1 - qp) * 54}px, ${(1 - qp) * 22}px)`
+      + ` rotate(${(-1.9 * (0.3 + 0.7 * qp)).toFixed(2)}deg)`;
+    $('qfig').style.opacity = at(t, 6.46, 0.5) * qOut;
+    $('tp20').style.opacity = $('fs20').style.opacity = at(t, 6.30, 0.34) * qOut;
+
+    /* three answers, three cards, three fasteners */
+    const IN = [6.72, 7.94, 9.16];
+    IN.forEach((ts, i) => {
+      const p = at(t, ts, 0.62);
+      const c = tapedCard(p, i + 1, { rise: 34 });
+      const el = $('ac' + i);
+      const s = settle(clamp((t - ts) / 0.62));
+      el.style.opacity = c.opacity;
+      el.style.transform = `${c.transform} scale(${lerp(0.94, 1, s).toFixed(4)})`;
+      el.style.transformOrigin = '50% 0%';
+      el.style.boxShadow = c.boxShadow;
+      const f = $('fs2' + (i + 1));
+      const fp = at(t, ts + 0.26, 0.28, easeEmphatic);
+      f.style.opacity = fp;
+      f.style.transform = `translateY(${(1 - fp) * -26}px) scale(${lerp(1.5, 1, fp).toFixed(3)})`;
+    });
+
+    /* the caption is a torn slip, not a line of paper-coloured text */
+    const cp = at(t, 9.66, 0.56);
+    $('capSlip').style.opacity = cp * 0.92;
+    $('capTxt').style.opacity = cp;
+    $('capTxt').style.transform = `translateY(${(1 - cp) * 14}px)`;
   }
 
-  /* ═══ BEAT 5 · 14.2–17.4 — most agencies send a report ═════════════ */
+  /* ═══ BEAT 4 · 10.8–14.4 — the desk breaks up ═══════════════════════
+     No camera move and no cross-fade: the cards, the caption and the three
+     birds scatter off the frame while the character they were arranged
+     around comes forward. Every piece leaves on its own path. */
   {
-    const out = at(t, 17.00, 0.35, easeStandard);
+    const sc = Math.pow(clamp((t - 10.86) / 1.66), 2.1);
+    [0, 1, 2].forEach((i) => {
+      const s = scatterPose(sc, i, 3, { seed: 101 + i * 37, spread: 1.15 });
+      const el = $('ac' + i);
+      if (sc > 0) {
+        const base = el.style.transform.split(' scale')[0];
+        el.style.transform = `${s.transform} ${base}`;
+        el.style.opacity = s.opacity;
+      }
+      const f = $('fs2' + (i + 1));
+      if (sc > 0) { f.style.opacity = s.opacity * 0.9; f.style.transform = s.transform; }
+    });
+    const sq = scatterPose(Math.pow(clamp((t - 10.90) / 1.60), 2.1), 1, 3,
+                           { seed: 211, spread: 1.25 });
+    if (sc > 0) {
+      $('qcard').style.transform = `${sq.transform} rotate(-1.9deg)`;
+      $('qcard').style.opacity = sq.opacity;
+      const cs = scatterPose(Math.pow(clamp((t - 10.94) / 1.56), 2.1), 2, 3,
+                             { seed: 307, spread: 1.1 });
+      $('capSlip').style.transform = $('capTxt').style.transform = cs.transform;
+      $('capSlip').style.opacity = cs.opacity * 0.92;
+      $('capTxt').style.opacity = cs.opacity;
+      $('tp20').style.opacity = $('fs20').style.opacity = 0;
+      $('qfig').style.opacity = 0;
+    }
+  }
+
+  /* ═══ BEAT 5 · 14.2–17.4 — most agencies send a report ══════════════ */
+  {
     const s = $('stmt');
-    s.style.opacity = at(t, 14.54, 0.16, easeStandard) * (1 - out);
-    s.style.transform = `translateY(${-46 * out}px)`;
-    riseLine(s.children[0], $('st1'), at(t, 14.62, 0.78), 58);
-    riseLine(s.children[1], $('st2'), at(t, 14.92, 0.78), 58);
+    s.style.opacity = at(t, 14.54, 0.16, easeStandard);
+    riseLine(s.children[0], $('st1'), at(t, 14.62, 0.80), 60);
+    riseLine(s.children[1], $('st2'), at(t, 14.94, 0.80), 60);
+    /* the thing being dismissed is an object, greyed, and the tear eats it */
+    const rp = at(t, 15.28, 0.70, easeEntrance);
+    const r = $('report');
+    r.style.opacity = rp * 0.85;
+    r.style.transform = `translateY(${(1 - rp) * 40}px) rotate(${(2.7 * (0.3 + 0.7 * rp)).toFixed(2)}deg)`;
   }
 
-  /* ═══ BEAT 6 · 17.2–20.4 — the hard inversion ══════════════════════ */
+  /* ═══ BEAT 6 · 17.2–20.4 — the turn, torn open ══════════════════════ */
   {
-    const inP = at(t, 17.15, 0.70, easeEmphatic);   /* sweeps in from the right */
-    const outP = at(t, 20.15, 0.62, easeEmphatic);  /* and leaves to the left   */
-    const dk = $('deep');
-    dk.style.clipPath = `inset(0 ${(outP * 100).toFixed(2)}% 0 ${((1 - inP) * 100).toFixed(2)}%)`;
-    dk.style.opacity = inP > 0 && outP < 1 ? 1 : 0;
+    const rl = at(t, 17.68, 0.72, easeEmphatic);
+    $('turnRule').style.width = `${(rl * 268).toFixed(1)}px`;
+    $('turnFig').style.opacity = at(t, 17.80, 0.42);
 
-    /* the wipe front, in stage pixels; the bot is re-lit the moment it is
-       standing on the deep surface rather than on paper */
-    const front = 1920 * (1 - inP);
-    const w = walk(t);
-    const onDeep = inP > 0 && outP < 1 && front < w.x - w.s * 0.30;
-    $('roomBot').style.setProperty('--m-bot-body', onDeep ? LIFT_BLUE : MARK_BLUE);
-
-    const tOut = at(t, 20.00, 0.30, easeStandard);
     const g = $('turn');
-    g.style.opacity = at(t, 17.90, 0.16, easeStandard) * (1 - tOut);
-    g.style.transform = `translateY(${-40 * tOut}px)`;
-    riseLine(g.children[0], $('tn1'), at(t, 17.96, 0.80), 64);
+    g.style.opacity = at(t, 17.90, 0.16, easeStandard);
+    riseLine(g.children[0], $('tn1'), at(t, 17.96, 0.82), 66);
     /* the second line arrives word by word, so "answer" lands on its own */
     g.children[1].style.clipPath = `inset(${(1 - at(t, 18.28, 0.34)) * 116}% 0 0 0)`;
     wTurn2.forEach((sp, i) => {
@@ -488,68 +772,123 @@ window.seek = function (t) {
       sp.style.opacity = p;
       sp.style.transform = `translateY(${(1 - p) * 58}px)`;
     });
-    const rl = at(t, 17.74, 0.70, easeEmphatic) * (1 - tOut);
-    $('turnRule').style.width = `${(rl * 252).toFixed(1)}px`;
-    $('turnRule').style.opacity = rl > 0 ? 1 : 0;
+    /* a torn strip of signal ink swiped under the word that carries the film */
+    const sp = at(t, 18.72, 0.62, easeEmphatic);
+    const st = $('turnStrip');
+    if (STRIP.w) {
+      st.style.left = `${STRIP.x}px`;
+      st.style.top = `${STRIP.y}px`;
+      st.style.width = `${STRIP.w}px`;
+      st.style.height = `${STRIP.h}px`;
+    }
+    st.style.clipPath = `inset(0 ${((1 - sp) * 100).toFixed(2)}% 0 0)`;
+    st.style.opacity = sp > 0 ? 0.92 : 0;
   }
 
-  /* ═══ BEAT 7 · 20.2–25.6 — bubbles off the phone, at full size ═════ */
+  /* ═══ BEAT 7 · 20.2–25.6 — the exchange, off the phone, on paper ════ */
   {
     const q = $('fq'), a = $('fa');
-    const qp = settle(clamp((t - 20.95) / 0.80));
-    const qOut = at(t, 24.80, 0.40, easeStandard);
-    q.style.opacity = at(t, 20.95, 0.18, easeStandard) * (1 - qOut);
-    q.style.transform = `translate(${(1 - qp) * 92}px, ${(1 - qp) * 36 - qOut * 44}px) scale(${lerp(0.93, 1, qp)})`;
-    q.style.transformOrigin = '100% 100%';
+    const qp = settle(clamp((t - 20.98) / 0.82));
+    const qe = at(t, 20.98, 0.82, easeEntrance);
+    q.style.opacity = at(t, 20.98, 0.18, easeStandard);
+    q.style.transform = `translate(${(1 - qp) * 86}px, ${(1 - qp) * 32}px)`
+      + ` rotate(${(1.9 * (0.3 + 0.7 * qe)).toFixed(2)}deg) scale(${lerp(0.94, 1, qp).toFixed(4)})`;
+    q.style.transformOrigin = '100% 0%';
+    $('b7fig').style.opacity = at(t, 21.30, 0.44);
+    $('tp40').style.opacity = at(t, 21.16, 0.30);
 
-    const ap = settle(clamp((t - 23.35) / 0.78));
-    const aOut = at(t, 24.90, 0.40, easeStandard);
-    a.style.opacity = at(t, 23.35, 0.18, easeStandard) * (1 - aOut);
-    a.style.transform = `translate(${(1 - ap) * -80}px, ${(1 - ap) * 32 - aOut * 36}px) scale(${lerp(0.92, 1, ap)})`;
-    a.style.transformOrigin = '0% 100%';
+    const ap = settle(clamp((t - 23.38) / 0.80));
+    const ae = at(t, 23.38, 0.80, easeEntrance);
+    a.style.opacity = at(t, 23.38, 0.18, easeStandard);
+    a.style.transform = `translate(${(1 - ap) * -76}px, ${(1 - ap) * 28}px)`
+      + ` rotate(${(-2.2 * (0.3 + 0.7 * ae)).toFixed(2)}deg) scale(${lerp(0.93, 1, ap).toFixed(4)})`;
+    a.style.transformOrigin = '0% 0%';
+    const fp = at(t, 23.74, 0.30, easeEmphatic);
+    $('fs41').style.opacity = fp;
   }
 
-  /* ═══ BEAT 8 · 25.4–29.2 — three names for the same job ════════════ */
+  /* ═══ BEAT 8 · 25.4–29.2 — three torn tabs, one job ═════════════════ */
   {
-    const out = at(t, 28.72, 0.40, easeStandard);
     const T = [26.06, 26.62, 27.18];
-    const DX = [46, -46, 0], DY = [18, 18, -24];
+    const DX = [52, -52, 0], DY = [22, 22, -28];
     T.forEach((ts, i) => {
-      const p = at(t, ts + 0.24, 0.62);
-      const el = $('lab' + i);
-      el.style.opacity = p * (1 - out);
-      el.style.transform = `translate(${(1 - p) * DX[i]}px, ${(1 - p) * DY[i] - out * 22}px)`;
+      const p = at(t, ts + 0.22, 0.62);
+      const c = tapedCard(p, i, { rise: 0 });
+      const el = $('tab' + i);
+      el.style.opacity = p;
+      el.style.transform = `translate(${((1 - p) * DX[i]).toFixed(1)}px, ${((1 - p) * DY[i]).toFixed(1)}px)`
+        + ` ${c.transform.split(') ')[1] || c.transform}`;
       $('cn' + i).setAttribute('stroke-dashoffset',
         (1 - at(t, ts, 0.46, easeEmphatic)).toFixed(4));
     });
-    $('conn').style.opacity = at(t, 26.00, 0.10, easeStandard) * (1 - out);
+    $('conn').style.opacity = at(t, 26.00, 0.10, easeStandard);
+    $('tp50').style.opacity = at(t, 26.30, 0.30);
+    $('tp51').style.opacity = at(t, 26.86, 0.30);
+    $('fs52').style.opacity = at(t, 27.44, 0.28, easeEmphatic);
   }
 
-  /* ═══ BEAT 9 · 29.0–31.6 — the one script line, and the answer ═════ */
+  /* ═══ BEAT 9 · 29.0–31.6 — the one quiet line, and the answer ═══════ */
   {
-    const out = at(t, 31.28, 0.40, easeStandard);
+    const out = at(t, 31.30, 0.40, easeStandard);
     const sp = at(t, 29.58, 0.86, easeStandard);
     const sc = $('script');
     sc.style.opacity = (sp > 0 ? 1 : 0) * (1 - out);
-    /* the script is written, not faded: a left-to-right wipe with a small rise */
+    /* the line is written, not faded: a left-to-right wipe with a small rise */
     sc.style.clipPath = `inset(0 ${((1 - sp) * 100).toFixed(2)}% 0 0)`;
     sc.style.transform = `translateY(${(1 - sp) * 14 - out * 28}px)`;
 
     const sd = $('side');
     sd.style.opacity = at(t, 30.30, 0.16, easeStandard) * (1 - out);
     sd.style.transform = `translateY(${-32 * out}px)`;
-    riseLine(sd.children[0], $('sd1'), at(t, 30.34, 0.82), 60);
+    riseLine(sd.children[0], $('sd1'), at(t, 30.34, 0.84), 62);
   }
 
-  /* ═══ BEAT 10 · 31.4–34.0 — the lockup, and one slow blink ═════════ */
-  if (lock) {
-    const p = clamp((t - 31.70) / 1.38);
-    lock.pose(p);
-    $('lock').style.opacity = p > 0 ? 1 : 0;
+  /* ═══ BEAT 10 · 31.4–34.0 — the card, the lockup, one slow blink ════ */
+  {
+    const cp = at(t, 31.56, 0.72, easeEntrance);
+    const pl = $('cardPlate');
+    pl.style.opacity = cp;
+    pl.style.transform = `translateY(${(1 - cp) * 34}px) rotate(${(-1.5 * (0.3 + 0.7 * cp)).toFixed(2)}deg)`;
+    $('tpL6').style.opacity = at(t, 31.86, 0.30);
+    $('fsL6').style.opacity = at(t, 32.30, 0.28, easeEmphatic);
+    if (lock) {
+      const p = clamp((t - 31.84) / 1.34);
+      lock.pose(p);
+      $('lock').style.opacity = p > 0 ? 1 : 0;
+    }
   }
 
-  /* ═══ THE BOT — one track, three instances, never two alive ════════ */
+  /* ═══ THE BIRDS · two flights, and each one breaks a beat up ════════ */
+  {
+    const inFlight2 = t >= 23.0;
+    const HOME = inFlight2 ? HOME2 : HOME1;
+    const LAND = inFlight2 ? LAND2 : LAND1;
+    const sc = inFlight2 ? Math.pow(clamp((t - 25.30) / 1.10), 2.0)
+                         : Math.pow(clamp((t - 10.86) / 1.66), 2.3);
+    [0, 1, 2].forEach((i) => {
+      const el = $('bd' + i);
+      el.style.left = `${HOME[i][0]}px`;
+      el.style.top = `${HOME[i][1]}px`;
+      const arr = at(t, LAND[i], 0.92, easeEntrance);
+      const s = scatterPose(sc, i, 3, { seed: 19 + i * 7, spread: 1.05 });
+      const ex = (1 - arr) * (170 + i * 62), ey = (1 - arr) * (-190 + i * 44);
+      el.style.opacity = arr * s.opacity;
+      el.style.transform = `translate(${ex.toFixed(1)}px,${ey.toFixed(1)}px) ${s.transform} `
+        + `rotate(${((1 - arr) * (10 - i * 6)).toFixed(1)}deg)`;
+    });
+  }
+
+  /* ═══ THE BOT — one track, three instances, never two alive ═════════ */
   if (roomBot) {
+    const w = walk(t);
+    $('threadBot').style.opacity = t < HANDOFF ? 1 : 0;
+    $('roomBot').style.opacity = t >= HANDOFF ? 1 : 0;
+    place($('roomBot'), w.x, w.y, w.s);
+
+    /* re-lit the moment it is standing on the deep surface rather than paper */
+    const onDeep = w.x < f2 && w.x < f3;
+    $('roomBot').style.setProperty('--m-bot-body', onDeep ? LIFT_BLUE : MARK_BLUE);
+
     let pose = trackPose(t);
     /* the mouth is driven only while it is actually saying the line */
     if (t >= 17.85 && t <= 20.05) {
@@ -568,6 +907,26 @@ window.seek = function (t) {
   }
 };
 
+/* the signal strip is cut to the word it marks, measured once on frame 0 */
+const STRIP = { x: 180, y: 560, w: 0, h: 26 };
+requestAnimationFrame(() => {});   /* no-op: never used to animate */
+
 window.seek(0);
+
+/* measure after the fonts land; seek() reads STRIP every frame, so this
+   simply fills in the numbers rather than driving anything */
+(async () => {
+  try { await document.fonts.ready; } catch (e) { /* headless */ }
+  const st = $('stage').getBoundingClientRect();
+  const pose = wTurn2[1].style.transform;
+  wTurn2[1].style.transform = 'none';
+  const wb = wTurn2[1].getBoundingClientRect();
+  wTurn2[1].style.transform = pose;
+  STRIP.x = Math.round(wb.left - st.left - 14);
+  STRIP.y = Math.round(wb.top - st.top + wb.height - 24);
+  STRIP.w = Math.round(wb.width + 30);
+  STRIP.h = 24;
+  window.seek(0);
+})();
 </script>
 </body></html>

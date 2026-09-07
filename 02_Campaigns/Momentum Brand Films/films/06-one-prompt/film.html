@@ -9,443 +9,727 @@
     background:var(--m-panel); color:var(--m-ink);
     font-family:var(--m-font-text); -webkit-font-smoothing:antialiased;
   }
-  .d { font-family:var(--m-font-display); letter-spacing:-.024em; line-height:1; }
+  .lay { position:absolute; inset:0; }
+  img { display:block; }
 
-  /* ── ghost furniture shared by the surface cards ─────────────────────── */
-  .gb  { display:block; height:12px; border-radius:6px; background:var(--m-line); }
-  .gb.t{ height:16px; background:var(--m-brand); opacity:.72; }
-  .gb.u{ height:10px; background:var(--m-line-strong); opacity:.42; }
-  .chip { display:inline-block; background:var(--m-signal); color:var(--m-on-signal);
-          font-size:19px; font-weight:800; letter-spacing:.005em; line-height:1;
-          padding:8px 13px 9px; border-radius:6px; white-space:nowrap; }
-  .winbox { position:absolute; left:-14px; right:-14px; top:-12px; bottom:-12px;
-            border:2px solid var(--m-signal-ink); border-radius:10px; pointer-events:none; }
+  /* type cuts ─────────────────────────────────────────────────────────── */
+  .ax  { font-family:var(--m-font-display); font-weight:400; line-height:1; }
+  .exp { font-variation-settings:var(--m-vf-expanded);  letter-spacing:-.028em; }
+  .dis { font-variation-settings:var(--m-vf-display);   letter-spacing:-.018em; }
+  .con { font-variation-settings:var(--m-vf-condensed); letter-spacing:.13em; }
+  .lit { font-variation-settings:var(--m-vf-light);     letter-spacing:-.012em; }
+  .ed  { font-family:var(--m-font-editorial); font-weight:400; line-height:1.06;
+         letter-spacing:-.006em; }
 
-  /* ── beat 2 · the prompt ─────────────────────────────────────────────── */
-  #prompt { position:absolute; left:420px; top:432px; width:1080px; height:216px;
-            background:var(--m-paper); border:1.5px solid var(--m-line-strong);
-            border-radius:26px; box-shadow:var(--m-block-md); opacity:0; }
-  #qline { position:absolute; left:48px; top:40px; right:130px; height:64px;
-           font-size:46px; font-weight:700; color:var(--m-ink); letter-spacing:-.008em;
+  /* the desk — the workspace sheet everything is pinned to ─────────────── */
+  #deskShadow { position:absolute; left:110px; top:112px; width:1728px; height:888px;
+                background:rgba(20,24,27,.11); }
+  #desk { position:absolute; left:96px; top:96px; width:1728px; height:888px;
+          background:var(--m-warm-canvas); }
+  #deskTex { position:absolute; inset:0; background-size:cover; opacity:.30;
+             mix-blend-mode:multiply; }
+  #deskGrid { position:absolute; inset:0; background-size:cover; opacity:.10;
+              mix-blend-mode:multiply; }
+  .tape { position:absolute; background-repeat:no-repeat; background-size:100% 100%; }
+
+  /* ── BEAT 1 · the run ────────────────────────────────────────────────── */
+  #sc1 { position:absolute; inset:0; background:var(--m-panel); }
+  .band { position:absolute; background-repeat:no-repeat; background-size:100% 100%; }
+  #run { position:absolute; left:0; top:0; white-space:nowrap; transform-origin:0 0;
+         font-family:var(--m-font-display); font-weight:400; line-height:1; }
+  #run span { display:inline-block; }
+  #runBrad { position:absolute; background-repeat:no-repeat; background-size:100% 100%;
+             opacity:0; }
+  .bird { position:absolute; }
+
+  /* ── BEAT 2 · the prompt ─────────────────────────────────────────────── */
+  .wrap { position:absolute; will-change:transform,opacity; }
+  .sh   { position:absolute; background:rgba(226,113,19,.26); }
+  .cd   { position:absolute; background:var(--m-warm-surface); overflow:hidden; }
+
+  #pw { left:426px; top:428px; width:1064px; height:232px; opacity:0; }
+  #pw .sh { left:13px; top:15px; width:1064px; height:232px; }
+  #pw .cd { left:0; top:0; width:1064px; height:232px; }
+  #qline { position:absolute; left:46px; top:44px; right:132px; height:62px;
+           font-size:45px; font-weight:700; color:var(--m-ink); letter-spacing:-.008em;
            white-space:nowrap; }
-  #caret { display:inline-block; width:4px; height:46px; background:var(--m-ink);
+  #caret { display:inline-block; width:4px; height:45px; background:var(--m-ink);
            vertical-align:-8px; margin-left:5px; }
-  #ghostq { position:absolute; left:48px; top:56px; width:520px; height:22px;
-            border-radius:11px; background:var(--m-line); }
-  #ptools { position:absolute; left:48px; bottom:34px; display:flex; gap:14px;
-            align-items:center; }
-  #ptools i { display:block; width:34px; height:34px; border-radius:9px;
-              border:1.5px solid var(--m-line-strong); opacity:.5; position:relative; }
-  #ptools i::before, #ptools i::after { content:""; position:absolute; background:var(--m-line-strong);
-            left:50%; top:50%; transform:translate(-50%,-50%); }
-  #ptools i::before { width:14px; height:2px; }
-  #ptools i:first-child::after { width:2px; height:14px; }
-  #ptools i:last-child::before { width:15px; height:11px; background:none;
-            border:2px solid var(--m-line-strong); border-radius:3px; }
-  #send { position:absolute; right:26px; bottom:26px; width:68px; height:68px;
+  #ghostq { position:absolute; left:46px; top:58px; width:512px; height:20px;
+            border-radius:10px; background:var(--m-warm-line); }
+  #ptools { position:absolute; left:46px; bottom:34px; display:flex; gap:14px; }
+  #ptools i { display:block; width:32px; height:32px; border-radius:8px;
+              border:1.5px solid var(--m-warm-line); position:relative; }
+  #ptools i::before { content:""; position:absolute; left:50%; top:50%; width:13px; height:2px;
+              background:var(--m-warm-muted); transform:translate(-50%,-50%); }
+  #ptools i:first-child::after { content:""; position:absolute; left:50%; top:50%;
+              width:2px; height:13px; background:var(--m-warm-muted); transform:translate(-50%,-50%); }
+  #send { position:absolute; right:26px; bottom:28px; width:66px; height:66px;
           border-radius:50%; background:var(--m-signal);
           display:flex; align-items:center; justify-content:center; }
-  #send svg { width:32px; height:32px; display:block; }
+  #send svg { width:31px; height:31px; display:block; }
+  .prule { position:absolute; left:46px; right:46px; top:126px; height:1.5px;
+           background:var(--m-warm-line); }
 
-  /* ── beat 3 · three surfaces ─────────────────────────────────────────── */
-  .scard { position:absolute; background:var(--m-paper);
-           border:1.5px solid var(--m-line-strong); border-radius:18px;
-           overflow:hidden; opacity:0; will-change:transform,opacity; }
-  #cA { left:96px;   top:370px; width:540px; height:430px; box-shadow:var(--m-soft-1); }
-  #cB { left:550px;  top:250px; width:720px; height:400px; box-shadow:var(--m-block-sm); }
-  #cC { left:1320px; top:168px; width:470px; height:410px; box-shadow:var(--m-soft-1); }
-  .clab { position:absolute; font-size:19px; font-weight:800; letter-spacing:.24em;
-          color:var(--m-muted); opacity:0; }
-  #labA { left:98px;   top:824px; }
-  #labB { left:684px;  top:674px; }
-  #labC { left:1322px; top:602px; }
+  .fragw { position:absolute; left:426px; top:428px; width:1064px; height:232px;
+           opacity:0; will-change:transform,opacity; }
+  .fragc { position:absolute; inset:0; }
+  .fragb { position:absolute; }
 
-  /* card A — a results page */
-  #cA .pad { padding:26px 26px 0; }
-  #cA .sbar { display:flex; align-items:center; gap:14px; height:46px; padding:0 18px;
-              border:1.5px solid var(--m-line); border-radius:999px; }
-  .mag { width:16px; height:16px; border-radius:50%; border:2.5px solid var(--m-muted);
+  /* ── BEAT 3 · three surfaces ─────────────────────────────────────────── */
+  .gb  { display:block; height:12px; border-radius:6px; background:var(--m-warm-line); }
+  .gb.t{ height:15px; background:var(--m-brand); opacity:.74; }
+  .gb.u{ height:10px; background:var(--m-warm-muted); opacity:.40; }
+  .chip { display:inline-block; background:var(--m-signal); color:var(--m-on-signal);
+          font-size:18px; font-weight:800; line-height:1;
+          padding:8px 13px 9px; border-radius:5px; white-space:nowrap; }
+  .winbox { position:absolute; left:-14px; right:-14px; top:-12px; bottom:-12px;
+            border:2.5px solid var(--m-signal-ink); border-radius:8px; }
+  .clab { position:absolute; font-family:var(--m-font-display); font-weight:400;
+          font-variation-settings:var(--m-vf-condensed); font-size:21px;
+          letter-spacing:.26em; color:var(--m-warm-muted); opacity:0; }
+  .clab s { display:inline-block; text-decoration:none; }
+
+  #wA { left:96px;  top:372px; width:540px; height:430px; opacity:0; }
+  #wB { left:556px; top:236px; width:720px; height:408px; opacity:0; }
+  #wC { left:1330px;top:176px; width:452px; height:400px; opacity:0; }
+  #wA .sh{ left:11px; top:13px; width:540px; height:430px; }
+  #wB .sh{ left:14px; top:16px; width:720px; height:408px; }
+  #wC .sh{ left:10px; top:12px; width:452px; height:400px; }
+  #wA .cd{ width:540px; height:430px; } #wB .cd{ width:720px; height:408px; }
+  #wC .cd{ width:452px; height:400px; }
+
+  #cA .pad { padding:30px 28px 0; }
+  #cA .sbar { display:flex; align-items:center; gap:14px; height:44px; padding:0 18px;
+              border:1.5px solid var(--m-warm-line); border-radius:999px; }
+  .mag { width:15px; height:15px; border-radius:50%; border:2.5px solid var(--m-warm-muted);
          position:relative; flex:0 0 auto; }
   .mag::after { content:""; position:absolute; right:-6px; bottom:-5px; width:9px; height:2.5px;
-                background:var(--m-muted); transform:rotate(45deg); }
-  #cA .res { position:relative; margin-top:30px; }
+                background:var(--m-warm-muted); transform:rotate(45deg); }
+  #cA .res { position:relative; margin-top:28px; }
   #cA .res .gb + .gb { margin-top:11px; }
-  #cA .res.win { margin-top:38px; width:392px; }
+  #cA .res.win { margin-top:36px; width:392px; }
 
-  /* card B — an answer engine */
-  #cB .pad { padding:30px 30px 0; }
+  #cB .pad { padding:34px 32px 0; }
   #cB .qrow { display:flex; align-items:center; gap:16px; }
-  #cB .av { width:34px; height:34px; border-radius:50%; background:var(--m-mark); flex:0 0 auto; }
-  #cB .ans { margin-top:34px; }
+  #cB .av { width:32px; height:32px; border-radius:50%; background:var(--m-mark); flex:0 0 auto; }
+  #cB .ans { margin-top:32px; }
   #cB .ans > * { margin-top:16px; }
   #cB .ans > *:first-child { margin-top:0; }
   #cB .inl { display:flex; align-items:center; gap:13px; }
-  #cB .cites { display:flex; gap:10px; margin-top:22px; }
-  #cB .cites b { width:32px; height:32px; border-radius:8px; background:var(--m-panel);
-                 border:1px solid var(--m-line); display:flex; align-items:center;
-                 justify-content:center; font-size:15px; font-weight:800; color:var(--m-muted); }
+  #cB .cites { display:flex; gap:10px; margin-top:24px; }
+  #cB .cites b { width:30px; height:30px; border-radius:7px; background:var(--m-warm-panel);
+                 display:flex; align-items:center; justify-content:center;
+                 font-size:14px; font-weight:800; color:var(--m-warm-muted); }
 
-  /* card C — generative search over a map */
-  #cC .plate { position:relative; height:186px; background:var(--m-panel);
-               border-bottom:1.5px solid var(--m-line); overflow:hidden; }
+  #cC .plate { position:relative; height:180px; background:var(--m-warm-panel); overflow:hidden; }
   #cC .plate u { position:absolute; display:block; background:var(--m-line-strong); opacity:.34; }
   #cC .plate .pin { position:absolute; }
   #cC .pad2 { padding:22px 24px 0; }
-  #cC .lrow { position:relative; margin-top:22px; }
+  #cC .lrow { position:relative; margin-top:24px; }
   #cC .lrow .gb { margin-top:10px; }
   #cC .lrow:first-child { margin-top:0; }
 
-  /* ── beat 4 · the checklist ──────────────────────────────────────────── */
-  #check { position:absolute; left:196px; top:302px; width:1040px; }
-  .ci { position:absolute; left:0; width:1040px; opacity:0; }
-  .ci .dot { position:absolute; left:0; top:19px; width:15px; height:15px; border-radius:50%; }
-  .ci h3 { margin:0; font-size:44px; font-weight:800; letter-spacing:-.012em;
-           color:var(--m-ink); line-height:1.05; }
-  .ci p  { margin:9px 0 0; font-size:21px; font-weight:600; color:var(--m-muted);
-           letter-spacing:.005em; }
-  .ci .body { margin-left:46px; }
-  .ci .rule { margin-left:46px; margin-top:20px; height:2px; background:var(--m-line); width:0; }
+  /* ── BEAT 4 · the checklist ──────────────────────────────────────────── */
+  #check { position:absolute; left:200px; top:300px; width:1060px; }
+  .ci { position:absolute; left:0; width:1060px; opacity:0; }
+  .ci .dot { position:absolute; left:-4px; top:14px; width:30px; height:22px;
+             background-repeat:no-repeat; background-size:100% 100%; }
+  .ci h3 { margin:0; font-family:var(--m-font-display); font-weight:400;
+           font-variation-settings:var(--m-vf-display); font-size:47px;
+           letter-spacing:-.018em; color:var(--m-warm-ink); line-height:1.02; }
+  .ci p  { margin:11px 0 0; font-family:var(--m-font-display); font-weight:400;
+           font-variation-settings:var(--m-vf-condensed); font-size:23px;
+           letter-spacing:.055em; color:var(--m-warm-muted); }
+  .ci .body { margin-left:52px; }
+  .ci .rule { margin-left:52px; margin-top:16px; width:0; height:9px; overflow:hidden; }
+  .ci .rule svg { display:block; }
 
-  /* ── beat 5 · the three words ────────────────────────────────────────── */
-  #deep { position:absolute; inset:0; background:var(--m-deep); opacity:0; }
-  .term { position:absolute; left:0; width:1920px; top:372px; text-align:center; }
-  .term .w { display:block; padding:22px 0; margin:-22px 0; }
-  .term b { display:block; font-family:var(--m-font-display); font-size:198px;
-            letter-spacing:-.02em; line-height:1; color:var(--m-brand-lift); }
-  .term i { display:block; font-style:normal; margin-top:22px; font-size:36px;
-            font-weight:600; letter-spacing:.045em; color:var(--m-on-deep-muted); }
-  #deeprule { position:absolute; left:810px; top:884px; width:300px; height:3px;
-              background:rgba(138,146,150,.28); }
-  #deepfill { position:absolute; left:0; top:0; height:3px; background:var(--m-brand-lift); width:0; }
+  /* ── BEAT 5 · the three words ────────────────────────────────────────── */
+  #deep { position:absolute; inset:0; opacity:0; }
+  #deepbg { position:absolute; inset:0; background:var(--m-deep); }
+  #deepcel { position:absolute; right:-160px; top:-190px; width:900px; opacity:.13;
+             filter:invert(1) saturate(.15); }
+  #deepstrip { position:absolute; left:-40px; top:912px; background-repeat:no-repeat;
+               background-size:100% 100%; }
+  .term { position:absolute; left:0; width:1920px; top:342px; text-align:center; }
+  .term .w { display:block; padding:26px 0; margin:-26px 0; }
+  .term b { display:block; font-family:var(--m-font-display); font-weight:400;
+            font-variation-settings:var(--m-vf-expanded); font-size:216px;
+            letter-spacing:-.012em; line-height:1; color:var(--m-brand-lift); }
+  .term i { display:block; font-style:normal; margin-top:26px;
+            font-family:var(--m-font-editorial); font-size:46px; letter-spacing:.004em;
+            color:var(--m-on-deep-muted); }
+  #deeprule { position:absolute; left:812px; top:986px; width:296px; height:4px;
+              background:rgba(99,100,101,.34); }
+  #deepfill { position:absolute; left:0; top:0; height:4px; background:var(--m-signal-ink); width:0; }
+  #deepbird { position:absolute; left:238px; top:214px; width:190px;
+              filter:invert(1) saturate(.15); opacity:.5; }
 
-  /* ── beat 6 · the deliverable ────────────────────────────────────────── */
-  #browser { position:absolute; left:430px; top:196px; width:1060px; height:660px;
-             background:var(--m-paper); border:1.5px solid var(--m-line-strong);
-             border-radius:16px; box-shadow:var(--m-block-md); overflow:hidden; opacity:0; }
-  #browser .chrome { height:54px; background:var(--m-panel);
-                     border-bottom:1.5px solid var(--m-line);
+  /* ── BEAT 6 · the deliverable ────────────────────────────────────────── */
+  #bw { left:432px; top:200px; width:1056px; height:646px; opacity:0; }
+  #bw .sh { left:16px; top:18px; width:1056px; height:646px; }
+  #bw .cd { width:1056px; height:646px; }
+  #browser .chrome { height:52px; background:var(--m-warm-panel);
                      display:flex; align-items:center; gap:9px; padding:0 22px; }
   #browser .chrome s { width:11px; height:11px; border-radius:50%;
-                       background:var(--m-line-strong); opacity:.5; }
-  #browser .chrome .url { margin-left:18px; height:28px; width:340px; border-radius:999px;
-                          background:var(--m-paper); border:1px solid var(--m-line);
-                          display:flex; align-items:center; padding:0 14px; gap:10px; }
-  #browser .chrome .url em { display:block; width:11px; height:13px; border-radius:2px;
-                             border:2px solid var(--m-muted); opacity:.6; }
-  #browser .chrome .url i { display:block; height:9px; width:190px; border-radius:5px;
-                            background:var(--m-line); }
+                       background:var(--m-warm-muted); opacity:.45; }
+  #browser .chrome .url { margin-left:18px; height:26px; width:340px; border-radius:999px;
+                          background:var(--m-warm-surface); display:flex; align-items:center;
+                          padding:0 14px; gap:10px; }
+  #browser .chrome .url em { display:block; width:10px; height:12px; border-radius:2px;
+                             border:2px solid var(--m-warm-muted); opacity:.6; }
+  #browser .chrome .url i { display:block; height:8px; width:190px; border-radius:4px;
+                            background:var(--m-warm-line); }
   .sec { overflow:hidden; height:0; }
-  .sec .in { }
   #s1 { background:var(--m-brand); }
   #s1 .in { padding:40px 46px 42px; }
-  #s1 .h { height:24px; border-radius:6px; background:var(--m-on-brand); opacity:.92; width:420px; }
-  #s1 .h2{ height:14px; border-radius:7px; background:var(--m-on-brand); opacity:.5; width:300px; margin-top:18px; }
-  #s1 .cta { margin-top:26px; height:48px; width:212px; border-radius:999px;
+  #s1 .h { height:23px; border-radius:6px; background:var(--m-on-brand); opacity:.92; width:420px; }
+  #s1 .h2{ height:13px; border-radius:7px; background:var(--m-on-brand); opacity:.5; width:300px; margin-top:18px; }
+  #s1 .cta { margin-top:26px; height:46px; width:212px; border-radius:999px;
              background:var(--m-signal); display:flex; align-items:center; padding:0 22px; }
   #s1 .cta i { display:block; height:11px; width:132px; border-radius:6px;
                background:var(--m-on-signal); opacity:.85; }
   #s2 .in { display:flex; gap:34px; padding:34px 46px; }
   #s2 .col { flex:1; }
-  #s2 .col i { display:block; height:12px; border-radius:6px; background:var(--m-line); margin-top:14px; }
-  #s2 .col i:first-child { margin-top:0; height:18px; width:270px; background:var(--m-line-strong); opacity:.5; }
-  #s2 .plate { width:290px; height:150px; border-radius:12px; background:var(--m-panel);
-               border:1px solid var(--m-line); position:relative; flex:0 0 auto; }
+  #s2 .col i { display:block; height:12px; border-radius:6px; background:var(--m-warm-line); margin-top:14px; }
+  #s2 .col i:first-child { margin-top:0; height:17px; width:270px; background:var(--m-warm-muted); opacity:.5; }
+  #s2 .plate { width:290px; height:148px; background:var(--m-warm-panel);
+               position:relative; flex:0 0 auto; }
   #s2 .plate .pin { position:absolute; left:124px; top:42px; }
   #s3 .in { display:flex; align-items:center; gap:26px; padding:0 46px 34px; }
-  #s3 .btn { height:52px; width:250px; border-radius:10px; background:var(--m-signal);
+  #s3 .btn { height:50px; width:250px; border-radius:8px; background:var(--m-signal);
              display:flex; align-items:center; justify-content:center; flex:0 0 auto; }
   #s3 .btn i { display:block; height:11px; width:150px; border-radius:6px;
                background:var(--m-on-signal); opacity:.85; }
   #s3 .m { flex:1; }
-  #s3 .m i { display:block; height:11px; border-radius:6px; background:var(--m-line); }
+  #s3 .m i { display:block; height:11px; border-radius:6px; background:var(--m-warm-line); }
   #s3 .m i + i { margin-top:12px; width:60%; }
-  #s4 .in { border-top:1px solid var(--m-line); margin:0 46px; padding:24px 0 0;
+  #s4 .in { border-top:1px solid var(--m-warm-line); margin:0 46px; padding:24px 0 0;
             display:flex; gap:22px; }
-  #s4 i { display:block; height:9px; width:110px; border-radius:5px; background:var(--m-line); }
-  #live { position:absolute; left:1338px; top:158px; background:var(--m-signal);
-          color:var(--m-on-signal); font-size:20px; font-weight:800; letter-spacing:.14em;
-          padding:11px 20px 12px; border-radius:999px; opacity:0;
-          display:flex; align-items:center; gap:10px; }
+  #s4 i { display:block; height:9px; width:110px; border-radius:5px; background:var(--m-warm-line); }
+  #live { position:absolute; left:1318px; top:162px; opacity:0;
+          display:flex; align-items:center; justify-content:center; gap:11px;
+          background-repeat:no-repeat; background-size:100% 100%;
+          font-family:var(--m-font-display); font-weight:400;
+          font-variation-settings:var(--m-vf-condensed); font-size:22px;
+          letter-spacing:.20em; color:var(--m-on-signal); }
   #live s { width:9px; height:9px; border-radius:50%; background:var(--m-on-signal); display:block; }
 
-  /* ── beat 7 · the line ───────────────────────────────────────────────── */
-  #sweep { position:absolute; left:0; top:376px; height:5px; background:var(--m-signal-ink); width:0; }
-  #line { position:absolute; left:0; top:0; width:1920px; }
-  #ln1 { position:absolute; left:0; top:432px; width:1920px; text-align:center;
-         font-size:104px; color:var(--m-ink); }
-  #ln2 { position:absolute; left:0; top:560px; width:1920px; text-align:center;
-         font-size:104px; color:var(--m-signal-ink); }
+  /* ── BEAT 7 · the line ───────────────────────────────────────────────── */
+  #hl { position:absolute; background-repeat:no-repeat; background-size:100% 100%; }
+  #ln1 { position:absolute; left:0; top:406px; width:1920px; text-align:center;
+         font-size:126px; color:var(--m-warm-ink); }
+  #ln2 { position:absolute; left:0; top:552px; width:1920px; text-align:center;
+         font-size:126px; color:var(--m-signal-ink); }
 
-  /* ── beat 8 · lockup ─────────────────────────────────────────────────── */
-  #lock { position:absolute; left:0; top:356px; width:1920px; opacity:0; }
+  /* ── BEAT 8 · lockup ─────────────────────────────────────────────────── */
+  #lock { position:absolute; left:0; top:352px; width:1920px; opacity:0; }
+  #endbird { position:absolute; left:1500px; top:770px; width:190px; opacity:0; }
 
-  /* ── pills — the thread that runs the whole film ─────────────────────── */
-  #pills { position:absolute; inset:0; }
-  .pill { position:absolute; left:0; top:0; background:var(--m-paper);
-          border:1.5px solid var(--m-line-strong); border-radius:999px;
-          padding:11px 22px 12px; font-size:19px; font-weight:800; letter-spacing:.16em;
-          color:var(--m-ink); white-space:nowrap; opacity:0; will-change:transform,opacity; }
+  /* ── the pill tabs ───────────────────────────────────────────────────── */
+  .pill { position:absolute; left:0; top:0; display:flex; align-items:center;
+          justify-content:center; height:52px; padding:0 24px; white-space:nowrap;
+          background-repeat:no-repeat; background-size:100% 100%;
+          font-family:var(--m-font-display); font-weight:400;
+          font-variation-settings:var(--m-vf-condensed); font-size:22px;
+          letter-spacing:.15em; color:var(--m-ink); opacity:0;
+          will-change:transform,opacity; }
 
-  #runcv { position:absolute; left:0; top:0; }
+  /* ── the travelling tear ─────────────────────────────────────────────── */
+  #tear { position:absolute; left:0; top:540px; background-repeat:no-repeat;
+          background-size:100% 100%; opacity:0; }
+  #grain { position:absolute; inset:0; opacity:.5; }
 </style></head>
 <body>
 <div class="stage" id="stage">
 
-  <!-- beat 3 · surfaces (B last = on top of A) -->
-  <div class="scard" id="cA">
-    <div class="pad">
-      <div class="sbar"><span class="mag"></span><i class="gb" style="width:206px"></i></div>
-      <div class="res">
-        <i class="gb t" style="width:300px"></i>
-        <i class="gb u" style="width:152px"></i>
-        <i class="gb" style="width:420px"></i>
-      </div>
-      <div class="res win">
-        <div class="winbox" id="boxA"></div>
-        <span class="chip" id="chipA">Your business</span>
-        <i class="gb u" style="width:152px;margin-top:13px"></i>
-        <i class="gb" style="width:398px"></i>
-      </div>
-      <div class="res">
-        <i class="gb t" style="width:268px"></i>
-        <i class="gb u" style="width:132px"></i>
-        <i class="gb" style="width:376px"></i>
-      </div>
+  <!-- the desk ------------------------------------------------------------ -->
+  <div class="lay" id="deskLay">
+    <div id="deskShadow"></div>
+    <div id="desk">
+      <div id="deskTex"></div><div id="deskGrid"></div>
     </div>
+    <div class="tape" id="dTape1"></div>
+    <div class="tape" id="dTape2"></div>
   </div>
 
-  <div class="scard" id="cC">
-    <div class="plate" id="plateC"></div>
-    <div class="pad2">
-      <i class="gb" style="width:300px"></i>
-      <div class="lrow win">
-        <div class="winbox" id="boxC"></div>
-        <span class="chip" id="chipC">Your business</span>
-        <i class="gb u" style="width:124px"></i>
-      </div>
-      <div class="lrow">
-        <i class="gb t" style="width:188px"></i>
-        <i class="gb u" style="width:108px"></i>
-      </div>
-    </div>
+  <!-- BEAT 1 --------------------------------------------------------------- -->
+  <div id="sc1">
+    <div class="band" id="bandT"></div>
+    <div class="band" id="bandB"></div>
+    <div id="run"><span class="exp" id="rA">MOMENTUM</span><span class="lit" id="rB">&nbsp;for&nbsp;</span><span class="con" id="rC">local search.</span></div>
+    <div id="runBrad"></div>
+    <img class="bird" id="k1" src="../../brand/material/cut-bird-a.png" alt="">
+    <img class="bird" id="k2" src="../../brand/material/cut-bird-a.png" alt="">
   </div>
 
-  <div class="scard" id="cB">
-    <div class="pad">
-      <div class="qrow"><span class="av"></span><i class="gb" style="width:334px"></i></div>
-      <div class="ans">
-        <i class="gb" style="width:560px"></i>
-        <div class="inl">
-          <i class="gb" style="width:196px"></i>
-          <span class="chip" id="chipB">Your business</span>
-          <i class="gb" style="width:88px"></i>
+  <!-- BEAT 3 · surfaces (B last = on top) ----------------------------------- -->
+  <div class="lay" id="sc3">
+    <div class="wrap" id="wA"><div class="sh"></div><div class="cd" id="cA">
+      <div class="pad">
+        <div class="sbar"><span class="mag"></span><i class="gb" style="width:206px"></i></div>
+        <div class="res">
+          <i class="gb t" style="width:300px"></i>
+          <i class="gb u" style="width:152px"></i>
+          <i class="gb" style="width:420px"></i>
         </div>
-        <i class="gb" style="width:640px"></i>
-        <i class="gb" style="width:580px"></i>
-        <i class="gb" style="width:430px"></i>
+        <div class="res win">
+          <div class="winbox" id="boxA" style="opacity:0"></div>
+          <span class="chip" id="chipA">Your business</span>
+          <i class="gb u" style="width:152px;margin-top:13px"></i>
+          <i class="gb" style="width:398px"></i>
+        </div>
+        <div class="res">
+          <i class="gb t" style="width:268px"></i>
+          <i class="gb u" style="width:132px"></i>
+          <i class="gb" style="width:376px"></i>
+        </div>
+      </div></div>
+      <div class="tape" id="tA"></div>
+    </div>
+
+    <div class="wrap" id="wC"><div class="sh"></div><div class="cd" id="cC">
+      <div class="plate" id="plateC"></div>
+      <div class="pad2">
+        <i class="gb" style="width:290px"></i>
+        <div class="lrow win">
+          <div class="winbox" id="boxC" style="opacity:0"></div>
+          <span class="chip" id="chipC">Your business</span>
+          <i class="gb u" style="width:124px"></i>
+        </div>
+        <div class="lrow">
+          <i class="gb t" style="width:188px"></i>
+          <i class="gb u" style="width:108px"></i>
+        </div>
+      </div></div>
+      <div class="tape" id="tC"></div>
+    </div>
+
+    <div class="wrap" id="wB"><div class="sh"></div><div class="cd" id="cB">
+      <div class="pad">
+        <div class="qrow"><span class="av"></span><i class="gb" style="width:334px"></i></div>
+        <div class="ans">
+          <i class="gb" style="width:560px"></i>
+          <div class="inl">
+            <i class="gb" style="width:196px"></i>
+            <span class="chip" id="chipB">Your business</span>
+            <i class="gb" style="width:88px"></i>
+          </div>
+          <i class="gb" style="width:640px"></i>
+          <i class="gb" style="width:580px"></i>
+          <i class="gb" style="width:430px"></i>
+        </div>
+        <div class="cites"><b>1</b><b>2</b><b>3</b></div>
+      </div></div>
+      <div class="tape" id="tB"></div>
+    </div>
+
+    <div class="clab" id="labA">SEARCH ENGINE</div>
+    <div class="clab" id="labB">ANSWER ENGINE</div>
+    <div class="clab" id="labC">GENERATIVE SEARCH</div>
+  </div>
+
+  <!-- BEAT 4 --------------------------------------------------------------- -->
+  <div class="lay" id="sc4">
+    <div id="check"></div>
+    <img class="bird" id="k3" src="../../brand/material/cut-bird-b.png" alt=""
+         style="left:1430px;top:686px;width:214px;opacity:0">
+  </div>
+
+  <!-- BEAT 2 · the prompt, above the surfaces so the fragments fly over ------ -->
+  <div class="lay" id="sc2">
+    <div class="wrap" id="pw">
+      <div class="sh"></div>
+      <div class="cd" id="prompt">
+        <div id="ghostq"></div>
+        <div id="qline"><span id="q"></span><span id="caret"></span></div>
+        <div class="prule"></div>
+        <div id="ptools"><i></i><i></i></div>
+        <div id="send">
+          <svg viewBox="0 0 24 24"><path d="M12 20V5.4M12 5.4l-6.5 6.5M12 5.4l6.5 6.5"
+            fill="none" style="stroke:var(--m-on-signal)" stroke-width="2.7"
+            stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
       </div>
-      <div class="cites"><b>1</b><b>2</b><b>3</b></div>
+      <div class="tape" id="tP1"></div>
+      <div class="tape" id="tP2"></div>
     </div>
+    <div class="fragw" id="f0"><div class="fragc"></div>
+      <img class="fragb" src="../../brand/material/cut-bird-a.png" alt=""
+           style="left:-150px;top:-118px;width:250px"></div>
+    <div class="fragw" id="f1"><div class="fragc"></div>
+      <img class="fragb" src="../../brand/material/cut-bird-c.png" alt=""
+           style="left:850px;top:-96px;width:150px"></div>
+    <div class="fragw" id="f2"><div class="fragc"></div>
+      <img class="fragb" src="../../brand/material/cut-bird-b.png" alt=""
+           style="left:380px;top:158px;width:132px"></div>
   </div>
 
-  <div class="clab" id="labA">SEARCH ENGINE</div>
-  <div class="clab" id="labB">ANSWER ENGINE</div>
-  <div class="clab" id="labC">GENERATIVE SEARCH</div>
+  <!-- the pill tabs -------------------------------------------------------- -->
+  <div class="lay" id="pills"></div>
 
-  <!-- beat 2 · the prompt -->
-  <div id="prompt">
-    <div id="ghostq"></div>
-    <div id="qline"><span id="q"></span><span id="caret"></span></div>
-    <div id="ptools"><i></i><i></i></div>
-    <div id="send">
-      <svg viewBox="0 0 24 24"><path d="M12 20V5.4M12 5.4l-6.5 6.5M12 5.4l6.5 6.5"
-        fill="none" style="stroke:var(--m-on-signal)" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  <!-- BEAT 6 --------------------------------------------------------------- -->
+  <div class="lay" id="sc6">
+    <div class="wrap" id="bw">
+      <div class="sh"></div>
+      <div class="cd" id="browser">
+        <div class="chrome"><s></s><s></s><s></s>
+          <div class="url"><em></em><i></i></div>
+        </div>
+        <div class="sec" id="s1"><div class="in">
+          <div class="h"></div><div class="h2"></div><div class="cta"><i></i></div>
+        </div></div>
+        <div class="sec" id="s2"><div class="in">
+          <div class="col"><i></i><i></i><i></i><i style="width:78%"></i></div>
+          <div class="plate"><span class="pin"></span></div>
+        </div></div>
+        <div class="sec" id="s3"><div class="in">
+          <div class="btn"><i></i></div>
+          <div class="m"><i></i><i></i></div>
+        </div></div>
+        <div class="sec" id="s4"><div class="in"><i></i><i></i><i></i></div></div>
+      </div>
+      <div class="tape" id="tW1"></div>
+      <div class="tape" id="tW2"></div>
     </div>
+    <div id="live"><s></s>LIVE</div>
   </div>
 
-  <!-- beat 4 · the checklist -->
-  <div id="check"></div>
-
-  <!-- beat 6 · the deliverable -->
-  <div id="browser">
-    <div class="chrome"><s></s><s></s><s></s>
-      <div class="url"><em></em><i></i></div>
-    </div>
-    <div class="sec" id="s1"><div class="in">
-      <div class="h"></div><div class="h2"></div><div class="cta"><i></i></div>
-    </div></div>
-    <div class="sec" id="s2"><div class="in">
-      <div class="col"><i></i><i></i><i></i><i style="width:78%"></i></div>
-      <div class="plate"><span class="pin"></span></div>
-    </div></div>
-    <div class="sec" id="s3"><div class="in">
-      <div class="btn"><i></i></div>
-      <div class="m"><i></i><i></i></div>
-    </div></div>
-    <div class="sec" id="s4"><div class="in"><i></i><i></i><i></i></div></div>
-  </div>
-  <div id="live"><s></s>Live</div>
-
-  <!-- beat 7 · the line -->
-  <div id="sweep"></div>
-  <div id="line">
-    <div id="ln1" class="d">One agency.</div>
-    <div id="ln2" class="d">Every place they look.</div>
+  <!-- BEAT 7 --------------------------------------------------------------- -->
+  <div class="lay" id="sc7">
+    <div id="hl"></div>
+    <div id="ln1" class="ed">One agency.</div>
+    <div id="ln2" class="ed">Every place they look.</div>
   </div>
 
-  <!-- beat 8 · lockup -->
-  <div id="lock"></div>
+  <!-- BEAT 8 --------------------------------------------------------------- -->
+  <div class="lay" id="sc8">
+    <div id="lock"></div>
+    <img class="bird" id="k4" src="../../brand/material/cut-bird-c.png" alt="">
+  </div>
 
-  <!-- the pills -->
-  <div id="pills"></div>
-
-  <!-- beat 5 · full-bleed deep, above the light layers -->
+  <!-- BEAT 5 · full-bleed deep, above every light layer ---------------------- -->
   <div id="deep">
+    <div id="deepbg"></div>
+    <img id="deepcel" src="../../brand/material/cut-celestial.png" alt="">
+    <img id="deepbird" src="../../brand/material/cut-bird-a.png" alt="">
+    <div id="deepstrip"></div>
     <div class="term" id="t1"><span class="w"><b>SEO</b></span><i>Search Engine Optimization</i></div>
     <div class="term" id="t2"><span class="w"><b>AEO</b></span><i>Answer Engine Optimization</i></div>
     <div class="term" id="t3"><span class="w"><b>GEO</b></span><i>Generative Engine Optimization</i></div>
     <div id="deeprule"><div id="deepfill"></div></div>
   </div>
 
-  <!-- beat 1 · the wordmark run -->
-  <canvas id="runcv" width="1920" height="1080"></canvas>
+  <div id="tear"></div>
+  <div id="grain"></div>
 </div>
 
 <script type="module">
 import { at, clamp, lerp, easeEntrance, easeEmphatic, easeStandard, easeInOut,
-         blink, typed, words, revealWords, Lockup, markSVG }
+         blink, typed, words, revealWords, Lockup, rng, grainURL,
+         MATERIAL, tornWipe, tapedCard, scatterPose, plateStrip, lens, VF }
   from '../../brand/film-kit.js';
 
 window.FILM = { width: 1920, height: 1080, fps: 30, duration: 24.0 };
 window.__ready = false;
 
 const $ = (id) => document.getElementById(id);
+const BRAND = '#155E86', SIGNAL = '#E27113';
 
-/* ── palette literals, matched to tokens.css ─────────────────────────────── */
-const INK = '#14181B', BRAND = '#155E86', SIGNAL = '#E27113',
-      SIGNAL_INK = '#A35309';
+/* ═══ material · sheets and crops ════════════════════════════════════════ */
+const TORN = { w:1600, h:645 };
+const TAPES = [
+  { x:21,  y:1,   w:779, h:187 },   /* 0 grey, long   */
+  { x:876, y:4,   w:538, h:191 },   /* 1 cream        */
+  { x:512, y:275, w:867, h:184 },   /* 2 ochre, long  */
+  { x:20,  y:278, w:354, h:188 },   /* 3 white, short */
+  { x:744, y:541, w:688, h:181 },   /* 4 grey         */
+  { x:0,   y:551, w:642, h:184 },   /* 5 cream, long  */
+];
+const FASTS = { pinA:{x:789,y:278,w:202,h:143}, pinB:{x:684,y:338,w:203,h:140} };
 
-/* ═══ beat 1 · the wordmark run, drawn on canvas ═════════════════════════ */
-const RUN_A = 'MOMENTUM ';                 // ink
-const RUN_B = 'for local search.';         // brand blue
-const RUN_FS = 1650;                       // overruns 1080 top and bottom
-const cv = $('runcv'), cx = cv.getContext('2d');
-let RUN = { wA: 0, W: 0, cap: 0, send: 0.07 };
-
-function measureRun() {
-  cx.save();
-  cx.font = `${RUN_FS}px "Archivo Black", "Arial Black", sans-serif`;
-  try { cx.letterSpacing = `${-0.028 * RUN_FS}px`; } catch (e) { /* older engines */ }
-  RUN.wA = cx.measureText(RUN_A).width;
-  RUN.W = cx.measureText(RUN_A + RUN_B).width;
-  const m = cx.measureText('M');
-  RUN.cap = m.actualBoundingBoxAscent || RUN_FS * 0.72;
-  RUN.send = 1584 / RUN.W;                 // resolved line spans 1584px
-  cx.restore();
+/** Cut an opaque shape out of translucent scanned material. Run once, at load:
+ *  the source PNGs carry 25–55% alpha, so drawing them n times over themselves
+ *  saturates the body while leaving the torn silhouette intact. */
+function cutPaper(img, box, { w, h, boost = 6, tint = null, tintA = 1 }) {
+  const c = document.createElement('canvas');
+  c.width = Math.max(1, Math.round(w));
+  c.height = Math.max(1, Math.round(h));
+  const x = c.getContext('2d');
+  for (let i = 0; i < boost; i++)
+    x.drawImage(img, box.x, box.y, box.w, box.h, 0, 0, c.width, c.height);
+  if (tint) {
+    x.globalCompositeOperation = 'source-atop';
+    x.globalAlpha = tintA;
+    x.fillStyle = tint;
+    x.fillRect(0, 0, c.width, c.height);
+  }
+  return c.toDataURL();
+}
+function paint(el, url, w, h) {
+  el.style.width = w + 'px'; el.style.height = h + 'px';
+  el.style.backgroundImage = `url(${url})`;
 }
 
-/* ═══ beat 4 · the checklist, built once ═════════════════════════════════ */
+/** A hand-cut edge on all four sides of a box. Seeded once; never at paint time. */
+function deckle(seed, n = 24, ax = 1.0, ay = 1.4) {
+  const r = rng(seed), p = [];
+  const put = (x, y) => p.push(`${x.toFixed(2)}% ${y.toFixed(2)}%`);
+  for (let i = 0; i <= n; i++) put(i / n * 100, r() * ay);
+  for (let i = 1; i <= n; i++) put(100 - r() * ax, i / n * 100);
+  for (let i = n - 1; i >= 0; i--) put(i / n * 100, 100 - r() * ay);
+  for (let i = n - 1; i >= 1; i--) put(r() * ax, i / n * 100);
+  return `polygon(${p.join(',')})`;
+}
+
+/** A ragged horizontal line across a box, in percent. */
+function ragLine(yc, seed, n = 15, amp = 4.5) {
+  const r = rng(seed);
+  return Array.from({ length: n + 1 }, (_, i) => ({ x: i / n * 100, y: yc * 100 + (r() - 0.5) * 2 * amp }));
+}
+const fmt = (l) => l.map((p) => `${p.x.toFixed(1)}% ${p.y.toFixed(1)}%`).join(',');
+
+/* ═══ beat 1 · the run, as DOM so every cut can differ ═══════════════════ */
+const RUN_FS = 1480;
+let RUN = { W: 0, send: 0.07, capOff: 0 };
+
+/* ═══ beat 4 · the checklist ════════════════════════════════════════════ */
 const LIST = [
-  ['Ranking the site.',            'technical SEO, pages that answer the question'],
-  ['Feeding the answer engines.',  'structured data, entities, citations'],
-  ['Showing up in AI results.',    'the sources those answers are built from'],
-  ['Running the ads.',             'search, performance max, retargeting'],
+  ['Ranking the site.',           'technical SEO, pages that answer the question'],
+  ['Feeding the answer engines.', 'structured data, entities, citations'],
+  ['Showing up in AI results.',   'the sources those answers are built from'],
+  ['Running the ads.',            'search, performance max, retargeting'],
 ];
+const RULE_R = rng(0x5ee11);
 const CI = LIST.map(([h, p], i) => {
-  const c = SIGNAL_INK;                    // one accent: four dots, no false system
   const d = document.createElement('div');
   d.className = 'ci';
-  d.style.top = `${i * 132}px`;
-  d.innerHTML = `<span class="dot" style="background:${c}"></span>
-    <div class="body"><h3>${h}</h3><p>${p}</p></div><div class="rule"></div>`;
+  d.style.top = `${i * 133}px`;
+  let path = 'M 0 5';
+  for (let k = 1; k <= 26; k++) path += ` L ${(k * 660 / 26).toFixed(1)} ${(4.4 + RULE_R() * 2.2).toFixed(2)}`;
+  d.innerHTML = `<span class="dot"></span>
+    <div class="body"><h3>${h}</h3><p>${p}</p></div>
+    <div class="rule"><svg width="660" height="9" viewBox="0 0 660 9"><path d="${path}"
+      fill="none" stroke="#8E8578" stroke-width="2.1" stroke-linecap="round"/></svg></div>`;
   $('check').appendChild(d);
-  return { el: d, body: d.querySelector('.body'), rule: d.querySelector('.rule') };
+  return { el: d, dot: d.querySelector('.dot'), rule: d.querySelector('.rule') };
 });
 
-/* ═══ pins (drawn, never imported) ══════════════════════════════════════ */
+/* ═══ pins, drawn ═══════════════════════════════════════════════════════ */
 const PIN = (fill, w = 26) => `<svg viewBox="0 0 34 46" width="${w}" height="${w * 46 / 34}"
   style="display:block"><path d="M17 46 C 4 27, 0 21, 0 15 A 17 17 0 1 1 34 15 C 34 21, 30 27, 17 46 Z"
-  fill="${fill}"/><circle cx="17" cy="15" r="6.2" style="fill:var(--m-paper)"/></svg>`;
-
-/* card C map plate: fixed roads + three pins, laid out once */
+  fill="${fill}"/><circle cx="17" cy="15" r="6.2" style="fill:var(--m-warm-surface)"/></svg>`;
 (() => {
   const roads = [
-    [-40, 44, 580, 3, -7], [-40, 118, 580, 3, 6], [96, -40, 3, 280, 12],
-    [268, -40, 3, 280, -9], [380, -30, 3, 260, 5],
+    [-40, 42, 560, 3, -7], [-40, 116, 560, 3, 6], [92, -40, 3, 270, 12],
+    [258, -40, 3, 270, -9], [366, -30, 3, 250, 5],
   ];
   const plate = $('plateC');
   let html = roads.map(([x, y, w, h, r]) =>
     `<u style="left:${x}px;top:${y}px;width:${w}px;height:${h}px;transform:rotate(${r}deg)"></u>`).join('');
-  html += `<span class="pin" style="left:78px;top:36px">${PIN(BRAND, 22)}</span>`;
-  html += `<span class="pin" style="left:330px;top:104px">${PIN(BRAND, 22)}</span>`;
-  html += `<span class="pin" style="left:216px;top:52px">${PIN(SIGNAL, 30)}</span>`;
+  html += `<span class="pin" style="left:74px;top:34px">${PIN(BRAND, 22)}</span>`;
+  html += `<span class="pin" style="left:318px;top:100px">${PIN(BRAND, 22)}</span>`;
+  html += `<span class="pin" style="left:206px;top:50px">${PIN(SIGNAL, 30)}</span>`;
   plate.innerHTML = html;
 })();
 $('s2').querySelector('.pin').innerHTML = PIN(SIGNAL, 26);
 
-/* ═══ the pills ═════════════════════════════════════════════════════════ */
+/* ═══ the pill tabs ═════════════════════════════════════════════════════ */
 const PILL_TEXT = ['GOOGLE', 'CHATGPT', 'MAPS', 'PERPLEXITY'];
-/* five stations: scatter → margins → right column → a low staging line → the
-   closing row. The staging line exists so the last move approaches the row from
-   below and no pill path ever crosses the lockup. */
+const PILL_TAPE = [5, 0, 2, 1];
 const PILL_POS = [
-  /* GOOGLE     */[[352, 350, -6], [300, 148, -3], null, null, null],
-  /* CHATGPT    */[[1596, 396, 5], [880, 942, 2], null, null, null],
-  /* MAPS       */[[430, 748, 4], [1690, 726, -3], null, null, null],
-  /* PERPLEXITY */[[1462, 796, -4], [330, 950, 3], null, null, null],
+  /* GOOGLE     */[[356, 348, -2.6], [300, 152, -2.2], null, null, null],
+  /* CHATGPT    */[[1592, 392, 2.4], [880, 944, 1.6], null, null, null],
+  /* MAPS       */[[432, 752, 2.8], [1690, 828, -2.4], null, null, null],
+  /* PERPLEXITY */[[1458, 800, -2.2], [330, 950, 2.2], null, null, null],
 ];
 const PILL_SCALE = [1, 0.84, 0.86, 0.86, 1];
 const PILL_HOP = [[5.95, 0.95], [9.50, 0.92], [21.86, 0.46], [22.30, 0.80]];
-const COL_JIT = [-14, 8, -6, 12];
-const PILLS = PILL_TEXT.map((txt) => {
+const COL_JIT = [-14, 10, -8, 12];
+const PILLS = PILL_TEXT.map((txt, i) => {
   const el = document.createElement('div');
   el.className = 'pill';
   el.textContent = txt;
+  el.dataset.tape = PILL_TAPE[i];
   $('pills').appendChild(el);
   return el;
 });
 
+/* ═══ constants seeded once ═════════════════════════════════════════════ */
+const DECK_DESK = deckle(0x2ad39, 30, 0.55, 1.0);
+const DECK = [deckle(0x91f3, 22, 1.0, 1.4), deckle(0x4c07, 22, 0.9, 1.3),
+              deckle(0xbe21, 22, 1.2, 1.5), deckle(0x7712, 22, 0.8, 1.2),
+              deckle(0x33ab, 22, 1.0, 1.4)];
+const CUT1 = ragLine(0.34, 0x1a7, 15, 4.4);
+const CUT2 = ragLine(0.68, 0x9d3, 15, 4.4);
+const FRAG_CLIP = [
+  `polygon(0% 0%,100% 0%,${fmt(CUT1.slice().reverse())})`,
+  `polygon(${fmt(CUT1)},${fmt(CUT2.slice().reverse())})`,
+  `polygon(${fmt(CUT2)},100% 100%,0% 100%)`,
+];
+const TILT = { prompt: 1.7, cards: [-2.4, 1.1, 2.6], browser: -1.6, desk: -0.7 };
+
 /* ═══ boot ══════════════════════════════════════════════════════════════ */
 let lock = null;
-const wLn1 = words($('ln1'));
-const wLn2 = words($('ln2'));
+const QUERY = "who's the best roofer in Fishtown?";
+const loadImg = (src) => new Promise((res) => {
+  const i = new Image(); i.onload = () => res(i); i.onerror = () => res(null); i.src = src;
+});
 
 (async () => {
+  const [torn, tape, fast] = await Promise.all([
+    loadImg(MATERIAL.tornStrip), loadImg(MATERIAL.tapeSet), loadImg(MATERIAL.fasteners),
+  ]);
+
+  /* the desk */
+  $('desk').style.clipPath = DECK_DESK;
+  $('deskShadow').style.clipPath = DECK_DESK;
+  $('deskTex').style.backgroundImage = `url(${MATERIAL.manila})`;
+  $('deskGrid').style.backgroundImage = `url(${MATERIAL.graph})`;
+
+  const tp = (el, idx, w, x, y, rot) => {
+    const b = TAPES[idx];
+    paint(el, cutPaper(tape, b, { w, h: b.h * (w / b.w), boost: 2 }), w, b.h * (w / b.w));
+    el.style.left = x + 'px'; el.style.top = y + 'px';
+    el.style.transform = `translate(-50%,-50%) rotate(${rot}deg)`;
+  };
+  tp($('dTape1'), 3, 172, 118, 112, -46);
+  tp($('dTape2'), 4, 196, 1806, 972, -40);
+
+  /* beat 1 — the torn bands that crop the giant type */
+  const BB = { x:130, y:60, w:1340, h:342 };
+  const bandURL = cutPaper(torn, BB, { w: 2240, h: 306, boost: 7 });
+  paint($('bandT'), bandURL, 2240, 306);
+  paint($('bandB'), bandURL, 2240, 306);
+  $('bandT').style.left = '-170px';
+  $('bandB').style.left = '-150px';
+
+  /* beat 1 — the brad that pins the resolved line */
+  const bradURL = cutPaper(fast, FASTS.pinA, { w: 46, h: 46 * FASTS.pinA.h / FASTS.pinA.w, boost: 4 });
+  paint($('runBrad'), bradURL, 46, 46 * FASTS.pinA.h / FASTS.pinA.w);
+
+  /* the checklist brads */
+  const dotA = cutPaper(fast, FASTS.pinA, { w: 30, h: 21, boost: 5 });
+  const dotB = cutPaper(fast, FASTS.pinB, { w: 30, h: 21, boost: 5 });
+  CI.forEach((it, i) => {
+    it.dot.style.backgroundImage = `url(${i % 2 ? dotB : dotA})`;
+    it.dot.style.transform = `rotate(${(i % 2 ? 1 : -1) * (9 + i * 5)}deg)`;
+  });
+
+  /* the taped specimens */
+  $('pw').querySelector('.cd').style.clipPath = DECK[0];
+  $('pw').querySelector('.sh').style.clipPath = DECK[0];
+  ['wA', 'wB', 'wC'].forEach((id, i) => {
+    $(id).querySelector('.cd').style.clipPath = DECK[i + 1];
+    $(id).querySelector('.sh').style.clipPath = DECK[i + 1];
+  });
+  $('bw').querySelector('.cd').style.clipPath = DECK[4];
+  $('bw').querySelector('.sh').style.clipPath = DECK[4];
+
+  tp($('tP1'), 4, 150, 96, 6, -38);
+  tp($('tP2'), 1, 132, 986, 228, 34);
+  tp($('tA'), 0, 148, 62, 8, -34);
+  tp($('tB'), 2, 162, 656, 4, 26);
+  tp($('tC'), 5, 138, 396, 12, 40);
+  tp($('tW1'), 5, 168, 74, 8, -33);
+  tp($('tW2'), 3, 150, 990, 640, 31);
+
+  /* the pill tabs, each on a different piece of tape */
+  PILLS.forEach((el) => {
+    const b = TAPES[+el.dataset.tape];
+    el.__url = cutPaper(tape, b, { w: 420, h: 104, boost: 2 });
+    el.style.backgroundImage = `url(${el.__url})`;
+  });
+
+  /* the deep beat's pasted strip */
+  const dsURL = cutPaper(torn, { x:130, y:120, w:1340, h:282 }, { w: 2020, h: 172, boost: 7 });
+  paint($('deepstrip'), dsURL, 2020, 172);
+  $('deepstrip').style.transform = 'scaleY(-1) rotate(0.7deg)';
+
+  /* beat 7's ochre highlight */
+  const hlURL = cutPaper(torn, { x:180, y:80, w:1160, h:300 },
+                         { w: 1180, h: 122, boost: 7, tint: '#B45F2A', tintA: 0.62 });
+  paint($('hl'), hlURL, 1180, 122);
+  $('hl').style.left = '374px'; $('hl').style.top = '566px';
+  $('hl').style.transform = 'rotate(-0.8deg)';
+
+  /* the LIVE tab */
+  const liveURL = cutPaper(tape, TAPES[3], { w: 340, h: 116, boost: 3, tint: SIGNAL, tintA: 0.9 });
+  $('live').style.backgroundImage = `url(${liveURL})`;
+  $('live').style.width = '150px'; $('live').style.height = '50px';
+  $('live').style.transform = 'rotate(-2.4deg)';
+
+  /* the travelling tear */
+  const tearURL = cutPaper(torn, { x:130, y:20, w:1340, h:382 }, { w: 1190, h: 344, boost: 7 });
+  paint($('tear'), tearURL, 1190, 344);
+
+  /* grain */
+  $('grain').style.backgroundImage = `url(${grainURL(160, 0.055, 11)})`;
+
+  /* fonts, then everything measured */
   try {
-    await document.fonts.load(`400 ${RUN_FS}px "Archivo Black"`);
-    await document.fonts.load('800 44px "Nunito Sans"');
+    await Promise.all([
+      document.fonts.load(`400 ${RUN_FS}px Archivo`),
+      document.fonts.load('400 48px Archivo'),
+      document.fonts.load('400 120px "Instrument Serif"'),
+      document.fonts.load('800 46px "Nunito Sans"'),
+      document.fonts.load('700 46px "Nunito Sans"'),
+    ]);
     await document.fonts.ready;
   } catch (e) { /* headless fallback */ }
 
-  measureRun();
-  lock = await Lockup($('lock'), { markSize: 124, wordSize: 96 });
-  /* beat 7's second line resolves into the lockup's line slot, so reserve it */
-  lock.el.querySelector('.lk-domain').style.marginTop = '96px';
+  /* the run: measure the line, and where its cap centre sits in the box */
+  const run = $('run');
+  run.style.fontSize = RUN_FS + 'px';
+  RUN.W = run.offsetWidth;
+  RUN.send = 1600 / RUN.W;
+  {
+    const c = document.createElement('canvas').getContext('2d');
+    c.font = '1000px Archivo, sans-serif';
+    const m = c.measureText('M');
+    const A = m.fontBoundingBoxAscent / 1000, D = m.fontBoundingBoxDescent / 1000;
+    const C = (m.actualBoundingBoxAscent || 730) / 1000;
+    RUN.capOff = ((1 - (A + D)) / 2 + A - C / 2) * RUN_FS;
+  }
 
-  /* the closing row: measured, centred, gap 26 */
+  /* the prompt fragments: a torn copy of the finished card, one bird each */
+  $('q').textContent = QUERY;
+  const clone = $('pw').cloneNode(true);
+  clone.querySelectorAll('[id]').forEach((e) => e.removeAttribute('id'));
+  clone.style.cssText = 'position:absolute;left:0;top:0;width:1064px;height:232px;opacity:1';
+  clone.querySelector('.cd').style.clipPath = DECK[0];
+  clone.querySelector('.sh').style.clipPath = DECK[0];
+  ['f0', 'f1', 'f2'].forEach((id, i) => {
+    const host = $(id).querySelector('.fragc');
+    host.style.clipPath = FRAG_CLIP[i];
+    host.appendChild(clone.cloneNode(true));
+  });
+  $('q').textContent = '';
+
+  lock = await Lockup($('lock'), { markSize: 122, wordSize: 94 });
+  lock.el.querySelector('.lk-domain').style.marginTop = '92px';
+
+  /* the pill row, measured */
   const ws = PILLS.map((p) => p.offsetWidth);
-  /* station 3: a right-aligned column that balances the checklist beat */
-  ws.forEach((w, i) => { PILL_POS[i][2] = [1766 + COL_JIT[i] - w / 2, 404 + i * 106, (i % 2 ? 1.4 : -1.4)]; });
-  /* station 5: the neat closing row, the scatter finally resolved */
+  ws.forEach((w, i) => { PILL_POS[i][2] = [1762 + COL_JIT[i] - w / 2, 396 + i * 108, (i % 2 ? 1.8 : -1.8)]; });
   const total = ws.reduce((a, b) => a + b, 0) + 26 * (ws.length - 1);
   let x = 960 - total / 2;
-  ws.forEach((w, i) => { PILL_POS[i][4] = [x + w / 2, 700, 0]; x += w + 26; });
-  /* station 4: the row's x, but parked low — so the column fans out under the
-     lockup and then rises into place. No pill path crosses the mark, the
-     wordmark, the line or the URL. */
-  ws.forEach((w, i) => { PILL_POS[i][3] = [PILL_POS[i][4][0], 872, (i % 2 ? 1.4 : -1.4)]; });
+  ws.forEach((w, i) => { PILL_POS[i][4] = [x + w / 2, 706, 0]; x += w + 26; });
+  ws.forEach((w, i) => { PILL_POS[i][3] = [PILL_POS[i][4][0], 880, (i % 2 ? 1.8 : -1.8)]; });
+
+  await Promise.all([...document.querySelectorAll('img')]
+    .map((i) => (i.decode ? i.decode().catch(() => {}) : null)));
 
   window.seek(0);
   window.__ready = true;
 })();
 
 /* ── helpers ────────────────────────────────────────────────────────────── */
-/** clip-reveal from below */
 const rise = (clipEl, innerEl, p, dy = 40) => {
-  clipEl.style.clipPath = `inset(${(1 - p) * 116}% 0 0 0)`;
+  clipEl.style.clipPath = `inset(${(1 - p) * 118}% 0 0 0)`;
   innerEl.style.transform = `translateY(${(1 - p) * dy}px)`;
 };
-/** place a card by its rest geometry, a target centre, a scale and a rotation */
 const poseCard = (el, rest, ccx, ccy, s, rot, o) => {
   el.style.opacity = o;
   el.style.transform =
@@ -454,206 +738,266 @@ const poseCard = (el, rest, ccx, ccy, s, rot, o) => {
 };
 
 const CARDS = [
-  { el: $('cA'), lab: $('labA'), x: 96,   y: 370, w: 540, h: 430, rot: -1.7,
-    birth: 5.98, sx: 600,  strip: [1546, 152, 0.34, 1.6] },
-  { el: $('cB'), lab: $('labB'), x: 550,  y: 250, w: 720, h: 400, rot: 0.9,
-    birth: 5.86, sx: 960,  strip: [1300, 150, 0.28, -1.2] },
-  { el: $('cC'), lab: $('labC'), x: 1320, y: 168, w: 470, h: 410, rot: 2.3,
-    birth: 6.12, sx: 1320, strip: [1748, 146, 0.32, 2.4] },
+  { w: $('wA'), lab: $('labA'), x: 96,   y: 372, ww: 540, h: 430, rot: TILT.cards[0],
+    birth: 5.98, sx: 620,  strip: [516, 168, 0.30, -2.2] },
+  { w: $('wB'), lab: $('labB'), x: 556,  y: 236, ww: 720, h: 408, rot: TILT.cards[1],
+    birth: 5.86, sx: 960,  strip: [1030, 160, 0.26, 1.6] },
+  { w: $('wC'), lab: $('labC'), x: 1330, y: 176, ww: 452, h: 400, rot: TILT.cards[2],
+    birth: 6.12, sx: 1300, strip: [1452, 166, 0.31, 2.4] },
 ];
+CARDS.forEach((c) => { c.rest = { x: c.x, y: c.y, w: c.ww, h: c.h }; });
+
 const SECS = ['s1', 's2', 's3', 's4'].map((id) => {
   const el = $(id), inr = el.querySelector('.in');
   return { el, in: inr, h: inr.offsetHeight };
 });
-
 const CHIPS = [
   { chip: $('chipA'), box: $('boxA'), at: 7.26 },
   { chip: $('chipB'), box: null,      at: 7.58 },
   { chip: $('chipC'), box: $('boxC'), at: 7.90 },
 ];
+const FRAGS = [$('f0'), $('f1'), $('f2')];
+const LN2_DY = -104, LN2_SCALE = 0.27;
 
-const QUERY = "who's the best roofer in Fishtown?";
-
-/* beat 7 → 8. #ln2 does not exit; it scales and travels into the lockup's line
-   slot, so the close is mark + MOMENTUM + one line + needmomentum.com. Its box
-   rests centred on y 612; the slot's centre is y 527. */
-const LN2_DY = -85, LN2_SCALE = 0.33;
+/* The four tears. Each is one torn band travelling the frame; the outgoing
+   layer is clipped to the same edge, so nothing ever cross-fades. */
+const TEARS = [
+  { t: 3.02,  d: 0.62, dir: 'ltr', seed: 41 },
+  { t: 12.84, d: 0.66, dir: 'ltr', seed: 17 },
+  { t: 15.48, d: 0.66, dir: 'ltr', seed: 63 },
+  { t: 18.92, d: 0.64, dir: 'rtl', seed: 29 },
+];
+const tearP = (i) => (t) => at(t, TEARS[i].t, TEARS[i].d, easeEmphatic);
 
 /* ═══ the timeline ══════════════════════════════════════════════════════ */
 window.seek = function (t) {
 
-  /* ═══ BEAT 1 · 0.00–3.55 — the wordmark run ══════════════════════════ */
+  /* ═══ the travelling tear ═════════════════════════════════════════════ */
+  let bandX = -900, bandDir = 'ltr', bandOn = 0;
+  for (let i = 0; i < TEARS.length; i++) {
+    const T = TEARS[i];
+    const p = at(t, T.t, T.d, easeEmphatic);
+    if (p > 0 && p < 1) { bandOn = 1; bandDir = T.dir; bandX = T.dir === 'ltr' ? lerp(-300, 2220, p) : lerp(2220, -300, p); }
+  }
+  $('tear').style.opacity = bandOn;
+  $('tear').style.transform =
+    `translate(${bandX - 595}px, -172px) rotate(${bandDir === 'ltr' ? -90 : 90}deg)`;
+
+  const P1 = tearP(0)(t), P2 = tearP(1)(t), P3 = tearP(2)(t), P4 = tearP(3)(t);
+
+  /* ═══ BEAT 1 · 0.00–3.60 — the wordmark run ═══════════════════════════ */
   {
-    const gone = at(t, 3.02, 0.52, easeStandard);
-    const alpha = 1 - gone;
-    cx.setTransform(1, 0, 0, 1, 0, 0);
-    cx.clearRect(0, 0, 1920, 1080);
-    if (alpha > 0.001 && RUN.W) {
-      /* one continuous move: the read head races down the string and the whole
-         line collapses into legibility underneath it. Already moving at t=0. */
-      const run = Math.pow(easeInOut(clamp((t + 0.62) / 3.22)), 1.85);
-      /* the read head starts past the M, so frame 0 is already mid-letter */
-      const f = lerp(0.058, 0.5, run);
-      const col = at(t, 1.20, 1.15, easeEmphatic);
+    $('sc1').style.opacity = P1 < 1 ? 1 : 0;
+    $('sc1').style.clipPath = P1 > 0 ? tornWipe(P1 * 1.06 + 0.03, { seed: 41, teeth: 78, jag: 0.013 }) : 'none';
+
+    if (P1 < 1 && RUN.W) {
+      const run = Math.pow(easeInOut(clamp((t + 0.62) / 3.30)), 1.85);
+      const f = lerp(0.055, 0.5, run);
+      const col = at(t, 1.16, 1.18, easeEmphatic);
       const s = lerp(1, RUN.send, col);
       const tx = 960 - s * RUN.W * f;
-      /* cap centre pinned to the frame centre: the crop is equal top and bottom */
-      const ty = 540 - 96 * gone;
+      $('run').style.transform =
+        `translate(${tx}px, 540px) scale(${s}) translateY(${-RUN.capOff}px)`;
 
-      cx.save();
-      cx.globalAlpha = alpha;
-      cx.translate(tx, ty);
-      cx.scale(s, s);
-      cx.font = `${RUN_FS}px "Archivo Black", "Arial Black", sans-serif`;
-      try { cx.letterSpacing = `${-0.028 * RUN_FS}px`; } catch (e) { /* noop */ }
-      cx.textBaseline = 'alphabetic';
-      const base = RUN.cap / 2;
-      cx.fillStyle = INK;   cx.fillText(RUN_A, 0, base);
-      cx.fillStyle = BRAND; cx.fillText(RUN_B, RUN.wA, base);
-      cx.restore();
+      /* the two torn bands crop the letters top and bottom, and open as the
+         line resolves — the crop is material, not a frame edge */
+      const open = col;
+      $('bandT').style.transform = `translate(${-104 * (1 - run)}px, ${-176 - 176 * open}px) rotate(-1.1deg)`;
+      $('bandB').style.transform = `translate(${72 * (1 - run)}px, ${922 + 176 * open}px) rotate(-1.1deg) scaleY(-1)`;
+
+      const brad = at(t, 2.16, 0.44, easeEmphatic);
+      $('runBrad').style.opacity = brad;
+      $('runBrad').style.transform =
+        `translate(${138 - 26 * (1 - brad)}px, ${476}px) rotate(${-14 + 22 * brad}deg) scale(${lerp(0.5, 1, brad)})`;
+
+      /* two birds cross the run — the type is broken up, not decorated */
+      const g1 = clamp((t + 0.28) / 2.35);
+      $('k1').style.width = '360px';
+      $('k1').style.transform =
+        `translate(${lerp(2180, -520, easeInOut(g1))}px, ${lerp(206, 320, g1)}px) rotate(${lerp(-14, 6, g1)}deg)`;
+      const g2 = clamp((t - 0.95) / 2.5);
+      $('k2').style.width = '158px';
+      $('k2').style.transform =
+        `translate(${lerp(-320, 2100, easeInOut(g2))}px, ${lerp(806, 700, g2)}px) rotate(${lerp(10, -8, g2)}deg) scaleX(-1)`;
+      $('k2').style.opacity = g2 > 0 ? 0.9 : 0;
     }
   }
 
-  /* ═══ BEAT 2 · 3.10–5.95 — the prompt ════════════════════════════════ */
+  /* the desk is under everything the first tear reveals */
+  $('deskLay').style.opacity = P1 > 0.02 ? 1 : 0;
+  $('desk').style.transform = $('deskShadow').style.transform = `rotate(${TILT.desk}deg)`;
+
+  /* ═══ BEAT 2 · 3.10–5.95 — the prompt ═════════════════════════════════ */
   {
-    const inP = at(t, 3.18, 0.92, easeEntrance);
-    const split = at(t, 5.86, 0.34, easeStandard);
-    const press = at(t, 5.80, 0.16, easeStandard) * (1 - at(t, 5.96, 0.2, easeStandard));
-    const p = $('prompt');
+    const inP = at(t, 3.20, 0.94, easeEntrance);
+    const split = t >= 5.86 ? 1 : 0;                     /* a break, never a fade */
+    const press = at(t, 5.78, 0.16, easeStandard) * (1 - at(t, 5.94, 0.18, easeStandard));
+    const p = $('pw');
     p.style.opacity = inP * (1 - split);
     p.style.transform =
-      `translateY(${lerp(268, 0, inP) + 26 * split}px) scale(${lerp(0.955, 1, inP) * (1 - 0.05 * split)})`;
+      `translateY(${lerp(272, 0, inP)}px) rotate(${TILT.prompt * (0.3 + 0.7 * inP)}deg) `
+      + `scale(${lerp(0.955, 1, inP)})`;
 
-    /* the ghost placeholder greys out as the query types itself in */
-    $('ghostq').style.opacity = (1 - at(t, 3.98, 0.30, easeStandard)) * inP;
-    const typing = typed(QUERY, t, 4.06, 1.32);
-    $('q').textContent = typing;
-    const caretOn = t > 3.96 && t < 5.86 ? blink(t - 3.96, 1.02) : 0;
-    $('caret').style.opacity = caretOn;
-    $('qline').style.opacity = inP;
+    $('ghostq').style.opacity = 1 - at(t, 3.98, 0.30, easeStandard);
+    $('q').textContent = typed(QUERY, t, 4.06, 1.32);
+    $('caret').style.opacity = (t > 3.94 && t < 5.86) ? blink(t - 3.94, 1.02) : 0;
 
-    /* the send button lifts, then is pressed */
-    const lift = at(t, 5.38, 0.34, easeEntrance);
+    const lift = at(t, 5.36, 0.34, easeEntrance);
     $('send').style.transform =
-      `translateY(${-7 * lift}px) scale(${lerp(1, 1.07, lift) * (1 - 0.13 * press)})`;
+      `translateY(${-7 * lift}px) scale(${lerp(1, 1.07, lift) * (1 - 0.14 * press)})`;
+
+    /* the split: the card is torn into three, and the birds take the pieces */
+    const sp = clamp((t - 5.86) / 1.15);
+    FRAGS.forEach((el, i) => {
+      const s = scatterPose(sp, i, 3, { seed: 19, spread: 1.12 });
+      el.style.opacity = (t >= 5.86 ? 1 : 0) * s.opacity;
+      el.style.transform = `${s.transform} rotate(${TILT.prompt}deg)`;
+    });
   }
 
-  /* ═══ BEAT 3 · 5.85–9.50 — three surfaces ════════════════════════════ */
+  /* ═══ BEAT 3 · 5.85–9.50 — three surfaces ═════════════════════════════ */
   {
-    const wipe = at(t, 12.92, 0.30, easeStandard);          // behind the deep edge
     CARDS.forEach((c, i) => {
       const born = at(t, c.birth, 1.06, easeEntrance);
-      const toStrip = at(t, 9.46 + i * 0.07, 0.92, easeEmphatic);
-      const rx = c.x + c.w / 2, ry = c.y + c.h / 2;
-      /* start life as a slab inside the prompt card, then fan out, then shrink up */
+      const toStrip = at(t, 9.44 + i * 0.07, 0.94, easeEmphatic);
+      const tp = tapedCard(born, i, { rise: 0 });
+      const rx = c.x + c.ww / 2, ry = c.y + c.h / 2;
       let ccx = lerp(c.sx, rx, born);
-      let ccy = lerp(540, ry, born);
-      let s = lerp(216 / c.h, 1, born);
-      let rot = lerp(0, c.rot, born);
+      let ccy = lerp(544, ry, born);
+      let s = lerp(214 / c.h, 1, born);
+      let rot = lerp(c.rot * 0.25, c.rot, born);
       ccx = lerp(ccx, c.strip[0], toStrip);
       ccy = lerp(ccy, c.strip[1], toStrip);
       s = lerp(s, c.strip[2], toStrip);
       rot = lerp(rot, c.strip[3], toStrip);
-      poseCard(c.el, c, ccx, ccy, s, rot, born * (1 - wipe));
+      poseCard(c.w, c.rest, ccx, ccy, s, rot, born);
+      c.w.querySelector('.sh').style.opacity = tp.opacity;
 
-      const labP = at(t, 6.94 + i * 0.16, 0.66) * (1 - at(t, 9.42, 0.34, easeStandard));
+      const labP = at(t, 6.94 + i * 0.16, 0.66) * (1 - at(t, 9.40, 0.30, easeStandard));
       c.lab.style.opacity = labP;
-      c.lab.style.transform = `translateY(${(1 - labP) * 16}px)`;
+      c.lab.style.transform = `translateY(${(1 - labP) * 18}px) rotate(${c.rot * 0.5}deg)`;
     });
+    /* labels ride under their own card */
+    $('labA').style.left = '112px'; $('labA').style.top = '828px';
+    $('labB').style.left = '700px'; $('labB').style.top = '672px';
+    $('labC').style.left = '1338px'; $('labC').style.top = '600px';
 
-    /* the client's name lands in each surface */
     CHIPS.forEach((c) => {
       const p = at(t, c.at, 0.40, easeEmphatic);
       c.chip.style.opacity = p;
-      c.chip.style.transform = `scale(${lerp(0.78, 1, p)})`;
+      c.chip.style.transform = `scale(${lerp(0.76, 1, p)}) rotate(${lerp(-4, 0, p)}deg)`;
       if (c.box) c.box.style.opacity = p;
     });
   }
 
-  /* ═══ BEAT 4 · 9.45–13.10 — the checklist ════════════════════════════ */
+  /* ═══ BEAT 4 · 9.45–13.10 — the checklist ═════════════════════════════ */
   {
-    const out = at(t, 12.92, 0.30, easeStandard);        // behind the deep edge
     CI.forEach((it, i) => {
       const p = at(t, 9.86 + i * 0.46, 0.70);
-      it.el.style.opacity = p * (1 - out);
-      it.el.style.transform = `translateY(${(1 - p) * 26 - 22 * out}px)`;
-      it.rule.style.width = `${at(t, 9.96 + i * 0.46, 0.62, easeEmphatic) * 660}px`;
+      it.el.style.opacity = p;
+      it.el.style.transform = `translateY(${(1 - p) * 28}px)`;
+      it.rule.style.width = `${at(t, 9.98 + i * 0.46, 0.62, easeEmphatic) * 660}px`;
     });
+    const bp = at(t, 10.70, 0.86, easeEntrance);
+    const bt = tapedCard(bp, 1, { rise: 30, tilt: 2.4 });
+    $('k3').style.opacity = bt.opacity * 0.95;
+    $('k3').style.transform = bt.transform;
   }
 
-  /* ═══ BEAT 5 · 12.55–16.10 — SEO · AEO · GEO ════════════════════════ */
+  /* ═══ BEAT 5 · 12.84–16.14 — SEO · AEO · GEO ══════════════════════════ */
   {
-    const inP = at(t, 12.58, 0.50, easeEmphatic);           // wipes in from the left
-    const outP = at(t, 15.62, 0.46, easeEmphatic);          // and keeps going, off right
-    $('deep').style.opacity = inP > 0 ? 1 : 0;
-    $('deep').style.clipPath =
-      `inset(0 ${(1 - inP) * 100}% 0 ${outP * 100}%)`;
+    /* in behind the second tear, out behind the third — no dissolve either side */
+    $('deep').style.opacity = (P2 > 0 && P3 < 1) ? 1 : 0;
+    if (P2 > 0 && P3 < 1) {
+      $('deep').style.clipPath = P3 > 0
+        ? tornWipe(P3 * 1.06 + 0.03, { seed: 63, teeth: 78, jag: 0.013 })
+        : tornWipe(1 - clamp(P2 * 1.04 - 0.01), { seed: 17, teeth: 78, jag: 0.013, dir: 'rtl' });
+    }
 
-    /* a hard swap, not a cross-dissolve: every word is fully gone before the
-       next one starts, so the three never share a pixel. */
     const T = [
-      { el: $('t1'), in: 12.86, out: 13.64 },   // rides in on the wipe
-      { el: $('t2'), in: 13.86, out: 14.64 },
-      { el: $('t3'), in: 14.86, out: 15.80 },   // the third holds longest
+      { el: $('t1'), in: 13.02, out: 13.78, seed: 5 },
+      { el: $('t2'), in: 14.00, out: 14.76, seed: 71 },
+      { el: $('t3'), in: 14.98, out: 15.92, seed: 23 },
     ];
     T.forEach((s) => {
-      const a = at(t, s.in, 0.42, easeEntrance);
-      const b = at(t, s.out, 0.18, easeStandard);
+      const a = at(t, s.in, 0.44, easeEntrance);
+      const b = at(t, s.out, 0.26, easeEmphatic);
       const w = s.el.querySelector('.w'), big = s.el.querySelector('b'), sub = s.el.querySelector('i');
-      rise(w, big, a, 96);
-      s.el.style.opacity = a * (1 - b);
-      s.el.style.transform = `translateY(${-56 * b}px)`;
-      const sp = at(t, s.in + 0.10, 0.26);   // the expansion lands early — AEO needs the read
+      rise(w, big, a, 104);
+      s.el.style.opacity = a > 0 ? 1 : 0;
+      /* each term is torn away, not faded */
+      s.el.style.clipPath = b > 0 ? tornWipe(b, { seed: s.seed, teeth: 40, jag: 0.03 }) : 'none';
+      s.el.style.transform = `translateY(${-40 * b}px)`;
+      const sp = at(t, s.in + 0.12, 0.28);
       sub.style.opacity = sp;
-      sub.style.transform = `translateY(${(1 - sp) * 16}px)`;
+      sub.style.transform = `translateY(${(1 - sp) * 18}px)`;
     });
-    const step = (at(t, 12.86, 0.4) + at(t, 13.86, 0.4) + at(t, 14.86, 0.4)) / 3;
-    $('deepfill').style.width = `${step * 300}px`;
+    const step = (at(t, 13.02, 0.42) + at(t, 14.00, 0.42) + at(t, 14.98, 0.42)) / 3;
+    $('deepfill').style.width = `${step * 296}px`;
+
+    const bd = clamp((t - 13.55) / 2.1);
+    $('deepbird').style.transform =
+      `translate(${lerp(-360, 1900, easeInOut(bd))}px, ${lerp(96, -34, bd)}px) rotate(${lerp(8, -6, bd)}deg)`;
   }
 
-  /* ═══ BEAT 6 · 15.65–19.95 — the deliverable ════════════════════════ */
+  /* ═══ BEAT 6 · 15.48–19.55 — the deliverable ══════════════════════════ */
   {
-    /* it arrives under the deep layer, so the exit wipe reveals a card that is
-       already there and already rendering — never an empty white rectangle */
-    const inP = at(t, 15.50, 0.72, easeEntrance);
-    const outP = at(t, 18.94, 0.46, easeStandard);
-    const b = $('browser');
-    b.style.opacity = inP * (1 - outP);
+    /* it is already built underneath when the third tear passes over it */
+    const inP = at(t, 15.16, 0.80, easeEntrance);
+    const b = $('bw');
+    b.style.opacity = inP * (P4 < 1 ? 1 : 0);
     b.style.transform =
-      `translateY(${lerp(112, 0, inP) + 54 * outP}px) scale(${lerp(0.945, 1, inP) * (1 - 0.10 * outP)})`;
+      `translateY(${lerp(96, 0, inP)}px) rotate(${TILT.browser * (0.3 + 0.7 * inP)}deg) `
+      + `scale(${lerp(0.955, 1, inP)})`;
 
-    /* the page renders itself, section by section */
     SECS.forEach((sc, i) => {
-      const p = at(t, 15.72 + i * 0.24, 0.46, easeEntrance);
+      const p = at(t, 15.62 + i * 0.24, 0.46, easeEntrance);
       sc.el.style.height = `${p * sc.h}px`;
       sc.in.style.transform = `translateY(${(1 - p) * -26}px)`;
     });
 
-    const lv = at(t, 18.16, 0.32, easeEmphatic);
-    $('live').style.opacity = lv * (1 - outP);
-    $('live').style.transform = `scale(${lerp(0.62, 1, lv)}) translateY(${54 * outP}px)`;
+    const lv = at(t, 18.10, 0.34, easeEmphatic);
+    $('live').style.opacity = lv * (P4 < 1 ? 1 : 0);
+    $('live').style.transform = `rotate(${lerp(-11, -2.4, lv)}deg) scale(${lerp(0.6, 1, lv)})`;
+
+    /* the fourth tear carries the whole deliverable off to the left */
+    $('sc6').style.clipPath = P4 > 0
+      ? tornWipe(P4 * 1.06 + 0.03, { seed: 29, teeth: 78, jag: 0.013, dir: 'rtl' })
+      : 'none';
   }
 
-  /* ═══ BEAT 7 · 19.45–22.30 — the line, resolving into the lockup ════ */
+  /* ═══ BEAT 7 · 19.20–22.30 — the line ═════════════════════════════════ */
   {
-    const out1 = at(t, 21.10, 0.44, easeStandard);        // 'One agency.' leaves
-    const settle = at(t, 21.28, 0.58, easeEmphatic);      // the second line stays
-    $('sweep').style.width = `${at(t, 19.16, 1.00, easeStandard) * 1920}px`;
-    $('sweep').style.opacity = 1 - at(t, 21.02, 0.42, easeStandard);
-    revealWords($('ln1'), t, 19.62, 0.66, 0.08, 40);
-    revealWords($('ln2'), t, 19.96, 0.66, 0.07, 40);
+    const out1 = at(t, 21.10, 0.44, easeStandard);
+    const settle = at(t, 21.28, 0.60, easeEmphatic);
+    revealWords($('ln1'), t, 19.30, 0.70, 0.09, 46);
+    revealWords($('ln2'), t, 19.74, 0.70, 0.08, 46);
     $('ln1').style.opacity = 1 - out1;
-    $('ln1').style.transform = `translateY(${-46 * out1}px)`;
-    /* 'Every place they look.' is not exited — it scales and travels down into
-       the lockup's line slot, so beat 7's copy becomes beat 8's line. */
+    $('ln1').style.transform = `translateY(${-52 * out1}px)`;
+
+    /* the ochre strip is torn in under the payoff line, then torn away */
+    const hin = at(t, 19.92, 0.62, easeEmphatic);
+    const hout = at(t, 21.06, 0.42, easeEmphatic);
+    $('hl').style.opacity = hin > 0 ? 1 : 0;
+    $('hl').style.clipPath = hout > 0
+      ? tornWipe(hout, { seed: 88, teeth: 34, jag: 0.04 })
+      : tornWipe(1 - hin, { seed: 12, teeth: 34, jag: 0.04, dir: 'rtl' });
+
     $('ln2').style.transform =
       `translateY(${LN2_DY * settle}px) scale(${lerp(1, LN2_SCALE, settle)})`;
   }
 
-  /* ═══ BEAT 8 · 21.70–24.00 — lockup, and the pills come to rest ═════ */
+  /* ═══ BEAT 8 · 21.70–24.00 — the lockup ═══════════════════════════════ */
   if (lock) lock.pose(at(t, 21.70, 1.10));
+  {
+    const bp = at(t, 22.30, 0.80, easeEntrance);
+    const bt = tapedCard(bp, 0, { rise: 26, tilt: -2.2 });
+    $('k4').style.width = '176px';
+    $('k4').style.opacity = bt.opacity * 0.9;
+    $('k4').style.transform = bt.transform;
+  }
 
-  /* ── the pills, one continuous thread from beat 2 to the last frame ─── */
+  /* ── the tabs: one thread from beat 2 to the last frame ───────────────── */
   PILLS.forEach((el, i) => {
     const track = PILL_POS[i];
     let x = track[0][0], y = track[0][1], r = track[0][2], s = PILL_SCALE[0];
@@ -664,10 +1008,10 @@ window.seek = function (t) {
       x = lerp(x, nxt[0], p); y = lerp(y, nxt[1], p); r = lerp(r, nxt[2], p);
       s = lerp(s, PILL_SCALE[k + 1], p);
     }
-    const born = at(t, 3.64 + i * 0.11, 0.62);
+    const born = at(t, 3.66 + i * 0.11, 0.62);
     el.style.opacity = born;
     el.style.transform =
-      `translate(${x}px, ${y + (1 - born) * 18}px) translate(-50%, -50%) `
+      `translate(${x}px, ${y + (1 - born) * 20}px) translate(-50%, -50%) `
       + `rotate(${r}deg) scale(${s * lerp(0.86, 1, born)})`;
   });
 };

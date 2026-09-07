@@ -4,315 +4,744 @@
 <link rel="stylesheet" href="../../brand/tokens.css">
 <style>
   html,body { background:#000; }
-  .stage {
-    position:relative; width:1080px; height:1080px; overflow:hidden;
-    background:var(--m-deep); color:var(--m-on-deep);
-    font-family:var(--m-font-text); -webkit-font-smoothing:antialiased;
-  }
-  #globe { position:absolute; inset:0; }
+  .stage { position:relative; width:1080px; height:1080px; overflow:hidden;
+           background:var(--m-deep); font-family:var(--m-font-text);
+           -webkit-font-smoothing:antialiased; }
 
-  /* corner furniture */
-  .tl { position:absolute; left:56px; top:52px; display:flex; align-items:center; gap:14px; }
-  .tl .mk { width:44px; height:44px; color:var(--m-brand-lift); display:block; }
-  .tl .wd { font-family:var(--m-font-display); font-size:26px; letter-spacing:-.01em; line-height:1; }
-  .tr { position:absolute; right:56px; top:52px; background:var(--m-signal); color:var(--m-on-signal);
-        padding:10px 16px 11px; border-radius:var(--m-r-sm); text-align:right; }
-  .tr b { display:block; font-weight:800; font-size:17px; letter-spacing:.14em; line-height:1.15; }
-  .tr i { display:block; font-style:normal; font-weight:700; font-size:12px; letter-spacing:.2em; opacity:.72; }
+  /* ── type voices: three real cuts of one variable family ─────────────────
+     expanded 125/900 · display 112/800 · condensed 70/700 — plus the serif. */
+  .vf-x    { font-family:var(--m-font-display); font-variation-settings:"wdth" 125,"wght" 900; }
+  .vf-disp { font-family:var(--m-font-display); font-variation-settings:"wdth" 112,"wght" 800;
+             letter-spacing:-.02em; }
+  .vf-cond { font-family:var(--m-font-display); font-variation-settings:"wdth" 70,"wght" 700;
+             text-transform:uppercase; }
+  .ed      { font-family:var(--m-font-editorial); font-weight:400; }
 
-  /* title block */
-  .title { position:absolute; left:70px; top:404px; }
-  .title .l1 { font-family:var(--m-font-display); font-size:112px; line-height:.86;
-               letter-spacing:-.028em; color:var(--m-on-deep); }
-  .title .l2 { font-family:var(--m-font-display); font-size:172px; line-height:.86;
-               letter-spacing:-.032em; color:var(--m-signal); margin-top:6px; }
-  .clip { overflow:hidden; display:block; }
+  /* ── grounds ─────────────────────────────────────────────────────────────── */
+  .layer  { position:absolute; inset:0; }
+  #deep   { background:var(--m-deep); }
+  #paper  { background:var(--m-warm-canvas); will-change:clip-path; }
+  .grain  { position:absolute; inset:0; pointer-events:none; background-repeat:repeat; }
+  #manila { position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
+            opacity:.24; mix-blend-mode:multiply;
+            object-position:88% 42%; transform:scale(1.4); }
 
-  .rule { position:absolute; left:74px; top:742px; height:2px; background:var(--m-brand-lift); width:0; }
-  .cap  { position:absolute; left:74px; top:762px; font-weight:700; font-size:19px;
-          letter-spacing:.34em; color:var(--m-on-deep-muted); }
+  .reg    { position:absolute; background:var(--m-warm-line); }
+  #deckle { position:absolute; right:0; top:0; width:96px; height:100%;
+            background:var(--m-deep); }
 
-  /* ticker */
-  .tick { position:absolute; left:0; right:0; bottom:56px; height:34px; overflow:hidden; }
-  .tick .strip { position:absolute; left:0; top:0; display:flex; gap:52px; white-space:nowrap;
-                 font-weight:700; font-size:17px; letter-spacing:.2em; color:var(--m-on-deep-muted); }
-  .tick .strip span.hot { color:var(--m-signal); }
-  .tick::before, .tick::after { content:""; position:absolute; top:0; bottom:0; width:120px; z-index:2; }
-  .tick::before { left:0;  background:linear-gradient(90deg,  rgba(14,20,23,1) 12%, rgba(14,20,23,0) 100%); }
-  .tick::after  { right:0; background:linear-gradient(270deg, rgba(14,20,23,1) 12%, rgba(14,20,23,0) 100%); }
+  .foot     { position:absolute; left:74px; top:1006px; font-size:12px; letter-spacing:.34em;
+              color:var(--m-warm-muted); }
+  .footrule { position:absolute; left:74px; top:996px; width:452px; height:1px;
+              background:var(--m-warm-line); }
+  .footed   { position:absolute; left:560px; top:1000px; font-size:21px;
+              color:var(--m-warm-muted); }
+  .clipimg  { position:absolute; right:228px; top:916px; width:26px; }
 
-  .sign { position:absolute; right:56px; bottom:58px; font-weight:700; font-size:19px;
-          letter-spacing:.1em; color:var(--m-on-deep-muted); }
+  /* ── corner lockups ──────────────────────────────────────────────────────── */
+  .lk { position:absolute; left:74px; top:66px; display:flex; align-items:center; gap:15px; }
+  .lk .mk { width:46px; height:46px; display:block; }
+  .lk .wd { font-size:27px; line-height:1; }
+  #lkP .mk { color:var(--m-mark); }        #lkP .wd { color:var(--m-ink); }
+  #lkD .mk { color:var(--m-brand-lift); }  #lkD .wd { color:var(--m-on-deep); }
+
+  /* ── cut-paper cards: shadow on the wrapper, deckle clip on the face ────── */
+  .card { position:absolute; transform-origin:50% 10%; }
+  .card > .face { position:relative; background:var(--m-warm-surface); }
+  .face > .graph { position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
+                   opacity:.14; mix-blend-mode:multiply; }
+
+  #plateP { left:88px; top:236px; width:544px;
+            filter:drop-shadow(16px 18px 0 rgba(226,113,19,.26)); }
+  #plateP > .face { padding:22px; }
+  .aper { position:relative; width:500px; height:500px; overflow:hidden; }
+  .aper .strip { position:absolute; left:0; top:0; display:flex; }
+  .aper .cell  { width:500px; height:500px; position:relative; flex:0 0 auto; overflow:hidden;
+                 display:flex; align-items:center; justify-content:center; }
+  .aper .cell img { display:block; }
+  .ring { position:absolute; left:22px; top:22px; pointer-events:none; }
+
+  .figrow  { position:relative; margin-top:17px; }
+  .figrule { height:2px; background:var(--m-ink); width:100%; }
+  .figlab  { font-size:13px; letter-spacing:.30em; color:var(--m-ink); margin-top:9px; }
+  .figed   { font-size:24px; line-height:1.15; color:var(--m-warm-ink); margin-top:1px; }
+
+  /* ── torn label strips: the report's data column ─────────────────────────── */
+  .tstrip { position:absolute; background-repeat:no-repeat;
+            display:flex; align-items:center; justify-content:space-between;
+            padding:0 34px; transform-origin:50% 50%;
+            filter:drop-shadow(5px 7px 0 rgba(23,60,44,.10)); }
+  .tstrip .lab { font-size:25px; letter-spacing:.15em; color:var(--m-warm-ink); }
+  .tstrip .idx { font-size:13px; letter-spacing:.26em; color:var(--m-warm-muted); }
+  .tstrip .hot { font-size:28px; letter-spacing:.03em; text-transform:none;
+                 font-variation-settings:"wdth" 78,"wght" 700; color:var(--m-signal-ink); }
+  .tstrip .set { font-size:20px; letter-spacing:.19em; }
+  #sUnder { position:absolute; height:3px; background:var(--m-signal-ink); }
+
+  .tape { position:absolute; background-repeat:no-repeat; transform-origin:50% 50%; }
+  .fast { position:absolute; background-repeat:no-repeat; }
+  .bird { position:absolute; }
+  #birds { position:absolute; inset:0; }
+
+  /* ── the badge ───────────────────────────────────────────────────────────── */
+  .badge { position:absolute; right:148px; top:62px; background:var(--m-signal);
+           color:var(--m-on-signal); padding:11px 17px 12px; text-align:right;
+           transform-origin:80% 0%; }
+  .badge b { display:block; font-family:var(--m-font-display);
+             font-variation-settings:"wdth" 70,"wght" 700; font-size:19px;
+             letter-spacing:.16em; line-height:1.1; text-transform:uppercase; }
+  .badge i { display:block; font-family:var(--m-font-display); font-style:normal;
+             font-variation-settings:"wdth" 70,"wght" 500; font-size:13px; letter-spacing:.22em;
+             line-height:1.5; opacity:.9; text-transform:uppercase; }
+
+  /* ── the title, a warm card taped to the deep board ─────────────────────── */
+  #tgroup { position:absolute; inset:0; }
+  #titlecard { left:66px; top:470px; width:906px;
+               filter:drop-shadow(20px 22px 0 rgba(226,113,19,.30)); }
+  #titlecard > .face { padding:34px 36px 30px; }
+  #tl1 { font-size:58px; line-height:1; letter-spacing:.34em; color:var(--m-warm-ink);
+         display:block; }
+  #tl2clip { display:block; overflow:hidden; margin-top:8px; }
+  #tl2 { font-size:176px; line-height:.92; letter-spacing:-.028em; color:var(--m-signal-ink);
+         display:block; }
+  #tbar { position:absolute; left:0; top:0; width:12px; height:100%; background:var(--m-signal); }
+
+  #rule { position:absolute; left:70px; top:800px; height:2px;
+          background:var(--m-brand-lift); width:0; }
+  #cap  { position:absolute; left:68px; top:816px; font-size:43px; line-height:1.1;
+          color:var(--m-on-deep); }
+
+  /* ── the demoted plate on deep ───────────────────────────────────────────── */
+  #plateD { right:70px; top:92px; width:262px;
+            filter:drop-shadow(12px 14px 0 rgba(226,113,19,.30)); }
+  #plateD > .face { padding:18px; }
+  #plateD .aperD { position:relative; width:226px; height:226px; overflow:hidden; }
+  #plateD .figrow { margin-top:13px; }
+  #plateD .figlab { font-size:11px; letter-spacing:.26em; margin-top:7px; }
+
+  /* ── the ticker, printed on a torn paper band ───────────────────────────── */
+  #band   { position:absolute; left:-84px; top:900px; width:1248px;
+            background-repeat:no-repeat; }
+  #bandmask { position:absolute; left:84px; top:46px; width:1080px; height:96px; overflow:hidden; }
+  #strip2 { position:absolute; left:0; top:0; display:flex; gap:62px; white-space:nowrap;
+            align-items:center; height:96px; }
+  #strip2 span { font-family:var(--m-font-display); font-variation-settings:"wdth" 70,"wght" 700;
+                 font-size:21px; letter-spacing:.22em; text-transform:uppercase; }
+  #strip2 span.hot { letter-spacing:.05em; text-transform:none;
+                     font-variation-settings:"wdth" 78,"wght" 700; }
+
+  #signstrip { position:absolute; right:52px; top:934px; background-repeat:no-repeat;
+               display:flex; align-items:center; justify-content:center;
+               transform-origin:50% 50%;
+               filter:drop-shadow(6px 8px 0 rgba(226,113,19,.34)); }
+  #signstrip span { font-size:20px; letter-spacing:.11em; color:var(--m-warm-ink);
+                    text-transform:none; }
 </style></head>
 <body>
-<div class="stage">
-  <canvas id="globe" width="1080" height="1080"></canvas>
+<div class="stage" id="stage">
 
-  <div class="tl" id="tl"><span class="mk" id="mk"></span><span class="wd">MOMENTUM</span></div>
-  <div class="tr" id="tr"><b>LOCAL SEARCH</b><i>PHILADELPHIA</i></div>
+  <!-- ═══ DEEP BOARD — lives underneath; the tear reveals it ═══════════════ -->
+  <div class="layer" id="deep">
+    <div class="grain" id="grainD"></div>
 
-  <div class="title">
-    <span class="clip" id="c1"><span class="l1" id="l1">MOMENTUM</span></span>
-    <span class="clip" id="c2"><span class="l2" id="l2">SIGNAL</span></span>
+    <div class="lk" id="lkD"><span class="mk"></span><span class="wd vf-disp">MOMENTUM</span></div>
+
+    <div class="card" id="plateD">
+      <div class="face" id="faceD">
+        <img class="graph" src="../../brand/material/06-graph.png" alt="">
+        <div class="aperD" id="aperD"><canvas id="gd" width="226" height="226"></canvas></div>
+        <div class="figrow">
+          <div class="figrule"></div>
+          <div class="figlab vf-cond">Fig. I — Philadelphia</div>
+        </div>
+      </div>
+    </div>
+    <div class="tape" id="tapeD"></div>
+    <div class="fast" id="pinD"></div>
+
+    <div id="tgroup">
+      <div class="card" id="titlecard">
+        <div class="face" id="faceT">
+          <div id="tbar"></div>
+          <span class="vf-cond" id="tl1">MOMENTUM</span>
+          <span id="tl2clip"><span class="vf-x" id="tl2">SIGNAL</span></span>
+        </div>
+      </div>
+      <div class="tape" id="tapeT1"></div>
+      <div class="tape" id="tapeT2"></div>
+      <div id="rule"></div>
+      <div class="ed" id="cap">The month in local demand</div>
+    </div>
+
+    <div id="band">
+      <div id="bandmask"><div id="strip2"></div></div>
+    </div>
+    <div id="signstrip"><span class="vf-cond">needmomentum.com</span></div>
   </div>
 
-  <div class="rule" id="rule"></div>
-  <div class="cap"  id="cap">THE MONTH IN LOCAL DEMAND</div>
+  <!-- ═══ PAPER DESK — torn away at 4.35s ═════════════════════════════════ -->
+  <div class="layer" id="paper">
+    <img id="manila" src="../../brand/material/03-manila.png" alt="">
+    <div class="grain" id="grainP"></div>
 
-  <div class="tick" id="tick"><div class="strip" id="strip"></div></div>
-  <div class="sign" id="sign">needmomentum.com</div>
+    <div class="reg" style="left:44px;top:44px;width:28px;height:1px"></div>
+    <div class="reg" style="left:44px;top:44px;width:1px;height:28px"></div>
+    <div class="reg" style="right:118px;top:44px;width:28px;height:1px"></div>
+    <div class="reg" style="right:118px;top:44px;width:1px;height:28px"></div>
+    <div class="reg" style="left:44px;bottom:44px;width:28px;height:1px"></div>
+    <div class="reg" style="left:44px;bottom:44px;width:1px;height:28px"></div>
+
+    <div class="footrule"></div>
+    <div class="foot vf-cond">Momentum Digital · Philadelphia</div>
+    <div class="footed ed">Bulletin 01</div>
+    <img class="clipimg" id="clipimg" src="" alt="">
+
+    <div class="card" id="plateP">
+      <div class="face" id="faceP">
+        <img class="graph" src="../../brand/material/06-graph.png" alt="">
+        <div class="aper" id="aperP">
+          <div class="strip" id="strip1">
+            <div class="cell"><img id="celest" src="../../brand/material/cut-celestial.png" alt="" style="width:562px"></div>
+            <div class="cell"><canvas id="gp" width="500" height="500"></canvas></div>
+          </div>
+        </div>
+        <div class="figrow">
+          <div class="figrule"></div>
+          <div class="figlab vf-cond">Fig. I — Local demand</div>
+          <div class="figed ed">Philadelphia &middot; 39.95&deg; N, 75.16&deg; W</div>
+        </div>
+      </div>
+    </div>
+    <canvas class="ring" id="ring" width="500" height="500"></canvas>
+
+    <div class="tstrip" id="s1"><span class="lab hot vf-cond">&ldquo;roofer near me&rdquo;</span><span class="idx vf-cond">01</span></div>
+    <div class="tstrip" id="s2"><span class="lab vf-cond">Map pack</span><span class="idx vf-cond">02</span></div>
+    <div class="tstrip" id="s3"><span class="lab vf-cond">AI answers</span><span class="idx vf-cond">03</span></div>
+    <div class="tstrip" id="s4"><span class="lab set vf-cond">Organic &middot; Paid &middot; GBP</span><span class="idx vf-cond">04</span></div>
+    <div id="sUnder"></div>
+
+    <div class="tape" id="tape1"></div>
+    <div class="tape" id="tape2"></div>
+    <div class="fast" id="pinP"></div>
+
+    <div class="lk" id="lkP"><span class="mk"></span><span class="wd vf-disp">MOMENTUM</span></div>
+    <div class="badge" id="badge"><b>Local search</b><i>Philadelphia</i></div>
+    <div class="tape" id="tapeB"></div>
+
+    <div id="deckle"></div>
+  </div>
+
+  <!-- ═══ BIRDS — above both grounds so the tear cannot clip them ═══ -->
+  <div id="birds">
+    <img class="bird" id="b0" src="../../brand/material/cut-bird-a.png" alt=""
+         style="left:96px;top:148px;width:196px">
+    <img class="bird" id="b1" src="../../brand/material/cut-bird-b.png" alt=""
+         style="left:856px;top:558px;width:98px">
+    <img class="bird" id="b2" src="../../brand/material/cut-bird-c.png" alt=""
+         style="left:296px;top:850px;width:108px">
+  </div>
+
 </div>
 
 <script type="module">
-import { at, clamp, lerp, easeEntrance, easeEmphatic, easeStandard, osc, markSVG }
+import { at, clamp, lerp, easeEntrance, easeEmphatic, easeStandard, osc,
+         markSVG, rng, grainURL, MATERIAL, tornWipe, tapedCard, scatterPose,
+         plateStrip, lens, VF }
   from '../../brand/film-kit.js';
 
 window.FILM = { width: 1080, height: 1080, fps: 30, duration: 12.0 };
 window.__ready = false;
 
-/* ── palette, as literals matched to tokens.css ───────────────────────────── */
-const DEEP = '#0E1417', LIFT = '#3897CC', SIGNAL = '#E27113', ONDEEP = '#F4F1EC';
+/* tornWipe() hides the layer it is applied to. A REVEAL is its complement. */
+const tornIn = (p, o) => tornWipe(1 - clamp(p), o);
 
-/* ── stage geometry ───────────────────────────────────────────────────────── */
-const cv = document.getElementById('globe');
-const ctx = cv.getContext('2d');
-const CX0 = 540, CY0 = 470, R0 = 352;
+/* ══ palettes, as literals matched to tokens.css ═══════════════════════════ */
+const P_PAPER = { disc:'#EDEEE4', rim:'#B4BBAB', land:'#155E86', sea:'#7C8A7F',
+                  arc:'#A35309', pin:'#A35309', seaA:0.50, landA:1.0, dot:1.28 };
+const P_DEEP  = { disc:'#111A1F', rim:'#33414A', land:'#3897CC', sea:'#F4F1EC',
+                  arc:'#E27113', pin:'#E27113', seaA:0.24, landA:1.0, dot:1.0 };
 
-/* ── land mask → a fixed list of surface points, built once ───────────────── */
-let POINTS = [];            // {lat, lon, land, r0} — r0 = normalised distance from grid centre
+/* ══ material sheets — one source PNG each, addressed by box ═══════════════ */
+const TAPE_SHEET = { src: MATERIAL.tapeSet, w:1434, h:736 };
+const TAPES = [
+  { x:21,  y:1,   w:779, h:187 },
+  { x:876, y:4,   w:538, h:191 },
+  { x:512, y:275, w:867, h:184 },
+  { x:20,  y:278, w:354, h:188 },
+  { x:744, y:541, w:688, h:181 },
+  { x:0,   y:551, w:642, h:184 },
+];
+const FAST_SHEET = { src: MATERIAL.fasteners, w:1328, h:737 };
+const FASTS = { pinA:{x:789,y:278,w:202,h:143}, pinB:{x:684,y:338,w:203,h:140},
+                clip:{x:1170,y:75,w:157,h:591} };
+/* the torn strip's real alpha extent, measured: (118,1)-(1482,404) of 1600x645 */
+const TORN_SHEET = { src: MATERIAL.tornStrip, w:1600, h:645 };
+const TORN = {
+  full: { x:118, y:1, w:1364, h:403 },   /* ragged on all four sides   */
+  midA: { x:400, y:1, w:820,  h:403 },   /* scissor-cut ends, chunkier */
+  midB: { x:250, y:1, w:760,  h:403 },
+  band: { x:118, y:1, w:1364, h:403 },
+  sign: { x:640, y:1, w:520,  h:403 },
+};
+
+function applyCrop(el, sheet, box, displayW) {
+  const k = displayW / box.w;
+  el.style.width  = displayW + 'px';
+  el.style.height = (box.h * k) + 'px';
+  el.style.backgroundImage = `url(${sheet.src})`;
+  el.style.backgroundSize = `${sheet.w * k}px ${sheet.h * k}px`;
+  el.style.backgroundPosition = `${-box.x * k}px ${-box.y * k}px`;
+  return box.h * k;
+}
+
+/* ══ hand-cut edges: a deckle polygon, seeded once, never at paint time ════ */
+function deckle(seed, amp = 0.7, n = 13) {
+  const r = rng(seed);
+  const j = () => (r() - 0.5) * 2 * amp;
+  const pts = [];
+  for (let i = 0; i <= n; i++) pts.push([i / n * 100, j()]);
+  for (let i = 1; i <= n; i++) pts.push([100 + j(), i / n * 100]);
+  for (let i = n - 1; i >= 0; i--) pts.push([i / n * 100, 100 + j()]);
+  for (let i = n - 1; i >= 1; i--) pts.push([j(), i / n * 100]);
+  return `polygon(${pts.map(p => `${p[0].toFixed(2)}% ${p[1].toFixed(2)}%`).join(',')})`;
+}
+
+/* ══ the sphere: a fixed point set, built once ═════════════════════════════ */
+let PTS_BIG = [], PTS_SM = [];
 async function buildPoints() {
   const txt = await fetch('../../brand/land-mask.txt').then(r => r.text());
   const [head, b64] = txt.trim().split('\n');
   const [NX, NY] = head.split(' ').map(Number);
   const bin = atob(b64);
   const bit = (i) => (bin.charCodeAt(i >> 3) >> (i & 7)) & 1;
-  const STEP = 2;                                  // sample every 2nd cell — ~10k points
-  const pts = [];
-  for (let j = 0; j < NY; j += STEP) {
-    const lat = 90 - (j + 0.5) * 180 / NY;
-    const cosl = Math.cos(lat * Math.PI / 180);
-    // keep dots roughly evenly spaced on the sphere: thin the longitude row near the poles
-    const stride = Math.max(STEP, Math.round(STEP / Math.max(0.12, cosl)));
-    for (let i = 0; i < NX; i += stride) {
-      const lon = -180 + (i + 0.5) * 360 / NX;
-      pts.push({ lat, lon, land: bit(j * NX + i) === 1 });
+  const build = (STEP) => {
+    const pts = [];
+    for (let j = 0; j < NY; j += STEP) {
+      const lat = 90 - (j + 0.5) * 180 / NY;
+      const cosl = Math.cos(lat * Math.PI / 180);
+      const stride = Math.max(STEP, Math.round(STEP / Math.max(0.12, cosl)));
+      for (let i = 0; i < NX; i += stride) {
+        const lon = -180 + (i + 0.5) * 360 / NX;
+        pts.push({ lat, lon, land: bit(j * NX + i) === 1 });
+      }
     }
-  }
-  POINTS = pts;
+    return pts;
+  };
+  PTS_BIG = build(2);
+  PTS_SM  = build(4);
 }
 
-/* ── projection ───────────────────────────────────────────────────────────── */
 const D2R = Math.PI / 180;
 function project(lat, lon, rot, cx, cy, R) {
   const a = (lon + rot) * D2R, b = lat * D2R;
   const cb = Math.cos(b);
-  const x = cb * Math.sin(a);
-  const y = -Math.sin(b);
-  const z = cb * Math.cos(a);                       // >0 = facing us
+  const x = cb * Math.sin(a), y = -Math.sin(b), z = cb * Math.cos(a);
   return { x: cx + x * R, y: cy + y * R, z, limb: Math.hypot(x, y) };
 }
-
-/* great-circle interpolation between two lat/lon points */
 function slerp(p, q, f) {
   const [la1, lo1] = p.map(v => v * D2R), [la2, lo2] = q.map(v => v * D2R);
-  const A = [Math.cos(la1) * Math.cos(lo1), Math.cos(la1) * Math.sin(lo1), Math.sin(la1)];
-  const B = [Math.cos(la2) * Math.cos(lo2), Math.cos(la2) * Math.sin(lo2), Math.sin(la2)];
-  let d = A[0] * B[0] + A[1] * B[1] + A[2] * B[2];
-  d = Math.max(-1, Math.min(1, d));
+  const A = [Math.cos(la1)*Math.cos(lo1), Math.cos(la1)*Math.sin(lo1), Math.sin(la1)];
+  const B = [Math.cos(la2)*Math.cos(lo2), Math.cos(la2)*Math.sin(lo2), Math.sin(la2)];
+  let d = Math.max(-1, Math.min(1, A[0]*B[0] + A[1]*B[1] + A[2]*B[2]));
   const w = Math.acos(d), s = Math.sin(w);
   const k1 = s < 1e-6 ? 1 - f : Math.sin((1 - f) * w) / s;
   const k2 = s < 1e-6 ? f : Math.sin(f * w) / s;
-  const v = [A[0] * k1 + B[0] * k2, A[1] * k1 + B[1] * k2, A[2] * k1 + B[2] * k2];
-  const n = Math.hypot(...v);
+  const v = [A[0]*k1 + B[0]*k2, A[1]*k1 + B[1]*k2, A[2]*k1 + B[2]*k2];
+  const n = Math.hypot(v[0], v[1], v[2]);
   return [Math.asin(v[2] / n) / D2R, Math.atan2(v[1], v[0]) / D2R];
 }
-
 const PHL = [39.95, -75.16];
 const DESTS = [
-  [51.51,  -0.13], [-23.55, -46.63], [35.68, 139.69], [-33.87, 151.21],
-  [ 6.52,   3.38], [34.05, -118.24], [41.88, -87.63], [43.65, -79.38],
-  [53.35,  -6.26], [19.08,  72.88],
+  [40.71, -74.01], [38.91, -77.04], [42.36, -71.06], [43.65, -79.38],
+  [41.88, -87.63], [25.76, -80.19], [39.74, -104.99], [34.05, -118.24],
+  [49.28, -123.12], [19.43, -99.13],
 ];
-const ARC_PTS = DESTS.map(d => Array.from({ length: 64 }, (_, i) => slerp(PHL, d, i / 63)));
+const ARCS = DESTS.map(d => Array.from({ length: 56 }, (_, i) => slerp(PHL, d, i / 55)));
 
-/* ── ticker, laid out once ────────────────────────────────────────────────── */
-const TICK = ['"roofer near me"', 'MAP PACK', 'AI ANSWERS', 'ORGANIC', 'PAID', 'GBP'];
-const strip = document.getElementById('strip');
-for (let rep = 0; rep < 4; rep++) {
-  for (const w of TICK) {
-    const s = document.createElement('span');
-    s.textContent = w;
-    if (w.startsWith('"')) s.className = 'hot';
-    strip.appendChild(s);
-  }
-}
+function drawGlobe(ctx, W, pts, cx, cy, R, rot, born, pal, arcT, scale) {
+  ctx.clearRect(0, 0, W, W);
+  if (born <= 0) return;
+  ctx.globalAlpha = 1;
+  ctx.fillStyle = pal.disc;
+  ctx.beginPath(); ctx.arc(cx, cy, R * born, 0, 6.2832); ctx.fill();
+  ctx.strokeStyle = pal.rim; ctx.lineWidth = 1.4;
+  ctx.beginPath(); ctx.arc(cx, cy, R * born, 0, 6.2832); ctx.stroke();
 
-/* ── boot ─────────────────────────────────────────────────────────────────── */
-const els = {
-  tl: document.getElementById('tl'), tr: document.getElementById('tr'),
-  c1: document.getElementById('c1'), c2: document.getElementById('c2'),
-  l1: document.getElementById('l1'), l2: document.getElementById('l2'),
-  rule: document.getElementById('rule'), cap: document.getElementById('cap'),
-  tick: document.getElementById('tick'), sign: document.getElementById('sign'),
-  mk: document.getElementById('mk'),
-};
-let stripW = 0;
-
-Promise.all([buildPoints(), markSVG()]).then(([, svg]) => {
-  els.mk.innerHTML = svg;
-  const s = els.mk.querySelector('svg');
-  s.setAttribute('width', '100%'); s.setAttribute('height', '100%'); s.style.display = 'block';
-  stripW = strip.scrollWidth / 4;
-  window.seek(0);
-  window.__ready = true;
-});
-
-/* ── the timeline ─────────────────────────────────────────────────────────── */
-window.seek = function (t) {
-  /* --- globe transform: the title beat displaces it, it does not just sit --- */
-  const push = at(t, 4.6, 1.6, easeEmphatic);            // globe moves right + back
-  const cx = lerp(CX0, 752, push);
-  const cy = lerp(CY0, 358, push);
-  const R  = lerp(R0, 292, push);
-  const rot = -18 + t * 11.5;                            // slow, continuous, never stops
-
-  ctx.fillStyle = DEEP;
-  ctx.fillRect(0, 0, 1080, 1080);
-
-  /* --- orbital rings sweep in first --- */
-  const ringP = at(t, 0.0, 1.3, easeEmphatic);
-  if (ringP > 0) {
-    const rings = [
-      { tilt: -0.30, sq: 0.30, w: 2.0, a: 0.55, sp: 1.00 },
-      { tilt:  0.46, sq: 0.17, w: 1.4, a: 0.34, sp: -0.7 },
-      { tilt:  0.10, sq: 0.46, w: 1.2, a: 0.24, sp: 0.55 },
-    ];
-    rings.forEach((rg, i) => {
-      const p = at(t, i * 0.13, 1.25, easeEmphatic);
-      if (p <= 0) return;
-      ctx.save();
-      ctx.translate(cx, cy);
-      ctx.rotate(rg.tilt + t * 0.02 * rg.sp);
-      ctx.beginPath();
-      ctx.ellipse(0, 0, R * 1.17, R * 1.17 * rg.sq, 0, -Math.PI / 2, -Math.PI / 2 + p * Math.PI * 2);
-      ctx.strokeStyle = LIFT;
-      ctx.globalAlpha = rg.a * (0.35 + 0.65 * p);
-      ctx.lineWidth = rg.w;
-      ctx.stroke();
-      ctx.restore();
-    });
-    ctx.globalAlpha = 1;
-  }
-
-  /* --- the sphere resolves out of nothing, centre outward --- */
-  const born = at(t, 0.12, 1.35, easeStandard);
-  if (born > 0) {
-    // the sphere has mass: a flat raised-surface disc, no gradient, no glow
-    ctx.globalAlpha = 0.85 * born;
-    ctx.fillStyle = '#1A2226';
-    ctx.beginPath(); ctx.arc(cx, cy, R * born, 0, 6.2832); ctx.fill();
-    ctx.globalAlpha = 0.22 * born;
-    ctx.strokeStyle = LIFT; ctx.lineWidth = 1.4;
-    ctx.beginPath(); ctx.arc(cx, cy, R * born, 0, 6.2832); ctx.stroke();
-    ctx.globalAlpha = 1;
-    for (const p of POINTS) {
-      const q = project(p.lat, p.lon, rot, cx, cy, R);
-      if (q.z <= 0.02) continue;                        // cull the far side
-      if (q.limb > born * 1.08) continue;               // resolve centre → limb
-      const depth = q.z;                                // 0 at limb, 1 facing us
-      const edge = 1 - Math.pow(q.limb, 3.2);           // soften the very rim
-      if (p.land) {
-        ctx.globalAlpha = (0.44 + 0.56 * depth) * edge;
-        ctx.fillStyle = LIFT;
-        const r = (1.05 + 1.75 * depth) * (R / R0);
-        ctx.beginPath(); ctx.arc(q.x, q.y, r, 0, 6.2832); ctx.fill();
-      } else {
-        ctx.globalAlpha = (0.10 + 0.20 * depth) * edge;
-        ctx.fillStyle = ONDEEP;
-        const s2 = 1.5 * (R / R0);
-        ctx.fillRect(q.x - s2 / 2, q.y - s2 / 2, s2, s2);
-      }
+  for (const p of pts) {
+    const q = project(p.lat, p.lon, rot, cx, cy, R);
+    if (q.z <= 0.02) continue;
+    if (q.limb > born * 1.06) continue;
+    const depth = q.z;
+    const edge = 1 - Math.pow(q.limb, 3.4);
+    if (p.land) {
+      ctx.globalAlpha = (0.50 + 0.50 * depth) * edge * pal.landA;
+      ctx.fillStyle = pal.land;
+      const r = (1.0 + 1.7 * depth) * scale * (pal.dot || 1);
+      ctx.beginPath(); ctx.arc(q.x, q.y, r, 0, 6.2832); ctx.fill();
+    } else {
+      ctx.globalAlpha = pal.seaA * (0.35 + 0.65 * depth) * edge;
+      ctx.fillStyle = pal.sea;
+      const s2 = 1.45 * scale;
+      ctx.fillRect(q.x - s2 / 2, q.y - s2 / 2, s2, s2);
     }
-    ctx.globalAlpha = 1;
   }
+  ctx.globalAlpha = 1;
 
-  /* --- demand arcs spring out of Philadelphia --- */
-  ARC_PTS.forEach((path, i) => {
-    const start = 2.4 + i * 0.17;
-    const draw = at(t, start, 0.9, easeEntrance);
+  /* inked great-circle arcs out of Philadelphia — the reference's good idea */
+  ARCS.forEach((path, i) => {
+    const draw = at(arcT, i * 0.082, 0.60, easeEntrance);
     if (draw <= 0) return;
-    const fade = 1 - 0.62 * at(t, start + 1.5, 1.6, easeStandard);   // dims to a trace
+    const fade = 1 - 0.52 * at(arcT, i * 0.082 + 1.05, 1.4, easeStandard);
     const n = Math.max(2, Math.round(draw * path.length));
     ctx.beginPath();
     let pen = false;
     for (let k = 0; k < n; k++) {
-      const q = project(path[k][0], path[k][1], rot, cx, cy, R * 1.005);
+      const q = project(path[k][0], path[k][1], rot, cx, cy, R * 1.004);
       if (q.z <= 0) { pen = false; continue; }
       if (!pen) { ctx.moveTo(q.x, q.y); pen = true; } else ctx.lineTo(q.x, q.y);
     }
-    ctx.strokeStyle = SIGNAL;
-    ctx.globalAlpha = 0.9 * fade;
-    ctx.lineWidth = 2.1 * (R / R0);
+    ctx.strokeStyle = pal.arc;
+    ctx.globalAlpha = 0.92 * fade;
+    ctx.lineWidth = 2.4 * scale;
     ctx.lineCap = 'round';
     ctx.stroke();
-
-    if (draw >= 1) {                                     // the destination pin
-      const q = project(path[path.length - 1][0], path[path.length - 1][1], rot, cx, cy, R * 1.01);
+    if (draw >= 1) {
+      const q = project(path[path.length-1][0], path[path.length-1][1], rot, cx, cy, R * 1.01);
       if (q.z > 0) {
-        ctx.globalAlpha = 0.95 * fade;
-        ctx.fillStyle = SIGNAL;
-        ctx.beginPath(); ctx.arc(q.x, q.y, 3.4 * (R / R0), 0, 6.2832); ctx.fill();
+        ctx.globalAlpha = 0.95 * fade; ctx.fillStyle = pal.pin;
+        ctx.beginPath(); ctx.arc(q.x, q.y, 3.8 * scale, 0, 6.2832); ctx.fill();
       }
     }
     ctx.globalAlpha = 1;
   });
 
-  /* --- the origin pin, always alive --- */
-  if (born > 0.4) {
-    const q = project(PHL[0], PHL[1], rot, cx, cy, R * 1.01);
-    if (q.z > 0) {
-      const beat = 0.5 + 0.5 * osc(t, 1.9);
-      ctx.globalAlpha = 0.30 * beat;
-      ctx.fillStyle = SIGNAL;
-      ctx.beginPath(); ctx.arc(q.x, q.y, (7 + 5 * beat) * (R / R0), 0, 6.2832); ctx.fill();
-      ctx.globalAlpha = 1;
-      ctx.beginPath(); ctx.arc(q.x, q.y, 4.4 * (R / R0), 0, 6.2832); ctx.fill();
-    }
+  const q = project(PHL[0], PHL[1], rot, cx, cy, R * 1.01);
+  if (q.z > 0) {
+    const beat = 0.5 + 0.5 * osc(arcT, 1.9);
+    ctx.globalAlpha = 0.26 * beat; ctx.fillStyle = pal.pin;
+    ctx.beginPath(); ctx.arc(q.x, q.y, (6 + 5 * beat) * scale, 0, 6.2832); ctx.fill();
+    ctx.globalAlpha = 1;
+    ctx.beginPath(); ctx.arc(q.x, q.y, 4.0 * scale, 0, 6.2832); ctx.fill();
+  }
+}
+
+/* ══ ticker band content ═══════════════════════════════════════════════════ */
+const TICK = ['"roofer near me"', 'Map pack', 'AI answers', 'Organic', 'Paid', 'GBP'];
+const strip2 = document.getElementById('strip2');
+for (let rep = 0; rep < 5; rep++) for (const w of TICK) {
+  const s = document.createElement('span');
+  s.textContent = w;
+  if (w.startsWith('"')) s.className = 'hot';
+  strip2.appendChild(s);
+}
+
+/* ══ elements ══════════════════════════════════════════════════════════════ */
+const $ = (id) => document.getElementById(id);
+const E = {
+  paper:$('paper'), lkP:$('lkP'), lkD:$('lkD'), badge:$('badge'), tapeB:$('tapeB'),
+  plateP:$('plateP'), faceP:$('faceP'), tape1:$('tape1'), tape2:$('tape2'),
+  pinP:$('pinP'), clipimg:$('clipimg'), strip1:$('strip1'), ring:$('ring').getContext('2d'),
+  strips:[$('s1'),$('s2'),$('s3'),$('s4')], sUnder:$('sUnder'),
+  tgroup:$('tgroup'), titlecard:$('titlecard'), tl2clip:$('tl2clip'), tl2:$('tl2'),
+  tl1:$('tl1'), tbar:$('tbar'), tapeT1:$('tapeT1'), tapeT2:$('tapeT2'),
+  rule:$('rule'), cap:$('cap'),
+  plateD:$('plateD'), faceD:$('faceD'), tapeD:$('tapeD'), pinD:$('pinD'), aperD:$('aperD'),
+  band:$('band'), signstrip:$('signstrip'), birds:[$('b0'),$('b1'),$('b2')],
+  gp:$('gp').getContext('2d'), gd:$('gd').getContext('2d'),
+  grainP:$('grainP'), grainD:$('grainD'), deckleEl:$('deckle'),
+};
+
+/* ══ deterministic geometry, seeded once at load ═══════════════════════════ */
+const DECKLE_EDGE = (() => {
+  const r = rng(0x2ad39), n = 34, pts = [];
+  for (let i = 0; i <= n; i++) pts.push({ y: i / n * 100, x: 30 + (r() - 0.5) * 48 });
+  return 'polygon(100% 0%,100% 100%,'
+       + pts.slice().reverse().map(p => `${p.x.toFixed(1)}% ${p.y.toFixed(1)}%`).join(',') + ')';
+})();
+const CUT_PLATE = deckle(0x71a3, 0.55);
+const CUT_TITLE = deckle(0x9c2e, 0.42);
+const CUT_PLATED = deckle(0x33f1, 0.9);
+
+/* the four label strips: box, width, position, tilt, tear direction */
+const STRIPS = [
+  { box: TORN.full, w: 348, x: 668, y: 236, rot: -1.7, dir: 'rtl', seed: 12, t: 0.14 },
+  { box: TORN.midA, w: 318, x: 690, y: 384, rot:  1.3, dir: 'ltr', seed: 31, t: 0.40 },
+  { box: TORN.full, w: 366, x: 660, y: 566, rot: -0.9, dir: 'rtl', seed: 57, t: 0.66 },
+  { box: TORN.midB, w: 332, x: 682, y: 700, rot:  2.2, dir: 'ltr', seed: 74, t: 0.92 },
+];
+const BIRD_BASE = [{ rot:-6, drop:34 }, { rot:3, drop:26 }, { rot:-4, drop:30 }];
+const TILT_PLATE = -1.6, TILT_BADGE = 2.2, TILT_PLATED = 2.5, TILT_TITLE = -1.8;
+
+/* ══ boot ══════════════════════════════════════════════════════════════════ */
+const IMGS = [...document.querySelectorAll('img')];
+function preload(src) {
+  return new Promise((res) => { const i = new Image(); i.onload = () => res(i); i.onerror = () => res(null); i.src = src; });
+}
+
+Promise.all([
+  buildPoints(),
+  markSVG(),
+  preload(MATERIAL.tapeSet),
+  preload(MATERIAL.fasteners),
+  preload(MATERIAL.tornStrip),
+  Promise.all(IMGS.map(i => (i.getAttribute('src') ? i.decode().catch(() => {}) : null))),
+]).then(([, svg]) => {
+  for (const host of [E.lkP, E.lkD]) {
+    const m = host.querySelector('.mk');
+    m.innerHTML = svg;
+    const s = m.querySelector('svg');
+    s.setAttribute('width', '100%'); s.setAttribute('height', '100%'); s.style.display = 'block';
   }
 
-  /* --- corner furniture --- */
-  const tlP = at(t, 1.2, 0.9);
-  els.tl.style.opacity = tlP;
-  els.tl.style.transform = `translateX(${(1 - tlP) * -22}px)`;
-  const trP = at(t, 1.5, 0.8);
-  els.tr.style.opacity = trP;
-  els.tr.style.clipPath = `inset(0 0 ${(1 - trP) * 100}% 0)`;
+  /* hand-cut card edges */
+  E.faceP.style.clipPath = CUT_PLATE;
+  document.getElementById('faceT').style.clipPath = CUT_TITLE;
+  E.faceD.style.clipPath = CUT_PLATED;
+  E.deckleEl.style.clipPath = DECKLE_EDGE;
 
-  /* --- the title --- */
-  const t1 = at(t, 4.6, 1.0, easeEntrance);
-  els.c1.style.clipPath = `inset(${(1 - t1) * 105}% 0 0 0)`;
-  els.l1.style.transform = `translateY(${(1 - t1) * 34}px)`;
-  const t2 = at(t, 5.5, 0.85, easeEmphatic);
-  els.c2.style.clipPath = `inset(${(1 - t2) * 105}% 0 0 0)`;
-  els.l2.style.transform = `translateY(${(1 - t2) * 46}px) scale(${lerp(1.06, 1, t2)})`;
-  els.c2.style.transformOrigin = 'left bottom';
+  /* torn label strips */
+  STRIPS.forEach((s, i) => {
+    const el = E.strips[i];
+    const h = applyCrop(el, TORN_SHEET, s.box, s.w);
+    el.style.left = s.x + 'px';
+    el.style.top  = s.y + 'px';
+    s.h = h;
+  });
+  /* the signal underline lives under the hot query on strip 01 */
+  E.sUnder.style.left = (STRIPS[0].x + 34) + 'px';
+  E.sUnder.style.top  = (STRIPS[0].y + STRIPS[0].h * 0.63) + 'px';
+  E.sUnder.style.transform = `rotate(${STRIPS[0].rot}deg)`;
+  E.sUnder.style.transformOrigin = '0% 50%';
 
-  /* --- rule + caption --- */
-  els.rule.style.width = `${at(t, 7.4, 1.0, easeEmphatic) * 452}px`;
-  const capP = at(t, 7.9, 0.9);
-  els.cap.style.opacity = capP;
-  els.cap.style.transform = `translateY(${(1 - capP) * 12}px)`;
+  /* the bottom band and the sign-off strip */
+  applyCrop(E.band, TORN_SHEET, TORN.band, 1248);
+  applyCrop(E.signstrip, TORN_SHEET, TORN.sign, 306);
 
-  /* --- ticker: constant speed, fades out before the sign-off --- */
-  const tkIn = at(t, 8.2, 0.8);
-  const tkOut = 1 - at(t, 11.1, 0.6, easeStandard);
-  els.tick.style.opacity = tkIn * tkOut;
-  if (stripW) strip.style.transform = `translateX(${-((t * 96) % stripW)}px)`;
+  /* tape and fasteners */
+  applyCrop(E.tape1, TAPE_SHEET, TAPES[0], 158);
+  applyCrop(E.tape2, TAPE_SHEET, TAPES[4], 136);
+  applyCrop(E.tapeB, TAPE_SHEET, TAPES[3], 104);
+  applyCrop(E.tapeD, TAPE_SHEET, TAPES[1], 118);
+  applyCrop(E.tapeT1, TAPE_SHEET, TAPES[2], 184);
+  applyCrop(E.tapeT2, TAPE_SHEET, TAPES[5], 152);
+  applyCrop(E.pinP,  FAST_SHEET, FASTS.pinA, 34);
+  applyCrop(E.pinD,  FAST_SHEET, FASTS.pinB, 32);
+  const cb = FASTS.clip, ck = 26 / cb.w;
+  E.clipimg.removeAttribute('src');
+  E.clipimg.style.width = '26px'; E.clipimg.style.height = (cb.h * ck) + 'px';
+  E.clipimg.style.backgroundImage = `url(${FAST_SHEET.src})`;
+  E.clipimg.style.backgroundSize = `${FAST_SHEET.w * ck}px ${FAST_SHEET.h * ck}px`;
+  E.clipimg.style.backgroundPosition = `${-cb.x * ck}px ${-cb.y * ck}px`;
+  E.clipimg.style.transform = 'rotate(11deg)';
 
-  /* --- sign-off --- */
-  const sgP = at(t, 11.2, 0.7);
-  els.sign.style.opacity = sgP;
-  els.sign.style.transform = `translateY(${(1 - sgP) * 10}px)`;
+  const g = grainURL(160, 0.05, 11);
+  E.grainP.style.backgroundImage = `url(${g})`;
+  E.grainD.style.backgroundImage = `url(${g})`;
+  E.grainD.style.opacity = '.32';
+
+  return document.fonts.ready.then(() => {
+    E.sUnder.style.width = (E.strips[0].querySelector('.lab').offsetWidth + 6) + 'px';
+    const hot = [...strip2.querySelectorAll('span.hot')];
+    const target = hot.reduce((a, b) => (Math.abs(b.offsetLeft - 640) < Math.abs(a.offsetLeft - 640) ? b : a));
+    TICK_REST = -(target.offsetLeft - 360);
+    TICK_START = TICK_REST + 292;
+    window.seek(0);
+    window.__ready = true;
+  });
+});
+let TICK_REST = 0, TICK_START = 292;
+
+/* ══ the timeline ══════════════════════════════════════════════════════════
+   0.00  the desk is already dressed — a compass chart under the lens
+   0.14  four torn label strips tear into place, one after another
+   0.60  lockup wipes in · 0.90 the badge is taped down
+   1.45  DEVICE 04 — the strip travels: compass out, local demand in
+   2.35  the arcs draw out of Philadelphia · birds settle on the material
+   4.35  DEVICE 01 — the tear. The desk is pulled off the deep board
+   4.45  DEVICE 03 — the birds scatter; one crosses and rides it out
+   5.25  DEVICE 02 — MOMENTUM / SIGNAL lands as a taped card
+   6.60  the plate comes back demoted, small and pinned
+   7.30  the rule draws · 7.85 the editorial line
+   8.60  the torn ticker band rises; the whole title group lifts for it
+  10.90  the sign-off strip is pasted over the band's right end          */
+window.seek = function (t) {
+
+  /* ── the tear ─────────────────────────────────────────────────────────── */
+  const tear = at(t, 4.35, 1.35, easeEmphatic);
+  E.paper.style.clipPath = tear > 0
+    ? tornWipe(tear * 1.10, { seed: 41, teeth: 46, jag: 0.026, dir: 'ltr' })
+    : 'none';
+
+  const rot = 48 + t * 7.0;
+
+  /* ═══════════ THE DESK — beats 1 to 3 ═══════════ */
+
+  /* the plate is already down when the film starts: no dead first frame */
+  E.plateP.style.transform = `rotate(${TILT_PLATE}deg)`;
+  E.tape1.style.left = '106px'; E.tape1.style.top = '212px';
+  E.tape1.style.transform = 'rotate(-7.5deg)';
+  E.tape2.style.left = '498px'; E.tape2.style.top = '826px';
+  E.tape2.style.transform = 'rotate(5deg)';
+  const pnP = at(t, 0.30, 0.26, easeEmphatic);
+  E.pinP.style.left = '592px'; E.pinP.style.top = '246px';
+  E.pinP.style.opacity = pnP;
+  E.pinP.style.transform = `rotate(${lerp(-18, 0, pnP)}deg) scale(${lerp(1.4, 1, pnP)})`;
+
+  /* the compass ring is re-scribed over the engraved plate */
+  const scribe = at(t, 0.06, 1.00, easeEmphatic);
+  const rc = E.ring;
+  rc.clearRect(0, 0, 500, 500);
+  if (scribe > 0) {
+    rc.save();
+    rc.strokeStyle = '#5F6C60'; rc.lineWidth = 2.2; rc.globalAlpha = 0.9;
+    rc.beginPath(); rc.arc(250, 250, 243, -Math.PI/2, -Math.PI/2 + scribe*Math.PI*2); rc.stroke();
+    rc.strokeStyle = '#9BA595'; rc.lineWidth = 1; rc.globalAlpha = 0.75;
+    rc.beginPath(); rc.arc(250, 250, 231, -Math.PI/2, -Math.PI/2 + scribe*Math.PI*2); rc.stroke();
+    if (scribe < 1) {
+      const a = -Math.PI/2 + scribe*Math.PI*2;
+      rc.globalAlpha = 1; rc.fillStyle = '#A35309';
+      rc.beginPath(); rc.arc(250 + Math.cos(a)*243, 250 + Math.sin(a)*243, 3.6, 0, 6.2832); rc.fill();
+    }
+    rc.restore();
+  }
+  /* the lens is a hard circular mask, open from frame one */
+  document.getElementById('aperP').style.clipPath = lens(250, 250, 243);
+
+  /* DEVICE 01 as a reveal — each label strip is TORN into place, not faded */
+  STRIPS.forEach((s, i) => {
+    const el = E.strips[i];
+    const p = at(t, s.t, 0.52, easeEmphatic);
+    el.style.opacity = p > 0 ? 1 : 0;
+    el.style.clipPath = p >= 1 ? 'none' : tornIn(p, { seed: s.seed, teeth: 15, jag: 0.055, dir: s.dir });
+    el.style.transform = `rotate(${s.rot}deg) translateY(${((1 - p) * 9).toFixed(1)}px)`;
+  });
+  /* the signal underline is scribed under the live query, on its own beat */
+  const und = at(t, 3.05, 0.44, easeEmphatic);
+  E.sUnder.style.clipPath = `inset(0 ${((1 - und) * 100).toFixed(1)}% 0 0)`;
+  E.sUnder.style.opacity = und > 0 ? 1 : 0;
+
+  /* DEVICE 04 — the lens holds; the strip of plates travels beneath it.
+     compass chart → local demand. A cut, made of paper, not a cross-fade.  */
+  const travel = at(t, 1.45, 0.78, easeEmphatic);
+  E.strip1.style.transform = plateStrip(travel, 500);
+
+  const born = at(t, 1.62, 0.62, easeStandard);
+  if (t < 6.1) drawGlobe(E.gp, 500, PTS_BIG, 250, 250, 219, rot, born, P_PAPER, t - 2.35, 0.96);
+
+  /* corner furniture */
+  const lkp = at(t, 0.60, 0.78, easeEntrance);
+  E.lkP.style.opacity = lkp > 0 ? 1 : 0;
+  E.lkP.style.clipPath = `inset(0 ${((1 - lkp) * 100).toFixed(1)}% 0 0)`;
+
+  const bdg = tapedCard(at(t, 0.90, 0.70), 1, { rise: 24, tilt: TILT_BADGE });
+  E.badge.style.transform = bdg.transform;
+  E.badge.style.opacity = bdg.opacity;
+  E.badge.style.boxShadow = bdg.boxShadow;
+  const tpb = at(t, 1.20, 0.24, easeEmphatic);
+  E.tapeB.style.right = '200px'; E.tapeB.style.top = '50px';
+  E.tapeB.style.opacity = tpb;
+  E.tapeB.style.transform = `rotate(-6deg) scale(${lerp(1.12, 1, tpb)})`;
+
+  /* ═══════════ BIRDS — settle on the material, then break the beat ═══════ */
+  const scat = at(t, 4.45, 1.05, easeEntrance);
+  E.birds.forEach((b, i) => {
+    const inP = at(t, 2.42 + i * 0.15, 0.66, easeEntrance);
+    if (scat <= 0) {
+      b.style.opacity = inP;
+      b.style.filter = 'none';
+      b.style.transform = `translateY(${((1 - inP) * BIRD_BASE[i].drop).toFixed(1)}px)`
+                        + ` rotate(${BIRD_BASE[i].rot}deg)`;
+      return;
+    }
+    if (i < 2) {                       /* two cut loose and take the beat with them */
+      const s = scatterPose(scat, i, 3, { seed: 19, spread: 1.05 });
+      b.style.opacity = s.opacity;
+      b.style.filter = 'none';
+      b.style.transform = `${s.transform} rotate(${BIRD_BASE[i].rot}deg)`;
+    } else {                           /* one crosses the tear and lands on the card */
+      const e = easeEntrance(clamp((t - 4.62) / 1.75));
+      const bow = Math.sin(Math.PI * e);
+      const lf  = at(t, 8.60, 0.90, easeStandard);
+      b.style.opacity = 1;
+      b.style.filter = `brightness(${lerp(1, 1.30, e).toFixed(3)})`;
+      b.style.transform =
+        `translate(${(-152 * e + 88 * bow).toFixed(1)}px, ${(-486 * e - 150 * bow - 38 * lf * e).toFixed(1)}px)`
+      + ` rotate(${lerp(BIRD_BASE[2].rot, 6, e).toFixed(1)}deg) scale(${lerp(1, 0.82, e).toFixed(3)})`;
+    }
+  });
+
+  /* ═══════════ THE DEEP BOARD — beats 4 to 7 ═══════════ */
+
+  /* the mark's one restrained scale-pulse, on the settle beat */
+  const pl = Math.sin(clamp((t - 9.85) / 0.60) * Math.PI);
+  E.lkD.querySelector('.mk').style.transform = `scale(${(1 + 0.07 * pl).toFixed(3)})`;
+
+  /* DEVICE 02 — the title arrives as a taped card of warm paper */
+  const tc = tapedCard(at(t, 5.25, 1.00), 0, { rise: 46, tilt: TILT_TITLE });
+  E.titlecard.style.transform = tc.transform;
+  E.titlecard.style.opacity = tc.opacity;
+  const t1 = at(t, 5.55, 0.62, easeEntrance);
+  E.tl1.style.opacity = t1;
+  E.tl1.style.clipPath = `inset(0 ${((1 - t1) * 100).toFixed(1)}% 0 0)`;
+  const t2 = at(t, 6.00, 0.72, easeEmphatic);
+  E.tl2clip.style.clipPath = `inset(0 ${((1 - t2) * 100).toFixed(2)}% 0 0)`;
+  E.tl2.style.transform = `translateX(${((1 - t2) * -30).toFixed(1)}px)`;
+  E.tbar.style.transform = `scaleY(${at(t, 5.45, 0.55, easeEmphatic).toFixed(3)})`;
+  E.tbar.style.transformOrigin = '50% 0%';
+
+  const tt1 = at(t, 5.62, 0.22, easeEmphatic);
+  E.tapeT1.style.left = '40px'; E.tapeT1.style.top = '446px';
+  E.tapeT1.style.opacity = tt1 * tc.opacity;
+  E.tapeT1.style.transform = `rotate(-6.5deg) scale(${lerp(1.14, 1, tt1)})`;
+  const tt2 = at(t, 5.86, 0.22, easeEmphatic);
+  E.tapeT2.style.left = '852px'; E.tapeT2.style.top = '712px';
+  E.tapeT2.style.opacity = tt2 * tc.opacity;
+  E.tapeT2.style.transform = `rotate(4.5deg) scale(${lerp(1.14, 1, tt2)})`;
+
+  /* the plate is not deleted, it is demoted: small, taped, pinned */
+  const pd = tapedCard(at(t, 6.60, 0.90), 2, { rise: -28, tilt: TILT_PLATED });
+  E.plateD.style.transform = `${pd.transform} translateX(${((1 - easeEntrance(clamp((t - 6.60) / 0.9))) * 52).toFixed(1)}px)`;
+  E.plateD.style.opacity = pd.opacity;
+  E.aperD.style.clipPath = lens(113, 113, 113);
+  const tpd = at(t, 7.05, 0.26, easeEmphatic);
+  E.tapeD.style.right = '240px'; E.tapeD.style.top = '74px';
+  E.tapeD.style.opacity = tpd * pd.opacity;
+  E.tapeD.style.transform = `rotate(-5deg) scale(${lerp(1.12, 1, tpd)})`;
+  const pnd = at(t, 9.65, 0.28, easeEmphatic);
+  E.pinD.style.right = '300px'; E.pinD.style.top = '360px';
+  E.pinD.style.opacity = pnd;
+  E.pinD.style.transform = `rotate(${lerp(22, 4, pnd)}deg) scale(${lerp(1.4, 1, pnd)})`;
+
+  if (t > 6.2) drawGlobe(E.gd, 226, PTS_SM, 113, 113, 98, rot, 1, P_DEEP, t - 2.35, 0.62);
+
+  /* rule + the film's one editorial line */
+  const lift = at(t, 8.60, 0.90, easeStandard);
+  E.tgroup.style.transform = `translateY(${((1 - lift) * 40).toFixed(1)}px)`;
+  E.rule.style.width = `${(at(t, 7.30, 0.95, easeEmphatic) * lerp(430, 690, lift)).toFixed(0)}px`;
+  const capP = at(t, 7.85, 0.80, easeEntrance);
+  E.cap.style.opacity = capP;
+  E.cap.style.transform = `translateY(${((1 - capP) * 16).toFixed(1)}px)`;
+
+  /* the ticker rides a torn band: paper arrives like paper, and travels */
+  const bIn = at(t, 8.60, 0.90, easeEntrance);
+  E.band.style.opacity = bIn > 0 ? 1 : 0;
+  E.band.style.clipPath = bIn >= 1 ? 'none'
+    : tornIn(bIn, { seed: 88, teeth: 30, jag: 0.020, dir: 'rtl' });
+  E.band.style.transform = `translateY(${lerp(58, 0, bIn).toFixed(1)}px)`;
+  const glide = at(t, 8.62, 2.30, easeStandard);
+  strip2.style.transform = `translateX(${lerp(TICK_START, TICK_REST, glide).toFixed(1)}px)`;
+  const dim = at(t, 11.02, 0.60, easeStandard);
+  strip2.style.color = dim > 0.5 ? 'var(--m-warm-muted)' : 'var(--m-warm-ink)';
+  [...strip2.querySelectorAll('.hot')].forEach(s => {
+    s.style.color = dim > 0.5 ? 'var(--m-warm-muted)' : 'var(--m-signal-ink)';
+  });
+
+  /* the sign-off is a last scrap, pasted over the band's right end */
+  const sg = at(t, 10.90, 0.60, easeEmphatic);
+  E.signstrip.style.opacity = sg > 0 ? 1 : 0;
+  E.signstrip.style.clipPath = sg >= 1 ? 'none'
+    : tornIn(sg, { seed: 63, teeth: 14, jag: 0.06, dir: 'rtl' });
+  E.signstrip.style.transform = `rotate(1.7deg) translateY(${((1 - sg) * 12).toFixed(1)}px)`;
 };
 
 window.seek(0);

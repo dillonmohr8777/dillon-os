@@ -6,463 +6,505 @@
   html,body { background:#000; }
   .stage {
     position:relative; width:1920px; height:1080px; overflow:hidden;
-    background:var(--m-deep); font-family:var(--m-font-text);
+    background:var(--m-warm-canvas); font-family:var(--m-font-text);
     -webkit-font-smoothing:antialiased;
   }
 
-  /* ── the lens: a hard circular mask. No blur, no bevel, no glass. ───────── */
-  #lens { position:absolute; inset:0; }
-  #paperbg { position:absolute; inset:0; background:var(--m-paper); }
-  #panelbg { position:absolute; inset:0; background:var(--m-panel); }
-  #stripScale { position:absolute; inset:0; transform-origin:960px 496px; }
-  #stripWrap  { position:absolute; left:0; top:0; }
+  /* ── z0 · THE SHEET.  One continuous warm page. The plates travel on it,
+        the trace is recorded on it, the birds sit on it. Never clipped. ──── */
+  #sheet { position:absolute; inset:0; background:var(--m-warm-canvas); }
+  #sheetTex { position:absolute; inset:0; background-size:cover; background-position:center;
+              mix-blend-mode:multiply; opacity:.22; }
+  #stripScale { position:absolute; inset:0; transform-origin:960px 500px; }
+  #stripWrap  { position:absolute; left:0; top:0; display:flex; }
+  .cell { position:relative; flex:0 0 auto; height:1080px; }
+  .grid { position:absolute; inset:0;
+    background-image:
+      linear-gradient(to right, rgba(23,60,44,.055) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(23,60,44,.055) 1px, transparent 1px),
+      linear-gradient(to right, rgba(23,60,44,.075) 1.4px, transparent 1.4px),
+      linear-gradient(to bottom, rgba(23,60,44,.075) 1.4px, transparent 1.4px);
+    background-size: 48px 48px, 48px 48px, 240px 240px, 240px 240px;
+  }
 
-  /* ── the page layer: statement, credit, lockup. Also inside the mask. ──── */
+  /* collage primitives ------------------------------------------------- */
+  .card { position:absolute; background:var(--m-warm-surface);
+          border:1px solid var(--m-warm-line); }
+  .tape { position:absolute; background-repeat:no-repeat; mix-blend-mode:multiply;
+          opacity:.94; transform-origin:50% 50%; }
+  .fast { position:absolute; background-repeat:no-repeat;
+          filter:drop-shadow(3px 4px 0 rgba(23,60,44,.16)); }
+  .plate-img { position:absolute; mix-blend-mode:multiply; }
+  .strip-img { position:absolute;
+               filter:drop-shadow(7px 9px 0 rgba(23,60,44,.11)); }
+  .ann { position:absolute; left:0; top:0; }
+  .pl { position:absolute; font-family:var(--m-font-display);
+        font-variation-settings:"wdth" 70, "wght" 700; font-size:15px;
+        letter-spacing:.34em; color:var(--m-warm-muted); }
+
+  /* ── z1 · THE DARK.  A hole is punched in it for the lens; a torn paper
+        edge takes the rest of it away at the release. ────────────────── */
+  #deep { position:absolute; inset:0; background:var(--m-deep); }
+
+  /* ── z2 · THE PAGE.  Statement, credit, lockup — above the dark. ─────── */
   #page { position:absolute; inset:0; }
-
-  #stmt { position:absolute; left:0; right:0; top:352px; text-align:center; }
-  #stmt div { font-weight:400; font-size:88px; letter-spacing:.05em;
-              line-height:1.42; color:var(--m-ink); }
-
-  #credit { position:absolute; left:150px; top:608px; }
-  #credit .rule { height:2px; background:var(--m-line-strong); width:0; }
-  #credit .a { margin-top:32px; font-weight:700; font-size:28px; letter-spacing:.30em;
-               color:var(--m-muted); }
-  #credit .b { margin-top:21px; font-weight:400; font-size:22px; letter-spacing:.26em;
-               color:var(--m-signal-ink); }
-
-  /* the release beat's subject: one recorded trace across open paper */
-  #trace { position:absolute; inset:0; }
-
-  #lock { position:absolute; left:0; right:0; top:436px; text-align:center;
+  #stmt { position:absolute; left:0; right:0; top:322px; text-align:center; }
+  #stmt div { font-family:var(--m-font-editorial); font-weight:400; font-size:108px;
+              line-height:1.24; color:var(--m-warm-ink); letter-spacing:.004em; }
+  #credit { position:absolute; left:0; right:0; top:600px; text-align:center; }
+  #credStrip { position:absolute; left:50%; top:6px; transform:translateX(-50%);
+               filter:drop-shadow(9px 11px 0 rgba(23,60,44,.10)); }
+  #credInner { position:relative; }
+  #crule { height:2px; background:var(--m-warm-signal); width:0; margin:0 auto 34px; }
+  #ca { font-family:var(--m-font-display); font-variation-settings:"wdth" 70, "wght" 700;
+        font-size:31px; letter-spacing:.30em; color:var(--m-warm-ink); }
+  #cb { margin-top:22px; font-family:var(--m-font-display);
+        font-variation-settings:"wdth" 70, "wght" 700;
+        font-size:22px; letter-spacing:.28em; color:var(--m-signal-ink); }
+  #lock { position:absolute; left:0; right:0; top:408px;
           display:flex; flex-direction:column; align-items:center; opacity:0; }
 
-  /* ── the optic: ring, graduations, reticle, registration. Above the mask. ─ */
+  /* ── z3 · THE OPTIC.  Hard keyline, graduations, reticle, registration. ─ */
   #optic { position:absolute; inset:0; }
 
-  /* ── surround furniture ─────────────────────────────────────────────────── */
-  .tl { position:absolute; left:100px; top:88px; display:flex; align-items:center; gap:13px; }
-  /* the mark is never recoloured: --m-mark on every surface in this film.
-     contrast.json rates mark-on-deep at 4.39, role graphic — legal as-is. */
+  /* ── z4 · SURROUND FURNITURE.  Lives in the darkness. ────────────────── */
+  .tl { position:absolute; left:92px; top:74px; display:flex; align-items:center; gap:13px; }
   .tl .mk { width:34px; height:34px; color:var(--m-mark); display:block; }
-  .tl .wd { font-family:var(--m-font-display); font-size:20px; letter-spacing:-.01em;
-            line-height:1; color:var(--m-on-deep); }
-  .tr { position:absolute; right:100px; top:94px; font-weight:700; font-size:15px;
-        letter-spacing:.24em; color:var(--m-on-deep-muted); text-align:right; }
+  .tl .wd { font-family:var(--m-font-display); font-variation-settings:"wdth" 88, "wght" 800;
+            font-size:20px; letter-spacing:.02em; line-height:1; color:var(--m-on-deep); }
+  .tr { position:absolute; right:92px; top:80px; font-family:var(--m-font-display);
+        font-variation-settings:"wdth" 70, "wght" 700; font-size:15px;
+        letter-spacing:.26em; color:var(--m-on-deep-muted); text-align:right; }
 
-  .figs { position:absolute; left:100px; bottom:92px; height:34px; }
-  .figs .fr { position:absolute; left:0; bottom:60px; width:62px; height:2px;
-              background:var(--m-brand-lift); }
-  .figs span { position:absolute; left:0; bottom:0; white-space:nowrap;
-               font-weight:400; font-size:23px; letter-spacing:.05em;
-               color:var(--m-on-deep-muted); }
+  .figcard { position:absolute; left:96px; top:932px; width:452px; height:84px;
+             background:var(--m-warm-surface); }
+  .figcard span { position:absolute; left:28px; top:0; line-height:84px;
+                  font-family:var(--m-font-editorial); font-size:31px;
+                  color:var(--m-warm-ink); white-space:nowrap; }
 
+  .pidx { position:absolute; right:96px; bottom:96px; display:flex;
+          align-items:center; gap:11px; }
+  .pidx i { display:block; height:3px; background:var(--m-on-deep-muted); }
+
+  #endline { position:absolute; left:0; right:0; bottom:92px; text-align:center;
+             font-family:var(--m-font-display); font-variation-settings:"wdth" 70, "wght" 700;
+             font-size:16px; letter-spacing:.32em; color:var(--m-on-deep-muted); opacity:0; }
+
+  /* ── z5 · GRAIN.  One static seeded tile. Never resampled. ───────────── */
   #grain { position:absolute; inset:0; pointer-events:none; }
 </style></head>
 <body>
 <div class="stage">
 
-  <div id="lens">
-    <div id="paperbg"></div>
-    <div id="panelbg"></div>
+  <div id="sheet">
+    <div id="sheetTex"></div>
+    <svg id="trace" width="1920" height="1080" viewBox="0 0 1920 1080"
+         style="position:absolute;inset:0"></svg>
+    <div id="birds"></div>
     <div id="stripScale"><div id="stripWrap"></div></div>
+  </div>
 
-    <div id="page">
-      <svg id="trace" width="1920" height="1080" viewBox="0 0 1920 1080"></svg>
-      <div id="stmt"><div id="s1">Demand leaves traces.</div><div id="s2">We read them.</div></div>
-      <div id="credit">
-        <div class="rule" id="crule"></div>
-        <div class="a" id="ca">FIELD GUIDE TO LOCAL DEMAND</div>
-        <div class="b" id="cb">SEO · AEO · GEO · PAID</div>
+  <div id="deep"></div>
+
+  <div id="page">
+    <div id="stmt"><div id="s1">Demand leaves traces.</div><div id="s2">We read them.</div></div>
+    <div id="credit">
+      <img id="credStrip" alt="">
+      <div id="credInner">
+        <div id="crule"></div>
+        <div id="ca">FIELD GUIDE TO LOCAL DEMAND</div>
+        <div id="cb">SEO · AEO · GEO · PAID</div>
       </div>
-      <div id="lock"></div>
-      <svg id="xh" width="1920" height="1080" viewBox="0 0 1920 1080" style="position:absolute;inset:0;opacity:0">
-        <g id="xhg">
-          <path d="M 900,496 h 120 M 960,436 v 120" stroke="#8E8578" stroke-width="1.2"/>
-          <circle cx="960" cy="496" r="26" fill="none" stroke="#8E8578" stroke-width="1.2"
-                  stroke-dasharray="3 7"/>
-          <path d="M 828,496 h 26 M 1066,496 h 26 M 960,364 v 26 M 960,602 v 26"
-                stroke="#8E8578" stroke-width="1.2" stroke-opacity=".7"/>
-        </g>
-      </svg>
     </div>
+    <div id="lock"></div>
   </div>
 
   <svg id="optic" width="1920" height="1080" viewBox="0 0 1920 1080"></svg>
 
   <div class="tl" id="tl"><span class="mk" id="mk"></span><span class="wd">MOMENTUM</span></div>
   <div class="tr" id="tr">PHILADELPHIA · 39.95° N</div>
-
-  <div class="figs" id="figs"><div class="fr" id="fr"></div></div>
+  <div id="figs"></div>
+  <div class="pidx" id="pidx"></div>
+  <div id="endline">FIELD GUIDE TO LOCAL DEMAND</div>
 
   <div id="grain"></div>
 </div>
 
 <script type="module">
 import { at, clamp, lerp, easeEntrance, easeEmphatic, easeStandard, easeInOut,
-         osc, revealWords, grainURL, markSVG, Lockup }
+         osc, revealWords, grainURL, markSVG, Lockup, rng,
+         MATERIAL, tornWipe, tapedCard, scatterPose, plateStrip, lens, VF }
   from '../../brand/film-kit.js';
 
 window.FILM = { width: 1920, height: 1080, fps: 30, duration: 26.0 };
 window.__ready = false;
 
-/* ── palette: literals matched to tokens.css ──────────────────────────────── */
-const PAPER = '#FBF8F4', PANEL = '#F0ECE5', INK = '#14181B', MUTED = '#636465',
-      LINE  = '#DCD6CC', LSTRONG = '#8E8578', BRAND = '#155E86',
-      SIGNAL = '#E27113', SIGINK = '#A35309', ONDEEPMUTED = '#8A9296',
-      LIFT = '#3897CC', WHITE = '#FFFFFF';
+/* ── palette: literals matched to the warm block in tokens.css ────────────── */
+const CANVAS  = '#F6F5EF', SURFACE = '#FFFEFA', WINK = '#173C2C',
+      WMUTED  = '#647067', WLINE   = '#D4D9CD', SIGFILL = '#B45F2A',
+      SIGINK  = '#A35309', BRAND   = '#155E86', WHITE  = '#FFFFFF';
 
-/* ── stage geometry ───────────────────────────────────────────────────────── */
-const CX = 960, CY = 496;          // the lens never moves; only its radius does
-const W  = 1000;                   // one plate cell on the strip
+/* ── stage geometry.  The lens never moves; the sheet travels beneath it. ── */
+const CX = 960, CY = 500;
+const W  = 1180;              // one plate cell on the strip
 const NP = 5;
+const HX = 590, HY = 500;     // a plate's own centre, in cell coordinates
 
-/* ── tiny SVG DSL ─────────────────────────────────────────────────────────── */
+/* ── DOM helpers ──────────────────────────────────────────────────────────── */
 const NS = 'http://www.w3.org/2000/svg';
+function D(cls, parent, css) {
+  const d = document.createElement('div');
+  if (cls) d.className = cls;
+  if (css) Object.assign(d.style, css);
+  parent.appendChild(d); return d;
+}
+function TX(str, parent, css) {
+  const d = document.createElement('div');
+  d.textContent = str;
+  d.style.position = 'absolute';
+  if (css) Object.assign(d.style, css);
+  parent.appendChild(d); return d;
+}
+function IM(src, parent, cls, css) {
+  const i = document.createElement('img');
+  i.src = src; i.alt = '';
+  if (cls) i.className = cls;
+  if (css) Object.assign(i.style, css);
+  parent.appendChild(i); return i;
+}
 function E(tag, a, parent) {
   const e = document.createElementNS(NS, tag);
   for (const k in a) e.setAttribute(k, a[k]);
   if (parent) parent.appendChild(e);
   return e;
 }
-/* Every plate element is registered with an order o in [0,1]: strokes draw on
-   that order, fills and type arrive just behind them. */
-const plate = [[], [], [], [], []];
-function S(pi, o, tag, a, p) { const e = E(tag, a, p); e.__o = o; e.__s = 1; plate[pi].push(e); return e; }
-function F(pi, o, tag, a, p) { const e = E(tag, a, p); e.__o = o; e.__s = 0; plate[pi].push(e); return e; }
-function T(pi, o, str, a, p) {
-  const e = F(pi, o, 'text', Object.assign({ 'font-family': 'Nunito Sans', fill: INK }, a), p);
-  e.textContent = str; return e;
-}
-/* Late accents. One element per plate arrives *after* the plate has settled, on
-   its own clock — the move that answers "what is this revealing". Elements
-   marked late are skipped by the draw pass and posed from t directly. */
-const lateList = [];
-function LATE(e, start, dur = 0.34) { e.__late = [start, dur]; lateList.push(e); return e; }
-
-/* ── the strip ────────────────────────────────────────────────────────────── */
-const strip = E('svg', { width: W * NP, height: 1080, viewBox: `0 0 ${W * NP} 1080` });
-document.getElementById('stripWrap').appendChild(strip);
-const defs = E('defs', {}, strip);
-
-/* field-notebook grid, travelling with the specimens */
-const gp = E('pattern', { id: 'grid', width: 46, height: 46, patternUnits: 'userSpaceOnUse' }, defs);
-E('path', { d: 'M46 0 H0 V46', fill: 'none', stroke: LINE, 'stroke-width': 1 }, gp);
-const gridRect = E('rect', { x: 0, y: 0, width: W * NP, height: 1080, fill: 'url(#grid)' }, strip);
-
-/* three geological hatches for Plate II */
-function hatch(id, build) {
-  const p = E('pattern', { id, width: 14, height: 14, patternUnits: 'userSpaceOnUse' }, defs);
-  build(p); return `url(#${id})`;
-}
-const H_STIPPLE = hatch('hStip', p => {
-  E('circle', { cx: 3.5, cy: 3.5, r: 1.5, fill: LSTRONG, 'fill-opacity': .75 }, p);
-  E('circle', { cx: 10.5, cy: 10.5, r: 1.5, fill: LSTRONG, 'fill-opacity': .75 }, p);
-});
-const H_HACHURE = hatch('hHach', p => {
-  E('path', { d: 'M-4 4 L4 -4 M0 14 L14 0 M10 18 L18 10', stroke: LSTRONG,
-              'stroke-width': 1.2, 'stroke-opacity': .8 }, p);
-});
-const H_DASH = hatch('hDash', p => {
-  E('path', { d: 'M0 4 H8 M6 11 H14', stroke: LSTRONG, 'stroke-width': 1.3, 'stroke-opacity': .8 }, p);
-});
-
-/* one group per plate, so opacity can be posed per plate */
-const G = [];
-for (let i = 0; i < NP; i++) G.push(E('g', { transform: `translate(${i * W},0)` }, strip));
-
-/* helpers ─────────────────────────────────────────────────────────────────── */
-/* Naturalist caption. Roman, not italic: Nunito Sans ships no italic and
-   Chromium's synthesized oblique reads as a rendering fault at this size. */
-const IT = { 'font-size': 17, 'font-weight': 400, fill: MUTED, 'letter-spacing': '.10em' };
-function leafPath(x, y, deg, len, wid) {
-  const a = deg * Math.PI / 180, dx = Math.cos(a) * len, dy = Math.sin(a) * len;
-  const px = -Math.sin(a) * wid, py = Math.cos(a) * wid;
-  return `M ${x},${y} Q ${x + dx * .42 + px},${y + dy * .42 + py} ${x + dx},${y + dy}`
-       + ` Q ${x + dx * .42 - px},${y + dy * .42 - py} ${x},${y} Z`;
+/** A hairline that draws itself. Registered with an order o in [0,1]. */
+function ST(list, svg, d, o, attrs = {}) {
+  const e = E('path', Object.assign({ d, fill: 'none', stroke: WINK,
+    'stroke-width': 1.5, 'stroke-linecap': 'round' }, attrs), svg);
+  e.__o = o; list.push(e); return e;
 }
 
-/* ══ PLATE I — the query ══════════════════════════════════════════════════ */
+/* ── material sheet crops: one source PNG, addressed by box ───────────────── */
+const TAPE_SHEET = { src: MATERIAL.tapeSet,   w: 1434, h: 736 };
+const TAPES = [
+  { x: 21,  y: 1,   w: 779, h: 187 },   // 0 grey, long
+  { x: 876, y: 4,   w: 538, h: 191 },   // 1 cream
+  { x: 512, y: 275, w: 867, h: 184 },   // 2 ochre
+  { x: 20,  y: 278, w: 354, h: 188 },   // 3 white, short
+  { x: 744, y: 541, w: 688, h: 181 },   // 4 grey
+  { x: 0,   y: 551, w: 642, h: 184 },   // 5 cream
+];
+const FAST_SHEET = { src: MATERIAL.fasteners, w: 1328, h: 737 };
+const FASTS = {
+  mount: { x: 1,    y: 0,   w: 519, h: 737 },   // photo-corner mount card
+  pinA:  { x: 789,  y: 278, w: 202, h: 143 },
+  pinB:  { x: 684,  y: 338, w: 203, h: 140 },
+  clip:  { x: 1170, y: 75,  w: 157, h: 591 },
+};
+const GRAPH_SHEET = { src: MATERIAL.graph, w: 2752, h: 1536 };
+const GRAPH_BOX = { x: 430, y: 190, w: 1960, h: 1080 };
+
+function applyCrop(el, sheet, box, displayW) {
+  const k = displayW / box.w;
+  el.style.width  = displayW + 'px';
+  el.style.height = (box.h * k).toFixed(1) + 'px';
+  el.style.backgroundImage = `url(${sheet.src})`;
+  el.style.backgroundSize = `${(sheet.w * k).toFixed(1)}px ${(sheet.h * k).toFixed(1)}px`;
+  el.style.backgroundPosition = `${(-box.x * k).toFixed(1)}px ${(-box.y * k).toFixed(1)}px`;
+  return el;
+}
+/** A piece of tape, laid at an angle across a corner. */
+function tape(parent, idx, wpx, left, top, deg) {
+  const t = D('tape', parent, { left: left + 'px', top: top + 'px' });
+  applyCrop(t, TAPE_SHEET, TAPES[idx], wpx);
+  t.__deg = deg;
+  return t;
+}
+function fastener(parent, box, wpx, left, top, deg = 0) {
+  const f = D('fast', parent, { left: left + 'px', top: top + 'px' });
+  applyCrop(f, FAST_SHEET, box, wpx);
+  f.__deg = deg;
+  return f;
+}
+
+/* ── the strip: five cells on one continuous sheet ────────────────────────── */
+const wrap = document.getElementById('stripWrap');
+wrap.style.width = (W * NP) + 'px';
+const cells = [];
+for (let i = 0; i < NP; i++) {
+  const c = D('cell', wrap, { width: W + 'px' });
+  D('grid', c);
+  cells.push(c);
+}
+const PLNUM = ['PL. I', 'PL. II', 'PL. III', 'PL. IV', 'PL. V'];
+const plNums = cells.map((c, i) => TX(PLNUM[i], c, {
+  left: '0px', top: '898px', width: W + 'px', textAlign: 'center',
+}));
+plNums.forEach(e => e.className = 'pl');
+
+/* Every plate keeps its own list of hairlines to draw and props to pose. */
+const P = [{}, {}, {}, {}, {}];
+
+/* ══ PLATE I — the query ═══════════════════════════════════════════════════
+   A pressed specimen with roots: the real engraved botanical, laid on the
+   sheet, with the query itself taped over it as the flower head.           */
 {
-  const g = G[0], P = 0;
-  // stem
-  S(P, .08, 'path', { d: 'M 500,750 C 486,676 512,570 500,430', fill: 'none',
-                      stroke: INK, 'stroke-width': 2.8, 'stroke-linecap': 'round' }, g);
-  // roots, then finer root hairs
-  const roots = [[-104, 50], [-58, 60], [-8, 58], [44, 56], [96, 44]];
-  roots.forEach((r, i) => S(P, .13 + i * .025, 'path', {
-    d: `M 500,750 C ${500 + r[0] * .32},${770} ${500 + r[0] * .78},${762 + r[1] * .4} ${500 + r[0]},${750 + r[1]}`,
-    fill: 'none', stroke: INK, 'stroke-width': 1.4, 'stroke-opacity': .82,
-    'stroke-linecap': 'round' }, g));
-  [[-72, 28], [-30, 38], [24, 36], [66, 24]].forEach((r, i) => S(P, .19 + i * .02, 'path', {
-    d: `M 500,750 Q ${500 + r[0] * .6},${764} ${500 + r[0]},${750 + r[1]}`,
-    fill: 'none', stroke: INK, 'stroke-width': .9, 'stroke-opacity': .5 }, g));
-  // three leaves, each with a midrib and veins that land exactly on the edge
-  const leaves = [
-    { x: 502, y: 534, d: -6,  l: 178, w: 48 },
-    { x: 498, y: 622, d: 187, l: 190, w: 50 },
-    { x: 502, y: 686, d: -16, l: 150, w: 40 },
-  ];
-  leaves.forEach((lf, i) => {
-    const a = lf.d * Math.PI / 180, ca = Math.cos(a), sa = Math.sin(a);
-    const ex = lf.x + ca * lf.l, ey = lf.y + sa * lf.l;
-    S(P, .26 + i * .075, 'path', { d: leafPath(lf.x, lf.y, lf.d, lf.l, lf.w), fill: 'none',
-                                   stroke: INK, 'stroke-width': 2 }, g);
-    S(P, .31 + i * .075, 'line', { x1: lf.x, y1: lf.y, x2: ex, y2: ey, stroke: INK,
-                                   'stroke-width': 1.1, 'stroke-opacity': .7 }, g);
-    [.24, .46, .70].forEach((u, v) => {
-      const along = 2 * u * (1 - u) * .42 * lf.l + u * u * lf.l;
-      const off   = 2 * u * (1 - u) * lf.w;
-      const bx = lf.x + ca * along, by = lf.y + sa * along;
-      const nx = -sa * off, ny = ca * off;
-      S(P, .35 + i * .075 + v * .01, 'line', { x1: bx, y1: by, x2: bx + nx, y2: by + ny,
-        stroke: INK, 'stroke-width': .9, 'stroke-opacity': .45 }, g);
-      S(P, .36 + i * .075 + v * .01, 'line', { x1: bx, y1: by, x2: bx - nx, y2: by - ny,
-        stroke: INK, 'stroke-width': .9, 'stroke-opacity': .45 }, g);
-    });
-  });
-  // two buds, each seated on a stalk of petiole weight so they read as growth,
-  // not as debris. They arrive last — the growing tip is the last thing drawn.
-  const BUD_T = [3.34, 3.48];
-  [[494, 520, -26, -13], [506, 478, 27, -12]].forEach((b, i) => {
-    const sx = b[0], sy = b[1], tx = sx + b[2] * 1.12, ty = sy + b[3] * 1.12;
-    LATE(S(P, .48 + i * .03, 'line', { x1: sx, y1: sy, x2: tx, y2: ty, stroke: INK,
-      'stroke-width': 2.0, 'stroke-linecap': 'round' }, g), BUD_T[i], 0.30);
-    LATE(S(P, .51 + i * .03, 'ellipse', { cx: tx + b[2] * .40, cy: ty + b[3] * .40, rx: 8, ry: 5.5,
-      fill: 'none', stroke: INK, 'stroke-width': 1.8,
-      transform: `rotate(${b[2] > 0 ? -24 : 24} ${tx + b[2] * .40} ${ty + b[3] * .40})` }, g),
-      BUD_T[i] + 0.10, 0.30);
-  });
-  // the query field, drawn as the specimen's flower head
-  S(P, .56, 'rect', { x: 320, y: 354, width: 360, height: 68, rx: 34, fill: 'none',
-                      stroke: INK, 'stroke-width': 2.4 }, g);
-  F(P, .62, 'rect', { x: 322, y: 356, width: 356, height: 64, rx: 32, fill: PAPER }, g);
-  S(P, .64, 'circle', { cx: 364, cy: 388, r: 11, fill: 'none', stroke: INK, 'stroke-width': 2 }, g);
-  S(P, .66, 'line', { x1: 372, y1: 396, x2: 380, y2: 404, stroke: INK,
-                      'stroke-width': 2, 'stroke-linecap': 'round' }, g);
-  T(P, .72, '"roofer near me"', { x: 398, y: 398, 'font-size': 28, 'font-weight': 400 }, g);
-  // one named part. The specimen-sheet gesture needs a word exactly once.
-  LATE(S(P, .78, 'line', { x1: 300, y1: 608, x2: 352, y2: 600, stroke: LSTRONG,
-                           'stroke-width': 1 }, g), 3.62, 0.28);
-  LATE(T(P, .82, 'folium', Object.assign({ x: 292, y: 614, 'text-anchor': 'end' }, IT), g),
-       3.72, 0.30);
+  const c = cells[0], p = P[0];
+  p.lines = [];
+  p.svg = E('svg', { class: 'ann', width: W, height: 1080 }, null);
+  c.appendChild(p.svg);
+
+  p.bot = IM(MATERIAL.botanical, c, 'plate-img',
+    { left: '360px', top: '236px', width: '470px', transformOrigin: '235px 330px' });
+
+  // the query, taped down as the specimen's flower head
+  p.card = D('card', c, { left: '378px', top: '188px', width: '428px', height: '100px',
+                          transformOrigin: '214px 50px' });
+  const g = E('svg', { width: 26, height: 26, style: 'position:absolute;left:28px;top:37px' }, null);
+  p.card.appendChild(g);
+  E('circle', { cx: 10, cy: 10, r: 8, fill: 'none', stroke: WINK, 'stroke-width': 2 }, g);
+  E('line', { x1: 16, y1: 16, x2: 23, y2: 23, stroke: WINK, 'stroke-width': 2,
+              'stroke-linecap': 'round' }, g);
+  TX('"roofer near me"', p.card, { left: '70px', top: '24px',
+    fontFamily: 'var(--m-font-editorial)', fontSize: '38px', color: WINK, lineHeight: '52px' });
+  p.tapeA = tape(p.card, 3, 118, -30, -26, -38);
+  p.tapeB = tape(p.card, 5, 128, 372, 62, -34);
+
+  // the annotator's hand: two leaders to two named parts, in real italic
+  ST(p.lines, p.svg, 'M 322,566 L 396,552', .58, { stroke: WMUTED, 'stroke-width': 1.2 });
+  ST(p.lines, p.svg, 'M 878,772 L 800,742', .66, { stroke: WMUTED, 'stroke-width': 1.2 });
+  p.lab1 = TX('folium', c, { left: '166px', top: '546px', width: '150px', textAlign: 'right',
+    fontFamily: 'var(--m-font-editorial)', fontStyle: 'italic', fontSize: '25px', color: WMUTED });
+  p.lab2 = TX('radix', c, { left: '888px', top: '752px',
+    fontFamily: 'var(--m-font-editorial)', fontStyle: 'italic', fontSize: '25px', color: WMUTED });
+
+  // a rule and a determination line, where a herbarium sheet would carry one
+  ST(p.lines, p.svg, 'M 300,846 H 880', .80, { stroke: WLINE, 'stroke-width': 1.6 });
+  p.det = TX('det. Momentum · Philadelphia', c, { left: '300px', top: '856px',
+    fontFamily: 'var(--m-font-editorial)', fontStyle: 'italic', fontSize: '21px', color: WMUTED });
+
+  p.pin = fastener(c, FASTS.pinA, 44, 812, 226, 14);
 }
 
-/* ══ PLATE II — the map pack ═════════════════════════════════════════════ */
+/* ══ PLATE II — the map pack ═══════════════════════════════════════════════
+   Three torn strata, cut paper on graph paper, each a pack slot, each
+   pinned with a brass fastener pressed in like a fossil.                   */
 {
-  const g = G[1], P = 1;
-  const fills = [H_STIPPLE, H_HACHURE, H_DASH];
-  /* Real strata are never congruent. Unequal thickness, unequal spacing,
-     unequal extent, unequal furniture — the map pack has three slots, the
-     drawing does not have to make them the same shape to say so. */
-  const beds = [
-    { x0: 236, x1: 766, y: 296, h:  94, ph: 0.0, num: 66, px: 300, pd: 62,
-      bars: [[188, 40, 44]] },
-    { x0: 208, x1: 792, y: 410, h: 150, ph: 2.1, num: 96, px: 266, pd: 112,
-      bars: [[232, 28, 44], [154, 56, 98], [516, 92, 30]] },
-    { x0: 254, x1: 750, y: 592, h: 104, ph: 4.2, num: 70, px: 404, pd: 70,
-      bars: [[126, 34, 52], [206, 62, 34]] },
+  const c = cells[1], p = P[1];
+  p.lines = [];
+  p.graph = D('', c, { position: 'absolute', left: '236px', top: '178px',
+    mixBlendMode: 'multiply', opacity: '.26', transform: 'rotate(.6deg)' });
+  applyCrop(p.graph, GRAPH_SHEET, GRAPH_BOX, 700);
+
+  p.svg = E('svg', { class: 'ann', width: W, height: 1080 }, null);
+  c.appendChild(p.svg);
+
+  const BEDS = [
+    { w: 520, left: 300, top: 196, deg: -1.2, num: '1',
+      bars: [[56, 74, 300]], pin: [430, 66], from: -1 },
+    { w: 604, left: 268, top: 396, deg:  0.8, num: '2',
+      bars: [[54, 70, 372], [54, 104, 236], [54, 134, 300]], pin: [364, 96], from: 1 },
+    { w: 470, left: 330, top: 618, deg: -0.6, num: '3',
+      bars: [[50, 66, 252], [50, 98, 164]], pin: [246, 60], from: -1 },
   ];
-  function wavy(b, amp) {
-    let d = `M ${b.x0},${b.y + Math.sin(b.ph) * amp}`;
-    for (let i = 1; i <= 36; i++) {
-      const x = b.x0 + (b.x1 - b.x0) * i / 36;
-      d += ` L ${x.toFixed(1)},${(b.y + Math.sin(i * .42 + b.ph) * amp).toFixed(1)}`;
-    }
-    return d;
-  }
-  // a map pin, pressed in like a fossil
-  function pin(px, py, r) {
-    const h = r * 0.87;
-    return `M ${px},${py} L ${px - h},${py - r * 1.38} A ${r},${r} 0 1 1 ${px + h},${py - r * 1.38} Z`;
-  }
-  const PIN_T = [5.96, 6.10, 6.24];
-  beds.forEach((b, i) => {
-    const y = b.y, H = b.h, cid = `st${i}`;
-    const cp = E('clipPath', { id: cid }, defs);
-    E('path', { d: wavy(b, 7) + ` L ${b.x1},${y + H} L ${b.x0},${y + H} Z` }, cp);
-    F(P, .30 + i * .10, 'rect', { x: b.x0, y: y - 12, width: b.x1 - b.x0, height: H + 14,
-                                  fill: fills[i], 'clip-path': `url(#${cid})` }, g);
-    S(P, .06 + i * .09, 'path', { d: wavy(b, 7), fill: 'none', stroke: INK,
-                                  'stroke-width': 2.2 }, g);
-    S(P, .12 + i * .09, 'line', { x1: b.x0, y1: y + H, x2: b.x1, y2: y + H, stroke: INK,
-                                  'stroke-width': 1.2, 'stroke-opacity': .5 }, g);
-    S(P, .10 + i * .09, 'line', { x1: b.x0, y1: y, x2: b.x0, y2: y + H, stroke: INK,
-                                  'stroke-width': 1.4 }, g);
-    S(P, .11 + i * .09, 'line', { x1: b.x1, y1: y, x2: b.x1, y2: y + H, stroke: INK,
-                                  'stroke-width': 1.4 }, g);
-    T(P, .48 + i * .07, String(i + 1), { x: b.x0 - 30, y: y + b.num, 'text-anchor': 'end',
-      'font-size': 34, 'font-weight': 700, fill: BRAND }, g);
-    // bars: unequal counts and lengths; the long one runs into the bed edge and is cut by it
-    b.bars.forEach((bar, k) =>
-      F(P, .64 + i * .07 + k * .02, 'rect', { x: b.px + bar[2], y: y + bar[1], width: bar[0],
-        height: 9, rx: 4.5, fill: LSTRONG, 'fill-opacity': .8,
-        'clip-path': `url(#${cid})` }, g));
-    // the pins seat one after another, after the beds have settled
-    const px = b.px, py = y + b.pd;
-    LATE(F(P, .54 + i * .07, 'path', { d: pin(px, py, 17), fill: SIGNAL }, g), PIN_T[i], 0.30);
-    LATE(S(P, .58 + i * .07, 'path', { d: pin(px, py, 17), fill: 'none', stroke: INK,
-                                  'stroke-width': 1.8, 'stroke-linejoin': 'round' }, g),
-      PIN_T[i], 0.30);
-    LATE(F(P, .60 + i * .07, 'circle', { cx: px, cy: py - 23.5, r: 6, fill: PANEL }, g),
-      PIN_T[i] + 0.08, 0.24);
+  p.beds = BEDS.map((b, i) => {
+    const holder = D('', c, { position: 'absolute', left: b.left + 'px', top: b.top + 'px',
+      transformOrigin: (b.w / 2) + 'px 84px' });
+    const img = IM(MATERIAL.tornStrip, holder, 'strip-img',
+      { left: (-b.w * 119 / 1362).toFixed(1) + 'px', top: '0px',
+        width: (b.w * 1600 / 1362).toFixed(1) + 'px' });
+    const bars = b.bars.map(bar => D('', holder, {
+      position: 'absolute', left: bar[0] + 'px', top: bar[1] + 'px',
+      width: bar[2] + 'px', height: '9px', borderRadius: '5px',
+      background: WMUTED, opacity: '.5' }));
+    const num = TX(b.num, c, { left: (b.left - 84) + 'px', top: (b.top + 24) + 'px',
+      width: '64px', textAlign: 'right', fontFamily: 'var(--m-font-editorial)',
+      fontSize: '62px', color: WINK, lineHeight: '62px' });
+    const pin = fastener(c, i === 1 ? FASTS.pinB : FASTS.pinA, 46,
+      b.left + b.pin[0], b.top + b.pin[1], i * 23 - 20);
+    return { holder, img, bars, num, pin, b };
   });
+
   // a scale bar, where a field plate would put one
-  S(P, .80, 'line', { x1: 300, y1: 762, x2: 620, y2: 762, stroke: LSTRONG, 'stroke-width': 1.4 }, g);
+  ST(p.lines, p.svg, 'M 320,824 H 660', .86, { stroke: WMUTED, 'stroke-width': 1.6 });
   for (let k = 0; k <= 4; k++)
-    S(P, .82 + k * .012, 'line', { x1: 300 + k * 80, y1: 762, x2: 300 + k * 80,
-      y2: 762 + (k % 2 ? 6 : 12), stroke: LSTRONG, 'stroke-width': 1.4 }, g);
+    ST(p.lines, p.svg, `M ${320 + k * 85},824 V ${824 + (k % 2 ? 7 : 14)}`, .88 + k * .01,
+       { stroke: WMUTED, 'stroke-width': 1.6 });
+  p.scale = TX('three slots · one pack', c, { left: '320px', top: '848px',
+    fontFamily: 'var(--m-font-editorial)', fontStyle: 'italic', fontSize: '21px', color: WMUTED });
 }
 
-/* ══ PLATE III — intent ══════════════════════════════════════════════════ */
+/* ══ PLATE III — intent ════════════════════════════════════════════════════
+   A taxonomic branch. The variants arrive as taped label cards — text boxes
+   pinned to the sheet — and an engraved bird settles on the head of it.    */
 {
-  const g = G[2], P = 2;
-  const hx = 250, hy = 496;
-  S(P, .04, 'circle', { cx: hx, cy: hy, r: 25, fill: 'none', stroke: INK, 'stroke-width': 2.4 }, g);
-  F(P, .10, 'circle', { cx: hx, cy: hy, r: 22, fill: PAPER }, g);
-  T(P, .14, '"roofer"', { x: hx, y: hy - 46, 'text-anchor': 'middle', 'font-size': 21,
-                          'font-weight': 700, fill: BRAND, 'letter-spacing': '.02em' }, g);
-  const ends = [
-    { x: 600, y: 252, n: '1', s: 'near me' },
-    { x: 642, y: 374, n: '2', s: 'cost' },
-    { x: 666, y: 496, n: '3', s: 'emergency' },
-    { x: 642, y: 620, n: '4', s: 'repair' },
-    { x: 600, y: 742, n: '5', s: 'best' },
+  const c = cells[2], p = P[2];
+  p.lines = [];
+  p.svg = E('svg', { class: 'ann', width: W, height: 1080 }, null);
+  c.appendChild(p.svg);
+
+  p.head = D('card', c, { left: '178px', top: '466px', width: '212px', height: '68px',
+                          transformOrigin: '106px 34px' });
+  TX('"roofer"', p.head, { left: '0px', top: '13px', width: '212px', textAlign: 'center',
+    fontFamily: 'var(--m-font-editorial)', fontSize: '30px', color: BRAND });
+  p.headTape = tape(p.head, 1, 96, -22, 44, -28);
+
+  const ENDS = [
+    { y: 252, n: 'i',   s: 'near me' },
+    { y: 376, n: 'ii',  s: 'cost' },
+    { y: 500, n: 'iii', s: 'emergency' },
+    { y: 624, n: 'iv',  s: 'repair' },
+    { y: 748, n: 'v',   s: 'best' },
   ];
-  ends.forEach((e, i) => {
-    S(P, .18 + i * .06, 'path', {
-      d: `M ${hx + 27},${hy} C ${hx + 150},${hy} ${e.x - 150},${e.y} ${e.x - 14},${e.y}`,
-      fill: 'none', stroke: INK, 'stroke-width': 1.7, 'stroke-opacity': .85 }, g);
-    S(P, .46 + i * .04, 'circle', { cx: e.x, cy: e.y, r: 10, fill: 'none', stroke: INK,
-                                    'stroke-width': 2 }, g);
-    // the hand numbering happens after the branches land — the classifying act
-    LATE(T(P, .60 + i * .04, e.n, { x: e.x - 24, y: e.y - 19, 'text-anchor': 'middle',
-      'font-size': 19, 'font-weight': 700, fill: BRAND }, g), 8.66 + i * 0.08, 0.30);
-    T(P, .66 + i * .04, e.s, { x: e.x + 24, y: e.y + 7, 'font-size': 22, 'font-weight': 400,
-      fill: INK, 'letter-spacing': '.01em' }, g);
+  p.labs = ENDS.map((e, i) => {
+    ST(p.lines, p.svg,
+      `M 394,500 C 486,500 552,${e.y} 630,${e.y}`, .06 + i * .09,
+      { 'stroke-width': 1.6, 'stroke-opacity': .8 });
+    ST(p.lines, p.svg, `M 618,${e.y - 9} a 9,9 0 1,0 .1,0`, .40 + i * .05,
+      { 'stroke-width': 1.8 });
+    const card = D('card', c, { left: '644px', top: (e.y - 31) + 'px',
+      width: '250px', height: '62px', transformOrigin: '125px 31px' });
+    TX(e.n, card, { left: '16px', top: '20px', fontFamily: 'var(--m-font-editorial)',
+      fontStyle: 'italic', fontSize: '21px', color: SIGINK });
+    TX(e.s, card, { left: '62px', top: '13px', fontFamily: 'var(--m-font-editorial)',
+      fontSize: '29px', color: WINK });
+    const tp = tape(card, [0, 4, 5, 1, 3][i], 82, i % 2 ? 196 : -18, i % 2 ? 40 : -18,
+                    i % 2 ? -30 : -34);
+    return { card, tp };
   });
+
   // second-order twigs, unlabelled — a classification chart keeps going
-  const twigs = [[600, 252, 566, 190], [600, 252, 654, 196], [642, 620, 596, 700], [642, 620, 700, 690]];
-  twigs.forEach((w, i) => {
-    S(P, .72 + i * .03, 'path', { d: `M ${w[0]},${w[1]} Q ${(w[0] + w[2]) / 2 + 8},${(w[1] + w[3]) / 2} ${w[2]},${w[3]}`,
-      fill: 'none', stroke: INK, 'stroke-width': 1.2, 'stroke-opacity': .6 }, g);
-    S(P, .80 + i * .03, 'circle', { cx: w[2], cy: w[3], r: 7, fill: 'none', stroke: INK,
-      'stroke-width': 1.5, 'stroke-opacity': .75 }, g);
-  });
+  [[630, 252, 700, 178], [630, 748, 706, 818], [630, 376, 690, 322]].forEach((t, i) =>
+    ST(p.lines, p.svg, `M ${t[0]},${t[1]} Q ${(t[0] + t[2]) / 2 + 8},${(t[1] + t[3]) / 2} ${t[2]},${t[3]}`,
+       .76 + i * .04, { 'stroke-width': 1.2, 'stroke-opacity': .55 }));
+
+  p.bird = IM(MATERIAL.birds[2], c, 'plate-img',
+    { left: '744px', top: '104px', width: '176px', transformOrigin: '88px 176px' });
 }
 
-/* ══ PLATE IV — the answer engine ════════════════════════════════════════ */
+/* ══ PLATE IV — the answer engine ══════════════════════════════════════════
+   An illuminated panel, mounted in real photo corners and paper-clipped.
+   The lens narrows for it: the manuscript is read close.                   */
 {
-  const g = G[3], P = 3;
-  const x0 = 332, y0 = 352, w = 336, h = 292;
-  S(P, .04, 'rect', { x: x0, y: y0, width: w, height: h, fill: 'none', stroke: INK,
-                      'stroke-width': 2.6 }, g);
-  S(P, .14, 'rect', { x: x0 + 9, y: y0 + 9, width: w - 18, height: h - 18, fill: 'none',
-                      stroke: LSTRONG, 'stroke-width': 1 }, g);
-  [[x0 + 9, y0 + 9, 1, 1], [x0 + w - 9, y0 + 9, -1, 1],
-   [x0 + 9, y0 + h - 9, 1, -1], [x0 + w - 9, y0 + h - 9, -1, -1]].forEach((c, i) =>
-    S(P, .20 + i * .02, 'path', { d: `M ${c[0]},${c[1] + 22 * c[3]} Q ${c[0]},${c[1]} ${c[0] + 22 * c[2]},${c[1]}`,
-      fill: 'none', stroke: SIGINK, 'stroke-width': 1.6 }, g));
+  const c = cells[3], p = P[3];
+  p.lines = [];
+  p.svg = E('svg', { class: 'ann', width: W, height: 1080 }, null);
+  c.appendChild(p.svg);
+
+  const CW = 352, CH = Math.round(CW * 737 / 519);      // 352 × 500
+  const CL = HX - CW / 2, CT = 250;
+  p.leaf = D('', c, { position: 'absolute', left: (CL + 12) + 'px', top: (CT + 12) + 'px',
+    width: (CW - 24) + 'px', height: (CH - 24) + 'px', background: SURFACE,
+    boxShadow: '10px 12px 0 rgba(23,60,44,.10)' });
+  p.leafTex = D('', p.leaf, { position: 'absolute', inset: '0',
+    backgroundImage: `url(${MATERIAL.manila})`, backgroundSize: 'cover',
+    backgroundPosition: 'center', mixBlendMode: 'multiply', opacity: '.34' });
+  p.mount = D('', c, { position: 'absolute', left: CL + 'px', top: CT + 'px' });
+  applyCrop(p.mount, FAST_SHEET, FASTS.mount, CW);
+
   // the illuminated initial
-  F(P, .32, 'rect', { x: x0 + 24, y: y0 + 28, width: 68, height: 68, fill: BRAND }, g);
-  T(P, .40, 'A', { x: x0 + 58, y: y0 + 82, 'text-anchor': 'middle', 'font-family': 'Archivo Black',
-                   'font-size': 48, fill: WHITE }, g);
-  S(P, .44, 'path', { d: `M ${x0 + 20},${y0 + 102} q -14,10 -4,24 q 12,10 22,-4`, fill: 'none',
-                      stroke: SIGINK, 'stroke-width': 1.6 }, g);
-  S(P, .46, 'path', { d: `M ${x0 + 96},${y0 + 22} q 16,-10 26,2 q 8,12 -6,20`, fill: 'none',
-                      stroke: SIGINK, 'stroke-width': 1.6 }, g);
+  p.init = D('', c, { position: 'absolute', left: (CL + 34) + 'px', top: (CT + 40) + 'px',
+    width: '78px', height: '78px', background: BRAND, transformOrigin: '39px 39px' });
+  TX('A', p.init, { left: '0px', top: '2px', width: '78px', textAlign: 'center',
+    fontFamily: 'var(--m-font-editorial)', fontSize: '64px', lineHeight: '78px', color: WHITE });
+
   // the answer, redacted to hairlines — illustrative UI, never a claim
-  [[x0 + 106, y0 + 46, 190], [x0 + 106, y0 + 74, 154]].forEach((r, i) =>
-    F(P, .52 + i * .03, 'rect', { x: r[0], y: r[1], width: r[2], height: 8, rx: 4,
-      fill: LSTRONG, 'fill-opacity': .68 }, g));
-  [[x0 + 26, y0 + 126, 284], [x0 + 26, y0 + 152, 284], [x0 + 26, y0 + 178, 198]].forEach((r, i) =>
-    F(P, .58 + i * .03, 'rect', { x: r[0], y: r[1], width: r[2], height: 8, rx: 4,
-      fill: LSTRONG, 'fill-opacity': .68 }, g));
-  S(P, .68, 'line', { x1: x0 + 26, y1: y0 + 208, x2: x0 + w - 26, y2: y0 + 208,
-                      stroke: LSTRONG, 'stroke-width': 1 }, g);
+  p.bars = [];
+  [[CL + 128, CT + 54, 174], [CL + 128, CT + 86, 138]].forEach((r) =>
+    p.bars.push(D('', c, { position: 'absolute', left: r[0] + 'px', top: r[1] + 'px',
+      width: r[2] + 'px', height: '9px', borderRadius: '5px', background: WMUTED,
+      opacity: '.46', transformOrigin: '0 50%' })));
+  [[CL + 36, CT + 158, 280], [CL + 36, CT + 190, 280], [CL + 36, CT + 222, 196],
+   [CL + 36, CT + 254, 244]].forEach((r) =>
+    p.bars.push(D('', c, { position: 'absolute', left: r[0] + 'px', top: r[1] + 'px',
+      width: r[2] + 'px', height: '9px', borderRadius: '5px', background: WMUTED,
+      opacity: '.46', transformOrigin: '0 50%' })));
+
+  ST(p.lines, p.svg, `M ${CL + 36},${CT + 306} H ${CL + CW - 36}`, .70,
+     { stroke: WLINE, 'stroke-width': 1.6 });
+  // the marginalia hand: a bracket in the left margin
+  ST(p.lines, p.svg, `M ${CL - 26},${CT + 44} l 0,110 m -9,-55 l 18,0`, .78,
+     { stroke: SIGINK, 'stroke-width': 1.8 });
+
   // the film's single script accent
-  T(P, .76, 'Answer Engine Optimization', { x: 500, y: y0 + 252, 'text-anchor': 'middle',
-    'font-family': 'Caveat', 'font-weight': 700, 'font-size': 29, fill: SIGINK }, g);
-  // marginalia — the annotator's hand, and the last thing on this plate to move
-  T(P, .88, 'nota bene', Object.assign({ x: 500, y: y0 + 334, 'text-anchor': 'middle' }, IT), g);
-  LATE(S(P, .84, 'path', { d: `M ${x0 - 20},${y0 + 40} l 0,34 m -8,-17 l 16,0`, fill: 'none',
-                      stroke: SIGINK, 'stroke-width': 1.6, 'stroke-linecap': 'round' }, g),
-       11.34, 0.38);
+  p.script = TX('Answer Engine Optimization', c, { left: '0px', top: (CT + 336) + 'px',
+    width: W + 'px', textAlign: 'center', fontFamily: 'var(--m-font-script)',
+    fontWeight: '700', fontSize: '31px', color: SIGINK });
+  p.nb = TX('nota bene', c, { left: '0px', top: (CT + 392) + 'px', width: W + 'px',
+    textAlign: 'center', fontFamily: 'var(--m-font-editorial)', fontStyle: 'italic',
+    fontSize: '21px', color: WMUTED });
+
+  p.clip = fastener(c, FASTS.clip, 30, CL + CW - 52, CT - 30, 4);
+  p.tape = tape(c, 2, 122, CL - 34, CT + CH - 46, -30);
+  p.tape.style.mixBlendMode = 'multiply';
 }
 
-/* ══ PLATE V — where they look ═══════════════════════════════════════════ */
+/* ══ PLATE V — where they look ═════════════════════════════════════════════
+   The engraved compass chart. The lens widens for it; the whole plate, torn
+   edges and all, sits inside the circle.                                    */
 {
-  const g = G[4], P = 4;
-  const cx = 500, cy = 496;
-  for (let k = 0; k < 12; k++) {
-    const a = k * Math.PI / 6;
-    S(P, .04 + k * .008, 'line', { x1: cx + Math.cos(a) * 58, y1: cy + Math.sin(a) * 58,
-      x2: cx + Math.cos(a) * 322, y2: cy + Math.sin(a) * 322, stroke: LINE, 'stroke-width': 1 }, g);
-  }
-  const rings = [
-    { r: 92,  s: 'MAP',     ang: 90 },
-    { r: 162, s: 'ORGANIC', ang: -90 },
-    { r: 232, s: 'PAID',    ang: 0 },
-    { r: 300, s: 'AI',      ang: 180 },
-  ];
-  rings.forEach((rg, i) => {
-    S(P, .14 + i * .10, 'circle', { cx, cy, r: rg.r, fill: 'none', stroke: LSTRONG,
-      'stroke-width': i === 3 ? 1.9 : 1.4 }, g);
-  });
-  // one tilted hairline, so the chart reads celestial and not diagrammatic
-  S(P, .56, 'ellipse', { cx, cy, rx: 268, ry: 94, fill: 'none', stroke: LSTRONG,
-    'stroke-width': 1, 'stroke-dasharray': '7 7', transform: `rotate(-19 ${cx} ${cy})` }, g);
-  for (let k = 0; k < 24; k++) {
-    const a = k * Math.PI / 12;
-    S(P, .60 + k * .004, 'line', { x1: cx + Math.cos(a) * 300, y1: cy + Math.sin(a) * 300,
-      x2: cx + Math.cos(a) * (k % 2 ? 311 : 318), y2: cy + Math.sin(a) * (k % 2 ? 311 : 318),
-      stroke: LSTRONG, 'stroke-width': 1.3 }, g);
-  }
-  /* Ring labels knock the ring out with a halo painted in the surface colour —
-     a stroke, not a filled plate, so nothing can survive as a grey slab when
-     the surface changes underneath. */
-  rings.forEach((rg, i) => {
-    const a = rg.ang * Math.PI / 180;
-    const lx = cx + Math.cos(a) * rg.r, ly = cy + Math.sin(a) * rg.r;
-    T(P, .74 + i * .04, rg.s, { x: lx, y: ly + 7, 'text-anchor': 'middle', 'font-size': 19,
-      'font-weight': 700, 'letter-spacing': '.16em', fill: INK,
-      'paint-order': 'stroke', stroke: PANEL, 'stroke-width': 9,
-      'stroke-linejoin': 'round' }, g);
-  });
-  S(P, .10, 'path', { d: `M ${cx - 15},${cy} h 30 M ${cx},${cy - 15} v 30`, stroke: INK,
-    'stroke-width': 1.4 }, g);
-  F(P, .18, 'circle', { cx, cy, r: 5, fill: INK }, g);
-  // the traveller — posed from seek(t), so it is registered but never dash-drawn
-  var travTrail = E('path', { fill: 'none', stroke: SIGNAL, 'stroke-width': 2.6,
-    'stroke-linecap': 'round', opacity: 0 }, g);
-  var travDot = E('circle', { r: 9, fill: SIGNAL, opacity: 0 }, g);
-}
-const TRAIL = travTrail, DOT = travDot;
+  const c = cells[4], p = P[4];
+  const SZ = 648, L = HX - SZ / 2, T = HY - SZ / 2;
+  p.chart = IM(MATERIAL.celestial, c, 'plate-img',
+    { left: L + 'px', top: T + 'px', width: SZ + 'px',
+      transformOrigin: (SZ / 2) + 'px ' + (SZ / 2) + 'px' });
 
-/* ── measure every stroked element once, at load ──────────────────────────── */
-for (const list of plate) for (const e of list) {
-  if (e.__s) {
+  p.svg = E('svg', { class: 'ann', width: W, height: 1080 }, null);
+  c.appendChild(p.svg);
+  p.lines = [];
+
+  const RINGS = [
+    { r: 112, s: 'MAP',     a:  90 },
+    { r: 168, s: 'ORGANIC', a: -90 },
+    { r: 224, s: 'PAID',    a:   0 },
+    { r: 282, s: 'AI',      a: 180 },
+  ];
+  p.labs = RINGS.map((rg, i) => {
+    const a = rg.a * Math.PI / 180;
+    const x = HX + Math.cos(a) * rg.r, y = HY + Math.sin(a) * rg.r;
+    const t = E('text', { x, y: y + 7, 'text-anchor': 'middle',
+      'font-family': 'Archivo', 'font-size': 20, fill: WINK,
+      'letter-spacing': '.18em', style: 'font-variation-settings:"wdth" 70,"wght" 700',
+      'paint-order': 'stroke', stroke: SURFACE, 'stroke-width': 10,
+      'stroke-linejoin': 'round' }, p.svg);
+    t.textContent = rg.s;
+    return t;
+  });
+  // the traveller: posed from seek(t), never dash-drawn
+  p.trail = E('path', { fill: 'none', stroke: SIGFILL, 'stroke-width': 3,
+    'stroke-linecap': 'round', opacity: 0 }, p.svg);
+  p.dot = E('circle', { r: 9, fill: SIGFILL, opacity: 0 }, p.svg);
+
+  p.pin = fastener(c, FASTS.pinB, 40, HX - 20, HY - 14, -8);
+  p.tape = tape(c, 0, 148, L - 44, T - 22, -32);
+  p.note = TX('four places · one demand', c, { left: '0px', top: '852px', width: W + 'px',
+    textAlign: 'center', fontFamily: 'var(--m-font-editorial)', fontStyle: 'italic',
+    fontSize: '22px', color: WMUTED });
+}
+
+/* ── measure every hairline once, at load ─────────────────────────────────── */
+for (const p of P) {
+  if (!p.lines) continue;
+  for (const e of p.lines) {
     const L = e.getTotalLength ? e.getTotalLength() : 0;
     e.__L = L || 1;
     e.style.strokeDasharray = `${e.__L} ${e.__L}`;
     e.style.strokeDashoffset = e.__L;
-  } else {
-    e.style.opacity = 0;
   }
 }
 
-/* ══ THE TRACE — the release beat's own subject ═══════════════════════════
-   Not a magnification of Plate V. When the traveller leaves the orbit it puts
-   a pen on the page and runs, and the recording it leaves is wider than the
-   lens: opening the mask reveals more of the same trace in both directions.
-   Screen space, inside the mask, unscaled — it is the page, not the strip.  */
+/* ══ THE TRACE — the release beat's own subject ════════════════════════════
+   When the traveller leaves the chart it puts a pen on the sheet and runs.
+   The recording is wider than the lens: tearing the darkness away reveals
+   more of the same trace in both directions.                               */
 const traceSvg = document.getElementById('trace');
-const TR_Y = 790, TR_X0 = -140, TR_X1 = 2060, TR_DX = 4, TR_ENTER = 608;
-const TR_PEAKS = [[130, 38, 54], [470, 72, 72], [1180, 124, 86], [1660, 84, 62]];
+const TR_Y = 796, TR_X0 = -140, TR_X1 = 2060, TR_DX = 4, TR_ENTER = 608;
+const TR_PEAKS = [[130, 38, 54], [470, 74, 72], [1180, 126, 86], [1660, 86, 62]];
 function traceY(x) {
   let y = TR_Y - 7.5 * Math.sin(x / 46) - 4.6 * Math.sin(x / 22 + 1.1)
                 - 3.0 * Math.sin(x / 12.5 + 2.2);
-  for (const p of TR_PEAKS) { const u = (x - p[0]) / p[2]; y -= p[1] * Math.exp(-u * u); }
+  for (const q of TR_PEAKS) { const u = (x - q[0]) / q[2]; y -= q[1] * Math.exp(-u * u); }
   return y;
 }
 const TP = [];
@@ -472,23 +514,22 @@ for (let i = 1; i < TP.length; i++)
   TCUM.push(TCUM[i - 1] + Math.hypot(TP[i][0] - TP[i - 1][0], TP[i][1] - TP[i - 1][1]));
 const TLEN = TCUM[TCUM.length - 1];
 
-const DATUM_Y = 892, DATUM_X0 = 96, DATUM_X1 = 1824;
+const DATUM_Y = 900, DATUM_X0 = 96, DATUM_X1 = 1824;
 const datum = E('path', { d: `M ${DATUM_X0},${DATUM_Y} H ${DATUM_X1}`, fill: 'none',
-  stroke: LSTRONG, 'stroke-width': 1.4 }, traceSvg);
+  stroke: WMUTED, 'stroke-width': 1.6 }, traceSvg);
 const TICK_X = [470, 1180, 1660];
 const ticks = TICK_X.map(x => E('path', { d: `M ${x},${traceY(x).toFixed(1)} V ${DATUM_Y}`,
-  fill: 'none', stroke: LSTRONG, 'stroke-width': 1.5 }, traceSvg));
+  fill: 'none', stroke: WMUTED, 'stroke-width': 1.6 }, traceSvg));
 const tracePath = E('path', {
-  d: TP.map((p, i) => (i ? 'L' : 'M') + p[0] + ',' + p[1].toFixed(1)).join(' '),
-  fill: 'none', stroke: INK, 'stroke-width': 3.0,
+  d: TP.map((q, i) => (i ? 'L' : 'M') + q[0] + ',' + q[1].toFixed(1)).join(' '),
+  fill: 'none', stroke: WINK, 'stroke-width': 3.2,
   'stroke-linecap': 'round', 'stroke-linejoin': 'round' }, traceSvg);
-const pen = E('circle', { r: 8, fill: SIGNAL, opacity: 0 }, traceSvg);
+const pen = E('circle', { r: 9, fill: SIGFILL, opacity: 0 }, traceSvg);
 for (const e of [datum, ...ticks, tracePath]) {
   e.__L = e.getTotalLength();
   e.style.strokeDasharray = `${e.__L} ${e.__L}`;
   e.style.strokeDashoffset = e.__L;
 }
-/** Pen position and arc-length fraction at t. Constant speed once it is visible. */
 function traceAt(t) {
   const x = t < 13.80
     ? lerp(TR_X0, TR_ENTER, easeStandard(clamp((t - 13.10) / 0.70)))
@@ -498,70 +539,112 @@ function traceAt(t) {
   return { x, y: lerp(TP[i][1], TP[i + 1][1], f), u: lerp(TCUM[i], TCUM[i + 1], f) / TLEN };
 }
 
-/* ── the optic: ring, graduations, reticle, registration marks ────────────── */
+/* ══ THE BIRDS — three separately cut plates, waiting on the open sheet ════
+   The darkness tears off them; they hold one beat, then break out of the
+   frame and take the field guide with them.                                */
+const birdHost = document.getElementById('birds');
+const BIRDS = [
+  { src: MATERIAL.birds[0], w: 316, left: 186, top: 318, deg: -5 },
+  { src: MATERIAL.birds[1], w: 208, left: 1432, top: 168, deg:  4 },
+  { src: MATERIAL.birds[2], w: 224, left: 1494, top: 688, deg: -3 },
+];
+const birdEls = BIRDS.map(b => {
+  const holder = D('', birdHost, { position: 'absolute', left: b.left + 'px',
+    top: b.top + 'px', transformOrigin: '50% 50%' });
+  IM(b.src, holder, 'plate-img', { left: '0px', top: '0px', width: b.w + 'px',
+    position: 'relative' });
+  return holder;
+});
+
+/* ── the optic: keyline, graduations, reticle, registration ───────────────── */
 const optic = document.getElementById('optic');
 const gRing = E('g', { transform: `translate(${CX},${CY})` }, optic);
-const ring = E('circle', { cx: 0, cy: 0, r: 1, fill: 'none', stroke: LSTRONG,
-                           'stroke-width': 3, 'vector-effect': 'non-scaling-stroke' }, gRing);
+const ring = E('circle', { cx: 0, cy: 0, r: 1, fill: 'none', stroke: '#8E8578',
+  'stroke-width': 3, 'vector-effect': 'non-scaling-stroke' }, gRing);
 const gTicks = E('g', { transform: `translate(${CX},${CY})` }, optic);
 for (let k = 0; k < 36; k++) {
   const a = k * Math.PI / 18, big = k % 3 === 0;
   E('line', { x1: Math.cos(a), y1: Math.sin(a),
-              x2: Math.cos(a) * (big ? 1.055 : 1.03), y2: Math.sin(a) * (big ? 1.055 : 1.03),
-              stroke: ONDEEPMUTED, 'stroke-width': big ? 1.8 : 1.1,
-              'vector-effect': 'non-scaling-stroke' }, gTicks);
+    x2: Math.cos(a) * (big ? 1.05 : 1.028), y2: Math.sin(a) * (big ? 1.05 : 1.028),
+    stroke: '#8A9296', 'stroke-width': big ? 1.9 : 1.1,
+    'vector-effect': 'non-scaling-stroke' }, gTicks);
 }
 const gRet = E('g', {}, optic);
-E('path', { d: `M ${CX - 460},${CY} h 920 M ${CX},${CY - 452} v 904`, stroke: ONDEEPMUTED,
-            'stroke-width': 1.1 }, gRet);
+E('path', { d: `M ${CX - 470},${CY} h 940 M ${CX},${CY - 462} v 924`, stroke: '#8A9296',
+  'stroke-width': 1.1 }, gRet);
 for (let k = -10; k <= 10; k++) {
   if (!k) continue;
   const d = k * 42, len = k % 5 === 0 ? 11 : 6;
-  E('line', { x1: CX + d, y1: CY - len, x2: CX + d, y2: CY + len, stroke: ONDEEPMUTED,
-              'stroke-width': 1.1 }, gRet);
-  E('line', { x1: CX - len, y1: CY + d, x2: CX + len, y2: CY + d, stroke: ONDEEPMUTED,
-              'stroke-width': 1.1 }, gRet);
+  E('line', { x1: CX + d, y1: CY - len, x2: CX + d, y2: CY + len, stroke: '#8A9296',
+    'stroke-width': 1.1 }, gRet);
+  E('line', { x1: CX - len, y1: CY + d, x2: CX + len, y2: CY + d, stroke: '#8A9296',
+    'stroke-width': 1.1 }, gRet);
 }
-E('circle', { cx: CX, cy: CY, r: 372, fill: 'none', stroke: ONDEEPMUTED, 'stroke-width': 1.4,
-              'stroke-dasharray': '5 11' }, gRet);
+E('circle', { cx: CX, cy: CY, r: 380, fill: 'none', stroke: '#8A9296', 'stroke-width': 1.4,
+  'stroke-dasharray': '5 11' }, gRet);
 const gReg = E('g', {}, optic);
 [[92, 92], [1828, 92], [92, 988], [1828, 988]].forEach(c =>
-  E('path', { d: `M ${c[0] - 13},${c[1]} h 26 M ${c[0]},${c[1] - 13} v 26`, stroke: ONDEEPMUTED,
-              'stroke-width': 1.4 }, gReg));
+  E('path', { d: `M ${c[0] - 13},${c[1]} h 26 M ${c[0]},${c[1] - 13} v 26`, stroke: '#8A9296',
+    'stroke-width': 1.4 }, gReg));
 
-/* ── plate labels in the surround ─────────────────────────────────────────── */
+/* ── the Fig. captions: five taped cards in the darkness ──────────────────── */
 const FIG = ['Fig. I — the query', 'Fig. II — the map pack', 'Fig. III — intent',
              'Fig. IV — the answer engine', 'Fig. V — where they look'];
-const figEls = FIG.map(s => {
-  const d = document.createElement('span');
-  d.textContent = s; document.getElementById('figs').appendChild(d); return d;
-});
 const FIGWIN = [[1.50, 3.94], [4.40, 6.62], [7.08, 9.28], [9.80, 11.68], [12.32, 13.72]];
+const figHost = document.getElementById('figs');
+const figCards = FIG.map((s, i) => {
+  const card = D('figcard', figHost, { transformOrigin: '226px 42px' });
+  const sp = document.createElement('span'); sp.textContent = s; card.appendChild(sp);
+  tape(card, [3, 5, 1, 0, 4][i], 104, -26, -22, -36);
+  card.__tape = card.querySelector('.tape');
+  card.__tape.style.mixBlendMode = 'normal';
+  return card;
+});
+
+/* ── the plate index, bottom right ────────────────────────────────────────── */
+const pidx = document.getElementById('pidx');
+const pidxEls = [0, 1, 2, 3, 4].map(() => {
+  const i = document.createElement('i'); pidx.appendChild(i); return i;
+});
 
 /* ── grain: one seeded texture, generated once, never resampled ───────────── */
-document.getElementById('grain').style.background = `url(${grainURL(190, 0.052, 23)}) repeat`;
+document.getElementById('grain').style.background = `url(${grainURL(200, 0.030, 23)}) repeat`;
+
+/* ── the paper the whole film is printed on ───────────────────────────────── */
+document.getElementById('sheetTex').style.backgroundImage = `url(${MATERIAL.manila})`;
+const credStrip = document.getElementById('credStrip');
+credStrip.src = MATERIAL.tornStrip;
+credStrip.style.width = '1010px';
 
 /* ── boot ─────────────────────────────────────────────────────────────────── */
 const els = {
-  lens: document.getElementById('lens'),
-  panel: document.getElementById('panelbg'),
+  sheet: document.getElementById('sheet'),
+  deep: document.getElementById('deep'),
   scale: document.getElementById('stripScale'),
-  wrap: document.getElementById('stripWrap'),
-  grid: gridRect,
+  wrap,
+  grids: [...document.querySelectorAll('.grid')],
   stmt: document.getElementById('stmt'),
   s1: document.getElementById('s1'), s2: document.getElementById('s2'),
   credit: document.getElementById('credit'), crule: document.getElementById('crule'),
+  credStrip, credInner: document.getElementById('credInner'),
   ca: document.getElementById('ca'), cb: document.getElementById('cb'),
   tl: document.getElementById('tl'), tr: document.getElementById('tr'),
-  fr: document.getElementById('fr'), mk: document.getElementById('mk'),
-  lock: document.getElementById('lock'),
-  xh: document.getElementById('xh'), xhg: document.getElementById('xhg'),
+  mk: document.getElementById('mk'), lock: document.getElementById('lock'),
+  endline: document.getElementById('endline'),
 };
 let lock = null;
 
-Promise.all([markSVG(), Lockup(document.getElementById('lock'), {
-  line: 'Philadelphia. Since 2015.', markSize: 104, wordSize: 72,
-})]).then(([svg, lk]) => {
+function preload(src) {
+  return new Promise((res) => { const i = new Image(); i.onload = () => res(i); i.onerror = () => res(null); i.src = src; });
+}
+const SHEETS = [MATERIAL.tapeSet, MATERIAL.fasteners, MATERIAL.manila, MATERIAL.graph];
+Promise.all([
+  markSVG(),
+  Lockup(els.lock, { line: 'Philadelphia. Since 2015.', markSize: 104, wordSize: 72 }),
+  ...SHEETS.map(preload),
+  Promise.all([...document.querySelectorAll('img')]
+    .map(i => (i.getAttribute('src') ? i.decode().catch(() => {}) : null))),
+]).then(([svg, lk]) => {
   els.mk.innerHTML = svg;
   const s = els.mk.querySelector('svg');
   s.setAttribute('width', '100%'); s.setAttribute('height', '100%'); s.style.display = 'block';
@@ -570,129 +653,122 @@ Promise.all([markSVG(), Lockup(document.getElementById('lock'), {
   window.__ready = true;
 });
 
-/* ── timeline helpers ─────────────────────────────────────────────────────── */
-const DRAW = [[1.35, 1.96], [4.20, 1.82], [6.88, 1.82], [9.60, 1.76], [12.00, 1.42]];
+/* ── timeline constants ───────────────────────────────────────────────────── */
+const DRAW  = [[1.35, 1.96], [4.20, 1.82], [6.88, 1.82], [9.60, 1.76], [12.00, 1.42]];
+const T_IV_V = 11.80;      // the scale-through
+const T_OPEN = 14.40;      // the darkness tears away
+const T_CLOSE = 23.05;     // and comes back to frame the lockup
 
-const T_IV_V = 11.80;                                  // the scale-through
-const T_OPEN = 14.40;                                  // the mask races past the frame
+const R_BASE = 434, R_NARROW = 358, R_WIDE = 470;
 
 function lensR(t) {
-  let R = 372 * at(t, 0.00, 1.35, easeEmphatic);       // the aperture irises open
-  R = lerp(R, 274, at(t, 9.40, 0.78, easeEmphatic));   // it narrows for the manuscript
-  R = lerp(R, 452, at(t, T_IV_V, 0.92, easeEmphatic)); // and widens for the celestial chart
-  R = lerp(R, 1560, at(t, T_OPEN, 1.05, easeEmphatic));// then races past the frame
-  R = lerp(R, 424, at(t, 23.05, 1.65, easeEmphatic));  // and closes back to frame the lockup
+  let R = R_BASE * at(t, 0.00, 1.35, easeEmphatic);           // the aperture irises open
+  R = lerp(R, R_NARROW, at(t, 9.40, 0.78, easeEmphatic));     // narrows for the manuscript
+  R = lerp(R, R_WIDE,   at(t, T_IV_V, 0.92, easeEmphatic));   // widens for the chart
+  R = lerp(R, 596,      at(t, T_OPEN, 1.15, easeStandard));   // eases out under the tear
+  R = lerp(R, 430,      at(t, T_CLOSE, 1.55, easeEmphatic));  // closes back for the lockup
   return R;
 }
 
-/* IV → V is the one transition that is not a slide: Plate IV is pinned in screen
-   space and scaled through the viewer's eye while the strip travels under it, so
-   nothing is carved by the mask arc. p4 is that travel. */
+/* IV → V is the one transition that is not a slide: Plate IV is pinned in
+   screen space and scaled through the viewer's eye while the sheet travels
+   under it, so nothing is carved by the mask arc. */
 const p4at = (t) => at(t, T_IV_V, 0.62, easeEmphatic);
 
-function stripX(t) {
-  return at(t, 4.06, 0.62, easeEmphatic)      // I → II : a decisive slide
+function stripIdx(t) {
+  return at(t, 4.06, 0.62, easeEmphatic)      // I  → II : a decisive slide
        + at(t, 6.74, 0.94, easeStandard)      // II → III: a slower drift with a rise
-       + at(t, 9.40, 0.72, easeEmphatic)      // III → IV: under a narrowing iris
-       + p4at(t);                             // IV → V : the scale-through
+       + at(t, 9.40, 0.72, easeEmphatic)      // III→ IV : under a narrowing iris
+       + p4at(t);                             // IV → V  : the scale-through
 }
 
-/* ── the timeline ─────────────────────────────────────────────────────────── */
+/* ══ the timeline ═════════════════════════════════════════════════════════ */
 window.seek = function (t) {
 
-  /* --- the instrument -------------------------------------------------- */
+  /* --- the instrument: a hole in the dark, and a tear that takes it away - */
   const R = lensR(t);
-  els.lens.style.clipPath = `circle(${R.toFixed(2)}px at ${CX}px ${CY}px)`;
+  const tearOut = at(t, T_OPEN, 1.15, easeEmphatic);
+  const tearIn  = at(t, T_CLOSE, 1.35, easeEmphatic);
+  const mask = `radial-gradient(circle ${R.toFixed(1)}px at ${CX}px ${CY}px,`
+             + ` rgba(0,0,0,0) 0, rgba(0,0,0,0) ${(R - 0.6).toFixed(1)}px, #000 ${R.toFixed(1)}px)`;
+  els.deep.style.webkitMaskImage = mask;
+  els.deep.style.maskImage = mask;
+  els.deep.style.clipPath = t < 22.0
+    ? tornWipe(tearOut * 1.09, { seed: 11, teeth: 26, jag: 0.030, dir: 'ltr' })
+    : tornWipe(1 - tearIn * 1.09, { seed: 29, teeth: 26, jag: 0.030, dir: 'rtl' });
 
-  const surround = Math.max(at(t, 0.25, 0.9) * (1 - at(t, T_OPEN, 0.80)), at(t, 23.65, 0.9));
+  const surround = Math.max(at(t, 0.10, 0.9) * (1 - at(t, T_OPEN, 0.55, easeStandard)),
+                            at(t, T_CLOSE + 0.30, 0.9));
   gRing.setAttribute('transform', `translate(${CX},${CY}) scale(${(R + 2.4).toFixed(3)})`);
   gTicks.setAttribute('transform', `translate(${CX},${CY}) scale(${R.toFixed(3)})`);
   ring.style.opacity = surround;
-  gTicks.style.opacity = surround * 0.85;
-  gReg.style.opacity = surround * 0.55;
+  gTicks.style.opacity = surround * 0.8;
+  gReg.style.opacity = Math.max(at(t, 0.02, 0.5) * (1 - at(t, T_OPEN, 0.55)),
+                                at(t, T_CLOSE + 0.30, 0.9)) * 0.55;
 
   /* the reticle: present on the first frame, drifting, gone once the iris lands */
-  const ret = 0.52 * (1 - at(t, 0.85, 0.90, easeStandard));
-  gRet.style.opacity = ret;
-  gRet.setAttribute('transform', `translate(${(osc(t, 5.2) * 7).toFixed(2)},${(osc(t, 3.7, .3) * 5).toFixed(2)})`);
+  gRet.style.opacity = 0.5 * (1 - at(t, 0.85, 0.90, easeStandard));
+  gRet.setAttribute('transform',
+    `translate(${(osc(t, 5.2) * 7).toFixed(2)},${(osc(t, 3.7, .3) * 5).toFixed(2)})`);
 
-  /* the crosshair holds the plate only until the stem starts — the specimen is
-     already forming as the iris settles, so the iris never lands on nothing */
-  const xhP = at(t, 0.62, 0.55) * (1 - at(t, 1.40, 0.50, easeStandard));
-  els.xh.style.opacity = xhP * 0.85;
-  els.xhg.setAttribute('transform',
-    `translate(${(osc(t, 4.4) * 13).toFixed(2)},${(osc(t, 3.1, .2) * 9).toFixed(2)})`);
-
-  /* --- the strip under the lens ---------------------------------------- */
-  const idx = stripX(t);
+  /* --- the sheet travelling under the lens ------------------------------ */
+  const idx = stripIdx(t);
   const p4 = p4at(t);
-  const rise = -22 * Math.sin(Math.PI * clamp((t - 6.74) / 0.94));      // the II→III drift lifts
-  const driftX = osc(t, 9.0) * 3.5, driftY = osc(t, 6.4, 0.35) * 2.6;   // held by hand, not bolted
+  const rise = -26 * Math.sin(Math.PI * clamp((t - 6.74) / 0.94));
+  const driftX = osc(t, 9.0) * 3.5, driftY = osc(t, 6.4, 0.35) * 2.6;
   els.wrap.style.transform =
-    `translate(${(CX - 500 - idx * W + driftX).toFixed(2)}px,${(rise + driftY).toFixed(2)}px)`;
+    `translate(${(CX - HX + driftX - idx * W).toFixed(2)}px,${(rise + driftY).toFixed(2)}px)`;
+  // the device, stated: the strip travels, the lens holds
+  els.wrap.dataset.strip = plateStrip(idx, W);
+  els.wrap.dataset.lens = lens(CX, CY, R);
 
-  const sc = 1 + 0.0048 * Math.min(t, 14.2);                            // a slow, constant push
+  const sc = 1 + 0.0046 * Math.min(t, 14.2);
   els.scale.style.transform = `scale(${sc.toFixed(4)})`;
 
-  /* the plates leave together as the traveller puts a pen on the page */
-  const platesOut = 1 - at(t, 13.90, 1.05, easeStandard);
-  els.grid.style.opacity = 0.85 * (1 - at(t, 14.05, 1.20, easeStandard));
-  els.panel.style.opacity = 1 - at(t, 14.40, 1.35, easeStandard);
+  const platesOut = 1 - at(t, 13.90, 1.00, easeStandard);
+  const gridOut = 0.9 * (1 - at(t, 13.95, 1.25, easeStandard));
+  for (const g of els.grids) g.style.opacity = gridOut.toFixed(3);
 
-  /* --- the plates draw themselves in ----------------------------------- */
+  /* --- the plates ------------------------------------------------------- */
+  const pp = DRAW.map(d => at(t, d[0], d[1], easeStandard));
   for (let i = 0; i < NP; i++) {
-    const p = at(t, DRAW[i][0], DRAW[i][1], easeStandard);
-    if (p !== G[i].__last) {
-      G[i].__last = p;
-      for (const e of plate[i]) {
-        if (e.__late) continue;                          // posed on its own clock below
-        if (e.__s) {
-          const q = easeStandard(clamp((p - e.__o * 0.56) / 0.44));
-          e.style.strokeDashoffset = (e.__L * (1 - q)).toFixed(2);
-        } else {
-          e.style.opacity = easeStandard(clamp((p - 0.26 - e.__o * 0.46) / 0.30));
-        }
-      }
+    cells[i].style.opacity = platesOut.toFixed(3);
+    plNums[i].style.opacity = (Math.max(0, pp[i] - 0.5) * 2 * 0.9).toFixed(3);
+  }
+  /* every hairline draws on its own order behind the plate's progress */
+  for (let i = 0; i < NP; i++) {
+    const p = P[i]; if (!p.lines) continue;
+    for (const e of p.lines) {
+      const q = easeStandard(clamp((pp[i] - e.__o * 0.52) / 0.46));
+      e.style.strokeDashoffset = (e.__L * (1 - q)).toFixed(2);
     }
-    G[i].style.opacity = platesOut.toFixed(3);
   }
-  /* the late accents: the move that lands after each plate has settled */
-  for (const e of lateList) {
-    const q = at(t, e.__late[0], e.__late[1], easeStandard);
-    if (e.__s) e.style.strokeDashoffset = (e.__L * (1 - q)).toFixed(2);
-    else e.style.opacity = q.toFixed(3);
-  }
+  poseI(pp[0], t); poseII(pp[1], t); poseIII(pp[2], t); poseIV(pp[3], t); poseV(pp[4], t);
 
-  /* Plate IV is pinned in screen space and driven through the viewer's eye from
-     its own centre, so the manuscript is never carved by the mask arc. */
+  /* Plate IV is pinned in screen space and driven through the viewer's eye
+     from its own centre, so the manuscript is never carved by the mask arc. */
   const p4s = at(t, T_IV_V, 0.50, easeInOut);
   const p4f = at(t, T_IV_V + 0.05, 0.34, easeInOut);
-  G[3].setAttribute('transform',
-    `translate(${(3 * W + p4 * W).toFixed(2)},0) translate(500,498) ` +
-    `scale(${(1 + 0.92 * p4s).toFixed(4)}) translate(-500,-498)`);
-  G[3].style.opacity = ((1 - p4f) * platesOut).toFixed(3);
+  cells[3].style.transform =
+    `translateX(${(p4 * W).toFixed(2)}px) translate(${HX}px,${HY}px) ` +
+    `scale(${(1 + 0.94 * p4s).toFixed(4)}) translate(${-HX}px,${-HY}px)`;
+  cells[3].style.opacity = ((1 - p4f) * platesOut).toFixed(3);
   /* Plate V closes inward as the traveller leaves it — the chart shuts, the
      record opens. A dissolve with a direction, not a fade to nothing. */
-  const p5o = at(t, 13.90, 1.05, easeStandard);
-  G[4].setAttribute('transform',
-    `translate(${4 * W},0) translate(500,496) ` +
-    `scale(${(1 - 0.26 * p5o).toFixed(4)}) translate(-500,-496)`);
+  const p5o = at(t, 13.90, 1.00, easeStandard);
+  cells[4].style.transform =
+    `translate(${HX}px,${HY}px) scale(${(1 - 0.24 * p5o).toFixed(4)}) translate(${-HX}px,${-HY}px)`;
 
-  /* --- Plate V: the traveller on the ORGANIC ring ----------------------- */
+  /* --- the birds -------------------------------------------------------- */
   {
-    const live = at(t, 12.85, 0.42) * (1 - at(t, 13.62, 0.24));
-    const cx = 500, cy = 496, r = 162;
-    const a0 = Math.PI * 0.17, a1 = a0 - Math.PI * 0.80;   // right → top → upper left
-    const a = lerp(a0, a1, easeInOut(clamp((t - 12.85) / 1.05)));
-    const b = Math.min(a0, a + 0.70);
-    const large = 0, sweep = 0;
-    TRAIL.setAttribute('d',
-      `M ${(cx + Math.cos(b) * r).toFixed(1)},${(cy + Math.sin(b) * r).toFixed(1)}` +
-      ` A ${r},${r} 0 ${large} ${sweep} ${(cx + Math.cos(a) * r).toFixed(1)},${(cy + Math.sin(a) * r).toFixed(1)}`);
-    TRAIL.setAttribute('opacity', (live * 0.55).toFixed(3));
-    DOT.setAttribute('cx', (cx + Math.cos(a) * r).toFixed(1));
-    DOT.setAttribute('cy', (cy + Math.sin(a) * r).toFixed(1));
-    DOT.setAttribute('opacity', live.toFixed(3));
+    const settle = at(t, 14.10, 0.70, easeEntrance);
+    const go = at(t, 15.05, 1.30, easeStandard);
+    birdEls.forEach((el, i) => {
+      const s = scatterPose(go, i, 3, { seed: 19, spread: 1.15 });
+      const base = `translateY(${((1 - settle) * 22).toFixed(1)}px) rotate(${BIRDS[i].deg}deg) `;
+      el.style.transform = base + s.transform;
+      el.style.opacity = (settle * s.opacity).toFixed(3);
+    });
   }
 
   /* --- the release: one recorded trace, wider than the lens ------------- */
@@ -705,9 +781,9 @@ window.seek = function (t) {
     pen.setAttribute('cx', tp.x.toFixed(1));
     pen.setAttribute('cy', tp.y.toFixed(1));
     pen.setAttribute('opacity', (penOn * out).toFixed(3));
-    // then it is read: the peaks are dropped to a datum and the datum is ruled
     ticks.forEach((e, i) => {
-      e.style.strokeDashoffset = (e.__L * (1 - at(t, 16.95 + i * 0.25, 0.36, easeStandard))).toFixed(2);
+      e.style.strokeDashoffset =
+        (e.__L * (1 - at(t, 16.95 + i * 0.25, 0.36, easeStandard))).toFixed(2);
       e.style.opacity = out.toFixed(3);
     });
     datum.style.strokeDashoffset =
@@ -716,43 +792,210 @@ window.seek = function (t) {
   }
 
   /* --- surround furniture ---------------------------------------------- */
-  const surOut = 1 - at(t, T_OPEN, 0.70);
-  const tlP = at(t, 1.40, 0.8) * surOut;
-  els.tl.style.opacity = tlP;
-  els.tl.style.transform = `translateX(${((1 - at(t, 1.40, 0.8)) * -18).toFixed(2)}px)`;
-  els.tr.style.opacity = at(t, 1.70, 0.8) * surOut;
+  const surOut = 1 - at(t, T_OPEN, 0.55);
+  els.tl.style.opacity = at(t, 0.10, 0.8) * surOut;
+  els.tl.style.transform = `translateX(${((1 - at(t, 0.10, 0.8)) * -18).toFixed(2)}px)`;
+  els.tr.style.opacity = at(t, 0.30, 0.8) * surOut;
 
-  /* the Fig. rule and the Fig. label share one envelope — they never separate */
-  let figMax = 0;
-  figEls.forEach((el, i) => {
+  let active = -1;
+  figCards.forEach((el, i) => {
     const [a, b] = FIGWIN[i];
     const p = at(t, a, 0.55) * (1 - at(t, b, 0.30, easeStandard));
-    el.style.opacity = p;
-    el.style.transform = `translateY(${((1 - at(t, a, 0.55)) * 15).toFixed(2)}px)`;
-    if (p > figMax) figMax = p;
+    const pose = tapedCard(p, i, { rise: 30 });
+    el.style.transform = pose.transform;
+    el.style.opacity = (pose.opacity * surOut).toFixed(3);
+    el.style.boxShadow = pose.boxShadow;
+    el.__tape.style.transform = `rotate(${el.__tape.__deg}deg) scale(${(0.6 + 0.4 * p).toFixed(3)})`;
+    if (p > 0.5) active = i;
   });
-  els.fr.style.opacity = (figMax * surOut).toFixed(3);
-  els.fr.style.transform = `scaleX(${at(t, 1.45, 0.8, easeEmphatic).toFixed(3)})`;
-  els.fr.style.transformOrigin = 'left center';
+  pidxEls.forEach((el, i) => {
+    const on = i === active ? 1 : 0;
+    el.style.width = (30 + 26 * on) + 'px';
+    el.style.background = on ? SIGFILL : '#8A9296';
+    el.style.opacity = ((on ? 1 : 0.3) * at(t, 0.55, 0.8) * surOut).toFixed(3);
+  });
 
-  /* --- the statement --------------------------------------------------- */
-  const sOut = at(t, 20.15, 0.50, easeEmphatic);
-  revealWords(els.s1, t, 15.00, 0.90, 0.085, 34);
-  revealWords(els.s2, t, 15.62, 0.90, 0.085, 34);
-  els.stmt.style.opacity = 1 - sOut;
-  els.stmt.style.transform = `translateY(${(-sOut * 46).toFixed(2)}px)`;
+  /* --- the statement: uncovered by a torn edge, not faded in ------------ */
+  {
+    const sOut = at(t, 20.15, 0.50, easeEmphatic);
+    revealWords(els.s1, t, 15.02, 0.86, 0.075, 30);
+    revealWords(els.s2, t, 15.64, 0.86, 0.075, 30);
+    const r1 = at(t, 14.96, 1.00, easeStandard), r2 = at(t, 15.58, 1.00, easeStandard);
+    els.s1.style.clipPath = tornWipe(1 - r1 * 1.09, { seed: 41, teeth: 18, jag: 0.024, dir: 'ltr' });
+    els.s2.style.clipPath = tornWipe(1 - r2 * 1.09, { seed: 57, teeth: 18, jag: 0.024, dir: 'rtl' });
+    els.stmt.style.opacity = 1 - sOut;
+    els.stmt.style.transform = `translateY(${(-sOut * 48).toFixed(2)}px)`;
+  }
 
-  /* --- the credit ------------------------------------------------------ */
-  const cOut = 1 - at(t, 22.55, 0.40, easeStandard);
-  els.crule.style.width = `${(at(t, 20.15, 1.20, easeEntrance) * 980).toFixed(1)}px`;
-  els.credit.style.opacity = cOut;
-  const caP = at(t, 20.55, 0.60), cbP = at(t, 20.95, 0.60);
-  els.ca.style.opacity = caP; els.ca.style.transform = `translateY(${((1 - caP) * 14).toFixed(2)}px)`;
-  els.cb.style.opacity = cbP; els.cb.style.transform = `translateY(${((1 - cbP) * 14).toFixed(2)}px)`;
+  /* --- the credit: a torn strip, then the line, then the services ------- */
+  {
+    const cIn = at(t, 20.15, 1.10, easeEntrance);
+    const cOut = 1 - at(t, 22.55, 0.40, easeStandard);
+    els.credStrip.style.opacity = (cIn * 0.98).toFixed(3);
+    els.credStrip.style.transform =
+      `translateX(-50%) rotate(${(-0.9 + 0.5 * cIn).toFixed(2)}deg) ` +
+      `translateY(${((1 - cIn) * 18).toFixed(1)}px)`;
+    els.credStrip.style.clipPath =
+      tornWipe(1 - cIn * 1.09, { seed: 73, teeth: 20, jag: 0.020, dir: 'ltr' });
+    els.crule.style.width = `${(at(t, 20.30, 1.00, easeEntrance) * 560).toFixed(1)}px`;
+    els.credit.style.opacity = cOut;
+    const caP = at(t, 20.62, 0.60), cbP = at(t, 21.00, 0.60);
+    els.ca.style.opacity = caP;
+    els.ca.style.transform = `translateY(${((1 - caP) * 14).toFixed(2)}px)`;
+    els.cb.style.opacity = cbP;
+    els.cb.style.transform = `translateY(${((1 - cbP) * 14).toFixed(2)}px)`;
+  }
 
-  /* --- the lockup ------------------------------------------------------ */
+  /* --- the lockup ------------------------------------------------------- */
   if (lock) lock.pose(at(t, 22.55, 1.45));
+  els.endline.style.opacity = (at(t, 24.30, 1.00) * 0.9).toFixed(3);
 };
+
+/* ══ per-plate poses ══════════════════════════════════════════════════════
+   Each plate arrives with its own gesture. No two adjacent plates share one. */
+
+/* I — the specimen is pressed down onto the sheet, then taped. */
+function poseI(p, t) {
+  const q = P[0];
+  const press = easeEmphatic(clamp((p - 0.02) / 0.55));
+  q.bot.style.opacity = easeStandard(clamp((p - 0.04) / 0.42)).toFixed(3);
+  q.bot.style.transform =
+    `scale(${lerp(1.075, 1, press).toFixed(4)}) rotate(${lerp(-2.2, 0, press).toFixed(2)}deg)`;
+  const cp = at(t, 2.90, 0.70, easeEntrance);
+  const pose = tapedCard(cp, 3, { rise: 24, tilt: -1.6 });
+  q.card.style.transform = pose.transform;
+  q.card.style.opacity = pose.opacity;
+  q.card.style.boxShadow = pose.boxShadow;
+  const ta = at(t, 3.24, 0.34, easeEmphatic), tb = at(t, 3.40, 0.34, easeEmphatic);
+  q.tapeA.style.transform = `rotate(${q.tapeA.__deg}deg) scale(${(0.55 + 0.45 * ta).toFixed(3)})`;
+  q.tapeA.style.opacity = ta.toFixed(3);
+  q.tapeB.style.transform = `rotate(${q.tapeB.__deg}deg) scale(${(0.55 + 0.45 * tb).toFixed(3)})`;
+  q.tapeB.style.opacity = tb.toFixed(3);
+  const l1 = at(t, 3.14, 0.40), l2 = at(t, 3.40, 0.40);
+  q.lab1.style.opacity = l1; q.lab1.style.transform = `translateX(${((1 - l1) * -12).toFixed(1)}px)`;
+  q.lab2.style.opacity = l2; q.lab2.style.transform = `translateX(${((1 - l2) * 12).toFixed(1)}px)`;
+  q.det.style.opacity = at(t, 3.62, 0.50) * 0.95;
+  const pn = at(t, 3.50, 0.34, easeEmphatic);
+  q.pin.style.opacity = pn.toFixed(3);
+  q.pin.style.transform = `rotate(${q.pin.__deg}deg) scale(${lerp(1.6, 1, pn).toFixed(3)})`;
+}
+
+/* II — the strata slide in from alternating sides; the pins press in. */
+function poseII(p, t) {
+  const q = P[1];
+  q.graph.style.opacity = (0.26 * easeStandard(clamp(p / 0.35))).toFixed(3);
+  q.beds.forEach((bd, i) => {
+    const e = at(t, 4.30 + i * 0.30, 0.72, easeEmphatic);
+    bd.holder.style.transform =
+      `translateX(${((1 - e) * 210 * bd.b.from).toFixed(1)}px) ` +
+      `rotate(${lerp(bd.b.deg + 2.4 * bd.b.from, bd.b.deg, e).toFixed(2)}deg)`;
+    bd.holder.style.opacity = e.toFixed(3);
+    bd.bars.forEach((bar, k) => {
+      const be = at(t, 4.86 + i * 0.30 + k * 0.06, 0.44, easeEntrance);
+      bar.style.transform = `scaleX(${be.toFixed(3)})`;
+      bar.style.transformOrigin = '0 50%';
+      bar.style.opacity = (0.5 * be).toFixed(3);
+    });
+    const ne = at(t, 4.62 + i * 0.30, 0.46, easeEntrance);
+    bd.num.style.opacity = ne.toFixed(3);
+    bd.num.style.transform = `translateX(${((1 - ne) * -16).toFixed(1)}px)`;
+    const pe = at(t, 5.42 + i * 0.22, 0.32, easeEmphatic);
+    bd.pin.style.opacity = pe.toFixed(3);
+    bd.pin.style.transform =
+      `rotate(${bd.pin.__deg}deg) scale(${lerp(1.9, 1, pe).toFixed(3)}) ` +
+      `translateY(${((1 - pe) * -18).toFixed(1)}px)`;
+  });
+  q.scale.style.opacity = at(t, 5.92, 0.50) * 0.95;
+}
+
+/* III — the branch draws, the labels arrive taped, the bird lands last. */
+function poseIII(p, t) {
+  const q = P[2];
+  const hp = at(t, 6.98, 0.60, easeEntrance);
+  const hpose = tapedCard(hp, 0, { rise: 20, tilt: -1.8 });
+  q.head.style.transform = hpose.transform;
+  q.head.style.opacity = hpose.opacity;
+  q.head.style.boxShadow = hpose.boxShadow;
+  q.headTape.style.opacity = at(t, 7.20, 0.30).toFixed(3);
+  q.headTape.style.transform = `rotate(${q.headTape.__deg}deg)`;
+  q.labs.forEach((l, i) => {
+    const e = at(t, 7.52 + i * 0.13, 0.62, easeEntrance);
+    const pose = tapedCard(e, i + 1, { rise: 26 });
+    l.card.style.transform = pose.transform;
+    l.card.style.opacity = pose.opacity;
+    l.card.style.boxShadow = pose.boxShadow;
+    const te = at(t, 7.70 + i * 0.13, 0.28, easeEmphatic);
+    l.tp.style.opacity = te.toFixed(3);
+    l.tp.style.transform = `rotate(${l.tp.__deg}deg) scale(${(0.5 + 0.5 * te).toFixed(3)})`;
+  });
+  const be = at(t, 8.34, 0.62, easeEntrance);
+  q.bird.style.opacity = be.toFixed(3);
+  q.bird.style.transform =
+    `translate(${((1 - be) * 54).toFixed(1)}px,${((1 - be) * -46).toFixed(1)}px) ` +
+    `rotate(${lerp(-9, 0, be).toFixed(2)}deg)`;
+}
+
+/* IV — the mount lands, the initial flips in, the answer wipes across. */
+function poseIV(p, t) {
+  const q = P[3];
+  const e = at(t, 9.70, 0.66, easeEntrance);
+  const pose = tapedCard(e, 2, { rise: 30, tilt: 1.7 });
+  q.leaf.style.transform = pose.transform;
+  q.leaf.style.opacity = pose.opacity;
+  q.mount.style.transform = pose.transform;
+  q.mount.style.opacity = pose.opacity;
+  const ie = at(t, 10.10, 0.44, easeEmphatic);
+  q.init.style.opacity = ie.toFixed(3);
+  q.init.style.transform =
+    `${pose.transform} scale(${lerp(0.6, 1, ie).toFixed(3)}) rotate(${lerp(-14, 0, ie).toFixed(2)}deg)`;
+  q.bars.forEach((b, i) => {
+    const be = at(t, 10.26 + i * 0.07, 0.40, easeEntrance);
+    b.style.transform = `${pose.transform} scaleX(${be.toFixed(3)})`;
+    b.style.opacity = (0.46 * be).toFixed(3);
+  });
+  q.script.style.opacity = at(t, 10.86, 0.62).toFixed(3);
+  q.script.style.transform = `translateY(${((1 - at(t, 10.86, 0.62)) * 12).toFixed(1)}px)`;
+  q.nb.style.opacity = (at(t, 11.20, 0.50) * 0.95).toFixed(3);
+  const ce = at(t, 10.02, 0.40, easeEmphatic);
+  q.clip.style.opacity = ce.toFixed(3);
+  q.clip.style.transform = `rotate(${q.clip.__deg}deg) translateY(${((1 - ce) * -22).toFixed(1)}px)`;
+  const te = at(t, 10.40, 0.34, easeEmphatic);
+  q.tape.style.opacity = te.toFixed(3);
+  q.tape.style.transform = `rotate(${q.tape.__deg}deg) scale(${(0.55 + 0.45 * te).toFixed(3)})`;
+}
+
+/* V — the chart rotates into register; the traveller runs the ORGANIC ring. */
+function poseV(p, t) {
+  const q = P[4];
+  const e = at(t, 12.06, 0.86, easeEmphatic);
+  q.chart.style.opacity = e.toFixed(3);
+  q.chart.style.transform =
+    `rotate(${lerp(-7.5, 0, e).toFixed(2)}deg) scale(${lerp(1.06, 1, e).toFixed(4)})`;
+  q.labs.forEach((l, i) => {
+    const le = at(t, 12.48 + i * 0.10, 0.42, easeEntrance);
+    l.setAttribute('opacity', le.toFixed(3));
+  });
+  const pe = at(t, 12.40, 0.34, easeEmphatic);
+  q.pin.style.opacity = pe.toFixed(3);
+  q.pin.style.transform = `rotate(${q.pin.__deg}deg) scale(${lerp(1.8, 1, pe).toFixed(3)})`;
+  const te = at(t, 12.24, 0.34, easeEmphatic);
+  q.tape.style.opacity = te.toFixed(3);
+  q.tape.style.transform = `rotate(${q.tape.__deg}deg) scale(${(0.55 + 0.45 * te).toFixed(3)})`;
+  q.note.style.opacity = (at(t, 12.90, 0.50) * 0.95).toFixed(3);
+
+  const live = at(t, 12.85, 0.42) * (1 - at(t, 13.62, 0.24));
+  const r = 168;
+  const a0 = Math.PI * 0.17, a1 = a0 - Math.PI * 0.82;
+  const a = lerp(a0, a1, easeInOut(clamp((t - 12.85) / 1.05)));
+  const b = Math.min(a0, a + 0.72);
+  q.trail.setAttribute('d',
+    `M ${(HX + Math.cos(b) * r).toFixed(1)},${(HY + Math.sin(b) * r).toFixed(1)}` +
+    ` A ${r},${r} 0 0 0 ${(HX + Math.cos(a) * r).toFixed(1)},${(HY + Math.sin(a) * r).toFixed(1)}`);
+  q.trail.setAttribute('opacity', (live * 0.6).toFixed(3));
+  q.dot.setAttribute('cx', (HX + Math.cos(a) * r).toFixed(1));
+  q.dot.setAttribute('cy', (HY + Math.sin(a) * r).toFixed(1));
+  q.dot.setAttribute('opacity', live.toFixed(3));
+}
 
 window.seek(0);
 </script>
