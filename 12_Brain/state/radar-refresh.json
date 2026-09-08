@@ -1,48 +1,48 @@
 {
   "automation_id": "radar-refresh",
-  "started_at": "2026-09-07T12:24:42.894Z",
+  "started_at": "2026-09-08T11:15:54.477Z",
   "status": "ok",
-  "date": "2026-09-07",
-  "rotation_slot": "PA: Forest County, Huntingdon County, Snyder County, Adams County, Lycoming County, Philadelphia",
+  "date": "2026-09-08",
+  "rotation_slot": "PA: Jefferson County, Tioga County, Indiana County, Union County, Cumberland County, Montgomery County",
   "run": {
-    "discovered_raw": 75,
-    "discovered_new": 9,
-    "regraded": 9,
-    "enriched": 5,
+    "discovered_raw": 224,
+    "discovered_new": 6,
+    "regraded": 10,
+    "enriched": 2,
     "enrich_no_match": 4,
     "enrich_skipped": 0,
     "errors": [],
-    "plan": "registry is at 1378 rows, past the 1200 soft cap — discovery ramped from 60 to 24",
+    "plan": "registry is at 1387 rows, past the 1200 soft cap — discovery ramped from 60 to 23",
     "throttled": true,
-    "rendered": 6,
+    "rendered": 7,
     "imagery_checked": 60,
     "imagery_buildable": 0,
     "logo_verified": 0,
     "logo_pending": 58,
     "logo_rejected": 2
   },
-  "tracked": 1387,
+  "tracked": 1393,
   "active": 0,
-  "logo_holds": 1369,
+  "logo_holds": 1375,
   "logo_hold_reasons": {
     "logo_provenance_missing": 1161,
     "previous_homepage_exists": 139,
     "logo_fetch_failed": 43,
     "logo_not_found": 2,
     "business_identity_mismatch": 1,
-    "logo_verification_pending": 23
+    "logo_verification_pending": 29
   },
   "build_queue_size": 0,
   "needs_render": 0,
   "mean_site_quality": 54,
   "by_verdict": {
-    "rebuild": 248,
-    "polish": 861,
-    "enrich": 25,
-    "nurture": 206,
-    "ads_seo": 29
+    "rebuild": 251,
+    "polish": 865,
+    "enrich": 22,
+    "nurture": 207,
+    "ads_seo": 30
   },
   "by_verdict_active": {},
   "errors": [],
-  "written_at": "2026-09-07T12:24:42.915Z"
+  "written_at": "2026-09-08T11:15:54.504Z"
 }
