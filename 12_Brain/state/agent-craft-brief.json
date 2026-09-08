@@ -1,9 +1,13 @@
 {
   "automation_id": "agent-craft-brief",
   "status": "ok",
-  "generated_for": "2026-09-02",
-  "window_days": 3,
+  "generated_for": "2026-09-08",
+  "window_days": 7,
   "days": [
+    "2026-08-12",
+    "2026-08-13",
+    "2026-08-14",
+    "2026-08-15",
     "2026-08-16",
     "2026-08-17",
     "2026-08-18"
@@ -11,63 +15,50 @@
   "counts": {
     "routines_seen": 22,
     "workhorses": 10,
-    "unreliable": 3,
+    "unreliable": 5,
     "cadence_drift": 6,
     "authorized_never_ran": 7,
     "earned_lessons": 11
   },
-  "gate_blocks": [],
+  "gate_blocks": [
+    {
+      "gate": "G5_stale_source",
+      "blocks": 2
+    },
+    {
+      "gate": "G6_dedupe",
+      "blocks": 1
+    }
+  ],
   "workhorses": [
+    {
+      "id": "D19",
+      "name": "Build a report, dashboard, deck, or executive summary",
+      "cadence": "daily",
+      "claude_role": "maker",
+      "completions": 7,
+      "failures": 0,
+      "reliability": 1,
+      "last_completed": "2026-08-18",
+      "fail_reason": null
+    },
+    {
+      "id": "D03",
+      "name": "Review overnight automations and watchdogs",
+      "cadence": "daily",
+      "claude_role": "terminal_readonly",
+      "completions": 7,
+      "failures": 3,
+      "reliability": 0.7,
+      "last_completed": "2026-08-17",
+      "fail_reason": "3/9 stages ok; next: resolve stage:build"
+    },
     {
       "id": "D07",
       "name": "Triage monitoring and system alerts",
       "cadence": "daily",
       "claude_role": "terminal_readonly",
-      "completions": 3,
-      "failures": 0,
-      "reliability": 1,
-      "last_completed": "2026-08-18",
-      "fail_reason": null
-    },
-    {
-      "id": "D10",
-      "name": "Infer the real deliverable",
-      "cadence": "daily",
-      "claude_role": "analyst",
-      "completions": 3,
-      "failures": 0,
-      "reliability": 1,
-      "last_completed": "2026-08-18",
-      "fail_reason": null
-    },
-    {
-      "id": "D11",
-      "name": "Plan dependencies and approval gates",
-      "cadence": "daily",
-      "claude_role": "analyst",
-      "completions": 3,
-      "failures": 0,
-      "reliability": 1,
-      "last_completed": "2026-08-18",
-      "fail_reason": null
-    },
-    {
-      "id": "D12",
-      "name": "Run repository and worktree preflight",
-      "cadence": "daily",
-      "claude_role": "terminal_readonly",
-      "completions": 3,
-      "failures": 0,
-      "reliability": 1,
-      "last_completed": "2026-08-18",
-      "fail_reason": null
-    },
-    {
-      "id": "D13",
-      "name": "Load product truth and visual authority",
-      "cadence": "daily",
-      "claude_role": "maker",
-      "completions": 3,
+      "completions": 7,
       "failures": 0,
       "reliability": 1,
       "last_completed": "2026-08-18",
@@ -78,18 +69,62 @@
       "name": "Produce content, copy, SEO, AEO, and GEO deliverables",
       "cadence": "daily",
       "claude_role": "maker",
-      "completions": 3,
+      "completions": 7,
+      "failures": 2,
+      "reliability": 0.78,
+      "last_completed": "2026-08-18",
+      "fail_reason": "3/9 stages ok; next: resolve stage:build"
+    },
+    {
+      "id": "D26",
+      "name": "Capture durable knowledge in Dillon OS",
+      "cadence": "daily",
+      "claude_role": "maker",
+      "completions": 7,
       "failures": 0,
       "reliability": 1,
       "last_completed": "2026-08-18",
       "fail_reason": null
     },
     {
-      "id": "D19",
-      "name": "Build a report, dashboard, deck, or executive summary",
+      "id": "D12",
+      "name": "Run repository and worktree preflight",
+      "cadence": "daily",
+      "claude_role": "terminal_readonly",
+      "completions": 7,
+      "failures": 0,
+      "reliability": 1,
+      "last_completed": "2026-08-18",
+      "fail_reason": null
+    },
+    {
+      "id": "D10",
+      "name": "Infer the real deliverable",
+      "cadence": "daily",
+      "claude_role": "analyst",
+      "completions": 7,
+      "failures": 0,
+      "reliability": 1,
+      "last_completed": "2026-08-18",
+      "fail_reason": null
+    },
+    {
+      "id": "D11",
+      "name": "Plan dependencies and approval gates",
+      "cadence": "daily",
+      "claude_role": "analyst",
+      "completions": 7,
+      "failures": 0,
+      "reliability": 1,
+      "last_completed": "2026-08-18",
+      "fail_reason": null
+    },
+    {
+      "id": "D13",
+      "name": "Load product truth and visual authority",
       "cadence": "daily",
       "claude_role": "maker",
-      "completions": 3,
+      "completions": 7,
       "failures": 0,
       "reliability": 1,
       "last_completed": "2026-08-18",
@@ -100,29 +135,7 @@
       "name": "Create an evidence-backed completion handoff",
       "cadence": "daily",
       "claude_role": "critic",
-      "completions": 3,
-      "failures": 0,
-      "reliability": 1,
-      "last_completed": "2026-08-18",
-      "fail_reason": null
-    },
-    {
-      "id": "D26",
-      "name": "Capture durable knowledge in Dillon OS",
-      "cadence": "daily",
-      "claude_role": "maker",
-      "completions": 3,
-      "failures": 0,
-      "reliability": 1,
-      "last_completed": "2026-08-18",
-      "fail_reason": null
-    },
-    {
-      "id": "E05",
-      "name": "Onboard an existing repository or project",
-      "cadence": "event",
-      "claude_role": "architect",
-      "completions": 3,
+      "completions": 7,
       "failures": 0,
       "reliability": 1,
       "last_completed": "2026-08-18",
@@ -135,21 +148,10 @@
       "name": "Audit automation reliability",
       "cadence": "weekly",
       "claude_role": "critic",
-      "completions": 1,
-      "failures": 6,
-      "reliability": 0.14,
+      "completions": 4,
+      "failures": 10,
+      "reliability": 0.29,
       "last_completed": "2026-08-16",
-      "fail_reason": "3/9 stages ok; next: resolve stage:build"
-    },
-    {
-      "id": "D03",
-      "name": "Review overnight automations and watchdogs",
-      "cadence": "daily",
-      "claude_role": "terminal_readonly",
-      "completions": 2,
-      "failures": 3,
-      "reliability": 0.4,
-      "last_completed": "2026-08-17",
       "fail_reason": "3/9 stages ok; next: resolve stage:build"
     },
     {
@@ -157,10 +159,43 @@
       "name": "Test Dillon OS knowledge graph health",
       "cadence": "weekly",
       "claude_role": "critic",
-      "completions": 2,
-      "failures": 3,
-      "reliability": 0.4,
+      "completions": 6,
+      "failures": 4,
+      "reliability": 0.6,
       "last_completed": "2026-08-17",
+      "fail_reason": "3/9 stages ok; next: resolve stage:build"
+    },
+    {
+      "id": "D03",
+      "name": "Review overnight automations and watchdogs",
+      "cadence": "daily",
+      "claude_role": "terminal_readonly",
+      "completions": 7,
+      "failures": 3,
+      "reliability": 0.7,
+      "last_completed": "2026-08-17",
+      "fail_reason": "3/9 stages ok; next: resolve stage:build"
+    },
+    {
+      "id": "D16",
+      "name": "Produce content, copy, SEO, AEO, and GEO deliverables",
+      "cadence": "daily",
+      "claude_role": "maker",
+      "completions": 7,
+      "failures": 2,
+      "reliability": 0.78,
+      "last_completed": "2026-08-18",
+      "fail_reason": "3/9 stages ok; next: resolve stage:build"
+    },
+    {
+      "id": "W04",
+      "name": "Build the content and creative production calendar",
+      "cadence": "weekly",
+      "claude_role": "maker",
+      "completions": 7,
+      "failures": 2,
+      "reliability": 0.78,
+      "last_completed": "2026-08-18",
       "fail_reason": "3/9 stages ok; next: resolve stage:build"
     }
   ],
@@ -170,18 +205,18 @@
       "name": "Build the content and creative production calendar",
       "cadence": "weekly",
       "claude_role": "maker",
-      "completions": 3,
-      "failures": 0,
-      "reliability": 1,
+      "completions": 7,
+      "failures": 2,
+      "reliability": 0.78,
       "last_completed": "2026-08-18",
-      "fail_reason": null
+      "fail_reason": "3/9 stages ok; next: resolve stage:build"
     },
     {
       "id": "W10",
       "name": "Run the executive weekly review",
       "cadence": "weekly",
       "claude_role": "critic",
-      "completions": 3,
+      "completions": 7,
       "failures": 0,
       "reliability": 1,
       "last_completed": "2026-08-18",
@@ -192,7 +227,7 @@
       "name": "Evaluate agents, permissions, and output quality",
       "cadence": "monthly",
       "claude_role": "critic",
-      "completions": 3,
+      "completions": 7,
       "failures": 0,
       "reliability": 1,
       "last_completed": "2026-08-18",
@@ -203,7 +238,7 @@
       "name": "Audit scheduled work, usage, and cost",
       "cadence": "monthly",
       "claude_role": "critic",
-      "completions": 3,
+      "completions": 7,
       "failures": 0,
       "reliability": 1,
       "last_completed": "2026-08-18",
@@ -214,7 +249,7 @@
       "name": "Audit client and account separation",
       "cadence": "monthly",
       "claude_role": "critic",
-      "completions": 3,
+      "completions": 7,
       "failures": 0,
       "reliability": 1,
       "last_completed": "2026-08-18",
@@ -225,7 +260,7 @@
       "name": "Refresh operating rules, brand voice, and design truth",
       "cadence": "monthly",
       "claude_role": "architect",
-      "completions": 3,
+      "completions": 7,
       "failures": 0,
       "reliability": 1,
       "last_completed": "2026-08-18",
@@ -269,6 +304,10 @@
       "cadence": "event"
     }
   ],
-  "dry_run": true,
-  "written_at": "2026-09-02T02:32:58.290Z"
+  "dry_run": false,
+  "artifacts": [
+    "12_Brain/11_Craft/2026-09-08 - operating brief.md",
+    "12_Brain/11_Craft/00_Index.md"
+  ],
+  "written_at": "2026-09-08T13:05:11.655Z"
 }

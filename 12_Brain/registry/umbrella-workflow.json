@@ -1,0 +1,188 @@
+{
+  "workflow_id": "competitive-task-orchestrator",
+  "version": "1.0.0",
+  "purpose": "One daily umbrella workflow with parallel agent lanes. Replaces fragmented morning, learning, hygiene, and consolidation automations.",
+  "owner": "marketing-chief",
+  "schedule_utc": "0 13 * * *",
+  "approval_tier": 0,
+  "source_refs": [
+    "[[11_Agents/64gb Morning Orchestrator Spec 2026-07-08]]",
+    "[[11_Agents/Cloud Routine Prompts 2026-09-05]]",
+    "[[12_Brain/01_Captures/sessions/2026-09-05 - pr-sweep-and-client-archive]]",
+    "[[System/competitive-task-definition]]"
+  ],
+  "supersedes": [
+    {
+      "id": "cursor-competitive-task-consolidation",
+      "note": "Retire daily draft-PR pattern; use this workflow and commit briefs to main."
+    },
+    {
+      "id": "claude-daily-learning-loop",
+      "cron": "0 4 * * *",
+      "folded_into": "learn"
+    },
+    {
+      "id": "claude-nightly-vault-hygiene",
+      "cron": "0 6 * * *",
+      "folded_into": "hygiene"
+    },
+    {
+      "id": "claude-morning-brief",
+      "cron": "0 11 * * 1-5",
+      "folded_into": "morning"
+    }
+  ],
+  "kept_separate": [
+    "Claude-Autonomous-Daily-Driver (15m local gate loop)",
+    "Prospect Radar Next 20 (05:20 build factory)",
+    "marketing-chief-twice-daily-brief (infra health)",
+    "Gmail/Slack intake bridges"
+  ],
+  "env": {
+    "DILLON_CLIENT_OPERATIONS_ROOT": "${HOME}/client-operations-canonical",
+    "DILLON_REPORT_SOURCE_ROOTS": "${HOME}/client-operations-canonical/clients;${REPO}/Daily-Briefs/reports"
+  },
+  "phases": [
+    {
+      "phase_id": "preflight",
+      "parallel": false,
+      "lanes": [
+        {
+          "lane_id": "env-check",
+          "kind": "builtin",
+          "handler": "checkEnv",
+          "timeout_seconds": 30
+        }
+      ]
+    },
+    {
+      "phase_id": "intel",
+      "parallel": true,
+      "max_concurrency": 6,
+      "lanes": [
+        {
+          "lane_id": "connector-health",
+          "kind": "command",
+          "command": ["node", "_os/automation/bin/connector-health.js", "--json"],
+          "timeout_seconds": 60,
+          "blocked_exit": [2]
+        },
+        {
+          "lane_id": "queue-status",
+          "kind": "command",
+          "command": ["node", "_os/automation/bin/queue-status.js"],
+          "timeout_seconds": 60
+        },
+        {
+          "lane_id": "predict-work",
+          "kind": "command",
+          "command": ["node", "_os/automation/bin/predict-work.js", "--write"],
+          "timeout_seconds": 120,
+          "optional_flag": "--refresh-predictions"
+        },
+        {
+          "lane_id": "frontmatter-validate",
+          "kind": "command",
+          "command": ["node", "_os/automation/bin/frontmatter-validate.js"],
+          "timeout_seconds": 180,
+          "blocked_exit": [2]
+        }
+      ]
+    },
+    {
+      "phase_id": "morning",
+      "parallel": true,
+      "max_concurrency": 4,
+      "weekdays_only": true,
+      "lanes": [
+        {
+          "lane_id": "vault-pulse",
+          "kind": "agent",
+          "agent": "vault-pulse",
+          "skill": ".claude/skills/client-pulse/SKILL.md",
+          "outputs": ["Daily-Briefs/pulse-today.md"]
+        },
+        {
+          "lane_id": "inbox-brief",
+          "kind": "agent",
+          "agent": "gmail-intel",
+          "skill": ".claude/skills/inbox-brief/SKILL.md",
+          "outputs": ["Daily-Briefs/inbox-brief-YYYY-MM-DD.md"]
+        },
+        {
+          "lane_id": "metrics-pull",
+          "kind": "agent",
+          "agent": "domain-ads-seo",
+          "skill": ".claude/skills/metrics-pull/SKILL.md",
+          "outputs": ["Daily-Briefs/metrics-YYYY-MM-DD.md"]
+        },
+        {
+          "lane_id": "plan-today",
+          "kind": "agent",
+          "agent": "memory-consolidator",
+          "skill": ".claude/skills/plan-today/SKILL.md",
+          "outputs": ["Daily-Briefs/plan-YYYY-MM-DD.md", "Dashboard.md"]
+        }
+      ]
+    },
+    {
+      "phase_id": "learn",
+      "parallel": true,
+      "max_concurrency": 2,
+      "lanes": [
+        {
+          "lane_id": "agent-craft-brief",
+          "kind": "command",
+          "command": ["node", "_os/automation/bin/agent-craft-brief.js", "--days", "14", "--write"],
+          "timeout_seconds": 120
+        },
+        {
+          "lane_id": "codex-session-sync",
+          "kind": "agent",
+          "agent": "codex-session-sync",
+          "outputs": ["12_Brain/queue/codex-session-sync-YYYY-MM-DD.jsonl"]
+        }
+      ]
+    },
+    {
+      "phase_id": "hygiene",
+      "parallel": true,
+      "max_concurrency": 2,
+      "weekdays_only": false,
+      "lanes": [
+        {
+          "lane_id": "vault-clean",
+          "kind": "agent",
+          "agent": "vault-pulse",
+          "skill": ".claude/skills/vault-clean/SKILL.md",
+          "outputs": ["Daily-Briefs/vault-clean-YYYY-MM-DD.md"],
+          "schedule": "0 6 * * *"
+        },
+        {
+          "lane_id": "wiki-lint",
+          "kind": "agent",
+          "agent": "vault-pulse",
+          "skill": ".claude/skills/wiki-lint/SKILL.md",
+          "outputs": ["Daily-Briefs/wiki-lint-YYYY-MM-DD.md"],
+          "schedule": "0 6 * * *"
+        }
+      ]
+    },
+    {
+      "phase_id": "synthesize",
+      "parallel": false,
+      "lanes": [
+        {
+          "lane_id": "competitive-task-brief",
+          "kind": "agent",
+          "agent": "memory-consolidator",
+          "outputs": [
+            "Daily-Briefs/competitive-task-today.md",
+            "System/slack-action-queue.md",
+            "12_Brain/state/competitive-task-orchestrator.json"
+          ]
+        }
+      ]
+    }
+  ]
+}

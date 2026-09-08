@@ -1,0 +1,16 @@
+{
+  "run_id": "CTO-2026-09-08-1788872711608",
+  "started_at": "2026-09-08T13:05:11.608Z",
+  "finished_at": "2026-09-08T13:05:11.661Z",
+  "status": "ok",
+  "summary": {
+    "ok": 5,
+    "blocked": 1,
+    "failed": 0,
+    "deferred": 8,
+    "skipped": 0
+  },
+  "dry_run": false,
+  "automation_id": "competitive-task-orchestrator",
+  "written_at": "2026-09-08T13:05:11.662Z"
+}
