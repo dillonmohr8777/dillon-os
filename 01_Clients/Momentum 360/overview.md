@@ -4,8 +4,8 @@ client_id: momentum-360
 role: Agency operations and product enablement
 division: Momentum 360
 status: active
-last_touched: 2026-08-01
-next_action: Reconcile the agency-level operating scorecard while preserving separate client records, then resolve the open AI, CRM, call-attribution, and product rollout decisions.
+last_touched: 2026-09-07
+next_action: Get Jason to refresh the HubSpot browser session, grant conversations.read, and restore CallRail account 671942387 access — see [[12_Brain/05_Projects/2026-09-07 - Restore Momentum 360 HubSpot health]].
 due: none
 tags: [client, agency, hubspot, ai, reporting, operations]
 ---
@@ -26,3 +26,15 @@ client truth.
 - Rob committed to a Phase 1 website plan over the weekend; check for it next workday and convert it into owner-trigger-output-QA role cards. [Source](https://momentum3d.slack.com/archives/C1CFQBC79/p1785525137451239?thread_ts=1784812437.578939&cid=C1CFQBC79)
 - The GMBS lane reported its first premium close at $750. Verify the payment and HubSpot deal before updating financial truth or beginning document intake. [Source](https://momentum3d.slack.com/archives/C08PB4N3L6L/p1785526167428929)
 - A 28-second HeyGen snow-video preview exists; the free output is watermarked and final download requires a paid plan. Review first, and keep purchase and delivery approval-gated. [Source](gmail://message/19fbe5bf41663152)
+
+## HubSpot health drift - 2026-09-07
+
+The daily M360 AI & lead-response Slack report showed **Agent status:
+DEGRADED** every day from 2026-08-21 through 2026-09-01 (12 straight reports),
+then went silent (no report found 2026-09-02 through 2026-09-07). Root causes:
+an expired HubSpot Google-password browser session (needs Jason to log back
+in), a missing `conversations.read` scope on the portal 50612503 private app,
+and blocked CallRail account 671942387 membership. Read-only aggregate data
+(contact/task/CallRail counts) kept flowing throughout — Dillon's own
+2026-09-01 read was "a little bit dramatic," not a full outage. Full writeup,
+evidence, and next actions: [[12_Brain/05_Projects/2026-09-07 - Restore Momentum 360 HubSpot health]].
