@@ -19,6 +19,51 @@ Prepared from the deployed artifact on 2026-09-06 and 2026-09-07. Every claim
 below is either read out of the shipped bundle or fetched live from the site.
 Where something is unverified, it says so.
 
+## 0a. Correction, 2026-09-08: the app was redeployed before this was written
+
+Everything below section 0a was written from a copy of the bundle cached on
+2026-09-06 at 17:57 UTC. The site was redeployed on **2026-09-07 at 06:49:45Z**
+as deploy `6a9e5e8551c724ec38da209a`, roughly eight hours before this handoff was
+finished, and it was never re-checked against the live build. That is a research
+failure, not a change of circumstances, and the consequences are recorded here
+rather than quietly edited into the text.
+
+Re-verified against the live site on 2026-09-08:
+
+| Claim below | Status now |
+|---|---|
+| Google Maps API key is a plain literal in the public bundle | **No longer true of the current build** |
+| `createGooglePhotorealistic3DTileset` is compiled live | **Gone. Zero occurrences** |
+| Walkable city at `?mode=walk` is unreachable | **Still true. Zero `mode=walk` in the whole build** |
+
+The current bundle is `/assets/index-BCVm_5NT.js` at 547,573 bytes, up from
+276,611. Across it and both lazy chunks there are zero `AIza` literals, zero
+`GoogleMaps` references, zero `googleapis` references, and Cesium references
+fall from 142 to 3. The baked city path survives (`/data/city/index.json`,
+`EllipsoidTerrainProvider`, the USGS basemap). Someone removed the Google
+Photorealistic Tiles path entirely.
+
+**Rotating the key is still required and still outstanding.** Removing a
+credential from future builds does nothing about the period it was public.
+Anyone who fetched the old bundle still holds it. Section 4.1's conclusion
+stands even though its present-tense description does not.
+
+**Section 5.1 is therefore already done** and should not be re-implemented.
+Section 7.1, the browser network check for `tile.googleapis.com`, is moot: there
+is no call site left to verify.
+
+**Sections 4.2, 4.3, 4.4, 4.5 and 5.2 through 5.5 are unaffected** and are now
+the whole of the remaining work. The door on the walkable city is still shut.
+
+The walkable city has also now been seen rendering, which nothing in this
+document could previously claim. The deployed build was mirrored byte for byte
+and served from localhost, because Chromium in the authoring container cannot
+reach the live host through the proxy and disabling certificate verification was
+not an acceptable way around that. It runs: third-person guide on South Sydenham
+Street, streamed tiles, instanced traffic, working minimap, night mode with real
+lamp light, and the full nine-stop route. Under SwiftShader the app's own tier
+detection drops to mobile quality, so those frames understate it.
+
 ## 0. Read this before you plan
 
 The milestone brief asked for one small polished navigable Philadelphia area
