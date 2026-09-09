@@ -46,6 +46,8 @@ links instead of loading the entire vault.
 
 ## Work
 
+- [[01_Clients/Momentum 360/AI Division Library/README|Momentum AI Division Library]]: private videos, ebooks, blog drafts and source packages.
+
 - [[01_Clients/Client Index|Client Index]] — canonical client records.
 - `02_Campaigns/` — campaign plans and delivery.
 - `02_FullTimeJob/` — Align HCM work, kept separate from client revenue.
