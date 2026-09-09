@@ -95,12 +95,17 @@ try {
   for ($attempt = 0; $attempt -lt 4; $attempt += 1) {
     if ($selected) { break }
     $target = $areas[($day + $attempt) % $areas.Count]
+    # --imagery is the stage that mints logo evidence. It was 0 here, so every
+    # area this loop discovered arrived with `logo_provenance_missing` and could
+    # never satisfy the exact-logo gate select-ready.js enforces two lines below.
+    # Four discovery attempts then failed to find 20 eligible rows and the task
+    # exited 1 -- every morning, whatever the discovery found.
     Write-State -Status 'discovering' -Detail "Attempt $($attempt + 1): $($target.market) $($target.area)."
     Invoke-Logged -FilePath $node -Arguments @(
       (Join-Path $repo '_os\automation\bin\radar-refresh.js'),
       '--discover','320','--market',$target.market,'--area',$target.area,
       '--groups', $(if (($attempt % 2) -eq 0) { 'home-services,medical,legal' } else { 'industrial,spa-wellness,auto,retail,food' }),
-      '--recheck','0','--concurrency','12','--max-tier','0','--enrich','0','--render','0','--imagery','0'
+      '--recheck','0','--concurrency','12','--max-tier','0','--enrich','0','--render','0','--imagery','120'
     ) -Label "radar-$($target.market)-$($target.area)"
 
     Write-State -Status 'selecting' -Detail "Global duplicate and source preflight after $($target.area)."

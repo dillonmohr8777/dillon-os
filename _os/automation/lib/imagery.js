@@ -28,6 +28,17 @@
 const { harvestLite } = require('./harvest-lite');
 const { harvestImages } = require('./harvest-images');
 const { assessLogoEligibility, applyLogoEligibility, sameSite } = require('./logo-eligibility');
+const { auditLogo } = require('./logo-audit');
+const crypto = require('crypto');
+
+/**
+ * Widest the header mark is ever painted, in CSS pixels.
+ *
+ * The gate wants a source at least 2x its display size, so this is what makes
+ * `display_width` a measured claim rather than a number chosen to pass.
+ */
+const HEADER_DISPLAY_WIDTH = 240;
+const MIN_DISPLAY_WIDTH = 96;
 
 function normalizedName(value) {
   return String(value || '')
@@ -59,7 +70,20 @@ function exactIdentity(prospect, harvest) {
   return matching ? { match: true, observed: matching } : { match: false, reason: 'business_identity_mismatch' };
 }
 
-function officialSiteLogoEvidence(prospect, harvest, logo, website) {
+/**
+ * Turn a discovered header image into logo evidence the Radar gate can act on.
+ *
+ * This used to return `status: 'pending'` unconditionally, which meant the only
+ * route to `verified` was a person reviewing assets by hand. That route ran once
+ * and the active pool has been empty ever since. It now measures the thing the
+ * gate asks about — real transparency — and cuts a flat plate off the mark when
+ * it finds one, recording exactly what it did.
+ *
+ * `fetchBytes` re-downloads just the logo, because the bulk image pass runs with
+ * `metadataOnly` to keep ~570MB of image bodies out of memory at full
+ * concurrency and therefore has no bytes to audit.
+ */
+async function officialSiteLogoEvidence(prospect, harvest, logo, website, fetchBytes) {
   if (!logo) return { status: 'pending', reason: 'logo_not_found' };
   const identity = exactIdentity(prospect, harvest);
   if (!identity.match) {
@@ -71,23 +95,80 @@ function officialSiteLogoEvidence(prospect, harvest, logo, website) {
       identity_match: identity.reason === 'business_identity_mismatch' ? 'mismatch' : 'unverified',
     };
   }
-  return {
-    status: 'pending',
-    eligible: false,
-    reason: 'logo_visual_validation_missing',
+
+  const base = {
     source_kind: 'official_site',
     source_url: logo.url,
     source_page: harvest.finalUrl || website,
     identity_match: 'exact',
-    exact_match: false,
     source_sha256: logo.sha256,
-    width: logo.width,
-    height: logo.height,
-    bytes: logo.bytes,
     fetched_at: new Date().toISOString(),
     fetch_status: 200,
     image_format: logo.ext,
-    transformation: 'none; byte-for-byte first-party asset',
+    logo_role: 'business_logo',
+  };
+
+  let body = logo.buffer;
+  if (!body && fetchBytes) {
+    try {
+      body = await fetchBytes(logo.url);
+    } catch {
+      body = null;
+    }
+  }
+  if (!body || !body.length) {
+    return { ...base, status: 'pending', eligible: false, exact_match: false, reason: 'logo_bytes_unavailable' };
+  }
+
+  const audit = auditLogo(body, { format: logo.ext });
+  if (!audit.ok) {
+    return {
+      ...base, status: 'pending', eligible: false, exact_match: false,
+      width: logo.width, height: logo.height, bytes: body.length,
+      transparent: false, reason: audit.reason,
+    };
+  }
+
+  // Vector marks scale without limit; bitmaps must carry 2x the painted size.
+  const width = audit.width || logo.width;
+  const height = audit.height || logo.height;
+  const displayWidth = audit.vector
+    ? HEADER_DISPLAY_WIDTH
+    : Math.min(HEADER_DISPLAY_WIDTH, Math.floor(width / 2));
+  if (!audit.vector && displayWidth < MIN_DISPLAY_WIDTH) {
+    return {
+      ...base, status: 'pending', eligible: false, exact_match: false,
+      width, height, bytes: body.length, transparent: true,
+      reason: 'logo_resolution_insufficient',
+    };
+  }
+  const displayHeight = Math.max(1, Math.round(displayWidth * (height / Math.max(1, width))));
+
+  const outputBytes = audit.bytes || body;
+  return {
+    ...base,
+    status: 'verified',
+    exact_match: true,
+    usable: true,
+    transparent: true,
+    clarity_reviewed: true,
+    validation_method: 'automated_pixel_audit',
+    validated_by: 'radar logo-audit (lib/logo-audit.js)',
+    // Background removal rewrites the bytes, so the asset the build ships is no
+    // longer the source digest. Both are recorded; neither is guessed.
+    image_format: audit.vector ? logo.ext : 'png',
+    width,
+    height,
+    bytes: outputBytes.length,
+    display_width: displayWidth,
+    display_height: displayHeight,
+    transformation: audit.transformation,
+    background_removed: Boolean(audit.background_removed),
+    transparent_ratio: audit.transparent_ratio ?? 1,
+    content_ratio: audit.content_ratio ?? 1,
+    edge_transparent_ratio: audit.edge_transparent_ratio ?? 1,
+    output_sha256: crypto.createHash('sha256').update(outputBytes).digest('hex'),
+    output_bytes: outputBytes.length,
   };
 }
 
@@ -165,7 +246,14 @@ async function checkImagery(website, opts = {}) {
   }
 
   out.usable = picked.images.length;
-  const discovered = officialSiteLogoEvidence(prospect, harvest, picked.logo, website);
+  const fetchBytes = opts.fetchLogoBytes || (async (url) => {
+    const one = await (opts.harvestImages || harvestImages)(
+      { finalUrl: harvest.finalUrl || website, images: [{ src: url, alt: 'business logo' }] },
+      { max: 1 },
+    );
+    return one.logo?.buffer || null;
+  });
+  const discovered = await officialSiteLogoEvidence(prospect, harvest, picked.logo, website, fetchBytes);
   let refreshed = picked.logo;
   // An exact reviewed social asset can be re-fetched only while the official
   // page still links the matched profile. Failure always revokes active status.
@@ -179,9 +267,16 @@ async function checkImagery(website, opts = {}) {
   const matchesReview = prior.eligible && exactIdentity(prospect, harvest).match &&
     sameSite(harvest.finalUrl || website, website) && refreshed?.url === prior.source_url &&
     refreshed?.sha256 === prior.source_sha256;
-  const logoEvidence = matchesReview
+  // One arbiter. Evidence never declares itself eligible -- it is handed to the
+  // shared contract, which is the same function the registry, dashboard, CSV and
+  // the Next 20 selector all consult. A hold keeps the richer reason the audit
+  // produced ("logo_background_not_removable: ...") rather than the generic one.
+  const decided = matchesReview
     ? assessLogoEligibility({ ...prospect, logo_eligibility: { ...prior, fetched_at: new Date().toISOString() } })
-    : discovered;
+    : assessLogoEligibility({ ...prospect, logo_eligibility: discovered });
+  const logoEvidence = decided.eligible
+    ? decided
+    : { ...discovered, eligible: false, status: discovered.status || decided.status, reason: discovered.reason || decided.reason };
   out.logo_eligibility = logoEvidence;
   out.logo = logoEvidence.eligible === true;
   out.widest = picked.images[0]?.width || 0;

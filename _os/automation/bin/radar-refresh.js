@@ -443,13 +443,34 @@ async function main() {
   // question the grader cannot: their site being bad says nothing about whether
   // they own enough photographs to replace it with.
   if (args.imagery > 0) {
+    // Logo verification is a Radar-wide active-eligibility gate. Work through
+    // every unresolved row, not only rebuild targets, while keeping the daily
+    // network budget bounded and leaving clients/excluded history untouched.
+    //
+    // Ordering is the whole game here. Sorting by priority alone re-checked the
+    // identical top 60 rows every single morning: on 2026-09-09 all 60 carried
+    // `logo_checked: 2026-09-09` while 1,303 rows had never been checked once.
+    // A row that just failed must therefore go to the back of the queue, so the
+    // budget advances through the registry instead of grinding one head.
+    const LOGO_RECHECK_COOLDOWN_DAYS = 10;
+    const dayNumber = (value) => {
+      const t = Date.parse(value);
+      return Number.isFinite(t) ? Math.floor(t / 86400000) : -Infinity;
+    };
+    const todayNumber = dayNumber(today) === -Infinity ? Math.floor(Date.now() / 86400000) : dayNumber(today);
     const needCheck = Object.values(registry.prospects)
-      // Logo verification is a Radar-wide active-eligibility gate. Work through
-      // every unresolved row, not only rebuild targets, while keeping the daily
-      // network budget bounded and leaving clients/excluded history untouched.
       .filter((p) => p.lifecycle !== 'client' && p.lifecycle !== 'excluded' && p.website)
       .filter((p) => !radar.isRadarEligible(p) || imageryStale(p, { today }))
-      .sort((a, b) => (b.priority_score || 0) - (a.priority_score || 0))
+      // Never-checked rows first; after that, whatever waited longest. A row
+      // checked inside the cooldown is skipped entirely unless nothing else is
+      // waiting, so a permanently unverifiable logo cannot starve the registry.
+      .filter((p) => !p.logo_checked || todayNumber - dayNumber(p.logo_checked) >= LOGO_RECHECK_COOLDOWN_DAYS)
+      .sort((a, b) => {
+        const aChecked = a.logo_checked ? dayNumber(a.logo_checked) : -Infinity;
+        const bChecked = b.logo_checked ? dayNumber(b.logo_checked) : -Infinity;
+        if (aChecked !== bChecked) return aChecked - bChecked;
+        return (b.priority_score || 0) - (a.priority_score || 0);
+      })
       .slice(0, args.imagery);
 
     if (needCheck.length) {
