@@ -4,7 +4,7 @@ status: active
 generated: true
 generated_by: Update-SecondBrainMaps
 map_type: domain
-updated: 2026-09-02
+updated: 2026-09-08
 tags:
   - brain
   - map
@@ -34,6 +34,7 @@ Concepts, decisions, projects, research, reviews, memory, and brain operations.
 - [[12_Brain/01_Captures/Communications/2026-08-12 - daily-communications-comms-2026-08-12-day-1|2026-08-12 - daily-communications-comms-2026-08-12-day-1]]
 - [[12_Brain/01_Captures/Communications/2026-08-15 - daily-communications-comms-2026-08-15-day-1|2026-08-15 - daily-communications-comms-2026-08-15-day-1]]
 - [[12_Brain/01_Captures/Communications/2026-08-17 - daily-communications-comms-2026-08-17-day-1|2026-08-17 - daily-communications-comms-2026-08-17-day-1]]
+- [[12_Brain/01_Captures/GROK-HANDOFF-DILLON-OS|GROK-HANDOFF-DILLON-OS]]
 - [[12_Brain/01_Captures/Grok/2026-07-30 - agent-workflow-and-design-tools|2026-07-30 - agent-workflow-and-design-tools]]
 - [[12_Brain/01_Captures/Grok/2026-07-30 - daily-ai-workflow-design-and-consumer-pulse|2026-07-30 - daily-ai-workflow-design-and-consumer-pulse]]
 - [[12_Brain/01_Captures/Grok/2026-07-30 - daily-marketing-agent-workflow-mcp-plugin-and-web-build-frontier|2026-07-30 - daily-marketing-agent-workflow-mcp-plugin-and-web-build-frontier]]
@@ -52,6 +53,8 @@ Concepts, decisions, projects, research, reviews, memory, and brain operations.
 - [[12_Brain/01_Captures/sessions/2026-08-14 - google-rsvp-rail|2026-08-14 - google-rsvp-rail]]
 - [[12_Brain/01_Captures/sessions/2026-08-14 - send-ready-emails|2026-08-14 - send-ready-emails]]
 - [[12_Brain/01_Captures/sessions/2026-09-01 - fable-5-1-integration-session|2026-09-01 - fable-5-1-integration-session]]
+- [[12_Brain/01_Captures/sessions/2026-09-02 - repository-access-discovery|2026-09-02 - repository-access-discovery]]
+- [[12_Brain/01_Captures/sessions/2026-09-05 - pr-sweep-and-client-archive|2026-09-05 - pr-sweep-and-client-archive]]
 - [[12_Brain/01_Captures/sessions/session-log|session-log]]
 - [[12_Brain/01_Captures/Slack/2026-07-30 Live Slack Scan|2026-07-30 Live Slack Scan]]
 - [[12_Brain/01_Captures/Slack/2026-07-30 Slack Open Loops|2026-07-30 Slack Open Loops]]
@@ -126,6 +129,7 @@ Concepts, decisions, projects, research, reviews, memory, and brain operations.
 - [[12_Brain/05_Projects/2026-08-01 - Build client intelligence overlays|2026-08-01 - Build client intelligence overlays]]
 - [[12_Brain/05_Projects/2026-08-04 - Philadelphia 25 Site Factory Batch 3|2026-08-04 - Philadelphia 25 Site Factory Batch 3]]
 - [[12_Brain/05_Projects/2026-08-04 - Philadelphia 25 Site Factory Batch 4|2026-08-04 - Philadelphia 25 Site Factory Batch 4]]
+- [[12_Brain/05_Projects/2026-09-07 - Momentum AI division launch|2026-09-07 - Momentum AI division launch]]
 - [[12_Brain/05_Projects/Experiments/EXP-0B188F75 - keyv-shai-hulud-dependency-audit-and-install-freeze-gate|EXP-0B188F75 - keyv-shai-hulud-dependency-audit-and-install-freeze-gate]]
 - [[12_Brain/05_Projects/Experiments/EXP-16ED0D24 - missiondeck-mcp-parallel-codex|EXP-16ED0D24 - missiondeck-mcp-parallel-codex]]
 - [[12_Brain/05_Projects/Experiments/EXP-1E8B67EC - c2d2c-skill-browser-tools-mcp|EXP-1E8B67EC - c2d2c-skill-browser-tools-mcp]]
@@ -171,6 +175,7 @@ Concepts, decisions, projects, research, reviews, memory, and brain operations.
 - [[12_Brain/07_Reviews/2026-07-29 - Second brain foundation|2026-07-29 - Second brain foundation]]
 - [[12_Brain/07_Reviews/2026-08-15 - 120-Day Slack Operating System Audit|2026-08-15 - 120-Day Slack Operating System Audit]]
 - [[12_Brain/07_Reviews/2026-08-16 - Weekly Brain Synthesis|2026-08-16 - Weekly Brain Synthesis]]
+- [[12_Brain/07_Reviews/2026-09-04 - Weekly Brain Synthesis|2026-09-04 - Weekly Brain Synthesis]]
 - [[12_Brain/07_Reviews/Automation Runs/RUN-2026-07-30-0C310011 - build-and-independently-verify-a-fixture-landing-page|RUN-2026-07-30-0C310011 - build-and-independently-verify-a-fixture-landing-page]]
 - [[12_Brain/07_Reviews/Daily Intelligence/2026-08-01 - Communication Intelligence|2026-08-01 - Communication Intelligence]]
 - [[12_Brain/07_Reviews/Daily Intelligence/2026-08-05 - Communication Intelligence|2026-08-05 - Communication Intelligence]]
@@ -224,6 +229,7 @@ Concepts, decisions, projects, research, reviews, memory, and brain operations.
 - [[12_Brain/09_Ops/Health|Health]]
 - [[12_Brain/09_Ops/Knowledge Coverage|Knowledge Coverage]]
 - [[12_Brain/09_Ops/Netlify Credits Suspension 2026-07-30|Netlify Credits Suspension 2026-07-30]]
+- [[12_Brain/09_Ops/Repository Access Map|Repository Access Map]]
 - [[12_Brain/09_Ops/Runbook|Runbook]]
 - [[12_Brain/09_Ops/Schema|Schema]]
 - [[12_Brain/09_Ops/Web Escalation Architecture|Web Escalation Architecture]]
