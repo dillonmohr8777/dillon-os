@@ -71,6 +71,22 @@ The reusable lesson is at
 - **Roster supersession** —
   `Local source note: 12_Brain/04_Decisions/2026-09-07 - Align HCM registry record is superseded`
 
+> [!warning] Evidence gap — flagged 2026-09-09, unresolved
+> **None of the seven notes cited above exists in this repository.** Verified
+> against `main` at `7310838` by testing each path directly; all seven absent.
+> Four of this note's `source_refs` are `C:\Users\dillo\...` Windows paths, also
+> unreachable from the repository. Until the seven notes are pushed, every claim
+> on this page that rests on them is **unverified** in the vault's own sense — a
+> conclusion whose evidence trail leaves the repository and does not come back.
+>
+> The references are written as inline code rather than `[[wikilinks]]`, and this
+> note lives in `12_Brain/05_Projects/`, which `wiki-lint` does not scan, so no
+> hygiene pass will ever report this. See
+> [[12_Brain/11_Craft/2026-09-09 - daily learning review|2026-09-09 daily learning review]].
+>
+> Resolution: push the seven notes from the local vault and convert these lines
+> to `[[wikilinks]]`. Do not delete the citations — they record what was read.
+
 ## The Google route — live-verified 2026-09-07
 
 The machinery now includes a working Google AI Studio path on Dillon's key, which
