@@ -40,6 +40,7 @@ Client cluster for **Momentum 360**.
 - [[01_Clients/Momentum 360/AI Division Library/Editable Sources/ebook-04-the-small-business-ai-operating-system|ebook-04-the-small-business-ai-operating-system]]
 - [[01_Clients/Momentum 360/AI Division Library/Editable Sources/ebook-05-names-not-numbers|ebook-05-names-not-numbers]]
 - [[01_Clients/Momentum 360/AI Division Library/Editable Sources/index-DELIVERY-INDEX|index-DELIVERY-INDEX]]
+- [[01_Clients/Momentum 360/AI Division Library/Editable Sources/MODELS|MODELS]]
 - [[01_Clients/Momentum 360/AI Division Library/Editable Sources/planning-DIVISION|planning-DIVISION]]
 - [[01_Clients/Momentum 360/AI Division Library/Editable Sources/planning-MAC-ASKS|planning-MAC-ASKS]]
 - [[01_Clients/Momentum 360/AI Division Library/Editable Sources/planning-MARKETING-PLAN|planning-MARKETING-PLAN]]
