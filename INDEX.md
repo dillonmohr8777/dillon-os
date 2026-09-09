@@ -47,7 +47,7 @@ links instead of loading the entire vault.
 ## Work
 
 - [[01_Clients/Client Index|Client Index]] — canonical client records.
-- [[01_Clients/Momentum 360/philadelphia-service-world-handoff|Philadelphia Service World handoff]] - implementation handoff for the Momentum Philadelphia web app, with the exposed Google key and the unreachable walkable city.
+- [[01_Clients/Momentum 360/philadelphia-service-world-handoff|Philadelphia Service World handoff]] - implementation handoff for the Momentum Philadelphia web app: a finished walkable city that nothing links to, and a Google Maps key that was public until the 2026-09-07 redeploy removed it and still needs rotating.
 - `02_Campaigns/` — campaign plans and delivery.
 - `02_FullTimeJob/` — Align HCM work, kept separate from client revenue.
 - `03_Content/` — content plans and drafts.
