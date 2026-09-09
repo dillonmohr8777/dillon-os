@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-09-01",
+  "updated": "2026-09-09",
   "contract": "00_Inbox/Automation Deep Analysis 2026-07-29.md",
   "dependency": "12_Brain/DEPENDENCY_PR226.md",
   "automations": [
@@ -484,6 +484,39 @@
       "notes": "automation.toml status=ACTIVE with a real DAILY BYHOUR=9,17 rrule and dated run history through 2026-08-12; this is the twice-daily brief that actually runs on schedule. Read-only OmniRoute + ChatGPT Sites/SitesBridge health check, not an inbox/client/content brief.",
       "status": "active-scheduled",
       "note": "Codex scheduled automation (09:00/17:00) checking OmniRoute/ChatGPT-Sites infra health. Reviewed 2026-09-01 against am-report: not a duplicate; kept separate pending Dillon's confirmation."
+    },
+    {
+      "id": "competitive-task-orchestrator",
+      "name": "Competitive-task umbrella (parallel lanes, single daily brief)",
+      "lane": "command",
+      "tier": 0,
+      "cadence": "daily 13:00 UTC via Cursor automation",
+      "command": "node _os/automation/bin/competitive-task-run.js --refresh-predictions",
+      "path": "12_Brain/registry/umbrella-workflow.json",
+      "inputs": [
+        "00_Inbox/",
+        "01_Clients/",
+        "Daily-Briefs/",
+        "12_Brain/queue/",
+        "12_Brain/state/",
+        "System/approval-queue.md"
+      ],
+      "outputs": [
+        "Daily-Briefs/competitive-task-today.md",
+        "12_Brain/state/competitive-task-orchestrator.json",
+        "Daily-Briefs/umbrella-run-YYYY-MM-DD.json",
+        "System/slack-action-queue.md"
+      ],
+      "external_actions": false,
+      "owner": "cursor-automation",
+      "supersedes": [
+        "cursor-competitive-task-consolidation-daily-pr",
+        "claude-morning-brief-routine",
+        "claude-daily-learning-loop",
+        "claude-nightly-vault-hygiene"
+      ],
+      "notes": "One umbrella workflow with parallel command + agent lanes. Briefs commit to main; code uses one rolling PR. See System/competitive-task-definition.md.",
+      "status": "implemented"
     },
     {
       "id": "am-report",
