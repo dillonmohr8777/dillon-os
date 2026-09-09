@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-09-01",
+  "updated": "2026-09-09",
   "contract": "00_Inbox/Automation Deep Analysis 2026-07-29.md",
   "dependency": "12_Brain/DEPENDENCY_PR226.md",
   "automations": [
@@ -511,6 +511,31 @@
       "status": "implemented",
       "owner": "claude-code-skill",
       "note": "On-demand Claude Code skill, run by Dillon; never cron-scheduled. Reviewed 2026-09-01 against marketing-chief-twice-daily-brief: different content (morning inbox/client/content brief vs infra health), so not collapsed. Dillon to confirm whether one should absorb the other."
+    },
+    {
+      "id": "job-search-daily",
+      "name": "Daily remote job search — find, rank, and draft",
+      "lane": "career",
+      "tier": 0,
+      "cadence": "daily at 5:47 AM America/New_York",
+      "command": "node _os/automation/bin/job-search-daily.js --top 8",
+      "inputs": [
+        "02_FullTimeJob/JobSearch/profile/dillon-profile.json",
+        "02_FullTimeJob/JobSearch/profile/evidence.json",
+        "02_FullTimeJob/JobSearch/profile/sources.json",
+        "public job endpoints: remotive, arbeitnow, himalayas, jobicy, plus 30 Greenhouse/Lever/Ashby company boards"
+      ],
+      "outputs": [
+        "02_FullTimeJob/JobSearch/daily/<date>-ranked-roles.md",
+        "02_FullTimeJob/JobSearch/applications/<date>/*-draft.md",
+        "Daily-Briefs/job-search-<date>.md",
+        "12_Brain/state/job-search-daily.json"
+      ],
+      "external_actions": false,
+      "notes": "The first automation in this registry that serves the job search rather than the agency. Draft only: it never sends, submits, applies, or emails, and holds no credential that could. Remote is a hard gate (hybrid and on-site are rejected whatever the board's remote flag says), US eligibility is a second gate, and a fit floor of 52 stops a high-odds role that is the wrong job from reaching the list. Needs no secret, which is what lets it run unattended. Do NOT confuse with indeed-hiring-adapter: that one reads employer-side hiring signals for prospecting and needs INDEED_* credentials.",
+      "status": "active-scheduled",
+      "owner": "github-actions",
+      "owner_note": "Scheduled by .github/workflows/job-search-daily.yml and commits its output back to the branch. Runs in GitHub's cloud, so it does not depend on the Windows box being awake."
     }
   ],
   "gates": {

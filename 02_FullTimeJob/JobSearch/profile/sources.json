@@ -1,0 +1,69 @@
+{
+  "schema_version": 2,
+  "updated": "2026-09-09",
+  "note": "Only public, no-auth job endpoints. Nothing here needs a credential, which is what lets the daily run stay unattended. Indeed's Partner API is deliberately NOT used: _os/automation/lib/indeed-api.js holds employer-side hiring signals for prospecting and needs INDEED_* secrets that are not configured.",
+  "slug_note": "Every slug below returned HTTP 200 when probed on 2026-09-09. Companies move between Greenhouse, Lever and Ashby without notice, so a slug going 404 is expected drift, not a bug — the run logs it and carries on. When the source table in the daily report shows a board failing for a week, re-probe it and move it to the right platform here. Remote-only aggregators (himalayas, jobicy) were added on 2026-09-09 when remote became a hard requirement — a general board wastes most of its rows on on-site reqs.",
+  "aggregators": [
+    {
+      "id": "remotive",
+      "enabled": true,
+      "url": "https://remotive.com/api/remote-jobs",
+      "note": "Remote-first board. Its server-side category filter is unreliable, so the fetch is broad and filtering happens locally."
+    },
+    {
+      "id": "arbeitnow",
+      "enabled": true,
+      "url": "https://www.arbeitnow.com/api/job-board-api",
+      "note": "Mixed EU/US board. Most rows are non-US and get dropped by the location gate; kept for the US remote marketing rows the other sources miss."
+    },
+    {
+      "id": "himalayas",
+      "enabled": true,
+      "url": "https://himalayas.app/jobs/api",
+      "note": "Remote-only board, ~104k live rows, paginated 20 at a time. Its locationRestrictions field is authoritative: an empty list means genuinely open, so it maps cleanly onto the remote gate."
+    },
+    {
+      "id": "jobicy",
+      "enabled": true,
+      "url": "https://jobicy.com/api/v2/remote-jobs",
+      "note": "Remote-only board with an industry filter and a jobGeo field that usually names the country outright. Queried unfiltered plus marketing and business."
+    }
+  ],
+  "greenhouse_boards": [
+    "anthropic",
+    "scaleai",
+    "figma",
+    "vercel",
+    "webflow",
+    "airtable",
+    "amplitude",
+    "asana",
+    "hubspot",
+    "klaviyo",
+    "mongodb",
+    "instacart",
+    "duolingo",
+    "cloudflare",
+    "sourcegraph91",
+    "attentive",
+    "togetherai",
+    "netlify"
+  ],
+  "lever_boards": [
+    "mistral"
+  ],
+  "ashby_boards": [
+    "openai",
+    "notion",
+    "ramp",
+    "clickup",
+    "elevenlabs",
+    "cursor",
+    "linear",
+    "replit",
+    "harvey",
+    "sierra",
+    "decagon"
+  ],
+  "board_note": "AI-forward product companies plus marketing-tech firms where an agency operator's paid/SEO/attribution background transfers. Boards that 404 are skipped silently — one dead company slug must never cost the day's list."
+}

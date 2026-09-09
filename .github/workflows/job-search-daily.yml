@@ -1,0 +1,166 @@
+name: Job search — daily ranked roles
+
+# 09:47 UTC = 05:47 America/New_York during EDT, which puts the day's list in
+# Daily-Briefs before the 07:00 report in System/OS Config.md. Off the hour on
+# purpose: several of these boards are free community endpoints and :00 is when
+# every naive cron in the world hits them.
+#
+# This is the first automation in the estate that serves the job search rather
+# than the agency. It needs no secret — every source is public — which is what
+# lets it run unattended with nothing to approve.
+on:
+  schedule:
+    - cron: '47 9 * * *'
+  workflow_dispatch:
+    inputs:
+      top:
+        description: 'How many roles to draft application material for'
+        required: false
+        default: '8'
+      date:
+        description: 'Override the run date (YYYY-MM-DD), for backfilling'
+        required: false
+        default: ''
+
+# One run at a time. Two concurrent runs would both write the same dated files
+# and the second push would clobber the first.
+concurrency:
+  group: job-search-daily
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  sweep:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # The run commits its output back, so it needs a real branch rather
+          # than a detached HEAD at the triggering SHA.
+          ref: ${{ github.ref_name }}
+          fetch-depth: 1
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      # Dependency-free by design, so the guard against a regression is the test
+      # suite rather than a lockfile. Failing here means the scoring changed
+      # shape and the day's list would be wrong — better no list than a wrong one.
+      - name: Test the scoring and drafting
+        run: node --test _os/automation/tests/job-search.test.js
+
+      - name: Find and rank today's roles
+        run: |
+          set -o pipefail
+          node _os/automation/bin/job-search-daily.js \
+            --top "${{ github.event.inputs.top || '8' }}" \
+            ${{ github.event.inputs.date && format('--date {0}', github.event.inputs.date) || '' }} \
+            2>&1 | tee job-search.log
+
+      # The drafts quote evidence that gets read by people outside the company.
+      # This is the stop on a source_ref or an evidence edit accidentally
+      # carrying a credential, an address, or a client's confidential deal name
+      # into a cover letter.
+      - name: Guard the drafts before they are committed
+        if: always()
+        run: |
+          fail=0
+          for f in $(find 02_FullTimeJob/JobSearch/applications 02_FullTimeJob/JobSearch/daily Daily-Briefs -name 'job-search-*.md' -o -path '*JobSearch*' -name '*.md' 2>/dev/null); do
+            [ -f "$f" ] || continue
+            if grep -qiE '(api[_-]?key|secret|password|bearer |bw://)' "$f"; then
+              echo "::error file=$f::credential-shaped value in a draft"
+              fail=1
+            fi
+            if grep -qE 'C:\\\\Users\\\\' "$f"; then
+              echo "::error file=$f::a private Windows path is present"
+              fail=1
+            fi
+          done
+          if [ "$fail" = "1" ]; then
+            echo "Refusing to commit. Fix profile/evidence.json before re-running."
+            exit 1
+          fi
+          echo "drafts are clean"
+
+      # `always()`: a source outage should still leave the day's partial list in
+      # the vault. Losing a morning's ranking to one dead board is the failure
+      # mode this avoids.
+      - name: Commit the day's list
+        if: always()
+        run: |
+          git config user.name  "job-search-bot"
+          git config user.email "noreply@needmomentum.com"
+          # Explicit pathspecs only — never `git add -A` from the root.
+          git add -A 02_FullTimeJob/JobSearch Daily-Briefs 12_Brain/state/job-search-daily.json || true
+          if git diff --cached --name-only | grep -q '^12_Brain/private/'; then
+            echo "::error::a file under 12_Brain/private is staged — refusing to push"
+            exit 1
+          fi
+          if git diff --cached --quiet; then
+            echo "nothing changed — no commit"
+            exit 0
+          fi
+          SUMMARY=$(node -e "
+            const s=require('./12_Brain/state/job-search-daily.json');
+            const t=(s.top||[])[0];
+            process.stdout.write(
+              \`\${s.stats.eligible} eligible of \${s.stats.raw_count} screened\` +
+              (t ? \` · top: \${t.title} @ \${t.company} (P\${t.priority})\` : '')
+            );
+          " 2>/dev/null || echo "daily run")
+          git commit -m "Job search $(date -u +%Y-%m-%d): ${SUMMARY}"
+          for i in 1 2 3 4; do
+            git push && break
+            echo "push failed, retrying in $((2**i))s"
+            sleep $((2**i))
+            git pull --rebase --autostash || true
+          done
+
+      - name: Surface the run in the job summary
+        if: always()
+        run: |
+          {
+            echo "## Job search $(date -u +%Y-%m-%d)"
+            echo
+            if [ -f 12_Brain/state/job-search-daily.json ]; then
+              node -e "
+                const s=require('./12_Brain/state/job-search-daily.json');
+                console.log('| | |'); console.log('|---|---|');
+                console.log(\`| Status | \${s.status} |\`);
+                console.log(\`| Screened | \${s.stats.raw_count} |\`);
+                console.log(\`| Eligible | \${s.stats.eligible} |\`);
+                console.log(\`| Sources healthy | \${s.stats.sources_ok}/\${s.stats.sources_total} |\`);
+                console.log(\`| Drafts written | \${(s.outputs.drafts||[]).length} |\`);
+                console.log('');
+                console.log('### Top roles');
+                console.log('| Role | Company | Fit | Odds | Priority |');
+                console.log('|---|---|---|---|---|');
+                (s.top||[]).forEach(t=>console.log(\`| [\${t.title}](\${t.url}) | \${t.company} | \${t.fit} | \${t.odds} | \${t.priority} |\`));
+                const dead=(s.stats.sources||[]).filter(x=>!x.ok);
+                if (dead.length) {
+                  console.log('');
+                  console.log('### Sources that failed');
+                  dead.forEach(d=>console.log(\`- \\\`\${d.source}\\\` — \${d.error}\`));
+                  console.log('');
+                  console.log('A board that fails for a week has probably moved platform. Re-probe and update \\\`profile/sources.json\\\`.');
+                }
+              "
+            else
+              echo 'No run state written — the sweep did not reach the write step.'
+            fi
+            echo
+            echo "Draft only. Nothing was sent, submitted, or applied to."
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: job-search-log
+          path: job-search.log
+          retention-days: 14
+          if-no-files-found: ignore
