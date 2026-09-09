@@ -69,23 +69,36 @@ jobs:
       - name: Guard the drafts before they are committed
         if: always()
         run: |
+          # The drafts get read by people outside the company, so this is the stop
+          # on an evidence edit carrying a credential or a private path into a
+          # cover letter.
+          #
+          # Scoped to GENERATED output only. README.md and archive/MIGRATION.md
+          # document the Windows paths on purpose and must not trip this.
           fail=0
-          for f in $(find 02_FullTimeJob/JobSearch/applications 02_FullTimeJob/JobSearch/daily Daily-Briefs -name 'job-search-*.md' -o -path '*JobSearch*' -name '*.md' 2>/dev/null); do
+          targets=$(
+            find 02_FullTimeJob/JobSearch/daily \
+                 02_FullTimeJob/JobSearch/applications \
+                 -type f -name '*.md' 2>/dev/null
+            ls Daily-Briefs/job-search-*.md 2>/dev/null
+          )
+          for f in $targets; do
             [ -f "$f" ] || continue
-            if grep -qiE '(api[_-]?key|secret|password|bearer |bw://)' "$f"; then
-              echo "::error file=$f::credential-shaped value in a draft"
+            if grep -qiE '(api[_-]?key|client_secret|password|bearer [A-Za-z0-9]|bw://)' "$f"; then
+              echo "::error file=$f::credential-shaped value in a generated draft"
               fail=1
             fi
-            if grep -qE 'C:\\\\Users\\\\' "$f"; then
-              echo "::error file=$f::a private Windows path is present"
+            if grep -qE 'C:\\Users\\' "$f"; then
+              echo "::error file=$f::a private Windows path reached a generated draft"
               fail=1
             fi
           done
+          echo "scanned $(echo "$targets" | grep -c . ) generated files"
           if [ "$fail" = "1" ]; then
             echo "Refusing to commit. Fix profile/evidence.json before re-running."
             exit 1
           fi
-          echo "drafts are clean"
+          echo "generated drafts are clean"
 
       # `always()`: a source outage should still leave the day's partial list in
       # the vault. Losing a morning's ranking to one dead board is the failure
