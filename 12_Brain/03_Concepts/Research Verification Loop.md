@@ -37,4 +37,4 @@ Run it: `/research-sweep <question>` (weekly, on the niche).
 
 ## Links
 
-- [[Second Brain Architecture]] · [[Context Economy]]
+- [[12_Brain/03_Concepts/Living Second Brain|Living Second Brain]] · [[Context Economy]]

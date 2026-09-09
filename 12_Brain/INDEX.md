@@ -30,12 +30,17 @@ in the same change.
 - [[12_Brain/02_Entities/Claude in Chrome|Claude in Chrome]] — browser-driving extension for local apply sessions.
 - [[12_Brain/02_Entities/Ops Box (EliteDesk 800 G4)|Ops Box (EliteDesk 800 G4)]] — always-on Ops machine (no credentials in Git).
 - [[12_Brain/02_Entities/LandingFolio MCP|LandingFolio MCP]] — layout-reference MCP for site builds; sandbox-only until its Inspector check passes.
+- [[12_Brain/02_Entities/Chronos-2|Chronos-2]] — Amazon's 120M-param time-series foundation model; sandbox canary for the forecast-specialist role, not a production default.
+- [[12_Brain/02_Entities/Cloudflare D1 Radar|Cloudflare D1 Radar]] — live backend for [[12_Brain/05_Projects/Prospect Radar V2|Prospect Radar V2]]: a D1 database plus read-only Worker serving the prospect queue.
+- [[12_Brain/02_Entities/Higgsfield MCP|Higgsfield MCP]] — hosted image/video generation MCP surfaced by the Fable 5.1 launch link sweep.
+- [[12_Brain/02_Entities/TimesFM|TimesFM]] — Google Research time-series foundation model family; forecast-specialist candidate, not an orchestrator or client-reporting voice.
+- [[12_Brain/02_Entities/Vibe Prospecting|Vibe Prospecting]] — paid business/prospect-data MCP powering `franchise-list` and future lead-pull skills.
 
 Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Index]].
 
 ## Concepts
 
-- [[12_Brain/03_Concepts/Second Brain Architecture|Second Brain Architecture]] — vault-as-codebase: raw → compiled pages → linked graph.
+- [[12_Brain/03_Concepts/Living Second Brain|Living Second Brain]] — a useful second brain reconciles new evidence into canonical knowledge instead of growing as an append-only pile. (Replaces the deleted "Second Brain Architecture" page — see wiki-lint 2026-09-09.)
 - [[12_Brain/03_Concepts/Context Economy|Context Economy]] — read by trail not sweep; tier model use.
 - [[12_Brain/03_Concepts/Research Verification Loop|Research Verification Loop]] — fan-out research with a skeptic gate.
 - [[12_Brain/03_Concepts/Truth Hierarchy|Truth Hierarchy]] — live surfaces beat memory beat artifacts.
@@ -48,6 +53,24 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/03_Concepts/Conversion Tracking Setup 2026|Conversion Tracking Setup 2026]] — generic setup patterns (no account IDs).
 - [[12_Brain/03_Concepts/Google Ads Conversion Optimization 2026|Google Ads Conversion Optimization 2026]] — generic optimization patterns.
 - [[12_Brain/03_Concepts/Meta Lead Ads Optimization 2026|Meta Lead Ads Optimization 2026]] — generic Lead Ads patterns.
+- [[12_Brain/03_Concepts/Marketing Intelligence Operating System|Marketing Intelligence Operating System]] — canonical map connecting demand research, content, AI discovery, paid media, websites, automation, measurement, and learning.
+- [[12_Brain/03_Concepts/AEO GEO and AI Discovery|AEO GEO and AI Discovery]] — AEO/GEO extend SEO through answer extractability, entity consistency, corroborating sources, and outcome-aware citation measurement.
+- [[12_Brain/03_Concepts/AI Visibility Measurement|AI Visibility Measurement]] — AI visibility measured with fixed prompts, platform-native citation data, referral analytics, and downstream outcomes.
+- [[12_Brain/03_Concepts/Entity Authority and Citation Readiness|Entity Authority and Citation Readiness]] — authority comes from consistent identity, explicit relationships, original evidence, and corroboration.
+- [[12_Brain/03_Concepts/Keyword Research and Search Demand|Keyword Research and Search Demand]] — source-labeled demand model joining real queries, intent, economics, pages, and outcomes.
+- [[12_Brain/03_Concepts/Search Intent and Topic Architecture|Search Intent and Topic Architecture]] — search intent connects job/decision stage to page type, evidence, internal links, and conversion path.
+- [[12_Brain/03_Concepts/Content Systems and Distribution|Content Systems and Distribution]] — content compounds when source-backed demand becomes a canonical asset, distributed proof, and a refresh loop.
+- [[12_Brain/03_Concepts/Local Search and Maps Site Parity|Local Search and Maps Site Parity]] — local visibility depends on verified parity across business, maps profiles, website, directories, and reviews.
+- [[12_Brain/03_Concepts/High Craft Website Factory|High Craft Website Factory]] — scales reusable production while preserving distinct art direction, accuracy, accessibility, performance, and taste.
+- [[12_Brain/03_Concepts/Qualified Pipeline Measurement|Qualified Pipeline Measurement]] — move from raw platform events to reconciled qualified opportunities, appointments, and booked value.
+- [[12_Brain/03_Concepts/Client Reporting and Outcome Scoreboards|Client Reporting and Outcome Scoreboards]] — a client report is a decision instrument preserving definitions, sources, freshness, and uncertainty.
+- [[12_Brain/03_Concepts/Prospect to Build to Outreach Pipeline|Prospect to Build to Outreach Pipeline]] — the prospect engine converts source-verified opportunities into qualified builds, outreach, and a learning ledger.
+- [[12_Brain/03_Concepts/Agent Governance and Verification|Agent Governance and Verification]] — one accountable orchestrator routes bounded work, requires evidence and independent checking, and preserves human approval.
+- [[12_Brain/03_Concepts/Automation and Workflow Engineering|Automation and Workflow Engineering]] — reliable automation is stateful, idempotent, observable, with exact routing, evidence, approval boundaries, and recovery.
+- [[12_Brain/03_Concepts/Evidence Context and Learning Loops|Evidence Context and Learning Loops]] — durable learning joins immutable evidence to canonical knowledge, decisions, outcomes, and future precedent.
+- [[12_Brain/03_Concepts/Predictive Work Planner|Predictive Work Planner]] — predict the likely work package and numeric workload separately, using an evidence router plus a gated forecast evaluator.
+- [[12_Brain/03_Concepts/Specialist Forecast Router|Specialist Forecast Router]] — route time series to a dedicated forecast specialist; let the LLM interpret quantile bands into one gated next action.
+- [[12_Brain/03_Concepts/Confirm the Artifact Not the Action|Confirm the Artifact Not the Action]] — a change you believe you made is more dangerous than one you know you didn't; verify by reading the produced artifact.
 
 ## Raw captures (Git-safe)
 

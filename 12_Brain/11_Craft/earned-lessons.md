@@ -228,3 +228,36 @@ routine that was still keying dedupe daily until the cadence fix landed on 08-18
 **How to apply.** Treat the brief's `unreliable` list as a queue to investigate, not a
 list of broken things. Read `last_completed` and the failure timestamps before concluding
 anything is currently failing.
+
+---
+
+## 2026-09-09 — A hygiene report that says "no issues" is a claim about the resolver, not the vault
+
+**Lesson.** `vault-clean-2026-09-06.md`, `vault-clean-2026-09-07.md`,
+`wiki-lint-2026-09-06.md`, and `wiki-lint-2026-09-07.md` each reported zero broken
+links, zero empty notes, zero stale inbox items, and zero orphans. A real scan run
+2026-09-09 against the same tree (content essentially unchanged since 09-07) found 57+
+unresolved `[[wikilinks]]`, 2 empty 0-byte inbox notes, 17 inbox items 22-153 days past
+the 14-day threshold, 5 orphaned entity pages, and 19 orphaned concept pages missing
+from `12_Brain/INDEX.md`. One of the dead links (`Second Brain Architecture`, deleted
+2026-09-01 in an unrelated registry-cleanup commit `62d05c53` with no mention in the
+commit message) had also been silently failing `_os/test/brain-hud.test.js`'s
+`requiredBrainPaths()` check since that date — a deterministic test, not a subjective
+report, was red for over a week and nothing surfaced it.
+
+**Evidence.** A naive link resolver that strips file extensions incorrectly (matching
+`"Bases/Command Center.base"` against a basename index built without stripping
+`.base`) produces a wall of false positives on real Bases; the opposite failure mode —
+a resolver that is *too* permissive, or simply never implemented — produces false
+negatives and a clean-looking report. The prior three runs' "no issues" output is
+consistent with the latter: no artifact, script, or count breakdown was left behind to
+show the check actually walked the tree, only a prose claim. `12_Brain/state/` holds
+receipts for automation routines but neither vault-clean nor wiki-lint write one.
+
+**How to apply.** A hygiene report must show its work: file counts scanned, and for
+"zero found" claims, note what the check actually did (e.g. "759 files, N wikilinks
+extracted, 0 unresolved after excluding doc-example prose"). A bare "no dead links
+found" with no denominator is not verifiable and should be treated as unverified until
+it carries one. Corollary for INDEX sync specifically: orphan checks need a real
+folder-listing-vs-INDEX-listing diff, not a spot check — 24 orphaned pages is not a
+finding a quick skim would produce.

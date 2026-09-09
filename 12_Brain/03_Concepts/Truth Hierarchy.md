@@ -23,4 +23,4 @@ Order of authority for any "what's true right now" question:
 Corollary for this vault: pages carry `updated:` dates precisely so the reader knows how far down this hierarchy they're operating. A stale page loses to a live check every time — and gets corrected afterward.
 
 ## Links
-- [[12_Brain/03_Concepts/Second Brain Architecture|Second Brain Architecture]] · [[12_Brain/03_Concepts/Access Verification Discipline|Access Verification Discipline]]
+- [[12_Brain/03_Concepts/Living Second Brain|Living Second Brain]] · [[12_Brain/03_Concepts/Access Verification Discipline|Access Verification Discipline]]
