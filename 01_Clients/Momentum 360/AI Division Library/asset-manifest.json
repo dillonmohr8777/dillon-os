@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "snapshot_utc": "2026-09-09T00:18:46.360625+00:00",
+  "snapshot_utc": "2026-09-08T20:18:46.360625-04:00",
   "production_date_eastern": "2026-09-08",
   "repository": "https://github.com/dillonmohr8777/dillon-os",
   "release_tag": "momentum-ai-assets-2026-09-08",
@@ -4600,5 +4600,43 @@
   "source_copy_transforms": [
     "Vault metadata prepended",
     "Historical wikilinks missing from this repository snapshot retained as explicit local source references; canonical files unchanged"
+  ],
+  "supporting_sources": [
+    {
+      "name": "BUSINESS-EVIDENCE.md",
+      "source": "C:\\Users\\dillo\\Documents\\Codex\\projects\\client-operations\\clients\\momentum-360\\deliverables\\2026-09-04-ai-division-plan\\BUSINESS-EVIDENCE.md",
+      "source_sha256": "ad329068374e97e6416292769f30358c5e9c3a7f7a73c78b53ffa0d992b09bfd",
+      "repository_path": "01_Clients/Momentum 360/AI Division Library/Editable Sources/BUSINESS-EVIDENCE.md"
+    },
+    {
+      "name": "economics.py",
+      "source": "C:\\Users\\dillo\\Documents\\Codex\\projects\\client-operations\\clients\\momentum-360\\deliverables\\2026-09-04-ai-division-plan\\economics.py",
+      "source_sha256": "289431a4fb30f86e4af1ec95db22ca444dc5a49277c7ba7c67d09e10e06b6898",
+      "repository_path": "01_Clients/Momentum 360/AI Division Library/Editable Sources/economics.py"
+    },
+    {
+      "name": "economics.csv",
+      "source": "C:\\Users\\dillo\\Documents\\Codex\\projects\\client-operations\\clients\\momentum-360\\deliverables\\2026-09-04-ai-division-plan\\economics.csv",
+      "source_sha256": "b01b6ad69952e7cee74537777e274c4c2723880efdf66868f46193609ab881ee",
+      "repository_path": "01_Clients/Momentum 360/AI Division Library/Editable Sources/economics.csv"
+    },
+    {
+      "name": "economics.json",
+      "source": "C:\\Users\\dillo\\Documents\\Codex\\projects\\client-operations\\clients\\momentum-360\\deliverables\\2026-09-04-ai-division-plan\\economics.json",
+      "source_sha256": "0e2e8586fc7b8c5294bd0cb4475456d6cf12d71270b586a062d3bf7dca9517f0",
+      "repository_path": "01_Clients/Momentum 360/AI Division Library/Editable Sources/economics.json"
+    },
+    {
+      "name": "BENCH.md",
+      "source": "C:\\Users\\dillo\\Documents\\Codex\\projects\\client-operations\\clients\\momentum-360\\deliverables\\2026-09-07-ai-division-claude-design\\BENCH.md",
+      "source_sha256": "009d22cfd230686a84eebc436239695fda603f1881c2bf06de2e0fa5103cc8bb",
+      "repository_path": "01_Clients/Momentum 360/AI Division Library/Editable Sources/BENCH.md"
+    },
+    {
+      "name": "MODELS.md",
+      "source": "C:\\Users\\dillo\\Documents\\Codex\\projects\\client-operations\\clients\\momentum-360\\deliverables\\2026-09-07-ai-division-claude-design\\MODELS.md",
+      "source_sha256": "14d9493d1c7d819ecd119cec5dd7817777bed28b31cfca71f2c8e2fe98790425",
+      "repository_path": "01_Clients/Momentum 360/AI Division Library/Editable Sources/MODELS.md"
+    }
   ]
 }
