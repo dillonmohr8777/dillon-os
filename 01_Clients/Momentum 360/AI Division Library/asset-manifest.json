@@ -469,7 +469,9 @@
           "duration": "18.000000",
           "size": "6978998"
         }
-      }
+      },
+      "version_status": "replacement-pending",
+      "known_followup": "Portrait message clipping; both aspects scheduled for revised export"
     },
     {
       "name": "review--ai04-9x16-opaque-navy-review.mp4",
@@ -497,7 +499,9 @@
           "duration": "18.000000",
           "size": "5131545"
         }
-      }
+      },
+      "version_status": "replacement-pending",
+      "known_followup": "Portrait message clipping; both aspects scheduled for revised export"
     },
     {
       "name": "review--ai05-16x9-opaque-navy-review.mp4",
@@ -4638,5 +4642,10 @@
       "source_sha256": "14d9493d1c7d819ecd119cec5dd7817777bed28b31cfca71f2c8e2fe98790425",
       "repository_path": "01_Clients/Momentum 360/AI Division Library/Editable Sources/MODELS.md"
     }
-  ]
+  ],
+  "pending_revisions": {
+    "ai04": "Two replacement exports pending; prior portrait message clipping identified after initial snapshot acceptance",
+    "ai01": "Two stronger-opening Chain Reaction derivative exports pending",
+    "count_rule": "Revisions do not add new narrative segments"
+  }
 }

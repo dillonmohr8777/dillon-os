@@ -14,11 +14,13 @@ source_refs:
 
 The central private archive of Momentum's AI launch videos, ebooks, article drafts, editable sources, artwork, deck and native Claude Design packages. Canonical production files remain in client-operations; this is the portable repository snapshot from September 8, 2026 (Eastern).
 
-**39 completed current Claude Design MP4s:** 36 new silent review exports covering 18 narrative segments in landscape and portrait, plus three preserved refined earlier films. The 18 segments belong to 10 major directions: three standalone films, four Next Chapter episodes, six character shorts, and five later AI films. Do not count each aspect as another story, or source footage, tests, rejected exports and old launch cuts as today's new Claude films.
+**39 completed Claude Design MP4 files in this snapshot:** 36 new silent review exports covering 18 narrative segments in landscape and portrait, plus three preserved refined earlier films. The 18 segments belong to 10 major directions: three standalone films, four Next Chapter episodes, six character shorts, and five later AI films. Do not count each aspect as another story, or source footage, tests, rejected exports and old launch cuts as today's new Claude films.
 
 **Also included:** five native interactive ebook editions, five current PDF companions totaling 174 pages, ten unpublished article drafts with PDFs, 23 editable manuscript/planning/index files, the deck addendum, source archives, brand assets, and earlier launch media.
 
 All content remains private review material. Repository storage does not authorize public marketing publication. Audio in the 36 new review videos is absent; the three refined earlier films contain audio. Chain Reaction / Atomic Assembly's requested typography and 3D refinement is a pending derivative and is not included as an additional completed film.
+
+Follow-up correction: production subsequently identified portrait message clipping in the archived AI04 / Break the Frame version. A replacement pair and a separate Chain Reaction refinement pair are pending. These will be revisions, not four new stories; the existing completed files remain available as dated review versions.
 
 ## Start here
 
@@ -249,6 +251,14 @@ These files are not accepted deliverables and are excluded from completion count
 | [REJECTED--next-chapter-search-9x16-incomplete-first-pass.mp4](https://github.com/dillonmohr8777/dillon-os/releases/download/momentum-ai-assets-2026-09-08/REJECTED--next-chapter-search-9x16-incomplete-first-pass.mp4) | 0.00 MB | invalid / incomplete; do not use |
 | [REJECTED--REJECTED-capture-crop-one-idea-everywhere-16x9-review-silent.mp4](https://github.com/dillonmohr8777/dillon-os/releases/download/momentum-ai-assets-2026-09-08/REJECTED--REJECTED-capture-crop-one-idea-everywhere-16x9-review-silent.mp4) | 5.29 MB | 1920x1080, 20s, silent |
 | [REJECTED--REJECTED-native-book-export-cropped.mp4](https://github.com/dillonmohr8777/dillon-os/releases/download/momentum-ai-assets-2026-09-08/REJECTED--REJECTED-native-book-export-cropped.mp4) | 11.84 MB | 1920x1080, 26s, silent |
+
+## Download the entire archive
+
+With the authenticated GitHub CLI:
+
+```sh
+gh release download momentum-ai-assets-2026-09-08 --repo dillonmohr8777/dillon-os --dir momentum-ai-assets-2026-09-08
+```
 
 ## Original service and preview URLs
 
