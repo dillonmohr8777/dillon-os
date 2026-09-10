@@ -141,3 +141,41 @@ Two consequences:
   named-lead match-back is **zero**, not one. The differentiator is a claim
   about a capability, not a description of current delivery, until Omega or
   another account is fixed.
+
+## The nine promises and the unsent email are the same 41 days — 2026-09-09
+
+Found in `Documents/Codex/2026-08-06/c/work/recent-session-index.json`, which
+preserves the final message of the 2026-07-30 Omega session verbatim:
+
+> "Prepared Gmail draft `r4420360796608729033` to David, Christian, and John
+> requesting the exact Google Ads, Wix, and Omega-only GHL permissions. It
+> remains unsent pending approval."
+>
+> "**Say send and I'll send the prepared access request.** Until permissions
+> arrive, leads remain downloadable through Google Ads as `CSV for CRM`."
+
+That was **2026-07-30**. The draft is still unsent on 2026-09-09 — **41 days.**
+
+Put the two timelines side by side and they are the same window:
+
+| Date | Promise to Omega | Access request |
+|---|---|---|
+| 2026-07-20 | promise 1 | — |
+| **2026-07-30** | — | **drafted, "say send", never sent** |
+| 2026-08-03 | promises 2 and 3 | still unsent |
+| 2026-08-10 | promise 4 | still unsent |
+| 2026-08-17 | promise 5 | still unsent |
+| 2026-08-24 | promise 6 | still unsent |
+| 2026-08-31 | promise 7 | still unsent |
+| 2026-09-09 | — | still unsent |
+
+Six of the nine promises were made after the email that unblocks the Google Ads
+Admin half of the problem was already written and waiting.
+
+The failure was never analysis or effort. Both were done. **What did not happen
+was a send** — the same pattern as the 57 unsent client replies and the five
+weekly-report batches that generated and never went out.
+
+To be precise about the quote: that is an *agent* asking for approval. It is not
+approval, and nothing on disk shows Dillon replying "send." The draft is unsent
+and unapproved, and it stays that way until he says otherwise.
