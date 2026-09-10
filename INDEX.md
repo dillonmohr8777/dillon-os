@@ -124,6 +124,9 @@ evidence.
 One pass over the work twenty-two sessions left behind. Filed here so it stops
 living in session folders and application caches.
 
+- [[12_Brain/07_Reviews/2026-09-09 - Session estate consolidation|Session estate consolidation]]
+  — thirteen streams swept. The headline is the hardware: fourteen unclean power-offs
+  in thirty days, zero blue screens. Bridge has 39 pushed commits and no pull request.
 - [[12_Brain/07_Reviews/2026-09-09 - Game tree version control audit|Game tree version control audit]]
   — every game tree is under git with a baseline commit; the audit that said so
   checked the wrong copy of one repo, and neither Philadelphia tree has a remote.
