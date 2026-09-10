@@ -1,4 +1,4 @@
-# Codex image queue — generated 2026-09-09
+# Codex image queue — generated 2026-09-10
 
 100 rebuild targets own no usable photographs. Each has a brief in
 this directory specifying exactly what to generate, slot by slot.
@@ -80,12 +80,12 @@ this directory specifying exactly what to generate, slot by slot.
 | 57 | Twisted Shamrock Studios & Spa | cosmetics |  | twisted-shamrock-studios-and-spa.json |
 | 58 | Tax Express | tax-advisor | Yardley | tax-express.json |
 | 59 | Golden Eagle Jewelry | jewelry | Philadelphia | golden-eagle-jewelry.json |
-| 60 | Pisano and Son Shoe Repair | shoes |  | pisano-and-son-shoe-repair.json |
-| 61 | Sense Zero Float Center | beauty | Yardley | sense-zero-float-center.json |
-| 62 | Mexico Magico | tax-advisor | Avondale | mexico-magico.json |
-| 63 | Attitude Alley Motorcycle Co LLC | motorcycle | Lititz | attitude-alley-motorcycle-co-llc.json |
-| 64 | Law Offices of D. A. Casselle | lawyer | Allentown | law-offices-of-d-a-casselle.json |
-| 65 | 4/4 Architecture | architect | Bethlehem | 4-4-architecture.json |
+| 60 | Sense Zero Float Center | beauty | Yardley | sense-zero-float-center.json |
+| 61 | Mexico Magico | tax-advisor | Avondale | mexico-magico.json |
+| 62 | Attitude Alley Motorcycle Co LLC | motorcycle | Lititz | attitude-alley-motorcycle-co-llc.json |
+| 63 | Law Offices of D. A. Casselle | lawyer | Allentown | law-offices-of-d-a-casselle.json |
+| 64 | 4/4 Architecture | architect | Bethlehem | 4-4-architecture.json |
+| 65 | Slippery Rock Salvage | scrap-yard | Slippery Rock | slippery-rock-salvage.json |
 | 66 | Randy's Greenhouse LLC | gardener | Athens | randy-s-greenhouse-llc.json |
 | 67 | Magness Garage (Volkswagen) | car-repair | New Bethlehem | magness-garage-volkswagen.json |
 | 68 | Saul's Landscaping | garden-centre | Palmyra | saul-s-landscaping.json |
@@ -100,24 +100,24 @@ this directory specifying exactly what to generate, slot by slot.
 | 77 | Advanced Specialty Flooring | floorer | Kittanning | advanced-specialty-flooring.json |
 | 78 | William G. Schwab & Associates | lawyer | Lehighton | william-g-schwab-and-associates.json |
 | 79 | Professional Opticians | optician | Reedsville | professional-opticians.json |
-| 80 | Fortitude & Co | fitness-centre | Philadelphia | fortitude-and-co.json |
-| 81 | BG Electric Service LLC | electrician | Philadelphia | bg-electric-service-llc.json |
-| 82 | Chestnut Hill Animal Hospital | veterinary | Erdenheim | chestnut-hill-animal-hospital.json |
-| 83 | County Line Veterinary Hospital | veterinary | Hatboro | county-line-veterinary-hospital.json |
-| 84 | F M Berkheimer Inc | hvac | Mechanicsburg | f-m-berkheimer-inc.json |
-| 85 | Hortense T. Moss Health Center | doctor | Philadelphia | hortense-t-moss-health-center.json |
-| 86 | Grand Sport Auto Body | car-repair | Collegeville | grand-sport-auto-body.json |
-| 87 | NewAge® Industries | works | Southampton | newage-industries.json |
-| 88 | Malvern Veterinary Hospital | veterinary |  | malvern-veterinary-hospital.json |
-| 89 | Bimbo Bakeries USA | bakery | Bethlehem | bimbo-bakeries-usa.json |
-| 90 | The Juice Merchant | restaurant | Narberth | the-juice-merchant.json |
-| 91 | Sciacca Service Center | car-repair |  | sciacca-service-center.json |
-| 92 | Clear Vision Auto Glass | car-repair | Chadds Ford | clear-vision-auto-glass.json |
-| 93 | Upscale Consignments Boutiques Maria Fe's | clothes |  | upscale-consignments-boutiques-maria-fe-s.json |
-| 94 | West Philadelphia VA Clinic | clinic |  | west-philadelphia-va-clinic.json |
-| 95 | Danger Salon | hairdresser | Philadelphia | danger-salon.json |
-| 96 | Schaeffer Floor Coverings | flooring | Bechtelsville | schaeffer-floor-coverings.json |
-| 97 | Out-tac Outfitters | outdoor |  | out-tac-outfitters.json |
-| 98 | Bei Jing Chinese Food | restaurant | Norristown | bei-jing-chinese-food.json |
-| 99 | Golden Sea | restaurant | Blue Bell | golden-sea.json |
-| 100 | Gallo Insurance Agency | insurance | Philadelphia | gallo-insurance-agency.json |
+| 80 | Twisted PC & MAC Repair | electronics-repair | Huntingdon | twisted-pc-and-mac-repair.json |
+| 81 | Showalter Landscaping | gardener | Alexandria | showalter-landscaping.json |
+| 82 | Marty Mummert Sign Co. | signmaker | Gettysburg | marty-mummert-sign-co.json |
+| 83 | CDP Complex LLC | warehouse | Clymer | cdp-complex-llc.json |
+| 84 | Andrew W Barbin Pc | lawyer | Mechanicsburg | andrew-w-barbin-pc.json |
+| 85 | Fortitude & Co | fitness-centre | Philadelphia | fortitude-and-co.json |
+| 86 | BG Electric Service LLC | electrician | Philadelphia | bg-electric-service-llc.json |
+| 87 | Pennsylvania Dental Group | dentist | Philadelphia | pennsylvania-dental-group.json |
+| 88 | Chestnut Hill Animal Hospital | veterinary | Erdenheim | chestnut-hill-animal-hospital.json |
+| 89 | County Line Veterinary Hospital | veterinary | Hatboro | county-line-veterinary-hospital.json |
+| 90 | Glen Eagle Pediatric Dentistry | dentist |  | glen-eagle-pediatric-dentistry.json |
+| 91 | Dream Team | hvac | Paoli | dream-team.json |
+| 92 | F M Berkheimer Inc | hvac | Mechanicsburg | f-m-berkheimer-inc.json |
+| 93 | Hortense T. Moss Health Center | doctor | Philadelphia | hortense-t-moss-health-center.json |
+| 94 | Grand Sport Auto Body | car-repair | Collegeville | grand-sport-auto-body.json |
+| 95 | NewAge® Industries | works | Southampton | newage-industries.json |
+| 96 | Malvern Veterinary Hospital | veterinary |  | malvern-veterinary-hospital.json |
+| 97 | Bimbo Bakeries USA | bakery | Bethlehem | bimbo-bakeries-usa.json |
+| 98 | The Juice Merchant | restaurant | Narberth | the-juice-merchant.json |
+| 99 | Sciacca Service Center | car-repair |  | sciacca-service-center.json |
+| 100 | Clear Vision Auto Glass | car-repair | Chadds Ford | clear-vision-auto-glass.json |
