@@ -124,6 +124,9 @@ evidence.
 One pass over the work twenty-two sessions left behind. Filed here so it stops
 living in session folders and application caches.
 
+- [[12_Brain/04_Decisions/2026-09-09 - Book characters stay out of Agency Wars|Book characters stay out of Agency Wars]]
+  — decided. The four GTB characters are web-ready and free; the sales floor is not
+  the place for the book's cast. philly-game is a spike, not a product line.
 - [[12_Brain/07_Reviews/2026-09-09 - Session estate consolidation|Session estate consolidation]]
   — thirteen streams swept. The headline is the hardware: fourteen unclean power-offs
   in thirty days, zero blue screens. Bridge has 39 pushed commits and no pull request.
