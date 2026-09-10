@@ -124,6 +124,9 @@ evidence.
 One pass over the work twenty-two sessions left behind. Filed here so it stops
 living in session folders and application caches.
 
+- [[12_Brain/07_Reviews/2026-09-09 - Machine power fault diagnosis|Machine power fault diagnosis]]
+  — 14 unclean power-offs, 0 dumps, 0 WHEA, no battery. Thermal, disk and software
+  crash all ruled out by measurement. It is power delivery. Needs hands.
 - [[12_Brain/04_Decisions/2026-09-09 - Book characters stay out of Agency Wars|Book characters stay out of Agency Wars]]
   — decided. The four GTB characters are web-ready and free; the sales floor is not
   the place for the book's cast. philly-game is a spike, not a product line.
