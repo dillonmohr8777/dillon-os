@@ -84,8 +84,19 @@ jobs:
           )
           for f in $targets; do
             [ -f "$f" ] || continue
-            if grep -qiE '(api[_-]?key|client_secret|password|bearer [A-Za-z0-9]|bw://)' "$f"; then
-              echo "::error file=$f::credential-shaped value in a generated draft"
+            # Match an ASSIGNMENT, not the bare word. A marketing-ops posting
+            # that says "manage API keys" or "password-protected landing page"
+            # is prose, and a guard that fails on prose would bin a completely
+            # clean day's list -- the same false-positive that blocked the radar
+            # dashboard publish on retina filenames like logo@2x-1.png.
+            #
+            # The pattern stays narrow on purpose: a keyword, a : or =, then at
+            # least eight credential-ish characters. A Bitwarden locator needs no
+            # assignment because bw:// is never prose.
+            if grep -qiE "(api[_-]?key|client_secret|secret_key|access_token|password)[\"']?[[:space:]]*[:=][[:space:]]*[\"']?[A-Za-z0-9_./+-]{8,}|bw://|bearer[[:space:]]+[A-Za-z0-9_-]{12,}" "$f"; then
+              # Count and name the file only. Echoing the match into a build log
+              # would publish the very thing this step exists to stop.
+              echo "::error file=$f::credential-shaped assignment in a generated draft"
               fail=1
             fi
             if grep -qE 'C:\\Users\\' "$f"; then
