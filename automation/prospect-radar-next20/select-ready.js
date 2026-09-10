@@ -6,6 +6,8 @@ const path = require('path');
 const crypto = require('crypto');
 const { spawnSync } = require('child_process');
 const { resolveGeneratedStockAssignment } = require('./generated-stock-categories');
+const { decodePng, encodePng, measureAlpha, removeFlatBackground } = require('../../_os/automation/lib/logo-audit');
+const { decodeJpeg } = require('../../_os/automation/lib/jpeg-decode');
 const { dedupeDecisions } = require('../../_os/automation/lib/logo-eligibility');
 
 const root = path.resolve(__dirname, '..', '..');
@@ -21,7 +23,8 @@ const registryPath = path.join(root, '12_Brain', 'state', 'radar', 'registry.jso
 const selectionPath = path.join(runDir, 'SELECTION-EVIDENCE.json');
 const generatedStockLibrary = path.join(__dirname, 'generated-stock-library');
 const targetCount = 20;
-const readinessPolicy = 'Current Radar rebuild at 0.90 confidence or higher, phone present, untouched domain and slug, reachable official HTML, identity match, exact transparent first-party logo or deterministic flat-background removal with unchanged geometry, at least one usable first-party visual reference, and an approved category-relevant generated-stock board. A provisional Radar grade is accepted only after this live source, identity, and stock-readiness preflight passes.';
+const BUILDABLE_VERDICTS = new Set(['rebuild', 'polish']);
+const readinessPolicy = 'Current Radar rebuild or polish at 0.90 confidence or higher, phone present, untouched domain and slug, reachable official HTML, identity match, exact transparent first-party logo or deterministic flat-background removal with unchanged geometry, at least one usable first-party visual reference, and an approved category-relevant generated-stock board. A provisional Radar grade is accepted only after this live source, identity, and stock-readiness preflight passes.';
 const generatedStockBoardHashes = new Map();
 
 const artifactNames = new Set([
@@ -76,6 +79,20 @@ const writeBoth = (filename, value) => {
   atomicJson(path.join(runDir, filename), value);
   atomicJson(path.join(batchDir, filename), value);
 };
+
+/**
+ * Remove the batch directory when a run ends without selecting anything.
+ *
+ * The daily builder runs unattended and the candidate pool is finite, so runs
+ * that stop short are routine. Without this each one left a directory in the
+ * tracked campaigns folder that looked like a batch and contained none.
+ * A directory with files in it is a real batch and is never touched.
+ */
+function discardEmptyBatchDir() {
+  try {
+    if (fs.existsSync(batchDir) && fs.readdirSync(batchDir).length === 0) fs.rmdirSync(batchDir);
+  } catch { /* never let cleanup mask the real failure */ }
+}
 
 function generatedStockEvidence(candidate, slug = slugify(candidate.name || candidate.domain)) {
   const [boardKey, descriptor] = resolveGeneratedStockAssignment({
@@ -284,76 +301,89 @@ function hasTransparentBackground(bytes, type) {
   return false;
 }
 
+/**
+ * Alpha, background removal and tonal checks now come from the shared
+ * pure-Node auditor rather than five separate ffmpeg invocations.
+ *
+ * Two reasons. First, this selector could not run anywhere without an ffmpeg
+ * binary -- not on a GitHub runner without an install step, not in the cloud
+ * container -- which pinned the whole daily lane to one Windows machine.
+ * Second, the ffmpeg path used a global `colorkey`, which erases every pixel
+ * matching the plate colour *anywhere* in the mark: a white knockout inside a
+ * roundel comes out as a hole. lib/logo-audit.js floods inward from the border
+ * instead, so interior plate-coloured pixels survive.
+ */
 function rasterAlphaAudit(file, type) {
   if (type === 'svg') return { ok: true, vector: true };
-  const result = spawnSync('ffmpeg', ['-hide_banner', '-i', file, '-vf', 'alphaextract,signalstats,metadata=print', '-frames:v', '1', '-f', 'null', 'NUL'], { encoding: 'utf8', maxBuffer: 4 * 1024 * 1024 });
-  const output = `${result.stdout || ''}\n${result.stderr || ''}`;
-  const value = (key) => Number(output.match(new RegExp(`lavfi\\.signalstats\\.${key}=([\\d.]+)`))?.[1]);
-  const min = value('YMIN');
-  const max = value('YMAX');
-  const average = value('YAVG');
-  const ok = result.status === 0 && Number.isFinite(min) && Number.isFinite(max) && Number.isFinite(average) && max >= 200 && min <= 245 && average >= 1 && average <= 248;
-  return { ok, alphaMin: min, alphaMax: max, alphaAverage: average, reason: ok ? null : 'alpha plane is empty, effectively opaque, or lacks meaningful transparent area' };
-}
-
-function rasterVisualAudit(file) {
-  const result = spawnSync('ffmpeg', ['-hide_banner', '-i', file, '-vf', 'signalstats,metadata=print', '-frames:v', '1', '-f', 'null', 'NUL'], { encoding: 'utf8', maxBuffer: 4 * 1024 * 1024 });
-  const output = `${result.stdout || ''}\n${result.stderr || ''}`;
-  const value = (key) => Number(output.match(new RegExp(`lavfi\\.signalstats\\.${key}=([\\d.]+)`))?.[1]);
-  const ranges = {
-    luma: value('YMAX') - value('YMIN'),
-    chromaU: value('UMAX') - value('UMIN'),
-    chromaV: value('VMAX') - value('VMIN'),
-  };
-  const finite = Object.values(ranges).every(Number.isFinite);
-  const maxRange = finite ? Math.max(ranges.luma, ranges.chromaU, ranges.chromaV) : 0;
-  const ok = result.status === 0 && finite && maxRange >= 12;
+  let decoded;
+  try {
+    decoded = decodePng(fs.readFileSync(file));
+  } catch (error) {
+    return { ok: false, reason: `logo could not be read: ${String(error.message || error).slice(0, 60)}` };
+  }
+  if (decoded.error) return { ok: false, reason: decoded.error };
+  const measured = measureAlpha(decoded.rgba, decoded.width, decoded.height);
+  const ok = measured.transparentRatio >= 0.02 && measured.contentRatio >= 0.02;
   return {
     ok,
-    lumaRange: ranges.luma,
-    chromaURange: ranges.chromaU,
-    chromaVRange: ranges.chromaV,
+    transparentRatio: Number(measured.transparentRatio.toFixed(4)),
+    edgeTransparentRatio: Number(measured.edgeTransparentRatio.toFixed(4)),
+    contentRatio: Number(measured.contentRatio.toFixed(4)),
+    reason: ok ? null : 'alpha plane is empty, effectively opaque, or lacks meaningful transparent area',
+  };
+}
+
+/** A reference image must carry real tonal range, not be a flat colour field. */
+function rasterVisualAudit(file) {
+  let bytes;
+  try {
+    bytes = fs.readFileSync(file);
+  } catch (error) {
+    return { ok: false, reason: 'reference could not be read' };
+  }
+  const type = imageType(bytes, '');
+  const decoded = type === 'jpg' || type === 'jpeg' ? decodeJpeg(bytes) : decodePng(bytes);
+  if (decoded.error) return { ok: false, reason: decoded.error };
+  let min = 255, max = 0;
+  const { rgba, width, height } = decoded;
+  const stride = Math.max(1, Math.floor((width * height) / 20000));
+  for (let p = 0; p < width * height; p += stride) {
+    const o = p * 4;
+    if (rgba[o + 3] < 200) continue;
+    const luma = 0.2126 * rgba[o] + 0.7152 * rgba[o + 1] + 0.0722 * rgba[o + 2];
+    if (luma < min) min = luma;
+    if (luma > max) max = luma;
+  }
+  const range = max - min;
+  const ok = range >= 12;
+  return {
+    ok,
+    lumaRange: Number(range.toFixed(1)),
     reason: ok ? null : 'reference is flat or lacks enough tonal variation to serve as visual evidence',
   };
 }
 
 function removeFlatLogoBackground(bytes, type, dimensions, directory) {
-  if (!['jpeg', 'png'].includes(type) || !dimensions?.width || !dimensions?.height) return { error: 'unsupported background-removal source' };
-  const sourceFile = path.join(directory, `logo-source.${type === 'jpeg' ? 'jpg' : 'png'}`);
+  const decoded = type === 'jpg' || type === 'jpeg' ? decodeJpeg(bytes) : decodePng(bytes);
+  if (decoded.error) return { error: `unsupported background-removal source: ${decoded.error}` };
+  const cut = removeFlatBackground(decoded.rgba, decoded.width, decoded.height);
+  if (cut.error) return { error: cut.error };
   fs.mkdirSync(directory, { recursive: true });
+  const sourceFile = path.join(directory, `logo-source${extensionFor(type === 'jpeg' ? 'jpg' : type, '')}`);
   fs.writeFileSync(sourceFile, bytes);
-  const points = [
-    [0, 0],
-    [Math.max(0, dimensions.width - 1), 0],
-    [0, Math.max(0, dimensions.height - 1)],
-    [Math.max(0, dimensions.width - 1), Math.max(0, dimensions.height - 1)],
-  ];
-  const colors = points.map(([x, y]) => {
-    const sample = spawnSync('ffmpeg', ['-v', 'error', '-i', sourceFile, '-vf', `crop=1:1:${x}:${y},format=rgb24`, '-frames:v', '1', '-f', 'rawvideo', 'pipe:1'], { encoding: null, maxBuffer: 1024 * 1024 });
-    if (sample.status !== 0 || !sample.stdout || sample.stdout.length < 3) return null;
-    return [...sample.stdout.subarray(0, 3)];
-  });
-  if (colors.some((color) => !color)) return { error: 'could not sample logo border' };
-  const spread = Math.max(...colors.flatMap((a) => colors.map((b) => Math.hypot(a[0] - b[0], a[1] - b[1], a[2] - b[2]))));
-  if (spread > 24) return { error: 'logo border is not a single removable color' };
-  const average = [0, 1, 2].map((channel) => Math.round(colors.reduce((sum, color) => sum + color[channel], 0) / colors.length));
-  const key = average.map((value) => value.toString(16).padStart(2, '0')).join('');
   const output = path.join(directory, 'logo.png');
-  const filter = `colorkey=0x${key}:0.095:0.035,format=rgba`;
-  const converted = spawnSync('ffmpeg', ['-y', '-v', 'error', '-i', sourceFile, '-vf', filter, '-frames:v', '1', output], { encoding: 'utf8' });
-  if (converted.status !== 0 || !fs.existsSync(output)) return { error: converted.stderr || 'logo background removal failed' };
-  const outputBytes = fs.readFileSync(output);
-  if (!hasTransparentBackground(outputBytes, 'png')) return { error: 'background removal did not emit alpha' };
+  const outputBytes = encodePng(cut.rgba, decoded.width, decoded.height);
+  fs.writeFileSync(output, outputBytes);
   const alpha = rasterAlphaAudit(output, 'png');
   if (!alpha.ok) return { error: `background removal produced an unusable logo: ${alpha.reason}` };
   return {
     file: output,
     bytes: outputBytes,
-    transformation: `flat border color #${key} removed with deterministic FFmpeg colorkey; geometry unchanged`,
+    transformation: cut.transformation,
     sourceFile,
     sourceSha256: sha256Buffer(bytes),
     sourceType: type,
-    borderSpread: Number(spread.toFixed(2)),
+    borderSpread: cut.border.spread,
     alpha,
   };
 }
@@ -742,7 +772,12 @@ async function main() {
   const prior = scanPriorEvidence();
   const rows = Object.values(registry.prospects || {});
   const logoDecisions = dedupeDecisions(rows);
-  writeBoth('LOGO-HOLDS.json', rows.flatMap((row, index) => logoDecisions[index].eligible ? [] :
+  // Diagnostics belong with the run receipts, not in the tracked batch folder.
+  // writeBoth() put this in both, so every run that stopped at the pool gate
+  // left a phantom batch directory containing nothing but a hold list -- and
+  // with the daily builder now running unattended, short days are normal and
+  // those would accumulate one per morning.
+  atomicJson(path.join(runDir, 'LOGO-HOLDS.json'), rows.flatMap((row, index) => logoDecisions[index].eligible ? [] :
     [{ domain: row.domain, name: row.business_name, ...logoDecisions[index] }]));
   const rawCandidates = rows
     .filter((row, index) => logoDecisions[index].eligible)
@@ -770,28 +805,48 @@ async function main() {
       };
     })
     .filter((candidate) => candidate.domain && candidate.website && candidate.name)
-    .filter((candidate) => candidate.verdict === 'rebuild' && candidate.confidence >= 0.9 && candidate.hasPhone)
+    // `rebuild` alone cannot supply this lane. Only 138 never-built rebuild rows
+    // exist in the whole registry, 127 were already audited, and exactly 1 held
+    // a verified exact logo -- because the two rules pull against each other: a
+    // rebuild verdict means a bad site, and a bad site is precisely the one with
+    // no clean logo, a dead URL, or a decade-old template. 849 never-built
+    // `polish` rows are available and verify well (4 of the 5 rows that cleared
+    // the 2026-09-10 sweep were polish). Those businesses have dated sites
+    // rather than broken ones, which is still a real redesign pitch.
+    .filter((candidate) => BUILDABLE_VERDICTS.has(candidate.verdict) && candidate.confidence >= 0.9 && candidate.hasPhone)
     .filter((candidate) => !/\.(gov|edu|mil)$/i.test(candidate.domain))
     .filter((candidate) => !prior.domains.has(candidate.domain) && !prior.slugs.has(slugify(candidate.name)))
     .sort((a, b) =>
       Number(b.lifecycle === 'queued_build') - Number(a.lifecycle === 'queued_build') ||
       Number(b.registryBuildable) - Number(a.registryBuildable) ||
+      // A genuinely broken site still outranks a merely dated one, so widening
+      // the pool adds depth behind the best prospects rather than displacing them.
+      Number(b.verdict === 'rebuild') - Number(a.verdict === 'rebuild') ||
       b.opportunity - a.opportunity ||
       a.quality - b.quality ||
       a.domain.localeCompare(b.domain)
     )
     .map((candidate, sortIndex) => ({ ...candidate, sortIndex }));
 
-  if (rawCandidates.length < targetCount) throw new Error(`Only ${rawCandidates.length} untouched rebuild rows remain before source preflight.`);
+  if (rawCandidates.length < targetCount) {
+    discardEmptyBatchDir();
+    throw new Error(`Only ${rawCandidates.length} untouched rebuild/polish rows remain before source preflight.`);
+  }
   const preflight = await probePool(rawCandidates);
-  writeBoth('PREFLIGHT-EVIDENCE.json', {
+  atomicJson(path.join(runDir, 'PREFLIGHT-EVIDENCE.json'), {
     runId,
     generatedAt: new Date().toISOString(),
     candidatePool: rawCandidates.length,
     ready: preflight.ready.map((item) => ({ domain: item.candidate.domain, name: item.candidate.name, slug: item.slug, logo: item.source.logo.fileName, referenceCount: item.source.references.length, generatedStockBoard: item.generatedStock.boardKey, cached: Boolean(item.cached) })),
     rejected: preflight.rejected.map((item) => ({ domain: item.candidate.domain, name: item.candidate.name, website: item.candidate.website, reason: item.reason })),
   });
-  const chosen = chooseTwenty(preflight.ready);
+  let chosen;
+  try {
+    chosen = chooseTwenty(preflight.ready);
+  } catch (error) {
+    discardEmptyBatchDir();
+    throw error;
+  }
   copySelectedSources(chosen);
 
   const selection = {

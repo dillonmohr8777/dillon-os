@@ -16,7 +16,17 @@ Dillon reviews private, mobile-first concept websites for qualified Momentum 360
 
 ## Product Purpose
 
-Select exactly 20 untouched Prospect Radar rebuild opportunities per run, prove that each one is a new build, and produce a complete private concept with verified identity assets and review evidence.
+Select exactly 20 untouched Prospect Radar rebuild or polish opportunities per run, prove that each one is a new build, and produce a complete private concept with verified identity assets and review evidence.
+
+`rebuild` alone cannot supply this lane, and the reason is structural rather than a shortfall to be discovered later. On 2026-09-10 the registry held 138
+never-built `rebuild` rows; 127 had been audited and exactly 1 carried a
+verified exact logo. The two rules pull against each other — a `rebuild`
+verdict means a bad website, and a bad website is precisely the one with no
+clean logo, a dead URL, or a decade-old template. 849 never-built `polish` rows
+were available and verified well: 4 of the 5 rows that cleared that day's sweep
+were `polish`. Those are businesses whose sites are dated rather than broken,
+which is still a real redesign pitch, and the reference build itself contains
+plenty of merely-dated sites.
 
 ## Positioning
 
@@ -28,7 +38,7 @@ The current Prospect Radar registry and prior batch evidence are the sources of 
 
 ## Capabilities and Constraints
 
-- Select 20 current `rebuild` prospects with a reachable official source, a verified exact logo, and usable first-party visual reference.
+- Select 20 current `rebuild` or `polish` prospects with a reachable official source, a verified exact logo, and usable first-party visual reference. A genuinely broken site outranks a merely dated one in the sort, so widening adds depth behind the best prospects rather than displacing them.
 - Exclude domains and slugs found in every prior Radar, prospect-site, and site-factory artifact available on this machine.
 - Preserve exact logos. Never redraw or synthesize a prospect logo.
 - Keep `noindex`, `nofollow`, `mail_ready=hold`, and `qa_ready=hold` until factual and outreach gates pass.

@@ -30,6 +30,18 @@ const CHROME_PATTERNS =
 /** Fragments that suggest the asset IS the logo. */
 const LOGO_PATTERNS = /(?:logo|brandmark|wordmark|site-?id|header-?img)/i;
 
+/**
+ * How much a structural hint from harvest-lite is worth.
+ *
+ * A filename is weak evidence; position is strong. `jsonld-logo` is the site
+ * declaring its own logo, `class-brand` is markup saying so, and the other two
+ * are conventions. Ranked so the masthead mark wins over an incidental header
+ * image rather than whichever the markup happened to list first.
+ */
+const HINT_RANK = { 'jsonld-logo': 4, 'class-brand': 3, 'home-anchor': 2, header: 1, '': 0 };
+/** Hints explicit enough to overrule a filename that reads like chrome. */
+const HINT_BEATS_CHROME = 3;
+
 const EXT_BY_MIME = {
   'image/jpeg': 'jpg',
   'image/jpg': 'jpg',
@@ -132,7 +144,7 @@ async function harvestImages(harvest, opts = {}) {
     const url = absolutize(img.src, base);
     if (!url || seen.has(url)) continue;
     seen.add(url);
-    queue.push({ url, alt: img.alt || '' });
+    queue.push({ url, alt: img.alt || '', hint: img.hint || '' });
   }
 
   const kept = [];
@@ -144,7 +156,12 @@ async function harvestImages(harvest, opts = {}) {
     while (cursor < queue.length && kept.length < max + 4) {
       const item = queue[cursor++];
 
-      if (CHROME_PATTERNS.test(item.url) && !LOGO_PATTERNS.test(item.url)) {
+      // A declared logo may legitimately live at a path the chrome filter hates
+      // (/assets/icons/brand.svg). Only an explicit declaration overrules it --
+      // a plain `header` hint does not, or every social icon in a masthead would
+      // survive. A favicon is never a logo whatever the markup claims.
+      const declared = HINT_RANK[item.hint] >= HINT_BEATS_CHROME && !/favicon/i.test(item.url);
+      if (CHROME_PATTERNS.test(item.url) && !LOGO_PATTERNS.test(item.url) && !declared) {
         rejected.push({ url: item.url, why: 'looks like chrome (icon, badge, tracker)' });
         continue;
       }
@@ -167,7 +184,7 @@ async function harvestImages(harvest, opts = {}) {
         continue;
       }
 
-      const isLogo = LOGO_PATTERNS.test(item.url) || LOGO_PATTERNS.test(item.alt);
+      const isLogo = !!item.hint || LOGO_PATTERNS.test(item.url) || LOGO_PATTERNS.test(item.alt);
       // Logos are legitimately small and often SVG, so they skip the size floor.
       if (!isLogo && probed.format !== 'svg') {
         if (res.body.length < minBytes) {
@@ -198,13 +215,22 @@ async function harvestImages(harvest, opts = {}) {
         // auditable. `metadataOnly` drops the body but retains this digest.
         sha256: crypto.createHash('sha256').update(res.body).digest('hex'),
         isLogo,
+        hint: item.hint || '',
       });
     }
   }
 
   await Promise.all(Array.from({ length: Math.min(concurrency, queue.length) }, worker));
 
-  const logo = kept.find((k) => k.isLogo) || null;
+  // Best evidence wins, not markup order: an explicit declaration, then a
+  // filename that says "logo", then the larger of two equally-hinted marks.
+  const logo = kept
+    .filter((k) => k.isLogo)
+    .sort((a, b) =>
+      (HINT_RANK[b.hint] || 0) - (HINT_RANK[a.hint] || 0)
+      || Number(LOGO_PATTERNS.test(b.url) || LOGO_PATTERNS.test(b.alt))
+         - Number(LOGO_PATTERNS.test(a.url) || LOGO_PATTERNS.test(a.alt))
+      || b.width * b.height - a.width * a.height)[0] || null;
   // Content images, biggest first — the hero wants the best photograph available.
   const photos = kept
     .filter((k) => !k.isLogo)
