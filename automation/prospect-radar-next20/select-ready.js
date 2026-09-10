@@ -21,7 +21,8 @@ const registryPath = path.join(root, '12_Brain', 'state', 'radar', 'registry.jso
 const selectionPath = path.join(runDir, 'SELECTION-EVIDENCE.json');
 const generatedStockLibrary = path.join(__dirname, 'generated-stock-library');
 const targetCount = 20;
-const readinessPolicy = 'Current Radar rebuild at 0.90 confidence or higher, phone present, untouched domain and slug, reachable official HTML, identity match, exact transparent first-party logo or deterministic flat-background removal with unchanged geometry, at least one usable first-party visual reference, and an approved category-relevant generated-stock board. A provisional Radar grade is accepted only after this live source, identity, and stock-readiness preflight passes.';
+const BUILDABLE_VERDICTS = new Set(['rebuild', 'polish']);
+const readinessPolicy = 'Current Radar rebuild or polish at 0.90 confidence or higher, phone present, untouched domain and slug, reachable official HTML, identity match, exact transparent first-party logo or deterministic flat-background removal with unchanged geometry, at least one usable first-party visual reference, and an approved category-relevant generated-stock board. A provisional Radar grade is accepted only after this live source, identity, and stock-readiness preflight passes.';
 const generatedStockBoardHashes = new Map();
 
 const artifactNames = new Set([
@@ -770,19 +771,30 @@ async function main() {
       };
     })
     .filter((candidate) => candidate.domain && candidate.website && candidate.name)
-    .filter((candidate) => candidate.verdict === 'rebuild' && candidate.confidence >= 0.9 && candidate.hasPhone)
+    // `rebuild` alone cannot supply this lane. Only 138 never-built rebuild rows
+    // exist in the whole registry, 127 were already audited, and exactly 1 held
+    // a verified exact logo -- because the two rules pull against each other: a
+    // rebuild verdict means a bad site, and a bad site is precisely the one with
+    // no clean logo, a dead URL, or a decade-old template. 849 never-built
+    // `polish` rows are available and verify well (4 of the 5 rows that cleared
+    // the 2026-09-10 sweep were polish). Those businesses have dated sites
+    // rather than broken ones, which is still a real redesign pitch.
+    .filter((candidate) => BUILDABLE_VERDICTS.has(candidate.verdict) && candidate.confidence >= 0.9 && candidate.hasPhone)
     .filter((candidate) => !/\.(gov|edu|mil)$/i.test(candidate.domain))
     .filter((candidate) => !prior.domains.has(candidate.domain) && !prior.slugs.has(slugify(candidate.name)))
     .sort((a, b) =>
       Number(b.lifecycle === 'queued_build') - Number(a.lifecycle === 'queued_build') ||
       Number(b.registryBuildable) - Number(a.registryBuildable) ||
+      // A genuinely broken site still outranks a merely dated one, so widening
+      // the pool adds depth behind the best prospects rather than displacing them.
+      Number(b.verdict === 'rebuild') - Number(a.verdict === 'rebuild') ||
       b.opportunity - a.opportunity ||
       a.quality - b.quality ||
       a.domain.localeCompare(b.domain)
     )
     .map((candidate, sortIndex) => ({ ...candidate, sortIndex }));
 
-  if (rawCandidates.length < targetCount) throw new Error(`Only ${rawCandidates.length} untouched rebuild rows remain before source preflight.`);
+  if (rawCandidates.length < targetCount) throw new Error(`Only ${rawCandidates.length} untouched rebuild/polish rows remain before source preflight.`);
   const preflight = await probePool(rawCandidates);
   writeBoth('PREFLIGHT-EVIDENCE.json', {
     runId,
