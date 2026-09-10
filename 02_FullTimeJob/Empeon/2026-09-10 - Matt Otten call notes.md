@@ -12,8 +12,13 @@ tags: [empeon, matt-otten, john-nack, interview, hcm, healthcare]
 
 # Matt Otten call — 2026-09-10, 9:00 AM
 
-**Outcome: passed on to John Nack at Empeon.** Otten is the recruiter screen;
-Nack is the next conversation.
+**Talk track in this file is superseded.** Use
+[[02_FullTimeJob/Empeon/2026-09-10 - Nack room card]] before you speak to
+Nack. Pb&J is PBJ. Do not lead with readmissions. Do not treat 98.5% as a
+public number. He is Jonathan Nack, not John.
+
+**Outcome: passed on to Jonathan Nack at Empeon.** Otten is the recruiter
+screen; Nack is the next conversation.
 
 **ACTION WITH A DEADLINE: text Matt end of day today.**
 

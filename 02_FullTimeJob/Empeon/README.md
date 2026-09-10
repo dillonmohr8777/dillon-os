@@ -18,6 +18,7 @@ not send another.** Candace is the mutual.
 
 | File | Use it? |
 |---|---|
+| `2026-09-10 - Nack room card.md` | **Walk in with this.** |
 | `DillonMohr-AttributionWorkSample-2026-09-09.pdf` | **Yes. This is the one.** $162K closed-won, $2.19M open pipeline, 1,479 deals audited. |
 | `Dillon-Mohr-HCM-Attribution-Ledger-2026-09-09-SUPERSEDED.pdf` | **No. Do not hand this over.** It leads with "$0 directly traceable" and predates the reconstructed ledger. |
 | `empeon-growth-case-site.html` | **The strongest unshipped piece.** Never delivered — publishing was blocked. |
@@ -37,15 +38,25 @@ days** (tracking started 07-17). The WorkSample PDF uses the reconstructed
 version. The superseded PDF does not. That is the whole reason not to hand over
 the old one.
 
-**2. Keyword count.** Four numbers are in circulation — ~436 report snapshot,
-363 unique US, 458 live Sep 8, 543 worldwide domain-level. Pick one and say
-which basis it is on.
+**2. Keyword count.** Locked for the room: **458 on the 2026-09-08 live
+crawl.** The other three (~436 report snapshot, 363 unique US, 543
+worldwide) stay in your pocket.
 
-## Open
+## Walk in with this
 
-- **Nothing was prepared for the 9 AM call.** A "8:55 AM send" was raised at
-  01:18 UTC and never decided or built.
-- **Jeff Dooney's LinkedIn invitation is unanswered** (notification 2026-09-09
-  19:41 UTC, still unread).
-- Four abandoned signature-only Gmail drafts clutter the Metro threads.
+[[02_FullTimeJob/Empeon/2026-09-10 - Nack room card]] supersedes the talk
+track in the Matt call notes. He is **Jonathan Nack**, not John.
+
+## Open — live reread 2026-09-10 ~13:20 ET
+
+- **Matt screen passed.** Next conversation is Jonathan Nack. No Nack or
+  Otten event on the primary calendar through Sep 30. No inbound Gmail from
+  either after the 9 AM call. Slack quiet.
+- **Text Matt before end of day.** Draft:
+  [[02_FullTimeJob/Empeon/2026-09-10 - Matt EOD text draft]]. Still unsent.
+- **Jeff Dooney** emailed 2026-09-03 asking for Tue/Wed the week of Sep 8.
+  That window is gone. Four junk drafts sit on threads `1a06270aa2bb3ee5`
+  and `1a0599246a3d58ec`. Do not send them. Optional close:
+  [[02_FullTimeJob/Empeon/2026-09-10 - Jeff Dooney close draft]].
+- Both PDFs are on disk in this folder. Hand over the WorkSample only.
 - The job board still reads "Interview held 8/31" — stale.

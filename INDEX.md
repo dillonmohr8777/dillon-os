@@ -126,8 +126,10 @@ evidence.
 - [[12_Brain/07_Reviews/2026-09-10 - Orchestrator pickup|Orchestrator pickup]] —
   live reread late morning 2026-09-10. Ads API is live. Andy's old access reply
   already sent. Matt EOD text is drafted and unsent.
+- [[02_FullTimeJob/Empeon/2026-09-10 - Nack room card|Nack room card]] —
+  walk-in card for Jonathan Nack. Use this, not the Matt call notes.
 - [[02_FullTimeJob/Empeon/2026-09-10 - Matt EOD text draft|Matt Otten EOD text]] —
-  unsent. Recruiter screen passed; next conversation is John Nack.
+  unsent. Recruiter screen passed; next conversation is Jonathan Nack.
 - [[12_Brain/06_Research/2026-09-10 - Antigravity extra Google access|Antigravity extra Google access]] —
   Gemini 3.8 Flash plan quota is the extra Google path. Not GTM, Ads, or Search Console.
 - [[12_Brain/07_Reviews/2026-09-10 - Antigravity Gemini 3.8 Flash wiring|Antigravity 3.8 Flash wiring]] —
