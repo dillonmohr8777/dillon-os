@@ -118,3 +118,26 @@ tenth broken promise, made from a fix rather than a gap.
 
 Closing the phone leg needs a tracking number — CallRail or WhatConverts — which
 is new vendor spend and a separate approval.
+
+## Fagan is a reference, not a client — 2026-09-09
+
+Dillon, 2026-09-09: "fagan im not rly doing anymore but u can always use him as
+reference". Fagan Painting has been moved out of the active roster in
+[[System/operating-status]] and its three client-action rows retired from
+[[System/approval-queue]].
+
+**This does not weaken the argument, and it sharpens one part of it.** The Fagan
+Zap still works and its configuration is still the thing to copy — leads parsed
+into the email body, carrying UTM source/medium/campaign, the click id, a
+timestamp and a submission id. That is a technical reference and it stays valid.
+
+Two consequences:
+
+- **Do not cite Fagan to a client as a current case study.** "It works for
+  another client of ours" is no longer true in the present tense. The honest
+  framing is that the pattern is proven and Momentum has run it.
+- **Nobody is currently receiving named leads.** Fagan was the one account where
+  the loop closed. With it off the roster, the count of live accounts producing
+  named-lead match-back is **zero**, not one. The differentiator is a claim
+  about a capability, not a description of current delivery, until Omega or
+  another account is fixed.
