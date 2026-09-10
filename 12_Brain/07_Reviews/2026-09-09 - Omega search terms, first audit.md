@@ -124,3 +124,28 @@ Negatives come first. Then match-back means something.
 
 - [[12_Brain/03_Concepts/2026-09-07 - Conversion match-back is the differentiator]]
 - [[System/approval-queue]]
+
+## Three more found on a second pass — 2026-09-10
+
+Re-read of page 1 surfaced three names the first pass did not reach. The Ads
+table virtualises at roughly thirteen rows, so the first capture stopped short.
+
+| Search term | What it is | Clicks | Cost | Conv |
+|---|---|---|---|---|
+| `bear claw landscaping` | competitor | 2 | $22.51 | 0 |
+| `c and c sand` | material supplier | 2 | $11.34 | 0 |
+| `c&c sand and stone locations` | material supplier | 2 | $6.64 | 0 |
+
+All three show `Added/Excluded: None` and all three ran through PMax, same as
+the original six.
+
+**The negative list is nine terms, not six.** Together they account for 49
+clicks and $388.14, and **seven of the account's seventeen conversions are
+attributable to somebody looking for a different business.**
+
+`c&c sand and stone locations` also shows a 200.00% CTR on 1 impression and 2
+clicks — a reporting artifact, not a signal, and a reminder not to read
+percentages off tiny denominators in this table.
+
+The remaining 2,012 terms still need a pass. The Ads UI export or the API is the
+right tool; scrolling a virtualised table is not.
