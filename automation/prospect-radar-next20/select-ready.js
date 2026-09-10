@@ -758,7 +758,12 @@ async function main() {
   const prior = scanPriorEvidence();
   const rows = Object.values(registry.prospects || {});
   const logoDecisions = dedupeDecisions(rows);
-  writeBoth('LOGO-HOLDS.json', rows.flatMap((row, index) => logoDecisions[index].eligible ? [] :
+  // Diagnostics belong with the run receipts, not in the tracked batch folder.
+  // writeBoth() put this in both, so every run that stopped at the pool gate
+  // left a phantom batch directory containing nothing but a hold list -- and
+  // with the daily builder now running unattended, short days are normal and
+  // those would accumulate one per morning.
+  atomicJson(path.join(runDir, 'LOGO-HOLDS.json'), rows.flatMap((row, index) => logoDecisions[index].eligible ? [] :
     [{ domain: row.domain, name: row.business_name, ...logoDecisions[index] }]));
   const rawCandidates = rows
     .filter((row, index) => logoDecisions[index].eligible)
@@ -809,7 +814,13 @@ async function main() {
     )
     .map((candidate, sortIndex) => ({ ...candidate, sortIndex }));
 
-  if (rawCandidates.length < targetCount) throw new Error(`Only ${rawCandidates.length} untouched rebuild/polish rows remain before source preflight.`);
+  if (rawCandidates.length < targetCount) {
+    // Leave nothing behind: a run that never selected anything has no batch.
+    try {
+      if (fs.existsSync(batchDir) && fs.readdirSync(batchDir).length === 0) fs.rmdirSync(batchDir);
+    } catch { /* a non-empty batch dir is a real batch; never remove it */ }
+    throw new Error(`Only ${rawCandidates.length} untouched rebuild/polish rows remain before source preflight.`);
+  }
   const preflight = await probePool(rawCandidates);
   writeBoth('PREFLIGHT-EVIDENCE.json', {
     runId,
