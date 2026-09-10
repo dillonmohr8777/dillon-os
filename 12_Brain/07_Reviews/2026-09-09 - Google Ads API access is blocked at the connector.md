@@ -106,3 +106,62 @@ for any client.
 
 - [[_os/automation/google-ads-daily/PROVENANCE]]
 - [[12_Brain/07_Reviews/2026-09-09 - Session estate consolidation]]
+
+## Correction: the header is not sufficient — the MCC itself is refused
+
+Tested further on 2026-09-09 after this note was first written. **Querying the
+manager account directly also returns 403 `USER_PERMISSION_DENIED`.**
+
+| Account | Result |
+|---|---|
+| `7038673437` — the MCC itself, `SELECT customer.id ... FROM customer` | 403 |
+| `7038673437` — `FROM customer_client` (hierarchy listing) | 403 |
+
+That matters. Accessing your **own manager account** does not require a
+`login-customer-id` header — the header is only needed when reaching *through* a
+manager to a client customer. If the manager is refused too, the missing header
+is not the whole explanation.
+
+**Revised reading:** the OAuth grant behind the Composio connection can
+enumerate the sixteen `resourceNames` (that call reads the OAuth grant, not the
+Ads API), but the developer token / OAuth pair Composio uses is not authorised
+against this account tree at all. Eight accounts tested, eight identical 403s,
+including the manager.
+
+So the fix queued earlier is necessary but probably not sufficient. Setting
+`login-customer-id` alone would very likely still fail.
+
+## The configuration surface does not exist either
+
+`COMPOSIO_MANAGE_CONNECTIONS` offers exactly four actions — `add`, `rename`,
+`list`, `remove`. There are no configuration fields on a connection, and
+`GOOGLEADS_SEARCH_STREAM_GAQL` exposes only `query`, `customer_id` and
+`summary_row_setting`. **There is no `login-customer-id` to set, on the tool or
+on the connection.**
+
+## A second connector was tested and is also unavailable
+
+The Abency marketing MCP exposes `ads_overview`, `ads_campaigns` and
+`ads_search_terms`, which would be the right shape. Its organization has one
+brand, `Dillon's Organization` (id 1789), and the call returns:
+
+> "La brand 1789 (Dillon's Organization) no té cap connexió de Google Ads
+> activa. Connecta-la des de la UI d'Abency (Brand → Connexions → Google Ads)."
+
+No Google Ads connection, and connecting one is a UI step in that product.
+Its client-management module is not enabled for the organization at all.
+
+## Where that leaves it
+
+Three paths tested on 2026-09-09, three blocked:
+
+1. **Composio Google Ads** — 8/8 accounts 403, including the manager. No
+   configuration surface.
+2. **Abency** — no Google Ads connection on the brand; needs a UI step.
+3. **Authenticated browser** — works, and is how every figure to date was
+   obtained. Hand-driven, and already failed once on 2026-09-08.
+
+The remaining real option is a **local GAQL client** using a developer token
+issued under `703-867-3437`, sending `login-customer-id` itself. The developer
+token is a Google application-and-approval step, not a code step. That is the
+honest cost of unattended daily collection.
