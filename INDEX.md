@@ -1,7 +1,7 @@
 ---
 note_type: index
 status: active
-updated: 2026-08-01
+updated: 2026-09-10
 tags:
   - index
   - brain
@@ -121,8 +121,13 @@ evidence.
 
 ## Handoff — 2026-09-10
 
-- [[System/handoff-2026-09-10|Session handoff]] — what is waiting on Dillon, what was
-  in flight, and the findings not worth re-deriving.
+- [[System/handoff-2026-09-10|Session handoff]] — 02:30 ET overnight note. Several
+  lines are already stale; use the pickup review before acting on it.
+- [[12_Brain/07_Reviews/2026-09-10 - Orchestrator pickup|Orchestrator pickup]] —
+  live reread late morning 2026-09-10. Ads API is live. Andy's old access reply
+  already sent. Matt EOD text is drafted and unsent.
+- [[02_FullTimeJob/Empeon/2026-09-10 - Matt EOD text draft|Matt Otten EOD text]] —
+  unsent. Recruiter screen passed; next conversation is John Nack.
 
 ## Orchestrator consolidation — 2026-09-09
 
@@ -135,16 +140,21 @@ living in session folders and application caches.
 - [[12_Brain/07_Reviews/2026-09-09 - Onsite landing destination contradiction|Onsite landing destination contradiction]]
   — two read-only sessions, three days apart, recorded opposite destinations for the
   only live campaign. One Final URL field decides whether the lane is tracked or blind.
+- [[12_Brain/07_Reviews/2026-09-10 - Nexla technical corrections|Nexla technical corrections]]
+  — offline conversion upload is closed to new adopters; enhanced-conversion terms
+  must be accepted by Nexla not Momentum; the MCP fix is match type, not negation.
 - [[12_Brain/07_Reviews/2026-09-10 - Nexla search terms, first audit|Nexla search terms, first audit]]
-  — $12,977 for 3 conversions, and two of the three came from people typing the brand
-  name. Non-brand bought one conversion for roughly $11,900. 32,024 terms.
+  — Two dated scopes. Browser UI 2026-09-10: $12,977.06 / 3.00 conversions / 32,024
+  terms. API clicked-term pull 2026-06-01 to 2026-09-09: $5,677.77 / 3.00
+  conversions / 419 terms; non-brand $4,858.02 for one conversion. Same three
+  conversions, not the same spend.
 - [[12_Brain/07_Reviews/2026-09-09 - Omega search terms, first audit|Omega search terms, first audit]]
   — never run before. The top term by clicks is a competitor's brand name and it
   produced 35% of all conversions. Three concrete terms burned $1,113 at $40-54 a
   click for zero. This is the lead-quality complaint, with a receipt.
 - [[12_Brain/07_Reviews/2026-09-09 - Google Ads API access is blocked at the connector|Google Ads API is blocked at the connector]]
-  — six accounts tested, six 403s. The connector cannot send `login-customer-id`.
-  The MCC is `703-867-3437`; that is the missing value.
+  — true of Composio only. Local probe is live as of 2026-09-10: Omega and Nexla
+  identity reads HTTP 200 with no login-customer-id header. Do not revive Composio.
 - [[_os/automation/google-ads-daily/PROVENANCE|Google Ads daily loop (rescued)]]
   — a complete daily runbook and working renderer, found in a dated session folder
   with nothing scheduling it. Rendering works; collection does not exist.
