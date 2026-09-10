@@ -1,0 +1,14 @@
+{
+ "wakeId":"heartbeat:20260905T133136179Z",
+ "identities":{"gmail":"verified expected account","slack":"verified expected Momentum workspace and Dillon identity"},
+ "window":{"afterUnix":1788611119,"beforeUnix":1788615115,"overlapSeconds":900},
+ "sources":{"gmail":{"pages":1,"messages":2,"paginationExhausted":true},"slack":{"pages":1,"messages":6,"paginationExhausted":true,"candidateThreadsRead":1}},
+ "interpretation":{"suppressed":7,"sourceReportedMilestones":1,"newDirectRequestsToDillon":0},
+ "milestone":{"clientId":"va-claims-edge","source":"https://momentum3d.slack.com/archives/C0AU6GMGY73/p1788612887809939","sourceTime":"2026-09-05T08:54:47-04:00","summary":"Developer reports Phase 3 complete, tested and deployed. Message addressed to existing project owners, not a new assignment to Dillon. No replies in full fetched thread.","verification":"source-reported only; production acceptance not independently verified","nextSafeStep":"Existing owners can schedule final acceptance walkthrough; no phase4 activation or implementation reassignment.","canonicalMutation":false},
+ "daily":{"leadTable":"already attempted blocked today; no repeated notification","bedtime":"not due","predictions":"not due","googleAdsReport":"dispatched to existing collaboration worker /root/active_ads_review; actual artifacts still pending"},
+ "worker":{"owner":"/root/active_ads_review","kind":"collaboration","status":"running","newAppTasks":0,"parentReviewPending":true,"ownerReceipt":"work/google-ads-daily-owner-20260905.json","nextWake":"Check child completion, interrupt when finished, inspect actual artifacts and update daily status. Do not dispatch duplicate."},
+ "externalMutations":false,
+ "rawMessagesStored":false,
+ "decision":"NOTIFY",
+ "notificationReason":"New source-backed Phase 3 readiness milestone; not a claim of production acceptance."
+}

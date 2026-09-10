@@ -124,6 +124,12 @@ evidence.
 One pass over the work twenty-two sessions left behind. Filed here so it stops
 living in session folders and application caches.
 
+- [[12_Brain/07_Reviews/2026-09-09 - Google Ads API access is blocked at the connector|Google Ads API is blocked at the connector]]
+  — six accounts tested, six 403s. The connector cannot send `login-customer-id`.
+  The MCC is `703-867-3437`; that is the missing value.
+- [[_os/automation/google-ads-daily/PROVENANCE|Google Ads daily loop (rescued)]]
+  — a complete daily runbook and working renderer, found in a dated session folder
+  with nothing scheduling it. Rendering works; collection does not exist.
 - [[12_Brain/07_Reviews/2026-09-09 - Machine power fault diagnosis|Machine power fault diagnosis]]
   — 14 unclean power-offs, 0 dumps, 0 WHEA, no battery. Thermal, disk and software
   crash all ruled out by measurement. It is power delivery. Needs hands.

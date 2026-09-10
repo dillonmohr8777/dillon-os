@@ -1,0 +1,74 @@
+[
+  {
+    "action": "seen",
+    "key": "gmail:1a0721716eaf4998",
+    "disposition": "suppressed"
+  },
+  {
+    "action": "seen",
+    "key": "gmail:1a072157b805deda",
+    "disposition": "suppressed"
+  },
+  {
+    "action": "seen",
+    "key": "gmail:1a07212c6cf7b76d",
+    "disposition": "suppressed"
+  },
+  {
+    "action": "seen",
+    "key": "gmail:1a0720aefc1ddb18",
+    "disposition": "suppressed"
+  },
+  {
+    "action": "seen",
+    "key": "gmail:1a07204a737d7f4c",
+    "disposition": "suppressed"
+  },
+  {
+    "action": "seen",
+    "key": "gmail:1a071efa68815d31",
+    "disposition": "suppressed"
+  },
+  {
+    "action": "seen",
+    "key": "gmail:1a071e993a4b53be",
+    "disposition": "suppressed"
+  },
+  {
+    "action": "seen",
+    "key": "gmail:1a07200c268d20d0",
+    "disposition": "reviewed"
+  },
+  {
+    "action": "seen",
+    "key": "gmail:1a0720015e9ea5ba",
+    "disposition": "reviewed"
+  },
+  {
+    "action": "seen",
+    "key": "slack:CSEDG476U:1788620213.293809",
+    "disposition": "suppressed"
+  },
+  {
+    "action": "seen",
+    "key": "slack:D0AGQGYHM5M:1788621293.717989",
+    "disposition": "suppressed"
+  },
+  {
+    "action": "seen",
+    "key": "slack:D0AGQGYHM5M:1788621416.471609",
+    "disposition": "reviewed"
+  },
+  {
+    "action": "source-complete",
+    "source": "slack",
+    "beforeUnix": 1788621471,
+    "paginationExhausted": true
+  },
+  {
+    "action": "source-complete",
+    "source": "gmail",
+    "beforeUnix": 1788621471,
+    "paginationExhausted": true
+  }
+]

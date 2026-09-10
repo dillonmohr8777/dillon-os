@@ -1,0 +1,9 @@
+[
+{"action":"seen","key":"gmail:1a07252d555d23ee","disposition":"suppressed"},
+{"action":"seen","key":"gmail:1a072509f3f25666","disposition":"suppressed"},
+{"action":"seen","key":"gmail:1a0724d86386d070","disposition":"suppressed"},
+{"action":"seen","key":"slack:C0AU6GMGY73:1788624230.980949","disposition":"suppressed"},
+{"action":"seen","key":"slack:C0AEU1Q5UER:1788624255.120509","disposition":"reviewed"},
+{"action":"source-complete","source":"slack","beforeUnix":1788624666,"paginationExhausted":true},
+{"action":"source-complete","source":"gmail","beforeUnix":1788624666,"paginationExhausted":true}
+]
