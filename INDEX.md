@@ -119,6 +119,11 @@ evidence.
 - [[12_Brain/04_Decisions/2026-09-07 - Align HCM registry record is superseded|Align HCM registry record is superseded]]
   — the stale active registry record is superseded by the vault.
 
+## Handoff — 2026-09-10
+
+- [[System/handoff-2026-09-10|Session handoff]] — what is waiting on Dillon, what was
+  in flight, and the findings not worth re-deriving.
+
 ## Orchestrator consolidation — 2026-09-09
 
 One pass over the work twenty-two sessions left behind. Filed here so it stops
