@@ -92,3 +92,29 @@ The Zap change is a client-account change and is **approval-gated**; it is queue
 in [[System/approval-queue|Approval Queue]], not executed.
 
 Feeds [[12_Brain/05_Projects/2026-09-07 - Momentum AI division launch]].
+
+## The Zap fix recovers forms only — 2026-09-09
+
+Confirmed by exhaustive search on 2026-09-09, not inferred:
+`grep -rln -i "callrail"` across every client tree under
+`Documents/Codex/projects/client-operations/clients/` returns **zero files** for
+Omega. Omega has no call tracking of any kind.
+
+Its landing page emits `phone_call` on a `.tracked-phone` click. As the tracking
+readiness review states: "this is a phone click, not connected-call or
+qualified-call evidence." A click is not a call, and it carries no identity.
+
+This is a second, independent gap sitting alongside the Zapier defect, and it
+changes what the Zap fix actually delivers:
+
+- **Fixing the Zap recovers named leads from forms.**
+- **Calls stay anonymous**, and `phone call lead` is a primary action on 9 of 9
+  Omega campaigns. The July 6-12 window recorded 3 tracked actions — 1 call, 2
+  forms — so calls are roughly a third of the signal.
+
+So the honest promise to David is "we can now name your form leads," not "we can
+now name your leads." Saying the second and delivering the first would be the
+tenth broken promise, made from a fix rather than a gap.
+
+Closing the phone leg needs a tracking number — CallRail or WhatConverts — which
+is new vendor spend and a separate approval.
