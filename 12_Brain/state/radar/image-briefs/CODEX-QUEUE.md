@@ -105,19 +105,19 @@ this directory specifying exactly what to generate, slot by slot.
 | 82 | Marty Mummert Sign Co. | signmaker | Gettysburg | marty-mummert-sign-co.json |
 | 83 | CDP Complex LLC | warehouse | Clymer | cdp-complex-llc.json |
 | 84 | Andrew W Barbin Pc | lawyer | Mechanicsburg | andrew-w-barbin-pc.json |
-| 85 | Fortitude & Co | fitness-centre | Philadelphia | fortitude-and-co.json |
-| 86 | BG Electric Service LLC | electrician | Philadelphia | bg-electric-service-llc.json |
-| 87 | Pennsylvania Dental Group | dentist | Philadelphia | pennsylvania-dental-group.json |
-| 88 | Chestnut Hill Animal Hospital | veterinary | Erdenheim | chestnut-hill-animal-hospital.json |
-| 89 | County Line Veterinary Hospital | veterinary | Hatboro | county-line-veterinary-hospital.json |
-| 90 | Glen Eagle Pediatric Dentistry | dentist |  | glen-eagle-pediatric-dentistry.json |
-| 91 | Dream Team | hvac | Paoli | dream-team.json |
-| 92 | F M Berkheimer Inc | hvac | Mechanicsburg | f-m-berkheimer-inc.json |
-| 93 | Hortense T. Moss Health Center | doctor | Philadelphia | hortense-t-moss-health-center.json |
-| 94 | Grand Sport Auto Body | car-repair | Collegeville | grand-sport-auto-body.json |
-| 95 | NewAge® Industries | works | Southampton | newage-industries.json |
-| 96 | Malvern Veterinary Hospital | veterinary |  | malvern-veterinary-hospital.json |
-| 97 | Bimbo Bakeries USA | bakery | Bethlehem | bimbo-bakeries-usa.json |
-| 98 | The Juice Merchant | restaurant | Narberth | the-juice-merchant.json |
-| 99 | Sciacca Service Center | car-repair |  | sciacca-service-center.json |
-| 100 | Clear Vision Auto Glass | car-repair | Chadds Ford | clear-vision-auto-glass.json |
+| 85 | Lau & Associates, P.C. | lawyer | Reading | lau-and-associates-p-c.json |
+| 86 | Aim High Realty Inc | estate-agent | White Haven | aim-high-realty-inc.json |
+| 87 | William & Co Inc | accountant | Sweet Valley | william-and-co-inc.json |
+| 88 | Fortitude & Co | fitness-centre | Philadelphia | fortitude-and-co.json |
+| 89 | BG Electric Service LLC | electrician | Philadelphia | bg-electric-service-llc.json |
+| 90 | Pennsylvania Dental Group | dentist | Philadelphia | pennsylvania-dental-group.json |
+| 91 | Chestnut Hill Animal Hospital | veterinary | Erdenheim | chestnut-hill-animal-hospital.json |
+| 92 | County Line Veterinary Hospital | veterinary | Hatboro | county-line-veterinary-hospital.json |
+| 93 | Glen Eagle Pediatric Dentistry | dentist |  | glen-eagle-pediatric-dentistry.json |
+| 94 | Dream Team | hvac | Paoli | dream-team.json |
+| 95 | F M Berkheimer Inc | hvac | Mechanicsburg | f-m-berkheimer-inc.json |
+| 96 | Hortense T. Moss Health Center | doctor | Philadelphia | hortense-t-moss-health-center.json |
+| 97 | Grand Sport Auto Body | car-repair | Collegeville | grand-sport-auto-body.json |
+| 98 | NewAge® Industries | works | Southampton | newage-industries.json |
+| 99 | Malvern Veterinary Hospital | veterinary |  | malvern-veterinary-hospital.json |
+| 100 | Bimbo Bakeries USA | bakery | Bethlehem | bimbo-bakeries-usa.json |
