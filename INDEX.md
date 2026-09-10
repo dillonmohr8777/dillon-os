@@ -124,6 +124,10 @@ evidence.
 One pass over the work twenty-two sessions left behind. Filed here so it stops
 living in session folders and application caches.
 
+- [[12_Brain/07_Reviews/2026-09-09 - Omega search terms, first audit|Omega search terms, first audit]]
+  — never run before. The top term by clicks is a competitor's brand name and it
+  produced 35% of all conversions. Three concrete terms burned $1,113 at $40-54 a
+  click for zero. This is the lead-quality complaint, with a receipt.
 - [[12_Brain/07_Reviews/2026-09-09 - Google Ads API access is blocked at the connector|Google Ads API is blocked at the connector]]
   — six accounts tested, six 403s. The connector cannot send `login-customer-id`.
   The MCC is `703-867-3437`; that is the missing value.
