@@ -92,3 +92,25 @@ delete either without a decision.
 - Product question open: GTB characters (Alec, Brittany, Darnell, Javon) are
   web-ready at 14.4 MB. Whether they belong in the Philadelphia browser world
   alongside service-world is undecided.
+
+## Parallel by default — Dillon, 2026-09-09
+
+**"Parallel work is probably gonna be the bible for literally every single
+session we run — in master orchestrator for sure."**
+
+Standing rule for this seat. Fan out first, then think. Concretely:
+
+- **Dispatch before you dig.** When a question spans more than one tree, repo or
+  account, send subagents at all of it in one message and do your own verifying
+  while they run. Do not investigate serially and then delegate the leftovers.
+- **Multiple tool calls per message** whenever the calls are independent.
+- **The orchestrator verifies, the agents gather.** This seat's own hands are
+  for the one or two things that must not be taken on trust. Everything else is
+  someone else's turn.
+- **Never idle waiting for an agent.** There is always a local file to check, a
+  note to file, a commit to make.
+
+The counter-rule, learned the same day: a subagent cannot be messaged mid-flight
+in this session. So **put shared context on disk in a versioned path**, not in a
+message. Files reach a running agent; messages do not, and files survive the
+session besides.
