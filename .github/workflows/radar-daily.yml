@@ -127,9 +127,23 @@ jobs:
             # Contact discovery writes to the private layer, so any address in a
             # tracked file means that separation broke. needmomentum.com is our
             # own and appears in the footer by design.
-            if grep -oE '[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}' "$f" \
-                 | grep -vE '@(needmomentum\.com|momentum360\.com)$' | head -1 | grep -q .; then
-              echo "::error file=$f::a third-party email address is present in a tracked file"
+            # A retina asset filename is not an email address. `logo@2x-1.png`
+            # and `m-header-logo@3x.png` match the address pattern exactly, and
+            # they entered the registry legitimately once logo provenance began
+            # recording each mark's source URL -- which failed this guard and
+            # blocked the dashboard publish on an entirely clean run.
+            #
+            # The exclusion is narrow on purpose: it drops only strings whose
+            # domain part ends in a file extension. No real address has a TLD of
+            # .png, so this cannot hide an actual leak.
+            leaked=$(grep -oE '[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}' "$f" \
+                 | grep -vE '@(needmomentum\.com|momentum360\.com)$' \
+                 | grep -viE '\.(png|jpe?g|gif|webp|avif|svg|ico|bmp|tiff?|css|js|mjs|json|woff2?|ttf|otf|eot|mp4|webm|pdf)$' \
+                 | wc -l)
+            if [ "$leaked" -gt 0 ]; then
+              # Count only. Printing the address into a public build log would
+              # publish the very thing this step exists to stop.
+              echo "::error file=$f::$leaked third-party email address(es) present in a tracked file"
               fail=1
             fi
           done
