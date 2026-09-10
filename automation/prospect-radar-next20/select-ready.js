@@ -80,6 +80,20 @@ const writeBoth = (filename, value) => {
   atomicJson(path.join(batchDir, filename), value);
 };
 
+/**
+ * Remove the batch directory when a run ends without selecting anything.
+ *
+ * The daily builder runs unattended and the candidate pool is finite, so runs
+ * that stop short are routine. Without this each one left a directory in the
+ * tracked campaigns folder that looked like a batch and contained none.
+ * A directory with files in it is a real batch and is never touched.
+ */
+function discardEmptyBatchDir() {
+  try {
+    if (fs.existsSync(batchDir) && fs.readdirSync(batchDir).length === 0) fs.rmdirSync(batchDir);
+  } catch { /* never let cleanup mask the real failure */ }
+}
+
 function generatedStockEvidence(candidate, slug = slugify(candidate.name || candidate.domain)) {
   const [boardKey, descriptor] = resolveGeneratedStockAssignment({
     slug,
@@ -815,21 +829,24 @@ async function main() {
     .map((candidate, sortIndex) => ({ ...candidate, sortIndex }));
 
   if (rawCandidates.length < targetCount) {
-    // Leave nothing behind: a run that never selected anything has no batch.
-    try {
-      if (fs.existsSync(batchDir) && fs.readdirSync(batchDir).length === 0) fs.rmdirSync(batchDir);
-    } catch { /* a non-empty batch dir is a real batch; never remove it */ }
+    discardEmptyBatchDir();
     throw new Error(`Only ${rawCandidates.length} untouched rebuild/polish rows remain before source preflight.`);
   }
   const preflight = await probePool(rawCandidates);
-  writeBoth('PREFLIGHT-EVIDENCE.json', {
+  atomicJson(path.join(runDir, 'PREFLIGHT-EVIDENCE.json'), {
     runId,
     generatedAt: new Date().toISOString(),
     candidatePool: rawCandidates.length,
     ready: preflight.ready.map((item) => ({ domain: item.candidate.domain, name: item.candidate.name, slug: item.slug, logo: item.source.logo.fileName, referenceCount: item.source.references.length, generatedStockBoard: item.generatedStock.boardKey, cached: Boolean(item.cached) })),
     rejected: preflight.rejected.map((item) => ({ domain: item.candidate.domain, name: item.candidate.name, website: item.candidate.website, reason: item.reason })),
   });
-  const chosen = chooseTwenty(preflight.ready);
+  let chosen;
+  try {
+    chosen = chooseTwenty(preflight.ready);
+  } catch (error) {
+    discardEmptyBatchDir();
+    throw error;
+  }
   copySelectedSources(chosen);
 
   const selection = {
