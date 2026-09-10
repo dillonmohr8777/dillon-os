@@ -69,29 +69,71 @@ filesystem or credits to a local session.
 `.claude/skills/`: `client-pulse`, `client-report`, `content-scan`,
 `inbox-brief`, `metrics-pull`, `plan-today`, `vault-clean`, `week-review`.
 
-Known overlap: `momentum-client-report` vs `client-report`. Unresolved — do not
-delete either without a decision.
+Overlap resolved 2026-09-09: **`momentum-client-report` survives.** `client-report`
+has one commit from July and would emit conversion counts with no names. Four
+mechanics merge up from it — the `build-report.js` render path, `sampleData:
+true`, the `writing-rules.md` pointer, and the Align HCM branding exception.
+Neither deleted. See
+[[12_Brain/04_Decisions/2026-09-09 - momentum-client-report supersedes client-report]].
 
 ## Open items carried forward
 
-- Tock credential exposed in plaintext email since 2026-08-31; revocation drafted
-  2026-09-02, never sent. Four more credential sets sat in Slack channels.
-- Omega match-back promised nine times. Blocked structurally: Zapier
-  notifications carry no lead data. Fagan Painting is the only account where the
-  loop closes, because its leads are parsed into the email body. The fix is a Zap
-  change.
+Revised 2026-09-09. Resolved items moved to the closed list below.
+
+- **The machine is failing.** 14 unclean power-offs in 30 days, zero bugchecks,
+  zero WHEA, no battery — an HP EliteDesk 800 G4 SFF. Uptime has collapsed from
+  204 hours in August to 4-12 hours, with two deaths at **10 seconds** after
+  POST. It is the power supply. Needs hands. This is the root cause behind
+  session death, config "resets", and orphaned lock folders.
+  [[12_Brain/07_Reviews/2026-09-09 - Machine power fault diagnosis]]
+- **No Google Ads API path exists.** 8 of 8 accounts return 403, including the
+  MCC `703-867-3437` itself — so the missing `login-customer-id` header is not
+  the whole story and the OAuth/developer-token pair is not authorised against
+  the tree. Composio exposes no config surface; Abency has no Ads connection.
+  Every figure today comes from a hand-driven browser session.
+  [[12_Brain/07_Reviews/2026-09-09 - Google Ads API access is blocked at the connector]]
+- **Omega's ads were buying competitors' brand names.** First search-terms audit
+  ever run, 2026-09-09: `timberline landscaping` is the top term by clicks and
+  produced 6 of 17 conversions. Three concrete terms burned $1,113 at $39-54 a
+  click for zero. This is the lead-quality complaint's actual cause. Negatives
+  are queued and gated. 21 of 22 pages still unread.
+  [[12_Brain/07_Reviews/2026-09-09 - Omega search terms, first audit]]
+- **Match-back now closes on ZERO accounts.** Fagan Painting was the one where
+  it worked and it is no longer an active client (Dillon, 2026-09-09). The Zap
+  fix also only recovers **form** leads — Omega has no call tracking at all, and
+  `phone call lead` is primary on 9 of 9 campaigns.
+- Tock credential exposed in plaintext email since 2026-08-31; revocation
+  drafted 2026-09-02, never sent. Four more credential sets sat in Slack.
+- **Omega's access request has been written and unsent since 2026-07-30** — 41
+  days. Six of the nine match-back promises were made after it was drafted.
 - Onsite Concrete: the Netlify landing page has no GTM or gtag, so Search form
   submissions never reach Google Ads. Lifetime 3 submissions, 0 since Aug 2.
 - Puttery: zero of seven access gates cleared. Vendor eligibility confirmed
   (Business Group 28086, Business 37824). Laura at Resy holds four open items.
-- Bridge: zero dated client acceptances against three paid milestones;
-  Milestone 3 complete but in an unmerged PR.
 - Two prospect sites shipped with an unmodified demo palette and passed QA.
-- Five clients have Slack channels and no vault record, Nexla among them.
-- 57 unsent client replies in Gmail drafts, none older than 38 days.
-- Product question open: GTB characters (Alec, Brittany, Darnell, Javon) are
-  web-ready at 14.4 MB. Whether they belong in the Philadelphia browser world
-  alongside service-world is undecided.
+- 57 unsent client replies in Gmail drafts, plus ~29 unsent reports. Five weekly
+  batches generated and none sent. The last thing actually sent to Omega was
+  **August 11**.
+- The Momentum design system is not a git repository and its vendored copy in
+  `client-operations` has already drifted — 6,459 vs 7,416 bytes.
+- **20 open decisions against the Friday 2026-09-11 meeting with Mac.** D01
+  blocks any client-facing offer sheet and any outbound.
+
+## Closed 2026-09-09
+
+- **GTB characters in Agency Wars: decided, no.** Book cast stays with the book.
+- **Version control on the game trees: done.** All three under git; the two
+  Philadelphia trees now have private remotes, as does the twice-gitignored
+  Fable avatar-life evidence.
+- **Bridge PR opened** — `dillonmohr8777/bridge-software-frontend` #17, 39
+  commits against `development`. Tori's two decisions still gate it.
+- **Nexla registered.** It had live spend and no registry record at all, which
+  is why the control system could not see it. Omega given its Slack channel.
+- **Six orphaned session outputs filed into the vault**, three of which existed
+  only in an AppData cache.
+- **The Google Ads daily runbook and renderer rescued** into
+  `_os/automation/google-ads-daily/`. Rendering works; collection does not
+  exist, and cannot until the API path above is solved.
 
 ## Parallel by default — Dillon, 2026-09-09
 
