@@ -103,6 +103,32 @@ Evidence: `12_Brain/07_Reviews/2026-09-09 - Machine power fault diagnosis.md`
 Full verified inventory with per-file descriptions:
 **`System/ESTATE-INVENTORY-2026-09-10.md`**
 
+### Five things the inventory turned up that you would otherwise assume wrong
+
+1. **Nearly half the scheduled automations are not running.** 26 in
+   `~/.codex/automations`: **15 active, 10 paused, 1 inactive.** Check status
+   per-file before relying on any of them. Do not assume the roster is live.
+2. **`GoogleAdsProbe` contains live mutation scripts** — `nexla_all.py` and
+   `nexla_fix.py` write directly to Google Ads via REST, gated only by
+   `--apply`. This **bypasses the read-only MCP posture used everywhere else in
+   the estate.** Flag before any automated run touches it.
+3. **`11_Agents\Master/Google Ads/Reporting/SEO/Web Agent.md` are superseded**
+   by the 17-agent `.claude/agents` roster built by `Build-ClaudeAgents.py`.
+   Current authority is `OPERATING-PLAN-2026-09-09.md`.
+4. **Nexla is being actively worked as a Google Ads client but does not clearly
+   appear in `client-operations/registry/clients.json`.** Reconcile before
+   treating it as canonical — **the registry wins.** The registry declares 26
+   clients, 24 verified; Zen Spa at Tropicana and AMI Cleaning are inactive.
+5. **`bok-law-firm` carries an explicit `affiliationConstraints` record** —
+   "not-client-of momentum-360", confidence 1.0, from a 2026-07-16 user
+   correction. Evidence of a real past client mixup. **Do not re-blend those
+   two.**
+
+Skills: 25 project skills mirrored across `.agents/skills` and
+`.claude/skills` (5 files diverge, 1 is Claude-only), ~90 in global
+`~/.claude/skills`, 489 top-level dirs in `~/.codex/skills` (bulk marketplace
+library). Subagents: 17 in `~/.claude/agents`.
+
 ## Skills — use rather than reinvent
 
 `momentum-client-context`, `momentum-brand-system`, `momentum-client-intake`,
