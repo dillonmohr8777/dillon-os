@@ -100,3 +100,62 @@ Note the Nexla monthly draft `r2013811896562371890` is sitting unsent from
 
 - [[12_Brain/07_Reviews/2026-09-09 - Omega search terms, first audit]]
 - [[12_Brain/07_Reviews/2026-09-09 - The work went inward and never outward]]
+
+## Full API pull — 2026-09-10, and it is a structure problem
+
+First complete pull, via the Google Ads API rather than the UI. Window
+2026-06-01 to 2026-09-09, terms with at least one click. Raw data at
+`_os/automation/google-ads-api/pulls/nexla-search-terms-2026-06-01-to-2026-09-09.json`.
+
+**419 terms · 1,203 clicks · $5,677.77 · 3.00 conversions**
+
+| | Terms | Cost | Conversions | Cost/conv |
+|---|---:|---:|---:|---:|
+| Brand (contains "nexla") | 6 | $819.75 | **2.00** | $410 |
+| **Non-brand** | 413 | **$4,858.02** | **1.00** | **$4,858** |
+
+**400 zero-conversion terms carry $4,555.54 — 80% of account spend bought
+nothing.**
+
+### The bleed is match type, not keyword choice
+
+Seven terms took **$319.13 at an average $40.66 per click**, most on a single
+click each:
+
+| Term | Clicks | Cost/click |
+|---|---:|---:|
+| `etl platforms` | 1 | **$48.11** |
+| `data observability platform` | 1 | **$47.84** |
+| `data management platforms` | 1 | **$45.80** |
+| `data integration tools` | 1 | **$40.18** |
+| `etl tools` | 2 | $34.53 |
+| `hermes agent os` | 1 | $35.23 |
+| `agent memory` | 1 | $32.91 |
+
+And a **340-term long tail at one click each, $2,080.92.** That cannot be
+negated away term by term — 340 negatives is not a fix, it is a symptom. Broad
+match is reaching for generic head terms the account cannot afford to win.
+
+`hermes agent os` is worth noting on its own: that is the name of Dillon's own
+manager account (`Dillon Mohr Hermes Agent`). Somebody searched an internal
+project name and Nexla paid $35.23 for the click.
+
+### What this implies for structure, beyond negatives
+
+1. **Twenty-five negatives remove 49% of the waste ($2,216.94).** Worth doing,
+   but it treats half the problem.
+2. **The other half is match type.** The one-click-at-$40 pattern says broad
+   match on generic data-infrastructure vocabulary. Phrase or exact on the terms
+   that actually convert, and let the head terms go.
+3. **Brand is subsidising the report.** Two of three conversions came from
+   people typing the company name. Brand and non-brand must be reported
+   separately or the account looks four times healthier than it is.
+4. **34 of 36 campaigns are paused**, and the paused set includes an `aws`
+   Performance Max at **$600/day** and a `Demand Gen` at **$150/day**. Anything
+   that unpauses those spends real money in hours.
+
+### The honest sentence for the client
+
+Non-brand search bought one conversion for $4,858 over roughly a hundred days,
+while brand search bought two for $820. The account is not underperforming at
+the margins; the non-brand thesis has not been proven at all yet.
