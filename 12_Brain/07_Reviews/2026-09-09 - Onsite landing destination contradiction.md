@@ -1,6 +1,6 @@
 ---
 note_type: review
-status: active
+status: superseded
 created: 2026-09-09
 updated: 2026-09-09
 owner: Dillon Mohr
@@ -8,7 +8,7 @@ client: "[[01_Clients/Onsite Concrete/overview]]"
 priority: critical
 verification_status: verified
 observed_at: 2026-09-09
-next_action: Read the final URL of Search campaign 24183437726 in the Ads UI and settle it
+next_action: Re-scope the queue item to publish draft 10207039555 before it creates a second competing live campaign
 tags: [review, onsite, google-ads, tracking, contradiction, unresolved]
 source_refs:
   - "C:/Users/dillo/repos/dillon-os/_os/automation/google-ads-daily/omega-onsite-applied-status.md line 15 (2026-09-05)"
@@ -16,6 +16,10 @@ source_refs:
 ---
 
 # Onsite landing destination contradiction
+
+> **RESOLVED the same day, in favour of the 2026-09-05 file.** The 2026-09-08
+> trace made an inference error. The correction is at the bottom; the analysis
+> below is preserved as the reasoning that led to it.
 
 **Summary:** Two dated, read-only sessions three days apart recorded opposite
 facts about where Onsite's live Search campaign sends its traffic. Both are
@@ -81,3 +85,58 @@ notification is a trigger rather than a record.
 
 - [[12_Brain/07_Reviews/2026-09-09 - Omega search terms, first audit]]
 - [[12_Brain/03_Concepts/2026-09-07 - Conversion match-back is the differentiator]]
+
+## Resolved — 2026-09-09
+
+The Netlify final URL is real, and it belongs to a campaign that was **never
+published.**
+
+`onsite-concrete-landscape/paid-media/launches/alr-20260814-231753-8d9c8a19/plan.md`
+line 155 specifies it. Its sibling `implementation-status.md`, updated
+2026-08-14, says what became of it:
+
+> `awaiting_fresh_google_verification`
+> "The campaign has not been created or enabled."
+> Google opened a `Confirm it is you` challenge classified
+> `CAMPAIGN_BUDGET_INCREASE`.
+
+And it is demonstrably a different campaign from the live one:
+
+| | Unpublished draft | Live campaign `24183437726` |
+|---|---|---|
+| Budget | **$15.00/day** | $7.00/day |
+| Scope | **Vacaville only** | 8 locations, Solano County |
+| Keywords | 14 | 18 |
+
+The 2026-09-08 statement — "The Search campaign launched Jul 30 sends traffic to
+the Netlify page" — conflated that unpublished Vacaville draft with the live
+Solano County campaign. The 2026-09-05 direct readback stands: **live Search
+traffic lands on `onsiteconcretelandscape.com/services/`, which is tracked**
+with `GTM-PFJ633DF` and Ads conversion ID `16871144532`. The 2026-09-05 tracking
+test was itself run through that site's Divi form at `/contact-us/`, not the
+Netlify form.
+
+**Revised verdict.** "No GTM or gtag on the Netlify page" — true, re-verified.
+"Lifetime 3 submissions, 0 since Aug 2" — true. **"So Search form submissions
+never reach Google Ads" — false as stated.** That page receives no live Search
+traffic. It is a dormant orphan, not an active leak.
+
+This downgrades from an urgent measurement outage to cleanup. Onsite's real
+problem stays the one that was always well-evidenced: **74.07% Search lost
+impression share to rank, and 5 impressions a week.**
+
+## The risk this exposed instead
+
+**Three competing Search artifacts on one account.**
+
+| Artifact | Budget | Scope | State |
+|---|---|---|---|
+| Campaign `24183437726` | $7/day, 18 kw, 8 locations | Solano County | **Live**, Eligible (Learning) |
+| Draft `10207039555` | $9.39/day combined, 14 kw | 7 cities | Blocked on a security confirmation since 2026-07-30 |
+| Draft `alr-20260814` | $15/day, 14 kw | Vacaville only | Blocked on a budget challenge since 2026-08-14 |
+
+The queue item dated 2026-09-08 asks to approve publishing draft `10207039555`.
+**Publishing it while `24183437726` runs would put a second live Search campaign
+on the same keywords, bidding against itself.** The item reads as though the
+draft replaces campaigns paused on 2026-07-30 — but that replacement already
+went live. Re-scope or withdraw it before anyone actions it.
