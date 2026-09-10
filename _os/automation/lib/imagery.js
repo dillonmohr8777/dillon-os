@@ -29,6 +29,7 @@ const { harvestLite } = require('./harvest-lite');
 const { harvestImages } = require('./harvest-images');
 const { assessLogoEligibility, applyLogoEligibility, sameSite } = require('./logo-eligibility');
 const { auditLogo } = require('./logo-audit');
+const { identifyBusiness } = require('./business-identity');
 const crypto = require('crypto');
 
 /**
@@ -40,34 +41,19 @@ const crypto = require('crypto');
 const HEADER_DISPLAY_WIDTH = 240;
 const MIN_DISPLAY_WIDTH = 96;
 
-function normalizedName(value) {
-  return String(value || '')
-    .toLowerCase()
-    .replace(/&/g, ' and ')
-    .replace(/[^a-z0-9]+/g, ' ')
-    .replace(/\b(inc|llc|ltd|corp|corporation)\b/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim();
-}
-
 /**
- * Confirm that the official page identifies the same business before a logo is
+ * Confirm the official page identifies the same business before its logo is
  * trusted. URL reachability alone is deliberately not enough: a parked domain,
- * redirect target, or wrong business can still return HTTP 200.
+ * a redirect target, or the wrong business can still return HTTP 200.
+ *
+ * The comparison lives in lib/business-identity.js. It used to be a strict
+ * containment check here, which refused about a quarter of otherwise-good
+ * prospects -- most of them wrongly, because HTML entities were never decoded
+ * and "Plumbing &amp; Heating" normalised to "plumbing and amp heating".
  */
 function exactIdentity(prospect, harvest) {
-  const expected = normalizedName(prospect?.business_name || prospect?.name);
-  if (!expected) return { match: false, reason: 'business_identity_unverified' };
-  const facts = harvest?.facts || {};
-  const voice = harvest?.voice || {};
-  const candidates = [facts.businessNameFromLd, voice.title, voice.metaDescription, ...(voice.headings || [])]
-    .map(normalizedName)
-    .filter(Boolean);
-  if (!candidates.length) return { match: false, reason: 'business_identity_unverified' };
-  const matching = candidates.find((candidate) => {
-    return candidate === expected || (` ${candidate} `).includes(` ${expected} `);
-  });
-  return matching ? { match: true, observed: matching } : { match: false, reason: 'business_identity_mismatch' };
+  const out = identifyBusiness(prospect, harvest);
+  return out.match ? { match: true, observed: out.observed } : { match: false, reason: out.reason };
 }
 
 /**
