@@ -86,12 +86,26 @@ Revised 2026-09-09. Resolved items moved to the closed list below.
   POST. It is the power supply. Needs hands. This is the root cause behind
   session death, config "resets", and orphaned lock folders.
   [[12_Brain/07_Reviews/2026-09-09 - Machine power fault diagnosis]]
-- **No Google Ads API path exists.** 8 of 8 accounts return 403, including the
-  MCC `703-867-3437` itself — so the missing `login-customer-id` header is not
-  the whole story and the OAuth/developer-token pair is not authorised against
-  the tree. Composio exposes no config surface; Abency has no Ads connection.
-  Every figure today comes from a hand-driven browser session.
-  [[12_Brain/07_Reviews/2026-09-09 - Google Ads API access is blocked at the connector]]
+- **Google Ads API is live as of 2026-09-10.** Local client under
+  `%LOCALAPPDATA%\Dillon\GoogleAdsProbe\`. Query every account DIRECT. The
+  manager route 403s because the MCC and the children are separately
+  accessible, not hierarchical. Composio is still dead (its own Cloud project)
+  — do not revive it. Never query 7214914099. Never take an account-level
+  total on 6275014654. Cloud project 150963436905, Explorer Access.
+  The 2026-09-09 "no API path" bullet is superseded.
+  [[12_Brain/07_Reviews/2026-09-10 - Orchestrator pickup]]
+- **Antigravity extra Google access is Gemini 3.8 Flash plan quota, not Ads.**
+  Antigravity 2.12.2 is the desktop Gemini 3.8 Flash (High) seat. Cursor
+  monitors that session with Grok 4.6 and does not spawn Gemini 3.8 here.
+  Desktop quota spent 2026-09-10 10:20 ET until 2026-09-17 09:55 ET. That
+  session account-totaled shared CID 6275014654; the local probe now refuses
+  that total and splits Replenish vs Fresh Blends by campaign name.
+  Empty Antigravity `mcp_config.json` is correct. Do not treat
+  `GEMINI_API_KEY` or `gemini:antigravity` as the 3.8 path. GTM, Search
+  Console, and Workspace MCP stay off until Dillon names them.
+  [[System/antigravity-desktop-seat]]
+  [[12_Brain/07_Reviews/2026-09-10 - Antigravity desktop Gemini monitor]]
+  [[12_Brain/06_Research/2026-09-10 - Antigravity extra Google access]]
 - **Omega's ads were buying competitors' brand names.** First search-terms audit
   ever run, 2026-09-09: `timberline landscaping` is the top term by clicks and
   produced 6 of 17 conversions. Three concrete terms burned $1,113 at $39-54 a

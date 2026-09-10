@@ -128,6 +128,15 @@ evidence.
   already sent. Matt EOD text is drafted and unsent.
 - [[02_FullTimeJob/Empeon/2026-09-10 - Matt EOD text draft|Matt Otten EOD text]] —
   unsent. Recruiter screen passed; next conversation is John Nack.
+- [[12_Brain/06_Research/2026-09-10 - Antigravity extra Google access|Antigravity extra Google access]] —
+  Gemini 3.8 Flash plan quota is the extra Google path. Not GTM, Ads, or Search Console.
+- [[12_Brain/07_Reviews/2026-09-10 - Antigravity Gemini 3.8 Flash wiring|Antigravity 3.8 Flash wiring]] —
+  desktop live; Gemini CLI headless path configured.
+- [[System/antigravity-desktop-seat|Antigravity desktop seat]] — Gemini 3.8
+  stays in the desktop app. Cursor stays Grok and monitors it.
+- [[12_Brain/07_Reviews/2026-09-10 - Antigravity desktop Gemini monitor|Antigravity desktop Gemini monitor]] —
+  session idle after 10:20 ET quota. Shared-CID account total on 6275014654
+  was refused and split.
 
 ## Orchestrator consolidation — 2026-09-09
 
