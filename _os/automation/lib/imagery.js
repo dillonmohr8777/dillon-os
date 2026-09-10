@@ -30,6 +30,7 @@ const { harvestImages } = require('./harvest-images');
 const { assessLogoEligibility, applyLogoEligibility, sameSite } = require('./logo-eligibility');
 const { auditLogo } = require('./logo-audit');
 const { identifyBusiness } = require('./business-identity');
+const { isLive } = require('./site-liveness');
 const crypto = require('crypto');
 
 /**
@@ -212,6 +213,19 @@ async function checkImagery(website, opts = {}) {
     out.reason = 'harvest returned nothing to inspect';
     return out;
   }
+  // A parked redirect and a real homepage are both "HTTP 200 with no images".
+  // Separating them stops ~39% of the daily budget being spent re-reading dead
+  // domains, and gives a hold reason that says what is actually wrong.
+  out.liveness = harvest.liveness || { state: 'live', reason: '' };
+  if (!isLive(out.liveness)) {
+    out.reason = `site not live: ${out.liveness.reason}`;
+    out.logo_eligibility = {
+      eligible: false,
+      status: out.liveness.state === 'parked' ? 'rejected' : 'pending',
+      reason: `site_not_live_${out.liveness.state}`,
+    };
+    return out;
+  }
   out.found = harvest.images.length;
 
   let picked;
@@ -297,7 +311,7 @@ async function surveyImagery(registry, prospects, opts = {}) {
   const today = opts.today;
   const concurrency = opts.concurrency || 6;
   const need = opts.need ?? HOMEPAGE_IMAGE_SLOTS;
-  const stats = { checked: 0, buildable: 0, partial: 0, none: 0, logo_verified: 0, logo_pending: 0, logo_rejected: 0 };
+  const stats = { checked: 0, buildable: 0, partial: 0, none: 0, logo_verified: 0, logo_pending: 0, logo_rejected: 0, not_live: 0 };
 
   let cursor = 0;
   async function worker() {
@@ -306,6 +320,7 @@ async function surveyImagery(registry, prospects, opts = {}) {
       const res = await checkImagery(p.website, { ...opts, prospect: p, businessName: p.business_name, need });
       const row = registry.prospects[p.domain];
       if (row) {
+        if (res.liveness) row.liveness = { ...res.liveness, checked: today };
         row.imagery = {
           checked: today,
           usable: res.usable,
@@ -319,6 +334,7 @@ async function surveyImagery(registry, prospects, opts = {}) {
         applyLogoEligibility(row, res.logo_eligibility, { today });
       }
       stats.checked += 1;
+      if (res.liveness && res.liveness.state !== 'live') stats.not_live += 1;
       if (res.logo_eligibility?.eligible) stats.logo_verified += 1;
       else if (res.logo_eligibility?.status === 'rejected') stats.logo_rejected += 1;
       else stats.logo_pending += 1;

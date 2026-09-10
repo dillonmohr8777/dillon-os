@@ -36,6 +36,7 @@
  */
 
 const { auditTier0 } = require('./site-audit');
+const { classifySite } = require('./site-liveness');
 const { httpGet } = require('./net');
 
 /** Words that mark a heading as navigation furniture rather than real copy. */
@@ -355,9 +356,16 @@ async function harvestLite(url, opts = {}) {
     limitations.unshift(`only ${wordCount} words readable — too thin to ground 1,200 words of new copy`);
   }
 
+  // Classify the URL itself before anything downstream tries to read a brand
+  // off it. A parked 114-byte redirect and a real homepage are both "HTTP 200
+  // with no images", and telling them apart is what stops dead domains eating
+  // the daily logo budget.
+  const liveness = classifySite(html, { status: 200 });
+
   return {
     source: 'harvest-lite',
     siteUrl: url,
+    liveness,
     finalUrl: audit.finalUrl || url,
     officialSocialUrls: [...html.matchAll(/<a\b[^>]*\bhref=["']([^"']+)["']/gi)]
       .map(m => { try { return new URL(m[1], audit.finalUrl || url).href; } catch { return ''; } })

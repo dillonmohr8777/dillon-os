@@ -38,6 +38,7 @@ const { repoPath, readJson, writeJson, ensureDir, todayISO, nowISO, slugify } = 
 const radar = require('../lib/radar');
 const { planDiscovery, describePlan, DAILY } = require('../lib/coverage-plan');
 const { surveyImagery, imageryStale, HOMEPAGE_IMAGE_SLOTS } = require('../lib/imagery');
+const { isLive, livenessStale } = require('../lib/site-liveness');
 const { renderDashboard } = require('../lib/radar-dashboard');
 const { gradeSite, mergeAudits } = require('../lib/site-grader');
 const { auditTier0, auditTier1 } = require('../lib/site-audit');
@@ -465,6 +466,10 @@ async function main() {
       // checked inside the cooldown is skipped entirely unless nothing else is
       // waiting, so a permanently unverifiable logo cannot starve the registry.
       .filter((p) => !p.logo_checked || todayNumber - dayNumber(p.logo_checked) >= LOGO_RECHECK_COOLDOWN_DAYS)
+      // A URL already found parked or dead is skipped until its own re-check
+      // window opens. Businesses do move hosts, so this is a timed hold on the
+      // URL, never a permanent judgement about the business.
+      .filter((p) => isLive(p.liveness) || livenessStale(p, { today }))
       .sort((a, b) => {
         const aChecked = a.logo_checked ? dayNumber(a.logo_checked) : -Infinity;
         const bChecked = b.logo_checked ? dayNumber(b.logo_checked) : -Infinity;
@@ -483,6 +488,7 @@ async function main() {
       run.logo_verified = st.logo_verified;
       run.logo_pending = st.logo_pending;
       run.logo_rejected = st.logo_rejected;
+      run.not_live = st.not_live;
       process.stderr.write(
         `  imagery: ${st.buildable} buildable now, ${st.logo_verified} exact logos verified, ` +
         `${st.logo_pending} pending, ${st.logo_rejected} rejected; ${st.partial} partial, ${st.none} with nothing usable\n`
