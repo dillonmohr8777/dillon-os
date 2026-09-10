@@ -124,6 +124,9 @@ evidence.
 One pass over the work twenty-two sessions left behind. Filed here so it stops
 living in session folders and application caches.
 
+- [[12_Brain/07_Reviews/2026-09-09 - The work went inward and never outward|The work went inward and never outward]]
+  — 13 August monthly reports, attachment-verified, posted to internal Slack and sent
+  to zero clients. The generator was built never-send; the sender arrived 28 days late.
 - [[12_Brain/07_Reviews/2026-09-09 - Onsite landing destination contradiction|Onsite landing destination contradiction]]
   — two read-only sessions, three days apart, recorded opposite destinations for the
   only live campaign. One Final URL field decides whether the lane is tracked or blind.
