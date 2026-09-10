@@ -24,6 +24,7 @@
  */
 
 const zlib = require('zlib');
+const { decodeJpeg } = require('./jpeg-decode');
 
 const MAX_PIXELS = 16e6; // 16MP: a logo bigger than this is not a logo.
 
@@ -437,6 +438,11 @@ function auditSvg(buffer) {
 function auditLogo(buffer, { format, minWidth = 64, minHeight = 16 } = {}) {
   const fmt = String(format || '').toLowerCase().replace('jpeg', 'jpg');
 
+  if (!['png', 'jpg', 'svg'].includes(fmt)) {
+    // WEBP/AVIF/GIF need a decoder this module does not carry. Named, not silent.
+    return { ok: false, transparent: false, reason: `logo_format_not_auditable_${fmt || 'unknown'}` };
+  }
+
   if (fmt === 'svg') {
     const svg = auditSvg(buffer);
     return svg.ok
@@ -448,14 +454,23 @@ function auditLogo(buffer, { format, minWidth = 64, minHeight = 16 } = {}) {
       : { ok: false, transparent: false, reason: svg.reason };
   }
 
-  if (fmt !== 'png') {
-    // JPEG/WEBP/GIF/AVIF carry no usable alpha for a header mark and decoding
-    // them in pure Node is not worth the surface. Held with a real reason.
-    return { ok: false, transparent: false, reason: `logo_format_not_auditable_${fmt || 'unknown'}` };
+  // A JPEG carries no alpha at all, so it can only qualify by having a flat
+  // plate cut off it -- which is exactly what removeFlatBackground does, and
+  // exactly why refusing JPEGs unread was throwing away usable logos. Baseline
+  // JPEG decodes; progressive and arithmetic are refused by name rather than
+  // half-decoded into a plausible-looking wrong image, because a wrong image
+  // here yields a wrong brand colour with no signal that anything went astray.
+  const decoded = fmt === 'jpg' ? decodeJpeg(buffer) : decodePng(buffer);
+  if (decoded.error) {
+    const unsupported = /progressive|arithmetic|not a (?:JPEG|PNG)/i.test(decoded.error);
+    return {
+      ok: false,
+      transparent: false,
+      reason: unsupported
+        ? `logo_format_not_auditable_${fmt}: ${decoded.error}`
+        : `logo_undecodable: ${decoded.error}`,
+    };
   }
-
-  const decoded = decodePng(buffer);
-  if (decoded.error) return { ok: false, transparent: false, reason: `logo_undecodable: ${decoded.error}` };
 
   let { rgba, width, height } = decoded;
   let measured = measureAlpha(rgba, width, height);
@@ -463,7 +478,8 @@ function auditLogo(buffer, { format, minWidth = 64, minHeight = 16 } = {}) {
   let bytes = buffer;
   let removal = null;
 
-  const alreadyClear = measured.transparentRatio >= 0.04 && measured.edgeTransparentRatio >= 0.5;
+  const alreadyClear = fmt !== 'jpg'
+    && measured.transparentRatio >= 0.04 && measured.edgeTransparentRatio >= 0.5;
 
   if (!alreadyClear) {
     removal = removeFlatBackground(rgba, width, height);
