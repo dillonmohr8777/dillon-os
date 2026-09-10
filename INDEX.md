@@ -130,6 +130,9 @@ living in session folders and application caches.
 - [[12_Brain/07_Reviews/2026-09-09 - Onsite landing destination contradiction|Onsite landing destination contradiction]]
   — two read-only sessions, three days apart, recorded opposite destinations for the
   only live campaign. One Final URL field decides whether the lane is tracked or blind.
+- [[12_Brain/07_Reviews/2026-09-10 - Nexla search terms, first audit|Nexla search terms, first audit]]
+  — $12,977 for 3 conversions, and two of the three came from people typing the brand
+  name. Non-brand bought one conversion for roughly $11,900. 32,024 terms.
 - [[12_Brain/07_Reviews/2026-09-09 - Omega search terms, first audit|Omega search terms, first audit]]
   — never run before. The top term by clicks is a competitor's brand name and it
   produced 35% of all conversions. Three concrete terms burned $1,113 at $40-54 a
