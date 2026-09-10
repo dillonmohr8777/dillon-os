@@ -122,10 +122,21 @@ test('SVG plate detection separates a real vector mark from a backed one', () =>
 });
 
 test('formats with no usable alpha are held with a named reason, never passed', () => {
+  // JPEG is decodable now (lib/jpeg-decode.js), so a malformed one is
+  // `undecodable` rather than `not_auditable` -- the distinction is deliberate:
+  // one is a broken file, the other an encoding nothing here can read.
   const jpg = auditLogo(Buffer.from([0xff, 0xd8, 0xff, 0xe0, 0, 0, 0, 0]), { format: 'jpg' });
   assert.equal(jpg.ok, false);
   assert.equal(jpg.transparent, false);
-  assert.match(jpg.reason, /not_auditable/);
+  assert.match(jpg.reason, /logo_undecodable|logo_format_not_auditable/);
+
+  // Formats with no decoder at all are still named rather than silently passed.
+  for (const fmt of ['webp', 'avif', 'gif']) {
+    const out = auditLogo(Buffer.alloc(64), { format: fmt });
+    assert.equal(out.ok, false);
+    assert.match(out.reason, /logo_format_not_auditable/);
+  }
+
   const junk = auditLogo(Buffer.from('nonsense'), { format: 'png' });
   assert.equal(junk.ok, false);
 });
