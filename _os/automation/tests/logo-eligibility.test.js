@@ -5,6 +5,7 @@ const { assessLogoEligibility: assess, sameSite, dedupeDecisions, applyLogoEligi
 const radar = require('../lib/radar');
 const { projectRows, renderDashboard } = require('../lib/radar-dashboard');
 const { checkImagery, surveyImagery } = require('../lib/imagery');
+const { encodePng } = require('../lib/logo-audit');
 function row(domain = 'acme.example') {
   return { domain, website: `https://${domain}`, business_name: 'Acme Plumbing', lifecycle: 'queued_build',
     grades: [], current: { verdict: 'rebuild', opportunity: 80 }, imagery: { buildable: true, usable: 6 },
@@ -93,11 +94,70 @@ test('harvest labels cannot self-certify; reviewed identical bytes can refresh',
   const harvestImages = async () => ({ images: Array(6).fill({ width: 800 }), logo });
   let result = await checkImagery(p.website, { prospect: p, harvestLite, harvestImages });
   assert.equal(result.buildable, true);
+  // Bytes that no longer match the review drop out of it. The row then has to
+  // earn `verified` again on measurement alone -- and a stub that serves no
+  // bytes cannot, which is the point: the label is not the evidence.
   logo.sha256 = 'b'.repeat(64);
   result = await checkImagery(p.website, { prospect: p, harvestLite, harvestImages });
   assert.equal(result.buildable, false);
-  assert.equal(result.logo_eligibility.reason, 'logo_visual_validation_missing');
+  assert.equal(result.logo_eligibility.reason, 'logo_bytes_unavailable');
   delete p.logo_eligibility;
   result = await checkImagery(p.website, { prospect: p, harvestLite, harvestImages });
   assert.equal(result.logo, false);
+});
+test('a measured, background-removed logo reaches verified with no human in the loop', async () => {
+  // The regression this whole lane exists for: before lib/logo-audit.js, this
+  // path returned `pending` for every prospect forever, so `logo_verified` was
+  // 0 on every sweep and the Next 20 builder had nothing to select.
+  const p = row();
+  delete p.logo_eligibility;
+  const width = 320, height = 120;
+  const rgba = Buffer.alloc(width * height * 4);
+  for (let y = 0; y < height; y++) {
+    for (let x = 0; x < width; x++) {
+      const o = (y * width + x) * 4;
+      const mark = x >= 24 && x < width - 24 && y >= 20 && y < height - 20;
+      const c = mark ? [12, 60, 130] : [255, 255, 255];
+      rgba[o] = c[0]; rgba[o + 1] = c[1]; rgba[o + 2] = c[2]; rgba[o + 3] = 255;
+    }
+  }
+  const png = encodePng(rgba, width, height);
+  const harvestLite = async () => ({ finalUrl: p.website, images: [], voice: { title: p.business_name } });
+  const logo = { url: `${p.website}/brand.png`, sha256: 'c'.repeat(64), ext: 'png', width, height, bytes: png.length };
+  const harvestImages = async () => ({ images: Array(6).fill({ width: 800 }), logo });
+
+  const result = await checkImagery(p.website, {
+    prospect: p, harvestLite, harvestImages, fetchLogoBytes: async () => png,
+  });
+
+  const e = result.logo_eligibility;
+  assert.equal(e.status, 'verified', e.reason);
+  assert.equal(e.transparent, true);
+  assert.equal(e.background_removed, true);
+  assert.equal(e.validation_method, 'automated_pixel_audit');
+  assert.ok(e.transparent_ratio > 0.02, 'transparency is a measured number');
+  assert.match(e.output_sha256, /^[a-f0-9]{64}$/);
+  assert.notEqual(e.output_sha256, e.source_sha256, 'removed background means new bytes');
+  assert.ok(e.width >= 2 * e.display_width, 'source carries 2x the painted size');
+  assert.equal(result.logo, true);
+  assert.equal(result.buildable, true);
+
+  // And the shared contract agrees, which is what actually opens the gate.
+  assert.equal(assess({ ...p, logo_eligibility: e }).eligible, true);
+});
+test('measured claims without their measurements are refused', async () => {
+  const p = row();
+  // An automated verdict that omits what it measured must not inherit trust.
+  for (const missing of ['transparent_ratio', 'content_ratio', 'transformation']) {
+    const e = { ...p.logo_eligibility, validation_method: 'automated_pixel_audit',
+      transparent_ratio: 0.4, content_ratio: 0.3, transformation: 'flood fill' };
+    delete e[missing];
+    assert.equal(assess({ ...p, logo_eligibility: e }).eligible, false, missing);
+  }
+  // Claiming a background was removed without naming the resulting bytes.
+  const e = { ...p.logo_eligibility, validation_method: 'automated_pixel_audit',
+    transparent_ratio: 0.4, content_ratio: 0.3, transformation: 'flood fill', background_removed: true };
+  assert.equal(assess({ ...p, logo_eligibility: e }).eligible, false);
+  e.output_sha256 = 'd'.repeat(64);
+  assert.equal(assess({ ...p, logo_eligibility: e }).eligible, true);
 });
