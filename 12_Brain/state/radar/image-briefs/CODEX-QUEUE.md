@@ -1,4 +1,4 @@
-# Codex image queue — generated 2026-09-10
+# Codex image queue — generated 2026-09-11
 
 100 rebuild targets own no usable photographs. Each has a brief in
 this directory specifying exactly what to generate, slot by slot.
@@ -108,16 +108,16 @@ this directory specifying exactly what to generate, slot by slot.
 | 85 | Lau & Associates, P.C. | lawyer | Reading | lau-and-associates-p-c.json |
 | 86 | Aim High Realty Inc | estate-agent | White Haven | aim-high-realty-inc.json |
 | 87 | William & Co Inc | accountant | Sweet Valley | william-and-co-inc.json |
-| 88 | Fortitude & Co | fitness-centre | Philadelphia | fortitude-and-co.json |
-| 89 | BG Electric Service LLC | electrician | Philadelphia | bg-electric-service-llc.json |
-| 90 | Pennsylvania Dental Group | dentist | Philadelphia | pennsylvania-dental-group.json |
-| 91 | Chestnut Hill Animal Hospital | veterinary | Erdenheim | chestnut-hill-animal-hospital.json |
-| 92 | County Line Veterinary Hospital | veterinary | Hatboro | county-line-veterinary-hospital.json |
-| 93 | Glen Eagle Pediatric Dentistry | dentist |  | glen-eagle-pediatric-dentistry.json |
-| 94 | Dream Team | hvac | Paoli | dream-team.json |
-| 95 | F M Berkheimer Inc | hvac | Mechanicsburg | f-m-berkheimer-inc.json |
-| 96 | Hortense T. Moss Health Center | doctor | Philadelphia | hortense-t-moss-health-center.json |
-| 97 | Grand Sport Auto Body | car-repair | Collegeville | grand-sport-auto-body.json |
-| 98 | NewAge® Industries | works | Southampton | newage-industries.json |
-| 99 | Malvern Veterinary Hospital | veterinary |  | malvern-veterinary-hospital.json |
-| 100 | Bimbo Bakeries USA | bakery | Bethlehem | bimbo-bakeries-usa.json |
+| 88 | Car Audio Files | car-parts | Milford | car-audio-files.json |
+| 89 | Fortitude & Co | fitness-centre | Philadelphia | fortitude-and-co.json |
+| 90 | BG Electric Service LLC | electrician | Philadelphia | bg-electric-service-llc.json |
+| 91 | Pennsylvania Dental Group | dentist | Philadelphia | pennsylvania-dental-group.json |
+| 92 | Chestnut Hill Animal Hospital | veterinary | Erdenheim | chestnut-hill-animal-hospital.json |
+| 93 | County Line Veterinary Hospital | veterinary | Hatboro | county-line-veterinary-hospital.json |
+| 94 | Glen Eagle Pediatric Dentistry | dentist |  | glen-eagle-pediatric-dentistry.json |
+| 95 | Dream Team | hvac | Paoli | dream-team.json |
+| 96 | F M Berkheimer Inc | hvac | Mechanicsburg | f-m-berkheimer-inc.json |
+| 97 | Hortense T. Moss Health Center | doctor | Philadelphia | hortense-t-moss-health-center.json |
+| 98 | Grand Sport Auto Body | car-repair | Collegeville | grand-sport-auto-body.json |
+| 99 | NewAge® Industries | works | Southampton | newage-industries.json |
+| 100 | Malvern Veterinary Hospital | veterinary |  | malvern-veterinary-hospital.json |
