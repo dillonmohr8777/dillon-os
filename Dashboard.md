@@ -2,7 +2,7 @@
 note_type: dashboard
 status: active
 owner: Dillon Mohr
-updated: 2026-08-15
+updated: 2026-09-11
 review_cadence: daily
 tags:
   - dashboard
@@ -21,11 +21,11 @@ navigation is needed.
 Checkbox items only — `_os/vault-state.js` reads this section for the HUD
 directive feed and skips any other list format.
 
-- [ ] Close out Cindy May Christmas deliverable (`due: 2026-09-01`, now 9 days past due — carried forward again).
+- [ ] Close out Cindy May Christmas deliverable (`due: 2026-09-01`, now 10 days past due — carried forward again).
 - [ ] Get yes/no on the two needs-approval queue items: BigOrange Marketing website build, Bar Crawl USA paid-media optimization.
-- [ ] Touch 3-5 stalled clients (real contact, not another scan) — lead with Tags 2 Go (freshest stall, access-blocked queue item); pick the rest from the 36 stalled in pulse-today.md.
-- [ ] Carry forward the 4 unanswered Momentum 360 Slack asks (open since ~2026-07-30, now ~6 weeks) — last day Momentum 360 reads "moving" on git evidence alone; fix its `last_touched` frontmatter before the signal drops.
-- [ ] BOK Law Firm predicted prep (bounded step only): window is 2026-09-15-09-17 (5 days out) — locate/fingerprint the source packet and resolve topics/copy, no drafting or image generation yet.
+- [ ] Touch 3-5 stalled clients (real contact, not another scan) — lead with Tags 2 Go (freshest stall, access-blocked queue item); pick the rest from the 37 stalled in pulse-today.md.
+- [ ] Carry forward the 4 unanswered Momentum 360 Slack asks (open since ~2026-07-30, now ~6 weeks) — Momentum dropped out of "moving" today; fix its `last_touched` frontmatter and draft replies from `System/slack-action-queue.md`.
+- [ ] BOK Law Firm predicted prep (bounded step only): window is 2026-09-15-09-17 (4 days out) — locate/fingerprint the source packet and resolve topics/copy, no drafting or image generation yet.
 
 ## Active projects
 

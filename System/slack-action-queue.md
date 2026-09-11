@@ -1,6 +1,6 @@
 ---
 tags: [system, slack, drafts]
-updated: 2026-09-10
+updated: 2026-09-11
 status: draft-only
 source_refs:
   - "[[Daily-Briefs/inbox-brief-2026-09-10]]"
