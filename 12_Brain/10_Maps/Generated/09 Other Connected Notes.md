@@ -48,12 +48,6 @@ Visible notes that do not yet belong to a stable operating domain.
 - [[_archive/09_Transcripts/Transcript Index|Transcript Index]]
 - [[_archive/README|README]]
 
-## .github
-
-- [[.github/skills/dillon-frontend-maker/SKILL|SKILL]]
-- [[.github/skills/dillon-independent-web-checker/SKILL|SKILL]]
-- [[.github/skills/dillon-plan-grill/SKILL|SKILL]]
-
 ## 08_Prospects
 
 - [[08_Prospects/bar-crawl-usa-web-barcrawlusa-com|bar-crawl-usa-web-barcrawlusa-com]]
