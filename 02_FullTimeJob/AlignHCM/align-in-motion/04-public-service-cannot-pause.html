@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Someone is still on shift · Align in Motion</title>
+<link rel="stylesheet" href="align-motion.css">
+<link rel="preload" as="image" href="assets/panel-utility.jpg">
+</head>
+<body>
+<div id="stage-wrap">
+  <div id="stage">
+    <!-- background stack: painted layers + GPU-only drifting light -->
+    <div class="bg bg-base"></div>
+    <div class="bg bg-depth"></div>
+    <div class="bg"><i class="aura aura-a"></i><i class="aura aura-b"></i><i class="aura aura-c"></i><i class="aura aura-d"></i></div>
+    <div class="bg motes"></div>
+    <div class="bg"><i class="sweep"></i></div>
+    <div class="bg bg-bloom"></div>
+    <div class="bg bg-vignette"></div>
+    <div class="bg bg-grain"></div>
+    <div class="topbar"><i></i></div>
+
+    <!-- 1 · hook -->
+    <section class="scene" data-dur="8">
+      <div class="ghost">3 A.M.</div>
+      <div class="content">
+        <div class="eyebrow"><i></i><span>Public Sector</span></div>
+        <h1 class="headline h-xl">At 3 a.m., someone's <em>still on shift.</em></h1>
+        <p class="body">While the city sleeps, crews are working. Water keeps running, roads stay clear, and calls get answered. None of that happens by accident.</p>
+      </div>
+    </section>
+
+    <!-- 2 · utilities -->
+    <section class="scene split" data-dur="8" data-page="1">
+      <div class="panel">
+        <img src="assets/panel-utility.jpg" alt="Utility crews maintaining infrastructure at dusk">
+        <span class="feather"></span><span class="warm"></span><span class="edge"></span>
+      </div>
+      <div class="content">
+        <div class="eyebrow"><i></i><span>Utilities</span></div>
+        <h2 class="headline h-lg">Someone kept <em>the lights on.</em></h2>
+        <p class="body">Line crews, treatment plants, rotating nights. Schedules that respect the contract, and pay that's right.</p>
+      </div>
+    </section>
+
+    <!-- 3 · fire and EMS -->
+    <section class="scene split" data-dur="8" data-page="2">
+      <div class="panel">
+        <img src="assets/panel-fire.jpg" alt="Fire and EMS crew in front of an engine">
+        <span class="feather"></span><span class="warm"></span><span class="edge"></span>
+      </div>
+      <div class="content">
+        <div class="eyebrow"><i></i><span>Fire and EMS</span></div>
+        <h2 class="headline h-lg">Every call needs <em>the right crew.</em></h2>
+        <p class="body">Qualifications, staffing minimums, and overtime rules, all handled before the call comes in.</p>
+      </div>
+    </section>
+
+    <!-- 4 · where it gets hard -->
+    <section class="scene" data-dur="10" data-page="3">
+      <div class="content">
+        <div class="eyebrow"><i></i><span>What It Takes</span></div>
+        <h2 class="headline h-md">Getting it right, <em>every single day.</em></h2>
+        <div class="list">
+          <div class="li"><div class="num">01</div><div><div class="lt">Coverage you can count on</div><div class="ld">Every shift filled, every day of the year, holidays included.</div></div></div>
+          <div class="li"><div class="num">02</div><div><div class="lt">The right person, qualified</div><div class="ld">Certifications tracked, so assignments always line up.</div></div></div>
+          <div class="li"><div class="num">03</div><div><div class="lt">Rules built in, not memorized</div><div class="ld">Contract tiers, differentials, and overtime, right on every check.</div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5 · K-12 education -->
+    <section class="scene split" data-dur="8" data-page="4">
+      <div class="panel">
+        <img src="assets/panel-edu.jpg" alt="School staff and educators">
+        <span class="feather"></span><span class="warm"></span><span class="edge"></span>
+      </div>
+      <div class="content">
+        <div class="eyebrow"><i></i><span>K-12 Education</span></div>
+        <h2 class="headline h-lg">A school day depends on <em>who shows up.</em></h2>
+        <p class="body">Substitutes, aides, drivers, and food service. Hourly teams with pay built around the school calendar.</p>
+      </div>
+    </section>
+
+    <!-- 6 · one foundation -->
+    <section class="scene" data-dur="8" data-page="5">
+      <div class="ghost right">TRUST</div>
+      <div class="content">
+        <div class="eyebrow"><i></i><span>One Foundation</span></div>
+        <h2 class="headline h-lg">One system your team <em>can actually trust.</em></h2>
+        <p class="body">Scheduling, time, pay, and compliance in one place, built around how agencies actually run.</p>
+      </div>
+    </section>
+
+    <!-- 7 · outro -->
+    <section class="scene" data-dur="10">
+      <div class="outro-wrap">
+        <span class="halo"></span>
+        <div class="lg xl"><img src="assets/alignhcm-logo.svg" alt="Align HCM"><span class="gleam"><i></i></span></div>
+        <div class="divider"></div>
+        <div class="tag">Built for the people <em>who keep it running.</em></div>
+        <div class="u">alignhcm.com</div>
+      </div>
+    </section>
+
+    <!-- chrome (no corner logo: the closing lockup carries the brand) -->
+    <div class="footer">
+      <div class="brand"><span class="dot"></span><b>Align HCM</b><span>· Public Sector · Align in Motion</span></div>
+      <div class="url">alignhcm.com</div>
+    </div>
+    <div class="pager"></div>
+  </div>
+</div>
+
+<div class="controls">
+  <button id="btn-reset" class="ghostbtn" title="Restart">⏮</button>
+  <button id="btn-play" title="Play / pause">▶</button>
+  <div class="time" id="t-cur">00:00 / 01:00</div>
+  <div class="track" id="track"><div class="fill" id="t-fill"></div></div>
+</div>
+<div class="hint">space play/pause · ← → seek · H hide UI</div>
+
+<script src="vendor/gsap.min.js"></script>
+<script src="align-motion.js"></script>
+</body>
+</html>
