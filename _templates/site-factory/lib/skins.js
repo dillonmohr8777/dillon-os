@@ -29,7 +29,7 @@ function buildSkinCss(brief) {
   const shared = `
 .slug-${slug}{--attitude:${attitude}}
 .slug-${slug} .hero h1,.slug-${slug} .section-head h2,.slug-${slug} .story h2,.slug-${slug} .feature h2,.slug-${slug} .spotlight h2,.slug-${slug} .contact-intro h2,.slug-${slug} .closing h2,.slug-${slug} .offering-card h3,.slug-${slug} .experience-grid h3,.slug-${slug} .catalog-card h3,.slug-${slug} .footer-identity strong{font-family:var(--display);font-weight:700}
-.slug-${slug} .glass-panel,.slug-${slug} .contact-card,.slug-${slug} .site-header,.slug-${slug} figcaption{backdrop-filter:blur(var(--glass-blur,22px)) saturate(160%);-webkit-backdrop-filter:blur(var(--glass-blur,22px)) saturate(160%)}
+.slug-${slug} .glass-panel,.slug-${slug} .contact-card,.slug-${slug} .site-header,.slug-${slug} .bottom-dock,.slug-${slug} figcaption{backdrop-filter:blur(var(--glass-blur,22px)) saturate(160%);-webkit-backdrop-filter:blur(var(--glass-blur,22px)) saturate(160%)}
 `;
 
   const attitudes = {
@@ -37,7 +37,7 @@ function buildSkinCss(brief) {
 .slug-${slug}{--glass-blur:28px;--glass-alpha:.42}
 .slug-${slug} .site-header{background:color-mix(in srgb,var(--paper) 55%,transparent);border-bottom-color:color-mix(in srgb,var(--ink) 10%,transparent);box-shadow:0 10px 40px color-mix(in srgb,var(--deep) 12%,transparent)}
 .slug-${slug} .hero-media figure{border:1px solid color-mix(in srgb,#fff 45%,transparent);box-shadow:0 30px 80px color-mix(in srgb,var(--deep) 28%,transparent),inset 0 1px 0 color-mix(in srgb,#fff 55%,transparent);border-radius:calc(var(--radius) + 8px)}
-.slug-${slug} .offering-card,.slug-${slug} .experience-grid article,.slug-${slug} .catalog-card,.slug-${slug} .contact-card{background:color-mix(in srgb,var(--paper) 38%,transparent);border:1px solid color-mix(in srgb,#fff 35%,var(--ink) 12%);box-shadow:0 18px 50px color-mix(in srgb,var(--deep) 14%,transparent);backdrop-filter:blur(24px) saturate(170%)}
+.slug-${slug} .offering-card,.slug-${slug} .experience-grid article,.slug-${slug} .catalog-card,.slug-${slug} .contact-card,.slug-${slug} .bottom-dock{background:color-mix(in srgb,var(--paper) 38%,transparent);border:1px solid color-mix(in srgb,#fff 35%,var(--ink) 12%);box-shadow:0 18px 50px color-mix(in srgb,var(--deep) 14%,transparent);backdrop-filter:blur(24px) saturate(170%)}
 .slug-${slug} .marquee-strip{background:color-mix(in srgb,var(--deep) 72%,transparent);backdrop-filter:blur(18px)}
 .slug-${slug} .hero::after{content:"";position:absolute;inset:auto 8% 12% auto;width:min(38vw,420px);height:min(38vw,420px);border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,var(--accent2) 55%,transparent),transparent 70%);filter:blur(8px);pointer-events:none;z-index:0;animation:glass-orb 12s ease-in-out infinite alternate}
 `,

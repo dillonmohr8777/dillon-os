@@ -1,0 +1,232 @@
+{
+  "slug": "home-furnishings-consignment",
+  "name": "Home Furnishing Consignment",
+  "city": "Wayne",
+  "category": "Furniture consignment",
+  "vertical": "Retail",
+  "attitude": "warm",
+  "url": "http://www.hfconsignment.com/",
+  "phone": "610.964.1903",
+  "address": "Gateway Shopping Center, 139 East Swedesford Road, Wayne, PA 19087",
+  "description": "Consignment furniture on the Main Line. Gateway Shopping Center, 139 East Swedesford Road, Wayne. Call 610.964.1903.",
+  "fonts": {
+    "display": "Libre Baskerville",
+    "displayFallback": "Georgia,serif",
+    "text": "Source Sans 3"
+  },
+  "tokens": {
+    "paper": "#F7F3EA",
+    "ink": "#404040",
+    "accent": "#BFA97D",
+    "accent2": "#8A6D3B",
+    "panel": "#E6DCC8",
+    "deep": "#404040",
+    "onAccent": "#090909",
+    "onAccent2": "#FFFFFF",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "2px",
+    "radius": "20px"
+  },
+  "marquee": [
+    "Main Line",
+    "Wayne",
+    "Consignment",
+    "Gateway Shopping Center"
+  ],
+  "nav": [
+    {
+      "label": "Shop",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Wayne | Main Line consignment",
+    "headline": "The first choice for furniture consignment",
+    "sub": "Home Furnishing Consignment sits in Gateway Shopping Center at 139 East Swedesford Road in Wayne. Real pieces on the floor. Call 610.964.1903 before you haul a sofa across the Main Line.",
+    "ctaPrimary": {
+      "label": "Call the shop",
+      "href": "tel:6109641903"
+    },
+    "ctaSecondary": {
+      "label": "Official site",
+      "href": "http://www.hfconsignment.com/"
+    },
+    "glassFloat": {
+      "title": "Gateway Center",
+      "sub": "Wayne, PA 19087"
+    },
+    "marquee": [
+      "Consign",
+      "Browse",
+      "Wayne",
+      "Main Line"
+    ]
+  },
+  "offerings": {
+    "heading": "Floor stock, not a <mark>warehouse photo.</mark>",
+    "items": [
+      "Consignment furniture on the Main Line, priced for people who still want the maker name without the showroom markup.",
+      "You can consign a piece. They handle pricing, merchandising, and the floor, so you aren't running a yard sale.",
+      "Gateway Shopping Center puts the shop on Swedesford Road, close enough that a second visit is easy."
+    ]
+  },
+  "proof": {
+    "items": [
+      "139 East Swedesford Road, Wayne, PA 19087",
+      "Gateway Shopping Center",
+      "Tel 610.964.1903",
+      "Consignment furniture on the Main Line"
+    ]
+  },
+  "gallery": {
+    "heading": "Wood, linen, <mark>daylight.</mark>",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "A Main Line consignment floor in Wayne",
+    "paragraphs": [
+      "The shop lives at 139 East Swedesford Road in Gateway Shopping Center. You walk in, you sit in the chair, you decide if the piece belongs in the house.",
+      "Consignment only works if the floor turns. Call 610.964.1903 to consign, or come browse what's already tagged."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a furniture run should go.",
+    "items": [
+      "Park at Gateway. The shop is on East Swedesford Road, not a hidden lot.",
+      "Sit in the piece. Consignment only pays off if the scale is right in person.",
+      "Bring a photo if you're consigning. They'll tell you what belongs on the floor."
+    ]
+  },
+  "feature": {
+    "heading": "Consign the piece, or take one home",
+    "text": "The Main Line still has rooms that need a real dresser, not a box-store stand-in. This floor is built for that trade, in both directions.",
+    "cta": {
+      "label": "See the shop",
+      "href": "http://www.hfconsignment.com/"
+    },
+    "imageIndex": 8
+  },
+  "catalog": {
+    "heading": "Two ways onto <mark>the floor.</mark>",
+    "items": [
+      {
+        "title": "Browse furniture",
+        "href": "http://www.hfconsignment.com/",
+        "imageIndex": 9
+      },
+      {
+        "title": "Consign with us",
+        "href": "http://www.hfconsignment.com/",
+        "imageIndex": 10
+      },
+      {
+        "title": "Location",
+        "href": "http://www.hfconsignment.com/",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Find the shop in <mark>Wayne.</mark>",
+    "sub": "Gateway Shopping Center, 139 East Swedesford Road. Confirm hours on the official site before you drive."
+  },
+  "closing": {
+    "heading": "Home Furnishing Consignment",
+    "cta": {
+      "label": "Call the shop",
+      "href": "tel:6109641903"
+    }
+  },
+  "links": [
+    {
+      "label": "Official site",
+      "href": "http://www.hfconsignment.com/"
+    },
+    {
+      "label": "Call",
+      "href": "tel:6109641903"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Showroom of mixed consignment sofas and lamps"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Hand running along a walnut dresser edge"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Sunlit dining table with mismatched chairs"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Stack of framed art leaning on a rug"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Upholstered armchair in a shop window"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Tag hanging from a mid-century cabinet"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Dusk exterior of a shopping-center storefront"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Close crop of brass hardware on a chest"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Living-room vignette with a consigned sofa"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Customer talking with staff on the floor"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Parking lot view of Gateway Shopping Center"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Evening lamps glowing inside the shop"
+    }
+  ],
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "sections": [
+    "hero",
+    "offerings",
+    "proof",
+    "gallery",
+    "story",
+    "experience",
+    "feature",
+    "catalog",
+    "contact",
+    "closing"
+  ]
+}

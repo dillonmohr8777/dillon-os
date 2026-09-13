@@ -87,13 +87,14 @@ So the floor is 6 required sections; hitting the target of 10 means adding `proo
 
 ## Shared chrome and behavior
 
-- `site-header`: fixed/absolute pill bar with `brand-logo` (or `wordmark` fallback), 3 anchor links, one `nav-cta`. Collapses to logo + CTA under 850px.
-- `mobile-action`: fixed bottom CTA bar, mobile only.
+- `site-header`: sticky liquid-glass bar with `brand-logo` (or `wordmark` fallback), chip nav links, one header CTA. Nav stays visible on small screens as a horizontal chip scroller. On scroll the header mark inks away as the bottom logo arrives.
+- `bottom-dock` (also class `mobile-action`): always-on liquid-glass page menu at the thumb line. Explore / Gallery, a center ink-logo well, Visit, and the primary CTA. The real logo is not baked into photos. It blooms into the well with disappearing-ink masking and particle spray after the hero.
 - `site-footer`: name + address + `footer-links`.
 - Reveal-on-scroll with direction/delay variants; sections can `.vanish-out` as they leave upward
 - Marquee strip after the hero (their lingo, not filler)
-- Liquid-glass header, contact cards, and hero float
-- Sticky mobile action bar
+- Liquid-glass header, bottom dock, contact cards, and hero float
+- Sticky bottom dock with scroll-triggered ink/particle logo
+- Ken-burns live frames on odd images; glass sheen on even stills
 - Per-site `attitude` skin (`glass` | `editorial` | `brutal` | `warm` | `industrial` | `neon`) so every homepage has its own feel
 - Social rail fed by harvested site/social imagery via `apply-harvest-images.js`
 - Buttons: pill (`border-radius:999px`) with hover lift (`translateY(-2px)` + shadow) and active scale `.97`. `:focus-visible` outline in `--accent`.

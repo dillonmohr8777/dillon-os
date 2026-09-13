@@ -1,0 +1,231 @@
+{
+  "slug": "southampton-hot-tub",
+  "name": "Southampton Hot Tub",
+  "city": "Exton",
+  "category": "Hot tubs and saunas",
+  "vertical": "Retail",
+  "attitude": "glass",
+  "url": "https://southamptonhottub.com/",
+  "phone": "(215) 791-6170",
+  "description": "Hot tubs and saunas in Exton and Huntingdon Valley. Artesian and Bullfrog spas, in-house delivery, repairs. Call (215) 791-6170.",
+  "fonts": {
+    "display": "Archivo",
+    "displayFallback": "sans-serif",
+    "text": "Outfit"
+  },
+  "tokens": {
+    "paper": "#F1F1F1",
+    "ink": "#3A3936",
+    "accent": "#4A90A4",
+    "accent2": "#D0E2E5",
+    "panel": "#D8E4E6",
+    "deep": "#3A3936",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "32px"
+  },
+  "marquee": [
+    "Artesian",
+    "Bullfrog",
+    "Exton",
+    "Huntingdon Valley"
+  ],
+  "nav": [
+    {
+      "label": "Shop",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Exton and Huntingdon Valley | Hot tubs and saunas",
+    "headline": "Bring your dream spa to life",
+    "sub": "Southampton Hot Tub sells hot tubs and saunas from Exton and Huntingdon Valley. Artesian and Bullfrog spas, in-house delivery, repairs. Call (215) 791-6170.",
+    "ctaPrimary": {
+      "label": "Call the showroom",
+      "href": "tel:2157916170"
+    },
+    "ctaSecondary": {
+      "label": "Shop online",
+      "href": "https://southamptonhottub.com/"
+    },
+    "glassFloat": {
+      "title": "Two showrooms",
+      "sub": "Exton \u00b7 Huntingdon Valley"
+    },
+    "marquee": [
+      "Hot tubs",
+      "Saunas",
+      "Delivery",
+      "Repairs"
+    ]
+  },
+  "offerings": {
+    "heading": "Spas you can sit in, <mark>then have delivered.</mark>",
+    "items": [
+      "Artesian and Bullfrog spas on the floor in Exton and Huntingdon Valley, so you sit before you buy.",
+      "In-house delivery, because a spa that arrives on someone else's truck is how the install goes wrong.",
+      "Repairs and service after the sale, from the same company that sold the tub."
+    ]
+  },
+  "proof": {
+    "items": [
+      "Telephone (215) 791-6170",
+      "Exton and Huntingdon Valley showrooms",
+      "Artesian and Bullfrog spas",
+      "In-house delivery and repairs"
+    ]
+  },
+  "gallery": {
+    "heading": "Water, steam, <mark>quiet glass.</mark>",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "Two showrooms, one spa shop",
+    "paragraphs": [
+      "Southampton Hot Tub runs Exton and Huntingdon Valley. You can sit in an Artesian or a Bullfrog before anyone talks delivery.",
+      "In-house delivery and repairs are the after. Call (215) 791-6170 when you want the consultation, not a brochure."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a spa buy should go.",
+    "items": [
+      "Sit in the tub at Exton or Huntingdon Valley. Size is a body question.",
+      "Ask about in-house delivery so the crane and the pad are theirs.",
+      "When something fails later, the repair number is the same shop."
+    ]
+  },
+  "feature": {
+    "heading": "In-house delivery is the difference",
+    "text": "A spa is a machine you sit in. If a third party drops it, you own the problem. Southampton keeps delivery and repairs inside the company.",
+    "cta": {
+      "label": "See hot tubs",
+      "href": "https://southamptonhottub.com/"
+    },
+    "imageIndex": 8
+  },
+  "catalog": {
+    "heading": "Tubs, saunas, <mark>service.</mark>",
+    "items": [
+      {
+        "title": "Hot tubs",
+        "href": "https://southamptonhottub.com/",
+        "imageIndex": 9
+      },
+      {
+        "title": "Saunas",
+        "href": "https://southamptonhottub.com/",
+        "imageIndex": 10
+      },
+      {
+        "title": "Service and repair",
+        "href": "https://southamptonhottub.com/",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Pick a <mark>showroom.</mark>",
+    "sub": "Exton and Huntingdon Valley. Confirm hours on the official site before you drive."
+  },
+  "closing": {
+    "heading": "Southampton Hot Tub",
+    "cta": {
+      "label": "Call the showroom",
+      "href": "tel:2157916170"
+    }
+  },
+  "links": [
+    {
+      "label": "Official site",
+      "href": "https://southamptonhottub.com/"
+    },
+    {
+      "label": "Call",
+      "href": "tel:2157916170"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Hot tub on a cedar deck at twilight"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Person sitting in a spa with steam rising"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Showroom row of uncovered spas"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Indoor sauna with cedar benches"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Delivery crew setting a spa on a pad"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Bullfrog spa jets under clear water"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Dusk exterior of a spa showroom"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Close crop of water beading on an acrylic shell"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Artesian spa on a showroom floor"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Traditional sauna interior with a heater"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Technician opening a spa skirt for repair"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Night patio with a covered hot tub"
+    }
+  ],
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "sections": [
+    "hero",
+    "offerings",
+    "proof",
+    "gallery",
+    "story",
+    "experience",
+    "feature",
+    "catalog",
+    "contact",
+    "closing"
+  ]
+}
