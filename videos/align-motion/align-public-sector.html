@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Align HCM · Public Sector</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app"></div>
+<script src="assets/mark-data.js"></script>
+<script src="engine.js"></script>
+<script>
+/* =============================================================================
+   ALIGN HCM · "Public Sector / Shift" reel  ·  1920x1080  ·  ~53s
+   Five numbered chapters drive the 01/05 counter. No em dashes anywhere.
+   ========================================================================== */
+AlignMotion.boot({
+  rail: 'PUBLIC SECTOR',
+  url: 'ALIGNHCM.COM',
+  fps: 30,
+  scenes: [
+
+    /* ---- open: atoms swarm in, mark holds full, disperses into the hook --- */
+    { kind: 'logo', dur: 4.2, logoY: 470, logoW: 900,
+      phases: { t0: 0.20, t1: 1.60, t2: 2.25, t3: 3.50, t4: 4.85 } },
+
+    { kind: 'text', dur: 5.8,
+      eyebrow: 'PUBLIC SECTOR',
+      ghost: '3 A.M.',
+      headline: "At 3 a.m., // {someone's still on shift}.",
+      sub: 'While the city sleeps, crews are working. Water keeps running, roads stay clear, and calls get answered. None of it happens by accident.' },
+
+    { kind: 'text', dur: 5.6, chapter: true, photo: 'util',
+      eyebrow: 'UTILITIES',
+      headline: 'Someone kept {the lights on}.',
+      sub: "Line crews and rotating nights. Schedules that respect the contract, and pay that's right." },
+
+    { kind: 'text', dur: 5.6, chapter: true, photo: 'ems',
+      eyebrow: 'FIRE AND EMS',
+      headline: 'Every call needs {the right crew}.',
+      sub: 'Certifications, staffing minimums, and overtime rules, all settled before the tones drop.' },
+
+    { kind: 'list', dur: 6.6, chapter: true,
+      eyebrow: 'WHAT IT TAKES',
+      headline: 'Getting it right, // {every single day}.',
+      items: [
+        { t: 'Coverage you can count on', d: 'Every shift filled, every day of the year, holidays included.' },
+        { t: 'The right person, qualified', d: 'Certifications tracked, so assignments always line up.' },
+        { t: 'Rules built in, not memorized', d: 'Contract tiers, differentials, and overtime, right on every check.' }
+      ] },
+
+    { kind: 'text', dur: 5.6, chapter: true, photo: 'school',
+      eyebrow: 'K-12 EDUCATION',
+      headline: 'A school day depends on {who shows up}.',
+      sub: 'Substitutes, aides, drivers, food service. Pay built around the school calendar.' },
+
+    { kind: 'text', dur: 5.6, chapter: true,
+      eyebrow: 'ONE FOUNDATION',
+      ghost: 'ONE SYSTEM',
+      headline: 'One system your team {can actually trust}.',
+      sub: 'Scheduling, time, pay, and compliance in one place, built around how agencies actually run.' },
+
+    { kind: 'statement', dur: 4.0,
+      headline: 'Nobody notices // when it works.',
+      sub: "That's the entire job." },
+
+    /* ---- close --------------------------------------------------------- */
+    { kind: 'endcard', dur: 6.2, logoY: 373, logoW: 943,
+      phases: { t0: 0.05, t1: 1.55, t2: 2.15, t3: 99, t4: 100 },
+      lockupText: 'HUMAN CAPITAL MANAGEMENT',
+      url: 'ALIGNHCM.COM' }
+  ]
+});
+</script>
+</body>
+</html>
