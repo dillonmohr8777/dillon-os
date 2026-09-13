@@ -1,0 +1,13 @@
+{
+  "name": "wck-win-story",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Builds the WCK win-story one-pager (.pptx) from a scene graph",
+  "scripts": {
+    "build": "node render-pptx.js",
+    "preview": "node render-html.js"
+  },
+  "dependencies": {
+    "pptxgenjs": "^3.12.0"
+  }
+}
