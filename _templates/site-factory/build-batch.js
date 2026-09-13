@@ -142,6 +142,13 @@ async function runBatch(batchDir, options = {}) {
         row.failures.push(`${built.missingAssets.length} missing asset file(s)`);
       }
 
+      const imgSrcs = [...built.html.matchAll(/src="(assets\/image-[^"]+)"/g)].map((m) => m[1]);
+      const seenSrc = new Set();
+      imgSrcs.forEach((src) => {
+        if (seenSrc.has(src)) row.failures.push(`duplicate image src in HTML: ${src}`);
+        seenSrc.add(src);
+      });
+
       const assetsDir = path.join(built.outDir, 'assets');
       if (fs.existsSync(assetsDir)) {
         for (const f of fs.readdirSync(assetsDir)) {

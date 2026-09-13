@@ -1,0 +1,235 @@
+{
+  "slug": "oaks-italian-deli",
+  "name": "Oaks Italian Deli And Pizzeria",
+  "city": "Phoenixville",
+  "category": "Italian deli and pizzeria",
+  "vertical": "Restaurant",
+  "attitude": "brutal",
+  "url": "http://oaksitaliandeli.com/",
+  "phone": "610-666-0280",
+  "address": "1570 Egypt Rd, Phoenixville, PA 19460",
+  "hours": "Mon-Thu 10am-10pm, Fri-Sat 10am-11pm, Sun 11am-9pm",
+  "description": "Oaks Italian Deli And Pizzeria at 1570 Egypt Rd, Phoenixville. Call 610-666-0280. Open late most nights.",
+  "schemaType": "Restaurant",
+  "fonts": {
+    "display": "Bebas Neue",
+    "displayFallback": "Impact,sans-serif",
+    "text": "IBM Plex Sans"
+  },
+  "tokens": {
+    "paper": "#F6F3EA",
+    "ink": "#0C0C0C",
+    "accent": "#A01419",
+    "accent2": "#E8FFBB",
+    "panel": "#E4DCC8",
+    "deep": "#0C0C0C",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "6px",
+    "radius": "0px"
+  },
+  "marquee": [
+    "Deli",
+    "Pizza",
+    "Egypt Road",
+    "Phoenixville"
+  ],
+  "nav": [
+    {
+      "label": "Menu",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Phoenixville | Deli and pizzeria",
+    "headline": "Oaks Italian Deli And Pizzeria",
+    "sub": "1570 Egypt Rd, Phoenixville. Deli counter and pizza from the same shop. Call 610-666-0280. Monday through Thursday 10 to 10, Friday and Saturday 10 to 11, Sunday 11 to 9. Oaks Italian Deli And Pizzeria at 1570 Egypt Rd, Phoenixville. Call 610-666-0280. Open late most nights.",
+    "ctaPrimary": {
+      "label": "Call the deli",
+      "href": "tel:6106660280"
+    },
+    "ctaSecondary": {
+      "label": "See the menu",
+      "href": "http://oaksitaliandeli.com/"
+    },
+    "glassFloat": {
+      "title": "1570 Egypt Rd",
+      "sub": "Open late most nights"
+    },
+    "marquee": [
+      "Deli",
+      "Pizza",
+      "Order online",
+      "Egypt Road"
+    ]
+  },
+  "offerings": {
+    "heading": "Deli in the name. Pizza on the board.",
+    "items": [
+      "Italian deli sandwiches built at the counter, not assembled from a frozen pack.",
+      "Pizzeria pies for the nights the table wants a box, not a hoagie.",
+      "Order online when you already know the ticket, or call 610-666-0280."
+    ]
+  },
+  "proof": {
+    "items": [
+      "1570 Egypt Rd, Phoenixville, PA 19460",
+      "Telephone 610-666-0280",
+      "Mon-Thu 10-10, Fri-Sat 10-11, Sun 11-9",
+      "Deli and pizzeria in one shop"
+    ]
+  },
+  "gallery": {
+    "heading": "Rolls, pies, red and white.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "Egypt Road, Phoenixville",
+    "paragraphs": [
+      "Oaks Italian Deli And Pizzeria sits at 1570 Egypt Rd. The name is the offer. You can leave with a sandwich or a pie.",
+      "Hours run late most nights. Sunday is the short day. Call 610-666-0280 if the line at the counter is long.",
+      "Find them at 1570 Egypt Rd, Phoenixville, PA 19460. Call 610-666-0280. Hours: Mon-Thu 10am-10pm, Fri-Sat 10am-11pm, Sun 11am-9pm. Confirm details on the official site before you drive."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How the counter should work.",
+    "items": [
+      "Walk in on Egypt Road. Read the board. Order at the deli or ask for a pie.",
+      "Online ordering exists for the nights you don't want to stand there.",
+      "If something's wrong, ask for the manager. They say they listen."
+    ]
+  },
+  "feature": {
+    "heading": "One shop for the sandwich and the pie",
+    "text": "Plenty of places make you choose deli or pizza. Oaks put both on Egypt Road, with hours that cover a late Friday. Italian deli sandwiches built at the counter, not assembled from a frozen pack.",
+    "cta": {
+      "label": "Open the menu",
+      "href": "http://oaksitaliandeli.com/"
+    },
+    "imageIndex": 8
+  },
+  "catalog": {
+    "heading": "Counter, pie, or the site.",
+    "items": [
+      {
+        "title": "Menu",
+        "href": "http://oaksitaliandeli.com/",
+        "imageIndex": 9
+      },
+      {
+        "title": "Order online",
+        "href": "http://oaksitaliandeli.com/",
+        "imageIndex": 10
+      },
+      {
+        "title": "Gallery",
+        "href": "http://oaksitaliandeli.com/",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Egypt Road is the address.",
+    "sub": "1570 Egypt Rd, Phoenixville. Confirm a holiday close on the official site. Find them at 1570 Egypt Rd, Phoenixville, PA 19460. Call 610-666-0280. Hours: Mon-Thu 10am-10pm, Fri-Sat 10am-11pm, Sun 11am-9pm. Confirm details on the official site before you drive."
+  },
+  "closing": {
+    "heading": "Oaks Italian Deli And Pizzeria",
+    "cta": {
+      "label": "Call the deli",
+      "href": "tel:6106660280"
+    },
+    "sub": "Oaks Italian Deli And Pizzeria at 1570 Egypt Rd, Phoenixville. Call 610-666-0280. Open late most nights."
+  },
+  "links": [
+    {
+      "label": "Official site",
+      "href": "http://oaksitaliandeli.com/"
+    },
+    {
+      "label": "Call",
+      "href": "tel:6106660280"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Italian hoagie wrapped in deli paper"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Pizza coming out of a deck oven"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Deli case with meats and cheeses"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Sliced pepperoni pie on a counter"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Staff at a busy order window"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Stacks of pizza boxes by the door"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Night storefront on Egypt Road"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Close crop of oil-soaked focaccia"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Printed menu over a deli counter"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Online order on a phone beside a pie"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Interior dining tables with red chairs"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Dusk parking lot outside the pizzeria"
+    }
+  ],
+  "noindex": true,
+  "logo": true,
+  "sections": [
+    "hero",
+    "offerings",
+    "proof",
+    "gallery",
+    "story",
+    "experience",
+    "feature",
+    "catalog",
+    "contact",
+    "closing"
+  ]
+}

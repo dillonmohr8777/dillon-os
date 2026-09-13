@@ -1,0 +1,242 @@
+{
+  "slug": "salters-fireplace",
+  "name": "Salter's Fireplace",
+  "city": "Eagleville",
+  "category": "Fireplaces and outdoor living",
+  "vertical": "Home Services",
+  "attitude": "industrial",
+  "url": "https://saltersfireplace.com/",
+  "phone": "(610) 631-9372",
+  "address": "3076 Ridge Pike, Eagleville, PA 19403",
+  "description": "Fireplaces and outdoor living in Southeastern PA. Fifty-plus years. Eagleville and Hatfield showrooms. We bring the fire. Call (610) 631-9372.",
+  "fonts": {
+    "display": "Cinzel",
+    "displayFallback": "Georgia,serif",
+    "text": "Poppins"
+  },
+  "tokens": {
+    "paper": "#EFE8E0",
+    "ink": "#2B2A2A",
+    "accent": "#5D1400",
+    "accent2": "#C45C26",
+    "panel": "#D8CFC4",
+    "deep": "#2B2A2A",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#FFFFFF",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "3px",
+    "radius": "6px"
+  },
+  "marquee": [
+    "We bring the fire",
+    "Eagleville",
+    "Hatfield",
+    "50+ years"
+  ],
+  "nav": [
+    {
+      "label": "Showrooms",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Southeastern PA | Fireplaces and outdoor living",
+    "headline": "We bring the fire",
+    "sub": "Salter's Fireplace has spent 50+ years on fireplaces and outdoor living in Southeastern PA. Eagleville and Hatfield showrooms. Call (610) 631-9372. Fireplaces and outdoor living in Southeastern PA. Fifty-plus years. Eagleville and Hatfield showrooms. We bring the fire. Call (610) 631-9372.",
+    "ctaPrimary": {
+      "label": "Call us",
+      "href": "tel:6106319372"
+    },
+    "ctaSecondary": {
+      "label": "Get my estimate",
+      "href": "https://saltersfireplace.com/"
+    },
+    "glassFloat": {
+      "title": "50+ years",
+      "sub": "Two showrooms"
+    },
+    "marquee": [
+      "Fireplaces",
+      "Outdoor",
+      "Service",
+      "Showrooms"
+    ]
+  },
+  "offerings": {
+    "heading": "Fire inside. Fire outside.",
+    "items": [
+      "Fireplaces for the room that needs a real hearth, not a TV stand with a glow.",
+      "Outdoor living: the fire pit, the grill, the setup that keeps people outside after dark.",
+      "Two showrooms, Eagleville and Hatfield, so you can see the unit before anyone opens a wall."
+    ]
+  },
+  "proof": {
+    "items": [
+      "Telephone (610) 631-9372",
+      "50+ years in Southeastern PA",
+      "Eagleville and Hatfield showrooms",
+      "Fireplaces and outdoor living"
+    ]
+  },
+  "gallery": {
+    "heading": "Ember, stone, and iron.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "We bring the fire. You make the memories",
+    "paragraphs": [
+      "Salter's has been helping families across Southeastern PA for over 50 years. The motto on the site is blunt: we bring the fire.",
+      "Walk the Eagleville showroom or the Hatfield showroom. Call (610) 631-9372 when you already know you want the estimate.",
+      "Call (610) 631-9372. Confirm details on the official site before you drive."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How buying a fireplace should go.",
+    "items": [
+      "See the unit in a showroom. Photos lie about scale and heat.",
+      "Ask for the estimate, then a site inspection so the opening is real.",
+      "Installation is theirs. You light it when the crew is done."
+    ]
+  },
+  "feature": {
+    "heading": "Two showrooms, one phone number",
+    "text": "Eagleville and Hatfield exist so you can stand in front of the fire before you buy it. Fifty-plus years is the reason the install still comes from the same company. Fireplaces for the room that needs a real hearth, not a TV stand with a glow.",
+    "cta": {
+      "label": "Eagleville showroom",
+      "href": "https://saltersfireplace.com/eagleville-showroom/"
+    },
+    "imageIndex": 8
+  },
+  "catalog": {
+    "heading": "Pick a showroom.",
+    "items": [
+      {
+        "title": "Eagleville showroom",
+        "href": "https://saltersfireplace.com/eagleville-showroom/",
+        "imageIndex": 9
+      },
+      {
+        "title": "Hatfield showroom",
+        "href": "https://saltersfireplace.com/hatfield-showroom/",
+        "imageIndex": 10
+      },
+      {
+        "title": "Get an estimate",
+        "href": "https://saltersfireplace.com/",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Come see the fire.",
+    "sub": "Eagleville and Hatfield. Confirm showroom hours on the official site before you drive. Call (610) 631-9372. Confirm details on the official site before you drive."
+  },
+  "closing": {
+    "heading": "Salter's Fireplace",
+    "cta": {
+      "label": "Call us",
+      "href": "tel:6106319372"
+    },
+    "sub": "Fireplaces and outdoor living in Southeastern PA. Fifty-plus years. Eagleville and Hatfield showrooms. We bring the fire. Call (610) 631-9372."
+  },
+  "links": [
+    {
+      "label": "Official site",
+      "href": "https://saltersfireplace.com/"
+    },
+    {
+      "label": "Eagleville",
+      "href": "https://saltersfireplace.com/eagleville-showroom/"
+    },
+    {
+      "label": "Hatfield",
+      "href": "https://saltersfireplace.com/hatfield-showroom/"
+    },
+    {
+      "label": "Call",
+      "href": "tel:6106319372"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Gas fireplace burning in a stone surround"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Outdoor fire pit on a patio at dusk"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Showroom row of fireplace units"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Wood stove with a glass door aglow"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Grill and outdoor kitchen under a pergola"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Chimney detail against a brick house"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Evening exterior of a fireplace showroom"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Close crop of flame over ceramic logs"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Eagleville showroom floor with sample units"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Hatfield showroom seating by a lit hearth"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Clipboard estimate on a job-site table"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Night glow from a backyard fire feature"
+    }
+  ],
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "sections": [
+    "hero",
+    "offerings",
+    "proof",
+    "gallery",
+    "story",
+    "experience",
+    "feature",
+    "catalog",
+    "contact",
+    "closing"
+  ]
+}

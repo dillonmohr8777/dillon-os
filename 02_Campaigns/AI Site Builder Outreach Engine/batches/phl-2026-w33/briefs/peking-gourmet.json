@@ -1,0 +1,235 @@
+{
+  "slug": "peking-gourmet",
+  "name": "Peking Gourmet",
+  "city": "Pottstown",
+  "category": "Chinese restaurant",
+  "vertical": "Restaurant",
+  "attitude": "neon",
+  "url": "http://pekinggourmetpottstown.com/",
+  "phone": "(610) 326-2332",
+  "address": "799 State St, Pottstown, PA 19464",
+  "hours": "Monday-Thursday 11:00 am - 9:00 pm",
+  "description": "Chinese restaurant in Pottstown. Cashew chicken, Moo Shu Pork, Young Chow Fried Rice, Happy Family. 799 State St. Call (610) 326-2332.",
+  "schemaType": "Restaurant",
+  "fonts": {
+    "display": "Great Vibes",
+    "displayFallback": "cursive",
+    "text": "Oswald"
+  },
+  "tokens": {
+    "paper": "#F9F1E1",
+    "ink": "#642B0B",
+    "accent": "#CC0000",
+    "accent2": "#F2DF96",
+    "panel": "#E8D4C0",
+    "deep": "#642B0B",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "2px",
+    "radius": "14px"
+  },
+  "marquee": [
+    "Cashew chicken",
+    "Moo Shu Pork",
+    "Young Chow",
+    "Happy Family"
+  ],
+  "nav": [
+    {
+      "label": "Menu",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Pottstown | Chinese restaurant",
+    "headline": "Peking Gourmet",
+    "sub": "Chinese cooking at 799 State St in Pottstown. Cashew chicken, Moo Shu Pork, Young Chow Fried Rice, Happy Family. Call (610) 326-2332. Monday through Thursday, 11 to 9. Chinese restaurant in Pottstown. Cashew chicken, Moo Shu Pork, Young Chow Fried Rice, Happy Family. 799 State St. Call (610) 326-2332.",
+    "ctaPrimary": {
+      "label": "Call to order",
+      "href": "tel:6103262332"
+    },
+    "ctaSecondary": {
+      "label": "See the menu",
+      "href": "http://pekinggourmetpottstown.com/"
+    },
+    "glassFloat": {
+      "title": "799 State St",
+      "sub": "Mon-Thurs 11 to 9"
+    },
+    "marquee": [
+      "Dine in",
+      "Take out",
+      "Pottstown",
+      "State Street"
+    ]
+  },
+  "offerings": {
+    "heading": "The dishes people already know.",
+    "items": [
+      "Chicken with cashew nuts, Moo Shu Pork, and the rest of the board you came to order.",
+      "Young Chow Fried Rice and Happy Family when the table wants a shared plate, not a single entree.",
+      "Dine in or take out from 799 State St. Call (610) 326-2332 if you're already in the car."
+    ]
+  },
+  "proof": {
+    "items": [
+      "799 State St, Pottstown, PA 19464",
+      "Tel (610) 326-2332",
+      "Monday-Thursday 11:00 am - 9:00 pm",
+      "Cashew chicken, Moo Shu Pork, Young Chow, Happy Family"
+    ]
+  },
+  "gallery": {
+    "heading": "Wok, gold, red sign.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "State Street, Pottstown",
+    "paragraphs": [
+      "Peking Gourmet is a Chinese restaurant at 799 State St. The homepage still names the plates: cashew chicken, Moo Shu Pork, Young Chow Fried Rice, Happy Family.",
+      "Monday through Thursday the kitchen runs 11 to 9. Call (610) 326-2332. Confirm Friday and Saturday on the official site.",
+      "Find them at 799 State St, Pottstown, PA 19464. Call (610) 326-2332. Hours: Monday-Thursday 11:00 am - 9:00 pm. Confirm details on the official site before you drive."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How the order should go.",
+    "items": [
+      "Walk in on State Street, or call the number and pick up.",
+      "Name the dish. Cashew chicken and Moo Shu are already on the welcome list.",
+      "Happy Family and Young Chow cover the table that wants to share."
+    ]
+  },
+  "feature": {
+    "heading": "The regular Chinese board, cooked in Pottstown",
+    "text": "You don't need a tasting menu. You need cashew chicken, Moo Shu Pork, fried rice, and a table on State Street. Chicken with cashew nuts, Moo Shu Pork, and the rest of the board you came to order.",
+    "cta": {
+      "label": "Open the menu",
+      "href": "http://pekinggourmetpottstown.com/"
+    },
+    "imageIndex": 8
+  },
+  "catalog": {
+    "heading": "Plates worth repeating.",
+    "items": [
+      {
+        "title": "Menu",
+        "href": "http://pekinggourmetpottstown.com/",
+        "imageIndex": 9
+      },
+      {
+        "title": "Take out",
+        "href": "http://pekinggourmetpottstown.com/",
+        "imageIndex": 10
+      },
+      {
+        "title": "Contact",
+        "href": "http://pekinggourmetpottstown.com/",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "State Street is the door.",
+    "sub": "799 State St, Pottstown. Confirm Friday, Saturday, and Sunday hours on the official site. Find them at 799 State St, Pottstown, PA 19464. Call (610) 326-2332. Hours: Monday-Thursday 11:00 am - 9:00 pm. Confirm details on the official site before you drive."
+  },
+  "closing": {
+    "heading": "Peking Gourmet",
+    "cta": {
+      "label": "Call to order",
+      "href": "tel:6103262332"
+    },
+    "sub": "Chinese restaurant in Pottstown. Cashew chicken, Moo Shu Pork, Young Chow Fried Rice, Happy Family. 799 State St. Call (610) 326-2332."
+  },
+  "links": [
+    {
+      "label": "Official site",
+      "href": "http://pekinggourmetpottstown.com/"
+    },
+    {
+      "label": "Call",
+      "href": "tel:6103262332"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Chinese restaurant dining room with red lanterns"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Cashew chicken in a white oval platter"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Moo shu pork with pancakes on the side"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Wok toss in a tight kitchen"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Young Chow fried rice in a bowl"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Takeout bag on a State Street sidewalk"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Night neon over a Pottstown storefront"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Close crop of chili oil and scallions"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Printed Chinese menu on a laminate table"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Paper cartons at a pickup window"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Happy Family platter with mixed vegetables"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Dusk empty booths with gold place settings"
+    }
+  ],
+  "noindex": true,
+  "logo": true,
+  "sections": [
+    "hero",
+    "offerings",
+    "proof",
+    "gallery",
+    "story",
+    "experience",
+    "feature",
+    "catalog",
+    "contact",
+    "closing"
+  ]
+}

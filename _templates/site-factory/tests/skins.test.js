@@ -22,7 +22,7 @@ describe('attitude skins', () => {
     const neon = buildSkinCss({ slug: 'c', attitude: 'neon', fonts: { display: 'X' } });
     assert.match(glass, /--glass-blur:28px/);
     assert.match(brutal, /border-radius:0/);
-    assert.match(neon, /text-shadow/);
+    assert.match(neon, /linear-gradient\(160deg,var\(--deep\)/);
     assert.notEqual(glass, brutal);
     assert.notEqual(brutal, neon);
   });
@@ -31,9 +31,17 @@ describe('attitude skins', () => {
     const brief = passingBrief({ slug: 'glass-shop', name: 'Glass Shop', attitude: 'glass' });
     const built = buildSite(brief, '/tmp/skin-test');
     assert.match(built.html, /name="attitude" content="glass"/);
-    assert.match(built.html, /glass-float/);
+    assert.doesNotMatch(built.html, /<div class="[^"]*glass-float/);
     assert.match(built.html, /marquee-strip/);
     assert.match(built.html, /mobile-action/);
+    assert.match(built.html, /bottom-dock/);
+    assert.match(built.html, /data-ink-logo/);
+    assert.match(built.html, /gallery-rail/);
+    assert.doesNotMatch(built.html, /gallery-grid/);
+    assert.match(built.html, /live-frame/);
     assert.match(built.html, /vanish-out/);
+    assert.doesNotMatch(built.html, /<mark[\s>]/);
+    assert.match(built.html, /class="ink-reveal reveal"/);
+    assert.match(built.html, /logo-outro-mark|logo-outro-wordmark/);
   });
 });

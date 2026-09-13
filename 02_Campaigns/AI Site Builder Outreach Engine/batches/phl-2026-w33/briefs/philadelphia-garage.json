@@ -1,0 +1,229 @@
+{
+  "slug": "philadelphia-garage",
+  "name": "Philadelphia Garage",
+  "city": "West Chester",
+  "category": "Garage floors and organization",
+  "vertical": "Home Services",
+  "attitude": "brutal",
+  "url": "https://www.philadelphiagarage.com/",
+  "address": "11 Hagerty Blvd, Suite 8, West Chester, PA 19382",
+  "description": "Garage floors and organization in West Chester. Flooring, cabinets, and storage. Schedule a free estimate on the official site.",
+  "fonts": {
+    "display": "Archivo Black",
+    "displayFallback": "Impact,sans-serif",
+    "text": "Figtree"
+  },
+  "tokens": {
+    "paper": "#FDFDFD",
+    "ink": "#1A1818",
+    "accent": "#AF0A1B",
+    "accent2": "#8E0008",
+    "panel": "#E8E0DC",
+    "deep": "#1A1818",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#FFFFFF",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "5px",
+    "radius": "0px"
+  },
+  "marquee": [
+    "Garage floors",
+    "Organization",
+    "West Chester",
+    "Free estimate"
+  ],
+  "nav": [
+    {
+      "label": "Floors",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "hero": {
+    "eyebrow": "West Chester | Garage floors and organization",
+    "headline": "The absolute authority in garage makeovers",
+    "sub": "Philadelphia Garage does garage floors and organization in West Chester. Flooring, cabinets, storage. Schedule now. Free estimate. Start on the official site. Garage floors and organization in West Chester. Flooring, cabinets, and storage. Schedule a free estimate on the official site.",
+    "ctaPrimary": {
+      "label": "Schedule now",
+      "href": "https://www.philadelphiagarage.com/"
+    },
+    "ctaSecondary": {
+      "label": "Free estimate",
+      "href": "https://www.philadelphiagarage.com/"
+    },
+    "glassFloat": {
+      "title": "West Chester, PA",
+      "sub": "Floors and storage"
+    },
+    "marquee": [
+      "Flooring",
+      "Cabinets",
+      "Organization",
+      "Schedule now"
+    ]
+  },
+  "offerings": {
+    "heading": "Floor first. Then the wall.",
+    "items": [
+      "Garage flooring built for Pennsylvania weather, cars, and the stuff you actually store.",
+      "Cabinets and organization so the floor you just finished doesn't disappear under bins.",
+      "Commercial and residential work, scheduled from the official site. Free estimate before anyone pours."
+    ]
+  },
+  "proof": {
+    "items": [
+      "Garage floors and organization in West Chester",
+      "Schedule now on the official site",
+      "Free estimate",
+      "Flooring, cabinets, storage"
+    ]
+  },
+  "gallery": {
+    "heading": "Epoxy, cabinets, clean slab.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "West Chester garages, finished as rooms",
+    "paragraphs": [
+      "Philadelphia Garage treats the garage as a floor and a storage problem, not a leftover slab. The specialty is organization and garage floors in West Chester, for houses and for shops.",
+      "Schedule now on the official site and ask for the free estimate. The site is the door.",
+      "Confirm details on the official site before you drive."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How an install is supposed to run.",
+    "items": [
+      "Request the estimate. They'll talk flooring and organization as one job.",
+      "Materials get chosen for the weather and the way you park, not a catalog gloss.",
+      "The crew installs, then you get a garage you can actually use."
+    ]
+  },
+  "feature": {
+    "heading": "A floor that can take a Pennsylvania winter",
+    "text": "Epoxy and organization only matter if they survive salt, tires, and the stuff you drop. West Chester weather is the test. Garage flooring built for Pennsylvania weather, cars, and the stuff you actually store.",
+    "cta": {
+      "label": "Get a free estimate",
+      "href": "https://www.philadelphiagarage.com/"
+    },
+    "imageIndex": 8
+  },
+  "catalog": {
+    "heading": "Floors, cabinets, the schedule.",
+    "items": [
+      {
+        "title": "Garage flooring",
+        "href": "https://www.philadelphiagarage.com/",
+        "imageIndex": 9
+      },
+      {
+        "title": "Organization",
+        "href": "https://www.philadelphiagarage.com/",
+        "imageIndex": 10
+      },
+      {
+        "title": "Schedule now",
+        "href": "https://www.philadelphiagarage.com/",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Book the estimate.",
+    "sub": "West Chester, PA. Use the official site to schedule a free estimate. Confirm details on the official site before you drive."
+  },
+  "closing": {
+    "heading": "Philadelphia Garage",
+    "cta": {
+      "label": "Schedule now",
+      "href": "https://www.philadelphiagarage.com/"
+    },
+    "sub": "Garage floors and organization in West Chester. Flooring, cabinets, and storage. Schedule a free estimate on the official site."
+  },
+  "links": [
+    {
+      "label": "Official site",
+      "href": "https://www.philadelphiagarage.com/"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Glossy epoxy garage floor with a parked car"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Wall of garage cabinets and slat storage"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Crew rolling a floor coating"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Before-and-after of a cleared garage bay"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Overhead lighting on a finished slab"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Custom cabinets holding bins and tools"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Dusk exterior of a West Chester garage"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Close crop of flake in an epoxy coat"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Residential two-car garage after install"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Pegboard and cabinets on a side wall"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Tablet showing a scheduling form"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Night shop lights on a clean floor"
+    }
+  ],
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "sections": [
+    "hero",
+    "offerings",
+    "proof",
+    "gallery",
+    "story",
+    "experience",
+    "feature",
+    "catalog",
+    "contact",
+    "closing"
+  ]
+}

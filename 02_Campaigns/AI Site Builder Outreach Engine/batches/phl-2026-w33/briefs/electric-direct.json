@@ -1,0 +1,234 @@
+{
+  "slug": "electric-direct",
+  "name": "Electric Direct",
+  "city": "Havertown",
+  "category": "Electrician",
+  "vertical": "Home Services",
+  "attitude": "brutal",
+  "url": "https://www.electric-direct.net/",
+  "phone": "610.853.8288",
+  "address": "1812 Darby Rd, Havertown, PA 19083",
+  "description": "Friendly, affordable electricians serving Delaware County and the Main Line. Free estimates. Call 610.853.8288.",
+  "schemaType": "Electrician",
+  "fonts": {
+    "display": "Anton",
+    "displayFallback": "Impact,sans-serif",
+    "text": "IBM Plex Sans"
+  },
+  "tokens": {
+    "paper": "#F9F9F9",
+    "ink": "#222222",
+    "accent": "#002C48",
+    "accent2": "#666666",
+    "panel": "#E4E6E8",
+    "deep": "#002C48",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#FFFFFF",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "5px",
+    "radius": "0px"
+  },
+  "marquee": [
+    "Delaware County",
+    "Main Line",
+    "Free estimates",
+    "Residential & commercial"
+  ],
+  "nav": [
+    {
+      "label": "Services",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Delaware County and the Main Line | Electricians",
+    "headline": "Friendly, affordable electricians",
+    "sub": "Electric Direct is owner operated. Delaware County and the Main Line. Residential and commercial. Free estimates. No job too big or too small. Call 610.853.8288. Friendly, affordable electricians serving Delaware County and the Main Line. Free estimates. Call 610.853.8288.",
+    "ctaPrimary": {
+      "label": "Get a quote",
+      "href": "tel:6108538288"
+    },
+    "ctaSecondary": {
+      "label": "Official site",
+      "href": "https://www.electric-direct.net/"
+    },
+    "glassFloat": {
+      "title": "Free estimates",
+      "sub": "Delco & Main Line"
+    },
+    "marquee": [
+      "Residential",
+      "Commercial",
+      "Free estimates",
+      "Call today"
+    ]
+  },
+  "offerings": {
+    "heading": "The electrical work the house actually needs.",
+    "items": [
+      "Residential calls across Delaware County and the Main Line, from the small fix to the panel.",
+      "Commercial work when the shop needs an electrician who still picks up the phone.",
+      "Free estimates before the job starts, so the number is on the table."
+    ]
+  },
+  "proof": {
+    "items": [
+      "Telephone 610.853.8288",
+      "Delaware County and the Main Line",
+      "Free estimates",
+      "Owner operated, residential and commercial"
+    ]
+  },
+  "gallery": {
+    "heading": "Panel, pipe, clean work.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "Owner operated, still answering the phone",
+    "paragraphs": [
+      "Electric Direct is an owner operated company. The site says it straight: friendly, affordable, Delaware County and the Main Line.",
+      "No job is too big or too small. You call 610.853.8288, you get a free estimate, and they tell you if they can do the work.",
+      "Call 610.853.8288. Confirm details on the official site before you drive."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How an electrical call should go.",
+    "items": [
+      "Call 610.853.8288. Describe the problem. Ask for the free estimate.",
+      "Residential or commercial, they service both. Say which one you are.",
+      "The owner-operated part means the person who quoted can still show up."
+    ]
+  },
+  "feature": {
+    "heading": "A free estimate before anyone opens the panel",
+    "text": "Friendly only counts if the price is on the table. Electric Direct puts free estimates on the homepage for Delaware County and Main Line jobs. Residential calls across Delaware County and the Main Line, from the small fix to the panel.",
+    "cta": {
+      "label": "Get a quote",
+      "href": "tel:6108538288"
+    },
+    "imageIndex": 8
+  },
+  "catalog": {
+    "heading": "Call, quote, work.",
+    "items": [
+      {
+        "title": "Residential",
+        "href": "https://www.electric-direct.net/",
+        "imageIndex": 9
+      },
+      {
+        "title": "Commercial",
+        "href": "https://www.electric-direct.net/",
+        "imageIndex": 10
+      },
+      {
+        "title": "Get a quote",
+        "href": "https://www.electric-direct.net/",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Call the shop.",
+    "sub": "Delaware County and the Main Line. Confirm availability on the official site if the line is busy. Call 610.853.8288. Confirm details on the official site before you drive."
+  },
+  "closing": {
+    "heading": "Electric Direct",
+    "cta": {
+      "label": "Get a quote",
+      "href": "tel:6108538288"
+    },
+    "sub": "Friendly, affordable electricians serving Delaware County and the Main Line. Free estimates. Call 610.853.8288."
+  },
+  "links": [
+    {
+      "label": "Official site",
+      "href": "https://www.electric-direct.net/"
+    },
+    {
+      "label": "Call",
+      "href": "tel:6108538288"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Electrician at an open residential panel"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Gloved hands wiring a new outlet"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Service van parked on a Main Line street"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Conduit run along a basement ceiling"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Commercial panel with labeled breakers"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Voltage tester on a kitchen outlet"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Dusk exterior of a brick house with porch light"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Close crop of a meter and service entrance"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Residential garage with new lighting"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Storefront interior with new fixtures"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Clipboard estimate on a workbench"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Night porch light after a service call"
+    }
+  ],
+  "noindex": true,
+  "logo": true,
+  "sections": [
+    "hero",
+    "offerings",
+    "proof",
+    "gallery",
+    "story",
+    "experience",
+    "feature",
+    "catalog",
+    "contact",
+    "closing"
+  ]
+}

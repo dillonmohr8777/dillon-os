@@ -1,0 +1,236 @@
+{
+  "slug": "dream-team-hvac",
+  "name": "Dream Team Home Services",
+  "city": "Lansdowne",
+  "category": "HVAC, Plumbing & Electrical",
+  "vertical": "Home Services",
+  "attitude": "industrial",
+  "url": "https://dreamteampa.com/",
+  "phone": "610-477-8226",
+  "address": "439 S. Lansdowne Ave, Lansdowne, PA 19050",
+  "description": "HVAC, plumbing, and electrical for the Delaware Valley and Greater Philadelphia. Heating, AC, drain and sewer, plumbing, electrical. Book now.",
+  "fonts": {
+    "display": "Archivo Black",
+    "displayFallback": "Impact,sans-serif",
+    "text": "Work Sans"
+  },
+  "tokens": {
+    "paper": "#FBF2E4",
+    "ink": "#184822",
+    "accent": "#184822",
+    "accent2": "#D7A660",
+    "panel": "#E6D9C4",
+    "deep": "#123318",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "3px",
+    "radius": "4px"
+  },
+  "marquee": [
+    "Heating",
+    "Air conditioning",
+    "Drain & sewer",
+    "Plumbing",
+    "Electrical"
+  ],
+  "nav": [
+    {
+      "label": "Services",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Book",
+      "href": "#visit"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Delaware Valley | HVAC, plumbing, electrical",
+    "headline": "Services that elevate your home",
+    "sub": "Dream Team runs heating, AC, drain and sewer, plumbing, and electrical across Greater Philadelphia. Licensed techs. Same-day dispatch when the system fails. HVAC, plumbing, and electrical for the Delaware Valley and Greater Philadelphia. Heating, AC, drain and sewer, plumbing, electrical. Book now.",
+    "ctaPrimary": {
+      "label": "BOOK NOW",
+      "href": "tel:6104778226"
+    },
+    "ctaSecondary": {
+      "label": "Official site",
+      "href": "https://dreamteampa.com/"
+    },
+    "glassFloat": {
+      "title": "Delaware Valley",
+      "sub": "Greater Philadelphia"
+    },
+    "marquee": [
+      "Heating",
+      "AC",
+      "Drain & sewer",
+      "Plumbing",
+      "Electrical"
+    ]
+  },
+  "offerings": {
+    "heading": "Five trades, one crew.",
+    "items": [
+      "Heating repair and install for furnaces, boilers, and heat pumps that have to hold a Pennsylvania winter.",
+      "Air conditioning, drain and sewer clearing, plus plumbing when the leak won't wait until Monday.",
+      "Electrical work from the panel out, so the house isn't split across three vendors."
+    ]
+  },
+  "proof": {
+    "items": [
+      "Telephone 610-477-8226",
+      "Delaware Valley and Greater Philadelphia",
+      "Heating, AC, drain and sewer, plumbing, electrical",
+      "BOOK NOW from the truck or the site"
+    ]
+  },
+  "gallery": {
+    "heading": "Trucks, tools, and the call.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "Home services, not a maze of subcontractors",
+    "paragraphs": [
+      "Most houses in this region fail the same way. Heat drops, a line backs up, a breaker trips, and you start calling three shops.",
+      "Dream Team keeps HVAC, plumbing, and electrical on one roster. You call 610-477-8226. They tell you which trade rolls, and they book the window.",
+      "Call 610-477-8226. Confirm details on the official site before you drive."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a service call should go.",
+    "items": [
+      "You book now. They confirm the trade and the window before anyone drives.",
+      "The tech names the repair in plain language, then prices it before the work starts.",
+      "Follow-up is a person at 610-477-8226, not a ticket portal."
+    ]
+  },
+  "feature": {
+    "heading": "Heat, water, and power on one ticket",
+    "text": "A winter furnace, a summer condenser, a mainline clog, a dead panel. The house doesn't fail in departments. Neither should the crew. Heating repair and install for furnaces, boilers, and heat pumps that have to hold a Pennsylvania winter.",
+    "cta": {
+      "label": "See services",
+      "href": "https://dreamteampa.com/"
+    },
+    "imageIndex": 8
+  },
+  "catalog": {
+    "heading": "Start with the trade you need.",
+    "items": [
+      {
+        "title": "Heating & AC",
+        "href": "https://dreamteampa.com/",
+        "imageIndex": 9
+      },
+      {
+        "title": "Plumbing & sewer",
+        "href": "https://dreamteampa.com/",
+        "imageIndex": 10
+      },
+      {
+        "title": "Electrical",
+        "href": "https://dreamteampa.com/",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Book the next window.",
+    "sub": "Delaware Valley and Greater Philadelphia. Confirm the arrival window when you call. Call 610-477-8226. Confirm details on the official site before you drive."
+  },
+  "closing": {
+    "heading": "Dream Team Home Services",
+    "cta": {
+      "label": "BOOK NOW",
+      "href": "tel:6104778226"
+    },
+    "sub": "HVAC, plumbing, and electrical for the Delaware Valley and Greater Philadelphia. Heating, AC, drain and sewer, plumbing, electrical. Book now."
+  },
+  "links": [
+    {
+      "label": "Official site",
+      "href": "https://dreamteampa.com/"
+    },
+    {
+      "label": "Call",
+      "href": "tel:6104778226"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Service van parked outside a brick Philadelphia home"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Technician checking a residential furnace"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Outdoor AC condenser beside a rowhome"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Drain camera cable on a basement floor"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Copper plumbing repair at a utility sink"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Electrical panel with labeled breakers"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Night exterior of a suburban house with porch light"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Close view of a thermostat on a plaster wall"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Heating equipment in a mechanical closet"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Sewer cleanout at the side of a house"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Electrician testing a wall outlet"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Dusk street with a marked service truck"
+    }
+  ],
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "sections": [
+    "hero",
+    "offerings",
+    "proof",
+    "gallery",
+    "story",
+    "experience",
+    "feature",
+    "catalog",
+    "contact",
+    "closing"
+  ]
+}

@@ -45,7 +45,11 @@ async function runQa(siteDir, opts = {}) {
   imgs.forEach((m) => {
     const tag = m[1];
     const src = (tag.match(/src="([^"]*)"/) || [])[1];
-    if (!/alt="[^"]+"/.test(tag)) failures.push(`Image missing alt text: ${src}`);
+    if (/aria-hidden="true"/.test(tag)) {
+      if (!/\balt="/.test(tag)) failures.push(`Hidden image missing alt attribute: ${src}`);
+    } else if (!/alt="[^"]+"/.test(tag)) {
+      failures.push(`Image missing alt text: ${src}`);
+    }
     if (src && src.startsWith('assets/') && !fs.existsSync(path.join(siteDir, src))) {
       failures.push(`Missing asset file: ${src}`);
     }
@@ -61,6 +65,48 @@ async function runQa(siteDir, opts = {}) {
     if (!html.includes(`class="${s} `) && !html.includes(`class="${s}"`)) {
       failures.push(`Missing required section: ${s}`);
     }
+  });
+
+  if (!/<iframe[^>]+src="https:\/\/maps\.google\.com\/maps\?[^"]*output=embed/.test(html)) {
+    failures.push('Missing embedded Google Map iframe');
+  }
+  if (/class="offering-card/.test(html) && !/<article class="offering-card[\s\S]*?<p>/.test(html)) {
+    failures.push('Offering cards are missing body copy');
+  }
+  if (/class="catalog-card/.test(html) && !/<article class="catalog-card[\s\S]*?<p>/.test(html)) {
+    failures.push('Catalog cards are missing body copy');
+  }
+
+  if (/<mark[\s>]/.test(html)) failures.push('Highlighted mark tags are not allowed');
+  if (!/class="ink-reveal/.test(html)) failures.push('Missing ink-reveal logo outro');
+  if (/<section class="proof[\s"]/.test(html)) failures.push('Proof address strip is not allowed');
+  if (/<div class="[^"]*glass-float/.test(html)) failures.push('Hero address float card is not allowed');
+  const logoPath = path.join(siteDir, 'assets', 'logo.png');
+  if (fs.existsSync(logoPath)) {
+    const buf = fs.readFileSync(logoPath);
+    if (buf.length >= 24 && buf[0] === 0x89) {
+      const w = buf.readUInt32BE(16);
+      const h = buf.readUInt32BE(20);
+      if (!new RegExp(`logo-outro-mark"[^>]*width="${w}" height="${h}"`).test(html)) {
+        failures.push(`Logo markup is not native size ${w}x${h}`);
+      }
+      if (/logo-outro-mark[^>]*width="1000"/.test(html) && w !== 1000) {
+        failures.push('Logo is stretched with a fake 1000px box');
+      }
+    }
+    if (!/class="logo-outro-ghost"/.test(html)) failures.push('Missing ink ghost; the real mark must stay unfiltered');
+  }
+  const danglingHead = /(?:\s+(?:a|an|the|and|or|but|nor|not|so|for|with|to|of|in|on|at|by|from)|,)\s*$/i;
+  [...html.matchAll(/<h([1-3])[^>]*>([\s\S]*?)<\/h\1>/gi)].forEach((m) => {
+    const text = m[2].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+    if (danglingHead.test(text)) failures.push(`Incomplete heading: "${text}"`);
+  });
+
+  const imgSrcs = [...html.matchAll(/<img[^>]*src="(assets\/image-[^"]+)"/g)].map((m) => m[1]);
+  const seenSrc = new Set();
+  imgSrcs.forEach((src) => {
+    if (seenSrc.has(src)) failures.push(`Duplicate image on page: ${src}`);
+    seenSrc.add(src);
   });
 
   const surfaces = [...html.matchAll(/<section class="[^"]*surface-([a-z]+)/g)].map((m) => m[1]);
@@ -101,10 +147,20 @@ async function runQa(siteDir, opts = {}) {
           ['desktop', 1440, 900],
         ]) {
           const page = await browser.newPage({ viewport: { width, height } });
-          await page.goto(url, { waitUntil: 'networkidle' });
-          await page.evaluate(() =>
-            document.querySelectorAll('.reveal').forEach((n) => n.classList.add('visible', 'in-view'))
-          );
+          await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 20000 });
+          await new Promise((r) => setTimeout(r, 400));
+          await page.evaluate(() => {
+            document.querySelectorAll('.reveal').forEach((n) => n.classList.add('visible', 'in-view'));
+            document.querySelectorAll('.logo-outro-ghost').forEach((n) => {
+              n.style.display = 'none';
+            });
+            document.querySelectorAll('.logo-outro-mark, .logo-outro-wordmark:not(.logo-outro-ghost)').forEach((n) => {
+              n.style.transition = 'none';
+              n.style.opacity = '1';
+              n.style.filter = 'none';
+              n.style.transform = 'none';
+            });
+          });
           const overflow = await page.evaluate(
             () => document.documentElement.scrollWidth - document.documentElement.clientWidth
           );

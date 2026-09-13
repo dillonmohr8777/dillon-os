@@ -1,0 +1,223 @@
+{
+  "slug": "davidson-fabricating",
+  "name": "Davidson Fabricating",
+  "city": "West Chester",
+  "category": "Sheet metal fabrication",
+  "vertical": "Industrial",
+  "attitude": "industrial",
+  "url": "https://davidsonfab.com/",
+  "phone": "(610) 544-9750",
+  "address": "11 Hagerty Blvd, West Chester, PA 19382",
+  "hours": "Monday-Friday 7AM \u2013 3:30 PM",
+  "description": "Sheet metal fabricator in West Chester since 1966. CNC, waterjet, plasma, certified welding, paint and finishing.",
+  "fonts": {
+    "display": "Oswald",
+    "displayFallback": "Impact,sans-serif",
+    "text": "IBM Plex Sans"
+  },
+  "tokens": {
+    "paper": "#F3F1EC",
+    "ink": "#28303D",
+    "accent": "#C1121F",
+    "accent2": "#C9A227",
+    "panel": "#D5D8DE",
+    "deep": "#28303D",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "3px",
+    "radius": "4px"
+  },
+  "marquee": [
+    "CNC",
+    "Waterjet",
+    "Plasma",
+    "Certified welding",
+    "Since 1966"
+  ],
+  "nav": [
+    {
+      "label": "Services",
+      "href": "#offerings"
+    },
+    {
+      "label": "Shop",
+      "href": "#gallery"
+    },
+    {
+      "label": "Quote",
+      "href": "#visit"
+    }
+  ],
+  "hero": {
+    "eyebrow": "West Chester | Sheet metal since 1966",
+    "headline": "#1 sheet metal fabricator",
+    "sub": "Davidson Fabricating cuts, forms, and welds on Hagerty Blvd. CNC, waterjet, plasma, certified welding, then paint. Get a free quote. Sheet metal fabricator in West Chester since 1966. CNC, waterjet, plasma, certified welding, paint and finishing.",
+    "ctaPrimary": {
+      "label": "Get a free quote",
+      "href": "https://davidsonfab.com/"
+    },
+    "ctaSecondary": {
+      "label": "Call the shop",
+      "href": "tel:6105449750"
+    },
+    "glassFloat": {
+      "title": "Since 1966",
+      "sub": "7AM \u2013 3:30 PM"
+    },
+    "marquee": [
+      "Sheet metal",
+      "CNC machining",
+      "Waterjet",
+      "Plasma"
+    ]
+  },
+  "offerings": {
+    "heading": "The floor does the work.",
+    "items": [
+      "CNC machining for parts that have to repeat, not almost repeat.",
+      "Waterjet and plasma when the plate is thick and the edge has to be honest.",
+      "Certified welding plus paint and finishing so the job leaves ready."
+    ]
+  },
+  "proof": {
+    "items": [
+      "11 Hagerty Blvd, West Chester, PA 19382",
+      "(610) 544-9750",
+      "Monday-Friday 7AM \u2013 3:30 PM",
+      "Fabricating since 1966"
+    ]
+  },
+  "gallery": {
+    "heading": "Sparks, coolant, plate.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "Sheet metal fabricator since 1966",
+    "paragraphs": [
+      "The shop has been on this work since 1966. That is not a slogan on a van. It is the reason the quote still comes from people who run the machines.",
+      "Bring drawings. They will tell you what waterjet should take and what belongs on plasma.",
+      "Find them at 11 Hagerty Blvd, West Chester, PA 19382. Call (610) 544-9750. Hours: Monday-Friday 7AM \u2013 3:30 PM. Confirm details on the official site before you drive."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a job moves.",
+    "items": [
+      "You send the file. They price the process, not a guess.",
+      "Cutting, forming, and weld live on one floor.",
+      "Pickup windows sit inside weekday shop hours, 7 to 3:30."
+    ]
+  },
+  "feature": {
+    "heading": "One shop, five processes",
+    "text": "CNC, waterjet, plasma, certified welding, paint. Most jobs die in the handoff between vendors. This floor keeps the handoff inside the building. CNC machining for parts that have to repeat, not almost repeat.",
+    "cta": {
+      "label": "See services",
+      "href": "https://davidsonfab.com/"
+    },
+    "imageIndex": 8
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "CNC machining",
+        "href": "https://davidsonfab.com/",
+        "imageIndex": 9
+      },
+      {
+        "title": "Waterjet cutting",
+        "href": "https://davidsonfab.com/",
+        "imageIndex": 10
+      },
+      {
+        "title": "Certified welding",
+        "href": "https://davidsonfab.com/",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Connect now.",
+    "sub": "Hagerty Blvd. Confirm the dock hours before you roll a truck. Find them at 11 Hagerty Blvd, West Chester, PA 19382. Call (610) 544-9750. Hours: Monday-Friday 7AM \u2013 3:30 PM. Confirm details on the official site before you drive."
+  },
+  "closing": {
+    "heading": "Davidson Fabricating",
+    "cta": {
+      "label": "Get a free quote",
+      "href": "https://davidsonfab.com/"
+    },
+    "sub": "Sheet metal fabricator in West Chester since 1966. CNC, waterjet, plasma, certified welding, paint and finishing."
+  },
+  "links": [
+    {
+      "label": "Quote",
+      "href": "https://davidsonfab.com/"
+    },
+    {
+      "label": "Call",
+      "href": "tel:6105449750"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Welder sparks in a sheet metal shop"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "CNC mill cutting aluminum with coolant"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Waterjet cutting thick steel plate"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Plasma torch on steel"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Welder joining stainless"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Dusk exterior of a fabricating plant"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Harvested shop photography"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Stacked sheet metal"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Finished painted parts"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Press brake forming a panel"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Inspection table with calipers"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Night loading dock"
+    }
+  ],
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true
+}

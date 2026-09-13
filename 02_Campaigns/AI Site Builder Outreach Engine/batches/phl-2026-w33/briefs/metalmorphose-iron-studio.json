@@ -1,0 +1,234 @@
+{
+  "slug": "metalmorphose-iron-studio",
+  "name": "Metalmorphose Ironworks",
+  "city": "Kennett Square",
+  "category": "Custom wrought iron",
+  "vertical": "Industrial",
+  "attitude": "industrial",
+  "url": "https://metalmorphoseironworks.com/",
+  "phone": "(484) 919-4548",
+  "address": "1296 Cannery Rd, Kennett Square, PA 19348",
+  "description": "Custom wrought iron with a French twist. Eric Zandotti, master blacksmith, Chester County studio near the Brandywine River. Call (484) 919-4548.",
+  "fonts": {
+    "display": "Cinzel",
+    "displayFallback": "Georgia,serif",
+    "text": "Libre Franklin"
+  },
+  "tokens": {
+    "paper": "#F4EFD8",
+    "ink": "#111111",
+    "accent": "#F2DF96",
+    "accent2": "#BCBCBC",
+    "panel": "#D4CFB8",
+    "deep": "#111111",
+    "onAccent": "#090909",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "3px",
+    "radius": "4px"
+  },
+  "marquee": [
+    "Wrought iron",
+    "French twist",
+    "Chester County",
+    "Brandywine"
+  ],
+  "nav": [
+    {
+      "label": "Services",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Chester County | Custom wrought iron",
+    "headline": "Bienvenue. Custom iron with a French twist",
+    "sub": "Eric Zandotti is a master blacksmith. The Chester County studio sits near the Brandywine River. Wrought iron is in the family. His grandfather was a blacksmith. Nearly twenty years of work. Call (484) 919-4548. Custom wrought iron with a French twist. Eric Zandotti, master blacksmith, Chester County studio near the Brandywine River. Call (484) 919-4548.",
+    "ctaPrimary": {
+      "label": "Call the studio",
+      "href": "tel:4849194548"
+    },
+    "ctaSecondary": {
+      "label": "Official site",
+      "href": "https://metalmorphoseironworks.com/"
+    },
+    "glassFloat": {
+      "title": "Eric Zandotti",
+      "sub": "Near the Brandywine"
+    },
+    "marquee": [
+      "Railings",
+      "Furniture",
+      "Gates",
+      "French twist"
+    ]
+  },
+  "offerings": {
+    "heading": "Steel, fire, and a French hand.",
+    "items": [
+      "Custom wrought iron furniture and architectural pieces, drawn in the classical French style.",
+      "A Chester County studio near the Brandywine River, where you can see the work before you commission it.",
+      "Nearly twenty years of making, with a grandfather who was a traditional blacksmith in Southern France."
+    ]
+  },
+  "proof": {
+    "items": [
+      "Telephone (484) 919-4548",
+      "Eric Zandotti, master blacksmith",
+      "Chester County studio near the Brandywine River",
+      "Nearly twenty years of wrought iron"
+    ]
+  },
+  "gallery": {
+    "heading": "Hammer, scroll, gold leaf light.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "Wrought iron is in Eric's blood",
+    "paragraphs": [
+      "Eric Zandotti started Metalmorphose to bring steel to life in the classical French style. His grandfather was a traditional blacksmith in Southern France. The talent runs from that bench to this one.",
+      "Come to the Chester County studio near the Brandywine River. Call (484) 919-4548 and talk about the piece before anyone lights the forge.",
+      "Call (484) 919-4548. Confirm details on the official site before you drive."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a commission should start.",
+    "items": [
+      "Visit the studio. Wrought iron has to be seen, not picked from a thumbnail.",
+      "Eric will tell you what the French twist can do for the piece you actually want.",
+      "The work leaves as furniture, rail, or gate. You live with the steel, not a sketch."
+    ]
+  },
+  "feature": {
+    "heading": "A French twist on American iron",
+    "text": "Classical European, whimsical, modern. The through-line is a blacksmith who still hammers the scroll himself, in a studio by the Brandywine. Custom wrought iron furniture and architectural pieces, drawn in the classical French style.",
+    "cta": {
+      "label": "See the work",
+      "href": "https://metalmorphoseironworks.com/"
+    },
+    "imageIndex": 8
+  },
+  "catalog": {
+    "heading": "Start with the studio.",
+    "items": [
+      {
+        "title": "The artist",
+        "href": "https://metalmorphoseironworks.com/",
+        "imageIndex": 9
+      },
+      {
+        "title": "Gallery",
+        "href": "https://metalmorphoseironworks.com/",
+        "imageIndex": 10
+      },
+      {
+        "title": "Services",
+        "href": "https://metalmorphoseironworks.com/",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Come to the Brandywine studio.",
+    "sub": "Chester County, near the Brandywine River. Confirm the visit on the official site or by phone. Call (484) 919-4548. Confirm details on the official site before you drive."
+  },
+  "closing": {
+    "heading": "Metalmorphose Ironworks",
+    "cta": {
+      "label": "Call the studio",
+      "href": "tel:4849194548"
+    },
+    "sub": "Custom wrought iron with a French twist. Eric Zandotti, master blacksmith, Chester County studio near the Brandywine River. Call (484) 919-4548."
+  },
+  "links": [
+    {
+      "label": "Official site",
+      "href": "https://metalmorphoseironworks.com/"
+    },
+    {
+      "label": "Call",
+      "href": "tel:4849194548"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Blacksmith hammering a glowing iron scroll"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Finished wrought-iron table in a studio"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Forge fire in a dark Chester County shop"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "French-twist railing on a stone stair"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Close crop of hammered iron texture"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Gate with classical scrolls against trees"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Dusk exterior of a riverside iron studio"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Sparks off an anvil at night"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Portrait of tools on a blacksmith's bench"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Wrought-iron bed frame in natural light"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Sample finishes laid on a steel plate"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Brandywine trees behind a workshop door"
+    }
+  ],
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "sections": [
+    "hero",
+    "offerings",
+    "proof",
+    "gallery",
+    "story",
+    "experience",
+    "feature",
+    "catalog",
+    "contact",
+    "closing"
+  ]
+}

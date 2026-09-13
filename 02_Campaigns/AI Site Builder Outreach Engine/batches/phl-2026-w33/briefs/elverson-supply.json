@@ -1,0 +1,237 @@
+{
+  "slug": "elverson-supply",
+  "name": "Elverson Supply",
+  "city": "Elverson",
+  "category": "Hardware and building supply",
+  "vertical": "Retail",
+  "attitude": "brutal",
+  "url": "https://elversonsupply.net/",
+  "phone": "(610) 286-5021",
+  "address": "101 East Main Street, Elverson, PA 19520",
+  "hours": "Monday-Friday 7am-5pm",
+  "description": "Fifth-generation hardware and building supply in Elverson. Lehigh cement, Sakrete, block, windows, and tools. Call (610) 286-5021.",
+  "fonts": {
+    "display": "Anton",
+    "displayFallback": "Impact,sans-serif",
+    "text": "PT Sans"
+  },
+  "tokens": {
+    "paper": "#E8E8E8",
+    "ink": "#293B89",
+    "accent": "#293B89",
+    "accent2": "#C45C26",
+    "panel": "#D0D0D0",
+    "deep": "#363839",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#FFFFFF",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "6px",
+    "radius": "0px"
+  },
+  "marquee": [
+    "Lehigh cement",
+    "Sakrete",
+    "Block",
+    "Windows",
+    "Tools"
+  ],
+  "nav": [
+    {
+      "label": "Products",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Elverson | Fifth-generation hardware",
+    "headline": "Your neighborhood hardware store",
+    "sub": "Elverson Supply is a fifth-generation yard. Cement, Sakrete, block, windows, and tools. Open Monday through Friday, 7 to 5. Call (610) 286-5021 if you don't see the SKU. Fifth-generation hardware and building supply in Elverson. Lehigh cement, Sakrete, block, windows, and tools. Call (610) 286-5021.",
+    "ctaPrimary": {
+      "label": "Call the yard",
+      "href": "tel:6102865021"
+    },
+    "ctaSecondary": {
+      "label": "Official site",
+      "href": "https://elversonsupply.net/"
+    },
+    "glassFloat": {
+      "title": "Elverson, PA",
+      "sub": "Mon-Fri 7am-5pm"
+    },
+    "marquee": [
+      "Cement",
+      "Sakrete",
+      "Block",
+      "Windows",
+      "Tools"
+    ]
+  },
+  "offerings": {
+    "heading": "The yard stocks the job.",
+    "items": [
+      "Lehigh cement products and Sakrete mixes for the pour you already scheduled.",
+      "Concrete block, windows, and the hardware that keeps a job from stalling at noon.",
+      "Tools on the floor, with a counter that still answers (610) 286-5021."
+    ]
+  },
+  "proof": {
+    "items": [
+      "Fifth-generation hardware in Elverson",
+      "Telephone (610) 286-5021",
+      "Monday-Friday 7am-5pm",
+      "Lehigh cement, Sakrete, block, windows, tools"
+    ]
+  },
+  "gallery": {
+    "heading": "Pallets, bins, and dust.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "Fifth generation, still a supply house",
+    "paragraphs": [
+      "Elverson Supply isn't a big-box aisle with a seasonal endcap. It's a family yard that has kept cement, block, and tools in town for five generations.",
+      "You show up on a weekday between 7 and 5, or you call (610) 286-5021 and ask if the mix is in.",
+      "Call (610) 286-5021. Hours: Monday-Friday 7am-5pm. Confirm details on the official site before you drive."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a pickup should go.",
+    "items": [
+      "Know the mix and the count. They'll pull Lehigh, Sakrete, or block.",
+      "Windows and tools sit with the building materials, not in a second store.",
+      "If the list isn't on the site, call. The counter still picks up."
+    ]
+  },
+  "feature": {
+    "heading": "Cement and hardware without the warehouse run",
+    "text": "Lehigh, Sakrete, block, windows, tools. The fifth-generation point is simple: the yard still exists in Elverson, and the hours are weekday daylight. Lehigh cement products and Sakrete mixes for the pour you already scheduled.",
+    "cta": {
+      "label": "See products",
+      "href": "https://elversonsupply.net/"
+    },
+    "imageIndex": 8
+  },
+  "catalog": {
+    "heading": "Load the truck.",
+    "items": [
+      {
+        "title": "Cement & Sakrete",
+        "href": "https://elversonsupply.net/",
+        "imageIndex": 9
+      },
+      {
+        "title": "Block & windows",
+        "href": "https://elversonsupply.net/",
+        "imageIndex": 10
+      },
+      {
+        "title": "Tools",
+        "href": "https://elversonsupply.net/",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Call before you roll.",
+    "sub": "Elverson, PA. Weekdays 7 to 5. Confirm Saturday hours on the official site. Call (610) 286-5021. Hours: Monday-Friday 7am-5pm. Confirm details on the official site before you drive."
+  },
+  "closing": {
+    "heading": "Elverson Supply",
+    "cta": {
+      "label": "Call the yard",
+      "href": "tel:6102865021"
+    },
+    "sub": "Fifth-generation hardware and building supply in Elverson. Lehigh cement, Sakrete, block, windows, and tools. Call (610) 286-5021."
+  },
+  "links": [
+    {
+      "label": "Official site",
+      "href": "https://elversonsupply.net/"
+    },
+    {
+      "label": "Call",
+      "href": "tel:6102865021"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Stacked bags of cement on a pallet"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Hardware aisle with bins of fasteners"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Sakrete bags beside a mixing tub"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Concrete block stacked in a lumber yard"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Window units leaning in a warehouse bay"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Hand tools hanging on a pegboard wall"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Dusk exterior of a small-town supply yard"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Forklift moving a pallet of masonry mix"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Close view of Type S mortar bags"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Vinyl window frames in a rack"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Counter with a corded shop phone"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Night floodlight over a loading dock"
+    }
+  ],
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "sections": [
+    "hero",
+    "offerings",
+    "proof",
+    "gallery",
+    "story",
+    "experience",
+    "feature",
+    "catalog",
+    "contact",
+    "closing"
+  ]
+}
