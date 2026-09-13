@@ -1,0 +1,24 @@
+# Regenerable intermediates. Everything needed to reproduce the film is
+# committed; these are just build scratch.
+build/seg/
+build/picture.mp4
+build/frames/
+build/render.log
+build/qc_audio.raw
+build/asset_index.json
+
+# large inspection renders that are regenerable via --preview / qc.py
+build/inspect/sheet_*.png
+build/inspect/botanicals.png
+build/inspect/test_grid.png
+build/inspect/spot.png
+build/inspect/first3s.png
+build/inspect/seam_crop.png
+build/inspect/clip3_hope_words_detail.png
+build/inspect/LOGO_*.png
+
+__pycache__/
+*.pyc
+
+# review evidence lives in docs/review/ as compressed jpg; build/inspect is scratch
+build/inspect/
