@@ -1,0 +1,33 @@
+# Hermes config example — model routing for Cursor models
+# Copy to ~/.hermes/config.yaml on the operator machine.
+# Do not commit real API keys or private tokens.
+
+models:
+  default: cursor-grok-4.5-high
+  research: cursor-grok-4.5-high
+  research_fast: cursor-grok-4.5-high-fast
+  cms_pack: composer-2.5
+  cms_pack_fast: composer-2.5-fast
+  code: composer-2.5
+
+routing:
+  - when: ["visibility", "serp", "aeo", "audit", "triage"]
+    model: research
+  - when: ["hubspot", "title", "cta", "copy", "module", "js-fix"]
+    model: cms_pack
+  - when: ["orchestrate", "merge", "vault"]
+    model: default
+
+mcp:
+  # Register only what is authenticated on this machine
+  - exa
+  - github
+  # hubspot: requires HUBSPOT_PRIVATE_APP_TOKEN in env (see tools/hubspot-agent/)
+
+env_required:
+  - HUBSPOT_PRIVATE_APP_TOKEN
+
+policies:
+  publish: gated   # Tier-2 only
+  edge_deploy: gated
+  draft_to_vault: allowed
