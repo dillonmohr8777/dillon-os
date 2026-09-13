@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CMO OS</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>◈</text></svg>">
+<link rel="stylesheet" href="/app.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <span class="mark">◈</span>
+    <div>
+      <strong>CMO OS</strong>
+      <span class="tagline">multi-client · paid + organic · every claim carries a receipt</span>
+    </div>
+  </div>
+  <div class="topbar-right">
+    <label class="ws-picker">
+      <span>Client</span>
+      <select id="ws-select" aria-label="Select client workspace"></select>
+    </label>
+    <span id="provider-badge" class="badge" title="Model provider"></span>
+    <button id="theme-toggle" class="ghost" type="button" title="Toggle theme">◐</button>
+  </div>
+</header>
+
+<nav class="tabs" role="tablist">
+  <button class="tab active" data-view="feed" role="tab">Feed</button>
+  <button class="tab" data-view="approvals" role="tab">Approvals <span id="approval-count" class="pill"></span></button>
+  <button class="tab" data-view="geo" role="tab">AI visibility</button>
+  <button class="tab" data-view="runs" role="tab">Runs</button>
+  <button class="tab" data-view="cost" role="tab">Cost</button>
+  <button class="tab" data-view="agents" role="tab">Agents</button>
+  <button class="tab" data-view="connectors" role="tab">Connectors</button>
+</nav>
+
+<main id="main">
+  <div id="loading" class="empty">Loading…</div>
+</main>
+
+<div id="drawer" class="drawer" hidden>
+  <div class="drawer-head">
+    <strong id="drawer-title">Detail</strong>
+    <button id="drawer-close" class="ghost" type="button">✕</button>
+  </div>
+  <div id="drawer-body" class="drawer-body"></div>
+</div>
+<div id="scrim" class="scrim" hidden></div>
+
+<footer class="footer">
+  <span id="footer-note"></span>
+</footer>
+
+<script src="/app.js"></script>
+</body>
+</html>

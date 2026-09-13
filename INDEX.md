@@ -34,6 +34,15 @@ links instead of loading the entire vault.
 - [[12_Brain/Bases/Client Strategy Overlays.base|Client Strategy Overlays]] -
   one evidence-backed strategy and next sprint per active canonical route.
 - [[12_Brain/09_Ops/Client Intelligence Coverage|Client Intelligence Coverage]]
+
+### CMO OS — the auditable AI CMO engine
+
+- `_cmo/README.md` — multi-client marketing runtime: 16 agents, replayable run
+  journal, approval gates, dollar-denominated cost ledger. Runs offline with
+  `node _cmo/bin/cmo.js demo`.
+- `_cmo/docs/OKARA-TEARDOWN.md` — reverse-engineering teardown of okara.ai
+  (stack, agent roster, pricing, architectural gaps) and the decision trail from
+  each finding to a design choice here. Dated 2026-08-18, expires 2026-11-18.
   - roster reconciliation, missing overlays, and dated evidence states.
 - [[12_Brain/Bases/Daily Communication Intelligence.base|Daily Communication Intelligence]]
   - daily Gmail and Slack decisions, commitments, blockers, deliverables, and

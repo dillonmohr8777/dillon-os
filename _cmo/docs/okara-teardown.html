@@ -1,0 +1,738 @@
+<!-- Source of the published teardown page. Revision 2.
+     Body content only: no <!doctype>, <html>, <head> or <body> wrapper, because
+     the artifact host supplies that skeleton at publish time.
+     Published: https://claude.ai/code/artifact/48db51cc-80f3-4e9b-a715-185766772e4b -->
+<title>Okara Teardown</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  /* Design plan
+     Subject: forensic reverse-engineering of a SaaS architecture. The vernacular
+     is evidence classification - chain of custody, confirmed vs unverified,
+     401-proves-it-exists. So the page is built like a lab report, and the
+     confidence chip is the primary structural device because it encodes
+     something true about every claim.
+     Color: cool slate neutrals biased toward a deep instrument teal; amber for
+     unverified, rose for the architectural gaps.
+     Type: the IBM Plex superfamily - serif for findings, sans for argument,
+     mono for evidence. One family, three voices, engineering-document register.
+     Layout: one measured column for the argument; tables break full-width and
+     scroll on their own. */
+
+  :root {
+    --ground: #f6f8fa;
+    --surface: #ffffff;
+    --surface-sunk: #eef2f6;
+    --rule: #d8e0e8;
+    --rule-soft: #e7edf2;
+    --ink: #131920;
+    --ink-soft: #4d5865;
+    --ink-faint: #7b8794;
+    --signal: #0b6480;
+    --signal-soft: #e2f0f5;
+    --amber: #8a5606;
+    --amber-soft: #fbf0dd;
+    --rose: #9d2e28;
+    --rose-soft: #fbe9e7;
+    --moss: #1c6647;
+    --moss-soft: #e2f1ea;
+
+    --serif: "IBM Plex Serif", Iowan Old Style, Georgia, serif;
+    --sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+    --measure: 68ch;
+    --step--1: 0.815rem;
+    --step-0: 1rem;
+    --step-1: 1.2rem;
+    --step-2: 1.5rem;
+    --step-3: 2rem;
+    --step-4: 2.85rem;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground: #0e1318;
+      --surface: #151c23;
+      --surface-sunk: #1b232b;
+      --rule: #2a343e;
+      --rule-soft: #212a33;
+      --ink: #e5ebf1;
+      --ink-soft: #a3b0bd;
+      --ink-faint: #74828f;
+      --signal: #5cbcd8;
+      --signal-soft: #10303c;
+      --amber: #dda65a;
+      --amber-soft: #33260f;
+      --rose: #f0938c;
+      --rose-soft: #3a1d1b;
+      --moss: #6ec59c;
+      --moss-soft: #122c22;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --ground: #0e1318;
+    --surface: #151c23;
+    --surface-sunk: #1b232b;
+    --rule: #2a343e;
+    --rule-soft: #212a33;
+    --ink: #e5ebf1;
+    --ink-soft: #a3b0bd;
+    --ink-faint: #74828f;
+    --signal: #5cbcd8;
+    --signal-soft: #10303c;
+    --amber: #dda65a;
+    --amber-soft: #33260f;
+    --rose: #f0938c;
+    --rose-soft: #3a1d1b;
+    --moss: #6ec59c;
+    --moss-soft: #122c22;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--ground);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: var(--step-0);
+    line-height: 1.62;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 clamp(18px, 4vw, 48px) 96px;
+  }
+
+  .col { max-width: var(--measure); }
+
+  /* ---------- masthead ---------- */
+
+  header.masthead {
+    border-bottom: 1px solid var(--rule);
+    padding: clamp(40px, 8vw, 84px) 0 34px;
+    margin-bottom: 40px;
+  }
+
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: var(--step--1);
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--signal);
+    margin: 0 0 18px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 14px;
+  }
+
+  h1 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: var(--step-4);
+    line-height: 1.08;
+    letter-spacing: -0.018em;
+    text-wrap: balance;
+    margin: 0 0 20px;
+  }
+
+  .standfirst {
+    font-family: var(--serif);
+    font-size: var(--step-1);
+    line-height: 1.55;
+    color: var(--ink-soft);
+    max-width: var(--measure);
+    margin: 0;
+  }
+
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 26px;
+    margin-top: 28px;
+    font-family: var(--mono);
+    font-size: var(--step--1);
+    color: var(--ink-faint);
+  }
+  .meta b { color: var(--ink-soft); font-weight: 500; }
+
+  /* ---------- sections ---------- */
+
+  section { margin: 0 0 clamp(44px, 7vw, 76px); }
+
+  h2 {
+    font-family: var(--serif);
+    font-size: var(--step-3);
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.012em;
+    text-wrap: balance;
+    margin: 0 0 6px;
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+  }
+  /* Section numbers are real: the report refers to its own sections by number,
+     and the code's decision trail cites them. */
+  h2 .num {
+    font-family: var(--mono);
+    font-size: var(--step-0);
+    font-weight: 400;
+    color: var(--signal);
+    letter-spacing: 0;
+    flex: none;
+  }
+
+  h3 {
+    font-family: var(--sans);
+    font-size: var(--step-1);
+    font-weight: 600;
+    margin: 34px 0 8px;
+    letter-spacing: -0.005em;
+  }
+
+  .kicker {
+    font-family: var(--mono);
+    font-size: var(--step--1);
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin: 0 0 26px;
+  }
+
+  p { margin: 0 0 1.05em; max-width: var(--measure); }
+  ul, ol { max-width: var(--measure); padding-left: 1.3em; margin: 0 0 1.15em; }
+  li { margin-bottom: 0.5em; }
+  strong { font-weight: 600; }
+  a { color: var(--signal); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  a:focus-visible, summary:focus-visible { outline: 2px solid var(--signal); outline-offset: 3px; border-radius: 3px; }
+
+  code, .mono { font-family: var(--mono); font-size: 0.9em; overflow-wrap: anywhere; }
+  code {
+    background: var(--surface-sunk);
+    padding: 0.12em 0.38em;
+    border-radius: 3px;
+  }
+
+  /* ---------- confidence chips: the structural device ---------- */
+
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 0.14em 0.5em;
+    border-radius: 3px;
+    white-space: nowrap;
+    background: var(--surface-sunk);
+    color: var(--ink-soft);
+  }
+  .chip.primary { background: var(--moss); color: var(--surface); }
+  .chip.confirmed { background: var(--moss-soft); color: var(--moss); }
+  .chip.likely { background: var(--signal-soft); color: var(--signal); }
+  .chip.thirdparty { background: var(--surface-sunk); color: var(--ink-soft); }
+  .chip.unverified { background: var(--amber-soft); color: var(--amber); }
+  .chip.gap { background: var(--rose-soft); color: var(--rose); }
+
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+    padding: 16px 20px;
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    margin: 0 0 30px;
+    font-size: var(--step--1);
+    color: var(--ink-soft);
+  }
+  .legend div { display: flex; align-items: center; gap: 8px; }
+
+  /* ---------- tables ---------- */
+
+  .table-scroll {
+    overflow-x: auto;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    background: var(--surface);
+    margin: 0 0 20px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.93rem;
+    font-variant-numeric: tabular-nums;
+  }
+  th, td {
+    text-align: left;
+    padding: 10px 16px;
+    border-bottom: 1px solid var(--rule-soft);
+    vertical-align: top;
+  }
+  thead th {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    font-weight: 500;
+    background: var(--surface-sunk);
+    white-space: nowrap;
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  td.tech { font-family: var(--mono); font-size: 0.86rem; }
+
+  /* ---------- callouts ---------- */
+
+  .finding {
+    border-left: 3px solid var(--rose);
+    background: var(--rose-soft);
+    padding: 18px 22px;
+    border-radius: 0 4px 4px 0;
+    margin: 0 0 24px;
+    max-width: var(--measure);
+  }
+  .finding .label {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--rose);
+    display: block;
+    margin-bottom: 7px;
+  }
+  .finding p:last-child { margin-bottom: 0; }
+
+  .aside {
+    border-left: 3px solid var(--signal);
+    background: var(--signal-soft);
+    padding: 18px 22px;
+    border-radius: 0 4px 4px 0;
+    margin: 0 0 24px;
+    max-width: var(--measure);
+  }
+  .aside .label {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--signal);
+    display: block;
+    margin-bottom: 7px;
+  }
+  .aside p:last-child { margin-bottom: 0; }
+
+  blockquote {
+    margin: 0 0 22px;
+    padding-left: 20px;
+    border-left: 2px solid var(--rule);
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: var(--step-1);
+    line-height: 1.5;
+    color: var(--ink-soft);
+    max-width: var(--measure);
+  }
+
+  /* ---------- figures ---------- */
+
+  .stat-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(160px, 100%), 1fr));
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 0 0 28px;
+  }
+  .stat { background: var(--surface); padding: 18px 20px; }
+  .stat .v {
+    font-family: var(--serif);
+    font-size: var(--step-2);
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    display: block;
+  }
+  .stat .k {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-top: 6px;
+    display: block;
+  }
+
+  figure { margin: 0 0 26px; }
+  figcaption {
+    font-size: var(--step--1);
+    color: var(--ink-faint);
+    margin-top: 10px;
+    max-width: var(--measure);
+  }
+  svg { display: block; max-width: 100%; height: auto; }
+
+  details {
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    background: var(--surface);
+    padding: 0;
+    margin: 0 0 16px;
+    max-width: var(--measure);
+  }
+  summary {
+    cursor: pointer;
+    padding: 13px 18px;
+    font-weight: 500;
+    font-size: 0.95rem;
+  }
+  details[open] summary { border-bottom: 1px solid var(--rule-soft); }
+  details .body { padding: 16px 18px; }
+  details .body > :last-child { margin-bottom: 0; }
+
+  hr {
+    border: none;
+    border-top: 1px solid var(--rule);
+    margin: 0 0 40px;
+  }
+
+  footer {
+    border-top: 1px solid var(--rule);
+    padding-top: 26px;
+    font-size: var(--step--1);
+    color: var(--ink-faint);
+  }
+  footer p { max-width: var(--measure); }
+
+  @media (max-width: 640px) {
+    h2 { flex-direction: column; gap: 2px; }
+    .meta { gap: 4px 18px; }
+  }
+</style>
+
+<div class="wrap">
+
+<header class="masthead">
+  <p class="eyebrow"><span>Competitive teardown</span><span>·</span><span>okara.ai</span><span>·</span><span>rev. 2</span></p>
+  <h1>What okara.ai is built on, and the one thing its architecture can't do</h1>
+  <p class="standfirst">A $99–249/mo “AI CMO” running ten organic agents for 120,000 businesses, reconstructed without ever loading the site — and the specific gap that decided what to build instead.</p>
+  <div class="meta">
+    <span><b>Compiled</b> 2026-08-18</span>
+    <span><b>Expires</b> 2026-11-18</span>
+    <span><b>Target</b> okara.ai</span>
+    <span><b>Access</b> blocked at CONNECT, then observed directly</span>
+  </div>
+</header>
+
+<section>
+  <h2><span class="num">01</span><span>How this was compiled</span></h2>
+  <p class="kicker">Method first, because the method is the credibility</p>
+
+  <p><strong>okara.ai returns 403 at the CONNECT layer</strong> under this environment's egress policy. So does nearly every stack-detection service — urlscan, crt.sh, BuiltWith, W3Techs, SimilarWeb — along with the Wayback Machine and most review sites. The denial was reported, not routed around. <strong>Nothing here comes from fetching the site.</strong></p>
+
+  <p>Four channels carried the whole teardown instead:</p>
+
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Channel</th><th>What it gave up</th></tr></thead>
+      <tbody>
+        <tr><td><strong>okara's own public CI</strong></td><td>A workflow file in their public <code>okara-crypto</code> repo names the private monorepo it dispatches to, and the production environment URL</td></tr>
+        <tr><td><strong>First-party vendor case studies</strong></td><td>Vercel, Upstash and TinyFish each published architecture write-ups quoting okara's engineers directly. Vendors describe their customers' stacks in more detail than customers do</td></tr>
+        <tr><td><strong>Google API Discovery documents</strong></td><td>Machine-readable, authoritative endpoint paths and scope strings — for the connector work that followed</td></tr>
+        <tr><td><strong>Live unauthenticated probing</strong></td><td>A <code>401</code> proves a route exists. A <code>404</code> proves it doesn't. Neither requires credentials</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="finding">
+    <span class="label">Caveat that outranks the findings</span>
+    <p>The okara review corpus is overwhelmingly <em>synthetic</em>. The sites ranking for “okara review” are programmatic AI-review pages, affiliate sites, and — in two cases — direct competitors ranking on okara's brand. Their “complaints” are plausible reconstructions of complaints, not user testimony.</p>
+    <p><strong>Trustpilot shows two reviews, both one-star.</strong> That is the entire verifiable first-party user-voice corpus for a product with 120,000 accounts. Every quoted complaint below is directional at best.</p>
+  </div>
+
+  <div class="aside">
+    <span class="label">Update — after first publication</span>
+    <p>The site was subsequently observed directly, on a device outside this environment's egress
+    policy. That observation is folded in below, and it is worth recording what it did to the
+    indirect method: <strong>the structural findings held, and every correction was at the level of
+    detail</strong> — which engines one agent card names, whether one output publishes or downloads.</p>
+    <p>The stack in §02 is unaffected, because it never depended on reaching the site. Four claims are
+    corrected in §04 and three move from unverified to observed. Where the two disagree, the
+    disagreement itself is shown rather than resolved silently.</p>
+  </div>
+
+  <div class="legend">
+    <div><span class="chip primary">observed</span> the live site, directly</div>
+    <div><span class="chip confirmed">confirmed</span> first-party source</div>
+    <div><span class="chip likely">likely</span> consistent indirect evidence</div>
+    <div><span class="chip thirdparty">third-party</span> single external claim</div>
+    <div><span class="chip unverified">unverified</span> could not establish</div>
+  </div>
+</section>
+
+<hr>
+
+<section>
+  <h2><span class="num">02</span><span>The stack</span></h2>
+  <p class="kicker">Confirmed from first-party vendor write-ups and DNS</p>
+
+  <div class="stat-row">
+    <div class="stat"><span class="v">4</span><span class="k">engineers</span></div>
+    <div class="stat"><span class="v">120k+</span><span class="k">tenants</span></div>
+    <div class="stat"><span class="v">4B</span><span class="k">tokens / day</span></div>
+    <div class="stat"><span class="v">6–7</span><span class="k">deploys / day</span></div>
+  </div>
+
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Layer</th><th>Technology</th><th>Confidence</th></tr></thead>
+      <tbody>
+        <tr><td>Hosting / CDN</td><td class="tech">Vercel</td><td><span class="chip confirmed">confirmed</span></td></tr>
+        <tr><td>Framework</td><td class="tech">Next.js · TypeScript · React Server Components</td><td><span class="chip confirmed">confirmed</span></td></tr>
+        <tr><td>LLM access</td><td class="tech">Vercel AI Gateway — 8+ providers behind one endpoint</td><td><span class="chip confirmed">confirmed</span></td></tr>
+        <tr><td>Agent execution</td><td class="tech">Vercel Sandbox</td><td><span class="chip confirmed">confirmed</span></td></tr>
+        <tr><td>Orchestration</td><td class="tech">Upstash QStash + Flow Control</td><td><span class="chip confirmed">confirmed</span></td></tr>
+        <tr><td>Hot state</td><td class="tech">Upstash Redis — session, auth, subscription</td><td><span class="chip confirmed">confirmed</span></td></tr>
+        <tr><td>Content dedup</td><td class="tech">Upstash Vector</td><td><span class="chip confirmed">confirmed</span></td></tr>
+        <tr><td>Second backend</td><td class="tech">Google Cloud — <code>api.okara.ai</code> → GCP HTTPS LB</td><td><span class="chip confirmed">confirmed</span></td></tr>
+        <tr><td>Onboarding research</td><td class="tech">TinyFish Search &amp; Fetch — Chromium fleet, p50 &lt;0.5s</td><td><span class="chip confirmed">confirmed</span></td></tr>
+        <tr><td>Client crypto</td><td class="tech">X25519 · Argon2id (128MB) · AES-256-GCM · HKDF-SHA512</td><td><span class="chip confirmed">confirmed</span></td></tr>
+        <tr><td>DNS</td><td class="tech">wildcard <code>*.okara.ai</code> → Vercel anycast</td><td><span class="chip confirmed">confirmed</span></td></tr>
+        <tr><td>Payments</td><td class="tech">Stripe</td><td><span class="chip likely">likely</span></td></tr>
+        <tr><td>Auth</td><td class="tech">rolled sessions in Redis + Google OAuth</td><td><span class="chip likely">likely</span></td></tr>
+        <tr><td>Primary database</td><td class="tech">—</td><td><span class="chip unverified">unverified</span></td></tr>
+        <tr><td>ORM · storage · analytics · email</td><td class="tech">—</td><td><span class="chip unverified">unverified</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>The primary datastore is the largest remaining gap. Redis and Vector are a cache and an index, not a system of record, and a product with approval queues across 120,000 tenants has one. One read of their subprocessor list would settle it.</p>
+
+  <h3>The lineage explains the shape</h3>
+  <p>The private monorepo is still called <code>bti-chat</code>, and the encryption library's key-derivation strings are literally <code>bti-e2ee-salt</code> and <code>bti-e2ee-key</code>. <strong>BuildThatIdea</strong> (Feb 2025, a no-code GPT-wrapper builder) became <strong>Okara Chat</strong> (Dec 2025) became <strong>Okara AI CMO</strong> (Mar 2026). One application, three product skins.</p>
+
+  <div class="aside">
+    <span class="label">The part worth stealing</span>
+    <p>Their SEO-to-code loop is genuinely good: the SEO agent finds a technical issue, spins up a disposable sandbox, runs the analysis in isolation, hands findings to a coding agent, and that agent <strong>opens a pull request against the customer's repo</strong> with diffs and explanations inline. Fixes needing structural change are flagged manual rather than attempted. Most competitors cannot do this at all.</p>
+  </div>
+
+  <details>
+    <summary>Two published analyses of okara, both wrong in opposite directions</summary>
+    <div class="body">
+      <p>One files okara as a <em>“cron plus prompt templates”</em> reference implementation — “task-specific prompt templates marketed as agents.” Too dismissive: that category explicitly means no workflow knows about any other, which cannot describe a system needing queue retries, flow control, and a shared state layer.</p>
+      <p>Another claims a <em>“multi-agent swarm”</em> with a task-routing brain, a unified memory pool, and ~40 models — asserting it was “confirmed” while citing no artifacts. It is inference from the marketing surface.</p>
+      <p>The accurate label, from first-party evidence: <strong>a queue-driven worker fleet with shared KV state and a vector-backed dedup filter, plus sandboxed code execution and a human-in-the-loop PR gate.</strong> No trace of LangChain, LangGraph, CrewAI, Inngest, Trigger.dev or Temporal — QStash <em>is</em> the orchestrator.</p>
+    </div>
+  </details>
+</section>
+
+<hr>
+
+<section>
+  <h2><span class="num">03</span><span>The gap that decided everything</span></h2>
+  <p class="kicker">Not a missing feature — a missing property</p>
+
+  <div class="finding">
+    <span class="label">Architectural finding</span>
+    <p><strong>QStash gives at-least-once delivery, not durable execution. There is no run journal.</strong></p>
+    <p>A retry re-runs a <em>step</em>. It does not resume a half-finished agent run with its intermediate reasoning, retrieved documents, and partial tool results intact.</p>
+  </div>
+
+  <p>So for a product whose entire interaction model is <em>approving agent output that will post under a customer's name</em>, this question has no answer:</p>
+
+  <blockquote>Which model, which prompt version, which retrieved page, and which human click produced this reply?</blockquote>
+
+  <p>At 120,000 tenants that is a brand-safety and legal exposure. It also makes regression testing impossible: there is no recording to replay a prompt change against.</p>
+
+  <figure>
+    <svg viewBox="0 0 720 200" role="img" aria-labelledby="fig1-t">
+      <title id="fig1-t">At-least-once retry re-runs a step from scratch; a journaled run resumes from the first change</title>
+      <g font-family="IBM Plex Mono, monospace" font-size="11">
+        <text x="0" y="14" fill="var(--rose)" letter-spacing="1.2">AT-LEAST-ONCE — A RETRY REDOES THE WORK</text>
+        <g>
+          <rect x="0" y="26" width="150" height="30" rx="3" fill="var(--rose-soft)" stroke="var(--rose)" stroke-width="1"/>
+          <text x="12" y="45" fill="var(--rose)">crawl · $0.02</text>
+          <rect x="162" y="26" width="150" height="30" rx="3" fill="var(--rose-soft)" stroke="var(--rose)" stroke-width="1"/>
+          <text x="174" y="45" fill="var(--rose)">brief · $0.05</text>
+          <rect x="324" y="26" width="150" height="30" rx="3" fill="var(--rose-soft)" stroke="var(--rose)" stroke-width="1"/>
+          <text x="336" y="45" fill="var(--rose)">draft · $0.30</text>
+          <text x="490" y="45" fill="var(--ink-soft)">prompt edited → $0.37 again</text>
+        </g>
+
+        <text x="0" y="104" fill="var(--moss)" letter-spacing="1.2">JOURNALED — UNCHANGED STEPS ARE REUSED</text>
+        <g>
+          <rect x="0" y="116" width="150" height="30" rx="3" fill="var(--moss-soft)" stroke="var(--moss)" stroke-width="1" stroke-dasharray="3 2"/>
+          <text x="12" y="135" fill="var(--moss)">crawl · reused</text>
+          <rect x="162" y="116" width="150" height="30" rx="3" fill="var(--moss-soft)" stroke="var(--moss)" stroke-width="1" stroke-dasharray="3 2"/>
+          <text x="174" y="135" fill="var(--moss)">brief · reused</text>
+          <rect x="324" y="116" width="150" height="30" rx="3" fill="var(--signal-soft)" stroke="var(--signal)" stroke-width="1.5"/>
+          <text x="336" y="135" fill="var(--signal)">draft · live</text>
+          <text x="490" y="135" fill="var(--ink-soft)">prompt edited → $0.30</text>
+        </g>
+        <line x1="0" y1="164" x2="474" y2="164" stroke="var(--rule)" stroke-width="1"/>
+        <text x="0" y="182" fill="var(--ink-faint)">input hash decides reuse; the first mismatch and everything after it runs live</text>
+      </g>
+    </svg>
+    <figcaption>Measured, not illustrative: these are the real figures from a journal replay in the build that followed. Editing the final prompt cost $0.30 instead of $0.37, and the crawl ran once across three runs.</figcaption>
+  </figure>
+
+  <h3>Five more, briefly</h3>
+  <ul>
+    <li><strong>Serverless is the wrong shape for long agent runs.</strong> Request-scoped execution forces agent work into artificial steps that re-hydrate context on each hop — so the brand-voice document goes to the model again every time. Latency, correctness and cost problem at once.</li>
+    <li><strong>No visible caching strategy at 4B tokens/day.</strong> The per-run context is exactly the reusable kind. Provider prompt caching on that stable prefix is the largest single cost lever available.</li>
+    <li><strong>Tenant isolation lives in application code.</strong> State in Redis means isolation is a key-prefix convention; one prefix bug is a cross-tenant leak. And they hold write-scoped OAuth tokens for 120,000 sites.</li>
+    <li><strong>Flow Control throttles globally, not per tenant.</strong> It keeps <em>okara</em> under a platform's rate limit. It does not stop one heavy tenant consuming the shared quota, and a shared app credential tripping abuse detection kills the flagship feature for everyone at once.</li>
+    <li><strong>“New models the same day they ship” has no eval gate.</strong> Their proudest capability is also their biggest quality risk.</li>
+  </ul>
+
+  <div class="aside">
+    <span class="label">Why not Temporal</span>
+    <p>The obvious fix for “no durable execution” is to adopt Temporal or Inngest. That is the wrong call here for a specific reason: this product independently needs a per-run audit record — input snapshot, prompt hash, model, tokens, cost, sources. <em>That record already is a step journal.</em></p>
+      <p>Adopt a framework and you build the audit journal anyway, then maintain a second opaque vendor journal beside it. Owning it gives replay, audit, cost accounting and the approval queue from one source of truth, with one stateful dependency — and sidesteps determinism constraints, the largest source of durable-execution incidents.</p>
+  </div>
+</section>
+
+<hr>
+
+<section>
+  <h2><span class="num">04</span><span>What the product actually does</span></h2>
+  <p class="kicker">Eleven agent surfaces, and one honest gap between marketing and docs</p>
+
+  <p>You give it a URL. It crawls the site, maps external perception, analyses 10–15 competitors, writes a set of strategy documents, audits SEO, then runs per-channel agents daily — each drafting work for you to approve.</p>
+
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Agent</th><th>Output</th><th>Publishes?</th></tr></thead>
+      <tbody>
+        <tr><td>SEO</td><td>Daily audit, <strong>exactly two fixes per day</strong> with copy-paste snippets</td><td>via Fix / PR</td></tr>
+        <tr><td>Coding</td><td>JSON-LD, canonicals, meta, sitemaps, <code>llms.txt</code></td><td>Yes — as a PR</td></tr>
+        <tr><td>Writer</td><td>One long-form article per day with keyword and difficulty</td><td>Yes — 5 CMS platforms</td></tr>
+        <tr><td>X · LinkedIn</td><td>Daily post and thread drafts in brand voice</td><td>Click-to-publish</td></tr>
+        <tr><td>GEO</td><td><em>Card, observed:</em> “Gets your brand cited in ChatGPT, and Google AI Overviews.” Indexed pages claim a wider set — ChatGPT, Perplexity, Gemini, Claude — plus score, sentiment and a per-platform map <span class="chip unverified">discrepancy</span></td><td>No</td></tr>
+        <tr><td>Reddit</td><td>High-intent threads plus a drafted reply per thread</td><td><strong>No — by design</strong></td></tr>
+        <tr><td>Link Broker</td><td>“Automated high-quality backlink building and management.” On the roster with a <code>SOON</code> badge <span class="chip primary">observed</span></td><td>—</td></tr>
+        <tr><td>Hacker News</td><td>Show HN / Ask HN title <em>and</em> first comment</td><td>No</td></tr>
+        <tr><td>UGC Video</td><td><em>Card, observed:</em> “Guided briefs, multi-aspect AI clips, and <strong>downloads</strong> for social and ads.” The credit sink</td><td><strong>Download</strong>, not auto-publish <span class="chip gap">corrected</span></td></tr>
+        <tr><td>Influencer</td><td><em>Card, observed:</em> “Connect with the right influencers for your brand automatically.” Indexed pages go further — outreach, campaign management, payments, flat fee + 10% of spend</td><td>Yes</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>The publishing surface</h3>
+
+  <p>Observed directly: <strong>twelve live channels and three marked <code>SOON</code></strong>, presented as step three of a numbered onboarding narrative. <span class="chip primary">observed</span></p>
+
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Category</th><th>Channels</th></tr></thead>
+      <tbody>
+        <tr><td>CMS / site</td><td class="tech">WordPress · Webflow · Framer · Wix · Sanity</td></tr>
+        <tr><td>Data in</td><td class="tech">Google Search Console · Google Analytics</td></tr>
+        <tr><td>Code</td><td class="tech">GitHub</td></tr>
+        <tr><td>Social</td><td class="tech">LinkedIn · X</td></tr>
+        <tr><td>Messaging</td><td class="tech">WhatsApp · Telegram</td></tr>
+        <tr><td><code>SOON</code></td><td class="tech">TikTok · Instagram · Slack</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>This is broader than I had credited, and it is shipped. WhatsApp and Telegram sit in the live grid rather than the <code>SOON</code> row, so they are real integrations and not the notification channels I had guessed at. For a four-person team it is a lot of working surface, and it is the strongest thing about the product.</p>
+
+  <p>It also makes the §03 risk concrete. Twelve integrations across 120,000 tenants is a very large vault of write-scoped OAuth tokens sitting behind application-code isolation. The same breadth that makes the product good is what makes one prefix bug a mass event.</p>
+
+  <h3>The autopilot question, corrected</h3>
+
+  <p>My first pass framed this as marketing dishonesty — <em>the marketing says autopilot, the docs say you click publish on every post.</em> Direct observation makes that too strong, and the accurate version is more useful.</p>
+
+  <p><strong>Every agent card is scrupulous about the gate.</strong> Verbatim: <span class="chip primary">observed</span></p>
+
+  <blockquote>Reddit — “drafts reply ideas and posts <strong>for you to review before publishing</strong>” · SEO — “drafts blog posts and landing pages <strong>for your approval</strong>” · X — “drafts you can edit, refine, and <strong>post yourself</strong>” · LinkedIn — “drafts professional posts <strong>for you to personalise and share</strong>” · Hacker News — “drafts comments <strong>for you to post</strong>”</blockquote>
+
+  <p>The section above the roster closes: <em>“…so nothing drifts off-message. <strong>You stay in control.</strong>”</em> That is honest product copy. The homepage headline is a different register, not a lie.</p>
+
+  <p>And the publish step is <strong>more automated than I credited</strong>. The integration copy reads: <em>“connect […] once, and <strong>approved work publishes and reports back automatically</strong>.”</em> So the real shape is <strong>approval as the gate, with publishing automatic after it</strong> for the twelve integrated channels. Reddit and Hacker News stay fully manual because they have no integration — a deliberate ban-avoidance choice.</p>
+
+  <div class="finding">
+    <span class="label">So the honest contrast is narrower, and better</span>
+    <p>Not “they claim autopilot but make you paste.” It is that their gate is <strong>per-item human approval with no separation of duties, no risk tiering, and no record of what the approver was shown.</strong></p>
+    <p>That works at one brand. It is exactly what stops working at forty, because the reviewer stops reading and the gate becomes decorative — and afterwards there is nothing to reconstruct what they approved.</p>
+  </div>
+
+  <p>Three whole categories are still absent, and okara's own comparison content concedes the first: <strong>paid media management</strong>, <strong>local SEO and Google Business Profile</strong>, and <strong>reconciling platform-reported conversions against real leads</strong>. Local appears nowhere in its roster — or in any GEO tool.</p>
+
+  <details>
+    <summary>Pricing, and why its instability matters</summary>
+    <div class="body">
+      <p>Four headline prices for the AI CMO are simultaneously indexed — almost certainly sequential increases rather than tiers: <strong>$99/mo</strong> (2,000 credits, the most-documented), <strong>$129/mo</strong> on their own influencer page, <strong>$249/mo</strong> in their own docs, and a <strong>$20/mo</strong> tier from an earlier structure.</p>
+      <p>The free tier is reported as both 5 and 20 one-time credits, so it has been re-cut. Top-up packs cost roughly what the subscription does, which makes a heavy month $150–280 rather than $99.</p>
+      <p>$99 → $129 → $249 inside roughly a year, on a product whose free tier already reads as a demo, is the pricing history of a company still looking for its number.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>The complaint that recurs most: credit opacity</summary>
+    <div class="body">
+      <blockquote>“Zero transparency on how many credits one CMO initialization actually burns.”</blockquote>
+      <p>The paid plan carries 2,000 credits and okara's own documentation reportedly puts a full-output month at ~1,700 — about 300 of headroom. There is no published per-action credit table. One user reported credits gone in fourteen days.</p>
+      <p>Alongside it: <em>“no public API, no MCP server, and no Zapier or Make hooks, so you cannot orchestrate its agents from your own stack”</em>, and no documented bulk export — <em>“leaving means walking away from the accumulated context.”</em></p>
+    </div>
+  </details>
+</section>
+
+<hr>
+
+<section>
+  <h2><span class="num">05</span><span>The decision trail</span></h2>
+  <p class="kicker">Every finding above, mapped to what it changed</p>
+
+  <p>The teardown was not the deliverable. This is: a working runtime where each design choice traces to a specific finding.</p>
+
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Finding</th><th>Response</th></tr></thead>
+      <tbody>
+        <tr><td>No run journal <span class="chip gap">§03</span></td><td>Step-level journal per run with input hashes, model, cost and sources. Replay reuses unchanged steps at zero cost and re-executes from the first change</td></tr>
+        <tr><td>Single-brand architecture; agency SKU is a price list</td><td>Workspaces are the primitive — every read and write fenced, no API crosses workspaces without naming them</td></tr>
+        <tr><td>Credit opacity <span class="chip gap">§04</span></td><td>Dollars from one price table. Per-workspace caps that downshift the model tier before hard-stopping — and never downshift a claim-verification step, because a cheaper checker produces false confidence nobody catches</td></tr>
+        <tr><td>Approval gate that can't scale past one brand</td><td>Risk is a property of the <em>effect</em>, not the content; an unrecognised effect defaults to high. An agent can never be the checker; the maker can never be the checker</td></tr>
+        <tr><td>“Garbage in, organized garbage out”</td><td>A factual claim without a source is <strong>blocking</strong>, not a warning. Intake quality is scored and stated rather than papered over</td></tr>
+        <tr><td>No paid media, no local, no attribution <span class="chip gap">§04</span></td><td>Three lanes added: Google Ads and Meta, GBP with a Places substitute, and conversion reconciliation against real leads</td></tr>
+        <tr><td>GEO as single-run point estimates</td><td>Wilson intervals, effective sample size, a control cohort that nets engine drift out of every delta, and no delta reported without a significance test</td></tr>
+        <tr><td>Community agents as the sharpest edge</td><td>Community listening is <strong>read-only</strong> and never drafts a reply to post. Listening scales across forty accounts; posting does not</td></tr>
+        <tr><td>Onboarding that hangs, free tier that delivers nothing</td><td>Fixture mode is a first-class product mode — the full pipeline runs with no key, no network and no credentials</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="aside">
+    <span class="label">The measurement point worth isolating</span>
+    <p>During the build, the weighted confidence interval collapsed to zero width at a presence rate of zero — reporting <code>0.0% [0.0–0.0]</code> across 54 runs. That is precisely the false precision the whole measurement engine exists to prevent, appearing in the engine itself. Fifty-four runs of nothing is consistent with a true rate of several percent, so it now reports <code>0% [0–6.6%]</code>.</p>
+    <p>Separately, the control cohort caught the simulator naming the client in <em>“what is the best cordless drill?”</em> — a question it has no business appearing in. Both are fixed and both are tested. A control cohort that never catches anything isn't a control.</p>
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">06</span><span>Where okara is ahead</span></h2>
+  <p class="kicker">Stated plainly, because a teardown that finds only weaknesses isn't a teardown</p>
+
+  <p>For four engineers serving 120,000 tenants, most of their choices are close to optimal. The AI Gateway deleted eight provider integrations and all retry logic from a codebase two people maintain. A managed queue instead of standing up Kafka is right. A managed vector index instead of a Pinecone bill is right. None of that should be “improved” by adding operational surface.</p>
+
+  <p>And on capability, now measured rather than estimated: <strong>okara ships twelve live publishing and data integrations</strong>, and approved work publishes and reports back without a human touching it again. Its sandbox-to-pull-request loop for technical SEO is a real, non-trivial capability. Its client-side encryption is competently engineered, and its whitepaper honestly discloses that messages are plaintext during active processing. It has 120,000 users.</p>
+
+  <p>The build that followed this teardown has publishing paths specified, risk-tiered and idempotency-keyed — and <strong>no publisher implemented.</strong> One live connector against twelve. One demo workspace against 120,000. It has never made a live model call, because the environment it was built in had no API key.</p>
+
+  <p>So the claim is narrow and worth stating precisely: <strong>the gate here is better; the loop it gates is not closed yet.</strong> Those limits are in the README rather than glossed, for the same reason every number in this report carries a source.</p>
+</section>
+
+<footer>
+  <p>Compiled 2026-08-18 from indirect evidence only; okara.ai was never fetched. Confidence chips reflect source class, not certainty of interpretation. Findings expire 2026-11-18 — pricing and agent rosters in this category move monthly, and the primary datastore, ORM, analytics and email layers remain unestablished.</p>
+</footer>
+
+</div>

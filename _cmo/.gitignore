@@ -1,0 +1,7 @@
+# Runtime state. Regenerable: `cmo demo` recreates a workspace from fixtures.
+data/
+node_modules/
+*.log
+.env
+.env.*
+!.env.example

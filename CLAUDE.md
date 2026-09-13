@@ -62,6 +62,7 @@ scheme; new notes there are invisible to the Bases and to the HUD.
 | `System/` | OS config, scripts, health automation |
 | `Daily-Briefs/` | Output of the daily skills (am-report, inbox-brief, pulse) |
 | `_os/` | D.I.L.L.O.N. OS HUD — reads this vault live (`node _os/server.js`) |
+| `_cmo/` | CMO OS — auditable multi-client AI CMO engine (`node _cmo/bin/cmo.js demo`) |
 
 Client truth stays in `01_Clients/`. Link to it from the brain; never duplicate
 a client page under `12_Brain/`.
