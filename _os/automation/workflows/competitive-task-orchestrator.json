@@ -1,0 +1,7 @@
+{
+  "$schema": "../schemas/workflow-pointer.json",
+  "workflow_id": "competitive-task-orchestrator",
+  "registry": "12_Brain/registry/umbrella-workflow.json",
+  "runner": "_os/automation/bin/competitive-task-run.js",
+  "prompt": "System/competitive-task-orchestrator-prompt.md"
+}
