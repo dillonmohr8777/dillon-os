@@ -1,0 +1,172 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-23T05:35:55.8942431Z",
+  "title": "Design System: Marketing Chief Operator Studio",
+  "extensions": {
+    "colorMeta": {
+      "command-navy": {
+        "role": "primary",
+        "displayName": "Command Navy",
+        "canonical": "#0c1930",
+        "tonalRamp": ["#07101f", "#0c1930", "#132340", "#253752", "#48576c", "#788397", "#b5bcc7", "#eef0f3"]
+      },
+      "signal-orange": {
+        "role": "primary",
+        "displayName": "Signal Orange",
+        "canonical": "#a94017",
+        "tonalRamp": ["#381409", "#64240d", "#873411", "#a94017", "#cf5b2b", "#ed8d66", "#f7c4ad", "#fff0e8"]
+      },
+      "working-paper": {
+        "role": "neutral",
+        "displayName": "Working Paper",
+        "canonical": "#f4f2ec",
+        "tonalRamp": ["#272622", "#4a4944", "#73716b", "#9f9d96", "#c6c3bc", "#e2dfd8", "#f4f2ec", "#fffefa"]
+      },
+      "verified-green": {
+        "role": "secondary",
+        "displayName": "Verified Green",
+        "canonical": "#198267",
+        "tonalRamp": ["#092b22", "#0d4939", "#12644f", "#198267", "#39a588", "#71c7af", "#b4e4d6", "#edf9f5"]
+      },
+      "operator-support": {
+        "role": "neutral",
+        "displayName": "Operator Support",
+        "canonical": "#aeb9ca",
+        "tonalRamp": ["#091426", "#536079", "#7a4b04", "#8491a7", "#8593a8", "#98a7ba", "#9da7b8", "#9eabbf", "#aab5c5", "#aeb9ca", "#b7c1cf", "#b8c1d0", "#e6c686", "#eceae4", "#f5a079", "#ffb8b8", "#8de0ca", "#fff4d8"]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "View thesis",
+        "purpose": "One thesis per operating view."
+      },
+      "body": {
+        "displayName": "Operational body",
+        "purpose": "Compact instructions, evidence, and outcomes."
+      },
+      "label": {
+        "displayName": "Ledger notation",
+        "purpose": "Versions, state, dates, confidence, and identifiers."
+      },
+      "ramp": {
+        "displayName": "Complete incumbent type ramp",
+        "purpose": "Supported responsive and dense operating sizes: 7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 20, 21, 24, 28, 30, 31, 34, 48, and 54 pixels."
+      }
+    },
+    "shadows": [
+      {
+        "name": "command-lift",
+        "value": "0 22px 70px rgb(12 25 48 / 12%)",
+        "purpose": "Command panels and sticky client dossiers."
+      },
+      {
+        "name": "overlay-lift",
+        "value": "0 30px 100px rgb(0 0 0 / 30%)",
+        "purpose": "Owner decision and instruction overlays."
+      }
+    ],
+    "motion": [
+      {
+        "name": "state-fast",
+        "value": "180ms ease-out",
+        "purpose": "Hover, focus, selection, and disclosure state."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "tablet",
+        "value": "1120px"
+      },
+      {
+        "name": "mobile",
+        "value": "760px"
+      },
+      {
+        "name": "compact",
+        "value": "380px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Owner commitment or deliberate choice.",
+      "html": "<button class=\"ds-btn-primary\">RECORD CHOICE</button>",
+      "css": ".ds-btn-primary { border: 1px solid var(--orange, #a94017); border-radius: 0; background: var(--orange, #a94017); color: #fff; padding: 11px 16px; font: 750 12px Geist, Arial, sans-serif; cursor: pointer; } .ds-btn-primary:hover { background: #cf5b2b; } .ds-btn-primary:focus-visible { outline: 3px solid rgb(239 107 54 / 25%); outline-offset: 2px; }"
+    },
+    {
+      "name": "Command Action",
+      "kind": "button",
+      "refersTo": "button-command",
+      "description": "Safe execution, refresh, or navigation into a governed workflow.",
+      "html": "<button class=\"ds-btn-command\">QUEUE LOCAL RUN</button>",
+      "css": ".ds-btn-command { border: 1px solid var(--navy, #0c1930); border-radius: 0; background: var(--navy, #0c1930); color: #fff; padding: 11px 16px; font: 700 12px Geist, Arial, sans-serif; cursor: pointer; } .ds-btn-command:hover { background: #132340; } .ds-btn-command:focus-visible { outline: 3px solid rgb(239 107 54 / 25%); outline-offset: 2px; }"
+    },
+    {
+      "name": "Working Field",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "Search, filter, or instruction capture.",
+      "html": "<input class=\"ds-field\" aria-label=\"Search clients\" placeholder=\"Search clients\" />",
+      "css": ".ds-field { width: 100%; border: 1px solid var(--line-strong, #b9bac0); border-radius: 0; background: var(--surface, #fffefa); color: var(--ink, #172032); padding: 11px 12px; font: 400 12px Geist, Arial, sans-serif; } .ds-field:focus-visible { outline: 3px solid rgb(239 107 54 / 25%); outline-offset: 2px; }"
+    },
+    {
+      "name": "Command Rail Item",
+      "kind": "nav",
+      "description": "Desktop operating-view navigation.",
+      "html": "<button class=\"ds-nav\" data-active=\"true\"><strong>CLIENTS</strong><small>21 DOSSIERS</small></button>",
+      "css": ".ds-nav { display: grid; gap: 3px; width: 220px; min-height: 52px; padding: 10px 12px; border: 0; border-left: 2px solid transparent; background: transparent; color: #b8c1d0; text-align: left; } .ds-nav[data-active=\"true\"] { border-left-color: var(--orange, #a94017); background: #132340; color: #fff; } .ds-nav:focus-visible { outline: 3px solid rgb(239 107 54 / 25%); outline-offset: 2px; }"
+    },
+    {
+      "name": "Recommendation Record",
+      "kind": "card",
+      "description": "Client-routed recommendation with evidence and owner controls attached.",
+      "html": "<article class=\"ds-record\"><span>DECISION</span><strong>Implement the approved workflow</strong><p>Confirm the trigger, owner, test plan, and rollback before implementation.</p></article>",
+      "css": ".ds-record { display: grid; gap: 12px; min-height: 220px; padding: 22px; border: 1px solid var(--line-strong, #b9bac0); border-radius: 0; background: var(--surface, #fffefa); color: var(--ink, #172032); } .ds-record > span { color: var(--orange, #a94017); font: 750 9px Geist Mono, Consolas, monospace; letter-spacing: .08em; } .ds-record > strong { font: 700 20px Geist, Arial, sans-serif; } .ds-record > p { color: var(--muted, #5f6878); font: 400 12px/1.55 Geist, Arial, sans-serif; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Operating Ledger",
+    "overview": "The Studio behaves like a living operations book laid open beside Dillon: exact, scannable, dense when the work demands it, and quiet enough that state and decisions remain obvious. Its visual language joins an editorial ledger's rules and notation with a modern control room's status vocabulary.",
+    "keyCharacteristics": [
+      "Dense, legible operational hierarchy",
+      "Square ledger geometry and explicit dividers",
+      "Navy command surfaces paired with warm working paper",
+      "Orange reserved for owner action and current focus",
+      "Mono notation for state, evidence, counts, and versions",
+      "Responsive structure that turns into a mobile operating console"
+    ],
+    "rules": [
+      {
+        "name": "The Signal Rarity Rule",
+        "body": "Orange belongs to owner action, active focus, or meaningful attention. It must not become ambient decoration.",
+        "section": "colors"
+      },
+      {
+        "name": "The Data Is Not Decoration Rule",
+        "body": "Mono appears only when the text behaves like state, a version, a count, a date, or an identifier.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Record Rule",
+        "body": "Ordinary rows and records never receive floating-card shadows.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do keep client identity visible beside every recommendation, queue item, request, and result.",
+      "Do use density where Dillon is comparing work and quiet space where he is making a decision.",
+      "Do make status, stale state, and approval gates explicit in words as well as color.",
+      "Do preserve one component vocabulary across desktop and mobile."
+    ],
+    "donts": [
+      "Don't replace operational structure with generic analytics cards.",
+      "Don't use gradients, glow, glass, or decorative motion as substitutes for information.",
+      "Don't scatter orange across inactive regions.",
+      "Don't hide consequential actions behind ambiguous icon-only controls.",
+      "Don't make mobile a read-only afterthought."
+    ]
+  }
+}
