@@ -1,0 +1,10 @@
+{
+  "site": "https://www.alignhcm.com",
+  "brand": "Align HCM",
+  "maxPages": 200,
+  "concurrency": 6,
+  "timeoutMs": 20000,
+  "linkCheckCap": 250,
+  "reportDir": "SEO/AlignHCM/Watchdog",
+  "targetKeywords": ["hcm", "workday", "ukg", "payroll", "implementation", "hris", "smartcare", "hr"]
+}
