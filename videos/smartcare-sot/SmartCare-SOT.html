@@ -1,0 +1,304 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>SmartCare - Stabilize · Optimize · Thrive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,600&family=Archivo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="smartcare-sot.css?v=1">
+<script src="gsap.min.js"></script>
+</head>
+<body>
+<div id="stage-wrap">
+  <div id="stage-inner">
+    <div id="stage" data-screen-label="scene 1">
+      <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <defs>
+          <filter id="inkDissolve" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+            <feTurbulence type="fractalNoise" baseFrequency="0.010 0.013" numOctaves="2" seed="5" result="noise"/>
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="0" id="inkDisp" xChannelSelector="R" yChannelSelector="G" result="disp"/>
+            <feGaussianBlur in="disp" stdDeviation="0" id="inkBlur"/>
+          </filter>
+        </defs>
+      </svg>
+
+      <!-- dark ambient background -->
+      <div class="bg-layer bg-base"></div>
+      <div class="bg-layer bg-glow"></div>
+      <div class="bg-layer bg-swoosh" id="bg-swoosh">
+        <svg viewBox="0 0 1920 1080" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <linearGradient id="swGrad" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#F5821F" stop-opacity="0"/>
+              <stop offset="55%" stop-color="#F5821F" stop-opacity="0.55"/>
+              <stop offset="100%" stop-color="#FFC27A" stop-opacity="0.95"/>
+            </linearGradient>
+            <linearGradient id="swGrad2" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0"/>
+              <stop offset="80%" stop-color="#FFFFFF" stop-opacity="0.5"/>
+              <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.9"/>
+            </linearGradient>
+          </defs>
+          <g fill="none" stroke-linecap="round">
+            <path class="sw sw1" d="M760 1180 C 1180 1040, 1560 900, 1980 470" stroke="url(#swGrad)" stroke-width="7"/>
+            <path class="sw sw2" d="M840 1230 C 1280 1080, 1660 920, 2010 560" stroke="url(#swGrad)" stroke-width="4" opacity="0.7"/>
+            <path class="sw sw3" d="M700 1120 C 1120 1000, 1520 880, 1960 520" stroke="url(#swGrad2)" stroke-width="2.5" opacity="0.8"/>
+            <path class="sw sw4" d="M900 1260 C 1360 1120, 1720 980, 2040 660" stroke="url(#swGrad)" stroke-width="2" opacity="0.45"/>
+          </g>
+        </svg>
+      </div>
+      <div class="bg-layer bg-particles" id="bg-particles"></div>
+      <div class="bg-layer bg-grid"></div>
+      <div class="bg-layer bg-vignette"></div>
+
+      <div id="scene-host"></div>
+
+      <div id="swipe-seam" aria-hidden="true">
+        <span class="seam-core"></span>
+        <span class="seam-glow"></span>
+        <span class="seam-spark s1"></span><span class="seam-spark s2"></span><span class="seam-spark s3"></span>
+      </div>
+
+      <div class="chrome">
+        <div class="foot"><span class="foot-glyph">🌐</span><span class="foot-txt">ALIGNHCM.COM</span></div>
+        <div class="progress" id="progress">
+          <span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span>
+          <span class="pip"></span><span class="pip"></span><span class="pip"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="controls">
+    <button id="btn-reset" title="restart">⏮</button>
+    <button id="btn-play" title="play/pause">▶</button>
+    <div class="time" id="t-cur">0:00</div>
+    <div class="track" id="track"><div class="rail"></div><div class="fill" id="t-fill"></div><div class="knob" id="t-knob"></div></div>
+    <div class="time" id="t-dur" style="text-align:left">0:00</div>
+  </div>
+</div>
+
+<script src="smartcare-sot-scenes.js?v=1"></script>
+<script>
+  // ── Ambient particles ──
+  (function(){
+    const particles = document.getElementById('bg-particles');
+    const frag = document.createDocumentFragment();
+    for (let i=0;i<26;i++){
+      const el = document.createElement('span');
+      el.className = 'p' + (i % 3 === 0 ? ' o' : '') + ' p-anim';
+      const size = 1.5 + ((i*37)%100)/100*2.5;
+      el.style.width = size+'px'; el.style.height = size+'px';
+      el.style.left = ((i*53)%100)+'%'; el.style.top = ((i*29)%100)+'%';
+      el.style.animationDuration = (7 + ((i*17)%60)/10)+'s';
+      el.style.animationDelay = (-((i*23)%80)/10)+'s';
+      frag.appendChild(el);
+    }
+    particles.appendChild(frag);
+  })();
+
+  // ── Stage scale ──
+  (function(){
+    const stage = document.getElementById('stage');
+    const host  = document.getElementById('stage-inner');
+    function fit(){
+      const s = Math.min(host.clientWidth / 1920, host.clientHeight / 1080);
+      stage.style.transform = `scale(${Math.max(0.05, s)})`;
+    }
+    fit(); window.addEventListener('resize', fit); new ResizeObserver(fit).observe(host);
+  })();
+
+  // ── Scenes ──
+  const SCENE_FNS = [
+    SOTScenes.scene0,
+    SOTScenes.scene1, SOTScenes.scene2, SOTScenes.scene3,
+    SOTScenes.scene4, SOTScenes.scene5, SOTScenes.scene6,
+  ];
+  const SCENE_DUR = 8;
+  const TOTAL = SCENE_FNS.length * SCENE_DUR;
+  const XION = 0.9;
+
+  const host = document.getElementById('scene-host');
+  const sceneEls = SCENE_FNS.map((fn, i) => {
+    const el = document.createElement('div');
+    el.className = 'scene'; el.dataset.idx = i;
+    const inner = document.createElement('div');
+    inner.className = 'scene-motion';
+    el.appendChild(inner);
+    host.appendChild(el);
+    return el;
+  });
+  const motionOf = (el) => el.querySelector('.scene-motion');
+
+  const built = sceneEls.map(() => null);
+  function getTL(i){
+    if (built[i]) return built[i];
+    const tl = SCENE_FNS[i](motionOf(sceneEls[i]));
+    tl.pause(); built[i] = tl; return tl;
+  }
+
+  const master = gsap.timeline({ paused: true, onUpdate: onMasterUpdate });
+  master.to({ v: 0 }, { v: 1, duration: TOTAL, ease: 'none' });
+
+  const inkDisp = document.getElementById('inkDisp');
+  const inkBlur = document.getElementById('inkBlur');
+  const seam = document.getElementById('swipe-seam');
+
+  const pips = () => document.querySelectorAll('#progress .pip');
+  function updatePips(i){
+    pips().forEach((p, idx) => { p.classList.toggle('active', idx === i); p.classList.toggle('done', idx < i); });
+    const st = document.getElementById('stage');
+    st.classList.toggle('intro', i === 0);
+    st.classList.toggle('ending', i === SCENE_FNS.length - 1);
+    st.setAttribute('data-screen-label', `scene ${i+1}/${SCENE_FNS.length}`);
+  }
+
+  let currentScene = -1;
+  let transitioning = false;
+
+  function revealScene(i){
+    sceneEls.forEach((el, idx) => {
+      const m = motionOf(el);
+      if (idx === i){
+        el.classList.add('active');
+        gsap.set(el, { opacity: 1, clipPath: 'none', filter: 'none' });
+        gsap.set(m, { opacity: 1, clearProps: 'transform,filter' });
+      } else {
+        el.classList.remove('active');
+        gsap.killTweensOf(el); gsap.killTweensOf(m);
+        gsap.set(el, { opacity: 0, clipPath: 'none', filter: 'none' });
+        if (built[idx]) built[idx].pause(0);
+      }
+    });
+    getTL(i).restart();
+    updatePips(i);
+  }
+
+  function transitionTo(prev, i){
+    transitioning = true;
+    const prevEl = sceneEls[prev], nextEl = sceneEls[i];
+    const prevMotion = motionOf(prevEl), nextMotion = motionOf(nextEl);
+
+    nextEl.classList.add('active');
+    const tlNext = getTL(i); tlNext.pause(0);
+    gsap.set(nextEl, { opacity: 1, clipPath: 'inset(-2% 100% -2% 0)', filter: 'none' });
+    gsap.set(nextMotion, { opacity: 1, clearProps: 'transform' });
+
+    gsap.set(prevEl, { filter: 'url(#inkDissolve)', clipPath: 'inset(-2% 0 -2% 0%)' });
+    gsap.set(inkDisp, { attr: { scale: 0 } });
+    gsap.set(inkBlur, { attr: { stdDeviation: 0 } });
+    gsap.set(seam, { display: 'block', left: '0%', opacity: 1 });
+    updatePips(i);
+
+    const tl = gsap.timeline({
+      onComplete: () => {
+        prevEl.classList.remove('active');
+        gsap.killTweensOf(prevMotion);
+        gsap.set(prevEl, { opacity: 0, clipPath: 'none', filter: 'none' });
+        gsap.set(prevMotion, { clearProps: 'all' });
+        if (built[prev]) built[prev].pause(0);
+        gsap.set(seam, { display: 'none' });
+        gsap.set(nextEl, { clipPath: 'none' });
+        gsap.set(inkDisp, { attr: { scale: 0 } });
+        gsap.set(inkBlur, { attr: { stdDeviation: 0 } });
+        transitioning = false;
+        tlNext.restart();
+      }
+    });
+    tl.to(nextEl, { clipPath: 'inset(-2% 0% -2% 0)', duration: XION, ease: 'power2.inOut' }, 0)
+      .to(prevEl, { clipPath: 'inset(-2% 0 -2% 100%)', duration: XION, ease: 'power2.inOut' }, 0)
+      .to(inkDisp, { attr: { scale: 70 }, duration: XION, ease: 'power2.in' }, 0)
+      .to(inkBlur, { attr: { stdDeviation: 3 }, duration: XION, ease: 'power2.in' }, 0)
+      .to(prevMotion, { opacity: 0.0, duration: XION * 0.7, ease: 'power2.in' }, XION * 0.25)
+      .fromTo(seam, { left: '-4%' }, { left: '104%', duration: XION, ease: 'power2.inOut' }, 0);
+    return tl;
+  }
+
+  function setScene(i){
+    if (i === currentScene) return;
+    const prev = currentScene;
+    currentScene = i;
+    const forward = prev !== -1 && i === prev + 1 && playing && !dragging && !transitioning;
+    if (forward){ transitionTo(prev, i); }
+    else {
+      transitioning = false;
+      gsap.set(seam, { display: 'none' });
+      gsap.set(inkDisp, { attr: { scale: 0 } });
+      gsap.set(inkBlur, { attr: { stdDeviation: 0 } });
+      revealScene(i);
+    }
+  }
+
+  function onMasterUpdate(){
+    const t = master.time();
+    const idx = Math.min(SCENE_FNS.length - 1, Math.floor(t / SCENE_DUR));
+    setScene(idx);
+    const fmt = (x) => { const m = Math.floor(x/60); const s = Math.floor(x%60); return m+':'+String(s).padStart(2,'0'); };
+    document.getElementById('t-cur').textContent = fmt(t);
+    document.getElementById('t-dur').textContent = fmt(TOTAL);
+    const pct = (t / TOTAL) * 100;
+    document.getElementById('t-fill').style.width = pct+'%';
+    document.getElementById('t-knob').style.left = pct+'%';
+  }
+
+  // ── Controls ──
+  let playing = true, dragging = false;
+  const btnPlay = document.getElementById('btn-play');
+  const btnReset = document.getElementById('btn-reset');
+  btnPlay.addEventListener('click', () => {
+    playing = !playing;
+    if (playing) { master.play(); btnPlay.textContent = '❚❚'; } else { master.pause(); btnPlay.textContent = '▶'; }
+  });
+  btnReset.addEventListener('click', () => { master.time(0); transitioning=false; currentScene=-1; setScene(0); if (playing) master.play(); });
+
+  const track = document.getElementById('track');
+  function seekFromEvent(e){
+    const r = track.getBoundingClientRect();
+    const x = Math.max(0, Math.min(1, (e.clientX - r.left) / r.width));
+    master.time(x * TOTAL);
+    if (built[currentScene]) { const within = (x * TOTAL) % SCENE_DUR; built[currentScene].time(Math.min(built[currentScene].duration(), within)); }
+  }
+  track.addEventListener('mousedown', (e) => { dragging = true; master.pause(); seekFromEvent(e); });
+  window.addEventListener('mousemove', (e) => { if (dragging) seekFromEvent(e); });
+  window.addEventListener('mouseup', () => { if (dragging){ dragging=false; if (playing) master.play(); } });
+
+  master.eventCallback('onComplete', () => { master.time(0); transitioning=false; currentScene=-1; setScene(0); master.play(); });
+
+  setScene(0); master.play(); btnPlay.textContent = '❚❚';
+
+  window.addEventListener('keydown', (e) => {
+    if (e.code === 'Space') { e.preventDefault(); btnPlay.click(); }
+    else if (e.code === 'ArrowLeft') master.time(Math.max(0, master.time() - 1));
+    else if (e.code === 'ArrowRight') master.time(Math.min(TOTAL-0.05, master.time() + 1));
+    else if (e.key === '0') btnReset.click();
+  });
+
+  // Render/scrub hooks
+  window.__M = master;
+  window.__scrub = (i, localT) => { master.pause(); transitioning=false; gsap.set(seam,{display:'none'}); currentScene=-1; setScene(i); const tl = getTL(i); tl.pause(); tl.time(Math.min(tl.duration()||localT, localT)); };
+  window.__mid = (prev, i, p) => { master.pause(); currentScene=prev; playing=true; dragging=false; transitioning=false; revealScene(prev); const tt = transitionTo(prev, i); tt.pause(); tt.progress(p); };
+  // Deterministic transition frame for MP4 capture: outgoing held at final state,
+  // incoming at t=0, all transition visuals derived purely from progress p.
+  window.__capTrans = (prev, next, p) => {
+    master.pause(); transitioning = false;
+    const eInOut = gsap.parseEase('power2.inOut'), eIn = gsap.parseEase('power2.in');
+    const e = eInOut(p);
+    sceneEls.forEach((el, idx) => {
+      if (idx === prev || idx === next) { el.classList.add('active'); gsap.set(el, { opacity: 1 }); }
+      else { el.classList.remove('active'); gsap.set(el, { opacity: 0, clipPath: 'none', filter: 'none' }); if (built[idx]) built[idx].pause(0); }
+    });
+    const pt = getTL(prev); pt.pause(); pt.time(isFinite(pt.duration()) ? pt.duration() : SCENE_DUR);
+    const nt = getTL(next); nt.pause(); nt.time(0);
+    gsap.set(motionOf(sceneEls[next]), { opacity: 1, clearProps: 'transform' });
+    const fl = Math.max(0, Math.min(1, (p - 0.25) / 0.7));
+    gsap.set(motionOf(sceneEls[prev]), { opacity: 1 - eIn(fl) });
+    gsap.set(sceneEls[next], { opacity: 1, filter: 'none', clipPath: `inset(-2% ${(1 - e) * 100}% -2% 0)` });
+    gsap.set(sceneEls[prev], { filter: 'url(#inkDissolve)', clipPath: `inset(-2% 0 -2% ${e * 100}%)` });
+    gsap.set(inkDisp, { attr: { scale: 70 * eIn(p) } });
+    gsap.set(inkBlur, { attr: { stdDeviation: 3 * eIn(p) } });
+    gsap.set(seam, { display: 'block', opacity: 1, left: (-4 + 108 * e) + '%' });
+    updatePips(next);
+  };
+</script>
+</body>
+</html>
