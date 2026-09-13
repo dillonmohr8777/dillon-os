@@ -1,0 +1,121 @@
+<!--
+  templateType: blog_post
+  isAvailableForNewContent: true
+  label: Blog Post
+  screenshotPath: "../images/template-previews/hilton-fallback.png"
+-->
+{% set template_css = "../../css/templates/blog-post.css" %}
+{% extends "./layouts/base.html" %}
+{% block body %}
+<div class="scroll-progress"></div>
+
+<style>
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 5px;
+  width: 0%;
+  background: #f8931e;
+  z-index: 9999;
+  transition: width 0.1s ease;
+}
+</style>
+
+<script>
+window.addEventListener('scroll', function() {
+  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrollPercent = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+  var progress = document.querySelector('.scroll-progress');
+  if (progress) {
+    progress.style.width = scrollPercent + '%';
+  }
+});
+</script>
+
+<style>
+  #blog-hero {
+    background-image: url('{{ content.featured_image }}');
+  }
+</style>
+{# Hero Section with Background Image #}
+<div id="blog-hero" class="body-wrapper hero-dynamic">
+  <div class="blog-post-section blog-single hero-padding">
+    <div class="blog-hero-content">
+      <p class="eyebrow">
+        Align HCM Insights
+      </p>
+      <h1 class="blog-title-heading">{{ content.name }}</h1>
+    </div>
+  </div>
+</div>
+{# Blog post content wrapper #}
+<div class="content-wrapper">
+  {# Blog post #}
+  <div class="blog-post-section blog-single">
+    <article class="blog-post">
+      <div class="blog-info-container">
+        <div class="author-left">
+          <div class="blog-post__meta">
+            <div class="blog-post__author">
+              {% if content.blog_author.avatar %}
+              <img class="blog-post__author-image" src="{{ content.blog_author.avatar }}" width="50" loading="eager" alt="Picture of {{ content.blog_author.display_name }}">
+              {% endif %}
+              {% if content.blog_post_author %}
+                <a class="blog-post__author-name" href="{{ blog_author_url(group.id, content.blog_post_author.slug) }}" rel="author">
+                  {{ content.blog_post_author.display_name }}
+                </a>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+        <div class="time-right">
+          <time datetime="{{ content.publish_date }}" class="blog-post__timestamp">
+            {{ content.publish_date_local_time.strftime('%B %d, %Y') }}
+          </time>
+        </div>
+      </div>
+      <hr class="orange-hr">
+
+      {% if content.meta_description %}
+      <aside class="align-at-a-glance" aria-label="Article summary">
+        <p class="align-at-a-glance__label">At a glance</p>
+        <p>{{ content.meta_description }}</p>
+      </aside>
+      {% endif %}
+
+      <aside class="align-blog-cta align-blog-cta--inline" data-align-conversion-context data-align-offer-id="hcm_assessment" data-align-cta-placement="blog_inline_cta" data-align-conversion-type="contact_form">
+        <div>
+          <p class="align-blog-cta__eyebrow">Make the next HCM decision with confidence</p>
+          <h2>Get a free, no-obligation assessment</h2>
+          <p>Tell an Align HCM specialist what you are evaluating, implementing, or trying to fix.</p>
+        </div>
+        <a class="align-blog-cta__button" href="#blog-conversion-form" data-align-cta data-align-offer-id="hcm_assessment" data-align-cta-placement="blog_inline_cta" data-align-conversion-type="contact_form">Talk to an HCM expert</a>
+      </aside>
+
+      <div class="blog-post__body">
+        {{ content.post_body }}
+      </div>
+    </article>
+  </div>
+</div>
+<div class="content-wrapper">
+  {% module "module_17649746174243" path="/Align HCM/modules/Blog Contact Form", label="Blog Contact Form" %}
+</div>
+<div>
+  {# Recent posts #}
+  <div style="background: rgb(249 249 249); padding: 80px 0px 0px 0px;">
+    <div class="page-center" style="padding-bottom:40px;">
+      <p class="eyebrow">Insights</p>
+      <h3>Recent Posts</h3>
+      {% module "Recent Posts Slider" path="/Align HCM/modules/Blog Slider.module" %}
+    </div>
+  </div>
+  {# CTA #}
+  <div>
+    {% module "Recent Posts Slider" path="/Align HCM/modules/Pre-Footer-CTA.module" %}
+  </div>
+</div>
+
+{% endblock body %}

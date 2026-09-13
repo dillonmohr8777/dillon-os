@@ -1,0 +1,56 @@
+# robots.txt for www.alignhcm.com
+# Policy: search engines and AI assistant crawlers get full access.
+# Managed by: Site Health Watchdog (dillon-os vault). Do not add blanket Disallow rules.
+
+User-agent: *
+Allow: /
+Disallow: /hs-search-results
+Disallow: /_hcms/
+
+# Explicit welcome for AI assistant crawlers (AEO)
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+Sitemap: https://www.alignhcm.com/sitemap.xml
