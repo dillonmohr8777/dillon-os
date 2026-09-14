@@ -1,51 +1,51 @@
 {
   "automation_id": "radar-refresh",
-  "started_at": "2026-09-13T11:52:53.989Z",
+  "started_at": "2026-09-14T12:48:09.498Z",
   "status": "error",
-  "date": "2026-09-13",
-  "rotation_slot": "PA: Sullivan County, Beaver County, Susquehanna County, Butler County, Lancaster County, Delaware County",
+  "date": "2026-09-14",
+  "rotation_slot": "PA: Crawford County, Wyoming County, Bedford County, Centre County, Mifflin County, Philadelphia",
   "run": {
-    "discovered_raw": 384,
-    "discovered_new": 3,
-    "regraded": 4,
-    "enriched": 2,
-    "enrich_no_match": 1,
+    "discovered_raw": 148,
+    "discovered_new": 1,
+    "regraded": 1,
+    "enriched": 1,
+    "enrich_no_match": 0,
     "enrich_skipped": 0,
     "errors": [
-      "dashboard failed: dashboard is 1.55MB, over the 1.50MB limit — 1450 prospects. Trim projectRows() or paginate server-side before shipping this."
+      "dashboard failed: dashboard is 1.61MB, over the 1.50MB limit — 1451 prospects. Trim projectRows() or paginate server-side before shipping this."
     ],
-    "plan": "registry is at 1467 rows, past the 1200 soft cap — discovery ramped from 60 to 7",
+    "plan": "registry is at 1470 rows, past the 1200 soft cap — discovery ramped from 60 to 6",
     "throttled": true,
-    "rendered": 3,
+    "rendered": 1,
     "imagery_checked": 150,
-    "imagery_buildable": 28,
-    "logo_verified": 51,
-    "logo_pending": 87,
-    "logo_rejected": 12,
-    "not_live": 11
+    "imagery_buildable": 40,
+    "logo_verified": 66,
+    "logo_pending": 69,
+    "logo_rejected": 15,
+    "not_live": 10
   },
-  "tracked": 1470,
-  "active": 273,
-  "logo_holds": 1177,
+  "tracked": 1471,
+  "active": 339,
+  "logo_holds": 1112,
   "logo_hold_reasons": {
-    "logo_fetch_failed": 135,
-    "logo_not_found": 156,
+    "logo_fetch_failed": 139,
+    "logo_not_found": 180,
     "previous_homepage_exists": 140,
-    "logo_below_minimum_size": 6,
-    "logo_provenance_missing": 258,
-    "logo_source_not_official_site": 13,
-    "business_identity_mismatch": 99,
-    "logo_format_not_auditable_webp": 42,
-    "logo_background_not_removable: logo border is not a single removable color": 19,
-    "logo_undecodable: interlaced PNG is not decodable here": 5,
-    "logo_resolution_insufficient": 77,
-    "site_not_live_empty": 82,
-    "logo_format_not_auditable_jpg: progressive JPEG is not decodable here": 20,
+    "logo_below_minimum_size": 8,
+    "logo_provenance_missing": 121,
+    "logo_source_not_official_site": 15,
+    "business_identity_mismatch": 114,
+    "logo_format_not_auditable_webp": 53,
+    "logo_background_not_removable: logo border is not a single removable color": 20,
+    "logo_undecodable: interlaced PNG is not decodable here": 6,
+    "logo_resolution_insufficient": 86,
+    "site_not_live_empty": 92,
+    "logo_format_not_auditable_jpg: progressive JPEG is not decodable here": 23,
     "logo_format_not_auditable_jpg": 25,
     "logo_has_no_transparent_area": 4,
-    "logo_format_not_auditable_gif": 4,
+    "logo_format_not_auditable_gif": 5,
     "business_identity_unverified": 2,
-    "SVG paints an opaque background plate": 5,
+    "SVG paints an opaque background plate": 6,
     "logo_bytes_unavailable": 3,
     "logo_background_not_removable: no flat background found to remove": 1,
     "logo_undecodable: filtered paletted PNG is not decodable here": 8,
@@ -53,7 +53,7 @@
     "logo_background_not_removable: background removal would erase the whole image": 2,
     "logo_not_usable": 4,
     "site_not_live_parked": 1,
-    "logo_verification_pending": 62
+    "logo_verification_pending": 50
   },
   "build_queue_size": 4,
   "needs_render": 0,
@@ -63,16 +63,16 @@
     "polish": 914,
     "enrich": 25,
     "nurture": 220,
-    "ads_seo": 30
+    "ads_seo": 31
   },
   "by_verdict_active": {
-    "polish": 229,
-    "ads_seo": 2,
-    "nurture": 38,
+    "polish": 283,
+    "ads_seo": 11,
+    "nurture": 41,
     "rebuild": 4
   },
   "errors": [
-    "dashboard failed: dashboard is 1.55MB, over the 1.50MB limit — 1450 prospects. Trim projectRows() or paginate server-side before shipping this."
+    "dashboard failed: dashboard is 1.61MB, over the 1.50MB limit — 1451 prospects. Trim projectRows() or paginate server-side before shipping this."
   ],
-  "written_at": "2026-09-13T11:52:54.061Z"
+  "written_at": "2026-09-14T12:48:09.608Z"
 }
