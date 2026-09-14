@@ -16,7 +16,17 @@ source_of_truth: C:\Users\dillo\repos\dillon-os
 Everything in this block was measured on disk or in Task Scheduler on
 2026-09-14. Nothing here is recalled.
 
-- **Client registry:** the canonical registry at
+- **CORRECTION, same day, 19:45Z.** The registry block immediately below was
+  measured at 19:00Z and was overtaken at 19:06Z by a concurrent session:
+  `registry/clients.json` is now **27** records, not 24. Commit 03817ee added
+  `nexla`, `puttery-nyc` and `deborah-mara`, all `active`, all with
+  `slackChannels` populated. `align-hcm` and `nkcdc` still read `active` and are
+  still wrong. `slackChannels` is populated on 8 of 27. The three-registry
+  disagreement has resolved toward the 27-record set, so "the canonical 24 win"
+  is itself now stale. `gt-clinic` and `immohrtal-marketing` still do not
+  resolve. Left in place rather than overwritten, because a status file that
+  quietly rewrites its own history is worse than one that shows its drift.
+- **Client registry (as measured 19:00Z, superseded above):** the canonical registry at
   `client-operations/registry/clients.json` holds **24** records, 22 `active`
   and 2 `inactive` (zen-spa-tropicana, ami-cleaning). Two records are known
   stale and cannot be fixed here -- the registry is single-writer and
