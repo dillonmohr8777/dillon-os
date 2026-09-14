@@ -3,18 +3,18 @@
   "automation_id": "daily-sweep",
   "version": 1,
   "date": "2026-09-14",
-  "generated_at": "2026-09-14T16:12:54.073Z",
+  "generated_at": "2026-09-14T21:00:01.188Z",
   "generated_by": "_os/automation/bin/daily-sweep.js",
-  "previous_run": "2026-09-14T16:10:24.521Z",
+  "previous_run": "2026-09-14T20:00:01.280Z",
   "days_since_previous_sweep": 0,
-  "repos_scanned": 66,
+  "repos_scanned": 67,
   "freshness": [
     {
       "id": "daily-brief",
       "path": "Daily-Briefs/2026-09-14.md",
       "owner": "Codex cron daily-communications-brain (07:00 local)",
       "state": "fresh",
-      "age_hours": 5.2,
+      "age_hours": 10,
       "budget_hours": 26
     },
     {
@@ -22,7 +22,7 @@
       "path": "12_Brain/state/daily-communications-brain.json",
       "owner": "Codex cron daily-communications-brain",
       "state": "fresh",
-      "age_hours": 5.1,
+      "age_hours": 9.9,
       "budget_hours": 26
     },
     {
@@ -38,7 +38,7 @@
       "path": "12_Brain/state/claude-loop.json",
       "owner": "claude-loop.js via the daily driver",
       "state": "fresh",
-      "age_hours": 10.8,
+      "age_hours": 15.6,
       "budget_hours": 26
     },
     {
@@ -46,7 +46,7 @@
       "path": "Daily-Briefs/plan-2026-09-14.md",
       "owner": "Task Scheduler Immohrtal-Crew",
       "state": "fresh",
-      "age_hours": 0.5,
+      "age_hours": 1.3,
       "budget_hours": 26
     },
     {
@@ -54,7 +54,7 @@
       "path": "12_Brain/state/frontmatter-validate.json",
       "owner": "frontmatter-validate.js, on demand + pre-pulse",
       "state": "fresh",
-      "age_hours": 48,
+      "age_hours": 52.8,
       "budget_hours": 168
     },
     {
@@ -62,7 +62,7 @@
       "path": "System/approval-queue.md",
       "owner": "every session that gates an external action",
       "state": "fresh",
-      "age_hours": 1.2,
+      "age_hours": 0.6,
       "budget_hours": 72
     }
   ],
@@ -127,11 +127,11 @@
   "clients": {
     "registry_present": true,
     "registry_total": {
-      "value": 24,
+      "value": 27,
       "source_ref": "client-operations/registry/clients.json"
     },
     "registry_active": {
-      "value": 22,
+      "value": 25,
       "source_ref": "client-operations/registry/clients.json"
     },
     "vault_client_dirs": {
@@ -142,27 +142,59 @@
       "value": true,
       "source_ref": "01_Clients/Client Index.md"
     },
-    "roster_disagreement": "registry 24 vs 27 vault directories"
+    "roster_disagreement": null
   },
   "shipped": [
     {
       "repo": "dillon-os",
       "path": "C:\\Users\\dillo\\repos\\dillon-os",
-      "commits": 5,
+      "commits": 39,
       "subjects": [
-        "cadence(daily): run ledger for 2026-09-14",
-        "cadence(daily): unfiled-sweep",
-        "cadence(daily): approval-queue-diff",
-        "cadence(daily): heartbeat",
-        "Add cadence layer: three manifests, one driver, ledger-gated"
+        "System: managed agents inventory and runbook; checkpoint",
+        "fix(ledger): delivery is a property of the client, not its newest folder",
+        "Decision: Workmate is the Slack surface; enable Morning Chief",
+        "Amend the Pampano/Howard item: it is an identity blocker, not a brand vote",
+        "System: open items from the closing-layer session"
       ]
     },
     {
       "repo": "momentum-slack-agent",
       "path": "C:\\Users\\dillo\\repos\\momentum-slack-agent",
+      "commits": 2,
+      "subjects": [
+        "Retire this runtime: Workmate is the decided Slack surface",
+        "Slack AI teammate on the Agents API, hosted sandbox instead of Docker"
+      ]
+    },
+    {
+      "repo": "mac-mini-handoff",
+      "path": "C:\\Users\\dillo\\Documents\\Codex\\mac-mini-handoff",
+      "commits": 4,
+      "subjects": [
+        "Correct the stale Puttery access claim in the first-boot file",
+        "Correct the Onsite tracking claim; add the Nexla call card",
+        "Mark what was resolved the same day the kit was written",
+        "Mac mini bootstrap kit and daily-sweep handoff"
+      ]
+    },
+    {
+      "repo": "client-operations",
+      "path": "C:\\Users\\dillo\\Documents\\Codex\\projects\\client-operations",
+      "commits": 7,
+      "subjects": [
+        "state: restore portfolio-priorities parity with the registry",
+        "gt-clinic: stage the kickoff email as a real Gmail draft",
+        "intake: packet on three stale registry records",
+        "Commit the weekend's client deliverables",
+        "release(omega): conversion tracking correction deployed, 6aa845a6c3319f697d18df73"
+      ]
+    },
+    {
+      "repo": "website-design-engine",
+      "path": "C:\\Users\\dillo\\Documents\\Codex\\projects\\website-design-engine",
       "commits": 1,
       "subjects": [
-        "Slack AI teammate on the Agents API, hosted sandbox instead of Docker"
+        "Initial commit: local AI website design engine"
       ]
     }
   ],
@@ -170,26 +202,18 @@
     {
       "repo": "client-operations",
       "path": "C:\\Users\\dillo\\Documents\\Codex\\projects\\client-operations",
-      "dirty_files": 3447,
+      "dirty_files": 3437,
       "has_remote": true,
-      "unpushed_commits": 0,
-      "risk": "3447 uncommitted file(s)"
+      "unpushed_commits": 7,
+      "risk": "7 commit(s) exist only on this machine"
     },
     {
       "repo": "dillon-os",
       "path": "C:\\Users\\dillo\\repos\\dillon-os",
-      "dirty_files": 696,
+      "dirty_files": 711,
       "has_remote": true,
-      "unpushed_commits": 5,
-      "risk": "5 commit(s) exist only on this machine"
-    },
-    {
-      "repo": "website-design-engine",
-      "path": "C:\\Users\\dillo\\Documents\\Codex\\projects\\website-design-engine",
-      "dirty_files": 129,
-      "has_remote": false,
-      "unpushed_commits": null,
-      "risk": "NO REMOTE — a disk loss or a machine move loses this entirely"
+      "unpushed_commits": 6,
+      "risk": "6 commit(s) exist only on this machine"
     },
     {
       "repo": "dillon-os",
@@ -318,22 +342,6 @@
       "has_remote": true,
       "unpushed_commits": null,
       "risk": "branch has no upstream — nothing is pushing it"
-    },
-    {
-      "repo": "momentum-slack-agent",
-      "path": "C:\\Users\\dillo\\repos\\momentum-slack-agent",
-      "dirty_files": 0,
-      "has_remote": false,
-      "unpushed_commits": null,
-      "risk": "NO REMOTE — a disk loss or a machine move loses this entirely"
-    },
-    {
-      "repo": "momentum-design-system",
-      "path": "C:\\Users\\dillo\\Documents\\Codex\\momentum-design-system",
-      "dirty_files": 0,
-      "has_remote": false,
-      "unpushed_commits": null,
-      "risk": "NO REMOTE — a disk loss or a machine move loses this entirely"
     }
   ],
   "overdue": [
@@ -413,29 +421,29 @@
   "waiting_on_human": {
     "present": true,
     "source_ref": "System/approval-queue.md",
-    "lines": 133,
-    "open_checkboxes": 110,
+    "lines": 200,
+    "open_checkboxes": 114,
     "risk_mentions": {
-      "low": 14,
-      "high": 47,
-      "mediumium": 23,
-      "medium": 33
+      "low": 10,
+      "high": 50,
+      "mediumium": 20,
+      "medium": 35
     },
-    "last_modified": "2026-09-14T15:02:28.457Z",
+    "last_modified": "2026-09-14T20:22:46.879Z",
     "note": "An item in the queue is a request, never a permission."
   },
   "machine": {
     "platform": "win32 10.0.26200",
     "hostname": "DESKTOP-4AHKEC4",
-    "uptime_hours": 2.1,
+    "uptime_hours": 6.9,
     "total_memory_gb": 63.8,
-    "free_memory_gb": 36.3,
+    "free_memory_gb": 30.1,
     "unclean_shutdowns_30d": 16,
     "unclean_shutdowns_source": "Windows System event log, Id 6008"
   },
   "cadence": {
     "ledger_present": true,
-    "ledger_rows": 3,
+    "ledger_rows": 12,
     "first_ledger_day": "2026-09-14",
     "days_with_no_ledger_entry": [],
     "ledger_claims_missing_artifacts": [],
@@ -443,7 +451,7 @@
       {
         "cadence": "daily",
         "present": true,
-        "jobs": 3,
+        "jobs": 5,
         "disabled": 0
       },
       {
@@ -461,24 +469,29 @@
     ],
     "scheduler": {
       "mechanism": "Windows Task Scheduler",
-      "registered": []
+      "registered": [
+        "Cadence-daily",
+        "Cadence-monthly",
+        "Cadence-sweep-heartbeat",
+        "Cadence-weekly"
+      ]
     }
   },
   "silent": {
     "counters": {
-      "shipped_repos": 2,
-      "at_risk_repos": 21,
+      "shipped_repos": 5,
+      "at_risk_repos": 18,
       "overdue_notes": 12,
-      "approval_open_checkboxes": 110,
+      "approval_open_checkboxes": 114,
       "fresh_artifacts": 7
     },
     "suspect": []
   },
   "counters": {
-    "shipped_repos": 2,
-    "at_risk_repos": 21,
+    "shipped_repos": 5,
+    "at_risk_repos": 18,
     "overdue_notes": 12,
-    "approval_open_checkboxes": 110,
+    "approval_open_checkboxes": 114,
     "fresh_artifacts": 7
   },
   "source_refs": [
@@ -499,9 +512,9 @@
     {
       "date": "2026-09-14",
       "status": "ran",
-      "ran_at": "2026-09-14T16:12:54.073Z"
+      "ran_at": "2026-09-14T21:00:01.188Z"
     }
   ],
   "exit_code": 2,
-  "verdict": "sweep-gaps=0 stale=0 silent=0 missed-briefs=4/14 cadence-absent=0 cadence-UNSCHEDULED"
+  "verdict": "sweep-gaps=0 stale=0 silent=0 missed-briefs=4/14 cadence-absent=0"
 }
