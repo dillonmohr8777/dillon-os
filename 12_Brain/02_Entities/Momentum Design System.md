@@ -37,7 +37,7 @@ resolves it without being told.
 - Reference the tokens by path. **Do not vendor a copy into a repo** — copied
   palettes are precisely the drift `AUDIT.md` measured.
 - Read `AUDIT.md` before changing a token or reconciling a site's palette.
-- **It is now a Git repository as of 2026-09-09** (baseline commit `75b386a`, 5 files tracked). Before that it was unversioned, which made every edit a one-way door. Still not pushed anywhere -- a remote is Dillon's call.
+- **It is now a Git repository as of 2026-09-09** (baseline commit `75b386a`, 5 files tracked). Before that it was unversioned, which made every edit a one-way door. Pushed to a remote as of 2026-09-14: `origin` is `https://github.com/dillonmohr8777/momentum-design-system.git` and `refs/heads/main` on the remote is `75b386a`, identical to local HEAD. Working tree clean. Verified with `git ls-remote origin` 2026-09-14.
 
 ## Links
 

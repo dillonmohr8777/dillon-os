@@ -153,8 +153,12 @@ Revised 2026-09-09. Resolved items moved to the closed list below.
 - 57 unsent client replies in Gmail drafts, plus ~29 unsent reports. Five weekly
   batches generated and none sent. The last thing actually sent to Omega was
   **August 11**.
-- The Momentum design system is not a git repository and its vendored copy in
-  `client-operations` has already drifted — 6,459 vs 7,416 bytes.
+- The Momentum design system IS a git repository (baseline `75b386a`, clean on
+  `main`) and IS pushed to `dillonmohr8777/momentum-design-system` as of
+  2026-09-14. The earlier "not a git repository" line was false. The
+  "vendored copy has drifted" claim is also withdrawn: the `client-operations`
+  file is a derived output artifact with its own schema (173 canonical keys vs
+  100, exactly one shared value conflict, `version`), not a vendored copy.
 - **20 open decisions, and the gate event never happened.** Dillon confirmed
   2026-09-14 that the Friday 2026-09-11 meeting with Mac was not held -- it was
   his birthday. There is no readout to recover. D01 still blocks any
