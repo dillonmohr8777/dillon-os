@@ -39,11 +39,16 @@ def load_registry():
         return json.load(fh)["clients"]
 
 
+def all_matching(folder, pattern):
+    """Every immediate subdirectory whose name matches, oldest first."""
+    if not os.path.isdir(folder):
+        return []
+    return sorted(d for d in os.listdir(folder) if re.search(pattern, d, re.I))
+
+
 def newest_matching(folder, pattern):
     """Newest immediate subdirectory whose name matches, or None."""
-    if not os.path.isdir(folder):
-        return None
-    hits = sorted(d for d in os.listdir(folder) if re.search(pattern, d, re.I))
+    hits = all_matching(folder, pattern)
     return hits[-1] if hits else None
 
 
@@ -101,8 +106,19 @@ def main():
         folder = os.path.join(CLIENT_OPS, c.get("folder", ""))
         deliverables = os.path.join(folder, "deliverables")
 
-        report_dir = newest_matching(deliverables, r"weekly-(report|update)")
-        receipt = has_delivery_evidence(os.path.join(deliverables, report_dir)) if report_dir else None
+        report_dirs = all_matching(deliverables, r"weekly-(report|update)")
+        report_dir = report_dirs[-1] if report_dirs else None
+
+        # Delivery is a property of the CLIENT, not of their newest folder. An
+        # earlier version checked only the newest, so a client whose 09-14 folder
+        # had no receipt read as never-delivered even with a verified 09-08
+        # receipt one folder over. That understated both built and delivered.
+        receipt, receipt_from = None, None
+        for d in reversed(report_dirs):
+            found = has_delivery_evidence(os.path.join(deliverables, d))
+            if found:
+                receipt, receipt_from = found, d
+                break
         ads = ads_figures(cid)
 
         blockers = []
@@ -129,8 +145,11 @@ def main():
             "accepted_leads_reason": "Zapier notifications carry a link, not the lead. No client has named-lead data as of 2026-09-14.",
             "ads_source": ads.get("source") if ads else None,
             "report_built": report_dir,
+            "reports_built_total": len(report_dirs),
             "report_delivered": bool(receipt),
+            "delivered_from_folder": receipt_from,
             "delivery_receipt": receipt,
+            "never_delivered": not receipt,
             "blockers": blockers,
         })
 
@@ -166,7 +185,12 @@ def main():
         "",
         "## What this says",
         "",
-        "- **{} of {} clients** have a report on disk; **{} have a delivery receipt**.".format(built, len(rows), delivered),
+        "- **{} of {} clients** have a report on disk; **{} have a delivery receipt on disk**.".format(built, len(rows), delivered),
+        "- **A missing receipt is not proof nothing was sent.** This script reads files, and a send",
+        "  recorded only as a Gmail message id is invisible to it. nexla is the known case: verified",
+        "  sent 2026-09-10 (message `1a08d1c2d7d72b1c`) with no receipt file in its report folder.",
+        "  Treat `never_delivered` as *no evidence on disk*, and confirm against the mailbox before",
+        "  telling a client they were missed.",
         "- **Accepted leads is empty for every client.** That is the finding, not a gap in this script.",
         "  Lead notifications carry a link instead of the lead, so there is nothing to reconcile",
         "  platform conversions against. Fixing the Zapier payload is the unlock and needs nobody's",
