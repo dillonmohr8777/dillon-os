@@ -105,6 +105,14 @@ Revised 2026-09-09. Resolved items moved to the closed list below.
   POST. It is the power supply. Needs hands. This is the root cause behind
   session death, config "resets", and orphaned lock folders.
   [[12_Brain/07_Reviews/2026-09-09 - Machine power fault diagnosis]]
+  **Correction 2026-09-14: the power fault did NOT cause the weekend gaps.**
+  The System event log shows the last unclean shutdown was 2026-09-10 20:00,
+  before the window. The machine was up continuously all weekend: uptime
+  228,748s at 2026-09-13 12:00, boot ~2026-09-10 20:26. A winlogon power-off
+  was initiated 2026-09-12 11:14 but uptime continuity shows it never
+  completed. No weekend work was lost to power. The PSU still needs hands; it
+  is just not the explanation for anything between 2026-09-11 and 2026-09-13.
+  Source: Get-WinEvent System log 41/6008/1074/6013, read 2026-09-14.
 - **Google Ads API is live as of 2026-09-10.** Local client under
   `%LOCALAPPDATA%\Dillon\GoogleAdsProbe\`. Query every account DIRECT. The
   manager route 403s because the MCC and the children are separately
