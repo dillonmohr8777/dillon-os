@@ -1,7 +1,7 @@
 ---
 note_type: index
 status: active
-updated: 2026-09-10
+updated: 2026-09-14
 tags:
   - index
   - brain
@@ -25,6 +25,9 @@ links instead of loading the entire vault.
   truth.
 - [[System/approval-queue|Approval Queue]] — consequential actions waiting for
   Dillon.
+- [[System/sweep-status|Sweep Status]] — today's evidence sweep, and the loud
+  record of every day it did not run. If the date at the top of that file is not
+  today, nothing below it was collected today.
 - [[System/revenue-scorecard|Revenue Scorecard]] — verified revenue state.
 
 - [[12_Brain/Bases/Strategy Library.base|Strategy Library]] - the compiled
@@ -127,9 +130,12 @@ evidence.
   live reread late morning 2026-09-10. Ads API is live. Andy's old access reply
   already sent. Matt EOD text is drafted and unsent.
 - [[02_FullTimeJob/Empeon/2026-09-10 - Nack room card|Nack room card]] —
-  walk-in card for Jonathan Nack. Use this, not the Matt call notes.
+  walk-in card for Jonathan Nack. Use this, not the Matt call notes. Copy
+  for Matt is at the top. Write Jonathan, not John.
 - [[02_FullTimeJob/Empeon/2026-09-10 - Matt EOD text draft|Matt Otten EOD text]] —
-  unsent. Recruiter screen passed; next conversation is Jonathan Nack.
+  unsent as of 13:55 ET. LinkedIn with Matt is now connected
+  (`1a08c68b993684bf`). SMS or LinkedIn DM. Recruiter screen passed; next
+  conversation is Jonathan Nack.
 - [[12_Brain/06_Research/2026-09-10 - Antigravity extra Google access|Antigravity extra Google access]] —
   Gemini 3.8 Flash plan quota is the extra Google path. Not GTM, Ads, or Search Console.
 - [[12_Brain/07_Reviews/2026-09-10 - Antigravity Gemini 3.8 Flash wiring|Antigravity 3.8 Flash wiring]] —

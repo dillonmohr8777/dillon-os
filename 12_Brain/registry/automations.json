@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-07-29",
+  "updated": "2026-09-14",
   "contract": "00_Inbox/Automation Deep Analysis 2026-07-29.md",
   "dependency": "12_Brain/DEPENDENCY_PR226.md",
   "automations": [
@@ -114,7 +114,7 @@
       "cadence": "daily/3x week",
       "command": "node _os/automation/bin/qualify.js --adapter indeed --from <signals.json>",
       "external_actions": false,
-      "notes": "Normalizes hiring signals into the shared prospect schema. Does not scrape Indeed live in this PR (fixture/import only \u2014 live scrape is a credential/ToS gate).",
+      "notes": "Normalizes hiring signals into the shared prospect schema. Does not scrape Indeed live in this PR (fixture/import only — live scrape is a credential/ToS gate).",
       "status": "implemented"
     },
     {
@@ -447,6 +447,51 @@
       "external_actions": false,
       "status": "implemented",
       "note": "Refuses forbidden port 9222 with exit 3 and marks chrome_isolated not-live unless the process on the port really runs a claude-chrome profile. probe/recommend describe agent-only rungs (WebFetch, WebSearch, Firecrawl) that a CLI cannot drive."
+    },
+    {
+      "id": "outreach-ledger",
+      "name": "Outreach engine Stage 8 learning ledger",
+      "lane": "outreach",
+      "tier": 0,
+      "cadence": "daily",
+      "command": "node _os/automation/bin/outreach-ledger.js",
+      "inputs": [
+        "02_Campaigns/AI Site Builder Outreach Engine/batches/*/prospects.csv"
+      ],
+      "outputs": [
+        "12_Brain/state/outreach-ledger.json",
+        "Daily-Briefs/outreach-ledger.md"
+      ],
+      "external_actions": false,
+      "notes": "Read-only aggregation. Reports 'not measured' for absent columns and omits rates with a zero denominator; never reports a missing column as zero conversion. Self-check: --selftest.",
+      "status": "implemented"
+    },
+    {
+      "id": "daily-sweep",
+      "name": "Daily evidence sweep and gap detector",
+      "lane": "infrastructure",
+      "tier": 0,
+      "cadence": "daily, as the first job in _os/automation/cadence/daily.yaml",
+      "stale_after_hours": 26,
+      "command": "node _os/automation/bin/daily-sweep.js [--json] [--selftest]",
+      "inputs": [
+        "12_Brain/state/*.json",
+        "Daily-Briefs/*.md",
+        "System/approval-queue.md",
+        "01_Clients/Client Index.md",
+        "C:/Users/dillo/Documents/Codex/projects/client-operations/registry/clients.json",
+        "_os/automation/cadence/run-ledger.jsonl",
+        "git status and git log across the local estate roots",
+        "Windows System event log Id 6008, or the macOS equivalent"
+      ],
+      "outputs": [
+        "12_Brain/state/daily-sweep.json",
+        "System/sweep-status.md",
+        "one appended row in _os/automation/cadence/run-ledger.jsonl"
+      ],
+      "external_actions": false,
+      "notes": "Local evidence only: no network, no model, no credential, no canonical client write. Exit 2 is a successful run reporting bad news (missed day, stale artifact, undelivered brief, absent cadence run, lying ledger row, unscheduled driver, or a counter that fell from non-zero to zero). Exit 1 is the script breaking. Backfills MISSED rows for every day it was skipped, so a machine that was powered off still produces a written gap rather than silence. Self-check: --selftest.",
+      "status": "implemented"
     }
   ],
   "gates": {

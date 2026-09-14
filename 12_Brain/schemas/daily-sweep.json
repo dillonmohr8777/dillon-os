@@ -1,0 +1,193 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "dillon-os/daily-sweep",
+  "title": "DailySweepState",
+  "description": "State written by _os/automation/bin/daily-sweep.js. Local evidence only: no network, no model, no secrets, no external action. Every reported number carries a source_ref; an unmeasured value is null and is never inferred.",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "automation_id",
+    "version",
+    "date",
+    "generated_at",
+    "generated_by",
+    "run_history",
+    "freshness",
+    "silent",
+    "source_refs",
+    "exit_code",
+    "verdict"
+  ],
+  "properties": {
+    "schema": { "const": "12_Brain/schemas/daily-sweep.json" },
+    "automation_id": { "const": "daily-sweep" },
+    "version": { "type": "integer", "minimum": 1 },
+    "date": { "type": "string", "format": "date" },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "generated_by": { "type": "string" },
+    "previous_run": { "type": ["string", "null"], "format": "date-time" },
+    "days_since_previous_sweep": { "type": ["integer", "null"], "minimum": 0 },
+    "repos_scanned": { "type": "integer", "minimum": 0 },
+
+    "run_history": {
+      "description": "One row per calendar day for the last 30 days. Any day between two runs with no row is written as MISSED by the next run. A gap is a recorded fact, never an absence someone has to notice.",
+      "type": "array",
+      "maxItems": 30,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["date", "status"],
+        "properties": {
+          "date": { "type": "string", "format": "date" },
+          "status": { "enum": ["ran", "MISSED"] },
+          "ran_at": { "type": "string", "format": "date-time" }
+        }
+      }
+    },
+
+    "freshness": {
+      "description": "Daily artifacts the orchestrator depends on, each with its own staleness budget. Past budget is stale, never 'fine'.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "path", "owner", "state", "budget_hours"],
+        "properties": {
+          "id": { "type": "string" },
+          "path": { "type": "string" },
+          "owner": { "type": "string", "description": "What is supposed to produce it. A stale artifact needs a named owner or nobody fixes it." },
+          "state": { "enum": ["fresh", "stale", "missing"] },
+          "age_hours": { "type": ["number", "null"] },
+          "budget_hours": { "type": "number", "exclusiveMinimum": 0 }
+        }
+      }
+    },
+
+    "daily_brief_days": {
+      "type": "array",
+      "maxItems": 31,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["date", "present"],
+        "properties": {
+          "date": { "type": "string", "format": "date" },
+          "present": { "type": "boolean" }
+        }
+      }
+    },
+
+    "cadence": {
+      "description": "State of _os/automation/cadence/, which owns scheduling. This sweep is a job in its daily manifest and is its deterministic ABSENT detector: a prompt-driven heartbeat cannot report on a day the driver never started.",
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["ledger_present", "ledger_rows", "days_with_no_ledger_entry", "scheduler"],
+      "properties": {
+        "ledger_present": { "type": "boolean" },
+        "ledger_rows": { "type": "integer", "minimum": 0 },
+        "first_ledger_day": { "type": ["string", "null"], "format": "date" },
+        "days_with_no_ledger_entry": {
+          "type": "array",
+          "items": { "type": "string", "format": "date" }
+        },
+        "ledger_claims_missing_artifacts": {
+          "description": "Ledger rows with status ok naming an artifact that is not on disk. A ledger that lies is worse than no ledger.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "job": { "type": "string" },
+              "artifact": { "type": "string" },
+              "ts": { "type": "string" }
+            }
+          }
+        },
+        "manifests": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["cadence", "present"],
+            "properties": {
+              "cadence": { "enum": ["daily", "weekly", "monthly"] },
+              "present": { "type": "boolean" },
+              "jobs": { "type": "integer", "minimum": 0 },
+              "disabled": { "type": "integer", "minimum": 0 }
+            }
+          }
+        },
+        "scheduler": {
+          "type": "object",
+          "additionalProperties": true,
+          "required": ["mechanism"],
+          "properties": {
+            "mechanism": { "enum": ["Windows Task Scheduler", "launchd"] },
+            "registered": {
+              "description": "Task or job labels matching the probe. An EMPTY array means nothing is scheduled and every run was hand-started. null means the probe failed and the state is unknown — the two are not the same and must never be collapsed.",
+              "type": ["array", "null"],
+              "items": { "type": "string" }
+            },
+            "note": { "type": "string" }
+          }
+        }
+      }
+    },
+
+    "silent": {
+      "description": "The Gmail-label failure mode, generalised. Three labels sat at zero for weeks because a dead collector reads exactly like a quiet day. A counter that was non-zero and is now zero is SUSPECT, not healthy.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["counters", "suspect"],
+      "properties": {
+        "counters": { "type": "object", "additionalProperties": { "type": "number" } },
+        "suspect": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["counter", "previous", "current", "verdict"],
+            "properties": {
+              "counter": { "type": "string" },
+              "previous": { "type": "number" },
+              "current": { "const": 0 },
+              "verdict": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+
+    "clients": { "type": "object" },
+    "shipped": { "type": "array" },
+    "at_risk": {
+      "description": "Repos with uncommitted work, unpushed commits, or no remote. These are exactly what a machine failure or a machine move destroys.",
+      "type": "array"
+    },
+    "overdue": { "type": "array" },
+    "waiting_on_human": { "type": "object" },
+    "machine": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "unclean_shutdowns_30d": {
+          "type": ["integer", "null"],
+          "description": "null means not measured on this platform. It does not mean zero."
+        }
+      }
+    },
+
+    "source_refs": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string" }
+    },
+    "counters": { "type": "object" },
+    "ledger_appended": { "type": "boolean" },
+    "exit_code": {
+      "description": "0 clean. 2 something is unobservable: a missed sweep day, a stale artifact, an undelivered brief, an absent cadence run, a lying ledger row, an unscheduled driver, or a suspect-silent counter. 1 the sweep itself broke.",
+      "enum": [0, 1, 2]
+    },
+    "verdict": { "type": "string" }
+  }
+}

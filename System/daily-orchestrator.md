@@ -13,10 +13,29 @@ Start it each morning. Point new work at it before spawning anything new.
 
 ## First actions, every run
 
-1. Read `INDEX.md`, `System/operating-status.md`, `System/approval-queue.md`.
-2. Read `12_Brain/05_Projects/` for live threads.
-3. Report: what is on fire, what is waiting on Dillon, what is waiting on a
+1. **Run the sweep, then read it.** `node _os/automation/bin/daily-sweep.js`,
+   then `System/sweep-status.md`. It takes seconds, costs no model quota, and
+   its first line tells you whether the evidence under it is today's. Exit 2 is
+   a successful run reporting bad news — read the headline, do not retry it.
+   If the sweep's date is not today, fix that before trusting anything else.
+2. Read `INDEX.md`, `System/operating-status.md`, `System/approval-queue.md`.
+3. Read `12_Brain/05_Projects/` for live threads.
+4. Report: what is on fire, what is waiting on Dillon, what is waiting on a
    client, what shipped since the last run.
+
+## Scheduling is not optional and is not currently wired
+
+Verified 2026-09-14. The `_os/automation/cadence/` layer is the right shape —
+three manifests, one driver, one ledger — but **no scheduled task or launchd job
+starts it.** Every cadence run so far was hand-started. Until that is fixed, the
+system built to detect silence is silent whenever nobody remembers to run it.
+`System/sweep-install.md` has the registration for both Windows and macOS.
+
+The machine's power-supply fault means a scheduled run *will* miss days. That is
+designed for: the sweep backfills a written `MISSED` row for every day it was
+skipped, the next time it runs. A gap you can read is acceptable. A gap nobody
+recorded is the actual failure — it is what happened to the daily brief on
+September 7, 9, 10 and 11, and to three Gmail labels that sat at zero for weeks.
 
 Lead with what needs him today. No padding.
 
@@ -130,8 +149,12 @@ Revised 2026-09-09. Resolved items moved to the closed list below.
   **August 11**.
 - The Momentum design system is not a git repository and its vendored copy in
   `client-operations` has already drifted — 6,459 vs 7,416 bytes.
-- **20 open decisions against the Friday 2026-09-11 meeting with Mac.** D01
-  blocks any client-facing offer sheet and any outbound.
+- **20 open decisions, and the gate event never happened.** Dillon confirmed
+  2026-09-14 that the Friday 2026-09-11 meeting with Mac was not held -- it was
+  his birthday. There is no readout to recover. D01 still blocks any
+  client-facing offer sheet and all outbound, D10 blocks outbound, D18 blocks
+  client-facing paid generation. The open item is a new date, not a debrief.
+  [[12_Brain/04_Decisions/2026-09-14 - The Mac meeting did not happen]]
 
 ## Closed 2026-09-09
 

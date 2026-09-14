@@ -5,6 +5,40 @@ cadence: daily
 # Schema and rules: ./README.md
 
 jobs:
+  # -------------------------------------------------------------- daily sweep
+  # Runs FIRST, before the heartbeat, because it is deterministic code and costs
+  # no model quota. It is the layer's own ABSENT detector: a prompt-driven
+  # heartbeat cannot report on a day the driver never started, but this script
+  # backfills MISSED rows for every day it was skipped the next time it does run.
+  # It also checks whether the cadence driver is scheduled at all — as of
+  # 2026-09-14 it is not, and every run so far was hand-started.
+  - id: daily-sweep
+    title: Deterministic evidence sweep and gap detector
+    enabled: true
+    outputs: System
+    accept: |
+      System/sweep-status.md and 12_Brain/state/daily-sweep.json both carry
+      today's date in generated_at, and the run-ledger has a daily-sweep row for
+      today. A non-zero exit is expected and is not a failure of this job — the
+      job fails only if the two files are absent or carry a stale date.
+    prompt: |
+      Run, from C:/Users/dillo/repos/dillon-os:
+
+        node _os/automation/bin/daily-sweep.js
+
+      Exit 0 means clean. Exit 2 means it found something unobservable — a
+      missed sweep day, a stale daily artifact, an undelivered daily brief, a
+      cadence day with no ledger entry, a ledger row naming an artifact that is
+      not on disk, an unscheduled driver, or a counter that dropped from
+      non-zero to zero. Exit 2 is a successful run reporting bad news; do not
+      retry it and do not suppress it. Exit 1 means the script itself broke:
+      ledger that as failed with the stack's first line as the note.
+
+      Then read the headline of System/sweep-status.md and carry it into the
+      cadence run summary verbatim. Do not re-summarise it and do not soften it.
+
+      Write nothing else. The script owns both its output files.
+
   # ---------------------------------------------------------------- heartbeat
   # Runs FIRST and deliberately reports on yesterday, because the failure this
   # whole system exists to fix is silence. daily-communications-brain went dark
