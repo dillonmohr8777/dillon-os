@@ -70,6 +70,18 @@ rejected (gotcha 5).
 | AUDIT.md | `file_01TZt6xvR6nVHbTsoKFkWtmy` |
 | dc-format.md | `file_01MzE9GNPEGK7WzRUKH8xaMZ` |
 
+### Where the 75c went
+
+11c platform tests + 6c sentinel + 16c across six smoke/mount/diagnostic
+sessions + **42c on the first real researcher run**. That run is the calibration
+number that matters: a single-target web research job with 16 tool calls cost
+**42c against a 40c cap**, roughly double my 15-25c estimate. Budget research at
+~40c per target, not 20c.
+
+It also gave a second reading on the cap leak: 42c against a 40c cap is a **5%
+overrun**, versus 400% on the 1c test. The leak is one turn's cost, so it shrinks
+proportionally as the cap grows. Caps of 40c+ behave close to a real ceiling.
+
 ## 2. The bridge (local, in this repo)
 
 `_os/automation/bridge/`:
