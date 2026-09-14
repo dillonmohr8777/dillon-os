@@ -359,3 +359,7 @@ coverage matrix and Semrush run verification.
 
 Dropped on instruction: Replenish end-date verification (Dillon: "ignore
 replenish"). The agent was stopped before it pulled anything.
+
+**Correction, evening:** sandbox outputs DO surface via
+`GET /v1/files?scope_id=<session>` (both beta headers). Earlier notes saying
+otherwise were wrong. The fleet's collector is built on this.

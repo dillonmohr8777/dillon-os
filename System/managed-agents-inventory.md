@@ -88,9 +88,13 @@ re-verified live for this inventory. Distinct wallet, distinct vendor.
    It does not error. It invents plausible tool output. Always pass `tools` at
    agent creation (both real agents here were created that way) and always
    check the event stream for `agent.tool_use` before believing a result.
-3. **Files written to `/mnt/session/outputs/` do not surface through the API.**
-   `/artifacts` 404s, `/resources` and `/files` come back empty. The agent's
-   **final message is the record.** Both agents here are instructed accordingly.
+3. **Outputs DO surface, but only through `scope_id` — CORRECTED 2026-09-14 evening.**
+   Earlier today this file said they did not; that came from hitting
+   `/v1/sessions/{id}/artifacts` (404) and `/v1/files` without a filter (empty).
+   The documented path: `GET /v1/files?scope_id=<session_id>` with **both**
+   `files-api-2025-04-14` and `managed-agents-2026-04-01` headers, ~1-3 s after
+   idle, then `GET /v1/files/{id}/content`. The agent's final message remains a
+   good record, but files are the delivery channel the fleet is built on.
 
 ## 4. Runbook
 
