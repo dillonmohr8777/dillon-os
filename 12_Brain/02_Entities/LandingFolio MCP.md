@@ -28,7 +28,7 @@ The [[12_Brain/07_Reviews/MCP/2026-07-31 - landingfolio|acceptance review]] retu
 **sandbox-only**. Four of the five checks pass; the Inspector check is pending
 because the endpoint refuses every anonymous call, so its tools cannot be
 enumerated until a free account token exists. Minting that token is an operator
-action — see [[12_Brain/registry/automations|the automation registry]] entry
+action — see [[12_Brain/registry/automations.json|the automation registry]] entry
 `landingfolio-design-reference` for the command that finishes the check.
 
 The wiring is already committed in `.cursor/mcp.json` and `.mcp.json`, both reading

@@ -1,7 +1,7 @@
 ---
 tags: [index, moc, brain]
 canonical: 12_Brain
-updated: 2026-08-15
+updated: 2026-09-14
 ---
 
 # INDEX — the front door
@@ -30,6 +30,11 @@ in the same change.
 - [[12_Brain/02_Entities/Claude in Chrome|Claude in Chrome]] — browser-driving extension for local apply sessions.
 - [[12_Brain/02_Entities/Ops Box (EliteDesk 800 G4)|Ops Box (EliteDesk 800 G4)]] — always-on Ops machine (no credentials in Git).
 - [[12_Brain/02_Entities/LandingFolio MCP|LandingFolio MCP]] — layout-reference MCP for site builds; sandbox-only until its Inspector check passes.
+- [[12_Brain/02_Entities/Chronos-2|Chronos-2]] — Amazon's 120M-param time-series foundation model; sandbox canary forecast-specialist candidate, not a production default.
+- [[12_Brain/02_Entities/TimesFM|TimesFM]] — Google Research time-series foundation model family; forecast-specialist candidate, 3.0 checkpoint is research-only.
+- [[12_Brain/02_Entities/Cloudflare D1 Radar|Cloudflare D1 Radar]] — D1 database plus read-only Worker backend for Prospect Radar; Worker code written but undeployed.
+- [[12_Brain/02_Entities/Higgsfield MCP|Higgsfield MCP]] — hosted image/video generation MCP wired 2026-09-01; OAuth login pending, every generation is external spend.
+- [[12_Brain/02_Entities/Vibe Prospecting|Vibe Prospecting]] — paid business/prospect-data MCP powering `.claude/skills/franchise-list` and future lead-pull skills.
 
 Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Index]].
 
@@ -48,6 +53,25 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/03_Concepts/Conversion Tracking Setup 2026|Conversion Tracking Setup 2026]] — generic setup patterns (no account IDs).
 - [[12_Brain/03_Concepts/Google Ads Conversion Optimization 2026|Google Ads Conversion Optimization 2026]] — generic optimization patterns.
 - [[12_Brain/03_Concepts/Meta Lead Ads Optimization 2026|Meta Lead Ads Optimization 2026]] — generic Lead Ads patterns.
+- [[12_Brain/03_Concepts/Living Second Brain|Living Second Brain]] — a useful second brain reconciles new evidence into canonical knowledge instead of growing as an append-only pile.
+- [[12_Brain/03_Concepts/Marketing Intelligence Operating System|Marketing Intelligence Operating System]] — the canonical map connecting demand research, content, AI discovery, paid media, websites, automation, and measurement.
+- [[12_Brain/03_Concepts/Agent Governance and Verification|Agent Governance and Verification]] — one accountable orchestrator routes bounded work to specialists with evidence, independent checking, and human approval.
+- [[12_Brain/03_Concepts/Automation and Workflow Engineering|Automation and Workflow Engineering]] — reliable automation is stateful, idempotent, observable, with exact routing, evidence, and recovery.
+- [[12_Brain/03_Concepts/Evidence Context and Learning Loops|Evidence Context and Learning Loops]] — durable learning joins immutable evidence to canonical knowledge, decisions, and outcomes without confusing capture with truth.
+- [[12_Brain/03_Concepts/Specialist Forecast Router|Specialist Forecast Router]] — route time-series forecasts to a dedicated specialist instead of an LLM guess; the LLM interprets quantile bands into one gated action.
+- [[12_Brain/03_Concepts/Predictive Work Planner|Predictive Work Planner]] — predict likely work packages and numeric workload separately, using an evidence router plus a gated forecast evaluator.
+- [[12_Brain/03_Concepts/Confirm the Artifact Not the Action|Confirm the Artifact Not the Action]] — verify by reading the artifact a tool actually produced, never by trusting that the edit ran.
+- [[12_Brain/03_Concepts/AEO GEO and AI Discovery|AEO GEO and AI Discovery]] — AEO/GEO extend SEO through answer extractability, entity consistency, and outcome-aware citation measurement.
+- [[12_Brain/03_Concepts/AI Visibility Measurement|AI Visibility Measurement]] — measure AI visibility with fixed prompts, platform-native citation data, referral analytics, and downstream outcomes.
+- [[12_Brain/03_Concepts/Entity Authority and Citation Readiness|Entity Authority and Citation Readiness]] — entity authority comes from consistent identity, explicit relationships, and corroborated evidence.
+- [[12_Brain/03_Concepts/Local Search and Maps Site Parity|Local Search and Maps Site Parity]] — local visibility depends on verified parity among the business, maps profiles, website, directories, and conversion paths.
+- [[12_Brain/03_Concepts/Keyword Research and Search Demand|Keyword Research and Search Demand]] — keyword research is a source-labeled demand model joining real queries, intent, economics, and outcomes.
+- [[12_Brain/03_Concepts/Search Intent and Topic Architecture|Search Intent and Topic Architecture]] — search intent connects a person's job and decision stage to the correct page type, evidence, and conversion path.
+- [[12_Brain/03_Concepts/Content Systems and Distribution|Content Systems and Distribution]] — content compounds when source-backed demand becomes a canonical asset with distributed proof and a refresh loop.
+- [[12_Brain/03_Concepts/High Craft Website Factory|High Craft Website Factory]] — a website factory scales reusable production while preserving art direction, accuracy, accessibility, and performance.
+- [[12_Brain/03_Concepts/Prospect to Build to Outreach Pipeline|Prospect to Build to Outreach Pipeline]] — the prospect engine converts source-verified opportunities into qualified builds, approved outreach, and a learning ledger.
+- [[12_Brain/03_Concepts/Qualified Pipeline Measurement|Qualified Pipeline Measurement]] — move from raw platform events to reconciled qualified opportunities, appointments, and booked work.
+- [[12_Brain/03_Concepts/Client Reporting and Outcome Scoreboards|Client Reporting and Outcome Scoreboards]] — a client report is a decision instrument preserving definitions, sources, freshness, and next actions.
 
 ## Raw captures (Git-safe)
 
