@@ -1,6 +1,6 @@
 ---
 tags: [system, operating-status]
-last_updated: 2026-09-09
+last_updated: 2026-09-14
 callsign: D.I.L.L.O.N.
 operator: Dillon Mohr
 goal_label: ACTIVE CLIENTS
@@ -10,6 +10,42 @@ source_of_truth: C:\Users\dillo\repos\dillon-os
 ---
 
 # Operating Status
+
+## Verified 2026-09-14 — refreshed by the approval-queue closing pass
+
+Everything in this block was measured on disk or in Task Scheduler on
+2026-09-14. Nothing here is recalled.
+
+- **Client registry:** the canonical registry at
+  `client-operations/registry/clients.json` holds **24** records, 22 `active`
+  and 2 `inactive` (zen-spa-tropicana, ami-cleaning). Two records are known
+  stale and cannot be fixed here -- the registry is single-writer and
+  Marketing Chief owns it: `align-hcm` still reads `active` though the
+  engagement ended 2026-09-02, and `nkcdc` still reads `active` though Dillon
+  stated directly on 2026-09-14 that it is not a current client.
+- **Registries still disagree.** 24 canonical, 7 in
+  `_os/reporting/client-registry.json`, 27 on branch
+  `registry/add-nexla-puttery-mara-20260909`. Until that reconciles, the
+  canonical 24 win. `gt-clinic`, `nexla`, `deborah-mara` and
+  `immohrtal-marketing` have deliverable folders but do NOT resolve against
+  the canonical 24.
+- **Cadence layer IS scheduled.** Four Task Scheduler entries exist:
+  `Cadence-daily`, `Cadence-weekly`, `Cadence-monthly`, `Cadence-sweep-heartbeat`,
+  all `Ready`. **But only the heartbeat has ever fired.** The other three report
+  `LastRunTime 11/30/1999`, the Windows never-run sentinel, with next runs
+  2026-09-15 09:05, 2026-09-21 09:20 and 2026-10-01 09:35. Registered is not
+  the same as running; treat the first real daily fire as unproven until
+  2026-09-15 09:05 passes and the ledger shows it.
+- **Run ledger is live:** `_os/automation/cadence/run-ledger.jsonl` last wrote
+  2026-09-14T19:01:38Z, daily-sweep ok, `cadence-absent=0`.
+- **AI division:** all 20 decisions D01-D20 in
+  `client-operations/clients/momentum-360/deliverables/2026-09-05-ai-division-launch-kit/pending-decisions.json`
+  still read `state: open`. The gate meeting did not happen -- Dillon confirmed
+  2026-09-14 it was his birthday. D01 and D10 block all outbound; D18 blocks
+  client-facing paid generation.
+- **Open PR:** dillon-os #339 on `cursor/immohrtal-standing-canary-3c2e`, state
+  OPEN. The cadence layer and daily-sweep commits are already on origin.
+
 
 The vault was reconciled on 2026-07-12 against current work from the rolling three-week window. The April-era client roster is superseded.
 
