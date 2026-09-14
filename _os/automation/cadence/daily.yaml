@@ -47,7 +47,7 @@ jobs:
   # evidence at no model cost. This job is the 30 lines between them.
   - id: morning-chief
     title: Post the morning brief into the Workmate DM
-    enabled: false
+    enabled: true
     outputs: 12_Brain/07_Reviews/Cadence
     accept: |
       A dated markdown file recording exactly what was posted, and either a
