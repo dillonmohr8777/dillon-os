@@ -492,6 +492,29 @@
       "external_actions": false,
       "notes": "Local evidence only: no network, no model, no credential, no canonical client write. Exit 2 is a successful run reporting bad news (missed day, stale artifact, undelivered brief, absent cadence run, lying ledger row, unscheduled driver, or a counter that fell from non-zero to zero). Exit 1 is the script breaking. Backfills MISSED rows for every day it was skipped, so a machine that was powered off still produces a written gap rather than silence. Self-check: --selftest.",
       "status": "implemented"
+    },
+    {
+      "id": "weekly-netlify-report-rebuild",
+      "name": "Weekly Netlify client report rebuild and deploy",
+      "lane": "reporting",
+      "tier": 1,
+      "cadence": "weekly, Monday 09:00 America/New_York, via Codex cron",
+      "command": "Codex automation weekly-netlify-report-rebuild",
+      "inputs": [
+        "client-operations/clients/*/deliverables/* dated in the prior Mon-Sun window",
+        "dillon-os/12_Brain/07_Reviews/* dated in the prior Mon-Sun window",
+        "live Google Ads and Analytics reads for in-scope accounts",
+        "weekly-report-dashboard/palettes.json (the logo gate)"
+      ],
+      "outputs": [
+        "weekly-report-dashboard/live/client-report-content-<date>.json",
+        "weekly-report-dashboard deploy tree, redeployed to Netlify site 0094c232-ba9e-429b-bcd0-df407b7137b5",
+        "a git commit + push on the weekly-report-dashboard repo",
+        "an approval-queue.md line when the new week contradicts a prior client-facing claim"
+      ],
+      "external_actions": true,
+      "notes": "AUTO PUBLISHES to the public internet weekly with no human review step, on Dillon's explicit instruction 2026-09-14. Never sends a client email or posts to Slack; those stay manual. Client inclusion is gated by the renderer's own verified-logo requirement, the same gate that excluded Deborah Mara on launch day, so a missing logo silently excludes a client rather than blocking the whole run. Must never run in the same window as the older weekly-client-marketing-reports automation (a different PDF+draft pipeline that also touches this folder); that one should stay paused. Full behavioural spec in ~/.codex/automations/weekly-netlify-report-rebuild/automation.toml.",
+      "status": "implemented"
     }
   ],
   "gates": {
