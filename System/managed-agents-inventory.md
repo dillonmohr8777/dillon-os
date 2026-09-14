@@ -2,99 +2,118 @@
 date: 2026-09-14
 status: live
 owner: dillon
-spend_today: 17 cents of a 429 cent Console balance
+spend_today: ~22 cents of a 429 cent Console balance
 ---
 
 # Managed Agents inventory
 
-Everything Momentum has on Anthropic's Managed Agents platform, plus every
-agent-shaped thing that lives only on this machine, so nobody confuses the two
-again. **A local `.md` file is a definition. A `agent_`/`env_`/`depl_` id is a
-billable Console resource.** Only the second kind runs when this desktop is off.
+Everything Momentum has on Anthropic's Managed Agents platform, plus the local
+bridge that delivers its output. **A local `.md` file is a definition. A
+`agent_`/`env_`/`depl_`/`vlt_`/`file_` id is a billable Console resource.**
+Only the second kind runs when this desktop is off.
 
-Verified live at 2026-09-14 20:55 UTC. Re-verify with the read commands at the
-bottom before trusting any status here.
+Verified live at 2026-09-14. All Console resources below were created
+2026-09-14, are active, and had their tools attached at creation.
 
-## 1. Console resources (real, billable, run without this machine)
+## 1. Console resources
 
-| Resource | ID | Purpose | Status | Cost model |
-|---|---|---|---|---|
-| **Agent** `momentum-url-sentinel` | `agent_01HqNDQ64t3qfBFzDwpVd5F1` v1 | Daily check that the 11 live client report pages and the Omega conversion fix are still correct. Sonnet 5, low effort. | active | ~6c per run, measured |
-| **Agent** `momentum-analyst` | `agent_01UMXwDwbwqJLFXyZcCJCjqF` v1 | On-demand analysis of uploaded exports in a locked, no-network sandbox. The vehicle for the Omega search-terms audit once Codex exports the data. Sonnet 5, medium. | active, never run | est. 5-30c per run depending on file size |
-| **Agent** `momentum-smoke-test` | `agent_01SKQzvHy9vws7ofEzHB87ee` v2 | The 2026-09-14 platform test. Done. | active, **safe to archive** | none idle |
-| **Environment** `momentum-monitor-net` | `env_012C6JvqEKA3fk95iaaqNdkv` | Cloud sandbox, `limited` networking, egress ONLY to `momentum-weekly-client-reports.netlify.app` and `omega-landscaping-landing-page.netlify.app`. No package managers, no MCP. | active | none idle |
-| **Environment** `momentum-test-locked` | `env_01VKzXQqDVsfohc5JTGzuCa7` | Cloud sandbox, `limited` networking, **no** allowed hosts. Fully offline. Use for the analyst. | active | none idle |
-| **Deployment** `momentum-url-sentinel-daily` | `depl_01NziWNpiq9wqnsuSRSm1RFF` | Fires the sentinel every day at **06:00 America/New_York** (`0 6 * * *`). Each fired session carries a **25c cap**. | **PAUSED** (`paused_reason: manual`) | ~6c/day ≈ $1.80/month if unpaused |
+### Agents
 
-### Why the deployment is paused
+| Agent | ID | Version | Model/effort | Env | Purpose | Status |
+|---|---|---|---|---|---|---|
+| `momentum-url-sentinel` | `agent_01HqNDQ64t3qfBFzDwpVd5F1` | v1 | Sonnet/low | monitor-net | Daily liveness of 11 report pages + Omega tracking fix | Verified ALL CLEAR, 6c |
+| `momentum-analyst` | `agent_01UMXwDwbwqJLFXyZcCJCjqF` | v1 | Sonnet/medium | locked | Uploaded-export analysis | Never run |
+| `momentum-researcher` | `agent_01RbidZ2iYpChBU3niguP9Vj` | v1 | Sonnet/medium | open, web_search+web_fetch | Finds URLs/locator endpoints; writes research.md, urls.json, dead-ends.md | Not yet run — a run was prepared and rejected pending Dillon's spend approval, est 15-25c |
+| `momentum-research-coordinator` | `agent_01AC7RNJCzUxgXzJoe2FJMDK` | v1 | Sonnet/medium | open | Multiagent coordinator over researcher v1, ceiling 3 test / 5 prod | Not yet run, est 60-80c |
+| `momentum-reporter` | `agent_01RMLxWLY2k3LsgAbWdowZYD` | v2 | Sonnet/medium | open | Pulls Ads+GSC via vault, renders house template, writes email to standard | Not yet run; needs vault secrets |
+| `momentum-designer` | `agent_01QgDvhvE9Na6GzX6AR75jbX` | v2 | Opus/high | locked | Artboards from a brief on audited tokens | Not yet run, est ~$1 |
+| `momentum-qa-reviewer` | `agent_01NL8Ld9kchYGPEfUqfxrdud` | v2 | Sonnet/medium | — | Independent review, no authority to change | Not yet run |
+| `momentum-content-producer` | `agent_01RSjLoCvY5d82G3J6VRSDSJ` | v2 | Sonnet/medium | locked | Briefs/copy/SEO drafts/specs | Not yet run |
+| `momentum-job-researcher` | `agent_01DpF1YeqgFeDHk7agdJ5F4i` | v2 | Sonnet/medium | open, web | Finds live first-party roles fitting resume.md, public contact path, drafts outreach. Never applies/sends | Not yet run |
+| `momentum-smoke-test` | `agent_01SKQzvHy9vws7ofEzHB87ee` | v2 | — | — | Platform test, done | Safe to archive |
 
-Creating it made it `active` with the first fire at 06:00 tomorrow. That is new
-recurring spend, which needs Dillon's approval, so it was paused in the same
-minute. **Nothing fires until he unpauses it.** Manual runs still work while
-paused, which is how it was verified.
+v2 = system prompt patched to the real mount path (gotcha 4 below).
 
-### The verification run
+### Environments
 
-`drun_01RACz2pShdqh839hwUUZbZR` → `sesn_01J2LMarCTampsmQS3HPVeMG`,
-trigger `manual`, 2026-09-14 20:55 UTC. Result **ALL CLEAR**: 11 report pages
-HTTP 200 with titles, `script.js` carries `omega_submit_pending`, the premature
-`gtag('event','conversion')` is absent from the submit block, `/thank-you/`
-carries the marker. **5 `agent.tool_use` events** — real execution, not
-narration. 6 cents, 29.8 active seconds.
-
-### Sessions to date
-
-| Session | Agent | Cap | Spent | What it proved |
-|---|---|---|---|---|
-| `sesn_01P8wvKyKtEVwXG1UN78qWKX` | smoke v1 | 50c | 1c | **Version trap.** Pinned to v1 which had no tools; model fabricated a bash session, fake 2025 timestamp. Zero tool events. |
-| `sesn_01Jr28u9G83jmHVwzRpLTdX2` | smoke v2 | 50c | 3c | Real Firecracker VM, real 119-byte file. |
-| `sesn_01S8qMU6W3eJ83mouCvrGUjV` | smoke v2 | 15c | 2c | Agent quit early; cap untested. |
-| `sesn_017JDmG4JFapLbYXnzT7ub4z` | smoke v2 | **1c** | **5c** | **Cap does not bound spend.** Overran 5x, silently. Next turn refused. |
-| `sesn_01J2LMarCTampsmQS3HPVeMG` | sentinel v1 | 25c | 6c | End-to-end through the deployment and the allowlisted environment. |
-
-## 2. Local definitions (this machine only, run on the Max subscription)
-
-These are markdown files. They cost nothing, they are not Console resources,
-and they do not run unless a Claude Code session on this machine invokes them.
-
-| Where | Names | Built by |
+| Environment | ID | Networking |
 |---|---|---|
-| `C:\Users\dillo\.claude\agents\` | `closer`, `conversion-truth`, `report-courier`, `creative-foundry`, `auditor`, `scout`, `design-canvas` | this session, 2026-09-14 |
-| `C:\Users\dillo\.claude\agents\` | `dillon-builder`, `dillon-client-operations`, `dillon-critic`, `dillon-growth`, `dillon-intelligence`, `dillon-mission-director`, `dillon-reliability`, `dillon-revenue` | a concurrent session, 2026-09-14 |
-| `C:\Users\dillo\.claude\agents\` | the 17 original advisors (`marketing-chief`, `paid-media-analyst`, ...) | earlier; refusal clauses rewritten 2026-09-14 |
-| `C:\Users\dillo\repos\dillon-os\_os\automation\cadence\` | `daily.yaml`, `weekly.yaml`, `monthly.yaml` + `driver.md` | 2026-09-14; Task Scheduler entries exist, first fire 09-15 09:05 |
-| `C:\Users\dillo\repos\dillon-os\_os\agent-swarm\` | OpenAI Agents API swarm scaffold | earlier |
-| `C:\Users\dillo\repos\momentum-slack-agent\` | Workmate answering runtime (OpenAI Agents API), commit `483dc7f` | 2026-09-14 |
+| `momentum-open` | `env_01MshEwNFTUyoxhJPpxaQuZb` | Unrestricted |
+| `momentum-monitor-net` | `env_012C6JvqEKA3fk95iaaqNdkv` | Limited — two Netlify hosts only |
+| `momentum-test-locked` | `env_01VKzXQqDVsfohc5JTGzuCa7` | Limited — no hosts, fully offline |
 
-Overlap to reconcile: `dillon-revenue`/`conversion-truth`, `dillon-critic`/`auditor`,
-`dillon-reliability`/`auditor`. Two agents with contradictory instructions is the
-failure this whole architecture exists to prevent.
+### Vault
 
-**Other-vendor Console resources.** An OpenAI Agents API session was created and
-verified from this machine earlier on 2026-09-14 (plain curl, `openai_hosted`
-environment). Its id is in that session's transcript and in the memory note
-`agents-api-curl-path.md`; it is not reproduced here because it was not
-re-verified live for this inventory. Distinct wallet, distinct vendor.
+`momentum-google` `vlt_011Cf43aPqiZsFdRfM1Wv56J` — EMPTY. Dillon adds three
+credentials in the Console (type `environment_variable`): `GOOGLE_ADS_DEVELOPER_TOKEN`
+(allowed_hosts `googleads.googleapis.com`), `GOOGLE_OAUTH_REFRESH_TOKEN` and
+`GOOGLE_OAUTH_CLIENT_SECRET` (allowed_hosts `oauth2.googleapis.com`). The vault
+create field the API accepts is `display_name` — `name` and `description` are
+rejected (gotcha 5).
 
-## 3. Three things measured today that the docs do not make obvious
+### Deployments
 
-1. **The budget cap is a pre-request gate, not a ceiling.** A 1c cap spent 5c
-   with `stop_reason: null` and no `budget_reached` event. It refuses the *next*
-   turn; it does not stop the current one. One turn can cost arbitrarily more
-   than the cap. **You cannot promise a client a hard dollar ceiling.** For
-   single-turn jobs like the sentinel this is fine; for anything multi-turn,
-   size the cap knowing it leaks by up to one turn.
+| Deployment | ID | Cron | Cap | Status |
+|---|---|---|---|---|
+| `momentum-url-sentinel-daily` | `depl_01NziWNpiq9wqnsuSRSm1RFF` | `0 6 * * *` America/New_York | 25c | PAUSED |
+| `momentum-reporter-weekly` | `depl_01A3eaYHXaJCvYXaX7CXgkHt` | `0 6 * * 1` America/New_York | 300c | PAUSED — vault attached, three inputs mounted, brief covers nexla/omega-landscaping/onsite-concrete-landscape, next fire 2026-09-21T10:00Z once unpaused |
+
+### Files uploaded (purpose: agent)
+
+| File | ID |
+|---|---|
+| clients.json | `file_01KbkThoyhtKh9BWvd4xtKnu` |
+| report-template.html | `file_01B2t3rPARHv98LG45jcEN3H` |
+| build-report.js | `file_01PUw18zewmd3QG6G2PbxGad` |
+| tokens.json | `file_011pvDs1P4mTotr68LfvBVNR` |
+| tokens.css | `file_01MNGHfxaWYP28nGderAZWmZ` |
+| AUDIT.md | `file_01TZt6xvR6nVHbTsoKFkWtmy` |
+| dc-format.md | `file_01MzE9GNPEGK7WzRUKH8xaMZ` |
+
+## 2. The bridge (local, in this repo)
+
+`_os/automation/bridge/`:
+
+- `collector.py` — stdlib only, SQLite WAL journal, manifest-last delivery.
+  Idempotent deliver steps: `gmail_draft`, `designsync`, `receipt`, `git_commit`.
+  `test_collector.py` 5/5 passing.
+- `Run-Collector.ps1` — Task Scheduler entry point. Reads the API key from
+  Windows Credential Manager (target `Momentum.ManagedAgents.ApiKey`) at run
+  time, hands it to one child process only, never writes it to disk/env/file.
+- `SETUP.md` — rotate key, `cmdkey` one-time setup, how to confirm the
+  collector runs.
+- `inputs/dc-format.md` — Claude Design artboard format reference for agents
+  that produce `.dc.html` output.
+
+Task Scheduler: `Momentum-ManagedAgents-Collector`, at logon + every 10 min,
+registered and Ready. No-ops (logs one line, exits) until the credential
+exists.
+
+Agents write to `/mnt/session/outputs/` + `manifest.json` last; no custom
+tools in v1.
+
+## 3. Gotchas measured
+
+1. **Budget cap is a pre-request gate, not a ceiling.** A 1c cap spent 5c with
+   `stop_reason: null` and no `budget_reached` event — it refuses the *next*
+   turn, not the current one. One turn can cost arbitrarily more than the cap.
 2. **A session pinned to an agent version that predates its tools fabricates.**
-   It does not error. It invents plausible tool output. Always pass `tools` at
-   agent creation (both real agents here were created that way) and always
-   check the event stream for `agent.tool_use` before believing a result.
-3. **Outputs DO surface, but only through `scope_id` — CORRECTED 2026-09-14 evening.**
-   Earlier today this file said they did not; that came from hitting
-   `/v1/sessions/{id}/artifacts` (404) and `/v1/files` without a filter (empty).
-   The documented path: `GET /v1/files?scope_id=<session_id>` with **both**
-   `files-api-2025-04-14` and `managed-agents-2026-04-01` headers, ~1-3 s after
-   idle, then `GET /v1/files/{id}/content`. The agent's final message remains a
-   good record, but files are the delivery channel the fleet is built on.
+   No error — it invents plausible tool output. Always pass `tools` at agent
+   creation and check the event stream for `agent.tool_use` before trusting a
+   result.
+3. **Outputs surface, but only via `scope_id`.** `GET /v1/files?scope_id=<session_id>`
+   with both `files-api-2025-04-14` and `managed-agents-2026-04-01` headers,
+   ~1-3s after idle, then `GET /v1/files/{id}/content`.
+4. **`mount_path` is relative to `/mnt/session/uploads/`.** A resource with
+   `mount_path` `/workspace/clients.json` lands at
+   `/mnt/session/uploads/workspace/clients.json` — `/workspace` itself is
+   empty (verified: echo returned Nexla/27 only at the real path). `pwd` in
+   the sandbox is `/`, not `/workspace`.
+5. **Vault create body is `{"display_name": ...}`.** `name`/`description` are
+   rejected.
+6. **The files listing also returns mounted inputs**, not just outputs — the
+   collector delivers only files its manifest names, so it filters on that
+   rather than trusting the listing alone.
 
 ## 4. Runbook
 
@@ -115,38 +134,55 @@ GET https://api.anthropic.com/v1/deployment_runs?deployment_id=depl_01NziWNpiq9w
 GET https://api.anthropic.com/v1/sessions          (usage.list_cost per session = spend)
 ```
 
-**Turn the daily sentinel on** (Dillon's call — it is ~$1.80/month):
+**Pause / unpause a deployment:**
 ```
-POST https://api.anthropic.com/v1/deployments/depl_01NziWNpiq9wqnsuSRSm1RFF/unpause   body: {}
+POST https://api.anthropic.com/v1/deployments/<depl_id>/pause    body: {}
+POST https://api.anthropic.com/v1/deployments/<depl_id>/unpause  body: {}
+POST https://api.anthropic.com/v1/deployments/<depl_id>/run      (fire once by hand, no unpause)
 ```
-Turn it off: `.../pause`. Fire it once by hand without unpausing: `.../run`.
 
-**Read a sentinel result:** list runs for the deployment, take `session_id`,
-then `GET /v1/sessions/{id}/events` and read the last `agent.message`. Line 1
-is `ALL CLEAR` | `DEGRADED` | `CRITICAL`.
-
-**Use the analyst on an export:**
+**Run an agent:**
 ```
-POST /v1/sessions   {"agent":{"type":"agent","id":"agent_01UMXwDwbwqJLFXyZcCJCjqF","version":1},
-                     "environment_id":"env_01VKzXQqDVsfohc5JTGzuCa7",
-                     "budget":{"type":"limit","max_list_cost":{"amount":"50","currency":"USD"}}}
-POST /v1/files      (multipart upload of the CSV)  -> file_id
+POST /v1/sessions   {"agent":{"type":"agent","id":"<agent_id>","version":<n>},
+                     "environment_id":"<env_id>",
+                     "budget":{"type":"limit","max_list_cost":{"amount":"<cents>","currency":"USD"}}}
+POST /v1/files      (multipart upload, if the agent needs an input)  -> file_id
 POST /v1/sessions/{id}/resources   {"type":"file","file_id":"..."}
-POST /v1/sessions/{id}/events      {"events":[{"type":"user.message","content":[{"type":"text","text":"Analyse the attached search-terms export, pages 2-6."}]}]}
+POST /v1/sessions/{id}/events      {"events":[{"type":"user.message","content":[{"type":"text","text":"..."}]}]}
 ```
-Then read the final `agent.message`. The analyst never applies anything.
 
-## 5. Open on this lane
+**Read a result:** list runs for the deployment (or the session directly),
+take `session_id`, then `GET /v1/sessions/{id}/events` and read the last
+`agent.message`. For the sentinel, line 1 is `ALL CLEAR` | `DEGRADED` | `CRITICAL`.
 
-- **Unpause the deployment** — Dillon.
-- **Rotate the API key.** It was pasted into a chat transcript that syncs to his
-  phone. Every resource above keeps working after rotation.
-- **Archive `momentum-smoke-test`** — safe, optional, keeps the list clean.
-- **Top up the balance** before it matters: ~412c left; the sentinel alone would
-  run ~7 months on that, but one real analyst job on a big export could be
-  30-50c.
-- **The Omega export for the analyst** still depends on Codex pulling it
-  (account 285-398-1364, direct route). That prompt is in
-  `Documents\Codex\2026-09-14\codex-full-access\PROMPT-CODEX-PARALLEL.md`.
-- **Puttery dashboard is not in the sentinel.** Its Netlify hostname was not to
-  hand; add it to the environment's `allowed_hosts` and to Check Set A when it is.
+**Read files a session produced:**
+```
+GET /v1/files?scope_id=<session_id>   (both beta headers — see gotcha 3)
+GET /v1/files/{id}/content
+```
+
+## 5. Still Dillon's
+
+- **Rotate the API key**, then store it via `cmdkey` (`SETUP.md`).
+- **Paste the three vault credentials** in the Console (`momentum-google`).
+- **Unpause the two deployments** — sentinel (~$1.80/month) and reporter.
+- **Approve the first verification runs**: researcher ~20c, coordinator ~70c,
+  designer ~$1, reporter cred probe ~2c then full ~20c.
+- **Optionally archive `momentum-smoke-test`.**
+- **Pending test:** expiry survival — re-list session
+  `sesn_01U2CouEefMGvwhMQajKLJsN` outputs after 22:41 UTC to confirm files
+  persist past sandbox idle expiry.
+
+Budget: $50 was the pilot allowance for two agents. Operating float for the
+nine-role fleet is ~$150/month (Sonnet everywhere except the Opus designer;
+coordinator used deliberately). Pay-per-use; a quiet week costs a few dollars.
+
+## 6. Sessions to date
+
+| Session | Agent | Cap | Spent | What it proved |
+|---|---|---|---|---|
+| `sesn_01P8wvKyKtEVwXG1UN78qWKX` | smoke v1 | 50c | 1c | **Version trap.** Pinned to v1 which had no tools; model fabricated a bash session, fake 2025 timestamp. Zero tool events. |
+| `sesn_01Jr28u9G83jmHVwzRpLTdX2` | smoke v2 | 50c | 3c | Real Firecracker VM, real 119-byte file. |
+| `sesn_01S8qMU6W3eJ83mouCvrGUjV` | smoke v2 | 15c | 2c | Agent quit early; cap untested. |
+| `sesn_017JDmG4JFapLbYXnzT7ub4z` | smoke v2 | **1c** | **5c** | **Cap does not bound spend.** Overran 5x, silently. Next turn refused. |
+| `sesn_01J2LMarCTampsmQS3HPVeMG` | sentinel v1 | 25c | 6c | End-to-end through the deployment and the allowlisted environment. ALL CLEAR, 11 report pages + Omega fix, 5 `agent.tool_use` events. |

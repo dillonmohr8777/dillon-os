@@ -363,3 +363,29 @@ replenish"). The agent was stopped before it pulled anything.
 **Correction, evening:** sandbox outputs DO surface via
 `GET /v1/files?scope_id=<session>` (both beta headers). Earlier notes saying
 otherwise were wrong. The fleet's collector is built on this.
+
+---
+
+## Checkpoint, 2026-09-14 late (fleet build-out + local bridge)
+
+Fleet grew from two agents to nine roles: `momentum-researcher`,
+`momentum-research-coordinator`, `momentum-reporter` (v2), `momentum-designer`
+(v2), `momentum-qa-reviewer` (v2), `momentum-content-producer` (v2), and
+`momentum-job-researcher` (v2) created alongside the original sentinel and
+analyst. A second deployment, `momentum-reporter-weekly`, exists and is
+PAUSED. A vault (`momentum-google`) exists and is EMPTY — three Google
+credentials still need pasting in the Console. Full detail rewritten in
+`System/managed-agents-inventory.md`.
+
+Local delivery bridge built and committed: `_os/automation/bridge/collector.py`
+(stdlib, SQLite WAL journal, idempotent `gmail_draft`/`designsync`/`receipt`/
+`git_commit` deliver steps, 5/5 tests), `Run-Collector.ps1` (reads the API key
+from Windows Credential Manager per-run, never persists it), `SETUP.md`, and
+`inputs/dc-format.md`. Task Scheduler entry `Momentum-ManagedAgents-Collector`
+registered (at logon + every 10 min) and no-ops until the credential exists.
+
+Still Dillon's, unchanged in kind, larger in scope: rotate the key and store
+it via `cmdkey`; paste the three vault credentials; unpause both deployments;
+approve the first verification runs on the seven new agents (researcher ~20c,
+coordinator ~70c, designer ~$1, reporter ~20c after a 2c cred probe); the
+expiry-survival test on `sesn_01U2CouEefMGvwhMQajKLJsN` is still pending.
