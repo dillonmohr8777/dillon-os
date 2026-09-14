@@ -1,0 +1,380 @@
+{
+  "project": "need-momentum-birds-2026-09-11",
+  "brand": "Need Momentum",
+  "status": "draft-story-lock-proposal",
+  "updated": "2026-09-12",
+  "craft": {
+    "displayFont": "Outfit Bold",
+    "bodyFont": "Source Sans 3",
+    "accent": null,
+    "cream": "#FBF8F4",
+    "scrapbook": "Original blue-and-cream torn paper, tactile fibers and soft contact shadows",
+    "logoOverlayRule": "Authentic original M-and-circle unchanged, separate from generated artwork and final typography; final lockup only; intended reference match pending",
+    "forbiddenMarks": [
+      "Anthropic",
+      "Claude",
+      "anthropic.com"
+    ],
+    "legacyAccent": "#E27113",
+    "palette": "Blue and cream dominant; exact blue brand token pending; cardinal red motif only",
+    "fontReviewStatus": "Existing fonts retained as assumption, pending brand reconciliation"
+  },
+  "assets": [
+    {
+      "id": "NM-BIRD-DOVE-01",
+      "slot": "hero-bird-dove",
+      "kind": "illustration",
+      "format": [
+        "png",
+        "webp"
+      ],
+      "path": "assets/birds/NM-BIRD-DOVE-01.png",
+      "status": "planned-not-created",
+      "replaceable": true,
+      "notes": "Extract intact foreground white dove; alpha edges and natural paper fibers require QA; no wing deformation",
+      "artworkAction": "derive-transparent-foreground",
+      "sourceAsset": "NM-GPT-PLATE-05",
+      "sceneIds": [
+        "NM-S02",
+        "NM-S03",
+        "NM-S04",
+        "NM-S05",
+        "NM-S06"
+      ]
+    },
+    {
+      "id": "NM-BIRD-CARDINAL-01",
+      "slot": "hero-bird-cardinal",
+      "kind": "illustration",
+      "format": [
+        "png",
+        "webp"
+      ],
+      "path": "assets/birds/NM-BIRD-CARDINAL-01.png",
+      "status": "planned-not-created",
+      "replaceable": true,
+      "notes": "Extract intact foreground red cardinal; preserve natural red, no orange recolor",
+      "artworkAction": "derive-transparent-foreground",
+      "sourceAsset": "NM-GPT-PLATE-05",
+      "sceneIds": [
+        "NM-S01",
+        "NM-S02",
+        "NM-S03",
+        "NM-S04",
+        "NM-S05",
+        "NM-S06"
+      ]
+    },
+    {
+      "id": "NM-FLOCK-BG-01",
+      "slot": "hero-flock-bg",
+      "kind": "plate",
+      "format": [
+        "png",
+        "webp"
+      ],
+      "path": "assets/flock/NM-FLOCK-BG-01.png",
+      "status": "not-required-for-30s",
+      "replaceable": true,
+      "notes": "Build growing flock from independent dove/cardinal foregrounds; no new full flock plate"
+    },
+    {
+      "id": "NM-WORDMARK-DRAFT",
+      "slot": "wordmark-draft",
+      "kind": "wordmark",
+      "format": [
+        "png",
+        "svg"
+      ],
+      "path": "assets/wordmarks/NM-WORDMARK-DRAFT.png",
+      "status": "placeholder",
+      "replaceable": true,
+      "notes": "DRAFT 'Need Momentum' — Outfit Bold; Remotion also draws live type"
+    },
+    {
+      "id": "NM-LOGO-OVERLAY",
+      "slot": "logo-finals-only",
+      "kind": "logo",
+      "format": [
+        "png",
+        "svg"
+      ],
+      "path": "C:/Users/dillo/Documents/Codex/projects/client-operations/clients/momentum-360/deliverables/2026-09-08-momentum-brand-system-v3/assets/momentum-mark.png",
+      "status": "authentic-candidate-reference-match-pending",
+      "replaceable": false,
+      "notes": "Parent verified visually and against exact-copy sidecar; unchanged original blue M-and-circle; small raster, final enlargement requires quality review; not proof of intended reference",
+      "sha256": "046b7bc27374c1d38f3885a3c638908e1dd8097cfed6fafed9631d7d60bc1ef2",
+      "sceneIds": [
+        "NM-S06"
+      ]
+    },
+    {
+      "id": "NM-PAPER-TEX-01",
+      "slot": "paper-texture",
+      "kind": "texture",
+      "format": [
+        "png",
+        "jpg"
+      ],
+      "path": "assets/paper/NM-PAPER-TEX-01.png",
+      "status": "planned-not-created",
+      "replaceable": true,
+      "notes": "One reusable blue-and-cream paper background, 1920x1080 minimum plus motion overscan; no birds, people, logos or text",
+      "artworkAction": "new",
+      "sceneIds": [
+        "NM-S01",
+        "NM-S02",
+        "NM-S03",
+        "NM-S04",
+        "NM-S05",
+        "NM-S06"
+      ]
+    },
+    {
+      "id": "NM-GPT-PLATE-01",
+      "slot": "concept-flock-rising",
+      "concept": "Flock Rising",
+      "kind": "gpt-image-plate",
+      "format": [
+        "png"
+      ],
+      "path": "assets/gpt-plates/NM-GPT-PLATE-01-flock-rising.png",
+      "status": "ingested",
+      "replaceable": true,
+      "sourceFilename": "ChatGPT Image Sep 11, 2026, 02_54_54 PM (1).png",
+      "ingestedAt": "2026-09-11T22:00:00Z",
+      "notes": "Clean 16:9 scrapbook plate 1672x941 from Pro GPT Image batch ~02:54 PM ET",
+      "visualAudit": "inspected-2026-09-12",
+      "reviewStatus": "source-reference-not-approved-30s-frame",
+      "sourceDimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "NM-GPT-PLATE-02",
+      "slot": "concept-cardinal-signal",
+      "concept": "Cardinal Signal",
+      "kind": "gpt-image-plate",
+      "format": [
+        "png"
+      ],
+      "path": "assets/gpt-plates/NM-GPT-PLATE-02-cardinal-signal.png",
+      "status": "ingested",
+      "replaceable": true,
+      "sourceFilename": "ChatGPT Image Sep 11, 2026, 02_54_55 PM (2).png",
+      "ingestedAt": "2026-09-11T22:00:00Z",
+      "notes": "Clean 16:9 scrapbook plate 1672x941 from Pro GPT Image batch ~02:54 PM ET",
+      "visualAudit": "inspected-2026-09-12",
+      "reviewStatus": "source-reference-not-approved-30s-frame",
+      "sourceDimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "NM-GPT-PLATE-03",
+      "slot": "concept-prosperity-arc",
+      "concept": "Prosperity Arc",
+      "kind": "gpt-image-plate",
+      "format": [
+        "png"
+      ],
+      "path": "assets/gpt-plates/NM-GPT-PLATE-03-prosperity-arc.png",
+      "status": "ingested",
+      "replaceable": true,
+      "sourceFilename": "ChatGPT Image Sep 11, 2026, 02_54_55 PM (3).png",
+      "ingestedAt": "2026-09-11T22:00:00Z",
+      "notes": "Clean 16:9 scrapbook plate 1672x941 from Pro GPT Image batch ~02:54 PM ET",
+      "visualAudit": "inspected-2026-09-12",
+      "reviewStatus": "source-reference-not-approved-30s-frame",
+      "sourceDimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "NM-GPT-PLATE-04",
+      "slot": "concept-human-flightpath",
+      "concept": "Human Flightpath",
+      "kind": "gpt-image-plate",
+      "format": [
+        "png"
+      ],
+      "path": "assets/gpt-plates/NM-GPT-PLATE-04-human-flightpath.png",
+      "status": "ingested",
+      "replaceable": true,
+      "sourceFilename": "ChatGPT Image Sep 11, 2026, 02_54_56 PM (4).png",
+      "ingestedAt": "2026-09-11T22:00:00Z",
+      "notes": "Clean 16:9 scrapbook plate 1672x941 from Pro GPT Image batch ~02:54 PM ET",
+      "visualAudit": "inspected-2026-09-12",
+      "reviewStatus": "source-reference-not-approved-30s-frame",
+      "sourceDimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "NM-GPT-PLATE-05",
+      "slot": "concept-many-birds-one-direction",
+      "concept": "Many Birds One Direction",
+      "kind": "gpt-image-plate",
+      "format": [
+        "png"
+      ],
+      "path": "assets/gpt-plates/NM-GPT-PLATE-05-many-birds-one-direction.png",
+      "status": "ingested",
+      "replaceable": true,
+      "sourceFilename": "ChatGPT Image Sep 11, 2026, 02_54_56 PM (5).png",
+      "ingestedAt": "2026-09-11T22:00:00Z",
+      "notes": "Clean 16:9 scrapbook plate 1672x941 from Pro GPT Image batch ~02:54 PM ET",
+      "visualAudit": "inspected-2026-09-12",
+      "reviewStatus": "source-reference-not-approved-30s-frame",
+      "sourceDimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "NM-GPT-PLATE-06",
+      "slot": "concept-future-needs-momentum-lockup",
+      "concept": "Future Needs Momentum Lockup",
+      "kind": "gpt-image-plate",
+      "format": [
+        "png"
+      ],
+      "path": "assets/gpt-plates/NM-GPT-PLATE-06-future-needs-momentum-lockup.png",
+      "status": "ingested",
+      "replaceable": true,
+      "sourceFilename": "ChatGPT Image Sep 11, 2026, 02_54_56 PM (6).png",
+      "ingestedAt": "2026-09-11T22:00:00Z",
+      "notes": "Clean 16:9 scrapbook plate 1672x941 from Pro GPT Image batch ~02:54 PM ET",
+      "visualAudit": "inspected-2026-09-12",
+      "reviewStatus": "source-reference-not-approved-30s-frame",
+      "sourceDimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "NM-HUMAN-TABLEAU-01",
+      "notes": "Intact three-person cafe/laptop/table tableau, retain physical floor/contact grounding; source group used tight then wide; no invented hand or mouth animation",
+      "slot": "human-business-foreground",
+      "artworkAction": "derive-transparent-foreground",
+      "sceneIds": [
+        "NM-S01",
+        "NM-S03",
+        "NM-S05"
+      ],
+      "format": [
+        "png"
+      ],
+      "sourceAsset": "NM-GPT-PLATE-04",
+      "path": "assets/people/NM-HUMAN-TABLEAU-01.png",
+      "kind": "source-derived-foreground",
+      "status": "planned-not-created"
+    },
+    {
+      "sceneIds": [
+        "NM-S01",
+        "NM-S02",
+        "NM-S03",
+        "NM-S04",
+        "NM-S06"
+      ],
+      "status": "planned-not-created",
+      "kind": "compositing-layers",
+      "notes": "Editable task papers, request/draft/review/calendar/follow-up type, pencil route and end sheet. Not image generations. Exact copy in SHOT-LIST.md",
+      "id": "NM-TASK-LAYERS-01",
+      "path": null
+    }
+  ],
+  "compositions": [
+    {
+      "id": "NeedMomentumBirdsHero",
+      "path": "remotion/",
+      "durationFrames": 450,
+      "fps": 30,
+      "width": 1920,
+      "height": 1080,
+      "status": "existing-15s-implementation-unchanged"
+    }
+  ],
+  "source_refs": [
+    "Current Dillon brief, 2026-09-12",
+    "../SHOT-LIST.md",
+    "../reports/VISUAL-AUDIT-2026-09-12.md"
+  ],
+  "storyboard": {
+    "durationSeconds": 30,
+    "transitionFrames": 12,
+    "path": "../SHOT-LIST.md",
+    "width": 1920,
+    "scenes": [
+      {
+        "startFrame": 0,
+        "copy": "The work keeps coming.",
+        "reviewStatus": "proposed",
+        "endFrame": 120,
+        "id": "NM-S01",
+        "transition": "Reply slip foreground wipe"
+      },
+      {
+        "startFrame": 120,
+        "copy": "Need Momentum · AI division | Start with a useful reply.",
+        "reviewStatus": "proposed",
+        "endFrame": 270,
+        "id": "NM-S02",
+        "transition": "Same draft card travels into review"
+      },
+      {
+        "startFrame": 270,
+        "copy": "You make the call.",
+        "reviewStatus": "proposed",
+        "endFrame": 420,
+        "id": "NM-S03",
+        "transition": "Review pencil line becomes workflow route"
+      },
+      {
+        "startFrame": 420,
+        "copy": "Connect the next steps.",
+        "reviewStatus": "proposed",
+        "endFrame": 600,
+        "id": "NM-S04",
+        "transition": "Route becomes cafe table edge"
+      },
+      {
+        "startFrame": 600,
+        "copy": "Keep people at the center.",
+        "reviewStatus": "proposed",
+        "endFrame": 750,
+        "id": "NM-S05",
+        "transition": "Cream sheet covers tableau and becomes lockup"
+      },
+      {
+        "startFrame": 750,
+        "copy": "Need Momentum | Introducing our AI division | Let's put AI to work.",
+        "reviewStatus": "proposed",
+        "endFrame": 900,
+        "id": "NM-S06",
+        "transition": "Hold through frame 899"
+      }
+    ],
+    "artworkMinimum": {
+      "contingency": "Failed alpha extraction can require revised foregrounds; record additional count",
+      "sourceDerived": 3,
+      "generatedThisPass": 0,
+      "new": 1,
+      "total": 4
+    },
+    "durationFrames": 900,
+    "transitionTiming": "Inside final 12 frames of outgoing scene; no runtime added",
+    "serviceScope": "Illustrative proposal, capabilities unverified",
+    "status": "proposed-not-user-approved",
+    "height": 1080,
+    "implementationStatus": "not-implemented",
+    "id": "NeedMomentumAILaunch30",
+    "fps": 30,
+    "imageRoute": "Conversation GPT Image later; Sunburst/Flare backend unverified"
+  }
+}
