@@ -323,10 +323,14 @@ them is irreversible and therefore not an internal action.
 
 ## 10. Smaller, still open
 
-- **Managed Agents phases 3 and 4** not run. Phases 1 and 2 answered the question
-  that mattered: the budget cap does **not** bound total spend (1c cap, 5c spent,
-  silently), it only refuses the next turn. The client-billable hard-ceiling story
-  does not hold.
+- **Managed Agents: built end to end, 2026-09-14 evening.** Full inventory and
+  runbook in `System/managed-agents-inventory.md`. Two real agents
+  (`momentum-url-sentinel`, `momentum-analyst`), two environments, one daily
+  deployment verified by a manual run (ALL CLEAR, 14 targets, 5 real tool calls,
+  6c) and then **paused** because recurring spend is Dillon's call. Total spend
+  today 17c of 429. Still Dillon's: unpause the deployment (~$1.80/month), rotate
+  the key, optionally archive the smoke-test agent. Phase 3 (Omega search terms
+  through the analyst) still waits on Codex exporting the data.
 - **Cline Desktop** installed and healthy (v0.0.27, signed by Cline Bot Inc.) but
   `userId: null` — not signed in. Telemetry is on by default. Its workspace root
   defaulted to `Documents\Codex\weekend-review`.
@@ -337,3 +341,21 @@ them is irreversible and therefore not an internal action.
   another session's in-flight 55-line edit to a globally loaded contract.
 - **`momentum-radar-daily-12`** has no `status` field at all, so it cannot be
   scheduled. It builds twelve homepages a day when it runs.
+
+---
+
+## Checkpoint, 2026-09-14 evening (Fable 5.1 continuation)
+
+Done since the morning list: Omega tracking fix deployed and re-verified live by
+the cloud sentinel; registry 24 → 27; `portfolio-priorities.json` repaired to
+match (my own break, from that merge); ten client drafts rewritten with the real
+signature and pushed to Gmail; GT Clinic kickoff email staged (attach the PDF);
+Managed Agents built and paused; business ledger delivery logic fixed
+(8 → 12 delivered, and it now says what it measures).
+
+In flight, background agents: Capsule & Tonic + four unmapped accounts
+reconciliation (proposals only, registry untouched); GSC/GTM/Meta/Semrush
+coverage matrix and Semrush run verification.
+
+Dropped on instruction: Replenish end-date verification (Dillon: "ignore
+replenish"). The agent was stopped before it pulled anything.
