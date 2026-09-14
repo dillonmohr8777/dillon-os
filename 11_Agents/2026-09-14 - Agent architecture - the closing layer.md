@@ -71,8 +71,15 @@ Found and fixed today, verified against the live site before anything was touche
 Omega's Google Ads conversion fired **inside the form's submit handler** — on
 click, before Netlify accepted the POST and before `netlify-honeypot="bot-field"`
 filtered bots. Every bot the honeypot caught was reported to Google as a
-conversion. Smart Bidding has been optimising toward button clicks. Onsite shares
-the pattern. Fixed in commit `34c456c`, with `conversion-gate.test.js` covering
+conversion. Smart Bidding has been optimising toward button clicks.
+
+**Correction, same day:** Onsite does *not* share that bug. Verified directly:
+its landing page has no `gtag`, no `AW-` id, no GTM container and no thank-you
+page, so it has **no conversion tracking on the page at all**. Its Ads account
+instead carries **twelve conversion actions with nine marked primary**, including
+`Local actions - Directions` and three separate clicks-to-call actions, plus four
+overlapping form actions. Different defect, arguably worse: Omega counted one
+thing wrongly, Onsite counts a directions tap as equal to a submitted lead. Fixed in commit `34c456c`, with `conversion-gate.test.js` covering
 all six paths plus a regression guard.
 
 And the reconciliation could not complete anyway. Zapier lead notifications carry
