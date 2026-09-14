@@ -25,6 +25,9 @@ links instead of loading the entire vault.
   truth.
 - [[System/approval-queue|Approval Queue]] — consequential actions waiting for
   Dillon.
+- [[System/sweep-status|Sweep Status]] — today's evidence sweep, and the loud
+  record of every day it did not run. If the date at the top of that file is not
+  today, nothing below it was collected today.
 - [[System/revenue-scorecard|Revenue Scorecard]] — verified revenue state.
 
 - [[12_Brain/Bases/Strategy Library.base|Strategy Library]] - the compiled
