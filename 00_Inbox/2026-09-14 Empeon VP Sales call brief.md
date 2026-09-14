@@ -98,6 +98,28 @@ inside six months."
 - No rank claims beyond the one live SERP pulled today. No revenue forecast for Empeon.
 - Nothing was submitted, published, or changed on empeon.com.
 
+## The keywords, if he asks "which ones"
+
+Google Keyword Planner, US, 14 Sep 2026. Empeon's position is the DataForSEO US index.
+
+- **Own the page:** healthcare payroll software (110/mo, Paylocity 1, Netchex 2, ADP 3, Reddit 4);
+  payroll software for healthcare (110, Netchex 2); best payroll software for healthcare (70,
+  Netchex 4); snf payroll (90, nobody); home care payroll software (30, Viventium holds "home
+  care payroll"); pbj reporting software (10, nobody).
+- **Extend what Google already grants:** pbj reporting (320); cms pbj (170); payroll based
+  journal (140, Empeon 6); hppd calculator (70, Empeon 1 for "how to calculate hppd");
+  pbj reporting for nursing homes (40, Empeon 6). Empeon holds nine PBJ/HPPD terms in the
+  top ten. Netchex and Viventium hold none in their top 150.
+- **Viventium's new front:** home care scheduling software (480); caregiver scheduling
+  software (170, Empeon 12 for "caregiver scheduling"); home health scheduling software (140);
+  nursing home scheduling software (110); calculate shift differential (720); shift
+  differential pay (590).
+- Say it in one line: "Google already trusts you on PBJ and HPPD. Nobody has claimed the
+  commercial versions, and neither competitor ranks for the topic at all."
+
 ## Send after the call
 
-The 2-page sales addendum: `Daily-Briefs/reports/empeon-sales-addendum.pdf`.
+The 5-page sales addendum in Empeon's brand: `Daily-Briefs/reports/empeon-sales-addendum.pdf`.
+Pages A–C are for Empeon. Pages D–E are the Align Search Console and GA4 appendix; decide
+whether that leaves the building before sending. The full Align query table is at
+`Daily-Briefs/reports/empeon-evidence/align-gsc-queries-2026-09-14.png`.
