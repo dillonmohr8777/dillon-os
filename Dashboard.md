@@ -21,11 +21,11 @@ navigation is needed.
 Checkbox items only — `_os/vault-state.js` reads this section for the HUD
 directive feed and skips any other list format.
 
-- [ ] Close out Cindy May Christmas deliverable (`due: 2026-09-01`, now 9 days past due — carried forward again).
-- [ ] Get yes/no on the two needs-approval queue items: BigOrange Marketing website build, Bar Crawl USA paid-media optimization.
+- [ ] Close out Cindy May Christmas deliverable (`due: 2026-09-01`, now 13 days past due — carried forward again).
+- [ ] Get yes/no on the needs-approval queue item: BigOrange Marketing website build (35 days overdue on its own `due:` field).
 - [ ] Touch 3-5 stalled clients (real contact, not another scan) — lead with Tags 2 Go (freshest stall, access-blocked queue item); pick the rest from the 36 stalled in pulse-today.md.
-- [ ] Carry forward the 4 unanswered Momentum 360 Slack asks (open since ~2026-07-30, now ~6 weeks) — last day Momentum 360 reads "moving" on git evidence alone; fix its `last_touched` frontmatter before the signal drops.
-- [ ] BOK Law Firm predicted prep (bounded step only): window is 2026-09-15-09-17 (5 days out) — locate/fingerprint the source packet and resolve topics/copy, no drafting or image generation yet.
+- [ ] Carry forward the 4 unanswered Momentum 360 Slack asks (open since ~2026-07-30, now ~6.5 weeks) — Momentum 360 has aged from "moving" into "watch" on git evidence; fix its `last_touched` frontmatter to stop the signal drifting further from reality.
+- [ ] BOK Law Firm predicted prep (bounded step only): window is 2026-09-15-09-17 (opens tomorrow) — locate/fingerprint the source packet and resolve topics/copy, no drafting or image generation yet.
 
 ## Active projects
 
