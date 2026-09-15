@@ -1,7 +1,9 @@
 {
   "automation_id": "agent-craft-brief",
-  "status": "ok",
-  "generated_for": "2026-09-02",
+  "status": "stale",
+  "generated_for": "2026-09-06",
+  "newest_receipt": "2026-08-18",
+  "receipt_age_days": 19,
   "window_days": 3,
   "days": [
     "2026-08-16",
@@ -270,5 +272,5 @@
     }
   ],
   "dry_run": true,
-  "written_at": "2026-09-02T02:32:58.290Z"
+  "written_at": "2026-09-06T04:06:07.854Z"
 }

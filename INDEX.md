@@ -100,3 +100,7 @@ links instead of loading the entire vault.
 - [[12_Brain/09_Ops/Repository Access Map|Repository Access Map]]
 - [[System/client-roster-reconciliation-2026-09-05|Client Roster Reconciliation 2026-09-05]] (Fagan Painting, Shadow HVAC, Jeff Hozias retired to `_archive/01_Clients/`)
 - [[11_Agents/Cloud Routine Prompts 2026-09-05|Cloud Routine Prompts 2026-09-05]] (replacement prompts for hygiene, daily learning loop, morning brief)
+- [[12_Brain/11_Craft/00_Index|Agent Craft]] — the recursive layer: what this
+  infrastructure does badly, and [[12_Brain/11_Craft/earned-lessons|earned-lessons]]
+  (append-only; agents write there, never into a generated brief). Latest review:
+  [[12_Brain/11_Craft/2026-09-06 - daily learning review|2026-09-06 - daily learning review]].
