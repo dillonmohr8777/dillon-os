@@ -1,0 +1,84 @@
+version: 1
+cadence: monthly
+
+jobs:
+  # ------------------------------------------------------ registry reconciliation
+  # 2026-09-14: Nexla has live ad spend and no registry record, which is why the
+  # control system could not see it. GT Clinic and Puttery are also missing.
+  - id: registry-reconciliation
+    title: Clients the registry cannot see
+    enabled: true
+    outputs: 12_Brain/07_Reviews/Cadence
+    accept: |
+      A dated markdown file listing every client folder with no registry record,
+      every registry record with no folder, and every record whose status
+      contradicts evidence on disk.
+    prompt: |
+      Read registry/clients.json under
+      C:/Users/dillo/Documents/Codex/projects/client-operations/.
+
+      Compare three ways:
+        1. Folders under clients/ with NO matching registry id.
+        2. Registry records with NO matching folder.
+        3. Records marked active whose folder shows no deliverable newer than
+           90 days, and records marked inactive whose folder shows recent work.
+
+      Write "<date> - registry reconciliation.md". For each gap, say what the
+      evidence on disk actually shows.
+
+      Do NOT edit clients.json. The registry is canonical and single-writer -
+      Marketing Chief owns it. Findings go to
+      C:/Users/dillo/Documents/Codex/projects/client-operations/intake/ as a
+      dated observation file, the same way the Gmail and Slack sensors write.
+
+  # ------------------------------------------------------------- credential age
+  # Tock credential exposed in plaintext since 2026-08-31, revocation drafted
+  # 2026-09-02 and never sent. Four more sets sat in Slack. Age is the signal.
+  - id: credential-age
+    title: How old is every known exposure
+    enabled: true
+    outputs: 12_Brain/07_Reviews/Cadence
+    accept: |
+      A dated markdown file listing each known credential exposure by LOCATOR
+      only, with days elapsed since discovery and its current remediation state.
+    prompt: |
+      Search System/approval-queue.md and 12_Brain/07_Reviews/ for recorded
+      credential exposures, rotations, and revocations.
+
+      For each, report: what it is, WHERE it was found (file path, thread id, or
+      channel - a locator), the date discovered, days elapsed, and whether
+      rotation or revocation has actually happened.
+
+      Write "<date> - credential age.md". Sort by days elapsed, oldest first.
+
+      ABSOLUTE RULE: never read, copy, echo, or store the credential VALUE. Not
+      into this report, not into the ledger, not into a log. Locators only. If
+      you cannot describe an exposure without quoting the secret, describe it as
+      "value not recorded, see <locator>" and move on.
+
+  # ------------------------------------------------------------- estate at risk
+  - id: backup-risk
+    title: Finished work with no copy anywhere
+    enabled: true
+    outputs: 12_Brain/07_Reviews/Cadence
+    accept: |
+      A dated markdown file with total size of finished deliverables that are
+      untracked AND have no off-device copy, broken down by project.
+    prompt: |
+      Find finished creative output - .mp4, .pdf, .pptx, and design PNG/SVG over
+      500 KB - under deliverables/, renders/, out/ and final/ paths in:
+        C:/Users/dillo/Documents/Codex/projects/client-operations
+        C:/Users/dillo/repos/dillon-os
+        C:/Users/dillo/Documents/Codex (dated session folders)
+
+      For each, determine git state: tracked, untracked, ignored, or no repo at
+      all. Note that C:/Users/dillo/Documents/Codex is NOT a git repository - its
+      .git contains only info/ - so everything under the dated folders is loose.
+
+      Write "<date> - backup risk.md" with totals by project, newest first, and
+      name the single largest at-risk item explicitly.
+
+      Do NOT commit media to git. dillon-os gitignores media deliberately -
+      ".git is already 3 GB of history; media stays local" - and that rule is
+      correct. This job exists to keep the off-device backup decision visible,
+      not to work around it.

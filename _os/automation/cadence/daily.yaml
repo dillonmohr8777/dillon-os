@@ -1,0 +1,93 @@
+version: 1
+cadence: daily
+
+# Adding work = adding an entry here. No new routine, no new code.
+# Schema and rules: ./README.md
+
+jobs:
+  # ---------------------------------------------------------------- heartbeat
+  # Runs FIRST and deliberately reports on yesterday, because the failure this
+  # whole system exists to fix is silence. daily-communications-brain went dark
+  # 2026-09-07 through 09-11 and self-recovered with nobody noticing.
+  - id: heartbeat
+    title: Did yesterday actually happen
+    enabled: true
+    outputs: 12_Brain/07_Reviews/Cadence
+    accept: |
+      A dated markdown file exists naming every job that was due yesterday and
+      whether the ledger shows it ok, failed, skipped, or ABSENT. Absent is the
+      loudest state and must be called out first.
+    prompt: |
+      Read _os/automation/cadence/run-ledger.jsonl and the three manifests in
+      _os/automation/cadence/.
+
+      Work out which jobs were DUE yesterday (daily jobs every weekday; weekly on
+      Monday; monthly on the 1st). For each, find its most recent ledger entry.
+
+      Classify every due job as:
+        ok       - ledger entry, status ok, artifact path exists on disk
+        failed   - ledger entry, status failed
+        skipped  - enabled: false in its manifest
+        ABSENT   - NO ledger entry at all. The driver never ran, or died partway.
+
+      Write the report to the outputs dir as "<date> - cadence heartbeat.md".
+      Lead with ABSENT, then failed. If everything is ok, say so in one line and
+      stop - do not pad.
+
+      Also check the artifact each ok job claims: if the ledger names a path that
+      does not exist on disk, that is a FAILURE, not an ok. A ledger that lies is
+      worse than no ledger.
+
+  # ------------------------------------------------------------ approval queue
+  - id: approval-queue-diff
+    title: What changed in the approval queue
+    enabled: true
+    outputs: 12_Brain/07_Reviews/Cadence
+    accept: |
+      A dated markdown file listing items added, closed, or newly overdue since
+      the previous run, with the total open count.
+    prompt: |
+      Read C:/Users/dillo/repos/dillon-os/System/approval-queue.md.
+
+      Compare against the previous run's report in the outputs dir (most recent
+      dated file). Report:
+        - items ADDED since then
+        - items marked [x] since then
+        - any item whose text contains a date more than 14 days old and is still
+          unchecked - these are rotting, list them oldest first
+        - total open count
+
+      Write "<date> - approval queue diff.md". If this is the first run, say so
+      and just report the current state and the rotting list.
+
+      Do NOT check off, edit, reword, or reorder anything in approval-queue.md.
+      This job is read-only against that file.
+
+  # ------------------------------------------------------- untracked deliverables
+  # Direct answer to the 2026-09-14 finding: 3,408 untracked files in
+  # client-operations, 575 films with no tracked copy, Codex not a git repo.
+  - id: unfiled-sweep
+    title: Finished work sitting untracked
+    enabled: true
+    outputs: 12_Brain/07_Reviews/Cadence
+    accept: |
+      A dated markdown file with the untracked count per repo and a named list of
+      any NEW deliverable-shaped file that appeared since the last run.
+    prompt: |
+      For each of these repos, run `git status --porcelain` and count untracked
+      entries:
+        C:/Users/dillo/repos/dillon-os
+        C:/Users/dillo/Documents/Codex/projects/client-operations
+
+      Then list untracked files under any path containing "deliverables/" that
+      look finished - .pdf, .mp4, .png, .html, or a README/DELIVERY markdown -
+      and that did NOT appear in the previous run's report.
+
+      Write "<date> - unfiled sweep.md". Lead with the counts, then the new
+      arrivals. If a new arrival resolves to a client in
+      C:/Users/dillo/Documents/Codex/projects/client-operations/registry/clients.json,
+      say which one.
+
+      Do NOT commit, stage, move, or delete anything. This job reports; a human
+      decides. Committing 5.5 GB of unbacked media is exactly the wrong reflex -
+      see the 2026-09-14 approval-queue entry on the backup destination.
