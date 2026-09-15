@@ -1,0 +1,1002 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Field Guide to Local Demand — Momentum</title>
+<link rel="stylesheet" href="../../brand/tokens.css">
+<style>
+  html,body { background:#000; }
+  .stage {
+    position:relative; width:1920px; height:1080px; overflow:hidden;
+    background:var(--m-warm-canvas); font-family:var(--m-font-text);
+    -webkit-font-smoothing:antialiased;
+  }
+
+  /* ── z0 · THE SHEET.  One continuous warm page. The plates travel on it,
+        the trace is recorded on it, the birds sit on it. Never clipped. ──── */
+  #sheet { position:absolute; inset:0; background:var(--m-warm-canvas); }
+  #sheetTex { position:absolute; inset:0; background-size:cover; background-position:center;
+              mix-blend-mode:multiply; opacity:.22; }
+  #stripScale { position:absolute; inset:0; transform-origin:960px 500px; }
+  #stripWrap  { position:absolute; left:0; top:0; display:flex; }
+  .cell { position:relative; flex:0 0 auto; height:1080px; }
+  .grid { position:absolute; inset:0;
+    background-image:
+      linear-gradient(to right, rgba(23,60,44,.055) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(23,60,44,.055) 1px, transparent 1px),
+      linear-gradient(to right, rgba(23,60,44,.075) 1.4px, transparent 1.4px),
+      linear-gradient(to bottom, rgba(23,60,44,.075) 1.4px, transparent 1.4px);
+    background-size: 48px 48px, 48px 48px, 240px 240px, 240px 240px;
+  }
+
+  /* collage primitives ------------------------------------------------- */
+  .card { position:absolute; background:var(--m-warm-surface);
+          border:1px solid var(--m-warm-line); }
+  .tape { position:absolute; background-repeat:no-repeat; mix-blend-mode:multiply;
+          opacity:.94; transform-origin:50% 50%; }
+  .fast { position:absolute; background-repeat:no-repeat;
+          filter:drop-shadow(3px 4px 0 rgba(23,60,44,.16)); }
+  .plate-img { position:absolute; mix-blend-mode:multiply; }
+  .strip-img { position:absolute;
+               filter:drop-shadow(7px 9px 0 rgba(23,60,44,.11)); }
+  .ann { position:absolute; left:0; top:0; }
+  .pl { position:absolute; font-family:var(--m-font-display);
+        font-variation-settings:"wdth" 70, "wght" 700; font-size:15px;
+        letter-spacing:.34em; color:var(--m-warm-muted); }
+
+  /* ── z1 · THE DARK.  A hole is punched in it for the lens; a torn paper
+        edge takes the rest of it away at the release. ────────────────── */
+  #deep { position:absolute; inset:0; background:var(--m-deep); }
+
+  /* ── z2 · THE PAGE.  Statement, credit, lockup — above the dark. ─────── */
+  #page { position:absolute; inset:0; }
+  #stmt { position:absolute; left:0; right:0; top:322px; text-align:center; }
+  #stmt div { font-family:var(--m-font-editorial); font-weight:400; font-size:108px;
+              line-height:1.24; color:var(--m-warm-ink); letter-spacing:.004em; }
+  #credit { position:absolute; left:0; right:0; top:600px; text-align:center; }
+  #credStrip { position:absolute; left:50%; top:6px; transform:translateX(-50%);
+               filter:drop-shadow(9px 11px 0 rgba(23,60,44,.10)); }
+  #credInner { position:relative; }
+  #crule { height:2px; background:var(--m-warm-signal); width:0; margin:0 auto 34px; }
+  #ca { font-family:var(--m-font-display); font-variation-settings:"wdth" 70, "wght" 700;
+        font-size:31px; letter-spacing:.30em; color:var(--m-warm-ink); }
+  #cb { margin-top:22px; font-family:var(--m-font-display);
+        font-variation-settings:"wdth" 70, "wght" 700;
+        font-size:22px; letter-spacing:.28em; color:var(--m-signal-ink); }
+  #lock { position:absolute; left:0; right:0; top:408px;
+          display:flex; flex-direction:column; align-items:center; opacity:0; }
+
+  /* ── z3 · THE OPTIC.  Hard keyline, graduations, reticle, registration. ─ */
+  #optic { position:absolute; inset:0; }
+
+  /* ── z4 · SURROUND FURNITURE.  Lives in the darkness. ────────────────── */
+  .tl { position:absolute; left:92px; top:74px; display:flex; align-items:center; gap:13px; }
+  .tl .mk { width:34px; height:34px; color:var(--m-mark); display:block; }
+  .tl .wd { font-family:var(--m-font-display); font-variation-settings:"wdth" 88, "wght" 800;
+            font-size:20px; letter-spacing:.02em; line-height:1; color:var(--m-on-deep); }
+  .tr { position:absolute; right:92px; top:80px; font-family:var(--m-font-display);
+        font-variation-settings:"wdth" 70, "wght" 700; font-size:15px;
+        letter-spacing:.26em; color:var(--m-on-deep-muted); text-align:right; }
+
+  .figcard { position:absolute; left:96px; top:932px; width:452px; height:84px;
+             background:var(--m-warm-surface); }
+  .figcard span { position:absolute; left:28px; top:0; line-height:84px;
+                  font-family:var(--m-font-editorial); font-size:31px;
+                  color:var(--m-warm-ink); white-space:nowrap; }
+
+  .pidx { position:absolute; right:96px; bottom:96px; display:flex;
+          align-items:center; gap:11px; }
+  .pidx i { display:block; height:3px; background:var(--m-on-deep-muted); }
+
+  #endline { position:absolute; left:0; right:0; bottom:92px; text-align:center;
+             font-family:var(--m-font-display); font-variation-settings:"wdth" 70, "wght" 700;
+             font-size:16px; letter-spacing:.32em; color:var(--m-on-deep-muted); opacity:0; }
+
+  /* ── z5 · GRAIN.  One static seeded tile. Never resampled. ───────────── */
+  #grain { position:absolute; inset:0; pointer-events:none; }
+</style></head>
+<body>
+<div class="stage">
+
+  <div id="sheet">
+    <div id="sheetTex"></div>
+    <svg id="trace" width="1920" height="1080" viewBox="0 0 1920 1080"
+         style="position:absolute;inset:0"></svg>
+    <div id="birds"></div>
+    <div id="stripScale"><div id="stripWrap"></div></div>
+  </div>
+
+  <div id="deep"></div>
+
+  <div id="page">
+    <div id="stmt"><div id="s1">Demand leaves traces.</div><div id="s2">We read them.</div></div>
+    <div id="credit">
+      <img id="credStrip" alt="">
+      <div id="credInner">
+        <div id="crule"></div>
+        <div id="ca">FIELD GUIDE TO LOCAL DEMAND</div>
+        <div id="cb">SEO · AEO · GEO · PAID</div>
+      </div>
+    </div>
+    <div id="lock"></div>
+  </div>
+
+  <svg id="optic" width="1920" height="1080" viewBox="0 0 1920 1080"></svg>
+
+  <div class="tl" id="tl"><span class="mk" id="mk"></span><span class="wd">MOMENTUM</span></div>
+  <div class="tr" id="tr">PHILADELPHIA · 39.95° N</div>
+  <div id="figs"></div>
+  <div class="pidx" id="pidx"></div>
+  <div id="endline">FIELD GUIDE TO LOCAL DEMAND</div>
+
+  <div id="grain"></div>
+</div>
+
+<script type="module">
+import { at, clamp, lerp, easeEntrance, easeEmphatic, easeStandard, easeInOut,
+         osc, revealWords, grainURL, markSVG, Lockup, rng,
+         MATERIAL, tornWipe, tapedCard, scatterPose, plateStrip, lens, VF }
+  from '../../brand/film-kit.js';
+
+window.FILM = { width: 1920, height: 1080, fps: 30, duration: 26.0 };
+window.__ready = false;
+
+/* ── palette: literals matched to the warm block in tokens.css ────────────── */
+const CANVAS  = '#F6F5EF', SURFACE = '#FFFEFA', WINK = '#173C2C',
+      WMUTED  = '#647067', WLINE   = '#D4D9CD', SIGFILL = '#B45F2A',
+      SIGINK  = '#A35309', BRAND   = '#155E86', WHITE  = '#FFFFFF';
+
+/* ── stage geometry.  The lens never moves; the sheet travels beneath it. ── */
+const CX = 960, CY = 500;
+const W  = 1180;              // one plate cell on the strip
+const NP = 5;
+const HX = 590, HY = 500;     // a plate's own centre, in cell coordinates
+
+/* ── DOM helpers ──────────────────────────────────────────────────────────── */
+const NS = 'http://www.w3.org/2000/svg';
+function D(cls, parent, css) {
+  const d = document.createElement('div');
+  if (cls) d.className = cls;
+  if (css) Object.assign(d.style, css);
+  parent.appendChild(d); return d;
+}
+function TX(str, parent, css) {
+  const d = document.createElement('div');
+  d.textContent = str;
+  d.style.position = 'absolute';
+  if (css) Object.assign(d.style, css);
+  parent.appendChild(d); return d;
+}
+function IM(src, parent, cls, css) {
+  const i = document.createElement('img');
+  i.src = src; i.alt = '';
+  if (cls) i.className = cls;
+  if (css) Object.assign(i.style, css);
+  parent.appendChild(i); return i;
+}
+function E(tag, a, parent) {
+  const e = document.createElementNS(NS, tag);
+  for (const k in a) e.setAttribute(k, a[k]);
+  if (parent) parent.appendChild(e);
+  return e;
+}
+/** A hairline that draws itself. Registered with an order o in [0,1]. */
+function ST(list, svg, d, o, attrs = {}) {
+  const e = E('path', Object.assign({ d, fill: 'none', stroke: WINK,
+    'stroke-width': 1.5, 'stroke-linecap': 'round' }, attrs), svg);
+  e.__o = o; list.push(e); return e;
+}
+
+/* ── material sheet crops: one source PNG, addressed by box ───────────────── */
+const TAPE_SHEET = { src: MATERIAL.tapeSet,   w: 1434, h: 736 };
+const TAPES = [
+  { x: 21,  y: 1,   w: 779, h: 187 },   // 0 grey, long
+  { x: 876, y: 4,   w: 538, h: 191 },   // 1 cream
+  { x: 512, y: 275, w: 867, h: 184 },   // 2 ochre
+  { x: 20,  y: 278, w: 354, h: 188 },   // 3 white, short
+  { x: 744, y: 541, w: 688, h: 181 },   // 4 grey
+  { x: 0,   y: 551, w: 642, h: 184 },   // 5 cream
+];
+const FAST_SHEET = { src: MATERIAL.fasteners, w: 1328, h: 737 };
+const FASTS = {
+  mount: { x: 1,    y: 0,   w: 519, h: 737 },   // photo-corner mount card
+  pinA:  { x: 789,  y: 278, w: 202, h: 143 },
+  pinB:  { x: 684,  y: 338, w: 203, h: 140 },
+  clip:  { x: 1170, y: 75,  w: 157, h: 591 },
+};
+const GRAPH_SHEET = { src: MATERIAL.graph, w: 2752, h: 1536 };
+const GRAPH_BOX = { x: 430, y: 190, w: 1960, h: 1080 };
+
+function applyCrop(el, sheet, box, displayW) {
+  const k = displayW / box.w;
+  el.style.width  = displayW + 'px';
+  el.style.height = (box.h * k).toFixed(1) + 'px';
+  el.style.backgroundImage = `url(${sheet.src})`;
+  el.style.backgroundSize = `${(sheet.w * k).toFixed(1)}px ${(sheet.h * k).toFixed(1)}px`;
+  el.style.backgroundPosition = `${(-box.x * k).toFixed(1)}px ${(-box.y * k).toFixed(1)}px`;
+  return el;
+}
+/** A piece of tape, laid at an angle across a corner. */
+function tape(parent, idx, wpx, left, top, deg) {
+  const t = D('tape', parent, { left: left + 'px', top: top + 'px' });
+  applyCrop(t, TAPE_SHEET, TAPES[idx], wpx);
+  t.__deg = deg;
+  return t;
+}
+function fastener(parent, box, wpx, left, top, deg = 0) {
+  const f = D('fast', parent, { left: left + 'px', top: top + 'px' });
+  applyCrop(f, FAST_SHEET, box, wpx);
+  f.__deg = deg;
+  return f;
+}
+
+/* ── the strip: five cells on one continuous sheet ────────────────────────── */
+const wrap = document.getElementById('stripWrap');
+wrap.style.width = (W * NP) + 'px';
+const cells = [];
+for (let i = 0; i < NP; i++) {
+  const c = D('cell', wrap, { width: W + 'px' });
+  D('grid', c);
+  cells.push(c);
+}
+const PLNUM = ['PL. I', 'PL. II', 'PL. III', 'PL. IV', 'PL. V'];
+const plNums = cells.map((c, i) => TX(PLNUM[i], c, {
+  left: '0px', top: '898px', width: W + 'px', textAlign: 'center',
+}));
+plNums.forEach(e => e.className = 'pl');
+
+/* Every plate keeps its own list of hairlines to draw and props to pose. */
+const P = [{}, {}, {}, {}, {}];
+
+/* ══ PLATE I — the query ═══════════════════════════════════════════════════
+   A pressed specimen with roots: the real engraved botanical, laid on the
+   sheet, with the query itself taped over it as the flower head.           */
+{
+  const c = cells[0], p = P[0];
+  p.lines = [];
+  p.svg = E('svg', { class: 'ann', width: W, height: 1080 }, null);
+  c.appendChild(p.svg);
+
+  p.bot = IM(MATERIAL.botanical, c, 'plate-img',
+    { left: '360px', top: '236px', width: '470px', transformOrigin: '235px 330px' });
+
+  // the query, taped down as the specimen's flower head
+  p.card = D('card', c, { left: '378px', top: '188px', width: '428px', height: '100px',
+                          transformOrigin: '214px 50px' });
+  const g = E('svg', { width: 26, height: 26, style: 'position:absolute;left:28px;top:37px' }, null);
+  p.card.appendChild(g);
+  E('circle', { cx: 10, cy: 10, r: 8, fill: 'none', stroke: WINK, 'stroke-width': 2 }, g);
+  E('line', { x1: 16, y1: 16, x2: 23, y2: 23, stroke: WINK, 'stroke-width': 2,
+              'stroke-linecap': 'round' }, g);
+  TX('"roofer near me"', p.card, { left: '70px', top: '24px',
+    fontFamily: 'var(--m-font-editorial)', fontSize: '38px', color: WINK, lineHeight: '52px' });
+  p.tapeA = tape(p.card, 3, 118, -30, -26, -38);
+  p.tapeB = tape(p.card, 5, 128, 372, 62, -34);
+
+  // the annotator's hand: two leaders to two named parts, in real italic
+  ST(p.lines, p.svg, 'M 322,566 L 396,552', .58, { stroke: WMUTED, 'stroke-width': 1.2 });
+  ST(p.lines, p.svg, 'M 878,772 L 800,742', .66, { stroke: WMUTED, 'stroke-width': 1.2 });
+  p.lab1 = TX('folium', c, { left: '166px', top: '546px', width: '150px', textAlign: 'right',
+    fontFamily: 'var(--m-font-editorial)', fontStyle: 'italic', fontSize: '25px', color: WMUTED });
+  p.lab2 = TX('radix', c, { left: '888px', top: '752px',
+    fontFamily: 'var(--m-font-editorial)', fontStyle: 'italic', fontSize: '25px', color: WMUTED });
+
+  // a rule and a determination line, where a herbarium sheet would carry one
+  ST(p.lines, p.svg, 'M 300,846 H 880', .80, { stroke: WLINE, 'stroke-width': 1.6 });
+  p.det = TX('det. Momentum · Philadelphia', c, { left: '300px', top: '856px',
+    fontFamily: 'var(--m-font-editorial)', fontStyle: 'italic', fontSize: '21px', color: WMUTED });
+
+  p.pin = fastener(c, FASTS.pinA, 44, 812, 226, 14);
+}
+
+/* ══ PLATE II — the map pack ═══════════════════════════════════════════════
+   Three torn strata, cut paper on graph paper, each a pack slot, each
+   pinned with a brass fastener pressed in like a fossil.                   */
+{
+  const c = cells[1], p = P[1];
+  p.lines = [];
+  p.graph = D('', c, { position: 'absolute', left: '236px', top: '178px',
+    mixBlendMode: 'multiply', opacity: '.26', transform: 'rotate(.6deg)' });
+  applyCrop(p.graph, GRAPH_SHEET, GRAPH_BOX, 700);
+
+  p.svg = E('svg', { class: 'ann', width: W, height: 1080 }, null);
+  c.appendChild(p.svg);
+
+  const BEDS = [
+    { w: 520, left: 300, top: 196, deg: -1.2, num: '1',
+      bars: [[56, 74, 300]], pin: [430, 66], from: -1 },
+    { w: 604, left: 268, top: 396, deg:  0.8, num: '2',
+      bars: [[54, 70, 372], [54, 104, 236], [54, 134, 300]], pin: [364, 96], from: 1 },
+    { w: 470, left: 330, top: 618, deg: -0.6, num: '3',
+      bars: [[50, 66, 252], [50, 98, 164]], pin: [246, 60], from: -1 },
+  ];
+  p.beds = BEDS.map((b, i) => {
+    const holder = D('', c, { position: 'absolute', left: b.left + 'px', top: b.top + 'px',
+      transformOrigin: (b.w / 2) + 'px 84px' });
+    const img = IM(MATERIAL.tornStrip, holder, 'strip-img',
+      { left: (-b.w * 119 / 1362).toFixed(1) + 'px', top: '0px',
+        width: (b.w * 1600 / 1362).toFixed(1) + 'px' });
+    const bars = b.bars.map(bar => D('', holder, {
+      position: 'absolute', left: bar[0] + 'px', top: bar[1] + 'px',
+      width: bar[2] + 'px', height: '9px', borderRadius: '5px',
+      background: WMUTED, opacity: '.5' }));
+    const num = TX(b.num, c, { left: (b.left - 84) + 'px', top: (b.top + 24) + 'px',
+      width: '64px', textAlign: 'right', fontFamily: 'var(--m-font-editorial)',
+      fontSize: '62px', color: WINK, lineHeight: '62px' });
+    const pin = fastener(c, i === 1 ? FASTS.pinB : FASTS.pinA, 46,
+      b.left + b.pin[0], b.top + b.pin[1], i * 23 - 20);
+    return { holder, img, bars, num, pin, b };
+  });
+
+  // a scale bar, where a field plate would put one
+  ST(p.lines, p.svg, 'M 320,824 H 660', .86, { stroke: WMUTED, 'stroke-width': 1.6 });
+  for (let k = 0; k <= 4; k++)
+    ST(p.lines, p.svg, `M ${320 + k * 85},824 V ${824 + (k % 2 ? 7 : 14)}`, .88 + k * .01,
+       { stroke: WMUTED, 'stroke-width': 1.6 });
+  p.scale = TX('three slots · one pack', c, { left: '320px', top: '848px',
+    fontFamily: 'var(--m-font-editorial)', fontStyle: 'italic', fontSize: '21px', color: WMUTED });
+}
+
+/* ══ PLATE III — intent ════════════════════════════════════════════════════
+   A taxonomic branch. The variants arrive as taped label cards — text boxes
+   pinned to the sheet — and an engraved bird settles on the head of it.    */
+{
+  const c = cells[2], p = P[2];
+  p.lines = [];
+  p.svg = E('svg', { class: 'ann', width: W, height: 1080 }, null);
+  c.appendChild(p.svg);
+
+  p.head = D('card', c, { left: '178px', top: '466px', width: '212px', height: '68px',
+                          transformOrigin: '106px 34px' });
+  TX('"roofer"', p.head, { left: '0px', top: '13px', width: '212px', textAlign: 'center',
+    fontFamily: 'var(--m-font-editorial)', fontSize: '30px', color: BRAND });
+  p.headTape = tape(p.head, 1, 96, -22, 44, -28);
+
+  const ENDS = [
+    { y: 252, n: 'i',   s: 'near me' },
+    { y: 376, n: 'ii',  s: 'cost' },
+    { y: 500, n: 'iii', s: 'emergency' },
+    { y: 624, n: 'iv',  s: 'repair' },
+    { y: 748, n: 'v',   s: 'best' },
+  ];
+  p.labs = ENDS.map((e, i) => {
+    ST(p.lines, p.svg,
+      `M 394,500 C 486,500 552,${e.y} 630,${e.y}`, .06 + i * .09,
+      { 'stroke-width': 1.6, 'stroke-opacity': .8 });
+    ST(p.lines, p.svg, `M 618,${e.y - 9} a 9,9 0 1,0 .1,0`, .40 + i * .05,
+      { 'stroke-width': 1.8 });
+    const card = D('card', c, { left: '644px', top: (e.y - 31) + 'px',
+      width: '250px', height: '62px', transformOrigin: '125px 31px' });
+    TX(e.n, card, { left: '16px', top: '20px', fontFamily: 'var(--m-font-editorial)',
+      fontStyle: 'italic', fontSize: '21px', color: SIGINK });
+    TX(e.s, card, { left: '62px', top: '13px', fontFamily: 'var(--m-font-editorial)',
+      fontSize: '29px', color: WINK });
+    const tp = tape(card, [0, 4, 5, 1, 3][i], 82, i % 2 ? 196 : -18, i % 2 ? 40 : -18,
+                    i % 2 ? -30 : -34);
+    return { card, tp };
+  });
+
+  // second-order twigs, unlabelled — a classification chart keeps going
+  [[630, 252, 700, 178], [630, 748, 706, 818], [630, 376, 690, 322]].forEach((t, i) =>
+    ST(p.lines, p.svg, `M ${t[0]},${t[1]} Q ${(t[0] + t[2]) / 2 + 8},${(t[1] + t[3]) / 2} ${t[2]},${t[3]}`,
+       .76 + i * .04, { 'stroke-width': 1.2, 'stroke-opacity': .55 }));
+
+  p.bird = IM(MATERIAL.birds[2], c, 'plate-img',
+    { left: '744px', top: '104px', width: '176px', transformOrigin: '88px 176px' });
+}
+
+/* ══ PLATE IV — the answer engine ══════════════════════════════════════════
+   An illuminated panel, mounted in real photo corners and paper-clipped.
+   The lens narrows for it: the manuscript is read close.                   */
+{
+  const c = cells[3], p = P[3];
+  p.lines = [];
+  p.svg = E('svg', { class: 'ann', width: W, height: 1080 }, null);
+  c.appendChild(p.svg);
+
+  const CW = 352, CH = Math.round(CW * 737 / 519);      // 352 × 500
+  const CL = HX - CW / 2, CT = 250;
+  p.leaf = D('', c, { position: 'absolute', left: (CL + 12) + 'px', top: (CT + 12) + 'px',
+    width: (CW - 24) + 'px', height: (CH - 24) + 'px', background: SURFACE,
+    boxShadow: '10px 12px 0 rgba(23,60,44,.10)' });
+  p.leafTex = D('', p.leaf, { position: 'absolute', inset: '0',
+    backgroundImage: `url(${MATERIAL.manila})`, backgroundSize: 'cover',
+    backgroundPosition: 'center', mixBlendMode: 'multiply', opacity: '.34' });
+  p.mount = D('', c, { position: 'absolute', left: CL + 'px', top: CT + 'px' });
+  applyCrop(p.mount, FAST_SHEET, FASTS.mount, CW);
+
+  // the illuminated initial
+  p.init = D('', c, { position: 'absolute', left: (CL + 34) + 'px', top: (CT + 40) + 'px',
+    width: '78px', height: '78px', background: BRAND, transformOrigin: '39px 39px' });
+  TX('A', p.init, { left: '0px', top: '2px', width: '78px', textAlign: 'center',
+    fontFamily: 'var(--m-font-editorial)', fontSize: '64px', lineHeight: '78px', color: WHITE });
+
+  // the answer, redacted to hairlines — illustrative UI, never a claim
+  p.bars = [];
+  [[CL + 128, CT + 54, 174], [CL + 128, CT + 86, 138]].forEach((r) =>
+    p.bars.push(D('', c, { position: 'absolute', left: r[0] + 'px', top: r[1] + 'px',
+      width: r[2] + 'px', height: '9px', borderRadius: '5px', background: WMUTED,
+      opacity: '.46', transformOrigin: '0 50%' })));
+  [[CL + 36, CT + 158, 280], [CL + 36, CT + 190, 280], [CL + 36, CT + 222, 196],
+   [CL + 36, CT + 254, 244]].forEach((r) =>
+    p.bars.push(D('', c, { position: 'absolute', left: r[0] + 'px', top: r[1] + 'px',
+      width: r[2] + 'px', height: '9px', borderRadius: '5px', background: WMUTED,
+      opacity: '.46', transformOrigin: '0 50%' })));
+
+  ST(p.lines, p.svg, `M ${CL + 36},${CT + 306} H ${CL + CW - 36}`, .70,
+     { stroke: WLINE, 'stroke-width': 1.6 });
+  // the marginalia hand: a bracket in the left margin
+  ST(p.lines, p.svg, `M ${CL - 26},${CT + 44} l 0,110 m -9,-55 l 18,0`, .78,
+     { stroke: SIGINK, 'stroke-width': 1.8 });
+
+  // the film's single script accent
+  p.script = TX('Answer Engine Optimization', c, { left: '0px', top: (CT + 336) + 'px',
+    width: W + 'px', textAlign: 'center', fontFamily: 'var(--m-font-script)',
+    fontWeight: '700', fontSize: '31px', color: SIGINK });
+  p.nb = TX('nota bene', c, { left: '0px', top: (CT + 392) + 'px', width: W + 'px',
+    textAlign: 'center', fontFamily: 'var(--m-font-editorial)', fontStyle: 'italic',
+    fontSize: '21px', color: WMUTED });
+
+  p.clip = fastener(c, FASTS.clip, 30, CL + CW - 52, CT - 30, 4);
+  p.tape = tape(c, 2, 122, CL - 34, CT + CH - 46, -30);
+  p.tape.style.mixBlendMode = 'multiply';
+}
+
+/* ══ PLATE V — where they look ═════════════════════════════════════════════
+   The engraved compass chart. The lens widens for it; the whole plate, torn
+   edges and all, sits inside the circle.                                    */
+{
+  const c = cells[4], p = P[4];
+  const SZ = 648, L = HX - SZ / 2, T = HY - SZ / 2;
+  p.chart = IM(MATERIAL.celestial, c, 'plate-img',
+    { left: L + 'px', top: T + 'px', width: SZ + 'px',
+      transformOrigin: (SZ / 2) + 'px ' + (SZ / 2) + 'px' });
+
+  p.svg = E('svg', { class: 'ann', width: W, height: 1080 }, null);
+  c.appendChild(p.svg);
+  p.lines = [];
+
+  const RINGS = [
+    { r: 112, s: 'MAP',     a:  90 },
+    { r: 168, s: 'ORGANIC', a: -90 },
+    { r: 224, s: 'PAID',    a:   0 },
+    { r: 282, s: 'AI',      a: 180 },
+  ];
+  p.labs = RINGS.map((rg, i) => {
+    const a = rg.a * Math.PI / 180;
+    const x = HX + Math.cos(a) * rg.r, y = HY + Math.sin(a) * rg.r;
+    const t = E('text', { x, y: y + 7, 'text-anchor': 'middle',
+      'font-family': 'Archivo', 'font-size': 20, fill: WINK,
+      'letter-spacing': '.18em', style: 'font-variation-settings:"wdth" 70,"wght" 700',
+      'paint-order': 'stroke', stroke: SURFACE, 'stroke-width': 10,
+      'stroke-linejoin': 'round' }, p.svg);
+    t.textContent = rg.s;
+    return t;
+  });
+  // the traveller: posed from seek(t), never dash-drawn
+  p.trail = E('path', { fill: 'none', stroke: SIGFILL, 'stroke-width': 3,
+    'stroke-linecap': 'round', opacity: 0 }, p.svg);
+  p.dot = E('circle', { r: 9, fill: SIGFILL, opacity: 0 }, p.svg);
+
+  p.pin = fastener(c, FASTS.pinB, 40, HX - 20, HY - 14, -8);
+  p.tape = tape(c, 0, 148, L - 44, T - 22, -32);
+  p.note = TX('four places · one demand', c, { left: '0px', top: '852px', width: W + 'px',
+    textAlign: 'center', fontFamily: 'var(--m-font-editorial)', fontStyle: 'italic',
+    fontSize: '22px', color: WMUTED });
+}
+
+/* ── measure every hairline once, at load ─────────────────────────────────── */
+for (const p of P) {
+  if (!p.lines) continue;
+  for (const e of p.lines) {
+    const L = e.getTotalLength ? e.getTotalLength() : 0;
+    e.__L = L || 1;
+    e.style.strokeDasharray = `${e.__L} ${e.__L}`;
+    e.style.strokeDashoffset = e.__L;
+  }
+}
+
+/* ══ THE TRACE — the release beat's own subject ════════════════════════════
+   When the traveller leaves the chart it puts a pen on the sheet and runs.
+   The recording is wider than the lens: tearing the darkness away reveals
+   more of the same trace in both directions.                               */
+const traceSvg = document.getElementById('trace');
+const TR_Y = 796, TR_X0 = -140, TR_X1 = 2060, TR_DX = 4, TR_ENTER = 608;
+const TR_PEAKS = [[130, 38, 54], [470, 74, 72], [1180, 126, 86], [1660, 86, 62]];
+function traceY(x) {
+  let y = TR_Y - 7.5 * Math.sin(x / 46) - 4.6 * Math.sin(x / 22 + 1.1)
+                - 3.0 * Math.sin(x / 12.5 + 2.2);
+  for (const q of TR_PEAKS) { const u = (x - q[0]) / q[2]; y -= q[1] * Math.exp(-u * u); }
+  return y;
+}
+const TP = [];
+for (let x = TR_X0; x <= TR_X1; x += TR_DX) TP.push([x, traceY(x)]);
+const TCUM = [0];
+for (let i = 1; i < TP.length; i++)
+  TCUM.push(TCUM[i - 1] + Math.hypot(TP[i][0] - TP[i - 1][0], TP[i][1] - TP[i - 1][1]));
+const TLEN = TCUM[TCUM.length - 1];
+
+const DATUM_Y = 900, DATUM_X0 = 96, DATUM_X1 = 1824;
+const datum = E('path', { d: `M ${DATUM_X0},${DATUM_Y} H ${DATUM_X1}`, fill: 'none',
+  stroke: WMUTED, 'stroke-width': 1.6 }, traceSvg);
+const TICK_X = [470, 1180, 1660];
+const ticks = TICK_X.map(x => E('path', { d: `M ${x},${traceY(x).toFixed(1)} V ${DATUM_Y}`,
+  fill: 'none', stroke: WMUTED, 'stroke-width': 1.6 }, traceSvg));
+const tracePath = E('path', {
+  d: TP.map((q, i) => (i ? 'L' : 'M') + q[0] + ',' + q[1].toFixed(1)).join(' '),
+  fill: 'none', stroke: WINK, 'stroke-width': 3.2,
+  'stroke-linecap': 'round', 'stroke-linejoin': 'round' }, traceSvg);
+const pen = E('circle', { r: 9, fill: SIGFILL, opacity: 0 }, traceSvg);
+for (const e of [datum, ...ticks, tracePath]) {
+  e.__L = e.getTotalLength();
+  e.style.strokeDasharray = `${e.__L} ${e.__L}`;
+  e.style.strokeDashoffset = e.__L;
+}
+function traceAt(t) {
+  const x = t < 13.80
+    ? lerp(TR_X0, TR_ENTER, easeStandard(clamp((t - 13.10) / 0.70)))
+    : lerp(TR_ENTER, TR_X1, clamp((t - 13.80) / 2.98));
+  const fi = clamp((x - TR_X0) / TR_DX, 0, TP.length - 1.001);
+  const i = Math.floor(fi), f = fi - i;
+  return { x, y: lerp(TP[i][1], TP[i + 1][1], f), u: lerp(TCUM[i], TCUM[i + 1], f) / TLEN };
+}
+
+/* ══ THE BIRDS — three separately cut plates, waiting on the open sheet ════
+   The darkness tears off them; they hold one beat, then break out of the
+   frame and take the field guide with them.                                */
+const birdHost = document.getElementById('birds');
+const BIRDS = [
+  { src: MATERIAL.birds[0], w: 316, left: 186, top: 318, deg: -5 },
+  { src: MATERIAL.birds[1], w: 208, left: 1432, top: 168, deg:  4 },
+  { src: MATERIAL.birds[2], w: 224, left: 1494, top: 688, deg: -3 },
+];
+const birdEls = BIRDS.map(b => {
+  const holder = D('', birdHost, { position: 'absolute', left: b.left + 'px',
+    top: b.top + 'px', transformOrigin: '50% 50%' });
+  IM(b.src, holder, 'plate-img', { left: '0px', top: '0px', width: b.w + 'px',
+    position: 'relative' });
+  return holder;
+});
+
+/* ── the optic: keyline, graduations, reticle, registration ───────────────── */
+const optic = document.getElementById('optic');
+const gRing = E('g', { transform: `translate(${CX},${CY})` }, optic);
+const ring = E('circle', { cx: 0, cy: 0, r: 1, fill: 'none', stroke: '#8E8578',
+  'stroke-width': 3, 'vector-effect': 'non-scaling-stroke' }, gRing);
+const gTicks = E('g', { transform: `translate(${CX},${CY})` }, optic);
+for (let k = 0; k < 36; k++) {
+  const a = k * Math.PI / 18, big = k % 3 === 0;
+  E('line', { x1: Math.cos(a), y1: Math.sin(a),
+    x2: Math.cos(a) * (big ? 1.05 : 1.028), y2: Math.sin(a) * (big ? 1.05 : 1.028),
+    stroke: '#8A9296', 'stroke-width': big ? 1.9 : 1.1,
+    'vector-effect': 'non-scaling-stroke' }, gTicks);
+}
+const gRet = E('g', {}, optic);
+E('path', { d: `M ${CX - 470},${CY} h 940 M ${CX},${CY - 462} v 924`, stroke: '#8A9296',
+  'stroke-width': 1.1 }, gRet);
+for (let k = -10; k <= 10; k++) {
+  if (!k) continue;
+  const d = k * 42, len = k % 5 === 0 ? 11 : 6;
+  E('line', { x1: CX + d, y1: CY - len, x2: CX + d, y2: CY + len, stroke: '#8A9296',
+    'stroke-width': 1.1 }, gRet);
+  E('line', { x1: CX - len, y1: CY + d, x2: CX + len, y2: CY + d, stroke: '#8A9296',
+    'stroke-width': 1.1 }, gRet);
+}
+E('circle', { cx: CX, cy: CY, r: 380, fill: 'none', stroke: '#8A9296', 'stroke-width': 1.4,
+  'stroke-dasharray': '5 11' }, gRet);
+const gReg = E('g', {}, optic);
+[[92, 92], [1828, 92], [92, 988], [1828, 988]].forEach(c =>
+  E('path', { d: `M ${c[0] - 13},${c[1]} h 26 M ${c[0]},${c[1] - 13} v 26`, stroke: '#8A9296',
+    'stroke-width': 1.4 }, gReg));
+
+/* ── the Fig. captions: five taped cards in the darkness ──────────────────── */
+const FIG = ['Fig. I — the query', 'Fig. II — the map pack', 'Fig. III — intent',
+             'Fig. IV — the answer engine', 'Fig. V — where they look'];
+const FIGWIN = [[1.50, 3.94], [4.40, 6.62], [7.08, 9.28], [9.80, 11.68], [12.32, 13.72]];
+const figHost = document.getElementById('figs');
+const figCards = FIG.map((s, i) => {
+  const card = D('figcard', figHost, { transformOrigin: '226px 42px' });
+  const sp = document.createElement('span'); sp.textContent = s; card.appendChild(sp);
+  tape(card, [3, 5, 1, 0, 4][i], 104, -26, -22, -36);
+  card.__tape = card.querySelector('.tape');
+  card.__tape.style.mixBlendMode = 'normal';
+  return card;
+});
+
+/* ── the plate index, bottom right ────────────────────────────────────────── */
+const pidx = document.getElementById('pidx');
+const pidxEls = [0, 1, 2, 3, 4].map(() => {
+  const i = document.createElement('i'); pidx.appendChild(i); return i;
+});
+
+/* ── grain: one seeded texture, generated once, never resampled ───────────── */
+document.getElementById('grain').style.background = `url(${grainURL(200, 0.030, 23)}) repeat`;
+
+/* ── the paper the whole film is printed on ───────────────────────────────── */
+document.getElementById('sheetTex').style.backgroundImage = `url(${MATERIAL.manila})`;
+const credStrip = document.getElementById('credStrip');
+credStrip.src = MATERIAL.tornStrip;
+credStrip.style.width = '1010px';
+
+/* ── boot ─────────────────────────────────────────────────────────────────── */
+const els = {
+  sheet: document.getElementById('sheet'),
+  deep: document.getElementById('deep'),
+  scale: document.getElementById('stripScale'),
+  wrap,
+  grids: [...document.querySelectorAll('.grid')],
+  stmt: document.getElementById('stmt'),
+  s1: document.getElementById('s1'), s2: document.getElementById('s2'),
+  credit: document.getElementById('credit'), crule: document.getElementById('crule'),
+  credStrip, credInner: document.getElementById('credInner'),
+  ca: document.getElementById('ca'), cb: document.getElementById('cb'),
+  tl: document.getElementById('tl'), tr: document.getElementById('tr'),
+  mk: document.getElementById('mk'), lock: document.getElementById('lock'),
+  endline: document.getElementById('endline'),
+};
+let lock = null;
+
+function preload(src) {
+  return new Promise((res) => { const i = new Image(); i.onload = () => res(i); i.onerror = () => res(null); i.src = src; });
+}
+const SHEETS = [MATERIAL.tapeSet, MATERIAL.fasteners, MATERIAL.manila, MATERIAL.graph];
+Promise.all([
+  markSVG(),
+  Lockup(els.lock, { line: 'Philadelphia. Since 2015.', markSize: 104, wordSize: 72 }),
+  ...SHEETS.map(preload),
+  Promise.all([...document.querySelectorAll('img')]
+    .map(i => (i.getAttribute('src') ? i.decode().catch(() => {}) : null))),
+]).then(([svg, lk]) => {
+  els.mk.innerHTML = svg;
+  const s = els.mk.querySelector('svg');
+  s.setAttribute('width', '100%'); s.setAttribute('height', '100%'); s.style.display = 'block';
+  lock = lk;
+  window.seek(0);
+  window.__ready = true;
+});
+
+/* ── timeline constants ───────────────────────────────────────────────────── */
+const DRAW  = [[1.35, 1.96], [4.20, 1.82], [6.88, 1.82], [9.60, 1.76], [12.00, 1.42]];
+const T_IV_V = 11.80;      // the scale-through
+const T_OPEN = 14.40;      // the darkness tears away
+const T_CLOSE = 23.05;     // and comes back to frame the lockup
+
+const R_BASE = 434, R_NARROW = 358, R_WIDE = 470;
+
+function lensR(t) {
+  let R = R_BASE * at(t, 0.00, 1.35, easeEmphatic);           // the aperture irises open
+  R = lerp(R, R_NARROW, at(t, 9.40, 0.78, easeEmphatic));     // narrows for the manuscript
+  R = lerp(R, R_WIDE,   at(t, T_IV_V, 0.92, easeEmphatic));   // widens for the chart
+  R = lerp(R, 596,      at(t, T_OPEN, 1.15, easeStandard));   // eases out under the tear
+  R = lerp(R, 430,      at(t, T_CLOSE, 1.55, easeEmphatic));  // closes back for the lockup
+  return R;
+}
+
+/* IV → V is the one transition that is not a slide: Plate IV is pinned in
+   screen space and scaled through the viewer's eye while the sheet travels
+   under it, so nothing is carved by the mask arc. */
+const p4at = (t) => at(t, T_IV_V, 0.62, easeEmphatic);
+
+function stripIdx(t) {
+  return at(t, 4.06, 0.62, easeEmphatic)      // I  → II : a decisive slide
+       + at(t, 6.74, 0.94, easeStandard)      // II → III: a slower drift with a rise
+       + at(t, 9.40, 0.72, easeEmphatic)      // III→ IV : under a narrowing iris
+       + p4at(t);                             // IV → V  : the scale-through
+}
+
+/* ══ the timeline ═════════════════════════════════════════════════════════ */
+window.seek = function (t) {
+
+  /* --- the instrument: a hole in the dark, and a tear that takes it away - */
+  const R = lensR(t);
+  const tearOut = at(t, T_OPEN, 1.15, easeEmphatic);
+  const tearIn  = at(t, T_CLOSE, 1.35, easeEmphatic);
+  const mask = `radial-gradient(circle ${R.toFixed(1)}px at ${CX}px ${CY}px,`
+             + ` rgba(0,0,0,0) 0, rgba(0,0,0,0) ${(R - 0.6).toFixed(1)}px, #000 ${R.toFixed(1)}px)`;
+  els.deep.style.webkitMaskImage = mask;
+  els.deep.style.maskImage = mask;
+  els.deep.style.clipPath = t < 22.0
+    ? tornWipe(tearOut * 1.09, { seed: 11, teeth: 26, jag: 0.030, dir: 'ltr' })
+    : tornWipe(1 - tearIn * 1.09, { seed: 29, teeth: 26, jag: 0.030, dir: 'rtl' });
+
+  const surround = Math.max(at(t, 0.10, 0.9) * (1 - at(t, T_OPEN, 0.55, easeStandard)),
+                            at(t, T_CLOSE + 0.30, 0.9));
+  gRing.setAttribute('transform', `translate(${CX},${CY}) scale(${(R + 2.4).toFixed(3)})`);
+  gTicks.setAttribute('transform', `translate(${CX},${CY}) scale(${R.toFixed(3)})`);
+  ring.style.opacity = surround;
+  gTicks.style.opacity = surround * 0.8;
+  gReg.style.opacity = Math.max(at(t, 0.02, 0.5) * (1 - at(t, T_OPEN, 0.55)),
+                                at(t, T_CLOSE + 0.30, 0.9)) * 0.55;
+
+  /* the reticle: present on the first frame, drifting, gone once the iris lands */
+  gRet.style.opacity = 0.5 * (1 - at(t, 0.85, 0.90, easeStandard));
+  gRet.setAttribute('transform',
+    `translate(${(osc(t, 5.2) * 7).toFixed(2)},${(osc(t, 3.7, .3) * 5).toFixed(2)})`);
+
+  /* --- the sheet travelling under the lens ------------------------------ */
+  const idx = stripIdx(t);
+  const p4 = p4at(t);
+  const rise = -26 * Math.sin(Math.PI * clamp((t - 6.74) / 0.94));
+  const driftX = osc(t, 9.0) * 3.5, driftY = osc(t, 6.4, 0.35) * 2.6;
+  els.wrap.style.transform =
+    `translate(${(CX - HX + driftX - idx * W).toFixed(2)}px,${(rise + driftY).toFixed(2)}px)`;
+  // the device, stated: the strip travels, the lens holds
+  els.wrap.dataset.strip = plateStrip(idx, W);
+  els.wrap.dataset.lens = lens(CX, CY, R);
+
+  const sc = 1 + 0.0046 * Math.min(t, 14.2);
+  els.scale.style.transform = `scale(${sc.toFixed(4)})`;
+
+  const platesOut = 1 - at(t, 13.90, 1.00, easeStandard);
+  const gridOut = 0.9 * (1 - at(t, 13.95, 1.25, easeStandard));
+  for (const g of els.grids) g.style.opacity = gridOut.toFixed(3);
+
+  /* --- the plates ------------------------------------------------------- */
+  const pp = DRAW.map(d => at(t, d[0], d[1], easeStandard));
+  for (let i = 0; i < NP; i++) {
+    cells[i].style.opacity = platesOut.toFixed(3);
+    plNums[i].style.opacity = (Math.max(0, pp[i] - 0.5) * 2 * 0.9).toFixed(3);
+  }
+  /* every hairline draws on its own order behind the plate's progress */
+  for (let i = 0; i < NP; i++) {
+    const p = P[i]; if (!p.lines) continue;
+    for (const e of p.lines) {
+      const q = easeStandard(clamp((pp[i] - e.__o * 0.52) / 0.46));
+      e.style.strokeDashoffset = (e.__L * (1 - q)).toFixed(2);
+    }
+  }
+  poseI(pp[0], t); poseII(pp[1], t); poseIII(pp[2], t); poseIV(pp[3], t); poseV(pp[4], t);
+
+  /* Plate IV is pinned in screen space and driven through the viewer's eye
+     from its own centre, so the manuscript is never carved by the mask arc. */
+  const p4s = at(t, T_IV_V, 0.50, easeInOut);
+  const p4f = at(t, T_IV_V + 0.05, 0.34, easeInOut);
+  cells[3].style.transform =
+    `translateX(${(p4 * W).toFixed(2)}px) translate(${HX}px,${HY}px) ` +
+    `scale(${(1 + 0.94 * p4s).toFixed(4)}) translate(${-HX}px,${-HY}px)`;
+  cells[3].style.opacity = ((1 - p4f) * platesOut).toFixed(3);
+  /* Plate V closes inward as the traveller leaves it — the chart shuts, the
+     record opens. A dissolve with a direction, not a fade to nothing. */
+  const p5o = at(t, 13.90, 1.00, easeStandard);
+  cells[4].style.transform =
+    `translate(${HX}px,${HY}px) scale(${(1 - 0.24 * p5o).toFixed(4)}) translate(${-HX}px,${-HY}px)`;
+
+  /* --- the birds -------------------------------------------------------- */
+  {
+    const settle = at(t, 14.10, 0.70, easeEntrance);
+    const go = at(t, 15.05, 1.30, easeStandard);
+    birdEls.forEach((el, i) => {
+      const s = scatterPose(go, i, 3, { seed: 19, spread: 1.15 });
+      const base = `translateY(${((1 - settle) * 22).toFixed(1)}px) rotate(${BIRDS[i].deg}deg) `;
+      el.style.transform = base + s.transform;
+      el.style.opacity = (settle * s.opacity).toFixed(3);
+    });
+  }
+
+  /* --- the release: one recorded trace, wider than the lens ------------- */
+  {
+    const tp = traceAt(t);
+    const out = 1 - at(t, 20.15, 0.60, easeStandard);
+    tracePath.style.strokeDashoffset = (tracePath.__L * (1 - tp.u)).toFixed(2);
+    tracePath.style.opacity = out.toFixed(3);
+    const penOn = at(t, 13.10, 0.02) * (1 - at(t, 16.76, 0.42, easeStandard));
+    pen.setAttribute('cx', tp.x.toFixed(1));
+    pen.setAttribute('cy', tp.y.toFixed(1));
+    pen.setAttribute('opacity', (penOn * out).toFixed(3));
+    ticks.forEach((e, i) => {
+      e.style.strokeDashoffset =
+        (e.__L * (1 - at(t, 16.95 + i * 0.25, 0.36, easeStandard))).toFixed(2);
+      e.style.opacity = out.toFixed(3);
+    });
+    datum.style.strokeDashoffset =
+      (datum.__L * (1 - at(t, 17.95, 1.80, easeStandard))).toFixed(2);
+    datum.style.opacity = out.toFixed(3);
+  }
+
+  /* --- surround furniture ---------------------------------------------- */
+  const surOut = 1 - at(t, T_OPEN, 0.55);
+  els.tl.style.opacity = at(t, 0.10, 0.8) * surOut;
+  els.tl.style.transform = `translateX(${((1 - at(t, 0.10, 0.8)) * -18).toFixed(2)}px)`;
+  els.tr.style.opacity = at(t, 0.30, 0.8) * surOut;
+
+  let active = -1;
+  figCards.forEach((el, i) => {
+    const [a, b] = FIGWIN[i];
+    const p = at(t, a, 0.55) * (1 - at(t, b, 0.30, easeStandard));
+    const pose = tapedCard(p, i, { rise: 30 });
+    el.style.transform = pose.transform;
+    el.style.opacity = (pose.opacity * surOut).toFixed(3);
+    el.style.boxShadow = pose.boxShadow;
+    el.__tape.style.transform = `rotate(${el.__tape.__deg}deg) scale(${(0.6 + 0.4 * p).toFixed(3)})`;
+    if (p > 0.5) active = i;
+  });
+  pidxEls.forEach((el, i) => {
+    const on = i === active ? 1 : 0;
+    el.style.width = (30 + 26 * on) + 'px';
+    el.style.background = on ? SIGFILL : '#8A9296';
+    el.style.opacity = ((on ? 1 : 0.3) * at(t, 0.55, 0.8) * surOut).toFixed(3);
+  });
+
+  /* --- the statement: uncovered by a torn edge, not faded in ------------ */
+  {
+    const sOut = at(t, 20.15, 0.50, easeEmphatic);
+    revealWords(els.s1, t, 15.02, 0.86, 0.075, 30);
+    revealWords(els.s2, t, 15.64, 0.86, 0.075, 30);
+    const r1 = at(t, 14.96, 1.00, easeStandard), r2 = at(t, 15.58, 1.00, easeStandard);
+    els.s1.style.clipPath = tornWipe(1 - r1 * 1.09, { seed: 41, teeth: 18, jag: 0.024, dir: 'ltr' });
+    els.s2.style.clipPath = tornWipe(1 - r2 * 1.09, { seed: 57, teeth: 18, jag: 0.024, dir: 'rtl' });
+    els.stmt.style.opacity = 1 - sOut;
+    els.stmt.style.transform = `translateY(${(-sOut * 48).toFixed(2)}px)`;
+  }
+
+  /* --- the credit: a torn strip, then the line, then the services ------- */
+  {
+    const cIn = at(t, 20.15, 1.10, easeEntrance);
+    const cOut = 1 - at(t, 22.55, 0.40, easeStandard);
+    els.credStrip.style.opacity = (cIn * 0.98).toFixed(3);
+    els.credStrip.style.transform =
+      `translateX(-50%) rotate(${(-0.9 + 0.5 * cIn).toFixed(2)}deg) ` +
+      `translateY(${((1 - cIn) * 18).toFixed(1)}px)`;
+    els.credStrip.style.clipPath =
+      tornWipe(1 - cIn * 1.09, { seed: 73, teeth: 20, jag: 0.020, dir: 'ltr' });
+    els.crule.style.width = `${(at(t, 20.30, 1.00, easeEntrance) * 560).toFixed(1)}px`;
+    els.credit.style.opacity = cOut;
+    const caP = at(t, 20.62, 0.60), cbP = at(t, 21.00, 0.60);
+    els.ca.style.opacity = caP;
+    els.ca.style.transform = `translateY(${((1 - caP) * 14).toFixed(2)}px)`;
+    els.cb.style.opacity = cbP;
+    els.cb.style.transform = `translateY(${((1 - cbP) * 14).toFixed(2)}px)`;
+  }
+
+  /* --- the lockup ------------------------------------------------------- */
+  if (lock) lock.pose(at(t, 22.55, 1.45));
+  els.endline.style.opacity = (at(t, 24.30, 1.00) * 0.9).toFixed(3);
+};
+
+/* ══ per-plate poses ══════════════════════════════════════════════════════
+   Each plate arrives with its own gesture. No two adjacent plates share one. */
+
+/* I — the specimen is pressed down onto the sheet, then taped. */
+function poseI(p, t) {
+  const q = P[0];
+  const press = easeEmphatic(clamp((p - 0.02) / 0.55));
+  q.bot.style.opacity = easeStandard(clamp((p - 0.04) / 0.42)).toFixed(3);
+  q.bot.style.transform =
+    `scale(${lerp(1.075, 1, press).toFixed(4)}) rotate(${lerp(-2.2, 0, press).toFixed(2)}deg)`;
+  const cp = at(t, 2.90, 0.70, easeEntrance);
+  const pose = tapedCard(cp, 3, { rise: 24, tilt: -1.6 });
+  q.card.style.transform = pose.transform;
+  q.card.style.opacity = pose.opacity;
+  q.card.style.boxShadow = pose.boxShadow;
+  const ta = at(t, 3.24, 0.34, easeEmphatic), tb = at(t, 3.40, 0.34, easeEmphatic);
+  q.tapeA.style.transform = `rotate(${q.tapeA.__deg}deg) scale(${(0.55 + 0.45 * ta).toFixed(3)})`;
+  q.tapeA.style.opacity = ta.toFixed(3);
+  q.tapeB.style.transform = `rotate(${q.tapeB.__deg}deg) scale(${(0.55 + 0.45 * tb).toFixed(3)})`;
+  q.tapeB.style.opacity = tb.toFixed(3);
+  const l1 = at(t, 3.14, 0.40), l2 = at(t, 3.40, 0.40);
+  q.lab1.style.opacity = l1; q.lab1.style.transform = `translateX(${((1 - l1) * -12).toFixed(1)}px)`;
+  q.lab2.style.opacity = l2; q.lab2.style.transform = `translateX(${((1 - l2) * 12).toFixed(1)}px)`;
+  q.det.style.opacity = at(t, 3.62, 0.50) * 0.95;
+  const pn = at(t, 3.50, 0.34, easeEmphatic);
+  q.pin.style.opacity = pn.toFixed(3);
+  q.pin.style.transform = `rotate(${q.pin.__deg}deg) scale(${lerp(1.6, 1, pn).toFixed(3)})`;
+}
+
+/* II — the strata slide in from alternating sides; the pins press in. */
+function poseII(p, t) {
+  const q = P[1];
+  q.graph.style.opacity = (0.26 * easeStandard(clamp(p / 0.35))).toFixed(3);
+  q.beds.forEach((bd, i) => {
+    const e = at(t, 4.30 + i * 0.30, 0.72, easeEmphatic);
+    bd.holder.style.transform =
+      `translateX(${((1 - e) * 210 * bd.b.from).toFixed(1)}px) ` +
+      `rotate(${lerp(bd.b.deg + 2.4 * bd.b.from, bd.b.deg, e).toFixed(2)}deg)`;
+    bd.holder.style.opacity = e.toFixed(3);
+    bd.bars.forEach((bar, k) => {
+      const be = at(t, 4.86 + i * 0.30 + k * 0.06, 0.44, easeEntrance);
+      bar.style.transform = `scaleX(${be.toFixed(3)})`;
+      bar.style.transformOrigin = '0 50%';
+      bar.style.opacity = (0.5 * be).toFixed(3);
+    });
+    const ne = at(t, 4.62 + i * 0.30, 0.46, easeEntrance);
+    bd.num.style.opacity = ne.toFixed(3);
+    bd.num.style.transform = `translateX(${((1 - ne) * -16).toFixed(1)}px)`;
+    const pe = at(t, 5.42 + i * 0.22, 0.32, easeEmphatic);
+    bd.pin.style.opacity = pe.toFixed(3);
+    bd.pin.style.transform =
+      `rotate(${bd.pin.__deg}deg) scale(${lerp(1.9, 1, pe).toFixed(3)}) ` +
+      `translateY(${((1 - pe) * -18).toFixed(1)}px)`;
+  });
+  q.scale.style.opacity = at(t, 5.92, 0.50) * 0.95;
+}
+
+/* III — the branch draws, the labels arrive taped, the bird lands last. */
+function poseIII(p, t) {
+  const q = P[2];
+  const hp = at(t, 6.98, 0.60, easeEntrance);
+  const hpose = tapedCard(hp, 0, { rise: 20, tilt: -1.8 });
+  q.head.style.transform = hpose.transform;
+  q.head.style.opacity = hpose.opacity;
+  q.head.style.boxShadow = hpose.boxShadow;
+  q.headTape.style.opacity = at(t, 7.20, 0.30).toFixed(3);
+  q.headTape.style.transform = `rotate(${q.headTape.__deg}deg)`;
+  q.labs.forEach((l, i) => {
+    const e = at(t, 7.52 + i * 0.13, 0.62, easeEntrance);
+    const pose = tapedCard(e, i + 1, { rise: 26 });
+    l.card.style.transform = pose.transform;
+    l.card.style.opacity = pose.opacity;
+    l.card.style.boxShadow = pose.boxShadow;
+    const te = at(t, 7.70 + i * 0.13, 0.28, easeEmphatic);
+    l.tp.style.opacity = te.toFixed(3);
+    l.tp.style.transform = `rotate(${l.tp.__deg}deg) scale(${(0.5 + 0.5 * te).toFixed(3)})`;
+  });
+  const be = at(t, 8.34, 0.62, easeEntrance);
+  q.bird.style.opacity = be.toFixed(3);
+  q.bird.style.transform =
+    `translate(${((1 - be) * 54).toFixed(1)}px,${((1 - be) * -46).toFixed(1)}px) ` +
+    `rotate(${lerp(-9, 0, be).toFixed(2)}deg)`;
+}
+
+/* IV — the mount lands, the initial flips in, the answer wipes across. */
+function poseIV(p, t) {
+  const q = P[3];
+  const e = at(t, 9.70, 0.66, easeEntrance);
+  const pose = tapedCard(e, 2, { rise: 30, tilt: 1.7 });
+  q.leaf.style.transform = pose.transform;
+  q.leaf.style.opacity = pose.opacity;
+  q.mount.style.transform = pose.transform;
+  q.mount.style.opacity = pose.opacity;
+  const ie = at(t, 10.10, 0.44, easeEmphatic);
+  q.init.style.opacity = ie.toFixed(3);
+  q.init.style.transform =
+    `${pose.transform} scale(${lerp(0.6, 1, ie).toFixed(3)}) rotate(${lerp(-14, 0, ie).toFixed(2)}deg)`;
+  q.bars.forEach((b, i) => {
+    const be = at(t, 10.26 + i * 0.07, 0.40, easeEntrance);
+    b.style.transform = `${pose.transform} scaleX(${be.toFixed(3)})`;
+    b.style.opacity = (0.46 * be).toFixed(3);
+  });
+  q.script.style.opacity = at(t, 10.86, 0.62).toFixed(3);
+  q.script.style.transform = `translateY(${((1 - at(t, 10.86, 0.62)) * 12).toFixed(1)}px)`;
+  q.nb.style.opacity = (at(t, 11.20, 0.50) * 0.95).toFixed(3);
+  const ce = at(t, 10.02, 0.40, easeEmphatic);
+  q.clip.style.opacity = ce.toFixed(3);
+  q.clip.style.transform = `rotate(${q.clip.__deg}deg) translateY(${((1 - ce) * -22).toFixed(1)}px)`;
+  const te = at(t, 10.40, 0.34, easeEmphatic);
+  q.tape.style.opacity = te.toFixed(3);
+  q.tape.style.transform = `rotate(${q.tape.__deg}deg) scale(${(0.55 + 0.45 * te).toFixed(3)})`;
+}
+
+/* V — the chart rotates into register; the traveller runs the ORGANIC ring. */
+function poseV(p, t) {
+  const q = P[4];
+  const e = at(t, 12.06, 0.86, easeEmphatic);
+  q.chart.style.opacity = e.toFixed(3);
+  q.chart.style.transform =
+    `rotate(${lerp(-7.5, 0, e).toFixed(2)}deg) scale(${lerp(1.06, 1, e).toFixed(4)})`;
+  q.labs.forEach((l, i) => {
+    const le = at(t, 12.48 + i * 0.10, 0.42, easeEntrance);
+    l.setAttribute('opacity', le.toFixed(3));
+  });
+  const pe = at(t, 12.40, 0.34, easeEmphatic);
+  q.pin.style.opacity = pe.toFixed(3);
+  q.pin.style.transform = `rotate(${q.pin.__deg}deg) scale(${lerp(1.8, 1, pe).toFixed(3)})`;
+  const te = at(t, 12.24, 0.34, easeEmphatic);
+  q.tape.style.opacity = te.toFixed(3);
+  q.tape.style.transform = `rotate(${q.tape.__deg}deg) scale(${(0.55 + 0.45 * te).toFixed(3)})`;
+  q.note.style.opacity = (at(t, 12.90, 0.50) * 0.95).toFixed(3);
+
+  const live = at(t, 12.85, 0.42) * (1 - at(t, 13.62, 0.24));
+  const r = 168;
+  const a0 = Math.PI * 0.17, a1 = a0 - Math.PI * 0.82;
+  const a = lerp(a0, a1, easeInOut(clamp((t - 12.85) / 1.05)));
+  const b = Math.min(a0, a + 0.72);
+  q.trail.setAttribute('d',
+    `M ${(HX + Math.cos(b) * r).toFixed(1)},${(HY + Math.sin(b) * r).toFixed(1)}` +
+    ` A ${r},${r} 0 0 0 ${(HX + Math.cos(a) * r).toFixed(1)},${(HY + Math.sin(a) * r).toFixed(1)}`);
+  q.trail.setAttribute('opacity', (live * 0.6).toFixed(3));
+  q.dot.setAttribute('cx', (HX + Math.cos(a) * r).toFixed(1));
+  q.dot.setAttribute('cy', (HY + Math.sin(a) * r).toFixed(1));
+  q.dot.setAttribute('opacity', live.toFixed(3));
+}
+
+window.seek(0);
+</script>
+</body></html>

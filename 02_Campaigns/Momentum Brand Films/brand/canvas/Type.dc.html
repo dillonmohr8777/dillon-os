@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Instrument+Serif:ital@0;1&family=Nunito+Sans:wght@400;700;800&display=swap">
+  <style>
+    body { margin:0; }
+    a { color:#A35309; } a:hover { color:#7d3f07; }
+    .kit { font-family:"Nunito Sans", system-ui, sans-serif; color:#14181B; }
+    .disp { font-family:"Archivo", "Arial Black", sans-serif; font-variation-settings:"wdth" 112,"wght" 800; letter-spacing:-.025em; line-height:.92; }
+    .cond { font-family:"Archivo", sans-serif; font-variation-settings:"wdth" 70,"wght" 700; letter-spacing:.14em; text-transform:uppercase; }
+    .ed   { font-family:"Instrument Serif", Georgia, serif; font-weight:400; }
+    .lab  { font-family:"Nunito Sans", sans-serif; font-weight:800; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:#8E8578; }
+    .plate { background:#FFFEFA; border:1px solid #DCD6CC; box-shadow:10px 12px 0 rgba(226,113,19,.16); }
+    .tape { position:absolute; height:26px; background:rgba(214,203,178,.72); border-left:1px dashed rgba(0,0,0,.06); border-right:1px dashed rgba(0,0,0,.06); }
+  </style>
+</helmet>
+
+<div class="kit" style="width:1240px;height:900px;background:#FBF8F4;padding:60px 68px;position:relative;overflow:hidden">
+  <div class="lab">The type system</div>
+  <div class="disp" style="font-size:52px;margin-top:10px">THREE VOICES</div>
+
+  <div style="display:flex;flex-direction:column;gap:34px;margin-top:40px">
+    <div style="border-top:2px solid #14181B;padding-top:18px">
+      <div style="display:flex;justify-content:space-between;align-items:baseline">
+        <span class="lab">Archivo Variable — display</span>
+        <span class="lab">wdth 62–125 · wght 100–900</span>
+      </div>
+      <div class="disp" style="font-size:80px;margin-top:12px">MOMENTUM</div>
+      <div style="display:flex;gap:26px;align-items:baseline;margin-top:10px">
+        <span style="font-family:Archivo,sans-serif;font-variation-settings:'wdth' 125,'wght' 900;font-size:30px">EXPANDED 900</span>
+        <span style="font-family:Archivo,sans-serif;font-variation-settings:'wdth' 62,'wght' 700;font-size:30px;letter-spacing:.1em">CONDENSED 700</span>
+        <span style="font-family:Archivo,sans-serif;font-variation-settings:'wdth' 100,'wght' 300;font-size:30px">LIGHT 300</span>
+      </div>
+      <div class="ed" style="font-size:19px;color:#636465;margin-top:12px">Replaces Archivo Black. Same family Momentum already owns — one weight becomes a full width and weight range.</div>
+    </div>
+
+    <div style="border-top:2px solid #14181B;padding-top:18px">
+      <div style="display:flex;justify-content:space-between;align-items:baseline">
+        <span class="lab">Instrument Serif — editorial</span>
+        <span class="lab">The one new family · slate-level amendment</span>
+      </div>
+      <div class="ed" style="font-size:62px;line-height:1.05;margin-top:10px;color:#173C2C">Demand leaves traces.<span style="font-style:italic"> We read them.</span></div>
+      <div class="ed" style="font-size:19px;color:#636465;margin-top:12px">Carries the quiet beats and the figure captions. Never set below 19px, never used for interface text.</div>
+    </div>
+
+    <div style="border-top:2px solid #14181B;padding-top:18px">
+      <div style="display:flex;justify-content:space-between;align-items:baseline">
+        <span class="lab">Nunito Sans — body, UI, eyebrow</span>
+        <span class="lab">400 / 700 / 800</span>
+      </div>
+      <div style="font-size:24px;line-height:1.45;margin-top:10px;max-width:840px">Every interface element in the films — message bubbles, search results, map packs, checklists — is set here, because it has to read as software rather than as a poster.</div>
+    </div>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

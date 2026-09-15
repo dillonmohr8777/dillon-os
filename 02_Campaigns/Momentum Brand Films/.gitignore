@@ -1,0 +1,5 @@
+# Rendered output is regenerable from films/ + brand/ via render/capture.py.
+# The repo already ignores *.mp4 globally; keep the heavy QA stills out too and
+# commit only the poster frames, which are the visual record of what shipped.
+out/*
+!out/posters/

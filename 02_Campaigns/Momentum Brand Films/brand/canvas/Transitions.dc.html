@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Instrument+Serif:ital@0;1&family=Nunito+Sans:wght@400;700;800&display=swap">
+  <style>
+    body { margin:0; }
+    a { color:#A35309; } a:hover { color:#7d3f07; }
+    .kit { font-family:"Nunito Sans", system-ui, sans-serif; color:#14181B; }
+    .disp { font-family:"Archivo", "Arial Black", sans-serif; font-variation-settings:"wdth" 112,"wght" 800; letter-spacing:-.025em; line-height:.92; }
+    .cond { font-family:"Archivo", sans-serif; font-variation-settings:"wdth" 70,"wght" 700; letter-spacing:.14em; text-transform:uppercase; }
+    .ed   { font-family:"Instrument Serif", Georgia, serif; font-weight:400; }
+    .lab  { font-family:"Nunito Sans", sans-serif; font-weight:800; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:#8E8578; }
+    .plate { background:#FFFEFA; border:1px solid #DCD6CC; box-shadow:10px 12px 0 rgba(226,113,19,.16); }
+    .tape { position:absolute; height:26px; background:rgba(214,203,178,.72); border-left:1px dashed rgba(0,0,0,.06); border-right:1px dashed rgba(0,0,0,.06); }
+  </style>
+</helmet>
+
+<div class="kit" style="width:1400px;height:820px;background:#F6F5EF;padding:58px 72px;position:relative;overflow:hidden">
+  <div class="lab">The transition devices</div>
+  <div class="disp" style="font-size:52px;margin-top:10px">HOW BEATS BREAK</div>
+  <div class="ed" style="font-size:22px;color:#636465;margin-top:8px;max-width:820px">Four devices, used across all six films so the slate reads as one system rather than six one-offs.</div>
+
+  <div style="display:grid;grid-template-columns:repeat(2, minmax(0,1fr));gap:30px;margin-top:36px">
+    <div class="plate" style="padding:24px;position:relative">
+      <div class="lab">Device 01</div>
+      <div class="disp" style="font-size:30px;margin-top:6px">TORN WIPE</div>
+      <div style="height:110px;margin-top:16px;position:relative;overflow:hidden;background:#0E1417">
+        <div style="position:absolute;inset:0;background:#FBF8F4;clip-path:polygon(0 0,58% 0,55% 18%,60% 34%,53% 52%,59% 71%,54% 88%,57% 100%,0 100%)"></div>
+        <span class="cond" style="position:absolute;right:16px;top:44px;font-size:12px;color:#3897CC">next beat</span>
+      </div>
+      <div class="ed" style="font-size:18px;color:#636465;margin-top:12px">A torn paper edge sweeps across and the next beat is already behind it. Replaces every cross-fade.</div>
+    </div>
+
+    <div class="plate" style="padding:24px;position:relative">
+      <div class="lab">Device 02</div>
+      <div class="disp" style="font-size:30px;margin-top:6px">TAPED CARD</div>
+      <div style="height:110px;margin-top:16px;position:relative;background:#EBECE1">
+        <div style="position:absolute;left:64px;top:18px;width:230px;background:#FFFEFA;border:1px solid #DCD6CC;padding:12px 14px;transform:rotate(-2.4deg);box-shadow:6px 7px 0 rgba(226,113,19,.18)">
+          <span style="font-size:15px;font-weight:700">11 calls. 9 were real people.</span>
+        </div>
+        <div class="tape" style="width:78px;left:74px;top:8px;transform:rotate(-9deg)"></div>
+      </div>
+      <div class="ed" style="font-size:18px;color:#636465;margin-top:12px">Text boxes arrive taped and slightly off-axis, never centred and square. The tilt is between 1.5 and 3 degrees, never more.</div>
+    </div>
+
+    <div class="plate" style="padding:24px;position:relative">
+      <div class="lab">Device 03</div>
+      <div class="disp" style="font-size:30px;margin-top:6px">BIRDS SCATTER</div>
+      <div style="height:110px;margin-top:16px;position:relative;background:#EBECE1;overflow:hidden">
+        <img src="04-birds.jpg" alt="" style="position:absolute;left:8px;top:-52px;width:120px;transform:rotate(-9deg)">
+        <img src="04-birds.jpg" alt="" style="position:absolute;left:150px;top:-30px;width:88px;transform:rotate(13deg);opacity:.72">
+        <img src="04-birds.jpg" alt="" style="position:absolute;left:258px;top:-64px;width:64px;transform:rotate(-22deg);opacity:.5">
+      </div>
+      <div class="ed" style="font-size:18px;color:#636465;margin-top:12px">The engraved birds cut loose from their plate and scatter out of frame, taking the beat with them.</div>
+    </div>
+
+    <div class="plate" style="padding:24px;position:relative">
+      <div class="lab">Device 04</div>
+      <div class="disp" style="font-size:30px;margin-top:6px">PLATE UNDER LENS</div>
+      <div style="height:110px;margin-top:16px;position:relative;background:#0E1417;overflow:hidden">
+        <div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:104px;height:104px;border-radius:50%;overflow:hidden;border:2px solid #8E8578">
+          <img src="08-celestial.jpg" alt="" style="width:190px;margin-left:-42px;margin-top:-40px">
+        </div>
+      </div>
+      <div class="ed" style="font-size:18px;color:#636465;margin-top:12px">A hard circular mask holds still while a strip of plates slides beneath it. The lens never cuts — it travels.</div>
+    </div>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

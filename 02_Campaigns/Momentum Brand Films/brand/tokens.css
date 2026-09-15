@@ -1,0 +1,102 @@
+/* Momentum Brand Films — token layer.
+   Colour, type, space, motion for every film in this slate.
+   Values are literals from the Momentum design system (momentum-brand-system skill,
+   reference table) plus --m-mark, sampled from the official mark PNG.
+   Nothing is derived at runtime. Measured ratios live in brand/contrast.json. */
+
+@import url("./fonts/fonts.css");
+
+:root {
+  /* Surfaces — light */
+  --m-paper:        #FBF8F4;
+  --m-panel:        #F0ECE5;
+  --m-ink:          #14181B;
+  --m-muted:        #636465;
+  --m-line:         #DCD6CC;   /* decorative only, not AA */
+  --m-line-strong:  #8E8578;
+
+  /* Surfaces — dark */
+  --m-deep:         #0E1417;
+  --m-deep-raised:  #1A2226;
+  --m-on-deep:      #F4F1EC;
+  --m-on-deep-muted:#8A9296;
+
+  /* Brand */
+  --m-brand:        #155E86;   /* speaks on light */
+  --m-brand-lift:   #3897CC;   /* speaks on dark */
+  --m-on-brand:     #FFFFFF;
+  --m-mark:         #2A80C2;   /* the literal logo blue, sampled from the official mark */
+
+  /* Warm editorial set — carried over from the Bridge botanical theme
+     (bridge-software-frontend app/globals.css, [data-theme="botanical"]).
+     The paper ground the collage material sits on. Measured in contrast.json. */
+  --m-warm-canvas:  #F6F5EF;
+  --m-warm-surface: #FFFEFA;
+  --m-warm-panel:   #EBECE1;
+  --m-warm-ink:     #173C2C;
+  --m-warm-muted:   #647067;
+  --m-warm-line:    #D4D9CD;
+  --m-warm-signal:  #B45F2A;   /* FILL ONLY. Measured 4.17:1 as text on --m-warm-canvas,
+                                  under the 4.5 threshold. The orange that SPEAKS on the warm
+                                  ground is --m-signal-ink #A35309 (5.06:1). Same split the
+                                  system already makes between --m-signal and --m-signal-ink. */
+
+  /* Signal */
+  --m-signal:       #E27113;   /* fills; speaks on dark */
+  --m-signal-ink:   #A35309;   /* speaks on light */
+  --m-on-signal:    #14181B;   /* never white on signal */
+  --m-focus:        #A35309;
+
+  /* Type — amended 2026-09-06 for the brand-film slate.
+     Archivo Black is superseded by Archivo Variable: the SAME family Momentum
+     already owns, but with wdth 62-125 and wght 100-900 instead of one weight.
+     Set cuts with font-variation-settings, e.g.
+       display   : "wdth" 112, "wght" 800
+       expanded  : "wdth" 125, "wght" 900
+       condensed : "wdth"  70, "wght" 700   (labels, tickers, eyebrows)
+     Instrument Serif is the ONE new family, added as a documented slate-level
+     amendment to the two-family rule. It carries the quiet beats and the
+     figure captions. Never below 19px, never used for interface text. */
+  --m-font-display:   "Archivo", "Arial Black", sans-serif;
+  --m-font-editorial: "Instrument Serif", Georgia, serif;
+  --m-font-text:      "Nunito Sans", system-ui, -apple-system, sans-serif;
+  --m-font-script:    "Caveat", cursive;
+  --m-vf-display:   "wdth" 112, "wght" 800;
+  --m-vf-expanded:  "wdth" 125, "wght" 900;
+  --m-vf-condensed: "wdth"  70, "wght" 700;
+  --m-vf-light:     "wdth" 100, "wght" 300;
+
+  /* Space */
+  --m-s-1: .25rem; --m-s-2: .5rem;  --m-s-3: .75rem; --m-s-4: 1rem;
+  --m-s-5: 1.5rem; --m-s-6: 2rem;   --m-s-7: 3rem;   --m-s-8: 4rem;
+  --m-s-9: 6rem;   --m-s-10: 8rem;
+
+  /* Radius */
+  --m-r-sm: 8px; --m-r-md: 16px; --m-r-lg: 26px; --m-r-pill: 999px;
+
+  /* Elevation — soft */
+  --m-soft-1: 0 1px 2px rgba(14,20,23,.08), 0 6px 18px rgba(14,20,23,.06);
+  --m-soft-2: 0 18px 40px -22px rgba(14,20,23,.45);
+  --m-soft-3: 0 38px 90px -30px rgba(14,20,23,.5);
+  /* Elevation — block (hard offset, zero blur; the anti-glow lift) */
+  --m-block-sm: 8px 10px 0 rgba(226,113,19,.28);
+  --m-block-md: 14px 16px 0 rgba(226,113,19,.28);
+  --m-block-lg: 24px 28px 0 rgba(226,113,19,.28);
+
+  /* Motion */
+  --m-instant: 120ms; --m-fast: 220ms; --m-base: 500ms; --m-slow: 800ms;
+  --m-ease-standard: cubic-bezier(.2,.7,.2,1);
+  --m-ease-entrance: cubic-bezier(.16,1,.3,1);
+  --m-ease-emphatic: cubic-bezier(.85,0,.15,1);
+  --m-stagger: 70ms;
+}
+
+/* Films are rendered frame-by-frame by render/capture.py, which drives
+   window.seek(t). No CSS transitions or keyframes may run: every visual state
+   must be a pure function of t, or frames will tear. */
+*, *::before, *::after {
+  animation: none !important;
+  transition: none !important;
+  box-sizing: border-box;
+}
+html, body { margin: 0; padding: 0; background: var(--m-paper); }

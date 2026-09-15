@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Instrument+Serif:ital@0;1&family=Nunito+Sans:wght@400;700;800&display=swap">
+  <style>
+    body { margin:0; }
+    a { color:#A35309; } a:hover { color:#7d3f07; }
+    .kit { font-family:"Nunito Sans", system-ui, sans-serif; color:#14181B; }
+    .disp { font-family:"Archivo", "Arial Black", sans-serif; font-variation-settings:"wdth" 112,"wght" 800; letter-spacing:-.025em; line-height:.92; }
+    .cond { font-family:"Archivo", sans-serif; font-variation-settings:"wdth" 70,"wght" 700; letter-spacing:.14em; text-transform:uppercase; }
+    .ed   { font-family:"Instrument Serif", Georgia, serif; font-weight:400; }
+    .lab  { font-family:"Nunito Sans", sans-serif; font-weight:800; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:#8E8578; }
+    .plate { background:#FFFEFA; border:1px solid #DCD6CC; box-shadow:10px 12px 0 rgba(226,113,19,.16); }
+    .tape { position:absolute; height:26px; background:rgba(214,203,178,.72); border-left:1px dashed rgba(0,0,0,.06); border-right:1px dashed rgba(0,0,0,.06); }
+  </style>
+</helmet>
+
+<div class="kit" style="width:1400px;height:900px;background:#FBF8F4;position:relative;overflow:hidden;padding:60px 72px">
+  <div class="lab">The material</div>
+  <div class="disp" style="font-size:56px;margin-top:10px">EIGHT PLATES</div>
+  <div class="ed" style="font-size:23px;color:#636465;margin-top:8px;max-width:760px">Generated once, cut to alpha, reused across all six films. Nothing here carries type or a logo, so it composites under code-drawn text without fighting it.</div>
+  <div style="display:grid;grid-template-columns:repeat(4, minmax(0,1fr));gap:34px;margin-top:44px">
+    <div style="width:300px;transform:rotate(-2.1deg);position:relative">
+      <div class="plate" style="padding:12px"><img src="01-torn-edge.jpg" alt="" style="width:100%;display:block;aspect-ratio:16/9;object-fit:cover">
+        <div class="lab" style="margin-top:9px">Torn edge</div>
+        <div class="ed" style="font-size:19px;line-height:1.3;color:#173C2C;margin-top:3px">The wipe between beats</div></div>
+      <div class="tape" style="width:92px;left:88px;top:-12px;transform:rotate(3.8deg)"></div></div>
+    <div style="width:300px;transform:rotate(1.6deg);position:relative">
+      <div class="plate" style="padding:12px"><img src="02-tape.jpg" alt="" style="width:100%;display:block;aspect-ratio:16/9;object-fit:cover">
+        <div class="lab" style="margin-top:9px">Tape</div>
+        <div class="ed" style="font-size:19px;line-height:1.3;color:#173C2C;margin-top:3px">Fixes a card to the frame</div></div>
+      <div class="tape" style="width:92px;left:64px;top:-12px;transform:rotate(-2.9deg)"></div></div>
+    <div style="width:300px;transform:rotate(-1.2deg);position:relative">
+      <div class="plate" style="padding:12px"><img src="03-manila.jpg" alt="" style="width:100%;display:block;aspect-ratio:16/9;object-fit:cover">
+        <div class="lab" style="margin-top:9px">Manila</div>
+        <div class="ed" style="font-size:19px;line-height:1.3;color:#173C2C;margin-top:3px">The warm ground</div></div>
+      <div class="tape" style="width:92px;left:102px;top:-12px;transform:rotate(2.2deg)"></div></div>
+    <div style="width:300px;transform:rotate(2.3deg);position:relative">
+      <div class="plate" style="padding:12px"><img src="06-graph.jpg" alt="" style="width:100%;display:block;aspect-ratio:16/9;object-fit:cover">
+        <div class="lab" style="margin-top:9px">Graph</div>
+        <div class="ed" style="font-size:19px;line-height:1.3;color:#173C2C;margin-top:3px">Where data sits</div></div>
+      <div class="tape" style="width:92px;left:72px;top:-12px;transform:rotate(-4.1deg)"></div></div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(4, minmax(0,1fr));gap:34px;margin-top:30px">
+    <div style="width:300px;transform:rotate(1.9deg);position:relative">
+      <div class="plate" style="padding:12px"><img src="04-birds.jpg" alt="" style="width:100%;display:block;aspect-ratio:16/9;object-fit:cover">
+        <div class="lab" style="margin-top:9px">Birds</div>
+        <div class="ed" style="font-size:19px;line-height:1.3;color:#173C2C;margin-top:3px">Scatter to break a beat</div></div>
+      <div class="tape" style="width:92px;left:80px;top:-12px;transform:rotate(-3.4deg)"></div></div>
+    <div style="width:300px;transform:rotate(-2.4deg);position:relative">
+      <div class="plate" style="padding:12px"><img src="05-botanical.jpg" alt="" style="width:100%;display:block;aspect-ratio:16/9;object-fit:cover">
+        <div class="lab" style="margin-top:9px">Botanical</div>
+        <div class="ed" style="font-size:19px;line-height:1.3;color:#173C2C;margin-top:3px">The query as specimen</div></div>
+      <div class="tape" style="width:92px;left:96px;top:-12px;transform:rotate(4.3deg)"></div></div>
+    <div style="width:300px;transform:rotate(1.1deg);position:relative">
+      <div class="plate" style="padding:12px"><img src="08-celestial.jpg" alt="" style="width:100%;display:block;aspect-ratio:16/9;object-fit:cover">
+        <div class="lab" style="margin-top:9px">Celestial</div>
+        <div class="ed" style="font-size:19px;line-height:1.3;color:#173C2C;margin-top:3px">Where they look</div></div>
+      <div class="tape" style="width:92px;left:68px;top:-12px;transform:rotate(-2.0deg)"></div></div>
+    <div style="width:300px;transform:rotate(-1.7deg);position:relative">
+      <div class="plate" style="padding:12px"><img src="07-fasteners.jpg" alt="" style="width:100%;display:block;aspect-ratio:16/9;object-fit:cover">
+        <div class="lab" style="margin-top:9px">Fasteners</div>
+        <div class="ed" style="font-size:19px;line-height:1.3;color:#173C2C;margin-top:3px">Pins a plate down</div></div>
+      <div class="tape" style="width:92px;left:84px;top:-12px;transform:rotate(3.1deg)"></div></div>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

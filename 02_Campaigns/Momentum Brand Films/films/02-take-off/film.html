@@ -1,0 +1,1059 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Momentum — Take Off</title>
+<link rel="stylesheet" href="../../brand/tokens.css">
+<style>
+  html,body { background:var(--m-warm-canvas); }
+  .stage { position:relative; width:1920px; height:1080px; overflow:hidden;
+           background:var(--m-warm-canvas); color:var(--m-ink);
+           font-family:var(--m-font-text); -webkit-font-smoothing:antialiased; }
+
+  /* ── layers: each beat is an opaque sheet; the sheet above it is TORN AWAY
+        to reveal it. There is not one cross-fade in this film. ───────────── */
+  .layer { position:absolute; inset:0; overflow:hidden; isolation:isolate;
+           will-change:clip-path; }
+
+  /* ── the type system: three voices, four cuts ────────────────────────── */
+  .d  { font-family:var(--m-font-display); font-variation-settings:var(--m-vf-display);
+        letter-spacing:-.025em; line-height:.92; }
+  .dx { font-family:var(--m-font-display); font-variation-settings:var(--m-vf-expanded);
+        letter-spacing:-.03em; line-height:.9; }
+  .dc { font-family:var(--m-font-display); font-variation-settings:var(--m-vf-condensed);
+        letter-spacing:.17em; text-transform:uppercase; line-height:1; }
+  .ed { font-family:var(--m-font-editorial); font-weight:400; line-height:1.02; }
+  .ui { font-family:var(--m-font-text); }
+  .acc { color:var(--m-signal-ink); }
+
+  /* ── material ────────────────────────────────────────────────────────── */
+  .tex  { position:absolute; inset:0; background-repeat:no-repeat;
+          background-position:center; background-size:cover;
+          mix-blend-mode:multiply; pointer-events:none;
+          filter:saturate(.5) brightness(1.07); }
+  #tx1 { background-size:118% 118%; background-position:22% 30%; opacity:.20; }
+  #tx2 { background-size:104% 104%; background-position:70% 62%; }
+  #tx3 { background-size:142% 142%; background-position:32% 82%; opacity:.17; }
+  #tx4 { background-size:106% 106%; background-position:62% 18%; opacity:.26; }
+  #tx5 { background-size:132% 132%; background-position:12% 52%; opacity:.15; }
+  #tx6 { background-size:126% 126%; background-position:84% 36%; opacity:.15; }
+  #tx8 { background-size:114% 114%; background-position:70% 44%; opacity:.15; }
+  #tx9 { background-size:122% 122%; background-position:46% 72%; opacity:.17; }
+  /* a real torn edge, cut to alpha and used as a mask so it can carry a token
+     colour. The numbers map the plate's alpha bbox exactly onto the element. */
+  .torn { position:absolute; -webkit-mask-repeat:no-repeat; mask-repeat:no-repeat;
+          -webkit-mask-size:117.7% 160.4%; mask-size:117.7% 160.4%;
+          -webkit-mask-position:-8.76% 0%; mask-position:-8.76% 0%; }
+  .tape { position:absolute; background-repeat:no-repeat; opacity:.94;
+          filter:saturate(.86); pointer-events:none; }
+  .fast { position:absolute; background-repeat:no-repeat; pointer-events:none; }
+  .bird { position:absolute; will-change:transform,opacity;
+          filter:contrast(1.12) brightness(1.14); }
+
+  /* the plate: warm surface, hairline, hard offset. Never a blur. */
+  .plate { background:var(--m-warm-surface); border:1px solid var(--m-warm-line);
+           box-shadow:14px 16px 0 rgba(226,113,19,.20); }
+
+  /* ═══ B1 ═══════════════════════════════════════════════════════════════ */
+  #b1 { z-index:91; background:var(--m-warm-canvas); }
+  #eyeL { position:absolute; left:120px; top:98px; font-size:22px; color:var(--m-warm-ink); }
+  #eyeR { position:absolute; right:120px; top:98px; font-size:22px; color:var(--m-warm-ink); }
+  #eyeRule { position:absolute; left:120px; right:120px; top:150px; height:1px;
+             background:var(--m-warm-line); }
+  #l1 { position:absolute; left:0; width:1920px; top:436px; text-align:center;
+        font-size:114px; color:var(--m-warm-ink); }
+  #l1u { height:24px; background:var(--m-signal-ink); }
+
+  /* ═══ B2 ═══════════════════════════════════════════════════════════════ */
+  #b2 { z-index:90; background:var(--m-paper); }
+  #b2 .tex { opacity:.17; transform:scaleX(-1); }
+  #b2band { left:0; top:556px; width:1920px; height:660px;
+            background-color:var(--m-warm-panel); background-size:104% auto;
+            background-position:38% 26%; background-blend-mode:multiply; }
+  #l2a { position:absolute; left:124px; top:700px; font-size:54px; color:var(--m-ink); }
+  #l2b { position:absolute; left:120px; top:772px; font-size:152px; color:var(--m-ink);
+         white-space:nowrap; }
+  #b2fig { position:absolute; right:124px; top:700px; font-size:22px; color:var(--m-warm-ink); }
+  #l2hl { background:var(--m-signal); }
+  #l2b .hl { color:var(--m-on-signal); }
+
+  /* ═══ B3 ═══════════════════════════════════════════════════════════════ */
+  #b3 { z-index:89; background:var(--m-warm-panel); }
+  #b3head { position:absolute; left:120px; top:126px; font-size:34px; color:var(--m-ink); }
+  #b3rule { position:absolute; left:120px; top:184px; height:3px; background:var(--m-ink); }
+  #cards { position:absolute; inset:0; perspective:1500px; perspective-origin:52% 44%; }
+  .card { position:absolute; transform-origin:50% 50%; will-change:transform,opacity; }
+  .figno { position:absolute; font-size:19px; color:var(--m-warm-ink); letter-spacing:.2em; }
+  #browser { left:-186px; top:282px; width:990px; height:626px; }
+  .brwin { position:absolute; inset:0; background:var(--m-warm-surface);
+           border:1px solid var(--m-warm-line); box-shadow:16px 18px 0 rgba(226,113,19,.20);
+           overflow:hidden; }
+  .chrome { height:56px; background:var(--m-warm-panel);
+            border-bottom:1px solid var(--m-warm-line);
+            display:flex; align-items:center; gap:10px; padding:0 22px; }
+  .dot { width:11px; height:11px; border-radius:50%; background:var(--m-warm-muted); opacity:.5; }
+  .urlpill { margin-left:16px; height:28px; flex:1; max-width:440px; border-radius:999px;
+             background:var(--m-warm-surface); border:1px solid var(--m-warm-line);
+             display:flex; align-items:center; padding:0 16px;
+             font-size:14px; font-weight:700; color:var(--m-warm-muted); letter-spacing:.03em; }
+  #bodyA { position:absolute; left:0; right:0; top:56px; bottom:0; }
+  #bodyA .rail { position:absolute; left:0; top:0; bottom:0; width:78px;
+                 background:var(--m-warm-panel); border-right:1px solid var(--m-warm-line); }
+  #bodyA .rail i { display:block; width:28px; height:8px; border-radius:4px;
+                   background:var(--m-warm-muted); opacity:.42; margin:28px auto 0; }
+  #bodyA .rail i:first-child { background:var(--m-mark); opacity:1; margin-top:32px; }
+  #bodyA .hd { position:absolute; left:118px; top:34px; width:230px; height:15px;
+               border-radius:4px; background:var(--m-warm-muted); opacity:.5; }
+  #bodyA .hd2 { position:absolute; left:118px; top:64px; width:130px; height:11px;
+                border-radius:4px; background:var(--m-warm-line); }
+  #bodyA .chart { position:absolute; left:118px; top:112px; width:820px; height:250px; }
+  #bodyA .row { position:absolute; left:118px; height:12px; border-radius:6px;
+                background:var(--m-warm-line); }
+  #phone { left:1652px; top:-118px; width:330px; height:660px; }
+  .phwin { position:absolute; inset:0; border-radius:40px; border:9px solid var(--m-ink);
+           background:var(--m-ink); box-shadow:16px 18px 0 rgba(226,113,19,.20); overflow:hidden; }
+  .phwin .scr { position:absolute; inset:0; background:var(--m-warm-surface);
+                border-radius:31px; overflow:hidden; }
+  .phwin .nav { height:48px; background:var(--m-warm-panel);
+                border-bottom:1px solid var(--m-warm-line); }
+  .phwin .hero { height:172px; background:var(--m-brand); }
+  .phwin .ln { height:12px; border-radius:6px; background:var(--m-warm-line); margin:18px 20px 0; }
+  .phwin .cta { height:44px; border-radius:999px; background:var(--m-signal); margin:26px 20px 0; }
+  #mapc { left:680px; top:800px; width:600px; height:420px; }
+  .mpwin { position:absolute; inset:0; background:var(--m-warm-surface);
+           border:1px solid var(--m-warm-line); box-shadow:16px 18px 0 rgba(226,113,19,.20);
+           overflow:hidden; }
+  #cap { position:absolute; left:120px; top:1004px; font-size:21px; color:var(--m-warm-ink); }
+
+  /* ═══ B4 ═══════════════════════════════════════════════════════════════ */
+  #b4 { z-index:88; background:var(--m-warm-canvas); }
+  #lenswrap { position:absolute; inset:0; }
+  #strip { position:absolute; left:344px; top:398px; width:2400px; height:336px;
+           will-change:transform; }
+  .splate { position:absolute; top:0; width:520px; height:336px; padding:24px 30px;
+            background:var(--m-warm-surface); border:1px solid var(--m-warm-line);
+            box-shadow:9px 10px 0 rgba(226,113,19,.18); }
+  .splate .hdr { font-size:19px; color:var(--m-warm-ink); letter-spacing:.2em; }
+  #lensring { position:absolute; border-radius:50%; border:4px solid var(--m-ink); }
+  #lenstick { position:absolute; border-radius:50%; border:1px solid var(--m-signal-ink); }
+  #b4head { position:absolute; left:1084px; top:376px; }
+  .clip { display:block; overflow:hidden; padding:.1em 0 .18em; }
+  #b4head .l { font-size:128px; color:var(--m-ink); display:block; }
+  #b4note { position:absolute; right:120px; bottom:56px; font-size:18px; color:var(--m-warm-ink); }
+
+  /* ═══ B5 ═══════════════════════════════════════════════════════════════ */
+  #b5 { z-index:87; background:var(--m-paper); }
+  #b5half { position:absolute; left:0; top:0; width:864px; height:1080px;
+            background:var(--m-warm-panel); }
+  #b5edge { position:absolute; left:862px; top:0; width:3px; height:1080px;
+            background:var(--m-line-strong); }
+  #mapcard { position:absolute; left:104px; top:222px; width:668px; height:596px;
+             background:var(--m-warm-surface); border:1px solid var(--m-warm-line);
+             box-shadow:18px 20px 0 rgba(226,113,19,.20); overflow:hidden; }
+  #mapcard .mtex { position:absolute; inset:0; background-size:cover;
+                   background-position:center; opacity:.72; mix-blend-mode:multiply; }
+  .pin { position:absolute; width:38px; height:50px; margin-left:-19px; margin-top:-50px;
+         transform-origin:50% 100%; }
+  #b5head { position:absolute; left:948px; top:236px; }
+  #b5head .l { display:block; font-size:108px; color:var(--m-ink); }
+  #pack { position:absolute; left:948px; top:560px; width:740px; }
+  .prow { position:absolute; left:0; width:740px; height:112px; display:flex;
+          align-items:center; gap:22px; padding:0 24px; background:var(--m-warm-surface);
+          border:1px solid var(--m-warm-line); will-change:transform,opacity; }
+  .prow .rank { width:42px; height:42px; border-radius:50%; background:var(--m-warm-panel);
+                display:flex; align-items:center; justify-content:center;
+                font-size:20px; font-weight:800; color:var(--m-ink); flex:0 0 auto; }
+  .prow .nm { font-size:27px; font-weight:800; color:var(--m-ink); }
+  .prow .ghost { width:320px; height:15px; border-radius:8px;
+                 background:var(--m-warm-muted); opacity:.34; }
+  .prow .stars { display:flex; gap:6px; margin-top:10px; }
+  .prow .stars i { width:14px; height:14px; background:var(--m-warm-muted); opacity:.4; }
+  .prow.win { border:2px solid var(--m-signal-ink); }
+  .prow.win .rank { background:var(--m-signal); color:var(--m-on-signal); }
+  .prow.win .stars i { background:var(--m-signal); opacity:1; }
+
+  /* ═══ B6 ═══════════════════════════════════════════════════════════════ */
+  #b6 { z-index:86; background:var(--m-paper); }
+  #b6 .tex { transform:scale(-1,1); }
+  #pg1 { position:absolute; left:-36px; top:250px; font-size:176px; color:var(--m-ink);
+         white-space:nowrap; }
+  #pg2 { position:absolute; left:-36px; top:428px; font-size:176px; color:var(--m-ink);
+         white-space:nowrap; }
+  #pg3 { position:absolute; left:6px; top:648px; font-size:70px; color:var(--m-warm-ink);
+         font-style:italic; white-space:nowrap; }
+  #pagecol { position:absolute; left:1128px; top:0; width:648px; height:1080px;
+             overflow:hidden;
+             -webkit-mask-image:linear-gradient(180deg, rgba(0,0,0,0) 0, #000 120px, #000 940px, rgba(0,0,0,0) 1064px);
+             mask-image:linear-gradient(180deg, rgba(0,0,0,0) 0, #000 120px, #000 940px, rgba(0,0,0,0) 1064px); }
+  #pagestack { position:absolute; left:24px; top:0; width:600px;
+               background:var(--m-warm-surface);
+               border-left:1px solid var(--m-warm-line);
+               border-right:1px solid var(--m-warm-line); will-change:transform; }
+  #pagestack .pad { padding:0 40px; }
+  #pagestack .ph { height:210px; background:var(--m-brand); }
+  #pagestack .h1 { height:26px; border-radius:6px; background:var(--m-warm-muted);
+                   opacity:.5; margin-top:34px; }
+  #pagestack .p  { height:12px; border-radius:6px; background:var(--m-warm-line); margin-top:15px; }
+  #pagestack .sh { font-size:26px; font-weight:800; color:var(--m-ink); margin-top:40px; }
+  #pagestack .q  { display:flex; align-items:center; justify-content:space-between;
+                   border-bottom:1px solid var(--m-warm-line); padding:20px 0; }
+  #pagestack .q b { display:block; height:14px; border-radius:7px;
+                    background:var(--m-warm-muted); opacity:.44; width:300px; }
+  #pagestack .q u { display:block; width:12px; height:12px;
+                    border-right:2px solid var(--m-warm-muted);
+                    border-bottom:2px solid var(--m-warm-muted); transform:rotate(45deg); }
+  #pagestack .cta { margin:38px 0 40px; height:58px; border-radius:999px;
+                    background:var(--m-signal); color:var(--m-on-signal);
+                    display:flex; align-items:center; justify-content:center;
+                    font-size:19px; font-weight:800; letter-spacing:.1em; }
+  #spec { position:relative; margin:34px 0 10px; height:300px;
+          background:var(--m-warm-canvas); border:1px solid var(--m-warm-line); }
+  #specimg { position:absolute; left:50%; top:14px; width:190px; margin-left:-95px;
+             filter:contrast(1.28) brightness(.94); mix-blend-mode:multiply; }
+
+  /* ═══ B7 ═══════════════════════════════════════════════════════════════ */
+  #b7 { z-index:85; background:var(--m-brand); }
+  #cel { position:absolute; left:50%; top:52%; width:1240px; margin-left:-620px;
+         margin-top:-620px; opacity:.42; will-change:transform; }
+  #b7a { position:absolute; left:0; width:1920px; top:268px; text-align:center;
+         font-size:62px; color:var(--m-on-brand); }
+  #b7b { position:absolute; left:0; width:1920px; top:352px; text-align:center;
+         font-size:134px; color:var(--m-on-brand); }
+  .lbl { position:absolute; will-change:transform,opacity; }
+  .lbl .rule { height:2px; background:var(--m-on-brand); opacity:.85;
+               transform-origin:0 50%; }
+  .lbl .k { font-family:var(--m-font-display); font-variation-settings:var(--m-vf-display);
+            font-size:58px; letter-spacing:-.01em; color:var(--m-on-brand);
+            margin-top:20px; line-height:1; }
+  .lbl .x { font-family:var(--m-font-display); font-variation-settings:var(--m-vf-condensed);
+            font-size:21px; letter-spacing:.22em; text-transform:uppercase;
+            color:var(--m-on-brand); margin-top:16px; }
+
+  /* ═══ B8 ═══════════════════════════════════════════════════════════════ */
+  #b8 { z-index:84; background:var(--m-warm-canvas); }
+  #b8grid { position:absolute; inset:0; background-size:200% 200%;
+            background-position:50% 46%; mix-blend-mode:multiply; opacity:.30;
+            filter:sepia(.5) saturate(.5) brightness(1.20); }
+  #b8a { position:absolute; left:200px; top:196px; font-size:92px; color:var(--m-warm-ink); }
+  #b8b { position:absolute; left:196px; top:296px; font-size:134px; color:var(--m-signal-ink); }
+  #b8fig { position:absolute; right:120px; top:200px; font-size:22px; color:var(--m-warm-ink); }
+  #barplate { position:absolute; left:288px; top:598px; width:1344px; height:190px;
+              background:var(--m-warm-surface); border:1px solid var(--m-warm-line);
+              box-shadow:20px 22px 0 rgba(226,113,19,.24); }
+  #barwrap { position:absolute; left:52px; top:48px; width:1240px; height:94px;
+             background:var(--m-warm-panel); overflow:hidden; }
+  .seg { position:absolute; top:0; bottom:0; }
+  #segA { background:var(--m-brand); }
+  #segB { background:var(--m-signal); }
+  #segC { background:var(--m-ink); }
+  .slab { position:absolute; top:826px; }
+  .slab .tick { width:2px; height:20px; background:var(--m-line-strong); }
+  .slab .tx { margin-top:14px; font-size:21px; color:var(--m-ink); }
+
+  /* ═══ B9 / lockup ═════════════════════════════════════════════════════ */
+  #b9 { z-index:83; background:var(--m-warm-canvas); }
+  #b9foot { left:0; top:942px; width:1920px; height:170px; background:var(--m-warm-line); }
+  #b9rule { position:absolute; left:120px; right:120px; top:150px; height:1px;
+            background:var(--m-line-strong); opacity:.34; }
+  #trail { position:absolute; left:0; top:0; }
+  #dartmark { position:absolute; left:0; top:0; color:var(--m-mark);
+              transform-origin:50% 50%; will-change:transform; }
+  #dartmark svg { display:block; width:100%; height:100%; }
+  #lock { position:absolute; left:0; width:1920px; top:414px; }
+  #lock .lk-word { font-variation-settings:var(--m-vf-display); }
+  #lock .lk-line, #lock .lk-domain { color:var(--m-warm-ink); }
+
+  /* the flight deck: above every layer, so the birds cross the tear */
+  #fly { position:absolute; inset:0; z-index:95; pointer-events:none; }
+  #grain { position:absolute; inset:0; z-index:99; pointer-events:none; }
+</style></head>
+<body>
+<div class="stage" id="stage">
+
+  <!-- ══ BEAT 9 + 10 · the dart and the lockup (the bottom sheet) ══ -->
+  <div class="layer" id="b9">
+    <div class="tex" id="tx9"></div>
+    <i class="torn" id="b9foot"></i>
+    <div id="b9rule"></div>
+    <i class="tape" data-tape="5" data-w="196" style="left:66px;  top:74px;  transform:rotate(-41deg)"></i>
+    <i class="tape" data-tape="2" data-w="196" style="left:1660px;top:74px;  transform:rotate(41deg)"></i>
+    <canvas id="trail" width="1920" height="1080"></canvas>
+    <div id="dartmark"></div>
+    <div id="lock"></div>
+  </div>
+
+  <!-- ══ BEAT 8 · the bar, on graph paper ══ -->
+  <div class="layer" id="b8">
+    <div class="tex" id="tx8"></div>
+    <div id="b8grid"></div>
+    <div class="ed" id="b8a">Not just clicks.</div>
+    <div class="dx" id="b8b">Momentum.</div>
+    <div class="dc" id="b8fig">Fig. 08 — the shape</div>
+    <div id="barplate">
+      <i class="tape" data-tape="1" data-w="196" style="left:-42px; top:-30px; transform:rotate(-7deg)"></i>
+      <i class="tape" data-tape="4" data-w="182" style="left:1198px;top:150px; transform:rotate(6deg)"></i>
+      <div id="barwrap">
+        <div class="seg" id="segA"></div><div class="seg" id="segB"></div><div class="seg" id="segC"></div>
+      </div>
+    </div>
+    <div class="slab" id="sl0" style="left:340px"><div class="tick"></div><div class="dc tx">Ads</div></div>
+    <div class="slab" id="sl1" style="left:910px"><div class="tick"></div><div class="dc tx">Organic</div></div>
+    <div class="slab" id="sl2" style="left:1306px"><div class="tick"></div><div class="dc tx">AI answers</div></div>
+  </div>
+
+  <!-- ══ BEAT 7 · full bleed brand ══ -->
+  <div class="layer" id="b7">
+    <img id="cel" src="../../brand/material/cut-celestial.png" alt="">
+    <div class="dc" id="b7a">Search. Answers.</div>
+    <div class="dx" id="b7b">Everything after.</div>
+    <div class="lbl" id="lb0" style="left:262px; top:706px">
+      <div class="rule" style="width:150px"></div><div class="k">SEO</div>
+      <div class="x">Search engines</div></div>
+    <div class="lbl" id="lb1" style="left:846px; top:762px">
+      <div class="rule" style="width:112px"></div><div class="k">AEO</div>
+      <div class="x">Answer engines</div></div>
+    <div class="lbl" id="lb2" style="left:1388px;top:698px">
+      <div class="rule" style="width:176px"></div><div class="k">GEO</div>
+      <div class="x">Generative search</div></div>
+  </div>
+
+  <!-- ══ BEAT 6 · cropped type, page scrolling, the specimen ══ -->
+  <div class="layer" id="b6">
+    <div class="tex" id="tx6"></div>
+    <div id="pagecol">
+      <div id="pagestack">
+        <div class="ph"></div>
+        <div class="pad">
+          <div class="h1" style="width:390px"></div>
+          <div class="p" style="width:470px"></div><div class="p" style="width:430px"></div>
+          <div class="p" style="width:456px"></div><div class="p" style="width:320px"></div>
+          <div class="sh">Frequently asked</div>
+          <div class="q"><b></b><u></u></div>
+          <div class="q"><b style="width:342px"></b><u></u></div>
+          <div class="q"><b style="width:258px"></b><u></u></div>
+          <div class="cta">GET A QUOTE</div>
+          <div id="spec">
+            <img id="specimg" src="../../brand/material/cut-botanical.png" alt="">
+            <i class="tape" data-tape="5" data-w="132" style="left:180px;top:-16px;transform:rotate(-6deg)"></i>
+            <div class="dc" style="position:absolute;left:18px;bottom:14px;font-size:16px;color:var(--m-warm-ink)">Fig. 05 — the query</div>
+          </div>
+          <div class="sh">What we optimise</div>
+          <div class="p" style="width:510px"></div><div class="p" style="width:452px"></div>
+          <div class="p" style="width:488px"></div><div class="p" style="width:370px"></div>
+          <div class="h1" style="width:320px"></div>
+          <div class="p" style="width:480px"></div><div class="p" style="width:422px"></div>
+          <div class="p" style="width:456px"></div><div class="p" style="width:342px"></div>
+          <div class="sh">Local pages, by neighbourhood</div>
+          <div class="p" style="width:498px"></div><div class="p" style="width:430px"></div>
+          <div class="p" style="width:466px"></div><div class="p" style="width:356px"></div>
+          <div class="p" style="width:484px"></div><div class="p" style="width:400px"></div>
+          <div style="height:120px"></div>
+        </div>
+      </div>
+    </div>
+    <i class="fast" data-fast="1" data-w="84" style="left:1104px;top:196px;transform:rotate(-24deg)"></i>
+    <i class="fast" data-fast="2" data-w="80" style="left:1746px;top:846px;transform:rotate(38deg)"></i>
+    <div class="d" id="pg1">We write</div>
+    <div class="d" id="pg2">the pages</div>
+    <div class="ed" id="pg3">that answer <span class="acc">the question.</span></div>
+  </div>
+
+  <!-- ══ BEAT 5 · the split ══ -->
+  <div class="layer" id="b5">
+    <div class="tex" id="tx5"></div>
+    <div id="b5half"></div>
+    <div id="b5edge"></div>
+    <div id="mapcard">
+      <div class="mtex" id="mapTex"></div>
+      <svg viewBox="0 0 668 596" width="668" height="596" style="position:absolute;inset:0">
+        <g stroke="#14181B" stroke-opacity=".17" stroke-width="14" fill="none">
+          <line x1="-10" y1="126" x2="678" y2="126"/><line x1="-10" y1="292" x2="678" y2="292"/>
+          <line x1="-10" y1="460" x2="678" y2="460"/>
+          <line x1="150" y1="-10" x2="150" y2="606"/><line x1="352" y1="-10" x2="352" y2="606"/>
+          <line x1="542" y1="-10" x2="542" y2="606"/>
+        </g>
+        <g stroke="#14181B" stroke-opacity=".10" stroke-width="5" fill="none">
+          <line x1="-10" y1="208" x2="678" y2="208"/><line x1="-10" y1="376" x2="678" y2="376"/>
+          <line x1="250" y1="-10" x2="250" y2="606"/><line x1="448" y1="-10" x2="448" y2="606"/>
+        </g>
+        <path d="M96 -10 C 140 130, 86 250, 140 372 S 206 540, 184 606"
+              fill="none" stroke="#155E86" stroke-opacity=".22" stroke-width="17"/>
+        <rect x="380" y="306" width="126" height="112" fill="#155E86" fill-opacity=".10"/>
+        <rect x="172" y="146" width="58" height="42" fill="#14181B" fill-opacity=".08"/>
+      </svg>
+      <div class="pin" id="pin0" style="left:250px; top:208px"></div>
+      <div class="pin" id="pin1" style="left:542px; top:460px"></div>
+      <div class="pin" id="pin2" style="left:352px; top:292px"></div>
+      <div class="dc figno" style="left:22px; bottom:18px">Fig. 04 — the pack</div>
+    </div>
+    <i class="tape" data-tape="0" data-w="220" style="left:126px;top:200px;transform:rotate(-5deg)"></i>
+    <i class="fast" data-fast="0" data-w="46"  style="left:716px;top:198px;transform:rotate(12deg)"></i>
+    <div id="b5head">
+      <span class="clip"><span class="dx l" id="b5h1">We win</span></span>
+      <span class="clip"><span class="dx l" id="b5h2">the map.</span></span>
+    </div>
+    <div id="pack">
+      <div class="prow ui" id="pr0"><span class="rank">1</span><div><div class="ghost"></div>
+        <div class="stars"><i></i><i></i><i></i><i></i><i></i></div></div></div>
+      <div class="prow ui" id="pr1"><span class="rank">2</span><div><div class="ghost" style="width:242px"></div>
+        <div class="stars"><i></i><i></i><i></i><i></i><i></i></div></div></div>
+      <div class="prow ui win" id="pr2"><span class="rank" id="pr2rank">3</span><div><div class="nm">Your business</div>
+        <div class="stars"><i></i><i></i><i></i><i></i><i></i></div></div></div>
+      <i class="tape" data-tape="3" data-w="150" style="left:520px;top:-20px;transform:rotate(5deg);z-index:9"></i>
+    </div>
+  </div>
+
+  <!-- ══ BEAT 4 · the lens over the strip ══ -->
+  <div class="layer" id="b4">
+    <div class="tex" id="tx4"></div>
+    <div id="lenswrap">
+      <div id="strip">
+        <div class="splate" style="left:0">
+          <div class="dc hdr">Organic result</div>
+          <div style="height:18px;width:300px;border-radius:6px;background:var(--m-warm-muted);opacity:.42;margin-top:26px"></div>
+          <div style="height:11px;width:392px;border-radius:6px;background:var(--m-warm-line);margin-top:20px"></div>
+          <div style="height:11px;width:334px;border-radius:6px;background:var(--m-warm-line);margin-top:12px"></div>
+          <div style="height:11px;width:368px;border-radius:6px;background:var(--m-warm-line);margin-top:12px"></div>
+          <div style="height:11px;width:256px;border-radius:6px;background:var(--m-warm-line);margin-top:12px"></div>
+          <div style="height:11px;width:310px;border-radius:6px;background:var(--m-warm-line);margin-top:12px"></div>
+        </div>
+        <div class="splate" style="left:620px">
+          <div class="dc hdr">Map pack</div>
+          <div style="display:flex;gap:16px;margin-top:24px">
+            <div style="width:148px;height:186px;background:var(--m-warm-panel)"></div>
+            <div style="flex:1">
+              <div style="height:14px;width:196px;border-radius:6px;background:var(--m-warm-muted);opacity:.4"></div>
+              <div style="height:9px;width:140px;border-radius:6px;background:var(--m-warm-line);margin-top:11px"></div>
+              <div style="height:14px;width:178px;border-radius:6px;background:var(--m-warm-muted);opacity:.4;margin-top:24px"></div>
+              <div style="height:9px;width:156px;border-radius:6px;background:var(--m-warm-line);margin-top:11px"></div>
+              <div style="height:14px;width:206px;border-radius:6px;background:var(--m-warm-muted);opacity:.4;margin-top:24px"></div>
+              <div style="height:9px;width:132px;border-radius:6px;background:var(--m-warm-line);margin-top:11px"></div>
+            </div>
+          </div>
+        </div>
+        <div class="splate" id="adplate" style="left:1240px">
+          <div class="dc hdr">Ad slot</div>
+          <div style="margin-top:20px">
+            <span class="ui" style="display:inline-block;background:var(--m-signal);color:var(--m-on-signal);
+                  font-size:13px;font-weight:800;letter-spacing:.16em;padding:5px 9px 6px">AD</span>
+          </div>
+          <div class="ui" style="font-size:23px;font-weight:800;color:var(--m-brand);margin-top:16px;line-height:1.2">
+            Emergency plumbing<br>— same day service</div>
+          <div class="ui" style="font-size:15px;font-weight:700;color:var(--m-muted);margin-top:12px;letter-spacing:.02em">
+            local service page · book online</div>
+          <div id="adkey" style="position:absolute;left:12px;top:58px;right:12px;height:216px;
+               border:3px solid var(--m-signal-ink)"></div>
+          <i class="tape" data-tape="5" data-w="126" style="left:172px;top:-18px;transform:rotate(-7deg)"></i>
+        </div>
+      </div>
+    </div>
+    <div id="lensring"></div>
+    <div id="lenstick"></div>
+    <div id="b4head">
+      <span class="clip"><span class="d l" id="b4h1">We run</span></span>
+      <span class="clip"><span class="d l" id="b4h2">the ads.</span></span>
+    </div>
+    <div class="dc" id="b4note">Illustrative UI — not client work.</div>
+  </div>
+
+  <!-- ══ BEAT 3 · the stack ══ -->
+  <div class="layer" id="b3">
+    <div class="tex" id="tx3"></div>
+    <div class="dc" id="b3head">Great ones build momentum.</div>
+    <div id="b3rule"></div>
+    <div id="cards">
+      <div class="card" id="browser">
+        <div class="brwin">
+          <div class="chrome"><i class="dot"></i><i class="dot"></i><i class="dot"></i>
+            <span class="urlpill ui">local search results</span></div>
+          <div id="bodyA">
+            <div class="rail"><i></i><i></i><i></i><i></i></div>
+            <div class="hd"></div><div class="hd2"></div>
+            <svg class="chart" viewBox="0 0 820 250" preserveAspectRatio="none">
+              <line x1="0" y1="249" x2="820" y2="249" stroke="#D4D9CD" stroke-width="2"/>
+              <line x1="0" y1="166" x2="820" y2="166" stroke="#D4D9CD" stroke-width="1"/>
+              <line x1="0" y1="83"  x2="820" y2="83"  stroke="#D4D9CD" stroke-width="1"/>
+              <polyline points="0,224 102,208 205,214 308,172 410,158 512,118 614,102 716,60 820,26"
+                        fill="none" stroke="#155E86" stroke-width="6"
+                        stroke-linejoin="round" stroke-linecap="round"/>
+              <circle cx="820" cy="26" r="10" fill="#E27113"/>
+            </svg>
+            <div class="row" style="top:404px;width:600px"></div>
+            <div class="row" style="top:440px;width:460px"></div>
+            <div class="row" style="top:476px;width:540px"></div>
+          </div>
+        </div>
+        <i class="tape" data-tape="1" data-w="210" style="left:660px;top:-32px;transform:rotate(-6deg)"></i>
+        <div class="dc figno" style="left:196px;top:664px">Fig. 01 — the dashboard</div>
+      </div>
+
+      <div class="card" id="phone">
+        <div class="phwin">
+          <div class="scr">
+            <div class="nav"></div><div class="hero"></div>
+            <div class="ln" style="width:160px;height:16px"></div>
+            <div class="ln" style="width:212px"></div>
+            <div class="ln" style="width:174px"></div>
+            <div class="cta"></div>
+          </div>
+        </div>
+        <i class="tape" data-tape="4" data-w="180" style="left:-52px;top:472px;transform:rotate(83deg)"></i>
+        <div class="dc figno" style="left:-14px;top:688px">Fig. 02</div>
+      </div>
+
+      <div class="card" id="mapc">
+        <div class="mpwin">
+          <svg viewBox="0 0 600 420" width="600" height="420" preserveAspectRatio="none">
+            <rect width="600" height="420" fill="#EBECE1"/>
+            <path d="M0 296 C 130 268, 190 340, 300 316 S 500 280, 600 300 L600 420 L0 420 Z"
+                  fill="#155E86" fill-opacity=".10"/>
+            <g stroke="#D4D9CD" stroke-width="10">
+              <line x1="-10" y1="100" x2="610" y2="100"/><line x1="-10" y1="238" x2="610" y2="238"/>
+              <line x1="136" y1="-10" x2="136" y2="430"/><line x1="384" y1="-10" x2="384" y2="430"/>
+            </g>
+            <g stroke="#8E8578" stroke-width="4" stroke-opacity=".5">
+              <line x1="-10" y1="168" x2="610" y2="168"/><line x1="266" y1="-10" x2="266" y2="430"/>
+            </g>
+            <g transform="translate(384,168)">
+              <path d="M0 0 C -14 -19, -19 -24, -19 -34 A 19 19 0 1 1 19 -34 C 19 -24, 14 -19, 0 0 Z" fill="#E27113"/>
+              <circle cx="0" cy="-34" r="7" fill="#FFFEFA"/>
+            </g>
+          </svg>
+        </div>
+        <i class="tape" data-tape="2" data-w="190" style="left:104px;top:-28px;transform:rotate(4deg)"></i>
+        <div class="dc figno" style="left:392px;top:-46px">Fig. 03 — the map</div>
+      </div>
+    </div>
+    <div class="dc" id="cap">Illustrative UI — not client work.</div>
+  </div>
+
+  <!-- ══ BEAT 2 · the escalation ══ -->
+  <div class="layer" id="b2">
+    <div class="tex" id="tx2"></div>
+    <i class="torn" id="b2band"></i>
+    <i class="tape" data-tape="2" data-w="212" style="left:286px; top:534px; transform:rotate(-6deg)"></i>
+    <i class="tape" data-tape="4" data-w="196" style="left:1430px;top:556px; transform:rotate(7deg)"></i>
+    <div class="dc" id="l2a">Great ones</div>
+    <i class="torn" id="l2hl"></i>
+    <div class="dx" id="l2b">build <span class="acc">momentum.</span></div>
+    <div class="dc" id="b2fig">Fig. 02</div>
+  </div>
+
+  <!-- ══ BEAT 1 · the ordinary case ══ -->
+  <div class="layer" id="b1">
+    <div class="tex" id="tx1"></div>
+    <div class="dc" id="eyeL">Momentum Digital · Philadelphia</div>
+    <div class="dc" id="eyeR">Film 02 — Take off</div>
+    <div id="eyeRule"></div>
+    <i class="tape" data-tape="3" data-w="168" style="left:92px;top:122px;transform:rotate(-3deg)"></i>
+    <i class="torn" id="l1u"></i>
+    <div class="ed" id="l1">Most local businesses <span class="acc">run ads.</span></div>
+  </div>
+
+  <div id="fly">
+    <img class="bird" id="bd0" src="../../brand/material/cut-bird-a.png" alt="" style="left:206px; top:470px; width:274px">
+    <img class="bird" id="bd1" src="../../brand/material/cut-bird-b.png" alt="" style="left:836px; top:534px; width:190px">
+    <img class="bird" id="bd2" src="../../brand/material/cut-bird-c.png" alt="" style="left:1382px;top:452px; width:208px">
+  </div>
+  <div id="grain"></div>
+</div>
+
+<script type="module">
+import { at, clamp, lerp, words, easeEntrance, easeEmphatic, easeStandard, easeInOut,
+         osc, grainURL, markSVG, Lockup, MATERIAL, tornWipe, tapedCard, scatterPose,
+         plateStrip, lens } from '../../brand/film-kit.js';
+
+window.FILM = { width: 1920, height: 1080, fps: 30, duration: 30.0 };
+window.__ready = false;
+
+const $ = (id) => document.getElementById(id);
+const TOK = (n) => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const SIGNAL = TOK('--m-signal');
+
+/* ── material sprites: the tape sheet and the fastener sheet are cut plates
+      holding several objects. These are their measured alpha boxes, so one
+      piece can be pulled without the sheet's rectangle coming with it. ──── */
+const TAPE = { w: 1434, h: 736, box: [[512,275,867,184],[21,1,779,187],[744,541,688,181],
+                                      [1,551,641,184],[876,5,538,190],[21,278,353,188]] };
+const FAST = { w: 1328, h: 737, box: [[1170,75,157,591],[684,338,203,140],[789,278,202,143]] };
+
+function dress(el, sheet, url, i, w) {
+  const b = sheet.box[i], k = w / b[2];
+  el.style.width = `${b[2] * k}px`;
+  el.style.height = `${b[3] * k}px`;
+  el.style.backgroundImage = `url(${url})`;
+  el.style.backgroundSize = `${sheet.w * k}px ${sheet.h * k}px`;
+  el.style.backgroundPosition = `${-b[0] * k}px ${-b[1] * k}px`;
+}
+
+/* ── the torn edge, thresholded to a hard cut so it carries a token colour
+      instead of arriving as a translucent wash. Done once, at load. ─────── */
+async function hardMask(url, cut = 46) {
+  const img = new Image();
+  img.src = url;
+  await img.decode();
+  try {
+    const c = document.createElement('canvas');
+    c.width = img.naturalWidth; c.height = img.naturalHeight;
+    const x = c.getContext('2d');
+    x.drawImage(img, 0, 0);
+    const d = x.getImageData(0, 0, c.width, c.height);
+    const p = d.data;
+    for (let i = 0; i < p.length; i += 4) {
+      p[i] = p[i + 1] = p[i + 2] = 0;
+      p[i + 3] = p[i + 3] > cut ? 255 : 0;
+    }
+    x.putImageData(d, 0, 0);
+    return c.toDataURL();
+  } catch (e) { return url; }   /* tainted canvas: fall back to the soft plate */
+}
+
+/* ── word runs ───────────────────────────────────────────────────────────── */
+const w2 = words($('l2b'));                    // build / momentum.
+w2[1].classList.add('hl');                     // words() rebuilds the run: re-mark after
+const wPg1 = words($('pg1')), wPg2 = words($('pg2'));
+const wB7 = words($('b7b'));
+
+/* ── pins, drawn ─────────────────────────────────────────────────────────── */
+const PIN = (fill) => `<svg viewBox="0 0 38 50" width="38" height="50">
+  <path d="M19 50 C 5 30, 0 24, 0 17 A 19 19 0 1 1 38 17 C 38 24, 33 30, 19 50 Z" fill="${fill}"/>
+  <circle cx="19" cy="17" r="7" fill="${TOK('--m-warm-surface')}"/></svg>`;
+$('pin0').innerHTML = PIN(TOK('--m-brand'));
+$('pin1').innerHTML = PIN(TOK('--m-brand'));
+$('pin2').innerHTML = PIN(SIGNAL);
+
+/* ── the tear schedule. Every beat break in this film is a torn paper edge
+      travelling across the frame. Nothing cross-fades. ──────────────────── */
+const TEARS = [
+  ['b1', 2.26, 0.38, 'ltr', 11, 20, 0.040],
+  ['b2', 4.72, 0.42, 'rtl', 23, 16, 0.048],
+  ['b3', 8.14, 0.40, 'ltr', 37, 24, 0.032],
+  ['b4', 11.04, 0.42, 'rtl', 41, 18, 0.044],
+  ['b5', 14.30, 0.40, 'ltr', 53, 26, 0.030],
+  ['b6', 17.62, 0.48, 'ltr', 67, 14, 0.052],
+  ['b7', 21.22, 0.50, 'rtl', 79, 20, 0.046],
+  ['b8', 24.08, 0.42, 'ltr', 89, 22, 0.036],
+];
+
+/* ── the dart ────────────────────────────────────────────────────────────── */
+const ctx = $('trail').getContext('2d');
+let MARKC = { x: 676, y: 486 };
+let PATH = [[70, 1014], [430, 940], [530, 636], [MARKC.x, MARKC.y]];
+const buildPath = () => { PATH = [[70, 1014], [430, 940], [530, 636], [MARKC.x, MARKC.y]]; };
+const bez = (p) => {
+  const u = 1 - p, a = u * u * u, b = 3 * u * u * p, c = 3 * u * p * p, d = p * p * p;
+  return [a * PATH[0][0] + b * PATH[1][0] + c * PATH[2][0] + d * PATH[3][0],
+          a * PATH[0][1] + b * PATH[1][1] + c * PATH[2][1] + d * PATH[3][1]];
+};
+
+const MARK_SIZE = 132, DART_SIZE = 306;
+const LAND = 25.86, SETTLE = 0.34, LOCK_IN = 25.94;
+let lock = null;
+let U1 = { left: 640, width: 300 };            // measured underscore under "run ads."
+let RULE3 = 560;                               // measured width of the beat-3 header rule
+
+/* ── boot ────────────────────────────────────────────────────────────────── */
+(async () => {
+  /* material */
+  document.querySelectorAll('[data-tape]').forEach((el) =>
+    dress(el, TAPE, MATERIAL.tapeSet, +el.dataset.tape, +el.dataset.w));
+  document.querySelectorAll('[data-fast]').forEach((el) =>
+    dress(el, FAST, MATERIAL.fasteners, +el.dataset.fast, +el.dataset.w));
+
+  const manila = MATERIAL.manila;
+  ['tx1', 'tx2', 'tx3', 'tx4', 'tx5', 'tx6', 'tx8', 'tx9'].forEach((id) => {
+    $(id).style.backgroundImage = `url(${manila})`;
+  });
+  $('mapTex').style.backgroundImage = `url(${manila})`;
+  $('b2band').style.backgroundImage = `url(${manila})`;
+  $('b8grid').style.backgroundImage = `url(${MATERIAL.graph})`;
+
+  const tornURL = await hardMask(MATERIAL.tornStrip, 46);
+  ['l1u', 'b2band', 'b9foot', 'l2hl'].forEach((id, i) => {
+    const el = $(id);
+    el.style.webkitMaskImage = `url(${tornURL})`;
+    el.style.maskImage = `url(${tornURL})`;
+    if (i === 1) el.style.transform = 'scaleX(-1)';
+    if (i === 2) el.style.transform = 'scale(-1,-1)';
+  });
+
+  $('grain').style.backgroundImage = `url(${grainURL(180, 0.034, 7)})`;
+  $('grain').style.backgroundRepeat = 'repeat';
+
+  /* preload everything that is painted from CSS, so frame 0 is complete */
+  await Promise.all([manila, MATERIAL.graph, MATERIAL.tapeSet, MATERIAL.fasteners,
+                     MATERIAL.celestial, MATERIAL.botanical, ...MATERIAL.birds]
+    .map((u) => { const i = new Image(); i.src = u; return i.decode().catch(() => {}); }));
+
+  /* brand furniture */
+  const svg = await markSVG();
+  $('dartmark').innerHTML = svg;
+  lock = await Lockup($('lock'), {
+    line: 'Philadelphia. Since 2015.', markSize: MARK_SIZE, wordSize: 92,
+  });
+  try { await document.fonts.ready; } catch (e) { /* headless */ }
+
+  /* measurements: the torn underscore is cut to the words it marks, and the
+     beat-3 rule to the header it carries — both settled on frame 0. */
+  const st = $('stage').getBoundingClientRect();
+  const acc = $('l1').querySelector('.acc').getBoundingClientRect();
+  U1 = { left: acc.left - st.left - 10, width: acc.width + 20 };
+  const pose = w2[1].style.transform;         /* the torn block is cut to the word,
+     measured in its SETTLED position, not the posed one seek(0) already applied */
+  w2[1].style.transform = 'none';
+  const hb = w2[1].getBoundingClientRect();
+  w2[1].style.transform = pose;
+  const hl = $('l2hl');
+  hl.style.left = `${hb.left - st.left - 26}px`;
+  hl.style.top = `${hb.top - st.top + 4}px`;
+  hl.style.width = `${hb.width + 52}px`;
+  hl.style.height = `${hb.height + 6}px`;
+  RULE3 = Math.round($('b3head').getBoundingClientRect().width);
+  const mr = $('lock').querySelector('.lk-mark').getBoundingClientRect();
+  MARKC = { x: mr.left - st.left + mr.width / 2, y: mr.top - st.top + mr.height / 2 };
+  buildPath();
+
+  window.seek(0);
+  window.__ready = true;
+})();
+
+/* ── card keyframes: one shared vanishing point, three concurrent tweens ─── */
+const K = (o = {}) => Object.assign({ x: 0, y: 0, s: 1, ry: 0, rx: 0, tz: 0, o: 1 }, o);
+const mixK = (a, b, p) => ({
+  x: lerp(a.x, b.x, p), y: lerp(a.y, b.y, p), s: lerp(a.s, b.s, p),
+  ry: lerp(a.ry, b.ry, p), rx: lerp(a.rx, b.rx, p), tz: lerp(a.tz, b.tz, p),
+  o: lerp(a.o, b.o, p),
+});
+const applyK = (el, k) => {
+  el.style.opacity = k.o;
+  el.style.transform =
+    `translate3d(${k.x}px,${k.y}px,${k.tz}px) rotateY(${k.ry}deg) rotateX(${k.rx}deg) scale(${k.s})`;
+};
+const BR_IN   = K({ x: -540, y: 460, s: .52, ry: -44, rx: 20, tz: -460, o: 0 });
+const BR_REST = K({ x:  -34, y:  10, s: 1.00, ry: -9, rx: 6, tz: 0 });
+const PH_IN   = K({ x:  620, y: 200, s: .92, ry:  46, rx: -18, tz: -460, o: 0 });
+const PH_REST = K({ x:  -70, y:  22, s: 1.06, ry:  11, rx: -5, tz: 40 });
+const MP_IN   = K({ x:  -60, y: 420, s: .82, ry:   4, rx: 46, tz: -320, o: 0 });
+const MP_REST = K({ x:   14, y: -34, s: 1.05, ry:   6, rx: 12, tz: -60 });
+
+/* ── the timeline ────────────────────────────────────────────────────────── */
+window.seek = function (t) {
+
+  /* ═══ the tears ═══════════════════════════════════════════════════════ */
+  for (const [id, s, dur, dir, seed, teeth, jag] of TEARS) {
+    const el = $(id);
+    const p = at(t, s, dur, easeEmphatic);
+    if (p <= 0) { el.style.clipPath = 'none'; el.style.visibility = 'visible'; }
+    else if (p >= 1) { el.style.visibility = 'hidden'; }
+    else { el.style.visibility = 'visible'; el.style.clipPath = tornWipe(p, { seed, dir, teeth, jag }); }
+  }
+
+  /* ═══ BEAT 1 · 0.0–2.6 — the ordinary case, already printed ════════════
+     Frame 0 is a finished page: eyebrows, rule, line, all set. The only
+     motion is the mark being made — a torn strip of signal ink swiped under
+     the two words that matter. Nothing fades up out of nothing. */
+  {
+    const u = $('l1u');
+    const p = at(t, 0.22, 0.86, easeEmphatic);
+    u.style.left = `${U1.left}px`;
+    u.style.top = '556px';
+    u.style.width = `${U1.width}px`;
+    u.style.clipPath = `inset(0 ${(1 - p) * 100}% 0 0)`;
+    const breathe = at(t, 0, 2.6, easeStandard);
+    $('l1').style.transform = `translateY(${-7 * breathe}px)`;
+    $('tx1').style.transform = `scale(${1 + 0.012 * breathe})`;
+  }
+
+  /* ═══ BEAT 2 · 2.4–5.0 — the escalation, flush left and low ════════════
+     Different axis, different cut, different device: a whole torn sheet of
+     panel arrives under the words instead of a rule beside them. */
+  {
+    const band = at(t, 2.38, 0.62, easeEntrance);
+    $('b2band').style.clipPath = `inset(${(1 - band) * 100}% 0 0 0)`;
+    const hlp = at(t, 2.66, 0.52, easeEmphatic);
+    $('l2hl').style.clipPath = `inset(0 ${(1 - hlp) * 100}% 0 0)`;
+    $('l2hl').style.opacity = hlp > 0 ? 1 : 0;
+
+    const a = at(t, 2.52, 0.62);
+    $('l2a').style.opacity = a;
+    $('l2a').style.transform = `translateX(${(1 - a) * -30}px)`;
+    $('b2fig').style.opacity = a * 0.9;
+
+    w2.forEach((s, i) => {
+      const p = at(t, 2.62 + i * 0.15, 0.78);
+      s.style.opacity = p;
+      s.style.transform = `translateY(${(1 - p) * 66}px)`;
+    });
+    $('l2b').style.clipPath = `inset(-14% 0 ${(1 - at(t, 2.58, 0.34)) * 118}% 0)`;
+  }
+
+  /* ═══ BEAT 3 · 4.8–8.4 — the line shrinks to a header; three cards land ═
+     The header is the same words at a different CUT: condensed 700 caps.
+     The cards crop three edges and each one is taped down. */
+  {
+    const h = at(t, 4.86, 0.54, easeEmphatic);
+    $('b3head').style.opacity = h;
+    $('b3head').style.transform = `translateY(${(1 - h) * -26}px)`;
+    $('b3rule').style.width = `${RULE3}px`;
+    $('b3rule').style.transform = `scaleX(${at(t, 5.02, 0.5, easeEmphatic)})`;
+    $('b3rule').style.transformOrigin = '0 50%';
+
+    const drift = (per, ph) => 6 * osc(t, per, ph) * at(t, 6.5, 0.9);
+    const bk = mixK(BR_IN, BR_REST, at(t, 5.02, 1.14));
+    bk.y += drift(5.2, 0.0); applyK($('browser'), bk);
+    const pk = mixK(PH_IN, PH_REST, at(t, 5.26, 1.14));
+    pk.y += drift(4.3, 0.35); applyK($('phone'), pk);
+    const mk = mixK(MP_IN, MP_REST, at(t, 5.48, 1.14));
+    mk.y += drift(6.1, 0.7); applyK($('mapc'), mk);
+
+    const cp = at(t, 6.10, 0.55);
+    $('cap').style.opacity = cp;
+    $('cap').style.transform = `translateY(${(1 - cp) * 16}px)`;
+  }
+
+  /* ═══ BEAT 4 · 8.2–11.4 — the lens ═════════════════════════════════════
+     The circle never moves. A strip of placements travels under it —
+     organic, then the pack, then the slot the ads live in — and stops
+     there. The keyline then draws itself around the slot. */
+  {
+    const idx = at(t, 8.68, 0.62, easeEmphatic) + at(t, 9.34, 0.62, easeEmphatic);
+    $('strip').style.transform = plateStrip(idx, 620);
+
+    const R = 288, CX = 604, CY = 566;
+    const grow = at(t, 8.32, 0.52, easeEntrance);
+    const r = R * lerp(0.86, 1, grow);
+    $('lenswrap').style.clipPath = lens(CX, CY, r);
+    const ring = $('lensring');
+    ring.style.left = `${CX - r - 2}px`; ring.style.top = `${CY - r - 2}px`;
+    ring.style.width = ring.style.height = `${r * 2}px`;
+    ring.style.opacity = grow;
+    const tk = $('lenstick');
+    const r2 = r + 26;
+    tk.style.left = `${CX - r2}px`; tk.style.top = `${CY - r2}px`;
+    tk.style.width = tk.style.height = `${r2 * 2}px`;
+    tk.style.opacity = grow * 0.55;
+
+    const key = at(t, 10.12, 0.56, easeEmphatic);
+    $('adkey').style.clipPath = `inset(0 ${(1 - key) * 100}% 0 0)`;
+
+    const hp1 = at(t, 8.56, 0.72), hp2 = at(t, 8.74, 0.72);
+    $('b4h1').style.opacity = hp1;
+    $('b4h1').style.transform = `translateY(${(1 - hp1) * 54}px)`;
+    $('b4h2').style.opacity = hp2;
+    $('b4h2').style.transform = `translateY(${(1 - hp2) * 54}px)`;
+    $('b4head').style.clipPath = `inset(-8% 0 0 0)`;
+    const np = at(t, 9.5, 0.6);
+    $('b4note').style.opacity = np * 0.92;
+    $('b4note').style.transform = `translateY(${(1 - np) * 14}px)`;
+  }
+
+  /* ═══ BEAT 5 · 11.2–14.6 — the split ═══════════════════════════════════
+     Left half panel, right half paper, a hard rule between them. The map is
+     an old survey sheet, taped at one corner and clipped at the other. */
+  {
+    const inP = at(t, 11.00, 0.58, easeEntrance);
+    $('b5half').style.clipPath = `inset(0 ${(1 - inP) * 100}% 0 0)`;
+    $('b5edge').style.transform = `translateX(${864 * inP - 864}px)`;
+    $('b5edge').style.opacity = clamp(inP * 6);
+
+    const cardP = at(t, 11.16, 0.62);
+    const mc = $('mapcard');
+    mc.style.opacity = cardP;
+    mc.style.transform = `translateY(${(1 - cardP) * 52}px) rotate(${lerp(-3.4, -1.7, cardP)}deg)`;
+
+    const promote = at(t, 13.34, 0.80, easeEmphatic);
+    [['pin0', 11.78], ['pin1', 12.10], ['pin2', 12.46]].forEach(([id, ts], i) => {
+      const d = at(t, ts, 0.54, easeEntrance);
+      const el = $(id), winner = i === 2;
+      el.style.opacity = d * (winner ? 1 : lerp(1, 0.42, promote));
+      el.style.transform = `translateY(${(1 - d) * -130}px) `
+        + `scale(${lerp(0.66, 1, d) * (winner ? lerp(1, 1.26, promote) : 1)})`;
+      el.style.zIndex = winner ? 3 : 1;
+    });
+
+    const h1 = at(t, 11.30, 0.74), h2 = at(t, 11.46, 0.74);
+    $('b5h1').style.opacity = h1;
+    $('b5h1').style.transform = `translateY(${(1 - h1) * 56}px)`;
+    $('b5h2').style.opacity = h2;
+    $('b5h2').style.transform = `translateY(${(1 - h2) * 56}px)`;
+
+    const SLOT = [0, 128, 256];
+    const order = [lerp(0, 1, promote), lerp(1, 2, promote), lerp(2, 0, promote)];
+    ['pr0', 'pr1', 'pr2'].forEach((id, i) => {
+      const el = $(id);
+      const tc = tapedCard(at(t, 11.92 + i * 0.13, 0.68), i + 1);
+      const y = lerp(SLOT[0], SLOT[2], order[i] / 2);
+      el.style.opacity = tc.opacity;
+      el.style.boxShadow = tc.boxShadow;
+      el.style.transform = `translateY(${y}px) ` + tc.transform;
+      el.style.zIndex = i === 2 ? 4 : 1;
+    });
+    $('pr2rank').textContent = promote > 0.5 ? '1' : '3';
+    $('pr0').querySelector('.rank').textContent = promote > 0.5 ? '2' : '1';
+    $('pr1').querySelector('.rank').textContent = promote > 0.5 ? '3' : '2';
+  }
+
+  /* ═══ BEAT 6 · 14.4–18.0 — cropped type, the page under it ═════════════
+     The display face is cut by the frame's left edge; the answer is set in
+     the editorial serif, italic, because it is a quieter kind of sentence. */
+  {
+    wPg1.forEach((s, i) => {
+      const p = at(t, 14.52 + i * 0.09, 0.82);
+      s.style.opacity = p; s.style.transform = `translateY(${(1 - p) * 74}px)`;
+    });
+    wPg2.forEach((s, i) => {
+      const p = at(t, 14.70 + i * 0.09, 0.82);
+      s.style.opacity = p; s.style.transform = `translateY(${(1 - p) * 74}px)`;
+    });
+    $('pg1').style.clipPath = `inset(-12% 0 ${(1 - at(t, 14.48, 0.36)) * 116}% 0)`;
+    $('pg2').style.clipPath = `inset(-12% 0 ${(1 - at(t, 14.66, 0.36)) * 116}% 0)`;
+    const p3 = at(t, 15.24, 0.74);
+    $('pg3').style.opacity = p3;
+    $('pg3').style.transform = `translateY(${(1 - p3) * 30}px)`;
+
+    const inP = at(t, 14.44, 0.72);
+    const scroll = at(t, 14.52, 3.10, easeStandard);
+    $('pagecol').style.opacity = inP;
+    $('pagestack').style.transform = `translateY(${lerp(126, -742, scroll) + (1 - inP) * 96}px)`;
+  }
+
+  /* ═══ BEAT 7 · 17.8–21.6 — full bleed brand, the chart of everywhere ═══
+     The celestial plate turns behind the type: it is the map of every place
+     a question gets asked. Three labels; three birds land on them. */
+  {
+    const turn = at(t, 17.70, 3.6, easeStandard);
+    $('cel').style.transform = `rotate(${lerp(-3.2, 2.6, turn)}deg) scale(${lerp(1.06, 1, turn)})`;
+
+    const ap = at(t, 17.94, 0.66);
+    $('b7a').style.opacity = ap;
+    $('b7a').style.transform = `translateY(${(1 - ap) * 26}px)`;
+    wB7.forEach((s, i) => {
+      const p = at(t, 18.14 + i * 0.12, 0.80);
+      s.style.opacity = p; s.style.transform = `translateY(${(1 - p) * 62}px)`;
+    });
+    $('b7b').style.clipPath = `inset(-12% 0 ${(1 - at(t, 18.10, 0.34)) * 116}% 0)`;
+
+    [['lb0', 18.92, -50], ['lb1', 19.14, 0], ['lb2', 19.36, 50]].forEach(([id, ts, dx]) => {
+      const p = at(t, ts, 0.86);
+      const el = $(id);
+      el.style.opacity = p;
+      el.style.transform = `translate(${(1 - p) * dx}px, ${(1 - p) * 36}px)`;
+      const r = el.querySelector('.rule');
+      r.style.transform = `scaleX(${at(t, ts + 0.06, 0.62, easeEmphatic)})`;
+    });
+  }
+
+  /* ═══ THE BREAK · 20.9–22.3 — the birds take the beat with them ════════
+     They live above every layer, so they cross the torn edge instead of
+     being cut by it. Each one has its own path; they never move as a block. */
+  {
+    const land = [18.86, 19.02, 19.18];
+    const sc = Math.pow(clamp((t - 20.88) / 1.72), 2.3);   /* slow front: the
+       exit reads as three separate birds leaving, not as one fast blur */
+    [0, 1, 2].forEach((i) => {
+      const el = $('bd' + i);
+      const arr = at(t, land[i], 0.90, easeEntrance);
+      const s = scatterPose(sc, i, 3, { seed: 19 + i * 7, spread: 1.05 });
+      const ex = (1 - arr) * (150 + i * 60), ey = (1 - arr) * (210 - i * 40);
+      el.style.opacity = arr * s.opacity;
+      el.style.transform = `translate(${ex}px,${ey}px) ${s.transform} `
+        + `rotate(${(1 - arr) * (8 - i * 5)}deg)`;
+    });
+  }
+
+  /* ═══ BEAT 8 · 21.4–24.4 — one bar, on graph paper ═════════════════════
+     Asymmetric: the claim sits top-left, the shape sits low and wide on a
+     taped plate. Nothing here carries a number, because a number would be
+     a claim and this is a shape. */
+  {
+    const ap = at(t, 21.38, 0.68), bp = at(t, 21.56, 0.68);
+    $('b8fig').style.opacity = at(t, 22.40, 0.60);
+    $('b8a').style.opacity = ap;
+    $('b8a').style.transform = `translateY(${(1 - ap) * 34}px)`;
+    $('b8b').style.opacity = bp;
+    $('b8b').style.transform = `translateY(${(1 - bp) * 46}px)`;
+
+    const pl = at(t, 21.72, 0.60, easeEmphatic);
+    const plate = $('barplate');
+    plate.style.opacity = pl;
+    plate.style.transform = `translateY(${(1 - pl) * 34}px) rotate(${lerp(-2.6, -1.2, pl)}deg)`;
+
+    const W = 1240, wid = [0.46, 0.32, 0.22];
+    let acc = 0;
+    ['segA', 'segB', 'segC'].forEach((id, i) => {
+      const p = at(t, 22.00 + i * 0.22, 0.72, easeEmphatic);
+      const el = $(id);
+      el.style.left = `${acc}px`;
+      el.style.width = `${W * wid[i] * p}px`;
+      acc += W * wid[i];
+    });
+    ['sl0', 'sl1', 'sl2'].forEach((id, i) => {
+      const p = at(t, 22.56 + i * 0.16, 0.62);
+      const el = $(id);
+      el.style.opacity = p;
+      el.style.transform = `translateY(${(1 - p) * 14}px)`;
+    });
+  }
+
+  /* ═══ BEAT 9 · 24.2–26.2 — the dart ════════════════════════════════════
+     One object on a cleared page. The arc rises the whole way and never
+     reverses; the trail is a short comet, not a glow and not a pin. */
+  {
+    ctx.clearRect(0, 0, 1920, 1080);
+    const handoff = LAND + SETTLE;
+    const live = t > 24.06 && t < handoff;
+    const p = at(t, 24.20, LAND - 24.20, easeInOut);
+    const appear = at(t, 24.12, 0.22, easeStandard);
+    const settle = at(t, LAND, SETTLE, easeEmphatic);
+    const dm = $('dartmark');
+
+    if (live) {
+      const fade = 1 - at(t, LAND - 0.10, 0.52, easeStandard);
+      const s0 = Math.max(0, p - 0.74);
+      const size = lerp(lerp(116, DART_SIZE, Math.pow(p, 0.38)), MARK_SIZE, settle);
+      const hx = bez(p);
+      let pEnd = p;
+      for (let k = 0; k < 60; k++) {
+        const q = bez(pEnd);
+        if (Math.hypot(q[0] - hx[0], q[1] - hx[1]) >= size * 0.40) break;
+        pEnd -= 0.006;
+      }
+      pEnd = Math.max(s0, pEnd);
+      const N = 150;
+      if (p > 0.004 && fade > 0 && pEnd > s0) {
+        ctx.lineCap = 'round';
+        for (let k = 1; k <= N; k++) {
+          const f0 = s0 + (pEnd - s0) * ((k - 1) / N);
+          const f1 = s0 + (pEnd - s0) * (k / N);
+          const a = bez(f0), b = bez(f1), frac = k / N;
+          ctx.beginPath();
+          ctx.moveTo(a[0], a[1]); ctx.lineTo(b[0], b[1]);
+          ctx.strokeStyle = SIGNAL;
+          ctx.globalAlpha = Math.pow(frac, 1.5) * 0.94 * fade * appear;
+          ctx.lineWidth = lerp(0.6, 13.0, Math.pow(frac, 1.3));
+          ctx.stroke();
+        }
+        ctx.globalAlpha = 1;
+      }
+      const [mx, my] = bez(p);
+      dm.style.width = dm.style.height = `${size}px`;
+      dm.style.opacity = appear;
+      dm.style.transform =
+        `translate(${mx - size / 2}px, ${my - size / 2}px) rotate(${lerp(-24, 0, p)}deg)`;
+    } else {
+      dm.style.opacity = 0;
+    }
+  }
+
+  /* ═══ BEAT 10 · 26.0–30.0 — the lockup, mounted and held ═══════════════ */
+  if (lock) {
+    const p = clamp((t - LOCK_IN) / 1.34);
+    lock.pose(p);
+    const mk = $('lock').querySelector('.lk-mark');
+    mk.style.opacity = t >= LAND + SETTLE ? 1 : 0;   /* one hard handoff, never both */
+    mk.style.transform = 'scale(1)';
+    $('lock').style.opacity = p > 0 ? 1 : 0;
+  }
+};
+
+window.seek(0);
+</script>
+</body></html>
