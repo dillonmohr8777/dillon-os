@@ -1,0 +1,15 @@
+{
+  "title": "Bridge Signal — 30s explainer",
+  "target_duration_seconds": 30,
+  "aspect_ratio": "16:9",
+  "tier": "standard",
+  "scenes": [
+    { "id": "s1", "scene_type": "logo_sting", "duration_seconds": 2, "headline": "Bridge Signal", "narration": "Bridge Signal." },
+    { "id": "s2", "scene_type": "kinetic_type", "duration_seconds": 4, "headline": "The cannabis industry runs on guesswork", "caption": "The cannabis industry runs on guesswork" },
+    { "id": "s3", "scene_type": "generative", "duration_seconds": 6, "prompt": "Slow dolly across a modern dispensary back office at dusk, warm practical lighting, shallow depth of field, a buyer scrolling a tablet, cinematic, muted teal and amber grade", "caption": "Buyers can't verify who they're dealing with" },
+    { "id": "s4", "scene_type": "ui_mock", "duration_seconds": 5, "headline": "bridge.app/directory", "items": [{ "label": "Cascade Canna — verified" }, { "label": "Northline Distribution — verified" }, { "label": "Pending review" }], "caption": "Every member is license-verified" },
+    { "id": "s5", "scene_type": "chart", "duration_seconds": 5, "headline": "Time to a verified match", "items": [{ "label": "Before", "value": 21, "display": "21 days" }, { "label": "With Bridge", "value": 2, "display": "2 days" }], "caption": "21 days to 2" },
+    { "id": "s6", "scene_type": "generative", "duration_seconds": 5, "prompt": "Handshake between two professionals in a bright modern warehouse, natural window light, documentary style, shallow focus, no text", "caption": "Deals that start with trust" },
+    { "id": "s7", "scene_type": "end_card", "duration_seconds": 3, "headline": "Bridge", "subhead": "Get verified at bridge.app", "narration": "Get verified at bridge dot app." }
+  ]
+}
