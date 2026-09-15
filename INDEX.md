@@ -91,6 +91,8 @@ links instead of loading the entire vault.
 - [[12_Brain/09_Ops/Architecture|Second Brain Architecture]]
 - [[12_Brain/09_Ops/Schema|Canonical Properties]]
 - [[12_Brain/09_Ops/AGENT_PROTOCOL|Agent Protocol]]
+- [[12_Brain/11_Craft/00_Index|Agent Craft]] — what the automation layer does
+  reliably, what fails silently, and the nightly learning reviews
 - [[12_Brain/09_Ops/Runbook|Second Brain Runbook]]
 - [[12_Brain/09_Ops/Health|Brain Health]]
 - [[12_Brain/09_Ops/Knowledge Coverage|Knowledge Coverage]]
