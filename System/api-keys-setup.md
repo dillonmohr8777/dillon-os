@@ -95,3 +95,31 @@ and prints the server's 404 body instead of a misleading "not available" line.
 Rotate at Google AI Studio, then update each surface above. A key that has ever
 been pasted into a chat, an email, or a Slack message is burned and should be
 rotated rather than reused.
+
+## OpenAI Agents API (added 2026-09-10)
+
+Application API key for Agents API sessions. Grant scopes:
+
+- `api.agents.read`
+- `api.agents.write`
+- `api.responses.write`
+
+Set as Windows User environment variable (same pattern as Gemini):
+
+```powershell
+[Environment]::SetEnvironmentVariable('OPENAI_API_KEY', '<paste-key-here>', 'User')
+```
+
+Restart the terminal/app after setting. Verify without printing:
+
+```powershell
+if ($env:OPENAI_API_KEY) { "OPENAI_API_KEY is set ($($env:OPENAI_API_KEY.Length) chars)" } else { "not set" }
+```
+
+Dry-run wrapper (no spend):
+
+```powershell
+& .\System\scripts\Invoke-OpenAIAgentsSession.ps1 -DryRun
+```
+
+Live smoke requires an explicit CEO spend yes plus `-Live`. Keep the key outside any agent sandbox. Requests need header `OpenAI-Beta: agents=v1` (SDK adds it; cURL must include it).

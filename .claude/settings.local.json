@@ -1,8 +1,11 @@
 {
   "permissions": {
-    "defaultMode": "bypassPermissions",
     "allow": [
       "Bash(*)",
+      "PowerShell(*)",
+      "Skill(*)",
+      "Agent(*)",
+      "SendUserFile(*)",
       "Read(*)",
       "Edit(*)",
       "Write(*)",
@@ -12,6 +15,10 @@
       "WebSearch(*)",
       "mcp__claude_ai_Gmail__*",
       "mcp__claude_ai_Slack__*"
-    ]
-  }
+    ],
+    "defaultMode": "bypassPermissions"
+  },
+  "disabledMcpjsonServers": [
+    "landingfolio"
+  ]
 }

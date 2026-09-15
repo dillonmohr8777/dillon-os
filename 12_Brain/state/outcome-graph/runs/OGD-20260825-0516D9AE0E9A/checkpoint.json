@@ -1,0 +1,589 @@
+{
+  "schema_version": 1,
+  "run_id": "OGD-20260825-0516D9AE0E9A",
+  "graph_id": "closed-loop-web-design-canary",
+  "dedupe_identity": "a3e5057af0dd277d6edac3a00b61c7e0d2a918725914bec79ec56c638c69d312",
+  "dedupe_key": "web-design:2026-08-24-live",
+  "contract_fingerprint": "789fd2f708de59f818e3d3a595396ea9b3128696eb8b725c4c94a74fdfd33128",
+  "canonical_binding": {
+    "locator": "dillon-os://web-design/2026-08-24-live",
+    "version": "closed-loop-canary-2026-08-24-v1",
+    "sha256": "64db51d408423660fa02b50ba1ae771b206dfd53d10241504dfb90c568377ea2",
+    "captured_at": "2026-08-25T00:04:08.425Z"
+  },
+  "canonical_binding_fingerprint": "3a23f33faadd5211897e73321905c94dd4caa3dc4e8ff4a191cebe54204aa34c",
+  "status": "blocked",
+  "started_at": "2026-08-25T00:04:08.439Z",
+  "updated_at": "2026-08-25T00:04:16.993Z",
+  "event_sequence": 5,
+  "events": [
+    {
+      "sequence": 1,
+      "event": "run_started",
+      "at": "2026-08-25T00:04:08.439Z",
+      "resumed": false
+    },
+    {
+      "sequence": 2,
+      "event": "planned",
+      "at": "2026-08-25T00:04:08.459Z",
+      "graph_attempt": 1,
+      "item_id": null
+    },
+    {
+      "sequence": 3,
+      "event": "workers_verified",
+      "at": "2026-08-25T00:04:16.934Z",
+      "graph_attempt": 1,
+      "item_id": null
+    },
+    {
+      "sequence": 4,
+      "event": "learned",
+      "at": "2026-08-25T00:04:16.964Z",
+      "graph_attempt": 1,
+      "item_id": null
+    },
+    {
+      "sequence": 5,
+      "event": "receipt_committed",
+      "at": "2026-08-25T00:04:16.993Z",
+      "outcome": "blocked"
+    }
+  ],
+  "engine": {
+    "stage": "learned",
+    "graph_attempt": 1,
+    "plan_signature": "71344fd327698b660e592e70aa23626f3e72d1831804eb35d3a098e8080d8730",
+    "verified_workers": {},
+    "budget_used": 8,
+    "previous_terminal_findings": [],
+    "graph_iterations": [
+      {
+        "iteration": 1,
+        "status": "worker_failed",
+        "planner": {
+          "evidence": "Bound 1 web surface(s) to product, brief, authority, and implementation source hashes.",
+          "item_count": 1,
+          "plan_signature": "71344fd327698b660e592e70aa23626f3e72d1831804eb35d3a098e8080d8730",
+          "items": [
+            {
+              "id": "surface:closed-loop-canary",
+              "isolation_key": "web-design:closed-loop-canary",
+              "input_fingerprint": "692e9b87dd6a30ea74ee57db27b65c2523852c4fc949e4a7d1c44ad720491d9c",
+              "task": "Build and independently verify closed-loop-canary"
+            }
+          ]
+        },
+        "workers": [
+          {
+            "item_id": "surface:closed-loop-canary",
+            "status": "failed",
+            "attempts": [
+              {
+                "attempt": 1,
+                "isolation_id": "web-design:closed-loop-canary:g1:a1",
+                "maker_evidence": "Produced isolated closed-loop-canary candidate attempt 1 from 0 checker finding(s).",
+                "artifacts": [
+                  {
+                    "path": "workspace://closed-loop-canary/g1-a1/maker-receipt.json",
+                    "sha256": "e54299cc1bf4763dcbf1a2be41aaf4b0244888d2cc62f95e21acca3ef228ba5b",
+                    "bytes": 1100
+                  }
+                ],
+                "checker_evidence": "Independently inspected rendered closed-loop-canary attempt 1 across all required gates.",
+                "passed": false,
+                "findings": [
+                  {
+                    "id": "gate-responsive-failed",
+                    "gate_id": "responsive",
+                    "severity": "major",
+                    "summary": "responsive requires the recorded repair.",
+                    "repair_instruction": "responsive requires the recorded repair.",
+                    "regression_test": "Re-run the affected gate.",
+                    "learning_target": "qa_rule"
+                  },
+                  {
+                    "id": "gate-interaction-failed",
+                    "gate_id": "interaction",
+                    "severity": "major",
+                    "summary": "interaction requires the recorded repair.",
+                    "repair_instruction": "interaction requires the recorded repair.",
+                    "regression_test": "Re-run the affected gate.",
+                    "learning_target": "qa_rule"
+                  },
+                  {
+                    "id": "gate-accessibility-failed",
+                    "gate_id": "accessibility",
+                    "severity": "major",
+                    "summary": "accessibility requires the recorded repair.",
+                    "repair_instruction": "accessibility requires the recorded repair.",
+                    "regression_test": "Re-run the affected gate.",
+                    "learning_target": "qa_rule"
+                  },
+                  {
+                    "id": "gate-design-system-failed",
+                    "gate_id": "design-system",
+                    "severity": "major",
+                    "summary": "design-system requires the recorded repair.",
+                    "repair_instruction": "design-system requires the recorded repair.",
+                    "regression_test": "Re-run the affected gate.",
+                    "learning_target": "qa_rule"
+                  },
+                  {
+                    "id": "gate-independent-craft-failed",
+                    "gate_id": "independent-craft",
+                    "severity": "major",
+                    "summary": "independent-craft requires the recorded repair.",
+                    "repair_instruction": "independent-craft requires the recorded repair.",
+                    "regression_test": "Re-run the affected gate.",
+                    "learning_target": "qa_rule"
+                  },
+                  {
+                    "id": "craft-brand-specificity-below-floor",
+                    "gate_id": "independent-craft",
+                    "severity": "major",
+                    "summary": "brand_specificity must score at least 4 of 5.",
+                    "repair_instruction": "brand_specificity must score at least 4 of 5.",
+                    "regression_test": "Re-run the affected gate.",
+                    "learning_target": "qa_rule"
+                  },
+                  {
+                    "id": "craft-visual-hierarchy-below-floor",
+                    "gate_id": "independent-craft",
+                    "severity": "major",
+                    "summary": "visual_hierarchy must score at least 4 of 5.",
+                    "repair_instruction": "visual_hierarchy must score at least 4 of 5.",
+                    "regression_test": "Re-run the affected gate.",
+                    "learning_target": "qa_rule"
+                  },
+                  {
+                    "id": "craft-composition-rhythm-below-floor",
+                    "gate_id": "independent-craft",
+                    "severity": "major",
+                    "summary": "composition_rhythm must score at least 4 of 5.",
+                    "repair_instruction": "composition_rhythm must score at least 4 of 5.",
+                    "regression_test": "Re-run the affected gate.",
+                    "learning_target": "qa_rule"
+                  },
+                  {
+                    "id": "craft-typography-below-floor",
+                    "gate_id": "independent-craft",
+                    "severity": "major",
+                    "summary": "typography must score at least 4 of 5.",
+                    "repair_instruction": "typography must score at least 4 of 5.",
+                    "regression_test": "Re-run the affected gate.",
+                    "learning_target": "qa_rule"
+                  },
+                  {
+                    "id": "craft-imagery-below-floor",
+                    "gate_id": "independent-craft",
+                    "severity": "major",
+                    "summary": "imagery must score at least 4 of 5.",
+                    "repair_instruction": "imagery must score at least 4 of 5.",
+                    "regression_test": "Re-run the affected gate.",
+                    "learning_target": "qa_rule"
+                  },
+                  {
+                    "id": "craft-interaction-motion-below-floor",
+                    "gate_id": "independent-craft",
+                    "severity": "major",
+                    "summary": "interaction_motion must score at least 4 of 5.",
+                    "repair_instruction": "interaction_motion must score at least 4 of 5.",
+                    "regression_test": "Re-run the affected gate.",
+                    "learning_target": "qa_rule"
+                  },
+                  {
+                    "id": "craft-responsive-integrity-below-floor",
+                    "gate_id": "independent-craft",
+                    "severity": "major",
+                    "summary": "responsive_integrity must score at least 4 of 5.",
+                    "repair_instruction": "responsive_integrity must score at least 4 of 5.",
+                    "regression_test": "Re-run the affected gate.",
+                    "learning_target": "qa_rule"
+                  },
+                  {
+                    "id": "craft-content-clarity-below-floor",
+                    "gate_id": "independent-craft",
+                    "severity": "major",
+                    "summary": "content_clarity must score at least 4 of 5.",
+                    "repair_instruction": "content_clarity must score at least 4 of 5.",
+                    "regression_test": "Re-run the affected gate.",
+                    "learning_target": "qa_rule"
+                  },
+                  {
+                    "id": "craft-verdict-below-floor",
+                    "gate_id": "independent-craft",
+                    "severity": "major",
+                    "summary": "Independent craft review must pass with a 4.2 average and a written rationale.",
+                    "repair_instruction": "Independent craft review must pass with a 4.2 average and a written rationale.",
+                    "regression_test": "Re-run the affected gate.",
+                    "learning_target": "qa_rule"
+                  },
+                  {
+                    "id": "composition-generic-and-flat",
+                    "gate_id": "independent-craft",
+                    "severity": "major",
+                    "summary": "The draft uses interchangeable translucent cards and gives every message equal weight.",
+                    "repair_instruction": "Commit to the editorial signal-path thesis with one dominant headline, flat fields, and a visible loop sequence.",
+                    "regression_test": "Re-run independent-craft on desktop and mobile after the repair.",
+                    "learning_target": "brief"
+                  },
+                  {
+                    "id": "mobile-horizontal-overflow",
+                    "gate_id": "responsive",
+                    "severity": "major",
+                    "summary": "The fixed-width composition exceeds the mobile viewport.",
+                    "repair_instruction": "Replace fixed canvas widths with bounded fluid grids and verify 390 pixels without horizontal overflow.",
+                    "regression_test": "Re-run responsive on desktop and mobile after the repair.",
+                    "learning_target": "component"
+                  },
+                  {
+                    "id": "primary-action-below-touch-floor",
+                    "gate_id": "accessibility",
+                    "severity": "major",
+                    "summary": "The primary action is shorter than the 44 pixel touch floor.",
+                    "repair_instruction": "Give the primary action at least 48 pixels of usable height and preserve it on mobile.",
+                    "regression_test": "Re-run accessibility on desktop and mobile after the repair.",
+                    "learning_target": "token"
+                  },
+                  {
+                    "id": "keyboard-focus-not-visible",
+                    "gate_id": "interaction",
+                    "severity": "major",
+                    "summary": "Keyboard focus has no visible authored state.",
+                    "repair_instruction": "Add a high-contrast focus-visible treatment that does not depend on hover.",
+                    "regression_test": "Re-run interaction on desktop and mobile after the repair.",
+                    "learning_target": "component"
+                  },
+                  {
+                    "id": "reduced-motion-fallback-missing",
+                    "gate_id": "interaction",
+                    "severity": "major",
+                    "summary": "Decorative animation continues for reduced-motion users.",
+                    "repair_instruction": "Resolve animated elements to their final state inside prefers-reduced-motion.",
+                    "regression_test": "Re-run interaction on desktop and mobile after the repair.",
+                    "learning_target": "motion"
+                  }
+                ]
+              },
+              {
+                "attempt": 2,
+                "isolation_id": "web-design:closed-loop-canary:g1:a2",
+                "maker_evidence": "Produced isolated closed-loop-canary candidate attempt 2 from 19 checker finding(s).",
+                "artifacts": [
+                  {
+                    "path": "workspace://closed-loop-canary/g1-a2/maker-receipt.json",
+                    "sha256": "f79584cae5709b3b194ce7a821f4740a930297aaa9d1a31786bdecc5fc5c9ac9",
+                    "bytes": 1797
+                  }
+                ],
+                "checker_evidence": "Independently inspected rendered closed-loop-canary attempt 2 across all required gates.",
+                "passed": false,
+                "findings": [
+                  {
+                    "id": "gate-design-system-failed",
+                    "gate_id": "design-system",
+                    "severity": "major",
+                    "summary": "design-system requires the recorded repair.",
+                    "repair_instruction": "design-system requires the recorded repair.",
+                    "regression_test": "Re-run the affected gate.",
+                    "learning_target": "qa_rule"
+                  },
+                  {
+                    "id": "gate-independent-craft-failed",
+                    "gate_id": "independent-craft",
+                    "severity": "major",
+                    "summary": "independent-craft requires the recorded repair.",
+                    "repair_instruction": "independent-craft requires the recorded repair.",
+                    "regression_test": "Re-run the affected gate.",
+                    "learning_target": "qa_rule"
+                  },
+                  {
+                    "id": "craft-brand-specificity-below-floor",
+                    "gate_id": "independent-craft",
+                    "severity": "major",
+                    "summary": "brand_specificity must score at least 4 of 5.",
+                    "repair_instruction": "brand_specificity must score at least 4 of 5.",
+                    "regression_test": "Re-run the affected gate.",
+                    "learning_target": "qa_rule"
+                  },
+                  {
+                    "id": "craft-visual-hierarchy-below-floor",
+                    "gate_id": "independent-craft",
+                    "severity": "major",
+                    "summary": "visual_hierarchy must score at least 4 of 5.",
+                    "repair_instruction": "visual_hierarchy must score at least 4 of 5.",
+                    "regression_test": "Re-run the affected gate.",
+                    "learning_target": "qa_rule"
+                  },
+                  {
+                    "id": "craft-composition-rhythm-below-floor",
+                    "gate_id": "independent-craft",
+                    "severity": "major",
+                    "summary": "composition_rhythm must score at least 4 of 5.",
+                    "repair_instruction": "composition_rhythm must score at least 4 of 5.",
+                    "regression_test": "Re-run the affected gate.",
+                    "learning_target": "qa_rule"
+                  },
+                  {
+                    "id": "craft-typography-below-floor",
+                    "gate_id": "independent-craft",
+                    "severity": "major",
+                    "summary": "typography must score at least 4 of 5.",
+                    "repair_instruction": "typography must score at least 4 of 5.",
+                    "regression_test": "Re-run the affected gate.",
+                    "learning_target": "qa_rule"
+                  },
+                  {
+                    "id": "craft-imagery-below-floor",
+                    "gate_id": "independent-craft",
+                    "severity": "major",
+                    "summary": "imagery must score at least 4 of 5.",
+                    "repair_instruction": "imagery must score at least 4 of 5.",
+                    "regression_test": "Re-run the affected gate.",
+                    "learning_target": "qa_rule"
+                  },
+                  {
+                    "id": "craft-interaction-motion-below-floor",
+                    "gate_id": "independent-craft",
+                    "severity": "major",
+                    "summary": "interaction_motion must score at least 4 of 5.",
+                    "repair_instruction": "interaction_motion must score at least 4 of 5.",
+                    "regression_test": "Re-run the affected gate.",
+                    "learning_target": "qa_rule"
+                  },
+                  {
+                    "id": "craft-responsive-integrity-below-floor",
+                    "gate_id": "independent-craft",
+                    "severity": "major",
+                    "summary": "responsive_integrity must score at least 4 of 5.",
+                    "repair_instruction": "responsive_integrity must score at least 4 of 5.",
+                    "regression_test": "Re-run the affected gate.",
+                    "learning_target": "qa_rule"
+                  },
+                  {
+                    "id": "craft-content-clarity-below-floor",
+                    "gate_id": "independent-craft",
+                    "severity": "major",
+                    "summary": "content_clarity must score at least 4 of 5.",
+                    "repair_instruction": "content_clarity must score at least 4 of 5.",
+                    "regression_test": "Re-run the affected gate.",
+                    "learning_target": "qa_rule"
+                  },
+                  {
+                    "id": "craft-verdict-below-floor",
+                    "gate_id": "independent-craft",
+                    "severity": "major",
+                    "summary": "Independent craft review must pass with a 4.2 average and a written rationale.",
+                    "repair_instruction": "Independent craft review must pass with a 4.2 average and a written rationale.",
+                    "regression_test": "Re-run the affected gate.",
+                    "learning_target": "qa_rule"
+                  },
+                  {
+                    "id": "design-system-gate-failed",
+                    "gate_id": "design-system",
+                    "severity": "major",
+                    "summary": "The resolved page did not satisfy token, anti-gradient, or detector checks.",
+                    "repair_instruction": "Repair the exact token or detector finding and rerun the manual Windows detector.",
+                    "regression_test": "Re-run design-system on desktop and mobile after the repair.",
+                    "learning_target": "qa_rule"
+                  }
+                ]
+              },
+              {
+                "attempt": 3,
+                "isolation_id": "web-design:closed-loop-canary:g1:a3",
+                "maker_evidence": "Produced isolated closed-loop-canary candidate attempt 3 from 12 checker finding(s).",
+                "artifacts": [
+                  {
+                    "path": "workspace://closed-loop-canary/g1-a3/maker-receipt.json",
+                    "sha256": "31f6ccab244b0d6ef9232e457b67683c790a156320b84df20aece9d35d0b86dc",
+                    "bytes": 1553
+                  }
+                ],
+                "checker_evidence": "Independently inspected rendered closed-loop-canary attempt 3 across all required gates.",
+                "passed": false,
+                "findings": [
+                  {
+                    "id": "gate-design-system-failed",
+                    "gate_id": "design-system",
+                    "severity": "major",
+                    "summary": "design-system requires the recorded repair.",
+                    "repair_instruction": "design-system requires the recorded repair.",
+                    "regression_test": "Re-run the affected gate.",
+                    "learning_target": "qa_rule"
+                  },
+                  {
+                    "id": "gate-independent-craft-failed",
+                    "gate_id": "independent-craft",
+                    "severity": "major",
+                    "summary": "independent-craft requires the recorded repair.",
+                    "repair_instruction": "independent-craft requires the recorded repair.",
+                    "regression_test": "Re-run the affected gate.",
+                    "learning_target": "qa_rule"
+                  },
+                  {
+                    "id": "craft-brand-specificity-below-floor",
+                    "gate_id": "independent-craft",
+                    "severity": "major",
+                    "summary": "brand_specificity must score at least 4 of 5.",
+                    "repair_instruction": "brand_specificity must score at least 4 of 5.",
+                    "regression_test": "Re-run the affected gate.",
+                    "learning_target": "qa_rule"
+                  },
+                  {
+                    "id": "craft-visual-hierarchy-below-floor",
+                    "gate_id": "independent-craft",
+                    "severity": "major",
+                    "summary": "visual_hierarchy must score at least 4 of 5.",
+                    "repair_instruction": "visual_hierarchy must score at least 4 of 5.",
+                    "regression_test": "Re-run the affected gate.",
+                    "learning_target": "qa_rule"
+                  },
+                  {
+                    "id": "craft-composition-rhythm-below-floor",
+                    "gate_id": "independent-craft",
+                    "severity": "major",
+                    "summary": "composition_rhythm must score at least 4 of 5.",
+                    "repair_instruction": "composition_rhythm must score at least 4 of 5.",
+                    "regression_test": "Re-run the affected gate.",
+                    "learning_target": "qa_rule"
+                  },
+                  {
+                    "id": "craft-typography-below-floor",
+                    "gate_id": "independent-craft",
+                    "severity": "major",
+                    "summary": "typography must score at least 4 of 5.",
+                    "repair_instruction": "typography must score at least 4 of 5.",
+                    "regression_test": "Re-run the affected gate.",
+                    "learning_target": "qa_rule"
+                  },
+                  {
+                    "id": "craft-imagery-below-floor",
+                    "gate_id": "independent-craft",
+                    "severity": "major",
+                    "summary": "imagery must score at least 4 of 5.",
+                    "repair_instruction": "imagery must score at least 4 of 5.",
+                    "regression_test": "Re-run the affected gate.",
+                    "learning_target": "qa_rule"
+                  },
+                  {
+                    "id": "craft-interaction-motion-below-floor",
+                    "gate_id": "independent-craft",
+                    "severity": "major",
+                    "summary": "interaction_motion must score at least 4 of 5.",
+                    "repair_instruction": "interaction_motion must score at least 4 of 5.",
+                    "regression_test": "Re-run the affected gate.",
+                    "learning_target": "qa_rule"
+                  },
+                  {
+                    "id": "craft-responsive-integrity-below-floor",
+                    "gate_id": "independent-craft",
+                    "severity": "major",
+                    "summary": "responsive_integrity must score at least 4 of 5.",
+                    "repair_instruction": "responsive_integrity must score at least 4 of 5.",
+                    "regression_test": "Re-run the affected gate.",
+                    "learning_target": "qa_rule"
+                  },
+                  {
+                    "id": "craft-content-clarity-below-floor",
+                    "gate_id": "independent-craft",
+                    "severity": "major",
+                    "summary": "content_clarity must score at least 4 of 5.",
+                    "repair_instruction": "content_clarity must score at least 4 of 5.",
+                    "regression_test": "Re-run the affected gate.",
+                    "learning_target": "qa_rule"
+                  },
+                  {
+                    "id": "craft-verdict-below-floor",
+                    "gate_id": "independent-craft",
+                    "severity": "major",
+                    "summary": "Independent craft review must pass with a 4.2 average and a written rationale.",
+                    "repair_instruction": "Independent craft review must pass with a 4.2 average and a written rationale.",
+                    "regression_test": "Re-run the affected gate.",
+                    "learning_target": "qa_rule"
+                  },
+                  {
+                    "id": "design-system-gate-failed",
+                    "gate_id": "design-system",
+                    "severity": "major",
+                    "summary": "The resolved page did not satisfy token, anti-gradient, or detector checks.",
+                    "repair_instruction": "Repair the exact token or detector finding and rerun the manual Windows detector.",
+                    "regression_test": "Re-run design-system on desktop and mobile after the repair.",
+                    "learning_target": "qa_rule"
+                  }
+                ]
+              }
+            ],
+            "final_artifacts": [],
+            "isolation_id": null
+          }
+        ],
+        "reduction": null,
+        "terminal_verification": null,
+        "learning": {
+          "evidence": "Appended one hashed web-design correction entry without changing canonical design truth.",
+          "corrections": [
+            "Repair only the exact unresolved design defect, source drift, manifest mismatch, or authority assertion; never promote an unrendered or self-reviewed build."
+          ],
+          "ledger": "System/outcome-graph/web-design/closed-loop-canary/2026-08-24-live/corrections.jsonl",
+          "ledger_receipt": {
+            "locator": "System/outcome-graph/web-design/closed-loop-canary/2026-08-24-live/corrections.jsonl",
+            "entry_sha256": "f23607a3f75636ad3468108575d0d6a6d62aa5b1cffbe58c9c0addcfbce9fd6b"
+          }
+        }
+      }
+    ],
+    "invocation_log": [
+      {
+        "adapter": "web-design-planner",
+        "invoked_at": "2026-08-25T00:04:08.454Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "web-design-maker",
+        "invoked_at": "2026-08-25T00:04:08.479Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "web-design-independent-checker",
+        "invoked_at": "2026-08-25T00:04:08.502Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "web-design-maker",
+        "invoked_at": "2026-08-25T00:04:12.909Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "web-design-independent-checker",
+        "invoked_at": "2026-08-25T00:04:12.932Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "web-design-maker",
+        "invoked_at": "2026-08-25T00:04:14.877Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "web-design-independent-checker",
+        "invoked_at": "2026-08-25T00:04:14.889Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "web-design-learner",
+        "invoked_at": "2026-08-25T00:04:16.957Z",
+        "status": "returned"
+      }
+    ]
+  },
+  "last_event": "receipt_committed",
+  "state_revision": 5,
+  "previous_state_sha256": "38d85a9ad7f49390380550b8ddf2bf10a108e402a50e89d5c7f76feb469f93ba",
+  "receipt": {
+    "path": "runs/OGD-20260825-0516D9AE0E9A/receipt.json",
+    "sha256": "c13d1d19ba133200a0177f8e47ea16e2cf78a715c639cb7186d7183d81725b6f",
+    "bytes": 28479
+  }
+}

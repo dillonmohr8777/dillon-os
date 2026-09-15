@@ -18,7 +18,7 @@ const path = require('node:path');
 const { buildSite } = require('../../../_templates/site-factory/build-site.js');
 
 const FONTS = [
-  'font-display-400.woff2', 'font-display-700.woff2',
+  'font-display-400.woff2', 'font-display-800.woff2',
   'font-text-400.woff2', 'font-text-700.woff2',
 ];
 

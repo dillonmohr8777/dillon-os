@@ -1,0 +1,737 @@
+[
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/24082267830",
+      "name": "Search | High Intent | Colorado Springs | 2026-07-30",
+      "id": "24082267830"
+    },
+    "metrics": {
+      "clicks": "178",
+      "conversions": 3,
+      "costMicros": "1305543883",
+      "impressions": "3902"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1014471",
+      "geoTargetMetro": "geoTargetConstants/200752",
+      "geoTargetRegion": "geoTargetConstants/21138"
+    },
+    "geographicView": {
+      "resourceName": "customers/2853981364/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/21959397587",
+      "name": "Omega Landscaping & Concrete | Colorado Springs | PMax",
+      "id": "21959397587"
+    },
+    "metrics": {
+      "clicks": "171",
+      "conversions": 13,
+      "costMicros": "1003868811",
+      "impressions": "3344"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1014471",
+      "geoTargetMetro": "geoTargetConstants/200752",
+      "geoTargetRegion": "geoTargetConstants/21138"
+    },
+    "geographicView": {
+      "resourceName": "customers/2853981364/geographicViews/2840~AREA_OF_INTEREST"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/21959397587",
+      "name": "Omega Landscaping & Concrete | Colorado Springs | PMax",
+      "id": "21959397587"
+    },
+    "metrics": {
+      "clicks": "494",
+      "conversions": 2,
+      "costMicros": "760878357",
+      "impressions": "18688"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1014471",
+      "geoTargetMetro": "geoTargetConstants/200752",
+      "geoTargetRegion": "geoTargetConstants/21138"
+    },
+    "geographicView": {
+      "resourceName": "customers/2853981364/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/21959397587",
+      "name": "Omega Landscaping & Concrete | Colorado Springs | PMax",
+      "id": "21959397587"
+    },
+    "metrics": {
+      "clicks": "16",
+      "conversions": 0,
+      "costMicros": "141018037",
+      "impressions": "422"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1014462",
+      "geoTargetMetro": "geoTargetConstants/200751",
+      "geoTargetRegion": "geoTargetConstants/21138"
+    },
+    "geographicView": {
+      "resourceName": "customers/2853981364/geographicViews/2840~AREA_OF_INTEREST"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/21959397587",
+      "name": "Omega Landscaping & Concrete | Colorado Springs | PMax",
+      "id": "21959397587"
+    },
+    "metrics": {
+      "clicks": "6",
+      "conversions": 0,
+      "costMicros": "111675618",
+      "impressions": "174"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9051702",
+      "geoTargetMetro": "geoTargetConstants/200751",
+      "geoTargetRegion": "geoTargetConstants/21138"
+    },
+    "geographicView": {
+      "resourceName": "customers/2853981364/geographicViews/2840~AREA_OF_INTEREST"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/21959397587",
+      "name": "Omega Landscaping & Concrete | Colorado Springs | PMax",
+      "id": "21959397587"
+    },
+    "metrics": {
+      "clicks": "160",
+      "conversions": 0,
+      "costMicros": "105228087",
+      "impressions": "6256"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1014611",
+      "geoTargetMetro": "geoTargetConstants/200752",
+      "geoTargetRegion": "geoTargetConstants/21138"
+    },
+    "geographicView": {
+      "resourceName": "customers/2853981364/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/21959397587",
+      "name": "Omega Landscaping & Concrete | Colorado Springs | PMax",
+      "id": "21959397587"
+    },
+    "metrics": {
+      "clicks": "12",
+      "conversions": 1,
+      "costMicros": "69728350",
+      "impressions": "425"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1014585",
+      "geoTargetMetro": "geoTargetConstants/200752",
+      "geoTargetRegion": "geoTargetConstants/21138"
+    },
+    "geographicView": {
+      "resourceName": "customers/2853981364/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23440060242",
+      "name": "Search_Services_Standard",
+      "id": "23440060242"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "59358429",
+      "impressions": "21"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1014471",
+      "geoTargetMetro": "geoTargetConstants/200752",
+      "geoTargetRegion": "geoTargetConstants/21138"
+    },
+    "geographicView": {
+      "resourceName": "customers/2853981364/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/24082267830",
+      "name": "Search | High Intent | Colorado Springs | 2026-07-30",
+      "id": "24082267830"
+    },
+    "metrics": {
+      "clicks": "7",
+      "conversions": 0,
+      "costMicros": "53940000",
+      "impressions": "157"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1014585",
+      "geoTargetMetro": "geoTargetConstants/200752",
+      "geoTargetRegion": "geoTargetConstants/21138"
+    },
+    "geographicView": {
+      "resourceName": "customers/2853981364/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23441013566",
+      "name": "Search_Services_Call Only",
+      "id": "23441013566"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "44520000",
+      "impressions": "54"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1014471",
+      "geoTargetMetro": "geoTargetConstants/200752",
+      "geoTargetRegion": "geoTargetConstants/21138"
+    },
+    "geographicView": {
+      "resourceName": "customers/2853981364/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/21959397587",
+      "name": "Omega Landscaping & Concrete | Colorado Springs | PMax",
+      "id": "21959397587"
+    },
+    "metrics": {
+      "clicks": "42",
+      "conversions": 0,
+      "costMicros": "41773665",
+      "impressions": "1441"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1014462",
+      "geoTargetMetro": "geoTargetConstants/200751",
+      "geoTargetRegion": "geoTargetConstants/21138"
+    },
+    "geographicView": {
+      "resourceName": "customers/2853981364/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/21959397587",
+      "name": "Omega Landscaping & Concrete | Colorado Springs | PMax",
+      "id": "21959397587"
+    },
+    "metrics": {
+      "clicks": "37",
+      "conversions": 0,
+      "costMicros": "41586733",
+      "impressions": "1412"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9052720",
+      "geoTargetMetro": "geoTargetConstants/200752",
+      "geoTargetRegion": "geoTargetConstants/21138"
+    },
+    "geographicView": {
+      "resourceName": "customers/2853981364/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/24082267830",
+      "name": "Search | High Intent | Colorado Springs | 2026-07-30",
+      "id": "24082267830"
+    },
+    "metrics": {
+      "clicks": "5",
+      "conversions": 0,
+      "costMicros": "37975232",
+      "impressions": "160"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9195699",
+      "geoTargetMetro": "geoTargetConstants/200752",
+      "geoTargetRegion": "geoTargetConstants/21138"
+    },
+    "geographicView": {
+      "resourceName": "customers/2853981364/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/24082267830",
+      "name": "Search | High Intent | Colorado Springs | 2026-07-30",
+      "id": "24082267830"
+    },
+    "metrics": {
+      "clicks": "5",
+      "conversions": 0,
+      "costMicros": "37590000",
+      "impressions": "31"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9051968",
+      "geoTargetMetro": "geoTargetConstants/200752",
+      "geoTargetRegion": "geoTargetConstants/21138"
+    },
+    "geographicView": {
+      "resourceName": "customers/2853981364/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/21959397587",
+      "name": "Omega Landscaping & Concrete | Colorado Springs | PMax",
+      "id": "21959397587"
+    },
+    "metrics": {
+      "clicks": "23",
+      "conversions": 0,
+      "costMicros": "20721742",
+      "impressions": "983"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9195699",
+      "geoTargetMetro": "geoTargetConstants/200752",
+      "geoTargetRegion": "geoTargetConstants/21138"
+    },
+    "geographicView": {
+      "resourceName": "customers/2853981364/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/21959397587",
+      "name": "Omega Landscaping & Concrete | Colorado Springs | PMax",
+      "id": "21959397587"
+    },
+    "metrics": {
+      "clicks": "4",
+      "conversions": 0,
+      "costMicros": "19570356",
+      "impressions": "49"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9052720",
+      "geoTargetMetro": "geoTargetConstants/200752",
+      "geoTargetRegion": "geoTargetConstants/21138"
+    },
+    "geographicView": {
+      "resourceName": "customers/2853981364/geographicViews/2840~AREA_OF_INTEREST"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/21959397587",
+      "name": "Omega Landscaping & Concrete | Colorado Springs | PMax",
+      "id": "21959397587"
+    },
+    "metrics": {
+      "clicks": "24",
+      "conversions": 0,
+      "costMicros": "9698902",
+      "impressions": "1009"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1014460",
+      "geoTargetMetro": "geoTargetConstants/200752",
+      "geoTargetRegion": "geoTargetConstants/21138"
+    },
+    "geographicView": {
+      "resourceName": "customers/2853981364/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/21959397587",
+      "name": "Omega Landscaping & Concrete | Colorado Springs | PMax",
+      "id": "21959397587"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "9240000",
+      "impressions": "18"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1014460",
+      "geoTargetMetro": "geoTargetConstants/200752",
+      "geoTargetRegion": "geoTargetConstants/21138"
+    },
+    "geographicView": {
+      "resourceName": "customers/2853981364/geographicViews/2840~AREA_OF_INTEREST"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/21959397587",
+      "name": "Omega Landscaping & Concrete | Colorado Springs | PMax",
+      "id": "21959397587"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "7330000",
+      "impressions": "29"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9195699",
+      "geoTargetMetro": "geoTargetConstants/200752",
+      "geoTargetRegion": "geoTargetConstants/21138"
+    },
+    "geographicView": {
+      "resourceName": "customers/2853981364/geographicViews/2840~AREA_OF_INTEREST"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/21959397587",
+      "name": "Omega Landscaping & Concrete | Colorado Springs | PMax",
+      "id": "21959397587"
+    },
+    "metrics": {
+      "clicks": "14",
+      "conversions": 0,
+      "costMicros": "5150273",
+      "impressions": "715"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9051702",
+      "geoTargetMetro": "geoTargetConstants/200751",
+      "geoTargetRegion": "geoTargetConstants/21138"
+    },
+    "geographicView": {
+      "resourceName": "customers/2853981364/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/21959397587",
+      "name": "Omega Landscaping & Concrete | Colorado Springs | PMax",
+      "id": "21959397587"
+    },
+    "metrics": {
+      "clicks": "15",
+      "conversions": 0,
+      "costMicros": "3737763",
+      "impressions": "424"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1014657",
+      "geoTargetMetro": "geoTargetConstants/200752",
+      "geoTargetRegion": "geoTargetConstants/21138"
+    },
+    "geographicView": {
+      "resourceName": "customers/2853981364/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/21959397587",
+      "name": "Omega Landscaping & Concrete | Colorado Springs | PMax",
+      "id": "21959397587"
+    },
+    "metrics": {
+      "clicks": "14",
+      "conversions": 0,
+      "costMicros": "2300377",
+      "impressions": "307"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9051968",
+      "geoTargetMetro": "geoTargetConstants/200752",
+      "geoTargetRegion": "geoTargetConstants/21138"
+    },
+    "geographicView": {
+      "resourceName": "customers/2853981364/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/21959397587",
+      "name": "Omega Landscaping & Concrete | Colorado Springs | PMax",
+      "id": "21959397587"
+    },
+    "metrics": {
+      "clicks": "2",
+      "conversions": 0,
+      "costMicros": "994603",
+      "impressions": "150"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1014458",
+      "geoTargetMetro": "geoTargetConstants/200752",
+      "geoTargetRegion": "geoTargetConstants/21138"
+    },
+    "geographicView": {
+      "resourceName": "customers/2853981364/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/21959397587",
+      "name": "Omega Landscaping & Concrete | Colorado Springs | PMax",
+      "id": "21959397587"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "90000",
+      "impressions": "66"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1014611",
+      "geoTargetMetro": "geoTargetConstants/200752",
+      "geoTargetRegion": "geoTargetConstants/21138"
+    },
+    "geographicView": {
+      "resourceName": "customers/2853981364/geographicViews/2840~AREA_OF_INTEREST"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/21959397587",
+      "name": "Omega Landscaping & Concrete | Colorado Springs | PMax",
+      "id": "21959397587"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "61258",
+      "impressions": "58"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1014576",
+      "geoTargetMetro": "geoTargetConstants/200752",
+      "geoTargetRegion": "geoTargetConstants/21138"
+    },
+    "geographicView": {
+      "resourceName": "customers/2853981364/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/21959397587",
+      "name": "Omega Landscaping & Concrete | Colorado Springs | PMax",
+      "id": "21959397587"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "9"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1014458",
+      "geoTargetMetro": "geoTargetConstants/200752",
+      "geoTargetRegion": "geoTargetConstants/21138"
+    },
+    "geographicView": {
+      "resourceName": "customers/2853981364/geographicViews/2840~AREA_OF_INTEREST"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23307822197",
+      "name": "Search_Concrete Services_Call Only",
+      "id": "23307822197"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "5"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1014471",
+      "geoTargetMetro": "geoTargetConstants/200752",
+      "geoTargetRegion": "geoTargetConstants/21138"
+    },
+    "geographicView": {
+      "resourceName": "customers/2853981364/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/21959397587",
+      "name": "Omega Landscaping & Concrete | Colorado Springs | PMax",
+      "id": "21959397587"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "41"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1014576",
+      "geoTargetMetro": "geoTargetConstants/200752",
+      "geoTargetRegion": "geoTargetConstants/21138"
+    },
+    "geographicView": {
+      "resourceName": "customers/2853981364/geographicViews/2840~AREA_OF_INTEREST"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/21959397587",
+      "name": "Omega Landscaping & Concrete | Colorado Springs | PMax",
+      "id": "21959397587"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "75"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1014585",
+      "geoTargetMetro": "geoTargetConstants/200752",
+      "geoTargetRegion": "geoTargetConstants/21138"
+    },
+    "geographicView": {
+      "resourceName": "customers/2853981364/geographicViews/2840~AREA_OF_INTEREST"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/21959397587",
+      "name": "Omega Landscaping & Concrete | Colorado Springs | PMax",
+      "id": "21959397587"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "4"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1014605",
+      "geoTargetMetro": "geoTargetConstants/200752",
+      "geoTargetRegion": "geoTargetConstants/21138"
+    },
+    "geographicView": {
+      "resourceName": "customers/2853981364/geographicViews/2840~AREA_OF_INTEREST"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/21959397587",
+      "name": "Omega Landscaping & Concrete | Colorado Springs | PMax",
+      "id": "21959397587"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1014605",
+      "geoTargetMetro": "geoTargetConstants/200752",
+      "geoTargetRegion": "geoTargetConstants/21138"
+    },
+    "geographicView": {
+      "resourceName": "customers/2853981364/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/24082267830",
+      "name": "Search | High Intent | Colorado Springs | 2026-07-30",
+      "id": "24082267830"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1014605",
+      "geoTargetMetro": "geoTargetConstants/200752",
+      "geoTargetRegion": "geoTargetConstants/21138"
+    },
+    "geographicView": {
+      "resourceName": "customers/2853981364/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/21959397587",
+      "name": "Omega Landscaping & Concrete | Colorado Springs | PMax",
+      "id": "21959397587"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "28"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1014657",
+      "geoTargetMetro": "geoTargetConstants/200752",
+      "geoTargetRegion": "geoTargetConstants/21138"
+    },
+    "geographicView": {
+      "resourceName": "customers/2853981364/geographicViews/2840~AREA_OF_INTEREST"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/24082267830",
+      "name": "Search | High Intent | Colorado Springs | 2026-07-30",
+      "id": "24082267830"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "27"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9051600",
+      "geoTargetMetro": "geoTargetConstants/200752",
+      "geoTargetRegion": "geoTargetConstants/21138"
+    },
+    "geographicView": {
+      "resourceName": "customers/2853981364/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/21959397587",
+      "name": "Omega Landscaping & Concrete | Colorado Springs | PMax",
+      "id": "21959397587"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "42"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9051968",
+      "geoTargetMetro": "geoTargetConstants/200752",
+      "geoTargetRegion": "geoTargetConstants/21138"
+    },
+    "geographicView": {
+      "resourceName": "customers/2853981364/geographicViews/2840~AREA_OF_INTEREST"
+    }
+  }
+]

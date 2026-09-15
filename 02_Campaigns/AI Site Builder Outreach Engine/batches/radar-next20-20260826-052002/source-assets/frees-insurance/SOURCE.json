@@ -1,0 +1,132 @@
+{
+  "sourceUrl": "https://freesinsurance.com/",
+  "finalUrl": "https://freesinsurance.com/",
+  "sourceDomain": "freesinsurance.com",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=UTF-8",
+  "pageSha256": "222b88ccfc45da824afc79d2f5bf127b68ec70ce2be7b23a1fe2441beff2649f",
+  "title": "Frees Insurance – Phoenixville, PA",
+  "description": "Your Community Insurance Agent PHOENIXVILLE, PA An independent insurance agency specializing in personal insurance since 1933 About Us You have worked hard for what you have. Make sure it is properly protected. Insurance is not what you pay; it's what you buy. Everyone has different needs depending on their exposures. We can help you determine&hellip;",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "frees",
+      "insurance"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260826-052002\\preflight\\frees-insurance\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://i0.wp.com/freesinsurance.com/wp-content/uploads/2023/10/freesinsurancelogo.png?fit=1143%2C544&ssl=1",
+    "sourceEvidence": "IMG attachment-full size-full wp-image-11 11  freesinsurancelogo",
+    "type": "png",
+    "dimensions": {
+      "width": 1143,
+      "height": 544
+    },
+    "sha256": "26f1819971a449fda3e1dfa844ed9e47a6152e74d8093e6ac38605678bd8da5b",
+    "sourceSha256": "16465f81b0018f532fb0eb673661f434ccba418817e7cb00a7d17d42425f6dd6",
+    "sourceType": "png",
+    "sourceFileName": "logo-source.png",
+    "transformation": "flat border color #47704c removed with deterministic FFmpeg colorkey; geometry unchanged",
+    "borderSpread": 0,
+    "alpha": {
+      "ok": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "alphaAverage": 47.9999,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 8896
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260826-052002\\preflight\\frees-insurance\\reference-1.webp",
+      "fileName": "reference-1.webp",
+      "sourceUrl": "https://freesinsurance.com/wp-content/uploads/2023/11/IMG_3567-e1575988159425-1024x683.jpg",
+      "sourceEvidence": "og:image",
+      "type": "webp",
+      "dimensions": {
+        "width": 1024,
+        "height": 683
+      },
+      "sha256": "3b245f2f3e557b8feec81b6bf8f0742ed545fdbeab7f47937b5328a3b1350ddb",
+      "bytes": 66830,
+      "visual": {
+        "ok": true,
+        "lumaRange": 216,
+        "chromaURange": 91,
+        "chromaVRange": 126,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260826-052002\\preflight\\frees-insurance\\reference-2.webp",
+      "fileName": "reference-2.webp",
+      "sourceUrl": "https://freesinsurance.com/wp-content/uploads/2023/11/IMG_3567-e1575988159425-1024x683.jpg?w=640",
+      "sourceEvidence": "twitter:image",
+      "type": "webp",
+      "dimensions": {
+        "width": 640,
+        "height": 426
+      },
+      "sha256": "109c4d2107c26b63db1ab41ab5ea3b925bb1ddcd68ca96f77f97add178bbf7f9",
+      "bytes": 31920,
+      "visual": {
+        "ok": true,
+        "lumaRange": 212,
+        "chromaURange": 85,
+        "chromaVRange": 114,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260826-052002\\preflight\\frees-insurance\\reference-3.webp",
+      "fileName": "reference-3.webp",
+      "sourceUrl": "https://i0.wp.com/freesinsurance.com/wp-content/uploads/2022/11/post-featured-img9.jpg?resize=768%2C478&ssl=1",
+      "sourceEvidence": "IMG attachment-medium size-medium wp-image-759 759  post-featured-img9",
+      "type": "webp",
+      "dimensions": {
+        "width": 768,
+        "height": 478
+      },
+      "sha256": "33ab431bac3a75f3a0285703ad845f46676ef4059ae216249f533d2fea45c5d4",
+      "bytes": 11068,
+      "visual": {
+        "ok": true,
+        "lumaRange": 225,
+        "chromaURange": 88,
+        "chromaVRange": 70,
+        "reason": null
+      }
+    }
+  ],
+  "contact": {
+    "phone": "+1 610-933-4950",
+    "address": "120 Gay Street, Phoenixville, PA 19460",
+    "city": "Phoenixville",
+    "phoneSource": "official JSON-LD",
+    "addressSource": "official JSON-LD"
+  },
+  "visualReferenceFallback": null,
+  "referenceFailures": [
+    {
+      "url": "https://freesinsurance.com/580",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://freesinsurance.com/387",
+      "reason": "HTTP 404"
+    }
+  ],
+  "brandColors": [
+    "#f4bb4c",
+    "#003388",
+    "#003399",
+    "#e22658",
+    "#cd2653"
+  ],
+  "checkedAt": "2026-08-26T09:30:27.724Z"
+}

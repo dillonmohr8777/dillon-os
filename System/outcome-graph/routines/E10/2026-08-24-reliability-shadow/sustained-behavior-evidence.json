@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "routine_id": "E10",
+  "generated_at": "2026-08-24T23:35:22.299Z",
+  "process_identity_verified": true,
+  "heartbeat_current": false,
+  "log_advancement_verified": true,
+  "sustained_inbound_and_reply_behavior_verified": false,
+  "evidence_state": "pending_validation",
+  "authority": {
+    "read_only": true,
+    "proposal_only": true,
+    "external_action_attempted": false,
+    "canonical_write_attempted": false,
+    "provider_mutation_attempted": false,
+    "restart_attempted": false,
+    "retry_attempted": false,
+    "checkpoint_advance_attempted": false,
+    "secret_access_attempted": false
+  }
+}

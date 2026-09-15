@@ -1,0 +1,82 @@
+[
+  {
+    "metrics": {
+      "clicks": "37",
+      "costMicros": "210339800"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844695~2479174121939",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "mcp server platform"
+      }
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844695~2479174121939"
+    }
+  },
+  {
+    "metrics": {
+      "clicks": "5",
+      "costMicros": "30160000"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844695~2435254355259",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "mcp platform"
+      }
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844695~2435254355259"
+    }
+  },
+  {
+    "metrics": {
+      "clicks": "4",
+      "costMicros": "22000000"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844695~2486327123236",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "enterprise mcp platform"
+      }
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844695~2486327123236"
+    }
+  },
+  {
+    "metrics": {
+      "clicks": "4",
+      "costMicros": "21060000"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844695~2626543375432",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "mcp server integration"
+      }
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844695~2626543375432"
+    }
+  },
+  {
+    "metrics": {
+      "clicks": "3",
+      "costMicros": "13900000"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844695~2470863795969",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "mcp integration platform"
+      }
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844695~2470863795969"
+    }
+  }
+]

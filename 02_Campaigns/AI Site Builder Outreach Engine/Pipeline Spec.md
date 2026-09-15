@@ -138,7 +138,9 @@ Per the tier rules in `AGENTS.md` and the orchestrator spec, everything up to he
 
 **Goal:** the engine gets smarter every week.
 
-**Status: not built.**
+**Status: built 2026-09-03.** `node _os/automation/bin/outreach-ledger.js` aggregates every batch's
+`prospects.csv` into [[outreach-ledger]] and names the current bottleneck. First run
+reported 20 built, 0 approved, 0 reached. See [[2026-09-03 - Outreach engine reaches its first prospect]].
 
 Per-batch ledger: `02_Campaigns/AI Site Builder Outreach Engine/batches/<batch-id>/results.md` recording pieces mailed, scans, calls booked, closes, and revenue, sliced by market, vertical, and design direction. Feeds Stage 2 scoring and the offer.
 

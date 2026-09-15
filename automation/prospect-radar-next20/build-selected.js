@@ -7,6 +7,7 @@ const crypto = require('crypto');
 const { spawnSync } = require('child_process');
 const { runBatch } = require('../../_templates/site-factory/build-batch.js');
 const { resolveGeneratedStockAssignment } = require('./generated-stock-categories');
+const { assessLogoEligibility, dedupeDecisions } = require('../../_os/automation/lib/logo-eligibility');
 
 const root = path.resolve(__dirname, '..', '..');
 const runId = process.env.PROSPECT_RADAR_RUN_ID || process.argv[2];
@@ -50,8 +51,8 @@ const clip = (value, max = 230) => {
 };
 
 const palettes = [
-  { paper: '#F4EFE7', ink: '#0B1D2D', accent: '#F05A28', accent2: '#91D5ED', panel: '#EAF6FC', deep: '#071521', onPaper: '#0B1D2D', onAccent: '#FFFFFF', onAccent2: '#071521', onPanel: '#0B1D2D', onDeep: '#FFFFFF', border: '1px', radius: '14px' },
-  { paper: '#EAF6FC', ink: '#071521', accent: '#FF6B35', accent2: '#159B63', panel: '#F4EFE7', deep: '#0B1D2D', onPaper: '#071521', onAccent: '#FFFFFF', onAccent2: '#FFFFFF', onPanel: '#0B1D2D', onDeep: '#FFFFFF', border: '1px', radius: '12px' },
+  { paper: '#F4EFE7', ink: '#0B1D2D', accent: '#F05A28', accent2: '#91D5ED', panel: '#EAF6FC', deep: '#071521', onPaper: '#0B1D2D', onAccent: '#071521', onAccent2: '#071521', onPanel: '#0B1D2D', onDeep: '#FFFFFF', border: '1px', radius: '14px' },
+  { paper: '#EAF6FC', ink: '#071521', accent: '#FF6B35', accent2: '#159B63', panel: '#F4EFE7', deep: '#0B1D2D', onPaper: '#071521', onAccent: '#071521', onAccent2: '#071521', onPanel: '#0B1D2D', onDeep: '#FFFFFF', border: '1px', radius: '12px' },
 ];
 
 const fontPairs = [
@@ -162,7 +163,7 @@ function siteDocuments(item, source, brief, palette, pair, direction) {
 function makeBrief(item, source, prospect, pair, palette, rank) {
   const d = descriptor(item.vertical, item.verticalGroup);
   const category = titleCase(item.vertical || d.family);
-  const locality = item.city || prospect?.city || item.area || 'Pennsylvania';
+  const locality = source.contact?.city || 'Service area';
   const sourceDescription = clip(source.description || '', 210);
   const directions = ['image first', 'type first', 'split signal'];
   const direction = directions[(rank - 1) % directions.length];
@@ -173,8 +174,9 @@ function makeBrief(item, source, prospect, pair, palette, rank) {
     prospectId: `RADAR-NEXT20-${String(rank).padStart(3, '0')}`,
     name: item.name,
     city: locality,
-    market: item.area || 'Pennsylvania',
-    address: `${locality}, Pennsylvania`,
+    market: locality,
+    address: source.contact?.address || '',
+    phone: source.contact?.phone || '',
     category,
     vertical: item.vertical,
     verticalGroup: item.verticalGroup,
@@ -208,7 +210,7 @@ function makeBrief(item, source, prospect, pair, palette, rank) {
       glassFloat: null,
       marquee: [],
     },
-    proof: { items: [item.name, `${locality}, Pennsylvania`, category, 'Official source connected'] },
+    proof: { items: [item.name, locality, category, 'Official source connected'] },
     offerings: {
       heading: 'A homepage organized around the decision a visitor is actually making.',
       items: [
@@ -274,6 +276,10 @@ async function prepare() {
   if (selection.selection?.length !== 20 || sourceStatus.selected?.length !== 20) throw new Error('Exactly 20 selected and source-ready rows are required.');
 
   const sourceByDomain = new Map(sourceStatus.selected.map((source) => [source.domain, source]));
+  const eligibility = dedupeDecisions(selection.selection.map(item => ({
+    ...(registry.prospects[item.domain] || {}), slug: item.slug,
+  })));
+  if (eligibility.some(result => !result.eligible)) throw new Error('Selected batch contains an unverified or duplicate business logo');
   const fontDirectories = new Map();
   for (const pair of fontPairs) fontDirectories.set(pair.id, await ensureFontPair(pair));
 
@@ -282,6 +288,11 @@ async function prepare() {
     const source = sourceByDomain.get(item.domain);
     if (!source) throw new Error(`Missing source evidence for ${item.domain}`);
     const prospect = registry.prospects[item.domain] || {};
+    const reviewedLogo = assessLogoEligibility(prospect);
+    if (!reviewedLogo.eligible || source.logo.sourceUrl !== reviewedLogo.source_url ||
+        (source.logo.sourceSha256 || item.logoSha256) !== reviewedLogo.source_sha256) {
+      throw new Error(`Logo review no longer matches selected source for ${item.domain}`);
+    }
     const rank = item.rank;
     const pair = fontPairs[(rank - 1) % fontPairs.length];
     const palette = palettes[(rank - 1) % palettes.length];

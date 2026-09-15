@@ -1,0 +1,378 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-08-24T23:01:56.736Z",
+  "timezone": "America/New_York",
+  "privacy": "redacted",
+  "contains_secrets": false,
+  "contains_direct_identifiers": false,
+  "contains_raw_communications": false,
+  "provider_mutation_attempted": false,
+  "canonical_queue_mutation_attempted": false,
+  "external_action_attempted": false,
+  "collector_states": {
+    "windsor_connector": "blocked_reauthentication_required",
+    "google_ads_ui": "authenticated_account_selector_read_only",
+    "meta_ads_ui": "authenticated_exact_kjb_and_ambiguous_shadow_read_only",
+    "pass_b_baseline_binding": "exact_pass_a_artifact_hash_declared"
+  },
+  "lanes": [
+    {
+      "lane_id": "google-ads--kimberly-james-bridal",
+      "client_id": "kimberly-james-bridal",
+      "platform": "google-ads",
+      "observed_at": "2026-08-24T23:01:56.736Z",
+      "account_binding_state": "exact",
+      "provider_account_sha256": "5a12d8241b68162141eeae928b7d12271f22487dfb028c42a8c91de155f87468",
+      "checks": {
+        "session_account": {
+          "status": "verified"
+        },
+        "delivery_pacing": {
+          "status": "pending"
+        },
+        "conversion_tracking_dedup": {
+          "status": "pending"
+        },
+        "landing_page_health": {
+          "status": "pending"
+        },
+        "search-terms-and-negatives": {
+          "status": "pending"
+        },
+        "change_history": {
+          "status": "pending"
+        },
+        "budget_recommendation": {
+          "status": "pending"
+        },
+        "readback_freshness": {
+          "status": "partial"
+        }
+      },
+      "attribution": {
+        "status": "pending_validation",
+        "conversion_definition": null,
+        "attribution_window": null,
+        "latency_state": "unverified",
+        "tracking_health": "unverified",
+        "downstream_source_sha256": null,
+        "downstream_reconciled": false
+      },
+      "platform_claims": [],
+      "proposals": [],
+      "comparison": {
+        "baseline_artifact_sha256": "7d65a000d0d8dce4a234394a7051b3ae677684f6b75f779a670fbf9bdc854098",
+        "classification": "inconclusive"
+      }
+    },
+    {
+      "lane_id": "google-ads--replenish-7-eleven",
+      "client_id": "replenish-7-eleven",
+      "platform": "google-ads",
+      "observed_at": "2026-08-24T23:01:56.736Z",
+      "account_binding_state": "exact",
+      "provider_account_sha256": "90a6a66370175821d88c61e1185bf2a7a69d3e9b5654a5d144acf6bdbdc70a59",
+      "checks": {
+        "session_account": {
+          "status": "verified"
+        },
+        "delivery_pacing": {
+          "status": "pending"
+        },
+        "conversion_tracking_dedup": {
+          "status": "pending"
+        },
+        "landing_page_health": {
+          "status": "pending"
+        },
+        "search-terms-and-negatives": {
+          "status": "pending"
+        },
+        "change_history": {
+          "status": "pending"
+        },
+        "budget_recommendation": {
+          "status": "pending"
+        },
+        "readback_freshness": {
+          "status": "partial"
+        }
+      },
+      "attribution": {
+        "status": "pending_validation",
+        "conversion_definition": null,
+        "attribution_window": null,
+        "latency_state": "unverified",
+        "tracking_health": "unverified",
+        "downstream_source_sha256": null,
+        "downstream_reconciled": false
+      },
+      "platform_claims": [],
+      "proposals": [],
+      "comparison": {
+        "baseline_artifact_sha256": "7d65a000d0d8dce4a234394a7051b3ae677684f6b75f779a670fbf9bdc854098",
+        "classification": "inconclusive"
+      }
+    },
+    {
+      "lane_id": "google-ads--fresh-blends-kwik-trip",
+      "client_id": "fresh-blends-kwik-trip",
+      "platform": "google-ads",
+      "observed_at": "2026-08-24T23:01:56.736Z",
+      "account_binding_state": "unverified",
+      "checks": {
+        "session_account": {
+          "status": "blocked"
+        },
+        "delivery_pacing": {
+          "status": "blocked"
+        },
+        "conversion_tracking_dedup": {
+          "status": "blocked"
+        },
+        "landing_page_health": {
+          "status": "pending"
+        },
+        "search-terms-and-negatives": {
+          "status": "blocked"
+        },
+        "change_history": {
+          "status": "blocked"
+        },
+        "budget_recommendation": {
+          "status": "blocked"
+        },
+        "readback_freshness": {
+          "status": "blocked"
+        }
+      },
+      "attribution": {
+        "status": "pending_validation",
+        "conversion_definition": null,
+        "attribution_window": null,
+        "latency_state": "unverified",
+        "tracking_health": "unverified",
+        "downstream_source_sha256": null,
+        "downstream_reconciled": false
+      },
+      "platform_claims": [],
+      "proposals": [],
+      "comparison": {
+        "baseline_artifact_sha256": "7d65a000d0d8dce4a234394a7051b3ae677684f6b75f779a670fbf9bdc854098",
+        "classification": "inconclusive"
+      }
+    },
+    {
+      "lane_id": "google-ads--omega-landscaping",
+      "client_id": "omega-landscaping",
+      "platform": "google-ads",
+      "observed_at": "2026-08-24T23:01:56.736Z",
+      "account_binding_state": "exact",
+      "provider_account_sha256": "7ce89ae5bb4b719b356f3831ae0dbab513c9f47b6aa825362b560932fe22441d",
+      "checks": {
+        "session_account": {
+          "status": "verified"
+        },
+        "delivery_pacing": {
+          "status": "pending"
+        },
+        "conversion_tracking_dedup": {
+          "status": "pending"
+        },
+        "landing_page_health": {
+          "status": "pending"
+        },
+        "search-terms-and-negatives": {
+          "status": "pending"
+        },
+        "change_history": {
+          "status": "pending"
+        },
+        "budget_recommendation": {
+          "status": "pending"
+        },
+        "readback_freshness": {
+          "status": "partial"
+        }
+      },
+      "attribution": {
+        "status": "pending_validation",
+        "conversion_definition": null,
+        "attribution_window": null,
+        "latency_state": "unverified",
+        "tracking_health": "unverified",
+        "downstream_source_sha256": null,
+        "downstream_reconciled": false
+      },
+      "platform_claims": [],
+      "proposals": [],
+      "comparison": {
+        "baseline_artifact_sha256": "7d65a000d0d8dce4a234394a7051b3ae677684f6b75f779a670fbf9bdc854098",
+        "classification": "inconclusive"
+      }
+    },
+    {
+      "lane_id": "google-ads--onsite-concrete-landscape",
+      "client_id": "onsite-concrete-landscape",
+      "platform": "google-ads",
+      "observed_at": "2026-08-24T23:01:56.736Z",
+      "account_binding_state": "exact",
+      "provider_account_sha256": "0de066d1bfbbceb8ae1fd12ad7b3d79d8077470d90eab20718e2fa4d0587211e",
+      "checks": {
+        "session_account": {
+          "status": "verified"
+        },
+        "delivery_pacing": {
+          "status": "pending"
+        },
+        "conversion_tracking_dedup": {
+          "status": "pending"
+        },
+        "landing_page_health": {
+          "status": "pending"
+        },
+        "search-terms-and-negatives": {
+          "status": "pending"
+        },
+        "change_history": {
+          "status": "pending"
+        },
+        "budget_recommendation": {
+          "status": "pending"
+        },
+        "readback_freshness": {
+          "status": "partial"
+        }
+      },
+      "attribution": {
+        "status": "pending_validation",
+        "conversion_definition": null,
+        "attribution_window": null,
+        "latency_state": "unverified",
+        "tracking_health": "unverified",
+        "downstream_source_sha256": null,
+        "downstream_reconciled": false
+      },
+      "platform_claims": [],
+      "proposals": [],
+      "comparison": {
+        "baseline_artifact_sha256": "7d65a000d0d8dce4a234394a7051b3ae677684f6b75f779a670fbf9bdc854098",
+        "classification": "inconclusive"
+      }
+    },
+    {
+      "lane_id": "meta-ads--shadow-heating-cooling",
+      "client_id": "shadow-heating-cooling",
+      "platform": "meta-ads",
+      "observed_at": "2026-08-24T23:01:56.736Z",
+      "account_binding_state": "ambiguous",
+      "candidate_account_sha256s": [
+        "67751e358e907676c55ca5429bf5acd317612bb35b94507e1036b7aae796da9e",
+        "8cb1924bc8d90b6e8e5f22537ec626df8e2a313871786580628ab6f80740501f"
+      ],
+      "checks": {
+        "session_account": {
+          "status": "blocked"
+        },
+        "delivery_pacing": {
+          "status": "blocked"
+        },
+        "conversion_tracking_dedup": {
+          "status": "blocked"
+        },
+        "landing_page_health": {
+          "status": "pending"
+        },
+        "creative-fatigue-and-placements": {
+          "status": "blocked"
+        },
+        "change_history": {
+          "status": "blocked"
+        },
+        "budget_recommendation": {
+          "status": "blocked"
+        },
+        "readback_freshness": {
+          "status": "blocked"
+        }
+      },
+      "attribution": {
+        "status": "pending_validation",
+        "conversion_definition": null,
+        "attribution_window": null,
+        "latency_state": "unverified",
+        "tracking_health": "unverified",
+        "downstream_source_sha256": null,
+        "downstream_reconciled": false
+      },
+      "platform_claims": [],
+      "proposals": [],
+      "comparison": {
+        "baseline_artifact_sha256": "7d65a000d0d8dce4a234394a7051b3ae677684f6b75f779a670fbf9bdc854098",
+        "classification": "inconclusive"
+      }
+    },
+    {
+      "lane_id": "meta-ads--kimberly-james-bridal",
+      "client_id": "kimberly-james-bridal",
+      "platform": "meta-ads",
+      "observed_at": "2026-08-24T23:01:56.736Z",
+      "account_binding_state": "exact",
+      "provider_account_sha256": "6582c950246c525d53150adaf5170ee1b68806cdd383af38bedad8a1b954d2f5",
+      "reporting_window": {
+        "start": "2026-07-25",
+        "end": "2026-08-23",
+        "timezone": "America/New_York"
+      },
+      "checks": {
+        "session_account": {
+          "status": "verified"
+        },
+        "delivery_pacing": {
+          "status": "partial"
+        },
+        "conversion_tracking_dedup": {
+          "status": "pending"
+        },
+        "landing_page_health": {
+          "status": "pending"
+        },
+        "creative-fatigue-and-placements": {
+          "status": "pending"
+        },
+        "change_history": {
+          "status": "pending"
+        },
+        "budget_recommendation": {
+          "status": "pending"
+        },
+        "readback_freshness": {
+          "status": "partial"
+        }
+      },
+      "attribution": {
+        "status": "pending_validation",
+        "conversion_definition": null,
+        "attribution_window": null,
+        "latency_state": "unverified",
+        "tracking_health": "unverified",
+        "downstream_source_sha256": null,
+        "downstream_reconciled": false
+      },
+      "platform_claims": [
+        {
+          "metric": "form_leads",
+          "value": 24,
+          "definition_label": "Platform-reported form leads",
+          "downstream_reconciled": false
+        }
+      ],
+      "unpublished_draft_count": 1,
+      "proposals": [],
+      "comparison": {
+        "baseline_artifact_sha256": "7d65a000d0d8dce4a234394a7051b3ae677684f6b75f779a670fbf9bdc854098",
+        "classification": "inconclusive"
+      }
+    }
+  ]
+}

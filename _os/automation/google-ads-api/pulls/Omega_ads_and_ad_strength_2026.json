@@ -1,0 +1,790 @@
+[
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "0"
+    },
+    "adGroupAd": {
+      "resourceName": "customers/2853981364/adGroupAds/188618163827~774607339817",
+      "status": "ENABLED",
+      "ad": {
+        "type": "CALL_AD",
+        "resourceName": "customers/2853981364/ads/774607339817",
+        "id": "774607339817",
+        "finalUrls": [
+          "https://omegalandscapingandconcrete.com/"
+        ]
+      },
+      "policySummary": {
+        "reviewStatus": "REVIEWED",
+        "approvalStatus": "APPROVED"
+      }
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23300554493",
+      "name": "Search_Snow Removal_Call Only",
+      "id": "23300554493"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/184395440330",
+      "id": "184395440330",
+      "name": "Snow Plowing Services"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "0"
+    },
+    "adGroupAd": {
+      "resourceName": "customers/2853981364/adGroupAds/184395440330~785637077929",
+      "status": "ENABLED",
+      "ad": {
+        "type": "CALL_AD",
+        "resourceName": "customers/2853981364/ads/785637077929",
+        "id": "785637077929",
+        "finalUrls": [
+          "https://www.omegalandscapingandconcrete.com/"
+        ]
+      },
+      "policySummary": {
+        "reviewStatus": "REVIEWED",
+        "approvalStatus": "APPROVED"
+      }
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23300554493",
+      "name": "Search_Snow Removal_Call Only",
+      "id": "23300554493"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/189225370757",
+      "id": "189225370757",
+      "name": "Driveway & Home Snow Removal"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 1,
+      "costMicros": "24800000",
+      "impressions": "22"
+    },
+    "adGroupAd": {
+      "resourceName": "customers/2853981364/adGroupAds/189225370757~785637638806",
+      "status": "ENABLED",
+      "ad": {
+        "type": "CALL_AD",
+        "resourceName": "customers/2853981364/ads/785637638806",
+        "id": "785637638806",
+        "finalUrls": [
+          "https://www.omegalandscapingandconcrete.com/"
+        ]
+      },
+      "policySummary": {
+        "reviewStatus": "REVIEWED",
+        "approvalStatus": "APPROVED"
+      }
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23300554493",
+      "name": "Search_Snow Removal_Call Only",
+      "id": "23300554493"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/192064433711",
+      "id": "192064433711",
+      "name": "Residential Snow Removal"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "27"
+    },
+    "adGroupAd": {
+      "resourceName": "customers/2853981364/adGroupAds/192064433711~785602345566",
+      "status": "ENABLED",
+      "ad": {
+        "type": "CALL_AD",
+        "resourceName": "customers/2853981364/ads/785602345566",
+        "id": "785602345566",
+        "finalUrls": [
+          "https://www.omegalandscapingandconcrete.com/"
+        ]
+      },
+      "policySummary": {
+        "reviewStatus": "REVIEWED",
+        "approvalStatus": "APPROVED"
+      }
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23300554493",
+      "name": "Search_Snow Removal_Call Only",
+      "id": "23300554493"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/192726117561",
+      "id": "192726117561",
+      "name": "Emergency & Seasonal Snow Removal"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "0"
+    },
+    "adGroupAd": {
+      "resourceName": "customers/2853981364/adGroupAds/192726117561~785729573738",
+      "status": "ENABLED",
+      "ad": {
+        "type": "CALL_AD",
+        "resourceName": "customers/2853981364/ads/785729573738",
+        "id": "785729573738",
+        "finalUrls": [
+          "https://www.omegalandscapingandconcrete.com/"
+        ]
+      },
+      "policySummary": {
+        "reviewStatus": "REVIEWED",
+        "approvalStatus": "APPROVED"
+      }
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23307769901",
+      "name": "Search_Hardscaping_Call Only",
+      "id": "23307769901"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/187654160285",
+      "id": "187654160285",
+      "name": "Hardscape Design & Build"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "0"
+    },
+    "adGroupAd": {
+      "resourceName": "customers/2853981364/adGroupAds/187654160285~785927810842",
+      "status": "ENABLED",
+      "ad": {
+        "type": "CALL_AD",
+        "resourceName": "customers/2853981364/ads/785927810842",
+        "id": "785927810842",
+        "finalUrls": [
+          "https://www.omegalandscapingandconcrete.com/blank-1"
+        ]
+      },
+      "policySummary": {
+        "reviewStatus": "REVIEWED",
+        "approvalStatus": "APPROVED"
+      }
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23307769901",
+      "name": "Search_Hardscaping_Call Only",
+      "id": "23307769901"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188922480203",
+      "id": "188922480203",
+      "name": "Backyard & Garden Hardscaping"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "0"
+    },
+    "adGroupAd": {
+      "resourceName": "customers/2853981364/adGroupAds/188922480203~785927994367",
+      "status": "ENABLED",
+      "ad": {
+        "type": "CALL_AD",
+        "resourceName": "customers/2853981364/ads/785927994367",
+        "id": "785927994367",
+        "finalUrls": [
+          "https://www.omegalandscapingandconcrete.com/blank-1"
+        ]
+      },
+      "policySummary": {
+        "reviewStatus": "REVIEWED",
+        "approvalStatus": "APPROVED"
+      }
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23307769901",
+      "name": "Search_Hardscaping_Call Only",
+      "id": "23307769901"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/189761420816",
+      "id": "189761420816",
+      "name": "Hardscape Contractors"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "0"
+    },
+    "adGroupAd": {
+      "resourceName": "customers/2853981364/adGroupAds/189761420816~786021028700",
+      "status": "ENABLED",
+      "ad": {
+        "type": "CALL_AD",
+        "resourceName": "customers/2853981364/ads/786021028700",
+        "id": "786021028700",
+        "finalUrls": [
+          "https://www.omegalandscapingandconcrete.com/blank-1"
+        ]
+      },
+      "policySummary": {
+        "reviewStatus": "REVIEWED",
+        "approvalStatus": "APPROVED"
+      }
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23307822197",
+      "name": "Search_Concrete Services_Call Only",
+      "id": "23307822197"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/186541129862",
+      "id": "186541129862",
+      "name": "Concrete Pool Decks"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "0"
+    },
+    "adGroupAd": {
+      "resourceName": "customers/2853981364/adGroupAds/186541129862~785895753516",
+      "status": "ENABLED",
+      "ad": {
+        "type": "CALL_AD",
+        "resourceName": "customers/2853981364/ads/785895753516",
+        "id": "785895753516",
+        "finalUrls": [
+          "https://www.omegalandscapingandconcrete.com/blank-1"
+        ]
+      },
+      "policySummary": {
+        "reviewStatus": "REVIEWED",
+        "approvalStatus": "APPROVED"
+      }
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23307822197",
+      "name": "Search_Concrete Services_Call Only",
+      "id": "23307822197"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/189884087952",
+      "id": "189884087952",
+      "name": "Concrete Driveways & Patios"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "0"
+    },
+    "adGroupAd": {
+      "resourceName": "customers/2853981364/adGroupAds/189884087952~786022826582",
+      "status": "ENABLED",
+      "ad": {
+        "type": "CALL_AD",
+        "resourceName": "customers/2853981364/ads/786022826582",
+        "id": "786022826582",
+        "finalUrls": [
+          "https://www.omegalandscapingandconcrete.com/blank-1"
+        ]
+      },
+      "policySummary": {
+        "reviewStatus": "REVIEWED",
+        "approvalStatus": "APPROVED"
+      }
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23307822197",
+      "name": "Search_Concrete Services_Call Only",
+      "id": "23307822197"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/193174025470",
+      "id": "193174025470",
+      "name": "Concrete Walkways & Commercial"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "5"
+    },
+    "adGroupAd": {
+      "resourceName": "customers/2853981364/adGroupAds/193174025470~785895853386",
+      "status": "ENABLED",
+      "ad": {
+        "type": "CALL_AD",
+        "resourceName": "customers/2853981364/ads/785895853386",
+        "id": "785895853386",
+        "finalUrls": [
+          "https://www.omegalandscapingandconcrete.com/blank-1"
+        ]
+      },
+      "policySummary": {
+        "reviewStatus": "REVIEWED",
+        "approvalStatus": "APPROVED"
+      }
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23440060242",
+      "name": "Search_Services_Standard",
+      "id": "23440060242"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/191483295076",
+      "id": "191483295076",
+      "name": "Hardscaping"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "5"
+    },
+    "adGroupAd": {
+      "resourceName": "customers/2853981364/adGroupAds/191483295076~791873070621",
+      "status": "PAUSED",
+      "ad": {
+        "type": "CALL_AD",
+        "resourceName": "customers/2853981364/ads/791873070621",
+        "id": "791873070621",
+        "finalUrls": [
+          "https://www.omegalandscapingandconcrete.com/"
+        ]
+      },
+      "policySummary": {
+        "reviewStatus": "REVIEWED",
+        "approvalStatus": "APPROVED"
+      }
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23440060242",
+      "name": "Search_Services_Standard",
+      "id": "23440060242"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/191483295076",
+      "id": "191483295076",
+      "name": "Hardscaping"
+    },
+    "metrics": {
+      "clicks": "4",
+      "conversions": 0,
+      "costMicros": "68780000",
+      "impressions": "82"
+    },
+    "adGroupAd": {
+      "resourceName": "customers/2853981364/adGroupAds/191483295076~791874254856",
+      "status": "PAUSED",
+      "ad": {
+        "type": "RESPONSIVE_SEARCH_AD",
+        "resourceName": "customers/2853981364/ads/791874254856",
+        "id": "791874254856",
+        "finalUrls": [
+          "https://www.omegalandscapingandconcrete.com/"
+        ]
+      },
+      "policySummary": {
+        "reviewStatus": "REVIEWED",
+        "approvalStatus": "APPROVED"
+      },
+      "adStrength": "AVERAGE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23440060242",
+      "name": "Search_Services_Standard",
+      "id": "23440060242"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/197079002091",
+      "id": "197079002091",
+      "name": "Concrete"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "29"
+    },
+    "adGroupAd": {
+      "resourceName": "customers/2853981364/adGroupAds/197079002091~791875169256",
+      "status": "PAUSED",
+      "ad": {
+        "type": "CALL_AD",
+        "resourceName": "customers/2853981364/ads/791875169256",
+        "id": "791875169256",
+        "finalUrls": [
+          "https://www.omegalandscapingandconcrete.com/"
+        ]
+      },
+      "policySummary": {
+        "reviewStatus": "REVIEWED",
+        "approvalStatus": "APPROVED"
+      }
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23440060242",
+      "name": "Search_Services_Standard",
+      "id": "23440060242"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/197079002091",
+      "id": "197079002091",
+      "name": "Concrete"
+    },
+    "metrics": {
+      "clicks": "63",
+      "conversions": 1,
+      "costMicros": "2588277429",
+      "impressions": "1042"
+    },
+    "adGroupAd": {
+      "resourceName": "customers/2853981364/adGroupAds/197079002091~791915240578",
+      "status": "ENABLED",
+      "ad": {
+        "type": "RESPONSIVE_SEARCH_AD",
+        "resourceName": "customers/2853981364/ads/791915240578",
+        "id": "791915240578",
+        "finalUrls": [
+          "https://www.omegalandscapingandconcrete.com/blank-1"
+        ]
+      },
+      "policySummary": {
+        "reviewStatus": "REVIEWED",
+        "approvalStatus": "APPROVED"
+      },
+      "adStrength": "GOOD"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23441013566",
+      "name": "Search_Services_Call Only",
+      "id": "23441013566"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/192083417500",
+      "id": "192083417500",
+      "name": "Hardscaping"
+    },
+    "metrics": {
+      "clicks": "3",
+      "conversions": 0,
+      "costMicros": "104547500",
+      "impressions": "82"
+    },
+    "adGroupAd": {
+      "resourceName": "customers/2853981364/adGroupAds/192083417500~791672613036",
+      "status": "ENABLED",
+      "ad": {
+        "type": "CALL_AD",
+        "resourceName": "customers/2853981364/ads/791672613036",
+        "id": "791672613036",
+        "finalUrls": [
+          "https://www.omegalandscapingandconcrete.com/"
+        ]
+      },
+      "policySummary": {
+        "reviewStatus": "REVIEWED",
+        "approvalStatus": "APPROVED"
+      }
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23441013566",
+      "name": "Search_Services_Call Only",
+      "id": "23441013566"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/192083417500",
+      "id": "192083417500",
+      "name": "Hardscaping"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "8"
+    },
+    "adGroupAd": {
+      "resourceName": "customers/2853981364/adGroupAds/192083417500~799111263034",
+      "status": "ENABLED",
+      "ad": {
+        "type": "RESPONSIVE_SEARCH_AD",
+        "resourceName": "customers/2853981364/ads/799111263034",
+        "id": "799111263034",
+        "finalUrls": [
+          "https://www.omegalandscapingandconcrete.com/blank-1"
+        ]
+      },
+      "policySummary": {
+        "reviewStatus": "REVIEWED",
+        "approvalStatus": "APPROVED"
+      },
+      "adStrength": "AVERAGE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23441013566",
+      "name": "Search_Services_Call Only",
+      "id": "23441013566"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/192344093698",
+      "id": "192344093698",
+      "name": "Patio"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "0"
+    },
+    "adGroupAd": {
+      "resourceName": "customers/2853981364/adGroupAds/192344093698~791676073437",
+      "status": "ENABLED",
+      "ad": {
+        "type": "CALL_AD",
+        "resourceName": "customers/2853981364/ads/791676073437",
+        "id": "791676073437",
+        "finalUrls": [
+          "https://www.omegalandscapingandconcrete.com/"
+        ]
+      },
+      "policySummary": {
+        "reviewStatus": "REVIEWED",
+        "approvalStatus": "APPROVED"
+      }
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23441013566",
+      "name": "Search_Services_Call Only",
+      "id": "23441013566"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/194198788991",
+      "id": "194198788991",
+      "name": "Concrete"
+    },
+    "metrics": {
+      "clicks": "31",
+      "conversions": 0,
+      "costMicros": "885298900",
+      "impressions": "1199"
+    },
+    "adGroupAd": {
+      "resourceName": "customers/2853981364/adGroupAds/194198788991~791794593524",
+      "status": "ENABLED",
+      "ad": {
+        "type": "CALL_AD",
+        "resourceName": "customers/2853981364/ads/791794593524",
+        "id": "791794593524",
+        "finalUrls": [
+          "https://www.omegalandscapingandconcrete.com/"
+        ]
+      },
+      "policySummary": {
+        "reviewStatus": "REVIEWED",
+        "approvalStatus": "APPROVED"
+      }
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23441013566",
+      "name": "Search_Services_Call Only",
+      "id": "23441013566"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/194198788991",
+      "id": "194198788991",
+      "name": "Concrete"
+    },
+    "metrics": {
+      "clicks": "21",
+      "conversions": 0,
+      "costMicros": "725980000",
+      "impressions": "333"
+    },
+    "adGroupAd": {
+      "resourceName": "customers/2853981364/adGroupAds/194198788991~798969880746",
+      "status": "ENABLED",
+      "ad": {
+        "type": "RESPONSIVE_SEARCH_AD",
+        "resourceName": "customers/2853981364/ads/798969880746",
+        "id": "798969880746",
+        "finalUrls": [
+          "https://www.omegalandscapingandconcrete.com/blank-1"
+        ]
+      },
+      "policySummary": {
+        "reviewStatus": "REVIEWED",
+        "approvalStatus": "APPROVED"
+      },
+      "adStrength": "AVERAGE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23441013566",
+      "name": "Search_Services_Call Only",
+      "id": "23441013566"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/194199152391",
+      "id": "194199152391",
+      "name": "Retaining Walls"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "0"
+    },
+    "adGroupAd": {
+      "resourceName": "customers/2853981364/adGroupAds/194199152391~791676422610",
+      "status": "ENABLED",
+      "ad": {
+        "type": "CALL_AD",
+        "resourceName": "customers/2853981364/ads/791676422610",
+        "id": "791676422610",
+        "finalUrls": [
+          "https://www.omegalandscapingandconcrete.com/"
+        ]
+      },
+      "policySummary": {
+        "reviewStatus": "REVIEWED",
+        "approvalStatus": "APPROVED"
+      }
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23614055022",
+      "name": "Search_Brand Campaign",
+      "id": "23614055022"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/196593433569",
+      "id": "196593433569",
+      "name": "Brand Campaign"
+    },
+    "metrics": {
+      "clicks": "29",
+      "conversions": 0,
+      "costMicros": "201510626",
+      "impressions": "426"
+    },
+    "adGroupAd": {
+      "resourceName": "customers/2853981364/adGroupAds/196593433569~799093042526",
+      "status": "ENABLED",
+      "ad": {
+        "type": "RESPONSIVE_SEARCH_AD",
+        "resourceName": "customers/2853981364/ads/799093042526",
+        "id": "799093042526",
+        "finalUrls": [
+          "https://www.omegalandscapingandconcrete.com/"
+        ]
+      },
+      "policySummary": {
+        "reviewStatus": "REVIEWED",
+        "approvalStatus": "APPROVED"
+      },
+      "adStrength": "GOOD"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/24082267830",
+      "name": "Search | High Intent | Colorado Springs | 2026-07-30",
+      "id": "24082267830"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/198337769266",
+      "id": "198337769266",
+      "name": "Ad group 1"
+    },
+    "metrics": {
+      "clicks": "195",
+      "conversions": 3,
+      "costMicros": "1435049115",
+      "impressions": "4279"
+    },
+    "adGroupAd": {
+      "resourceName": "customers/2853981364/adGroupAds/198337769266~818861424471",
+      "status": "ENABLED",
+      "ad": {
+        "type": "RESPONSIVE_SEARCH_AD",
+        "resourceName": "customers/2853981364/ads/818861424471",
+        "id": "818861424471",
+        "finalUrls": [
+          "https://www.omegalandscapingandconcrete.com/"
+        ]
+      },
+      "policySummary": {
+        "reviewStatus": "REVIEWED",
+        "approvalStatus": "APPROVED"
+      },
+      "adStrength": "GOOD"
+    }
+  }
+]

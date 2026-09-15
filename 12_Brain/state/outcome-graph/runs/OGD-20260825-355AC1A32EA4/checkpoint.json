@@ -1,0 +1,564 @@
+{
+  "schema_version": 1,
+  "run_id": "OGD-20260825-355AC1A32EA4",
+  "graph_id": "monthly-m05-documentation-refresh-shadow",
+  "dedupe_identity": "687af954a2b3f8968a372c322c7e0706a3b2c99165162c65792c3e8adb5b85e3",
+  "dedupe_key": "M05:2026-08-24:source-bound-shadow",
+  "contract_fingerprint": "ecb79cc3c6a66fb94877ac8efa0967ce6e1ee6dd44a0550daa4d61cf8a680dcc",
+  "canonical_binding": {
+    "locator": "dillon-os://routine/M05/2026-08-24",
+    "version": "2026-08-25:f7aa7149.05e6a21e.d503a937.90d9bcee.130c4018.43588267.c4f66a74.f349bdba.03f91cd6.3fc9c1e7.3625cdc8",
+    "sha256": "900600a4c5b968c417856ad0517234a971dc918a5a6de67a060b11b8d5506df7",
+    "captured_at": "2026-08-25T00:27:27.043Z"
+  },
+  "canonical_binding_fingerprint": "6ed5ca8a4e8c8c6d235957a2ae7ba5e9e1cbb189270e76ece24354f4e41b1766",
+  "status": "blocked",
+  "started_at": "2026-08-25T00:27:27.061Z",
+  "updated_at": "2026-08-25T00:27:27.271Z",
+  "event_sequence": 11,
+  "events": [
+    {
+      "sequence": 1,
+      "event": "run_started",
+      "at": "2026-08-25T00:27:27.061Z",
+      "resumed": false
+    },
+    {
+      "sequence": 2,
+      "event": "planned",
+      "at": "2026-08-25T00:27:27.080Z",
+      "graph_attempt": 1,
+      "item_id": null
+    },
+    {
+      "sequence": 3,
+      "event": "worker_verified",
+      "at": "2026-08-25T00:27:27.144Z",
+      "graph_attempt": 1,
+      "item_id": "M05:prospect-radar-seed-state"
+    },
+    {
+      "sequence": 4,
+      "event": "worker_verified",
+      "at": "2026-08-25T00:27:27.155Z",
+      "graph_attempt": 1,
+      "item_id": "M05:missing-visual-direction-output"
+    },
+    {
+      "sequence": 5,
+      "event": "worker_verified",
+      "at": "2026-08-25T00:27:27.171Z",
+      "graph_attempt": 1,
+      "item_id": "M05:windows-design-preflight-regression"
+    },
+    {
+      "sequence": 6,
+      "event": "worker_verified",
+      "at": "2026-08-25T00:27:27.193Z",
+      "graph_attempt": 1,
+      "item_id": "M05:synthetic-review-production-boundary"
+    },
+    {
+      "sequence": 7,
+      "event": "workers_verified",
+      "at": "2026-08-25T00:27:27.204Z",
+      "graph_attempt": 1,
+      "item_id": null
+    },
+    {
+      "sequence": 8,
+      "event": "reduced",
+      "at": "2026-08-25T00:27:27.224Z",
+      "graph_attempt": 1,
+      "item_id": null
+    },
+    {
+      "sequence": 9,
+      "event": "terminal_verified",
+      "at": "2026-08-25T00:27:27.242Z",
+      "graph_attempt": 1,
+      "item_id": null
+    },
+    {
+      "sequence": 10,
+      "event": "learned",
+      "at": "2026-08-25T00:27:27.254Z",
+      "graph_attempt": 1,
+      "item_id": null
+    },
+    {
+      "sequence": 11,
+      "event": "receipt_committed",
+      "at": "2026-08-25T00:27:27.271Z",
+      "outcome": "blocked"
+    }
+  ],
+  "engine": {
+    "stage": "learned",
+    "graph_attempt": 1,
+    "plan_signature": "657e8a711eb141b807498b7030023b748c4f307996fd927fbeaccb910c88bc74",
+    "verified_workers": {
+      "M05:prospect-radar-seed-state": {
+        "input_fingerprint": "c3ad15493de0d963cd8be12da8a3049ff78371eb8f80121c063b581c3b0ffdb2",
+        "worker_result": {
+          "item_id": "M05:prospect-radar-seed-state",
+          "input_fingerprint": "c3ad15493de0d963cd8be12da8a3049ff78371eb8f80121c063b581c3b0ffdb2",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260825-355AC1A32EA4:70088035ba6895415cbd:attempt:1",
+              "maker_evidence": "Built one privacy-safe M05 record for M05:prospect-radar-seed-state.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/M05/2026-08-24-governance-shadow/workers/70088035ba6895415cbd.json",
+                  "sha256": "9431dd415d39e1fc882db5b464af779f69ebd29b63c707a8cc1538b69e777b58",
+                  "bytes": 1124
+                }
+              ],
+              "checker_evidence": "Independently reconstructed M05:prospect-radar-seed-state from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/M05/2026-08-24-governance-shadow/workers/70088035ba6895415cbd.json",
+              "sha256": "9431dd415d39e1fc882db5b464af779f69ebd29b63c707a8cc1538b69e777b58",
+              "bytes": 1124
+            }
+          ],
+          "isolation_id": "OGD-20260825-355AC1A32EA4:70088035ba6895415cbd:attempt:1"
+        }
+      },
+      "M05:missing-visual-direction-output": {
+        "input_fingerprint": "4c03679a9aa21f386588eeb22a6d740cc8997a894e8d99eb241d536f8e22be35",
+        "worker_result": {
+          "item_id": "M05:missing-visual-direction-output",
+          "input_fingerprint": "4c03679a9aa21f386588eeb22a6d740cc8997a894e8d99eb241d536f8e22be35",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260825-355AC1A32EA4:17e3e7301a05f3ffbe31:attempt:1",
+              "maker_evidence": "Built one privacy-safe M05 record for M05:missing-visual-direction-output.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/M05/2026-08-24-governance-shadow/workers/17e3e7301a05f3ffbe31.json",
+                  "sha256": "b0f845892a212631193506a51d5da3f0eb57150474e27312192009e2c7c4007a",
+                  "bytes": 1261
+                }
+              ],
+              "checker_evidence": "Independently reconstructed M05:missing-visual-direction-output from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/M05/2026-08-24-governance-shadow/workers/17e3e7301a05f3ffbe31.json",
+              "sha256": "b0f845892a212631193506a51d5da3f0eb57150474e27312192009e2c7c4007a",
+              "bytes": 1261
+            }
+          ],
+          "isolation_id": "OGD-20260825-355AC1A32EA4:17e3e7301a05f3ffbe31:attempt:1"
+        }
+      },
+      "M05:windows-design-preflight-regression": {
+        "input_fingerprint": "10a55b05ee16cf86821375983c662661ff5ba8b6ed4c8e7c10efa20ee6de74ee",
+        "worker_result": {
+          "item_id": "M05:windows-design-preflight-regression",
+          "input_fingerprint": "10a55b05ee16cf86821375983c662661ff5ba8b6ed4c8e7c10efa20ee6de74ee",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260825-355AC1A32EA4:293a09c0cb07c102e95c:attempt:1",
+              "maker_evidence": "Built one privacy-safe M05 record for M05:windows-design-preflight-regression.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/M05/2026-08-24-governance-shadow/workers/293a09c0cb07c102e95c.json",
+                  "sha256": "9f898fc21704db289e18ec3906af133694487c362b70fdae29522ba9504cbae0",
+                  "bytes": 1376
+                }
+              ],
+              "checker_evidence": "Independently reconstructed M05:windows-design-preflight-regression from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/M05/2026-08-24-governance-shadow/workers/293a09c0cb07c102e95c.json",
+              "sha256": "9f898fc21704db289e18ec3906af133694487c362b70fdae29522ba9504cbae0",
+              "bytes": 1376
+            }
+          ],
+          "isolation_id": "OGD-20260825-355AC1A32EA4:293a09c0cb07c102e95c:attempt:1"
+        }
+      },
+      "M05:synthetic-review-production-boundary": {
+        "input_fingerprint": "36f5f30fcdaa3ae1aed732840446ec76ba6015463ff3b6a034b2a070c7e01c1d",
+        "worker_result": {
+          "item_id": "M05:synthetic-review-production-boundary",
+          "input_fingerprint": "36f5f30fcdaa3ae1aed732840446ec76ba6015463ff3b6a034b2a070c7e01c1d",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260825-355AC1A32EA4:ce32ed51ec29e2763fcf:attempt:1",
+              "maker_evidence": "Built one privacy-safe M05 record for M05:synthetic-review-production-boundary.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/M05/2026-08-24-governance-shadow/workers/ce32ed51ec29e2763fcf.json",
+                  "sha256": "ee0e1491ac212b959951ae47935a89a4e9713e2410bfcfd9b0c5ee768366704a",
+                  "bytes": 1208
+                }
+              ],
+              "checker_evidence": "Independently reconstructed M05:synthetic-review-production-boundary from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/M05/2026-08-24-governance-shadow/workers/ce32ed51ec29e2763fcf.json",
+              "sha256": "ee0e1491ac212b959951ae47935a89a4e9713e2410bfcfd9b0c5ee768366704a",
+              "bytes": 1208
+            }
+          ],
+          "isolation_id": "OGD-20260825-355AC1A32EA4:ce32ed51ec29e2763fcf:attempt:1"
+        }
+      }
+    },
+    "budget_used": 12,
+    "previous_terminal_findings": [
+      "The missing declared visual direction asset is explicit."
+    ],
+    "graph_iterations": [
+      {
+        "iteration": 1,
+        "status": "terminal_failed",
+        "planner": {
+          "evidence": "Collected 4 isolated M05 item(s) from source set 900600a4c5b968c417856ad0517234a971dc918a5a6de67a060b11b8d5506df7.",
+          "item_count": 4,
+          "plan_signature": "657e8a711eb141b807498b7030023b748c4f307996fd927fbeaccb910c88bc74",
+          "items": [
+            {
+              "id": "M05:prospect-radar-seed-state",
+              "isolation_key": "project:prospect-radar:design-seed",
+              "input_fingerprint": "c3ad15493de0d963cd8be12da8a3049ff78371eb8f80121c063b581c3b0ffdb2",
+              "task": null
+            },
+            {
+              "id": "M05:missing-visual-direction-output",
+              "isolation_key": "project:prospect-radar:visual-authority-output",
+              "input_fingerprint": "4c03679a9aa21f386588eeb22a6d740cc8997a894e8d99eb241d536f8e22be35",
+              "task": null
+            },
+            {
+              "id": "M05:windows-design-preflight-regression",
+              "isolation_key": "global-tool:impeccable-preflight:windows",
+              "input_fingerprint": "10a55b05ee16cf86821375983c662661ff5ba8b6ed4c8e7c10efa20ee6de74ee",
+              "task": null
+            },
+            {
+              "id": "M05:synthetic-review-production-boundary",
+              "isolation_key": "global-design-governance:review-authority",
+              "input_fingerprint": "36f5f30fcdaa3ae1aed732840446ec76ba6015463ff3b6a034b2a070c7e01c1d",
+              "task": null
+            }
+          ]
+        },
+        "workers": [
+          {
+            "item_id": "M05:prospect-radar-seed-state",
+            "input_fingerprint": "c3ad15493de0d963cd8be12da8a3049ff78371eb8f80121c063b581c3b0ffdb2",
+            "status": "verified",
+            "attempts": [
+              {
+                "attempt": 1,
+                "isolation_id": "OGD-20260825-355AC1A32EA4:70088035ba6895415cbd:attempt:1",
+                "maker_evidence": "Built one privacy-safe M05 record for M05:prospect-radar-seed-state.",
+                "artifacts": [
+                  {
+                    "path": "System/outcome-graph/routines/M05/2026-08-24-governance-shadow/workers/70088035ba6895415cbd.json",
+                    "sha256": "9431dd415d39e1fc882db5b464af779f69ebd29b63c707a8cc1538b69e777b58",
+                    "bytes": 1124
+                  }
+                ],
+                "checker_evidence": "Independently reconstructed M05:prospect-radar-seed-state from the same source-bound contract.",
+                "passed": true,
+                "findings": []
+              }
+            ],
+            "final_artifacts": [
+              {
+                "path": "System/outcome-graph/routines/M05/2026-08-24-governance-shadow/workers/70088035ba6895415cbd.json",
+                "sha256": "9431dd415d39e1fc882db5b464af779f69ebd29b63c707a8cc1538b69e777b58",
+                "bytes": 1124
+              }
+            ],
+            "isolation_id": "OGD-20260825-355AC1A32EA4:70088035ba6895415cbd:attempt:1"
+          },
+          {
+            "item_id": "M05:missing-visual-direction-output",
+            "input_fingerprint": "4c03679a9aa21f386588eeb22a6d740cc8997a894e8d99eb241d536f8e22be35",
+            "status": "verified",
+            "attempts": [
+              {
+                "attempt": 1,
+                "isolation_id": "OGD-20260825-355AC1A32EA4:17e3e7301a05f3ffbe31:attempt:1",
+                "maker_evidence": "Built one privacy-safe M05 record for M05:missing-visual-direction-output.",
+                "artifacts": [
+                  {
+                    "path": "System/outcome-graph/routines/M05/2026-08-24-governance-shadow/workers/17e3e7301a05f3ffbe31.json",
+                    "sha256": "b0f845892a212631193506a51d5da3f0eb57150474e27312192009e2c7c4007a",
+                    "bytes": 1261
+                  }
+                ],
+                "checker_evidence": "Independently reconstructed M05:missing-visual-direction-output from the same source-bound contract.",
+                "passed": true,
+                "findings": []
+              }
+            ],
+            "final_artifacts": [
+              {
+                "path": "System/outcome-graph/routines/M05/2026-08-24-governance-shadow/workers/17e3e7301a05f3ffbe31.json",
+                "sha256": "b0f845892a212631193506a51d5da3f0eb57150474e27312192009e2c7c4007a",
+                "bytes": 1261
+              }
+            ],
+            "isolation_id": "OGD-20260825-355AC1A32EA4:17e3e7301a05f3ffbe31:attempt:1"
+          },
+          {
+            "item_id": "M05:windows-design-preflight-regression",
+            "input_fingerprint": "10a55b05ee16cf86821375983c662661ff5ba8b6ed4c8e7c10efa20ee6de74ee",
+            "status": "verified",
+            "attempts": [
+              {
+                "attempt": 1,
+                "isolation_id": "OGD-20260825-355AC1A32EA4:293a09c0cb07c102e95c:attempt:1",
+                "maker_evidence": "Built one privacy-safe M05 record for M05:windows-design-preflight-regression.",
+                "artifacts": [
+                  {
+                    "path": "System/outcome-graph/routines/M05/2026-08-24-governance-shadow/workers/293a09c0cb07c102e95c.json",
+                    "sha256": "9f898fc21704db289e18ec3906af133694487c362b70fdae29522ba9504cbae0",
+                    "bytes": 1376
+                  }
+                ],
+                "checker_evidence": "Independently reconstructed M05:windows-design-preflight-regression from the same source-bound contract.",
+                "passed": true,
+                "findings": []
+              }
+            ],
+            "final_artifacts": [
+              {
+                "path": "System/outcome-graph/routines/M05/2026-08-24-governance-shadow/workers/293a09c0cb07c102e95c.json",
+                "sha256": "9f898fc21704db289e18ec3906af133694487c362b70fdae29522ba9504cbae0",
+                "bytes": 1376
+              }
+            ],
+            "isolation_id": "OGD-20260825-355AC1A32EA4:293a09c0cb07c102e95c:attempt:1"
+          },
+          {
+            "item_id": "M05:synthetic-review-production-boundary",
+            "input_fingerprint": "36f5f30fcdaa3ae1aed732840446ec76ba6015463ff3b6a034b2a070c7e01c1d",
+            "status": "verified",
+            "attempts": [
+              {
+                "attempt": 1,
+                "isolation_id": "OGD-20260825-355AC1A32EA4:ce32ed51ec29e2763fcf:attempt:1",
+                "maker_evidence": "Built one privacy-safe M05 record for M05:synthetic-review-production-boundary.",
+                "artifacts": [
+                  {
+                    "path": "System/outcome-graph/routines/M05/2026-08-24-governance-shadow/workers/ce32ed51ec29e2763fcf.json",
+                    "sha256": "ee0e1491ac212b959951ae47935a89a4e9713e2410bfcfd9b0c5ee768366704a",
+                    "bytes": 1208
+                  }
+                ],
+                "checker_evidence": "Independently reconstructed M05:synthetic-review-production-boundary from the same source-bound contract.",
+                "passed": true,
+                "findings": []
+              }
+            ],
+            "final_artifacts": [
+              {
+                "path": "System/outcome-graph/routines/M05/2026-08-24-governance-shadow/workers/ce32ed51ec29e2763fcf.json",
+                "sha256": "ee0e1491ac212b959951ae47935a89a4e9713e2410bfcfd9b0c5ee768366704a",
+                "bytes": 1208
+              }
+            ],
+            "isolation_id": "OGD-20260825-355AC1A32EA4:ce32ed51ec29e2763fcf:attempt:1"
+          }
+        ],
+        "reduction": {
+          "evidence": "Reduced all checked M05 records without blending isolation keys.",
+          "artifacts": [
+            {
+              "path": "System/outcome-graph/routines/M05/2026-08-24-governance-shadow/documentation-refresh-proposal.json",
+              "sha256": "92d707314a765e74cc83ef804e64f7fedd68dd7dbff0f8e0669e6abfd20ab56a",
+              "bytes": 6123
+            },
+            {
+              "path": "System/outcome-graph/routines/M05/2026-08-24-governance-shadow/authority-conflict-map.json",
+              "sha256": "cbd4dd9918498a3c5e4fe73584a4b9e7758ed6653e814fef3161ee46ad2d33a7",
+              "bytes": 1239
+            }
+          ]
+        },
+        "terminal_verification": {
+          "evidence": "Recollected and independently verified all M05 sources, records, negative states, and artifact hashes.",
+          "declared_pass": false,
+          "passed": false,
+          "assertions": [
+            {
+              "id": "source-manifest-stable",
+              "passed": true,
+              "detail": "Every named source remains hash-bound at terminal verification."
+            },
+            {
+              "id": "every-isolated-item-reconstructed-exactly-once",
+              "passed": true,
+              "detail": "Every in-scope item has one collision-resistant reconstructed record."
+            },
+            {
+              "id": "reducer-output-reproduces-exactly",
+              "passed": true,
+              "detail": "Final artifacts reproduce exactly from current sources and the frozen evaluation clock."
+            },
+            {
+              "id": "current-behavior-compared-to-durable-rules",
+              "passed": true,
+              "detail": "Current preflight and rendered behavior are compared to durable authority."
+            },
+            {
+              "id": "global-project-and-surface-scope-resolved",
+              "passed": true,
+              "detail": "Every proposal names its owning authority layer."
+            },
+            {
+              "id": "stale-brand-and-design-guidance-identified",
+              "passed": false,
+              "detail": "The missing declared visual direction asset is explicit."
+            },
+            {
+              "id": "proposal-names-source-conflict-and-effective-date",
+              "passed": true,
+              "detail": "Every proposed correction is dated and reviewable."
+            },
+            {
+              "id": "generated-sidecars-use-supported-tools",
+              "passed": true,
+              "detail": "No sidecar is hand-edited or fabricated."
+            },
+            {
+              "id": "no-silent-canonical-overwrite",
+              "passed": true,
+              "detail": "All changes remain proposals."
+            },
+            {
+              "id": "privacy-and-no-mutation-boundary",
+              "passed": true,
+              "detail": "Final artifacts are redacted and attest no external, canonical, provider, restart, or checkpoint mutation."
+            }
+          ],
+          "artifact_manifest": [
+            {
+              "path": "System/outcome-graph/routines/M05/2026-08-24-governance-shadow/documentation-refresh-proposal.json",
+              "sha256": "92d707314a765e74cc83ef804e64f7fedd68dd7dbff0f8e0669e6abfd20ab56a",
+              "bytes": 6123
+            },
+            {
+              "path": "System/outcome-graph/routines/M05/2026-08-24-governance-shadow/authority-conflict-map.json",
+              "sha256": "cbd4dd9918498a3c5e4fe73584a4b9e7758ed6653e814fef3161ee46ad2d33a7",
+              "bytes": 1239
+            }
+          ],
+          "manifest_errors": []
+        },
+        "learning": {
+          "evidence": "Appended one hashed M05 correction entry.",
+          "corrections": [
+            "Repair only the exact M05 source, isolation, reducer, privacy, or assertion mismatch."
+          ],
+          "ledger": "System/outcome-graph/routines/M05/2026-08-24-governance-shadow/corrections.jsonl",
+          "ledger_receipt": {
+            "locator": "System/outcome-graph/routines/M05/2026-08-24-governance-shadow/corrections.jsonl",
+            "entry_sha256": "595fed1122a4f0b4efdfa8215f47fe64fa7c20960028ddd6e0310a2afce05ed6"
+          }
+        }
+      }
+    ],
+    "invocation_log": [
+      {
+        "adapter": "source-bound-m05-planner",
+        "invoked_at": "2026-08-25T00:27:27.071Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-m05-maker",
+        "invoked_at": "2026-08-25T00:27:27.092Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-m05-maker",
+        "invoked_at": "2026-08-25T00:27:27.092Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-m05-maker",
+        "invoked_at": "2026-08-25T00:27:27.092Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-m05-checker",
+        "invoked_at": "2026-08-25T00:27:27.125Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-m05-checker",
+        "invoked_at": "2026-08-25T00:27:27.125Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-m05-checker",
+        "invoked_at": "2026-08-25T00:27:27.125Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-m05-maker",
+        "invoked_at": "2026-08-25T00:27:27.164Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-m05-checker",
+        "invoked_at": "2026-08-25T00:27:27.188Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-m05-reducer",
+        "invoked_at": "2026-08-25T00:27:27.218Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-m05-terminal-verifier",
+        "invoked_at": "2026-08-25T00:27:27.234Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-m05-learner",
+        "invoked_at": "2026-08-25T00:27:27.254Z",
+        "status": "returned"
+      }
+    ]
+  },
+  "last_event": "receipt_committed",
+  "state_revision": 11,
+  "previous_state_sha256": "b28329ed786e54f9efc0a339ce2e365b2dee0f5b8bee8f40ef81c9358c47b85c",
+  "receipt": {
+    "path": "runs/OGD-20260825-355AC1A32EA4/receipt.json",
+    "sha256": "606d155f15eab30a979acab0e63ee979e17ae705d708c0fc1c957f16b62c3eae",
+    "bytes": 16037
+  }
+}

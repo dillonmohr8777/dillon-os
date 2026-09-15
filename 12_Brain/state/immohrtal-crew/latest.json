@@ -1,8 +1,8 @@
 {
     "schema":  1,
-    "cycle_id":  "CREW-20260827-181008429",
-    "started_at_utc":  "2026-08-27T22:10:08.4291976Z",
-    "finished_at_utc":  "2026-08-27T22:10:13.1138268Z",
+    "cycle_id":  "CREW-20260915-014120675",
+    "started_at_utc":  "2026-09-15T05:41:20.6751459Z",
+    "finished_at_utc":  "2026-09-15T05:41:28.6979949Z",
     "outcome":  "worked",
     "skip_reason":  null,
     "mail_ready":  "hold",
@@ -17,7 +17,7 @@
                       "id":  "reliability",
                       "agent":  "reliability-scout",
                       "status":  "ok",
-                      "summary":  "tasks healthy=4/4; daily-driver=noop; loop-fail-lines=5; agency-lease-expired=True",
+                      "summary":  "tasks healthy=4/4; daily-driver=noop; loop-fail-lines=0; agency-lease-expired=True",
                       "evidence":  [
                                        "12_Brain/state/claude-daily-driver.json",
                                        "hidden-scheduled-tasks.tsv"
@@ -51,12 +51,12 @@
                                                    },
                                                    {
                                                        "name":  "Immohrtal-Crew",
-                                                       "state":  "Ready",
+                                                       "state":  "Running",
                                                        "expected":  "Ready",
                                                        "healthy":  true
                                                    }
                                                ],
-                                     "loop_fail_lines":  5
+                                     "loop_fail_lines":  0
                                  }
                   },
                   {
@@ -70,13 +70,14 @@
                       "detail":  {
                                      "health_cli":  {
                                                         "automation_id":  "connector-health",
-                                                        "status":  "ok",
+                                                        "status":  "blocked",
                                                         "window_hours":  48,
-                                                        "snapshot_age_hours":  2.14,
+                                                        "snapshot_age_hours":  441.66,
+                                                        "generated_at":  "2026-08-27T20:02:00Z",
                                                         "counts":  {
                                                                        "connectors":  5,
-                                                                       "usable":  1,
-                                                                       "unusable":  4
+                                                                       "usable":  0,
+                                                                       "unusable":  5
                                                                    },
                                                         "connectors":  [
                                                                            {
@@ -84,8 +85,8 @@
                                                                                "status":  "active",
                                                                                "read_verified":  true,
                                                                                "observed_at_utc":  "2026-08-27T20:01:52.000Z",
-                                                                               "age_hours":  2.14,
-                                                                               "usable":  true,
+                                                                               "age_hours":  441.66,
+                                                                               "usable":  false,
                                                                                "note":  "Live and usable. Two accounts: pass the account id explicitly, since account_selection is required."
                                                                            },
                                                                            {
@@ -93,7 +94,7 @@
                                                                                "status":  "active",
                                                                                "read_verified":  false,
                                                                                "observed_at_utc":  "2026-08-27T12:06:00.000Z",
-                                                                               "age_hours":  10.07,
+                                                                               "age_hours":  449.59,
                                                                                "usable":  false,
                                                                                "note":  "Connection remains ACTIVE. LIST_ACCESSIBLE_CUSTOMERS returned 16 resource names (quota recovered; not 429). Child-account GAQL returned USER_PERMISSION_DENIED for login-customer-id. One listed customer returned CUSTOMER_NOT_ENABLED. Do not treat this as a re-auth problem. No pause/enable/budget. Replenish invite untouched."
                                                                            },
@@ -102,7 +103,7 @@
                                                                                "status":  "active",
                                                                                "read_verified":  false,
                                                                                "observed_at_utc":  "2026-08-18T19:25:22.000Z",
-                                                                               "age_hours":  218.75,
+                                                                               "age_hours":  658.27,
                                                                                "usable":  false,
                                                                                "note":  "Connection reported active by COMPOSIO_MANAGE_CONNECTIONS but no read was executed this session, so read_verified stays false. Verify before relying on it."
                                                                            },
@@ -111,7 +112,7 @@
                                                                                "status":  "not_connected",
                                                                                "read_verified":  false,
                                                                                "observed_at_utc":  "2026-08-18T19:25:22.000Z",
-                                                                               "age_hours":  218.75,
+                                                                               "age_hours":  658.27,
                                                                                "usable":  false,
                                                                                "note":  "Not in the connected-toolkit list. `instagram` is connected, which is not the same as Meta Ads. Routines needing Meta delivery data stay blocked."
                                                                            },
@@ -120,7 +121,7 @@
                                                                                "status":  "not_connected",
                                                                                "read_verified":  false,
                                                                                "observed_at_utc":  "2026-08-18T19:25:22.000Z",
-                                                                               "age_hours":  218.75,
+                                                                               "age_hours":  658.27,
                                                                                "usable":  false,
                                                                                "note":  "Not connected via Composio. The jason-fallon-hubspot-agent repo holds a portal-guarded path; treat that as the route, not this connector."
                                                                            }
@@ -290,7 +291,7 @@
                       "status":  "ok",
                       "summary":  "one ranked Immohrtal board; Codex remains canonical queue writer",
                       "evidence":  [
-                                       "Daily-Briefs/plan-2026-08-27.md"
+                                       "Daily-Briefs/plan-2026-09-15.md"
                                    ],
                       "detail":  {
                                      "board":  [

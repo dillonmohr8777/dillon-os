@@ -1,0 +1,535 @@
+{
+  "run_id": "OGD-20260824-A8DA8DCB0A3D",
+  "graph_id": "daily-d11-bounded-execution-graph-shadow",
+  "objective": "Produce the bounded source-to-terminal dependency graph for the Outcome Graph migration objective.",
+  "value_signal": "Every node has exact inputs, outputs, owner, isolation, limits, failure state, dependencies, and approval boundary.",
+  "contract_sha256": "e04ab37d96232f853e1c0a8eba974058fd751b51d491f004a5a9140b27bd82a0",
+  "started_at": "2026-08-24T23:48:51.856Z",
+  "source_evidence": "The exact objective, registry, git state, rules, product/design documents, design probe, and W05 receipt are recollected before planning and at terminal verification.",
+  "finish_line": "Every graph node independently reconstructs with unique isolation, finite limits, maker-checker separation, explicit abstention, and no self-granted authority.",
+  "governance": {
+    "orchestrator": "Codex acting as Marketing Chief",
+    "canonical_state": "The exact user objective, Dillon OS registry and rules, repository state, product/design authority, and W05 durable evidence remain canonical and read only.",
+    "dedupe_key": "D11:2026-08-24:source-bound-shadow",
+    "checkpoint": "System/outcome-graph/routines/D11/2026-08-24-foundation-shadow/run-receipt.json",
+    "rollback": "Discard foundation shadow artifacts; preserve the worktree, product/design truth, deployment state, canonical queue, and external systems unchanged.",
+    "escalation": "Return exact scope, repository, design-context, build-gate, QA, delivery, or authority evidence to Marketing Chief."
+  },
+  "graph_iterations": [
+    {
+      "iteration": 1,
+      "status": "verified",
+      "planner": {
+        "evidence": "Collected 6 isolated D11 item(s) from source set bee6d7037763d45601274702c12c8e31ad280fed7e97757744fc5930b1d39065.",
+        "item_count": 6,
+        "plan_signature": "d4ed8deebbc0b6f9f02093054e38b317fa96321f560113f5a56b6c602d456140",
+        "items": [
+          {
+            "id": "D11:sense-and-bind-sources",
+            "isolation_key": "graph-node:sense-and-bind-sources",
+            "input_fingerprint": "ca8956514caae3d2aa445ca6cc94768358a0858a994a45cdb90075ec000ca718",
+            "task": null
+          },
+          {
+            "id": "D11:build-isolated-records",
+            "isolation_key": "graph-node:build-isolated-records",
+            "input_fingerprint": "e088f294063c9baac926a0a3f726c4221d9a476f9dd33afa899f3b9fdf2eaf02",
+            "task": null
+          },
+          {
+            "id": "D11:check-records-independently",
+            "isolation_key": "graph-node:check-records-independently",
+            "input_fingerprint": "f267924d4550778438c77dffa3ca43d68fcd04630824028941b279d911e9f39e",
+            "task": null
+          },
+          {
+            "id": "D11:reduce-passed-records",
+            "isolation_key": "graph-node:reduce-passed-records",
+            "input_fingerprint": "daa33784c6a6d8ab965e816590fd00c620d26a3f09c91e203cfb6db2191d31e7",
+            "task": null
+          },
+          {
+            "id": "D11:verify-terminal-outcome",
+            "isolation_key": "graph-node:verify-terminal-outcome",
+            "input_fingerprint": "3d709403904e28bec770e30a747ecc934ca57af6a1178fa3e1152fce8c6e019f",
+            "task": null
+          },
+          {
+            "id": "D11:learn-and-handoff",
+            "isolation_key": "graph-node:learn-and-handoff",
+            "input_fingerprint": "99f6236c50524f2e97cbaa4f203f3c6dc01b0d00a9df39eef14af9b72d008bcd",
+            "task": null
+          }
+        ]
+      },
+      "workers": [
+        {
+          "item_id": "D11:sense-and-bind-sources",
+          "input_fingerprint": "ca8956514caae3d2aa445ca6cc94768358a0858a994a45cdb90075ec000ca718",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-A8DA8DCB0A3D:6ad01815f25d51c88373:attempt:1",
+              "maker_evidence": "Built one privacy-safe D11 record for D11:sense-and-bind-sources.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D11/2026-08-24-foundation-shadow/workers/6ad01815f25d51c88373.json",
+                  "sha256": "631fc6fcafa85a7158a4c677615f843ee98b94045ffd38da34f819a96738b656",
+                  "bytes": 1132
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D11:sense-and-bind-sources from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D11/2026-08-24-foundation-shadow/workers/6ad01815f25d51c88373.json",
+              "sha256": "631fc6fcafa85a7158a4c677615f843ee98b94045ffd38da34f819a96738b656",
+              "bytes": 1132
+            }
+          ],
+          "isolation_id": "OGD-20260824-A8DA8DCB0A3D:6ad01815f25d51c88373:attempt:1"
+        },
+        {
+          "item_id": "D11:build-isolated-records",
+          "input_fingerprint": "e088f294063c9baac926a0a3f726c4221d9a476f9dd33afa899f3b9fdf2eaf02",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-A8DA8DCB0A3D:3d5ad07bbcf35f2de5be:attempt:1",
+              "maker_evidence": "Built one privacy-safe D11 record for D11:build-isolated-records.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D11/2026-08-24-foundation-shadow/workers/3d5ad07bbcf35f2de5be.json",
+                  "sha256": "dd57fc71678d430e64f09b0a2bdcb2aada0e12ee96a28aaba91817915675673b",
+                  "bytes": 1166
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D11:build-isolated-records from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D11/2026-08-24-foundation-shadow/workers/3d5ad07bbcf35f2de5be.json",
+              "sha256": "dd57fc71678d430e64f09b0a2bdcb2aada0e12ee96a28aaba91817915675673b",
+              "bytes": 1166
+            }
+          ],
+          "isolation_id": "OGD-20260824-A8DA8DCB0A3D:3d5ad07bbcf35f2de5be:attempt:1"
+        },
+        {
+          "item_id": "D11:check-records-independently",
+          "input_fingerprint": "f267924d4550778438c77dffa3ca43d68fcd04630824028941b279d911e9f39e",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-A8DA8DCB0A3D:dc3dc6cdca33798764c1:attempt:1",
+              "maker_evidence": "Built one privacy-safe D11 record for D11:check-records-independently.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D11/2026-08-24-foundation-shadow/workers/dc3dc6cdca33798764c1.json",
+                  "sha256": "1122b0a56bff732495621cefa52cb5c010b5786739f4394e87f0a8cebe34babe",
+                  "bytes": 1175
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D11:check-records-independently from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D11/2026-08-24-foundation-shadow/workers/dc3dc6cdca33798764c1.json",
+              "sha256": "1122b0a56bff732495621cefa52cb5c010b5786739f4394e87f0a8cebe34babe",
+              "bytes": 1175
+            }
+          ],
+          "isolation_id": "OGD-20260824-A8DA8DCB0A3D:dc3dc6cdca33798764c1:attempt:1"
+        },
+        {
+          "item_id": "D11:reduce-passed-records",
+          "input_fingerprint": "daa33784c6a6d8ab965e816590fd00c620d26a3f09c91e203cfb6db2191d31e7",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-A8DA8DCB0A3D:0eea28db2c23aaed5e8f:attempt:1",
+              "maker_evidence": "Built one privacy-safe D11 record for D11:reduce-passed-records.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D11/2026-08-24-foundation-shadow/workers/0eea28db2c23aaed5e8f.json",
+                  "sha256": "ab5ff1fbf28f006d7b32c866f8fa60fe0ced4cb22990a1880ec0ea32121714e0",
+                  "bytes": 1165
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D11:reduce-passed-records from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D11/2026-08-24-foundation-shadow/workers/0eea28db2c23aaed5e8f.json",
+              "sha256": "ab5ff1fbf28f006d7b32c866f8fa60fe0ced4cb22990a1880ec0ea32121714e0",
+              "bytes": 1165
+            }
+          ],
+          "isolation_id": "OGD-20260824-A8DA8DCB0A3D:0eea28db2c23aaed5e8f:attempt:1"
+        },
+        {
+          "item_id": "D11:verify-terminal-outcome",
+          "input_fingerprint": "3d709403904e28bec770e30a747ecc934ca57af6a1178fa3e1152fce8c6e019f",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-A8DA8DCB0A3D:8461213878e4f129b1af:attempt:1",
+              "maker_evidence": "Built one privacy-safe D11 record for D11:verify-terminal-outcome.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D11/2026-08-24-foundation-shadow/workers/8461213878e4f129b1af.json",
+                  "sha256": "1f6bb44ec013612ea969c133b5e0952d2dd8a8caceee1b9c5ce649c8483a32ee",
+                  "bytes": 1196
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D11:verify-terminal-outcome from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D11/2026-08-24-foundation-shadow/workers/8461213878e4f129b1af.json",
+              "sha256": "1f6bb44ec013612ea969c133b5e0952d2dd8a8caceee1b9c5ce649c8483a32ee",
+              "bytes": 1196
+            }
+          ],
+          "isolation_id": "OGD-20260824-A8DA8DCB0A3D:8461213878e4f129b1af:attempt:1"
+        },
+        {
+          "item_id": "D11:learn-and-handoff",
+          "input_fingerprint": "99f6236c50524f2e97cbaa4f203f3c6dc01b0d00a9df39eef14af9b72d008bcd",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-A8DA8DCB0A3D:525df99cf419d20106c2:attempt:1",
+              "maker_evidence": "Built one privacy-safe D11 record for D11:learn-and-handoff.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D11/2026-08-24-foundation-shadow/workers/525df99cf419d20106c2.json",
+                  "sha256": "6604ebb7d2fb301075eae75b7a5ef68c2c51fb02a0b4f01de3d33f4a74e346a2",
+                  "bytes": 1212
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D11:learn-and-handoff from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D11/2026-08-24-foundation-shadow/workers/525df99cf419d20106c2.json",
+              "sha256": "6604ebb7d2fb301075eae75b7a5ef68c2c51fb02a0b4f01de3d33f4a74e346a2",
+              "bytes": 1212
+            }
+          ],
+          "isolation_id": "OGD-20260824-A8DA8DCB0A3D:525df99cf419d20106c2:attempt:1"
+        }
+      ],
+      "reduction": {
+        "evidence": "Reduced all checked D11 records without blending isolation keys.",
+        "artifacts": [
+          {
+            "path": "System/outcome-graph/routines/D11/2026-08-24-foundation-shadow/bounded-execution-graph.json",
+            "sha256": "afe7b61796ce8630f6703d186b0e19f6a9c0f9f102a5af6bf7f3f29717d7ff71",
+            "bytes": 9028
+          },
+          {
+            "path": "System/outcome-graph/routines/D11/2026-08-24-foundation-shadow/approval-map.json",
+            "sha256": "619decf31b39a6a282068ac6fd32ac62116ea53c991723bb08aee48ed295b44d",
+            "bytes": 841
+          }
+        ]
+      },
+      "terminal_verification": {
+        "evidence": "Recollected and independently verified all D11 sources, records, negative states, and artifact hashes.",
+        "declared_pass": true,
+        "passed": true,
+        "assertions": [
+          {
+            "id": "source-manifest-stable",
+            "passed": true,
+            "detail": "Every named source remains hash-bound at terminal verification."
+          },
+          {
+            "id": "every-isolated-item-reconstructed-exactly-once",
+            "passed": true,
+            "detail": "Every in-scope item has one collision-resistant reconstructed record."
+          },
+          {
+            "id": "reducer-output-reproduces-exactly",
+            "passed": true,
+            "detail": "Final artifacts reproduce exactly from current sources and the frozen evaluation clock."
+          },
+          {
+            "id": "every-node-has-input-output-and-owner",
+            "passed": true,
+            "detail": "Node contracts are complete."
+          },
+          {
+            "id": "maker-checker-independence",
+            "passed": true,
+            "detail": "Maker and checker roles are distinct."
+          },
+          {
+            "id": "parallel-work-has-unique-isolation",
+            "passed": true,
+            "detail": "Every node has unique work isolation."
+          },
+          {
+            "id": "loops-have-hard-limits",
+            "passed": true,
+            "detail": "Iterations, attempts, concurrency, timeout, and budget are finite."
+          },
+          {
+            "id": "approval-and-abstain-states-explicit",
+            "passed": true,
+            "detail": "Approval and abstention are explicit."
+          },
+          {
+            "id": "no-agent-grants-itself-authority",
+            "passed": true,
+            "detail": "No node expands permission."
+          },
+          {
+            "id": "privacy-and-no-mutation-boundary",
+            "passed": true,
+            "detail": "Final artifacts are redacted and attest no external, canonical, provider, restart, or checkpoint mutation."
+          }
+        ],
+        "artifact_manifest": [
+          {
+            "path": "System/outcome-graph/routines/D11/2026-08-24-foundation-shadow/bounded-execution-graph.json",
+            "sha256": "afe7b61796ce8630f6703d186b0e19f6a9c0f9f102a5af6bf7f3f29717d7ff71",
+            "bytes": 9028
+          },
+          {
+            "path": "System/outcome-graph/routines/D11/2026-08-24-foundation-shadow/approval-map.json",
+            "sha256": "619decf31b39a6a282068ac6fd32ac62116ea53c991723bb08aee48ed295b44d",
+            "bytes": 841
+          }
+        ],
+        "manifest_errors": []
+      },
+      "learning": {
+        "evidence": "Appended one hashed D11 correction entry.",
+        "corrections": [
+          "Retain D11 source bindings, negative states, exact authority, and terminal assertions until the underlying evidence changes."
+        ],
+        "ledger": "System/outcome-graph/routines/D11/2026-08-24-foundation-shadow/corrections.jsonl",
+        "ledger_receipt": {
+          "locator": "System/outcome-graph/routines/D11/2026-08-24-foundation-shadow/corrections.jsonl",
+          "entry_sha256": "b1ef3423ec370f2f1b67b18b1be04e2d1fde913f08dcbd8b0fe211d6e2f0dd9c"
+        }
+      }
+    }
+  ],
+  "invocation_log": [
+    {
+      "adapter": "source-bound-d11-planner",
+      "invoked_at": "2026-08-24T23:48:51.868Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d11-maker",
+      "invoked_at": "2026-08-24T23:48:52.278Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d11-maker",
+      "invoked_at": "2026-08-24T23:48:52.279Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d11-maker",
+      "invoked_at": "2026-08-24T23:48:52.279Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d11-maker",
+      "invoked_at": "2026-08-24T23:48:52.279Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d11-checker",
+      "invoked_at": "2026-08-24T23:48:53.889Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d11-checker",
+      "invoked_at": "2026-08-24T23:48:53.889Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d11-checker",
+      "invoked_at": "2026-08-24T23:48:53.889Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d11-checker",
+      "invoked_at": "2026-08-24T23:48:53.889Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d11-maker",
+      "invoked_at": "2026-08-24T23:48:55.400Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d11-maker",
+      "invoked_at": "2026-08-24T23:48:55.815Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d11-checker",
+      "invoked_at": "2026-08-24T23:48:56.209Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d11-checker",
+      "invoked_at": "2026-08-24T23:48:56.574Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d11-reducer",
+      "invoked_at": "2026-08-24T23:48:57.000Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d11-terminal-verifier",
+      "invoked_at": "2026-08-24T23:48:57.026Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d11-learner",
+      "invoked_at": "2026-08-24T23:48:57.434Z",
+      "status": "returned"
+    }
+  ],
+  "budget": {
+    "limit_units": 96,
+    "used_units": 16
+  },
+  "outcome": "complete",
+  "terminal_truth": true,
+  "finished_at": "2026-08-24T23:48:57.449Z",
+  "elapsed_seconds": 5.593,
+  "blocked_by": null,
+  "reason": "Finish line is proven by an independent terminal verifier.",
+  "terminal_evidence": {
+    "evidence": "Recollected and independently verified all D11 sources, records, negative states, and artifact hashes.",
+    "declared_pass": true,
+    "passed": true,
+    "assertions": [
+      {
+        "id": "source-manifest-stable",
+        "passed": true,
+        "detail": "Every named source remains hash-bound at terminal verification."
+      },
+      {
+        "id": "every-isolated-item-reconstructed-exactly-once",
+        "passed": true,
+        "detail": "Every in-scope item has one collision-resistant reconstructed record."
+      },
+      {
+        "id": "reducer-output-reproduces-exactly",
+        "passed": true,
+        "detail": "Final artifacts reproduce exactly from current sources and the frozen evaluation clock."
+      },
+      {
+        "id": "every-node-has-input-output-and-owner",
+        "passed": true,
+        "detail": "Node contracts are complete."
+      },
+      {
+        "id": "maker-checker-independence",
+        "passed": true,
+        "detail": "Maker and checker roles are distinct."
+      },
+      {
+        "id": "parallel-work-has-unique-isolation",
+        "passed": true,
+        "detail": "Every node has unique work isolation."
+      },
+      {
+        "id": "loops-have-hard-limits",
+        "passed": true,
+        "detail": "Iterations, attempts, concurrency, timeout, and budget are finite."
+      },
+      {
+        "id": "approval-and-abstain-states-explicit",
+        "passed": true,
+        "detail": "Approval and abstention are explicit."
+      },
+      {
+        "id": "no-agent-grants-itself-authority",
+        "passed": true,
+        "detail": "No node expands permission."
+      },
+      {
+        "id": "privacy-and-no-mutation-boundary",
+        "passed": true,
+        "detail": "Final artifacts are redacted and attest no external, canonical, provider, restart, or checkpoint mutation."
+      }
+    ],
+    "artifact_manifest": [
+      {
+        "path": "System/outcome-graph/routines/D11/2026-08-24-foundation-shadow/bounded-execution-graph.json",
+        "sha256": "afe7b61796ce8630f6703d186b0e19f6a9c0f9f102a5af6bf7f3f29717d7ff71",
+        "bytes": 9028
+      },
+      {
+        "path": "System/outcome-graph/routines/D11/2026-08-24-foundation-shadow/approval-map.json",
+        "sha256": "619decf31b39a6a282068ac6fd32ac62116ea53c991723bb08aee48ed295b44d",
+        "bytes": 841
+      }
+    ],
+    "manifest_errors": []
+  },
+  "learning_evidence": {
+    "evidence": "Appended one hashed D11 correction entry.",
+    "corrections": [
+      "Retain D11 source bindings, negative states, exact authority, and terminal assertions until the underlying evidence changes."
+    ],
+    "ledger": "System/outcome-graph/routines/D11/2026-08-24-foundation-shadow/corrections.jsonl",
+    "ledger_receipt": {
+      "locator": "System/outcome-graph/routines/D11/2026-08-24-foundation-shadow/corrections.jsonl",
+      "entry_sha256": "b1ef3423ec370f2f1b67b18b1be04e2d1fde913f08dcbd8b0fe211d6e2f0dd9c"
+    }
+  },
+  "drift_fingerprint": "0353efe3151795bff4326f4d01a6109054fccb9e64d88d4b1a2c45db3ece745f",
+  "deduped": false,
+  "durable_state": {
+    "schema_version": 1,
+    "dedupe_identity": "1834b426e3d0f7513dc616298e890aee66e3c97c60494ffb99870d78342bc9d7",
+    "dedupe_hit": false,
+    "resumed": false,
+    "canonical_binding": {
+      "locator": "dillon-os://routine/D11/2026-08-24",
+      "version": "2026-08-24:e1cb9e89.05e6a21e.c5a7c091.1b135970.d503a937.90d9bcee.f497ab86.4cbc7e46.43cfa9c9.c4f66a74",
+      "sha256": "bee6d7037763d45601274702c12c8e31ad280fed7e97757744fc5930b1d39065",
+      "captured_at": "2026-08-24T23:48:51.044Z"
+    },
+    "canonical_binding_fingerprint": "5d19e13a51fbc03a108a12ce0b0ebd8e1922b653f705e65c7b0a6cfa088fc3fd",
+    "contract_fingerprint": "60083d415e7870ef74a30968801fe3cf4c8d0c1276ce81832b5f3c6e993fd563",
+    "checkpoint": "runs/OGD-20260824-A8DA8DCB0A3D/checkpoint.json"
+  }
+}

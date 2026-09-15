@@ -1,0 +1,508 @@
+[
+  {
+    "changeEvent": {
+      "resourceName": "customers/8145506229/changeEvents/1786924789825775~0~0",
+      "changeDateTime": "2026-08-16 19:59:49.825775",
+      "changeResourceType": "AD_GROUP_CRITERION",
+      "changeResourceName": "customers/8145506229/adGroupCriteria/199369426475~295099220300",
+      "clientType": "GOOGLE_ADS_RECOMMENDATIONS_SUBSCRIPTION",
+      "userEmail": "Recommendations Auto-Apply",
+      "resourceChangeOperation": "REMOVE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/8145506229/changeEvents/1786924791640863~0~0",
+      "changeDateTime": "2026-08-16 19:59:51.640863",
+      "changeResourceType": "AD_GROUP_CRITERION",
+      "changeResourceName": "customers/8145506229/adGroupCriteria/199369426475~295099220300",
+      "clientType": "GOOGLE_ADS_RECOMMENDATIONS_SUBSCRIPTION",
+      "userEmail": "Recommendations Auto-Apply",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/8145506229/changeEvents/1787012225176847~0~0",
+      "changeDateTime": "2026-08-17 20:17:05.176847",
+      "changeResourceType": "AD_GROUP_CRITERION",
+      "changeResourceName": "customers/8145506229/adGroupCriteria/199369426475~295099220300",
+      "clientType": "GOOGLE_ADS_RECOMMENDATIONS_SUBSCRIPTION",
+      "userEmail": "Recommendations Auto-Apply",
+      "resourceChangeOperation": "REMOVE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/8145506229/changeEvents/1787097809028959~0~0",
+      "changeDateTime": "2026-08-18 20:03:29.028959",
+      "changeResourceType": "AD_GROUP_CRITERION",
+      "changeResourceName": "customers/8145506229/adGroupCriteria/199369426475~295354709706",
+      "clientType": "GOOGLE_ADS_RECOMMENDATIONS_SUBSCRIPTION",
+      "userEmail": "Recommendations Auto-Apply",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/8145506229/changeEvents/1787184447089807~0~0",
+      "changeDateTime": "2026-08-19 20:07:27.089807",
+      "changeResourceType": "AD_GROUP_CRITERION",
+      "changeResourceName": "customers/8145506229/adGroupCriteria/199369426475~299335604816",
+      "clientType": "GOOGLE_ADS_RECOMMENDATIONS_SUBSCRIPTION",
+      "userEmail": "Recommendations Auto-Apply",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/8145506229/changeEvents/1787264252134543~0~0",
+      "changeDateTime": "2026-08-20 18:17:32.134543",
+      "changeResourceType": "AD_GROUP_CRITERION",
+      "changeResourceName": "customers/8145506229/adGroupCriteria/199369426475~295294469986",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "dillonmohr8777@gmail.com",
+      "resourceChangeOperation": "UPDATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/8145506229/changeEvents/1787264334286479~0~0",
+      "changeDateTime": "2026-08-20 18:18:54.286479",
+      "changeResourceType": "CAMPAIGN_CRITERION",
+      "changeResourceName": "customers/8145506229/campaignCriteria/24069334480~295872303339",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "dillonmohr8777@gmail.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/8145506229/changeEvents/1787264444968403~0~0",
+      "changeDateTime": "2026-08-20 18:20:44.968403",
+      "changeResourceType": "CAMPAIGN",
+      "changeResourceName": "customers/8145506229/campaigns/24069334480",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "dillonmohr8777@gmail.com",
+      "resourceChangeOperation": "UPDATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/8145506229/changeEvents/1787357012865600~0~0",
+      "changeDateTime": "2026-08-21 20:03:32.8656",
+      "changeResourceType": "CAMPAIGN",
+      "changeResourceName": "customers/8145506229/campaigns/24069334480",
+      "clientType": "GOOGLE_ADS_RECOMMENDATIONS_SUBSCRIPTION",
+      "userEmail": "Recommendations Auto-Apply",
+      "resourceChangeOperation": "UPDATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/8145506229/changeEvents/1787531311431135~0~0",
+      "changeDateTime": "2026-08-23 20:28:31.431135",
+      "changeResourceType": "AD_GROUP_CRITERION",
+      "changeResourceName": "customers/8145506229/adGroupCriteria/199369426475~295099220300",
+      "clientType": "GOOGLE_ADS_RECOMMENDATIONS_SUBSCRIPTION",
+      "userEmail": "Recommendations Auto-Apply",
+      "resourceChangeOperation": "UPDATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/8145506229/changeEvents/1787702580532911~0~0",
+      "changeDateTime": "2026-08-25 20:03:00.532911",
+      "changeResourceType": "AD_GROUP_CRITERION",
+      "changeResourceName": "customers/8145506229/adGroupCriteria/199369426475~38113320052",
+      "clientType": "GOOGLE_ADS_RECOMMENDATIONS_SUBSCRIPTION",
+      "userEmail": "Recommendations Auto-Apply",
+      "resourceChangeOperation": "REMOVE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/8145506229/changeEvents/1787877018190351~0~0",
+      "changeDateTime": "2026-08-27 20:30:18.190351",
+      "changeResourceType": "AD_GROUP_CRITERION",
+      "changeResourceName": "customers/8145506229/adGroupCriteria/199369426475~295099220300",
+      "clientType": "GOOGLE_ADS_RECOMMENDATIONS_SUBSCRIPTION",
+      "userEmail": "Recommendations Auto-Apply",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/8145506229/changeEvents/1788048122408863~0~0",
+      "changeDateTime": "2026-08-29 20:02:02.408863",
+      "changeResourceType": "AD_GROUP_CRITERION",
+      "changeResourceName": "customers/8145506229/adGroupCriteria/199369426475~295099220300",
+      "clientType": "GOOGLE_ADS_RECOMMENDATIONS_SUBSCRIPTION",
+      "userEmail": "Recommendations Auto-Apply",
+      "resourceChangeOperation": "REMOVE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/8145506229/changeEvents/1788048123747151~0~0",
+      "changeDateTime": "2026-08-29 20:02:03.747151",
+      "changeResourceType": "AD_GROUP_CRITERION",
+      "changeResourceName": "customers/8145506229/adGroupCriteria/199369426475~295099220300",
+      "clientType": "GOOGLE_ADS_RECOMMENDATIONS_SUBSCRIPTION",
+      "userEmail": "Recommendations Auto-Apply",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/8145506229/changeEvents/1788134204145663~0~0",
+      "changeDateTime": "2026-08-30 19:56:44.145663",
+      "changeResourceType": "AD_GROUP_CRITERION",
+      "changeResourceName": "customers/8145506229/adGroupCriteria/199369426475~295099220300",
+      "clientType": "GOOGLE_ADS_RECOMMENDATIONS_SUBSCRIPTION",
+      "userEmail": "Recommendations Auto-Apply",
+      "resourceChangeOperation": "REMOVE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/8145506229/changeEvents/1788134206578047~0~0",
+      "changeDateTime": "2026-08-30 19:56:46.578047",
+      "changeResourceType": "AD_GROUP_CRITERION",
+      "changeResourceName": "customers/8145506229/adGroupCriteria/199369426475~295099220300",
+      "clientType": "GOOGLE_ADS_RECOMMENDATIONS_SUBSCRIPTION",
+      "userEmail": "Recommendations Auto-Apply",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/8145506229/changeEvents/1788282981444669~0~0",
+      "changeDateTime": "2026-09-01 13:16:21.444669",
+      "changeResourceType": "CAMPAIGN",
+      "changeResourceName": "customers/8145506229/campaigns/24069334480",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "dillonmohr8777@gmail.com",
+      "resourceChangeOperation": "UPDATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/8145506229/changeEvents/1788308102877599~0~0",
+      "changeDateTime": "2026-09-01 20:15:02.877599",
+      "changeResourceType": "AD_GROUP_CRITERION",
+      "changeResourceName": "customers/8145506229/adGroupCriteria/199369426475~295099220300",
+      "clientType": "GOOGLE_ADS_RECOMMENDATIONS_SUBSCRIPTION",
+      "userEmail": "Recommendations Auto-Apply",
+      "resourceChangeOperation": "REMOVE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/8145506229/changeEvents/1788308104392207~0~0",
+      "changeDateTime": "2026-09-01 20:15:04.392207",
+      "changeResourceType": "AD_GROUP_CRITERION",
+      "changeResourceName": "customers/8145506229/adGroupCriteria/199369426475~378042047249",
+      "clientType": "GOOGLE_ADS_RECOMMENDATIONS_SUBSCRIPTION",
+      "userEmail": "Recommendations Auto-Apply",
+      "resourceChangeOperation": "UPDATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/8145506229/changeEvents/1786924789825775~0~1",
+      "changeDateTime": "2026-08-16 19:59:49.825775",
+      "changeResourceType": "AD_GROUP_CRITERION",
+      "changeResourceName": "customers/8145506229/adGroupCriteria/199369426475~310626366641",
+      "clientType": "GOOGLE_ADS_RECOMMENDATIONS_SUBSCRIPTION",
+      "userEmail": "Recommendations Auto-Apply",
+      "resourceChangeOperation": "REMOVE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/8145506229/changeEvents/1786924791640863~0~1",
+      "changeDateTime": "2026-08-16 19:59:51.640863",
+      "changeResourceType": "AD_GROUP_CRITERION",
+      "changeResourceName": "customers/8145506229/adGroupCriteria/199369426475~310626366641",
+      "clientType": "GOOGLE_ADS_RECOMMENDATIONS_SUBSCRIPTION",
+      "userEmail": "Recommendations Auto-Apply",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/8145506229/changeEvents/1787012225176847~0~1",
+      "changeDateTime": "2026-08-17 20:17:05.176847",
+      "changeResourceType": "AD_GROUP_CRITERION",
+      "changeResourceName": "customers/8145506229/adGroupCriteria/199369426475~299335604816",
+      "clientType": "GOOGLE_ADS_RECOMMENDATIONS_SUBSCRIPTION",
+      "userEmail": "Recommendations Auto-Apply",
+      "resourceChangeOperation": "REMOVE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/8145506229/changeEvents/1787184447089807~0~1",
+      "changeDateTime": "2026-08-19 20:07:27.089807",
+      "changeResourceType": "AD_GROUP_CRITERION",
+      "changeResourceName": "customers/8145506229/adGroupCriteria/199369426475~295099220300",
+      "clientType": "GOOGLE_ADS_RECOMMENDATIONS_SUBSCRIPTION",
+      "userEmail": "Recommendations Auto-Apply",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/8145506229/changeEvents/1787264334286479~0~1",
+      "changeDateTime": "2026-08-20 18:18:54.286479",
+      "changeResourceType": "CAMPAIGN_CRITERION",
+      "changeResourceName": "customers/8145506229/campaignCriteria/24069334480~21932280",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "dillonmohr8777@gmail.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/8145506229/changeEvents/1787531311431135~0~1",
+      "changeDateTime": "2026-08-23 20:28:31.431135",
+      "changeResourceType": "AD_GROUP_CRITERION",
+      "changeResourceName": "customers/8145506229/adGroupCriteria/199369426475~297712999183",
+      "clientType": "GOOGLE_ADS_RECOMMENDATIONS_SUBSCRIPTION",
+      "userEmail": "Recommendations Auto-Apply",
+      "resourceChangeOperation": "UPDATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/8145506229/changeEvents/1787702580532911~0~1",
+      "changeDateTime": "2026-08-25 20:03:00.532911",
+      "changeResourceType": "AD_GROUP_CRITERION",
+      "changeResourceName": "customers/8145506229/adGroupCriteria/199369426475~295099220300",
+      "clientType": "GOOGLE_ADS_RECOMMENDATIONS_SUBSCRIPTION",
+      "userEmail": "Recommendations Auto-Apply",
+      "resourceChangeOperation": "REMOVE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/8145506229/changeEvents/1787877018190351~0~1",
+      "changeDateTime": "2026-08-27 20:30:18.190351",
+      "changeResourceType": "AD_GROUP_CRITERION",
+      "changeResourceName": "customers/8145506229/adGroupCriteria/199369426475~299335604816",
+      "clientType": "GOOGLE_ADS_RECOMMENDATIONS_SUBSCRIPTION",
+      "userEmail": "Recommendations Auto-Apply",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/8145506229/changeEvents/1788048122408863~0~1",
+      "changeDateTime": "2026-08-29 20:02:02.408863",
+      "changeResourceType": "AD_GROUP_CRITERION",
+      "changeResourceName": "customers/8145506229/adGroupCriteria/199369426475~299335604816",
+      "clientType": "GOOGLE_ADS_RECOMMENDATIONS_SUBSCRIPTION",
+      "userEmail": "Recommendations Auto-Apply",
+      "resourceChangeOperation": "REMOVE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/8145506229/changeEvents/1788048123747151~0~1",
+      "changeDateTime": "2026-08-29 20:02:03.747151",
+      "changeResourceType": "AD_GROUP_CRITERION",
+      "changeResourceName": "customers/8145506229/adGroupCriteria/199369426475~299335604816",
+      "clientType": "GOOGLE_ADS_RECOMMENDATIONS_SUBSCRIPTION",
+      "userEmail": "Recommendations Auto-Apply",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/8145506229/changeEvents/1788134204145663~0~1",
+      "changeDateTime": "2026-08-30 19:56:44.145663",
+      "changeResourceType": "AD_GROUP_CRITERION",
+      "changeResourceName": "customers/8145506229/adGroupCriteria/199369426475~299335604816",
+      "clientType": "GOOGLE_ADS_RECOMMENDATIONS_SUBSCRIPTION",
+      "userEmail": "Recommendations Auto-Apply",
+      "resourceChangeOperation": "REMOVE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/8145506229/changeEvents/1788134206578047~0~1",
+      "changeDateTime": "2026-08-30 19:56:46.578047",
+      "changeResourceType": "AD_GROUP_CRITERION",
+      "changeResourceName": "customers/8145506229/adGroupCriteria/199369426475~299335604816",
+      "clientType": "GOOGLE_ADS_RECOMMENDATIONS_SUBSCRIPTION",
+      "userEmail": "Recommendations Auto-Apply",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/8145506229/changeEvents/1788308102877599~0~1",
+      "changeDateTime": "2026-09-01 20:15:02.877599",
+      "changeResourceType": "AD_GROUP_CRITERION",
+      "changeResourceName": "customers/8145506229/adGroupCriteria/199369426475~299335604816",
+      "clientType": "GOOGLE_ADS_RECOMMENDATIONS_SUBSCRIPTION",
+      "userEmail": "Recommendations Auto-Apply",
+      "resourceChangeOperation": "REMOVE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/8145506229/changeEvents/1787264334286479~0~2",
+      "changeDateTime": "2026-08-20 18:18:54.286479",
+      "changeResourceType": "CAMPAIGN_CRITERION",
+      "changeResourceName": "customers/8145506229/campaignCriteria/24069334480~580969579",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "dillonmohr8777@gmail.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/8145506229/changeEvents/1787531311431135~0~2",
+      "changeDateTime": "2026-08-23 20:28:31.431135",
+      "changeResourceType": "AD_GROUP_CRITERION",
+      "changeResourceName": "customers/8145506229/adGroupCriteria/199369426475~295354709706",
+      "clientType": "GOOGLE_ADS_RECOMMENDATIONS_SUBSCRIPTION",
+      "userEmail": "Recommendations Auto-Apply",
+      "resourceChangeOperation": "UPDATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/8145506229/changeEvents/1787702580532911~0~2",
+      "changeDateTime": "2026-08-25 20:03:00.532911",
+      "changeResourceType": "AD_GROUP_CRITERION",
+      "changeResourceName": "customers/8145506229/adGroupCriteria/199369426475~299335604816",
+      "clientType": "GOOGLE_ADS_RECOMMENDATIONS_SUBSCRIPTION",
+      "userEmail": "Recommendations Auto-Apply",
+      "resourceChangeOperation": "REMOVE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/8145506229/changeEvents/1787264334286479~0~3",
+      "changeDateTime": "2026-08-20 18:18:54.286479",
+      "changeResourceType": "CAMPAIGN_CRITERION",
+      "changeResourceName": "customers/8145506229/campaignCriteria/24069334480~88697323",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "dillonmohr8777@gmail.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/8145506229/changeEvents/1787531311431135~0~3",
+      "changeDateTime": "2026-08-23 20:28:31.431135",
+      "changeResourceType": "AD_GROUP_CRITERION",
+      "changeResourceName": "customers/8145506229/adGroupCriteria/199369426475~310626366641",
+      "clientType": "GOOGLE_ADS_RECOMMENDATIONS_SUBSCRIPTION",
+      "userEmail": "Recommendations Auto-Apply",
+      "resourceChangeOperation": "UPDATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/8145506229/changeEvents/1787264334286479~0~4",
+      "changeDateTime": "2026-08-20 18:18:54.286479",
+      "changeResourceType": "CAMPAIGN_CRITERION",
+      "changeResourceName": "customers/8145506229/campaignCriteria/24069334480~300650200756",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "dillonmohr8777@gmail.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/8145506229/changeEvents/1787531311431135~0~4",
+      "changeDateTime": "2026-08-23 20:28:31.431135",
+      "changeResourceType": "AD_GROUP_CRITERION",
+      "changeResourceName": "customers/8145506229/adGroupCriteria/199369426475~299335604816",
+      "clientType": "GOOGLE_ADS_RECOMMENDATIONS_SUBSCRIPTION",
+      "userEmail": "Recommendations Auto-Apply",
+      "resourceChangeOperation": "UPDATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/8145506229/changeEvents/1787264252134543~1~0",
+      "changeDateTime": "2026-08-20 18:17:32.134543",
+      "changeResourceType": "AD_GROUP_CRITERION",
+      "changeResourceName": "customers/8145506229/adGroupCriteria/199369426475~310626366641",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "dillonmohr8777@gmail.com",
+      "resourceChangeOperation": "UPDATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/8145506229/changeEvents/1787264252134543~2~0",
+      "changeDateTime": "2026-08-20 18:17:32.134543",
+      "changeResourceType": "AD_GROUP_CRITERION",
+      "changeResourceName": "customers/8145506229/adGroupCriteria/199369426475~796672303670",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "dillonmohr8777@gmail.com",
+      "resourceChangeOperation": "UPDATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/8145506229/changeEvents/1787264252134543~3~0",
+      "changeDateTime": "2026-08-20 18:17:32.134543",
+      "changeResourceType": "AD_GROUP_CRITERION",
+      "changeResourceName": "customers/8145506229/adGroupCriteria/199369426475~299335604816",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "dillonmohr8777@gmail.com",
+      "resourceChangeOperation": "UPDATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/8145506229/changeEvents/1787264252134543~4~0",
+      "changeDateTime": "2026-08-20 18:17:32.134543",
+      "changeResourceType": "AD_GROUP_CRITERION",
+      "changeResourceName": "customers/8145506229/adGroupCriteria/199369426475~378042047249",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "dillonmohr8777@gmail.com",
+      "resourceChangeOperation": "UPDATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/8145506229/changeEvents/1787264252134543~5~0",
+      "changeDateTime": "2026-08-20 18:17:32.134543",
+      "changeResourceType": "AD_GROUP_CRITERION",
+      "changeResourceName": "customers/8145506229/adGroupCriteria/199369426475~295099220300",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "dillonmohr8777@gmail.com",
+      "resourceChangeOperation": "UPDATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/8145506229/changeEvents/1787264252134543~6~0",
+      "changeDateTime": "2026-08-20 18:17:32.134543",
+      "changeResourceType": "AD_GROUP_CRITERION",
+      "changeResourceName": "customers/8145506229/adGroupCriteria/199369426475~297712999183",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "dillonmohr8777@gmail.com",
+      "resourceChangeOperation": "UPDATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/8145506229/changeEvents/1787264252134543~7~0",
+      "changeDateTime": "2026-08-20 18:17:32.134543",
+      "changeResourceType": "AD_GROUP_CRITERION",
+      "changeResourceName": "customers/8145506229/adGroupCriteria/199369426475~295354709706",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "dillonmohr8777@gmail.com",
+      "resourceChangeOperation": "UPDATE"
+    }
+  }
+]

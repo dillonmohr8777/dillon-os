@@ -1,0 +1,1491 @@
+{
+  "schema_version": 1,
+  "routine_id": "M02",
+  "generated_at": "2026-08-25T00:31:32.989Z",
+  "source_set_sha256": "95467c386177ab42843d44141520028ba92de271325601238127f6a1dd16d696",
+  "summary": {
+    "agents": 21,
+    "retain": 5,
+    "revise": 16,
+    "retire": 0,
+    "command_center_name_collisions": 1,
+    "permission_changes": 0,
+    "deletions": 0
+  },
+  "agents": [
+    {
+      "schema_version": 1,
+      "routine_id": "M02",
+      "id": "M02:0f17193933cc79b42f40",
+      "isolation_key": "agent:0f17193933cc79b42f40:2026-08",
+      "observed_at": "2026-08-25T00:31:32.989Z",
+      "source_set_sha256": "95467c386177ab42843d44141520028ba92de271325601238127f6a1dd16d696",
+      "agent_name": "Weekly Executive Review",
+      "agent_class": "cadence_bot",
+      "departments": [
+        "Command",
+        "Performance"
+      ],
+      "scope": {
+        "contract_detail": "name-only",
+        "purpose_resolved": false,
+        "routines_owned": [
+          "W01",
+          "W10",
+          "M03"
+        ],
+        "executable_routines": [
+          "W10",
+          "M03"
+        ]
+      },
+      "tools": {
+        "capability_count": 8,
+        "capabilities": [
+          "aggregate_counts",
+          "check_ports_readonly",
+          "diff_sources",
+          "emit_receipt",
+          "git_readonly",
+          "hash_files",
+          "read_files",
+          "run_validator"
+        ],
+        "permission_bounded": true
+      },
+      "authority_state": {
+        "claude_instantiable": true,
+        "approval_ceiling": 1,
+        "canonical_write_forbidden": true,
+        "external_delivery_forbidden": true,
+        "command_center_name_collision": false
+      },
+      "sample_state": {
+        "samples": [
+          "W01",
+          "W10"
+        ],
+        "sample_count": 2,
+        "acceptance_bound": true,
+        "maker_checker_independence_measured": true
+      },
+      "risks": [
+        "name-only-or-purpose-unresolved"
+      ],
+      "disposition": "revise",
+      "disposition_reason": "Revise the contract or naming and collect a verified output sample before retention.",
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "permission_change_attempted": false,
+        "deletion_attempted": false,
+        "schedule_change_attempted": false,
+        "billing_change_attempted": false,
+        "record_move_attempted": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "M02",
+      "id": "M02:12f92f67b7d5426e6a91",
+      "isolation_key": "agent:12f92f67b7d5426e6a91:2026-08",
+      "observed_at": "2026-08-25T00:31:32.989Z",
+      "source_set_sha256": "95467c386177ab42843d44141520028ba92de271325601238127f6a1dd16d696",
+      "agent_name": "Brand Voice and Content Studio",
+      "agent_class": "specialist",
+      "departments": [
+        "Growth",
+        "Web"
+      ],
+      "scope": {
+        "contract_detail": "bench-defined",
+        "purpose_resolved": true,
+        "routines_owned": [
+          "D15",
+          "W04",
+          "E09"
+        ],
+        "executable_routines": [
+          "W04"
+        ]
+      },
+      "tools": {
+        "capability_count": 10,
+        "capabilities": [
+          "aggregate_counts",
+          "check_ports_readonly",
+          "diff_sources",
+          "emit_receipt",
+          "git_readonly",
+          "hash_files",
+          "read_files",
+          "run_local_test",
+          "run_validator",
+          "write_local_artifact"
+        ],
+        "permission_bounded": true
+      },
+      "authority_state": {
+        "claude_instantiable": true,
+        "approval_ceiling": 2,
+        "canonical_write_forbidden": true,
+        "external_delivery_forbidden": true,
+        "command_center_name_collision": false
+      },
+      "sample_state": {
+        "samples": [
+          "W04"
+        ],
+        "sample_count": 1,
+        "acceptance_bound": true,
+        "maker_checker_independence_measured": true
+      },
+      "risks": [],
+      "disposition": "retain",
+      "disposition_reason": "Contract, authority, permissions, and sampled acceptance evidence are complete.",
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "permission_change_attempted": false,
+        "deletion_attempted": false,
+        "schedule_change_attempted": false,
+        "billing_change_attempted": false,
+        "record_move_attempted": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "M02",
+      "id": "M02:3fb687803ff8a90756a4",
+      "isolation_key": "agent:3fb687803ff8a90756a4:2026-08",
+      "observed_at": "2026-08-25T00:31:32.989Z",
+      "source_set_sha256": "95467c386177ab42843d44141520028ba92de271325601238127f6a1dd16d696",
+      "agent_name": "Communications Intake Analyst",
+      "agent_class": "specialist",
+      "departments": [
+        "Communications"
+      ],
+      "scope": {
+        "contract_detail": "name-only",
+        "purpose_resolved": false,
+        "routines_owned": [
+          "D04",
+          "D05",
+          "D06"
+        ],
+        "executable_routines": []
+      },
+      "tools": {
+        "capability_count": 0,
+        "capabilities": [],
+        "permission_bounded": true
+      },
+      "authority_state": {
+        "claude_instantiable": false,
+        "approval_ceiling": 0,
+        "canonical_write_forbidden": true,
+        "external_delivery_forbidden": true,
+        "command_center_name_collision": false
+      },
+      "sample_state": {
+        "samples": [],
+        "sample_count": 0,
+        "acceptance_bound": false,
+        "maker_checker_independence_measured": true
+      },
+      "risks": [
+        "name-only-or-purpose-unresolved",
+        "verified-output-sample-pending"
+      ],
+      "disposition": "revise",
+      "disposition_reason": "Revise the contract or naming and collect a verified output sample before retention.",
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "permission_change_attempted": false,
+        "deletion_attempted": false,
+        "schedule_change_attempted": false,
+        "billing_change_attempted": false,
+        "record_move_attempted": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "M02",
+      "id": "M02:43149245154579743816",
+      "isolation_key": "agent:43149245154579743816:2026-08",
+      "observed_at": "2026-08-25T00:31:32.989Z",
+      "source_set_sha256": "95467c386177ab42843d44141520028ba92de271325601238127f6a1dd16d696",
+      "agent_name": "SEO AEO GEO Strategist",
+      "agent_class": "specialist",
+      "departments": [
+        "Growth"
+      ],
+      "scope": {
+        "contract_detail": "name-only",
+        "purpose_resolved": false,
+        "routines_owned": [
+          "D16"
+        ],
+        "executable_routines": [
+          "D16"
+        ]
+      },
+      "tools": {
+        "capability_count": 10,
+        "capabilities": [
+          "aggregate_counts",
+          "check_ports_readonly",
+          "diff_sources",
+          "emit_receipt",
+          "git_readonly",
+          "hash_files",
+          "read_files",
+          "run_local_test",
+          "run_validator",
+          "write_local_artifact"
+        ],
+        "permission_bounded": true
+      },
+      "authority_state": {
+        "claude_instantiable": true,
+        "approval_ceiling": 0,
+        "canonical_write_forbidden": true,
+        "external_delivery_forbidden": true,
+        "command_center_name_collision": false
+      },
+      "sample_state": {
+        "samples": [
+          "D16"
+        ],
+        "sample_count": 1,
+        "acceptance_bound": true,
+        "maker_checker_independence_measured": true
+      },
+      "risks": [
+        "name-only-or-purpose-unresolved"
+      ],
+      "disposition": "revise",
+      "disposition_reason": "Revise the contract or naming and collect a verified output sample before retention.",
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "permission_change_attempted": false,
+        "deletion_attempted": false,
+        "schedule_change_attempted": false,
+        "billing_change_attempted": false,
+        "record_move_attempted": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "M02",
+      "id": "M02:448eb82b93ca9eda7d1a",
+      "isolation_key": "agent:448eb82b93ca9eda7d1a:2026-08",
+      "observed_at": "2026-08-25T00:31:32.989Z",
+      "source_set_sha256": "95467c386177ab42843d44141520028ba92de271325601238127f6a1dd16d696",
+      "agent_name": "Independent QA and Release Critic",
+      "agent_class": "specialist",
+      "departments": [
+        "Web"
+      ],
+      "scope": {
+        "contract_detail": "bench-defined",
+        "purpose_resolved": true,
+        "routines_owned": [
+          "D24",
+          "M02"
+        ],
+        "executable_routines": [
+          "D24",
+          "M02"
+        ]
+      },
+      "tools": {
+        "capability_count": 8,
+        "capabilities": [
+          "aggregate_counts",
+          "check_ports_readonly",
+          "diff_sources",
+          "emit_receipt",
+          "git_readonly",
+          "hash_files",
+          "read_files",
+          "run_validator"
+        ],
+        "permission_bounded": true
+      },
+      "authority_state": {
+        "claude_instantiable": true,
+        "approval_ceiling": 0,
+        "canonical_write_forbidden": true,
+        "external_delivery_forbidden": true,
+        "command_center_name_collision": false
+      },
+      "sample_state": {
+        "samples": [
+          "D24"
+        ],
+        "sample_count": 1,
+        "acceptance_bound": true,
+        "maker_checker_independence_measured": true
+      },
+      "risks": [],
+      "disposition": "retain",
+      "disposition_reason": "Contract, authority, permissions, and sampled acceptance evidence are complete.",
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "permission_change_attempted": false,
+        "deletion_attempted": false,
+        "schedule_change_attempted": false,
+        "billing_change_attempted": false,
+        "record_move_attempted": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "M02",
+      "id": "M02:4b16fb4eee5f95676f97",
+      "isolation_key": "agent:4b16fb4eee5f95676f97:2026-08",
+      "observed_at": "2026-08-25T00:31:32.989Z",
+      "source_set_sha256": "95467c386177ab42843d44141520028ba92de271325601238127f6a1dd16d696",
+      "agent_name": "Client Context Router",
+      "agent_class": "specialist",
+      "departments": [
+        "Command"
+      ],
+      "scope": {
+        "contract_detail": "name-only",
+        "purpose_resolved": false,
+        "routines_owned": [
+          "D08",
+          "M04",
+          "E01"
+        ],
+        "executable_routines": [
+          "M04"
+        ]
+      },
+      "tools": {
+        "capability_count": 8,
+        "capabilities": [
+          "aggregate_counts",
+          "check_ports_readonly",
+          "diff_sources",
+          "emit_receipt",
+          "git_readonly",
+          "hash_files",
+          "read_files",
+          "run_validator"
+        ],
+        "permission_bounded": true
+      },
+      "authority_state": {
+        "claude_instantiable": true,
+        "approval_ceiling": 2,
+        "canonical_write_forbidden": true,
+        "external_delivery_forbidden": true,
+        "command_center_name_collision": false
+      },
+      "sample_state": {
+        "samples": [],
+        "sample_count": 0,
+        "acceptance_bound": false,
+        "maker_checker_independence_measured": true
+      },
+      "risks": [
+        "name-only-or-purpose-unresolved",
+        "verified-output-sample-pending"
+      ],
+      "disposition": "revise",
+      "disposition_reason": "Revise the contract or naming and collect a verified output sample before retention.",
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "permission_change_attempted": false,
+        "deletion_attempted": false,
+        "schedule_change_attempted": false,
+        "billing_change_attempted": false,
+        "record_move_attempted": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "M02",
+      "id": "M02:6443ce2e00c447791357",
+      "isolation_key": "agent:6443ce2e00c447791357:2026-08",
+      "observed_at": "2026-08-25T00:31:32.989Z",
+      "source_set_sha256": "95467c386177ab42843d44141520028ba92de271325601238127f6a1dd16d696",
+      "agent_name": "Prospect Radar Website Factory",
+      "agent_class": "cadence_bot",
+      "departments": [
+        "Web"
+      ],
+      "scope": {
+        "contract_detail": "name-only",
+        "purpose_resolved": false,
+        "routines_owned": [
+          "W05"
+        ],
+        "executable_routines": [
+          "W05"
+        ]
+      },
+      "tools": {
+        "capability_count": 10,
+        "capabilities": [
+          "aggregate_counts",
+          "check_ports_readonly",
+          "diff_sources",
+          "emit_receipt",
+          "git_readonly",
+          "hash_files",
+          "read_files",
+          "run_local_test",
+          "run_validator",
+          "write_local_artifact"
+        ],
+        "permission_bounded": true
+      },
+      "authority_state": {
+        "claude_instantiable": true,
+        "approval_ceiling": 0,
+        "canonical_write_forbidden": true,
+        "external_delivery_forbidden": true,
+        "command_center_name_collision": false
+      },
+      "sample_state": {
+        "samples": [
+          "W05"
+        ],
+        "sample_count": 1,
+        "acceptance_bound": true,
+        "maker_checker_independence_measured": true
+      },
+      "risks": [
+        "name-only-or-purpose-unresolved"
+      ],
+      "disposition": "revise",
+      "disposition_reason": "Revise the contract or naming and collect a verified output sample before retention.",
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "permission_change_attempted": false,
+        "deletion_attempted": false,
+        "schedule_change_attempted": false,
+        "billing_change_attempted": false,
+        "record_move_attempted": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "M02",
+      "id": "M02:7bffc389fc8ac0f4c5b0",
+      "isolation_key": "agent:7bffc389fc8ac0f4c5b0:2026-08",
+      "observed_at": "2026-08-25T00:31:32.989Z",
+      "source_set_sha256": "95467c386177ab42843d44141520028ba92de271325601238127f6a1dd16d696",
+      "agent_name": "Reporting and Analytics Analyst",
+      "agent_class": "specialist",
+      "departments": [
+        "Performance"
+      ],
+      "scope": {
+        "contract_detail": "bench-defined",
+        "purpose_resolved": true,
+        "routines_owned": [
+          "D19"
+        ],
+        "executable_routines": [
+          "D19"
+        ]
+      },
+      "tools": {
+        "capability_count": 10,
+        "capabilities": [
+          "aggregate_counts",
+          "check_ports_readonly",
+          "diff_sources",
+          "emit_receipt",
+          "git_readonly",
+          "hash_files",
+          "read_files",
+          "run_local_test",
+          "run_validator",
+          "write_local_artifact"
+        ],
+        "permission_bounded": true
+      },
+      "authority_state": {
+        "claude_instantiable": true,
+        "approval_ceiling": 0,
+        "canonical_write_forbidden": true,
+        "external_delivery_forbidden": true,
+        "command_center_name_collision": false
+      },
+      "sample_state": {
+        "samples": [
+          "D19"
+        ],
+        "sample_count": 1,
+        "acceptance_bound": true,
+        "maker_checker_independence_measured": true
+      },
+      "risks": [],
+      "disposition": "retain",
+      "disposition_reason": "Contract, authority, permissions, and sampled acceptance evidence are complete.",
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "permission_change_attempted": false,
+        "deletion_attempted": false,
+        "schedule_change_attempted": false,
+        "billing_change_attempted": false,
+        "record_move_attempted": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "M02",
+      "id": "M02:7e1c3e69a1bb77dc9097",
+      "isolation_key": "agent:7e1c3e69a1bb77dc9097:2026-08",
+      "observed_at": "2026-08-25T00:31:32.989Z",
+      "source_set_sha256": "95467c386177ab42843d44141520028ba92de271325601238127f6a1dd16d696",
+      "agent_name": "Paid Media Auditor",
+      "agent_class": "specialist",
+      "departments": [
+        "Performance"
+      ],
+      "scope": {
+        "contract_detail": "name-only",
+        "purpose_resolved": false,
+        "routines_owned": [
+          "D17",
+          "E06"
+        ],
+        "executable_routines": [
+          "D17"
+        ]
+      },
+      "tools": {
+        "capability_count": 7,
+        "capabilities": [
+          "aggregate_counts",
+          "check_ports_readonly",
+          "diff_sources",
+          "emit_receipt",
+          "git_readonly",
+          "hash_files",
+          "read_files"
+        ],
+        "permission_bounded": true
+      },
+      "authority_state": {
+        "claude_instantiable": true,
+        "approval_ceiling": 2,
+        "canonical_write_forbidden": true,
+        "external_delivery_forbidden": true,
+        "command_center_name_collision": false
+      },
+      "sample_state": {
+        "samples": [
+          "D17"
+        ],
+        "sample_count": 1,
+        "acceptance_bound": true,
+        "maker_checker_independence_measured": true
+      },
+      "risks": [
+        "name-only-or-purpose-unresolved"
+      ],
+      "disposition": "revise",
+      "disposition_reason": "Revise the contract or naming and collect a verified output sample before retention.",
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "permission_change_attempted": false,
+        "deletion_attempted": false,
+        "schedule_change_attempted": false,
+        "billing_change_attempted": false,
+        "record_move_attempted": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "M02",
+      "id": "M02:9e38a69714303b69130f",
+      "isolation_key": "agent:9e38a69714303b69130f:2026-08",
+      "observed_at": "2026-08-25T00:31:32.989Z",
+      "source_set_sha256": "95467c386177ab42843d44141520028ba92de271325601238127f6a1dd16d696",
+      "agent_name": "Morning Marketing Chief Operator",
+      "agent_class": "cadence_bot",
+      "departments": [
+        "Command"
+      ],
+      "scope": {
+        "contract_detail": "name-only",
+        "purpose_resolved": false,
+        "routines_owned": [
+          "D01",
+          "D02",
+          "D09",
+          "D10",
+          "D11",
+          "D27",
+          "E02"
+        ],
+        "executable_routines": [
+          "D10",
+          "D11"
+        ]
+      },
+      "tools": {
+        "capability_count": 7,
+        "capabilities": [
+          "aggregate_counts",
+          "check_ports_readonly",
+          "diff_sources",
+          "emit_receipt",
+          "git_readonly",
+          "hash_files",
+          "read_files"
+        ],
+        "permission_bounded": true
+      },
+      "authority_state": {
+        "claude_instantiable": true,
+        "approval_ceiling": 2,
+        "canonical_write_forbidden": true,
+        "external_delivery_forbidden": true,
+        "command_center_name_collision": true
+      },
+      "sample_state": {
+        "samples": [
+          "D10",
+          "D11"
+        ],
+        "sample_count": 2,
+        "acceptance_bound": true,
+        "maker_checker_independence_measured": true
+      },
+      "risks": [
+        "name-only-or-purpose-unresolved",
+        "subordinate-name-collides-with-marketing-chief-authority"
+      ],
+      "disposition": "revise",
+      "disposition_reason": "Revise the contract or naming and collect a verified output sample before retention.",
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "permission_change_attempted": false,
+        "deletion_attempted": false,
+        "schedule_change_attempted": false,
+        "billing_change_attempted": false,
+        "record_move_attempted": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "M02",
+      "id": "M02:a485fba00381bf55caaa",
+      "isolation_key": "agent:a485fba00381bf55caaa:2026-08",
+      "observed_at": "2026-08-25T00:31:32.989Z",
+      "source_set_sha256": "95467c386177ab42843d44141520028ba92de271325601238127f6a1dd16d696",
+      "agent_name": "Delivery Evidence Auditor",
+      "agent_class": "specialist",
+      "departments": [
+        "Communications",
+        "Web"
+      ],
+      "scope": {
+        "contract_detail": "name-only",
+        "purpose_resolved": false,
+        "routines_owned": [
+          "D22",
+          "D23",
+          "D25",
+          "E07"
+        ],
+        "executable_routines": [
+          "D25"
+        ]
+      },
+      "tools": {
+        "capability_count": 8,
+        "capabilities": [
+          "aggregate_counts",
+          "check_ports_readonly",
+          "diff_sources",
+          "emit_receipt",
+          "git_readonly",
+          "hash_files",
+          "read_files",
+          "run_validator"
+        ],
+        "permission_bounded": true
+      },
+      "authority_state": {
+        "claude_instantiable": true,
+        "approval_ceiling": 2,
+        "canonical_write_forbidden": true,
+        "external_delivery_forbidden": true,
+        "command_center_name_collision": false
+      },
+      "sample_state": {
+        "samples": [
+          "D25"
+        ],
+        "sample_count": 1,
+        "acceptance_bound": true,
+        "maker_checker_independence_measured": true
+      },
+      "risks": [
+        "name-only-or-purpose-unresolved"
+      ],
+      "disposition": "revise",
+      "disposition_reason": "Revise the contract or naming and collect a verified output sample before retention.",
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "permission_change_attempted": false,
+        "deletion_attempted": false,
+        "schedule_change_attempted": false,
+        "billing_change_attempted": false,
+        "record_move_attempted": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "M02",
+      "id": "M02:a9e535108d30c321c867",
+      "isolation_key": "agent:a9e535108d30c321c867:2026-08",
+      "observed_at": "2026-08-25T00:31:32.989Z",
+      "source_set_sha256": "95467c386177ab42843d44141520028ba92de271325601238127f6a1dd16d696",
+      "agent_name": "CRM and Revenue Ops Analyst",
+      "agent_class": "specialist",
+      "departments": [
+        "Performance"
+      ],
+      "scope": {
+        "contract_detail": "name-only",
+        "purpose_resolved": false,
+        "routines_owned": [
+          "D18"
+        ],
+        "executable_routines": [
+          "D18"
+        ]
+      },
+      "tools": {
+        "capability_count": 7,
+        "capabilities": [
+          "aggregate_counts",
+          "check_ports_readonly",
+          "diff_sources",
+          "emit_receipt",
+          "git_readonly",
+          "hash_files",
+          "read_files"
+        ],
+        "permission_bounded": true
+      },
+      "authority_state": {
+        "claude_instantiable": true,
+        "approval_ceiling": 0,
+        "canonical_write_forbidden": true,
+        "external_delivery_forbidden": true,
+        "command_center_name_collision": false
+      },
+      "sample_state": {
+        "samples": [
+          "D18"
+        ],
+        "sample_count": 1,
+        "acceptance_bound": true,
+        "maker_checker_independence_measured": true
+      },
+      "risks": [
+        "name-only-or-purpose-unresolved"
+      ],
+      "disposition": "revise",
+      "disposition_reason": "Revise the contract or naming and collect a verified output sample before retention.",
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "permission_change_attempted": false,
+        "deletion_attempted": false,
+        "schedule_change_attempted": false,
+        "billing_change_attempted": false,
+        "record_move_attempted": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "M02",
+      "id": "M02:a9f52c215171c8bd549b",
+      "isolation_key": "agent:a9f52c215171c8bd549b:2026-08",
+      "observed_at": "2026-08-25T00:31:32.989Z",
+      "source_set_sha256": "95467c386177ab42843d44141520028ba92de271325601238127f6a1dd16d696",
+      "agent_name": "Web and Product Builder",
+      "agent_class": "specialist",
+      "departments": [
+        "Web"
+      ],
+      "scope": {
+        "contract_detail": "bench-defined",
+        "purpose_resolved": true,
+        "routines_owned": [
+          "D12",
+          "D14",
+          "E03",
+          "E05"
+        ],
+        "executable_routines": [
+          "D12",
+          "D14",
+          "E05"
+        ]
+      },
+      "tools": {
+        "capability_count": 12,
+        "capabilities": [
+          "aggregate_counts",
+          "check_ports_readonly",
+          "diff_sources",
+          "emit_receipt",
+          "git_readonly",
+          "hash_files",
+          "list_processes_readonly",
+          "read_files",
+          "run_local_test",
+          "run_validator",
+          "write_local_artifact",
+          "write_proposal"
+        ],
+        "permission_bounded": true
+      },
+      "authority_state": {
+        "claude_instantiable": true,
+        "approval_ceiling": 2,
+        "canonical_write_forbidden": true,
+        "external_delivery_forbidden": true,
+        "command_center_name_collision": false
+      },
+      "sample_state": {
+        "samples": [
+          "D12",
+          "D14",
+          "E05"
+        ],
+        "sample_count": 3,
+        "acceptance_bound": true,
+        "maker_checker_independence_measured": true
+      },
+      "risks": [],
+      "disposition": "retain",
+      "disposition_reason": "Contract, authority, permissions, and sampled acceptance evidence are complete.",
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "permission_change_attempted": false,
+        "deletion_attempted": false,
+        "schedule_change_attempted": false,
+        "billing_change_attempted": false,
+        "record_move_attempted": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "M02",
+      "id": "M02:ae50c71af6cf7689f8f1",
+      "isolation_key": "agent:ae50c71af6cf7689f8f1:2026-08",
+      "observed_at": "2026-08-25T00:31:32.989Z",
+      "source_set_sha256": "95467c386177ab42843d44141520028ba92de271325601238127f6a1dd16d696",
+      "agent_name": "CRO Experiment Planner",
+      "agent_class": "specialist",
+      "departments": [
+        "Growth"
+      ],
+      "scope": {
+        "contract_detail": "name-only",
+        "purpose_resolved": false,
+        "routines_owned": [
+          "W08"
+        ],
+        "executable_routines": [
+          "W08"
+        ]
+      },
+      "tools": {
+        "capability_count": 7,
+        "capabilities": [
+          "aggregate_counts",
+          "check_ports_readonly",
+          "diff_sources",
+          "emit_receipt",
+          "git_readonly",
+          "hash_files",
+          "read_files"
+        ],
+        "permission_bounded": true
+      },
+      "authority_state": {
+        "claude_instantiable": true,
+        "approval_ceiling": 0,
+        "canonical_write_forbidden": true,
+        "external_delivery_forbidden": true,
+        "command_center_name_collision": false
+      },
+      "sample_state": {
+        "samples": [
+          "W08"
+        ],
+        "sample_count": 1,
+        "acceptance_bound": true,
+        "maker_checker_independence_measured": true
+      },
+      "risks": [
+        "name-only-or-purpose-unresolved"
+      ],
+      "disposition": "revise",
+      "disposition_reason": "Revise the contract or naming and collect a verified output sample before retention.",
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "permission_change_attempted": false,
+        "deletion_attempted": false,
+        "schedule_change_attempted": false,
+        "billing_change_attempted": false,
+        "record_move_attempted": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "M02",
+      "id": "M02:bf455c922b57d8b99dad",
+      "isolation_key": "agent:bf455c922b57d8b99dad:2026-08",
+      "observed_at": "2026-08-25T00:31:32.989Z",
+      "source_set_sha256": "95467c386177ab42843d44141520028ba92de271325601238127f6a1dd16d696",
+      "agent_name": "Client Communications Draft Desk",
+      "agent_class": "cadence_bot",
+      "departments": [
+        "Communications"
+      ],
+      "scope": {
+        "contract_detail": "name-only",
+        "purpose_resolved": false,
+        "routines_owned": [
+          "D20",
+          "D21",
+          "W07"
+        ],
+        "executable_routines": []
+      },
+      "tools": {
+        "capability_count": 0,
+        "capabilities": [],
+        "permission_bounded": true
+      },
+      "authority_state": {
+        "claude_instantiable": false,
+        "approval_ceiling": 2,
+        "canonical_write_forbidden": true,
+        "external_delivery_forbidden": true,
+        "command_center_name_collision": false
+      },
+      "sample_state": {
+        "samples": [
+          "W07"
+        ],
+        "sample_count": 1,
+        "acceptance_bound": true,
+        "maker_checker_independence_measured": true
+      },
+      "risks": [
+        "name-only-or-purpose-unresolved"
+      ],
+      "disposition": "revise",
+      "disposition_reason": "Revise the contract or naming and collect a verified output sample before retention.",
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "permission_change_attempted": false,
+        "deletion_attempted": false,
+        "schedule_change_attempted": false,
+        "billing_change_attempted": false,
+        "record_move_attempted": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "M02",
+      "id": "M02:c4d02e8d2206dcdf059a",
+      "isolation_key": "agent:c4d02e8d2206dcdf059a:2026-08",
+      "observed_at": "2026-08-25T00:31:32.989Z",
+      "source_set_sha256": "95467c386177ab42843d44141520028ba92de271325601238127f6a1dd16d696",
+      "agent_name": "Weekly Reporting Operator",
+      "agent_class": "cadence_bot",
+      "departments": [
+        "Performance"
+      ],
+      "scope": {
+        "contract_detail": "name-only",
+        "purpose_resolved": false,
+        "routines_owned": [
+          "W06"
+        ],
+        "executable_routines": [
+          "W06"
+        ]
+      },
+      "tools": {
+        "capability_count": 10,
+        "capabilities": [
+          "aggregate_counts",
+          "check_ports_readonly",
+          "diff_sources",
+          "emit_receipt",
+          "git_readonly",
+          "hash_files",
+          "read_files",
+          "run_local_test",
+          "run_validator",
+          "write_local_artifact"
+        ],
+        "permission_bounded": true
+      },
+      "authority_state": {
+        "claude_instantiable": true,
+        "approval_ceiling": 0,
+        "canonical_write_forbidden": true,
+        "external_delivery_forbidden": true,
+        "command_center_name_collision": false
+      },
+      "sample_state": {
+        "samples": [
+          "W06"
+        ],
+        "sample_count": 1,
+        "acceptance_bound": true,
+        "maker_checker_independence_measured": true
+      },
+      "risks": [
+        "name-only-or-purpose-unresolved"
+      ],
+      "disposition": "revise",
+      "disposition_reason": "Revise the contract or naming and collect a verified output sample before retention.",
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "permission_change_attempted": false,
+        "deletion_attempted": false,
+        "schedule_change_attempted": false,
+        "billing_change_attempted": false,
+        "record_move_attempted": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "M02",
+      "id": "M02:cab56ec4d628e2a87391",
+      "isolation_key": "agent:cab56ec4d628e2a87391:2026-08",
+      "observed_at": "2026-08-25T00:31:32.989Z",
+      "source_set_sha256": "95467c386177ab42843d44141520028ba92de271325601238127f6a1dd16d696",
+      "agent_name": "Paid Media Twice-Weekly Review",
+      "agent_class": "cadence_bot",
+      "departments": [
+        "Performance"
+      ],
+      "scope": {
+        "contract_detail": "name-only",
+        "purpose_resolved": false,
+        "routines_owned": [
+          "W02",
+          "W03"
+        ],
+        "executable_routines": []
+      },
+      "tools": {
+        "capability_count": 0,
+        "capabilities": [],
+        "permission_bounded": true
+      },
+      "authority_state": {
+        "claude_instantiable": false,
+        "approval_ceiling": 2,
+        "canonical_write_forbidden": true,
+        "external_delivery_forbidden": true,
+        "command_center_name_collision": false
+      },
+      "sample_state": {
+        "samples": [
+          "W02",
+          "W03"
+        ],
+        "sample_count": 2,
+        "acceptance_bound": true,
+        "maker_checker_independence_measured": true
+      },
+      "risks": [
+        "name-only-or-purpose-unresolved"
+      ],
+      "disposition": "revise",
+      "disposition_reason": "Revise the contract or naming and collect a verified output sample before retention.",
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "permission_change_attempted": false,
+        "deletion_attempted": false,
+        "schedule_change_attempted": false,
+        "billing_change_attempted": false,
+        "record_move_attempted": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "M02",
+      "id": "M02:d61e5628d71fad768c69",
+      "isolation_key": "agent:d61e5628d71fad768c69:2026-08",
+      "observed_at": "2026-08-25T00:31:32.989Z",
+      "source_set_sha256": "95467c386177ab42843d44141520028ba92de271325601238127f6a1dd16d696",
+      "agent_name": "Automation Reliability Scout",
+      "agent_class": "specialist",
+      "departments": [
+        "Reliability"
+      ],
+      "scope": {
+        "contract_detail": "bench-defined",
+        "purpose_resolved": true,
+        "routines_owned": [
+          "D03",
+          "D07",
+          "W09",
+          "M01",
+          "E04",
+          "E08",
+          "E10"
+        ],
+        "executable_routines": [
+          "D03",
+          "D07",
+          "W09",
+          "E04",
+          "E10"
+        ]
+      },
+      "tools": {
+        "capability_count": 9,
+        "capabilities": [
+          "aggregate_counts",
+          "check_ports_readonly",
+          "diff_sources",
+          "emit_receipt",
+          "git_readonly",
+          "hash_files",
+          "list_processes_readonly",
+          "read_files",
+          "run_validator"
+        ],
+        "permission_bounded": true
+      },
+      "authority_state": {
+        "claude_instantiable": true,
+        "approval_ceiling": 2,
+        "canonical_write_forbidden": true,
+        "external_delivery_forbidden": true,
+        "command_center_name_collision": false
+      },
+      "sample_state": {
+        "samples": [
+          "D03",
+          "D07",
+          "E04",
+          "E10",
+          "W09"
+        ],
+        "sample_count": 5,
+        "acceptance_bound": true,
+        "maker_checker_independence_measured": true
+      },
+      "risks": [],
+      "disposition": "retain",
+      "disposition_reason": "Contract, authority, permissions, and sampled acceptance evidence are complete.",
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "permission_change_attempted": false,
+        "deletion_attempted": false,
+        "schedule_change_attempted": false,
+        "billing_change_attempted": false,
+        "record_move_attempted": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "M02",
+      "id": "M02:d75279c554c5d375366a",
+      "isolation_key": "agent:d75279c554c5d375366a:2026-08",
+      "observed_at": "2026-08-25T00:31:32.989Z",
+      "source_set_sha256": "95467c386177ab42843d44141520028ba92de271325601238127f6a1dd16d696",
+      "agent_name": "Knowledge and Obsidian Curator",
+      "agent_class": "specialist",
+      "departments": [
+        "Communications"
+      ],
+      "scope": {
+        "contract_detail": "name-only",
+        "purpose_resolved": false,
+        "routines_owned": [
+          "D26",
+          "W11",
+          "M05",
+          "E11"
+        ],
+        "executable_routines": [
+          "D26",
+          "W11",
+          "M05",
+          "E11"
+        ]
+      },
+      "tools": {
+        "capability_count": 11,
+        "capabilities": [
+          "aggregate_counts",
+          "check_ports_readonly",
+          "diff_sources",
+          "emit_receipt",
+          "git_readonly",
+          "hash_files",
+          "read_files",
+          "run_local_test",
+          "run_validator",
+          "write_local_artifact",
+          "write_proposal"
+        ],
+        "permission_bounded": true
+      },
+      "authority_state": {
+        "claude_instantiable": true,
+        "approval_ceiling": 1,
+        "canonical_write_forbidden": true,
+        "external_delivery_forbidden": true,
+        "command_center_name_collision": false
+      },
+      "sample_state": {
+        "samples": [
+          "W11"
+        ],
+        "sample_count": 1,
+        "acceptance_bound": true,
+        "maker_checker_independence_measured": true
+      },
+      "risks": [
+        "name-only-or-purpose-unresolved"
+      ],
+      "disposition": "revise",
+      "disposition_reason": "Revise the contract or naming and collect a verified output sample before retention.",
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "permission_change_attempted": false,
+        "deletion_attempted": false,
+        "schedule_change_attempted": false,
+        "billing_change_attempted": false,
+        "record_move_attempted": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "M02",
+      "id": "M02:d770859c52257a54555d",
+      "isolation_key": "agent:d770859c52257a54555d:2026-08",
+      "observed_at": "2026-08-25T00:31:32.989Z",
+      "source_set_sha256": "95467c386177ab42843d44141520028ba92de271325601238127f6a1dd16d696",
+      "agent_name": "Grok Research Scout",
+      "agent_class": "specialist",
+      "departments": [],
+      "scope": {
+        "contract_detail": "bench-defined",
+        "purpose_resolved": true,
+        "routines_owned": [],
+        "executable_routines": []
+      },
+      "tools": {
+        "capability_count": 0,
+        "capabilities": [],
+        "permission_bounded": true
+      },
+      "authority_state": {
+        "claude_instantiable": false,
+        "approval_ceiling": 0,
+        "canonical_write_forbidden": true,
+        "external_delivery_forbidden": true,
+        "command_center_name_collision": false
+      },
+      "sample_state": {
+        "samples": [],
+        "sample_count": 0,
+        "acceptance_bound": false,
+        "maker_checker_independence_measured": true
+      },
+      "risks": [
+        "verified-output-sample-pending"
+      ],
+      "disposition": "revise",
+      "disposition_reason": "Revise the contract or naming and collect a verified output sample before retention.",
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "permission_change_attempted": false,
+        "deletion_attempted": false,
+        "schedule_change_attempted": false,
+        "billing_change_attempted": false,
+        "record_move_attempted": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "M02",
+      "id": "M02:e26e3abc7d8a038a7f3c",
+      "isolation_key": "agent:e26e3abc7d8a038a7f3c:2026-08",
+      "observed_at": "2026-08-25T00:31:32.989Z",
+      "source_set_sha256": "95467c386177ab42843d44141520028ba92de271325601238127f6a1dd16d696",
+      "agent_name": "Design and Art Direction Critic",
+      "agent_class": "specialist",
+      "departments": [
+        "Web"
+      ],
+      "scope": {
+        "contract_detail": "name-only",
+        "purpose_resolved": false,
+        "routines_owned": [
+          "D13"
+        ],
+        "executable_routines": [
+          "D13"
+        ]
+      },
+      "tools": {
+        "capability_count": 10,
+        "capabilities": [
+          "aggregate_counts",
+          "check_ports_readonly",
+          "diff_sources",
+          "emit_receipt",
+          "git_readonly",
+          "hash_files",
+          "read_files",
+          "run_local_test",
+          "run_validator",
+          "write_local_artifact"
+        ],
+        "permission_bounded": true
+      },
+      "authority_state": {
+        "claude_instantiable": true,
+        "approval_ceiling": 0,
+        "canonical_write_forbidden": true,
+        "external_delivery_forbidden": true,
+        "command_center_name_collision": false
+      },
+      "sample_state": {
+        "samples": [
+          "D13"
+        ],
+        "sample_count": 1,
+        "acceptance_bound": true,
+        "maker_checker_independence_measured": true
+      },
+      "risks": [
+        "name-only-or-purpose-unresolved"
+      ],
+      "disposition": "revise",
+      "disposition_reason": "Revise the contract or naming and collect a verified output sample before retention.",
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "permission_change_attempted": false,
+        "deletion_attempted": false,
+        "schedule_change_attempted": false,
+        "billing_change_attempted": false,
+        "record_move_attempted": false
+      }
+    }
+  ],
+  "authority": {
+    "read_only": true,
+    "proposal_only": true,
+    "external_action_attempted": false,
+    "canonical_write_attempted": false,
+    "provider_mutation_attempted": false,
+    "permission_change_attempted": false,
+    "deletion_attempted": false,
+    "schedule_change_attempted": false,
+    "billing_change_attempted": false,
+    "record_move_attempted": false
+  }
+}

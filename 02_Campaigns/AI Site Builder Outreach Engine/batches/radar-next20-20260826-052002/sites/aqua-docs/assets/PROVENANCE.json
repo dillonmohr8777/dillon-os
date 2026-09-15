@@ -1,0 +1,252 @@
+{
+  "slug": "aqua-docs",
+  "preparedAt": "2026-08-26T10:42:43.948Z",
+  "sourceSite": "https://aqua-docs.com/ephrata/",
+  "sourceFinalUrl": "https://aqua-docs.com/ephrata/",
+  "sourcePageSha256": "e95a02de9d5d4cd922ea35f546c7877b0adb279a58f65fb0ecffa829c8ed17ff",
+  "exactLogoRequired": true,
+  "exactLogoSha256": "ca144c638d1ac771a60157e989bef99c6f5f85f7a93ba78829430b5ab8c1394d",
+  "identityFallback": false,
+  "generatedImagePolicy": "All content visuals come from an Align HCM Image Gen editorial board, carry embedded plus interface-level grain, and are disclosed as illustrative concept material. They never serve as proof about the business, its staff, facilities, products, clients, or outcomes.",
+  "assets": [
+    {
+      "role": "first-party identity",
+      "output": "logo.png",
+      "sourceUrl": "https://aqua-docs.com/wp-content/uploads/2024/12/cropped-drop-pointing-out-213x300-1-180x180.png",
+      "sourceSha256": "ca144c638d1ac771a60157e989bef99c6f5f85f7a93ba78829430b5ab8c1394d",
+      "outputSha256": "ca144c638d1ac771a60157e989bef99c6f5f85f7a93ba78829430b5ab8c1394d",
+      "transformation": "none; exact first-party transparent asset",
+      "transparent": true
+    },
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "aqua-docs",
+      "boardDescriptor": "swimming-pool",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/aqua-docs.png",
+      "sourceSha256": "5b8b826b7db5b2471194258ae6a828706b77b571789b38bc51af8aa363c5632a",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Aqua Docs. Four distinct but cohesive unlabelled panels in a generic professional pool maintenance setting: a technician adjusting a pool skimmer and filter with a compact tool bag; a close detailed water-testing kit and gloved hands at a pool edge; a service professional rolling a vacuum hose beside a quiet backyard pool; a grounded conversation between a homeowner and technician near unbranded service equipment, shown from non-identifying angles. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:56,eq=saturation=0.965:contrast=1.028:brightness=0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "ffff327bf3db62d6cad597a9075b72d03363f0bcb6829b2dc87bee024e64a37e",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "aqua-docs",
+      "boardDescriptor": "swimming-pool",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/aqua-docs.png",
+      "sourceSha256": "5b8b826b7db5b2471194258ae6a828706b77b571789b38bc51af8aa363c5632a",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Aqua Docs. Four distinct but cohesive unlabelled panels in a generic professional pool maintenance setting: a technician adjusting a pool skimmer and filter with a compact tool bag; a close detailed water-testing kit and gloved hands at a pool edge; a service professional rolling a vacuum hose beside a quiet backyard pool; a grounded conversation between a homeowner and technician near unbranded service equipment, shown from non-identifying angles. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=0.990:contrast=1.082:brightness=-0.018,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "e9a3b958fc439a4d539be03f3c9cd6d33bbf7ea9d7025b14a783082a338521cb",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "aqua-docs",
+      "boardDescriptor": "swimming-pool",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/aqua-docs.png",
+      "sourceSha256": "5b8b826b7db5b2471194258ae6a828706b77b571789b38bc51af8aa363c5632a",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Aqua Docs. Four distinct but cohesive unlabelled panels in a generic professional pool maintenance setting: a technician adjusting a pool skimmer and filter with a compact tool bag; a close detailed water-testing kit and gloved hands at a pool edge; a service professional rolling a vacuum hose beside a quiet backyard pool; a grounded conversation between a homeowner and technician near unbranded service equipment, shown from non-identifying angles. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:28,eq=saturation=1.015:contrast=1.046:brightness=-0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "8dfdd59676f262bb0e4b8deda91d5c13a4d296498abf6e8e7697d555e0f414d4",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "aqua-docs",
+      "boardDescriptor": "swimming-pool",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/aqua-docs.png",
+      "sourceSha256": "5b8b826b7db5b2471194258ae6a828706b77b571789b38bc51af8aa363c5632a",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Aqua Docs. Four distinct but cohesive unlabelled panels in a generic professional pool maintenance setting: a technician adjusting a pool skimmer and filter with a compact tool bag; a close detailed water-testing kit and gloved hands at a pool edge; a service professional rolling a vacuum hose beside a quiet backyard pool; a grounded conversation between a homeowner and technician near unbranded service equipment, shown from non-identifying angles. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:56,eq=saturation=1.040:contrast=1.010:brightness=0.000,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "f8d66a1e304eff26f26f2be61985490eaab88f8dd06786fd22eaa91616ab5e66",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "aqua-docs",
+      "boardDescriptor": "swimming-pool",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/aqua-docs.png",
+      "sourceSha256": "5b8b826b7db5b2471194258ae6a828706b77b571789b38bc51af8aa363c5632a",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Aqua Docs. Four distinct but cohesive unlabelled panels in a generic professional pool maintenance setting: a technician adjusting a pool skimmer and filter with a compact tool bag; a close detailed water-testing kit and gloved hands at a pool edge; a service professional rolling a vacuum hose beside a quiet backyard pool; a grounded conversation between a homeowner and technician near unbranded service equipment, shown from non-identifying angles. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:0,eq=saturation=0.940:contrast=1.064:brightness=0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "24360a7c5f4a218a04c461f7cdc7c53a8958c1f419d8fc0d5955efe6120b7b2b",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "aqua-docs",
+      "boardDescriptor": "swimming-pool",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/aqua-docs.png",
+      "sourceSha256": "5b8b826b7db5b2471194258ae6a828706b77b571789b38bc51af8aa363c5632a",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Aqua Docs. Four distinct but cohesive unlabelled panels in a generic professional pool maintenance setting: a technician adjusting a pool skimmer and filter with a compact tool bag; a close detailed water-testing kit and gloved hands at a pool edge; a service professional rolling a vacuum hose beside a quiet backyard pool; a grounded conversation between a homeowner and technician near unbranded service equipment, shown from non-identifying angles. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:28,eq=saturation=0.965:contrast=1.028:brightness=-0.018,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "bb420fd800386eec6b8b1f8f735f478a1ec08d5d882597fd89a9e5af04ba7120",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "aqua-docs",
+      "boardDescriptor": "swimming-pool",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/aqua-docs.png",
+      "sourceSha256": "5b8b826b7db5b2471194258ae6a828706b77b571789b38bc51af8aa363c5632a",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Aqua Docs. Four distinct but cohesive unlabelled panels in a generic professional pool maintenance setting: a technician adjusting a pool skimmer and filter with a compact tool bag; a close detailed water-testing kit and gloved hands at a pool edge; a service professional rolling a vacuum hose beside a quiet backyard pool; a grounded conversation between a homeowner and technician near unbranded service equipment, shown from non-identifying angles. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:56,eq=saturation=0.990:contrast=1.082:brightness=-0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "04ef5efaf80b46e026058dc7896b44f595d9423aea2748f9a1cb092545a7ba35",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "aqua-docs",
+      "boardDescriptor": "swimming-pool",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/aqua-docs.png",
+      "sourceSha256": "5b8b826b7db5b2471194258ae6a828706b77b571789b38bc51af8aa363c5632a",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Aqua Docs. Four distinct but cohesive unlabelled panels in a generic professional pool maintenance setting: a technician adjusting a pool skimmer and filter with a compact tool bag; a close detailed water-testing kit and gloved hands at a pool edge; a service professional rolling a vacuum hose beside a quiet backyard pool; a grounded conversation between a homeowner and technician near unbranded service equipment, shown from non-identifying angles. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:0,eq=saturation=1.015:contrast=1.046:brightness=0.000,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "365d25a8c9e16bd91232ce8d39afa7c3a2d6c1e0a3b4ec3f6e6268ed188b5449",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "aqua-docs",
+      "boardDescriptor": "swimming-pool",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/aqua-docs.png",
+      "sourceSha256": "5b8b826b7db5b2471194258ae6a828706b77b571789b38bc51af8aa363c5632a",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Aqua Docs. Four distinct but cohesive unlabelled panels in a generic professional pool maintenance setting: a technician adjusting a pool skimmer and filter with a compact tool bag; a close detailed water-testing kit and gloved hands at a pool edge; a service professional rolling a vacuum hose beside a quiet backyard pool; a grounded conversation between a homeowner and technician near unbranded service equipment, shown from non-identifying angles. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:28,eq=saturation=1.040:contrast=1.010:brightness=0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "421739364a431a3c4d7a129b09aead27078abecbfb637944e86e17880c61be8b",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "aqua-docs",
+      "boardDescriptor": "swimming-pool",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/aqua-docs.png",
+      "sourceSha256": "5b8b826b7db5b2471194258ae6a828706b77b571789b38bc51af8aa363c5632a",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Aqua Docs. Four distinct but cohesive unlabelled panels in a generic professional pool maintenance setting: a technician adjusting a pool skimmer and filter with a compact tool bag; a close detailed water-testing kit and gloved hands at a pool edge; a service professional rolling a vacuum hose beside a quiet backyard pool; a grounded conversation between a homeowner and technician near unbranded service equipment, shown from non-identifying angles. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:56,eq=saturation=0.940:contrast=1.064:brightness=-0.018,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "640cf826f63c06d4b69f0a04f5d43bc19e58c5c75cfc72f88f72f4b7e9b8db2e",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "aqua-docs",
+      "boardDescriptor": "swimming-pool",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/aqua-docs.png",
+      "sourceSha256": "5b8b826b7db5b2471194258ae6a828706b77b571789b38bc51af8aa363c5632a",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Aqua Docs. Four distinct but cohesive unlabelled panels in a generic professional pool maintenance setting: a technician adjusting a pool skimmer and filter with a compact tool bag; a close detailed water-testing kit and gloved hands at a pool edge; a service professional rolling a vacuum hose beside a quiet backyard pool; a grounded conversation between a homeowner and technician near unbranded service equipment, shown from non-identifying angles. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:0,eq=saturation=0.965:contrast=1.028:brightness=-0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "5b8d695b70bff5d338cea5fd36f1d173c4d7ce544c9087705e8c792c6892319c",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "aqua-docs",
+      "boardDescriptor": "swimming-pool",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/aqua-docs.png",
+      "sourceSha256": "5b8b826b7db5b2471194258ae6a828706b77b571789b38bc51af8aa363c5632a",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Aqua Docs. Four distinct but cohesive unlabelled panels in a generic professional pool maintenance setting: a technician adjusting a pool skimmer and filter with a compact tool bag; a close detailed water-testing kit and gloved hands at a pool edge; a service professional rolling a vacuum hose beside a quiet backyard pool; a grounded conversation between a homeowner and technician near unbranded service equipment, shown from non-identifying angles. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:28,eq=saturation=0.990:contrast=1.082:brightness=0.000,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "6454a33c53789a82ac479c41937829b2a9c98528eb91364e7cfe46d3c5917d71",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    }
+  ],
+  "fonts": {
+    "pair": {
+      "id": "plus-jakarta-dm-sans",
+      "display": "Plus Jakarta Sans",
+      "text": "DM Sans"
+    },
+    "source": "Google Fonts CSS API",
+    "files": [
+      {
+        "file": "font-display-400.woff2",
+        "sha256": "153fc85b70298beeb1d61a5f723331649e7f23bb77302a66e61cb3e2fbdb5e79"
+      },
+      {
+        "file": "font-display-800.woff2",
+        "sha256": "153fc85b70298beeb1d61a5f723331649e7f23bb77302a66e61cb3e2fbdb5e79"
+      },
+      {
+        "file": "font-text-400.woff2",
+        "sha256": "9fea608a947e67020c33cad9a6fe3d60c54119dfb8cff87768a8117a15ed7543"
+      },
+      {
+        "file": "font-text-700.woff2",
+        "sha256": "9fea608a947e67020c33cad9a6fe3d60c54119dfb8cff87768a8117a15ed7543"
+      }
+    ]
+  }
+}

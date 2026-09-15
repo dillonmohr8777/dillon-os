@@ -1,0 +1,245 @@
+{
+  "schema": 1,
+  "business": "Street Stores Hardware Store",
+  "domain": "streetstoreshardware.com",
+  "route": "sites/street-stores-hardware-store/",
+  "generatedAt": "2026-08-26T10:07:01.3418223Z",
+  "generator": "Align HCM Image Gen plugin contract",
+  "model": "gpt-image-2.0",
+  "board": {
+    "key": "street-stores-hardware-store",
+    "descriptor": "hardware",
+    "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Street Stores Hardware Store. Four distinct but cohesive unlabelled panels in a credible independent hardware store: a knowledgeable associate in plain workwear helping an adult customer compare hand tools; a close detail of gloved hands sorting screws and fittings in labelled-but-unreadable bins; a sturdy workbench with tape measure, drill bits, and wood offcuts; a warm aisle view of hardware materials and a customer carrying a small project item, with no readable brand labels. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+    "sourceOutput": "C:/Users/dillo/.codex/generated_images/01a03d5e-c09f-74a0-b82e-14ad3c549703/exec-899b2b97-f7fd-42b3-96e5-0e12d6f66a4d.png",
+    "file": "automation/prospect-radar-next20/generated-stock-library/street-stores-hardware-store.png",
+    "sha256": "6cfe9a47c421f4aaec3aefd60b07a10f82b518c5d8cdda7e7224a370fe36801a",
+    "dimensions": {
+      "width": 1448,
+      "height": 1086
+    }
+  },
+  "treatment": {
+    "palette": [
+      "#F05A28",
+      "#FF6B35",
+      "#0B1D2D",
+      "#071521",
+      "#F4EFE7",
+      "#EAF6FC",
+      "#91D5ED"
+    ],
+    "imageGrain": "Visible refined 35mm film grain authored in the generated board and preserved in every derivative.",
+    "interfaceGrain": {
+      "file": "grain.svg",
+      "sha256": "f8b8b72ee2a84cf2aaa04ce069edaaa459ee61650e76f307254572db67efb813",
+      "opacity": 0.13
+    },
+    "disclosure": "Illustrative generated imagery. These concept visuals do not depict the business, its staff, customers, facility, products, projects, or outcomes."
+  },
+  "outputs": [
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "street-stores-hardware-store",
+      "boardDescriptor": "hardware",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/street-stores-hardware-store.png",
+      "sourceSha256": "6cfe9a47c421f4aaec3aefd60b07a10f82b518c5d8cdda7e7224a370fe36801a",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Street Stores Hardware Store. Four distinct but cohesive unlabelled panels in a credible independent hardware store: a knowledgeable associate in plain workwear helping an adult customer compare hand tools; a close detail of gloved hands sorting screws and fittings in labelled-but-unreadable bins; a sturdy workbench with tape measure, drill bits, and wood offcuts; a warm aisle view of hardware materials and a customer carrying a small project item, with no readable brand labels. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:28,eq=saturation=0.940:contrast=1.010:brightness=0.000,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "5787356a02b3beed1d66c596368d3f7c4bb3b6d73096db379c659a276a5e89db",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "street-stores-hardware-store",
+      "boardDescriptor": "hardware",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/street-stores-hardware-store.png",
+      "sourceSha256": "6cfe9a47c421f4aaec3aefd60b07a10f82b518c5d8cdda7e7224a370fe36801a",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Street Stores Hardware Store. Four distinct but cohesive unlabelled panels in a credible independent hardware store: a knowledgeable associate in plain workwear helping an adult customer compare hand tools; a close detail of gloved hands sorting screws and fittings in labelled-but-unreadable bins; a sturdy workbench with tape measure, drill bits, and wood offcuts; a warm aisle view of hardware materials and a customer carrying a small project item, with no readable brand labels. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:56,eq=saturation=0.965:contrast=1.064:brightness=0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "fc6b757b117cf4ebead567c8badc2d19a46ccd0a48f40cc5001c28f7c10c5667",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "street-stores-hardware-store",
+      "boardDescriptor": "hardware",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/street-stores-hardware-store.png",
+      "sourceSha256": "6cfe9a47c421f4aaec3aefd60b07a10f82b518c5d8cdda7e7224a370fe36801a",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Street Stores Hardware Store. Four distinct but cohesive unlabelled panels in a credible independent hardware store: a knowledgeable associate in plain workwear helping an adult customer compare hand tools; a close detail of gloved hands sorting screws and fittings in labelled-but-unreadable bins; a sturdy workbench with tape measure, drill bits, and wood offcuts; a warm aisle view of hardware materials and a customer carrying a small project item, with no readable brand labels. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=0.990:contrast=1.028:brightness=-0.018,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "3c203e9b5e78f50fdcff9bc177d4cca626cd9283f40aac3f6442321f66214034",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "street-stores-hardware-store",
+      "boardDescriptor": "hardware",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/street-stores-hardware-store.png",
+      "sourceSha256": "6cfe9a47c421f4aaec3aefd60b07a10f82b518c5d8cdda7e7224a370fe36801a",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Street Stores Hardware Store. Four distinct but cohesive unlabelled panels in a credible independent hardware store: a knowledgeable associate in plain workwear helping an adult customer compare hand tools; a close detail of gloved hands sorting screws and fittings in labelled-but-unreadable bins; a sturdy workbench with tape measure, drill bits, and wood offcuts; a warm aisle view of hardware materials and a customer carrying a small project item, with no readable brand labels. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:28,eq=saturation=1.015:contrast=1.082:brightness=-0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "93898281940aadc29cb735093533d9e2dad6bce77ed60311679efa042849b934",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "street-stores-hardware-store",
+      "boardDescriptor": "hardware",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/street-stores-hardware-store.png",
+      "sourceSha256": "6cfe9a47c421f4aaec3aefd60b07a10f82b518c5d8cdda7e7224a370fe36801a",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Street Stores Hardware Store. Four distinct but cohesive unlabelled panels in a credible independent hardware store: a knowledgeable associate in plain workwear helping an adult customer compare hand tools; a close detail of gloved hands sorting screws and fittings in labelled-but-unreadable bins; a sturdy workbench with tape measure, drill bits, and wood offcuts; a warm aisle view of hardware materials and a customer carrying a small project item, with no readable brand labels. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:56,eq=saturation=1.040:contrast=1.046:brightness=0.000,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "e1c92c832fba4b259f2c5aedb2cbb8d0db22da8336fb4002f1a29297ebcc09ca",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "street-stores-hardware-store",
+      "boardDescriptor": "hardware",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/street-stores-hardware-store.png",
+      "sourceSha256": "6cfe9a47c421f4aaec3aefd60b07a10f82b518c5d8cdda7e7224a370fe36801a",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Street Stores Hardware Store. Four distinct but cohesive unlabelled panels in a credible independent hardware store: a knowledgeable associate in plain workwear helping an adult customer compare hand tools; a close detail of gloved hands sorting screws and fittings in labelled-but-unreadable bins; a sturdy workbench with tape measure, drill bits, and wood offcuts; a warm aisle view of hardware materials and a customer carrying a small project item, with no readable brand labels. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:0,eq=saturation=0.940:contrast=1.010:brightness=0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "5e9d390c24073ff15b8e43827b68aee2ebf184145f96c1e9465a07ec876bf41f",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "street-stores-hardware-store",
+      "boardDescriptor": "hardware",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/street-stores-hardware-store.png",
+      "sourceSha256": "6cfe9a47c421f4aaec3aefd60b07a10f82b518c5d8cdda7e7224a370fe36801a",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Street Stores Hardware Store. Four distinct but cohesive unlabelled panels in a credible independent hardware store: a knowledgeable associate in plain workwear helping an adult customer compare hand tools; a close detail of gloved hands sorting screws and fittings in labelled-but-unreadable bins; a sturdy workbench with tape measure, drill bits, and wood offcuts; a warm aisle view of hardware materials and a customer carrying a small project item, with no readable brand labels. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:28,eq=saturation=0.965:contrast=1.064:brightness=-0.018,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "4440253906a56b2b344aaf9f80afae2ae1076458878e5572ef4b69909cbafc33",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "street-stores-hardware-store",
+      "boardDescriptor": "hardware",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/street-stores-hardware-store.png",
+      "sourceSha256": "6cfe9a47c421f4aaec3aefd60b07a10f82b518c5d8cdda7e7224a370fe36801a",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Street Stores Hardware Store. Four distinct but cohesive unlabelled panels in a credible independent hardware store: a knowledgeable associate in plain workwear helping an adult customer compare hand tools; a close detail of gloved hands sorting screws and fittings in labelled-but-unreadable bins; a sturdy workbench with tape measure, drill bits, and wood offcuts; a warm aisle view of hardware materials and a customer carrying a small project item, with no readable brand labels. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:56,eq=saturation=0.990:contrast=1.028:brightness=-0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "fb9094eb874435da224664a4df1f85c31d804884edcba92caaa33dc4c7577fd5",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "street-stores-hardware-store",
+      "boardDescriptor": "hardware",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/street-stores-hardware-store.png",
+      "sourceSha256": "6cfe9a47c421f4aaec3aefd60b07a10f82b518c5d8cdda7e7224a370fe36801a",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Street Stores Hardware Store. Four distinct but cohesive unlabelled panels in a credible independent hardware store: a knowledgeable associate in plain workwear helping an adult customer compare hand tools; a close detail of gloved hands sorting screws and fittings in labelled-but-unreadable bins; a sturdy workbench with tape measure, drill bits, and wood offcuts; a warm aisle view of hardware materials and a customer carrying a small project item, with no readable brand labels. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:0,eq=saturation=1.015:contrast=1.082:brightness=0.000,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "78d1686e069ad95698f076ed514af5b76c183600dcc264fab27fb2eb6c116de8",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "street-stores-hardware-store",
+      "boardDescriptor": "hardware",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/street-stores-hardware-store.png",
+      "sourceSha256": "6cfe9a47c421f4aaec3aefd60b07a10f82b518c5d8cdda7e7224a370fe36801a",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Street Stores Hardware Store. Four distinct but cohesive unlabelled panels in a credible independent hardware store: a knowledgeable associate in plain workwear helping an adult customer compare hand tools; a close detail of gloved hands sorting screws and fittings in labelled-but-unreadable bins; a sturdy workbench with tape measure, drill bits, and wood offcuts; a warm aisle view of hardware materials and a customer carrying a small project item, with no readable brand labels. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:28,eq=saturation=1.040:contrast=1.046:brightness=0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "96c7909d21f7a424f881e93e6fbc89fce14e3606ca21852268315048756752bd",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "street-stores-hardware-store",
+      "boardDescriptor": "hardware",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/street-stores-hardware-store.png",
+      "sourceSha256": "6cfe9a47c421f4aaec3aefd60b07a10f82b518c5d8cdda7e7224a370fe36801a",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Street Stores Hardware Store. Four distinct but cohesive unlabelled panels in a credible independent hardware store: a knowledgeable associate in plain workwear helping an adult customer compare hand tools; a close detail of gloved hands sorting screws and fittings in labelled-but-unreadable bins; a sturdy workbench with tape measure, drill bits, and wood offcuts; a warm aisle view of hardware materials and a customer carrying a small project item, with no readable brand labels. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:56,eq=saturation=0.940:contrast=1.010:brightness=-0.018,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "31057a9ce648dab1b85a08bdb6134f1022521e9c22c6242595cc0d414c709dd1",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "street-stores-hardware-store",
+      "boardDescriptor": "hardware",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/street-stores-hardware-store.png",
+      "sourceSha256": "6cfe9a47c421f4aaec3aefd60b07a10f82b518c5d8cdda7e7224a370fe36801a",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Street Stores Hardware Store. Four distinct but cohesive unlabelled panels in a credible independent hardware store: a knowledgeable associate in plain workwear helping an adult customer compare hand tools; a close detail of gloved hands sorting screws and fittings in labelled-but-unreadable bins; a sturdy workbench with tape measure, drill bits, and wood offcuts; a warm aisle view of hardware materials and a customer carrying a small project item, with no readable brand labels. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:0,eq=saturation=0.965:contrast=1.064:brightness=-0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "3bb3dd4d65a35e0630e7599e4b4144a8ce668e0ac47723610ff5efe3ee06ff49",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    }
+  ]
+}

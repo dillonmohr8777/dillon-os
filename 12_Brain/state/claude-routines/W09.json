@@ -1,7 +1,19 @@
 {
-    "routine_id":  "W09",
-    "dedupe_key":  "internal:2026-08-18:W09",
-    "last_stage":  "prioritize",
-    "run_id":  "LOOP-20260818-032319581",
-    "updated":  "2026-08-18T07:23:19.6980180Z"
+  "routine_id": "W09",
+  "dedupe_key": "internal:2026-W38:W09",
+  "last_stage": "learn",
+  "run_id": "LOOP-20260914-010819684",
+  "updated": "2026-09-14T05:08:23.522Z",
+  "generated_at": "2026-09-14T05:08:23.522Z",
+  "stage_states": {
+    "sense": "ok",
+    "route": "ok",
+    "prioritize": "ok",
+    "build": "ok",
+    "verify": "ok",
+    "approve": "ok",
+    "deliver": "ok",
+    "readback": "ok",
+    "learn": "ok"
+  }
 }

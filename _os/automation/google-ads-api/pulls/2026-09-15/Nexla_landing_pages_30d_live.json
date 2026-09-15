@@ -1,0 +1,937 @@
+[
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23027231268",
+      "name": "G_US_S_NB_Data-Products",
+      "id": "23027231268"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "34"
+    },
+    "landingPageView": {
+      "resourceName": "customers/7917802207/landingPageViews/538063139825524530",
+      "unexpandedFinalUrl": "https://nexla.com/nexla-platform-overview"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038365681",
+      "name": "G_US_S_Brand_Exact",
+      "id": "22038365681"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "317"
+    },
+    "landingPageView": {
+      "resourceName": "customers/7917802207/landingPageViews/1553570668618538507",
+      "unexpandedFinalUrl": "https://www.nexla.com/customers/"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22988394145",
+      "name": "G_US_S_NB_AI-Data-Integration",
+      "id": "22988394145"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "6"
+    },
+    "landingPageView": {
+      "resourceName": "customers/7917802207/landingPageViews/1553570668618538507",
+      "unexpandedFinalUrl": "https://www.nexla.com/customers/"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23027231268",
+      "name": "G_US_S_NB_Data-Products",
+      "id": "23027231268"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "4"
+    },
+    "landingPageView": {
+      "resourceName": "customers/7917802207/landingPageViews/1553570668618538507",
+      "unexpandedFinalUrl": "https://www.nexla.com/customers/"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "904"
+    },
+    "landingPageView": {
+      "resourceName": "customers/7917802207/landingPageViews/1553570668618538507",
+      "unexpandedFinalUrl": "https://www.nexla.com/customers/"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317335",
+      "name": "G_US_S_NB_ETL-Pipeline",
+      "id": "23705317335"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "41"
+    },
+    "landingPageView": {
+      "resourceName": "customers/7917802207/landingPageViews/1553570668618538507",
+      "unexpandedFinalUrl": "https://www.nexla.com/customers/"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317341",
+      "name": "G_US_S_NB_Governance",
+      "id": "23705317341"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "landingPageView": {
+      "resourceName": "customers/7917802207/landingPageViews/1553570668618538507",
+      "unexpandedFinalUrl": "https://www.nexla.com/customers/"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/24177650112",
+      "name": "G_US_PMAX_NB_MCP-Agentic",
+      "id": "24177650112"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "13"
+    },
+    "landingPageView": {
+      "resourceName": "customers/7917802207/landingPageViews/1553570668618538507",
+      "unexpandedFinalUrl": "https://www.nexla.com/customers/"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "metrics": {
+      "clicks": "34",
+      "conversions": 0,
+      "costMicros": "83258811",
+      "impressions": "907"
+    },
+    "landingPageView": {
+      "resourceName": "customers/7917802207/landingPageViews/2935855520126823217",
+      "unexpandedFinalUrl": "https://nexla.com/lp/mcp-for-agents/"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/24177650112",
+      "name": "G_US_PMAX_NB_MCP-Agentic",
+      "id": "24177650112"
+    },
+    "metrics": {
+      "clicks": "23",
+      "conversions": 1,
+      "costMicros": "24437145",
+      "impressions": "3941"
+    },
+    "landingPageView": {
+      "resourceName": "customers/7917802207/landingPageViews/2935855520126823217",
+      "unexpandedFinalUrl": "https://nexla.com/lp/mcp-for-agents/"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "metrics": {
+      "clicks": "80",
+      "conversions": 0,
+      "costMicros": "417499800",
+      "impressions": "7682"
+    },
+    "landingPageView": {
+      "resourceName": "customers/7917802207/landingPageViews/4061646215392046293",
+      "unexpandedFinalUrl": "https://nexla.com/lp/mcp-servers/{ignore}?utm_source=google&utm_medium=cpc&utm_campaign={campaignid}&utm_adgroup={adgroupid}&utm_term={keyword}&utm_content={creative}"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038365681",
+      "name": "G_US_S_Brand_Exact",
+      "id": "22038365681"
+    },
+    "metrics": {
+      "clicks": "102",
+      "conversions": 0,
+      "costMicros": "244136442",
+      "impressions": "579"
+    },
+    "landingPageView": {
+      "resourceName": "customers/7917802207/landingPageViews/4419447621405226749",
+      "unexpandedFinalUrl": "https://nexla.com/demo/"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22988394145",
+      "name": "G_US_S_NB_AI-Data-Integration",
+      "id": "22988394145"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "43"
+    },
+    "landingPageView": {
+      "resourceName": "customers/7917802207/landingPageViews/4419447621405226749",
+      "unexpandedFinalUrl": "https://nexla.com/demo/"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23027231268",
+      "name": "G_US_S_NB_Data-Products",
+      "id": "23027231268"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "13"
+    },
+    "landingPageView": {
+      "resourceName": "customers/7917802207/landingPageViews/4419447621405226749",
+      "unexpandedFinalUrl": "https://nexla.com/demo/"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "19"
+    },
+    "landingPageView": {
+      "resourceName": "customers/7917802207/landingPageViews/4419447621405226749",
+      "unexpandedFinalUrl": "https://nexla.com/demo/"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317335",
+      "name": "G_US_S_NB_ETL-Pipeline",
+      "id": "23705317335"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "389"
+    },
+    "landingPageView": {
+      "resourceName": "customers/7917802207/landingPageViews/4419447621405226749",
+      "unexpandedFinalUrl": "https://nexla.com/demo/"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317341",
+      "name": "G_US_S_NB_Governance",
+      "id": "23705317341"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "8"
+    },
+    "landingPageView": {
+      "resourceName": "customers/7917802207/landingPageViews/4419447621405226749",
+      "unexpandedFinalUrl": "https://nexla.com/demo/"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317335",
+      "name": "G_US_S_NB_ETL-Pipeline",
+      "id": "23705317335"
+    },
+    "metrics": {
+      "clicks": "2",
+      "conversions": 0,
+      "costMicros": "31380000",
+      "impressions": "299"
+    },
+    "landingPageView": {
+      "resourceName": "customers/7917802207/landingPageViews/6053440943272247409",
+      "unexpandedFinalUrl": "https://nexla.com/converged-integration/"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038365681",
+      "name": "G_US_S_Brand_Exact",
+      "id": "22038365681"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "407"
+    },
+    "landingPageView": {
+      "resourceName": "customers/7917802207/landingPageViews/7813667619029997438",
+      "unexpandedFinalUrl": "https://offers.nexla.com/metadata-data-integration-guide"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22988394145",
+      "name": "G_US_S_NB_AI-Data-Integration",
+      "id": "22988394145"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "13"
+    },
+    "landingPageView": {
+      "resourceName": "customers/7917802207/landingPageViews/7813667619029997438",
+      "unexpandedFinalUrl": "https://offers.nexla.com/metadata-data-integration-guide"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23027231268",
+      "name": "G_US_S_NB_Data-Products",
+      "id": "23027231268"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "10"
+    },
+    "landingPageView": {
+      "resourceName": "customers/7917802207/landingPageViews/7813667619029997438",
+      "unexpandedFinalUrl": "https://offers.nexla.com/metadata-data-integration-guide"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "860000",
+      "impressions": "3353"
+    },
+    "landingPageView": {
+      "resourceName": "customers/7917802207/landingPageViews/7813667619029997438",
+      "unexpandedFinalUrl": "https://offers.nexla.com/metadata-data-integration-guide"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317335",
+      "name": "G_US_S_NB_ETL-Pipeline",
+      "id": "23705317335"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "89"
+    },
+    "landingPageView": {
+      "resourceName": "customers/7917802207/landingPageViews/7813667619029997438",
+      "unexpandedFinalUrl": "https://offers.nexla.com/metadata-data-integration-guide"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317341",
+      "name": "G_US_S_NB_Governance",
+      "id": "23705317341"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "landingPageView": {
+      "resourceName": "customers/7917802207/landingPageViews/7813667619029997438",
+      "unexpandedFinalUrl": "https://offers.nexla.com/metadata-data-integration-guide"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/24177650112",
+      "name": "G_US_PMAX_NB_MCP-Agentic",
+      "id": "24177650112"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "18"
+    },
+    "landingPageView": {
+      "resourceName": "customers/7917802207/landingPageViews/7813667619029997438",
+      "unexpandedFinalUrl": "https://offers.nexla.com/metadata-data-integration-guide"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "211"
+    },
+    "landingPageView": {
+      "resourceName": "customers/7917802207/landingPageViews/9769424115774626595",
+      "unexpandedFinalUrl": "https://nexla.com/industry/finance/"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/24177650112",
+      "name": "G_US_PMAX_NB_MCP-Agentic",
+      "id": "24177650112"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "9"
+    },
+    "landingPageView": {
+      "resourceName": "customers/7917802207/landingPageViews/9769424115774626595",
+      "unexpandedFinalUrl": "https://nexla.com/industry/finance/"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/24177650112",
+      "name": "G_US_PMAX_NB_MCP-Agentic",
+      "id": "24177650112"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "10"
+    },
+    "landingPageView": {
+      "resourceName": "customers/7917802207/landingPageViews/11933819540510515848",
+      "unexpandedFinalUrl": "https://nexla.com/data-architects-engineers/"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038365681",
+      "name": "G_US_S_Brand_Exact",
+      "id": "22038365681"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "324"
+    },
+    "landingPageView": {
+      "resourceName": "customers/7917802207/landingPageViews/12195583080359299258",
+      "unexpandedFinalUrl": "https://www.nexla.com/"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22988394145",
+      "name": "G_US_S_NB_AI-Data-Integration",
+      "id": "22988394145"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "12"
+    },
+    "landingPageView": {
+      "resourceName": "customers/7917802207/landingPageViews/12195583080359299258",
+      "unexpandedFinalUrl": "https://www.nexla.com/"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23027231268",
+      "name": "G_US_S_NB_Data-Products",
+      "id": "23027231268"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "4"
+    },
+    "landingPageView": {
+      "resourceName": "customers/7917802207/landingPageViews/12195583080359299258",
+      "unexpandedFinalUrl": "https://www.nexla.com/"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "2834"
+    },
+    "landingPageView": {
+      "resourceName": "customers/7917802207/landingPageViews/12195583080359299258",
+      "unexpandedFinalUrl": "https://www.nexla.com/"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317335",
+      "name": "G_US_S_NB_ETL-Pipeline",
+      "id": "23705317335"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "74"
+    },
+    "landingPageView": {
+      "resourceName": "customers/7917802207/landingPageViews/12195583080359299258",
+      "unexpandedFinalUrl": "https://www.nexla.com/"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/24177650112",
+      "name": "G_US_PMAX_NB_MCP-Agentic",
+      "id": "24177650112"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "16"
+    },
+    "landingPageView": {
+      "resourceName": "customers/7917802207/landingPageViews/12195583080359299258",
+      "unexpandedFinalUrl": "https://www.nexla.com/"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "11010000",
+      "impressions": "84"
+    },
+    "landingPageView": {
+      "resourceName": "customers/7917802207/landingPageViews/12602014113703305456",
+      "unexpandedFinalUrl": "https://nexla.com/mcp-architecture/"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "metrics": {
+      "clicks": "10",
+      "conversions": 0,
+      "costMicros": "56100000",
+      "impressions": "442"
+    },
+    "landingPageView": {
+      "resourceName": "customers/7917802207/landingPageViews/15273100602358577634",
+      "unexpandedFinalUrl": "https://nexla.com/lp/mcp-in-action/"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/24177650112",
+      "name": "G_US_PMAX_NB_MCP-Agentic",
+      "id": "24177650112"
+    },
+    "metrics": {
+      "clicks": "18",
+      "conversions": 0,
+      "costMicros": "16124074",
+      "impressions": "3019"
+    },
+    "landingPageView": {
+      "resourceName": "customers/7917802207/landingPageViews/15273100602358577634",
+      "unexpandedFinalUrl": "https://nexla.com/lp/mcp-in-action/"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "1628"
+    },
+    "landingPageView": {
+      "resourceName": "customers/7917802207/landingPageViews/16328785812961111056",
+      "unexpandedFinalUrl": "https://nexla.com/asset-management/"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/24177650112",
+      "name": "G_US_PMAX_NB_MCP-Agentic",
+      "id": "24177650112"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "3"
+    },
+    "landingPageView": {
+      "resourceName": "customers/7917802207/landingPageViews/16328785812961111056",
+      "unexpandedFinalUrl": "https://nexla.com/asset-management/"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038365681",
+      "name": "G_US_S_Brand_Exact",
+      "id": "22038365681"
+    },
+    "metrics": {
+      "clicks": "2",
+      "conversions": 0,
+      "costMicros": "3230000",
+      "impressions": "376"
+    },
+    "landingPageView": {
+      "resourceName": "customers/7917802207/landingPageViews/16602716180506918883",
+      "unexpandedFinalUrl": "https://www.nexla.com/data-integration/?utm_source=google&utm_medium=cpc&utm_campaign=brand-terms-non-nexla"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22988394145",
+      "name": "G_US_S_NB_AI-Data-Integration",
+      "id": "22988394145"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "8"
+    },
+    "landingPageView": {
+      "resourceName": "customers/7917802207/landingPageViews/16602716180506918883",
+      "unexpandedFinalUrl": "https://www.nexla.com/data-integration/?utm_source=google&utm_medium=cpc&utm_campaign=brand-terms-non-nexla"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "705"
+    },
+    "landingPageView": {
+      "resourceName": "customers/7917802207/landingPageViews/16602716180506918883",
+      "unexpandedFinalUrl": "https://www.nexla.com/data-integration/?utm_source=google&utm_medium=cpc&utm_campaign=brand-terms-non-nexla"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317335",
+      "name": "G_US_S_NB_ETL-Pipeline",
+      "id": "23705317335"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "36"
+    },
+    "landingPageView": {
+      "resourceName": "customers/7917802207/landingPageViews/16602716180506918883",
+      "unexpandedFinalUrl": "https://www.nexla.com/data-integration/?utm_source=google&utm_medium=cpc&utm_campaign=brand-terms-non-nexla"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317341",
+      "name": "G_US_S_NB_Governance",
+      "id": "23705317341"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "landingPageView": {
+      "resourceName": "customers/7917802207/landingPageViews/16602716180506918883",
+      "unexpandedFinalUrl": "https://www.nexla.com/data-integration/?utm_source=google&utm_medium=cpc&utm_campaign=brand-terms-non-nexla"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/24177650112",
+      "name": "G_US_PMAX_NB_MCP-Agentic",
+      "id": "24177650112"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "11"
+    },
+    "landingPageView": {
+      "resourceName": "customers/7917802207/landingPageViews/16602716180506918883",
+      "unexpandedFinalUrl": "https://www.nexla.com/data-integration/?utm_source=google&utm_medium=cpc&utm_campaign=brand-terms-non-nexla"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038365681",
+      "name": "G_US_S_Brand_Exact",
+      "id": "22038365681"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "110"
+    },
+    "landingPageView": {
+      "resourceName": "customers/7917802207/landingPageViews/16727310988732311705",
+      "unexpandedFinalUrl": "https://www.nexla.com/data-transformation/?utm_source=google&utm_medium=cpc&utm_campaign=brand-terms-non-nexla"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22988394145",
+      "name": "G_US_S_NB_AI-Data-Integration",
+      "id": "22988394145"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "8"
+    },
+    "landingPageView": {
+      "resourceName": "customers/7917802207/landingPageViews/16727310988732311705",
+      "unexpandedFinalUrl": "https://www.nexla.com/data-transformation/?utm_source=google&utm_medium=cpc&utm_campaign=brand-terms-non-nexla"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23027231268",
+      "name": "G_US_S_NB_Data-Products",
+      "id": "23027231268"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "5"
+    },
+    "landingPageView": {
+      "resourceName": "customers/7917802207/landingPageViews/16727310988732311705",
+      "unexpandedFinalUrl": "https://www.nexla.com/data-transformation/?utm_source=google&utm_medium=cpc&utm_campaign=brand-terms-non-nexla"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "307"
+    },
+    "landingPageView": {
+      "resourceName": "customers/7917802207/landingPageViews/16727310988732311705",
+      "unexpandedFinalUrl": "https://www.nexla.com/data-transformation/?utm_source=google&utm_medium=cpc&utm_campaign=brand-terms-non-nexla"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317335",
+      "name": "G_US_S_NB_ETL-Pipeline",
+      "id": "23705317335"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "65"
+    },
+    "landingPageView": {
+      "resourceName": "customers/7917802207/landingPageViews/16727310988732311705",
+      "unexpandedFinalUrl": "https://www.nexla.com/data-transformation/?utm_source=google&utm_medium=cpc&utm_campaign=brand-terms-non-nexla"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317341",
+      "name": "G_US_S_NB_Governance",
+      "id": "23705317341"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "landingPageView": {
+      "resourceName": "customers/7917802207/landingPageViews/16727310988732311705",
+      "unexpandedFinalUrl": "https://www.nexla.com/data-transformation/?utm_source=google&utm_medium=cpc&utm_campaign=brand-terms-non-nexla"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/24177650112",
+      "name": "G_US_PMAX_NB_MCP-Agentic",
+      "id": "24177650112"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "12"
+    },
+    "landingPageView": {
+      "resourceName": "customers/7917802207/landingPageViews/16727310988732311705",
+      "unexpandedFinalUrl": "https://www.nexla.com/data-transformation/?utm_source=google&utm_medium=cpc&utm_campaign=brand-terms-non-nexla"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "16"
+    },
+    "landingPageView": {
+      "resourceName": "customers/7917802207/landingPageViews/16825215197296166421",
+      "unexpandedFinalUrl": "https://nexla.com/mcp/"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "metrics": {
+      "clicks": "51",
+      "conversions": 0,
+      "costMicros": "133947039",
+      "impressions": "1034"
+    },
+    "landingPageView": {
+      "resourceName": "customers/7917802207/landingPageViews/18432173115485860634",
+      "unexpandedFinalUrl": "https://nexla.com/lp/mcp-servers/"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/24177650112",
+      "name": "G_US_PMAX_NB_MCP-Agentic",
+      "id": "24177650112"
+    },
+    "metrics": {
+      "clicks": "40",
+      "conversions": 0,
+      "costMicros": "43819592",
+      "impressions": "6311"
+    },
+    "landingPageView": {
+      "resourceName": "customers/7917802207/landingPageViews/18432173115485860634",
+      "unexpandedFinalUrl": "https://nexla.com/lp/mcp-servers/"
+    }
+  }
+]

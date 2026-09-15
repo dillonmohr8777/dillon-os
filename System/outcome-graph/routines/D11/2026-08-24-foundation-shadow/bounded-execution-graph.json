@@ -1,0 +1,262 @@
+{
+  "schema_version": 1,
+  "routine_id": "D11",
+  "generated_at": "2026-08-24T23:48:51.873Z",
+  "source_set_sha256": "bee6d7037763d45601274702c12c8e31ad280fed7e97757744fc5930b1d39065",
+  "objective_fingerprint": "outcome-graph-replica-and-loop-engineering",
+  "nodes": [
+    {
+      "schema_version": 1,
+      "routine_id": "D11",
+      "id": "D11:build-isolated-records",
+      "isolation_key": "graph-node:build-isolated-records",
+      "source_set_sha256": "bee6d7037763d45601274702c12c8e31ad280fed7e97757744fc5930b1d39065",
+      "node_id": "build-isolated-records",
+      "owner": "routine maker",
+      "dependencies": [
+        "sense-and-bind-sources"
+      ],
+      "input_contract": "source-bound work item",
+      "output_contract": "isolated candidate record",
+      "work_isolation": "routine-specific ownership key",
+      "failure_state": "maker_failed_or_budget_exhausted",
+      "limits": {
+        "graph_iterations": 1,
+        "worker_attempts": 2,
+        "concurrency": 4,
+        "timeout_seconds": 600,
+        "budget_units": 96
+      },
+      "approval_state": "no_external_action",
+      "abstain_state": "blocked_or_held",
+      "grants_new_authority": false,
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "deployment_attempted": false,
+        "worktree_mutation_attempted": false,
+        "ui_mutation_attempted": false,
+        "acceptance_contract_changed": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "D11",
+      "id": "D11:check-records-independently",
+      "isolation_key": "graph-node:check-records-independently",
+      "source_set_sha256": "bee6d7037763d45601274702c12c8e31ad280fed7e97757744fc5930b1d39065",
+      "node_id": "check-records-independently",
+      "owner": "routine checker",
+      "dependencies": [
+        "build-isolated-records"
+      ],
+      "input_contract": "candidate record and source binding",
+      "output_contract": "pass or exact findings",
+      "work_isolation": "same item different verifier",
+      "failure_state": "checker_rejected",
+      "limits": {
+        "graph_iterations": 1,
+        "worker_attempts": 2,
+        "concurrency": 4,
+        "timeout_seconds": 600,
+        "budget_units": 96
+      },
+      "approval_state": "no_external_action",
+      "abstain_state": "blocked_or_held",
+      "grants_new_authority": false,
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "deployment_attempted": false,
+        "worktree_mutation_attempted": false,
+        "ui_mutation_attempted": false,
+        "acceptance_contract_changed": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "D11",
+      "id": "D11:learn-and-handoff",
+      "isolation_key": "graph-node:learn-and-handoff",
+      "source_set_sha256": "bee6d7037763d45601274702c12c8e31ad280fed7e97757744fc5930b1d39065",
+      "node_id": "learn-and-handoff",
+      "owner": "learner then Marketing Chief",
+      "dependencies": [
+        "verify-terminal-outcome"
+      ],
+      "input_contract": "terminal receipt and findings",
+      "output_contract": "correction receipt and proposal-only handoff",
+      "work_isolation": "routine drift fingerprint",
+      "failure_state": "learning_receipt_invalid_or_adoption_held",
+      "limits": {
+        "graph_iterations": 1,
+        "worker_attempts": 2,
+        "concurrency": 4,
+        "timeout_seconds": 600,
+        "budget_units": 96
+      },
+      "approval_state": "marketing_chief_adoption_required",
+      "abstain_state": "blocked_or_held",
+      "grants_new_authority": false,
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "deployment_attempted": false,
+        "worktree_mutation_attempted": false,
+        "ui_mutation_attempted": false,
+        "acceptance_contract_changed": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "D11",
+      "id": "D11:reduce-passed-records",
+      "isolation_key": "graph-node:reduce-passed-records",
+      "source_set_sha256": "bee6d7037763d45601274702c12c8e31ad280fed7e97757744fc5930b1d39065",
+      "node_id": "reduce-passed-records",
+      "owner": "collision-safe reducer",
+      "dependencies": [
+        "check-records-independently"
+      ],
+      "input_contract": "checked records only",
+      "output_contract": "staged final artifacts",
+      "work_isolation": "artifact role and routine",
+      "failure_state": "collision_or_cross_scope_blend",
+      "limits": {
+        "graph_iterations": 1,
+        "worker_attempts": 2,
+        "concurrency": 4,
+        "timeout_seconds": 600,
+        "budget_units": 96
+      },
+      "approval_state": "no_external_action",
+      "abstain_state": "blocked_or_held",
+      "grants_new_authority": false,
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "deployment_attempted": false,
+        "worktree_mutation_attempted": false,
+        "ui_mutation_attempted": false,
+        "acceptance_contract_changed": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "D11",
+      "id": "D11:sense-and-bind-sources",
+      "isolation_key": "graph-node:sense-and-bind-sources",
+      "source_set_sha256": "bee6d7037763d45601274702c12c8e31ad280fed7e97757744fc5930b1d39065",
+      "node_id": "sense-and-bind-sources",
+      "owner": "Marketing Chief planner",
+      "dependencies": [],
+      "input_contract": "canonical source manifest",
+      "output_contract": "source-bound plan",
+      "work_isolation": "routine-source-binding",
+      "failure_state": "blocked_stale_or_ambiguous_source",
+      "limits": {
+        "graph_iterations": 1,
+        "worker_attempts": 2,
+        "concurrency": 4,
+        "timeout_seconds": 600,
+        "budget_units": 96
+      },
+      "approval_state": "no_external_action",
+      "abstain_state": "blocked_or_held",
+      "grants_new_authority": false,
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "deployment_attempted": false,
+        "worktree_mutation_attempted": false,
+        "ui_mutation_attempted": false,
+        "acceptance_contract_changed": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "D11",
+      "id": "D11:verify-terminal-outcome",
+      "isolation_key": "graph-node:verify-terminal-outcome",
+      "source_set_sha256": "bee6d7037763d45601274702c12c8e31ad280fed7e97757744fc5930b1d39065",
+      "node_id": "verify-terminal-outcome",
+      "owner": "independent terminal verifier",
+      "dependencies": [
+        "reduce-passed-records"
+      ],
+      "input_contract": "fresh sources and staged artifacts",
+      "output_contract": "assertions and artifact manifest",
+      "work_isolation": "whole routine canonical binding",
+      "failure_state": "terminal_predicate_false",
+      "limits": {
+        "graph_iterations": 1,
+        "worker_attempts": 2,
+        "concurrency": 4,
+        "timeout_seconds": 600,
+        "budget_units": 96
+      },
+      "approval_state": "no_external_action",
+      "abstain_state": "blocked_or_held",
+      "grants_new_authority": false,
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "deployment_attempted": false,
+        "worktree_mutation_attempted": false,
+        "ui_mutation_attempted": false,
+        "acceptance_contract_changed": false
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "sense-and-bind-sources",
+      "to": "build-isolated-records"
+    },
+    {
+      "from": "build-isolated-records",
+      "to": "check-records-independently"
+    },
+    {
+      "from": "verify-terminal-outcome",
+      "to": "learn-and-handoff"
+    },
+    {
+      "from": "check-records-independently",
+      "to": "reduce-passed-records"
+    },
+    {
+      "from": "reduce-passed-records",
+      "to": "verify-terminal-outcome"
+    }
+  ],
+  "authority": {
+    "read_only": true,
+    "proposal_only": true,
+    "external_action_attempted": false,
+    "canonical_write_attempted": false,
+    "provider_mutation_attempted": false,
+    "deployment_attempted": false,
+    "worktree_mutation_attempted": false,
+    "ui_mutation_attempted": false,
+    "acceptance_contract_changed": false
+  }
+}

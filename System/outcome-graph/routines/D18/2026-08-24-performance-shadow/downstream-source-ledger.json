@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "routine_id": "D18",
+  "generated_at": "2026-08-24T23:42:21.488Z",
+  "source_set_sha256": "cd4877517666380542f1ea8d7c4be50549fa27d98e354f32850b01cab67f172e",
+  "paid_media_source_set_sha256": "d9999ce6c6b447b97dca8c7fd68c14e8b0981ef414085b0a05ce49a5a94f2928",
+  "source_count": 0,
+  "lanes": [
+    {
+      "isolation_key": "fresh-blends-kwik-trip:google-ads:2026-W35A",
+      "downstream_source_bound": false,
+      "downstream_reconciled": false,
+      "outcome_state": "pending_validation"
+    },
+    {
+      "isolation_key": "kimberly-james-bridal:google-ads:2026-W35A",
+      "downstream_source_bound": false,
+      "downstream_reconciled": false,
+      "outcome_state": "pending_validation"
+    },
+    {
+      "isolation_key": "kimberly-james-bridal:meta-ads:2026-W35A",
+      "downstream_source_bound": false,
+      "downstream_reconciled": false,
+      "outcome_state": "pending_validation"
+    },
+    {
+      "isolation_key": "omega-landscaping:google-ads:2026-W35A",
+      "downstream_source_bound": false,
+      "downstream_reconciled": false,
+      "outcome_state": "pending_validation"
+    },
+    {
+      "isolation_key": "onsite-concrete-landscape:google-ads:2026-W35A",
+      "downstream_source_bound": false,
+      "downstream_reconciled": false,
+      "outcome_state": "pending_validation"
+    },
+    {
+      "isolation_key": "replenish-7-eleven:google-ads:2026-W35A",
+      "downstream_source_bound": false,
+      "downstream_reconciled": false,
+      "outcome_state": "pending_validation"
+    },
+    {
+      "isolation_key": "shadow-heating-cooling:meta-ads:2026-W35A",
+      "downstream_source_bound": false,
+      "downstream_reconciled": false,
+      "outcome_state": "pending_validation"
+    }
+  ],
+  "authority": {
+    "read_only": true,
+    "proposal_only": true,
+    "external_action_attempted": false,
+    "canonical_write_attempted": false,
+    "provider_mutation_attempted": false,
+    "crm_mutation_attempted": false,
+    "spend_change_attempted": false,
+    "delivery_attempted": false
+  }
+}

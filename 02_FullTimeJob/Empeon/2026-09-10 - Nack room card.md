@@ -18,7 +18,15 @@ source_refs:
 
 **He is Jonathan Nack.** VP Sales, Empeon. LinkedIn `/in/jonathannack`. "John Nack" is the Adobe/Google PM. Do not teach him the market. He ran SmartLinx enterprise sales for 3.5 years.
 
-Live check 2026-09-10 ~13:20 ET: no Nack or Otten event on the primary calendar through Sep 30. No inbound Gmail from Nack or Otten after the 9 AM Matt call. Slack has no Empeon hits after Sep 1. The conversation is not scheduled yet. Matt is still the gate.
+## Copy this to Matt now
+
+SMS or LinkedIn DM, same words. Thank you, not a pitch.
+
+Matt — thanks for the time this morning. I will be ready for Jonathan. Appreciate you passing me through.
+
+Optional second line: happy to send Jonathan the work sample ahead of the conversation.
+
+Live reread 2026-09-10 ~13:55 ET: **Matt accepted the LinkedIn invite** at 13:41 ET, Gmail `1a08c68b993684bf`. You are connected. Do not send another invite. Candace is still the mutual. No Nack or Otten event on the primary calendar through Sep 30. No inbound Gmail from Nack, Otten, Go To Market Hire, or empeon.com after the 9 AM call. Slack still has no Empeon hits. The Nack conversation is not scheduled. Matt is still the gate.
 
 ## Open your mouth with this
 
@@ -103,16 +111,10 @@ Do not send `empeon-growth-case-site.html` or the MP4s unless you name that exac
 
 ## Still on you today
 
-Text Matt. Draft is ready. Thank you, not a pitch:
-
-Matt — thanks for the time this morning. I will be ready for John. Appreciate you passing me through.
-
-Optional second line: happy to send Jonathan the work sample ahead of the conversation.
-
-Do not send another LinkedIn connect. One is already Pending. Candace is the mutual.
+Text or LinkedIn-DM Matt with the copy at the top of this card. Still unsent as of 13:55 ET.
 
 ## Pipeline hygiene, do not confuse
 
-Matt Otten (Go To Market Hire) is the live gate to Nack. Jeff Dooney (Metro CEO, 973-615-8774) emailed 2026-09-03 asking for Tuesday or Wednesday the week of Sep 8. That window is gone. Four signature-only Gmail drafts sit on the Metro threads (`1a06270aa2bb3ee5`, `1a0599246a3d58ec`). Do not send them. A clean Jeff close is drafted next to this card if you want the thread shut.
+Matt Otten (Go To Market Hire) is the live gate to Nack. Jeff Dooney (Metro CEO, 973-615-8774) last wrote 2026-09-08 19:09 ET, message `1a0826ca26937f12`, proposing **Wednesday Sep 9 at 2:00 ET**. No confirmation went out after that. Four signature-only Gmail drafts sit on the Metro threads (`1a06270aa2bb3ee5`, `1a0599246a3d58ec`). Do not send them. A clean Jeff close is drafted next to this card if you want the thread shut.
 
 Ebooks: still unresolved whether they are gated. Ask Nack. Resources page is real; the form is not crawler-reachable.

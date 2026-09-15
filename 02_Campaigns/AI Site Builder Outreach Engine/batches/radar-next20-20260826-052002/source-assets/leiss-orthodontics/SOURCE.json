@@ -1,0 +1,83 @@
+{
+  "sourceUrl": "https://leisshendrix.com/location/elverson-orthodontics/",
+  "finalUrl": "https://leisshendrix.com/location/elverson-orthodontics/",
+  "sourceDomain": "leisshendrix.com",
+  "httpStatus": 200,
+  "contentType": "",
+  "pageSha256": "92657d4829609de97c10bcdbb60d35879bcf8d8c6fa0d00d88b81f1991ec2ba8",
+  "title": "Orthodontist in Elverson, PA | Leiss Orthodontics Chester County",
+  "description": "Looking for braces or Invisalign® in Elverson, PA? Visit Dr. Jeffrey Leiss at Darby Square off W Main St. Free consultations available!",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "leiss",
+      "orthodontics"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260826-052002\\preflight\\leiss-orthodontics\\logo.svg",
+    "fileName": "logo.svg",
+    "sourceUrl": "https://assets.drjeffreyleiss.com/Images/Sites/S/SD-Leiss/MasterPage/1531354.svg",
+    "sourceEvidence": "JSON-LD logo",
+    "type": "svg",
+    "dimensions": {
+      "width": 1500,
+      "height": 281
+    },
+    "sha256": "ecb27bdb8d6c74efdd63d776b7a459a095d7b54798ffb4556482ddf30a5874fa",
+    "sourceSha256": "ecb27bdb8d6c74efdd63d776b7a459a095d7b54798ffb4556482ddf30a5874fa",
+    "sourceType": "svg",
+    "sourceFileName": null,
+    "transformation": "none; exact first-party transparent asset",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "vector": true
+    },
+    "transparent": true,
+    "bytes": 5885
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260826-052002\\preflight\\leiss-orthodontics\\reference-1.webp",
+      "fileName": "reference-1.webp",
+      "sourceUrl": "https://assets.drjeffreyleiss.com/Images/Sites/S/SD-Leiss/Facility/1582912.jpg",
+      "sourceEvidence": "og:image",
+      "type": "webp",
+      "dimensions": {
+        "width": 1920,
+        "height": 1440
+      },
+      "sha256": "cc7eae063a07c26768ae73bf2173acef330ab09141c16a671d8dc58e0c333332",
+      "bytes": 446340,
+      "visual": {
+        "ok": true,
+        "lumaRange": 232,
+        "chromaURange": 53,
+        "chromaVRange": 38,
+        "reason": null
+      }
+    }
+  ],
+  "contact": {
+    "phone": "610-363-2900",
+    "address": "201 Darby Square, Elverson, PA 19520",
+    "city": "Elverson",
+    "phoneSource": "official JSON-LD",
+    "addressSource": "official JSON-LD"
+  },
+  "visualReferenceFallback": null,
+  "referenceFailures": [
+    {
+      "url": "https://assets.drjeffreyleiss.com/Images/Sites/GlobalAssets/SmileDoctors/phone-sticky-bar.svg",
+      "reason": "unsupported reference type svg"
+    },
+    {
+      "url": "https://assets.drjeffreyleiss.com/Images/Sites/GlobalAssets/SmileDoctors/calendar-sticky-bar.svg",
+      "reason": "unsupported reference type svg"
+    }
+  ],
+  "brandColors": [],
+  "checkedAt": "2026-08-26T09:34:41.357Z"
+}

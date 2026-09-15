@@ -1,7 +1,19 @@
 {
-    "routine_id":  "W10",
-    "dedupe_key":  "internal:2026-08-18:W10",
-    "last_stage":  "learn",
-    "run_id":  "LOOP-20260818-030830864",
-    "updated":  "2026-08-18T07:08:33.8649753Z"
+  "routine_id": "W10",
+  "dedupe_key": "internal:2026-W38:W10",
+  "last_stage": "learn",
+  "run_id": "LOOP-20260914-010823624",
+  "updated": "2026-09-14T05:08:27.331Z",
+  "generated_at": "2026-09-14T05:08:27.331Z",
+  "stage_states": {
+    "sense": "ok",
+    "route": "ok",
+    "prioritize": "ok",
+    "build": "ok",
+    "verify": "ok",
+    "approve": "ok",
+    "deliver": "ok",
+    "readback": "ok",
+    "learn": "ok"
+  }
 }

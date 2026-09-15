@@ -1,0 +1,1080 @@
+{
+  "schema_version": 1,
+  "run_id": "OGD-20260825-0EB931F1E7DE",
+  "graph_id": "monthly-m03-automation-value-cost-shadow",
+  "dedupe_identity": "8826f4b8c64b244ce9c328be531fd92735e753fad40bea246cf4002ec426d8cc",
+  "dedupe_key": "M03:2026-08-24:source-bound-shadow",
+  "contract_fingerprint": "057d7f6430b27ce8e4d8fb97da32216a5f74b281e49449df68ce43aff26fd7a7",
+  "canonical_binding": {
+    "locator": "dillon-os://routine/M03/2026-08-24",
+    "version": "2026-08-25:f7aa7149.05e6a21e.f497ab86.4cbc7e46.bf6d66f3.6dfe16e3.f96f62d5.162ea5eb.cbbca8bc.ea6d61ce.93b9d0fe.f732363f.92de219c.afe7b617.c355f1e8.e1f37605.335c7b06.8922e2ff.279df6e5.aeae1f8a.36bd6b59.6d1938a5.a103d71e.f13750cf.575dddf3.9e9e56d3.b6a08193.e3fb5768.d3e6d2f3.7d6e3c11.b34518cf.1164d9e4.31a8ebb5.4dc39e2d.bed1aeea.b885b117.b191bb26.525b6d51.53a57c86.9f1943bc.25da97d8.7d65a000.ff7a25e5.1d0c18e9.a7a511c0.4f8b11fe.58541f6d.2438ad8f.c4f66a74.6bf1f073.3f06d2f3.fedfe667.aaa4096f.80997a5e",
+    "sha256": "2503ec97084489049230785ff71c6851337b9335c5444c1534518830de2ab4b5",
+    "captured_at": "2026-08-25T00:23:56.364Z"
+  },
+  "canonical_binding_fingerprint": "02763a786ca2cae12bfad4ecdc9e6371b9d3700348ca071fc04eb97de13e35fc",
+  "status": "complete",
+  "started_at": "2026-08-25T00:23:56.400Z",
+  "updated_at": "2026-08-25T00:23:57.240Z",
+  "event_sequence": 18,
+  "events": [
+    {
+      "sequence": 1,
+      "event": "run_started",
+      "at": "2026-08-25T00:23:56.400Z",
+      "resumed": false
+    },
+    {
+      "sequence": 2,
+      "event": "planned",
+      "at": "2026-08-25T00:23:56.437Z",
+      "graph_attempt": 1,
+      "item_id": null
+    },
+    {
+      "sequence": 3,
+      "event": "worker_verified",
+      "at": "2026-08-25T00:23:56.610Z",
+      "graph_attempt": 1,
+      "item_id": "M03:D09"
+    },
+    {
+      "sequence": 4,
+      "event": "worker_verified",
+      "at": "2026-08-25T00:23:56.621Z",
+      "graph_attempt": 1,
+      "item_id": "M03:D19"
+    },
+    {
+      "sequence": 5,
+      "event": "worker_verified",
+      "at": "2026-08-25T00:23:56.654Z",
+      "graph_attempt": 1,
+      "item_id": "M03:D27"
+    },
+    {
+      "sequence": 6,
+      "event": "worker_verified",
+      "at": "2026-08-25T00:23:56.792Z",
+      "graph_attempt": 1,
+      "item_id": "M03:W01"
+    },
+    {
+      "sequence": 7,
+      "event": "worker_verified",
+      "at": "2026-08-25T00:23:56.805Z",
+      "graph_attempt": 1,
+      "item_id": "M03:W02"
+    },
+    {
+      "sequence": 8,
+      "event": "worker_verified",
+      "at": "2026-08-25T00:23:56.841Z",
+      "graph_attempt": 1,
+      "item_id": "M03:W03"
+    },
+    {
+      "sequence": 9,
+      "event": "worker_verified",
+      "at": "2026-08-25T00:23:56.990Z",
+      "graph_attempt": 1,
+      "item_id": "M03:W05"
+    },
+    {
+      "sequence": 10,
+      "event": "worker_verified",
+      "at": "2026-08-25T00:23:57.003Z",
+      "graph_attempt": 1,
+      "item_id": "M03:W06"
+    },
+    {
+      "sequence": 11,
+      "event": "worker_verified",
+      "at": "2026-08-25T00:23:57.043Z",
+      "graph_attempt": 1,
+      "item_id": "M03:W10"
+    },
+    {
+      "sequence": 12,
+      "event": "worker_verified",
+      "at": "2026-08-25T00:23:57.087Z",
+      "graph_attempt": 1,
+      "item_id": "M03:M03"
+    },
+    {
+      "sequence": 13,
+      "event": "workers_verified",
+      "at": "2026-08-25T00:23:57.099Z",
+      "graph_attempt": 1,
+      "item_id": null
+    },
+    {
+      "sequence": 14,
+      "event": "reduced",
+      "at": "2026-08-25T00:23:57.119Z",
+      "graph_attempt": 1,
+      "item_id": null
+    },
+    {
+      "sequence": 15,
+      "event": "terminal_verified",
+      "at": "2026-08-25T00:23:57.163Z",
+      "graph_attempt": 1,
+      "item_id": null
+    },
+    {
+      "sequence": 16,
+      "event": "learned",
+      "at": "2026-08-25T00:23:57.177Z",
+      "graph_attempt": 1,
+      "item_id": null
+    },
+    {
+      "sequence": 17,
+      "event": "finished",
+      "at": "2026-08-25T00:23:57.189Z",
+      "graph_attempt": 1,
+      "item_id": null
+    },
+    {
+      "sequence": 18,
+      "event": "receipt_committed",
+      "at": "2026-08-25T00:23:57.240Z",
+      "outcome": "complete"
+    }
+  ],
+  "engine": {
+    "stage": "finished",
+    "graph_attempt": 1,
+    "plan_signature": "ac57234b3ffbe63acba76cd5dd14379e299a34207158962523819d98ab1ebdff",
+    "verified_workers": {
+      "M03:D09": {
+        "input_fingerprint": "0cfca1b36aa513c3558dec0e0518191e7601b2545cca69f59ee21248c3440d19",
+        "worker_result": {
+          "item_id": "M03:D09",
+          "input_fingerprint": "0cfca1b36aa513c3558dec0e0518191e7601b2545cca69f59ee21248c3440d19",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260825-0EB931F1E7DE:471a4c4ffa6bf03f3b72:attempt:1",
+              "maker_evidence": "Built one privacy-safe M03 record for M03:D09.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/M03/2026-08-24-governance-shadow/workers/471a4c4ffa6bf03f3b72.json",
+                  "sha256": "a65ac188d32853ed408ff71f3e2adf3481bd098d26aacab65f4356c13ca32272",
+                  "bytes": 1499
+                }
+              ],
+              "checker_evidence": "Independently reconstructed M03:D09 from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/M03/2026-08-24-governance-shadow/workers/471a4c4ffa6bf03f3b72.json",
+              "sha256": "a65ac188d32853ed408ff71f3e2adf3481bd098d26aacab65f4356c13ca32272",
+              "bytes": 1499
+            }
+          ],
+          "isolation_id": "OGD-20260825-0EB931F1E7DE:471a4c4ffa6bf03f3b72:attempt:1"
+        }
+      },
+      "M03:D19": {
+        "input_fingerprint": "a87d25cdc3e8e44ba5162b2325bc8fbf89dd58e6c0b34317842984512fa48b87",
+        "worker_result": {
+          "item_id": "M03:D19",
+          "input_fingerprint": "a87d25cdc3e8e44ba5162b2325bc8fbf89dd58e6c0b34317842984512fa48b87",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260825-0EB931F1E7DE:237343f5d05b956ed8d6:attempt:1",
+              "maker_evidence": "Built one privacy-safe M03 record for M03:D19.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/M03/2026-08-24-governance-shadow/workers/237343f5d05b956ed8d6.json",
+                  "sha256": "ad823e6415aa80a027fa5174b6c78aede2b897dcff00e62a43a0638da66c0191",
+                  "bytes": 1846
+                }
+              ],
+              "checker_evidence": "Independently reconstructed M03:D19 from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/M03/2026-08-24-governance-shadow/workers/237343f5d05b956ed8d6.json",
+              "sha256": "ad823e6415aa80a027fa5174b6c78aede2b897dcff00e62a43a0638da66c0191",
+              "bytes": 1846
+            }
+          ],
+          "isolation_id": "OGD-20260825-0EB931F1E7DE:237343f5d05b956ed8d6:attempt:1"
+        }
+      },
+      "M03:D27": {
+        "input_fingerprint": "238da39097a02963933efc86ac6ff9240ff35d82ff234d8acd7728cdb00e93ad",
+        "worker_result": {
+          "item_id": "M03:D27",
+          "input_fingerprint": "238da39097a02963933efc86ac6ff9240ff35d82ff234d8acd7728cdb00e93ad",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260825-0EB931F1E7DE:f1da69a85be9cec809b9:attempt:1",
+              "maker_evidence": "Built one privacy-safe M03 record for M03:D27.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/M03/2026-08-24-governance-shadow/workers/f1da69a85be9cec809b9.json",
+                  "sha256": "166ca284f4fd3d9ad8d06a93f1219e788d1315563ed39c43e22bd6393662ebf4",
+                  "bytes": 1469
+                }
+              ],
+              "checker_evidence": "Independently reconstructed M03:D27 from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/M03/2026-08-24-governance-shadow/workers/f1da69a85be9cec809b9.json",
+              "sha256": "166ca284f4fd3d9ad8d06a93f1219e788d1315563ed39c43e22bd6393662ebf4",
+              "bytes": 1469
+            }
+          ],
+          "isolation_id": "OGD-20260825-0EB931F1E7DE:f1da69a85be9cec809b9:attempt:1"
+        }
+      },
+      "M03:W01": {
+        "input_fingerprint": "4154576fcfa5a71f05962228bdb0f5f7ff4d0e660372480fe38b2c3c83eb9bee",
+        "worker_result": {
+          "item_id": "M03:W01",
+          "input_fingerprint": "4154576fcfa5a71f05962228bdb0f5f7ff4d0e660372480fe38b2c3c83eb9bee",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260825-0EB931F1E7DE:e37c83f52f7ac8e6d948:attempt:1",
+              "maker_evidence": "Built one privacy-safe M03 record for M03:W01.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/M03/2026-08-24-governance-shadow/workers/e37c83f52f7ac8e6d948.json",
+                  "sha256": "a8c0f6651d9308db3b3e1c343c0085840effe178b90eb83c3a5d8961b031dc01",
+                  "bytes": 1833
+                }
+              ],
+              "checker_evidence": "Independently reconstructed M03:W01 from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/M03/2026-08-24-governance-shadow/workers/e37c83f52f7ac8e6d948.json",
+              "sha256": "a8c0f6651d9308db3b3e1c343c0085840effe178b90eb83c3a5d8961b031dc01",
+              "bytes": 1833
+            }
+          ],
+          "isolation_id": "OGD-20260825-0EB931F1E7DE:e37c83f52f7ac8e6d948:attempt:1"
+        }
+      },
+      "M03:W02": {
+        "input_fingerprint": "0676de213d820bdc8447cf7da815b58175462774ff7650496d9d76cf9f8a19f5",
+        "worker_result": {
+          "item_id": "M03:W02",
+          "input_fingerprint": "0676de213d820bdc8447cf7da815b58175462774ff7650496d9d76cf9f8a19f5",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260825-0EB931F1E7DE:ed160dafc3ffd5697c0c:attempt:1",
+              "maker_evidence": "Built one privacy-safe M03 record for M03:W02.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/M03/2026-08-24-governance-shadow/workers/ed160dafc3ffd5697c0c.json",
+                  "sha256": "7a9e1f2600458334f2336f02a5bcaef5161eca2b220cb55585ad2b4dcd596b8d",
+                  "bytes": 1835
+                }
+              ],
+              "checker_evidence": "Independently reconstructed M03:W02 from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/M03/2026-08-24-governance-shadow/workers/ed160dafc3ffd5697c0c.json",
+              "sha256": "7a9e1f2600458334f2336f02a5bcaef5161eca2b220cb55585ad2b4dcd596b8d",
+              "bytes": 1835
+            }
+          ],
+          "isolation_id": "OGD-20260825-0EB931F1E7DE:ed160dafc3ffd5697c0c:attempt:1"
+        }
+      },
+      "M03:W03": {
+        "input_fingerprint": "107dfc45093952d8d0d5acd5324a205661a5666ba5103c19c00ee5bc2347d8da",
+        "worker_result": {
+          "item_id": "M03:W03",
+          "input_fingerprint": "107dfc45093952d8d0d5acd5324a205661a5666ba5103c19c00ee5bc2347d8da",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260825-0EB931F1E7DE:7eb8ef4815b19578036a:attempt:1",
+              "maker_evidence": "Built one privacy-safe M03 record for M03:W03.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/M03/2026-08-24-governance-shadow/workers/7eb8ef4815b19578036a.json",
+                  "sha256": "ecf405dc6a69fec6037f5e74b1d0627cd3ee94cdb51553718db0211534985216",
+                  "bytes": 1842
+                }
+              ],
+              "checker_evidence": "Independently reconstructed M03:W03 from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/M03/2026-08-24-governance-shadow/workers/7eb8ef4815b19578036a.json",
+              "sha256": "ecf405dc6a69fec6037f5e74b1d0627cd3ee94cdb51553718db0211534985216",
+              "bytes": 1842
+            }
+          ],
+          "isolation_id": "OGD-20260825-0EB931F1E7DE:7eb8ef4815b19578036a:attempt:1"
+        }
+      },
+      "M03:W05": {
+        "input_fingerprint": "10af76d02dd43127fbfaab012222d425a80fac539aad6b222ad6370ea7d3d63f",
+        "worker_result": {
+          "item_id": "M03:W05",
+          "input_fingerprint": "10af76d02dd43127fbfaab012222d425a80fac539aad6b222ad6370ea7d3d63f",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260825-0EB931F1E7DE:8b19ef0dbcd970facf11:attempt:1",
+              "maker_evidence": "Built one privacy-safe M03 record for M03:W05.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/M03/2026-08-24-governance-shadow/workers/8b19ef0dbcd970facf11.json",
+                  "sha256": "e925b83af59e1753ca6b5007d821457093bed9e031f37dda8dacb2e9ebe33ba8",
+                  "bytes": 1883
+                }
+              ],
+              "checker_evidence": "Independently reconstructed M03:W05 from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/M03/2026-08-24-governance-shadow/workers/8b19ef0dbcd970facf11.json",
+              "sha256": "e925b83af59e1753ca6b5007d821457093bed9e031f37dda8dacb2e9ebe33ba8",
+              "bytes": 1883
+            }
+          ],
+          "isolation_id": "OGD-20260825-0EB931F1E7DE:8b19ef0dbcd970facf11:attempt:1"
+        }
+      },
+      "M03:W06": {
+        "input_fingerprint": "d5d3a47623b59b538f874d7ee7960e71241d032edf869f22710391abaf430e47",
+        "worker_result": {
+          "item_id": "M03:W06",
+          "input_fingerprint": "d5d3a47623b59b538f874d7ee7960e71241d032edf869f22710391abaf430e47",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260825-0EB931F1E7DE:cf8e6044c90a0ddf5fe7:attempt:1",
+              "maker_evidence": "Built one privacy-safe M03 record for M03:W06.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/M03/2026-08-24-governance-shadow/workers/cf8e6044c90a0ddf5fe7.json",
+                  "sha256": "a6c86e7544d23824befb1e6cc18c206ce4d80837a70a693c3cb5eb4faf95229e",
+                  "bytes": 1865
+                }
+              ],
+              "checker_evidence": "Independently reconstructed M03:W06 from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/M03/2026-08-24-governance-shadow/workers/cf8e6044c90a0ddf5fe7.json",
+              "sha256": "a6c86e7544d23824befb1e6cc18c206ce4d80837a70a693c3cb5eb4faf95229e",
+              "bytes": 1865
+            }
+          ],
+          "isolation_id": "OGD-20260825-0EB931F1E7DE:cf8e6044c90a0ddf5fe7:attempt:1"
+        }
+      },
+      "M03:W10": {
+        "input_fingerprint": "1c2ac08c14a5331fe2c94b68772d941a111200d93bbcaf4be23e858e49a3715c",
+        "worker_result": {
+          "item_id": "M03:W10",
+          "input_fingerprint": "1c2ac08c14a5331fe2c94b68772d941a111200d93bbcaf4be23e858e49a3715c",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260825-0EB931F1E7DE:881050d899cf312f346a:attempt:1",
+              "maker_evidence": "Built one privacy-safe M03 record for M03:W10.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/M03/2026-08-24-governance-shadow/workers/881050d899cf312f346a.json",
+                  "sha256": "55a4e6491dbb1906cea1bc8ea25a6369b52d461a1d37a2284c3569d81109d4c1",
+                  "bytes": 1823
+                }
+              ],
+              "checker_evidence": "Independently reconstructed M03:W10 from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/M03/2026-08-24-governance-shadow/workers/881050d899cf312f346a.json",
+              "sha256": "55a4e6491dbb1906cea1bc8ea25a6369b52d461a1d37a2284c3569d81109d4c1",
+              "bytes": 1823
+            }
+          ],
+          "isolation_id": "OGD-20260825-0EB931F1E7DE:881050d899cf312f346a:attempt:1"
+        }
+      },
+      "M03:M03": {
+        "input_fingerprint": "0111784f0ac44bc9d79a329c2ecb682650713a3822704648041a396f8343479a",
+        "worker_result": {
+          "item_id": "M03:M03",
+          "input_fingerprint": "0111784f0ac44bc9d79a329c2ecb682650713a3822704648041a396f8343479a",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260825-0EB931F1E7DE:fe6e18f76ead4e2af34c:attempt:1",
+              "maker_evidence": "Built one privacy-safe M03 record for M03:M03.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/M03/2026-08-24-governance-shadow/workers/fe6e18f76ead4e2af34c.json",
+                  "sha256": "5b72add9aa4c50026b9ee04d76c265c29bc2014f9d35bbdf729d4e29146e4ffa",
+                  "bytes": 1490
+                }
+              ],
+              "checker_evidence": "Independently reconstructed M03:M03 from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/M03/2026-08-24-governance-shadow/workers/fe6e18f76ead4e2af34c.json",
+              "sha256": "5b72add9aa4c50026b9ee04d76c265c29bc2014f9d35bbdf729d4e29146e4ffa",
+              "bytes": 1490
+            }
+          ],
+          "isolation_id": "OGD-20260825-0EB931F1E7DE:fe6e18f76ead4e2af34c:attempt:1"
+        }
+      }
+    },
+    "budget_used": 24,
+    "previous_terminal_findings": [],
+    "graph_iterations": [
+      {
+        "iteration": 1,
+        "status": "verified",
+        "planner": {
+          "evidence": "Collected 10 isolated M03 item(s) from source set 2503ec97084489049230785ff71c6851337b9335c5444c1534518830de2ab4b5.",
+          "item_count": 10,
+          "plan_signature": "ac57234b3ffbe63acba76cd5dd14379e299a34207158962523819d98ab1ebdff",
+          "items": [
+            {
+              "id": "M03:D09",
+              "isolation_key": "D09:2026-08:schedule",
+              "input_fingerprint": "0cfca1b36aa513c3558dec0e0518191e7601b2545cca69f59ee21248c3440d19",
+              "task": null
+            },
+            {
+              "id": "M03:D19",
+              "isolation_key": "D19:2026-08:schedule",
+              "input_fingerprint": "a87d25cdc3e8e44ba5162b2325bc8fbf89dd58e6c0b34317842984512fa48b87",
+              "task": null
+            },
+            {
+              "id": "M03:D27",
+              "isolation_key": "D27:2026-08:schedule",
+              "input_fingerprint": "238da39097a02963933efc86ac6ff9240ff35d82ff234d8acd7728cdb00e93ad",
+              "task": null
+            },
+            {
+              "id": "M03:W01",
+              "isolation_key": "W01:2026-08:schedule",
+              "input_fingerprint": "4154576fcfa5a71f05962228bdb0f5f7ff4d0e660372480fe38b2c3c83eb9bee",
+              "task": null
+            },
+            {
+              "id": "M03:W02",
+              "isolation_key": "W02:2026-08:schedule",
+              "input_fingerprint": "0676de213d820bdc8447cf7da815b58175462774ff7650496d9d76cf9f8a19f5",
+              "task": null
+            },
+            {
+              "id": "M03:W03",
+              "isolation_key": "W03:2026-08:schedule",
+              "input_fingerprint": "107dfc45093952d8d0d5acd5324a205661a5666ba5103c19c00ee5bc2347d8da",
+              "task": null
+            },
+            {
+              "id": "M03:W05",
+              "isolation_key": "W05:2026-08:schedule",
+              "input_fingerprint": "10af76d02dd43127fbfaab012222d425a80fac539aad6b222ad6370ea7d3d63f",
+              "task": null
+            },
+            {
+              "id": "M03:W06",
+              "isolation_key": "W06:2026-08:schedule",
+              "input_fingerprint": "d5d3a47623b59b538f874d7ee7960e71241d032edf869f22710391abaf430e47",
+              "task": null
+            },
+            {
+              "id": "M03:W10",
+              "isolation_key": "W10:2026-08:schedule",
+              "input_fingerprint": "1c2ac08c14a5331fe2c94b68772d941a111200d93bbcaf4be23e858e49a3715c",
+              "task": null
+            },
+            {
+              "id": "M03:M03",
+              "isolation_key": "M03:2026-08:schedule",
+              "input_fingerprint": "0111784f0ac44bc9d79a329c2ecb682650713a3822704648041a396f8343479a",
+              "task": null
+            }
+          ]
+        },
+        "workers": [
+          {
+            "item_id": "M03:D09",
+            "input_fingerprint": "0cfca1b36aa513c3558dec0e0518191e7601b2545cca69f59ee21248c3440d19",
+            "status": "verified",
+            "attempts": [
+              {
+                "attempt": 1,
+                "isolation_id": "OGD-20260825-0EB931F1E7DE:471a4c4ffa6bf03f3b72:attempt:1",
+                "maker_evidence": "Built one privacy-safe M03 record for M03:D09.",
+                "artifacts": [
+                  {
+                    "path": "System/outcome-graph/routines/M03/2026-08-24-governance-shadow/workers/471a4c4ffa6bf03f3b72.json",
+                    "sha256": "a65ac188d32853ed408ff71f3e2adf3481bd098d26aacab65f4356c13ca32272",
+                    "bytes": 1499
+                  }
+                ],
+                "checker_evidence": "Independently reconstructed M03:D09 from the same source-bound contract.",
+                "passed": true,
+                "findings": []
+              }
+            ],
+            "final_artifacts": [
+              {
+                "path": "System/outcome-graph/routines/M03/2026-08-24-governance-shadow/workers/471a4c4ffa6bf03f3b72.json",
+                "sha256": "a65ac188d32853ed408ff71f3e2adf3481bd098d26aacab65f4356c13ca32272",
+                "bytes": 1499
+              }
+            ],
+            "isolation_id": "OGD-20260825-0EB931F1E7DE:471a4c4ffa6bf03f3b72:attempt:1"
+          },
+          {
+            "item_id": "M03:D19",
+            "input_fingerprint": "a87d25cdc3e8e44ba5162b2325bc8fbf89dd58e6c0b34317842984512fa48b87",
+            "status": "verified",
+            "attempts": [
+              {
+                "attempt": 1,
+                "isolation_id": "OGD-20260825-0EB931F1E7DE:237343f5d05b956ed8d6:attempt:1",
+                "maker_evidence": "Built one privacy-safe M03 record for M03:D19.",
+                "artifacts": [
+                  {
+                    "path": "System/outcome-graph/routines/M03/2026-08-24-governance-shadow/workers/237343f5d05b956ed8d6.json",
+                    "sha256": "ad823e6415aa80a027fa5174b6c78aede2b897dcff00e62a43a0638da66c0191",
+                    "bytes": 1846
+                  }
+                ],
+                "checker_evidence": "Independently reconstructed M03:D19 from the same source-bound contract.",
+                "passed": true,
+                "findings": []
+              }
+            ],
+            "final_artifacts": [
+              {
+                "path": "System/outcome-graph/routines/M03/2026-08-24-governance-shadow/workers/237343f5d05b956ed8d6.json",
+                "sha256": "ad823e6415aa80a027fa5174b6c78aede2b897dcff00e62a43a0638da66c0191",
+                "bytes": 1846
+              }
+            ],
+            "isolation_id": "OGD-20260825-0EB931F1E7DE:237343f5d05b956ed8d6:attempt:1"
+          },
+          {
+            "item_id": "M03:D27",
+            "input_fingerprint": "238da39097a02963933efc86ac6ff9240ff35d82ff234d8acd7728cdb00e93ad",
+            "status": "verified",
+            "attempts": [
+              {
+                "attempt": 1,
+                "isolation_id": "OGD-20260825-0EB931F1E7DE:f1da69a85be9cec809b9:attempt:1",
+                "maker_evidence": "Built one privacy-safe M03 record for M03:D27.",
+                "artifacts": [
+                  {
+                    "path": "System/outcome-graph/routines/M03/2026-08-24-governance-shadow/workers/f1da69a85be9cec809b9.json",
+                    "sha256": "166ca284f4fd3d9ad8d06a93f1219e788d1315563ed39c43e22bd6393662ebf4",
+                    "bytes": 1469
+                  }
+                ],
+                "checker_evidence": "Independently reconstructed M03:D27 from the same source-bound contract.",
+                "passed": true,
+                "findings": []
+              }
+            ],
+            "final_artifacts": [
+              {
+                "path": "System/outcome-graph/routines/M03/2026-08-24-governance-shadow/workers/f1da69a85be9cec809b9.json",
+                "sha256": "166ca284f4fd3d9ad8d06a93f1219e788d1315563ed39c43e22bd6393662ebf4",
+                "bytes": 1469
+              }
+            ],
+            "isolation_id": "OGD-20260825-0EB931F1E7DE:f1da69a85be9cec809b9:attempt:1"
+          },
+          {
+            "item_id": "M03:W01",
+            "input_fingerprint": "4154576fcfa5a71f05962228bdb0f5f7ff4d0e660372480fe38b2c3c83eb9bee",
+            "status": "verified",
+            "attempts": [
+              {
+                "attempt": 1,
+                "isolation_id": "OGD-20260825-0EB931F1E7DE:e37c83f52f7ac8e6d948:attempt:1",
+                "maker_evidence": "Built one privacy-safe M03 record for M03:W01.",
+                "artifacts": [
+                  {
+                    "path": "System/outcome-graph/routines/M03/2026-08-24-governance-shadow/workers/e37c83f52f7ac8e6d948.json",
+                    "sha256": "a8c0f6651d9308db3b3e1c343c0085840effe178b90eb83c3a5d8961b031dc01",
+                    "bytes": 1833
+                  }
+                ],
+                "checker_evidence": "Independently reconstructed M03:W01 from the same source-bound contract.",
+                "passed": true,
+                "findings": []
+              }
+            ],
+            "final_artifacts": [
+              {
+                "path": "System/outcome-graph/routines/M03/2026-08-24-governance-shadow/workers/e37c83f52f7ac8e6d948.json",
+                "sha256": "a8c0f6651d9308db3b3e1c343c0085840effe178b90eb83c3a5d8961b031dc01",
+                "bytes": 1833
+              }
+            ],
+            "isolation_id": "OGD-20260825-0EB931F1E7DE:e37c83f52f7ac8e6d948:attempt:1"
+          },
+          {
+            "item_id": "M03:W02",
+            "input_fingerprint": "0676de213d820bdc8447cf7da815b58175462774ff7650496d9d76cf9f8a19f5",
+            "status": "verified",
+            "attempts": [
+              {
+                "attempt": 1,
+                "isolation_id": "OGD-20260825-0EB931F1E7DE:ed160dafc3ffd5697c0c:attempt:1",
+                "maker_evidence": "Built one privacy-safe M03 record for M03:W02.",
+                "artifacts": [
+                  {
+                    "path": "System/outcome-graph/routines/M03/2026-08-24-governance-shadow/workers/ed160dafc3ffd5697c0c.json",
+                    "sha256": "7a9e1f2600458334f2336f02a5bcaef5161eca2b220cb55585ad2b4dcd596b8d",
+                    "bytes": 1835
+                  }
+                ],
+                "checker_evidence": "Independently reconstructed M03:W02 from the same source-bound contract.",
+                "passed": true,
+                "findings": []
+              }
+            ],
+            "final_artifacts": [
+              {
+                "path": "System/outcome-graph/routines/M03/2026-08-24-governance-shadow/workers/ed160dafc3ffd5697c0c.json",
+                "sha256": "7a9e1f2600458334f2336f02a5bcaef5161eca2b220cb55585ad2b4dcd596b8d",
+                "bytes": 1835
+              }
+            ],
+            "isolation_id": "OGD-20260825-0EB931F1E7DE:ed160dafc3ffd5697c0c:attempt:1"
+          },
+          {
+            "item_id": "M03:W03",
+            "input_fingerprint": "107dfc45093952d8d0d5acd5324a205661a5666ba5103c19c00ee5bc2347d8da",
+            "status": "verified",
+            "attempts": [
+              {
+                "attempt": 1,
+                "isolation_id": "OGD-20260825-0EB931F1E7DE:7eb8ef4815b19578036a:attempt:1",
+                "maker_evidence": "Built one privacy-safe M03 record for M03:W03.",
+                "artifacts": [
+                  {
+                    "path": "System/outcome-graph/routines/M03/2026-08-24-governance-shadow/workers/7eb8ef4815b19578036a.json",
+                    "sha256": "ecf405dc6a69fec6037f5e74b1d0627cd3ee94cdb51553718db0211534985216",
+                    "bytes": 1842
+                  }
+                ],
+                "checker_evidence": "Independently reconstructed M03:W03 from the same source-bound contract.",
+                "passed": true,
+                "findings": []
+              }
+            ],
+            "final_artifacts": [
+              {
+                "path": "System/outcome-graph/routines/M03/2026-08-24-governance-shadow/workers/7eb8ef4815b19578036a.json",
+                "sha256": "ecf405dc6a69fec6037f5e74b1d0627cd3ee94cdb51553718db0211534985216",
+                "bytes": 1842
+              }
+            ],
+            "isolation_id": "OGD-20260825-0EB931F1E7DE:7eb8ef4815b19578036a:attempt:1"
+          },
+          {
+            "item_id": "M03:W05",
+            "input_fingerprint": "10af76d02dd43127fbfaab012222d425a80fac539aad6b222ad6370ea7d3d63f",
+            "status": "verified",
+            "attempts": [
+              {
+                "attempt": 1,
+                "isolation_id": "OGD-20260825-0EB931F1E7DE:8b19ef0dbcd970facf11:attempt:1",
+                "maker_evidence": "Built one privacy-safe M03 record for M03:W05.",
+                "artifacts": [
+                  {
+                    "path": "System/outcome-graph/routines/M03/2026-08-24-governance-shadow/workers/8b19ef0dbcd970facf11.json",
+                    "sha256": "e925b83af59e1753ca6b5007d821457093bed9e031f37dda8dacb2e9ebe33ba8",
+                    "bytes": 1883
+                  }
+                ],
+                "checker_evidence": "Independently reconstructed M03:W05 from the same source-bound contract.",
+                "passed": true,
+                "findings": []
+              }
+            ],
+            "final_artifacts": [
+              {
+                "path": "System/outcome-graph/routines/M03/2026-08-24-governance-shadow/workers/8b19ef0dbcd970facf11.json",
+                "sha256": "e925b83af59e1753ca6b5007d821457093bed9e031f37dda8dacb2e9ebe33ba8",
+                "bytes": 1883
+              }
+            ],
+            "isolation_id": "OGD-20260825-0EB931F1E7DE:8b19ef0dbcd970facf11:attempt:1"
+          },
+          {
+            "item_id": "M03:W06",
+            "input_fingerprint": "d5d3a47623b59b538f874d7ee7960e71241d032edf869f22710391abaf430e47",
+            "status": "verified",
+            "attempts": [
+              {
+                "attempt": 1,
+                "isolation_id": "OGD-20260825-0EB931F1E7DE:cf8e6044c90a0ddf5fe7:attempt:1",
+                "maker_evidence": "Built one privacy-safe M03 record for M03:W06.",
+                "artifacts": [
+                  {
+                    "path": "System/outcome-graph/routines/M03/2026-08-24-governance-shadow/workers/cf8e6044c90a0ddf5fe7.json",
+                    "sha256": "a6c86e7544d23824befb1e6cc18c206ce4d80837a70a693c3cb5eb4faf95229e",
+                    "bytes": 1865
+                  }
+                ],
+                "checker_evidence": "Independently reconstructed M03:W06 from the same source-bound contract.",
+                "passed": true,
+                "findings": []
+              }
+            ],
+            "final_artifacts": [
+              {
+                "path": "System/outcome-graph/routines/M03/2026-08-24-governance-shadow/workers/cf8e6044c90a0ddf5fe7.json",
+                "sha256": "a6c86e7544d23824befb1e6cc18c206ce4d80837a70a693c3cb5eb4faf95229e",
+                "bytes": 1865
+              }
+            ],
+            "isolation_id": "OGD-20260825-0EB931F1E7DE:cf8e6044c90a0ddf5fe7:attempt:1"
+          },
+          {
+            "item_id": "M03:W10",
+            "input_fingerprint": "1c2ac08c14a5331fe2c94b68772d941a111200d93bbcaf4be23e858e49a3715c",
+            "status": "verified",
+            "attempts": [
+              {
+                "attempt": 1,
+                "isolation_id": "OGD-20260825-0EB931F1E7DE:881050d899cf312f346a:attempt:1",
+                "maker_evidence": "Built one privacy-safe M03 record for M03:W10.",
+                "artifacts": [
+                  {
+                    "path": "System/outcome-graph/routines/M03/2026-08-24-governance-shadow/workers/881050d899cf312f346a.json",
+                    "sha256": "55a4e6491dbb1906cea1bc8ea25a6369b52d461a1d37a2284c3569d81109d4c1",
+                    "bytes": 1823
+                  }
+                ],
+                "checker_evidence": "Independently reconstructed M03:W10 from the same source-bound contract.",
+                "passed": true,
+                "findings": []
+              }
+            ],
+            "final_artifacts": [
+              {
+                "path": "System/outcome-graph/routines/M03/2026-08-24-governance-shadow/workers/881050d899cf312f346a.json",
+                "sha256": "55a4e6491dbb1906cea1bc8ea25a6369b52d461a1d37a2284c3569d81109d4c1",
+                "bytes": 1823
+              }
+            ],
+            "isolation_id": "OGD-20260825-0EB931F1E7DE:881050d899cf312f346a:attempt:1"
+          },
+          {
+            "item_id": "M03:M03",
+            "input_fingerprint": "0111784f0ac44bc9d79a329c2ecb682650713a3822704648041a396f8343479a",
+            "status": "verified",
+            "attempts": [
+              {
+                "attempt": 1,
+                "isolation_id": "OGD-20260825-0EB931F1E7DE:fe6e18f76ead4e2af34c:attempt:1",
+                "maker_evidence": "Built one privacy-safe M03 record for M03:M03.",
+                "artifacts": [
+                  {
+                    "path": "System/outcome-graph/routines/M03/2026-08-24-governance-shadow/workers/fe6e18f76ead4e2af34c.json",
+                    "sha256": "5b72add9aa4c50026b9ee04d76c265c29bc2014f9d35bbdf729d4e29146e4ffa",
+                    "bytes": 1490
+                  }
+                ],
+                "checker_evidence": "Independently reconstructed M03:M03 from the same source-bound contract.",
+                "passed": true,
+                "findings": []
+              }
+            ],
+            "final_artifacts": [
+              {
+                "path": "System/outcome-graph/routines/M03/2026-08-24-governance-shadow/workers/fe6e18f76ead4e2af34c.json",
+                "sha256": "5b72add9aa4c50026b9ee04d76c265c29bc2014f9d35bbdf729d4e29146e4ffa",
+                "bytes": 1490
+              }
+            ],
+            "isolation_id": "OGD-20260825-0EB931F1E7DE:fe6e18f76ead4e2af34c:attempt:1"
+          }
+        ],
+        "reduction": {
+          "evidence": "Reduced all checked M03 records without blending isolation keys.",
+          "artifacts": [
+            {
+              "path": "System/outcome-graph/routines/M03/2026-08-24-governance-shadow/automation-value-cost-report.json",
+              "sha256": "0c319bc775beb13007ccc12c3f3bd178dbcfb7b5fc1e14a5d096ca459b806c98",
+              "bytes": 20082
+            },
+            {
+              "path": "System/outcome-graph/routines/M03/2026-08-24-governance-shadow/schedule-inventory.json",
+              "sha256": "daad156590b1b14072ce84e089b2231f36e85d2e7d0456e629039041aa8ceeb9",
+              "bytes": 2829
+            }
+          ]
+        },
+        "terminal_verification": {
+          "evidence": "Recollected and independently verified all M03 sources, records, negative states, and artifact hashes.",
+          "declared_pass": true,
+          "passed": true,
+          "assertions": [
+            {
+              "id": "source-manifest-stable",
+              "passed": true,
+              "detail": "Every named source remains hash-bound at terminal verification."
+            },
+            {
+              "id": "every-isolated-item-reconstructed-exactly-once",
+              "passed": true,
+              "detail": "Every in-scope item has one collision-resistant reconstructed record."
+            },
+            {
+              "id": "reducer-output-reproduces-exactly",
+              "passed": true,
+              "detail": "Final artifacts reproduce exactly from current sources and the frozen evaluation clock."
+            },
+            {
+              "id": "scheduled-inventory-complete",
+              "passed": true,
+              "detail": "Every current schedule card appears once."
+            },
+            {
+              "id": "verified-outputs-failures-and-usage-measured",
+              "passed": true,
+              "detail": "Output, failure, and observed usage states are explicit."
+            },
+            {
+              "id": "costs-reconcile-to-named-sources",
+              "passed": true,
+              "detail": "No billing source exists, so all costs remain pending rather than zero."
+            },
+            {
+              "id": "cost-maps-to-outcome-or-stop-proposal",
+              "passed": true,
+              "detail": "Every scheduled unit maps to value and a bounded disposition."
+            },
+            {
+              "id": "no-schedule-subscription-or-billing-change",
+              "passed": true,
+              "detail": "No scheduler or billing state changed."
+            },
+            {
+              "id": "privacy-and-no-mutation-boundary",
+              "passed": true,
+              "detail": "Final artifacts are redacted and attest no external, canonical, provider, restart, or checkpoint mutation."
+            }
+          ],
+          "artifact_manifest": [
+            {
+              "path": "System/outcome-graph/routines/M03/2026-08-24-governance-shadow/automation-value-cost-report.json",
+              "sha256": "0c319bc775beb13007ccc12c3f3bd178dbcfb7b5fc1e14a5d096ca459b806c98",
+              "bytes": 20082
+            },
+            {
+              "path": "System/outcome-graph/routines/M03/2026-08-24-governance-shadow/schedule-inventory.json",
+              "sha256": "daad156590b1b14072ce84e089b2231f36e85d2e7d0456e629039041aa8ceeb9",
+              "bytes": 2829
+            }
+          ],
+          "manifest_errors": []
+        },
+        "learning": {
+          "evidence": "Appended one hashed M03 correction entry.",
+          "corrections": [
+            "Never translate missing billing evidence into a zero-cost claim or configured schedule into business value."
+          ],
+          "ledger": "System/outcome-graph/routines/M03/2026-08-24-governance-shadow/corrections.jsonl",
+          "ledger_receipt": {
+            "locator": "System/outcome-graph/routines/M03/2026-08-24-governance-shadow/corrections.jsonl",
+            "entry_sha256": "d2833bc271f8fab0d596127a09dd3ed37d93d6ef0268ea6f63b6d2811457b692"
+          }
+        }
+      }
+    ],
+    "invocation_log": [
+      {
+        "adapter": "source-bound-m03-planner",
+        "invoked_at": "2026-08-25T00:23:56.407Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-m03-maker",
+        "invoked_at": "2026-08-25T00:23:56.447Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-m03-maker",
+        "invoked_at": "2026-08-25T00:23:56.447Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-m03-maker",
+        "invoked_at": "2026-08-25T00:23:56.447Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-m03-checker",
+        "invoked_at": "2026-08-25T00:23:56.533Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-m03-checker",
+        "invoked_at": "2026-08-25T00:23:56.533Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-m03-checker",
+        "invoked_at": "2026-08-25T00:23:56.533Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-m03-maker",
+        "invoked_at": "2026-08-25T00:23:56.630Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-m03-maker",
+        "invoked_at": "2026-08-25T00:23:56.669Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-m03-maker",
+        "invoked_at": "2026-08-25T00:23:56.694Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-m03-checker",
+        "invoked_at": "2026-08-25T00:23:56.695Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-m03-checker",
+        "invoked_at": "2026-08-25T00:23:56.745Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-m03-checker",
+        "invoked_at": "2026-08-25T00:23:56.770Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-m03-maker",
+        "invoked_at": "2026-08-25T00:23:56.814Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-m03-maker",
+        "invoked_at": "2026-08-25T00:23:56.855Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-m03-maker",
+        "invoked_at": "2026-08-25T00:23:56.883Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-m03-checker",
+        "invoked_at": "2026-08-25T00:23:56.883Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-m03-checker",
+        "invoked_at": "2026-08-25T00:23:56.936Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-m03-checker",
+        "invoked_at": "2026-08-25T00:23:56.963Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-m03-maker",
+        "invoked_at": "2026-08-25T00:23:57.014Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-m03-checker",
+        "invoked_at": "2026-08-25T00:23:57.058Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-m03-reducer",
+        "invoked_at": "2026-08-25T00:23:57.110Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-m03-terminal-verifier",
+        "invoked_at": "2026-08-25T00:23:57.129Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-m03-learner",
+        "invoked_at": "2026-08-25T00:23:57.176Z",
+        "status": "returned"
+      }
+    ]
+  },
+  "last_event": "receipt_committed",
+  "state_revision": 18,
+  "previous_state_sha256": "aaab7c8a6d6b9a8cfe60581e5efbd903eaea6b135a809feb6e27c7f99871c778",
+  "receipt": {
+    "path": "runs/OGD-20260825-0EB931F1E7DE/receipt.json",
+    "sha256": "64de893a874a080879572b808def956c1891f400e3443239fdf66b67b8d5ebbd",
+    "bytes": 29701
+  }
+}

@@ -2,7 +2,7 @@
 note_type: proposal
 status: worked
 created: 2026-08-27
-verified_at: 2026-08-27T22:10:13.1138268Z
+verified_at: 2026-08-28T03:41:24.0724152Z
 agent: marketing-chief
 privacy: redacted
 external_action_attempted: none
@@ -13,9 +13,7 @@ source_refs:
 
 # Immohrtal crew - 2026-08-27
 
-cycle `CREW-20260827-181008429` outcome **worked**
-
-Highest safe automatic action: outreach live-verify. Rank 1 Ads stayed blocked (403, not 429). No send.
+cycle `CREW-20260827-234120025` outcome **worked**
 
 ## Lanes
 

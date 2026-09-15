@@ -124,9 +124,9 @@ if (Test-Path -LiteralPath $ManifestPath) {
     }
 }
 Add-T 'T4a' 'manifest_row_present_and_parseable' 'row found' ($null -ne $manifestRow) ($null -ne $manifestRow)
-Add-T 'T4b' 'manifest_row_targets_driver' 'Invoke-ClaudeDailyDriver.ps1' `
-    $(if ($manifestRow) { $manifestRow -match 'Invoke-ClaudeDailyDriver\.ps1' } else { $false }) `
-    $(if ($manifestRow) { [bool]($manifestRow -match 'Invoke-ClaudeDailyDriver\.ps1') } else { $false })
+Add-T 'T4b' 'manifest_row_targets_driver' 'Invoke-ClaudeDailyDriverGpuSafe.ps1' `
+    $(if ($manifestRow) { $manifestRow -match 'Invoke-ClaudeDailyDriverGpuSafe\.ps1' } else { $false }) `
+    $(if ($manifestRow) { [bool]($manifestRow -match 'Invoke-ClaudeDailyDriverGpuSafe\.ps1') } else { $false })
 Add-T 'T4c' 'manifest_row_is_console_free' '-WindowStyle Hidden' `
     $(if ($manifestRow) { [bool]($manifestRow -match '-WindowStyle Hidden') } else { $false }) `
     $(if ($manifestRow) { [bool]($manifestRow -match '-WindowStyle Hidden') } else { $false })

@@ -1,0 +1,245 @@
+{
+  "schema": 1,
+  "business": "Eckroth Equipment Company",
+  "domain": "eckrothequipment.com",
+  "route": "sites/eckroth-equipment-company/",
+  "generatedAt": "2026-08-26T10:11:24.3070667Z",
+  "generator": "Align HCM Image Gen plugin contract",
+  "model": "gpt-image-2.0",
+  "board": {
+    "key": "eckroth-equipment-company",
+    "descriptor": "trade",
+    "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Eckroth Equipment Company. Four distinct but cohesive unlabelled panels in a generic equipment sales and service yard: a technician in plain durable workwear inspecting hydraulic hoses on compact heavy equipment; gloved hands using a wrench and diagnostic gauge at an engine compartment; a customer and equipment specialist discussing a machine from a non-identifying distance; a documentary wide view of organized unbranded construction and utility equipment under grounded daylight. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+    "sourceOutput": "C:/Users/dillo/.codex/generated_images/01a03d5e-c09f-74a0-b82e-14ad3c549703/exec-cd5f9427-cf76-4407-a966-b195827df6ac.png",
+    "file": "automation/prospect-radar-next20/generated-stock-library/eckroth-equipment-company.png",
+    "sha256": "01e8bb582420afeafc69342011b955fe4eb916404ff6497e9d4f83f50a656f33",
+    "dimensions": {
+      "width": 1448,
+      "height": 1086
+    }
+  },
+  "treatment": {
+    "palette": [
+      "#F05A28",
+      "#FF6B35",
+      "#0B1D2D",
+      "#071521",
+      "#F4EFE7",
+      "#EAF6FC",
+      "#91D5ED"
+    ],
+    "imageGrain": "Visible refined 35mm film grain authored in the generated board and preserved in every derivative.",
+    "interfaceGrain": {
+      "file": "grain.svg",
+      "sha256": "f8b8b72ee2a84cf2aaa04ce069edaaa459ee61650e76f307254572db67efb813",
+      "opacity": 0.13
+    },
+    "disclosure": "Illustrative generated imagery. These concept visuals do not depict the business, its staff, customers, facility, products, projects, or outcomes."
+  },
+  "outputs": [
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "eckroth-equipment-company",
+      "boardDescriptor": "trade",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/eckroth-equipment-company.png",
+      "sourceSha256": "01e8bb582420afeafc69342011b955fe4eb916404ff6497e9d4f83f50a656f33",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Eckroth Equipment Company. Four distinct but cohesive unlabelled panels in a generic equipment sales and service yard: a technician in plain durable workwear inspecting hydraulic hoses on compact heavy equipment; gloved hands using a wrench and diagnostic gauge at an engine compartment; a customer and equipment specialist discussing a machine from a non-identifying distance; a documentary wide view of organized unbranded construction and utility equipment under grounded daylight. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:56,eq=saturation=1.040:contrast=1.082:brightness=0.000,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "ddbf79d67e51d17523faa0cefd53bbf0d25925cbc18aab55add28fcb39d0c1d2",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "eckroth-equipment-company",
+      "boardDescriptor": "trade",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/eckroth-equipment-company.png",
+      "sourceSha256": "01e8bb582420afeafc69342011b955fe4eb916404ff6497e9d4f83f50a656f33",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Eckroth Equipment Company. Four distinct but cohesive unlabelled panels in a generic equipment sales and service yard: a technician in plain durable workwear inspecting hydraulic hoses on compact heavy equipment; gloved hands using a wrench and diagnostic gauge at an engine compartment; a customer and equipment specialist discussing a machine from a non-identifying distance; a documentary wide view of organized unbranded construction and utility equipment under grounded daylight. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=0.940:contrast=1.046:brightness=0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "8c72a8a341803d7d9e01149026490def592d19eb8fa66c6d13f46c2420c51dd6",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "eckroth-equipment-company",
+      "boardDescriptor": "trade",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/eckroth-equipment-company.png",
+      "sourceSha256": "01e8bb582420afeafc69342011b955fe4eb916404ff6497e9d4f83f50a656f33",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Eckroth Equipment Company. Four distinct but cohesive unlabelled panels in a generic equipment sales and service yard: a technician in plain durable workwear inspecting hydraulic hoses on compact heavy equipment; gloved hands using a wrench and diagnostic gauge at an engine compartment; a customer and equipment specialist discussing a machine from a non-identifying distance; a documentary wide view of organized unbranded construction and utility equipment under grounded daylight. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:28,eq=saturation=0.965:contrast=1.010:brightness=-0.018,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "d2d6302788509410b09a273505e0b7f1f9286593328f05969024ad72e0f380d3",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "eckroth-equipment-company",
+      "boardDescriptor": "trade",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/eckroth-equipment-company.png",
+      "sourceSha256": "01e8bb582420afeafc69342011b955fe4eb916404ff6497e9d4f83f50a656f33",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Eckroth Equipment Company. Four distinct but cohesive unlabelled panels in a generic equipment sales and service yard: a technician in plain durable workwear inspecting hydraulic hoses on compact heavy equipment; gloved hands using a wrench and diagnostic gauge at an engine compartment; a customer and equipment specialist discussing a machine from a non-identifying distance; a documentary wide view of organized unbranded construction and utility equipment under grounded daylight. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:56,eq=saturation=0.990:contrast=1.064:brightness=-0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "acb5b9002353943ad185bb65e3b5b690a3c497bdd3b9865846f61b319ad221c3",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "eckroth-equipment-company",
+      "boardDescriptor": "trade",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/eckroth-equipment-company.png",
+      "sourceSha256": "01e8bb582420afeafc69342011b955fe4eb916404ff6497e9d4f83f50a656f33",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Eckroth Equipment Company. Four distinct but cohesive unlabelled panels in a generic equipment sales and service yard: a technician in plain durable workwear inspecting hydraulic hoses on compact heavy equipment; gloved hands using a wrench and diagnostic gauge at an engine compartment; a customer and equipment specialist discussing a machine from a non-identifying distance; a documentary wide view of organized unbranded construction and utility equipment under grounded daylight. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:0,eq=saturation=1.015:contrast=1.028:brightness=0.000,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "072f5f3fde661540de845d97d2b9b5dbb4aa6ef50546e06254db9e927abc250a",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "eckroth-equipment-company",
+      "boardDescriptor": "trade",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/eckroth-equipment-company.png",
+      "sourceSha256": "01e8bb582420afeafc69342011b955fe4eb916404ff6497e9d4f83f50a656f33",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Eckroth Equipment Company. Four distinct but cohesive unlabelled panels in a generic equipment sales and service yard: a technician in plain durable workwear inspecting hydraulic hoses on compact heavy equipment; gloved hands using a wrench and diagnostic gauge at an engine compartment; a customer and equipment specialist discussing a machine from a non-identifying distance; a documentary wide view of organized unbranded construction and utility equipment under grounded daylight. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:28,eq=saturation=1.040:contrast=1.082:brightness=0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "f1aab8ef64dedcfa76dc15536f911fd842b0534eb6d624fafb31e3e376daf537",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "eckroth-equipment-company",
+      "boardDescriptor": "trade",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/eckroth-equipment-company.png",
+      "sourceSha256": "01e8bb582420afeafc69342011b955fe4eb916404ff6497e9d4f83f50a656f33",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Eckroth Equipment Company. Four distinct but cohesive unlabelled panels in a generic equipment sales and service yard: a technician in plain durable workwear inspecting hydraulic hoses on compact heavy equipment; gloved hands using a wrench and diagnostic gauge at an engine compartment; a customer and equipment specialist discussing a machine from a non-identifying distance; a documentary wide view of organized unbranded construction and utility equipment under grounded daylight. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:56,eq=saturation=0.940:contrast=1.046:brightness=-0.018,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "30faf2b88fcb0b27a0d36c7defc5ae64baf7bd3dd2713072496d0441e02750c4",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "eckroth-equipment-company",
+      "boardDescriptor": "trade",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/eckroth-equipment-company.png",
+      "sourceSha256": "01e8bb582420afeafc69342011b955fe4eb916404ff6497e9d4f83f50a656f33",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Eckroth Equipment Company. Four distinct but cohesive unlabelled panels in a generic equipment sales and service yard: a technician in plain durable workwear inspecting hydraulic hoses on compact heavy equipment; gloved hands using a wrench and diagnostic gauge at an engine compartment; a customer and equipment specialist discussing a machine from a non-identifying distance; a documentary wide view of organized unbranded construction and utility equipment under grounded daylight. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:0,eq=saturation=0.965:contrast=1.010:brightness=-0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "27048b7a4dfadaf1ef09a73af0640de25b072bba3dd800c1c8a195cc34e96c88",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "eckroth-equipment-company",
+      "boardDescriptor": "trade",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/eckroth-equipment-company.png",
+      "sourceSha256": "01e8bb582420afeafc69342011b955fe4eb916404ff6497e9d4f83f50a656f33",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Eckroth Equipment Company. Four distinct but cohesive unlabelled panels in a generic equipment sales and service yard: a technician in plain durable workwear inspecting hydraulic hoses on compact heavy equipment; gloved hands using a wrench and diagnostic gauge at an engine compartment; a customer and equipment specialist discussing a machine from a non-identifying distance; a documentary wide view of organized unbranded construction and utility equipment under grounded daylight. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:28,eq=saturation=0.990:contrast=1.064:brightness=0.000,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "4fec2c4e991843cd84974a52d993d0719ca4e1256646e1f8855232c8b76dfa79",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "eckroth-equipment-company",
+      "boardDescriptor": "trade",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/eckroth-equipment-company.png",
+      "sourceSha256": "01e8bb582420afeafc69342011b955fe4eb916404ff6497e9d4f83f50a656f33",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Eckroth Equipment Company. Four distinct but cohesive unlabelled panels in a generic equipment sales and service yard: a technician in plain durable workwear inspecting hydraulic hoses on compact heavy equipment; gloved hands using a wrench and diagnostic gauge at an engine compartment; a customer and equipment specialist discussing a machine from a non-identifying distance; a documentary wide view of organized unbranded construction and utility equipment under grounded daylight. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:56,eq=saturation=1.015:contrast=1.028:brightness=0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "95e724591c6caa9f6fc5aedc2d1acaa300669f820d5c409015f8570551a8de12",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "eckroth-equipment-company",
+      "boardDescriptor": "trade",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/eckroth-equipment-company.png",
+      "sourceSha256": "01e8bb582420afeafc69342011b955fe4eb916404ff6497e9d4f83f50a656f33",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Eckroth Equipment Company. Four distinct but cohesive unlabelled panels in a generic equipment sales and service yard: a technician in plain durable workwear inspecting hydraulic hoses on compact heavy equipment; gloved hands using a wrench and diagnostic gauge at an engine compartment; a customer and equipment specialist discussing a machine from a non-identifying distance; a documentary wide view of organized unbranded construction and utility equipment under grounded daylight. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:0,eq=saturation=1.040:contrast=1.082:brightness=-0.018,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "a2b905af224686b2045290b708513f20ed91af5457420b29f532cc32b5a827ba",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "eckroth-equipment-company",
+      "boardDescriptor": "trade",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/eckroth-equipment-company.png",
+      "sourceSha256": "01e8bb582420afeafc69342011b955fe4eb916404ff6497e9d4f83f50a656f33",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Eckroth Equipment Company. Four distinct but cohesive unlabelled panels in a generic equipment sales and service yard: a technician in plain durable workwear inspecting hydraulic hoses on compact heavy equipment; gloved hands using a wrench and diagnostic gauge at an engine compartment; a customer and equipment specialist discussing a machine from a non-identifying distance; a documentary wide view of organized unbranded construction and utility equipment under grounded daylight. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:28,eq=saturation=0.940:contrast=1.046:brightness=-0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "c84e09c4f5852cf653696fb97d3bb9d7d867152a31587e235d827f3ce47c1fd1",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    }
+  ]
+}

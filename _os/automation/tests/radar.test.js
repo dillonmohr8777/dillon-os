@@ -24,6 +24,18 @@ const contactStore = require('../lib/contact-store');
 const TODAY = '2026-08-06';
 const LATER = '2026-10-01';
 
+function reviewedLogo(p) {
+  p.website = `https://${p.domain}`;
+  p.business_name = p.domain;
+  p.logo_eligibility = { status: 'verified', source_kind: 'official_site',
+    source_page: p.website, source_url: `${p.website}/brand.png`, identity_match: 'exact',
+    exact_match: true, source_sha256: 'a'.repeat(64), fetched_at: new Date().toISOString(),
+    fetch_status: 200, bytes: 1200, image_format: 'png', width: 240, height: 80,
+    transparent: true, clarity_reviewed: true, display_width: 120, display_height: 40,
+    usable: true, logo_role: 'business_logo', validation_method: 'visual_review', validated_by: 'test-reviewer' };
+  return p;
+}
+
 function emptyRegistry() {
   return { prospects: {} };
 }
@@ -239,6 +251,7 @@ test('summarize separates the build queue from the traffic queue', () => {
   radar.recordGrade(reg, 'acme.example', gradeResult({ verdict: 'rebuild', site_quality_score: 30 }), { today: TODAY });
   radar.recordGrade(reg, 'good.example', gradeResult({ verdict: 'ads_seo', site_quality_score: 90, site_quality_band: 'elite' }), { today: TODAY });
   radar.recordGrade(reg, 'mid.example', gradeResult({ verdict: 'polish', site_quality_score: 65, site_quality_band: 'dated' }), { today: TODAY });
+  Object.values(reg.prospects).forEach(reviewedLogo);
 
   const s = radar.summarize(reg, { today: TODAY });
   assert.equal(s.build_queue_size, 1);
@@ -296,6 +309,7 @@ test('the dashboard embeds every prospect, not just the queues', () => {
   radar.recordGrade(reg, 'b.example', gradeResult({ verdict: 'polish', site_quality_score: 61 }), { today: TODAY });
   radar.recordGrade(reg, 'c.example', gradeResult({ verdict: 'nurture', site_quality_score: 88 }), { today: TODAY });
   // d.example stays ungraded on purpose — an unaudited row is still a row.
+  Object.values(reg.prospects).forEach(reviewedLogo);
 
   const s = radar.summarize(reg, { today: TODAY });
   assert.equal(s.prospects.length, 4, 'summarize must expose the whole actionable set');

@@ -183,7 +183,7 @@ Run identity and scope:
 Read the root AGENTS.md, the synced agent-vault rules, AUTOMATION.md, the current site-factory source, the Align skill completely, its required style guide, CURRENT-PRODUCTION.json, and all existing selection/build/deployment evidence before changing anything. Stay in the canonical client-independent Prospect Radar lane; the Business Workshop does not apply. Preserve unrelated user changes. Do not spawn subagents.
 
 Selection and truth:
-- Select exactly 20 current untouched prospects from the canonical Radar registry after global exclusion across all prior batch, target, manifest, deployment, and live-route evidence. Resume an incomplete exact prior selection before consuming new prospects.
+- Select exactly 20 current untouched prospects from the canonical Radar registry after global exclusion across all prior batch, target, manifest, deployment, and live-route evidence. Prioritize eligible prospects by registry first_seen ascending, oldest tracked first. Missing or invalid dates sort last. Rebuild score may break ties only within the same date, and vertical diversity must never move a newer prospect ahead of an older one. Resume an incomplete exact prior selection before consuming new prospects.
 - Never claim that a prospect was discovered today unless its source evidence proves that date. Record the actual selection basis.
 - Use first-party sources for identity, services, city, contact details, and claims. Never guess a phone, address, testimonial, certification, outcome, or logo.
 
@@ -202,7 +202,7 @@ Build and quality:
 Release and sheet:
 - Read CURRENT-PRODUCTION.json and verify its local snapshot index SHA/count against the current live root before composition. Stop on mismatch or an ambiguous site/account.
 - Compose additively with compose-netlify-release.js, preserving every existing live route. Deploy only to the exact existing Netlify site above under Dillon's standing approval. Verify the root, the new indexed count, all 20 routes, hero assets, provenance files, and noindex headers live. Update CURRENT-PRODUCTION.json atomically to the newly verified local release snapshot and deploy receipt.
-- Append exactly 20 nonduplicate rows to the canonical JESSE CALL SHEET. Expand the grid and copy formatting when required. Mark SHOW only when the phone and business identity are verified from an official source; otherwise mark REVIEW and leave unverified contact fields blank. Read back the exact written range. Do not use or update a Business Workshop sheet.
+- Append exactly 20 nonduplicate rows to the canonical JESSE CALL SHEET in selection-rank order, which must be oldest first by registry first_seen. Keep column N labeled Radar First Seen and write each row's verified registry date there. Preserve prior batch chronology and never globally reorder completed call history. Expand the grid and copy formatting when required. Mark SHOW only when the phone and business identity are verified from an official source; otherwise mark REVIEW and leave unverified contact fields blank. Read back the exact written range. Do not use or update a Business Workshop sheet.
 
 Safety and completion receipt:
 - Keep mail_ready=hold. Do not send outreach, post, launch ads, create a new public site, change accounts, or write to a different CRM/sheet/site.
@@ -213,6 +213,10 @@ Safety and completion receipt:
     $codexArgs = @(
         $codex.Prefix
         'exec',
+        # Codex CLI 0.147 parses the newer context_management feature table as a
+        # boolean feature. Override it at invocation time so the scheduled worker
+        # remains compatible while the shared config can retain the newer table.
+        '-c', 'features.context_management=true',
         '-C', $repo,
         '-m', 'gpt-5.6-terra',
         '-s', 'danger-full-access',

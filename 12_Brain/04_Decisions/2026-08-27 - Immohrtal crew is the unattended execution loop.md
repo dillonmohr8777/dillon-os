@@ -2,6 +2,7 @@
 note_type: decision
 status: active
 created: 2026-08-27
+updated: 2026-08-27
 source_refs:
   - System/scripts/Invoke-ImmohrtalCrew.ps1
   - System/scripts/Register-ImmohrtalCrewTask.ps1

@@ -92,7 +92,7 @@ const audit = {
   runId,
   status: failures.length ? 'FAIL' : 'PASS',
   generatedAt: new Date().toISOString(),
-  selectionBasis: 'Current untouched Prospect Radar queue after global prior-build exclusion and live source preflight; not represented as first-seen-on-2026-08-25.',
+  selectionBasis: 'Current untouched Prospect Radar queue after global prior-build exclusion and live source preflight. This receipt does not assert that any prospect was discovered on the run date.',
   counts: {
     businesses: summary.results.length,
     qaReady: summary.qaReadyCount,

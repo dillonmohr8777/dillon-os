@@ -1,0 +1,2778 @@
+{
+  "schema": 1,
+  "runId": "20260826-052002",
+  "status": "PASS",
+  "generatedAt": "2026-08-26T10:59:07.585Z",
+  "selectionBasis": "Current untouched Prospect Radar queue after global prior-build exclusion and live source preflight. This receipt does not assert that any prospect was discovered on the run date.",
+  "counts": {
+    "businesses": 20,
+    "qaReady": 20,
+    "viewportScreenshots": 240,
+    "siteSpecificImageBoards": 20,
+    "contentImages": 240,
+    "uniqueContentImageHashes": 240
+  },
+  "boundaries": {
+    "mailReady": "hold",
+    "generatedPeopleDisclosure": "Illustrative industry representatives; not actual business staff or customers.",
+    "detector": "Factory source was corrected after the one detector pass. Per the run contract, no second detector pass was run. Full factory QA and acceptance QA are rerun after the corrected build."
+  },
+  "checks": [
+    {
+      "name": "exact selected count",
+      "pass": true,
+      "detail": "20/20"
+    },
+    {
+      "name": "untouched global inventory scanned",
+      "pass": true,
+      "detail": "110 artifacts; 176 prior domains"
+    },
+    {
+      "name": "selected domains unique",
+      "pass": true,
+      "detail": "20 unique domains"
+    },
+    {
+      "name": "selected slugs unique",
+      "pass": true,
+      "detail": "20 unique slugs"
+    },
+    {
+      "name": "source-ready count",
+      "pass": true,
+      "detail": "20/20 source records"
+    },
+    {
+      "name": "build QA summary",
+      "pass": true,
+      "detail": "20/20 qa_ready"
+    },
+    {
+      "name": "strict browser acceptance",
+      "pass": true,
+      "detail": "20/20 acceptance pass"
+    },
+    {
+      "name": "mail remains hold",
+      "pass": true,
+      "detail": "no outreach authorization"
+    },
+    {
+      "name": "detector receipt",
+      "pass": true,
+      "detail": "undefined warnings, no exit-code-2 block"
+    },
+    {
+      "name": "aqua-docs exact or disclosed identity",
+      "pass": true,
+      "detail": "none; exact first-party transparent asset"
+    },
+    {
+      "name": "aqua-docs identity presentation",
+      "pass": true,
+      "detail": "verified first-party logo"
+    },
+    {
+      "name": "aqua-docs private noindex",
+      "pass": true,
+      "detail": "noindex,nofollow"
+    },
+    {
+      "name": "aqua-docs Align type system",
+      "pass": true,
+      "detail": "self-hosted Plus Jakarta Sans 800 and DM Sans"
+    },
+    {
+      "name": "aqua-docs visible grain layer",
+      "pass": true,
+      "detail": "image and interface grain"
+    },
+    {
+      "name": "aqua-docs honest illustrative disclosure",
+      "pass": true,
+      "detail": "not actual staff, customers, facility, products, projects, or outcomes"
+    },
+    {
+      "name": "aqua-docs no continuous marquee",
+      "pass": true,
+      "detail": "reader-controlled optional strip"
+    },
+    {
+      "name": "aqua-docs site-specific board",
+      "pass": true,
+      "detail": "Aqua Docs; aqua-docs"
+    },
+    {
+      "name": "aqua-docs board source exists",
+      "pass": true,
+      "detail": "5b8b826b7db5b2471194258ae6a828706b77b571789b38bc51af8aa363c5632a"
+    },
+    {
+      "name": "aqua-docs grain provenance",
+      "pass": true,
+      "detail": "f8b8b72ee2a84cf2aaa04ce069edaaa459ee61650e76f307254572db67efb813"
+    },
+    {
+      "name": "aqua-docs image-1.webp",
+      "pass": true,
+      "detail": "ffff327bf3db62d6cad597a9075b72d03363f0bcb6829b2dc87bee024e64a37e"
+    },
+    {
+      "name": "aqua-docs image-2.webp",
+      "pass": true,
+      "detail": "e9a3b958fc439a4d539be03f3c9cd6d33bbf7ea9d7025b14a783082a338521cb"
+    },
+    {
+      "name": "aqua-docs image-3.webp",
+      "pass": true,
+      "detail": "8dfdd59676f262bb0e4b8deda91d5c13a4d296498abf6e8e7697d555e0f414d4"
+    },
+    {
+      "name": "aqua-docs image-4.webp",
+      "pass": true,
+      "detail": "f8d66a1e304eff26f26f2be61985490eaab88f8dd06786fd22eaa91616ab5e66"
+    },
+    {
+      "name": "aqua-docs image-5.webp",
+      "pass": true,
+      "detail": "24360a7c5f4a218a04c461f7cdc7c53a8958c1f419d8fc0d5955efe6120b7b2b"
+    },
+    {
+      "name": "aqua-docs image-6.webp",
+      "pass": true,
+      "detail": "bb420fd800386eec6b8b1f8f735f478a1ec08d5d882597fd89a9e5af04ba7120"
+    },
+    {
+      "name": "aqua-docs image-7.webp",
+      "pass": true,
+      "detail": "04ef5efaf80b46e026058dc7896b44f595d9423aea2748f9a1cb092545a7ba35"
+    },
+    {
+      "name": "aqua-docs image-8.webp",
+      "pass": true,
+      "detail": "365d25a8c9e16bd91232ce8d39afa7c3a2d6c1e0a3b4ec3f6e6268ed188b5449"
+    },
+    {
+      "name": "aqua-docs image-9.webp",
+      "pass": true,
+      "detail": "421739364a431a3c4d7a129b09aead27078abecbfb637944e86e17880c61be8b"
+    },
+    {
+      "name": "aqua-docs image-10.webp",
+      "pass": true,
+      "detail": "640cf826f63c06d4b69f0a04f5d43bc19e58c5c75cfc72f88f72f4b7e9b8db2e"
+    },
+    {
+      "name": "aqua-docs image-11.webp",
+      "pass": true,
+      "detail": "5b8d695b70bff5d338cea5fd36f1d173c4d7ce544c9087705e8c792c6892319c"
+    },
+    {
+      "name": "aqua-docs image-12.webp",
+      "pass": true,
+      "detail": "6454a33c53789a82ac479c41937829b2a9c98528eb91364e7cfe46d3c5917d71"
+    },
+    {
+      "name": "aqua-docs font-display-400.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "aqua-docs font-display-800.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "aqua-docs font-text-400.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "aqua-docs font-text-700.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "aqua-docs top and full-page viewport screenshots",
+      "pass": true,
+      "detail": "top-of-page and full-page evidence at 320 through 1440"
+    },
+    {
+      "name": "bala-financial-group exact or disclosed identity",
+      "pass": true,
+      "detail": "none; exact first-party transparent asset"
+    },
+    {
+      "name": "bala-financial-group identity presentation",
+      "pass": true,
+      "detail": "verified first-party logo"
+    },
+    {
+      "name": "bala-financial-group private noindex",
+      "pass": true,
+      "detail": "noindex,nofollow"
+    },
+    {
+      "name": "bala-financial-group Align type system",
+      "pass": true,
+      "detail": "self-hosted Plus Jakarta Sans 800 and DM Sans"
+    },
+    {
+      "name": "bala-financial-group visible grain layer",
+      "pass": true,
+      "detail": "image and interface grain"
+    },
+    {
+      "name": "bala-financial-group honest illustrative disclosure",
+      "pass": true,
+      "detail": "not actual staff, customers, facility, products, projects, or outcomes"
+    },
+    {
+      "name": "bala-financial-group no continuous marquee",
+      "pass": true,
+      "detail": "reader-controlled optional strip"
+    },
+    {
+      "name": "bala-financial-group site-specific board",
+      "pass": true,
+      "detail": "Bala Financial Group; bala-financial-group"
+    },
+    {
+      "name": "bala-financial-group board source exists",
+      "pass": true,
+      "detail": "17f0f70807beb8511e92dfdb4b7da34bd3b8edd8b9e5bc3199d3743b8a6350b3"
+    },
+    {
+      "name": "bala-financial-group grain provenance",
+      "pass": true,
+      "detail": "f8b8b72ee2a84cf2aaa04ce069edaaa459ee61650e76f307254572db67efb813"
+    },
+    {
+      "name": "bala-financial-group image-1.webp",
+      "pass": true,
+      "detail": "c3f90f451cfde5312cceb1da0c8acae117aa7b08cf14e7852d661e96cc174805"
+    },
+    {
+      "name": "bala-financial-group image-2.webp",
+      "pass": true,
+      "detail": "c1d8155a42a698a5579dbd0158c5a430056e87224a25e491a8d647e25a3e3526"
+    },
+    {
+      "name": "bala-financial-group image-3.webp",
+      "pass": true,
+      "detail": "fe89f2d186d99c030758588af17a44c77e1f78eb675307797a087a0af0b88357"
+    },
+    {
+      "name": "bala-financial-group image-4.webp",
+      "pass": true,
+      "detail": "b8f9680335770e690e4a3930936e566ecd10dc3b21d574aa69b74f494fb15800"
+    },
+    {
+      "name": "bala-financial-group image-5.webp",
+      "pass": true,
+      "detail": "29826328e87e278aee9e2b95e52919f9ef468a63516eb14b99511de2ecbfdae3"
+    },
+    {
+      "name": "bala-financial-group image-6.webp",
+      "pass": true,
+      "detail": "fbe6db997698701f00b9e630ff22ca713ea4e5378c2e1ffd67be0be38fe17dd4"
+    },
+    {
+      "name": "bala-financial-group image-7.webp",
+      "pass": true,
+      "detail": "a468a48485301ab5fb61fa57abb3dd53852c688cc22d0b4e2d980a6f78ffbfb7"
+    },
+    {
+      "name": "bala-financial-group image-8.webp",
+      "pass": true,
+      "detail": "56444e21dc0f7723804b5a1e8939b0096ed518a7ccb461005b6799f5d25648dd"
+    },
+    {
+      "name": "bala-financial-group image-9.webp",
+      "pass": true,
+      "detail": "9ac0cd70de535f3b757779d855e5fe84e96b397583750d4adf12fe2f3b347907"
+    },
+    {
+      "name": "bala-financial-group image-10.webp",
+      "pass": true,
+      "detail": "2f5db85c095ba7b5dd1c005555b886d35ac307bedf02996afff1ad8a403f3f10"
+    },
+    {
+      "name": "bala-financial-group image-11.webp",
+      "pass": true,
+      "detail": "a64a459d6ca1303b036a58709d027da738754a1863502f7b4adfa76e2710a4b8"
+    },
+    {
+      "name": "bala-financial-group image-12.webp",
+      "pass": true,
+      "detail": "1b6d89069bd90e8cb4179cc424b4afbf44fff5b604a92d1305af89ab0e2e5584"
+    },
+    {
+      "name": "bala-financial-group font-display-400.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "bala-financial-group font-display-800.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "bala-financial-group font-text-400.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "bala-financial-group font-text-700.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "bala-financial-group top and full-page viewport screenshots",
+      "pass": true,
+      "detail": "top-of-page and full-page evidence at 320 through 1440"
+    },
+    {
+      "name": "bath-and-kitchen-showroom-of-hajoca-york exact or disclosed identity",
+      "pass": true,
+      "detail": "flat border color #fefefe removed with deterministic FFmpeg colorkey; geometry unchanged"
+    },
+    {
+      "name": "bath-and-kitchen-showroom-of-hajoca-york identity presentation",
+      "pass": true,
+      "detail": "verified first-party logo"
+    },
+    {
+      "name": "bath-and-kitchen-showroom-of-hajoca-york private noindex",
+      "pass": true,
+      "detail": "noindex,nofollow"
+    },
+    {
+      "name": "bath-and-kitchen-showroom-of-hajoca-york Align type system",
+      "pass": true,
+      "detail": "self-hosted Plus Jakarta Sans 800 and DM Sans"
+    },
+    {
+      "name": "bath-and-kitchen-showroom-of-hajoca-york visible grain layer",
+      "pass": true,
+      "detail": "image and interface grain"
+    },
+    {
+      "name": "bath-and-kitchen-showroom-of-hajoca-york honest illustrative disclosure",
+      "pass": true,
+      "detail": "not actual staff, customers, facility, products, projects, or outcomes"
+    },
+    {
+      "name": "bath-and-kitchen-showroom-of-hajoca-york no continuous marquee",
+      "pass": true,
+      "detail": "reader-controlled optional strip"
+    },
+    {
+      "name": "bath-and-kitchen-showroom-of-hajoca-york site-specific board",
+      "pass": true,
+      "detail": "Bath & Kitchen Showroom of Hajoca-York; bath-and-kitchen-showroom-of-hajoca-york"
+    },
+    {
+      "name": "bath-and-kitchen-showroom-of-hajoca-york board source exists",
+      "pass": true,
+      "detail": "a977a7d4328166a6062d3d9c9c8d85524b74212554eec98c73fdab19632b3c7f"
+    },
+    {
+      "name": "bath-and-kitchen-showroom-of-hajoca-york grain provenance",
+      "pass": true,
+      "detail": "f8b8b72ee2a84cf2aaa04ce069edaaa459ee61650e76f307254572db67efb813"
+    },
+    {
+      "name": "bath-and-kitchen-showroom-of-hajoca-york image-1.webp",
+      "pass": true,
+      "detail": "a4ce1172011e1db0495ada72d3c145f46df01c50b2eb7449d01f2e2bf0e80f23"
+    },
+    {
+      "name": "bath-and-kitchen-showroom-of-hajoca-york image-2.webp",
+      "pass": true,
+      "detail": "9712936b24432cc2e97e1cf872bcde762d39bdbd1690b39dacbd85505b8cefff"
+    },
+    {
+      "name": "bath-and-kitchen-showroom-of-hajoca-york image-3.webp",
+      "pass": true,
+      "detail": "f4a99b437fa630447f9dc441ec1e002522d1d6bc415d57d5e61b95a175b88d00"
+    },
+    {
+      "name": "bath-and-kitchen-showroom-of-hajoca-york image-4.webp",
+      "pass": true,
+      "detail": "bf6f8b78e1390c5f232845da891299eaf339d825e34cb5819af1c977aba07ed7"
+    },
+    {
+      "name": "bath-and-kitchen-showroom-of-hajoca-york image-5.webp",
+      "pass": true,
+      "detail": "6f3023e4a08e899180e8deb1f8b6af3903b3ba1894300bf19db611f248c1f846"
+    },
+    {
+      "name": "bath-and-kitchen-showroom-of-hajoca-york image-6.webp",
+      "pass": true,
+      "detail": "4cb6059d9a64f89dda61adc076b40648f1bfb8c375fbffb2d68d684034f2e3eb"
+    },
+    {
+      "name": "bath-and-kitchen-showroom-of-hajoca-york image-7.webp",
+      "pass": true,
+      "detail": "80074ba8dd60630ee650daafb5fbc9e80128ec1f643536e9adffe751b843063e"
+    },
+    {
+      "name": "bath-and-kitchen-showroom-of-hajoca-york image-8.webp",
+      "pass": true,
+      "detail": "32935f108a83df42298ee4d2663b6f17831a41dbc1ea73ffe447df886cc38d05"
+    },
+    {
+      "name": "bath-and-kitchen-showroom-of-hajoca-york image-9.webp",
+      "pass": true,
+      "detail": "5ddbb7b8faf499c77fb8363dca9c59685146ac31190e48adefabdb9c9efffe3e"
+    },
+    {
+      "name": "bath-and-kitchen-showroom-of-hajoca-york image-10.webp",
+      "pass": true,
+      "detail": "e567df66397f48f8d36ad2b008c9308bd52955ff321f572fa811b756f55ceb73"
+    },
+    {
+      "name": "bath-and-kitchen-showroom-of-hajoca-york image-11.webp",
+      "pass": true,
+      "detail": "dacf156bb46e88bd24e49870da20affc3b1fa1df6fa69729f791b13cc650d812"
+    },
+    {
+      "name": "bath-and-kitchen-showroom-of-hajoca-york image-12.webp",
+      "pass": true,
+      "detail": "52d5a1529d6bf47bb35e2f9f62b6b599783df7cb5f4451574517eb7ce35f005b"
+    },
+    {
+      "name": "bath-and-kitchen-showroom-of-hajoca-york font-display-400.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "bath-and-kitchen-showroom-of-hajoca-york font-display-800.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "bath-and-kitchen-showroom-of-hajoca-york font-text-400.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "bath-and-kitchen-showroom-of-hajoca-york font-text-700.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "bath-and-kitchen-showroom-of-hajoca-york top and full-page viewport screenshots",
+      "pass": true,
+      "detail": "top-of-page and full-page evidence at 320 through 1440"
+    },
+    {
+      "name": "bob-swayne-real-estate exact or disclosed identity",
+      "pass": true,
+      "detail": "flat border color #000000 removed with deterministic FFmpeg colorkey; geometry unchanged"
+    },
+    {
+      "name": "bob-swayne-real-estate identity presentation",
+      "pass": true,
+      "detail": "verified first-party logo"
+    },
+    {
+      "name": "bob-swayne-real-estate private noindex",
+      "pass": true,
+      "detail": "noindex,nofollow"
+    },
+    {
+      "name": "bob-swayne-real-estate Align type system",
+      "pass": true,
+      "detail": "self-hosted Plus Jakarta Sans 800 and DM Sans"
+    },
+    {
+      "name": "bob-swayne-real-estate visible grain layer",
+      "pass": true,
+      "detail": "image and interface grain"
+    },
+    {
+      "name": "bob-swayne-real-estate honest illustrative disclosure",
+      "pass": true,
+      "detail": "not actual staff, customers, facility, products, projects, or outcomes"
+    },
+    {
+      "name": "bob-swayne-real-estate no continuous marquee",
+      "pass": true,
+      "detail": "reader-controlled optional strip"
+    },
+    {
+      "name": "bob-swayne-real-estate site-specific board",
+      "pass": true,
+      "detail": "Bob Swayne Real Estate; bob-swayne-real-estate"
+    },
+    {
+      "name": "bob-swayne-real-estate board source exists",
+      "pass": true,
+      "detail": "55fd632f0c491a523f28ea9b1a2b05a92e1c396c32b2fb695efc9928030473b5"
+    },
+    {
+      "name": "bob-swayne-real-estate grain provenance",
+      "pass": true,
+      "detail": "f8b8b72ee2a84cf2aaa04ce069edaaa459ee61650e76f307254572db67efb813"
+    },
+    {
+      "name": "bob-swayne-real-estate image-1.webp",
+      "pass": true,
+      "detail": "3aac701e210e01696a2846b24a64fdcf095938c8effdc6c82f179e3d05343ab7"
+    },
+    {
+      "name": "bob-swayne-real-estate image-2.webp",
+      "pass": true,
+      "detail": "2437f8839e24a5873a5dc492c607a548afb5adfd29021203e4e66cb5f7d7da48"
+    },
+    {
+      "name": "bob-swayne-real-estate image-3.webp",
+      "pass": true,
+      "detail": "6c71297f0838e83c9d4d15e7be0dc2852f3c1b64bbd8880dcfb2ab85b4729509"
+    },
+    {
+      "name": "bob-swayne-real-estate image-4.webp",
+      "pass": true,
+      "detail": "64ca143ade0788b73cf7d304029622cc674cd46786be2aa02bea121f73140366"
+    },
+    {
+      "name": "bob-swayne-real-estate image-5.webp",
+      "pass": true,
+      "detail": "4d84cc16d1caaa66d4eb0e2a12cf951a37a2370d19129ccca9eda8d9b0295760"
+    },
+    {
+      "name": "bob-swayne-real-estate image-6.webp",
+      "pass": true,
+      "detail": "30dc7d6642283a81175ce1f00b865f0f1d61c568f502e59b59480d914d94b1a1"
+    },
+    {
+      "name": "bob-swayne-real-estate image-7.webp",
+      "pass": true,
+      "detail": "92f64185126099fdae1ac2ab778e0b894f3467d7e6a4944716df6b20e807ac08"
+    },
+    {
+      "name": "bob-swayne-real-estate image-8.webp",
+      "pass": true,
+      "detail": "06a990dd561b8a7974b6a2e4998d1f77950f3ae42cdc117924a126292b8261b4"
+    },
+    {
+      "name": "bob-swayne-real-estate image-9.webp",
+      "pass": true,
+      "detail": "36fc7fa51589969eeb20212a76969c602d0b98514d340def8b5bfaf3b376e7a2"
+    },
+    {
+      "name": "bob-swayne-real-estate image-10.webp",
+      "pass": true,
+      "detail": "c0bcbb1b6203d87f3f1e5e35a447690ebb4f805aef434c94cbcde2d70fc4a067"
+    },
+    {
+      "name": "bob-swayne-real-estate image-11.webp",
+      "pass": true,
+      "detail": "bfd6fd5929625b4b01037fd2216531967fa61ebf74ce45733998be4221379e92"
+    },
+    {
+      "name": "bob-swayne-real-estate image-12.webp",
+      "pass": true,
+      "detail": "3d4197f04d1d3e27648e0c38302b9ad64e7ba04969a05ced287ed515837a6725"
+    },
+    {
+      "name": "bob-swayne-real-estate font-display-400.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "bob-swayne-real-estate font-display-800.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "bob-swayne-real-estate font-text-400.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "bob-swayne-real-estate font-text-700.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "bob-swayne-real-estate top and full-page viewport screenshots",
+      "pass": true,
+      "detail": "top-of-page and full-page evidence at 320 through 1440"
+    },
+    {
+      "name": "eckroth-equipment-company exact or disclosed identity",
+      "pass": true,
+      "detail": "none; exact first-party transparent asset"
+    },
+    {
+      "name": "eckroth-equipment-company identity presentation",
+      "pass": true,
+      "detail": "verified first-party logo"
+    },
+    {
+      "name": "eckroth-equipment-company private noindex",
+      "pass": true,
+      "detail": "noindex,nofollow"
+    },
+    {
+      "name": "eckroth-equipment-company Align type system",
+      "pass": true,
+      "detail": "self-hosted Plus Jakarta Sans 800 and DM Sans"
+    },
+    {
+      "name": "eckroth-equipment-company visible grain layer",
+      "pass": true,
+      "detail": "image and interface grain"
+    },
+    {
+      "name": "eckroth-equipment-company honest illustrative disclosure",
+      "pass": true,
+      "detail": "not actual staff, customers, facility, products, projects, or outcomes"
+    },
+    {
+      "name": "eckroth-equipment-company no continuous marquee",
+      "pass": true,
+      "detail": "reader-controlled optional strip"
+    },
+    {
+      "name": "eckroth-equipment-company site-specific board",
+      "pass": true,
+      "detail": "Eckroth Equipment Company; eckroth-equipment-company"
+    },
+    {
+      "name": "eckroth-equipment-company board source exists",
+      "pass": true,
+      "detail": "01e8bb582420afeafc69342011b955fe4eb916404ff6497e9d4f83f50a656f33"
+    },
+    {
+      "name": "eckroth-equipment-company grain provenance",
+      "pass": true,
+      "detail": "f8b8b72ee2a84cf2aaa04ce069edaaa459ee61650e76f307254572db67efb813"
+    },
+    {
+      "name": "eckroth-equipment-company image-1.webp",
+      "pass": true,
+      "detail": "ddbf79d67e51d17523faa0cefd53bbf0d25925cbc18aab55add28fcb39d0c1d2"
+    },
+    {
+      "name": "eckroth-equipment-company image-2.webp",
+      "pass": true,
+      "detail": "8c72a8a341803d7d9e01149026490def592d19eb8fa66c6d13f46c2420c51dd6"
+    },
+    {
+      "name": "eckroth-equipment-company image-3.webp",
+      "pass": true,
+      "detail": "d2d6302788509410b09a273505e0b7f1f9286593328f05969024ad72e0f380d3"
+    },
+    {
+      "name": "eckroth-equipment-company image-4.webp",
+      "pass": true,
+      "detail": "acb5b9002353943ad185bb65e3b5b690a3c497bdd3b9865846f61b319ad221c3"
+    },
+    {
+      "name": "eckroth-equipment-company image-5.webp",
+      "pass": true,
+      "detail": "072f5f3fde661540de845d97d2b9b5dbb4aa6ef50546e06254db9e927abc250a"
+    },
+    {
+      "name": "eckroth-equipment-company image-6.webp",
+      "pass": true,
+      "detail": "f1aab8ef64dedcfa76dc15536f911fd842b0534eb6d624fafb31e3e376daf537"
+    },
+    {
+      "name": "eckroth-equipment-company image-7.webp",
+      "pass": true,
+      "detail": "30faf2b88fcb0b27a0d36c7defc5ae64baf7bd3dd2713072496d0441e02750c4"
+    },
+    {
+      "name": "eckroth-equipment-company image-8.webp",
+      "pass": true,
+      "detail": "27048b7a4dfadaf1ef09a73af0640de25b072bba3dd800c1c8a195cc34e96c88"
+    },
+    {
+      "name": "eckroth-equipment-company image-9.webp",
+      "pass": true,
+      "detail": "4fec2c4e991843cd84974a52d993d0719ca4e1256646e1f8855232c8b76dfa79"
+    },
+    {
+      "name": "eckroth-equipment-company image-10.webp",
+      "pass": true,
+      "detail": "95e724591c6caa9f6fc5aedc2d1acaa300669f820d5c409015f8570551a8de12"
+    },
+    {
+      "name": "eckroth-equipment-company image-11.webp",
+      "pass": true,
+      "detail": "a2b905af224686b2045290b708513f20ed91af5457420b29f532cc32b5a827ba"
+    },
+    {
+      "name": "eckroth-equipment-company image-12.webp",
+      "pass": true,
+      "detail": "c84e09c4f5852cf653696fb97d3bb9d7d867152a31587e235d827f3ce47c1fd1"
+    },
+    {
+      "name": "eckroth-equipment-company font-display-400.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "eckroth-equipment-company font-display-800.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "eckroth-equipment-company font-text-400.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "eckroth-equipment-company font-text-700.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "eckroth-equipment-company top and full-page viewport screenshots",
+      "pass": true,
+      "detail": "top-of-page and full-page evidence at 320 through 1440"
+    },
+    {
+      "name": "frees-insurance exact or disclosed identity",
+      "pass": true,
+      "detail": "flat border color #47704c removed with deterministic FFmpeg colorkey; geometry unchanged"
+    },
+    {
+      "name": "frees-insurance identity presentation",
+      "pass": true,
+      "detail": "verified first-party logo"
+    },
+    {
+      "name": "frees-insurance private noindex",
+      "pass": true,
+      "detail": "noindex,nofollow"
+    },
+    {
+      "name": "frees-insurance Align type system",
+      "pass": true,
+      "detail": "self-hosted Plus Jakarta Sans 800 and DM Sans"
+    },
+    {
+      "name": "frees-insurance visible grain layer",
+      "pass": true,
+      "detail": "image and interface grain"
+    },
+    {
+      "name": "frees-insurance honest illustrative disclosure",
+      "pass": true,
+      "detail": "not actual staff, customers, facility, products, projects, or outcomes"
+    },
+    {
+      "name": "frees-insurance no continuous marquee",
+      "pass": true,
+      "detail": "reader-controlled optional strip"
+    },
+    {
+      "name": "frees-insurance site-specific board",
+      "pass": true,
+      "detail": "Frees Insurance; frees-insurance"
+    },
+    {
+      "name": "frees-insurance board source exists",
+      "pass": true,
+      "detail": "cbab8b9357e0467484ca4d02ea3be5872999a59e4220d455a0fcab154362ad6e"
+    },
+    {
+      "name": "frees-insurance grain provenance",
+      "pass": true,
+      "detail": "f8b8b72ee2a84cf2aaa04ce069edaaa459ee61650e76f307254572db67efb813"
+    },
+    {
+      "name": "frees-insurance image-1.webp",
+      "pass": true,
+      "detail": "78e7fa501fd072190adcf2f26c9c69eff6c83137ba938575bb24d25d97ae6637"
+    },
+    {
+      "name": "frees-insurance image-2.webp",
+      "pass": true,
+      "detail": "8d0f81ee9f3e1573087c9c15f24da9010e23a3a6070de2a2e63b3f7443d5aebe"
+    },
+    {
+      "name": "frees-insurance image-3.webp",
+      "pass": true,
+      "detail": "927f06bdd00dfc1dad9d947ce2ca4e936a5ad5745bd8065692e8cc34bc593fe7"
+    },
+    {
+      "name": "frees-insurance image-4.webp",
+      "pass": true,
+      "detail": "08433e06593eef95f40450a1ffbbd345637bc45aa859edbbf94db4c0c5a481b7"
+    },
+    {
+      "name": "frees-insurance image-5.webp",
+      "pass": true,
+      "detail": "11865ff4e6c9b0bfc52dd9a85b2f26086b90623e4fbf17410da229466a35e492"
+    },
+    {
+      "name": "frees-insurance image-6.webp",
+      "pass": true,
+      "detail": "09e9ee9a84e1ff197162381963e57b7bb514973ff12183a8df8f3a05b3fee9b4"
+    },
+    {
+      "name": "frees-insurance image-7.webp",
+      "pass": true,
+      "detail": "9d4a1600514f38bcbe74cae10f1b5b4ace4f8af4b3e825d8b027bf620cc82123"
+    },
+    {
+      "name": "frees-insurance image-8.webp",
+      "pass": true,
+      "detail": "ca042617115bec188c1a15679a11408e29a44cc279d96b6e80f71860e4224f80"
+    },
+    {
+      "name": "frees-insurance image-9.webp",
+      "pass": true,
+      "detail": "16d6148c008c9c982c6518ac42c58f7b1cca77bec37ac2646d997489dda99c72"
+    },
+    {
+      "name": "frees-insurance image-10.webp",
+      "pass": true,
+      "detail": "3683c00deacd99b2b821ba617ea3887e6622fd8c584738f04fac70a66713b5c2"
+    },
+    {
+      "name": "frees-insurance image-11.webp",
+      "pass": true,
+      "detail": "0465fa64c5cc36b9b1a83eb5dfabbb2f89d06c52f33827152eec1de0c4ce75da"
+    },
+    {
+      "name": "frees-insurance image-12.webp",
+      "pass": true,
+      "detail": "a64d1dc3fc2f296b405721cc4528256ea778d4f59572e04282cd13bd222e8bc9"
+    },
+    {
+      "name": "frees-insurance font-display-400.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "frees-insurance font-display-800.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "frees-insurance font-text-400.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "frees-insurance font-text-700.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "frees-insurance top and full-page viewport screenshots",
+      "pass": true,
+      "detail": "top-of-page and full-page evidence at 320 through 1440"
+    },
+    {
+      "name": "kevin-t-coyne-attorney-at-law exact or disclosed identity",
+      "pass": true,
+      "detail": "Disclosed exact-name typographic fallback; no icon, symbol, or first-party logo imitation."
+    },
+    {
+      "name": "kevin-t-coyne-attorney-at-law identity presentation",
+      "pass": true,
+      "detail": "verified business name as ordinary live text"
+    },
+    {
+      "name": "kevin-t-coyne-attorney-at-law private noindex",
+      "pass": true,
+      "detail": "noindex,nofollow"
+    },
+    {
+      "name": "kevin-t-coyne-attorney-at-law Align type system",
+      "pass": true,
+      "detail": "self-hosted Plus Jakarta Sans 800 and DM Sans"
+    },
+    {
+      "name": "kevin-t-coyne-attorney-at-law visible grain layer",
+      "pass": true,
+      "detail": "image and interface grain"
+    },
+    {
+      "name": "kevin-t-coyne-attorney-at-law honest illustrative disclosure",
+      "pass": true,
+      "detail": "not actual staff, customers, facility, products, projects, or outcomes"
+    },
+    {
+      "name": "kevin-t-coyne-attorney-at-law no continuous marquee",
+      "pass": true,
+      "detail": "reader-controlled optional strip"
+    },
+    {
+      "name": "kevin-t-coyne-attorney-at-law site-specific board",
+      "pass": true,
+      "detail": "Kevin T Coyne Attorney At Law; kevin-t-coyne-attorney-at-law"
+    },
+    {
+      "name": "kevin-t-coyne-attorney-at-law board source exists",
+      "pass": true,
+      "detail": "43fb097531311456af5565f0f7bdb8a1a39092182c22a34906e89345ed1765a3"
+    },
+    {
+      "name": "kevin-t-coyne-attorney-at-law grain provenance",
+      "pass": true,
+      "detail": "f8b8b72ee2a84cf2aaa04ce069edaaa459ee61650e76f307254572db67efb813"
+    },
+    {
+      "name": "kevin-t-coyne-attorney-at-law image-1.webp",
+      "pass": true,
+      "detail": "b3a9ee3a00f5247deda1d3fcd7a0327f43fc12f801fcf261d41f5b7ceca6d684"
+    },
+    {
+      "name": "kevin-t-coyne-attorney-at-law image-2.webp",
+      "pass": true,
+      "detail": "348e102f642e22de6ed761cb4f923375765f5de406c2c4fd42ce6c8ed45ee26a"
+    },
+    {
+      "name": "kevin-t-coyne-attorney-at-law image-3.webp",
+      "pass": true,
+      "detail": "4974cf37f72427f77abfaccba56d40b69b721c501b7af4e99dc974389964386e"
+    },
+    {
+      "name": "kevin-t-coyne-attorney-at-law image-4.webp",
+      "pass": true,
+      "detail": "6f7a474b50c8ed5eb9c9307a9de9c5807b7be3eea54b7ccb9d8efcc0fe46fab0"
+    },
+    {
+      "name": "kevin-t-coyne-attorney-at-law image-5.webp",
+      "pass": true,
+      "detail": "10d56c1d31c144e9134b51b3f7f7605fdbb77206ad8c0d8a3debaf726ae43160"
+    },
+    {
+      "name": "kevin-t-coyne-attorney-at-law image-6.webp",
+      "pass": true,
+      "detail": "ad85e9b4a9e394467a7e6787963cc875c6881d7ae3ebfa4a0ce798a0bd700d41"
+    },
+    {
+      "name": "kevin-t-coyne-attorney-at-law image-7.webp",
+      "pass": true,
+      "detail": "2e20352170a567a34f60fd4663f64e55105f210d4d197b1facb9537cc8bc1120"
+    },
+    {
+      "name": "kevin-t-coyne-attorney-at-law image-8.webp",
+      "pass": true,
+      "detail": "71b08aa09c6ee0bf756b6ef58e7ca69b8733f83e1e4a9d9feabd1a5bb0f9f573"
+    },
+    {
+      "name": "kevin-t-coyne-attorney-at-law image-9.webp",
+      "pass": true,
+      "detail": "1d0826c36ed0b2225e7c1029af7d7d9c9a20fbd62263c61f8354557c6c8671d6"
+    },
+    {
+      "name": "kevin-t-coyne-attorney-at-law image-10.webp",
+      "pass": true,
+      "detail": "4f71f064efd934facc148dfb209f4beafb80cfb71f5a701b6ba6a1bdf54e0a30"
+    },
+    {
+      "name": "kevin-t-coyne-attorney-at-law image-11.webp",
+      "pass": true,
+      "detail": "468a4f396a1300416b42ca686b71894f4c01a394e83b308ac74f9e5971d0be05"
+    },
+    {
+      "name": "kevin-t-coyne-attorney-at-law image-12.webp",
+      "pass": true,
+      "detail": "4f55a403baee6931289727e7f0e199e7ea8ae5bd2b77127f438216314c4faa63"
+    },
+    {
+      "name": "kevin-t-coyne-attorney-at-law font-display-400.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "kevin-t-coyne-attorney-at-law font-display-800.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "kevin-t-coyne-attorney-at-law font-text-400.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "kevin-t-coyne-attorney-at-law font-text-700.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "kevin-t-coyne-attorney-at-law top and full-page viewport screenshots",
+      "pass": true,
+      "detail": "top-of-page and full-page evidence at 320 through 1440"
+    },
+    {
+      "name": "kitay-law-offices exact or disclosed identity",
+      "pass": true,
+      "detail": "flat border color #47704c removed with deterministic FFmpeg colorkey; geometry unchanged"
+    },
+    {
+      "name": "kitay-law-offices identity presentation",
+      "pass": true,
+      "detail": "verified first-party logo"
+    },
+    {
+      "name": "kitay-law-offices private noindex",
+      "pass": true,
+      "detail": "noindex,nofollow"
+    },
+    {
+      "name": "kitay-law-offices Align type system",
+      "pass": true,
+      "detail": "self-hosted Plus Jakarta Sans 800 and DM Sans"
+    },
+    {
+      "name": "kitay-law-offices visible grain layer",
+      "pass": true,
+      "detail": "image and interface grain"
+    },
+    {
+      "name": "kitay-law-offices honest illustrative disclosure",
+      "pass": true,
+      "detail": "not actual staff, customers, facility, products, projects, or outcomes"
+    },
+    {
+      "name": "kitay-law-offices no continuous marquee",
+      "pass": true,
+      "detail": "reader-controlled optional strip"
+    },
+    {
+      "name": "kitay-law-offices site-specific board",
+      "pass": true,
+      "detail": "Kitay Law Offices; kitay-law-offices"
+    },
+    {
+      "name": "kitay-law-offices board source exists",
+      "pass": true,
+      "detail": "eeeb9ba62dc1ed72d50d9acc29f76a5b63076bafaf1e86da156d397ea8df7c1a"
+    },
+    {
+      "name": "kitay-law-offices grain provenance",
+      "pass": true,
+      "detail": "f8b8b72ee2a84cf2aaa04ce069edaaa459ee61650e76f307254572db67efb813"
+    },
+    {
+      "name": "kitay-law-offices image-1.webp",
+      "pass": true,
+      "detail": "5b68ac5ee5a9566782a7ce69b9a028c7af29311b31674ca6ddee4ad268522b98"
+    },
+    {
+      "name": "kitay-law-offices image-2.webp",
+      "pass": true,
+      "detail": "9e78bbcfb5db7a65bca8f44a8b3344c9f983a53be5ec67ec384caef179fae03b"
+    },
+    {
+      "name": "kitay-law-offices image-3.webp",
+      "pass": true,
+      "detail": "4afc61356583643e6952a911a8462fa71c3fc00e4c06d9fddb98c3fef1068306"
+    },
+    {
+      "name": "kitay-law-offices image-4.webp",
+      "pass": true,
+      "detail": "449547e0054c6f1d8e9210ae08623c7ee4fc8d6fc357189d717fe810006e6905"
+    },
+    {
+      "name": "kitay-law-offices image-5.webp",
+      "pass": true,
+      "detail": "85a1f069fdab837bf125530fb8969c28e597a36e96516eef7503e632c8bef9a5"
+    },
+    {
+      "name": "kitay-law-offices image-6.webp",
+      "pass": true,
+      "detail": "c1221c6702aeb92043685b85bd78ee2d24f6337a80d063e477eb82c5f607b81e"
+    },
+    {
+      "name": "kitay-law-offices image-7.webp",
+      "pass": true,
+      "detail": "c104257935904a7ad2a21731071866f3daf15551db0dc12335fc7769228b221d"
+    },
+    {
+      "name": "kitay-law-offices image-8.webp",
+      "pass": true,
+      "detail": "642d51a1e6530dd368d8fac31fff934139ab838cb56db2cf6e053efd0459952d"
+    },
+    {
+      "name": "kitay-law-offices image-9.webp",
+      "pass": true,
+      "detail": "ad5185de62cc1ed4a5141d1765d2dbc4e733df693b94e1f9ad3df9d04d579a60"
+    },
+    {
+      "name": "kitay-law-offices image-10.webp",
+      "pass": true,
+      "detail": "458e2504ff440eaaf746cb0ff6582ba2f89bb94ea0fd2038f995240a53fbe1e5"
+    },
+    {
+      "name": "kitay-law-offices image-11.webp",
+      "pass": true,
+      "detail": "7ec50d40305380ceba75edb2f1e36b880618c76e8514fb115fef620310a3f0a5"
+    },
+    {
+      "name": "kitay-law-offices image-12.webp",
+      "pass": true,
+      "detail": "0b76534b9b84fa6da33f358a5d925dcd413f9a221c1cf3366437c92e08564a5f"
+    },
+    {
+      "name": "kitay-law-offices font-display-400.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "kitay-law-offices font-display-800.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "kitay-law-offices font-text-400.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "kitay-law-offices font-text-700.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "kitay-law-offices top and full-page viewport screenshots",
+      "pass": true,
+      "detail": "top-of-page and full-page evidence at 320 through 1440"
+    },
+    {
+      "name": "lancaster-general-health-express exact or disclosed identity",
+      "pass": true,
+      "detail": "Disclosed exact-name typographic fallback; no icon, symbol, or first-party logo imitation."
+    },
+    {
+      "name": "lancaster-general-health-express identity presentation",
+      "pass": true,
+      "detail": "verified business name as ordinary live text"
+    },
+    {
+      "name": "lancaster-general-health-express private noindex",
+      "pass": true,
+      "detail": "noindex,nofollow"
+    },
+    {
+      "name": "lancaster-general-health-express Align type system",
+      "pass": true,
+      "detail": "self-hosted Plus Jakarta Sans 800 and DM Sans"
+    },
+    {
+      "name": "lancaster-general-health-express visible grain layer",
+      "pass": true,
+      "detail": "image and interface grain"
+    },
+    {
+      "name": "lancaster-general-health-express honest illustrative disclosure",
+      "pass": true,
+      "detail": "not actual staff, customers, facility, products, projects, or outcomes"
+    },
+    {
+      "name": "lancaster-general-health-express no continuous marquee",
+      "pass": true,
+      "detail": "reader-controlled optional strip"
+    },
+    {
+      "name": "lancaster-general-health-express site-specific board",
+      "pass": true,
+      "detail": "Lancaster General Health Express; lancaster-general-health-express"
+    },
+    {
+      "name": "lancaster-general-health-express board source exists",
+      "pass": true,
+      "detail": "979dfec684b1fcb8ac719ef791a483b418810ef246b97ab97c43ab999de91c7c"
+    },
+    {
+      "name": "lancaster-general-health-express grain provenance",
+      "pass": true,
+      "detail": "f8b8b72ee2a84cf2aaa04ce069edaaa459ee61650e76f307254572db67efb813"
+    },
+    {
+      "name": "lancaster-general-health-express image-1.webp",
+      "pass": true,
+      "detail": "88542bf08c22e82f13b628ea92ec99bc81a99fa6699184f24cc1b3a51bc29eb2"
+    },
+    {
+      "name": "lancaster-general-health-express image-2.webp",
+      "pass": true,
+      "detail": "791fca4df194c1691932211ba941ab066dc9993f649a32dea8a8fd8dc3d681a8"
+    },
+    {
+      "name": "lancaster-general-health-express image-3.webp",
+      "pass": true,
+      "detail": "9cc729dfa4c4c85ced90704166a590e32f371c8801d28257b90f6426ed3e582a"
+    },
+    {
+      "name": "lancaster-general-health-express image-4.webp",
+      "pass": true,
+      "detail": "7b874eb4003df72e10cd08166c3dfa4d74be80c04b063242f3dc91745a11da98"
+    },
+    {
+      "name": "lancaster-general-health-express image-5.webp",
+      "pass": true,
+      "detail": "4256a099cef5729e0d3fc191dd37da275dfa362d833e60b087a6909df2453dbc"
+    },
+    {
+      "name": "lancaster-general-health-express image-6.webp",
+      "pass": true,
+      "detail": "8c21cd5cca05754629dd892b8dd1a9024f835fa084aafc4ef90639b3eeda74f4"
+    },
+    {
+      "name": "lancaster-general-health-express image-7.webp",
+      "pass": true,
+      "detail": "25b121cb8ab466ee0521a4005307d3a679a2308c6506429dad6024eab918480b"
+    },
+    {
+      "name": "lancaster-general-health-express image-8.webp",
+      "pass": true,
+      "detail": "f94112aade3f4cfe110e93018b92b8d238517e970d10834cd816de9f14196bfb"
+    },
+    {
+      "name": "lancaster-general-health-express image-9.webp",
+      "pass": true,
+      "detail": "3082f9be888be1f58880c92cb96c029db47b5451ab3612d18dbbf71fc16f1098"
+    },
+    {
+      "name": "lancaster-general-health-express image-10.webp",
+      "pass": true,
+      "detail": "9ce6a26ca9813c5ca22b6f817f97fdcb356cd61709d656a8ac0ed9b5f4b20172"
+    },
+    {
+      "name": "lancaster-general-health-express image-11.webp",
+      "pass": true,
+      "detail": "51d786d790f7ed22cda13e31639dde21b988637f1fbaf21b763053a9ecf8a23e"
+    },
+    {
+      "name": "lancaster-general-health-express image-12.webp",
+      "pass": true,
+      "detail": "4452d2009ff548a813f6623c47fb9159b15fc3ea35e1583d9d16c4cc8ee70143"
+    },
+    {
+      "name": "lancaster-general-health-express font-display-400.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "lancaster-general-health-express font-display-800.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "lancaster-general-health-express font-text-400.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "lancaster-general-health-express font-text-700.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "lancaster-general-health-express top and full-page viewport screenshots",
+      "pass": true,
+      "detail": "top-of-page and full-page evidence at 320 through 1440"
+    },
+    {
+      "name": "leiss-orthodontics exact or disclosed identity",
+      "pass": true,
+      "detail": "none; exact first-party transparent asset"
+    },
+    {
+      "name": "leiss-orthodontics identity presentation",
+      "pass": true,
+      "detail": "verified first-party logo"
+    },
+    {
+      "name": "leiss-orthodontics private noindex",
+      "pass": true,
+      "detail": "noindex,nofollow"
+    },
+    {
+      "name": "leiss-orthodontics Align type system",
+      "pass": true,
+      "detail": "self-hosted Plus Jakarta Sans 800 and DM Sans"
+    },
+    {
+      "name": "leiss-orthodontics visible grain layer",
+      "pass": true,
+      "detail": "image and interface grain"
+    },
+    {
+      "name": "leiss-orthodontics honest illustrative disclosure",
+      "pass": true,
+      "detail": "not actual staff, customers, facility, products, projects, or outcomes"
+    },
+    {
+      "name": "leiss-orthodontics no continuous marquee",
+      "pass": true,
+      "detail": "reader-controlled optional strip"
+    },
+    {
+      "name": "leiss-orthodontics site-specific board",
+      "pass": true,
+      "detail": "Leiss Orthodontics; leiss-orthodontics"
+    },
+    {
+      "name": "leiss-orthodontics board source exists",
+      "pass": true,
+      "detail": "be0761c4a0716f44bb0b997a24b38c027fee8f50f570261a0aee886de08a3cc9"
+    },
+    {
+      "name": "leiss-orthodontics grain provenance",
+      "pass": true,
+      "detail": "f8b8b72ee2a84cf2aaa04ce069edaaa459ee61650e76f307254572db67efb813"
+    },
+    {
+      "name": "leiss-orthodontics image-1.webp",
+      "pass": true,
+      "detail": "666ba0142bde1d7353267a47ac18c5251f0c5eef44636014e1d06139c8ff64f7"
+    },
+    {
+      "name": "leiss-orthodontics image-2.webp",
+      "pass": true,
+      "detail": "4fdff9f14f75ab6c9ce2555f2eb0e4e8dc9359758f1eefb12653b8862053a656"
+    },
+    {
+      "name": "leiss-orthodontics image-3.webp",
+      "pass": true,
+      "detail": "171303cc1fe64112580de1f44e04ed95e6d7312605c0ec6720b0093e1a8081e5"
+    },
+    {
+      "name": "leiss-orthodontics image-4.webp",
+      "pass": true,
+      "detail": "370a5383ee6e74fe327a860d098b3828f45f5d137f0dc70b7c907b9372948156"
+    },
+    {
+      "name": "leiss-orthodontics image-5.webp",
+      "pass": true,
+      "detail": "c4cfbbc6e16a32a2be981502240c8f1c13583024b8ddc78d3eceb7145d2cc916"
+    },
+    {
+      "name": "leiss-orthodontics image-6.webp",
+      "pass": true,
+      "detail": "c6b249ba0f9867d1efcb2eb233d8cc245e2abc44afb6c2c8f5321150fa559b57"
+    },
+    {
+      "name": "leiss-orthodontics image-7.webp",
+      "pass": true,
+      "detail": "dbd15390084b506d68540fd6930e9ecff43d12136810408711d27216e9f3f1e9"
+    },
+    {
+      "name": "leiss-orthodontics image-8.webp",
+      "pass": true,
+      "detail": "c97c41924e851f30ba33528507778e6e214c5dbc1d66d7ddb204e39215048a78"
+    },
+    {
+      "name": "leiss-orthodontics image-9.webp",
+      "pass": true,
+      "detail": "0c3559a0fddac0e5f42c4b10ed4961f5728f755c35cf04a55d51ff339c22f966"
+    },
+    {
+      "name": "leiss-orthodontics image-10.webp",
+      "pass": true,
+      "detail": "1a65993b964c14e631c8c2c54e692e1382f02334939f6df0cb560078f5a35dc8"
+    },
+    {
+      "name": "leiss-orthodontics image-11.webp",
+      "pass": true,
+      "detail": "e802d7121cf5ca91e31f858c98e9558ec484498442640ad05a1d3ef61a123141"
+    },
+    {
+      "name": "leiss-orthodontics image-12.webp",
+      "pass": true,
+      "detail": "36660a24a06f8dd53429a80a1bea379278b305be7a3850fbbbc7c229c6c674cb"
+    },
+    {
+      "name": "leiss-orthodontics font-display-400.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "leiss-orthodontics font-display-800.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "leiss-orthodontics font-text-400.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "leiss-orthodontics font-text-700.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "leiss-orthodontics top and full-page viewport screenshots",
+      "pass": true,
+      "detail": "top-of-page and full-page evidence at 320 through 1440"
+    },
+    {
+      "name": "lg-health-physicians-family-medicine-abbeyville exact or disclosed identity",
+      "pass": true,
+      "detail": "Disclosed exact-name typographic fallback; no icon, symbol, or first-party logo imitation."
+    },
+    {
+      "name": "lg-health-physicians-family-medicine-abbeyville identity presentation",
+      "pass": true,
+      "detail": "verified business name as ordinary live text"
+    },
+    {
+      "name": "lg-health-physicians-family-medicine-abbeyville private noindex",
+      "pass": true,
+      "detail": "noindex,nofollow"
+    },
+    {
+      "name": "lg-health-physicians-family-medicine-abbeyville Align type system",
+      "pass": true,
+      "detail": "self-hosted Plus Jakarta Sans 800 and DM Sans"
+    },
+    {
+      "name": "lg-health-physicians-family-medicine-abbeyville visible grain layer",
+      "pass": true,
+      "detail": "image and interface grain"
+    },
+    {
+      "name": "lg-health-physicians-family-medicine-abbeyville honest illustrative disclosure",
+      "pass": true,
+      "detail": "not actual staff, customers, facility, products, projects, or outcomes"
+    },
+    {
+      "name": "lg-health-physicians-family-medicine-abbeyville no continuous marquee",
+      "pass": true,
+      "detail": "reader-controlled optional strip"
+    },
+    {
+      "name": "lg-health-physicians-family-medicine-abbeyville site-specific board",
+      "pass": true,
+      "detail": "LG Health Physicians Family Medicine Abbeyville; lg-health-physicians-family-medicine-abbeyville"
+    },
+    {
+      "name": "lg-health-physicians-family-medicine-abbeyville board source exists",
+      "pass": true,
+      "detail": "2c0b880258d26d979fbb4f702b28d03664b69a9a3b7fe82ddafc7938a1d99364"
+    },
+    {
+      "name": "lg-health-physicians-family-medicine-abbeyville grain provenance",
+      "pass": true,
+      "detail": "f8b8b72ee2a84cf2aaa04ce069edaaa459ee61650e76f307254572db67efb813"
+    },
+    {
+      "name": "lg-health-physicians-family-medicine-abbeyville image-1.webp",
+      "pass": true,
+      "detail": "0fe78c666ce428320377aa20753af14046d9258d3cf6793f33565ebd33871188"
+    },
+    {
+      "name": "lg-health-physicians-family-medicine-abbeyville image-2.webp",
+      "pass": true,
+      "detail": "be34df052551202232add1efdc911691fa1673617437cc608055566fe005eebe"
+    },
+    {
+      "name": "lg-health-physicians-family-medicine-abbeyville image-3.webp",
+      "pass": true,
+      "detail": "8517ad716468cde33dae5a7a24af667bd61da2089ab46aca3d1e5265e4be4d36"
+    },
+    {
+      "name": "lg-health-physicians-family-medicine-abbeyville image-4.webp",
+      "pass": true,
+      "detail": "b4e9daab94ac83a0906ca2043080bd179373e940ee9af3da0f184c549812bc79"
+    },
+    {
+      "name": "lg-health-physicians-family-medicine-abbeyville image-5.webp",
+      "pass": true,
+      "detail": "f37830772451e9ab8566de5cadc0431b5dfc144c3aef1e3bdd6ac463e9224366"
+    },
+    {
+      "name": "lg-health-physicians-family-medicine-abbeyville image-6.webp",
+      "pass": true,
+      "detail": "836a0d50e426d4364a33ee4af5588ff70bf01faefb0432fc1a1abfae48335ddb"
+    },
+    {
+      "name": "lg-health-physicians-family-medicine-abbeyville image-7.webp",
+      "pass": true,
+      "detail": "f0906706ee3e048458bf4f48b78ccf044c02b6d77265fdb6395372fe6241a91e"
+    },
+    {
+      "name": "lg-health-physicians-family-medicine-abbeyville image-8.webp",
+      "pass": true,
+      "detail": "97009b625a50dd5c1b8b067e71e505a2ef19c9a4054821cfeb7f58638d686698"
+    },
+    {
+      "name": "lg-health-physicians-family-medicine-abbeyville image-9.webp",
+      "pass": true,
+      "detail": "c2994b358fd716b569089b194e32a47d94a18794b2fd3ca93047f96c60d12b73"
+    },
+    {
+      "name": "lg-health-physicians-family-medicine-abbeyville image-10.webp",
+      "pass": true,
+      "detail": "235aab8127a47315cfb035aabd2aeaccef40721c8f91a50bf5de4ac75fa9d5a1"
+    },
+    {
+      "name": "lg-health-physicians-family-medicine-abbeyville image-11.webp",
+      "pass": true,
+      "detail": "912f26a7ecc7be3622dd84d4513d18a26e2a7d3c4af98ffc4f957ef6f7880c94"
+    },
+    {
+      "name": "lg-health-physicians-family-medicine-abbeyville image-12.webp",
+      "pass": true,
+      "detail": "5f21abff3238a4a7f6ecd8b164bd8f57e1a4012d2fbaede0b16540d8e1c7a03e"
+    },
+    {
+      "name": "lg-health-physicians-family-medicine-abbeyville font-display-400.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "lg-health-physicians-family-medicine-abbeyville font-display-800.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "lg-health-physicians-family-medicine-abbeyville font-text-400.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "lg-health-physicians-family-medicine-abbeyville font-text-700.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "lg-health-physicians-family-medicine-abbeyville top and full-page viewport screenshots",
+      "pass": true,
+      "detail": "top-of-page and full-page evidence at 320 through 1440"
+    },
+    {
+      "name": "money-management-advisory-inc exact or disclosed identity",
+      "pass": true,
+      "detail": "flat border color #fcfbfc removed with deterministic FFmpeg colorkey; geometry unchanged"
+    },
+    {
+      "name": "money-management-advisory-inc identity presentation",
+      "pass": true,
+      "detail": "verified first-party logo"
+    },
+    {
+      "name": "money-management-advisory-inc private noindex",
+      "pass": true,
+      "detail": "noindex,nofollow"
+    },
+    {
+      "name": "money-management-advisory-inc Align type system",
+      "pass": true,
+      "detail": "self-hosted Plus Jakarta Sans 800 and DM Sans"
+    },
+    {
+      "name": "money-management-advisory-inc visible grain layer",
+      "pass": true,
+      "detail": "image and interface grain"
+    },
+    {
+      "name": "money-management-advisory-inc honest illustrative disclosure",
+      "pass": true,
+      "detail": "not actual staff, customers, facility, products, projects, or outcomes"
+    },
+    {
+      "name": "money-management-advisory-inc no continuous marquee",
+      "pass": true,
+      "detail": "reader-controlled optional strip"
+    },
+    {
+      "name": "money-management-advisory-inc site-specific board",
+      "pass": true,
+      "detail": "Money Management Advisory, Inc.; money-management-advisory-inc"
+    },
+    {
+      "name": "money-management-advisory-inc board source exists",
+      "pass": true,
+      "detail": "6e263f6b898cc2edc5b10916c1214cec082505325ae4c8f46528a56716f47cd7"
+    },
+    {
+      "name": "money-management-advisory-inc grain provenance",
+      "pass": true,
+      "detail": "f8b8b72ee2a84cf2aaa04ce069edaaa459ee61650e76f307254572db67efb813"
+    },
+    {
+      "name": "money-management-advisory-inc image-1.webp",
+      "pass": true,
+      "detail": "5a4990f9654d868fb3ce4046c8793ead92e15c96d6bc697e2b3b39bba800394c"
+    },
+    {
+      "name": "money-management-advisory-inc image-2.webp",
+      "pass": true,
+      "detail": "1664426cd45901f29db459f5addc2669a2dc5afe0e4eaf4cdb586fc4339e9e69"
+    },
+    {
+      "name": "money-management-advisory-inc image-3.webp",
+      "pass": true,
+      "detail": "e68edef60b5384fe559602b6c380072874762c84e01a06f75e17d421e8509410"
+    },
+    {
+      "name": "money-management-advisory-inc image-4.webp",
+      "pass": true,
+      "detail": "4c230a80dcb93660c1b6c00aad6d053353656656ef33b8765927232a565b56a9"
+    },
+    {
+      "name": "money-management-advisory-inc image-5.webp",
+      "pass": true,
+      "detail": "01f30d32551d437004dc2a60c3e6747ad502ea2dc7174c7e3c4d4a9d60eca0f6"
+    },
+    {
+      "name": "money-management-advisory-inc image-6.webp",
+      "pass": true,
+      "detail": "4c748f08359f1903d086b780c365d82f5f81edc7f5b5e658b7ad5573b9a4b6db"
+    },
+    {
+      "name": "money-management-advisory-inc image-7.webp",
+      "pass": true,
+      "detail": "45c960cfb9f1e01073822b2d76c60b7611d9a73077e4e4cd9162173d68f53070"
+    },
+    {
+      "name": "money-management-advisory-inc image-8.webp",
+      "pass": true,
+      "detail": "db15819c659a679362ff8e1c4bdb29fc0e9121a7626a36d07a8ff9d78840032d"
+    },
+    {
+      "name": "money-management-advisory-inc image-9.webp",
+      "pass": true,
+      "detail": "f5e23958fcf86d9a15ae8d87a2ef4c7ab8faf20dcf9f29b8f11d27d723f211ee"
+    },
+    {
+      "name": "money-management-advisory-inc image-10.webp",
+      "pass": true,
+      "detail": "4ba6705d9de6e1cab73e4dbde8bfb3846bcc22c9ca6acaf13d78a5e7d1b19a14"
+    },
+    {
+      "name": "money-management-advisory-inc image-11.webp",
+      "pass": true,
+      "detail": "c75181929e788f4bd9cbfc8f1e64b9ba6b063344a7355c7a88944a8e6fd80b93"
+    },
+    {
+      "name": "money-management-advisory-inc image-12.webp",
+      "pass": true,
+      "detail": "c384944c45b46a95d0f134a66d9e133b8805bf120c98573935cfd29f63602ce8"
+    },
+    {
+      "name": "money-management-advisory-inc font-display-400.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "money-management-advisory-inc font-display-800.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "money-management-advisory-inc font-text-400.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "money-management-advisory-inc font-text-700.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "money-management-advisory-inc top and full-page viewport screenshots",
+      "pass": true,
+      "detail": "top-of-page and full-page evidence at 320 through 1440"
+    },
+    {
+      "name": "mri-group exact or disclosed identity",
+      "pass": true,
+      "detail": "Disclosed exact-name typographic fallback; no icon, symbol, or first-party logo imitation."
+    },
+    {
+      "name": "mri-group identity presentation",
+      "pass": true,
+      "detail": "verified business name as ordinary live text"
+    },
+    {
+      "name": "mri-group private noindex",
+      "pass": true,
+      "detail": "noindex,nofollow"
+    },
+    {
+      "name": "mri-group Align type system",
+      "pass": true,
+      "detail": "self-hosted Plus Jakarta Sans 800 and DM Sans"
+    },
+    {
+      "name": "mri-group visible grain layer",
+      "pass": true,
+      "detail": "image and interface grain"
+    },
+    {
+      "name": "mri-group honest illustrative disclosure",
+      "pass": true,
+      "detail": "not actual staff, customers, facility, products, projects, or outcomes"
+    },
+    {
+      "name": "mri-group no continuous marquee",
+      "pass": true,
+      "detail": "reader-controlled optional strip"
+    },
+    {
+      "name": "mri-group site-specific board",
+      "pass": true,
+      "detail": "MRI Group; mri-group"
+    },
+    {
+      "name": "mri-group board source exists",
+      "pass": true,
+      "detail": "00b8377f616d0eb82f484093ebbc04a812b38ec242886dfb1a548ad1ab5b58b5"
+    },
+    {
+      "name": "mri-group grain provenance",
+      "pass": true,
+      "detail": "f8b8b72ee2a84cf2aaa04ce069edaaa459ee61650e76f307254572db67efb813"
+    },
+    {
+      "name": "mri-group image-1.webp",
+      "pass": true,
+      "detail": "27ac5a749456fc990836cdaba1f521bd497a6ff7d9ed55ecaa04dee85e06bcae"
+    },
+    {
+      "name": "mri-group image-2.webp",
+      "pass": true,
+      "detail": "d90e4dc5d6bb1af75112ea782cc92f2aaf426b2092321d629665fe25fe4f4307"
+    },
+    {
+      "name": "mri-group image-3.webp",
+      "pass": true,
+      "detail": "3402ce77e2193823389ada865ebe54cd4d88390e872940ab8528af430befbb9a"
+    },
+    {
+      "name": "mri-group image-4.webp",
+      "pass": true,
+      "detail": "c4a01746a1edc9d5d76cb525151c26aaf4c1fe24c5e4da8e725b0fe11e02ddc1"
+    },
+    {
+      "name": "mri-group image-5.webp",
+      "pass": true,
+      "detail": "4c1a2689840ac6ee705423cd3608d492e9361e6539addf02404ac66da5362113"
+    },
+    {
+      "name": "mri-group image-6.webp",
+      "pass": true,
+      "detail": "9af21acb1e55a45c5f4800dc03182273013d6bfdc37ad0c79b53a5d07cde3f1a"
+    },
+    {
+      "name": "mri-group image-7.webp",
+      "pass": true,
+      "detail": "ffaacd00ca589949581e0f24542fe53b3841e251ad2af10008425c7f76b518ae"
+    },
+    {
+      "name": "mri-group image-8.webp",
+      "pass": true,
+      "detail": "1ef3d72dd9f9ca4bd98519a72f09c42e52ee5b23b2d56c39246b2bcdbd2430d6"
+    },
+    {
+      "name": "mri-group image-9.webp",
+      "pass": true,
+      "detail": "82bca624f7ff456986e06d003d5ce625e8d099c16d89db27a21a21fc2d32a2ca"
+    },
+    {
+      "name": "mri-group image-10.webp",
+      "pass": true,
+      "detail": "90cc9bf3ec8ea3826ef2b6ed6152292cdfbb503ccaa9c523b00cef61b18da87e"
+    },
+    {
+      "name": "mri-group image-11.webp",
+      "pass": true,
+      "detail": "457aea869193551cbe310325f8c030734efb3e4d5d795ae7bdfaa144e5d9b431"
+    },
+    {
+      "name": "mri-group image-12.webp",
+      "pass": true,
+      "detail": "3d55a48074506895632dc688abaaa9dafc4575ca8a52840ddd669eaaca3cd511"
+    },
+    {
+      "name": "mri-group font-display-400.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "mri-group font-display-800.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "mri-group font-text-400.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "mri-group font-text-700.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "mri-group top and full-page viewport screenshots",
+      "pass": true,
+      "detail": "top-of-page and full-page evidence at 320 through 1440"
+    },
+    {
+      "name": "neiderer-s-pool-sales-and-service exact or disclosed identity",
+      "pass": true,
+      "detail": "Disclosed exact-name typographic fallback; no icon, symbol, or first-party logo imitation."
+    },
+    {
+      "name": "neiderer-s-pool-sales-and-service identity presentation",
+      "pass": true,
+      "detail": "verified business name as ordinary live text"
+    },
+    {
+      "name": "neiderer-s-pool-sales-and-service private noindex",
+      "pass": true,
+      "detail": "noindex,nofollow"
+    },
+    {
+      "name": "neiderer-s-pool-sales-and-service Align type system",
+      "pass": true,
+      "detail": "self-hosted Plus Jakarta Sans 800 and DM Sans"
+    },
+    {
+      "name": "neiderer-s-pool-sales-and-service visible grain layer",
+      "pass": true,
+      "detail": "image and interface grain"
+    },
+    {
+      "name": "neiderer-s-pool-sales-and-service honest illustrative disclosure",
+      "pass": true,
+      "detail": "not actual staff, customers, facility, products, projects, or outcomes"
+    },
+    {
+      "name": "neiderer-s-pool-sales-and-service no continuous marquee",
+      "pass": true,
+      "detail": "reader-controlled optional strip"
+    },
+    {
+      "name": "neiderer-s-pool-sales-and-service site-specific board",
+      "pass": true,
+      "detail": "Neiderer's Pool Sales & Service; neiderer-s-pool-sales-and-service"
+    },
+    {
+      "name": "neiderer-s-pool-sales-and-service board source exists",
+      "pass": true,
+      "detail": "8de184324f510534f051c4d100c154ac4b6d97791cd3368f28c643794c4756ca"
+    },
+    {
+      "name": "neiderer-s-pool-sales-and-service grain provenance",
+      "pass": true,
+      "detail": "f8b8b72ee2a84cf2aaa04ce069edaaa459ee61650e76f307254572db67efb813"
+    },
+    {
+      "name": "neiderer-s-pool-sales-and-service image-1.webp",
+      "pass": true,
+      "detail": "9f2d92a8e34fcfa623c931b77ea358f3376d32d77cff87f0fa70481f4ce146b5"
+    },
+    {
+      "name": "neiderer-s-pool-sales-and-service image-2.webp",
+      "pass": true,
+      "detail": "58c7d7b6726f2774dd88f7e2f884908d04036fb7a92838a3c7d08b888e6f3220"
+    },
+    {
+      "name": "neiderer-s-pool-sales-and-service image-3.webp",
+      "pass": true,
+      "detail": "f98938d0cc1565ff67ae616e578cffbec99717d0582d3b98c392b84dad00d200"
+    },
+    {
+      "name": "neiderer-s-pool-sales-and-service image-4.webp",
+      "pass": true,
+      "detail": "86cb0fede3082843a07d692ba4042ba3beb5b5ed9ef7f18391a47f6cc124dcfc"
+    },
+    {
+      "name": "neiderer-s-pool-sales-and-service image-5.webp",
+      "pass": true,
+      "detail": "8b41eb1fe733f2aed6f38ab7c3f5b47aeff9d720d95405bca7deb8495169143e"
+    },
+    {
+      "name": "neiderer-s-pool-sales-and-service image-6.webp",
+      "pass": true,
+      "detail": "9b043df2f6c4c25b021a57feda0f326be238863ab21956a25553185a5fd3f622"
+    },
+    {
+      "name": "neiderer-s-pool-sales-and-service image-7.webp",
+      "pass": true,
+      "detail": "e796af79573874d1d168a4257442e86cdfc9bb1e02e1e51f80196ed687749bd4"
+    },
+    {
+      "name": "neiderer-s-pool-sales-and-service image-8.webp",
+      "pass": true,
+      "detail": "204f9e9d64fd412aad0b98a539ffa848af336e6fc1416240e0b81fe5c491475e"
+    },
+    {
+      "name": "neiderer-s-pool-sales-and-service image-9.webp",
+      "pass": true,
+      "detail": "f55c4b65338e6ca5e36969939b88fdaa2936d5ab29aef9c4cc594d5d62a779fe"
+    },
+    {
+      "name": "neiderer-s-pool-sales-and-service image-10.webp",
+      "pass": true,
+      "detail": "a78c438fafd70be459d446b4b2711d3849edd853ba88f51ffe0d08fff6c22232"
+    },
+    {
+      "name": "neiderer-s-pool-sales-and-service image-11.webp",
+      "pass": true,
+      "detail": "e992003c81dafc2a8f56801ce58ae27e6b5474a38214076f6e5c51825ca13153"
+    },
+    {
+      "name": "neiderer-s-pool-sales-and-service image-12.webp",
+      "pass": true,
+      "detail": "0c25a92372783ee59ef6fb7cc1d337e71082fc504233931d471c4a7dfb71c7e8"
+    },
+    {
+      "name": "neiderer-s-pool-sales-and-service font-display-400.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "neiderer-s-pool-sales-and-service font-display-800.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "neiderer-s-pool-sales-and-service font-text-400.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "neiderer-s-pool-sales-and-service font-text-700.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "neiderer-s-pool-sales-and-service top and full-page viewport screenshots",
+      "pass": true,
+      "detail": "top-of-page and full-page evidence at 320 through 1440"
+    },
+    {
+      "name": "pacifico-marple-lincoln exact or disclosed identity",
+      "pass": true,
+      "detail": "none; exact first-party transparent asset"
+    },
+    {
+      "name": "pacifico-marple-lincoln identity presentation",
+      "pass": true,
+      "detail": "verified first-party logo"
+    },
+    {
+      "name": "pacifico-marple-lincoln private noindex",
+      "pass": true,
+      "detail": "noindex,nofollow"
+    },
+    {
+      "name": "pacifico-marple-lincoln Align type system",
+      "pass": true,
+      "detail": "self-hosted Plus Jakarta Sans 800 and DM Sans"
+    },
+    {
+      "name": "pacifico-marple-lincoln visible grain layer",
+      "pass": true,
+      "detail": "image and interface grain"
+    },
+    {
+      "name": "pacifico-marple-lincoln honest illustrative disclosure",
+      "pass": true,
+      "detail": "not actual staff, customers, facility, products, projects, or outcomes"
+    },
+    {
+      "name": "pacifico-marple-lincoln no continuous marquee",
+      "pass": true,
+      "detail": "reader-controlled optional strip"
+    },
+    {
+      "name": "pacifico-marple-lincoln site-specific board",
+      "pass": true,
+      "detail": "Pacifico Marple Lincoln; pacifico-marple-lincoln"
+    },
+    {
+      "name": "pacifico-marple-lincoln board source exists",
+      "pass": true,
+      "detail": "082ccb2dc48d880b86854663893fd550ab7039622d06ddaba17267dea2a98c3d"
+    },
+    {
+      "name": "pacifico-marple-lincoln grain provenance",
+      "pass": true,
+      "detail": "f8b8b72ee2a84cf2aaa04ce069edaaa459ee61650e76f307254572db67efb813"
+    },
+    {
+      "name": "pacifico-marple-lincoln image-1.webp",
+      "pass": true,
+      "detail": "9d80d947d97bcaa6a00686f9ce37184aa6ab924a20f1175e605e4f80ff3247a6"
+    },
+    {
+      "name": "pacifico-marple-lincoln image-2.webp",
+      "pass": true,
+      "detail": "92afd11af037125742dd084f185846737fdd61a07f6cd024a6d2ead9261e20ab"
+    },
+    {
+      "name": "pacifico-marple-lincoln image-3.webp",
+      "pass": true,
+      "detail": "a6c1313edf5544b48b89a26c3ff686e92172e2a3c044c4145e7e8c356806ca6c"
+    },
+    {
+      "name": "pacifico-marple-lincoln image-4.webp",
+      "pass": true,
+      "detail": "570d45f53474f61c235c1f9ca0c48c749d9a4e3905b05d2c13c5c1658f970e8e"
+    },
+    {
+      "name": "pacifico-marple-lincoln image-5.webp",
+      "pass": true,
+      "detail": "b9198121109012cbfe2aa2d005270ca1924894e009ad1775886c5b4b140cea5f"
+    },
+    {
+      "name": "pacifico-marple-lincoln image-6.webp",
+      "pass": true,
+      "detail": "4bfb013eb498fb99b296b278aa5a97217a4831c972ea875200278740404b999e"
+    },
+    {
+      "name": "pacifico-marple-lincoln image-7.webp",
+      "pass": true,
+      "detail": "0d50d595206b473dcd4a9ede956e559eb4c7e414d1c2df93f03b71b44c748f3f"
+    },
+    {
+      "name": "pacifico-marple-lincoln image-8.webp",
+      "pass": true,
+      "detail": "277251d396f5162fb9f4754bf39b7ffc4042dcb4a37efeb9479aab3612ced0db"
+    },
+    {
+      "name": "pacifico-marple-lincoln image-9.webp",
+      "pass": true,
+      "detail": "2e17d0cb7c006af66fd00417dd1162522e1fdaaaff51e48e21cf567ff9503d64"
+    },
+    {
+      "name": "pacifico-marple-lincoln image-10.webp",
+      "pass": true,
+      "detail": "6a0ed54beb717d6639c1c9c2ee373a9d19fba65ae85333abeb08605d0a5aaadb"
+    },
+    {
+      "name": "pacifico-marple-lincoln image-11.webp",
+      "pass": true,
+      "detail": "6d7297fcd774a020bc97cc4dfd3b075f6d80b6204880f20cbb379d47bfc5ba48"
+    },
+    {
+      "name": "pacifico-marple-lincoln image-12.webp",
+      "pass": true,
+      "detail": "57bb408544a3821e2c9e204609eb21b0ecd1e3d2dbe3d53fec29910f1438874b"
+    },
+    {
+      "name": "pacifico-marple-lincoln font-display-400.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "pacifico-marple-lincoln font-display-800.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "pacifico-marple-lincoln font-text-400.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "pacifico-marple-lincoln font-text-700.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "pacifico-marple-lincoln top and full-page viewport screenshots",
+      "pass": true,
+      "detail": "top-of-page and full-page evidence at 320 through 1440"
+    },
+    {
+      "name": "peachtree-city-foamcraft exact or disclosed identity",
+      "pass": true,
+      "detail": "Disclosed exact-name typographic fallback; no icon, symbol, or first-party logo imitation."
+    },
+    {
+      "name": "peachtree-city-foamcraft identity presentation",
+      "pass": true,
+      "detail": "verified business name as ordinary live text"
+    },
+    {
+      "name": "peachtree-city-foamcraft private noindex",
+      "pass": true,
+      "detail": "noindex,nofollow"
+    },
+    {
+      "name": "peachtree-city-foamcraft Align type system",
+      "pass": true,
+      "detail": "self-hosted Plus Jakarta Sans 800 and DM Sans"
+    },
+    {
+      "name": "peachtree-city-foamcraft visible grain layer",
+      "pass": true,
+      "detail": "image and interface grain"
+    },
+    {
+      "name": "peachtree-city-foamcraft honest illustrative disclosure",
+      "pass": true,
+      "detail": "not actual staff, customers, facility, products, projects, or outcomes"
+    },
+    {
+      "name": "peachtree-city-foamcraft no continuous marquee",
+      "pass": true,
+      "detail": "reader-controlled optional strip"
+    },
+    {
+      "name": "peachtree-city-foamcraft site-specific board",
+      "pass": true,
+      "detail": "Peachtree City Foamcraft; peachtree-city-foamcraft"
+    },
+    {
+      "name": "peachtree-city-foamcraft board source exists",
+      "pass": true,
+      "detail": "ba4cb1b56d4e7e7f51811ca1d589e7b63de536965a523c7adfe6fbfdd4049e27"
+    },
+    {
+      "name": "peachtree-city-foamcraft grain provenance",
+      "pass": true,
+      "detail": "f8b8b72ee2a84cf2aaa04ce069edaaa459ee61650e76f307254572db67efb813"
+    },
+    {
+      "name": "peachtree-city-foamcraft image-1.webp",
+      "pass": true,
+      "detail": "f7b123c2f41b335811b08e943efd5d2e23e191f429e322101b6206f45f2a83f7"
+    },
+    {
+      "name": "peachtree-city-foamcraft image-2.webp",
+      "pass": true,
+      "detail": "d8ee6dffc5129654bd481ef6240f203f22baee05958a9cb31043aee25ff9db23"
+    },
+    {
+      "name": "peachtree-city-foamcraft image-3.webp",
+      "pass": true,
+      "detail": "0673736de01522408c0e991ea6e70b288631baa19591e513d18070be05778a2b"
+    },
+    {
+      "name": "peachtree-city-foamcraft image-4.webp",
+      "pass": true,
+      "detail": "c76cb46c3fb38320156b2bac668df2b6e55a88d4342e1e87983d862058394ab6"
+    },
+    {
+      "name": "peachtree-city-foamcraft image-5.webp",
+      "pass": true,
+      "detail": "43a20c62cbd91ddee3ff5568a2bc26e914b11fcf408ad1d678d8b603dd3a761b"
+    },
+    {
+      "name": "peachtree-city-foamcraft image-6.webp",
+      "pass": true,
+      "detail": "675fb8254791b7bb63db211fcb21ddf69caf986a41b5f46c88402c851060c161"
+    },
+    {
+      "name": "peachtree-city-foamcraft image-7.webp",
+      "pass": true,
+      "detail": "1358dcdc75f8e746349a6a62bf3cf48bbe7b4995a678724352995098730d5507"
+    },
+    {
+      "name": "peachtree-city-foamcraft image-8.webp",
+      "pass": true,
+      "detail": "df40fc18fb999d587e0ce5bfa73dbd332bce1a9fd26d84131178905bafb01168"
+    },
+    {
+      "name": "peachtree-city-foamcraft image-9.webp",
+      "pass": true,
+      "detail": "cb192e825259f31fbe6ea101f9df3b2c908afbe04dc7fa7f834c83ca9e65ed18"
+    },
+    {
+      "name": "peachtree-city-foamcraft image-10.webp",
+      "pass": true,
+      "detail": "e3a78d2b85dffd16b1570c9c1555d11a683ff888b21a24e44b022a5e6100ea2e"
+    },
+    {
+      "name": "peachtree-city-foamcraft image-11.webp",
+      "pass": true,
+      "detail": "918c42b3196237fd9fcc8675f61f5affdd3de2f79a91d4bd3af0e5e2b10608ba"
+    },
+    {
+      "name": "peachtree-city-foamcraft image-12.webp",
+      "pass": true,
+      "detail": "41c52e01215eca79bb5c069b43031a80ddc565daba7f4abb7fb7d664567f6c37"
+    },
+    {
+      "name": "peachtree-city-foamcraft font-display-400.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "peachtree-city-foamcraft font-display-800.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "peachtree-city-foamcraft font-text-400.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "peachtree-city-foamcraft font-text-700.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "peachtree-city-foamcraft top and full-page viewport screenshots",
+      "pass": true,
+      "detail": "top-of-page and full-page evidence at 320 through 1440"
+    },
+    {
+      "name": "peter-zimmerman-architects exact or disclosed identity",
+      "pass": true,
+      "detail": "none; exact first-party transparent asset"
+    },
+    {
+      "name": "peter-zimmerman-architects identity presentation",
+      "pass": true,
+      "detail": "verified first-party logo"
+    },
+    {
+      "name": "peter-zimmerman-architects private noindex",
+      "pass": true,
+      "detail": "noindex,nofollow"
+    },
+    {
+      "name": "peter-zimmerman-architects Align type system",
+      "pass": true,
+      "detail": "self-hosted Plus Jakarta Sans 800 and DM Sans"
+    },
+    {
+      "name": "peter-zimmerman-architects visible grain layer",
+      "pass": true,
+      "detail": "image and interface grain"
+    },
+    {
+      "name": "peter-zimmerman-architects honest illustrative disclosure",
+      "pass": true,
+      "detail": "not actual staff, customers, facility, products, projects, or outcomes"
+    },
+    {
+      "name": "peter-zimmerman-architects no continuous marquee",
+      "pass": true,
+      "detail": "reader-controlled optional strip"
+    },
+    {
+      "name": "peter-zimmerman-architects site-specific board",
+      "pass": true,
+      "detail": "Peter Zimmerman Architects; peter-zimmerman-architects"
+    },
+    {
+      "name": "peter-zimmerman-architects board source exists",
+      "pass": true,
+      "detail": "a25b66a093b2b466ba0f42ebed1a508a27414e234bec7f461e7cb788a7902936"
+    },
+    {
+      "name": "peter-zimmerman-architects grain provenance",
+      "pass": true,
+      "detail": "f8b8b72ee2a84cf2aaa04ce069edaaa459ee61650e76f307254572db67efb813"
+    },
+    {
+      "name": "peter-zimmerman-architects image-1.webp",
+      "pass": true,
+      "detail": "81c5d21c16c67d9ede23484a2e1500933628159cb31825474cfa6352e3c02991"
+    },
+    {
+      "name": "peter-zimmerman-architects image-2.webp",
+      "pass": true,
+      "detail": "2b714d29e126bd23cdb2eec79345e8aaf01257d86e8c0a64dcffdfa7481e0b10"
+    },
+    {
+      "name": "peter-zimmerman-architects image-3.webp",
+      "pass": true,
+      "detail": "65f00337445fba643344b078c4686d5462712b8d6d85097820ec4b663bb0a9f1"
+    },
+    {
+      "name": "peter-zimmerman-architects image-4.webp",
+      "pass": true,
+      "detail": "5224e2c8917b5454a07fada97ee6a6bbd2e55d3e41faac537a2fa5163fe44580"
+    },
+    {
+      "name": "peter-zimmerman-architects image-5.webp",
+      "pass": true,
+      "detail": "bea1f0f1687cab17762e133c467b221a8dc2cfc7dadf7d2026c987d7f43bf606"
+    },
+    {
+      "name": "peter-zimmerman-architects image-6.webp",
+      "pass": true,
+      "detail": "63bc1e63bc1d625f2810acabc77c4bb20a6bcc6f66c81a8a4c6b4f9d3144d2b4"
+    },
+    {
+      "name": "peter-zimmerman-architects image-7.webp",
+      "pass": true,
+      "detail": "17f5eafa10ba48c6383c26034371b23f095c304252d83668f2b671cfbc27f35f"
+    },
+    {
+      "name": "peter-zimmerman-architects image-8.webp",
+      "pass": true,
+      "detail": "9641a8c6ab7a153d421590fb054b0777f7e405a55304b0a1cb8c612c3343dde4"
+    },
+    {
+      "name": "peter-zimmerman-architects image-9.webp",
+      "pass": true,
+      "detail": "d7a4ccb203bf1a8a6a7fdd971ebf953015f8c4b332bbc1334a83bda0a33132e6"
+    },
+    {
+      "name": "peter-zimmerman-architects image-10.webp",
+      "pass": true,
+      "detail": "5aa0955ace4f26d4b8c3e2f850e9e4226fe5dda499a13d802293b56a03da1e60"
+    },
+    {
+      "name": "peter-zimmerman-architects image-11.webp",
+      "pass": true,
+      "detail": "fe4e16227fc34b3fa5a15f77d5b9168def5c3dc185bcfeeecfb033b72e179c33"
+    },
+    {
+      "name": "peter-zimmerman-architects image-12.webp",
+      "pass": true,
+      "detail": "f60d32119ea522c01c4713cbc4877bb2f21b1610127678a0ed177627336bb338"
+    },
+    {
+      "name": "peter-zimmerman-architects font-display-400.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "peter-zimmerman-architects font-display-800.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "peter-zimmerman-architects font-text-400.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "peter-zimmerman-architects font-text-700.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "peter-zimmerman-architects top and full-page viewport screenshots",
+      "pass": true,
+      "detail": "top-of-page and full-page evidence at 320 through 1440"
+    },
+    {
+      "name": "street-stores-hardware-store exact or disclosed identity",
+      "pass": true,
+      "detail": "Disclosed exact-name typographic fallback; no icon, symbol, or first-party logo imitation."
+    },
+    {
+      "name": "street-stores-hardware-store identity presentation",
+      "pass": true,
+      "detail": "verified business name as ordinary live text"
+    },
+    {
+      "name": "street-stores-hardware-store private noindex",
+      "pass": true,
+      "detail": "noindex,nofollow"
+    },
+    {
+      "name": "street-stores-hardware-store Align type system",
+      "pass": true,
+      "detail": "self-hosted Plus Jakarta Sans 800 and DM Sans"
+    },
+    {
+      "name": "street-stores-hardware-store visible grain layer",
+      "pass": true,
+      "detail": "image and interface grain"
+    },
+    {
+      "name": "street-stores-hardware-store honest illustrative disclosure",
+      "pass": true,
+      "detail": "not actual staff, customers, facility, products, projects, or outcomes"
+    },
+    {
+      "name": "street-stores-hardware-store no continuous marquee",
+      "pass": true,
+      "detail": "reader-controlled optional strip"
+    },
+    {
+      "name": "street-stores-hardware-store site-specific board",
+      "pass": true,
+      "detail": "Street Stores Hardware Store; street-stores-hardware-store"
+    },
+    {
+      "name": "street-stores-hardware-store board source exists",
+      "pass": true,
+      "detail": "6cfe9a47c421f4aaec3aefd60b07a10f82b518c5d8cdda7e7224a370fe36801a"
+    },
+    {
+      "name": "street-stores-hardware-store grain provenance",
+      "pass": true,
+      "detail": "f8b8b72ee2a84cf2aaa04ce069edaaa459ee61650e76f307254572db67efb813"
+    },
+    {
+      "name": "street-stores-hardware-store image-1.webp",
+      "pass": true,
+      "detail": "5787356a02b3beed1d66c596368d3f7c4bb3b6d73096db379c659a276a5e89db"
+    },
+    {
+      "name": "street-stores-hardware-store image-2.webp",
+      "pass": true,
+      "detail": "fc6b757b117cf4ebead567c8badc2d19a46ccd0a48f40cc5001c28f7c10c5667"
+    },
+    {
+      "name": "street-stores-hardware-store image-3.webp",
+      "pass": true,
+      "detail": "3c203e9b5e78f50fdcff9bc177d4cca626cd9283f40aac3f6442321f66214034"
+    },
+    {
+      "name": "street-stores-hardware-store image-4.webp",
+      "pass": true,
+      "detail": "93898281940aadc29cb735093533d9e2dad6bce77ed60311679efa042849b934"
+    },
+    {
+      "name": "street-stores-hardware-store image-5.webp",
+      "pass": true,
+      "detail": "e1c92c832fba4b259f2c5aedb2cbb8d0db22da8336fb4002f1a29297ebcc09ca"
+    },
+    {
+      "name": "street-stores-hardware-store image-6.webp",
+      "pass": true,
+      "detail": "5e9d390c24073ff15b8e43827b68aee2ebf184145f96c1e9465a07ec876bf41f"
+    },
+    {
+      "name": "street-stores-hardware-store image-7.webp",
+      "pass": true,
+      "detail": "4440253906a56b2b344aaf9f80afae2ae1076458878e5572ef4b69909cbafc33"
+    },
+    {
+      "name": "street-stores-hardware-store image-8.webp",
+      "pass": true,
+      "detail": "fb9094eb874435da224664a4df1f85c31d804884edcba92caaa33dc4c7577fd5"
+    },
+    {
+      "name": "street-stores-hardware-store image-9.webp",
+      "pass": true,
+      "detail": "78d1686e069ad95698f076ed514af5b76c183600dcc264fab27fb2eb6c116de8"
+    },
+    {
+      "name": "street-stores-hardware-store image-10.webp",
+      "pass": true,
+      "detail": "96c7909d21f7a424f881e93e6fbc89fce14e3606ca21852268315048756752bd"
+    },
+    {
+      "name": "street-stores-hardware-store image-11.webp",
+      "pass": true,
+      "detail": "31057a9ce648dab1b85a08bdb6134f1022521e9c22c6242595cc0d414c709dd1"
+    },
+    {
+      "name": "street-stores-hardware-store image-12.webp",
+      "pass": true,
+      "detail": "3bb3dd4d65a35e0630e7599e4b4144a8ce668e0ac47723610ff5efe3ee06ff49"
+    },
+    {
+      "name": "street-stores-hardware-store font-display-400.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "street-stores-hardware-store font-display-800.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "street-stores-hardware-store font-text-400.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "street-stores-hardware-store font-text-700.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "street-stores-hardware-store top and full-page viewport screenshots",
+      "pass": true,
+      "detail": "top-of-page and full-page evidence at 320 through 1440"
+    },
+    {
+      "name": "wesley-works-real-estate exact or disclosed identity",
+      "pass": true,
+      "detail": "flat border color #000000 removed with deterministic FFmpeg colorkey; geometry unchanged"
+    },
+    {
+      "name": "wesley-works-real-estate identity presentation",
+      "pass": true,
+      "detail": "verified first-party logo"
+    },
+    {
+      "name": "wesley-works-real-estate private noindex",
+      "pass": true,
+      "detail": "noindex,nofollow"
+    },
+    {
+      "name": "wesley-works-real-estate Align type system",
+      "pass": true,
+      "detail": "self-hosted Plus Jakarta Sans 800 and DM Sans"
+    },
+    {
+      "name": "wesley-works-real-estate visible grain layer",
+      "pass": true,
+      "detail": "image and interface grain"
+    },
+    {
+      "name": "wesley-works-real-estate honest illustrative disclosure",
+      "pass": true,
+      "detail": "not actual staff, customers, facility, products, projects, or outcomes"
+    },
+    {
+      "name": "wesley-works-real-estate no continuous marquee",
+      "pass": true,
+      "detail": "reader-controlled optional strip"
+    },
+    {
+      "name": "wesley-works-real-estate site-specific board",
+      "pass": true,
+      "detail": "Wesley Works Real Estate; wesley-works-real-estate"
+    },
+    {
+      "name": "wesley-works-real-estate board source exists",
+      "pass": true,
+      "detail": "91f770a3eedf5031b5ec2509a923e23eb2010fbede96a24c73a33be5cd5deadc"
+    },
+    {
+      "name": "wesley-works-real-estate grain provenance",
+      "pass": true,
+      "detail": "f8b8b72ee2a84cf2aaa04ce069edaaa459ee61650e76f307254572db67efb813"
+    },
+    {
+      "name": "wesley-works-real-estate image-1.webp",
+      "pass": true,
+      "detail": "c457fa8bd9aed88d7cf15fb5a49c1da4725288cb6d4141a3caa99e462d2beb88"
+    },
+    {
+      "name": "wesley-works-real-estate image-2.webp",
+      "pass": true,
+      "detail": "cbe528ee79577ba8c5520793fc8cdcb12f10d1c3ceb8b39947d427deb914652d"
+    },
+    {
+      "name": "wesley-works-real-estate image-3.webp",
+      "pass": true,
+      "detail": "1ce5390c839a17e3d6e382d5fb8b503f3e275b45ab6d12d4e574c8158c09c07e"
+    },
+    {
+      "name": "wesley-works-real-estate image-4.webp",
+      "pass": true,
+      "detail": "9a5115c7833a3bf80e078100cfcf499118e939b5f5dd9c5b4460b889d5bfc6da"
+    },
+    {
+      "name": "wesley-works-real-estate image-5.webp",
+      "pass": true,
+      "detail": "82eb452969257784634ed90e1cc60e1ee6784300a36bd8c0bacb7eac2789ca67"
+    },
+    {
+      "name": "wesley-works-real-estate image-6.webp",
+      "pass": true,
+      "detail": "4ecd4fcaabd7f16f1301b0e557d23810220c414bc94bdfeeeac37fac99ba3dca"
+    },
+    {
+      "name": "wesley-works-real-estate image-7.webp",
+      "pass": true,
+      "detail": "a94edeb41240cf930eb898abf1c05136e57456b7b1c570116a266dbb491e0c4f"
+    },
+    {
+      "name": "wesley-works-real-estate image-8.webp",
+      "pass": true,
+      "detail": "2244825d8a5f4c59f20282187e52da08b2a75aab157c3925cf026e6d832d2155"
+    },
+    {
+      "name": "wesley-works-real-estate image-9.webp",
+      "pass": true,
+      "detail": "9af1ab86d9c6c5fe8ab6f9502dcf5855d11e86ad800a7f653cd5a34ed3022b85"
+    },
+    {
+      "name": "wesley-works-real-estate image-10.webp",
+      "pass": true,
+      "detail": "63f284b3db5b6f176f0ee74d22bfdf8d3ffcd8a5d1c59d29d69c679872287bfb"
+    },
+    {
+      "name": "wesley-works-real-estate image-11.webp",
+      "pass": true,
+      "detail": "37a4064f0437fef9dc70e19d6364d88b1c66803bfd49567d00a157911f0600d9"
+    },
+    {
+      "name": "wesley-works-real-estate image-12.webp",
+      "pass": true,
+      "detail": "2ab82367889f8dbba6f5e24d1e3156004f051385bf9343c5f0e20b56fc41f82d"
+    },
+    {
+      "name": "wesley-works-real-estate font-display-400.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "wesley-works-real-estate font-display-800.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "wesley-works-real-estate font-text-400.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "wesley-works-real-estate font-text-700.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "wesley-works-real-estate top and full-page viewport screenshots",
+      "pass": true,
+      "detail": "top-of-page and full-page evidence at 320 through 1440"
+    },
+    {
+      "name": "wilkie-lexus exact or disclosed identity",
+      "pass": true,
+      "detail": "Disclosed exact-name typographic fallback; no icon, symbol, or first-party logo imitation."
+    },
+    {
+      "name": "wilkie-lexus identity presentation",
+      "pass": true,
+      "detail": "verified business name as ordinary live text"
+    },
+    {
+      "name": "wilkie-lexus private noindex",
+      "pass": true,
+      "detail": "noindex,nofollow"
+    },
+    {
+      "name": "wilkie-lexus Align type system",
+      "pass": true,
+      "detail": "self-hosted Plus Jakarta Sans 800 and DM Sans"
+    },
+    {
+      "name": "wilkie-lexus visible grain layer",
+      "pass": true,
+      "detail": "image and interface grain"
+    },
+    {
+      "name": "wilkie-lexus honest illustrative disclosure",
+      "pass": true,
+      "detail": "not actual staff, customers, facility, products, projects, or outcomes"
+    },
+    {
+      "name": "wilkie-lexus no continuous marquee",
+      "pass": true,
+      "detail": "reader-controlled optional strip"
+    },
+    {
+      "name": "wilkie-lexus site-specific board",
+      "pass": true,
+      "detail": "Wilkie Lexus; wilkie-lexus"
+    },
+    {
+      "name": "wilkie-lexus board source exists",
+      "pass": true,
+      "detail": "09bb24f3b2473dbadc3b6ee64716afef8ef9858a4fa42dc5dd9a73d5d5e42fae"
+    },
+    {
+      "name": "wilkie-lexus grain provenance",
+      "pass": true,
+      "detail": "f8b8b72ee2a84cf2aaa04ce069edaaa459ee61650e76f307254572db67efb813"
+    },
+    {
+      "name": "wilkie-lexus image-1.webp",
+      "pass": true,
+      "detail": "d02666331fbb2fd729a238594a1935d69b7f1c7039cdf4e1cbcaad2ba3f8e00e"
+    },
+    {
+      "name": "wilkie-lexus image-2.webp",
+      "pass": true,
+      "detail": "8d3bc06fc4e11b0e9686ed2ae17288ecad931d97c9286648fc6b4be796430a47"
+    },
+    {
+      "name": "wilkie-lexus image-3.webp",
+      "pass": true,
+      "detail": "2d8c0f3b3beeb80d00a3d0fe86c42a43be7f353cde51fd4c68945745065be1ed"
+    },
+    {
+      "name": "wilkie-lexus image-4.webp",
+      "pass": true,
+      "detail": "d720d7f247f3f672e297378d4da31179c755476c5bb4458ae9198930048fe5fa"
+    },
+    {
+      "name": "wilkie-lexus image-5.webp",
+      "pass": true,
+      "detail": "89aa5f13b25e9a87d26bc49bf07c428dbf72460a768292b0fc923a484aa7cfc7"
+    },
+    {
+      "name": "wilkie-lexus image-6.webp",
+      "pass": true,
+      "detail": "70105d8935964092b4a885d4f3b24c334627b2395c5b37ee616544cdbb95dda3"
+    },
+    {
+      "name": "wilkie-lexus image-7.webp",
+      "pass": true,
+      "detail": "6a840bb669fa0af41000373539e19c353ec74efcc93231917feebb48105945dc"
+    },
+    {
+      "name": "wilkie-lexus image-8.webp",
+      "pass": true,
+      "detail": "563bd2976901a09bb356c8117db05143fb77137c22263c1e9821ed6e17313f68"
+    },
+    {
+      "name": "wilkie-lexus image-9.webp",
+      "pass": true,
+      "detail": "9cd6ff185e2ab977639c4f1355c005d1b9d3a01166e324cbafb1c7b9a6514096"
+    },
+    {
+      "name": "wilkie-lexus image-10.webp",
+      "pass": true,
+      "detail": "099a8d70e114357630487cc58118929b9032fe540775bd879d6be5e9e142fb3d"
+    },
+    {
+      "name": "wilkie-lexus image-11.webp",
+      "pass": true,
+      "detail": "ffb13c5c1b436a91b0bee33bc8b8808261db1c5b11ee2f783cfd48adf0863677"
+    },
+    {
+      "name": "wilkie-lexus image-12.webp",
+      "pass": true,
+      "detail": "4b912b1e5326eb2f58e12bdbcf8dd20d1eeed5b0cf94800b0d671f991cfd160d"
+    },
+    {
+      "name": "wilkie-lexus font-display-400.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "wilkie-lexus font-display-800.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "wilkie-lexus font-text-400.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "wilkie-lexus font-text-700.woff2",
+      "pass": true,
+      "detail": "valid self-hosted WOFF2"
+    },
+    {
+      "name": "wilkie-lexus top and full-page viewport screenshots",
+      "pass": true,
+      "detail": "top-of-page and full-page evidence at 320 through 1440"
+    },
+    {
+      "name": "20 unique business-specific boards",
+      "pass": true,
+      "detail": "20 unique board hashes; 0 duplicates"
+    },
+    {
+      "name": "240 unique content derivatives",
+      "pass": true,
+      "detail": "240 unique image hashes; 0 duplicates"
+    }
+  ],
+  "failures": []
+}

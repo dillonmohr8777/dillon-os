@@ -389,3 +389,32 @@ it via `cmdkey`; paste the three vault credentials; unpause both deployments;
 approve the first verification runs on the seven new agents (researcher ~20c,
 coordinator ~70c, designer ~$1, reporter ~20c after a 2c cred probe); the
 expiry-survival test on `sesn_01U2CouEefMGvwhMQajKLJsN` is still pending.
+
+## Checkpoint 2026-09-14 19:55 — Codex process leak, first fix applied
+
+Root cause, measured from the process tree (one `codex.exe`, PID at the time 7808): Codex restores every open thread at launch and each thread spawns one process per enabled stdio MCP server plus its own node_repl pair and two builtins — about 11 processes per thread. 8 restored threads = 89 children. The guard (`Protect-AgentSettings.ps1`) only enforces block count (>=20), byte size (>=10000) and a few required keys; it does not touch concurrency or `enabled` flags, so `enabled = false` edits hold (verified 90 s, hash `f947462b`).
+
+Changed in `~/.codex/config.toml` (backup `config.toml.bak-20260914-1944-preclean`): `max_concurrent_threads_per_session` 6 -> 3 in `[agents]` and `[features.multi_agent_v2]`; `enabled = false` on google-cloud, google-ads, google-analytics, agent-memory, wordpress-com (zero calls in 7 days of rollouts). context7 edit was blocked by the permission classifier; it is a URL server so it spawns nothing anyway. Total processes 660 -> 635 after restart (Codex-owned 40 -> 39): the config change bounds fan-out, it does not shrink the restored-thread baseline.
+
+The remaining lever is thread count, which is Dillon's: archive stale Codex threads in the app. Each closed thread frees ~11 processes. Per-thread stdio servers still enabled and their 7-day call counts: node_repl 113, marketing-chief-files 16, hubspot-jason-momentum 16, local-ai-worker 9, hermes-local-control 2, cua-driver 59.
+
+## Checkpoint 2026-09-14 20:30 — Codex smoothness pass, measured
+
+CPU was pinned at 99-100% before any Codex-side cause: two of Dillon's own guard loops had burned 14,057 s and 5,784 s of CPU since logon. Both were idle-polling at 20 Hz.
+
+Changed (backups `*.bak-20260914-preloop` beside each file):
+- `~/.codex/tools/Invoke-NoPopupGuard.ps1` idle sleep 50 ms -> 2000 ms (39% of a core -> 8.5% measured over 60 s).
+- `~/.codex/tools/Watch-AgentSettings.ps1 -Continuous` idle sleep 50 ms -> 30 s; the FileSystemWatchers still wake it on change (16% -> 2.8%).
+- Scheduled task `Codex-Settings-Guard` repetition PT1M -> PT5M (it is the one-shot twin of the continuous watcher; both triggers now carry PT5M).
+- Announced per the operating contract: these are agent-facing guard scripts; new guard processes load the change (both were restarted and re-measured).
+
+Not Codex, but what is actually eating the machine right now: a HyperFrames render (`hyperframes render targets/tall`, puppeteer Chrome with SwiftShader, PID 45376) at 7.2 cores since 20:10, launched from a Claude Code bash. Transient; let it finish. The guard-launched headless `claude-chrome` (port 9223) holds 14 tabs including five dead Facebook login pages.
+
+Left for Dillon (each is a UI or product decision, not a config fix):
+- Archive stale Codex threads: 8 restored threads = 89 child processes; ~11 per thread.
+- Plugins: 25 enabled, every one loads into every session's context. Candidates: align-hcm-image-gen (employment ended 2026-09-02), sales/data-analytics/product-design role packs, sol-advisor, chatcut. The classifier blocked my config edit for these; toggle in the app.
+- `~/.codex/sessions` is 18 GB / 2,134 rollouts; 761 files (5.4 GB) are 31-60 days old; one July rollout is 1.1 GB. Codex indexes this at launch.
+- `Hermes-Reliability-Watchdog` fails every 2 min (rc=1) because Cursor.exe is missing at `AppData\Local\Programs\cursor\` while its uninstall key still exists: reinstall Cursor or drop the cursor-desktop check.
+- `MarketingChief-SitesBridge` fails every 15 min: "local Studio snapshot failed client coverage checks".
+- Reliability root cause is still hardware: 5 unclean power-offs (kernel-power 41) in the last 7 days, zero GPU TDRs.
+- Codex in-app browser cache is 2.4 GB (`LocalCache\Roaming\Codex\web\Codex\Default\Partitions\codex-browser-app`); clearable with Codex closed, low value.

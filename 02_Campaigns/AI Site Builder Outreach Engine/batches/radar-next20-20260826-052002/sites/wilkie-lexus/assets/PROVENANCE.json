@@ -1,0 +1,252 @@
+{
+  "slug": "wilkie-lexus",
+  "preparedAt": "2026-08-26T10:41:58.414Z",
+  "sourceSite": "https://www.wilkielexus.com/",
+  "sourceFinalUrl": "https://www.wilkielexus.com/",
+  "sourcePageSha256": "60ab8b9429807b33af3ff7f24773271a9bf2c1be3b7dcd44706e1ea03aca1782",
+  "exactLogoRequired": false,
+  "exactLogoSha256": "765092a5794b19f16ddc59299784b26865f7822b0a61262a49a28faadac67f43",
+  "identityFallback": true,
+  "generatedImagePolicy": "All content visuals come from an Align HCM Image Gen editorial board, carry embedded plus interface-level grain, and are disclosed as illustrative concept material. They never serve as proof about the business, its staff, facilities, products, clients, or outcomes.",
+  "assets": [
+    {
+      "role": "verified exact-name identity fallback",
+      "output": "logo.svg",
+      "sourceUrl": "https://www.wilkielexus.com/",
+      "sourceSha256": "765092a5794b19f16ddc59299784b26865f7822b0a61262a49a28faadac67f43",
+      "outputSha256": "765092a5794b19f16ddc59299784b26865f7822b0a61262a49a28faadac67f43",
+      "transformation": "Disclosed exact-name typographic fallback; no icon, symbol, or first-party logo imitation.",
+      "transparent": true
+    },
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "wilkie-lexus",
+      "boardDescriptor": "car",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/wilkie-lexus.png",
+      "sourceSha256": "09bb24f3b2473dbadc3b6ee64716afef8ef9858a4fa42dc5dd9a73d5d5e42fae",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Wilkie Lexus. Four distinct but cohesive unlabelled panels in a generic premium automotive dealership and service environment: a service technician in unbranded workwear inspecting a modern vehicle wheel with proper tools; a sales consultant and customer reviewing a vehicle interior from non-identifying angles; a clean detail of a mechanic's diagnostic tablet and tools beside a car hood; a quiet showroom-like composition of an anonymous luxury vehicle silhouette under grounded daylight. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:28,eq=saturation=1.040:contrast=1.082:brightness=-0.018,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "d02666331fbb2fd729a238594a1935d69b7f1c7039cdf4e1cbcaad2ba3f8e00e",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "wilkie-lexus",
+      "boardDescriptor": "car",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/wilkie-lexus.png",
+      "sourceSha256": "09bb24f3b2473dbadc3b6ee64716afef8ef9858a4fa42dc5dd9a73d5d5e42fae",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Wilkie Lexus. Four distinct but cohesive unlabelled panels in a generic premium automotive dealership and service environment: a service technician in unbranded workwear inspecting a modern vehicle wheel with proper tools; a sales consultant and customer reviewing a vehicle interior from non-identifying angles; a clean detail of a mechanic's diagnostic tablet and tools beside a car hood; a quiet showroom-like composition of an anonymous luxury vehicle silhouette under grounded daylight. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:56,eq=saturation=0.940:contrast=1.046:brightness=-0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "8d3bc06fc4e11b0e9686ed2ae17288ecad931d97c9286648fc6b4be796430a47",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "wilkie-lexus",
+      "boardDescriptor": "car",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/wilkie-lexus.png",
+      "sourceSha256": "09bb24f3b2473dbadc3b6ee64716afef8ef9858a4fa42dc5dd9a73d5d5e42fae",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Wilkie Lexus. Four distinct but cohesive unlabelled panels in a generic premium automotive dealership and service environment: a service technician in unbranded workwear inspecting a modern vehicle wheel with proper tools; a sales consultant and customer reviewing a vehicle interior from non-identifying angles; a clean detail of a mechanic's diagnostic tablet and tools beside a car hood; a quiet showroom-like composition of an anonymous luxury vehicle silhouette under grounded daylight. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=0.965:contrast=1.010:brightness=0.000,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "2d8c0f3b3beeb80d00a3d0fe86c42a43be7f353cde51fd4c68945745065be1ed",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "wilkie-lexus",
+      "boardDescriptor": "car",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/wilkie-lexus.png",
+      "sourceSha256": "09bb24f3b2473dbadc3b6ee64716afef8ef9858a4fa42dc5dd9a73d5d5e42fae",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Wilkie Lexus. Four distinct but cohesive unlabelled panels in a generic premium automotive dealership and service environment: a service technician in unbranded workwear inspecting a modern vehicle wheel with proper tools; a sales consultant and customer reviewing a vehicle interior from non-identifying angles; a clean detail of a mechanic's diagnostic tablet and tools beside a car hood; a quiet showroom-like composition of an anonymous luxury vehicle silhouette under grounded daylight. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:28,eq=saturation=0.990:contrast=1.064:brightness=0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "d720d7f247f3f672e297378d4da31179c755476c5bb4458ae9198930048fe5fa",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "wilkie-lexus",
+      "boardDescriptor": "car",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/wilkie-lexus.png",
+      "sourceSha256": "09bb24f3b2473dbadc3b6ee64716afef8ef9858a4fa42dc5dd9a73d5d5e42fae",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Wilkie Lexus. Four distinct but cohesive unlabelled panels in a generic premium automotive dealership and service environment: a service technician in unbranded workwear inspecting a modern vehicle wheel with proper tools; a sales consultant and customer reviewing a vehicle interior from non-identifying angles; a clean detail of a mechanic's diagnostic tablet and tools beside a car hood; a quiet showroom-like composition of an anonymous luxury vehicle silhouette under grounded daylight. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:56,eq=saturation=1.015:contrast=1.028:brightness=-0.018,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "89aa5f13b25e9a87d26bc49bf07c428dbf72460a768292b0fc923a484aa7cfc7",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "wilkie-lexus",
+      "boardDescriptor": "car",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/wilkie-lexus.png",
+      "sourceSha256": "09bb24f3b2473dbadc3b6ee64716afef8ef9858a4fa42dc5dd9a73d5d5e42fae",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Wilkie Lexus. Four distinct but cohesive unlabelled panels in a generic premium automotive dealership and service environment: a service technician in unbranded workwear inspecting a modern vehicle wheel with proper tools; a sales consultant and customer reviewing a vehicle interior from non-identifying angles; a clean detail of a mechanic's diagnostic tablet and tools beside a car hood; a quiet showroom-like composition of an anonymous luxury vehicle silhouette under grounded daylight. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:0,eq=saturation=1.040:contrast=1.082:brightness=-0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "70105d8935964092b4a885d4f3b24c334627b2395c5b37ee616544cdbb95dda3",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "wilkie-lexus",
+      "boardDescriptor": "car",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/wilkie-lexus.png",
+      "sourceSha256": "09bb24f3b2473dbadc3b6ee64716afef8ef9858a4fa42dc5dd9a73d5d5e42fae",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Wilkie Lexus. Four distinct but cohesive unlabelled panels in a generic premium automotive dealership and service environment: a service technician in unbranded workwear inspecting a modern vehicle wheel with proper tools; a sales consultant and customer reviewing a vehicle interior from non-identifying angles; a clean detail of a mechanic's diagnostic tablet and tools beside a car hood; a quiet showroom-like composition of an anonymous luxury vehicle silhouette under grounded daylight. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:28,eq=saturation=0.940:contrast=1.046:brightness=0.000,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "6a840bb669fa0af41000373539e19c353ec74efcc93231917feebb48105945dc",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "wilkie-lexus",
+      "boardDescriptor": "car",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/wilkie-lexus.png",
+      "sourceSha256": "09bb24f3b2473dbadc3b6ee64716afef8ef9858a4fa42dc5dd9a73d5d5e42fae",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Wilkie Lexus. Four distinct but cohesive unlabelled panels in a generic premium automotive dealership and service environment: a service technician in unbranded workwear inspecting a modern vehicle wheel with proper tools; a sales consultant and customer reviewing a vehicle interior from non-identifying angles; a clean detail of a mechanic's diagnostic tablet and tools beside a car hood; a quiet showroom-like composition of an anonymous luxury vehicle silhouette under grounded daylight. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:56,eq=saturation=0.965:contrast=1.010:brightness=0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "563bd2976901a09bb356c8117db05143fb77137c22263c1e9821ed6e17313f68",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "wilkie-lexus",
+      "boardDescriptor": "car",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/wilkie-lexus.png",
+      "sourceSha256": "09bb24f3b2473dbadc3b6ee64716afef8ef9858a4fa42dc5dd9a73d5d5e42fae",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Wilkie Lexus. Four distinct but cohesive unlabelled panels in a generic premium automotive dealership and service environment: a service technician in unbranded workwear inspecting a modern vehicle wheel with proper tools; a sales consultant and customer reviewing a vehicle interior from non-identifying angles; a clean detail of a mechanic's diagnostic tablet and tools beside a car hood; a quiet showroom-like composition of an anonymous luxury vehicle silhouette under grounded daylight. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:0,eq=saturation=0.990:contrast=1.064:brightness=-0.018,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "9cd6ff185e2ab977639c4f1355c005d1b9d3a01166e324cbafb1c7b9a6514096",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "wilkie-lexus",
+      "boardDescriptor": "car",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/wilkie-lexus.png",
+      "sourceSha256": "09bb24f3b2473dbadc3b6ee64716afef8ef9858a4fa42dc5dd9a73d5d5e42fae",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Wilkie Lexus. Four distinct but cohesive unlabelled panels in a generic premium automotive dealership and service environment: a service technician in unbranded workwear inspecting a modern vehicle wheel with proper tools; a sales consultant and customer reviewing a vehicle interior from non-identifying angles; a clean detail of a mechanic's diagnostic tablet and tools beside a car hood; a quiet showroom-like composition of an anonymous luxury vehicle silhouette under grounded daylight. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:28,eq=saturation=1.015:contrast=1.028:brightness=-0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "099a8d70e114357630487cc58118929b9032fe540775bd879d6be5e9e142fb3d",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "wilkie-lexus",
+      "boardDescriptor": "car",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/wilkie-lexus.png",
+      "sourceSha256": "09bb24f3b2473dbadc3b6ee64716afef8ef9858a4fa42dc5dd9a73d5d5e42fae",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Wilkie Lexus. Four distinct but cohesive unlabelled panels in a generic premium automotive dealership and service environment: a service technician in unbranded workwear inspecting a modern vehicle wheel with proper tools; a sales consultant and customer reviewing a vehicle interior from non-identifying angles; a clean detail of a mechanic's diagnostic tablet and tools beside a car hood; a quiet showroom-like composition of an anonymous luxury vehicle silhouette under grounded daylight. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:56,eq=saturation=1.040:contrast=1.082:brightness=0.000,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "ffb13c5c1b436a91b0bee33bc8b8808261db1c5b11ee2f783cfd48adf0863677",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "wilkie-lexus",
+      "boardDescriptor": "car",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/wilkie-lexus.png",
+      "sourceSha256": "09bb24f3b2473dbadc3b6ee64716afef8ef9858a4fa42dc5dd9a73d5d5e42fae",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Wilkie Lexus. Four distinct but cohesive unlabelled panels in a generic premium automotive dealership and service environment: a service technician in unbranded workwear inspecting a modern vehicle wheel with proper tools; a sales consultant and customer reviewing a vehicle interior from non-identifying angles; a clean detail of a mechanic's diagnostic tablet and tools beside a car hood; a quiet showroom-like composition of an anonymous luxury vehicle silhouette under grounded daylight. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:0,eq=saturation=0.940:contrast=1.046:brightness=0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "4b912b1e5326eb2f58e12bdbcf8dd20d1eeed5b0cf94800b0d671f991cfd160d",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    }
+  ],
+  "fonts": {
+    "pair": {
+      "id": "plus-jakarta-dm-sans",
+      "display": "Plus Jakarta Sans",
+      "text": "DM Sans"
+    },
+    "source": "Google Fonts CSS API",
+    "files": [
+      {
+        "file": "font-display-400.woff2",
+        "sha256": "153fc85b70298beeb1d61a5f723331649e7f23bb77302a66e61cb3e2fbdb5e79"
+      },
+      {
+        "file": "font-display-800.woff2",
+        "sha256": "153fc85b70298beeb1d61a5f723331649e7f23bb77302a66e61cb3e2fbdb5e79"
+      },
+      {
+        "file": "font-text-400.woff2",
+        "sha256": "9fea608a947e67020c33cad9a6fe3d60c54119dfb8cff87768a8117a15ed7543"
+      },
+      {
+        "file": "font-text-700.woff2",
+        "sha256": "9fea608a947e67020c33cad9a6fe3d60c54119dfb8cff87768a8117a15ed7543"
+      }
+    ]
+  }
+}

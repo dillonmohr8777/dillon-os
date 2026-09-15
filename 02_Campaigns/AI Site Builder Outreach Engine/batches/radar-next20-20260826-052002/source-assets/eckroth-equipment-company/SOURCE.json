@@ -1,0 +1,122 @@
+{
+  "sourceUrl": "https://www.eckrothequipment.com/",
+  "finalUrl": "https://www.eckrothequipment.com/",
+  "sourceDomain": "eckrothequipment.com",
+  "httpStatus": 200,
+  "contentType": "",
+  "pageSha256": "8419925879466de68ec8c0752c563399e5569e1d9f13e0d58eff6386f5c24973",
+  "title": "Home Orefield, PA Orefield, PA (800) 237-4592",
+  "description": "Home Orefield, PA Orefield, PA (800) 237-4592",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "eckroth",
+      "equipment"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260826-052002\\preflight\\eckroth-equipment-company\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://published-assets.ari-build.com/Content/Published/Site/21250/images/logo.png",
+    "sourceEvidence": "IMG img-responsive center-block  orefield, pa",
+    "type": "png",
+    "dimensions": {
+      "width": 422,
+      "height": 90
+    },
+    "sha256": "cab30d10af63808aef249cf1313e6a8ba641f639bed8037bb79b369deb00bf87",
+    "sourceSha256": "cab30d10af63808aef249cf1313e6a8ba641f639bed8037bb79b369deb00bf87",
+    "sourceType": "png",
+    "sourceFileName": null,
+    "transformation": "none; exact first-party transparent asset",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "alphaAverage": 133.818,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 12675
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260826-052002\\preflight\\eckroth-equipment-company\\reference-1.jpg",
+      "fileName": "reference-1.jpg",
+      "sourceUrl": "https://cdnmedia.endeavorsuite.com/images/corporate/webdesign/merchslides/Service/076b2be7-e295-494b-b23c-3c03aa95f52d.jpg",
+      "sourceEvidence": "IMG schedule spring service today schedule spring service today",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 620,
+        "width": 1920
+      },
+      "sha256": "6201b78041824d997e6633ecedeae465d5306c629481bf077c5dba6cadca6ca5",
+      "bytes": 78501,
+      "visual": {
+        "ok": true,
+        "lumaRange": 255,
+        "chromaURange": 109,
+        "chromaVRange": 85,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260826-052002\\preflight\\eckroth-equipment-company\\reference-2.jpg",
+      "fileName": "reference-2.jpg",
+      "sourceUrl": "https://cdnmedia.endeavorsuite.com/images/corporate/webdesign/merchslides/CubCadet/CubCadetUltimaSeries.jpg",
+      "sourceEvidence": "IMG cub cadet ultima series cub cadet ultima series",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 620,
+        "width": 1920
+      },
+      "sha256": "8d3591cff49234b714f32f83b1f15dfd2aa31642ada1278c703cdee1aa0e0c66",
+      "bytes": 115022,
+      "visual": {
+        "ok": true,
+        "lumaRange": 255,
+        "chromaURange": 151,
+        "chromaVRange": 112,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260826-052002\\preflight\\eckroth-equipment-company\\reference-3.jpg",
+      "fileName": "reference-3.jpg",
+      "sourceUrl": "https://cdnmedia.endeavorsuite.com/images/corporate/webdesign/merchslides/Facebook/facebookmerchandising.jpg",
+      "sourceEvidence": "IMG follow us on facebook follow us on facebook",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 620,
+        "width": 1920
+      },
+      "sha256": "55ffca7c87387917ca2cb38403590d3ddbeb63098b5f40721a0b909c366e3fb8",
+      "bytes": 202405,
+      "visual": {
+        "ok": true,
+        "lumaRange": 255,
+        "chromaURange": 105,
+        "chromaVRange": 154,
+        "reason": null
+      }
+    }
+  ],
+  "contact": {
+    "phone": "(800) 237-4592",
+    "address": "",
+    "city": "",
+    "phoneSource": "official tel link",
+    "addressSource": null
+  },
+  "visualReferenceFallback": null,
+  "referenceFailures": [
+    {
+      "url": "https://i.simpli.fi/dpx?cid=121643&action=100&segment=Retargeting_(1%2F1%2F2018-12%2F31%2F2018)&sifi_tuid=67092",
+      "reason": "unsupported reference type unknown"
+    }
+  ],
+  "brandColors": [],
+  "checkedAt": "2026-08-26T09:34:50.909Z"
+}

@@ -3,7 +3,7 @@ note_type: status
 status: active
 date: 2026-09-15
 updated: 2026-09-15
-generated_at: 2026-09-15T13:55:12.548Z
+generated_at: 2026-09-15T14:00:01.764Z
 generated_by: _os/automation/bin/daily-sweep.js
 days_since_previous_sweep: 0
 tags:
@@ -29,7 +29,7 @@ source_refs:
 
 **ATTENTION — 3 stale or missing daily artifact(s); 5 of 14 daily briefs never produced.**
 
-Swept `2026-09-15T13:55:12.548Z`. Previous sweep: 2026-09-15T07:00:01.238Z.
+Swept `2026-09-15T14:00:01.764Z`. Previous sweep: 2026-09-15T13:57:41.578Z.
 
 This file is written by the sweep and by nothing else. If the date in
 the frontmatter above is not today, the sweep did not run today — that
@@ -51,12 +51,12 @@ written down are the actual failure.
 | Artifact | State | Age (h) | Budget (h) | Produced by |
 | --- | --- | --- | --- | --- |
 | `Daily-Briefs/2026-09-15.md` | **missing** | — | 26 | Codex cron daily-communications-brain (07:00 local) |
-| `12_Brain/state/daily-communications-brain.json` | **stale** | 26.8 | 26 | Codex cron daily-communications-brain |
-| `12_Brain/state/claude-daily-driver.json` | **stale** | 6.5 | 2 | Task Scheduler Claude-Autonomous-Daily-Driver (PT15M) |
-| `12_Brain/state/claude-loop.json` | fresh | 8.8 | 26 | claude-loop.js via the daily driver |
-| `Daily-Briefs/plan-2026-09-15.md` | fresh | 8.2 | 26 | Task Scheduler Immohrtal-Crew |
-| `12_Brain/state/frontmatter-validate.json` | fresh | 69.7 | 168 | frontmatter-validate.js, on demand + pre-pulse |
-| `System/approval-queue.md` | fresh | 6.8 | 72 | every session that gates an external action |
+| `12_Brain/state/daily-communications-brain.json` | **stale** | 26.9 | 26 | Codex cron daily-communications-brain |
+| `12_Brain/state/claude-daily-driver.json` | **stale** | 6.6 | 2 | Task Scheduler Claude-Autonomous-Daily-Driver (PT15M) |
+| `12_Brain/state/claude-loop.json` | fresh | 8.9 | 26 | claude-loop.js via the daily driver |
+| `Daily-Briefs/plan-2026-09-15.md` | fresh | 8.3 | 26 | Task Scheduler Immohrtal-Crew |
+| `12_Brain/state/frontmatter-validate.json` | fresh | 69.8 | 168 | frontmatter-validate.js, on demand + pre-pulse |
+| `System/approval-queue.md` | fresh | 6.9 | 72 | every session that gates an external action |
 
 ## Daily brief delivery, last 14 days
 
@@ -70,7 +70,7 @@ Scheduling is owned by `_os/automation/cadence/`. This sweep is a job in
 its `daily.yaml` manifest and writes to its ledger — one ledger, not two.
 
 - Windows Task Scheduler entries: `Cadence-daily`, `Cadence-monthly`, `Cadence-sweep-heartbeat`, `Cadence-weekly`.
-- Ledger rows: **22**, first entry 2026-09-14.
+- Ledger rows: **24**, first entry 2026-09-14.
 - Every day since the first ledger entry has at least one row.
 - `daily.yaml`: 5 job(s), 0 disabled.
 - `weekly.yaml`: 2 job(s), 0 disabled.
@@ -90,7 +90,7 @@ Counters this run: shipped_repos=6, at_risk_repos=18, overdue_notes=12, approval
 
 ## What shipped in the last 24 hours
 
-- **dillon-os** — 45 commit(s): Register the weekly Netlify report auto-publish automation; inventory: correct spend to 75c and record the research calibration; Rewrite Managed Agents inventory for the full nine-role fleet, commit the local delivery bridge; gitignore: bridge journal and downloaded deliveries; bridge: the collector, and the outputs correction
+- **dillon-os** — 46 commit(s): cadence(daily): daily-sweep; Register the weekly Netlify report auto-publish automation; inventory: correct spend to 75c and record the research calibration; Rewrite Managed Agents inventory for the full nine-role fleet, commit the local delivery bridge; gitignore: bridge journal and downloaded deliveries
 - **momentum-slack-agent** — 2 commit(s): Retire this runtime: Workmate is the decided Slack surface; Slack AI teammate on the Agents API, hosted sandbox instead of Docker
 - **mac-mini-handoff** — 4 commit(s): Correct the stale Puttery access claim in the first-boot file; Correct the Onsite tracking claim; add the Nexla call card; Mark what was resolved the same day the kit was written; Mac mini bootstrap kit and daily-sweep handoff
 - **weekly-report-dashboard** — 1 commit(s): Initial commit: the weekly client report system
@@ -100,7 +100,7 @@ Counters this run: shipped_repos=6, at_risk_repos=18, overdue_notes=12, approval
 ## Work that would not survive this machine
 
 - **client-operations** — 7 commit(s) exist only on this machine
-- **dillon-os** — 12 commit(s) exist only on this machine
+- **dillon-os** — 13 commit(s) exist only on this machine
 - **dillon-os** — 33 uncommitted file(s)
 - **agent-vault** — 12 uncommitted file(s)
 - **client-operations-ami-pdfs-d9e7** — 6 uncommitted file(s)
@@ -143,7 +143,7 @@ Counters this run: shipped_repos=6, at_risk_repos=18, overdue_notes=12, approval
 ## Machine health
 
 - win32 10.0.26200, host `DESKTOP-4AHKEC4`.
-- Uptime **6.4 h**. Memory 51.5 GB free of 63.8 GB.
+- Uptime **6.5 h**. Memory 34.2 GB free of 63.8 GB.
 - Unclean shutdowns in 30 days: **16** (Windows System event log, Id 6008).
 
 ---

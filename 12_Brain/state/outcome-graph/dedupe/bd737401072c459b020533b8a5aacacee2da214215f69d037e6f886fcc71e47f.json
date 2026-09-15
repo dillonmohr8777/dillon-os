@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "graph_id": "daily-d17-paid-media-evidence-shadow",
+  "dedupe_key": "D17:2026-08-24:source-bound-shadow",
+  "dedupe_identity": "bd737401072c459b020533b8a5aacacee2da214215f69d037e6f886fcc71e47f",
+  "contract_fingerprint": "2ae0f1abfd984aee33897e49184500adb81edc1c3621eceedba14bb5a9fd2387",
+  "canonical_binding": {
+    "locator": "dillon-os://routine/D17/2026-08-24",
+    "version": "2026-08-24:7d65a000d0.6216ed7d8b.fedfe6670d",
+    "sha256": "cd4877517666380542f1ea8d7c4be50549fa27d98e354f32850b01cab67f172e",
+    "captured_at": "2026-08-24T23:42:20.803Z"
+  },
+  "canonical_binding_fingerprint": "414f0abf76fe5eea7e476399f2609a35f906b95773a4e593b2beff4ef7a54183",
+  "status": "complete",
+  "run_id": "OGD-20260824-38FE26FF0DFE",
+  "checkpoint": {
+    "path": "runs/OGD-20260824-38FE26FF0DFE/checkpoint.json"
+  },
+  "created_at": "2026-08-24T23:42:20.820Z",
+  "updated_at": "2026-08-24T23:42:21.172Z",
+  "state_revision": 15,
+  "previous_state_sha256": "215539753ce6d030848ba5e1f87ac1bbb07367fc4a86687b7ff0532c41c27fbb",
+  "completed_at": "2026-08-24T23:42:21.172Z",
+  "receipt": {
+    "path": "runs/OGD-20260824-38FE26FF0DFE/receipt.json",
+    "sha256": "249f93b6b65a3eb458b237a4ee5c78ee27b20bd2b3efea40d183d90907699162",
+    "bytes": 24773
+  }
+}

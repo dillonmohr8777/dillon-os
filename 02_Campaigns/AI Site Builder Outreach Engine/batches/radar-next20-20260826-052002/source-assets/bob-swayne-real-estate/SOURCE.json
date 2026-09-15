@@ -1,0 +1,94 @@
+{
+  "sourceUrl": "https://www.brightmlshomes.com/robert-swayne-jr",
+  "finalUrl": "https://www.brightmlshomes.com/robert-swayne-jr",
+  "sourceDomain": "brightmlshomes.com",
+  "httpStatus": 200,
+  "contentType": "",
+  "pageSha256": "85a023ba1002f97c622829d4bc4f322efc078b2b6dbaac3dfa1d2ef3a31aeb21",
+  "title": "Welcome | Robert Swayne Jr | Homes for Sale and Rent",
+  "description": "Find homes for sale, find an agent, view virtual tours, receive homes by e-mail, learn about buying and selling a home and more!",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "bob",
+      "swayne",
+      "real",
+      "estate"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260826-052002\\preflight\\bob-swayne-real-estate\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://www.brightmlshomes.com/images/common/css/CMSDesigns/v1/images/logo-eho.png",
+    "sourceEvidence": "IMG ",
+    "type": "png",
+    "dimensions": {
+      "width": 217,
+      "height": 265
+    },
+    "sha256": "c2c7a7667015fa7ec21810038092bb8d28a332bfb9ea470dad3f58fc412b18a9",
+    "sourceSha256": "2855ed9a88201453d80816930ca17c84346327f0010273f75a8e3a8773def2f2",
+    "sourceType": "png",
+    "sourceFileName": "logo-source.png",
+    "transformation": "flat border color #000000 removed with deterministic FFmpeg colorkey; geometry unchanged",
+    "borderSpread": 0,
+    "alpha": {
+      "ok": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "alphaAverage": 111.015,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 4464
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260826-052002\\preflight\\bob-swayne-real-estate\\reference-1.webp",
+      "fileName": "reference-1.webp",
+      "sourceUrl": "https://photos.prod.cirrussystem.net/1774/ce4acef2d01a9ab7e527f6a05b6334c8/1491501023.jpeg?format=webp",
+      "sourceEvidence": "IMG img-responsive",
+      "type": "webp",
+      "dimensions": {
+        "width": 2048,
+        "height": 1529
+      },
+      "sha256": "c9ed8dda65a83bcb46c95993d3fa29824bff53a6eb41acabe82629aef23dedf1",
+      "bytes": 393136,
+      "visual": {
+        "ok": true,
+        "lumaRange": 248,
+        "chromaURange": 99,
+        "chromaVRange": 117,
+        "reason": null
+      }
+    }
+  ],
+  "contact": {
+    "phone": "717-587-2218",
+    "address": "",
+    "city": "",
+    "phoneSource": "official tel link",
+    "addressSource": null
+  },
+  "visualReferenceFallback": null,
+  "referenceFailures": [
+    {
+      "url": "https://brightmlsimages.fnistools.com/images/uploads/agents/21824249/21824249.png",
+      "reason": "HTTP 403; curl: curl: (22) The requested URL returned error: 403"
+    },
+    {
+      "url": "https://brightmlsimages.fnistools.com/images/uploads/agents/21824249/21824249.png?ts=639233156834829164",
+      "reason": "reference image is too small"
+    }
+  ],
+  "brandColors": [
+    "#112244",
+    "#187764",
+    "#168072",
+    "#0000ee",
+    "#118313"
+  ],
+  "checkedAt": "2026-08-26T09:34:50.806Z"
+}

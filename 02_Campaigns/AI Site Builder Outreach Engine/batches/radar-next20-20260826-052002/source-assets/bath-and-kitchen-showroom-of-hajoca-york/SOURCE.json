@@ -1,0 +1,138 @@
+{
+  "sourceUrl": "https://shop.hajocayork.com/",
+  "finalUrl": "https://shop.hajocayork.com/",
+  "sourceDomain": "shop.hajocayork.com",
+  "httpStatus": 200,
+  "contentType": "",
+  "pageSha256": "01c5272c21a6f5d1501914192b02af7c16e375c2021109b891c75b56a97de395",
+  "title": "HAJOCA YORK | ONLINE SERVICES",
+  "description": "HAJOCA YORK | ONLINE SERVICES",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "bath",
+      "kitchen",
+      "hajoca",
+      "york"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260826-052002\\preflight\\bath-and-kitchen-showroom-of-hajoca-york\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://supplyweb.hajoca.com/WOE2-CORE/images/logos/Hajoca-Since1858-01-small.jpg",
+    "sourceEvidence": "IMG logoimage logoimage",
+    "type": "png",
+    "dimensions": {
+      "width": 213,
+      "height": 100
+    },
+    "sha256": "79c88894c601e67d5c98087352028e9cdd87ddd9a15aa89278dfc0641b8d95c7",
+    "sourceSha256": "f94ece150fda29e778ebac1bb95fa6844758f10d56f757adcf8d1786ffbe1fa1",
+    "sourceType": "jpeg",
+    "sourceFileName": "logo-source.jpg",
+    "transformation": "flat border color #fefefe removed with deterministic FFmpeg colorkey; geometry unchanged",
+    "borderSpread": 0,
+    "alpha": {
+      "ok": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "alphaAverage": 65.0147,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 21114
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260826-052002\\preflight\\bath-and-kitchen-showroom-of-hajoca-york\\reference-1.jpg",
+      "fileName": "reference-1.jpg",
+      "sourceUrl": "https://shop.hajocayork.com/WOE2-CORE/images/hajoca1.jpg",
+      "sourceEvidence": "IMG hajoca york | online services",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 298,
+        "width": 1700
+      },
+      "sha256": "23261dbd34a7c7671f2c636086b42321ddce319e449fd60983517c19cbc1cac2",
+      "bytes": 160134,
+      "visual": {
+        "ok": true,
+        "lumaRange": 255,
+        "chromaURange": 140,
+        "chromaVRange": 152,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260826-052002\\preflight\\bath-and-kitchen-showroom-of-hajoca-york\\reference-2.jpg",
+      "fileName": "reference-2.jpg",
+      "sourceUrl": "https://supplyweb.hajoca.com/WOE2-CORE/images/frontpage/kohler-bathroom.jpg",
+      "sourceEvidence": "IMG ",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 297,
+        "width": 484
+      },
+      "sha256": "f5adc20cfef75ddf04c6e666e2056115b381d99970c7926b1be62061b52419b8",
+      "bytes": 17278,
+      "visual": {
+        "ok": true,
+        "lumaRange": 255,
+        "chromaURange": 11,
+        "chromaVRange": 6,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260826-052002\\preflight\\bath-and-kitchen-showroom-of-hajoca-york\\reference-3.jpg",
+      "fileName": "reference-3.jpg",
+      "sourceUrl": "https://supplyweb.hajoca.com/WOE2-CORE/images/frontpage/toilets.jpg",
+      "sourceEvidence": "IMG ",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 303,
+        "width": 519
+      },
+      "sha256": "77bd277740d07de7fc0a11f3820bdff6945ed3ce5838172c03192d5ac63b258b",
+      "bytes": 55830,
+      "visual": {
+        "ok": true,
+        "lumaRange": 215,
+        "chromaURange": 8,
+        "chromaVRange": 9,
+        "reason": null
+      }
+    }
+  ],
+  "contact": {
+    "phone": "",
+    "address": "",
+    "city": "",
+    "phoneSource": null,
+    "addressSource": null
+  },
+  "visualReferenceFallback": null,
+  "referenceFailures": [
+    {
+      "url": "https://supplyweb.hajoca.com/woe2-core/images/image-coming-soon.png",
+      "reason": "reference image is too small"
+    },
+    {
+      "url": "https://supplyweb.hajoca.com/WOE2-CORE/images/frontpage/kfaucet2.jpg",
+      "reason": "reference image is too small"
+    },
+    {
+      "url": "https://supplyweb.hajoca.com/WOE2-CORE/images/frontpage/ksinks.jpg",
+      "reason": "reference image is too small"
+    },
+    {
+      "url": "https://supplyweb.hajoca.com/WOE2-CORE/images/frontpage/bsinks.jpg",
+      "reason": "reference image is too small"
+    }
+  ],
+  "brandColors": [
+    "#116600"
+  ],
+  "checkedAt": "2026-08-26T09:34:59.958Z"
+}

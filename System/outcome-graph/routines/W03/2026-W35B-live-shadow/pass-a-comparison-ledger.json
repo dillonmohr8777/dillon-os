@@ -1,0 +1,231 @@
+{
+  "schema_version": 1,
+  "routine_id": "W03",
+  "review_date": "2026-08-24",
+  "source_set_sha256": "2b9a6e1c96dc88d53c2186cea2b66729ccac5a81034ba43b063714d8f9014324",
+  "pass_a": {
+    "locator": "System/outcome-graph/routines/W02/2026-W35A-live-shadow/paid-media-review-a.json",
+    "sha256": "7d65a000d0d8dce4a234394a7051b3ae677684f6b75f779a670fbf9bdc854098",
+    "bytes": 22981
+  },
+  "comparisons": [
+    {
+      "lane_id": "google-ads--fresh-blends-kwik-trip",
+      "client_id": "fresh-blends-kwik-trip",
+      "platform": "google-ads",
+      "pass_a_binding": {
+        "artifact_sha256": "7d65a000d0d8dce4a234394a7051b3ae677684f6b75f779a670fbf9bdc854098",
+        "declared_hash_matches": true,
+        "scope_revalidated": true,
+        "distinct_observation": false
+      },
+      "trend": {
+        "state": "held_no_distinct_observation",
+        "latency_accounted": false,
+        "downstream_reconciled": false,
+        "prior_test_decision_valid": true
+      },
+      "outcome_state": "held_pending_comparison_evidence",
+      "findings": [
+        "d17-change_history-blocked",
+        "d17-delivery_pacing-blocked",
+        "d17-landing_page_health-pending",
+        "d17-readback_freshness-blocked",
+        "d17-search-terms-and-negatives-blocked",
+        "d17-session_account-blocked",
+        "d18-attribution-and-downstream-pending-validation",
+        "d18-conversion-tracking-and-dedup-not-verified",
+        "exact-provider-account-unverified",
+        "reporting-window-or-timezone-missing",
+        "second-observation-not-later-than-pass-a"
+      ]
+    },
+    {
+      "lane_id": "google-ads--kimberly-james-bridal",
+      "client_id": "kimberly-james-bridal",
+      "platform": "google-ads",
+      "pass_a_binding": {
+        "artifact_sha256": "7d65a000d0d8dce4a234394a7051b3ae677684f6b75f779a670fbf9bdc854098",
+        "declared_hash_matches": true,
+        "scope_revalidated": true,
+        "distinct_observation": false
+      },
+      "trend": {
+        "state": "held_no_distinct_observation",
+        "latency_accounted": false,
+        "downstream_reconciled": false,
+        "prior_test_decision_valid": true
+      },
+      "outcome_state": "held_pending_comparison_evidence",
+      "findings": [
+        "d17-change_history-pending",
+        "d17-delivery_pacing-pending",
+        "d17-landing_page_health-pending",
+        "d17-readback_freshness-partial",
+        "d17-search-terms-and-negatives-pending",
+        "d18-attribution-and-downstream-pending-validation",
+        "d18-conversion-tracking-and-dedup-not-verified",
+        "reporting-window-or-timezone-missing",
+        "second-observation-not-later-than-pass-a"
+      ]
+    },
+    {
+      "lane_id": "google-ads--omega-landscaping",
+      "client_id": "omega-landscaping",
+      "platform": "google-ads",
+      "pass_a_binding": {
+        "artifact_sha256": "7d65a000d0d8dce4a234394a7051b3ae677684f6b75f779a670fbf9bdc854098",
+        "declared_hash_matches": true,
+        "scope_revalidated": true,
+        "distinct_observation": false
+      },
+      "trend": {
+        "state": "held_no_distinct_observation",
+        "latency_accounted": false,
+        "downstream_reconciled": false,
+        "prior_test_decision_valid": true
+      },
+      "outcome_state": "held_pending_comparison_evidence",
+      "findings": [
+        "d17-change_history-pending",
+        "d17-delivery_pacing-pending",
+        "d17-landing_page_health-pending",
+        "d17-readback_freshness-partial",
+        "d17-search-terms-and-negatives-pending",
+        "d18-attribution-and-downstream-pending-validation",
+        "d18-conversion-tracking-and-dedup-not-verified",
+        "reporting-window-or-timezone-missing",
+        "second-observation-not-later-than-pass-a"
+      ]
+    },
+    {
+      "lane_id": "google-ads--onsite-concrete-landscape",
+      "client_id": "onsite-concrete-landscape",
+      "platform": "google-ads",
+      "pass_a_binding": {
+        "artifact_sha256": "7d65a000d0d8dce4a234394a7051b3ae677684f6b75f779a670fbf9bdc854098",
+        "declared_hash_matches": true,
+        "scope_revalidated": true,
+        "distinct_observation": false
+      },
+      "trend": {
+        "state": "held_no_distinct_observation",
+        "latency_accounted": false,
+        "downstream_reconciled": false,
+        "prior_test_decision_valid": true
+      },
+      "outcome_state": "held_pending_comparison_evidence",
+      "findings": [
+        "d17-change_history-pending",
+        "d17-delivery_pacing-pending",
+        "d17-landing_page_health-pending",
+        "d17-readback_freshness-partial",
+        "d17-search-terms-and-negatives-pending",
+        "d18-attribution-and-downstream-pending-validation",
+        "d18-conversion-tracking-and-dedup-not-verified",
+        "reporting-window-or-timezone-missing",
+        "second-observation-not-later-than-pass-a"
+      ]
+    },
+    {
+      "lane_id": "google-ads--replenish-7-eleven",
+      "client_id": "replenish-7-eleven",
+      "platform": "google-ads",
+      "pass_a_binding": {
+        "artifact_sha256": "7d65a000d0d8dce4a234394a7051b3ae677684f6b75f779a670fbf9bdc854098",
+        "declared_hash_matches": true,
+        "scope_revalidated": true,
+        "distinct_observation": false
+      },
+      "trend": {
+        "state": "held_no_distinct_observation",
+        "latency_accounted": false,
+        "downstream_reconciled": false,
+        "prior_test_decision_valid": true
+      },
+      "outcome_state": "held_pending_comparison_evidence",
+      "findings": [
+        "d17-change_history-pending",
+        "d17-delivery_pacing-pending",
+        "d17-landing_page_health-pending",
+        "d17-readback_freshness-partial",
+        "d17-search-terms-and-negatives-pending",
+        "d18-attribution-and-downstream-pending-validation",
+        "d18-conversion-tracking-and-dedup-not-verified",
+        "reporting-window-or-timezone-missing",
+        "second-observation-not-later-than-pass-a"
+      ]
+    },
+    {
+      "lane_id": "meta-ads--kimberly-james-bridal",
+      "client_id": "kimberly-james-bridal",
+      "platform": "meta-ads",
+      "pass_a_binding": {
+        "artifact_sha256": "7d65a000d0d8dce4a234394a7051b3ae677684f6b75f779a670fbf9bdc854098",
+        "declared_hash_matches": true,
+        "scope_revalidated": true,
+        "distinct_observation": false
+      },
+      "trend": {
+        "state": "held_no_distinct_observation",
+        "latency_accounted": false,
+        "downstream_reconciled": false,
+        "prior_test_decision_valid": true
+      },
+      "outcome_state": "held_pending_comparison_evidence",
+      "findings": [
+        "access-registry-account-read-capability-missing",
+        "access-registry-insights-read-capability-missing",
+        "d17-change_history-pending",
+        "d17-creative-fatigue-and-placements-pending",
+        "d17-delivery_pacing-partial",
+        "d17-landing_page_health-pending",
+        "d17-readback_freshness-partial",
+        "d18-attribution-and-downstream-pending-validation",
+        "d18-conversion-tracking-and-dedup-not-verified",
+        "second-observation-not-later-than-pass-a"
+      ]
+    },
+    {
+      "lane_id": "meta-ads--shadow-heating-cooling",
+      "client_id": "shadow-heating-cooling",
+      "platform": "meta-ads",
+      "pass_a_binding": {
+        "artifact_sha256": "7d65a000d0d8dce4a234394a7051b3ae677684f6b75f779a670fbf9bdc854098",
+        "declared_hash_matches": true,
+        "scope_revalidated": true,
+        "distinct_observation": false
+      },
+      "trend": {
+        "state": "held_no_distinct_observation",
+        "latency_accounted": false,
+        "downstream_reconciled": false,
+        "prior_test_decision_valid": true
+      },
+      "outcome_state": "held_pending_comparison_evidence",
+      "findings": [
+        "access-registry-account-read-capability-missing",
+        "access-registry-insights-read-capability-missing",
+        "d17-change_history-blocked",
+        "d17-creative-fatigue-and-placements-blocked",
+        "d17-delivery_pacing-blocked",
+        "d17-landing_page_health-pending",
+        "d17-readback_freshness-blocked",
+        "d17-session_account-blocked",
+        "d18-attribution-and-downstream-pending-validation",
+        "d18-conversion-tracking-and-dedup-not-verified",
+        "exact-provider-account-ambiguous",
+        "reporting-window-or-timezone-missing",
+        "second-observation-not-later-than-pass-a"
+      ]
+    }
+  ],
+  "authority": {
+    "read_only": true,
+    "proposal_only": true,
+    "external_action_attempted": false,
+    "provider_mutation_attempted": false,
+    "crm_mutation_attempted": false,
+    "canonical_write_attempted": false
+  }
+}

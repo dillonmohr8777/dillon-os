@@ -1,0 +1,92 @@
+[
+  {
+    "campaign": {
+      "resourceName": "customers/1033715894/campaigns/22233329038",
+      "status": "PAUSED",
+      "advertisingChannelType": "SMART",
+      "biddingStrategyType": "TARGET_SPEND",
+      "name": "Onsite Concrete & Landscape",
+      "id": "22233329038"
+    },
+    "metrics": {
+      "clicks": "1808",
+      "conversions": 6,
+      "costMicros": "282943958",
+      "impressions": "65904"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/1033715894/campaignBudgets/14318141220",
+      "amountMicros": "7000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/1033715894/campaigns/22454241769",
+      "status": "PAUSED",
+      "advertisingChannelType": "PERFORMANCE_MAX",
+      "biddingStrategyType": "MAXIMIZE_CONVERSIONS",
+      "name": "Leads-Performance Max-1",
+      "id": "22454241769"
+    },
+    "metrics": {
+      "clicks": "438",
+      "searchBudgetLostImpressionShare": 0.14953271028037382,
+      "searchExactMatchImpressionShare": 0.0999,
+      "searchImpressionShare": 0.0999,
+      "searchRankLostImpressionShare": 0.8079864061172473,
+      "conversions": 72,
+      "costMicros": "201105707",
+      "impressions": "3201"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/1033715894/campaignBudgets/14484250490",
+      "amountMicros": "5000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/1033715894/campaigns/23068725075",
+      "status": "ENABLED",
+      "advertisingChannelType": "LOCAL_SERVICES",
+      "biddingStrategyType": "MAXIMIZE_CONVERSIONS",
+      "name": "LocalServicesCampaign:SystemGenerated:0006401c1fc27d91",
+      "id": "23068725075"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "0"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/1033715894/campaignBudgets/14982151864",
+      "amountMicros": "80000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/1033715894/campaigns/24183437726",
+      "status": "ENABLED",
+      "advertisingChannelType": "SEARCH",
+      "biddingStrategyType": "TARGET_SPEND",
+      "name": "Search | High Intent | Solano County | 2026-07-30",
+      "id": "24183437726"
+    },
+    "metrics": {
+      "clicks": "2",
+      "searchAbsoluteTopImpressionShare": 0.0999,
+      "searchBudgetLostImpressionShare": 0.15789473684210525,
+      "searchExactMatchImpressionShare": 0.0999,
+      "searchImpressionShare": 0.0999,
+      "searchRankLostImpressionShare": 0.7719298245614035,
+      "searchTopImpressionShare": 0.0999,
+      "conversions": 0,
+      "costMicros": "6400000",
+      "impressions": "8"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/1033715894/campaignBudgets/15831011752",
+      "amountMicros": "7000000"
+    }
+  }
+]

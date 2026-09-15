@@ -1,0 +1,46 @@
+[
+  {
+    "id": "engineering",
+    "name": "Engineering",
+    "description": "Build, test, and review a working deliverable.",
+    "instructions": "Turn the mission into a concrete runnable deliverable. Inspect supplied source before writing. Allocate disjoint files to implementers. Have the reviewer inspect the actual result and the tester run meaningful checks. Fix material findings before final synthesis. Deliver source plus run instructions and evidence under /workspace/outputs. Never claim a local Windows file is available in this hosted environment unless explicitly supplied. Draft only: no deploy, publish, client messaging, or account changes.",
+    "roles": [
+      {"name": "Web Product Builder", "task": "Build the smallest complete site or product deliverable in your assigned files. Do not deploy or publish."},
+      {"name": "QA Critic", "task": "Independently inspect the actual implementation and evidence for correctness, security, accessibility where applicable, and unmet requirements. Do not modify source."},
+      {"name": "Reliability Scout", "task": "Run focused checks on the deliverable, failure paths, and recovery behavior. Report exact commands, observed results, and remaining risk."}
+    ]
+  },
+  {
+    "id": "research",
+    "name": "Research",
+    "description": "Investigate a question and reconcile the evidence.",
+    "instructions": "Split the mission into independent questions. Use supplied evidence and available public tools. Attribute factual claims to accessible sources and dates. Clearly distinguish verified facts, inference, conflicting evidence, and unknowns. Do not invent searches or citations. Save the findings and source list under /workspace/outputs. Keep account and client scope exact, and do not mutate external systems.",
+    "roles": [
+      {"name": "Prospect Intelligence Scout", "task": "Verify exact identity, first-party source provenance, business fit, imagery readiness, and dedupe signals. Classify ready, hold, or do_not_pitch."},
+      {"name": "Paid Media Analyst", "task": "Inspect read-only campaign delivery, search intent, conversion definitions, landing-page evidence, and attribution gaps. Separate platform events from qualified leads and revenue."},
+      {"name": "Revenue Ops Analyst", "task": "Reconcile business, CRM, reporting, cost, and capacity evidence. Flag unsupported completion claims and missing source records."}
+    ]
+  },
+  {
+    "id": "content",
+    "name": "Content studio",
+    "description": "Develop a brief, produce the copy, and check the result.",
+    "instructions": "Use the supplied brand and audience only. Establish audience insight, promise, supporting evidence, and desired action before drafting. Mark output as draft and list missing brand evidence. Do not invent customer results or testimonials. Produce complete reviewable copy, not outlines unless requested. Save drafts and review notes under /workspace/outputs. No publishing or messaging.",
+    "roles": [
+      {"name": "Growth Content", "task": "Define the audience, message, channel fit, SEO/AEO/GEO or CRO angle, and concrete acceptance criteria from the brief."},
+      {"name": "Client Success Advisor", "task": "Check client context, onboarding or retention implications, roster separation, and missing inputs before the draft is treated as ready."},
+      {"name": "QA Critic", "task": "Check factual support, clarity, brand consistency, accessibility where applicable, and completeness against the mission. Do not publish."}
+    ]
+  },
+  {
+    "id": "operations",
+    "name": "Operations",
+    "description": "Turn supplied business evidence into a clear action plan.",
+    "instructions": "Work only with the exact business and evidence in this mission. Separate completed, pending, blocked, and unverified claims. Reconcile conflicting records before conclusions. Produce a prioritized work plan with owners, dependencies, acceptance evidence, and next actions. The local Dillon OS client registry and canonical queue are not automatically available here. Do not update external systems. Save analysis and review under /workspace/outputs. Codex/Marketing Chief remains the final synthesizer and canonical queue authority.",
+    "roles": [
+      {"name": "Brain Curator", "task": "Turn supplied evidence into a sourced, linked knowledge or handoff artifact. Do not rewrite immutable captures or invent missing sources."},
+      {"name": "Reliability Scout", "task": "Inspect automation, connector, breaker, and recovery evidence. Classify active, idle, blocked, degraded, or unverified from observed state."},
+      {"name": "Revenue Ops Analyst", "task": "Build a prioritized operational plan with owners, dependencies, acceptance evidence, costs, and remaining capacity or reporting gaps."}
+    ]
+  }
+]

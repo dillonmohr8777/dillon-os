@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "routine_id": "D19",
+  "generated_at": "2026-08-24T23:42:22.164Z",
+  "source_set_sha256": "cd4877517666380542f1ea8d7c4be50549fa27d98e354f32850b01cab67f172e",
+  "sources": [
+    {
+      "locator": "System/outcome-graph/routines/W02/2026-W35A-live-shadow/paid-media-review-a.json",
+      "sha256": "7d65a000d0d8dce4a234394a7051b3ae677684f6b75f779a670fbf9bdc854098",
+      "bytes": 22981
+    },
+    {
+      "locator": "System/outcome-graph/routines/W02/2026-W35A-live-shadow/source-ledger.json",
+      "sha256": "6216ed7d8b6fc920281cdf94d0b17276e64659dd587e3504b9a9307a617841cb",
+      "bytes": 11016
+    },
+    {
+      "locator": "System/outcome-graph/tranche-2026-08-24-run-2-durable/W06-client-report-packages.json",
+      "sha256": "fedfe6670d9ca9ce77c0a93343d1db90baae77d2298253826fb9227acfd8700f",
+      "bytes": 36769
+    }
+  ],
+  "report_bindings": [
+    {
+      "isolation_key": "bar-crawl-usa:2026-08-17 through 2026-08-23",
+      "source_count": 3,
+      "source_hashes_valid": true,
+      "kpi_fields_recomputed": true
+    },
+    {
+      "isolation_key": "fagan-painting:2026-08-17 through 2026-08-23",
+      "source_count": 3,
+      "source_hashes_valid": true,
+      "kpi_fields_recomputed": true
+    },
+    {
+      "isolation_key": "fresh-blends-kwik-trip:2026-08-17 through 2026-08-23",
+      "source_count": 3,
+      "source_hashes_valid": true,
+      "kpi_fields_recomputed": true
+    },
+    {
+      "isolation_key": "hope-wellness-center:2026-08-17 through 2026-08-23",
+      "source_count": 3,
+      "source_hashes_valid": true,
+      "kpi_fields_recomputed": true
+    },
+    {
+      "isolation_key": "kimberly-james-bridal:2026-08-17 through 2026-08-23",
+      "source_count": 4,
+      "source_hashes_valid": true,
+      "kpi_fields_recomputed": true
+    },
+    {
+      "isolation_key": "nexla:2026-08-17 through 2026-08-23",
+      "source_count": 3,
+      "source_hashes_valid": true,
+      "kpi_fields_recomputed": true
+    },
+    {
+      "isolation_key": "nkcdc:2026-08-17 through 2026-08-23",
+      "source_count": 3,
+      "source_hashes_valid": true,
+      "kpi_fields_recomputed": true
+    },
+    {
+      "isolation_key": "omega-landscaping:2026-08-17 through 2026-08-23",
+      "source_count": 3,
+      "source_hashes_valid": true,
+      "kpi_fields_recomputed": true
+    },
+    {
+      "isolation_key": "onsite-concrete-landscape:2026-08-17 through 2026-08-23",
+      "source_count": 3,
+      "source_hashes_valid": true,
+      "kpi_fields_recomputed": true
+    },
+    {
+      "isolation_key": "replenish-7-eleven:2026-08-17 through 2026-08-23",
+      "source_count": 3,
+      "source_hashes_valid": true,
+      "kpi_fields_recomputed": true
+    },
+    {
+      "isolation_key": "revive-systems:2026-08-17 through 2026-08-23",
+      "source_count": 3,
+      "source_hashes_valid": true,
+      "kpi_fields_recomputed": true
+    },
+    {
+      "isolation_key": "va-claims-edge:2026-08-17 through 2026-08-23",
+      "source_count": 3,
+      "source_hashes_valid": true,
+      "kpi_fields_recomputed": true
+    }
+  ],
+  "authority": {
+    "read_only": true,
+    "proposal_only": true,
+    "external_action_attempted": false,
+    "canonical_write_attempted": false,
+    "provider_mutation_attempted": false,
+    "crm_mutation_attempted": false,
+    "spend_change_attempted": false,
+    "delivery_attempted": false
+  }
+}

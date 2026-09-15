@@ -1,0 +1,15 @@
+{
+  "name": "dillon-os-agents-sdk",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "OpenAI Agents SDK dependencies for local Dillon OS workflows",
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "check": "node --input-type=module -e \"import {Agent, Runner, tool} from '@openai/agents'; import {z} from 'zod'; import assert from 'node:assert/strict'; assert.equal(typeof Agent, 'function'); assert.equal(typeof Runner, 'function'); assert.equal(typeof tool, 'function'); assert.ok(z); console.log('PASS: SDK and Zod imports; no API calls');\""
+  },
+  "dependencies": {
+    "@openai/agents": "0.18.0",
+    "zod": "4.6.5"
+  }
+}

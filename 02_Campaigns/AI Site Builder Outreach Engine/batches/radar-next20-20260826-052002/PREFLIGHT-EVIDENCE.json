@@ -1,0 +1,617 @@
+{
+  "runId": "20260826-052002",
+  "generatedAt": "2026-08-26T09:35:11.212Z",
+  "candidatePool": 63,
+  "ready": [
+    {
+      "domain": "leisshendrix.com",
+      "name": "Leiss Orthodontics",
+      "slug": "leiss-orthodontics",
+      "logo": "logo.svg",
+      "referenceCount": 1,
+      "requiredSiteSpecificBoard": "leiss-orthodontics",
+      "contact": {
+        "phone": "610-363-2900",
+        "address": "201 Darby Square, Elverson, PA 19520",
+        "city": "Elverson",
+        "phoneSource": "official JSON-LD",
+        "addressSource": "official JSON-LD"
+      },
+      "cached": false
+    },
+    {
+      "domain": "foamcraft.com",
+      "name": "Peachtree City Foamcraft",
+      "slug": "peachtree-city-foamcraft",
+      "logo": "logo.svg",
+      "referenceCount": 0,
+      "requiredSiteSpecificBoard": "peachtree-city-foamcraft",
+      "contact": {
+        "phone": "",
+        "address": "",
+        "city": "",
+        "phoneSource": null,
+        "addressSource": null
+      },
+      "cached": false
+    },
+    {
+      "domain": "kevintcoyneattorneyatlaw.com",
+      "name": "Kevin T Coyne Attorney At Law",
+      "slug": "kevin-t-coyne-attorney-at-law",
+      "logo": "logo.svg",
+      "referenceCount": 0,
+      "requiredSiteSpecificBoard": "kevin-t-coyne-attorney-at-law",
+      "contact": {
+        "phone": "",
+        "address": "",
+        "city": "",
+        "phoneSource": null,
+        "addressSource": null
+      },
+      "cached": false
+    },
+    {
+      "domain": "lancastergeneralhealth.org",
+      "name": "LG Health Physicians Family Medicine Abbeyville",
+      "slug": "lg-health-physicians-family-medicine-abbeyville",
+      "logo": "logo.svg",
+      "referenceCount": 0,
+      "requiredSiteSpecificBoard": "lg-health-physicians-family-medicine-abbeyville",
+      "contact": {
+        "phone": "",
+        "address": "",
+        "city": "",
+        "phoneSource": null,
+        "addressSource": null
+      },
+      "cached": false
+    },
+    {
+      "domain": "lghealthexpress.org",
+      "name": "Lancaster General Health Express",
+      "slug": "lancaster-general-health-express",
+      "logo": "logo.svg",
+      "referenceCount": 0,
+      "requiredSiteSpecificBoard": "lancaster-general-health-express",
+      "contact": {
+        "phone": "",
+        "address": "",
+        "city": "",
+        "phoneSource": null,
+        "addressSource": null
+      },
+      "cached": false
+    },
+    {
+      "domain": "mrigroup.com",
+      "name": "MRI Group",
+      "slug": "mri-group",
+      "logo": "logo.svg",
+      "referenceCount": 0,
+      "requiredSiteSpecificBoard": "mri-group",
+      "contact": {
+        "phone": "",
+        "address": "",
+        "city": "",
+        "phoneSource": null,
+        "addressSource": null
+      },
+      "cached": false
+    },
+    {
+      "domain": "pzarchitects.com",
+      "name": "Peter Zimmerman Architects",
+      "slug": "peter-zimmerman-architects",
+      "logo": "logo.svg",
+      "referenceCount": 3,
+      "requiredSiteSpecificBoard": "peter-zimmerman-architects",
+      "contact": {
+        "phone": "(610)%20647-6970",
+        "address": "",
+        "city": "",
+        "phoneSource": "official tel link",
+        "addressSource": null
+      },
+      "cached": true
+    },
+    {
+      "domain": "neidererspoolsales.com",
+      "name": "Neiderer's Pool Sales & Service",
+      "slug": "neiderer-s-pool-sales-and-service",
+      "logo": "logo.svg",
+      "referenceCount": 1,
+      "requiredSiteSpecificBoard": "neiderer-s-pool-sales-and-service",
+      "contact": {
+        "phone": "",
+        "address": "",
+        "city": "",
+        "phoneSource": null,
+        "addressSource": null
+      },
+      "cached": true
+    },
+    {
+      "domain": "streetstoreshardware.com",
+      "name": "Street Stores Hardware Store",
+      "slug": "street-stores-hardware-store",
+      "logo": "logo.svg",
+      "referenceCount": 3,
+      "requiredSiteSpecificBoard": "street-stores-hardware-store",
+      "contact": {
+        "phone": "",
+        "address": "",
+        "city": "",
+        "phoneSource": null,
+        "addressSource": null
+      },
+      "cached": true
+    },
+    {
+      "domain": "aqua-docs.com",
+      "name": "Aqua Docs",
+      "slug": "aqua-docs",
+      "logo": "logo.png",
+      "referenceCount": 0,
+      "requiredSiteSpecificBoard": "aqua-docs",
+      "contact": {
+        "phone": "717-733-7667",
+        "address": "",
+        "city": "",
+        "phoneSource": "official tel link",
+        "addressSource": null
+      },
+      "cached": false
+    },
+    {
+      "domain": "balafinancial.com",
+      "name": "Bala Financial Group",
+      "slug": "bala-financial-group",
+      "logo": "logo.png",
+      "referenceCount": 0,
+      "requiredSiteSpecificBoard": "bala-financial-group",
+      "contact": {
+        "phone": "(610) 940-1000",
+        "address": "Devon, PA Office: 610-940-1000, Moorestown, NJ Office: 856-273-0800, valuedclient@balafinancial.com, PA 19333",
+        "city": "valuedclient@balafinancial.com",
+        "phoneSource": "official JSON-LD",
+        "addressSource": "official JSON-LD"
+      },
+      "cached": false
+    },
+    {
+      "domain": "brightmlshomes.com",
+      "name": "Bob Swayne Real Estate",
+      "slug": "bob-swayne-real-estate",
+      "logo": "logo.png",
+      "referenceCount": 1,
+      "requiredSiteSpecificBoard": "bob-swayne-real-estate",
+      "contact": {
+        "phone": "717-587-2218",
+        "address": "",
+        "city": "",
+        "phoneSource": "official tel link",
+        "addressSource": null
+      },
+      "cached": false
+    },
+    {
+      "domain": "eckrothequipment.com",
+      "name": "Eckroth Equipment Company",
+      "slug": "eckroth-equipment-company",
+      "logo": "logo.png",
+      "referenceCount": 3,
+      "requiredSiteSpecificBoard": "eckroth-equipment-company",
+      "contact": {
+        "phone": "(800) 237-4592",
+        "address": "",
+        "city": "",
+        "phoneSource": "official tel link",
+        "addressSource": null
+      },
+      "cached": false
+    },
+    {
+      "domain": "kitaylegal.com",
+      "name": "Kitay Law Offices",
+      "slug": "kitay-law-offices",
+      "logo": "logo.png",
+      "referenceCount": 3,
+      "requiredSiteSpecificBoard": "kitay-law-offices",
+      "contact": {
+        "phone": "+18885482952",
+        "address": "",
+        "city": "",
+        "phoneSource": "official tel link",
+        "addressSource": null
+      },
+      "cached": false
+    },
+    {
+      "domain": "mmacentral.com",
+      "name": "Money Management Advisory, Inc.",
+      "slug": "money-management-advisory-inc",
+      "logo": "logo.png",
+      "referenceCount": 3,
+      "requiredSiteSpecificBoard": "money-management-advisory-inc",
+      "contact": {
+        "phone": "215-322-7670",
+        "address": "102 West Street Road, Feasterville, PA 19053",
+        "city": "Feasterville",
+        "phoneSource": "official JSON-LD",
+        "addressSource": "official JSON-LD"
+      },
+      "cached": false
+    },
+    {
+      "domain": "shop.hajocayork.com",
+      "name": "Bath & Kitchen Showroom of Hajoca-York",
+      "slug": "bath-and-kitchen-showroom-of-hajoca-york",
+      "logo": "logo.png",
+      "referenceCount": 3,
+      "requiredSiteSpecificBoard": "bath-and-kitchen-showroom-of-hajoca-york",
+      "contact": {
+        "phone": "",
+        "address": "",
+        "city": "",
+        "phoneSource": null,
+        "addressSource": null
+      },
+      "cached": false
+    },
+    {
+      "domain": "wesleyworksrealestate.com",
+      "name": "Wesley Works Real Estate",
+      "slug": "wesley-works-real-estate",
+      "logo": "logo.png",
+      "referenceCount": 0,
+      "requiredSiteSpecificBoard": "wesley-works-real-estate",
+      "contact": {
+        "phone": "610.928.1000",
+        "address": "",
+        "city": "",
+        "phoneSource": "official tel link",
+        "addressSource": null
+      },
+      "cached": false
+    },
+    {
+      "domain": "freesinsurance.com",
+      "name": "Frees Insurance",
+      "slug": "frees-insurance",
+      "logo": "logo.png",
+      "referenceCount": 3,
+      "requiredSiteSpecificBoard": "frees-insurance",
+      "contact": {
+        "phone": "+1 610-933-4950",
+        "address": "120 Gay Street, Phoenixville, PA 19460",
+        "city": "Phoenixville",
+        "phoneSource": "official JSON-LD",
+        "addressSource": "official JSON-LD"
+      },
+      "cached": true
+    },
+    {
+      "domain": "wilkielexus.com",
+      "name": "Wilkie Lexus",
+      "slug": "wilkie-lexus",
+      "logo": "logo.svg",
+      "referenceCount": 0,
+      "requiredSiteSpecificBoard": "wilkie-lexus",
+      "contact": {
+        "phone": "",
+        "address": "",
+        "city": "",
+        "phoneSource": null,
+        "addressSource": null
+      },
+      "cached": false
+    },
+    {
+      "domain": "pacificomarplelincoln.com",
+      "name": "Pacifico Marple Lincoln",
+      "slug": "pacifico-marple-lincoln",
+      "logo": "logo.png",
+      "referenceCount": 3,
+      "requiredSiteSpecificBoard": "pacifico-marple-lincoln",
+      "contact": {
+        "phone": "",
+        "address": "",
+        "city": "",
+        "phoneSource": null,
+        "addressSource": null
+      },
+      "cached": true
+    },
+    {
+      "domain": "reading.towerhealth.org",
+      "name": "Reading Hospital at Muhlenberg",
+      "slug": "reading-hospital-at-muhlenberg",
+      "logo": "logo.png",
+      "referenceCount": 0,
+      "requiredSiteSpecificBoard": "reading-hospital-at-muhlenberg",
+      "contact": {
+        "phone": "833-348-6937",
+        "address": "",
+        "city": "",
+        "phoneSource": "official tel link",
+        "addressSource": null
+      },
+      "cached": false
+    },
+    {
+      "domain": "psclg.com",
+      "name": "Physicians' Surgery Center",
+      "slug": "physicians-surgery-center",
+      "logo": "logo.svg",
+      "referenceCount": 0,
+      "requiredSiteSpecificBoard": "physicians-surgery-center",
+      "contact": {
+        "phone": "",
+        "address": "Physicians' Surgery Center, Lancaster General Health 2150 Harrisburg Pike Lancaster , PA 17604 717-735-3993",
+        "city": "Lancaster General Health 2150 Harrisburg Pike Lancaster",
+        "phoneSource": null,
+        "addressSource": "official address element"
+      },
+      "cached": false
+    },
+    {
+      "domain": "affordabledentures.com",
+      "name": "Affordable Dentures & Implants",
+      "slug": "affordable-dentures-and-implants",
+      "logo": "logo.svg",
+      "referenceCount": 0,
+      "requiredSiteSpecificBoard": "affordable-dentures-and-implants",
+      "contact": {
+        "phone": "+1-866-318-1533",
+        "address": "629 Davis Drive, Suite 300, Morrisville, NC 27560",
+        "city": "Morrisville",
+        "phoneSource": "official JSON-LD",
+        "addressSource": "official JSON-LD"
+      },
+      "cached": false
+    }
+  ],
+  "rejected": [
+    {
+      "domain": "bmconstructionhvac.com",
+      "name": "B & M Construction & Hvac LLC",
+      "website": "https://bmconstructionhvac.com/",
+      "reason": "fetch failed; curl: curl: (6) Could not resolve host: bmconstructionhvac.com; browser: page.goto: net::ERR_NAME_NOT_RESOLVED at https://bmconstructionhvac.com/\nCall log:\n\u001b[2m  - navigating to \"https://bmconstructionhvac.com/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    {
+      "domain": "carabinassociates.com",
+      "name": "Carabin Associates",
+      "website": "https://carabinassociates.com/",
+      "reason": "fetch failed; curl: curl: (6) Could not resolve host: carabinassociates.com; browser: page.goto: net::ERR_NAME_NOT_RESOLVED at https://carabinassociates.com/\nCall log:\n\u001b[2m  - navigating to \"https://carabinassociates.com/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    {
+      "domain": "colonialnewtownsquare.com",
+      "name": "Colonial Animal Hospital",
+      "website": "http://www.colonialnewtownsquare.com/",
+      "reason": "fetch failed; curl: curl: (6) Could not resolve host: www.colonialnewtownsquare.com; browser: page.goto: net::ERR_NAME_NOT_RESOLVED at http://www.colonialnewtownsquare.com/\nCall log:\n\u001b[2m  - navigating to \"http://www.colonialnewtownsquare.com/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    {
+      "domain": "dralanrobertson.com",
+      "name": "Alan J Robertson, DDS",
+      "website": "http://www.dralanrobertson.com/",
+      "reason": "fetch failed; curl: curl: (6) Could not resolve host: www.dralanrobertson.com; browser: page.goto: net::ERR_NAME_NOT_RESOLVED at http://www.dralanrobertson.com/\nCall log:\n\u001b[2m  - navigating to \"http://www.dralanrobertson.com/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    {
+      "domain": "redrosefamilydental",
+      "name": "Red Rose Family Dental",
+      "website": "http://www.redrosefamilydental/",
+      "reason": "fetch failed; curl: curl: (6) Could not resolve host: www.redrosefamilydental; browser: page.goto: net::ERR_NAME_NOT_RESOLVED at http://www.redrosefamilydental/\nCall log:\n\u001b[2m  - navigating to \"http://www.redrosefamilydental/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    {
+      "domain": "tricountyanimalhospitaldillsburg.com",
+      "name": "Tri-County Animal Hospital",
+      "website": "https://tricountyanimalhospitaldillsburg.com/",
+      "reason": "fetch failed; curl: curl: (6) Could not resolve host: tricountyanimalhospitaldillsburg.com; browser: page.goto: net::ERR_NAME_NOT_RESOLVED at https://tricountyanimalhospitaldillsburg.com/\nCall log:\n\u001b[2m  - navigating to \"https://tricountyanimalhospitaldillsburg.com/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    {
+      "domain": "wjamesvincentdds.com",
+      "name": "W. James Vincent",
+      "website": "http://www.wjamesvincentdds.com/",
+      "reason": "fetch failed; curl: curl: (6) Could not resolve host: www.wjamesvincentdds.com; browser: page.goto: net::ERR_NAME_NOT_RESOLVED at http://www.wjamesvincentdds.com/\nCall log:\n\u001b[2m  - navigating to \"http://www.wjamesvincentdds.com/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    {
+      "domain": "zugdentistry.com",
+      "name": "David A Zug",
+      "website": "http://zugdentistry.com/",
+      "reason": "fetch failed; curl: curl: (6) Could not resolve host: zugdentistry.com; browser: page.goto: net::ERR_NAME_NOT_RESOLVED at http://zugdentistry.com/\nCall log:\n\u001b[2m  - navigating to \"http://zugdentistry.com/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    {
+      "domain": "donwardagency.com",
+      "name": "Ward Insurance Associates Inc.",
+      "website": "https://www.donwardagency.com/",
+      "reason": "fetch failed; curl: curl: (6) Could not resolve host: www.donwardagency.com; browser: page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.donwardagency.com/\nCall log:\n\u001b[2m  - navigating to \"https://www.donwardagency.com/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    {
+      "domain": "riceltd.net",
+      "name": "Rice & Rice, Ltd.",
+      "website": "https://riceltd.net/",
+      "reason": "fetch failed; curl: curl: (6) Could not resolve host: riceltd.net; browser: page.goto: net::ERR_NAME_NOT_RESOLVED at https://riceltd.net/\nCall log:\n\u001b[2m  - navigating to \"https://riceltd.net/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    {
+      "domain": "24emergencyrooter.com",
+      "name": "Emergency Rooter Services",
+      "website": "https://24emergencyrooter.com/",
+      "reason": "fetch failed; curl: curl: (6) Could not resolve host: 24emergencyrooter.com; browser: page.goto: net::ERR_NAME_NOT_RESOLVED at https://24emergencyrooter.com/\nCall log:\n\u001b[2m  - navigating to \"https://24emergencyrooter.com/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    {
+      "domain": "bsaia.net",
+      "name": "4/4 Architecture",
+      "website": "http://www.bsaia.net/",
+      "reason": "fetch failed; curl: curl: (6) Could not resolve host: www.bsaia.net; browser: page.goto: net::ERR_NAME_NOT_RESOLVED at http://www.bsaia.net/\nCall log:\n\u001b[2m  - navigating to \"http://www.bsaia.net/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    {
+      "domain": "cassellelawfirm.com",
+      "name": "Law Offices of D. A. Casselle",
+      "website": "http://cassellelawfirm.com/",
+      "reason": "fetch failed; curl: curl: (6) Could not resolve host: cassellelawfirm.com; browser: page.goto: net::ERR_NAME_NOT_RESOLVED at http://cassellelawfirm.com/\nCall log:\n\u001b[2m  - navigating to \"http://cassellelawfirm.com/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    {
+      "domain": "comealivechiro.com",
+      "name": "Come Alive Chiropractic",
+      "website": "http://comealivechiro.com/",
+      "reason": "fetch failed; curl: curl: (6) Could not resolve host: comealivechiro.com; browser: page.goto: net::ERR_NAME_NOT_RESOLVED at http://comealivechiro.com/\nCall log:\n\u001b[2m  - navigating to \"http://comealivechiro.com/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    {
+      "domain": "eshcom.com",
+      "name": "Esh Computer Center",
+      "website": "https://www.eshcom.com/",
+      "reason": "fetch failed; curl: curl: (6) Could not resolve host: www.eshcom.com; browser: page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.eshcom.com/\nCall log:\n\u001b[2m  - navigating to \"https://www.eshcom.com/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    {
+      "domain": "guntherheussmaninc.com",
+      "name": "Gunther Heussman",
+      "website": "http://www.guntherheussmaninc.com/",
+      "reason": "fetch failed; curl: curl: (6) Could not resolve host: www.guntherheussmaninc.com; browser: page.goto: net::ERR_NAME_NOT_RESOLVED at http://www.guntherheussmaninc.com/\nCall log:\n\u001b[2m  - navigating to \"http://www.guntherheussmaninc.com/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    {
+      "domain": "laulaw.net",
+      "name": "Lau & Associates, P.C.",
+      "website": "https://www.laulaw.net/",
+      "reason": "fetch failed; curl: curl: (6) Could not resolve host: www.laulaw.net; browser: page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.laulaw.net/\nCall log:\n\u001b[2m  - navigating to \"https://www.laulaw.net/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    {
+      "domain": "m.patrickchirocenter.com",
+      "name": "Patrick Chiropractic Center",
+      "website": "http://m.patrickchirocenter.com/",
+      "reason": "fetch failed; curl: curl: (6) Could not resolve host: m.patrickchirocenter.com; browser: page.goto: net::ERR_NAME_NOT_RESOLVED at http://m.patrickchirocenter.com/\nCall log:\n\u001b[2m  - navigating to \"http://m.patrickchirocenter.com/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    {
+      "domain": "mexicomagicopa.com",
+      "name": "Mexico Magico",
+      "website": "http://mexicomagicopa.com/",
+      "reason": "fetch failed; curl: curl: (6) Could not resolve host: mexicomagicopa.com; browser: page.goto: net::ERR_NAME_NOT_RESOLVED at http://mexicomagicopa.com/\nCall log:\n\u001b[2m  - navigating to \"http://mexicomagicopa.com/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    {
+      "domain": "sensezerofloat.com",
+      "name": "Sense Zero Float Center",
+      "website": "https://www.sensezerofloat.com/",
+      "reason": "fetch failed; curl: curl: (6) Could not resolve host: www.sensezerofloat.com; browser: page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.sensezerofloat.com/\nCall log:\n\u001b[2m  - navigating to \"https://www.sensezerofloat.com/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    {
+      "domain": "southernberksfamilymedicine.com",
+      "name": "Southern Berks Family Medicine",
+      "website": "http://southernberksfamilymedicine.com/",
+      "reason": "fetch failed; curl: curl: (6) Could not resolve host: southernberksfamilymedicine.com; browser: page.goto: net::ERR_NAME_NOT_RESOLVED at http://southernberksfamilymedicine.com/\nCall log:\n\u001b[2m  - navigating to \"http://southernberksfamilymedicine.com/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    {
+      "domain": "zatorlaw.com",
+      "name": "Zator Law",
+      "website": "https://www.zatorlaw.com/",
+      "reason": "fetch failed; curl: curl: (6) Could not resolve host: www.zatorlaw.com; browser: page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.zatorlaw.com/\nCall log:\n\u001b[2m  - navigating to \"https://www.zatorlaw.com/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    {
+      "domain": "fortitudefitness.info",
+      "name": "Fortitude & Co",
+      "website": "https://fortitudefitness.info/",
+      "reason": "fetch failed; curl: curl: (6) Could not resolve host: fortitudefitness.info; browser: page.goto: net::ERR_NAME_NOT_RESOLVED at https://fortitudefitness.info/\nCall log:\n\u001b[2m  - navigating to \"https://fortitudefitness.info/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    {
+      "domain": "valleydentalsmiles.com",
+      "name": "Valley Dental",
+      "website": "https://valleydentalsmiles.com/",
+      "reason": "HTTP 500; curl: curl: (22) The requested URL returned error: 500; browser: browser HTTP 500"
+    },
+    {
+      "domain": "malvernveterinaryhospital.vetstreet.com",
+      "name": "Malvern Veterinary Hospital",
+      "website": "http://malvernveterinaryhospital.vetstreet.com/",
+      "reason": "HTTP 404; curl: curl: (22) The requested URL returned error: 404; browser: browser HTTP 404"
+    },
+    {
+      "domain": "agency.nationwide.com",
+      "name": "Kathy Barry Agency",
+      "website": "https://agency.nationwide.com/pa/boyertown/19512/kathy-barry-agency-llc-10742849",
+      "reason": "HTTP 404; curl: curl: (22) The requested URL returned error: 404; browser: browser HTTP 404"
+    },
+    {
+      "domain": "sleepapneahallam.com",
+      "name": "Snoring, Sleep Apnea & Oral Appliance Dentist - Dr. Gordon Bell",
+      "website": "https://sleepapneahallam.com/",
+      "reason": "fetch failed; curl: curl: (47) Maximum (50) redirects followed; browser: page.goto: net::ERR_TOO_MANY_REDIRECTS at https://sleepapneahallam.com/\nCall log:\n\u001b[2m  - navigating to \"https://sleepapneahallam.com/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    {
+      "domain": "dangersalon.tv",
+      "name": "Danger Salon",
+      "website": "http://www.dangersalon.tv/",
+      "reason": "fetch failed; curl: curl: (6) Could not resolve host: www.dangersalon.tv; browser: page.goto: net::ERR_NAME_NOT_RESOLVED at http://www.dangersalon.tv/\nCall log:\n\u001b[2m  - navigating to \"http://www.dangersalon.tv/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    {
+      "domain": "pennstatehealthpassion.org",
+      "name": "Penn State Health St. Joseph Robesonia",
+      "website": "https://www.pennstatehealthpassion.org/location?id=64",
+      "reason": "fetch failed; curl: curl: (6) Could not resolve host: www.pennstatehealthpassion.org; browser: page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.pennstatehealthpassion.org/location?id=64\nCall log:\n\u001b[2m  - navigating to \"https://www.pennstatehealthpassion.org/location?id=64\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    {
+      "domain": "schaefferfloorcoveringspa.com",
+      "name": "Schaeffer Floor Coverings",
+      "website": "https://www.schaefferfloorcoveringspa.com/",
+      "reason": "fetch failed; curl: curl: (6) Could not resolve host: www.schaefferfloorcoveringspa.com; browser: page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.schaefferfloorcoveringspa.com/\nCall log:\n\u001b[2m  - navigating to \"https://www.schaefferfloorcoveringspa.com/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    {
+      "domain": "heartland-manorcare.com",
+      "name": "ManorCare Health Services",
+      "website": "https://www.heartland-manorcare.com/YorkSouth",
+      "reason": "HTTP 404; curl: curl: (22) The requested URL returned error: 404; browser: browser HTTP 404"
+    },
+    {
+      "domain": "satoshigear.mymusclepay.com",
+      "name": "S.B. Health",
+      "website": "https://satoshigear.mymusclepay.com/",
+      "reason": "HTTP 404; curl: curl: (22) The requested URL returned error: 404; browser: browser HTTP 404"
+    },
+    {
+      "domain": "sparkorthodontics.com",
+      "name": "Spark Orthodontics",
+      "website": "https://sparkorthodontics.com/contact/lancaster-pa-orthodontics-office/",
+      "reason": "HTTP 404; curl: curl: (22) The requested URL returned error: 404; browser: browser HTTP 404"
+    },
+    {
+      "domain": "brightchoicedentistry.com",
+      "name": "Bright Choice Dental",
+      "website": "https://www.brightchoicedentistry.com/bethlehem/",
+      "reason": "HTTP 404; curl: curl: (22) The requested URL returned error: 404; browser: browser HTTP 404"
+    },
+    {
+      "domain": "suburbansolutions.com",
+      "name": "The Rouse Group Development Co.",
+      "website": "https://suburbansolutions.com/philadelphia/havertown-movers/avertown",
+      "reason": "HTTP 404; curl: curl: (22) The requested URL returned error: 404; browser: browser HTTP 404"
+    },
+    {
+      "domain": "trivalleypc.com",
+      "name": "Trivalley Primary Care",
+      "website": "https://www.trivalleypc.com/pennridge-office/",
+      "reason": "HTTP 403; curl: curl: (22) The requested URL returned error: 403; browser: browser HTTP 403"
+    },
+    {
+      "domain": "hollywoodnailsbensalem.com",
+      "name": "Hollywood Nails",
+      "website": "https://hollywoodnailsbensalem.com/",
+      "reason": "HTTP 503; curl: curl: (22) The requested URL returned error: 503; browser: browser HTTP 503"
+    },
+    {
+      "domain": "crozerhealth.org",
+      "name": "Aston Foot Center",
+      "website": "https://www.crozerhealth.org/locations/practices/a/aston-foot-center",
+      "reason": "HTTP 404; curl: curl: (22) The requested URL returned error: 404; browser: browser HTTP 404"
+    },
+    {
+      "domain": "halligankeatonlaw.com",
+      "name": "Halligan & Keaton Law P.C.",
+      "website": "https://www.halligankeatonlaw.com/",
+      "reason": "HTTP 404; curl: curl: (22) The requested URL returned error: 404; browser: browser HTTP 404"
+    },
+    {
+      "domain": "mackshairstudio.com",
+      "name": "Mack’s Hair Studio",
+      "website": "https://www.mackshairstudio.com/",
+      "reason": "HTTP 404; curl: curl: (22) The requested URL returned error: 404; browser: browser HTTP 404"
+    }
+  ]
+}

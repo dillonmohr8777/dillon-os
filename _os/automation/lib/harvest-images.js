@@ -21,6 +21,7 @@
  */
 
 const { httpGet } = require('./net');
+const crypto = require('crypto');
 
 /** Filename or path fragments that mark an asset as chrome rather than content. */
 const CHROME_PATTERNS =
@@ -193,6 +194,9 @@ async function harvestImages(harvest, opts = {}) {
         width: probed.width || 0,
         height: probed.height || 0,
         bytes: res.body.length,
+        // Keep provenance lightweight while still making an exact asset
+        // auditable. `metadataOnly` drops the body but retains this digest.
+        sha256: crypto.createHash('sha256').update(res.body).digest('hex'),
         isLogo,
       });
     }

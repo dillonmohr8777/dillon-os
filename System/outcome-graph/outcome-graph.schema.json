@@ -1,0 +1,280 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dillon-os.local/schemas/outcome-graph-v1.json",
+  "title": "Dillon OS Outcome Graph v1",
+  "description": "A bounded graph of independently checked worker loops. Completion requires a true terminal predicate and artifact evidence.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "graph_id",
+    "objective",
+    "value_signal",
+    "constraints",
+    "upstream_artifacts",
+    "scope",
+    "source_freshness",
+    "finish_line",
+    "stopping",
+    "adapters",
+    "approval",
+    "governance",
+    "learning"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "graph_id": {
+      "$ref": "#/$defs/non_empty_string"
+    },
+    "objective": {
+      "$ref": "#/$defs/non_empty_string"
+    },
+    "value_signal": {
+      "$ref": "#/$defs/non_empty_string"
+    },
+    "constraints": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/non_empty_string"
+      }
+    },
+    "upstream_artifacts": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/non_empty_string"
+      }
+    },
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "root",
+        "isolation_key",
+        "data_class"
+      ],
+      "properties": {
+        "root": {
+          "$ref": "#/$defs/non_empty_string"
+        },
+        "isolation_key": {
+          "$ref": "#/$defs/non_empty_string"
+        },
+        "data_class": {
+          "$ref": "#/$defs/non_empty_string"
+        }
+      }
+    },
+    "source_freshness": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "checked_at",
+        "max_age_seconds",
+        "evidence"
+      ],
+      "properties": {
+        "checked_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "max_age_seconds": {
+          "$ref": "#/$defs/positive_integer"
+        },
+        "evidence": {
+          "$ref": "#/$defs/non_empty_string"
+        }
+      }
+    },
+    "finish_line": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "predicate",
+        "required_artifacts"
+      ],
+      "properties": {
+        "predicate": {
+          "$ref": "#/$defs/non_empty_string"
+        },
+        "required_artifacts": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/non_empty_string"
+          }
+        }
+      }
+    },
+    "stopping": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "max_graph_iterations",
+        "max_worker_attempts",
+        "timeout_seconds",
+        "max_parallel",
+        "budget_units"
+      ],
+      "properties": {
+        "max_graph_iterations": {
+          "$ref": "#/$defs/positive_integer"
+        },
+        "max_worker_attempts": {
+          "$ref": "#/$defs/positive_integer"
+        },
+        "timeout_seconds": {
+          "$ref": "#/$defs/positive_integer"
+        },
+        "max_parallel": {
+          "$ref": "#/$defs/positive_integer"
+        },
+        "budget_units": {
+          "$ref": "#/$defs/positive_integer"
+        }
+      }
+    },
+    "adapters": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "planner",
+        "maker",
+        "checker",
+        "reducer",
+        "terminal_verifier",
+        "learner"
+      ],
+      "properties": {
+        "planner": {
+          "$ref": "#/$defs/non_empty_string"
+        },
+        "maker": {
+          "$ref": "#/$defs/non_empty_string"
+        },
+        "checker": {
+          "$ref": "#/$defs/non_empty_string"
+        },
+        "reducer": {
+          "$ref": "#/$defs/non_empty_string"
+        },
+        "terminal_verifier": {
+          "$ref": "#/$defs/non_empty_string"
+        },
+        "learner": {
+          "$ref": "#/$defs/non_empty_string"
+        }
+      }
+    },
+    "approval": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "external_actions",
+        "required_before"
+      ],
+      "properties": {
+        "external_actions": {
+          "type": "boolean"
+        },
+        "required_before": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "adopt",
+              "external_action"
+            ]
+          }
+        }
+      }
+    },
+    "governance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "orchestrator",
+        "canonical_state",
+        "dedupe_key",
+        "checkpoint",
+        "rollback",
+        "escalation",
+        "allowed_actions",
+        "forbidden_actions"
+      ],
+      "properties": {
+        "orchestrator": {
+          "$ref": "#/$defs/non_empty_string"
+        },
+        "canonical_state": {
+          "$ref": "#/$defs/non_empty_string"
+        },
+        "dedupe_key": {
+          "$ref": "#/$defs/non_empty_string"
+        },
+        "checkpoint": {
+          "$ref": "#/$defs/non_empty_string"
+        },
+        "rollback": {
+          "$ref": "#/$defs/non_empty_string"
+        },
+        "escalation": {
+          "$ref": "#/$defs/non_empty_string"
+        },
+        "allowed_actions": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/non_empty_string"
+          }
+        },
+        "forbidden_actions": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/non_empty_string"
+          }
+        }
+      }
+    },
+    "learning": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "fingerprint_inputs",
+        "corrections_ledger"
+      ],
+      "properties": {
+        "fingerprint_inputs": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/non_empty_string"
+          }
+        },
+        "corrections_ledger": {
+          "$ref": "#/$defs/non_empty_string"
+        }
+      }
+    }
+  },
+  "$defs": {
+    "non_empty_string": {
+      "type": "string",
+      "minLength": 1
+    },
+    "positive_integer": {
+      "type": "integer",
+      "minimum": 1
+    }
+  }
+}

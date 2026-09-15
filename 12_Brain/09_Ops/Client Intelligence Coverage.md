@@ -1,10 +1,10 @@
 ---
 note_type: system
-status: healthy
+status: blocked
 generated: true
 generated_by: Update-ClientIntelligenceCoverage
-updated: 2026-08-17
-checked_at: 2026-08-17T08:34:42
+updated: 2026-09-15
+checked_at: 2026-09-15T10:03:50
 tags:
   - brain
   - client-intelligence
@@ -19,11 +19,12 @@ tags:
 
 ## Snapshot
 
-- Canonical active routes: **23**
-- Intelligence overlays present: **23**
-- Missing overlays: **0**
+- Canonical active routes: **25**
+- Active intelligence overlays present: **24**
+- Historical intelligence overlays retained: **0**
+- Missing overlays: **1**
 - Duplicate overlays: **0**
-- Extra or non-active overlays: **0**
+- Extra or non-active overlays: **1**
 - Active vault overviews without a canonical client_id: **0**
 
 ## Active portfolio
@@ -31,7 +32,6 @@ tags:
 | Client | Relationship | Maturity | Evidence as of | Keywords | AEO/GEO | Pipeline | Reporting | Workflow |
 |---|---|---|---|---|---|---|---|---|
 | [[02_FullTimeJob/AlignHCM/Intelligence Overlay|Align HCM]] | employer | operational | 2026-07-30 | developing | developing | developing | developing | operational |
-| [[01_Clients/AMI Cleaning/Client Intelligence Overlay|AMI Cleaning]] | client | developing | 2026-07-23 | developing | developing | blocked | developing | blocked |
 | [[01_Clients/Bar Crawl USA/Client Intelligence Overlay|Bar Crawl USA]] | client | operational | 2026-07-15 | operational | developing | developing | developing | developing |
 | [[01_Clients/Bercos Popcorn/Client Intelligence Overlay|Bercos Popcorn]] | client | developing | 2026-07-08 | blocked | blocked | blocked | blocked | developing |
 | [[01_Clients/BigOrange Marketing/Client Intelligence Overlay|BigOrange Marketing]] | client-and-employer | developing | 2026-07-30 | developing | developing | developing | developing | developing |
@@ -43,11 +43,13 @@ tags:
 | [[01_Clients/Hope Wellness Center/Client Intelligence Overlay|Hope Wellness Center]] | client | operational | 2026-07-15 | developing | developing | blocked | blocked | developing |
 | [[01_Clients/Kimberly James Bridal/Client Intelligence Overlay|Kimberly James Bridal]] | client | operational | 2026-07-27 | developing | developing | developing | developing | operational |
 | [[01_Clients/Momentum 360/Client Intelligence Overlay|Momentum 360]] | agency-partner | operational | 2026-07-30 | developing | developing | developing | operational | operational |
+| [[01_Clients/Nexla/Client Intelligence Overlay|Nexla]] | client | operational | 2026-08-24 | operational | deferred | blocked | developing | developing |
 | [[01_Clients/NKCDC/Client Intelligence Overlay|NKCDC]] | client | operational | 2026-07-21 | developing | developing | developing | developing | developing |
 | [[01_Clients/Omega Landscaping/Client Intelligence Overlay|Omega Landscaping and Concrete]] | client | operational | 2026-07-30 | operational | developing | blocked | operational | operational |
 | [[01_Clients/Onsite Concrete/Client Intelligence Overlay|Onsite Concrete & Landscape]] | client | operational | 2026-07-26 | operational | operational | blocked | operational | operational |
 | [[01_Clients/Pritzker Law Group/Client Intelligence Overlay|Pritzker Law Group]] | client | developing | 2026-07-25 | deferred | developing | blocked | blocked | developing |
 | [[01_Clients/Pro Fence & Deck/Client Intelligence Overlay|Pro Fence & Deck]] | client | developing | 2026-07-28 | developing | blocked | blocked | blocked | developing |
+| [[01_Clients/Puttery NYC/Client Intelligence Overlay|Puttery NYC]] | client | operational | 2026-09-01 | deferred | deferred | blocked | developing | operational |
 | [[01_Clients/Replenish/Client Intelligence Overlay|Replenish / 7-Eleven]] | client | operational | 2026-07-26 | operational | developing | developing | operational | operational |
 | [[01_Clients/Revive Systems/Client Intelligence Overlay|Revive Systems]] | client | operational | 2026-07-17 | operational | operational | blocked | blocked | developing |
 | [[01_Clients/Shadow HVAC/Client Intelligence Overlay|Shadow Heating and Cooling]] | client | operational | 2026-07-26 | developing | developing | blocked | operational | operational |
@@ -56,7 +58,8 @@ tags:
 
 ## Reconciliation findings
 
-- None.
+- **Missing overlay:** Deborah Mara (`deborah-mara`).
+- **Extra overlay:** [[01_Clients/AMI Cleaning/Client Intelligence Overlay]].
 
 ## Operating rule
 

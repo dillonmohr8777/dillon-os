@@ -1,0 +1,252 @@
+{
+  "slug": "leiss-orthodontics",
+  "preparedAt": "2026-08-26T10:41:38.885Z",
+  "sourceSite": "https://leisshendrix.com/location/elverson-orthodontics/",
+  "sourceFinalUrl": "https://leisshendrix.com/location/elverson-orthodontics/",
+  "sourcePageSha256": "92657d4829609de97c10bcdbb60d35879bcf8d8c6fa0d00d88b81f1991ec2ba8",
+  "exactLogoRequired": true,
+  "exactLogoSha256": "ecb27bdb8d6c74efdd63d776b7a459a095d7b54798ffb4556482ddf30a5874fa",
+  "identityFallback": false,
+  "generatedImagePolicy": "All content visuals come from an Align HCM Image Gen editorial board, carry embedded plus interface-level grain, and are disclosed as illustrative concept material. They never serve as proof about the business, its staff, facilities, products, clients, or outcomes.",
+  "assets": [
+    {
+      "role": "first-party identity",
+      "output": "logo.svg",
+      "sourceUrl": "https://assets.drjeffreyleiss.com/Images/Sites/S/SD-Leiss/MasterPage/1531354.svg",
+      "sourceSha256": "ecb27bdb8d6c74efdd63d776b7a459a095d7b54798ffb4556482ddf30a5874fa",
+      "outputSha256": "ecb27bdb8d6c74efdd63d776b7a459a095d7b54798ffb4556482ddf30a5874fa",
+      "transformation": "none; exact first-party transparent asset",
+      "transparent": true
+    },
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "leiss-orthodontics",
+      "boardDescriptor": "dentist",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/leiss-orthodontics.png",
+      "sourceSha256": "be0761c4a0716f44bb0b997a24b38c027fee8f50f570261a0aee886de08a3cc9",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Leiss Orthodontics. This is illustrative art only: do not depict, name, or imply the real business, its staff, patients, facility, outcomes, or brand. Four distinct but cohesive unlabelled panels in a generic credible orthodontic practice: an orthodontist in clean neutral scrubs reviewing a treatment scan with an adult patient from a non-identifying angle; gloved hands preparing orthodontic tools on a sterile tray; a candid consultation at a bright paper-toned desk; a quiet close detail of clear orthodontic materials and a dental model. No readable text, no logos, no watermarks, no signage, no fake testimonials, no branded uniforms. Human documentary editorial photography, grounded daylight, refined pronounced 35mm grain, tactile paper texture, authentic clinical equipment and hygiene, subtle deep navy, warm paper, orange and cyan color accents, not glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:28,eq=saturation=0.965:contrast=1.028:brightness=-0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "666ba0142bde1d7353267a47ac18c5251f0c5eef44636014e1d06139c8ff64f7",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "leiss-orthodontics",
+      "boardDescriptor": "dentist",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/leiss-orthodontics.png",
+      "sourceSha256": "be0761c4a0716f44bb0b997a24b38c027fee8f50f570261a0aee886de08a3cc9",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Leiss Orthodontics. This is illustrative art only: do not depict, name, or imply the real business, its staff, patients, facility, outcomes, or brand. Four distinct but cohesive unlabelled panels in a generic credible orthodontic practice: an orthodontist in clean neutral scrubs reviewing a treatment scan with an adult patient from a non-identifying angle; gloved hands preparing orthodontic tools on a sterile tray; a candid consultation at a bright paper-toned desk; a quiet close detail of clear orthodontic materials and a dental model. No readable text, no logos, no watermarks, no signage, no fake testimonials, no branded uniforms. Human documentary editorial photography, grounded daylight, refined pronounced 35mm grain, tactile paper texture, authentic clinical equipment and hygiene, subtle deep navy, warm paper, orange and cyan color accents, not glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:56,eq=saturation=0.990:contrast=1.082:brightness=0.000,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "4fdff9f14f75ab6c9ce2555f2eb0e4e8dc9359758f1eefb12653b8862053a656",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "leiss-orthodontics",
+      "boardDescriptor": "dentist",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/leiss-orthodontics.png",
+      "sourceSha256": "be0761c4a0716f44bb0b997a24b38c027fee8f50f570261a0aee886de08a3cc9",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Leiss Orthodontics. This is illustrative art only: do not depict, name, or imply the real business, its staff, patients, facility, outcomes, or brand. Four distinct but cohesive unlabelled panels in a generic credible orthodontic practice: an orthodontist in clean neutral scrubs reviewing a treatment scan with an adult patient from a non-identifying angle; gloved hands preparing orthodontic tools on a sterile tray; a candid consultation at a bright paper-toned desk; a quiet close detail of clear orthodontic materials and a dental model. No readable text, no logos, no watermarks, no signage, no fake testimonials, no branded uniforms. Human documentary editorial photography, grounded daylight, refined pronounced 35mm grain, tactile paper texture, authentic clinical equipment and hygiene, subtle deep navy, warm paper, orange and cyan color accents, not glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=1.015:contrast=1.046:brightness=0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "171303cc1fe64112580de1f44e04ed95e6d7312605c0ec6720b0093e1a8081e5",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "leiss-orthodontics",
+      "boardDescriptor": "dentist",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/leiss-orthodontics.png",
+      "sourceSha256": "be0761c4a0716f44bb0b997a24b38c027fee8f50f570261a0aee886de08a3cc9",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Leiss Orthodontics. This is illustrative art only: do not depict, name, or imply the real business, its staff, patients, facility, outcomes, or brand. Four distinct but cohesive unlabelled panels in a generic credible orthodontic practice: an orthodontist in clean neutral scrubs reviewing a treatment scan with an adult patient from a non-identifying angle; gloved hands preparing orthodontic tools on a sterile tray; a candid consultation at a bright paper-toned desk; a quiet close detail of clear orthodontic materials and a dental model. No readable text, no logos, no watermarks, no signage, no fake testimonials, no branded uniforms. Human documentary editorial photography, grounded daylight, refined pronounced 35mm grain, tactile paper texture, authentic clinical equipment and hygiene, subtle deep navy, warm paper, orange and cyan color accents, not glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:28,eq=saturation=1.040:contrast=1.010:brightness=-0.018,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "370a5383ee6e74fe327a860d098b3828f45f5d137f0dc70b7c907b9372948156",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "leiss-orthodontics",
+      "boardDescriptor": "dentist",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/leiss-orthodontics.png",
+      "sourceSha256": "be0761c4a0716f44bb0b997a24b38c027fee8f50f570261a0aee886de08a3cc9",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Leiss Orthodontics. This is illustrative art only: do not depict, name, or imply the real business, its staff, patients, facility, outcomes, or brand. Four distinct but cohesive unlabelled panels in a generic credible orthodontic practice: an orthodontist in clean neutral scrubs reviewing a treatment scan with an adult patient from a non-identifying angle; gloved hands preparing orthodontic tools on a sterile tray; a candid consultation at a bright paper-toned desk; a quiet close detail of clear orthodontic materials and a dental model. No readable text, no logos, no watermarks, no signage, no fake testimonials, no branded uniforms. Human documentary editorial photography, grounded daylight, refined pronounced 35mm grain, tactile paper texture, authentic clinical equipment and hygiene, subtle deep navy, warm paper, orange and cyan color accents, not glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:56,eq=saturation=0.940:contrast=1.064:brightness=-0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "c4cfbbc6e16a32a2be981502240c8f1c13583024b8ddc78d3eceb7145d2cc916",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "leiss-orthodontics",
+      "boardDescriptor": "dentist",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/leiss-orthodontics.png",
+      "sourceSha256": "be0761c4a0716f44bb0b997a24b38c027fee8f50f570261a0aee886de08a3cc9",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Leiss Orthodontics. This is illustrative art only: do not depict, name, or imply the real business, its staff, patients, facility, outcomes, or brand. Four distinct but cohesive unlabelled panels in a generic credible orthodontic practice: an orthodontist in clean neutral scrubs reviewing a treatment scan with an adult patient from a non-identifying angle; gloved hands preparing orthodontic tools on a sterile tray; a candid consultation at a bright paper-toned desk; a quiet close detail of clear orthodontic materials and a dental model. No readable text, no logos, no watermarks, no signage, no fake testimonials, no branded uniforms. Human documentary editorial photography, grounded daylight, refined pronounced 35mm grain, tactile paper texture, authentic clinical equipment and hygiene, subtle deep navy, warm paper, orange and cyan color accents, not glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:0,eq=saturation=0.965:contrast=1.028:brightness=0.000,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "c6b249ba0f9867d1efcb2eb233d8cc245e2abc44afb6c2c8f5321150fa559b57",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "leiss-orthodontics",
+      "boardDescriptor": "dentist",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/leiss-orthodontics.png",
+      "sourceSha256": "be0761c4a0716f44bb0b997a24b38c027fee8f50f570261a0aee886de08a3cc9",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Leiss Orthodontics. This is illustrative art only: do not depict, name, or imply the real business, its staff, patients, facility, outcomes, or brand. Four distinct but cohesive unlabelled panels in a generic credible orthodontic practice: an orthodontist in clean neutral scrubs reviewing a treatment scan with an adult patient from a non-identifying angle; gloved hands preparing orthodontic tools on a sterile tray; a candid consultation at a bright paper-toned desk; a quiet close detail of clear orthodontic materials and a dental model. No readable text, no logos, no watermarks, no signage, no fake testimonials, no branded uniforms. Human documentary editorial photography, grounded daylight, refined pronounced 35mm grain, tactile paper texture, authentic clinical equipment and hygiene, subtle deep navy, warm paper, orange and cyan color accents, not glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:28,eq=saturation=0.990:contrast=1.082:brightness=0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "dbd15390084b506d68540fd6930e9ecff43d12136810408711d27216e9f3f1e9",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "leiss-orthodontics",
+      "boardDescriptor": "dentist",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/leiss-orthodontics.png",
+      "sourceSha256": "be0761c4a0716f44bb0b997a24b38c027fee8f50f570261a0aee886de08a3cc9",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Leiss Orthodontics. This is illustrative art only: do not depict, name, or imply the real business, its staff, patients, facility, outcomes, or brand. Four distinct but cohesive unlabelled panels in a generic credible orthodontic practice: an orthodontist in clean neutral scrubs reviewing a treatment scan with an adult patient from a non-identifying angle; gloved hands preparing orthodontic tools on a sterile tray; a candid consultation at a bright paper-toned desk; a quiet close detail of clear orthodontic materials and a dental model. No readable text, no logos, no watermarks, no signage, no fake testimonials, no branded uniforms. Human documentary editorial photography, grounded daylight, refined pronounced 35mm grain, tactile paper texture, authentic clinical equipment and hygiene, subtle deep navy, warm paper, orange and cyan color accents, not glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:56,eq=saturation=1.015:contrast=1.046:brightness=-0.018,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "c97c41924e851f30ba33528507778e6e214c5dbc1d66d7ddb204e39215048a78",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "leiss-orthodontics",
+      "boardDescriptor": "dentist",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/leiss-orthodontics.png",
+      "sourceSha256": "be0761c4a0716f44bb0b997a24b38c027fee8f50f570261a0aee886de08a3cc9",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Leiss Orthodontics. This is illustrative art only: do not depict, name, or imply the real business, its staff, patients, facility, outcomes, or brand. Four distinct but cohesive unlabelled panels in a generic credible orthodontic practice: an orthodontist in clean neutral scrubs reviewing a treatment scan with an adult patient from a non-identifying angle; gloved hands preparing orthodontic tools on a sterile tray; a candid consultation at a bright paper-toned desk; a quiet close detail of clear orthodontic materials and a dental model. No readable text, no logos, no watermarks, no signage, no fake testimonials, no branded uniforms. Human documentary editorial photography, grounded daylight, refined pronounced 35mm grain, tactile paper texture, authentic clinical equipment and hygiene, subtle deep navy, warm paper, orange and cyan color accents, not glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:0,eq=saturation=1.040:contrast=1.010:brightness=-0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "0c3559a0fddac0e5f42c4b10ed4961f5728f755c35cf04a55d51ff339c22f966",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "leiss-orthodontics",
+      "boardDescriptor": "dentist",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/leiss-orthodontics.png",
+      "sourceSha256": "be0761c4a0716f44bb0b997a24b38c027fee8f50f570261a0aee886de08a3cc9",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Leiss Orthodontics. This is illustrative art only: do not depict, name, or imply the real business, its staff, patients, facility, outcomes, or brand. Four distinct but cohesive unlabelled panels in a generic credible orthodontic practice: an orthodontist in clean neutral scrubs reviewing a treatment scan with an adult patient from a non-identifying angle; gloved hands preparing orthodontic tools on a sterile tray; a candid consultation at a bright paper-toned desk; a quiet close detail of clear orthodontic materials and a dental model. No readable text, no logos, no watermarks, no signage, no fake testimonials, no branded uniforms. Human documentary editorial photography, grounded daylight, refined pronounced 35mm grain, tactile paper texture, authentic clinical equipment and hygiene, subtle deep navy, warm paper, orange and cyan color accents, not glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:28,eq=saturation=0.940:contrast=1.064:brightness=0.000,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "1a65993b964c14e631c8c2c54e692e1382f02334939f6df0cb560078f5a35dc8",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "leiss-orthodontics",
+      "boardDescriptor": "dentist",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/leiss-orthodontics.png",
+      "sourceSha256": "be0761c4a0716f44bb0b997a24b38c027fee8f50f570261a0aee886de08a3cc9",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Leiss Orthodontics. This is illustrative art only: do not depict, name, or imply the real business, its staff, patients, facility, outcomes, or brand. Four distinct but cohesive unlabelled panels in a generic credible orthodontic practice: an orthodontist in clean neutral scrubs reviewing a treatment scan with an adult patient from a non-identifying angle; gloved hands preparing orthodontic tools on a sterile tray; a candid consultation at a bright paper-toned desk; a quiet close detail of clear orthodontic materials and a dental model. No readable text, no logos, no watermarks, no signage, no fake testimonials, no branded uniforms. Human documentary editorial photography, grounded daylight, refined pronounced 35mm grain, tactile paper texture, authentic clinical equipment and hygiene, subtle deep navy, warm paper, orange and cyan color accents, not glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:56,eq=saturation=0.965:contrast=1.028:brightness=0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "e802d7121cf5ca91e31f858c98e9558ec484498442640ad05a1d3ef61a123141",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "leiss-orthodontics",
+      "boardDescriptor": "dentist",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/leiss-orthodontics.png",
+      "sourceSha256": "be0761c4a0716f44bb0b997a24b38c027fee8f50f570261a0aee886de08a3cc9",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Leiss Orthodontics. This is illustrative art only: do not depict, name, or imply the real business, its staff, patients, facility, outcomes, or brand. Four distinct but cohesive unlabelled panels in a generic credible orthodontic practice: an orthodontist in clean neutral scrubs reviewing a treatment scan with an adult patient from a non-identifying angle; gloved hands preparing orthodontic tools on a sterile tray; a candid consultation at a bright paper-toned desk; a quiet close detail of clear orthodontic materials and a dental model. No readable text, no logos, no watermarks, no signage, no fake testimonials, no branded uniforms. Human documentary editorial photography, grounded daylight, refined pronounced 35mm grain, tactile paper texture, authentic clinical equipment and hygiene, subtle deep navy, warm paper, orange and cyan color accents, not glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:0,eq=saturation=0.990:contrast=1.082:brightness=-0.018,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "36660a24a06f8dd53429a80a1bea379278b305be7a3850fbbbc7c229c6c674cb",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    }
+  ],
+  "fonts": {
+    "pair": {
+      "id": "plus-jakarta-dm-sans",
+      "display": "Plus Jakarta Sans",
+      "text": "DM Sans"
+    },
+    "source": "Google Fonts CSS API",
+    "files": [
+      {
+        "file": "font-display-400.woff2",
+        "sha256": "153fc85b70298beeb1d61a5f723331649e7f23bb77302a66e61cb3e2fbdb5e79"
+      },
+      {
+        "file": "font-display-800.woff2",
+        "sha256": "153fc85b70298beeb1d61a5f723331649e7f23bb77302a66e61cb3e2fbdb5e79"
+      },
+      {
+        "file": "font-text-400.woff2",
+        "sha256": "9fea608a947e67020c33cad9a6fe3d60c54119dfb8cff87768a8117a15ed7543"
+      },
+      {
+        "file": "font-text-700.woff2",
+        "sha256": "9fea608a947e67020c33cad9a6fe3d60c54119dfb8cff87768a8117a15ed7543"
+      }
+    ]
+  }
+}

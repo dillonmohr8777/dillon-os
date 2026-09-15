@@ -7,7 +7,7 @@ owner: Dillon Mohr
 verification_status: verified
 observed_at: 2026-09-10
 source_type: live call, Dillon's own notes
-tags: [empeon, matt-otten, john-nack, interview, hcm, healthcare]
+tags: [empeon, matt-otten, jonathan-nack, interview, hcm, healthcare]
 ---
 
 # Matt Otten call — 2026-09-10, 9:00 AM
@@ -15,7 +15,9 @@ tags: [empeon, matt-otten, john-nack, interview, hcm, healthcare]
 **Talk track in this file is superseded.** Use
 [[02_FullTimeJob/Empeon/2026-09-10 - Nack room card]] before you speak to
 Nack. Pb&J is PBJ. Do not lead with readmissions. Do not treat 98.5% as a
-public number. He is Jonathan Nack, not John.
+public number. He is Jonathan Nack, not John. The "What these actually mean"
+section below is the error, kept as a receipt of what the raw notes first
+produced.
 
 **Outcome: passed on to Jonathan Nack at Empeon.** Otten is the recruiter
 screen; Nack is the next conversation.
@@ -33,7 +35,7 @@ screen; Nack is the next conversation.
 - Text Matt EOD
 - John Nack
 
-## What these actually mean — the argument is in here
+## What these actually mean — superseded, do not walk in with this
 
 **1. Government reimbursement tied to patient satisfaction and readmission
 rates is the forcing function.** Empeon's buyers are not choosing scheduling
@@ -72,7 +74,7 @@ gap it surfaced.
 scheduling feature for acute care. Both are worth knowing as vocabulary; neither
 is the marketing argument.
 
-## For the John Nack conversation
+## For the Jonathan Nack conversation — superseded by the room card
 
 - Lead with the reimbursement-KPI link. It reframes marketing as revenue
   protection rather than lead generation.

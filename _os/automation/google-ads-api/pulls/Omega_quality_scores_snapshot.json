@@ -1,0 +1,5614 @@
+[
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23300554493",
+      "name": "Search_Snow Removal_Call Only",
+      "id": "23300554493"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/184395440330",
+      "id": "184395440330",
+      "name": "Snow Plowing Services"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/184395440330~358463136690",
+      "status": "PAUSED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "residential snow plowing near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "358463136690"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23300554493",
+      "name": "Search_Snow Removal_Call Only",
+      "id": "23300554493"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/184395440330",
+      "id": "184395440330",
+      "name": "Snow Plowing Services"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/184395440330~842302590618",
+      "status": "PAUSED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "residential snow plow services near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "842302590618"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23300554493",
+      "name": "Search_Snow Removal_Call Only",
+      "id": "23300554493"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/184395440330",
+      "id": "184395440330",
+      "name": "Snow Plowing Services"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/184395440330~866867687721",
+      "status": "PAUSED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "snow plowing residential near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "866867687721"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23300554493",
+      "name": "Search_Snow Removal_Call Only",
+      "id": "23300554493"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/184395440330",
+      "id": "184395440330",
+      "name": "Snow Plowing Services"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/184395440330~890337212082",
+      "status": "PAUSED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "residential snow plowers near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "890337212082"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23307822197",
+      "name": "Search_Concrete Services_Call Only",
+      "id": "23307822197"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/186541129862",
+      "id": "186541129862",
+      "name": "Concrete Pool Decks"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/186541129862~638302022345",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "concrete pool deck contractors near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "638302022345"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23307822197",
+      "name": "Search_Concrete Services_Call Only",
+      "id": "23307822197"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/186541129862",
+      "id": "186541129862",
+      "name": "Concrete Pool Decks"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/186541129862~1308942675040",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "stamped concrete pool deck contractors near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "1308942675040"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23307769901",
+      "name": "Search_Hardscaping_Call Only",
+      "id": "23307769901"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/187654160285",
+      "id": "187654160285",
+      "name": "Hardscape Design & Build"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/187654160285~547131898479",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "custom hardscape design near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "547131898479"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23307769901",
+      "name": "Search_Hardscaping_Call Only",
+      "id": "23307769901"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/187654160285",
+      "id": "187654160285",
+      "name": "Hardscape Design & Build"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/187654160285~2457150120452",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "hardscape renovation and design build near me"
+      },
+      "systemServingStatus": "RARELY_SERVED",
+      "criterionId": "2457150120452"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~23308460",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "stonework"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "23308460"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~41430263",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "driveway installation"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "41430263"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~41430283",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "driveway repair"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "41430283"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~43244043",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "foundation wall"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "43244043"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~99776361",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "concrete driveway pricing"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "99776361"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~99776381",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "concrete driveway contractors"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "99776381"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~117646240",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "concrete building construction"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "117646240"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~275828022",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "building a concrete patio"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "275828022"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~275831772",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "concrete wall construction"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "275831772"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~283049532",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "concrete driveway installation"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "283049532"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~326260732",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "yard retaining wall"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "326260732"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~326260762",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "home retaining wall"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "326260762"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~352674092",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "building cement"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "352674092"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~374566147",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "designer concrete"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "374566147"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~708172049",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "decorative concrete wall"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "708172049"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~1316928741",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "decorative retaining walls"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "1316928741"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~3707960477",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "cover cement patio"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "3707960477"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~3866507297",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "concrete retaining wall installation"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "3866507297"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~9924065520",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "retaining wall styles"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "9924065520"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~294689495262",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "best concrete for driveway"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "294689495262"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~294885018386",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "concrete driveway work"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "294885018386"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~295209025336",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "decorative cement patio"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "295209025336"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~295307221166",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "beautiful retaining walls"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "295307221166"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~295335849580",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "concrete retaining"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "295335849580"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~295344414459",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "decorative concrete work"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "295344414459"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~295344415139",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "residential concrete work"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "295344415139"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~295753426933",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "building a garden retaining wall"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "295753426933"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~295818849974",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "concrete retaining wall construction"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "295818849974"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~295916802170",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "concrete work"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "295916802170"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~295916802210",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "concrete workers"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "295916802210"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~295916803610",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "residential concrete patio"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "295916803610"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~295948340580",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "landscaping materials colorado springs"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "295948340580"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~296004829171",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "top landscape designers"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "296004829171"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~296112309571",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "home concrete"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "296112309571"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~296328203466",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "driveway patterned concrete"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "296328203466"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~296393042571",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "decorative concrete services"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "296393042571"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~296768352363",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "concrete garden wall"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "296768352363"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~296768356483",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "retaining wall how to"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "296768356483"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~296770419353",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "concrete driveway company"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "296770419353"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~296864218516",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "concrete work contractors"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "296864218516"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~297253346076",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "best way to build a retaining wall"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "297253346076"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~297253351356",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "easiest way to build a retaining wall"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "297253351356"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~297367588471",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "wall landscaping"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "297367588471"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~297423433865",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "home driveway"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "297423433865"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~297473354578",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "outdoor concrete patio"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "297473354578"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~297474681960",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "landscaping and concrete services"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "297474681960"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~297523467810",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "cement drive way"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "297523467810"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~297524783691",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "cement yard"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "297524783691"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~297584201185",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "decorative concrete designs"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "297584201185"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~297709395963",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "outdoor retaining wall"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "297709395963"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~297722450343",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "concrete commercial"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "297722450343"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~297952376810",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "landscape building materials"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "297952376810"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~298209463662",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "cement and concrete"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "298209463662"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~298380399275",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "concrete patio landscaping"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "298380399275"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~298412789035",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "patio foundation"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "298412789035"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~298629909336",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "construction cement"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "298629909336"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~298710717816",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "concrete and foundation"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "298710717816"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~298958407183",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "driveway wall"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "298958407183"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~299017924749",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "upgrade concrete patio"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "299017924749"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~299095401291",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "outdoor cement"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "299095401291"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~299179060461",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "quality concrete construction"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "299179060461"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~299262196781",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "commercial retaining walls"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "299262196781"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~299446298388",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "cement construction"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "299446298388"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~299658683923",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "concrete websites"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "299658683923"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~299823845015",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "designs in concrete"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "299823845015"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~300397512643",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "concrete works llc"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "300397512643"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~301397659575",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "company of concrete"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "301397659575"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~302225368529",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "foundation concrete work"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "302225368529"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~304283699925",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "yard construction"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "304283699925"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~305431833347",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "beautiful concrete"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "305431833347"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~305912903726",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "concrete project"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "305912903726"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~305918163046",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "concrete in colorado"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "305918163046"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~307424304378",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "custom concrete patio"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "307424304378"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~308507216821",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "concrete hardscaping"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "308507216821"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~313090672707",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "decorative concrete colorado springs"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "313090672707"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~313596552175",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "concrete landscape services"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "313596552175"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~314066213513",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "concrete only"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "314066213513"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~315060096199",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "concrete driveway colorado springs"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "315060096199"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~316723272161",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "custom concrete work"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "316723272161"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~319612442874",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "building a concrete retaining wall"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "319612442874"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~320909981420",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "concrete patio work"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "320909981420"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~322760176688",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "stenciled concrete driveway"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "322760176688"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~326578580364",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "decorative concrete landscaping"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "326578580364"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~327000793324",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "concrete covered patio"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "327000793324"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~327779512034",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "concrete for garden"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "327779512034"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~329507125084",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "concrete on top of concrete"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "329507125084"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~332785428154",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "retaining wall construction company"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "332785428154"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~334735609914",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "concrete contact"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "334735609914"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~345248489230",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "retaining wall and landscaping"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "345248489230"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~350282988167",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "cement driveway installation"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "350282988167"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~350653860847",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "cheap concrete driveway"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "350653860847"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~352343387887",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "retaining wall project"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "352343387887"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~353298220029",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "david's concrete"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "353298220029"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~354292405199",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "colorado springs concrete company"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "354292405199"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~357178823758",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "landscape wall construction"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "357178823758"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~359406345549",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "concrete work driveway"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "359406345549"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~359559243043",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "concrete and retaining walls"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "359559243043"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~360934468557",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "decorative landscaping"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "360934468557"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~361054792477",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "service concrete"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "361054792477"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~367613811768",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "retaining wall and driveway"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "367613811768"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~368774282871",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "concrete driveway and patio"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "368774282871"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~371552721334",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "retaining wall professionals"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "371552721334"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~387713706158",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "concrete residential driveway"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "387713706158"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~400536472776",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "concrete for residential"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "400536472776"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~408358206843",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "call concrete"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "408358206843"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~449307479717",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "best type of retaining wall"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "449307479717"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~488567792352",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "commercial concrete work"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "488567792352"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~488692523752",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "best concrete for patio"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "488692523752"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~531866523797",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "landscaping with cement"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "531866523797"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~561920455135",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "landscaping and concrete work"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "561920455135"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~571142704242",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "concrete commercial contractors"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "571142704242"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~667590113661",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "cement professionals"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "667590113661"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~809281228505",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "we concrete"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "809281228505"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~820756658766",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "aggregate driveway installation"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "820756658766"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~905773911035",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "retaining wall business near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "905773911035"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~1186957534694",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "patterned concrete driveway near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "1186957534694"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~1202741113327",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "driveway concreting near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "1202741113327"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188618163827",
+      "id": "188618163827",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188618163827~1373567823032",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "residential concrete workers near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "1373567823032"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23307769901",
+      "name": "Search_Hardscaping_Call Only",
+      "id": "23307769901"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188922480203",
+      "id": "188922480203",
+      "name": "Backyard & Garden Hardscaping"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188922480203~351919717815",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "backyard hardscaping services"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "351919717815"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23307769901",
+      "name": "Search_Hardscaping_Call Only",
+      "id": "23307769901"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188922480203",
+      "id": "188922480203",
+      "name": "Backyard & Garden Hardscaping"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188922480203~2453989411348",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "hardscape patio installers near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "2453989411348"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23307769901",
+      "name": "Search_Hardscaping_Call Only",
+      "id": "23307769901"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188922480203",
+      "id": "188922480203",
+      "name": "Backyard & Garden Hardscaping"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188922480203~2453989437748",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "backyard hardscape design colorado springs"
+      },
+      "systemServingStatus": "RARELY_SERVED",
+      "criterionId": "2453989437748"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23307769901",
+      "name": "Search_Hardscaping_Call Only",
+      "id": "23307769901"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/188922480203",
+      "id": "188922480203",
+      "name": "Backyard & Garden Hardscaping"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/188922480203~2453989461028",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "garden hardscape colorado springs"
+      },
+      "systemServingStatus": "RARELY_SERVED",
+      "criterionId": "2453989461028"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23300554493",
+      "name": "Search_Snow Removal_Call Only",
+      "id": "23300554493"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/189225370757",
+      "id": "189225370757",
+      "name": "Driveway & Home Snow Removal"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/189225370757~298941102929",
+      "status": "PAUSED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "snow removal colorado springs"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "298941102929"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23300554493",
+      "name": "Search_Snow Removal_Call Only",
+      "id": "23300554493"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/189225370757",
+      "id": "189225370757",
+      "name": "Driveway & Home Snow Removal"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/189225370757~604525190121",
+      "status": "PAUSED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "driveway snow removal colorado springs"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "604525190121"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23300554493",
+      "name": "Search_Snow Removal_Call Only",
+      "id": "23300554493"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/189225370757",
+      "id": "189225370757",
+      "name": "Driveway & Home Snow Removal"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/189225370757~2273531691259",
+      "status": "PAUSED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "residential driveway snow removal near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "2273531691259"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23300554493",
+      "name": "Search_Snow Removal_Call Only",
+      "id": "23300554493"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/189225370757",
+      "id": "189225370757",
+      "name": "Driveway & Home Snow Removal"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/189225370757~2456808749492",
+      "status": "PAUSED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "home snow clearing service colorado springs"
+      },
+      "systemServingStatus": "RARELY_SERVED",
+      "criterionId": "2456808749492"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23307769901",
+      "name": "Search_Hardscaping_Call Only",
+      "id": "23307769901"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/189761420816",
+      "id": "189761420816",
+      "name": "Hardscape Contractors"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/189761420816~298500978698",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "hardscape contractors near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "298500978698"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23307769901",
+      "name": "Search_Hardscaping_Call Only",
+      "id": "23307769901"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/189761420816",
+      "id": "189761420816",
+      "name": "Hardscape Contractors"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/189761420816~386778311186",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "best hardscape contractors near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "386778311186"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23307769901",
+      "name": "Search_Hardscaping_Call Only",
+      "id": "23307769901"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/189761420816",
+      "id": "189761420816",
+      "name": "Hardscape Contractors"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/189761420816~547131902639",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "hardscape installers near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "547131902639"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23307769901",
+      "name": "Search_Hardscaping_Call Only",
+      "id": "23307769901"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/189761420816",
+      "id": "189761420816",
+      "name": "Hardscape Contractors"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/189761420816~813340405594",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "hardscape contractors in colorado springs"
+      },
+      "systemServingStatus": "RARELY_SERVED",
+      "criterionId": "813340405594"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23307822197",
+      "name": "Search_Concrete Services_Call Only",
+      "id": "23307822197"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/189884087952",
+      "id": "189884087952",
+      "name": "Concrete Driveways & Patios"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/189884087952~377851112551",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "concrete driveway installation near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "377851112551"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23307822197",
+      "name": "Search_Concrete Services_Call Only",
+      "id": "23307822197"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/189884087952",
+      "id": "189884087952",
+      "name": "Concrete Driveways & Patios"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/189884087952~769210197071",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "residential concrete driveway contractors near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "769210197071"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23307822197",
+      "name": "Search_Concrete Services_Call Only",
+      "id": "23307822197"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/189884087952",
+      "id": "189884087952",
+      "name": "Concrete Driveways & Patios"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/189884087952~1381352818272",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "concrete patio installation services near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "1381352818272"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23440060242",
+      "name": "Search_Services_Standard",
+      "id": "23440060242"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/191483295076",
+      "id": "191483295076",
+      "name": "Hardscaping"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/191483295076~11857500",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "landscaper"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "11857500"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23440060242",
+      "name": "Search_Services_Standard",
+      "id": "23440060242"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/191483295076",
+      "id": "191483295076",
+      "name": "Hardscaping"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/191483295076~11857510",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "landscapers"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "11857510"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23440060242",
+      "name": "Search_Services_Standard",
+      "id": "23440060242"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/191483295076",
+      "id": "191483295076",
+      "name": "Hardscaping"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/191483295076~13561646",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "landscapers"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "13561646"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23440060242",
+      "name": "Search_Services_Standard",
+      "id": "23440060242"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/191483295076",
+      "id": "191483295076",
+      "name": "Hardscaping"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/191483295076~24426180",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "landscape"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "24426180"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23440060242",
+      "name": "Search_Services_Standard",
+      "id": "23440060242"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/191483295076",
+      "id": "191483295076",
+      "name": "Hardscaping"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/191483295076~48081492",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "landscaping companies"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "48081492"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23440060242",
+      "name": "Search_Services_Standard",
+      "id": "23440060242"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/191483295076",
+      "id": "191483295076",
+      "name": "Hardscaping"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/191483295076~56999850",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "retaining wall"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "56999850"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23440060242",
+      "name": "Search_Services_Standard",
+      "id": "23440060242"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/191483295076",
+      "id": "191483295076",
+      "name": "Hardscaping"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/191483295076~101479413",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "retaining wall"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "101479413"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23440060242",
+      "name": "Search_Services_Standard",
+      "id": "23440060242"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/191483295076",
+      "id": "191483295076",
+      "name": "Hardscaping"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/191483295076~157271693",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "patio builders"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "157271693"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23440060242",
+      "name": "Search_Services_Standard",
+      "id": "23440060242"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/191483295076",
+      "id": "191483295076",
+      "name": "Hardscaping"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/191483295076~258476676",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "landscape companies"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "258476676"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23440060242",
+      "name": "Search_Services_Standard",
+      "id": "23440060242"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/191483295076",
+      "id": "191483295076",
+      "name": "Hardscaping"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/191483295076~466003532",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "patio builders"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "466003532"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23440060242",
+      "name": "Search_Services_Standard",
+      "id": "23440060242"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/191483295076",
+      "id": "191483295076",
+      "name": "Hardscaping"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/191483295076~883417652",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "local landscapers"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "883417652"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23440060242",
+      "name": "Search_Services_Standard",
+      "id": "23440060242"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/191483295076",
+      "id": "191483295076",
+      "name": "Hardscaping"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/191483295076~1285155140",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "local landscapers"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "1285155140"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23440060242",
+      "name": "Search_Services_Standard",
+      "id": "23440060242"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/191483295076",
+      "id": "191483295076",
+      "name": "Hardscaping"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/191483295076~299195306085",
+      "status": "PAUSED",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "hardscape contractors near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "299195306085"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23440060242",
+      "name": "Search_Services_Standard",
+      "id": "23440060242"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/191483295076",
+      "id": "191483295076",
+      "name": "Hardscaping"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/191483295076~382025531466",
+      "status": "PAUSED",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "patio installation colorado springs"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "382025531466"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23440060242",
+      "name": "Search_Services_Standard",
+      "id": "23440060242"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/191483295076",
+      "id": "191483295076",
+      "name": "Hardscaping"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/191483295076~429641839131",
+      "status": "PAUSED",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "hardscape landscapers near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "429641839131"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23440060242",
+      "name": "Search_Services_Standard",
+      "id": "23440060242"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/191483295076",
+      "id": "191483295076",
+      "name": "Hardscaping"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/191483295076~467804982213",
+      "status": "PAUSED",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "stone walkway installation near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "467804982213"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23440060242",
+      "name": "Search_Services_Standard",
+      "id": "23440060242"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/191483295076",
+      "id": "191483295076",
+      "name": "Hardscaping"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/191483295076~863930804097",
+      "status": "PAUSED",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "retaining wall installer colorado springs"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "863930804097"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23440060242",
+      "name": "Search_Services_Standard",
+      "id": "23440060242"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/191483295076",
+      "id": "191483295076",
+      "name": "Hardscaping"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/191483295076~2459317535267",
+      "status": "PAUSED",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "rockrimmon backyard hardscaping"
+      },
+      "systemServingStatus": "RARELY_SERVED",
+      "criterionId": "2459317535267"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23440060242",
+      "name": "Search_Services_Standard",
+      "id": "23440060242"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/191483295076",
+      "id": "191483295076",
+      "name": "Hardscaping"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/191483295076~2459317535427",
+      "status": "PAUSED",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "flying horse hardscaping services"
+      },
+      "systemServingStatus": "RARELY_SERVED",
+      "criterionId": "2459317535427"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23440060242",
+      "name": "Search_Services_Standard",
+      "id": "23440060242"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/191483295076",
+      "id": "191483295076",
+      "name": "Hardscaping"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/191483295076~2459317535467",
+      "status": "PAUSED",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "falcon hardscaping near me"
+      },
+      "systemServingStatus": "RARELY_SERVED",
+      "criterionId": "2459317535467"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23440060242",
+      "name": "Search_Services_Standard",
+      "id": "23440060242"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/191483295076",
+      "id": "191483295076",
+      "name": "Hardscaping"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/191483295076~2459317545547",
+      "status": "PAUSED",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "castle rock hardscaping experts"
+      },
+      "systemServingStatus": "RARELY_SERVED",
+      "criterionId": "2459317545547"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23440060242",
+      "name": "Search_Services_Standard",
+      "id": "23440060242"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/191483295076",
+      "id": "191483295076",
+      "name": "Hardscaping"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/191483295076~2459317552547",
+      "status": "PAUSED",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "calhan professional hardscaping"
+      },
+      "systemServingStatus": "RARELY_SERVED",
+      "criterionId": "2459317552547"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23440060242",
+      "name": "Search_Services_Standard",
+      "id": "23440060242"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/191483295076",
+      "id": "191483295076",
+      "name": "Hardscaping"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/191483295076~2459317552707",
+      "status": "PAUSED",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "peyton yard hardscaping pros"
+      },
+      "systemServingStatus": "RARELY_SERVED",
+      "criterionId": "2459317552707"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23300554493",
+      "name": "Search_Snow Removal_Call Only",
+      "id": "23300554493"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/192064433711",
+      "id": "192064433711",
+      "name": "Residential Snow Removal"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/192064433711~305580280495",
+      "status": "PAUSED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "residential snow removal near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "305580280495"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23300554493",
+      "name": "Search_Snow Removal_Call Only",
+      "id": "23300554493"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/192064433711",
+      "id": "192064433711",
+      "name": "Residential Snow Removal"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/192064433711~306272524751",
+      "status": "PAUSED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "residential snow clearing"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "306272524751"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23300554493",
+      "name": "Search_Snow Removal_Call Only",
+      "id": "23300554493"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/192064433711",
+      "id": "192064433711",
+      "name": "Residential Snow Removal"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/192064433711~324438201497",
+      "status": "PAUSED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "snow removal near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "324438201497"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23300554493",
+      "name": "Search_Snow Removal_Call Only",
+      "id": "23300554493"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/192064433711",
+      "id": "192064433711",
+      "name": "Residential Snow Removal"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/192064433711~346650646206",
+      "status": "PAUSED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "residential snow clearing service"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "346650646206"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23300554493",
+      "name": "Search_Snow Removal_Call Only",
+      "id": "23300554493"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/192064433711",
+      "id": "192064433711",
+      "name": "Residential Snow Removal"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/192064433711~356721175424",
+      "status": "PAUSED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "residential snow removal services near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "356721175424"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23300554493",
+      "name": "Search_Snow Removal_Call Only",
+      "id": "23300554493"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/192064433711",
+      "id": "192064433711",
+      "name": "Residential Snow Removal"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/192064433711~602872620907",
+      "status": "PAUSED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "residential snow removal colorado springs"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "602872620907"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23300554493",
+      "name": "Search_Snow Removal_Call Only",
+      "id": "23300554493"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/192064433711",
+      "id": "192064433711",
+      "name": "Residential Snow Removal"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/192064433711~867228988964",
+      "status": "PAUSED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "residential snow removal companies near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "867228988964"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23300554493",
+      "name": "Search_Snow Removal_Call Only",
+      "id": "23300554493"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/192064433711",
+      "id": "192064433711",
+      "name": "Residential Snow Removal"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/192064433711~1580567957035",
+      "status": "PAUSED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "residential snow removal contractors near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "1580567957035"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23441013566",
+      "name": "Search_Services_Call Only",
+      "id": "23441013566"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/192083417500",
+      "id": "192083417500",
+      "name": "Hardscaping"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/192083417500~16014270",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "wholesale"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "16014270"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23441013566",
+      "name": "Search_Services_Call Only",
+      "id": "23441013566"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/192083417500",
+      "id": "192083417500",
+      "name": "Hardscaping"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/192083417500~300821951191",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "patio paver installers"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "300821951191"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23441013566",
+      "name": "Search_Services_Call Only",
+      "id": "23441013566"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/192083417500",
+      "id": "192083417500",
+      "name": "Hardscaping"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/192083417500~300900627559",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "hardscaping near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "300900627559"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23441013566",
+      "name": "Search_Services_Call Only",
+      "id": "23441013566"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/192083417500",
+      "id": "192083417500",
+      "name": "Hardscaping"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/192083417500~323002327436",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "hardscaping contractor near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "323002327436"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23441013566",
+      "name": "Search_Services_Call Only",
+      "id": "23441013566"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/192083417500",
+      "id": "192083417500",
+      "name": "Hardscaping"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/192083417500~356317062200",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "hardscapes near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "356317062200"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23441013566",
+      "name": "Search_Services_Call Only",
+      "id": "23441013566"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/192083417500",
+      "id": "192083417500",
+      "name": "Hardscaping"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/192083417500~386778920786",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "residential hardscape contractors near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "386778920786"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23441013566",
+      "name": "Search_Services_Call Only",
+      "id": "23441013566"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/192083417500",
+      "id": "192083417500",
+      "name": "Hardscaping"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/192083417500~439851681961",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "walkway contractor near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "439851681961"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23441013566",
+      "name": "Search_Services_Call Only",
+      "id": "23441013566"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/192083417500",
+      "id": "192083417500",
+      "name": "Hardscaping"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/192083417500~667467530357",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "hardscape landscapers near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "667467530357"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23441013566",
+      "name": "Search_Services_Call Only",
+      "id": "23441013566"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/192083417500",
+      "id": "192083417500",
+      "name": "Hardscaping"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/192083417500~2413548696230",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "fire pit installation colorado springs"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "2413548696230"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23441013566",
+      "name": "Search_Services_Call Only",
+      "id": "23441013566"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/192083417500",
+      "id": "192083417500",
+      "name": "Hardscaping"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/192083417500~2453989461028",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "garden hardscape colorado springs"
+      },
+      "systemServingStatus": "RARELY_SERVED",
+      "criterionId": "2453989461028"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23441013566",
+      "name": "Search_Services_Call Only",
+      "id": "23441013566"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/192083417500",
+      "id": "192083417500",
+      "name": "Hardscaping"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/192083417500~2459580066389",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "custom edging & border detailing near me"
+      },
+      "systemServingStatus": "RARELY_SERVED",
+      "criterionId": "2459580066389"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23441013566",
+      "name": "Search_Services_Call Only",
+      "id": "23441013566"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/192344093698",
+      "id": "192344093698",
+      "name": "Patio"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/192344093698~336800312605",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "concrete patio contractor near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "336800312605"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23441013566",
+      "name": "Search_Services_Call Only",
+      "id": "23441013566"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/192344093698",
+      "id": "192344093698",
+      "name": "Patio"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/192344093698~359348367996",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "concrete patios colorado springs"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "359348367996"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23441013566",
+      "name": "Search_Services_Call Only",
+      "id": "23441013566"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/192344093698",
+      "id": "192344093698",
+      "name": "Patio"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/192344093698~987458266536",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "stamped concrete patio contractors in my area"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "987458266536"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23441013566",
+      "name": "Search_Services_Call Only",
+      "id": "23441013566"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/192344093698",
+      "id": "192344093698",
+      "name": "Patio"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/192344093698~1338554873912",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "stamped patio near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "1338554873912"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23441013566",
+      "name": "Search_Services_Call Only",
+      "id": "23441013566"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/192344093698",
+      "id": "192344093698",
+      "name": "Patio"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/192344093698~1381352818272",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "concrete patio installation services near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "1381352818272"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23441013566",
+      "name": "Search_Services_Call Only",
+      "id": "23441013566"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/192344093698",
+      "id": "192344093698",
+      "name": "Patio"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/192344093698~1416566510586",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "best concrete patio installers near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "1416566510586"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23441013566",
+      "name": "Search_Services_Call Only",
+      "id": "23441013566"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/192344093698",
+      "id": "192344093698",
+      "name": "Patio"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/192344093698~2460866717735",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "stone patio installer colorado springs"
+      },
+      "systemServingStatus": "RARELY_SERVED",
+      "criterionId": "2460866717735"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23300554493",
+      "name": "Search_Snow Removal_Call Only",
+      "id": "23300554493"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/192726117561",
+      "id": "192726117561",
+      "name": "Emergency & Seasonal Snow Removal"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/192726117561~348869198375",
+      "status": "PAUSED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "local snow removal company"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "348869198375"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23300554493",
+      "name": "Search_Snow Removal_Call Only",
+      "id": "23300554493"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/192726117561",
+      "id": "192726117561",
+      "name": "Emergency & Seasonal Snow Removal"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/192726117561~2451939556934",
+      "status": "PAUSED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "seasonal snow removal contract colorado springs"
+      },
+      "systemServingStatus": "RARELY_SERVED",
+      "criterionId": "2451939556934"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23300554493",
+      "name": "Search_Snow Removal_Call Only",
+      "id": "23300554493"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/192726117561",
+      "id": "192726117561",
+      "name": "Emergency & Seasonal Snow Removal"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/192726117561~2451939556974",
+      "status": "PAUSED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "same day snow removal service colorado springs"
+      },
+      "systemServingStatus": "RARELY_SERVED",
+      "criterionId": "2451939556974"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23300554493",
+      "name": "Search_Snow Removal_Call Only",
+      "id": "23300554493"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/192726117561",
+      "id": "192726117561",
+      "name": "Emergency & Seasonal Snow Removal"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/192726117561~2451939557654",
+      "status": "PAUSED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "emergency residential snow removal colorado springs"
+      },
+      "systemServingStatus": "RARELY_SERVED",
+      "criterionId": "2451939557654"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23300554493",
+      "name": "Search_Snow Removal_Call Only",
+      "id": "23300554493"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/192726117561",
+      "id": "192726117561",
+      "name": "Emergency & Seasonal Snow Removal"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/192726117561~2451939557974",
+      "status": "PAUSED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "affordable snow removal service colorado springs"
+      },
+      "systemServingStatus": "RARELY_SERVED",
+      "criterionId": "2451939557974"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23307822197",
+      "name": "Search_Concrete Services_Call Only",
+      "id": "23307822197"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/193174025470",
+      "id": "193174025470",
+      "name": "Concrete Walkways & Commercial"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/193174025470~357285086817",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "commercial concrete contractors near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "357285086817"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23307822197",
+      "name": "Search_Concrete Services_Call Only",
+      "id": "23307822197"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/193174025470",
+      "id": "193174025470",
+      "name": "Concrete Walkways & Commercial"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/193174025470~2454479834544",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "concrete sidewalk and walkway installation"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "2454479834544"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23307822197",
+      "name": "Search_Concrete Services_Call Only",
+      "id": "23307822197"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/193174025470",
+      "id": "193174025470",
+      "name": "Concrete Walkways & Commercial"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/193174025470~2454479834584",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "decorative concrete walkways near me"
+      },
+      "systemServingStatus": "RARELY_SERVED",
+      "criterionId": "2454479834584"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23307822197",
+      "name": "Search_Concrete Services_Call Only",
+      "id": "23307822197"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/193174025470",
+      "id": "193174025470",
+      "name": "Concrete Walkways & Commercial"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/193174025470~2454479834624",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "concrete garage floor installation colorado springs"
+      },
+      "systemServingStatus": "RARELY_SERVED",
+      "criterionId": "2454479834624"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23307822197",
+      "name": "Search_Concrete Services_Call Only",
+      "id": "23307822197"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/193174025470",
+      "id": "193174025470",
+      "name": "Concrete Walkways & Commercial"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/193174025470~2454479834784",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "concrete flatwork contractor colorado springs"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "2454479834784"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23441013566",
+      "name": "Search_Services_Call Only",
+      "id": "23441013566"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/194198788991",
+      "id": "194198788991",
+      "name": "Concrete"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/194198788991~296980634876",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "concrete driveway contractor colorado springs"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "296980634876"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23441013566",
+      "name": "Search_Services_Call Only",
+      "id": "23441013566"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/194198788991",
+      "id": "194198788991",
+      "name": "Concrete"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/194198788991~297610463501",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "stamped concrete near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "297610463501"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23441013566",
+      "name": "Search_Services_Call Only",
+      "id": "23441013566"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/194198788991",
+      "id": "194198788991",
+      "name": "Concrete"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/194198788991~324699862539",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "advance concrete"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "324699862539"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23441013566",
+      "name": "Search_Services_Call Only",
+      "id": "23441013566"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/194198788991",
+      "id": "194198788991",
+      "name": "Concrete"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/194198788991~334025266270",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "concrete contractor colorado springs"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "334025266270"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23441013566",
+      "name": "Search_Services_Call Only",
+      "id": "23441013566"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/194198788991",
+      "id": "194198788991",
+      "name": "Concrete"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/194198788991~350155479727",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "decorative concrete colorado springs"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "350155479727"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23441013566",
+      "name": "Search_Services_Call Only",
+      "id": "23441013566"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/194198788991",
+      "id": "194198788991",
+      "name": "Concrete"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/194198788991~361662915314",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "concrete experts colorado springs"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "361662915314"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23441013566",
+      "name": "Search_Services_Call Only",
+      "id": "23441013566"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/194198788991",
+      "id": "194198788991",
+      "name": "Concrete"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/194198788991~374719332687",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "concrete patio installation near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "374719332687"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23441013566",
+      "name": "Search_Services_Call Only",
+      "id": "23441013566"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/194198788991",
+      "id": "194198788991",
+      "name": "Concrete"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/194198788991~405354004717",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "concrete installation colorado springs"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "405354004717"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23441013566",
+      "name": "Search_Services_Call Only",
+      "id": "23441013566"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/194198788991",
+      "id": "194198788991",
+      "name": "Concrete"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/194198788991~426017842787",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "stamped concrete contractor near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "426017842787"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23441013566",
+      "name": "Search_Services_Call Only",
+      "id": "23441013566"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/194198788991",
+      "id": "194198788991",
+      "name": "Concrete"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/194198788991~439885128459",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "decorative concrete contractor near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "439885128459"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23441013566",
+      "name": "Search_Services_Call Only",
+      "id": "23441013566"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/194198788991",
+      "id": "194198788991",
+      "name": "Concrete"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/194198788991~1516228205988",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "small residential concrete contractors near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "1516228205988"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23441013566",
+      "name": "Search_Services_Call Only",
+      "id": "23441013566"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/194199152391",
+      "id": "194199152391",
+      "name": "Retaining Walls"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/194199152391~300821953431",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "retaining wall installers near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "300821953431"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23441013566",
+      "name": "Search_Services_Call Only",
+      "id": "23441013566"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/194199152391",
+      "id": "194199152391",
+      "name": "Retaining Walls"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/194199152391~300921954400",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "retaining wall construction near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "300921954400"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23441013566",
+      "name": "Search_Services_Call Only",
+      "id": "23441013566"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/194199152391",
+      "id": "194199152391",
+      "name": "Retaining Walls"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/194199152391~323919328303",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "retaining wall contractor near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "323919328303"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23441013566",
+      "name": "Search_Services_Call Only",
+      "id": "23441013566"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/194199152391",
+      "id": "194199152391",
+      "name": "Retaining Walls"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/194199152391~854701641347",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "stone retaining wall contractors near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "854701641347"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23441013566",
+      "name": "Search_Services_Call Only",
+      "id": "23441013566"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/194199152391",
+      "id": "194199152391",
+      "name": "Retaining Walls"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/194199152391~855806573259",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "retaining wall experts near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "855806573259"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23614055022",
+      "name": "Search_Brand Campaign",
+      "id": "23614055022"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/196593433569",
+      "id": "196593433569",
+      "name": "Brand Campaign"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/196593433569~419444647835",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "omega landscaping"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "419444647835"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23614055022",
+      "name": "Search_Brand Campaign",
+      "id": "23614055022"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/196593433569",
+      "id": "196593433569",
+      "name": "Brand Campaign"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/196593433569~2448711421917",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "omega landscaping and concrete"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "2448711421917"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23440060242",
+      "name": "Search_Services_Standard",
+      "id": "23440060242"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/197079002091",
+      "id": "197079002091",
+      "name": "Concrete"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/197079002091~76137560",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "concrete driveway"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "76137560"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23440060242",
+      "name": "Search_Services_Standard",
+      "id": "23440060242"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/197079002091",
+      "id": "197079002091",
+      "name": "Concrete"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/197079002091~76137600",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "driveway"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "76137600"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23440060242",
+      "name": "Search_Services_Standard",
+      "id": "23440060242"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/197079002091",
+      "id": "197079002091",
+      "name": "Concrete"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/197079002091~93809901",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "driveway"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "93809901"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23440060242",
+      "name": "Search_Services_Standard",
+      "id": "23440060242"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/197079002091",
+      "id": "197079002091",
+      "name": "Concrete"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/197079002091~144506356",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "cement"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "144506356"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23440060242",
+      "name": "Search_Services_Standard",
+      "id": "23440060242"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/197079002091",
+      "id": "197079002091",
+      "name": "Concrete"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/197079002091~299633208669",
+      "status": "PAUSED",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "driveway replacement near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "299633208669"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23440060242",
+      "name": "Search_Services_Standard",
+      "id": "23440060242"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/197079002091",
+      "id": "197079002091",
+      "name": "Concrete"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/197079002091~318337987853",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "concrete company colorado springs"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "318337987853"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23440060242",
+      "name": "Search_Services_Standard",
+      "id": "23440060242"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/197079002091",
+      "id": "197079002091",
+      "name": "Concrete"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/197079002091~395772877909",
+      "status": "PAUSED",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "concrete patio repair near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "395772877909"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23440060242",
+      "name": "Search_Services_Standard",
+      "id": "23440060242"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/197079002091",
+      "id": "197079002091",
+      "name": "Concrete"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/197079002091~419634939115",
+      "status": "PAUSED",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "concrete driveway replacement near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "419634939115"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23440060242",
+      "name": "Search_Services_Standard",
+      "id": "23440060242"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/197079002091",
+      "id": "197079002091",
+      "name": "Concrete"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/197079002091~428980894079",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "concrete contractor colorado springs"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "428980894079"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23440060242",
+      "name": "Search_Services_Standard",
+      "id": "23440060242"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/197079002091",
+      "id": "197079002091",
+      "name": "Concrete"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/197079002091~758716527019",
+      "status": "PAUSED",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "concrete patio contractors colorado springs"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "758716527019"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23440060242",
+      "name": "Search_Services_Standard",
+      "id": "23440060242"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/197079002091",
+      "id": "197079002091",
+      "name": "Concrete"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/197079002091~797835867246",
+      "status": "PAUSED",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "driveway replacement contractors near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "797835867246"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23440060242",
+      "name": "Search_Services_Standard",
+      "id": "23440060242"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/197079002091",
+      "id": "197079002091",
+      "name": "Concrete"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/197079002091~1212643511168",
+      "status": "PAUSED",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "castle rock concrete company"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "1212643511168"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23440060242",
+      "name": "Search_Services_Standard",
+      "id": "23440060242"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/197079002091",
+      "id": "197079002091",
+      "name": "Concrete"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/197079002091~2424213076074",
+      "status": "PAUSED",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "stamped concrete patio builders near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "2424213076074"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23440060242",
+      "name": "Search_Services_Standard",
+      "id": "23440060242"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/197079002091",
+      "id": "197079002091",
+      "name": "Concrete"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/197079002091~2453955461461",
+      "status": "PAUSED",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "decorative concrete patio installation near me"
+      },
+      "systemServingStatus": "RARELY_SERVED",
+      "criterionId": "2453955461461"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23440060242",
+      "name": "Search_Services_Standard",
+      "id": "23440060242"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/197079002091",
+      "id": "197079002091",
+      "name": "Concrete"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/197079002091~2526618299677",
+      "status": "PAUSED",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "concrete walkway replacement colorado springs"
+      },
+      "systemServingStatus": "RARELY_SERVED",
+      "criterionId": "2526618299677"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23440060242",
+      "name": "Search_Services_Standard",
+      "id": "23440060242"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/197079002091",
+      "id": "197079002091",
+      "name": "Concrete"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/197079002091~2526618299717",
+      "status": "PAUSED",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "rockrimmon concrete services"
+      },
+      "systemServingStatus": "RARELY_SERVED",
+      "criterionId": "2526618299717"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23440060242",
+      "name": "Search_Services_Standard",
+      "id": "23440060242"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/197079002091",
+      "id": "197079002091",
+      "name": "Concrete"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/197079002091~2526618299757",
+      "status": "PAUSED",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "flying horse concrete contractors"
+      },
+      "systemServingStatus": "RARELY_SERVED",
+      "criterionId": "2526618299757"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23440060242",
+      "name": "Search_Services_Standard",
+      "id": "23440060242"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/197079002091",
+      "id": "197079002091",
+      "name": "Concrete"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/197079002091~2526618299917",
+      "status": "PAUSED",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "falcon concrete near me"
+      },
+      "systemServingStatus": "RARELY_SERVED",
+      "criterionId": "2526618299917"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23440060242",
+      "name": "Search_Services_Standard",
+      "id": "23440060242"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/197079002091",
+      "id": "197079002091",
+      "name": "Concrete"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/197079002091~2526618299957",
+      "status": "PAUSED",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "calhan concrete specialists"
+      },
+      "systemServingStatus": "RARELY_SERVED",
+      "criterionId": "2526618299957"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/24082267830",
+      "name": "Search | High Intent | Colorado Springs | 2026-07-30",
+      "id": "24082267830"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/198337769266",
+      "id": "198337769266",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/198337769266~328175650",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "landscape design build"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "328175650"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/24082267830",
+      "name": "Search | High Intent | Colorado Springs | 2026-07-30",
+      "id": "24082267830"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/198337769266",
+      "id": "198337769266",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/198337769266~371090600",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "stamped concrete contractor"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "371090600"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/24082267830",
+      "name": "Search | High Intent | Colorado Springs | 2026-07-30",
+      "id": "24082267830"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/198337769266",
+      "id": "198337769266",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/198337769266~381164991",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "concrete driveway contractor"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "381164991"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/24082267830",
+      "name": "Search | High Intent | Colorado Springs | 2026-07-30",
+      "id": "24082267830"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/198337769266",
+      "id": "198337769266",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/198337769266~381326601",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "concrete patio contractor"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "381326601"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/24082267830",
+      "name": "Search | High Intent | Colorado Springs | 2026-07-30",
+      "id": "24082267830"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/198337769266",
+      "id": "198337769266",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/198337769266~757348462",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "stamped concrete contractor"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "757348462"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/24082267830",
+      "name": "Search | High Intent | Colorado Springs | 2026-07-30",
+      "id": "24082267830"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/198337769266",
+      "id": "198337769266",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/198337769266~923047815",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "landscape design build"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "923047815"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/24082267830",
+      "name": "Search | High Intent | Colorado Springs | 2026-07-30",
+      "id": "24082267830"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/198337769266",
+      "id": "198337769266",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/198337769266~1446321784",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "retaining wall contractor"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "1446321784"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/24082267830",
+      "name": "Search | High Intent | Colorado Springs | 2026-07-30",
+      "id": "24082267830"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/198337769266",
+      "id": "198337769266",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/198337769266~2165067208",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "concrete driveway contractor"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "2165067208"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/24082267830",
+      "name": "Search | High Intent | Colorado Springs | 2026-07-30",
+      "id": "24082267830"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/198337769266",
+      "id": "198337769266",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/198337769266~2466404813",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "concrete patio contractor"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "2466404813"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/24082267830",
+      "name": "Search | High Intent | Colorado Springs | 2026-07-30",
+      "id": "24082267830"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/198337769266",
+      "id": "198337769266",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/198337769266~2750570629",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "retaining wall contractor"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "2750570629"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/24082267830",
+      "name": "Search | High Intent | Colorado Springs | 2026-07-30",
+      "id": "24082267830"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/198337769266",
+      "id": "198337769266",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/198337769266~332467788691",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "outdoor living contractor"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "332467788691"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/24082267830",
+      "name": "Search | High Intent | Colorado Springs | 2026-07-30",
+      "id": "24082267830"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/198337769266",
+      "id": "198337769266",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/198337769266~334025266270",
+      "status": "ENABLED",
+      "qualityInfo": {
+        "creativeQualityScore": "AVERAGE",
+        "postClickQualityScore": "AVERAGE",
+        "searchPredictedCtr": "BELOW_AVERAGE",
+        "qualityScore": 4
+      },
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "concrete contractor colorado springs"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "334025266270"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/24082267830",
+      "name": "Search | High Intent | Colorado Springs | 2026-07-30",
+      "id": "24082267830"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/198337769266",
+      "id": "198337769266",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/198337769266~387281231700",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "landscaping contractor colorado springs"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "387281231700"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/24082267830",
+      "name": "Search | High Intent | Colorado Springs | 2026-07-30",
+      "id": "24082267830"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/198337769266",
+      "id": "198337769266",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/198337769266~428980894079",
+      "status": "ENABLED",
+      "qualityInfo": {
+        "creativeQualityScore": "AVERAGE",
+        "postClickQualityScore": "AVERAGE",
+        "searchPredictedCtr": "BELOW_AVERAGE",
+        "qualityScore": 4
+      },
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "concrete contractor colorado springs"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "428980894079"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/24082267830",
+      "name": "Search | High Intent | Colorado Springs | 2026-07-30",
+      "id": "24082267830"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/198337769266",
+      "id": "198337769266",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/198337769266~668081655320",
+      "status": "ENABLED",
+      "qualityInfo": {
+        "creativeQualityScore": "BELOW_AVERAGE",
+        "postClickQualityScore": "BELOW_AVERAGE",
+        "searchPredictedCtr": "BELOW_AVERAGE",
+        "qualityScore": 1
+      },
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "hardscape contractor colorado springs"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "668081655320"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/24082267830",
+      "name": "Search | High Intent | Colorado Springs | 2026-07-30",
+      "id": "24082267830"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/198337769266",
+      "id": "198337769266",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/198337769266~668081665120",
+      "status": "ENABLED",
+      "qualityInfo": {
+        "creativeQualityScore": "BELOW_AVERAGE",
+        "postClickQualityScore": "BELOW_AVERAGE",
+        "searchPredictedCtr": "BELOW_AVERAGE",
+        "qualityScore": 1
+      },
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "hardscape contractor colorado springs"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "668081665120"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/24082267830",
+      "name": "Search | High Intent | Colorado Springs | 2026-07-30",
+      "id": "24082267830"
+    },
+    "adGroup": {
+      "resourceName": "customers/2853981364/adGroups/198337769266",
+      "id": "198337769266",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/2853981364/adGroupCriteria/198337769266~668081666800",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "landscaping contractor colorado springs"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "668081666800"
+    }
+  }
+]

@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "routine_id": "D07",
+  "generated_at": "2026-08-24T23:34:54.547Z",
+  "source_set_sha256": "b52e6019ce577e6427819c75ce81c9d04bbc32253583635a0206012c90e3683a",
+  "sources": [
+    {
+      "locator": "11_Agents/claude-operating-team.json",
+      "sha256": "05e6a21e884f4a6748b824ef5d58f4c786861ce892a2c8c3514ebb8b7cf8677e",
+      "bytes": 415812
+    },
+    {
+      "locator": "12_Brain/queue/claude-daily-driver-2026-08-24.jsonl",
+      "sha256": "aa41a5c96d1192c4b3562d303dee92fa3a710fed8f22bf3631323348da836fb0",
+      "bytes": 27323
+    },
+    {
+      "locator": "12_Brain/queue/claude-loop-2026-08-24.jsonl",
+      "sha256": "58c3eba404268e194054eda42a4463de510562ccbdaf74571e9ada16f8aeb927",
+      "bytes": 21941
+    },
+    {
+      "locator": "12_Brain/state/claude-daily-driver.json",
+      "sha256": "7c8c85b7a4c8994531b440a8016ed61853201037cd660fef00415a57b1ba374e",
+      "bytes": 414
+    },
+    {
+      "locator": "12_Brain/state/claude-loop-checkpoint.json",
+      "sha256": "671a1719ea5d82cbb9cf51bf6a037b5ad31b17c0aa6c1c99aa1c40ea05f1b30b",
+      "bytes": 285
+    },
+    {
+      "locator": "12_Brain/state/claude-usage-ledger.json",
+      "sha256": "483c6549b43c6658e4795e4099b49dfd3c3b921fef38bdaf02c8555d85b765e4",
+      "bytes": 447
+    },
+    {
+      "locator": "12_Brain/state/connector-health.json",
+      "sha256": "d3f6602f82aaeb1eea6e602566a15226cf5f618dd96862ad236d26245f03d3a1",
+      "bytes": 3861
+    },
+    {
+      "locator": "System/automation-status.md",
+      "sha256": "b206acfa920260ceacf9c8de24fe9fbf1cb771d26919246145ec994b81d2e4a0",
+      "bytes": 6087
+    },
+    {
+      "locator": "System/gateway-health.md",
+      "sha256": "5f9296df8c3581141bf4da37b9e58def9746b40041ce387e12cb9a4c1a7ebde1",
+      "bytes": 4187
+    },
+    {
+      "locator": "System/outcome-graph/source-snapshots/paid-media-live-2026-08-24.json",
+      "sha256": "48f8da8609ab79e901c8ff80237f0a2436e35ad1aef6954dcfbca6f1c725b90d",
+      "bytes": 9150
+    },
+    {
+      "locator": "System/routine-health.md",
+      "sha256": "40feaf987e9074b6ef7e973eb008e8025b2c48b18d613334e3ddea1b7e6dd2c1",
+      "bytes": 1115
+    }
+  ],
+  "authority": {
+    "read_only": true,
+    "proposal_only": true,
+    "external_action_attempted": false,
+    "canonical_write_attempted": false,
+    "provider_mutation_attempted": false,
+    "restart_attempted": false,
+    "retry_attempted": false,
+    "checkpoint_advance_attempted": false,
+    "secret_access_attempted": false
+  }
+}

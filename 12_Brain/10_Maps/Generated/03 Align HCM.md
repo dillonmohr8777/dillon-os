@@ -4,7 +4,7 @@ status: active
 generated: true
 generated_by: Update-SecondBrainMaps
 map_type: domain
-updated: 2026-08-18
+updated: 2026-09-15
 tags:
   - brain
   - map
@@ -30,6 +30,15 @@ Full-time Align HCM work, kept distinct from client revenue and client delivery.
 - [[02_FullTimeJob/AlignHCM/overview|overview]]
 - [[02_FullTimeJob/AlignHCM/smartcare-notes|smartcare-notes]]
 - [[02_FullTimeJob/AlignHCM/team-contacts|team-contacts]]
+- [[02_FullTimeJob/Empeon/2026-09-10 - CDPAP, the SEO gap, and market structure|2026-09-10 - CDPAP, the SEO gap, and market structure]]
+- [[02_FullTimeJob/Empeon/2026-09-10 - Jeff Dooney close draft|2026-09-10 - Jeff Dooney close draft]]
+- [[02_FullTimeJob/Empeon/2026-09-10 - Matt EOD text draft|2026-09-10 - Matt EOD text draft]]
+- [[02_FullTimeJob/Empeon/2026-09-10 - Matt Otten call notes|2026-09-10 - Matt Otten call notes]]
+- [[02_FullTimeJob/Empeon/2026-09-10 - Nack briefing and the expansion problem|2026-09-10 - Nack briefing and the expansion problem]]
+- [[02_FullTimeJob/Empeon/2026-09-10 - Nack room card|2026-09-10 - Nack room card]]
+- [[02_FullTimeJob/Empeon/README|README]]
+- [[02_FullTimeJob/Job Search/2026-09-08 - Full-Time Job Board|2026-09-08 - Full-Time Job Board]]
+- [[02_FullTimeJob/Job Search/Remote Marketing Roles|Remote Marketing Roles]]
 
 ## Related domains
 

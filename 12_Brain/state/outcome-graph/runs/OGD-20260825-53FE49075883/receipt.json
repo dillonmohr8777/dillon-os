@@ -1,0 +1,1215 @@
+{
+  "run_id": "OGD-20260825-53FE49075883",
+  "graph_id": "monthly-m02-agent-evaluation-shadow",
+  "objective": "Evaluate all 21 registered agents against current scope, tools, authority, sampled output evidence, maker-checker independence, and a retain, revise, or retire disposition.",
+  "value_signal": "Every agent has a source-bound governance record; unresolved name-only contracts and overlapping command-center signals remain visible.",
+  "contract_sha256": "54fb18b5e6ea46c812bb2e408954c6eebef49b5bd95dfaaf1c31e0e685c816c6",
+  "started_at": "2026-08-25T00:23:50.036Z",
+  "source_evidence": "Each governance routine recollects its exact registry, receipt, client, design, or knowledge source set before planning and terminal verification.",
+  "finish_line": "Every registered agent appears exactly once with scope, tools, authority, sample state, independence state, and a bounded disposition without permission or deletion changes.",
+  "governance": {
+    "orchestrator": "Codex acting as Marketing Chief",
+    "canonical_state": "The agent registry, routine contracts, current durable receipts, client registry, access metadata, design authority, Obsidian vault, and Marketing Chief queue remain canonical and read only.",
+    "dedupe_key": "M02:2026-08-24:source-bound-shadow",
+    "checkpoint": "System/outcome-graph/routines/M02/2026-08-24-governance-shadow/run-receipt.json",
+    "rollback": "Discard governance shadow artifacts and the unadopted proposal; preserve registry, permissions, schedules, billing, client records, design truth, sidecars, queue, and external systems.",
+    "escalation": "Return the exact missing sample, cost source, client ambiguity, stale authority, duplicate routine, or proposal decision to Marketing Chief."
+  },
+  "graph_iterations": [
+    {
+      "iteration": 1,
+      "status": "verified",
+      "planner": {
+        "evidence": "Collected 21 isolated M02 item(s) from source set 2502f22840f660e7fe3d6c4bce698fe9fe28a7fa9ba80a567233860b099bba84.",
+        "item_count": 21,
+        "plan_signature": "77eeced67e421d3f40568ed2ce81cd630e75d0324356a58c1241e422f49a82ee",
+        "items": [
+          {
+            "id": "M02:9e38a69714303b69130f",
+            "isolation_key": "agent:9e38a69714303b69130f:2026-08",
+            "input_fingerprint": "abc89bd3cbc631cb4344689237819d9cbacb11dfeb3085d993bb6aaeadf04e1d",
+            "task": null
+          },
+          {
+            "id": "M02:6443ce2e00c447791357",
+            "isolation_key": "agent:6443ce2e00c447791357:2026-08",
+            "input_fingerprint": "adca482a2e0dcbce20468d279b3cfb3e075d2ae02d967b51c07a1e4797c77cec",
+            "task": null
+          },
+          {
+            "id": "M02:bf455c922b57d8b99dad",
+            "isolation_key": "agent:bf455c922b57d8b99dad:2026-08",
+            "input_fingerprint": "a2c4b62fd9e728ad5f7894bacb8417adb28d8871edde91cba7199e89b3e161ef",
+            "task": null
+          },
+          {
+            "id": "M02:cab56ec4d628e2a87391",
+            "isolation_key": "agent:cab56ec4d628e2a87391:2026-08",
+            "input_fingerprint": "aae8ebde8a9e51425e0a9ba372a198f2fb0388011a68c1601409c306d389e279",
+            "task": null
+          },
+          {
+            "id": "M02:c4d02e8d2206dcdf059a",
+            "isolation_key": "agent:c4d02e8d2206dcdf059a:2026-08",
+            "input_fingerprint": "63246a251cfa3d5af454d8917ef3af51a958943d7fa2b106e8bc55dce5a3ca43",
+            "task": null
+          },
+          {
+            "id": "M02:0f17193933cc79b42f40",
+            "isolation_key": "agent:0f17193933cc79b42f40:2026-08",
+            "input_fingerprint": "5b8cc1110fc5d27a51fcaea9c9d376953915ff2828598e213e80b8396fb7df54",
+            "task": null
+          },
+          {
+            "id": "M02:4b16fb4eee5f95676f97",
+            "isolation_key": "agent:4b16fb4eee5f95676f97:2026-08",
+            "input_fingerprint": "5ef86a8ed453a5f5f1d27ddb65bf3d3d37c68d94d5b0642835a5857ab13869a1",
+            "task": null
+          },
+          {
+            "id": "M02:d770859c52257a54555d",
+            "isolation_key": "agent:d770859c52257a54555d:2026-08",
+            "input_fingerprint": "a110e588fdf1188937bc5b17299a4757166212e12525cc001d58377a6b07b62f",
+            "task": null
+          },
+          {
+            "id": "M02:3fb687803ff8a90756a4",
+            "isolation_key": "agent:3fb687803ff8a90756a4:2026-08",
+            "input_fingerprint": "a0071ed47e527639144f08a9e0960c2601edaad9ce322e7c94a3d857be6c6f04",
+            "task": null
+          },
+          {
+            "id": "M02:7e1c3e69a1bb77dc9097",
+            "isolation_key": "agent:7e1c3e69a1bb77dc9097:2026-08",
+            "input_fingerprint": "2ee5a40aeb5c58a1c620dbba2a5c7e8e340180a66fbe56e18d2bd4d48229e86c",
+            "task": null
+          },
+          {
+            "id": "M02:7bffc389fc8ac0f4c5b0",
+            "isolation_key": "agent:7bffc389fc8ac0f4c5b0:2026-08",
+            "input_fingerprint": "75f3491fec6770a843667ed77796661cc94582764288ddde30841f05433e676f",
+            "task": null
+          },
+          {
+            "id": "M02:a9f52c215171c8bd549b",
+            "isolation_key": "agent:a9f52c215171c8bd549b:2026-08",
+            "input_fingerprint": "30d4c964af85dc1eab3bfc5e20c2ba97b293aca4520346da87c431afe743d2f2",
+            "task": null
+          },
+          {
+            "id": "M02:e26e3abc7d8a038a7f3c",
+            "isolation_key": "agent:e26e3abc7d8a038a7f3c:2026-08",
+            "input_fingerprint": "53ca1e2735eadb746faa71d007a6f8be0ac35832f53cda9c36cad089ee8cc218",
+            "task": null
+          },
+          {
+            "id": "M02:12f92f67b7d5426e6a91",
+            "isolation_key": "agent:12f92f67b7d5426e6a91:2026-08",
+            "input_fingerprint": "ffb2c4c369b89fd460adeeb749b7c100fac78ed963d55829ec070eb8b853ef48",
+            "task": null
+          },
+          {
+            "id": "M02:43149245154579743816",
+            "isolation_key": "agent:43149245154579743816:2026-08",
+            "input_fingerprint": "ef5ac3cea0329b7eed61110d381f3e778e0b11b788d597639d23e5ef5769c6ff",
+            "task": null
+          },
+          {
+            "id": "M02:ae50c71af6cf7689f8f1",
+            "isolation_key": "agent:ae50c71af6cf7689f8f1:2026-08",
+            "input_fingerprint": "2317cfce5d25d8c1e6e988a0ff130c52d170d0624c6cc8f91dddef052afbf9af",
+            "task": null
+          },
+          {
+            "id": "M02:a9e535108d30c321c867",
+            "isolation_key": "agent:a9e535108d30c321c867:2026-08",
+            "input_fingerprint": "bc9a6c5cf2390061631deb34963933c4c95bc0546e6141c496d7f06ee1be7521",
+            "task": null
+          },
+          {
+            "id": "M02:d61e5628d71fad768c69",
+            "isolation_key": "agent:d61e5628d71fad768c69:2026-08",
+            "input_fingerprint": "8a598e4ccdc74dc1fbd082ec793ceaa4e47d0b59136b8fada991e8d5591d505f",
+            "task": null
+          },
+          {
+            "id": "M02:d75279c554c5d375366a",
+            "isolation_key": "agent:d75279c554c5d375366a:2026-08",
+            "input_fingerprint": "f861d4daddbca16b2cf1c9da490558b8c43872d448b660961ecbdd44e06af00c",
+            "task": null
+          },
+          {
+            "id": "M02:448eb82b93ca9eda7d1a",
+            "isolation_key": "agent:448eb82b93ca9eda7d1a:2026-08",
+            "input_fingerprint": "ea00a9b2ba5221d8dd6ac08673155c4aac655df03b23fb832a6da36bcbcaa373",
+            "task": null
+          },
+          {
+            "id": "M02:a485fba00381bf55caaa",
+            "isolation_key": "agent:a485fba00381bf55caaa:2026-08",
+            "input_fingerprint": "b996e4670f773c94f99bad7eb8e5ab17f45630af68e00ade7b351d35dd4efe3c",
+            "task": null
+          }
+        ]
+      },
+      "workers": [
+        {
+          "item_id": "M02:9e38a69714303b69130f",
+          "input_fingerprint": "abc89bd3cbc631cb4344689237819d9cbacb11dfeb3085d993bb6aaeadf04e1d",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260825-53FE49075883:a4ebfc4ba1cac126dd02:attempt:1",
+              "maker_evidence": "Built one privacy-safe M02 record for M02:9e38a69714303b69130f.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/M02/2026-08-24-governance-shadow/workers/a4ebfc4ba1cac126dd02.json",
+                  "sha256": "029ad20a94544acddd9ef0cfcdc43c6de0119357015b5c62c84dca481d49f1d0",
+                  "bytes": 1959
+                }
+              ],
+              "checker_evidence": "Independently reconstructed M02:9e38a69714303b69130f from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/M02/2026-08-24-governance-shadow/workers/a4ebfc4ba1cac126dd02.json",
+              "sha256": "029ad20a94544acddd9ef0cfcdc43c6de0119357015b5c62c84dca481d49f1d0",
+              "bytes": 1959
+            }
+          ],
+          "isolation_id": "OGD-20260825-53FE49075883:a4ebfc4ba1cac126dd02:attempt:1"
+        },
+        {
+          "item_id": "M02:6443ce2e00c447791357",
+          "input_fingerprint": "adca482a2e0dcbce20468d279b3cfb3e075d2ae02d967b51c07a1e4797c77cec",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260825-53FE49075883:c7f9ba4a1ae465de39df:attempt:1",
+              "maker_evidence": "Built one privacy-safe M02 record for M02:6443ce2e00c447791357.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/M02/2026-08-24-governance-shadow/workers/c7f9ba4a1ae465de39df.json",
+                  "sha256": "1297a1990576417851f8ec3818a74dfc96bccb8b9c306c817c5b6cf257035563",
+                  "bytes": 1864
+                }
+              ],
+              "checker_evidence": "Independently reconstructed M02:6443ce2e00c447791357 from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/M02/2026-08-24-governance-shadow/workers/c7f9ba4a1ae465de39df.json",
+              "sha256": "1297a1990576417851f8ec3818a74dfc96bccb8b9c306c817c5b6cf257035563",
+              "bytes": 1864
+            }
+          ],
+          "isolation_id": "OGD-20260825-53FE49075883:c7f9ba4a1ae465de39df:attempt:1"
+        },
+        {
+          "item_id": "M02:bf455c922b57d8b99dad",
+          "input_fingerprint": "a2c4b62fd9e728ad5f7894bacb8417adb28d8871edde91cba7199e89b3e161ef",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260825-53FE49075883:add460a5c8ff1599dee5:attempt:1",
+              "maker_evidence": "Built one privacy-safe M02 record for M02:bf455c922b57d8b99dad.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/M02/2026-08-24-governance-shadow/workers/add460a5c8ff1599dee5.json",
+                  "sha256": "188946dc6e1a3762f804c07e3c37b5849bf1e2e4dc412e3e75313135f715557a",
+                  "bytes": 1643
+                }
+              ],
+              "checker_evidence": "Independently reconstructed M02:bf455c922b57d8b99dad from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/M02/2026-08-24-governance-shadow/workers/add460a5c8ff1599dee5.json",
+              "sha256": "188946dc6e1a3762f804c07e3c37b5849bf1e2e4dc412e3e75313135f715557a",
+              "bytes": 1643
+            }
+          ],
+          "isolation_id": "OGD-20260825-53FE49075883:add460a5c8ff1599dee5:attempt:1"
+        },
+        {
+          "item_id": "M02:cab56ec4d628e2a87391",
+          "input_fingerprint": "aae8ebde8a9e51425e0a9ba372a198f2fb0388011a68c1601409c306d389e279",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260825-53FE49075883:8716b69452a30d783830:attempt:1",
+              "maker_evidence": "Built one privacy-safe M02 record for M02:cab56ec4d628e2a87391.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/M02/2026-08-24-governance-shadow/workers/8716b69452a30d783830.json",
+                  "sha256": "cf5804937a57a9c43184bcda2b33215e5fcc631175df3e4147a581277dd1f7ae",
+                  "bytes": 1638
+                }
+              ],
+              "checker_evidence": "Independently reconstructed M02:cab56ec4d628e2a87391 from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/M02/2026-08-24-governance-shadow/workers/8716b69452a30d783830.json",
+              "sha256": "cf5804937a57a9c43184bcda2b33215e5fcc631175df3e4147a581277dd1f7ae",
+              "bytes": 1638
+            }
+          ],
+          "isolation_id": "OGD-20260825-53FE49075883:8716b69452a30d783830:attempt:1"
+        },
+        {
+          "item_id": "M02:c4d02e8d2206dcdf059a",
+          "input_fingerprint": "63246a251cfa3d5af454d8917ef3af51a958943d7fa2b106e8bc55dce5a3ca43",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260825-53FE49075883:469d226ee2ff6ce27e5e:attempt:1",
+              "maker_evidence": "Built one privacy-safe M02 record for M02:c4d02e8d2206dcdf059a.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/M02/2026-08-24-governance-shadow/workers/469d226ee2ff6ce27e5e.json",
+                  "sha256": "77c56584ddc4e705c8a7a8b2ce05ab0901cd440e79831764a3093b8d3af5b098",
+                  "bytes": 1867
+                }
+              ],
+              "checker_evidence": "Independently reconstructed M02:c4d02e8d2206dcdf059a from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/M02/2026-08-24-governance-shadow/workers/469d226ee2ff6ce27e5e.json",
+              "sha256": "77c56584ddc4e705c8a7a8b2ce05ab0901cd440e79831764a3093b8d3af5b098",
+              "bytes": 1867
+            }
+          ],
+          "isolation_id": "OGD-20260825-53FE49075883:469d226ee2ff6ce27e5e:attempt:1"
+        },
+        {
+          "item_id": "M02:0f17193933cc79b42f40",
+          "input_fingerprint": "5b8cc1110fc5d27a51fcaea9c9d376953915ff2828598e213e80b8396fb7df54",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260825-53FE49075883:38e37da108e4b1cd0d29:attempt:1",
+              "maker_evidence": "Built one privacy-safe M02 record for M02:0f17193933cc79b42f40.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/M02/2026-08-24-governance-shadow/workers/38e37da108e4b1cd0d29.json",
+                  "sha256": "fe8ed6e3cb5ebeb63a9a5dc8fe4500b3fae674ffc49f883da22ceb44078928f4",
+                  "bytes": 1877
+                }
+              ],
+              "checker_evidence": "Independently reconstructed M02:0f17193933cc79b42f40 from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/M02/2026-08-24-governance-shadow/workers/38e37da108e4b1cd0d29.json",
+              "sha256": "fe8ed6e3cb5ebeb63a9a5dc8fe4500b3fae674ffc49f883da22ceb44078928f4",
+              "bytes": 1877
+            }
+          ],
+          "isolation_id": "OGD-20260825-53FE49075883:38e37da108e4b1cd0d29:attempt:1"
+        },
+        {
+          "item_id": "M02:4b16fb4eee5f95676f97",
+          "input_fingerprint": "5ef86a8ed453a5f5f1d27ddb65bf3d3d37c68d94d5b0642835a5857ab13869a1",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260825-53FE49075883:d7627c276f9dbc68661b:attempt:1",
+              "maker_evidence": "Built one privacy-safe M02 record for M02:4b16fb4eee5f95676f97.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/M02/2026-08-24-governance-shadow/workers/d7627c276f9dbc68661b.json",
+                  "sha256": "fc4f00b5c9efe50b0079671651b39447852d413c6f8f7f6cb92224b868330086",
+                  "bytes": 1851
+                }
+              ],
+              "checker_evidence": "Independently reconstructed M02:4b16fb4eee5f95676f97 from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/M02/2026-08-24-governance-shadow/workers/d7627c276f9dbc68661b.json",
+              "sha256": "fc4f00b5c9efe50b0079671651b39447852d413c6f8f7f6cb92224b868330086",
+              "bytes": 1851
+            }
+          ],
+          "isolation_id": "OGD-20260825-53FE49075883:d7627c276f9dbc68661b:attempt:1"
+        },
+        {
+          "item_id": "M02:d770859c52257a54555d",
+          "input_fingerprint": "a110e588fdf1188937bc5b17299a4757166212e12525cc001d58377a6b07b62f",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260825-53FE49075883:0116814859461495eef0:attempt:1",
+              "maker_evidence": "Built one privacy-safe M02 record for M02:d770859c52257a54555d.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/M02/2026-08-24-governance-shadow/workers/0116814859461495eef0.json",
+                  "sha256": "4fd76df606fea0eae516aa4dbf033448c235113cfd6b32b33de4e348c6dd53d5",
+                  "bytes": 1548
+                }
+              ],
+              "checker_evidence": "Independently reconstructed M02:d770859c52257a54555d from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/M02/2026-08-24-governance-shadow/workers/0116814859461495eef0.json",
+              "sha256": "4fd76df606fea0eae516aa4dbf033448c235113cfd6b32b33de4e348c6dd53d5",
+              "bytes": 1548
+            }
+          ],
+          "isolation_id": "OGD-20260825-53FE49075883:0116814859461495eef0:attempt:1"
+        },
+        {
+          "item_id": "M02:3fb687803ff8a90756a4",
+          "input_fingerprint": "a0071ed47e527639144f08a9e0960c2601edaad9ce322e7c94a3d857be6c6f04",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260825-53FE49075883:7b027e2acd4ca9c27892:attempt:1",
+              "maker_evidence": "Built one privacy-safe M02 record for M02:3fb687803ff8a90756a4.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/M02/2026-08-24-governance-shadow/workers/7b027e2acd4ca9c27892.json",
+                  "sha256": "d44e938c2f03750ddf139b0acc3a2bed0455364aad001d2052317c1402eb652c",
+                  "bytes": 1661
+                }
+              ],
+              "checker_evidence": "Independently reconstructed M02:3fb687803ff8a90756a4 from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/M02/2026-08-24-governance-shadow/workers/7b027e2acd4ca9c27892.json",
+              "sha256": "d44e938c2f03750ddf139b0acc3a2bed0455364aad001d2052317c1402eb652c",
+              "bytes": 1661
+            }
+          ],
+          "isolation_id": "OGD-20260825-53FE49075883:7b027e2acd4ca9c27892:attempt:1"
+        },
+        {
+          "item_id": "M02:7e1c3e69a1bb77dc9097",
+          "input_fingerprint": "2ee5a40aeb5c58a1c620dbba2a5c7e8e340180a66fbe56e18d2bd4d48229e86c",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260825-53FE49075883:3b49a77655e8e84f0b30:attempt:1",
+              "maker_evidence": "Built one privacy-safe M02 record for M02:7e1c3e69a1bb77dc9097.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/M02/2026-08-24-governance-shadow/workers/3b49a77655e8e84f0b30.json",
+                  "sha256": "6b3da0dec1500e8390934c5708b67d8df2b7d8fcc74f74f9534d6082f3d710ed",
+                  "bytes": 1794
+                }
+              ],
+              "checker_evidence": "Independently reconstructed M02:7e1c3e69a1bb77dc9097 from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/M02/2026-08-24-governance-shadow/workers/3b49a77655e8e84f0b30.json",
+              "sha256": "6b3da0dec1500e8390934c5708b67d8df2b7d8fcc74f74f9534d6082f3d710ed",
+              "bytes": 1794
+            }
+          ],
+          "isolation_id": "OGD-20260825-53FE49075883:3b49a77655e8e84f0b30:attempt:1"
+        },
+        {
+          "item_id": "M02:7bffc389fc8ac0f4c5b0",
+          "input_fingerprint": "75f3491fec6770a843667ed77796661cc94582764288ddde30841f05433e676f",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260825-53FE49075883:90ba125447780d271f5a:attempt:1",
+              "maker_evidence": "Built one privacy-safe M02 record for M02:7bffc389fc8ac0f4c5b0.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/M02/2026-08-24-governance-shadow/workers/90ba125447780d271f5a.json",
+                  "sha256": "d25d2a7dd0db6fbecf827f3ca8a59831d6bd2fe24ae922f8587cb0a164442977",
+                  "bytes": 1829
+                }
+              ],
+              "checker_evidence": "Independently reconstructed M02:7bffc389fc8ac0f4c5b0 from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/M02/2026-08-24-governance-shadow/workers/90ba125447780d271f5a.json",
+              "sha256": "d25d2a7dd0db6fbecf827f3ca8a59831d6bd2fe24ae922f8587cb0a164442977",
+              "bytes": 1829
+            }
+          ],
+          "isolation_id": "OGD-20260825-53FE49075883:90ba125447780d271f5a:attempt:1"
+        },
+        {
+          "item_id": "M02:a9f52c215171c8bd549b",
+          "input_fingerprint": "30d4c964af85dc1eab3bfc5e20c2ba97b293aca4520346da87c431afe743d2f2",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260825-53FE49075883:84a621d5101a34f3de79:attempt:1",
+              "maker_evidence": "Built one privacy-safe M02 record for M02:a9f52c215171c8bd549b.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/M02/2026-08-24-governance-shadow/workers/84a621d5101a34f3de79.json",
+                  "sha256": "502736066d4b66061fcc4ccfb4a0105760262a70c916d4870da15ac37ba13fb9",
+                  "bytes": 1961
+                }
+              ],
+              "checker_evidence": "Independently reconstructed M02:a9f52c215171c8bd549b from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/M02/2026-08-24-governance-shadow/workers/84a621d5101a34f3de79.json",
+              "sha256": "502736066d4b66061fcc4ccfb4a0105760262a70c916d4870da15ac37ba13fb9",
+              "bytes": 1961
+            }
+          ],
+          "isolation_id": "OGD-20260825-53FE49075883:84a621d5101a34f3de79:attempt:1"
+        },
+        {
+          "item_id": "M02:e26e3abc7d8a038a7f3c",
+          "input_fingerprint": "53ca1e2735eadb746faa71d007a6f8be0ac35832f53cda9c36cad089ee8cc218",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260825-53FE49075883:0216888205796dacb8c9:attempt:1",
+              "maker_evidence": "Built one privacy-safe M02 record for M02:e26e3abc7d8a038a7f3c.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/M02/2026-08-24-governance-shadow/workers/0216888205796dacb8c9.json",
+                  "sha256": "78147bf21ce0c83d83ab8c7f7f570483752d64f28e891369f70e56998defcc42",
+                  "bytes": 1864
+                }
+              ],
+              "checker_evidence": "Independently reconstructed M02:e26e3abc7d8a038a7f3c from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/M02/2026-08-24-governance-shadow/workers/0216888205796dacb8c9.json",
+              "sha256": "78147bf21ce0c83d83ab8c7f7f570483752d64f28e891369f70e56998defcc42",
+              "bytes": 1864
+            }
+          ],
+          "isolation_id": "OGD-20260825-53FE49075883:0216888205796dacb8c9:attempt:1"
+        },
+        {
+          "item_id": "M02:12f92f67b7d5426e6a91",
+          "input_fingerprint": "ffb2c4c369b89fd460adeeb749b7c100fac78ed963d55829ec070eb8b853ef48",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260825-53FE49075883:14dc451208df5ba987a9:attempt:1",
+              "maker_evidence": "Built one privacy-safe M02 record for M02:12f92f67b7d5426e6a91.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/M02/2026-08-24-governance-shadow/workers/14dc451208df5ba987a9.json",
+                  "sha256": "994e5341289e0812b6e349b5a1f0f2f163b3c21712a3bfe8aa6f8d9da7d20457",
+                  "bytes": 1860
+                }
+              ],
+              "checker_evidence": "Independently reconstructed M02:12f92f67b7d5426e6a91 from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/M02/2026-08-24-governance-shadow/workers/14dc451208df5ba987a9.json",
+              "sha256": "994e5341289e0812b6e349b5a1f0f2f163b3c21712a3bfe8aa6f8d9da7d20457",
+              "bytes": 1860
+            }
+          ],
+          "isolation_id": "OGD-20260825-53FE49075883:14dc451208df5ba987a9:attempt:1"
+        },
+        {
+          "item_id": "M02:43149245154579743816",
+          "input_fingerprint": "ef5ac3cea0329b7eed61110d381f3e778e0b11b788d597639d23e5ef5769c6ff",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260825-53FE49075883:000ea6811ccf11e21d80:attempt:1",
+              "maker_evidence": "Built one privacy-safe M02 record for M02:43149245154579743816.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/M02/2026-08-24-governance-shadow/workers/000ea6811ccf11e21d80.json",
+                  "sha256": "ab526bd4d09d33ad2bdb07400b1ead3fef763ae8f35ce31eaa49c1a838fa6313",
+                  "bytes": 1858
+                }
+              ],
+              "checker_evidence": "Independently reconstructed M02:43149245154579743816 from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/M02/2026-08-24-governance-shadow/workers/000ea6811ccf11e21d80.json",
+              "sha256": "ab526bd4d09d33ad2bdb07400b1ead3fef763ae8f35ce31eaa49c1a838fa6313",
+              "bytes": 1858
+            }
+          ],
+          "isolation_id": "OGD-20260825-53FE49075883:000ea6811ccf11e21d80:attempt:1"
+        },
+        {
+          "item_id": "M02:ae50c71af6cf7689f8f1",
+          "input_fingerprint": "2317cfce5d25d8c1e6e988a0ff130c52d170d0624c6cc8f91dddef052afbf9af",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260825-53FE49075883:a3997155a9911f63da26:attempt:1",
+              "maker_evidence": "Built one privacy-safe M02 record for M02:ae50c71af6cf7689f8f1.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/M02/2026-08-24-governance-shadow/workers/a3997155a9911f63da26.json",
+                  "sha256": "095ff732a995a689461014e823155edcf135ef705d1938d1b4cf59a52f06927b",
+                  "bytes": 1780
+                }
+              ],
+              "checker_evidence": "Independently reconstructed M02:ae50c71af6cf7689f8f1 from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/M02/2026-08-24-governance-shadow/workers/a3997155a9911f63da26.json",
+              "sha256": "095ff732a995a689461014e823155edcf135ef705d1938d1b4cf59a52f06927b",
+              "bytes": 1780
+            }
+          ],
+          "isolation_id": "OGD-20260825-53FE49075883:a3997155a9911f63da26:attempt:1"
+        },
+        {
+          "item_id": "M02:a9e535108d30c321c867",
+          "input_fingerprint": "bc9a6c5cf2390061631deb34963933c4c95bc0546e6141c496d7f06ee1be7521",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260825-53FE49075883:660808da5af664c4d421:attempt:1",
+              "maker_evidence": "Built one privacy-safe M02 record for M02:a9e535108d30c321c867.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/M02/2026-08-24-governance-shadow/workers/660808da5af664c4d421.json",
+                  "sha256": "5b2191433964cce20bb7c0706ffaf5dbd444cd73f9382dc574f52a4a61f2de2a",
+                  "bytes": 1790
+                }
+              ],
+              "checker_evidence": "Independently reconstructed M02:a9e535108d30c321c867 from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/M02/2026-08-24-governance-shadow/workers/660808da5af664c4d421.json",
+              "sha256": "5b2191433964cce20bb7c0706ffaf5dbd444cd73f9382dc574f52a4a61f2de2a",
+              "bytes": 1790
+            }
+          ],
+          "isolation_id": "OGD-20260825-53FE49075883:660808da5af664c4d421:attempt:1"
+        },
+        {
+          "item_id": "M02:d61e5628d71fad768c69",
+          "input_fingerprint": "8a598e4ccdc74dc1fbd082ec793ceaa4e47d0b59136b8fada991e8d5591d505f",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260825-53FE49075883:8df55948fd5d1e095068:attempt:1",
+              "maker_evidence": "Built one privacy-safe M02 record for M02:d61e5628d71fad768c69.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/M02/2026-08-24-governance-shadow/workers/8df55948fd5d1e095068.json",
+                  "sha256": "05d02aefd1d14bffed7b1ff81150eac26b8e445ea2e7bbec53e828dc8785d31f",
+                  "bytes": 1986
+                }
+              ],
+              "checker_evidence": "Independently reconstructed M02:d61e5628d71fad768c69 from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/M02/2026-08-24-governance-shadow/workers/8df55948fd5d1e095068.json",
+              "sha256": "05d02aefd1d14bffed7b1ff81150eac26b8e445ea2e7bbec53e828dc8785d31f",
+              "bytes": 1986
+            }
+          ],
+          "isolation_id": "OGD-20260825-53FE49075883:8df55948fd5d1e095068:attempt:1"
+        },
+        {
+          "item_id": "M02:d75279c554c5d375366a",
+          "input_fingerprint": "f861d4daddbca16b2cf1c9da490558b8c43872d448b660961ecbdd44e06af00c",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260825-53FE49075883:92df51a68f4f31ecd983:attempt:1",
+              "maker_evidence": "Built one privacy-safe M02 record for M02:d75279c554c5d375366a.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/M02/2026-08-24-governance-shadow/workers/92df51a68f4f31ecd983.json",
+                  "sha256": "5e840d345027161e6fac8b355060ae9dec22791b6f3d031a89ae4b2fe786924a",
+                  "bytes": 1976
+                }
+              ],
+              "checker_evidence": "Independently reconstructed M02:d75279c554c5d375366a from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/M02/2026-08-24-governance-shadow/workers/92df51a68f4f31ecd983.json",
+              "sha256": "5e840d345027161e6fac8b355060ae9dec22791b6f3d031a89ae4b2fe786924a",
+              "bytes": 1976
+            }
+          ],
+          "isolation_id": "OGD-20260825-53FE49075883:92df51a68f4f31ecd983:attempt:1"
+        },
+        {
+          "item_id": "M02:448eb82b93ca9eda7d1a",
+          "input_fingerprint": "ea00a9b2ba5221d8dd6ac08673155c4aac655df03b23fb832a6da36bcbcaa373",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260825-53FE49075883:7586746401b67f9903ee:attempt:1",
+              "maker_evidence": "Built one privacy-safe M02 record for M02:448eb82b93ca9eda7d1a.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/M02/2026-08-24-governance-shadow/workers/7586746401b67f9903ee.json",
+                  "sha256": "96958a2956e0fb5c59416fcae955fe1d4e32ccda17a22f29dfb631fe29efcff4",
+                  "bytes": 1794
+                }
+              ],
+              "checker_evidence": "Independently reconstructed M02:448eb82b93ca9eda7d1a from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/M02/2026-08-24-governance-shadow/workers/7586746401b67f9903ee.json",
+              "sha256": "96958a2956e0fb5c59416fcae955fe1d4e32ccda17a22f29dfb631fe29efcff4",
+              "bytes": 1794
+            }
+          ],
+          "isolation_id": "OGD-20260825-53FE49075883:7586746401b67f9903ee:attempt:1"
+        },
+        {
+          "item_id": "M02:a485fba00381bf55caaa",
+          "input_fingerprint": "b996e4670f773c94f99bad7eb8e5ab17f45630af68e00ade7b351d35dd4efe3c",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260825-53FE49075883:8c2f6c65c1bf8fb5d1c3:attempt:1",
+              "maker_evidence": "Built one privacy-safe M02 record for M02:a485fba00381bf55caaa.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/M02/2026-08-24-governance-shadow/workers/8c2f6c65c1bf8fb5d1c3.json",
+                  "sha256": "9baaeedc2b722f97fde3fb56824f3b6c5f28104043f815afe4b9b2e70f632e10",
+                  "bytes": 1864
+                }
+              ],
+              "checker_evidence": "Independently reconstructed M02:a485fba00381bf55caaa from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/M02/2026-08-24-governance-shadow/workers/8c2f6c65c1bf8fb5d1c3.json",
+              "sha256": "9baaeedc2b722f97fde3fb56824f3b6c5f28104043f815afe4b9b2e70f632e10",
+              "bytes": 1864
+            }
+          ],
+          "isolation_id": "OGD-20260825-53FE49075883:8c2f6c65c1bf8fb5d1c3:attempt:1"
+        }
+      ],
+      "reduction": {
+        "evidence": "Reduced all checked M02 records without blending isolation keys.",
+        "artifacts": [
+          {
+            "path": "System/outcome-graph/routines/M02/2026-08-24-governance-shadow/agent-evaluation-scorecard.json",
+            "sha256": "9f1943bc87310060ed0eb837c4084d2d28a7b0449856576627d3558b775f1719",
+            "bytes": 44899
+          },
+          {
+            "path": "System/outcome-graph/routines/M02/2026-08-24-governance-shadow/sample-ledger.json",
+            "sha256": "927d177ca8873b6f74db535382ff08b4073b663c4c898145ed9bea03fe40c0bb",
+            "bytes": 11177
+          }
+        ]
+      },
+      "terminal_verification": {
+        "evidence": "Recollected and independently verified all M02 sources, records, negative states, and artifact hashes.",
+        "declared_pass": true,
+        "passed": true,
+        "assertions": [
+          {
+            "id": "source-manifest-stable",
+            "passed": true,
+            "detail": "Every named source remains hash-bound at terminal verification."
+          },
+          {
+            "id": "every-isolated-item-reconstructed-exactly-once",
+            "passed": true,
+            "detail": "Every in-scope item has one collision-resistant reconstructed record."
+          },
+          {
+            "id": "reducer-output-reproduces-exactly",
+            "passed": true,
+            "detail": "Final artifacts reproduce exactly from current sources and the frozen evaluation clock."
+          },
+          {
+            "id": "every-agent-has-scope-tools-authority-and-disposition",
+            "passed": true,
+            "detail": "Every registered agent has one complete governance record."
+          },
+          {
+            "id": "output-samples-bound-to-acceptance-contracts",
+            "passed": true,
+            "detail": "Every sample state explicitly records acceptance binding or its absence."
+          },
+          {
+            "id": "maker-checker-independence-measured",
+            "passed": true,
+            "detail": "Independence is measured for each agent sample set."
+          },
+          {
+            "id": "redundant-or-unsafe-agents-identified",
+            "passed": true,
+            "detail": "Naming overlap and unresolved contracts remain visible."
+          },
+          {
+            "id": "no-permission-expansion-or-deletion",
+            "passed": true,
+            "detail": "The evaluation changes no agent or permission."
+          },
+          {
+            "id": "privacy-and-no-mutation-boundary",
+            "passed": true,
+            "detail": "Final artifacts are redacted and attest no external, canonical, provider, restart, or checkpoint mutation."
+          }
+        ],
+        "artifact_manifest": [
+          {
+            "path": "System/outcome-graph/routines/M02/2026-08-24-governance-shadow/agent-evaluation-scorecard.json",
+            "sha256": "9f1943bc87310060ed0eb837c4084d2d28a7b0449856576627d3558b775f1719",
+            "bytes": 44899
+          },
+          {
+            "path": "System/outcome-graph/routines/M02/2026-08-24-governance-shadow/sample-ledger.json",
+            "sha256": "927d177ca8873b6f74db535382ff08b4073b663c4c898145ed9bea03fe40c0bb",
+            "bytes": 11177
+          }
+        ],
+        "manifest_errors": []
+      },
+      "learning": {
+        "evidence": "Appended one hashed M02 correction entry.",
+        "corrections": [
+          "Retain unresolved agent contracts and naming collisions as revise dispositions until evidence changes."
+        ],
+        "ledger": "System/outcome-graph/routines/M02/2026-08-24-governance-shadow/corrections.jsonl",
+        "ledger_receipt": {
+          "locator": "System/outcome-graph/routines/M02/2026-08-24-governance-shadow/corrections.jsonl",
+          "entry_sha256": "c7d84cea92fc00cb667e0db70c669173c4d34c6d02a288ca1e0854efb3621ac2"
+        }
+      }
+    }
+  ],
+  "invocation_log": [
+    {
+      "adapter": "source-bound-m02-planner",
+      "invoked_at": "2026-08-25T00:23:50.043Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m02-maker",
+      "invoked_at": "2026-08-25T00:23:50.083Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m02-maker",
+      "invoked_at": "2026-08-25T00:23:50.083Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m02-maker",
+      "invoked_at": "2026-08-25T00:23:50.083Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m02-maker",
+      "invoked_at": "2026-08-25T00:23:50.083Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m02-maker",
+      "invoked_at": "2026-08-25T00:23:50.083Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m02-maker",
+      "invoked_at": "2026-08-25T00:23:50.083Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m02-checker",
+      "invoked_at": "2026-08-25T00:23:50.275Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m02-checker",
+      "invoked_at": "2026-08-25T00:23:50.275Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m02-checker",
+      "invoked_at": "2026-08-25T00:23:50.275Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m02-checker",
+      "invoked_at": "2026-08-25T00:23:50.275Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m02-checker",
+      "invoked_at": "2026-08-25T00:23:50.275Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m02-checker",
+      "invoked_at": "2026-08-25T00:23:50.275Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m02-maker",
+      "invoked_at": "2026-08-25T00:23:50.448Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m02-maker",
+      "invoked_at": "2026-08-25T00:23:50.483Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m02-maker",
+      "invoked_at": "2026-08-25T00:23:50.519Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m02-checker",
+      "invoked_at": "2026-08-25T00:23:50.519Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m02-maker",
+      "invoked_at": "2026-08-25T00:23:50.583Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m02-checker",
+      "invoked_at": "2026-08-25T00:23:50.583Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m02-maker",
+      "invoked_at": "2026-08-25T00:23:50.645Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m02-checker",
+      "invoked_at": "2026-08-25T00:23:50.645Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m02-maker",
+      "invoked_at": "2026-08-25T00:23:50.707Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m02-checker",
+      "invoked_at": "2026-08-25T00:23:50.707Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m02-checker",
+      "invoked_at": "2026-08-25T00:23:50.772Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m02-maker",
+      "invoked_at": "2026-08-25T00:23:50.772Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m02-checker",
+      "invoked_at": "2026-08-25T00:23:50.828Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m02-maker",
+      "invoked_at": "2026-08-25T00:23:50.833Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m02-maker",
+      "invoked_at": "2026-08-25T00:23:50.894Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m02-checker",
+      "invoked_at": "2026-08-25T00:23:50.894Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m02-maker",
+      "invoked_at": "2026-08-25T00:23:50.953Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m02-checker",
+      "invoked_at": "2026-08-25T00:23:50.954Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m02-maker",
+      "invoked_at": "2026-08-25T00:23:51.015Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m02-checker",
+      "invoked_at": "2026-08-25T00:23:51.015Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m02-maker",
+      "invoked_at": "2026-08-25T00:23:51.076Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m02-checker",
+      "invoked_at": "2026-08-25T00:23:51.076Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m02-checker",
+      "invoked_at": "2026-08-25T00:23:51.136Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m02-maker",
+      "invoked_at": "2026-08-25T00:23:51.136Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m02-checker",
+      "invoked_at": "2026-08-25T00:23:51.189Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m02-maker",
+      "invoked_at": "2026-08-25T00:23:51.193Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m02-maker",
+      "invoked_at": "2026-08-25T00:23:51.254Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m02-checker",
+      "invoked_at": "2026-08-25T00:23:51.254Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m02-checker",
+      "invoked_at": "2026-08-25T00:23:51.311Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m02-checker",
+      "invoked_at": "2026-08-25T00:23:51.345Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m02-reducer",
+      "invoked_at": "2026-08-25T00:23:51.414Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m02-terminal-verifier",
+      "invoked_at": "2026-08-25T00:23:51.435Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m02-learner",
+      "invoked_at": "2026-08-25T00:23:51.472Z",
+      "status": "returned"
+    }
+  ],
+  "budget": {
+    "limit_units": 96,
+    "used_units": 46
+  },
+  "outcome": "complete",
+  "terminal_truth": true,
+  "finished_at": "2026-08-25T00:23:51.484Z",
+  "elapsed_seconds": 1.448,
+  "blocked_by": null,
+  "reason": "Finish line is proven by an independent terminal verifier.",
+  "terminal_evidence": {
+    "evidence": "Recollected and independently verified all M02 sources, records, negative states, and artifact hashes.",
+    "declared_pass": true,
+    "passed": true,
+    "assertions": [
+      {
+        "id": "source-manifest-stable",
+        "passed": true,
+        "detail": "Every named source remains hash-bound at terminal verification."
+      },
+      {
+        "id": "every-isolated-item-reconstructed-exactly-once",
+        "passed": true,
+        "detail": "Every in-scope item has one collision-resistant reconstructed record."
+      },
+      {
+        "id": "reducer-output-reproduces-exactly",
+        "passed": true,
+        "detail": "Final artifacts reproduce exactly from current sources and the frozen evaluation clock."
+      },
+      {
+        "id": "every-agent-has-scope-tools-authority-and-disposition",
+        "passed": true,
+        "detail": "Every registered agent has one complete governance record."
+      },
+      {
+        "id": "output-samples-bound-to-acceptance-contracts",
+        "passed": true,
+        "detail": "Every sample state explicitly records acceptance binding or its absence."
+      },
+      {
+        "id": "maker-checker-independence-measured",
+        "passed": true,
+        "detail": "Independence is measured for each agent sample set."
+      },
+      {
+        "id": "redundant-or-unsafe-agents-identified",
+        "passed": true,
+        "detail": "Naming overlap and unresolved contracts remain visible."
+      },
+      {
+        "id": "no-permission-expansion-or-deletion",
+        "passed": true,
+        "detail": "The evaluation changes no agent or permission."
+      },
+      {
+        "id": "privacy-and-no-mutation-boundary",
+        "passed": true,
+        "detail": "Final artifacts are redacted and attest no external, canonical, provider, restart, or checkpoint mutation."
+      }
+    ],
+    "artifact_manifest": [
+      {
+        "path": "System/outcome-graph/routines/M02/2026-08-24-governance-shadow/agent-evaluation-scorecard.json",
+        "sha256": "9f1943bc87310060ed0eb837c4084d2d28a7b0449856576627d3558b775f1719",
+        "bytes": 44899
+      },
+      {
+        "path": "System/outcome-graph/routines/M02/2026-08-24-governance-shadow/sample-ledger.json",
+        "sha256": "927d177ca8873b6f74db535382ff08b4073b663c4c898145ed9bea03fe40c0bb",
+        "bytes": 11177
+      }
+    ],
+    "manifest_errors": []
+  },
+  "learning_evidence": {
+    "evidence": "Appended one hashed M02 correction entry.",
+    "corrections": [
+      "Retain unresolved agent contracts and naming collisions as revise dispositions until evidence changes."
+    ],
+    "ledger": "System/outcome-graph/routines/M02/2026-08-24-governance-shadow/corrections.jsonl",
+    "ledger_receipt": {
+      "locator": "System/outcome-graph/routines/M02/2026-08-24-governance-shadow/corrections.jsonl",
+      "entry_sha256": "c7d84cea92fc00cb667e0db70c669173c4d34c6d02a288ca1e0854efb3621ac2"
+    }
+  },
+  "drift_fingerprint": "e12d11ca154694059a6e194198f9af71bc787b50dca0093e7e574a4b6ed22233",
+  "deduped": false,
+  "durable_state": {
+    "schema_version": 1,
+    "dedupe_identity": "6af245667b6e0afa32d82025bf709dd4ee53de64d7561a466d069de58f2d2c50",
+    "dedupe_hit": false,
+    "resumed": false,
+    "canonical_binding": {
+      "locator": "dillon-os://routine/M02/2026-08-24",
+      "version": "2026-08-25:f7aa7149.05e6a21e.f497ab86.4cbc7e46.bf6d66f3.6dfe16e3.f96f62d5.162ea5eb.cbbca8bc.ea6d61ce.93b9d0fe.f732363f.92de219c.afe7b617.c355f1e8.e1f37605.335c7b06.8922e2ff.279df6e5.aeae1f8a.36bd6b59.6d1938a5.a103d71e.f13750cf.575dddf3.9e9e56d3.b6a08193.e3fb5768.d3e6d2f3.7d6e3c11.b34518cf.1164d9e4.31a8ebb5.4dc39e2d.bed1aeea.b885b117.b191bb26.525b6d51.53a57c86.7d65a000.ff7a25e5.1d0c18e9.a7a511c0.4f8b11fe.58541f6d.2438ad8f.c4f66a74.6bf1f073.3f06d2f3.fedfe667.aaa4096f.80997a5e",
+      "sha256": "2502f22840f660e7fe3d6c4bce698fe9fe28a7fa9ba80a567233860b099bba84",
+      "captured_at": "2026-08-25T00:23:50.003Z"
+    },
+    "canonical_binding_fingerprint": "9640afdd27bd4a14f0f7d795974cfe98062e81e8c510302db8507fc28218effc",
+    "contract_fingerprint": "eeb92987493ff6cd5307baa12837694a09eafbb44c3790b7d4ca086cbbfb3697",
+    "checkpoint": "runs/OGD-20260825-53FE49075883/checkpoint.json"
+  }
+}

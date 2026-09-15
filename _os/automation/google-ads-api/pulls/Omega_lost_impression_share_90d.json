@@ -1,0 +1,210 @@
+[
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/21959397587",
+      "status": "PAUSED",
+      "advertisingChannelType": "PERFORMANCE_MAX",
+      "biddingStrategyType": "MAXIMIZE_CONVERSIONS",
+      "name": "Omega Landscaping & Concrete | Colorado Springs | PMax",
+      "id": "21959397587"
+    },
+    "metrics": {
+      "clicks": "1037",
+      "searchBudgetLostImpressionShare": 0.2804224505267561,
+      "searchExactMatchImpressionShare": 0.10074138682948103,
+      "searchImpressionShare": 0.14074713094397825,
+      "searchRankLostImpressionShare": 0.5788304185292656,
+      "conversions": 16,
+      "costMicros": "2354652932",
+      "impressions": "36171"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/2853981364/campaignBudgets/14107026371",
+      "amountMicros": "50000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "status": "PAUSED",
+      "advertisingChannelType": "SEARCH",
+      "biddingStrategyType": "MAXIMIZE_CONVERSIONS",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "0"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/2853981364/campaignBudgets/14935116608",
+      "amountMicros": "95110000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23300554493",
+      "status": "PAUSED",
+      "advertisingChannelType": "SEARCH",
+      "biddingStrategyType": "MANUAL_CPC",
+      "name": "Search_Snow Removal_Call Only",
+      "id": "23300554493"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "0"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/2853981364/campaignBudgets/15168824799",
+      "amountMicros": "50000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23307769901",
+      "status": "PAUSED",
+      "advertisingChannelType": "SEARCH",
+      "biddingStrategyType": "MANUAL_CPC",
+      "name": "Search_Hardscaping_Call Only",
+      "id": "23307769901"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "0"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/2853981364/campaignBudgets/15179086504",
+      "amountMicros": "50000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23307822197",
+      "status": "PAUSED",
+      "advertisingChannelType": "SEARCH",
+      "biddingStrategyType": "MANUAL_CPC",
+      "name": "Search_Concrete Services_Call Only",
+      "id": "23307822197"
+    },
+    "metrics": {
+      "clicks": "0",
+      "searchAbsoluteTopImpressionShare": 0.5,
+      "searchBudgetLostImpressionShare": 0,
+      "searchExactMatchImpressionShare": 0.6,
+      "searchImpressionShare": 0.625,
+      "searchRankLostImpressionShare": 0.375,
+      "searchTopImpressionShare": 0.5,
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "5"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/2853981364/campaignBudgets/15179125423",
+      "amountMicros": "20000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23440060242",
+      "status": "PAUSED",
+      "advertisingChannelType": "SEARCH",
+      "biddingStrategyType": "MANUAL_CPC",
+      "name": "Search_Services_Standard",
+      "id": "23440060242"
+    },
+    "metrics": {
+      "clicks": "1",
+      "searchAbsoluteTopImpressionShare": 0.6666666666666666,
+      "searchBudgetLostImpressionShare": 0,
+      "searchExactMatchImpressionShare": 1,
+      "searchImpressionShare": 1,
+      "searchRankLostImpressionShare": 0,
+      "searchTopImpressionShare": 0.8333333333333334,
+      "conversions": 0,
+      "costMicros": "59358429",
+      "impressions": "21"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/2853981364/campaignBudgets/15284768869",
+      "amountMicros": "70000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23441013566",
+      "status": "PAUSED",
+      "advertisingChannelType": "SEARCH",
+      "biddingStrategyType": "MANUAL_CPC",
+      "name": "Search_Services_Call Only",
+      "id": "23441013566"
+    },
+    "metrics": {
+      "clicks": "1",
+      "searchAbsoluteTopImpressionShare": 0.4230769230769231,
+      "searchBudgetLostImpressionShare": 0.07692307692307693,
+      "searchExactMatchImpressionShare": 0.625,
+      "searchImpressionShare": 0.6346153846153846,
+      "searchRankLostImpressionShare": 0.28846153846153844,
+      "searchTopImpressionShare": 0.5192307692307693,
+      "conversions": 0,
+      "costMicros": "44520000",
+      "impressions": "54"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/2853981364/campaignBudgets/15277021149",
+      "amountMicros": "30000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23614055022",
+      "status": "PAUSED",
+      "advertisingChannelType": "SEARCH",
+      "biddingStrategyType": "MANUAL_CPC",
+      "name": "Search_Brand Campaign",
+      "id": "23614055022"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "0"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/2853981364/campaignBudgets/15412169662",
+      "amountMicros": "10000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/24082267830",
+      "status": "ENABLED",
+      "advertisingChannelType": "SEARCH",
+      "biddingStrategyType": "TARGET_SPEND",
+      "name": "Search | High Intent | Colorado Springs | 2026-07-30",
+      "id": "24082267830"
+    },
+    "metrics": {
+      "clicks": "195",
+      "searchAbsoluteTopImpressionShare": 0.10444225074037512,
+      "searchBudgetLostImpressionShare": 0.03880714920509529,
+      "searchExactMatchImpressionShare": 0.2261904761904762,
+      "searchImpressionShare": 0.3130245877357559,
+      "searchRankLostImpressionShare": 0.6481682630591488,
+      "searchTopImpressionShare": 0.2,
+      "conversions": 3,
+      "costMicros": "1435049115",
+      "impressions": "4279"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/2853981364/campaignBudgets/15759128760",
+      "amountMicros": "50000000"
+    }
+  }
+]

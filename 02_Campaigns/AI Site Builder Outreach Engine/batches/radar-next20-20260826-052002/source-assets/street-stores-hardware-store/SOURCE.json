@@ -1,0 +1,134 @@
+{
+  "sourceUrl": "https://www.streetstoreshardware.com/",
+  "finalUrl": "https://www.streetstoreshardware.com/",
+  "sourceDomain": "streetstoreshardware.com",
+  "httpStatus": 200,
+  "contentType": "text/html; Charset=UTF-8",
+  "pageSha256": "4dddddc91cb445ae3a540c1bbe0deaacaa8311597b17f87f0d63abb8f8006aa2",
+  "title": "",
+  "description": "",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "street",
+      "stores",
+      "hardware",
+      "store"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260826-052002\\preflight\\street-stores-hardware-store\\logo.svg",
+    "fileName": "logo.svg",
+    "sourceUrl": "https://www.streetstoreshardware.com/",
+    "sourceEvidence": "Exact business name from the verified official source; code-rendered transparent typographic fallback.",
+    "type": "svg",
+    "dimensions": {
+      "width": 1200,
+      "height": 320
+    },
+    "sha256": "1b597fb79aa521c5a88c6ff3ecf8505dce7a14ffc58ab87134a23dcf8fb36c4b",
+    "sourceSha256": null,
+    "sourceType": "verified business name",
+    "sourceFileName": null,
+    "transformation": "Disclosed exact-name typographic fallback; no icon, symbol, or first-party logo imitation.",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "reason": "SVG has no background rectangle."
+    },
+    "transparent": true,
+    "identityFallback": true,
+    "downloadFailures": [
+      {
+        "url": "https://www.streetstoreshardware.com/v/vspfiles/assets/images/newCC_logos.png",
+        "reason": "logo source is too small"
+      }
+    ],
+    "bytes": 456
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260826-052002\\preflight\\street-stores-hardware-store\\reference-1.jpg",
+      "fileName": "reference-1.jpg",
+      "sourceUrl": "https://www.streetstoreshardware.com/v/vspfiles/photos/homepage/1773421810864.jpg",
+      "sourceEvidence": "IMG owl-lazy",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 3456,
+        "width": 6912
+      },
+      "sha256": "b0cfd11e34c9d0574ee135c4a4b030eb00492b7053f7caf22633fe3539ea2467",
+      "bytes": 1331955,
+      "visual": {
+        "ok": true,
+        "lumaRange": 255,
+        "chromaURange": 148,
+        "chromaVRange": 142,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260826-052002\\preflight\\street-stores-hardware-store\\reference-2.jpg",
+      "fileName": "reference-2.jpg",
+      "sourceUrl": "https://www.streetstoreshardware.com/v/vspfiles/photos/homepage/1733258443526.jpg",
+      "sourceEvidence": "IMG owl-lazy",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 403,
+        "width": 871
+      },
+      "sha256": "0605b72c11fd3d62998e4f1c0c77922e52cec7a9d37d464cc34d1713df436725",
+      "bytes": 89656,
+      "visual": {
+        "ok": true,
+        "lumaRange": 251,
+        "chromaURange": 46,
+        "chromaVRange": 69,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260826-052002\\preflight\\street-stores-hardware-store\\reference-3.jpg",
+      "fileName": "reference-3.jpg",
+      "sourceUrl": "https://www.streetstoreshardware.com/v/vspfiles/photos/homepage/1732043943812.jpg",
+      "sourceEvidence": "IMG owl-lazy",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 1369,
+        "width": 2963
+      },
+      "sha256": "61664e70bbe148a6b7d260fae8e120d1f1bc9a275588077ddf2f35b484df36f3",
+      "bytes": 1092626,
+      "visual": {
+        "ok": true,
+        "lumaRange": 255,
+        "chromaURange": 80,
+        "chromaVRange": 101,
+        "reason": null
+      }
+    }
+  ],
+  "contact": {
+    "phone": "",
+    "address": "",
+    "city": "",
+    "phoneSource": null,
+    "addressSource": null
+  },
+  "visualReferenceFallback": null,
+  "referenceFailures": [
+    {
+      "url": "https://www.streetstoreshardware.com/a/i/seal_volusion2.png",
+      "reason": "reference image is too small"
+    },
+    {
+      "url": "https://www.streetstoreshardware.com/v/vspfiles/templates/215/images/clear1x1.gif",
+      "reason": "unsupported reference type gif"
+    }
+  ],
+  "brandColors": [
+    "#f05a28"
+  ],
+  "checkedAt": "2026-08-26T09:30:17.327Z"
+}

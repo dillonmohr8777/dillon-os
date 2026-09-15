@@ -1,0 +1,392 @@
+[
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/899954048",
+      "status": "ENABLED",
+      "type": "LEAD_FORM_SUBMIT",
+      "category": "SUBMIT_LEAD_FORM",
+      "countingType": "ONE_PER_CLICK",
+      "id": "899954048",
+      "name": "Lead form - Submit",
+      "includeInConversionsMetric": false,
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/916488686",
+      "status": "REMOVED",
+      "type": "WEBPAGE",
+      "category": "SUBMIT_LEAD_FORM",
+      "countingType": "ONE_PER_CLICK",
+      "id": "916488686",
+      "name": "Content Download",
+      "includeInConversionsMetric": true,
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/931722373",
+      "status": "HIDDEN",
+      "type": "UNIVERSAL_ANALYTICS_GOAL",
+      "category": "GET_DIRECTIONS",
+      "countingType": "MANY_PER_CLICK",
+      "id": "931722373",
+      "name": "Content Download (All Web Site Data)",
+      "includeInConversionsMetric": true,
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/990749459",
+      "status": "REMOVED",
+      "type": "SALESFORCE",
+      "category": "QUALIFIED_LEAD",
+      "countingType": "ONE_PER_CLICK",
+      "id": "990749459",
+      "name": "Salesforce - Intro Meeting Held",
+      "includeInConversionsMetric": true,
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/990752099",
+      "status": "REMOVED",
+      "type": "SALESFORCE",
+      "category": "PURCHASE",
+      "countingType": "ONE_PER_CLICK",
+      "id": "990752099",
+      "name": "Salesforce - Closed Won",
+      "includeInConversionsMetric": true,
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/991527592",
+      "status": "REMOVED",
+      "type": "SALESFORCE",
+      "category": "CONVERTED_LEAD",
+      "countingType": "ONE_PER_CLICK",
+      "id": "991527592",
+      "name": "Salesforce - Lead Converted",
+      "includeInConversionsMetric": true,
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/6593597035",
+      "status": "HIDDEN",
+      "type": "GOOGLE_ANALYTICS_4_PURCHASE",
+      "category": "PURCHASE",
+      "countingType": "MANY_PER_CLICK",
+      "id": "6593597035",
+      "name": "Nexla Main Website (nexla.com) - GA4 (web) purchase",
+      "includeInConversionsMetric": false,
+      "primaryForGoal": false
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/6593597038",
+      "status": "REMOVED",
+      "type": "GOOGLE_ANALYTICS_4_CUSTOM",
+      "category": "PAGE_VIEW",
+      "countingType": "MANY_PER_CLICK",
+      "id": "6593597038",
+      "name": "Nexla Main Website (nexla.com) - GA4 (web) content_download",
+      "includeInConversionsMetric": true,
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/6657811329",
+      "status": "REMOVED",
+      "type": "WEBPAGE",
+      "category": "SUBMIT_LEAD_FORM",
+      "countingType": "ONE_PER_CLICK",
+      "id": "6657811329",
+      "name": "Demo request - data integration",
+      "includeInConversionsMetric": true,
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/6808884459",
+      "status": "HIDDEN",
+      "type": "GOOGLE_ANALYTICS_4_CUSTOM",
+      "category": "PAGE_VIEW",
+      "countingType": "MANY_PER_CLICK",
+      "id": "6808884459",
+      "name": "Nexla Main Website (nexla.com) - GA4 (web) is_conversion",
+      "includeInConversionsMetric": false,
+      "primaryForGoal": false
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/6881875334",
+      "status": "REMOVED",
+      "type": "WEBPAGE",
+      "category": "SUBMIT_LEAD_FORM",
+      "countingType": "ONE_PER_CLICK",
+      "id": "6881875334",
+      "name": "Demo Request",
+      "includeInConversionsMetric": true,
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/6881875337",
+      "status": "REMOVED",
+      "type": "WEBPAGE",
+      "category": "SUBMIT_LEAD_FORM",
+      "countingType": "ONE_PER_CLICK",
+      "id": "6881875337",
+      "name": "Data Integration Report Download",
+      "includeInConversionsMetric": true,
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/6883315602",
+      "status": "REMOVED",
+      "type": "GOOGLE_ANALYTICS_4_CUSTOM",
+      "category": "PAGE_VIEW",
+      "countingType": "ONE_PER_CLICK",
+      "id": "6883315602",
+      "name": "Nexla Main Website (nexla.com) - GA4 (web) data_integration_trends_access",
+      "includeInConversionsMetric": true,
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/6883810477",
+      "status": "REMOVED",
+      "type": "GOOGLE_ANALYTICS_4_CUSTOM",
+      "category": "REQUEST_QUOTE",
+      "countingType": "MANY_PER_CLICK",
+      "id": "6883810477",
+      "name": "Nexla Main Website (nexla.com) - GA4 (web) demo_submit",
+      "includeInConversionsMetric": true,
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/6975703368",
+      "status": "REMOVED",
+      "type": "WEBPAGE",
+      "category": "SUBMIT_LEAD_FORM",
+      "countingType": "ONE_PER_CLICK",
+      "id": "6975703368",
+      "name": "HubSpot - Nexla Demo Request",
+      "includeInConversionsMetric": true,
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/6982872465",
+      "status": "REMOVED",
+      "type": "UPLOAD_CLICKS",
+      "category": "CONVERTED_LEAD",
+      "countingType": "MANY_PER_CLICK",
+      "id": "6982872465",
+      "name": "Opportunity - New Opportunities In Discovery",
+      "includeInConversionsMetric": true,
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/7081382847",
+      "status": "REMOVED",
+      "type": "WEBPAGE",
+      "category": "SUBMIT_LEAD_FORM",
+      "countingType": "ONE_PER_CLICK",
+      "id": "7081382847",
+      "name": "HubSpot - Demo Request (Nexla vs Fivetran LP)",
+      "includeInConversionsMetric": false,
+      "primaryForGoal": false
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/7082017820",
+      "status": "REMOVED",
+      "type": "UPLOAD_CLICKS",
+      "category": "QUALIFIED_LEAD",
+      "countingType": "ONE_PER_CLICK",
+      "id": "7082017820",
+      "name": "HubSpot - Opportunity",
+      "includeInConversionsMetric": false,
+      "primaryForGoal": false
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/7082325480",
+      "status": "REMOVED",
+      "type": "UPLOAD_CLICKS",
+      "category": "PURCHASE",
+      "countingType": "ONE_PER_CLICK",
+      "id": "7082325480",
+      "name": "HubSpot - Customer",
+      "includeInConversionsMetric": false,
+      "primaryForGoal": false
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/7082326314",
+      "status": "REMOVED",
+      "type": "UPLOAD_CLICKS",
+      "category": "QUALIFIED_LEAD",
+      "countingType": "ONE_PER_CLICK",
+      "id": "7082326314",
+      "name": "HubSpot - Marketing Qualified Lead",
+      "includeInConversionsMetric": false,
+      "primaryForGoal": false
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/7506957337",
+      "status": "REMOVED",
+      "type": "WEBPAGE",
+      "category": "SUBMIT_LEAD_FORM",
+      "countingType": "ONE_PER_CLICK",
+      "id": "7506957337",
+      "name": "HubSpot - Request Connector Demo",
+      "includeInConversionsMetric": false,
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/7506958681",
+      "status": "REMOVED",
+      "type": "WEBPAGE",
+      "category": "SUBMIT_LEAD_FORM",
+      "countingType": "ONE_PER_CLICK",
+      "id": "7506958681",
+      "name": "HubSpot - Connector Request Form",
+      "includeInConversionsMetric": false,
+      "primaryForGoal": false
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/7507186233",
+      "status": "REMOVED",
+      "type": "WEBPAGE",
+      "category": "SUBMIT_LEAD_FORM",
+      "countingType": "ONE_PER_CLICK",
+      "id": "7507186233",
+      "name": "HubSpot - Nexla Demo Video Series Access",
+      "includeInConversionsMetric": false,
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/7534625037",
+      "status": "ENABLED",
+      "type": "WEBPAGE",
+      "category": "SUBMIT_LEAD_FORM",
+      "countingType": "ONE_PER_CLICK",
+      "id": "7534625037",
+      "name": "HubSpot-Demo Request",
+      "includeInConversionsMetric": false,
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/7672793025",
+      "status": "ENABLED",
+      "type": "UNKNOWN",
+      "category": "YOUTUBE_FOLLOW_ON_VIEWS",
+      "countingType": "MANY_PER_CLICK",
+      "id": "7672793025",
+      "name": "YouTube follow-on views",
+      "includeInConversionsMetric": true,
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/7672822300",
+      "status": "ENABLED",
+      "type": "UNKNOWN",
+      "category": "ENGAGEMENT",
+      "countingType": "ONE_PER_CLICK",
+      "id": "7672822300",
+      "name": "YouTube channel subscriptions",
+      "includeInConversionsMetric": true,
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/7724496703",
+      "status": "ENABLED",
+      "type": "UPLOAD_CLICKS",
+      "category": "SUBMIT_LEAD_FORM",
+      "countingType": "ONE_PER_CLICK",
+      "id": "7724496703",
+      "name": "Contacts - Contacts Lifecycle Stage becomes Lead",
+      "includeInConversionsMetric": false,
+      "primaryForGoal": false
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/7724498875",
+      "status": "ENABLED",
+      "type": "UPLOAD_CLICKS",
+      "category": "CONVERTED_LEAD",
+      "countingType": "ONE_PER_CLICK",
+      "id": "7724498875",
+      "name": "Contacts - Contacts Lifecycle Stage becomes Opportunity",
+      "includeInConversionsMetric": false,
+      "primaryForGoal": false
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/7724501725",
+      "status": "ENABLED",
+      "type": "UPLOAD_CLICKS",
+      "category": "QUALIFIED_LEAD",
+      "countingType": "ONE_PER_CLICK",
+      "id": "7724501725",
+      "name": "Contacts - Contacts Lifecycle Stage becomes Marketing Qualified Lead",
+      "includeInConversionsMetric": false,
+      "primaryForGoal": false
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/7724503645",
+      "status": "ENABLED",
+      "type": "UPLOAD_CLICKS",
+      "category": "PURCHASE",
+      "countingType": "ONE_PER_CLICK",
+      "id": "7724503645",
+      "name": "Contacts - Contacts Lifecycle Stage becomes Customer",
+      "includeInConversionsMetric": false,
+      "primaryForGoal": false
+    }
+  }
+]

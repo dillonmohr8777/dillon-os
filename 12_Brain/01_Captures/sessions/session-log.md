@@ -20,3 +20,5 @@ Sensitive session mines go to `12_Brain/private/sessions/` (gitignored).
 - 2026-09-02 11:06 — session ended (run /session-mine if decisions were made)
 - 2026-09-02 11:07 — session ended (run /session-mine if decisions were made)
 - 2026-09-02 — recursive-vault-loop: Node dispatcher port, learn + generated_at contracts, dedupe and graph-crash fixes, hygiene pass (mined)
+- 2026-09-14 15:25 — session ended (run /session-mine if decisions were made)
+- 2026-09-14 16:30 — session ended (run /session-mine if decisions were made)

@@ -3,9 +3,9 @@
   "automation_id": "daily-sweep",
   "version": 1,
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T13:55:12.548Z",
+  "generated_at": "2026-09-15T14:00:01.764Z",
   "generated_by": "_os/automation/bin/daily-sweep.js",
-  "previous_run": "2026-09-15T07:00:01.238Z",
+  "previous_run": "2026-09-15T13:57:41.578Z",
   "days_since_previous_sweep": 0,
   "repos_scanned": 68,
   "freshness": [
@@ -22,7 +22,7 @@
       "path": "12_Brain/state/daily-communications-brain.json",
       "owner": "Codex cron daily-communications-brain",
       "state": "stale",
-      "age_hours": 26.8,
+      "age_hours": 26.9,
       "budget_hours": 26
     },
     {
@@ -30,7 +30,7 @@
       "path": "12_Brain/state/claude-daily-driver.json",
       "owner": "Task Scheduler Claude-Autonomous-Daily-Driver (PT15M)",
       "state": "stale",
-      "age_hours": 6.5,
+      "age_hours": 6.6,
       "budget_hours": 2
     },
     {
@@ -38,7 +38,7 @@
       "path": "12_Brain/state/claude-loop.json",
       "owner": "claude-loop.js via the daily driver",
       "state": "fresh",
-      "age_hours": 8.8,
+      "age_hours": 8.9,
       "budget_hours": 26
     },
     {
@@ -46,7 +46,7 @@
       "path": "Daily-Briefs/plan-2026-09-15.md",
       "owner": "Task Scheduler Immohrtal-Crew",
       "state": "fresh",
-      "age_hours": 8.2,
+      "age_hours": 8.3,
       "budget_hours": 26
     },
     {
@@ -54,7 +54,7 @@
       "path": "12_Brain/state/frontmatter-validate.json",
       "owner": "frontmatter-validate.js, on demand + pre-pulse",
       "state": "fresh",
-      "age_hours": 69.7,
+      "age_hours": 69.8,
       "budget_hours": 168
     },
     {
@@ -62,7 +62,7 @@
       "path": "System/approval-queue.md",
       "owner": "every session that gates an external action",
       "state": "fresh",
-      "age_hours": 6.8,
+      "age_hours": 6.9,
       "budget_hours": 72
     }
   ],
@@ -148,13 +148,13 @@
     {
       "repo": "dillon-os",
       "path": "C:\\Users\\dillo\\repos\\dillon-os",
-      "commits": 45,
+      "commits": 46,
       "subjects": [
+        "cadence(daily): daily-sweep",
         "Register the weekly Netlify report auto-publish automation",
         "inventory: correct spend to 75c and record the research calibration",
         "Rewrite Managed Agents inventory for the full nine-role fleet, commit the local delivery bridge",
-        "gitignore: bridge journal and downloaded deliveries",
-        "bridge: the collector, and the outputs correction"
+        "gitignore: bridge journal and downloaded deliveries"
       ]
     },
     {
@@ -218,10 +218,10 @@
     {
       "repo": "dillon-os",
       "path": "C:\\Users\\dillo\\repos\\dillon-os",
-      "dirty_files": 727,
+      "dirty_files": 730,
       "has_remote": true,
-      "unpushed_commits": 12,
-      "risk": "12 commit(s) exist only on this machine"
+      "unpushed_commits": 13,
+      "risk": "13 commit(s) exist only on this machine"
     },
     {
       "repo": "dillon-os",
@@ -443,15 +443,15 @@
   "machine": {
     "platform": "win32 10.0.26200",
     "hostname": "DESKTOP-4AHKEC4",
-    "uptime_hours": 6.4,
+    "uptime_hours": 6.5,
     "total_memory_gb": 63.8,
-    "free_memory_gb": 51.5,
+    "free_memory_gb": 34.2,
     "unclean_shutdowns_30d": 16,
     "unclean_shutdowns_source": "Windows System event log, Id 6008"
   },
   "cadence": {
     "ledger_present": true,
-    "ledger_rows": 22,
+    "ledger_rows": 24,
     "first_ledger_day": "2026-09-14",
     "days_with_no_ledger_entry": [],
     "ledger_claims_missing_artifacts": [],
@@ -525,7 +525,7 @@
     {
       "date": "2026-09-15",
       "status": "ran",
-      "ran_at": "2026-09-15T13:55:12.548Z"
+      "ran_at": "2026-09-15T14:00:01.764Z"
     }
   ],
   "exit_code": 2,

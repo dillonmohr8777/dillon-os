@@ -1,0 +1,581 @@
+{
+  "run_id": "OGD-20260824-8D1DBB3F5BB8",
+  "graph_id": "daily-d18-attribution-validation-shadow",
+  "objective": "Reconstruct every conversion claim against current attribution, tracking, latency, and downstream evidence or preserve pending-validation language.",
+  "value_signal": "No platform event becomes a business outcome unless the definition, attribution window, tracking health, latency, and downstream reconciliation all pass.",
+  "contract_sha256": "1dee88cf3eaedd6b032e0f6158bacbea485b2718b2c4490f9165d67aa99462df",
+  "started_at": "2026-08-24T23:42:21.473Z",
+  "source_evidence": "Current hashed W02 lane evidence and W06 client report packages are re-collected before planning and at terminal verification.",
+  "finish_line": "Every lane is independently reconstructed with verified-or-pending attribution truth, lead-quality state, downstream binding, and no CRM or provider mutation.",
+  "governance": {
+    "orchestrator": "Codex acting as Marketing Chief",
+    "canonical_state": "The exact W02 paid-media source binding and W06 client-separated report packages remain canonical read-only evidence.",
+    "dedupe_key": "D18:2026-08-24:source-bound-shadow",
+    "checkpoint": "System/outcome-graph/routines/D18/2026-08-24-performance-shadow/run-receipt.json",
+    "rollback": "Discard performance shadow artifacts; retain accounts, providers, CRM, reports, delivery state, spend, and canonical queue state unchanged.",
+    "escalation": "Return exact account ambiguity, pending metric, attribution gap, report limitation, or delivery gate to Marketing Chief."
+  },
+  "graph_iterations": [
+    {
+      "iteration": 1,
+      "status": "verified",
+      "planner": {
+        "evidence": "Collected 7 isolated D18 item(s) from source set cd4877517666380542f1ea8d7c4be50549fa27d98e354f32850b01cab67f172e.",
+        "item_count": 7,
+        "plan_signature": "d46562d390a972e6f33bbbe559ab45b8d13af5e1fcc0c8e44e68411f1951e0a4",
+        "items": [
+          {
+            "id": "D18:google-ads--fresh-blends-kwik-trip",
+            "isolation_key": "fresh-blends-kwik-trip:google-ads:2026-W35A",
+            "input_fingerprint": "01b61b44559790b7381e35604202fda7b810928f2c34a3839d24c47b9210f686",
+            "task": null
+          },
+          {
+            "id": "D18:google-ads--kimberly-james-bridal",
+            "isolation_key": "kimberly-james-bridal:google-ads:2026-W35A",
+            "input_fingerprint": "6184448a1aad8b5138fe893fb5d6d5b6d038cedfbec98830e8eb145e84f533ab",
+            "task": null
+          },
+          {
+            "id": "D18:google-ads--omega-landscaping",
+            "isolation_key": "omega-landscaping:google-ads:2026-W35A",
+            "input_fingerprint": "41f972cd1ecf64cedf0eb81ef06e35e5ab272d4fcd2dd57e46c7da3e803eb9c6",
+            "task": null
+          },
+          {
+            "id": "D18:google-ads--onsite-concrete-landscape",
+            "isolation_key": "onsite-concrete-landscape:google-ads:2026-W35A",
+            "input_fingerprint": "c0752db6fc38e6ffef7d40c29d1301b48afa006de37bc21d327dfe95e7184269",
+            "task": null
+          },
+          {
+            "id": "D18:google-ads--replenish-7-eleven",
+            "isolation_key": "replenish-7-eleven:google-ads:2026-W35A",
+            "input_fingerprint": "be14ddeec5110e5e37a048ad5880de9235fdd1b9ab105873f522f98b298532ea",
+            "task": null
+          },
+          {
+            "id": "D18:meta-ads--kimberly-james-bridal",
+            "isolation_key": "kimberly-james-bridal:meta-ads:2026-W35A",
+            "input_fingerprint": "730078d2edabe9e4b49cb632486a8862cddaaad6054feee846a7a386e84783df",
+            "task": null
+          },
+          {
+            "id": "D18:meta-ads--shadow-heating-cooling",
+            "isolation_key": "shadow-heating-cooling:meta-ads:2026-W35A",
+            "input_fingerprint": "a98013abee871b1c3d644c457844965588b58b2a713dd6b436acbbc0d3262eec",
+            "task": null
+          }
+        ]
+      },
+      "workers": [
+        {
+          "item_id": "D18:google-ads--fresh-blends-kwik-trip",
+          "input_fingerprint": "01b61b44559790b7381e35604202fda7b810928f2c34a3839d24c47b9210f686",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-8D1DBB3F5BB8:7af1aa52748710f152fe:attempt:1",
+              "maker_evidence": "Built one privacy-safe D18 record for D18:google-ads--fresh-blends-kwik-trip.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D18/2026-08-24-performance-shadow/workers/7af1aa52748710f152fe.json",
+                  "sha256": "4b953305e8cce037399464be69de83ddde0e9665ff7e733827fe2bea7fbc8474",
+                  "bytes": 1260
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D18:google-ads--fresh-blends-kwik-trip from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D18/2026-08-24-performance-shadow/workers/7af1aa52748710f152fe.json",
+              "sha256": "4b953305e8cce037399464be69de83ddde0e9665ff7e733827fe2bea7fbc8474",
+              "bytes": 1260
+            }
+          ],
+          "isolation_id": "OGD-20260824-8D1DBB3F5BB8:7af1aa52748710f152fe:attempt:1"
+        },
+        {
+          "item_id": "D18:google-ads--kimberly-james-bridal",
+          "input_fingerprint": "6184448a1aad8b5138fe893fb5d6d5b6d038cedfbec98830e8eb145e84f533ab",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-8D1DBB3F5BB8:e6aba23bad4b14646dad:attempt:1",
+              "maker_evidence": "Built one privacy-safe D18 record for D18:google-ads--kimberly-james-bridal.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D18/2026-08-24-performance-shadow/workers/e6aba23bad4b14646dad.json",
+                  "sha256": "63bfbc0dd17f88018b9f2dcf0bc953b024e0932fbfbefeadef92311b315e6006",
+                  "bytes": 1256
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D18:google-ads--kimberly-james-bridal from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D18/2026-08-24-performance-shadow/workers/e6aba23bad4b14646dad.json",
+              "sha256": "63bfbc0dd17f88018b9f2dcf0bc953b024e0932fbfbefeadef92311b315e6006",
+              "bytes": 1256
+            }
+          ],
+          "isolation_id": "OGD-20260824-8D1DBB3F5BB8:e6aba23bad4b14646dad:attempt:1"
+        },
+        {
+          "item_id": "D18:google-ads--omega-landscaping",
+          "input_fingerprint": "41f972cd1ecf64cedf0eb81ef06e35e5ab272d4fcd2dd57e46c7da3e803eb9c6",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-8D1DBB3F5BB8:0762d13dc283a60526b5:attempt:1",
+              "maker_evidence": "Built one privacy-safe D18 record for D18:google-ads--omega-landscaping.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D18/2026-08-24-performance-shadow/workers/0762d13dc283a60526b5.json",
+                  "sha256": "bbb449c3dc099966b599c782b21da4e352195d9098bd7d7d363c50b7fd98ea44",
+                  "bytes": 1244
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D18:google-ads--omega-landscaping from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D18/2026-08-24-performance-shadow/workers/0762d13dc283a60526b5.json",
+              "sha256": "bbb449c3dc099966b599c782b21da4e352195d9098bd7d7d363c50b7fd98ea44",
+              "bytes": 1244
+            }
+          ],
+          "isolation_id": "OGD-20260824-8D1DBB3F5BB8:0762d13dc283a60526b5:attempt:1"
+        },
+        {
+          "item_id": "D18:google-ads--onsite-concrete-landscape",
+          "input_fingerprint": "c0752db6fc38e6ffef7d40c29d1301b48afa006de37bc21d327dfe95e7184269",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-8D1DBB3F5BB8:a1c66c776c1dee459f39:attempt:1",
+              "maker_evidence": "Built one privacy-safe D18 record for D18:google-ads--onsite-concrete-landscape.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D18/2026-08-24-performance-shadow/workers/a1c66c776c1dee459f39.json",
+                  "sha256": "703e3887f5da9b4b547cde0033294a1c08cd0748d7ddce1764b73039bd9570b6",
+                  "bytes": 1268
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D18:google-ads--onsite-concrete-landscape from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D18/2026-08-24-performance-shadow/workers/a1c66c776c1dee459f39.json",
+              "sha256": "703e3887f5da9b4b547cde0033294a1c08cd0748d7ddce1764b73039bd9570b6",
+              "bytes": 1268
+            }
+          ],
+          "isolation_id": "OGD-20260824-8D1DBB3F5BB8:a1c66c776c1dee459f39:attempt:1"
+        },
+        {
+          "item_id": "D18:google-ads--replenish-7-eleven",
+          "input_fingerprint": "be14ddeec5110e5e37a048ad5880de9235fdd1b9ab105873f522f98b298532ea",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-8D1DBB3F5BB8:4d443284ba29ed734ae2:attempt:1",
+              "maker_evidence": "Built one privacy-safe D18 record for D18:google-ads--replenish-7-eleven.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D18/2026-08-24-performance-shadow/workers/4d443284ba29ed734ae2.json",
+                  "sha256": "6e5d7fe5587ed605af46a2ea580080597837a9e7635dd0d7b1f093504a7351f5",
+                  "bytes": 1247
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D18:google-ads--replenish-7-eleven from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D18/2026-08-24-performance-shadow/workers/4d443284ba29ed734ae2.json",
+              "sha256": "6e5d7fe5587ed605af46a2ea580080597837a9e7635dd0d7b1f093504a7351f5",
+              "bytes": 1247
+            }
+          ],
+          "isolation_id": "OGD-20260824-8D1DBB3F5BB8:4d443284ba29ed734ae2:attempt:1"
+        },
+        {
+          "item_id": "D18:meta-ads--kimberly-james-bridal",
+          "input_fingerprint": "730078d2edabe9e4b49cb632486a8862cddaaad6054feee846a7a386e84783df",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-8D1DBB3F5BB8:1eca39ccbaf84e9752f6:attempt:1",
+              "maker_evidence": "Built one privacy-safe D18 record for D18:meta-ads--kimberly-james-bridal.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D18/2026-08-24-performance-shadow/workers/1eca39ccbaf84e9752f6.json",
+                  "sha256": "4deb75052698d545946ed6d7e48b54b576a10a0199daa99c0ea45b44f20e259a",
+                  "bytes": 1441
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D18:meta-ads--kimberly-james-bridal from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D18/2026-08-24-performance-shadow/workers/1eca39ccbaf84e9752f6.json",
+              "sha256": "4deb75052698d545946ed6d7e48b54b576a10a0199daa99c0ea45b44f20e259a",
+              "bytes": 1441
+            }
+          ],
+          "isolation_id": "OGD-20260824-8D1DBB3F5BB8:1eca39ccbaf84e9752f6:attempt:1"
+        },
+        {
+          "item_id": "D18:meta-ads--shadow-heating-cooling",
+          "input_fingerprint": "a98013abee871b1c3d644c457844965588b58b2a713dd6b436acbbc0d3262eec",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-8D1DBB3F5BB8:b40e937b729675b575ca:attempt:1",
+              "maker_evidence": "Built one privacy-safe D18 record for D18:meta-ads--shadow-heating-cooling.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D18/2026-08-24-performance-shadow/workers/b40e937b729675b575ca.json",
+                  "sha256": "2a0c236319c01ecc7db6890c7a990e471bae9fa94d253bd7eda1e7778eebbaa7",
+                  "bytes": 1254
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D18:meta-ads--shadow-heating-cooling from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D18/2026-08-24-performance-shadow/workers/b40e937b729675b575ca.json",
+              "sha256": "2a0c236319c01ecc7db6890c7a990e471bae9fa94d253bd7eda1e7778eebbaa7",
+              "bytes": 1254
+            }
+          ],
+          "isolation_id": "OGD-20260824-8D1DBB3F5BB8:b40e937b729675b575ca:attempt:1"
+        }
+      ],
+      "reduction": {
+        "evidence": "Reduced all checked D18 records without blending isolation keys.",
+        "artifacts": [
+          {
+            "path": "System/outcome-graph/routines/D18/2026-08-24-performance-shadow/attribution-validation.json",
+            "sha256": "9e9e56d39e5ea0081b17a6bacda57684f2c3f10972cc67fd6a4271574b5bd8ed",
+            "bytes": 10604
+          },
+          {
+            "path": "System/outcome-graph/routines/D18/2026-08-24-performance-shadow/downstream-source-ledger.json",
+            "sha256": "ab0625ebba0a3c267538054990292030347ee2f74b4fb2a29366f4a0a7018281",
+            "bytes": 2049
+          }
+        ]
+      },
+      "terminal_verification": {
+        "evidence": "Recollected and independently verified all D18 sources, records, negative states, and artifact hashes.",
+        "declared_pass": true,
+        "passed": true,
+        "assertions": [
+          {
+            "id": "source-manifest-stable",
+            "passed": true,
+            "detail": "Every named source remains hash-bound at terminal verification."
+          },
+          {
+            "id": "every-isolated-item-reconstructed-exactly-once",
+            "passed": true,
+            "detail": "Every in-scope item has one collision-resistant reconstructed record."
+          },
+          {
+            "id": "reducer-output-reproduces-exactly",
+            "passed": true,
+            "detail": "Final artifacts reproduce exactly from current sources and the frozen evaluation clock."
+          },
+          {
+            "id": "conversion-definition-window-and-latency-verified-or-pending",
+            "passed": true,
+            "detail": "Definition, window, and latency states are explicit."
+          },
+          {
+            "id": "tracking-health-verified-before-claim",
+            "passed": true,
+            "detail": "No verified outcome bypasses tracking health."
+          },
+          {
+            "id": "platform-and-downstream-outcomes-reconciled",
+            "passed": true,
+            "detail": "Verified outcomes require downstream reconciliation."
+          },
+          {
+            "id": "lead-quality-state-explicit",
+            "passed": true,
+            "detail": "Lead quality is never implicit."
+          },
+          {
+            "id": "unsupported-outcomes-marked-pending",
+            "passed": true,
+            "detail": "Unsupported outcomes use neutral pending-validation language."
+          },
+          {
+            "id": "no-crm-or-provider-mutation",
+            "passed": true,
+            "detail": "The validation remained read only."
+          },
+          {
+            "id": "privacy-and-no-mutation-boundary",
+            "passed": true,
+            "detail": "Final artifacts are redacted and attest no external, canonical, provider, restart, or checkpoint mutation."
+          }
+        ],
+        "artifact_manifest": [
+          {
+            "path": "System/outcome-graph/routines/D18/2026-08-24-performance-shadow/attribution-validation.json",
+            "sha256": "9e9e56d39e5ea0081b17a6bacda57684f2c3f10972cc67fd6a4271574b5bd8ed",
+            "bytes": 10604
+          },
+          {
+            "path": "System/outcome-graph/routines/D18/2026-08-24-performance-shadow/downstream-source-ledger.json",
+            "sha256": "ab0625ebba0a3c267538054990292030347ee2f74b4fb2a29366f4a0a7018281",
+            "bytes": 2049
+          }
+        ],
+        "manifest_errors": []
+      },
+      "learning": {
+        "evidence": "Appended one hashed D18 correction entry.",
+        "corrections": [
+          "Retain pending-validation language until attribution and downstream evidence both pass."
+        ],
+        "ledger": "System/outcome-graph/routines/D18/2026-08-24-performance-shadow/corrections.jsonl",
+        "ledger_receipt": {
+          "locator": "System/outcome-graph/routines/D18/2026-08-24-performance-shadow/corrections.jsonl",
+          "entry_sha256": "b2caf6d5ed2bd7b9559a8d87728c3bfb7c98b38b2f03fb2285ab00dbdb203ef4"
+        }
+      }
+    }
+  ],
+  "invocation_log": [
+    {
+      "adapter": "source-bound-d18-planner",
+      "invoked_at": "2026-08-24T23:42:21.487Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d18-maker",
+      "invoked_at": "2026-08-24T23:42:21.511Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d18-maker",
+      "invoked_at": "2026-08-24T23:42:21.512Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d18-maker",
+      "invoked_at": "2026-08-24T23:42:21.512Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d18-maker",
+      "invoked_at": "2026-08-24T23:42:21.512Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d18-checker",
+      "invoked_at": "2026-08-24T23:42:21.553Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d18-checker",
+      "invoked_at": "2026-08-24T23:42:21.553Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d18-checker",
+      "invoked_at": "2026-08-24T23:42:21.553Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d18-checker",
+      "invoked_at": "2026-08-24T23:42:21.553Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d18-maker",
+      "invoked_at": "2026-08-24T23:42:21.606Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d18-maker",
+      "invoked_at": "2026-08-24T23:42:21.633Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d18-maker",
+      "invoked_at": "2026-08-24T23:42:21.660Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d18-checker",
+      "invoked_at": "2026-08-24T23:42:21.660Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d18-checker",
+      "invoked_at": "2026-08-24T23:42:21.677Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d18-checker",
+      "invoked_at": "2026-08-24T23:42:21.681Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d18-reducer",
+      "invoked_at": "2026-08-24T23:42:21.764Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d18-terminal-verifier",
+      "invoked_at": "2026-08-24T23:42:21.802Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d18-learner",
+      "invoked_at": "2026-08-24T23:42:21.832Z",
+      "status": "returned"
+    }
+  ],
+  "budget": {
+    "limit_units": 96,
+    "used_units": 18
+  },
+  "outcome": "complete",
+  "terminal_truth": true,
+  "finished_at": "2026-08-24T23:42:21.857Z",
+  "elapsed_seconds": 0.384,
+  "blocked_by": null,
+  "reason": "Finish line is proven by an independent terminal verifier.",
+  "terminal_evidence": {
+    "evidence": "Recollected and independently verified all D18 sources, records, negative states, and artifact hashes.",
+    "declared_pass": true,
+    "passed": true,
+    "assertions": [
+      {
+        "id": "source-manifest-stable",
+        "passed": true,
+        "detail": "Every named source remains hash-bound at terminal verification."
+      },
+      {
+        "id": "every-isolated-item-reconstructed-exactly-once",
+        "passed": true,
+        "detail": "Every in-scope item has one collision-resistant reconstructed record."
+      },
+      {
+        "id": "reducer-output-reproduces-exactly",
+        "passed": true,
+        "detail": "Final artifacts reproduce exactly from current sources and the frozen evaluation clock."
+      },
+      {
+        "id": "conversion-definition-window-and-latency-verified-or-pending",
+        "passed": true,
+        "detail": "Definition, window, and latency states are explicit."
+      },
+      {
+        "id": "tracking-health-verified-before-claim",
+        "passed": true,
+        "detail": "No verified outcome bypasses tracking health."
+      },
+      {
+        "id": "platform-and-downstream-outcomes-reconciled",
+        "passed": true,
+        "detail": "Verified outcomes require downstream reconciliation."
+      },
+      {
+        "id": "lead-quality-state-explicit",
+        "passed": true,
+        "detail": "Lead quality is never implicit."
+      },
+      {
+        "id": "unsupported-outcomes-marked-pending",
+        "passed": true,
+        "detail": "Unsupported outcomes use neutral pending-validation language."
+      },
+      {
+        "id": "no-crm-or-provider-mutation",
+        "passed": true,
+        "detail": "The validation remained read only."
+      },
+      {
+        "id": "privacy-and-no-mutation-boundary",
+        "passed": true,
+        "detail": "Final artifacts are redacted and attest no external, canonical, provider, restart, or checkpoint mutation."
+      }
+    ],
+    "artifact_manifest": [
+      {
+        "path": "System/outcome-graph/routines/D18/2026-08-24-performance-shadow/attribution-validation.json",
+        "sha256": "9e9e56d39e5ea0081b17a6bacda57684f2c3f10972cc67fd6a4271574b5bd8ed",
+        "bytes": 10604
+      },
+      {
+        "path": "System/outcome-graph/routines/D18/2026-08-24-performance-shadow/downstream-source-ledger.json",
+        "sha256": "ab0625ebba0a3c267538054990292030347ee2f74b4fb2a29366f4a0a7018281",
+        "bytes": 2049
+      }
+    ],
+    "manifest_errors": []
+  },
+  "learning_evidence": {
+    "evidence": "Appended one hashed D18 correction entry.",
+    "corrections": [
+      "Retain pending-validation language until attribution and downstream evidence both pass."
+    ],
+    "ledger": "System/outcome-graph/routines/D18/2026-08-24-performance-shadow/corrections.jsonl",
+    "ledger_receipt": {
+      "locator": "System/outcome-graph/routines/D18/2026-08-24-performance-shadow/corrections.jsonl",
+      "entry_sha256": "b2caf6d5ed2bd7b9559a8d87728c3bfb7c98b38b2f03fb2285ab00dbdb203ef4"
+    }
+  },
+  "drift_fingerprint": "59ee796abc7f0945b537591ef145c7693249d8a974143d15010f62ec845c5c44",
+  "deduped": true,
+  "durable_state": {
+    "schema_version": 1,
+    "dedupe_identity": "1831f088f511d54121dcb791b23c1a920088227c16337f8bfa2eba7c04fd04fa",
+    "dedupe_hit": true,
+    "resumed": false,
+    "canonical_binding": {
+      "locator": "dillon-os://routine/D18/2026-08-24",
+      "version": "2026-08-24:7d65a000d0.6216ed7d8b.fedfe6670d",
+      "sha256": "cd4877517666380542f1ea8d7c4be50549fa27d98e354f32850b01cab67f172e",
+      "captured_at": "2026-08-24T23:42:21.455Z"
+    },
+    "canonical_binding_fingerprint": "61c553d488f05fb3cf9d732091e2c2ffc80152537d801d6fc6b5d2eacd7987ac",
+    "contract_fingerprint": "7130f02727b093976ff239b325f4056edbf18f955520dfb4a81c380a012a4333",
+    "checkpoint": "runs/OGD-20260824-8D1DBB3F5BB8/checkpoint.json"
+  }
+}

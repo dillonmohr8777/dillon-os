@@ -1,0 +1,866 @@
+[
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/16689200340",
+      "status": "PAUSED",
+      "experimentType": "BASE",
+      "servingStatus": "ENDED",
+      "biddingStrategyType": "MAXIMIZE_CONVERSIONS",
+      "name": "aws",
+      "id": "16689200340"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/7917802207/campaignBudgets/10628922136",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "10628922136",
+      "amountMicros": "1000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/16762329771",
+      "status": "REMOVED",
+      "experimentType": "BASE",
+      "servingStatus": "ENDED",
+      "biddingStrategyType": "MAXIMIZE_CONVERSIONS",
+      "name": "AWS",
+      "id": "16762329771"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/7917802207/campaignBudgets/10657345814",
+      "status": "REMOVED",
+      "deliveryMethod": "STANDARD",
+      "id": "10657345814",
+      "amountMicros": "250000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/16866137031",
+      "status": "REMOVED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "MAXIMIZE_CONVERSIONS",
+      "name": "DSA",
+      "id": "16866137031"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/7917802207/campaignBudgets/10717248454",
+      "status": "REMOVED",
+      "deliveryMethod": "STANDARD",
+      "id": "10717248454",
+      "amountMicros": "20000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/16878703655",
+      "status": "REMOVED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "MAXIMIZE_CONVERSIONS",
+      "name": "Data Keywords",
+      "id": "16878703655"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/7917802207/campaignBudgets/10714378041",
+      "status": "REMOVED",
+      "deliveryMethod": "STANDARD",
+      "id": "10714378041",
+      "amountMicros": "50000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/17231500953",
+      "status": "REMOVED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "MAXIMIZE_CONVERSIONS",
+      "name": "Competitor",
+      "id": "17231500953"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/7917802207/campaignBudgets/10899095461",
+      "status": "REMOVED",
+      "deliveryMethod": "STANDARD",
+      "id": "10899095461",
+      "amountMicros": "6000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/17234349817",
+      "status": "REMOVED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "MAXIMIZE_CONVERSIONS",
+      "name": "Brand",
+      "id": "17234349817"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/7917802207/campaignBudgets/10890665210",
+      "status": "REMOVED",
+      "deliveryMethod": "STANDARD",
+      "id": "10890665210",
+      "amountMicros": "50000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/17712974791",
+      "status": "REMOVED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "MAXIMIZE_CONVERSIONS",
+      "name": "Performance Max",
+      "id": "17712974791"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/7917802207/campaignBudgets/11190197945",
+      "status": "REMOVED",
+      "deliveryMethod": "STANDARD",
+      "id": "11190197945",
+      "amountMicros": "25000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/20034665019",
+      "status": "REMOVED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "TARGET_SPEND",
+      "name": "US + CA | Search/Google | Non-Brand | Competitor: Datacoral",
+      "id": "20034665019"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/7917802207/campaignBudgets/12562554700",
+      "status": "REMOVED",
+      "deliveryMethod": "STANDARD",
+      "id": "12562554700",
+      "amountMicros": "58200000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/20043025660",
+      "status": "REMOVED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "TARGET_SPEND",
+      "name": "US + CA | Search/Google | Brand Terms",
+      "id": "20043025660"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/7917802207/campaignBudgets/12562582306",
+      "status": "REMOVED",
+      "deliveryMethod": "STANDARD",
+      "id": "12562582306",
+      "amountMicros": "58200000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/20602466056",
+      "status": "REMOVED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "TARGET_SPEND",
+      "name": "Data integration: A to B",
+      "id": "20602466056"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/7917802207/campaignBudgets/12988601418",
+      "status": "REMOVED",
+      "deliveryMethod": "STANDARD",
+      "id": "12988601418",
+      "amountMicros": "100000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/20792678576",
+      "status": "REMOVED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "TARGET_SPEND",
+      "name": "TOFU: Data Integration",
+      "id": "20792678576"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/7917802207/campaignBudgets/13165858000",
+      "status": "REMOVED",
+      "deliveryMethod": "STANDARD",
+      "id": "13165858000",
+      "amountMicros": "100000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/21679608360",
+      "status": "PAUSED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "MANUAL_CPC",
+      "name": "Brand Keywords",
+      "id": "21679608360"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/7917802207/campaignBudgets/13905988017",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "13905988017",
+      "amountMicros": "10000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/21686057663",
+      "status": "PAUSED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "TARGET_SPEND",
+      "name": "Demand Gen",
+      "id": "21686057663"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/7917802207/campaignBudgets/13899512861",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "13899512861",
+      "amountMicros": "1000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22032126150",
+      "status": "PAUSED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "MANUAL_CPC",
+      "name": "G_US_S_NB_Data-Integration",
+      "id": "22032126150"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/7917802207/campaignBudgets/14174586678",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "14174586678",
+      "amountMicros": "50000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038365681",
+      "status": "ENABLED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "MAXIMIZE_CONVERSIONS",
+      "name": "G_US_S_Brand_Exact",
+      "id": "22038365681"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/7917802207/campaignBudgets/14181179446",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "14181179446",
+      "amountMicros": "25000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038435110",
+      "status": "PAUSED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "TARGET_SPEND",
+      "name": "G_US_S_Brand_Long-Tail",
+      "id": "22038435110"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/7917802207/campaignBudgets/14174596956",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "14174596956",
+      "amountMicros": "25000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038966953",
+      "status": "PAUSED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "TARGET_SPEND",
+      "name": "G_US_Competitor_Fivetran",
+      "id": "22038966953"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/7917802207/campaignBudgets/14181638101",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "14181638101",
+      "amountMicros": "75000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22212011205",
+      "status": "PAUSED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "TARGET_SPEND",
+      "name": "G_US_S_Competitor_Boomi",
+      "id": "22212011205"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/7917802207/campaignBudgets/14303500457",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "14303500457",
+      "amountMicros": "75000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22212011208",
+      "status": "PAUSED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "TARGET_SPEND",
+      "name": "G_US_S_NB_iPaaS",
+      "id": "22212011208"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/7917802207/campaignBudgets/14303500460",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "14303500460",
+      "amountMicros": "20000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22212011211",
+      "status": "PAUSED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "MANUAL_CPC",
+      "name": "G_US_S_Competitor_Celigo",
+      "id": "22212011211"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/7917802207/campaignBudgets/14303500739",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "14303500739",
+      "amountMicros": "75000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22212011214",
+      "status": "PAUSED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "TARGET_SPEND",
+      "name": "G_US_S_Competitor_Jitterbit",
+      "id": "22212011214"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/7917802207/campaignBudgets/14303500742",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "14303500742",
+      "amountMicros": "75000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22212011217",
+      "status": "PAUSED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "MANUAL_CPC",
+      "name": "G_US_S_Competitor_Informatica",
+      "id": "22212011217"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/7917802207/campaignBudgets/14303500745",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "14303500745",
+      "amountMicros": "75000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22228238128",
+      "status": "PAUSED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "MANUAL_CPC",
+      "name": "G_US_S_Competitor_SnapLogic",
+      "id": "22228238128"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/7917802207/campaignBudgets/14314090944",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "14314090944",
+      "amountMicros": "75000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22228238131",
+      "status": "PAUSED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "MANUAL_CPC",
+      "name": "G_US_S_Competitor_TrayAI",
+      "id": "22228238131"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/7917802207/campaignBudgets/14314090947",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "14314090947",
+      "amountMicros": "75000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22274713590",
+      "status": "PAUSED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "TARGET_SPEND",
+      "name": "G_US_RLSA",
+      "id": "22274713590"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/7917802207/campaignBudgets/14363726827",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "14363726827",
+      "amountMicros": "20000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22347688788",
+      "status": "PAUSED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "MANUAL_CPC",
+      "name": "G_US_S_Competitor_Talend",
+      "id": "22347688788"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/7917802207/campaignBudgets/14408490920",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "14408490920",
+      "amountMicros": "25000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22765022280",
+      "status": "PAUSED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "MANUAL_CPC",
+      "name": "G_AUS_S_Brand_Exact",
+      "id": "22765022280"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/7917802207/campaignBudgets/14744972815",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "14744972815",
+      "amountMicros": "25000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22765028826",
+      "status": "PAUSED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "MANUAL_CPC",
+      "name": "G_AUS_S_Competitor_Talend",
+      "id": "22765028826"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/7917802207/campaignBudgets/14732985512",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "14732985512",
+      "amountMicros": "75000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22765030269",
+      "status": "PAUSED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "MANUAL_CPC",
+      "name": "G_AUS_S_Competitor_Jitterbit",
+      "id": "22765030269"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/7917802207/campaignBudgets/14738615445",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "14738615445",
+      "amountMicros": "75000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22771065566",
+      "status": "REMOVED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "TARGET_SPEND",
+      "name": "G_AUS_S_Brand_Long-Tail",
+      "id": "22771065566"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/7917802207/campaignBudgets/14744969257",
+      "status": "REMOVED",
+      "deliveryMethod": "STANDARD",
+      "id": "14744969257",
+      "amountMicros": "25000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22771066316",
+      "status": "PAUSED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "MANUAL_CPC",
+      "name": "G_AUS_S_Competitor_SnapLogic",
+      "id": "22771066316"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/7917802207/campaignBudgets/14738623125",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "14738623125",
+      "amountMicros": "75000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22771074893",
+      "status": "PAUSED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "TARGET_SPEND",
+      "name": "G_AUS_S_Competitor_Boomi",
+      "id": "22771074893"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/7917802207/campaignBudgets/14744979508",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "14744979508",
+      "amountMicros": "75000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22771076546",
+      "status": "PAUSED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "MANUAL_CPC",
+      "name": "G_AUS_S_Competitor_Celigo",
+      "id": "22771076546"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/7917802207/campaignBudgets/14744979340",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "14744979340",
+      "amountMicros": "75000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22771076609",
+      "status": "PAUSED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "MANUAL_CPC",
+      "name": "G_AUS_S_Competitor_Informatica",
+      "id": "22771076609"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/7917802207/campaignBudgets/14738623119",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "14738623119",
+      "amountMicros": "75000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22774811908",
+      "status": "PAUSED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "MANUAL_CPC",
+      "name": "G_AUS_S_NB_Data-Integration",
+      "id": "22774811908"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/7917802207/campaignBudgets/14732975657",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "14732975657",
+      "amountMicros": "50000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22795443543",
+      "status": "PAUSED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "MANUAL_CPC",
+      "name": "G_US_S_NB_Data-Transformation",
+      "id": "22795443543"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/7917802207/campaignBudgets/14763804438",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "14763804438",
+      "amountMicros": "1000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22801157261",
+      "status": "REMOVED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "MANUAL_CPC",
+      "name": "G_AUS_S_Brand_P",
+      "id": "22801157261"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/7917802207/campaignBudgets/14757983213",
+      "status": "REMOVED",
+      "deliveryMethod": "STANDARD",
+      "id": "14757983213",
+      "amountMicros": "25000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22804992418",
+      "status": "PAUSED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "MANUAL_CPC",
+      "name": "G_AUS_S_Brand_Long-Tail",
+      "id": "22804992418"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/7917802207/campaignBudgets/14758077560",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "14758077560",
+      "amountMicros": "25000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22988394145",
+      "status": "PAUSED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "MAXIMIZE_CONVERSIONS",
+      "name": "G_US_S_NB_AI-Data-Integration",
+      "id": "22988394145"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/7917802207/campaignBudgets/14904649130",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "14904649130",
+      "amountMicros": "10000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23027231268",
+      "status": "PAUSED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "MAXIMIZE_CONVERSIONS",
+      "name": "G_US_S_NB_Data-Products",
+      "id": "23027231268"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/7917802207/campaignBudgets/14943423963",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "14943423963",
+      "amountMicros": "10000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23037349600",
+      "status": "PAUSED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "MAXIMIZE_CONVERSIONS",
+      "name": "G_US_S_NB_B2B-Onboarding",
+      "id": "23037349600"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/7917802207/campaignBudgets/14938025204",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "14938025204",
+      "amountMicros": "50000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23164249614",
+      "status": "PAUSED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "MANUAL_CPC",
+      "name": "G_US_S_NB_AI-Data-Integration Long Tail",
+      "id": "23164249614"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/7917802207/campaignBudgets/15058599978",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "15058599978",
+      "amountMicros": "15000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "status": "ENABLED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "TARGET_SPEND",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/7917802207/campaignBudgets/15467446061",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "15467446061",
+      "amountMicros": "40750000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317335",
+      "status": "PAUSED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "MAXIMIZE_CONVERSIONS",
+      "name": "G_US_S_NB_ETL-Pipeline",
+      "id": "23705317335"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/7917802207/campaignBudgets/15467446064",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "15467446064",
+      "amountMicros": "30000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317338",
+      "status": "PAUSED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "TARGET_SPEND",
+      "name": "G_US_S_NB_Competitor",
+      "id": "23705317338"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/7917802207/campaignBudgets/15477447556",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "15477447556",
+      "amountMicros": "50000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317341",
+      "status": "PAUSED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "MAXIMIZE_CONVERSIONS",
+      "name": "G_US_S_NB_Governance",
+      "id": "23705317341"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/7917802207/campaignBudgets/15477447559",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "15477447559",
+      "amountMicros": "10000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/24039385907",
+      "status": "PAUSED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "MAXIMIZE_CONVERSIONS",
+      "name": "Retargeting",
+      "id": "24039385907"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/7917802207/campaignBudgets/15718171139",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "15718171139",
+      "amountMicros": "20000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/24177650112",
+      "status": "PAUSED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "MAXIMIZE_CONVERSIONS",
+      "name": "G_US_PMAX_NB_MCP-Agentic",
+      "id": "24177650112"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/7917802207/campaignBudgets/15820807322",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "15820807322",
+      "amountMicros": "20000000"
+    }
+  }
+]

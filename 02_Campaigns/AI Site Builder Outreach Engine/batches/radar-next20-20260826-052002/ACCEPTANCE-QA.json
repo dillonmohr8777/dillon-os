@@ -1,0 +1,293 @@
+{
+  "schema": 1,
+  "runId": "20260826-052002",
+  "generatedAt": "2026-08-26T10:58:50.838Z",
+  "source": "Independent acceptance browser run",
+  "viewports": [
+    {
+      "name": "small-phone",
+      "width": 320,
+      "height": 740
+    },
+    {
+      "name": "phone",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "name": "wide-phone",
+      "width": 430,
+      "height": 932
+    },
+    {
+      "name": "tablet",
+      "width": 850,
+      "height": 1100
+    },
+    {
+      "name": "compact-desktop",
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 900
+    }
+  ],
+  "gates": [
+    "static structure and metadata",
+    "all rendered images loaded",
+    "horizontal overflow",
+    "console and page errors",
+    "keyboard-visible skip-link focus",
+    "reduced-motion behavior",
+    "six top-of-page viewport screenshots",
+    "six full-page screenshots with passed-section opacity restored"
+  ],
+  "passCount": 20,
+  "failCount": 0,
+  "status": "PASS",
+  "results": [
+    {
+      "slug": "aqua-docs",
+      "status": "PASS",
+      "staticOk": true,
+      "visualQa": "ran",
+      "visualReason": "screenshots written to C:\\Users\\dillo\\repos\\dillon-os\\_templates\\site-factory\\qa-shots\\aqua-docs",
+      "failures": [],
+      "warnings": [
+        "noindex is present (correct for demos, REMOVE for live client sites)"
+      ],
+      "fullQa": true
+    },
+    {
+      "slug": "bala-financial-group",
+      "status": "PASS",
+      "staticOk": true,
+      "visualQa": "ran",
+      "visualReason": "screenshots written to C:\\Users\\dillo\\repos\\dillon-os\\_templates\\site-factory\\qa-shots\\bala-financial-group",
+      "failures": [],
+      "warnings": [
+        "noindex is present (correct for demos, REMOVE for live client sites)"
+      ],
+      "fullQa": true
+    },
+    {
+      "slug": "bath-and-kitchen-showroom-of-hajoca-york",
+      "status": "PASS",
+      "staticOk": true,
+      "visualQa": "ran",
+      "visualReason": "screenshots written to C:\\Users\\dillo\\repos\\dillon-os\\_templates\\site-factory\\qa-shots\\bath-and-kitchen-showroom-of-hajoca-york",
+      "failures": [],
+      "warnings": [
+        "noindex is present (correct for demos, REMOVE for live client sites)"
+      ],
+      "fullQa": true
+    },
+    {
+      "slug": "bob-swayne-real-estate",
+      "status": "PASS",
+      "staticOk": true,
+      "visualQa": "ran",
+      "visualReason": "screenshots written to C:\\Users\\dillo\\repos\\dillon-os\\_templates\\site-factory\\qa-shots\\bob-swayne-real-estate",
+      "failures": [],
+      "warnings": [
+        "noindex is present (correct for demos, REMOVE for live client sites)"
+      ],
+      "fullQa": true
+    },
+    {
+      "slug": "eckroth-equipment-company",
+      "status": "PASS",
+      "staticOk": true,
+      "visualQa": "ran",
+      "visualReason": "screenshots written to C:\\Users\\dillo\\repos\\dillon-os\\_templates\\site-factory\\qa-shots\\eckroth-equipment-company",
+      "failures": [],
+      "warnings": [
+        "noindex is present (correct for demos, REMOVE for live client sites)"
+      ],
+      "fullQa": true
+    },
+    {
+      "slug": "frees-insurance",
+      "status": "PASS",
+      "staticOk": true,
+      "visualQa": "ran",
+      "visualReason": "screenshots written to C:\\Users\\dillo\\repos\\dillon-os\\_templates\\site-factory\\qa-shots\\frees-insurance",
+      "failures": [],
+      "warnings": [
+        "noindex is present (correct for demos, REMOVE for live client sites)"
+      ],
+      "fullQa": true
+    },
+    {
+      "slug": "kevin-t-coyne-attorney-at-law",
+      "status": "PASS",
+      "staticOk": true,
+      "visualQa": "ran",
+      "visualReason": "screenshots written to C:\\Users\\dillo\\repos\\dillon-os\\_templates\\site-factory\\qa-shots\\kevin-t-coyne-attorney-at-law",
+      "failures": [],
+      "warnings": [
+        "noindex is present (correct for demos, REMOVE for live client sites)"
+      ],
+      "fullQa": true
+    },
+    {
+      "slug": "kitay-law-offices",
+      "status": "PASS",
+      "staticOk": true,
+      "visualQa": "ran",
+      "visualReason": "screenshots written to C:\\Users\\dillo\\repos\\dillon-os\\_templates\\site-factory\\qa-shots\\kitay-law-offices",
+      "failures": [],
+      "warnings": [
+        "noindex is present (correct for demos, REMOVE for live client sites)"
+      ],
+      "fullQa": true
+    },
+    {
+      "slug": "lancaster-general-health-express",
+      "status": "PASS",
+      "staticOk": true,
+      "visualQa": "ran",
+      "visualReason": "screenshots written to C:\\Users\\dillo\\repos\\dillon-os\\_templates\\site-factory\\qa-shots\\lancaster-general-health-express",
+      "failures": [],
+      "warnings": [
+        "noindex is present (correct for demos, REMOVE for live client sites)"
+      ],
+      "fullQa": true
+    },
+    {
+      "slug": "leiss-orthodontics",
+      "status": "PASS",
+      "staticOk": true,
+      "visualQa": "ran",
+      "visualReason": "screenshots written to C:\\Users\\dillo\\repos\\dillon-os\\_templates\\site-factory\\qa-shots\\leiss-orthodontics",
+      "failures": [],
+      "warnings": [
+        "noindex is present (correct for demos, REMOVE for live client sites)"
+      ],
+      "fullQa": true
+    },
+    {
+      "slug": "lg-health-physicians-family-medicine-abbeyville",
+      "status": "PASS",
+      "staticOk": true,
+      "visualQa": "ran",
+      "visualReason": "screenshots written to C:\\Users\\dillo\\repos\\dillon-os\\_templates\\site-factory\\qa-shots\\lg-health-physicians-family-medicine-abbeyville",
+      "failures": [],
+      "warnings": [
+        "noindex is present (correct for demos, REMOVE for live client sites)"
+      ],
+      "fullQa": true
+    },
+    {
+      "slug": "money-management-advisory-inc",
+      "status": "PASS",
+      "staticOk": true,
+      "visualQa": "ran",
+      "visualReason": "screenshots written to C:\\Users\\dillo\\repos\\dillon-os\\_templates\\site-factory\\qa-shots\\money-management-advisory-inc",
+      "failures": [],
+      "warnings": [
+        "noindex is present (correct for demos, REMOVE for live client sites)"
+      ],
+      "fullQa": true
+    },
+    {
+      "slug": "mri-group",
+      "status": "PASS",
+      "staticOk": true,
+      "visualQa": "ran",
+      "visualReason": "screenshots written to C:\\Users\\dillo\\repos\\dillon-os\\_templates\\site-factory\\qa-shots\\mri-group",
+      "failures": [],
+      "warnings": [
+        "noindex is present (correct for demos, REMOVE for live client sites)"
+      ],
+      "fullQa": true
+    },
+    {
+      "slug": "neiderer-s-pool-sales-and-service",
+      "status": "PASS",
+      "staticOk": true,
+      "visualQa": "ran",
+      "visualReason": "screenshots written to C:\\Users\\dillo\\repos\\dillon-os\\_templates\\site-factory\\qa-shots\\neiderer-s-pool-sales-and-service",
+      "failures": [],
+      "warnings": [
+        "noindex is present (correct for demos, REMOVE for live client sites)"
+      ],
+      "fullQa": true
+    },
+    {
+      "slug": "pacifico-marple-lincoln",
+      "status": "PASS",
+      "staticOk": true,
+      "visualQa": "ran",
+      "visualReason": "screenshots written to C:\\Users\\dillo\\repos\\dillon-os\\_templates\\site-factory\\qa-shots\\pacifico-marple-lincoln",
+      "failures": [],
+      "warnings": [
+        "noindex is present (correct for demos, REMOVE for live client sites)"
+      ],
+      "fullQa": true
+    },
+    {
+      "slug": "peachtree-city-foamcraft",
+      "status": "PASS",
+      "staticOk": true,
+      "visualQa": "ran",
+      "visualReason": "screenshots written to C:\\Users\\dillo\\repos\\dillon-os\\_templates\\site-factory\\qa-shots\\peachtree-city-foamcraft",
+      "failures": [],
+      "warnings": [
+        "noindex is present (correct for demos, REMOVE for live client sites)"
+      ],
+      "fullQa": true
+    },
+    {
+      "slug": "peter-zimmerman-architects",
+      "status": "PASS",
+      "staticOk": true,
+      "visualQa": "ran",
+      "visualReason": "screenshots written to C:\\Users\\dillo\\repos\\dillon-os\\_templates\\site-factory\\qa-shots\\peter-zimmerman-architects",
+      "failures": [],
+      "warnings": [
+        "noindex is present (correct for demos, REMOVE for live client sites)"
+      ],
+      "fullQa": true
+    },
+    {
+      "slug": "street-stores-hardware-store",
+      "status": "PASS",
+      "staticOk": true,
+      "visualQa": "ran",
+      "visualReason": "screenshots written to C:\\Users\\dillo\\repos\\dillon-os\\_templates\\site-factory\\qa-shots\\street-stores-hardware-store",
+      "failures": [],
+      "warnings": [
+        "noindex is present (correct for demos, REMOVE for live client sites)"
+      ],
+      "fullQa": true
+    },
+    {
+      "slug": "wesley-works-real-estate",
+      "status": "PASS",
+      "staticOk": true,
+      "visualQa": "ran",
+      "visualReason": "screenshots written to C:\\Users\\dillo\\repos\\dillon-os\\_templates\\site-factory\\qa-shots\\wesley-works-real-estate",
+      "failures": [],
+      "warnings": [
+        "noindex is present (correct for demos, REMOVE for live client sites)"
+      ],
+      "fullQa": true
+    },
+    {
+      "slug": "wilkie-lexus",
+      "status": "PASS",
+      "staticOk": true,
+      "visualQa": "ran",
+      "visualReason": "screenshots written to C:\\Users\\dillo\\repos\\dillon-os\\_templates\\site-factory\\qa-shots\\wilkie-lexus",
+      "failures": [],
+      "warnings": [
+        "noindex is present (correct for demos, REMOVE for live client sites)"
+      ],
+      "fullQa": true
+    }
+  ]
+}

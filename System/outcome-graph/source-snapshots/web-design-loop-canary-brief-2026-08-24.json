@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "surface_id": "closed-loop-canary",
+  "mode": "Experience",
+  "production_intent": false,
+  "audience": "Dillon and future independent design reviewers",
+  "job": "See how a creative brief becomes a rendered candidate, critique, bounded repair, and terminal proof",
+  "primary_action": "Inspect the evidence behind the final candidate",
+  "art_direction_thesis": "An editorial field note crossed with a live signal path: oversized type, flat ink and paper fields, a single orange current, and a visible loop that feels authored rather than dashboard-like",
+  "content_truth": [
+    "This is a synthetic local canary for the web-design runtime.",
+    "It is not a client site, public deployment, performance claim, or approval artifact.",
+    "Its reviewer is deterministic and therefore cannot confer production readiness."
+  ],
+  "acceptance": {
+    "viewports": [
+      "desktop",
+      "mobile"
+    ],
+    "minimum_touch_target_px": 44,
+    "horizontal_overflow_allowed": false,
+    "keyboard_focus_required": true,
+    "reduced_motion_required": true,
+    "external_requests_allowed": false,
+    "open_checker_defects_allowed": 0,
+    "craft_dimension_floor": 4,
+    "craft_average_floor": 4.2
+  },
+  "authority": {
+    "external_action_attempted": false,
+    "canonical_write_attempted": false,
+    "deployment_authorized": false
+  }
+}

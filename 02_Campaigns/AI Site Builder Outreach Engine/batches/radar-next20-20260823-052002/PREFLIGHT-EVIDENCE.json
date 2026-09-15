@@ -1,0 +1,465 @@
+{
+  "runId": "20260823-052002",
+  "generatedAt": "2026-08-23T09:32:01.266Z",
+  "candidatePool": 73,
+  "ready": [
+    {
+      "domain": "aboutallfloors.com",
+      "name": "About All Floors",
+      "slug": "about-all-floors",
+      "logo": "logo.png",
+      "referenceCount": 3,
+      "generatedStockBoard": "category-flooring",
+      "cached": true
+    },
+    {
+      "domain": "fusiongyms.com",
+      "name": "Fusion Gyms",
+      "slug": "fusion-gyms",
+      "logo": "logo.png",
+      "referenceCount": 3,
+      "generatedStockBoard": "category-salon-massage",
+      "cached": true
+    },
+    {
+      "domain": "pennpain.com",
+      "name": "Pennsylvania Pain & Spine Institute",
+      "slug": "pennsylvania-pain-and-spine-institute",
+      "logo": "logo.webp",
+      "referenceCount": 3,
+      "generatedStockBoard": "category-medical-clinic",
+      "cached": true
+    },
+    {
+      "domain": "connollyskincare.com",
+      "name": "Connolly Dermatology",
+      "slug": "connolly-dermatology",
+      "logo": "logo.png",
+      "referenceCount": 3,
+      "generatedStockBoard": "category-medical-clinic",
+      "cached": true
+    },
+    {
+      "domain": "pzarchitects.com",
+      "name": "Peter Zimmerman Architects",
+      "slug": "peter-zimmerman-architects",
+      "logo": "logo.svg",
+      "referenceCount": 3,
+      "generatedStockBoard": "category-veterinary",
+      "cached": true
+    },
+    {
+      "domain": "freesinsurance.com",
+      "name": "Frees Insurance",
+      "slug": "frees-insurance",
+      "logo": "logo.png",
+      "referenceCount": 3,
+      "generatedStockBoard": "p-and-c-insurance",
+      "cached": true
+    }
+  ],
+  "rejected": [
+    {
+      "domain": "bmconstructionhvac.com",
+      "name": "B & M Construction & Hvac LLC",
+      "website": "https://bmconstructionhvac.com/",
+      "reason": "fetch failed"
+    },
+    {
+      "domain": "carabinassociates.com",
+      "name": "Carabin Associates",
+      "website": "https://carabinassociates.com/",
+      "reason": "fetch failed"
+    },
+    {
+      "domain": "colonialnewtownsquare.com",
+      "name": "Colonial Animal Hospital",
+      "website": "http://www.colonialnewtownsquare.com/",
+      "reason": "fetch failed"
+    },
+    {
+      "domain": "dralanrobertson.com",
+      "name": "Alan J Robertson, DDS",
+      "website": "http://www.dralanrobertson.com/",
+      "reason": "fetch failed"
+    },
+    {
+      "domain": "redrosefamilydental",
+      "name": "Red Rose Family Dental",
+      "website": "http://www.redrosefamilydental/",
+      "reason": "fetch failed"
+    },
+    {
+      "domain": "tricountyanimalhospitaldillsburg.com",
+      "name": "Tri-County Animal Hospital",
+      "website": "https://tricountyanimalhospitaldillsburg.com/",
+      "reason": "fetch failed"
+    },
+    {
+      "domain": "wjamesvincentdds.com",
+      "name": "W. James Vincent",
+      "website": "http://www.wjamesvincentdds.com/",
+      "reason": "fetch failed"
+    },
+    {
+      "domain": "zugdentistry.com",
+      "name": "David A Zug",
+      "website": "http://zugdentistry.com/",
+      "reason": "fetch failed"
+    },
+    {
+      "domain": "donwardagency.com",
+      "name": "Ward Insurance Associates Inc.",
+      "website": "https://www.donwardagency.com/",
+      "reason": "fetch failed"
+    },
+    {
+      "domain": "riceltd.net",
+      "name": "Rice & Rice, Ltd.",
+      "website": "https://riceltd.net/",
+      "reason": "fetch failed"
+    },
+    {
+      "domain": "dentaldreams.com",
+      "name": "Dental Dreams",
+      "website": "https://www.dentaldreams.com/location/dental-dreams-loucks-rd-york/",
+      "reason": "exact transparent logo unavailable: could not sample logo border"
+    },
+    {
+      "domain": "usahinc.com",
+      "name": "Upper Saucon Animal Hospital",
+      "website": "http://www.usahinc.com/",
+      "reason": "exact transparent logo unavailable: no first-party logo candidate"
+    },
+    {
+      "domain": "24emergencyrooter.com",
+      "name": "Emergency Rooter Services",
+      "website": "https://24emergencyrooter.com/",
+      "reason": "No relevant generated-stock category is approved for emergency-rooter-services (emergency-rooter-services emergency rooter services plumber home-services). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "bsaia.net",
+      "name": "4/4 Architecture",
+      "website": "http://www.bsaia.net/",
+      "reason": "fetch failed"
+    },
+    {
+      "domain": "cassellelawfirm.com",
+      "name": "Law Offices of D. A. Casselle",
+      "website": "http://cassellelawfirm.com/",
+      "reason": "fetch failed"
+    },
+    {
+      "domain": "comealivechiro.com",
+      "name": "Come Alive Chiropractic",
+      "website": "http://comealivechiro.com/",
+      "reason": "No relevant generated-stock category is approved for come-alive-chiropractic (come-alive-chiropractic come alive chiropractic alternative medical). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "eshcom.com",
+      "name": "Esh Computer Center",
+      "website": "https://www.eshcom.com/",
+      "reason": "fetch failed"
+    },
+    {
+      "domain": "guntherheussmaninc.com",
+      "name": "Gunther Heussman",
+      "website": "http://www.guntherheussmaninc.com/",
+      "reason": "No relevant generated-stock category is approved for gunther-heussman (gunther-heussman gunther heussman trade home-services). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "laulaw.net",
+      "name": "Lau & Associates, P.C.",
+      "website": "https://www.laulaw.net/",
+      "reason": "fetch failed"
+    },
+    {
+      "domain": "m.patrickchirocenter.com",
+      "name": "Patrick Chiropractic Center",
+      "website": "http://m.patrickchirocenter.com/",
+      "reason": "No relevant generated-stock category is approved for patrick-chiropractic-center (patrick-chiropractic-center patrick chiropractic center physiotherapist medical). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "mexicomagicopa.com",
+      "name": "Mexico Magico",
+      "website": "http://mexicomagicopa.com/",
+      "reason": "fetch failed"
+    },
+    {
+      "domain": "sensezerofloat.com",
+      "name": "Sense Zero Float Center",
+      "website": "https://www.sensezerofloat.com/",
+      "reason": "fetch failed"
+    },
+    {
+      "domain": "southernberksfamilymedicine.com",
+      "name": "Southern Berks Family Medicine",
+      "website": "http://southernberksfamilymedicine.com/",
+      "reason": "fetch failed"
+    },
+    {
+      "domain": "zatorlaw.com",
+      "name": "Zator Law",
+      "website": "https://www.zatorlaw.com/",
+      "reason": "fetch failed"
+    },
+    {
+      "domain": "agvets.com",
+      "name": "Agricultural Veterinary Associates",
+      "website": "http://www.agvets.com/",
+      "reason": "exact transparent logo unavailable: logo source is too small"
+    },
+    {
+      "domain": "valleydentalsmiles.com",
+      "name": "Valley Dental",
+      "website": "https://valleydentalsmiles.com/",
+      "reason": "HTTP 500"
+    },
+    {
+      "domain": "leisshendrix.com",
+      "name": "Leiss Orthodontics",
+      "website": "https://leisshendrix.com/location/elverson-orthodontics/",
+      "reason": "HTTP 403"
+    },
+    {
+      "domain": "agency.nationwide.com",
+      "name": "Kathy Barry Agency",
+      "website": "https://agency.nationwide.com/pa/boyertown/19512/kathy-barry-agency-llc-10742849",
+      "reason": "HTTP 404"
+    },
+    {
+      "domain": "myfamilydentalcare.com",
+      "name": "Union Dental Specialties",
+      "website": "https://www.myfamilydentalcare.com/index.php?/locations/details/11",
+      "reason": "exact transparent logo unavailable: unsupported background-removal source"
+    },
+    {
+      "domain": "abelconst.com",
+      "name": "Abel Construction Co",
+      "website": "https://www.abelconst.com/",
+      "reason": "exact transparent logo unavailable: no first-party logo candidate"
+    },
+    {
+      "domain": "bhgre.com",
+      "name": "Better Homes and Gardens Real Estate Community Realty",
+      "website": "https://www.bhgre.com/pa/phoenixville/offices/better-homes-and-gardens-real-estate-community-realty/oid-P00400000FDdqQW3g9ijI5yKEDirVw1I5Q5YkMO0",
+      "reason": "exact transparent logo unavailable: logo source is too small"
+    },
+    {
+      "domain": "heartland-manorcare.com",
+      "name": "ManorCare Health Services",
+      "website": "https://www.heartland-manorcare.com/YorkSouth",
+      "reason": "HTTP 404"
+    },
+    {
+      "domain": "mzlegal.com",
+      "name": "Montgomery & Zimmerer, LLC",
+      "website": "http://www.mzlegal.com/",
+      "reason": "exact transparent logo unavailable: no first-party logo candidate"
+    },
+    {
+      "domain": "weathersmotors.com",
+      "name": "Weathers Motors & Auto Sales",
+      "website": "https://www.weathersmotors.com/",
+      "reason": "exact transparent logo unavailable: could not sample logo border"
+    },
+    {
+      "domain": "springridgeeyecare.com",
+      "name": "Spring Ridge Family Eyecare",
+      "website": "http://springridgeeyecare.com/",
+      "reason": "No relevant generated-stock category is approved for spring-ridge-family-eyecare (spring-ridge-family-eyecare spring ridge family eyecare optometrist medical). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "whitehallsmiles.com",
+      "name": "Rodney M. Dobrowolski, DMD",
+      "website": "http://www.whitehallsmiles.com/",
+      "reason": "exact transparent logo unavailable: logo border is not a single removable color"
+    },
+    {
+      "domain": "hersheysurveying.com",
+      "name": "Hershey Surveying",
+      "website": "http://hersheysurveying.com/",
+      "reason": "exact transparent logo unavailable: logo source is too small"
+    },
+    {
+      "domain": "chiropracticrevolution.com",
+      "name": "Cornerstone Chiropractic",
+      "website": "https://chiropracticrevolution.com/",
+      "reason": "No relevant generated-stock category is approved for cornerstone-chiropractic (cornerstone-chiropractic cornerstone chiropractic alternative medical). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "sparkorthodontics.com",
+      "name": "Spark Orthodontics",
+      "website": "https://sparkorthodontics.com/contact/lancaster-pa-orthodontics-office/",
+      "reason": "HTTP 404"
+    },
+    {
+      "domain": "jhfunktax.com",
+      "name": "John H Funk Tax Service",
+      "website": "http://www.jhfunktax.com/",
+      "reason": "exact transparent logo unavailable: no first-party logo candidate"
+    },
+    {
+      "domain": "sangillos.com",
+      "name": "Sangillo Tire Center",
+      "website": "http://www.sangillos.com/",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "hirshland.com",
+      "name": "Hirshland Optical Co",
+      "website": "http://hirshland.com/products.html",
+      "reason": "No relevant generated-stock category is approved for hirshland-optical-co (hirshland-optical-co hirshland optical co optician medical). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "foamcraft.com",
+      "name": "Peachtree City Foamcraft",
+      "website": "https://foamcraft.com/",
+      "reason": "No relevant generated-stock category is approved for peachtree-city-foamcraft (peachtree-city-foamcraft peachtree city foamcraft trade home-services). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "brightchoicedentistry.com",
+      "name": "Bright Choice Dental",
+      "website": "https://www.brightchoicedentistry.com/bethlehem/",
+      "reason": "HTTP 404"
+    },
+    {
+      "domain": "lenferberrealestate.net",
+      "name": "Len Ferber Real Estate",
+      "website": "http://lenferberrealestate.net/",
+      "reason": "exact transparent logo unavailable: no first-party logo candidate"
+    },
+    {
+      "domain": "kevintcoyneattorneyatlaw.com",
+      "name": "Kevin T Coyne Attorney At Law",
+      "website": "https://kevintcoyneattorneyatlaw.com/",
+      "reason": "exact transparent logo unavailable: no first-party logo candidate"
+    },
+    {
+      "domain": "lancastergeneralhealth.org",
+      "name": "LG Health Physicians Family Medicine Abbeyville",
+      "website": "https://www.lancastergeneralhealth.org/LGH/Locations/LG-Health-Physicians/Family-Medicine/Abbeyville-Family-Medicine.aspx",
+      "reason": "exact transparent logo unavailable: no first-party logo candidate"
+    },
+    {
+      "domain": "lghealthexpress.org",
+      "name": "Lancaster General Health Express",
+      "website": "https://www.lghealthexpress.org/",
+      "reason": "exact transparent logo unavailable: no first-party logo candidate"
+    },
+    {
+      "domain": "mrigroup.com",
+      "name": "MRI Group",
+      "website": "https://mrigroup.com/Our-Locations.aspx",
+      "reason": "exact transparent logo unavailable: no first-party logo candidate"
+    },
+    {
+      "domain": "suburbansolutions.com",
+      "name": "The Rouse Group Development Co.",
+      "website": "https://suburbansolutions.com/philadelphia/havertown-movers/avertown",
+      "reason": "HTTP 404"
+    },
+    {
+      "domain": "neidererspoolsales.com",
+      "name": "Neiderer's Pool Sales & Service",
+      "website": "https://www.neidererspoolsales.com/",
+      "reason": "exact transparent logo unavailable: no first-party logo candidate"
+    },
+    {
+      "domain": "streetstoreshardware.com",
+      "name": "Street Stores Hardware Store",
+      "website": "https://www.streetstoreshardware.com/",
+      "reason": "exact transparent logo unavailable: logo source is too small"
+    },
+    {
+      "domain": "aqua-docs.com",
+      "name": "Aqua Docs",
+      "website": "https://aqua-docs.com/ephrata/",
+      "reason": "HTTP 403"
+    },
+    {
+      "domain": "balafinancial.com",
+      "name": "Bala Financial Group",
+      "website": "https://www.balafinancial.com/",
+      "reason": "HTTP 403"
+    },
+    {
+      "domain": "brightmlshomes.com",
+      "name": "Bob Swayne Real Estate",
+      "website": "https://www.brightmlshomes.com/robert-swayne-jr",
+      "reason": "HTTP 403"
+    },
+    {
+      "domain": "eckrothequipment.com",
+      "name": "Eckroth Equipment Company",
+      "website": "https://www.eckrothequipment.com/",
+      "reason": "No relevant generated-stock category is approved for eckroth-equipment-company (eckroth-equipment-company eckroth equipment company trade home-services). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "kitaylegal.com",
+      "name": "Kitay Law Offices",
+      "website": "https://kitaylegal.com/",
+      "reason": "HTTP 403"
+    },
+    {
+      "domain": "mmacentral.com",
+      "name": "Money Management Advisory, Inc.",
+      "website": "https://www.mmacentral.com/",
+      "reason": "HTTP 403"
+    },
+    {
+      "domain": "shop.hajocayork.com",
+      "name": "Bath & Kitchen Showroom of Hajoca-York",
+      "website": "https://shop.hajocayork.com/",
+      "reason": "HTTP 403"
+    },
+    {
+      "domain": "trivalleypc.com",
+      "name": "Trivalley Primary Care",
+      "website": "https://www.trivalleypc.com/pennridge-office/",
+      "reason": "HTTP 403"
+    },
+    {
+      "domain": "wesleyworksrealestate.com",
+      "name": "Wesley Works Real Estate",
+      "website": "https://wesleyworksrealestate.com/",
+      "reason": "HTTP 403"
+    },
+    {
+      "domain": "hollywoodnailsbensalem.com",
+      "name": "Hollywood Nails",
+      "website": "https://hollywoodnailsbensalem.com/",
+      "reason": "HTTP 503"
+    },
+    {
+      "domain": "psclg.com",
+      "name": "Physicians' Surgery Center",
+      "website": "http://www.psclg.com/",
+      "reason": "exact transparent logo unavailable: no first-party logo candidate"
+    },
+    {
+      "domain": "crozerhealth.org",
+      "name": "Aston Foot Center",
+      "website": "https://www.crozerhealth.org/locations/practices/a/aston-foot-center",
+      "reason": "No relevant generated-stock category is approved for aston-foot-center (aston-foot-center aston foot center podiatrist medical). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "halligankeatonlaw.com",
+      "name": "Halligan & Keaton Law P.C.",
+      "website": "https://www.halligankeatonlaw.com/",
+      "reason": "HTTP 404"
+    },
+    {
+      "domain": "mackshairstudio.com",
+      "name": "Mack’s Hair Studio",
+      "website": "https://www.mackshairstudio.com/",
+      "reason": "HTTP 404"
+    },
+    {
+      "domain": "affordabledentures.com",
+      "name": "Affordable Dentures & Implants",
+      "website": "https://www.affordabledentures.com/locations/pa/doylestown",
+      "reason": "HTTP 429"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+[
+  {
+    "campaign": {
+      "resourceName": "customers/1033715894/campaigns/22233329038",
+      "name": "Onsite Concrete & Landscape",
+      "id": "22233329038"
+    },
+    "adGroup": {
+      "resourceName": "customers/1033715894/adGroups/175739618158",
+      "id": "175739618158",
+      "name": "Smart Campaign Managed AdGroup"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "0"
+    },
+    "adGroupAd": {
+      "resourceName": "customers/1033715894/adGroupAds/175739618158~732722133318",
+      "status": "ENABLED",
+      "ad": {
+        "type": "SMART_CAMPAIGN_AD",
+        "resourceName": "customers/1033715894/ads/732722133318",
+        "id": "732722133318"
+      },
+      "policySummary": {
+        "reviewStatus": "REVIEWED",
+        "approvalStatus": "APPROVED"
+      }
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/1033715894/campaigns/24183437726",
+      "name": "Search | High Intent | Solano County | 2026-07-30",
+      "id": "24183437726"
+    },
+    "adGroup": {
+      "resourceName": "customers/1033715894/adGroups/208045326628",
+      "id": "208045326628",
+      "name": "Ad group 1"
+    },
+    "metrics": {
+      "clicks": "2",
+      "conversions": 0,
+      "costMicros": "6400000",
+      "impressions": "8"
+    },
+    "adGroupAd": {
+      "resourceName": "customers/1033715894/adGroupAds/208045326628~822281796705",
+      "status": "ENABLED",
+      "ad": {
+        "type": "RESPONSIVE_SEARCH_AD",
+        "resourceName": "customers/1033715894/ads/822281796705",
+        "id": "822281796705",
+        "finalUrls": [
+          "https://onsiteconcretelandscape.com/services/"
+        ]
+      },
+      "policySummary": {
+        "reviewStatus": "REVIEWED",
+        "approvalStatus": "APPROVED"
+      },
+      "adStrength": "POOR"
+    }
+  }
+]

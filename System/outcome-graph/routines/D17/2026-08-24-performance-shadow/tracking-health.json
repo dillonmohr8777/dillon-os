@@ -1,0 +1,342 @@
+{
+  "schema_version": 1,
+  "routine_id": "D17",
+  "generated_at": "2026-08-24T23:42:20.835Z",
+  "source_set_sha256": "cd4877517666380542f1ea8d7c4be50549fa27d98e354f32850b01cab67f172e",
+  "lanes": [
+    {
+      "isolation_key": "fresh-blends-kwik-trip:google-ads:2026-W35A",
+      "delivery_and_tracking_checks": {
+        "session_account": "blocked",
+        "delivery_pacing": "blocked",
+        "landing_page_health": "pending",
+        "search-terms-and-negatives": "blocked",
+        "change_history": "blocked",
+        "readback_freshness": "blocked"
+      },
+      "pending_fields": [
+        {
+          "field": "session_account",
+          "state": "blocked",
+          "estimated": false
+        },
+        {
+          "field": "delivery_pacing",
+          "state": "blocked",
+          "estimated": false
+        },
+        {
+          "field": "landing_page_health",
+          "state": "pending",
+          "estimated": false
+        },
+        {
+          "field": "search-terms-and-negatives",
+          "state": "blocked",
+          "estimated": false
+        },
+        {
+          "field": "change_history",
+          "state": "blocked",
+          "estimated": false
+        },
+        {
+          "field": "readback_freshness",
+          "state": "blocked",
+          "estimated": false
+        },
+        {
+          "field": "exact_provider_account",
+          "state": "unverified",
+          "estimated": false
+        },
+        {
+          "field": "reporting_window_and_timezone",
+          "state": "pending",
+          "estimated": false
+        }
+      ],
+      "evidence_ready": false
+    },
+    {
+      "isolation_key": "kimberly-james-bridal:google-ads:2026-W35A",
+      "delivery_and_tracking_checks": {
+        "session_account": "verified",
+        "delivery_pacing": "pending",
+        "landing_page_health": "pending",
+        "search-terms-and-negatives": "pending",
+        "change_history": "pending",
+        "readback_freshness": "partial"
+      },
+      "pending_fields": [
+        {
+          "field": "delivery_pacing",
+          "state": "pending",
+          "estimated": false
+        },
+        {
+          "field": "landing_page_health",
+          "state": "pending",
+          "estimated": false
+        },
+        {
+          "field": "search-terms-and-negatives",
+          "state": "pending",
+          "estimated": false
+        },
+        {
+          "field": "change_history",
+          "state": "pending",
+          "estimated": false
+        },
+        {
+          "field": "readback_freshness",
+          "state": "partial",
+          "estimated": false
+        },
+        {
+          "field": "reporting_window_and_timezone",
+          "state": "pending",
+          "estimated": false
+        }
+      ],
+      "evidence_ready": false
+    },
+    {
+      "isolation_key": "kimberly-james-bridal:meta-ads:2026-W35A",
+      "delivery_and_tracking_checks": {
+        "session_account": "verified",
+        "delivery_pacing": "partial",
+        "landing_page_health": "pending",
+        "creative-fatigue-and-placements": "pending",
+        "change_history": "pending",
+        "readback_freshness": "partial"
+      },
+      "pending_fields": [
+        {
+          "field": "delivery_pacing",
+          "state": "partial",
+          "estimated": false
+        },
+        {
+          "field": "landing_page_health",
+          "state": "pending",
+          "estimated": false
+        },
+        {
+          "field": "creative-fatigue-and-placements",
+          "state": "pending",
+          "estimated": false
+        },
+        {
+          "field": "change_history",
+          "state": "pending",
+          "estimated": false
+        },
+        {
+          "field": "readback_freshness",
+          "state": "partial",
+          "estimated": false
+        }
+      ],
+      "evidence_ready": false
+    },
+    {
+      "isolation_key": "omega-landscaping:google-ads:2026-W35A",
+      "delivery_and_tracking_checks": {
+        "session_account": "verified",
+        "delivery_pacing": "pending",
+        "landing_page_health": "pending",
+        "search-terms-and-negatives": "pending",
+        "change_history": "pending",
+        "readback_freshness": "partial"
+      },
+      "pending_fields": [
+        {
+          "field": "delivery_pacing",
+          "state": "pending",
+          "estimated": false
+        },
+        {
+          "field": "landing_page_health",
+          "state": "pending",
+          "estimated": false
+        },
+        {
+          "field": "search-terms-and-negatives",
+          "state": "pending",
+          "estimated": false
+        },
+        {
+          "field": "change_history",
+          "state": "pending",
+          "estimated": false
+        },
+        {
+          "field": "readback_freshness",
+          "state": "partial",
+          "estimated": false
+        },
+        {
+          "field": "reporting_window_and_timezone",
+          "state": "pending",
+          "estimated": false
+        }
+      ],
+      "evidence_ready": false
+    },
+    {
+      "isolation_key": "onsite-concrete-landscape:google-ads:2026-W35A",
+      "delivery_and_tracking_checks": {
+        "session_account": "verified",
+        "delivery_pacing": "pending",
+        "landing_page_health": "pending",
+        "search-terms-and-negatives": "pending",
+        "change_history": "pending",
+        "readback_freshness": "partial"
+      },
+      "pending_fields": [
+        {
+          "field": "delivery_pacing",
+          "state": "pending",
+          "estimated": false
+        },
+        {
+          "field": "landing_page_health",
+          "state": "pending",
+          "estimated": false
+        },
+        {
+          "field": "search-terms-and-negatives",
+          "state": "pending",
+          "estimated": false
+        },
+        {
+          "field": "change_history",
+          "state": "pending",
+          "estimated": false
+        },
+        {
+          "field": "readback_freshness",
+          "state": "partial",
+          "estimated": false
+        },
+        {
+          "field": "reporting_window_and_timezone",
+          "state": "pending",
+          "estimated": false
+        }
+      ],
+      "evidence_ready": false
+    },
+    {
+      "isolation_key": "replenish-7-eleven:google-ads:2026-W35A",
+      "delivery_and_tracking_checks": {
+        "session_account": "verified",
+        "delivery_pacing": "pending",
+        "landing_page_health": "pending",
+        "search-terms-and-negatives": "pending",
+        "change_history": "pending",
+        "readback_freshness": "partial"
+      },
+      "pending_fields": [
+        {
+          "field": "delivery_pacing",
+          "state": "pending",
+          "estimated": false
+        },
+        {
+          "field": "landing_page_health",
+          "state": "pending",
+          "estimated": false
+        },
+        {
+          "field": "search-terms-and-negatives",
+          "state": "pending",
+          "estimated": false
+        },
+        {
+          "field": "change_history",
+          "state": "pending",
+          "estimated": false
+        },
+        {
+          "field": "readback_freshness",
+          "state": "partial",
+          "estimated": false
+        },
+        {
+          "field": "reporting_window_and_timezone",
+          "state": "pending",
+          "estimated": false
+        }
+      ],
+      "evidence_ready": false
+    },
+    {
+      "isolation_key": "shadow-heating-cooling:meta-ads:2026-W35A",
+      "delivery_and_tracking_checks": {
+        "session_account": "blocked",
+        "delivery_pacing": "blocked",
+        "landing_page_health": "pending",
+        "creative-fatigue-and-placements": "blocked",
+        "change_history": "blocked",
+        "readback_freshness": "blocked"
+      },
+      "pending_fields": [
+        {
+          "field": "session_account",
+          "state": "blocked",
+          "estimated": false
+        },
+        {
+          "field": "delivery_pacing",
+          "state": "blocked",
+          "estimated": false
+        },
+        {
+          "field": "landing_page_health",
+          "state": "pending",
+          "estimated": false
+        },
+        {
+          "field": "creative-fatigue-and-placements",
+          "state": "blocked",
+          "estimated": false
+        },
+        {
+          "field": "change_history",
+          "state": "blocked",
+          "estimated": false
+        },
+        {
+          "field": "readback_freshness",
+          "state": "blocked",
+          "estimated": false
+        },
+        {
+          "field": "exact_provider_account",
+          "state": "ambiguous",
+          "estimated": false
+        },
+        {
+          "field": "reporting_window_and_timezone",
+          "state": "pending",
+          "estimated": false
+        }
+      ],
+      "evidence_ready": false
+    }
+  ],
+  "unavailable_fields_are_pending_not_estimated": true,
+  "authority": {
+    "read_only": true,
+    "proposal_only": true,
+    "external_action_attempted": false,
+    "canonical_write_attempted": false,
+    "provider_mutation_attempted": false,
+    "crm_mutation_attempted": false,
+    "spend_change_attempted": false,
+    "delivery_attempted": false
+  }
+}

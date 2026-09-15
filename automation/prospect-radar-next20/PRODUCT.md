@@ -29,6 +29,7 @@ The current Prospect Radar registry, prior build evidence, exact Netlify site ma
 ## Capabilities and Constraints
 
 - Select 20 current `rebuild` prospects with a reachable official source and verified identity.
+- Prioritize eligible prospects by the registry's `first_seen` date, oldest first. Rebuild score is a same-date tie-breaker only; missing dates sort last and category diversity cannot override chronology.
 - Exclude domains and slugs found in every prior Radar, prospect-site, and site-factory artifact available on this machine.
 - Preserve exact logos. Never redraw or synthesize a prospect logo.
 - Use the named Align HCM Image Gen plugin and image generation to create one unique industry-specific people-at-work board per business; never substitute a category or shared board.

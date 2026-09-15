@@ -1,0 +1,310 @@
+{
+  "schema_version": 1,
+  "routine_id": "D14",
+  "generated_at": "2026-08-24T23:49:06.130Z",
+  "source_set_sha256": "bee6d7037763d45601274702c12c8e31ad280fed7e97757744fc5930b1d39065",
+  "target_surface": "Prospect Radar Next 20 local noindex batch",
+  "source_run_id": "20260824-052002",
+  "gates": [
+    {
+      "schema_version": 1,
+      "routine_id": "D14",
+      "id": "D14:authority-boundary",
+      "isolation_key": "build-gate:authority-boundary",
+      "observed_at": "2026-08-24T23:49:06.130Z",
+      "source_set_sha256": "bee6d7037763d45601274702c12c8e31ad280fed7e97757744fc5930b1d39065",
+      "gate_id": "authority-boundary",
+      "state": "not_reached",
+      "passed": false,
+      "reasons": [
+        "build-browser-qa-gate-not-met"
+      ],
+      "metrics": {
+        "prospect_rows": 0,
+        "qa_ready_rows": 0,
+        "mail_hold_rows": 0,
+        "non_hold_rows": 0,
+        "state_mail_ready": "hold",
+        "local_only_claimed": true,
+        "no_external_delivery_claimed": true
+      },
+      "source_record_valid": true,
+      "external_action_attempted": false,
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "deployment_attempted": false,
+        "worktree_mutation_attempted": false,
+        "ui_mutation_attempted": false,
+        "acceptance_contract_changed": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "D14",
+      "id": "D14:build-browser-qa",
+      "isolation_key": "build-gate:build-browser-qa",
+      "observed_at": "2026-08-24T23:49:06.130Z",
+      "source_set_sha256": "bee6d7037763d45601274702c12c8e31ad280fed7e97757744fc5930b1d39065",
+      "gate_id": "build-browser-qa",
+      "state": "not_reached",
+      "passed": false,
+      "reasons": [
+        "selection-gate-not-met"
+      ],
+      "metrics": {
+        "build_receipt_present": false,
+        "selected": 0,
+        "qa_ready": 0,
+        "summary_hash_matches": false,
+        "briefs": 0,
+        "browser_passes": 0,
+        "site_directories": 0,
+        "noindex_sites": 0,
+        "final_audit_status": null,
+        "final_audit_failures": 0
+      },
+      "source_record_valid": true,
+      "external_action_attempted": false,
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "deployment_attempted": false,
+        "worktree_mutation_attempted": false,
+        "ui_mutation_attempted": false,
+        "acceptance_contract_changed": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "D14",
+      "id": "D14:freshness",
+      "isolation_key": "build-gate:freshness",
+      "observed_at": "2026-08-24T23:49:06.130Z",
+      "source_set_sha256": "bee6d7037763d45601274702c12c8e31ad280fed7e97757744fc5930b1d39065",
+      "gate_id": "freshness",
+      "state": "pass",
+      "passed": true,
+      "reasons": [],
+      "metrics": {
+        "source_age_seconds": 46581,
+        "max_age_seconds": 93600
+      },
+      "source_record_valid": true,
+      "external_action_attempted": false,
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "deployment_attempted": false,
+        "worktree_mutation_attempted": false,
+        "ui_mutation_attempted": false,
+        "acceptance_contract_changed": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "D14",
+      "id": "D14:generated-assets",
+      "isolation_key": "build-gate:generated-assets",
+      "observed_at": "2026-08-24T23:49:06.130Z",
+      "source_set_sha256": "bee6d7037763d45601274702c12c8e31ad280fed7e97757744fc5930b1d39065",
+      "gate_id": "generated-assets",
+      "state": "not_reached",
+      "passed": false,
+      "reasons": [
+        "build-browser-qa-gate-not-met"
+      ],
+      "metrics": {
+        "receipt_present": false,
+        "sites": 0,
+        "images": 0,
+        "unassigned_sites": 0,
+        "expected_images": 80
+      },
+      "source_record_valid": true,
+      "external_action_attempted": false,
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "deployment_attempted": false,
+        "worktree_mutation_attempted": false,
+        "ui_mutation_attempted": false,
+        "acceptance_contract_changed": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "D14",
+      "id": "D14:impeccable-detector",
+      "isolation_key": "build-gate:impeccable-detector",
+      "observed_at": "2026-08-24T23:49:06.130Z",
+      "source_set_sha256": "bee6d7037763d45601274702c12c8e31ad280fed7e97757744fc5930b1d39065",
+      "gate_id": "impeccable-detector",
+      "state": "not_reached",
+      "passed": false,
+      "reasons": [
+        "build-browser-qa-gate-not-met"
+      ],
+      "metrics": {
+        "receipt_present": false,
+        "finding_count": 0
+      },
+      "source_record_valid": true,
+      "external_action_attempted": false,
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "deployment_attempted": false,
+        "worktree_mutation_attempted": false,
+        "ui_mutation_attempted": false,
+        "acceptance_contract_changed": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "D14",
+      "id": "D14:independent-quality",
+      "isolation_key": "build-gate:independent-quality",
+      "observed_at": "2026-08-24T23:49:06.130Z",
+      "source_set_sha256": "bee6d7037763d45601274702c12c8e31ad280fed7e97757744fc5930b1d39065",
+      "gate_id": "independent-quality",
+      "state": "not_reached",
+      "passed": false,
+      "reasons": [
+        "asset-or-detector-gate-not-met"
+      ],
+      "metrics": {
+        "evidence_present": false,
+        "schema_valid": false,
+        "validation_error_count": 2,
+        "qa_ready": "hold",
+        "maker_checker_distinct": false,
+        "recording_present": false,
+        "recording_hash_matches": false,
+        "recording_bytes_match": false,
+        "required_viewports_present": false
+      },
+      "source_record_valid": true,
+      "external_action_attempted": false,
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "deployment_attempted": false,
+        "worktree_mutation_attempted": false,
+        "ui_mutation_attempted": false,
+        "acceptance_contract_changed": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "D14",
+      "id": "D14:selection",
+      "isolation_key": "build-gate:selection",
+      "observed_at": "2026-08-24T23:49:06.130Z",
+      "source_set_sha256": "bee6d7037763d45601274702c12c8e31ad280fed7e97757744fc5930b1d39065",
+      "gate_id": "selection",
+      "state": "not_reached",
+      "passed": false,
+      "reasons": [
+        "source-pool-gate-not-met"
+      ],
+      "metrics": {
+        "target": 20,
+        "selected": 0,
+        "unique_identities": 0,
+        "unique_slugs": 0,
+        "exact_transparent_logos": 0,
+        "prior_artifacts_scanned": 0
+      },
+      "source_record_valid": true,
+      "external_action_attempted": false,
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "deployment_attempted": false,
+        "worktree_mutation_attempted": false,
+        "ui_mutation_attempted": false,
+        "acceptance_contract_changed": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "D14",
+      "id": "D14:source-pool",
+      "isolation_key": "build-gate:source-pool",
+      "observed_at": "2026-08-24T23:49:06.130Z",
+      "source_set_sha256": "bee6d7037763d45601274702c12c8e31ad280fed7e97757744fc5930b1d39065",
+      "gate_id": "source-pool",
+      "state": "hold",
+      "passed": false,
+      "reasons": [
+        "source-ready-pool-is-6-of-20"
+      ],
+      "metrics": {
+        "target": 20,
+        "candidate_pool": 73,
+        "ready": 6,
+        "rejected": 67,
+        "unique_ready_identities": 6,
+        "unique_ready_slugs": 6,
+        "rejection_categories": {
+          "source-unreachable": 20,
+          "exact-logo-unavailable": 19,
+          "approved-image-board-unavailable": 10,
+          "source-forbidden": 9,
+          "source-not-found": 7,
+          "first-party-reference-unavailable": 1,
+          "source-rate-limited": 1
+        }
+      },
+      "source_record_valid": true,
+      "external_action_attempted": false,
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "deployment_attempted": false,
+        "worktree_mutation_attempted": false,
+        "ui_mutation_attempted": false,
+        "acceptance_contract_changed": false
+      }
+    }
+  ],
+  "outcome_state": "held_source_pool",
+  "workflow_ready": false,
+  "deployment_state": "none_local_only",
+  "authority": {
+    "read_only": true,
+    "proposal_only": true,
+    "external_action_attempted": false,
+    "canonical_write_attempted": false,
+    "provider_mutation_attempted": false,
+    "deployment_attempted": false,
+    "worktree_mutation_attempted": false,
+    "ui_mutation_attempted": false,
+    "acceptance_contract_changed": false
+  }
+}

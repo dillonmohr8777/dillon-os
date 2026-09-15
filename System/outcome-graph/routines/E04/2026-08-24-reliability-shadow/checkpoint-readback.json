@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "routine_id": "E04",
+  "generated_at": "2026-08-24T23:34:59.706Z",
+  "checkpoints": [
+    {
+      "connector_id": "google_analytics",
+      "before_sha256": "d3f6602f82aaeb1eea6e602566a15226cf5f618dd96862ad236d26245f03d3a1",
+      "after_sha256": "d3f6602f82aaeb1eea6e602566a15226cf5f618dd96862ad236d26245f03d3a1",
+      "preserved": true,
+      "advanced": false
+    },
+    {
+      "connector_id": "google_search_console",
+      "before_sha256": "d3f6602f82aaeb1eea6e602566a15226cf5f618dd96862ad236d26245f03d3a1",
+      "after_sha256": "d3f6602f82aaeb1eea6e602566a15226cf5f618dd96862ad236d26245f03d3a1",
+      "preserved": true,
+      "advanced": false
+    },
+    {
+      "connector_id": "googleads",
+      "before_sha256": "d3f6602f82aaeb1eea6e602566a15226cf5f618dd96862ad236d26245f03d3a1",
+      "after_sha256": "d3f6602f82aaeb1eea6e602566a15226cf5f618dd96862ad236d26245f03d3a1",
+      "preserved": true,
+      "advanced": false
+    },
+    {
+      "connector_id": "hubspot",
+      "before_sha256": "d3f6602f82aaeb1eea6e602566a15226cf5f618dd96862ad236d26245f03d3a1",
+      "after_sha256": "d3f6602f82aaeb1eea6e602566a15226cf5f618dd96862ad236d26245f03d3a1",
+      "preserved": true,
+      "advanced": false
+    },
+    {
+      "connector_id": "meta_ads",
+      "before_sha256": "d3f6602f82aaeb1eea6e602566a15226cf5f618dd96862ad236d26245f03d3a1",
+      "after_sha256": "d3f6602f82aaeb1eea6e602566a15226cf5f618dd96862ad236d26245f03d3a1",
+      "preserved": true,
+      "advanced": false
+    },
+    {
+      "connector_id": "windsor_connector",
+      "before_sha256": "48f8da8609ab79e901c8ff80237f0a2436e35ad1aef6954dcfbca6f1c725b90d",
+      "after_sha256": "48f8da8609ab79e901c8ff80237f0a2436e35ad1aef6954dcfbca6f1c725b90d",
+      "preserved": true,
+      "advanced": false
+    }
+  ],
+  "authority": {
+    "read_only": true,
+    "proposal_only": true,
+    "external_action_attempted": false,
+    "canonical_write_attempted": false,
+    "provider_mutation_attempted": false,
+    "restart_attempted": false,
+    "retry_attempted": false,
+    "checkpoint_advance_attempted": false,
+    "secret_access_attempted": false
+  }
+}

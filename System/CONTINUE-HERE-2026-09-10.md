@@ -41,8 +41,12 @@ is the only item on this list that can actually lose work, and no session can
 fix it. Evidence:
 `12_Brain/07_Reviews/2026-09-09 - Machine power fault diagnosis.md`.
 
-**P1 — Empeon, before you speak to Nack.** Two research notes landed today and
-they contain corrections to your own files. Read them:
+**P1 — Empeon, before you speak to Nack.** Room card is compiled at
+`02_FullTimeJob/Empeon/2026-09-10 - Nack room card.md`. Live reread
+2026-09-10 ~13:55 ET: Matt accepted LinkedIn 13:41 ET (`1a08c68b993684bf`);
+no Nack/Otten calendar event through Sep 30; no inbound from Nack, Otten,
+or empeon.com after the 9 AM call. Walk in with the room card. Two research
+notes still contain the corrections:
 - `02_FullTimeJob/Empeon/2026-09-10 - Nack briefing and the expansion problem.md`
 - `02_FullTimeJob/Empeon/2026-09-10 - CDPAP, the SEO gap, and market structure.md`
 
@@ -71,9 +75,10 @@ Conversion goals still need `SUBMIT_LEAD_FORM/WEBSITE` made biddable, and a
 is itself defective** — two known defects must be fixed before any publish.
 Nothing publishes without your per-action approval.
 
-**P5 — Text Matt Otten.** Draft at
-`02_FullTimeJob/Empeon/2026-09-10 - Matt EOD text draft.md`. Was due end of day
-2026-09-10.
+**P5 — Text Matt Otten.** Still unsent as of 13:55 ET. Copy at the top of
+the room card. LinkedIn is now connected, so SMS or DM. Write **Jonathan**,
+not John. Draft also at
+`02_FullTimeJob/Empeon/2026-09-10 - Matt EOD text draft.md`.
 
 ---
 
@@ -81,7 +86,7 @@ Nothing publishes without your per-action approval.
 
 | Item | State | What it needs |
 |---|---|---|
-| Bar Crawl deploy + send | staged | Netlify deploy, then explicit send approval |
+| Bar Crawl deploy + send | **DONE 2026-09-10** (was mis-stated as staged) | Live URL + sent email cited in P2 correction |
 | Nexla match-type narrowing | staged | apply via `GoogleAdsProbe` client |
 | Nexla conversion goals | diagnosed | make SUBMIT_LEAD_FORM biddable, create new action |
 | MCP negatives | specified | 5 terms listed above |
@@ -154,3 +159,14 @@ the same commit as any new note. Approval-gated items go to
 
 Report what you verified, not what you assume. If a figure cannot be traced to
 a file or a live read, say so plainly.
+
+
+## Contradiction log
+**P2 - Bar Crawl.** **CORRECTED 2026-09-10 ~15:33 ET by The CEO (contradiction recorded, not silently erased).**
+Prior claim in this note (\"Not deployed, not sent\") is **false as of this afternoon.**
+Live report: `https://bar-crawl-usa-2026-09-10-andy-report.netlify.app` (same site id `c77cfd42-6a72-4c53-98f1-1b4171128622`).
+Positive client email sent 2026-09-10T19:25:36Z messageId `1a08cc85d5ec2ef0` subject \"Bar Crawl USA | +160% organic search clicks | Sep 10 update\" to info@barcrawlusa.com (CC Mac/Sean/Melissa). Earlier pause-ack misfire was retracted in-thread by Dillon.
+\"Before the numbers\" acknowledgement section was removed and redeployed same URL (deployId `6aa305ebdf97b222392b7e54`, live HTML verified no `acknowledgement` / \"Before the numbers\").
+Sources: `clients/bar-crawl-usa/deliverables/2026-09-10-andy-report/STAGING.json`, Netlify prod deploy, live GET 200.
+**Remaining Bar Crawl risk:** standing \"Nothing to Mac Frederick\" vs Mac already on the sent CC — Dillon must clarify whether that ban is new-outbound-only.
+

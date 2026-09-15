@@ -1,0 +1,245 @@
+{
+  "schema": 1,
+  "business": "Bath & Kitchen Showroom of Hajoca-York",
+  "domain": "shop.hajocayork.com",
+  "route": "sites/bath-and-kitchen-showroom-of-hajoca-york/",
+  "generatedAt": "2026-08-26T10:14:27.9939777Z",
+  "generator": "Align HCM Image Gen plugin contract",
+  "model": "gpt-image-2.0",
+  "board": {
+    "key": "bath-and-kitchen-showroom-of-hajoca-york",
+    "descriptor": "hardware",
+    "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Bath & Kitchen Showroom of Hajoca-York. Four distinct but cohesive unlabelled panels in a generic bath and kitchen design showroom: a designer and homeowner comparing tile and cabinet samples at a worktable; hands handling a tactile faucet finish and stone swatches; a quiet modern kitchen display with no readable brand marks; a consultant sketching a simple room layout beside cabinetry and plumbing material samples. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+    "sourceOutput": "C:/Users/dillo/.codex/generated_images/01a03d5e-c09f-74a0-b82e-14ad3c549703/exec-1ff6dc7a-f0ab-4a2c-bd27-f227f3ab772a.png",
+    "file": "automation/prospect-radar-next20/generated-stock-library/bath-and-kitchen-showroom-of-hajoca-york.png",
+    "sha256": "a977a7d4328166a6062d3d9c9c8d85524b74212554eec98c73fdab19632b3c7f",
+    "dimensions": {
+      "width": 1448,
+      "height": 1086
+    }
+  },
+  "treatment": {
+    "palette": [
+      "#F05A28",
+      "#FF6B35",
+      "#0B1D2D",
+      "#071521",
+      "#F4EFE7",
+      "#EAF6FC",
+      "#91D5ED"
+    ],
+    "imageGrain": "Visible refined 35mm film grain authored in the generated board and preserved in every derivative.",
+    "interfaceGrain": {
+      "file": "grain.svg",
+      "sha256": "f8b8b72ee2a84cf2aaa04ce069edaaa459ee61650e76f307254572db67efb813",
+      "opacity": 0.13
+    },
+    "disclosure": "Illustrative generated imagery. These concept visuals do not depict the business, its staff, customers, facility, products, projects, or outcomes."
+  },
+  "outputs": [
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "bath-and-kitchen-showroom-of-hajoca-york",
+      "boardDescriptor": "hardware",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/bath-and-kitchen-showroom-of-hajoca-york.png",
+      "sourceSha256": "a977a7d4328166a6062d3d9c9c8d85524b74212554eec98c73fdab19632b3c7f",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Bath & Kitchen Showroom of Hajoca-York. Four distinct but cohesive unlabelled panels in a generic bath and kitchen design showroom: a designer and homeowner comparing tile and cabinet samples at a worktable; hands handling a tactile faucet finish and stone swatches; a quiet modern kitchen display with no readable brand marks; a consultant sketching a simple room layout beside cabinetry and plumbing material samples. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:56,eq=saturation=0.990:contrast=1.046:brightness=-0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "a4ce1172011e1db0495ada72d3c145f46df01c50b2eb7449d01f2e2bf0e80f23",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "bath-and-kitchen-showroom-of-hajoca-york",
+      "boardDescriptor": "hardware",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/bath-and-kitchen-showroom-of-hajoca-york.png",
+      "sourceSha256": "a977a7d4328166a6062d3d9c9c8d85524b74212554eec98c73fdab19632b3c7f",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Bath & Kitchen Showroom of Hajoca-York. Four distinct but cohesive unlabelled panels in a generic bath and kitchen design showroom: a designer and homeowner comparing tile and cabinet samples at a worktable; hands handling a tactile faucet finish and stone swatches; a quiet modern kitchen display with no readable brand marks; a consultant sketching a simple room layout beside cabinetry and plumbing material samples. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=1.015:contrast=1.010:brightness=0.000,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "9712936b24432cc2e97e1cf872bcde762d39bdbd1690b39dacbd85505b8cefff",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "bath-and-kitchen-showroom-of-hajoca-york",
+      "boardDescriptor": "hardware",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/bath-and-kitchen-showroom-of-hajoca-york.png",
+      "sourceSha256": "a977a7d4328166a6062d3d9c9c8d85524b74212554eec98c73fdab19632b3c7f",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Bath & Kitchen Showroom of Hajoca-York. Four distinct but cohesive unlabelled panels in a generic bath and kitchen design showroom: a designer and homeowner comparing tile and cabinet samples at a worktable; hands handling a tactile faucet finish and stone swatches; a quiet modern kitchen display with no readable brand marks; a consultant sketching a simple room layout beside cabinetry and plumbing material samples. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:28,eq=saturation=1.040:contrast=1.064:brightness=0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "f4a99b437fa630447f9dc441ec1e002522d1d6bc415d57d5e61b95a175b88d00",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "bath-and-kitchen-showroom-of-hajoca-york",
+      "boardDescriptor": "hardware",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/bath-and-kitchen-showroom-of-hajoca-york.png",
+      "sourceSha256": "a977a7d4328166a6062d3d9c9c8d85524b74212554eec98c73fdab19632b3c7f",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Bath & Kitchen Showroom of Hajoca-York. Four distinct but cohesive unlabelled panels in a generic bath and kitchen design showroom: a designer and homeowner comparing tile and cabinet samples at a worktable; hands handling a tactile faucet finish and stone swatches; a quiet modern kitchen display with no readable brand marks; a consultant sketching a simple room layout beside cabinetry and plumbing material samples. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:56,eq=saturation=0.940:contrast=1.028:brightness=-0.018,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "bf6f8b78e1390c5f232845da891299eaf339d825e34cb5819af1c977aba07ed7",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "bath-and-kitchen-showroom-of-hajoca-york",
+      "boardDescriptor": "hardware",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/bath-and-kitchen-showroom-of-hajoca-york.png",
+      "sourceSha256": "a977a7d4328166a6062d3d9c9c8d85524b74212554eec98c73fdab19632b3c7f",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Bath & Kitchen Showroom of Hajoca-York. Four distinct but cohesive unlabelled panels in a generic bath and kitchen design showroom: a designer and homeowner comparing tile and cabinet samples at a worktable; hands handling a tactile faucet finish and stone swatches; a quiet modern kitchen display with no readable brand marks; a consultant sketching a simple room layout beside cabinetry and plumbing material samples. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:0,eq=saturation=0.965:contrast=1.082:brightness=-0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "6f3023e4a08e899180e8deb1f8b6af3903b3ba1894300bf19db611f248c1f846",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "bath-and-kitchen-showroom-of-hajoca-york",
+      "boardDescriptor": "hardware",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/bath-and-kitchen-showroom-of-hajoca-york.png",
+      "sourceSha256": "a977a7d4328166a6062d3d9c9c8d85524b74212554eec98c73fdab19632b3c7f",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Bath & Kitchen Showroom of Hajoca-York. Four distinct but cohesive unlabelled panels in a generic bath and kitchen design showroom: a designer and homeowner comparing tile and cabinet samples at a worktable; hands handling a tactile faucet finish and stone swatches; a quiet modern kitchen display with no readable brand marks; a consultant sketching a simple room layout beside cabinetry and plumbing material samples. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:28,eq=saturation=0.990:contrast=1.046:brightness=0.000,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "4cb6059d9a64f89dda61adc076b40648f1bfb8c375fbffb2d68d684034f2e3eb",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "bath-and-kitchen-showroom-of-hajoca-york",
+      "boardDescriptor": "hardware",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/bath-and-kitchen-showroom-of-hajoca-york.png",
+      "sourceSha256": "a977a7d4328166a6062d3d9c9c8d85524b74212554eec98c73fdab19632b3c7f",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Bath & Kitchen Showroom of Hajoca-York. Four distinct but cohesive unlabelled panels in a generic bath and kitchen design showroom: a designer and homeowner comparing tile and cabinet samples at a worktable; hands handling a tactile faucet finish and stone swatches; a quiet modern kitchen display with no readable brand marks; a consultant sketching a simple room layout beside cabinetry and plumbing material samples. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:56,eq=saturation=1.015:contrast=1.010:brightness=0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "80074ba8dd60630ee650daafb5fbc9e80128ec1f643536e9adffe751b843063e",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "bath-and-kitchen-showroom-of-hajoca-york",
+      "boardDescriptor": "hardware",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/bath-and-kitchen-showroom-of-hajoca-york.png",
+      "sourceSha256": "a977a7d4328166a6062d3d9c9c8d85524b74212554eec98c73fdab19632b3c7f",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Bath & Kitchen Showroom of Hajoca-York. Four distinct but cohesive unlabelled panels in a generic bath and kitchen design showroom: a designer and homeowner comparing tile and cabinet samples at a worktable; hands handling a tactile faucet finish and stone swatches; a quiet modern kitchen display with no readable brand marks; a consultant sketching a simple room layout beside cabinetry and plumbing material samples. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:0,eq=saturation=1.040:contrast=1.064:brightness=-0.018,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "32935f108a83df42298ee4d2663b6f17831a41dbc1ea73ffe447df886cc38d05",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "bath-and-kitchen-showroom-of-hajoca-york",
+      "boardDescriptor": "hardware",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/bath-and-kitchen-showroom-of-hajoca-york.png",
+      "sourceSha256": "a977a7d4328166a6062d3d9c9c8d85524b74212554eec98c73fdab19632b3c7f",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Bath & Kitchen Showroom of Hajoca-York. Four distinct but cohesive unlabelled panels in a generic bath and kitchen design showroom: a designer and homeowner comparing tile and cabinet samples at a worktable; hands handling a tactile faucet finish and stone swatches; a quiet modern kitchen display with no readable brand marks; a consultant sketching a simple room layout beside cabinetry and plumbing material samples. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:28,eq=saturation=0.940:contrast=1.028:brightness=-0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "5ddbb7b8faf499c77fb8363dca9c59685146ac31190e48adefabdb9c9efffe3e",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "bath-and-kitchen-showroom-of-hajoca-york",
+      "boardDescriptor": "hardware",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/bath-and-kitchen-showroom-of-hajoca-york.png",
+      "sourceSha256": "a977a7d4328166a6062d3d9c9c8d85524b74212554eec98c73fdab19632b3c7f",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Bath & Kitchen Showroom of Hajoca-York. Four distinct but cohesive unlabelled panels in a generic bath and kitchen design showroom: a designer and homeowner comparing tile and cabinet samples at a worktable; hands handling a tactile faucet finish and stone swatches; a quiet modern kitchen display with no readable brand marks; a consultant sketching a simple room layout beside cabinetry and plumbing material samples. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:56,eq=saturation=0.965:contrast=1.082:brightness=0.000,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "e567df66397f48f8d36ad2b008c9308bd52955ff321f572fa811b756f55ceb73",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "bath-and-kitchen-showroom-of-hajoca-york",
+      "boardDescriptor": "hardware",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/bath-and-kitchen-showroom-of-hajoca-york.png",
+      "sourceSha256": "a977a7d4328166a6062d3d9c9c8d85524b74212554eec98c73fdab19632b3c7f",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Bath & Kitchen Showroom of Hajoca-York. Four distinct but cohesive unlabelled panels in a generic bath and kitchen design showroom: a designer and homeowner comparing tile and cabinet samples at a worktable; hands handling a tactile faucet finish and stone swatches; a quiet modern kitchen display with no readable brand marks; a consultant sketching a simple room layout beside cabinetry and plumbing material samples. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:0,eq=saturation=0.990:contrast=1.046:brightness=0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "dacf156bb46e88bd24e49870da20affc3b1fa1df6fa69729f791b13cc650d812",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "bath-and-kitchen-showroom-of-hajoca-york",
+      "boardDescriptor": "hardware",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/bath-and-kitchen-showroom-of-hajoca-york.png",
+      "sourceSha256": "a977a7d4328166a6062d3d9c9c8d85524b74212554eec98c73fdab19632b3c7f",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Bath & Kitchen Showroom of Hajoca-York. Four distinct but cohesive unlabelled panels in a generic bath and kitchen design showroom: a designer and homeowner comparing tile and cabinet samples at a worktable; hands handling a tactile faucet finish and stone swatches; a quiet modern kitchen display with no readable brand marks; a consultant sketching a simple room layout beside cabinetry and plumbing material samples. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:28,eq=saturation=1.015:contrast=1.010:brightness=-0.018,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "52d5a1529d6bf47bb35e2f9f62b6b599783df7cb5f4451574517eb7ce35f005b",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    }
+  ]
+}

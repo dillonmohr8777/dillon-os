@@ -1,0 +1,252 @@
+{
+  "slug": "kevin-t-coyne-attorney-at-law",
+  "preparedAt": "2026-08-26T10:41:53.078Z",
+  "sourceSite": "https://kevintcoyneattorneyatlaw.com/",
+  "sourceFinalUrl": "https://kevintcoyneattorneyatlaw.com/",
+  "sourcePageSha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023",
+  "exactLogoRequired": false,
+  "exactLogoSha256": "6707d4e794bca30a166664bb3a2dbf3e2f0289731c4c0d1a438272dde7208ea0",
+  "identityFallback": true,
+  "generatedImagePolicy": "All content visuals come from an Align HCM Image Gen editorial board, carry embedded plus interface-level grain, and are disclosed as illustrative concept material. They never serve as proof about the business, its staff, facilities, products, clients, or outcomes.",
+  "assets": [
+    {
+      "role": "verified exact-name identity fallback",
+      "output": "logo.svg",
+      "sourceUrl": "https://kevintcoyneattorneyatlaw.com/",
+      "sourceSha256": "6707d4e794bca30a166664bb3a2dbf3e2f0289731c4c0d1a438272dde7208ea0",
+      "outputSha256": "6707d4e794bca30a166664bb3a2dbf3e2f0289731c4c0d1a438272dde7208ea0",
+      "transformation": "Disclosed exact-name typographic fallback; no icon, symbol, or first-party logo imitation.",
+      "transparent": true
+    },
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "kevin-t-coyne-attorney-at-law",
+      "boardDescriptor": "lawyer",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/kevin-t-coyne-attorney-at-law.png",
+      "sourceSha256": "43fb097531311456af5565f0f7bdb8a1a39092182c22a34906e89345ed1765a3",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Kevin T Coyne Attorney At Law. Four distinct but cohesive unlabelled panels in a generic small legal practice: an attorney in everyday professional attire reviewing a printed case file at a walnut desk; a client consultation from an over-the-shoulder non-identifying angle; hands annotating a legal document beside an orderly notebook and reading glasses; a quiet courthouse-adjacent architectural detail with a lawyer arriving, no identifiable signage. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=1.015:contrast=1.064:brightness=0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "b3a9ee3a00f5247deda1d3fcd7a0327f43fc12f801fcf261d41f5b7ceca6d684",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "kevin-t-coyne-attorney-at-law",
+      "boardDescriptor": "lawyer",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/kevin-t-coyne-attorney-at-law.png",
+      "sourceSha256": "43fb097531311456af5565f0f7bdb8a1a39092182c22a34906e89345ed1765a3",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Kevin T Coyne Attorney At Law. Four distinct but cohesive unlabelled panels in a generic small legal practice: an attorney in everyday professional attire reviewing a printed case file at a walnut desk; a client consultation from an over-the-shoulder non-identifying angle; hands annotating a legal document beside an orderly notebook and reading glasses; a quiet courthouse-adjacent architectural detail with a lawyer arriving, no identifiable signage. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:28,eq=saturation=1.040:contrast=1.028:brightness=-0.018,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "348e102f642e22de6ed761cb4f923375765f5de406c2c4fd42ce6c8ed45ee26a",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "kevin-t-coyne-attorney-at-law",
+      "boardDescriptor": "lawyer",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/kevin-t-coyne-attorney-at-law.png",
+      "sourceSha256": "43fb097531311456af5565f0f7bdb8a1a39092182c22a34906e89345ed1765a3",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Kevin T Coyne Attorney At Law. Four distinct but cohesive unlabelled panels in a generic small legal practice: an attorney in everyday professional attire reviewing a printed case file at a walnut desk; a client consultation from an over-the-shoulder non-identifying angle; hands annotating a legal document beside an orderly notebook and reading glasses; a quiet courthouse-adjacent architectural detail with a lawyer arriving, no identifiable signage. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:56,eq=saturation=0.940:contrast=1.082:brightness=-0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "4974cf37f72427f77abfaccba56d40b69b721c501b7af4e99dc974389964386e",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "kevin-t-coyne-attorney-at-law",
+      "boardDescriptor": "lawyer",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/kevin-t-coyne-attorney-at-law.png",
+      "sourceSha256": "43fb097531311456af5565f0f7bdb8a1a39092182c22a34906e89345ed1765a3",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Kevin T Coyne Attorney At Law. Four distinct but cohesive unlabelled panels in a generic small legal practice: an attorney in everyday professional attire reviewing a printed case file at a walnut desk; a client consultation from an over-the-shoulder non-identifying angle; hands annotating a legal document beside an orderly notebook and reading glasses; a quiet courthouse-adjacent architectural detail with a lawyer arriving, no identifiable signage. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=0.965:contrast=1.046:brightness=0.000,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "6f7a474b50c8ed5eb9c9307a9de9c5807b7be3eea54b7ccb9d8efcc0fe46fab0",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "kevin-t-coyne-attorney-at-law",
+      "boardDescriptor": "lawyer",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/kevin-t-coyne-attorney-at-law.png",
+      "sourceSha256": "43fb097531311456af5565f0f7bdb8a1a39092182c22a34906e89345ed1765a3",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Kevin T Coyne Attorney At Law. Four distinct but cohesive unlabelled panels in a generic small legal practice: an attorney in everyday professional attire reviewing a printed case file at a walnut desk; a client consultation from an over-the-shoulder non-identifying angle; hands annotating a legal document beside an orderly notebook and reading glasses; a quiet courthouse-adjacent architectural detail with a lawyer arriving, no identifiable signage. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:28,eq=saturation=0.990:contrast=1.010:brightness=0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "10d56c1d31c144e9134b51b3f7f7605fdbb77206ad8c0d8a3debaf726ae43160",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "kevin-t-coyne-attorney-at-law",
+      "boardDescriptor": "lawyer",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/kevin-t-coyne-attorney-at-law.png",
+      "sourceSha256": "43fb097531311456af5565f0f7bdb8a1a39092182c22a34906e89345ed1765a3",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Kevin T Coyne Attorney At Law. Four distinct but cohesive unlabelled panels in a generic small legal practice: an attorney in everyday professional attire reviewing a printed case file at a walnut desk; a client consultation from an over-the-shoulder non-identifying angle; hands annotating a legal document beside an orderly notebook and reading glasses; a quiet courthouse-adjacent architectural detail with a lawyer arriving, no identifiable signage. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:56,eq=saturation=1.015:contrast=1.064:brightness=-0.018,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "ad85e9b4a9e394467a7e6787963cc875c6881d7ae3ebfa4a0ce798a0bd700d41",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "kevin-t-coyne-attorney-at-law",
+      "boardDescriptor": "lawyer",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/kevin-t-coyne-attorney-at-law.png",
+      "sourceSha256": "43fb097531311456af5565f0f7bdb8a1a39092182c22a34906e89345ed1765a3",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Kevin T Coyne Attorney At Law. Four distinct but cohesive unlabelled panels in a generic small legal practice: an attorney in everyday professional attire reviewing a printed case file at a walnut desk; a client consultation from an over-the-shoulder non-identifying angle; hands annotating a legal document beside an orderly notebook and reading glasses; a quiet courthouse-adjacent architectural detail with a lawyer arriving, no identifiable signage. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:0,eq=saturation=1.040:contrast=1.028:brightness=-0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "2e20352170a567a34f60fd4663f64e55105f210d4d197b1facb9537cc8bc1120",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "kevin-t-coyne-attorney-at-law",
+      "boardDescriptor": "lawyer",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/kevin-t-coyne-attorney-at-law.png",
+      "sourceSha256": "43fb097531311456af5565f0f7bdb8a1a39092182c22a34906e89345ed1765a3",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Kevin T Coyne Attorney At Law. Four distinct but cohesive unlabelled panels in a generic small legal practice: an attorney in everyday professional attire reviewing a printed case file at a walnut desk; a client consultation from an over-the-shoulder non-identifying angle; hands annotating a legal document beside an orderly notebook and reading glasses; a quiet courthouse-adjacent architectural detail with a lawyer arriving, no identifiable signage. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:28,eq=saturation=0.940:contrast=1.082:brightness=0.000,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "71b08aa09c6ee0bf756b6ef58e7ca69b8733f83e1e4a9d9feabd1a5bb0f9f573",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "kevin-t-coyne-attorney-at-law",
+      "boardDescriptor": "lawyer",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/kevin-t-coyne-attorney-at-law.png",
+      "sourceSha256": "43fb097531311456af5565f0f7bdb8a1a39092182c22a34906e89345ed1765a3",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Kevin T Coyne Attorney At Law. Four distinct but cohesive unlabelled panels in a generic small legal practice: an attorney in everyday professional attire reviewing a printed case file at a walnut desk; a client consultation from an over-the-shoulder non-identifying angle; hands annotating a legal document beside an orderly notebook and reading glasses; a quiet courthouse-adjacent architectural detail with a lawyer arriving, no identifiable signage. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:56,eq=saturation=0.965:contrast=1.046:brightness=0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "1d0826c36ed0b2225e7c1029af7d7d9c9a20fbd62263c61f8354557c6c8671d6",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "kevin-t-coyne-attorney-at-law",
+      "boardDescriptor": "lawyer",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/kevin-t-coyne-attorney-at-law.png",
+      "sourceSha256": "43fb097531311456af5565f0f7bdb8a1a39092182c22a34906e89345ed1765a3",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Kevin T Coyne Attorney At Law. Four distinct but cohesive unlabelled panels in a generic small legal practice: an attorney in everyday professional attire reviewing a printed case file at a walnut desk; a client consultation from an over-the-shoulder non-identifying angle; hands annotating a legal document beside an orderly notebook and reading glasses; a quiet courthouse-adjacent architectural detail with a lawyer arriving, no identifiable signage. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:0,eq=saturation=0.990:contrast=1.010:brightness=-0.018,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "4f71f064efd934facc148dfb209f4beafb80cfb71f5a701b6ba6a1bdf54e0a30",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "kevin-t-coyne-attorney-at-law",
+      "boardDescriptor": "lawyer",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/kevin-t-coyne-attorney-at-law.png",
+      "sourceSha256": "43fb097531311456af5565f0f7bdb8a1a39092182c22a34906e89345ed1765a3",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Kevin T Coyne Attorney At Law. Four distinct but cohesive unlabelled panels in a generic small legal practice: an attorney in everyday professional attire reviewing a printed case file at a walnut desk; a client consultation from an over-the-shoulder non-identifying angle; hands annotating a legal document beside an orderly notebook and reading glasses; a quiet courthouse-adjacent architectural detail with a lawyer arriving, no identifiable signage. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:28,eq=saturation=1.015:contrast=1.064:brightness=-0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "468a4f396a1300416b42ca686b71894f4c01a394e83b308ac74f9e5971d0be05",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "kevin-t-coyne-attorney-at-law",
+      "boardDescriptor": "lawyer",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/kevin-t-coyne-attorney-at-law.png",
+      "sourceSha256": "43fb097531311456af5565f0f7bdb8a1a39092182c22a34906e89345ed1765a3",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Kevin T Coyne Attorney At Law. Four distinct but cohesive unlabelled panels in a generic small legal practice: an attorney in everyday professional attire reviewing a printed case file at a walnut desk; a client consultation from an over-the-shoulder non-identifying angle; hands annotating a legal document beside an orderly notebook and reading glasses; a quiet courthouse-adjacent architectural detail with a lawyer arriving, no identifiable signage. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:56,eq=saturation=1.040:contrast=1.028:brightness=0.000,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "4f55a403baee6931289727e7f0e199e7ea8ae5bd2b77127f438216314c4faa63",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    }
+  ],
+  "fonts": {
+    "pair": {
+      "id": "plus-jakarta-dm-sans",
+      "display": "Plus Jakarta Sans",
+      "text": "DM Sans"
+    },
+    "source": "Google Fonts CSS API",
+    "files": [
+      {
+        "file": "font-display-400.woff2",
+        "sha256": "153fc85b70298beeb1d61a5f723331649e7f23bb77302a66e61cb3e2fbdb5e79"
+      },
+      {
+        "file": "font-display-800.woff2",
+        "sha256": "153fc85b70298beeb1d61a5f723331649e7f23bb77302a66e61cb3e2fbdb5e79"
+      },
+      {
+        "file": "font-text-400.woff2",
+        "sha256": "9fea608a947e67020c33cad9a6fe3d60c54119dfb8cff87768a8117a15ed7543"
+      },
+      {
+        "file": "font-text-700.woff2",
+        "sha256": "9fea608a947e67020c33cad9a6fe3d60c54119dfb8cff87768a8117a15ed7543"
+      }
+    ]
+  }
+}

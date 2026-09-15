@@ -1,10 +1,10 @@
 {
   "automation_id": "frontmatter-validate",
-  "started_at": "2026-08-18T06:53:19.966Z",
-  "status": "ok",
+  "started_at": "2026-09-15T14:03:26.226Z",
+  "status": "warn",
   "counts": {
-    "files": 40,
-    "incomplete": 0,
+    "files": 42,
+    "incomplete": 2,
     "complete": 40
   },
   "rows": [
@@ -252,6 +252,19 @@
       "due": "none"
     },
     {
+      "file": "01_Clients\\Nexla\\overview.md",
+      "ok": false,
+      "missing": [
+        "last_touched",
+        "next_action",
+        "due"
+      ],
+      "warnings": [],
+      "status": "active",
+      "last_touched": null,
+      "due": null
+    },
+    {
       "file": "01_Clients\\Next Gen Solutions.md",
       "ok": true,
       "missing": [],
@@ -315,6 +328,19 @@
       "due": "none"
     },
     {
+      "file": "01_Clients\\Puttery NYC\\overview.md",
+      "ok": false,
+      "missing": [
+        "last_touched",
+        "next_action",
+        "due"
+      ],
+      "warnings": [],
+      "status": "active",
+      "last_touched": null,
+      "due": null
+    },
+    {
       "file": "01_Clients\\Replenish\\overview.md",
       "ok": true,
       "missing": [],
@@ -369,5 +395,6 @@
       "due": "none"
     }
   ],
-  "written_at": "2026-08-18T06:53:19.967Z"
+  "generated_at": "2026-09-15T14:03:26.227Z",
+  "written_at": "2026-09-15T14:03:26.227Z"
 }

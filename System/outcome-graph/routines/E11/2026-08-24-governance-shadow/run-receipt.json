@@ -1,0 +1,320 @@
+{
+  "run_id": "OGD-20260825-7D3581FF90C7",
+  "graph_id": "event-e11-web-design-routine-proposal-shadow",
+  "objective": "Define the newly proven closed-loop web-design workflow with a unique trigger, observable finish line, exact inputs and outputs, privacy boundaries, and a positive plus negative canary.",
+  "value_signal": "D13, D14, D24, and D25 become one reproducible feedback loop without broadening permissions or silently adding a scheduler routine.",
+  "contract_sha256": "987cd662b0928d00c1b90dfc73740183068fc857049296add5d734eb53cad525",
+  "started_at": "2026-08-25T00:37:00.875Z",
+  "source_evidence": "Each governance routine recollects its exact registry, receipt, client, design, or knowledge source set before planning and terminal verification.",
+  "finish_line": "The proposed routine is unique relative to existing stage routines, the positive terminal canary and negative false-completion case both revalidate, and adoption remains proposal-only.",
+  "governance": {
+    "orchestrator": "Codex acting as Marketing Chief",
+    "canonical_state": "The agent registry, routine contracts, current durable receipts, client registry, access metadata, design authority, Obsidian vault, and Marketing Chief queue remain canonical and read only.",
+    "dedupe_key": "E11:2026-08-24:source-bound-shadow",
+    "checkpoint": "System/outcome-graph/routines/E11/2026-08-24-governance-shadow/run-receipt.json",
+    "rollback": "Discard governance shadow artifacts and the unadopted proposal; preserve registry, permissions, schedules, billing, client records, design truth, sidecars, queue, and external systems.",
+    "escalation": "Return the exact missing sample, cost source, client ambiguity, stale authority, duplicate routine, or proposal decision to Marketing Chief."
+  },
+  "graph_iterations": [
+    {
+      "iteration": 1,
+      "status": "verified",
+      "planner": {
+        "evidence": "Collected 1 isolated E11 item(s) from source set 72a5c74d2a761527a36ea78fcab22e4c52cf832cb6cf95016cf15687dd9393b1.",
+        "item_count": 1,
+        "plan_signature": "4afea3953385957f6a70a75460c67d06665f24a76c6ff640578d601c76adc685",
+        "items": [
+          {
+            "id": "E11:closed-loop-web-design",
+            "isolation_key": "routine:web-design-closed-loop:v1",
+            "input_fingerprint": "99ec1c15eaf98e739bd314193d2925bed88f7f02f63d4b56691cfc31ab612bbe",
+            "task": null
+          }
+        ]
+      },
+      "workers": [
+        {
+          "item_id": "E11:closed-loop-web-design",
+          "input_fingerprint": "99ec1c15eaf98e739bd314193d2925bed88f7f02f63d4b56691cfc31ab612bbe",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260825-7D3581FF90C7:20c0f6afbd5ddb40c253:attempt:1",
+              "maker_evidence": "Built one privacy-safe E11 record for E11:closed-loop-web-design.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/E11/2026-08-24-governance-shadow/workers/20c0f6afbd5ddb40c253.json",
+                  "sha256": "66022a0e158234ea038aa6f86f22fe702646f5a3c781a734cd5e3decbfe8bdc0",
+                  "bytes": 3543
+                }
+              ],
+              "checker_evidence": "Independently reconstructed E11:closed-loop-web-design from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/E11/2026-08-24-governance-shadow/workers/20c0f6afbd5ddb40c253.json",
+              "sha256": "66022a0e158234ea038aa6f86f22fe702646f5a3c781a734cd5e3decbfe8bdc0",
+              "bytes": 3543
+            }
+          ],
+          "isolation_id": "OGD-20260825-7D3581FF90C7:20c0f6afbd5ddb40c253:attempt:1"
+        }
+      ],
+      "reduction": {
+        "evidence": "Reduced all checked E11 records without blending isolation keys.",
+        "artifacts": [
+          {
+            "path": "System/outcome-graph/routines/E11/2026-08-24-governance-shadow/routine-definition.json",
+            "sha256": "005be4a82adf910858198dd06853dcf5d997742ba9e0bcabd961b5fa012cc983",
+            "bytes": 3042
+          },
+          {
+            "path": "System/outcome-graph/routines/E11/2026-08-24-governance-shadow/synthetic-canary-receipt.json",
+            "sha256": "4f10e507efcc981413b68bdf729df192784c730fe9a05002b17af909c1e62ed5",
+            "bytes": 902
+          },
+          {
+            "path": "System/outcome-graph/routines/E11/2026-08-24-governance-shadow/manifest-ledger-proposal.json",
+            "sha256": "4b11f6ff6a9e2249c3d08e85f96012d817a68f1dc823352e11fbdb8d15844885",
+            "bytes": 875
+          }
+        ]
+      },
+      "terminal_verification": {
+        "evidence": "Recollected and independently verified all E11 sources, records, negative states, and artifact hashes.",
+        "declared_pass": true,
+        "passed": true,
+        "assertions": [
+          {
+            "id": "source-manifest-stable",
+            "passed": true,
+            "detail": "Every named source remains hash-bound at terminal verification."
+          },
+          {
+            "id": "every-isolated-item-reconstructed-exactly-once",
+            "passed": true,
+            "detail": "Every in-scope item has one collision-resistant reconstructed record."
+          },
+          {
+            "id": "reducer-output-reproduces-exactly",
+            "passed": true,
+            "detail": "Final artifacts reproduce exactly from current sources and the frozen evaluation clock."
+          },
+          {
+            "id": "trigger-and-finish-line-unique-and-observable",
+            "passed": true,
+            "detail": "The feedback edge and terminal replay distinguish the routine from existing stages."
+          },
+          {
+            "id": "inputs-steps-outputs-systems-and-client-scope-complete",
+            "passed": true,
+            "detail": "The workflow can be reproduced without route guessing."
+          },
+          {
+            "id": "approvals-and-never-record-surfaces-explicit",
+            "passed": true,
+            "detail": "Human gates, privacy, and prohibited captures are explicit."
+          },
+          {
+            "id": "synthetic-canary-passes-terminal-verifier",
+            "passed": true,
+            "detail": "The positive terminal case passes and the weak first draft plus production overclaim are rejected."
+          },
+          {
+            "id": "manifest-and-ledger-change-is-proposal-only",
+            "passed": true,
+            "detail": "Canonical adoption remains with Marketing Chief."
+          },
+          {
+            "id": "permissions-do-not-exceed-demonstrated-task",
+            "passed": true,
+            "detail": "The routine proposes no broader capability."
+          },
+          {
+            "id": "privacy-and-no-mutation-boundary",
+            "passed": true,
+            "detail": "Final artifacts are redacted and attest no external, canonical, provider, restart, or checkpoint mutation."
+          }
+        ],
+        "artifact_manifest": [
+          {
+            "path": "System/outcome-graph/routines/E11/2026-08-24-governance-shadow/routine-definition.json",
+            "sha256": "005be4a82adf910858198dd06853dcf5d997742ba9e0bcabd961b5fa012cc983",
+            "bytes": 3042
+          },
+          {
+            "path": "System/outcome-graph/routines/E11/2026-08-24-governance-shadow/synthetic-canary-receipt.json",
+            "sha256": "4f10e507efcc981413b68bdf729df192784c730fe9a05002b17af909c1e62ed5",
+            "bytes": 902
+          },
+          {
+            "path": "System/outcome-graph/routines/E11/2026-08-24-governance-shadow/manifest-ledger-proposal.json",
+            "sha256": "4b11f6ff6a9e2249c3d08e85f96012d817a68f1dc823352e11fbdb8d15844885",
+            "bytes": 875
+          }
+        ],
+        "manifest_errors": []
+      },
+      "learning": {
+        "evidence": "Appended one hashed E11 correction entry.",
+        "corrections": [
+          "Adopt the closed-loop design routine only after Marketing Chief reviews uniqueness, permissions, and scheduler placement."
+        ],
+        "ledger": "System/outcome-graph/routines/E11/2026-08-24-governance-shadow/corrections.jsonl",
+        "ledger_receipt": {
+          "locator": "System/outcome-graph/routines/E11/2026-08-24-governance-shadow/corrections.jsonl",
+          "entry_sha256": "4f9edbbd262340854e7a025d5334c79a58ba2566002ba86384577529a7579eac"
+        }
+      }
+    }
+  ],
+  "invocation_log": [
+    {
+      "adapter": "source-bound-e11-planner",
+      "invoked_at": "2026-08-25T00:37:00.883Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-e11-maker",
+      "invoked_at": "2026-08-25T00:37:00.902Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-e11-checker",
+      "invoked_at": "2026-08-25T00:37:00.914Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-e11-reducer",
+      "invoked_at": "2026-08-25T00:37:00.944Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-e11-terminal-verifier",
+      "invoked_at": "2026-08-25T00:37:00.966Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-e11-learner",
+      "invoked_at": "2026-08-25T00:37:00.985Z",
+      "status": "returned"
+    }
+  ],
+  "budget": {
+    "limit_units": 96,
+    "used_units": 6
+  },
+  "outcome": "complete",
+  "terminal_truth": true,
+  "finished_at": "2026-08-25T00:37:00.998Z",
+  "elapsed_seconds": 0.123,
+  "blocked_by": null,
+  "reason": "Finish line is proven by an independent terminal verifier.",
+  "terminal_evidence": {
+    "evidence": "Recollected and independently verified all E11 sources, records, negative states, and artifact hashes.",
+    "declared_pass": true,
+    "passed": true,
+    "assertions": [
+      {
+        "id": "source-manifest-stable",
+        "passed": true,
+        "detail": "Every named source remains hash-bound at terminal verification."
+      },
+      {
+        "id": "every-isolated-item-reconstructed-exactly-once",
+        "passed": true,
+        "detail": "Every in-scope item has one collision-resistant reconstructed record."
+      },
+      {
+        "id": "reducer-output-reproduces-exactly",
+        "passed": true,
+        "detail": "Final artifacts reproduce exactly from current sources and the frozen evaluation clock."
+      },
+      {
+        "id": "trigger-and-finish-line-unique-and-observable",
+        "passed": true,
+        "detail": "The feedback edge and terminal replay distinguish the routine from existing stages."
+      },
+      {
+        "id": "inputs-steps-outputs-systems-and-client-scope-complete",
+        "passed": true,
+        "detail": "The workflow can be reproduced without route guessing."
+      },
+      {
+        "id": "approvals-and-never-record-surfaces-explicit",
+        "passed": true,
+        "detail": "Human gates, privacy, and prohibited captures are explicit."
+      },
+      {
+        "id": "synthetic-canary-passes-terminal-verifier",
+        "passed": true,
+        "detail": "The positive terminal case passes and the weak first draft plus production overclaim are rejected."
+      },
+      {
+        "id": "manifest-and-ledger-change-is-proposal-only",
+        "passed": true,
+        "detail": "Canonical adoption remains with Marketing Chief."
+      },
+      {
+        "id": "permissions-do-not-exceed-demonstrated-task",
+        "passed": true,
+        "detail": "The routine proposes no broader capability."
+      },
+      {
+        "id": "privacy-and-no-mutation-boundary",
+        "passed": true,
+        "detail": "Final artifacts are redacted and attest no external, canonical, provider, restart, or checkpoint mutation."
+      }
+    ],
+    "artifact_manifest": [
+      {
+        "path": "System/outcome-graph/routines/E11/2026-08-24-governance-shadow/routine-definition.json",
+        "sha256": "005be4a82adf910858198dd06853dcf5d997742ba9e0bcabd961b5fa012cc983",
+        "bytes": 3042
+      },
+      {
+        "path": "System/outcome-graph/routines/E11/2026-08-24-governance-shadow/synthetic-canary-receipt.json",
+        "sha256": "4f10e507efcc981413b68bdf729df192784c730fe9a05002b17af909c1e62ed5",
+        "bytes": 902
+      },
+      {
+        "path": "System/outcome-graph/routines/E11/2026-08-24-governance-shadow/manifest-ledger-proposal.json",
+        "sha256": "4b11f6ff6a9e2249c3d08e85f96012d817a68f1dc823352e11fbdb8d15844885",
+        "bytes": 875
+      }
+    ],
+    "manifest_errors": []
+  },
+  "learning_evidence": {
+    "evidence": "Appended one hashed E11 correction entry.",
+    "corrections": [
+      "Adopt the closed-loop design routine only after Marketing Chief reviews uniqueness, permissions, and scheduler placement."
+    ],
+    "ledger": "System/outcome-graph/routines/E11/2026-08-24-governance-shadow/corrections.jsonl",
+    "ledger_receipt": {
+      "locator": "System/outcome-graph/routines/E11/2026-08-24-governance-shadow/corrections.jsonl",
+      "entry_sha256": "4f9edbbd262340854e7a025d5334c79a58ba2566002ba86384577529a7579eac"
+    }
+  },
+  "drift_fingerprint": "d986ad8f0784e7574d26f01512f30f857d54e3fc142973c7c17546781bbcc2a5",
+  "deduped": true,
+  "durable_state": {
+    "schema_version": 1,
+    "dedupe_identity": "8f30a5e46feb9a06afdc7e5db70e8e1751bd28ee2d571221f14d694a4b418a02",
+    "dedupe_hit": true,
+    "resumed": false,
+    "canonical_binding": {
+      "locator": "dillon-os://routine/E11/2026-08-24",
+      "version": "2026-08-25:75ead33c.05e6a21e.c4f66a74.f349bdba.699fd0a4.df76a269.03f91cd6",
+      "sha256": "72a5c74d2a761527a36ea78fcab22e4c52cf832cb6cf95016cf15687dd9393b1",
+      "captured_at": "2026-08-25T00:37:00.861Z"
+    },
+    "canonical_binding_fingerprint": "d6db81c2ef1832bde35d435c4daefa11298aca70bb4489520f3cd9f87973635c",
+    "contract_fingerprint": "621d6f2c7bdfaff98945c3be0bf76c4c235d915d1c08ae9290e25f40cd5462c8",
+    "checkpoint": "runs/OGD-20260825-7D3581FF90C7/checkpoint.json"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "graph_id": "monthly-m03-automation-value-cost-shadow",
+  "dedupe_key": "M03:2026-08-24:source-bound-shadow",
+  "dedupe_identity": "be4206103d219268e5a65768a6f652a90a9e7250c0ce5a71f830011f0e223bc0",
+  "contract_fingerprint": "057d7f6430b27ce8e4d8fb97da32216a5f74b281e49449df68ce43aff26fd7a7",
+  "canonical_binding": {
+    "locator": "dillon-os://routine/M03/2026-08-24",
+    "version": "2026-08-25:f7aa7149.05e6a21e.f497ab86.4cbc7e46.bf6d66f3.6dfe16e3.e3fb5768.d3e6d2f3.7d65a000.ff7a25e5.1d0c18e9.a7a511c0.c4f66a74.6bf1f073.fedfe667.80997a5e",
+    "sha256": "9416ae8194e2d665df910150d34753b2c76f1fe63a5d8651e143eae252809e69",
+    "captured_at": "2026-08-25T00:29:01.498Z"
+  },
+  "canonical_binding_fingerprint": "f77083ca64d4f81d05486cbcd127f4a880455c32a33229f1fdd8721a47c739ac",
+  "status": "complete",
+  "run_id": "OGD-20260825-295A0BF6F449",
+  "checkpoint": {
+    "path": "runs/OGD-20260825-295A0BF6F449/checkpoint.json"
+  },
+  "created_at": "2026-08-25T00:29:01.538Z",
+  "updated_at": "2026-08-25T00:29:02.355Z",
+  "state_revision": 18,
+  "previous_state_sha256": "47f3677745e090554a5b4ee8cf2935dbf3de26466fa574b11b9f5c57bfac7d36",
+  "completed_at": "2026-08-25T00:29:02.355Z",
+  "receipt": {
+    "path": "runs/OGD-20260825-295A0BF6F449/receipt.json",
+    "sha256": "a0e92e10cf79195e83034f7a6919bab4a955a2a2bdc1fa5d057e513383511970",
+    "bytes": 29359
+  }
+}

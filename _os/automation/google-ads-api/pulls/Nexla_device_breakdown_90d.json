@@ -1,0 +1,274 @@
+[
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038365681",
+      "name": "G_US_S_Brand_Exact",
+      "id": "22038365681"
+    },
+    "metrics": {
+      "clicks": "351",
+      "conversions": 2,
+      "costMicros": "879461204",
+      "impressions": "1286"
+    },
+    "segments": {
+      "device": "DESKTOP"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038365681",
+      "name": "G_US_S_Brand_Exact",
+      "id": "22038365681"
+    },
+    "metrics": {
+      "clicks": "57",
+      "conversions": 0,
+      "costMicros": "104965970",
+      "impressions": "294"
+    },
+    "segments": {
+      "device": "MOBILE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038365681",
+      "name": "G_US_S_Brand_Exact",
+      "id": "22038365681"
+    },
+    "metrics": {
+      "clicks": "3",
+      "conversions": 0,
+      "costMicros": "1830000",
+      "impressions": "11"
+    },
+    "segments": {
+      "device": "TABLET"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22988394145",
+      "name": "G_US_S_NB_AI-Data-Integration",
+      "id": "22988394145"
+    },
+    "metrics": {
+      "clicks": "20",
+      "conversions": 0,
+      "costMicros": "192485439",
+      "impressions": "1161"
+    },
+    "segments": {
+      "device": "DESKTOP"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22988394145",
+      "name": "G_US_S_NB_AI-Data-Integration",
+      "id": "22988394145"
+    },
+    "metrics": {
+      "clicks": "3",
+      "conversions": 0,
+      "costMicros": "2930000",
+      "impressions": "44"
+    },
+    "segments": {
+      "device": "MOBILE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23027231268",
+      "name": "G_US_S_NB_Data-Products",
+      "id": "23027231268"
+    },
+    "metrics": {
+      "clicks": "69",
+      "conversions": 0,
+      "costMicros": "442301447",
+      "impressions": "4782"
+    },
+    "segments": {
+      "device": "DESKTOP"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23027231268",
+      "name": "G_US_S_NB_Data-Products",
+      "id": "23027231268"
+    },
+    "metrics": {
+      "clicks": "72",
+      "conversions": 0,
+      "costMicros": "145770000",
+      "impressions": "202"
+    },
+    "segments": {
+      "device": "MOBILE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23027231268",
+      "name": "G_US_S_NB_Data-Products",
+      "id": "23027231268"
+    },
+    "metrics": {
+      "clicks": "3",
+      "conversions": 0,
+      "costMicros": "5940000",
+      "impressions": "17"
+    },
+    "segments": {
+      "device": "TABLET"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "metrics": {
+      "clicks": "188",
+      "conversions": 0,
+      "costMicros": "1826022259",
+      "impressions": "17554"
+    },
+    "segments": {
+      "device": "DESKTOP"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "metrics": {
+      "clicks": "101",
+      "conversions": 0,
+      "costMicros": "227365850",
+      "impressions": "1603"
+    },
+    "segments": {
+      "device": "MOBILE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "metrics": {
+      "clicks": "3",
+      "conversions": 0,
+      "costMicros": "8100000",
+      "impressions": "34"
+    },
+    "segments": {
+      "device": "TABLET"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317335",
+      "name": "G_US_S_NB_ETL-Pipeline",
+      "id": "23705317335"
+    },
+    "metrics": {
+      "clicks": "53",
+      "conversions": 0,
+      "costMicros": "737223408",
+      "impressions": "7979"
+    },
+    "segments": {
+      "device": "DESKTOP"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317335",
+      "name": "G_US_S_NB_ETL-Pipeline",
+      "id": "23705317335"
+    },
+    "metrics": {
+      "clicks": "17",
+      "conversions": 0,
+      "costMicros": "36800000",
+      "impressions": "267"
+    },
+    "segments": {
+      "device": "MOBILE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317335",
+      "name": "G_US_S_NB_ETL-Pipeline",
+      "id": "23705317335"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "18"
+    },
+    "segments": {
+      "device": "TABLET"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317341",
+      "name": "G_US_S_NB_Governance",
+      "id": "23705317341"
+    },
+    "metrics": {
+      "clicks": "21",
+      "conversions": 0,
+      "costMicros": "284724483",
+      "impressions": "1561"
+    },
+    "segments": {
+      "device": "DESKTOP"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317341",
+      "name": "G_US_S_NB_Governance",
+      "id": "23705317341"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "1050000",
+      "impressions": "9"
+    },
+    "segments": {
+      "device": "MOBILE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/24177650112",
+      "name": "G_US_PMAX_NB_MCP-Agentic",
+      "id": "24177650112"
+    },
+    "metrics": {
+      "clicks": "82",
+      "conversions": 1,
+      "costMicros": "84380811",
+      "impressions": "13271"
+    },
+    "segments": {
+      "device": "DESKTOP"
+    }
+  }
+]

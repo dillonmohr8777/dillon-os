@@ -1,0 +1,168 @@
+{
+  "schema_version": 1,
+  "routine_id": "W04",
+  "reporting_window": {
+    "prepared": "2026-08-24",
+    "period_start": "2026-08-17",
+    "period_end": "2026-08-23",
+    "month": "2026-08"
+  },
+  "objective": "Represent current client-separated content commitments without inventing production dates, channels, approvals, or scope.",
+  "production_items": [],
+  "client_calendars": [
+    {
+      "schema_version": 1,
+      "routine_id": "W04",
+      "client_id": "bar-crawl-usa",
+      "client_name": "Bar Crawl USA",
+      "client_status": "active",
+      "source": {
+        "locator": "01_Clients/Bar Crawl USA/content-calendar.md",
+        "sha256": "5a0969cc6ac7282c9bde416570f165a881abb117d6d8aa94883ad361fafe11f1",
+        "bytes": 375,
+        "modified_at": "2026-07-09T21:22:43.479Z",
+        "declared_month": "2026-04"
+      },
+      "canonical_commitments": [],
+      "production_items": [],
+      "holds": [
+        "no_current_canonical_content_commitment",
+        "source_older_than_freshness_window",
+        "stale_calendar_month"
+      ],
+      "approval_state": "proposal_only_unscheduled",
+      "external_action_attempted": false,
+      "validation_fingerprint": "5dcfb5c0673f4c3e4bbee86022a596bff339ab6a0bd082b2aea6e666892f82d1"
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W04",
+      "client_id": "kimberly-james-bridal",
+      "client_name": "Kimberly James Bridal",
+      "client_status": "active",
+      "source": {
+        "locator": "01_Clients/Kimberly James Bridal/content-calendar.md",
+        "sha256": "f4b6d3df87f2d2986f2b9457eb990746c5ae4843fba04712e5c2a175a6d34347",
+        "bytes": 474,
+        "modified_at": "2026-07-09T21:22:43.515Z",
+        "declared_month": "2026-04"
+      },
+      "canonical_commitments": [],
+      "production_items": [],
+      "holds": [
+        "no_current_canonical_content_commitment",
+        "source_older_than_freshness_window",
+        "stale_calendar_month"
+      ],
+      "approval_state": "proposal_only_unscheduled",
+      "external_action_attempted": false,
+      "validation_fingerprint": "cc4fd75f5b4c68ff965b6786e1ad523634039c56f9b2fd74b9a2fb15d46a0318"
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W04",
+      "client_id": "omega-landscaping",
+      "client_name": "Omega Landscaping and Concrete",
+      "client_status": "active",
+      "source": {
+        "locator": "01_Clients/Omega Landscaping/content-calendar.md",
+        "sha256": "f9544f556adf934d5e012e6932ad3f31856dc362c4f2c1c796beeef2f75b5c4c",
+        "bytes": 298,
+        "modified_at": "2026-07-09T21:22:43.543Z",
+        "declared_month": "2026-04"
+      },
+      "canonical_commitments": [],
+      "production_items": [],
+      "holds": [
+        "no_current_canonical_content_commitment",
+        "source_older_than_freshness_window",
+        "stale_calendar_month"
+      ],
+      "approval_state": "proposal_only_unscheduled",
+      "external_action_attempted": false,
+      "validation_fingerprint": "d9ffcc94c990e510dbf73100a1faab249e58b94596cc1a0af625541aae854554"
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W04",
+      "client_id": "onsite-concrete-landscape",
+      "client_name": "Onsite Concrete & Landscape",
+      "client_status": "active",
+      "source": {
+        "locator": "01_Clients/Onsite Concrete/content-calendar.md",
+        "sha256": "22fc6e4d7a59b54716d37a55dfd175cf54e25bca958ec61f8fbbe7e91fbff05b",
+        "bytes": 174,
+        "modified_at": "2026-07-09T21:22:43.550Z",
+        "declared_month": "2026-04"
+      },
+      "canonical_commitments": [],
+      "production_items": [],
+      "holds": [
+        "needs_current_scope_confirmation",
+        "no_current_canonical_content_commitment",
+        "source_older_than_freshness_window",
+        "stale_calendar_month"
+      ],
+      "approval_state": "proposal_only_unscheduled",
+      "external_action_attempted": false,
+      "validation_fingerprint": "139bdbc60da8fdfede774fd228baff351f56a834c6c339ada3b48450b5f29194"
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W04",
+      "client_id": "shadow-heating-cooling",
+      "client_name": "Shadow Heating and Cooling",
+      "client_status": "active",
+      "source": {
+        "locator": "01_Clients/Shadow HVAC/content-calendar.md",
+        "sha256": "396c8dded368b13836dba1c276bfccdb0a469e3a55e54bb4a666f1eb295c0f0a",
+        "bytes": 326,
+        "modified_at": "2026-07-09T21:22:43.556Z",
+        "declared_month": "2026-04"
+      },
+      "canonical_commitments": [],
+      "production_items": [],
+      "holds": [
+        "no_current_canonical_content_commitment",
+        "source_older_than_freshness_window",
+        "stale_calendar_month"
+      ],
+      "approval_state": "proposal_only_unscheduled",
+      "external_action_attempted": false,
+      "validation_fingerprint": "f26b3333d35927d657d94360c5bf3e916707a90a52a3f6e0469b1171346e5384"
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W04",
+      "client_id": "tags-2-go",
+      "client_name": "Tags 2 Go",
+      "client_status": "inactive",
+      "source": {
+        "locator": "01_Clients/Tags 2 Go/content-calendar.md",
+        "sha256": "4eddbb601190df8c714f62a19f5d84f3b45c248ad3437b6e5b2283e7371be9ac",
+        "bytes": 234,
+        "modified_at": "2026-08-07T16:13:41.063Z",
+        "declared_month": null
+      },
+      "canonical_commitments": [],
+      "production_items": [],
+      "holds": [
+        "content_out_of_scope",
+        "inactive_client",
+        "no_current_canonical_content_commitment",
+        "source_older_than_freshness_window"
+      ],
+      "approval_state": "proposal_only_unscheduled",
+      "external_action_attempted": false,
+      "validation_fingerprint": "fd34304096b200027a369fb4df2d6f385c3a037184eb8e64b31995b27e4d996f"
+    }
+  ],
+  "summary": {
+    "client_sources": 6,
+    "canonical_content_commitments": 0,
+    "production_ready_items": 0,
+    "held_source_records": 6
+  },
+  "approval_state": "proposal_only_unscheduled",
+  "external_action_attempted": false
+}

@@ -1,23 +1,23 @@
 {
   "automation_id": "agent-craft-brief",
   "status": "ok",
-  "generated_for": "2026-09-02",
+  "generated_for": "2026-09-15",
   "window_days": 3,
   "days": [
-    "2026-08-31",
-    "2026-09-01",
-    "2026-09-02"
+    "2026-09-13",
+    "2026-09-14",
+    "2026-09-15"
   ],
   "counts": {
-    "routines_seen": 23,
-    "workhorses": 11,
-    "unreliable": 2,
-    "cadence_drift": 9,
-    "authorized_never_ran": 6,
-    "earned_lessons": 13,
-    "loop_lessons": 0,
-    "loop_no_findings": 0,
-    "loop_learn_missing": 78,
+    "routines_seen": 18,
+    "workhorses": 13,
+    "unreliable": 0,
+    "cadence_drift": 0,
+    "authorized_never_ran": 11,
+    "earned_lessons": 22,
+    "loop_lessons": 2,
+    "loop_no_findings": 42,
+    "loop_learn_missing": 0,
     "promotion_candidates": 0
   },
   "gate_blocks": [],
@@ -30,7 +30,7 @@
       "completions": 3,
       "failures": 0,
       "reliability": 1,
-      "last_completed": "2026-09-02",
+      "last_completed": "2026-09-15",
       "fail_reason": null
     },
     {
@@ -41,7 +41,7 @@
       "completions": 3,
       "failures": 0,
       "reliability": 1,
-      "last_completed": "2026-09-02",
+      "last_completed": "2026-09-15",
       "fail_reason": null
     },
     {
@@ -52,7 +52,7 @@
       "completions": 3,
       "failures": 0,
       "reliability": 1,
-      "last_completed": "2026-09-02",
+      "last_completed": "2026-09-15",
       "fail_reason": null
     },
     {
@@ -63,7 +63,7 @@
       "completions": 3,
       "failures": 0,
       "reliability": 1,
-      "last_completed": "2026-09-02",
+      "last_completed": "2026-09-15",
       "fail_reason": null
     },
     {
@@ -74,7 +74,7 @@
       "completions": 3,
       "failures": 0,
       "reliability": 1,
-      "last_completed": "2026-09-02",
+      "last_completed": "2026-09-15",
       "fail_reason": null
     },
     {
@@ -85,7 +85,7 @@
       "completions": 3,
       "failures": 0,
       "reliability": 1,
-      "last_completed": "2026-09-02",
+      "last_completed": "2026-09-15",
       "fail_reason": null
     },
     {
@@ -96,7 +96,7 @@
       "completions": 3,
       "failures": 0,
       "reliability": 1,
-      "last_completed": "2026-09-02",
+      "last_completed": "2026-09-15",
       "fail_reason": null
     },
     {
@@ -107,7 +107,7 @@
       "completions": 3,
       "failures": 0,
       "reliability": 1,
-      "last_completed": "2026-09-02",
+      "last_completed": "2026-09-15",
       "fail_reason": null
     },
     {
@@ -118,7 +118,7 @@
       "completions": 3,
       "failures": 0,
       "reliability": 1,
-      "last_completed": "2026-09-02",
+      "last_completed": "2026-09-15",
       "fail_reason": null
     },
     {
@@ -129,7 +129,18 @@
       "completions": 3,
       "failures": 0,
       "reliability": 1,
-      "last_completed": "2026-09-02",
+      "last_completed": "2026-09-15",
+      "fail_reason": null
+    },
+    {
+      "id": "E05",
+      "name": "Onboard an existing repository or project",
+      "cadence": "event",
+      "claude_role": "architect",
+      "completions": 3,
+      "failures": 0,
+      "reliability": 1,
+      "last_completed": "2026-09-15",
       "fail_reason": null
     },
     {
@@ -140,135 +151,23 @@
       "completions": 3,
       "failures": 0,
       "reliability": 1,
-      "last_completed": "2026-09-02",
+      "last_completed": "2026-09-15",
       "fail_reason": null
-    }
-  ],
-  "unreliable": [
-    {
-      "id": "M05",
-      "name": "Refresh operating rules, brand voice, and design truth",
-      "cadence": "monthly",
-      "claude_role": "architect",
-      "completions": 0,
-      "failures": 9,
-      "reliability": 0,
-      "last_completed": null,
-      "fail_reason": "3/9 stages ok; next: resolve stage:build"
     },
     {
-      "id": "E05",
-      "name": "Onboard an existing repository or project",
+      "id": "E11",
+      "name": "Capture and add a newly discovered routine",
       "cadence": "event",
       "claude_role": "architect",
-      "completions": 0,
-      "failures": 8,
-      "reliability": 0,
-      "last_completed": null,
-      "fail_reason": "3/9 stages ok; next: resolve stage:build"
-    }
-  ],
-  "cadence_drift": [
-    {
-      "id": "W04",
-      "name": "Build the content and creative production calendar",
-      "cadence": "weekly",
-      "claude_role": "maker",
       "completions": 3,
       "failures": 0,
       "reliability": 1,
-      "last_completed": "2026-09-02",
-      "fail_reason": null
-    },
-    {
-      "id": "W05",
-      "name": "Run the Prospect Radar Next 20 website factory",
-      "cadence": "weekly",
-      "claude_role": "maker",
-      "completions": 3,
-      "failures": 0,
-      "reliability": 1,
-      "last_completed": "2026-09-02",
-      "fail_reason": null
-    },
-    {
-      "id": "W08",
-      "name": "Review CRO, SEO, AEO, GEO, offer, and outreach experiments",
-      "cadence": "weekly",
-      "claude_role": "analyst",
-      "completions": 3,
-      "failures": 0,
-      "reliability": 1,
-      "last_completed": "2026-09-02",
-      "fail_reason": null
-    },
-    {
-      "id": "W09",
-      "name": "Audit automation reliability",
-      "cadence": "weekly",
-      "claude_role": "critic",
-      "completions": 3,
-      "failures": 0,
-      "reliability": 1,
-      "last_completed": "2026-09-02",
-      "fail_reason": null
-    },
-    {
-      "id": "W10",
-      "name": "Run the executive weekly review",
-      "cadence": "weekly",
-      "claude_role": "critic",
-      "completions": 3,
-      "failures": 0,
-      "reliability": 1,
-      "last_completed": "2026-09-02",
-      "fail_reason": null
-    },
-    {
-      "id": "W11",
-      "name": "Test Dillon OS knowledge graph health",
-      "cadence": "weekly",
-      "claude_role": "critic",
-      "completions": 3,
-      "failures": 0,
-      "reliability": 1,
-      "last_completed": "2026-09-02",
-      "fail_reason": null
-    },
-    {
-      "id": "M02",
-      "name": "Evaluate agents, permissions, and output quality",
-      "cadence": "monthly",
-      "claude_role": "critic",
-      "completions": 3,
-      "failures": 0,
-      "reliability": 1,
-      "last_completed": "2026-09-02",
-      "fail_reason": null
-    },
-    {
-      "id": "M03",
-      "name": "Audit scheduled work, usage, and cost",
-      "cadence": "monthly",
-      "claude_role": "critic",
-      "completions": 3,
-      "failures": 0,
-      "reliability": 1,
-      "last_completed": "2026-09-02",
-      "fail_reason": null
-    },
-    {
-      "id": "M04",
-      "name": "Audit client and account separation",
-      "cadence": "monthly",
-      "claude_role": "critic",
-      "completions": 3,
-      "failures": 0,
-      "reliability": 1,
-      "last_completed": "2026-09-02",
+      "last_completed": "2026-09-15",
       "fail_reason": null
     }
   ],
+  "unreliable": [],
+  "cadence_drift": [],
   "authorized_never_ran": [
     {
       "id": "D14",
@@ -286,24 +185,64 @@
       "cadence": "daily"
     },
     {
+      "id": "D19",
+      "name": "Build a report, dashboard, deck, or executive summary",
+      "cadence": "daily"
+    },
+    {
+      "id": "W05",
+      "name": "Run the Prospect Radar Next 20 website factory",
+      "cadence": "weekly"
+    },
+    {
       "id": "W06",
       "name": "Produce client weekly reports",
       "cadence": "weekly"
     },
     {
+      "id": "M02",
+      "name": "Evaluate agents, permissions, and output quality",
+      "cadence": "monthly"
+    },
+    {
+      "id": "M03",
+      "name": "Audit scheduled work, usage, and cost",
+      "cadence": "monthly"
+    },
+    {
+      "id": "M04",
+      "name": "Audit client and account separation",
+      "cadence": "monthly"
+    },
+    {
+      "id": "M05",
+      "name": "Refresh operating rules, brand voice, and design truth",
+      "cadence": "monthly"
+    },
+    {
       "id": "E04",
       "name": "Recover a failed connector or collector",
       "cadence": "event"
-    },
-    {
-      "id": "E11",
-      "name": "Capture and add a newly discovered routine",
-      "cadence": "event"
     }
   ],
-  "loop_lessons": [],
+  "loop_lessons": [
+    {
+      "day": "2026-09-15",
+      "id": "D03",
+      "key": "D03:build ok->blocked",
+      "text": "stage state changed since LOOP-20260914-000819572: build ok->blocked",
+      "run_id": "LOOP-20260915-000820127"
+    },
+    {
+      "day": "2026-09-15",
+      "id": "E10",
+      "key": "E10:build ok->blocked",
+      "text": "stage state changed since LOOP-20260914-012325569: build ok->blocked",
+      "run_id": "LOOP-20260915-005327871"
+    }
+  ],
   "promotion_candidates": [],
   "dry_run": true,
-  "generated_at": "2026-09-02T16:05:54.825Z",
-  "written_at": "2026-09-02T16:05:54.825Z"
+  "generated_at": "2026-09-15T14:04:48.193Z",
+  "written_at": "2026-09-15T14:04:48.193Z"
 }

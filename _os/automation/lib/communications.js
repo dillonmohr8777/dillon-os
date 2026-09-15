@@ -170,6 +170,23 @@ function normalizeCommunicationItems(items) {
   return [...unique.values()];
 }
 
+function communicationEventFingerprint(item) {
+  const occurredAt = validDateTime(item?.occurred_at)
+    ? new Date(item.occurred_at).toISOString()
+    : cleanLine(item?.occurred_at);
+  return sha256(`${cleanLine(item?.source_ref)}\n${occurredAt}`);
+}
+
+function filterNewCommunicationItems(items, processed = {}) {
+  const processedEvents = new Set(
+    Object.values(processed).map(communicationEventFingerprint),
+  );
+  return items.filter((item) => (
+    !processed[item.dedupe_key]
+    && !processedEvents.has(communicationEventFingerprint(item))
+  ));
+}
+
 function renderItem(item) {
   const participants = item.participants?.length ? item.participants.join(', ') : 'Not retained';
   const targets = item.write_targets.length ? item.write_targets.map((target) => `  - \`${target}\``).join('\n') : '  - Daily review only';
@@ -353,7 +370,7 @@ function ingestCommunicationRun(envelope, options = {}) {
 
   const newItems = options.force
     ? normalizedItems
-    : normalizedItems.filter((item) => !state.processed?.[item.dedupe_key]);
+    : filterNewCommunicationItems(normalizedItems, state.processed);
   const payloadHash = sha256(JSON.stringify({ ...envelope, items: normalizedItems }));
   const day = dateOnly(envelope.run_at);
   const captureName = `${day} - daily-communications-${slugify(envelope.run_id)}.md`;
@@ -432,6 +449,8 @@ function ingestCommunicationRun(envelope, options = {}) {
 module.exports = {
   validateCommunicationEnvelope,
   normalizeCommunicationItems,
+  communicationEventFingerprint,
+  filterNewCommunicationItems,
   renderCapture,
   renderDailyReview,
   appendReview,

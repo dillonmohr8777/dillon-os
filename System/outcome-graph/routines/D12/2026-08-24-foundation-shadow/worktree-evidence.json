@@ -1,0 +1,769 @@
+{
+  "schema_version": 1,
+  "routine_id": "D12",
+  "generated_at": "2026-08-24T23:48:58.905Z",
+  "repository": {
+    "root": "C:/Users/dillo/repos/dillon-os",
+    "branch": "vault-live-2026-08-07",
+    "head": "0558f09029a7f2130c5beed97fb2551927fbd940",
+    "remote": "https://github.com/dillonmohr8777/dillon-os.git",
+    "exact": true
+  },
+  "dirty_tree": {
+    "dirty": true,
+    "intended_paths": [
+      {
+        "status": "??",
+        "path": "12_Brain/05_Projects/2026-08-24 - Perfect outcome graph engineering.md"
+      },
+      {
+        "status": "??",
+        "path": "System/outcome-graph/"
+      },
+      {
+        "status": "??",
+        "path": "_os/automation/bin/outcome-graph.js"
+      },
+      {
+        "status": "??",
+        "path": "_os/automation/lib/outcome-graph-audit.js"
+      },
+      {
+        "status": "??",
+        "path": "_os/automation/lib/outcome-graph-canary.js"
+      },
+      {
+        "status": "??",
+        "path": "_os/automation/lib/outcome-graph-command-comms.js"
+      },
+      {
+        "status": "??",
+        "path": "_os/automation/lib/outcome-graph-durable-canary.js"
+      },
+      {
+        "status": "??",
+        "path": "_os/automation/lib/outcome-graph-foundation.js"
+      },
+      {
+        "status": "??",
+        "path": "_os/automation/lib/outcome-graph-outreach-state.js"
+      },
+      {
+        "status": "??",
+        "path": "_os/automation/lib/outcome-graph-paid-media.js"
+      },
+      {
+        "status": "??",
+        "path": "_os/automation/lib/outcome-graph-performance.js"
+      },
+      {
+        "status": "??",
+        "path": "_os/automation/lib/outcome-graph-reliability.js"
+      },
+      {
+        "status": "??",
+        "path": "_os/automation/lib/outcome-graph-routine-catalog.js"
+      },
+      {
+        "status": "??",
+        "path": "_os/automation/lib/outcome-graph-source-bound.js"
+      },
+      {
+        "status": "??",
+        "path": "_os/automation/lib/outcome-graph-state.js"
+      },
+      {
+        "status": "??",
+        "path": "_os/automation/lib/outcome-graph-website-factory.js"
+      },
+      {
+        "status": "??",
+        "path": "_os/automation/lib/outcome-graph-weekly-shadow.js"
+      },
+      {
+        "status": "??",
+        "path": "_os/automation/lib/outcome-graph-weekly-tranche.js"
+      },
+      {
+        "status": "??",
+        "path": "_os/automation/lib/outcome-graph.js"
+      },
+      {
+        "status": "??",
+        "path": "_os/automation/tests/outcome-graph-command-comms.test.js"
+      },
+      {
+        "status": "??",
+        "path": "_os/automation/tests/outcome-graph-foundation.test.js"
+      },
+      {
+        "status": "??",
+        "path": "_os/automation/tests/outcome-graph-outreach-state.test.js"
+      },
+      {
+        "status": "??",
+        "path": "_os/automation/tests/outcome-graph-paid-media.test.js"
+      },
+      {
+        "status": "??",
+        "path": "_os/automation/tests/outcome-graph-performance.test.js"
+      },
+      {
+        "status": "??",
+        "path": "_os/automation/tests/outcome-graph-reliability.test.js"
+      },
+      {
+        "status": "??",
+        "path": "_os/automation/tests/outcome-graph-routine-catalog.test.js"
+      },
+      {
+        "status": "??",
+        "path": "_os/automation/tests/outcome-graph-source-bound.test.js"
+      },
+      {
+        "status": "??",
+        "path": "_os/automation/tests/outcome-graph-state.test.js"
+      },
+      {
+        "status": "??",
+        "path": "_os/automation/tests/outcome-graph-website-factory.test.js"
+      },
+      {
+        "status": "??",
+        "path": "_os/automation/tests/outcome-graph-weekly-tranche.test.js"
+      },
+      {
+        "status": "??",
+        "path": "_os/automation/tests/outcome-graph.test.js"
+      }
+    ],
+    "unrelated_existing_paths": [
+      {
+        "status": "M ",
+        "path": "0_Inbox/Agent-Proposals/Claude/2026-08-18-daily-driver-approval-package.md"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/00_Home.md"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/01_Captures/sessions/session-log.md"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/05_Projects/2026-07-29 - Complete Dillon OS second brain.md"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/09_Ops/Client Intelligence Coverage.md"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/09_Ops/Health.md"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/09_Ops/Knowledge Coverage.md"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/10_Maps/00_Atlas.md"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/10_Maps/Generated/01 Clients and Revenue.md"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/10_Maps/Generated/02 Growth and Content.md"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/10_Maps/Generated/03 Align HCM.md"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/10_Maps/Generated/04 Agents and Automation.md"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/10_Maps/Generated/05 Knowledge and Memory.md"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/10_Maps/Generated/06 Work Sessions and Reviews.md"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/10_Maps/Generated/07 Standards and Templates.md"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/10_Maps/Generated/08 Personal Ventures.md"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/10_Maps/Generated/09 Other Connected Notes.md"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/10_Maps/Generated/client-ami-cleaning.md"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/10_Maps/Generated/client-bar-crawl-usa.md"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/10_Maps/Generated/client-bercos-popcorn.md"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/10_Maps/Generated/client-bigorange-marketing.md"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/10_Maps/Generated/client-bok-law-firm.md"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/10_Maps/Generated/client-bridge-software-development.md"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/10_Maps/Generated/client-capsule-tonic.md"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/10_Maps/Generated/client-cindy-may-christmas.md"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/10_Maps/Generated/client-everyday-life-insurance.md"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/10_Maps/Generated/client-fagan-painting.md"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/10_Maps/Generated/client-fresh-blends.md"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/10_Maps/Generated/client-hope-wellness-center.md"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/10_Maps/Generated/client-kimberly-james-bridal.md"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/10_Maps/Generated/client-momentum-360.md"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/10_Maps/Generated/client-nkcdc.md"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/10_Maps/Generated/client-omega-landscaping.md"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/10_Maps/Generated/client-onsite-concrete.md"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/10_Maps/Generated/client-pritzker-law-group.md"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/10_Maps/Generated/client-pro-fence-deck.md"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/10_Maps/Generated/client-replenish.md"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/10_Maps/Generated/client-revive-systems.md"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/10_Maps/Generated/client-shadow-hvac.md"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/10_Maps/Generated/client-tags-2-go.md"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/10_Maps/Generated/client-va-claims.md"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/11_Craft/00_Index.md"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/11_Craft/2026-08-19 - operating brief.md"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/queue/claude-daily-driver-2026-08-18.jsonl"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/state/agent-craft-brief.json"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/state/claude-daily-driver.json"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/state/claude-routines/D03.json"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/state/claude-routines/D07.json"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/state/claude-routines/D10.json"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/state/claude-routines/D11.json"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/state/claude-routines/D12.json"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/state/claude-routines/D13.json"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/state/claude-routines/D16.json"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/state/claude-routines/D25.json"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/state/claude-routines/D26.json"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/state/claude-routines/E05.json"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/state/claude-routines/E10.json"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/state/claude-routines/E11.json"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/state/claude-routines/M02.json"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/state/claude-routines/M03.json"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/state/claude-routines/M04.json"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/state/claude-routines/M05.json"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/state/claude-routines/W04.json"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/state/claude-routines/W09.json"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/state/claude-routines/W10.json"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/state/claude-usage-ledger.json"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/state/radar-last.json"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/state/radar-refresh.json"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/state/radar/build-queue.csv"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/state/radar/registry.json"
+      },
+      {
+        "status": " M",
+        "path": "12_Brain/state/report-brain-ingest.json"
+      },
+      {
+        "status": " M",
+        "path": "Daily-Briefs/prospect-radar.html"
+      },
+      {
+        "status": " M",
+        "path": "System/approval-queue.md"
+      },
+      {
+        "status": " M",
+        "path": "System/gateway-health.md"
+      },
+      {
+        "status": " M",
+        "path": "_os/automation/bin/connector-health.js"
+      },
+      {
+        "status": " M",
+        "path": "_os/automation/tests/connector-health.test.js"
+      },
+      {
+        "status": "??",
+        "path": "00_Inbox/Agent-Proposals/Claude/2026-08-19-daily-driver-approval-package.md"
+      },
+      {
+        "status": "??",
+        "path": "00_Inbox/Agent-Proposals/Claude/2026-08-20-daily-driver-approval-package.md"
+      },
+      {
+        "status": "??",
+        "path": "00_Inbox/Agent-Proposals/Claude/2026-08-21-daily-driver-approval-package.md"
+      },
+      {
+        "status": "??",
+        "path": "00_Inbox/Agent-Proposals/Claude/2026-08-22-daily-driver-approval-package.md"
+      },
+      {
+        "status": "??",
+        "path": "00_Inbox/Agent-Proposals/Claude/2026-08-23-daily-driver-approval-package.md"
+      },
+      {
+        "status": "??",
+        "path": "00_Inbox/Agent-Proposals/Claude/2026-08-24-daily-driver-approval-package.md"
+      },
+      {
+        "status": "??",
+        "path": "01_Clients/Nexla/"
+      },
+      {
+        "status": "??",
+        "path": "02_Campaigns/AI Site Builder Outreach Engine/batches/"
+      },
+      {
+        "status": "??",
+        "path": "12_Brain/01_Captures/Reports/2026-08/bar-crawl-usa/"
+      },
+      {
+        "status": "??",
+        "path": "12_Brain/01_Captures/Reports/2026-08/fagan-painting/"
+      },
+      {
+        "status": "??",
+        "path": "12_Brain/01_Captures/Reports/2026-08/fresh-blends-kwik-trip/"
+      },
+      {
+        "status": "??",
+        "path": "12_Brain/01_Captures/Reports/2026-08/hope-wellness-center/"
+      },
+      {
+        "status": "??",
+        "path": "12_Brain/01_Captures/Reports/2026-08/kimberly-james-bridal/momentum-360-weekly-2026-08-17-kimberly-james-bridal.pdf"
+      },
+      {
+        "status": "??",
+        "path": "12_Brain/01_Captures/Reports/2026-08/nexla/"
+      },
+      {
+        "status": "??",
+        "path": "12_Brain/01_Captures/Reports/2026-08/nkcdc/"
+      },
+      {
+        "status": "??",
+        "path": "12_Brain/01_Captures/Reports/2026-08/omega-landscaping/momentum-360-weekly-2026-08-17-omega-landscaping.pdf"
+      },
+      {
+        "status": "??",
+        "path": "12_Brain/01_Captures/Reports/2026-08/onsite-concrete-landscape/momentum-360-weekly-2026-08-17-onsite-concrete-landscape.pdf"
+      },
+      {
+        "status": "??",
+        "path": "12_Brain/01_Captures/Reports/2026-08/replenish-7-eleven/momentum-360-weekly-2026-08-17-replenish-7-eleven.pdf"
+      },
+      {
+        "status": "??",
+        "path": "12_Brain/01_Captures/Reports/2026-08/revive-systems/"
+      },
+      {
+        "status": "??",
+        "path": "12_Brain/01_Captures/Reports/2026-08/va-claims-edge/"
+      },
+      {
+        "status": "??",
+        "path": "12_Brain/07_Reviews/2026-08-23 - Weekly Brain Synthesis.md"
+      },
+      {
+        "status": "??",
+        "path": "12_Brain/07_Reviews/Reports/2026-08/2026-08-19 - nexla - monthly - nexla-google-ads-audit-2026-08-20-r2.md"
+      },
+      {
+        "status": "??",
+        "path": "12_Brain/07_Reviews/Reports/2026-08/2026-08-19 - nexla - monthly - nexla-google-ads-audit-2026-08-20.md"
+      },
+      {
+        "status": "??",
+        "path": "12_Brain/07_Reviews/Reports/2026-08/2026-08-20 - nexla - monthly - nexla-google-ads-audit-2026-08-20-r3.md"
+      },
+      {
+        "status": "??",
+        "path": "12_Brain/07_Reviews/Reports/2026-08/2026-08-23 - bar-crawl-usa - weekly - momentum-360-weekly-2026-08-17-bar-crawl-usa.md"
+      },
+      {
+        "status": "??",
+        "path": "12_Brain/07_Reviews/Reports/2026-08/2026-08-23 - fagan-painting - weekly - momentum-360-weekly-2026-08-17-fagan-painting.md"
+      },
+      {
+        "status": "??",
+        "path": "12_Brain/07_Reviews/Reports/2026-08/2026-08-23 - fresh-blends-kwik-trip - weekly - momentum-360-weekly-2026-08-17-fresh-blends-kwik-trip.md"
+      },
+      {
+        "status": "??",
+        "path": "12_Brain/07_Reviews/Reports/2026-08/2026-08-23 - hope-wellness-center - weekly - momentum-360-weekly-2026-08-17-hope-wellness-center.md"
+      },
+      {
+        "status": "??",
+        "path": "12_Brain/07_Reviews/Reports/2026-08/2026-08-23 - kimberly-james-bridal - weekly - momentum-360-weekly-2026-08-17-kimberly-james-bridal.md"
+      },
+      {
+        "status": "??",
+        "path": "12_Brain/07_Reviews/Reports/2026-08/2026-08-23 - nkcdc - weekly - momentum-360-weekly-2026-08-17-nkcdc.md"
+      },
+      {
+        "status": "??",
+        "path": "12_Brain/07_Reviews/Reports/2026-08/2026-08-23 - omega-landscaping - weekly - momentum-360-weekly-2026-08-17-omega-landscaping.md"
+      },
+      {
+        "status": "??",
+        "path": "12_Brain/07_Reviews/Reports/2026-08/2026-08-23 - onsite-concrete-landscape - weekly - momentum-360-weekly-2026-08-17-onsite-concrete-landscape.md"
+      },
+      {
+        "status": "??",
+        "path": "12_Brain/07_Reviews/Reports/2026-08/2026-08-23 - replenish-7-eleven - weekly - momentum-360-weekly-2026-08-17-replenish-7-eleven.md"
+      },
+      {
+        "status": "??",
+        "path": "12_Brain/07_Reviews/Reports/2026-08/2026-08-23 - revive-systems - weekly - momentum-360-weekly-2026-08-17-revive-systems.md"
+      },
+      {
+        "status": "??",
+        "path": "12_Brain/07_Reviews/Reports/2026-08/2026-08-23 - va-claims-edge - weekly - momentum-360-weekly-2026-08-17-va-claims-edge.md"
+      },
+      {
+        "status": "??",
+        "path": "12_Brain/10_Maps/Generated/client-nexla.md"
+      },
+      {
+        "status": "??",
+        "path": "12_Brain/11_Craft/2026-08-20 - operating brief.md"
+      },
+      {
+        "status": "??",
+        "path": "12_Brain/11_Craft/2026-08-21 - operating brief.md"
+      },
+      {
+        "status": "??",
+        "path": "12_Brain/11_Craft/2026-08-22 - operating brief.md"
+      },
+      {
+        "status": "??",
+        "path": "12_Brain/11_Craft/2026-08-23 - operating brief.md"
+      },
+      {
+        "status": "??",
+        "path": "12_Brain/11_Craft/2026-08-24 - operating brief.md"
+      },
+      {
+        "status": "??",
+        "path": "12_Brain/queue/claude-daily-driver-2026-08-19.jsonl"
+      },
+      {
+        "status": "??",
+        "path": "12_Brain/queue/claude-daily-driver-2026-08-20.jsonl"
+      },
+      {
+        "status": "??",
+        "path": "12_Brain/queue/claude-daily-driver-2026-08-21.jsonl"
+      },
+      {
+        "status": "??",
+        "path": "12_Brain/queue/claude-daily-driver-2026-08-22.jsonl"
+      },
+      {
+        "status": "??",
+        "path": "12_Brain/queue/claude-daily-driver-2026-08-23.jsonl"
+      },
+      {
+        "status": "??",
+        "path": "12_Brain/queue/claude-daily-driver-2026-08-24.jsonl"
+      },
+      {
+        "status": "??",
+        "path": "12_Brain/queue/claude-loop-2026-08-19.jsonl"
+      },
+      {
+        "status": "??",
+        "path": "12_Brain/queue/claude-loop-2026-08-20.jsonl"
+      },
+      {
+        "status": "??",
+        "path": "12_Brain/queue/claude-loop-2026-08-21.jsonl"
+      },
+      {
+        "status": "??",
+        "path": "12_Brain/queue/claude-loop-2026-08-22.jsonl"
+      },
+      {
+        "status": "??",
+        "path": "12_Brain/queue/claude-loop-2026-08-23.jsonl"
+      },
+      {
+        "status": "??",
+        "path": "12_Brain/queue/claude-loop-2026-08-24.jsonl"
+      },
+      {
+        "status": "??",
+        "path": "12_Brain/queue/report-brain-ingest-2026-08-20.jsonl"
+      },
+      {
+        "status": "??",
+        "path": "12_Brain/queue/report-brain-ingest-2026-08-21.jsonl"
+      },
+      {
+        "status": "??",
+        "path": "12_Brain/queue/report-brain-ingest-2026-08-24.jsonl"
+      },
+      {
+        "status": "??",
+        "path": "12_Brain/state/browser-evidence/internal/2026-08-19T04-08-24-075Z/"
+      },
+      {
+        "status": "??",
+        "path": "12_Brain/state/browser-evidence/internal/2026-08-20T04-08-25-413Z/"
+      },
+      {
+        "status": "??",
+        "path": "12_Brain/state/browser-evidence/internal/2026-08-21T04-08-35-202Z/"
+      },
+      {
+        "status": "??",
+        "path": "12_Brain/state/browser-evidence/internal/2026-08-22T04-08-31-719Z/"
+      },
+      {
+        "status": "??",
+        "path": "12_Brain/state/browser-evidence/internal/2026-08-23T04-08-26-499Z/"
+      },
+      {
+        "status": "??",
+        "path": "12_Brain/state/browser-evidence/internal/2026-08-24T04-08-24-641Z/"
+      },
+      {
+        "status": "??",
+        "path": "12_Brain/state/outcome-graph/"
+      },
+      {
+        "status": "??",
+        "path": "Daily-Briefs/2026-08-20.md"
+      },
+      {
+        "status": "??",
+        "path": "Daily-Briefs/2026-08-21.md"
+      },
+      {
+        "status": "??",
+        "path": "Daily-Briefs/2026-08-22.md"
+      },
+      {
+        "status": "??",
+        "path": "Daily-Briefs/2026-08-23.md"
+      },
+      {
+        "status": "??",
+        "path": "Daily-Briefs/2026-08-24.md"
+      },
+      {
+        "status": "??",
+        "path": "Daily-Briefs/radar-2026-08-19.md"
+      },
+      {
+        "status": "??",
+        "path": "Daily-Briefs/radar-2026-08-20.md"
+      },
+      {
+        "status": "??",
+        "path": "Daily-Briefs/radar-2026-08-21.md"
+      },
+      {
+        "status": "??",
+        "path": "Daily-Briefs/radar-2026-08-22.md"
+      },
+      {
+        "status": "??",
+        "path": "Daily-Briefs/radar-2026-08-23.md"
+      },
+      {
+        "status": "??",
+        "path": "Daily-Briefs/radar-2026-08-24.md"
+      },
+      {
+        "status": "??",
+        "path": "NUL"
+      },
+      {
+        "status": "??",
+        "path": "_os/automation/incoming/reports/2026-08-24-momentum-weekly-client-reports.json"
+      },
+      {
+        "status": "??",
+        "path": "mohr-media-site/PRODUCT.md"
+      }
+    ],
+    "classified": true,
+    "preservation_required": true
+  },
+  "destructive_action_attempted": false,
+  "authority": {
+    "read_only": true,
+    "proposal_only": true,
+    "external_action_attempted": false,
+    "canonical_write_attempted": false,
+    "provider_mutation_attempted": false,
+    "deployment_attempted": false,
+    "worktree_mutation_attempted": false,
+    "ui_mutation_attempted": false,
+    "acceptance_contract_changed": false
+  }
+}

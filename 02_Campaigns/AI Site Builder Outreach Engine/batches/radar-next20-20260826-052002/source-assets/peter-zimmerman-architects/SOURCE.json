@@ -1,0 +1,134 @@
+{
+  "sourceUrl": "https://www.pzarchitects.com/",
+  "finalUrl": "https://pzarchitects.com/",
+  "sourceDomain": "pzarchitects.com",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=UTF-8",
+  "pageSha256": "0acdc89ece9961ef8274055bbe025e389a2713e80f88c1e32933cfbbc9c2b799",
+  "title": "Luxury Residential Architecture | Peter Zimmerman Architects",
+  "description": "Nationally recognized luxury residential architecture firm specializing in historic preservation, classical design, and timeless styles.",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "peter",
+      "zimmerman",
+      "architects"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260826-052002\\preflight\\peter-zimmerman-architects\\logo.svg",
+    "fileName": "logo.svg",
+    "sourceUrl": "https://pzarchitects.com/wp-content/uploads/2021/01/Secondary-2_smaller-green.svg",
+    "sourceEvidence": "IMG normal  logo",
+    "type": "svg",
+    "dimensions": {
+      "width": 277,
+      "height": 45
+    },
+    "sha256": "e3ee5729970db11d2d4383dcdbde132e33aa2957b018fa3606e3259a4690480f",
+    "sourceSha256": "e3ee5729970db11d2d4383dcdbde132e33aa2957b018fa3606e3259a4690480f",
+    "sourceType": "svg",
+    "sourceFileName": null,
+    "transformation": "none; exact first-party transparent asset",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "vector": true
+    },
+    "transparent": true,
+    "bytes": 11578
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260826-052002\\preflight\\peter-zimmerman-architects\\reference-1.webp",
+      "fileName": "reference-1.webp",
+      "sourceUrl": "https://pzarchitects.com/wp-content/uploads/2024/12/2_cropped.webp",
+      "sourceEvidence": "og:image",
+      "type": "webp",
+      "dimensions": {
+        "width": 1920,
+        "height": 1080
+      },
+      "sha256": "416a1782422f1d4742da9dbbdf9a20185a1f165d7d4e4f5b4eea1ae4eb70c30c",
+      "bytes": 347498,
+      "visual": {
+        "ok": true,
+        "lumaRange": 246,
+        "chromaURange": 134,
+        "chromaVRange": 93,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260826-052002\\preflight\\peter-zimmerman-architects\\reference-2.jpg",
+      "fileName": "reference-2.jpg",
+      "sourceUrl": "https://pzarchitects.com/wp-content/uploads/2025/10/stonework1-scaled.jpg",
+      "sourceEvidence": "IMG rev-slidebg   stonework1",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 1920,
+        "width": 2560
+      },
+      "sha256": "d82fc22be5daeefcf554225446760661d08db8bf921c05d67376b29f7a89a716",
+      "bytes": 1139673,
+      "visual": {
+        "ok": true,
+        "lumaRange": 255,
+        "chromaURange": 141,
+        "chromaVRange": 118,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260826-052002\\preflight\\peter-zimmerman-architects\\reference-3.jpg",
+      "fileName": "reference-3.jpg",
+      "sourceUrl": "https://pzarchitects.com/wp-content/uploads/2025/10/cullman_oceandrive_2-scaled.jpeg",
+      "sourceEvidence": "IMG rev-slidebg   cullman_oceandrive_2",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 1707,
+        "width": 2560
+      },
+      "sha256": "9a328b7013d6314bebfefc009b947ddea720820b22330e989628a4d892e2f7cd",
+      "bytes": 640791,
+      "visual": {
+        "ok": true,
+        "lumaRange": 255,
+        "chromaURange": 164,
+        "chromaVRange": 107,
+        "reason": null
+      }
+    }
+  ],
+  "contact": {
+    "phone": "(610)%20647-6970",
+    "address": "",
+    "city": "",
+    "phoneSource": "official tel link",
+    "addressSource": null
+  },
+  "visualReferenceFallback": null,
+  "referenceFailures": [
+    {
+      "url": "https://pzarchitects.com/1920",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://pzarchitects.com/1080",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://pzarchitects.com/image/webp",
+      "reason": "HTTP 404"
+    }
+  ],
+  "brandColors": [
+    "#003388",
+    "#003399",
+    "#00d084",
+    "#0693e3",
+    "#116600"
+  ],
+  "checkedAt": "2026-08-26T09:30:23.320Z"
+}

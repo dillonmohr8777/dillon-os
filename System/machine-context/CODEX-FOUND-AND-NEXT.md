@@ -1,0 +1,258 @@
+# CODEX FOUND AND NEXT - Free / Student Stack
+
+- Updated: 2026-09-11
+- Reporter: Terminal Codex on Grok Linux, coding specialist lane for The CEO / Dillon
+- Mode: draft/stage only
+- Spend/post/send/install: none performed
+- School auth: Liberty University only
+- Sources read:
+- `/workspace/machine-context/CODEX-PROBE-REPLY.md`
+- `/workspace/machine-context/FREE-STUDENT-STACK-CATALOG-2026-09-11.md`
+- `/workspace/machine-context/FREE-STUDENT-STACK-CATALOG-RESEARCH.md`
+- `/workspace/machine-context/STUDENT-DISCOUNT-AUTH.md`
+- `/workspace/machine-context/CODEX-MASTER-ADMIN-BRIEF.md`
+- `/workspace/machine-context/WINDOWS-WORLD-MAP.md`
+
+## What I found
+
+- Probe takeaway:
+- This worker is Terminal Codex on Grok Bot Linux account `dillonmohr311`.
+- Treat this as the ~$20 / mid-model coding specialist lane.
+- Use one worker by default.
+- Conserve quota with disk-first reads, exact paths, and bounded output artifacts.
+- This Linux box is good for local docs, inventories, patches, tests, Playwright, FFmpeg, browser research, and draft deliverables.
+- This Linux box is not the verified Windows desktop executor.
+- This Linux box is not a GPU workstation.
+- This Linux box should not claim Luna Max availability from runtime strings.
+- Windows `DESKTOP-4AHKEC4` remains the stronger authenticated desktop lane.
+- Windows has Codex CLI 0.153.4 and config showing Luna/Terra/native-agent flags.
+- Windows should execute verified Luna/native multi-agent jobs only when Dillon or The CEO names a bounded lane.
+- Current standing policy is no Max/Luna Max for routine inventory or prose cleanup.
+- Current standing policy is draft/stage only unless Dillon gives exact send/post/publish/spend approval.
+- Luna status:
+- Linux package has runtime strings referencing Luna-like capability surfaces.
+- Linux account-level Luna worker usability is not verified.
+- No usage-percent or worker-quota claim should be made from Linux.
+- Default operating rule remains one worker, mid model, no parallel worker storm.
+- Windows status:
+- Windows is the verified richer Codex/Luna config lane.
+- Windows is the authenticated desktop/app context for many client and Dillon OS workflows.
+- Use Windows when the task needs local app auth, Windows-only tools, OneDrive/Desktop files, or verified Codex native-agent features.
+- Free/student stack count ranges:
+- Codex twin file is 713 lines.
+- Codex twin has 18 stack categories.
+- Codex twin has roughly 500-580 table-style product rows after headers/shortlists.
+- Codex twin is curated around Dillon/Momentum fit rather than raw breadth.
+- RESEARCH twin file is 1209 lines.
+- RESEARCH twin states 970 distinct named bullets and 979 raw bullet rows.
+- RESEARCH twin is intentionally broader and includes many "reportedly" or Pack-gated claims.
+- Combined working universe is roughly 970 verified/broad research names plus a curated 500-ish stack-fit view.
+- Top categories in the Codex twin:
+- Student / education packs.
+- Core dev environments.
+- AI coding agents and frameworks.
+- LLM apps, local AI, and inference.
+- Automation, integration, and browser ops.
+- Hosting, cloud, deployment, and edge.
+- Databases, search, queues, and storage.
+- Marketing, SEO, AEO, GEO, and ads analytics.
+- CRM, sales, outreach, and client ops.
+- Video, motion, audio, and streaming.
+- Design, creative, images, and 3D.
+- Content, social, email, and publishing.
+- Research, learning, and knowledge work.
+- Productivity, notes, project management, and meetings.
+- Security, privacy, compliance, and observability.
+- Data, BI, spreadsheets, and analytics.
+- Websites, CMS, forms, and no-code.
+- Asset libraries, fonts, icons, and templates.
+- Top categories in the RESEARCH twin:
+- Already-in-orbit stack anchors.
+- Student packs and education discounts.
+- AI coding agents and IDE assistants.
+- LLM APIs and local runtimes.
+- RAG/vector/search infrastructure.
+- Automation and CRM.
+- Email marketing and transactional email.
+- SEO/AEO/GEO tools.
+- Social schedulers and listening.
+- Design, video/audio, stock media.
+- Analytics, forms, auth, hosting, DBs, storage.
+- Monitoring, security, productivity, notes, research APIs.
+- Browser automation, maps, payment sandboxes, job search, agency ops.
+- Liberty path:
+- Student/edu discounts must use Dillon's Liberty University student login.
+- Preferred verification paths are Liberty login/school email, SheerID, UNiDAYS, Student Beans, GitHub Student Developer Pack, Azure for Students, JetBrains Education, and ID.me where applicable.
+- Do not invent another school.
+- Do not paste credentials into chats or files.
+- Do not claim or activate a discount without Dillon performing or approving the Liberty verification flow.
+- Overlap between Codex twin and RESEARCH twin:
+- Both agree GitHub Student Developer Pack is the highest-density first claim.
+- Both agree Azure for Students is a top no-card cloud-credit path if Liberty verifies.
+- Both agree JetBrains Education is high value for coding/IDE work.
+- Both agree Figma Education and Notion Education are useful if verified.
+- Both agree Adobe Student is discounted but not free and has renewal-price risk.
+- Both agree Google Ads/GA4/GTM/GSC/Looker Studio are immediate no-spend marketing ops pillars.
+- Both agree Remotion, FFmpeg, Playwright, Chrome, Node, Python, Ollama, Cursor, Codex, HubSpot, and n8n are already in orbit.
+- Both agree free tiers and education eligibility must be rechecked before operational use.
+- Both agree no paid GPU, no client publish, no client send, and no spend without named approval.
+- Gaps in Codex twin versus RESEARCH twin:
+- Codex twin is cleaner and easier to use as an operator catalog.
+- Codex twin omits many lower-confidence GitHub Pack partner details that RESEARCH includes.
+- Codex twin is lighter on payments sandboxes, maps, research APIs, job-search tooling, and miscellaneous developer freebies.
+- Codex twin is lighter on dozens of niche OSS alternatives.
+- Codex twin is safer for quick decisions because it avoids some noisier "reported" claims.
+- Gaps in RESEARCH twin versus Codex twin:
+- RESEARCH twin is broader but noisier.
+- RESEARCH twin contains more stale-pricing risk and more partner-offer claims that may have changed.
+- RESEARCH twin includes some duplicates by concept even where names are counted once.
+- RESEARCH twin is less Dillon-stack-prioritized and needs triage before use.
+- RESEARCH twin includes more tempting but low-priority tools that could fragment the operating system.
+- Highest-value free/student claims Dillon should verify first with Liberty login:
+- 1. GitHub Student Developer Pack.
+- 2. Azure for Students.
+- 3. JetBrains All Products Pack Student.
+- 4. GitHub Pro for Students.
+- 5. GitHub Copilot Student or current GitHub AI student benefit, with 2026 signup constraint caveat.
+- 6. Microsoft 365 Education.
+- 7. Figma Education.
+- 8. Notion Education Plus.
+- 9. Adobe Creative Cloud Student, only if discounted paid spend is intentionally approved.
+- 10. DigitalOcean student credits via GitHub Pack.
+- 11. Domain offers via GitHub Pack such as Namecheap `.me`, Name.com, or `.TECH`.
+- 12. Sentry student/Pack elevated limits.
+- 13. Datadog or New Relic student/Pack observability benefits.
+- 14. Doppler student/Pack secrets management.
+- 15. Frontend Masters, DataCamp, Educative, Boot.dev, or Scrimba Pack learning windows, claimed only when Dillon can use the clock.
+- Secondary useful verify targets:
+- BrowserStack and LambdaTest student testing offers.
+- MongoDB Atlas student/Pack credits.
+- Heroku student credit if still live.
+- Stripe fee waiver on first revenue if Pack listing is live.
+- Tableau for Students if BI learning becomes a priority.
+- Autodesk Education if 3D/CAD experiments become real.
+- Perplexity Pro Education if research volume justifies discounted spend.
+- Google AI Pro / Gemini student offer if SheerID path is live.
+- Wolfram student programs if math/research tasks justify it.
+- Canva eligibility, with caveat that individual college access may not equal K-12 Canva Education.
+- Immediate no-login/no-spend stack already worth exploiting:
+- Google Ads Editor.
+- Google Ads Keyword Planner.
+- GA4.
+- Google Tag Manager.
+- Google Search Console.
+- Looker Studio.
+- PageSpeed Insights.
+- Lighthouse.
+- Schema.org Validator.
+- Rich Results Test.
+- Bing Webmaster Tools.
+- Microsoft Clarity.
+- Meta Ads Library.
+- TikTok Creative Center.
+- LinkedIn Ads Library.
+- Screaming Frog free crawl.
+- Ahrefs Webmaster Tools for verified owned sites.
+- Risks and stale-pricing caveats:
+- Free tiers change quickly.
+- Education verification rules change quickly.
+- Partner catalogs inside GitHub Pack rotate.
+- Some student licenses restrict commercial or client use.
+- Some "free" products require a card, upgrade path, or easy overspend surface.
+- Some cloud trials can burn credits or produce bills if budgets are not set.
+- Some Pack learning offers start a countdown immediately when claimed.
+- AI video/image credits burn quickly and may create rights/consent issues.
+- Voice cloning and synthetic-media tools need explicit consent and disclosure discipline.
+- Browser extensions require privacy and permission review.
+- Outreach/email tools can harm sender reputation and compliance if misused.
+- SERP/scraping APIs require ToS, robots, and privacy checks.
+- Client-facing use requires separate authorization even when the tool itself is free.
+- Current local caveats:
+- Docker is missing on Windows path per prior context.
+- Tailscale/private overlay is design-only and not installed.
+- Bitwarden CLI is not on Windows PATH.
+- Chrome/profile pressure and Linux swap pressure were already called out.
+- Dirty worktrees exist and must be preserved.
+- Higgsfield remains paused until credits return or Dillon names spend.
+- ChatGPT student promo renewal reminder is important because it can auto-renew after promo terms.
+
+## What I will do next (proposed, draft/stage only)
+
+- 1. Student claim verification board.
+- Exact output path: `/workspace/machine-context/STUDENT-CLAIM-VERIFY-BOARD.md`
+- Why it matters: turns 970 noisy possibilities into a Liberty-first checklist with claim order, proof path, timer risk, spend risk, and "claim now / defer / skip" columns.
+- Estimated model cost: low.
+- Windows `DESKTOP-4AHKEC4` required: no, unless Dillon wants browser-auth verification screenshots.
+- 2. Catalog dedupe and priority merge.
+- Exact output path: `/workspace/machine-context/FREE-STUDENT-STACK-MERGED-PRIORITY.md`
+- Why it matters: reconciles Codex curated rows with RESEARCH breadth and produces one operator-safe shortlist for The CEO.
+- Estimated model cost: mid.
+- Windows `DESKTOP-4AHKEC4` required: no.
+- 3. Free-stack no-spend marketing ops kit.
+- Exact output path: `/workspace/machine-context/MARKETING-OPS-FREE-STACK-RUNBOOK.md`
+- Why it matters: packages Google Ads/GSC/GA4/GTM/Looker/Schema/Screaming Frog/Clarity into a daily/weekly draft workflow for Momentum clients.
+- Estimated model cost: mid.
+- Windows `DESKTOP-4AHKEC4` required: optional; required only for authenticated client account inspection.
+- 4. Student cloud guardrail plan.
+- Exact output path: `/workspace/machine-context/STUDENT-CLOUD-CREDIT-GUARDRAILS.md`
+- Why it matters: makes Azure/GitHub/DO/Heroku/Oracle/Cloudflare experiments safe with budgets, no-card preference, teardown rules, and no-spend tripwires.
+- Estimated model cost: low.
+- Windows `DESKTOP-4AHKEC4` required: no.
+- 5. Agent-cost control matrix.
+- Exact output path: `/workspace/machine-context/AGENT-COST-CONTROL-MATRIX.md`
+- Why it matters: maps Codex/Cursor/Grok/Hermes/Ollama/Groq/Gemini/OpenRouter/LiteLLM into a one-worker, mid-model operating policy.
+- Estimated model cost: low.
+- Windows `DESKTOP-4AHKEC4` required: optional; useful if checking Windows agent configs.
+- 6. Free creative/video pipeline map.
+- Exact output path: `/workspace/machine-context/FREE-CREATIVE-VIDEO-PIPELINE.md`
+- Why it matters: keeps Remotion/FFmpeg/Resolve/CapCut/Whisper/assets/stock media useful without burning AI video credits or paid GPU.
+- Estimated model cost: low.
+- Windows `DESKTOP-4AHKEC4` required: optional; required if validating installed Windows creative apps.
+- 7. Security hygiene starter pack.
+- Exact output path: `/workspace/machine-context/FREE-SECURITY-HYGIENE-PACK.md`
+- Why it matters: proposes Gitleaks/OSV/Semgrep/CodeQL/Bitwarden/Doppler/SOPS usage without dumping secrets or touching dirty repos destructively.
+- Estimated model cost: low.
+- Windows `DESKTOP-4AHKEC4` required: optional; required for Windows-local repo/tool inventory.
+- 8. Windows-required opportunities list.
+- Exact output path: `/workspace/machine-context/WINDOWS-ONLY-STUDENT-STACK-ACTIONS.md`
+- Why it matters: separates what Linux can stage from what needs authenticated Windows desktop, OneDrive, Office, browser profiles, or Codex Luna config.
+- Estimated model cost: low.
+- Windows `DESKTOP-4AHKEC4` required: yes for final validation, no for first draft.
+
+## What Grok / The CEO should do
+
+- Keep orchestration centralized.
+- Approve only one next job at a time.
+- Prefer the `STUDENT-CLAIM-VERIFY-BOARD.md` job first.
+- Keep Terminal Codex on mid-model, one-worker posture.
+- Reserve Windows Codex/Luna lane for bounded authenticated desktop or high-value implementation tasks.
+- Do not ask Codex to open dozens of live student-offer pages until Dillon is ready to verify with Liberty.
+- Do not start GitHub Pack partner claim clocks until Dillon can actually use each offer.
+- Keep all student claims personal to Dillon unless a license explicitly permits agency/client/commercial use.
+- Have The CEO decide which categories are strategic versus distraction:
+- Dev/cloud credits.
+- Marketing ops.
+- Creative/video.
+- Agent cost control.
+- Security hygiene.
+- Research/learning.
+- Have The CEO maintain the no-spend gate.
+- Have The CEO maintain no send/post/publish/client-message gate.
+- Have The CEO approve any Windows-only authenticated inspection as a separate bounded task.
+- Have The CEO keep Grok as planner and Terminal Codex as artifact producer.
+- Have The CEO avoid broad multi-agent fan-out on the $20 lane.
+- Have The CEO route student-auth decisions to Dillon, not agents.
+- Have The CEO track renewal/cancellation reminders for any promo that can auto-renew.
+
+## Blockers needing Dillon
+
+- Dillon must use Liberty University login or school email for student verification.
+- Dillon must decide whether to attempt GitHub Student Developer Pack verification first.
+- Dillon must decide whether Azure for Students is worth activating now.
+- Dillon must decide whether any discounted paid offer is allowed, especially Adobe, Perplexity, Spotify-class, hardware, or anything requiring a card.
+- Dillon must decide whether claiming learning offers now is worth starting their limited-time clocks.
+- Dillon must authorize any account creation, signup, subscription, card entry, or promo activation.
+- Dillon must authorize any install on Windows, including Tailscale, Docker, Bitwarden CLI, creative apps, or student-offer desktop tools.
+- Dillon must authorize any client account access, client send, client post, client publish, CMS change, or ads upload.
+- Dillon must refresh or perform MFA/auth if a vendor requires live student login.
+- Dillon must decide whether student-license outputs may be used for agency/client work after ToS review.

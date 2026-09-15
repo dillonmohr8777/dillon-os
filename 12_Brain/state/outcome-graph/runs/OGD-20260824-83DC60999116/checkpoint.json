@@ -1,0 +1,306 @@
+{
+  "schema_version": 1,
+  "run_id": "OGD-20260824-83DC60999116",
+  "graph_id": "event-e05-codebase-onboarding-shadow",
+  "dedupe_identity": "a24212e84d4fff6c4771b0bf38033ec15eb800bb7526385b3bab5e2ad01b4ab1",
+  "dedupe_key": "E05:2026-08-24:known-repository-state:source-bound-shadow",
+  "contract_fingerprint": "f567f53f07f4a88691fc02622a72069ce1c6f9e4b373fb13f847a3eda3abe4f6",
+  "canonical_binding": {
+    "locator": "dillon-os://routine/E05/2026-08-24:known-repository-state",
+    "version": "2026-08-24:e1cb9e89.05e6a21e.c5a7c091.1b135970.d503a937.90d9bcee.f497ab86.4cbc7e46.43cfa9c9.c4f66a74",
+    "sha256": "bee6d7037763d45601274702c12c8e31ad280fed7e97757744fc5930b1d39065",
+    "captured_at": "2026-08-24T23:49:22.143Z"
+  },
+  "canonical_binding_fingerprint": "1212049b0bb8124dc8365ed24ba30c9eb950cc2078939bbd1cb9cc4d351f204f",
+  "status": "complete",
+  "started_at": "2026-08-24T23:49:22.736Z",
+  "updated_at": "2026-08-24T23:49:24.364Z",
+  "event_sequence": 9,
+  "events": [
+    {
+      "sequence": 1,
+      "event": "run_started",
+      "at": "2026-08-24T23:49:22.736Z",
+      "resumed": false
+    },
+    {
+      "sequence": 2,
+      "event": "planned",
+      "at": "2026-08-24T23:49:23.062Z",
+      "graph_attempt": 1,
+      "item_id": null
+    },
+    {
+      "sequence": 3,
+      "event": "worker_verified",
+      "at": "2026-08-24T23:49:23.655Z",
+      "graph_attempt": 1,
+      "item_id": "E05:080734d1c42b71e832ae"
+    },
+    {
+      "sequence": 4,
+      "event": "workers_verified",
+      "at": "2026-08-24T23:49:23.669Z",
+      "graph_attempt": 1,
+      "item_id": null
+    },
+    {
+      "sequence": 5,
+      "event": "reduced",
+      "at": "2026-08-24T23:49:23.694Z",
+      "graph_attempt": 1,
+      "item_id": null
+    },
+    {
+      "sequence": 6,
+      "event": "terminal_verified",
+      "at": "2026-08-24T23:49:24.001Z",
+      "graph_attempt": 1,
+      "item_id": null
+    },
+    {
+      "sequence": 7,
+      "event": "learned",
+      "at": "2026-08-24T23:49:24.021Z",
+      "graph_attempt": 1,
+      "item_id": null
+    },
+    {
+      "sequence": 8,
+      "event": "finished",
+      "at": "2026-08-24T23:49:24.034Z",
+      "graph_attempt": 1,
+      "item_id": null
+    },
+    {
+      "sequence": 9,
+      "event": "receipt_committed",
+      "at": "2026-08-24T23:49:24.364Z",
+      "outcome": "complete"
+    }
+  ],
+  "engine": {
+    "stage": "finished",
+    "graph_attempt": 1,
+    "plan_signature": "fedbdebde23b76e37056cbcae695a703d38b1be14b819b07f91a46922a5aa993",
+    "verified_workers": {
+      "E05:080734d1c42b71e832ae": {
+        "input_fingerprint": "6d7d172ed82a579af1df3e227bc3b739998b0bb2238281649a92a0cb7e310ff3",
+        "worker_result": {
+          "item_id": "E05:080734d1c42b71e832ae",
+          "input_fingerprint": "6d7d172ed82a579af1df3e227bc3b739998b0bb2238281649a92a0cb7e310ff3",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-83DC60999116:3e1796193d1404e38e51:attempt:1",
+              "maker_evidence": "Built one privacy-safe E05 record for E05:080734d1c42b71e832ae.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/E05/2026-08-24-foundation-shadow/workers/3e1796193d1404e38e51.json",
+                  "sha256": "7d81c7b73e48218fc1add682870a101134bc5835a8c7fc49e6d731ef102a38b9",
+                  "bytes": 1746
+                }
+              ],
+              "checker_evidence": "Independently reconstructed E05:080734d1c42b71e832ae from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/E05/2026-08-24-foundation-shadow/workers/3e1796193d1404e38e51.json",
+              "sha256": "7d81c7b73e48218fc1add682870a101134bc5835a8c7fc49e6d731ef102a38b9",
+              "bytes": 1746
+            }
+          ],
+          "isolation_id": "OGD-20260824-83DC60999116:3e1796193d1404e38e51:attempt:1"
+        }
+      }
+    },
+    "budget_used": 6,
+    "previous_terminal_findings": [],
+    "graph_iterations": [
+      {
+        "iteration": 1,
+        "status": "verified",
+        "planner": {
+          "evidence": "Collected 1 isolated E05 item(s) from source set bee6d7037763d45601274702c12c8e31ad280fed7e97757744fc5930b1d39065.",
+          "item_count": 1,
+          "plan_signature": "fedbdebde23b76e37056cbcae695a703d38b1be14b819b07f91a46922a5aa993",
+          "items": [
+            {
+              "id": "E05:080734d1c42b71e832ae",
+              "isolation_key": "repository:31cce74faad494511962",
+              "input_fingerprint": "6d7d172ed82a579af1df3e227bc3b739998b0bb2238281649a92a0cb7e310ff3",
+              "task": null
+            }
+          ]
+        },
+        "workers": [
+          {
+            "item_id": "E05:080734d1c42b71e832ae",
+            "input_fingerprint": "6d7d172ed82a579af1df3e227bc3b739998b0bb2238281649a92a0cb7e310ff3",
+            "status": "verified",
+            "attempts": [
+              {
+                "attempt": 1,
+                "isolation_id": "OGD-20260824-83DC60999116:3e1796193d1404e38e51:attempt:1",
+                "maker_evidence": "Built one privacy-safe E05 record for E05:080734d1c42b71e832ae.",
+                "artifacts": [
+                  {
+                    "path": "System/outcome-graph/routines/E05/2026-08-24-foundation-shadow/workers/3e1796193d1404e38e51.json",
+                    "sha256": "7d81c7b73e48218fc1add682870a101134bc5835a8c7fc49e6d731ef102a38b9",
+                    "bytes": 1746
+                  }
+                ],
+                "checker_evidence": "Independently reconstructed E05:080734d1c42b71e832ae from the same source-bound contract.",
+                "passed": true,
+                "findings": []
+              }
+            ],
+            "final_artifacts": [
+              {
+                "path": "System/outcome-graph/routines/E05/2026-08-24-foundation-shadow/workers/3e1796193d1404e38e51.json",
+                "sha256": "7d81c7b73e48218fc1add682870a101134bc5835a8c7fc49e6d731ef102a38b9",
+                "bytes": 1746
+              }
+            ],
+            "isolation_id": "OGD-20260824-83DC60999116:3e1796193d1404e38e51:attempt:1"
+          }
+        ],
+        "reduction": {
+          "evidence": "Reduced all checked E05 records without blending isolation keys.",
+          "artifacts": [
+            {
+              "path": "System/outcome-graph/routines/E05/2026-08-24-foundation-shadow/codebase-onboarding-receipt.json",
+              "sha256": "b885b117d616a52d04754a9c5618b1f213aa2f3be748f77e1d4aa98c7ee66215",
+              "bytes": 1792
+            },
+            {
+              "path": "System/outcome-graph/routines/E05/2026-08-24-foundation-shadow/architecture-command-map.json",
+              "sha256": "b5c590fa01b177c6ef89245eace50fc28988b183d4496d3c9d280791ab46c44d",
+              "bytes": 1570
+            }
+          ]
+        },
+        "terminal_verification": {
+          "evidence": "Recollected and independently verified all E05 sources, records, negative states, and artifact hashes.",
+          "declared_pass": true,
+          "passed": true,
+          "assertions": [
+            {
+              "id": "source-manifest-stable",
+              "passed": true,
+              "detail": "Every named source remains hash-bound at terminal verification."
+            },
+            {
+              "id": "every-isolated-item-reconstructed-exactly-once",
+              "passed": true,
+              "detail": "Every in-scope item has one collision-resistant reconstructed record."
+            },
+            {
+              "id": "reducer-output-reproduces-exactly",
+              "passed": true,
+              "detail": "Final artifacts reproduce exactly from current sources and the frozen evaluation clock."
+            },
+            {
+              "id": "canonical-project-route-verified",
+              "passed": true,
+              "detail": "The exact known repository is resolved."
+            },
+            {
+              "id": "applicable-rules-and-docs-loaded",
+              "passed": true,
+              "detail": "Rules and primary docs are evidenced."
+            },
+            {
+              "id": "architecture-commands-tests-and-owners-mapped",
+              "passed": true,
+              "detail": "Architecture and commands are mapped."
+            },
+            {
+              "id": "git-and-deployment-state-inspected",
+              "passed": true,
+              "detail": "Git and deployment boundaries are explicit."
+            },
+            {
+              "id": "read-only-without-implementation-authority",
+              "passed": true,
+              "detail": "Onboarding grants no implementation authority."
+            },
+            {
+              "id": "privacy-and-no-mutation-boundary",
+              "passed": true,
+              "detail": "Final artifacts are redacted and attest no external, canonical, provider, restart, or checkpoint mutation."
+            }
+          ],
+          "artifact_manifest": [
+            {
+              "path": "System/outcome-graph/routines/E05/2026-08-24-foundation-shadow/codebase-onboarding-receipt.json",
+              "sha256": "b885b117d616a52d04754a9c5618b1f213aa2f3be748f77e1d4aa98c7ee66215",
+              "bytes": 1792
+            },
+            {
+              "path": "System/outcome-graph/routines/E05/2026-08-24-foundation-shadow/architecture-command-map.json",
+              "sha256": "b5c590fa01b177c6ef89245eace50fc28988b183d4496d3c9d280791ab46c44d",
+              "bytes": 1570
+            }
+          ],
+          "manifest_errors": []
+        },
+        "learning": {
+          "evidence": "Appended one hashed E05 correction entry.",
+          "corrections": [
+            "Retain E05 source bindings, negative states, exact authority, and terminal assertions until the underlying evidence changes."
+          ],
+          "ledger": "System/outcome-graph/routines/E05/2026-08-24-foundation-shadow/corrections.jsonl",
+          "ledger_receipt": {
+            "locator": "System/outcome-graph/routines/E05/2026-08-24-foundation-shadow/corrections.jsonl",
+            "entry_sha256": "2c0b44c7c58e9799a13cf059dddbf54264529c4ede1c5893a12560bf5a2e1284"
+          }
+        }
+      }
+    ],
+    "invocation_log": [
+      {
+        "adapter": "source-bound-e05-planner",
+        "invoked_at": "2026-08-24T23:49:22.749Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-e05-maker",
+        "invoked_at": "2026-08-24T23:49:23.078Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-e05-checker",
+        "invoked_at": "2026-08-24T23:49:23.376Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-e05-reducer",
+        "invoked_at": "2026-08-24T23:49:23.683Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-e05-terminal-verifier",
+        "invoked_at": "2026-08-24T23:49:23.703Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-e05-learner",
+        "invoked_at": "2026-08-24T23:49:24.019Z",
+        "status": "returned"
+      }
+    ]
+  },
+  "last_event": "receipt_committed",
+  "state_revision": 9,
+  "previous_state_sha256": "5bc194996d1b4953f30f695e5aa6685cdaf9fbe8158478726533e35329410cb4",
+  "receipt": {
+    "path": "runs/OGD-20260824-83DC60999116/receipt.json",
+    "sha256": "a7cd66247a2bf0d0a3fce76f7c6e4b3f6e7d2b4ecd10bcee15c8f653e78c5fa1",
+    "bytes": 12582
+  }
+}

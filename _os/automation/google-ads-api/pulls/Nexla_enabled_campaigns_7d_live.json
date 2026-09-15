@@ -1,0 +1,48 @@
+[
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038365681",
+      "status": "ENABLED",
+      "biddingStrategyType": "MAXIMIZE_CONVERSIONS",
+      "name": "G_US_S_Brand_Exact",
+      "id": "22038365681"
+    },
+    "metrics": {
+      "clicks": "32",
+      "searchBudgetLostImpressionShare": 0,
+      "searchImpressionShare": 0.9743589743589743,
+      "searchRankLostImpressionShare": 0.02564102564102564,
+      "conversions": 0,
+      "costMicros": "68490054",
+      "allConversions": 0,
+      "impressions": "144"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/7917802207/campaignBudgets/14181179446",
+      "amountMicros": "25000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "status": "ENABLED",
+      "biddingStrategyType": "TARGET_SPEND",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "metrics": {
+      "clicks": "53",
+      "searchBudgetLostImpressionShare": 0.4411778652378017,
+      "searchImpressionShare": 0.0999,
+      "searchRankLostImpressionShare": 0.4780059114546288,
+      "conversions": 0,
+      "costMicros": "297459800",
+      "allConversions": 0,
+      "impressions": "5474"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/7917802207/campaignBudgets/15467446061",
+      "amountMicros": "40750000"
+    }
+  }
+]
