@@ -2,7 +2,7 @@
 note_type: ops
 status: active
 created: 2026-09-01
-updated: 2026-09-01
+updated: 2026-09-15
 owner: Dillon Mohr
 verification_status: verified
 review_on: 2026-10-01
@@ -98,6 +98,7 @@ then `claude mcp add` for Higgsfield, then `/mcp` login.
 ## Dated preflight log
 
 - 2026-09-01 (session 2, `ListConnectors`): live Gmail, Slack, Google Drive, Google Calendar, HyperFrames, Indeed, Higgsfield. Degraded Netlify and WordPress.com (installed, `installState: unknown`, not enabled in chat; deploys drafted to approval queue). Blocked Composio, Claude Browser, HubSpot, Ads/GA4/Meta, Semrush (absent from workspace). Higgsfield moved from pending to live.
+- 2026-09-14 (Windows box, live probes — **scope correction to the row above**): the 09-01 "Blocked Composio" verdict was true of *that cloud workspace* and was not a fact about the Composio server. On the Windows box, `google_search_console`, `google_analytics` and `googleads` were all `active`; a read-only `GET_SITE` on `alignhcm.com` returned `siteOwner`, `LIST_SITEMAPS` and a totals query returned data, and `LIST_ACCOUNT_SUMMARIES` returned Align HCM property 320235048. **The only genuine block is Google Ads entitlement**, because Explorer access attaches to Cloud project 150963436905 and Composio's OAuth client does not use it — Search Console and GA4 were never blocked. Separately, Composio is not required for these reads at all: the gcloud Application Default Credential carries webmasters.readonly, analytics.readonly, tagmanager.readonly and adwords, and all four APIs are enabled on `momentum-360-489301`. Supersedes the 2026-09-12 closeout's "gcloud is unauthenticated". Source: [[12_Brain/01_Captures/2026-09-14 - Align Search Console and GA4 direct snapshot, gap table, and the Google access answer]].
 
 ## Rules
 
@@ -107,6 +108,11 @@ then `claude mcp add` for Higgsfield, then `/mcp` login.
   same session.
 - Re-verify with `ListConnectors` before claiming a connector is usable; the
   state changes and installed does not mean authenticated.
+- Write every verdict as `<surface>: <state> because <scope>`, with the date and
+  the workspace it was observed in. A bare "blocked" is read as a fact about the
+  whole connector and outlives the condition that produced it — see the 2026-09-14
+  correction above and
+  [[12_Brain/11_Craft/earned-lessons|earned-lessons]].
 
 ## Links
 

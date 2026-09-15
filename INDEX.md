@@ -85,6 +85,11 @@ links instead of loading the entire vault.
   synthesis.
 - [[12_Brain/08_Memory/README|Memory Ledger]] — corrections, preferences, and
   facts with observation and validity dates.
+  Open correction: [[12_Brain/08_Memory/2026-09-15 - Align HCM engagement ended|Align HCM engagement ended 2026-09-02]] —
+  three read-first files still call it current.
+- [[12_Brain/11_Craft/00_Index|Agent Craft]] — how the agentic layer is built, what it
+  gets wrong, and the lessons that repeat. Latest nightly pass:
+  [[12_Brain/11_Craft/2026-09-15 - daily learning review|2026-09-15 daily learning review]].
 
 ## Operating system
 

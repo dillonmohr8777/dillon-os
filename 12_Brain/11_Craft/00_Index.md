@@ -2,7 +2,7 @@
 note_type: index
 status: active
 created: 2026-08-18
-updated: 2026-08-19
+updated: 2026-09-15
 source_refs: []
 tags: [craft, index]
 ---
@@ -31,4 +31,19 @@ Agents write there. Never into a generated brief.
 
 - [[12_Brain/11_Craft/2026-08-19 - operating brief|2026-08-19 - operating brief]]
 - [[12_Brain/11_Craft/2026-08-18 - operating brief|2026-08-18 - operating brief]]
+
+Generated briefs are only as fresh as `12_Brain/queue/claude-loop-*.jsonl`, and that
+writer stopped on 2026-08-18. Any brief dated after that is counting August. Read
+`newest_receipt_day` before you read the tables — see proposal 1 in the 2026-09-15
+review below.
+
+## Daily learning reviews
+
+Hand-written nightly passes over what the estate did and what its machinery got wrong.
+Unlike the briefs above, these are not generated and are safe to edit.
+
+- [[12_Brain/11_Craft/2026-09-15 - daily learning review|2026-09-15 - daily learning review]]
+
+Earlier reviews (2026-09-03 through 2026-09-10) exist only on unmerged branches —
+PRs #363, #368, #373, #380, #384, #388, #395. They are not readable from `main`.
 
