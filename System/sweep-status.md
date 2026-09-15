@@ -3,7 +3,7 @@ note_type: status
 status: active
 date: 2026-09-15
 updated: 2026-09-15
-generated_at: 2026-09-15T15:50:02.575Z
+generated_at: 2026-09-15T18:00:01.675Z
 generated_by: _os/automation/bin/daily-sweep.js
 days_since_previous_sweep: 0
 tags:
@@ -29,7 +29,7 @@ source_refs:
 
 **ATTENTION — 4 of 14 daily briefs never produced.**
 
-Swept `2026-09-15T15:50:02.575Z`. Previous sweep: 2026-09-15T15:02:39.366Z.
+Swept `2026-09-15T18:00:01.675Z`. Previous sweep: 2026-09-15T17:00:01.618Z.
 
 This file is written by the sweep and by nothing else. If the date in
 the frontmatter above is not today, the sweep did not run today — that
@@ -50,13 +50,13 @@ written down are the actual failure.
 
 | Artifact | State | Age (h) | Budget (h) | Produced by |
 | --- | --- | --- | --- | --- |
-| `Daily-Briefs/2026-09-15.md` | fresh | 1.8 | 26 | Codex cron daily-communications-brain (07:00 local) |
-| `12_Brain/state/daily-communications-brain.json` | fresh | 1.8 | 26 | Codex cron daily-communications-brain |
-| `12_Brain/state/claude-daily-driver.json` | fresh | 0.2 | 2 | Task Scheduler Claude-Autonomous-Daily-Driver (PT15M) |
-| `12_Brain/state/claude-loop.json` | fresh | 0.7 | 26 | claude-loop.js via the daily driver |
-| `Daily-Briefs/plan-2026-09-15.md` | fresh | 0.1 | 26 | Task Scheduler Immohrtal-Crew |
-| `12_Brain/state/frontmatter-validate.json` | fresh | 0.1 | 168 | frontmatter-validate.js, on demand + pre-pulse |
-| `System/approval-queue.md` | fresh | 0.7 | 72 | every session that gates an external action |
+| `Daily-Briefs/2026-09-15.md` | fresh | 4 | 26 | Codex cron daily-communications-brain (07:00 local) |
+| `12_Brain/state/daily-communications-brain.json` | fresh | 3.9 | 26 | Codex cron daily-communications-brain |
+| `12_Brain/state/claude-daily-driver.json` | fresh | 0.1 | 2 | Task Scheduler Claude-Autonomous-Daily-Driver (PT15M) |
+| `12_Brain/state/claude-loop.json` | fresh | 2.9 | 26 | claude-loop.js via the daily driver |
+| `Daily-Briefs/plan-2026-09-15.md` | fresh | 0.3 | 26 | Task Scheduler Immohrtal-Crew |
+| `12_Brain/state/frontmatter-validate.json` | fresh | 2.3 | 168 | frontmatter-validate.js, on demand + pre-pulse |
+| `System/approval-queue.md` | fresh | 0.9 | 72 | every session that gates an external action |
 
 ## Daily brief delivery, last 14 days
 
@@ -70,7 +70,7 @@ Scheduling is owned by `_os/automation/cadence/`. This sweep is a job in
 its `daily.yaml` manifest and writes to its ledger — one ledger, not two.
 
 - Windows Task Scheduler entries: `Cadence-daily`, `Cadence-monthly`, `Cadence-sweep-heartbeat`, `Cadence-weekly`.
-- Ledger rows: **31**, first entry 2026-09-14.
+- Ledger rows: **34**, first entry 2026-09-14.
 - Every day since the first ledger entry has at least one row.
 - `daily.yaml`: 3 job(s), 0 disabled.
 - `weekly.yaml`: 2 job(s), 0 disabled.
@@ -80,7 +80,7 @@ its `daily.yaml` manifest and writes to its ledger — one ledger, not two.
 
 No counter dropped from non-zero to zero since the previous sweep.
 
-Counters this run: shipped_repos=6, at_risk_repos=18, overdue_notes=11, approval_open_checkboxes=123, fresh_artifacts=7.
+Counters this run: shipped_repos=5, at_risk_repos=19, overdue_notes=11, approval_open_checkboxes=127, fresh_artifacts=7.
 
 ## Client state
 
@@ -91,17 +91,17 @@ Counters this run: shipped_repos=6, at_risk_repos=18, overdue_notes=11, approval
 
 ## What shipped in the last 24 hours
 
-- **dillon-os** — 76 commit(s): session: master orchestrator record for 2026-09-15; sweep: re-run on the merged tree, stale drops 3 to 0; Merge pull request #404 from dillonmohr8777/cursor/immohrtal-standing-canary-3c2e; merge origin/main into the working branch; chore: delete the reserved NUL file and commit the remainder
+- **dillon-os** — 61 commit(s): scripts: make Repair-ScheduledTasks idempotent and stop it killing Workmate; session: master orchestrator record for 2026-09-15; sweep: re-run on the merged tree, stale drops 3 to 0; Merge pull request #404 from dillonmohr8777/cursor/immohrtal-standing-canary-3c2e; merge origin/main into the working branch
 - **momentum-slack-agent** — 1 commit(s): Retire this runtime: Workmate is the decided Slack surface
-- **mac-mini-handoff** — 4 commit(s): Correct the stale Puttery access claim in the first-boot file; Correct the Onsite tracking claim; add the Nexla call card; Mark what was resolved the same day the kit was written; Mac mini bootstrap kit and daily-sweep handoff
+- **mac-mini-handoff** — 3 commit(s): inventory: scan recursively, and fix the encoding bug that broke it under powershell.exe; Correct the stale Puttery access claim in the first-boot file; Correct the Onsite tracking claim; add the Nexla call card
 - **weekly-report-dashboard** — 1 commit(s): Initial commit: the weekly client report system
 - **client-operations** — 8 commit(s): feat(faq-bot): read-only team FAQ bot over 04_SOPs, answer path verified; state: restore portfolio-priorities parity with the registry; gt-clinic: stage the kickoff email as a real Gmail draft; intake: packet on three stale registry records; Commit the weekend's client deliverables
-- **website-design-engine** — 1 commit(s): Initial commit: local AI website design engine
 
 ## Work that would not survive this machine
 
 - **client-operations** — 8 commit(s) exist only on this machine
 - **dillon-os** — 33 uncommitted file(s)
+- **dillon-os** — 15 uncommitted file(s)
 - **agent-vault** — 12 uncommitted file(s)
 - **client-operations-ami-pdfs-d9e7** — 6 uncommitted file(s)
 - **dillon-os-films** — 3 uncommitted file(s)
@@ -109,13 +109,13 @@ Counters this run: shipped_repos=6, at_risk_repos=18, overdue_notes=11, approval
 - **bridge-discovery-prototype** — 1 uncommitted file(s)
 - **client-operations-canonical** — 1 uncommitted file(s)
 - **coinbase-derivatives-paper-platform** — 1 uncommitted file(s)
-- **dillon-os** — 1 uncommitted file(s)
 - **MB-Lab** — 1 uncommitted file(s)
 - **nkcdc-phase-two-growth-proposal** — 1 uncommitted file(s)
 - **philadelphia-prospect-sites** — 1 uncommitted file(s)
 - **pro-fence-deck-claude-handoff** — 1 uncommitted file(s)
 - **shadow-heating-website** — 1 uncommitted file(s)
 - **vace-platform** — 1 uncommitted file(s)
+- **mac-mini-handoff** — 1 commit(s) exist only on this machine
 - **hermes-control** — 1 uncommitted file(s)
 - **bridge-wt-pr16** — branch has no upstream — nothing is pushing it
 
@@ -135,15 +135,15 @@ Counters this run: shipped_repos=6, at_risk_repos=18, overdue_notes=11, approval
 
 ## Waiting on a human
 
-- Queue: 189 lines, last modified 2026-09-15T15:07:33.187Z.
-- Open checkboxes: **123**.
-- Risk labels present: low=15, high=49, mediumium=25, medium=34.
+- Queue: 194 lines, last modified 2026-09-15T17:06:21.441Z.
+- Open checkboxes: **127**.
+- Risk labels present: low=15, high=51, mediumium=25, medium=36.
 - An item in the queue is a request, never a permission.
 
 ## Machine health
 
 - win32 10.0.26200, host `DESKTOP-4AHKEC4`.
-- Uptime **8.3 h**. Memory 35.7 GB free of 63.8 GB.
+- Uptime **10.5 h**. Memory 31.5 GB free of 63.8 GB.
 - Unclean shutdowns in 30 days: **16** (Windows System event log, Id 6008).
 
 ---

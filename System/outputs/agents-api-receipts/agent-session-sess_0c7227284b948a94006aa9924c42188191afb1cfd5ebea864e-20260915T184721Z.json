@@ -1,0 +1,120 @@
+{
+  "schema_version": 2,
+  "recorded_at_utc": "2026-09-15T18:47:21.0714392Z",
+  "receipt_status": "completed",
+  "session_id": "sess_0c7227284b948a94006aa9924c42188191afb1cfd5ebea864e",
+  "session_status": "idle",
+  "environment": "openai_hosted",
+  "model": "gpt-6-astra",
+  "reasoning_effort": "xhigh",
+  "multi_agent": false,
+  "max_concurrent_subagents": 0,
+  "minimum_completed_subagents": 0,
+  "input": {
+    "source": "file",
+    "file_name": "astra-consult-input.txt",
+    "bytes": 3149,
+    "sha256": "7032689F920A933CC53B2DEAEC60F54870273EFAD9DD6C628D985F4B4F7B04BB"
+  },
+  "elapsed_seconds": 108,
+  "poll_timeout_seconds": 240,
+  "request_timeout_seconds": 90,
+  "error": null,
+  "required_actions": null,
+  "usage": null,
+  "items": {
+    "count": 6,
+    "types": [
+      "message",
+      "reasoning"
+    ],
+    "message_count": 2,
+    "assistant_message_count": 1,
+    "records": [
+      {
+        "id": "msg_8d3e316a62ae07189162e67601fc73c9ed8da642678eb252a5",
+        "type": "message",
+        "role": "user",
+        "status": "completed",
+        "turn_id": "turn_0c7227284b948a94006aa9925442e08191b57221ea62bbc620",
+        "phase": null,
+        "created_at": null
+      },
+      {
+        "id": "rs_0c7067dd888d4210016aa99254189c87d18d96cbec62ad31fe",
+        "type": "reasoning",
+        "role": null,
+        "status": "completed",
+        "turn_id": "turn_0c7227284b948a94006aa9925442e08191b57221ea62bbc620",
+        "phase": null,
+        "created_at": null
+      },
+      {
+        "id": "rs_0c7067dd888d4210016aa992649aa087d183abe1c08755e50b",
+        "type": "reasoning",
+        "role": null,
+        "status": "completed",
+        "turn_id": "turn_0c7227284b948a94006aa9925442e08191b57221ea62bbc620",
+        "phase": null,
+        "created_at": null
+      },
+      {
+        "id": "rs_0c7067dd888d4210016aa99274ab6087d18ab82758430d0f3c",
+        "type": "reasoning",
+        "role": null,
+        "status": "completed",
+        "turn_id": "turn_0c7227284b948a94006aa9925442e08191b57221ea62bbc620",
+        "phase": null,
+        "created_at": null
+      },
+      {
+        "id": "rs_0c7067dd888d4210016aa99283dd1087d1821854a91019c8dc",
+        "type": "reasoning",
+        "role": null,
+        "status": "completed",
+        "turn_id": "turn_0c7227284b948a94006aa9925442e08191b57221ea62bbc620",
+        "phase": null,
+        "created_at": null
+      },
+      {
+        "id": "msg_0c7067dd888d4210016aa992917d1087d1b6ba6f2af3d8dc71",
+        "type": "message",
+        "role": "assistant",
+        "status": "completed",
+        "turn_id": "turn_0c7227284b948a94006aa9925442e08191b57221ea62bbc620",
+        "phase": "final_answer",
+        "created_at": null
+      }
+    ]
+  },
+  "turns": {
+    "count": 1,
+    "types": [],
+    "message_count": 0,
+    "assistant_message_count": 0,
+    "records": [
+      {
+        "id": "turn_0c7227284b948a94006aa9925442e08191b57221ea62bbc620",
+        "type": null,
+        "role": null,
+        "status": "completed",
+        "turn_id": null,
+        "phase": null,
+        "created_at": 1789497938
+      }
+    ]
+  },
+  "turn_statuses": "completed",
+  "tool_failures": null,
+  "delegation": {
+    "state": "not_requested",
+    "sufficient": true
+  },
+  "subagent_evidence": null,
+  "artifacts": [
+    null
+  ],
+  "exported_artifacts": [],
+  "evidence_error": "",
+  "deletion": null
+}

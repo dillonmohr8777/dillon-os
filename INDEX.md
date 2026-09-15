@@ -136,6 +136,11 @@ evidence.
 
 ## Reliability — 2026-09-15
 
+- [[12_Brain/07_Reviews/2026-09-15 - Astra consultation, the estate's root problem|Astra consultation, the estate's root problem]]
+  — a live GPT-6 Astra session, given today's own verified findings, names one root
+  cause under four of them, calls the job-outreach routing rule wrong rather than the
+  effort, and confirms live that this account has zero cost visibility into Agents API runs.
+
 - [[12_Brain/07_Reviews/2026-09-15 - Master orchestrator session record|Master orchestrator session record]]
   — the full 2026-09-15 session: what access was exercised and what it proved,
   the three root causes found, the 87-conflict main merge, and what is still open.

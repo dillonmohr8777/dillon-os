@@ -1,6 +1,6 @@
 ---
 tags: [system, approvals, archive]
-last_updated: 2026-09-15T15:04Z
+last_updated: 2026-09-15T16:05Z
 ---
 
 # Approval Queue Archive
@@ -87,3 +87,8 @@ Moved from the active queue because each item was already explicitly completed.
 - [x] 2026-09-01 -- [Puttery / Resy API] -- SUPERSEDED: Dillon already replied 2026-09-01 20:02Z moving to webhook setup; credential rotation still recommended in a follow-up -- -- Approve email to Tom Luciano and api-integration@resy.com requesting credential rotation and confirming Business Group ID, NYC Business ID, and webhook format; do not use the emailed credential -- Source: 00_Inbox/Agent-Proposals/Claude/2026-09-01-puttery-wnf-reply-drafts.md -- Evidence: gmail thread 1a049e62f063f279, credential sent in plain text -- Risk: med
 - [x] 2026-09-01 -- [Puttery / Mac Frederick] -- SENT 2026-09-02 02:58Z in thread -- -- Approve #puttery reply recommending monthly billing for the first 3 months, contract and CC form as the gate -- Source: 00_Inbox/Agent-Proposals/Claude/2026-09-01-puttery-wnf-reply-drafts.md -- Evidence: Mac asked to confirm billing 1x vs monthly (Slack 2026-09-01) -- Risk: low
 - [x] 2026-09-01 -- [With Not For / Jack Lesser] -- SENT 2026-09-02 02:58Z gmail 1a0600da0af6838b, preview to be brought to the call -- -- Approve email confirming Wednesday 10 am and attaching the rebuilt homepage preview -- Source: 02_Campaigns/With Not For/With Not For.md -- Evidence: gmail thread 1a034b2a4a2214bc, Jack proposed "10am on wens" -- Risk: low
+
+## Completed batch 2026-09-15 - approval scan maintenance
+
+- [x] 2026-09-14 -- [Cadence / the driver has no scheduled task, so it only runs when someone remembers] -- `_os/automation/cadence/README.md` describes three scheduled tasks reading the manifests. None exist: no Task Scheduler entry matches "cadence". Every run to date was hand-started, which means the layer built to detect silence is itself silent whenever nobody starts it. `System/sweep-install.md` carries the registration for both Windows and launchd -- Source: Get-ScheduledTask 2026-09-14; daily-sweep cadence probe -- Risk: high
+  — ARCHIVED 2026-09-15, STALE DUPLICATE: the archive already records the corrected version of this item. Four Cadence tasks are registered; the unresolved issue is their Interactive logon mode, not their existence. Source: System/operating-status.md, verified 2026-09-15.
