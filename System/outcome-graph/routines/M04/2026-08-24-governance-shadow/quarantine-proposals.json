@@ -1,0 +1,247 @@
+{
+  "schema_version": 1,
+  "routine_id": "M04",
+  "generated_at": "2026-08-25T00:36:30.471Z",
+  "source_set_sha256": "13b96d5cb99b6efaa3f643db6225372e63ae1b272ecae42a3800a0b052e0c0c0",
+  "state": "proposal_only",
+  "proposals": [
+    {
+      "sample_fingerprint": "dcb900d48cdc2794983fb8df7e96f7cc8402393c75779048d95024418fa37567",
+      "client_id": "align-hcm",
+      "surface": "access_metadata",
+      "reason": "surface-evidence-missing",
+      "proposed_action": "Review the exact canonical client route before any assignment or move."
+    },
+    {
+      "sample_fingerprint": "2215c98b579fd6abbcb8ffc4d2bd1e4c2c813717948ac2b05461b790c2a5de90",
+      "client_id": "ami-cleaning",
+      "surface": "access_metadata",
+      "reason": "surface-evidence-missing",
+      "proposed_action": "Review the exact canonical client route before any assignment or move."
+    },
+    {
+      "sample_fingerprint": "cc5370bbd5b2395e77bfdaae5f59b27eff64988f72d5d07eb5455b82ae8ee64e",
+      "client_id": "ami-cleaning",
+      "surface": "account",
+      "reason": "surface-evidence-missing",
+      "proposed_action": "Review the exact canonical client route before any assignment or move."
+    },
+    {
+      "sample_fingerprint": "97478d6b2cd3a878a2e5adfa13a9c09b36aecad39e7873e33f39393f899d80dc",
+      "client_id": "bar-crawl-usa",
+      "surface": "access_metadata",
+      "reason": "cross-client-identifier-overlap",
+      "proposed_action": "Review the exact canonical client route before any assignment or move."
+    },
+    {
+      "sample_fingerprint": "13c244d99620dd5b0f739add8508143996dc0a1d5682a0b44a55fa2f2ad9f91b",
+      "client_id": "bar-crawl-usa",
+      "surface": "account",
+      "reason": "cross-client-identifier-overlap",
+      "proposed_action": "Review the exact canonical client route before any assignment or move."
+    },
+    {
+      "sample_fingerprint": "3f0c756ab269ec0d4bf39e288e3ac1c08f931b689289bc8e60eac369b33201af",
+      "client_id": "bercos-popcorn",
+      "surface": "access_metadata",
+      "reason": "surface-evidence-missing",
+      "proposed_action": "Review the exact canonical client route before any assignment or move."
+    },
+    {
+      "sample_fingerprint": "79a55a518a1e5c000a42526bbd26b7147b5b462aca7a6c042cd81640c6b41729",
+      "client_id": "bercos-popcorn",
+      "surface": "account",
+      "reason": "surface-evidence-missing",
+      "proposed_action": "Review the exact canonical client route before any assignment or move."
+    },
+    {
+      "sample_fingerprint": "b95bb9be68bffd18ffe8c8bf14b441d4959a819df84d6f31d8bbfa754046706d",
+      "client_id": "bigorange-marketing",
+      "surface": "account",
+      "reason": "surface-evidence-missing",
+      "proposed_action": "Review the exact canonical client route before any assignment or move."
+    },
+    {
+      "sample_fingerprint": "10d28871697f7efe95e844459431e6f1cee62c99bf6832b86819ee8348721389",
+      "client_id": "bok-law-firm",
+      "surface": "access_metadata",
+      "reason": "surface-evidence-missing",
+      "proposed_action": "Review the exact canonical client route before any assignment or move."
+    },
+    {
+      "sample_fingerprint": "f1b7fc928326aea597076e319743727d764dd9ec0a383659660a61b413e4a618",
+      "client_id": "bok-law-firm",
+      "surface": "account",
+      "reason": "surface-evidence-missing",
+      "proposed_action": "Review the exact canonical client route before any assignment or move."
+    },
+    {
+      "sample_fingerprint": "7b5d5a354aa6f1004fe8f0bb3e8da9204fb87d2a5ddcb7ae15532224cc5ca097",
+      "client_id": "bridge-software",
+      "surface": "access_metadata",
+      "reason": "surface-evidence-missing",
+      "proposed_action": "Review the exact canonical client route before any assignment or move."
+    },
+    {
+      "sample_fingerprint": "a60a7b36d34079e1c8de31d37317c9bd768765a5272a81ff6e78d1be450d792a",
+      "client_id": "bridge-software",
+      "surface": "account",
+      "reason": "surface-evidence-missing",
+      "proposed_action": "Review the exact canonical client route before any assignment or move."
+    },
+    {
+      "sample_fingerprint": "13511ae6fe70c61c90a9a29a06c1e75cd1fd5309cd84aef6a4fd784ab3059ee2",
+      "client_id": "cindy-may-christmas",
+      "surface": "access_metadata",
+      "reason": "surface-evidence-missing",
+      "proposed_action": "Review the exact canonical client route before any assignment or move."
+    },
+    {
+      "sample_fingerprint": "ca59ee75596128c0df950e3ca0da9ddf2200cf8c8be137e7cb71d943c2aa7833",
+      "client_id": "cindy-may-christmas",
+      "surface": "account",
+      "reason": "surface-evidence-missing",
+      "proposed_action": "Review the exact canonical client route before any assignment or move."
+    },
+    {
+      "sample_fingerprint": "b1ebc35af8846e8d64e9bf87bbf078df21dfc3d110ca001b4e2c75e5b0260800",
+      "client_id": "fagan-painting",
+      "surface": "access_metadata",
+      "reason": "cross-client-identifier-overlap",
+      "proposed_action": "Review the exact canonical client route before any assignment or move."
+    },
+    {
+      "sample_fingerprint": "e9255ff722796488bb3b393b6f92b2ff103dd5a59f43b651a4918301896e42de",
+      "client_id": "fagan-painting",
+      "surface": "account",
+      "reason": "cross-client-identifier-overlap",
+      "proposed_action": "Review the exact canonical client route before any assignment or move."
+    },
+    {
+      "sample_fingerprint": "41ff11f64a4eba9e532cc084fe77e252ff66f3089e1db32eedb91fec7ea849a7",
+      "client_id": "hope-wellness-center",
+      "surface": "access_metadata",
+      "reason": "surface-evidence-missing",
+      "proposed_action": "Review the exact canonical client route before any assignment or move."
+    },
+    {
+      "sample_fingerprint": "c3550653d42c4d7029f074d2b879d8dcdb8bd7dda94a0fb3d84afda7837d245d",
+      "client_id": "hope-wellness-center",
+      "surface": "account",
+      "reason": "surface-evidence-missing",
+      "proposed_action": "Review the exact canonical client route before any assignment or move."
+    },
+    {
+      "sample_fingerprint": "a144689ce72c7df800354dda8ec7f4d8c68427a2c1c80f3ae2d10b4a7880d5c6",
+      "client_id": "nexla",
+      "surface": "access_metadata",
+      "reason": "surface-evidence-missing",
+      "proposed_action": "Review the exact canonical client route before any assignment or move."
+    },
+    {
+      "sample_fingerprint": "0e48fa90567d54846af456167a880486d186f7c2af043ac587256cd63d5b946c",
+      "client_id": "nexla",
+      "surface": "account",
+      "reason": "surface-evidence-missing",
+      "proposed_action": "Review the exact canonical client route before any assignment or move."
+    },
+    {
+      "sample_fingerprint": "11c280740854ced01a74d017596e369c185ec25c53cd42753caa88b1f57c375d",
+      "client_id": "pritzker-law-group",
+      "surface": "account",
+      "reason": "surface-evidence-missing",
+      "proposed_action": "Review the exact canonical client route before any assignment or move."
+    },
+    {
+      "sample_fingerprint": "e265306ffbfda125fb8464bae1804333930498cb90185a13c25b6408aced2358",
+      "client_id": "pro-fence-deck",
+      "surface": "access_metadata",
+      "reason": "surface-evidence-missing",
+      "proposed_action": "Review the exact canonical client route before any assignment or move."
+    },
+    {
+      "sample_fingerprint": "028c40cee3d36b0502e806e15245cb9818cb587a867241cd993ce88395144d59",
+      "client_id": "pro-fence-deck",
+      "surface": "account",
+      "reason": "surface-evidence-missing",
+      "proposed_action": "Review the exact canonical client route before any assignment or move."
+    },
+    {
+      "sample_fingerprint": "444c8627aa57995f35db369c0f7dcfe1921a04ab849ae892b04d39d4dc50897a",
+      "client_id": "pro-fence-deck",
+      "surface": "communication",
+      "reason": "surface-evidence-missing",
+      "proposed_action": "Review the exact canonical client route before any assignment or move."
+    },
+    {
+      "sample_fingerprint": "0544fd845178c7278dd05c8973686d1ff14e317a349482b5a9c3fddc5971ae0c",
+      "client_id": "revive-systems",
+      "surface": "account",
+      "reason": "surface-evidence-missing",
+      "proposed_action": "Review the exact canonical client route before any assignment or move."
+    },
+    {
+      "sample_fingerprint": "c38b62003e0752ecd449523fe28cb4b17b3bf3cf61d6e2652bdd7ab00feedd9b",
+      "client_id": "shadow-heating-cooling",
+      "surface": "account",
+      "reason": "surface-evidence-missing",
+      "proposed_action": "Review the exact canonical client route before any assignment or move."
+    },
+    {
+      "sample_fingerprint": "6175e7608d6e8cee8181dbba206297a422e534f95ac1b59e412483e0cf8e8408",
+      "client_id": "tags-2-go",
+      "surface": "access_metadata",
+      "reason": "surface-evidence-missing",
+      "proposed_action": "Review the exact canonical client route before any assignment or move."
+    },
+    {
+      "sample_fingerprint": "a6438c9e1ea0ef9f7ebd4af5a76348ac119c251d462126007a78aade695ef571",
+      "client_id": "tags-2-go",
+      "surface": "account",
+      "reason": "surface-evidence-missing",
+      "proposed_action": "Review the exact canonical client route before any assignment or move."
+    },
+    {
+      "sample_fingerprint": "634e21ae2ed2fbb9886acca38423c2c6723ba1f9a6f2dc381e193ff3cdc01d9d",
+      "client_id": "va-claims-edge",
+      "surface": "access_metadata",
+      "reason": "surface-evidence-missing",
+      "proposed_action": "Review the exact canonical client route before any assignment or move."
+    },
+    {
+      "sample_fingerprint": "a80c29a20e296f78e1015abf5263691d9c27e7df00c5196ca7237bcf6c152a6a",
+      "client_id": "va-claims-edge",
+      "surface": "account",
+      "reason": "surface-evidence-missing",
+      "proposed_action": "Review the exact canonical client route before any assignment or move."
+    },
+    {
+      "sample_fingerprint": "72c25f63a02c1b662a396491c8f4900ce0cc47e4a041884f7755d99fdb6ea4a0",
+      "client_id": "zen-spa-tropicana",
+      "surface": "access_metadata",
+      "reason": "surface-evidence-missing",
+      "proposed_action": "Review the exact canonical client route before any assignment or move."
+    },
+    {
+      "sample_fingerprint": "a0bd9a6a201a9d29f23e4130853ea0b69867fcfdde4ff0f9d30a4920c70de864",
+      "client_id": "zen-spa-tropicana",
+      "surface": "account",
+      "reason": "surface-evidence-missing",
+      "proposed_action": "Review the exact canonical client route before any assignment or move."
+    }
+  ],
+  "applied_moves": 0,
+  "provider_mutations": 0,
+  "authority": {
+    "read_only": true,
+    "proposal_only": true,
+    "external_action_attempted": false,
+    "canonical_write_attempted": false,
+    "provider_mutation_attempted": false,
+    "permission_change_attempted": false,
+    "deletion_attempted": false,
+    "schedule_change_attempted": false,
+    "billing_change_attempted": false,
+    "record_move_attempted": false
+  }
+}

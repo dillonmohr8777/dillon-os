@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "graph_id": "weekly-w05-website-factory-shadow",
+  "dedupe_key": "internal:W05:current-run:factory-verification",
+  "dedupe_identity": "ecca3e8394e4b3e34791e58a83e4137b6a7a9339e5c29cbbb37bbc1f39af64df",
+  "contract_fingerprint": "d780d7b773413081f9e79bc9e694cfd2fd305a2db8b3c530a9bb87e14bb04250",
+  "canonical_binding": {
+    "locator": "dillon-os://automation/prospect-radar-next20/20260824-052002",
+    "version": "20260824-052002:blocked:6:1",
+    "sha256": "63cd895873d360a06bbe0644389b5883c0baff81a195f555dff56aa574abd489",
+    "captured_at": "2026-08-24T22:30:00.000Z"
+  },
+  "canonical_binding_fingerprint": "b3ec63b47409d009b4951c4d1e6a4e563c2475bdc90200be444f6dcd68e99982",
+  "status": "complete",
+  "run_id": "OGD-20260824-23145989F598",
+  "checkpoint": {
+    "path": "runs/OGD-20260824-23145989F598/checkpoint.json"
+  },
+  "created_at": "2026-08-24T22:32:00.096Z",
+  "updated_at": "2026-08-24T22:32:00.276Z",
+  "state_revision": 16,
+  "previous_state_sha256": "dcbcc3b0bff76b272b907798e84b119c6d63e8eed507fe3fb59caba1f53f5bca",
+  "completed_at": "2026-08-24T22:32:00.276Z",
+  "receipt": {
+    "path": "runs/OGD-20260824-23145989F598/receipt.json",
+    "sha256": "513708c649c8c8bde0bd63b8e36b268e025ade5e0cd942d053ed08e6ecd904bb",
+    "bytes": 24405
+  }
+}

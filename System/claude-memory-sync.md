@@ -14,7 +14,7 @@ Kimberly James Bridal; Omega Landscaping & Concrete; On-Site Concrete & Landscap
 
 ## Separate lane
 
-Align HCM is active full-time work and not a client.
+Align HCM **ended 2026-09-02**. It was full-time work and never a client. Historical record only.
 
 ## Routing rules
 

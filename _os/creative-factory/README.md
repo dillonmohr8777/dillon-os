@@ -18,18 +18,8 @@ Local image and video asset pipeline for Momentum 360 client landing pages and p
 3. **Videos:** screen-record the social HTML (loops are CSS-driven, 6–15s).
 4. **Deploy LP:** copy HTML to Netlify drop or client static host (approval required).
 
-## Shadow HVAC (full Next.js site)
-
-Production site: `01_Clients/Shadow HVAC/website/`
-
-```bash
-cd "01_Clients/Shadow HVAC/website"
-npm install && npm run build
-```
-
 ## Clients in factory
 
-- Shadow HVAC — ember/ice HVAC palette
 - Kimberly James Bridal — navy/gold/cream bridal
 - Omega Landscaping — green/earth Colorado Springs
 - Bar Crawl USA — red/white/blue events (compliance-safe copy)
@@ -39,7 +29,7 @@ npm install && npm run build
 
 ```bash
 # Record 9:16 reel in browser, then:
-ffmpeg -i recording.mov -c:v libx264 -pix_fmt yuv420p output/reels/shadow-hvac-reel.mp4
+ffmpeg -i recording.mov -c:v libx264 -pix_fmt yuv420p output/reels/<client>-reel.mp4
 ```
 
 Or adapt `02_Campaigns/IMMOHRTAL/asset-studio/motion.py` pattern with Playwright for headless MP4.

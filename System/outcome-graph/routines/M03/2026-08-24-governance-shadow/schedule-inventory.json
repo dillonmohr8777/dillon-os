@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "routine_id": "M03",
+  "generated_at": "2026-08-25T00:31:36.179Z",
+  "source_set_sha256": "693840adcdac02189b089cd344e00d08687f65979329b59f03fd2b7b60b43bf4",
+  "schedules": [
+    {
+      "routine_id": "D09",
+      "schedule_card": "weekdays 09:36",
+      "cadence": "daily",
+      "trigger": "After intake or before beginning a work block",
+      "output_state": "pending_verified_output"
+    },
+    {
+      "routine_id": "D19",
+      "schedule_card": "weekdays 10:36",
+      "cadence": "daily",
+      "trigger": "Reporting deadline, performance question, or decision review",
+      "output_state": "verified_current_output"
+    },
+    {
+      "routine_id": "D27",
+      "schedule_card": "weekdays 17:36",
+      "cadence": "daily",
+      "trigger": "End of the final work block",
+      "output_state": "pending_verified_output"
+    },
+    {
+      "routine_id": "M03",
+      "schedule_card": "1st monthly 10:36",
+      "cadence": "monthly",
+      "trigger": "Monthly operating-cost review",
+      "output_state": "pending_verified_output"
+    },
+    {
+      "routine_id": "W01",
+      "schedule_card": "Mondays 09:36",
+      "cadence": "weekly",
+      "trigger": "Start of weekly planning window",
+      "output_state": "verified_current_output"
+    },
+    {
+      "routine_id": "W02",
+      "schedule_card": "Tuesdays 09:36",
+      "cadence": "weekly-twice",
+      "trigger": "First scheduled paid-media review window",
+      "output_state": "verified_current_output"
+    },
+    {
+      "routine_id": "W03",
+      "schedule_card": "Fridays 09:36",
+      "cadence": "weekly-twice",
+      "trigger": "Second scheduled paid-media review window",
+      "output_state": "verified_current_output"
+    },
+    {
+      "routine_id": "W05",
+      "schedule_card": "Mondays 09:00",
+      "cadence": "weekly",
+      "trigger": "A fresh ready pool contains at least 20 eligible prospects",
+      "output_state": "verified_current_output"
+    },
+    {
+      "routine_id": "W06",
+      "schedule_card": "Mondays 09:36",
+      "cadence": "weekly",
+      "trigger": "Client reporting window",
+      "output_state": "verified_current_output"
+    },
+    {
+      "routine_id": "W10",
+      "schedule_card": "Fridays 16:36",
+      "cadence": "weekly",
+      "trigger": "End of weekly operating cycle",
+      "output_state": "verified_current_output"
+    }
+  ],
+  "schedule_changes": 0,
+  "subscription_changes": 0,
+  "billing_changes": 0,
+  "authority": {
+    "read_only": true,
+    "proposal_only": true,
+    "external_action_attempted": false,
+    "canonical_write_attempted": false,
+    "provider_mutation_attempted": false,
+    "permission_change_attempted": false,
+    "deletion_attempted": false,
+    "schedule_change_attempted": false,
+    "billing_change_attempted": false,
+    "record_move_attempted": false
+  }
+}

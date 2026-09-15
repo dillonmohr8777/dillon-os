@@ -1,0 +1,11 @@
+{
+  "wakeId":"heartbeat:20260905T105502930Z",
+  "identityVerified":{"gmail":true,"slack":true},
+  "window":{"afterUnix":1788603778,"beforeUnix":1788605710},
+  "sources":{"slack":{"pages":1,"messages":0,"paginationExhausted":true},"gmail":{"pages":1,"messages":2,"knownSuppressedOverlap":2,"paginationExhausted":true}},
+  "due":{"bedtime":false,"leadTable":false,"googleAdsReport":false,"predictionBrief":false},
+  "allowNewWork":false,
+  "externalMutations":0,
+  "decision":"DONT_NOTIFY",
+  "reason":"Only previously suppressed overlap; no new actionable business input. Morning deliverables not yet due."
+}

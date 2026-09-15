@@ -8,7 +8,6 @@ import { Nav } from './components/Nav'
 import { Hero, LogoOutro, MarqueeDivider } from './components/Hero'
 import { SpineStage } from './components/SpineStage'
 import { SpineRail } from './components/SpineRail'
-import { Loader } from './components/Loader'
 import { Listen } from './components/Listen'
 import { Tracklist } from './components/Tracklist'
 import { PlayerBar } from './components/PlayerBar'
@@ -29,7 +28,6 @@ export default function App() {
         </a>
         <SpineStage engineRef={engineRef} dark={dark} />
         <SpineRail engineRef={engineRef} />
-        <Loader engineRef={engineRef} />
         <Nav />
         <main>
           <Hero />

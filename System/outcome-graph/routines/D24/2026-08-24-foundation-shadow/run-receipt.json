@@ -1,0 +1,305 @@
+{
+  "run_id": "OGD-20260824-C0E82BC36886",
+  "graph_id": "daily-d24-independent-qa-shadow",
+  "objective": "Falsify the current W05 local-build claim against its exact artifact hash and immutable gate contract.",
+  "value_signal": "Exact hash truth passes while missing desktop, mobile, build, detector, and independent-quality proof produces a blocked verdict with reproducible defects.",
+  "contract_sha256": "e0cde148a64e8f11b7b541a1ea6b7b1a33ab650c7a145489891e6e64fa8b0a12",
+  "started_at": "2026-08-24T23:49:17.778Z",
+  "source_evidence": "The exact objective, registry, git state, rules, product/design documents, design probe, and W05 receipt are recollected before planning and at terminal verification.",
+  "finish_line": "The target artifact hash, byte count, acceptance gates, missing evidence, checker independence, and verdict reconstruct exactly without weakening criteria.",
+  "governance": {
+    "orchestrator": "Codex acting as Marketing Chief",
+    "canonical_state": "The exact user objective, Dillon OS registry and rules, repository state, product/design authority, and W05 durable evidence remain canonical and read only.",
+    "dedupe_key": "D24:2026-08-24:source-bound-shadow",
+    "checkpoint": "System/outcome-graph/routines/D24/2026-08-24-foundation-shadow/run-receipt.json",
+    "rollback": "Discard foundation shadow artifacts; preserve the worktree, product/design truth, deployment state, canonical queue, and external systems unchanged.",
+    "escalation": "Return exact scope, repository, design-context, build-gate, QA, delivery, or authority evidence to Marketing Chief."
+  },
+  "graph_iterations": [
+    {
+      "iteration": 1,
+      "status": "verified",
+      "planner": {
+        "evidence": "Collected 1 isolated D24 item(s) from source set bee6d7037763d45601274702c12c8e31ad280fed7e97757744fc5930b1d39065.",
+        "item_count": 1,
+        "plan_signature": "23d655ee03747bab3585ff1fd92737ff107936a5dc13bb1f34c752ab070f7fb2",
+        "items": [
+          {
+            "id": "D24:4cbc7e46def665bc346c",
+            "isolation_key": "artifact:4cbc7e46def665bc346c32375f21eea3a4ecdebc08a9b36732feb999a9e4de58:W05-acceptance",
+            "input_fingerprint": "cd748ddd4164f37396d64c93111368b7700c6dff4f0fbd2fe73970f96508ff36",
+            "task": null
+          }
+        ]
+      },
+      "workers": [
+        {
+          "item_id": "D24:4cbc7e46def665bc346c",
+          "input_fingerprint": "cd748ddd4164f37396d64c93111368b7700c6dff4f0fbd2fe73970f96508ff36",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-C0E82BC36886:0f29036f7572cc58ef06:attempt:1",
+              "maker_evidence": "Built one privacy-safe D24 record for D24:4cbc7e46def665bc346c.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D24/2026-08-24-foundation-shadow/workers/0f29036f7572cc58ef06.json",
+                  "sha256": "d4a15a2c69878837e8d9505c17726666584019b091fe4dc27cd028e856295d5b",
+                  "bytes": 2297
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D24:4cbc7e46def665bc346c from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D24/2026-08-24-foundation-shadow/workers/0f29036f7572cc58ef06.json",
+              "sha256": "d4a15a2c69878837e8d9505c17726666584019b091fe4dc27cd028e856295d5b",
+              "bytes": 2297
+            }
+          ],
+          "isolation_id": "OGD-20260824-C0E82BC36886:0f29036f7572cc58ef06:attempt:1"
+        }
+      ],
+      "reduction": {
+        "evidence": "Reduced all checked D24 records without blending isolation keys.",
+        "artifacts": [
+          {
+            "path": "System/outcome-graph/routines/D24/2026-08-24-foundation-shadow/independent-qa-verdict.json",
+            "sha256": "7d6e3c1196c32bf88d10df0bb79e49a87b236690954a7a7eb9f8e7c841e66df6",
+            "bytes": 2343
+          },
+          {
+            "path": "System/outcome-graph/routines/D24/2026-08-24-foundation-shadow/reproduction-receipt.json",
+            "sha256": "f6a24c9bb2916524abd727ee20a1dfcf7ebd67529014a0b51b1a4a26b8ae87c9",
+            "bytes": 868
+          }
+        ]
+      },
+      "terminal_verification": {
+        "evidence": "Recollected and independently verified all D24 sources, records, negative states, and artifact hashes.",
+        "declared_pass": true,
+        "passed": true,
+        "assertions": [
+          {
+            "id": "source-manifest-stable",
+            "passed": true,
+            "detail": "Every named source remains hash-bound at terminal verification."
+          },
+          {
+            "id": "every-isolated-item-reconstructed-exactly-once",
+            "passed": true,
+            "detail": "Every in-scope item has one collision-resistant reconstructed record."
+          },
+          {
+            "id": "reducer-output-reproduces-exactly",
+            "passed": true,
+            "detail": "Final artifacts reproduce exactly from current sources and the frozen evaluation clock."
+          },
+          {
+            "id": "checker-is-independent-from-maker",
+            "passed": true,
+            "detail": "Checker and maker identities differ."
+          },
+          {
+            "id": "exact-artifact-hash-reproduced",
+            "passed": true,
+            "detail": "Path, SHA-256, and byte count match."
+          },
+          {
+            "id": "desktop-mobile-and-interaction-reproduced-or-defected",
+            "passed": true,
+            "detail": "Missing viewport evidence becomes a defect."
+          },
+          {
+            "id": "tests-build-console-accessibility-reproduced-or-defected",
+            "passed": true,
+            "detail": "Missing build or detector proof becomes a defect."
+          },
+          {
+            "id": "verdict-and-exact-defects-present",
+            "passed": true,
+            "detail": "Every non-pass verdict is reproducible."
+          },
+          {
+            "id": "acceptance-contract-unchanged",
+            "passed": true,
+            "detail": "QA did not weaken the gate."
+          },
+          {
+            "id": "privacy-and-no-mutation-boundary",
+            "passed": true,
+            "detail": "Final artifacts are redacted and attest no external, canonical, provider, restart, or checkpoint mutation."
+          }
+        ],
+        "artifact_manifest": [
+          {
+            "path": "System/outcome-graph/routines/D24/2026-08-24-foundation-shadow/independent-qa-verdict.json",
+            "sha256": "7d6e3c1196c32bf88d10df0bb79e49a87b236690954a7a7eb9f8e7c841e66df6",
+            "bytes": 2343
+          },
+          {
+            "path": "System/outcome-graph/routines/D24/2026-08-24-foundation-shadow/reproduction-receipt.json",
+            "sha256": "f6a24c9bb2916524abd727ee20a1dfcf7ebd67529014a0b51b1a4a26b8ae87c9",
+            "bytes": 868
+          }
+        ],
+        "manifest_errors": []
+      },
+      "learning": {
+        "evidence": "Appended one hashed D24 correction entry.",
+        "corrections": [
+          "Retain D24 source bindings, negative states, exact authority, and terminal assertions until the underlying evidence changes."
+        ],
+        "ledger": "System/outcome-graph/routines/D24/2026-08-24-foundation-shadow/corrections.jsonl",
+        "ledger_receipt": {
+          "locator": "System/outcome-graph/routines/D24/2026-08-24-foundation-shadow/corrections.jsonl",
+          "entry_sha256": "30a7e6ecfca9850b5b52838a5dafb7aa68e0aad24ad8aa96b6b060131fc714f7"
+        }
+      }
+    }
+  ],
+  "invocation_log": [
+    {
+      "adapter": "source-bound-d24-planner",
+      "invoked_at": "2026-08-24T23:49:17.793Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d24-maker",
+      "invoked_at": "2026-08-24T23:49:18.145Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d24-checker",
+      "invoked_at": "2026-08-24T23:49:18.487Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d24-reducer",
+      "invoked_at": "2026-08-24T23:49:18.799Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d24-terminal-verifier",
+      "invoked_at": "2026-08-24T23:49:18.822Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d24-learner",
+      "invoked_at": "2026-08-24T23:49:19.132Z",
+      "status": "returned"
+    }
+  ],
+  "budget": {
+    "limit_units": 96,
+    "used_units": 6
+  },
+  "outcome": "complete",
+  "terminal_truth": true,
+  "finished_at": "2026-08-24T23:49:19.146Z",
+  "elapsed_seconds": 1.368,
+  "blocked_by": null,
+  "reason": "Finish line is proven by an independent terminal verifier.",
+  "terminal_evidence": {
+    "evidence": "Recollected and independently verified all D24 sources, records, negative states, and artifact hashes.",
+    "declared_pass": true,
+    "passed": true,
+    "assertions": [
+      {
+        "id": "source-manifest-stable",
+        "passed": true,
+        "detail": "Every named source remains hash-bound at terminal verification."
+      },
+      {
+        "id": "every-isolated-item-reconstructed-exactly-once",
+        "passed": true,
+        "detail": "Every in-scope item has one collision-resistant reconstructed record."
+      },
+      {
+        "id": "reducer-output-reproduces-exactly",
+        "passed": true,
+        "detail": "Final artifacts reproduce exactly from current sources and the frozen evaluation clock."
+      },
+      {
+        "id": "checker-is-independent-from-maker",
+        "passed": true,
+        "detail": "Checker and maker identities differ."
+      },
+      {
+        "id": "exact-artifact-hash-reproduced",
+        "passed": true,
+        "detail": "Path, SHA-256, and byte count match."
+      },
+      {
+        "id": "desktop-mobile-and-interaction-reproduced-or-defected",
+        "passed": true,
+        "detail": "Missing viewport evidence becomes a defect."
+      },
+      {
+        "id": "tests-build-console-accessibility-reproduced-or-defected",
+        "passed": true,
+        "detail": "Missing build or detector proof becomes a defect."
+      },
+      {
+        "id": "verdict-and-exact-defects-present",
+        "passed": true,
+        "detail": "Every non-pass verdict is reproducible."
+      },
+      {
+        "id": "acceptance-contract-unchanged",
+        "passed": true,
+        "detail": "QA did not weaken the gate."
+      },
+      {
+        "id": "privacy-and-no-mutation-boundary",
+        "passed": true,
+        "detail": "Final artifacts are redacted and attest no external, canonical, provider, restart, or checkpoint mutation."
+      }
+    ],
+    "artifact_manifest": [
+      {
+        "path": "System/outcome-graph/routines/D24/2026-08-24-foundation-shadow/independent-qa-verdict.json",
+        "sha256": "7d6e3c1196c32bf88d10df0bb79e49a87b236690954a7a7eb9f8e7c841e66df6",
+        "bytes": 2343
+      },
+      {
+        "path": "System/outcome-graph/routines/D24/2026-08-24-foundation-shadow/reproduction-receipt.json",
+        "sha256": "f6a24c9bb2916524abd727ee20a1dfcf7ebd67529014a0b51b1a4a26b8ae87c9",
+        "bytes": 868
+      }
+    ],
+    "manifest_errors": []
+  },
+  "learning_evidence": {
+    "evidence": "Appended one hashed D24 correction entry.",
+    "corrections": [
+      "Retain D24 source bindings, negative states, exact authority, and terminal assertions until the underlying evidence changes."
+    ],
+    "ledger": "System/outcome-graph/routines/D24/2026-08-24-foundation-shadow/corrections.jsonl",
+    "ledger_receipt": {
+      "locator": "System/outcome-graph/routines/D24/2026-08-24-foundation-shadow/corrections.jsonl",
+      "entry_sha256": "30a7e6ecfca9850b5b52838a5dafb7aa68e0aad24ad8aa96b6b060131fc714f7"
+    }
+  },
+  "drift_fingerprint": "dc1baf31a7f63cef6dbdbe56d96df247fb545686a1a51285047d626a6d2250ef",
+  "deduped": true,
+  "durable_state": {
+    "schema_version": 1,
+    "dedupe_identity": "f6e7d10e1989ba0827dc53b509aa7f7184a613d1cb0e750d5ffd959549b633cf",
+    "dedupe_hit": true,
+    "resumed": false,
+    "canonical_binding": {
+      "locator": "dillon-os://routine/D24/2026-08-24",
+      "version": "2026-08-24:e1cb9e89.05e6a21e.c5a7c091.1b135970.d503a937.90d9bcee.f497ab86.4cbc7e46.43cfa9c9.c4f66a74",
+      "sha256": "bee6d7037763d45601274702c12c8e31ad280fed7e97757744fc5930b1d39065",
+      "captured_at": "2026-08-24T23:49:17.050Z"
+    },
+    "canonical_binding_fingerprint": "1e48f0b5a89453aaca88e574ffb23e380026407b11f2b1e7186d0e4e2354dca8",
+    "contract_fingerprint": "3b0748ae7f05b85da7e4f1570635b1e629c53d7b60eb24dfd6e78c4506ef6b8b",
+    "checkpoint": "runs/OGD-20260824-C0E82BC36886/checkpoint.json"
+  }
+}

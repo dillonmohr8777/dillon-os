@@ -1,0 +1,252 @@
+{
+  "slug": "peachtree-city-foamcraft",
+  "preparedAt": "2026-08-26T10:41:46.322Z",
+  "sourceSite": "https://foamcraft.com/",
+  "sourceFinalUrl": "https://foamcraft.com/",
+  "sourcePageSha256": "97908a87190c4431a82e005e6c02a8cae7ed6fc9603613e7a6113677003115d2",
+  "exactLogoRequired": false,
+  "exactLogoSha256": "dc09920f399be39afee33bfe4dd5b39076908ff4949b3ac9a9db9e8ccb2176a2",
+  "identityFallback": true,
+  "generatedImagePolicy": "All content visuals come from an Align HCM Image Gen editorial board, carry embedded plus interface-level grain, and are disclosed as illustrative concept material. They never serve as proof about the business, its staff, facilities, products, clients, or outcomes.",
+  "assets": [
+    {
+      "role": "verified exact-name identity fallback",
+      "output": "logo.svg",
+      "sourceUrl": "https://foamcraft.com/",
+      "sourceSha256": "dc09920f399be39afee33bfe4dd5b39076908ff4949b3ac9a9db9e8ccb2176a2",
+      "outputSha256": "dc09920f399be39afee33bfe4dd5b39076908ff4949b3ac9a9db9e8ccb2176a2",
+      "transformation": "Disclosed exact-name typographic fallback; no icon, symbol, or first-party logo imitation.",
+      "transparent": true
+    },
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "peachtree-city-foamcraft",
+      "boardDescriptor": "trade",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/peachtree-city-foamcraft.png",
+      "sourceSha256": "ba4cb1b56d4e7e7f51811ca1d589e7b63de536965a523c7adfe6fbfdd4049e27",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Peachtree City Foamcraft. Four distinct but cohesive unlabelled panels in a generic custom foam fabrication workshop: a craft worker measuring a patterned foam panel on a large cutting table; hands guiding a safe electric foam-cutting tool through high-density material; a technician examining fitted protective packaging inserts; a customer and fabricator discussing upholstery foam samples at a workbench. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:56,eq=saturation=0.990:contrast=1.046:brightness=0.000,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "f7b123c2f41b335811b08e943efd5d2e23e191f429e322101b6206f45f2a83f7",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "peachtree-city-foamcraft",
+      "boardDescriptor": "trade",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/peachtree-city-foamcraft.png",
+      "sourceSha256": "ba4cb1b56d4e7e7f51811ca1d589e7b63de536965a523c7adfe6fbfdd4049e27",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Peachtree City Foamcraft. Four distinct but cohesive unlabelled panels in a generic custom foam fabrication workshop: a craft worker measuring a patterned foam panel on a large cutting table; hands guiding a safe electric foam-cutting tool through high-density material; a technician examining fitted protective packaging inserts; a customer and fabricator discussing upholstery foam samples at a workbench. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=1.015:contrast=1.010:brightness=0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "d8ee6dffc5129654bd481ef6240f203f22baee05958a9cb31043aee25ff9db23",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "peachtree-city-foamcraft",
+      "boardDescriptor": "trade",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/peachtree-city-foamcraft.png",
+      "sourceSha256": "ba4cb1b56d4e7e7f51811ca1d589e7b63de536965a523c7adfe6fbfdd4049e27",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Peachtree City Foamcraft. Four distinct but cohesive unlabelled panels in a generic custom foam fabrication workshop: a craft worker measuring a patterned foam panel on a large cutting table; hands guiding a safe electric foam-cutting tool through high-density material; a technician examining fitted protective packaging inserts; a customer and fabricator discussing upholstery foam samples at a workbench. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:28,eq=saturation=1.040:contrast=1.064:brightness=-0.018,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "0673736de01522408c0e991ea6e70b288631baa19591e513d18070be05778a2b",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "peachtree-city-foamcraft",
+      "boardDescriptor": "trade",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/peachtree-city-foamcraft.png",
+      "sourceSha256": "ba4cb1b56d4e7e7f51811ca1d589e7b63de536965a523c7adfe6fbfdd4049e27",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Peachtree City Foamcraft. Four distinct but cohesive unlabelled panels in a generic custom foam fabrication workshop: a craft worker measuring a patterned foam panel on a large cutting table; hands guiding a safe electric foam-cutting tool through high-density material; a technician examining fitted protective packaging inserts; a customer and fabricator discussing upholstery foam samples at a workbench. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:56,eq=saturation=0.940:contrast=1.028:brightness=-0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "c76cb46c3fb38320156b2bac668df2b6e55a88d4342e1e87983d862058394ab6",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "peachtree-city-foamcraft",
+      "boardDescriptor": "trade",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/peachtree-city-foamcraft.png",
+      "sourceSha256": "ba4cb1b56d4e7e7f51811ca1d589e7b63de536965a523c7adfe6fbfdd4049e27",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Peachtree City Foamcraft. Four distinct but cohesive unlabelled panels in a generic custom foam fabrication workshop: a craft worker measuring a patterned foam panel on a large cutting table; hands guiding a safe electric foam-cutting tool through high-density material; a technician examining fitted protective packaging inserts; a customer and fabricator discussing upholstery foam samples at a workbench. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:0,eq=saturation=0.965:contrast=1.082:brightness=0.000,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "43a20c62cbd91ddee3ff5568a2bc26e914b11fcf408ad1d678d8b603dd3a761b",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "peachtree-city-foamcraft",
+      "boardDescriptor": "trade",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/peachtree-city-foamcraft.png",
+      "sourceSha256": "ba4cb1b56d4e7e7f51811ca1d589e7b63de536965a523c7adfe6fbfdd4049e27",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Peachtree City Foamcraft. Four distinct but cohesive unlabelled panels in a generic custom foam fabrication workshop: a craft worker measuring a patterned foam panel on a large cutting table; hands guiding a safe electric foam-cutting tool through high-density material; a technician examining fitted protective packaging inserts; a customer and fabricator discussing upholstery foam samples at a workbench. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:28,eq=saturation=0.990:contrast=1.046:brightness=0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "675fb8254791b7bb63db211fcb21ddf69caf986a41b5f46c88402c851060c161",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "peachtree-city-foamcraft",
+      "boardDescriptor": "trade",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/peachtree-city-foamcraft.png",
+      "sourceSha256": "ba4cb1b56d4e7e7f51811ca1d589e7b63de536965a523c7adfe6fbfdd4049e27",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Peachtree City Foamcraft. Four distinct but cohesive unlabelled panels in a generic custom foam fabrication workshop: a craft worker measuring a patterned foam panel on a large cutting table; hands guiding a safe electric foam-cutting tool through high-density material; a technician examining fitted protective packaging inserts; a customer and fabricator discussing upholstery foam samples at a workbench. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:56,eq=saturation=1.015:contrast=1.010:brightness=-0.018,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "1358dcdc75f8e746349a6a62bf3cf48bbe7b4995a678724352995098730d5507",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "peachtree-city-foamcraft",
+      "boardDescriptor": "trade",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/peachtree-city-foamcraft.png",
+      "sourceSha256": "ba4cb1b56d4e7e7f51811ca1d589e7b63de536965a523c7adfe6fbfdd4049e27",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Peachtree City Foamcraft. Four distinct but cohesive unlabelled panels in a generic custom foam fabrication workshop: a craft worker measuring a patterned foam panel on a large cutting table; hands guiding a safe electric foam-cutting tool through high-density material; a technician examining fitted protective packaging inserts; a customer and fabricator discussing upholstery foam samples at a workbench. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:0,eq=saturation=1.040:contrast=1.064:brightness=-0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "df40fc18fb999d587e0ce5bfa73dbd332bce1a9fd26d84131178905bafb01168",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "peachtree-city-foamcraft",
+      "boardDescriptor": "trade",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/peachtree-city-foamcraft.png",
+      "sourceSha256": "ba4cb1b56d4e7e7f51811ca1d589e7b63de536965a523c7adfe6fbfdd4049e27",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Peachtree City Foamcraft. Four distinct but cohesive unlabelled panels in a generic custom foam fabrication workshop: a craft worker measuring a patterned foam panel on a large cutting table; hands guiding a safe electric foam-cutting tool through high-density material; a technician examining fitted protective packaging inserts; a customer and fabricator discussing upholstery foam samples at a workbench. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:28,eq=saturation=0.940:contrast=1.028:brightness=0.000,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "cb192e825259f31fbe6ea101f9df3b2c908afbe04dc7fa7f834c83ca9e65ed18",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "peachtree-city-foamcraft",
+      "boardDescriptor": "trade",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/peachtree-city-foamcraft.png",
+      "sourceSha256": "ba4cb1b56d4e7e7f51811ca1d589e7b63de536965a523c7adfe6fbfdd4049e27",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Peachtree City Foamcraft. Four distinct but cohesive unlabelled panels in a generic custom foam fabrication workshop: a craft worker measuring a patterned foam panel on a large cutting table; hands guiding a safe electric foam-cutting tool through high-density material; a technician examining fitted protective packaging inserts; a customer and fabricator discussing upholstery foam samples at a workbench. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:56,eq=saturation=0.965:contrast=1.082:brightness=0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "e3a78d2b85dffd16b1570c9c1555d11a683ff888b21a24e44b022a5e6100ea2e",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "peachtree-city-foamcraft",
+      "boardDescriptor": "trade",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/peachtree-city-foamcraft.png",
+      "sourceSha256": "ba4cb1b56d4e7e7f51811ca1d589e7b63de536965a523c7adfe6fbfdd4049e27",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Peachtree City Foamcraft. Four distinct but cohesive unlabelled panels in a generic custom foam fabrication workshop: a craft worker measuring a patterned foam panel on a large cutting table; hands guiding a safe electric foam-cutting tool through high-density material; a technician examining fitted protective packaging inserts; a customer and fabricator discussing upholstery foam samples at a workbench. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:0,eq=saturation=0.990:contrast=1.046:brightness=-0.018,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "918c42b3196237fd9fcc8675f61f5affdd3de2f79a91d4bd3af0e5e2b10608ba",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "peachtree-city-foamcraft",
+      "boardDescriptor": "trade",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/peachtree-city-foamcraft.png",
+      "sourceSha256": "ba4cb1b56d4e7e7f51811ca1d589e7b63de536965a523c7adfe6fbfdd4049e27",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Peachtree City Foamcraft. Four distinct but cohesive unlabelled panels in a generic custom foam fabrication workshop: a craft worker measuring a patterned foam panel on a large cutting table; hands guiding a safe electric foam-cutting tool through high-density material; a technician examining fitted protective packaging inserts; a customer and fabricator discussing upholstery foam samples at a workbench. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:28,eq=saturation=1.015:contrast=1.010:brightness=-0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "41c52e01215eca79bb5c069b43031a80ddc565daba7f4abb7fb7d664567f6c37",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    }
+  ],
+  "fonts": {
+    "pair": {
+      "id": "plus-jakarta-dm-sans",
+      "display": "Plus Jakarta Sans",
+      "text": "DM Sans"
+    },
+    "source": "Google Fonts CSS API",
+    "files": [
+      {
+        "file": "font-display-400.woff2",
+        "sha256": "153fc85b70298beeb1d61a5f723331649e7f23bb77302a66e61cb3e2fbdb5e79"
+      },
+      {
+        "file": "font-display-800.woff2",
+        "sha256": "153fc85b70298beeb1d61a5f723331649e7f23bb77302a66e61cb3e2fbdb5e79"
+      },
+      {
+        "file": "font-text-400.woff2",
+        "sha256": "9fea608a947e67020c33cad9a6fe3d60c54119dfb8cff87768a8117a15ed7543"
+      },
+      {
+        "file": "font-text-700.woff2",
+        "sha256": "9fea608a947e67020c33cad9a6fe3d60c54119dfb8cff87768a8117a15ed7543"
+      }
+    ]
+  }
+}

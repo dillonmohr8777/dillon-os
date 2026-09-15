@@ -1,0 +1,645 @@
+{
+  "schema_version": 1,
+  "routine_id": "W01",
+  "artifact_type": "weekly_operating_slate_readiness",
+  "window": {
+    "prepared": "2026-08-24",
+    "period_start": "2026-08-17",
+    "period_end": "2026-08-23",
+    "month": "2026-08"
+  },
+  "canonical_binding": {
+    "locator": "client-operations/queue/work-items.json",
+    "revision": 415,
+    "sha256": "524a8f8d65b598b3d0a4df41e4bd4799a8696bab8cc05a95d259039d1d824131"
+  },
+  "queue_items": [
+    {
+      "schema_version": 1,
+      "routine_id": "W01",
+      "record_kind": "queue_item",
+      "work_item_id": "wi-20260715-0002",
+      "expected_work_item_version": 11,
+      "client_id": "fagan-painting",
+      "title": "Reconcile two Fagan Painting website leads",
+      "status": "blocked",
+      "priority": {
+        "level": "P0",
+        "rationale": "Fresh inbound leads can decay quickly, and current local evidence does not prove routing, ownership, or follow-up."
+      },
+      "owner": "marketing-chief",
+      "next_action": "Obtain lead-level disposition for the two exact canonical records from the approved client mailbox, CRM, or Zapier record; do not infer individual outcomes from aggregate batch feedback.",
+      "deadline": {
+        "value": null,
+        "state": "no_evidenced_deadline"
+      },
+      "approval": {
+        "tier": "automatic",
+        "action": "Read-only verification and local state update only.",
+        "status": "not_required",
+        "approvalRef": null
+      },
+      "checks": {
+        "registry_record_present": true,
+        "registry_status_active": true,
+        "queue_route_resolved": true,
+        "queue_route_matches_registry": true,
+        "route_verified_within_14_days": false,
+        "evidence_current_within_14_days": false,
+        "evidence_references_present": true,
+        "owner_present": true,
+        "next_action_present": true,
+        "finish_line_present": true,
+        "deadline_evidenced": false
+      },
+      "ready": false,
+      "proposed_transition": null,
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W01",
+      "record_kind": "queue_item",
+      "work_item_id": "wi-20260718-0001",
+      "expected_work_item_version": 4,
+      "client_id": "bigorange-marketing",
+      "title": "Confirm BigOrange paid-trial scope and compensation",
+      "status": "blocked",
+      "priority": {
+        "level": "P1",
+        "rationale": "A new client relationship and proposed paid trial need a clear commercial record before work or income is treated as committed."
+      },
+      "owner": "marketing-chief",
+      "next_action": "Obtain Janice SME review, Moz or Semrush validation, verified WordPress staging access, and invoice or payment timing; then apply final edits and prepare the exact client delivery and publication preview.",
+      "deadline": {
+        "value": "2026-08-10T09:00:00.0000000-04:00",
+        "state": "overdue"
+      },
+      "approval": {
+        "tier": "explicit",
+        "action": "Confirm the final BigOrange pilot scope and compensation before execution or invoicing.",
+        "status": "approved",
+        "approvalRef": "gdoc://1_rv8nGWdb6X5QxdByBhLDSQrvEVkRCD853ByH_aYjhA;gmail-thread://19fa4cb8f6812394;user-request://2026-08-03/finish-bigorange-pilot"
+      },
+      "checks": {
+        "registry_record_present": true,
+        "registry_status_active": true,
+        "queue_route_resolved": true,
+        "queue_route_matches_registry": true,
+        "route_verified_within_14_days": false,
+        "evidence_current_within_14_days": false,
+        "evidence_references_present": true,
+        "owner_present": true,
+        "next_action_present": true,
+        "finish_line_present": true,
+        "deadline_evidenced": true
+      },
+      "ready": false,
+      "proposed_transition": null,
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W01",
+      "record_kind": "queue_item",
+      "work_item_id": "wi-20260718-0003",
+      "expected_work_item_version": 4,
+      "client_id": "momentum-360",
+      "title": "Implement the Momentum caller auto-response workflow",
+      "status": "verification",
+      "priority": {
+        "level": "P1",
+        "rationale": "The request is an explicit team commitment and should be resolved at the July 20 review, but implementation changes messaging and connected accounts."
+      },
+      "owner": "marketing-chief",
+      "next_action": "After 10:00 PM Eastern, run one controlled unanswered call to a Momentum 360 tracking number and one to the GMB Suspension number; verify the approved missed-call text, equal Sean and Jason round-robin without voicemail interception, and one CallRail-associated HubSpot record per call.",
+      "deadline": {
+        "value": "2026-07-20T15:00:00.0000000-04:00",
+        "state": "overdue"
+      },
+      "approval": {
+        "tier": "explicit",
+        "action": "Approve the exact Momentum CallRail and HubSpot caller auto-response configuration before any workflow or account change.",
+        "status": "approved",
+        "approvalRef": "client-evidence-callrail-live-approval"
+      },
+      "checks": {
+        "registry_record_present": true,
+        "registry_status_active": true,
+        "queue_route_resolved": true,
+        "queue_route_matches_registry": true,
+        "route_verified_within_14_days": false,
+        "evidence_current_within_14_days": false,
+        "evidence_references_present": true,
+        "owner_present": true,
+        "next_action_present": true,
+        "finish_line_present": true,
+        "deadline_evidenced": true
+      },
+      "ready": false,
+      "proposed_transition": null,
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W01",
+      "record_kind": "queue_item",
+      "work_item_id": "wi-20260723-0005",
+      "expected_work_item_version": 4,
+      "client_id": "align-hcm",
+      "title": "Finish Align HCM HubSpot Customer Agent",
+      "status": "verification",
+      "priority": {
+        "level": "P1",
+        "rationale": "The portal agent is a direct website and lead-routing capability, but safe completion depends on exact portal state and a human Microsoft sign-in gate."
+      },
+      "owner": "marketing-chief",
+      "next_action": "Verify the working live agent against the prepared acceptance suite from the authenticated Align HubSpot computer, then record its knowledge-source sync, human handoff, channel, credit, and activation evidence.",
+      "deadline": {
+        "value": null,
+        "state": "no_evidenced_deadline"
+      },
+      "approval": {
+        "tier": "explicit",
+        "action": "Dillon completes Microsoft sign-in and approves controlled Customer Agent configuration in the Align portal.",
+        "status": "approved",
+        "approvalRef": "user://current-message"
+      },
+      "checks": {
+        "registry_record_present": true,
+        "registry_status_active": true,
+        "queue_route_resolved": true,
+        "queue_route_matches_registry": true,
+        "route_verified_within_14_days": false,
+        "evidence_current_within_14_days": false,
+        "evidence_references_present": true,
+        "owner_present": true,
+        "next_action_present": true,
+        "finish_line_present": true,
+        "deadline_evidenced": false
+      },
+      "ready": false,
+      "proposed_transition": null,
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W01",
+      "record_kind": "queue_item",
+      "work_item_id": "wi-20260723-0006",
+      "expected_work_item_version": 3,
+      "client_id": "momentum-360",
+      "title": "Complete Mac AI operations and Slack enablement bundle",
+      "status": "blocked",
+      "priority": {
+        "level": "P1",
+        "rationale": "The request consolidates current prospect outreach operations and team AI adoption work."
+      },
+      "owner": "marketing-chief",
+      "next_action": "Finish QRTIGER Google account selection and confirm any annual paid-plan commitment, then complete the PostGrid signup CAPTCHA and terms gate and provide the verified sender, return address, postcard template, and exact approved test recipient and quantity.",
+      "deadline": {
+        "value": null,
+        "state": "no_evidenced_deadline"
+      },
+      "approval": {
+        "tier": "explicit",
+        "action": "Complete vendor authentication and approve the exact sender, template, budget, and test recipient before any direct mail is sent.",
+        "status": "approved",
+        "approvalRef": "user:2026-07-23:full-api-account-approval"
+      },
+      "checks": {
+        "registry_record_present": true,
+        "registry_status_active": true,
+        "queue_route_resolved": true,
+        "queue_route_matches_registry": true,
+        "route_verified_within_14_days": false,
+        "evidence_current_within_14_days": false,
+        "evidence_references_present": true,
+        "owner_present": true,
+        "next_action_present": true,
+        "finish_line_present": true,
+        "deadline_evidenced": false
+      },
+      "ready": false,
+      "proposed_transition": null,
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W01",
+      "record_kind": "queue_item",
+      "work_item_id": "wi-20260724-0001",
+      "expected_work_item_version": 3,
+      "client_id": "bridge-software",
+      "title": "Cursor integration",
+      "status": "blocked",
+      "priority": {
+        "level": "P1",
+        "rationale": "Owner-set P1 priority in the private Marketing Chief Studio."
+      },
+      "owner": "marketing-chief",
+      "next_action": "Invite the Cursor Slack app to the exact private Pritzker Law Group and VA Claims channels, then rerun a bounded read-only source pass before considering any broader integration.",
+      "deadline": {
+        "value": null,
+        "state": "no_evidenced_deadline"
+      },
+      "approval": {
+        "tier": "explicit",
+        "action": "Local reversible preparation only. Any consequential external action remains separately approval-gated.",
+        "status": "pending",
+        "approvalRef": null
+      },
+      "checks": {
+        "registry_record_present": true,
+        "registry_status_active": true,
+        "queue_route_resolved": true,
+        "queue_route_matches_registry": true,
+        "route_verified_within_14_days": false,
+        "evidence_current_within_14_days": false,
+        "evidence_references_present": true,
+        "owner_present": true,
+        "next_action_present": true,
+        "finish_line_present": true,
+        "deadline_evidenced": false
+      },
+      "ready": false,
+      "proposed_transition": null,
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W01",
+      "record_kind": "queue_item",
+      "work_item_id": "wi-20260724-0024",
+      "expected_work_item_version": 2,
+      "client_id": "momentum-360",
+      "title": "Activate foundation Stripe donation flow",
+      "status": "blocked",
+      "priority": {
+        "level": "P0",
+        "rationale": "The donation experience is technically ready, but production collection cannot start until the dedicated Stripe business gate is completed."
+      },
+      "owner": "marketing-chief",
+      "next_action": "Await confirmation that an authorized foundation representative has completed the dedicated Stripe business identity, banking, tax, terms, MFA, and verification requirements and that live payments and payouts are enabled.",
+      "deadline": {
+        "value": "2026-07-24T23:59:00.0000000-04:00",
+        "state": "overdue"
+      },
+      "approval": {
+        "tier": "explicit",
+        "action": "Authorized foundation representative completes the dedicated Stripe onboarding and authentication gates.",
+        "status": "pending",
+        "approvalRef": null
+      },
+      "checks": {
+        "registry_record_present": true,
+        "registry_status_active": true,
+        "queue_route_resolved": true,
+        "queue_route_matches_registry": true,
+        "route_verified_within_14_days": false,
+        "evidence_current_within_14_days": false,
+        "evidence_references_present": true,
+        "owner_present": true,
+        "next_action_present": true,
+        "finish_line_present": true,
+        "deadline_evidenced": true
+      },
+      "ready": false,
+      "proposed_transition": null,
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W01",
+      "record_kind": "queue_item",
+      "work_item_id": "wi-20260725-0007",
+      "expected_work_item_version": 3,
+      "client_id": "va-claims-edge",
+      "title": "Correct VA Claims booking and lead routing rules",
+      "status": "blocked",
+      "priority": {
+        "level": "P0",
+        "rationale": "Incorrect scheduling constraints and provider assignment can misroute or mis-schedule prospective clients."
+      },
+      "owner": "marketing-chief",
+      "next_action": "Map and authenticate the exact authorized WordPress or Amelia administrator route, apply only the verified scheduling and routing corrections, then complete an approved synthetic booking test without contacting a prospect.",
+      "deadline": {
+        "value": null,
+        "state": "no_evidenced_deadline"
+      },
+      "approval": {
+        "tier": "explicit",
+        "action": "Approve the verified WordPress or Amelia scheduling and provider-routing corrections plus one synthetic booking test.",
+        "status": "approved",
+        "approvalRef": "user://2026-07-25/fix-va-claims-lead-routing"
+      },
+      "checks": {
+        "registry_record_present": true,
+        "registry_status_active": true,
+        "queue_route_resolved": true,
+        "queue_route_matches_registry": true,
+        "route_verified_within_14_days": false,
+        "evidence_current_within_14_days": false,
+        "evidence_references_present": true,
+        "owner_present": true,
+        "next_action_present": true,
+        "finish_line_present": true,
+        "deadline_evidenced": false
+      },
+      "ready": false,
+      "proposed_transition": null,
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W01",
+      "record_kind": "queue_item",
+      "work_item_id": "wi-20260728-0001",
+      "expected_work_item_version": 5,
+      "client_id": "replenish-7-eleven",
+      "title": "Resolve Replenish Google Ads chargebacks and mixed-brand balance",
+      "status": "needs_approval",
+      "priority": {
+        "level": "P0",
+        "rationale": "The live Replenish and Fresh Blends campaign account is billing-suspended after four chargebacks, and the shared account contains two brand ledgers that must be separated before any payment or reimbursement decision."
+      },
+      "owner": "marketing-chief",
+      "next_action": "Approve the exact PDF attachment and recipient, then send it to Mia; collect her chargeback reason, Pompano credit intent, and San Diego budget ceiling before opening the Google Ads billing case or making any payment.",
+      "deadline": {
+        "value": null,
+        "state": "no_evidenced_deadline"
+      },
+      "approval": {
+        "tier": "explicit",
+        "action": "Approve one exact resolution path after cardholder intent and mixed-brand cost allocation are confirmed. Payment, campaign restart, and support submission remain separately gated.",
+        "status": "pending",
+        "approvalRef": null
+      },
+      "checks": {
+        "registry_record_present": true,
+        "registry_status_active": true,
+        "queue_route_resolved": true,
+        "queue_route_matches_registry": true,
+        "route_verified_within_14_days": false,
+        "evidence_current_within_14_days": false,
+        "evidence_references_present": true,
+        "owner_present": true,
+        "next_action_present": true,
+        "finish_line_present": true,
+        "deadline_evidenced": false
+      },
+      "ready": false,
+      "proposed_transition": null,
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W01",
+      "record_kind": "queue_item",
+      "work_item_id": "wi-20260801-0001",
+      "expected_work_item_version": 2,
+      "client_id": "momentum-360",
+      "title": "Verify Momentum HubSpot caller-response deployment and daily review path",
+      "status": "blocked",
+      "priority": {
+        "level": "P1",
+        "rationale": "The request supports daily follow-up visibility and completion verification for the active caller-response workflow without authorizing a live account change."
+      },
+      "owner": "marketing-chief",
+      "next_action": "Unlock the sole approved Bitwarden vault, complete the Google password challenge for the approved Momentum HubSpot account, and confirm whether live alerts should use the Slack-profile identity or the approved HubSpot-account identity before any production change.",
+      "deadline": {
+        "value": null,
+        "state": "no_evidenced_deadline"
+      },
+      "approval": {
+        "tier": "explicit",
+        "action": "Local read-only verification and guide preparation only.",
+        "status": "pending",
+        "approvalRef": null
+      },
+      "checks": {
+        "registry_record_present": true,
+        "registry_status_active": true,
+        "queue_route_resolved": true,
+        "queue_route_matches_registry": true,
+        "route_verified_within_14_days": false,
+        "evidence_current_within_14_days": false,
+        "evidence_references_present": true,
+        "owner_present": true,
+        "next_action_present": true,
+        "finish_line_present": true,
+        "deadline_evidenced": false
+      },
+      "ready": false,
+      "proposed_transition": null,
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W01",
+      "record_kind": "queue_item",
+      "work_item_id": "wi-20260805-0004",
+      "expected_work_item_version": 2,
+      "client_id": "kimberly-james-bridal",
+      "title": "KJB daily lead intake and Kim routing",
+      "status": "blocked",
+      "priority": {
+        "level": "P1",
+        "rationale": "Missed or delayed appointment notifications directly affect lead follow-up."
+      },
+      "owner": "marketing-chief",
+      "next_action": "Use the active KJB Daily Leads label for intake and retry the verified forwarding address only after Google secure verification succeeds.",
+      "deadline": {
+        "value": null,
+        "state": "no_evidenced_deadline"
+      },
+      "approval": {
+        "tier": "explicit",
+        "action": "Use Dillon explicit authority for the named KJB Gmail routing work.",
+        "status": "approved",
+        "approvalRef": "user://dillon/explicit-authority/2026-08-05"
+      },
+      "checks": {
+        "registry_record_present": true,
+        "registry_status_active": true,
+        "queue_route_resolved": true,
+        "queue_route_matches_registry": true,
+        "route_verified_within_14_days": false,
+        "evidence_current_within_14_days": false,
+        "evidence_references_present": true,
+        "owner_present": true,
+        "next_action_present": true,
+        "finish_line_present": true,
+        "deadline_evidenced": false
+      },
+      "ready": false,
+      "proposed_transition": null,
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W01",
+      "record_kind": "queue_item",
+      "work_item_id": "wi-20260807-0001",
+      "expected_work_item_version": 2,
+      "client_id": "tags-2-go",
+      "title": "Map Tags 2 Go Google Ads access and produce redacted audit baseline",
+      "status": "blocked",
+      "priority": {
+        "level": "P1",
+        "rationale": "Owner-accepted active handoff with blocked access mapping and known policy-risk account history."
+      },
+      "owner": "marketing-chief",
+      "next_action": "Map Tags 2 Go Google Ads through Access Broker or Bitwarden, confirm whether an agency admin invite is already active, then capture a redacted account-health baseline under the client evidence folder.",
+      "deadline": {
+        "value": null,
+        "state": "no_evidenced_deadline"
+      },
+      "approval": {
+        "tier": "automatic",
+        "action": "Local reversible access-mapping research and redacted baseline only.",
+        "status": "not_required",
+        "approvalRef": null
+      },
+      "checks": {
+        "registry_record_present": true,
+        "registry_status_active": false,
+        "queue_route_resolved": true,
+        "queue_route_matches_registry": false,
+        "route_verified_within_14_days": false,
+        "evidence_current_within_14_days": false,
+        "evidence_references_present": true,
+        "owner_present": true,
+        "next_action_present": true,
+        "finish_line_present": true,
+        "deadline_evidenced": false
+      },
+      "ready": false,
+      "proposed_transition": null,
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W01",
+      "record_kind": "queue_item",
+      "work_item_id": "wi-20260808-0003",
+      "expected_work_item_version": 1,
+      "client_id": "bar-crawl-usa",
+      "title": "Confirm Bar Crawl billing-method change scope",
+      "status": "needs_approval",
+      "priority": {
+        "level": "P1",
+        "rationale": "The request affects recurring billing and an advertising account, but Bar Crawl is absent from the canonical paid-media roster and no account mutation is authorized automatically."
+      },
+      "owner": "marketing-chief",
+      "next_action": "Obtain explicit approval for the exact billing accounts, effective date, and protected payment-method update path; keep all invoice and advertising account changes paused.",
+      "deadline": {
+        "value": null,
+        "state": "no_evidenced_deadline"
+      },
+      "approval": {
+        "tier": "explicit",
+        "action": "Approve the exact Bar Crawl billing accounts, effective date, and protected payment-method update path before any account change.",
+        "status": "pending",
+        "approvalRef": null
+      },
+      "checks": {
+        "registry_record_present": true,
+        "registry_status_active": true,
+        "queue_route_resolved": true,
+        "queue_route_matches_registry": true,
+        "route_verified_within_14_days": false,
+        "evidence_current_within_14_days": false,
+        "evidence_references_present": true,
+        "owner_present": true,
+        "next_action_present": true,
+        "finish_line_present": true,
+        "deadline_evidenced": false
+      },
+      "ready": false,
+      "proposed_transition": null,
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    }
+  ],
+  "integrity_records": [
+    {
+      "schema_version": 1,
+      "routine_id": "W01",
+      "record_kind": "control_integrity",
+      "queue_revision": 415,
+      "control_revision": 415,
+      "health_revision": 415,
+      "ranking_probe": {
+        "passed": false,
+        "exit_code": 1,
+        "signal": null,
+        "timed_out": false,
+        "failure_kind": "inactive_or_quarantined_client_portfolio_eligible",
+        "client_id": "tags-2-go",
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "3b5dd6443f79f832c99622290cd942ba2f91fe247343d3e98152d8da5d88287e",
+        "probe_sha256": "10f1f9729167f21dfabe2f24f6ff0faedda4bfc6e6ee86c383d98e5a2ab0be3b"
+      },
+      "checks": {
+        "projection_revision_matches_queue": true,
+        "system_health_revision_matches_queue": true,
+        "ranking_probe_passed": false,
+        "w10_remains_proposal_only": true
+      },
+      "ready": false,
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W01",
+      "record_kind": "portfolio_integrity",
+      "registry_clients": 25,
+      "portfolio_entries": 24,
+      "findings": [
+        {
+          "code": "missing_portfolio_entry",
+          "client_id": "nexla"
+        },
+        {
+          "code": "inactive_client_portfolio_eligible",
+          "client_id": "tags-2-go"
+        }
+      ],
+      "ready": false,
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    }
+  ],
+  "summary": {
+    "unresolved_items": 13,
+    "ready_items": 0,
+    "overdue_items": 3,
+    "items_without_evidenced_deadline": 10,
+    "stale_routes": 13,
+    "stale_evidence": 13,
+    "inactive_or_mismatched_routes": 1,
+    "integrity_records_ready": 0,
+    "integrity_records_total": 2
+  },
+  "workflow_ready": false,
+  "authority": {
+    "proposal_only": true,
+    "marketing_chief_only_canonical_writer": true,
+    "canonical_write_attempted": false,
+    "external_action_attempted": false
+  }
+}

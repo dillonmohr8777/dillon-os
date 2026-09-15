@@ -35,6 +35,10 @@ async function runQa(siteDir, opts = {}) {
     }
   }
 
+  if (/<h1>\s*<mark>/.test(html)) failures.push('Hero wraps the entire h1 in a mark chip');
+  if (/deserves a first screen that makes the next step legible/.test(html)) {
+    failures.push('Generator concept copy is still in the first viewport');
+  }
   if (!/<meta name="viewport"/.test(html)) failures.push('Missing viewport meta');
   if (!/<meta name="description" content="[^"]+"/.test(html)) failures.push('Missing or empty meta description');
   if (!/<meta name="theme-color"/.test(html)) warnings.push('Missing theme-color meta');

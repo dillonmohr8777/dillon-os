@@ -1,0 +1,130 @@
+[
+  {
+    "campaign": {
+      "resourceName": "customers/8145506229/campaigns/23690389385",
+      "name": "Campaign #1",
+      "id": "23690389385"
+    },
+    "metrics": {
+      "clicks": "60",
+      "conversions": 0,
+      "costMicros": "28559211",
+      "impressions": "1219"
+    },
+    "segments": {
+      "month": "2026-03-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/8145506229/campaigns/23690389385",
+      "name": "Campaign #1",
+      "id": "23690389385"
+    },
+    "metrics": {
+      "clicks": "957",
+      "conversions": 0,
+      "costMicros": "608494770",
+      "impressions": "54392"
+    },
+    "segments": {
+      "month": "2026-04-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/8145506229/campaigns/23690389385",
+      "name": "Campaign #1",
+      "id": "23690389385"
+    },
+    "metrics": {
+      "clicks": "751",
+      "conversions": 0,
+      "costMicros": "388937561",
+      "impressions": "84553"
+    },
+    "segments": {
+      "month": "2026-05-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/8145506229/campaigns/23690389385",
+      "name": "Campaign #1",
+      "id": "23690389385"
+    },
+    "metrics": {
+      "clicks": "1362",
+      "conversions": 0,
+      "costMicros": "603883234",
+      "impressions": "66340"
+    },
+    "segments": {
+      "month": "2026-06-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/8145506229/campaigns/23690389385",
+      "name": "Campaign #1",
+      "id": "23690389385"
+    },
+    "metrics": {
+      "clicks": "876",
+      "conversions": 1,
+      "costMicros": "474652814",
+      "impressions": "34699"
+    },
+    "segments": {
+      "month": "2026-07-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/8145506229/campaigns/24069334480",
+      "name": "KJB | Search | Local Bridal | Philadelphia",
+      "id": "24069334480"
+    },
+    "metrics": {
+      "clicks": "30",
+      "conversions": 0,
+      "costMicros": "96234302",
+      "impressions": "559"
+    },
+    "segments": {
+      "month": "2026-07-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/8145506229/campaigns/24069334480",
+      "name": "KJB | Search | Local Bridal | Philadelphia",
+      "id": "24069334480"
+    },
+    "metrics": {
+      "clicks": "144",
+      "conversions": 0,
+      "costMicros": "526044054",
+      "impressions": "2543"
+    },
+    "segments": {
+      "month": "2026-08-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/8145506229/campaigns/24069334480",
+      "name": "KJB | Search | Local Bridal | Philadelphia",
+      "id": "24069334480"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "4920000",
+      "impressions": "35"
+    },
+    "segments": {
+      "month": "2026-09-01"
+    }
+  }
+]

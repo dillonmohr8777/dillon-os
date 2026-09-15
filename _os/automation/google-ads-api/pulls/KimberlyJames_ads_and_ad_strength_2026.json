@@ -1,0 +1,37 @@
+[
+  {
+    "campaign": {
+      "resourceName": "customers/8145506229/campaigns/24069334480",
+      "name": "KJB | Search | Local Bridal | Philadelphia",
+      "id": "24069334480"
+    },
+    "adGroup": {
+      "resourceName": "customers/8145506229/adGroups/199369426475",
+      "id": "199369426475",
+      "name": "Ad group 1"
+    },
+    "metrics": {
+      "clicks": "175",
+      "conversions": 0,
+      "costMicros": "627198356",
+      "impressions": "3137"
+    },
+    "adGroupAd": {
+      "resourceName": "customers/8145506229/adGroupAds/199369426475~818204330830",
+      "status": "ENABLED",
+      "ad": {
+        "type": "RESPONSIVE_SEARCH_AD",
+        "resourceName": "customers/8145506229/ads/818204330830",
+        "id": "818204330830",
+        "finalUrls": [
+          "https://www.kimberlyjamesbridal.com/bridal-appointment-request"
+        ]
+      },
+      "policySummary": {
+        "reviewStatus": "REVIEWED",
+        "approvalStatus": "APPROVED"
+      },
+      "adStrength": "POOR"
+    }
+  }
+]

@@ -1,0 +1,617 @@
+{
+  "run_id": "OGD-20260824-AB98BE6292F0",
+  "graph_id": "daily-d03-automation-health-shadow",
+  "objective": "Classify every in-scope automation surface from current inventory, runtime, checkpoint, and delivery evidence without inferring health from configuration.",
+  "value_signal": "Every detected reliability failure is source-bound and has one bounded next action while stale or structural-only evidence remains visible.",
+  "contract_sha256": "cc293528fe67d9ff5f669788d0763bf4db666f480801dc3b365615f7638df8dd",
+  "started_at": "2026-08-24T23:34:48.439Z",
+  "source_evidence": "Registry, loop and driver logs, runtime and checkpoint state, connector observations, gateway health, and historical health projections are rehashed before planning and at terminal verification.",
+  "finish_line": "Every named reliability surface is independently reconstructed exactly once; inventory, runtime, delivery, checkpoint, false-completion, and no-mutation states reproduce from a stable source manifest.",
+  "governance": {
+    "orchestrator": "Codex acting as Marketing Chief",
+    "canonical_state": "Dillon OS automation registry, runtime/checkpoint state, provider-readback state, current gateway health, and legacy loop receipts remain canonical and read only.",
+    "dedupe_key": "D03:2026-08-24:source-bound-shadow",
+    "checkpoint": "System/outcome-graph/routines/D03/2026-08-24-reliability-shadow/run-receipt.json",
+    "rollback": "Discard reliability shadow artifacts; retain processes, checkpoints, providers, schedules, messages, and canonical state unchanged.",
+    "escalation": "Return exact stale evidence, false-completion risk, connector gate, runtime degradation, or missing approval to Marketing Chief."
+  },
+  "graph_iterations": [
+    {
+      "iteration": 1,
+      "status": "verified",
+      "planner": {
+        "evidence": "Collected 8 isolated D03 item(s) from source set b52e6019ce577e6427819c75ce81c9d04bbc32253583635a0206012c90e3683a.",
+        "item_count": 8,
+        "plan_signature": "5046b2f4dd8ea39338278621571b1fb57f4619c0f34b44a2baec4b1e6e658527",
+        "items": [
+          {
+            "id": "D03:scheduled-inventory",
+            "isolation_key": "automation:scheduled-inventory",
+            "input_fingerprint": "626c71d3de590d0a516c9722355fcdf4c53fb004805e73fd07d013bf216785a1",
+            "task": null
+          },
+          {
+            "id": "D03:claude-daily-driver",
+            "isolation_key": "automation:claude-daily-driver",
+            "input_fingerprint": "38040a21b1dbc30a22d2ddcd702d65a32b1e7284d56636dd8c007f0462f8df8a",
+            "task": null
+          },
+          {
+            "id": "D03:external-connectors",
+            "isolation_key": "automation:external-connectors",
+            "input_fingerprint": "f8fed249e91e55316d6c8387d72fbdf1a42c43355eb9f18c267277b1020e1a63",
+            "task": null
+          },
+          {
+            "id": "D03:hermes-gateway",
+            "isolation_key": "automation:hermes-gateway",
+            "input_fingerprint": "5f709da074b49a7717f740b65f1a7b6c2df1c6dbb0315e95dc3aead7fd7b780e",
+            "task": null
+          },
+          {
+            "id": "D03:legacy-routine-monitor",
+            "isolation_key": "automation:legacy-routine-monitor",
+            "input_fingerprint": "0e5718aef8b55e8b37f0ce13e5337ecb1c350d348d0b2895c28929a3e40fd2b4",
+            "task": null
+          },
+          {
+            "id": "D03:legacy-automation-status",
+            "isolation_key": "automation:legacy-automation-status",
+            "input_fingerprint": "57741d31e7fc6d255f1b665781253a972824f9f6c8300a3c643ca2cc60b77595",
+            "task": null
+          },
+          {
+            "id": "D03:legacy-loop-completion",
+            "isolation_key": "automation:legacy-loop-completion",
+            "input_fingerprint": "861b5d60fcef853c49b43120b960dfe4d14ff0d1b4861da02a1e51dff7aee71d",
+            "task": null
+          },
+          {
+            "id": "D03:legacy-loop-checkpoint",
+            "isolation_key": "automation:legacy-loop-checkpoint",
+            "input_fingerprint": "bda933cdf9466030bcee7af15baefd8e4b363102a62d82c9fc5c9e9d1e75cf01",
+            "task": null
+          }
+        ]
+      },
+      "workers": [
+        {
+          "item_id": "D03:scheduled-inventory",
+          "input_fingerprint": "626c71d3de590d0a516c9722355fcdf4c53fb004805e73fd07d013bf216785a1",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-AB98BE6292F0:d0ab3f43a72662ff4c25:attempt:1",
+              "maker_evidence": "Built one privacy-safe D03 record for D03:scheduled-inventory.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D03/2026-08-24-reliability-shadow/workers/d0ab3f43a72662ff4c25.json",
+                  "sha256": "a3cd169cceeca42652915625eda8ef7d98cef3bab41a627bce5fa9896f824228",
+                  "bytes": 1088
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D03:scheduled-inventory from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D03/2026-08-24-reliability-shadow/workers/d0ab3f43a72662ff4c25.json",
+              "sha256": "a3cd169cceeca42652915625eda8ef7d98cef3bab41a627bce5fa9896f824228",
+              "bytes": 1088
+            }
+          ],
+          "isolation_id": "OGD-20260824-AB98BE6292F0:d0ab3f43a72662ff4c25:attempt:1"
+        },
+        {
+          "item_id": "D03:claude-daily-driver",
+          "input_fingerprint": "38040a21b1dbc30a22d2ddcd702d65a32b1e7284d56636dd8c007f0462f8df8a",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-AB98BE6292F0:c59cfc8b290d37ad44db:attempt:1",
+              "maker_evidence": "Built one privacy-safe D03 record for D03:claude-daily-driver.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D03/2026-08-24-reliability-shadow/workers/c59cfc8b290d37ad44db.json",
+                  "sha256": "1dcba139259018d4eddf9f54e935ed1a56bd8f9cf71dac93fe49abbfbe40372d",
+                  "bytes": 1115
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D03:claude-daily-driver from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D03/2026-08-24-reliability-shadow/workers/c59cfc8b290d37ad44db.json",
+              "sha256": "1dcba139259018d4eddf9f54e935ed1a56bd8f9cf71dac93fe49abbfbe40372d",
+              "bytes": 1115
+            }
+          ],
+          "isolation_id": "OGD-20260824-AB98BE6292F0:c59cfc8b290d37ad44db:attempt:1"
+        },
+        {
+          "item_id": "D03:external-connectors",
+          "input_fingerprint": "f8fed249e91e55316d6c8387d72fbdf1a42c43355eb9f18c267277b1020e1a63",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-AB98BE6292F0:7e5adb44d7c1f07c12f9:attempt:1",
+              "maker_evidence": "Built one privacy-safe D03 record for D03:external-connectors.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D03/2026-08-24-reliability-shadow/workers/7e5adb44d7c1f07c12f9.json",
+                  "sha256": "1ebf9657c8169ca1bafe910a217cb8e357614845f1b04ac91bb3f64ea1f5b333",
+                  "bytes": 1266
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D03:external-connectors from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D03/2026-08-24-reliability-shadow/workers/7e5adb44d7c1f07c12f9.json",
+              "sha256": "1ebf9657c8169ca1bafe910a217cb8e357614845f1b04ac91bb3f64ea1f5b333",
+              "bytes": 1266
+            }
+          ],
+          "isolation_id": "OGD-20260824-AB98BE6292F0:7e5adb44d7c1f07c12f9:attempt:1"
+        },
+        {
+          "item_id": "D03:hermes-gateway",
+          "input_fingerprint": "5f709da074b49a7717f740b65f1a7b6c2df1c6dbb0315e95dc3aead7fd7b780e",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-AB98BE6292F0:39d1decf297678b220c9:attempt:1",
+              "maker_evidence": "Built one privacy-safe D03 record for D03:hermes-gateway.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D03/2026-08-24-reliability-shadow/workers/39d1decf297678b220c9.json",
+                  "sha256": "eef3468711668f2a0474a0a3315aea538b037151a57fcaa05815d6440f423101",
+                  "bytes": 1335
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D03:hermes-gateway from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D03/2026-08-24-reliability-shadow/workers/39d1decf297678b220c9.json",
+              "sha256": "eef3468711668f2a0474a0a3315aea538b037151a57fcaa05815d6440f423101",
+              "bytes": 1335
+            }
+          ],
+          "isolation_id": "OGD-20260824-AB98BE6292F0:39d1decf297678b220c9:attempt:1"
+        },
+        {
+          "item_id": "D03:legacy-routine-monitor",
+          "input_fingerprint": "0e5718aef8b55e8b37f0ce13e5337ecb1c350d348d0b2895c28929a3e40fd2b4",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-AB98BE6292F0:580c11b122d21f0a9c4c:attempt:1",
+              "maker_evidence": "Built one privacy-safe D03 record for D03:legacy-routine-monitor.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D03/2026-08-24-reliability-shadow/workers/580c11b122d21f0a9c4c.json",
+                  "sha256": "ecd2808442d7a1a0d86c20fc32a1dac155eba9ccd174db50df3c00109448225c",
+                  "bytes": 1077
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D03:legacy-routine-monitor from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D03/2026-08-24-reliability-shadow/workers/580c11b122d21f0a9c4c.json",
+              "sha256": "ecd2808442d7a1a0d86c20fc32a1dac155eba9ccd174db50df3c00109448225c",
+              "bytes": 1077
+            }
+          ],
+          "isolation_id": "OGD-20260824-AB98BE6292F0:580c11b122d21f0a9c4c:attempt:1"
+        },
+        {
+          "item_id": "D03:legacy-automation-status",
+          "input_fingerprint": "57741d31e7fc6d255f1b665781253a972824f9f6c8300a3c643ca2cc60b77595",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-AB98BE6292F0:b94640be95785ed01625:attempt:1",
+              "maker_evidence": "Built one privacy-safe D03 record for D03:legacy-automation-status.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D03/2026-08-24-reliability-shadow/workers/b94640be95785ed01625.json",
+                  "sha256": "4dd18a4ed09f2d0469e5a619824fdcdd17ac67c109c0b7a33338e6a434acd611",
+                  "bytes": 1087
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D03:legacy-automation-status from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D03/2026-08-24-reliability-shadow/workers/b94640be95785ed01625.json",
+              "sha256": "4dd18a4ed09f2d0469e5a619824fdcdd17ac67c109c0b7a33338e6a434acd611",
+              "bytes": 1087
+            }
+          ],
+          "isolation_id": "OGD-20260824-AB98BE6292F0:b94640be95785ed01625:attempt:1"
+        },
+        {
+          "item_id": "D03:legacy-loop-completion",
+          "input_fingerprint": "861b5d60fcef853c49b43120b960dfe4d14ff0d1b4861da02a1e51dff7aee71d",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-AB98BE6292F0:06d57434beff0037e6d3:attempt:1",
+              "maker_evidence": "Built one privacy-safe D03 record for D03:legacy-loop-completion.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D03/2026-08-24-reliability-shadow/workers/06d57434beff0037e6d3.json",
+                  "sha256": "462bb5f79f5eb7e09b478350021e06dc315aae2e1a8bb56010316f730138a670",
+                  "bytes": 1055
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D03:legacy-loop-completion from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D03/2026-08-24-reliability-shadow/workers/06d57434beff0037e6d3.json",
+              "sha256": "462bb5f79f5eb7e09b478350021e06dc315aae2e1a8bb56010316f730138a670",
+              "bytes": 1055
+            }
+          ],
+          "isolation_id": "OGD-20260824-AB98BE6292F0:06d57434beff0037e6d3:attempt:1"
+        },
+        {
+          "item_id": "D03:legacy-loop-checkpoint",
+          "input_fingerprint": "bda933cdf9466030bcee7af15baefd8e4b363102a62d82c9fc5c9e9d1e75cf01",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-AB98BE6292F0:a27522e6c8266059a2c2:attempt:1",
+              "maker_evidence": "Built one privacy-safe D03 record for D03:legacy-loop-checkpoint.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D03/2026-08-24-reliability-shadow/workers/a27522e6c8266059a2c2.json",
+                  "sha256": "4dc87cfa37f8af4a9b267ac6274f7ff6f125dc29786d898f37acb9dea396d00e",
+                  "bytes": 1039
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D03:legacy-loop-checkpoint from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D03/2026-08-24-reliability-shadow/workers/a27522e6c8266059a2c2.json",
+              "sha256": "4dc87cfa37f8af4a9b267ac6274f7ff6f125dc29786d898f37acb9dea396d00e",
+              "bytes": 1039
+            }
+          ],
+          "isolation_id": "OGD-20260824-AB98BE6292F0:a27522e6c8266059a2c2:attempt:1"
+        }
+      ],
+      "reduction": {
+        "evidence": "Reduced all checked D03 records without blending isolation keys.",
+        "artifacts": [
+          {
+            "path": "System/outcome-graph/routines/D03/2026-08-24-reliability-shadow/automation-health-brief.json",
+            "sha256": "162ea5eb7231c511acf30ab87e1cf02c71a50d1b3c9cbb079dd3d7a72dad3614",
+            "bytes": 10805
+          },
+          {
+            "path": "System/outcome-graph/routines/D03/2026-08-24-reliability-shadow/source-ledger.json",
+            "sha256": "03fb0b9676798dee1bb7247d49d52e079d01959b0518a28671c80b21a5fe3067",
+            "bytes": 2552
+          }
+        ]
+      },
+      "terminal_verification": {
+        "evidence": "Recollected and independently verified all D03 sources, records, negative states, and artifact hashes.",
+        "declared_pass": true,
+        "passed": true,
+        "assertions": [
+          {
+            "id": "source-manifest-stable",
+            "passed": true,
+            "detail": "Every named source remains hash-bound at terminal verification."
+          },
+          {
+            "id": "every-isolated-item-reconstructed-exactly-once",
+            "passed": true,
+            "detail": "Every in-scope item has one collision-resistant reconstructed record."
+          },
+          {
+            "id": "reducer-output-reproduces-exactly",
+            "passed": true,
+            "detail": "Final artifacts reproduce exactly from current sources and the frozen evaluation clock."
+          },
+          {
+            "id": "active-automation-inventory-complete",
+            "passed": true,
+            "detail": "All eight named reliability surfaces are represented."
+          },
+          {
+            "id": "runtime-and-delivery-truth-separated",
+            "passed": true,
+            "detail": "Configuration, runtime, delivery, and checkpoint evidence are not conflated."
+          },
+          {
+            "id": "failure-packets-are-actionable",
+            "passed": true,
+            "detail": "Every nonhealthy state has exact findings and one bounded action."
+          },
+          {
+            "id": "failed-checkpoints-not-advanced",
+            "passed": true,
+            "detail": "No checkpoint was advanced."
+          },
+          {
+            "id": "no-restart-retry-or-provider-mutation",
+            "passed": true,
+            "detail": "The audit remained read only."
+          },
+          {
+            "id": "privacy-and-no-mutation-boundary",
+            "passed": true,
+            "detail": "Final artifacts are redacted and attest no external, canonical, provider, restart, or checkpoint mutation."
+          }
+        ],
+        "artifact_manifest": [
+          {
+            "path": "System/outcome-graph/routines/D03/2026-08-24-reliability-shadow/automation-health-brief.json",
+            "sha256": "162ea5eb7231c511acf30ab87e1cf02c71a50d1b3c9cbb079dd3d7a72dad3614",
+            "bytes": 10805
+          },
+          {
+            "path": "System/outcome-graph/routines/D03/2026-08-24-reliability-shadow/source-ledger.json",
+            "sha256": "03fb0b9676798dee1bb7247d49d52e079d01959b0518a28671c80b21a5fe3067",
+            "bytes": 2552
+          }
+        ],
+        "manifest_errors": []
+      },
+      "learning": {
+        "evidence": "Appended one hashed D03 correction entry.",
+        "corrections": [
+          "Keep configuration, runtime, delivery, checkpoint, and provider freshness as separate evidence states."
+        ],
+        "ledger": "System/outcome-graph/routines/D03/2026-08-24-reliability-shadow/corrections.jsonl",
+        "ledger_receipt": {
+          "locator": "System/outcome-graph/routines/D03/2026-08-24-reliability-shadow/corrections.jsonl",
+          "entry_sha256": "343f6b1ee2334c45a24a4bb468d24b20f7c3f2ce5ade215e8f4b11084c24b09a"
+        }
+      }
+    }
+  ],
+  "invocation_log": [
+    {
+      "adapter": "source-bound-d03-planner",
+      "invoked_at": "2026-08-24T23:34:48.447Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d03-maker",
+      "invoked_at": "2026-08-24T23:34:48.477Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d03-maker",
+      "invoked_at": "2026-08-24T23:34:48.477Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d03-maker",
+      "invoked_at": "2026-08-24T23:34:48.477Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d03-maker",
+      "invoked_at": "2026-08-24T23:34:48.477Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d03-checker",
+      "invoked_at": "2026-08-24T23:34:48.558Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d03-checker",
+      "invoked_at": "2026-08-24T23:34:48.558Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d03-checker",
+      "invoked_at": "2026-08-24T23:34:48.558Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d03-checker",
+      "invoked_at": "2026-08-24T23:34:48.558Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d03-maker",
+      "invoked_at": "2026-08-24T23:34:48.643Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d03-maker",
+      "invoked_at": "2026-08-24T23:34:48.674Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d03-maker",
+      "invoked_at": "2026-08-24T23:34:48.707Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d03-checker",
+      "invoked_at": "2026-08-24T23:34:48.707Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d03-maker",
+      "invoked_at": "2026-08-24T23:34:48.740Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d03-checker",
+      "invoked_at": "2026-08-24T23:34:48.740Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d03-checker",
+      "invoked_at": "2026-08-24T23:34:48.773Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d03-checker",
+      "invoked_at": "2026-08-24T23:34:48.800Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d03-reducer",
+      "invoked_at": "2026-08-24T23:34:48.865Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d03-terminal-verifier",
+      "invoked_at": "2026-08-24T23:34:48.888Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d03-learner",
+      "invoked_at": "2026-08-24T23:34:48.922Z",
+      "status": "returned"
+    }
+  ],
+  "budget": {
+    "limit_units": 96,
+    "used_units": 20
+  },
+  "outcome": "complete",
+  "terminal_truth": true,
+  "finished_at": "2026-08-24T23:34:48.937Z",
+  "elapsed_seconds": 0.498,
+  "blocked_by": null,
+  "reason": "Finish line is proven by an independent terminal verifier.",
+  "terminal_evidence": {
+    "evidence": "Recollected and independently verified all D03 sources, records, negative states, and artifact hashes.",
+    "declared_pass": true,
+    "passed": true,
+    "assertions": [
+      {
+        "id": "source-manifest-stable",
+        "passed": true,
+        "detail": "Every named source remains hash-bound at terminal verification."
+      },
+      {
+        "id": "every-isolated-item-reconstructed-exactly-once",
+        "passed": true,
+        "detail": "Every in-scope item has one collision-resistant reconstructed record."
+      },
+      {
+        "id": "reducer-output-reproduces-exactly",
+        "passed": true,
+        "detail": "Final artifacts reproduce exactly from current sources and the frozen evaluation clock."
+      },
+      {
+        "id": "active-automation-inventory-complete",
+        "passed": true,
+        "detail": "All eight named reliability surfaces are represented."
+      },
+      {
+        "id": "runtime-and-delivery-truth-separated",
+        "passed": true,
+        "detail": "Configuration, runtime, delivery, and checkpoint evidence are not conflated."
+      },
+      {
+        "id": "failure-packets-are-actionable",
+        "passed": true,
+        "detail": "Every nonhealthy state has exact findings and one bounded action."
+      },
+      {
+        "id": "failed-checkpoints-not-advanced",
+        "passed": true,
+        "detail": "No checkpoint was advanced."
+      },
+      {
+        "id": "no-restart-retry-or-provider-mutation",
+        "passed": true,
+        "detail": "The audit remained read only."
+      },
+      {
+        "id": "privacy-and-no-mutation-boundary",
+        "passed": true,
+        "detail": "Final artifacts are redacted and attest no external, canonical, provider, restart, or checkpoint mutation."
+      }
+    ],
+    "artifact_manifest": [
+      {
+        "path": "System/outcome-graph/routines/D03/2026-08-24-reliability-shadow/automation-health-brief.json",
+        "sha256": "162ea5eb7231c511acf30ab87e1cf02c71a50d1b3c9cbb079dd3d7a72dad3614",
+        "bytes": 10805
+      },
+      {
+        "path": "System/outcome-graph/routines/D03/2026-08-24-reliability-shadow/source-ledger.json",
+        "sha256": "03fb0b9676798dee1bb7247d49d52e079d01959b0518a28671c80b21a5fe3067",
+        "bytes": 2552
+      }
+    ],
+    "manifest_errors": []
+  },
+  "learning_evidence": {
+    "evidence": "Appended one hashed D03 correction entry.",
+    "corrections": [
+      "Keep configuration, runtime, delivery, checkpoint, and provider freshness as separate evidence states."
+    ],
+    "ledger": "System/outcome-graph/routines/D03/2026-08-24-reliability-shadow/corrections.jsonl",
+    "ledger_receipt": {
+      "locator": "System/outcome-graph/routines/D03/2026-08-24-reliability-shadow/corrections.jsonl",
+      "entry_sha256": "343f6b1ee2334c45a24a4bb468d24b20f7c3f2ce5ade215e8f4b11084c24b09a"
+    }
+  },
+  "drift_fingerprint": "3bd6dcb31aff15a2441c5e79aaf130fa0ff260ac76e4b0e092421c18da2221a3",
+  "deduped": false,
+  "durable_state": {
+    "schema_version": 1,
+    "dedupe_identity": "830f55f0e524ba537017eb867a5302ea669f572e34bf9ab7a359b8e762f9fdb1",
+    "dedupe_hit": false,
+    "resumed": false,
+    "canonical_binding": {
+      "locator": "dillon-os://routine/D03/2026-08-24",
+      "version": "2026-08-24:05e6a21e.aa41a5c9.58c3eba4.7c8c85b7.671a1719.483c6549.d3f6602f.b206acfa.5f9296df.48f8da86.40feaf98",
+      "sha256": "b52e6019ce577e6427819c75ce81c9d04bbc32253583635a0206012c90e3683a",
+      "captured_at": "2026-08-24T23:34:48.403Z"
+    },
+    "canonical_binding_fingerprint": "3a57edbcf4f0af235b818ccd6d0bfc2f5ffb45e1c04b8ee4a38a3cebab80624e",
+    "contract_fingerprint": "fbb15a5e0f56552663c00ecc35f71822b55fe18389929f15f50f8eda16bb1f20",
+    "checkpoint": "runs/OGD-20260824-AB98BE6292F0/checkpoint.json"
+  }
+}

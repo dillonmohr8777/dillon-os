@@ -2,7 +2,7 @@
 note_type: concept
 status: active
 created: 2026-08-01
-updated: 2026-08-01
+updated: 2026-09-01
 domain: marketing operating system
 maturity: operational
 summary: The canonical map connecting demand research, content, AI discovery, paid media, websites, automation, measurement, and learning in Dillon OS.
@@ -13,6 +13,8 @@ source_refs:
   - "[[12_Brain/03_Concepts/Living Second Brain]]"
   - "[[12_Brain/04_Decisions/2026-07-30 - Adopt gated intelligence stack]]"
   - "[[_os/automation/docs/OPERATOR]]"
+  - "[[12_Brain/03_Concepts/Specialist Forecast Router]]"
+  - "[[12_Brain/04_Decisions/2026-09-01 - Route numeric forecasts to a specialist]]"
 tags:
   - brain
   - concept
@@ -77,6 +79,8 @@ Every operating lane should answer seven questions:
 - [[12_Brain/03_Concepts/Automation and Workflow Engineering|Automation and Workflow Engineering]]
 - [[12_Brain/03_Concepts/Agent Governance and Verification|Agent Governance and Verification]]
 - [[12_Brain/03_Concepts/Evidence Context and Learning Loops|Evidence, Context, and Learning Loops]]
+- [[12_Brain/03_Concepts/Specialist Forecast Router|Specialist Forecast Router]]
+- [[12_Brain/03_Concepts/Leading Indicators|Leading Indicators]]
 
 ## Signal hierarchy
 
@@ -90,7 +94,7 @@ prove.
 | 3. Platform opportunity | Keyword Planner, Trends, Bing AI Performance, citation exports | Relative demand, cost, visibility, and change |
 | 4. Customer language | Reviews, sales calls, Slack, email, forums, autocomplete, support questions | Vocabulary, objections, questions, and jobs to be done |
 | 5. External research | Official documentation, studies, expert analysis | Methods and hypotheses that still require local validation |
-| 6. Model output | AI summaries, classifications, recommendations | Draft interpretation only, never proof |
+| 6. Model output | AI summaries, classifications, recommendations, forecast bands | Draft interpretation only, never proof. Quantile forecasts are still model output. |
 
 ## One demand model
 
@@ -186,6 +190,7 @@ new surface without proving an outcome.
 - Automating a broken or undefined manual process.
 - Letting an agent verify its own material claim.
 - Copying raw communication into the knowledge layer.
+- Asking an LLM to project next month's spend, leads, or pipeline from a paragraph.
 
 ## Reusable starting points
 

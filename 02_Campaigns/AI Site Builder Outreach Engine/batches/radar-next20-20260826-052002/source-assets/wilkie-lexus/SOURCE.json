@@ -1,0 +1,83 @@
+{
+  "sourceUrl": "https://www.wilkielexus.com/",
+  "finalUrl": "https://www.wilkielexus.com/",
+  "sourceDomain": "wilkielexus.com",
+  "httpStatus": 200,
+  "contentType": "text/html;charset=utf-8",
+  "pageSha256": "60ab8b9429807b33af3ff7f24773271a9bf2c1be3b7dcd44706e1ea03aca1782",
+  "title": "Wilkie Lexus in Haverford, PA | Car Sales & Service Near Me",
+  "description": "Visit Wilkie Lexus the next time you're looking to buy a used luxury car or start a new Lexus lease. We offer auto financing and certified Lexus service.",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "wilkie",
+      "lexus"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260826-052002\\preflight\\wilkie-lexus\\logo.svg",
+    "fileName": "logo.svg",
+    "sourceUrl": "https://www.wilkielexus.com/",
+    "sourceEvidence": "Exact business name from the verified official source; code-rendered transparent typographic fallback.",
+    "type": "svg",
+    "dimensions": {
+      "width": 1200,
+      "height": 320
+    },
+    "sha256": "765092a5794b19f16ddc59299784b26865f7822b0a61262a49a28faadac67f43",
+    "sourceSha256": null,
+    "sourceType": "verified business name",
+    "sourceFileName": null,
+    "transformation": "Disclosed exact-name typographic fallback; no icon, symbol, or first-party logo imitation.",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "reason": "SVG has no background rectangle."
+    },
+    "transparent": true,
+    "identityFallback": true,
+    "downloadFailures": [
+      {
+        "url": "https://pictures.dealer.com/w/wilkielexus/1234/54f77fc54d6e4adb8ebe5f13bf086a13.jpg?impolicy=downsize&h=260",
+        "reason": "could not sample logo border"
+      },
+      {
+        "url": "https://www.wilkielexus.com/static/v8/global/images/franchise-logos/auto/l/lexus/white/117x80.png?r=1787238394000",
+        "reason": "logo source is too small"
+      },
+      {
+        "url": "https://pictures.dealer.com/l/lexusprogram/0991/5e2600a01524afb803de30925275cf48x.jpg",
+        "reason": "logo source is too small"
+      }
+    ],
+    "bytes": 424
+  },
+  "references": [],
+  "contact": {
+    "phone": "",
+    "address": "",
+    "city": "",
+    "phoneSource": null,
+    "addressSource": null
+  },
+  "visualReferenceFallback": "No usable first-party photography was exposed by the legacy source. Use only disclosed Align Image Gen concept imagery.",
+  "referenceFailures": [
+    {
+      "url": "https://pictures.dealer.com/w/wilkielexus/1234/54f77fc54d6e4adb8ebe5f13bf086a13.jpg?impolicy=downsize&h=260",
+      "reason": "reference image has insufficient evidence of usable size"
+    },
+    {
+      "url": "https://www.wilkielexus.com/'+T+'",
+      "reason": "HTTP 404; curl: curl: (22) The requested URL returned error: 403"
+    }
+  ],
+  "brandColors": [
+    "#f05a28",
+    "#33d0f2",
+    "#3d9ebe",
+    "#007faa",
+    "#00678a"
+  ],
+  "checkedAt": "2026-08-26T09:35:00.655Z"
+}

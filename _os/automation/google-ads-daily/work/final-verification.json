@@ -1,0 +1,67 @@
+{
+  "verifiedAt": "2026-09-05T00:55:53.373Z",
+  "tests": {
+    "nodeTestsPassed": 17,
+    "nodeTestsFailed": 0,
+    "independentRadarChecks": "15-test earlier build plus12 independent assertions; see radar-qa.md",
+    "sourceWindowIntegration": "8 Slack segments, all pagination exhausted"
+  },
+  "sources": {
+    "throughUnix": 1788567552,
+    "slackUniqueMessages": 705,
+    "slackSurfacedConversations": 37,
+    "gmailHeaderSnippetRecords": 625,
+    "gmailAllBodiesRead": false,
+    "seenKeys": 1331,
+    "uniqueSeenKeys": 1331
+  },
+  "automations": {
+    "quietRadar": {
+      "kind": "heartbeat",
+      "status": "ACTIVE",
+      "intervalMinutes": 15,
+      "notificationPolicy": "default",
+      "lastRunAt": null,
+      "scheduledRunCount": 0
+    },
+    "slack-reply-watchdog": {
+      "status": "PAUSED",
+      "originalConfigBackedUp": true,
+      "missingProjectReferenceRetired": true
+    },
+    "six-hour-important-email-drafter": {
+      "status": "PAUSED",
+      "originalConfigBackedUp": true,
+      "missingProjectReferenceRetired": true
+    }
+  },
+  "ownedSession": {
+    "threadId": "01a06efc-21e8-7d03-ae5a-b0046cc5992c",
+    "status": "completed",
+    "reviewCorrectionsVerified": true,
+    "canonicalQueueWrites": 0
+  },
+  "noPopupGuard": "Running",
+  "artifactLinks": {
+    "checked": 16,
+    "missing": 0
+  },
+  "signature": {
+    "state": "reviewable-static-draft",
+    "localChecksPassed": 17,
+    "independentReview": "acceptable",
+    "gif": false,
+    "installed": false,
+    "sent": false
+  },
+  "meta": {
+    "exactAccount": "1249689223687250",
+    "currentDailyDataVerified": false,
+    "observedRoute": "login-choice screen",
+    "mappedAuthMethod": "browser-oauth",
+    "mappedBitwardenItem": false,
+    "bridgeStatus": "locked with approved bootstrap present; no human unlock requirement reported",
+    "secretsExposed": false
+  },
+  "externalSends": 0
+}

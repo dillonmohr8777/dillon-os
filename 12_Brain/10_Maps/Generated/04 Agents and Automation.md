@@ -4,7 +4,7 @@ status: active
 generated: true
 generated_by: Update-SecondBrainMaps
 map_type: domain
-updated: 2026-08-18
+updated: 2026-09-08
 tags:
   - brain
   - map
@@ -31,6 +31,7 @@ Agent roles, system state, tooling, automation, and operating infrastructure.
 - [[_os/automation/incoming/grok/README|README]]
 - [[_os/automation/incoming/reports/README|README]]
 - [[_os/creative-factory/README|README]]
+- [[_os/radar-d1/README|README]]
 - [[_os/radar-engine/README|README]]
 - [[_os/README|README]]
 - [[_os/reporting/am-dashboard-build-prompt|am-dashboard-build-prompt]]
@@ -39,6 +40,7 @@ Agent roles, system state, tooling, automation, and operating infrastructure.
 ## 11_Agents
 
 - [[11_Agents/64gb Morning Orchestrator Spec 2026-07-08|64gb Morning Orchestrator Spec 2026-07-08]]
+- [[11_Agents/Cloud Routine Prompts 2026-09-05|Cloud Routine Prompts 2026-09-05]]
 - [[11_Agents/Google Ads Agent|Google Ads Agent]]
 - [[11_Agents/Master Agent|Master Agent]]
 - [[11_Agents/Reporting Agent|Reporting Agent]]
@@ -93,6 +95,7 @@ Agent roles, system state, tooling, automation, and operating infrastructure.
 - [[System/automation-status|automation-status]]
 - [[System/claude-memory-sync|claude-memory-sync]]
 - [[System/client-roster-reconciliation-2026-07-12|client-roster-reconciliation-2026-07-12]]
+- [[System/client-roster-reconciliation-2026-09-05|client-roster-reconciliation-2026-09-05]]
 - [[System/cursor-integration|cursor-integration]]
 - [[System/cursor-optimization-backlog|cursor-optimization-backlog]]
 - [[System/cursor-takeover-report|cursor-takeover-report]]

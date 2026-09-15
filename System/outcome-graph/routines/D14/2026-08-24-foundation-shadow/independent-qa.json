@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "routine_id": "D14",
+  "generated_at": "2026-08-24T23:49:06.130Z",
+  "source_set_sha256": "bee6d7037763d45601274702c12c8e31ad280fed7e97757744fc5930b1d39065",
+  "gate_count": 8,
+  "passing_gates": 1,
+  "missing_evidence": [
+    {
+      "gate_id": "authority-boundary",
+      "state": "not_reached",
+      "reasons": [
+        "build-browser-qa-gate-not-met"
+      ]
+    },
+    {
+      "gate_id": "build-browser-qa",
+      "state": "not_reached",
+      "reasons": [
+        "selection-gate-not-met"
+      ]
+    },
+    {
+      "gate_id": "generated-assets",
+      "state": "not_reached",
+      "reasons": [
+        "build-browser-qa-gate-not-met"
+      ]
+    },
+    {
+      "gate_id": "impeccable-detector",
+      "state": "not_reached",
+      "reasons": [
+        "build-browser-qa-gate-not-met"
+      ]
+    },
+    {
+      "gate_id": "independent-quality",
+      "state": "not_reached",
+      "reasons": [
+        "asset-or-detector-gate-not-met"
+      ]
+    },
+    {
+      "gate_id": "selection",
+      "state": "not_reached",
+      "reasons": [
+        "source-pool-gate-not-met"
+      ]
+    },
+    {
+      "gate_id": "source-pool",
+      "state": "hold",
+      "reasons": [
+        "source-ready-pool-is-6-of-20"
+      ]
+    }
+  ],
+  "desktop_mobile_review_state": "not_reached",
+  "interaction_state_review": "not_reached",
+  "accessibility_console_detector_state": "not_reached",
+  "verdict": "blocked",
+  "authority": {
+    "read_only": true,
+    "proposal_only": true,
+    "external_action_attempted": false,
+    "canonical_write_attempted": false,
+    "provider_mutation_attempted": false,
+    "deployment_attempted": false,
+    "worktree_mutation_attempted": false,
+    "ui_mutation_attempted": false,
+    "acceptance_contract_changed": false
+  }
+}

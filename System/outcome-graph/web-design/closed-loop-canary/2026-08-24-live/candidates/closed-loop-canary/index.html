@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en" data-design-state="resolved">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A synthetic local proof of the closed-loop web-design runtime.">
+  <title>The page is not done when it renders</title>
+  <style>
+    :root {
+      --paper: #dfe6dc;
+      --ink: #101512;
+      --moss: #214b3b;
+      --signal: #ffc3a6;
+      --mist: #cbd8cb;
+      --bright: #fffaf0;
+      --line: rgba(16, 21, 18, .22);
+      --measure: 78rem;
+      --pad: clamp(1.25rem, 4vw, 4.5rem);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; background: var(--ink); }
+    body { margin: 0; min-width: 0; color: var(--ink); background: var(--paper); font-family: Georgia, Cambria, serif; font-size: 18px; line-height: 1.5; }
+    a { color: inherit; }
+    a:focus-visible { outline: 3px solid var(--signal); outline-offset: 5px; }
+    .mast { min-height: 4.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0 var(--pad); border-bottom: 1px solid var(--line); font: 650 .9rem/1.1 Bahnschrift, 'Franklin Gothic Medium', sans-serif; letter-spacing: .04em; }
+    .mast a { min-height: 48px; display: inline-flex; align-items: center; }
+    .signal { display: inline-flex; align-items: center; gap: .55rem; }
+    .signal::before { width: 1.1rem; height: .24rem; background: var(--signal); content: ''; }
+    main { overflow: clip; }
+    .hero { max-width: var(--measure); min-height: min(48rem, calc(100vh - 4.5rem)); margin: 0 auto; padding: clamp(3rem, 7vw, 7rem) var(--pad) 3rem; display: grid; align-content: space-between; gap: 4rem; }
+    .eyebrow { margin: 0; font: 650 .9rem/1.1 Bahnschrift, 'Franklin Gothic Medium', sans-serif; letter-spacing: .04em; }
+    h1 { max-width: 12ch; margin: 0; font-size: clamp(3.6rem, 9.7vw, 9.4rem); font-weight: 400; line-height: .84; letter-spacing: -.035em; text-wrap: balance; }
+    .hero-foot { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(15rem, .65fr); align-items: end; gap: 2rem; border-top: 1px solid var(--line); padding-top: 1.5rem; }
+    .hero-foot p { max-width: 52ch; margin: 0; font-family: Verdana, Geneva, sans-serif; }
+    .primary { min-height: 52px; display: inline-flex; align-items: center; justify-content: space-between; gap: 2rem; padding: .7rem 1rem; background: var(--signal); color: var(--ink); font: 750 .9rem/1 Bahnschrift, 'Franklin Gothic Medium', sans-serif; letter-spacing: .04em; text-decoration: none; }
+    .primary::after { content: '↘'; font-size: 1.2rem; transition: transform .2s ease; }
+    .primary:hover::after, .primary:focus-visible::after { transform: translate(.2rem, .2rem); }
+    .current { padding: 1rem; color: var(--bright); background: var(--moss); }
+    .current-inner { max-width: var(--measure); margin: 0 auto; padding: clamp(4rem, 9vw, 8rem) var(--pad); }
+    .current-head { display: grid; grid-template-columns: .42fr 1.58fr; gap: 2rem; align-items: end; margin-bottom: clamp(3rem, 8vw, 7rem); }
+    .current h2 { max-width: 13ch; margin: 0; font-size: clamp(2.7rem, 6vw, 6.2rem); font-weight: 400; line-height: .94; letter-spacing: -.03em; }
+    .loop-map { position: relative; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 0; border-top: 1px solid rgba(242,237,221,.4); }
+    .loop-map::before { position: absolute; top: -2px; left: 0; width: 16.66%; height: 3px; background: var(--signal); content: ''; animation: travel 1.4s cubic-bezier(.2,.8,.2,1) 1 both; }
+    .node { min-width: 0; padding: 1.4rem .9rem 3rem; border-right: 1px solid rgba(223,230,220,.22); }
+    .node:last-child { border-right: 0; }
+    .node b { display: block; margin-bottom: 1.7rem; color: var(--signal); font: 750 .9rem/1 Bahnschrift, 'Franklin Gothic Medium', sans-serif; letter-spacing: .04em; }
+    .node strong { display: block; font-size: clamp(1.05rem, 1.6vw, 1.5rem); font-weight: 400; line-height: 1.05; }
+    .proof { padding: 1rem; background: var(--ink); color: var(--bright); }
+    .proof-grid { max-width: var(--measure); margin: 0 auto; padding: clamp(4rem, 9vw, 8rem) var(--pad); display: grid; grid-template-columns: 1fr 1fr; gap: clamp(3rem, 8vw, 8rem); }
+    .proof h2 { margin: 0; font-size: clamp(3rem, 7vw, 7rem); font-weight: 400; line-height: .9; letter-spacing: -.03em; }
+    .proof-list { margin: 0; padding: 0; list-style: none; counter-reset: proof; }
+    .proof-list li { display: grid; grid-template-columns: 2.4rem 1fr; gap: .75rem; padding: 1rem 0; border-top: 1px solid rgba(223,230,220,.24); font-family: Verdana, Geneva, sans-serif; }
+    .proof-list li::before { counter-increment: proof; content: '0' counter(proof); color: var(--signal); font: 750 .9rem/1.7 Bahnschrift, 'Franklin Gothic Medium', sans-serif; }
+    .disclosure { max-width: var(--measure); margin: 0 auto; padding: 1.25rem var(--pad); border-top: 1px solid rgba(223,230,220,.24); color: var(--mist); font: 550 .9rem/1.5 Bahnschrift, 'Franklin Gothic Medium', sans-serif; letter-spacing: .025em; }
+    @keyframes travel { to { transform: translateX(500%); } }
+    @media (max-width: 760px) {
+      .hero { min-height: calc(100svh - 4.5rem); gap: 3rem; }
+      h1 { font-size: clamp(3.7rem, 19vw, 6.2rem); }
+      .hero-foot, .current-head, .proof-grid { grid-template-columns: 1fr; }
+      .primary { width: 100%; }
+      .loop-map { grid-template-columns: 1fr 1fr; }
+      .loop-map::before { width: 50%; animation-name: travel-mobile; }
+      .node:nth-child(2n) { border-right: 0; }
+      .node { min-height: 8.5rem; border-bottom: 1px solid rgba(223,230,220,.22); }
+      .node:nth-last-child(-n+2) { border-bottom: 0; }
+      .proof-grid { gap: 3rem; }
+    }
+    @keyframes travel-mobile { to { transform: translateX(100%); } }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="mast"><span class="signal">Local canary / loop active</span><a href="#proof">Inspect proof</a></header>
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <h1 id="hero-title">The page is not done when it renders.</h1>
+      <div class="hero-foot"><p>A build becomes a candidate only after the rendered surface is criticized, repaired, captured again, and reproduced from the same source truth.</p><a class="primary" href="#proof">Inspect the evidence</a></div>
+    </section>
+    <section class="current" aria-labelledby="loop-title">
+      <div class="current-inner">
+        <div class="current-head"><p class="eyebrow">One visible current</p><h2 id="loop-title">Every defect has somewhere to go next.</h2></div>
+        <div class="loop-map" aria-label="Closed-loop design sequence">
+          <div class="node"><b>01</b><strong>Bind the brief</strong></div>
+          <div class="node"><b>02</b><strong>Make in isolation</strong></div>
+          <div class="node"><b>03</b><strong>Render the truth</strong></div>
+          <div class="node"><b>04</b><strong>Critique precisely</strong></div>
+          <div class="node"><b>05</b><strong>Repair the cause</strong></div>
+          <div class="node"><b>06</b><strong>Reprove the finish</strong></div>
+        </div>
+      </div>
+    </section>
+    <section class="proof" id="proof" aria-labelledby="proof-title">
+      <div class="proof-grid"><h2 id="proof-title">Proof before promotion.</h2><ol class="proof-list"><li>Desktop and mobile renders are hash-bound.</li><li>Keyboard, motion, overflow, content, and build states are checked separately.</li><li>Checker defects feed the next maker attempt.</li><li>A terminal replay verifies the final candidate again.</li><li>Adoption and deployment remain separate decisions.</li></ol></div>
+      <p class="disclosure">Synthetic local canary. No client, public deployment, performance claim, or production approval.</p>
+    </section>
+  </main>
+</body>
+</html>

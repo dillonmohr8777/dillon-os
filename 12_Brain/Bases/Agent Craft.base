@@ -20,6 +20,12 @@ properties:
     displayName: Never ran
   earned_lessons:
     displayName: Lessons
+  loop_lessons:
+    displayName: Loop lessons
+  loop_no_findings:
+    displayName: No-findings
+  promotion_candidates:
+    displayName: Promote
   updated:
     displayName: Updated
 views:
@@ -36,6 +42,9 @@ views:
       - cadence_drift
       - authorized_never_ran
       - earned_lessons
+      - loop_lessons
+      - loop_no_findings
+      - promotion_candidates
   - type: table
     name: Needs Attention
     filters:

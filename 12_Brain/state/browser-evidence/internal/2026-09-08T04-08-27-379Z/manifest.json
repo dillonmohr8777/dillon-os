@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.0",
+  "captured_at": "2026-09-08T04:08:27.379Z",
+  "scope": "internal",
+  "url": "file:///C:/Users/dillo/repos/dillon-os/_os/reporting/report-template.html",
+  "browser": "Chrome/152.0.7977.76",
+  "endpoint": "http://127.0.0.1:9223",
+  "loopback_only": true,
+  "tunnel_used": false,
+  "title": "__TITLE__",
+  "dom_chars": 81,
+  "artifacts": [
+    {
+      "file": "screenshot.png",
+      "bytes": 5557,
+      "sha256_16": "a4b8d9d78c3f9cf5"
+    },
+    {
+      "file": "dom.txt",
+      "bytes": 81,
+      "sha256_16": "46f4e47791c8e338"
+    }
+  ],
+  "created_target_id": "CC9B77F769AD2AA464C6BB5DAD0CA4F4",
+  "preexisting_page_targets_untouched": 1,
+  "forbidden_actions": [
+    "click_submit",
+    "form_submit",
+    "file_upload",
+    "oauth_consent",
+    "permission_grant",
+    "cookie_read",
+    "credential_entry",
+    "mfa_entry"
+  ],
+  "external_action_attempted": "none",
+  "credential_read": false,
+  "cookies_read": false,
+  "privacy": "redacted"
+}

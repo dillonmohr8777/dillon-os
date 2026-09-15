@@ -1,5 +1,8 @@
 'use strict';
 
+const fs = require('fs');
+const path = require('path');
+
 const assignments = {
   'allure-skin-nails-body': ['allure-skincare-nails-body', 'spa, nail, and skincare'],
   'always-dental-care': ['germantown-dental-group', 'dental care'],
@@ -119,11 +122,25 @@ const siteSpecificBoards = new Set([
   'connolly-dermatology',
 ]);
 
+function resolveGeneratedSiteBoard(slug, descriptor) {
+  const catalog = path.join(__dirname, 'generated-stock-library', 'ALIGN-SITE-IMAGE-BOARDS.json');
+  if (!fs.existsSync(catalog)) return null;
+  try {
+    const entry = JSON.parse(fs.readFileSync(catalog, 'utf8')).boards?.[slug];
+    if (!entry?.prompt || !entry?.business || entry.business === '') return null;
+    return [slug, entry.descriptor || descriptor];
+  } catch (error) {
+    throw new Error(`Cannot read site-specific Align board catalog for ${slug}: ${error.message}`);
+  }
+}
+
 function resolveGeneratedStockAssignment({ slug, name, category, vertical, verticalGroup }) {
+  const descriptor = String(category || vertical || 'business').toLowerCase();
+  const generatedSiteBoard = resolveGeneratedSiteBoard(slug, descriptor);
+  if (generatedSiteBoard) return generatedSiteBoard;
   if (siteSpecificBoards.has(slug)) return [slug, String(category || vertical || 'business').toLowerCase()];
   if (assignments[slug]) return assignments[slug];
   const signal = [slug, name, category, vertical, verticalGroup].filter(Boolean).join(' ').toLowerCase();
-  const descriptor = String(category || vertical || 'business').toLowerCase();
   const match = rules.find(([pattern]) => pattern.test(signal));
   if (!match) {
     throw new Error(`No relevant generated-stock category is approved for ${slug} (${signal}). Generate and approve a new board instead of guessing.`);

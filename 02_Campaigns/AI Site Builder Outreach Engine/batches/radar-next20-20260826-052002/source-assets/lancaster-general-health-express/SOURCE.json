@@ -1,0 +1,54 @@
+{
+  "sourceUrl": "https://www.lghealthexpress.org/",
+  "finalUrl": "https://www.lghealthexpress.org/",
+  "sourceDomain": "lghealthexpress.org",
+  "httpStatus": 200,
+  "contentType": "text/html",
+  "pageSha256": "84b1ca130d85380a891010818e64130756c0b994b28ce08290876206e8907385",
+  "title": "",
+  "description": "",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260826-052002\\preflight\\lancaster-general-health-express\\logo.svg",
+    "fileName": "logo.svg",
+    "sourceUrl": "https://www.lghealthexpress.org/",
+    "sourceEvidence": "Exact business name from the verified official source; code-rendered transparent typographic fallback.",
+    "type": "svg",
+    "dimensions": {
+      "width": 1200,
+      "height": 320
+    },
+    "sha256": "5fb0f4f79b8062ba7d2f4c99947d111707747296f7a07772ac6ec558aff05cdd",
+    "sourceSha256": null,
+    "sourceType": "verified business name",
+    "sourceFileName": null,
+    "transformation": "Disclosed exact-name typographic fallback; no icon, symbol, or first-party logo imitation.",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "reason": "SVG has no background rectangle."
+    },
+    "transparent": true,
+    "identityFallback": true,
+    "downloadFailures": [],
+    "bytes": 464
+  },
+  "references": [],
+  "contact": {
+    "phone": "",
+    "address": "",
+    "city": "",
+    "phoneSource": null,
+    "addressSource": null
+  },
+  "visualReferenceFallback": "No usable first-party photography was exposed by the legacy source. Use only disclosed Align Image Gen concept imagery.",
+  "referenceFailures": [],
+  "brandColors": [
+    "#f05a28"
+  ],
+  "checkedAt": "2026-08-26T09:34:42.930Z"
+}

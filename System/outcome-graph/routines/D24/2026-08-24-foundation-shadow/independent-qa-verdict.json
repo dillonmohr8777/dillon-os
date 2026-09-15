@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "routine_id": "D24",
+  "id": "D24:4cbc7e46def665bc346c",
+  "isolation_key": "artifact:4cbc7e46def665bc346c32375f21eea3a4ecdebc08a9b36732feb999a9e4de58:W05-acceptance",
+  "observed_at": "2026-08-24T23:49:17.799Z",
+  "source_set_sha256": "bee6d7037763d45601274702c12c8e31ad280fed7e97757744fc5930b1d39065",
+  "target": {
+    "path": "System/outcome-graph/factory-2026-08-24-run-1-durable/W05-website-factory-readiness.json",
+    "sha256": "4cbc7e46def665bc346c32375f21eea3a4ecdebc08a9b36732feb999a9e4de58",
+    "bytes": 8909
+  },
+  "checker_identity": "D24 independent source-bound verifier",
+  "maker_identity": "W05 website factory durable graph",
+  "checker_independent": true,
+  "exact_artifact_hash_reproduced": true,
+  "desktop_mobile_and_interaction_reproduced": false,
+  "tests_build_console_accessibility_reproduced": false,
+  "acceptance_contract_unchanged": true,
+  "defects": [
+    {
+      "gate_id": "source-pool",
+      "state": "hold",
+      "reasons": [
+        "source-ready-pool-is-6-of-20"
+      ]
+    },
+    {
+      "gate_id": "selection",
+      "state": "not_reached",
+      "reasons": [
+        "source-pool-gate-not-met"
+      ]
+    },
+    {
+      "gate_id": "build-browser-qa",
+      "state": "not_reached",
+      "reasons": [
+        "selection-gate-not-met"
+      ]
+    },
+    {
+      "gate_id": "generated-assets",
+      "state": "not_reached",
+      "reasons": [
+        "build-browser-qa-gate-not-met"
+      ]
+    },
+    {
+      "gate_id": "impeccable-detector",
+      "state": "not_reached",
+      "reasons": [
+        "build-browser-qa-gate-not-met"
+      ]
+    },
+    {
+      "gate_id": "independent-quality",
+      "state": "not_reached",
+      "reasons": [
+        "asset-or-detector-gate-not-met"
+      ]
+    },
+    {
+      "gate_id": "authority-boundary",
+      "state": "not_reached",
+      "reasons": [
+        "build-browser-qa-gate-not-met"
+      ]
+    }
+  ],
+  "verdict": "blocked",
+  "authority": {
+    "read_only": true,
+    "proposal_only": true,
+    "external_action_attempted": false,
+    "canonical_write_attempted": false,
+    "provider_mutation_attempted": false,
+    "deployment_attempted": false,
+    "worktree_mutation_attempted": false,
+    "ui_mutation_attempted": false,
+    "acceptance_contract_changed": false
+  },
+  "generated_at": "2026-08-24T23:49:17.799Z"
+}

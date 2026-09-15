@@ -1,0 +1,2477 @@
+[
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "9",
+      "conversions": 0,
+      "costMicros": "2165121",
+      "impressions": "353"
+    },
+    "segments": {
+      "dayOfWeek": "SUNDAY",
+      "hour": 0
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "13",
+      "conversions": 0,
+      "costMicros": "2705078",
+      "impressions": "275"
+    },
+    "segments": {
+      "dayOfWeek": "SUNDAY",
+      "hour": 1
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "3",
+      "conversions": 0,
+      "costMicros": "565523",
+      "impressions": "178"
+    },
+    "segments": {
+      "dayOfWeek": "SUNDAY",
+      "hour": 2
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "191412",
+      "impressions": "102"
+    },
+    "segments": {
+      "dayOfWeek": "SUNDAY",
+      "hour": 3
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "216"
+    },
+    "segments": {
+      "dayOfWeek": "SUNDAY",
+      "hour": 4
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "4",
+      "conversions": 0,
+      "costMicros": "1528395",
+      "impressions": "177"
+    },
+    "segments": {
+      "dayOfWeek": "SUNDAY",
+      "hour": 5
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "7",
+      "conversions": 0,
+      "costMicros": "1754737",
+      "impressions": "396"
+    },
+    "segments": {
+      "dayOfWeek": "SUNDAY",
+      "hour": 6
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "12",
+      "conversions": 1,
+      "costMicros": "2607364",
+      "impressions": "372"
+    },
+    "segments": {
+      "dayOfWeek": "SUNDAY",
+      "hour": 7
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "16",
+      "conversions": 0,
+      "costMicros": "2209001",
+      "impressions": "727"
+    },
+    "segments": {
+      "dayOfWeek": "SUNDAY",
+      "hour": 8
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "11",
+      "conversions": 1,
+      "costMicros": "2364163",
+      "impressions": "479"
+    },
+    "segments": {
+      "dayOfWeek": "SUNDAY",
+      "hour": 9
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "19",
+      "conversions": 0,
+      "costMicros": "3773671",
+      "impressions": "571"
+    },
+    "segments": {
+      "dayOfWeek": "SUNDAY",
+      "hour": 10
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "42",
+      "conversions": 1,
+      "costMicros": "6081827",
+      "impressions": "984"
+    },
+    "segments": {
+      "dayOfWeek": "SUNDAY",
+      "hour": 11
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "31",
+      "conversions": 0,
+      "costMicros": "4721490",
+      "impressions": "997"
+    },
+    "segments": {
+      "dayOfWeek": "SUNDAY",
+      "hour": 12
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "28",
+      "conversions": 3.000579,
+      "costMicros": "6590414",
+      "impressions": "780"
+    },
+    "segments": {
+      "dayOfWeek": "SUNDAY",
+      "hour": 13
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "30",
+      "conversions": 1,
+      "costMicros": "5322405",
+      "impressions": "991"
+    },
+    "segments": {
+      "dayOfWeek": "SUNDAY",
+      "hour": 14
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "22",
+      "conversions": 1,
+      "costMicros": "2865575",
+      "impressions": "709"
+    },
+    "segments": {
+      "dayOfWeek": "SUNDAY",
+      "hour": 15
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "20",
+      "conversions": 0,
+      "costMicros": "3442897",
+      "impressions": "699"
+    },
+    "segments": {
+      "dayOfWeek": "SUNDAY",
+      "hour": 16
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "23",
+      "conversions": 1.994805,
+      "costMicros": "4085599",
+      "impressions": "543"
+    },
+    "segments": {
+      "dayOfWeek": "SUNDAY",
+      "hour": 17
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "8",
+      "conversions": 2,
+      "costMicros": "2866429",
+      "impressions": "49"
+    },
+    "segments": {
+      "dayOfWeek": "SUNDAY",
+      "hour": 18
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "3",
+      "conversions": 1,
+      "costMicros": "1962483",
+      "impressions": "40"
+    },
+    "segments": {
+      "dayOfWeek": "SUNDAY",
+      "hour": 19
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "11",
+      "conversions": 2,
+      "costMicros": "5126467",
+      "impressions": "91"
+    },
+    "segments": {
+      "dayOfWeek": "SUNDAY",
+      "hour": 20
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "2",
+      "conversions": 0,
+      "costMicros": "1562216",
+      "impressions": "17"
+    },
+    "segments": {
+      "dayOfWeek": "SUNDAY",
+      "hour": 21
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "6",
+      "conversions": 1,
+      "costMicros": "1181752",
+      "impressions": "67"
+    },
+    "segments": {
+      "dayOfWeek": "SUNDAY",
+      "hour": 22
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "3",
+      "conversions": 0,
+      "costMicros": "780766",
+      "impressions": "110"
+    },
+    "segments": {
+      "dayOfWeek": "SUNDAY",
+      "hour": 23
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "12",
+      "conversions": 0,
+      "costMicros": "2792864",
+      "impressions": "438"
+    },
+    "segments": {
+      "dayOfWeek": "MONDAY",
+      "hour": 0
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "8",
+      "conversions": 0,
+      "costMicros": "2120422",
+      "impressions": "355"
+    },
+    "segments": {
+      "dayOfWeek": "MONDAY",
+      "hour": 1
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "4",
+      "conversions": 0,
+      "costMicros": "909431",
+      "impressions": "171"
+    },
+    "segments": {
+      "dayOfWeek": "MONDAY",
+      "hour": 2
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "3",
+      "conversions": 0,
+      "costMicros": "716731",
+      "impressions": "166"
+    },
+    "segments": {
+      "dayOfWeek": "MONDAY",
+      "hour": 3
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "2",
+      "conversions": 0,
+      "costMicros": "363520",
+      "impressions": "247"
+    },
+    "segments": {
+      "dayOfWeek": "MONDAY",
+      "hour": 4
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "13",
+      "conversions": 1,
+      "costMicros": "3663522",
+      "impressions": "410"
+    },
+    "segments": {
+      "dayOfWeek": "MONDAY",
+      "hour": 5
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "5",
+      "conversions": 0,
+      "costMicros": "1139350",
+      "impressions": "355"
+    },
+    "segments": {
+      "dayOfWeek": "MONDAY",
+      "hour": 6
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "17",
+      "conversions": 0,
+      "costMicros": "3490281",
+      "impressions": "815"
+    },
+    "segments": {
+      "dayOfWeek": "MONDAY",
+      "hour": 7
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "25",
+      "conversions": 1.105695,
+      "costMicros": "5137237",
+      "impressions": "748"
+    },
+    "segments": {
+      "dayOfWeek": "MONDAY",
+      "hour": 8
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "15",
+      "conversions": 2.893915,
+      "costMicros": "4103834",
+      "impressions": "413"
+    },
+    "segments": {
+      "dayOfWeek": "MONDAY",
+      "hour": 9
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "20",
+      "conversions": 3,
+      "costMicros": "4347868",
+      "impressions": "598"
+    },
+    "segments": {
+      "dayOfWeek": "MONDAY",
+      "hour": 10
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "18",
+      "conversions": 0,
+      "costMicros": "4931544",
+      "impressions": "564"
+    },
+    "segments": {
+      "dayOfWeek": "MONDAY",
+      "hour": 11
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "21",
+      "conversions": 0.005195,
+      "costMicros": "4016718",
+      "impressions": "560"
+    },
+    "segments": {
+      "dayOfWeek": "MONDAY",
+      "hour": 12
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "22",
+      "conversions": 0,
+      "costMicros": "3520294",
+      "impressions": "872"
+    },
+    "segments": {
+      "dayOfWeek": "MONDAY",
+      "hour": 13
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "39",
+      "conversions": 2,
+      "costMicros": "5848698",
+      "impressions": "1433"
+    },
+    "segments": {
+      "dayOfWeek": "MONDAY",
+      "hour": 14
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "35",
+      "conversions": 2.000724,
+      "costMicros": "7420760",
+      "impressions": "764"
+    },
+    "segments": {
+      "dayOfWeek": "MONDAY",
+      "hour": 15
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "38",
+      "conversions": 2,
+      "costMicros": "7466082",
+      "impressions": "797"
+    },
+    "segments": {
+      "dayOfWeek": "MONDAY",
+      "hour": 16
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "14",
+      "conversions": 0,
+      "costMicros": "3464870",
+      "impressions": "110"
+    },
+    "segments": {
+      "dayOfWeek": "MONDAY",
+      "hour": 17
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "7",
+      "conversions": 1,
+      "costMicros": "2153653",
+      "impressions": "39"
+    },
+    "segments": {
+      "dayOfWeek": "MONDAY",
+      "hour": 18
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "12",
+      "conversions": 1.999401,
+      "costMicros": "4676441",
+      "impressions": "63"
+    },
+    "segments": {
+      "dayOfWeek": "MONDAY",
+      "hour": 19
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "15",
+      "conversions": 1,
+      "costMicros": "4230083",
+      "impressions": "98"
+    },
+    "segments": {
+      "dayOfWeek": "MONDAY",
+      "hour": 20
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "3",
+      "conversions": 0,
+      "costMicros": "983417",
+      "impressions": "20"
+    },
+    "segments": {
+      "dayOfWeek": "MONDAY",
+      "hour": 21
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "623375",
+      "impressions": "13"
+    },
+    "segments": {
+      "dayOfWeek": "MONDAY",
+      "hour": 22
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "2",
+      "conversions": 0,
+      "costMicros": "801436",
+      "impressions": "8"
+    },
+    "segments": {
+      "dayOfWeek": "MONDAY",
+      "hour": 23
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "19",
+      "conversions": 0,
+      "costMicros": "4118289",
+      "impressions": "1091"
+    },
+    "segments": {
+      "dayOfWeek": "TUESDAY",
+      "hour": 0
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "19",
+      "conversions": 0,
+      "costMicros": "3318122",
+      "impressions": "594"
+    },
+    "segments": {
+      "dayOfWeek": "TUESDAY",
+      "hour": 1
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "7",
+      "conversions": 0,
+      "costMicros": "1830968",
+      "impressions": "155"
+    },
+    "segments": {
+      "dayOfWeek": "TUESDAY",
+      "hour": 2
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "2",
+      "conversions": 0,
+      "costMicros": "469961",
+      "impressions": "148"
+    },
+    "segments": {
+      "dayOfWeek": "TUESDAY",
+      "hour": 3
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "5",
+      "conversions": 0,
+      "costMicros": "1979299",
+      "impressions": "190"
+    },
+    "segments": {
+      "dayOfWeek": "TUESDAY",
+      "hour": 4
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "4",
+      "conversions": 0,
+      "costMicros": "1187604",
+      "impressions": "133"
+    },
+    "segments": {
+      "dayOfWeek": "TUESDAY",
+      "hour": 5
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "8",
+      "conversions": 0.007229,
+      "costMicros": "2574251",
+      "impressions": "247"
+    },
+    "segments": {
+      "dayOfWeek": "TUESDAY",
+      "hour": 6
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "12",
+      "conversions": 0,
+      "costMicros": "3657441",
+      "impressions": "422"
+    },
+    "segments": {
+      "dayOfWeek": "TUESDAY",
+      "hour": 7
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "4",
+      "conversions": 0,
+      "costMicros": "652007",
+      "impressions": "397"
+    },
+    "segments": {
+      "dayOfWeek": "TUESDAY",
+      "hour": 8
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "20",
+      "conversions": 1.00039,
+      "costMicros": "3345198",
+      "impressions": "821"
+    },
+    "segments": {
+      "dayOfWeek": "TUESDAY",
+      "hour": 9
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "25",
+      "conversions": 0.005195,
+      "costMicros": "7437519",
+      "impressions": "1095"
+    },
+    "segments": {
+      "dayOfWeek": "TUESDAY",
+      "hour": 10
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "24",
+      "conversions": 1,
+      "costMicros": "4493249",
+      "impressions": "901"
+    },
+    "segments": {
+      "dayOfWeek": "TUESDAY",
+      "hour": 11
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "12",
+      "conversions": 0,
+      "costMicros": "1942535",
+      "impressions": "723"
+    },
+    "segments": {
+      "dayOfWeek": "TUESDAY",
+      "hour": 12
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "18",
+      "conversions": 0,
+      "costMicros": "7498194",
+      "impressions": "579"
+    },
+    "segments": {
+      "dayOfWeek": "TUESDAY",
+      "hour": 13
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "22",
+      "conversions": 0,
+      "costMicros": "1927998",
+      "impressions": "759"
+    },
+    "segments": {
+      "dayOfWeek": "TUESDAY",
+      "hour": 14
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "5",
+      "conversions": 0,
+      "costMicros": "1139441",
+      "impressions": "137"
+    },
+    "segments": {
+      "dayOfWeek": "TUESDAY",
+      "hour": 15
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "16",
+      "conversions": 0,
+      "costMicros": "2107881",
+      "impressions": "328"
+    },
+    "segments": {
+      "dayOfWeek": "TUESDAY",
+      "hour": 16
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "18",
+      "conversions": 2,
+      "costMicros": "3777046",
+      "impressions": "242"
+    },
+    "segments": {
+      "dayOfWeek": "TUESDAY",
+      "hour": 17
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "6",
+      "conversions": 1,
+      "costMicros": "2099771",
+      "impressions": "56"
+    },
+    "segments": {
+      "dayOfWeek": "TUESDAY",
+      "hour": 18
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "12",
+      "conversions": 1.999276,
+      "costMicros": "5339983",
+      "impressions": "85"
+    },
+    "segments": {
+      "dayOfWeek": "TUESDAY",
+      "hour": 19
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "7",
+      "conversions": 0,
+      "costMicros": "2560887",
+      "impressions": "82"
+    },
+    "segments": {
+      "dayOfWeek": "TUESDAY",
+      "hour": 20
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "2",
+      "conversions": 0,
+      "costMicros": "1097005",
+      "impressions": "6"
+    },
+    "segments": {
+      "dayOfWeek": "TUESDAY",
+      "hour": 21
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0.998321,
+      "costMicros": "491702",
+      "impressions": "32"
+    },
+    "segments": {
+      "dayOfWeek": "TUESDAY",
+      "hour": 22
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "11",
+      "conversions": 0,
+      "costMicros": "2069256",
+      "impressions": "441"
+    },
+    "segments": {
+      "dayOfWeek": "TUESDAY",
+      "hour": 23
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "23",
+      "conversions": 0,
+      "costMicros": "8058725",
+      "impressions": "549"
+    },
+    "segments": {
+      "dayOfWeek": "WEDNESDAY",
+      "hour": 0
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "3",
+      "conversions": 0,
+      "costMicros": "516451",
+      "impressions": "233"
+    },
+    "segments": {
+      "dayOfWeek": "WEDNESDAY",
+      "hour": 1
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "7",
+      "conversions": 0,
+      "costMicros": "1044324",
+      "impressions": "231"
+    },
+    "segments": {
+      "dayOfWeek": "WEDNESDAY",
+      "hour": 2
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "9",
+      "conversions": 0,
+      "costMicros": "1143638",
+      "impressions": "264"
+    },
+    "segments": {
+      "dayOfWeek": "WEDNESDAY",
+      "hour": 3
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "7",
+      "conversions": 0,
+      "costMicros": "1194493",
+      "impressions": "266"
+    },
+    "segments": {
+      "dayOfWeek": "WEDNESDAY",
+      "hour": 4
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "10",
+      "conversions": 0,
+      "costMicros": "1655955",
+      "impressions": "304"
+    },
+    "segments": {
+      "dayOfWeek": "WEDNESDAY",
+      "hour": 5
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "10",
+      "conversions": 0,
+      "costMicros": "1478489",
+      "impressions": "399"
+    },
+    "segments": {
+      "dayOfWeek": "WEDNESDAY",
+      "hour": 6
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "16",
+      "conversions": 0,
+      "costMicros": "3848375",
+      "impressions": "674"
+    },
+    "segments": {
+      "dayOfWeek": "WEDNESDAY",
+      "hour": 7
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "35",
+      "conversions": 0,
+      "costMicros": "7392986",
+      "impressions": "935"
+    },
+    "segments": {
+      "dayOfWeek": "WEDNESDAY",
+      "hour": 8
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "38",
+      "conversions": 1.5,
+      "costMicros": "6079321",
+      "impressions": "1040"
+    },
+    "segments": {
+      "dayOfWeek": "WEDNESDAY",
+      "hour": 9
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "25",
+      "conversions": 1,
+      "costMicros": "4550430",
+      "impressions": "711"
+    },
+    "segments": {
+      "dayOfWeek": "WEDNESDAY",
+      "hour": 10
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "15",
+      "conversions": 0,
+      "costMicros": "4307197",
+      "impressions": "779"
+    },
+    "segments": {
+      "dayOfWeek": "WEDNESDAY",
+      "hour": 11
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "26",
+      "conversions": 1,
+      "costMicros": "7888635",
+      "impressions": "550"
+    },
+    "segments": {
+      "dayOfWeek": "WEDNESDAY",
+      "hour": 12
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "15",
+      "conversions": 0.5,
+      "costMicros": "3277920",
+      "impressions": "482"
+    },
+    "segments": {
+      "dayOfWeek": "WEDNESDAY",
+      "hour": 13
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "30",
+      "conversions": 1,
+      "costMicros": "6627965",
+      "impressions": "889"
+    },
+    "segments": {
+      "dayOfWeek": "WEDNESDAY",
+      "hour": 14
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "32",
+      "conversions": 2,
+      "costMicros": "18681116",
+      "impressions": "1192"
+    },
+    "segments": {
+      "dayOfWeek": "WEDNESDAY",
+      "hour": 15
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "26",
+      "conversions": 1,
+      "costMicros": "4494176",
+      "impressions": "1137"
+    },
+    "segments": {
+      "dayOfWeek": "WEDNESDAY",
+      "hour": 16
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "9",
+      "conversions": 0,
+      "costMicros": "2705735",
+      "impressions": "309"
+    },
+    "segments": {
+      "dayOfWeek": "WEDNESDAY",
+      "hour": 17
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "7",
+      "conversions": 3,
+      "costMicros": "2951972",
+      "impressions": "28"
+    },
+    "segments": {
+      "dayOfWeek": "WEDNESDAY",
+      "hour": 18
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "5",
+      "conversions": 0,
+      "costMicros": "2018583",
+      "impressions": "33"
+    },
+    "segments": {
+      "dayOfWeek": "WEDNESDAY",
+      "hour": 19
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "8",
+      "conversions": 4,
+      "costMicros": "2545742",
+      "impressions": "48"
+    },
+    "segments": {
+      "dayOfWeek": "WEDNESDAY",
+      "hour": 20
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "2",
+      "conversions": 0,
+      "costMicros": "619097",
+      "impressions": "12"
+    },
+    "segments": {
+      "dayOfWeek": "WEDNESDAY",
+      "hour": 21
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "2"
+    },
+    "segments": {
+      "dayOfWeek": "WEDNESDAY",
+      "hour": 22
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "34",
+      "conversions": 0,
+      "costMicros": "7147551",
+      "impressions": "1201"
+    },
+    "segments": {
+      "dayOfWeek": "THURSDAY",
+      "hour": 0
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "19",
+      "conversions": 0,
+      "costMicros": "4040661",
+      "impressions": "374"
+    },
+    "segments": {
+      "dayOfWeek": "THURSDAY",
+      "hour": 1
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "9",
+      "conversions": 1,
+      "costMicros": "1428333",
+      "impressions": "230"
+    },
+    "segments": {
+      "dayOfWeek": "THURSDAY",
+      "hour": 2
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "6",
+      "conversions": 0,
+      "costMicros": "1090530",
+      "impressions": "216"
+    },
+    "segments": {
+      "dayOfWeek": "THURSDAY",
+      "hour": 3
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "5",
+      "conversions": 0,
+      "costMicros": "772121",
+      "impressions": "196"
+    },
+    "segments": {
+      "dayOfWeek": "THURSDAY",
+      "hour": 4
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "11",
+      "conversions": 0,
+      "costMicros": "1680376",
+      "impressions": "392"
+    },
+    "segments": {
+      "dayOfWeek": "THURSDAY",
+      "hour": 5
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "17",
+      "conversions": 0,
+      "costMicros": "3352644",
+      "impressions": "464"
+    },
+    "segments": {
+      "dayOfWeek": "THURSDAY",
+      "hour": 6
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "13",
+      "conversions": 0,
+      "costMicros": "2516924",
+      "impressions": "456"
+    },
+    "segments": {
+      "dayOfWeek": "THURSDAY",
+      "hour": 7
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "16",
+      "conversions": 0,
+      "costMicros": "2547204",
+      "impressions": "499"
+    },
+    "segments": {
+      "dayOfWeek": "THURSDAY",
+      "hour": 8
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "26",
+      "conversions": 0,
+      "costMicros": "3857905",
+      "impressions": "888"
+    },
+    "segments": {
+      "dayOfWeek": "THURSDAY",
+      "hour": 9
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "16",
+      "conversions": 0,
+      "costMicros": "2490535",
+      "impressions": "627"
+    },
+    "segments": {
+      "dayOfWeek": "THURSDAY",
+      "hour": 10
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "42",
+      "conversions": 0,
+      "costMicros": "7666312",
+      "impressions": "726"
+    },
+    "segments": {
+      "dayOfWeek": "THURSDAY",
+      "hour": 11
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "11",
+      "conversions": 0,
+      "costMicros": "1326769",
+      "impressions": "480"
+    },
+    "segments": {
+      "dayOfWeek": "THURSDAY",
+      "hour": 12
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "13",
+      "conversions": 0,
+      "costMicros": "1332445",
+      "impressions": "540"
+    },
+    "segments": {
+      "dayOfWeek": "THURSDAY",
+      "hour": 13
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "14",
+      "conversions": 1,
+      "costMicros": "1997940",
+      "impressions": "337"
+    },
+    "segments": {
+      "dayOfWeek": "THURSDAY",
+      "hour": 14
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "5"
+    },
+    "segments": {
+      "dayOfWeek": "THURSDAY",
+      "hour": 15
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "4",
+      "conversions": 1,
+      "costMicros": "4625257",
+      "impressions": "22"
+    },
+    "segments": {
+      "dayOfWeek": "THURSDAY",
+      "hour": 16
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "5",
+      "conversions": 0,
+      "costMicros": "1660970",
+      "impressions": "21"
+    },
+    "segments": {
+      "dayOfWeek": "THURSDAY",
+      "hour": 17
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "5",
+      "conversions": 1,
+      "costMicros": "1734961",
+      "impressions": "36"
+    },
+    "segments": {
+      "dayOfWeek": "THURSDAY",
+      "hour": 18
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "2",
+      "conversions": 0,
+      "costMicros": "690251",
+      "impressions": "15"
+    },
+    "segments": {
+      "dayOfWeek": "THURSDAY",
+      "hour": 19
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "194315",
+      "impressions": "10"
+    },
+    "segments": {
+      "dayOfWeek": "THURSDAY",
+      "hour": 20
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "413384",
+      "impressions": "1"
+    },
+    "segments": {
+      "dayOfWeek": "THURSDAY",
+      "hour": 21
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "16",
+      "conversions": 0,
+      "costMicros": "4022881",
+      "impressions": "799"
+    },
+    "segments": {
+      "dayOfWeek": "FRIDAY",
+      "hour": 0
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "8",
+      "conversions": 0,
+      "costMicros": "990456",
+      "impressions": "351"
+    },
+    "segments": {
+      "dayOfWeek": "FRIDAY",
+      "hour": 1
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "9",
+      "conversions": 0,
+      "costMicros": "1981782",
+      "impressions": "264"
+    },
+    "segments": {
+      "dayOfWeek": "FRIDAY",
+      "hour": 2
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "4",
+      "conversions": 0,
+      "costMicros": "649950",
+      "impressions": "186"
+    },
+    "segments": {
+      "dayOfWeek": "FRIDAY",
+      "hour": 3
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "5",
+      "conversions": 0,
+      "costMicros": "1393643",
+      "impressions": "165"
+    },
+    "segments": {
+      "dayOfWeek": "FRIDAY",
+      "hour": 4
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "4",
+      "conversions": 0,
+      "costMicros": "917917",
+      "impressions": "163"
+    },
+    "segments": {
+      "dayOfWeek": "FRIDAY",
+      "hour": 5
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "7",
+      "conversions": 0,
+      "costMicros": "1290972",
+      "impressions": "266"
+    },
+    "segments": {
+      "dayOfWeek": "FRIDAY",
+      "hour": 6
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "12",
+      "conversions": 0.992771,
+      "costMicros": "1921318",
+      "impressions": "521"
+    },
+    "segments": {
+      "dayOfWeek": "FRIDAY",
+      "hour": 7
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "16",
+      "conversions": 2,
+      "costMicros": "3808118",
+      "impressions": "724"
+    },
+    "segments": {
+      "dayOfWeek": "FRIDAY",
+      "hour": 8
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "30",
+      "conversions": 2,
+      "costMicros": "7672503",
+      "impressions": "1176"
+    },
+    "segments": {
+      "dayOfWeek": "FRIDAY",
+      "hour": 9
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "50",
+      "conversions": 1,
+      "costMicros": "7959883",
+      "impressions": "1031"
+    },
+    "segments": {
+      "dayOfWeek": "FRIDAY",
+      "hour": 10
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "28",
+      "conversions": 1.994805,
+      "costMicros": "7489438",
+      "impressions": "792"
+    },
+    "segments": {
+      "dayOfWeek": "FRIDAY",
+      "hour": 11
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "27",
+      "conversions": 0,
+      "costMicros": "4533613",
+      "impressions": "641"
+    },
+    "segments": {
+      "dayOfWeek": "FRIDAY",
+      "hour": 12
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "19",
+      "conversions": 0,
+      "costMicros": "2733494",
+      "impressions": "285"
+    },
+    "segments": {
+      "dayOfWeek": "FRIDAY",
+      "hour": 13
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "36",
+      "conversions": 1,
+      "costMicros": "4574201",
+      "impressions": "495"
+    },
+    "segments": {
+      "dayOfWeek": "FRIDAY",
+      "hour": 14
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "18",
+      "conversions": 0,
+      "costMicros": "1779636",
+      "impressions": "230"
+    },
+    "segments": {
+      "dayOfWeek": "FRIDAY",
+      "hour": 15
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "2",
+      "conversions": 0,
+      "costMicros": "224375",
+      "impressions": "141"
+    },
+    "segments": {
+      "dayOfWeek": "FRIDAY",
+      "hour": 16
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "11",
+      "conversions": 1,
+      "costMicros": "2842565",
+      "impressions": "420"
+    },
+    "segments": {
+      "dayOfWeek": "FRIDAY",
+      "hour": 17
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "8",
+      "conversions": 0,
+      "costMicros": "2588202",
+      "impressions": "190"
+    },
+    "segments": {
+      "dayOfWeek": "FRIDAY",
+      "hour": 18
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "8",
+      "conversions": 0,
+      "costMicros": "1915131",
+      "impressions": "338"
+    },
+    "segments": {
+      "dayOfWeek": "FRIDAY",
+      "hour": 19
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "2",
+      "conversions": 0,
+      "costMicros": "1047381",
+      "impressions": "45"
+    },
+    "segments": {
+      "dayOfWeek": "FRIDAY",
+      "hour": 20
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "2"
+    },
+    "segments": {
+      "dayOfWeek": "FRIDAY",
+      "hour": 21
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "dayOfWeek": "FRIDAY",
+      "hour": 22
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "261098",
+      "impressions": "4"
+    },
+    "segments": {
+      "dayOfWeek": "FRIDAY",
+      "hour": 23
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "9",
+      "conversions": 0,
+      "costMicros": "2572627",
+      "impressions": "363"
+    },
+    "segments": {
+      "dayOfWeek": "SATURDAY",
+      "hour": 0
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "8",
+      "conversions": 0,
+      "costMicros": "1762441",
+      "impressions": "494"
+    },
+    "segments": {
+      "dayOfWeek": "SATURDAY",
+      "hour": 1
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "10",
+      "conversions": 0,
+      "costMicros": "1916047",
+      "impressions": "392"
+    },
+    "segments": {
+      "dayOfWeek": "SATURDAY",
+      "hour": 2
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "11",
+      "conversions": 0,
+      "costMicros": "1504374",
+      "impressions": "249"
+    },
+    "segments": {
+      "dayOfWeek": "SATURDAY",
+      "hour": 3
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "7",
+      "conversions": 0,
+      "costMicros": "2846794",
+      "impressions": "189"
+    },
+    "segments": {
+      "dayOfWeek": "SATURDAY",
+      "hour": 4
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "3",
+      "conversions": 0,
+      "costMicros": "556899",
+      "impressions": "163"
+    },
+    "segments": {
+      "dayOfWeek": "SATURDAY",
+      "hour": 5
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "12",
+      "conversions": 0,
+      "costMicros": "1892818",
+      "impressions": "478"
+    },
+    "segments": {
+      "dayOfWeek": "SATURDAY",
+      "hour": 6
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "14",
+      "conversions": 0,
+      "costMicros": "2435339",
+      "impressions": "596"
+    },
+    "segments": {
+      "dayOfWeek": "SATURDAY",
+      "hour": 7
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "17",
+      "conversions": 0,
+      "costMicros": "1925092",
+      "impressions": "443"
+    },
+    "segments": {
+      "dayOfWeek": "SATURDAY",
+      "hour": 8
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "8",
+      "conversions": 0,
+      "costMicros": "1083605",
+      "impressions": "333"
+    },
+    "segments": {
+      "dayOfWeek": "SATURDAY",
+      "hour": 9
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "15",
+      "conversions": 0,
+      "costMicros": "2648623",
+      "impressions": "445"
+    },
+    "segments": {
+      "dayOfWeek": "SATURDAY",
+      "hour": 10
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "18",
+      "conversions": 0.999421,
+      "costMicros": "5032948",
+      "impressions": "663"
+    },
+    "segments": {
+      "dayOfWeek": "SATURDAY",
+      "hour": 11
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "35",
+      "conversions": 2,
+      "costMicros": "5338801",
+      "impressions": "876"
+    },
+    "segments": {
+      "dayOfWeek": "SATURDAY",
+      "hour": 12
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "30",
+      "conversions": 0,
+      "costMicros": "5479184",
+      "impressions": "888"
+    },
+    "segments": {
+      "dayOfWeek": "SATURDAY",
+      "hour": 13
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "45",
+      "conversions": 0,
+      "costMicros": "6374822",
+      "impressions": "1484"
+    },
+    "segments": {
+      "dayOfWeek": "SATURDAY",
+      "hour": 14
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "27",
+      "conversions": 0,
+      "costMicros": "6137944",
+      "impressions": "1135"
+    },
+    "segments": {
+      "dayOfWeek": "SATURDAY",
+      "hour": 15
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "25",
+      "conversions": 2,
+      "costMicros": "4592845",
+      "impressions": "782"
+    },
+    "segments": {
+      "dayOfWeek": "SATURDAY",
+      "hour": 16
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "9",
+      "conversions": 0,
+      "costMicros": "5565864",
+      "impressions": "233"
+    },
+    "segments": {
+      "dayOfWeek": "SATURDAY",
+      "hour": 17
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "3",
+      "conversions": 0,
+      "costMicros": "630370",
+      "impressions": "317"
+    },
+    "segments": {
+      "dayOfWeek": "SATURDAY",
+      "hour": 18
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "15",
+      "conversions": 2,
+      "costMicros": "3483368",
+      "impressions": "342"
+    },
+    "segments": {
+      "dayOfWeek": "SATURDAY",
+      "hour": 19
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "19",
+      "conversions": 0,
+      "costMicros": "3487313",
+      "impressions": "497"
+    },
+    "segments": {
+      "dayOfWeek": "SATURDAY",
+      "hour": 20
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "456296",
+      "impressions": "36"
+    },
+    "segments": {
+      "dayOfWeek": "SATURDAY",
+      "hour": 21
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "534487",
+      "impressions": "26"
+    },
+    "segments": {
+      "dayOfWeek": "SATURDAY",
+      "hour": 22
+    }
+  },
+  {
+    "customer": {
+      "resourceName": "customers/1033715894"
+    },
+    "metrics": {
+      "clicks": "3",
+      "conversions": 0,
+      "costMicros": "1450671",
+      "impressions": "12"
+    },
+    "segments": {
+      "dayOfWeek": "SATURDAY",
+      "hour": 23
+    }
+  }
+]

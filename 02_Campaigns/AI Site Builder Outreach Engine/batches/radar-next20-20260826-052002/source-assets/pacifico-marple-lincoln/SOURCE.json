@@ -1,0 +1,129 @@
+{
+  "sourceUrl": "https://www.pacificomarplelincoln.com/",
+  "finalUrl": "https://www.pacificomarplelincoln.com/",
+  "sourceDomain": "pacificomarplelincoln.com",
+  "httpStatus": 200,
+  "contentType": "text/html;charset=utf-8",
+  "pageSha256": "0f4048d287b5acf893452f3d95bd544eeeb8fbce108f260a689604661bd0374c",
+  "title": "Lincoln Dealer in Broomall, PA | Pacifico Marple Lincoln",
+  "description": "Shop new and used Lincoln vehicles in Broomall, PA, at Pacifico Marple Lincoln. Explore financing, service, specials, and schedule a test drive.",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "pacifico",
+      "marple",
+      "lincoln"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260826-052002\\preflight\\pacifico-marple-lincoln\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://www.pacificomarplelincoln.com/static/v8/global/images/franchise-logos/auto/l/lincoln/white/183x125.png?r=1787021927000",
+    "sourceEvidence": "IMG lincoln",
+    "type": "png",
+    "dimensions": {
+      "width": 183,
+      "height": 125
+    },
+    "sha256": "db84e4e52fe96ebb587eb819de3ffb6463abf1bb2b3e25996a0ecf69f03fd753",
+    "sourceSha256": "db84e4e52fe96ebb587eb819de3ffb6463abf1bb2b3e25996a0ecf69f03fd753",
+    "sourceType": "png",
+    "sourceFileName": null,
+    "transformation": "none; exact first-party transparent asset",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "alphaAverage": 16.4459,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 2387
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260826-052002\\preflight\\pacifico-marple-lincoln\\reference-1.jpg",
+      "fileName": "reference-1.jpg",
+      "sourceUrl": "https://pictures.dealer.com/p/pacificomarplelincolnfd/1234/db4fdf9230d649a5ba80dff306e48d10.jpg",
+      "sourceEvidence": "IMG lazy-image dynamic-resize",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 938,
+        "width": 1250
+      },
+      "sha256": "f3c2ee91bf4d2f526bfed4e8279520e161bbdfbbd967b4e7012962d79afe52f7",
+      "bytes": 385422,
+      "visual": {
+        "ok": true,
+        "lumaRange": 251,
+        "chromaURange": 80,
+        "chromaVRange": 84,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260826-052002\\preflight\\pacifico-marple-lincoln\\reference-2.jpg",
+      "fileName": "reference-2.jpg",
+      "sourceUrl": "https://pictures.dealer.com/p/pacificomarplelincolnfd/1029/c89e08e053e3705fc93de817b2fbc529x.jpg",
+      "sourceEvidence": "IMG lazy-image dynamic-resize  2021 corsair button block 1.jpg",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 650,
+        "width": 976
+      },
+      "sha256": "6b99a448f9fe8665c2eed56fc2f7ac6d7018db82982a2418661fbb36a1f20c0d",
+      "bytes": 211671,
+      "visual": {
+        "ok": true,
+        "lumaRange": 255,
+        "chromaURange": 77,
+        "chromaVRange": 105,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260826-052002\\preflight\\pacifico-marple-lincoln\\reference-3.jpg",
+      "fileName": "reference-3.jpg",
+      "sourceUrl": "https://pictures.dealer.com/p/pacificomarplelincolnfd/1234/e23b8558a46642f78c7a1f1139e7c773.jpg",
+      "sourceEvidence": "IMG lazy-image dynamic-resize  2026 aviator button block 1.jpg",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 1484,
+        "width": 1979
+      },
+      "sha256": "a66e1a836d91f7ad34e4c104dde31b8b4e97995ce08092c85def0c179e7882be",
+      "bytes": 385362,
+      "visual": {
+        "ok": true,
+        "lumaRange": 255,
+        "chromaURange": 88,
+        "chromaVRange": 51,
+        "reason": null
+      }
+    }
+  ],
+  "contact": {
+    "phone": "",
+    "address": "",
+    "city": "",
+    "phoneSource": null,
+    "addressSource": null
+  },
+  "visualReferenceFallback": null,
+  "referenceFailures": [
+    {
+      "url": "https://pictures.dealer.com/p/pacificomarplelincolnfd/1440/f549a1f73de66b47f8b87e17398e6ae1x.jpg",
+      "reason": "reference image is too small"
+    }
+  ],
+  "brandColors": [
+    "#c24e39",
+    "#ffe0b1",
+    "#a42801",
+    "#caeaca",
+    "#045f04"
+  ],
+  "checkedAt": "2026-08-26T09:30:26.317Z"
+}

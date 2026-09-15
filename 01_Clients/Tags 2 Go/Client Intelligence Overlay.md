@@ -6,7 +6,7 @@ client_id: tags-2-go
 relationship: client
 division: Momentum 360
 created: 2026-08-07
-updated: 2026-08-07
+updated: 2026-09-13
 evidence_as_of: 2026-08-07
 verification_status: dated-evidence
 intelligence_maturity: developing
@@ -17,7 +17,7 @@ reporting_state: developing
 workflow_state: developing
 priority: standard
 next_action: "Map Google Ads access through Access Broker/Bitwarden and confirm whether an agency admin invite is already active before any audit rebuild."
-review_on: 2026-08-14
+review_on: 2026-09-20
 source_refs:
   - "[[overview]]"
   - "[[Google Ads Client Slack Reports/tags-2-go-slack-channel-read]]"

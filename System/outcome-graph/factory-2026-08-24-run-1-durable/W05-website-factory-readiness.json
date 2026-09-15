@@ -1,0 +1,307 @@
+{
+  "schema_version": 1,
+  "routine_id": "W05",
+  "run_id": "20260824-052002",
+  "objective": "Prove exactly 20 fresh, eligible, isolated, local noindex sites through the real W05 finish line or retain one explicit hold.",
+  "source_snapshot": {
+    "run_id": "20260824-052002",
+    "operational_state": {
+      "status": "blocked",
+      "updated_at": "2026-08-24T09:33:38.391Z",
+      "source_age_seconds": 46581,
+      "source_fresh": true,
+      "mail_ready": "hold",
+      "local_only_claimed": true,
+      "no_external_delivery_claimed": true
+    },
+    "preflight": {
+      "candidate_pool": 73,
+      "ready_count": 6,
+      "rejected_count": 67,
+      "ready_unique_identity_count": 6,
+      "ready_unique_slug_count": 6,
+      "rejection_categories": {
+        "source-unreachable": 20,
+        "exact-logo-unavailable": 19,
+        "approved-image-board-unavailable": 10,
+        "source-forbidden": 9,
+        "source-not-found": 7,
+        "first-party-reference-unavailable": 1,
+        "source-rate-limited": 1
+      }
+    },
+    "selection": {
+      "count": 0,
+      "unique_identity_count": 0,
+      "unique_slug_count": 0,
+      "transparent_logo_count": 0,
+      "prior_artifacts_scanned": 0,
+      "prior_identities_excluded": 0
+    },
+    "inventory": {
+      "expected": [
+        "PREFLIGHT-EVIDENCE.json",
+        "SELECTION-EVIDENCE.json",
+        "SOURCE-STATUS.json",
+        "BUILD-RECEIPT.json",
+        "batch.json",
+        "batch-summary.json",
+        "index.html",
+        "manifest.csv",
+        "prospects.csv",
+        "GENERATED-STOCK-RECEIPT.json",
+        "IMPECCABLE-DETECTOR.json",
+        "FINAL-AUDIT.json",
+        "QUALITY-GATE.json"
+      ],
+      "present": [
+        "PREFLIGHT-EVIDENCE.json"
+      ],
+      "missing": [
+        "SELECTION-EVIDENCE.json",
+        "SOURCE-STATUS.json",
+        "BUILD-RECEIPT.json",
+        "batch.json",
+        "batch-summary.json",
+        "index.html",
+        "manifest.csv",
+        "prospects.csv",
+        "GENERATED-STOCK-RECEIPT.json",
+        "IMPECCABLE-DETECTOR.json",
+        "FINAL-AUDIT.json",
+        "QUALITY-GATE.json"
+      ]
+    },
+    "blocked_receipts": {
+      "selection": "blocked-selection",
+      "daily": "blocked"
+    },
+    "legacy_completion_claim": {
+      "observed": true,
+      "source_locator": "12_Brain/queue/claude-loop-2026-08-24.jsonl",
+      "run_id": "LOOP-20260824-005324749",
+      "outcome": "complete",
+      "claimed_independent_verification": true,
+      "declared_artifact_count": 2,
+      "declared_artifacts_present": 1
+    },
+    "source_manifest": [
+      {
+        "locator": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260824-052002/BLOCKED-RECEIPT.json",
+        "sha256": "16ecb4deda1d8c408024f1d6fd2411ef2ff23eb1d8c174aa6277f84303ad6f62",
+        "bytes": 183
+      },
+      {
+        "locator": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260824-052002/PREFLIGHT-EVIDENCE.json",
+        "sha256": "79af26f01455edcff9bcf07440ac9de5d138b774a1c6b5d7472b63ab21413be4",
+        "bytes": 16756
+      },
+      {
+        "locator": "12_Brain/queue/claude-loop-2026-08-24.jsonl",
+        "sha256": "58c3eba404268e194054eda42a4463de510562ccbdaf74571e9ada16f8aeb927",
+        "bytes": 21941
+      },
+      {
+        "locator": "automation/prospect-radar-next20/latest-daily-state.json",
+        "sha256": "f6234b68f7ff9c5ea3fd35014b3ebd3c30b3093130be3d642e83bba39a53c690",
+        "bytes": 541
+      },
+      {
+        "locator": "automation/prospect-radar-next20/runs/20260824-052002/BLOCKED-DAILY-RECEIPT.json",
+        "sha256": "f896bd4908fce05b57a523d8e6adff5e71c75d3b8f123d7e991e50b1c28a99d4",
+        "bytes": 252
+      }
+    ],
+    "source_set_sha256": "63cd895873d360a06bbe0644389b5883c0baff81a195f555dff56aa574abd489"
+  },
+  "gates": [
+    {
+      "schema_version": 1,
+      "routine_id": "W05",
+      "gate_id": "freshness",
+      "state": "pass",
+      "passed": true,
+      "reasons": [],
+      "metrics": {
+        "source_age_seconds": 46581,
+        "max_age_seconds": 93600
+      },
+      "valid": true,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W05",
+      "gate_id": "source-pool",
+      "state": "hold",
+      "passed": false,
+      "reasons": [
+        "source-ready-pool-is-6-of-20"
+      ],
+      "metrics": {
+        "target": 20,
+        "candidate_pool": 73,
+        "ready": 6,
+        "rejected": 67,
+        "unique_ready_identities": 6,
+        "unique_ready_slugs": 6,
+        "rejection_categories": {
+          "source-unreachable": 20,
+          "exact-logo-unavailable": 19,
+          "approved-image-board-unavailable": 10,
+          "source-forbidden": 9,
+          "source-not-found": 7,
+          "first-party-reference-unavailable": 1,
+          "source-rate-limited": 1
+        }
+      },
+      "valid": true,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W05",
+      "gate_id": "selection",
+      "state": "not_reached",
+      "passed": false,
+      "reasons": [
+        "source-pool-gate-not-met"
+      ],
+      "metrics": {
+        "target": 20,
+        "selected": 0,
+        "unique_identities": 0,
+        "unique_slugs": 0,
+        "exact_transparent_logos": 0,
+        "prior_artifacts_scanned": 0
+      },
+      "valid": true,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W05",
+      "gate_id": "build-browser-qa",
+      "state": "not_reached",
+      "passed": false,
+      "reasons": [
+        "selection-gate-not-met"
+      ],
+      "metrics": {
+        "build_receipt_present": false,
+        "selected": 0,
+        "qa_ready": 0,
+        "summary_hash_matches": false,
+        "briefs": 0,
+        "browser_passes": 0,
+        "site_directories": 0,
+        "noindex_sites": 0,
+        "final_audit_status": null,
+        "final_audit_failures": 0
+      },
+      "valid": true,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W05",
+      "gate_id": "generated-assets",
+      "state": "not_reached",
+      "passed": false,
+      "reasons": [
+        "build-browser-qa-gate-not-met"
+      ],
+      "metrics": {
+        "receipt_present": false,
+        "sites": 0,
+        "images": 0,
+        "unassigned_sites": 0,
+        "expected_images": 80
+      },
+      "valid": true,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W05",
+      "gate_id": "impeccable-detector",
+      "state": "not_reached",
+      "passed": false,
+      "reasons": [
+        "build-browser-qa-gate-not-met"
+      ],
+      "metrics": {
+        "receipt_present": false,
+        "finding_count": 0
+      },
+      "valid": true,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W05",
+      "gate_id": "independent-quality",
+      "state": "not_reached",
+      "passed": false,
+      "reasons": [
+        "asset-or-detector-gate-not-met"
+      ],
+      "metrics": {
+        "evidence_present": false,
+        "schema_valid": false,
+        "validation_error_count": 2,
+        "qa_ready": "hold",
+        "maker_checker_distinct": false,
+        "recording_present": false,
+        "recording_hash_matches": false,
+        "recording_bytes_match": false,
+        "required_viewports_present": false
+      },
+      "valid": true,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W05",
+      "gate_id": "authority-boundary",
+      "state": "not_reached",
+      "passed": false,
+      "reasons": [
+        "build-browser-qa-gate-not-met"
+      ],
+      "metrics": {
+        "prospect_rows": 0,
+        "qa_ready_rows": 0,
+        "mail_hold_rows": 0,
+        "non_hold_rows": 0,
+        "state_mail_ready": "hold",
+        "local_only_claimed": true,
+        "no_external_delivery_claimed": true
+      },
+      "valid": true,
+      "external_action_attempted": false
+    }
+  ],
+  "outcome": {
+    "state": "held_source_pool",
+    "workflow_ready": false,
+    "legacy_false_completion_detected": true,
+    "old_loop_claimed_complete": true,
+    "actual_operational_status": "blocked",
+    "passing_gates": 1,
+    "total_gates": 8,
+    "next_safest_action": "Repair or expand eligible first-party sources until at least 20 unique source-ready prospects exist; do not build a partial batch."
+  },
+  "approval": {
+    "state": "mail_ready_hold",
+    "verified_local_batch_is_not_delivery_approval": true,
+    "external_action_authorized": false
+  },
+  "authority": {
+    "canonical_queue_write_attempted": false,
+    "external_action_attempted": false,
+    "deployment_attempted": false,
+    "outreach_attempted": false
+  },
+  "correction_fingerprint": "ff7c997132a238b1e0b068db61ee4ae9f5d8d240c5298c4506b434f41504f9cd"
+}

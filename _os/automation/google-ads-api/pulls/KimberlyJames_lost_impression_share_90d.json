@@ -1,0 +1,52 @@
+[
+  {
+    "campaign": {
+      "resourceName": "customers/8145506229/campaigns/23690389385",
+      "status": "PAUSED",
+      "advertisingChannelType": "PERFORMANCE_MAX",
+      "biddingStrategyType": "MAXIMIZE_CONVERSIONS",
+      "name": "Campaign #1",
+      "id": "23690389385"
+    },
+    "metrics": {
+      "clicks": "1770",
+      "searchBudgetLostImpressionShare": 0.17335088262620008,
+      "searchExactMatchImpressionShare": 0.17271993543179984,
+      "searchImpressionShare": 0.10545060390213688,
+      "searchRankLostImpressionShare": 0.7211985134716631,
+      "conversions": 1,
+      "costMicros": "881579008",
+      "impressions": "80554"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/8145506229/campaignBudgets/15452750093",
+      "amountMicros": "20000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/8145506229/campaigns/24069334480",
+      "status": "PAUSED",
+      "advertisingChannelType": "SEARCH",
+      "biddingStrategyType": "MAXIMIZE_CONVERSIONS",
+      "name": "KJB | Search | Local Bridal | Philadelphia",
+      "id": "24069334480"
+    },
+    "metrics": {
+      "clicks": "175",
+      "searchAbsoluteTopImpressionShare": 0.0999,
+      "searchBudgetLostImpressionShare": 0.09315496533541646,
+      "searchExactMatchImpressionShare": 0.43156843156843155,
+      "searchImpressionShare": 0.22927448491358265,
+      "searchRankLostImpressionShare": 0.6775705497510008,
+      "searchTopImpressionShare": 0.16598200312989045,
+      "conversions": 0,
+      "costMicros": "627198356",
+      "impressions": "3137"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/8145506229/campaignBudgets/15737391777",
+      "amountMicros": "20000000"
+    }
+  }
+]

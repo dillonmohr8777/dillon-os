@@ -1,0 +1,11 @@
+{
+  "wakeId":"heartbeat:20260905T091501232Z",
+  "identityVerified":{"gmail":true,"slack":true},
+  "window":{"afterUnix":1788597818,"beforeUnix":1788599709},
+  "sources":{"slack":{"pages":1,"messages":0,"paginationExhausted":true},"gmail":{"pages":1,"messages":1,"newSuppressed":1,"paginationExhausted":true}},
+  "due":{"bedtime":false,"leadTable":false,"googleAdsReport":false,"predictionBrief":false},
+  "allowNewWork":false,
+  "externalMutations":0,
+  "decision":"DONT_NOTIFY",
+  "reason":"Only a retail newsletter arrived; no actionable business input. Morning deliverables not yet due."
+}

@@ -2,12 +2,12 @@
 note_type: project
 status: active
 created: 2026-07-29
-updated: 2026-08-17
+updated: 2026-08-23
 owner: Dillon Mohr
 area: company operating system
 priority: high
 outcome: Obsidian is synced, the CLI and native Bases work, and the strategy brain compiles research, workflows, automations, measurement, and delivery knowledge into verified operating systems.
-next_action: Restore the authorized read-only communication and frontier-research collectors, replay preserved overlap windows, and measure recovered evidence freshness in the next weekly synthesis.
+next_action: Restore or register the authorized read-only communication and frontier-research collectors, replay the preserved overlap windows, and require a successful source receipt before advancing freshness or experiments.
 due: 2026-08-23
 review_on: 2026-08-23
 source_refs:
@@ -17,6 +17,7 @@ source_refs:
   - "[[12_Brain/03_Concepts/README]]"
   - "[[12_Brain/01_Captures/2026-08-15 - Chase AI Obsidian command center]]"
   - "[[12_Brain/07_Reviews/2026-08-16 - Weekly Brain Synthesis]]"
+  - "[[12_Brain/07_Reviews/2026-08-23 - Weekly Brain Synthesis]]"
 tags:
   - brain
   - project
@@ -52,8 +53,12 @@ evidence-backed canonical improvement, promotes only durable memory, and proves
 the graph and automation suite afterward. Sundays add seven-day consolidation.
 The compiled strategy layer connects existing source material to operational
 concepts, templates, maps, dashboards, and deterministic health checks. The
-first weekly synthesis is complete and correctly identifies source availability,
-not graph structure, as the current limiting factor.
+second weekly synthesis confirms that source availability remains the limiting
+factor: communication and frontier-research collectors produced no fresh successful
+receipt during the review period, while report archiving, agent receipts, graph repair,
+coverage, and deterministic tests continued to work. Obsidian was not running for the
+August 22 and 23 guard checks, so live Sync, API, CLI, and captured-error verification
+remain deferred until the app is opened by the user.
 
 ## Completed
 
@@ -74,11 +79,16 @@ not graph structure, as the current limiting factor.
   Claude-specific configuration.
 - [x] Generate the first evidence-based seven-day review from the guarded growth
   loop without blending client truth.
+- [x] Generate the second evidence-based seven-day review and reconcile collector
+  debt, report revisions, unresolved experiments, automation reliability, and
+  memory promotion without inventing missing evidence.
 
 ## Next actions
 
-- [ ] Restore authorized read-only source collection and replay preserved
-  overlap windows without advancing failed checkpoints.
+- [ ] Restore or register authorized read-only source collection and replay
+  preserved overlap windows without advancing failed checkpoints.
+- [ ] Require one successful communication receipt and one successful frontier
+  research receipt before claiming recovered evidence freshness.
 - [ ] Apply the strategy systems to active clients through separate client
   overlays and current live evidence.
 - [ ] Turn verified client outcomes back into concept refinements, templates,

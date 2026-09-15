@@ -1,0 +1,48 @@
+{
+  "wakeId": "heartbeat:20260905T164951915Z",
+  "window": {
+    "afterUnix": 1788623766,
+    "beforeUnix": 1788627019
+  },
+  "identities": {
+    "gmail": "dillonmohr8777@gmail.com",
+    "slack": "Momentum Digital Agency / Dillon Mohr"
+  },
+  "coverage": {
+    "gmailMessages": 11,
+    "slackMessages": 16,
+    "newKeys": 22,
+    "searchPages": 2,
+    "supplementalReads": 4,
+    "paginationExhausted": true
+  },
+  "observations": [
+    {
+      "lane": "bok-law-firm",
+      "sources": [
+        "gmail:1a0726477da9f5de",
+        "gmail:1a072651c6fc1ea8"
+      ],
+      "status": "User already sent payment and deliverable-receipt follow-up. Automatic holiday reply says office resumes September 8; not evidence of payment or deliverable acceptance. No duplicate draft or send created. Previously observed ownership-uncertain draft was not touched."
+    },
+    {
+      "lane": "internal-operations",
+      "source": "slack:C0AEU1Q5UER:1788625274.714699",
+      "status": "User expressed tentative same-day sharing commitment for unspecified idea. No reply or exact artifact identity; not sufficient to dispatch a duplicate build or assume deadline breach."
+    },
+    {
+      "lane": "unresolved-client-route",
+      "source": "slack:D0B6F3J423F:1788626716.567459",
+      "status": "Melissa Rigby advises consumer-facing work should not feel overtly AI and suggests seeking Tori feedback. Existing user-led discussion, no new concrete deliverable. Text and attachment metadata reviewed; two audio clips not transcribed, so full multimodal context unverified. No client state, outreach or production changes inferred."
+    }
+  ],
+  "daily": {
+    "leadTableDue": false,
+    "googleAdsReportDue": false,
+    "predictionBriefDue": false,
+    "bedtimeDue": false
+  },
+  "workersDispatched": 0,
+  "externalWrites": 0,
+  "decision": "DONT_NOTIFY"
+}

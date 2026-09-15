@@ -1,0 +1,199 @@
+plugins = []
+
+[functions]
+
+[functions."*"]
+
+[build]
+publish = "C:\\Users\\dillo\\repos\\dillon-os"
+publishOrigin = "default"
+
+[build.environment]
+
+[build.processing]
+
+[build.processing.css]
+
+[build.processing.html]
+
+[build.processing.images]
+
+[build.processing.js]
+
+[build.services]
+
+[[headers]]
+for = "/*"
+
+[headers.values]
+X-Robots-Tag = "noindex, nofollow, noarchive"
+X-Content-Type-Options = "nosniff"
+Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[redirects]]
+from = "/sites/frederick-oster-fine-violins"
+to = "/sites/oster-fine-violins/"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/sites/frederick-oster-fine-violins/*"
+to = "/sites/oster-fine-violins/:splat"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/sites/jarman-sales-service"
+to = "/sites/jarman-hvac/"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/sites/jarman-sales-service/*"
+to = "/sites/jarman-hvac/:splat"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/sites/l-a-verruni-landscaping"
+to = "/sites/verruni-landscaping/"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/sites/l-a-verruni-landscaping/*"
+to = "/sites/verruni-landscaping/:splat"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/sites/maclaren-kitchen-bath"
+to = "/sites/maclaren-kitchen-and-bath/"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/sites/maclaren-kitchen-bath/*"
+to = "/sites/maclaren-kitchen-and-bath/:splat"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/sites/pipe-xpress-inc"
+to = "/sites/pipe-xpress/"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/sites/pipe-xpress-inc/*"
+to = "/sites/pipe-xpress/:splat"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/sites/pier-6"
+to = "/?excluded=pier-6"
+status = 302.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/sites/pier-6/*"
+to = "/?excluded=pier-6"
+status = 302.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/sites/the-little-gym"
+to = "/?excluded=the-little-gym"
+status = 302.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/sites/the-little-gym/*"
+to = "/?excluded=the-little-gym"
+status = 302.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]

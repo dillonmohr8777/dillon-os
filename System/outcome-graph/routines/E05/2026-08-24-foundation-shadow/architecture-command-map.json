@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "routine_id": "E05",
+  "generated_at": "2026-08-24T23:49:22.754Z",
+  "repository": {
+    "root": "C:/Users/dillo/repos/dillon-os",
+    "remote": "https://github.com/dillonmohr8777/dillon-os.git",
+    "branch": "vault-live-2026-08-07",
+    "head": "0558f09029a7f2130c5beed97fb2551927fbd940",
+    "exact": true,
+    "previously_known": true
+  },
+  "architecture": {
+    "primary_runtime": "_os/server.js",
+    "primary_readme": "_os/README.md",
+    "automation_root": "_os/automation",
+    "vault_root": "12_Brain",
+    "web_surface_root": "automation/prospect-radar-next20",
+    "test_command": "node --test _os/automation/tests/*.test.js",
+    "structural_test": "System/scripts/Test-SecondBrain.ps1",
+    "local_runtime_command": "node _os/server.js",
+    "deployment_boundary": "local-only for this shadow; no new public site or ambiguous target"
+  },
+  "commands": {
+    "local_runtime": "node _os/server.js",
+    "automation_tests": "node --test _os/automation/tests/*.test.js",
+    "structural_test": "System/scripts/Test-SecondBrain.ps1"
+  },
+  "ownership": {
+    "canonical_orchestrator": "Codex acting as Marketing Chief",
+    "human_authority": "Dillon Mohr"
+  },
+  "read_only": true,
+  "authority": {
+    "read_only": true,
+    "proposal_only": true,
+    "external_action_attempted": false,
+    "canonical_write_attempted": false,
+    "provider_mutation_attempted": false,
+    "deployment_attempted": false,
+    "worktree_mutation_attempted": false,
+    "ui_mutation_attempted": false,
+    "acceptance_contract_changed": false
+  }
+}

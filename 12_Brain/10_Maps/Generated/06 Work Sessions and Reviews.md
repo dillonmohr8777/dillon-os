@@ -4,7 +4,7 @@ status: active
 generated: true
 generated_by: Update-SecondBrainMaps
 map_type: domain
-updated: 2026-08-18
+updated: 2026-09-08
 tags:
   - brain
   - map
@@ -21,7 +21,6 @@ Inbox material, sessions, daily briefs, dashboards, and dated operating context.
 
 ## Vault front doors
 
-- [[2026-06-04|2026-06-04]]
 - [[Dashboard|Dashboard]]
 - [[INDEX|INDEX]]
 
@@ -37,6 +36,7 @@ Inbox material, sessions, daily briefs, dashboards, and dated operating context.
 - [[00_Inbox/Agent-Proposals/Claude/2026-08-16-daily-driver-approval-package|2026-08-16-daily-driver-approval-package]]
 - [[00_Inbox/Agent-Proposals/Claude/2026-08-17-daily-driver-approval-package|2026-08-17-daily-driver-approval-package]]
 - [[00_Inbox/Agent-Proposals/Claude/2026-08-18-daily-driver-approval-package|2026-08-18-daily-driver-approval-package]]
+- [[00_Inbox/Agent-Proposals/Claude/2026-09-01-puttery-wnf-reply-drafts|2026-09-01-puttery-wnf-reply-drafts]]
 - [[00_Inbox/Agent-Proposals/Grok/2026-08-12-active-vault-access-canary|2026-08-12-active-vault-access-canary]]
 - [[00_Inbox/Automation Deep Analysis 2026-07-29|Automation Deep Analysis 2026-07-29]]
 - [[00_Inbox/Dryer Vent John|Dryer Vent John]]
@@ -70,7 +70,27 @@ Inbox material, sessions, daily briefs, dashboards, and dated operating context.
 - [[Daily-Briefs/aeo-trust-report|aeo-trust-report]]
 - [[Daily-Briefs/artifacts/2026-07-20-meeting-risk-workpack|2026-07-20-meeting-risk-workpack]]
 - [[Daily-Briefs/frontmatter-report|frontmatter-report]]
+- [[Daily-Briefs/inbox-brief-2026-09-02|inbox-brief-2026-09-02]]
+- [[Daily-Briefs/inbox-brief-2026-09-03|inbox-brief-2026-09-03]]
+- [[Daily-Briefs/inbox-brief-2026-09-04|inbox-brief-2026-09-04]]
+- [[Daily-Briefs/inbox-brief-2026-09-07|inbox-brief-2026-09-07]]
+- [[Daily-Briefs/inbox-brief-2026-09-08|inbox-brief-2026-09-08]]
+- [[Daily-Briefs/metrics-2026-09-02|metrics-2026-09-02]]
+- [[Daily-Briefs/metrics-2026-09-03|metrics-2026-09-03]]
+- [[Daily-Briefs/metrics-2026-09-04|metrics-2026-09-04]]
+- [[Daily-Briefs/metrics-2026-09-07|metrics-2026-09-07]]
+- [[Daily-Briefs/metrics-2026-09-08|metrics-2026-09-08]]
 - [[Daily-Briefs/operator-2026-07-19|operator-2026-07-19]]
+- [[Daily-Briefs/plan-2026-09-02|plan-2026-09-02]]
+- [[Daily-Briefs/plan-2026-09-03|plan-2026-09-03]]
+- [[Daily-Briefs/plan-2026-09-04|plan-2026-09-04]]
+- [[Daily-Briefs/plan-2026-09-07|plan-2026-09-07]]
+- [[Daily-Briefs/plan-2026-09-08|plan-2026-09-08]]
+- [[Daily-Briefs/predicted-work-2026-09-02|predicted-work-2026-09-02]]
+- [[Daily-Briefs/predicted-work-2026-09-03|predicted-work-2026-09-03]]
+- [[Daily-Briefs/predicted-work-2026-09-04|predicted-work-2026-09-04]]
+- [[Daily-Briefs/predicted-work-2026-09-07|predicted-work-2026-09-07]]
+- [[Daily-Briefs/predicted-work-2026-09-08|predicted-work-2026-09-08]]
 - [[Daily-Briefs/pulse-today|pulse-today]]
 - [[Daily-Briefs/radar-2026-08-06|radar-2026-08-06]]
 - [[Daily-Briefs/radar-2026-08-07|radar-2026-08-07]]
@@ -85,8 +105,37 @@ Inbox material, sessions, daily briefs, dashboards, and dated operating context.
 - [[Daily-Briefs/radar-2026-08-16|radar-2026-08-16]]
 - [[Daily-Briefs/radar-2026-08-17|radar-2026-08-17]]
 - [[Daily-Briefs/radar-2026-08-18|radar-2026-08-18]]
+- [[Daily-Briefs/radar-2026-08-20|radar-2026-08-20]]
+- [[Daily-Briefs/radar-2026-08-21|radar-2026-08-21]]
+- [[Daily-Briefs/radar-2026-08-22|radar-2026-08-22]]
+- [[Daily-Briefs/radar-2026-08-23|radar-2026-08-23]]
+- [[Daily-Briefs/radar-2026-08-24|radar-2026-08-24]]
+- [[Daily-Briefs/radar-2026-08-25|radar-2026-08-25]]
+- [[Daily-Briefs/radar-2026-08-26|radar-2026-08-26]]
+- [[Daily-Briefs/radar-2026-08-27|radar-2026-08-27]]
+- [[Daily-Briefs/radar-2026-08-28|radar-2026-08-28]]
+- [[Daily-Briefs/radar-2026-08-29|radar-2026-08-29]]
+- [[Daily-Briefs/radar-2026-08-30|radar-2026-08-30]]
+- [[Daily-Briefs/radar-2026-08-31|radar-2026-08-31]]
+- [[Daily-Briefs/radar-2026-09-01|radar-2026-09-01]]
+- [[Daily-Briefs/radar-2026-09-02|radar-2026-09-02]]
+- [[Daily-Briefs/radar-2026-09-03|radar-2026-09-03]]
+- [[Daily-Briefs/radar-2026-09-04|radar-2026-09-04]]
+- [[Daily-Briefs/radar-2026-09-05|radar-2026-09-05]]
+- [[Daily-Briefs/radar-2026-09-06|radar-2026-09-06]]
+- [[Daily-Briefs/radar-2026-09-07|radar-2026-09-07]]
+- [[Daily-Briefs/radar-2026-09-08|radar-2026-09-08]]
 - [[Daily-Briefs/site-health-report|site-health-report]]
 - [[Daily-Briefs/source-intake-2026-07-30|source-intake-2026-07-30]]
+- [[Daily-Briefs/vault-clean-2026-09-03|vault-clean-2026-09-03]]
+- [[Daily-Briefs/vault-clean-2026-09-06|vault-clean-2026-09-06]]
+- [[Daily-Briefs/vault-clean-2026-09-07|vault-clean-2026-09-07]]
+- [[Daily-Briefs/vault-clean-2026-09-08|vault-clean-2026-09-08]]
+- [[Daily-Briefs/week-review-2026-09-04|week-review-2026-09-04]]
+- [[Daily-Briefs/wiki-lint-2026-09-03|wiki-lint-2026-09-03]]
+- [[Daily-Briefs/wiki-lint-2026-09-06|wiki-lint-2026-09-06]]
+- [[Daily-Briefs/wiki-lint-2026-09-07|wiki-lint-2026-09-07]]
+- [[Daily-Briefs/wiki-lint-2026-09-08|wiki-lint-2026-09-08]]
 
 ## Related domains
 

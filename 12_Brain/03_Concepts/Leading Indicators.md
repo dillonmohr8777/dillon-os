@@ -1,11 +1,18 @@
 ---
 tags: [concept, prediction]
+source: "12_Brain/01_Captures/2026-07-04 - lost-clients-confirmation-2 (capture never landed; unverified)"
+updated: 2026-09-02
 source: "[[12_Brain/01_Captures/2026-07-04 - lost-clients-confirmation-2]]"
-updated: 2026-07-04
+updated: 2026-09-01
 note_type: concept
 status: active
+verification_status: unverified
 created: 2026-07-04
-source_refs: ["[[12_Brain/01_Captures/2026-07-04 - lost-clients-confirmation-2]]"]
+source_refs: ["12_Brain/01_Captures/2026-07-04 - lost-clients-confirmation-2 (capture never landed; unverified)"]
+source_refs:
+  - "[[12_Brain/01_Captures/2026-07-04 - lost-clients-confirmation-2]]"
+  - "[[12_Brain/03_Concepts/Specialist Forecast Router]]"
+  - "[[12_Brain/04_Decisions/2026-09-01 - Route numeric forecasts to a specialist]]"
 ---
 
 
@@ -51,6 +58,10 @@ before it happens.
   `/synthesize`).
 - When a prediction is confirmed or busted, note it here with the date — the
   list must earn its keep or shrink.
+- Numeric drought, overpace, and fill-rate questions go through
+  [[12_Brain/03_Concepts/Specialist Forecast Router|Specialist Forecast Router]],
+  not an LLM guess. The six-week silence rule stays a validated discrete
+  signal; a specialist does not replace it.
 
 ## Links
-- [[12_Brain/03_Concepts/Truth Hierarchy|Truth Hierarchy]] · [[12_Brain/03_Concepts/Evidence Boundaries in Reporting|Evidence Boundaries in Reporting]] · [[01_Clients/Client Index|Client Index]]
+- [[12_Brain/03_Concepts/Truth Hierarchy|Truth Hierarchy]] · [[12_Brain/03_Concepts/Evidence Boundaries in Reporting|Evidence Boundaries in Reporting]] · [[12_Brain/03_Concepts/Specialist Forecast Router|Specialist Forecast Router]] · [[01_Clients/Client Index|Client Index]]

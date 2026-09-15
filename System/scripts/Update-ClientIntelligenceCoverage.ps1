@@ -57,12 +57,18 @@ $overlays = @(
         $_.frontmatter.note_type -eq 'client_intelligence'
     }
 )
+$activeOverlays = @($overlays | Where-Object {
+    -not $_.frontmatter.ContainsKey('status') -or $_.frontmatter.status -like 'active*'
+})
+$historicalOverlays = @($overlays | Where-Object {
+    $_.frontmatter.ContainsKey('status') -and $_.frontmatter.status -notlike 'active*'
+})
 
 $missing = New-Object System.Collections.Generic.List[object]
 $duplicates = New-Object System.Collections.Generic.List[object]
 $rows = New-Object System.Collections.Generic.List[object]
 foreach ($client in $activeClients) {
-    $matches = @($overlays | Where-Object {
+    $matches = @($activeOverlays | Where-Object {
         $_.frontmatter.ContainsKey('client_id') -and
         $_.frontmatter.client_id -eq $client.id
     })
@@ -90,7 +96,7 @@ foreach ($client in $activeClients) {
     })
 }
 
-$extraOverlays = @($overlays | Where-Object {
+$extraOverlays = @($activeOverlays | Where-Object {
     -not $_.frontmatter.ContainsKey('client_id') -or
     -not $activeIds.Contains([string]$_.frontmatter.client_id)
 })
@@ -125,7 +131,8 @@ $lines = @(
     '## Snapshot'
     ''
     "- Canonical active routes: **$($activeClients.Count)**"
-    "- Intelligence overlays present: **$($rows.Count)**"
+    "- Active intelligence overlays present: **$($rows.Count)**"
+    "- Historical intelligence overlays retained: **$($historicalOverlays.Count)**"
     "- Missing overlays: **$($missing.Count)**"
     "- Duplicate overlays: **$($duplicates.Count)**"
     "- Extra or non-active overlays: **$($extraOverlays.Count)**"
@@ -146,8 +153,8 @@ $lines += @('', '## Reconciliation findings', '')
 if ($missing.Count -eq 0 -and $duplicates.Count -eq 0 -and $extraOverlays.Count -eq 0 -and $unmappedActiveOverviews.Count -eq 0) {
     $lines += '- None.'
 }
-foreach ($client in $missing) { $lines += "- **Missing overlay:** $($client.displayName) (`$($client.id)`)." }
-foreach ($client in $duplicates) { $lines += "- **Duplicate overlay:** $($client.displayName) (`$($client.id)`)." }
+foreach ($client in $missing) { $lines += "- **Missing overlay:** $($client.displayName) (``$($client.id)``)." }
+foreach ($client in $duplicates) { $lines += "- **Duplicate overlay:** $($client.displayName) (``$($client.id)``)." }
 foreach ($overlay in $extraOverlays) { $lines += "- **Extra overlay:** [[$($overlay.relativePath.Substring(0, $overlay.relativePath.Length - 3))]]." }
 foreach ($overview in $unmappedActiveOverviews) { $lines += "- **Unmapped active vault overview:** [[$($overview.relativePath.Substring(0, $overview.relativePath.Length - 3))]]. Confirm its canonical registry disposition before promotion or removal." }
 
@@ -178,6 +185,7 @@ if (-not $absoluteOutput.StartsWith($resolvedVault, [StringComparison]::OrdinalI
     status = $status
     activeRegistryClients = $activeClients.Count
     overlays = $rows.Count
+    historical = $historicalOverlays.Count
     missing = $missing.Count
     duplicates = $duplicates.Count
     extra = $extraOverlays.Count

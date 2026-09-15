@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "routine_id": "D16",
+  "id": "D16:no-current-content-trigger",
+  "isolation_key": "content-trigger:outcome-graph-replica-and-loop-engineering",
+  "observed_at": "2026-08-24T23:49:15.088Z",
+  "source_set_sha256": "bee6d7037763d45601274702c12c8e31ad280fed7e97757744fc5930b1d39065",
+  "request_fingerprint": "outcome-graph-replica-and-loop-engineering",
+  "classified_type": "operating_system_engineering",
+  "content_triggered": false,
+  "audience_state": "not_applicable",
+  "channel_state": "not_applicable",
+  "desired_action_state": "not_applicable",
+  "facts": [],
+  "strategy": [],
+  "material_claims": [],
+  "invented_claims": false,
+  "outcome_state": "no_trigger",
+  "next_safe_action": "Run D16 only when an exact content, page, campaign, search, answer-engine, or editorial request is present.",
+  "authority": {
+    "read_only": true,
+    "proposal_only": true,
+    "external_action_attempted": false,
+    "canonical_write_attempted": false,
+    "provider_mutation_attempted": false,
+    "deployment_attempted": false,
+    "worktree_mutation_attempted": false,
+    "ui_mutation_attempted": false,
+    "acceptance_contract_changed": false
+  },
+  "generated_at": "2026-08-24T23:49:15.088Z",
+  "content": null
+}

@@ -90,3 +90,17 @@ Update the prospect note in `01_Clients/` with: the site folder path, the audit 
 - Deploying, mailing, and sending are Tier 2. Prepare and stage; a human approves.
 - Their imagery is used for a private mirror preview. Provenance is recorded in `harvest.json`; note it in the prospect note. Never republish their photos on a live indexed site we own.
 - If the harvest failed and you have no real facts, don't build. A demo with invented details is worse than no demo.
+- Keep changes to what the task asks. Report nearby problems as follow-ups, do not fix them in the same pass.
+- Edit surgically; never rewrite a whole file when a targeted edit does the job.
+
+## Cost
+
+- Step 1 Harvest: Sonnet (sonnet)
+- Step 2 Mine their voice: Sonnet (sonnet)
+- Step 3 Diagnose what to beat: Haiku (haiku)
+- Step 4 Design the upgrade: Fable 5.1 (claude-fable-5-1)
+- Step 5 Write the brief to the measured spec: Sonnet (sonnet)
+- Step 6 Build and QA: Sonnet (sonnet)
+- Step 7 Log it: Sonnet (sonnet)
+- Subagent return caps: scouts 150 words, builders 250 words, researchers 250 words plus receipts as file paths; no tables, no transcripts in returns.
+- Lead reads reports and diffs only; it never fetches pages, reads images, or sweeps folders.

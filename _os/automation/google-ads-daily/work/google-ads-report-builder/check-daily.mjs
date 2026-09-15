@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {normalizeDaily} from './build.mjs';
+const r=JSON.parse(fs.readFileSync('C:/Users/dillo/Documents/Codex/projects/client-operations/clients/omega-landscaping/deliverables/2026-09-05-google-ads-daily-health/run-receipt.json'));
+const e=normalizeDaily(r,'2026-09-05');
+assert.equal(e.clients[0].cost,7.84);
+assert.equal(e.clients[0].qualifiedLeads,null);
+assert.equal(e.clients[0].impressions,9);
+assert.throws(()=>normalizeDaily(r,'2026-09-06'));
+assert.throws(()=>normalizeDaily({...r,capturedAtUtc:'2026-09-04T13:00:00Z'},r.date));
+assert.throws(()=>normalizeDaily({...r,periods:[{...r.periods[0],clicks:0.5}]},r.date));
+const future={...r,date:'2026-09-06',capturedAtUtc:'2026-09-06T13:00:00Z',periods:[{from:'2026-09-05',to:'2026-09-05',clicks:2,impressions:20,cost:4}]};
+assert.equal(normalizeDaily(future,future.date).clients[0].clicks,2);
+console.log('PASS: daily mapping, missing outcomes, date freshness, integer counts, future receipt contract');

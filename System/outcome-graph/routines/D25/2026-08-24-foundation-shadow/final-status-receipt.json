@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "routine_id": "D25",
+  "id": "D25:OGD-20260824-23145989F598",
+  "isolation_key": "handoff:OGD-20260824-23145989F598:4cbc7e46def665bc346c32375f21eea3a4ecdebc08a9b36732feb999a9e4de58",
+  "observed_at": "2026-08-24T23:49:20.285Z",
+  "source_set_sha256": "bee6d7037763d45601274702c12c8e31ad280fed7e97757744fc5930b1d39065",
+  "status": {
+    "graph": "complete",
+    "business": "held",
+    "local_artifact": "verified",
+    "staged": false,
+    "deployed": false,
+    "sent": false
+  },
+  "artifacts": [
+    {
+      "path": "System/outcome-graph/factory-2026-08-24-run-1-durable/W05-website-factory-readiness.json",
+      "sha256": "4cbc7e46def665bc346c32375f21eea3a4ecdebc08a9b36732feb999a9e4de58",
+      "bytes": 8909
+    }
+  ],
+  "local_proof": {
+    "run_id": "OGD-20260824-23145989F598",
+    "terminal_truth": true,
+    "business_outcome": "held_source_pool"
+  },
+  "external_proof": {
+    "deployment_readback": null,
+    "delivery_readback": null,
+    "absent_and_not_inferred": true
+  },
+  "unresolved_risk": "Repair or expand eligible first-party sources until at least 20 unique source-ready prospects exist; do not build a partial batch.",
+  "next_safest_action": "Repair or expand eligible first-party sources until at least 20 unique source-ready prospects exist; do not build a partial batch.",
+  "canonical_completion_owner": "Codex acting as Marketing Chief",
+  "canonical_adoption_attempted": false,
+  "authority": {
+    "read_only": true,
+    "proposal_only": true,
+    "external_action_attempted": false,
+    "canonical_write_attempted": false,
+    "provider_mutation_attempted": false,
+    "deployment_attempted": false,
+    "worktree_mutation_attempted": false,
+    "ui_mutation_attempted": false,
+    "acceptance_contract_changed": false
+  },
+  "generated_at": "2026-08-24T23:49:20.285Z"
+}

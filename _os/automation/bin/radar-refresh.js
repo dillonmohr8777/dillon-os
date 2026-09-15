@@ -8,10 +8,9 @@
  *
  * Four things happen, in this order:
  *
- *   1. **Expand.** Discover new businesses in the rotation's next market and add
- *      them to the registry. Philadelphia and its collar counties come up far
- *      more often than the rest of Pennsylvania — this is Momentum 360's home
- *      market and local proof is what carries a cold open.
+ *   1. **Expand.** Discover new Pennsylvania businesses and add them to the
+ *      registry. Every daily plan reaches all six operating regions, choosing
+ *      the thinnest county in each one.
  *   2. **Grade the new arrivals.** Tier 0, so a couple of hundred rows is a few
  *      minutes and no browser.
  *   3. **Re-audit what went stale.** Every verdict carries its own recheck
@@ -22,9 +21,9 @@
  *   4. **Publish.** Rewrite the dashboard, the CSV, and a dated digest.
  *
  * Options
- *   --discover <n>     new candidates to look for (default 200, 0 to skip)
- *   --recheck <n>      stale prospects to re-audit (default 120, 0 to skip)
- *   --market <CODE>    force a market instead of using the rotation
+ *   --discover <n>     new candidates to look for (default 60, 0 to skip)
+ *   --recheck <n>      stale prospects to re-audit (default 250, 0 to skip)
+ *   --market <CODE>    force PA (statewide), PHL, or PGH instead of the plan
  *   --concurrency <n>  parallel fetches (default 12)
  *   --max-tier <0|1>   deepest audit tier (default 0; 1 needs a working browser)
  *   --enrich <n>       Google Places lookups to spend today (default 60, 0 to skip).
@@ -39,6 +38,7 @@ const { repoPath, readJson, writeJson, ensureDir, todayISO, nowISO, slugify } = 
 const radar = require('../lib/radar');
 const { planDiscovery, describePlan, DAILY } = require('../lib/coverage-plan');
 const { surveyImagery, imageryStale, HOMEPAGE_IMAGE_SLOTS } = require('../lib/imagery');
+const { isLive, livenessStale } = require('../lib/site-liveness');
 const { renderDashboard } = require('../lib/radar-dashboard');
 const { gradeSite, mergeAudits } = require('../lib/site-grader');
 const { auditTier0, auditTier1 } = require('../lib/site-audit');
@@ -53,30 +53,20 @@ const DASHBOARD_PATH = 'Daily-Briefs/prospect-radar.html';
 const CSV_PATH = '12_Brain/state/radar/build-queue.csv';
 
 /**
- * Market rotation, Philadelphia-weighted.
- *
- * Momentum 360 is a Philadelphia agency: we can shoot our own photography there,
- * name local proof, and drive to a meeting. So the city and its collar counties
- * occupy five of seven slots and the rest of Pennsylvania fills the other two.
- * Rotating by day-of-year rather than at random keeps coverage even and makes any
- * given morning's run reproducible.
+ * Narrow manual presets. The scheduled/default path is always the statewide
+ * coverage planner; these exist only for an operator deliberately forcing a
+ * local diagnostic run.
  */
-const ROTATION = [
-  { market: 'PHL', areas: [{ name: 'Philadelphia', adminLevel: 8, state: 'Pennsylvania' }] },
-  { market: 'PHL', areas: [{ name: 'Montgomery County', adminLevel: 6, state: 'Pennsylvania' }] },
-  { market: 'PHL', areas: [{ name: 'Delaware County', adminLevel: 6, state: 'Pennsylvania' }] },
-  { market: 'PHL', areas: [{ name: 'Bucks County', adminLevel: 6, state: 'Pennsylvania' }] },
-  { market: 'PHL', areas: [{ name: 'Chester County', adminLevel: 6, state: 'Pennsylvania' }] },
-  { market: 'PGH', areas: [{ name: 'Allegheny County', adminLevel: 6, state: 'Pennsylvania' }] },
-  { market: 'PA', areas: [
-      { name: 'Lehigh County', adminLevel: 6, state: 'Pennsylvania' },
-      { name: 'Erie County', adminLevel: 6, state: 'Pennsylvania' },
-      { name: 'Lancaster County', adminLevel: 6, state: 'Pennsylvania' },
-      { name: 'Dauphin County', adminLevel: 6, state: 'Pennsylvania' },
-      { name: 'Berks County', adminLevel: 6, state: 'Pennsylvania' },
-      { name: 'York County', adminLevel: 6, state: 'Pennsylvania' },
-    ] },
-];
+const MANUAL_MARKETS = {
+  PHL: [
+    { name: 'Philadelphia', adminLevel: 8, state: 'Pennsylvania' },
+    { name: 'Montgomery County', adminLevel: 6, state: 'Pennsylvania' },
+    { name: 'Delaware County', adminLevel: 6, state: 'Pennsylvania' },
+    { name: 'Bucks County', adminLevel: 6, state: 'Pennsylvania' },
+    { name: 'Chester County', adminLevel: 6, state: 'Pennsylvania' },
+  ],
+  PGH: [{ name: 'Allegheny County', adminLevel: 6, state: 'Pennsylvania' }],
+};
 
 /** Vertical priority for discovery — high-fit groups first. */
 const GROUP_ORDER = ['home-services', 'medical', 'legal', 'industrial', 'spa-wellness', 'auto', 'retail', 'food'];
@@ -108,12 +98,6 @@ function parseArgs(argv) {
     else if (a === '--help' || a === '-h') o.help = true;
   }
   return o;
-}
-
-function dayOfYear(iso) {
-  const d = new Date(`${iso}T00:00:00Z`);
-  const start = Date.UTC(d.getUTCFullYear(), 0, 0);
-  return Math.floor((d.getTime() - start) / 86400000);
 }
 
 async function mapLimit(items, limit, fn) {
@@ -235,6 +219,7 @@ function digest(summary, run) {
   L.push(`# Prospect Radar — ${summary.generated}`);
   L.push('');
   L.push(`Tracking **${summary.total}** businesses. Found ${run.discovered_new} new today, re-audited ${run.regraded}.`);
+  L.push(`**${summary.active}** are active with a verified exact logo; **${summary.logo_holds}** remain held for logo verification.`);
   L.push(`**${summary.build_queue_size}** qualify for a rebuild right now; ${(summary.needs_render || []).length} are blocked on a render pass.`);
   L.push('');
   L.push(`Dashboard: \`${DASHBOARD_PATH}\` · queue CSV: \`${CSV_PATH}\``);
@@ -298,22 +283,20 @@ async function main() {
   }
 
   const run = { discovered_raw: 0, discovered_new: 0, regraded: 0, enriched: 0, enrich_no_match: 0, enrich_skipped: 0, errors: [] };
-  // Coverage-driven targeting. The old day-of-year rotation was even in *slots*
-  // but not in *rows* — Montgomery County yields far more per query than
-  // Philadelphia does, which is how the registry ended up 2.2:1 against the
-  // priority market with no mechanism to correct itself. --market still forces a
-  // single area for a manual run.
-  const plan = args.market
-    ? (() => {
-        const r = ROTATION.find((x) => x.market === args.market) || ROTATION[0];
-        return {
-          targets: r.areas.map((a) => ({ ...a, market: r.market, groups: GROUP_ORDER.slice(0, 3), cap: args.discover })),
-          budget: args.discover, throttled: false, total: Object.keys(registry.prospects).length,
-          reason: `forced market ${args.market}`, areaDeficits: [], groupDeficits: [],
-        };
-      })()
-    : planDiscovery(registry, { budget: args.discover });
-  const slot = { market: plan.targets[0]?.market || 'PHL', areas: plan.targets };
+  // The default and `--market PA` paths are the same statewide plan: one county
+  // from each of six Pennsylvania regions. PHL/PGH remain narrow manual tools.
+  const plan = (() => {
+    if (!args.market || args.market === 'PA') return planDiscovery(registry, { budget: args.discover, today });
+    const areas = MANUAL_MARKETS[args.market];
+    if (!areas) throw new Error(`unknown forced market ${args.market}; use PA, PHL, or PGH`);
+    const cap = Math.max(1, Math.ceil(args.discover / areas.length));
+    return {
+      targets: areas.map((a) => ({ ...a, market: args.market, groups: GROUP_ORDER.slice(0, 3), cap })),
+      budget: args.discover, throttled: false, total: Object.keys(registry.prospects).length,
+      reason: `forced market ${args.market}`, areaDeficits: [], groupDeficits: [],
+    };
+  })();
+  const slot = { market: plan.targets[0]?.market || 'PA', areas: plan.targets };
   const areaLabel = plan.targets.map((a) => a.name).join(', ') || 'none (discovery paused)';
 
   process.stderr.write(`radar refresh ${today} · ${plan.reason}\n`);
@@ -346,6 +329,14 @@ async function main() {
         fresh.set(c.domain, { ...c, area: area.name });
         added += 1;
       }
+      registry.coverage_attempts = registry.coverage_attempts || {};
+      registry.coverage_attempts[area.name] = {
+        last_attempt: today,
+        raw: stats.raw,
+        eligible: stats.kept,
+        added,
+        groups: area.groups,
+      };
       process.stderr.write(`${stats.raw} raw → ${added} new\n`);
     }
     const upserted = radar.upsertDiscovered(registry, [...fresh.values()], { today });
@@ -453,21 +444,54 @@ async function main() {
   // question the grader cannot: their site being bad says nothing about whether
   // they own enough photographs to replace it with.
   if (args.imagery > 0) {
+    // Logo verification is a Radar-wide active-eligibility gate. Work through
+    // every unresolved row, not only rebuild targets, while keeping the daily
+    // network budget bounded and leaving clients/excluded history untouched.
+    //
+    // Ordering is the whole game here. Sorting by priority alone re-checked the
+    // identical top 60 rows every single morning: on 2026-09-09 all 60 carried
+    // `logo_checked: 2026-09-09` while 1,303 rows had never been checked once.
+    // A row that just failed must therefore go to the back of the queue, so the
+    // budget advances through the registry instead of grinding one head.
+    const LOGO_RECHECK_COOLDOWN_DAYS = 10;
+    const dayNumber = (value) => {
+      const t = Date.parse(value);
+      return Number.isFinite(t) ? Math.floor(t / 86400000) : -Infinity;
+    };
+    const todayNumber = dayNumber(today) === -Infinity ? Math.floor(Date.now() / 86400000) : dayNumber(today);
     const needCheck = Object.values(registry.prospects)
-      .filter((p) => p.current?.verdict === 'rebuild' && p.website)
-      .filter((p) => imageryStale(p, { today }))
-      .sort((a, b) => (b.priority_score || 0) - (a.priority_score || 0))
+      .filter((p) => p.lifecycle !== 'client' && p.lifecycle !== 'excluded' && p.website)
+      .filter((p) => !radar.isRadarEligible(p) || imageryStale(p, { today }))
+      // Never-checked rows first; after that, whatever waited longest. A row
+      // checked inside the cooldown is skipped entirely unless nothing else is
+      // waiting, so a permanently unverifiable logo cannot starve the registry.
+      .filter((p) => !p.logo_checked || todayNumber - dayNumber(p.logo_checked) >= LOGO_RECHECK_COOLDOWN_DAYS)
+      // A URL already found parked or dead is skipped until its own re-check
+      // window opens. Businesses do move hosts, so this is a timed hold on the
+      // URL, never a permanent judgement about the business.
+      .filter((p) => isLive(p.liveness) || livenessStale(p, { today }))
+      .sort((a, b) => {
+        const aChecked = a.logo_checked ? dayNumber(a.logo_checked) : -Infinity;
+        const bChecked = b.logo_checked ? dayNumber(b.logo_checked) : -Infinity;
+        if (aChecked !== bChecked) return aChecked - bChecked;
+        return (b.priority_score || 0) - (a.priority_score || 0);
+      })
       .slice(0, args.imagery);
 
     if (needCheck.length) {
-      process.stderr.write(`  imagery: checking ${needCheck.length} rebuild target(s)\n`);
+      process.stderr.write(`  imagery: checking ${needCheck.length} radar row(s)\n`);
       const st = await surveyImagery(registry, needCheck, {
         today, concurrency: Math.min(6, args.concurrency), need: HOMEPAGE_IMAGE_SLOTS,
       });
       run.imagery_checked = st.checked;
       run.imagery_buildable = st.buildable;
+      run.logo_verified = st.logo_verified;
+      run.logo_pending = st.logo_pending;
+      run.logo_rejected = st.logo_rejected;
+      run.not_live = st.not_live;
       process.stderr.write(
-        `  imagery: ${st.buildable} buildable now, ${st.partial} partial, ${st.none} with nothing usable\n`
+        `  imagery: ${st.buildable} buildable now, ${st.logo_verified} exact logos verified, ` +
+        `${st.logo_pending} pending, ${st.logo_rejected} rejected; ${st.partial} partial, ${st.none} with nothing usable\n`
       );
     }
   }
@@ -493,10 +517,14 @@ async function main() {
     rotation_slot: `${slot.market}: ${areaLabel}`,
     run,
     tracked: summary.total,
+    active: summary.active,
+    logo_holds: summary.logo_holds,
+    logo_hold_reasons: summary.logo_hold_reasons,
     build_queue_size: summary.build_queue_size,
     needs_render: (summary.needs_render || []).length,
     mean_site_quality: summary.mean_site_quality,
     by_verdict: summary.by_verdict,
+    by_verdict_active: summary.by_verdict_active,
     errors: run.errors,
   };
 
@@ -521,17 +549,18 @@ async function main() {
     ['queue csv', () => {
       const f = repoPath(CSV_PATH);
       ensureDir(path.dirname(f));
-      // Operator rule: we do not build for sites with no photographs. A row
+       // Operator rule: we do not build for sites without a verified exact logo
+       // or photographs. A row
       // whose imagery was checked and came back empty stays a rebuild target in
       // the registry (their site is still bad), but is held out of the working
       // queue, because a homepage concept with broken-image slots pitches
       // nothing. Unchecked rows stay in: absence of a check is not evidence of
       // absence of photos.
-      const buildable = summary.build_queue.filter(
-        (p) => !(p.imagery && p.imagery.checked && p.imagery.usable === 0)
-      );
-      const excluded = summary.build_queue.length - buildable.length;
-      if (excluded > 0) process.stderr.write(`  build queue: ${excluded} row(s) held out pending generated imagery (briefs in 12_Brain/state/radar/image-briefs)\n`);
+       const buildable = summary.build_queue.filter(
+         (p) => radar.isRadarEligible(p) && !(p.imagery && p.imagery.checked && p.imagery.usable === 0)
+       );
+       const excluded = summary.build_queue.length - buildable.length;
+       if (excluded > 0) process.stderr.write(`  build queue: ${excluded} row(s) held pending first-party imagery (briefs in 12_Brain/state/radar/image-briefs)\n`);
       fs.writeFileSync(f, toCsv(buildable));
     }],
     ['digest', () => {
@@ -560,11 +589,14 @@ async function main() {
         rotation: state.rotation_slot,
         discovered_new: run.discovered_new,
         regraded: run.regraded,
-        enriched: run.enriched,
-        tracked: summary.total,
-        build_queue: summary.build_queue_size,
+         enriched: run.enriched,
+         tracked: summary.total,
+         active: summary.active,
+         logo_holds: summary.logo_holds,
+         build_queue: summary.build_queue_size,
         needs_render: state.needs_render,
-        by_verdict: summary.by_verdict,
+         by_verdict: summary.by_verdict,
+         by_verdict_active: summary.by_verdict_active,
         dashboard: DASHBOARD_PATH,
         digest: `Daily-Briefs/radar-${today}.md`,
         errors: run.errors,

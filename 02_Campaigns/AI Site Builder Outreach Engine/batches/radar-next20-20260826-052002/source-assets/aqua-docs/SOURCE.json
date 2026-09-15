@@ -1,0 +1,67 @@
+{
+  "sourceUrl": "https://aqua-docs.com/ephrata/",
+  "finalUrl": "https://aqua-docs.com/ephrata/",
+  "sourceDomain": "aqua-docs.com",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=UTF-8",
+  "pageSha256": "e95a02de9d5d4cd922ea35f546c7877b0adb279a58f65fb0ecffa829c8ed17ff",
+  "title": "Ephrata – AQUA-DOCS",
+  "description": "",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "aqua",
+      "docs"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260826-052002\\preflight\\aqua-docs\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://aqua-docs.com/wp-content/uploads/2024/12/cropped-drop-pointing-out-213x300-1-180x180.png",
+    "sourceEvidence": "LINK apple-touch-icon size unstated",
+    "type": "png",
+    "dimensions": {
+      "width": 180,
+      "height": 180
+    },
+    "sha256": "ca144c638d1ac771a60157e989bef99c6f5f85f7a93ba78829430b5ab8c1394d",
+    "sourceSha256": "ca144c638d1ac771a60157e989bef99c6f5f85f7a93ba78829430b5ab8c1394d",
+    "sourceType": "png",
+    "sourceFileName": null,
+    "transformation": "none; exact first-party transparent asset",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "alphaAverage": 122.42,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 31873
+  },
+  "references": [],
+  "contact": {
+    "phone": "717-733-7667",
+    "address": "",
+    "city": "",
+    "phoneSource": "official tel link",
+    "addressSource": null
+  },
+  "visualReferenceFallback": "No usable first-party photography was exposed by the legacy source. Use only disclosed Align Image Gen concept imagery.",
+  "referenceFailures": [
+    {
+      "url": "https://aqua-docs.com/wp-content/uploads/2024/12/Screenshot_2024-12-04_032303-removebg-preview-300x55.png",
+      "reason": "reference image is too small"
+    }
+  ],
+  "brandColors": [
+    "#6c6c89",
+    "#0000ff",
+    "#e8d833",
+    "#abb8c3",
+    "#f78da7"
+  ],
+  "checkedAt": "2026-08-26T09:34:50.355Z"
+}

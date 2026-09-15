@@ -1,0 +1,14 @@
+{
+"wakeId":"heartbeat:20260905T153620480Z",
+"identityChecks":{"gmail":"expected-account-verified","slack":"expected-momentum-workspace-and-user-verified"},
+"coverage":{"afterUnix":1788620571,"beforeUnix":1788622591,"gmailPages":1,"gmailMessages":2,"slackPages":1,"slackMessages":2,"paginationExhaustedBoth":true,"newSourceKeys":2},
+"interpretation":"Two new non-actionable newsletters suppressed. Both Slack results are already-reviewed overlap; no new reply or assignment surfaced.",
+"dailyWork":"None due; prior reported source and report-builder blockers unchanged.",
+"newWorkers":[],
+"canonicalQueueMutation":false,
+"externalDelivery":false,
+"decision":"DONT_NOTIFY",
+"privacy":"redacted",
+"containsSecrets":false,
+"containsRawCommunications":false
+}

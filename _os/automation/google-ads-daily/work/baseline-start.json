@@ -1,0 +1,14 @@
+[
+  {
+    "action": "source-start",
+    "source": "slack",
+    "afterUnix": 1788394752,
+    "beforeUnix": 1788567552
+  },
+  {
+    "action": "source-start",
+    "source": "gmail",
+    "afterUnix": 1788394752,
+    "beforeUnix": 1788567552
+  }
+]

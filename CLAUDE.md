@@ -12,8 +12,9 @@ still go in `12_Brain/private/` (gitignored) and never into tracked files;
 
 ## Who this vault serves
 
-- Dillon Mohr — marketing operator. Full-time at Align HCM, account manager at
-  Momentum 360, plus direct/1099 clients.
+- Dillon Mohr — marketing operator. Account manager at Momentum 360, plus
+  direct/1099 clients. **No longer at Align HCM (ended, confirmed 2026-09-02).**
+  A remote full-time marketing role is an active search.
 - Services: Google Ads, Meta Ads, local SEO, GBP content, web design, landing
   page design, WordPress.
 - Primary directive: ROAD TO 100 CLIENTS (see `System/OS Config.md`).
@@ -74,6 +75,9 @@ a client page under `12_Brain/`.
 3. **Delete notes that turn out to be wrong.** A wrong page is worse than none.
 4. **Never rewrite `12_Brain/01_Captures/`.** Compile from it; the capture stays
    exactly as captured.
+5. **Keep changes to what the task asks.** Report nearby problems as follow-ups,
+   never fix them unasked.
+6. **Edit surgically; never rewrite a whole file** when a targeted edit does the job.
 
 Plus:
 

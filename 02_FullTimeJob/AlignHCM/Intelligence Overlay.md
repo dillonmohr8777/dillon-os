@@ -29,8 +29,8 @@ tags: [client-intelligence, align-hcm, fulltime, seo, aeo, attribution]
 # Align HCM Intelligence Overlay
 
 > [!important] Relationship boundary
-> Align HCM is Dillon's full-time employer, not a freelance or Momentum 360
-> client. It belongs in the portfolio intelligence view because it is an active
+> Align HCM has **ended** as of 2026-09-02 and is historical record only. It was
+> Dillon's full-time employer, never a freelance or Momentum 360 client. It belongs in the portfolio intelligence view because it is an active
 > canonical route, but its work, access, metrics, and reporting remain separate.
 
 ## Executive operating thesis

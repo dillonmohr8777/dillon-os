@@ -21,10 +21,17 @@ navigation is needed.
 Checkbox items only — `_os/vault-state.js` reads this section for the HUD
 directive feed and skips any other list format.
 
-- [ ] Process [[00_Inbox/Start Here|inbox]] material that affects current work.
-- [ ] Choose one finish line from the active-project view.
-- [ ] Verify facts before external or consequential action.
-- [ ] Record decisions, lessons, and outcome evidence before closing the loop.
+- [x] Arm Immohrtal-Crew every 2 hours; mail_ready=hold; do not send.
+- [ ] Keep Omega / Onsite / KJB / Replenish Ads truth honest; no mutation until developer quota retries after 2026-08-27T10:36:19Z.
+- [ ] Fix preview LP publish blockers (Omega photos, KJB homepage CTAs); do not publish.
+- [ ] Hold four radar outreach packets; Dillon names exact recipient before any Gmail draft.
+- [ ] Map the Vercel source for https://www.immohrtalmarketing.com; do not deploy.
+- [ ] Leave IMMOHRTAL Agency Daily Disabled until the source audit clears; do not restart Hermes.
+- [ ] Close out Cindy May Christmas deliverable (`due: 2026-09-01`, now 14 days past due — carried forward again).
+- [ ] Get yes/no on the needs-approval queue item: BigOrange Marketing website build (36 days overdue on its own `due:` field).
+- [ ] Touch 3-5 stalled clients (real contact, not another scan) — lead with Momentum 360 (4 Slack asks open 47 days, one ties directly to the blocked CallRail queue item) and Tags 2 Go (access-blocked queue item, 38 days overdue); pick the rest from the 37 stalled in pulse-today.md.
+- [ ] Escalate the open credential-rotation approval (`System/approval-queue.md:182`, open since 2026-08-13, now 33 days) — live security item, not routine backlog.
+- [ ] BOK Law Firm predicted prep (bounded step only): window is 2026-09-22–09-24 — locate/fingerprint the source packet and resolve topics/copy, no drafting or image generation yet.
 
 ## Active projects
 

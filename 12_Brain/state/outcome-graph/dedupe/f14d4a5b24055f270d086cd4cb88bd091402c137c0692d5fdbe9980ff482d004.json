@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "graph_id": "weekly-w04-w06-w08-w10-shadow",
+  "dedupe_key": "internal:2026-08-17:2026-08-23:W04-W06-W08-W10",
+  "dedupe_identity": "f14d4a5b24055f270d086cd4cb88bd091402c137c0692d5fdbe9980ff482d004",
+  "contract_fingerprint": "5d11ac9b5af1dbe37ff68da2a8f35131e353daeb6f528fe61017921f51b99af1",
+  "canonical_binding": {
+    "locator": "dillon-os://weekly/W04-W06-W08-W10-source-set",
+    "version": "queue-r415:2026-08-17:6:12:20",
+    "sha256": "61c83da54702f065df003bfb2d79057254b04cee5c49006a28eaec8b10b4b35e",
+    "captured_at": "2026-08-24T21:55:53.425Z"
+  },
+  "canonical_binding_fingerprint": "c43368d99375da442f76cdf5cd36be9294545af266f3df25a51f14b2947f07a6",
+  "status": "complete",
+  "run_id": "OGD-20260824-312BFDB7A088",
+  "checkpoint": {
+    "path": "runs/OGD-20260824-312BFDB7A088/checkpoint.json"
+  },
+  "created_at": "2026-08-24T21:55:53.482Z",
+  "updated_at": "2026-08-24T21:55:54.363Z",
+  "state_revision": 46,
+  "previous_state_sha256": "07bd03c2de83f3c088f5bf5371a906f0baf6cfedb4eba25c411aeb31bce13c7e",
+  "completed_at": "2026-08-24T21:55:54.363Z",
+  "receipt": {
+    "path": "runs/OGD-20260824-312BFDB7A088/receipt.json",
+    "sha256": "49cb2bd846640b54c8fdf1d5b75adb40c080f51165dacc3cdaf20de8c84b4c59",
+    "bytes": 84572
+  }
+}

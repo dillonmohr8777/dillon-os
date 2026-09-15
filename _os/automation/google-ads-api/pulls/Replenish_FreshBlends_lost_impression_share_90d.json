@@ -1,0 +1,312 @@
+[
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/23733909990",
+      "status": "ENABLED",
+      "advertisingChannelType": "PERFORMANCE_MAX",
+      "biddingStrategyType": "MAXIMIZE_CONVERSIONS",
+      "name": "Pampano Campaign",
+      "id": "23733909990"
+    },
+    "metrics": {
+      "clicks": "1007",
+      "searchBudgetLostImpressionShare": 0.13345521023765997,
+      "searchExactMatchImpressionShare": 0.14893617021276595,
+      "searchImpressionShare": 0.16087751371115175,
+      "searchRankLostImpressionShare": 0.7056672760511883,
+      "conversions": 0,
+      "costMicros": "548599959",
+      "impressions": "24252"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/6275014654/campaignBudgets/15475062213",
+      "amountMicros": "16670000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/23883827641",
+      "status": "ENABLED",
+      "advertisingChannelType": "PERFORMANCE_MAX",
+      "biddingStrategyType": "MAXIMIZE_CONVERSIONS",
+      "name": "Howard Camaign",
+      "id": "23883827641"
+    },
+    "metrics": {
+      "clicks": "590",
+      "searchBudgetLostImpressionShare": 0.10552061495457722,
+      "searchExactMatchImpressionShare": 0.1320754716981132,
+      "searchImpressionShare": 0.11774982529699511,
+      "searchRankLostImpressionShare": 0.7767295597484277,
+      "conversions": 0,
+      "costMicros": "488291807",
+      "impressions": "38706"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/6275014654/campaignBudgets/15597351086",
+      "amountMicros": "16670000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/23895251475",
+      "status": "PAUSED",
+      "advertisingChannelType": "PERFORMANCE_MAX",
+      "biddingStrategyType": "MAXIMIZE_CONVERSIONS",
+      "name": "Fresh Blends x Kwik Trip #633 | Ice Box | PMax",
+      "id": "23895251475"
+    },
+    "metrics": {
+      "clicks": "486",
+      "searchBudgetLostImpressionShare": 0.12696696696696697,
+      "searchExactMatchImpressionShare": 0.27749811225773974,
+      "searchImpressionShare": 0.27627627627627627,
+      "searchRankLostImpressionShare": 0.5967567567567568,
+      "conversions": 0,
+      "costMicros": "391844463",
+      "impressions": "6929"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/6275014654/campaignBudgets/15613302884",
+      "amountMicros": "16670000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/23895254871",
+      "status": "PAUSED",
+      "advertisingChannelType": "PERFORMANCE_MAX",
+      "biddingStrategyType": "MAXIMIZE_CONVERSIONS",
+      "name": "Fresh Blends x Kwik Trip #1110 | Ice Box | PMax",
+      "id": "23895254871"
+    },
+    "metrics": {
+      "clicks": "522",
+      "searchBudgetLostImpressionShare": 0.08709175738724728,
+      "searchExactMatchImpressionShare": 0.15449915110356535,
+      "searchImpressionShare": 0.15707620528771385,
+      "searchRankLostImpressionShare": 0.7558320373250389,
+      "conversions": 0,
+      "costMicros": "376522001",
+      "impressions": "37940"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/6275014654/campaignBudgets/15613306784",
+      "amountMicros": "16670000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/23902535468",
+      "status": "PAUSED",
+      "advertisingChannelType": "PERFORMANCE_MAX",
+      "biddingStrategyType": "MAXIMIZE_CONVERSIONS",
+      "name": "Fresh Blends x Kwik Trip #573 | Ice Box | PMax",
+      "id": "23902535468"
+    },
+    "metrics": {
+      "clicks": "697",
+      "searchBudgetLostImpressionShare": 0.12004566954819769,
+      "searchExactMatchImpressionShare": 0.278,
+      "searchImpressionShare": 0.2789104550644267,
+      "searchRankLostImpressionShare": 0.6010438753873756,
+      "conversions": 0,
+      "costMicros": "379104638",
+      "impressions": "30370"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/6275014654/campaignBudgets/15625078501",
+      "amountMicros": "16670000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/23904822223",
+      "status": "PAUSED",
+      "advertisingChannelType": "PERFORMANCE_MAX",
+      "biddingStrategyType": "MAXIMIZE_CONVERSIONS",
+      "name": "Fresh Blends x Kwik Trip #1161 | Ice Box | PMax",
+      "id": "23904822223"
+    },
+    "metrics": {
+      "clicks": "756",
+      "searchBudgetLostImpressionShare": 0.17854217854217855,
+      "searchExactMatchImpressionShare": 0.1478494623655914,
+      "searchImpressionShare": 0.1416871416871417,
+      "searchRankLostImpressionShare": 0.6797706797706797,
+      "conversions": 0,
+      "costMicros": "370996698",
+      "impressions": "34636"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/6275014654/campaignBudgets/15613346597",
+      "amountMicros": "16670000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/23944102690",
+      "status": "ENABLED",
+      "advertisingChannelType": "PERFORMANCE_MAX",
+      "biddingStrategyType": "MAXIMIZE_CONVERSIONS",
+      "name": "Replenish | PMAX | Boca | Consumer Foot Traffic",
+      "id": "23944102690"
+    },
+    "metrics": {
+      "clicks": "1111",
+      "searchBudgetLostImpressionShare": 0.0649895178197065,
+      "searchExactMatchImpressionShare": 0.3,
+      "searchImpressionShare": 0.16771488469601678,
+      "searchRankLostImpressionShare": 0.7672955974842768,
+      "conversions": 6,
+      "costMicros": "677258244",
+      "impressions": "53285"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/6275014654/campaignBudgets/15648764604",
+      "amountMicros": "16670000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/23944174558",
+      "status": "ENABLED",
+      "advertisingChannelType": "PERFORMANCE_MAX",
+      "biddingStrategyType": "MAXIMIZE_CONVERSIONS",
+      "name": "Replenish | PMAX | Coral Springs | Consumer Foot Traffic",
+      "id": "23944174558"
+    },
+    "metrics": {
+      "clicks": "1735",
+      "searchBudgetLostImpressionShare": 0.05853658536585366,
+      "searchImpressionShare": 0.17560975609756097,
+      "searchRankLostImpressionShare": 0.7658536585365854,
+      "conversions": 1,
+      "costMicros": "755708591",
+      "impressions": "96027"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/6275014654/campaignBudgets/15644383841",
+      "amountMicros": "16670000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/23944175995",
+      "status": "ENABLED",
+      "advertisingChannelType": "PERFORMANCE_MAX",
+      "biddingStrategyType": "MAXIMIZE_CONVERSIONS",
+      "name": "Replenish | PMAX | Miami 56 | Consumer Foot Traffic",
+      "id": "23944175995"
+    },
+    "metrics": {
+      "clicks": "1761",
+      "searchBudgetLostImpressionShare": 0.03690036900369004,
+      "searchImpressionShare": 0.21033210332103322,
+      "searchRankLostImpressionShare": 0.7527675276752768,
+      "conversions": 10,
+      "costMicros": "824711816",
+      "impressions": "76388"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/6275014654/campaignBudgets/15649297140",
+      "amountMicros": "16670000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/24008391755",
+      "status": "ENABLED",
+      "advertisingChannelType": "PERFORMANCE_MAX",
+      "biddingStrategyType": "MAXIMIZE_CONVERSIONS",
+      "name": "Replenish | PMAX | Carmel Mountain 19223 | Consumer Foot Traffic",
+      "id": "24008391755"
+    },
+    "metrics": {
+      "clicks": "803",
+      "searchBudgetLostImpressionShare": 0.09746251441753172,
+      "searchExactMatchImpressionShare": 0.224,
+      "searchImpressionShare": 0.1972318339100346,
+      "searchRankLostImpressionShare": 0.7053056516724336,
+      "conversions": 0,
+      "costMicros": "533180181",
+      "impressions": "31149"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/6275014654/campaignBudgets/15695238944",
+      "amountMicros": "16670000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/24012660853",
+      "status": "ENABLED",
+      "advertisingChannelType": "PERFORMANCE_MAX",
+      "biddingStrategyType": "MAXIMIZE_CONVERSIONS",
+      "name": "Replenish | PMAX | Solana Beach 4344 | Consumer Foot Traffic",
+      "id": "24012660853"
+    },
+    "metrics": {
+      "clicks": "190",
+      "searchBudgetLostImpressionShare": 0.009484536082474227,
+      "searchExactMatchImpressionShare": 0.22535211267605634,
+      "searchImpressionShare": 0.1979381443298969,
+      "searchRankLostImpressionShare": 0.7925773195876289,
+      "conversions": 0,
+      "costMicros": "107020224",
+      "impressions": "7594"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/6275014654/campaignBudgets/15705135991",
+      "amountMicros": "16670000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/24012666388",
+      "status": "ENABLED",
+      "advertisingChannelType": "PERFORMANCE_MAX",
+      "biddingStrategyType": "MAXIMIZE_CONVERSIONS",
+      "name": "Replenish | PMAX | Torrey Del Mar 3458 | Consumer Foot Traffic",
+      "id": "24012666388"
+    },
+    "metrics": {
+      "clicks": "1001",
+      "searchBudgetLostImpressionShare": 0.056703118671526935,
+      "searchExactMatchImpressionShare": 0.1417910447761194,
+      "searchImpressionShare": 0.16646415552855406,
+      "searchRankLostImpressionShare": 0.776832725799919,
+      "conversions": 0,
+      "costMicros": "479852094",
+      "impressions": "34066"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/6275014654/campaignBudgets/15700056189",
+      "amountMicros": "16670000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/24012722869",
+      "status": "ENABLED",
+      "advertisingChannelType": "PERFORMANCE_MAX",
+      "biddingStrategyType": "MAXIMIZE_CONVERSIONS",
+      "name": "Replenish | PMAX | Miramar 43130 | Consumer Foot Traffic",
+      "id": "24012722869"
+    },
+    "metrics": {
+      "clicks": "907",
+      "searchBudgetLostImpressionShare": 0.06324582338902147,
+      "searchExactMatchImpressionShare": 0.17256637168141592,
+      "searchImpressionShare": 0.1578162291169451,
+      "searchRankLostImpressionShare": 0.7789379474940334,
+      "conversions": 0,
+      "costMicros": "320934676",
+      "impressions": "23345"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/6275014654/campaignBudgets/15695171909",
+      "amountMicros": "16670000"
+    }
+  }
+]

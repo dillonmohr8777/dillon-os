@@ -1,0 +1,446 @@
+{
+  "schema_version": 1,
+  "routine_id": "W11",
+  "generated_at": "2026-08-24T21:15:25.388Z",
+  "objective": "Prove current vault structure and knowledge-graph connectivity.",
+  "source_fingerprint": "d6dc36d248a703ba7c0aff0260beef4b6e657e4aaee66c40dca17713b7cbe5e5",
+  "revised_from_checker_findings": [],
+  "snapshot": {
+    "captured_at": "2026-08-24T21:15:16.697Z",
+    "structural_test": {
+      "schemaVersion": 1,
+      "status": "warning",
+      "vaultRoot": "C:\\Users\\dillo\\repos\\dillon-os",
+      "checkedAtUtc": "2026-08-24T21:15:22.2259054Z",
+      "summary": {
+        "markdownFiles": 723,
+        "brainNotes": 269,
+        "baseFiles": 17,
+        "graphNodes": 688,
+        "graphEdges": 1816,
+        "graphComponents": 1,
+        "graphLargestComponentCoverage": 100,
+        "graphOrphans": 0,
+        "errorCount": 0,
+        "warningCount": 35
+      },
+      "issues": [
+        {
+          "severity": "warning",
+          "code": "unresolved_wikilink",
+          "path": "12_Brain/INDEX.md",
+          "detail": "Unresolved link target: 12_Brain/Brain Map.canvas."
+        },
+        {
+          "severity": "warning",
+          "code": "unresolved_wikilink",
+          "path": "12_Brain/01_Captures/2026-07-04 - obsidian-second-brain-article.md",
+          "detail": "Unresolved link target: wikilinks."
+        },
+        {
+          "severity": "warning",
+          "code": "unresolved_wikilink",
+          "path": "12_Brain/01_Captures/2026-07-04 - obsidian-second-brain-article.md",
+          "detail": "Unresolved link target: link."
+        },
+        {
+          "severity": "warning",
+          "code": "unresolved_wikilink",
+          "path": "12_Brain/02_Entities/Hermes.md",
+          "detail": "Unresolved link target: 12_Brain/01_Captures/2026-06-26 - intel-core-7-master-operating-transfer."
+        },
+        {
+          "severity": "warning",
+          "code": "unresolved_wikilink",
+          "path": "12_Brain/02_Entities/Hermes.md",
+          "detail": "Unresolved link target: 12_Brain/01_Captures/2026-06-26 - intel-core-7-master-operating-transfer."
+        },
+        {
+          "severity": "warning",
+          "code": "unresolved_wikilink",
+          "path": "12_Brain/02_Entities/King Agent OS.md",
+          "detail": "Unresolved link target: 12_Brain/01_Captures/2026-06-26 - intel-core-7-master-operating-transfer."
+        },
+        {
+          "severity": "warning",
+          "code": "unresolved_wikilink",
+          "path": "12_Brain/02_Entities/King Agent OS.md",
+          "detail": "Unresolved link target: 12_Brain/01_Captures/2026-06-26 - intel-core-7-master-operating-transfer."
+        },
+        {
+          "severity": "warning",
+          "code": "unresolved_wikilink",
+          "path": "12_Brain/02_Entities/LandingFolio MCP.md",
+          "detail": "Unresolved link target: 12_Brain/registry/automations."
+        },
+        {
+          "severity": "warning",
+          "code": "unresolved_wikilink",
+          "path": "12_Brain/03_Concepts/Access Verification Discipline.md",
+          "detail": "Unresolved link target: 12_Brain/01_Captures/2026-06-26 - intel-core-7-master-operating-transfer."
+        },
+        {
+          "severity": "warning",
+          "code": "unresolved_wikilink",
+          "path": "12_Brain/03_Concepts/Access Verification Discipline.md",
+          "detail": "Unresolved link target: 12_Brain/01_Captures/2026-06-26 - intel-core-7-master-operating-transfer."
+        },
+        {
+          "severity": "warning",
+          "code": "unresolved_wikilink",
+          "path": "12_Brain/03_Concepts/Access Verification Discipline.md",
+          "detail": "Unresolved link target: Blissful Zen Spa."
+        },
+        {
+          "severity": "warning",
+          "code": "unresolved_wikilink",
+          "path": "12_Brain/03_Concepts/Context Economy.md",
+          "detail": "Unresolved link target: wikilinks."
+        },
+        {
+          "severity": "warning",
+          "code": "unresolved_wikilink",
+          "path": "12_Brain/03_Concepts/Conversion Tracking Setup 2026.md",
+          "detail": "Unresolved link target: 12_Brain/01_Captures/2026-07-04 - full-autonomy-directive."
+        },
+        {
+          "severity": "warning",
+          "code": "unresolved_wikilink",
+          "path": "12_Brain/03_Concepts/Conversion Tracking Setup 2026.md",
+          "detail": "Unresolved link target: 12_Brain/01_Captures/2026-07-04 - full-autonomy-directive."
+        },
+        {
+          "severity": "warning",
+          "code": "unresolved_wikilink",
+          "path": "12_Brain/03_Concepts/Conversion Tracking Setup 2026.md",
+          "detail": "Unresolved link target: 02_Campaigns/Ads Ops/Ads Ops Hub."
+        },
+        {
+          "severity": "warning",
+          "code": "unresolved_wikilink",
+          "path": "12_Brain/03_Concepts/Draft-First Operating Rules.md",
+          "detail": "Unresolved link target: 12_Brain/01_Captures/2026-06-26 - intel-core-7-master-operating-transfer."
+        },
+        {
+          "severity": "warning",
+          "code": "unresolved_wikilink",
+          "path": "12_Brain/03_Concepts/Draft-First Operating Rules.md",
+          "detail": "Unresolved link target: 12_Brain/01_Captures/2026-06-26 - intel-core-7-master-operating-transfer."
+        },
+        {
+          "severity": "warning",
+          "code": "unresolved_wikilink",
+          "path": "12_Brain/03_Concepts/Evidence Boundaries in Reporting.md",
+          "detail": "Unresolved link target: 12_Brain/01_Captures/2026-06-26 - intel-core-7-master-operating-transfer."
+        },
+        {
+          "severity": "warning",
+          "code": "unresolved_wikilink",
+          "path": "12_Brain/03_Concepts/Evidence Boundaries in Reporting.md",
+          "detail": "Unresolved link target: 12_Brain/01_Captures/2026-06-26 - intel-core-7-master-operating-transfer."
+        },
+        {
+          "severity": "warning",
+          "code": "unresolved_wikilink",
+          "path": "12_Brain/03_Concepts/Google Ads Conversion Optimization 2026.md",
+          "detail": "Unresolved link target: 12_Brain/01_Captures/2026-07-04 - full-autonomy-directive."
+        },
+        {
+          "severity": "warning",
+          "code": "unresolved_wikilink",
+          "path": "12_Brain/03_Concepts/Google Ads Conversion Optimization 2026.md",
+          "detail": "Unresolved link target: 12_Brain/01_Captures/2026-07-04 - full-autonomy-directive."
+        },
+        {
+          "severity": "warning",
+          "code": "unresolved_wikilink",
+          "path": "12_Brain/03_Concepts/Google Ads Conversion Optimization 2026.md",
+          "detail": "Unresolved link target: 02_Campaigns/Ads Ops/Ads Ops Hub."
+        },
+        {
+          "severity": "warning",
+          "code": "unresolved_wikilink",
+          "path": "12_Brain/03_Concepts/Google Docs Sharding Pattern.md",
+          "detail": "Unresolved link target: 12_Brain/01_Captures/2026-06-26 - intel-core-7-master-operating-transfer."
+        },
+        {
+          "severity": "warning",
+          "code": "unresolved_wikilink",
+          "path": "12_Brain/03_Concepts/Google Docs Sharding Pattern.md",
+          "detail": "Unresolved link target: 12_Brain/01_Captures/2026-06-26 - intel-core-7-master-operating-transfer."
+        },
+        {
+          "severity": "warning",
+          "code": "unresolved_wikilink",
+          "path": "12_Brain/03_Concepts/Leading Indicators.md",
+          "detail": "Unresolved link target: 12_Brain/01_Captures/2026-07-04 - lost-clients-confirmation-2."
+        },
+        {
+          "severity": "warning",
+          "code": "unresolved_wikilink",
+          "path": "12_Brain/03_Concepts/Leading Indicators.md",
+          "detail": "Unresolved link target: 12_Brain/01_Captures/2026-07-04 - lost-clients-confirmation-2."
+        },
+        {
+          "severity": "warning",
+          "code": "unresolved_wikilink",
+          "path": "12_Brain/03_Concepts/Meta Lead Ads Optimization 2026.md",
+          "detail": "Unresolved link target: 12_Brain/01_Captures/2026-07-04 - full-autonomy-directive."
+        },
+        {
+          "severity": "warning",
+          "code": "unresolved_wikilink",
+          "path": "12_Brain/03_Concepts/Meta Lead Ads Optimization 2026.md",
+          "detail": "Unresolved link target: 12_Brain/01_Captures/2026-07-04 - full-autonomy-directive."
+        },
+        {
+          "severity": "warning",
+          "code": "unresolved_wikilink",
+          "path": "12_Brain/03_Concepts/Meta Lead Ads Optimization 2026.md",
+          "detail": "Unresolved link target: 02_Campaigns/Ads Ops/Ads Ops Hub."
+        },
+        {
+          "severity": "warning",
+          "code": "unresolved_wikilink",
+          "path": "12_Brain/03_Concepts/Netlify Deploy Safety.md",
+          "detail": "Unresolved link target: 12_Brain/01_Captures/2026-06-26 - intel-core-7-master-operating-transfer."
+        },
+        {
+          "severity": "warning",
+          "code": "unresolved_wikilink",
+          "path": "12_Brain/03_Concepts/Netlify Deploy Safety.md",
+          "detail": "Unresolved link target: 12_Brain/01_Captures/2026-06-26 - intel-core-7-master-operating-transfer."
+        },
+        {
+          "severity": "warning",
+          "code": "unresolved_wikilink",
+          "path": "12_Brain/03_Concepts/Second Brain Architecture.md",
+          "detail": "Unresolved link target: link."
+        },
+        {
+          "severity": "warning",
+          "code": "unresolved_wikilink",
+          "path": "12_Brain/03_Concepts/Truth Hierarchy.md",
+          "detail": "Unresolved link target: 12_Brain/01_Captures/2026-06-26 - intel-core-7-master-operating-transfer."
+        },
+        {
+          "severity": "warning",
+          "code": "unresolved_wikilink",
+          "path": "12_Brain/03_Concepts/Truth Hierarchy.md",
+          "detail": "Unresolved link target: 12_Brain/01_Captures/2026-06-26 - intel-core-7-master-operating-transfer."
+        },
+        {
+          "severity": "warning",
+          "code": "empty_scratch_base",
+          "path": "Untitled 1.base",
+          "detail": "Empty scratch Base is outside the managed brain layer; either name it and add a view or remove it after review."
+        }
+      ]
+    },
+    "graph_measurement": {
+      "schemaVersion": 1,
+      "vaultRoot": "C:\\Users\\dillo\\repos\\dillon-os",
+      "checkedAtUtc": "2026-08-24T21:15:25.2607515Z",
+      "nodes": 688,
+      "edges": 1816,
+      "components": 1,
+      "largestComponent": 688,
+      "largestComponentCoverage": 100,
+      "orphans": 0,
+      "orphanRate": 0,
+      "unresolvedLinkOccurrences": 73,
+      "largestComponents": [
+        {
+          "size": 688,
+          "sample": [
+            "_archive/05_Book/characters",
+            "_archive/05_Book/email-growth-tracker",
+            "_archive/05_Book/guest-post-pipeline",
+            "_archive/05_Book/overview",
+            "_archive/05_Book/seo-strategy"
+          ]
+        }
+      ],
+      "orphanPaths": [],
+      "folders": [
+        {
+          "folder": "12_Brain",
+          "notes": 269,
+          "orphans": 0
+        },
+        {
+          "folder": "01_Clients",
+          "notes": 117,
+          "orphans": 0
+        },
+        {
+          "folder": "02_Campaigns",
+          "notes": 47,
+          "orphans": 0
+        },
+        {
+          "folder": "11_Agents",
+          "notes": 47,
+          "orphans": 0
+        },
+        {
+          "folder": "Daily-Briefs",
+          "notes": 39,
+          "orphans": 0
+        },
+        {
+          "folder": "00_Inbox",
+          "notes": 25,
+          "orphans": 0
+        },
+        {
+          "folder": "_templates",
+          "notes": 23,
+          "orphans": 0
+        },
+        {
+          "folder": "System",
+          "notes": 19,
+          "orphans": 0
+        },
+        {
+          "folder": "_os",
+          "notes": 14,
+          "orphans": 0
+        },
+        {
+          "folder": "_archive",
+          "notes": 13,
+          "orphans": 0
+        },
+        {
+          "folder": "SEO",
+          "notes": 10,
+          "orphans": 0
+        },
+        {
+          "folder": "04_SOPs",
+          "notes": 9,
+          "orphans": 0
+        },
+        {
+          "folder": "02_FullTimeJob",
+          "notes": 9,
+          "orphans": 0
+        },
+        {
+          "folder": "10_Sessions",
+          "notes": 7,
+          "orphans": 0
+        },
+        {
+          "folder": "03_Content",
+          "notes": 7,
+          "orphans": 0
+        },
+        {
+          "folder": "(root)",
+          "notes": 6,
+          "orphans": 0
+        },
+        {
+          "folder": "handoffs",
+          "notes": 6,
+          "orphans": 0
+        },
+        {
+          "folder": "08_Prospects",
+          "notes": 6,
+          "orphans": 0
+        },
+        {
+          "folder": "automation",
+          "notes": 5,
+          "orphans": 0
+        },
+        {
+          "folder": "immohrtal-site",
+          "notes": 4,
+          "orphans": 0
+        },
+        {
+          "folder": ".github",
+          "notes": 3,
+          "orphans": 0
+        },
+        {
+          "folder": "mohr-media-site",
+          "notes": 2,
+          "orphans": 0
+        },
+        {
+          "folder": "philly-sites",
+          "notes": 1,
+          "orphans": 0
+        }
+      ],
+      "topDegree": [
+        {
+          "note": "12_Brain/10_Maps/Generated/05 Knowledge and Memory",
+          "degree": 238
+        },
+        {
+          "note": "12_Brain/10_Maps/Generated/06 Work Sessions and Reviews",
+          "degree": 106
+        },
+        {
+          "note": "12_Brain/10_Maps/Generated/02 Growth and Content",
+          "degree": 95
+        },
+        {
+          "note": "12_Brain/10_Maps/Generated/04 Agents and Automation",
+          "degree": 86
+        },
+        {
+          "note": "12_Brain/00_Home",
+          "degree": 70
+        },
+        {
+          "note": "12_Brain/03_Concepts/Client Reporting and Outcome Scoreboards",
+          "degree": 64
+        },
+        {
+          "note": "12_Brain/INDEX",
+          "degree": 52
+        },
+        {
+          "note": "12_Brain/07_Reviews/Reports/README",
+          "degree": 48
+        },
+        {
+          "note": "11_Agents/Reporting Agent",
+          "degree": 47
+        },
+        {
+          "note": "12_Brain/10_Maps/Generated/01 Clients and Revenue",
+          "degree": 46
+        },
+        {
+          "note": "11_Agents/Rockbot Operating System/INDEX",
+          "degree": 41
+        },
+        {
+          "note": "12_Brain/03_Concepts/Marketing Intelligence Operating System",
+          "degree": 39
+        },
+        {
+          "note": "12_Brain/10_Maps/Generated/07 Standards and Templates",
+          "degree": 39
+        },
+        {
+          "note": "12_Brain/10_Maps/Generated/09 Other Connected Notes",
+          "degree": 38
+        },
+        {
+          "note": "Dashboard",
+          "degree": 32
+        }
+      ]
+    }
+  }
+}

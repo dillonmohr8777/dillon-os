@@ -31,3 +31,17 @@ Accept any of:
 - Deploying is Tier 2: prepare the folder, tell Dillon the exact deploy command, never run the deploy yourself.
 - Never remove `noindex` without Dillon confirming the site is going live for a paying client.
 - Every factual claim on the page (hours, address, phone, founding year) needs a source; recheck before a demo becomes a live site.
+- Keep changes to what the task asks. Report nearby problems as follow-ups, do not fix them in the same pass.
+- Edit surgically; never rewrite a whole file when a targeted edit does the job.
+
+## Cost
+
+- Step 1 Research the business: Haiku (haiku)
+- Step 2 Derive the brand: Sonnet (sonnet)
+- Step 3 Write the brief: Sonnet (sonnet)
+- Step 4 Build: Sonnet (sonnet)
+- Step 5 Images: Haiku (haiku)
+- Step 6 QA: Haiku (haiku) runs the Playwright JSON QA; Fable 5.1 (claude-fable-5-1) reads the numbers only and gives the final design go/no-go. This is the one Fable step.
+- Step 7 Log it: Sonnet (sonnet)
+- Subagent return caps: scouts 150 words, builders 250 words, researchers 250 words plus receipts as file paths; no tables, no transcripts in returns.
+- Lead reads reports and diffs only; it never fetches pages, reads images, or sweeps folders.

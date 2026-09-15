@@ -1,0 +1,581 @@
+{
+  "run_id": "OGD-20260824-B630ED6F0337",
+  "graph_id": "daily-d07-incident-triage-shadow",
+  "objective": "Reduce current reliability signals into deduplicated incident packets with explicit impact, scope, evidence, and the smallest reversible proposal.",
+  "value_signal": "Every open incident has a stable fingerprint, current detection receipt, explicit impact, and one safe next action.",
+  "contract_sha256": "ec2a96cc251180f91a4144f64ca70a6180fb8f59124fd246f0eba8af9d9f5829",
+  "started_at": "2026-08-24T23:34:54.534Z",
+  "source_evidence": "Registry, loop and driver logs, runtime and checkpoint state, connector observations, gateway health, and historical health projections are rehashed before planning and at terminal verification.",
+  "finish_line": "Every current reliability incident is independently reconstructed, deduplicated by exact fingerprint, and reproduced without destructive or production mutation.",
+  "governance": {
+    "orchestrator": "Codex acting as Marketing Chief",
+    "canonical_state": "Dillon OS automation registry, runtime/checkpoint state, provider-readback state, current gateway health, and legacy loop receipts remain canonical and read only.",
+    "dedupe_key": "D07:2026-08-24:source-bound-shadow",
+    "checkpoint": "System/outcome-graph/routines/D07/2026-08-24-reliability-shadow/run-receipt.json",
+    "rollback": "Discard reliability shadow artifacts; retain processes, checkpoints, providers, schedules, messages, and canonical state unchanged.",
+    "escalation": "Return exact stale evidence, false-completion risk, connector gate, runtime degradation, or missing approval to Marketing Chief."
+  },
+  "graph_iterations": [
+    {
+      "iteration": 1,
+      "status": "verified",
+      "planner": {
+        "evidence": "Collected 7 isolated D07 item(s) from source set b52e6019ce577e6427819c75ce81c9d04bbc32253583635a0206012c90e3683a.",
+        "item_count": 7,
+        "plan_signature": "8c53526ca6952af7edb5424c5c14c1e3a4f394ff2cd8b1fe0da15fb4efc98da1",
+        "items": [
+          {
+            "id": "D07:231400454bb45ed00c5d",
+            "isolation_key": "incident:231400454bb45ed00c5d1345c021e94aabfd52a0407adb99bd2367a190d407a2",
+            "input_fingerprint": "f98422ab893941c2418fcc5f979431df5ffb334789350c291ace2c740662bbbe",
+            "task": null
+          },
+          {
+            "id": "D07:301f66110b58ec4e5933",
+            "isolation_key": "incident:301f66110b58ec4e5933e0e768566b0435804efb9dc77eb62ba4f3348e188c9b",
+            "input_fingerprint": "1ea20e476afd24d9137892010327fcddda29afac937a82189544ff7fe322b789",
+            "task": null
+          },
+          {
+            "id": "D07:ccfe7039c0d2f823269b",
+            "isolation_key": "incident:ccfe7039c0d2f823269bafb0e6e4b9a73d405b27728ad6da4e5b757320577d9e",
+            "input_fingerprint": "3cbde337e262745def2ebd19d5058a7344074b39bc14816e1f92a6ccc0e37c66",
+            "task": null
+          },
+          {
+            "id": "D07:ac2f257237d11e5dc646",
+            "isolation_key": "incident:ac2f257237d11e5dc6463ffa46018ca66e935c6ca434d5c7fcad222232f7e7cc",
+            "input_fingerprint": "f80929f2c8fc120a81c4bac0648e77e3d8a1400bf0d0c0e0646170fc4cb341b5",
+            "task": null
+          },
+          {
+            "id": "D07:dee059bb2aae4972a679",
+            "isolation_key": "incident:dee059bb2aae4972a679dac36fb4bb0cb3043ac3f6b41adfa638a5ae486fc0e2",
+            "input_fingerprint": "c423f8836fda525ed6ca65f50eff09ab0063cb6b2422e12598e2ea716d66efda",
+            "task": null
+          },
+          {
+            "id": "D07:efd52ace022a7a29abb0",
+            "isolation_key": "incident:efd52ace022a7a29abb0389b4b9f4aedc53f2ec60f5ed302d756181685d8308f",
+            "input_fingerprint": "2009c8158f3fbbb1dd0b5c6c8ba98eaad7d0d2b782f1af0720f4a0a173b1f813",
+            "task": null
+          },
+          {
+            "id": "D07:ef21b52444a9c79845ed",
+            "isolation_key": "incident:ef21b52444a9c79845edf47077af45ce78163d38dc4986dd59d83bfa1db4e61c",
+            "input_fingerprint": "1a68aa68b1870f7290d81ff3ac914352fbdfd73a66a4215df33ad70227ee156d",
+            "task": null
+          }
+        ]
+      },
+      "workers": [
+        {
+          "item_id": "D07:231400454bb45ed00c5d",
+          "input_fingerprint": "f98422ab893941c2418fcc5f979431df5ffb334789350c291ace2c740662bbbe",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-B630ED6F0337:3444307443dbbb7adf98:attempt:1",
+              "maker_evidence": "Built one privacy-safe D07 record for D07:231400454bb45ed00c5d.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D07/2026-08-24-reliability-shadow/workers/3444307443dbbb7adf98.json",
+                  "sha256": "f4fe951b5cf6f30a16c0b34b11ece48252cb8b08fa39db57c23e08145af8865a",
+                  "bytes": 1255
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D07:231400454bb45ed00c5d from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D07/2026-08-24-reliability-shadow/workers/3444307443dbbb7adf98.json",
+              "sha256": "f4fe951b5cf6f30a16c0b34b11ece48252cb8b08fa39db57c23e08145af8865a",
+              "bytes": 1255
+            }
+          ],
+          "isolation_id": "OGD-20260824-B630ED6F0337:3444307443dbbb7adf98:attempt:1"
+        },
+        {
+          "item_id": "D07:301f66110b58ec4e5933",
+          "input_fingerprint": "1ea20e476afd24d9137892010327fcddda29afac937a82189544ff7fe322b789",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-B630ED6F0337:d30859106c32eb74ea91:attempt:1",
+              "maker_evidence": "Built one privacy-safe D07 record for D07:301f66110b58ec4e5933.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D07/2026-08-24-reliability-shadow/workers/d30859106c32eb74ea91.json",
+                  "sha256": "5fe8479241c69a7edb11a15d8badce8691e4b852c94bda1978998ec1a2032435",
+                  "bytes": 1406
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D07:301f66110b58ec4e5933 from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D07/2026-08-24-reliability-shadow/workers/d30859106c32eb74ea91.json",
+              "sha256": "5fe8479241c69a7edb11a15d8badce8691e4b852c94bda1978998ec1a2032435",
+              "bytes": 1406
+            }
+          ],
+          "isolation_id": "OGD-20260824-B630ED6F0337:d30859106c32eb74ea91:attempt:1"
+        },
+        {
+          "item_id": "D07:ccfe7039c0d2f823269b",
+          "input_fingerprint": "3cbde337e262745def2ebd19d5058a7344074b39bc14816e1f92a6ccc0e37c66",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-B630ED6F0337:ebe7ae5c4f43be2d1df5:attempt:1",
+              "maker_evidence": "Built one privacy-safe D07 record for D07:ccfe7039c0d2f823269b.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D07/2026-08-24-reliability-shadow/workers/ebe7ae5c4f43be2d1df5.json",
+                  "sha256": "09545b1a91c7d0330160b9911d448df671fe4b1f4e114c9cf19bfb9c77c08ab4",
+                  "bytes": 1239
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D07:ccfe7039c0d2f823269b from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D07/2026-08-24-reliability-shadow/workers/ebe7ae5c4f43be2d1df5.json",
+              "sha256": "09545b1a91c7d0330160b9911d448df671fe4b1f4e114c9cf19bfb9c77c08ab4",
+              "bytes": 1239
+            }
+          ],
+          "isolation_id": "OGD-20260824-B630ED6F0337:ebe7ae5c4f43be2d1df5:attempt:1"
+        },
+        {
+          "item_id": "D07:ac2f257237d11e5dc646",
+          "input_fingerprint": "f80929f2c8fc120a81c4bac0648e77e3d8a1400bf0d0c0e0646170fc4cb341b5",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-B630ED6F0337:3e1359c3b020d833c065:attempt:1",
+              "maker_evidence": "Built one privacy-safe D07 record for D07:ac2f257237d11e5dc646.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D07/2026-08-24-reliability-shadow/workers/3e1359c3b020d833c065.json",
+                  "sha256": "a522abcf6b192b7a1617185e0090e4e51cc04ba325006e3fa4b66c62251cf1e4",
+                  "bytes": 1188
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D07:ac2f257237d11e5dc646 from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D07/2026-08-24-reliability-shadow/workers/3e1359c3b020d833c065.json",
+              "sha256": "a522abcf6b192b7a1617185e0090e4e51cc04ba325006e3fa4b66c62251cf1e4",
+              "bytes": 1188
+            }
+          ],
+          "isolation_id": "OGD-20260824-B630ED6F0337:3e1359c3b020d833c065:attempt:1"
+        },
+        {
+          "item_id": "D07:dee059bb2aae4972a679",
+          "input_fingerprint": "c423f8836fda525ed6ca65f50eff09ab0063cb6b2422e12598e2ea716d66efda",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-B630ED6F0337:71bf476928a7b64cbb59:attempt:1",
+              "maker_evidence": "Built one privacy-safe D07 record for D07:dee059bb2aae4972a679.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D07/2026-08-24-reliability-shadow/workers/71bf476928a7b64cbb59.json",
+                  "sha256": "70d1c452e1c9cc140a2de06a105095501d071af764b9d3dddddc8e65eed6b7c9",
+                  "bytes": 1196
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D07:dee059bb2aae4972a679 from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D07/2026-08-24-reliability-shadow/workers/71bf476928a7b64cbb59.json",
+              "sha256": "70d1c452e1c9cc140a2de06a105095501d071af764b9d3dddddc8e65eed6b7c9",
+              "bytes": 1196
+            }
+          ],
+          "isolation_id": "OGD-20260824-B630ED6F0337:71bf476928a7b64cbb59:attempt:1"
+        },
+        {
+          "item_id": "D07:efd52ace022a7a29abb0",
+          "input_fingerprint": "2009c8158f3fbbb1dd0b5c6c8ba98eaad7d0d2b782f1af0720f4a0a173b1f813",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-B630ED6F0337:6cccbca751464eb07314:attempt:1",
+              "maker_evidence": "Built one privacy-safe D07 record for D07:efd52ace022a7a29abb0.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D07/2026-08-24-reliability-shadow/workers/6cccbca751464eb07314.json",
+                  "sha256": "90c07c3b7c12245baef4016c44065150e10dffacc8efd599e0622a9e4c1fb8f5",
+                  "bytes": 1241
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D07:efd52ace022a7a29abb0 from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D07/2026-08-24-reliability-shadow/workers/6cccbca751464eb07314.json",
+              "sha256": "90c07c3b7c12245baef4016c44065150e10dffacc8efd599e0622a9e4c1fb8f5",
+              "bytes": 1241
+            }
+          ],
+          "isolation_id": "OGD-20260824-B630ED6F0337:6cccbca751464eb07314:attempt:1"
+        },
+        {
+          "item_id": "D07:ef21b52444a9c79845ed",
+          "input_fingerprint": "1a68aa68b1870f7290d81ff3ac914352fbdfd73a66a4215df33ad70227ee156d",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-B630ED6F0337:f900f704a5399df6edf3:attempt:1",
+              "maker_evidence": "Built one privacy-safe D07 record for D07:ef21b52444a9c79845ed.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D07/2026-08-24-reliability-shadow/workers/f900f704a5399df6edf3.json",
+                  "sha256": "90157162d0223138db4e9955a6879051cf7e5de0b504056725a2f82a68a5d033",
+                  "bytes": 1238
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D07:ef21b52444a9c79845ed from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D07/2026-08-24-reliability-shadow/workers/f900f704a5399df6edf3.json",
+              "sha256": "90157162d0223138db4e9955a6879051cf7e5de0b504056725a2f82a68a5d033",
+              "bytes": 1238
+            }
+          ],
+          "isolation_id": "OGD-20260824-B630ED6F0337:f900f704a5399df6edf3:attempt:1"
+        }
+      ],
+      "reduction": {
+        "evidence": "Reduced all checked D07 records without blending isolation keys.",
+        "artifacts": [
+          {
+            "path": "System/outcome-graph/routines/D07/2026-08-24-reliability-shadow/incident-triage.json",
+            "sha256": "ea6d61cefa296799ea6f33c37e3d8567c11a3762a907b5b2494794a69ea30505",
+            "bytes": 10391
+          },
+          {
+            "path": "System/outcome-graph/routines/D07/2026-08-24-reliability-shadow/source-ledger.json",
+            "sha256": "28666f8ebbf65ffbca64a458b523789fbaae20d4e500045e3672475ee3e167b2",
+            "bytes": 2490
+          }
+        ]
+      },
+      "terminal_verification": {
+        "evidence": "Recollected and independently verified all D07 sources, records, negative states, and artifact hashes.",
+        "declared_pass": true,
+        "passed": true,
+        "assertions": [
+          {
+            "id": "source-manifest-stable",
+            "passed": true,
+            "detail": "Every named source remains hash-bound at terminal verification."
+          },
+          {
+            "id": "every-isolated-item-reconstructed-exactly-once",
+            "passed": true,
+            "detail": "Every in-scope item has one collision-resistant reconstructed record."
+          },
+          {
+            "id": "reducer-output-reproduces-exactly",
+            "passed": true,
+            "detail": "Final artifacts reproduce exactly from current sources and the frozen evaluation clock."
+          },
+          {
+            "id": "alert-freshness-proven",
+            "passed": true,
+            "detail": "Every incident is a current detection over a named source state."
+          },
+          {
+            "id": "duplicate-alerts-collapsed",
+            "passed": true,
+            "detail": "Only matching incident fingerprints collapse."
+          },
+          {
+            "id": "impact-scope-and-evidence-explicit",
+            "passed": true,
+            "detail": "Impact, surface, and evidence are explicit for every open incident."
+          },
+          {
+            "id": "recovery-is-smallest-reversible-step",
+            "passed": true,
+            "detail": "Each incident has one bounded proposal."
+          },
+          {
+            "id": "no-trigger-state-is-explicit",
+            "passed": true,
+            "detail": "A clear no-incident receipt replaces an empty or falsely failed run."
+          },
+          {
+            "id": "no-destructive-or-production-mutation",
+            "passed": true,
+            "detail": "No recovery mutation occurred."
+          },
+          {
+            "id": "privacy-and-no-mutation-boundary",
+            "passed": true,
+            "detail": "Final artifacts are redacted and attest no external, canonical, provider, restart, or checkpoint mutation."
+          }
+        ],
+        "artifact_manifest": [
+          {
+            "path": "System/outcome-graph/routines/D07/2026-08-24-reliability-shadow/incident-triage.json",
+            "sha256": "ea6d61cefa296799ea6f33c37e3d8567c11a3762a907b5b2494794a69ea30505",
+            "bytes": 10391
+          },
+          {
+            "path": "System/outcome-graph/routines/D07/2026-08-24-reliability-shadow/source-ledger.json",
+            "sha256": "28666f8ebbf65ffbca64a458b523789fbaae20d4e500045e3672475ee3e167b2",
+            "bytes": 2490
+          }
+        ],
+        "manifest_errors": []
+      },
+      "learning": {
+        "evidence": "Appended one hashed D07 correction entry.",
+        "corrections": [
+          "Retain incident fingerprints and update only when the underlying source state changes."
+        ],
+        "ledger": "System/outcome-graph/routines/D07/2026-08-24-reliability-shadow/corrections.jsonl",
+        "ledger_receipt": {
+          "locator": "System/outcome-graph/routines/D07/2026-08-24-reliability-shadow/corrections.jsonl",
+          "entry_sha256": "046aa1cb9e5bc375b9a2e5b2bda15f48e730d3c4824801756a59443e1a737a30"
+        }
+      }
+    }
+  ],
+  "invocation_log": [
+    {
+      "adapter": "source-bound-d07-planner",
+      "invoked_at": "2026-08-24T23:34:54.542Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d07-maker",
+      "invoked_at": "2026-08-24T23:34:54.575Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d07-maker",
+      "invoked_at": "2026-08-24T23:34:54.575Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d07-maker",
+      "invoked_at": "2026-08-24T23:34:54.575Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d07-checker",
+      "invoked_at": "2026-08-24T23:34:54.634Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d07-checker",
+      "invoked_at": "2026-08-24T23:34:54.634Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d07-checker",
+      "invoked_at": "2026-08-24T23:34:54.634Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d07-maker",
+      "invoked_at": "2026-08-24T23:34:54.714Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d07-maker",
+      "invoked_at": "2026-08-24T23:34:54.749Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d07-maker",
+      "invoked_at": "2026-08-24T23:34:54.768Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d07-checker",
+      "invoked_at": "2026-08-24T23:34:54.769Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d07-checker",
+      "invoked_at": "2026-08-24T23:34:54.804Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d07-checker",
+      "invoked_at": "2026-08-24T23:34:54.819Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d07-maker",
+      "invoked_at": "2026-08-24T23:34:54.859Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d07-checker",
+      "invoked_at": "2026-08-24T23:34:54.892Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d07-reducer",
+      "invoked_at": "2026-08-24T23:34:54.933Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d07-terminal-verifier",
+      "invoked_at": "2026-08-24T23:34:54.954Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d07-learner",
+      "invoked_at": "2026-08-24T23:34:54.984Z",
+      "status": "returned"
+    }
+  ],
+  "budget": {
+    "limit_units": 96,
+    "used_units": 18
+  },
+  "outcome": "complete",
+  "terminal_truth": true,
+  "finished_at": "2026-08-24T23:34:54.998Z",
+  "elapsed_seconds": 0.464,
+  "blocked_by": null,
+  "reason": "Finish line is proven by an independent terminal verifier.",
+  "terminal_evidence": {
+    "evidence": "Recollected and independently verified all D07 sources, records, negative states, and artifact hashes.",
+    "declared_pass": true,
+    "passed": true,
+    "assertions": [
+      {
+        "id": "source-manifest-stable",
+        "passed": true,
+        "detail": "Every named source remains hash-bound at terminal verification."
+      },
+      {
+        "id": "every-isolated-item-reconstructed-exactly-once",
+        "passed": true,
+        "detail": "Every in-scope item has one collision-resistant reconstructed record."
+      },
+      {
+        "id": "reducer-output-reproduces-exactly",
+        "passed": true,
+        "detail": "Final artifacts reproduce exactly from current sources and the frozen evaluation clock."
+      },
+      {
+        "id": "alert-freshness-proven",
+        "passed": true,
+        "detail": "Every incident is a current detection over a named source state."
+      },
+      {
+        "id": "duplicate-alerts-collapsed",
+        "passed": true,
+        "detail": "Only matching incident fingerprints collapse."
+      },
+      {
+        "id": "impact-scope-and-evidence-explicit",
+        "passed": true,
+        "detail": "Impact, surface, and evidence are explicit for every open incident."
+      },
+      {
+        "id": "recovery-is-smallest-reversible-step",
+        "passed": true,
+        "detail": "Each incident has one bounded proposal."
+      },
+      {
+        "id": "no-trigger-state-is-explicit",
+        "passed": true,
+        "detail": "A clear no-incident receipt replaces an empty or falsely failed run."
+      },
+      {
+        "id": "no-destructive-or-production-mutation",
+        "passed": true,
+        "detail": "No recovery mutation occurred."
+      },
+      {
+        "id": "privacy-and-no-mutation-boundary",
+        "passed": true,
+        "detail": "Final artifacts are redacted and attest no external, canonical, provider, restart, or checkpoint mutation."
+      }
+    ],
+    "artifact_manifest": [
+      {
+        "path": "System/outcome-graph/routines/D07/2026-08-24-reliability-shadow/incident-triage.json",
+        "sha256": "ea6d61cefa296799ea6f33c37e3d8567c11a3762a907b5b2494794a69ea30505",
+        "bytes": 10391
+      },
+      {
+        "path": "System/outcome-graph/routines/D07/2026-08-24-reliability-shadow/source-ledger.json",
+        "sha256": "28666f8ebbf65ffbca64a458b523789fbaae20d4e500045e3672475ee3e167b2",
+        "bytes": 2490
+      }
+    ],
+    "manifest_errors": []
+  },
+  "learning_evidence": {
+    "evidence": "Appended one hashed D07 correction entry.",
+    "corrections": [
+      "Retain incident fingerprints and update only when the underlying source state changes."
+    ],
+    "ledger": "System/outcome-graph/routines/D07/2026-08-24-reliability-shadow/corrections.jsonl",
+    "ledger_receipt": {
+      "locator": "System/outcome-graph/routines/D07/2026-08-24-reliability-shadow/corrections.jsonl",
+      "entry_sha256": "046aa1cb9e5bc375b9a2e5b2bda15f48e730d3c4824801756a59443e1a737a30"
+    }
+  },
+  "drift_fingerprint": "beeb70389ca533e0e9e7a04eb255cedea2cbc463966a94b5beed128cced51725",
+  "deduped": true,
+  "durable_state": {
+    "schema_version": 1,
+    "dedupe_identity": "b08ae04ca043749fb6666ed118d13fc7eaed18f8fec170e04827deb010ab0943",
+    "dedupe_hit": true,
+    "resumed": false,
+    "canonical_binding": {
+      "locator": "dillon-os://routine/D07/2026-08-24",
+      "version": "2026-08-24:05e6a21e.aa41a5c9.58c3eba4.7c8c85b7.671a1719.483c6549.d3f6602f.b206acfa.5f9296df.48f8da86.40feaf98",
+      "sha256": "b52e6019ce577e6427819c75ce81c9d04bbc32253583635a0206012c90e3683a",
+      "captured_at": "2026-08-24T23:34:54.492Z"
+    },
+    "canonical_binding_fingerprint": "060f53b6219bbc02cbf1be078179ba977a1f7579e57f89d328a172574a174aea",
+    "contract_fingerprint": "b80c8343faa79e1de6d98938bc0abd4d1bf221ceabe574303db15b2362784203",
+    "checkpoint": "runs/OGD-20260824-B630ED6F0337/checkpoint.json"
+  }
+}

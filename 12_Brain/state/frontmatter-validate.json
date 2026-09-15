@@ -1,11 +1,11 @@
 {
   "automation_id": "frontmatter-validate",
-  "started_at": "2026-08-18T06:53:19.966Z",
-  "status": "ok",
+  "started_at": "2026-09-15T18:48:23.160Z",
+  "status": "warn",
   "counts": {
-    "files": 40,
-    "incomplete": 0,
-    "complete": 40
+    "files": 39,
+    "incomplete": 2,
+    "complete": 37
   },
   "rows": [
     {
@@ -171,15 +171,6 @@
       "due": "none"
     },
     {
-      "file": "01_Clients\\Fagan Painting\\overview.md",
-      "ok": true,
-      "missing": [],
-      "warnings": [],
-      "status": "active",
-      "last_touched": "2026-08-01",
-      "due": "none"
-    },
-    {
       "file": "01_Clients\\Florecita.md",
       "ok": true,
       "missing": [],
@@ -216,15 +207,6 @@
       "due": "2026-07-15"
     },
     {
-      "file": "01_Clients\\Jeff Hozias.md",
-      "ok": true,
-      "missing": [],
-      "warnings": [],
-      "status": "active",
-      "last_touched": "2026-07-29",
-      "due": "none"
-    },
-    {
       "file": "01_Clients\\Kimberly James Bridal\\overview.md",
       "ok": true,
       "missing": [],
@@ -250,6 +232,19 @@
       "status": "active",
       "last_touched": "2026-08-01",
       "due": "none"
+    },
+    {
+      "file": "01_Clients\\Nexla\\overview.md",
+      "ok": false,
+      "missing": [
+        "last_touched",
+        "next_action",
+        "due"
+      ],
+      "warnings": [],
+      "status": "active",
+      "last_touched": null,
+      "due": null
     },
     {
       "file": "01_Clients\\Next Gen Solutions.md",
@@ -315,6 +310,19 @@
       "due": "none"
     },
     {
+      "file": "01_Clients\\Puttery NYC\\overview.md",
+      "ok": false,
+      "missing": [
+        "last_touched",
+        "next_action",
+        "due"
+      ],
+      "warnings": [],
+      "status": "active",
+      "last_touched": null,
+      "due": null
+    },
+    {
       "file": "01_Clients\\Replenish\\overview.md",
       "ok": true,
       "missing": [],
@@ -331,15 +339,6 @@
       "status": "active",
       "last_touched": "2026-08-01",
       "due": "none"
-    },
-    {
-      "file": "01_Clients\\Shadow HVAC\\overview.md",
-      "ok": true,
-      "missing": [],
-      "warnings": [],
-      "status": "active",
-      "last_touched": "2026-07-12",
-      "due": "2026-07-15"
     },
     {
       "file": "01_Clients\\Tags 2 Go\\overview.md",
@@ -369,5 +368,6 @@
       "due": "none"
     }
   ],
-  "written_at": "2026-08-18T06:53:19.967Z"
+  "generated_at": "2026-09-15T18:48:23.161Z",
+  "written_at": "2026-09-15T18:48:23.161Z"
 }

@@ -46,3 +46,17 @@ own work — never let a researcher grade its own findings.
 - Add new pages to `12_Brain/INDEX.md` and link from `12_Brain/06_Research/README.md` when the topic is research-shaped.
 - Reply with: survivors (one line each), what got killed and why, and
   `git diff --stat`.
+
+## Rules
+
+- Keep changes to what the task asks. Report nearby problems as follow-ups, do not fix them in the same pass.
+- Edit surgically; never rewrite a whole file when a targeted edit does the job.
+
+## Cost
+
+- Step 1 Split: Sonnet (sonnet)
+- Step 2 Fan out: Sonnet (sonnet)
+- Step 3 Skeptic gate: Fable 5.1 (claude-fable-5-1)
+- Step 4 Land it: Sonnet (sonnet)
+- Subagent return caps: scouts 150 words, builders 250 words, researchers 250 words plus receipts as file paths; no tables, no transcripts in returns.
+- Lead reads reports and diffs only; it never fetches pages, reads images, or sweeps folders.

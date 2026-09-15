@@ -1,0 +1,11 @@
+{
+  "wakeId":"heartbeat:20260905T084130746Z",
+  "identityVerified":{"gmail":true,"slack":true},
+  "window":{"afterUnix":1788595807,"beforeUnix":1788597726},
+  "sources":{"slack":{"pages":1,"messages":0,"paginationExhausted":true},"gmail":{"pages":1,"messages":0,"paginationExhausted":true}},
+  "due":{"bedtime":false,"leadTable":false,"googleAdsReport":false,"predictionBrief":false},
+  "allowNewWork":false,
+  "externalMutations":0,
+  "decision":"DONT_NOTIFY",
+  "reason":"No new actionable messages; morning deliverables not yet due."
+}

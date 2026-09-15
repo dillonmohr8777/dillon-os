@@ -1,0 +1,2352 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-08-25T01:05:12.524Z",
+  "collection_mode": "live Google Sheets value reads; contact columns excluded",
+  "source_files": [
+    {
+      "state": "cleared_to_show",
+      "title": "1 · CALL LIST — 133 cleared to show",
+      "modified_at": "2026-08-19T20:32:21.910Z",
+      "row_count": 133
+    },
+    {
+      "state": "hold_for_repair",
+      "title": "2 · HOLD — 87 not cleared to show",
+      "modified_at": "2026-08-19T20:29:38.055Z",
+      "row_count": 87
+    },
+    {
+      "state": "do_not_pitch",
+      "title": "3 · DO NOT PITCH — 18 off the list",
+      "modified_at": "2026-08-19T20:27:38.742Z",
+      "row_count": 18
+    }
+  ],
+  "count_contract": {
+    "total": 238,
+    "cleared_to_show": 133,
+    "hold_for_repair": 87,
+    "do_not_pitch": 18
+  },
+  "rows": [
+    {
+      "source_row": 2,
+      "state": "cleared_to_show",
+      "business": "Bartram's Garden",
+      "concept_url": "https://philly-site-builder-hub-0711.netlify.app/sites/bartram-garden/",
+      "rebuilt_2026_08_19": false,
+      "vertical": "Botanical Garden"
+    },
+    {
+      "source_row": 3,
+      "state": "cleared_to_show",
+      "business": "Di Bruno Bros. Italian Market",
+      "concept_url": "https://philly-site-builder-hub-0711.netlify.app/sites/dibruno-bros/",
+      "rebuilt_2026_08_19": false,
+      "vertical": "Specialty Foods"
+    },
+    {
+      "source_row": 4,
+      "state": "cleared_to_show",
+      "business": "Fante's Kitchen Shop",
+      "concept_url": "https://philly-site-builder-hub-0711.netlify.app/sites/fantes-kitchen-shop/",
+      "rebuilt_2026_08_19": false,
+      "vertical": "Kitchenware"
+    },
+    {
+      "source_row": 5,
+      "state": "cleared_to_show",
+      "business": "Frankford Hall",
+      "concept_url": "https://philly-site-builder-hub-0711.netlify.app/sites/frankford-hall/",
+      "rebuilt_2026_08_19": false,
+      "vertical": "Beer Garden"
+    },
+    {
+      "source_row": 6,
+      "state": "cleared_to_show",
+      "business": "Franklin Fountain",
+      "concept_url": "https://philly-site-builder-hub-0711.netlify.app/sites/franklin-fountain/",
+      "rebuilt_2026_08_19": false,
+      "vertical": "Ice Cream & Sweets"
+    },
+    {
+      "source_row": 7,
+      "state": "cleared_to_show",
+      "business": "Geno's Steaks",
+      "concept_url": "https://philly-site-builder-hub-0711.netlify.app/sites/genos-steaks/",
+      "rebuilt_2026_08_19": false,
+      "vertical": "Restaurant"
+    },
+    {
+      "source_row": 8,
+      "state": "cleared_to_show",
+      "business": "Isgro Pastries",
+      "concept_url": "https://philly-site-builder-hub-0711.netlify.app/sites/isgro-pastries/",
+      "rebuilt_2026_08_19": false,
+      "vertical": "Bakery"
+    },
+    {
+      "source_row": 9,
+      "state": "cleared_to_show",
+      "business": "La Colombe Coffee Roasters, Rittenhouse Square",
+      "concept_url": "https://philly-site-builder-hub-0711.netlify.app/sites/la-colombe-rittenhouse/",
+      "rebuilt_2026_08_19": false,
+      "vertical": null
+    },
+    {
+      "source_row": 10,
+      "state": "cleared_to_show",
+      "business": "Morris Arboretum & Gardens",
+      "concept_url": "https://philly-site-builder-hub-0711.netlify.app/sites/morris-arboretum/",
+      "rebuilt_2026_08_19": false,
+      "vertical": null
+    },
+    {
+      "source_row": 11,
+      "state": "cleared_to_show",
+      "business": "Philadelphia's Magic Gardens",
+      "concept_url": "https://philly-site-builder-hub-0711.netlify.app/sites/magic-gardens/",
+      "rebuilt_2026_08_19": false,
+      "vertical": null
+    },
+    {
+      "source_row": 12,
+      "state": "cleared_to_show",
+      "business": "Reading Terminal Market",
+      "concept_url": "https://philly-site-builder-hub-0711.netlify.app/sites/reading-terminal/",
+      "rebuilt_2026_08_19": false,
+      "vertical": null
+    },
+    {
+      "source_row": 13,
+      "state": "cleared_to_show",
+      "business": "ReAnimator Coffee",
+      "concept_url": "https://philly-site-builder-hub-0711.netlify.app/sites/reanimator-coffee/",
+      "rebuilt_2026_08_19": false,
+      "vertical": null
+    },
+    {
+      "source_row": 14,
+      "state": "cleared_to_show",
+      "business": "Standard Tap",
+      "concept_url": "https://philly-site-builder-hub-0711.netlify.app/sites/standard-tap/",
+      "rebuilt_2026_08_19": false,
+      "vertical": null
+    },
+    {
+      "source_row": 15,
+      "state": "cleared_to_show",
+      "business": "Suraya",
+      "concept_url": "https://philly-site-builder-hub-0711.netlify.app/sites/suraya/",
+      "rebuilt_2026_08_19": false,
+      "vertical": null
+    },
+    {
+      "source_row": 16,
+      "state": "cleared_to_show",
+      "business": "Termini Brothers Bakery",
+      "concept_url": "https://philly-site-builder-hub-0711.netlify.app/sites/termini-bros/",
+      "rebuilt_2026_08_19": false,
+      "vertical": null
+    },
+    {
+      "source_row": 17,
+      "state": "cleared_to_show",
+      "business": "Victor Cafe",
+      "concept_url": "https://philly-site-builder-hub-0711.netlify.app/sites/victor-cafe/",
+      "rebuilt_2026_08_19": false,
+      "vertical": null
+    },
+    {
+      "source_row": 18,
+      "state": "cleared_to_show",
+      "business": "Zahav",
+      "concept_url": "https://philly-site-builder-hub-0711.netlify.app/sites/zahav/",
+      "rebuilt_2026_08_19": false,
+      "vertical": null
+    },
+    {
+      "source_row": 19,
+      "state": "cleared_to_show",
+      "business": "A POSITIVE RESPONSE PLUMBING, LLC.",
+      "concept_url": "https://philly-25-homepage-concepts-batch-3.netlify.app/sites/a-positive-response-plumbing-llc/",
+      "rebuilt_2026_08_19": false,
+      "vertical": "Painting / drywall"
+    },
+    {
+      "source_row": 20,
+      "state": "cleared_to_show",
+      "business": "Advanced Commercial Interior, Inc.",
+      "concept_url": "https://philly-25-homepage-concepts-batch-3.netlify.app/sites/advanced-commercial-interior-inc/",
+      "rebuilt_2026_08_19": false,
+      "vertical": "Plumbing / sewer"
+    },
+    {
+      "source_row": 21,
+      "state": "cleared_to_show",
+      "business": "Choice Coating, Inc.",
+      "concept_url": "https://philly-25-homepage-concepts-batch-3.netlify.app/sites/choice-coating-inc/",
+      "rebuilt_2026_08_19": false,
+      "vertical": "Plumbing / sewer"
+    },
+    {
+      "source_row": 22,
+      "state": "cleared_to_show",
+      "business": "Commercial Wallcovering",
+      "concept_url": "https://philly-25-homepage-concepts-batch-3.netlify.app/sites/commercial-wallcovering/",
+      "rebuilt_2026_08_19": false,
+      "vertical": "Plumbing / sewer"
+    },
+    {
+      "source_row": 23,
+      "state": "cleared_to_show",
+      "business": "Dan Ferry Plumbing, Inc.",
+      "concept_url": "https://philly-25-homepage-concepts-batch-3.netlify.app/sites/dan-ferry-plumbing-inc/",
+      "rebuilt_2026_08_19": false,
+      "vertical": "Plumbing / sewer"
+    },
+    {
+      "source_row": 24,
+      "state": "cleared_to_show",
+      "business": "Ferguson Plumbing & Heating",
+      "concept_url": "https://philly-25-homepage-concepts-batch-3.netlify.app/sites/ferguson-plumbing-heating/",
+      "rebuilt_2026_08_19": false,
+      "vertical": "Painting / drywall"
+    },
+    {
+      "source_row": 25,
+      "state": "cleared_to_show",
+      "business": "Gracies Painting",
+      "concept_url": "https://philly-25-homepage-concepts-batch-3.netlify.app/sites/gracies-painting/",
+      "rebuilt_2026_08_19": false,
+      "vertical": "Painting / drywall"
+    },
+    {
+      "source_row": 26,
+      "state": "cleared_to_show",
+      "business": "Graham Painting (10/98)",
+      "concept_url": "https://philly-25-homepage-concepts-batch-3.netlify.app/sites/graham-painting-10-98/",
+      "rebuilt_2026_08_19": false,
+      "vertical": "Painting / drywall"
+    },
+    {
+      "source_row": 27,
+      "state": "cleared_to_show",
+      "business": "Integrity Interiors",
+      "concept_url": "https://philly-25-homepage-concepts-batch-3.netlify.app/sites/integrity-interiors/",
+      "rebuilt_2026_08_19": false,
+      "vertical": "Painting / drywall"
+    },
+    {
+      "source_row": 28,
+      "state": "cleared_to_show",
+      "business": "James Harper Painting",
+      "concept_url": "https://philly-25-homepage-concepts-batch-3.netlify.app/sites/james-harper-painting/",
+      "rebuilt_2026_08_19": false,
+      "vertical": "Plumbing / sewer"
+    },
+    {
+      "source_row": 29,
+      "state": "cleared_to_show",
+      "business": "Mary Cleary Drywall & Carpentry, LLC",
+      "concept_url": "https://philly-25-homepage-concepts-batch-3.netlify.app/sites/mary-cleary-drywall-carpentry-llc/",
+      "rebuilt_2026_08_19": false,
+      "vertical": null
+    },
+    {
+      "source_row": 30,
+      "state": "cleared_to_show",
+      "business": "Mitchell Painting, LLC",
+      "concept_url": "https://philly-25-homepage-concepts-batch-3.netlify.app/sites/mitchell-painting-llc/",
+      "rebuilt_2026_08_19": false,
+      "vertical": null
+    },
+    {
+      "source_row": 31,
+      "state": "cleared_to_show",
+      "business": "PK2 Construction",
+      "concept_url": "https://philly-25-homepage-concepts-batch-3.netlify.app/sites/pk2-construction/",
+      "rebuilt_2026_08_19": false,
+      "vertical": null
+    },
+    {
+      "source_row": 32,
+      "state": "cleared_to_show",
+      "business": "Robert J. Spence Plumbing and Heating",
+      "concept_url": "https://philly-25-homepage-concepts-batch-3.netlify.app/sites/robert-j-spence-plumbing-and-heating/",
+      "rebuilt_2026_08_19": false,
+      "vertical": null
+    },
+    {
+      "source_row": 33,
+      "state": "cleared_to_show",
+      "business": "Shooster Development",
+      "concept_url": "https://philly-25-homepage-concepts-batch-3.netlify.app/sites/shooster-development/",
+      "rebuilt_2026_08_19": false,
+      "vertical": null
+    },
+    {
+      "source_row": 34,
+      "state": "cleared_to_show",
+      "business": "Sioutis Coatings Ent., Inc.",
+      "concept_url": "https://philly-25-homepage-concepts-batch-3.netlify.app/sites/sioutis-coatings-ent-inc/",
+      "rebuilt_2026_08_19": false,
+      "vertical": null
+    },
+    {
+      "source_row": 35,
+      "state": "cleared_to_show",
+      "business": "Tanglewood PTG. Corp.",
+      "concept_url": "https://philly-25-homepage-concepts-batch-3.netlify.app/sites/tanglewood-ptg-corp/",
+      "rebuilt_2026_08_19": false,
+      "vertical": null
+    },
+    {
+      "source_row": 36,
+      "state": "cleared_to_show",
+      "business": "Trend Painting",
+      "concept_url": "https://philly-25-homepage-concepts-batch-3.netlify.app/sites/trend-painting/",
+      "rebuilt_2026_08_19": false,
+      "vertical": null
+    },
+    {
+      "source_row": 37,
+      "state": "cleared_to_show",
+      "business": "A.M. Electric, Inc.",
+      "concept_url": "https://philly-25-redesigns-batch-4.netlify.app/sites/a-m-electric-inc/",
+      "rebuilt_2026_08_19": false,
+      "vertical": "Electrical"
+    },
+    {
+      "source_row": 38,
+      "state": "cleared_to_show",
+      "business": "All Phase Electric Co.",
+      "concept_url": "https://philly-25-redesigns-batch-4.netlify.app/sites/all-phase-electric-co/",
+      "rebuilt_2026_08_19": false,
+      "vertical": "Electrical"
+    },
+    {
+      "source_row": 39,
+      "state": "cleared_to_show",
+      "business": "Dunryte Electric, Inc.",
+      "concept_url": "https://philly-25-redesigns-batch-4.netlify.app/sites/dunryte-electric-inc/",
+      "rebuilt_2026_08_19": false,
+      "vertical": "Electrical"
+    },
+    {
+      "source_row": 40,
+      "state": "cleared_to_show",
+      "business": "Ernest D. Menold, Inc.",
+      "concept_url": "https://philly-25-redesigns-batch-4.netlify.app/sites/ernest-d-menold-inc/",
+      "rebuilt_2026_08_19": false,
+      "vertical": "General sheet metal"
+    },
+    {
+      "source_row": 41,
+      "state": "cleared_to_show",
+      "business": "Gallagher Fabrication & Machine",
+      "concept_url": "https://philly-25-redesigns-batch-4.netlify.app/sites/gallagher-fabrication-machine/",
+      "rebuilt_2026_08_19": false,
+      "vertical": "Fabrication / machining"
+    },
+    {
+      "source_row": 42,
+      "state": "cleared_to_show",
+      "business": "K.A.M. Sheet Metal & Fab",
+      "concept_url": "https://philly-25-redesigns-batch-4.netlify.app/sites/k-a-m-sheet-metal-fab/",
+      "rebuilt_2026_08_19": false,
+      "vertical": null
+    },
+    {
+      "source_row": 43,
+      "state": "cleared_to_show",
+      "business": "Waste Gas Fabricating Company, Inc.",
+      "concept_url": "https://philly-25-redesigns-batch-4.netlify.app/sites/waste-gas-fabricating-company-inc/",
+      "rebuilt_2026_08_19": false,
+      "vertical": null
+    },
+    {
+      "source_row": 44,
+      "state": "cleared_to_show",
+      "business": "Young's Electrical Services Inc.",
+      "concept_url": "https://philly-25-redesigns-batch-4.netlify.app/sites/young-s-electrical-services-inc/",
+      "rebuilt_2026_08_19": false,
+      "vertical": null
+    },
+    {
+      "source_row": 45,
+      "state": "cleared_to_show",
+      "business": "Bustleton Services, Inc",
+      "concept_url": "https://philly-25-homepage-concepts-batch-2.netlify.app/bustleton-services/",
+      "rebuilt_2026_08_19": false,
+      "vertical": "Home Services"
+    },
+    {
+      "source_row": 46,
+      "state": "cleared_to_show",
+      "business": "E & E cleaning services",
+      "concept_url": "https://philly-25-homepage-concepts-batch-2.netlify.app/e-and-e-cleaning/",
+      "rebuilt_2026_08_19": false,
+      "vertical": "Home Services"
+    },
+    {
+      "source_row": 47,
+      "state": "cleared_to_show",
+      "business": "Martha's Sophisticated Shine",
+      "concept_url": "https://philly-25-homepage-concepts-batch-2.netlify.app/marthas-sophisticated-shine/",
+      "rebuilt_2026_08_19": false,
+      "vertical": null
+    },
+    {
+      "source_row": 48,
+      "state": "cleared_to_show",
+      "business": "Mayfair Fence",
+      "concept_url": "https://philly-25-homepage-concepts-batch-2.netlify.app/mayfair-fence/",
+      "rebuilt_2026_08_19": false,
+      "vertical": null
+    },
+    {
+      "source_row": 49,
+      "state": "cleared_to_show",
+      "business": "Moss Contracting",
+      "concept_url": "https://philly-25-homepage-concepts-batch-2.netlify.app/moss-contracting/",
+      "rebuilt_2026_08_19": false,
+      "vertical": null
+    },
+    {
+      "source_row": 50,
+      "state": "cleared_to_show",
+      "business": "Philly Medical and Rehab Associates",
+      "concept_url": "https://philly-25-homepage-concepts-batch-2.netlify.app/philly-medical-and-rehab-associates/",
+      "rebuilt_2026_08_19": false,
+      "vertical": null
+    },
+    {
+      "source_row": 51,
+      "state": "cleared_to_show",
+      "business": "PT in Philly",
+      "concept_url": "https://philly-25-homepage-concepts-batch-2.netlify.app/pt-in-philly/",
+      "rebuilt_2026_08_19": false,
+      "vertical": null
+    },
+    {
+      "source_row": 52,
+      "state": "cleared_to_show",
+      "business": "RHI Construction Inc.",
+      "concept_url": "https://philly-25-homepage-concepts-batch-2.netlify.app/rhi-construction/",
+      "rebuilt_2026_08_19": false,
+      "vertical": null
+    },
+    {
+      "source_row": 53,
+      "state": "cleared_to_show",
+      "business": "Metalmorphose Ironworks",
+      "concept_url": "https://momentum-prospect-radar-next20-2026-08-11.netlify.app/sites/metalmorphose-iron-studio/",
+      "rebuilt_2026_08_19": false,
+      "vertical": "metal-construction"
+    },
+    {
+      "source_row": 54,
+      "state": "cleared_to_show",
+      "business": "Boyle Energy",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/boyle-energy-heating-air-conditioning-oil-propane/",
+      "rebuilt_2026_08_19": true,
+      "vertical": "Business"
+    },
+    {
+      "source_row": 55,
+      "state": "cleared_to_show",
+      "business": "Orthodontic Associates of Collegeville",
+      "concept_url": "https://momentum-prospect-radar-next20-2026-08-11.netlify.app/sites/dr-weiss-s-office/",
+      "rebuilt_2026_08_19": false,
+      "vertical": "Business"
+    },
+    {
+      "source_row": 56,
+      "state": "cleared_to_show",
+      "business": "UNO Pizzeria & Grill Oaks",
+      "concept_url": "https://momentum-prospect-radar-next20-2026-08-11.netlify.app/sites/uno-chicago-style-pizza/",
+      "rebuilt_2026_08_19": false,
+      "vertical": "restaurant"
+    },
+    {
+      "source_row": 57,
+      "state": "cleared_to_show",
+      "business": "Rocco's Brick Oven Pizzeria",
+      "concept_url": "https://momentum-prospect-radar-next20-2026-08-11.netlify.app/sites/rocco-s-brick-oven-pizzeria/",
+      "rebuilt_2026_08_19": false,
+      "vertical": "restaurant"
+    },
+    {
+      "source_row": 58,
+      "state": "cleared_to_show",
+      "business": "THR Insurance",
+      "concept_url": "https://momentum-prospect-radar-next20-2026-08-11.netlify.app/sites/thr-insurance/",
+      "rebuilt_2026_08_19": false,
+      "vertical": "insurance"
+    },
+    {
+      "source_row": 59,
+      "state": "cleared_to_show",
+      "business": "Johnny's Pizza & Pasta",
+      "concept_url": "https://momentum-prospect-radar-next20-2026-08-11.netlify.app/sites/johnnys-pizza/",
+      "rebuilt_2026_08_19": false,
+      "vertical": "Business"
+    },
+    {
+      "source_row": 60,
+      "state": "cleared_to_show",
+      "business": "Peking Gourmet",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/peking-gourmet/",
+      "rebuilt_2026_08_19": true,
+      "vertical": "restaurant"
+    },
+    {
+      "source_row": 61,
+      "state": "cleared_to_show",
+      "business": "Easy Auto Tag & Insurance",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/easy-auto-tag-insurance/",
+      "rebuilt_2026_08_19": true,
+      "vertical": "Business"
+    },
+    {
+      "source_row": 62,
+      "state": "cleared_to_show",
+      "business": "Towne Book Center & Wine Bar",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/towne-book-center-wine-bar/",
+      "rebuilt_2026_08_19": true,
+      "vertical": "books"
+    },
+    {
+      "source_row": 63,
+      "state": "cleared_to_show",
+      "business": "APR Supply Company",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/apr-supply-company/",
+      "rebuilt_2026_08_19": true,
+      "vertical": "Business"
+    },
+    {
+      "source_row": 64,
+      "state": "cleared_to_show",
+      "business": "Borsello Landscaping",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/borsello-landscaping/",
+      "rebuilt_2026_08_19": true,
+      "vertical": "Business"
+    },
+    {
+      "source_row": 65,
+      "state": "cleared_to_show",
+      "business": "City Electric Supply West Chester",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/city-electric-supply/",
+      "rebuilt_2026_08_19": true,
+      "vertical": "Business"
+    },
+    {
+      "source_row": 66,
+      "state": "cleared_to_show",
+      "business": "J-Pro Pools, Inc.",
+      "concept_url": "https://momentum-prospect-radar-next20-2026-08-11.netlify.app/sites/j-pro-inc/",
+      "rebuilt_2026_08_19": false,
+      "vertical": "Business"
+    },
+    {
+      "source_row": 67,
+      "state": "cleared_to_show",
+      "business": "Ming's Chinese Restaurant",
+      "concept_url": "https://momentum-prospect-radar-next20-2026-08-11.netlify.app/sites/ming-s-chinese/",
+      "rebuilt_2026_08_19": false,
+      "vertical": "restaurant"
+    },
+    {
+      "source_row": 68,
+      "state": "cleared_to_show",
+      "business": "Red Hill Greenhouses & Florist",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/red-hill-greenhouses-florist/",
+      "rebuilt_2026_08_19": true,
+      "vertical": "florist"
+    },
+    {
+      "source_row": 69,
+      "state": "cleared_to_show",
+      "business": "Seiler & Drury",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/seiler-drury/",
+      "rebuilt_2026_08_19": true,
+      "vertical": "architect"
+    },
+    {
+      "source_row": 70,
+      "state": "cleared_to_show",
+      "business": "Apollo Wealth Advisors",
+      "concept_url": "https://momentum-prospect-radar-next20-2026-08-11.netlify.app/sites/lpl-financial/",
+      "rebuilt_2026_08_19": false,
+      "vertical": "financial"
+    },
+    {
+      "source_row": 71,
+      "state": "cleared_to_show",
+      "business": "Narberth Pizza and Steaks",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/narberth-pizza/",
+      "rebuilt_2026_08_19": true,
+      "vertical": "restaurant"
+    },
+    {
+      "source_row": 72,
+      "state": "cleared_to_show",
+      "business": "O'Donnell, Weiss & Mattei, P.C.",
+      "concept_url": "https://momentum-prospect-radar-next20-2026-08-11.netlify.app/sites/o-donnell-weiss-mattei-p-c/",
+      "rebuilt_2026_08_19": false,
+      "vertical": "lawyer"
+    },
+    {
+      "source_row": 73,
+      "state": "cleared_to_show",
+      "business": "GO2 Tech",
+      "concept_url": "https://momentum-prospect-radar-next20-2026-08-11.netlify.app/sites/go2tech/",
+      "rebuilt_2026_08_19": false,
+      "vertical": "Business"
+    },
+    {
+      "source_row": 74,
+      "state": "cleared_to_show",
+      "business": "The New Pennsburg Diner",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/new-pennsburg-diner/",
+      "rebuilt_2026_08_19": true,
+      "vertical": "restaurant"
+    },
+    {
+      "source_row": 75,
+      "state": "cleared_to_show",
+      "business": "BG Electric Service LLC",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/bg-electric/",
+      "rebuilt_2026_08_19": true,
+      "vertical": "Business"
+    },
+    {
+      "source_row": 76,
+      "state": "cleared_to_show",
+      "business": "DreamMaker Bath & Kitchen of Chester County",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/dreammaker-bath-kitchen/",
+      "rebuilt_2026_08_19": true,
+      "vertical": "Business"
+    },
+    {
+      "source_row": 77,
+      "state": "cleared_to_show",
+      "business": "McMenamin & Margiotti",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/mcmenamin-margiotti/",
+      "rebuilt_2026_08_19": true,
+      "vertical": "lawyer"
+    },
+    {
+      "source_row": 78,
+      "state": "cleared_to_show",
+      "business": "Plastic & Reconstructive Surgical Solutions",
+      "concept_url": "https://momentum-prospect-radar-next20-2026-08-11.netlify.app/sites/plastic-surgery-solutions/",
+      "rebuilt_2026_08_19": false,
+      "vertical": "doctor"
+    },
+    {
+      "source_row": 79,
+      "state": "cleared_to_show",
+      "business": "Chestnut Hill Animal Hospital",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/chestnut-hill-animal-hospital/",
+      "rebuilt_2026_08_19": true,
+      "vertical": "Business"
+    },
+    {
+      "source_row": 80,
+      "state": "cleared_to_show",
+      "business": "Riley Rodzianko & Clymer LLP",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/riley-rodzianko-and-clymer-llp/",
+      "rebuilt_2026_08_19": true,
+      "vertical": "accountant"
+    },
+    {
+      "source_row": 81,
+      "state": "cleared_to_show",
+      "business": "Eastern Dragon",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/eastern-dragon/",
+      "rebuilt_2026_08_19": true,
+      "vertical": "Business"
+    },
+    {
+      "source_row": 82,
+      "state": "cleared_to_show",
+      "business": "Home Furnishing Consignment",
+      "concept_url": "https://momentum-prospect-radar-next20-2026-08-11.netlify.app/sites/home-furnishings-consignment/",
+      "rebuilt_2026_08_19": false,
+      "vertical": "Business"
+    },
+    {
+      "source_row": 83,
+      "state": "cleared_to_show",
+      "business": "Johnny Destructo's Hero Complex",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/hero-complex/",
+      "rebuilt_2026_08_19": true,
+      "vertical": "Business"
+    },
+    {
+      "source_row": 84,
+      "state": "cleared_to_show",
+      "business": "Andorra Family Dentistry",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/andorra-family-dentistry/",
+      "rebuilt_2026_08_19": true,
+      "vertical": "Business"
+    },
+    {
+      "source_row": 85,
+      "state": "cleared_to_show",
+      "business": "Always Dental Care",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/always-dental-care/",
+      "rebuilt_2026_08_19": true,
+      "vertical": "Business"
+    },
+    {
+      "source_row": 86,
+      "state": "cleared_to_show",
+      "business": "Field 1 Post, LLC",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/field-1-post-llc/",
+      "rebuilt_2026_08_19": true,
+      "vertical": "Business"
+    },
+    {
+      "source_row": 87,
+      "state": "cleared_to_show",
+      "business": "Colmar Dentistry For Kids",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/colmar-dentistry-for-kids/",
+      "rebuilt_2026_08_19": true,
+      "vertical": "Business"
+    },
+    {
+      "source_row": 88,
+      "state": "cleared_to_show",
+      "business": "Barnes Financial Group",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/barnes-financial-group/",
+      "rebuilt_2026_08_19": true,
+      "vertical": "Business"
+    },
+    {
+      "source_row": 89,
+      "state": "cleared_to_show",
+      "business": "HaverCrown Dental",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/havercrown-dental/",
+      "rebuilt_2026_08_19": true,
+      "vertical": "Business"
+    },
+    {
+      "source_row": 90,
+      "state": "cleared_to_show",
+      "business": "Malvern Vision Care",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/malvern-vision-care/",
+      "rebuilt_2026_08_19": true,
+      "vertical": "optician"
+    },
+    {
+      "source_row": 91,
+      "state": "cleared_to_show",
+      "business": "Wynnewood Eye Care",
+      "concept_url": "https://momentum-prospect-radar-next20-2026-08-11.netlify.app/sites/wynnewood-eyecare/",
+      "rebuilt_2026_08_19": false,
+      "vertical": "optometrist"
+    },
+    {
+      "source_row": 92,
+      "state": "cleared_to_show",
+      "business": "Good Dog Bar",
+      "concept_url": "https://philly-site-builder-hub-0711.netlify.app/sites/good-dog-bar/",
+      "rebuilt_2026_08_19": false,
+      "vertical": "Bar & Restaurant"
+    },
+    {
+      "source_row": 93,
+      "state": "cleared_to_show",
+      "business": "John's Roast Pork",
+      "concept_url": "https://philly-site-builder-hub-0711.netlify.app/sites/johns-roast-pork/",
+      "rebuilt_2026_08_19": false,
+      "vertical": "Restaurant"
+    },
+    {
+      "source_row": 94,
+      "state": "cleared_to_show",
+      "business": "MOM's Organic Market, Center City",
+      "concept_url": "https://philly-site-builder-hub-0711.netlify.app/sites/moms-organic-market/",
+      "rebuilt_2026_08_19": false,
+      "vertical": null
+    },
+    {
+      "source_row": 95,
+      "state": "cleared_to_show",
+      "business": "Pat's King of Steaks",
+      "concept_url": "https://philly-site-builder-hub-0711.netlify.app/sites/pats-king-steaks/",
+      "rebuilt_2026_08_19": false,
+      "vertical": null
+    },
+    {
+      "source_row": 96,
+      "state": "cleared_to_show",
+      "business": "Philadelphia Record Exchange",
+      "concept_url": "https://philly-site-builder-hub-0711.netlify.app/sites/philadelphia-record-exchange/",
+      "rebuilt_2026_08_19": false,
+      "vertical": null
+    },
+    {
+      "source_row": 97,
+      "state": "cleared_to_show",
+      "business": "Square 1682",
+      "concept_url": "https://philly-site-builder-hub-0711.netlify.app/sites/square-1682/",
+      "rebuilt_2026_08_19": false,
+      "vertical": null
+    },
+    {
+      "source_row": 98,
+      "state": "cleared_to_show",
+      "business": "Bill Frusco Plumbing, Heating & Cooling",
+      "concept_url": "https://philly-25-redesigns-batch-4.netlify.app/sites/bill-frusco-plumbing-heating-cooling/",
+      "rebuilt_2026_08_19": false,
+      "vertical": "Plumbing / HVAC / commercial"
+    },
+    {
+      "source_row": 99,
+      "state": "cleared_to_show",
+      "business": "Borden Heating & Cooling, Inc.",
+      "concept_url": "https://philly-25-redesigns-batch-4.netlify.app/sites/borden-heating-cooling-inc/",
+      "rebuilt_2026_08_19": false,
+      "vertical": "HVAC"
+    },
+    {
+      "source_row": 100,
+      "state": "cleared_to_show",
+      "business": "Brandon Electric, Inc.",
+      "concept_url": "https://philly-25-redesigns-batch-4.netlify.app/sites/brandon-electric-inc/",
+      "rebuilt_2026_08_19": false,
+      "vertical": "Electrical"
+    },
+    {
+      "source_row": 101,
+      "state": "cleared_to_show",
+      "business": "Centrum Mechanical Services",
+      "concept_url": "https://philly-25-redesigns-batch-4.netlify.app/sites/centrum-mechanical-services/",
+      "rebuilt_2026_08_19": false,
+      "vertical": "Mechanical / HVAC / plumbing"
+    },
+    {
+      "source_row": 102,
+      "state": "cleared_to_show",
+      "business": "Charles Schillinger Company",
+      "concept_url": "https://philly-25-redesigns-batch-4.netlify.app/sites/charles-schillinger-company/",
+      "rebuilt_2026_08_19": false,
+      "vertical": "Metal spinning / forming"
+    },
+    {
+      "source_row": 103,
+      "state": "cleared_to_show",
+      "business": "Cleaned by D&D, LLC",
+      "concept_url": "https://philly-25-redesigns-batch-4.netlify.app/sites/cleaned-by-d-d-llc/",
+      "rebuilt_2026_08_19": false,
+      "vertical": null
+    },
+    {
+      "source_row": 104,
+      "state": "cleared_to_show",
+      "business": "Guaranteed Plumbing & Heating",
+      "concept_url": "https://philly-25-redesigns-batch-4.netlify.app/sites/guaranteed-plumbing-heating/",
+      "rebuilt_2026_08_19": false,
+      "vertical": "Plumbing / HVAC"
+    },
+    {
+      "source_row": 105,
+      "state": "cleared_to_show",
+      "business": "H&G Sign Company",
+      "concept_url": "https://philly-25-redesigns-batch-4.netlify.app/sites/h-g-sign-company/",
+      "rebuilt_2026_08_19": false,
+      "vertical": null
+    },
+    {
+      "source_row": 106,
+      "state": "cleared_to_show",
+      "business": "JDV Electric, LLC",
+      "concept_url": "https://philly-25-redesigns-batch-4.netlify.app/sites/jdv-electric-llc/",
+      "rebuilt_2026_08_19": false,
+      "vertical": "Electrical"
+    },
+    {
+      "source_row": 107,
+      "state": "cleared_to_show",
+      "business": "Manayunk Plumbing & Heating",
+      "concept_url": "https://philly-25-redesigns-batch-4.netlify.app/sites/manayunk-plumbing-heating/",
+      "rebuilt_2026_08_19": false,
+      "vertical": null
+    },
+    {
+      "source_row": 108,
+      "state": "cleared_to_show",
+      "business": "Summers Quality Services",
+      "concept_url": "https://philly-25-redesigns-batch-4.netlify.app/sites/summers-quality-services/",
+      "rebuilt_2026_08_19": false,
+      "vertical": null
+    },
+    {
+      "source_row": 109,
+      "state": "cleared_to_show",
+      "business": "Lawrence Kassan Podiatry",
+      "concept_url": "https://philly-25-homepage-concepts-batch-2.netlify.app/lawrence-kassan-podiatry/",
+      "rebuilt_2026_08_19": false,
+      "vertical": null
+    },
+    {
+      "source_row": 110,
+      "state": "cleared_to_show",
+      "business": "Mayfair Family Chiropractic Center",
+      "concept_url": "https://philly-25-homepage-concepts-batch-2.netlify.app/mayfair-family-chiropractic/",
+      "rebuilt_2026_08_19": false,
+      "vertical": null
+    },
+    {
+      "source_row": 111,
+      "state": "cleared_to_show",
+      "business": "Metro Physical Medicine",
+      "concept_url": "https://philly-25-homepage-concepts-batch-2.netlify.app/metro-physical-medicine/",
+      "rebuilt_2026_08_19": false,
+      "vertical": null
+    },
+    {
+      "source_row": 112,
+      "state": "cleared_to_show",
+      "business": "Northeast Family Foot Care",
+      "concept_url": "https://philly-25-homepage-concepts-batch-2.netlify.app/northeast-family-foot-care/",
+      "rebuilt_2026_08_19": false,
+      "vertical": null
+    },
+    {
+      "source_row": 113,
+      "state": "cleared_to_show",
+      "business": "Oxford Rehabilitation Center",
+      "concept_url": "https://philly-25-homepage-concepts-batch-2.netlify.app/oxford-rehabilitation-center/",
+      "rebuilt_2026_08_19": false,
+      "vertical": null
+    },
+    {
+      "source_row": 114,
+      "state": "cleared_to_show",
+      "business": "Patriot Fence & Ironworks, LLC.",
+      "concept_url": "https://philly-25-homepage-concepts-batch-2.netlify.app/patriot-fence-and-ironworks/",
+      "rebuilt_2026_08_19": false,
+      "vertical": null
+    },
+    {
+      "source_row": 115,
+      "state": "cleared_to_show",
+      "business": "Rufus Chiropractic and Wellness",
+      "concept_url": "https://philly-25-homepage-concepts-batch-2.netlify.app/rufus-chiropractic-and-wellness/",
+      "rebuilt_2026_08_19": false,
+      "vertical": null
+    },
+    {
+      "source_row": 116,
+      "state": "cleared_to_show",
+      "business": "SCRC Accident & Injury Center",
+      "concept_url": "https://philly-25-homepage-concepts-batch-2.netlify.app/scrc-accident-and-injury-center/",
+      "rebuilt_2026_08_19": false,
+      "vertical": null
+    },
+    {
+      "source_row": 117,
+      "state": "cleared_to_show",
+      "business": "BeBalanced Royersford",
+      "concept_url": "https://momentum-prospect-radar-next20-2026-08-11.netlify.app/sites/be-balanced-hormone/",
+      "rebuilt_2026_08_19": false,
+      "vertical": "Business"
+    },
+    {
+      "source_row": 118,
+      "state": "cleared_to_show",
+      "business": "Fredo's Deli",
+      "concept_url": "https://momentum-prospect-radar-next20-2026-08-11.netlify.app/sites/fredo-s-deli/",
+      "rebuilt_2026_08_19": false,
+      "vertical": "Business"
+    },
+    {
+      "source_row": 119,
+      "state": "cleared_to_show",
+      "business": "Harry's Hotdogs",
+      "concept_url": "https://momentum-prospect-radar-next20-2026-08-11.netlify.app/sites/harry-s-hotdogs/",
+      "rebuilt_2026_08_19": false,
+      "vertical": "Business"
+    },
+    {
+      "source_row": 120,
+      "state": "cleared_to_show",
+      "business": "Katana Pittsburgh",
+      "concept_url": "https://momentum-prospect-radar-next20-2026-08-11.netlify.app/sites/katana/",
+      "rebuilt_2026_08_19": false,
+      "vertical": null
+    },
+    {
+      "source_row": 121,
+      "state": "cleared_to_show",
+      "business": "Nicky's Thai Kitchen Downtown",
+      "concept_url": "https://momentum-prospect-radar-next20-2026-08-11.netlify.app/sites/nicky-s-thai-kitchen/",
+      "rebuilt_2026_08_19": false,
+      "vertical": null
+    },
+    {
+      "source_row": 122,
+      "state": "cleared_to_show",
+      "business": "Nottingham Creamery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/nottingham-creamery/",
+      "rebuilt_2026_08_19": true,
+      "vertical": null
+    },
+    {
+      "source_row": 123,
+      "state": "cleared_to_show",
+      "business": "Sesame Inn",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/sesame-inn/",
+      "rebuilt_2026_08_19": true,
+      "vertical": null
+    },
+    {
+      "source_row": 124,
+      "state": "cleared_to_show",
+      "business": "Anthony Gueriera Jr. Insurance Agency LLC",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/anthony-gueriera-insurance/",
+      "rebuilt_2026_08_19": true,
+      "vertical": "Business"
+    },
+    {
+      "source_row": 125,
+      "state": "cleared_to_show",
+      "business": "Bàn Bàn Asian Bistro",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/ban-ban-asian-bistro/",
+      "rebuilt_2026_08_19": true,
+      "vertical": "Business"
+    },
+    {
+      "source_row": 126,
+      "state": "cleared_to_show",
+      "business": "Big Head Transport, LLC",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/big-head-transport/",
+      "rebuilt_2026_08_19": true,
+      "vertical": "Business"
+    },
+    {
+      "source_row": 127,
+      "state": "cleared_to_show",
+      "business": "Elite Philly Auto Parts",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/elite-auto-parts/",
+      "rebuilt_2026_08_19": true,
+      "vertical": "Business"
+    },
+    {
+      "source_row": 128,
+      "state": "cleared_to_show",
+      "business": "Germantown Dental Group",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/germantown-dental-group/",
+      "rebuilt_2026_08_19": true,
+      "vertical": "Business"
+    },
+    {
+      "source_row": 129,
+      "state": "cleared_to_show",
+      "business": "Kehan's Auto Service",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/kehans-auto-service/",
+      "rebuilt_2026_08_19": true,
+      "vertical": "car-repair"
+    },
+    {
+      "source_row": 130,
+      "state": "cleared_to_show",
+      "business": "Lee's Hoagie House of Horsham",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/lees-hoagie-house/",
+      "rebuilt_2026_08_19": true,
+      "vertical": "restaurant"
+    },
+    {
+      "source_row": 131,
+      "state": "cleared_to_show",
+      "business": "Morton Electric Pool & Spa",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/morton-electric-pool-spa/",
+      "rebuilt_2026_08_19": true,
+      "vertical": "plumber"
+    },
+    {
+      "source_row": 132,
+      "state": "cleared_to_show",
+      "business": "Udis & Conn Orthodontics",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/udis-conn-orthodontics/",
+      "rebuilt_2026_08_19": true,
+      "vertical": "dentist"
+    },
+    {
+      "source_row": 133,
+      "state": "cleared_to_show",
+      "business": "Frazer Antiques",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/frazer-antiques/",
+      "rebuilt_2026_08_19": true,
+      "vertical": "Business"
+    },
+    {
+      "source_row": 134,
+      "state": "cleared_to_show",
+      "business": "Welcome Dental",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/welcome-dental/",
+      "rebuilt_2026_08_19": true,
+      "vertical": null
+    },
+    {
+      "source_row": 2,
+      "state": "hold_for_repair",
+      "business": "Eastern State Penitentiary",
+      "repair_instruction": "The page does not load. Redeploy it or remove the row.",
+      "blocker": "unreachable",
+      "concept_url": "https://philly-site-builder-hub-0711.netlify.app/sites/eastern-state/",
+      "vertical": "Historic Site",
+      "area": null,
+      "batch": "Philadelphia Batch 1 restored canonical routes",
+      "rebuilt_2026_08_19": false
+    },
+    {
+      "source_row": 3,
+      "state": "hold_for_repair",
+      "business": "Dependable Concrete Contractor LLC",
+      "repair_instruction": "Replace em dashes in the page copy. House rule: none on a customer-facing page.",
+      "blocker": "em-dash",
+      "concept_url": "https://philly-25-homepage-concepts-batch-2.netlify.app/dependable-concrete/",
+      "vertical": "Home Services",
+      "area": null,
+      "batch": "Philadelphia Batch 2",
+      "rebuilt_2026_08_19": false
+    },
+    {
+      "source_row": 4,
+      "state": "hold_for_repair",
+      "business": "Anton's Plumbing & Heating Inc.",
+      "repair_instruction": "Replace em dashes in the page copy. House rule: none on a customer-facing page.",
+      "blocker": "em-dash",
+      "concept_url": "https://philly-25-homepage-concepts-batch-3.netlify.app/sites/anton-s-plumbing-heating-inc/",
+      "vertical": "Plumbing / sewer",
+      "area": null,
+      "batch": "Philadelphia Batch 3",
+      "rebuilt_2026_08_19": false
+    },
+    {
+      "source_row": 5,
+      "state": "hold_for_repair",
+      "business": "Bryn Mawr Plumbing & Heating Co., Inc.",
+      "repair_instruction": "Replace em dashes in the page copy. House rule: none on a customer-facing page.",
+      "blocker": "em-dash",
+      "concept_url": "https://philly-25-homepage-concepts-batch-3.netlify.app/sites/bryn-mawr-plumbing-heating-co-inc/",
+      "vertical": "Plumbing / sewer",
+      "area": null,
+      "batch": "Philadelphia Batch 3",
+      "rebuilt_2026_08_19": false
+    },
+    {
+      "source_row": 6,
+      "state": "hold_for_repair",
+      "business": "C. Mazzoni Brothers Inc.",
+      "repair_instruction": "Replace em dashes in the page copy. House rule: none on a customer-facing page.",
+      "blocker": "em-dash",
+      "concept_url": "https://philly-25-homepage-concepts-batch-3.netlify.app/sites/c-mazzoni-brothers-inc/",
+      "vertical": "Painting / drywall",
+      "area": null,
+      "batch": "Philadelphia Batch 3",
+      "rebuilt_2026_08_19": false
+    },
+    {
+      "source_row": 7,
+      "state": "hold_for_repair",
+      "business": "Chris Clement Plumbing & Heating",
+      "repair_instruction": "Replace em dashes in the page copy. House rule: none on a customer-facing page.",
+      "blocker": "em-dash",
+      "concept_url": "https://philly-25-homepage-concepts-batch-3.netlify.app/sites/chris-clement-plumbing-heating/",
+      "vertical": "Painting / drywall",
+      "area": null,
+      "batch": "Philadelphia Batch 3",
+      "rebuilt_2026_08_19": false
+    },
+    {
+      "source_row": 8,
+      "state": "hold_for_repair",
+      "business": "Lynch Plumbing & Heating",
+      "repair_instruction": "The page does not load. Redeploy it or remove the row.",
+      "blocker": "unreachable",
+      "concept_url": "https://philly-25-homepage-concepts-batch-3.netlify.app/sites/lynch-plumbing-heating/",
+      "vertical": null,
+      "area": null,
+      "batch": "Philadelphia Batch 3",
+      "rebuilt_2026_08_19": false
+    },
+    {
+      "source_row": 9,
+      "state": "hold_for_repair",
+      "business": "Prime Interiors, LLC",
+      "repair_instruction": "The page does not load. Redeploy it or remove the row.",
+      "blocker": "unreachable",
+      "concept_url": "https://philly-25-homepage-concepts-batch-3.netlify.app/sites/prime-interiors-llc/",
+      "vertical": null,
+      "area": null,
+      "batch": "Philadelphia Batch 3",
+      "rebuilt_2026_08_19": false
+    },
+    {
+      "source_row": 10,
+      "state": "hold_for_repair",
+      "business": "Sharp Edge Construction Company",
+      "repair_instruction": "Replace em dashes in the page copy. House rule: none on a customer-facing page.",
+      "blocker": "em-dash",
+      "concept_url": "https://philly-25-homepage-concepts-batch-3.netlify.app/sites/sharp-edge-construction-company/",
+      "vertical": null,
+      "area": null,
+      "batch": "Philadelphia Batch 3",
+      "rebuilt_2026_08_19": false
+    },
+    {
+      "source_row": 11,
+      "state": "hold_for_repair",
+      "business": "APT Heating and Cooling",
+      "repair_instruction": "Replace em dashes in the page copy. House rule: none on a customer-facing page.",
+      "blocker": "em-dash",
+      "concept_url": "https://philly-25-redesigns-batch-4.netlify.app/sites/apt-heating-and-cooling/",
+      "vertical": "HVAC",
+      "area": null,
+      "batch": "Philadelphia Batch 4",
+      "rebuilt_2026_08_19": false
+    },
+    {
+      "source_row": 12,
+      "state": "hold_for_repair",
+      "business": "CompuCraft Fabricators, Inc.",
+      "repair_instruction": "Replace em dashes in the page copy. House rule: none on a customer-facing page.",
+      "blocker": "em-dash",
+      "concept_url": "https://philly-25-redesigns-batch-4.netlify.app/sites/compucraft-fabricators-inc/",
+      "vertical": "Precision sheet metal",
+      "area": null,
+      "batch": "Philadelphia Batch 4",
+      "rebuilt_2026_08_19": false
+    },
+    {
+      "source_row": 13,
+      "state": "hold_for_repair",
+      "business": "Strickland Electric",
+      "repair_instruction": "The page does not load. Redeploy it or remove the row.",
+      "blocker": "unreachable",
+      "concept_url": "https://philly-25-redesigns-batch-4.netlify.app/sites/strickland-electric/",
+      "vertical": null,
+      "area": null,
+      "batch": "Philadelphia Batch 4",
+      "rebuilt_2026_08_19": false
+    },
+    {
+      "source_row": 14,
+      "state": "hold_for_repair",
+      "business": "United Metal Construction LLC",
+      "repair_instruction": "Replace em dashes in the page copy. House rule: none on a customer-facing page.",
+      "blocker": "em-dash",
+      "concept_url": "https://philly-25-redesigns-batch-4.netlify.app/sites/united-metal-construction-llc/",
+      "vertical": null,
+      "area": null,
+      "batch": "Philadelphia Batch 4",
+      "rebuilt_2026_08_19": false
+    },
+    {
+      "source_row": 15,
+      "state": "hold_for_repair",
+      "business": "Wilson's Forklift Service, LLC",
+      "repair_instruction": "Replace em dashes in the page copy. House rule: none on a customer-facing page.",
+      "blocker": "em-dash",
+      "concept_url": "https://philly-25-redesigns-batch-4.netlify.app/sites/wilson-s-forklift-service-llc/",
+      "vertical": null,
+      "area": null,
+      "batch": "Philadelphia Batch 4",
+      "rebuilt_2026_08_19": false
+    },
+    {
+      "source_row": 16,
+      "state": "hold_for_repair",
+      "business": "Acupuncture Medical Practice",
+      "repair_instruction": "Replace em dashes in the page copy. House rule: none on a customer-facing page.",
+      "blocker": "em-dash",
+      "concept_url": "https://philly-25-homepage-concepts-batch-2.netlify.app/acupuncture-medical-practice/",
+      "vertical": "Medical & Healthcare",
+      "area": null,
+      "batch": "Philadelphia W31 verified 25",
+      "rebuilt_2026_08_19": false
+    },
+    {
+      "source_row": 17,
+      "state": "hold_for_repair",
+      "business": "Farrell's Roofing",
+      "repair_instruction": "Replace em dashes in the page copy. House rule: none on a customer-facing page.",
+      "blocker": "em-dash",
+      "concept_url": "https://philly-25-homepage-concepts-batch-2.netlify.app/farrells-roofing/",
+      "vertical": "Home Services",
+      "area": null,
+      "batch": "Philadelphia W31 verified 25",
+      "rebuilt_2026_08_19": false
+    },
+    {
+      "source_row": 18,
+      "state": "hold_for_repair",
+      "business": "Hal Rosenthaler DMD",
+      "repair_instruction": "Replace em dashes in the page copy. House rule: none on a customer-facing page.",
+      "blocker": "em-dash",
+      "concept_url": "https://philly-25-homepage-concepts-batch-2.netlify.app/hal-rosenthaler-dmd/",
+      "vertical": "Medical & Healthcare",
+      "area": null,
+      "batch": "Philadelphia W31 verified 25",
+      "rebuilt_2026_08_19": false
+    },
+    {
+      "source_row": 19,
+      "state": "hold_for_repair",
+      "business": "Oaks Italian Deli And Pizzeria",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/oaks-italian-deli/",
+      "vertical": "restaurant",
+      "area": "Montgomery County",
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 20,
+      "state": "hold_for_repair",
+      "business": "THR Insurance Agency",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/thr-insurance/",
+      "vertical": "insurance",
+      "area": "Montgomery County",
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 21,
+      "state": "hold_for_repair",
+      "business": "Electric Direct",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/electric-direct/",
+      "vertical": "Business",
+      "area": "Delaware County",
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 22,
+      "state": "hold_for_repair",
+      "business": "Ooka Hibachi and Sushi",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/ooka-hibachi-and-sushi/",
+      "vertical": "restaurant",
+      "area": "Montgomery County",
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 23,
+      "state": "hold_for_repair",
+      "business": "Brandywine Auto Parts",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/brandywine-auto-parts/",
+      "vertical": "Business",
+      "area": "Delaware County",
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 24,
+      "state": "hold_for_repair",
+      "business": "Auger Manufacturing Specialists",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/auger-manufacturing/",
+      "vertical": "Business",
+      "area": "Chester County",
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 25,
+      "state": "hold_for_repair",
+      "business": "Johnny's Pizza",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/johnnys-pizza/",
+      "vertical": "Business",
+      "area": "Montgomery County",
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 26,
+      "state": "hold_for_repair",
+      "business": "Al Tacos Locos",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/al-tacos-locos/",
+      "vertical": "Business",
+      "area": "Montgomery County",
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 27,
+      "state": "hold_for_repair",
+      "business": "Ember & Ale",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/ember-ale/",
+      "vertical": "Business",
+      "area": "Montgomery County",
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 28,
+      "state": "hold_for_repair",
+      "business": "IVC Wealth Advisors",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/ivc-wealth-advisors/",
+      "vertical": "Business",
+      "area": "Bucks County",
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 29,
+      "state": "hold_for_repair",
+      "business": "Benjamin Lovell Shoes",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/benjamin-lovell-shoes/",
+      "vertical": "Business",
+      "area": "Montgomery County",
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 30,
+      "state": "hold_for_repair",
+      "business": "Davidson Fabricating",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/davidson-fabricating/",
+      "vertical": "Business",
+      "area": "Chester County",
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 31,
+      "state": "hold_for_repair",
+      "business": "Dream Team Home Services",
+      "repair_instruction": "The page does not load. Redeploy it or remove the row.",
+      "blocker": "unreachable",
+      "concept_url": "https://momentum-prospect-radar-next20-2026-08-11.netlify.app/sites/dream-team-hvac/",
+      "vertical": "Business",
+      "area": "Chester County",
+      "batch": "phl-2026-w33",
+      "rebuilt_2026_08_19": false
+    },
+    {
+      "source_row": 32,
+      "state": "hold_for_repair",
+      "business": "Elverson Supply",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/elverson-supply/",
+      "vertical": "Business",
+      "area": "Chester County",
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 33,
+      "state": "hold_for_repair",
+      "business": "Floral and Hardy of Skippack",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/floral-and-hardy/",
+      "vertical": "Business",
+      "area": "Montgomery County",
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 34,
+      "state": "hold_for_repair",
+      "business": "Frederick W. Oster Fine Violins",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/oster-fine-violins/",
+      "vertical": "musical-instrument",
+      "area": "Philadelphia",
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 35,
+      "state": "hold_for_repair",
+      "business": "MacLaren Kitchen and Bath",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/maclaren-kitchen-and-bath/",
+      "vertical": "hardware",
+      "area": "Chester County",
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 36,
+      "state": "hold_for_repair",
+      "business": "Philadelphia Garage",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/philadelphia-garage/",
+      "vertical": "floorer",
+      "area": "Chester County",
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 37,
+      "state": "hold_for_repair",
+      "business": "Pipe Xpress",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/pipe-xpress/",
+      "vertical": "hardware",
+      "area": "Chester County",
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 38,
+      "state": "hold_for_repair",
+      "business": "Pro Nails",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/pro-nails/",
+      "vertical": "beauty",
+      "area": "Montgomery County",
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 39,
+      "state": "hold_for_repair",
+      "business": "Southampton Hot Tub",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/southampton-hot-tub/",
+      "vertical": "swimming-pool",
+      "area": "Chester County",
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 40,
+      "state": "hold_for_repair",
+      "business": "WJA Landscaping",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/wja-landscaping/",
+      "vertical": "gardener",
+      "area": "Montgomery County",
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 41,
+      "state": "hold_for_repair",
+      "business": "County Line Veterinary Hospital",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/county-line-veterinary-hospital/",
+      "vertical": "Business",
+      "area": "Montgomery County",
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 42,
+      "state": "hold_for_repair",
+      "business": "Eisenberg, Rothweiler, Winkler, Eisenberg & Jeck",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/eisenberg-rothweiler/",
+      "vertical": "Business",
+      "area": "Philadelphia",
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 43,
+      "state": "hold_for_repair",
+      "business": "Glen Eagle Pediatric Dentistry",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/glen-eagle-pediatric-dentistry/",
+      "vertical": "Business",
+      "area": "Delaware County",
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 44,
+      "state": "hold_for_repair",
+      "business": "Pennsylvania Dental Group",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/pennsylvania-dental-group/",
+      "vertical": "dentist",
+      "area": "Philadelphia",
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 45,
+      "state": "hold_for_repair",
+      "business": "Captain Car Wash",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/captain-car-wash/",
+      "vertical": "Business",
+      "area": "Montgomery County",
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 46,
+      "state": "hold_for_repair",
+      "business": "Custom IT Solutions",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/custom-it-solutions/",
+      "vertical": "Business",
+      "area": "Montgomery County",
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 47,
+      "state": "hold_for_repair",
+      "business": "Euphoria Nail Bar",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/euphoria-nail-bar/",
+      "vertical": "Business",
+      "area": "Philadelphia",
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 48,
+      "state": "hold_for_repair",
+      "business": "Heart & Soul Tattoo",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/heart-soul-tattoo/",
+      "vertical": "Business",
+      "area": "Montgomery County",
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 49,
+      "state": "hold_for_repair",
+      "business": "Philadelphia Auto Accident Injury Attorney",
+      "repair_instruction": "The page does not load. Redeploy it or remove the row.",
+      "blocker": "unreachable",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/philadelphia-auto-accident-injury-attorney/",
+      "vertical": "lawyer",
+      "area": "Philadelphia",
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 50,
+      "state": "hold_for_repair",
+      "business": "TM Prestige Home Cash Buyer",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/tm-prestige-home-cash-buyer/",
+      "vertical": "estate-agent",
+      "area": "Philadelphia",
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 51,
+      "state": "hold_for_repair",
+      "business": "Live Urgent Care King of Prussia",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/live-urgent-care/",
+      "vertical": "clinic",
+      "area": "Montgomery County",
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 52,
+      "state": "hold_for_repair",
+      "business": "Train and Nourish",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/train-and-nourish/",
+      "vertical": "fitness-centre",
+      "area": "Philadelphia",
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 53,
+      "state": "hold_for_repair",
+      "business": "Manatawny Still Works",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/manatawny-still-works/",
+      "vertical": "distillery",
+      "area": "Montgomery County",
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 54,
+      "state": "hold_for_repair",
+      "business": "Snyder Online Marketing",
+      "repair_instruction": "The page does not load. Redeploy it or remove the row.",
+      "blocker": "unreachable",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/snyder-online-marketing/",
+      "vertical": "advertising-agency",
+      "area": "Philadelphia",
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 55,
+      "state": "hold_for_repair",
+      "business": "Trend Auto Trader",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/trend-auto-trader/",
+      "vertical": "car-repair",
+      "area": "Bucks County",
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 56,
+      "state": "hold_for_repair",
+      "business": "Dutton Road Veterinary Clinic",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/dutton-road-veterinary-clinic/",
+      "vertical": "Business",
+      "area": "Philadelphia",
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 57,
+      "state": "hold_for_repair",
+      "business": "Fillman & Sons Floors & More",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/fillman-and-sons-floors/",
+      "vertical": "Business",
+      "area": "Lehigh County",
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 58,
+      "state": "hold_for_repair",
+      "business": "L. A. Verruni Landscaping",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/verruni-landscaping/",
+      "vertical": "gardener",
+      "area": "Montgomery County",
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 59,
+      "state": "hold_for_repair",
+      "business": "Kinetic Physical Therapy",
+      "repair_instruction": "The page does not load. Redeploy it or remove the row.",
+      "blocker": "unreachable",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/kinetic-physical-therapy/",
+      "vertical": "physiotherapist",
+      "area": "Montgomery County",
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 60,
+      "state": "hold_for_repair",
+      "business": "Highline Motors Aston",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/highline-motors/",
+      "vertical": "Business",
+      "area": "Delaware County",
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 61,
+      "state": "hold_for_repair",
+      "business": "Jarman Sales & Service",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://momentum-prospect-radar-next20-2026-08-11.netlify.app/sites/jarman-hvac/",
+      "vertical": "Business",
+      "area": "Philadelphia",
+      "batch": "phl-2026-w34",
+      "rebuilt_2026_08_19": false
+    },
+    {
+      "source_row": 62,
+      "state": "hold_for_repair",
+      "business": "Sciacca Service Center",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/sciacca-service-center/",
+      "vertical": "car-repair",
+      "area": "Montgomery County",
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 63,
+      "state": "hold_for_repair",
+      "business": "Johnny Brenda's",
+      "repair_instruction": "The page does not load. Redeploy it or remove the row.",
+      "blocker": "unreachable",
+      "concept_url": "https://philly-site-builder-hub-0711.netlify.app/sites/johnny-brendas/",
+      "vertical": "Restaurant & Music Venue",
+      "area": null,
+      "batch": "Philadelphia Batch 1 restored canonical routes",
+      "rebuilt_2026_08_19": false
+    },
+    {
+      "source_row": 64,
+      "state": "hold_for_repair",
+      "business": "Solution Based Plumbing and Heating, Inc.",
+      "repair_instruction": "Replace em dashes in the page copy. House rule: none on a customer-facing page.",
+      "blocker": "em-dash",
+      "concept_url": "https://philly-25-redesigns-batch-4.netlify.app/sites/solution-based-plumbing-and-heating-inc/",
+      "vertical": null,
+      "area": null,
+      "batch": "Philadelphia Batch 4",
+      "rebuilt_2026_08_19": false
+    },
+    {
+      "source_row": 65,
+      "state": "hold_for_repair",
+      "business": "Academy Chiropractic Center",
+      "repair_instruction": "Replace em dashes in the page copy. House rule: none on a customer-facing page.",
+      "blocker": "em-dash",
+      "concept_url": "https://philly-25-homepage-concepts-batch-2.netlify.app/academy-chiropractic-center/",
+      "vertical": "Medical & Healthcare",
+      "area": null,
+      "batch": "Philadelphia W31 verified 25",
+      "rebuilt_2026_08_19": false
+    },
+    {
+      "source_row": 66,
+      "state": "hold_for_repair",
+      "business": "Bridesburg Spine and Injury Clinic",
+      "repair_instruction": "The page does not load. Redeploy it or remove the row.",
+      "blocker": "unreachable",
+      "concept_url": "https://philly-25-homepage-concepts-batch-2.netlify.app/bridesburg-spine-and-injury-clinic/",
+      "vertical": "Medical & Healthcare",
+      "area": null,
+      "batch": "Philadelphia W31 verified 25",
+      "rebuilt_2026_08_19": false
+    },
+    {
+      "source_row": 67,
+      "state": "hold_for_repair",
+      "business": "GREATER PHILADELPHIA CHIROPRACTIC CENTER",
+      "repair_instruction": "Replace em dashes in the page copy. House rule: none on a customer-facing page.",
+      "blocker": "em-dash",
+      "concept_url": "https://philly-25-homepage-concepts-batch-2.netlify.app/greater-philadelphia-chiropractic-center/",
+      "vertical": "Medical & Healthcare",
+      "area": null,
+      "batch": "Philadelphia W31 verified 25",
+      "rebuilt_2026_08_19": false
+    },
+    {
+      "source_row": 68,
+      "state": "hold_for_repair",
+      "business": "Rittenhouse Square Chiro",
+      "repair_instruction": "The page does not load. Redeploy it or remove the row.",
+      "blocker": "unreachable",
+      "concept_url": "https://philly-25-homepage-concepts-batch-2.netlify.app/rittenhouse-square-chiro/",
+      "vertical": null,
+      "area": null,
+      "batch": "Philadelphia W31 verified 25",
+      "rebuilt_2026_08_19": false
+    },
+    {
+      "source_row": 69,
+      "state": "hold_for_repair",
+      "business": "Salter's Fireplace",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/salters-fireplace/",
+      "vertical": null,
+      "area": null,
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 70,
+      "state": "hold_for_repair",
+      "business": "Artisan Wine and Cheese Cellars",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/artisan-wine-and-cheese-cellars/",
+      "vertical": "Business",
+      "area": null,
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 71,
+      "state": "hold_for_repair",
+      "business": "Chadds Ford Animal Hospital",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/chadds-ford-animal-hospital/",
+      "vertical": "Business",
+      "area": null,
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 72,
+      "state": "hold_for_repair",
+      "business": "Ciocca Pre-Owned Autos",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/ciocca-pre-owned-autos/",
+      "vertical": "Business",
+      "area": null,
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 73,
+      "state": "hold_for_repair",
+      "business": "Del Chevrolet",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/del-chevrolet/",
+      "vertical": "Business",
+      "area": null,
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 74,
+      "state": "hold_for_repair",
+      "business": "Dinse Dental Care",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/dinse-dental-care/",
+      "vertical": "Business",
+      "area": null,
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 75,
+      "state": "hold_for_repair",
+      "business": "Faulkner Buick GMC",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/faulkner-buick-gmc/",
+      "vertical": "Business",
+      "area": null,
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 76,
+      "state": "hold_for_repair",
+      "business": "Hamburg Animal Hospital",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/hamburg-animal-hospital/",
+      "vertical": "Business",
+      "area": null,
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 77,
+      "state": "hold_for_repair",
+      "business": "Legacy Jewelers",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/legacy-jewelers/",
+      "vertical": null,
+      "area": null,
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 78,
+      "state": "hold_for_repair",
+      "business": "OpenArc",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/openarc/",
+      "vertical": null,
+      "area": null,
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 79,
+      "state": "hold_for_repair",
+      "business": "OSS Health",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/oss-health/",
+      "vertical": null,
+      "area": null,
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 80,
+      "state": "hold_for_repair",
+      "business": "Radiance Dental",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/radiance-dental/",
+      "vertical": null,
+      "area": null,
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 81,
+      "state": "hold_for_repair",
+      "business": "Reardon Dental Exton",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/reardon-dental/",
+      "vertical": null,
+      "area": null,
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 82,
+      "state": "hold_for_repair",
+      "business": "Scott Lot",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/scott-lot/",
+      "vertical": null,
+      "area": null,
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 83,
+      "state": "hold_for_repair",
+      "business": "Golden Eagle Jewelers",
+      "repair_instruction": "Replace em dashes in the page copy. House rule: none on a customer-facing page.",
+      "blocker": "em-dash",
+      "concept_url": "https://momentum-prospect-radar-next20-2026-08-11.netlify.app/sites/golden-eagle-jewelry/?forcegl",
+      "vertical": "Business",
+      "area": "Philadelphia",
+      "batch": "Cinematic builds 166-168",
+      "rebuilt_2026_08_19": false
+    },
+    {
+      "source_row": 84,
+      "state": "hold_for_repair",
+      "business": "Baldwin's Book Barn",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/baldwins-book-barn/",
+      "vertical": "Business",
+      "area": null,
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 85,
+      "state": "hold_for_repair",
+      "business": "Main Line Veterinary Hospital",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/main-line-veterinary-hospital/",
+      "vertical": null,
+      "area": null,
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 86,
+      "state": "hold_for_repair",
+      "business": "Pizza Peddler",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/pizza-peddler/",
+      "vertical": null,
+      "area": null,
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 87,
+      "state": "hold_for_repair",
+      "business": "Whitelands Animal Hospital",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/whitelands-animal-hospital/",
+      "vertical": null,
+      "area": null,
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 88,
+      "state": "hold_for_repair",
+      "business": "Wholly Grounds Coffeehouse",
+      "repair_instruction": "Add the illustrative-imagery disclosure line that the other pages already carry. One template edit, no rebuild.",
+      "blocker": "asserted-imagery",
+      "concept_url": "https://radar-unslop-20260819.netlify.app/sites/wholly-grounds/",
+      "vertical": null,
+      "area": null,
+      "batch": "unslop 2026-08-19",
+      "rebuilt_2026_08_19": true
+    },
+    {
+      "source_row": 2,
+      "state": "do_not_pitch",
+      "business": "ZBC General Contracting",
+      "exclusion_status": "WRONG OFFER",
+      "exclusion_reason": "their site scores 68/100 - sell a tune-up, not a rebuild",
+      "their_site": "https://zbcgeneralcontracting.com/",
+      "their_site_score": "68",
+      "vertical": "plumber",
+      "area": "Philadelphia"
+    },
+    {
+      "source_row": 3,
+      "state": "do_not_pitch",
+      "business": "Dentistry for Life",
+      "exclusion_status": "WRONG OFFER",
+      "exclusion_reason": "their site scores 62/100 - sell a tune-up, not a rebuild",
+      "their_site": "https://dentistryforlife.net/",
+      "their_site_score": "62",
+      "vertical": "Business",
+      "area": "Philadelphia"
+    },
+    {
+      "source_row": 4,
+      "state": "do_not_pitch",
+      "business": "UrgentVet Pottstown",
+      "exclusion_status": "WRONG OFFER",
+      "exclusion_reason": "their site scores 61/100 - sell a tune-up, not a rebuild",
+      "their_site": "https://urgentvet.com/location/pottstown-pa/",
+      "their_site_score": "61",
+      "vertical": "veterinary",
+      "area": "Montgomery County"
+    },
+    {
+      "source_row": 5,
+      "state": "do_not_pitch",
+      "business": "Art City Vets & Urgent Care",
+      "exclusion_status": "WRONG OFFER",
+      "exclusion_reason": "their site scores 57/100 - sell a tune-up, not a rebuild",
+      "their_site": "https://www.artcityvets.com/",
+      "their_site_score": "57",
+      "vertical": "Business",
+      "area": "Philadelphia"
+    },
+    {
+      "source_row": 6,
+      "state": "do_not_pitch",
+      "business": "Holiday Hair Quakertown",
+      "exclusion_status": "SKIP",
+      "exclusion_reason": "Holiday Hair is a national salon chain",
+      "their_site": "https://www.holidayhair.com/locations/nearme/haircut/PA/QUAKERTOWN/1465-21-W-BROAD-ST/19300",
+      "their_site_score": "37",
+      "vertical": "Business",
+      "area": "Bucks County"
+    },
+    {
+      "source_row": 7,
+      "state": "do_not_pitch",
+      "business": "Agnes Edmunds Bridal & Formals",
+      "exclusion_status": "SKIP",
+      "exclusion_reason": "Google reports this business permanently closed",
+      "their_site": "https://agnesedmunds.com/",
+      "their_site_score": "35",
+      "vertical": "Business",
+      "area": "Montgomery County"
+    },
+    {
+      "source_row": 8,
+      "state": "do_not_pitch",
+      "business": "EPAM Philadelphia",
+      "exclusion_status": "SKIP",
+      "exclusion_reason": "EPAM is a multi-billion-dollar public software company",
+      "their_site": "https://www.epam.com/",
+      "their_site_score": "35",
+      "vertical": "Business",
+      "area": "Philadelphia"
+    },
+    {
+      "source_row": 9,
+      "state": "do_not_pitch",
+      "business": "NovaCare Rehabilitation Conshohocken",
+      "exclusion_status": "SKIP",
+      "exclusion_reason": "NovaCare is a national rehabilitation chain",
+      "their_site": "https://www.novacare.com/contact/find-a-location/pa/conshohocken/conshohocken/?ty=xt",
+      "their_site_score": "35",
+      "vertical": "clinic",
+      "area": "Montgomery County"
+    },
+    {
+      "source_row": 10,
+      "state": "do_not_pitch",
+      "business": "Rally House Collegeville",
+      "exclusion_status": "SKIP",
+      "exclusion_reason": "Rally House is a national retail chain",
+      "their_site": "https://www.rallyhouse.com/rally-house-collegeville",
+      "their_site_score": "35",
+      "vertical": "sports",
+      "area": "Montgomery County"
+    },
+    {
+      "source_row": 11,
+      "state": "do_not_pitch",
+      "business": "The Edge Fitness Clubs Media",
+      "exclusion_status": "SKIP",
+      "exclusion_reason": "The Edge Fitness is a regional gym chain",
+      "their_site": "https://www.theedgefitnessclubs.com/locations/pennsylvania-media",
+      "their_site_score": "35",
+      "vertical": "fitness-centre",
+      "area": "Delaware County"
+    },
+    {
+      "source_row": 12,
+      "state": "do_not_pitch",
+      "business": "The Restaurant Store Plymouth Meeting",
+      "exclusion_status": "SKIP",
+      "exclusion_reason": "The Restaurant Store is a multi-state chain",
+      "their_site": "https://www.therestaurantstore.com/stores/Plymouth-Meeting",
+      "their_site_score": "35",
+      "vertical": "kitchen",
+      "area": "Montgomery County"
+    },
+    {
+      "source_row": 13,
+      "state": "do_not_pitch",
+      "business": "Ferrari Philadelphia",
+      "exclusion_status": "SKIP",
+      "exclusion_reason": "factory-owned luxury dealership",
+      "their_site": "https://ferrariphiladelphia.com/",
+      "their_site_score": "34",
+      "vertical": "Business",
+      "area": "Delaware County"
+    },
+    {
+      "source_row": 14,
+      "state": "do_not_pitch",
+      "business": "Zuber Realty",
+      "exclusion_status": "SKIP",
+      "exclusion_reason": "Google reports this business permanently closed",
+      "their_site": "https://www.zuberrealty.com/agents-offices/red-hill-office",
+      "their_site_score": "34",
+      "vertical": "estate-agent",
+      "area": "Montgomery County"
+    },
+    {
+      "source_row": 15,
+      "state": "do_not_pitch",
+      "business": "BPM Fitness",
+      "exclusion_status": "SKIP",
+      "exclusion_reason": "Google reports this business permanently closed",
+      "their_site": "https://bpmfitnessphl.com/",
+      "their_site_score": "33",
+      "vertical": "Business",
+      "area": "Philadelphia"
+    },
+    {
+      "source_row": 16,
+      "state": "do_not_pitch",
+      "business": "C&C Super Seal",
+      "exclusion_status": "SKIP",
+      "exclusion_reason": "Google reports this business permanently closed",
+      "their_site": "https://www.candcsuperseal.com/",
+      "their_site_score": "33",
+      "vertical": "paver",
+      "area": "Bucks County"
+    },
+    {
+      "source_row": 17,
+      "state": "do_not_pitch",
+      "business": "Just Tires Media",
+      "exclusion_status": "SKIP",
+      "exclusion_reason": "Just Tires is a Goodyear national chain",
+      "their_site": "https://www.justtires.com/en_US/location/Media-PA-19063-US-000901223",
+      "their_site_score": "32",
+      "vertical": "car-repair",
+      "area": "Delaware County"
+    },
+    {
+      "source_row": 18,
+      "state": "do_not_pitch",
+      "business": "Francis Kaufman House",
+      "exclusion_status": "SKIP",
+      "exclusion_reason": "Google reports this business permanently closed",
+      "their_site": "http://franciskaufmanhouse.com/",
+      "their_site_score": "27",
+      "vertical": "Business",
+      "area": "Montgomery County"
+    },
+    {
+      "source_row": 19,
+      "state": "do_not_pitch",
+      "business": "Theory Outlet at Philadelphia Premium Outlets",
+      "exclusion_status": "SKIP",
+      "exclusion_reason": "Theory is a national fashion brand",
+      "their_site": "https://www.theory.com/storedetail/?StoreID=280075",
+      "their_site_score": "23",
+      "vertical": "clothes",
+      "area": "Montgomery County"
+    }
+  ],
+  "privacy": {
+    "redacted": true,
+    "contact_columns_collected": false,
+    "emails_included": false,
+    "phones_included": false,
+    "provider_ids_included": false,
+    "secrets_included": false
+  },
+  "authority": {
+    "read_only_collection": true,
+    "drive_write_attempted": false,
+    "external_action_authorized": false
+  }
+}

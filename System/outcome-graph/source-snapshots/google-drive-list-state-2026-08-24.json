@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-08-24T22:28:03.4525458Z",
+  "source": {
+    "connector": "google_drive",
+    "authenticated_account_verified": true,
+    "collection_mode": "live metadata plus aggregate range checks",
+    "screenshot_sha256": "71df94024154615d05501ff893c25a2711416c0b2f3a840de6f21a22c30db47c",
+    "screenshot_bytes": 106368
+  },
+  "workflows": {
+    "momentum_concept_outreach": {
+      "folder": {
+        "title": "Momentum 360 — Outreach Workbook 2026-08-18",
+        "visibility": "private_owner_only",
+        "current_sheet_count": 5,
+        "superseded_sheet_count": 4,
+        "current_sheet_modified_at_max": "2026-08-19T20:32:21.910Z",
+        "superseded_sheet_modified_at_max": "2026-08-19T22:56:19.612Z"
+      },
+      "guide": {
+        "title": "0 · START HERE — verified 2026-08-19",
+        "verification_date": "2026-08-19",
+        "nonempty_rows": 33,
+        "built_pages_all_time": 238,
+        "declared_distinct_businesses": 236,
+        "rebuilt_on_verification_date": 136,
+        "pages_passing_polish": 140
+      },
+      "live_states": {
+        "call_list": {
+          "declared_rows": 133,
+          "observed_rows": 133,
+          "unique_normalized_business_names": 133,
+          "verified_email_rows": 51,
+          "phone_without_email_rows": 82,
+          "may_be_screen_shared": true
+        },
+        "hold": {
+          "declared_rows": 87,
+          "observed_rows": 87,
+          "unique_normalized_business_names": 87,
+          "missing_disclosure_rows": 59,
+          "dash_rule_failure_rows": 17,
+          "page_load_failure_rows": 11,
+          "may_be_screen_shared": false
+        },
+        "do_not_pitch": {
+          "declared_rows": 18,
+          "observed_rows": 18,
+          "unique_normalized_business_names": 18,
+          "wrong_offer_rows": 4,
+          "chain_or_closed_rows": 14,
+          "may_receive_site_pitch": false
+        }
+      },
+      "partition_checks": {
+        "state_rows_sum": 238,
+        "state_rows_match_built_pages": true,
+        "call_channel_rows_sum": 133,
+        "call_channel_rows_match_call_list": true,
+        "hold_reason_rows_sum": 87,
+        "hold_reason_rows_match_hold": true,
+        "do_not_pitch_reason_rows_sum": 18,
+        "do_not_pitch_reason_rows_match_do_not_pitch": true,
+        "normalized_name_overlap_call_hold": 0,
+        "normalized_name_overlap_call_do_not_pitch": 0,
+        "normalized_name_overlap_hold_do_not_pitch": 0
+      },
+      "identity_integrity": {
+        "stable_identity_column_present": false,
+        "observed_unique_normalized_business_names": 238,
+        "guide_declared_distinct_businesses": 236,
+        "unexplained_identity_delta": 2,
+        "cross_state_exclusivity_provable": false,
+        "state": "held_missing_canonical_row_identity"
+      },
+      "authority": {
+        "call_list_is_only_screen_share_source": true,
+        "cleared_to_show_is_not_production_approval": true,
+        "human_approval_required_for_every_send": true,
+        "external_action_authorized": false
+      }
+    },
+    "franchise_workshop": {
+      "folder": {
+        "title": "Franchise Workshop Lists — 2026-08-14",
+        "visibility": "private",
+        "file_count": 5
+      },
+      "full_send_ready_projection": {
+        "title": "SEND READY — 720 franchisee emails — 2026-08-14",
+        "modified_at": "2026-08-20T21:42:42.706Z",
+        "visibility": "shared_to_named_users_only",
+        "owner_permission_count": 1,
+        "writer_permission_count": 2,
+        "broad_discovery_permission_count": 0,
+        "rows": 720,
+        "unique_prospect_ids": 719,
+        "missing_prospect_id_rows": 1,
+        "unique_emails": 720,
+        "mx_ok_rows": 720,
+        "registration_link_rows": 720,
+        "wave_1_rows": 50,
+        "wave_2_rows": 670,
+        "not_sent_rows": 720
+      },
+      "wave_1_projection": {
+        "title": "WAVE 1 — 50 named franchisees — SEND THESE FIRST — 2026-08-14",
+        "modified_at": "2026-08-14T20:22:31.296Z",
+        "visibility": "private",
+        "rows": 50,
+        "unique_prospect_ids": 50,
+        "unique_emails": 50,
+        "mx_ok_rows": 50,
+        "registration_link_rows": 50,
+        "not_sent_rows": 50
+      },
+      "projection_checks": {
+        "full_source_stable_identity_complete": false,
+        "shared_prospect_ids": 50,
+        "prospect_ids_only_in_full_wave_1": 0,
+        "prospect_ids_only_in_separate_wave_1": 0,
+        "exact_rows_for_shared_ids": 48,
+        "shared_id_email_mismatches": 1,
+        "shared_id_other_field_mismatches": 1,
+        "separate_wave_1_exact_projection": false,
+        "state": "held_stale_wave_projection"
+      },
+      "documentation_checks": {
+        "current_how_to_use_sendable_rows": 720,
+        "current_how_to_use_named_style_rows": 123,
+        "older_readme_full_rows": 5359,
+        "older_readme_named_owner_rows": 46,
+        "older_readme_marked_superseded": false,
+        "one_unambiguous_current_instruction_source": false,
+        "state": "held_instruction_precedence_drift"
+      },
+      "authority": {
+        "all_rows_currently_not_sent": true,
+        "sheet_title_is_not_send_approval": true,
+        "human_copy_and_send_approval_required": true,
+        "bounce_gate_required_before_wave_2": true,
+        "agent_send_authorized": false,
+        "external_action_authorized": false
+      }
+    }
+  },
+  "aggregate_outcome": {
+    "workflow_ready": false,
+    "holds": [
+      "momentum_missing_canonical_row_identity",
+      "momentum_238_rows_vs_236_distinct_businesses_unreconciled",
+      "franchise_wave_1_projection_differs_from_full_source",
+      "franchise_full_source_has_one_missing_prospect_id",
+      "franchise_instruction_precedence_is_ambiguous",
+      "all_external_contact_requires_exact_human_approval"
+    ]
+  },
+  "privacy": {
+    "redacted": true,
+    "contains_contact_rows": false,
+    "contains_email_addresses": false,
+    "contains_phone_numbers": false,
+    "contains_provider_file_ids": false,
+    "contains_provider_urls": false,
+    "contains_secrets": false
+  },
+  "authority": {
+    "read_only_collection": true,
+    "drive_write_attempted": false,
+    "send_attempted": false,
+    "call_attempted": false,
+    "screenshare_attempted": false,
+    "canonical_queue_write_attempted": false
+  }
+}

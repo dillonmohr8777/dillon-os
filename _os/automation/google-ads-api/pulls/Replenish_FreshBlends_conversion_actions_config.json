@@ -1,0 +1,50 @@
+[
+  {
+    "conversionAction": {
+      "resourceName": "customers/6275014654/conversionActions/7557816878",
+      "status": "ENABLED",
+      "type": "GOOGLE_ANALYTICS_4_CUSTOM",
+      "category": "PAGE_VIEW",
+      "id": "7557816878",
+      "name": "PAGE_VIEW",
+      "ownerCustomer": "customers/6275014654",
+      "primaryForGoal": false
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/6275014654/conversionActions/7558114521",
+      "status": "ENABLED",
+      "type": "GOOGLE_ANALYTICS_4_PURCHASE",
+      "category": "PURCHASE",
+      "id": "7558114521",
+      "name": "getreplenish.com (web) purchase",
+      "ownerCustomer": "customers/6275014654",
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/6275014654/conversionActions/7601483418",
+      "status": "REMOVED",
+      "type": "WEBPAGE",
+      "category": "GET_DIRECTIONS",
+      "id": "7601483418",
+      "name": "Get Directions Click",
+      "ownerCustomer": "customers/6275014654",
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/6275014654/conversionActions/7601484927",
+      "status": "ENABLED",
+      "type": "WEBPAGE",
+      "category": "GET_DIRECTIONS",
+      "id": "7601484927",
+      "name": "Get Directions Click (1)",
+      "ownerCustomer": "customers/6275014654",
+      "primaryForGoal": true
+    }
+  }
+]

@@ -1,0 +1,277 @@
+{
+  "schema_version": 1,
+  "routine_id": "D18",
+  "generated_at": "2026-08-24T23:42:21.488Z",
+  "source_set_sha256": "cd4877517666380542f1ea8d7c4be50549fa27d98e354f32850b01cab67f172e",
+  "summary": {
+    "lanes": 7,
+    "verified": 0,
+    "pending_validation": 7,
+    "workflow_ready": false
+  },
+  "lanes": [
+    {
+      "schema_version": 1,
+      "routine_id": "D18",
+      "id": "D18:google-ads--fresh-blends-kwik-trip",
+      "isolation_key": "fresh-blends-kwik-trip:google-ads:2026-W35A",
+      "observed_at": "2026-08-24T23:42:21.488Z",
+      "source_set_sha256": "cd4877517666380542f1ea8d7c4be50549fa27d98e354f32850b01cab67f172e",
+      "client_id": "fresh-blends-kwik-trip",
+      "platform": "google-ads",
+      "exact_account_bound": false,
+      "conversion_definition_state": "pending_validation",
+      "attribution_window_state": "pending_validation",
+      "latency_state": "unverified",
+      "tracking_health": "unverified",
+      "downstream_source_bound": false,
+      "downstream_reconciled": false,
+      "lead_quality_state": "pending_validation",
+      "platform_claims": [],
+      "outcome_state": "pending_validation",
+      "client_language": "Conversion reporting is pending validation",
+      "limitations": [
+        "d18-attribution-and-downstream-pending-validation",
+        "d18-conversion-tracking-and-dedup-not-verified"
+      ],
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "crm_mutation_attempted": false,
+        "spend_change_attempted": false,
+        "delivery_attempted": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "D18",
+      "id": "D18:google-ads--kimberly-james-bridal",
+      "isolation_key": "kimberly-james-bridal:google-ads:2026-W35A",
+      "observed_at": "2026-08-24T23:42:21.488Z",
+      "source_set_sha256": "cd4877517666380542f1ea8d7c4be50549fa27d98e354f32850b01cab67f172e",
+      "client_id": "kimberly-james-bridal",
+      "platform": "google-ads",
+      "exact_account_bound": true,
+      "conversion_definition_state": "pending_validation",
+      "attribution_window_state": "pending_validation",
+      "latency_state": "unverified",
+      "tracking_health": "unverified",
+      "downstream_source_bound": false,
+      "downstream_reconciled": false,
+      "lead_quality_state": "pending_validation",
+      "platform_claims": [],
+      "outcome_state": "pending_validation",
+      "client_language": "Conversion reporting is pending validation",
+      "limitations": [
+        "d18-attribution-and-downstream-pending-validation",
+        "d18-conversion-tracking-and-dedup-not-verified"
+      ],
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "crm_mutation_attempted": false,
+        "spend_change_attempted": false,
+        "delivery_attempted": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "D18",
+      "id": "D18:meta-ads--kimberly-james-bridal",
+      "isolation_key": "kimberly-james-bridal:meta-ads:2026-W35A",
+      "observed_at": "2026-08-24T23:42:21.488Z",
+      "source_set_sha256": "cd4877517666380542f1ea8d7c4be50549fa27d98e354f32850b01cab67f172e",
+      "client_id": "kimberly-james-bridal",
+      "platform": "meta-ads",
+      "exact_account_bound": true,
+      "conversion_definition_state": "pending_validation",
+      "attribution_window_state": "pending_validation",
+      "latency_state": "unverified",
+      "tracking_health": "unverified",
+      "downstream_source_bound": false,
+      "downstream_reconciled": false,
+      "lead_quality_state": "pending_validation",
+      "platform_claims": [
+        {
+          "metric": "form_leads",
+          "value": 24,
+          "definition_label": "Platform-reported form leads",
+          "source_of_truth": false,
+          "downstream_reconciled": false
+        }
+      ],
+      "outcome_state": "pending_validation",
+      "client_language": "Conversion reporting is pending validation",
+      "limitations": [
+        "d18-attribution-and-downstream-pending-validation",
+        "d18-conversion-tracking-and-dedup-not-verified"
+      ],
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "crm_mutation_attempted": false,
+        "spend_change_attempted": false,
+        "delivery_attempted": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "D18",
+      "id": "D18:google-ads--omega-landscaping",
+      "isolation_key": "omega-landscaping:google-ads:2026-W35A",
+      "observed_at": "2026-08-24T23:42:21.488Z",
+      "source_set_sha256": "cd4877517666380542f1ea8d7c4be50549fa27d98e354f32850b01cab67f172e",
+      "client_id": "omega-landscaping",
+      "platform": "google-ads",
+      "exact_account_bound": true,
+      "conversion_definition_state": "pending_validation",
+      "attribution_window_state": "pending_validation",
+      "latency_state": "unverified",
+      "tracking_health": "unverified",
+      "downstream_source_bound": false,
+      "downstream_reconciled": false,
+      "lead_quality_state": "pending_validation",
+      "platform_claims": [],
+      "outcome_state": "pending_validation",
+      "client_language": "Conversion reporting is pending validation",
+      "limitations": [
+        "d18-attribution-and-downstream-pending-validation",
+        "d18-conversion-tracking-and-dedup-not-verified"
+      ],
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "crm_mutation_attempted": false,
+        "spend_change_attempted": false,
+        "delivery_attempted": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "D18",
+      "id": "D18:google-ads--onsite-concrete-landscape",
+      "isolation_key": "onsite-concrete-landscape:google-ads:2026-W35A",
+      "observed_at": "2026-08-24T23:42:21.488Z",
+      "source_set_sha256": "cd4877517666380542f1ea8d7c4be50549fa27d98e354f32850b01cab67f172e",
+      "client_id": "onsite-concrete-landscape",
+      "platform": "google-ads",
+      "exact_account_bound": true,
+      "conversion_definition_state": "pending_validation",
+      "attribution_window_state": "pending_validation",
+      "latency_state": "unverified",
+      "tracking_health": "unverified",
+      "downstream_source_bound": false,
+      "downstream_reconciled": false,
+      "lead_quality_state": "pending_validation",
+      "platform_claims": [],
+      "outcome_state": "pending_validation",
+      "client_language": "Conversion reporting is pending validation",
+      "limitations": [
+        "d18-attribution-and-downstream-pending-validation",
+        "d18-conversion-tracking-and-dedup-not-verified"
+      ],
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "crm_mutation_attempted": false,
+        "spend_change_attempted": false,
+        "delivery_attempted": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "D18",
+      "id": "D18:google-ads--replenish-7-eleven",
+      "isolation_key": "replenish-7-eleven:google-ads:2026-W35A",
+      "observed_at": "2026-08-24T23:42:21.488Z",
+      "source_set_sha256": "cd4877517666380542f1ea8d7c4be50549fa27d98e354f32850b01cab67f172e",
+      "client_id": "replenish-7-eleven",
+      "platform": "google-ads",
+      "exact_account_bound": true,
+      "conversion_definition_state": "pending_validation",
+      "attribution_window_state": "pending_validation",
+      "latency_state": "unverified",
+      "tracking_health": "unverified",
+      "downstream_source_bound": false,
+      "downstream_reconciled": false,
+      "lead_quality_state": "pending_validation",
+      "platform_claims": [],
+      "outcome_state": "pending_validation",
+      "client_language": "Conversion reporting is pending validation",
+      "limitations": [
+        "d18-attribution-and-downstream-pending-validation",
+        "d18-conversion-tracking-and-dedup-not-verified"
+      ],
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "crm_mutation_attempted": false,
+        "spend_change_attempted": false,
+        "delivery_attempted": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "D18",
+      "id": "D18:meta-ads--shadow-heating-cooling",
+      "isolation_key": "shadow-heating-cooling:meta-ads:2026-W35A",
+      "observed_at": "2026-08-24T23:42:21.488Z",
+      "source_set_sha256": "cd4877517666380542f1ea8d7c4be50549fa27d98e354f32850b01cab67f172e",
+      "client_id": "shadow-heating-cooling",
+      "platform": "meta-ads",
+      "exact_account_bound": false,
+      "conversion_definition_state": "pending_validation",
+      "attribution_window_state": "pending_validation",
+      "latency_state": "unverified",
+      "tracking_health": "unverified",
+      "downstream_source_bound": false,
+      "downstream_reconciled": false,
+      "lead_quality_state": "pending_validation",
+      "platform_claims": [],
+      "outcome_state": "pending_validation",
+      "client_language": "Conversion reporting is pending validation",
+      "limitations": [
+        "d18-attribution-and-downstream-pending-validation",
+        "d18-conversion-tracking-and-dedup-not-verified"
+      ],
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "crm_mutation_attempted": false,
+        "spend_change_attempted": false,
+        "delivery_attempted": false
+      }
+    }
+  ],
+  "authority": {
+    "read_only": true,
+    "proposal_only": true,
+    "external_action_attempted": false,
+    "canonical_write_attempted": false,
+    "provider_mutation_attempted": false,
+    "crm_mutation_attempted": false,
+    "spend_change_attempted": false,
+    "delivery_attempted": false
+  }
+}

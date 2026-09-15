@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "graph_id": "daily-d03-automation-health-shadow",
+  "dedupe_key": "D03:2026-08-24:source-bound-shadow",
+  "dedupe_identity": "830f55f0e524ba537017eb867a5302ea669f572e34bf9ab7a359b8e762f9fdb1",
+  "contract_fingerprint": "fbb15a5e0f56552663c00ecc35f71822b55fe18389929f15f50f8eda16bb1f20",
+  "canonical_binding": {
+    "locator": "dillon-os://routine/D03/2026-08-24",
+    "version": "2026-08-24:05e6a21e.aa41a5c9.58c3eba4.7c8c85b7.671a1719.483c6549.d3f6602f.b206acfa.5f9296df.48f8da86.40feaf98",
+    "sha256": "b52e6019ce577e6427819c75ce81c9d04bbc32253583635a0206012c90e3683a",
+    "captured_at": "2026-08-24T23:34:48.403Z"
+  },
+  "canonical_binding_fingerprint": "3a57edbcf4f0af235b818ccd6d0bfc2f5ffb45e1c04b8ee4a38a3cebab80624e",
+  "status": "complete",
+  "run_id": "OGD-20260824-AB98BE6292F0",
+  "checkpoint": {
+    "path": "runs/OGD-20260824-AB98BE6292F0/checkpoint.json"
+  },
+  "created_at": "2026-08-24T23:34:48.439Z",
+  "updated_at": "2026-08-24T23:34:48.974Z",
+  "state_revision": 16,
+  "previous_state_sha256": "db8813defdac2d5621ef5ab7d42a01f172a7a065688b20cb75021a92a9e32999",
+  "completed_at": "2026-08-24T23:34:48.974Z",
+  "receipt": {
+    "path": "runs/OGD-20260824-AB98BE6292F0/receipt.json",
+    "sha256": "d04f90adee36b765283af3524552838424d802c410ed5f7cd6887ed1e03aa689",
+    "bytes": 26129
+  }
+}

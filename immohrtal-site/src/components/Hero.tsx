@@ -1,60 +1,102 @@
-import { useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { artist } from '../content/album'
-import { TiltBox } from './TiltBox'
 import { prefersReducedMotion } from '../hooks/useReveal'
 
-/**
- * The headshot splits into the album cover's red/blue halves as the
- * cursor moves across it. Tap toggles a 50/50 split on touch.
- */
-function DualityShot() {
-  const ref = useRef<HTMLSpanElement>(null)
-  const queued = useRef(false)
-  const x = useRef(50)
-  const fine = () => window.matchMedia('(pointer: fine)').matches && !prefersReducedMotion()
+const HERO_VIDEO = '/video/dance-with-the-delusional-hero.mp4'
+const HERO_POSTER = '/video/dance-with-the-delusional-hero-poster.jpg'
 
-  const set = (split: number, on: boolean) => {
-    const el = ref.current
-    if (!el) return
-    el.style.setProperty('--split', `${split}%`)
-    el.style.setProperty('--duality', on ? '1' : '0')
+function VideoOpening() {
+  const videoRef = useRef<HTMLVideoElement>(null)
+  const [muted, setMuted] = useState(true)
+  const [playing, setPlaying] = useState(false)
+  const [reducedMotion] = useState(() => prefersReducedMotion())
+
+  useEffect(() => {
+    const video = videoRef.current
+    if (!video) return
+
+    if (reducedMotion) {
+      video.pause()
+      return
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.25) {
+          void video.play().catch(() => undefined)
+          return
+        }
+
+        video.pause()
+        video.muted = true
+        setMuted(true)
+      },
+      { threshold: [0, 0.25] },
+    )
+
+    observer.observe(video)
+    return () => observer.disconnect()
+  }, [reducedMotion])
+
+  const toggleSound = async () => {
+    const video = videoRef.current
+    if (!video) return
+
+    if (!playing || video.paused) {
+      video.muted = false
+      setMuted(false)
+      try {
+        await video.play()
+      } catch {
+        video.muted = true
+        setMuted(true)
+      }
+      return
+    }
+
+    video.muted = !video.muted
+    setMuted(video.muted)
   }
 
+  const controlLabel = !playing
+    ? 'Play video with sound'
+    : muted
+      ? 'Turn sound on'
+      : 'Mute video'
+
   return (
-    <span
-      ref={ref}
-      className="pop-box sheen duality-shot block"
-      onMouseMove={(e) => {
-        if (!fine()) return
-        const r = ref.current?.getBoundingClientRect()
-        if (!r) return
-        x.current = ((e.clientX - r.left) / r.width) * 100
-        if (queued.current) return
-        queued.current = true
-        requestAnimationFrame(() => {
-          queued.current = false
-          set(Math.max(0, Math.min(100, x.current)), true)
-        })
-      }}
-      onMouseLeave={() => set(50, false)}
-      onClick={() => {
-        if (fine() || prefersReducedMotion()) return
-        const on = ref.current?.style.getPropertyValue('--duality') === '1'
-        set(50, !on)
-      }}
-    >
-      <img
-        src={artist.heroImage ?? ''}
-        alt={`${artist.name} portrait`}
-        fetchPriority="high"
-        decoding="async"
-        className="block aspect-square w-full object-cover"
-        width={1080}
-        height={1080}
-      />
-      <span aria-hidden="true" className="duality-layer duality-red" />
-      <span aria-hidden="true" className="duality-layer duality-blue" />
-    </span>
+    <section className="hero-video-stage" aria-label="Dance With The Delusional video">
+      <div className="hero-video-frame">
+        <video
+          ref={videoRef}
+          className="hero-video-media"
+          src={HERO_VIDEO}
+          poster={HERO_POSTER}
+          aria-label={`${artist.name}, Dance With The Delusional visual`}
+          autoPlay={!reducedMotion}
+          muted={muted}
+          loop
+          playsInline
+          preload="auto"
+          onPlay={() => setPlaying(true)}
+          onPause={() => setPlaying(false)}
+        />
+      </div>
+
+      <div className="hero-video-meta">
+        <p className="hero-video-kicker font-mono">
+          Dance With The Delusional <span aria-hidden="true">//</span> 15 second transmission
+        </p>
+        <button type="button" className="hero-sound-control" onClick={toggleSound} aria-label={controlLabel}>
+          <span aria-hidden="true" className={`hero-sound-indicator${muted ? '' : ' is-live'}`} />
+          {controlLabel}
+        </button>
+      </div>
+
+      <a href="#hero-story" className="hero-video-scroll font-mono">
+        Enter the album
+      </a>
+    </section>
   )
 }
 
@@ -95,14 +137,10 @@ function AnimatedQuoteLine({
 
 export function Hero() {
   return (
-    <header
-      id="top"
-      className="home-hero relative flex min-h-[100svh] flex-col items-center justify-center overflow-hidden px-5 py-20 text-center"
-    >
-      <div aria-hidden="true" className="hero-aura absolute inset-0 z-0" />
-      <div aria-hidden="true" className="hero-vignette absolute inset-0 z-[1]" />
+    <header id="top" className="home-hero relative overflow-hidden text-center">
+      <VideoOpening />
 
-      <div className="relative z-10 flex w-full max-w-5xl flex-col items-center">
+      <div id="hero-story" className="hero-copy relative z-10 flex w-full flex-col items-center px-5">
         <h1 className="sr-only">
           {artist.name}, {artist.albumTitle}
         </h1>
@@ -111,27 +149,9 @@ export function Hero() {
           {artist.sessionTag}
         </p>
 
-        {/* the shot leads: first thing you see */}
-        <div className="reveal reveal-late relative mt-8 w-full max-w-[440px]">
-          <div aria-hidden="true" className="hero-shadow-field" />
-          <TiltBox max={5}>
-            {artist.heroImage ? (
-              <DualityShot />
-            ) : (
-              <span className="pop-box sheen block">
-                <span className="artist-slot artist-slot-neutral flex aspect-square w-full flex-col items-center justify-center gap-4 px-6">
-                  <span className="split-lines" aria-hidden="true" />
-                  <span className="font-display chrome-text-light text-4xl uppercase tracking-wide sm:text-6xl">The Shot</span>
-                  <span className="mono-tag text-center">artist image placeholder</span>
-                </span>
-              </span>
-            )}
-          </TiltBox>
-        </div>
-
         {artist.introQuoteLines.length > 0 && (
           <blockquote
-            className="opening-bar reveal reveal-late m-0 mt-10 w-full border-y px-2 py-8 font-serif"
+            className="opening-bar reveal reveal-late m-0 mt-8 w-full max-w-5xl border-y px-2 py-8 font-serif"
             style={{ borderColor: 'var(--line-strong)', color: 'var(--ink)' }}
           >
             {artist.introQuoteLines.map((line, i) => (
@@ -173,15 +193,6 @@ export function Hero() {
           </a>
         </div>
       </div>
-
-      <a
-        href="#listen"
-        aria-label="Scroll to the listen section"
-        className="absolute bottom-7 left-1/2 z-10 -translate-x-1/2 font-mono text-[10px] tracking-[0.3em] uppercase no-underline"
-        style={{ color: 'var(--faint)' }}
-      >
-        Scroll
-      </a>
     </header>
   )
 }

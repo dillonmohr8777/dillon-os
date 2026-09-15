@@ -1,0 +1,245 @@
+{
+  "schema": 1,
+  "business": "Frees Insurance",
+  "domain": "freesinsurance.com",
+  "route": "sites/frees-insurance/",
+  "generatedAt": "2026-08-26T10:16:23.0294422Z",
+  "generator": "Align HCM Image Gen plugin contract",
+  "model": "gpt-image-2.0",
+  "board": {
+    "key": "frees-insurance",
+    "descriptor": "insurance",
+    "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Frees Insurance. Four distinct but cohesive unlabelled panels in a generic independent insurance office: an advisor and homeowner reviewing a neutral protection checklist with all text unreadable; a close detail of hands organizing an unmarked policy folder, calculator, and pen; an advisor speaking with a small-business owner in a daylight office; a quiet still-life of house, vehicle, and umbrella-shaped desk objects without any brand or guarantee implication. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+    "sourceOutput": "C:/Users/dillo/.codex/generated_images/01a03d5e-c09f-74a0-b82e-14ad3c549703/exec-e6164c79-f51c-415a-aed1-dc4a2477ef95.png",
+    "file": "automation/prospect-radar-next20/generated-stock-library/frees-insurance.png",
+    "sha256": "cbab8b9357e0467484ca4d02ea3be5872999a59e4220d455a0fcab154362ad6e",
+    "dimensions": {
+      "width": 1448,
+      "height": 1086
+    }
+  },
+  "treatment": {
+    "palette": [
+      "#F05A28",
+      "#FF6B35",
+      "#0B1D2D",
+      "#071521",
+      "#F4EFE7",
+      "#EAF6FC",
+      "#91D5ED"
+    ],
+    "imageGrain": "Visible refined 35mm film grain authored in the generated board and preserved in every derivative.",
+    "interfaceGrain": {
+      "file": "grain.svg",
+      "sha256": "f8b8b72ee2a84cf2aaa04ce069edaaa459ee61650e76f307254572db67efb813",
+      "opacity": 0.13
+    },
+    "disclosure": "Illustrative generated imagery. These concept visuals do not depict the business, its staff, customers, facility, products, projects, or outcomes."
+  },
+  "outputs": [
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "frees-insurance",
+      "boardDescriptor": "insurance",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/frees-insurance.png",
+      "sourceSha256": "cbab8b9357e0467484ca4d02ea3be5872999a59e4220d455a0fcab154362ad6e",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Frees Insurance. Four distinct but cohesive unlabelled panels in a generic independent insurance office: an advisor and homeowner reviewing a neutral protection checklist with all text unreadable; a close detail of hands organizing an unmarked policy folder, calculator, and pen; an advisor speaking with a small-business owner in a daylight office; a quiet still-life of house, vehicle, and umbrella-shaped desk objects without any brand or guarantee implication. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:28,eq=saturation=1.040:contrast=1.082:brightness=0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "78e7fa501fd072190adcf2f26c9c69eff6c83137ba938575bb24d25d97ae6637",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "frees-insurance",
+      "boardDescriptor": "insurance",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/frees-insurance.png",
+      "sourceSha256": "cbab8b9357e0467484ca4d02ea3be5872999a59e4220d455a0fcab154362ad6e",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Frees Insurance. Four distinct but cohesive unlabelled panels in a generic independent insurance office: an advisor and homeowner reviewing a neutral protection checklist with all text unreadable; a close detail of hands organizing an unmarked policy folder, calculator, and pen; an advisor speaking with a small-business owner in a daylight office; a quiet still-life of house, vehicle, and umbrella-shaped desk objects without any brand or guarantee implication. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:56,eq=saturation=0.940:contrast=1.046:brightness=-0.018,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "8d0f81ee9f3e1573087c9c15f24da9010e23a3a6070de2a2e63b3f7443d5aebe",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "frees-insurance",
+      "boardDescriptor": "insurance",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/frees-insurance.png",
+      "sourceSha256": "cbab8b9357e0467484ca4d02ea3be5872999a59e4220d455a0fcab154362ad6e",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Frees Insurance. Four distinct but cohesive unlabelled panels in a generic independent insurance office: an advisor and homeowner reviewing a neutral protection checklist with all text unreadable; a close detail of hands organizing an unmarked policy folder, calculator, and pen; an advisor speaking with a small-business owner in a daylight office; a quiet still-life of house, vehicle, and umbrella-shaped desk objects without any brand or guarantee implication. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=0.965:contrast=1.010:brightness=-0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "927f06bdd00dfc1dad9d947ce2ca4e936a5ad5745bd8065692e8cc34bc593fe7",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "frees-insurance",
+      "boardDescriptor": "insurance",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/frees-insurance.png",
+      "sourceSha256": "cbab8b9357e0467484ca4d02ea3be5872999a59e4220d455a0fcab154362ad6e",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Frees Insurance. Four distinct but cohesive unlabelled panels in a generic independent insurance office: an advisor and homeowner reviewing a neutral protection checklist with all text unreadable; a close detail of hands organizing an unmarked policy folder, calculator, and pen; an advisor speaking with a small-business owner in a daylight office; a quiet still-life of house, vehicle, and umbrella-shaped desk objects without any brand or guarantee implication. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:28,eq=saturation=0.990:contrast=1.064:brightness=0.000,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "08433e06593eef95f40450a1ffbbd345637bc45aa859edbbf94db4c0c5a481b7",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "frees-insurance",
+      "boardDescriptor": "insurance",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/frees-insurance.png",
+      "sourceSha256": "cbab8b9357e0467484ca4d02ea3be5872999a59e4220d455a0fcab154362ad6e",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Frees Insurance. Four distinct but cohesive unlabelled panels in a generic independent insurance office: an advisor and homeowner reviewing a neutral protection checklist with all text unreadable; a close detail of hands organizing an unmarked policy folder, calculator, and pen; an advisor speaking with a small-business owner in a daylight office; a quiet still-life of house, vehicle, and umbrella-shaped desk objects without any brand or guarantee implication. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:56,eq=saturation=1.015:contrast=1.028:brightness=0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "11865ff4e6c9b0bfc52dd9a85b2f26086b90623e4fbf17410da229466a35e492",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "frees-insurance",
+      "boardDescriptor": "insurance",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/frees-insurance.png",
+      "sourceSha256": "cbab8b9357e0467484ca4d02ea3be5872999a59e4220d455a0fcab154362ad6e",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Frees Insurance. Four distinct but cohesive unlabelled panels in a generic independent insurance office: an advisor and homeowner reviewing a neutral protection checklist with all text unreadable; a close detail of hands organizing an unmarked policy folder, calculator, and pen; an advisor speaking with a small-business owner in a daylight office; a quiet still-life of house, vehicle, and umbrella-shaped desk objects without any brand or guarantee implication. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:0,eq=saturation=1.040:contrast=1.082:brightness=-0.018,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "09e9ee9a84e1ff197162381963e57b7bb514973ff12183a8df8f3a05b3fee9b4",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "frees-insurance",
+      "boardDescriptor": "insurance",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/frees-insurance.png",
+      "sourceSha256": "cbab8b9357e0467484ca4d02ea3be5872999a59e4220d455a0fcab154362ad6e",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Frees Insurance. Four distinct but cohesive unlabelled panels in a generic independent insurance office: an advisor and homeowner reviewing a neutral protection checklist with all text unreadable; a close detail of hands organizing an unmarked policy folder, calculator, and pen; an advisor speaking with a small-business owner in a daylight office; a quiet still-life of house, vehicle, and umbrella-shaped desk objects without any brand or guarantee implication. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:28,eq=saturation=0.940:contrast=1.046:brightness=-0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "9d4a1600514f38bcbe74cae10f1b5b4ace4f8af4b3e825d8b027bf620cc82123",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "frees-insurance",
+      "boardDescriptor": "insurance",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/frees-insurance.png",
+      "sourceSha256": "cbab8b9357e0467484ca4d02ea3be5872999a59e4220d455a0fcab154362ad6e",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Frees Insurance. Four distinct but cohesive unlabelled panels in a generic independent insurance office: an advisor and homeowner reviewing a neutral protection checklist with all text unreadable; a close detail of hands organizing an unmarked policy folder, calculator, and pen; an advisor speaking with a small-business owner in a daylight office; a quiet still-life of house, vehicle, and umbrella-shaped desk objects without any brand or guarantee implication. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:56,eq=saturation=0.965:contrast=1.010:brightness=0.000,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "ca042617115bec188c1a15679a11408e29a44cc279d96b6e80f71860e4224f80",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "frees-insurance",
+      "boardDescriptor": "insurance",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/frees-insurance.png",
+      "sourceSha256": "cbab8b9357e0467484ca4d02ea3be5872999a59e4220d455a0fcab154362ad6e",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Frees Insurance. Four distinct but cohesive unlabelled panels in a generic independent insurance office: an advisor and homeowner reviewing a neutral protection checklist with all text unreadable; a close detail of hands organizing an unmarked policy folder, calculator, and pen; an advisor speaking with a small-business owner in a daylight office; a quiet still-life of house, vehicle, and umbrella-shaped desk objects without any brand or guarantee implication. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:0,eq=saturation=0.990:contrast=1.064:brightness=0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "16d6148c008c9c982c6518ac42c58f7b1cca77bec37ac2646d997489dda99c72",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "frees-insurance",
+      "boardDescriptor": "insurance",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/frees-insurance.png",
+      "sourceSha256": "cbab8b9357e0467484ca4d02ea3be5872999a59e4220d455a0fcab154362ad6e",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Frees Insurance. Four distinct but cohesive unlabelled panels in a generic independent insurance office: an advisor and homeowner reviewing a neutral protection checklist with all text unreadable; a close detail of hands organizing an unmarked policy folder, calculator, and pen; an advisor speaking with a small-business owner in a daylight office; a quiet still-life of house, vehicle, and umbrella-shaped desk objects without any brand or guarantee implication. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:28,eq=saturation=1.015:contrast=1.028:brightness=-0.018,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "3683c00deacd99b2b821ba617ea3887e6622fd8c584738f04fac70a66713b5c2",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "frees-insurance",
+      "boardDescriptor": "insurance",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/frees-insurance.png",
+      "sourceSha256": "cbab8b9357e0467484ca4d02ea3be5872999a59e4220d455a0fcab154362ad6e",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Frees Insurance. Four distinct but cohesive unlabelled panels in a generic independent insurance office: an advisor and homeowner reviewing a neutral protection checklist with all text unreadable; a close detail of hands organizing an unmarked policy folder, calculator, and pen; an advisor speaking with a small-business owner in a daylight office; a quiet still-life of house, vehicle, and umbrella-shaped desk objects without any brand or guarantee implication. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:56,eq=saturation=1.040:contrast=1.082:brightness=-0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "0465fa64c5cc36b9b1a83eb5dfabbb2f89d06c52f33827152eec1de0c4ce75da",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "frees-insurance",
+      "boardDescriptor": "insurance",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/frees-insurance.png",
+      "sourceSha256": "cbab8b9357e0467484ca4d02ea3be5872999a59e4220d455a0fcab154362ad6e",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Frees Insurance. Four distinct but cohesive unlabelled panels in a generic independent insurance office: an advisor and homeowner reviewing a neutral protection checklist with all text unreadable; a close detail of hands organizing an unmarked policy folder, calculator, and pen; an advisor speaking with a small-business owner in a daylight office; a quiet still-life of house, vehicle, and umbrella-shaped desk objects without any brand or guarantee implication. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:0,eq=saturation=0.940:contrast=1.046:brightness=0.000,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "a64d1dc3fc2f296b405721cc4528256ea778d4f59572e04282cd13bd222e8bc9",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    }
+  ]
+}

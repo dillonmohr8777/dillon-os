@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-25T00:09:38.525Z",
+  "source_set_sha256": "64db51d408423660fa02b50ba1ae771b206dfd53d10241504dfb90c568377ea2",
+  "state": "proposal_only",
+  "proposed_updates": [
+    {
+      "layer": "qa_rule",
+      "resolved_defects": 14,
+      "action": "Review recurring qa_rule defects before changing the canonical qa_rule system."
+    },
+    {
+      "layer": "brief",
+      "resolved_defects": 1,
+      "action": "Review recurring brief defects before changing the canonical brief system."
+    },
+    {
+      "layer": "component",
+      "resolved_defects": 2,
+      "action": "Review recurring component defects before changing the canonical component system."
+    },
+    {
+      "layer": "token",
+      "resolved_defects": 1,
+      "action": "Review recurring token defects before changing the canonical token system."
+    },
+    {
+      "layer": "motion",
+      "resolved_defects": 1,
+      "action": "Review recurring motion defects before changing the canonical motion system."
+    }
+  ],
+  "applied": false,
+  "authority": {
+    "external_action_attempted": false,
+    "canonical_write_attempted": false
+  }
+}

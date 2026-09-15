@@ -562,6 +562,633 @@
       },
       "run_id": "COMMS-2026-08-09-DAY-1",
       "processed_at": "2026-08-09T11:05:50.130Z"
+    },
+    "gmail:thread:1a0219ad3ad53df0": {
+      "source_ref": "gmail://thread/1a0219ad3ad53df0",
+      "occurred_at": "2026-08-25T22:03:23-07:00",
+      "route": {
+        "type": "client",
+        "name": "Nexla",
+        "path": "01_Clients/Nexla/overview.md"
+      },
+      "run_id": "COMMS-2026-08-26-DAY-1",
+      "processed_at": "2026-08-26T11:05:33.609Z"
+    },
+    "gmail:message:1a03ba4718088732": {
+      "source_ref": "gmail://message/1a03ba4718088732",
+      "occurred_at": "2026-08-25T21:17:07-04:00",
+      "route": {
+        "type": "client",
+        "name": "BOK Law Firm",
+        "path": "01_Clients/BOK Law Firm/overview.md"
+      },
+      "run_id": "COMMS-2026-08-26-DAY-1",
+      "processed_at": "2026-08-26T11:05:33.609Z"
+    },
+    "gmail:thread:19e890b2df4eb09f": {
+      "source_ref": "gmail://thread/19e890b2df4eb09f",
+      "occurred_at": "2026-08-24T16:44:55-04:00",
+      "route": {
+        "type": "client",
+        "name": "Bercos Popcorn",
+        "path": "01_Clients/Bercos Popcorn/overview.md"
+      },
+      "run_id": "COMMS-2026-08-26-DAY-1",
+      "processed_at": "2026-08-26T11:05:33.610Z"
+    },
+    "gmail:thread:19fa4cb8f6812394": {
+      "source_ref": "gmail://thread/19fa4cb8f6812394",
+      "occurred_at": "2026-08-24T15:53:44-04:00",
+      "route": {
+        "type": "client",
+        "name": "BigOrange Marketing",
+        "path": "01_Clients/BigOrange Marketing/overview.md"
+      },
+      "run_id": "COMMS-2026-08-26-DAY-1",
+      "processed_at": "2026-08-26T11:05:33.612Z"
+    },
+    "slack:message:1788491257.000000": {
+      "source_ref": "https://momentum3d.slack.com/archives/C0BT1P1PGJF/p1788491257000000",
+      "occurred_at": "2026-09-01T14:49:13-04:00",
+      "route": {
+        "type": "client",
+        "name": "Puttery NYC",
+        "path": "01_Clients/Puttery NYC/overview.md"
+      },
+      "run_id": "COMMS-2026-09-04-DAY-1",
+      "processed_at": "2026-09-04T11:04:18.244Z"
+    },
+    "gmail:thread:1a0592c581c51729": {
+      "source_ref": "gmail://thread/1a0592c581c51729",
+      "occurred_at": "2026-09-04T02:08:57+00:00",
+      "route": {
+        "type": "client",
+        "name": "Bar Crawl USA",
+        "path": "01_Clients/Bar Crawl USA/overview.md"
+      },
+      "run_id": "COMMS-2026-09-04-DAY-1",
+      "processed_at": "2026-09-04T11:04:18.245Z"
+    },
+    "slack:message:bridge-2026-09-03-preview": {
+      "source_ref": "https://momentum3d.slack.com/archives/C0BGWRK03B2/p1788442016000000",
+      "occurred_at": "2026-09-03T08:26:56-04:00",
+      "route": {
+        "type": "client",
+        "name": "Bridge Software",
+        "path": "01_Clients/Bridge Software/overview.md"
+      },
+      "run_id": "COMMS-2026-09-04-DAY-1",
+      "processed_at": "2026-09-04T11:04:18.246Z"
+    },
+    "gmail:message:1a06a8e88fbeda3b": {
+      "source_ref": "gmail://message/1a06a8e88fbeda3b",
+      "occurred_at": "2026-09-04T05:55:20+02:00",
+      "route": {
+        "type": "client",
+        "name": "Fagan Painting",
+        "path": "01_Clients/Fagan Painting/overview.md"
+      },
+      "run_id": "COMMS-2026-09-04-DAY-1",
+      "processed_at": "2026-09-04T11:04:18.247Z"
+    },
+    "slack:message:178844?hope-video-review": {
+      "source_ref": "https://momentum3d.slack.com/archives/C09DEEBMW0J/p1788262399000000",
+      "occurred_at": "2026-09-01T10:52:40-04:00",
+      "route": {
+        "type": "client",
+        "name": "Hope Wellness Center",
+        "path": "01_Clients/Hope Wellness Center/overview.md"
+      },
+      "run_id": "COMMS-2026-09-04-DAY-1",
+      "processed_at": "2026-09-04T11:04:18.247Z"
+    },
+    "slack:message:1788441646.000000": {
+      "source_ref": "https://momentum3d.slack.com/archives/C0BB04ZFZ26/p1788441646000000",
+      "occurred_at": "2026-09-03T13:20:46-04:00",
+      "route": {
+        "type": "client",
+        "name": "Pritzker Law Group",
+        "path": "01_Clients/Pritzker Law Group/overview.md"
+      },
+      "run_id": "COMMS-2026-09-04-DAY-1",
+      "processed_at": "2026-09-04T11:04:18.248Z"
+    },
+    "gmail:thread:1a04587435c429e0": {
+      "source_ref": "gmail://thread/1a04587435c429e0",
+      "occurred_at": "2026-08-31T15:47:50+00:00",
+      "route": {
+        "type": "client",
+        "name": "Revive Systems",
+        "path": "01_Clients/Revive Systems/overview.md"
+      },
+      "run_id": "COMMS-2026-09-04-DAY-1",
+      "processed_at": "2026-09-04T11:04:18.248Z"
+    },
+    "gmail:thread:1a06821af7a90e2b": {
+      "source_ref": "gmail://thread/1a06821af7a90e2b",
+      "occurred_at": "2026-09-03T16:48:37+00:00",
+      "route": {
+        "type": "client",
+        "name": "Kimberly James Bridal",
+        "path": "01_Clients/Kimberly James Bridal/overview.md"
+      },
+      "run_id": "COMMS-2026-09-04-DAY-1",
+      "processed_at": "2026-09-04T11:04:18.249Z"
+    },
+    "slack:message:bridge-2026-09-03-milestone-3": {
+      "source_ref": "slack://message/bridge-2026-09-03-milestone-3",
+      "occurred_at": "2026-09-03T10:05:19-04:00",
+      "route": {
+        "type": "client",
+        "name": "Bridge Software Development",
+        "path": "01_Clients/Bridge Software Development/overview.md"
+      },
+      "run_id": "COMMS-2026-09-05-DAY-1",
+      "processed_at": "2026-09-05T11:05:46.002Z"
+    },
+    "slack:message:nexla-2026-09-03-live": {
+      "source_ref": "slack://message/nexla-2026-09-03-live",
+      "occurred_at": "2026-09-03T20:54:05-04:00",
+      "route": {
+        "type": "client",
+        "name": "Nexla",
+        "path": "01_Clients/Nexla/overview.md"
+      },
+      "run_id": "COMMS-2026-09-05-DAY-1",
+      "processed_at": "2026-09-05T11:05:46.002Z"
+    },
+    "slack:message:puttery-2026-09-04-gate": {
+      "source_ref": "slack://message/puttery-2026-09-04-gate",
+      "occurred_at": "2026-09-04T17:57:37-04:00",
+      "route": {
+        "type": "client",
+        "name": "Puttery NYC",
+        "path": "01_Clients/Puttery NYC/overview.md"
+      },
+      "run_id": "COMMS-2026-09-05-DAY-1",
+      "processed_at": "2026-09-05T11:05:46.003Z"
+    },
+    "slack:message:hope-2026-09-03-website": {
+      "source_ref": "slack://message/hope-2026-09-03-website",
+      "occurred_at": "2026-09-03T12:39:40-04:00",
+      "route": {
+        "type": "client",
+        "name": "Hope Wellness Center",
+        "path": "01_Clients/Hope Wellness Center/overview.md"
+      },
+      "run_id": "COMMS-2026-09-05-DAY-1",
+      "processed_at": "2026-09-05T11:05:46.004Z"
+    },
+    "slack:message:hope-2026-09-04-meeting": {
+      "source_ref": "slack://message/hope-2026-09-04-meeting",
+      "occurred_at": "2026-09-04T15:08:23-04:00",
+      "route": {
+        "type": "client",
+        "name": "Hope Wellness Center",
+        "path": "01_Clients/Hope Wellness Center/overview.md"
+      },
+      "run_id": "COMMS-2026-09-05-DAY-1",
+      "processed_at": "2026-09-05T11:05:46.004Z"
+    },
+    "slack:message:fagan-2026-09-04-organic-lead": {
+      "source_ref": "slack://message/fagan-2026-09-04-organic-lead",
+      "occurred_at": "2026-09-04T13:44:09-04:00",
+      "route": {
+        "type": "client",
+        "name": "Fagan Painting",
+        "path": "01_Clients/Fagan Painting/overview.md"
+      },
+      "run_id": "COMMS-2026-09-05-DAY-1",
+      "processed_at": "2026-09-05T11:05:46.005Z"
+    },
+    "slack:message:ghl-2026-09-04-sheet": {
+      "source_ref": "slack://message/ghl-2026-09-04-sheet",
+      "occurred_at": "2026-09-04T07:59:23-04:00",
+      "route": {
+        "type": "operations",
+        "name": "Lead intake reconciliation",
+        "path": "System/operating-status.md"
+      },
+      "run_id": "COMMS-2026-09-05-DAY-1",
+      "processed_at": "2026-09-05T11:05:46.005Z"
+    },
+    "slack:message:pritzker-2026-09-03-reset": {
+      "source_ref": "slack://message/pritzker-2026-09-03-reset",
+      "occurred_at": "2026-09-03T13:20:46-04:00",
+      "route": {
+        "type": "client",
+        "name": "Pritzker Law Group",
+        "path": "01_Clients/Pritzker Law Group/overview.md"
+      },
+      "run_id": "COMMS-2026-09-05-DAY-1",
+      "processed_at": "2026-09-05T11:05:46.006Z"
+    },
+    "slack:message:kimberly-2026-09-03-seo": {
+      "source_ref": "slack://message/kimberly-2026-09-03-seo",
+      "occurred_at": "2026-09-03T11:58:31-04:00",
+      "route": {
+        "type": "client",
+        "name": "Kimberly James Bridal",
+        "path": "01_Clients/Kimberly James Bridal/overview.md"
+      },
+      "run_id": "COMMS-2026-09-05-DAY-1",
+      "processed_at": "2026-09-05T11:05:46.007Z"
+    },
+    "gmail:message:1a06a593c00768f3": {
+      "source_ref": "gmail://message/1a06a593c00768f3",
+      "occurred_at": "2026-09-03T19:56:56-07:00",
+      "route": {
+        "type": "client",
+        "name": "Nexla",
+        "path": "01_Clients/Nexla/overview.md"
+      },
+      "run_id": "COMMS-2026-09-05-DAY-1",
+      "processed_at": "2026-09-05T11:05:46.007Z"
+    },
+    "gmail:message:1a06d7806d581781": {
+      "source_ref": "gmail://message/1a06d7806d581781",
+      "occurred_at": "2026-09-04T17:29:08+00:00",
+      "route": {
+        "type": "client",
+        "name": "Puttery NYC",
+        "path": "01_Clients/Puttery NYC/overview.md"
+      },
+      "run_id": "COMMS-2026-09-05-DAY-1",
+      "processed_at": "2026-09-05T11:05:46.008Z"
+    },
+    "gmail:message:1a05521f2ef4b157": {
+      "source_ref": "gmail://message/1a05521f2ef4b157",
+      "occurred_at": "2026-09-03T12:23:31-04:00",
+      "route": {
+        "type": "client",
+        "name": "AMI Cleaning",
+        "path": "01_Clients/AMI Cleaning/overview.md"
+      },
+      "run_id": "COMMS-2026-09-05-DAY-1",
+      "processed_at": "2026-09-05T11:05:46.008Z"
+    },
+    "gmail:thread:1a07263f09e5e70e": {
+      "source_ref": "gmail://thread/1a07263f09e5e70e",
+      "occurred_at": "2026-09-05T22:10:33Z",
+      "route": {
+        "type": "client",
+        "name": "BOK Law Firm",
+        "path": "01_Clients/BOK Law Firm/overview.md"
+      },
+      "run_id": "COMMS-2026-09-06-DAY-1",
+      "processed_at": "2026-09-06T11:03:00.202Z"
+    },
+    "gmail:thread:1a06d7806d581781": {
+      "source_ref": "gmail://thread/1a049e62f063f279",
+      "occurred_at": "2026-09-04T13:29:08-04:00",
+      "route": {
+        "type": "client",
+        "name": "Puttery NYC",
+        "path": "01_Clients/Puttery NYC/overview.md"
+      },
+      "run_id": "COMMS-2026-09-08-DAY-1",
+      "processed_at": "2026-09-08T11:06:12.292Z"
+    },
+    "gmail:message:1a06c703265725a6": {
+      "source_ref": "gmail://message/1a06c703265725a6",
+      "occurred_at": "2026-09-04T08:41:27-04:00",
+      "route": {
+        "type": "client",
+        "name": "Fagan Painting",
+        "path": "01_Clients/Fagan Painting/overview.md"
+      },
+      "run_id": "COMMS-2026-09-08-DAY-1",
+      "processed_at": "2026-09-08T11:06:12.293Z"
+    },
+    "gmail:message:1a06a2d340fa82c1": {
+      "source_ref": "gmail://thread/1a0592c581c51729",
+      "occurred_at": "2026-09-03T22:08:57-04:00",
+      "route": {
+        "type": "client",
+        "name": "Bar Crawl USA",
+        "path": "01_Clients/Bar Crawl USA/overview.md"
+      },
+      "run_id": "COMMS-2026-09-08-DAY-1",
+      "processed_at": "2026-09-08T11:06:12.294Z"
+    },
+    "gmail:message:1a0739fecb237c2f": {
+      "source_ref": "gmail://thread/1a07263f09e5e70e",
+      "occurred_at": "2026-09-05T18:10:33-04:00",
+      "route": {
+        "type": "client",
+        "name": "BOK Law Firm",
+        "path": "01_Clients/BOK Law Firm/overview.md"
+      },
+      "run_id": "COMMS-2026-09-08-DAY-1",
+      "processed_at": "2026-09-08T11:06:12.294Z"
+    },
+    "gmail:thread:1a059f51edea301e": {
+      "source_ref": "gmail://thread/1a059f51edea301e",
+      "occurred_at": "2026-09-05T10:36:37-04:00",
+      "route": {
+        "type": "client",
+        "name": "Momentum 360",
+        "path": "01_Clients/Momentum 360/overview.md"
+      },
+      "run_id": "COMMS-2026-09-08-DAY-1",
+      "processed_at": "2026-09-08T11:06:12.295Z"
+    },
+    "slack:message:1788702887-va-phase3": {
+      "source_ref": "https://momentum3d.slack.com/archives/C0A4Q3LLASE/p1788699287000000",
+      "occurred_at": "2026-09-05T08:54:47-04:00",
+      "route": {
+        "type": "client",
+        "name": "VA Claims Edge",
+        "path": "01_Clients/VA Claims Edge/overview.md"
+      },
+      "run_id": "COMMS-2026-09-08-DAY-1",
+      "processed_at": "2026-09-08T11:06:12.296Z"
+    },
+    "slack:message:1788738082-va-final-testing": {
+      "source_ref": "https://momentum3d.slack.com/archives/C0A4Q3LLASE/p1788738082000000",
+      "occurred_at": "2026-09-05T18:01:22-04:00",
+      "route": {
+        "type": "client",
+        "name": "VA Claims Edge",
+        "path": "01_Clients/VA Claims Edge/overview.md"
+      },
+      "run_id": "COMMS-2026-09-08-DAY-1",
+      "processed_at": "2026-09-08T11:06:12.296Z"
+    },
+    "slack:message:1788780080-hope-weekly": {
+      "source_ref": "https://momentum3d.slack.com/archives/C09DEEBMW0J/p1788780059000000",
+      "occurred_at": "2026-09-07T10:20:59-04:00",
+      "route": {
+        "type": "client",
+        "name": "Hope Wellness Center",
+        "path": "01_Clients/Hope Wellness Center/overview.md"
+      },
+      "run_id": "COMMS-2026-09-08-DAY-1",
+      "processed_at": "2026-09-08T11:06:12.297Z"
+    },
+    "slack:message:1788774124-360marketing-slugs": {
+      "source_ref": "https://momentum3d.slack.com/archives/C0A4Q3LLASE/p1788774124000000",
+      "occurred_at": "2026-09-07T08:02:06-04:00",
+      "route": {
+        "type": "client",
+        "name": "Momentum 360",
+        "path": "01_Clients/Momentum 360/overview.md"
+      },
+      "run_id": "COMMS-2026-09-08-DAY-1",
+      "processed_at": "2026-09-08T11:06:12.298Z"
+    },
+    "slack:message:1788790604-hope-meeting": {
+      "source_ref": "https://momentum3d.slack.com/archives/C09DEEBMW0J/p1788790604000000",
+      "occurred_at": "2026-09-07T09:06:41-04:00",
+      "route": {
+        "type": "client",
+        "name": "Hope Wellness Center",
+        "path": "01_Clients/Hope Wellness Center/overview.md"
+      },
+      "run_id": "COMMS-2026-09-08-DAY-1",
+      "processed_at": "2026-09-08T11:06:12.298Z"
+    },
+    "slack:message:1788809416-gmbs-admin": {
+      "source_ref": "https://momentum3d.slack.com/archives/C0A4Q3LLASE/p1788809416000000",
+      "occurred_at": "2026-09-07T15:30:16-04:00",
+      "route": {
+        "type": "operations",
+        "name": "Google Business Profile reinstatement",
+        "path": "System/operating-status.md"
+      },
+      "run_id": "COMMS-2026-09-08-DAY-1",
+      "processed_at": "2026-09-08T11:06:12.299Z"
+    },
+    "slack:message:1788862844-momentumsites": {
+      "source_ref": "https://momentum3d.slack.com/archives/C0A4Q3LLASE/p1788862844000000",
+      "occurred_at": "2026-09-08T06:20:44-04:00",
+      "route": {
+        "type": "operations",
+        "name": "Momentum sites SEO task cadence",
+        "path": "System/operating-status.md"
+      },
+      "run_id": "COMMS-2026-09-08-DAY-1",
+      "processed_at": "2026-09-08T11:06:12.300Z"
+    },
+    "slack:message:1788771751-deborah-mara": {
+      "source_ref": "https://momentum3d.slack.com/archives/C0A4Q3LLASE/p1788730951000000",
+      "occurred_at": "2026-09-07T03:02:31-04:00",
+      "route": {
+        "type": "unresolved",
+        "name": "Deborah Mara web design",
+        "path": "12_Brain/07_Reviews/Daily Intelligence/2026-09-08 - Communication Intelligence.md"
+      },
+      "run_id": "COMMS-2026-09-08-DAY-1",
+      "processed_at": "2026-09-08T11:06:12.300Z"
+    },
+    "gmail:thread:1a081d3c706e1ee9:nexla-2026-09-10": {
+      "source_ref": "gmail://thread/1a081d3c706e1ee9",
+      "occurred_at": "2026-09-11T10:12:54-04:00",
+      "route": {
+        "type": "client",
+        "name": "Nexla",
+        "path": "01_Clients/Nexla/overview.md"
+      },
+      "run_id": "COMMS-2026-09-13-DAY-1",
+      "processed_at": "2026-09-13T11:04:19.153Z"
+    },
+    "gmail:thread:1a08d92a6a8582ae:deborah-aeo-2026-09-11": {
+      "source_ref": "gmail://thread/1a08d92a6a8582ae",
+      "occurred_at": "2026-09-11T16:24:08-04:00",
+      "route": {
+        "type": "unresolved",
+        "name": "Deborah Mara web design",
+        "path": "12_Brain/07_Reviews/Daily Intelligence/2026-09-13 - Communication Intelligence.md"
+      },
+      "run_id": "COMMS-2026-09-13-DAY-1",
+      "processed_at": "2026-09-13T11:04:19.154Z"
+    },
+    "gmail:thread:1a0592c581c51729:barcrawl-2026-09-11": {
+      "source_ref": "gmail://thread/1a0592c581c51729",
+      "occurred_at": "2026-09-11T20:00:48Z",
+      "route": {
+        "type": "client",
+        "name": "Bar Crawl USA",
+        "path": "01_Clients/Bar Crawl USA/overview.md"
+      },
+      "run_id": "COMMS-2026-09-13-DAY-1",
+      "processed_at": "2026-09-13T11:04:19.154Z"
+    },
+    "slack:message:1789072696.879919:puttery-gates": {
+      "source_ref": "https://momentum3d.slack.com/archives/C0BT1P1PGJF/p1789072696879919",
+      "occurred_at": "2026-09-10T16:38:16-04:00",
+      "route": {
+        "type": "client",
+        "name": "Puttery NYC",
+        "path": "01_Clients/Puttery NYC/overview.md"
+      },
+      "run_id": "COMMS-2026-09-13-DAY-1",
+      "processed_at": "2026-09-13T11:04:19.155Z"
+    },
+    "gmail:thread:1a08da046a582dc7:revive-lsa-2026-09-11": {
+      "source_ref": "gmail://thread/1a08da046a582dc7",
+      "occurred_at": "2026-09-11T13:55:10-07:00",
+      "route": {
+        "type": "client",
+        "name": "Revive Systems",
+        "path": "01_Clients/Revive Systems/overview.md"
+      },
+      "run_id": "COMMS-2026-09-13-DAY-1",
+      "processed_at": "2026-09-13T11:04:19.155Z"
+    },
+    "slack:message:1789294052.563369:momentum-pages-ready": {
+      "source_ref": "https://momentum3d.slack.com/archives/C1CFQBC79/p1789294052563369",
+      "occurred_at": "2026-09-13T06:07:32-04:00",
+      "route": {
+        "type": "operations",
+        "name": "Momentum sites SEO task cadence",
+        "path": "System/operating-status.md"
+      },
+      "run_id": "COMMS-2026-09-13-DAY-1",
+      "processed_at": "2026-09-13T11:04:19.156Z"
+    },
+    "slack:message:1788964684.489459:weekly-lead-breakdown": {
+      "source_ref": "https://momentum3d.slack.com/archives/C1CFQBC79/p1788964684489459",
+      "occurred_at": "2026-09-09T10:38:04-04:00",
+      "route": {
+        "type": "operations",
+        "name": "Momentum weekly reporting",
+        "path": "System/operating-status.md"
+      },
+      "run_id": "COMMS-2026-09-13-DAY-1",
+      "processed_at": "2026-09-13T11:04:19.156Z"
+    },
+    "slack:message:1789050634.769399:lead-automation-2026-09-10": {
+      "source_ref": "https://momentum3d.slack.com/archives/C05R2B1ULF6/p1789050634769399",
+      "occurred_at": "2026-09-10T10:30:34-04:00",
+      "route": {
+        "type": "operations",
+        "name": "Lead intake reconciliation",
+        "path": "System/operating-status.md"
+      },
+      "run_id": "COMMS-2026-09-13-DAY-1",
+      "processed_at": "2026-09-13T11:04:19.157Z"
+    },
+    "gmail:message:1a08978cf7807c91:google-ads-explorer-2026-09-09": {
+      "source_ref": "gmail://message/1a08978cf7807c91",
+      "occurred_at": "2026-09-09T20:59:50-07:00",
+      "route": {
+        "type": "operations",
+        "name": "Google Ads access evidence",
+        "path": "System/operating-status.md"
+      },
+      "run_id": "COMMS-2026-09-13-DAY-1",
+      "processed_at": "2026-09-13T11:04:19.157Z"
+    },
+    "gmail:message:1a09c0671326e55e": {
+      "source_ref": "gmail://message/1a09c0671326e55e",
+      "occurred_at": "2026-09-13T14:27:29-04:00",
+      "route": {
+        "type": "client",
+        "name": "Cindy May Christmas",
+        "path": "01_Clients/Cindy May Christmas/overview.md"
+      },
+      "run_id": "COMMS-2026-09-14-DAY-1",
+      "processed_at": "2026-09-14T11:04:25.673Z"
+    },
+    "gmail:message:1a0987a3880dff01": {
+      "source_ref": "gmail://message/1a0987a3880dff01",
+      "occurred_at": "2026-09-13T01:55:13Z",
+      "route": {
+        "type": "client",
+        "name": "Bar Crawl USA",
+        "path": "01_Clients/Bar Crawl USA/overview.md"
+      },
+      "run_id": "COMMS-2026-09-14-DAY-1",
+      "processed_at": "2026-09-14T11:04:25.674Z"
+    },
+    "slack:message:1789375365.840869": {
+      "source_ref": "https://momentum3d.slack.com/archives/C092MVBN8SV/p1789375365840869",
+      "occurred_at": "2026-09-14T04:42:45-04:00",
+      "route": {
+        "type": "client",
+        "name": "Hope Wellness Center",
+        "path": "01_Clients/Hope Wellness Center/overview.md"
+      },
+      "run_id": "COMMS-2026-09-14-DAY-1",
+      "processed_at": "2026-09-14T11:04:25.674Z"
+    },
+    "gmail:message:1a0a53303b327602": {
+      "source_ref": "gmail://message/1a0a53303b327602",
+      "occurred_at": "2026-09-15T09:12:45-04:00",
+      "route": {
+        "type": "client",
+        "name": "Puttery NYC",
+        "path": "01_Clients/Puttery NYC/overview.md"
+      },
+      "run_id": "COMMS-2026-09-15-DAY-1",
+      "processed_at": "2026-09-15T14:03:35.793Z"
+    },
+    "gmail:message:1a0a526103432481": {
+      "source_ref": "gmail://message/1a0a526103432481",
+      "occurred_at": "2026-09-15T08:58:45-04:00",
+      "route": {
+        "type": "client",
+        "name": "Deborah Mara",
+        "path": "01_Clients/Deborah Mara/overview.md"
+      },
+      "run_id": "COMMS-2026-09-15-DAY-1",
+      "processed_at": "2026-09-15T14:03:35.794Z"
+    },
+    "gmail:message:1a0a141d86a20258": {
+      "source_ref": "gmail://message/1a0a141d86a20258",
+      "occurred_at": "2026-09-14T18:50:42Z",
+      "route": {
+        "type": "client",
+        "name": "Nexla",
+        "path": "01_Clients/Nexla/overview.md"
+      },
+      "run_id": "COMMS-2026-09-15-DAY-1",
+      "processed_at": "2026-09-15T14:03:35.795Z"
+    },
+    "slack:message:deborah-mara:2026-09-15T09:41:50-04:00": {
+      "source_ref": "slack://channel/deborah-mara/2026-09-15T09:41:50-04:00",
+      "occurred_at": "2026-09-15T09:41:50-04:00",
+      "route": {
+        "type": "client",
+        "name": "Deborah Mara",
+        "path": "01_Clients/Deborah Mara/overview.md"
+      },
+      "run_id": "COMMS-2026-09-15-DAY-1",
+      "processed_at": "2026-09-15T14:03:35.797Z"
+    },
+    "slack:message:fagan-painting:2026-09-14T09:06:09-04:00": {
+      "source_ref": "slack://channel/fagan-painting/2026-09-14T09:06:09-04:00",
+      "occurred_at": "2026-09-14T09:06:09-04:00",
+      "route": {
+        "type": "client",
+        "name": "Fagan Painting",
+        "path": "01_Clients/Fagan Painting/overview.md"
+      },
+      "run_id": "COMMS-2026-09-15-DAY-1",
+      "processed_at": "2026-09-15T14:03:35.799Z"
+    },
+    "slack:message:capsule-and-tonic:2026-09-14T10:25:17-04:00": {
+      "source_ref": "slack://channel/capsule-and-tonic/2026-09-14T10:25:17-04:00",
+      "occurred_at": "2026-09-14T10:25:17-04:00",
+      "route": {
+        "type": "client",
+        "name": "Capsule & Tonic",
+        "path": "01_Clients/Capsule & Tonic/overview.md"
+      },
+      "run_id": "COMMS-2026-09-15-DAY-1",
+      "processed_at": "2026-09-15T14:03:35.800Z"
+    },
+    "slack:message:hope-wellness-center:2026-09-14T04:42:45-04:00": {
+      "source_ref": "slack://channel/hope-wellness-center/2026-09-14T04:42:45-04:00",
+      "occurred_at": "2026-09-14T04:42:45-04:00",
+      "route": {
+        "type": "client",
+        "name": "Hope Wellness Center",
+        "path": "01_Clients/Hope Wellness Center/overview.md"
+      },
+      "run_id": "COMMS-2026-09-15-DAY-1",
+      "processed_at": "2026-09-15T14:03:35.803Z"
     }
   },
   "runs": {
@@ -654,14 +1281,105 @@
       "review_file": "12_Brain\\07_Reviews\\Daily Intelligence\\2026-08-17 - Communication Intelligence.md",
       "review_action": "created",
       "written_at": "2026-08-17T11:04:26.983Z"
+    },
+    "COMMS-2026-08-26-DAY-1": {
+      "status": "success",
+      "payload_hash": "51ed7c538a3a5b55f7cd49db94653b6e2e2480fc66109c1e003758ede179605d",
+      "new_items": 4,
+      "duplicate_items": 0,
+      "capture_file": "12_Brain\\01_Captures\\Communications\\2026-08-26 - daily-communications-comms-2026-08-26-day-1.md",
+      "review_file": "12_Brain\\07_Reviews\\Daily Intelligence\\2026-08-26 - Communication Intelligence.md",
+      "review_action": "created",
+      "written_at": "2026-08-26T11:05:33.612Z"
+    },
+    "COMMS-2026-09-04-DAY-1": {
+      "status": "success",
+      "payload_hash": "3a5121eb675ddabe426d03b05d0819d3ed667d94fb29dacc9bbf8fbf609ea998",
+      "new_items": 8,
+      "duplicate_items": 1,
+      "capture_file": "12_Brain\\01_Captures\\Communications\\2026-09-04 - daily-communications-comms-2026-09-04-day-1.md",
+      "review_file": "12_Brain\\07_Reviews\\Daily Intelligence\\2026-09-04 - Communication Intelligence.md",
+      "review_action": "created",
+      "written_at": "2026-09-04T11:04:18.249Z"
+    },
+    "COMMS-2026-09-05-DAY-1": {
+      "status": "degraded",
+      "payload_hash": "7920a8c9ea824632a5eda73a58bde40037d66efd105cc9b9a392ab9857cfaeac",
+      "new_items": 12,
+      "duplicate_items": 2,
+      "capture_file": "12_Brain\\01_Captures\\Communications\\2026-09-05 - daily-communications-comms-2026-09-05-day-1.md",
+      "review_file": "12_Brain\\07_Reviews\\Daily Intelligence\\2026-09-05 - Communication Intelligence.md",
+      "review_action": "created",
+      "written_at": "2026-09-05T11:05:46.008Z"
+    },
+    "COMMS-2026-09-06-DAY-1": {
+      "status": "success",
+      "payload_hash": "5e9c6b139b4db871b538739819c1b643e0f85f8127c5e45d80445261850ece9b",
+      "new_items": 1,
+      "duplicate_items": 0,
+      "capture_file": "12_Brain\\01_Captures\\Communications\\2026-09-06 - daily-communications-comms-2026-09-06-day-1.md",
+      "review_file": "12_Brain\\07_Reviews\\Daily Intelligence\\2026-09-06 - Communication Intelligence.md",
+      "review_action": "created",
+      "written_at": "2026-09-06T11:03:00.202Z"
+    },
+    "COMMS-2026-09-08-DAY-1": {
+      "status": "success",
+      "payload_hash": "2285fe1a2b1bff2c0bac5f1af9c7a84a39f5c55aeadd5fdaf95d404ea151caa4",
+      "new_items": 13,
+      "duplicate_items": 1,
+      "capture_file": "12_Brain\\01_Captures\\Communications\\2026-09-08 - daily-communications-comms-2026-09-08-day-1.md",
+      "review_file": "12_Brain\\07_Reviews\\Daily Intelligence\\2026-09-08 - Communication Intelligence.md",
+      "review_action": "created",
+      "written_at": "2026-09-08T11:06:12.300Z"
+    },
+    "COMMS-2026-09-12-DAY-1": {
+      "status": "degraded",
+      "payload_hash": "fc6347cc6b908a6ee45cab9aa41f73cee446feffa98aa0cbf28b62b19b1ab6ac",
+      "new_items": 0,
+      "duplicate_items": 0,
+      "capture_file": "12_Brain\\01_Captures\\Communications\\2026-09-12 - daily-communications-comms-2026-09-12-day-1.md",
+      "review_file": "12_Brain\\07_Reviews\\Daily Intelligence\\2026-09-12 - Communication Intelligence.md",
+      "review_action": "created",
+      "written_at": "2026-09-12T11:03:45.021Z"
+    },
+    "COMMS-2026-09-13-DAY-1": {
+      "status": "success",
+      "payload_hash": "98107f1b5b9e4e13ae810d8f001a4f181dc00a3ca0cee5db3afc27901560586d",
+      "new_items": 9,
+      "duplicate_items": 0,
+      "capture_file": "12_Brain\\01_Captures\\Communications\\2026-09-13 - daily-communications-comms-2026-09-13-day-1.md",
+      "review_file": "12_Brain\\07_Reviews\\Daily Intelligence\\2026-09-13 - Communication Intelligence.md",
+      "review_action": "created",
+      "written_at": "2026-09-13T11:04:19.157Z"
+    },
+    "COMMS-2026-09-14-DAY-1": {
+      "status": "success",
+      "payload_hash": "433ed45a2588762af8bacd6f7b197ea6e30d9a8421c55d659a0b104418d12a39",
+      "new_items": 3,
+      "duplicate_items": 0,
+      "capture_file": "12_Brain\\01_Captures\\Communications\\2026-09-14 - daily-communications-comms-2026-09-14-day-1.md",
+      "review_file": "12_Brain\\07_Reviews\\Daily Intelligence\\2026-09-14 - Communication Intelligence.md",
+      "review_action": "created",
+      "written_at": "2026-09-14T11:04:25.674Z"
+    },
+    "COMMS-2026-09-15-DAY-1": {
+      "status": "degraded",
+      "payload_hash": "694a98036383f992fa3e50bfacc0e656bfd80f3879aa3033a765a619d692d762",
+      "new_items": 7,
+      "duplicate_items": 2,
+      "capture_file": "12_Brain\\01_Captures\\Communications\\2026-09-15 - daily-communications-comms-2026-09-15-day-1.md",
+      "review_file": "12_Brain\\07_Reviews\\Daily Intelligence\\2026-09-15 - Communication Intelligence.md",
+      "review_action": "created",
+      "written_at": "2026-09-15T14:03:35.803Z"
     }
   },
   "checkpoints": {
-    "gmail": "2026-08-09T07:05:03.4946980-04:00",
-    "slack": "1786050000.000000"
+    "gmail": "2026-09-15T10:02:06-04:00",
+    "slack": "1789480057.000000"
   },
-  "last_successful_run": "2026-08-09T07:05:03.4946980-04:00",
-  "last_run": "2026-08-17T07:04:11.5021535-04:00",
+  "last_successful_run": "2026-09-14T07:03:38-04:00",
+  "last_run": "2026-09-15T10:02:06-04:00",
   "last_status": "degraded",
-  "updated_at": "2026-08-17T11:04:26.984Z"
+  "updated_at": "2026-09-15T14:03:35.803Z",
+  "generated_at": "2026-09-15T14:03:35.803Z"
 }

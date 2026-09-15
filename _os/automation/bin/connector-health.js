@@ -27,7 +27,6 @@
  * Exit 0 = at least one connector fresh. Exit 2 = none fresh (blocked, not failed).
  */
 
-const fs = require('fs');
 const { repoPath, readJson } = require('../lib/fsutil');
 
 const STATE = repoPath('12_Brain/state/connector-health.json');
@@ -37,6 +36,38 @@ function argInt(flag, dflt) {
   if (i < 0) return dflt;
   const n = parseInt(process.argv[i + 1], 10);
   return Number.isFinite(n) ? n : dflt;
+}
+
+function evaluateState(state, windowHours, nowMs = Date.now()) {
+  const rows = state.connectors.map((c) => {
+    // Age from the connector's own observation stamp and the actual evaluation
+    // clock. File mtime is ingestion recency, not provider-evidence recency.
+    const seen = Date.parse(c.last_verified_utc || '');
+    const ageH = Number.isFinite(seen) ? Number(((nowMs - seen) / 3.6e6).toFixed(2)) : null;
+    const usable = c.status === 'active' && c.read_verified === true &&
+      ageH !== null && ageH >= 0 && ageH <= windowHours;
+    return {
+      toolkit: c.toolkit,
+      status: c.status,
+      read_verified: c.read_verified === true,
+      observed_at_utc: Number.isFinite(seen) ? new Date(seen).toISOString() : null,
+      age_hours: ageH,
+      usable,
+      note: c.note || null,
+    };
+  });
+
+  // generated_at is the shared timestamp contract; recorded_at_utc is what the
+  // MCP agent has written so far and stays the fallback.
+  const snapshotStamp = state.generated_at || state.recorded_at_utc || '';
+  const recordedAt = Date.parse(snapshotStamp);
+  return {
+    rows,
+    generated_at: Number.isFinite(recordedAt) ? snapshotStamp : null,
+    snapshot_age_hours: Number.isFinite(recordedAt)
+      ? Number(((nowMs - recordedAt) / 3.6e6).toFixed(2))
+      : null,
+  };
 }
 
 function main() {
@@ -54,29 +85,18 @@ function main() {
     process.exit(2);
   }
 
-  const nowMs = fs.statSync(STATE).mtimeMs;
-  const rows = state.connectors.map((c) => {
-    // Age from the connector's own observation stamp, not the file mtime: one
-    // stale connector inside a freshly-rewritten file must still read as stale.
-    const seen = Date.parse(c.last_verified_utc || '');
-    const ageH = Number.isFinite(seen) ? Number(((nowMs - seen) / 3.6e6).toFixed(2)) : null;
-    const usable = c.status === 'active' && c.read_verified === true
-      && ageH !== null && ageH <= windowHours;
-    return {
-      toolkit: c.toolkit,
-      status: c.status,
-      read_verified: c.read_verified === true,
-      age_hours: ageH,
-      usable,
-      note: c.note || null,
-    };
-  });
+  const { rows, snapshot_age_hours: snapshotAgeHours, generated_at: generatedAt } = evaluateState(
+    state,
+    windowHours
+  );
 
   const fresh = rows.filter((r) => r.usable);
   const out = {
     automation_id: 'connector-health',
     status: fresh.length ? 'ok' : 'blocked',
     window_hours: windowHours,
+    snapshot_age_hours: snapshotAgeHours,
+    generated_at: generatedAt,
     counts: { connectors: rows.length, usable: fresh.length, unusable: rows.length - fresh.length },
     connectors: rows,
     recorded_by: state.recorded_by || 'unknown',
@@ -86,4 +106,6 @@ function main() {
   process.exit(fresh.length ? 0 : 2);
 }
 
-main();
+if (require.main === module) main();
+
+module.exports = { evaluateState };

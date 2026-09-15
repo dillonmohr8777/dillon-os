@@ -1,0 +1,28 @@
+{
+  "wakeId": "heartbeat:20260905T190023541Z",
+  "window": {
+    "afterUnix": 1788632944,
+    "beforeUnix": 1788634841
+  },
+  "identities": {
+    "gmail": "dillonmohr8777@gmail.com",
+    "slack": "Momentum Digital Agency / Dillon Mohr"
+  },
+  "coverage": {
+    "gmailMessages": 8,
+    "slackMessages": 0,
+    "sourcePages": 2,
+    "newKeys": 8,
+    "paginationExhausted": true
+  },
+  "interpretation": "New Gmail headers were account/security notices, promotions and unrelated personal notices. Suppressed without deeper retrieval; no authentication challenge consumed or account action taken. No Slack messages, new business asks or demonstrated changed client blockers.",
+  "daily": {
+    "leadTableDue": false,
+    "googleAdsReportDue": false,
+    "predictionBriefDue": false,
+    "bedtimeDue": false
+  },
+  "workersDispatched": 0,
+  "externalWrites": 0,
+  "decision": "DONT_NOTIFY"
+}

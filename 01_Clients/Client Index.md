@@ -30,7 +30,7 @@ prove present-tense platform state.
 
 ## Relationship boundary
 
-- [[../02_FullTimeJob/AlignHCM/overview|Align HCM]] is Dillon's full-time
+- [[../02_FullTimeJob/AlignHCM/overview|Align HCM]] has **ended** (2026-09-02) and is not a client. It was Dillon's full-time
   employer, not freelance or Momentum 360 client revenue. Its intelligence
   overlay remains in the portfolio view because the canonical registry route is
   active, but the underlying work and metrics stay separate.

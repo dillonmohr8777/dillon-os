@@ -1,0 +1,202 @@
+{
+  "schema_version": 1,
+  "adoption_id": "web-design-closed-loop-production-2026-08-24",
+  "decided_at": "2026-08-24T21:00:00-04:00",
+  "decision": {
+    "state": "adopted_manual_event",
+    "approved_by": "Dillon Mohr",
+    "approved_scope": "Primary portfolio plus batch of 238",
+    "routine_id": "WEB-DESIGN-CLOSED-LOOP",
+    "routine_definition": {
+      "locator": "System/outcome-graph/routines/E11/2026-08-24-governance-shadow/routine-definition.json",
+      "sha256": "005be4a82adf910858198dd06853dcf5d997742ba9e0bcabd961b5fa012cc983"
+    },
+    "registry_strategy": "manual production overlay on the existing D13, D14, D24, D25, and W05 contracts; not a 55th scheduled routine",
+    "scheduler_cutover_authorized": false,
+    "legacy_retirement_authorized": false,
+    "permission_expansion_authorized": false
+  },
+  "estate": {
+    "logical_site_records_target": 239,
+    "possible_build_routes_target": 240,
+    "counting_rule": "One primary portfolio product plus 238 prospect concept pages equals 239 logical site records. The portfolio has two build-time deployment variants, so the estate can emit 240 routes without becoming 240 independently designed sites.",
+    "primary_portfolio": {
+      "logical_site_records": 1,
+      "mode": "Experience",
+      "repository_root": "C:/Users/dillo/Documents/Codex/2026-08-20/dillon-portfolio-signal-foundry",
+      "surface_root": "C:/Users/dillo/Documents/Codex/2026-08-20/dillon-portfolio-signal-foundry/mohr-media-site",
+      "branch": "codex/dillon-portfolio-signal-foundry-20260820",
+      "product_sha256": "3bc9c8eb680b541aa6b645a598474c2cb61561aa63454c7e6a0e64c2090c2be2",
+      "design_sha256": "0bfb38201f86078d1aa89553bf5e9214dafa0c3642e7a425dca6e461190040ec",
+      "design_sidecar_sha256": "d6cb619dcf1a86f38c0b0659599125244b01a79696e1782d8b5753c3cd67de3d",
+      "build_variants": [
+        {
+          "variant": "hrchitect",
+          "build_binding": "VITE_PROSPECT_SLUG=hrchitect",
+          "mapped_host": "dillon-mohr-portfolio.netlify.app"
+        },
+        {
+          "variant": "general",
+          "build_binding": "VITE_PROSPECT_SLUG=general",
+          "mapped_host": "dillon-mohr-for-you.netlify.app"
+        }
+      ],
+      "deployment_targets_locator": "System/outcome-graph/web-design/portfolio-deployment-targets-2026-08-24.json",
+      "deployment_targets_sha256": "511d9d1b2d2b96856804d65ed9919c5386bd0781330640d6a9d152b018cd755c",
+      "deployment_targets_state": "exact_existing_targets_verified",
+      "terminal_receipt_locator": "System/outcome-graph/web-design/portfolio-terminal-receipt-2026-08-24.json",
+      "terminal_receipt_sha256": "1f7344aab1af9527effedba9da67da9a999a9c3124f4e9cf8d6f37b0753684ef",
+      "deployment_state": "deployed_live_verified",
+      "current_state": "deployed_live_verified"
+    },
+    "momentum_prospect_pages": {
+      "logical_site_records_requested": 238,
+      "client_id": "momentum-360",
+      "canonical_client_folder": "C:/Users/dillo/Documents/Codex/projects/client-operations/clients/momentum-360",
+      "current_projection_locator": "System/outcome-graph/source-snapshots/google-drive-list-state-2026-08-24.json",
+      "current_projection_sha256": "c5c24658a62dac9e7c54ac451550ae53f529143db9df7f79f76794140758ed5c",
+      "current_row_snapshot_locator": "System/outcome-graph/source-snapshots/momentum-current-238-rows-2026-08-24.json",
+      "current_row_snapshot_sha256": "39f3b2e8c24aceee6eda8271b5b07aace916dedaf4074c33711390dda25cf732",
+      "predecessor_inventory_locator": "C:/Users/dillo/Documents/Codex/projects/client-operations/clients/momentum-360/deliverables/2026-08-12-ai-tech-news-batch-registry/site-inventory.csv",
+      "predecessor_inventory_sha256": "5c643abd7df3cb7071c90ca6a744643970d31ddb49dec6f054f68a1a08435ff6",
+      "identity_aliases_locator": "System/outcome-graph/web-design/momentum-identity-aliases-2026-08-24.json",
+      "identity_aliases_sha256": "09f66e070c0660241a2d3a3e7c911977d2a5ccce80c13a9c003a9cb5595a7692",
+      "reconciled_manifest_locator": "System/outcome-graph/web-design/momentum-238-reconciled-manifest-2026-08-24.json",
+      "reconciled_manifest_sha256": "eea2102f331b2dbb9daa95add6988f1c9753d7977ba16896567b8987ac08de29",
+      "wave_plan_locator": "System/outcome-graph/web-design/momentum-238-wave-plan-2026-08-24.json",
+      "wave_plan_sha256": "899ab0887063fc8462dd69d6bba2e0a46f63d7298f4366946f95d48f567afd26",
+      "wave_plan_state": "portfolio_terminal_passed_held_for_exact_logo_source_authority",
+      "particle_logo_candidate_manifest_locator": "System/outcome-graph/web-design/momentum-particle-logo-candidates-2026-08-24/candidate-manifest.json",
+      "particle_logo_candidate_manifest_sha256": "84a04114760dcb7a885fdafb293bb468757f2caf4e374eaa14d81bc7bc114724",
+      "particle_logo_review_findings_locator": "System/outcome-graph/web-design/momentum-particle-logo-candidates-2026-08-24/review-findings.json",
+      "particle_logo_review_findings_sha256": "e8f8664d03dec4267faef23d8146c67adc05284344014ea467500c32728151be",
+      "particle_logo_screen": {
+        "candidate_extracted": 187,
+        "visual_screen_pass_pending_source_match": 135,
+        "rejected": 35,
+        "manual_source_match_hold": 17,
+        "held_logo_candidate_missing": 32,
+        "held_page_fetch": 1,
+        "exact_logo_verified": 0,
+        "registry_eligible": 0
+      },
+      "predecessor_unique_slugs": 245,
+      "current_page_rows": 238,
+      "current_declared_distinct_businesses": 236,
+      "current_states": {
+        "cleared_to_show": 133,
+        "hold_for_repair": 87,
+        "do_not_pitch": 18
+      },
+      "current_polish_claim": 140,
+      "identity_delta": 2,
+      "identity_delta_explanation": "Johnny's Pizza and THR Insurance each have one cleared page and one held replacement page, producing 238 stable page IDs for 236 stable business IDs.",
+      "current_state": "identity_reconciled_logo_candidates_screened_fail_closed",
+      "reconciliation_result": {
+        "stable_page_ids": 238,
+        "stable_business_ids": 236,
+        "retain": 133,
+        "repair": 87,
+        "exclude": 18,
+        "predecessor_only_slugs": 9,
+        "match_methods": {
+          "concept_url_slug": 219,
+          "exact_normalized_name": 12,
+          "bounded_alias_decision": 7
+        },
+        "active_waves": 12,
+        "terminal_exclusion_waves": 1,
+        "total_waves": 13
+      }
+    }
+  },
+  "execution_contract": {
+    "portfolio_first": true,
+    "prospect_wave_size": 20,
+    "max_parallel": 3,
+    "max_graph_iterations": 2,
+    "max_repair_passes_per_surface": 1,
+    "max_confirmation_passes_per_surface": 1,
+    "source_freshness_hours": 192,
+    "maker_checker_must_differ": true,
+    "terminal_rerender_required": true,
+    "resume_requires_input_and_artifact_hash_revalidation": true,
+    "collision_key": "stable page_id plus business_id plus source fingerprint",
+    "eligible_prospect_surface": "One unique, responsive, noindex conversion concept page bound to the exact business identity, public source facts, verified logo or documented logo hold, relevant imagery, offer, disclosure, and contact path.",
+    "portfolio_surface": "One complete interactive professional portfolio with two prospect-bound build variants from the same verified product and design authority."
+  },
+  "outputs_per_logical_site": [
+    "isolated candidate files",
+    "source and identity manifest",
+    "exact-logo Mohr Media particle presentation binding for each active record",
+    "brand-specific image direction and provenance manifest when imagery is generated or replaced",
+    "desktop and mobile captures",
+    "functional, responsive, accessibility, performance, content-truth, and design-system results",
+    "independent craft scorecard",
+    "defect and repair ledger",
+    "final file manifest with SHA-256 and byte counts",
+    "terminal rerender receipt",
+    "separate adoption, deployment, delivery, and business-outcome states"
+  ],
+  "acceptance": {
+    "craft_average_minimum": 8.0,
+    "craft_category_minimum": 7.0,
+    "required_craft_categories": [
+      "brand_match",
+      "clarity",
+      "conversion_intent",
+      "factual_support",
+      "accessibility",
+      "technical_integrity"
+    ],
+    "engineering_gates": [
+      "authority",
+      "brief",
+      "build",
+      "responsive",
+      "interaction",
+      "accessibility",
+      "performance",
+      "content_truth",
+      "design_system",
+      "independent_craft"
+    ],
+    "terminal_truth_required": true,
+    "open_blocker_count_required": 0,
+    "open_major_defect_count_required": 0
+  },
+  "promotion_states": [
+    "discovered",
+    "identity_bound",
+    "source_ready",
+    "candidate_built",
+    "checker_passed",
+    "terminal_true",
+    "adopted",
+    "deployment_approved",
+    "deployed",
+    "delivery_approved",
+    "delivered",
+    "business_outcome_verified"
+  ],
+  "holds": [
+    "The primary portfolio passed terminal review with a 9.3 craft average and no material findings; the existing dirty worktree remains preserved and uncommitted.",
+    "Identity is reconciled, but 87 page records remain held for repair and 18 are explicit no-build, no-pitch exclusions.",
+    "The 133 retained pages still require the adopted rendered quality gates before any production promotion.",
+    "The logo candidate collector extracted 187 assets, but the first visual screen rejected 35 and held 17 for manual source matching. The remaining 135 are only visual-screen passes and still require authoritative source matching; no candidate is exact-logo verified or registry eligible.",
+    "Nine predecessor-only slugs are outside the current 238-page projection and cannot be reintroduced by inference.",
+    "Cleared to show, polish passed, source ready, production approved, deployed, delivered, and business complete are different states.",
+    "The separate W05 fresh-source preflight currently has only 6 of 20 source-ready candidates and cannot justify a new 20-site build."
+  ],
+  "authority": {
+    "canonical_queue_write_authorized": false,
+    "scheduler_mutation_authorized": false,
+    "external_send_authorized": false,
+    "deployment_authorized_by_this_record": false,
+    "new_public_destination_authorized": false,
+    "spend_authorized": false,
+    "account_change_authorized": false,
+    "secret_access_authorized": false,
+    "client_cross_fan_in_authorized": false
+  }
+}

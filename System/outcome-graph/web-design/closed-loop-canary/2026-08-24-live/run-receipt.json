@@ -1,0 +1,537 @@
+{
+  "run_id": "OGD-20260825-11747080BBC9",
+  "graph_id": "closed-loop-web-design-canary",
+  "objective": "Prove the web-design runtime by rendering an intentionally weak local draft, feeding exact visual and engineering defects into one repair, and terminally re-rendering the resolved candidate.",
+  "value_signal": "The design loop itself proves that critique changes the next build and that a synthetic review never promotes a candidate to production-ready.",
+  "contract_sha256": "8fadfa07728715dfd1563d8d952cc80548a55c3c060c8e58de79c72d05776069",
+  "started_at": "2026-08-25T00:09:38.505Z",
+  "source_evidence": "Product, design, brief, authority, and implementation sources are hash-bound before planning and recollected at terminal verification.",
+  "finish_line": "Every isolated surface preserves its source authority, resolves every recorded defect within the repair budget, passes all ten engineering and craft gates, reproduces from final candidate hashes, and remains local pending separate adoption or deployment authority.",
+  "governance": {
+    "orchestrator": "Codex acting as Marketing Chief",
+    "canonical_state": "The source brief, product/design documents, high-craft factory concept, source project, and deployment state remain canonical and read only.",
+    "dedupe_key": "web-design:2026-08-24-live",
+    "checkpoint": "System/outcome-graph/web-design/closed-loop-canary/2026-08-24-live/web-design-loop-receipt.json",
+    "rollback": "Discard the isolated candidate and evidence directory; preserve the source project, mapped site, queue, and external systems unchanged.",
+    "escalation": "Return the exact unresolved craft or engineering defect, missing authority, source drift, exhausted repair budget, or approval boundary to Marketing Chief."
+  },
+  "graph_iterations": [
+    {
+      "iteration": 1,
+      "status": "verified",
+      "planner": {
+        "evidence": "Bound 1 web surface(s) to product, brief, authority, and implementation source hashes.",
+        "item_count": 1,
+        "plan_signature": "71344fd327698b660e592e70aa23626f3e72d1831804eb35d3a098e8080d8730",
+        "items": [
+          {
+            "id": "surface:closed-loop-canary",
+            "isolation_key": "web-design:closed-loop-canary",
+            "input_fingerprint": "692e9b87dd6a30ea74ee57db27b65c2523852c4fc949e4a7d1c44ad720491d9c",
+            "task": "Build and independently verify closed-loop-canary"
+          }
+        ]
+      },
+      "workers": [
+        {
+          "item_id": "surface:closed-loop-canary",
+          "input_fingerprint": "692e9b87dd6a30ea74ee57db27b65c2523852c4fc949e4a7d1c44ad720491d9c",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "web-design:closed-loop-canary:g1:a1",
+              "maker_evidence": "Produced isolated closed-loop-canary candidate attempt 1 from 0 checker finding(s).",
+              "artifacts": [
+                {
+                  "path": "workspace://closed-loop-canary/g1-a1/maker-receipt.json",
+                  "sha256": "e54299cc1bf4763dcbf1a2be41aaf4b0244888d2cc62f95e21acca3ef228ba5b",
+                  "bytes": 1100
+                }
+              ],
+              "checker_evidence": "Independently inspected rendered closed-loop-canary attempt 1 across all required gates.",
+              "passed": false,
+              "findings": [
+                {
+                  "id": "gate-responsive-failed",
+                  "gate_id": "responsive",
+                  "severity": "major",
+                  "summary": "responsive requires the recorded repair.",
+                  "repair_instruction": "responsive requires the recorded repair.",
+                  "regression_test": "Re-run the affected gate.",
+                  "learning_target": "qa_rule"
+                },
+                {
+                  "id": "gate-interaction-failed",
+                  "gate_id": "interaction",
+                  "severity": "major",
+                  "summary": "interaction requires the recorded repair.",
+                  "repair_instruction": "interaction requires the recorded repair.",
+                  "regression_test": "Re-run the affected gate.",
+                  "learning_target": "qa_rule"
+                },
+                {
+                  "id": "gate-accessibility-failed",
+                  "gate_id": "accessibility",
+                  "severity": "major",
+                  "summary": "accessibility requires the recorded repair.",
+                  "repair_instruction": "accessibility requires the recorded repair.",
+                  "regression_test": "Re-run the affected gate.",
+                  "learning_target": "qa_rule"
+                },
+                {
+                  "id": "gate-design-system-failed",
+                  "gate_id": "design-system",
+                  "severity": "major",
+                  "summary": "design-system requires the recorded repair.",
+                  "repair_instruction": "design-system requires the recorded repair.",
+                  "regression_test": "Re-run the affected gate.",
+                  "learning_target": "qa_rule"
+                },
+                {
+                  "id": "gate-independent-craft-failed",
+                  "gate_id": "independent-craft",
+                  "severity": "major",
+                  "summary": "independent-craft requires the recorded repair.",
+                  "repair_instruction": "independent-craft requires the recorded repair.",
+                  "regression_test": "Re-run the affected gate.",
+                  "learning_target": "qa_rule"
+                },
+                {
+                  "id": "craft-brand-specificity-below-floor",
+                  "gate_id": "independent-craft",
+                  "severity": "major",
+                  "summary": "brand_specificity must score at least 4 of 5.",
+                  "repair_instruction": "brand_specificity must score at least 4 of 5.",
+                  "regression_test": "Re-run the affected gate.",
+                  "learning_target": "qa_rule"
+                },
+                {
+                  "id": "craft-visual-hierarchy-below-floor",
+                  "gate_id": "independent-craft",
+                  "severity": "major",
+                  "summary": "visual_hierarchy must score at least 4 of 5.",
+                  "repair_instruction": "visual_hierarchy must score at least 4 of 5.",
+                  "regression_test": "Re-run the affected gate.",
+                  "learning_target": "qa_rule"
+                },
+                {
+                  "id": "craft-composition-rhythm-below-floor",
+                  "gate_id": "independent-craft",
+                  "severity": "major",
+                  "summary": "composition_rhythm must score at least 4 of 5.",
+                  "repair_instruction": "composition_rhythm must score at least 4 of 5.",
+                  "regression_test": "Re-run the affected gate.",
+                  "learning_target": "qa_rule"
+                },
+                {
+                  "id": "craft-typography-below-floor",
+                  "gate_id": "independent-craft",
+                  "severity": "major",
+                  "summary": "typography must score at least 4 of 5.",
+                  "repair_instruction": "typography must score at least 4 of 5.",
+                  "regression_test": "Re-run the affected gate.",
+                  "learning_target": "qa_rule"
+                },
+                {
+                  "id": "craft-imagery-below-floor",
+                  "gate_id": "independent-craft",
+                  "severity": "major",
+                  "summary": "imagery must score at least 4 of 5.",
+                  "repair_instruction": "imagery must score at least 4 of 5.",
+                  "regression_test": "Re-run the affected gate.",
+                  "learning_target": "qa_rule"
+                },
+                {
+                  "id": "craft-interaction-motion-below-floor",
+                  "gate_id": "independent-craft",
+                  "severity": "major",
+                  "summary": "interaction_motion must score at least 4 of 5.",
+                  "repair_instruction": "interaction_motion must score at least 4 of 5.",
+                  "regression_test": "Re-run the affected gate.",
+                  "learning_target": "qa_rule"
+                },
+                {
+                  "id": "craft-responsive-integrity-below-floor",
+                  "gate_id": "independent-craft",
+                  "severity": "major",
+                  "summary": "responsive_integrity must score at least 4 of 5.",
+                  "repair_instruction": "responsive_integrity must score at least 4 of 5.",
+                  "regression_test": "Re-run the affected gate.",
+                  "learning_target": "qa_rule"
+                },
+                {
+                  "id": "craft-content-clarity-below-floor",
+                  "gate_id": "independent-craft",
+                  "severity": "major",
+                  "summary": "content_clarity must score at least 4 of 5.",
+                  "repair_instruction": "content_clarity must score at least 4 of 5.",
+                  "regression_test": "Re-run the affected gate.",
+                  "learning_target": "qa_rule"
+                },
+                {
+                  "id": "craft-verdict-below-floor",
+                  "gate_id": "independent-craft",
+                  "severity": "major",
+                  "summary": "Independent craft review must pass with a 4.2 average and a written rationale.",
+                  "repair_instruction": "Independent craft review must pass with a 4.2 average and a written rationale.",
+                  "regression_test": "Re-run the affected gate.",
+                  "learning_target": "qa_rule"
+                },
+                {
+                  "id": "composition-generic-and-flat",
+                  "gate_id": "independent-craft",
+                  "severity": "major",
+                  "summary": "The draft uses interchangeable translucent cards and gives every message equal weight.",
+                  "repair_instruction": "Commit to the editorial signal-path thesis with one dominant headline, flat fields, and a visible loop sequence.",
+                  "regression_test": "Re-run independent-craft on desktop and mobile after the repair.",
+                  "learning_target": "brief"
+                },
+                {
+                  "id": "mobile-horizontal-overflow",
+                  "gate_id": "responsive",
+                  "severity": "major",
+                  "summary": "The fixed-width composition exceeds the mobile viewport.",
+                  "repair_instruction": "Replace fixed canvas widths with bounded fluid grids and verify 390 pixels without horizontal overflow.",
+                  "regression_test": "Re-run responsive on desktop and mobile after the repair.",
+                  "learning_target": "component"
+                },
+                {
+                  "id": "primary-action-below-touch-floor",
+                  "gate_id": "accessibility",
+                  "severity": "major",
+                  "summary": "The primary action is shorter than the 44 pixel touch floor.",
+                  "repair_instruction": "Give the primary action at least 48 pixels of usable height and preserve it on mobile.",
+                  "regression_test": "Re-run accessibility on desktop and mobile after the repair.",
+                  "learning_target": "token"
+                },
+                {
+                  "id": "keyboard-focus-not-visible",
+                  "gate_id": "interaction",
+                  "severity": "major",
+                  "summary": "Keyboard focus has no visible authored state.",
+                  "repair_instruction": "Add a high-contrast focus-visible treatment that does not depend on hover.",
+                  "regression_test": "Re-run interaction on desktop and mobile after the repair.",
+                  "learning_target": "component"
+                },
+                {
+                  "id": "reduced-motion-fallback-missing",
+                  "gate_id": "interaction",
+                  "severity": "major",
+                  "summary": "Decorative animation continues for reduced-motion users.",
+                  "repair_instruction": "Resolve animated elements to their final state inside prefers-reduced-motion.",
+                  "regression_test": "Re-run interaction on desktop and mobile after the repair.",
+                  "learning_target": "motion"
+                }
+              ]
+            },
+            {
+              "attempt": 2,
+              "isolation_id": "web-design:closed-loop-canary:g1:a2",
+              "maker_evidence": "Produced isolated closed-loop-canary candidate attempt 2 from 19 checker finding(s).",
+              "artifacts": [
+                {
+                  "path": "workspace://closed-loop-canary/g1-a2/maker-receipt.json",
+                  "sha256": "a0573aba69873bf34131db04ebee8c417bed53e0e73a0ecf712e33f5feb71c7e",
+                  "bytes": 1797
+                }
+              ],
+              "checker_evidence": "Independently inspected rendered closed-loop-canary attempt 2 across all required gates.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "workspace://closed-loop-canary/g1-a2/maker-receipt.json",
+              "sha256": "a0573aba69873bf34131db04ebee8c417bed53e0e73a0ecf712e33f5feb71c7e",
+              "bytes": 1797
+            }
+          ],
+          "isolation_id": "web-design:closed-loop-canary:g1:a2"
+        }
+      ],
+      "reduction": {
+        "evidence": "Reduced 1 independently checked surface(s), their repair histories, captures, and final candidate manifests.",
+        "artifacts": [
+          {
+            "path": "System/outcome-graph/web-design/closed-loop-canary/2026-08-24-live/candidates/closed-loop-canary/index.html",
+            "sha256": "d18588f11b7218992dde818c9747f4846ca6b2ee638c8ab16ce6913d93b68c75",
+            "bytes": 8082
+          },
+          {
+            "path": "System/outcome-graph/web-design/closed-loop-canary/2026-08-24-live/design-defect-ledger.json",
+            "sha256": "699fd0a4710d4d77a80ca90b9b26a90369ae6fa277e19078b1888ca9f1afda39",
+            "bytes": 10143
+          },
+          {
+            "path": "System/outcome-graph/web-design/closed-loop-canary/2026-08-24-live/design-learning-proposal.json",
+            "sha256": "d0699579ca4ce5a20fcc20c0f734be3ac22fb55b0ad9119eaa2fef5e09f16e82",
+            "bytes": 1157
+          },
+          {
+            "path": "System/outcome-graph/web-design/closed-loop-canary/2026-08-24-live/evidence/closed-loop-canary/desktop-19ed51a932eb.png",
+            "sha256": "19ed51a932ebeda0d926b2cae1e571a8bd821a40d62f03f498d0b3583cef9c8b",
+            "bytes": 42577
+          },
+          {
+            "path": "System/outcome-graph/web-design/closed-loop-canary/2026-08-24-live/evidence/closed-loop-canary/mobile-24e1e61ed683.png",
+            "sha256": "24e1e61ed68395b862cf8f68a2a0b7965119d897378105359aac15d0c268af2d",
+            "bytes": 27828
+          },
+          {
+            "path": "System/outcome-graph/web-design/closed-loop-canary/2026-08-24-live/final-build-manifest.json",
+            "sha256": "df76a2697da7fb23b89fb29f9f8060fb5dfdad809b8ea6794f8c2a07c71683cd",
+            "bytes": 832
+          },
+          {
+            "path": "System/outcome-graph/web-design/closed-loop-canary/2026-08-24-live/web-design-loop-receipt.json",
+            "sha256": "03f91cd62183ab92e316add0def590ad6542147e90d387f3ce61831501fe8e2a",
+            "bytes": 4402
+          }
+        ]
+      },
+      "terminal_verification": {
+        "evidence": "Recollected all authorities, re-rendered every final candidate, replayed the full gate set, and verified final files, repair closure, and approval boundaries.",
+        "declared_pass": true,
+        "passed": true,
+        "assertions": [
+          {
+            "id": "source-manifest-stable",
+            "passed": true,
+            "detail": "Product, design, brief, visual authority, and implementation sources remained hash-stable."
+          },
+          {
+            "id": "every-surface-reinspected",
+            "passed": true,
+            "detail": "Every isolated surface received one terminal reinspection."
+          },
+          {
+            "id": "all-engineering-and-craft-gates-pass",
+            "passed": true,
+            "detail": "Every terminal render passed all ten gates, desktop and mobile evidence, and the craft floor."
+          },
+          {
+            "id": "final-candidate-manifests-reproduce",
+            "passed": true,
+            "detail": "Every final candidate exactly matches its declared SHA-256 manifest."
+          },
+          {
+            "id": "repair-ledger-is-closed",
+            "passed": true,
+            "detail": "No unresolved checker defect remains after the bounded repair loop."
+          },
+          {
+            "id": "approval-and-external-action-boundary-held",
+            "passed": true,
+            "detail": "The verified candidate remains local and unadopted; deployment and canonical writes stay closed."
+          }
+        ],
+        "artifact_manifest": [
+          {
+            "path": "System/outcome-graph/web-design/closed-loop-canary/2026-08-24-live/candidates/closed-loop-canary/index.html",
+            "sha256": "d18588f11b7218992dde818c9747f4846ca6b2ee638c8ab16ce6913d93b68c75",
+            "bytes": 8082
+          },
+          {
+            "path": "System/outcome-graph/web-design/closed-loop-canary/2026-08-24-live/design-defect-ledger.json",
+            "sha256": "699fd0a4710d4d77a80ca90b9b26a90369ae6fa277e19078b1888ca9f1afda39",
+            "bytes": 10143
+          },
+          {
+            "path": "System/outcome-graph/web-design/closed-loop-canary/2026-08-24-live/design-learning-proposal.json",
+            "sha256": "d0699579ca4ce5a20fcc20c0f734be3ac22fb55b0ad9119eaa2fef5e09f16e82",
+            "bytes": 1157
+          },
+          {
+            "path": "System/outcome-graph/web-design/closed-loop-canary/2026-08-24-live/evidence/closed-loop-canary/desktop-19ed51a932eb.png",
+            "sha256": "19ed51a932ebeda0d926b2cae1e571a8bd821a40d62f03f498d0b3583cef9c8b",
+            "bytes": 42577
+          },
+          {
+            "path": "System/outcome-graph/web-design/closed-loop-canary/2026-08-24-live/evidence/closed-loop-canary/mobile-24e1e61ed683.png",
+            "sha256": "24e1e61ed68395b862cf8f68a2a0b7965119d897378105359aac15d0c268af2d",
+            "bytes": 27828
+          },
+          {
+            "path": "System/outcome-graph/web-design/closed-loop-canary/2026-08-24-live/final-build-manifest.json",
+            "sha256": "df76a2697da7fb23b89fb29f9f8060fb5dfdad809b8ea6794f8c2a07c71683cd",
+            "bytes": 832
+          },
+          {
+            "path": "System/outcome-graph/web-design/closed-loop-canary/2026-08-24-live/web-design-loop-receipt.json",
+            "sha256": "03f91cd62183ab92e316add0def590ad6542147e90d387f3ce61831501fe8e2a",
+            "bytes": 4402
+          }
+        ],
+        "manifest_errors": []
+      },
+      "learning": {
+        "evidence": "Appended one hashed web-design correction entry without changing canonical design truth.",
+        "corrections": [
+          "Preserve the closed-loop sequence: source authority, isolated implementation, rendered critique, bounded repair, terminal replay, then separate adoption and deployment authority."
+        ],
+        "ledger": "System/outcome-graph/web-design/closed-loop-canary/2026-08-24-live/corrections.jsonl",
+        "ledger_receipt": {
+          "locator": "System/outcome-graph/web-design/closed-loop-canary/2026-08-24-live/corrections.jsonl",
+          "entry_sha256": "5733842fb64f340d314a0de377e10d7099c9a983581eaa90049b63440abe7bd6"
+        }
+      }
+    }
+  ],
+  "invocation_log": [
+    {
+      "adapter": "web-design-planner",
+      "invoked_at": "2026-08-25T00:09:38.521Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "web-design-maker",
+      "invoked_at": "2026-08-25T00:09:38.544Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "web-design-independent-checker",
+      "invoked_at": "2026-08-25T00:09:38.561Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "web-design-maker",
+      "invoked_at": "2026-08-25T00:09:54.800Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "web-design-independent-checker",
+      "invoked_at": "2026-08-25T00:09:54.809Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "web-design-reducer",
+      "invoked_at": "2026-08-25T00:10:17.480Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "web-design-terminal-verifier",
+      "invoked_at": "2026-08-25T00:10:17.548Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "web-design-learner",
+      "invoked_at": "2026-08-25T00:10:19.360Z",
+      "status": "returned"
+    }
+  ],
+  "budget": {
+    "limit_units": 128,
+    "used_units": 8
+  },
+  "outcome": "awaiting_approval",
+  "terminal_truth": true,
+  "finished_at": "2026-08-25T00:10:19.391Z",
+  "elapsed_seconds": 40.886,
+  "blocked_by": "approval_required",
+  "reason": "Finish line is proven; the declared human approval gate remains closed.",
+  "terminal_evidence": {
+    "evidence": "Recollected all authorities, re-rendered every final candidate, replayed the full gate set, and verified final files, repair closure, and approval boundaries.",
+    "declared_pass": true,
+    "passed": true,
+    "assertions": [
+      {
+        "id": "source-manifest-stable",
+        "passed": true,
+        "detail": "Product, design, brief, visual authority, and implementation sources remained hash-stable."
+      },
+      {
+        "id": "every-surface-reinspected",
+        "passed": true,
+        "detail": "Every isolated surface received one terminal reinspection."
+      },
+      {
+        "id": "all-engineering-and-craft-gates-pass",
+        "passed": true,
+        "detail": "Every terminal render passed all ten gates, desktop and mobile evidence, and the craft floor."
+      },
+      {
+        "id": "final-candidate-manifests-reproduce",
+        "passed": true,
+        "detail": "Every final candidate exactly matches its declared SHA-256 manifest."
+      },
+      {
+        "id": "repair-ledger-is-closed",
+        "passed": true,
+        "detail": "No unresolved checker defect remains after the bounded repair loop."
+      },
+      {
+        "id": "approval-and-external-action-boundary-held",
+        "passed": true,
+        "detail": "The verified candidate remains local and unadopted; deployment and canonical writes stay closed."
+      }
+    ],
+    "artifact_manifest": [
+      {
+        "path": "System/outcome-graph/web-design/closed-loop-canary/2026-08-24-live/candidates/closed-loop-canary/index.html",
+        "sha256": "d18588f11b7218992dde818c9747f4846ca6b2ee638c8ab16ce6913d93b68c75",
+        "bytes": 8082
+      },
+      {
+        "path": "System/outcome-graph/web-design/closed-loop-canary/2026-08-24-live/design-defect-ledger.json",
+        "sha256": "699fd0a4710d4d77a80ca90b9b26a90369ae6fa277e19078b1888ca9f1afda39",
+        "bytes": 10143
+      },
+      {
+        "path": "System/outcome-graph/web-design/closed-loop-canary/2026-08-24-live/design-learning-proposal.json",
+        "sha256": "d0699579ca4ce5a20fcc20c0f734be3ac22fb55b0ad9119eaa2fef5e09f16e82",
+        "bytes": 1157
+      },
+      {
+        "path": "System/outcome-graph/web-design/closed-loop-canary/2026-08-24-live/evidence/closed-loop-canary/desktop-19ed51a932eb.png",
+        "sha256": "19ed51a932ebeda0d926b2cae1e571a8bd821a40d62f03f498d0b3583cef9c8b",
+        "bytes": 42577
+      },
+      {
+        "path": "System/outcome-graph/web-design/closed-loop-canary/2026-08-24-live/evidence/closed-loop-canary/mobile-24e1e61ed683.png",
+        "sha256": "24e1e61ed68395b862cf8f68a2a0b7965119d897378105359aac15d0c268af2d",
+        "bytes": 27828
+      },
+      {
+        "path": "System/outcome-graph/web-design/closed-loop-canary/2026-08-24-live/final-build-manifest.json",
+        "sha256": "df76a2697da7fb23b89fb29f9f8060fb5dfdad809b8ea6794f8c2a07c71683cd",
+        "bytes": 832
+      },
+      {
+        "path": "System/outcome-graph/web-design/closed-loop-canary/2026-08-24-live/web-design-loop-receipt.json",
+        "sha256": "03f91cd62183ab92e316add0def590ad6542147e90d387f3ce61831501fe8e2a",
+        "bytes": 4402
+      }
+    ],
+    "manifest_errors": []
+  },
+  "learning_evidence": {
+    "evidence": "Appended one hashed web-design correction entry without changing canonical design truth.",
+    "corrections": [
+      "Preserve the closed-loop sequence: source authority, isolated implementation, rendered critique, bounded repair, terminal replay, then separate adoption and deployment authority."
+    ],
+    "ledger": "System/outcome-graph/web-design/closed-loop-canary/2026-08-24-live/corrections.jsonl",
+    "ledger_receipt": {
+      "locator": "System/outcome-graph/web-design/closed-loop-canary/2026-08-24-live/corrections.jsonl",
+      "entry_sha256": "5733842fb64f340d314a0de377e10d7099c9a983581eaa90049b63440abe7bd6"
+    }
+  },
+  "drift_fingerprint": "82b6c896899fbc0f3aca6ab9a2bcad7565b16999ce9445af3a7cac6070c992e8",
+  "deduped": true,
+  "durable_state": {
+    "schema_version": 1,
+    "dedupe_identity": "a3e5057af0dd277d6edac3a00b61c7e0d2a918725914bec79ec56c638c69d312",
+    "dedupe_hit": true,
+    "resumed": false,
+    "canonical_binding": {
+      "locator": "dillon-os://web-design/2026-08-24-live",
+      "version": "closed-loop-canary-2026-08-24-v1",
+      "sha256": "64db51d408423660fa02b50ba1ae771b206dfd53d10241504dfb90c568377ea2",
+      "captured_at": "2026-08-25T00:09:38.490Z"
+    },
+    "canonical_binding_fingerprint": "3a23f33faadd5211897e73321905c94dd4caa3dc4e8ff4a191cebe54204aa34c",
+    "contract_fingerprint": "789fd2f708de59f818e3d3a595396ea9b3128696eb8b725c4c94a74fdfd33128",
+    "checkpoint": "runs/OGD-20260825-11747080BBC9/checkpoint.json"
+  }
+}

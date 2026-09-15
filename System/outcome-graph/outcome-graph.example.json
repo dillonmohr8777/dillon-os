@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "graph_id": "weekly-client-report-example",
+  "objective": "Produce one recomputable weekly report per in-scope client from fresh named sources.",
+  "value_signal": "Every reported KPI can be recomputed and every client remains isolated.",
+  "constraints": [
+    "Exact client routing is required.",
+    "Inaccessible fields remain pending.",
+    "No report is sent or published by this graph."
+  ],
+  "upstream_artifacts": [
+    "client-operations/queue/work-items.json",
+    "client-specific source ledgers",
+    "current reporting definitions"
+  ],
+  "scope": {
+    "root": "client-operations",
+    "isolation_key": "client_id",
+    "data_class": "client-confidential"
+  },
+  "source_freshness": {
+    "checked_at": "2026-08-24T12:00:00Z",
+    "max_age_seconds": 93600,
+    "evidence": "Connector and source-ledger probes recorded before planning."
+  },
+  "finish_line": {
+    "predicate": "Every in-scope client has a separate report whose KPI math recomputes from named source fields and whose checker passed.",
+    "required_artifacts": [
+      "reports/*/weekly-report.json",
+      "reports/*/source-ledger.json"
+    ]
+  },
+  "stopping": {
+    "max_graph_iterations": 2,
+    "max_worker_attempts": 3,
+    "timeout_seconds": 1200,
+    "max_parallel": 3,
+    "budget_units": 40
+  },
+  "adapters": {
+    "planner": "weekly-report-planner",
+    "maker": "client-report-maker",
+    "checker": "client-report-math-checker",
+    "reducer": "report-index-merger",
+    "terminal_verifier": "portfolio-report-verifier",
+    "learner": "report-correction-ledger"
+  },
+  "approval": {
+    "external_actions": false,
+    "required_before": [
+      "adopt"
+    ]
+  },
+  "governance": {
+    "orchestrator": "Codex acting as Marketing Chief",
+    "canonical_state": "client-operations/queue/work-items.json",
+    "dedupe_key": "client_id:reporting-window:weekly-report",
+    "checkpoint": "12_Brain/state/outcome-graph/weekly-client-report.json",
+    "rollback": "Discard unadopted report artifacts and retain the prior verified report.",
+    "escalation": "Return ambiguous routing, stale sources, or disputed KPI definitions to Marketing Chief.",
+    "allowed_actions": [
+      "read_named_sources",
+      "write_local_report_artifact",
+      "recompute_kpis",
+      "hash_artifacts"
+    ],
+    "forbidden_actions": [
+      "blend_clients",
+      "invent_metrics",
+      "send",
+      "publish",
+      "canonical_queue_write"
+    ]
+  },
+  "learning": {
+    "fingerprint_inputs": [
+      "client-set",
+      "source-ledgers",
+      "artifact-hashes",
+      "acceptance-assertions"
+    ],
+    "corrections_ledger": "12_Brain/11_Craft/outcome-graph-corrections.jsonl"
+  }
+}

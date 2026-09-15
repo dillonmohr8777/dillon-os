@@ -1,0 +1,54 @@
+{
+  "sourceUrl": "https://kevintcoyneattorneyatlaw.com/",
+  "finalUrl": "https://kevintcoyneattorneyatlaw.com/",
+  "sourceDomain": "kevintcoyneattorneyatlaw.com",
+  "httpStatus": 200,
+  "contentType": "text/html",
+  "pageSha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023",
+  "title": "",
+  "description": "",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260826-052002\\preflight\\kevin-t-coyne-attorney-at-law\\logo.svg",
+    "fileName": "logo.svg",
+    "sourceUrl": "https://kevintcoyneattorneyatlaw.com/",
+    "sourceEvidence": "Exact business name from the verified official source; code-rendered transparent typographic fallback.",
+    "type": "svg",
+    "dimensions": {
+      "width": 1200,
+      "height": 320
+    },
+    "sha256": "6707d4e794bca30a166664bb3a2dbf3e2f0289731c4c0d1a438272dde7208ea0",
+    "sourceSha256": null,
+    "sourceType": "verified business name",
+    "sourceFileName": null,
+    "transformation": "Disclosed exact-name typographic fallback; no icon, symbol, or first-party logo imitation.",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "reason": "SVG has no background rectangle."
+    },
+    "transparent": true,
+    "identityFallback": true,
+    "downloadFailures": [],
+    "bytes": 458
+  },
+  "references": [],
+  "contact": {
+    "phone": "",
+    "address": "",
+    "city": "",
+    "phoneSource": null,
+    "addressSource": null
+  },
+  "visualReferenceFallback": "No usable first-party photography was exposed by the legacy source. Use only disclosed Align Image Gen concept imagery.",
+  "referenceFailures": [],
+  "brandColors": [
+    "#f05a28"
+  ],
+  "checkedAt": "2026-08-26T09:34:42.934Z"
+}

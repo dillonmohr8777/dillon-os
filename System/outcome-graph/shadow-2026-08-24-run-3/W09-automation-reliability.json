@@ -1,0 +1,1322 @@
+{
+  "schema_version": 1,
+  "routine_id": "W09",
+  "generated_at": "2026-08-24T21:15:25.021Z",
+  "objective": "Truthfully audit automation reliability, including false-completion risk.",
+  "source_fingerprint": "d2aa8f6a9625977321fc904c4d8c3f172daf46e8701d168ed0195fa5ff895d6a",
+  "revised_from_checker_findings": [],
+  "snapshot": {
+    "captured_at": "2026-08-24T21:15:12.732Z",
+    "operating_team": {
+      "harness": "Test-ClaudeOperatingTeam",
+      "mode": "read-only",
+      "registry": "11_Agents/claude-operating-team.json",
+      "overall": "pass",
+      "passed": 33,
+      "total": 33,
+      "checks": [
+        {
+          "check": "cadence_bots_unique",
+          "expected": "6 unique",
+          "actual": 6,
+          "ok": true
+        },
+        {
+          "check": "specialists_unique",
+          "expected": "15 unique",
+          "actual": 15,
+          "ok": true
+        },
+        {
+          "check": "agent_contracts_load",
+          "expected": "21 contracts",
+          "actual": 21,
+          "ok": true
+        },
+        {
+          "check": "agent_names_match_roster",
+          "expected": "0 differences",
+          "actual": 0,
+          "ok": true
+        },
+        {
+          "check": "agent_contracts_complete",
+          "expected": "0 incomplete",
+          "actual": 0,
+          "ok": true
+        },
+        {
+          "check": "routine_ids_unique",
+          "expected": "54 unique",
+          "actual": 54,
+          "ok": true
+        },
+        {
+          "check": "routine_ids_match_manifest",
+          "expected": "0 differences",
+          "actual": 0,
+          "ok": true
+        },
+        {
+          "check": "owners_resolve_to_known_agents",
+          "expected": "0 unknown",
+          "actual": 0,
+          "ok": true
+        },
+        {
+          "check": "routine_owned_exactly_once",
+          "expected": "0 deviations",
+          "actual": 0,
+          "ok": true
+        },
+        {
+          "check": "simulator_defines_9_stages",
+          "expected": "9",
+          "actual": 9,
+          "ok": true
+        },
+        {
+          "check": "operating_stages_match_simulator",
+          "expected": "0 differences",
+          "actual": 0,
+          "ok": true
+        },
+        {
+          "check": "receipt_fields_count",
+          "expected": "9",
+          "actual": 9,
+          "ok": true
+        },
+        {
+          "check": "stage_unit_distinct_from_receipt_fields",
+          "expected": "<=1 incidental overlap",
+          "actual": 1,
+          "ok": true
+        },
+        {
+          "check": "stage_pairs_unique",
+          "expected": "486 unique",
+          "actual": 486,
+          "ok": true
+        },
+        {
+          "check": "stage_total_matches_declared",
+          "expected": "486",
+          "actual": 486,
+          "ok": true
+        },
+        {
+          "check": "manifest_steps_are_a_separate_unit",
+          "expected": "272 <> 486",
+          "actual": 272,
+          "ok": true
+        },
+        {
+          "check": "departments_count",
+          "expected": "6",
+          "actual": 6,
+          "ok": true
+        },
+        {
+          "check": "department_stage_math",
+          "expected": "0 errors",
+          "actual": 0,
+          "ok": true
+        },
+        {
+          "check": "departments_partition_54",
+          "expected": "54 unique, no overlap",
+          "actual": 54,
+          "ok": true
+        },
+        {
+          "check": "department_ids_match_routines",
+          "expected": "0 differences",
+          "actual": 0,
+          "ok": true
+        },
+        {
+          "check": "routine_module_agrees_with_department",
+          "expected": "0 mismatches",
+          "actual": 0,
+          "ok": true
+        },
+        {
+          "check": "no_silent_missing_fields",
+          "expected": "0 unmarked gaps",
+          "actual": 0,
+          "ok": true
+        },
+        {
+          "check": "empty_fields_carry_explicit_marker",
+          "expected": "unresolved or not_applicable",
+          "actual": "not_applicable=73",
+          "ok": true
+        },
+        {
+          "check": "all_required_fields_have_provenance",
+          "expected": "0 missing",
+          "actual": 0,
+          "ok": true
+        },
+        {
+          "check": "routes_unique",
+          "expected": "54 unique",
+          "actual": 54,
+          "ok": true
+        },
+        {
+          "check": "route_encodes_department_owner_id",
+          "expected": "0 malformed",
+          "actual": 0,
+          "ok": true
+        },
+        {
+          "check": "no_forbidden_verb_granted",
+          "expected": "0 leaks",
+          "actual": 0,
+          "ok": true
+        },
+        {
+          "check": "tier2_never_claude_executable",
+          "expected": "0 executable",
+          "actual": 0,
+          "ok": true
+        },
+        {
+          "check": "never_routines_justified_and_empty",
+          "expected": "0 defects",
+          "actual": 0,
+          "ok": true
+        },
+        {
+          "check": "agent_contracts_grant_no_forbidden_verb",
+          "expected": "0 leaks",
+          "actual": 0,
+          "ok": true
+        },
+        {
+          "check": "authority_subordinate_to_codex",
+          "expected": "canonical+external false",
+          "actual": true,
+          "ok": true
+        },
+        {
+          "check": "stage_ledger_present_and_evidenced",
+          "expected": ">=5 evidence items",
+          "actual": "1",
+          "ok": true
+        },
+        {
+          "check": "unsupported_claims_declared_not_hidden",
+          "expected": ">=1 declared",
+          "actual": 1,
+          "ok": true
+        }
+      ]
+    },
+    "daily_driver": {
+      "harness": "Test-ClaudeDailyDriver",
+      "mode": "read-only",
+      "overall": "pass",
+      "passed": 42,
+      "total": 42,
+      "tests": [
+        {
+          "id": "T1a",
+          "test": "policy_complete_for_all_54",
+          "expected": "0 missing",
+          "actual": 0,
+          "ok": true
+        },
+        {
+          "id": "T1b",
+          "test": "policy_provenance_labelled",
+          "expected": "canonical + delegated = 54",
+          "actual": "17 + 37",
+          "ok": true
+        },
+        {
+          "id": "T1c",
+          "test": "delegated_grant_recorded",
+          "expected": "grant id present",
+          "actual": "delegated-autonomy-v1-2026-08-12",
+          "ok": true
+        },
+        {
+          "id": "T2a",
+          "test": "allowlist_block_found",
+          "expected": "non-empty",
+          "actual": 5229,
+          "ok": true
+        },
+        {
+          "id": "T2b",
+          "test": "allowlist_has_no_forbidden_verb",
+          "expected": "0",
+          "actual": 0,
+          "ok": true
+        },
+        {
+          "id": "T2c",
+          "test": "allowlist_entries_discovered",
+          "expected": ">=6",
+          "actual": 12,
+          "ok": true
+        },
+        {
+          "id": "T2d",
+          "test": "every_entry_has_timeout",
+          "expected": "0 without",
+          "actual": 0,
+          "ok": true
+        },
+        {
+          "id": "T2e",
+          "test": "every_entry_has_validator",
+          "expected": "0 without",
+          "actual": 0,
+          "ok": true
+        },
+        {
+          "id": "T3a",
+          "test": "allowlisted_script_paths_exist",
+          "expected": "0 missing",
+          "actual": 0,
+          "ok": true
+        },
+        {
+          "id": "T3b",
+          "test": "node_executable_resolvable",
+          "expected": "true",
+          "actual": true,
+          "ok": true
+        },
+        {
+          "id": "T4a",
+          "test": "manifest_row_present_and_parseable",
+          "expected": "row found",
+          "actual": true,
+          "ok": true
+        },
+        {
+          "id": "T4b",
+          "test": "manifest_row_targets_driver",
+          "expected": "Invoke-ClaudeDailyDriver.ps1",
+          "actual": true,
+          "ok": true
+        },
+        {
+          "id": "T4c",
+          "test": "manifest_row_is_console_free",
+          "expected": "-WindowStyle Hidden",
+          "actual": true,
+          "ok": true
+        },
+        {
+          "id": "T4d",
+          "test": "manifest_row_passes_explicit_vaultroot",
+          "expected": "-VaultRoot present",
+          "actual": true,
+          "ok": true
+        },
+        {
+          "id": "T5a",
+          "test": "vbs_hidden_host_exists",
+          "expected": "true",
+          "actual": true,
+          "ok": true
+        },
+        {
+          "id": "T5b",
+          "test": "task_uses_wscript_vbs_host",
+          "expected": "wscript + VBS",
+          "actual": "C:\\Windows\\System32\\wscript.exe",
+          "ok": true
+        },
+        {
+          "id": "T4e",
+          "test": "task_start_when_available",
+          "expected": "true",
+          "actual": true,
+          "ok": true
+        },
+        {
+          "id": "T4f",
+          "test": "task_does_not_wake_machine",
+          "expected": "WakeToRun false",
+          "actual": false,
+          "ok": true
+        },
+        {
+          "id": "T4g",
+          "test": "task_single_instance",
+          "expected": "IgnoreNew",
+          "actual": 2,
+          "ok": true
+        },
+        {
+          "id": "T4h",
+          "test": "controller_min_interval_below_trigger",
+          "expected": "min<15 min",
+          "actual": "min=10 interval=15",
+          "ok": true
+        },
+        {
+          "id": "T4i",
+          "test": "cycle_budget_inside_execution_limit",
+          "expected": "wall<12 min",
+          "actual": "wall=8 exec=12",
+          "ok": true
+        },
+        {
+          "id": "T4j",
+          "test": "slowest_command_inside_execution_limit",
+          "expected": "<= 12 min",
+          "actual": "300s",
+          "ok": true
+        },
+        {
+          "id": "T6a",
+          "test": "dedupe_counts_degraded_completion",
+          "expected": "code path present",
+          "actual": true,
+          "ok": true
+        },
+        {
+          "id": "T6b",
+          "test": "completed_routine_blocked_by_dedupe",
+          "expected": "G6 blocks D03",
+          "actual": "G6_dedupe",
+          "ok": true
+        },
+        {
+          "id": "T7a",
+          "test": "unknown_client_fails_isolation",
+          "expected": "G3 blocks",
+          "actual": "G3_client_isolation+G6_dedupe",
+          "ok": true
+        },
+        {
+          "id": "T8a",
+          "test": "usage_ledger_declares_ceilings",
+          "expected": "limits present",
+          "actual": "day=24/26 frontier=0/1",
+          "ok": true
+        },
+        {
+          "id": "T8b",
+          "test": "driver_enforces_daily_ceiling",
+          "expected": "ceiling check present",
+          "actual": true,
+          "ok": true
+        },
+        {
+          "id": "T8c",
+          "test": "frontier_requires_explicit_opt_in",
+          "expected": "EnableFrontier + disabled_by_default",
+          "actual": true,
+          "ok": true
+        },
+        {
+          "id": "T12a",
+          "test": "daily_keys_on_date",
+          "expected": "ends in yyyy-MM-dd",
+          "actual": "internal:2026-08-24:D10",
+          "ok": true
+        },
+        {
+          "id": "T12b",
+          "test": "weekly_keys_on_iso_week",
+          "expected": "ends in yyyy-Www",
+          "actual": "internal:2026-W35:W10",
+          "ok": true
+        },
+        {
+          "id": "T12c",
+          "test": "monthly_keys_on_year_month",
+          "expected": "ends in yyyy-MM",
+          "actual": "internal:2026-08:M02",
+          "ok": true
+        },
+        {
+          "id": "T12d",
+          "test": "weekly_twice_splits_the_week",
+          "expected": "ends in yyyy-WwwA|B",
+          "actual": "internal:2026-W35A:W02",
+          "ok": true
+        },
+        {
+          "id": "T12e",
+          "test": "monthly_key_is_not_a_daily_key",
+          "expected": "monthly != daily granularity",
+          "actual": "internal:2026-08:M02 vs internal:2026-08-24:D10",
+          "ok": true
+        },
+        {
+          "id": "T9a",
+          "test": "connector_backed_routines_identified",
+          "expected": ">=1",
+          "actual": 3,
+          "ok": true
+        },
+        {
+          "id": "T9b",
+          "test": "connector_probe_fails_closed",
+          "expected": "G5 blocks D17",
+          "actual": "G5_stale_source",
+          "ok": true
+        },
+        {
+          "id": "T9c",
+          "test": "connector_never_synthesises_success",
+          "expected": "fail_closed rule declared",
+          "actual": "external_connector probes cannot be verified locally and therefore always block; a connector outage is a blocked result, never synthetic success",
+          "ok": true
+        },
+        {
+          "id": "T10a",
+          "test": "canary_launches_nothing",
+          "expected": "launched=false",
+          "actual": true,
+          "ok": true
+        },
+        {
+          "id": "T10b",
+          "test": "canary_refuses_while_tunnel_present",
+          "expected": "NOT-READY",
+          "actual": "NOT-READY",
+          "ok": true
+        },
+        {
+          "id": "T10c",
+          "test": "loop_treats_canary_refusal_as_blocked",
+          "expected": "blocked_exit declares 1",
+          "actual": true,
+          "ok": true
+        },
+        {
+          "id": "T11a",
+          "test": "exit_code_alone_cannot_pass",
+          "expected": "validator gate present",
+          "actual": true,
+          "ok": true
+        },
+        {
+          "id": "T11b",
+          "test": "redaction_tripwire_on_child_stdout",
+          "expected": "tripwire present",
+          "actual": true,
+          "ok": true
+        },
+        {
+          "id": "T11c",
+          "test": "unknown_command_fails_closed",
+          "expected": "not on allowlist",
+          "actual": true,
+          "ok": true
+        }
+      ]
+    },
+    "legacy_outcome_audit": {
+      "schema_version": 1,
+      "audited_at": "2026-08-24T21:15:16.764Z",
+      "sources": {
+        "registry_path": "C:\\Users\\dillo\\repos\\dillon-os\\11_Agents\\claude-operating-team.json",
+        "registry_sha256": "29986f4d56b97d27846799e6cbd8ec34958cc1ef3ba6bcfa0c1863814934b75b",
+        "receipt_path": "C:\\Users\\dillo\\repos\\dillon-os\\12_Brain\\queue\\claude-loop-2026-08-24.jsonl",
+        "receipt_sha256": "dd2f3ecb6350313bc9de0c2872a3100517f2496899d657981d574fdcb8f1a552"
+      },
+      "counts": {
+        "routines_total": 54,
+        "routines_executable": 29,
+        "receipts_total": 24,
+        "receipts_complete": 24,
+        "receipts_with_false_completion_risk": 24
+      },
+      "contract_gap_counts": {
+        "objective": 29,
+        "terminal_predicate": 29,
+        "required_artifact_paths": 29,
+        "executable_terminal_verifier": 29,
+        "stopping_condition": 29
+      },
+      "receipt_risk_counts": {
+        "only_loop_log_and_checkpoint_evidenced": 24,
+        "independent_verification_is_structural_only": 24
+      },
+      "verdict": "migration_required",
+      "finding": "The legacy loop can prove that orchestration ran without proving the declared outcome.",
+      "executable_routine_findings": [
+        {
+          "routine_id": "D03",
+          "name": "Review overnight automations and watchdogs",
+          "cadence": "daily",
+          "declared_artifact": "Automation health brief",
+          "declared_value_signal": "Failures are evidence-backed and healthy status is not inferred from configuration alone",
+          "gaps": [
+            "objective",
+            "terminal_predicate",
+            "required_artifact_paths",
+            "executable_terminal_verifier",
+            "stopping_condition"
+          ]
+        },
+        {
+          "routine_id": "D07",
+          "name": "Triage monitoring and system alerts",
+          "cadence": "daily",
+          "declared_artifact": "Incident triage packet",
+          "declared_value_signal": "Impact, scope, evidence, and next safe action are explicit",
+          "gaps": [
+            "objective",
+            "terminal_predicate",
+            "required_artifact_paths",
+            "executable_terminal_verifier",
+            "stopping_condition"
+          ]
+        },
+        {
+          "routine_id": "D10",
+          "name": "Infer the real deliverable",
+          "cadence": "daily",
+          "declared_artifact": "Deliverable contract",
+          "declared_value_signal": "The finish line is concrete enough for an independent checker",
+          "gaps": [
+            "objective",
+            "terminal_predicate",
+            "required_artifact_paths",
+            "executable_terminal_verifier",
+            "stopping_condition"
+          ]
+        },
+        {
+          "routine_id": "D11",
+          "name": "Plan dependencies and approval gates",
+          "cadence": "daily",
+          "declared_artifact": "Bounded execution graph",
+          "declared_value_signal": "Every node has an input contract, output contract, and owner",
+          "gaps": [
+            "objective",
+            "terminal_predicate",
+            "required_artifact_paths",
+            "executable_terminal_verifier",
+            "stopping_condition"
+          ]
+        },
+        {
+          "routine_id": "D12",
+          "name": "Run repository and worktree preflight",
+          "cadence": "daily",
+          "declared_artifact": "Preflight receipt",
+          "declared_value_signal": "Target files and unrelated changes are clearly separated",
+          "gaps": [
+            "objective",
+            "terminal_predicate",
+            "required_artifact_paths",
+            "executable_terminal_verifier",
+            "stopping_condition"
+          ]
+        },
+        {
+          "routine_id": "D13",
+          "name": "Load product truth and visual authority",
+          "cadence": "daily",
+          "declared_artifact": "Design context receipt",
+          "declared_value_signal": "The chosen direction is traceable to product and brand evidence",
+          "gaps": [
+            "objective",
+            "terminal_predicate",
+            "required_artifact_paths",
+            "executable_terminal_verifier",
+            "stopping_condition"
+          ]
+        },
+        {
+          "routine_id": "D14",
+          "name": "Build a website, landing page, app, or dashboard",
+          "cadence": "daily",
+          "declared_artifact": "Local build artifact and verification receipt",
+          "declared_value_signal": "Build succeeds and artifact is reviewable at desktop and mobile sizes",
+          "gaps": [
+            "objective",
+            "terminal_predicate",
+            "required_artifact_paths",
+            "executable_terminal_verifier",
+            "stopping_condition"
+          ]
+        },
+        {
+          "routine_id": "D16",
+          "name": "Produce content, copy, SEO, AEO, and GEO deliverables",
+          "cadence": "daily",
+          "declared_artifact": "Content artifact and evidence map",
+          "declared_value_signal": "Claims are sourced and voice, intent, proof, and conversion path align",
+          "gaps": [
+            "objective",
+            "terminal_predicate",
+            "required_artifact_paths",
+            "executable_terminal_verifier",
+            "stopping_condition"
+          ]
+        },
+        {
+          "routine_id": "D17",
+          "name": "Inspect paid-media delivery read only",
+          "cadence": "daily",
+          "declared_artifact": "Read-only paid-media evidence packet",
+          "declared_value_signal": "Every metric has account, date range, source, and freshness",
+          "gaps": [
+            "objective",
+            "terminal_predicate",
+            "required_artifact_paths",
+            "executable_terminal_verifier",
+            "stopping_condition"
+          ]
+        },
+        {
+          "routine_id": "D18",
+          "name": "Validate attribution, leads, and downstream outcomes",
+          "cadence": "daily",
+          "declared_artifact": "Attribution validation receipt",
+          "declared_value_signal": "Reported outcomes are either verified or explicitly pending validation",
+          "gaps": [
+            "objective",
+            "terminal_predicate",
+            "required_artifact_paths",
+            "executable_terminal_verifier",
+            "stopping_condition"
+          ]
+        },
+        {
+          "routine_id": "D19",
+          "name": "Build a report, dashboard, deck, or executive summary",
+          "cadence": "daily",
+          "declared_artifact": "Report artifact and source ledger",
+          "declared_value_signal": "Derived KPIs can be recomputed from named source fields",
+          "gaps": [
+            "objective",
+            "terminal_predicate",
+            "required_artifact_paths",
+            "executable_terminal_verifier",
+            "stopping_condition"
+          ]
+        },
+        {
+          "routine_id": "D24",
+          "name": "Run independent QA and release criticism",
+          "cadence": "daily",
+          "declared_artifact": "Independent QA verdict",
+          "declared_value_signal": "Verdict is tied to reproduced checks and exact artifacts",
+          "gaps": [
+            "objective",
+            "terminal_predicate",
+            "required_artifact_paths",
+            "executable_terminal_verifier",
+            "stopping_condition"
+          ]
+        },
+        {
+          "routine_id": "D25",
+          "name": "Create an evidence-backed completion handoff",
+          "cadence": "daily",
+          "declared_artifact": "Final status receipt",
+          "declared_value_signal": "A reviewer can distinguish complete, partial, blocked, drafted, staged, deployed, and sent",
+          "gaps": [
+            "objective",
+            "terminal_predicate",
+            "required_artifact_paths",
+            "executable_terminal_verifier",
+            "stopping_condition"
+          ]
+        },
+        {
+          "routine_id": "D26",
+          "name": "Capture durable knowledge in Dillon OS",
+          "cadence": "daily",
+          "declared_artifact": "Knowledge proposal",
+          "declared_value_signal": "The proposal is source-located, deduplicated, client-separated, and reversible",
+          "gaps": [
+            "objective",
+            "terminal_predicate",
+            "required_artifact_paths",
+            "executable_terminal_verifier",
+            "stopping_condition"
+          ]
+        },
+        {
+          "routine_id": "W04",
+          "name": "Build the content and creative production calendar",
+          "cadence": "weekly",
+          "declared_artifact": "Client-separated production calendar",
+          "declared_value_signal": "Every content item has purpose, channel, owner, proof source, and approval state",
+          "gaps": [
+            "objective",
+            "terminal_predicate",
+            "required_artifact_paths",
+            "executable_terminal_verifier",
+            "stopping_condition"
+          ]
+        },
+        {
+          "routine_id": "W05",
+          "name": "Run the Prospect Radar Next 20 website factory",
+          "cadence": "weekly",
+          "declared_artifact": "Local-only 20-site batch and evidence bundle",
+          "declared_value_signal": "20 of 20 pass build, route, asset, browser, detector, and checker gates",
+          "gaps": [
+            "objective",
+            "terminal_predicate",
+            "required_artifact_paths",
+            "executable_terminal_verifier",
+            "stopping_condition"
+          ]
+        },
+        {
+          "routine_id": "W06",
+          "name": "Produce client weekly reports",
+          "cadence": "weekly",
+          "declared_artifact": "Client report, source ledger, and unsent delivery draft",
+          "declared_value_signal": "Each report is client-separated, date-bounded, recomputable, and decision-ready",
+          "gaps": [
+            "objective",
+            "terminal_predicate",
+            "required_artifact_paths",
+            "executable_terminal_verifier",
+            "stopping_condition"
+          ]
+        },
+        {
+          "routine_id": "W08",
+          "name": "Review CRO, SEO, AEO, GEO, offer, and outreach experiments",
+          "cadence": "weekly",
+          "declared_artifact": "Experiment decision ledger proposal",
+          "declared_value_signal": "Decision follows predeclared evidence and uncertainty is explicit",
+          "gaps": [
+            "objective",
+            "terminal_predicate",
+            "required_artifact_paths",
+            "executable_terminal_verifier",
+            "stopping_condition"
+          ]
+        },
+        {
+          "routine_id": "W09",
+          "name": "Audit automation reliability",
+          "cadence": "weekly",
+          "declared_artifact": "Weekly automation health report",
+          "declared_value_signal": "Every automation is classified as verified, degraded, blocked, stale, or retired",
+          "gaps": [
+            "objective",
+            "terminal_predicate",
+            "required_artifact_paths",
+            "executable_terminal_verifier",
+            "stopping_condition"
+          ]
+        },
+        {
+          "routine_id": "W10",
+          "name": "Run the executive weekly review",
+          "cadence": "weekly",
+          "declared_artifact": "Executive weekly review",
+          "declared_value_signal": "Review ends with a small ranked decision list and evidence links",
+          "gaps": [
+            "objective",
+            "terminal_predicate",
+            "required_artifact_paths",
+            "executable_terminal_verifier",
+            "stopping_condition"
+          ]
+        },
+        {
+          "routine_id": "W11",
+          "name": "Test Dillon OS knowledge graph health",
+          "cadence": "weekly",
+          "declared_artifact": "Knowledge health receipt and one proposal",
+          "declared_value_signal": "Findings are reproducible and proposed change is narrow and reversible",
+          "gaps": [
+            "objective",
+            "terminal_predicate",
+            "required_artifact_paths",
+            "executable_terminal_verifier",
+            "stopping_condition"
+          ]
+        },
+        {
+          "routine_id": "M02",
+          "name": "Evaluate agents, permissions, and output quality",
+          "cadence": "monthly",
+          "declared_artifact": "Agent evaluation scorecard",
+          "declared_value_signal": "Each agent has measured quality, bounded authority, and a disposition",
+          "gaps": [
+            "objective",
+            "terminal_predicate",
+            "required_artifact_paths",
+            "executable_terminal_verifier",
+            "stopping_condition"
+          ]
+        },
+        {
+          "routine_id": "M03",
+          "name": "Audit scheduled work, usage, and cost",
+          "cadence": "monthly",
+          "declared_artifact": "Automation value and cost report",
+          "declared_value_signal": "Every recurring cost maps to a verified outcome or a clear stop proposal",
+          "gaps": [
+            "objective",
+            "terminal_predicate",
+            "required_artifact_paths",
+            "executable_terminal_verifier",
+            "stopping_condition"
+          ]
+        },
+        {
+          "routine_id": "M04",
+          "name": "Audit client and account separation",
+          "cadence": "monthly",
+          "declared_artifact": "Client separation audit",
+          "declared_value_signal": "Every sampled artifact maps to exactly one client or is quarantined",
+          "gaps": [
+            "objective",
+            "terminal_predicate",
+            "required_artifact_paths",
+            "executable_terminal_verifier",
+            "stopping_condition"
+          ]
+        },
+        {
+          "routine_id": "M05",
+          "name": "Refresh operating rules, brand voice, and design truth",
+          "cadence": "monthly",
+          "declared_artifact": "Documentation refresh proposal",
+          "declared_value_signal": "Proposals state authority, scope, conflict, and intended effective date",
+          "gaps": [
+            "objective",
+            "terminal_predicate",
+            "required_artifact_paths",
+            "executable_terminal_verifier",
+            "stopping_condition"
+          ]
+        },
+        {
+          "routine_id": "E04",
+          "name": "Recover a failed connector or collector",
+          "cadence": "event",
+          "declared_artifact": "Recovery or blocked receipt",
+          "declared_value_signal": "Recovered data is source-backed or run is honestly blocked with state preserved",
+          "gaps": [
+            "objective",
+            "terminal_predicate",
+            "required_artifact_paths",
+            "executable_terminal_verifier",
+            "stopping_condition"
+          ]
+        },
+        {
+          "routine_id": "E05",
+          "name": "Onboard an existing repository or project",
+          "cadence": "event",
+          "declared_artifact": "Codebase route and operating guide",
+          "declared_value_signal": "Commands, boundaries, owners, tests, and deployment targets are evidence-backed",
+          "gaps": [
+            "objective",
+            "terminal_predicate",
+            "required_artifact_paths",
+            "executable_terminal_verifier",
+            "stopping_condition"
+          ]
+        },
+        {
+          "routine_id": "E10",
+          "name": "Take over or recover a live agent runtime",
+          "cadence": "event",
+          "declared_artifact": "Runtime recovery receipt",
+          "declared_value_signal": "Behavior is verified from current logs and end-to-end runtime evidence",
+          "gaps": [
+            "objective",
+            "terminal_predicate",
+            "required_artifact_paths",
+            "executable_terminal_verifier",
+            "stopping_condition"
+          ]
+        },
+        {
+          "routine_id": "E11",
+          "name": "Capture and add a newly discovered routine",
+          "cadence": "event",
+          "declared_artifact": "New routine definition and verified recording entry",
+          "declared_value_signal": "The new routine is reproducible, privacy-bounded, and independently verifiable",
+          "gaps": [
+            "objective",
+            "terminal_predicate",
+            "required_artifact_paths",
+            "executable_terminal_verifier",
+            "stopping_condition"
+          ]
+        }
+      ],
+      "receipt_findings": [
+        {
+          "run_id": "LOOP-20260824-000819257",
+          "routine_id": "D03",
+          "declared_artifact": "Automation health brief",
+          "declared_value_signal": "Failures are evidence-backed and healthy status is not inferred from configuration alone",
+          "evidenced_paths": [
+            "12_Brain/queue/claude-loop-2026-08-24.jsonl",
+            "12_Brain/state/claude-routines/D03.json"
+          ],
+          "checks": "gates 8/8; stages ok 9/9; blocked 0",
+          "risks": [
+            "only_loop_log_and_checkpoint_evidenced",
+            "independent_verification_is_structural_only"
+          ]
+        },
+        {
+          "run_id": "LOOP-20260824-000824488",
+          "routine_id": "D07",
+          "declared_artifact": "Incident triage packet",
+          "declared_value_signal": "Impact, scope, evidence, and next safe action are explicit",
+          "evidenced_paths": [
+            "12_Brain/queue/claude-loop-2026-08-24.jsonl",
+            "12_Brain/state/claude-routines/D07.json"
+          ],
+          "checks": "gates 8/8; stages ok 9/9; blocked 0",
+          "risks": [
+            "only_loop_log_and_checkpoint_evidenced",
+            "independent_verification_is_structural_only"
+          ]
+        },
+        {
+          "run_id": "LOOP-20260824-000834338",
+          "routine_id": "D10",
+          "declared_artifact": "Deliverable contract",
+          "declared_value_signal": "The finish line is concrete enough for an independent checker",
+          "evidenced_paths": [
+            "12_Brain/queue/claude-loop-2026-08-24.jsonl",
+            "12_Brain/state/claude-routines/D10.json"
+          ],
+          "checks": "gates 8/8; stages ok 9/9; blocked 0",
+          "risks": [
+            "only_loop_log_and_checkpoint_evidenced",
+            "independent_verification_is_structural_only"
+          ]
+        },
+        {
+          "run_id": "LOOP-20260824-002319263",
+          "routine_id": "D11",
+          "declared_artifact": "Bounded execution graph",
+          "declared_value_signal": "Every node has an input contract, output contract, and owner",
+          "evidenced_paths": [
+            "12_Brain/queue/claude-loop-2026-08-24.jsonl",
+            "12_Brain/state/claude-routines/D11.json"
+          ],
+          "checks": "gates 8/8; stages ok 9/9; blocked 0",
+          "risks": [
+            "only_loop_log_and_checkpoint_evidenced",
+            "independent_verification_is_structural_only"
+          ]
+        },
+        {
+          "run_id": "LOOP-20260824-002321080",
+          "routine_id": "D12",
+          "declared_artifact": "Preflight receipt",
+          "declared_value_signal": "Target files and unrelated changes are clearly separated",
+          "evidenced_paths": [
+            "12_Brain/queue/claude-loop-2026-08-24.jsonl",
+            "12_Brain/state/claude-routines/D12.json"
+          ],
+          "checks": "gates 8/8; stages ok 9/9; blocked 0",
+          "risks": [
+            "only_loop_log_and_checkpoint_evidenced",
+            "independent_verification_is_structural_only"
+          ]
+        },
+        {
+          "run_id": "LOOP-20260824-002323136",
+          "routine_id": "D13",
+          "declared_artifact": "Design context receipt",
+          "declared_value_signal": "The chosen direction is traceable to product and brand evidence",
+          "evidenced_paths": [
+            "12_Brain/queue/claude-loop-2026-08-24.jsonl",
+            "12_Brain/state/claude-routines/D13.json"
+          ],
+          "checks": "gates 8/8; stages ok 9/9; blocked 0",
+          "risks": [
+            "only_loop_log_and_checkpoint_evidenced",
+            "independent_verification_is_structural_only"
+          ]
+        },
+        {
+          "run_id": "LOOP-20260824-003819249",
+          "routine_id": "D16",
+          "declared_artifact": "Content artifact and evidence map",
+          "declared_value_signal": "Claims are sourced and voice, intent, proof, and conversion path align",
+          "evidenced_paths": [
+            "12_Brain/queue/claude-loop-2026-08-24.jsonl",
+            "12_Brain/state/claude-routines/D16.json"
+          ],
+          "checks": "gates 8/8; stages ok 9/9; blocked 0",
+          "risks": [
+            "only_loop_log_and_checkpoint_evidenced",
+            "independent_verification_is_structural_only"
+          ]
+        },
+        {
+          "run_id": "LOOP-20260824-003821791",
+          "routine_id": "D24",
+          "declared_artifact": "Independent QA verdict",
+          "declared_value_signal": "Verdict is tied to reproduced checks and exact artifacts",
+          "evidenced_paths": [
+            "12_Brain/queue/claude-loop-2026-08-24.jsonl",
+            "12_Brain/state/maker-checker.json"
+          ],
+          "checks": "gates 8/8; stages ok 9/9; blocked 0",
+          "risks": [
+            "only_loop_log_and_checkpoint_evidenced",
+            "independent_verification_is_structural_only"
+          ]
+        },
+        {
+          "run_id": "LOOP-20260824-003824768",
+          "routine_id": "D25",
+          "declared_artifact": "Final status receipt",
+          "declared_value_signal": "A reviewer can distinguish complete, partial, blocked, drafted, staged, deployed, and sent",
+          "evidenced_paths": [
+            "12_Brain/queue/claude-loop-2026-08-24.jsonl",
+            "12_Brain/state/claude-routines/D25.json"
+          ],
+          "checks": "gates 8/8; stages ok 9/9; blocked 0",
+          "risks": [
+            "only_loop_log_and_checkpoint_evidenced",
+            "independent_verification_is_structural_only"
+          ]
+        },
+        {
+          "run_id": "LOOP-20260824-005319809",
+          "routine_id": "D26",
+          "declared_artifact": "Knowledge proposal",
+          "declared_value_signal": "The proposal is source-located, deduplicated, client-separated, and reversible",
+          "evidenced_paths": [
+            "12_Brain/queue/claude-loop-2026-08-24.jsonl",
+            "12_Brain/state/claude-routines/D26.json"
+          ],
+          "checks": "gates 8/8; stages ok 9/9; blocked 0",
+          "risks": [
+            "only_loop_log_and_checkpoint_evidenced",
+            "independent_verification_is_structural_only"
+          ]
+        },
+        {
+          "run_id": "LOOP-20260824-005322082",
+          "routine_id": "W04",
+          "declared_artifact": "Client-separated production calendar",
+          "declared_value_signal": "Every content item has purpose, channel, owner, proof source, and approval state",
+          "evidenced_paths": [
+            "12_Brain/queue/claude-loop-2026-08-24.jsonl",
+            "12_Brain/state/claude-routines/W04.json"
+          ],
+          "checks": "gates 8/8; stages ok 9/9; blocked 0",
+          "risks": [
+            "only_loop_log_and_checkpoint_evidenced",
+            "independent_verification_is_structural_only"
+          ]
+        },
+        {
+          "run_id": "LOOP-20260824-005324749",
+          "routine_id": "W05",
+          "declared_artifact": "Local-only 20-site batch and evidence bundle",
+          "declared_value_signal": "20 of 20 pass build, route, asset, browser, detector, and checker gates",
+          "evidenced_paths": [
+            "12_Brain/queue/claude-loop-2026-08-24.jsonl",
+            "12_Brain/state/site-factory-batch.json"
+          ],
+          "checks": "gates 8/8; stages ok 9/9; blocked 0",
+          "risks": [
+            "only_loop_log_and_checkpoint_evidenced",
+            "independent_verification_is_structural_only"
+          ]
+        },
+        {
+          "run_id": "LOOP-20260824-010819556",
+          "routine_id": "W08",
+          "declared_artifact": "Experiment decision ledger proposal",
+          "declared_value_signal": "Decision follows predeclared evidence and uncertainty is explicit",
+          "evidenced_paths": [
+            "12_Brain/queue/claude-loop-2026-08-24.jsonl",
+            "12_Brain/state/experiment-queue.json"
+          ],
+          "checks": "gates 8/8; stages ok 9/9; blocked 0",
+          "risks": [
+            "only_loop_log_and_checkpoint_evidenced",
+            "independent_verification_is_structural_only"
+          ]
+        },
+        {
+          "run_id": "LOOP-20260824-010821717",
+          "routine_id": "W09",
+          "declared_artifact": "Weekly automation health report",
+          "declared_value_signal": "Every automation is classified as verified, degraded, blocked, stale, or retired",
+          "evidenced_paths": [
+            "12_Brain/queue/claude-loop-2026-08-24.jsonl",
+            "12_Brain/state/claude-routines/W09.json"
+          ],
+          "checks": "gates 8/8; stages ok 9/9; blocked 0",
+          "risks": [
+            "only_loop_log_and_checkpoint_evidenced",
+            "independent_verification_is_structural_only"
+          ]
+        },
+        {
+          "run_id": "LOOP-20260824-010825301",
+          "routine_id": "W10",
+          "declared_artifact": "Executive weekly review",
+          "declared_value_signal": "Review ends with a small ranked decision list and evidence links",
+          "evidenced_paths": [
+            "12_Brain/queue/claude-loop-2026-08-24.jsonl",
+            "12_Brain/state/claude-routines/W10.json"
+          ],
+          "checks": "gates 8/8; stages ok 9/9; blocked 0",
+          "risks": [
+            "only_loop_log_and_checkpoint_evidenced",
+            "independent_verification_is_structural_only"
+          ]
+        },
+        {
+          "run_id": "LOOP-20260824-012319246",
+          "routine_id": "W11",
+          "declared_artifact": "Knowledge health receipt and one proposal",
+          "declared_value_signal": "Findings are reproducible and proposed change is narrow and reversible",
+          "evidenced_paths": [
+            "12_Brain/queue/claude-loop-2026-08-24.jsonl",
+            "12_Brain/state/obsidian-guard-dog.json"
+          ],
+          "checks": "gates 8/8; stages ok 9/9; blocked 0",
+          "risks": [
+            "only_loop_log_and_checkpoint_evidenced",
+            "independent_verification_is_structural_only"
+          ]
+        },
+        {
+          "run_id": "LOOP-20260824-012324554",
+          "routine_id": "M02",
+          "declared_artifact": "Agent evaluation scorecard",
+          "declared_value_signal": "Each agent has measured quality, bounded authority, and a disposition",
+          "evidenced_paths": [
+            "12_Brain/queue/claude-loop-2026-08-24.jsonl",
+            "12_Brain/state/claude-routines/M02.json"
+          ],
+          "checks": "gates 8/8; stages ok 9/9; blocked 0",
+          "risks": [
+            "only_loop_log_and_checkpoint_evidenced",
+            "independent_verification_is_structural_only"
+          ]
+        },
+        {
+          "run_id": "LOOP-20260824-012326869",
+          "routine_id": "M03",
+          "declared_artifact": "Automation value and cost report",
+          "declared_value_signal": "Every recurring cost maps to a verified outcome or a clear stop proposal",
+          "evidenced_paths": [
+            "12_Brain/queue/claude-loop-2026-08-24.jsonl",
+            "12_Brain/state/claude-routines/M03.json"
+          ],
+          "checks": "gates 8/8; stages ok 9/9; blocked 0",
+          "risks": [
+            "only_loop_log_and_checkpoint_evidenced",
+            "independent_verification_is_structural_only"
+          ]
+        },
+        {
+          "run_id": "LOOP-20260824-013819953",
+          "routine_id": "M04",
+          "declared_artifact": "Client separation audit",
+          "declared_value_signal": "Every sampled artifact maps to exactly one client or is quarantined",
+          "evidenced_paths": [
+            "12_Brain/queue/claude-loop-2026-08-24.jsonl",
+            "12_Brain/state/claude-routines/M04.json"
+          ],
+          "checks": "gates 8/8; stages ok 9/9; blocked 0",
+          "risks": [
+            "only_loop_log_and_checkpoint_evidenced",
+            "independent_verification_is_structural_only"
+          ]
+        },
+        {
+          "run_id": "LOOP-20260824-013822191",
+          "routine_id": "M05",
+          "declared_artifact": "Documentation refresh proposal",
+          "declared_value_signal": "Proposals state authority, scope, conflict, and intended effective date",
+          "evidenced_paths": [
+            "12_Brain/queue/claude-loop-2026-08-24.jsonl",
+            "12_Brain/state/claude-routines/M05.json"
+          ],
+          "checks": "gates 8/8; stages ok 9/9; blocked 0",
+          "risks": [
+            "only_loop_log_and_checkpoint_evidenced",
+            "independent_verification_is_structural_only"
+          ]
+        },
+        {
+          "run_id": "LOOP-20260824-013826185",
+          "routine_id": "E05",
+          "declared_artifact": "Codebase route and operating guide",
+          "declared_value_signal": "Commands, boundaries, owners, tests, and deployment targets are evidence-backed",
+          "evidenced_paths": [
+            "12_Brain/queue/claude-loop-2026-08-24.jsonl",
+            "12_Brain/state/claude-routines/E05.json"
+          ],
+          "checks": "gates 8/8; stages ok 9/9; blocked 0",
+          "risks": [
+            "only_loop_log_and_checkpoint_evidenced",
+            "independent_verification_is_structural_only"
+          ]
+        },
+        {
+          "run_id": "LOOP-20260824-015319569",
+          "routine_id": "E10",
+          "declared_artifact": "Runtime recovery receipt",
+          "declared_value_signal": "Behavior is verified from current logs and end-to-end runtime evidence",
+          "evidenced_paths": [
+            "12_Brain/queue/claude-loop-2026-08-24.jsonl",
+            "12_Brain/state/claude-routines/E10.json"
+          ],
+          "checks": "gates 8/8; stages ok 9/9; blocked 0",
+          "risks": [
+            "only_loop_log_and_checkpoint_evidenced",
+            "independent_verification_is_structural_only"
+          ]
+        },
+        {
+          "run_id": "LOOP-20260824-015325105",
+          "routine_id": "E11",
+          "declared_artifact": "New routine definition and verified recording entry",
+          "declared_value_signal": "The new routine is reproducible, privacy-bounded, and independently verifiable",
+          "evidenced_paths": [
+            "12_Brain/queue/claude-loop-2026-08-24.jsonl",
+            "12_Brain/state/claude-routines/E11.json"
+          ],
+          "checks": "gates 8/8; stages ok 9/9; blocked 0",
+          "risks": [
+            "only_loop_log_and_checkpoint_evidenced",
+            "independent_verification_is_structural_only"
+          ]
+        },
+        {
+          "run_id": "LOOP-20260824-103819333",
+          "routine_id": "D19",
+          "declared_artifact": "Report artifact and source ledger",
+          "declared_value_signal": "Derived KPIs can be recomputed from named source fields",
+          "evidenced_paths": [
+            "12_Brain/queue/claude-loop-2026-08-24.jsonl",
+            "12_Brain/state/report-brain-ingest.json"
+          ],
+          "checks": "gates 8/8; stages ok 9/9; blocked 0",
+          "risks": [
+            "only_loop_log_and_checkpoint_evidenced",
+            "independent_verification_is_structural_only"
+          ]
+        }
+      ]
+    }
+  }
+}

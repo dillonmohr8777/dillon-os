@@ -383,8 +383,10 @@ try {
     if ($consecFail -ge $BreakerThreshold -and -not $breakerOpenedUtc) { $breakerOpenedUtc = $nowUtc }
     if ($consecFail -eq 0) { $breakerOpenedUtc = $null }
 
+    # generated_at is the shared timestamp contract (12_Brain/schemas/automation-run.json);
+    # last_cycle_utc / updated_utc stay for the readers above that already depend on them.
     [System.IO.File]::WriteAllText($driverState, ([pscustomobject]@{
-        cycle_id = $cycleId; last_cycle_utc = $nowUtc; signature = $sig.signature
+        cycle_id = $cycleId; last_cycle_utc = $nowUtc; generated_at = $nowUtc; signature = $sig.signature
         outcome = $outcome; consecutive_failures = $consecFail; breaker_opened_utc = $breakerOpenedUtc
         catch_up = $catchUp; routines_executed_this_cycle = $executedRows.Count
         eligible_at_cycle = $eligibleIds.Count
@@ -399,7 +401,7 @@ try {
                                     max_frontier_calls_per_day = $MaxFrontierCallsPerDay
                                     min_interval_minutes = $MinIntervalMinutes }
         frontier_state = $frontierState
-        updated_utc = $nowUtc
+        updated_utc = $nowUtc; generated_at = $nowUtc
     } | ConvertTo-Json -Depth 4), $utf8)
 
     $cycleLog = Join-Path $queueDir ('claude-daily-driver-' + $today + '.jsonl')

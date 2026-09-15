@@ -1,0 +1,21 @@
+{
+  "automation_id": "claude-loop",
+  "status": "ok",
+  "run_id": "LOOP-20260915-110820818",
+  "mode": "bounded-local-execute",
+  "fixture": false,
+  "generated_at": "2026-09-15T15:08:24.918Z",
+  "written_at": "2026-09-15T15:08:24.918Z",
+  "counts": {
+    "evaluated": 1,
+    "complete": 1,
+    "eligible": 0,
+    "executed": 1
+  },
+  "outcomes": {
+    "W05": "complete"
+  },
+  "learn": {
+    "W05": "no_finding"
+  }
+}

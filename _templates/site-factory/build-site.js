@@ -40,6 +40,12 @@ const esc = (s) =>
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#x27;');
 
+const markedPhrase = (s) => {
+  const parts = String(s ?? '').trim().split(/\s+/).filter(Boolean);
+  if (parts.length < 4) return esc(parts.join(' '));
+  return `${esc(parts.slice(0, -2).join(' '))} <mark>${esc(parts.slice(-2).join(' '))}</mark>`;
+};
+
 const required = ['slug', 'name', 'city', 'tokens', 'fonts', 'hero'];
 for (const key of required) {
   if (!brief[key]) {
@@ -56,11 +62,12 @@ const tokenDefaults = {
 for (const [k, v] of Object.entries(tokenDefaults)) t[k] = t[k] || v;
 
 const fontFallback = brief.fonts.displayFallback || 'Georgia,serif';
+const textFallback = brief.fonts.textFallback || 'system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif';
 const rootBlock =
   `:root{--paper:${t.paper};--ink:${t.ink};--accent:${t.accent};--accent2:${t.accent2};` +
   `--panel:${t.panel};--deep:${t.deep};--on-paper:${t.onPaper};--on-accent:${t.onAccent};` +
   `--on-accent2:${t.onAccent2};--on-panel:${t.onPanel};--on-deep:${t.onDeep};` +
-  `--border:${t.border};--radius:${t.radius};--display:'${brief.fonts.display}',${fontFallback}}`;
+  `--border:${t.border};--radius:${t.radius};--display:'${brief.fonts.display}',${fontFallback};--text:'${brief.fonts.text || brief.fonts.display}',${textFallback}}`;
 
 const fontFamilies = [brief.fonts.display, brief.fonts.text]
   .filter(Boolean)
@@ -133,10 +140,12 @@ const pickSurface = (preferred) => {
 const builders = {
   hero(d) {
     lastSurface = 'paper';
+    const eyebrow = d.eyebrow ? `<span class="eyebrow">${esc(d.eyebrow)}</span>` : '';
     const float = d.glassFloat
       ? `<div class="glass-panel glass-float"><strong>${esc(d.glassFloat.title || brief.name)}</strong><span>${esc(d.glassFloat.sub || brief.city)}</span></div>`
       : `<div class="glass-panel glass-float"><strong>${esc(brief.name)}</strong><span>${esc(brief.city)}</span></div>`;
-    return `<section class="hero surface-paper vanish-out" id="top"><div class="hero-copy reveal"><span class="eyebrow">${esc(d.eyebrow || `${brief.city} | ${brief.category || ''}`)}</span><h1><mark>${esc(d.headline || brief.name)}</mark></h1><p>${esc(d.sub || brief.description || '')}</p><div class="button-row">${cta(d.ctaPrimary)}${cta(d.ctaSecondary, 'button button-secondary')}</div></div><div class="hero-media reveal reveal-right">${figure(1, { eager: true })}${float}</div></section>${marqueeHtml(d.marquee || brief.marquee)}`;
+    const headline = markedPhrase(d.headline || brief.name);
+    return `<section class="hero surface-paper vanish-out" id="top"><div class="hero-copy reveal">${eyebrow}<h1>${headline}</h1><p>${esc(d.sub || brief.description || '')}</p><div class="button-row">${cta(d.ctaPrimary)}${cta(d.ctaSecondary, 'button button-secondary')}</div></div><div class="hero-media reveal reveal-right">${figure(1, { eager: true })}${float}</div></section>${marqueeHtml(d.marquee || brief.marquee)}`;
   },
   offerings(d) {
     const cards = d.items

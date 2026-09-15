@@ -21,6 +21,22 @@ const { runQa: defaultRunQa } = require('./qa.js');
 const { SPEC, checkSpec } = require('./lib/spec.js');
 const { assertSafeSlug } = require('./lib/validate.js');
 
+/**
+ * A market is a place. Briefs have shipped with an email address or a URL in this field
+ * (radar-next20-20260826 carried market="valuedclient@balafinancial.com"), and that value
+ * flows straight into mail-merge copy. Reject anything that is plainly not a place, fall
+ * back to the batch market, and record a warning so the bad brief is visible.
+ */
+const looksLikePlace = (s) => !/[@]|^https?:|\bwww\.|\.(com|net|org|io|co)\b/i.test(s);
+function cleanMarket(briefMarket, batchMarket, row) {
+  const candidate = String(briefMarket ?? '').trim();
+  if (candidate && !looksLikePlace(candidate)) {
+    row.warnings.push(`brief.market is not a place (${candidate}); using batch market instead`);
+    return String(batchMarket ?? '').trim();
+  }
+  return candidate || String(batchMarket ?? '').trim();
+}
+
 const csvCell = (v) => {
   const s = String(v ?? '');
   return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
@@ -107,7 +123,7 @@ async function runBatch(batchDir, options = {}) {
 
     row.name = brief.name;
     row.vertical = brief.vertical || brief.category || '';
-    row.market = brief.market || batch.market || '';
+    row.market = cleanMarket(brief.market, batch.market, row);
     row.address = brief.address || '';
     row.phone = brief.phone || '';
     row.sourceUrl = brief.url || '';
@@ -203,15 +219,16 @@ async function runBatch(batchDir, options = {}) {
     }
   }
 
-  // Gate qa_ready: full QA PASS + no failures + address present. mail_ready always hold.
+  // Gate qa_ready: full QA PASS + no failures. Contact fields stay absent unless
+  // proven by the official source; an honest blank must not block an otherwise
+  // complete noindex review concept. mail_ready always remains hold.
   for (const row of results) {
     row.mailReady = 'hold';
     const eligible =
       !forceHoldAll &&
       row.qa === 'PASS' &&
       row.visualQa === 'ran' &&
-      !row.failures.length &&
-      !!row.address;
+       !row.failures.length;
     row.qaReady = eligible ? 'ready' : 'hold';
   }
 
@@ -280,6 +297,13 @@ async function runBatch(batchDir, options = {}) {
     'mailed_on',
     'scanned',
     'call_booked',
+    // Email lane. Appended after the existing columns so the QR/mail-merge sheet mapping is
+    // unchanged. Always emitted empty: a human records these after an approved send, and
+    // outreach-ledger.js reads them. An absent column means "not measured", not zero.
+    'email',
+    'emailed_on',
+    'replied',
+    'bounced',
     'notes',
   ];
   const prospectRows = results.map((r) =>
@@ -293,10 +317,14 @@ async function runBatch(batchDir, options = {}) {
       targetUrl(r),
       r.qaReady,
       'hold',
-      '',
-      '',
-      '',
-      '',
+      '', // approved_by
+      '', // mailed_on
+      '', // scanned
+      '', // call_booked
+      '', // email
+      '', // emailed_on
+      '', // replied
+      '', // bounced
       [...r.warnings, ...r.failures].join('; '),
     ]
       .map(csvCell)

@@ -1,0 +1,305 @@
+{
+  "run_id": "OGD-20260825-9A9181C7F45D",
+  "graph_id": "daily-d26-knowledge-proposal-shadow",
+  "objective": "Create one source-located, deduplicated, reversible Obsidian proposal for the closed-loop web-design lesson without writing canonical truth.",
+  "value_signal": "The durable lesson has one existing canonical destination, current source hashes, explicit client/project scope, and a reviewable narrow change.",
+  "contract_sha256": "ffb2b3e435b4c316a19bacf447dcb531c0ba145c60e8bfcbb52762cbdc393d65",
+  "started_at": "2026-08-25T00:31:06.416Z",
+  "source_evidence": "Each governance routine recollects its exact registry, receipt, client, design, or knowledge source set before planning and terminal verification.",
+  "finish_line": "One exact Markdown proposal and one machine source ledger reproduce from the current design-loop evidence while canonical notes remain unchanged.",
+  "governance": {
+    "orchestrator": "Codex acting as Marketing Chief",
+    "canonical_state": "The agent registry, routine contracts, current durable receipts, client registry, access metadata, design authority, Obsidian vault, and Marketing Chief queue remain canonical and read only.",
+    "dedupe_key": "D26:2026-08-24:source-bound-shadow",
+    "checkpoint": "System/outcome-graph/routines/D26/2026-08-24-governance-shadow/run-receipt.json",
+    "rollback": "Discard governance shadow artifacts and the unadopted proposal; preserve registry, permissions, schedules, billing, client records, design truth, sidecars, queue, and external systems.",
+    "escalation": "Return the exact missing sample, cost source, client ambiguity, stale authority, duplicate routine, or proposal decision to Marketing Chief."
+  },
+  "graph_iterations": [
+    {
+      "iteration": 1,
+      "status": "verified",
+      "planner": {
+        "evidence": "Collected 1 isolated D26 item(s) from source set a2d2bb3bc16eb1353ffbb5cf69ea048e8a616aa02023a69ac8d365d83fd7b95e.",
+        "item_count": 1,
+        "plan_signature": "7302970627101a6de59bebdd497578975a190f591c8c5b8731faa82c195b9dd2",
+        "items": [
+          {
+            "id": "D26:high-craft-website-factory-closed-loop-design",
+            "isolation_key": "knowledge:internal:web-design-loop:high-craft-website-factory",
+            "input_fingerprint": "c9adee1d54ef871bab0c6e740234194826e7e0f8a9a58d85046a39f5fa800549",
+            "task": null
+          }
+        ]
+      },
+      "workers": [
+        {
+          "item_id": "D26:high-craft-website-factory-closed-loop-design",
+          "input_fingerprint": "c9adee1d54ef871bab0c6e740234194826e7e0f8a9a58d85046a39f5fa800549",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260825-9A9181C7F45D:cead9bcbc558414622df:attempt:1",
+              "maker_evidence": "Built one privacy-safe D26 record for D26:high-craft-website-factory-closed-loop-design.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D26/2026-08-24-governance-shadow/workers/cead9bcbc558414622df.json",
+                  "sha256": "114aac8663a7648a951596fcefa467a1e35af75092714716679bd904c2cf098a",
+                  "bytes": 1471
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D26:high-craft-website-factory-closed-loop-design from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D26/2026-08-24-governance-shadow/workers/cead9bcbc558414622df.json",
+              "sha256": "114aac8663a7648a951596fcefa467a1e35af75092714716679bd904c2cf098a",
+              "bytes": 1471
+            }
+          ],
+          "isolation_id": "OGD-20260825-9A9181C7F45D:cead9bcbc558414622df:attempt:1"
+        }
+      ],
+      "reduction": {
+        "evidence": "Reduced all checked D26 records without blending isolation keys.",
+        "artifacts": [
+          {
+            "path": "00_Inbox/Agent-Proposals/Codex/2026-08-24-outcome-graph-knowledge-proposal.md",
+            "sha256": "122fec5735e68aae51924258dcd143b10eaa575b059bf3d7f27769a1876f70ea",
+            "bytes": 2797
+          },
+          {
+            "path": "System/outcome-graph/routines/D26/2026-08-24-governance-shadow/source-ledger.json",
+            "sha256": "92e55eee7fd786ccdd17cbb109b770d4f1f1be563ac686b7a3b37e20535f87a1",
+            "bytes": 2494
+          }
+        ]
+      },
+      "terminal_verification": {
+        "evidence": "Recollected and independently verified all D26 sources, records, negative states, and artifact hashes.",
+        "declared_pass": true,
+        "passed": true,
+        "assertions": [
+          {
+            "id": "source-manifest-stable",
+            "passed": true,
+            "detail": "Every named source remains hash-bound at terminal verification."
+          },
+          {
+            "id": "every-isolated-item-reconstructed-exactly-once",
+            "passed": true,
+            "detail": "Every in-scope item has one collision-resistant reconstructed record."
+          },
+          {
+            "id": "reducer-output-reproduces-exactly",
+            "passed": true,
+            "detail": "Final artifacts reproduce exactly from current sources and the frozen evaluation clock."
+          },
+          {
+            "id": "knowledge-type-and-canonical-page-resolved",
+            "passed": true,
+            "detail": "One knowledge type and canonical destination are resolved."
+          },
+          {
+            "id": "duplicate-search-completed",
+            "passed": true,
+            "detail": "The existing High Craft note prevents a duplicate canonical page."
+          },
+          {
+            "id": "source-locator-and-freshness-present",
+            "passed": true,
+            "detail": "Every source has a locator, hash, byte count, and current capture."
+          },
+          {
+            "id": "client-and-project-boundaries-preserved",
+            "passed": true,
+            "detail": "The proposal contains internal project lessons only."
+          },
+          {
+            "id": "proposal-is-narrow-and-reversible",
+            "passed": true,
+            "detail": "The Markdown proposal names one bounded change and rollback."
+          },
+          {
+            "id": "no-unauthorized-canonical-write",
+            "passed": true,
+            "detail": "The proposal inbox is used without canonical adoption."
+          },
+          {
+            "id": "privacy-and-no-mutation-boundary",
+            "passed": true,
+            "detail": "Final artifacts are redacted and attest no external, canonical, provider, restart, or checkpoint mutation."
+          }
+        ],
+        "artifact_manifest": [
+          {
+            "path": "00_Inbox/Agent-Proposals/Codex/2026-08-24-outcome-graph-knowledge-proposal.md",
+            "sha256": "122fec5735e68aae51924258dcd143b10eaa575b059bf3d7f27769a1876f70ea",
+            "bytes": 2797
+          },
+          {
+            "path": "System/outcome-graph/routines/D26/2026-08-24-governance-shadow/source-ledger.json",
+            "sha256": "92e55eee7fd786ccdd17cbb109b770d4f1f1be563ac686b7a3b37e20535f87a1",
+            "bytes": 2494
+          }
+        ],
+        "manifest_errors": []
+      },
+      "learning": {
+        "evidence": "Appended one hashed D26 correction entry.",
+        "corrections": [
+          "Keep web-design loop lessons in one existing canonical concept note and route changes through a reversible proposal."
+        ],
+        "ledger": "System/outcome-graph/routines/D26/2026-08-24-governance-shadow/corrections.jsonl",
+        "ledger_receipt": {
+          "locator": "System/outcome-graph/routines/D26/2026-08-24-governance-shadow/corrections.jsonl",
+          "entry_sha256": "1c3043efc4187b9ea05bc16d6ff509f1bb8bc633b77724fa50f7de584394762c"
+        }
+      }
+    }
+  ],
+  "invocation_log": [
+    {
+      "adapter": "source-bound-d26-planner",
+      "invoked_at": "2026-08-25T00:31:06.426Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d26-maker",
+      "invoked_at": "2026-08-25T00:31:06.444Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d26-checker",
+      "invoked_at": "2026-08-25T00:31:06.456Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d26-reducer",
+      "invoked_at": "2026-08-25T00:31:06.486Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d26-terminal-verifier",
+      "invoked_at": "2026-08-25T00:31:06.504Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d26-learner",
+      "invoked_at": "2026-08-25T00:31:06.523Z",
+      "status": "returned"
+    }
+  ],
+  "budget": {
+    "limit_units": 96,
+    "used_units": 6
+  },
+  "outcome": "complete",
+  "terminal_truth": true,
+  "finished_at": "2026-08-25T00:31:06.537Z",
+  "elapsed_seconds": 0.121,
+  "blocked_by": null,
+  "reason": "Finish line is proven by an independent terminal verifier.",
+  "terminal_evidence": {
+    "evidence": "Recollected and independently verified all D26 sources, records, negative states, and artifact hashes.",
+    "declared_pass": true,
+    "passed": true,
+    "assertions": [
+      {
+        "id": "source-manifest-stable",
+        "passed": true,
+        "detail": "Every named source remains hash-bound at terminal verification."
+      },
+      {
+        "id": "every-isolated-item-reconstructed-exactly-once",
+        "passed": true,
+        "detail": "Every in-scope item has one collision-resistant reconstructed record."
+      },
+      {
+        "id": "reducer-output-reproduces-exactly",
+        "passed": true,
+        "detail": "Final artifacts reproduce exactly from current sources and the frozen evaluation clock."
+      },
+      {
+        "id": "knowledge-type-and-canonical-page-resolved",
+        "passed": true,
+        "detail": "One knowledge type and canonical destination are resolved."
+      },
+      {
+        "id": "duplicate-search-completed",
+        "passed": true,
+        "detail": "The existing High Craft note prevents a duplicate canonical page."
+      },
+      {
+        "id": "source-locator-and-freshness-present",
+        "passed": true,
+        "detail": "Every source has a locator, hash, byte count, and current capture."
+      },
+      {
+        "id": "client-and-project-boundaries-preserved",
+        "passed": true,
+        "detail": "The proposal contains internal project lessons only."
+      },
+      {
+        "id": "proposal-is-narrow-and-reversible",
+        "passed": true,
+        "detail": "The Markdown proposal names one bounded change and rollback."
+      },
+      {
+        "id": "no-unauthorized-canonical-write",
+        "passed": true,
+        "detail": "The proposal inbox is used without canonical adoption."
+      },
+      {
+        "id": "privacy-and-no-mutation-boundary",
+        "passed": true,
+        "detail": "Final artifacts are redacted and attest no external, canonical, provider, restart, or checkpoint mutation."
+      }
+    ],
+    "artifact_manifest": [
+      {
+        "path": "00_Inbox/Agent-Proposals/Codex/2026-08-24-outcome-graph-knowledge-proposal.md",
+        "sha256": "122fec5735e68aae51924258dcd143b10eaa575b059bf3d7f27769a1876f70ea",
+        "bytes": 2797
+      },
+      {
+        "path": "System/outcome-graph/routines/D26/2026-08-24-governance-shadow/source-ledger.json",
+        "sha256": "92e55eee7fd786ccdd17cbb109b770d4f1f1be563ac686b7a3b37e20535f87a1",
+        "bytes": 2494
+      }
+    ],
+    "manifest_errors": []
+  },
+  "learning_evidence": {
+    "evidence": "Appended one hashed D26 correction entry.",
+    "corrections": [
+      "Keep web-design loop lessons in one existing canonical concept note and route changes through a reversible proposal."
+    ],
+    "ledger": "System/outcome-graph/routines/D26/2026-08-24-governance-shadow/corrections.jsonl",
+    "ledger_receipt": {
+      "locator": "System/outcome-graph/routines/D26/2026-08-24-governance-shadow/corrections.jsonl",
+      "entry_sha256": "1c3043efc4187b9ea05bc16d6ff509f1bb8bc633b77724fa50f7de584394762c"
+    }
+  },
+  "drift_fingerprint": "ceef30f93d4ea11be0ab5fe5f17b4a23100f3073e3e77bb57f05b78bc6d2ca98",
+  "deduped": false,
+  "durable_state": {
+    "schema_version": 1,
+    "dedupe_identity": "1c8cdecf56a748bc75d323e3406b84d444cf035a427dc1dca2fd1b1c1b488609",
+    "dedupe_hit": false,
+    "resumed": false,
+    "canonical_binding": {
+      "locator": "dillon-os://routine/D26/2026-08-24",
+      "version": "2026-08-25:75ead33c.05e6a21e.c947dbf0.43588267.c4f66a74.f349bdba.699fd0a4.03f91cd6",
+      "sha256": "a2d2bb3bc16eb1353ffbb5cf69ea048e8a616aa02023a69ac8d365d83fd7b95e",
+      "captured_at": "2026-08-25T00:31:06.401Z"
+    },
+    "canonical_binding_fingerprint": "799cc5998a0fb9eb2549a5705808aab778c755c089a69c9e093c4d2f980609bf",
+    "contract_fingerprint": "21d783823edf439e3524fede794e69fb82945c05eee043656a3c38f94e39400e",
+    "checkpoint": "runs/OGD-20260825-9A9181C7F45D/checkpoint.json"
+  }
+}

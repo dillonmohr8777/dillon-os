@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "graph_id": "closed-loop-web-design-canary",
+  "dedupe_key": "web-design:2026-08-24-live",
+  "dedupe_identity": "a3e5057af0dd277d6edac3a00b61c7e0d2a918725914bec79ec56c638c69d312",
+  "contract_fingerprint": "789fd2f708de59f818e3d3a595396ea9b3128696eb8b725c4c94a74fdfd33128",
+  "canonical_binding": {
+    "locator": "dillon-os://web-design/2026-08-24-live",
+    "version": "closed-loop-canary-2026-08-24-v1",
+    "sha256": "64db51d408423660fa02b50ba1ae771b206dfd53d10241504dfb90c568377ea2",
+    "captured_at": "2026-08-25T00:09:38.490Z"
+  },
+  "canonical_binding_fingerprint": "3a23f33faadd5211897e73321905c94dd4caa3dc4e8ff4a191cebe54204aa34c",
+  "status": "awaiting_approval",
+  "run_id": "OGD-20260825-11747080BBC9",
+  "checkpoint": {
+    "path": "runs/OGD-20260825-11747080BBC9/checkpoint.json"
+  },
+  "created_at": "2026-08-25T00:09:38.505Z",
+  "updated_at": "2026-08-25T00:10:19.450Z",
+  "state_revision": 14,
+  "previous_state_sha256": "4d7725659702c958038f0ff4f4c6f872a365abdf82e252b91a264cf90837faf0",
+  "completed_at": "2026-08-25T00:10:19.450Z",
+  "receipt": {
+    "path": "runs/OGD-20260825-11747080BBC9/receipt.json",
+    "sha256": "72a79aa323a4a883373ab05f5fc391b1e108e93eacd3960d5bcb8089ef77565d",
+    "bytes": 26211
+  }
+}

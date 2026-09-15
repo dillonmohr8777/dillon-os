@@ -1,0 +1,163 @@
+{
+  "schema_version": "1.0.0",
+  "receipt_id": "dillon-portfolio-terminal-2026-08-24",
+  "checked_at": "2026-08-24T22:33:53.9889811-04:00",
+  "state": "deployed_live_verified",
+  "deployed_and_verified_at": "2026-08-24T22:38:50.6672134-04:00",
+  "surface": {
+    "mode": "Experience",
+    "project_root": "C:/Users/dillo/Documents/Codex/2026-08-20/dillon-portfolio-signal-foundry/mohr-media-site",
+    "branch": "codex/dillon-portfolio-signal-foundry-20260820",
+    "dirty_worktree_preserved": true
+  },
+  "source_authority": {
+    "product_sha256": "3bc9c8eb680b541aa6b645a598474c2cb61561aa63454c7e6a0e64c2090c2be2",
+    "design_sha256": "0bfb38201f86078d1aa89553bf5e9214dafa0c3642e7a425dca6e461190040ec",
+    "design_sidecar_sha256": "d6cb619dcf1a86f38c0b0659599125244b01a79696e1782d8b5753c3cd67de3d",
+    "surface_brief_sha256": "82cc52ab2f5314c01915a9518b9425e86d5e50751a393710836472e751b45424",
+    "app_sha256": "ae0d7af468c20efd106daec101f389673ce1124cf8a1e56bdb4e919c4f52b11a",
+    "particle_engine_sha256": "7908983316e1f6a286178c3f0ce6ab56fb0c452d61741cfbe618f5114311da89",
+    "styles_sha256": "abf6fd4849f97b6a3cd5d1f081138e79797eca896fdf53a21b9102619c95ee21",
+    "immohrtal_logo": {
+      "path": "public/brand/immohrtal-logo.png",
+      "sha256": "509bbce1c7f100a898701c576b6c5ae3b084bf0bb999e7f3d18242fce8579ede",
+      "generated_substitution_allowed": false
+    }
+  },
+  "builds": [
+    {
+      "variant": "hrchitect",
+      "binding": "VITE_PROSPECT_SLUG=hrchitect",
+      "directory": "dist-hrchitect",
+      "file_count": 76,
+      "bytes": 28395641,
+      "manifest_sha256": "8bd8aad3adb8f5fd86290de05448756dc750ff8f4b4bd194d276d4aa80bffd97",
+      "initial_app_chunk_bytes": 220430,
+      "async_particle_chunk_bytes": 876190,
+      "result": "pass"
+    },
+    {
+      "variant": "general",
+      "binding": "VITE_PROSPECT_SLUG=general",
+      "directory": "dist-general",
+      "file_count": 76,
+      "bytes": 28395603,
+      "manifest_sha256": "ef1eea691946e98f14ca8126d72f81386c5555b1f34a85f443e598a96f211290",
+      "initial_app_chunk_bytes": 220430,
+      "async_particle_chunk_bytes": 876190,
+      "result": "pass"
+    }
+  ],
+  "qa": {
+    "variants": ["hrchitect", "general"],
+    "commands": {
+      "typescript_vite_build": "pass",
+      "functional_keyboard_menu_pause": "pass",
+      "axe_violations": 0,
+      "mobile_widths": [320, 360, 390, 430],
+      "mobile_overflow_failures": 0,
+      "reduced_motion": "pass",
+      "sability_personalized_route": "pass",
+      "particle_logo": "pass",
+      "blocked_lazy_chunk_fallback": "pass",
+      "image_decode_failure_fallback": "pass",
+      "webgl_failure_fallback": "pass",
+      "prospect_sequence": "pass",
+      "missing_images_or_resources": 0,
+      "console_or_page_errors": 0,
+      "capture_desktop_mobile_menu_reduced": "pass"
+    },
+    "visual_evidence": [
+      { "path": ".qa/terminal-hrchitect-final/portfolio-desktop-hrchitect-final.png", "sha256": "846ed3358420595dac9f67d1472cce6ff786838a1e11fe23952b496820cd623b" },
+      { "path": ".qa/terminal-hrchitect-final/portfolio-mobile-hrchitect-final.png", "sha256": "79b53708a22382e4e33f9bdcd53dfa95b453402b323efeb27e65dda3bd4a740f" },
+      { "path": ".qa/terminal-hrchitect-final/portfolio-menu-mobile-hrchitect-final.png", "sha256": "47664b44cc45a1190e255d2685da53ec2e895daa8ac36129ef904933dcf77d0c" },
+      { "path": ".qa/terminal-hrchitect-final/portfolio-reduced-motion-hrchitect-final.png", "sha256": "f93c95e94fd67b674535c5bd5e49b31ac98dc9f12bef6068edb521ff7d69db1a" },
+      { "path": ".qa/terminal-general-final/portfolio-desktop-general-final.png", "sha256": "4a183424238f708a68a546361cf250cd7bb3aac58b95ad25a5a6b9179ad2fdb9" },
+      { "path": ".qa/terminal-general-final/portfolio-mobile-general-final.png", "sha256": "cd449a9a520c29b6136d34c1037e784389e34894cb8a32da37b8524adaf1e44e" },
+      { "path": ".qa/terminal-general-final/portfolio-menu-mobile-general-final.png", "sha256": "433ac740b2ded4096bcc1cda0b293db32e5da3e0957f6fc2404b102134790bc8" },
+      { "path": ".qa/terminal-general-final/portfolio-reduced-motion-general-final.png", "sha256": "a3a0ec44101ce6ff16aebdd4a25a19b4dcd253936a2998fd37764f8ab5d1931a" },
+      { "path": ".qa/particle-refine-2/03-immohrtal-resolved-refined2.png", "sha256": "ab5be6d5ac6cb10303e2844eb6cd5d79ab7b93e3201c0a25d5ccad8bc94a0602" },
+      { "path": ".qa/particle-refine-2/07-target-resolved-refined2.png", "sha256": "7a87e2de7b07c2d9dd4bb25a175b265d792f0adcf6212a71bb71bea73a9cf9e4" }
+    ]
+  },
+  "design_detector": {
+    "exit_code": 2,
+    "finding_count": 115,
+    "blocking_severity_findings": 0,
+    "advisory_findings": 115,
+    "breakdown": {
+      "design_system_color": 57,
+      "design_system_font_size": 54,
+      "design_system_radius": 3,
+      "codex_grid_background": 1
+    },
+    "release_exception": {
+      "scope": "this terminal receipt only",
+      "persistent_ignore_added": false,
+      "reason": "The literal palette alphas, fluid display endpoints, and bounded radii are intentional local interpolation values inside one documented Experience surface. The single grid belongs to the operational 238-record blueprint chapter, an allowed measurement surface. Independent review found no P0, P1, or P2 defect in these advisories."
+    }
+  },
+  "independent_review": {
+    "reviewer": "fresh_read_only_finish_reviewer",
+    "replacement_disclosed": true,
+    "replacement_reason": "The first fresh reviewer stalled without returning a verdict and was terminated; one fresh replacement completed the same evidence-bounded review.",
+    "verdict": "SHIP",
+    "material_findings": [],
+    "scores": {
+      "visual_hierarchy": 9.2,
+      "typography": 8.8,
+      "composition": 9.2,
+      "particle_fidelity": 9.6,
+      "specificity": 9.5,
+      "responsive_craft": 9.0,
+      "accessibility_resilience": 9.5,
+      "truth_proof": 9.7,
+      "average": 9.3
+    }
+  },
+  "contract_audit": {
+    "exact_logo_authority": "pass",
+    "immohrtal_to_prospect_or_you_sequence": "pass",
+    "record_counts_and_parallelism": "pass",
+    "image_generation_provenance": "pass",
+    "align_selected_past_work_only": "pass",
+    "paid_media_drift_absent": "pass"
+  },
+  "deployment_targets": [
+    { "variant": "hrchitect", "site_name": "dillon-mohr-portfolio", "site_id": "da170eb6-ae55-4a2e-9392-b864e6c12948", "deploy_id": "6a8cff79fa99ff3db7d5c8a8", "url": "https://dillon-mohr-portfolio.netlify.app", "deploy_url": "https://6a8cff79fa99ff3db7d5c8a8--dillon-mohr-portfolio.netlify.app", "state": "deployed_live_verified" },
+    { "variant": "general", "site_name": "dillon-mohr-for-you", "site_id": "e4223be4-36eb-467a-b28e-d6406ddc3249", "deploy_id": "6a8cffa6ead9d49bda47750f", "url": "https://dillon-mohr-for-you.netlify.app", "deploy_url": "https://6a8cffa6ead9d49bda47750f--dillon-mohr-for-you.netlify.app", "state": "deployed_live_verified" }
+  ],
+  "live_verification": {
+    "hrchitect": {
+      "home_status": 200,
+      "title": "Dillon Mohr for HRchitect | Web design systems",
+      "canonical": "https://dillon-mohr-portfolio.netlify.app/",
+      "expected_built_asset_present": true,
+      "particle_chunk_status": 200,
+      "robots_and_sitemap": "pass",
+      "sability_route_status": 200,
+      "functional_accessibility_responsive": "pass_first_attempt"
+    },
+    "general": {
+      "home_status": 200,
+      "title": "Dillon Mohr for You | Web design systems",
+      "canonical": "https://dillon-mohr-for-you.netlify.app/",
+      "expected_built_asset_present": true,
+      "particle_chunk_status": 200,
+      "robots_and_sitemap": "pass",
+      "sability_route_status": 200,
+      "functional_accessibility_responsive": "pass_on_immediate_retry",
+      "first_attempt_note": "The first cold reduced-motion check exceeded the four-second lazy-chunk wait. It produced no application error; the immediate full retry passed, and the QA wait was raised to eight seconds for realistic live-network variance."
+    },
+    "axe_violations": 0,
+    "missing_images_or_resources": 0,
+    "console_or_page_errors": 0
+  },
+  "open_blockers": [],
+  "authority": {
+    "existing_mapped_netlify_publication_authorized": true,
+    "new_public_destination_authorized": false,
+    "momentum_batch_deployment_authorized": false,
+    "external_send_authorized": false
+  }
+}

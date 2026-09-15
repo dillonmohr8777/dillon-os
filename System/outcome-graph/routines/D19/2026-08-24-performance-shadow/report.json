@@ -1,0 +1,755 @@
+{
+  "schema_version": 1,
+  "routine_id": "D19",
+  "generated_at": "2026-08-24T23:42:22.164Z",
+  "source_set_sha256": "cd4877517666380542f1ea8d7c4be50549fa27d98e354f32850b01cab67f172e",
+  "reporting_window": {
+    "prepared": "2026-08-24",
+    "period_start": "2026-08-17",
+    "period_end": "2026-08-23",
+    "month": "2026-08"
+  },
+  "summary": {
+    "reports": 12,
+    "verified_local": 12,
+    "held": 0,
+    "pending_external_delivery": 12,
+    "workflow_ready": true
+  },
+  "reports": [
+    {
+      "schema_version": 1,
+      "routine_id": "D19",
+      "id": "D19:bar-crawl-usa:082d14c129d0",
+      "isolation_key": "bar-crawl-usa:2026-08-17 through 2026-08-23",
+      "observed_at": "2026-08-24T23:42:22.164Z",
+      "source_set_sha256": "cd4877517666380542f1ea8d7c4be50549fa27d98e354f32850b01cab67f172e",
+      "client_id": "bar-crawl-usa",
+      "client_status": "active",
+      "reporting_window": "2026-08-17 through 2026-08-23",
+      "prepared": "2026-08-24",
+      "metrics": [
+        {
+          "label": "Landing pages built",
+          "value": "10",
+          "source_bound": true
+        },
+        {
+          "label": "Seasonal focus",
+          "value": "October",
+          "source_bound": true
+        },
+        {
+          "label": "Teaser cut",
+          "value": "55 sec",
+          "source_bound": true
+        },
+        {
+          "label": "Publishing state",
+          "value": "Draft",
+          "source_bound": true
+        }
+      ],
+      "metric_labels_unique": true,
+      "kpi_fields_recomputed": true,
+      "source_count": 3,
+      "source_hashes_valid": true,
+      "limitations": [
+        "This verifies the retained report fields and hashes; it does not create new provider observations.",
+        "External delivery remains pending exact route and approval."
+      ],
+      "business_meaning": "The retained report package is locally reproducible from its named fields and remains separate from delivery.",
+      "next_decision": "Review the exact client package and either approve its existing delivery route or retain it unsent.",
+      "owner": "Codex acting as Marketing Chief",
+      "delivery_state": "pending_exact_route_and_approval",
+      "outcome_state": "verified_local_report_unsent",
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "crm_mutation_attempted": false,
+        "spend_change_attempted": false,
+        "delivery_attempted": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "D19",
+      "id": "D19:fagan-painting:082d14c129d0",
+      "isolation_key": "fagan-painting:2026-08-17 through 2026-08-23",
+      "observed_at": "2026-08-24T23:42:22.164Z",
+      "source_set_sha256": "cd4877517666380542f1ea8d7c4be50549fa27d98e354f32850b01cab67f172e",
+      "client_id": "fagan-painting",
+      "client_status": "active",
+      "reporting_window": "2026-08-17 through 2026-08-23",
+      "prepared": "2026-08-24",
+      "metrics": [
+        {
+          "label": "New blog",
+          "value": "1",
+          "source_bound": true
+        },
+        {
+          "label": "Service pages",
+          "value": "4",
+          "source_bound": true
+        },
+        {
+          "label": "Paid media",
+          "value": "Off",
+          "source_bound": true
+        },
+        {
+          "label": "AEO and GEO",
+          "value": "Early September",
+          "source_bound": true
+        }
+      ],
+      "metric_labels_unique": true,
+      "kpi_fields_recomputed": true,
+      "source_count": 3,
+      "source_hashes_valid": true,
+      "limitations": [
+        "This verifies the retained report fields and hashes; it does not create new provider observations.",
+        "External delivery remains pending exact route and approval."
+      ],
+      "business_meaning": "The retained report package is locally reproducible from its named fields and remains separate from delivery.",
+      "next_decision": "Review the exact client package and either approve its existing delivery route or retain it unsent.",
+      "owner": "Codex acting as Marketing Chief",
+      "delivery_state": "pending_exact_route_and_approval",
+      "outcome_state": "verified_local_report_unsent",
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "crm_mutation_attempted": false,
+        "spend_change_attempted": false,
+        "delivery_attempted": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "D19",
+      "id": "D19:fresh-blends-kwik-trip:082d14c129d0",
+      "isolation_key": "fresh-blends-kwik-trip:2026-08-17 through 2026-08-23",
+      "observed_at": "2026-08-24T23:42:22.164Z",
+      "source_set_sha256": "cd4877517666380542f1ea8d7c4be50549fa27d98e354f32850b01cab67f172e",
+      "client_id": "fresh-blends-kwik-trip",
+      "client_status": "active",
+      "reporting_window": "2026-08-17 through 2026-08-23",
+      "prepared": "2026-08-24",
+      "metrics": [
+        {
+          "label": "Brand boundary",
+          "value": "Fresh Blends only",
+          "source_bound": true
+        },
+        {
+          "label": "Campaign state",
+          "value": "Paused",
+          "source_bound": true
+        },
+        {
+          "label": "New activation",
+          "value": "Not verified",
+          "source_bound": true
+        },
+        {
+          "label": "Metrics",
+          "value": "Pending",
+          "source_bound": true
+        }
+      ],
+      "metric_labels_unique": true,
+      "kpi_fields_recomputed": true,
+      "source_count": 3,
+      "source_hashes_valid": true,
+      "limitations": [
+        "This verifies the retained report fields and hashes; it does not create new provider observations.",
+        "External delivery remains pending exact route and approval."
+      ],
+      "business_meaning": "The retained report package is locally reproducible from its named fields and remains separate from delivery.",
+      "next_decision": "Review the exact client package and either approve its existing delivery route or retain it unsent.",
+      "owner": "Codex acting as Marketing Chief",
+      "delivery_state": "pending_exact_route_and_approval",
+      "outcome_state": "verified_local_report_unsent",
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "crm_mutation_attempted": false,
+        "spend_change_attempted": false,
+        "delivery_attempted": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "D19",
+      "id": "D19:hope-wellness-center:082d14c129d0",
+      "isolation_key": "hope-wellness-center:2026-08-17 through 2026-08-23",
+      "observed_at": "2026-08-24T23:42:22.164Z",
+      "source_set_sha256": "cd4877517666380542f1ea8d7c4be50549fa27d98e354f32850b01cab67f172e",
+      "client_id": "hope-wellness-center",
+      "client_status": "active",
+      "reporting_window": "2026-08-17 through 2026-08-23",
+      "prepared": "2026-08-24",
+      "metrics": [
+        {
+          "label": "Review cleanup",
+          "value": "Completion pass",
+          "source_bound": true
+        },
+        {
+          "label": "Therapist video",
+          "value": "In editing",
+          "source_bound": true
+        },
+        {
+          "label": "Growth audit",
+          "value": "Delivered",
+          "source_bound": true
+        },
+        {
+          "label": "Paid media",
+          "value": "Off",
+          "source_bound": true
+        }
+      ],
+      "metric_labels_unique": true,
+      "kpi_fields_recomputed": true,
+      "source_count": 3,
+      "source_hashes_valid": true,
+      "limitations": [
+        "This verifies the retained report fields and hashes; it does not create new provider observations.",
+        "External delivery remains pending exact route and approval."
+      ],
+      "business_meaning": "The retained report package is locally reproducible from its named fields and remains separate from delivery.",
+      "next_decision": "Review the exact client package and either approve its existing delivery route or retain it unsent.",
+      "owner": "Codex acting as Marketing Chief",
+      "delivery_state": "pending_exact_route_and_approval",
+      "outcome_state": "verified_local_report_unsent",
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "crm_mutation_attempted": false,
+        "spend_change_attempted": false,
+        "delivery_attempted": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "D19",
+      "id": "D19:kimberly-james-bridal:082d14c129d0",
+      "isolation_key": "kimberly-james-bridal:2026-08-17 through 2026-08-23",
+      "observed_at": "2026-08-24T23:42:22.164Z",
+      "source_set_sha256": "cd4877517666380542f1ea8d7c4be50549fa27d98e354f32850b01cab67f172e",
+      "client_id": "kimberly-james-bridal",
+      "client_status": "active",
+      "reporting_window": "2026-08-17 through 2026-08-23",
+      "prepared": "2026-08-24",
+      "metrics": [
+        {
+          "label": "Meta leads",
+          "value": "9",
+          "source_bound": true
+        },
+        {
+          "label": "Meta cost per lead",
+          "value": "$7.72",
+          "source_bound": true
+        },
+        {
+          "label": "Google spend",
+          "value": "$103.98",
+          "source_bound": true
+        },
+        {
+          "label": "Google clicks",
+          "value": "25",
+          "source_bound": true
+        },
+        {
+          "label": "Google impressions",
+          "value": "557",
+          "source_bound": true
+        },
+        {
+          "label": "Google CTR",
+          "value": "4.49%",
+          "source_bound": true
+        }
+      ],
+      "metric_labels_unique": true,
+      "kpi_fields_recomputed": true,
+      "source_count": 4,
+      "source_hashes_valid": true,
+      "limitations": [
+        "This verifies the retained report fields and hashes; it does not create new provider observations.",
+        "External delivery remains pending exact route and approval."
+      ],
+      "business_meaning": "The retained report package is locally reproducible from its named fields and remains separate from delivery.",
+      "next_decision": "Review the exact client package and either approve its existing delivery route or retain it unsent.",
+      "owner": "Codex acting as Marketing Chief",
+      "delivery_state": "pending_exact_route_and_approval",
+      "outcome_state": "verified_local_report_unsent",
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "crm_mutation_attempted": false,
+        "spend_change_attempted": false,
+        "delivery_attempted": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "D19",
+      "id": "D19:nexla:082d14c129d0",
+      "isolation_key": "nexla:2026-08-17 through 2026-08-23",
+      "observed_at": "2026-08-24T23:42:22.164Z",
+      "source_set_sha256": "cd4877517666380542f1ea8d7c4be50549fa27d98e354f32850b01cab67f172e",
+      "client_id": "nexla",
+      "client_status": "active",
+      "reporting_window": "2026-08-17 through 2026-08-23",
+      "prepared": "2026-08-24",
+      "metrics": [
+        {
+          "label": "Audit delivered",
+          "value": "Aug 20",
+          "source_bound": true
+        },
+        {
+          "label": "Proposed budget",
+          "value": "$2,000 monthly",
+          "source_bound": true
+        },
+        {
+          "label": "Campaign structure",
+          "value": "Brand + Nonbrand",
+          "source_bound": true
+        },
+        {
+          "label": "Build state",
+          "value": "Unpublished",
+          "source_bound": true
+        },
+        {
+          "label": "Client inputs",
+          "value": "3 pending",
+          "source_bound": true
+        },
+        {
+          "label": "Live Ads read",
+          "value": "Out of scope",
+          "source_bound": true
+        }
+      ],
+      "metric_labels_unique": true,
+      "kpi_fields_recomputed": true,
+      "source_count": 3,
+      "source_hashes_valid": true,
+      "limitations": [
+        "This verifies the retained report fields and hashes; it does not create new provider observations.",
+        "External delivery remains pending exact route and approval."
+      ],
+      "business_meaning": "The retained report package is locally reproducible from its named fields and remains separate from delivery.",
+      "next_decision": "Review the exact client package and either approve its existing delivery route or retain it unsent.",
+      "owner": "Codex acting as Marketing Chief",
+      "delivery_state": "pending_exact_route_and_approval",
+      "outcome_state": "verified_local_report_unsent",
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "crm_mutation_attempted": false,
+        "spend_change_attempted": false,
+        "delivery_attempted": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "D19",
+      "id": "D19:nkcdc:082d14c129d0",
+      "isolation_key": "nkcdc:2026-08-17 through 2026-08-23",
+      "observed_at": "2026-08-24T23:42:22.164Z",
+      "source_set_sha256": "cd4877517666380542f1ea8d7c4be50549fa27d98e354f32850b01cab67f172e",
+      "client_id": "nkcdc",
+      "client_status": "active",
+      "reporting_window": "2026-08-17 through 2026-08-23",
+      "prepared": "2026-08-24",
+      "metrics": [
+        {
+          "label": "Account state",
+          "value": "Paused",
+          "source_bound": true
+        },
+        {
+          "label": "Phase Two",
+          "value": "Awaiting decision",
+          "source_bound": true
+        },
+        {
+          "label": "New production",
+          "value": "None verified",
+          "source_bound": true
+        },
+        {
+          "label": "Source of truth",
+          "value": "Growth plan",
+          "source_bound": true
+        }
+      ],
+      "metric_labels_unique": true,
+      "kpi_fields_recomputed": true,
+      "source_count": 3,
+      "source_hashes_valid": true,
+      "limitations": [
+        "This verifies the retained report fields and hashes; it does not create new provider observations.",
+        "External delivery remains pending exact route and approval."
+      ],
+      "business_meaning": "The retained report package is locally reproducible from its named fields and remains separate from delivery.",
+      "next_decision": "Review the exact client package and either approve its existing delivery route or retain it unsent.",
+      "owner": "Codex acting as Marketing Chief",
+      "delivery_state": "pending_exact_route_and_approval",
+      "outcome_state": "verified_local_report_unsent",
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "crm_mutation_attempted": false,
+        "spend_change_attempted": false,
+        "delivery_attempted": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "D19",
+      "id": "D19:omega-landscaping:082d14c129d0",
+      "isolation_key": "omega-landscaping:2026-08-17 through 2026-08-23",
+      "observed_at": "2026-08-24T23:42:22.164Z",
+      "source_set_sha256": "cd4877517666380542f1ea8d7c4be50549fa27d98e354f32850b01cab67f172e",
+      "client_id": "omega-landscaping",
+      "client_status": "active",
+      "reporting_window": "2026-08-17 through 2026-08-23",
+      "prepared": "2026-08-24",
+      "metrics": [
+        {
+          "label": "Google spend",
+          "value": "$279.34",
+          "source_bound": true
+        },
+        {
+          "label": "Clicks",
+          "value": "37",
+          "source_bound": true
+        },
+        {
+          "label": "Impressions",
+          "value": "728",
+          "source_bound": true
+        },
+        {
+          "label": "CTR",
+          "value": "5.08%",
+          "source_bound": true
+        },
+        {
+          "label": "Avg. CPC",
+          "value": "$7.55",
+          "source_bound": true
+        },
+        {
+          "label": "Optimization score",
+          "value": "91.7%",
+          "source_bound": true
+        }
+      ],
+      "metric_labels_unique": true,
+      "kpi_fields_recomputed": true,
+      "source_count": 3,
+      "source_hashes_valid": true,
+      "limitations": [
+        "This verifies the retained report fields and hashes; it does not create new provider observations.",
+        "External delivery remains pending exact route and approval."
+      ],
+      "business_meaning": "The retained report package is locally reproducible from its named fields and remains separate from delivery.",
+      "next_decision": "Review the exact client package and either approve its existing delivery route or retain it unsent.",
+      "owner": "Codex acting as Marketing Chief",
+      "delivery_state": "pending_exact_route_and_approval",
+      "outcome_state": "verified_local_report_unsent",
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "crm_mutation_attempted": false,
+        "spend_change_attempted": false,
+        "delivery_attempted": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "D19",
+      "id": "D19:onsite-concrete-landscape:082d14c129d0",
+      "isolation_key": "onsite-concrete-landscape:2026-08-17 through 2026-08-23",
+      "observed_at": "2026-08-24T23:42:22.164Z",
+      "source_set_sha256": "cd4877517666380542f1ea8d7c4be50549fa27d98e354f32850b01cab67f172e",
+      "client_id": "onsite-concrete-landscape",
+      "client_status": "active",
+      "reporting_window": "2026-08-17 through 2026-08-23",
+      "prepared": "2026-08-24",
+      "metrics": [
+        {
+          "label": "Google spend",
+          "value": "$46.70",
+          "source_bound": true
+        },
+        {
+          "label": "Clicks",
+          "value": "337",
+          "source_bound": true
+        },
+        {
+          "label": "Avg. CPC",
+          "value": "$0.14",
+          "source_bound": true
+        },
+        {
+          "label": "Phone call actions",
+          "value": "3",
+          "source_bound": true
+        },
+        {
+          "label": "Fairfield pages",
+          "value": "2 live",
+          "source_bound": true
+        },
+        {
+          "label": "Account state",
+          "value": "Running",
+          "source_bound": true
+        }
+      ],
+      "metric_labels_unique": true,
+      "kpi_fields_recomputed": true,
+      "source_count": 3,
+      "source_hashes_valid": true,
+      "limitations": [
+        "This verifies the retained report fields and hashes; it does not create new provider observations.",
+        "External delivery remains pending exact route and approval."
+      ],
+      "business_meaning": "The retained report package is locally reproducible from its named fields and remains separate from delivery.",
+      "next_decision": "Review the exact client package and either approve its existing delivery route or retain it unsent.",
+      "owner": "Codex acting as Marketing Chief",
+      "delivery_state": "pending_exact_route_and_approval",
+      "outcome_state": "verified_local_report_unsent",
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "crm_mutation_attempted": false,
+        "spend_change_attempted": false,
+        "delivery_attempted": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "D19",
+      "id": "D19:replenish-7-eleven:082d14c129d0",
+      "isolation_key": "replenish-7-eleven:2026-08-17 through 2026-08-23",
+      "observed_at": "2026-08-24T23:42:22.164Z",
+      "source_set_sha256": "cd4877517666380542f1ea8d7c4be50549fa27d98e354f32850b01cab67f172e",
+      "client_id": "replenish-7-eleven",
+      "client_status": "active",
+      "reporting_window": "2026-08-17 through 2026-08-23",
+      "prepared": "2026-08-24",
+      "metrics": [
+        {
+          "label": "Store campaigns",
+          "value": "9 requested",
+          "source_bound": true
+        },
+        {
+          "label": "Account access",
+          "value": "Follow up",
+          "source_bound": true
+        },
+        {
+          "label": "CPC audit",
+          "value": "Planned",
+          "source_bound": true
+        },
+        {
+          "label": "Ads read",
+          "value": "Not opened",
+          "source_bound": true
+        }
+      ],
+      "metric_labels_unique": true,
+      "kpi_fields_recomputed": true,
+      "source_count": 3,
+      "source_hashes_valid": true,
+      "limitations": [
+        "This verifies the retained report fields and hashes; it does not create new provider observations.",
+        "External delivery remains pending exact route and approval."
+      ],
+      "business_meaning": "The retained report package is locally reproducible from its named fields and remains separate from delivery.",
+      "next_decision": "Review the exact client package and either approve its existing delivery route or retain it unsent.",
+      "owner": "Codex acting as Marketing Chief",
+      "delivery_state": "pending_exact_route_and_approval",
+      "outcome_state": "verified_local_report_unsent",
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "crm_mutation_attempted": false,
+        "spend_change_attempted": false,
+        "delivery_attempted": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "D19",
+      "id": "D19:revive-systems:082d14c129d0",
+      "isolation_key": "revive-systems:2026-08-17 through 2026-08-23",
+      "observed_at": "2026-08-24T23:42:22.164Z",
+      "source_set_sha256": "cd4877517666380542f1ea8d7c4be50549fa27d98e354f32850b01cab67f172e",
+      "client_id": "revive-systems",
+      "client_status": "active",
+      "reporting_window": "2026-08-17 through 2026-08-23",
+      "prepared": "2026-08-24",
+      "metrics": [
+        {
+          "label": "Strategy document",
+          "value": "Created",
+          "source_bound": true
+        },
+        {
+          "label": "Content package",
+          "value": "5 pieces",
+          "source_bound": true
+        },
+        {
+          "label": "Publishing state",
+          "value": "Pending",
+          "source_bound": true
+        },
+        {
+          "label": "Paid media",
+          "value": "Off",
+          "source_bound": true
+        }
+      ],
+      "metric_labels_unique": true,
+      "kpi_fields_recomputed": true,
+      "source_count": 3,
+      "source_hashes_valid": true,
+      "limitations": [
+        "This verifies the retained report fields and hashes; it does not create new provider observations.",
+        "External delivery remains pending exact route and approval."
+      ],
+      "business_meaning": "The retained report package is locally reproducible from its named fields and remains separate from delivery.",
+      "next_decision": "Review the exact client package and either approve its existing delivery route or retain it unsent.",
+      "owner": "Codex acting as Marketing Chief",
+      "delivery_state": "pending_exact_route_and_approval",
+      "outcome_state": "verified_local_report_unsent",
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "crm_mutation_attempted": false,
+        "spend_change_attempted": false,
+        "delivery_attempted": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "D19",
+      "id": "D19:va-claims-edge:082d14c129d0",
+      "isolation_key": "va-claims-edge:2026-08-17 through 2026-08-23",
+      "observed_at": "2026-08-24T23:42:22.164Z",
+      "source_set_sha256": "cd4877517666380542f1ea8d7c4be50549fa27d98e354f32850b01cab67f172e",
+      "client_id": "va-claims-edge",
+      "client_status": "active",
+      "reporting_window": "2026-08-17 through 2026-08-23",
+      "prepared": "2026-08-24",
+      "metrics": [
+        {
+          "label": "Product phase",
+          "value": "Phase Three",
+          "source_bound": true
+        },
+        {
+          "label": "Nexus page",
+          "value": "Started",
+          "source_bound": true
+        },
+        {
+          "label": "Readiness review",
+          "value": "Aug 20",
+          "source_bound": true
+        },
+        {
+          "label": "Portal state",
+          "value": "Meeting ready",
+          "source_bound": true
+        }
+      ],
+      "metric_labels_unique": true,
+      "kpi_fields_recomputed": true,
+      "source_count": 3,
+      "source_hashes_valid": true,
+      "limitations": [
+        "This verifies the retained report fields and hashes; it does not create new provider observations.",
+        "External delivery remains pending exact route and approval."
+      ],
+      "business_meaning": "The retained report package is locally reproducible from its named fields and remains separate from delivery.",
+      "next_decision": "Review the exact client package and either approve its existing delivery route or retain it unsent.",
+      "owner": "Codex acting as Marketing Chief",
+      "delivery_state": "pending_exact_route_and_approval",
+      "outcome_state": "verified_local_report_unsent",
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "crm_mutation_attempted": false,
+        "spend_change_attempted": false,
+        "delivery_attempted": false
+      }
+    }
+  ],
+  "authority": {
+    "read_only": true,
+    "proposal_only": true,
+    "external_action_attempted": false,
+    "canonical_write_attempted": false,
+    "provider_mutation_attempted": false,
+    "crm_mutation_attempted": false,
+    "spend_change_attempted": false,
+    "delivery_attempted": false
+  }
+}

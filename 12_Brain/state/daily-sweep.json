@@ -1,0 +1,525 @@
+{
+  "schema": "12_Brain/schemas/daily-sweep.json",
+  "automation_id": "daily-sweep",
+  "version": 1,
+  "date": "2026-09-15",
+  "generated_at": "2026-09-15T19:00:01.768Z",
+  "generated_by": "_os/automation/bin/daily-sweep.js",
+  "previous_run": "2026-09-15T18:00:01.675Z",
+  "days_since_previous_sweep": 0,
+  "repos_scanned": 68,
+  "freshness": [
+    {
+      "id": "daily-brief",
+      "path": "Daily-Briefs/2026-09-15.md",
+      "owner": "Codex cron daily-communications-brain (07:00 local)",
+      "state": "fresh",
+      "age_hours": 5,
+      "budget_hours": 26
+    },
+    {
+      "id": "communications-brain",
+      "path": "12_Brain/state/daily-communications-brain.json",
+      "owner": "Codex cron daily-communications-brain",
+      "state": "fresh",
+      "age_hours": 4.9,
+      "budget_hours": 26
+    },
+    {
+      "id": "claude-daily-driver",
+      "path": "12_Brain/state/claude-daily-driver.json",
+      "owner": "Task Scheduler Claude-Autonomous-Daily-Driver (PT15M)",
+      "state": "fresh",
+      "age_hours": 0.1,
+      "budget_hours": 2
+    },
+    {
+      "id": "claude-loop",
+      "path": "12_Brain/state/claude-loop.json",
+      "owner": "claude-loop.js via the daily driver",
+      "state": "fresh",
+      "age_hours": 3.9,
+      "budget_hours": 26
+    },
+    {
+      "id": "immohrtal-plan",
+      "path": "Daily-Briefs/plan-2026-09-15.md",
+      "owner": "Task Scheduler Immohrtal-Crew",
+      "state": "fresh",
+      "age_hours": 1.3,
+      "budget_hours": 26
+    },
+    {
+      "id": "frontmatter-validate",
+      "path": "12_Brain/state/frontmatter-validate.json",
+      "owner": "frontmatter-validate.js, on demand + pre-pulse",
+      "state": "fresh",
+      "age_hours": 0.2,
+      "budget_hours": 168
+    },
+    {
+      "id": "approval-queue",
+      "path": "System/approval-queue.md",
+      "owner": "every session that gates an external action",
+      "state": "fresh",
+      "age_hours": 0.9,
+      "budget_hours": 72
+    }
+  ],
+  "daily_brief_days": [
+    {
+      "date": "2026-09-02",
+      "present": true
+    },
+    {
+      "date": "2026-09-03",
+      "present": true
+    },
+    {
+      "date": "2026-09-04",
+      "present": true
+    },
+    {
+      "date": "2026-09-05",
+      "present": true
+    },
+    {
+      "date": "2026-09-06",
+      "present": true
+    },
+    {
+      "date": "2026-09-07",
+      "present": false
+    },
+    {
+      "date": "2026-09-08",
+      "present": true
+    },
+    {
+      "date": "2026-09-09",
+      "present": false
+    },
+    {
+      "date": "2026-09-10",
+      "present": false
+    },
+    {
+      "date": "2026-09-11",
+      "present": false
+    },
+    {
+      "date": "2026-09-12",
+      "present": true
+    },
+    {
+      "date": "2026-09-13",
+      "present": true
+    },
+    {
+      "date": "2026-09-14",
+      "present": true
+    },
+    {
+      "date": "2026-09-15",
+      "present": true
+    }
+  ],
+  "clients": {
+    "registry_present": true,
+    "registry_total": {
+      "value": 27,
+      "source_ref": "client-operations/registry/clients.json"
+    },
+    "registry_active": {
+      "value": 25,
+      "source_ref": "client-operations/registry/clients.json"
+    },
+    "vault_client_dirs": {
+      "value": 25,
+      "source_ref": "01_Clients/"
+    },
+    "client_index_present": {
+      "value": true,
+      "source_ref": "01_Clients/Client Index.md"
+    },
+    "roster_disagreement": "registry 27 vs 25 vault directories"
+  },
+  "shipped": [
+    {
+      "repo": "dillon-os",
+      "path": "C:\\Users\\dillo\\repos\\dillon-os",
+      "commits": 56,
+      "subjects": [
+        "record: Astra consultation on the estate's root problem, 2026-09-15",
+        "scripts: make Repair-ScheduledTasks idempotent and stop it killing Workmate",
+        "session: master orchestrator record for 2026-09-15",
+        "sweep: re-run on the merged tree, stale drops 3 to 0",
+        "Merge pull request #404 from dillonmohr8777/cursor/immohrtal-standing-canary-3c2e"
+      ]
+    },
+    {
+      "repo": "momentum-slack-agent",
+      "path": "C:\\Users\\dillo\\repos\\momentum-slack-agent",
+      "commits": 1,
+      "subjects": [
+        "Retire this runtime: Workmate is the decided Slack surface"
+      ]
+    },
+    {
+      "repo": "mac-mini-handoff",
+      "path": "C:\\Users\\dillo\\Documents\\Codex\\mac-mini-handoff",
+      "commits": 3,
+      "subjects": [
+        "inventory: scan recursively, and fix the encoding bug that broke it under powershell.exe",
+        "Correct the stale Puttery access claim in the first-boot file",
+        "Correct the Onsite tracking claim; add the Nexla call card"
+      ]
+    },
+    {
+      "repo": "weekly-report-dashboard",
+      "path": "C:\\Users\\dillo\\Documents\\Codex\\weekly-report-dashboard",
+      "commits": 1,
+      "subjects": [
+        "Initial commit: the weekly client report system"
+      ]
+    },
+    {
+      "repo": "client-operations",
+      "path": "C:\\Users\\dillo\\Documents\\Codex\\projects\\client-operations",
+      "commits": 7,
+      "subjects": [
+        "feat(faq-bot): read-only team FAQ bot over 04_SOPs, answer path verified",
+        "state: restore portfolio-priorities parity with the registry",
+        "gt-clinic: stage the kickoff email as a real Gmail draft",
+        "intake: packet on three stale registry records",
+        "Commit the weekend's client deliverables"
+      ]
+    }
+  ],
+  "at_risk": [
+    {
+      "repo": "client-operations",
+      "path": "C:\\Users\\dillo\\Documents\\Codex\\projects\\client-operations",
+      "dirty_files": 3464,
+      "has_remote": true,
+      "unpushed_commits": 8,
+      "risk": "8 commit(s) exist only on this machine"
+    },
+    {
+      "repo": "dillon-os",
+      "path": "C:\\Users\\dillo\\Documents\\Codex\\projects\\dillon-os",
+      "dirty_files": 33,
+      "has_remote": true,
+      "unpushed_commits": 0,
+      "risk": "33 uncommitted file(s)"
+    },
+    {
+      "repo": "agent-vault",
+      "path": "C:\\Users\\dillo\\Documents\\Codex\\projects\\agent-vault",
+      "dirty_files": 12,
+      "has_remote": true,
+      "unpushed_commits": 0,
+      "risk": "12 uncommitted file(s)"
+    },
+    {
+      "repo": "client-operations-ami-pdfs-d9e7",
+      "path": "C:\\Users\\dillo\\Documents\\Codex\\projects\\client-operations-ami-pdfs-d9e7",
+      "dirty_files": 6,
+      "has_remote": true,
+      "unpushed_commits": 0,
+      "risk": "6 uncommitted file(s)"
+    },
+    {
+      "repo": "dillon-os",
+      "path": "C:\\Users\\dillo\\repos\\dillon-os",
+      "dirty_files": 5,
+      "has_remote": true,
+      "unpushed_commits": 0,
+      "risk": "5 uncommitted file(s)"
+    },
+    {
+      "repo": "dillon-os-films",
+      "path": "C:\\Users\\dillo\\repos\\dillon-os-films",
+      "dirty_files": 3,
+      "has_remote": true,
+      "unpushed_commits": 0,
+      "risk": "3 uncommitted file(s)"
+    },
+    {
+      "repo": "bigorange-marketing-homepage",
+      "path": "C:\\Users\\dillo\\repos\\bigorange-marketing-homepage",
+      "dirty_files": 1,
+      "has_remote": true,
+      "unpushed_commits": 0,
+      "risk": "1 uncommitted file(s)"
+    },
+    {
+      "repo": "bridge-discovery-prototype",
+      "path": "C:\\Users\\dillo\\repos\\bridge-discovery-prototype",
+      "dirty_files": 1,
+      "has_remote": true,
+      "unpushed_commits": 0,
+      "risk": "1 uncommitted file(s)"
+    },
+    {
+      "repo": "client-operations-canonical",
+      "path": "C:\\Users\\dillo\\repos\\client-operations-canonical",
+      "dirty_files": 1,
+      "has_remote": true,
+      "unpushed_commits": 0,
+      "risk": "1 uncommitted file(s)"
+    },
+    {
+      "repo": "coinbase-derivatives-paper-platform",
+      "path": "C:\\Users\\dillo\\repos\\coinbase-derivatives-paper-platform",
+      "dirty_files": 1,
+      "has_remote": true,
+      "unpushed_commits": 0,
+      "risk": "1 uncommitted file(s)"
+    },
+    {
+      "repo": "MB-Lab",
+      "path": "C:\\Users\\dillo\\repos\\MB-Lab",
+      "dirty_files": 1,
+      "has_remote": true,
+      "unpushed_commits": 0,
+      "risk": "1 uncommitted file(s)"
+    },
+    {
+      "repo": "nkcdc-phase-two-growth-proposal",
+      "path": "C:\\Users\\dillo\\repos\\nkcdc-phase-two-growth-proposal",
+      "dirty_files": 1,
+      "has_remote": true,
+      "unpushed_commits": 0,
+      "risk": "1 uncommitted file(s)"
+    },
+    {
+      "repo": "philadelphia-prospect-sites",
+      "path": "C:\\Users\\dillo\\repos\\philadelphia-prospect-sites",
+      "dirty_files": 1,
+      "has_remote": true,
+      "unpushed_commits": 0,
+      "risk": "1 uncommitted file(s)"
+    },
+    {
+      "repo": "pro-fence-deck-claude-handoff",
+      "path": "C:\\Users\\dillo\\repos\\pro-fence-deck-claude-handoff",
+      "dirty_files": 1,
+      "has_remote": true,
+      "unpushed_commits": 0,
+      "risk": "1 uncommitted file(s)"
+    },
+    {
+      "repo": "shadow-heating-website",
+      "path": "C:\\Users\\dillo\\repos\\shadow-heating-website",
+      "dirty_files": 1,
+      "has_remote": true,
+      "unpushed_commits": 0,
+      "risk": "1 uncommitted file(s)"
+    },
+    {
+      "repo": "vace-platform",
+      "path": "C:\\Users\\dillo\\repos\\vace-platform",
+      "dirty_files": 1,
+      "has_remote": true,
+      "unpushed_commits": 0,
+      "risk": "1 uncommitted file(s)"
+    },
+    {
+      "repo": "mac-mini-handoff",
+      "path": "C:\\Users\\dillo\\Documents\\Codex\\mac-mini-handoff",
+      "dirty_files": 0,
+      "has_remote": true,
+      "unpushed_commits": 1,
+      "risk": "1 commit(s) exist only on this machine"
+    },
+    {
+      "repo": "hermes-control",
+      "path": "C:\\Users\\dillo\\Documents\\Codex\\projects\\hermes-control",
+      "dirty_files": 1,
+      "has_remote": true,
+      "unpushed_commits": 0,
+      "risk": "1 uncommitted file(s)"
+    },
+    {
+      "repo": "bridge-wt-pr16",
+      "path": "C:\\Users\\dillo\\repos\\bridge-wt-pr16",
+      "dirty_files": 0,
+      "has_remote": true,
+      "unpushed_commits": null,
+      "risk": "branch has no upstream — nothing is pushing it"
+    }
+  ],
+  "overdue": [
+    {
+      "note": "01_Clients/Bar Crawl USA/overview.md",
+      "due": "2026-07-15",
+      "days_overdue": 62,
+      "status": "active"
+    },
+    {
+      "note": "01_Clients/Hope Wellness Center/overview.md",
+      "due": "2026-07-15",
+      "days_overdue": 62,
+      "status": "active"
+    },
+    {
+      "note": "01_Clients/Kimberly James Bridal/overview.md",
+      "due": "2026-07-15",
+      "days_overdue": 62,
+      "status": "active"
+    },
+    {
+      "note": "01_Clients/Omega Landscaping/overview.md",
+      "due": "2026-07-15",
+      "days_overdue": 62,
+      "status": "active"
+    },
+    {
+      "note": "01_Clients/Onsite Concrete/overview.md",
+      "due": "2026-07-15",
+      "days_overdue": 62,
+      "status": "active"
+    },
+    {
+      "note": "01_Clients/Replenish/overview.md",
+      "due": "2026-07-15",
+      "days_overdue": 62,
+      "status": "paused"
+    },
+    {
+      "note": "01_Clients/Tags 2 Go/overview.md",
+      "due": "2026-08-08",
+      "days_overdue": 38,
+      "status": "active"
+    },
+    {
+      "note": "01_Clients/BigOrange Marketing/Custom Home Builder Pillar Project.md",
+      "due": "2026-08-10",
+      "days_overdue": 36,
+      "status": "active"
+    },
+    {
+      "note": "01_Clients/BigOrange Marketing/overview.md",
+      "due": "2026-08-10",
+      "days_overdue": 36,
+      "status": "active"
+    },
+    {
+      "note": "12_Brain/05_Projects/2026-07-29 - Complete Dillon OS second brain.md",
+      "due": "2026-08-23",
+      "days_overdue": 23,
+      "status": "active"
+    },
+    {
+      "note": "01_Clients/Cindy May Christmas/overview.md",
+      "due": "2026-09-01",
+      "days_overdue": 14,
+      "status": "active"
+    }
+  ],
+  "waiting_on_human": {
+    "present": true,
+    "source_ref": "System/approval-queue.md",
+    "lines": 194,
+    "open_checkboxes": 127,
+    "risk_mentions": {
+      "low": 15,
+      "high": 51,
+      "mediumium": 25,
+      "medium": 36
+    },
+    "last_modified": "2026-09-15T18:06:19.407Z",
+    "note": "An item in the queue is a request, never a permission."
+  },
+  "machine": {
+    "platform": "win32 10.0.26200",
+    "hostname": "DESKTOP-4AHKEC4",
+    "uptime_hours": 11.5,
+    "total_memory_gb": 63.8,
+    "free_memory_gb": 31.8,
+    "unclean_shutdowns_30d": 16,
+    "unclean_shutdowns_source": "Windows System event log, Id 6008"
+  },
+  "cadence": {
+    "ledger_present": true,
+    "ledger_rows": 35,
+    "first_ledger_day": "2026-09-14",
+    "days_with_no_ledger_entry": [],
+    "ledger_claims_missing_artifacts": [],
+    "manifests": [
+      {
+        "cadence": "daily",
+        "present": true,
+        "jobs": 3,
+        "disabled": 0
+      },
+      {
+        "cadence": "weekly",
+        "present": true,
+        "jobs": 2,
+        "disabled": 0
+      },
+      {
+        "cadence": "monthly",
+        "present": true,
+        "jobs": 3,
+        "disabled": 0
+      }
+    ],
+    "scheduler": {
+      "mechanism": "Windows Task Scheduler",
+      "registered": [
+        "Cadence-daily",
+        "Cadence-monthly",
+        "Cadence-sweep-heartbeat",
+        "Cadence-weekly"
+      ]
+    }
+  },
+  "silent": {
+    "counters": {
+      "shipped_repos": 5,
+      "at_risk_repos": 19,
+      "overdue_notes": 11,
+      "approval_open_checkboxes": 127,
+      "fresh_artifacts": 7
+    },
+    "suspect": []
+  },
+  "counters": {
+    "shipped_repos": 5,
+    "at_risk_repos": 19,
+    "overdue_notes": 11,
+    "approval_open_checkboxes": 127,
+    "fresh_artifacts": 7
+  },
+  "source_refs": [
+    "12_Brain/registry/automations.json",
+    "12_Brain/state/daily-communications-brain.json",
+    "12_Brain/state/claude-daily-driver.json",
+    "12_Brain/state/claude-loop.json",
+    "System/approval-queue.md",
+    "01_Clients/Client Index.md",
+    "client-operations/registry/clients.json",
+    "Daily-Briefs/",
+    "_os/automation/cadence/run-ledger.jsonl",
+    "_os/automation/cadence/daily.yaml",
+    "git log and git status across the scanned roots",
+    "Windows System event log, Id 6008"
+  ],
+  "run_history": [
+    {
+      "date": "2026-09-14",
+      "status": "ran",
+      "ran_at": "2026-09-14T16:12:54.073Z"
+    },
+    {
+      "date": "2026-09-15",
+      "status": "ran",
+      "ran_at": "2026-09-15T19:00:01.768Z"
+    }
+  ],
+  "exit_code": 2,
+  "verdict": "sweep-gaps=0 stale=0 silent=0 missed-briefs=4/14 cadence-absent=0"
+}

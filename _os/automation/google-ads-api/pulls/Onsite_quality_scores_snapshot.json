@@ -1,0 +1,398 @@
+[
+  {
+    "campaign": {
+      "resourceName": "customers/1033715894/campaigns/24183437726",
+      "name": "Search | High Intent | Solano County | 2026-07-30",
+      "id": "24183437726"
+    },
+    "adGroup": {
+      "resourceName": "customers/1033715894/adGroups/208045326628",
+      "id": "208045326628",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/1033715894/adGroupCriteria/208045326628~371090600",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "stamped concrete contractor"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "371090600"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/1033715894/campaigns/24183437726",
+      "name": "Search | High Intent | Solano County | 2026-07-30",
+      "id": "24183437726"
+    },
+    "adGroup": {
+      "resourceName": "customers/1033715894/adGroups/208045326628",
+      "id": "208045326628",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/1033715894/adGroupCriteria/208045326628~381164991",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "concrete driveway contractor"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "381164991"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/1033715894/campaigns/24183437726",
+      "name": "Search | High Intent | Solano County | 2026-07-30",
+      "id": "24183437726"
+    },
+    "adGroup": {
+      "resourceName": "customers/1033715894/adGroups/208045326628",
+      "id": "208045326628",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/1033715894/adGroupCriteria/208045326628~381326601",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "concrete patio contractor"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "381326601"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/1033715894/campaigns/24183437726",
+      "name": "Search | High Intent | Solano County | 2026-07-30",
+      "id": "24183437726"
+    },
+    "adGroup": {
+      "resourceName": "customers/1033715894/adGroups/208045326628",
+      "id": "208045326628",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/1033715894/adGroupCriteria/208045326628~757348462",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "stamped concrete contractor"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "757348462"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/1033715894/campaigns/24183437726",
+      "name": "Search | High Intent | Solano County | 2026-07-30",
+      "id": "24183437726"
+    },
+    "adGroup": {
+      "resourceName": "customers/1033715894/adGroups/208045326628",
+      "id": "208045326628",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/1033715894/adGroupCriteria/208045326628~1446321784",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "retaining wall contractor"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "1446321784"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/1033715894/campaigns/24183437726",
+      "name": "Search | High Intent | Solano County | 2026-07-30",
+      "id": "24183437726"
+    },
+    "adGroup": {
+      "resourceName": "customers/1033715894/adGroups/208045326628",
+      "id": "208045326628",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/1033715894/adGroupCriteria/208045326628~2165067208",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "concrete driveway contractor"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "2165067208"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/1033715894/campaigns/24183437726",
+      "name": "Search | High Intent | Solano County | 2026-07-30",
+      "id": "24183437726"
+    },
+    "adGroup": {
+      "resourceName": "customers/1033715894/adGroups/208045326628",
+      "id": "208045326628",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/1033715894/adGroupCriteria/208045326628~2466404813",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "concrete patio contractor"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "2466404813"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/1033715894/campaigns/24183437726",
+      "name": "Search | High Intent | Solano County | 2026-07-30",
+      "id": "24183437726"
+    },
+    "adGroup": {
+      "resourceName": "customers/1033715894/adGroups/208045326628",
+      "id": "208045326628",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/1033715894/adGroupCriteria/208045326628~2750570629",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "retaining wall contractor"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "2750570629"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/1033715894/campaigns/24183437726",
+      "name": "Search | High Intent | Solano County | 2026-07-30",
+      "id": "24183437726"
+    },
+    "adGroup": {
+      "resourceName": "customers/1033715894/adGroups/208045326628",
+      "id": "208045326628",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/1033715894/adGroupCriteria/208045326628~113987020625",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "concrete company near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "113987020625"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/1033715894/campaigns/24183437726",
+      "name": "Search | High Intent | Solano County | 2026-07-30",
+      "id": "24183437726"
+    },
+    "adGroup": {
+      "resourceName": "customers/1033715894/adGroups/208045326628",
+      "id": "208045326628",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/1033715894/adGroupCriteria/208045326628~135866620161",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "concrete contractor near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "135866620161"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/1033715894/campaigns/24183437726",
+      "name": "Search | High Intent | Solano County | 2026-07-30",
+      "id": "24183437726"
+    },
+    "adGroup": {
+      "resourceName": "customers/1033715894/adGroups/208045326628",
+      "id": "208045326628",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/1033715894/adGroupCriteria/208045326628~296132697027",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "paver patio contractor"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "296132697027"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/1033715894/campaigns/24183437726",
+      "name": "Search | High Intent | Solano County | 2026-07-30",
+      "id": "24183437726"
+    },
+    "adGroup": {
+      "resourceName": "customers/1033715894/adGroups/208045326628",
+      "id": "208045326628",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/1033715894/adGroupCriteria/208045326628~300954017033",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "concrete contractor near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "300954017033"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/1033715894/campaigns/24183437726",
+      "name": "Search | High Intent | Solano County | 2026-07-30",
+      "id": "24183437726"
+    },
+    "adGroup": {
+      "resourceName": "customers/1033715894/adGroups/208045326628",
+      "id": "208045326628",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/1033715894/adGroupCriteria/208045326628~318170006310",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "concrete company near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "318170006310"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/1033715894/campaigns/24183437726",
+      "name": "Search | High Intent | Solano County | 2026-07-30",
+      "id": "24183437726"
+    },
+    "adGroup": {
+      "resourceName": "customers/1033715894/adGroups/208045326628",
+      "id": "208045326628",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/1033715894/adGroupCriteria/208045326628~322561145681",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "paver patio contractor"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "322561145681"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/1033715894/campaigns/24183437726",
+      "name": "Search | High Intent | Solano County | 2026-07-30",
+      "id": "24183437726"
+    },
+    "adGroup": {
+      "resourceName": "customers/1033715894/adGroups/208045326628",
+      "id": "208045326628",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/1033715894/adGroupCriteria/208045326628~395354420141",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "landscape contractor vacaville"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "395354420141"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/1033715894/campaigns/24183437726",
+      "name": "Search | High Intent | Solano County | 2026-07-30",
+      "id": "24183437726"
+    },
+    "adGroup": {
+      "resourceName": "customers/1033715894/adGroups/208045326628",
+      "id": "208045326628",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/1033715894/adGroupCriteria/208045326628~958255064073",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "concrete contractor vacaville"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "958255064073"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/1033715894/campaigns/24183437726",
+      "name": "Search | High Intent | Solano County | 2026-07-30",
+      "id": "24183437726"
+    },
+    "adGroup": {
+      "resourceName": "customers/1033715894/adGroups/208045326628",
+      "id": "208045326628",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/1033715894/adGroupCriteria/208045326628~958255067233",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "concrete contractor vacaville"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "958255067233"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/1033715894/campaigns/24183437726",
+      "name": "Search | High Intent | Solano County | 2026-07-30",
+      "id": "24183437726"
+    },
+    "adGroup": {
+      "resourceName": "customers/1033715894/adGroups/208045326628",
+      "id": "208045326628",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/1033715894/adGroupCriteria/208045326628~2392814089626",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "landscape contractor vacaville"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "2392814089626"
+    }
+  }
+]

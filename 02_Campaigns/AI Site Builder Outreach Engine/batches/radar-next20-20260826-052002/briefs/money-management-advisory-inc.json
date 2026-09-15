@@ -1,0 +1,221 @@
+{
+  "slug": "money-management-advisory-inc",
+  "prospectId": "RADAR-NEXT20-016",
+  "name": "Money Management Advisory, Inc.",
+  "city": "Feasterville",
+  "market": "Feasterville",
+  "address": "102 West Street Road, Feasterville, PA 19053",
+  "phone": "215-322-7670",
+  "category": "Financial",
+  "vertical": "financial",
+  "verticalGroup": "legal",
+  "attitude": "editorial",
+  "url": "https://www.mmacentral.com/",
+  "description": "Private mobile-first concept for Money Management Advisory, Inc., grounded in its official identity and first-party visual source.",
+  "logo": true,
+  "logoFile": "logo.png",
+  "filmGrain": true,
+  "logoOutroLine": "Feasterville | Financial",
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "qualityPolicy": {
+    "minImages": 12,
+    "maxWords": 500
+  },
+  "sections": [
+    "hero",
+    "proof",
+    "offerings",
+    "story",
+    "experience",
+    "gallery",
+    "feature",
+    "catalog",
+    "contact",
+    "closing"
+  ],
+  "tokens": {
+    "paper": "#EAF6FC",
+    "ink": "#071521",
+    "accent": "#FF6B35",
+    "accent2": "#159B63",
+    "panel": "#F4EFE7",
+    "deep": "#0B1D2D",
+    "onPaper": "#071521",
+    "onAccent": "#071521",
+    "onAccent2": "#071521",
+    "onPanel": "#0B1D2D",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "12px"
+  },
+  "fonts": {
+    "display": "Plus Jakarta Sans",
+    "displayFallback": "Arial,sans-serif",
+    "text": "DM Sans",
+    "textFallback": "Arial,sans-serif"
+  },
+  "skinCss": ".slug-money-management-advisory-inc .hero h1,.slug-money-management-advisory-inc .section-head h2,.slug-money-management-advisory-inc .story h2,.slug-money-management-advisory-inc .feature h2,.slug-money-management-advisory-inc .spotlight h2,.slug-money-management-advisory-inc .contact-intro h2,.slug-money-management-advisory-inc .closing h2,.slug-money-management-advisory-inc .offering-card h3,.slug-money-management-advisory-inc .experience-grid h3,.slug-money-management-advisory-inc .catalog-card h3,.slug-money-management-advisory-inc .footer-identity strong{font-weight:800}",
+  "directionContract": {
+    "thesis": "Money Management Advisory, Inc. should feel immediate, composed, and unmistakably itself on a phone.",
+    "ownWorld": "image first editorial system in deep navy, vivid orange, warm paper, cyan glints, and visibly tactile film grain.",
+    "story": "Move from orientation to legal question, source context, disclosed visual direction, and a direct official action.",
+    "firstViewport": "Source-verifiable identity, one clear proposition, one Align editorial image, and one thumb-ready action.",
+    "form": "Mobile-first legal practice homepage with an ink-resolved identity finale."
+  },
+  "hero": {
+    "eyebrow": "",
+    "headline": "Clarity for the question in front of you.",
+    "sub": "Money Management Advisory, Inc. deserves a first screen that makes the next step legible without flattening the character of the work. This private concept begins with the official identity and first-party source material.",
+    "ctaPrimary": {
+      "label": "Visit official website",
+      "href": "https://www.mmacentral.com/"
+    },
+    "ctaSecondary": {
+      "label": "Explore the concept",
+      "href": "#offerings"
+    },
+    "glassFloat": null,
+    "marquee": []
+  },
+  "proof": {
+    "items": [
+      "Money Management Advisory, Inc.",
+      "Feasterville",
+      "Financial",
+      "Official source connected"
+    ]
+  },
+  "offerings": {
+    "heading": "A homepage organized around the decision a visitor is actually making.",
+    "items": [
+      "Understand the role of Money Management Advisory, Inc. without searching through the page",
+      "See a clearly disclosed, business-relevant visual direction before choosing the next legal question",
+      "Reach the official source through one direct, clearly labelled action"
+    ]
+  },
+  "story": {
+    "heading": "Identity and evidence lead. The interface follows.",
+    "imageIndex": 2,
+    "paragraphs": [
+      "We help people with retirement.",
+      "This concept uses generated editorial imagery as illustrative direction, not as evidence about the business. The composition gives each image room to establish scale and character while the written hierarchy stays concise enough for a phone.",
+      "No testimonial, result, price, award, schedule, or service promise is added here. Current operational details remain under the control of the official website."
+    ]
+  },
+  "experience": {
+    "heading": "A deliberate path from first impression to official action.",
+    "items": [
+      "Immediate identity and location context",
+      "Readable source-led narrative with decisive image rhythm",
+      "A consistent action that stays reachable without interrupting the page"
+    ]
+  },
+  "gallery": {
+    "heading": "Illustrative concept imagery, cut into a tactile mobile editorial rhythm.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ]
+  },
+  "feature": {
+    "heading": "The page disappears behind the work, then returns to the identity.",
+    "text": "As each section passes, progressive motion lets completed information soften without turning the page into a scroll experiment. The final scene returns to the verified Money Management Advisory, Inc. logo with its geometry preserved.",
+    "imageIndex": 9,
+    "cta": {
+      "label": "Open official source",
+      "href": "https://www.mmacentral.com/"
+    }
+  },
+  "catalog": {
+    "heading": "Three useful routes, kept honest and direct.",
+    "items": [
+      {
+        "title": "Review current services and project information",
+        "href": "https://www.mmacentral.com/",
+        "imageIndex": 10
+      },
+      {
+        "title": "Confirm current location and contact details",
+        "href": "https://www.mmacentral.com/",
+        "imageIndex": 11
+      },
+      {
+        "title": "Decide whether the next legal question makes sense",
+        "href": "https://www.mmacentral.com/",
+        "imageIndex": 12
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Current details belong to the official source.",
+    "sub": "This private concept sends nothing. Generated imagery does not depict Money Management Advisory, Inc., its staff, customers, facility, products, projects, or outcomes. Use the official website to confirm services, availability, hours, and contact details."
+  },
+  "closing": {
+    "heading": "A stronger first impression, resolved to the verified logo.",
+    "cta": {
+      "label": "Visit official website",
+      "href": "https://www.mmacentral.com/"
+    }
+  },
+  "links": [
+    {
+      "label": "Official website",
+      "href": "https://www.mmacentral.com/"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Illustrative generated financial concept image 1 for the Money Management Advisory, Inc. private homepage direction"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Illustrative generated financial concept image 2 for the Money Management Advisory, Inc. private homepage direction"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Illustrative generated financial concept image 3 for the Money Management Advisory, Inc. private homepage direction"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Illustrative generated financial concept image 4 for the Money Management Advisory, Inc. private homepage direction"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Illustrative generated financial concept image 5 for the Money Management Advisory, Inc. private homepage direction"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Illustrative generated financial concept image 6 for the Money Management Advisory, Inc. private homepage direction"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Illustrative generated financial concept image 7 for the Money Management Advisory, Inc. private homepage direction"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Illustrative generated financial concept image 8 for the Money Management Advisory, Inc. private homepage direction"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Illustrative generated financial concept image 9 for the Money Management Advisory, Inc. private homepage direction"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Illustrative generated financial concept image 10 for the Money Management Advisory, Inc. private homepage direction"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Illustrative generated financial concept image 11 for the Money Management Advisory, Inc. private homepage direction"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Illustrative generated financial concept image 12 for the Money Management Advisory, Inc. private homepage direction"
+    }
+  ]
+}

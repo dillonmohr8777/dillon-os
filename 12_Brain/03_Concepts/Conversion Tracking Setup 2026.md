@@ -1,12 +1,13 @@
 ---
 tags: [concept, ads-research]
-source: "[[12_Brain/01_Captures/2026-07-04 - full-autonomy-directive]]"
-updated: 2026-07-05
+source: "12_Brain/01_Captures/2026-07-04 - full-autonomy-directive (capture never landed; unverified)"
+updated: 2026-09-02
 expires: 2026-08-04
 note_type: concept
-status: active
+status: expired
+verification_status: unverified
 created: 2026-07-05
-source_refs: ["[[12_Brain/01_Captures/2026-07-04 - full-autonomy-directive]]"]
+source_refs: ["12_Brain/01_Captures/2026-07-04 - full-autonomy-directive (capture never landed; unverified)"]
 ---
 
 
@@ -14,7 +15,7 @@ source_refs: ["[[12_Brain/01_Captures/2026-07-04 - full-autonomy-directive]]"]
 
 One-line: enhanced conversions, GA4 double-counting, gclid/fbclid offline
 stitching, verification order, and primary/secondary — verified July 2026.
-Feeds every [[02_Campaigns/Ads Ops/Ads Ops Hub|Ads Ops]] conversion audit.
+Feeds every [[02_Campaigns/Campaign Index|Ads Ops]] conversion audit.
 
 ## Three 2026 deadlines
 - **April 2026 (live):** Google unified user-provided data — tag + Data Manager

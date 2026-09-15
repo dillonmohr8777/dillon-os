@@ -1,0 +1,306 @@
+{
+  "schema_version": 1,
+  "run_id": "OGD-20260824-64CC5614F238",
+  "graph_id": "daily-d16-content-request-shadow",
+  "dedupe_identity": "ae6d699c533c9c682ddfe25679866270fd3ab7c8f6d6c4f58c2da1b00138f668",
+  "dedupe_key": "D16:2026-08-24:source-bound-shadow",
+  "contract_fingerprint": "b07b11e3d7d166ec1a7573939f361c17c86c8e80b1a113d45e34c3886da73eeb",
+  "canonical_binding": {
+    "locator": "dillon-os://routine/D16/2026-08-24",
+    "version": "2026-08-24:e1cb9e89.05e6a21e.c5a7c091.1b135970.d503a937.90d9bcee.f497ab86.4cbc7e46.43cfa9c9.c4f66a74",
+    "sha256": "bee6d7037763d45601274702c12c8e31ad280fed7e97757744fc5930b1d39065",
+    "captured_at": "2026-08-24T23:49:14.432Z"
+  },
+  "canonical_binding_fingerprint": "df6e083d39d600cb6896f3528e813c7ef81918a86ac5032f9a7076c114e7138b",
+  "status": "complete",
+  "started_at": "2026-08-24T23:49:15.070Z",
+  "updated_at": "2026-08-24T23:49:16.835Z",
+  "event_sequence": 9,
+  "events": [
+    {
+      "sequence": 1,
+      "event": "run_started",
+      "at": "2026-08-24T23:49:15.070Z",
+      "resumed": false
+    },
+    {
+      "sequence": 2,
+      "event": "planned",
+      "at": "2026-08-24T23:49:15.393Z",
+      "graph_attempt": 1,
+      "item_id": null
+    },
+    {
+      "sequence": 3,
+      "event": "worker_verified",
+      "at": "2026-08-24T23:49:16.098Z",
+      "graph_attempt": 1,
+      "item_id": "D16:no-current-content-trigger"
+    },
+    {
+      "sequence": 4,
+      "event": "workers_verified",
+      "at": "2026-08-24T23:49:16.112Z",
+      "graph_attempt": 1,
+      "item_id": null
+    },
+    {
+      "sequence": 5,
+      "event": "reduced",
+      "at": "2026-08-24T23:49:16.134Z",
+      "graph_attempt": 1,
+      "item_id": null
+    },
+    {
+      "sequence": 6,
+      "event": "terminal_verified",
+      "at": "2026-08-24T23:49:16.464Z",
+      "graph_attempt": 1,
+      "item_id": null
+    },
+    {
+      "sequence": 7,
+      "event": "learned",
+      "at": "2026-08-24T23:49:16.479Z",
+      "graph_attempt": 1,
+      "item_id": null
+    },
+    {
+      "sequence": 8,
+      "event": "finished",
+      "at": "2026-08-24T23:49:16.492Z",
+      "graph_attempt": 1,
+      "item_id": null
+    },
+    {
+      "sequence": 9,
+      "event": "receipt_committed",
+      "at": "2026-08-24T23:49:16.835Z",
+      "outcome": "complete"
+    }
+  ],
+  "engine": {
+    "stage": "finished",
+    "graph_attempt": 1,
+    "plan_signature": "c602efc8f2e7bdedd83666cf3e6ce179ae5b0fb0dcd0edc28e8936ca873dd536",
+    "verified_workers": {
+      "D16:no-current-content-trigger": {
+        "input_fingerprint": "da5005c412206a77aa0d5910000c15fa45211973aab1e234b41e019b7bfa6895",
+        "worker_result": {
+          "item_id": "D16:no-current-content-trigger",
+          "input_fingerprint": "da5005c412206a77aa0d5910000c15fa45211973aab1e234b41e019b7bfa6895",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-64CC5614F238:d6ed1ce73bec68120c7a:attempt:1",
+              "maker_evidence": "Built one privacy-safe D16 record for D16:no-current-content-trigger.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D16/2026-08-24-foundation-shadow/workers/d6ed1ce73bec68120c7a.json",
+                  "sha256": "3bd965427f849636a4dd1c8fdb074f6aee6d70bc8b08035c3b12c20cca0aca63",
+                  "bytes": 1181
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D16:no-current-content-trigger from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D16/2026-08-24-foundation-shadow/workers/d6ed1ce73bec68120c7a.json",
+              "sha256": "3bd965427f849636a4dd1c8fdb074f6aee6d70bc8b08035c3b12c20cca0aca63",
+              "bytes": 1181
+            }
+          ],
+          "isolation_id": "OGD-20260824-64CC5614F238:d6ed1ce73bec68120c7a:attempt:1"
+        }
+      }
+    },
+    "budget_used": 6,
+    "previous_terminal_findings": [],
+    "graph_iterations": [
+      {
+        "iteration": 1,
+        "status": "verified",
+        "planner": {
+          "evidence": "Collected 1 isolated D16 item(s) from source set bee6d7037763d45601274702c12c8e31ad280fed7e97757744fc5930b1d39065.",
+          "item_count": 1,
+          "plan_signature": "c602efc8f2e7bdedd83666cf3e6ce179ae5b0fb0dcd0edc28e8936ca873dd536",
+          "items": [
+            {
+              "id": "D16:no-current-content-trigger",
+              "isolation_key": "content-trigger:outcome-graph-replica-and-loop-engineering",
+              "input_fingerprint": "da5005c412206a77aa0d5910000c15fa45211973aab1e234b41e019b7bfa6895",
+              "task": null
+            }
+          ]
+        },
+        "workers": [
+          {
+            "item_id": "D16:no-current-content-trigger",
+            "input_fingerprint": "da5005c412206a77aa0d5910000c15fa45211973aab1e234b41e019b7bfa6895",
+            "status": "verified",
+            "attempts": [
+              {
+                "attempt": 1,
+                "isolation_id": "OGD-20260824-64CC5614F238:d6ed1ce73bec68120c7a:attempt:1",
+                "maker_evidence": "Built one privacy-safe D16 record for D16:no-current-content-trigger.",
+                "artifacts": [
+                  {
+                    "path": "System/outcome-graph/routines/D16/2026-08-24-foundation-shadow/workers/d6ed1ce73bec68120c7a.json",
+                    "sha256": "3bd965427f849636a4dd1c8fdb074f6aee6d70bc8b08035c3b12c20cca0aca63",
+                    "bytes": 1181
+                  }
+                ],
+                "checker_evidence": "Independently reconstructed D16:no-current-content-trigger from the same source-bound contract.",
+                "passed": true,
+                "findings": []
+              }
+            ],
+            "final_artifacts": [
+              {
+                "path": "System/outcome-graph/routines/D16/2026-08-24-foundation-shadow/workers/d6ed1ce73bec68120c7a.json",
+                "sha256": "3bd965427f849636a4dd1c8fdb074f6aee6d70bc8b08035c3b12c20cca0aca63",
+                "bytes": 1181
+              }
+            ],
+            "isolation_id": "OGD-20260824-64CC5614F238:d6ed1ce73bec68120c7a:attempt:1"
+          }
+        ],
+        "reduction": {
+          "evidence": "Reduced all checked D16 records without blending isolation keys.",
+          "artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D16/2026-08-24-foundation-shadow/content-artifact.json",
+              "sha256": "6d1938a5bce612d9c7344032aa1667736468b65c6f5e6b1b2dc67e6507dd604b",
+              "bytes": 1246
+            },
+            {
+              "path": "System/outcome-graph/routines/D16/2026-08-24-foundation-shadow/evidence-map.json",
+              "sha256": "9f9c344328d5d8062132586b3a34f78a885b6569380edd44578c8ce5860c0e9b",
+              "bytes": 813
+            }
+          ]
+        },
+        "terminal_verification": {
+          "evidence": "Recollected and independently verified all D16 sources, records, negative states, and artifact hashes.",
+          "declared_pass": true,
+          "passed": true,
+          "assertions": [
+            {
+              "id": "source-manifest-stable",
+              "passed": true,
+              "detail": "Every named source remains hash-bound at terminal verification."
+            },
+            {
+              "id": "every-isolated-item-reconstructed-exactly-once",
+              "passed": true,
+              "detail": "Every in-scope item has one collision-resistant reconstructed record."
+            },
+            {
+              "id": "reducer-output-reproduces-exactly",
+              "passed": true,
+              "detail": "Final artifacts reproduce exactly from current sources and the frozen evaluation clock."
+            },
+            {
+              "id": "audience-and-outcome-resolved-or-no-trigger",
+              "passed": true,
+              "detail": "A non-content request is explicitly not routed into content production."
+            },
+            {
+              "id": "facts-and-strategy-separated",
+              "passed": true,
+              "detail": "No absent facts are mixed with strategy."
+            },
+            {
+              "id": "material-claims-have-sources",
+              "passed": true,
+              "detail": "No material claim was produced."
+            },
+            {
+              "id": "voice-proof-and-conversion-align",
+              "passed": true,
+              "detail": "No fake audience or conversion path was invented."
+            },
+            {
+              "id": "no-invented-claims",
+              "passed": true,
+              "detail": "The no-trigger receipt contains no claim."
+            },
+            {
+              "id": "privacy-and-no-mutation-boundary",
+              "passed": true,
+              "detail": "Final artifacts are redacted and attest no external, canonical, provider, restart, or checkpoint mutation."
+            }
+          ],
+          "artifact_manifest": [
+            {
+              "path": "System/outcome-graph/routines/D16/2026-08-24-foundation-shadow/content-artifact.json",
+              "sha256": "6d1938a5bce612d9c7344032aa1667736468b65c6f5e6b1b2dc67e6507dd604b",
+              "bytes": 1246
+            },
+            {
+              "path": "System/outcome-graph/routines/D16/2026-08-24-foundation-shadow/evidence-map.json",
+              "sha256": "9f9c344328d5d8062132586b3a34f78a885b6569380edd44578c8ce5860c0e9b",
+              "bytes": 813
+            }
+          ],
+          "manifest_errors": []
+        },
+        "learning": {
+          "evidence": "Appended one hashed D16 correction entry.",
+          "corrections": [
+            "Retain D16 source bindings, negative states, exact authority, and terminal assertions until the underlying evidence changes."
+          ],
+          "ledger": "System/outcome-graph/routines/D16/2026-08-24-foundation-shadow/corrections.jsonl",
+          "ledger_receipt": {
+            "locator": "System/outcome-graph/routines/D16/2026-08-24-foundation-shadow/corrections.jsonl",
+            "entry_sha256": "90b664b99a25fb11a523f3f373ded7888c36ce89f9e2fc05132052b7e8d8e802"
+          }
+        }
+      }
+    ],
+    "invocation_log": [
+      {
+        "adapter": "source-bound-d16-planner",
+        "invoked_at": "2026-08-24T23:49:15.083Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-d16-maker",
+        "invoked_at": "2026-08-24T23:49:15.414Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-d16-checker",
+        "invoked_at": "2026-08-24T23:49:15.768Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-d16-reducer",
+        "invoked_at": "2026-08-24T23:49:16.127Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-d16-terminal-verifier",
+        "invoked_at": "2026-08-24T23:49:16.150Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-d16-learner",
+        "invoked_at": "2026-08-24T23:49:16.477Z",
+        "status": "returned"
+      }
+    ]
+  },
+  "last_event": "receipt_committed",
+  "state_revision": 9,
+  "previous_state_sha256": "bb602974d795f162cc40e1e9d7304accc4e6fdc1b056c44a86dd6d96a7458f19",
+  "receipt": {
+    "path": "runs/OGD-20260824-64CC5614F238/receipt.json",
+    "sha256": "d65bac73d3345f495cfd908706d63e3ec23280892f20ee054fe5adb1d7e657eb",
+    "bytes": 12454
+  }
+}

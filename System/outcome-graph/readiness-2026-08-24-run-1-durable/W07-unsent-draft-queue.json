@@ -1,0 +1,1996 @@
+{
+  "schema_version": 1,
+  "routine_id": "W07",
+  "artifact_type": "unsent_draft_queue_readiness",
+  "window": {
+    "prepared": "2026-08-24",
+    "period_start": "2026-08-17",
+    "period_end": "2026-08-23",
+    "month": "2026-08"
+  },
+  "source": {
+    "locator": "System/outcome-graph/source-snapshots/gmail-drafts-2026-08-17-to-2026-08-23.json",
+    "sha256": "e5f0c980f50217eb7e53d7119283910e82217e85f6e5402a4aec813586996ebc",
+    "source_set_sha256": "85eac42ff07c5913459fd6c8baaa10727d80aeba53d8a2800b1ac6755a87191b",
+    "connector_receipt": {
+      "list_pages": 7,
+      "pagination_complete": true,
+      "drafts_in_window": 45,
+      "threads_requested": 45,
+      "threads_returned": 45
+    }
+  },
+  "drafts": [
+    {
+      "schema_version": 1,
+      "routine_id": "W07",
+      "draft_key": "draft-030cb8d0a20c2af5404d",
+      "input_fingerprint": "030cb8d0a20c2af5404d10bc2fb1efbe6bc647a028cffb652349af876ad9518d",
+      "client_route": {
+        "status": "resolved_active",
+        "candidates": [
+          "revive-systems"
+        ]
+      },
+      "captured_timestamp": "2026-08-17T09:55:58-07:00",
+      "thread_kind": "new_thread",
+      "recipient_counts": {
+        "to": 1,
+        "cc": 3,
+        "bcc": 0
+      },
+      "has_attachment": true,
+      "checks": {
+        "complete_readback": true,
+        "draft_label": true,
+        "subject_present": true,
+        "primary_recipient_present": true,
+        "own_address_excluded": true,
+        "quoted_history_absent": false,
+        "canonical_signature_markers": false,
+        "rendered_dash_absent": false,
+        "canonical_source_bound": false,
+        "exact_active_client_route": true,
+        "reply_all_parity": true,
+        "approval_state_present": true,
+        "no_external_action": true
+      },
+      "findings": [
+        "quoted_history_absent",
+        "canonical_signature_markers",
+        "rendered_dash_absent",
+        "canonical_source_bound"
+      ],
+      "ready_for_exact_preview": false,
+      "approval_state": "pending_exact_preview_approval",
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W07",
+      "draft_key": "draft-09f5809418ef4b809742",
+      "input_fingerprint": "09f5809418ef4b80974287eb59a2ecceb3c7728e42dbd782ce3ad37c3b8db41f",
+      "client_route": {
+        "status": "resolved_active",
+        "candidates": [
+          "replenish-7-eleven"
+        ]
+      },
+      "captured_timestamp": "2026-08-17T17:20:10-04:00",
+      "thread_kind": "new_thread",
+      "recipient_counts": {
+        "to": 1,
+        "cc": 1,
+        "bcc": 0
+      },
+      "has_attachment": false,
+      "checks": {
+        "complete_readback": true,
+        "draft_label": true,
+        "subject_present": true,
+        "primary_recipient_present": true,
+        "own_address_excluded": true,
+        "quoted_history_absent": false,
+        "canonical_signature_markers": true,
+        "rendered_dash_absent": false,
+        "canonical_source_bound": false,
+        "exact_active_client_route": true,
+        "reply_all_parity": true,
+        "approval_state_present": true,
+        "no_external_action": true
+      },
+      "findings": [
+        "quoted_history_absent",
+        "rendered_dash_absent",
+        "canonical_source_bound"
+      ],
+      "ready_for_exact_preview": false,
+      "approval_state": "pending_exact_preview_approval",
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W07",
+      "draft_key": "draft-205a24fbcd4d6f35c64d",
+      "input_fingerprint": "205a24fbcd4d6f35c64dc122536d391aad3bb59f0e336959cbb850187680618d",
+      "client_route": {
+        "status": "resolved_active",
+        "candidates": [
+          "onsite-concrete-landscape"
+        ]
+      },
+      "captured_timestamp": "2026-08-17T19:43:44-04:00",
+      "thread_kind": "new_thread",
+      "recipient_counts": {
+        "to": 2,
+        "cc": 4,
+        "bcc": 0
+      },
+      "has_attachment": true,
+      "checks": {
+        "complete_readback": true,
+        "draft_label": true,
+        "subject_present": true,
+        "primary_recipient_present": true,
+        "own_address_excluded": true,
+        "quoted_history_absent": true,
+        "canonical_signature_markers": true,
+        "rendered_dash_absent": false,
+        "canonical_source_bound": false,
+        "exact_active_client_route": true,
+        "reply_all_parity": true,
+        "approval_state_present": true,
+        "no_external_action": true
+      },
+      "findings": [
+        "rendered_dash_absent",
+        "canonical_source_bound"
+      ],
+      "ready_for_exact_preview": false,
+      "approval_state": "pending_exact_preview_approval",
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W07",
+      "draft_key": "draft-2baa8b3ed83720eea874",
+      "input_fingerprint": "2baa8b3ed83720eea87417ac50549f9c71efb9c4a6e1102d49475213a242251f",
+      "client_route": {
+        "status": "resolved_active",
+        "candidates": [
+          "align-hcm"
+        ]
+      },
+      "captured_timestamp": "2026-08-20T23:22:56-04:00",
+      "thread_kind": "new_thread",
+      "recipient_counts": {
+        "to": 0,
+        "cc": 0,
+        "bcc": 0
+      },
+      "has_attachment": true,
+      "checks": {
+        "complete_readback": true,
+        "draft_label": true,
+        "subject_present": true,
+        "primary_recipient_present": false,
+        "own_address_excluded": true,
+        "quoted_history_absent": true,
+        "canonical_signature_markers": true,
+        "rendered_dash_absent": true,
+        "canonical_source_bound": false,
+        "exact_active_client_route": true,
+        "reply_all_parity": true,
+        "approval_state_present": true,
+        "no_external_action": true
+      },
+      "findings": [
+        "primary_recipient_present",
+        "canonical_source_bound"
+      ],
+      "ready_for_exact_preview": false,
+      "approval_state": "pending_exact_preview_approval",
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W07",
+      "draft_key": "draft-2c08f7fe3d5f2fae1d0c",
+      "input_fingerprint": "2c08f7fe3d5f2fae1d0cd6ccc882801ba82b7bfef4efa12bb54140ed141e1007",
+      "client_route": {
+        "status": "resolved_active",
+        "candidates": [
+          "align-hcm"
+        ]
+      },
+      "captured_timestamp": "2026-08-21T05:22:52+02:00",
+      "thread_kind": "new_thread",
+      "recipient_counts": {
+        "to": 0,
+        "cc": 0,
+        "bcc": 0
+      },
+      "has_attachment": true,
+      "checks": {
+        "complete_readback": true,
+        "draft_label": true,
+        "subject_present": true,
+        "primary_recipient_present": false,
+        "own_address_excluded": true,
+        "quoted_history_absent": true,
+        "canonical_signature_markers": true,
+        "rendered_dash_absent": true,
+        "canonical_source_bound": false,
+        "exact_active_client_route": true,
+        "reply_all_parity": true,
+        "approval_state_present": true,
+        "no_external_action": true
+      },
+      "findings": [
+        "primary_recipient_present",
+        "canonical_source_bound"
+      ],
+      "ready_for_exact_preview": false,
+      "approval_state": "pending_exact_preview_approval",
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W07",
+      "draft_key": "draft-2ee92ed98543178233be",
+      "input_fingerprint": "2ee92ed98543178233be49229f9e44fd886b829dc6ce51f741bc274b1cd44ab8",
+      "client_route": {
+        "status": "resolved_active",
+        "candidates": [
+          "align-hcm"
+        ]
+      },
+      "captured_timestamp": "2026-08-20T23:22:53-04:00",
+      "thread_kind": "new_thread",
+      "recipient_counts": {
+        "to": 0,
+        "cc": 0,
+        "bcc": 0
+      },
+      "has_attachment": true,
+      "checks": {
+        "complete_readback": true,
+        "draft_label": true,
+        "subject_present": true,
+        "primary_recipient_present": false,
+        "own_address_excluded": true,
+        "quoted_history_absent": true,
+        "canonical_signature_markers": true,
+        "rendered_dash_absent": true,
+        "canonical_source_bound": false,
+        "exact_active_client_route": true,
+        "reply_all_parity": true,
+        "approval_state_present": true,
+        "no_external_action": true
+      },
+      "findings": [
+        "primary_recipient_present",
+        "canonical_source_bound"
+      ],
+      "ready_for_exact_preview": false,
+      "approval_state": "pending_exact_preview_approval",
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W07",
+      "draft_key": "draft-327ebdb54b98b4780884",
+      "input_fingerprint": "327ebdb54b98b478088446a00e7eba4737a13edc4d689254957c61aa747e43b6",
+      "client_route": {
+        "status": "unresolved",
+        "candidates": []
+      },
+      "captured_timestamp": "2026-08-21T01:01:48-04:00",
+      "thread_kind": "new_thread",
+      "recipient_counts": {
+        "to": 1,
+        "cc": 0,
+        "bcc": 0
+      },
+      "has_attachment": false,
+      "checks": {
+        "complete_readback": true,
+        "draft_label": true,
+        "subject_present": true,
+        "primary_recipient_present": true,
+        "own_address_excluded": true,
+        "quoted_history_absent": true,
+        "canonical_signature_markers": false,
+        "rendered_dash_absent": false,
+        "canonical_source_bound": false,
+        "exact_active_client_route": false,
+        "reply_all_parity": true,
+        "approval_state_present": true,
+        "no_external_action": true
+      },
+      "findings": [
+        "canonical_signature_markers",
+        "rendered_dash_absent",
+        "canonical_source_bound",
+        "exact_active_client_route"
+      ],
+      "ready_for_exact_preview": false,
+      "approval_state": "pending_exact_preview_approval",
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W07",
+      "draft_key": "draft-363cb1d56fbf772b0942",
+      "input_fingerprint": "363cb1d56fbf772b09422122cd7588733be04023a8819251f07a0e99d570c1af",
+      "client_route": {
+        "status": "resolved_active",
+        "candidates": [
+          "fagan-painting"
+        ]
+      },
+      "captured_timestamp": "2026-08-17T12:55:15-04:00",
+      "thread_kind": "new_thread",
+      "recipient_counts": {
+        "to": 1,
+        "cc": 5,
+        "bcc": 0
+      },
+      "has_attachment": true,
+      "checks": {
+        "complete_readback": true,
+        "draft_label": true,
+        "subject_present": true,
+        "primary_recipient_present": true,
+        "own_address_excluded": true,
+        "quoted_history_absent": false,
+        "canonical_signature_markers": true,
+        "rendered_dash_absent": false,
+        "canonical_source_bound": false,
+        "exact_active_client_route": true,
+        "reply_all_parity": true,
+        "approval_state_present": true,
+        "no_external_action": true
+      },
+      "findings": [
+        "quoted_history_absent",
+        "rendered_dash_absent",
+        "canonical_source_bound"
+      ],
+      "ready_for_exact_preview": false,
+      "approval_state": "pending_exact_preview_approval",
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W07",
+      "draft_key": "draft-3ca2b22cf03131cb0938",
+      "input_fingerprint": "3ca2b22cf03131cb0938ee18fa54bccfd0735d061cd091e9963118a634d3d544",
+      "client_route": {
+        "status": "resolved_active",
+        "candidates": [
+          "nkcdc"
+        ]
+      },
+      "captured_timestamp": "2026-08-17T16:43:47-07:00",
+      "thread_kind": "new_thread",
+      "recipient_counts": {
+        "to": 3,
+        "cc": 4,
+        "bcc": 0
+      },
+      "has_attachment": true,
+      "checks": {
+        "complete_readback": true,
+        "draft_label": true,
+        "subject_present": true,
+        "primary_recipient_present": true,
+        "own_address_excluded": true,
+        "quoted_history_absent": true,
+        "canonical_signature_markers": true,
+        "rendered_dash_absent": false,
+        "canonical_source_bound": false,
+        "exact_active_client_route": true,
+        "reply_all_parity": true,
+        "approval_state_present": true,
+        "no_external_action": true
+      },
+      "findings": [
+        "rendered_dash_absent",
+        "canonical_source_bound"
+      ],
+      "ready_for_exact_preview": false,
+      "approval_state": "pending_exact_preview_approval",
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W07",
+      "draft_key": "draft-3d248f465ba8c77e80d2",
+      "input_fingerprint": "3d248f465ba8c77e80d27eca1a270a8243950d90535701fe3ad6ab44b2b95cf6",
+      "client_route": {
+        "status": "resolved_active",
+        "candidates": [
+          "momentum-360"
+        ]
+      },
+      "captured_timestamp": "2026-08-20T21:33:28-04:00",
+      "thread_kind": "new_thread",
+      "recipient_counts": {
+        "to": 1,
+        "cc": 0,
+        "bcc": 0
+      },
+      "has_attachment": false,
+      "checks": {
+        "complete_readback": true,
+        "draft_label": true,
+        "subject_present": true,
+        "primary_recipient_present": true,
+        "own_address_excluded": true,
+        "quoted_history_absent": true,
+        "canonical_signature_markers": true,
+        "rendered_dash_absent": true,
+        "canonical_source_bound": false,
+        "exact_active_client_route": true,
+        "reply_all_parity": true,
+        "approval_state_present": true,
+        "no_external_action": true
+      },
+      "findings": [
+        "canonical_source_bound"
+      ],
+      "ready_for_exact_preview": false,
+      "approval_state": "pending_exact_preview_approval",
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W07",
+      "draft_key": "draft-40b1d6db77e562a591d8",
+      "input_fingerprint": "40b1d6db77e562a591d87dcbcbbde8bbc5964f2fcef6c4ed75854fadbed97677",
+      "client_route": {
+        "status": "resolved_active",
+        "candidates": [
+          "align-hcm"
+        ]
+      },
+      "captured_timestamp": "2026-08-20T23:22:55-04:00",
+      "thread_kind": "new_thread",
+      "recipient_counts": {
+        "to": 0,
+        "cc": 0,
+        "bcc": 0
+      },
+      "has_attachment": true,
+      "checks": {
+        "complete_readback": true,
+        "draft_label": true,
+        "subject_present": true,
+        "primary_recipient_present": false,
+        "own_address_excluded": true,
+        "quoted_history_absent": true,
+        "canonical_signature_markers": true,
+        "rendered_dash_absent": true,
+        "canonical_source_bound": false,
+        "exact_active_client_route": true,
+        "reply_all_parity": true,
+        "approval_state_present": true,
+        "no_external_action": true
+      },
+      "findings": [
+        "primary_recipient_present",
+        "canonical_source_bound"
+      ],
+      "ready_for_exact_preview": false,
+      "approval_state": "pending_exact_preview_approval",
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W07",
+      "draft_key": "draft-41ff9aea0258aad7ef08",
+      "input_fingerprint": "41ff9aea0258aad7ef08236458e26e132b7f4291c64e426089a005ec2bea7b0f",
+      "client_route": {
+        "status": "resolved_inactive",
+        "candidates": [
+          "tags-2-go"
+        ]
+      },
+      "captured_timestamp": "2026-08-19T09:40:25-07:00",
+      "thread_kind": "new_thread",
+      "recipient_counts": {
+        "to": 1,
+        "cc": 1,
+        "bcc": 0
+      },
+      "has_attachment": false,
+      "checks": {
+        "complete_readback": true,
+        "draft_label": true,
+        "subject_present": true,
+        "primary_recipient_present": true,
+        "own_address_excluded": true,
+        "quoted_history_absent": true,
+        "canonical_signature_markers": false,
+        "rendered_dash_absent": false,
+        "canonical_source_bound": false,
+        "exact_active_client_route": false,
+        "reply_all_parity": true,
+        "approval_state_present": true,
+        "no_external_action": true
+      },
+      "findings": [
+        "canonical_signature_markers",
+        "rendered_dash_absent",
+        "canonical_source_bound",
+        "exact_active_client_route"
+      ],
+      "ready_for_exact_preview": false,
+      "approval_state": "pending_exact_preview_approval",
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W07",
+      "draft_key": "draft-489f019468c23193385d",
+      "input_fingerprint": "489f019468c23193385d7bc551d2c277be1a98075a9cc1021c0ac6c15a1347a7",
+      "client_route": {
+        "status": "resolved_active",
+        "candidates": [
+          "align-hcm"
+        ]
+      },
+      "captured_timestamp": "2026-08-21T05:22:50+02:00",
+      "thread_kind": "new_thread",
+      "recipient_counts": {
+        "to": 0,
+        "cc": 0,
+        "bcc": 0
+      },
+      "has_attachment": true,
+      "checks": {
+        "complete_readback": true,
+        "draft_label": true,
+        "subject_present": true,
+        "primary_recipient_present": false,
+        "own_address_excluded": true,
+        "quoted_history_absent": true,
+        "canonical_signature_markers": true,
+        "rendered_dash_absent": true,
+        "canonical_source_bound": false,
+        "exact_active_client_route": true,
+        "reply_all_parity": true,
+        "approval_state_present": true,
+        "no_external_action": true
+      },
+      "findings": [
+        "primary_recipient_present",
+        "canonical_source_bound"
+      ],
+      "ready_for_exact_preview": false,
+      "approval_state": "pending_exact_preview_approval",
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W07",
+      "draft_key": "draft-48c12bb4551040f14205",
+      "input_fingerprint": "48c12bb4551040f14205ca3fdb1b36e994270642dd67286602621b6f988aa8ad",
+      "client_route": {
+        "status": "resolved_active",
+        "candidates": [
+          "align-hcm"
+        ]
+      },
+      "captured_timestamp": "2026-08-20T23:22:57-04:00",
+      "thread_kind": "new_thread",
+      "recipient_counts": {
+        "to": 0,
+        "cc": 0,
+        "bcc": 0
+      },
+      "has_attachment": true,
+      "checks": {
+        "complete_readback": true,
+        "draft_label": true,
+        "subject_present": true,
+        "primary_recipient_present": false,
+        "own_address_excluded": true,
+        "quoted_history_absent": true,
+        "canonical_signature_markers": true,
+        "rendered_dash_absent": false,
+        "canonical_source_bound": false,
+        "exact_active_client_route": true,
+        "reply_all_parity": true,
+        "approval_state_present": true,
+        "no_external_action": true
+      },
+      "findings": [
+        "primary_recipient_present",
+        "rendered_dash_absent",
+        "canonical_source_bound"
+      ],
+      "ready_for_exact_preview": false,
+      "approval_state": "pending_exact_preview_approval",
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W07",
+      "draft_key": "draft-548ae2a5b75aaca21176",
+      "input_fingerprint": "548ae2a5b75aaca21176d66c3f6cacf4344dad3fd251bfe3021dc46fa98de40d",
+      "client_route": {
+        "status": "resolved_active",
+        "candidates": [
+          "align-hcm"
+        ]
+      },
+      "captured_timestamp": "2026-08-20T23:22:49-04:00",
+      "thread_kind": "new_thread",
+      "recipient_counts": {
+        "to": 1,
+        "cc": 0,
+        "bcc": 0
+      },
+      "has_attachment": true,
+      "checks": {
+        "complete_readback": true,
+        "draft_label": true,
+        "subject_present": true,
+        "primary_recipient_present": true,
+        "own_address_excluded": true,
+        "quoted_history_absent": true,
+        "canonical_signature_markers": true,
+        "rendered_dash_absent": true,
+        "canonical_source_bound": false,
+        "exact_active_client_route": true,
+        "reply_all_parity": true,
+        "approval_state_present": true,
+        "no_external_action": true
+      },
+      "findings": [
+        "canonical_source_bound"
+      ],
+      "ready_for_exact_preview": false,
+      "approval_state": "pending_exact_preview_approval",
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W07",
+      "draft_key": "draft-5890be79b8599570e7cb",
+      "input_fingerprint": "5890be79b8599570e7cb97306137f112b6c47330c966667f7943cac79bc336d9",
+      "client_route": {
+        "status": "unresolved",
+        "candidates": []
+      },
+      "captured_timestamp": "2026-08-21T02:33:00-04:00",
+      "thread_kind": "new_thread",
+      "recipient_counts": {
+        "to": 1,
+        "cc": 0,
+        "bcc": 0
+      },
+      "has_attachment": false,
+      "checks": {
+        "complete_readback": true,
+        "draft_label": true,
+        "subject_present": true,
+        "primary_recipient_present": true,
+        "own_address_excluded": true,
+        "quoted_history_absent": true,
+        "canonical_signature_markers": false,
+        "rendered_dash_absent": true,
+        "canonical_source_bound": false,
+        "exact_active_client_route": false,
+        "reply_all_parity": true,
+        "approval_state_present": true,
+        "no_external_action": true
+      },
+      "findings": [
+        "canonical_signature_markers",
+        "canonical_source_bound",
+        "exact_active_client_route"
+      ],
+      "ready_for_exact_preview": false,
+      "approval_state": "pending_exact_preview_approval",
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W07",
+      "draft_key": "draft-5b27797c785781dcc687",
+      "input_fingerprint": "5b27797c785781dcc687dc779a15828fa06dc898bb95e4aabee5d692812cf5e7",
+      "client_route": {
+        "status": "resolved_active",
+        "candidates": [
+          "hope-wellness-center"
+        ]
+      },
+      "captured_timestamp": "2026-08-17T09:55:20-07:00",
+      "thread_kind": "reply_thread",
+      "recipient_counts": {
+        "to": 1,
+        "cc": 4,
+        "bcc": 0
+      },
+      "has_attachment": true,
+      "checks": {
+        "complete_readback": true,
+        "draft_label": true,
+        "subject_present": true,
+        "primary_recipient_present": true,
+        "own_address_excluded": true,
+        "quoted_history_absent": false,
+        "canonical_signature_markers": true,
+        "rendered_dash_absent": false,
+        "canonical_source_bound": false,
+        "exact_active_client_route": true,
+        "reply_all_parity": true,
+        "approval_state_present": true,
+        "no_external_action": true
+      },
+      "findings": [
+        "quoted_history_absent",
+        "rendered_dash_absent",
+        "canonical_source_bound"
+      ],
+      "ready_for_exact_preview": false,
+      "approval_state": "pending_exact_preview_approval",
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W07",
+      "draft_key": "draft-76dc1063f16d8f0d6d53",
+      "input_fingerprint": "76dc1063f16d8f0d6d53fe85216f977e829849a0fb670689bd8194c384618ae1",
+      "client_route": {
+        "status": "resolved_active",
+        "candidates": [
+          "kimberly-james-bridal"
+        ]
+      },
+      "captured_timestamp": "2026-08-23T16:54:11-07:00",
+      "thread_kind": "new_thread",
+      "recipient_counts": {
+        "to": 1,
+        "cc": 0,
+        "bcc": 0
+      },
+      "has_attachment": false,
+      "checks": {
+        "complete_readback": true,
+        "draft_label": true,
+        "subject_present": true,
+        "primary_recipient_present": true,
+        "own_address_excluded": true,
+        "quoted_history_absent": true,
+        "canonical_signature_markers": true,
+        "rendered_dash_absent": true,
+        "canonical_source_bound": false,
+        "exact_active_client_route": true,
+        "reply_all_parity": true,
+        "approval_state_present": true,
+        "no_external_action": true
+      },
+      "findings": [
+        "canonical_source_bound"
+      ],
+      "ready_for_exact_preview": false,
+      "approval_state": "pending_exact_preview_approval",
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W07",
+      "draft_key": "draft-7a8527e1750e65e7b527",
+      "input_fingerprint": "7a8527e1750e65e7b527dd36e47f8b8dbadb04b28d47ffef5366c5b36fdd9918",
+      "client_route": {
+        "status": "resolved_active",
+        "candidates": [
+          "bok-law-firm"
+        ]
+      },
+      "captured_timestamp": "2026-08-18T20:30:46-04:00",
+      "thread_kind": "reply_thread",
+      "recipient_counts": {
+        "to": 1,
+        "cc": 2,
+        "bcc": 0
+      },
+      "has_attachment": true,
+      "checks": {
+        "complete_readback": true,
+        "draft_label": true,
+        "subject_present": true,
+        "primary_recipient_present": true,
+        "own_address_excluded": true,
+        "quoted_history_absent": false,
+        "canonical_signature_markers": false,
+        "rendered_dash_absent": false,
+        "canonical_source_bound": false,
+        "exact_active_client_route": true,
+        "reply_all_parity": true,
+        "approval_state_present": true,
+        "no_external_action": true
+      },
+      "findings": [
+        "quoted_history_absent",
+        "canonical_signature_markers",
+        "rendered_dash_absent",
+        "canonical_source_bound"
+      ],
+      "ready_for_exact_preview": false,
+      "approval_state": "pending_exact_preview_approval",
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W07",
+      "draft_key": "draft-7f91f3b7cc8d77fad80f",
+      "input_fingerprint": "7f91f3b7cc8d77fad80f39ddaa28065672d46320b0928a316fa1af14c8c0bca0",
+      "client_route": {
+        "status": "resolved_active",
+        "candidates": [
+          "kimberly-james-bridal"
+        ]
+      },
+      "captured_timestamp": "2026-08-23T16:53:00-07:00",
+      "thread_kind": "new_thread",
+      "recipient_counts": {
+        "to": 1,
+        "cc": 0,
+        "bcc": 0
+      },
+      "has_attachment": false,
+      "checks": {
+        "complete_readback": true,
+        "draft_label": true,
+        "subject_present": true,
+        "primary_recipient_present": true,
+        "own_address_excluded": true,
+        "quoted_history_absent": true,
+        "canonical_signature_markers": true,
+        "rendered_dash_absent": true,
+        "canonical_source_bound": false,
+        "exact_active_client_route": true,
+        "reply_all_parity": true,
+        "approval_state_present": true,
+        "no_external_action": true
+      },
+      "findings": [
+        "canonical_source_bound"
+      ],
+      "ready_for_exact_preview": false,
+      "approval_state": "pending_exact_preview_approval",
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W07",
+      "draft_key": "draft-8028b77fd9ab3642f178",
+      "input_fingerprint": "8028b77fd9ab3642f178ba190b4f34304ab9e94dae1ee4dec8291837bed88ad8",
+      "client_route": {
+        "status": "resolved_active",
+        "candidates": [
+          "align-hcm"
+        ]
+      },
+      "captured_timestamp": "2026-08-20T23:23:04-04:00",
+      "thread_kind": "new_thread",
+      "recipient_counts": {
+        "to": 1,
+        "cc": 0,
+        "bcc": 0
+      },
+      "has_attachment": true,
+      "checks": {
+        "complete_readback": true,
+        "draft_label": true,
+        "subject_present": true,
+        "primary_recipient_present": true,
+        "own_address_excluded": true,
+        "quoted_history_absent": true,
+        "canonical_signature_markers": true,
+        "rendered_dash_absent": true,
+        "canonical_source_bound": false,
+        "exact_active_client_route": true,
+        "reply_all_parity": true,
+        "approval_state_present": true,
+        "no_external_action": true
+      },
+      "findings": [
+        "canonical_source_bound"
+      ],
+      "ready_for_exact_preview": false,
+      "approval_state": "pending_exact_preview_approval",
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W07",
+      "draft_key": "draft-8768dbd65370f6fb9b8f",
+      "input_fingerprint": "8768dbd65370f6fb9b8fce5ae7667c886cb6a4fdd8a22447ca85e0e0186f7d99",
+      "client_route": {
+        "status": "unresolved",
+        "candidates": []
+      },
+      "captured_timestamp": "2026-08-21T15:21:57+00:00",
+      "thread_kind": "reply_thread",
+      "recipient_counts": {
+        "to": 1,
+        "cc": 0,
+        "bcc": 0
+      },
+      "has_attachment": false,
+      "checks": {
+        "complete_readback": true,
+        "draft_label": true,
+        "subject_present": true,
+        "primary_recipient_present": true,
+        "own_address_excluded": true,
+        "quoted_history_absent": true,
+        "canonical_signature_markers": true,
+        "rendered_dash_absent": false,
+        "canonical_source_bound": false,
+        "exact_active_client_route": false,
+        "reply_all_parity": true,
+        "approval_state_present": true,
+        "no_external_action": true
+      },
+      "findings": [
+        "rendered_dash_absent",
+        "canonical_source_bound",
+        "exact_active_client_route"
+      ],
+      "ready_for_exact_preview": false,
+      "approval_state": "pending_exact_preview_approval",
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W07",
+      "draft_key": "draft-96e4254c86e40f1f5b13",
+      "input_fingerprint": "96e4254c86e40f1f5b131ef2c2394a0eb503d1142978b2d4d51b2b9b00a392b6",
+      "client_route": {
+        "status": "resolved_active",
+        "candidates": [
+          "momentum-360"
+        ]
+      },
+      "captured_timestamp": "2026-08-20T10:11:35-04:00",
+      "thread_kind": "reply_thread",
+      "recipient_counts": {
+        "to": 1,
+        "cc": 0,
+        "bcc": 0
+      },
+      "has_attachment": false,
+      "checks": {
+        "complete_readback": true,
+        "draft_label": true,
+        "subject_present": true,
+        "primary_recipient_present": true,
+        "own_address_excluded": true,
+        "quoted_history_absent": false,
+        "canonical_signature_markers": true,
+        "rendered_dash_absent": false,
+        "canonical_source_bound": false,
+        "exact_active_client_route": true,
+        "reply_all_parity": false,
+        "approval_state_present": true,
+        "no_external_action": true
+      },
+      "findings": [
+        "quoted_history_absent",
+        "rendered_dash_absent",
+        "canonical_source_bound",
+        "reply_all_parity"
+      ],
+      "ready_for_exact_preview": false,
+      "approval_state": "pending_exact_preview_approval",
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W07",
+      "draft_key": "draft-9a757804a908725d32e4",
+      "input_fingerprint": "9a757804a908725d32e490e64bcff3fca5ac66d0b77870be74aeff8aa6fa2154",
+      "client_route": {
+        "status": "resolved_active",
+        "candidates": [
+          "align-hcm"
+        ]
+      },
+      "captured_timestamp": "2026-08-20T23:23:05-04:00",
+      "thread_kind": "new_thread",
+      "recipient_counts": {
+        "to": 1,
+        "cc": 0,
+        "bcc": 0
+      },
+      "has_attachment": true,
+      "checks": {
+        "complete_readback": true,
+        "draft_label": true,
+        "subject_present": true,
+        "primary_recipient_present": true,
+        "own_address_excluded": true,
+        "quoted_history_absent": true,
+        "canonical_signature_markers": true,
+        "rendered_dash_absent": true,
+        "canonical_source_bound": false,
+        "exact_active_client_route": true,
+        "reply_all_parity": true,
+        "approval_state_present": true,
+        "no_external_action": true
+      },
+      "findings": [
+        "canonical_source_bound"
+      ],
+      "ready_for_exact_preview": false,
+      "approval_state": "pending_exact_preview_approval",
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W07",
+      "draft_key": "draft-9b21271f8889a275b20f",
+      "input_fingerprint": "9b21271f8889a275b20f8bbbd33c41f7584f7b3901b021fecf53de8ac1b5f711",
+      "client_route": {
+        "status": "resolved_active",
+        "candidates": [
+          "hope-wellness-center"
+        ]
+      },
+      "captured_timestamp": "2026-08-17T18:43:46-05:00",
+      "thread_kind": "new_thread",
+      "recipient_counts": {
+        "to": 1,
+        "cc": 6,
+        "bcc": 0
+      },
+      "has_attachment": true,
+      "checks": {
+        "complete_readback": true,
+        "draft_label": true,
+        "subject_present": true,
+        "primary_recipient_present": true,
+        "own_address_excluded": true,
+        "quoted_history_absent": true,
+        "canonical_signature_markers": true,
+        "rendered_dash_absent": false,
+        "canonical_source_bound": false,
+        "exact_active_client_route": true,
+        "reply_all_parity": true,
+        "approval_state_present": true,
+        "no_external_action": true
+      },
+      "findings": [
+        "rendered_dash_absent",
+        "canonical_source_bound"
+      ],
+      "ready_for_exact_preview": false,
+      "approval_state": "pending_exact_preview_approval",
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W07",
+      "draft_key": "draft-9c3f27e607a9ae907ba1",
+      "input_fingerprint": "9c3f27e607a9ae907ba1e81fe0feb2e530e95c333c733334421fcb5e645750dc",
+      "client_route": {
+        "status": "unresolved",
+        "candidates": []
+      },
+      "captured_timestamp": "2026-08-21T19:55:00-07:00",
+      "thread_kind": "new_thread",
+      "recipient_counts": {
+        "to": 1,
+        "cc": 0,
+        "bcc": 0
+      },
+      "has_attachment": false,
+      "checks": {
+        "complete_readback": true,
+        "draft_label": true,
+        "subject_present": true,
+        "primary_recipient_present": true,
+        "own_address_excluded": true,
+        "quoted_history_absent": true,
+        "canonical_signature_markers": false,
+        "rendered_dash_absent": false,
+        "canonical_source_bound": false,
+        "exact_active_client_route": false,
+        "reply_all_parity": true,
+        "approval_state_present": true,
+        "no_external_action": true
+      },
+      "findings": [
+        "canonical_signature_markers",
+        "rendered_dash_absent",
+        "canonical_source_bound",
+        "exact_active_client_route"
+      ],
+      "ready_for_exact_preview": false,
+      "approval_state": "pending_exact_preview_approval",
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W07",
+      "draft_key": "draft-9cd9579b58663e02f7de",
+      "input_fingerprint": "9cd9579b58663e02f7def637c997bfc1c544886909f8c14ef1bd99eeda268082",
+      "client_route": {
+        "status": "resolved_active",
+        "candidates": [
+          "omega-landscaping"
+        ]
+      },
+      "captured_timestamp": "2026-08-17T11:54:35-05:00",
+      "thread_kind": "new_thread",
+      "recipient_counts": {
+        "to": 1,
+        "cc": 4,
+        "bcc": 0
+      },
+      "has_attachment": true,
+      "checks": {
+        "complete_readback": true,
+        "draft_label": true,
+        "subject_present": true,
+        "primary_recipient_present": true,
+        "own_address_excluded": true,
+        "quoted_history_absent": false,
+        "canonical_signature_markers": true,
+        "rendered_dash_absent": false,
+        "canonical_source_bound": false,
+        "exact_active_client_route": true,
+        "reply_all_parity": true,
+        "approval_state_present": true,
+        "no_external_action": true
+      },
+      "findings": [
+        "quoted_history_absent",
+        "rendered_dash_absent",
+        "canonical_source_bound"
+      ],
+      "ready_for_exact_preview": false,
+      "approval_state": "pending_exact_preview_approval",
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W07",
+      "draft_key": "draft-a4e99febde24c2027fc9",
+      "input_fingerprint": "a4e99febde24c2027fc9e97b13fd0f7a03b9be1084650276c081c6570063c6ad",
+      "client_route": {
+        "status": "ambiguous",
+        "candidates": [
+          "fresh-blends-kwik-trip",
+          "replenish-7-eleven"
+        ]
+      },
+      "captured_timestamp": "2026-08-17T09:55:49-07:00",
+      "thread_kind": "new_thread",
+      "recipient_counts": {
+        "to": 1,
+        "cc": 1,
+        "bcc": 0
+      },
+      "has_attachment": true,
+      "checks": {
+        "complete_readback": true,
+        "draft_label": true,
+        "subject_present": true,
+        "primary_recipient_present": true,
+        "own_address_excluded": true,
+        "quoted_history_absent": false,
+        "canonical_signature_markers": true,
+        "rendered_dash_absent": false,
+        "canonical_source_bound": false,
+        "exact_active_client_route": false,
+        "reply_all_parity": true,
+        "approval_state_present": true,
+        "no_external_action": true
+      },
+      "findings": [
+        "quoted_history_absent",
+        "rendered_dash_absent",
+        "canonical_source_bound",
+        "exact_active_client_route"
+      ],
+      "ready_for_exact_preview": false,
+      "approval_state": "pending_exact_preview_approval",
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W07",
+      "draft_key": "draft-a615e9b87a1556eb28ea",
+      "input_fingerprint": "a615e9b87a1556eb28ea05d5672109d925f43ce472be21ebaff7afbeefe63266",
+      "client_route": {
+        "status": "resolved_active",
+        "candidates": [
+          "onsite-concrete-landscape"
+        ]
+      },
+      "captured_timestamp": "2026-08-17T09:55:25-07:00",
+      "thread_kind": "new_thread",
+      "recipient_counts": {
+        "to": 1,
+        "cc": 2,
+        "bcc": 0
+      },
+      "has_attachment": true,
+      "checks": {
+        "complete_readback": true,
+        "draft_label": true,
+        "subject_present": true,
+        "primary_recipient_present": true,
+        "own_address_excluded": true,
+        "quoted_history_absent": false,
+        "canonical_signature_markers": false,
+        "rendered_dash_absent": false,
+        "canonical_source_bound": false,
+        "exact_active_client_route": true,
+        "reply_all_parity": true,
+        "approval_state_present": true,
+        "no_external_action": true
+      },
+      "findings": [
+        "quoted_history_absent",
+        "canonical_signature_markers",
+        "rendered_dash_absent",
+        "canonical_source_bound"
+      ],
+      "ready_for_exact_preview": false,
+      "approval_state": "pending_exact_preview_approval",
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W07",
+      "draft_key": "draft-a6e5b318cc33175fe60d",
+      "input_fingerprint": "a6e5b318cc33175fe60dfcc730ad584ece19c169a369df965bbd3e7330988fbf",
+      "client_route": {
+        "status": "resolved_active",
+        "candidates": [
+          "align-hcm"
+        ]
+      },
+      "captured_timestamp": "2026-08-20T23:23:07-04:00",
+      "thread_kind": "new_thread",
+      "recipient_counts": {
+        "to": 1,
+        "cc": 0,
+        "bcc": 0
+      },
+      "has_attachment": true,
+      "checks": {
+        "complete_readback": true,
+        "draft_label": true,
+        "subject_present": true,
+        "primary_recipient_present": true,
+        "own_address_excluded": true,
+        "quoted_history_absent": true,
+        "canonical_signature_markers": true,
+        "rendered_dash_absent": true,
+        "canonical_source_bound": false,
+        "exact_active_client_route": true,
+        "reply_all_parity": true,
+        "approval_state_present": true,
+        "no_external_action": true
+      },
+      "findings": [
+        "canonical_source_bound"
+      ],
+      "ready_for_exact_preview": false,
+      "approval_state": "pending_exact_preview_approval",
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W07",
+      "draft_key": "draft-a7b0c0cc939a9abd25e0",
+      "input_fingerprint": "a7b0c0cc939a9abd25e07917a69ef9686a95bbac30321280163863021c949a82",
+      "client_route": {
+        "status": "resolved_active",
+        "candidates": [
+          "omega-landscaping"
+        ]
+      },
+      "captured_timestamp": "2026-08-17T14:46:58-04:00",
+      "thread_kind": "reply_thread",
+      "recipient_counts": {
+        "to": 1,
+        "cc": 0,
+        "bcc": 0
+      },
+      "has_attachment": false,
+      "checks": {
+        "complete_readback": true,
+        "draft_label": true,
+        "subject_present": true,
+        "primary_recipient_present": true,
+        "own_address_excluded": true,
+        "quoted_history_absent": true,
+        "canonical_signature_markers": true,
+        "rendered_dash_absent": true,
+        "canonical_source_bound": false,
+        "exact_active_client_route": true,
+        "reply_all_parity": true,
+        "approval_state_present": true,
+        "no_external_action": true
+      },
+      "findings": [
+        "canonical_source_bound"
+      ],
+      "ready_for_exact_preview": false,
+      "approval_state": "pending_exact_preview_approval",
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W07",
+      "draft_key": "draft-ad4eb07d06b18bbd64e1",
+      "input_fingerprint": "ad4eb07d06b18bbd64e18119edbd2440d84007d58349108e0f1e581ff132ec47",
+      "client_route": {
+        "status": "resolved_active",
+        "candidates": [
+          "align-hcm"
+        ]
+      },
+      "captured_timestamp": "2026-08-20T23:23:10-04:00",
+      "thread_kind": "new_thread",
+      "recipient_counts": {
+        "to": 1,
+        "cc": 0,
+        "bcc": 0
+      },
+      "has_attachment": true,
+      "checks": {
+        "complete_readback": true,
+        "draft_label": true,
+        "subject_present": true,
+        "primary_recipient_present": true,
+        "own_address_excluded": true,
+        "quoted_history_absent": true,
+        "canonical_signature_markers": true,
+        "rendered_dash_absent": true,
+        "canonical_source_bound": false,
+        "exact_active_client_route": true,
+        "reply_all_parity": true,
+        "approval_state_present": true,
+        "no_external_action": true
+      },
+      "findings": [
+        "canonical_source_bound"
+      ],
+      "ready_for_exact_preview": false,
+      "approval_state": "pending_exact_preview_approval",
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W07",
+      "draft_key": "draft-ae5e198034f54338938a",
+      "input_fingerprint": "ae5e198034f54338938ad75988714eb9302d26354aa4ff6307a66e4dc711971a",
+      "client_route": {
+        "status": "resolved_active",
+        "candidates": [
+          "revive-systems"
+        ]
+      },
+      "captured_timestamp": "2026-08-17T19:43:47-04:00",
+      "thread_kind": "new_thread",
+      "recipient_counts": {
+        "to": 1,
+        "cc": 4,
+        "bcc": 0
+      },
+      "has_attachment": true,
+      "checks": {
+        "complete_readback": true,
+        "draft_label": true,
+        "subject_present": true,
+        "primary_recipient_present": true,
+        "own_address_excluded": true,
+        "quoted_history_absent": true,
+        "canonical_signature_markers": true,
+        "rendered_dash_absent": false,
+        "canonical_source_bound": false,
+        "exact_active_client_route": true,
+        "reply_all_parity": true,
+        "approval_state_present": true,
+        "no_external_action": true
+      },
+      "findings": [
+        "rendered_dash_absent",
+        "canonical_source_bound"
+      ],
+      "ready_for_exact_preview": false,
+      "approval_state": "pending_exact_preview_approval",
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W07",
+      "draft_key": "draft-c0612bf3d7b45c1f5152",
+      "input_fingerprint": "c0612bf3d7b45c1f5152e31f8ebfba5c0d00530122ede8e19be7666c8b91100c",
+      "client_route": {
+        "status": "resolved_active",
+        "candidates": [
+          "bar-crawl-usa"
+        ]
+      },
+      "captured_timestamp": "2026-08-17T19:39:24-04:00",
+      "thread_kind": "new_thread",
+      "recipient_counts": {
+        "to": 1,
+        "cc": 3,
+        "bcc": 0
+      },
+      "has_attachment": true,
+      "checks": {
+        "complete_readback": true,
+        "draft_label": true,
+        "subject_present": true,
+        "primary_recipient_present": true,
+        "own_address_excluded": true,
+        "quoted_history_absent": false,
+        "canonical_signature_markers": true,
+        "rendered_dash_absent": false,
+        "canonical_source_bound": false,
+        "exact_active_client_route": true,
+        "reply_all_parity": true,
+        "approval_state_present": true,
+        "no_external_action": true
+      },
+      "findings": [
+        "quoted_history_absent",
+        "rendered_dash_absent",
+        "canonical_source_bound"
+      ],
+      "ready_for_exact_preview": false,
+      "approval_state": "pending_exact_preview_approval",
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W07",
+      "draft_key": "draft-c56cf96aadfdd6fba024",
+      "input_fingerprint": "c56cf96aadfdd6fba0244aa84671fbe4c49f713565d12a7841342d29e0a7395f",
+      "client_route": {
+        "status": "ambiguous",
+        "candidates": [
+          "fresh-blends-kwik-trip",
+          "replenish-7-eleven"
+        ]
+      },
+      "captured_timestamp": "2026-08-17T16:43:44-07:00",
+      "thread_kind": "new_thread",
+      "recipient_counts": {
+        "to": 1,
+        "cc": 4,
+        "bcc": 0
+      },
+      "has_attachment": true,
+      "checks": {
+        "complete_readback": true,
+        "draft_label": true,
+        "subject_present": true,
+        "primary_recipient_present": true,
+        "own_address_excluded": true,
+        "quoted_history_absent": true,
+        "canonical_signature_markers": true,
+        "rendered_dash_absent": false,
+        "canonical_source_bound": false,
+        "exact_active_client_route": false,
+        "reply_all_parity": true,
+        "approval_state_present": true,
+        "no_external_action": true
+      },
+      "findings": [
+        "rendered_dash_absent",
+        "canonical_source_bound",
+        "exact_active_client_route"
+      ],
+      "ready_for_exact_preview": false,
+      "approval_state": "pending_exact_preview_approval",
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W07",
+      "draft_key": "draft-c7d0954e5e10034d2d23",
+      "input_fingerprint": "c7d0954e5e10034d2d232aad1240d9f16199b77f86c43b87255f0df02bb0e943",
+      "client_route": {
+        "status": "resolved_inactive",
+        "candidates": [
+          "tags-2-go"
+        ]
+      },
+      "captured_timestamp": "2026-08-16T23:45:18-07:00",
+      "thread_kind": "reply_thread",
+      "recipient_counts": {
+        "to": 1,
+        "cc": 1,
+        "bcc": 0
+      },
+      "has_attachment": false,
+      "checks": {
+        "complete_readback": true,
+        "draft_label": true,
+        "subject_present": true,
+        "primary_recipient_present": true,
+        "own_address_excluded": true,
+        "quoted_history_absent": true,
+        "canonical_signature_markers": false,
+        "rendered_dash_absent": true,
+        "canonical_source_bound": false,
+        "exact_active_client_route": false,
+        "reply_all_parity": true,
+        "approval_state_present": true,
+        "no_external_action": true
+      },
+      "findings": [
+        "canonical_signature_markers",
+        "canonical_source_bound",
+        "exact_active_client_route"
+      ],
+      "ready_for_exact_preview": false,
+      "approval_state": "pending_exact_preview_approval",
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W07",
+      "draft_key": "draft-cf0663b2cf9ebb22fb81",
+      "input_fingerprint": "cf0663b2cf9ebb22fb811e19f65aa4daf958bf3911bbb3177f37afccccb4fb0e",
+      "client_route": {
+        "status": "resolved_active",
+        "candidates": [
+          "fagan-painting"
+        ]
+      },
+      "captured_timestamp": "2026-08-17T16:43:46-07:00",
+      "thread_kind": "new_thread",
+      "recipient_counts": {
+        "to": 1,
+        "cc": 5,
+        "bcc": 0
+      },
+      "has_attachment": true,
+      "checks": {
+        "complete_readback": true,
+        "draft_label": true,
+        "subject_present": true,
+        "primary_recipient_present": true,
+        "own_address_excluded": true,
+        "quoted_history_absent": true,
+        "canonical_signature_markers": true,
+        "rendered_dash_absent": false,
+        "canonical_source_bound": false,
+        "exact_active_client_route": true,
+        "reply_all_parity": true,
+        "approval_state_present": true,
+        "no_external_action": true
+      },
+      "findings": [
+        "rendered_dash_absent",
+        "canonical_source_bound"
+      ],
+      "ready_for_exact_preview": false,
+      "approval_state": "pending_exact_preview_approval",
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W07",
+      "draft_key": "draft-d77ca647a942b3b6bde6",
+      "input_fingerprint": "d77ca647a942b3b6bde6d3551b7613ec7564d090402ee300cb61a074d19731c9",
+      "client_route": {
+        "status": "resolved_active",
+        "candidates": [
+          "nkcdc"
+        ]
+      },
+      "captured_timestamp": "2026-08-17T12:55:30-04:00",
+      "thread_kind": "reply_thread",
+      "recipient_counts": {
+        "to": 1,
+        "cc": 5,
+        "bcc": 0
+      },
+      "has_attachment": true,
+      "checks": {
+        "complete_readback": true,
+        "draft_label": true,
+        "subject_present": true,
+        "primary_recipient_present": true,
+        "own_address_excluded": true,
+        "quoted_history_absent": false,
+        "canonical_signature_markers": true,
+        "rendered_dash_absent": false,
+        "canonical_source_bound": false,
+        "exact_active_client_route": true,
+        "reply_all_parity": true,
+        "approval_state_present": true,
+        "no_external_action": true
+      },
+      "findings": [
+        "quoted_history_absent",
+        "rendered_dash_absent",
+        "canonical_source_bound"
+      ],
+      "ready_for_exact_preview": false,
+      "approval_state": "pending_exact_preview_approval",
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W07",
+      "draft_key": "draft-d817d73cde7a4df6ecbd",
+      "input_fingerprint": "d817d73cde7a4df6ecbd2840c538fb60a563523b6413885dd152bd20e45c0a0c",
+      "client_route": {
+        "status": "ambiguous",
+        "candidates": [
+          "fresh-blends-kwik-trip",
+          "replenish-7-eleven"
+        ]
+      },
+      "captured_timestamp": "2026-08-17T16:43:44-07:00",
+      "thread_kind": "new_thread",
+      "recipient_counts": {
+        "to": 1,
+        "cc": 4,
+        "bcc": 0
+      },
+      "has_attachment": true,
+      "checks": {
+        "complete_readback": true,
+        "draft_label": true,
+        "subject_present": true,
+        "primary_recipient_present": true,
+        "own_address_excluded": true,
+        "quoted_history_absent": true,
+        "canonical_signature_markers": true,
+        "rendered_dash_absent": false,
+        "canonical_source_bound": false,
+        "exact_active_client_route": false,
+        "reply_all_parity": true,
+        "approval_state_present": true,
+        "no_external_action": true
+      },
+      "findings": [
+        "rendered_dash_absent",
+        "canonical_source_bound",
+        "exact_active_client_route"
+      ],
+      "ready_for_exact_preview": false,
+      "approval_state": "pending_exact_preview_approval",
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W07",
+      "draft_key": "draft-d9e2fdf8d3136dfb15be",
+      "input_fingerprint": "d9e2fdf8d3136dfb15be870c497cf8c5947bd1d7d358b58480579719f5a080d9",
+      "client_route": {
+        "status": "resolved_active",
+        "candidates": [
+          "align-hcm"
+        ]
+      },
+      "captured_timestamp": "2026-08-20T23:23:02-04:00",
+      "thread_kind": "new_thread",
+      "recipient_counts": {
+        "to": 1,
+        "cc": 0,
+        "bcc": 0
+      },
+      "has_attachment": true,
+      "checks": {
+        "complete_readback": true,
+        "draft_label": true,
+        "subject_present": true,
+        "primary_recipient_present": true,
+        "own_address_excluded": true,
+        "quoted_history_absent": true,
+        "canonical_signature_markers": true,
+        "rendered_dash_absent": true,
+        "canonical_source_bound": false,
+        "exact_active_client_route": true,
+        "reply_all_parity": true,
+        "approval_state_present": true,
+        "no_external_action": true
+      },
+      "findings": [
+        "canonical_source_bound"
+      ],
+      "ready_for_exact_preview": false,
+      "approval_state": "pending_exact_preview_approval",
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W07",
+      "draft_key": "draft-df519600070d9df5e139",
+      "input_fingerprint": "df519600070d9df5e139bdcf7ea6801cd2d23267b50a721d6b06cab429a84a29",
+      "client_route": {
+        "status": "resolved_active",
+        "candidates": [
+          "align-hcm"
+        ]
+      },
+      "captured_timestamp": "2026-08-20T23:23:08-04:00",
+      "thread_kind": "new_thread",
+      "recipient_counts": {
+        "to": 1,
+        "cc": 0,
+        "bcc": 0
+      },
+      "has_attachment": true,
+      "checks": {
+        "complete_readback": true,
+        "draft_label": true,
+        "subject_present": true,
+        "primary_recipient_present": true,
+        "own_address_excluded": true,
+        "quoted_history_absent": true,
+        "canonical_signature_markers": true,
+        "rendered_dash_absent": true,
+        "canonical_source_bound": false,
+        "exact_active_client_route": true,
+        "reply_all_parity": true,
+        "approval_state_present": true,
+        "no_external_action": true
+      },
+      "findings": [
+        "canonical_source_bound"
+      ],
+      "ready_for_exact_preview": false,
+      "approval_state": "pending_exact_preview_approval",
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W07",
+      "draft_key": "draft-e62cc039b08bf464ef98",
+      "input_fingerprint": "e62cc039b08bf464ef986eb9f961f97cba98141b4463629edb528406e3b32669",
+      "client_route": {
+        "status": "resolved_active",
+        "candidates": [
+          "align-hcm"
+        ]
+      },
+      "captured_timestamp": "2026-08-20T23:23:01-04:00",
+      "thread_kind": "new_thread",
+      "recipient_counts": {
+        "to": 1,
+        "cc": 0,
+        "bcc": 0
+      },
+      "has_attachment": true,
+      "checks": {
+        "complete_readback": true,
+        "draft_label": true,
+        "subject_present": true,
+        "primary_recipient_present": true,
+        "own_address_excluded": true,
+        "quoted_history_absent": true,
+        "canonical_signature_markers": true,
+        "rendered_dash_absent": true,
+        "canonical_source_bound": false,
+        "exact_active_client_route": true,
+        "reply_all_parity": true,
+        "approval_state_present": true,
+        "no_external_action": true
+      },
+      "findings": [
+        "canonical_source_bound"
+      ],
+      "ready_for_exact_preview": false,
+      "approval_state": "pending_exact_preview_approval",
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W07",
+      "draft_key": "draft-e657b7dd5f9119cde5db",
+      "input_fingerprint": "e657b7dd5f9119cde5db2feb96d631cc3449461e3ae474fd9fa6dadbc4f3ea6a",
+      "client_route": {
+        "status": "resolved_active",
+        "candidates": [
+          "align-hcm"
+        ]
+      },
+      "captured_timestamp": "2026-08-21T05:22:47+02:00",
+      "thread_kind": "new_thread",
+      "recipient_counts": {
+        "to": 1,
+        "cc": 0,
+        "bcc": 0
+      },
+      "has_attachment": true,
+      "checks": {
+        "complete_readback": true,
+        "draft_label": true,
+        "subject_present": true,
+        "primary_recipient_present": true,
+        "own_address_excluded": true,
+        "quoted_history_absent": true,
+        "canonical_signature_markers": true,
+        "rendered_dash_absent": false,
+        "canonical_source_bound": false,
+        "exact_active_client_route": true,
+        "reply_all_parity": true,
+        "approval_state_present": true,
+        "no_external_action": true
+      },
+      "findings": [
+        "rendered_dash_absent",
+        "canonical_source_bound"
+      ],
+      "ready_for_exact_preview": false,
+      "approval_state": "pending_exact_preview_approval",
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W07",
+      "draft_key": "draft-f4a41792035e5961ae06",
+      "input_fingerprint": "f4a41792035e5961ae061a296cec29071633205d7bd0df7893e57211b522b5f4",
+      "client_route": {
+        "status": "resolved_active",
+        "candidates": [
+          "kimberly-james-bridal"
+        ]
+      },
+      "captured_timestamp": "2026-08-23T16:41:27-07:00",
+      "thread_kind": "new_thread",
+      "recipient_counts": {
+        "to": 1,
+        "cc": 0,
+        "bcc": 0
+      },
+      "has_attachment": false,
+      "checks": {
+        "complete_readback": true,
+        "draft_label": true,
+        "subject_present": true,
+        "primary_recipient_present": true,
+        "own_address_excluded": true,
+        "quoted_history_absent": true,
+        "canonical_signature_markers": true,
+        "rendered_dash_absent": false,
+        "canonical_source_bound": false,
+        "exact_active_client_route": true,
+        "reply_all_parity": true,
+        "approval_state_present": true,
+        "no_external_action": true
+      },
+      "findings": [
+        "rendered_dash_absent",
+        "canonical_source_bound"
+      ],
+      "ready_for_exact_preview": false,
+      "approval_state": "pending_exact_preview_approval",
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W07",
+      "draft_key": "draft-facca7a758cc1f5b4a43",
+      "input_fingerprint": "facca7a758cc1f5b4a43a433bcd3d01a2452b9b33b7fdd8ceb83f499cba96dc9",
+      "client_route": {
+        "status": "resolved_active",
+        "candidates": [
+          "align-hcm"
+        ]
+      },
+      "captured_timestamp": "2026-08-20T23:22:59-04:00",
+      "thread_kind": "new_thread",
+      "recipient_counts": {
+        "to": 1,
+        "cc": 0,
+        "bcc": 0
+      },
+      "has_attachment": true,
+      "checks": {
+        "complete_readback": true,
+        "draft_label": true,
+        "subject_present": true,
+        "primary_recipient_present": true,
+        "own_address_excluded": true,
+        "quoted_history_absent": true,
+        "canonical_signature_markers": true,
+        "rendered_dash_absent": true,
+        "canonical_source_bound": false,
+        "exact_active_client_route": true,
+        "reply_all_parity": true,
+        "approval_state_present": true,
+        "no_external_action": true
+      },
+      "findings": [
+        "canonical_source_bound"
+      ],
+      "ready_for_exact_preview": false,
+      "approval_state": "pending_exact_preview_approval",
+      "canonical_write_attempted": false,
+      "external_action_attempted": false
+    }
+  ],
+  "summary": {
+    "drafts": 45,
+    "ready_for_exact_preview": 0,
+    "unresolved_routes": 4,
+    "ambiguous_routes": 3,
+    "inactive_routes": 2,
+    "missing_primary_recipient": 6,
+    "quoted_history_present": 11,
+    "signature_mismatch": 8,
+    "dash_rule_failed": 25,
+    "reply_all_mismatch": 1,
+    "missing_canonical_source_binding": 45
+  },
+  "workflow_ready": false,
+  "privacy": {
+    "redacted": true,
+    "contains_secrets": false,
+    "contains_direct_identifiers": false,
+    "contains_raw_communications": false
+  },
+  "authority": {
+    "draft_only": true,
+    "exact_preview_approval_required": true,
+    "canonical_write_attempted": false,
+    "external_action_attempted": false
+  }
+}

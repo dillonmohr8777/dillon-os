@@ -1,0 +1,9 @@
+{
+ "wakeId":"heartbeat:20260905T180222713Z",
+ "window":{"afterUnix":1788629418,"beforeUnix":1788631358},
+ "identities":{"gmail":"dillonmohr8777@gmail.com","slack":"Momentum Digital Agency / Dillon Mohr"},
+ "coverage":{"gmailMessages":3,"slackMessages":0,"sourcePages":2,"newKeys":1,"paginationExhausted":true},
+ "interpretation":"One new promotion suppressed. Two deployment notices previously reviewed. No new Slack messages, actionable business requests, source failures or changed known blockers.",
+ "daily":{"leadTableDue":false,"googleAdsReportDue":false,"predictionBriefDue":false,"bedtimeDue":false},
+ "workersDispatched":0,"externalWrites":0,"decision":"DONT_NOTIFY"
+}

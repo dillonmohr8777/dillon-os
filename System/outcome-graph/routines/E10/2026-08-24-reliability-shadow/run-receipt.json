@@ -1,0 +1,305 @@
+{
+  "run_id": "OGD-20260824-1CA32B8705DA",
+  "graph_id": "event-e10-runtime-recovery-shadow",
+  "objective": "Classify the current bounded Hermes gateway runtime from process, heartbeat, log, conflict, and behavior evidence without creating a competing command center.",
+  "value_signal": "Recovery readiness is based on current end-to-end behavior, not process presence or retained connected state.",
+  "contract_sha256": "2efc61838783c960e7d3e612cf89d7f7c6b26507c3c43032cdf58d8fa408c770",
+  "started_at": "2026-08-24T23:35:22.253Z",
+  "source_evidence": "Registry, loop and driver logs, runtime and checkpoint state, connector observations, gateway health, and historical health projections are rehashed before planning and at terminal verification.",
+  "finish_line": "The exact runtime is independently reconstructed from current health evidence; unresolved sustained behavior remains held and no restart, token, worker, or command-center mutation occurs.",
+  "governance": {
+    "orchestrator": "Codex acting as Marketing Chief",
+    "canonical_state": "Dillon OS automation registry, runtime/checkpoint state, provider-readback state, current gateway health, and legacy loop receipts remain canonical and read only.",
+    "dedupe_key": "E10:2026-08-24:live-event-state:source-bound-shadow",
+    "checkpoint": "System/outcome-graph/routines/E10/2026-08-24-reliability-shadow/run-receipt.json",
+    "rollback": "Discard reliability shadow artifacts; retain processes, checkpoints, providers, schedules, messages, and canonical state unchanged.",
+    "escalation": "Return exact stale evidence, false-completion risk, connector gate, runtime degradation, or missing approval to Marketing Chief."
+  },
+  "graph_iterations": [
+    {
+      "iteration": 1,
+      "status": "verified",
+      "planner": {
+        "evidence": "Collected 1 isolated E10 item(s) from source set b52e6019ce577e6427819c75ce81c9d04bbc32253583635a0206012c90e3683a.",
+        "item_count": 1,
+        "plan_signature": "e380bc730ce814ce4d2ce8d95f480a14c4f493f1d659dd4e40872fdc277f7812",
+        "items": [
+          {
+            "id": "E10:hermes-gateway",
+            "isolation_key": "runtime:hermes-gateway:telegram-route",
+            "input_fingerprint": "09c45a77778a5fb3d8bbc7cf14ca7cab271f63954d16098360fb0a890a80b8b4",
+            "task": null
+          }
+        ]
+      },
+      "workers": [
+        {
+          "item_id": "E10:hermes-gateway",
+          "input_fingerprint": "09c45a77778a5fb3d8bbc7cf14ca7cab271f63954d16098360fb0a890a80b8b4",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-1CA32B8705DA:1f6e9db4930089cc32f7:attempt:1",
+              "maker_evidence": "Built one privacy-safe E10 record for E10:hermes-gateway.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/E10/2026-08-24-reliability-shadow/workers/1f6e9db4930089cc32f7.json",
+                  "sha256": "9118c6bce4396881f9335962fce60f6d95a1f6dcc6ad56b063fbd9eca6a73966",
+                  "bytes": 1492
+                }
+              ],
+              "checker_evidence": "Independently reconstructed E10:hermes-gateway from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/E10/2026-08-24-reliability-shadow/workers/1f6e9db4930089cc32f7.json",
+              "sha256": "9118c6bce4396881f9335962fce60f6d95a1f6dcc6ad56b063fbd9eca6a73966",
+              "bytes": 1492
+            }
+          ],
+          "isolation_id": "OGD-20260824-1CA32B8705DA:1f6e9db4930089cc32f7:attempt:1"
+        }
+      ],
+      "reduction": {
+        "evidence": "Reduced all checked E10 records without blending isolation keys.",
+        "artifacts": [
+          {
+            "path": "System/outcome-graph/routines/E10/2026-08-24-reliability-shadow/runtime-recovery-receipt.json",
+            "sha256": "53a57c86652786bd1b0641aad5063753054b600fb2e93a84b98b191d348e4f7e",
+            "bytes": 2123
+          },
+          {
+            "path": "System/outcome-graph/routines/E10/2026-08-24-reliability-shadow/sustained-behavior-evidence.json",
+            "sha256": "55f7fe2ad500cdd4f3fda834fb460aa48a7d77152967aa5940173c51586d8903",
+            "bytes": 634
+          }
+        ]
+      },
+      "terminal_verification": {
+        "evidence": "Recollected and independently verified all E10 sources, records, negative states, and artifact hashes.",
+        "declared_pass": true,
+        "passed": true,
+        "assertions": [
+          {
+            "id": "source-manifest-stable",
+            "passed": true,
+            "detail": "Every named source remains hash-bound at terminal verification."
+          },
+          {
+            "id": "every-isolated-item-reconstructed-exactly-once",
+            "passed": true,
+            "detail": "Every in-scope item has one collision-resistant reconstructed record."
+          },
+          {
+            "id": "reducer-output-reproduces-exactly",
+            "passed": true,
+            "detail": "Final artifacts reproduce exactly from current sources and the frozen evaluation clock."
+          },
+          {
+            "id": "current-process-logs-and-state-inspected",
+            "passed": true,
+            "detail": "Process identity and current health evidence are source-bound."
+          },
+          {
+            "id": "competing-workers-and-stale-state-visible",
+            "passed": true,
+            "detail": "Worker and stale-state findings are explicit."
+          },
+          {
+            "id": "recovery-is-bounded-and-reversible",
+            "passed": true,
+            "detail": "No unapproved recovery occurred."
+          },
+          {
+            "id": "sustained-behavior-not-inferred",
+            "passed": true,
+            "detail": "Process presence, heartbeat, and retained connected state do not become end-to-end proof without inbound and reply evidence."
+          },
+          {
+            "id": "marketing-chief-receives-exact-evidence",
+            "passed": true,
+            "detail": "The handoff carries exact evidence and one next action."
+          },
+          {
+            "id": "no-token-parallel-command-center-or-false-completion",
+            "passed": true,
+            "detail": "Authority remains bounded and runtime completion exactly matches current behavior evidence."
+          },
+          {
+            "id": "privacy-and-no-mutation-boundary",
+            "passed": true,
+            "detail": "Final artifacts are redacted and attest no external, canonical, provider, restart, or checkpoint mutation."
+          }
+        ],
+        "artifact_manifest": [
+          {
+            "path": "System/outcome-graph/routines/E10/2026-08-24-reliability-shadow/runtime-recovery-receipt.json",
+            "sha256": "53a57c86652786bd1b0641aad5063753054b600fb2e93a84b98b191d348e4f7e",
+            "bytes": 2123
+          },
+          {
+            "path": "System/outcome-graph/routines/E10/2026-08-24-reliability-shadow/sustained-behavior-evidence.json",
+            "sha256": "55f7fe2ad500cdd4f3fda834fb460aa48a7d77152967aa5940173c51586d8903",
+            "bytes": 634
+          }
+        ],
+        "manifest_errors": []
+      },
+      "learning": {
+        "evidence": "Appended one hashed E10 correction entry.",
+        "corrections": [
+          "Require sustained heartbeat, log, inbound, and reply evidence before calling a live runtime recovered."
+        ],
+        "ledger": "System/outcome-graph/routines/E10/2026-08-24-reliability-shadow/corrections.jsonl",
+        "ledger_receipt": {
+          "locator": "System/outcome-graph/routines/E10/2026-08-24-reliability-shadow/corrections.jsonl",
+          "entry_sha256": "e910ba6844fe9c0f8cce4f1fc583f5671388a70d2f8af69fb6fe069c74da8bc8"
+        }
+      }
+    }
+  ],
+  "invocation_log": [
+    {
+      "adapter": "source-bound-e10-planner",
+      "invoked_at": "2026-08-24T23:35:22.293Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-e10-maker",
+      "invoked_at": "2026-08-24T23:35:22.331Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-e10-checker",
+      "invoked_at": "2026-08-24T23:35:22.351Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-e10-reducer",
+      "invoked_at": "2026-08-24T23:35:22.424Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-e10-terminal-verifier",
+      "invoked_at": "2026-08-24T23:35:22.474Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-e10-learner",
+      "invoked_at": "2026-08-24T23:35:22.517Z",
+      "status": "returned"
+    }
+  ],
+  "budget": {
+    "limit_units": 96,
+    "used_units": 6
+  },
+  "outcome": "complete",
+  "terminal_truth": true,
+  "finished_at": "2026-08-24T23:35:22.543Z",
+  "elapsed_seconds": 0.29,
+  "blocked_by": null,
+  "reason": "Finish line is proven by an independent terminal verifier.",
+  "terminal_evidence": {
+    "evidence": "Recollected and independently verified all E10 sources, records, negative states, and artifact hashes.",
+    "declared_pass": true,
+    "passed": true,
+    "assertions": [
+      {
+        "id": "source-manifest-stable",
+        "passed": true,
+        "detail": "Every named source remains hash-bound at terminal verification."
+      },
+      {
+        "id": "every-isolated-item-reconstructed-exactly-once",
+        "passed": true,
+        "detail": "Every in-scope item has one collision-resistant reconstructed record."
+      },
+      {
+        "id": "reducer-output-reproduces-exactly",
+        "passed": true,
+        "detail": "Final artifacts reproduce exactly from current sources and the frozen evaluation clock."
+      },
+      {
+        "id": "current-process-logs-and-state-inspected",
+        "passed": true,
+        "detail": "Process identity and current health evidence are source-bound."
+      },
+      {
+        "id": "competing-workers-and-stale-state-visible",
+        "passed": true,
+        "detail": "Worker and stale-state findings are explicit."
+      },
+      {
+        "id": "recovery-is-bounded-and-reversible",
+        "passed": true,
+        "detail": "No unapproved recovery occurred."
+      },
+      {
+        "id": "sustained-behavior-not-inferred",
+        "passed": true,
+        "detail": "Process presence, heartbeat, and retained connected state do not become end-to-end proof without inbound and reply evidence."
+      },
+      {
+        "id": "marketing-chief-receives-exact-evidence",
+        "passed": true,
+        "detail": "The handoff carries exact evidence and one next action."
+      },
+      {
+        "id": "no-token-parallel-command-center-or-false-completion",
+        "passed": true,
+        "detail": "Authority remains bounded and runtime completion exactly matches current behavior evidence."
+      },
+      {
+        "id": "privacy-and-no-mutation-boundary",
+        "passed": true,
+        "detail": "Final artifacts are redacted and attest no external, canonical, provider, restart, or checkpoint mutation."
+      }
+    ],
+    "artifact_manifest": [
+      {
+        "path": "System/outcome-graph/routines/E10/2026-08-24-reliability-shadow/runtime-recovery-receipt.json",
+        "sha256": "53a57c86652786bd1b0641aad5063753054b600fb2e93a84b98b191d348e4f7e",
+        "bytes": 2123
+      },
+      {
+        "path": "System/outcome-graph/routines/E10/2026-08-24-reliability-shadow/sustained-behavior-evidence.json",
+        "sha256": "55f7fe2ad500cdd4f3fda834fb460aa48a7d77152967aa5940173c51586d8903",
+        "bytes": 634
+      }
+    ],
+    "manifest_errors": []
+  },
+  "learning_evidence": {
+    "evidence": "Appended one hashed E10 correction entry.",
+    "corrections": [
+      "Require sustained heartbeat, log, inbound, and reply evidence before calling a live runtime recovered."
+    ],
+    "ledger": "System/outcome-graph/routines/E10/2026-08-24-reliability-shadow/corrections.jsonl",
+    "ledger_receipt": {
+      "locator": "System/outcome-graph/routines/E10/2026-08-24-reliability-shadow/corrections.jsonl",
+      "entry_sha256": "e910ba6844fe9c0f8cce4f1fc583f5671388a70d2f8af69fb6fe069c74da8bc8"
+    }
+  },
+  "drift_fingerprint": "d4257366ceff15da1b213f5f0216bd2e5fb2895377ec0a5c0550bdd64f062098",
+  "deduped": true,
+  "durable_state": {
+    "schema_version": 1,
+    "dedupe_identity": "9c70f38475585791e99732ecbaa1a69cb68a5dfca90cda70ad2d77c3866277e2",
+    "dedupe_hit": true,
+    "resumed": false,
+    "canonical_binding": {
+      "locator": "dillon-os://routine/E10/2026-08-24:live-event-state",
+      "version": "2026-08-24:05e6a21e.aa41a5c9.58c3eba4.7c8c85b7.671a1719.483c6549.d3f6602f.b206acfa.5f9296df.48f8da86.40feaf98",
+      "sha256": "b52e6019ce577e6427819c75ce81c9d04bbc32253583635a0206012c90e3683a",
+      "captured_at": "2026-08-24T23:35:22.203Z"
+    },
+    "canonical_binding_fingerprint": "bfc04d6771fb1d4adde2cfe0c981334132a3a116a39c75be9d8e1d6dbd7bc6ed",
+    "contract_fingerprint": "add4dc6c319cbe899dd567f01874e2ce766ac305eff48525d9bf551627f77511",
+    "checkpoint": "runs/OGD-20260824-1CA32B8705DA/checkpoint.json"
+  }
+}

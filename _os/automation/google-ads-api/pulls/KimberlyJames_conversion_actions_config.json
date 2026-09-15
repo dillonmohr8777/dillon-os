@@ -1,0 +1,50 @@
+[
+  {
+    "conversionAction": {
+      "resourceName": "customers/8145506229/conversionActions/7548268442",
+      "status": "ENABLED",
+      "type": "LEAD_FORM_SUBMIT",
+      "category": "SUBMIT_LEAD_FORM",
+      "id": "7548268442",
+      "name": "Lead form - Submit",
+      "ownerCustomer": "customers/8145506229",
+      "primaryForGoal": false
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/8145506229/conversionActions/7548559086",
+      "status": "ENABLED",
+      "type": "WEBPAGE",
+      "category": "SUBMIT_LEAD_FORM",
+      "id": "7548559086",
+      "name": "Submit lead form",
+      "ownerCustomer": "customers/8145506229",
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/8145506229/conversionActions/7724600532",
+      "status": "ENABLED",
+      "type": "WEBPAGE_CODELESS",
+      "category": "BOOK_APPOINTMENT",
+      "id": "7724600532",
+      "name": "Book appointment (Form submission https://www.kimberlyjamesbridal.com/bridal-appointment-request)",
+      "ownerCustomer": "customers/8145506229",
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/8145506229/conversionActions/7724600535",
+      "status": "ENABLED",
+      "type": "AD_CALL",
+      "category": "BOOK_APPOINTMENT",
+      "id": "7724600535",
+      "name": "Calls from ads",
+      "ownerCustomer": "customers/8145506229",
+      "primaryForGoal": false
+    }
+  }
+]

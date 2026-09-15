@@ -1,0 +1,164 @@
+[
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/21959397587",
+      "status": "PAUSED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "MAXIMIZE_CONVERSIONS",
+      "name": "Omega Landscaping & Concrete | Colorado Springs | PMax",
+      "id": "21959397587"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/2853981364/campaignBudgets/14107026371",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "14107026371",
+      "amountMicros": "50000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23029417856",
+      "status": "PAUSED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "MAXIMIZE_CONVERSIONS",
+      "name": "Momentum Call Campaign 1",
+      "id": "23029417856"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/2853981364/campaignBudgets/14935116608",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "14935116608",
+      "amountMicros": "95110000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23300554493",
+      "status": "PAUSED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "MANUAL_CPC",
+      "name": "Search_Snow Removal_Call Only",
+      "id": "23300554493"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/2853981364/campaignBudgets/15168824799",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "15168824799",
+      "amountMicros": "50000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23307769901",
+      "status": "PAUSED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "MANUAL_CPC",
+      "name": "Search_Hardscaping_Call Only",
+      "id": "23307769901"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/2853981364/campaignBudgets/15179086504",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "15179086504",
+      "amountMicros": "50000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23307822197",
+      "status": "PAUSED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "MANUAL_CPC",
+      "name": "Search_Concrete Services_Call Only",
+      "id": "23307822197"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/2853981364/campaignBudgets/15179125423",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "15179125423",
+      "amountMicros": "20000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23440060242",
+      "status": "PAUSED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "MANUAL_CPC",
+      "name": "Search_Services_Standard",
+      "id": "23440060242"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/2853981364/campaignBudgets/15284768869",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "15284768869",
+      "amountMicros": "70000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23441013566",
+      "status": "PAUSED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "MANUAL_CPC",
+      "name": "Search_Services_Call Only",
+      "id": "23441013566"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/2853981364/campaignBudgets/15277021149",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "15277021149",
+      "amountMicros": "30000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23614055022",
+      "status": "PAUSED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "MANUAL_CPC",
+      "name": "Search_Brand Campaign",
+      "id": "23614055022"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/2853981364/campaignBudgets/15412169662",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "15412169662",
+      "amountMicros": "10000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/24082267830",
+      "status": "ENABLED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "TARGET_SPEND",
+      "name": "Search | High Intent | Colorado Springs | 2026-07-30",
+      "id": "24082267830"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/2853981364/campaignBudgets/15759128760",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "15759128760",
+      "amountMicros": "50000000"
+    }
+  }
+]
