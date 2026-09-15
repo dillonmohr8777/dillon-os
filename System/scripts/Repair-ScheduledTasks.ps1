@@ -1,6 +1,7 @@
 <#
 .SYNOPSIS
-  Make the cadence, job-lane and Workmate tasks run without an interactive logon.
+  Make the cadence, job-lane and Workmate tasks run without an interactive logon,
+  and register the kanban board as an always-on task.
 
 .DESCRIPTION
   All eight tasks below are registered LogonType Interactive, meaning "run only
@@ -60,6 +61,31 @@ if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdenti
 
 $target = if ($Revert) { 'Interactive' } else { 'S4U' }
 $user   = "$env:USERDOMAIN\$env:USERNAME"
+
+# Dillon-Kanban-Board does not exist yet. Registration itself (not just the
+# principal change) returned Access is denied unelevated on 2026-09-15, same
+# as everything else in this file, so it is created here instead of by a
+# separate script. It has no execution time limit and restarts on crash --
+# it is a server, not a job that finishes.
+if (-not $Revert) {
+  $kanban = 'Dillon-Kanban-Board'
+  if (-not (Get-ScheduledTask -TaskName $kanban -ErrorAction SilentlyContinue)) {
+    $kAction    = New-ScheduledTaskAction -Execute 'node.exe' -Argument '_os\kanban\server.js' `
+                    -WorkingDirectory 'C:\Users\dillo\repos\dillon-os'
+    $kTrigLogon = New-ScheduledTaskTrigger -AtLogOn
+    $kTrigBoot  = New-ScheduledTaskTrigger -AtStartup
+    $kTriggers  = @($kTrigLogon, $kTrigBoot)
+    $kSettings  = New-ScheduledTaskSettingsSet -StartWhenAvailable -AllowStartIfOnBatteries `
+                    -DontStopIfGoingOnBatteries -MultipleInstances IgnoreNew `
+                    -ExecutionTimeLimit ([TimeSpan]::Zero) -RestartCount 999 `
+                    -RestartInterval (New-TimeSpan -Minutes 1)
+    $kPrincipal = New-ScheduledTaskPrincipal -UserId $user -LogonType S4U -RunLevel Limited
+    Register-ScheduledTask -TaskName $kanban -Action $kAction -Trigger $kTriggers `
+      -Settings $kSettings -Principal $kPrincipal -Force | Out-Null
+    Start-ScheduledTask -TaskName $kanban
+    Write-Host "  REGISTERED $kanban (new task, S4U, auto-restart, no time limit)" -ForegroundColor Green
+  }
+}
 
 Write-Host ''
 Write-Host "  Target logon type: $target"
