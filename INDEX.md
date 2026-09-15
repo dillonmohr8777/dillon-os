@@ -136,6 +136,10 @@ evidence.
 
 ## Reliability — 2026-09-15
 
+- [[12_Brain/07_Reviews/2026-09-15 - Master orchestrator session record|Master orchestrator session record]]
+  — the full 2026-09-15 session: what access was exercised and what it proved,
+  the three root causes found, the 87-conflict main merge, and what is still open.
+
 - [[12_Brain/04_Decisions/2026-09-15 - Mac's FAQ bot is a second surface, not an opened Workmate|Mac's FAQ bot is a second surface, not an opened Workmate]]
   — Workmate is live and free per message, but its own prompt binds it to Dillon's
   private DM with Dillon's tool authority. The team FAQ bot is a separate read-only

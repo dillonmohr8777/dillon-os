@@ -2,7 +2,7 @@
 note_type: proposal
 status: worked
 created: 2026-09-15
-verified_at: 2026-09-15T05:41:28.6979949Z
+verified_at: 2026-09-15T15:41:26.8054410Z
 agent: marketing-chief
 privacy: redacted
 external_action_attempted: none
@@ -13,14 +13,14 @@ source_refs:
 
 # Immohrtal crew - 2026-09-15
 
-cycle `CREW-20260915-014120675` outcome **worked**
+cycle `CREW-20260915-114120343` outcome **worked**
 
 ## Lanes
 
 - **reliability-scout** (ok): tasks healthy=4/4; daily-driver=noop; loop-fail-lines=0; agency-lease-expired=True
 - **paid-media-analyst** (blocked): Google Ads not read-verified; Meta stays read-only; no mutation
 - **web-product-builder** (ok): preview LPs queued; radar preflight ready=4; no production deploy; no new public site
-- **qa-critic** (ok): preview QA: 0/3 fail for publish; no artifact edits by critic
+- **qa-critic** (fail_publish): preview QA: 1/3 fail for publish; no artifact edits by critic
 - **growth-content** (ok): agency site live probes 3/3; outreach remains DRAFT_ONLY_DO_NOT_SEND; mail_ready=hold
 - **brain-curator** (ok): compiled crew state only; 12_Brain/01_Captures untouched
 - **marketing-chief** (ok): one ranked Immohrtal board; Codex remains canonical queue writer

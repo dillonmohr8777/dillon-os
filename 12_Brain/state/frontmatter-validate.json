@@ -1,24 +1,15 @@
 {
   "automation_id": "frontmatter-validate",
-  "started_at": "2026-09-05T19:49:11.883Z",
-  "status": "ok",
+  "started_at": "2026-09-15T15:44:50.259Z",
+  "status": "warn",
   "counts": {
-    "files": 37,
-    "incomplete": 0,
+    "files": 39,
+    "incomplete": 2,
     "complete": 37
   },
   "rows": [
     {
-      "file": "01_Clients/AMI Cleaning/overview.md",
-      "ok": true,
-      "missing": [],
-      "warnings": [],
-      "status": "active",
-      "last_touched": "2026-08-01",
-      "due": "none"
-    },
-    {
-      "file": "01_Clients/AWCI.md",
+      "file": "01_Clients\\Align HCM.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -27,16 +18,7 @@
       "due": "none"
     },
     {
-      "file": "01_Clients/Align HCM.md",
-      "ok": true,
-      "missing": [],
-      "warnings": [],
-      "status": "active",
-      "last_touched": "2026-07-29",
-      "due": "none"
-    },
-    {
-      "file": "01_Clients/BOK Law Firm/overview.md",
+      "file": "01_Clients\\AMI Cleaning\\overview.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -45,7 +27,16 @@
       "due": "none"
     },
     {
-      "file": "01_Clients/Bar Crawl USA/overview.md",
+      "file": "01_Clients\\AWCI.md",
+      "ok": true,
+      "missing": [],
+      "warnings": [],
+      "status": "active",
+      "last_touched": "2026-07-29",
+      "due": "none"
+    },
+    {
+      "file": "01_Clients\\Bar Crawl USA\\overview.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -54,7 +45,7 @@
       "due": "2026-07-15"
     },
     {
-      "file": "01_Clients/Bend Plastic Surgery.md",
+      "file": "01_Clients\\Bend Plastic Surgery.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -63,7 +54,7 @@
       "due": "none"
     },
     {
-      "file": "01_Clients/Bercos Popcorn/overview.md",
+      "file": "01_Clients\\Bercos Popcorn\\overview.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -72,7 +63,7 @@
       "due": "none"
     },
     {
-      "file": "01_Clients/BigOrange Marketing/overview.md",
+      "file": "01_Clients\\BigOrange Marketing\\overview.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -81,7 +72,7 @@
       "due": "2026-08-10"
     },
     {
-      "file": "01_Clients/Blissful Events.md",
+      "file": "01_Clients\\Blissful Events.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -90,7 +81,7 @@
       "due": "none"
     },
     {
-      "file": "01_Clients/Bluegrass Janitorial.md",
+      "file": "01_Clients\\Bluegrass Janitorial.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -99,7 +90,25 @@
       "due": "none"
     },
     {
-      "file": "01_Clients/Bridge Software Development/overview.md",
+      "file": "01_Clients\\BOK Law Firm\\overview.md",
+      "ok": true,
+      "missing": [],
+      "warnings": [],
+      "status": "active",
+      "last_touched": "2026-08-01",
+      "due": "none"
+    },
+    {
+      "file": "01_Clients\\Bridge of Hope OTC.md",
+      "ok": true,
+      "missing": [],
+      "warnings": [],
+      "status": "active",
+      "last_touched": "2026-07-29",
+      "due": "none"
+    },
+    {
+      "file": "01_Clients\\Bridge Software Development\\overview.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -108,7 +117,7 @@
       "due": "none"
     },
     {
-      "file": "01_Clients/Bridge of Hope OTC.md",
+      "file": "01_Clients\\Buzz Bull.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -117,16 +126,7 @@
       "due": "none"
     },
     {
-      "file": "01_Clients/Buzz Bull.md",
-      "ok": true,
-      "missing": [],
-      "warnings": [],
-      "status": "active",
-      "last_touched": "2026-07-29",
-      "due": "none"
-    },
-    {
-      "file": "01_Clients/Capsule & Tonic/overview.md",
+      "file": "01_Clients\\Capsule & Tonic\\overview.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -135,7 +135,7 @@
       "due": "none"
     },
     {
-      "file": "01_Clients/Cindy May Christmas/overview.md",
+      "file": "01_Clients\\Cindy May Christmas\\overview.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -144,7 +144,7 @@
       "due": "2026-09-01"
     },
     {
-      "file": "01_Clients/Coach B.md",
+      "file": "01_Clients\\Coach B.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -153,7 +153,7 @@
       "due": "none"
     },
     {
-      "file": "01_Clients/Commercial Cleaners Alliance.md",
+      "file": "01_Clients\\Commercial Cleaners Alliance.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -162,7 +162,7 @@
       "due": "none"
     },
     {
-      "file": "01_Clients/Everyday Life Insurance/overview.md",
+      "file": "01_Clients\\Everyday Life Insurance\\overview.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -171,7 +171,7 @@
       "due": "none"
     },
     {
-      "file": "01_Clients/Florecita.md",
+      "file": "01_Clients\\Florecita.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -180,7 +180,7 @@
       "due": "none"
     },
     {
-      "file": "01_Clients/Fresh Blends/overview.md",
+      "file": "01_Clients\\Fresh Blends\\overview.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -189,7 +189,7 @@
       "due": "none"
     },
     {
-      "file": "01_Clients/Hardwood Artisan.md",
+      "file": "01_Clients\\Hardwood Artisan.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -198,7 +198,7 @@
       "due": "none"
     },
     {
-      "file": "01_Clients/Hope Wellness Center/overview.md",
+      "file": "01_Clients\\Hope Wellness Center\\overview.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -207,7 +207,7 @@
       "due": "2026-07-15"
     },
     {
-      "file": "01_Clients/Kimberly James Bridal/overview.md",
+      "file": "01_Clients\\Kimberly James Bridal\\overview.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -216,7 +216,7 @@
       "due": "2026-07-15"
     },
     {
-      "file": "01_Clients/Link Eze.md",
+      "file": "01_Clients\\Link Eze.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -225,7 +225,7 @@
       "due": "none"
     },
     {
-      "file": "01_Clients/Momentum 360/overview.md",
+      "file": "01_Clients\\Momentum 360\\overview.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -234,16 +234,20 @@
       "due": "none"
     },
     {
-      "file": "01_Clients/NKCDC/overview.md",
-      "ok": true,
-      "missing": [],
+      "file": "01_Clients\\Nexla\\overview.md",
+      "ok": false,
+      "missing": [
+        "last_touched",
+        "next_action",
+        "due"
+      ],
       "warnings": [],
       "status": "active",
-      "last_touched": "2026-08-01",
-      "due": "none"
+      "last_touched": null,
+      "due": null
     },
     {
-      "file": "01_Clients/Next Gen Solutions.md",
+      "file": "01_Clients\\Next Gen Solutions.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -252,7 +256,16 @@
       "due": "none"
     },
     {
-      "file": "01_Clients/Omega Landscaping/overview.md",
+      "file": "01_Clients\\NKCDC\\overview.md",
+      "ok": true,
+      "missing": [],
+      "warnings": [],
+      "status": "active",
+      "last_touched": "2026-08-01",
+      "due": "none"
+    },
+    {
+      "file": "01_Clients\\Omega Landscaping\\overview.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -261,7 +274,7 @@
       "due": "2026-07-15"
     },
     {
-      "file": "01_Clients/Onsite Concrete/overview.md",
+      "file": "01_Clients\\Onsite Concrete\\overview.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -270,7 +283,7 @@
       "due": "2026-07-15"
     },
     {
-      "file": "01_Clients/PNW Pro Clean.md",
+      "file": "01_Clients\\PNW Pro Clean.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -279,7 +292,7 @@
       "due": "none"
     },
     {
-      "file": "01_Clients/Pritzker Law Group/overview.md",
+      "file": "01_Clients\\Pritzker Law Group\\overview.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -288,7 +301,7 @@
       "due": "none"
     },
     {
-      "file": "01_Clients/Pro Fence & Deck/overview.md",
+      "file": "01_Clients\\Pro Fence & Deck\\overview.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -297,7 +310,20 @@
       "due": "none"
     },
     {
-      "file": "01_Clients/Replenish/overview.md",
+      "file": "01_Clients\\Puttery NYC\\overview.md",
+      "ok": false,
+      "missing": [
+        "last_touched",
+        "next_action",
+        "due"
+      ],
+      "warnings": [],
+      "status": "active",
+      "last_touched": null,
+      "due": null
+    },
+    {
+      "file": "01_Clients\\Replenish\\overview.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -306,7 +332,7 @@
       "due": "2026-07-15"
     },
     {
-      "file": "01_Clients/Revive Systems/overview.md",
+      "file": "01_Clients\\Revive Systems\\overview.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -315,7 +341,7 @@
       "due": "none"
     },
     {
-      "file": "01_Clients/Tags 2 Go/overview.md",
+      "file": "01_Clients\\Tags 2 Go\\overview.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -324,7 +350,7 @@
       "due": "2026-08-08"
     },
     {
-      "file": "01_Clients/VA Claims/overview.md",
+      "file": "01_Clients\\VA Claims\\overview.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -333,7 +359,7 @@
       "due": "none"
     },
     {
-      "file": "01_Clients/Vanessa.md",
+      "file": "01_Clients\\Vanessa.md",
       "ok": true,
       "missing": [],
       "warnings": [],
@@ -342,5 +368,6 @@
       "due": "none"
     }
   ],
-  "written_at": "2026-09-05T19:49:11.900Z"
+  "generated_at": "2026-09-15T15:44:50.260Z",
+  "written_at": "2026-09-15T15:44:50.260Z"
 }
