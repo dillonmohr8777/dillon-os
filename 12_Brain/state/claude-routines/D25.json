@@ -1,7 +1,19 @@
 {
-    "routine_id":  "D25",
-    "dedupe_key":  "internal:2026-08-18:D25",
-    "last_stage":  "learn",
-    "run_id":  "LOOP-20260818-023825908",
-    "updated":  "2026-08-18T06:38:29.4409254Z"
+  "routine_id": "D25",
+  "dedupe_key": "internal:2026-09-15:D25",
+  "last_stage": "learn",
+  "run_id": "LOOP-20260915-003825678",
+  "updated": "2026-09-15T04:38:28.555Z",
+  "generated_at": "2026-09-15T04:38:28.555Z",
+  "stage_states": {
+    "sense": "ok",
+    "route": "ok",
+    "prioritize": "ok",
+    "build": "ok",
+    "verify": "ok",
+    "approve": "ok",
+    "deliver": "ok",
+    "readback": "ok",
+    "learn": "ok"
+  }
 }

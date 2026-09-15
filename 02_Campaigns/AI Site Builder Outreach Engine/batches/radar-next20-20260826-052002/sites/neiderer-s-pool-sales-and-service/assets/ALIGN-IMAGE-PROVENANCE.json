@@ -1,0 +1,245 @@
+{
+  "schema": 1,
+  "business": "Neiderer's Pool Sales & Service",
+  "domain": "neidererspoolsales.com",
+  "route": "sites/neiderer-s-pool-sales-and-service/",
+  "generatedAt": "2026-08-26T10:05:59.6216616Z",
+  "generator": "Align HCM Image Gen plugin contract",
+  "model": "gpt-image-2.0",
+  "board": {
+    "key": "neiderer-s-pool-sales-and-service",
+    "descriptor": "swimming-pool",
+    "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Neiderer's Pool Sales & Service. Four distinct but cohesive unlabelled panels in a generic residential pool service context: a pool technician testing water with a professional kit beside a clear blue pool; gloved hands inspecting a pool pump and filtration fittings; a technician brushing a pool edge with proper equipment; a homeowner and technician discussing a simple pool layout from non-identifying angles. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+    "sourceOutput": "C:/Users/dillo/.codex/generated_images/01a03d5e-c09f-74a0-b82e-14ad3c549703/exec-a6bff999-216f-494e-bd31-0b57cd91810f.png",
+    "file": "automation/prospect-radar-next20/generated-stock-library/neiderer-s-pool-sales-and-service.png",
+    "sha256": "8de184324f510534f051c4d100c154ac4b6d97791cd3368f28c643794c4756ca",
+    "dimensions": {
+      "width": 1448,
+      "height": 1086
+    }
+  },
+  "treatment": {
+    "palette": [
+      "#F05A28",
+      "#FF6B35",
+      "#0B1D2D",
+      "#071521",
+      "#F4EFE7",
+      "#EAF6FC",
+      "#91D5ED"
+    ],
+    "imageGrain": "Visible refined 35mm film grain authored in the generated board and preserved in every derivative.",
+    "interfaceGrain": {
+      "file": "grain.svg",
+      "sha256": "f8b8b72ee2a84cf2aaa04ce069edaaa459ee61650e76f307254572db67efb813",
+      "opacity": 0.13
+    },
+    "disclosure": "Illustrative generated imagery. These concept visuals do not depict the business, its staff, customers, facility, products, projects, or outcomes."
+  },
+  "outputs": [
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "neiderer-s-pool-sales-and-service",
+      "boardDescriptor": "swimming-pool",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/neiderer-s-pool-sales-and-service.png",
+      "sourceSha256": "8de184324f510534f051c4d100c154ac4b6d97791cd3368f28c643794c4756ca",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Neiderer's Pool Sales & Service. Four distinct but cohesive unlabelled panels in a generic residential pool service context: a pool technician testing water with a professional kit beside a clear blue pool; gloved hands inspecting a pool pump and filtration fittings; a technician brushing a pool edge with proper equipment; a homeowner and technician discussing a simple pool layout from non-identifying angles. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=1.040:contrast=1.082:brightness=-0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "9f2d92a8e34fcfa623c931b77ea358f3376d32d77cff87f0fa70481f4ce146b5",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "neiderer-s-pool-sales-and-service",
+      "boardDescriptor": "swimming-pool",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/neiderer-s-pool-sales-and-service.png",
+      "sourceSha256": "8de184324f510534f051c4d100c154ac4b6d97791cd3368f28c643794c4756ca",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Neiderer's Pool Sales & Service. Four distinct but cohesive unlabelled panels in a generic residential pool service context: a pool technician testing water with a professional kit beside a clear blue pool; gloved hands inspecting a pool pump and filtration fittings; a technician brushing a pool edge with proper equipment; a homeowner and technician discussing a simple pool layout from non-identifying angles. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:28,eq=saturation=0.940:contrast=1.046:brightness=0.000,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "58c7d7b6726f2774dd88f7e2f884908d04036fb7a92838a3c7d08b888e6f3220",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "neiderer-s-pool-sales-and-service",
+      "boardDescriptor": "swimming-pool",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/neiderer-s-pool-sales-and-service.png",
+      "sourceSha256": "8de184324f510534f051c4d100c154ac4b6d97791cd3368f28c643794c4756ca",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Neiderer's Pool Sales & Service. Four distinct but cohesive unlabelled panels in a generic residential pool service context: a pool technician testing water with a professional kit beside a clear blue pool; gloved hands inspecting a pool pump and filtration fittings; a technician brushing a pool edge with proper equipment; a homeowner and technician discussing a simple pool layout from non-identifying angles. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:56,eq=saturation=0.965:contrast=1.010:brightness=0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "f98938d0cc1565ff67ae616e578cffbec99717d0582d3b98c392b84dad00d200",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "neiderer-s-pool-sales-and-service",
+      "boardDescriptor": "swimming-pool",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/neiderer-s-pool-sales-and-service.png",
+      "sourceSha256": "8de184324f510534f051c4d100c154ac4b6d97791cd3368f28c643794c4756ca",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Neiderer's Pool Sales & Service. Four distinct but cohesive unlabelled panels in a generic residential pool service context: a pool technician testing water with a professional kit beside a clear blue pool; gloved hands inspecting a pool pump and filtration fittings; a technician brushing a pool edge with proper equipment; a homeowner and technician discussing a simple pool layout from non-identifying angles. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=0.990:contrast=1.064:brightness=-0.018,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "86cb0fede3082843a07d692ba4042ba3beb5b5ed9ef7f18391a47f6cc124dcfc",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "neiderer-s-pool-sales-and-service",
+      "boardDescriptor": "swimming-pool",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/neiderer-s-pool-sales-and-service.png",
+      "sourceSha256": "8de184324f510534f051c4d100c154ac4b6d97791cd3368f28c643794c4756ca",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Neiderer's Pool Sales & Service. Four distinct but cohesive unlabelled panels in a generic residential pool service context: a pool technician testing water with a professional kit beside a clear blue pool; gloved hands inspecting a pool pump and filtration fittings; a technician brushing a pool edge with proper equipment; a homeowner and technician discussing a simple pool layout from non-identifying angles. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:28,eq=saturation=1.015:contrast=1.028:brightness=-0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "8b41eb1fe733f2aed6f38ab7c3f5b47aeff9d720d95405bca7deb8495169143e",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "neiderer-s-pool-sales-and-service",
+      "boardDescriptor": "swimming-pool",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/neiderer-s-pool-sales-and-service.png",
+      "sourceSha256": "8de184324f510534f051c4d100c154ac4b6d97791cd3368f28c643794c4756ca",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Neiderer's Pool Sales & Service. Four distinct but cohesive unlabelled panels in a generic residential pool service context: a pool technician testing water with a professional kit beside a clear blue pool; gloved hands inspecting a pool pump and filtration fittings; a technician brushing a pool edge with proper equipment; a homeowner and technician discussing a simple pool layout from non-identifying angles. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:56,eq=saturation=1.040:contrast=1.082:brightness=0.000,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "9b043df2f6c4c25b021a57feda0f326be238863ab21956a25553185a5fd3f622",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "neiderer-s-pool-sales-and-service",
+      "boardDescriptor": "swimming-pool",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/neiderer-s-pool-sales-and-service.png",
+      "sourceSha256": "8de184324f510534f051c4d100c154ac4b6d97791cd3368f28c643794c4756ca",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Neiderer's Pool Sales & Service. Four distinct but cohesive unlabelled panels in a generic residential pool service context: a pool technician testing water with a professional kit beside a clear blue pool; gloved hands inspecting a pool pump and filtration fittings; a technician brushing a pool edge with proper equipment; a homeowner and technician discussing a simple pool layout from non-identifying angles. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:0,eq=saturation=0.940:contrast=1.046:brightness=0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "e796af79573874d1d168a4257442e86cdfc9bb1e02e1e51f80196ed687749bd4",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "neiderer-s-pool-sales-and-service",
+      "boardDescriptor": "swimming-pool",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/neiderer-s-pool-sales-and-service.png",
+      "sourceSha256": "8de184324f510534f051c4d100c154ac4b6d97791cd3368f28c643794c4756ca",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Neiderer's Pool Sales & Service. Four distinct but cohesive unlabelled panels in a generic residential pool service context: a pool technician testing water with a professional kit beside a clear blue pool; gloved hands inspecting a pool pump and filtration fittings; a technician brushing a pool edge with proper equipment; a homeowner and technician discussing a simple pool layout from non-identifying angles. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:28,eq=saturation=0.965:contrast=1.010:brightness=-0.018,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "204f9e9d64fd412aad0b98a539ffa848af336e6fc1416240e0b81fe5c491475e",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "neiderer-s-pool-sales-and-service",
+      "boardDescriptor": "swimming-pool",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/neiderer-s-pool-sales-and-service.png",
+      "sourceSha256": "8de184324f510534f051c4d100c154ac4b6d97791cd3368f28c643794c4756ca",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Neiderer's Pool Sales & Service. Four distinct but cohesive unlabelled panels in a generic residential pool service context: a pool technician testing water with a professional kit beside a clear blue pool; gloved hands inspecting a pool pump and filtration fittings; a technician brushing a pool edge with proper equipment; a homeowner and technician discussing a simple pool layout from non-identifying angles. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:56,eq=saturation=0.990:contrast=1.064:brightness=-0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "f55c4b65338e6ca5e36969939b88fdaa2936d5ab29aef9c4cc594d5d62a779fe",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "neiderer-s-pool-sales-and-service",
+      "boardDescriptor": "swimming-pool",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/neiderer-s-pool-sales-and-service.png",
+      "sourceSha256": "8de184324f510534f051c4d100c154ac4b6d97791cd3368f28c643794c4756ca",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Neiderer's Pool Sales & Service. Four distinct but cohesive unlabelled panels in a generic residential pool service context: a pool technician testing water with a professional kit beside a clear blue pool; gloved hands inspecting a pool pump and filtration fittings; a technician brushing a pool edge with proper equipment; a homeowner and technician discussing a simple pool layout from non-identifying angles. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:0,eq=saturation=1.015:contrast=1.028:brightness=0.000,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "a78c438fafd70be459d446b4b2711d3849edd853ba88f51ffe0d08fff6c22232",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "neiderer-s-pool-sales-and-service",
+      "boardDescriptor": "swimming-pool",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/neiderer-s-pool-sales-and-service.png",
+      "sourceSha256": "8de184324f510534f051c4d100c154ac4b6d97791cd3368f28c643794c4756ca",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Neiderer's Pool Sales & Service. Four distinct but cohesive unlabelled panels in a generic residential pool service context: a pool technician testing water with a professional kit beside a clear blue pool; gloved hands inspecting a pool pump and filtration fittings; a technician brushing a pool edge with proper equipment; a homeowner and technician discussing a simple pool layout from non-identifying angles. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:28,eq=saturation=1.040:contrast=1.082:brightness=0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "e992003c81dafc2a8f56801ce58ae27e6b5474a38214076f6e5c51825ca13153",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "neiderer-s-pool-sales-and-service",
+      "boardDescriptor": "swimming-pool",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/neiderer-s-pool-sales-and-service.png",
+      "sourceSha256": "8de184324f510534f051c4d100c154ac4b6d97791cd3368f28c643794c4756ca",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Neiderer's Pool Sales & Service. Four distinct but cohesive unlabelled panels in a generic residential pool service context: a pool technician testing water with a professional kit beside a clear blue pool; gloved hands inspecting a pool pump and filtration fittings; a technician brushing a pool edge with proper equipment; a homeowner and technician discussing a simple pool layout from non-identifying angles. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:56,eq=saturation=0.940:contrast=1.046:brightness=-0.018,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "0c25a92372783ee59ef6fb7cc1d337e71082fc504233931d471c4a7dfb71c7e8",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    }
+  ]
+}

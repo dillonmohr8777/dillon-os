@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-25T00:09:38.525Z",
+  "source_set_sha256": "64db51d408423660fa02b50ba1ae771b206dfd53d10241504dfb90c568377ea2",
+  "state": "verified_nonproduction_candidate",
+  "production_ready": false,
+  "graph_ready": true,
+  "surfaces": [
+    {
+      "surface_id": "closed-loop-canary",
+      "mode": "Experience",
+      "production_intent": false,
+      "state": "verified_nonproduction_candidate",
+      "repair_cycles": 1,
+      "maker_id": "deterministic-canary-builder",
+      "checker": {
+        "schema_version": 1,
+        "surface_id": "closed-loop-canary",
+        "source_set_sha256": "64db51d408423660fa02b50ba1ae771b206dfd53d10241504dfb90c568377ea2",
+        "build_manifest_sha256": "12edf741bc74feb71e02c15b0f6b2e12a007cbe0196592dc88bd63b8adae94ba",
+        "maker_id": "deterministic-canary-builder",
+        "reviewer_id": "deterministic-visual-canary-checker",
+        "review_type": "synthetic_canary",
+        "production_eligible": false,
+        "gate_results": [
+          {
+            "id": "authority",
+            "passed": true,
+            "detail": "authority passed."
+          },
+          {
+            "id": "brief",
+            "passed": true,
+            "detail": "brief passed."
+          },
+          {
+            "id": "build",
+            "passed": true,
+            "detail": "build passed."
+          },
+          {
+            "id": "responsive",
+            "passed": true,
+            "detail": "responsive passed."
+          },
+          {
+            "id": "interaction",
+            "passed": true,
+            "detail": "interaction passed."
+          },
+          {
+            "id": "accessibility",
+            "passed": true,
+            "detail": "accessibility passed."
+          },
+          {
+            "id": "performance",
+            "passed": true,
+            "detail": "performance passed."
+          },
+          {
+            "id": "content-truth",
+            "passed": true,
+            "detail": "content-truth passed."
+          },
+          {
+            "id": "design-system",
+            "passed": true,
+            "detail": "design-system passed."
+          },
+          {
+            "id": "independent-craft",
+            "passed": true,
+            "detail": "independent-craft passed."
+          }
+        ],
+        "captures": [
+          {
+            "viewport": "desktop",
+            "width": 1440,
+            "height": 1000,
+            "path": "System/outcome-graph/web-design/closed-loop-canary/2026-08-24-live/evidence/closed-loop-canary/desktop-19ed51a932eb.png",
+            "sha256": "19ed51a932ebeda0d926b2cae1e571a8bd821a40d62f03f498d0b3583cef9c8b",
+            "bytes": 42577
+          },
+          {
+            "viewport": "mobile",
+            "width": 390,
+            "height": 844,
+            "path": "System/outcome-graph/web-design/closed-loop-canary/2026-08-24-live/evidence/closed-loop-canary/mobile-24e1e61ed683.png",
+            "sha256": "24e1e61ed68395b862cf8f68a2a0b7965119d897378105359aac15d0c268af2d",
+            "bytes": 27828
+          }
+        ],
+        "craft": {
+          "verdict": "pass",
+          "summary": "The resolved canary has a specific editorial thesis, decisive hierarchy, purposeful motion, strong responsive reconstruction, and explicit evidence disclosure.",
+          "scores": {
+            "brand_specificity": 4.5,
+            "visual_hierarchy": 4.5,
+            "composition_rhythm": 4.5,
+            "typography": 4.5,
+            "imagery": 4.5,
+            "interaction_motion": 4.5,
+            "responsive_integrity": 4.5,
+            "content_clarity": 4.5
+          }
+        },
+        "findings": [],
+        "external_action_attempted": false,
+        "passed": true,
+        "craft_average": 4.5
+      },
+      "candidate_manifest_sha256": "0a97aada73fbf990174252576a5a867203fb65cdd380d5e1b05f8a102d95362e",
+      "deployment": {
+        "source_state": "local_only",
+        "attempted": false,
+        "authorized": false
+      }
+    }
+  ],
+  "repair_budget": {
+    "max_repair_passes": 2,
+    "used_repair_passes": 1
+  },
+  "approval": {
+    "adoption_required": true,
+    "deployment_required": true,
+    "granted": false
+  },
+  "authority": {
+    "external_action_attempted": false,
+    "canonical_write_attempted": false,
+    "source_project_mutated": false,
+    "deployment_attempted": false
+  }
+}

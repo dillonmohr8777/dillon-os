@@ -1,0 +1,878 @@
+{
+  "schema_version": 1,
+  "run_id": "OGD-20260824-23145989F598",
+  "graph_id": "weekly-w05-website-factory-shadow",
+  "dedupe_identity": "ecca3e8394e4b3e34791e58a83e4137b6a7a9339e5c29cbbb37bbc1f39af64df",
+  "dedupe_key": "internal:W05:current-run:factory-verification",
+  "contract_fingerprint": "d780d7b773413081f9e79bc9e694cfd2fd305a2db8b3c530a9bb87e14bb04250",
+  "canonical_binding": {
+    "locator": "dillon-os://automation/prospect-radar-next20/20260824-052002",
+    "version": "20260824-052002:blocked:6:1",
+    "sha256": "63cd895873d360a06bbe0644389b5883c0baff81a195f555dff56aa574abd489",
+    "captured_at": "2026-08-24T22:30:00.000Z"
+  },
+  "canonical_binding_fingerprint": "b3ec63b47409d009b4951c4d1e6a4e563c2475bdc90200be444f6dcd68e99982",
+  "status": "complete",
+  "started_at": "2026-08-24T22:32:00.096Z",
+  "updated_at": "2026-08-24T22:32:00.276Z",
+  "event_sequence": 16,
+  "events": [
+    {
+      "sequence": 1,
+      "event": "run_started",
+      "at": "2026-08-24T22:32:00.096Z",
+      "resumed": false
+    },
+    {
+      "sequence": 2,
+      "event": "planned",
+      "at": "2026-08-24T22:32:00.107Z",
+      "graph_attempt": 1,
+      "item_id": null
+    },
+    {
+      "sequence": 3,
+      "event": "worker_verified",
+      "at": "2026-08-24T22:32:00.132Z",
+      "graph_attempt": 1,
+      "item_id": "W05:20260824-052002:freshness"
+    },
+    {
+      "sequence": 4,
+      "event": "worker_verified",
+      "at": "2026-08-24T22:32:00.141Z",
+      "graph_attempt": 1,
+      "item_id": "W05:20260824-052002:source-pool"
+    },
+    {
+      "sequence": 5,
+      "event": "worker_verified",
+      "at": "2026-08-24T22:32:00.153Z",
+      "graph_attempt": 1,
+      "item_id": "W05:20260824-052002:selection"
+    },
+    {
+      "sequence": 6,
+      "event": "worker_verified",
+      "at": "2026-08-24T22:32:00.165Z",
+      "graph_attempt": 1,
+      "item_id": "W05:20260824-052002:build-browser-qa"
+    },
+    {
+      "sequence": 7,
+      "event": "worker_verified",
+      "at": "2026-08-24T22:32:00.181Z",
+      "graph_attempt": 1,
+      "item_id": "W05:20260824-052002:generated-assets"
+    },
+    {
+      "sequence": 8,
+      "event": "worker_verified",
+      "at": "2026-08-24T22:32:00.190Z",
+      "graph_attempt": 1,
+      "item_id": "W05:20260824-052002:impeccable-detector"
+    },
+    {
+      "sequence": 9,
+      "event": "worker_verified",
+      "at": "2026-08-24T22:32:00.199Z",
+      "graph_attempt": 1,
+      "item_id": "W05:20260824-052002:independent-quality"
+    },
+    {
+      "sequence": 10,
+      "event": "worker_verified",
+      "at": "2026-08-24T22:32:00.208Z",
+      "graph_attempt": 1,
+      "item_id": "W05:20260824-052002:authority-boundary"
+    },
+    {
+      "sequence": 11,
+      "event": "workers_verified",
+      "at": "2026-08-24T22:32:00.216Z",
+      "graph_attempt": 1,
+      "item_id": null
+    },
+    {
+      "sequence": 12,
+      "event": "reduced",
+      "at": "2026-08-24T22:32:00.229Z",
+      "graph_attempt": 1,
+      "item_id": null
+    },
+    {
+      "sequence": 13,
+      "event": "terminal_verified",
+      "at": "2026-08-24T22:32:00.242Z",
+      "graph_attempt": 1,
+      "item_id": null
+    },
+    {
+      "sequence": 14,
+      "event": "learned",
+      "at": "2026-08-24T22:32:00.251Z",
+      "graph_attempt": 1,
+      "item_id": null
+    },
+    {
+      "sequence": 15,
+      "event": "finished",
+      "at": "2026-08-24T22:32:00.262Z",
+      "graph_attempt": 1,
+      "item_id": null
+    },
+    {
+      "sequence": 16,
+      "event": "receipt_committed",
+      "at": "2026-08-24T22:32:00.276Z",
+      "outcome": "complete"
+    }
+  ],
+  "engine": {
+    "stage": "finished",
+    "graph_attempt": 1,
+    "plan_signature": "45bc511b3701dce5832130081ed440d4a2acc91ff45f2f310971753dc6eb45ae",
+    "verified_workers": {
+      "W05:20260824-052002:freshness": {
+        "input_fingerprint": "23fe8e8f76d14917832cc5e53975488799cf86998959163caa2d0538fd95bf7a",
+        "worker_result": {
+          "item_id": "W05:20260824-052002:freshness",
+          "input_fingerprint": "23fe8e8f76d14917832cc5e53975488799cf86998959163caa2d0538fd95bf7a",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-23145989F598:bfbd3beb090560c30340:attempt:1",
+              "maker_evidence": "Built one redacted W05 freshness record.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/factory-2026-08-24-run-1-durable/workers/bfbd3beb090560c30340.json",
+                  "sha256": "fee557ed422cf24ed9bdf503020672c1941053c30605ee20d42b7ce3aee5e99b",
+                  "bytes": 266
+                }
+              ],
+              "checker_evidence": "Independently reconstructed and compared the W05 freshness gate.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/factory-2026-08-24-run-1-durable/workers/bfbd3beb090560c30340.json",
+              "sha256": "fee557ed422cf24ed9bdf503020672c1941053c30605ee20d42b7ce3aee5e99b",
+              "bytes": 266
+            }
+          ],
+          "isolation_id": "OGD-20260824-23145989F598:bfbd3beb090560c30340:attempt:1"
+        }
+      },
+      "W05:20260824-052002:source-pool": {
+        "input_fingerprint": "63f3d9b3632d902495ae86e49657dce79b5914e1251eb334d25837819caa34c7",
+        "worker_result": {
+          "item_id": "W05:20260824-052002:source-pool",
+          "input_fingerprint": "63f3d9b3632d902495ae86e49657dce79b5914e1251eb334d25837819caa34c7",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-23145989F598:87366283450c7ad03a41:attempt:1",
+              "maker_evidence": "Built one redacted W05 source-pool record.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/factory-2026-08-24-run-1-durable/workers/87366283450c7ad03a41.json",
+                  "sha256": "9797d09dae4b8416eea51aee879b3e77f03c086fbc381fa22d5df013efdedc6c",
+                  "bytes": 673
+                }
+              ],
+              "checker_evidence": "Independently reconstructed and compared the W05 source-pool gate.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/factory-2026-08-24-run-1-durable/workers/87366283450c7ad03a41.json",
+              "sha256": "9797d09dae4b8416eea51aee879b3e77f03c086fbc381fa22d5df013efdedc6c",
+              "bytes": 673
+            }
+          ],
+          "isolation_id": "OGD-20260824-23145989F598:87366283450c7ad03a41:attempt:1"
+        }
+      },
+      "W05:20260824-052002:selection": {
+        "input_fingerprint": "edb0223d7ae1f9737c44dd9fb33bde9f01f82d21f3a34a8ae55f6fe2b2c1bfe3",
+        "worker_result": {
+          "item_id": "W05:20260824-052002:selection",
+          "input_fingerprint": "edb0223d7ae1f9737c44dd9fb33bde9f01f82d21f3a34a8ae55f6fe2b2c1bfe3",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-23145989F598:061c9853f6591f283f99:attempt:1",
+              "maker_evidence": "Built one redacted W05 selection record.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/factory-2026-08-24-run-1-durable/workers/061c9853f6591f283f99.json",
+                  "sha256": "e8de9ef309d284655a897b3caceb87735b2f2c690b5226571f50dbdd1e1e0d9c",
+                  "bytes": 401
+                }
+              ],
+              "checker_evidence": "Independently reconstructed and compared the W05 selection gate.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/factory-2026-08-24-run-1-durable/workers/061c9853f6591f283f99.json",
+              "sha256": "e8de9ef309d284655a897b3caceb87735b2f2c690b5226571f50dbdd1e1e0d9c",
+              "bytes": 401
+            }
+          ],
+          "isolation_id": "OGD-20260824-23145989F598:061c9853f6591f283f99:attempt:1"
+        }
+      },
+      "W05:20260824-052002:build-browser-qa": {
+        "input_fingerprint": "a91dd0c3b58c01187382d457d796fea750f42c345fcde4a6b9c368a9894463de",
+        "worker_result": {
+          "item_id": "W05:20260824-052002:build-browser-qa",
+          "input_fingerprint": "a91dd0c3b58c01187382d457d796fea750f42c345fcde4a6b9c368a9894463de",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-23145989F598:c37e5e796973022e26b2:attempt:1",
+              "maker_evidence": "Built one redacted W05 build-browser-qa record.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/factory-2026-08-24-run-1-durable/workers/c37e5e796973022e26b2.json",
+                  "sha256": "ef5e1aee27d52a5b1c61c9b3ca4fe3014c7b70aad5a760910ba7d6796053852a",
+                  "bytes": 515
+                }
+              ],
+              "checker_evidence": "Independently reconstructed and compared the W05 build-browser-qa gate.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/factory-2026-08-24-run-1-durable/workers/c37e5e796973022e26b2.json",
+              "sha256": "ef5e1aee27d52a5b1c61c9b3ca4fe3014c7b70aad5a760910ba7d6796053852a",
+              "bytes": 515
+            }
+          ],
+          "isolation_id": "OGD-20260824-23145989F598:c37e5e796973022e26b2:attempt:1"
+        }
+      },
+      "W05:20260824-052002:generated-assets": {
+        "input_fingerprint": "5f23e48d282363b8d7af5cb57fe912e74719720f4aac6ea114f65a24deb57ad4",
+        "worker_result": {
+          "item_id": "W05:20260824-052002:generated-assets",
+          "input_fingerprint": "5f23e48d282363b8d7af5cb57fe912e74719720f4aac6ea114f65a24deb57ad4",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-23145989F598:5a6eb2805a895e2b80bc:attempt:1",
+              "maker_evidence": "Built one redacted W05 generated-assets record.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/factory-2026-08-24-run-1-durable/workers/5a6eb2805a895e2b80bc.json",
+                  "sha256": "dd216c8bda8ebacfa6841390eb99b1438b71dbc475bf7985cb22677b1893cd38",
+                  "bytes": 374
+                }
+              ],
+              "checker_evidence": "Independently reconstructed and compared the W05 generated-assets gate.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/factory-2026-08-24-run-1-durable/workers/5a6eb2805a895e2b80bc.json",
+              "sha256": "dd216c8bda8ebacfa6841390eb99b1438b71dbc475bf7985cb22677b1893cd38",
+              "bytes": 374
+            }
+          ],
+          "isolation_id": "OGD-20260824-23145989F598:5a6eb2805a895e2b80bc:attempt:1"
+        }
+      },
+      "W05:20260824-052002:impeccable-detector": {
+        "input_fingerprint": "f5bc566d30b864164b390c0dedbc08eb1d1835bfadf808919d7cc53f9b9284d2",
+        "worker_result": {
+          "item_id": "W05:20260824-052002:impeccable-detector",
+          "input_fingerprint": "f5bc566d30b864164b390c0dedbc08eb1d1835bfadf808919d7cc53f9b9284d2",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-23145989F598:e38cd0987f4df6b2a56d:attempt:1",
+              "maker_evidence": "Built one redacted W05 impeccable-detector record.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/factory-2026-08-24-run-1-durable/workers/e38cd0987f4df6b2a56d.json",
+                  "sha256": "eff1d5c37d8c81be85cf46135b3e21c9f0ca4ba8dae12d318884f3f7a2e8a23b",
+                  "bytes": 314
+                }
+              ],
+              "checker_evidence": "Independently reconstructed and compared the W05 impeccable-detector gate.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/factory-2026-08-24-run-1-durable/workers/e38cd0987f4df6b2a56d.json",
+              "sha256": "eff1d5c37d8c81be85cf46135b3e21c9f0ca4ba8dae12d318884f3f7a2e8a23b",
+              "bytes": 314
+            }
+          ],
+          "isolation_id": "OGD-20260824-23145989F598:e38cd0987f4df6b2a56d:attempt:1"
+        }
+      },
+      "W05:20260824-052002:independent-quality": {
+        "input_fingerprint": "ca43c47e392c8ff10661fad87b8051ff95b6887b635517cb25188b0bd42dd2de",
+        "worker_result": {
+          "item_id": "W05:20260824-052002:independent-quality",
+          "input_fingerprint": "ca43c47e392c8ff10661fad87b8051ff95b6887b635517cb25188b0bd42dd2de",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-23145989F598:8b75eefe985a4785c864:attempt:1",
+              "maker_evidence": "Built one redacted W05 independent-quality record.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/factory-2026-08-24-run-1-durable/workers/8b75eefe985a4785c864.json",
+                  "sha256": "e1b7fd83febd2591af6426a2fe6ffb8d6fc876417323edf648c2944ce7b43c33",
+                  "bytes": 559
+                }
+              ],
+              "checker_evidence": "Independently reconstructed and compared the W05 independent-quality gate.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/factory-2026-08-24-run-1-durable/workers/8b75eefe985a4785c864.json",
+              "sha256": "e1b7fd83febd2591af6426a2fe6ffb8d6fc876417323edf648c2944ce7b43c33",
+              "bytes": 559
+            }
+          ],
+          "isolation_id": "OGD-20260824-23145989F598:8b75eefe985a4785c864:attempt:1"
+        }
+      },
+      "W05:20260824-052002:authority-boundary": {
+        "input_fingerprint": "fcc743c12c234912f4721f6e16fca89be98055d0ca9df687faaab76e146445b9",
+        "worker_result": {
+          "item_id": "W05:20260824-052002:authority-boundary",
+          "input_fingerprint": "fcc743c12c234912f4721f6e16fca89be98055d0ca9df687faaab76e146445b9",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-23145989F598:4dee097fd1f76b2afa6e:attempt:1",
+              "maker_evidence": "Built one redacted W05 authority-boundary record.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/factory-2026-08-24-run-1-durable/workers/4dee097fd1f76b2afa6e.json",
+                  "sha256": "a051976b6dbacc62d9ee12b057718658339889de4c971e309f734e89d5fbc342",
+                  "bytes": 462
+                }
+              ],
+              "checker_evidence": "Independently reconstructed and compared the W05 authority-boundary gate.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/factory-2026-08-24-run-1-durable/workers/4dee097fd1f76b2afa6e.json",
+              "sha256": "a051976b6dbacc62d9ee12b057718658339889de4c971e309f734e89d5fbc342",
+              "bytes": 462
+            }
+          ],
+          "isolation_id": "OGD-20260824-23145989F598:4dee097fd1f76b2afa6e:attempt:1"
+        }
+      }
+    },
+    "budget_used": 20,
+    "previous_terminal_findings": [],
+    "graph_iterations": [
+      {
+        "iteration": 1,
+        "status": "verified",
+        "planner": {
+          "evidence": "Collected 8 isolated W05 gates for run 20260824-052002 from source set 63cd895873d360a06bbe0644389b5883c0baff81a195f555dff56aa574abd489.",
+          "item_count": 8,
+          "plan_signature": "45bc511b3701dce5832130081ed440d4a2acc91ff45f2f310971753dc6eb45ae",
+          "items": [
+            {
+              "id": "W05:20260824-052002:freshness",
+              "isolation_key": "W05:20260824-052002:freshness",
+              "input_fingerprint": "23fe8e8f76d14917832cc5e53975488799cf86998959163caa2d0538fd95bf7a",
+              "task": "Reconstruct the current W05 freshness gate from retained evidence."
+            },
+            {
+              "id": "W05:20260824-052002:source-pool",
+              "isolation_key": "W05:20260824-052002:source-pool",
+              "input_fingerprint": "63f3d9b3632d902495ae86e49657dce79b5914e1251eb334d25837819caa34c7",
+              "task": "Reconstruct the current W05 source-pool gate from retained evidence."
+            },
+            {
+              "id": "W05:20260824-052002:selection",
+              "isolation_key": "W05:20260824-052002:selection",
+              "input_fingerprint": "edb0223d7ae1f9737c44dd9fb33bde9f01f82d21f3a34a8ae55f6fe2b2c1bfe3",
+              "task": "Reconstruct the current W05 selection gate from retained evidence."
+            },
+            {
+              "id": "W05:20260824-052002:build-browser-qa",
+              "isolation_key": "W05:20260824-052002:build-browser-qa",
+              "input_fingerprint": "a91dd0c3b58c01187382d457d796fea750f42c345fcde4a6b9c368a9894463de",
+              "task": "Reconstruct the current W05 build-browser-qa gate from retained evidence."
+            },
+            {
+              "id": "W05:20260824-052002:generated-assets",
+              "isolation_key": "W05:20260824-052002:generated-assets",
+              "input_fingerprint": "5f23e48d282363b8d7af5cb57fe912e74719720f4aac6ea114f65a24deb57ad4",
+              "task": "Reconstruct the current W05 generated-assets gate from retained evidence."
+            },
+            {
+              "id": "W05:20260824-052002:impeccable-detector",
+              "isolation_key": "W05:20260824-052002:impeccable-detector",
+              "input_fingerprint": "f5bc566d30b864164b390c0dedbc08eb1d1835bfadf808919d7cc53f9b9284d2",
+              "task": "Reconstruct the current W05 impeccable-detector gate from retained evidence."
+            },
+            {
+              "id": "W05:20260824-052002:independent-quality",
+              "isolation_key": "W05:20260824-052002:independent-quality",
+              "input_fingerprint": "ca43c47e392c8ff10661fad87b8051ff95b6887b635517cb25188b0bd42dd2de",
+              "task": "Reconstruct the current W05 independent-quality gate from retained evidence."
+            },
+            {
+              "id": "W05:20260824-052002:authority-boundary",
+              "isolation_key": "W05:20260824-052002:authority-boundary",
+              "input_fingerprint": "fcc743c12c234912f4721f6e16fca89be98055d0ca9df687faaab76e146445b9",
+              "task": "Reconstruct the current W05 authority-boundary gate from retained evidence."
+            }
+          ]
+        },
+        "workers": [
+          {
+            "item_id": "W05:20260824-052002:freshness",
+            "input_fingerprint": "23fe8e8f76d14917832cc5e53975488799cf86998959163caa2d0538fd95bf7a",
+            "status": "verified",
+            "attempts": [
+              {
+                "attempt": 1,
+                "isolation_id": "OGD-20260824-23145989F598:bfbd3beb090560c30340:attempt:1",
+                "maker_evidence": "Built one redacted W05 freshness record.",
+                "artifacts": [
+                  {
+                    "path": "System/outcome-graph/factory-2026-08-24-run-1-durable/workers/bfbd3beb090560c30340.json",
+                    "sha256": "fee557ed422cf24ed9bdf503020672c1941053c30605ee20d42b7ce3aee5e99b",
+                    "bytes": 266
+                  }
+                ],
+                "checker_evidence": "Independently reconstructed and compared the W05 freshness gate.",
+                "passed": true,
+                "findings": []
+              }
+            ],
+            "final_artifacts": [
+              {
+                "path": "System/outcome-graph/factory-2026-08-24-run-1-durable/workers/bfbd3beb090560c30340.json",
+                "sha256": "fee557ed422cf24ed9bdf503020672c1941053c30605ee20d42b7ce3aee5e99b",
+                "bytes": 266
+              }
+            ],
+            "isolation_id": "OGD-20260824-23145989F598:bfbd3beb090560c30340:attempt:1"
+          },
+          {
+            "item_id": "W05:20260824-052002:source-pool",
+            "input_fingerprint": "63f3d9b3632d902495ae86e49657dce79b5914e1251eb334d25837819caa34c7",
+            "status": "verified",
+            "attempts": [
+              {
+                "attempt": 1,
+                "isolation_id": "OGD-20260824-23145989F598:87366283450c7ad03a41:attempt:1",
+                "maker_evidence": "Built one redacted W05 source-pool record.",
+                "artifacts": [
+                  {
+                    "path": "System/outcome-graph/factory-2026-08-24-run-1-durable/workers/87366283450c7ad03a41.json",
+                    "sha256": "9797d09dae4b8416eea51aee879b3e77f03c086fbc381fa22d5df013efdedc6c",
+                    "bytes": 673
+                  }
+                ],
+                "checker_evidence": "Independently reconstructed and compared the W05 source-pool gate.",
+                "passed": true,
+                "findings": []
+              }
+            ],
+            "final_artifacts": [
+              {
+                "path": "System/outcome-graph/factory-2026-08-24-run-1-durable/workers/87366283450c7ad03a41.json",
+                "sha256": "9797d09dae4b8416eea51aee879b3e77f03c086fbc381fa22d5df013efdedc6c",
+                "bytes": 673
+              }
+            ],
+            "isolation_id": "OGD-20260824-23145989F598:87366283450c7ad03a41:attempt:1"
+          },
+          {
+            "item_id": "W05:20260824-052002:selection",
+            "input_fingerprint": "edb0223d7ae1f9737c44dd9fb33bde9f01f82d21f3a34a8ae55f6fe2b2c1bfe3",
+            "status": "verified",
+            "attempts": [
+              {
+                "attempt": 1,
+                "isolation_id": "OGD-20260824-23145989F598:061c9853f6591f283f99:attempt:1",
+                "maker_evidence": "Built one redacted W05 selection record.",
+                "artifacts": [
+                  {
+                    "path": "System/outcome-graph/factory-2026-08-24-run-1-durable/workers/061c9853f6591f283f99.json",
+                    "sha256": "e8de9ef309d284655a897b3caceb87735b2f2c690b5226571f50dbdd1e1e0d9c",
+                    "bytes": 401
+                  }
+                ],
+                "checker_evidence": "Independently reconstructed and compared the W05 selection gate.",
+                "passed": true,
+                "findings": []
+              }
+            ],
+            "final_artifacts": [
+              {
+                "path": "System/outcome-graph/factory-2026-08-24-run-1-durable/workers/061c9853f6591f283f99.json",
+                "sha256": "e8de9ef309d284655a897b3caceb87735b2f2c690b5226571f50dbdd1e1e0d9c",
+                "bytes": 401
+              }
+            ],
+            "isolation_id": "OGD-20260824-23145989F598:061c9853f6591f283f99:attempt:1"
+          },
+          {
+            "item_id": "W05:20260824-052002:build-browser-qa",
+            "input_fingerprint": "a91dd0c3b58c01187382d457d796fea750f42c345fcde4a6b9c368a9894463de",
+            "status": "verified",
+            "attempts": [
+              {
+                "attempt": 1,
+                "isolation_id": "OGD-20260824-23145989F598:c37e5e796973022e26b2:attempt:1",
+                "maker_evidence": "Built one redacted W05 build-browser-qa record.",
+                "artifacts": [
+                  {
+                    "path": "System/outcome-graph/factory-2026-08-24-run-1-durable/workers/c37e5e796973022e26b2.json",
+                    "sha256": "ef5e1aee27d52a5b1c61c9b3ca4fe3014c7b70aad5a760910ba7d6796053852a",
+                    "bytes": 515
+                  }
+                ],
+                "checker_evidence": "Independently reconstructed and compared the W05 build-browser-qa gate.",
+                "passed": true,
+                "findings": []
+              }
+            ],
+            "final_artifacts": [
+              {
+                "path": "System/outcome-graph/factory-2026-08-24-run-1-durable/workers/c37e5e796973022e26b2.json",
+                "sha256": "ef5e1aee27d52a5b1c61c9b3ca4fe3014c7b70aad5a760910ba7d6796053852a",
+                "bytes": 515
+              }
+            ],
+            "isolation_id": "OGD-20260824-23145989F598:c37e5e796973022e26b2:attempt:1"
+          },
+          {
+            "item_id": "W05:20260824-052002:generated-assets",
+            "input_fingerprint": "5f23e48d282363b8d7af5cb57fe912e74719720f4aac6ea114f65a24deb57ad4",
+            "status": "verified",
+            "attempts": [
+              {
+                "attempt": 1,
+                "isolation_id": "OGD-20260824-23145989F598:5a6eb2805a895e2b80bc:attempt:1",
+                "maker_evidence": "Built one redacted W05 generated-assets record.",
+                "artifacts": [
+                  {
+                    "path": "System/outcome-graph/factory-2026-08-24-run-1-durable/workers/5a6eb2805a895e2b80bc.json",
+                    "sha256": "dd216c8bda8ebacfa6841390eb99b1438b71dbc475bf7985cb22677b1893cd38",
+                    "bytes": 374
+                  }
+                ],
+                "checker_evidence": "Independently reconstructed and compared the W05 generated-assets gate.",
+                "passed": true,
+                "findings": []
+              }
+            ],
+            "final_artifacts": [
+              {
+                "path": "System/outcome-graph/factory-2026-08-24-run-1-durable/workers/5a6eb2805a895e2b80bc.json",
+                "sha256": "dd216c8bda8ebacfa6841390eb99b1438b71dbc475bf7985cb22677b1893cd38",
+                "bytes": 374
+              }
+            ],
+            "isolation_id": "OGD-20260824-23145989F598:5a6eb2805a895e2b80bc:attempt:1"
+          },
+          {
+            "item_id": "W05:20260824-052002:impeccable-detector",
+            "input_fingerprint": "f5bc566d30b864164b390c0dedbc08eb1d1835bfadf808919d7cc53f9b9284d2",
+            "status": "verified",
+            "attempts": [
+              {
+                "attempt": 1,
+                "isolation_id": "OGD-20260824-23145989F598:e38cd0987f4df6b2a56d:attempt:1",
+                "maker_evidence": "Built one redacted W05 impeccable-detector record.",
+                "artifacts": [
+                  {
+                    "path": "System/outcome-graph/factory-2026-08-24-run-1-durable/workers/e38cd0987f4df6b2a56d.json",
+                    "sha256": "eff1d5c37d8c81be85cf46135b3e21c9f0ca4ba8dae12d318884f3f7a2e8a23b",
+                    "bytes": 314
+                  }
+                ],
+                "checker_evidence": "Independently reconstructed and compared the W05 impeccable-detector gate.",
+                "passed": true,
+                "findings": []
+              }
+            ],
+            "final_artifacts": [
+              {
+                "path": "System/outcome-graph/factory-2026-08-24-run-1-durable/workers/e38cd0987f4df6b2a56d.json",
+                "sha256": "eff1d5c37d8c81be85cf46135b3e21c9f0ca4ba8dae12d318884f3f7a2e8a23b",
+                "bytes": 314
+              }
+            ],
+            "isolation_id": "OGD-20260824-23145989F598:e38cd0987f4df6b2a56d:attempt:1"
+          },
+          {
+            "item_id": "W05:20260824-052002:independent-quality",
+            "input_fingerprint": "ca43c47e392c8ff10661fad87b8051ff95b6887b635517cb25188b0bd42dd2de",
+            "status": "verified",
+            "attempts": [
+              {
+                "attempt": 1,
+                "isolation_id": "OGD-20260824-23145989F598:8b75eefe985a4785c864:attempt:1",
+                "maker_evidence": "Built one redacted W05 independent-quality record.",
+                "artifacts": [
+                  {
+                    "path": "System/outcome-graph/factory-2026-08-24-run-1-durable/workers/8b75eefe985a4785c864.json",
+                    "sha256": "e1b7fd83febd2591af6426a2fe6ffb8d6fc876417323edf648c2944ce7b43c33",
+                    "bytes": 559
+                  }
+                ],
+                "checker_evidence": "Independently reconstructed and compared the W05 independent-quality gate.",
+                "passed": true,
+                "findings": []
+              }
+            ],
+            "final_artifacts": [
+              {
+                "path": "System/outcome-graph/factory-2026-08-24-run-1-durable/workers/8b75eefe985a4785c864.json",
+                "sha256": "e1b7fd83febd2591af6426a2fe6ffb8d6fc876417323edf648c2944ce7b43c33",
+                "bytes": 559
+              }
+            ],
+            "isolation_id": "OGD-20260824-23145989F598:8b75eefe985a4785c864:attempt:1"
+          },
+          {
+            "item_id": "W05:20260824-052002:authority-boundary",
+            "input_fingerprint": "fcc743c12c234912f4721f6e16fca89be98055d0ca9df687faaab76e146445b9",
+            "status": "verified",
+            "attempts": [
+              {
+                "attempt": 1,
+                "isolation_id": "OGD-20260824-23145989F598:4dee097fd1f76b2afa6e:attempt:1",
+                "maker_evidence": "Built one redacted W05 authority-boundary record.",
+                "artifacts": [
+                  {
+                    "path": "System/outcome-graph/factory-2026-08-24-run-1-durable/workers/4dee097fd1f76b2afa6e.json",
+                    "sha256": "a051976b6dbacc62d9ee12b057718658339889de4c971e309f734e89d5fbc342",
+                    "bytes": 462
+                  }
+                ],
+                "checker_evidence": "Independently reconstructed and compared the W05 authority-boundary gate.",
+                "passed": true,
+                "findings": []
+              }
+            ],
+            "final_artifacts": [
+              {
+                "path": "System/outcome-graph/factory-2026-08-24-run-1-durable/workers/4dee097fd1f76b2afa6e.json",
+                "sha256": "a051976b6dbacc62d9ee12b057718658339889de4c971e309f734e89d5fbc342",
+                "bytes": 462
+              }
+            ],
+            "isolation_id": "OGD-20260824-23145989F598:4dee097fd1f76b2afa6e:attempt:1"
+          }
+        ],
+        "reduction": {
+          "evidence": "Reduced 8 independently checked W05 gates into truthful state held_source_pool.",
+          "artifacts": [
+            {
+              "path": "System/outcome-graph/factory-2026-08-24-run-1-durable/W05-website-factory-readiness.json",
+              "sha256": "4cbc7e46def665bc346c32375f21eea3a4ecdebc08a9b36732feb999a9e4de58",
+              "bytes": 8909
+            }
+          ]
+        },
+        "terminal_verification": {
+          "evidence": "Recollected the W05 state and independently verified source stability, all gate semantics, truthful outcome classification, authority, privacy, and final hash.",
+          "declared_pass": true,
+          "passed": true,
+          "assertions": [
+            {
+              "id": "source-manifest-stable",
+              "passed": true,
+              "detail": "The entire W05 source set is unchanged since planning."
+            },
+            {
+              "id": "all-gates-exactly-reproduced",
+              "passed": true,
+              "detail": "All eight W05 gates exactly reproduce from retained evidence."
+            },
+            {
+              "id": "completion-or-hold-is-truthful",
+              "passed": true,
+              "detail": "The artifact truthfully reports held_source_pool."
+            },
+            {
+              "id": "approval-and-authority-remain-separate",
+              "passed": true,
+              "detail": "mail_ready remains hold and no queue, outreach, deployment, or external action is authorized or attempted."
+            },
+            {
+              "id": "prospect-data-redacted",
+              "passed": true,
+              "detail": "The final artifact contains aggregate counts and hashes only, with no prospect identifiers, URLs, or contact fields."
+            }
+          ],
+          "artifact_manifest": [
+            {
+              "path": "System/outcome-graph/factory-2026-08-24-run-1-durable/W05-website-factory-readiness.json",
+              "sha256": "4cbc7e46def665bc346c32375f21eea3a4ecdebc08a9b36732feb999a9e4de58",
+              "bytes": 8909
+            }
+          ],
+          "manifest_errors": []
+        },
+        "learning": {
+          "evidence": "Appended one hashed W05 correction entry.",
+          "corrections": [
+            "Never accept W05 completion from radar freshness or generic stage checks; preserve the exact source, selection, build, asset, detector, independent checker, and mail-hold gate state."
+          ],
+          "ledger": "System/outcome-graph/factory-2026-08-24-run-1-durable/corrections.jsonl",
+          "ledger_receipt": {
+            "locator": "System/outcome-graph/factory-2026-08-24-run-1-durable/corrections.jsonl",
+            "entry_sha256": "f8858de621f97dcc958ef6f3d370d6a325866163a0eb3e6282905b8f9b389507"
+          }
+        }
+      }
+    ],
+    "invocation_log": [
+      {
+        "adapter": "w05-factory-planner",
+        "invoked_at": "2026-08-24T22:32:00.104Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "w05-gate-maker",
+        "invoked_at": "2026-08-24T22:32:00.117Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "w05-gate-maker",
+        "invoked_at": "2026-08-24T22:32:00.117Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "w05-gate-maker",
+        "invoked_at": "2026-08-24T22:32:00.117Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "w05-gate-maker",
+        "invoked_at": "2026-08-24T22:32:00.117Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "w05-independent-gate-checker",
+        "invoked_at": "2026-08-24T22:32:00.131Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "w05-independent-gate-checker",
+        "invoked_at": "2026-08-24T22:32:00.131Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "w05-independent-gate-checker",
+        "invoked_at": "2026-08-24T22:32:00.131Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "w05-independent-gate-checker",
+        "invoked_at": "2026-08-24T22:32:00.131Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "w05-gate-maker",
+        "invoked_at": "2026-08-24T22:32:00.149Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "w05-gate-maker",
+        "invoked_at": "2026-08-24T22:32:00.161Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "w05-independent-gate-checker",
+        "invoked_at": "2026-08-24T22:32:00.174Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "w05-gate-maker",
+        "invoked_at": "2026-08-24T22:32:00.174Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "w05-independent-gate-checker",
+        "invoked_at": "2026-08-24T22:32:00.177Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "w05-gate-maker",
+        "invoked_at": "2026-08-24T22:32:00.177Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "w05-independent-gate-checker",
+        "invoked_at": "2026-08-24T22:32:00.181Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "w05-independent-gate-checker",
+        "invoked_at": "2026-08-24T22:32:00.190Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "w05-factory-reducer",
+        "invoked_at": "2026-08-24T22:32:00.225Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "w05-factory-terminal-verifier",
+        "invoked_at": "2026-08-24T22:32:00.238Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "w05-factory-correction-ledger",
+        "invoked_at": "2026-08-24T22:32:00.251Z",
+        "status": "returned"
+      }
+    ]
+  },
+  "last_event": "receipt_committed",
+  "state_revision": 16,
+  "previous_state_sha256": "961d0a0e9ba501bbca130f28e493c4bb45252376b287d26c53dda5f0b6463a92",
+  "receipt": {
+    "path": "runs/OGD-20260824-23145989F598/receipt.json",
+    "sha256": "513708c649c8c8bde0bd63b8e36b268e025ade5e0cd942d053ed08e6ecd904bb",
+    "bytes": 24405
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "routine_id": "W10",
+  "reporting_window": {
+    "prepared": "2026-08-24",
+    "period_start": "2026-08-17",
+    "period_end": "2026-08-23",
+    "month": "2026-08"
+  },
+  "objective": "Resolve verified weekly evidence into a small ranked proposal list without creating a second command center.",
+  "verified_wins": [
+    "12 of 12 discovered weekly report packages recomputed and passed.",
+    "W09/W11 durable run OGD-20260824-CC761B2EBA1E remains terminal-true."
+  ],
+  "activity_not_outcomes": [
+    "6 content-calendar sources remain reference or hold records, not approved scheduling commitments.",
+    "20 experiments remain inconclusive without retained verified outcome receipts."
+  ],
+  "queue_snapshot": {
+    "locator": "client-operations/queue/work-items.json",
+    "revision": 415,
+    "sha256": "524a8f8d65b598b3d0a4df41e4bd4799a8696bab8cc05a95d259039d1d824131",
+    "active_items": 13,
+    "active_by_status": {
+      "blocked": 9,
+      "verification": 2,
+      "needs_approval": 2
+    }
+  },
+  "ranked_decision_proposals": [
+    {
+      "rank": 1,
+      "decision": "Keep all experiment adoption and scaling closed until at least one retained outcome receipt passes its predeclared acceptance test.",
+      "owner": "Codex acting as Marketing Chief",
+      "due_date": null,
+      "evidence": [
+        "System/outcome-graph/tranche-2026-08-24-run-2-durable/W08-experiment-decision-ledger.json"
+      ],
+      "approval_required": true
+    },
+    {
+      "rank": 2,
+      "decision": "Revalidate content scope and current commitments before creating production or review dates; schedule nothing from stale calendar notes.",
+      "owner": "Codex acting as Marketing Chief",
+      "due_date": null,
+      "evidence": [
+        "System/outcome-graph/tranche-2026-08-24-run-2-durable/W04-production-calendar.json"
+      ],
+      "approval_required": true
+    },
+    {
+      "rank": 3,
+      "decision": "Retain the verified weekly report packages while recipient, thread, signature, and exact delivery approval remain separate gates.",
+      "owner": "Codex acting as Marketing Chief",
+      "due_date": null,
+      "evidence": [
+        "System/outcome-graph/tranche-2026-08-24-run-2-durable/W06-client-report-packages.json"
+      ],
+      "approval_required": true
+    },
+    {
+      "rank": 4,
+      "decision": "Continue Outcome Graph migration only through shadow contracts; do not replace Marketing Chief or the canonical queue.",
+      "owner": "Codex acting as Marketing Chief",
+      "due_date": null,
+      "evidence": [
+        "System/outcome-graph/shadow-2026-08-24-run-6-durable/run-receipt.json",
+        "client-operations/queue/work-items.json"
+      ],
+      "approval_required": false
+    }
+  ],
+  "risks": [
+    {
+      "id": "vault-health",
+      "state": "blocked",
+      "evidence": "12_Brain/09_Ops/Health.md",
+      "warning_count": 35
+    },
+    {
+      "id": "delivery-gates",
+      "state": "pending_exact_route_and_approval",
+      "evidence": "System/outcome-graph/tranche-2026-08-24-run-2-durable/W06-client-report-packages.json"
+    }
+  ],
+  "proposal_only": true,
+  "canonical_write_attempted": false,
+  "external_action_attempted": false,
+  "approval_state": "awaiting_marketing_chief_or_dillon_adoption"
+}

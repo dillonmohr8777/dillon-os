@@ -1,0 +1,295 @@
+{
+  "run_id": "OGD-20260824-2937C899B585",
+  "graph_id": "daily-d25-evidence-handoff-shadow",
+  "objective": "Create an exact evidence-backed handoff for the current W05 terminal state without promoting local graph completion into build, deployment, or delivery completion.",
+  "value_signal": "A reviewer can distinguish graph complete, business held, local artifact, external proof absent, and Marketing Chief adoption pending.",
+  "contract_sha256": "bfac6476e9fff25aca164762306771c4a4cca8ebe70cc12419629cc9658061c3",
+  "started_at": "2026-08-24T23:49:20.269Z",
+  "source_evidence": "The exact objective, registry, git state, rules, product/design documents, design probe, and W05 receipt are recollected before planning and at terminal verification.",
+  "finish_line": "The exact status vocabulary, artifact hashes, local/external proof classes, unresolved risk, next action, and canonical owner reconstruct without false completion.",
+  "governance": {
+    "orchestrator": "Codex acting as Marketing Chief",
+    "canonical_state": "The exact user objective, Dillon OS registry and rules, repository state, product/design authority, and W05 durable evidence remain canonical and read only.",
+    "dedupe_key": "D25:2026-08-24:source-bound-shadow",
+    "checkpoint": "System/outcome-graph/routines/D25/2026-08-24-foundation-shadow/run-receipt.json",
+    "rollback": "Discard foundation shadow artifacts; preserve the worktree, product/design truth, deployment state, canonical queue, and external systems unchanged.",
+    "escalation": "Return exact scope, repository, design-context, build-gate, QA, delivery, or authority evidence to Marketing Chief."
+  },
+  "graph_iterations": [
+    {
+      "iteration": 1,
+      "status": "verified",
+      "planner": {
+        "evidence": "Collected 1 isolated D25 item(s) from source set bee6d7037763d45601274702c12c8e31ad280fed7e97757744fc5930b1d39065.",
+        "item_count": 1,
+        "plan_signature": "e1fbe6d18e7d3d87637ac4f710cf307ebe898bfa58a76f1d5c4b5bc9e24d1a13",
+        "items": [
+          {
+            "id": "D25:OGD-20260824-23145989F598",
+            "isolation_key": "handoff:OGD-20260824-23145989F598:4cbc7e46def665bc346c32375f21eea3a4ecdebc08a9b36732feb999a9e4de58",
+            "input_fingerprint": "cf948198badf0a6f5c5faeeb476cd9f7ee9cbd16fd6a0f7ea4137bd150241010",
+            "task": null
+          }
+        ]
+      },
+      "workers": [
+        {
+          "item_id": "D25:OGD-20260824-23145989F598",
+          "input_fingerprint": "cf948198badf0a6f5c5faeeb476cd9f7ee9cbd16fd6a0f7ea4137bd150241010",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-2937C899B585:a210425747a894e3421e:attempt:1",
+              "maker_evidence": "Built one privacy-safe D25 record for D25:OGD-20260824-23145989F598.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D25/2026-08-24-foundation-shadow/workers/a210425747a894e3421e.json",
+                  "sha256": "09164bbdb094d36a69bd910873bd2d666d87a76b7f6d87a02247445082789212",
+                  "bytes": 1789
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D25:OGD-20260824-23145989F598 from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D25/2026-08-24-foundation-shadow/workers/a210425747a894e3421e.json",
+              "sha256": "09164bbdb094d36a69bd910873bd2d666d87a76b7f6d87a02247445082789212",
+              "bytes": 1789
+            }
+          ],
+          "isolation_id": "OGD-20260824-2937C899B585:a210425747a894e3421e:attempt:1"
+        }
+      ],
+      "reduction": {
+        "evidence": "Reduced all checked D25 records without blending isolation keys.",
+        "artifacts": [
+          {
+            "path": "System/outcome-graph/routines/D25/2026-08-24-foundation-shadow/final-status-receipt.json",
+            "sha256": "1164d9e4bcc0169c42711f0ccac79b435874231343e58f6384c55b05a4e69350",
+            "bytes": 1835
+          },
+          {
+            "path": "System/outcome-graph/routines/D25/2026-08-24-foundation-shadow/artifact-manifest.json",
+            "sha256": "65e4785742112fbd7615581f5cc2ac5e88e7a60f9583cc477c22172fb8a2abd1",
+            "bytes": 952
+          }
+        ]
+      },
+      "terminal_verification": {
+        "evidence": "Recollected and independently verified all D25 sources, records, negative states, and artifact hashes.",
+        "declared_pass": true,
+        "passed": true,
+        "assertions": [
+          {
+            "id": "source-manifest-stable",
+            "passed": true,
+            "detail": "Every named source remains hash-bound at terminal verification."
+          },
+          {
+            "id": "every-isolated-item-reconstructed-exactly-once",
+            "passed": true,
+            "detail": "Every in-scope item has one collision-resistant reconstructed record."
+          },
+          {
+            "id": "reducer-output-reproduces-exactly",
+            "passed": true,
+            "detail": "Final artifacts reproduce exactly from current sources and the frozen evaluation clock."
+          },
+          {
+            "id": "status-vocabulary-is-exact",
+            "passed": true,
+            "detail": "Graph completion remains distinct from business, deployment, and delivery state."
+          },
+          {
+            "id": "artifact-paths-hashes-and-bytes-present",
+            "passed": true,
+            "detail": "Artifacts have exact manifests."
+          },
+          {
+            "id": "local-and-external-proof-separated",
+            "passed": true,
+            "detail": "Missing external proof is explicit."
+          },
+          {
+            "id": "risks-and-one-next-action-present",
+            "passed": true,
+            "detail": "Risk and next action are explicit."
+          },
+          {
+            "id": "marketing-chief-owns-canonical-completion",
+            "passed": true,
+            "detail": "The shadow writes no canonical completion."
+          },
+          {
+            "id": "privacy-and-no-mutation-boundary",
+            "passed": true,
+            "detail": "Final artifacts are redacted and attest no external, canonical, provider, restart, or checkpoint mutation."
+          }
+        ],
+        "artifact_manifest": [
+          {
+            "path": "System/outcome-graph/routines/D25/2026-08-24-foundation-shadow/final-status-receipt.json",
+            "sha256": "1164d9e4bcc0169c42711f0ccac79b435874231343e58f6384c55b05a4e69350",
+            "bytes": 1835
+          },
+          {
+            "path": "System/outcome-graph/routines/D25/2026-08-24-foundation-shadow/artifact-manifest.json",
+            "sha256": "65e4785742112fbd7615581f5cc2ac5e88e7a60f9583cc477c22172fb8a2abd1",
+            "bytes": 952
+          }
+        ],
+        "manifest_errors": []
+      },
+      "learning": {
+        "evidence": "Appended one hashed D25 correction entry.",
+        "corrections": [
+          "Retain D25 source bindings, negative states, exact authority, and terminal assertions until the underlying evidence changes."
+        ],
+        "ledger": "System/outcome-graph/routines/D25/2026-08-24-foundation-shadow/corrections.jsonl",
+        "ledger_receipt": {
+          "locator": "System/outcome-graph/routines/D25/2026-08-24-foundation-shadow/corrections.jsonl",
+          "entry_sha256": "82c53f55bb1bc09df4de40c414e7abdb31715d1faaeb45e64cfccf97f63aaf01"
+        }
+      }
+    }
+  ],
+  "invocation_log": [
+    {
+      "adapter": "source-bound-d25-planner",
+      "invoked_at": "2026-08-24T23:49:20.282Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d25-maker",
+      "invoked_at": "2026-08-24T23:49:20.601Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d25-checker",
+      "invoked_at": "2026-08-24T23:49:20.910Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d25-reducer",
+      "invoked_at": "2026-08-24T23:49:21.232Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d25-terminal-verifier",
+      "invoked_at": "2026-08-24T23:49:21.255Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d25-learner",
+      "invoked_at": "2026-08-24T23:49:21.613Z",
+      "status": "returned"
+    }
+  ],
+  "budget": {
+    "limit_units": 96,
+    "used_units": 6
+  },
+  "outcome": "complete",
+  "terminal_truth": true,
+  "finished_at": "2026-08-24T23:49:21.627Z",
+  "elapsed_seconds": 1.358,
+  "blocked_by": null,
+  "reason": "Finish line is proven by an independent terminal verifier.",
+  "terminal_evidence": {
+    "evidence": "Recollected and independently verified all D25 sources, records, negative states, and artifact hashes.",
+    "declared_pass": true,
+    "passed": true,
+    "assertions": [
+      {
+        "id": "source-manifest-stable",
+        "passed": true,
+        "detail": "Every named source remains hash-bound at terminal verification."
+      },
+      {
+        "id": "every-isolated-item-reconstructed-exactly-once",
+        "passed": true,
+        "detail": "Every in-scope item has one collision-resistant reconstructed record."
+      },
+      {
+        "id": "reducer-output-reproduces-exactly",
+        "passed": true,
+        "detail": "Final artifacts reproduce exactly from current sources and the frozen evaluation clock."
+      },
+      {
+        "id": "status-vocabulary-is-exact",
+        "passed": true,
+        "detail": "Graph completion remains distinct from business, deployment, and delivery state."
+      },
+      {
+        "id": "artifact-paths-hashes-and-bytes-present",
+        "passed": true,
+        "detail": "Artifacts have exact manifests."
+      },
+      {
+        "id": "local-and-external-proof-separated",
+        "passed": true,
+        "detail": "Missing external proof is explicit."
+      },
+      {
+        "id": "risks-and-one-next-action-present",
+        "passed": true,
+        "detail": "Risk and next action are explicit."
+      },
+      {
+        "id": "marketing-chief-owns-canonical-completion",
+        "passed": true,
+        "detail": "The shadow writes no canonical completion."
+      },
+      {
+        "id": "privacy-and-no-mutation-boundary",
+        "passed": true,
+        "detail": "Final artifacts are redacted and attest no external, canonical, provider, restart, or checkpoint mutation."
+      }
+    ],
+    "artifact_manifest": [
+      {
+        "path": "System/outcome-graph/routines/D25/2026-08-24-foundation-shadow/final-status-receipt.json",
+        "sha256": "1164d9e4bcc0169c42711f0ccac79b435874231343e58f6384c55b05a4e69350",
+        "bytes": 1835
+      },
+      {
+        "path": "System/outcome-graph/routines/D25/2026-08-24-foundation-shadow/artifact-manifest.json",
+        "sha256": "65e4785742112fbd7615581f5cc2ac5e88e7a60f9583cc477c22172fb8a2abd1",
+        "bytes": 952
+      }
+    ],
+    "manifest_errors": []
+  },
+  "learning_evidence": {
+    "evidence": "Appended one hashed D25 correction entry.",
+    "corrections": [
+      "Retain D25 source bindings, negative states, exact authority, and terminal assertions until the underlying evidence changes."
+    ],
+    "ledger": "System/outcome-graph/routines/D25/2026-08-24-foundation-shadow/corrections.jsonl",
+    "ledger_receipt": {
+      "locator": "System/outcome-graph/routines/D25/2026-08-24-foundation-shadow/corrections.jsonl",
+      "entry_sha256": "82c53f55bb1bc09df4de40c414e7abdb31715d1faaeb45e64cfccf97f63aaf01"
+    }
+  },
+  "drift_fingerprint": "bced7319d3b2dd8f49ddd17fc6eeed2c235a7c5a227dd0f409e77290e56bdaa1",
+  "deduped": false,
+  "durable_state": {
+    "schema_version": 1,
+    "dedupe_identity": "6caaaa268e1403e2bfd2f67f006c2439dc0a8d2052845f354676eb11ebba957d",
+    "dedupe_hit": false,
+    "resumed": false,
+    "canonical_binding": {
+      "locator": "dillon-os://routine/D25/2026-08-24",
+      "version": "2026-08-24:e1cb9e89.05e6a21e.c5a7c091.1b135970.d503a937.90d9bcee.f497ab86.4cbc7e46.43cfa9c9.c4f66a74",
+      "sha256": "bee6d7037763d45601274702c12c8e31ad280fed7e97757744fc5930b1d39065",
+      "captured_at": "2026-08-24T23:49:19.628Z"
+    },
+    "canonical_binding_fingerprint": "718c6da2d4b11d3afb0bb308a361300055f0343c5cb69ca9bfd81185ae359d63",
+    "contract_fingerprint": "ba935a0fa3dd5991b2e6a075b7d45182510428de6d686e4b35a491f4f92b4863",
+    "checkpoint": "runs/OGD-20260824-2937C899B585/checkpoint.json"
+  }
+}

@@ -1,0 +1,535 @@
+{
+  "run_id": "OGD-20260824-5977C3E84A99",
+  "graph_id": "event-e04-connector-recovery-shadow",
+  "objective": "Resolve each currently failed connector or preserve its exact state and emit a source-backed blocked receipt without substitution or checkpoint advancement.",
+  "value_signal": "Every connector is either recovered from verified supported evidence or truthfully held with the pre-run checkpoint unchanged.",
+  "contract_sha256": "af9b7d9e887fd3e206c11c11651ec39a01fa3ea106f70cb977f971a3a0c0afb3",
+  "started_at": "2026-08-24T23:34:59.692Z",
+  "source_evidence": "Registry, loop and driver logs, runtime and checkpoint state, connector observations, gateway health, and historical health projections are rehashed before planning and at terminal verification.",
+  "finish_line": "Every failed connector is independently reconstructed with exact state preservation, supported-path decision, checkpoint readback, and no fabrication, secret exposure, substitution, or false advancement.",
+  "governance": {
+    "orchestrator": "Codex acting as Marketing Chief",
+    "canonical_state": "Dillon OS automation registry, runtime/checkpoint state, provider-readback state, current gateway health, and legacy loop receipts remain canonical and read only.",
+    "dedupe_key": "E04:2026-08-24:live-event-state:source-bound-shadow",
+    "checkpoint": "System/outcome-graph/routines/E04/2026-08-24-reliability-shadow/run-receipt.json",
+    "rollback": "Discard reliability shadow artifacts; retain processes, checkpoints, providers, schedules, messages, and canonical state unchanged.",
+    "escalation": "Return exact stale evidence, false-completion risk, connector gate, runtime degradation, or missing approval to Marketing Chief."
+  },
+  "graph_iterations": [
+    {
+      "iteration": 1,
+      "status": "verified",
+      "planner": {
+        "evidence": "Collected 6 isolated E04 item(s) from source set b52e6019ce577e6427819c75ce81c9d04bbc32253583635a0206012c90e3683a.",
+        "item_count": 6,
+        "plan_signature": "d6772e82f334ee0d34fd139c10611f8cc3630a3d9329dfdad1d403d58ef51620",
+        "items": [
+          {
+            "id": "E04:google_analytics",
+            "isolation_key": "connector:google_analytics:recorded-state",
+            "input_fingerprint": "92519cd55ddc31326f52b0c8045247c0b04002a0bb944252f5b2f53a2883b46f",
+            "task": null
+          },
+          {
+            "id": "E04:google_search_console",
+            "isolation_key": "connector:google_search_console:recorded-state",
+            "input_fingerprint": "6df2ce226c8b1964c50d6a09dde01d2ad1e490be8b7beb66f1cf811cd02bd530",
+            "task": null
+          },
+          {
+            "id": "E04:googleads",
+            "isolation_key": "connector:googleads:recorded-state",
+            "input_fingerprint": "45173833c7714e18490c1e6df4025b12ca4773aa74bf53d32f2328e42115734d",
+            "task": null
+          },
+          {
+            "id": "E04:hubspot",
+            "isolation_key": "connector:hubspot:recorded-state",
+            "input_fingerprint": "ae19d73cee7a5a8a3b956cc9df28c636a26c52a46f79e70a545b10d2b4f41d80",
+            "task": null
+          },
+          {
+            "id": "E04:meta_ads",
+            "isolation_key": "connector:meta_ads:recorded-state",
+            "input_fingerprint": "3ab47cc2ef58dda7f712983ff9ab7a5864545fbe680978ccfcfa3dc76b45ec25",
+            "task": null
+          },
+          {
+            "id": "E04:windsor-connector",
+            "isolation_key": "connector:windsor:authenticated-session",
+            "input_fingerprint": "f4e98922a6ab32a3aa1b5b61cf8dc9ff498191c4b9d6eb13a561dfe1f489d534",
+            "task": null
+          }
+        ]
+      },
+      "workers": [
+        {
+          "item_id": "E04:google_analytics",
+          "input_fingerprint": "92519cd55ddc31326f52b0c8045247c0b04002a0bb944252f5b2f53a2883b46f",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-5977C3E84A99:40741dbd8a296e3dea58:attempt:1",
+              "maker_evidence": "Built one privacy-safe E04 record for E04:google_analytics.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/E04/2026-08-24-reliability-shadow/workers/40741dbd8a296e3dea58.json",
+                  "sha256": "5a00bcb0c5c04465cc353db0009e7d2b34090478986c41c36e49f2054f1ac404",
+                  "bytes": 1291
+                }
+              ],
+              "checker_evidence": "Independently reconstructed E04:google_analytics from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/E04/2026-08-24-reliability-shadow/workers/40741dbd8a296e3dea58.json",
+              "sha256": "5a00bcb0c5c04465cc353db0009e7d2b34090478986c41c36e49f2054f1ac404",
+              "bytes": 1291
+            }
+          ],
+          "isolation_id": "OGD-20260824-5977C3E84A99:40741dbd8a296e3dea58:attempt:1"
+        },
+        {
+          "item_id": "E04:google_search_console",
+          "input_fingerprint": "6df2ce226c8b1964c50d6a09dde01d2ad1e490be8b7beb66f1cf811cd02bd530",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-5977C3E84A99:ac948f59fda85c31e146:attempt:1",
+              "maker_evidence": "Built one privacy-safe E04 record for E04:google_search_console.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/E04/2026-08-24-reliability-shadow/workers/ac948f59fda85c31e146.json",
+                  "sha256": "c446d2f44e86303f5400a09b9e12163080b63424629aed622babf3429e735e9f",
+                  "bytes": 1305
+                }
+              ],
+              "checker_evidence": "Independently reconstructed E04:google_search_console from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/E04/2026-08-24-reliability-shadow/workers/ac948f59fda85c31e146.json",
+              "sha256": "c446d2f44e86303f5400a09b9e12163080b63424629aed622babf3429e735e9f",
+              "bytes": 1305
+            }
+          ],
+          "isolation_id": "OGD-20260824-5977C3E84A99:ac948f59fda85c31e146:attempt:1"
+        },
+        {
+          "item_id": "E04:googleads",
+          "input_fingerprint": "45173833c7714e18490c1e6df4025b12ca4773aa74bf53d32f2328e42115734d",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-5977C3E84A99:c4be47cea1488a23b9cc:attempt:1",
+              "maker_evidence": "Built one privacy-safe E04 record for E04:googleads.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/E04/2026-08-24-reliability-shadow/workers/c4be47cea1488a23b9cc.json",
+                  "sha256": "57d181b53810622e8fd613a7c04d12311e0032b2902d1d31009816631ae7e4fb",
+                  "bytes": 1270
+                }
+              ],
+              "checker_evidence": "Independently reconstructed E04:googleads from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/E04/2026-08-24-reliability-shadow/workers/c4be47cea1488a23b9cc.json",
+              "sha256": "57d181b53810622e8fd613a7c04d12311e0032b2902d1d31009816631ae7e4fb",
+              "bytes": 1270
+            }
+          ],
+          "isolation_id": "OGD-20260824-5977C3E84A99:c4be47cea1488a23b9cc:attempt:1"
+        },
+        {
+          "item_id": "E04:hubspot",
+          "input_fingerprint": "ae19d73cee7a5a8a3b956cc9df28c636a26c52a46f79e70a545b10d2b4f41d80",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-5977C3E84A99:7fc7940949fb353b1804:attempt:1",
+              "maker_evidence": "Built one privacy-safe E04 record for E04:hubspot.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/E04/2026-08-24-reliability-shadow/workers/7fc7940949fb353b1804.json",
+                  "sha256": "f7aeb878d71d4a4a201b2f0b145dc385f440899e9c021081a17e5bf9a56470bb",
+                  "bytes": 1271
+                }
+              ],
+              "checker_evidence": "Independently reconstructed E04:hubspot from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/E04/2026-08-24-reliability-shadow/workers/7fc7940949fb353b1804.json",
+              "sha256": "f7aeb878d71d4a4a201b2f0b145dc385f440899e9c021081a17e5bf9a56470bb",
+              "bytes": 1271
+            }
+          ],
+          "isolation_id": "OGD-20260824-5977C3E84A99:7fc7940949fb353b1804:attempt:1"
+        },
+        {
+          "item_id": "E04:meta_ads",
+          "input_fingerprint": "3ab47cc2ef58dda7f712983ff9ab7a5864545fbe680978ccfcfa3dc76b45ec25",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-5977C3E84A99:cf34c4ba25dda3c88189:attempt:1",
+              "maker_evidence": "Built one privacy-safe E04 record for E04:meta_ads.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/E04/2026-08-24-reliability-shadow/workers/cf34c4ba25dda3c88189.json",
+                  "sha256": "fe6c799b6b34e86667ef60c9f458597b6b25d38e8034744cb89585b928873254",
+                  "bytes": 1274
+                }
+              ],
+              "checker_evidence": "Independently reconstructed E04:meta_ads from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/E04/2026-08-24-reliability-shadow/workers/cf34c4ba25dda3c88189.json",
+              "sha256": "fe6c799b6b34e86667ef60c9f458597b6b25d38e8034744cb89585b928873254",
+              "bytes": 1274
+            }
+          ],
+          "isolation_id": "OGD-20260824-5977C3E84A99:cf34c4ba25dda3c88189:attempt:1"
+        },
+        {
+          "item_id": "E04:windsor-connector",
+          "input_fingerprint": "f4e98922a6ab32a3aa1b5b61cf8dc9ff498191c4b9d6eb13a561dfe1f489d534",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-5977C3E84A99:2ea286536a19b810770b:attempt:1",
+              "maker_evidence": "Built one privacy-safe E04 record for E04:windsor-connector.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/E04/2026-08-24-reliability-shadow/workers/2ea286536a19b810770b.json",
+                  "sha256": "7ee823bfc9bc8059e8695ed67d831f9761071713ebe221d7599bce1129b56566",
+                  "bytes": 1328
+                }
+              ],
+              "checker_evidence": "Independently reconstructed E04:windsor-connector from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/E04/2026-08-24-reliability-shadow/workers/2ea286536a19b810770b.json",
+              "sha256": "7ee823bfc9bc8059e8695ed67d831f9761071713ebe221d7599bce1129b56566",
+              "bytes": 1328
+            }
+          ],
+          "isolation_id": "OGD-20260824-5977C3E84A99:2ea286536a19b810770b:attempt:1"
+        }
+      ],
+      "reduction": {
+        "evidence": "Reduced all checked E04 records without blending isolation keys.",
+        "artifacts": [
+          {
+            "path": "System/outcome-graph/routines/E04/2026-08-24-reliability-shadow/recovery-or-blocked-receipt.json",
+            "sha256": "4dc39e2da10516379c359ba8f3ac63619068cf361fe4e3d4c3404a22b90122f0",
+            "bytes": 9277
+          },
+          {
+            "path": "System/outcome-graph/routines/E04/2026-08-24-reliability-shadow/checkpoint-readback.json",
+            "sha256": "eb1397cdf0ae9dfb96b34db05ca2175aac98898919521e2745f98fa7a04217a9",
+            "bytes": 2146
+          }
+        ]
+      },
+      "terminal_verification": {
+        "evidence": "Recollected and independently verified all E04 sources, records, negative states, and artifact hashes.",
+        "declared_pass": true,
+        "passed": true,
+        "assertions": [
+          {
+            "id": "source-manifest-stable",
+            "passed": true,
+            "detail": "Every named source remains hash-bound at terminal verification."
+          },
+          {
+            "id": "every-isolated-item-reconstructed-exactly-once",
+            "passed": true,
+            "detail": "Every in-scope item has one collision-resistant reconstructed record."
+          },
+          {
+            "id": "reducer-output-reproduces-exactly",
+            "passed": true,
+            "detail": "Final artifacts reproduce exactly from current sources and the frozen evaluation clock."
+          },
+          {
+            "id": "pre-failure-checkpoint-preserved",
+            "passed": true,
+            "detail": "Every checkpoint hash is identical before and after."
+          },
+          {
+            "id": "exact-connector-and-account-state-visible",
+            "passed": true,
+            "detail": "Connector identity and unresolved account state remain explicit."
+          },
+          {
+            "id": "bounded-supported-recovery-decision",
+            "passed": true,
+            "detail": "Unsupported or human-gated recovery is held rather than fabricated."
+          },
+          {
+            "id": "no-trigger-state-is-explicit",
+            "passed": true,
+            "detail": "An explicit no-recovery receipt replaces an empty or falsely failed event run."
+          },
+          {
+            "id": "same-overlap-rerun-and-readback-not-falsely-claimed",
+            "passed": true,
+            "detail": "No rerun or readback is claimed when none occurred."
+          },
+          {
+            "id": "no-fabrication-secret-exposure-substitution-or-false-advance",
+            "passed": true,
+            "detail": "The connector state remains fail closed."
+          },
+          {
+            "id": "privacy-and-no-mutation-boundary",
+            "passed": true,
+            "detail": "Final artifacts are redacted and attest no external, canonical, provider, restart, or checkpoint mutation."
+          }
+        ],
+        "artifact_manifest": [
+          {
+            "path": "System/outcome-graph/routines/E04/2026-08-24-reliability-shadow/recovery-or-blocked-receipt.json",
+            "sha256": "4dc39e2da10516379c359ba8f3ac63619068cf361fe4e3d4c3404a22b90122f0",
+            "bytes": 9277
+          },
+          {
+            "path": "System/outcome-graph/routines/E04/2026-08-24-reliability-shadow/checkpoint-readback.json",
+            "sha256": "eb1397cdf0ae9dfb96b34db05ca2175aac98898919521e2745f98fa7a04217a9",
+            "bytes": 2146
+          }
+        ],
+        "manifest_errors": []
+      },
+      "learning": {
+        "evidence": "Appended one hashed E04 correction entry.",
+        "corrections": [
+          "Preserve the exact failed checkpoint and never substitute a connector or fabricate a recovery readback."
+        ],
+        "ledger": "System/outcome-graph/routines/E04/2026-08-24-reliability-shadow/corrections.jsonl",
+        "ledger_receipt": {
+          "locator": "System/outcome-graph/routines/E04/2026-08-24-reliability-shadow/corrections.jsonl",
+          "entry_sha256": "6c667563a0787c52e83c9584fa7eee7d35bbe54d37ffb0313741321b4ddf5544"
+        }
+      }
+    }
+  ],
+  "invocation_log": [
+    {
+      "adapter": "source-bound-e04-planner",
+      "invoked_at": "2026-08-24T23:34:59.702Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-e04-maker",
+      "invoked_at": "2026-08-24T23:34:59.733Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-e04-maker",
+      "invoked_at": "2026-08-24T23:34:59.733Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-e04-maker",
+      "invoked_at": "2026-08-24T23:34:59.733Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-e04-checker",
+      "invoked_at": "2026-08-24T23:34:59.790Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-e04-checker",
+      "invoked_at": "2026-08-24T23:34:59.790Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-e04-checker",
+      "invoked_at": "2026-08-24T23:34:59.790Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-e04-maker",
+      "invoked_at": "2026-08-24T23:34:59.856Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-e04-maker",
+      "invoked_at": "2026-08-24T23:34:59.885Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-e04-maker",
+      "invoked_at": "2026-08-24T23:34:59.901Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-e04-checker",
+      "invoked_at": "2026-08-24T23:34:59.901Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-e04-checker",
+      "invoked_at": "2026-08-24T23:34:59.929Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-e04-checker",
+      "invoked_at": "2026-08-24T23:34:59.941Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-e04-reducer",
+      "invoked_at": "2026-08-24T23:34:59.997Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-e04-terminal-verifier",
+      "invoked_at": "2026-08-24T23:35:00.019Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-e04-learner",
+      "invoked_at": "2026-08-24T23:35:00.052Z",
+      "status": "returned"
+    }
+  ],
+  "budget": {
+    "limit_units": 96,
+    "used_units": 16
+  },
+  "outcome": "complete",
+  "terminal_truth": true,
+  "finished_at": "2026-08-24T23:35:00.067Z",
+  "elapsed_seconds": 0.375,
+  "blocked_by": null,
+  "reason": "Finish line is proven by an independent terminal verifier.",
+  "terminal_evidence": {
+    "evidence": "Recollected and independently verified all E04 sources, records, negative states, and artifact hashes.",
+    "declared_pass": true,
+    "passed": true,
+    "assertions": [
+      {
+        "id": "source-manifest-stable",
+        "passed": true,
+        "detail": "Every named source remains hash-bound at terminal verification."
+      },
+      {
+        "id": "every-isolated-item-reconstructed-exactly-once",
+        "passed": true,
+        "detail": "Every in-scope item has one collision-resistant reconstructed record."
+      },
+      {
+        "id": "reducer-output-reproduces-exactly",
+        "passed": true,
+        "detail": "Final artifacts reproduce exactly from current sources and the frozen evaluation clock."
+      },
+      {
+        "id": "pre-failure-checkpoint-preserved",
+        "passed": true,
+        "detail": "Every checkpoint hash is identical before and after."
+      },
+      {
+        "id": "exact-connector-and-account-state-visible",
+        "passed": true,
+        "detail": "Connector identity and unresolved account state remain explicit."
+      },
+      {
+        "id": "bounded-supported-recovery-decision",
+        "passed": true,
+        "detail": "Unsupported or human-gated recovery is held rather than fabricated."
+      },
+      {
+        "id": "no-trigger-state-is-explicit",
+        "passed": true,
+        "detail": "An explicit no-recovery receipt replaces an empty or falsely failed event run."
+      },
+      {
+        "id": "same-overlap-rerun-and-readback-not-falsely-claimed",
+        "passed": true,
+        "detail": "No rerun or readback is claimed when none occurred."
+      },
+      {
+        "id": "no-fabrication-secret-exposure-substitution-or-false-advance",
+        "passed": true,
+        "detail": "The connector state remains fail closed."
+      },
+      {
+        "id": "privacy-and-no-mutation-boundary",
+        "passed": true,
+        "detail": "Final artifacts are redacted and attest no external, canonical, provider, restart, or checkpoint mutation."
+      }
+    ],
+    "artifact_manifest": [
+      {
+        "path": "System/outcome-graph/routines/E04/2026-08-24-reliability-shadow/recovery-or-blocked-receipt.json",
+        "sha256": "4dc39e2da10516379c359ba8f3ac63619068cf361fe4e3d4c3404a22b90122f0",
+        "bytes": 9277
+      },
+      {
+        "path": "System/outcome-graph/routines/E04/2026-08-24-reliability-shadow/checkpoint-readback.json",
+        "sha256": "eb1397cdf0ae9dfb96b34db05ca2175aac98898919521e2745f98fa7a04217a9",
+        "bytes": 2146
+      }
+    ],
+    "manifest_errors": []
+  },
+  "learning_evidence": {
+    "evidence": "Appended one hashed E04 correction entry.",
+    "corrections": [
+      "Preserve the exact failed checkpoint and never substitute a connector or fabricate a recovery readback."
+    ],
+    "ledger": "System/outcome-graph/routines/E04/2026-08-24-reliability-shadow/corrections.jsonl",
+    "ledger_receipt": {
+      "locator": "System/outcome-graph/routines/E04/2026-08-24-reliability-shadow/corrections.jsonl",
+      "entry_sha256": "6c667563a0787c52e83c9584fa7eee7d35bbe54d37ffb0313741321b4ddf5544"
+    }
+  },
+  "drift_fingerprint": "c6e72d96609bd3703534ceac330ba489c0690617926c6aa5e6a65dcb2e6a1047",
+  "deduped": true,
+  "durable_state": {
+    "schema_version": 1,
+    "dedupe_identity": "586e9980eee37a5d44332da4f9f326cfd66a151a96847c7c9bdd06438b5508ae",
+    "dedupe_hit": true,
+    "resumed": false,
+    "canonical_binding": {
+      "locator": "dillon-os://routine/E04/2026-08-24:live-event-state",
+      "version": "2026-08-24:05e6a21e.aa41a5c9.58c3eba4.7c8c85b7.671a1719.483c6549.d3f6602f.b206acfa.5f9296df.48f8da86.40feaf98",
+      "sha256": "b52e6019ce577e6427819c75ce81c9d04bbc32253583635a0206012c90e3683a",
+      "captured_at": "2026-08-24T23:34:59.655Z"
+    },
+    "canonical_binding_fingerprint": "1418c56e0332863bd57cc2d6246bd625486d6fb0f491386ec382cd24378b5e51",
+    "contract_fingerprint": "41ccb4568bd829120e3e662b3fb10fd80e613c523ff8c8764878946adacd3f59",
+    "checkpoint": "runs/OGD-20260824-5977C3E84A99/checkpoint.json"
+  }
+}

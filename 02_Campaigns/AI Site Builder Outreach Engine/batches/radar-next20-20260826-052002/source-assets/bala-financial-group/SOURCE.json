@@ -1,0 +1,78 @@
+{
+  "sourceUrl": "https://www.balafinancial.com/",
+  "finalUrl": "https://www.balafinancial.com/",
+  "sourceDomain": "balafinancial.com",
+  "httpStatus": 200,
+  "contentType": "",
+  "pageSha256": "a030c26a0b643c66bbbfb8acea138fe032e8913812279b021216e068276a7fa1",
+  "title": "Home | Bala Financial Group",
+  "description": "",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "bala",
+      "financial"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260826-052002\\preflight\\bala-financial-group\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://static.fmgsuite.com/media/images/0035848e-158a-4e45-9779-3440cb4c9003.png",
+    "sourceEvidence": "JSON-LD logo",
+    "type": "png",
+    "dimensions": {
+      "width": 300,
+      "height": 47
+    },
+    "sha256": "a2d0cb09c65913f80235c4ed1c294e87ec31e27ec85a819fe033532876e1a1a3",
+    "sourceSha256": "a2d0cb09c65913f80235c4ed1c294e87ec31e27ec85a819fe033532876e1a1a3",
+    "sourceType": "png",
+    "sourceFileName": null,
+    "transformation": "none; exact first-party transparent asset",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "alphaAverage": 37.8218,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 11717
+  },
+  "references": [],
+  "contact": {
+    "phone": "(610) 940-1000",
+    "address": "Devon, PA Office: 610-940-1000, Moorestown, NJ Office: 856-273-0800, valuedclient@balafinancial.com, PA 19333",
+    "city": "valuedclient@balafinancial.com",
+    "phoneSource": "official JSON-LD",
+    "addressSource": "official JSON-LD"
+  },
+  "visualReferenceFallback": "No usable first-party photography was exposed by the legacy source. Use only disclosed Align Image Gen concept imagery.",
+  "referenceFailures": [
+    {
+      "url": "https://static.fmgsuite.com/media/images/111ddbfd-95b9-4eb3-a770-30211311e9ac.jpg?v=1",
+      "reason": "reference image is too small"
+    },
+    {
+      "url": "https://static.fmgsuite.com/media/images/20fa1d6b-00ab-431a-998a-22a5de4f26a0.jpg?v=1",
+      "reason": "reference image is too small"
+    },
+    {
+      "url": "https://static.fmgsuite.com/media/images/e4632d27-2cc4-49d5-847d-3d68ce54239f.jpg?v=1",
+      "reason": "reference image is too small"
+    },
+    {
+      "url": "https://static.fmgsuite.com/media/images/222b386e-0ea3-4371-b460-8cfb73d72780.png?v=1",
+      "reason": "reference is flat or lacks enough tonal variation to serve as visual evidence"
+    }
+  ],
+  "brandColors": [
+    "#002c60",
+    "#116600",
+    "#cfcbb6",
+    "#4d80b0"
+  ],
+  "checkedAt": "2026-08-26T09:34:48.501Z"
+}

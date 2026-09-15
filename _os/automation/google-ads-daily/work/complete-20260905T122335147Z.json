@@ -1,0 +1,7 @@
+[
+  {"action":"seen","key":"gmail:1a0717837bf0bb5b","disposition":"suppressed"},
+  {"action":"seen","key":"gmail:1a071762f7a50480","disposition":"suppressed"},
+  {"action":"source-complete","source":"slack","beforeUnix":1788611024,"paginationExhausted":true},
+  {"action":"source-complete","source":"gmail","beforeUnix":1788611024,"paginationExhausted":true},
+  {"action":"daily","name":"predictionBrief","status":"quiet"}
+]

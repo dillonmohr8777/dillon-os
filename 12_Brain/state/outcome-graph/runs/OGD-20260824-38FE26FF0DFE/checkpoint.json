@@ -1,0 +1,827 @@
+{
+  "schema_version": 1,
+  "run_id": "OGD-20260824-38FE26FF0DFE",
+  "graph_id": "daily-d17-paid-media-evidence-shadow",
+  "dedupe_identity": "bd737401072c459b020533b8a5aacacee2da214215f69d037e6f886fcc71e47f",
+  "dedupe_key": "D17:2026-08-24:source-bound-shadow",
+  "contract_fingerprint": "2ae0f1abfd984aee33897e49184500adb81edc1c3621eceedba14bb5a9fd2387",
+  "canonical_binding": {
+    "locator": "dillon-os://routine/D17/2026-08-24",
+    "version": "2026-08-24:7d65a000d0.6216ed7d8b.fedfe6670d",
+    "sha256": "cd4877517666380542f1ea8d7c4be50549fa27d98e354f32850b01cab67f172e",
+    "captured_at": "2026-08-24T23:42:20.803Z"
+  },
+  "canonical_binding_fingerprint": "414f0abf76fe5eea7e476399f2609a35f906b95773a4e593b2beff4ef7a54183",
+  "status": "complete",
+  "started_at": "2026-08-24T23:42:20.820Z",
+  "updated_at": "2026-08-24T23:42:21.172Z",
+  "event_sequence": 15,
+  "events": [
+    {
+      "sequence": 1,
+      "event": "run_started",
+      "at": "2026-08-24T23:42:20.820Z",
+      "resumed": false
+    },
+    {
+      "sequence": 2,
+      "event": "planned",
+      "at": "2026-08-24T23:42:20.837Z",
+      "graph_attempt": 1,
+      "item_id": null
+    },
+    {
+      "sequence": 3,
+      "event": "worker_verified",
+      "at": "2026-08-24T23:42:20.905Z",
+      "graph_attempt": 1,
+      "item_id": "D17:google-ads--fresh-blends-kwik-trip"
+    },
+    {
+      "sequence": 4,
+      "event": "worker_verified",
+      "at": "2026-08-24T23:42:20.921Z",
+      "graph_attempt": 1,
+      "item_id": "D17:google-ads--kimberly-james-bridal"
+    },
+    {
+      "sequence": 5,
+      "event": "worker_verified",
+      "at": "2026-08-24T23:42:20.940Z",
+      "graph_attempt": 1,
+      "item_id": "D17:google-ads--omega-landscaping"
+    },
+    {
+      "sequence": 6,
+      "event": "worker_verified",
+      "at": "2026-08-24T23:42:20.970Z",
+      "graph_attempt": 1,
+      "item_id": "D17:google-ads--onsite-concrete-landscape"
+    },
+    {
+      "sequence": 7,
+      "event": "worker_verified",
+      "at": "2026-08-24T23:42:21.007Z",
+      "graph_attempt": 1,
+      "item_id": "D17:google-ads--replenish-7-eleven"
+    },
+    {
+      "sequence": 8,
+      "event": "worker_verified",
+      "at": "2026-08-24T23:42:21.022Z",
+      "graph_attempt": 1,
+      "item_id": "D17:meta-ads--kimberly-james-bridal"
+    },
+    {
+      "sequence": 9,
+      "event": "worker_verified",
+      "at": "2026-08-24T23:42:21.039Z",
+      "graph_attempt": 1,
+      "item_id": "D17:meta-ads--shadow-heating-cooling"
+    },
+    {
+      "sequence": 10,
+      "event": "workers_verified",
+      "at": "2026-08-24T23:42:21.055Z",
+      "graph_attempt": 1,
+      "item_id": null
+    },
+    {
+      "sequence": 11,
+      "event": "reduced",
+      "at": "2026-08-24T23:42:21.085Z",
+      "graph_attempt": 1,
+      "item_id": null
+    },
+    {
+      "sequence": 12,
+      "event": "terminal_verified",
+      "at": "2026-08-24T23:42:21.107Z",
+      "graph_attempt": 1,
+      "item_id": null
+    },
+    {
+      "sequence": 13,
+      "event": "learned",
+      "at": "2026-08-24T23:42:21.127Z",
+      "graph_attempt": 1,
+      "item_id": null
+    },
+    {
+      "sequence": 14,
+      "event": "finished",
+      "at": "2026-08-24T23:42:21.145Z",
+      "graph_attempt": 1,
+      "item_id": null
+    },
+    {
+      "sequence": 15,
+      "event": "receipt_committed",
+      "at": "2026-08-24T23:42:21.172Z",
+      "outcome": "complete"
+    }
+  ],
+  "engine": {
+    "stage": "finished",
+    "graph_attempt": 1,
+    "plan_signature": "c39f2118eb7f5ef32f1807bb94a199043e339c2a70d7293dc5525b9d3fca0580",
+    "verified_workers": {
+      "D17:google-ads--fresh-blends-kwik-trip": {
+        "input_fingerprint": "a0076204087171ef5a1f52b1527b5c526d7013687195a4a5b9b1cffbd2e8e5a8",
+        "worker_result": {
+          "item_id": "D17:google-ads--fresh-blends-kwik-trip",
+          "input_fingerprint": "a0076204087171ef5a1f52b1527b5c526d7013687195a4a5b9b1cffbd2e8e5a8",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-38FE26FF0DFE:c407471712433db63951:attempt:1",
+              "maker_evidence": "Built one privacy-safe D17 record for D17:google-ads--fresh-blends-kwik-trip.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D17/2026-08-24-performance-shadow/workers/c407471712433db63951.json",
+                  "sha256": "9df1d75ecc4b5ae1e894db4c2052258d705345b45442d5af9c7112a61c3ddc96",
+                  "bytes": 2650
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D17:google-ads--fresh-blends-kwik-trip from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D17/2026-08-24-performance-shadow/workers/c407471712433db63951.json",
+              "sha256": "9df1d75ecc4b5ae1e894db4c2052258d705345b45442d5af9c7112a61c3ddc96",
+              "bytes": 2650
+            }
+          ],
+          "isolation_id": "OGD-20260824-38FE26FF0DFE:c407471712433db63951:attempt:1"
+        }
+      },
+      "D17:google-ads--kimberly-james-bridal": {
+        "input_fingerprint": "a3adf0184014ad81937114cc27f6a780d834d5d18a19fcc0e414539c82f8c128",
+        "worker_result": {
+          "item_id": "D17:google-ads--kimberly-james-bridal",
+          "input_fingerprint": "a3adf0184014ad81937114cc27f6a780d834d5d18a19fcc0e414539c82f8c128",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-38FE26FF0DFE:22220455a33a5b6bd8c2:attempt:1",
+              "maker_evidence": "Built one privacy-safe D17 record for D17:google-ads--kimberly-james-bridal.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D17/2026-08-24-performance-shadow/workers/22220455a33a5b6bd8c2.json",
+                  "sha256": "0fd158f06cc6cb0c036488c0280b4fa0cb81aa2f3ecea4f53ac7f170e212941e",
+                  "bytes": 2427
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D17:google-ads--kimberly-james-bridal from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D17/2026-08-24-performance-shadow/workers/22220455a33a5b6bd8c2.json",
+              "sha256": "0fd158f06cc6cb0c036488c0280b4fa0cb81aa2f3ecea4f53ac7f170e212941e",
+              "bytes": 2427
+            }
+          ],
+          "isolation_id": "OGD-20260824-38FE26FF0DFE:22220455a33a5b6bd8c2:attempt:1"
+        }
+      },
+      "D17:google-ads--omega-landscaping": {
+        "input_fingerprint": "4ce93c9d1846d77337c3b1ea3c995b3ee34dca808bd4c0f19f10df1776a669c1",
+        "worker_result": {
+          "item_id": "D17:google-ads--omega-landscaping",
+          "input_fingerprint": "4ce93c9d1846d77337c3b1ea3c995b3ee34dca808bd4c0f19f10df1776a669c1",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-38FE26FF0DFE:1f10470fe7f5313f26eb:attempt:1",
+              "maker_evidence": "Built one privacy-safe D17 record for D17:google-ads--omega-landscaping.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D17/2026-08-24-performance-shadow/workers/1f10470fe7f5313f26eb.json",
+                  "sha256": "df4a46e0c5ec3ba01553ae6e4374ce7742b7ab476e2ca8f708139dd9350f9a65",
+                  "bytes": 2415
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D17:google-ads--omega-landscaping from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D17/2026-08-24-performance-shadow/workers/1f10470fe7f5313f26eb.json",
+              "sha256": "df4a46e0c5ec3ba01553ae6e4374ce7742b7ab476e2ca8f708139dd9350f9a65",
+              "bytes": 2415
+            }
+          ],
+          "isolation_id": "OGD-20260824-38FE26FF0DFE:1f10470fe7f5313f26eb:attempt:1"
+        }
+      },
+      "D17:google-ads--onsite-concrete-landscape": {
+        "input_fingerprint": "77f1fc4826369f38238b2558a84c581a6dba239236044322a3f1260123c2e61a",
+        "worker_result": {
+          "item_id": "D17:google-ads--onsite-concrete-landscape",
+          "input_fingerprint": "77f1fc4826369f38238b2558a84c581a6dba239236044322a3f1260123c2e61a",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-38FE26FF0DFE:4a289d390038d4000915:attempt:1",
+              "maker_evidence": "Built one privacy-safe D17 record for D17:google-ads--onsite-concrete-landscape.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D17/2026-08-24-performance-shadow/workers/4a289d390038d4000915.json",
+                  "sha256": "3df45aec5d91fae600bfa9c5576c57c76ae7c6d6e9e2ae142c50b410f57a256e",
+                  "bytes": 2439
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D17:google-ads--onsite-concrete-landscape from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D17/2026-08-24-performance-shadow/workers/4a289d390038d4000915.json",
+              "sha256": "3df45aec5d91fae600bfa9c5576c57c76ae7c6d6e9e2ae142c50b410f57a256e",
+              "bytes": 2439
+            }
+          ],
+          "isolation_id": "OGD-20260824-38FE26FF0DFE:4a289d390038d4000915:attempt:1"
+        }
+      },
+      "D17:google-ads--replenish-7-eleven": {
+        "input_fingerprint": "116c38dee7ff879fd80939fbc6e4fba66d64aa8aa88cb54e41ca29fa2ca5df40",
+        "worker_result": {
+          "item_id": "D17:google-ads--replenish-7-eleven",
+          "input_fingerprint": "116c38dee7ff879fd80939fbc6e4fba66d64aa8aa88cb54e41ca29fa2ca5df40",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-38FE26FF0DFE:e2f4b5290a62b3b52243:attempt:1",
+              "maker_evidence": "Built one privacy-safe D17 record for D17:google-ads--replenish-7-eleven.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D17/2026-08-24-performance-shadow/workers/e2f4b5290a62b3b52243.json",
+                  "sha256": "4b034d109ad0eed19293eb5cf25e8944e1e825195affd7caa6188a311f343f21",
+                  "bytes": 2418
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D17:google-ads--replenish-7-eleven from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D17/2026-08-24-performance-shadow/workers/e2f4b5290a62b3b52243.json",
+              "sha256": "4b034d109ad0eed19293eb5cf25e8944e1e825195affd7caa6188a311f343f21",
+              "bytes": 2418
+            }
+          ],
+          "isolation_id": "OGD-20260824-38FE26FF0DFE:e2f4b5290a62b3b52243:attempt:1"
+        }
+      },
+      "D17:meta-ads--kimberly-james-bridal": {
+        "input_fingerprint": "1da62be48c1e3d2b44f894d46e17c1bbdd0f136357c97bce5dff5bac1eefe76a",
+        "worker_result": {
+          "item_id": "D17:meta-ads--kimberly-james-bridal",
+          "input_fingerprint": "1da62be48c1e3d2b44f894d46e17c1bbdd0f136357c97bce5dff5bac1eefe76a",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-38FE26FF0DFE:1d7c1219095e479523c2:attempt:1",
+              "maker_evidence": "Built one privacy-safe D17 record for D17:meta-ads--kimberly-james-bridal.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D17/2026-08-24-performance-shadow/workers/1d7c1219095e479523c2.json",
+                  "sha256": "289c8064efa11786c9e05021f253b9d69662ac741a2d1e1d78ad44a573119ed3",
+                  "bytes": 2393
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D17:meta-ads--kimberly-james-bridal from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D17/2026-08-24-performance-shadow/workers/1d7c1219095e479523c2.json",
+              "sha256": "289c8064efa11786c9e05021f253b9d69662ac741a2d1e1d78ad44a573119ed3",
+              "bytes": 2393
+            }
+          ],
+          "isolation_id": "OGD-20260824-38FE26FF0DFE:1d7c1219095e479523c2:attempt:1"
+        }
+      },
+      "D17:meta-ads--shadow-heating-cooling": {
+        "input_fingerprint": "8300ee527ba36639bc0a1f9ec430ac1b223cac8225bd0378fee8b154f1cbede9",
+        "worker_result": {
+          "item_id": "D17:meta-ads--shadow-heating-cooling",
+          "input_fingerprint": "8300ee527ba36639bc0a1f9ec430ac1b223cac8225bd0378fee8b154f1cbede9",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-38FE26FF0DFE:12794d0d9308ccc01240:attempt:1",
+              "maker_evidence": "Built one privacy-safe D17 record for D17:meta-ads--shadow-heating-cooling.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D17/2026-08-24-performance-shadow/workers/12794d0d9308ccc01240.json",
+                  "sha256": "41a13831322cf87e7c687febfeb795b5d6d67715662de39f2b3e8f4473cba4ef",
+                  "bytes": 2768
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D17:meta-ads--shadow-heating-cooling from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D17/2026-08-24-performance-shadow/workers/12794d0d9308ccc01240.json",
+              "sha256": "41a13831322cf87e7c687febfeb795b5d6d67715662de39f2b3e8f4473cba4ef",
+              "bytes": 2768
+            }
+          ],
+          "isolation_id": "OGD-20260824-38FE26FF0DFE:12794d0d9308ccc01240:attempt:1"
+        }
+      }
+    },
+    "budget_used": 18,
+    "previous_terminal_findings": [],
+    "graph_iterations": [
+      {
+        "iteration": 1,
+        "status": "verified",
+        "planner": {
+          "evidence": "Collected 7 isolated D17 item(s) from source set cd4877517666380542f1ea8d7c4be50549fa27d98e354f32850b01cab67f172e.",
+          "item_count": 7,
+          "plan_signature": "c39f2118eb7f5ef32f1807bb94a199043e339c2a70d7293dc5525b9d3fca0580",
+          "items": [
+            {
+              "id": "D17:google-ads--fresh-blends-kwik-trip",
+              "isolation_key": "fresh-blends-kwik-trip:google-ads:2026-W35A",
+              "input_fingerprint": "a0076204087171ef5a1f52b1527b5c526d7013687195a4a5b9b1cffbd2e8e5a8",
+              "task": null
+            },
+            {
+              "id": "D17:google-ads--kimberly-james-bridal",
+              "isolation_key": "kimberly-james-bridal:google-ads:2026-W35A",
+              "input_fingerprint": "a3adf0184014ad81937114cc27f6a780d834d5d18a19fcc0e414539c82f8c128",
+              "task": null
+            },
+            {
+              "id": "D17:google-ads--omega-landscaping",
+              "isolation_key": "omega-landscaping:google-ads:2026-W35A",
+              "input_fingerprint": "4ce93c9d1846d77337c3b1ea3c995b3ee34dca808bd4c0f19f10df1776a669c1",
+              "task": null
+            },
+            {
+              "id": "D17:google-ads--onsite-concrete-landscape",
+              "isolation_key": "onsite-concrete-landscape:google-ads:2026-W35A",
+              "input_fingerprint": "77f1fc4826369f38238b2558a84c581a6dba239236044322a3f1260123c2e61a",
+              "task": null
+            },
+            {
+              "id": "D17:google-ads--replenish-7-eleven",
+              "isolation_key": "replenish-7-eleven:google-ads:2026-W35A",
+              "input_fingerprint": "116c38dee7ff879fd80939fbc6e4fba66d64aa8aa88cb54e41ca29fa2ca5df40",
+              "task": null
+            },
+            {
+              "id": "D17:meta-ads--kimberly-james-bridal",
+              "isolation_key": "kimberly-james-bridal:meta-ads:2026-W35A",
+              "input_fingerprint": "1da62be48c1e3d2b44f894d46e17c1bbdd0f136357c97bce5dff5bac1eefe76a",
+              "task": null
+            },
+            {
+              "id": "D17:meta-ads--shadow-heating-cooling",
+              "isolation_key": "shadow-heating-cooling:meta-ads:2026-W35A",
+              "input_fingerprint": "8300ee527ba36639bc0a1f9ec430ac1b223cac8225bd0378fee8b154f1cbede9",
+              "task": null
+            }
+          ]
+        },
+        "workers": [
+          {
+            "item_id": "D17:google-ads--fresh-blends-kwik-trip",
+            "input_fingerprint": "a0076204087171ef5a1f52b1527b5c526d7013687195a4a5b9b1cffbd2e8e5a8",
+            "status": "verified",
+            "attempts": [
+              {
+                "attempt": 1,
+                "isolation_id": "OGD-20260824-38FE26FF0DFE:c407471712433db63951:attempt:1",
+                "maker_evidence": "Built one privacy-safe D17 record for D17:google-ads--fresh-blends-kwik-trip.",
+                "artifacts": [
+                  {
+                    "path": "System/outcome-graph/routines/D17/2026-08-24-performance-shadow/workers/c407471712433db63951.json",
+                    "sha256": "9df1d75ecc4b5ae1e894db4c2052258d705345b45442d5af9c7112a61c3ddc96",
+                    "bytes": 2650
+                  }
+                ],
+                "checker_evidence": "Independently reconstructed D17:google-ads--fresh-blends-kwik-trip from the same source-bound contract.",
+                "passed": true,
+                "findings": []
+              }
+            ],
+            "final_artifacts": [
+              {
+                "path": "System/outcome-graph/routines/D17/2026-08-24-performance-shadow/workers/c407471712433db63951.json",
+                "sha256": "9df1d75ecc4b5ae1e894db4c2052258d705345b45442d5af9c7112a61c3ddc96",
+                "bytes": 2650
+              }
+            ],
+            "isolation_id": "OGD-20260824-38FE26FF0DFE:c407471712433db63951:attempt:1"
+          },
+          {
+            "item_id": "D17:google-ads--kimberly-james-bridal",
+            "input_fingerprint": "a3adf0184014ad81937114cc27f6a780d834d5d18a19fcc0e414539c82f8c128",
+            "status": "verified",
+            "attempts": [
+              {
+                "attempt": 1,
+                "isolation_id": "OGD-20260824-38FE26FF0DFE:22220455a33a5b6bd8c2:attempt:1",
+                "maker_evidence": "Built one privacy-safe D17 record for D17:google-ads--kimberly-james-bridal.",
+                "artifacts": [
+                  {
+                    "path": "System/outcome-graph/routines/D17/2026-08-24-performance-shadow/workers/22220455a33a5b6bd8c2.json",
+                    "sha256": "0fd158f06cc6cb0c036488c0280b4fa0cb81aa2f3ecea4f53ac7f170e212941e",
+                    "bytes": 2427
+                  }
+                ],
+                "checker_evidence": "Independently reconstructed D17:google-ads--kimberly-james-bridal from the same source-bound contract.",
+                "passed": true,
+                "findings": []
+              }
+            ],
+            "final_artifacts": [
+              {
+                "path": "System/outcome-graph/routines/D17/2026-08-24-performance-shadow/workers/22220455a33a5b6bd8c2.json",
+                "sha256": "0fd158f06cc6cb0c036488c0280b4fa0cb81aa2f3ecea4f53ac7f170e212941e",
+                "bytes": 2427
+              }
+            ],
+            "isolation_id": "OGD-20260824-38FE26FF0DFE:22220455a33a5b6bd8c2:attempt:1"
+          },
+          {
+            "item_id": "D17:google-ads--omega-landscaping",
+            "input_fingerprint": "4ce93c9d1846d77337c3b1ea3c995b3ee34dca808bd4c0f19f10df1776a669c1",
+            "status": "verified",
+            "attempts": [
+              {
+                "attempt": 1,
+                "isolation_id": "OGD-20260824-38FE26FF0DFE:1f10470fe7f5313f26eb:attempt:1",
+                "maker_evidence": "Built one privacy-safe D17 record for D17:google-ads--omega-landscaping.",
+                "artifacts": [
+                  {
+                    "path": "System/outcome-graph/routines/D17/2026-08-24-performance-shadow/workers/1f10470fe7f5313f26eb.json",
+                    "sha256": "df4a46e0c5ec3ba01553ae6e4374ce7742b7ab476e2ca8f708139dd9350f9a65",
+                    "bytes": 2415
+                  }
+                ],
+                "checker_evidence": "Independently reconstructed D17:google-ads--omega-landscaping from the same source-bound contract.",
+                "passed": true,
+                "findings": []
+              }
+            ],
+            "final_artifacts": [
+              {
+                "path": "System/outcome-graph/routines/D17/2026-08-24-performance-shadow/workers/1f10470fe7f5313f26eb.json",
+                "sha256": "df4a46e0c5ec3ba01553ae6e4374ce7742b7ab476e2ca8f708139dd9350f9a65",
+                "bytes": 2415
+              }
+            ],
+            "isolation_id": "OGD-20260824-38FE26FF0DFE:1f10470fe7f5313f26eb:attempt:1"
+          },
+          {
+            "item_id": "D17:google-ads--onsite-concrete-landscape",
+            "input_fingerprint": "77f1fc4826369f38238b2558a84c581a6dba239236044322a3f1260123c2e61a",
+            "status": "verified",
+            "attempts": [
+              {
+                "attempt": 1,
+                "isolation_id": "OGD-20260824-38FE26FF0DFE:4a289d390038d4000915:attempt:1",
+                "maker_evidence": "Built one privacy-safe D17 record for D17:google-ads--onsite-concrete-landscape.",
+                "artifacts": [
+                  {
+                    "path": "System/outcome-graph/routines/D17/2026-08-24-performance-shadow/workers/4a289d390038d4000915.json",
+                    "sha256": "3df45aec5d91fae600bfa9c5576c57c76ae7c6d6e9e2ae142c50b410f57a256e",
+                    "bytes": 2439
+                  }
+                ],
+                "checker_evidence": "Independently reconstructed D17:google-ads--onsite-concrete-landscape from the same source-bound contract.",
+                "passed": true,
+                "findings": []
+              }
+            ],
+            "final_artifacts": [
+              {
+                "path": "System/outcome-graph/routines/D17/2026-08-24-performance-shadow/workers/4a289d390038d4000915.json",
+                "sha256": "3df45aec5d91fae600bfa9c5576c57c76ae7c6d6e9e2ae142c50b410f57a256e",
+                "bytes": 2439
+              }
+            ],
+            "isolation_id": "OGD-20260824-38FE26FF0DFE:4a289d390038d4000915:attempt:1"
+          },
+          {
+            "item_id": "D17:google-ads--replenish-7-eleven",
+            "input_fingerprint": "116c38dee7ff879fd80939fbc6e4fba66d64aa8aa88cb54e41ca29fa2ca5df40",
+            "status": "verified",
+            "attempts": [
+              {
+                "attempt": 1,
+                "isolation_id": "OGD-20260824-38FE26FF0DFE:e2f4b5290a62b3b52243:attempt:1",
+                "maker_evidence": "Built one privacy-safe D17 record for D17:google-ads--replenish-7-eleven.",
+                "artifacts": [
+                  {
+                    "path": "System/outcome-graph/routines/D17/2026-08-24-performance-shadow/workers/e2f4b5290a62b3b52243.json",
+                    "sha256": "4b034d109ad0eed19293eb5cf25e8944e1e825195affd7caa6188a311f343f21",
+                    "bytes": 2418
+                  }
+                ],
+                "checker_evidence": "Independently reconstructed D17:google-ads--replenish-7-eleven from the same source-bound contract.",
+                "passed": true,
+                "findings": []
+              }
+            ],
+            "final_artifacts": [
+              {
+                "path": "System/outcome-graph/routines/D17/2026-08-24-performance-shadow/workers/e2f4b5290a62b3b52243.json",
+                "sha256": "4b034d109ad0eed19293eb5cf25e8944e1e825195affd7caa6188a311f343f21",
+                "bytes": 2418
+              }
+            ],
+            "isolation_id": "OGD-20260824-38FE26FF0DFE:e2f4b5290a62b3b52243:attempt:1"
+          },
+          {
+            "item_id": "D17:meta-ads--kimberly-james-bridal",
+            "input_fingerprint": "1da62be48c1e3d2b44f894d46e17c1bbdd0f136357c97bce5dff5bac1eefe76a",
+            "status": "verified",
+            "attempts": [
+              {
+                "attempt": 1,
+                "isolation_id": "OGD-20260824-38FE26FF0DFE:1d7c1219095e479523c2:attempt:1",
+                "maker_evidence": "Built one privacy-safe D17 record for D17:meta-ads--kimberly-james-bridal.",
+                "artifacts": [
+                  {
+                    "path": "System/outcome-graph/routines/D17/2026-08-24-performance-shadow/workers/1d7c1219095e479523c2.json",
+                    "sha256": "289c8064efa11786c9e05021f253b9d69662ac741a2d1e1d78ad44a573119ed3",
+                    "bytes": 2393
+                  }
+                ],
+                "checker_evidence": "Independently reconstructed D17:meta-ads--kimberly-james-bridal from the same source-bound contract.",
+                "passed": true,
+                "findings": []
+              }
+            ],
+            "final_artifacts": [
+              {
+                "path": "System/outcome-graph/routines/D17/2026-08-24-performance-shadow/workers/1d7c1219095e479523c2.json",
+                "sha256": "289c8064efa11786c9e05021f253b9d69662ac741a2d1e1d78ad44a573119ed3",
+                "bytes": 2393
+              }
+            ],
+            "isolation_id": "OGD-20260824-38FE26FF0DFE:1d7c1219095e479523c2:attempt:1"
+          },
+          {
+            "item_id": "D17:meta-ads--shadow-heating-cooling",
+            "input_fingerprint": "8300ee527ba36639bc0a1f9ec430ac1b223cac8225bd0378fee8b154f1cbede9",
+            "status": "verified",
+            "attempts": [
+              {
+                "attempt": 1,
+                "isolation_id": "OGD-20260824-38FE26FF0DFE:12794d0d9308ccc01240:attempt:1",
+                "maker_evidence": "Built one privacy-safe D17 record for D17:meta-ads--shadow-heating-cooling.",
+                "artifacts": [
+                  {
+                    "path": "System/outcome-graph/routines/D17/2026-08-24-performance-shadow/workers/12794d0d9308ccc01240.json",
+                    "sha256": "41a13831322cf87e7c687febfeb795b5d6d67715662de39f2b3e8f4473cba4ef",
+                    "bytes": 2768
+                  }
+                ],
+                "checker_evidence": "Independently reconstructed D17:meta-ads--shadow-heating-cooling from the same source-bound contract.",
+                "passed": true,
+                "findings": []
+              }
+            ],
+            "final_artifacts": [
+              {
+                "path": "System/outcome-graph/routines/D17/2026-08-24-performance-shadow/workers/12794d0d9308ccc01240.json",
+                "sha256": "41a13831322cf87e7c687febfeb795b5d6d67715662de39f2b3e8f4473cba4ef",
+                "bytes": 2768
+              }
+            ],
+            "isolation_id": "OGD-20260824-38FE26FF0DFE:12794d0d9308ccc01240:attempt:1"
+          }
+        ],
+        "reduction": {
+          "evidence": "Reduced all checked D17 records without blending isolation keys.",
+          "artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D17/2026-08-24-performance-shadow/paid-media-evidence.json",
+              "sha256": "f13750cf0f4502219db363d0543adafc3de2bc43b69a472f8258d23a9788248a",
+              "bytes": 20661
+            },
+            {
+              "path": "System/outcome-graph/routines/D17/2026-08-24-performance-shadow/tracking-health.json",
+              "sha256": "16ac8c4829aa3461d75e8e3f79b81ae2de22bf3401860733113e549d7225848b",
+              "bytes": 9184
+            }
+          ]
+        },
+        "terminal_verification": {
+          "evidence": "Recollected and independently verified all D17 sources, records, negative states, and artifact hashes.",
+          "declared_pass": true,
+          "passed": true,
+          "assertions": [
+            {
+              "id": "source-manifest-stable",
+              "passed": true,
+              "detail": "Every named source remains hash-bound at terminal verification."
+            },
+            {
+              "id": "every-isolated-item-reconstructed-exactly-once",
+              "passed": true,
+              "detail": "Every in-scope item has one collision-resistant reconstructed record."
+            },
+            {
+              "id": "reducer-output-reproduces-exactly",
+              "passed": true,
+              "detail": "Final artifacts reproduce exactly from current sources and the frozen evaluation clock."
+            },
+            {
+              "id": "client-account-brand-and-channel-exact",
+              "passed": true,
+              "detail": "Every lane retains exact identity and explicit account-binding state."
+            },
+            {
+              "id": "date-range-timezone-and-freshness-exact",
+              "passed": true,
+              "detail": "Date, timezone, and freshness are explicit even when pending."
+            },
+            {
+              "id": "delivery-spend-and-tracking-source-bound",
+              "passed": true,
+              "detail": "Unavailable delivery or spend fields are held rather than estimated."
+            },
+            {
+              "id": "platforms-and-brands-not-blended",
+              "passed": true,
+              "detail": "Every lane has one unique client-platform-window key."
+            },
+            {
+              "id": "inaccessible-fields-are-pending",
+              "passed": true,
+              "detail": "Every inaccessible field remains pending."
+            },
+            {
+              "id": "no-paid-media-mutation",
+              "passed": true,
+              "detail": "No paid-media state changed."
+            },
+            {
+              "id": "privacy-and-no-mutation-boundary",
+              "passed": true,
+              "detail": "Final artifacts are redacted and attest no external, canonical, provider, restart, or checkpoint mutation."
+            }
+          ],
+          "artifact_manifest": [
+            {
+              "path": "System/outcome-graph/routines/D17/2026-08-24-performance-shadow/paid-media-evidence.json",
+              "sha256": "f13750cf0f4502219db363d0543adafc3de2bc43b69a472f8258d23a9788248a",
+              "bytes": 20661
+            },
+            {
+              "path": "System/outcome-graph/routines/D17/2026-08-24-performance-shadow/tracking-health.json",
+              "sha256": "16ac8c4829aa3461d75e8e3f79b81ae2de22bf3401860733113e549d7225848b",
+              "bytes": 9184
+            }
+          ],
+          "manifest_errors": []
+        },
+        "learning": {
+          "evidence": "Appended one hashed D17 correction entry.",
+          "corrections": [
+            "Keep inaccessible delivery, spend, account, date, and tracking fields pending rather than estimated."
+          ],
+          "ledger": "System/outcome-graph/routines/D17/2026-08-24-performance-shadow/corrections.jsonl",
+          "ledger_receipt": {
+            "locator": "System/outcome-graph/routines/D17/2026-08-24-performance-shadow/corrections.jsonl",
+            "entry_sha256": "c33839aa3c5d5d5e9388854746a145364b21b64bbee60daa833a591deb0c3454"
+          }
+        }
+      }
+    ],
+    "invocation_log": [
+      {
+        "adapter": "source-bound-d17-planner",
+        "invoked_at": "2026-08-24T23:42:20.831Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-d17-maker",
+        "invoked_at": "2026-08-24T23:42:20.854Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-d17-maker",
+        "invoked_at": "2026-08-24T23:42:20.854Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-d17-maker",
+        "invoked_at": "2026-08-24T23:42:20.854Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-d17-maker",
+        "invoked_at": "2026-08-24T23:42:20.854Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-d17-checker",
+        "invoked_at": "2026-08-24T23:42:20.889Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-d17-checker",
+        "invoked_at": "2026-08-24T23:42:20.889Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-d17-checker",
+        "invoked_at": "2026-08-24T23:42:20.889Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-d17-checker",
+        "invoked_at": "2026-08-24T23:42:20.889Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-d17-maker",
+        "invoked_at": "2026-08-24T23:42:20.937Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-d17-maker",
+        "invoked_at": "2026-08-24T23:42:20.968Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-d17-maker",
+        "invoked_at": "2026-08-24T23:42:20.990Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-d17-checker",
+        "invoked_at": "2026-08-24T23:42:20.990Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-d17-checker",
+        "invoked_at": "2026-08-24T23:42:21.002Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-d17-checker",
+        "invoked_at": "2026-08-24T23:42:21.005Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-d17-reducer",
+        "invoked_at": "2026-08-24T23:42:21.072Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-d17-terminal-verifier",
+        "invoked_at": "2026-08-24T23:42:21.100Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-d17-learner",
+        "invoked_at": "2026-08-24T23:42:21.126Z",
+        "status": "returned"
+      }
+    ]
+  },
+  "last_event": "receipt_committed",
+  "state_revision": 15,
+  "previous_state_sha256": "05538babd5ff0716d34d966ea73d8269cb49901cc3d26275212daa934368aa4b",
+  "receipt": {
+    "path": "runs/OGD-20260824-38FE26FF0DFE/receipt.json",
+    "sha256": "249f93b6b65a3eb458b237a4ee5c78ee27b20bd2b3efea40d183d90907699162",
+    "bytes": 24773
+  }
+}

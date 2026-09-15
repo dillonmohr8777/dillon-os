@@ -1,0 +1,15 @@
+{
+"wakeId":"heartbeat:20260905T161050961Z",
+"identityChecks":{"gmail":"expected-account-verified","slack":"expected-momentum-workspace-and-user-verified"},
+"coverage":{"afterUnix":1788622715,"beforeUnix":1788624666,"gmailPages":1,"gmailMessages":4,"slackPages":1,"slackMessages":5,"paginationExhaustedBoth":true,"newSourceKeys":5,"supplementalContextPages":1},
+"interpretation":"New Gmail items are newsletters, a promotion and unrelated personal transaction receipt, suppressed without deeper retrieval. Owner praise in VA Claims adds no new task. Priority stakeholder acknowledgment was checked against eight nearby group-DM messages; it acknowledges prior owner discussion, not a new request or changed approval.",
+"contextCoverage":"Supplemental channel read intentionally bounded to nearby messages; older channel history not exhausted. Fixed-window source searches are fully exhausted.",
+"dailyWork":"None due; previously reported blockers unchanged and not redispatched.",
+"newWorkers":[],
+"canonicalQueueMutation":false,
+"externalDelivery":false,
+"decision":"DONT_NOTIFY",
+"privacy":"redacted",
+"containsSecrets":false,
+"containsRawCommunications":false
+}

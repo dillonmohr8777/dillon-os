@@ -1,0 +1,3 @@
+[mcp_servers.landingfolio]
+url = "https://mcp.landingfolio.com/mcp"
+bearer_token_env_var = "LANDINGFOLIO_TOKEN"

@@ -1,0 +1,241 @@
+{
+  "run_id": "OG-20260824-FB371569A0",
+  "graph_id": "weekly-w09-w11-shadow",
+  "objective": "Produce current, independently reproducible W09 automation-reliability and W11 knowledge-graph-health evidence without changing live operations.",
+  "contract_sha256": "93584b7f7850f07d72a518741046c5444eb3332ca8936341fb434f4a53efe7bf",
+  "started_at": "2026-08-24T21:14:10.113Z",
+  "source_evidence": "Live registry, current Claude loop receipt log, deterministic scheduler tests, and current vault graph checks.",
+  "finish_line": "W09 and W11 each have an isolated checked evidence artifact whose live source fingerprints and outcome-specific assertions reproduce at terminal verification.",
+  "graph_iterations": [
+    {
+      "iteration": 1,
+      "status": "verified",
+      "planner": {
+        "evidence": "Collected current W09 and W11 source packets before fan-out.",
+        "item_count": 2,
+        "items": [
+          {
+            "id": "W09",
+            "isolation_key": "routine:W09",
+            "input_fingerprint": "d2aa8f6a9625977321fc904c4d8c3f172daf46e8701d168ed0195fa5ff895d6a"
+          },
+          {
+            "id": "W11",
+            "isolation_key": "routine:W11",
+            "input_fingerprint": "d6dc36d248a703ba7c0aff0260beef4b6e657e4aaee66c40dca17713b7cbe5e5"
+          }
+        ]
+      },
+      "workers": [
+        {
+          "item_id": "W09",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "W09-graph-1-attempt-1",
+              "maker_evidence": "Built the W09 evidence artifact in isolated workspace W09-graph-1-attempt-1.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/shadow-2026-08-24-run-1/W09-automation-reliability.json",
+                  "sha256": "ccef9a12653ccedd8414bbc6efd55153dc7057671189175f766e9c28a1abc135",
+                  "bytes": 45734
+                }
+              ],
+              "checker_evidence": "Re-ran live W09 sources and compared outcome-specific assertions.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/shadow-2026-08-24-run-1/W09-automation-reliability.json",
+              "sha256": "ccef9a12653ccedd8414bbc6efd55153dc7057671189175f766e9c28a1abc135",
+              "bytes": 45734
+            }
+          ],
+          "isolation_id": "W09-graph-1-attempt-1"
+        },
+        {
+          "item_id": "W11",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "W11-graph-1-attempt-1",
+              "maker_evidence": "Built the W11 evidence artifact in isolated workspace W11-graph-1-attempt-1.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/shadow-2026-08-24-run-1/W11-knowledge-graph-health.json",
+                  "sha256": "c8013f2033219fe4185f7c9e75aabefc7eb900dd69010aef98874e919d063703",
+                  "bytes": 14979
+                }
+              ],
+              "checker_evidence": "Re-ran live W11 sources and compared outcome-specific assertions.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/shadow-2026-08-24-run-1/W11-knowledge-graph-health.json",
+              "sha256": "c8013f2033219fe4185f7c9e75aabefc7eb900dd69010aef98874e919d063703",
+              "bytes": 14979
+            }
+          ],
+          "isolation_id": "W11-graph-1-attempt-1"
+        }
+      ],
+      "reduction": {
+        "evidence": "Merged the two checked routine artifacts into a collision-free staging directory.",
+        "artifacts": [
+          {
+            "path": "System/outcome-graph/shadow-2026-08-24-run-1/W09-automation-reliability.json",
+            "sha256": "ccef9a12653ccedd8414bbc6efd55153dc7057671189175f766e9c28a1abc135",
+            "bytes": 45734
+          },
+          {
+            "path": "System/outcome-graph/shadow-2026-08-24-run-1/W11-knowledge-graph-health.json",
+            "sha256": "c8013f2033219fe4185f7c9e75aabefc7eb900dd69010aef98874e919d063703",
+            "bytes": 14979
+          }
+        ]
+      },
+      "terminal_verification": {
+        "evidence": "Terminal verifier independently repeated both live source checks after reduction.",
+        "declared_pass": true,
+        "passed": true,
+        "assertions": [
+          {
+            "id": "W09-reproduces-current-reliability-state",
+            "passed": true,
+            "detail": "W09 structural passes and false-completion migration risk both remain visible."
+          },
+          {
+            "id": "W11-proves-connected-vault-graph",
+            "passed": true,
+            "detail": "W11 has zero structural errors, one component, full coverage, and zero orphans."
+          }
+        ],
+        "artifact_manifest": [
+          {
+            "path": "System/outcome-graph/shadow-2026-08-24-run-1/W09-automation-reliability.json",
+            "sha256": "ccef9a12653ccedd8414bbc6efd55153dc7057671189175f766e9c28a1abc135",
+            "bytes": 45734
+          },
+          {
+            "path": "System/outcome-graph/shadow-2026-08-24-run-1/W11-knowledge-graph-health.json",
+            "sha256": "c8013f2033219fe4185f7c9e75aabefc7eb900dd69010aef98874e919d063703",
+            "bytes": 14979
+          }
+        ],
+        "manifest_errors": []
+      },
+      "learning": {
+        "evidence": "Appended one hashed correction entry for graph outcome terminal_true.",
+        "corrections": [
+          "Keep W09 false-completion risk visible while migrating W09 and W11 to outcome-specific terminal predicates."
+        ],
+        "ledger": "System/outcome-graph/shadow-2026-08-24-run-1/corrections.jsonl",
+        "ledger_receipt": {
+          "locator": "System/outcome-graph/shadow-2026-08-24-run-1/corrections.jsonl",
+          "entry_sha256": "ecf76e0a87cefa9d8011a4f299f6406ee150926d34a32953c647d33c16e4b97f"
+        }
+      }
+    }
+  ],
+  "invocation_log": [
+    {
+      "adapter": "weekly-shadow-planner",
+      "invoked_at": "2026-08-24T21:14:10.115Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-shadow-evidence-maker",
+      "invoked_at": "2026-08-24T21:14:27.496Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-shadow-evidence-maker",
+      "invoked_at": "2026-08-24T21:14:27.497Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-shadow-independent-checker",
+      "invoked_at": "2026-08-24T21:14:27.501Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-shadow-independent-checker",
+      "invoked_at": "2026-08-24T21:14:27.501Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-shadow-reducer",
+      "invoked_at": "2026-08-24T21:14:44.994Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-shadow-terminal-verifier",
+      "invoked_at": "2026-08-24T21:14:44.999Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-shadow-correction-ledger",
+      "invoked_at": "2026-08-24T21:15:00.372Z",
+      "status": "returned"
+    }
+  ],
+  "budget": {
+    "limit_units": 30,
+    "used_units": 8
+  },
+  "outcome": "complete",
+  "terminal_truth": true,
+  "finished_at": "2026-08-24T21:15:00.376Z",
+  "elapsed_seconds": 50.263,
+  "blocked_by": null,
+  "reason": "Finish line is proven by an independent terminal verifier.",
+  "terminal_evidence": {
+    "evidence": "Terminal verifier independently repeated both live source checks after reduction.",
+    "declared_pass": true,
+    "passed": true,
+    "assertions": [
+      {
+        "id": "W09-reproduces-current-reliability-state",
+        "passed": true,
+        "detail": "W09 structural passes and false-completion migration risk both remain visible."
+      },
+      {
+        "id": "W11-proves-connected-vault-graph",
+        "passed": true,
+        "detail": "W11 has zero structural errors, one component, full coverage, and zero orphans."
+      }
+    ],
+    "artifact_manifest": [
+      {
+        "path": "System/outcome-graph/shadow-2026-08-24-run-1/W09-automation-reliability.json",
+        "sha256": "ccef9a12653ccedd8414bbc6efd55153dc7057671189175f766e9c28a1abc135",
+        "bytes": 45734
+      },
+      {
+        "path": "System/outcome-graph/shadow-2026-08-24-run-1/W11-knowledge-graph-health.json",
+        "sha256": "c8013f2033219fe4185f7c9e75aabefc7eb900dd69010aef98874e919d063703",
+        "bytes": 14979
+      }
+    ],
+    "manifest_errors": []
+  },
+  "learning_evidence": {
+    "evidence": "Appended one hashed correction entry for graph outcome terminal_true.",
+    "corrections": [
+      "Keep W09 false-completion risk visible while migrating W09 and W11 to outcome-specific terminal predicates."
+    ],
+    "ledger": "System/outcome-graph/shadow-2026-08-24-run-1/corrections.jsonl",
+    "ledger_receipt": {
+      "locator": "System/outcome-graph/shadow-2026-08-24-run-1/corrections.jsonl",
+      "entry_sha256": "ecf76e0a87cefa9d8011a4f299f6406ee150926d34a32953c647d33c16e4b97f"
+    }
+  },
+  "drift_fingerprint": "4c6e365c360c8de7c5970bdfb2891cbbd0736534971932fc284f682306fa264e"
+}

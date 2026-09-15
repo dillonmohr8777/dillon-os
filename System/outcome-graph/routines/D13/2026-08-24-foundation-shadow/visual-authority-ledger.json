@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "routine_id": "D13",
+  "generated_at": "2026-08-25T00:16:11.045Z",
+  "surface": "automation/prospect-radar-next20",
+  "mode": "Persuade",
+  "authorities": [
+    {
+      "locator": "automation/prospect-radar-next20/PRODUCT.md",
+      "sha256": "90d9bceeaafa613f3e7498d276f9b474ee9b4377102340be55cf57548e803eda",
+      "bytes": 3070
+    },
+    {
+      "locator": "automation/prospect-radar-next20/DESIGN.md",
+      "sha256": "d503a937aac0e034d755ff7bfe94c85554952074492b296ea872a253afc50b1e",
+      "bytes": 2564
+    },
+    {
+      "locator": "automation/prospect-radar-next20/AUTOMATION.md",
+      "sha256": "1b13597002febc5b6fc952d0b059d70cd80111fa5fa952edc4752a8c935edb4b",
+      "bytes": 2087
+    }
+  ],
+  "check_state": {
+    "attempted": true,
+    "passed": true,
+    "gate": "no-ui-implementation",
+    "design_is_seed": true,
+    "manual_detector_required": true,
+    "blocker": null
+  },
+  "authority": {
+    "read_only": true,
+    "proposal_only": true,
+    "external_action_attempted": false,
+    "canonical_write_attempted": false,
+    "provider_mutation_attempted": false,
+    "deployment_attempted": false,
+    "worktree_mutation_attempted": false,
+    "ui_mutation_attempted": false,
+    "acceptance_contract_changed": false
+  }
+}

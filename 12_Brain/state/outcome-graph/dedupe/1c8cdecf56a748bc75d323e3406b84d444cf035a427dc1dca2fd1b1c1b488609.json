@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "graph_id": "daily-d26-knowledge-proposal-shadow",
+  "dedupe_key": "D26:2026-08-24:source-bound-shadow",
+  "dedupe_identity": "1c8cdecf56a748bc75d323e3406b84d444cf035a427dc1dca2fd1b1c1b488609",
+  "contract_fingerprint": "21d783823edf439e3524fede794e69fb82945c05eee043656a3c38f94e39400e",
+  "canonical_binding": {
+    "locator": "dillon-os://routine/D26/2026-08-24",
+    "version": "2026-08-25:75ead33c.05e6a21e.c947dbf0.43588267.c4f66a74.f349bdba.699fd0a4.03f91cd6",
+    "sha256": "a2d2bb3bc16eb1353ffbb5cf69ea048e8a616aa02023a69ac8d365d83fd7b95e",
+    "captured_at": "2026-08-25T00:31:06.401Z"
+  },
+  "canonical_binding_fingerprint": "799cc5998a0fb9eb2549a5705808aab778c755c089a69c9e093c4d2f980609bf",
+  "status": "complete",
+  "run_id": "OGD-20260825-9A9181C7F45D",
+  "checkpoint": {
+    "path": "runs/OGD-20260825-9A9181C7F45D/checkpoint.json"
+  },
+  "created_at": "2026-08-25T00:31:06.416Z",
+  "updated_at": "2026-08-25T00:31:06.555Z",
+  "state_revision": 9,
+  "previous_state_sha256": "8a3c021f12bcafed1bbd8aa00aef50eb26911a113be54c36b03dd4a521afff3a",
+  "completed_at": "2026-08-25T00:31:06.555Z",
+  "receipt": {
+    "path": "runs/OGD-20260825-9A9181C7F45D/receipt.json",
+    "sha256": "d66ead18919e67c1bd7b7dda41689c2b0ff5954df9ace1e900fd7a7a52522622",
+    "bytes": 13125
+  }
+}

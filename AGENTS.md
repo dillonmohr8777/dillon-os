@@ -124,27 +124,30 @@ node --test _os/test/brain-hud.test.js _os/test/public-safety.test.js _os/test/w
 
 ## Agent roster
 
-Seven runnable subagents live in `.claude/agents/`. They are the operating layer:
-invoke one with the `Agent` tool rather than working a lane yourself. Each carries
-the routines it owns, the skills it may invoke, and the repos in its scope.
+Ten runnable subagents live in `.claude/agents/` and `.codex/agents/`. They are the
+operating layer: invoke one with the `Agent` tool rather than working a lane yourself.
+Each exposes one or more of the 21 governed internal specialist/cadence-bot identities
+without duplicating `owner_bot` in `claude-operating-team.json`. Codex/Marketing Chief
+remains the sole canonical queue writer and final synthesis authority.
 
-| Agent | Model | Owns | Use it for |
+| Agent | Model | Internal identities | Use it for |
 |---|---|---|---|
-| `marketing-chief` | opus | Command (12) | Start a session, triage a request, rank the day, assemble the approval board. Delegates. |
-| `web-product-builder` | opus | Web maker (7) | Site and landing-page builds, batch prospect sites, front-end and design passes. **Maker.** |
-| `qa-critic` | opus | D24, D25, M02 | Independent verification of another agent's work. **Never the maker.** |
-| `paid-media-analyst` | opus | Performance (8) | Ads delivery, attribution reconciliation, client reports. Read-only on accounts. |
-| `growth-content` | opus | Growth (4) | SEO/AEO/GEO, content production, CRO experiments. |
-| `brain-curator` | sonnet | Knowledge (4) | Captures, compile, graph hygiene, session mining, weekly synthesis. |
-| `reliability-scout` | sonnet | Reliability (7) | Automation health, routine failures, breakers, connector recovery. |
+| `marketing-chief` | opus | Morning Marketing Chief Operator | Start a session, triage, rank the day, assemble the approval board. Delegates. |
+| `web-product-builder` | opus | Web and Product Builder | Site builds, landing pages, prospect batches. **Maker.** |
+| `qa-critic` | opus | Independent QA + Delivery Evidence Auditor | Falsify release claims before Dillon sees them. **Never the maker.** |
+| `paid-media-analyst` | opus | Paid Media Auditor | Ads delivery inspection and account readbacks. Read-only on accounts. |
+| `revenue-ops-analyst` | opus | CRM/Revenue Ops + Reporting + Weekly Review | MRR truth prep, reports, executive readbacks, cost/capacity audits. |
+| `client-success-advisor` | sonnet | Client Context Router | Onboarding prep, retention signals, roster/separation audits. |
+| `prospect-intelligence-scout` | sonnet | Grok Research Scout | Ad-hoc pre-W05/W07 source readiness: identity, logo provenance, dedupe, classify ready/hold/do_not_pitch. Zero scheduled routines. Never builds or drafts outreach. |
+| `growth-content` | opus | SEO/AEO/GEO + Brand Voice + CRO | Content, experiments, calendars. |
+| `brain-curator` | sonnet | Knowledge and Obsidian Curator | Captures, compile, graph hygiene, synthesis. |
+| `reliability-scout` | sonnet | Automation Reliability Scout | Loop health, breakers, connector recovery evidence. |
 
-All 29 Claude-executable routines have exactly one owner; none is double-owned.
+All 54 routines appear on exactly one exposed agent table; `prospect-intelligence-scout`
+owns zero scheduled routine IDs by design. 29 remain Claude-executable through the loop. Internal `owner_bot` ownership stays in the registry — this table is
+the worker delegation view only.
 
-**Edit `System/scripts/Build-ClaudeAgents.py`, never the generated `.md` files.** A
-hand edit to `paid-media-analyst.md` was silently reverted by the next regeneration
-on 2026-08-18 — the same drift that had already bitten
-`claude-operating-team.json`. The generator is idempotent and derives each agent's
-routine table from the registry, so agents cannot disagree with it about ownership.
+**Edit `System/scripts/Build-ClaudeAgents.py`, never the generated `.md` or `.toml` files.**
 
 Every agent carries a **web escalation ladder** (WebFetch → WebSearch → Firecrawl →
 Firecrawl stealth for Cloudflare → in-app browser → Claude in Chrome for
@@ -170,6 +173,7 @@ actions.
 | Task | Cadence | What it does |
 |---|---|---|
 | `Claude-Autonomous-Daily-Driver` | every 15 min | Runs `System/scripts/Invoke-ClaudeDailyDriver.ps1`, which gates the 54 routines in `11_Agents/claude-operating-team.json` through `Invoke-ClaudeLoop.ps1` and executes the eligible ones. |
+| `Immohrtal-Crew` | every 2 hours | Runs `System/scripts/Invoke-ImmohrtalCrew.ps1` for the seven Immohrtal agents (rank, local LP QA, connector health, agency-site probe, receipts). `mail_ready` is always `hold`. Does not send, publish, deploy, or write `client-operations/queue/work-items.json`. Do not re-enable `IMMOHRTAL Agency Daily` until its source audit clears. |
 | `Prospect Radar - Next 20 Daily Builder` | 05:20 daily | `automation/prospect-radar-next20/Run-ProspectRadarNext20Daily.ps1` — builds 20 local noindex sites, browser QA, generated imagery. `mail_ready` is always `hold`. |
 | `Claude Weekly Skills Research Brief` | weekly | Skills research brief. |
 | `Codex-AgentMemory-VaultSync` | hourly | Agent-memory and vault sync. |
@@ -192,10 +196,21 @@ today's receipt log opens it).
 Receipts land in `12_Brain/queue/claude-loop-<date>.jsonl`; per-routine state in
 `12_Brain/state/claude-routines/`.
 
-Build steps come from an execution allowlist in `Invoke-ClaudeLoop.ps1`. A
+Build steps come from an execution allowlist in
+`_os/automation/bin/claude-loop.js`, the Node dispatcher; `Invoke-ClaudeLoop.ps1`
+is a thin wrapper that keeps the scheduled task and the driver working. A
 routine whose build command fails three times opens its breaker, so one broken
 health script silently stops several routines while the loop still looks idle.
 Check the receipt log for `failed` outcomes before concluding nothing is eligible.
+
+Every executed routine records a `learn` output in its receipt: a concrete
+lesson (a failed stage, or a stage whose state changed since the last
+checkpoint) or an explicit no-finding. The craft brief counts them and lists
+lessons seen on two or more days as promotion candidates; promoting one into
+`12_Brain/11_Craft/earned-lessons.md` and then `12_Brain/03_Concepts/` stays an
+agent step. Routine and automation state carries `generated_at` (schema
+`12_Brain/schemas/automation-run.json`); `node _os/automation/bin/queue-status.js`
+reports staleness from it.
 
 ### Automation source vs artifacts
 

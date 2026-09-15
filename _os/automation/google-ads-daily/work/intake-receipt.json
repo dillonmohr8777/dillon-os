@@ -1,0 +1,89 @@
+{
+  "verifiedAt": "2026-09-05T00:42:11.133Z",
+  "mode": "manual-native-source-smoke-not-scheduled-run",
+  "window": {
+    "afterUnix": 1788394752,
+    "beforeUnix": 1788567552,
+    "cursor": null
+  },
+  "slack": {
+    "uniqueMessages": 705,
+    "surfacedChannels": 37,
+    "bots": 153,
+    "segments": [
+      {
+        "afterUnix": 1788394752,
+        "beforeUnix": 1788416352,
+        "pageCount": 1,
+        "count": 12,
+        "paginationExhausted": true
+      },
+      {
+        "afterUnix": 1788415452,
+        "beforeUnix": 1788437952,
+        "pageCount": 1,
+        "count": 1,
+        "paginationExhausted": true
+      },
+      {
+        "afterUnix": 1788437052,
+        "beforeUnix": 1788459552,
+        "pageCount": 12,
+        "count": 223,
+        "paginationExhausted": true
+      },
+      {
+        "afterUnix": 1788458652,
+        "beforeUnix": 1788481152,
+        "pageCount": 6,
+        "count": 109,
+        "paginationExhausted": true
+      },
+      {
+        "afterUnix": 1788480252,
+        "beforeUnix": 1788502752,
+        "pageCount": 5,
+        "count": 90,
+        "paginationExhausted": true
+      },
+      {
+        "afterUnix": 1788501852,
+        "beforeUnix": 1788524352,
+        "pageCount": 1,
+        "count": 4,
+        "paginationExhausted": true
+      },
+      {
+        "afterUnix": 1788523452,
+        "beforeUnix": 1788545952,
+        "pageCount": 8,
+        "count": 159,
+        "paginationExhausted": true
+      },
+      {
+        "afterUnix": 1788545052,
+        "beforeUnix": 1788567552,
+        "pageCount": 7,
+        "count": 120,
+        "paginationExhausted": true
+      }
+    ],
+    "paginationExhausted": true
+  },
+  "gmail": {
+    "headersAndSnippets": 625,
+    "query": "after:1788394752 before:1788567552 -in:spam -in:trash -subject:verification -subject:password -subject:code -subject:security -subject:recovery",
+    "paginationExhausted": true,
+    "allBodiesRead": false
+  },
+  "localInference": {
+    "route": "fast",
+    "chunks": 1,
+    "model": "llama3.2:3b",
+    "elapsedMs": 108447,
+    "promptTokens": 2617,
+    "outputTokens": 154,
+    "tokensPerSecond": 4.17
+  },
+  "externalSends": 0
+}

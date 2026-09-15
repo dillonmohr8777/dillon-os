@@ -1,0 +1,2207 @@
+{
+  "runId": "20260826-052002",
+  "generatedAt": "2026-08-26T09:51:11.012Z",
+  "selected": [
+    {
+      "rank": 1,
+      "domain": "leisshendrix.com",
+      "slug": "leiss-orthodontics",
+      "sourceUrl": "https://leisshendrix.com/location/elverson-orthodontics/",
+      "finalUrl": "https://leisshendrix.com/location/elverson-orthodontics/",
+      "sourceDomain": "leisshendrix.com",
+      "httpStatus": 200,
+      "contentType": "",
+      "pageSha256": "92657d4829609de97c10bcdbb60d35879bcf8d8c6fa0d00d88b81f1991ec2ba8",
+      "title": "Orthodontist in Elverson, PA | Leiss Orthodontics Chester County",
+      "description": "Looking for braces or Invisalign® in Elverson, PA? Visit Dr. Jeffrey Leiss at Darby Square off W Main St. Free consultations available!",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [
+          "leiss",
+          "orthodontics"
+        ],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260826-052002/source-assets/leiss-orthodontics/logo.svg",
+        "fileName": "logo.svg",
+        "sourceUrl": "https://assets.drjeffreyleiss.com/Images/Sites/S/SD-Leiss/MasterPage/1531354.svg",
+        "sourceEvidence": "JSON-LD logo",
+        "type": "svg",
+        "dimensions": {
+          "width": 1500,
+          "height": 281
+        },
+        "sha256": "ecb27bdb8d6c74efdd63d776b7a459a095d7b54798ffb4556482ddf30a5874fa",
+        "sourceSha256": "ecb27bdb8d6c74efdd63d776b7a459a095d7b54798ffb4556482ddf30a5874fa",
+        "sourceType": "svg",
+        "sourceFileName": null,
+        "transformation": "none; exact first-party transparent asset",
+        "borderSpread": null,
+        "alpha": {
+          "ok": true,
+          "vector": true
+        },
+        "transparent": true,
+        "bytes": 5885
+      },
+      "references": [
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260826-052002/source-assets/leiss-orthodontics/reference-1.webp",
+          "fileName": "reference-1.webp",
+          "sourceUrl": "https://assets.drjeffreyleiss.com/Images/Sites/S/SD-Leiss/Facility/1582912.jpg",
+          "sourceEvidence": "og:image",
+          "type": "webp",
+          "dimensions": {
+            "width": 1920,
+            "height": 1440
+          },
+          "sha256": "cc7eae063a07c26768ae73bf2173acef330ab09141c16a671d8dc58e0c333332",
+          "bytes": 446340,
+          "visual": {
+            "ok": true,
+            "lumaRange": 232,
+            "chromaURange": 53,
+            "chromaVRange": 38,
+            "reason": null
+          }
+        }
+      ],
+      "contact": {
+        "phone": "610-363-2900",
+        "address": "201 Darby Square, Elverson, PA 19520",
+        "city": "Elverson",
+        "phoneSource": "official JSON-LD",
+        "addressSource": "official JSON-LD"
+      },
+      "visualReferenceFallback": null,
+      "referenceFailures": [
+        {
+          "url": "https://assets.drjeffreyleiss.com/Images/Sites/GlobalAssets/SmileDoctors/phone-sticky-bar.svg",
+          "reason": "unsupported reference type svg"
+        },
+        {
+          "url": "https://assets.drjeffreyleiss.com/Images/Sites/GlobalAssets/SmileDoctors/calendar-sticky-bar.svg",
+          "reason": "unsupported reference type svg"
+        }
+      ],
+      "brandColors": [],
+      "checkedAt": "2026-08-26T09:34:41.357Z"
+    },
+    {
+      "rank": 2,
+      "domain": "foamcraft.com",
+      "slug": "peachtree-city-foamcraft",
+      "sourceUrl": "https://foamcraft.com/",
+      "finalUrl": "https://foamcraft.com/",
+      "sourceDomain": "foamcraft.com",
+      "httpStatus": 200,
+      "contentType": "",
+      "pageSha256": "97908a87190c4431a82e005e6c02a8cae7ed6fc9603613e7a6113677003115d2",
+      "title": "You are being redirected...",
+      "description": "",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260826-052002/source-assets/peachtree-city-foamcraft/logo.svg",
+        "fileName": "logo.svg",
+        "sourceUrl": "https://foamcraft.com/",
+        "sourceEvidence": "Exact business name from the verified official source; code-rendered transparent typographic fallback.",
+        "type": "svg",
+        "dimensions": {
+          "width": 1200,
+          "height": 320
+        },
+        "sha256": "dc09920f399be39afee33bfe4dd5b39076908ff4949b3ac9a9db9e8ccb2176a2",
+        "sourceSha256": null,
+        "sourceType": "verified business name",
+        "sourceFileName": null,
+        "transformation": "Disclosed exact-name typographic fallback; no icon, symbol, or first-party logo imitation.",
+        "borderSpread": null,
+        "alpha": {
+          "ok": true,
+          "reason": "SVG has no background rectangle."
+        },
+        "transparent": true,
+        "identityFallback": true,
+        "downloadFailures": [],
+        "bytes": 448
+      },
+      "references": [],
+      "contact": {
+        "phone": "",
+        "address": "",
+        "city": "",
+        "phoneSource": null,
+        "addressSource": null
+      },
+      "visualReferenceFallback": "No usable first-party photography was exposed by the legacy source. Use only disclosed Align Image Gen concept imagery.",
+      "referenceFailures": [],
+      "brandColors": [
+        "#f05a28"
+      ],
+      "checkedAt": "2026-08-26T09:34:34.857Z"
+    },
+    {
+      "rank": 3,
+      "domain": "kevintcoyneattorneyatlaw.com",
+      "slug": "kevin-t-coyne-attorney-at-law",
+      "sourceUrl": "https://kevintcoyneattorneyatlaw.com/",
+      "finalUrl": "https://kevintcoyneattorneyatlaw.com/",
+      "sourceDomain": "kevintcoyneattorneyatlaw.com",
+      "httpStatus": 200,
+      "contentType": "text/html",
+      "pageSha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023",
+      "title": "",
+      "description": "",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260826-052002/source-assets/kevin-t-coyne-attorney-at-law/logo.svg",
+        "fileName": "logo.svg",
+        "sourceUrl": "https://kevintcoyneattorneyatlaw.com/",
+        "sourceEvidence": "Exact business name from the verified official source; code-rendered transparent typographic fallback.",
+        "type": "svg",
+        "dimensions": {
+          "width": 1200,
+          "height": 320
+        },
+        "sha256": "6707d4e794bca30a166664bb3a2dbf3e2f0289731c4c0d1a438272dde7208ea0",
+        "sourceSha256": null,
+        "sourceType": "verified business name",
+        "sourceFileName": null,
+        "transformation": "Disclosed exact-name typographic fallback; no icon, symbol, or first-party logo imitation.",
+        "borderSpread": null,
+        "alpha": {
+          "ok": true,
+          "reason": "SVG has no background rectangle."
+        },
+        "transparent": true,
+        "identityFallback": true,
+        "downloadFailures": [],
+        "bytes": 458
+      },
+      "references": [],
+      "contact": {
+        "phone": "",
+        "address": "",
+        "city": "",
+        "phoneSource": null,
+        "addressSource": null
+      },
+      "visualReferenceFallback": "No usable first-party photography was exposed by the legacy source. Use only disclosed Align Image Gen concept imagery.",
+      "referenceFailures": [],
+      "brandColors": [
+        "#f05a28"
+      ],
+      "checkedAt": "2026-08-26T09:34:42.934Z"
+    },
+    {
+      "rank": 4,
+      "domain": "wilkielexus.com",
+      "slug": "wilkie-lexus",
+      "sourceUrl": "https://www.wilkielexus.com/",
+      "finalUrl": "https://www.wilkielexus.com/",
+      "sourceDomain": "wilkielexus.com",
+      "httpStatus": 200,
+      "contentType": "text/html;charset=utf-8",
+      "pageSha256": "60ab8b9429807b33af3ff7f24773271a9bf2c1be3b7dcd44706e1ea03aca1782",
+      "title": "Wilkie Lexus in Haverford, PA | Car Sales & Service Near Me",
+      "description": "Visit Wilkie Lexus the next time you're looking to buy a used luxury car or start a new Lexus lease. We offer auto financing and certified Lexus service.",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [
+          "wilkie",
+          "lexus"
+        ],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260826-052002/source-assets/wilkie-lexus/logo.svg",
+        "fileName": "logo.svg",
+        "sourceUrl": "https://www.wilkielexus.com/",
+        "sourceEvidence": "Exact business name from the verified official source; code-rendered transparent typographic fallback.",
+        "type": "svg",
+        "dimensions": {
+          "width": 1200,
+          "height": 320
+        },
+        "sha256": "765092a5794b19f16ddc59299784b26865f7822b0a61262a49a28faadac67f43",
+        "sourceSha256": null,
+        "sourceType": "verified business name",
+        "sourceFileName": null,
+        "transformation": "Disclosed exact-name typographic fallback; no icon, symbol, or first-party logo imitation.",
+        "borderSpread": null,
+        "alpha": {
+          "ok": true,
+          "reason": "SVG has no background rectangle."
+        },
+        "transparent": true,
+        "identityFallback": true,
+        "downloadFailures": [
+          {
+            "url": "https://pictures.dealer.com/w/wilkielexus/1234/54f77fc54d6e4adb8ebe5f13bf086a13.jpg?impolicy=downsize&h=260",
+            "reason": "could not sample logo border"
+          },
+          {
+            "url": "https://www.wilkielexus.com/static/v8/global/images/franchise-logos/auto/l/lexus/white/117x80.png?r=1787238394000",
+            "reason": "logo source is too small"
+          },
+          {
+            "url": "https://pictures.dealer.com/l/lexusprogram/0991/5e2600a01524afb803de30925275cf48x.jpg",
+            "reason": "logo source is too small"
+          }
+        ],
+        "bytes": 424
+      },
+      "references": [],
+      "contact": {
+        "phone": "",
+        "address": "",
+        "city": "",
+        "phoneSource": null,
+        "addressSource": null
+      },
+      "visualReferenceFallback": "No usable first-party photography was exposed by the legacy source. Use only disclosed Align Image Gen concept imagery.",
+      "referenceFailures": [
+        {
+          "url": "https://pictures.dealer.com/w/wilkielexus/1234/54f77fc54d6e4adb8ebe5f13bf086a13.jpg?impolicy=downsize&h=260",
+          "reason": "reference image has insufficient evidence of usable size"
+        },
+        {
+          "url": "https://www.wilkielexus.com/'+T+'",
+          "reason": "HTTP 404; curl: curl: (22) The requested URL returned error: 403"
+        }
+      ],
+      "brandColors": [
+        "#f05a28",
+        "#33d0f2",
+        "#3d9ebe",
+        "#007faa",
+        "#00678a"
+      ],
+      "checkedAt": "2026-08-26T09:35:00.655Z"
+    },
+    {
+      "rank": 5,
+      "domain": "lancastergeneralhealth.org",
+      "slug": "lg-health-physicians-family-medicine-abbeyville",
+      "sourceUrl": "https://www.lancastergeneralhealth.org/LGH/Locations/LG-Health-Physicians/Family-Medicine/Abbeyville-Family-Medicine.aspx",
+      "finalUrl": "https://www.lancastergeneralhealth.org/LGH/Locations/LG-Health-Physicians/Family-Medicine/Abbeyville-Family-Medicine.aspx",
+      "sourceDomain": "lancastergeneralhealth.org",
+      "httpStatus": 200,
+      "contentType": "text/html",
+      "pageSha256": "ac72e9e89f8805d98cc3e21b01d340e25d0381f2ae142c8a11f66e4e23e8fe5b",
+      "title": "",
+      "description": "",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260826-052002/source-assets/lg-health-physicians-family-medicine-abbeyville/logo.svg",
+        "fileName": "logo.svg",
+        "sourceUrl": "https://www.lancastergeneralhealth.org/LGH/Locations/LG-Health-Physicians/Family-Medicine/Abbeyville-Family-Medicine.aspx",
+        "sourceEvidence": "Exact business name from the verified official source; code-rendered transparent typographic fallback.",
+        "type": "svg",
+        "dimensions": {
+          "width": 1200,
+          "height": 320
+        },
+        "sha256": "631381d20b2739f9948edb07c13438ed971efe4caf6000538fac8cf76e0e2867",
+        "sourceSha256": null,
+        "sourceType": "verified business name",
+        "sourceFileName": null,
+        "transformation": "Disclosed exact-name typographic fallback; no icon, symbol, or first-party logo imitation.",
+        "borderSpread": null,
+        "alpha": {
+          "ok": true,
+          "reason": "SVG has no background rectangle."
+        },
+        "transparent": true,
+        "identityFallback": true,
+        "downloadFailures": [],
+        "bytes": 494
+      },
+      "references": [],
+      "contact": {
+        "phone": "",
+        "address": "",
+        "city": "",
+        "phoneSource": null,
+        "addressSource": null
+      },
+      "visualReferenceFallback": "No usable first-party photography was exposed by the legacy source. Use only disclosed Align Image Gen concept imagery.",
+      "referenceFailures": [],
+      "brandColors": [
+        "#f05a28"
+      ],
+      "checkedAt": "2026-08-26T09:34:42.925Z"
+    },
+    {
+      "rank": 6,
+      "domain": "lghealthexpress.org",
+      "slug": "lancaster-general-health-express",
+      "sourceUrl": "https://www.lghealthexpress.org/",
+      "finalUrl": "https://www.lghealthexpress.org/",
+      "sourceDomain": "lghealthexpress.org",
+      "httpStatus": 200,
+      "contentType": "text/html",
+      "pageSha256": "84b1ca130d85380a891010818e64130756c0b994b28ce08290876206e8907385",
+      "title": "",
+      "description": "",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260826-052002/source-assets/lancaster-general-health-express/logo.svg",
+        "fileName": "logo.svg",
+        "sourceUrl": "https://www.lghealthexpress.org/",
+        "sourceEvidence": "Exact business name from the verified official source; code-rendered transparent typographic fallback.",
+        "type": "svg",
+        "dimensions": {
+          "width": 1200,
+          "height": 320
+        },
+        "sha256": "5fb0f4f79b8062ba7d2f4c99947d111707747296f7a07772ac6ec558aff05cdd",
+        "sourceSha256": null,
+        "sourceType": "verified business name",
+        "sourceFileName": null,
+        "transformation": "Disclosed exact-name typographic fallback; no icon, symbol, or first-party logo imitation.",
+        "borderSpread": null,
+        "alpha": {
+          "ok": true,
+          "reason": "SVG has no background rectangle."
+        },
+        "transparent": true,
+        "identityFallback": true,
+        "downloadFailures": [],
+        "bytes": 464
+      },
+      "references": [],
+      "contact": {
+        "phone": "",
+        "address": "",
+        "city": "",
+        "phoneSource": null,
+        "addressSource": null
+      },
+      "visualReferenceFallback": "No usable first-party photography was exposed by the legacy source. Use only disclosed Align Image Gen concept imagery.",
+      "referenceFailures": [],
+      "brandColors": [
+        "#f05a28"
+      ],
+      "checkedAt": "2026-08-26T09:34:42.930Z"
+    },
+    {
+      "rank": 7,
+      "domain": "mrigroup.com",
+      "slug": "mri-group",
+      "sourceUrl": "https://mrigroup.com/Our-Locations.aspx",
+      "finalUrl": "https://www.mrigroup.com/Our-Locations.aspx",
+      "sourceDomain": "mrigroup.com",
+      "httpStatus": 200,
+      "contentType": "text/html",
+      "pageSha256": "bfe94bb619761c4f1e6e7dd57f16caa7a5346d1107835715c12a82b15cf599ef",
+      "title": "",
+      "description": "",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260826-052002/source-assets/mri-group/logo.svg",
+        "fileName": "logo.svg",
+        "sourceUrl": "https://mrigroup.com/Our-Locations.aspx",
+        "sourceEvidence": "Exact business name from the verified official source; code-rendered transparent typographic fallback.",
+        "type": "svg",
+        "dimensions": {
+          "width": 1200,
+          "height": 320
+        },
+        "sha256": "2510a9f5c7d86932eee229330d08173ecc0691c3e95041f0ca7d9448dcab6988",
+        "sourceSha256": null,
+        "sourceType": "verified business name",
+        "sourceFileName": null,
+        "transformation": "Disclosed exact-name typographic fallback; no icon, symbol, or first-party logo imitation.",
+        "borderSpread": null,
+        "alpha": {
+          "ok": true,
+          "reason": "SVG has no background rectangle."
+        },
+        "transparent": true,
+        "identityFallback": true,
+        "downloadFailures": [],
+        "bytes": 418
+      },
+      "references": [],
+      "contact": {
+        "phone": "",
+        "address": "",
+        "city": "",
+        "phoneSource": null,
+        "addressSource": null
+      },
+      "visualReferenceFallback": "No usable first-party photography was exposed by the legacy source. Use only disclosed Align Image Gen concept imagery.",
+      "referenceFailures": [],
+      "brandColors": [
+        "#f05a28"
+      ],
+      "checkedAt": "2026-08-26T09:34:47.635Z"
+    },
+    {
+      "rank": 8,
+      "domain": "pzarchitects.com",
+      "slug": "peter-zimmerman-architects",
+      "sourceUrl": "https://www.pzarchitects.com/",
+      "finalUrl": "https://pzarchitects.com/",
+      "sourceDomain": "pzarchitects.com",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "pageSha256": "0acdc89ece9961ef8274055bbe025e389a2713e80f88c1e32933cfbbc9c2b799",
+      "title": "Luxury Residential Architecture | Peter Zimmerman Architects",
+      "description": "Nationally recognized luxury residential architecture firm specializing in historic preservation, classical design, and timeless styles.",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [
+          "peter",
+          "zimmerman",
+          "architects"
+        ],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260826-052002/source-assets/peter-zimmerman-architects/logo.svg",
+        "fileName": "logo.svg",
+        "sourceUrl": "https://pzarchitects.com/wp-content/uploads/2021/01/Secondary-2_smaller-green.svg",
+        "sourceEvidence": "IMG normal  logo",
+        "type": "svg",
+        "dimensions": {
+          "width": 277,
+          "height": 45
+        },
+        "sha256": "e3ee5729970db11d2d4383dcdbde132e33aa2957b018fa3606e3259a4690480f",
+        "sourceSha256": "e3ee5729970db11d2d4383dcdbde132e33aa2957b018fa3606e3259a4690480f",
+        "sourceType": "svg",
+        "sourceFileName": null,
+        "transformation": "none; exact first-party transparent asset",
+        "borderSpread": null,
+        "alpha": {
+          "ok": true,
+          "vector": true
+        },
+        "transparent": true,
+        "bytes": 11578
+      },
+      "references": [
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260826-052002/source-assets/peter-zimmerman-architects/reference-1.webp",
+          "fileName": "reference-1.webp",
+          "sourceUrl": "https://pzarchitects.com/wp-content/uploads/2024/12/2_cropped.webp",
+          "sourceEvidence": "og:image",
+          "type": "webp",
+          "dimensions": {
+            "width": 1920,
+            "height": 1080
+          },
+          "sha256": "416a1782422f1d4742da9dbbdf9a20185a1f165d7d4e4f5b4eea1ae4eb70c30c",
+          "bytes": 347498,
+          "visual": {
+            "ok": true,
+            "lumaRange": 246,
+            "chromaURange": 134,
+            "chromaVRange": 93,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260826-052002/source-assets/peter-zimmerman-architects/reference-2.jpg",
+          "fileName": "reference-2.jpg",
+          "sourceUrl": "https://pzarchitects.com/wp-content/uploads/2025/10/stonework1-scaled.jpg",
+          "sourceEvidence": "IMG rev-slidebg   stonework1",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 1920,
+            "width": 2560
+          },
+          "sha256": "d82fc22be5daeefcf554225446760661d08db8bf921c05d67376b29f7a89a716",
+          "bytes": 1139673,
+          "visual": {
+            "ok": true,
+            "lumaRange": 255,
+            "chromaURange": 141,
+            "chromaVRange": 118,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260826-052002/source-assets/peter-zimmerman-architects/reference-3.jpg",
+          "fileName": "reference-3.jpg",
+          "sourceUrl": "https://pzarchitects.com/wp-content/uploads/2025/10/cullman_oceandrive_2-scaled.jpeg",
+          "sourceEvidence": "IMG rev-slidebg   cullman_oceandrive_2",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 1707,
+            "width": 2560
+          },
+          "sha256": "9a328b7013d6314bebfefc009b947ddea720820b22330e989628a4d892e2f7cd",
+          "bytes": 640791,
+          "visual": {
+            "ok": true,
+            "lumaRange": 255,
+            "chromaURange": 164,
+            "chromaVRange": 107,
+            "reason": null
+          }
+        }
+      ],
+      "contact": {
+        "phone": "(610) 647-6970",
+        "address": "",
+        "city": "",
+        "phoneSource": "official tel link",
+        "addressSource": null
+      },
+      "visualReferenceFallback": null,
+      "referenceFailures": [
+        {
+          "url": "https://pzarchitects.com/1920",
+          "reason": "HTTP 404"
+        },
+        {
+          "url": "https://pzarchitects.com/1080",
+          "reason": "HTTP 404"
+        },
+        {
+          "url": "https://pzarchitects.com/image/webp",
+          "reason": "HTTP 404"
+        }
+      ],
+      "brandColors": [
+        "#003388",
+        "#003399",
+        "#00d084",
+        "#0693e3",
+        "#116600"
+      ],
+      "checkedAt": "2026-08-26T09:30:23.320Z"
+    },
+    {
+      "rank": 9,
+      "domain": "neidererspoolsales.com",
+      "slug": "neiderer-s-pool-sales-and-service",
+      "sourceUrl": "https://www.neidererspoolsales.com/",
+      "finalUrl": "https://www.neidererspoolsales.com/",
+      "sourceDomain": "neidererspoolsales.com",
+      "httpStatus": 200,
+      "contentType": "text/html",
+      "pageSha256": "8c5891b00297210262b2319a926e85dda5c4153131cf6b566a4c1e4016f139bf",
+      "title": "Neiderer's Pool Sales & Service, Inc.",
+      "description": "",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [
+          "neiderer",
+          "pool",
+          "sales"
+        ],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260826-052002/source-assets/neiderer-s-pool-sales-and-service/logo.svg",
+        "fileName": "logo.svg",
+        "sourceUrl": "https://www.neidererspoolsales.com/",
+        "sourceEvidence": "Exact business name from the verified official source; code-rendered transparent typographic fallback.",
+        "type": "svg",
+        "dimensions": {
+          "width": 1200,
+          "height": 320
+        },
+        "sha256": "62a1d11092dc3c79ca7f5b8d5b2f71bc8ec893971196d5fa8661f4f4d2577f31",
+        "sourceSha256": null,
+        "sourceType": "verified business name",
+        "sourceFileName": null,
+        "transformation": "Disclosed exact-name typographic fallback; no icon, symbol, or first-party logo imitation.",
+        "borderSpread": null,
+        "alpha": {
+          "ok": true,
+          "reason": "SVG has no background rectangle."
+        },
+        "transparent": true,
+        "identityFallback": true,
+        "downloadFailures": [],
+        "bytes": 480
+      },
+      "references": [
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260826-052002/source-assets/neiderer-s-pool-sales-and-service/reference-1.png",
+          "fileName": "reference-1.png",
+          "sourceUrl": "https://www.neidererspoolsales.com/images/topphoto.png",
+          "sourceEvidence": "IMG ",
+          "type": "png",
+          "dimensions": {
+            "width": 980,
+            "height": 305
+          },
+          "sha256": "7525b3c2cb9d98c02f86452950876b22834061071d4e46eb7ed979b9a4340d5a",
+          "bytes": 525454,
+          "visual": {
+            "ok": true,
+            "lumaRange": 219,
+            "chromaURange": 132,
+            "chromaVRange": 216,
+            "reason": null
+          }
+        }
+      ],
+      "contact": {
+        "phone": "",
+        "address": "",
+        "city": "",
+        "phoneSource": null,
+        "addressSource": null
+      },
+      "visualReferenceFallback": null,
+      "referenceFailures": [
+        {
+          "url": "https://www.neidererspoolsales.com/images/header.png",
+          "reason": "reference image is too small"
+        },
+        {
+          "url": "https://www.neidererspoolsales.com/images/home.png",
+          "reason": "reference image is too small"
+        },
+        {
+          "url": "https://www.neidererspoolsales.com/images/pools.png",
+          "reason": "reference image is too small"
+        },
+        {
+          "url": "https://www.neidererspoolsales.com/images/products.png",
+          "reason": "reference image is too small"
+        }
+      ],
+      "brandColors": [
+        "#154092",
+        "#f05a28",
+        "#18b6ff",
+        "#ff0000"
+      ],
+      "checkedAt": "2026-08-26T09:30:18.241Z"
+    },
+    {
+      "rank": 10,
+      "domain": "streetstoreshardware.com",
+      "slug": "street-stores-hardware-store",
+      "sourceUrl": "https://www.streetstoreshardware.com/",
+      "finalUrl": "https://www.streetstoreshardware.com/",
+      "sourceDomain": "streetstoreshardware.com",
+      "httpStatus": 200,
+      "contentType": "text/html; Charset=UTF-8",
+      "pageSha256": "4dddddc91cb445ae3a540c1bbe0deaacaa8311597b17f87f0d63abb8f8006aa2",
+      "title": "",
+      "description": "",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [
+          "street",
+          "stores",
+          "hardware",
+          "store"
+        ],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260826-052002/source-assets/street-stores-hardware-store/logo.svg",
+        "fileName": "logo.svg",
+        "sourceUrl": "https://www.streetstoreshardware.com/",
+        "sourceEvidence": "Exact business name from the verified official source; code-rendered transparent typographic fallback.",
+        "type": "svg",
+        "dimensions": {
+          "width": 1200,
+          "height": 320
+        },
+        "sha256": "1b597fb79aa521c5a88c6ff3ecf8505dce7a14ffc58ab87134a23dcf8fb36c4b",
+        "sourceSha256": null,
+        "sourceType": "verified business name",
+        "sourceFileName": null,
+        "transformation": "Disclosed exact-name typographic fallback; no icon, symbol, or first-party logo imitation.",
+        "borderSpread": null,
+        "alpha": {
+          "ok": true,
+          "reason": "SVG has no background rectangle."
+        },
+        "transparent": true,
+        "identityFallback": true,
+        "downloadFailures": [
+          {
+            "url": "https://www.streetstoreshardware.com/v/vspfiles/assets/images/newCC_logos.png",
+            "reason": "logo source is too small"
+          }
+        ],
+        "bytes": 456
+      },
+      "references": [
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260826-052002/source-assets/street-stores-hardware-store/reference-1.jpg",
+          "fileName": "reference-1.jpg",
+          "sourceUrl": "https://www.streetstoreshardware.com/v/vspfiles/photos/homepage/1773421810864.jpg",
+          "sourceEvidence": "IMG owl-lazy",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 3456,
+            "width": 6912
+          },
+          "sha256": "b0cfd11e34c9d0574ee135c4a4b030eb00492b7053f7caf22633fe3539ea2467",
+          "bytes": 1331955,
+          "visual": {
+            "ok": true,
+            "lumaRange": 255,
+            "chromaURange": 148,
+            "chromaVRange": 142,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260826-052002/source-assets/street-stores-hardware-store/reference-2.jpg",
+          "fileName": "reference-2.jpg",
+          "sourceUrl": "https://www.streetstoreshardware.com/v/vspfiles/photos/homepage/1733258443526.jpg",
+          "sourceEvidence": "IMG owl-lazy",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 403,
+            "width": 871
+          },
+          "sha256": "0605b72c11fd3d62998e4f1c0c77922e52cec7a9d37d464cc34d1713df436725",
+          "bytes": 89656,
+          "visual": {
+            "ok": true,
+            "lumaRange": 251,
+            "chromaURange": 46,
+            "chromaVRange": 69,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260826-052002/source-assets/street-stores-hardware-store/reference-3.jpg",
+          "fileName": "reference-3.jpg",
+          "sourceUrl": "https://www.streetstoreshardware.com/v/vspfiles/photos/homepage/1732043943812.jpg",
+          "sourceEvidence": "IMG owl-lazy",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 1369,
+            "width": 2963
+          },
+          "sha256": "61664e70bbe148a6b7d260fae8e120d1f1bc9a275588077ddf2f35b484df36f3",
+          "bytes": 1092626,
+          "visual": {
+            "ok": true,
+            "lumaRange": 255,
+            "chromaURange": 80,
+            "chromaVRange": 101,
+            "reason": null
+          }
+        }
+      ],
+      "contact": {
+        "phone": "",
+        "address": "",
+        "city": "",
+        "phoneSource": null,
+        "addressSource": null
+      },
+      "visualReferenceFallback": null,
+      "referenceFailures": [
+        {
+          "url": "https://www.streetstoreshardware.com/a/i/seal_volusion2.png",
+          "reason": "reference image is too small"
+        },
+        {
+          "url": "https://www.streetstoreshardware.com/v/vspfiles/templates/215/images/clear1x1.gif",
+          "reason": "unsupported reference type gif"
+        }
+      ],
+      "brandColors": [
+        "#f05a28"
+      ],
+      "checkedAt": "2026-08-26T09:30:17.327Z"
+    },
+    {
+      "rank": 11,
+      "domain": "aqua-docs.com",
+      "slug": "aqua-docs",
+      "sourceUrl": "https://aqua-docs.com/ephrata/",
+      "finalUrl": "https://aqua-docs.com/ephrata/",
+      "sourceDomain": "aqua-docs.com",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "pageSha256": "e95a02de9d5d4cd922ea35f546c7877b0adb279a58f65fb0ecffa829c8ed17ff",
+      "title": "Ephrata – AQUA-DOCS",
+      "description": "",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [
+          "aqua",
+          "docs"
+        ],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260826-052002/source-assets/aqua-docs/logo.png",
+        "fileName": "logo.png",
+        "sourceUrl": "https://aqua-docs.com/wp-content/uploads/2024/12/cropped-drop-pointing-out-213x300-1-180x180.png",
+        "sourceEvidence": "LINK apple-touch-icon size unstated",
+        "type": "png",
+        "dimensions": {
+          "width": 180,
+          "height": 180
+        },
+        "sha256": "ca144c638d1ac771a60157e989bef99c6f5f85f7a93ba78829430b5ab8c1394d",
+        "sourceSha256": "ca144c638d1ac771a60157e989bef99c6f5f85f7a93ba78829430b5ab8c1394d",
+        "sourceType": "png",
+        "sourceFileName": null,
+        "transformation": "none; exact first-party transparent asset",
+        "borderSpread": null,
+        "alpha": {
+          "ok": true,
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "alphaAverage": 122.42,
+          "reason": null
+        },
+        "transparent": true,
+        "bytes": 31873
+      },
+      "references": [],
+      "contact": {
+        "phone": "717-733-7667",
+        "address": "",
+        "city": "",
+        "phoneSource": "official tel link",
+        "addressSource": null
+      },
+      "visualReferenceFallback": "No usable first-party photography was exposed by the legacy source. Use only disclosed Align Image Gen concept imagery.",
+      "referenceFailures": [
+        {
+          "url": "https://aqua-docs.com/wp-content/uploads/2024/12/Screenshot_2024-12-04_032303-removebg-preview-300x55.png",
+          "reason": "reference image is too small"
+        }
+      ],
+      "brandColors": [
+        "#6c6c89",
+        "#0000ff",
+        "#e8d833",
+        "#abb8c3",
+        "#f78da7"
+      ],
+      "checkedAt": "2026-08-26T09:34:50.355Z"
+    },
+    {
+      "rank": 12,
+      "domain": "balafinancial.com",
+      "slug": "bala-financial-group",
+      "sourceUrl": "https://www.balafinancial.com/",
+      "finalUrl": "https://www.balafinancial.com/",
+      "sourceDomain": "balafinancial.com",
+      "httpStatus": 200,
+      "contentType": "",
+      "pageSha256": "a030c26a0b643c66bbbfb8acea138fe032e8913812279b021216e068276a7fa1",
+      "title": "Home | Bala Financial Group",
+      "description": "",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [
+          "bala",
+          "financial"
+        ],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260826-052002/source-assets/bala-financial-group/logo.png",
+        "fileName": "logo.png",
+        "sourceUrl": "https://static.fmgsuite.com/media/images/0035848e-158a-4e45-9779-3440cb4c9003.png",
+        "sourceEvidence": "JSON-LD logo",
+        "type": "png",
+        "dimensions": {
+          "width": 300,
+          "height": 47
+        },
+        "sha256": "a2d0cb09c65913f80235c4ed1c294e87ec31e27ec85a819fe033532876e1a1a3",
+        "sourceSha256": "a2d0cb09c65913f80235c4ed1c294e87ec31e27ec85a819fe033532876e1a1a3",
+        "sourceType": "png",
+        "sourceFileName": null,
+        "transformation": "none; exact first-party transparent asset",
+        "borderSpread": null,
+        "alpha": {
+          "ok": true,
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "alphaAverage": 37.8218,
+          "reason": null
+        },
+        "transparent": true,
+        "bytes": 11717
+      },
+      "references": [],
+      "contact": {
+        "phone": "(610) 940-1000",
+        "address": "",
+        "city": "valuedclient@balafinancial.com",
+        "phoneSource": "official JSON-LD",
+        "addressSource": null
+      },
+      "visualReferenceFallback": "No usable first-party photography was exposed by the legacy source. Use only disclosed Align Image Gen concept imagery.",
+      "referenceFailures": [
+        {
+          "url": "https://static.fmgsuite.com/media/images/111ddbfd-95b9-4eb3-a770-30211311e9ac.jpg?v=1",
+          "reason": "reference image is too small"
+        },
+        {
+          "url": "https://static.fmgsuite.com/media/images/20fa1d6b-00ab-431a-998a-22a5de4f26a0.jpg?v=1",
+          "reason": "reference image is too small"
+        },
+        {
+          "url": "https://static.fmgsuite.com/media/images/e4632d27-2cc4-49d5-847d-3d68ce54239f.jpg?v=1",
+          "reason": "reference image is too small"
+        },
+        {
+          "url": "https://static.fmgsuite.com/media/images/222b386e-0ea3-4371-b460-8cfb73d72780.png?v=1",
+          "reason": "reference is flat or lacks enough tonal variation to serve as visual evidence"
+        }
+      ],
+      "brandColors": [
+        "#002c60",
+        "#116600",
+        "#cfcbb6",
+        "#4d80b0"
+      ],
+      "checkedAt": "2026-08-26T09:34:48.501Z"
+    },
+    {
+      "rank": 13,
+      "domain": "brightmlshomes.com",
+      "slug": "bob-swayne-real-estate",
+      "sourceUrl": "https://www.brightmlshomes.com/robert-swayne-jr",
+      "finalUrl": "https://www.brightmlshomes.com/robert-swayne-jr",
+      "sourceDomain": "brightmlshomes.com",
+      "httpStatus": 200,
+      "contentType": "",
+      "pageSha256": "85a023ba1002f97c622829d4bc4f322efc078b2b6dbaac3dfa1d2ef3a31aeb21",
+      "title": "Welcome | Robert Swayne Jr | Homes for Sale and Rent",
+      "description": "Find homes for sale, find an agent, view virtual tours, receive homes by e-mail, learn about buying and selling a home and more!",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [
+          "bob",
+          "swayne",
+          "real",
+          "estate"
+        ],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260826-052002/source-assets/bob-swayne-real-estate/logo.png",
+        "fileName": "logo.png",
+        "sourceUrl": "https://www.brightmlshomes.com/images/common/css/CMSDesigns/v1/images/logo-eho.png",
+        "sourceEvidence": "IMG ",
+        "type": "png",
+        "dimensions": {
+          "width": 217,
+          "height": 265
+        },
+        "sha256": "c2c7a7667015fa7ec21810038092bb8d28a332bfb9ea470dad3f58fc412b18a9",
+        "sourceSha256": "2855ed9a88201453d80816930ca17c84346327f0010273f75a8e3a8773def2f2",
+        "sourceType": "png",
+        "sourceFileName": "logo-source.png",
+        "transformation": "flat border color #000000 removed with deterministic FFmpeg colorkey; geometry unchanged",
+        "borderSpread": 0,
+        "alpha": {
+          "ok": true,
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "alphaAverage": 111.015,
+          "reason": null
+        },
+        "transparent": true,
+        "bytes": 4464
+      },
+      "references": [
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260826-052002/source-assets/bob-swayne-real-estate/reference-1.webp",
+          "fileName": "reference-1.webp",
+          "sourceUrl": "https://photos.prod.cirrussystem.net/1774/ce4acef2d01a9ab7e527f6a05b6334c8/1491501023.jpeg?format=webp",
+          "sourceEvidence": "IMG img-responsive",
+          "type": "webp",
+          "dimensions": {
+            "width": 2048,
+            "height": 1529
+          },
+          "sha256": "c9ed8dda65a83bcb46c95993d3fa29824bff53a6eb41acabe82629aef23dedf1",
+          "bytes": 393136,
+          "visual": {
+            "ok": true,
+            "lumaRange": 248,
+            "chromaURange": 99,
+            "chromaVRange": 117,
+            "reason": null
+          }
+        }
+      ],
+      "contact": {
+        "phone": "717-587-2218",
+        "address": "",
+        "city": "",
+        "phoneSource": "official tel link",
+        "addressSource": null
+      },
+      "visualReferenceFallback": null,
+      "referenceFailures": [
+        {
+          "url": "https://brightmlsimages.fnistools.com/images/uploads/agents/21824249/21824249.png",
+          "reason": "HTTP 403; curl: curl: (22) The requested URL returned error: 403"
+        },
+        {
+          "url": "https://brightmlsimages.fnistools.com/images/uploads/agents/21824249/21824249.png?ts=639233156834829164",
+          "reason": "reference image is too small"
+        }
+      ],
+      "brandColors": [
+        "#112244",
+        "#187764",
+        "#168072",
+        "#0000ee",
+        "#118313"
+      ],
+      "checkedAt": "2026-08-26T09:34:50.806Z"
+    },
+    {
+      "rank": 14,
+      "domain": "eckrothequipment.com",
+      "slug": "eckroth-equipment-company",
+      "sourceUrl": "https://www.eckrothequipment.com/",
+      "finalUrl": "https://www.eckrothequipment.com/",
+      "sourceDomain": "eckrothequipment.com",
+      "httpStatus": 200,
+      "contentType": "",
+      "pageSha256": "8419925879466de68ec8c0752c563399e5569e1d9f13e0d58eff6386f5c24973",
+      "title": "Home Orefield, PA Orefield, PA (800) 237-4592",
+      "description": "Home Orefield, PA Orefield, PA (800) 237-4592",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [
+          "eckroth",
+          "equipment"
+        ],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260826-052002/source-assets/eckroth-equipment-company/logo.png",
+        "fileName": "logo.png",
+        "sourceUrl": "https://published-assets.ari-build.com/Content/Published/Site/21250/images/logo.png",
+        "sourceEvidence": "IMG img-responsive center-block  orefield, pa",
+        "type": "png",
+        "dimensions": {
+          "width": 422,
+          "height": 90
+        },
+        "sha256": "cab30d10af63808aef249cf1313e6a8ba641f639bed8037bb79b369deb00bf87",
+        "sourceSha256": "cab30d10af63808aef249cf1313e6a8ba641f639bed8037bb79b369deb00bf87",
+        "sourceType": "png",
+        "sourceFileName": null,
+        "transformation": "none; exact first-party transparent asset",
+        "borderSpread": null,
+        "alpha": {
+          "ok": true,
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "alphaAverage": 133.818,
+          "reason": null
+        },
+        "transparent": true,
+        "bytes": 12675
+      },
+      "references": [
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260826-052002/source-assets/eckroth-equipment-company/reference-1.jpg",
+          "fileName": "reference-1.jpg",
+          "sourceUrl": "https://cdnmedia.endeavorsuite.com/images/corporate/webdesign/merchslides/Service/076b2be7-e295-494b-b23c-3c03aa95f52d.jpg",
+          "sourceEvidence": "IMG schedule spring service today schedule spring service today",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 620,
+            "width": 1920
+          },
+          "sha256": "6201b78041824d997e6633ecedeae465d5306c629481bf077c5dba6cadca6ca5",
+          "bytes": 78501,
+          "visual": {
+            "ok": true,
+            "lumaRange": 255,
+            "chromaURange": 109,
+            "chromaVRange": 85,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260826-052002/source-assets/eckroth-equipment-company/reference-2.jpg",
+          "fileName": "reference-2.jpg",
+          "sourceUrl": "https://cdnmedia.endeavorsuite.com/images/corporate/webdesign/merchslides/CubCadet/CubCadetUltimaSeries.jpg",
+          "sourceEvidence": "IMG cub cadet ultima series cub cadet ultima series",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 620,
+            "width": 1920
+          },
+          "sha256": "8d3591cff49234b714f32f83b1f15dfd2aa31642ada1278c703cdee1aa0e0c66",
+          "bytes": 115022,
+          "visual": {
+            "ok": true,
+            "lumaRange": 255,
+            "chromaURange": 151,
+            "chromaVRange": 112,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260826-052002/source-assets/eckroth-equipment-company/reference-3.jpg",
+          "fileName": "reference-3.jpg",
+          "sourceUrl": "https://cdnmedia.endeavorsuite.com/images/corporate/webdesign/merchslides/Facebook/facebookmerchandising.jpg",
+          "sourceEvidence": "IMG follow us on facebook follow us on facebook",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 620,
+            "width": 1920
+          },
+          "sha256": "55ffca7c87387917ca2cb38403590d3ddbeb63098b5f40721a0b909c366e3fb8",
+          "bytes": 202405,
+          "visual": {
+            "ok": true,
+            "lumaRange": 255,
+            "chromaURange": 105,
+            "chromaVRange": 154,
+            "reason": null
+          }
+        }
+      ],
+      "contact": {
+        "phone": "(800) 237-4592",
+        "address": "",
+        "city": "",
+        "phoneSource": "official tel link",
+        "addressSource": null
+      },
+      "visualReferenceFallback": null,
+      "referenceFailures": [
+        {
+          "url": "https://i.simpli.fi/dpx?cid=121643&action=100&segment=Retargeting_(1%2F1%2F2018-12%2F31%2F2018)&sifi_tuid=67092",
+          "reason": "unsupported reference type unknown"
+        }
+      ],
+      "brandColors": [],
+      "checkedAt": "2026-08-26T09:34:50.909Z"
+    },
+    {
+      "rank": 15,
+      "domain": "kitaylegal.com",
+      "slug": "kitay-law-offices",
+      "sourceUrl": "https://kitaylegal.com/",
+      "finalUrl": "https://kitaylegal.com/",
+      "sourceDomain": "kitaylegal.com",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "pageSha256": "63fe7cde8d5c42e487fb3ea3c6f3d6cf218f3f27188c220254908eed609606ac",
+      "title": "Kitay Law Offices - Personal Injury & Workers' Compensation Lawyer in PA",
+      "description": "Kitay Law Offices in Wyomissing, Allentown, Chambersburg, Kennett Square, Hazelton, and Philadelphia. Call for a free consultation!",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [
+          "kitay",
+          "law",
+          "offices"
+        ],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260826-052002/source-assets/kitay-law-offices/logo.png",
+        "fileName": "logo.png",
+        "sourceUrl": "https://kitaylegal.com/wp-content/uploads/2020/10/Kitay-Law-Offices-Media-Logos-Desktop-Transparent-Darker.png",
+        "sourceEvidence": "IMG kitay law offices featured media logos",
+        "type": "png",
+        "dimensions": {
+          "width": 769,
+          "height": 454
+        },
+        "sha256": "6eb18b39afbed18896ebb0ac12f8d7aafaa8a8ed312cc069df098f3445ffa44a",
+        "sourceSha256": "e8459ed57455fd968dd8de8b65b097128a51a44421d9b485da1a7ddacb96f8bd",
+        "sourceType": "png",
+        "sourceFileName": "logo-source.png",
+        "transformation": "flat border color #47704c removed with deterministic FFmpeg colorkey; geometry unchanged",
+        "borderSpread": 0,
+        "alpha": {
+          "ok": true,
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "alphaAverage": 38.3039,
+          "reason": null
+        },
+        "transparent": true,
+        "bytes": 95053
+      },
+      "references": [
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260826-052002/source-assets/kitay-law-offices/reference-1.jpg",
+          "fileName": "reference-1.jpg",
+          "sourceUrl": "https://kitaylegal.com/wp-content/uploads/2025/10/Kitay-Law-Offices-Law-Firm-Group-Photo-2025.jpg",
+          "sourceEvidence": "og:image",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 1125,
+            "width": 2000
+          },
+          "sha256": "cae3834ee88a2f5a1d1cee1e3eaca406312192f58b2b21e4af949e07793bf2d9",
+          "bytes": 221487,
+          "visual": {
+            "ok": true,
+            "lumaRange": 255,
+            "chromaURange": 98,
+            "chromaVRange": 87,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260826-052002/source-assets/kitay-law-offices/reference-2.jpg",
+          "fileName": "reference-2.jpg",
+          "sourceUrl": "https://kitaylegal.com/wp-content/uploads/2017/06/Ken-Banner-V6-TEST-1.jpg",
+          "sourceEvidence": "CSS image URL",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 842,
+            "width": 1799
+          },
+          "sha256": "15b268bce87e61e971f5ecdb89deb344eb45a588441f5dd1230062fd1da329da",
+          "bytes": 27464,
+          "visual": {
+            "ok": true,
+            "lumaRange": 239,
+            "chromaURange": 79,
+            "chromaVRange": 97,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260826-052002/source-assets/kitay-law-offices/reference-3.webp",
+          "fileName": "reference-3.webp",
+          "sourceUrl": "https://kitaylegal.com/wp-content/uploads/2020/01/Car-Accident-Lawyers-in-Pennsylvania-Kitay-Law-Offices-700x400.jpg.webp",
+          "sourceEvidence": "IMG personal injury lawyers in pennsylvania",
+          "type": "webp",
+          "dimensions": {
+            "width": 700,
+            "height": 400
+          },
+          "sha256": "675e6b5fff8f7073e726fe1299527e9f35063b9b0ead12798d7701a7be70ba37",
+          "bytes": 22980,
+          "visual": {
+            "ok": true,
+            "lumaRange": 240,
+            "chromaURange": 48,
+            "chromaVRange": 75,
+            "reason": null
+          }
+        }
+      ],
+      "contact": {
+        "phone": "+18885482952",
+        "address": "",
+        "city": "",
+        "phoneSource": "official tel link",
+        "addressSource": null
+      },
+      "visualReferenceFallback": null,
+      "referenceFailures": [
+        {
+          "url": "https://kitaylegal.com/2000",
+          "reason": "HTTP 403; curl: curl: (22) The requested URL returned error: 404"
+        },
+        {
+          "url": "https://kitaylegal.com/1125",
+          "reason": "HTTP 403; curl: curl: (22) The requested URL returned error: 404"
+        },
+        {
+          "url": "https://kitaylegal.com/image/jpeg",
+          "reason": "HTTP 403; curl: curl: (22) The requested URL returned error: 404"
+        }
+      ],
+      "brandColors": [
+        "#722032",
+        "#003399",
+        "#abb8c3",
+        "#f78da7",
+        "#cf2e2e"
+      ],
+      "checkedAt": "2026-08-26T09:35:06.504Z"
+    },
+    {
+      "rank": 16,
+      "domain": "mmacentral.com",
+      "slug": "money-management-advisory-inc",
+      "sourceUrl": "https://www.mmacentral.com/",
+      "finalUrl": "https://www.mmacentral.com/",
+      "sourceDomain": "mmacentral.com",
+      "httpStatus": 200,
+      "contentType": "",
+      "pageSha256": "1dd534f9907a3196541892fdee0420c8ea1c00baeae49c645cae9409da8565e1",
+      "title": "Money Management Advisory in Feasterville, PA",
+      "description": "We help people with retirement.",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [
+          "money",
+          "management",
+          "advisory"
+        ],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260826-052002/source-assets/money-management-advisory-inc/logo.png",
+        "fileName": "logo.png",
+        "sourceUrl": "https://static.fmgsuite.com/media/TransparentLogo/variantSize/9660fd59-f815-44a4-a69d-0e670468f5bd.png",
+        "sourceEvidence": "JSON-LD logo",
+        "type": "png",
+        "dimensions": {
+          "width": 232,
+          "height": 150
+        },
+        "sha256": "96cb925dc7fde42167555fe16bf01717cc325660ba5e14ef4d2db54df2b539c0",
+        "sourceSha256": "94acec85ba8efe20aa472bba9e51877276dc793eec6b5ece3d042c3c919d5e2c",
+        "sourceType": "png",
+        "sourceFileName": "logo-source.png",
+        "transformation": "flat border color #fcfbfc removed with deterministic FFmpeg colorkey; geometry unchanged",
+        "borderSpread": 1.41,
+        "alpha": {
+          "ok": true,
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "alphaAverage": 82.8272,
+          "reason": null
+        },
+        "transparent": true,
+        "bytes": 50899
+      },
+      "references": [
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260826-052002/source-assets/money-management-advisory-inc/reference-1.jpg",
+          "fileName": "reference-1.jpg",
+          "sourceUrl": "https://static.fmgsuite.com/media/images/f0876416-075d-4e61-9e26-b6ecefb4127b.jpg",
+          "sourceEvidence": "IMG img-responsive  we've been helping people with their money since 1982.",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 350,
+            "width": 525
+          },
+          "sha256": "da44a22f26443fe0e24678909bdd1d0bc4e1e25628f16eb712f4ee1d148f1c1f",
+          "bytes": 98783,
+          "visual": {
+            "ok": true,
+            "lumaRange": 255,
+            "chromaURange": 0,
+            "chromaVRange": 0,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260826-052002/source-assets/money-management-advisory-inc/reference-2.jpg",
+          "fileName": "reference-2.jpg",
+          "sourceUrl": "https://static.fmgsuite.com/media/images/cb00f80a-a9bc-4e88-9d7a-aa53ae871fe0.jpg",
+          "sourceEvidence": "IMG img-responsive visibleimage  our process",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 381,
+            "width": 500
+          },
+          "sha256": "e619c231adef745a69d5ba9cecba680d4ebc3caab268b6e0fc684d2ff28796a9",
+          "bytes": 44836,
+          "visual": {
+            "ok": true,
+            "lumaRange": 255,
+            "chromaURange": 66,
+            "chromaVRange": 76,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260826-052002/source-assets/money-management-advisory-inc/reference-3.jpg",
+          "fileName": "reference-3.jpg",
+          "sourceUrl": "https://static.fmgsuite.com/media/images/abf5b595-3850-4790-bdf4-724fdce4b153.jpg",
+          "sourceEvidence": "IMG img-responsive visibleimage  our history",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 381,
+            "width": 500
+          },
+          "sha256": "426d10588adf8559ce9f8d3d1c7e09b0d4346fe3ee8b8a851b0bd2728a8772c4",
+          "bytes": 50827,
+          "visual": {
+            "ok": true,
+            "lumaRange": 254,
+            "chromaURange": 88,
+            "chromaVRange": 108,
+            "reason": null
+          }
+        }
+      ],
+      "contact": {
+        "phone": "215-322-7670",
+        "address": "102 West Street Road, Feasterville, PA 19053",
+        "city": "Feasterville",
+        "phoneSource": "official JSON-LD",
+        "addressSource": "official JSON-LD"
+      },
+      "visualReferenceFallback": null,
+      "referenceFailures": [],
+      "brandColors": [
+        "#116600",
+        "#004a98"
+      ],
+      "checkedAt": "2026-08-26T09:34:59.784Z"
+    },
+    {
+      "rank": 17,
+      "domain": "shop.hajocayork.com",
+      "slug": "bath-and-kitchen-showroom-of-hajoca-york",
+      "sourceUrl": "https://shop.hajocayork.com/",
+      "finalUrl": "https://shop.hajocayork.com/",
+      "sourceDomain": "shop.hajocayork.com",
+      "httpStatus": 200,
+      "contentType": "",
+      "pageSha256": "01c5272c21a6f5d1501914192b02af7c16e375c2021109b891c75b56a97de395",
+      "title": "HAJOCA YORK | ONLINE SERVICES",
+      "description": "HAJOCA YORK | ONLINE SERVICES",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [
+          "bath",
+          "kitchen",
+          "hajoca",
+          "york"
+        ],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260826-052002/source-assets/bath-and-kitchen-showroom-of-hajoca-york/logo.png",
+        "fileName": "logo.png",
+        "sourceUrl": "https://supplyweb.hajoca.com/WOE2-CORE/images/logos/Hajoca-Since1858-01-small.jpg",
+        "sourceEvidence": "IMG logoimage logoimage",
+        "type": "png",
+        "dimensions": {
+          "width": 213,
+          "height": 100
+        },
+        "sha256": "79c88894c601e67d5c98087352028e9cdd87ddd9a15aa89278dfc0641b8d95c7",
+        "sourceSha256": "f94ece150fda29e778ebac1bb95fa6844758f10d56f757adcf8d1786ffbe1fa1",
+        "sourceType": "jpeg",
+        "sourceFileName": "logo-source.jpg",
+        "transformation": "flat border color #fefefe removed with deterministic FFmpeg colorkey; geometry unchanged",
+        "borderSpread": 0,
+        "alpha": {
+          "ok": true,
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "alphaAverage": 65.0147,
+          "reason": null
+        },
+        "transparent": true,
+        "bytes": 21114
+      },
+      "references": [
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260826-052002/source-assets/bath-and-kitchen-showroom-of-hajoca-york/reference-1.jpg",
+          "fileName": "reference-1.jpg",
+          "sourceUrl": "https://shop.hajocayork.com/WOE2-CORE/images/hajoca1.jpg",
+          "sourceEvidence": "IMG hajoca york | online services",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 298,
+            "width": 1700
+          },
+          "sha256": "23261dbd34a7c7671f2c636086b42321ddce319e449fd60983517c19cbc1cac2",
+          "bytes": 160134,
+          "visual": {
+            "ok": true,
+            "lumaRange": 255,
+            "chromaURange": 140,
+            "chromaVRange": 152,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260826-052002/source-assets/bath-and-kitchen-showroom-of-hajoca-york/reference-2.jpg",
+          "fileName": "reference-2.jpg",
+          "sourceUrl": "https://supplyweb.hajoca.com/WOE2-CORE/images/frontpage/kohler-bathroom.jpg",
+          "sourceEvidence": "IMG ",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 297,
+            "width": 484
+          },
+          "sha256": "f5adc20cfef75ddf04c6e666e2056115b381d99970c7926b1be62061b52419b8",
+          "bytes": 17278,
+          "visual": {
+            "ok": true,
+            "lumaRange": 255,
+            "chromaURange": 11,
+            "chromaVRange": 6,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260826-052002/source-assets/bath-and-kitchen-showroom-of-hajoca-york/reference-3.jpg",
+          "fileName": "reference-3.jpg",
+          "sourceUrl": "https://supplyweb.hajoca.com/WOE2-CORE/images/frontpage/toilets.jpg",
+          "sourceEvidence": "IMG ",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 303,
+            "width": 519
+          },
+          "sha256": "77bd277740d07de7fc0a11f3820bdff6945ed3ce5838172c03192d5ac63b258b",
+          "bytes": 55830,
+          "visual": {
+            "ok": true,
+            "lumaRange": 215,
+            "chromaURange": 8,
+            "chromaVRange": 9,
+            "reason": null
+          }
+        }
+      ],
+      "contact": {
+        "phone": "",
+        "address": "",
+        "city": "",
+        "phoneSource": null,
+        "addressSource": null
+      },
+      "visualReferenceFallback": null,
+      "referenceFailures": [
+        {
+          "url": "https://supplyweb.hajoca.com/woe2-core/images/image-coming-soon.png",
+          "reason": "reference image is too small"
+        },
+        {
+          "url": "https://supplyweb.hajoca.com/WOE2-CORE/images/frontpage/kfaucet2.jpg",
+          "reason": "reference image is too small"
+        },
+        {
+          "url": "https://supplyweb.hajoca.com/WOE2-CORE/images/frontpage/ksinks.jpg",
+          "reason": "reference image is too small"
+        },
+        {
+          "url": "https://supplyweb.hajoca.com/WOE2-CORE/images/frontpage/bsinks.jpg",
+          "reason": "reference image is too small"
+        }
+      ],
+      "brandColors": [
+        "#116600"
+      ],
+      "checkedAt": "2026-08-26T09:34:59.958Z"
+    },
+    {
+      "rank": 18,
+      "domain": "wesleyworksrealestate.com",
+      "slug": "wesley-works-real-estate",
+      "sourceUrl": "https://wesleyworksrealestate.com/",
+      "finalUrl": "https://wesleyworksrealestate.com/",
+      "sourceDomain": "wesleyworksrealestate.com",
+      "httpStatus": 200,
+      "contentType": "",
+      "pageSha256": "b774d9c33eaa482de41d98a0e79e69cd73e145ec3da126e6d438fe9061ee9613",
+      "title": "Wesley Works Real Estate - Buy & Sell in Emmaus, PA - #1 Realtor",
+      "description": "\"Wesley",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [
+          "wesley",
+          "works",
+          "real",
+          "estate"
+        ],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260826-052002/source-assets/wesley-works-real-estate/logo.png",
+        "fileName": "logo.png",
+        "sourceUrl": "https://wesleyworksrealestate.com/wp-content/uploads/2016/01/wesley-works-logo.png",
+        "sourceEvidence": "JSON-LD logo URL",
+        "type": "png",
+        "dimensions": {
+          "width": 684,
+          "height": 226
+        },
+        "sha256": "8182f6a5d1fa5e93f784770a7d15263a65f66193e4f39ed09e1457dd3430a1a2",
+        "sourceSha256": "544258bb4b4389c3be0c8c32762e9b3e5f2023353a2d1033747884f5ee581fc0",
+        "sourceType": "png",
+        "sourceFileName": "logo-source.png",
+        "transformation": "flat border color #000000 removed with deterministic FFmpeg colorkey; geometry unchanged",
+        "borderSpread": 0,
+        "alpha": {
+          "ok": true,
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "alphaAverage": 34.7374,
+          "reason": null
+        },
+        "transparent": true,
+        "bytes": 25078
+      },
+      "references": [],
+      "contact": {
+        "phone": "610.928.1000",
+        "address": "",
+        "city": "",
+        "phoneSource": "official tel link",
+        "addressSource": null
+      },
+      "visualReferenceFallback": "No usable first-party photography was exposed by the legacy source. Use only disclosed Align Image Gen concept imagery.",
+      "referenceFailures": [
+        {
+          "url": "https://wesleyworksrealestate.com/350",
+          "reason": "HTTP 403; curl: curl: (22) The requested URL returned error: 404"
+        },
+        {
+          "url": "https://wesleyworksrealestate.com/65",
+          "reason": "HTTP 403; curl: curl: (22) The requested URL returned error: 404"
+        },
+        {
+          "url": "https://wesleyworksrealestate.com/image/png",
+          "reason": "HTTP 403; curl: curl: (22) The requested URL returned error: 404"
+        },
+        {
+          "url": "https://www.facebook.com/tr?id=619597451958498&ev=PageView&noscript=1",
+          "reason": "unsupported reference type unknown"
+        }
+      ],
+      "brandColors": [
+        "#ffcf36",
+        "#003388"
+      ],
+      "checkedAt": "2026-08-26T09:34:59.258Z"
+    },
+    {
+      "rank": 19,
+      "domain": "freesinsurance.com",
+      "slug": "frees-insurance",
+      "sourceUrl": "https://freesinsurance.com/",
+      "finalUrl": "https://freesinsurance.com/",
+      "sourceDomain": "freesinsurance.com",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "pageSha256": "222b88ccfc45da824afc79d2f5bf127b68ec70ce2be7b23a1fe2441beff2649f",
+      "title": "Frees Insurance – Phoenixville, PA",
+      "description": "Your Community Insurance Agent PHOENIXVILLE, PA An independent insurance agency specializing in personal insurance since 1933 About Us You have worked hard for what you have. Make sure it is properly protected. Insurance is not what you pay; it's what you buy. Everyone has different needs depending on their exposures. We can help you determine&hellip;",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [
+          "frees",
+          "insurance"
+        ],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260826-052002/source-assets/frees-insurance/logo.png",
+        "fileName": "logo.png",
+        "sourceUrl": "https://i0.wp.com/freesinsurance.com/wp-content/uploads/2023/10/freesinsurancelogo.png?fit=1143%2C544&ssl=1",
+        "sourceEvidence": "IMG attachment-full size-full wp-image-11 11  freesinsurancelogo",
+        "type": "png",
+        "dimensions": {
+          "width": 1143,
+          "height": 544
+        },
+        "sha256": "26f1819971a449fda3e1dfa844ed9e47a6152e74d8093e6ac38605678bd8da5b",
+        "sourceSha256": "16465f81b0018f532fb0eb673661f434ccba418817e7cb00a7d17d42425f6dd6",
+        "sourceType": "png",
+        "sourceFileName": "logo-source.png",
+        "transformation": "flat border color #47704c removed with deterministic FFmpeg colorkey; geometry unchanged",
+        "borderSpread": 0,
+        "alpha": {
+          "ok": true,
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "alphaAverage": 47.9999,
+          "reason": null
+        },
+        "transparent": true,
+        "bytes": 8896
+      },
+      "references": [
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260826-052002/source-assets/frees-insurance/reference-1.webp",
+          "fileName": "reference-1.webp",
+          "sourceUrl": "https://freesinsurance.com/wp-content/uploads/2023/11/IMG_3567-e1575988159425-1024x683.jpg",
+          "sourceEvidence": "og:image",
+          "type": "webp",
+          "dimensions": {
+            "width": 1024,
+            "height": 683
+          },
+          "sha256": "3b245f2f3e557b8feec81b6bf8f0742ed545fdbeab7f47937b5328a3b1350ddb",
+          "bytes": 66830,
+          "visual": {
+            "ok": true,
+            "lumaRange": 216,
+            "chromaURange": 91,
+            "chromaVRange": 126,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260826-052002/source-assets/frees-insurance/reference-2.webp",
+          "fileName": "reference-2.webp",
+          "sourceUrl": "https://freesinsurance.com/wp-content/uploads/2023/11/IMG_3567-e1575988159425-1024x683.jpg?w=640",
+          "sourceEvidence": "twitter:image",
+          "type": "webp",
+          "dimensions": {
+            "width": 640,
+            "height": 426
+          },
+          "sha256": "109c4d2107c26b63db1ab41ab5ea3b925bb1ddcd68ca96f77f97add178bbf7f9",
+          "bytes": 31920,
+          "visual": {
+            "ok": true,
+            "lumaRange": 212,
+            "chromaURange": 85,
+            "chromaVRange": 114,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260826-052002/source-assets/frees-insurance/reference-3.webp",
+          "fileName": "reference-3.webp",
+          "sourceUrl": "https://i0.wp.com/freesinsurance.com/wp-content/uploads/2022/11/post-featured-img9.jpg?resize=768%2C478&ssl=1",
+          "sourceEvidence": "IMG attachment-medium size-medium wp-image-759 759  post-featured-img9",
+          "type": "webp",
+          "dimensions": {
+            "width": 768,
+            "height": 478
+          },
+          "sha256": "33ab431bac3a75f3a0285703ad845f46676ef4059ae216249f533d2fea45c5d4",
+          "bytes": 11068,
+          "visual": {
+            "ok": true,
+            "lumaRange": 225,
+            "chromaURange": 88,
+            "chromaVRange": 70,
+            "reason": null
+          }
+        }
+      ],
+      "contact": {
+        "phone": "+1 610-933-4950",
+        "address": "120 Gay Street, Phoenixville, PA 19460",
+        "city": "Phoenixville",
+        "phoneSource": "official JSON-LD",
+        "addressSource": "official JSON-LD"
+      },
+      "visualReferenceFallback": null,
+      "referenceFailures": [
+        {
+          "url": "https://freesinsurance.com/580",
+          "reason": "HTTP 404"
+        },
+        {
+          "url": "https://freesinsurance.com/387",
+          "reason": "HTTP 404"
+        }
+      ],
+      "brandColors": [
+        "#f4bb4c",
+        "#003388",
+        "#003399",
+        "#e22658",
+        "#cd2653"
+      ],
+      "checkedAt": "2026-08-26T09:30:27.724Z"
+    },
+    {
+      "rank": 20,
+      "domain": "pacificomarplelincoln.com",
+      "slug": "pacifico-marple-lincoln",
+      "sourceUrl": "https://www.pacificomarplelincoln.com/",
+      "finalUrl": "https://www.pacificomarplelincoln.com/",
+      "sourceDomain": "pacificomarplelincoln.com",
+      "httpStatus": 200,
+      "contentType": "text/html;charset=utf-8",
+      "pageSha256": "0f4048d287b5acf893452f3d95bd544eeeb8fbce108f260a689604661bd0374c",
+      "title": "Lincoln Dealer in Broomall, PA | Pacifico Marple Lincoln",
+      "description": "Shop new and used Lincoln vehicles in Broomall, PA, at Pacifico Marple Lincoln. Explore financing, service, specials, and schedule a test drive.",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [
+          "pacifico",
+          "marple",
+          "lincoln"
+        ],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260826-052002/source-assets/pacifico-marple-lincoln/logo.png",
+        "fileName": "logo.png",
+        "sourceUrl": "https://www.pacificomarplelincoln.com/static/v8/global/images/franchise-logos/auto/l/lincoln/white/183x125.png?r=1787021927000",
+        "sourceEvidence": "IMG lincoln",
+        "type": "png",
+        "dimensions": {
+          "width": 183,
+          "height": 125
+        },
+        "sha256": "db84e4e52fe96ebb587eb819de3ffb6463abf1bb2b3e25996a0ecf69f03fd753",
+        "sourceSha256": "db84e4e52fe96ebb587eb819de3ffb6463abf1bb2b3e25996a0ecf69f03fd753",
+        "sourceType": "png",
+        "sourceFileName": null,
+        "transformation": "none; exact first-party transparent asset",
+        "borderSpread": null,
+        "alpha": {
+          "ok": true,
+          "alphaMin": 0,
+          "alphaMax": 255,
+          "alphaAverage": 16.4459,
+          "reason": null
+        },
+        "transparent": true,
+        "bytes": 2387
+      },
+      "references": [
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260826-052002/source-assets/pacifico-marple-lincoln/reference-1.jpg",
+          "fileName": "reference-1.jpg",
+          "sourceUrl": "https://pictures.dealer.com/p/pacificomarplelincolnfd/1234/db4fdf9230d649a5ba80dff306e48d10.jpg",
+          "sourceEvidence": "IMG lazy-image dynamic-resize",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 938,
+            "width": 1250
+          },
+          "sha256": "f3c2ee91bf4d2f526bfed4e8279520e161bbdfbbd967b4e7012962d79afe52f7",
+          "bytes": 385422,
+          "visual": {
+            "ok": true,
+            "lumaRange": 251,
+            "chromaURange": 80,
+            "chromaVRange": 84,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260826-052002/source-assets/pacifico-marple-lincoln/reference-2.jpg",
+          "fileName": "reference-2.jpg",
+          "sourceUrl": "https://pictures.dealer.com/p/pacificomarplelincolnfd/1029/c89e08e053e3705fc93de817b2fbc529x.jpg",
+          "sourceEvidence": "IMG lazy-image dynamic-resize  2021 corsair button block 1.jpg",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 650,
+            "width": 976
+          },
+          "sha256": "6b99a448f9fe8665c2eed56fc2f7ac6d7018db82982a2418661fbb36a1f20c0d",
+          "bytes": 211671,
+          "visual": {
+            "ok": true,
+            "lumaRange": 255,
+            "chromaURange": 77,
+            "chromaVRange": 105,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260826-052002/source-assets/pacifico-marple-lincoln/reference-3.jpg",
+          "fileName": "reference-3.jpg",
+          "sourceUrl": "https://pictures.dealer.com/p/pacificomarplelincolnfd/1234/e23b8558a46642f78c7a1f1139e7c773.jpg",
+          "sourceEvidence": "IMG lazy-image dynamic-resize  2026 aviator button block 1.jpg",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 1484,
+            "width": 1979
+          },
+          "sha256": "a66e1a836d91f7ad34e4c104dde31b8b4e97995ce08092c85def0c179e7882be",
+          "bytes": 385362,
+          "visual": {
+            "ok": true,
+            "lumaRange": 255,
+            "chromaURange": 88,
+            "chromaVRange": 51,
+            "reason": null
+          }
+        }
+      ],
+      "contact": {
+        "phone": "",
+        "address": "",
+        "city": "",
+        "phoneSource": null,
+        "addressSource": null
+      },
+      "visualReferenceFallback": null,
+      "referenceFailures": [
+        {
+          "url": "https://pictures.dealer.com/p/pacificomarplelincolnfd/1440/f549a1f73de66b47f8b87e17398e6ae1x.jpg",
+          "reason": "reference image is too small"
+        }
+      ],
+      "brandColors": [
+        "#c24e39",
+        "#ffe0b1",
+        "#a42801",
+        "#caeaca",
+        "#045f04"
+      ],
+      "checkedAt": "2026-08-26T09:30:26.317Z"
+    }
+  ],
+  "rejected": [
+    {
+      "domain": "bmconstructionhvac.com",
+      "name": "B & M Construction & Hvac LLC",
+      "website": "https://bmconstructionhvac.com/",
+      "reason": "fetch failed; curl: curl: (6) Could not resolve host: bmconstructionhvac.com; browser: page.goto: net::ERR_NAME_NOT_RESOLVED at https://bmconstructionhvac.com/\nCall log:\n\u001b[2m  - navigating to \"https://bmconstructionhvac.com/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    {
+      "domain": "carabinassociates.com",
+      "name": "Carabin Associates",
+      "website": "https://carabinassociates.com/",
+      "reason": "fetch failed; curl: curl: (6) Could not resolve host: carabinassociates.com; browser: page.goto: net::ERR_NAME_NOT_RESOLVED at https://carabinassociates.com/\nCall log:\n\u001b[2m  - navigating to \"https://carabinassociates.com/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    {
+      "domain": "colonialnewtownsquare.com",
+      "name": "Colonial Animal Hospital",
+      "website": "http://www.colonialnewtownsquare.com/",
+      "reason": "fetch failed; curl: curl: (6) Could not resolve host: www.colonialnewtownsquare.com; browser: page.goto: net::ERR_NAME_NOT_RESOLVED at http://www.colonialnewtownsquare.com/\nCall log:\n\u001b[2m  - navigating to \"http://www.colonialnewtownsquare.com/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    {
+      "domain": "dralanrobertson.com",
+      "name": "Alan J Robertson, DDS",
+      "website": "http://www.dralanrobertson.com/",
+      "reason": "fetch failed; curl: curl: (6) Could not resolve host: www.dralanrobertson.com; browser: page.goto: net::ERR_NAME_NOT_RESOLVED at http://www.dralanrobertson.com/\nCall log:\n\u001b[2m  - navigating to \"http://www.dralanrobertson.com/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    {
+      "domain": "redrosefamilydental",
+      "name": "Red Rose Family Dental",
+      "website": "http://www.redrosefamilydental/",
+      "reason": "fetch failed; curl: curl: (6) Could not resolve host: www.redrosefamilydental; browser: page.goto: net::ERR_NAME_NOT_RESOLVED at http://www.redrosefamilydental/\nCall log:\n\u001b[2m  - navigating to \"http://www.redrosefamilydental/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    {
+      "domain": "tricountyanimalhospitaldillsburg.com",
+      "name": "Tri-County Animal Hospital",
+      "website": "https://tricountyanimalhospitaldillsburg.com/",
+      "reason": "fetch failed; curl: curl: (6) Could not resolve host: tricountyanimalhospitaldillsburg.com; browser: page.goto: net::ERR_NAME_NOT_RESOLVED at https://tricountyanimalhospitaldillsburg.com/\nCall log:\n\u001b[2m  - navigating to \"https://tricountyanimalhospitaldillsburg.com/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    {
+      "domain": "wjamesvincentdds.com",
+      "name": "W. James Vincent",
+      "website": "http://www.wjamesvincentdds.com/",
+      "reason": "fetch failed; curl: curl: (6) Could not resolve host: www.wjamesvincentdds.com; browser: page.goto: net::ERR_NAME_NOT_RESOLVED at http://www.wjamesvincentdds.com/\nCall log:\n\u001b[2m  - navigating to \"http://www.wjamesvincentdds.com/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    {
+      "domain": "zugdentistry.com",
+      "name": "David A Zug",
+      "website": "http://zugdentistry.com/",
+      "reason": "fetch failed; curl: curl: (6) Could not resolve host: zugdentistry.com; browser: page.goto: net::ERR_NAME_NOT_RESOLVED at http://zugdentistry.com/\nCall log:\n\u001b[2m  - navigating to \"http://zugdentistry.com/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    {
+      "domain": "donwardagency.com",
+      "name": "Ward Insurance Associates Inc.",
+      "website": "https://www.donwardagency.com/",
+      "reason": "fetch failed; curl: curl: (6) Could not resolve host: www.donwardagency.com; browser: page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.donwardagency.com/\nCall log:\n\u001b[2m  - navigating to \"https://www.donwardagency.com/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    {
+      "domain": "riceltd.net",
+      "name": "Rice & Rice, Ltd.",
+      "website": "https://riceltd.net/",
+      "reason": "fetch failed; curl: curl: (6) Could not resolve host: riceltd.net; browser: page.goto: net::ERR_NAME_NOT_RESOLVED at https://riceltd.net/\nCall log:\n\u001b[2m  - navigating to \"https://riceltd.net/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    {
+      "domain": "24emergencyrooter.com",
+      "name": "Emergency Rooter Services",
+      "website": "https://24emergencyrooter.com/",
+      "reason": "fetch failed; curl: curl: (6) Could not resolve host: 24emergencyrooter.com; browser: page.goto: net::ERR_NAME_NOT_RESOLVED at https://24emergencyrooter.com/\nCall log:\n\u001b[2m  - navigating to \"https://24emergencyrooter.com/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    {
+      "domain": "bsaia.net",
+      "name": "4/4 Architecture",
+      "website": "http://www.bsaia.net/",
+      "reason": "fetch failed; curl: curl: (6) Could not resolve host: www.bsaia.net; browser: page.goto: net::ERR_NAME_NOT_RESOLVED at http://www.bsaia.net/\nCall log:\n\u001b[2m  - navigating to \"http://www.bsaia.net/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    {
+      "domain": "cassellelawfirm.com",
+      "name": "Law Offices of D. A. Casselle",
+      "website": "http://cassellelawfirm.com/",
+      "reason": "fetch failed; curl: curl: (6) Could not resolve host: cassellelawfirm.com; browser: page.goto: net::ERR_NAME_NOT_RESOLVED at http://cassellelawfirm.com/\nCall log:\n\u001b[2m  - navigating to \"http://cassellelawfirm.com/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    {
+      "domain": "comealivechiro.com",
+      "name": "Come Alive Chiropractic",
+      "website": "http://comealivechiro.com/",
+      "reason": "fetch failed; curl: curl: (6) Could not resolve host: comealivechiro.com; browser: page.goto: net::ERR_NAME_NOT_RESOLVED at http://comealivechiro.com/\nCall log:\n\u001b[2m  - navigating to \"http://comealivechiro.com/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    {
+      "domain": "eshcom.com",
+      "name": "Esh Computer Center",
+      "website": "https://www.eshcom.com/",
+      "reason": "fetch failed; curl: curl: (6) Could not resolve host: www.eshcom.com; browser: page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.eshcom.com/\nCall log:\n\u001b[2m  - navigating to \"https://www.eshcom.com/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    {
+      "domain": "guntherheussmaninc.com",
+      "name": "Gunther Heussman",
+      "website": "http://www.guntherheussmaninc.com/",
+      "reason": "fetch failed; curl: curl: (6) Could not resolve host: www.guntherheussmaninc.com; browser: page.goto: net::ERR_NAME_NOT_RESOLVED at http://www.guntherheussmaninc.com/\nCall log:\n\u001b[2m  - navigating to \"http://www.guntherheussmaninc.com/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    {
+      "domain": "laulaw.net",
+      "name": "Lau & Associates, P.C.",
+      "website": "https://www.laulaw.net/",
+      "reason": "fetch failed; curl: curl: (6) Could not resolve host: www.laulaw.net; browser: page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.laulaw.net/\nCall log:\n\u001b[2m  - navigating to \"https://www.laulaw.net/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    {
+      "domain": "m.patrickchirocenter.com",
+      "name": "Patrick Chiropractic Center",
+      "website": "http://m.patrickchirocenter.com/",
+      "reason": "fetch failed; curl: curl: (6) Could not resolve host: m.patrickchirocenter.com; browser: page.goto: net::ERR_NAME_NOT_RESOLVED at http://m.patrickchirocenter.com/\nCall log:\n\u001b[2m  - navigating to \"http://m.patrickchirocenter.com/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    {
+      "domain": "mexicomagicopa.com",
+      "name": "Mexico Magico",
+      "website": "http://mexicomagicopa.com/",
+      "reason": "fetch failed; curl: curl: (6) Could not resolve host: mexicomagicopa.com; browser: page.goto: net::ERR_NAME_NOT_RESOLVED at http://mexicomagicopa.com/\nCall log:\n\u001b[2m  - navigating to \"http://mexicomagicopa.com/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    {
+      "domain": "sensezerofloat.com",
+      "name": "Sense Zero Float Center",
+      "website": "https://www.sensezerofloat.com/",
+      "reason": "fetch failed; curl: curl: (6) Could not resolve host: www.sensezerofloat.com; browser: page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.sensezerofloat.com/\nCall log:\n\u001b[2m  - navigating to \"https://www.sensezerofloat.com/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    {
+      "domain": "southernberksfamilymedicine.com",
+      "name": "Southern Berks Family Medicine",
+      "website": "http://southernberksfamilymedicine.com/",
+      "reason": "fetch failed; curl: curl: (6) Could not resolve host: southernberksfamilymedicine.com; browser: page.goto: net::ERR_NAME_NOT_RESOLVED at http://southernberksfamilymedicine.com/\nCall log:\n\u001b[2m  - navigating to \"http://southernberksfamilymedicine.com/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    {
+      "domain": "zatorlaw.com",
+      "name": "Zator Law",
+      "website": "https://www.zatorlaw.com/",
+      "reason": "fetch failed; curl: curl: (6) Could not resolve host: www.zatorlaw.com; browser: page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.zatorlaw.com/\nCall log:\n\u001b[2m  - navigating to \"https://www.zatorlaw.com/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    {
+      "domain": "fortitudefitness.info",
+      "name": "Fortitude & Co",
+      "website": "https://fortitudefitness.info/",
+      "reason": "fetch failed; curl: curl: (6) Could not resolve host: fortitudefitness.info; browser: page.goto: net::ERR_NAME_NOT_RESOLVED at https://fortitudefitness.info/\nCall log:\n\u001b[2m  - navigating to \"https://fortitudefitness.info/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    {
+      "domain": "valleydentalsmiles.com",
+      "name": "Valley Dental",
+      "website": "https://valleydentalsmiles.com/",
+      "reason": "HTTP 500; curl: curl: (22) The requested URL returned error: 500; browser: browser HTTP 500"
+    },
+    {
+      "domain": "malvernveterinaryhospital.vetstreet.com",
+      "name": "Malvern Veterinary Hospital",
+      "website": "http://malvernveterinaryhospital.vetstreet.com/",
+      "reason": "HTTP 404; curl: curl: (22) The requested URL returned error: 404; browser: browser HTTP 404"
+    },
+    {
+      "domain": "agency.nationwide.com",
+      "name": "Kathy Barry Agency",
+      "website": "https://agency.nationwide.com/pa/boyertown/19512/kathy-barry-agency-llc-10742849",
+      "reason": "HTTP 404; curl: curl: (22) The requested URL returned error: 404; browser: browser HTTP 404"
+    },
+    {
+      "domain": "sleepapneahallam.com",
+      "name": "Snoring, Sleep Apnea & Oral Appliance Dentist - Dr. Gordon Bell",
+      "website": "https://sleepapneahallam.com/",
+      "reason": "fetch failed; curl: curl: (47) Maximum (50) redirects followed; browser: page.goto: net::ERR_TOO_MANY_REDIRECTS at https://sleepapneahallam.com/\nCall log:\n\u001b[2m  - navigating to \"https://sleepapneahallam.com/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    {
+      "domain": "dangersalon.tv",
+      "name": "Danger Salon",
+      "website": "http://www.dangersalon.tv/",
+      "reason": "fetch failed; curl: curl: (6) Could not resolve host: www.dangersalon.tv; browser: page.goto: net::ERR_NAME_NOT_RESOLVED at http://www.dangersalon.tv/\nCall log:\n\u001b[2m  - navigating to \"http://www.dangersalon.tv/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    {
+      "domain": "pennstatehealthpassion.org",
+      "name": "Penn State Health St. Joseph Robesonia",
+      "website": "https://www.pennstatehealthpassion.org/location?id=64",
+      "reason": "fetch failed; curl: curl: (6) Could not resolve host: www.pennstatehealthpassion.org; browser: page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.pennstatehealthpassion.org/location?id=64\nCall log:\n\u001b[2m  - navigating to \"https://www.pennstatehealthpassion.org/location?id=64\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    {
+      "domain": "schaefferfloorcoveringspa.com",
+      "name": "Schaeffer Floor Coverings",
+      "website": "https://www.schaefferfloorcoveringspa.com/",
+      "reason": "fetch failed; curl: curl: (6) Could not resolve host: www.schaefferfloorcoveringspa.com; browser: page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.schaefferfloorcoveringspa.com/\nCall log:\n\u001b[2m  - navigating to \"https://www.schaefferfloorcoveringspa.com/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    {
+      "domain": "heartland-manorcare.com",
+      "name": "ManorCare Health Services",
+      "website": "https://www.heartland-manorcare.com/YorkSouth",
+      "reason": "HTTP 404; curl: curl: (22) The requested URL returned error: 404; browser: browser HTTP 404"
+    },
+    {
+      "domain": "satoshigear.mymusclepay.com",
+      "name": "S.B. Health",
+      "website": "https://satoshigear.mymusclepay.com/",
+      "reason": "HTTP 404; curl: curl: (22) The requested URL returned error: 404; browser: browser HTTP 404"
+    },
+    {
+      "domain": "sparkorthodontics.com",
+      "name": "Spark Orthodontics",
+      "website": "https://sparkorthodontics.com/contact/lancaster-pa-orthodontics-office/",
+      "reason": "HTTP 404; curl: curl: (22) The requested URL returned error: 404; browser: browser HTTP 404"
+    },
+    {
+      "domain": "brightchoicedentistry.com",
+      "name": "Bright Choice Dental",
+      "website": "https://www.brightchoicedentistry.com/bethlehem/",
+      "reason": "HTTP 404; curl: curl: (22) The requested URL returned error: 404; browser: browser HTTP 404"
+    },
+    {
+      "domain": "suburbansolutions.com",
+      "name": "The Rouse Group Development Co.",
+      "website": "https://suburbansolutions.com/philadelphia/havertown-movers/avertown",
+      "reason": "HTTP 404; curl: curl: (22) The requested URL returned error: 404; browser: browser HTTP 404"
+    },
+    {
+      "domain": "trivalleypc.com",
+      "name": "Trivalley Primary Care",
+      "website": "https://www.trivalleypc.com/pennridge-office/",
+      "reason": "HTTP 403; curl: curl: (22) The requested URL returned error: 403; browser: browser HTTP 403"
+    },
+    {
+      "domain": "hollywoodnailsbensalem.com",
+      "name": "Hollywood Nails",
+      "website": "https://hollywoodnailsbensalem.com/",
+      "reason": "HTTP 503; curl: curl: (22) The requested URL returned error: 503; browser: browser HTTP 503"
+    },
+    {
+      "domain": "crozerhealth.org",
+      "name": "Aston Foot Center",
+      "website": "https://www.crozerhealth.org/locations/practices/a/aston-foot-center",
+      "reason": "HTTP 404; curl: curl: (22) The requested URL returned error: 404; browser: browser HTTP 404"
+    },
+    {
+      "domain": "halligankeatonlaw.com",
+      "name": "Halligan & Keaton Law P.C.",
+      "website": "https://www.halligankeatonlaw.com/",
+      "reason": "HTTP 404; curl: curl: (22) The requested URL returned error: 404; browser: browser HTTP 404"
+    },
+    {
+      "domain": "mackshairstudio.com",
+      "name": "Mack’s Hair Studio",
+      "website": "https://www.mackshairstudio.com/",
+      "reason": "HTTP 404; curl: curl: (22) The requested URL returned error: 404; browser: browser HTTP 404"
+    }
+  ]
+}

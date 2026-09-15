@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "routine_id": "D11",
+  "generated_at": "2026-08-24T23:48:51.873Z",
+  "graph_verification": "does_not_grant_adoption_or_external_action",
+  "gates": [
+    {
+      "state": "verified_not_adopted",
+      "owner": "Codex acting as Marketing Chief"
+    },
+    {
+      "state": "external_action",
+      "owner": "Dillon Mohr exact approval"
+    },
+    {
+      "state": "abstain",
+      "owner": "automatic fail-closed boundary"
+    }
+  ],
+  "forbidden_self_grant": true,
+  "authority": {
+    "read_only": true,
+    "proposal_only": true,
+    "external_action_attempted": false,
+    "canonical_write_attempted": false,
+    "provider_mutation_attempted": false,
+    "deployment_attempted": false,
+    "worktree_mutation_attempted": false,
+    "ui_mutation_attempted": false,
+    "acceptance_contract_changed": false
+  }
+}

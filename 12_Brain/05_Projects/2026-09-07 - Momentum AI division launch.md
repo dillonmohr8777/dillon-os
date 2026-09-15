@@ -54,21 +54,28 @@ provenance failure:
 | "Never fails the design test" | Holds for the new system: 31 contrast pairs, 0 failures, and `build.py` refuses to render if any pair fails. Does **not** describe the existing estate — 37 of 120 measured pairs across ten live builds fail AA. |
 
 The reusable lesson is at
+[[12_Brain/03_Concepts/2026-09-07 - The delivery machinery is the product]].
 `Local source note: 12_Brain/03_Concepts/2026-09-07 - The delivery machinery is the product`.
 
 ## The evidence this plan now rests on
 
 - **Design proof and the drift underneath it** —
-  `Local source note: 12_Brain/03_Concepts/2026-09-07 - One token cannot do two jobs`
+  [[12_Brain/03_Concepts/2026-09-07 - One token cannot do two jobs]]
 - **The differentiator, and the defect that produced it** —
-  `Local source note: 12_Brain/03_Concepts/2026-09-07 - Conversion match-back is the differentiator`
+  [[12_Brain/03_Concepts/2026-09-07 - Conversion match-back is the differentiator]]
 - **Market position, dated and expiring** —
-  `Local source note: 12_Brain/06_Research/2026-09-07 - AI search retainer pricing and Philadelphia position`
+  [[12_Brain/06_Research/2026-09-07 - AI search retainer pricing and Philadelphia position]]
 - **Operating truths found in the same pass** —
-  `Local source note: 12_Brain/07_Reviews/2026-09-07 - AI division evidence pass`
+  [[12_Brain/07_Reviews/2026-09-07 - AI division evidence pass]]
 - **Corrections to earlier claims** —
-  `Local source note: 12_Brain/08_Memory/2026-09-07 - Corrections from the AI division evidence pass`
+  [[12_Brain/08_Memory/2026-09-07 - Corrections from the AI division evidence pass]]
 - **Roster supersession** —
+  [[12_Brain/04_Decisions/2026-09-07 - Align HCM registry record is superseded]]
+  `Local source note: 12_Brain/03_Concepts/2026-09-07 - One token cannot do two jobs`
+  `Local source note: 12_Brain/03_Concepts/2026-09-07 - Conversion match-back is the differentiator`
+  `Local source note: 12_Brain/06_Research/2026-09-07 - AI search retainer pricing and Philadelphia position`
+  `Local source note: 12_Brain/07_Reviews/2026-09-07 - AI division evidence pass`
+  `Local source note: 12_Brain/08_Memory/2026-09-07 - Corrections from the AI division evidence pass`
   `Local source note: 12_Brain/04_Decisions/2026-09-07 - Align HCM registry record is superseded`
 
 ## The Google route — live-verified 2026-09-07
@@ -112,6 +119,7 @@ set after the first charge; the cap is enforced by the runners, not by intent.
   no invented figures, named clients only after case-study permission).
 
 Two things the spot deliberately does not say: named-lead match-back (not yet true on
+all four accounts — see [[12_Brain/03_Concepts/2026-09-07 - Conversion match-back is the differentiator]])
 all four accounts — see `Local source note: 12_Brain/03_Concepts/2026-09-07 - Conversion match-back is the differentiator`)
 and any number, client name or guarantee. Mascot and founder-likeness pieces remain
 internal until Mac's and Sean's written acceptance.
@@ -180,8 +188,7 @@ credential revocation, client outreach — is gated in
 
 ## Asset archive, September 8, 2026
 
+[[01_Clients/Momentum 360/AI Division Library/README|Momentum AI Division Library]] contains the private repository download catalog: 39 current Claude Design MP4s (36 new silent reviews of 18 segments plus three preserved refined earlier films), five interactive ebook editions and 174 PDF pages, ten unpublished article drafts, deck, planning sources, artwork and earlier launch assets. Rejected/incomplete versions and source footage are counted separately. Source: the linked library and its exact-file manifest. The requested Chain Reaction refinement is a pending derivative and is excluded from this snapshot.
 [[01_Clients/Momentum 360/AI Division Library/README|Momentum AI Division Library]] now indexes the actual private repository downloads, native Claude URLs, five interactive ebook editions and their 174-page PDF set, ten unpublished article drafts, editable plans, deck, artwork, source packages and launch media.
-
 Current Claude Design completion count: 39 MP4 files, comprising 36 new silent reviews of 18 narrative segments across 10 major directions plus three preserved refined earlier films. Rejected tests, source footage and older launch cuts are counted separately. The requested stronger Chain Reaction opening and 3D refinement remains a pending derivative. Review/archive status does not imply public release or delivery approval.
-
 Source: [[01_Clients/Momentum 360/AI Division Library/README]] and its exact-file manifest.

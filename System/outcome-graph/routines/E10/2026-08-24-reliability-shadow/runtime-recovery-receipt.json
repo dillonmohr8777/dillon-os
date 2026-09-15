@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "routine_id": "E10",
+  "generated_at": "2026-08-24T23:35:22.299Z",
+  "source_set_sha256": "b52e6019ce577e6427819c75ce81c9d04bbc32253583635a0206012c90e3683a",
+  "runtime": {
+    "schema_version": 1,
+    "routine_id": "E10",
+    "id": "E10:hermes-gateway",
+    "isolation_key": "runtime:hermes-gateway:telegram-route",
+    "observed_at": "2026-08-24T23:35:22.299Z",
+    "source_sha256": "5f9296df8c3581141bf4da37b9e58def9746b40041ce387e12cb9a4c1a7ebde1",
+    "process_identity_verified": true,
+    "state": "DEGRADED-STALE / gateway PID alive and identity verified / root heartbeat stale 2d 04h 36m / Telegram retained connected / recent Photon RESOURCE_EXHAUSTED admission-queue error / no polling conflicts observed",
+    "heartbeat_age_sec": 189377,
+    "conflict_counts": {
+      "one_hour": 0,
+      "six_hours": 0,
+      "twenty_four_hours": 0
+    },
+    "retained_connected_is_not_progress_proof": true,
+    "heartbeat_current": false,
+    "log_advancement_verified": true,
+    "sustained_inbound_and_reply_behavior_verified": false,
+    "competing_workers_observed": false,
+    "recovery_attempted": false,
+    "outcome_state": "held_pending_scoped_recovery_and_sustained_readback",
+    "next_safe_action": "Use the existing scoped soft-restart approval path, then verify heartbeat under 120 seconds, log advancement, and one bounded inbound and reply readback.",
+    "authority": {
+      "read_only": true,
+      "proposal_only": true,
+      "external_action_attempted": false,
+      "canonical_write_attempted": false,
+      "provider_mutation_attempted": false,
+      "restart_attempted": false,
+      "retry_attempted": false,
+      "checkpoint_advance_attempted": false,
+      "secret_access_attempted": false
+    }
+  },
+  "workflow_ready": false,
+  "authority": {
+    "read_only": true,
+    "proposal_only": true,
+    "external_action_attempted": false,
+    "canonical_write_attempted": false,
+    "provider_mutation_attempted": false,
+    "restart_attempted": false,
+    "retry_attempted": false,
+    "checkpoint_advance_attempted": false,
+    "secret_access_attempted": false
+  }
+}

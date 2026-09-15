@@ -1,0 +1,221 @@
+{
+  "slug": "neiderer-s-pool-sales-and-service",
+  "prospectId": "RADAR-NEXT20-009",
+  "name": "Neiderer's Pool Sales & Service",
+  "city": "Service area",
+  "market": "Service area",
+  "address": "",
+  "phone": "",
+  "category": "Swimming Pool",
+  "vertical": "swimming-pool",
+  "verticalGroup": "home-services",
+  "attitude": "industrial",
+  "url": "https://www.neidererspoolsales.com/",
+  "description": "Private mobile-first concept for Neiderer's Pool Sales & Service, grounded in its official identity and first-party visual source.",
+  "logo": false,
+  "logoFile": "logo.svg",
+  "filmGrain": true,
+  "logoOutroLine": "Service area | Swimming Pool",
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "qualityPolicy": {
+    "minImages": 12,
+    "maxWords": 500
+  },
+  "sections": [
+    "hero",
+    "proof",
+    "offerings",
+    "story",
+    "experience",
+    "gallery",
+    "feature",
+    "catalog",
+    "contact",
+    "closing"
+  ],
+  "tokens": {
+    "paper": "#F4EFE7",
+    "ink": "#0B1D2D",
+    "accent": "#F05A28",
+    "accent2": "#91D5ED",
+    "panel": "#EAF6FC",
+    "deep": "#071521",
+    "onPaper": "#0B1D2D",
+    "onAccent": "#071521",
+    "onAccent2": "#071521",
+    "onPanel": "#0B1D2D",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "14px"
+  },
+  "fonts": {
+    "display": "Plus Jakarta Sans",
+    "displayFallback": "Arial,sans-serif",
+    "text": "DM Sans",
+    "textFallback": "Arial,sans-serif"
+  },
+  "skinCss": ".slug-neiderer-s-pool-sales-and-service .hero h1,.slug-neiderer-s-pool-sales-and-service .section-head h2,.slug-neiderer-s-pool-sales-and-service .story h2,.slug-neiderer-s-pool-sales-and-service .feature h2,.slug-neiderer-s-pool-sales-and-service .spotlight h2,.slug-neiderer-s-pool-sales-and-service .contact-intro h2,.slug-neiderer-s-pool-sales-and-service .closing h2,.slug-neiderer-s-pool-sales-and-service .offering-card h3,.slug-neiderer-s-pool-sales-and-service .experience-grid h3,.slug-neiderer-s-pool-sales-and-service .catalog-card h3,.slug-neiderer-s-pool-sales-and-service .footer-identity strong{font-weight:800}",
+  "directionContract": {
+    "thesis": "Neiderer's Pool Sales & Service should feel immediate, composed, and unmistakably itself on a phone.",
+    "ownWorld": "split signal editorial system in deep navy, vivid orange, warm paper, cyan glints, and visibly tactile film grain.",
+    "story": "Move from orientation to project question, source context, disclosed visual direction, and a direct official action.",
+    "firstViewport": "Source-verifiable identity, one clear proposition, one Align editorial image, and one thumb-ready action.",
+    "form": "Mobile-first home service homepage with an ink-resolved identity finale."
+  },
+  "hero": {
+    "eyebrow": "",
+    "headline": "Built around the work that matters.",
+    "sub": "Neiderer's Pool Sales & Service deserves a first screen that makes the next step legible without flattening the character of the work. This private concept begins with the official identity and first-party source material.",
+    "ctaPrimary": {
+      "label": "Visit official website",
+      "href": "https://www.neidererspoolsales.com/"
+    },
+    "ctaSecondary": {
+      "label": "Explore the concept",
+      "href": "#offerings"
+    },
+    "glassFloat": null,
+    "marquee": []
+  },
+  "proof": {
+    "items": [
+      "Neiderer's Pool Sales & Service",
+      "Service area",
+      "Swimming Pool",
+      "Official source connected"
+    ]
+  },
+  "offerings": {
+    "heading": "A homepage organized around the decision a visitor is actually making.",
+    "items": [
+      "Understand the role of Neiderer's Pool Sales & Service without searching through the page",
+      "See a clearly disclosed, business-relevant visual direction before choosing the next project question",
+      "Reach the official source through one direct, clearly labelled action"
+    ]
+  },
+  "story": {
+    "heading": "Identity and evidence lead. The interface follows.",
+    "imageIndex": 2,
+    "paragraphs": [
+      "Neiderer's Pool Sales & Service is listed by Prospect Radar as a swimming pool in Service area. Current details remain on the official source.",
+      "This concept uses generated editorial imagery as illustrative direction, not as evidence about the business. The composition gives each image room to establish scale and character while the written hierarchy stays concise enough for a phone.",
+      "No testimonial, result, price, award, schedule, or service promise is added here. Current operational details remain under the control of the official website."
+    ]
+  },
+  "experience": {
+    "heading": "A deliberate path from first impression to official action.",
+    "items": [
+      "Immediate identity and location context",
+      "Readable source-led narrative with decisive image rhythm",
+      "A consistent action that stays reachable without interrupting the page"
+    ]
+  },
+  "gallery": {
+    "heading": "Illustrative concept imagery, cut into a tactile mobile editorial rhythm.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ]
+  },
+  "feature": {
+    "heading": "The page disappears behind the work, then returns to the identity.",
+    "text": "As each section passes, progressive motion lets completed information soften without turning the page into a scroll experiment. The final scene returns to the verified Neiderer's Pool Sales & Service business name as clear live text, without inventing a logo or mark.",
+    "imageIndex": 9,
+    "cta": {
+      "label": "Open official source",
+      "href": "https://www.neidererspoolsales.com/"
+    }
+  },
+  "catalog": {
+    "heading": "Three useful routes, kept honest and direct.",
+    "items": [
+      {
+        "title": "Review current services and project information",
+        "href": "https://www.neidererspoolsales.com/",
+        "imageIndex": 10
+      },
+      {
+        "title": "Confirm current location and contact details",
+        "href": "https://www.neidererspoolsales.com/",
+        "imageIndex": 11
+      },
+      {
+        "title": "Decide whether the next project question makes sense",
+        "href": "https://www.neidererspoolsales.com/",
+        "imageIndex": 12
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Current details belong to the official source.",
+    "sub": "This private concept sends nothing. Generated imagery does not depict Neiderer's Pool Sales & Service, its staff, customers, facility, products, projects, or outcomes. Use the official website to confirm services, availability, hours, and contact details."
+  },
+  "closing": {
+    "heading": "A stronger first impression, resolved to the verified business name.",
+    "cta": {
+      "label": "Visit official website",
+      "href": "https://www.neidererspoolsales.com/"
+    }
+  },
+  "links": [
+    {
+      "label": "Official website",
+      "href": "https://www.neidererspoolsales.com/"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Illustrative generated swimming pool concept image 1 for the Neiderer's Pool Sales & Service private homepage direction"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Illustrative generated swimming pool concept image 2 for the Neiderer's Pool Sales & Service private homepage direction"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Illustrative generated swimming pool concept image 3 for the Neiderer's Pool Sales & Service private homepage direction"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Illustrative generated swimming pool concept image 4 for the Neiderer's Pool Sales & Service private homepage direction"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Illustrative generated swimming pool concept image 5 for the Neiderer's Pool Sales & Service private homepage direction"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Illustrative generated swimming pool concept image 6 for the Neiderer's Pool Sales & Service private homepage direction"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Illustrative generated swimming pool concept image 7 for the Neiderer's Pool Sales & Service private homepage direction"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Illustrative generated swimming pool concept image 8 for the Neiderer's Pool Sales & Service private homepage direction"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Illustrative generated swimming pool concept image 9 for the Neiderer's Pool Sales & Service private homepage direction"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Illustrative generated swimming pool concept image 10 for the Neiderer's Pool Sales & Service private homepage direction"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Illustrative generated swimming pool concept image 11 for the Neiderer's Pool Sales & Service private homepage direction"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Illustrative generated swimming pool concept image 12 for the Neiderer's Pool Sales & Service private homepage direction"
+    }
+  ]
+}

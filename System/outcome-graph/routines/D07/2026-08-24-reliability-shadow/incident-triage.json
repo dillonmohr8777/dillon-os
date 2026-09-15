@@ -1,0 +1,254 @@
+{
+  "schema_version": 1,
+  "routine_id": "D07",
+  "generated_at": "2026-08-24T23:34:54.547Z",
+  "source_set_sha256": "b52e6019ce577e6427819c75ce81c9d04bbc32253583635a0206012c90e3683a",
+  "summary": {
+    "open_incidents": 7,
+    "unique_fingerprints": 7,
+    "no_open_incidents": false,
+    "triage_complete": true
+  },
+  "incidents": [
+    {
+      "schema_version": 1,
+      "routine_id": "D07",
+      "id": "D07:231400454bb45ed00c5d",
+      "isolation_key": "incident:231400454bb45ed00c5d1345c021e94aabfd52a0407adb99bd2367a190d407a2",
+      "incident_fingerprint": "231400454bb45ed00c5d1345c021e94aabfd52a0407adb99bd2367a190d407a2",
+      "detected_at": "2026-08-24T23:34:54.547Z",
+      "detection_fresh": true,
+      "severity": "medium",
+      "impact": [
+        "scheduled-configuration-does-not-prove-runtime-or-delivery"
+      ],
+      "affected_surface": "automation:scheduled-inventory",
+      "source_classification": "inventory_verified_delivery_unverified",
+      "evidence": {
+        "source_set_sha256": "b52e6019ce577e6427819c75ce81c9d04bbc32253583635a0206012c90e3683a",
+        "evidence_level": "canonical_registry_inventory"
+      },
+      "smallest_reversible_proposal": "Bind each scheduled card to current task metadata, runtime receipt, and declared delivery artifact.",
+      "outcome_state": "triaged_open",
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "restart_attempted": false,
+        "retry_attempted": false,
+        "checkpoint_advance_attempted": false,
+        "secret_access_attempted": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "D07",
+      "id": "D07:301f66110b58ec4e5933",
+      "isolation_key": "incident:301f66110b58ec4e5933e0e768566b0435804efb9dc77eb62ba4f3348e188c9b",
+      "incident_fingerprint": "301f66110b58ec4e5933e0e768566b0435804efb9dc77eb62ba4f3348e188c9b",
+      "detected_at": "2026-08-24T23:34:54.547Z",
+      "detection_fresh": true,
+      "severity": "high",
+      "impact": [
+        "connector-google_analytics-stale-or-unread",
+        "connector-google_search_console-stale-or-unread",
+        "connector-googleads-stale-or-unread",
+        "connector-hubspot-stale-or-unread",
+        "connector-meta_ads-stale-or-unread"
+      ],
+      "affected_surface": "automation:external-connectors",
+      "source_classification": "blocked_stale_connector_evidence",
+      "evidence": {
+        "source_set_sha256": "b52e6019ce577e6427819c75ce81c9d04bbc32253583635a0206012c90e3683a",
+        "evidence_level": "recorded-provider-readback"
+      },
+      "smallest_reversible_proposal": "Refresh each required connector through its exact supported account route before relying on it.",
+      "outcome_state": "triaged_open",
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "restart_attempted": false,
+        "retry_attempted": false,
+        "checkpoint_advance_attempted": false,
+        "secret_access_attempted": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "D07",
+      "id": "D07:ac2f257237d11e5dc646",
+      "isolation_key": "incident:ac2f257237d11e5dc6463ffa46018ca66e935c6ca434d5c7fcad222232f7e7cc",
+      "incident_fingerprint": "ac2f257237d11e5dc6463ffa46018ca66e935c6ca434d5c7fcad222232f7e7cc",
+      "detected_at": "2026-08-24T23:34:54.547Z",
+      "detection_fresh": true,
+      "severity": "medium",
+      "impact": [
+        "routine-health-monitor-is-stale"
+      ],
+      "affected_surface": "automation:legacy-routine-monitor",
+      "source_classification": "stale_legacy_monitor",
+      "evidence": {
+        "source_set_sha256": "b52e6019ce577e6427819c75ce81c9d04bbc32253583635a0206012c90e3683a",
+        "evidence_level": "generated-health-note"
+      },
+      "smallest_reversible_proposal": "Replace the April seed monitor with current task, runtime, and artifact evidence.",
+      "outcome_state": "triaged_open",
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "restart_attempted": false,
+        "retry_attempted": false,
+        "checkpoint_advance_attempted": false,
+        "secret_access_attempted": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "D07",
+      "id": "D07:ccfe7039c0d2f823269b",
+      "isolation_key": "incident:ccfe7039c0d2f823269bafb0e6e4b9a73d405b27728ad6da4e5b757320577d9e",
+      "incident_fingerprint": "ccfe7039c0d2f823269bafb0e6e4b9a73d405b27728ad6da4e5b757320577d9e",
+      "detected_at": "2026-08-24T23:34:54.547Z",
+      "detection_fresh": true,
+      "severity": "high",
+      "impact": [
+        "process-presence-does-not-prove-sustained-gateway-behavior"
+      ],
+      "affected_surface": "automation:hermes-gateway",
+      "source_classification": "degraded_stale_gateway",
+      "evidence": {
+        "source_set_sha256": "b52e6019ce577e6427819c75ce81c9d04bbc32253583635a0206012c90e3683a",
+        "evidence_level": "process-heartbeat-log-readback"
+      },
+      "smallest_reversible_proposal": "Request the existing scoped soft-restart gate, then prove heartbeat and log advancement before recovery.",
+      "outcome_state": "triaged_open",
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "restart_attempted": false,
+        "retry_attempted": false,
+        "checkpoint_advance_attempted": false,
+        "secret_access_attempted": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "D07",
+      "id": "D07:dee059bb2aae4972a679",
+      "isolation_key": "incident:dee059bb2aae4972a679dac36fb4bb0cb3043ac3f6b41adfa638a5ae486fc0e2",
+      "incident_fingerprint": "dee059bb2aae4972a679dac36fb4bb0cb3043ac3f6b41adfa638a5ae486fc0e2",
+      "detected_at": "2026-08-24T23:34:54.547Z",
+      "detection_fresh": true,
+      "severity": "medium",
+      "impact": [
+        "automation-status-note-is-stale"
+      ],
+      "affected_surface": "automation:legacy-automation-status",
+      "source_classification": "stale_legacy_status",
+      "evidence": {
+        "source_set_sha256": "b52e6019ce577e6427819c75ce81c9d04bbc32253583635a0206012c90e3683a",
+        "evidence_level": "historical-status-note"
+      },
+      "smallest_reversible_proposal": "Use current gateway health and runtime logs instead of the historical July status note.",
+      "outcome_state": "triaged_open",
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "restart_attempted": false,
+        "retry_attempted": false,
+        "checkpoint_advance_attempted": false,
+        "secret_access_attempted": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "D07",
+      "id": "D07:ef21b52444a9c79845ed",
+      "isolation_key": "incident:ef21b52444a9c79845edf47077af45ce78163d38dc4986dd59d83bfa1db4e61c",
+      "incident_fingerprint": "ef21b52444a9c79845edf47077af45ce78163d38dc4986dd59d83bfa1db4e61c",
+      "detected_at": "2026-08-24T23:34:54.547Z",
+      "detection_fresh": true,
+      "severity": "medium",
+      "impact": [
+        "checkpoint-file-does-not-cover-current-completed-routine-estate"
+      ],
+      "affected_surface": "automation:legacy-loop-checkpoint",
+      "source_classification": "partial_stale_checkpoint_surface",
+      "evidence": {
+        "source_set_sha256": "b52e6019ce577e6427819c75ce81c9d04bbc32253583635a0206012c90e3683a",
+        "evidence_level": "checkpoint-file-hash"
+      },
+      "smallest_reversible_proposal": "Do not advance it; migrate checkpoint truth to the routine-specific durable state store.",
+      "outcome_state": "triaged_open",
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "restart_attempted": false,
+        "retry_attempted": false,
+        "checkpoint_advance_attempted": false,
+        "secret_access_attempted": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "D07",
+      "id": "D07:efd52ace022a7a29abb0",
+      "isolation_key": "incident:efd52ace022a7a29abb0389b4b9f4aedc53f2ec60f5ed302d756181685d8308f",
+      "incident_fingerprint": "efd52ace022a7a29abb0389b4b9f4aedc53f2ec60f5ed302d756181685d8308f",
+      "detected_at": "2026-08-24T23:34:54.547Z",
+      "detection_fresh": true,
+      "severity": "high",
+      "impact": [
+        "24-receipts-do-not-prove-declared-artifacts"
+      ],
+      "affected_surface": "automation:legacy-loop-completion",
+      "source_classification": "degraded_false_completion_risk",
+      "evidence": {
+        "source_set_sha256": "b52e6019ce577e6427819c75ce81c9d04bbc32253583635a0206012c90e3683a",
+        "evidence_level": "receipt-and-declared-artifact-audit"
+      },
+      "smallest_reversible_proposal": "Keep structural-only receipts out of outcome dedupe until each routine has a durable source adapter.",
+      "outcome_state": "triaged_open",
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "restart_attempted": false,
+        "retry_attempted": false,
+        "checkpoint_advance_attempted": false,
+        "secret_access_attempted": false
+      }
+    }
+  ],
+  "no_incident_receipt": null,
+  "authority": {
+    "read_only": true,
+    "proposal_only": true,
+    "external_action_attempted": false,
+    "canonical_write_attempted": false,
+    "provider_mutation_attempted": false,
+    "restart_attempted": false,
+    "retry_attempted": false,
+    "checkpoint_advance_attempted": false,
+    "secret_access_attempted": false
+  }
+}

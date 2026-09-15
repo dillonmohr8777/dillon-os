@@ -1,0 +1,74 @@
+[
+  {
+    "campaign": {
+      "resourceName": "customers/1033715894/campaigns/22233329038",
+      "status": "PAUSED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "TARGET_SPEND",
+      "name": "Onsite Concrete & Landscape",
+      "id": "22233329038"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/1033715894/campaignBudgets/14318141220",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "14318141220",
+      "amountMicros": "7000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/1033715894/campaigns/22454241769",
+      "status": "PAUSED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "MAXIMIZE_CONVERSIONS",
+      "name": "Leads-Performance Max-1",
+      "id": "22454241769"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/1033715894/campaignBudgets/14484250490",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "14484250490",
+      "amountMicros": "5000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/1033715894/campaigns/23068725075",
+      "status": "ENABLED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "MAXIMIZE_CONVERSIONS",
+      "name": "LocalServicesCampaign:SystemGenerated:0006401c1fc27d91",
+      "id": "23068725075"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/1033715894/campaignBudgets/14982151864",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "14982151864",
+      "amountMicros": "80000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/1033715894/campaigns/24183437726",
+      "status": "ENABLED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "TARGET_SPEND",
+      "name": "Search | High Intent | Solano County | 2026-07-30",
+      "id": "24183437726"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/1033715894/campaignBudgets/15831011752",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "15831011752",
+      "amountMicros": "7000000"
+    }
+  }
+]

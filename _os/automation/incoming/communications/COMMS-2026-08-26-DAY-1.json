@@ -1,0 +1,85 @@
+{
+  "run_id": "COMMS-2026-08-26-DAY-1",
+  "run_at": "2026-08-26T07:04:34-04:00",
+  "status": "success",
+  "window": {
+    "started_at": "2026-08-05T07:05:03-04:00",
+    "ended_at": "2026-08-26T07:04:34-04:00",
+    "overlap_hours": 36
+  },
+  "connectors": {
+    "gmail": "ok",
+    "slack": "ok"
+  },
+  "items": [
+    {
+      "dedupe_key": "gmail:thread:1a0219ad3ad53df0",
+      "source_type": "gmail",
+      "source_ref": "gmail://thread/1a0219ad3ad53df0",
+      "occurred_at": "2026-08-25T22:03:23-07:00",
+      "participants": ["Nexla stakeholders"],
+      "kind": "decision",
+      "priority": "high",
+      "route": {"type": "client", "name": "Nexla", "path": "01_Clients/Nexla/overview.md"},
+      "summary": "Nexla approved a 2,000 USD starting Google Ads budget while requesting landing-page and conversion validation before launch.",
+      "evidence": "Hydrated thread confirms the budget discussion, audit delivery, and unpublished launch-preparation boundary.",
+      "uncertainty": "No publication or platform-change approval was recorded.",
+      "next_safe_action": "Keep the campaign unpublished and prepare a tracking and landing-page validation checklist.",
+      "write_targets": ["01_Clients/Nexla/overview.md"]
+    },
+    {
+      "dedupe_key": "gmail:message:1a03ba4718088732",
+      "source_type": "gmail",
+      "source_ref": "gmail://message/1a03ba4718088732",
+      "occurred_at": "2026-08-25T21:17:07-04:00",
+      "participants": ["BOK Law Firm stakeholders"],
+      "kind": "deliverable",
+      "priority": "normal",
+      "route": {"type": "client", "name": "BOK Law Firm", "path": "01_Clients/BOK Law Firm/overview.md"},
+      "summary": "The August 26 to 28 weekly social content pack was delivered to BOK stakeholders as an email attachment.",
+      "evidence": "Sent Gmail metadata identifies the weekly content delivery and the attached PDF artifact.",
+      "uncertainty": "Recipient review or publication status is not established by this delivery record.",
+      "next_safe_action": "Record delivery for follow-up; do not publish or resend without separate approval.",
+      "write_targets": ["01_Clients/BOK Law Firm/overview.md"]
+    },
+    {
+      "dedupe_key": "gmail:thread:19e890b2df4eb09f",
+      "source_type": "gmail",
+      "source_ref": "gmail://thread/19e890b2df4eb09f",
+      "occurred_at": "2026-08-24T16:44:55-04:00",
+      "participants": ["Bercos Popcorn stakeholders"],
+      "kind": "client-change",
+      "priority": "normal",
+      "route": {"type": "client", "name": "Bercos Popcorn", "path": "01_Clients/Bercos Popcorn/overview.md"},
+      "summary": "Bercos Popcorn reported that the site is live and stakeholders began coordinating a follow-up call.",
+      "evidence": "Hydrated thread contains the live-site update and scheduling exchange.",
+      "uncertainty": "The thread does not verify production QA or the follow-up call outcome.",
+      "next_safe_action": "Verify the live site and capture the agreed follow-up outcome in the client record.",
+      "write_targets": ["01_Clients/Bercos Popcorn/overview.md"]
+    },
+    {
+      "dedupe_key": "gmail:thread:19fa4cb8f6812394",
+      "source_type": "gmail",
+      "source_ref": "gmail://thread/19fa4cb8f6812394",
+      "occurred_at": "2026-08-24T15:53:44-04:00",
+      "participants": ["BigOrange Marketing stakeholders"],
+      "kind": "deliverable",
+      "priority": "normal",
+      "route": {"type": "client", "name": "BigOrange Marketing", "path": "01_Clients/BigOrange Marketing/overview.md"},
+      "summary": "Two private WordPress directions for the custom-home-builder authority hub were completed and prepared for stakeholder review.",
+      "evidence": "Hydrated thread confirms both directions were built inside the BigOrange account and a review artifact was attached.",
+      "uncertainty": "No stakeholder approval or public publication is recorded.",
+      "next_safe_action": "Request or record stakeholder direction after review; keep both directions private.",
+      "write_targets": ["01_Clients/BigOrange Marketing/overview.md"]
+    }
+  ],
+  "excluded_counts": {
+    "newsletter_or_promotion": 18,
+    "bot_or_notification_noise": 23,
+    "routine_or_duplicate": 44
+  },
+  "checkpoints": {
+    "gmail": "2026-08-26T07:04:34-04:00",
+    "slack": "1787742274.000000"
+  }
+}

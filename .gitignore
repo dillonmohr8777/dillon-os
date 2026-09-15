@@ -61,3 +61,11 @@ automation/*/font-cache/
 automation/*/.impeccable/
 automation/*/*.log
 automation/*/latest-daily-state.json
+
+# managed-agents bridge runtime state
+_os/automation/bridge/bridge.sqlite*
+_os/automation/bridge/deliveries/
+
+# weekly-images: generated PNGs are regenerable client renders, not source.
+# Ledger rows (sha256/path/cost) are the durable record; keep the bytes local.
+_os/automation/weekly-images/out/

@@ -1,0 +1,137 @@
+{
+  "sourceUrl": "https://kitaylegal.com/",
+  "finalUrl": "https://kitaylegal.com/",
+  "sourceDomain": "kitaylegal.com",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=UTF-8",
+  "pageSha256": "63fe7cde8d5c42e487fb3ea3c6f3d6cf218f3f27188c220254908eed609606ac",
+  "title": "Kitay Law Offices - Personal Injury & Workers' Compensation Lawyer in PA",
+  "description": "Kitay Law Offices in Wyomissing, Allentown, Chambersburg, Kennett Square, Hazelton, and Philadelphia. Call for a free consultation!",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "kitay",
+      "law",
+      "offices"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260826-052002\\preflight\\kitay-law-offices\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://kitaylegal.com/wp-content/uploads/2020/10/Kitay-Law-Offices-Media-Logos-Desktop-Transparent-Darker.png",
+    "sourceEvidence": "IMG kitay law offices featured media logos",
+    "type": "png",
+    "dimensions": {
+      "width": 769,
+      "height": 454
+    },
+    "sha256": "6eb18b39afbed18896ebb0ac12f8d7aafaa8a8ed312cc069df098f3445ffa44a",
+    "sourceSha256": "e8459ed57455fd968dd8de8b65b097128a51a44421d9b485da1a7ddacb96f8bd",
+    "sourceType": "png",
+    "sourceFileName": "logo-source.png",
+    "transformation": "flat border color #47704c removed with deterministic FFmpeg colorkey; geometry unchanged",
+    "borderSpread": 0,
+    "alpha": {
+      "ok": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "alphaAverage": 38.3039,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 95053
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260826-052002\\preflight\\kitay-law-offices\\reference-1.jpg",
+      "fileName": "reference-1.jpg",
+      "sourceUrl": "https://kitaylegal.com/wp-content/uploads/2025/10/Kitay-Law-Offices-Law-Firm-Group-Photo-2025.jpg",
+      "sourceEvidence": "og:image",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 1125,
+        "width": 2000
+      },
+      "sha256": "cae3834ee88a2f5a1d1cee1e3eaca406312192f58b2b21e4af949e07793bf2d9",
+      "bytes": 221487,
+      "visual": {
+        "ok": true,
+        "lumaRange": 255,
+        "chromaURange": 98,
+        "chromaVRange": 87,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260826-052002\\preflight\\kitay-law-offices\\reference-2.jpg",
+      "fileName": "reference-2.jpg",
+      "sourceUrl": "https://kitaylegal.com/wp-content/uploads/2017/06/Ken-Banner-V6-TEST-1.jpg",
+      "sourceEvidence": "CSS image URL",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 842,
+        "width": 1799
+      },
+      "sha256": "15b268bce87e61e971f5ecdb89deb344eb45a588441f5dd1230062fd1da329da",
+      "bytes": 27464,
+      "visual": {
+        "ok": true,
+        "lumaRange": 239,
+        "chromaURange": 79,
+        "chromaVRange": 97,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260826-052002\\preflight\\kitay-law-offices\\reference-3.webp",
+      "fileName": "reference-3.webp",
+      "sourceUrl": "https://kitaylegal.com/wp-content/uploads/2020/01/Car-Accident-Lawyers-in-Pennsylvania-Kitay-Law-Offices-700x400.jpg.webp",
+      "sourceEvidence": "IMG personal injury lawyers in pennsylvania",
+      "type": "webp",
+      "dimensions": {
+        "width": 700,
+        "height": 400
+      },
+      "sha256": "675e6b5fff8f7073e726fe1299527e9f35063b9b0ead12798d7701a7be70ba37",
+      "bytes": 22980,
+      "visual": {
+        "ok": true,
+        "lumaRange": 240,
+        "chromaURange": 48,
+        "chromaVRange": 75,
+        "reason": null
+      }
+    }
+  ],
+  "contact": {
+    "phone": "+18885482952",
+    "address": "",
+    "city": "",
+    "phoneSource": "official tel link",
+    "addressSource": null
+  },
+  "visualReferenceFallback": null,
+  "referenceFailures": [
+    {
+      "url": "https://kitaylegal.com/2000",
+      "reason": "HTTP 403; curl: curl: (22) The requested URL returned error: 404"
+    },
+    {
+      "url": "https://kitaylegal.com/1125",
+      "reason": "HTTP 403; curl: curl: (22) The requested URL returned error: 404"
+    },
+    {
+      "url": "https://kitaylegal.com/image/jpeg",
+      "reason": "HTTP 403; curl: curl: (22) The requested URL returned error: 404"
+    }
+  ],
+  "brandColors": [
+    "#722032",
+    "#003399",
+    "#abb8c3",
+    "#f78da7",
+    "#cf2e2e"
+  ],
+  "checkedAt": "2026-08-26T09:35:06.504Z"
+}

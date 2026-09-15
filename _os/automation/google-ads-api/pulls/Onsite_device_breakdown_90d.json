@@ -1,0 +1,162 @@
+[
+  {
+    "campaign": {
+      "resourceName": "customers/1033715894/campaigns/22233329038",
+      "name": "Onsite Concrete & Landscape",
+      "id": "22233329038"
+    },
+    "metrics": {
+      "clicks": "2",
+      "conversions": 0,
+      "costMicros": "254710",
+      "impressions": "107"
+    },
+    "segments": {
+      "device": "OTHER"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/1033715894/campaigns/22233329038",
+      "name": "Onsite Concrete & Landscape",
+      "id": "22233329038"
+    },
+    "metrics": {
+      "clicks": "15",
+      "conversions": 0,
+      "costMicros": "3930249",
+      "impressions": "422"
+    },
+    "segments": {
+      "device": "DESKTOP"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/1033715894/campaigns/22233329038",
+      "name": "Onsite Concrete & Landscape",
+      "id": "22233329038"
+    },
+    "metrics": {
+      "clicks": "1317",
+      "conversions": 6,
+      "costMicros": "212183467",
+      "impressions": "48490"
+    },
+    "segments": {
+      "device": "MOBILE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/1033715894/campaigns/22233329038",
+      "name": "Onsite Concrete & Landscape",
+      "id": "22233329038"
+    },
+    "metrics": {
+      "clicks": "474",
+      "conversions": 0,
+      "costMicros": "66575532",
+      "impressions": "16885"
+    },
+    "segments": {
+      "device": "TABLET"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/1033715894/campaigns/22454241769",
+      "name": "Leads-Performance Max-1",
+      "id": "22454241769"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "160000",
+      "impressions": "34"
+    },
+    "segments": {
+      "device": "DESKTOP"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/1033715894/campaigns/22454241769",
+      "name": "Leads-Performance Max-1",
+      "id": "22454241769"
+    },
+    "metrics": {
+      "clicks": "432",
+      "conversions": 71,
+      "costMicros": "196930367",
+      "impressions": "3141"
+    },
+    "segments": {
+      "device": "MOBILE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/1033715894/campaigns/22454241769",
+      "name": "Leads-Performance Max-1",
+      "id": "22454241769"
+    },
+    "metrics": {
+      "clicks": "5",
+      "conversions": 1,
+      "costMicros": "4015340",
+      "impressions": "26"
+    },
+    "segments": {
+      "device": "TABLET"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/1033715894/campaigns/24183437726",
+      "name": "Search | High Intent | Solano County | 2026-07-30",
+      "id": "24183437726"
+    },
+    "metrics": {
+      "clicks": "2",
+      "conversions": 0,
+      "costMicros": "6400000",
+      "impressions": "2"
+    },
+    "segments": {
+      "device": "DESKTOP"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/1033715894/campaigns/24183437726",
+      "name": "Search | High Intent | Solano County | 2026-07-30",
+      "id": "24183437726"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "5"
+    },
+    "segments": {
+      "device": "MOBILE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/1033715894/campaigns/24183437726",
+      "name": "Search | High Intent | Solano County | 2026-07-30",
+      "id": "24183437726"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "device": "TABLET"
+    }
+  }
+]

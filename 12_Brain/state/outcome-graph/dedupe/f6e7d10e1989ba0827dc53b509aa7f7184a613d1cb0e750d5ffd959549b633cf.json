@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "graph_id": "daily-d24-independent-qa-shadow",
+  "dedupe_key": "D24:2026-08-24:source-bound-shadow",
+  "dedupe_identity": "f6e7d10e1989ba0827dc53b509aa7f7184a613d1cb0e750d5ffd959549b633cf",
+  "contract_fingerprint": "3b0748ae7f05b85da7e4f1570635b1e629c53d7b60eb24dfd6e78c4506ef6b8b",
+  "canonical_binding": {
+    "locator": "dillon-os://routine/D24/2026-08-24",
+    "version": "2026-08-24:e1cb9e89.05e6a21e.c5a7c091.1b135970.d503a937.90d9bcee.f497ab86.4cbc7e46.43cfa9c9.c4f66a74",
+    "sha256": "bee6d7037763d45601274702c12c8e31ad280fed7e97757744fc5930b1d39065",
+    "captured_at": "2026-08-24T23:49:17.050Z"
+  },
+  "canonical_binding_fingerprint": "1e48f0b5a89453aaca88e574ffb23e380026407b11f2b1e7186d0e4e2354dca8",
+  "status": "complete",
+  "run_id": "OGD-20260824-C0E82BC36886",
+  "checkpoint": {
+    "path": "runs/OGD-20260824-C0E82BC36886/checkpoint.json"
+  },
+  "created_at": "2026-08-24T23:49:17.778Z",
+  "updated_at": "2026-08-24T23:49:19.462Z",
+  "state_revision": 9,
+  "previous_state_sha256": "212cd554ac1f5140acac5661c0875ef0b1101eab22c246c3436bab555a713b14",
+  "completed_at": "2026-08-24T23:49:19.462Z",
+  "receipt": {
+    "path": "runs/OGD-20260824-C0E82BC36886/receipt.json",
+    "sha256": "1e978bc468fd71bf1c8bf948e48770439b232b18606cc1d9025798cde7d219d5",
+    "bytes": 12851
+  }
+}

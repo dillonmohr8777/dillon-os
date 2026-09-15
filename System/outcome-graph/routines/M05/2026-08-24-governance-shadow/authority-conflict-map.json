@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "routine_id": "M05",
+  "generated_at": "2026-08-25T00:36:59.945Z",
+  "source_set_sha256": "a3c86d4d760e9e2e952b65eacafa75aed1aabf3b9fff94e40840d045d92e2fa5",
+  "conflicts": [
+    {
+      "rule_id": "M05:missing-visual-direction-output",
+      "authority_layer": "project VISUALIZE-RECEIPT.md and .impeccable/mocks",
+      "conflict": "The receipt names a hashed direction image that is not present at its declared project path.",
+      "proposal": "Regenerate the direction image through the supported visualize flow or mark the receipt superseded; never treat the missing file as inspected authority."
+    }
+  ],
+  "alignments": [
+    "M05:synthetic-review-production-boundary",
+    "M05:windows-design-preflight-regression",
+    "M05:prospect-radar-seed-state"
+  ],
+  "generated_sidecar_changes": 0,
+  "silent_overwrites": 0,
+  "authority": {
+    "read_only": true,
+    "proposal_only": true,
+    "external_action_attempted": false,
+    "canonical_write_attempted": false,
+    "provider_mutation_attempted": false,
+    "permission_change_attempted": false,
+    "deletion_attempted": false,
+    "schedule_change_attempted": false,
+    "billing_change_attempted": false,
+    "record_move_attempted": false
+  }
+}

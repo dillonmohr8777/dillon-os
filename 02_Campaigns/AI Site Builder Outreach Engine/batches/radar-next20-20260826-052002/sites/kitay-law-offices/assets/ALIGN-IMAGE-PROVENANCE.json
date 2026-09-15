@@ -1,0 +1,245 @@
+{
+  "schema": 1,
+  "business": "Kitay Law Offices",
+  "domain": "kitaylegal.com",
+  "route": "sites/kitay-law-offices/",
+  "generatedAt": "2026-08-26T10:12:45.0090088Z",
+  "generator": "Align HCM Image Gen plugin contract",
+  "model": "gpt-image-2.0",
+  "board": {
+    "key": "kitay-law-offices",
+    "descriptor": "lawyer",
+    "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Kitay Law Offices. Four distinct but cohesive unlabelled panels in a generic plaintiff-side legal practice: an attorney listening attentively to an adult client in a quiet office from a non-identifying angle; hands organizing a neutral case file, notebook, and reading glasses; a lawyer walking toward an anonymous civic building with no signage; a collaborative desk scene with counsel explaining a simple paper timeline whose text cannot be read. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+    "sourceOutput": "C:/Users/dillo/.codex/generated_images/01a03d5e-c09f-74a0-b82e-14ad3c549703/exec-284bb951-6bb2-4a0d-b1cc-2187a66d3271.png",
+    "file": "automation/prospect-radar-next20/generated-stock-library/kitay-law-offices.png",
+    "sha256": "eeeb9ba62dc1ed72d50d9acc29f76a5b63076bafaf1e86da156d397ea8df7c1a",
+    "dimensions": {
+      "width": 1448,
+      "height": 1086
+    }
+  },
+  "treatment": {
+    "palette": [
+      "#F05A28",
+      "#FF6B35",
+      "#0B1D2D",
+      "#071521",
+      "#F4EFE7",
+      "#EAF6FC",
+      "#91D5ED"
+    ],
+    "imageGrain": "Visible refined 35mm film grain authored in the generated board and preserved in every derivative.",
+    "interfaceGrain": {
+      "file": "grain.svg",
+      "sha256": "f8b8b72ee2a84cf2aaa04ce069edaaa459ee61650e76f307254572db67efb813",
+      "opacity": 0.13
+    },
+    "disclosure": "Illustrative generated imagery. These concept visuals do not depict the business, its staff, customers, facility, products, projects, or outcomes."
+  },
+  "outputs": [
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "kitay-law-offices",
+      "boardDescriptor": "lawyer",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/kitay-law-offices.png",
+      "sourceSha256": "eeeb9ba62dc1ed72d50d9acc29f76a5b63076bafaf1e86da156d397ea8df7c1a",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Kitay Law Offices. Four distinct but cohesive unlabelled panels in a generic plaintiff-side legal practice: an attorney listening attentively to an adult client in a quiet office from a non-identifying angle; hands organizing a neutral case file, notebook, and reading glasses; a lawyer walking toward an anonymous civic building with no signage; a collaborative desk scene with counsel explaining a simple paper timeline whose text cannot be read. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=0.940:contrast=1.010:brightness=0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "5b68ac5ee5a9566782a7ce69b9a028c7af29311b31674ca6ddee4ad268522b98",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "kitay-law-offices",
+      "boardDescriptor": "lawyer",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/kitay-law-offices.png",
+      "sourceSha256": "eeeb9ba62dc1ed72d50d9acc29f76a5b63076bafaf1e86da156d397ea8df7c1a",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Kitay Law Offices. Four distinct but cohesive unlabelled panels in a generic plaintiff-side legal practice: an attorney listening attentively to an adult client in a quiet office from a non-identifying angle; hands organizing a neutral case file, notebook, and reading glasses; a lawyer walking toward an anonymous civic building with no signage; a collaborative desk scene with counsel explaining a simple paper timeline whose text cannot be read. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:28,eq=saturation=0.965:contrast=1.064:brightness=-0.018,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "9e78bbcfb5db7a65bca8f44a8b3344c9f983a53be5ec67ec384caef179fae03b",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "kitay-law-offices",
+      "boardDescriptor": "lawyer",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/kitay-law-offices.png",
+      "sourceSha256": "eeeb9ba62dc1ed72d50d9acc29f76a5b63076bafaf1e86da156d397ea8df7c1a",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Kitay Law Offices. Four distinct but cohesive unlabelled panels in a generic plaintiff-side legal practice: an attorney listening attentively to an adult client in a quiet office from a non-identifying angle; hands organizing a neutral case file, notebook, and reading glasses; a lawyer walking toward an anonymous civic building with no signage; a collaborative desk scene with counsel explaining a simple paper timeline whose text cannot be read. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:56,eq=saturation=0.990:contrast=1.028:brightness=-0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "4afc61356583643e6952a911a8462fa71c3fc00e4c06d9fddb98c3fef1068306",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "kitay-law-offices",
+      "boardDescriptor": "lawyer",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/kitay-law-offices.png",
+      "sourceSha256": "eeeb9ba62dc1ed72d50d9acc29f76a5b63076bafaf1e86da156d397ea8df7c1a",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Kitay Law Offices. Four distinct but cohesive unlabelled panels in a generic plaintiff-side legal practice: an attorney listening attentively to an adult client in a quiet office from a non-identifying angle; hands organizing a neutral case file, notebook, and reading glasses; a lawyer walking toward an anonymous civic building with no signage; a collaborative desk scene with counsel explaining a simple paper timeline whose text cannot be read. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=1.015:contrast=1.082:brightness=0.000,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "449547e0054c6f1d8e9210ae08623c7ee4fc8d6fc357189d717fe810006e6905",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "kitay-law-offices",
+      "boardDescriptor": "lawyer",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/kitay-law-offices.png",
+      "sourceSha256": "eeeb9ba62dc1ed72d50d9acc29f76a5b63076bafaf1e86da156d397ea8df7c1a",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Kitay Law Offices. Four distinct but cohesive unlabelled panels in a generic plaintiff-side legal practice: an attorney listening attentively to an adult client in a quiet office from a non-identifying angle; hands organizing a neutral case file, notebook, and reading glasses; a lawyer walking toward an anonymous civic building with no signage; a collaborative desk scene with counsel explaining a simple paper timeline whose text cannot be read. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:28,eq=saturation=1.040:contrast=1.046:brightness=0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "85a1f069fdab837bf125530fb8969c28e597a36e96516eef7503e632c8bef9a5",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "kitay-law-offices",
+      "boardDescriptor": "lawyer",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/kitay-law-offices.png",
+      "sourceSha256": "eeeb9ba62dc1ed72d50d9acc29f76a5b63076bafaf1e86da156d397ea8df7c1a",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Kitay Law Offices. Four distinct but cohesive unlabelled panels in a generic plaintiff-side legal practice: an attorney listening attentively to an adult client in a quiet office from a non-identifying angle; hands organizing a neutral case file, notebook, and reading glasses; a lawyer walking toward an anonymous civic building with no signage; a collaborative desk scene with counsel explaining a simple paper timeline whose text cannot be read. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:56,eq=saturation=0.940:contrast=1.010:brightness=-0.018,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "c1221c6702aeb92043685b85bd78ee2d24f6337a80d063e477eb82c5f607b81e",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "kitay-law-offices",
+      "boardDescriptor": "lawyer",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/kitay-law-offices.png",
+      "sourceSha256": "eeeb9ba62dc1ed72d50d9acc29f76a5b63076bafaf1e86da156d397ea8df7c1a",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Kitay Law Offices. Four distinct but cohesive unlabelled panels in a generic plaintiff-side legal practice: an attorney listening attentively to an adult client in a quiet office from a non-identifying angle; hands organizing a neutral case file, notebook, and reading glasses; a lawyer walking toward an anonymous civic building with no signage; a collaborative desk scene with counsel explaining a simple paper timeline whose text cannot be read. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:0,eq=saturation=0.965:contrast=1.064:brightness=-0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "c104257935904a7ad2a21731071866f3daf15551db0dc12335fc7769228b221d",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "kitay-law-offices",
+      "boardDescriptor": "lawyer",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/kitay-law-offices.png",
+      "sourceSha256": "eeeb9ba62dc1ed72d50d9acc29f76a5b63076bafaf1e86da156d397ea8df7c1a",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Kitay Law Offices. Four distinct but cohesive unlabelled panels in a generic plaintiff-side legal practice: an attorney listening attentively to an adult client in a quiet office from a non-identifying angle; hands organizing a neutral case file, notebook, and reading glasses; a lawyer walking toward an anonymous civic building with no signage; a collaborative desk scene with counsel explaining a simple paper timeline whose text cannot be read. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:28,eq=saturation=0.990:contrast=1.028:brightness=0.000,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "642d51a1e6530dd368d8fac31fff934139ab838cb56db2cf6e053efd0459952d",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "kitay-law-offices",
+      "boardDescriptor": "lawyer",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/kitay-law-offices.png",
+      "sourceSha256": "eeeb9ba62dc1ed72d50d9acc29f76a5b63076bafaf1e86da156d397ea8df7c1a",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Kitay Law Offices. Four distinct but cohesive unlabelled panels in a generic plaintiff-side legal practice: an attorney listening attentively to an adult client in a quiet office from a non-identifying angle; hands organizing a neutral case file, notebook, and reading glasses; a lawyer walking toward an anonymous civic building with no signage; a collaborative desk scene with counsel explaining a simple paper timeline whose text cannot be read. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:56,eq=saturation=1.015:contrast=1.082:brightness=0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "ad5185de62cc1ed4a5141d1765d2dbc4e733df693b94e1f9ad3df9d04d579a60",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "kitay-law-offices",
+      "boardDescriptor": "lawyer",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/kitay-law-offices.png",
+      "sourceSha256": "eeeb9ba62dc1ed72d50d9acc29f76a5b63076bafaf1e86da156d397ea8df7c1a",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Kitay Law Offices. Four distinct but cohesive unlabelled panels in a generic plaintiff-side legal practice: an attorney listening attentively to an adult client in a quiet office from a non-identifying angle; hands organizing a neutral case file, notebook, and reading glasses; a lawyer walking toward an anonymous civic building with no signage; a collaborative desk scene with counsel explaining a simple paper timeline whose text cannot be read. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:0,eq=saturation=1.040:contrast=1.046:brightness=-0.018,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "458e2504ff440eaaf746cb0ff6582ba2f89bb94ea0fd2038f995240a53fbe1e5",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "kitay-law-offices",
+      "boardDescriptor": "lawyer",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/kitay-law-offices.png",
+      "sourceSha256": "eeeb9ba62dc1ed72d50d9acc29f76a5b63076bafaf1e86da156d397ea8df7c1a",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Kitay Law Offices. Four distinct but cohesive unlabelled panels in a generic plaintiff-side legal practice: an attorney listening attentively to an adult client in a quiet office from a non-identifying angle; hands organizing a neutral case file, notebook, and reading glasses; a lawyer walking toward an anonymous civic building with no signage; a collaborative desk scene with counsel explaining a simple paper timeline whose text cannot be read. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:28,eq=saturation=0.940:contrast=1.010:brightness=-0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "7ec50d40305380ceba75edb2f1e36b880618c76e8514fb115fef620310a3f0a5",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "kitay-law-offices",
+      "boardDescriptor": "lawyer",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/kitay-law-offices.png",
+      "sourceSha256": "eeeb9ba62dc1ed72d50d9acc29f76a5b63076bafaf1e86da156d397ea8df7c1a",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Kitay Law Offices. Four distinct but cohesive unlabelled panels in a generic plaintiff-side legal practice: an attorney listening attentively to an adult client in a quiet office from a non-identifying angle; hands organizing a neutral case file, notebook, and reading glasses; a lawyer walking toward an anonymous civic building with no signage; a collaborative desk scene with counsel explaining a simple paper timeline whose text cannot be read. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:56,eq=saturation=0.965:contrast=1.064:brightness=0.000,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "0b76534b9b84fa6da33f358a5d925dcd413f9a221c1cf3366437c92e08564a5f",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    }
+  ]
+}

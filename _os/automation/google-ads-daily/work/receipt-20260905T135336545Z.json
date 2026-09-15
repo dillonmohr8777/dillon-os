@@ -1,0 +1,16 @@
+{
+ "wakeId":"heartbeat:20260905T135336545Z",
+ "identities":{"gmail":"expected account verified","slack":"Momentum workspace and Dillon profile verified"},
+ "window":{"afterUnix":1788614215,"beforeUnix":1788616439,"overlapSeconds":900},
+ "sources":{"gmail":{"pages":1,"messages":3,"new":3,"paginationExhausted":true},"slack":{"pages":1,"messages":4,"new":0,"paginationExhausted":true}},
+ "interpretation":"Three promotional/news/social email notifications suppressed; four Slack empty bot messages already known. No new business asks.",
+ "daily":{"googleAdsReport":"blocked after parent-reviewed partial worker completion","leadTable":"already attempted today; unchanged gap not repeated","bedtime":"not due","predictions":"not due"},
+ "worker":{"id":"/root/active_ads_review","status":"completed-partial","interruptedAfterCompletion":true,"parentReadAllThreeReceipts":true,"parentReadRendererContract":true,"htmlPdfProduced":false,"allQualifiedOutcomesNull":true},
+ "gaps":["Renderer only accepts September4 baseline; date/input/output contract requires extension without overwriting baseline","Missing 28-day/prior comparisons","Nexla Brand and complete campaign pagination missing","Business outcome reconciliation pending"],
+ "sourceAccess":"Google Ads browser worked; unsupported Chrome visibility option corrected, not treated as access failure",
+ "newWorkerDispatches":0,
+ "externalMutations":false,
+ "rawCommunicationsStored":false,
+ "decision":"NOTIFY",
+ "reason":"First daily report attempt finished with verified partial receipts but no requested HTML/PDF; new technical and coverage gap."
+}

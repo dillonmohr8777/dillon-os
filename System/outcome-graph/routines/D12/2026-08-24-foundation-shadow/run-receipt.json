@@ -1,0 +1,295 @@
+{
+  "run_id": "OGD-20260824-FF87593F7F21",
+  "graph_id": "daily-d12-repository-preflight-shadow",
+  "objective": "Bind Outcome Graph implementation to the exact Dillon OS repository, branch, rules, dirty-tree boundary, and local-only deployment state.",
+  "value_signal": "The target and unrelated existing work are separated before edits and no destructive worktree action occurs.",
+  "contract_sha256": "4bcc65be222523ddd38624c8382c085f0100c97bf46677c9ae1ab03e6ea900ee",
+  "started_at": "2026-08-24T23:48:58.884Z",
+  "source_evidence": "The exact objective, registry, git state, rules, product/design documents, design probe, and W05 receipt are recollected before planning and at terminal verification.",
+  "finish_line": "Repository identity, branch, HEAD, remote, applicable rules, intended paths, unrelated dirty paths, and deployment boundary reproduce exactly without mutation.",
+  "governance": {
+    "orchestrator": "Codex acting as Marketing Chief",
+    "canonical_state": "The exact user objective, Dillon OS registry and rules, repository state, product/design authority, and W05 durable evidence remain canonical and read only.",
+    "dedupe_key": "D12:2026-08-24:source-bound-shadow",
+    "checkpoint": "System/outcome-graph/routines/D12/2026-08-24-foundation-shadow/run-receipt.json",
+    "rollback": "Discard foundation shadow artifacts; preserve the worktree, product/design truth, deployment state, canonical queue, and external systems unchanged.",
+    "escalation": "Return exact scope, repository, design-context, build-gate, QA, delivery, or authority evidence to Marketing Chief."
+  },
+  "graph_iterations": [
+    {
+      "iteration": 1,
+      "status": "verified",
+      "planner": {
+        "evidence": "Collected 1 isolated D12 item(s) from source set bee6d7037763d45601274702c12c8e31ad280fed7e97757744fc5930b1d39065.",
+        "item_count": 1,
+        "plan_signature": "542f95e23e9b0d56d4ff78733165adae2cf2b09775834fcb86c7fa4a9caf0d0b",
+        "items": [
+          {
+            "id": "D12:vault-live-2026-08-07:0558f09029a7",
+            "isolation_key": "repo:9cd0e1a2404d42a7b677:vault-live-2026-08-07",
+            "input_fingerprint": "75b5fd02fe3f64d4ab5f5643558edebfa1bf4f9c11f6a8de702dbccea35647b2",
+            "task": null
+          }
+        ]
+      },
+      "workers": [
+        {
+          "item_id": "D12:vault-live-2026-08-07:0558f09029a7",
+          "input_fingerprint": "75b5fd02fe3f64d4ab5f5643558edebfa1bf4f9c11f6a8de702dbccea35647b2",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-FF87593F7F21:406080ba5bee15a1f6b0:attempt:1",
+              "maker_evidence": "Built one privacy-safe D12 record for D12:vault-live-2026-08-07:0558f09029a7.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D12/2026-08-24-foundation-shadow/workers/406080ba5bee15a1f6b0.json",
+                  "sha256": "db3ae416a536354b0d14f670bcda6a70280e9614893abce95ee2df2ada729aff",
+                  "bytes": 22320
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D12:vault-live-2026-08-07:0558f09029a7 from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D12/2026-08-24-foundation-shadow/workers/406080ba5bee15a1f6b0.json",
+              "sha256": "db3ae416a536354b0d14f670bcda6a70280e9614893abce95ee2df2ada729aff",
+              "bytes": 22320
+            }
+          ],
+          "isolation_id": "OGD-20260824-FF87593F7F21:406080ba5bee15a1f6b0:attempt:1"
+        }
+      ],
+      "reduction": {
+        "evidence": "Reduced all checked D12 records without blending isolation keys.",
+        "artifacts": [
+          {
+            "path": "System/outcome-graph/routines/D12/2026-08-24-foundation-shadow/preflight-receipt.json",
+            "sha256": "e1f37605b4aed8cc3b61d9a0d1162ca7faf0f87da538d9efb0e9487c851ea8f9",
+            "bytes": 22366
+          },
+          {
+            "path": "System/outcome-graph/routines/D12/2026-08-24-foundation-shadow/worktree-evidence.json",
+            "sha256": "5287d5ba01dfc6ecba5eb98f593bcea24ce88512230edbf53d5a4cc66ed82e17",
+            "bytes": 21854
+          }
+        ]
+      },
+      "terminal_verification": {
+        "evidence": "Recollected and independently verified all D12 sources, records, negative states, and artifact hashes.",
+        "declared_pass": true,
+        "passed": true,
+        "assertions": [
+          {
+            "id": "source-manifest-stable",
+            "passed": true,
+            "detail": "Every named source remains hash-bound at terminal verification."
+          },
+          {
+            "id": "every-isolated-item-reconstructed-exactly-once",
+            "passed": true,
+            "detail": "Every in-scope item has one collision-resistant reconstructed record."
+          },
+          {
+            "id": "reducer-output-reproduces-exactly",
+            "passed": true,
+            "detail": "Final artifacts reproduce exactly from current sources and the frozen evaluation clock."
+          },
+          {
+            "id": "repository-branch-and-root-exact",
+            "passed": true,
+            "detail": "Root, remote, branch, and HEAD are resolved."
+          },
+          {
+            "id": "project-rules-loaded",
+            "passed": true,
+            "detail": "Applicable project rules are source-bound."
+          },
+          {
+            "id": "dirty-paths-classified",
+            "passed": true,
+            "detail": "Intended and unrelated existing work are separated."
+          },
+          {
+            "id": "deployment-mapping-verified-when-relevant",
+            "passed": true,
+            "detail": "The shadow deployment boundary is exact."
+          },
+          {
+            "id": "no-destructive-worktree-action",
+            "passed": true,
+            "detail": "No reset, discard, move, or deletion occurred."
+          },
+          {
+            "id": "privacy-and-no-mutation-boundary",
+            "passed": true,
+            "detail": "Final artifacts are redacted and attest no external, canonical, provider, restart, or checkpoint mutation."
+          }
+        ],
+        "artifact_manifest": [
+          {
+            "path": "System/outcome-graph/routines/D12/2026-08-24-foundation-shadow/preflight-receipt.json",
+            "sha256": "e1f37605b4aed8cc3b61d9a0d1162ca7faf0f87da538d9efb0e9487c851ea8f9",
+            "bytes": 22366
+          },
+          {
+            "path": "System/outcome-graph/routines/D12/2026-08-24-foundation-shadow/worktree-evidence.json",
+            "sha256": "5287d5ba01dfc6ecba5eb98f593bcea24ce88512230edbf53d5a4cc66ed82e17",
+            "bytes": 21854
+          }
+        ],
+        "manifest_errors": []
+      },
+      "learning": {
+        "evidence": "Appended one hashed D12 correction entry.",
+        "corrections": [
+          "Retain D12 source bindings, negative states, exact authority, and terminal assertions until the underlying evidence changes."
+        ],
+        "ledger": "System/outcome-graph/routines/D12/2026-08-24-foundation-shadow/corrections.jsonl",
+        "ledger_receipt": {
+          "locator": "System/outcome-graph/routines/D12/2026-08-24-foundation-shadow/corrections.jsonl",
+          "entry_sha256": "8a20a914059f9cff26893ea9da0149b7debeff97294790684629d4a4f3db9c39"
+        }
+      }
+    }
+  ],
+  "invocation_log": [
+    {
+      "adapter": "source-bound-d12-planner",
+      "invoked_at": "2026-08-24T23:48:58.900Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d12-maker",
+      "invoked_at": "2026-08-24T23:48:59.303Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d12-checker",
+      "invoked_at": "2026-08-24T23:48:59.685Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d12-reducer",
+      "invoked_at": "2026-08-24T23:49:00.115Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d12-terminal-verifier",
+      "invoked_at": "2026-08-24T23:49:00.142Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d12-learner",
+      "invoked_at": "2026-08-24T23:49:00.543Z",
+      "status": "returned"
+    }
+  ],
+  "budget": {
+    "limit_units": 96,
+    "used_units": 6
+  },
+  "outcome": "complete",
+  "terminal_truth": true,
+  "finished_at": "2026-08-24T23:49:00.565Z",
+  "elapsed_seconds": 1.681,
+  "blocked_by": null,
+  "reason": "Finish line is proven by an independent terminal verifier.",
+  "terminal_evidence": {
+    "evidence": "Recollected and independently verified all D12 sources, records, negative states, and artifact hashes.",
+    "declared_pass": true,
+    "passed": true,
+    "assertions": [
+      {
+        "id": "source-manifest-stable",
+        "passed": true,
+        "detail": "Every named source remains hash-bound at terminal verification."
+      },
+      {
+        "id": "every-isolated-item-reconstructed-exactly-once",
+        "passed": true,
+        "detail": "Every in-scope item has one collision-resistant reconstructed record."
+      },
+      {
+        "id": "reducer-output-reproduces-exactly",
+        "passed": true,
+        "detail": "Final artifacts reproduce exactly from current sources and the frozen evaluation clock."
+      },
+      {
+        "id": "repository-branch-and-root-exact",
+        "passed": true,
+        "detail": "Root, remote, branch, and HEAD are resolved."
+      },
+      {
+        "id": "project-rules-loaded",
+        "passed": true,
+        "detail": "Applicable project rules are source-bound."
+      },
+      {
+        "id": "dirty-paths-classified",
+        "passed": true,
+        "detail": "Intended and unrelated existing work are separated."
+      },
+      {
+        "id": "deployment-mapping-verified-when-relevant",
+        "passed": true,
+        "detail": "The shadow deployment boundary is exact."
+      },
+      {
+        "id": "no-destructive-worktree-action",
+        "passed": true,
+        "detail": "No reset, discard, move, or deletion occurred."
+      },
+      {
+        "id": "privacy-and-no-mutation-boundary",
+        "passed": true,
+        "detail": "Final artifacts are redacted and attest no external, canonical, provider, restart, or checkpoint mutation."
+      }
+    ],
+    "artifact_manifest": [
+      {
+        "path": "System/outcome-graph/routines/D12/2026-08-24-foundation-shadow/preflight-receipt.json",
+        "sha256": "e1f37605b4aed8cc3b61d9a0d1162ca7faf0f87da538d9efb0e9487c851ea8f9",
+        "bytes": 22366
+      },
+      {
+        "path": "System/outcome-graph/routines/D12/2026-08-24-foundation-shadow/worktree-evidence.json",
+        "sha256": "5287d5ba01dfc6ecba5eb98f593bcea24ce88512230edbf53d5a4cc66ed82e17",
+        "bytes": 21854
+      }
+    ],
+    "manifest_errors": []
+  },
+  "learning_evidence": {
+    "evidence": "Appended one hashed D12 correction entry.",
+    "corrections": [
+      "Retain D12 source bindings, negative states, exact authority, and terminal assertions until the underlying evidence changes."
+    ],
+    "ledger": "System/outcome-graph/routines/D12/2026-08-24-foundation-shadow/corrections.jsonl",
+    "ledger_receipt": {
+      "locator": "System/outcome-graph/routines/D12/2026-08-24-foundation-shadow/corrections.jsonl",
+      "entry_sha256": "8a20a914059f9cff26893ea9da0149b7debeff97294790684629d4a4f3db9c39"
+    }
+  },
+  "drift_fingerprint": "f2e372f8652d687a6c0d134f5f1fd4ef94fc008958d785bfa216e60c50496107",
+  "deduped": true,
+  "durable_state": {
+    "schema_version": 1,
+    "dedupe_identity": "995fd8195788ba29452046ba8d47bf2797faabb73cad7463effb6322c2e4f697",
+    "dedupe_hit": true,
+    "resumed": false,
+    "canonical_binding": {
+      "locator": "dillon-os://routine/D12/2026-08-24",
+      "version": "2026-08-24:e1cb9e89.05e6a21e.c5a7c091.1b135970.d503a937.90d9bcee.f497ab86.4cbc7e46.43cfa9c9.c4f66a74",
+      "sha256": "bee6d7037763d45601274702c12c8e31ad280fed7e97757744fc5930b1d39065",
+      "captured_at": "2026-08-24T23:48:58.053Z"
+    },
+    "canonical_binding_fingerprint": "13f62db7adcd1eecb1baef041ce472d3a9250419ade9c16e8efc5d6928453f8d",
+    "contract_fingerprint": "c3d3ae85e31337a3d42f5bf1e554bc9c8df19efb22ad8206ccc1b2f2027b9cea",
+    "checkpoint": "runs/OGD-20260824-FF87593F7F21/checkpoint.json"
+  }
+}

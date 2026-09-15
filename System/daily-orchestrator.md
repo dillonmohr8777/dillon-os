@@ -23,12 +23,12 @@ Start it each morning. Point new work at it before spawning anything new.
 4. Report: what is on fire, what is waiting on Dillon, what is waiting on a
    client, what shipped since the last run.
 
-## Scheduling is not optional and is not currently wired
+## Scheduling - wired 2026-09-14
 
-Verified 2026-09-14. The `_os/automation/cadence/` layer is the right shape —
-three manifests, one driver, one ledger — but **no scheduled task or launchd job
-starts it.** Every cadence run so far was hand-started. Until that is fixed, the
-system built to detect silence is silent whenever nobody remembers to run it.
+Registered 2026-09-14: `Cadence-daily` 09:05, `Cadence-weekly` Mon 09:20,
+`Cadence-monthly` 1st 09:35, and `Cadence-sweep-heartbeat` hourly. The heartbeat
+is plain Node, no model quota, so the gap record is never more than an hour
+stale even if the 09:05 model run dies.
 `System/sweep-install.md` has the registration for both Windows and macOS.
 
 The machine's power-supply fault means a scheduled run *will* miss days. That is
@@ -43,7 +43,7 @@ Lead with what needs him today. No padding.
 
 | Root | What it is |
 |---|---|
-| `C:\Users\dillo\repos\dillon-os` | The vault. 114k files. Client truth in `01_Clients/`, brain in `12_Brain/` |
+| `C:\Users\dillo\repos\dillon-os` | The vault. 32,912 files, 6.49 GB (measured 2026-09-14; the old "114k" was wrong). Client truth in `01_Clients/`, brain in `12_Brain/` |
 | `C:\Users\dillo\Documents\Codex\projects\client-operations` | Canonical client queue |
 | `C:\Users\dillo\Claude\worktrees\repo-analysis-1bien2\client-operations-canonical` | Canonical client repo |
 | `C:\Users\dillo\Documents\Codex` | Dated session directories; a lot of finished work is filed nowhere else |
@@ -84,8 +84,8 @@ filesystem or credits to a local session.
 ## Skills to use rather than reinvent
 
 `momentum-client-context`, `momentum-brand-system`, `momentum-client-intake`,
-`momentum-client-report`, `momentum-spec-homepage`, plus the eight older ones in
-`.claude/skills/`: `client-pulse`, `client-report`, `content-scan`,
+`momentum-client-report`, `momentum-spec-homepage`, plus the eight older ones tracked in the
+vault at `dillon-os/.claude/skills/` (project-scoped, NOT `~/.claude/skills/`): `client-pulse`, `client-report`, `content-scan`,
 `inbox-brief`, `metrics-pull`, `plan-today`, `vault-clean`, `week-review`.
 
 Overlap resolved 2026-09-09: **`momentum-client-report` survives.** `client-report`
@@ -105,11 +105,24 @@ Revised 2026-09-09. Resolved items moved to the closed list below.
   POST. It is the power supply. Needs hands. This is the root cause behind
   session death, config "resets", and orphaned lock folders.
   [[12_Brain/07_Reviews/2026-09-09 - Machine power fault diagnosis]]
+  **Correction 2026-09-14: the power fault did NOT cause the weekend gaps.**
+  The System event log shows the last unclean shutdown was 2026-09-10 20:00,
+  before the window. The machine was up continuously all weekend: uptime
+  228,748s at 2026-09-13 12:00, boot ~2026-09-10 20:26. A winlogon power-off
+  was initiated 2026-09-12 11:14 but uptime continuity shows it never
+  completed. No weekend work was lost to power. The PSU still needs hands; it
+  is just not the explanation for anything between 2026-09-11 and 2026-09-13.
+  Source: Get-WinEvent System log 41/6008/1074/6013, read 2026-09-14.
 - **Google Ads API is live as of 2026-09-10.** Local client under
   `%LOCALAPPDATA%\Dillon\GoogleAdsProbe\`. Query every account DIRECT. The
   manager route 403s because the MCC and the children are separately
-  accessible, not hierarchical. Composio is still dead (its own Cloud project)
-  — do not revive it. Never query 7214914099. Never take an account-level
+  accessible, not hierarchical. Composio is dead **for Ads** (its own Cloud
+  project) — do not revive it for Ads. Corrected 2026-09-14: its Search Console,
+  GA4 and Ads connections all report active and a live Search Console read of
+  alignhcm.com succeeded, so "dead" is an Ads-entitlement fact, not a connector
+  fact. It is also unnecessary: the gcloud ADC on this machine (2026-09-12, same
+  project) already carries read scopes for Search Console, GA4 and GTM. See
+  `System/google-access-expansion/ACCESS-LEDGER-2026-09-14.md`. Never query 7214914099. Never take an account-level
   total on 6275014654. Cloud project 150963436905, Explorer Access.
   The 2026-09-09 "no API path" bullet is superseded.
   [[12_Brain/07_Reviews/2026-09-10 - Orchestrator pickup]]
@@ -120,8 +133,9 @@ Revised 2026-09-09. Resolved items moved to the closed list below.
   session account-totaled shared CID 6275014654; the local probe now refuses
   that total and splits Replenish vs Fresh Blends by campaign name.
   Empty Antigravity `mcp_config.json` is correct. Do not treat
-  `GEMINI_API_KEY` or `gemini:antigravity` as the 3.8 path. GTM, Search
-  Console, and Workspace MCP stay off until Dillon names them.
+  `GEMINI_API_KEY` or `gemini:antigravity` as the 3.8 path. Dillon named
+  Search Console and GA4 on 2026-09-14; both read directly via the gcloud ADC
+  (see the Ads bullet above). GTM write and Workspace MCP stay off until named.
   [[System/antigravity-desktop-seat]]
   [[12_Brain/07_Reviews/2026-09-10 - Antigravity desktop Gemini monitor]]
   [[12_Brain/06_Research/2026-09-10 - Antigravity extra Google access]]
@@ -147,8 +161,12 @@ Revised 2026-09-09. Resolved items moved to the closed list below.
 - 57 unsent client replies in Gmail drafts, plus ~29 unsent reports. Five weekly
   batches generated and none sent. The last thing actually sent to Omega was
   **August 11**.
-- The Momentum design system is not a git repository and its vendored copy in
-  `client-operations` has already drifted — 6,459 vs 7,416 bytes.
+- The Momentum design system IS a git repository (baseline `75b386a`, clean on
+  `main`) and IS pushed to `dillonmohr8777/momentum-design-system` as of
+  2026-09-14. The earlier "not a git repository" line was false. The
+  "vendored copy has drifted" claim is also withdrawn: the `client-operations`
+  file is a derived output artifact with its own schema (173 canonical keys vs
+  100, exactly one shared value conflict, `version`), not a vendored copy.
 - **20 open decisions, and the gate event never happened.** Dillon confirmed
   2026-09-14 that the Friday 2026-09-11 meeting with Mac was not held -- it was
   his birthday. There is no readout to recover. D01 still blocks any

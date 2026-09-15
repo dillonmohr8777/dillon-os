@@ -1,0 +1,362 @@
+[
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/899954048",
+      "status": "ENABLED",
+      "type": "LEAD_FORM_SUBMIT",
+      "category": "SUBMIT_LEAD_FORM",
+      "id": "899954048",
+      "name": "Lead form - Submit",
+      "ownerCustomer": "customers/7917802207",
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/916488686",
+      "status": "REMOVED",
+      "type": "WEBPAGE",
+      "category": "SUBMIT_LEAD_FORM",
+      "id": "916488686",
+      "name": "Content Download",
+      "ownerCustomer": "customers/7917802207",
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/931722373",
+      "status": "HIDDEN",
+      "type": "UNIVERSAL_ANALYTICS_GOAL",
+      "category": "GET_DIRECTIONS",
+      "id": "931722373",
+      "name": "Content Download (All Web Site Data)",
+      "ownerCustomer": "customers/7917802207",
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/990749459",
+      "status": "REMOVED",
+      "type": "SALESFORCE",
+      "category": "QUALIFIED_LEAD",
+      "id": "990749459",
+      "name": "Salesforce - Intro Meeting Held",
+      "ownerCustomer": "customers/7917802207",
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/990752099",
+      "status": "REMOVED",
+      "type": "SALESFORCE",
+      "category": "PURCHASE",
+      "id": "990752099",
+      "name": "Salesforce - Closed Won",
+      "ownerCustomer": "customers/7917802207",
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/991527592",
+      "status": "REMOVED",
+      "type": "SALESFORCE",
+      "category": "CONVERTED_LEAD",
+      "id": "991527592",
+      "name": "Salesforce - Lead Converted",
+      "ownerCustomer": "customers/7917802207",
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/6593597035",
+      "status": "HIDDEN",
+      "type": "GOOGLE_ANALYTICS_4_PURCHASE",
+      "category": "PURCHASE",
+      "id": "6593597035",
+      "name": "Nexla Main Website (nexla.com) - GA4 (web) purchase",
+      "ownerCustomer": "customers/7917802207",
+      "primaryForGoal": false
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/6593597038",
+      "status": "REMOVED",
+      "type": "GOOGLE_ANALYTICS_4_CUSTOM",
+      "category": "PAGE_VIEW",
+      "id": "6593597038",
+      "name": "Nexla Main Website (nexla.com) - GA4 (web) content_download",
+      "ownerCustomer": "customers/7917802207",
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/6657811329",
+      "status": "REMOVED",
+      "type": "WEBPAGE",
+      "category": "SUBMIT_LEAD_FORM",
+      "id": "6657811329",
+      "name": "Demo request - data integration",
+      "ownerCustomer": "customers/7917802207",
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/6808884459",
+      "status": "HIDDEN",
+      "type": "GOOGLE_ANALYTICS_4_CUSTOM",
+      "category": "PAGE_VIEW",
+      "id": "6808884459",
+      "name": "Nexla Main Website (nexla.com) - GA4 (web) is_conversion",
+      "ownerCustomer": "customers/7917802207",
+      "primaryForGoal": false
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/6881875334",
+      "status": "REMOVED",
+      "type": "WEBPAGE",
+      "category": "SUBMIT_LEAD_FORM",
+      "id": "6881875334",
+      "name": "Demo Request",
+      "ownerCustomer": "customers/7917802207",
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/6881875337",
+      "status": "REMOVED",
+      "type": "WEBPAGE",
+      "category": "SUBMIT_LEAD_FORM",
+      "id": "6881875337",
+      "name": "Data Integration Report Download",
+      "ownerCustomer": "customers/7917802207",
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/6883315602",
+      "status": "REMOVED",
+      "type": "GOOGLE_ANALYTICS_4_CUSTOM",
+      "category": "PAGE_VIEW",
+      "id": "6883315602",
+      "name": "Nexla Main Website (nexla.com) - GA4 (web) data_integration_trends_access",
+      "ownerCustomer": "customers/7917802207",
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/6883810477",
+      "status": "REMOVED",
+      "type": "GOOGLE_ANALYTICS_4_CUSTOM",
+      "category": "REQUEST_QUOTE",
+      "id": "6883810477",
+      "name": "Nexla Main Website (nexla.com) - GA4 (web) demo_submit",
+      "ownerCustomer": "customers/7917802207",
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/6975703368",
+      "status": "REMOVED",
+      "type": "WEBPAGE",
+      "category": "SUBMIT_LEAD_FORM",
+      "id": "6975703368",
+      "name": "HubSpot - Nexla Demo Request",
+      "ownerCustomer": "customers/7917802207",
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/6982872465",
+      "status": "REMOVED",
+      "type": "UPLOAD_CLICKS",
+      "category": "CONVERTED_LEAD",
+      "id": "6982872465",
+      "name": "Opportunity - New Opportunities In Discovery",
+      "ownerCustomer": "customers/7917802207",
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/7081382847",
+      "status": "REMOVED",
+      "type": "WEBPAGE",
+      "category": "SUBMIT_LEAD_FORM",
+      "id": "7081382847",
+      "name": "HubSpot - Demo Request (Nexla vs Fivetran LP)",
+      "ownerCustomer": "customers/7917802207",
+      "primaryForGoal": false
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/7082017820",
+      "status": "REMOVED",
+      "type": "UPLOAD_CLICKS",
+      "category": "QUALIFIED_LEAD",
+      "id": "7082017820",
+      "name": "HubSpot - Opportunity",
+      "ownerCustomer": "customers/7917802207",
+      "primaryForGoal": false
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/7082325480",
+      "status": "REMOVED",
+      "type": "UPLOAD_CLICKS",
+      "category": "PURCHASE",
+      "id": "7082325480",
+      "name": "HubSpot - Customer",
+      "ownerCustomer": "customers/7917802207",
+      "primaryForGoal": false
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/7082326314",
+      "status": "REMOVED",
+      "type": "UPLOAD_CLICKS",
+      "category": "QUALIFIED_LEAD",
+      "id": "7082326314",
+      "name": "HubSpot - Marketing Qualified Lead",
+      "ownerCustomer": "customers/7917802207",
+      "primaryForGoal": false
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/7506957337",
+      "status": "REMOVED",
+      "type": "WEBPAGE",
+      "category": "SUBMIT_LEAD_FORM",
+      "id": "7506957337",
+      "name": "HubSpot - Request Connector Demo",
+      "ownerCustomer": "customers/7917802207",
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/7506958681",
+      "status": "REMOVED",
+      "type": "WEBPAGE",
+      "category": "SUBMIT_LEAD_FORM",
+      "id": "7506958681",
+      "name": "HubSpot - Connector Request Form",
+      "ownerCustomer": "customers/7917802207",
+      "primaryForGoal": false
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/7507186233",
+      "status": "REMOVED",
+      "type": "WEBPAGE",
+      "category": "SUBMIT_LEAD_FORM",
+      "id": "7507186233",
+      "name": "HubSpot - Nexla Demo Video Series Access",
+      "ownerCustomer": "customers/7917802207",
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/7534625037",
+      "status": "ENABLED",
+      "type": "WEBPAGE",
+      "category": "SUBMIT_LEAD_FORM",
+      "id": "7534625037",
+      "name": "HubSpot-Demo Request",
+      "ownerCustomer": "customers/7917802207",
+      "primaryForGoal": false
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/7672793025",
+      "status": "ENABLED",
+      "type": "UNKNOWN",
+      "category": "YOUTUBE_FOLLOW_ON_VIEWS",
+      "id": "7672793025",
+      "name": "YouTube follow-on views",
+      "ownerCustomer": "customers/7917802207",
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/7672822300",
+      "status": "ENABLED",
+      "type": "UNKNOWN",
+      "category": "ENGAGEMENT",
+      "id": "7672822300",
+      "name": "YouTube channel subscriptions",
+      "ownerCustomer": "customers/7917802207",
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/7724496703",
+      "status": "ENABLED",
+      "type": "UPLOAD_CLICKS",
+      "category": "SUBMIT_LEAD_FORM",
+      "id": "7724496703",
+      "name": "Contacts - Contacts Lifecycle Stage becomes Lead",
+      "ownerCustomer": "customers/7917802207",
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/7724498875",
+      "status": "ENABLED",
+      "type": "UPLOAD_CLICKS",
+      "category": "CONVERTED_LEAD",
+      "id": "7724498875",
+      "name": "Contacts - Contacts Lifecycle Stage becomes Opportunity",
+      "ownerCustomer": "customers/7917802207",
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/7724501725",
+      "status": "ENABLED",
+      "type": "UPLOAD_CLICKS",
+      "category": "QUALIFIED_LEAD",
+      "id": "7724501725",
+      "name": "Contacts - Contacts Lifecycle Stage becomes Marketing Qualified Lead",
+      "ownerCustomer": "customers/7917802207",
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/7917802207/conversionActions/7724503645",
+      "status": "ENABLED",
+      "type": "UPLOAD_CLICKS",
+      "category": "PURCHASE",
+      "id": "7724503645",
+      "name": "Contacts - Contacts Lifecycle Stage becomes Customer",
+      "ownerCustomer": "customers/7917802207",
+      "primaryForGoal": true
+    }
+  }
+]

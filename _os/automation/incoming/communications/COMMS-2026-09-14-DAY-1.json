@@ -1,0 +1,60 @@
+{
+  "run_id": "COMMS-2026-09-14-DAY-1",
+  "run_at": "2026-09-14T07:03:38-04:00",
+  "status": "success",
+  "window": {
+    "started_at": "2026-09-11T19:03:00-04:00",
+    "ended_at": "2026-09-14T07:03:38-04:00",
+    "overlap_hours": 36
+  },
+  "connectors": {"gmail": "ok", "slack": "ok"},
+  "items": [
+    {
+      "dedupe_key": "gmail:message:1a09c0671326e55e",
+      "source_type": "gmail",
+      "source_ref": "gmail://message/1a09c0671326e55e",
+      "occurred_at": "2026-09-13T14:27:29-04:00",
+      "participants": ["Cindy May"],
+      "kind": "client-change",
+      "priority": "normal",
+      "route": {"type": "client", "name": "Cindy May Christmas", "path": "01_Clients/Cindy May Christmas/overview.md"},
+      "summary": "Cindy approved the separate Jack and May homepage concept and said Mrs. Christmas website work remains paused while her team reviews next steps, with a target to resume near the end of September.",
+      "evidence": "Hydrated Gmail thread confirms the human reply, separation of scopes, team review dependency, and stated timing target.",
+      "uncertainty": "Jack has not yet reviewed the concept with Cindy; the September restart target is not a committed delivery date.",
+      "next_safe_action": "Keep Mrs. Christmas work paused and wait for Cindy's team priorities before preparing a restart plan.",
+      "write_targets": ["01_Clients/Cindy May Christmas/overview.md"]
+    },
+    {
+      "dedupe_key": "gmail:message:1a0987a3880dff01",
+      "source_type": "gmail",
+      "source_ref": "gmail://message/1a0987a3880dff01",
+      "occurred_at": "2026-09-13T01:55:13Z",
+      "participants": ["Bar Crawl USA"],
+      "kind": "deliverable",
+      "priority": "normal",
+      "route": {"type": "client", "name": "Bar Crawl USA", "path": "01_Clients/Bar Crawl USA/overview.md"},
+      "summary": "Bar Crawl USA asked whether the August report and September plan were correct; the verified response keeps ten Halloween pages as the first workstream and leaves indexation, Event schema, and completed-order reconciliation open.",
+      "evidence": "Hydrated Gmail thread contains the owner question and the verified report response with current open measurement and access dependencies.",
+      "uncertainty": "Full Search Console and Eventbrite organizer access remain unavailable, so completed-order attribution is not yet verified.",
+      "next_safe_action": "Preserve the measurement and access gates; do not claim completed-order attribution or submit URLs without verified access.",
+      "write_targets": ["01_Clients/Bar Crawl USA/overview.md"]
+    },
+    {
+      "dedupe_key": "slack:message:1789375365.840869",
+      "source_type": "slack",
+      "source_ref": "https://momentum3d.slack.com/archives/C092MVBN8SV/p1789375365840869",
+      "occurred_at": "2026-09-14T04:42:45-04:00",
+      "participants": ["Muhammad U", "John Belaska"],
+      "kind": "deliverable",
+      "priority": "normal",
+      "route": {"type": "client", "name": "Hope Wellness Center", "path": "01_Clients/Hope Wellness Center/overview.md"},
+      "summary": "Hope Wellness Center reported that the requested changes are done.",
+      "evidence": "Slack thread readback contains one human-authored completion update and no replies.",
+      "uncertainty": "The message does not identify the exact changes or provide a review receipt.",
+      "next_safe_action": "Run bounded visual and functional QA against the requested Hope changes before treating the work as accepted.",
+      "write_targets": ["01_Clients/Hope Wellness Center/overview.md"]
+    }
+  ],
+  "excluded_counts": {"newsletter_or_promotion": 31, "bot_or_notification_noise": 9, "routine_personal": 6},
+  "checkpoints": {"gmail": "2026-09-14T07:03:38-04:00", "slack": "1789375365.840869"}
+}

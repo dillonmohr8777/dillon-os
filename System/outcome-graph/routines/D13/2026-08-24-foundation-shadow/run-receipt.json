@@ -1,0 +1,295 @@
+{
+  "run_id": "OGD-20260825-8F0AF1C77426",
+  "graph_id": "daily-d13-design-context-shadow",
+  "objective": "Resolve real product and design authority for the Prospect Radar Next 20 surface and preserve any blocked design-system check.",
+  "value_signal": "The surface mode, product truth, design truth, visual authority, context probe, and limitations are source-bound rather than invented.",
+  "contract_sha256": "d15c5d2864ccf6ab6ae328e4564453fb62f9a38e05fb7320fcb6c40b34acd229",
+  "started_at": "2026-08-25T00:16:11.026Z",
+  "source_evidence": "The exact objective, registry, git state, rules, product/design documents, design probe, and W05 receipt are recollected before planning and at terminal verification.",
+  "finish_line": "The exact surface reconstructs with a resolved mode, hashed product and design authority, explicit context/check state, and no unsupported brand or UI claim.",
+  "governance": {
+    "orchestrator": "Codex acting as Marketing Chief",
+    "canonical_state": "The exact user objective, Dillon OS registry and rules, repository state, product/design authority, and W05 durable evidence remain canonical and read only.",
+    "dedupe_key": "D13:2026-08-24:source-bound-shadow",
+    "checkpoint": "System/outcome-graph/routines/D13/2026-08-24-foundation-shadow/run-receipt.json",
+    "rollback": "Discard foundation shadow artifacts; preserve the worktree, product/design truth, deployment state, canonical queue, and external systems unchanged.",
+    "escalation": "Return exact scope, repository, design-context, build-gate, QA, delivery, or authority evidence to Marketing Chief."
+  },
+  "graph_iterations": [
+    {
+      "iteration": 1,
+      "status": "verified",
+      "planner": {
+        "evidence": "Collected 1 isolated D13 item(s) from source set d2b021c79a0d7aa43517314c1c1c6e668ac16b6c79caf5fc8ac3247e8a69a0c1.",
+        "item_count": 1,
+        "plan_signature": "6b592c8309afe7e293ff7c321c24c23ba0fa842b952117d7748f99ebc4d5438e",
+        "items": [
+          {
+            "id": "D13:prospect-radar-next20",
+            "isolation_key": "repo-surface:automation/prospect-radar-next20",
+            "input_fingerprint": "01a11c8914f555bb65c163f843287533cc0d5bbeb9bac2b17757247c4eaa872d",
+            "task": null
+          }
+        ]
+      },
+      "workers": [
+        {
+          "item_id": "D13:prospect-radar-next20",
+          "input_fingerprint": "01a11c8914f555bb65c163f843287533cc0d5bbeb9bac2b17757247c4eaa872d",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260825-8F0AF1C77426:857b29fb5eb449c81517:attempt:1",
+              "maker_evidence": "Built one privacy-safe D13 record for D13:prospect-radar-next20.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D13/2026-08-24-foundation-shadow/workers/857b29fb5eb449c81517.json",
+                  "sha256": "002d349d1723b15796f75245efd3483005c3e0ff1ab3bf7bed5aa96015354891",
+                  "bytes": 2075
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D13:prospect-radar-next20 from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D13/2026-08-24-foundation-shadow/workers/857b29fb5eb449c81517.json",
+              "sha256": "002d349d1723b15796f75245efd3483005c3e0ff1ab3bf7bed5aa96015354891",
+              "bytes": 2075
+            }
+          ],
+          "isolation_id": "OGD-20260825-8F0AF1C77426:857b29fb5eb449c81517:attempt:1"
+        }
+      ],
+      "reduction": {
+        "evidence": "Reduced all checked D13 records without blending isolation keys.",
+        "artifacts": [
+          {
+            "path": "System/outcome-graph/routines/D13/2026-08-24-foundation-shadow/design-context-receipt.json",
+            "sha256": "8922e2ff0b0a3e971dfe16b668cdbe017f57620b915f57c26abc3e9031f9a3f7",
+            "bytes": 2121
+          },
+          {
+            "path": "System/outcome-graph/routines/D13/2026-08-24-foundation-shadow/visual-authority-ledger.json",
+            "sha256": "9cb801bfc36e7932d8d60c718312419f8a6ec21110ac405543d066b106375c1b",
+            "bytes": 1271
+          }
+        ]
+      },
+      "terminal_verification": {
+        "evidence": "Recollected and independently verified all D13 sources, records, negative states, and artifact hashes.",
+        "declared_pass": true,
+        "passed": true,
+        "assertions": [
+          {
+            "id": "source-manifest-stable",
+            "passed": true,
+            "detail": "Every named source remains hash-bound at terminal verification."
+          },
+          {
+            "id": "every-isolated-item-reconstructed-exactly-once",
+            "passed": true,
+            "detail": "Every in-scope item has one collision-resistant reconstructed record."
+          },
+          {
+            "id": "reducer-output-reproduces-exactly",
+            "passed": true,
+            "detail": "Final artifacts reproduce exactly from current sources and the frozen evaluation clock."
+          },
+          {
+            "id": "surface-mode-resolved",
+            "passed": true,
+            "detail": "The surface mode is explicit."
+          },
+          {
+            "id": "product-truth-bound",
+            "passed": true,
+            "detail": "Product truth is hashed."
+          },
+          {
+            "id": "real-visual-authority-inspected",
+            "passed": true,
+            "detail": "At least one real authority source is bound."
+          },
+          {
+            "id": "design-system-context-and-checks-recorded",
+            "passed": true,
+            "detail": "Successful and blocked check states are both explicit."
+          },
+          {
+            "id": "no-invented-brand-system-or-claim",
+            "passed": true,
+            "detail": "No design truth or claim was invented."
+          },
+          {
+            "id": "privacy-and-no-mutation-boundary",
+            "passed": true,
+            "detail": "Final artifacts are redacted and attest no external, canonical, provider, restart, or checkpoint mutation."
+          }
+        ],
+        "artifact_manifest": [
+          {
+            "path": "System/outcome-graph/routines/D13/2026-08-24-foundation-shadow/design-context-receipt.json",
+            "sha256": "8922e2ff0b0a3e971dfe16b668cdbe017f57620b915f57c26abc3e9031f9a3f7",
+            "bytes": 2121
+          },
+          {
+            "path": "System/outcome-graph/routines/D13/2026-08-24-foundation-shadow/visual-authority-ledger.json",
+            "sha256": "9cb801bfc36e7932d8d60c718312419f8a6ec21110ac405543d066b106375c1b",
+            "bytes": 1271
+          }
+        ],
+        "manifest_errors": []
+      },
+      "learning": {
+        "evidence": "Appended one hashed D13 correction entry.",
+        "corrections": [
+          "Retain D13 source bindings, negative states, exact authority, and terminal assertions until the underlying evidence changes."
+        ],
+        "ledger": "System/outcome-graph/routines/D13/2026-08-24-foundation-shadow/corrections.jsonl",
+        "ledger_receipt": {
+          "locator": "System/outcome-graph/routines/D13/2026-08-24-foundation-shadow/corrections.jsonl",
+          "entry_sha256": "b4281923e5691f3d4c7713a4f9297dd9e194a084084464828c5b6cf2b4620b3d"
+        }
+      }
+    }
+  ],
+  "invocation_log": [
+    {
+      "adapter": "source-bound-d13-planner",
+      "invoked_at": "2026-08-25T00:16:11.040Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d13-maker",
+      "invoked_at": "2026-08-25T00:16:11.437Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d13-checker",
+      "invoked_at": "2026-08-25T00:16:11.831Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d13-reducer",
+      "invoked_at": "2026-08-25T00:16:12.256Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d13-terminal-verifier",
+      "invoked_at": "2026-08-25T00:16:12.281Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d13-learner",
+      "invoked_at": "2026-08-25T00:16:12.710Z",
+      "status": "returned"
+    }
+  ],
+  "budget": {
+    "limit_units": 96,
+    "used_units": 6
+  },
+  "outcome": "complete",
+  "terminal_truth": true,
+  "finished_at": "2026-08-25T00:16:12.730Z",
+  "elapsed_seconds": 1.704,
+  "blocked_by": null,
+  "reason": "Finish line is proven by an independent terminal verifier.",
+  "terminal_evidence": {
+    "evidence": "Recollected and independently verified all D13 sources, records, negative states, and artifact hashes.",
+    "declared_pass": true,
+    "passed": true,
+    "assertions": [
+      {
+        "id": "source-manifest-stable",
+        "passed": true,
+        "detail": "Every named source remains hash-bound at terminal verification."
+      },
+      {
+        "id": "every-isolated-item-reconstructed-exactly-once",
+        "passed": true,
+        "detail": "Every in-scope item has one collision-resistant reconstructed record."
+      },
+      {
+        "id": "reducer-output-reproduces-exactly",
+        "passed": true,
+        "detail": "Final artifacts reproduce exactly from current sources and the frozen evaluation clock."
+      },
+      {
+        "id": "surface-mode-resolved",
+        "passed": true,
+        "detail": "The surface mode is explicit."
+      },
+      {
+        "id": "product-truth-bound",
+        "passed": true,
+        "detail": "Product truth is hashed."
+      },
+      {
+        "id": "real-visual-authority-inspected",
+        "passed": true,
+        "detail": "At least one real authority source is bound."
+      },
+      {
+        "id": "design-system-context-and-checks-recorded",
+        "passed": true,
+        "detail": "Successful and blocked check states are both explicit."
+      },
+      {
+        "id": "no-invented-brand-system-or-claim",
+        "passed": true,
+        "detail": "No design truth or claim was invented."
+      },
+      {
+        "id": "privacy-and-no-mutation-boundary",
+        "passed": true,
+        "detail": "Final artifacts are redacted and attest no external, canonical, provider, restart, or checkpoint mutation."
+      }
+    ],
+    "artifact_manifest": [
+      {
+        "path": "System/outcome-graph/routines/D13/2026-08-24-foundation-shadow/design-context-receipt.json",
+        "sha256": "8922e2ff0b0a3e971dfe16b668cdbe017f57620b915f57c26abc3e9031f9a3f7",
+        "bytes": 2121
+      },
+      {
+        "path": "System/outcome-graph/routines/D13/2026-08-24-foundation-shadow/visual-authority-ledger.json",
+        "sha256": "9cb801bfc36e7932d8d60c718312419f8a6ec21110ac405543d066b106375c1b",
+        "bytes": 1271
+      }
+    ],
+    "manifest_errors": []
+  },
+  "learning_evidence": {
+    "evidence": "Appended one hashed D13 correction entry.",
+    "corrections": [
+      "Retain D13 source bindings, negative states, exact authority, and terminal assertions until the underlying evidence changes."
+    ],
+    "ledger": "System/outcome-graph/routines/D13/2026-08-24-foundation-shadow/corrections.jsonl",
+    "ledger_receipt": {
+      "locator": "System/outcome-graph/routines/D13/2026-08-24-foundation-shadow/corrections.jsonl",
+      "entry_sha256": "b4281923e5691f3d4c7713a4f9297dd9e194a084084464828c5b6cf2b4620b3d"
+    }
+  },
+  "drift_fingerprint": "85a0278ed18091ea6fd2992d93c92d9eac1d51d9844f8486c2515473858ecd66",
+  "deduped": false,
+  "durable_state": {
+    "schema_version": 1,
+    "dedupe_identity": "dcbd78bb233a4eb9b5e34e9b92841da1d028fb42216fe7267c0ead6eb274e101",
+    "dedupe_hit": false,
+    "resumed": false,
+    "canonical_binding": {
+      "locator": "dillon-os://routine/D13/2026-08-24",
+      "version": "2026-08-25:e1cb9e89.05e6a21e.c5a7c091.1b135970.d503a937.90d9bcee.f497ab86.4cbc7e46.43588267.c4f66a74",
+      "sha256": "d2b021c79a0d7aa43517314c1c1c6e668ac16b6c79caf5fc8ac3247e8a69a0c1",
+      "captured_at": "2026-08-25T00:16:10.165Z"
+    },
+    "canonical_binding_fingerprint": "f062af86f9c55cb147341642c2b7db84485612a39754cded100c2c0ab506ecff",
+    "contract_fingerprint": "f4de9235e58475dfd22737294e0a1f71bcb52ddbeb276ecc74bde45e52de9019",
+    "checkpoint": "runs/OGD-20260825-8F0AF1C77426/checkpoint.json"
+  }
+}

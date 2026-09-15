@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "workflowId": "google-ads-deep-review",
+  "stepId": "source-inventory",
+  "observedLocalDate": "2026-09-04",
+  "status": "local-inventory-complete-live-read-pending",
+  "scope": ["kimberly-james-bridal", "omega-landscaping", "onsite-concrete-landscape", "nexla-roster-conflict"],
+  "canonicalRoot": "C:/Users/dillo/Documents/Codex/projects/client-operations",
+  "clients": [
+    {"id":"kimberly-james-bridal","googleCustomerId":"8145506229","latestLocalWeeklyPeriod":"2026-08-17/2026-08-23","prepared":"2026-08-24","liveDeliveryVerified":false,"logo":"clients/kimberly-james-bridal/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/client-logo.png","logoSha256":"5A7E22999B784FBECCC3730DF11BA339AB371EAA44BEA6AF87A9FFDC45EC697D","logoVisualChecked":true,"logoOriginalWebProvenanceVerified":false,"focus":["current Google pause state","appointment/source reconciliation","connected calls versus click events"]},
+    {"id":"omega-landscaping","googleCustomerId":"2853981364","latestLocalWeeklyPeriod":"2026-08-17/2026-08-23","prepared":"2026-08-24","liveDeliveryVerified":false,"logo":"clients/omega-landscaping/content/google-business-profile/2026-08-17-to-2026-09-06-batch/assets/omega-logo-official.png","logoSha256":"4FD68A52FF1C7D98C93344E431CF608358CD59A2C72C85AF1BF204331B151CA4","logoVisualChecked":true,"logoOriginalWebProvenanceVerified":false,"focus":["local submit-time Ads event before receipt","direct thank-you page conversion path","phone click versus connected call","current goal membership"]},
+    {"id":"onsite-concrete-landscape","googleCustomerId":"1033715894","latestLocalWeeklyPeriod":"2026-08-17/2026-08-23","prepared":"2026-08-24","liveDeliveryVerified":false,"logo":"clients/onsite-concrete-landscape/video-factory/references/logo-verified.png","logoSha256":"E85AC3CD6BEEA35036D9DB3163D168BECDCA05BB16A9E95800357110AB52D9C5","logoVisualChecked":true,"logoOriginalWebProvenanceVerified":false,"focus":["historical click-optimized Smart campaign","historical duplicate Primary events","local click and submit triggers before quality proof","qualified estimate reconciliation"]},
+    {"id":"nexla","googleCustomerId":"7917802207","liveDeliveryVerified":false,"latestLocalReadiness":"2026-09-02","rosterConflict":true,"newerChiefSuppliedSourceLocators":["gmail-thread:1a0219ad3ad53df0","gmail-message:1a069adcb5513cd8","gmail-message:1a06a593c00768f3"],"newerMessagesIndependentlyReadByWorker":false}
+  ],
+  "reusableRenderers": ["scripts/Build-WeeklyClientReports-2026-08-17-to-2026-08-23.mjs","scripts/Build-WeeklyClientReports-2026-08-03-to-2026-08-09.mjs","scripts/Build-Nexla-WeeklyReport-2026-08-17-to-2026-08-23.mjs"],
+  "rendererWarning": "Historical periods and metrics hardcoded; parameterize and require fresh account receipts before reuse. Exact-logo contract forbids generated or wordmark fallback.",
+  "verification": {"exactRegistryRoutes":true,"threeLogosVisuallyInspected":true,"threeLogoHashesRecorded":true,"historicalMetricsNotPresentedAsCurrent":true,"liveAdsAccountsRead":false,"dailyReportsActivated":false},
+  "privacy":"redacted",
+  "containsSecrets":false,
+  "containsLeadPii":false,
+  "containsRawCommunications":false,
+  "canonicalWriteAttempted":false,
+  "externalActionAttempted":false,
+  "approvalGate":"Any campaign, goal, tracking, budget, targeting, account, scheduling or delivery change remains with Chief and exact authority."
+}

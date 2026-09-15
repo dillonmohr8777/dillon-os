@@ -1,0 +1,38 @@
+[
+  {
+    "campaign": {
+      "resourceName": "customers/8145506229/campaigns/23690389385",
+      "status": "PAUSED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "MAXIMIZE_CONVERSIONS",
+      "name": "Campaign #1",
+      "id": "23690389385"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/8145506229/campaignBudgets/15452750093",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "15452750093",
+      "amountMicros": "20000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/8145506229/campaigns/24069334480",
+      "status": "PAUSED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "MAXIMIZE_CONVERSIONS",
+      "name": "KJB | Search | Local Bridal | Philadelphia",
+      "id": "24069334480"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/8145506229/campaignBudgets/15737391777",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "15737391777",
+      "amountMicros": "20000000"
+    }
+  }
+]

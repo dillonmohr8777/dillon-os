@@ -6,7 +6,7 @@ role: Account Manager
 division: Momentum 360
 status: active
 last_touched: 2026-08-01
-next_action: Verify the current Wix, Google Ads, and Omega GoHighLevel roles, then prepare the exact access request for approval before sending.
+next_action: Put the lead fields into the Zapier notification body in Momentum's own Zapier account. The client-contact access path is dead -- Dillon confirmed 2026-09-14 that the contact does not respond -- so nothing may be sequenced behind an access request.
 due: 2026-07-15
 tags: [client, momentum360, google-ads, meta-ads, seo, landscaping]
 ---
@@ -18,6 +18,12 @@ Current work includes Google PMax, Meta lead generation, SEO, lead-quality check
 ## Current truth
 
 - The account is active with an access gap on the Meta side.
+- **The access-request path is dead as of 2026-09-14.** Dillon confirmed the
+  Omega client contact does not respond. Wix editing, Google Ads admin and
+  GoHighLevel access are not obtainable by asking, so no work may be
+  sequenced behind them. The route to lead data is the Zapier notification
+  body, which is in Momentum's own Zapier account and needs no client
+  permission.
 - Current optimization depends on verified call/form attribution and lead quality.
 - Budget or campaign changes remain approval-gated.
 

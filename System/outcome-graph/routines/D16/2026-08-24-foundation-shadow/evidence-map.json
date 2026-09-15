@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "routine_id": "D16",
+  "generated_at": "2026-08-24T23:49:15.088Z",
+  "request_fingerprint": "outcome-graph-replica-and-loop-engineering",
+  "trigger_state": "no_trigger",
+  "sources": [
+    {
+      "locator": "System/outcome-graph/source-snapshots/outcome-graph-objective-2026-08-24.json",
+      "sha256": "c4f66a749c2795f303402fa87c21b7a7eb937f3b17892184a57ee245c5007b33",
+      "bytes": 2043
+    }
+  ],
+  "unsupported_claim_count": 0,
+  "authority": {
+    "read_only": true,
+    "proposal_only": true,
+    "external_action_attempted": false,
+    "canonical_write_attempted": false,
+    "provider_mutation_attempted": false,
+    "deployment_attempted": false,
+    "worktree_mutation_attempted": false,
+    "ui_mutation_attempted": false,
+    "acceptance_contract_changed": false
+  }
+}

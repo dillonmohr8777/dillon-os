@@ -1,0 +1,245 @@
+{
+  "schema": 1,
+  "business": "Peter Zimmerman Architects",
+  "domain": "pzarchitects.com",
+  "route": "sites/peter-zimmerman-architects/",
+  "generatedAt": "2026-08-26T10:04:59.8260882Z",
+  "generator": "Align HCM Image Gen plugin contract",
+  "model": "gpt-image-2.0",
+  "board": {
+    "key": "peter-zimmerman-architects",
+    "descriptor": "architect",
+    "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Peter Zimmerman Architects. Four distinct but cohesive unlabelled panels in a generic high-craft residential architecture studio: an architect studying hand-drawn plans and a physical house model; a designer selecting stone, timber, and plaster samples on a large worktable; two architects walking a historic-looking residential exterior from behind without identifiable property features; a close documentary detail of a pencil, scale ruler, archival drawings, and material swatches. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+    "sourceOutput": "C:/Users/dillo/.codex/generated_images/01a03d5e-c09f-74a0-b82e-14ad3c549703/exec-ddf11df2-798a-4b1d-8fab-fb614d0f1654.png",
+    "file": "automation/prospect-radar-next20/generated-stock-library/peter-zimmerman-architects.png",
+    "sha256": "a25b66a093b2b466ba0f42ebed1a508a27414e234bec7f461e7cb788a7902936",
+    "dimensions": {
+      "width": 1448,
+      "height": 1086
+    }
+  },
+  "treatment": {
+    "palette": [
+      "#F05A28",
+      "#FF6B35",
+      "#0B1D2D",
+      "#071521",
+      "#F4EFE7",
+      "#EAF6FC",
+      "#91D5ED"
+    ],
+    "imageGrain": "Visible refined 35mm film grain authored in the generated board and preserved in every derivative.",
+    "interfaceGrain": {
+      "file": "grain.svg",
+      "sha256": "f8b8b72ee2a84cf2aaa04ce069edaaa459ee61650e76f307254572db67efb813",
+      "opacity": 0.13
+    },
+    "disclosure": "Illustrative generated imagery. These concept visuals do not depict the business, its staff, customers, facility, products, projects, or outcomes."
+  },
+  "outputs": [
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "peter-zimmerman-architects",
+      "boardDescriptor": "architect",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/peter-zimmerman-architects.png",
+      "sourceSha256": "a25b66a093b2b466ba0f42ebed1a508a27414e234bec7f461e7cb788a7902936",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Peter Zimmerman Architects. Four distinct but cohesive unlabelled panels in a generic high-craft residential architecture studio: an architect studying hand-drawn plans and a physical house model; a designer selecting stone, timber, and plaster samples on a large worktable; two architects walking a historic-looking residential exterior from behind without identifiable property features; a close documentary detail of a pencil, scale ruler, archival drawings, and material swatches. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:56,eq=saturation=1.015:contrast=1.064:brightness=-0.018,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "81c5d21c16c67d9ede23484a2e1500933628159cb31825474cfa6352e3c02991",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "peter-zimmerman-architects",
+      "boardDescriptor": "architect",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/peter-zimmerman-architects.png",
+      "sourceSha256": "a25b66a093b2b466ba0f42ebed1a508a27414e234bec7f461e7cb788a7902936",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Peter Zimmerman Architects. Four distinct but cohesive unlabelled panels in a generic high-craft residential architecture studio: an architect studying hand-drawn plans and a physical house model; a designer selecting stone, timber, and plaster samples on a large worktable; two architects walking a historic-looking residential exterior from behind without identifiable property features; a close documentary detail of a pencil, scale ruler, archival drawings, and material swatches. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=1.040:contrast=1.028:brightness=-0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "2b714d29e126bd23cdb2eec79345e8aaf01257d86e8c0a64dcffdfa7481e0b10",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "peter-zimmerman-architects",
+      "boardDescriptor": "architect",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/peter-zimmerman-architects.png",
+      "sourceSha256": "a25b66a093b2b466ba0f42ebed1a508a27414e234bec7f461e7cb788a7902936",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Peter Zimmerman Architects. Four distinct but cohesive unlabelled panels in a generic high-craft residential architecture studio: an architect studying hand-drawn plans and a physical house model; a designer selecting stone, timber, and plaster samples on a large worktable; two architects walking a historic-looking residential exterior from behind without identifiable property features; a close documentary detail of a pencil, scale ruler, archival drawings, and material swatches. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:28,eq=saturation=0.940:contrast=1.082:brightness=0.000,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "65f00337445fba643344b078c4686d5462712b8d6d85097820ec4b663bb0a9f1",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "peter-zimmerman-architects",
+      "boardDescriptor": "architect",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/peter-zimmerman-architects.png",
+      "sourceSha256": "a25b66a093b2b466ba0f42ebed1a508a27414e234bec7f461e7cb788a7902936",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Peter Zimmerman Architects. Four distinct but cohesive unlabelled panels in a generic high-craft residential architecture studio: an architect studying hand-drawn plans and a physical house model; a designer selecting stone, timber, and plaster samples on a large worktable; two architects walking a historic-looking residential exterior from behind without identifiable property features; a close documentary detail of a pencil, scale ruler, archival drawings, and material swatches. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:56,eq=saturation=0.965:contrast=1.046:brightness=0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "5224e2c8917b5454a07fada97ee6a6bbd2e55d3e41faac537a2fa5163fe44580",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "peter-zimmerman-architects",
+      "boardDescriptor": "architect",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/peter-zimmerman-architects.png",
+      "sourceSha256": "a25b66a093b2b466ba0f42ebed1a508a27414e234bec7f461e7cb788a7902936",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Peter Zimmerman Architects. Four distinct but cohesive unlabelled panels in a generic high-craft residential architecture studio: an architect studying hand-drawn plans and a physical house model; a designer selecting stone, timber, and plaster samples on a large worktable; two architects walking a historic-looking residential exterior from behind without identifiable property features; a close documentary detail of a pencil, scale ruler, archival drawings, and material swatches. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:0,eq=saturation=0.990:contrast=1.010:brightness=-0.018,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "bea1f0f1687cab17762e133c467b221a8dc2cfc7dadf7d2026c987d7f43bf606",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "peter-zimmerman-architects",
+      "boardDescriptor": "architect",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/peter-zimmerman-architects.png",
+      "sourceSha256": "a25b66a093b2b466ba0f42ebed1a508a27414e234bec7f461e7cb788a7902936",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Peter Zimmerman Architects. Four distinct but cohesive unlabelled panels in a generic high-craft residential architecture studio: an architect studying hand-drawn plans and a physical house model; a designer selecting stone, timber, and plaster samples on a large worktable; two architects walking a historic-looking residential exterior from behind without identifiable property features; a close documentary detail of a pencil, scale ruler, archival drawings, and material swatches. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:28,eq=saturation=1.015:contrast=1.064:brightness=-0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "63bc1e63bc1d625f2810acabc77c4bb20a6bcc6f66c81a8a4c6b4f9d3144d2b4",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "peter-zimmerman-architects",
+      "boardDescriptor": "architect",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/peter-zimmerman-architects.png",
+      "sourceSha256": "a25b66a093b2b466ba0f42ebed1a508a27414e234bec7f461e7cb788a7902936",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Peter Zimmerman Architects. Four distinct but cohesive unlabelled panels in a generic high-craft residential architecture studio: an architect studying hand-drawn plans and a physical house model; a designer selecting stone, timber, and plaster samples on a large worktable; two architects walking a historic-looking residential exterior from behind without identifiable property features; a close documentary detail of a pencil, scale ruler, archival drawings, and material swatches. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:56,eq=saturation=1.040:contrast=1.028:brightness=0.000,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "17f5eafa10ba48c6383c26034371b23f095c304252d83668f2b671cfbc27f35f",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "peter-zimmerman-architects",
+      "boardDescriptor": "architect",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/peter-zimmerman-architects.png",
+      "sourceSha256": "a25b66a093b2b466ba0f42ebed1a508a27414e234bec7f461e7cb788a7902936",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Peter Zimmerman Architects. Four distinct but cohesive unlabelled panels in a generic high-craft residential architecture studio: an architect studying hand-drawn plans and a physical house model; a designer selecting stone, timber, and plaster samples on a large worktable; two architects walking a historic-looking residential exterior from behind without identifiable property features; a close documentary detail of a pencil, scale ruler, archival drawings, and material swatches. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:0,eq=saturation=0.940:contrast=1.082:brightness=0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "9641a8c6ab7a153d421590fb054b0777f7e405a55304b0a1cb8c612c3343dde4",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "peter-zimmerman-architects",
+      "boardDescriptor": "architect",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/peter-zimmerman-architects.png",
+      "sourceSha256": "a25b66a093b2b466ba0f42ebed1a508a27414e234bec7f461e7cb788a7902936",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Peter Zimmerman Architects. Four distinct but cohesive unlabelled panels in a generic high-craft residential architecture studio: an architect studying hand-drawn plans and a physical house model; a designer selecting stone, timber, and plaster samples on a large worktable; two architects walking a historic-looking residential exterior from behind without identifiable property features; a close documentary detail of a pencil, scale ruler, archival drawings, and material swatches. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:28,eq=saturation=0.965:contrast=1.046:brightness=-0.018,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "d7a4ccb203bf1a8a6a7fdd971ebf953015f8c4b332bbc1334a83bda0a33132e6",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "peter-zimmerman-architects",
+      "boardDescriptor": "architect",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/peter-zimmerman-architects.png",
+      "sourceSha256": "a25b66a093b2b466ba0f42ebed1a508a27414e234bec7f461e7cb788a7902936",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Peter Zimmerman Architects. Four distinct but cohesive unlabelled panels in a generic high-craft residential architecture studio: an architect studying hand-drawn plans and a physical house model; a designer selecting stone, timber, and plaster samples on a large worktable; two architects walking a historic-looking residential exterior from behind without identifiable property features; a close documentary detail of a pencil, scale ruler, archival drawings, and material swatches. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:56,eq=saturation=0.990:contrast=1.010:brightness=-0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "5aa0955ace4f26d4b8c3e2f850e9e4226fe5dda499a13d802293b56a03da1e60",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "peter-zimmerman-architects",
+      "boardDescriptor": "architect",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/peter-zimmerman-architects.png",
+      "sourceSha256": "a25b66a093b2b466ba0f42ebed1a508a27414e234bec7f461e7cb788a7902936",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Peter Zimmerman Architects. Four distinct but cohesive unlabelled panels in a generic high-craft residential architecture studio: an architect studying hand-drawn plans and a physical house model; a designer selecting stone, timber, and plaster samples on a large worktable; two architects walking a historic-looking residential exterior from behind without identifiable property features; a close documentary detail of a pencil, scale ruler, archival drawings, and material swatches. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:0,eq=saturation=1.015:contrast=1.064:brightness=0.000,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "fe4e16227fc34b3fa5a15f77d5b9168def5c3dc185bcfeeecfb033b72e179c33",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "peter-zimmerman-architects",
+      "boardDescriptor": "architect",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/peter-zimmerman-architects.png",
+      "sourceSha256": "a25b66a093b2b466ba0f42ebed1a508a27414e234bec7f461e7cb788a7902936",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Peter Zimmerman Architects. Four distinct but cohesive unlabelled panels in a generic high-craft residential architecture studio: an architect studying hand-drawn plans and a physical house model; a designer selecting stone, timber, and plaster samples on a large worktable; two architects walking a historic-looking residential exterior from behind without identifiable property features; a close documentary detail of a pencil, scale ruler, archival drawings, and material swatches. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:28,eq=saturation=1.040:contrast=1.028:brightness=0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "f60d32119ea522c01c4713cbc4877bb2f21b1610127678a0ed177627336bb338",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    }
+  ]
+}

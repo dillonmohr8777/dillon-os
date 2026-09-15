@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "graph_id": "weekly-w03-paid-media-pass-b-shadow",
+  "dedupe_key": "W03:2026-W35B:paid-media-shadow",
+  "dedupe_identity": "ebbc18aa22b0cdf958ec072b3f02e1c0db162194523b976d4c42743be76ad52d",
+  "contract_fingerprint": "3311c2d3c792eb4a0e25554d106d0887bbbb5d27b8684dc9aae69ce3b4a076ef",
+  "canonical_binding": {
+    "locator": "dillon-os://paid-media/W03/2026-W35B",
+    "version": "2026-08-24:7:7d65a000d0d8dce4a234394a7051b3ae677684f6b75f779a670fbf9bdc854098",
+    "sha256": "2b9a6e1c96dc88d53c2186cea2b66729ccac5a81034ba43b063714d8f9014324",
+    "captured_at": "2026-08-24T23:13:36.440Z"
+  },
+  "canonical_binding_fingerprint": "e3f8cd99a8c9d0310671a5f888183c3832cb7a4c69e7e2e1355066380602f5df",
+  "status": "complete",
+  "run_id": "OGD-20260824-B4CE4BE41CCE",
+  "checkpoint": {
+    "path": "runs/OGD-20260824-B4CE4BE41CCE/checkpoint.json"
+  },
+  "created_at": "2026-08-24T23:13:36.462Z",
+  "updated_at": "2026-08-24T23:13:36.911Z",
+  "state_revision": 15,
+  "previous_state_sha256": "ae2d103abd2d5a2b9b03b449cdfe730b060faf15588ac2a5ee51a23f8561ad30",
+  "completed_at": "2026-08-24T23:13:36.911Z",
+  "receipt": {
+    "path": "runs/OGD-20260824-B4CE4BE41CCE/receipt.json",
+    "sha256": "5e833f838309b848861a53a77ed952a23b970b55cbe3d66255edc50964a3270a",
+    "bytes": 25747
+  }
+}

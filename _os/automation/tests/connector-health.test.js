@@ -15,6 +15,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const { execFileSync } = require('node:child_process');
+const { evaluateState } = require('../bin/connector-health');
 
 const CLI = path.resolve(__dirname, '../bin/connector-health.js');
 const SRC = fs.readFileSync(CLI, 'utf8');
@@ -70,4 +71,35 @@ test('exit 0 only when at least one connector is usable', () => {
   const { code, out } = run(['--window-hours', '48']);
   assert.equal(code === 0, out.counts.usable > 0);
   assert.equal(out.status, out.counts.usable ? 'ok' : 'blocked');
+});
+
+test('fresh file ingestion cannot make stale provider evidence usable', () => {
+  const now = Date.parse('2026-08-24T12:00:00.000Z');
+  const state = {
+    recorded_at_utc: '2026-08-24T11:59:00.000Z',
+    connectors: [{
+      toolkit: 'fixture',
+      status: 'active',
+      read_verified: true,
+      last_verified_utc: '2026-08-21T12:00:00.000Z',
+    }],
+  };
+  const result = evaluateState(state, 48, now);
+  assert.equal(result.snapshot_age_hours, 0.02);
+  assert.equal(result.rows[0].age_hours, 72);
+  assert.equal(result.rows[0].usable, false);
+});
+
+test('future-dated connector evidence fails closed', () => {
+  const now = Date.parse('2026-08-24T12:00:00.000Z');
+  const state = {
+    recorded_at_utc: '2026-08-24T12:00:00.000Z',
+    connectors: [{
+      toolkit: 'fixture',
+      status: 'active',
+      read_verified: true,
+      last_verified_utc: '2026-08-24T12:05:00.000Z',
+    }],
+  };
+  assert.equal(evaluateState(state, 48, now).rows[0].usable, false);
 });

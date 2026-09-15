@@ -1,0 +1,9 @@
+{
+ "wakeId":"heartbeat:20260905T182723088Z",
+ "window":{"afterUnix":1788630458,"beforeUnix":1788632853},
+ "identities":{"gmail":"dillonmohr8777@gmail.com","slack":"Momentum Digital Agency / Dillon Mohr"},
+ "coverage":{"gmailMessages":0,"slackMessages":0,"sourcePages":2,"newKeys":0,"paginationExhausted":true},
+ "interpretation":"Both fixed source windows returned no messages. User's preceding status request was answered and did not change pause or action authority. No new source failures or changed known blockers.",
+ "daily":{"leadTableDue":false,"googleAdsReportDue":false,"predictionBriefDue":false,"bedtimeDue":false},
+ "workersDispatched":0,"externalWrites":0,"decision":"DONT_NOTIFY"
+}

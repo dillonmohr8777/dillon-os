@@ -1,0 +1,348 @@
+[
+  {
+    "campaign": {
+      "resourceName": "customers/8145506229/campaigns/24069334480",
+      "name": "KJB | Search | Local Bridal | Philadelphia",
+      "id": "24069334480"
+    },
+    "adGroup": {
+      "resourceName": "customers/8145506229/adGroups/199369426475",
+      "id": "199369426475",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/8145506229/adGroupCriteria/199369426475~295294469986",
+      "status": "PAUSED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "bridal boutique near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "295294469986"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/8145506229/campaigns/24069334480",
+      "name": "KJB | Search | Local Bridal | Philadelphia",
+      "id": "24069334480"
+    },
+    "adGroup": {
+      "resourceName": "customers/8145506229/adGroups/199369426475",
+      "id": "199369426475",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/8145506229/adGroupCriteria/199369426475~295354709706",
+      "status": "ENABLED",
+      "qualityInfo": {
+        "creativeQualityScore": "BELOW_AVERAGE",
+        "postClickQualityScore": "BELOW_AVERAGE",
+        "searchPredictedCtr": "ABOVE_AVERAGE",
+        "qualityScore": 5
+      },
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "bridal stores near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "295354709706"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/8145506229/campaigns/24069334480",
+      "name": "KJB | Search | Local Bridal | Philadelphia",
+      "id": "24069334480"
+    },
+    "adGroup": {
+      "resourceName": "customers/8145506229/adGroups/199369426475",
+      "id": "199369426475",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/8145506229/adGroupCriteria/199369426475~295892088699",
+      "status": "ENABLED",
+      "qualityInfo": {
+        "creativeQualityScore": "ABOVE_AVERAGE",
+        "postClickQualityScore": "BELOW_AVERAGE",
+        "searchPredictedCtr": "AVERAGE",
+        "qualityScore": 5
+      },
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "wedding dresses philadelphia"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "295892088699"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/8145506229/campaigns/24069334480",
+      "name": "KJB | Search | Local Bridal | Philadelphia",
+      "id": "24069334480"
+    },
+    "adGroup": {
+      "resourceName": "customers/8145506229/adGroups/199369426475",
+      "id": "199369426475",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/8145506229/adGroupCriteria/199369426475~296831119433",
+      "status": "ENABLED",
+      "qualityInfo": {
+        "creativeQualityScore": "AVERAGE",
+        "postClickQualityScore": "BELOW_AVERAGE",
+        "searchPredictedCtr": "BELOW_AVERAGE",
+        "qualityScore": 2
+      },
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "wedding dress store near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "296831119433"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/8145506229/campaigns/24069334480",
+      "name": "KJB | Search | Local Bridal | Philadelphia",
+      "id": "24069334480"
+    },
+    "adGroup": {
+      "resourceName": "customers/8145506229/adGroups/199369426475",
+      "id": "199369426475",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/8145506229/adGroupCriteria/199369426475~297425052228",
+      "status": "ENABLED",
+      "qualityInfo": {
+        "creativeQualityScore": "BELOW_AVERAGE",
+        "postClickQualityScore": "BELOW_AVERAGE",
+        "searchPredictedCtr": "AVERAGE",
+        "qualityScore": 3
+      },
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "wedding dress shops near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "297425052228"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/8145506229/campaigns/24069334480",
+      "name": "KJB | Search | Local Bridal | Philadelphia",
+      "id": "24069334480"
+    },
+    "adGroup": {
+      "resourceName": "customers/8145506229/adGroups/199369426475",
+      "id": "199369426475",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/8145506229/adGroupCriteria/199369426475~297712999183",
+      "status": "ENABLED",
+      "qualityInfo": {
+        "creativeQualityScore": "AVERAGE",
+        "postClickQualityScore": "BELOW_AVERAGE",
+        "searchPredictedCtr": "BELOW_AVERAGE",
+        "qualityScore": 2
+      },
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "wedding dress store near me"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "297712999183"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/8145506229/campaigns/24069334480",
+      "name": "KJB | Search | Local Bridal | Philadelphia",
+      "id": "24069334480"
+    },
+    "adGroup": {
+      "resourceName": "customers/8145506229/adGroups/199369426475",
+      "id": "199369426475",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/8145506229/adGroupCriteria/199369426475~310626366641",
+      "status": "ENABLED",
+      "qualityInfo": {
+        "creativeQualityScore": "ABOVE_AVERAGE",
+        "postClickQualityScore": "BELOW_AVERAGE",
+        "searchPredictedCtr": "BELOW_AVERAGE",
+        "qualityScore": 3
+      },
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "bridal shop philadelphia"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "310626366641"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/8145506229/campaigns/24069334480",
+      "name": "KJB | Search | Local Bridal | Philadelphia",
+      "id": "24069334480"
+    },
+    "adGroup": {
+      "resourceName": "customers/8145506229/adGroups/199369426475",
+      "id": "199369426475",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/8145506229/adGroupCriteria/199369426475~320783491088",
+      "status": "ENABLED",
+      "qualityInfo": {
+        "creativeQualityScore": "ABOVE_AVERAGE",
+        "postClickQualityScore": "BELOW_AVERAGE",
+        "searchPredictedCtr": "BELOW_AVERAGE",
+        "qualityScore": 3
+      },
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "bridal shop philadelphia"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "320783491088"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/8145506229/campaigns/24069334480",
+      "name": "KJB | Search | Local Bridal | Philadelphia",
+      "id": "24069334480"
+    },
+    "adGroup": {
+      "resourceName": "customers/8145506229/adGroups/199369426475",
+      "id": "199369426475",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/8145506229/adGroupCriteria/199369426475~322569880496",
+      "status": "ENABLED",
+      "qualityInfo": {
+        "creativeQualityScore": "ABOVE_AVERAGE",
+        "postClickQualityScore": "BELOW_AVERAGE",
+        "searchPredictedCtr": "AVERAGE",
+        "qualityScore": 5
+      },
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "wedding gowns philadelphia"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "322569880496"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/8145506229/campaigns/24069334480",
+      "name": "KJB | Search | Local Bridal | Philadelphia",
+      "id": "24069334480"
+    },
+    "adGroup": {
+      "resourceName": "customers/8145506229/adGroups/199369426475",
+      "id": "199369426475",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/8145506229/adGroupCriteria/199369426475~378042047249",
+      "status": "ENABLED",
+      "qualityInfo": {
+        "creativeQualityScore": "ABOVE_AVERAGE",
+        "postClickQualityScore": "AVERAGE",
+        "searchPredictedCtr": "AVERAGE",
+        "qualityScore": 7
+      },
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "bridal boutique philadelphia"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "378042047249"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/8145506229/campaigns/24069334480",
+      "name": "KJB | Search | Local Bridal | Philadelphia",
+      "id": "24069334480"
+    },
+    "adGroup": {
+      "resourceName": "customers/8145506229/adGroups/199369426475",
+      "id": "199369426475",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/8145506229/adGroupCriteria/199369426475~465144264463",
+      "status": "ENABLED",
+      "qualityInfo": {
+        "creativeQualityScore": "ABOVE_AVERAGE",
+        "postClickQualityScore": "AVERAGE",
+        "searchPredictedCtr": "AVERAGE",
+        "qualityScore": 7
+      },
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "bridal boutique philadelphia"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "465144264463"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/8145506229/campaigns/24069334480",
+      "name": "KJB | Search | Local Bridal | Philadelphia",
+      "id": "24069334480"
+    },
+    "adGroup": {
+      "resourceName": "customers/8145506229/adGroups/199369426475",
+      "id": "199369426475",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/8145506229/adGroupCriteria/199369426475~796672303670",
+      "status": "PAUSED",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "private bridal appointment"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "796672303670"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/8145506229/campaigns/24069334480",
+      "name": "KJB | Search | Local Bridal | Philadelphia",
+      "id": "24069334480"
+    },
+    "adGroup": {
+      "resourceName": "customers/8145506229/adGroups/199369426475",
+      "id": "199369426475",
+      "name": "Ad group 1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/8145506229/adGroupCriteria/199369426475~1418295232485",
+      "status": "ENABLED",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "private bridal appointment"
+      },
+      "systemServingStatus": "ELIGIBLE",
+      "criterionId": "1418295232485"
+    }
+  }
+]

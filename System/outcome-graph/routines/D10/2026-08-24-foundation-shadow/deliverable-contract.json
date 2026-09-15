@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "routine_id": "D10",
+  "id": "D10:current-outcome-graph-request",
+  "isolation_key": "request:outcome-graph-replica-and-loop-engineering",
+  "observed_at": "2026-08-24T23:48:48.772Z",
+  "source_set_sha256": "bee6d7037763d45601274702c12c8e31ad280fed7e97757744fc5930b1d39065",
+  "business_outcome": "Every recurring Dillon workflow runs through bounded source-bound loops and can claim completion only when its real business finish line is independently reproduced from fresh evidence.",
+  "observable": true,
+  "smallest_reviewable_artifact": "A durable Outcome Graph runtime, explicit routine contracts, live read-only shadow receipts, deduplicated replay proof, a canonical Marketing Chief handoff boundary, and an Obsidian operating record.",
+  "audience": "Dillon Mohr as final human authority and Codex acting as Marketing Chief as the sole canonical orchestrator.",
+  "required_inputs": [
+    "Dillon OS",
+    "Obsidian evidence graph",
+    "Marketing Chief",
+    "client-operations",
+    "communications",
+    "content",
+    "paid media",
+    "reporting",
+    "design",
+    "web delivery",
+    "automation reliability"
+  ],
+  "acceptance_assertions": [
+    "All 29 executable routines have routine-specific source adapters and terminally verified durable shadow evidence.",
+    "All four governed weekly routes remain read-only and approval-gated.",
+    "False completion, stale evidence, ambiguity, blocked state, and missing downstream proof fail closed.",
+    "Duplicate triggers revalidate the canonical binding and final artifact hashes without redoing verified work.",
+    "The legacy scheduler remains unchanged until migration coverage and final cutover review are complete."
+  ],
+  "lifecycle_states": [
+    "defined",
+    "built",
+    "independently_verified",
+    "deep_shadow_verified",
+    "adopted_by_marketing_chief",
+    "externally_delivered"
+  ],
+  "scope": {
+    "systems": [
+      "Dillon OS",
+      "Obsidian evidence graph",
+      "Marketing Chief",
+      "client-operations",
+      "communications",
+      "content",
+      "paid media",
+      "reporting",
+      "design",
+      "web delivery",
+      "automation reliability"
+    ],
+    "legacy_scheduler_cutover_authorized": false,
+    "external_actions_authorized": false,
+    "canonical_queue_write_authorized": false
+  },
+  "materially_broadened": false,
+  "authority": {
+    "read_only": true,
+    "proposal_only": true,
+    "external_action_attempted": false,
+    "canonical_write_attempted": false,
+    "provider_mutation_attempted": false,
+    "deployment_attempted": false,
+    "worktree_mutation_attempted": false,
+    "ui_mutation_attempted": false,
+    "acceptance_contract_changed": false
+  },
+  "generated_at": "2026-08-24T23:48:48.772Z",
+  "finish_line_state": "explicit_not_yet_fully_migrated",
+  "approval_state": "marketing_chief_adoption_separate",
+  "delivery_state": "not_authorized"
+}

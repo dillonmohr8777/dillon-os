@@ -39,6 +39,7 @@ into reusable systems rather than leaving the learning trapped in source notes.
 - [[Automation and Workflow Engineering]]
 - [[Agent Governance and Verification]]
 - [[Evidence Context and Learning Loops]]
+- [[Dillon Voice Profile]]
 - [[Specialist Forecast Router]]
 - [[Leading Indicators]]
 

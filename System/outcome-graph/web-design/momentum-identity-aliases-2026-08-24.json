@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "decision_date": "2026-08-24",
+  "scope": "Bounded identity reconciliation between the current 238-row Momentum projection and the 245-slug predecessor inventory",
+  "method": "Use aliases only when the current row is the same named brand with an added location or market qualifier and neither the current concept URL nor an exact normalized business name resolves it.",
+  "aliases": [
+    {
+      "current_business": "Holiday Hair Quakertown",
+      "normalized_current_name": "holidayhairquakertown",
+      "predecessor_slug": "holiday-hair",
+      "basis": "Same brand with a location qualifier"
+    },
+    {
+      "current_business": "EPAM Philadelphia",
+      "normalized_current_name": "epamphiladelphia",
+      "predecessor_slug": "epam",
+      "basis": "Same brand with a market qualifier"
+    },
+    {
+      "current_business": "NovaCare Rehabilitation Conshohocken",
+      "normalized_current_name": "novacarerehabilitationconshohocken",
+      "predecessor_slug": "novacare",
+      "basis": "Same brand with service and location qualifiers"
+    },
+    {
+      "current_business": "The Edge Fitness Clubs Media",
+      "normalized_current_name": "theedgefitnessclubsmedia",
+      "predecessor_slug": "the-edge-fitness-clubs",
+      "basis": "Same brand with a location qualifier"
+    },
+    {
+      "current_business": "The Restaurant Store Plymouth Meeting",
+      "normalized_current_name": "therestaurantstoreplymouthmeeting",
+      "predecessor_slug": "the-restaurant-store",
+      "basis": "Same brand with a location qualifier"
+    },
+    {
+      "current_business": "Just Tires Media",
+      "normalized_current_name": "justtiresmedia",
+      "predecessor_slug": "just-tires",
+      "basis": "Same brand with a location qualifier"
+    },
+    {
+      "current_business": "Theory Outlet at Philadelphia Premium Outlets",
+      "normalized_current_name": "theoryoutletatphiladelphiapremiumoutlets",
+      "predecessor_slug": "theory",
+      "basis": "Same brand with outlet and location qualifiers"
+    }
+  ],
+  "authority": {
+    "identity_reconciliation_only": true,
+    "drive_write_authorized": false,
+    "site_mutation_authorized": false,
+    "deployment_authorized": false,
+    "external_contact_authorized": false
+  }
+}

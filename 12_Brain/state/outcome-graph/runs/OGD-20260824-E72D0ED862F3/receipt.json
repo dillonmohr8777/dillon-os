@@ -1,0 +1,642 @@
+{
+  "run_id": "OGD-20260824-E72D0ED862F3",
+  "graph_id": "daily-d14-local-build-verification-shadow",
+  "objective": "Reconstruct the current Prospect Radar Next 20 local build gate-by-gate and preserve the source-pool hold instead of claiming a completed surface.",
+  "value_signal": "Build, browser, state, accessibility, detector, QA, and deployment truth remain individually visible.",
+  "contract_sha256": "d064cfa118438f7faa50c16a48e249250abf735b70d4cd94b88ca73ef35c6a47",
+  "started_at": "2026-08-24T23:49:06.101Z",
+  "source_evidence": "The exact objective, registry, git state, rules, product/design documents, design probe, and W05 receipt are recollected before planning and at terminal verification.",
+  "finish_line": "Every current W05 build gate independently reconstructs and the final artifacts exactly preserve either full local readiness or the real bounded hold without deployment.",
+  "governance": {
+    "orchestrator": "Codex acting as Marketing Chief",
+    "canonical_state": "The exact user objective, Dillon OS registry and rules, repository state, product/design authority, and W05 durable evidence remain canonical and read only.",
+    "dedupe_key": "D14:2026-08-24:source-bound-shadow",
+    "checkpoint": "System/outcome-graph/routines/D14/2026-08-24-foundation-shadow/run-receipt.json",
+    "rollback": "Discard foundation shadow artifacts; preserve the worktree, product/design truth, deployment state, canonical queue, and external systems unchanged.",
+    "escalation": "Return exact scope, repository, design-context, build-gate, QA, delivery, or authority evidence to Marketing Chief."
+  },
+  "graph_iterations": [
+    {
+      "iteration": 1,
+      "status": "verified",
+      "planner": {
+        "evidence": "Collected 8 isolated D14 item(s) from source set bee6d7037763d45601274702c12c8e31ad280fed7e97757744fc5930b1d39065.",
+        "item_count": 8,
+        "plan_signature": "e23359036e6bca8e413f27daf148523f7069c963411fb81fe5bd7cc494e301c4",
+        "items": [
+          {
+            "id": "D14:freshness",
+            "isolation_key": "build-gate:freshness",
+            "input_fingerprint": "cea5f614161a3d570e18e4af9939c8a304650a6ccc14921be91b18308398dcae",
+            "task": null
+          },
+          {
+            "id": "D14:source-pool",
+            "isolation_key": "build-gate:source-pool",
+            "input_fingerprint": "4acbd1b733603c9623fb357323add9f346fa169ad00866630b4917eeb83f2646",
+            "task": null
+          },
+          {
+            "id": "D14:selection",
+            "isolation_key": "build-gate:selection",
+            "input_fingerprint": "bebd3a26be0a885c06188d3a8e4355f64e8eddce4345b9620a9192d2ffb7cf7f",
+            "task": null
+          },
+          {
+            "id": "D14:build-browser-qa",
+            "isolation_key": "build-gate:build-browser-qa",
+            "input_fingerprint": "46fd6c3f1c29fe19ee1efd1f874f1ce7c4f29791b620abb7dde4e29d92bba385",
+            "task": null
+          },
+          {
+            "id": "D14:generated-assets",
+            "isolation_key": "build-gate:generated-assets",
+            "input_fingerprint": "52825966f4554aca3e18ca09f5eb14e71ae07d070cbab488c09c9cbd82393ae3",
+            "task": null
+          },
+          {
+            "id": "D14:impeccable-detector",
+            "isolation_key": "build-gate:impeccable-detector",
+            "input_fingerprint": "7cd13a2b68468288ba506bc8b11c0cca0bb81385c17786d5c9e5522ba9f67818",
+            "task": null
+          },
+          {
+            "id": "D14:independent-quality",
+            "isolation_key": "build-gate:independent-quality",
+            "input_fingerprint": "dd07505a48337e1d734688a39c230d2b26dd0c2d76b5ef5c6292c4db9264fb30",
+            "task": null
+          },
+          {
+            "id": "D14:authority-boundary",
+            "isolation_key": "build-gate:authority-boundary",
+            "input_fingerprint": "b622ca7ed312b1ee79f3f7b5bcd38cf19a85a9a5f5db096b51d96779113e2926",
+            "task": null
+          }
+        ]
+      },
+      "workers": [
+        {
+          "item_id": "D14:freshness",
+          "input_fingerprint": "cea5f614161a3d570e18e4af9939c8a304650a6ccc14921be91b18308398dcae",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-E72D0ED862F3:08803864412ad6e2241b:attempt:1",
+              "maker_evidence": "Built one privacy-safe D14 record for D14:freshness.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D14/2026-08-24-foundation-shadow/workers/08803864412ad6e2241b.json",
+                  "sha256": "8df2d72ceb51ec22dbe0bbdf6b0154dc6c45f93397fe60afe257d9c2db545c3d",
+                  "bytes": 832
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D14:freshness from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D14/2026-08-24-foundation-shadow/workers/08803864412ad6e2241b.json",
+              "sha256": "8df2d72ceb51ec22dbe0bbdf6b0154dc6c45f93397fe60afe257d9c2db545c3d",
+              "bytes": 832
+            }
+          ],
+          "isolation_id": "OGD-20260824-E72D0ED862F3:08803864412ad6e2241b:attempt:1"
+        },
+        {
+          "item_id": "D14:source-pool",
+          "input_fingerprint": "4acbd1b733603c9623fb357323add9f346fa169ad00866630b4917eeb83f2646",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-E72D0ED862F3:de64e6ab138ae49274b8:attempt:1",
+              "maker_evidence": "Built one privacy-safe D14 record for D14:source-pool.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D14/2026-08-24-foundation-shadow/workers/de64e6ab138ae49274b8.json",
+                  "sha256": "637150773b970d89841acac9745223db435ee0f3aca39b9b1393381ffb4a3817",
+                  "bytes": 1243
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D14:source-pool from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D14/2026-08-24-foundation-shadow/workers/de64e6ab138ae49274b8.json",
+              "sha256": "637150773b970d89841acac9745223db435ee0f3aca39b9b1393381ffb4a3817",
+              "bytes": 1243
+            }
+          ],
+          "isolation_id": "OGD-20260824-E72D0ED862F3:de64e6ab138ae49274b8:attempt:1"
+        },
+        {
+          "item_id": "D14:selection",
+          "input_fingerprint": "bebd3a26be0a885c06188d3a8e4355f64e8eddce4345b9620a9192d2ffb7cf7f",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-E72D0ED862F3:9e397e47f287fbff4e5c:attempt:1",
+              "maker_evidence": "Built one privacy-safe D14 record for D14:selection.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D14/2026-08-24-foundation-shadow/workers/9e397e47f287fbff4e5c.json",
+                  "sha256": "59a5476e62634e62f1d45f1100287f2cbbdd0b7d089704c190976ed8c4317197",
+                  "bytes": 967
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D14:selection from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D14/2026-08-24-foundation-shadow/workers/9e397e47f287fbff4e5c.json",
+              "sha256": "59a5476e62634e62f1d45f1100287f2cbbdd0b7d089704c190976ed8c4317197",
+              "bytes": 967
+            }
+          ],
+          "isolation_id": "OGD-20260824-E72D0ED862F3:9e397e47f287fbff4e5c:attempt:1"
+        },
+        {
+          "item_id": "D14:build-browser-qa",
+          "input_fingerprint": "46fd6c3f1c29fe19ee1efd1f874f1ce7c4f29791b620abb7dde4e29d92bba385",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-E72D0ED862F3:1d21f54b0678928ef5ed:attempt:1",
+              "maker_evidence": "Built one privacy-safe D14 record for D14:build-browser-qa.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D14/2026-08-24-foundation-shadow/workers/1d21f54b0678928ef5ed.json",
+                  "sha256": "6c904a440c8083eca18127cdd116622a5edbdd82f48bea12b4919c6f5908548f",
+                  "bytes": 1095
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D14:build-browser-qa from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D14/2026-08-24-foundation-shadow/workers/1d21f54b0678928ef5ed.json",
+              "sha256": "6c904a440c8083eca18127cdd116622a5edbdd82f48bea12b4919c6f5908548f",
+              "bytes": 1095
+            }
+          ],
+          "isolation_id": "OGD-20260824-E72D0ED862F3:1d21f54b0678928ef5ed:attempt:1"
+        },
+        {
+          "item_id": "D14:generated-assets",
+          "input_fingerprint": "52825966f4554aca3e18ca09f5eb14e71ae07d070cbab488c09c9cbd82393ae3",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-E72D0ED862F3:bb3fd6fbb426d62655a1:attempt:1",
+              "maker_evidence": "Built one privacy-safe D14 record for D14:generated-assets.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D14/2026-08-24-foundation-shadow/workers/bb3fd6fbb426d62655a1.json",
+                  "sha256": "ef3751808ad2c8096f1faca5bb27606686cf7bbb8d7a9a9a04db995ed850aede",
+                  "bytes": 954
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D14:generated-assets from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D14/2026-08-24-foundation-shadow/workers/bb3fd6fbb426d62655a1.json",
+              "sha256": "ef3751808ad2c8096f1faca5bb27606686cf7bbb8d7a9a9a04db995ed850aede",
+              "bytes": 954
+            }
+          ],
+          "isolation_id": "OGD-20260824-E72D0ED862F3:bb3fd6fbb426d62655a1:attempt:1"
+        },
+        {
+          "item_id": "D14:impeccable-detector",
+          "input_fingerprint": "7cd13a2b68468288ba506bc8b11c0cca0bb81385c17786d5c9e5522ba9f67818",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-E72D0ED862F3:d53846904c7c8e93eb0c:attempt:1",
+              "maker_evidence": "Built one privacy-safe D14 record for D14:impeccable-detector.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D14/2026-08-24-foundation-shadow/workers/d53846904c7c8e93eb0c.json",
+                  "sha256": "029c2508af400bc0c820e9f2bf0966e0c0f00c44278b66a57ef0086c260cdee8",
+                  "bytes": 900
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D14:impeccable-detector from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D14/2026-08-24-foundation-shadow/workers/d53846904c7c8e93eb0c.json",
+              "sha256": "029c2508af400bc0c820e9f2bf0966e0c0f00c44278b66a57ef0086c260cdee8",
+              "bytes": 900
+            }
+          ],
+          "isolation_id": "OGD-20260824-E72D0ED862F3:d53846904c7c8e93eb0c:attempt:1"
+        },
+        {
+          "item_id": "D14:independent-quality",
+          "input_fingerprint": "dd07505a48337e1d734688a39c230d2b26dd0c2d76b5ef5c6292c4db9264fb30",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-E72D0ED862F3:f38d3135e72d9dd042ca:attempt:1",
+              "maker_evidence": "Built one privacy-safe D14 record for D14:independent-quality.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D14/2026-08-24-foundation-shadow/workers/f38d3135e72d9dd042ca.json",
+                  "sha256": "1eb64a25bc6dd85d653ea54c6884b5ee48a1e932defd5fcefa26c9b19ceec5e6",
+                  "bytes": 1145
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D14:independent-quality from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D14/2026-08-24-foundation-shadow/workers/f38d3135e72d9dd042ca.json",
+              "sha256": "1eb64a25bc6dd85d653ea54c6884b5ee48a1e932defd5fcefa26c9b19ceec5e6",
+              "bytes": 1145
+            }
+          ],
+          "isolation_id": "OGD-20260824-E72D0ED862F3:f38d3135e72d9dd042ca:attempt:1"
+        },
+        {
+          "item_id": "D14:authority-boundary",
+          "input_fingerprint": "b622ca7ed312b1ee79f3f7b5bcd38cf19a85a9a5f5db096b51d96779113e2926",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-E72D0ED862F3:5356db59cae52ff00053:attempt:1",
+              "maker_evidence": "Built one privacy-safe D14 record for D14:authority-boundary.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D14/2026-08-24-foundation-shadow/workers/5356db59cae52ff00053.json",
+                  "sha256": "cacd4cb9bc6f4c0fb19237c0fc7f7acdfcd4c6c607c334d89d208ee5725332e7",
+                  "bytes": 1046
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D14:authority-boundary from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D14/2026-08-24-foundation-shadow/workers/5356db59cae52ff00053.json",
+              "sha256": "cacd4cb9bc6f4c0fb19237c0fc7f7acdfcd4c6c607c334d89d208ee5725332e7",
+              "bytes": 1046
+            }
+          ],
+          "isolation_id": "OGD-20260824-E72D0ED862F3:5356db59cae52ff00053:attempt:1"
+        }
+      ],
+      "reduction": {
+        "evidence": "Reduced all checked D14 records without blending isolation keys.",
+        "artifacts": [
+          {
+            "path": "System/outcome-graph/routines/D14/2026-08-24-foundation-shadow/build-receipt.json",
+            "sha256": "aeae1f8a0a97791031131d4676b8661803b536e9cbf3f47887bcd71ce3144de7",
+            "bytes": 10096
+          },
+          {
+            "path": "System/outcome-graph/routines/D14/2026-08-24-foundation-shadow/independent-qa.json",
+            "sha256": "859134550545da7eabc2f5218f00716b0aaeb523c36135d0af67ae40b806f711",
+            "bytes": 1783
+          },
+          {
+            "path": "System/outcome-graph/routines/D14/2026-08-24-foundation-shadow/artifact-manifest.json",
+            "sha256": "d13b0df3e0912ae88c18bba08985cde9be1b72d4e5413c0c850e56c029db4019",
+            "bytes": 797
+          }
+        ]
+      },
+      "terminal_verification": {
+        "evidence": "Recollected and independently verified all D14 sources, records, negative states, and artifact hashes.",
+        "declared_pass": true,
+        "passed": true,
+        "assertions": [
+          {
+            "id": "source-manifest-stable",
+            "passed": true,
+            "detail": "Every named source remains hash-bound at terminal verification."
+          },
+          {
+            "id": "every-isolated-item-reconstructed-exactly-once",
+            "passed": true,
+            "detail": "Every in-scope item has one collision-resistant reconstructed record."
+          },
+          {
+            "id": "reducer-output-reproduces-exactly",
+            "passed": true,
+            "detail": "Final artifacts reproduce exactly from current sources and the frozen evaluation clock."
+          },
+          {
+            "id": "requested-surface-build-truthful",
+            "passed": true,
+            "detail": "The build is either fully proven or truthfully held."
+          },
+          {
+            "id": "desktop-and-mobile-review-state-explicit",
+            "passed": true,
+            "detail": "Viewport review is never inferred."
+          },
+          {
+            "id": "interactive-and-system-states-explicit",
+            "passed": true,
+            "detail": "Interaction and state review is explicit."
+          },
+          {
+            "id": "tests-console-accessibility-and-detector-explicit",
+            "passed": true,
+            "detail": "Quality gates are explicit."
+          },
+          {
+            "id": "deployment-boundary-is-exact",
+            "passed": true,
+            "detail": "The artifact remains local."
+          },
+          {
+            "id": "no-ambiguous-or-new-public-deployment",
+            "passed": true,
+            "detail": "No deployment occurred."
+          },
+          {
+            "id": "privacy-and-no-mutation-boundary",
+            "passed": true,
+            "detail": "Final artifacts are redacted and attest no external, canonical, provider, restart, or checkpoint mutation."
+          }
+        ],
+        "artifact_manifest": [
+          {
+            "path": "System/outcome-graph/routines/D14/2026-08-24-foundation-shadow/build-receipt.json",
+            "sha256": "aeae1f8a0a97791031131d4676b8661803b536e9cbf3f47887bcd71ce3144de7",
+            "bytes": 10096
+          },
+          {
+            "path": "System/outcome-graph/routines/D14/2026-08-24-foundation-shadow/independent-qa.json",
+            "sha256": "859134550545da7eabc2f5218f00716b0aaeb523c36135d0af67ae40b806f711",
+            "bytes": 1783
+          },
+          {
+            "path": "System/outcome-graph/routines/D14/2026-08-24-foundation-shadow/artifact-manifest.json",
+            "sha256": "d13b0df3e0912ae88c18bba08985cde9be1b72d4e5413c0c850e56c029db4019",
+            "bytes": 797
+          }
+        ],
+        "manifest_errors": []
+      },
+      "learning": {
+        "evidence": "Appended one hashed D14 correction entry.",
+        "corrections": [
+          "Retain D14 source bindings, negative states, exact authority, and terminal assertions until the underlying evidence changes."
+        ],
+        "ledger": "System/outcome-graph/routines/D14/2026-08-24-foundation-shadow/corrections.jsonl",
+        "ledger_receipt": {
+          "locator": "System/outcome-graph/routines/D14/2026-08-24-foundation-shadow/corrections.jsonl",
+          "entry_sha256": "9a0d1ae67ede16c5d8b006d3f47890de6e914da99a281da762f0d45752e0a68b"
+        }
+      }
+    }
+  ],
+  "invocation_log": [
+    {
+      "adapter": "source-bound-d14-planner",
+      "invoked_at": "2026-08-24T23:49:06.122Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d14-maker",
+      "invoked_at": "2026-08-24T23:49:06.640Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d14-maker",
+      "invoked_at": "2026-08-24T23:49:06.641Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d14-maker",
+      "invoked_at": "2026-08-24T23:49:06.641Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d14-maker",
+      "invoked_at": "2026-08-24T23:49:06.641Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d14-checker",
+      "invoked_at": "2026-08-24T23:49:08.416Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d14-checker",
+      "invoked_at": "2026-08-24T23:49:08.416Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d14-checker",
+      "invoked_at": "2026-08-24T23:49:08.416Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d14-checker",
+      "invoked_at": "2026-08-24T23:49:08.416Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d14-maker",
+      "invoked_at": "2026-08-24T23:49:10.139Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d14-maker",
+      "invoked_at": "2026-08-24T23:49:10.569Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d14-maker",
+      "invoked_at": "2026-08-24T23:49:11.003Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d14-checker",
+      "invoked_at": "2026-08-24T23:49:11.003Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d14-maker",
+      "invoked_at": "2026-08-24T23:49:11.803Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d14-checker",
+      "invoked_at": "2026-08-24T23:49:11.803Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d14-checker",
+      "invoked_at": "2026-08-24T23:49:12.639Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d14-checker",
+      "invoked_at": "2026-08-24T23:49:13.039Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d14-reducer",
+      "invoked_at": "2026-08-24T23:49:13.485Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d14-terminal-verifier",
+      "invoked_at": "2026-08-24T23:49:13.526Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d14-learner",
+      "invoked_at": "2026-08-24T23:49:13.892Z",
+      "status": "returned"
+    }
+  ],
+  "budget": {
+    "limit_units": 96,
+    "used_units": 20
+  },
+  "outcome": "complete",
+  "terminal_truth": true,
+  "finished_at": "2026-08-24T23:49:13.910Z",
+  "elapsed_seconds": 7.809,
+  "blocked_by": null,
+  "reason": "Finish line is proven by an independent terminal verifier.",
+  "terminal_evidence": {
+    "evidence": "Recollected and independently verified all D14 sources, records, negative states, and artifact hashes.",
+    "declared_pass": true,
+    "passed": true,
+    "assertions": [
+      {
+        "id": "source-manifest-stable",
+        "passed": true,
+        "detail": "Every named source remains hash-bound at terminal verification."
+      },
+      {
+        "id": "every-isolated-item-reconstructed-exactly-once",
+        "passed": true,
+        "detail": "Every in-scope item has one collision-resistant reconstructed record."
+      },
+      {
+        "id": "reducer-output-reproduces-exactly",
+        "passed": true,
+        "detail": "Final artifacts reproduce exactly from current sources and the frozen evaluation clock."
+      },
+      {
+        "id": "requested-surface-build-truthful",
+        "passed": true,
+        "detail": "The build is either fully proven or truthfully held."
+      },
+      {
+        "id": "desktop-and-mobile-review-state-explicit",
+        "passed": true,
+        "detail": "Viewport review is never inferred."
+      },
+      {
+        "id": "interactive-and-system-states-explicit",
+        "passed": true,
+        "detail": "Interaction and state review is explicit."
+      },
+      {
+        "id": "tests-console-accessibility-and-detector-explicit",
+        "passed": true,
+        "detail": "Quality gates are explicit."
+      },
+      {
+        "id": "deployment-boundary-is-exact",
+        "passed": true,
+        "detail": "The artifact remains local."
+      },
+      {
+        "id": "no-ambiguous-or-new-public-deployment",
+        "passed": true,
+        "detail": "No deployment occurred."
+      },
+      {
+        "id": "privacy-and-no-mutation-boundary",
+        "passed": true,
+        "detail": "Final artifacts are redacted and attest no external, canonical, provider, restart, or checkpoint mutation."
+      }
+    ],
+    "artifact_manifest": [
+      {
+        "path": "System/outcome-graph/routines/D14/2026-08-24-foundation-shadow/build-receipt.json",
+        "sha256": "aeae1f8a0a97791031131d4676b8661803b536e9cbf3f47887bcd71ce3144de7",
+        "bytes": 10096
+      },
+      {
+        "path": "System/outcome-graph/routines/D14/2026-08-24-foundation-shadow/independent-qa.json",
+        "sha256": "859134550545da7eabc2f5218f00716b0aaeb523c36135d0af67ae40b806f711",
+        "bytes": 1783
+      },
+      {
+        "path": "System/outcome-graph/routines/D14/2026-08-24-foundation-shadow/artifact-manifest.json",
+        "sha256": "d13b0df3e0912ae88c18bba08985cde9be1b72d4e5413c0c850e56c029db4019",
+        "bytes": 797
+      }
+    ],
+    "manifest_errors": []
+  },
+  "learning_evidence": {
+    "evidence": "Appended one hashed D14 correction entry.",
+    "corrections": [
+      "Retain D14 source bindings, negative states, exact authority, and terminal assertions until the underlying evidence changes."
+    ],
+    "ledger": "System/outcome-graph/routines/D14/2026-08-24-foundation-shadow/corrections.jsonl",
+    "ledger_receipt": {
+      "locator": "System/outcome-graph/routines/D14/2026-08-24-foundation-shadow/corrections.jsonl",
+      "entry_sha256": "9a0d1ae67ede16c5d8b006d3f47890de6e914da99a281da762f0d45752e0a68b"
+    }
+  },
+  "drift_fingerprint": "8f7128be425ceed367bd3925781f9e897c1ce13671a1d701f29e8f0b64c30968",
+  "deduped": false,
+  "durable_state": {
+    "schema_version": 1,
+    "dedupe_identity": "266c24f434d3d681028d1476a5505ee6c545048d45807b3ac8fae737bc518e6c",
+    "dedupe_hit": false,
+    "resumed": false,
+    "canonical_binding": {
+      "locator": "dillon-os://routine/D14/2026-08-24",
+      "version": "2026-08-24:e1cb9e89.05e6a21e.c5a7c091.1b135970.d503a937.90d9bcee.f497ab86.4cbc7e46.43cfa9c9.c4f66a74",
+      "sha256": "bee6d7037763d45601274702c12c8e31ad280fed7e97757744fc5930b1d39065",
+      "captured_at": "2026-08-24T23:49:05.083Z"
+    },
+    "canonical_binding_fingerprint": "3423ce478cda67bf9c79d37f60b289d40d5de03cecfbebe7fbadac8e5a1b72fa",
+    "contract_fingerprint": "c2653552c4adcc4020d908815e54b63340f7113f3bfd96995d082cb80c70ecd7",
+    "checkpoint": "runs/OGD-20260824-E72D0ED862F3/checkpoint.json"
+  }
+}

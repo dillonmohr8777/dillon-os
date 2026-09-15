@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "routine_id": "D26",
+  "generated_at": "2026-08-25T00:31:06.432Z",
+  "source_set_sha256": "a2d2bb3bc16eb1353ffbb5cf69ea048e8a616aa02023a69ac8d365d83fd7b95e",
+  "canonical_destination": "12_Brain/03_Concepts/High Craft Website Factory.md",
+  "duplicate_search": {
+    "completed": true,
+    "existing_destination_found": true,
+    "new_canonical_note_needed": false
+  },
+  "sources": [
+    {
+      "locator": "_os/automation/lib/outcome-graph-routine-catalog.js",
+      "sha256": "75ead33ce616e0094c7001eadaef56ef9f7273df77b2978d1f5bc192ee533bc3",
+      "bytes": 76831
+    },
+    {
+      "locator": "11_Agents/claude-operating-team.json",
+      "sha256": "05e6a21e884f4a6748b824ef5d58f4c786861ce892a2c8c3514ebb8b7cf8677e",
+      "bytes": 415812
+    },
+    {
+      "locator": "12_Brain/03_Concepts/High Craft Website Factory.md",
+      "sha256": "c947dbf00db30233cb2d16f7c980c95efb3d7a6daf7a10066a880a5e00098609",
+      "bytes": 11509
+    },
+    {
+      "locator": "System/outcome-graph/source-snapshots/impeccable-context-probe-2026-08-24.json",
+      "sha256": "43588267cf423435642bf9504bcdccd87351caa324c0807961eb28070a99f7f6",
+      "bytes": 1447
+    },
+    {
+      "locator": "System/outcome-graph/source-snapshots/outcome-graph-objective-2026-08-24.json",
+      "sha256": "c4f66a749c2795f303402fa87c21b7a7eb937f3b17892184a57ee245c5007b33",
+      "bytes": 2043
+    },
+    {
+      "locator": "System/outcome-graph/source-snapshots/web-design-loop-canary-brief-2026-08-24.json",
+      "sha256": "f349bdba1f6047860ec7fc0e75245d25132aecc674891e7e295b2e726f04c175",
+      "bytes": 1368
+    },
+    {
+      "locator": "System/outcome-graph/web-design/closed-loop-canary/2026-08-24-live/design-defect-ledger.json",
+      "sha256": "699fd0a4710d4d77a80ca90b9b26a90369ae6fa277e19078b1888ca9f1afda39",
+      "bytes": 10143
+    },
+    {
+      "locator": "System/outcome-graph/web-design/closed-loop-canary/2026-08-24-live/web-design-loop-receipt.json",
+      "sha256": "03f91cd62183ab92e316add0def590ad6542147e90d387f3ce61831501fe8e2a",
+      "bytes": 4402
+    }
+  ],
+  "confidence": "high",
+  "authority": {
+    "read_only": true,
+    "proposal_only": true,
+    "external_action_attempted": false,
+    "canonical_write_attempted": false,
+    "provider_mutation_attempted": false,
+    "permission_change_attempted": false,
+    "deletion_attempted": false,
+    "schedule_change_attempted": false,
+    "billing_change_attempted": false,
+    "record_move_attempted": false
+  }
+}

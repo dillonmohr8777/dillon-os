@@ -1,0 +1,236 @@
+[
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/23733909990",
+      "status": "ENABLED",
+      "experimentType": "BASE",
+      "servingStatus": "ENDED",
+      "biddingStrategyType": "MAXIMIZE_CONVERSIONS",
+      "name": "Pampano Campaign",
+      "id": "23733909990"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/6275014654/campaignBudgets/15475062213",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "15475062213",
+      "amountMicros": "16670000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/23883827641",
+      "status": "ENABLED",
+      "experimentType": "BASE",
+      "servingStatus": "ENDED",
+      "biddingStrategyType": "MAXIMIZE_CONVERSIONS",
+      "name": "Howard Camaign",
+      "id": "23883827641"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/6275014654/campaignBudgets/15597351086",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "15597351086",
+      "amountMicros": "16670000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/23895251475",
+      "status": "PAUSED",
+      "experimentType": "BASE",
+      "servingStatus": "ENDED",
+      "biddingStrategyType": "MAXIMIZE_CONVERSIONS",
+      "name": "Fresh Blends x Kwik Trip #633 | Ice Box | PMax",
+      "id": "23895251475"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/6275014654/campaignBudgets/15613302884",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "15613302884",
+      "amountMicros": "16670000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/23895254871",
+      "status": "PAUSED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "MAXIMIZE_CONVERSIONS",
+      "name": "Fresh Blends x Kwik Trip #1110 | Ice Box | PMax",
+      "id": "23895254871"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/6275014654/campaignBudgets/15613306784",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "15613306784",
+      "amountMicros": "16670000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/23902535468",
+      "status": "PAUSED",
+      "experimentType": "BASE",
+      "servingStatus": "ENDED",
+      "biddingStrategyType": "MAXIMIZE_CONVERSIONS",
+      "name": "Fresh Blends x Kwik Trip #573 | Ice Box | PMax",
+      "id": "23902535468"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/6275014654/campaignBudgets/15625078501",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "15625078501",
+      "amountMicros": "16670000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/23904822223",
+      "status": "PAUSED",
+      "experimentType": "BASE",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "MAXIMIZE_CONVERSIONS",
+      "name": "Fresh Blends x Kwik Trip #1161 | Ice Box | PMax",
+      "id": "23904822223"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/6275014654/campaignBudgets/15613346597",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "15613346597",
+      "amountMicros": "16670000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/23944102690",
+      "status": "ENABLED",
+      "experimentType": "BASE",
+      "servingStatus": "ENDED",
+      "biddingStrategyType": "MAXIMIZE_CONVERSIONS",
+      "name": "Replenish | PMAX | Boca | Consumer Foot Traffic",
+      "id": "23944102690"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/6275014654/campaignBudgets/15648764604",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "15648764604",
+      "amountMicros": "16670000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/23944174558",
+      "status": "ENABLED",
+      "experimentType": "BASE",
+      "servingStatus": "ENDED",
+      "biddingStrategyType": "MAXIMIZE_CONVERSIONS",
+      "name": "Replenish | PMAX | Coral Springs | Consumer Foot Traffic",
+      "id": "23944174558"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/6275014654/campaignBudgets/15644383841",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "15644383841",
+      "amountMicros": "16670000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/23944175995",
+      "status": "ENABLED",
+      "experimentType": "BASE",
+      "servingStatus": "ENDED",
+      "biddingStrategyType": "MAXIMIZE_CONVERSIONS",
+      "name": "Replenish | PMAX | Miami 56 | Consumer Foot Traffic",
+      "id": "23944175995"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/6275014654/campaignBudgets/15649297140",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "15649297140",
+      "amountMicros": "16670000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/24008391755",
+      "status": "ENABLED",
+      "experimentType": "BASE",
+      "servingStatus": "ENDED",
+      "biddingStrategyType": "MAXIMIZE_CONVERSIONS",
+      "name": "Replenish | PMAX | Carmel Mountain 19223 | Consumer Foot Traffic",
+      "id": "24008391755"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/6275014654/campaignBudgets/15695238944",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "15695238944",
+      "amountMicros": "16670000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/24012660853",
+      "status": "ENABLED",
+      "experimentType": "BASE",
+      "servingStatus": "ENDED",
+      "biddingStrategyType": "MAXIMIZE_CONVERSIONS",
+      "name": "Replenish | PMAX | Solana Beach 4344 | Consumer Foot Traffic",
+      "id": "24012660853"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/6275014654/campaignBudgets/15705135991",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "15705135991",
+      "amountMicros": "16670000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/24012666388",
+      "status": "ENABLED",
+      "experimentType": "BASE",
+      "servingStatus": "ENDED",
+      "biddingStrategyType": "MAXIMIZE_CONVERSIONS",
+      "name": "Replenish | PMAX | Torrey Del Mar 3458 | Consumer Foot Traffic",
+      "id": "24012666388"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/6275014654/campaignBudgets/15700056189",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "15700056189",
+      "amountMicros": "16670000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/24012722869",
+      "status": "ENABLED",
+      "experimentType": "BASE",
+      "servingStatus": "ENDED",
+      "biddingStrategyType": "MAXIMIZE_CONVERSIONS",
+      "name": "Replenish | PMAX | Miramar 43130 | Consumer Foot Traffic",
+      "id": "24012722869"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/6275014654/campaignBudgets/15695171909",
+      "status": "ENABLED",
+      "deliveryMethod": "STANDARD",
+      "id": "15695171909",
+      "amountMicros": "16670000"
+    }
+  }
+]

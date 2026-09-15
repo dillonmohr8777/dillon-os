@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "interrupted_run_id": "OGD-20260824-7C7C9E19FB31",
+  "resumed_run_id": "OGD-20260824-7C7C9E19FB31",
+  "outcome": "complete",
+  "resumed": true,
+  "dedupe_hit": true,
+  "worker_calls": {
+    "alpha": 1,
+    "beta": 1
+  },
+  "proof": {
+    "same_run_resumed": true,
+    "verified_alpha_not_redone": true,
+    "unfinished_beta_ran_once": true,
+    "duplicate_trigger_ran_no_adapters": true
+  }
+}

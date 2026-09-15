@@ -82,3 +82,7 @@ Record:
 - the next safe action.
 
 External delivery and consequential changes remain separately approval-gated.
+
+## OpenAI Agents API (optional harness)
+
+For long-running coding/research agents that need a managed Codex session/sandbox, prefer the skill `.agents/skills/openai-agents-api/SKILL.md` and dry-run wrapper `System/scripts/Invoke-OpenAIAgentsSession.ps1`. Do not use it for CEO chat, Hermes cron, OmniRoute routing, Marketing Chief canonical writes, or any send/post/publish/spend without an exact Dillon yes. Concept note: `12_Brain/03_Concepts/OpenAI Agents API.md`.

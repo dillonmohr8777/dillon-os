@@ -1,0 +1,41 @@
+{
+  "run_id": "COMMS-2026-09-06-DAY-1",
+  "run_at": "2026-09-06T07:02:31-04:00",
+  "status": "success",
+  "window": {
+    "started_at": "2026-09-02T19:02:59-04:00",
+    "ended_at": "2026-09-06T07:02:31-04:00",
+    "overlap_hours": 36
+  },
+  "connectors": { "gmail": "ok", "slack": "ok" },
+  "items": [
+    {
+      "dedupe_key": "gmail:thread:1a07263f09e5e70e",
+      "source_type": "gmail",
+      "source_ref": "gmail://thread/1a07263f09e5e70e",
+      "occurred_at": "2026-09-05T22:10:33Z",
+      "participants": ["BOK Law Firm", "Dillon Mohr"],
+      "kind": "blocker",
+      "priority": "high",
+      "route": { "type": "client", "name": "BOK Law Firm", "path": "01_Clients/BOK Law Firm/overview.md" },
+      "summary": "BOK did not receive the payment request or invoice sheet; the invoice link was resent in the verified thread.",
+      "evidence": "The hydrated Gmail thread shows the client reported the missing request, followed by a resend of the invoice sheet and confirmation of the $775 request.",
+      "uncertainty": "Receipt of the resent link and payment remain unconfirmed; the client auto-reply says normal response resumes September 8.",
+      "next_safe_action": "Wait for the client’s normal business response after September 8, then confirm receipt without sending another duplicate unless requested.",
+      "write_targets": ["01_Clients/BOK Law Firm/overview.md"]
+    }
+  ],
+  "excluded_counts": {
+    "newsletter_or_promotion": 12,
+    "social_or_hiring_noise": 9,
+    "self_sent_or_internal_receipt": 31,
+    "financial_or_billing": 5,
+    "credential_or_security": 3,
+    "bot_or_notification_noise": 8,
+    "overlap_duplicate": 14
+  },
+  "checkpoints": {
+    "gmail": "2026-09-06T07:02:31-04:00",
+    "slack": "1788692556.000000"
+  }
+}

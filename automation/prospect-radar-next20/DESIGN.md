@@ -19,7 +19,7 @@ tokens:
 
 ## Direction
 
-Verified identity, mobile-first cinematic pacing, and one memorable close. Each prospect keeps its own logo and source-led palette while the factory supplies a disciplined page grammar.
+Verified identity, mobile-first cinematic pacing, and one memorable close. Every prospect uses the Align HCM orange, navy, warm-paper, and cyan material system with a business-specific editorial board, while exact first-party identity remains authoritative.
 
 ## Composition
 
@@ -27,11 +27,11 @@ The phone view owns the hierarchy: a compact identity header, one-line offer, pr
 
 ## Typography
 
-Use self-hosted, expressive open-source display faces selected by direction family and a highly legible text face. Do not use Oswald, IBM Plex, Inter, DM Sans, Plus Jakarta Sans, Space Grotesk, or another default training-set pairing in this lane.
+Use self-hosted Plus Jakarta Sans at 800 for display statements and self-hosted DM Sans at 400 to 700 for body copy and controls. This is an explicit Align HCM contract, not a generic default.
 
 ## Color
 
-Derive the identity color from verified source material, then build an accessible four-role palette: paper, ink, signal, and deep field. Color owns page-scale regions rather than decorating cards.
+Use Align warm paper, deep and midnight navy, structural orange, and pale cyan as page-scale fields. The verified first-party business logo retains its own original colors and geometry; no generated or reconstructed mark is permitted.
 
 ## Components
 
@@ -39,7 +39,7 @@ Buttons are 48 pixels tall or larger. Media uses 12 to 16 pixel corners. Cards a
 
 ## Motion
 
-Sections are visible by default. Progressive enhancement may reveal content and let completed fields soften as they leave the viewport. The exact-logo outro is the authored moment: blur, scale, contrast, and opacity resolve into a crisp transparent mark. Reduced-motion users receive the final state immediately.
+Sections are visible by default. Progressive enhancement may reveal content and let completed fields soften as they leave the viewport. The authored moment is the documentary image-to-identity transition; an exact logo is used only when verified, and a fallback remains ordinary live text. Reduced-motion users receive the final state immediately.
 
 ## Asset rules
 

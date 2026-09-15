@@ -1,0 +1,487 @@
+{
+  "run_id": "OGD-20260824-0E1EBCD4DFD6",
+  "graph_id": "weekly-w02-paid-media-pass-a-shadow",
+  "objective": "Classify the first weekly paid-media review for every exact client-account-channel lane from current delivery and downstream attribution evidence without mutating any provider, CRM, delivery surface, or canonical queue.",
+  "value_signal": "Every recommendation is supported by a current exact-account D17 delivery packet and D18 downstream attribution receipt, or the lane remains held with exact reasons.",
+  "contract_sha256": "5a47a8834e65ae73e7674b838f3d529089399b8ef740a626976b0ac706ae0bb0",
+  "started_at": "2026-08-24T23:10:40.332Z",
+  "source_evidence": "Roster, registry, configs, daily manifest, sanitized access binding, live provider snapshot, and pass-A artifact when applicable are hashed before planning and recollected at terminal verification.",
+  "finish_line": "Every canonical paid-media lane is independently reconstructed; D17 and D18 gates, negative states, account isolation, pass-A binding when applicable, privacy, and no-mutation authority exactly reproduce from the stable source manifest.",
+  "governance": {
+    "orchestrator": "Codex acting as Marketing Chief",
+    "canonical_state": "client-operations remains canonical and read-only; this graph is evidence and readiness only",
+    "dedupe_key": "W02:2026-W35A:paid-media-shadow",
+    "checkpoint": "System/outcome-graph/routines/W02/2026-W35A-live-shadow/run-receipt.json",
+    "rollback": "Discard shadow artifacts and retain prior verified evidence; providers, CRM, messages, queue, and campaigns remain unchanged.",
+    "escalation": "Return exact account ambiguity, stale evidence, attribution gaps, provider drafts, latency, route mismatch, or unsafe recommendations to Marketing Chief."
+  },
+  "graph_iterations": [
+    {
+      "iteration": 1,
+      "status": "terminal_failed",
+      "planner": {
+        "evidence": "Collected 7 isolated W02 paid-media lanes from source set d9999ce6c6b447b97dca8c7fd68c14e8b0981ef414085b0a05ce49a5a94f2928.",
+        "item_count": 7,
+        "plan_signature": "e986f1076eb16e481b084a307e23496f903eba6606f23c6d9397644025aefb45",
+        "items": [
+          {
+            "id": "W02:google-ads--kimberly-james-bridal",
+            "isolation_key": "W02:kimberly-james-bridal:google-ads:2026-W35A",
+            "input_fingerprint": "72de498a3bf272bd8ee2e48814d10db40a8f664cfad4d4f6412aa6e58ce01205",
+            "task": "Classify google-ads--kimberly-james-bridal from exact route, account, delivery, attribution, latency, and downstream evidence."
+          },
+          {
+            "id": "W02:google-ads--replenish-7-eleven",
+            "isolation_key": "W02:replenish-7-eleven:google-ads:2026-W35A",
+            "input_fingerprint": "5e17fac959f68e84e2eee840b5288fe711962637c90648df3b741599dbbe15ac",
+            "task": "Classify google-ads--replenish-7-eleven from exact route, account, delivery, attribution, latency, and downstream evidence."
+          },
+          {
+            "id": "W02:google-ads--fresh-blends-kwik-trip",
+            "isolation_key": "W02:fresh-blends-kwik-trip:google-ads:2026-W35A",
+            "input_fingerprint": "6e72a5b53bec51ef78baf20bdb6a83614f2a7dc066137fb01637f5423ac879ec",
+            "task": "Classify google-ads--fresh-blends-kwik-trip from exact route, account, delivery, attribution, latency, and downstream evidence."
+          },
+          {
+            "id": "W02:google-ads--omega-landscaping",
+            "isolation_key": "W02:omega-landscaping:google-ads:2026-W35A",
+            "input_fingerprint": "52e1e3af491c7c83aa821eac36d11c5de82699ca3a55555c5112daf5579d6183",
+            "task": "Classify google-ads--omega-landscaping from exact route, account, delivery, attribution, latency, and downstream evidence."
+          },
+          {
+            "id": "W02:google-ads--onsite-concrete-landscape",
+            "isolation_key": "W02:onsite-concrete-landscape:google-ads:2026-W35A",
+            "input_fingerprint": "126f33532c991b23ef68d53a011dba9f019c430b8866d06fd59d8d9bf283d9db",
+            "task": "Classify google-ads--onsite-concrete-landscape from exact route, account, delivery, attribution, latency, and downstream evidence."
+          },
+          {
+            "id": "W02:meta-ads--shadow-heating-cooling",
+            "isolation_key": "W02:shadow-heating-cooling:meta-ads:2026-W35A",
+            "input_fingerprint": "55f3a01f93ab158619b7d15999f87bc15c5cfe27e5de2a7209a2a862ed949a5c",
+            "task": "Classify meta-ads--shadow-heating-cooling from exact route, account, delivery, attribution, latency, and downstream evidence."
+          },
+          {
+            "id": "W02:meta-ads--kimberly-james-bridal",
+            "isolation_key": "W02:kimberly-james-bridal:meta-ads:2026-W35A",
+            "input_fingerprint": "eaddfb6f54186396b3cddb1d7e87b5910b569c3c918180952394b52bbb8d0e7b",
+            "task": "Classify meta-ads--kimberly-james-bridal from exact route, account, delivery, attribution, latency, and downstream evidence."
+          }
+        ]
+      },
+      "workers": [
+        {
+          "item_id": "W02:google-ads--kimberly-james-bridal",
+          "input_fingerprint": "72de498a3bf272bd8ee2e48814d10db40a8f664cfad4d4f6412aa6e58ce01205",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-0E1EBCD4DFD6:6caad93cff0fb47d8388:attempt:1",
+              "maker_evidence": "Built one privacy-safe D17/D18 record for W02:google-ads--kimberly-james-bridal.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/W02/2026-W35A-live-shadow/workers/6caad93cff0fb47d8388.json",
+                  "sha256": "f8b5ddd180c48c777521cc4db1959f035746535280c110053480cf58c8823485",
+                  "bytes": 2653
+                }
+              ],
+              "checker_evidence": "Independently reconstructed the exact route, account, D17, D18, and comparison state for W02:google-ads--kimberly-james-bridal.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/W02/2026-W35A-live-shadow/workers/6caad93cff0fb47d8388.json",
+              "sha256": "f8b5ddd180c48c777521cc4db1959f035746535280c110053480cf58c8823485",
+              "bytes": 2653
+            }
+          ],
+          "isolation_id": "OGD-20260824-0E1EBCD4DFD6:6caad93cff0fb47d8388:attempt:1"
+        },
+        {
+          "item_id": "W02:google-ads--replenish-7-eleven",
+          "input_fingerprint": "5e17fac959f68e84e2eee840b5288fe711962637c90648df3b741599dbbe15ac",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-0E1EBCD4DFD6:9ebeee8ede21db56aa26:attempt:1",
+              "maker_evidence": "Built one privacy-safe D17/D18 record for W02:google-ads--replenish-7-eleven.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/W02/2026-W35A-live-shadow/workers/9ebeee8ede21db56aa26.json",
+                  "sha256": "4fb737556c1549fe397090e7aab8598810638f0c14a5ec8f5b277d881687ad94",
+                  "bytes": 2669
+                }
+              ],
+              "checker_evidence": "Independently reconstructed the exact route, account, D17, D18, and comparison state for W02:google-ads--replenish-7-eleven.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/W02/2026-W35A-live-shadow/workers/9ebeee8ede21db56aa26.json",
+              "sha256": "4fb737556c1549fe397090e7aab8598810638f0c14a5ec8f5b277d881687ad94",
+              "bytes": 2669
+            }
+          ],
+          "isolation_id": "OGD-20260824-0E1EBCD4DFD6:9ebeee8ede21db56aa26:attempt:1"
+        },
+        {
+          "item_id": "W02:google-ads--fresh-blends-kwik-trip",
+          "input_fingerprint": "6e72a5b53bec51ef78baf20bdb6a83614f2a7dc066137fb01637f5423ac879ec",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-0E1EBCD4DFD6:b9cd1ef37533a39d3789:attempt:1",
+              "maker_evidence": "Built one privacy-safe D17/D18 record for W02:google-ads--fresh-blends-kwik-trip.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/W02/2026-W35A-live-shadow/workers/b9cd1ef37533a39d3789.json",
+                  "sha256": "ecf90113816e605d9971753815a4d857fefe432f30f34424008d9ab4b87681e6",
+                  "bytes": 2696
+                }
+              ],
+              "checker_evidence": "Independently reconstructed the exact route, account, D17, D18, and comparison state for W02:google-ads--fresh-blends-kwik-trip.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/W02/2026-W35A-live-shadow/workers/b9cd1ef37533a39d3789.json",
+              "sha256": "ecf90113816e605d9971753815a4d857fefe432f30f34424008d9ab4b87681e6",
+              "bytes": 2696
+            }
+          ],
+          "isolation_id": "OGD-20260824-0E1EBCD4DFD6:b9cd1ef37533a39d3789:attempt:1"
+        },
+        {
+          "item_id": "W02:google-ads--omega-landscaping",
+          "input_fingerprint": "52e1e3af491c7c83aa821eac36d11c5de82699ca3a55555c5112daf5579d6183",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-0E1EBCD4DFD6:a4943d6bacdea9a25216:attempt:1",
+              "maker_evidence": "Built one privacy-safe D17/D18 record for W02:google-ads--omega-landscaping.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/W02/2026-W35A-live-shadow/workers/a4943d6bacdea9a25216.json",
+                  "sha256": "eca1dbc96c27ef8577afa6017aca376eda16efcae555a801833c1546a7764169",
+                  "bytes": 2641
+                }
+              ],
+              "checker_evidence": "Independently reconstructed the exact route, account, D17, D18, and comparison state for W02:google-ads--omega-landscaping.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/W02/2026-W35A-live-shadow/workers/a4943d6bacdea9a25216.json",
+              "sha256": "eca1dbc96c27ef8577afa6017aca376eda16efcae555a801833c1546a7764169",
+              "bytes": 2641
+            }
+          ],
+          "isolation_id": "OGD-20260824-0E1EBCD4DFD6:a4943d6bacdea9a25216:attempt:1"
+        },
+        {
+          "item_id": "W02:google-ads--onsite-concrete-landscape",
+          "input_fingerprint": "126f33532c991b23ef68d53a011dba9f019c430b8866d06fd59d8d9bf283d9db",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-0E1EBCD4DFD6:c40c5d65129ab830308e:attempt:1",
+              "maker_evidence": "Built one privacy-safe D17/D18 record for W02:google-ads--onsite-concrete-landscape.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/W02/2026-W35A-live-shadow/workers/c40c5d65129ab830308e.json",
+                  "sha256": "b295a76c05f76da47b036ace0cf8b31594c34fc0ce87500a072aeb026138f00d",
+                  "bytes": 2665
+                }
+              ],
+              "checker_evidence": "Independently reconstructed the exact route, account, D17, D18, and comparison state for W02:google-ads--onsite-concrete-landscape.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/W02/2026-W35A-live-shadow/workers/c40c5d65129ab830308e.json",
+              "sha256": "b295a76c05f76da47b036ace0cf8b31594c34fc0ce87500a072aeb026138f00d",
+              "bytes": 2665
+            }
+          ],
+          "isolation_id": "OGD-20260824-0E1EBCD4DFD6:c40c5d65129ab830308e:attempt:1"
+        },
+        {
+          "item_id": "W02:meta-ads--shadow-heating-cooling",
+          "input_fingerprint": "55f3a01f93ab158619b7d15999f87bc15c5cfe27e5de2a7209a2a862ed949a5c",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-0E1EBCD4DFD6:b780a25ded21af9f7513:attempt:1",
+              "maker_evidence": "Built one privacy-safe D17/D18 record for W02:meta-ads--shadow-heating-cooling.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/W02/2026-W35A-live-shadow/workers/b780a25ded21af9f7513.json",
+                  "sha256": "aaa11e5437883f8c529160554182c85f55f8b0ad91104420ca8c34cf4f49cbaa",
+                  "bytes": 2967
+                }
+              ],
+              "checker_evidence": "Independently reconstructed the exact route, account, D17, D18, and comparison state for W02:meta-ads--shadow-heating-cooling.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/W02/2026-W35A-live-shadow/workers/b780a25ded21af9f7513.json",
+              "sha256": "aaa11e5437883f8c529160554182c85f55f8b0ad91104420ca8c34cf4f49cbaa",
+              "bytes": 2967
+            }
+          ],
+          "isolation_id": "OGD-20260824-0E1EBCD4DFD6:b780a25ded21af9f7513:attempt:1"
+        },
+        {
+          "item_id": "W02:meta-ads--kimberly-james-bridal",
+          "input_fingerprint": "eaddfb6f54186396b3cddb1d7e87b5910b569c3c918180952394b52bbb8d0e7b",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-0E1EBCD4DFD6:9691736506e0f03f57ab:attempt:1",
+              "maker_evidence": "Built one privacy-safe D17/D18 record for W02:meta-ads--kimberly-james-bridal.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/W02/2026-W35A-live-shadow/workers/9691736506e0f03f57ab.json",
+                  "sha256": "7c0d597df5c5954eb3dfd41c7a1a99ad9f015b44dbbe9a541a604343cf2dfb87",
+                  "bytes": 2990
+                }
+              ],
+              "checker_evidence": "Independently reconstructed the exact route, account, D17, D18, and comparison state for W02:meta-ads--kimberly-james-bridal.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/W02/2026-W35A-live-shadow/workers/9691736506e0f03f57ab.json",
+              "sha256": "7c0d597df5c5954eb3dfd41c7a1a99ad9f015b44dbbe9a541a604343cf2dfb87",
+              "bytes": 2990
+            }
+          ],
+          "isolation_id": "OGD-20260824-0E1EBCD4DFD6:9691736506e0f03f57ab:attempt:1"
+        }
+      ],
+      "reduction": {
+        "evidence": "Reduced all checked W02 lanes into a review and hashed evidence ledger without blending clients or promoting platform claims.",
+        "artifacts": [
+          {
+            "path": "System/outcome-graph/routines/W02/2026-W35A-live-shadow/paid-media-review-a.json",
+            "sha256": "24a2de8a78c76553ef1e67587dc9d96700e20ef5c5eb871e77bc9bfa29af0d5f",
+            "bytes": 22981
+          },
+          {
+            "path": "System/outcome-graph/routines/W02/2026-W35A-live-shadow/source-ledger.json",
+            "sha256": "6216ed7d8b6fc920281cdf94d0b17276e64659dd587e3504b9a9307a617841cb",
+            "bytes": 11016
+          }
+        ]
+      },
+      "terminal_verification": {
+        "evidence": "Recollected and independently verified all W02 sources, lane records, negative states, privacy, authority, and artifact hashes.",
+        "declared_pass": false,
+        "passed": false,
+        "assertions": [
+          {
+            "id": "source-manifest-stable",
+            "passed": true,
+            "detail": "Roster, registry, configs, daily manifest, access projection, live snapshot, and pass-A artifact when applicable remain hash-bound."
+          },
+          {
+            "id": "every-canonical-lane-exactly-once",
+            "passed": false,
+            "detail": "Every canonical client-account-channel lane is independently reconstructed exactly once."
+          },
+          {
+            "id": "d17-d18-and-negative-readiness-faithful",
+            "passed": true,
+            "detail": "D17, D18, pending validation, and aggregate readiness exactly equal their lane evidence, including negative states."
+          },
+          {
+            "id": "client-account-channel-isolation",
+            "passed": true,
+            "detail": "No client, brand, platform, account, or reporting lane is blended."
+          },
+          {
+            "id": "pass-a-and-latency-comparison-faithful",
+            "passed": true,
+            "detail": "Pass A has no undeclared comparison dependency."
+          },
+          {
+            "id": "proposal-contract-and-platform-claim-boundary",
+            "passed": true,
+            "detail": "Recommendations remain complete proposals and platform-reported results never become downstream truth."
+          },
+          {
+            "id": "privacy-and-no-mutation-boundary",
+            "passed": true,
+            "detail": "Final artifacts contain hashes and aggregate states only and attest no provider, CRM, delivery, spend, or canonical mutation."
+          }
+        ],
+        "artifact_manifest": [
+          {
+            "path": "System/outcome-graph/routines/W02/2026-W35A-live-shadow/paid-media-review-a.json",
+            "sha256": "24a2de8a78c76553ef1e67587dc9d96700e20ef5c5eb871e77bc9bfa29af0d5f",
+            "bytes": 22981
+          },
+          {
+            "path": "System/outcome-graph/routines/W02/2026-W35A-live-shadow/source-ledger.json",
+            "sha256": "6216ed7d8b6fc920281cdf94d0b17276e64659dd587e3504b9a9307a617841cb",
+            "bytes": 11016
+          }
+        ],
+        "manifest_errors": []
+      },
+      "learning": {
+        "evidence": "Appended one hashed W02 paid-media correction entry.",
+        "corrections": [
+          "Recollect the changed paid-media source set and repair only the exact route, account, evidence, comparison, privacy, or authority assertion that failed."
+        ],
+        "ledger": "System/outcome-graph/routines/W02/2026-W35A-live-shadow/corrections.jsonl",
+        "ledger_receipt": {
+          "locator": "System/outcome-graph/routines/W02/2026-W35A-live-shadow/corrections.jsonl",
+          "entry_sha256": "d1134ec7b250286d7fd9748616b18ab12003e9afbf0dabc58582634aaf7125d7"
+        }
+      }
+    }
+  ],
+  "invocation_log": [
+    {
+      "adapter": "paid-media-source-bound-planner",
+      "invoked_at": "2026-08-24T23:10:40.340Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "paid-media-isolated-record-maker",
+      "invoked_at": "2026-08-24T23:10:40.360Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "paid-media-isolated-record-maker",
+      "invoked_at": "2026-08-24T23:10:40.360Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "paid-media-isolated-record-maker",
+      "invoked_at": "2026-08-24T23:10:40.360Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "paid-media-independent-checker",
+      "invoked_at": "2026-08-24T23:10:40.386Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "paid-media-independent-checker",
+      "invoked_at": "2026-08-24T23:10:40.387Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "paid-media-independent-checker",
+      "invoked_at": "2026-08-24T23:10:40.387Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "paid-media-isolated-record-maker",
+      "invoked_at": "2026-08-24T23:10:40.422Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "paid-media-isolated-record-maker",
+      "invoked_at": "2026-08-24T23:10:40.440Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "paid-media-independent-checker",
+      "invoked_at": "2026-08-24T23:10:40.449Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "paid-media-isolated-record-maker",
+      "invoked_at": "2026-08-24T23:10:40.449Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "paid-media-independent-checker",
+      "invoked_at": "2026-08-24T23:10:40.461Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "paid-media-independent-checker",
+      "invoked_at": "2026-08-24T23:10:40.466Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "paid-media-isolated-record-maker",
+      "invoked_at": "2026-08-24T23:10:40.491Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "paid-media-independent-checker",
+      "invoked_at": "2026-08-24T23:10:40.508Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "paid-media-review-reducer",
+      "invoked_at": "2026-08-24T23:10:40.533Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "paid-media-terminal-verifier",
+      "invoked_at": "2026-08-24T23:10:40.551Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "paid-media-correction-ledger",
+      "invoked_at": "2026-08-24T23:10:40.569Z",
+      "status": "returned"
+    }
+  ],
+  "budget": {
+    "limit_units": 96,
+    "used_units": 18
+  },
+  "outcome": "blocked",
+  "terminal_truth": false,
+  "finished_at": "2026-08-24T23:10:40.581Z",
+  "elapsed_seconds": 0.249,
+  "blocked_by": "terminal_predicate_false",
+  "reason": "The independent terminal verifier did not prove the finish line.",
+  "terminal_findings": [
+    "Every canonical client-account-channel lane is independently reconstructed exactly once."
+  ],
+  "deduped": false,
+  "durable_state": {
+    "schema_version": 1,
+    "dedupe_identity": "1780ad57b95005b81436623d3a13939ed2a499c0e7ad0fc897e919064655b652",
+    "dedupe_hit": false,
+    "resumed": false,
+    "canonical_binding": {
+      "locator": "dillon-os://paid-media/W02/2026-W35A",
+      "version": "2026-08-24:7:no-baseline",
+      "sha256": "d9999ce6c6b447b97dca8c7fd68c14e8b0981ef414085b0a05ce49a5a94f2928",
+      "captured_at": "2026-08-24T23:10:40.321Z"
+    },
+    "canonical_binding_fingerprint": "0e74192d0e53b024ddf688c85b8b5ba858f9a96c839d61af107f1970d183d5b7",
+    "contract_fingerprint": "9faed60ade00dbfeb662b07dfd2019fe07c9dff43abad4e27a9c658dd6ad422f",
+    "checkpoint": "runs/OGD-20260824-0E1EBCD4DFD6/checkpoint.json"
+  }
+}

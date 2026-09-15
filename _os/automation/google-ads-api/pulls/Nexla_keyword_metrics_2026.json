@@ -1,0 +1,4763 @@
+[
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038365681",
+      "name": "G_US_S_Brand_Exact",
+      "id": "22038365681"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/173751218153",
+      "id": "173751218153"
+    },
+    "metrics": {
+      "clicks": "1030",
+      "conversions": 8,
+      "costMicros": "3460054238",
+      "averageCpc": 3359275.959223301,
+      "impressions": "4371"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/173751218153~1080361362440",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "Nexla"
+      },
+      "criterionId": "1080361362440"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/173751218153~1080361362440"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038365681",
+      "name": "G_US_S_Brand_Exact",
+      "id": "22038365681"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/173751218153",
+      "id": "173751218153"
+    },
+    "metrics": {
+      "clicks": "11",
+      "conversions": 0,
+      "costMicros": "47593875",
+      "averageCpc": 4326715.909090909,
+      "impressions": "78"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/173751218153~2267003881815",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "nexla inc"
+      },
+      "criterionId": "2267003881815"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/173751218153~2267003881815"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038365681",
+      "name": "G_US_S_Brand_Exact",
+      "id": "22038365681"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/173751218153",
+      "id": "173751218153"
+    },
+    "metrics": {
+      "clicks": "7",
+      "conversions": 0,
+      "costMicros": "81640015",
+      "averageCpc": 11662859.285714285,
+      "impressions": "27"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/173751218153~2384980376091",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "Nexla Data Integration"
+      },
+      "criterionId": "2384980376091"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/173751218153~2384980376091"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038365681",
+      "name": "G_US_S_Brand_Exact",
+      "id": "22038365681"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/173751218153",
+      "id": "173751218153"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "9"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/173751218153~2385489150905",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "nexla tool"
+      },
+      "criterionId": "2385489150905"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/173751218153~2385489150905"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038365681",
+      "name": "G_US_S_Brand_Exact",
+      "id": "22038365681"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/173751218153",
+      "id": "173751218153"
+    },
+    "metrics": {
+      "clicks": "4",
+      "conversions": 0,
+      "costMicros": "31190000",
+      "averageCpc": 7797500,
+      "impressions": "18"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/173751218153~2385870088010",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "Nexla Software"
+      },
+      "criterionId": "2385870088010"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/173751218153~2385870088010"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038365681",
+      "name": "G_US_S_Brand_Exact",
+      "id": "22038365681"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/173751218153",
+      "id": "173751218153"
+    },
+    "metrics": {
+      "clicks": "2",
+      "conversions": 0,
+      "costMicros": "56770000",
+      "averageCpc": 28385000,
+      "impressions": "20"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/173751218153~2386890700038",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "Nexla Pricing"
+      },
+      "criterionId": "2386890700038"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/173751218153~2386890700038"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038435110",
+      "name": "G_US_S_Brand_Long-Tail",
+      "id": "22038435110"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/171678901905",
+      "id": "171678901905"
+    },
+    "metrics": {
+      "clicks": "38",
+      "conversions": 0,
+      "costMicros": "868904691",
+      "averageCpc": 22865912.92105263,
+      "impressions": "485"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/171678901905~474784888499",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "Nexla"
+      },
+      "criterionId": "474784888499"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/171678901905~474784888499"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038435110",
+      "name": "G_US_S_Brand_Long-Tail",
+      "id": "22038435110"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/171678901905",
+      "id": "171678901905"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "12220000",
+      "averageCpc": 12220000,
+      "impressions": "4"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/171678901905~2383335541425",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "Nexla Pricing"
+      },
+      "criterionId": "2383335541425"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/171678901905~2383335541425"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038435110",
+      "name": "G_US_S_Brand_Long-Tail",
+      "id": "22038435110"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/171678901905",
+      "id": "171678901905"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "10"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/171678901905~2384980376371",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "Nexla Data Integration"
+      },
+      "criterionId": "2384980376371"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/171678901905~2384980376371"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038435110",
+      "name": "G_US_S_Brand_Long-Tail",
+      "id": "22038435110"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/175368117834",
+      "id": "175368117834"
+    },
+    "metrics": {
+      "clicks": "11",
+      "conversions": 0,
+      "costMicros": "315420620",
+      "averageCpc": 28674601.818181816,
+      "impressions": "216"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/175368117834~474784888499",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "Nexla"
+      },
+      "criterionId": "474784888499"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/175368117834~474784888499"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038435110",
+      "name": "G_US_S_Brand_Long-Tail",
+      "id": "22038435110"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/175368117834",
+      "id": "175368117834"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "2"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/175368117834~2383335541425",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "Nexla Pricing"
+      },
+      "criterionId": "2383335541425"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/175368117834~2383335541425"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038435110",
+      "name": "G_US_S_Brand_Long-Tail",
+      "id": "22038435110"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/175368117834",
+      "id": "175368117834"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "6"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/175368117834~2384980376371",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "Nexla Data Integration"
+      },
+      "criterionId": "2384980376371"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/175368117834~2384980376371"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22988394145",
+      "name": "G_US_S_NB_AI-Data-Integration",
+      "id": "22988394145"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/191746375344",
+      "id": "191746375344"
+    },
+    "metrics": {
+      "clicks": "12",
+      "conversions": 0,
+      "costMicros": "165650000",
+      "averageCpc": 13804166.666666666,
+      "impressions": "467"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/191746375344~800503330699",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "ai data integration"
+      },
+      "criterionId": "800503330699"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/191746375344~800503330699"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22988394145",
+      "name": "G_US_S_NB_AI-Data-Integration",
+      "id": "22988394145"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/191746375344",
+      "id": "191746375344"
+    },
+    "metrics": {
+      "clicks": "6",
+      "conversions": 0,
+      "costMicros": "68283488",
+      "averageCpc": 11380581.333333334,
+      "impressions": "281"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/191746375344~1209250050954",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "ai data integration"
+      },
+      "criterionId": "1209250050954"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/191746375344~1209250050954"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22988394145",
+      "name": "G_US_S_NB_AI-Data-Integration",
+      "id": "22988394145"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/191746375344",
+      "id": "191746375344"
+    },
+    "metrics": {
+      "clicks": "4",
+      "conversions": 0,
+      "costMicros": "46930000",
+      "averageCpc": 11732500,
+      "impressions": "168"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/191746375344~2385631449043",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "AI data preparation"
+      },
+      "criterionId": "2385631449043"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/191746375344~2385631449043"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22988394145",
+      "name": "G_US_S_NB_AI-Data-Integration",
+      "id": "22988394145"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/191746375344",
+      "id": "191746375344"
+    },
+    "metrics": {
+      "clicks": "46",
+      "conversions": 0,
+      "costMicros": "288455714",
+      "averageCpc": 6270776.391304348,
+      "impressions": "1428"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/191746375344~2426238632140",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "ai powered data migration"
+      },
+      "criterionId": "2426238632140"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/191746375344~2426238632140"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22988394145",
+      "name": "G_US_S_NB_AI-Data-Integration",
+      "id": "22988394145"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/191746375344",
+      "id": "191746375344"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "59"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/191746375344~2435897046462",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "AI data preparation"
+      },
+      "criterionId": "2435897046462"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/191746375344~2435897046462"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22988394145",
+      "name": "G_US_S_NB_AI-Data-Integration",
+      "id": "22988394145"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/191746375344",
+      "id": "191746375344"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "5"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/191746375344~2437997216331",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "AI-ready data platform"
+      },
+      "criterionId": "2437997216331"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/191746375344~2437997216331"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22988394145",
+      "name": "G_US_S_NB_AI-Data-Integration",
+      "id": "22988394145"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/191746375344",
+      "id": "191746375344"
+    },
+    "metrics": {
+      "clicks": "2",
+      "conversions": 0,
+      "costMicros": "20958942",
+      "averageCpc": 10479471,
+      "impressions": "181"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/191746375344~2440155535812",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "AI-ready data platform"
+      },
+      "criterionId": "2440155535812"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/191746375344~2440155535812"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22988394145",
+      "name": "G_US_S_NB_AI-Data-Integration",
+      "id": "22988394145"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/191746375344",
+      "id": "191746375344"
+    },
+    "metrics": {
+      "clicks": "4",
+      "conversions": 0,
+      "costMicros": "44970000",
+      "averageCpc": 11242500,
+      "impressions": "48"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/191746375344~2442664405080",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "GenAI data platform"
+      },
+      "criterionId": "2442664405080"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/191746375344~2442664405080"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22988394145",
+      "name": "G_US_S_NB_AI-Data-Integration",
+      "id": "22988394145"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/191746375344",
+      "id": "191746375344"
+    },
+    "metrics": {
+      "clicks": "4",
+      "conversions": 0,
+      "costMicros": "38040000",
+      "averageCpc": 9510000,
+      "impressions": "260"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/191746375344~2442664801080",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "data integration for AI"
+      },
+      "criterionId": "2442664801080"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/191746375344~2442664801080"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22988394145",
+      "name": "G_US_S_NB_AI-Data-Integration",
+      "id": "22988394145"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/191746375344",
+      "id": "191746375344"
+    },
+    "metrics": {
+      "clicks": "2",
+      "conversions": 0,
+      "costMicros": "16760000",
+      "averageCpc": 8380000,
+      "impressions": "88"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/191746375344~2442664801120",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "generative AI data integration"
+      },
+      "criterionId": "2442664801120"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/191746375344~2442664801120"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22988394145",
+      "name": "G_US_S_NB_AI-Data-Integration",
+      "id": "22988394145"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/191746375344",
+      "id": "191746375344"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "11630000",
+      "averageCpc": 11630000,
+      "impressions": "33"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/191746375344~2442664801160",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "GenAI data platform"
+      },
+      "criterionId": "2442664801160"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/191746375344~2442664801160"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22988394145",
+      "name": "G_US_S_NB_AI-Data-Integration",
+      "id": "22988394145"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/191746375344",
+      "id": "191746375344"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "3"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/191746375344~2442664801320",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "data integration for AI"
+      },
+      "criterionId": "2442664801320"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/191746375344~2442664801320"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22988394145",
+      "name": "G_US_S_NB_AI-Data-Integration",
+      "id": "22988394145"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/191746375344",
+      "id": "191746375344"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "3"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/191746375344~2471807563135",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "Unstructured data Integration"
+      },
+      "criterionId": "2471807563135"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/191746375344~2471807563135"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22988394145",
+      "name": "G_US_S_NB_AI-Data-Integration",
+      "id": "22988394145"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/191746375344",
+      "id": "191746375344"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "3"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/191746375344~2663977452232",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "document data Integration"
+      },
+      "criterionId": "2663977452232"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/191746375344~2663977452232"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22988394145",
+      "name": "G_US_S_NB_AI-Data-Integration",
+      "id": "22988394145"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300844975",
+      "id": "195300844975"
+    },
+    "metrics": {
+      "clicks": "43",
+      "conversions": 0,
+      "costMicros": "256113760",
+      "averageCpc": 5956133.953488372,
+      "impressions": "2330"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844975~2478910093195",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "Agentic RAG solution"
+      },
+      "criterionId": "2478910093195"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844975~2478910093195"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22988394145",
+      "name": "G_US_S_NB_AI-Data-Integration",
+      "id": "22988394145"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300844975",
+      "id": "195300844975"
+    },
+    "metrics": {
+      "clicks": "60",
+      "conversions": 0,
+      "costMicros": "381028133",
+      "averageCpc": 6350468.883333334,
+      "impressions": "4571"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844975~2478910093355",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "data preparation for LLM"
+      },
+      "criterionId": "2478910093355"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844975~2478910093355"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23027231268",
+      "name": "G_US_S_NB_Data-Products",
+      "id": "23027231268"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/188478980591",
+      "id": "188478980591"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "17080000",
+      "averageCpc": 17080000,
+      "impressions": "259"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/188478980591~176845221866",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "data as a product"
+      },
+      "criterionId": "176845221866"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/188478980591~176845221866"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23027231268",
+      "name": "G_US_S_NB_Data-Products",
+      "id": "23027231268"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/188478980591",
+      "id": "188478980591"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "96280000",
+      "averageCpc": 96280000,
+      "impressions": "293"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/188478980591~956836868560",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "data as a product"
+      },
+      "criterionId": "956836868560"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/188478980591~956836868560"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23027231268",
+      "name": "G_US_S_NB_Data-Products",
+      "id": "23027231268"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/188478980631",
+      "id": "188478980631"
+    },
+    "metrics": {
+      "clicks": "199",
+      "conversions": 3,
+      "costMicros": "2653947245",
+      "averageCpc": 13336418.316582914,
+      "impressions": "14045"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/188478980631~1530386650001",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "data product platform"
+      },
+      "criterionId": "1530386650001"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/188478980631~1530386650001"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23027231268",
+      "name": "G_US_S_NB_Data-Products",
+      "id": "23027231268"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/188478980631",
+      "id": "188478980631"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "98110000",
+      "averageCpc": 98110000,
+      "impressions": "29"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/188478980631~1639313094878",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "data product platform"
+      },
+      "criterionId": "1639313094878"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/188478980631~1639313094878"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23027231268",
+      "name": "G_US_S_NB_Data-Products",
+      "id": "23027231268"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/188478980791",
+      "id": "188478980791"
+    },
+    "metrics": {
+      "clicks": "6",
+      "conversions": 0,
+      "costMicros": "141160721",
+      "averageCpc": 23526786.833333332,
+      "impressions": "925"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/188478980791~313719531504",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "unified data platform"
+      },
+      "criterionId": "313719531504"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/188478980791~313719531504"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23027231268",
+      "name": "G_US_S_NB_Data-Products",
+      "id": "23027231268"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/188478980791",
+      "id": "188478980791"
+    },
+    "metrics": {
+      "clicks": "78",
+      "conversions": 0,
+      "costMicros": "293190000",
+      "averageCpc": 3758846.153846154,
+      "impressions": "558"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/188478980791~313719540664",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "unified data platform"
+      },
+      "criterionId": "313719540664"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/188478980791~313719540664"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23027231268",
+      "name": "G_US_S_NB_Data-Products",
+      "id": "23027231268"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/188478980831",
+      "id": "188478980831"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "19"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/188478980831~376067720056",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "data fabric architecture"
+      },
+      "criterionId": "376067720056"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/188478980831~376067720056"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23027231268",
+      "name": "G_US_S_NB_Data-Products",
+      "id": "23027231268"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/188478980871",
+      "id": "188478980871"
+    },
+    "metrics": {
+      "clicks": "75",
+      "conversions": 1,
+      "costMicros": "1025817636",
+      "averageCpc": 13677568.48,
+      "impressions": "1983"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/188478980871~444242465",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "data mapping tools"
+      },
+      "criterionId": "444242465"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/188478980871~444242465"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23027231268",
+      "name": "G_US_S_NB_Data-Products",
+      "id": "23027231268"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/188478981031",
+      "id": "188478981031"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "3"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/188478981031~1684777060775",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "data mesh solution"
+      },
+      "criterionId": "1684777060775"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/188478981031~1684777060775"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23027231268",
+      "name": "G_US_S_NB_Data-Products",
+      "id": "23027231268"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/188478981111",
+      "id": "188478981111"
+    },
+    "metrics": {
+      "clicks": "7",
+      "conversions": 0,
+      "costMicros": "121547521",
+      "averageCpc": 17363931.57142857,
+      "impressions": "181"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/188478981111~41976722",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "data migration software"
+      },
+      "criterionId": "41976722"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/188478981111~41976722"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23027231268",
+      "name": "G_US_S_NB_Data-Products",
+      "id": "23027231268"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/188478981271",
+      "id": "188478981271"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "3"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/188478981271~121134189",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "data migration tools"
+      },
+      "criterionId": "121134189"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/188478981271~121134189"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23027231268",
+      "name": "G_US_S_NB_Data-Products",
+      "id": "23027231268"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/188478981271",
+      "id": "188478981271"
+    },
+    "metrics": {
+      "clicks": "2",
+      "conversions": 0,
+      "costMicros": "36310000",
+      "averageCpc": 18155000,
+      "impressions": "118"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/188478981271~257730435",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "data migration tools"
+      },
+      "criterionId": "257730435"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/188478981271~257730435"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23027231268",
+      "name": "G_US_S_NB_Data-Products",
+      "id": "23027231268"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/193976194516",
+      "id": "193976194516"
+    },
+    "metrics": {
+      "clicks": "6",
+      "conversions": 0,
+      "costMicros": "63360000",
+      "averageCpc": 10560000,
+      "impressions": "647"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/193976194516~2468218695766",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "Integration platform for Agents"
+      },
+      "criterionId": "2468218695766"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/193976194516~2468218695766"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23027231268",
+      "name": "G_US_S_NB_Data-Products",
+      "id": "23027231268"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/194581030555",
+      "id": "194581030555"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "18"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/194581030555~2314285894254",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "AI Ready Data"
+      },
+      "criterionId": "2314285894254"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/194581030555~2314285894254"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23027231268",
+      "name": "G_US_S_NB_Data-Products",
+      "id": "23027231268"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/194581030555",
+      "id": "194581030555"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "13050000",
+      "averageCpc": 13050000,
+      "impressions": "36"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/194581030555~2317071927334",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "AI Ready Data"
+      },
+      "criterionId": "2317071927334"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/194581030555~2317071927334"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23027231268",
+      "name": "G_US_S_NB_Data-Products",
+      "id": "23027231268"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195345564233",
+      "id": "195345564233"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "30"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195345564233~2468218591086",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "Integration platform for AI"
+      },
+      "criterionId": "2468218591086"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195345564233~2468218591086"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23027231268",
+      "name": "G_US_S_NB_Data-Products",
+      "id": "23027231268"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195345564233",
+      "id": "195345564233"
+    },
+    "metrics": {
+      "clicks": "2",
+      "conversions": 0,
+      "costMicros": "28890000",
+      "averageCpc": 14445000,
+      "impressions": "168"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195345564233~2471178098788",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "Integration platform for AI"
+      },
+      "criterionId": "2471178098788"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195345564233~2471178098788"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23027231268",
+      "name": "G_US_S_NB_Data-Products",
+      "id": "23027231268"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195492408204",
+      "id": "195492408204"
+    },
+    "metrics": {
+      "clicks": "12",
+      "conversions": 0,
+      "costMicros": "585005643",
+      "averageCpc": 48750470.25,
+      "impressions": "3970"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195492408204~2470767784058",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "MCP Server for Data"
+      },
+      "criterionId": "2470767784058"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195492408204~2470767784058"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23027231268",
+      "name": "G_US_S_NB_Data-Products",
+      "id": "23027231268"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/199562451771",
+      "id": "199562451771"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "4"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/199562451771~2470915252730",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "Agent Ready Data"
+      },
+      "criterionId": "2470915252730"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/199562451771~2470915252730"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23037349600",
+      "name": "G_US_S_NB_B2B-Onboarding",
+      "id": "23037349600"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/188478996231",
+      "id": "188478996231"
+    },
+    "metrics": {
+      "clicks": "24",
+      "conversions": 0,
+      "costMicros": "133330000",
+      "averageCpc": 5555416.666666667,
+      "impressions": "756"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/188478996231~16832467",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "enterprise data management solutions"
+      },
+      "criterionId": "16832467"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/188478996231~16832467"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23037349600",
+      "name": "G_US_S_NB_B2B-Onboarding",
+      "id": "23037349600"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/188478996231",
+      "id": "188478996231"
+    },
+    "metrics": {
+      "clicks": "16",
+      "conversions": 0,
+      "costMicros": "105428106",
+      "averageCpc": 6589256.625,
+      "impressions": "582"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/188478996231~5435557050",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "enterprise data governance"
+      },
+      "criterionId": "5435557050"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/188478996231~5435557050"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23037349600",
+      "name": "G_US_S_NB_B2B-Onboarding",
+      "id": "23037349600"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/188478996231",
+      "id": "188478996231"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "3"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/188478996231~298454800266",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "enterprise data management"
+      },
+      "criterionId": "298454800266"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/188478996231~298454800266"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23037349600",
+      "name": "G_US_S_NB_B2B-Onboarding",
+      "id": "23037349600"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/188478996231",
+      "id": "188478996231"
+    },
+    "metrics": {
+      "clicks": "24",
+      "conversions": 1,
+      "costMicros": "221129765",
+      "averageCpc": 9213740.208333334,
+      "impressions": "555"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/188478996231~298885775649",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "enterprise data management platform"
+      },
+      "criterionId": "298885775649"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/188478996231~298885775649"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23037349600",
+      "name": "G_US_S_NB_B2B-Onboarding",
+      "id": "23037349600"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/188478996231",
+      "id": "188478996231"
+    },
+    "metrics": {
+      "clicks": "4",
+      "conversions": 0,
+      "costMicros": "31118216",
+      "averageCpc": 7779554,
+      "impressions": "206"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/188478996231~302199257948",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "enterprise data management system"
+      },
+      "criterionId": "302199257948"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/188478996231~302199257948"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23037349600",
+      "name": "G_US_S_NB_B2B-Onboarding",
+      "id": "23037349600"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/188478996231",
+      "id": "188478996231"
+    },
+    "metrics": {
+      "clicks": "36",
+      "conversions": 2,
+      "costMicros": "262333097",
+      "averageCpc": 7287030.472222222,
+      "impressions": "1123"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/188478996231~324384559128",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "enterprise data management companies"
+      },
+      "criterionId": "324384559128"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/188478996231~324384559128"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23037349600",
+      "name": "G_US_S_NB_B2B-Onboarding",
+      "id": "23037349600"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/188478996231",
+      "id": "188478996231"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/188478996231~836855085019",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "enterprise data processing"
+      },
+      "criterionId": "836855085019"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/188478996231~836855085019"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300844695",
+      "id": "195300844695"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "2"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844695~2400241969609",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "remote mcp server"
+      },
+      "criterionId": "2400241969609"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844695~2400241969609"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300844695",
+      "id": "195300844695"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "3"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844695~2404682013776",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "hosted mcp server"
+      },
+      "criterionId": "2404682013776"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844695~2404682013776"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300844695",
+      "id": "195300844695"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "9"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844695~2409445140384",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "mcp server hosting"
+      },
+      "criterionId": "2409445140384"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844695~2409445140384"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300844695",
+      "id": "195300844695"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "2"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844695~2417850034249",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "remote mcp server"
+      },
+      "criterionId": "2417850034249"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844695~2417850034249"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300844695",
+      "id": "195300844695"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "140000",
+      "averageCpc": 140000,
+      "impressions": "12"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844695~2421483529907",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "enterprise mcp server"
+      },
+      "criterionId": "2421483529907"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844695~2421483529907"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300844695",
+      "id": "195300844695"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "3"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844695~2432199034941",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "hosted mcp server"
+      },
+      "criterionId": "2432199034941"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844695~2432199034941"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300844695",
+      "id": "195300844695"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "13"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844695~2433839249169",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "mcp server hosting"
+      },
+      "criterionId": "2433839249169"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844695~2433839249169"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300844695",
+      "id": "195300844695"
+    },
+    "metrics": {
+      "clicks": "7",
+      "conversions": 0,
+      "costMicros": "36970000",
+      "averageCpc": 5281428.571428572,
+      "impressions": "641"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844695~2435254355259",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "mcp platform"
+      },
+      "criterionId": "2435254355259"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844695~2435254355259"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300844695",
+      "id": "195300844695"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "112"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844695~2437830111582",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "enterprise mcp server"
+      },
+      "criterionId": "2437830111582"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844695~2437830111582"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300844695",
+      "id": "195300844695"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "4080000",
+      "averageCpc": 4080000,
+      "impressions": "18"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844695~2452329915776",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "secure mcp server"
+      },
+      "criterionId": "2452329915776"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844695~2452329915776"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300844695",
+      "id": "195300844695"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "10"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844695~2459614432249",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "enterprise MCP gateway"
+      },
+      "criterionId": "2459614432249"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844695~2459614432249"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300844695",
+      "id": "195300844695"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "3990000",
+      "averageCpc": 3990000,
+      "impressions": "128"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844695~2470863795969",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "mcp integration platform"
+      },
+      "criterionId": "2470863795969"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844695~2470863795969"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300844695",
+      "id": "195300844695"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "65"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844695~2471578598051",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "mcp data integration"
+      },
+      "criterionId": "2471578598051"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844695~2471578598051"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300844695",
+      "id": "195300844695"
+    },
+    "metrics": {
+      "clicks": "91",
+      "conversions": 0,
+      "costMicros": "489148480",
+      "averageCpc": 5375258.021978022,
+      "impressions": "9419"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844695~2478910093395",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "enterprise MCP gateway"
+      },
+      "criterionId": "2478910093395"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844695~2478910093395"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300844695",
+      "id": "195300844695"
+    },
+    "metrics": {
+      "clicks": "282",
+      "conversions": 0,
+      "costMicros": "1181882373",
+      "averageCpc": 4191072.244680851,
+      "impressions": "23844"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844695~2478910093435",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "MCP server for enterprise data"
+      },
+      "criterionId": "2478910093435"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844695~2478910093435"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300844695",
+      "id": "195300844695"
+    },
+    "metrics": {
+      "clicks": "26",
+      "conversions": 0,
+      "costMicros": "110911418",
+      "averageCpc": 4265823.769230769,
+      "impressions": "1509"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844695~2478910093595",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "model context protocol data"
+      },
+      "criterionId": "2478910093595"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844695~2478910093595"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300844695",
+      "id": "195300844695"
+    },
+    "metrics": {
+      "clicks": "140",
+      "conversions": 0,
+      "costMicros": "600682512",
+      "averageCpc": 4290589.371428572,
+      "impressions": "12320"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844695~2478910093635",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "MCP data connector"
+      },
+      "criterionId": "2478910093635"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844695~2478910093635"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300844695",
+      "id": "195300844695"
+    },
+    "metrics": {
+      "clicks": "31",
+      "conversions": 0,
+      "costMicros": "165820000",
+      "averageCpc": 5349032.258064516,
+      "impressions": "2535"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844695~2479174121939",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "mcp server platform"
+      },
+      "criterionId": "2479174121939"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844695~2479174121939"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300844695",
+      "id": "195300844695"
+    },
+    "metrics": {
+      "clicks": "3",
+      "conversions": 0,
+      "costMicros": "16740000",
+      "averageCpc": 5580000,
+      "impressions": "141"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844695~2486327123236",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "enterprise mcp platform"
+      },
+      "criterionId": "2486327123236"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844695~2486327123236"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300844695",
+      "id": "195300844695"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "4"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844695~2489713192518",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "MCP server for enterprise data"
+      },
+      "criterionId": "2489713192518"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844695~2489713192518"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300844695",
+      "id": "195300844695"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "13540000",
+      "averageCpc": 13540000,
+      "impressions": "280"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844695~2489713336278",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "MCP data connector"
+      },
+      "criterionId": "2489713336278"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844695~2489713336278"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300844695",
+      "id": "195300844695"
+    },
+    "metrics": {
+      "clicks": "54",
+      "conversions": 0,
+      "costMicros": "859167260",
+      "averageCpc": 15910504.814814815,
+      "impressions": "5346"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844695~2489713336318",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "model context protocol data"
+      },
+      "criterionId": "2489713336318"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844695~2489713336318"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300844695",
+      "id": "195300844695"
+    },
+    "metrics": {
+      "clicks": "2",
+      "conversions": 0,
+      "costMicros": "10420000",
+      "averageCpc": 5210000,
+      "impressions": "99"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844695~2626543375432",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "mcp server integration"
+      },
+      "criterionId": "2626543375432"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844695~2626543375432"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300844735",
+      "id": "195300844735"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "5"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844735~2446318823259",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "agentic data integration"
+      },
+      "criterionId": "2446318823259"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844735~2446318823259"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300844735",
+      "id": "195300844735"
+    },
+    "metrics": {
+      "clicks": "56",
+      "conversions": 0,
+      "costMicros": "369158611",
+      "averageCpc": 6592118.053571428,
+      "impressions": "2200"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844735~2471107142314",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "agentic data integration"
+      },
+      "criterionId": "2471107142314"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844735~2471107142314"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300844735",
+      "id": "195300844735"
+    },
+    "metrics": {
+      "clicks": "134",
+      "conversions": 0,
+      "costMicros": "502316027",
+      "averageCpc": 3748627.067164179,
+      "impressions": "2846"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844735~2478910093675",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "agentic AI data platform"
+      },
+      "criterionId": "2478910093675"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844735~2478910093675"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300844735",
+      "id": "195300844735"
+    },
+    "metrics": {
+      "clicks": "5",
+      "conversions": 0,
+      "costMicros": "140244963",
+      "averageCpc": 28048992.6,
+      "impressions": "95"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844735~2478910093835",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "data integration for AI agents"
+      },
+      "criterionId": "2478910093835"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844735~2478910093835"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300844735",
+      "id": "195300844735"
+    },
+    "metrics": {
+      "clicks": "466",
+      "conversions": 1,
+      "costMicros": "2166342401",
+      "averageCpc": 4648803.435622318,
+      "impressions": "14530"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844735~2478910093875",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "AI agent data access"
+      },
+      "criterionId": "2478910093875"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844735~2478910093875"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300844735",
+      "id": "195300844735"
+    },
+    "metrics": {
+      "clicks": "51",
+      "conversions": 0,
+      "costMicros": "276022952",
+      "averageCpc": 5412214.7450980395,
+      "impressions": "4096"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844735~2487607501813",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "agentic AI data platform"
+      },
+      "criterionId": "2487607501813"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844735~2487607501813"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300844735",
+      "id": "195300844735"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844735~2497597264467",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "ai agent data integration"
+      },
+      "criterionId": "2497597264467"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844735~2497597264467"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300844735",
+      "id": "195300844735"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844735~2546219241517",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "agentic data integration"
+      },
+      "criterionId": "2546219241517"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844735~2546219241517"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/199955133259",
+      "id": "199955133259"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "5"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/199955133259~2459584906557",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "ai-ready data platform"
+      },
+      "criterionId": "2459584906557"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/199955133259~2459584906557"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/199955133259",
+      "id": "199955133259"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "1530000",
+      "averageCpc": 1530000,
+      "impressions": "20"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/199955133259~2487607501813",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "agentic AI data platform"
+      },
+      "criterionId": "2487607501813"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/199955133259~2487607501813"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/199955133259",
+      "id": "199955133259"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/199955133259~2500362470040",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "agentic AI data platform"
+      },
+      "criterionId": "2500362470040"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/199955133259~2500362470040"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/199955133259",
+      "id": "199955133259"
+    },
+    "metrics": {
+      "clicks": "4",
+      "conversions": 0,
+      "costMicros": "5662543",
+      "averageCpc": 1415635.75,
+      "impressions": "20"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/199955133259~2564604959717",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "enterprise ai agent data platform"
+      },
+      "criterionId": "2564604959717"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/199955133259~2564604959717"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/199955133259",
+      "id": "199955133259"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "5"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/199955133259~2564604983037",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "data platform for agents"
+      },
+      "criterionId": "2564604983037"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/199955133259~2564604983037"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/199955133299",
+      "id": "199955133299"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/199955133299~2486248933334",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "ai agent data pipeline"
+      },
+      "criterionId": "2486248933334"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/199955133299~2486248933334"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/199955133299",
+      "id": "199955133299"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "9"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/199955133299~2564602799957",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "data pipeline for ai agents"
+      },
+      "criterionId": "2564602799957"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/199955133299~2564602799957"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/199955133339",
+      "id": "199955133339"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "9"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/199955133339~2564604448077",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "secure data access for ai agents"
+      },
+      "criterionId": "2564604448077"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/199955133339~2564604448077"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/199955133499",
+      "id": "199955133499"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/199955133499~2452217080017",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "ai ready data infrastructure"
+      },
+      "criterionId": "2452217080017"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/199955133499~2452217080017"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/199955133499",
+      "id": "199955133499"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/199955133499~2481896215801",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "data infrastructure for ai agents"
+      },
+      "criterionId": "2481896215801"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/199955133499~2481896215801"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/199955133539",
+      "id": "199955133539"
+    },
+    "metrics": {
+      "clicks": "2",
+      "conversions": 0,
+      "costMicros": "6250000",
+      "averageCpc": 3125000,
+      "impressions": "38"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/199955133539~2482624727215",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "knowledge layer for ai agents"
+      },
+      "criterionId": "2482624727215"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/199955133539~2482624727215"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/199955133579",
+      "id": "199955133579"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "3"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/199955133579~2322443842538",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "agentic rag"
+      },
+      "criterionId": "2322443842538"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/199955133579~2322443842538"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/199955133579",
+      "id": "199955133579"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "7"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/199955133579~2370681786368",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "rag data pipeline"
+      },
+      "criterionId": "2370681786368"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/199955133579~2370681786368"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/199955133579",
+      "id": "199955133579"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/199955133579~2371630827822",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "enterprise rag platform"
+      },
+      "criterionId": "2371630827822"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/199955133579~2371630827822"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/199955133579",
+      "id": "199955133579"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/199955133579~2446406873263",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "rag data pipeline"
+      },
+      "criterionId": "2446406873263"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/199955133579~2446406873263"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/199955133739",
+      "id": "199955133739"
+    },
+    "metrics": {
+      "clicks": "29",
+      "conversions": 0,
+      "costMicros": "81795575",
+      "averageCpc": 2820537.0689655175,
+      "impressions": "95"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/199955133739~1267145585721",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "ai data products"
+      },
+      "criterionId": "1267145585721"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/199955133739~1267145585721"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/199955133739",
+      "id": "199955133739"
+    },
+    "metrics": {
+      "clicks": "8",
+      "conversions": 0,
+      "costMicros": "21810000",
+      "averageCpc": 2726250,
+      "impressions": "13"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/199955133739~1547492870396",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "ai data products"
+      },
+      "criterionId": "1547492870396"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/199955133739~1547492870396"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/199955133779",
+      "id": "199955133779"
+    },
+    "metrics": {
+      "clicks": "2",
+      "conversions": 0,
+      "costMicros": "21060000",
+      "averageCpc": 10530000,
+      "impressions": "53"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/199955133779~2467507562147",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "mcp data connector"
+      },
+      "criterionId": "2467507562147"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/199955133779~2467507562147"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/199955133779",
+      "id": "199955133779"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "2"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/199955133779~2478910093635",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "MCP data connector"
+      },
+      "criterionId": "2478910093635"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/199955133779~2478910093635"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/199955133779",
+      "id": "199955133779"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/199955133779~2489713336278",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "MCP data connector"
+      },
+      "criterionId": "2489713336278"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/199955133779~2489713336278"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/199955133779",
+      "id": "199955133779"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "6"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/199955133779~2495266130628",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "MCP data connector"
+      },
+      "criterionId": "2495266130628"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/199955133779~2495266130628"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/199955133779",
+      "id": "199955133779"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "20"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/199955133779~2497597498747",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "no code mcp connector"
+      },
+      "criterionId": "2497597498747"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/199955133779~2497597498747"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/199955133779",
+      "id": "199955133779"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "12"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/199955133779~2501586176132",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "enterprise mcp connector"
+      },
+      "criterionId": "2501586176132"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/199955133779~2501586176132"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/199955133779",
+      "id": "199955133779"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "2"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/199955133779~2526964995724",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "mcp data connectors"
+      },
+      "criterionId": "2526964995724"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/199955133779~2526964995724"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/199955133779",
+      "id": "199955133779"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "3"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/199955133779~2564602424357",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "mcp data connector"
+      },
+      "criterionId": "2564602424357"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/199955133779~2564602424357"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/199955133779",
+      "id": "199955133779"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "8"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/199955133779~2564602424397",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "mcp data connectors"
+      },
+      "criterionId": "2564602424397"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/199955133779~2564602424397"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/199955133819",
+      "id": "199955133819"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "4"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/199955133819~2459614432249",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "enterprise MCP gateway"
+      },
+      "criterionId": "2459614432249"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/199955133819~2459614432249"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/199955133819",
+      "id": "199955133819"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "15"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/199955133819~2478910093395",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "enterprise MCP gateway"
+      },
+      "criterionId": "2478910093395"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/199955133819~2478910093395"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/199955133819",
+      "id": "199955133819"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "12"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/199955133819~2488587878878",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "mcp gateway platform"
+      },
+      "criterionId": "2488587878878"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/199955133819~2488587878878"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/199955133819",
+      "id": "199955133819"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "8"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/199955133819~2497761698849",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "mcp gateway platform"
+      },
+      "criterionId": "2497761698849"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/199955133819~2497761698849"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/199955133979",
+      "id": "199955133979"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "7"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/199955133979~2248795856867",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "mcp protocol"
+      },
+      "criterionId": "2248795856867"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/199955133979~2248795856867"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/199955133979",
+      "id": "199955133979"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "4"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/199955133979~2380801434719",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "model context protocol"
+      },
+      "criterionId": "2380801434719"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/199955133979~2380801434719"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/199955133979",
+      "id": "199955133979"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "7"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/199955133979~2405546525160",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "model context protocol"
+      },
+      "criterionId": "2405546525160"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/199955133979~2405546525160"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/199955133979",
+      "id": "199955133979"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "64"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/199955133979~2416012834211",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "mcp architecture"
+      },
+      "criterionId": "2416012834211"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/199955133979~2416012834211"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/199955133979",
+      "id": "199955133979"
+    },
+    "metrics": {
+      "clicks": "3",
+      "conversions": 0,
+      "costMicros": "14900000",
+      "averageCpc": 4966666.666666667,
+      "impressions": "199"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/199955133979~2439659433999",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "mcp architecture"
+      },
+      "criterionId": "2439659433999"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/199955133979~2439659433999"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/199955133979",
+      "id": "199955133979"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "5"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/199955133979~2500363738760",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "best mcp server platform"
+      },
+      "criterionId": "2500363738760"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/199955133979~2500363738760"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/199955133979",
+      "id": "199955133979"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "110"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/199955133979~2564604933357",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "best mcp server platform"
+      },
+      "criterionId": "2564604933357"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/199955133979~2564604933357"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/199955134019",
+      "id": "199955134019"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "3"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/199955134019~311513913056",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "composio"
+      },
+      "criterionId": "311513913056"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/199955134019~311513913056"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/199955134019",
+      "id": "199955134019"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "44"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/199955134019~337407963594",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "composio"
+      },
+      "criterionId": "337407963594"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/199955134019~337407963594"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/202529736929",
+      "id": "202529736929"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "5"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/202529736929~1462108255814",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "mcp studio"
+      },
+      "criterionId": "1462108255814"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/202529736929~1462108255814"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/202529736929",
+      "id": "202529736929"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "2"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/202529736929~2497904981267",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "studio mcp"
+      },
+      "criterionId": "2497904981267"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/202529736929~2497904981267"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/202529737089",
+      "id": "202529737089"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "52"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/202529737089~2442684242534",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "mcp orchestration"
+      },
+      "criterionId": "2442684242534"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/202529737089~2442684242534"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317335",
+      "name": "G_US_S_NB_ETL-Pipeline",
+      "id": "23705317335"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300844775",
+      "id": "195300844775"
+    },
+    "metrics": {
+      "clicks": "34",
+      "conversions": 0,
+      "costMicros": "168561731",
+      "averageCpc": 4957697.970588235,
+      "impressions": "1334"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844775~15861052",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "real time data integration"
+      },
+      "criterionId": "15861052"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844775~15861052"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317335",
+      "name": "G_US_S_NB_ETL-Pipeline",
+      "id": "23705317335"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300844775",
+      "id": "195300844775"
+    },
+    "metrics": {
+      "clicks": "32",
+      "conversions": 0,
+      "costMicros": "174855036",
+      "averageCpc": 5464219.875,
+      "impressions": "939"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844775~17017690",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "enterprise data integration"
+      },
+      "criterionId": "17017690"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844775~17017690"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317335",
+      "name": "G_US_S_NB_ETL-Pipeline",
+      "id": "23705317335"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300844775",
+      "id": "195300844775"
+    },
+    "metrics": {
+      "clicks": "205",
+      "conversions": 0,
+      "costMicros": "1193612958",
+      "averageCpc": 5822502.234146342,
+      "impressions": "11974"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844775~18219376",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "data integration platform"
+      },
+      "criterionId": "18219376"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844775~18219376"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317335",
+      "name": "G_US_S_NB_ETL-Pipeline",
+      "id": "23705317335"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300844775",
+      "id": "195300844775"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "15"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844775~89974933",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "real time data integration"
+      },
+      "criterionId": "89974933"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844775~89974933"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317335",
+      "name": "G_US_S_NB_ETL-Pipeline",
+      "id": "23705317335"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300844775",
+      "id": "195300844775"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "15760000",
+      "averageCpc": 15760000,
+      "impressions": "65"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844775~259374431",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "enterprise data integration"
+      },
+      "criterionId": "259374431"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844775~259374431"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317335",
+      "name": "G_US_S_NB_ETL-Pipeline",
+      "id": "23705317335"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300844775",
+      "id": "195300844775"
+    },
+    "metrics": {
+      "clicks": "26",
+      "conversions": 0,
+      "costMicros": "135420000",
+      "averageCpc": 5208461.538461538,
+      "impressions": "305"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844775~294240945",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "data integration platform"
+      },
+      "criterionId": "294240945"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844775~294240945"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317335",
+      "name": "G_US_S_NB_ETL-Pipeline",
+      "id": "23705317335"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300844935",
+      "id": "195300844935"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "52"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844935~386057093210",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "ETL platform"
+      },
+      "criterionId": "386057093210"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844935~386057093210"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317335",
+      "name": "G_US_S_NB_ETL-Pipeline",
+      "id": "23705317335"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300844935",
+      "id": "195300844935"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "3680000",
+      "averageCpc": 3680000,
+      "impressions": "98"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844935~606859664569",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "data pipeline automation"
+      },
+      "criterionId": "606859664569"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844935~606859664569"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317335",
+      "name": "G_US_S_NB_ETL-Pipeline",
+      "id": "23705317335"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300844935",
+      "id": "195300844935"
+    },
+    "metrics": {
+      "clicks": "140",
+      "conversions": 0,
+      "costMicros": "726895823",
+      "averageCpc": 5192113.021428571,
+      "impressions": "11164"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844935~760621147115",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "ETL platform"
+      },
+      "criterionId": "760621147115"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844935~760621147115"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317335",
+      "name": "G_US_S_NB_ETL-Pipeline",
+      "id": "23705317335"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300844935",
+      "id": "195300844935"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "11430000",
+      "averageCpc": 11430000,
+      "impressions": "48"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844935~868836973107",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "automated data pipeline"
+      },
+      "criterionId": "868836973107"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844935~868836973107"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317335",
+      "name": "G_US_S_NB_ETL-Pipeline",
+      "id": "23705317335"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300844935",
+      "id": "195300844935"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "114"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844935~868836975307",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "data pipeline automation"
+      },
+      "criterionId": "868836975307"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844935~868836975307"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317335",
+      "name": "G_US_S_NB_ETL-Pipeline",
+      "id": "23705317335"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300844935",
+      "id": "195300844935"
+    },
+    "metrics": {
+      "clicks": "89",
+      "conversions": 0,
+      "costMicros": "479816316",
+      "averageCpc": 5391194.561797753,
+      "impressions": "5947"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844935~870446277971",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "data pipeline automation"
+      },
+      "criterionId": "870446277971"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844935~870446277971"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317335",
+      "name": "G_US_S_NB_ETL-Pipeline",
+      "id": "23705317335"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300844935",
+      "id": "195300844935"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "33"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844935~870602751961",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "automated data pipeline"
+      },
+      "criterionId": "870602751961"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844935~870602751961"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317335",
+      "name": "G_US_S_NB_ETL-Pipeline",
+      "id": "23705317335"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300844935",
+      "id": "195300844935"
+    },
+    "metrics": {
+      "clicks": "9",
+      "conversions": 0,
+      "costMicros": "44873373",
+      "averageCpc": 4985930.333333333,
+      "impressions": "928"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844935~874918228717",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "automated data pipeline"
+      },
+      "criterionId": "874918228717"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844935~874918228717"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317335",
+      "name": "G_US_S_NB_ETL-Pipeline",
+      "id": "23705317335"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300844935",
+      "id": "195300844935"
+    },
+    "metrics": {
+      "clicks": "103",
+      "conversions": 0,
+      "costMicros": "519374973",
+      "averageCpc": 5042475.466019417,
+      "impressions": "10190"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844935~946218558447",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "ELT tool"
+      },
+      "criterionId": "946218558447"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844935~946218558447"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317335",
+      "name": "G_US_S_NB_ETL-Pipeline",
+      "id": "23705317335"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300844935",
+      "id": "195300844935"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "110"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844935~1075903757665",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "data pipeline automation tools"
+      },
+      "criterionId": "1075903757665"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844935~1075903757665"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317335",
+      "name": "G_US_S_NB_ETL-Pipeline",
+      "id": "23705317335"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300844935",
+      "id": "195300844935"
+    },
+    "metrics": {
+      "clicks": "14",
+      "conversions": 0,
+      "costMicros": "79986395",
+      "averageCpc": 5713313.928571428,
+      "impressions": "984"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844935~1084329748278",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "data pipeline automation tools"
+      },
+      "criterionId": "1084329748278"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844935~1084329748278"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317335",
+      "name": "G_US_S_NB_ETL-Pipeline",
+      "id": "23705317335"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300844935",
+      "id": "195300844935"
+    },
+    "metrics": {
+      "clicks": "2",
+      "conversions": 0,
+      "costMicros": "34950000",
+      "averageCpc": 17475000,
+      "impressions": "123"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844935~1159029157589",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "data pipeline automation tools"
+      },
+      "criterionId": "1159029157589"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844935~1159029157589"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317335",
+      "name": "G_US_S_NB_ETL-Pipeline",
+      "id": "23705317335"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300844935",
+      "id": "195300844935"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "7"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844935~1173211211659",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "automated etl pipeline"
+      },
+      "criterionId": "1173211211659"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844935~1173211211659"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317335",
+      "name": "G_US_S_NB_ETL-Pipeline",
+      "id": "23705317335"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300844935",
+      "id": "195300844935"
+    },
+    "metrics": {
+      "clicks": "11",
+      "conversions": 0,
+      "costMicros": "406570845",
+      "averageCpc": 36960985.90909091,
+      "impressions": "4884"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844935~1230037095745",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "ETL platform"
+      },
+      "criterionId": "1230037095745"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844935~1230037095745"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317335",
+      "name": "G_US_S_NB_ETL-Pipeline",
+      "id": "23705317335"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300844935",
+      "id": "195300844935"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "14"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844935~1411205585970",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "ELT tool"
+      },
+      "criterionId": "1411205585970"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844935~1411205585970"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317335",
+      "name": "G_US_S_NB_ETL-Pipeline",
+      "id": "23705317335"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300844935",
+      "id": "195300844935"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "45"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844935~1411205592410",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "ELT tool"
+      },
+      "criterionId": "1411205592410"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844935~1411205592410"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317335",
+      "name": "G_US_S_NB_ETL-Pipeline",
+      "id": "23705317335"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300844935",
+      "id": "195300844935"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "70"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844935~1464829659570",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "automated etl pipeline"
+      },
+      "criterionId": "1464829659570"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844935~1464829659570"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317335",
+      "name": "G_US_S_NB_ETL-Pipeline",
+      "id": "23705317335"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300844935",
+      "id": "195300844935"
+    },
+    "metrics": {
+      "clicks": "151",
+      "conversions": 0,
+      "costMicros": "751104942",
+      "averageCpc": 4974204.913907285,
+      "impressions": "5152"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844935~2478910094075",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "no code ETL tool"
+      },
+      "criterionId": "2478910094075"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844935~2478910094075"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317335",
+      "name": "G_US_S_NB_ETL-Pipeline",
+      "id": "23705317335"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300844935",
+      "id": "195300844935"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "2"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300844935~2487186562443",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "no code ETL tool"
+      },
+      "criterionId": "2487186562443"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300844935~2487186562443"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317338",
+      "name": "G_US_S_NB_Competitor",
+      "id": "23705317338"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300845015",
+      "id": "195300845015"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "81"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300845015~1252342136801",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "Boomi alternative"
+      },
+      "criterionId": "1252342136801"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300845015~1252342136801"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317338",
+      "name": "G_US_S_NB_Competitor",
+      "id": "23705317338"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300845015",
+      "id": "195300845015"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "21"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300845015~1268612471463",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "Talend alternative"
+      },
+      "criterionId": "1268612471463"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300845015~1268612471463"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317338",
+      "name": "G_US_S_NB_Competitor",
+      "id": "23705317338"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300845015",
+      "id": "195300845015"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "57620000",
+      "averageCpc": 57620000,
+      "impressions": "118"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300845015~1815649087350",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "Informatica alternative"
+      },
+      "criterionId": "1815649087350"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300845015~1815649087350"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317338",
+      "name": "G_US_S_NB_Competitor",
+      "id": "23705317338"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300845015",
+      "id": "195300845015"
+    },
+    "metrics": {
+      "clicks": "6",
+      "conversions": 0,
+      "costMicros": "444020000",
+      "averageCpc": 74003333.33333333,
+      "impressions": "653"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300845015~2444328308868",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "MuleSoft alternative"
+      },
+      "criterionId": "2444328308868"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300845015~2444328308868"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317341",
+      "name": "G_US_S_NB_Governance",
+      "id": "23705317341"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300845175",
+      "id": "195300845175"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "59"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300845175~272836839558",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "enterprise data catalog"
+      },
+      "criterionId": "272836839558"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300845175~272836839558"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317341",
+      "name": "G_US_S_NB_Governance",
+      "id": "23705317341"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300845175",
+      "id": "195300845175"
+    },
+    "metrics": {
+      "clicks": "105",
+      "conversions": 0,
+      "costMicros": "835589451",
+      "averageCpc": 7957994.771428571,
+      "impressions": "6322"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300845175~372511475277",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "enterprise data catalog"
+      },
+      "criterionId": "372511475277"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300845175~372511475277"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317341",
+      "name": "G_US_S_NB_Governance",
+      "id": "23705317341"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300845175",
+      "id": "195300845175"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300845175~401710837361",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "data governance automation"
+      },
+      "criterionId": "401710837361"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300845175~401710837361"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317341",
+      "name": "G_US_S_NB_Governance",
+      "id": "23705317341"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300845175",
+      "id": "195300845175"
+    },
+    "metrics": {
+      "clicks": "5",
+      "conversions": 0,
+      "costMicros": "40165445",
+      "averageCpc": 8033089,
+      "impressions": "388"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300845175~636622601234",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "automated data governance"
+      },
+      "criterionId": "636622601234"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300845175~636622601234"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317341",
+      "name": "G_US_S_NB_Governance",
+      "id": "23705317341"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300845175",
+      "id": "195300845175"
+    },
+    "metrics": {
+      "clicks": "35",
+      "conversions": 0,
+      "costMicros": "350309083",
+      "averageCpc": 10008830.942857143,
+      "impressions": "1563"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300845175~654880004062",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "data governance automation"
+      },
+      "criterionId": "654880004062"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300845175~654880004062"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317341",
+      "name": "G_US_S_NB_Governance",
+      "id": "23705317341"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300845175",
+      "id": "195300845175"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "10"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300845175~817850614454",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "data governance automation"
+      },
+      "criterionId": "817850614454"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300845175~817850614454"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317341",
+      "name": "G_US_S_NB_Governance",
+      "id": "23705317341"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300845175",
+      "id": "195300845175"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "22"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300845175~845473772364",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "automated data governance"
+      },
+      "criterionId": "845473772364"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300845175~845473772364"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317341",
+      "name": "G_US_S_NB_Governance",
+      "id": "23705317341"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300845175",
+      "id": "195300845175"
+    },
+    "metrics": {
+      "clicks": "206",
+      "conversions": 0,
+      "costMicros": "1670321142",
+      "averageCpc": 8108355.058252427,
+      "impressions": "8850"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300845175~1077556355171",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "data observability platform"
+      },
+      "criterionId": "1077556355171"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300845175~1077556355171"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317341",
+      "name": "G_US_S_NB_Governance",
+      "id": "23705317341"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300845175",
+      "id": "195300845175"
+    },
+    "metrics": {
+      "clicks": "3",
+      "conversions": 0,
+      "costMicros": "67890000",
+      "averageCpc": 22630000,
+      "impressions": "188"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300845175~1127167223007",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "data observability platform"
+      },
+      "criterionId": "1127167223007"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300845175~1127167223007"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317341",
+      "name": "G_US_S_NB_Governance",
+      "id": "23705317341"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300845175",
+      "id": "195300845175"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "6"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300845175~2383168711399",
+      "keyword": {
+        "matchType": "BROAD",
+        "text": "data product management platform"
+      },
+      "criterionId": "2383168711399"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300845175~2383168711399"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317341",
+      "name": "G_US_S_NB_Governance",
+      "id": "23705317341"
+    },
+    "adGroup": {
+      "resourceName": "customers/7917802207/adGroups/195300845175",
+      "id": "195300845175"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "45800000",
+      "averageCpc": 45800000,
+      "impressions": "311"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/7917802207/adGroupCriteria/195300845175~2413565197168",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "data product management platform"
+      },
+      "criterionId": "2413565197168"
+    },
+    "keywordView": {
+      "resourceName": "customers/7917802207/keywordViews/195300845175~2413565197168"
+    }
+  }
+]

@@ -1,0 +1,5 @@
+[
+  {"action":"wake-start","wakeId":"heartbeat:20260905T100432240Z"},
+  {"action":"source-start","source":"slack","afterUnix":1788600789,"beforeUnix":1788602679},
+  {"action":"source-start","source":"gmail","afterUnix":1788600789,"beforeUnix":1788602679}
+]

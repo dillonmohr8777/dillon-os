@@ -1,0 +1,245 @@
+{
+  "schema": 1,
+  "business": "Pacifico Marple Lincoln",
+  "domain": "pacificomarplelincoln.com",
+  "route": "sites/pacifico-marple-lincoln/",
+  "generatedAt": "2026-08-26T10:17:20.6839210Z",
+  "generator": "Align HCM Image Gen plugin contract",
+  "model": "gpt-image-2.0",
+  "board": {
+    "key": "pacifico-marple-lincoln",
+    "descriptor": "car",
+    "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Pacifico Marple Lincoln. Four distinct but cohesive unlabelled panels in a generic premium automotive dealership and service environment: a technician in plain workwear completing a careful wheel inspection; an adult customer and consultant discussing an anonymous vehicle in a bright showroom from non-identifying angles; a documentary close-up of clean detailing tools and a modern dashboard with no brand marks; a sunlit anonymous luxury vehicle exterior framed in a simple service-bay setting. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+    "sourceOutput": "C:/Users/dillo/.codex/generated_images/01a03d5e-c09f-74a0-b82e-14ad3c549703/exec-9b59a4ca-594b-43f9-b01f-dd6b90bcb402.png",
+    "file": "automation/prospect-radar-next20/generated-stock-library/pacifico-marple-lincoln.png",
+    "sha256": "082ccb2dc48d880b86854663893fd550ab7039622d06ddaba17267dea2a98c3d",
+    "dimensions": {
+      "width": 1448,
+      "height": 1086
+    }
+  },
+  "treatment": {
+    "palette": [
+      "#F05A28",
+      "#FF6B35",
+      "#0B1D2D",
+      "#071521",
+      "#F4EFE7",
+      "#EAF6FC",
+      "#91D5ED"
+    ],
+    "imageGrain": "Visible refined 35mm film grain authored in the generated board and preserved in every derivative.",
+    "interfaceGrain": {
+      "file": "grain.svg",
+      "sha256": "f8b8b72ee2a84cf2aaa04ce069edaaa459ee61650e76f307254572db67efb813",
+      "opacity": 0.13
+    },
+    "disclosure": "Illustrative generated imagery. These concept visuals do not depict the business, its staff, customers, facility, products, projects, or outcomes."
+  },
+  "outputs": [
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "pacifico-marple-lincoln",
+      "boardDescriptor": "car",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/pacifico-marple-lincoln.png",
+      "sourceSha256": "082ccb2dc48d880b86854663893fd550ab7039622d06ddaba17267dea2a98c3d",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Pacifico Marple Lincoln. Four distinct but cohesive unlabelled panels in a generic premium automotive dealership and service environment: a technician in plain workwear completing a careful wheel inspection; an adult customer and consultant discussing an anonymous vehicle in a bright showroom from non-identifying angles; a documentary close-up of clean detailing tools and a modern dashboard with no brand marks; a sunlit anonymous luxury vehicle exterior framed in a simple service-bay setting. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:56,eq=saturation=0.940:contrast=1.010:brightness=-0.018,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "9d80d947d97bcaa6a00686f9ce37184aa6ab924a20f1175e605e4f80ff3247a6",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "pacifico-marple-lincoln",
+      "boardDescriptor": "car",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/pacifico-marple-lincoln.png",
+      "sourceSha256": "082ccb2dc48d880b86854663893fd550ab7039622d06ddaba17267dea2a98c3d",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Pacifico Marple Lincoln. Four distinct but cohesive unlabelled panels in a generic premium automotive dealership and service environment: a technician in plain workwear completing a careful wheel inspection; an adult customer and consultant discussing an anonymous vehicle in a bright showroom from non-identifying angles; a documentary close-up of clean detailing tools and a modern dashboard with no brand marks; a sunlit anonymous luxury vehicle exterior framed in a simple service-bay setting. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=0.965:contrast=1.064:brightness=-0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "92afd11af037125742dd084f185846737fdd61a07f6cd024a6d2ead9261e20ab",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "pacifico-marple-lincoln",
+      "boardDescriptor": "car",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/pacifico-marple-lincoln.png",
+      "sourceSha256": "082ccb2dc48d880b86854663893fd550ab7039622d06ddaba17267dea2a98c3d",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Pacifico Marple Lincoln. Four distinct but cohesive unlabelled panels in a generic premium automotive dealership and service environment: a technician in plain workwear completing a careful wheel inspection; an adult customer and consultant discussing an anonymous vehicle in a bright showroom from non-identifying angles; a documentary close-up of clean detailing tools and a modern dashboard with no brand marks; a sunlit anonymous luxury vehicle exterior framed in a simple service-bay setting. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:28,eq=saturation=0.990:contrast=1.028:brightness=0.000,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "a6c1313edf5544b48b89a26c3ff686e92172e2a3c044c4145e7e8c356806ca6c",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "pacifico-marple-lincoln",
+      "boardDescriptor": "car",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/pacifico-marple-lincoln.png",
+      "sourceSha256": "082ccb2dc48d880b86854663893fd550ab7039622d06ddaba17267dea2a98c3d",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Pacifico Marple Lincoln. Four distinct but cohesive unlabelled panels in a generic premium automotive dealership and service environment: a technician in plain workwear completing a careful wheel inspection; an adult customer and consultant discussing an anonymous vehicle in a bright showroom from non-identifying angles; a documentary close-up of clean detailing tools and a modern dashboard with no brand marks; a sunlit anonymous luxury vehicle exterior framed in a simple service-bay setting. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:56,eq=saturation=1.015:contrast=1.082:brightness=0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "570d45f53474f61c235c1f9ca0c48c749d9a4e3905b05d2c13c5c1658f970e8e",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "pacifico-marple-lincoln",
+      "boardDescriptor": "car",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/pacifico-marple-lincoln.png",
+      "sourceSha256": "082ccb2dc48d880b86854663893fd550ab7039622d06ddaba17267dea2a98c3d",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Pacifico Marple Lincoln. Four distinct but cohesive unlabelled panels in a generic premium automotive dealership and service environment: a technician in plain workwear completing a careful wheel inspection; an adult customer and consultant discussing an anonymous vehicle in a bright showroom from non-identifying angles; a documentary close-up of clean detailing tools and a modern dashboard with no brand marks; a sunlit anonymous luxury vehicle exterior framed in a simple service-bay setting. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:0,eq=saturation=1.040:contrast=1.046:brightness=-0.018,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "b9198121109012cbfe2aa2d005270ca1924894e009ad1775886c5b4b140cea5f",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "pacifico-marple-lincoln",
+      "boardDescriptor": "car",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/pacifico-marple-lincoln.png",
+      "sourceSha256": "082ccb2dc48d880b86854663893fd550ab7039622d06ddaba17267dea2a98c3d",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Pacifico Marple Lincoln. Four distinct but cohesive unlabelled panels in a generic premium automotive dealership and service environment: a technician in plain workwear completing a careful wheel inspection; an adult customer and consultant discussing an anonymous vehicle in a bright showroom from non-identifying angles; a documentary close-up of clean detailing tools and a modern dashboard with no brand marks; a sunlit anonymous luxury vehicle exterior framed in a simple service-bay setting. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:28,eq=saturation=0.940:contrast=1.010:brightness=-0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "4bfb013eb498fb99b296b278aa5a97217a4831c972ea875200278740404b999e",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "pacifico-marple-lincoln",
+      "boardDescriptor": "car",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/pacifico-marple-lincoln.png",
+      "sourceSha256": "082ccb2dc48d880b86854663893fd550ab7039622d06ddaba17267dea2a98c3d",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Pacifico Marple Lincoln. Four distinct but cohesive unlabelled panels in a generic premium automotive dealership and service environment: a technician in plain workwear completing a careful wheel inspection; an adult customer and consultant discussing an anonymous vehicle in a bright showroom from non-identifying angles; a documentary close-up of clean detailing tools and a modern dashboard with no brand marks; a sunlit anonymous luxury vehicle exterior framed in a simple service-bay setting. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:56,eq=saturation=0.965:contrast=1.064:brightness=0.000,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "0d50d595206b473dcd4a9ede956e559eb4c7e414d1c2df93f03b71b44c748f3f",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "pacifico-marple-lincoln",
+      "boardDescriptor": "car",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/pacifico-marple-lincoln.png",
+      "sourceSha256": "082ccb2dc48d880b86854663893fd550ab7039622d06ddaba17267dea2a98c3d",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Pacifico Marple Lincoln. Four distinct but cohesive unlabelled panels in a generic premium automotive dealership and service environment: a technician in plain workwear completing a careful wheel inspection; an adult customer and consultant discussing an anonymous vehicle in a bright showroom from non-identifying angles; a documentary close-up of clean detailing tools and a modern dashboard with no brand marks; a sunlit anonymous luxury vehicle exterior framed in a simple service-bay setting. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:0,eq=saturation=0.990:contrast=1.028:brightness=0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "277251d396f5162fb9f4754bf39b7ffc4042dcb4a37efeb9479aab3612ced0db",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "pacifico-marple-lincoln",
+      "boardDescriptor": "car",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/pacifico-marple-lincoln.png",
+      "sourceSha256": "082ccb2dc48d880b86854663893fd550ab7039622d06ddaba17267dea2a98c3d",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Pacifico Marple Lincoln. Four distinct but cohesive unlabelled panels in a generic premium automotive dealership and service environment: a technician in plain workwear completing a careful wheel inspection; an adult customer and consultant discussing an anonymous vehicle in a bright showroom from non-identifying angles; a documentary close-up of clean detailing tools and a modern dashboard with no brand marks; a sunlit anonymous luxury vehicle exterior framed in a simple service-bay setting. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:28,eq=saturation=1.015:contrast=1.082:brightness=-0.018,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "2e17d0cb7c006af66fd00417dd1162522e1fdaaaff51e48e21cf567ff9503d64",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "pacifico-marple-lincoln",
+      "boardDescriptor": "car",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/pacifico-marple-lincoln.png",
+      "sourceSha256": "082ccb2dc48d880b86854663893fd550ab7039622d06ddaba17267dea2a98c3d",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Pacifico Marple Lincoln. Four distinct but cohesive unlabelled panels in a generic premium automotive dealership and service environment: a technician in plain workwear completing a careful wheel inspection; an adult customer and consultant discussing an anonymous vehicle in a bright showroom from non-identifying angles; a documentary close-up of clean detailing tools and a modern dashboard with no brand marks; a sunlit anonymous luxury vehicle exterior framed in a simple service-bay setting. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:56,eq=saturation=1.040:contrast=1.046:brightness=-0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "6a0ed54beb717d6639c1c9c2ee373a9d19fba65ae85333abeb08605d0a5aaadb",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "pacifico-marple-lincoln",
+      "boardDescriptor": "car",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/pacifico-marple-lincoln.png",
+      "sourceSha256": "082ccb2dc48d880b86854663893fd550ab7039622d06ddaba17267dea2a98c3d",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Pacifico Marple Lincoln. Four distinct but cohesive unlabelled panels in a generic premium automotive dealership and service environment: a technician in plain workwear completing a careful wheel inspection; an adult customer and consultant discussing an anonymous vehicle in a bright showroom from non-identifying angles; a documentary close-up of clean detailing tools and a modern dashboard with no brand marks; a sunlit anonymous luxury vehicle exterior framed in a simple service-bay setting. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:0,eq=saturation=0.940:contrast=1.010:brightness=0.000,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "6d7297fcd774a020bc97cc4dfd3b075f6d80b6204880f20cbb379d47bfc5ba48",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "pacifico-marple-lincoln",
+      "boardDescriptor": "car",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/pacifico-marple-lincoln.png",
+      "sourceSha256": "082ccb2dc48d880b86854663893fd550ab7039622d06ddaba17267dea2a98c3d",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Pacifico Marple Lincoln. Four distinct but cohesive unlabelled panels in a generic premium automotive dealership and service environment: a technician in plain workwear completing a careful wheel inspection; an adult customer and consultant discussing an anonymous vehicle in a bright showroom from non-identifying angles; a documentary close-up of clean detailing tools and a modern dashboard with no brand marks; a sunlit anonymous luxury vehicle exterior framed in a simple service-bay setting. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:28,eq=saturation=0.965:contrast=1.064:brightness=0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "57bb408544a3821e2c9e204609eb21b0ecd1e3d2dbe3d53fec29910f1438874b",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "action": "wake-start",
+    "wakeId": "manual:20260904:astra-reconfigure"
+  },
+  {
+    "action": "register-thread",
+    "threadId": "01a06efc-21e8-7d03-ae5a-b0046cc5992c",
+    "sourceKey": "ops:queue-divergence:20260904",
+    "clientId": "internal-operations"
+  },
+  {
+    "action": "daily",
+    "name": "leadTable",
+    "status": "blocked"
+  },
+  {
+    "action": "seen",
+    "key": "gmail:1a068222bee81c93:kjb-leads",
+    "disposition": "reviewed"
+  }
+]

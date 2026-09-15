@@ -1,0 +1,231 @@
+{
+  "schema_version": 1,
+  "routine_id": "E04",
+  "generated_at": "2026-08-24T23:34:59.706Z",
+  "source_set_sha256": "b52e6019ce577e6427819c75ce81c9d04bbc32253583635a0206012c90e3683a",
+  "summary": {
+    "connectors": 6,
+    "recovered": 0,
+    "blocked": 6,
+    "no_recovery_required": false,
+    "workflow_ready": false
+  },
+  "connectors": [
+    {
+      "schema_version": 1,
+      "routine_id": "E04",
+      "id": "E04:google_analytics",
+      "isolation_key": "connector:google_analytics:recorded-state",
+      "connector_id": "google_analytics",
+      "observed_at": "2026-08-24T23:34:59.706Z",
+      "exact_connector_verified": true,
+      "exact_account_verified": false,
+      "pre_failure_checkpoint_sha256": "d3f6602f82aaeb1eea6e602566a15226cf5f618dd96862ad236d26245f03d3a1",
+      "post_run_checkpoint_sha256": "d3f6602f82aaeb1eea6e602566a15226cf5f618dd96862ad236d26245f03d3a1",
+      "checkpoint_preserved": true,
+      "checkpoint_advanced": false,
+      "supported_recovery_attempted": false,
+      "recovery_state": "blocked_preserved_state",
+      "block_reason": "provider-readback-stale",
+      "evidence": {
+        "recorded_status": "active",
+        "read_verified": false,
+        "provider_observation_age_hours": 148.16
+      },
+      "next_safe_action": "Refresh the exact provider readback without substituting another connector or advancing the checkpoint.",
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "restart_attempted": false,
+        "retry_attempted": false,
+        "checkpoint_advance_attempted": false,
+        "secret_access_attempted": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "E04",
+      "id": "E04:google_search_console",
+      "isolation_key": "connector:google_search_console:recorded-state",
+      "connector_id": "google_search_console",
+      "observed_at": "2026-08-24T23:34:59.706Z",
+      "exact_connector_verified": true,
+      "exact_account_verified": false,
+      "pre_failure_checkpoint_sha256": "d3f6602f82aaeb1eea6e602566a15226cf5f618dd96862ad236d26245f03d3a1",
+      "post_run_checkpoint_sha256": "d3f6602f82aaeb1eea6e602566a15226cf5f618dd96862ad236d26245f03d3a1",
+      "checkpoint_preserved": true,
+      "checkpoint_advanced": false,
+      "supported_recovery_attempted": false,
+      "recovery_state": "blocked_preserved_state",
+      "block_reason": "provider-readback-stale",
+      "evidence": {
+        "recorded_status": "active",
+        "read_verified": true,
+        "provider_observation_age_hours": 148.16
+      },
+      "next_safe_action": "Refresh the exact provider readback without substituting another connector or advancing the checkpoint.",
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "restart_attempted": false,
+        "retry_attempted": false,
+        "checkpoint_advance_attempted": false,
+        "secret_access_attempted": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "E04",
+      "id": "E04:googleads",
+      "isolation_key": "connector:googleads:recorded-state",
+      "connector_id": "googleads",
+      "observed_at": "2026-08-24T23:34:59.706Z",
+      "exact_connector_verified": true,
+      "exact_account_verified": false,
+      "pre_failure_checkpoint_sha256": "d3f6602f82aaeb1eea6e602566a15226cf5f618dd96862ad236d26245f03d3a1",
+      "post_run_checkpoint_sha256": "d3f6602f82aaeb1eea6e602566a15226cf5f618dd96862ad236d26245f03d3a1",
+      "checkpoint_preserved": true,
+      "checkpoint_advanced": false,
+      "supported_recovery_attempted": false,
+      "recovery_state": "blocked_preserved_state",
+      "block_reason": "provider-readback-stale",
+      "evidence": {
+        "recorded_status": "active",
+        "read_verified": false,
+        "provider_observation_age_hours": 148.16
+      },
+      "next_safe_action": "Refresh the exact provider readback without substituting another connector or advancing the checkpoint.",
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "restart_attempted": false,
+        "retry_attempted": false,
+        "checkpoint_advance_attempted": false,
+        "secret_access_attempted": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "E04",
+      "id": "E04:hubspot",
+      "isolation_key": "connector:hubspot:recorded-state",
+      "connector_id": "hubspot",
+      "observed_at": "2026-08-24T23:34:59.706Z",
+      "exact_connector_verified": true,
+      "exact_account_verified": false,
+      "pre_failure_checkpoint_sha256": "d3f6602f82aaeb1eea6e602566a15226cf5f618dd96862ad236d26245f03d3a1",
+      "post_run_checkpoint_sha256": "d3f6602f82aaeb1eea6e602566a15226cf5f618dd96862ad236d26245f03d3a1",
+      "checkpoint_preserved": true,
+      "checkpoint_advanced": false,
+      "supported_recovery_attempted": false,
+      "recovery_state": "blocked_preserved_state",
+      "block_reason": "provider-readback-stale",
+      "evidence": {
+        "recorded_status": "not_connected",
+        "read_verified": false,
+        "provider_observation_age_hours": 148.16
+      },
+      "next_safe_action": "Refresh the exact provider readback without substituting another connector or advancing the checkpoint.",
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "restart_attempted": false,
+        "retry_attempted": false,
+        "checkpoint_advance_attempted": false,
+        "secret_access_attempted": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "E04",
+      "id": "E04:meta_ads",
+      "isolation_key": "connector:meta_ads:recorded-state",
+      "connector_id": "meta_ads",
+      "observed_at": "2026-08-24T23:34:59.706Z",
+      "exact_connector_verified": true,
+      "exact_account_verified": false,
+      "pre_failure_checkpoint_sha256": "d3f6602f82aaeb1eea6e602566a15226cf5f618dd96862ad236d26245f03d3a1",
+      "post_run_checkpoint_sha256": "d3f6602f82aaeb1eea6e602566a15226cf5f618dd96862ad236d26245f03d3a1",
+      "checkpoint_preserved": true,
+      "checkpoint_advanced": false,
+      "supported_recovery_attempted": false,
+      "recovery_state": "blocked_preserved_state",
+      "block_reason": "provider-readback-stale",
+      "evidence": {
+        "recorded_status": "not_connected",
+        "read_verified": false,
+        "provider_observation_age_hours": 148.16
+      },
+      "next_safe_action": "Refresh the exact provider readback without substituting another connector or advancing the checkpoint.",
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "restart_attempted": false,
+        "retry_attempted": false,
+        "checkpoint_advance_attempted": false,
+        "secret_access_attempted": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "E04",
+      "id": "E04:windsor-connector",
+      "isolation_key": "connector:windsor:authenticated-session",
+      "connector_id": "windsor_connector",
+      "observed_at": "2026-08-24T23:34:59.706Z",
+      "exact_connector_verified": true,
+      "exact_account_verified": false,
+      "pre_failure_checkpoint_sha256": "48f8da8609ab79e901c8ff80237f0a2436e35ad1aef6954dcfbca6f1c725b90d",
+      "post_run_checkpoint_sha256": "48f8da8609ab79e901c8ff80237f0a2436e35ad1aef6954dcfbca6f1c725b90d",
+      "checkpoint_preserved": true,
+      "checkpoint_advanced": false,
+      "supported_recovery_attempted": false,
+      "recovery_state": "blocked_preserved_state",
+      "block_reason": "reauthentication-required",
+      "evidence": {
+        "recorded_status": "blocked_reauthentication_required",
+        "read_verified": false,
+        "provider_observation_age_hours": 0.55
+      },
+      "next_safe_action": "Use the existing exact-account reauthentication path, then rerun the same bounded read and checkpoint comparison.",
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "restart_attempted": false,
+        "retry_attempted": false,
+        "checkpoint_advance_attempted": false,
+        "secret_access_attempted": false
+      }
+    }
+  ],
+  "no_trigger_receipt": null,
+  "authority": {
+    "read_only": true,
+    "proposal_only": true,
+    "external_action_attempted": false,
+    "canonical_write_attempted": false,
+    "provider_mutation_attempted": false,
+    "restart_attempted": false,
+    "retry_attempted": false,
+    "checkpoint_advance_attempted": false,
+    "secret_access_attempted": false
+  }
+}

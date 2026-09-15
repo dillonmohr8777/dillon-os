@@ -1,0 +1,1987 @@
+{
+  "run_id": "OGD-20260824-312BFDB7A088",
+  "graph_id": "weekly-w04-w06-w08-w10-shadow",
+  "objective": "Produce a source-bound content calendar, client-report package index, experiment decision ledger, and proposal-only executive review for the completed weekly window.",
+  "value_signal": "Every weekly decision is client-separated, evidence-linked, approval-aware, and independently reproducible without external delivery or canonical mutation.",
+  "contract_sha256": "c9084379404dcb710cc614739bfd7863c7b5882bedaedc1f59cce7d7e9f9df94",
+  "started_at": "2026-08-24T21:55:53.482Z",
+  "source_evidence": "A full queue, registry, content, report, experiment, W09/W11, and health manifest is hashed at run start.",
+  "finish_line": "All discovered content, report, and experiment sources have independently checked isolated records; four aggregate artifacts exactly cover those records; every report package passes; experiment uncertainty is explicit; and W10 remains proposal-only.",
+  "governance": {
+    "orchestrator": "Codex acting as Marketing Chief",
+    "canonical_state": "client-operations/queue/work-items.json remains canonical and read-only to this graph",
+    "dedupe_key": "internal:2026-08-17:2026-08-23:W04-W06-W08-W10",
+    "checkpoint": "System/outcome-graph/tranche-2026-08-24-run-1-durable/run-receipt.json",
+    "rollback": "Discard shadow artifacts and retain the prior verified weekly tranche; canonical queue and external systems are unchanged.",
+    "escalation": "Return source drift, routing ambiguity, report mismatch, unsupported experiment decision, or approval ambiguity to Marketing Chief."
+  },
+  "graph_iterations": [
+    {
+      "iteration": 1,
+      "status": "verified",
+      "planner": {
+        "evidence": "Collected 38 isolated weekly records from source set 61c83da54702f065df003bfb2d79057254b04cee5c49006a28eaec8b10b4b35e.",
+        "item_count": 38,
+        "plan_signature": "53117bda16a43ef20e86c44fdeaad0011935ca6598d47c8337eb1201507ef09d",
+        "items": [
+          {
+            "id": "W04:bar-crawl-usa",
+            "isolation_key": "W04:client:bar-crawl-usa",
+            "input_fingerprint": "28971e12919ec174094e03f58e23def29beea9ed07af800bacc4005759b9f1ff",
+            "task": "Classify the exact current content-calendar source for bar-crawl-usa."
+          },
+          {
+            "id": "W04:kimberly-james-bridal",
+            "isolation_key": "W04:client:kimberly-james-bridal",
+            "input_fingerprint": "ef8c9dad03f5d1f029a0e3dd8fe769411aa1a54ee47a02b8d81c48072cad7fb0",
+            "task": "Classify the exact current content-calendar source for kimberly-james-bridal."
+          },
+          {
+            "id": "W04:omega-landscaping",
+            "isolation_key": "W04:client:omega-landscaping",
+            "input_fingerprint": "0b2d625970fd77561352cb6a704f7b1f82244597e283e5e1c31364ac1ad9363a",
+            "task": "Classify the exact current content-calendar source for omega-landscaping."
+          },
+          {
+            "id": "W04:onsite-concrete-landscape",
+            "isolation_key": "W04:client:onsite-concrete-landscape",
+            "input_fingerprint": "ef4b1b1d047728c844e0c569c6313c94a931c25f4a5dd86f2b70cfe5c405be71",
+            "task": "Classify the exact current content-calendar source for onsite-concrete-landscape."
+          },
+          {
+            "id": "W04:shadow-heating-cooling",
+            "isolation_key": "W04:client:shadow-heating-cooling",
+            "input_fingerprint": "4abd34b411cd5744a2e1bca8a40ee51e3469bb6cff08be5d80fa4d6d2d7b6193",
+            "task": "Classify the exact current content-calendar source for shadow-heating-cooling."
+          },
+          {
+            "id": "W04:tags-2-go",
+            "isolation_key": "W04:client:tags-2-go",
+            "input_fingerprint": "537b64c3de303068690aa555a0fced79627d57582f4413585d76e31eaa83da96",
+            "task": "Classify the exact current content-calendar source for tags-2-go."
+          },
+          {
+            "id": "W06:bar-crawl-usa",
+            "isolation_key": "W06:client:bar-crawl-usa",
+            "input_fingerprint": "2e9b44d53d8be507d3c1ef37fe1f3f0c138dcd488c02fbbfd4b999d86ebf6bac",
+            "task": "Recompute and independently validate the weekly report package for bar-crawl-usa."
+          },
+          {
+            "id": "W06:fagan-painting",
+            "isolation_key": "W06:client:fagan-painting",
+            "input_fingerprint": "1a44c8305cdca518bf1ea13f363aff485adb548281d774b893b9ccff7f3a307f",
+            "task": "Recompute and independently validate the weekly report package for fagan-painting."
+          },
+          {
+            "id": "W06:fresh-blends-kwik-trip",
+            "isolation_key": "W06:client:fresh-blends-kwik-trip",
+            "input_fingerprint": "f6a4431b860fdec3beef4e02f26cb0448f61434adb0b61ae87eba151e2701b5d",
+            "task": "Recompute and independently validate the weekly report package for fresh-blends-kwik-trip."
+          },
+          {
+            "id": "W06:hope-wellness-center",
+            "isolation_key": "W06:client:hope-wellness-center",
+            "input_fingerprint": "4133f65fa3d51fc09b0a7ecae697b7309afead9b0ae7aac0e15023ee2f609d5c",
+            "task": "Recompute and independently validate the weekly report package for hope-wellness-center."
+          },
+          {
+            "id": "W06:kimberly-james-bridal",
+            "isolation_key": "W06:client:kimberly-james-bridal",
+            "input_fingerprint": "e773c6d54a5aaa182a398e8abb7a55c391d1e11813de3b58cd42f89aa82ceece",
+            "task": "Recompute and independently validate the weekly report package for kimberly-james-bridal."
+          },
+          {
+            "id": "W06:nexla",
+            "isolation_key": "W06:client:nexla",
+            "input_fingerprint": "045337f5b5a87503c2a9133a9326a74806d86ed63f6484e42e010204a8fcef86",
+            "task": "Recompute and independently validate the weekly report package for nexla."
+          },
+          {
+            "id": "W06:nkcdc",
+            "isolation_key": "W06:client:nkcdc",
+            "input_fingerprint": "ee82f1d4de90c52aa2b546d90f49497712dd89a02ac89f192bbcbb53ad93751b",
+            "task": "Recompute and independently validate the weekly report package for nkcdc."
+          },
+          {
+            "id": "W06:omega-landscaping",
+            "isolation_key": "W06:client:omega-landscaping",
+            "input_fingerprint": "331069e88f661b520e9503ba4a058fc5ad0a3238d849f0c358a1855a511da3d4",
+            "task": "Recompute and independently validate the weekly report package for omega-landscaping."
+          },
+          {
+            "id": "W06:onsite-concrete-landscape",
+            "isolation_key": "W06:client:onsite-concrete-landscape",
+            "input_fingerprint": "ebb5cbb8362fb97ae33454f8df0202d22ab94f2764553a51eaf5909205dade30",
+            "task": "Recompute and independently validate the weekly report package for onsite-concrete-landscape."
+          },
+          {
+            "id": "W06:replenish-7-eleven",
+            "isolation_key": "W06:client:replenish-7-eleven",
+            "input_fingerprint": "8e27f93f84c5634c4db3f9fb6bc50d477315108b9e84b11356f8c6a1aa95ad1b",
+            "task": "Recompute and independently validate the weekly report package for replenish-7-eleven."
+          },
+          {
+            "id": "W06:revive-systems",
+            "isolation_key": "W06:client:revive-systems",
+            "input_fingerprint": "17f0beaba6a0cbf84d466c4f269efaf922967b5103ca22c228e7eb7bc57af6a4",
+            "task": "Recompute and independently validate the weekly report package for revive-systems."
+          },
+          {
+            "id": "W06:va-claims-edge",
+            "isolation_key": "W06:client:va-claims-edge",
+            "input_fingerprint": "717be32d3f8e1c0e05069161efecd945902788ac98bcd3ca9dd6b7520b36afe1",
+            "task": "Recompute and independently validate the weekly report package for va-claims-edge."
+          },
+          {
+            "id": "W08:EXP-0B188F75",
+            "isolation_key": "W08:experiment:EXP-0B188F75",
+            "input_fingerprint": "63a073ea695b7add07f0cd7292e77e7356aaf2c26cf48f1346a95481150f614f",
+            "task": "Classify the evidence-bound decision state for EXP-0B188F75."
+          },
+          {
+            "id": "W08:EXP-16ED0D24",
+            "isolation_key": "W08:experiment:EXP-16ED0D24",
+            "input_fingerprint": "0d3fefd3a7dac3cc43a2e966491dfbc629fdc7732ef6fdd90525941daf005c47",
+            "task": "Classify the evidence-bound decision state for EXP-16ED0D24."
+          },
+          {
+            "id": "W08:EXP-1E8B67EC",
+            "isolation_key": "W08:experiment:EXP-1E8B67EC",
+            "input_fingerprint": "fb3a46b1e8af2c4ce8718583d45c8d2aecf42018ae459e46ef3ab2a8ecabfe6a",
+            "task": "Classify the evidence-bound decision state for EXP-1E8B67EC."
+          },
+          {
+            "id": "W08:EXP-3320BFA5",
+            "isolation_key": "W08:experiment:EXP-3320BFA5",
+            "input_fingerprint": "ef4a89bc983e7bc8898b31b670a8a820855b9178884d4e169b8396ef10752303",
+            "task": "Classify the evidence-bound decision state for EXP-3320BFA5."
+          },
+          {
+            "id": "W08:EXP-3764E7F8",
+            "isolation_key": "W08:experiment:EXP-3764E7F8",
+            "input_fingerprint": "924612dc97da18557a6b1834c1e0288dd12d9840e5349b300df09f163bf23258",
+            "task": "Classify the evidence-bound decision state for EXP-3764E7F8."
+          },
+          {
+            "id": "W08:EXP-69185DAF",
+            "isolation_key": "W08:experiment:EXP-69185DAF",
+            "input_fingerprint": "465fc950321a1c383c653fd780156d941645a5e7917646aa120e648ce7b02b52",
+            "task": "Classify the evidence-bound decision state for EXP-69185DAF."
+          },
+          {
+            "id": "W08:EXP-6CFE2386",
+            "isolation_key": "W08:experiment:EXP-6CFE2386",
+            "input_fingerprint": "5d0a321a82b4e5735bda9dee3ce81466ef25736e88d8322ed24c0f12d5c1ad12",
+            "task": "Classify the evidence-bound decision state for EXP-6CFE2386."
+          },
+          {
+            "id": "W08:EXP-731AF0C4",
+            "isolation_key": "W08:experiment:EXP-731AF0C4",
+            "input_fingerprint": "f731ef2c92b218b64bbd05d0135f57d0da7b1f607202e194445c63d329da7325",
+            "task": "Classify the evidence-bound decision state for EXP-731AF0C4."
+          },
+          {
+            "id": "W08:EXP-804115EF",
+            "isolation_key": "W08:experiment:EXP-804115EF",
+            "input_fingerprint": "2d427063f3e7d532c735f86e5514436b35067b67fde935e9169119197e5b6e6e",
+            "task": "Classify the evidence-bound decision state for EXP-804115EF."
+          },
+          {
+            "id": "W08:EXP-806093CC",
+            "isolation_key": "W08:experiment:EXP-806093CC",
+            "input_fingerprint": "677315e10d3b2782d5f033d2a651c106b9e43f01435897b42ed2a8d1966bac5e",
+            "task": "Classify the evidence-bound decision state for EXP-806093CC."
+          },
+          {
+            "id": "W08:EXP-940E4BF4",
+            "isolation_key": "W08:experiment:EXP-940E4BF4",
+            "input_fingerprint": "84bf7c099cc00ec2828e3cb411bcf8400534be58e3fa2898a4e1890f5b13b5eb",
+            "task": "Classify the evidence-bound decision state for EXP-940E4BF4."
+          },
+          {
+            "id": "W08:EXP-B99F6727",
+            "isolation_key": "W08:experiment:EXP-B99F6727",
+            "input_fingerprint": "5fef2b1af7b8b9a2ede7e8b75d50081d72dea06ca030e6ead367e26958542a4c",
+            "task": "Classify the evidence-bound decision state for EXP-B99F6727."
+          },
+          {
+            "id": "W08:EXP-CCDE3257",
+            "isolation_key": "W08:experiment:EXP-CCDE3257",
+            "input_fingerprint": "0ae38f9da02ea89fab1d2f5e3734c8946ad6b5a37586808b0c88fc17b0bdd205",
+            "task": "Classify the evidence-bound decision state for EXP-CCDE3257."
+          },
+          {
+            "id": "W08:EXP-CD0D693B",
+            "isolation_key": "W08:experiment:EXP-CD0D693B",
+            "input_fingerprint": "d1e520f9cdecbb7d0f7e493b4d935f56c73cbf6ad0128957d4b2c39068231fd0",
+            "task": "Classify the evidence-bound decision state for EXP-CD0D693B."
+          },
+          {
+            "id": "W08:EXP-D2C92739",
+            "isolation_key": "W08:experiment:EXP-D2C92739",
+            "input_fingerprint": "fb3e789ebae020e30f670486a0e6ff0bfc6c86301ad72774281f1d4de8d7b00c",
+            "task": "Classify the evidence-bound decision state for EXP-D2C92739."
+          },
+          {
+            "id": "W08:EXP-D65EF7ED",
+            "isolation_key": "W08:experiment:EXP-D65EF7ED",
+            "input_fingerprint": "f02e4f4ce966c130d22712973200c3f9f7d0b4a7e0397a13eb0ede4db3215709",
+            "task": "Classify the evidence-bound decision state for EXP-D65EF7ED."
+          },
+          {
+            "id": "W08:EXP-DF1A47C9",
+            "isolation_key": "W08:experiment:EXP-DF1A47C9",
+            "input_fingerprint": "5d9d5ad98997b3b41a9648b7fcad556faa9bac193be7f8d0b7351ebbc4e78413",
+            "task": "Classify the evidence-bound decision state for EXP-DF1A47C9."
+          },
+          {
+            "id": "W08:EXP-FE8DB259",
+            "isolation_key": "W08:experiment:EXP-FE8DB259",
+            "input_fingerprint": "99df39942cdaa6f1b061b38692c2e7bcf1b33c12c7a949d893cca0a96dc9b933",
+            "task": "Classify the evidence-bound decision state for EXP-FE8DB259."
+          },
+          {
+            "id": "W08:EXP-FF75F5FB",
+            "isolation_key": "W08:experiment:EXP-FF75F5FB",
+            "input_fingerprint": "88f730b6984dc57e3889f19e40762a7cc9611b7496555892383ab7a369a33f0b",
+            "task": "Classify the evidence-bound decision state for EXP-FF75F5FB."
+          },
+          {
+            "id": "W08:EXP-SKI-VOICE-SANDBOX",
+            "isolation_key": "W08:experiment:EXP-SKI-VOICE-SANDBOX",
+            "input_fingerprint": "3dfdeb15d614bf51bca2e19ec99e48b6cdaa423fe1b78b283686ad84c3cfed04",
+            "task": "Classify the evidence-bound decision state for EXP-SKI-VOICE-SANDBOX."
+          }
+        ]
+      },
+      "workers": [
+        {
+          "item_id": "W04:bar-crawl-usa",
+          "input_fingerprint": "28971e12919ec174094e03f58e23def29beea9ed07af800bacc4005759b9f1ff",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-312BFDB7A088:04dcd68eb0b5eeb6084f:attempt:1",
+              "maker_evidence": "Built one source-bound W04 record for W04:bar-crawl-usa.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/04dcd68eb0b5eeb6084f.json",
+                  "sha256": "c62fe656a27a71492220e2467355fb65700fd2a05cc179876cbd565a8516bb4a",
+                  "bytes": 779
+                }
+              ],
+              "checker_evidence": "Independently reconstructed and compared W04:bar-crawl-usa.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/04dcd68eb0b5eeb6084f.json",
+              "sha256": "c62fe656a27a71492220e2467355fb65700fd2a05cc179876cbd565a8516bb4a",
+              "bytes": 779
+            }
+          ],
+          "isolation_id": "OGD-20260824-312BFDB7A088:04dcd68eb0b5eeb6084f:attempt:1"
+        },
+        {
+          "item_id": "W04:kimberly-james-bridal",
+          "input_fingerprint": "ef8c9dad03f5d1f029a0e3dd8fe769411aa1a54ee47a02b8d81c48072cad7fb0",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-312BFDB7A088:39c5364e6b3cee6de5b0:attempt:1",
+              "maker_evidence": "Built one source-bound W04 record for W04:kimberly-james-bridal.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/39c5364e6b3cee6de5b0.json",
+                  "sha256": "bfa4aefeea8d3d642a2a410dfd1e73e6ad5bfe920763aee525fcb480ec886b25",
+                  "bytes": 803
+                }
+              ],
+              "checker_evidence": "Independently reconstructed and compared W04:kimberly-james-bridal.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/39c5364e6b3cee6de5b0.json",
+              "sha256": "bfa4aefeea8d3d642a2a410dfd1e73e6ad5bfe920763aee525fcb480ec886b25",
+              "bytes": 803
+            }
+          ],
+          "isolation_id": "OGD-20260824-312BFDB7A088:39c5364e6b3cee6de5b0:attempt:1"
+        },
+        {
+          "item_id": "W04:omega-landscaping",
+          "input_fingerprint": "0b2d625970fd77561352cb6a704f7b1f82244597e283e5e1c31364ac1ad9363a",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-312BFDB7A088:04d119e6563f804ef0db:attempt:1",
+              "maker_evidence": "Built one source-bound W04 record for W04:omega-landscaping.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/04d119e6563f804ef0db.json",
+                  "sha256": "7cb2543ae81768f658e8b9698b69c85206729145c647942de3c7d3c7cb6f35c5",
+                  "bytes": 804
+                }
+              ],
+              "checker_evidence": "Independently reconstructed and compared W04:omega-landscaping.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/04d119e6563f804ef0db.json",
+              "sha256": "7cb2543ae81768f658e8b9698b69c85206729145c647942de3c7d3c7cb6f35c5",
+              "bytes": 804
+            }
+          ],
+          "isolation_id": "OGD-20260824-312BFDB7A088:04d119e6563f804ef0db:attempt:1"
+        },
+        {
+          "item_id": "W04:onsite-concrete-landscape",
+          "input_fingerprint": "ef4b1b1d047728c844e0c569c6313c94a931c25f4a5dd86f2b70cfe5c405be71",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-312BFDB7A088:c5a2212553257cbfeb67:attempt:1",
+              "maker_evidence": "Built one source-bound W04 record for W04:onsite-concrete-landscape.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/c5a2212553257cbfeb67.json",
+                  "sha256": "f0fca65f8dd9c3ab2fd094c2923949b4308806a2d732401e765a74ab12046b35",
+                  "bytes": 847
+                }
+              ],
+              "checker_evidence": "Independently reconstructed and compared W04:onsite-concrete-landscape.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/c5a2212553257cbfeb67.json",
+              "sha256": "f0fca65f8dd9c3ab2fd094c2923949b4308806a2d732401e765a74ab12046b35",
+              "bytes": 847
+            }
+          ],
+          "isolation_id": "OGD-20260824-312BFDB7A088:c5a2212553257cbfeb67:attempt:1"
+        },
+        {
+          "item_id": "W04:shadow-heating-cooling",
+          "input_fingerprint": "4abd34b411cd5744a2e1bca8a40ee51e3469bb6cff08be5d80fa4d6d2d7b6193",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-312BFDB7A088:76c6391ee970d66ce8d9:attempt:1",
+              "maker_evidence": "Built one source-bound W04 record for W04:shadow-heating-cooling.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/76c6391ee970d66ce8d9.json",
+                  "sha256": "c939fc7dbc6ab90dd06a3755687d0e3ffb24e452ee07c5986434dfefaf6fb315",
+                  "bytes": 799
+                }
+              ],
+              "checker_evidence": "Independently reconstructed and compared W04:shadow-heating-cooling.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/76c6391ee970d66ce8d9.json",
+              "sha256": "c939fc7dbc6ab90dd06a3755687d0e3ffb24e452ee07c5986434dfefaf6fb315",
+              "bytes": 799
+            }
+          ],
+          "isolation_id": "OGD-20260824-312BFDB7A088:76c6391ee970d66ce8d9:attempt:1"
+        },
+        {
+          "item_id": "W04:tags-2-go",
+          "input_fingerprint": "537b64c3de303068690aa555a0fced79627d57582f4413585d76e31eaa83da96",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-312BFDB7A088:5ea92802473e7d28b233:attempt:1",
+              "maker_evidence": "Built one source-bound W04 record for W04:tags-2-go.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/5ea92802473e7d28b233.json",
+                  "sha256": "6b50be35dcc660c9b3c0e6ddb2d0bf513a5348701355d8e85366a4b762e5f1d6",
+                  "bytes": 787
+                }
+              ],
+              "checker_evidence": "Independently reconstructed and compared W04:tags-2-go.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/5ea92802473e7d28b233.json",
+              "sha256": "6b50be35dcc660c9b3c0e6ddb2d0bf513a5348701355d8e85366a4b762e5f1d6",
+              "bytes": 787
+            }
+          ],
+          "isolation_id": "OGD-20260824-312BFDB7A088:5ea92802473e7d28b233:attempt:1"
+        },
+        {
+          "item_id": "W06:bar-crawl-usa",
+          "input_fingerprint": "2e9b44d53d8be507d3c1ef37fe1f3f0c138dcd488c02fbbfd4b999d86ebf6bac",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-312BFDB7A088:85a326ae28ae7b332569:attempt:1",
+              "maker_evidence": "Built one source-bound W06 record for W06:bar-crawl-usa.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/85a326ae28ae7b332569.json",
+                  "sha256": "f37431d57d2af931edc198e27a5f4bcf75cf812f64dd45e3793cf78008c0c787",
+                  "bytes": 2572
+                }
+              ],
+              "checker_evidence": "Independently reconstructed and compared W06:bar-crawl-usa.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/85a326ae28ae7b332569.json",
+              "sha256": "f37431d57d2af931edc198e27a5f4bcf75cf812f64dd45e3793cf78008c0c787",
+              "bytes": 2572
+            }
+          ],
+          "isolation_id": "OGD-20260824-312BFDB7A088:85a326ae28ae7b332569:attempt:1"
+        },
+        {
+          "item_id": "W06:fagan-painting",
+          "input_fingerprint": "1a44c8305cdca518bf1ea13f363aff485adb548281d774b893b9ccff7f3a307f",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-312BFDB7A088:4e760fd02d5aebba7bcb:attempt:1",
+              "maker_evidence": "Built one source-bound W06 record for W06:fagan-painting.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/4e760fd02d5aebba7bcb.json",
+                  "sha256": "8da41f1b9aa91250cf26b161789c562b8f5a1c26ec13fa18ace35ba9eb72d677",
+                  "bytes": 2514
+                }
+              ],
+              "checker_evidence": "Independently reconstructed and compared W06:fagan-painting.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/4e760fd02d5aebba7bcb.json",
+              "sha256": "8da41f1b9aa91250cf26b161789c562b8f5a1c26ec13fa18ace35ba9eb72d677",
+              "bytes": 2514
+            }
+          ],
+          "isolation_id": "OGD-20260824-312BFDB7A088:4e760fd02d5aebba7bcb:attempt:1"
+        },
+        {
+          "item_id": "W06:fresh-blends-kwik-trip",
+          "input_fingerprint": "f6a4431b860fdec3beef4e02f26cb0448f61434adb0b61ae87eba151e2701b5d",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-312BFDB7A088:0f5e091cb7b31fb67071:attempt:1",
+              "maker_evidence": "Built one source-bound W06 record for W06:fresh-blends-kwik-trip.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/0f5e091cb7b31fb67071.json",
+                  "sha256": "aa8cc08e9592257136fd1f336744234933c32ffa9af8bb2b510342066400acfb",
+                  "bytes": 2616
+                }
+              ],
+              "checker_evidence": "Independently reconstructed and compared W06:fresh-blends-kwik-trip.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/0f5e091cb7b31fb67071.json",
+              "sha256": "aa8cc08e9592257136fd1f336744234933c32ffa9af8bb2b510342066400acfb",
+              "bytes": 2616
+            }
+          ],
+          "isolation_id": "OGD-20260824-312BFDB7A088:0f5e091cb7b31fb67071:attempt:1"
+        },
+        {
+          "item_id": "W06:hope-wellness-center",
+          "input_fingerprint": "4133f65fa3d51fc09b0a7ecae697b7309afead9b0ae7aac0e15023ee2f609d5c",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-312BFDB7A088:2b9787f9ddeefcf112fc:attempt:1",
+              "maker_evidence": "Built one source-bound W06 record for W06:hope-wellness-center.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/2b9787f9ddeefcf112fc.json",
+                  "sha256": "e9269bf8faeb7183bbeceffc50a7cc01c286c46700c02d3946075733a05071b6",
+                  "bytes": 2581
+                }
+              ],
+              "checker_evidence": "Independently reconstructed and compared W06:hope-wellness-center.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/2b9787f9ddeefcf112fc.json",
+              "sha256": "e9269bf8faeb7183bbeceffc50a7cc01c286c46700c02d3946075733a05071b6",
+              "bytes": 2581
+            }
+          ],
+          "isolation_id": "OGD-20260824-312BFDB7A088:2b9787f9ddeefcf112fc:attempt:1"
+        },
+        {
+          "item_id": "W06:kimberly-james-bridal",
+          "input_fingerprint": "e773c6d54a5aaa182a398e8abb7a55c391d1e11813de3b58cd42f89aa82ceece",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-312BFDB7A088:712afbadf9d93f23e118:attempt:1",
+              "maker_evidence": "Built one source-bound W06 record for W06:kimberly-james-bridal.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/712afbadf9d93f23e118.json",
+                  "sha256": "fbc5361378c3d0477d225b11e4520a928b73abd98c7beb92c5fa9e18b4e5ae08",
+                  "bytes": 3141
+                }
+              ],
+              "checker_evidence": "Independently reconstructed and compared W06:kimberly-james-bridal.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/712afbadf9d93f23e118.json",
+              "sha256": "fbc5361378c3d0477d225b11e4520a928b73abd98c7beb92c5fa9e18b4e5ae08",
+              "bytes": 3141
+            }
+          ],
+          "isolation_id": "OGD-20260824-312BFDB7A088:712afbadf9d93f23e118:attempt:1"
+        },
+        {
+          "item_id": "W06:nexla",
+          "input_fingerprint": "045337f5b5a87503c2a9133a9326a74806d86ed63f6484e42e010204a8fcef86",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-312BFDB7A088:664f3f989a49567d1ca5:attempt:1",
+              "maker_evidence": "Built one source-bound W06 record for W06:nexla.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/664f3f989a49567d1ca5.json",
+                  "sha256": "8c658347e56d19ad79cfb80e62f3ae91ccc21fdb21ccbac1c7c21acff14a3fe6",
+                  "bytes": 2694
+                }
+              ],
+              "checker_evidence": "Independently reconstructed and compared W06:nexla.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/664f3f989a49567d1ca5.json",
+              "sha256": "8c658347e56d19ad79cfb80e62f3ae91ccc21fdb21ccbac1c7c21acff14a3fe6",
+              "bytes": 2694
+            }
+          ],
+          "isolation_id": "OGD-20260824-312BFDB7A088:664f3f989a49567d1ca5:attempt:1"
+        },
+        {
+          "item_id": "W06:nkcdc",
+          "input_fingerprint": "ee82f1d4de90c52aa2b546d90f49497712dd89a02ac89f192bbcbb53ad93751b",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-312BFDB7A088:36c607e12c233851a941:attempt:1",
+              "maker_evidence": "Built one source-bound W06 record for W06:nkcdc.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/36c607e12c233851a941.json",
+                  "sha256": "e471279fedb12e55ee1b708d70247319eca322465abd947ca231372ff57228c4",
+                  "bytes": 2483
+                }
+              ],
+              "checker_evidence": "Independently reconstructed and compared W06:nkcdc.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/36c607e12c233851a941.json",
+              "sha256": "e471279fedb12e55ee1b708d70247319eca322465abd947ca231372ff57228c4",
+              "bytes": 2483
+            }
+          ],
+          "isolation_id": "OGD-20260824-312BFDB7A088:36c607e12c233851a941:attempt:1"
+        },
+        {
+          "item_id": "W06:omega-landscaping",
+          "input_fingerprint": "331069e88f661b520e9503ba4a058fc5ad0a3238d849f0c358a1855a511da3d4",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-312BFDB7A088:59332162facffaf19e0b:attempt:1",
+              "maker_evidence": "Built one source-bound W06 record for W06:omega-landscaping.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/59332162facffaf19e0b.json",
+                  "sha256": "975d50b2950dc9b574962f2b3fae2d800efa82ec11eec10c9739c48b85f7e910",
+                  "bytes": 2914
+                }
+              ],
+              "checker_evidence": "Independently reconstructed and compared W06:omega-landscaping.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/59332162facffaf19e0b.json",
+              "sha256": "975d50b2950dc9b574962f2b3fae2d800efa82ec11eec10c9739c48b85f7e910",
+              "bytes": 2914
+            }
+          ],
+          "isolation_id": "OGD-20260824-312BFDB7A088:59332162facffaf19e0b:attempt:1"
+        },
+        {
+          "item_id": "W06:onsite-concrete-landscape",
+          "input_fingerprint": "ebb5cbb8362fb97ae33454f8df0202d22ab94f2764553a51eaf5909205dade30",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-312BFDB7A088:83ece01ed68bd74c9212:attempt:1",
+              "maker_evidence": "Built one source-bound W06 record for W06:onsite-concrete-landscape.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/83ece01ed68bd74c9212.json",
+                  "sha256": "74cc6c63d40f9d6127248454d09d58f80e59aedf5f666aa8b8311e8faec387e3",
+                  "bytes": 2855
+                }
+              ],
+              "checker_evidence": "Independently reconstructed and compared W06:onsite-concrete-landscape.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/83ece01ed68bd74c9212.json",
+              "sha256": "74cc6c63d40f9d6127248454d09d58f80e59aedf5f666aa8b8311e8faec387e3",
+              "bytes": 2855
+            }
+          ],
+          "isolation_id": "OGD-20260824-312BFDB7A088:83ece01ed68bd74c9212:attempt:1"
+        },
+        {
+          "item_id": "W06:replenish-7-eleven",
+          "input_fingerprint": "8e27f93f84c5634c4db3f9fb6bc50d477315108b9e84b11356f8c6a1aa95ad1b",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-312BFDB7A088:a5842bc1d6d26f0bdc03:attempt:1",
+              "maker_evidence": "Built one source-bound W06 record for W06:replenish-7-eleven.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/a5842bc1d6d26f0bdc03.json",
+                  "sha256": "cfd4869a07562af9dccaf9f492e795cb93423743d4114c6ab0c42a0bc2a8c7cc",
+                  "bytes": 2598
+                }
+              ],
+              "checker_evidence": "Independently reconstructed and compared W06:replenish-7-eleven.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/a5842bc1d6d26f0bdc03.json",
+              "sha256": "cfd4869a07562af9dccaf9f492e795cb93423743d4114c6ab0c42a0bc2a8c7cc",
+              "bytes": 2598
+            }
+          ],
+          "isolation_id": "OGD-20260824-312BFDB7A088:a5842bc1d6d26f0bdc03:attempt:1"
+        },
+        {
+          "item_id": "W06:revive-systems",
+          "input_fingerprint": "17f0beaba6a0cbf84d466c4f269efaf922967b5103ca22c228e7eb7bc57af6a4",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-312BFDB7A088:a7645eca1d05f0a7759a:attempt:1",
+              "maker_evidence": "Built one source-bound W06 record for W06:revive-systems.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/a7645eca1d05f0a7759a.json",
+                  "sha256": "522ec0ef92f2fc71e8b6f2f7648833495ea1620be1622d56dcdc8243fc1fc988",
+                  "bytes": 2553
+                }
+              ],
+              "checker_evidence": "Independently reconstructed and compared W06:revive-systems.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/a7645eca1d05f0a7759a.json",
+              "sha256": "522ec0ef92f2fc71e8b6f2f7648833495ea1620be1622d56dcdc8243fc1fc988",
+              "bytes": 2553
+            }
+          ],
+          "isolation_id": "OGD-20260824-312BFDB7A088:a7645eca1d05f0a7759a:attempt:1"
+        },
+        {
+          "item_id": "W06:va-claims-edge",
+          "input_fingerprint": "717be32d3f8e1c0e05069161efecd945902788ac98bcd3ca9dd6b7520b36afe1",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-312BFDB7A088:6684f64b7959b7216228:attempt:1",
+              "maker_evidence": "Built one source-bound W06 record for W06:va-claims-edge.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/6684f64b7959b7216228.json",
+                  "sha256": "5269ed38745fa8efbc8aee250a39b2b3f2d03688d7d9e45623ce2b3a05220a6a",
+                  "bytes": 2578
+                }
+              ],
+              "checker_evidence": "Independently reconstructed and compared W06:va-claims-edge.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/6684f64b7959b7216228.json",
+              "sha256": "5269ed38745fa8efbc8aee250a39b2b3f2d03688d7d9e45623ce2b3a05220a6a",
+              "bytes": 2578
+            }
+          ],
+          "isolation_id": "OGD-20260824-312BFDB7A088:6684f64b7959b7216228:attempt:1"
+        },
+        {
+          "item_id": "W08:EXP-0B188F75",
+          "input_fingerprint": "63a073ea695b7add07f0cd7292e77e7356aaf2c26cf48f1346a95481150f614f",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-312BFDB7A088:d1d7eda6e5f3c4614d98:attempt:1",
+              "maker_evidence": "Built one source-bound W08 record for W08:EXP-0B188F75.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/d1d7eda6e5f3c4614d98.json",
+                  "sha256": "a6f4c65515db5bb3d2efcfd105336672f6a8c4a4e62e5232eb9569f5f886d4c4",
+                  "bytes": 1494
+                }
+              ],
+              "checker_evidence": "Independently reconstructed and compared W08:EXP-0B188F75.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/d1d7eda6e5f3c4614d98.json",
+              "sha256": "a6f4c65515db5bb3d2efcfd105336672f6a8c4a4e62e5232eb9569f5f886d4c4",
+              "bytes": 1494
+            }
+          ],
+          "isolation_id": "OGD-20260824-312BFDB7A088:d1d7eda6e5f3c4614d98:attempt:1"
+        },
+        {
+          "item_id": "W08:EXP-16ED0D24",
+          "input_fingerprint": "0d3fefd3a7dac3cc43a2e966491dfbc629fdc7732ef6fdd90525941daf005c47",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-312BFDB7A088:c324d40cce7be4398239:attempt:1",
+              "maker_evidence": "Built one source-bound W08 record for W08:EXP-16ED0D24.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/c324d40cce7be4398239.json",
+                  "sha256": "cfed797ab0d1d9da73516fa1e9c0b742dd277536458bdba7dfe7d749178eada4",
+                  "bytes": 1299
+                }
+              ],
+              "checker_evidence": "Independently reconstructed and compared W08:EXP-16ED0D24.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/c324d40cce7be4398239.json",
+              "sha256": "cfed797ab0d1d9da73516fa1e9c0b742dd277536458bdba7dfe7d749178eada4",
+              "bytes": 1299
+            }
+          ],
+          "isolation_id": "OGD-20260824-312BFDB7A088:c324d40cce7be4398239:attempt:1"
+        },
+        {
+          "item_id": "W08:EXP-1E8B67EC",
+          "input_fingerprint": "fb3a46b1e8af2c4ce8718583d45c8d2aecf42018ae459e46ef3ab2a8ecabfe6a",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-312BFDB7A088:851c17b58160d5e4693c:attempt:1",
+              "maker_evidence": "Built one source-bound W08 record for W08:EXP-1E8B67EC.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/851c17b58160d5e4693c.json",
+                  "sha256": "66cf590387c53e15ae4d49e94aa07c5e6d7bbf4100f91fa32a02d85e92e8aac6",
+                  "bytes": 1177
+                }
+              ],
+              "checker_evidence": "Independently reconstructed and compared W08:EXP-1E8B67EC.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/851c17b58160d5e4693c.json",
+              "sha256": "66cf590387c53e15ae4d49e94aa07c5e6d7bbf4100f91fa32a02d85e92e8aac6",
+              "bytes": 1177
+            }
+          ],
+          "isolation_id": "OGD-20260824-312BFDB7A088:851c17b58160d5e4693c:attempt:1"
+        },
+        {
+          "item_id": "W08:EXP-3320BFA5",
+          "input_fingerprint": "ef4a89bc983e7bc8898b31b670a8a820855b9178884d4e169b8396ef10752303",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-312BFDB7A088:1201af966fffc23afa1d:attempt:1",
+              "maker_evidence": "Built one source-bound W08 record for W08:EXP-3320BFA5.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/1201af966fffc23afa1d.json",
+                  "sha256": "5152e66681c2f5f8fc681f528638952e9cc654f49d0b8637a2f5910cb8d6e381",
+                  "bytes": 1274
+                }
+              ],
+              "checker_evidence": "Independently reconstructed and compared W08:EXP-3320BFA5.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/1201af966fffc23afa1d.json",
+              "sha256": "5152e66681c2f5f8fc681f528638952e9cc654f49d0b8637a2f5910cb8d6e381",
+              "bytes": 1274
+            }
+          ],
+          "isolation_id": "OGD-20260824-312BFDB7A088:1201af966fffc23afa1d:attempt:1"
+        },
+        {
+          "item_id": "W08:EXP-3764E7F8",
+          "input_fingerprint": "924612dc97da18557a6b1834c1e0288dd12d9840e5349b300df09f163bf23258",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-312BFDB7A088:37100997ad3b527f0708:attempt:1",
+              "maker_evidence": "Built one source-bound W08 record for W08:EXP-3764E7F8.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/37100997ad3b527f0708.json",
+                  "sha256": "281b3301191a52644052640c9765de26eed97842adfc57cc16d351095ccc3919",
+                  "bytes": 1257
+                }
+              ],
+              "checker_evidence": "Independently reconstructed and compared W08:EXP-3764E7F8.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/37100997ad3b527f0708.json",
+              "sha256": "281b3301191a52644052640c9765de26eed97842adfc57cc16d351095ccc3919",
+              "bytes": 1257
+            }
+          ],
+          "isolation_id": "OGD-20260824-312BFDB7A088:37100997ad3b527f0708:attempt:1"
+        },
+        {
+          "item_id": "W08:EXP-69185DAF",
+          "input_fingerprint": "465fc950321a1c383c653fd780156d941645a5e7917646aa120e648ce7b02b52",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-312BFDB7A088:e83d365e74606a0610a8:attempt:1",
+              "maker_evidence": "Built one source-bound W08 record for W08:EXP-69185DAF.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/e83d365e74606a0610a8.json",
+                  "sha256": "941619a61677dfdf4b7830eeb381f4aec8c60e15f1d747100e2b0826325c3fb1",
+                  "bytes": 1158
+                }
+              ],
+              "checker_evidence": "Independently reconstructed and compared W08:EXP-69185DAF.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/e83d365e74606a0610a8.json",
+              "sha256": "941619a61677dfdf4b7830eeb381f4aec8c60e15f1d747100e2b0826325c3fb1",
+              "bytes": 1158
+            }
+          ],
+          "isolation_id": "OGD-20260824-312BFDB7A088:e83d365e74606a0610a8:attempt:1"
+        },
+        {
+          "item_id": "W08:EXP-6CFE2386",
+          "input_fingerprint": "5d0a321a82b4e5735bda9dee3ce81466ef25736e88d8322ed24c0f12d5c1ad12",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-312BFDB7A088:7e7284fa2dc3feb55264:attempt:1",
+              "maker_evidence": "Built one source-bound W08 record for W08:EXP-6CFE2386.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/7e7284fa2dc3feb55264.json",
+                  "sha256": "98e13e286746206ee4a1b4a81960b0e75d2200014b6569c6a1f134c26e7e1468",
+                  "bytes": 1418
+                }
+              ],
+              "checker_evidence": "Independently reconstructed and compared W08:EXP-6CFE2386.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/7e7284fa2dc3feb55264.json",
+              "sha256": "98e13e286746206ee4a1b4a81960b0e75d2200014b6569c6a1f134c26e7e1468",
+              "bytes": 1418
+            }
+          ],
+          "isolation_id": "OGD-20260824-312BFDB7A088:7e7284fa2dc3feb55264:attempt:1"
+        },
+        {
+          "item_id": "W08:EXP-731AF0C4",
+          "input_fingerprint": "f731ef2c92b218b64bbd05d0135f57d0da7b1f607202e194445c63d329da7325",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-312BFDB7A088:c7fd7e63e62779df7980:attempt:1",
+              "maker_evidence": "Built one source-bound W08 record for W08:EXP-731AF0C4.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/c7fd7e63e62779df7980.json",
+                  "sha256": "30c123b39e5324c4e36be6d511a41e028060600a884fb182e687cf622fb2b21a",
+                  "bytes": 1423
+                }
+              ],
+              "checker_evidence": "Independently reconstructed and compared W08:EXP-731AF0C4.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/c7fd7e63e62779df7980.json",
+              "sha256": "30c123b39e5324c4e36be6d511a41e028060600a884fb182e687cf622fb2b21a",
+              "bytes": 1423
+            }
+          ],
+          "isolation_id": "OGD-20260824-312BFDB7A088:c7fd7e63e62779df7980:attempt:1"
+        },
+        {
+          "item_id": "W08:EXP-804115EF",
+          "input_fingerprint": "2d427063f3e7d532c735f86e5514436b35067b67fde935e9169119197e5b6e6e",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-312BFDB7A088:e7e4278b898edf551f74:attempt:1",
+              "maker_evidence": "Built one source-bound W08 record for W08:EXP-804115EF.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/e7e4278b898edf551f74.json",
+                  "sha256": "d61cf8017426d6ca86105f384f3e563414ba745a34a91c960dd566030e174c8f",
+                  "bytes": 1259
+                }
+              ],
+              "checker_evidence": "Independently reconstructed and compared W08:EXP-804115EF.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/e7e4278b898edf551f74.json",
+              "sha256": "d61cf8017426d6ca86105f384f3e563414ba745a34a91c960dd566030e174c8f",
+              "bytes": 1259
+            }
+          ],
+          "isolation_id": "OGD-20260824-312BFDB7A088:e7e4278b898edf551f74:attempt:1"
+        },
+        {
+          "item_id": "W08:EXP-806093CC",
+          "input_fingerprint": "677315e10d3b2782d5f033d2a651c106b9e43f01435897b42ed2a8d1966bac5e",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-312BFDB7A088:b56ddc9fb39bb2159cdf:attempt:1",
+              "maker_evidence": "Built one source-bound W08 record for W08:EXP-806093CC.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/b56ddc9fb39bb2159cdf.json",
+                  "sha256": "8a35c042271ea36150392349d06469faa6a2fcdd8fb8dafd901545c5d63195df",
+                  "bytes": 1360
+                }
+              ],
+              "checker_evidence": "Independently reconstructed and compared W08:EXP-806093CC.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/b56ddc9fb39bb2159cdf.json",
+              "sha256": "8a35c042271ea36150392349d06469faa6a2fcdd8fb8dafd901545c5d63195df",
+              "bytes": 1360
+            }
+          ],
+          "isolation_id": "OGD-20260824-312BFDB7A088:b56ddc9fb39bb2159cdf:attempt:1"
+        },
+        {
+          "item_id": "W08:EXP-940E4BF4",
+          "input_fingerprint": "84bf7c099cc00ec2828e3cb411bcf8400534be58e3fa2898a4e1890f5b13b5eb",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-312BFDB7A088:b24ef7b4ef3457debfe6:attempt:1",
+              "maker_evidence": "Built one source-bound W08 record for W08:EXP-940E4BF4.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/b24ef7b4ef3457debfe6.json",
+                  "sha256": "1b840c41f3a6fd8e2f50134447ef41cbff2dd8dcaec2e427e7793c47722e98ac",
+                  "bytes": 1403
+                }
+              ],
+              "checker_evidence": "Independently reconstructed and compared W08:EXP-940E4BF4.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/b24ef7b4ef3457debfe6.json",
+              "sha256": "1b840c41f3a6fd8e2f50134447ef41cbff2dd8dcaec2e427e7793c47722e98ac",
+              "bytes": 1403
+            }
+          ],
+          "isolation_id": "OGD-20260824-312BFDB7A088:b24ef7b4ef3457debfe6:attempt:1"
+        },
+        {
+          "item_id": "W08:EXP-B99F6727",
+          "input_fingerprint": "5fef2b1af7b8b9a2ede7e8b75d50081d72dea06ca030e6ead367e26958542a4c",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-312BFDB7A088:2855ddb175c541236153:attempt:1",
+              "maker_evidence": "Built one source-bound W08 record for W08:EXP-B99F6727.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/2855ddb175c541236153.json",
+                  "sha256": "f4532d1e035ca5eb75f2b6f0e9f74190ebcab076b5afd17d0a3620f658732faf",
+                  "bytes": 1375
+                }
+              ],
+              "checker_evidence": "Independently reconstructed and compared W08:EXP-B99F6727.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/2855ddb175c541236153.json",
+              "sha256": "f4532d1e035ca5eb75f2b6f0e9f74190ebcab076b5afd17d0a3620f658732faf",
+              "bytes": 1375
+            }
+          ],
+          "isolation_id": "OGD-20260824-312BFDB7A088:2855ddb175c541236153:attempt:1"
+        },
+        {
+          "item_id": "W08:EXP-CCDE3257",
+          "input_fingerprint": "0ae38f9da02ea89fab1d2f5e3734c8946ad6b5a37586808b0c88fc17b0bdd205",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-312BFDB7A088:18b7fdff06c27045187e:attempt:1",
+              "maker_evidence": "Built one source-bound W08 record for W08:EXP-CCDE3257.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/18b7fdff06c27045187e.json",
+                  "sha256": "98c2a0ba0a2bfb00fc82fcb6cbfc13a4f87633738fce8724163ba8adbc438e2f",
+                  "bytes": 1353
+                }
+              ],
+              "checker_evidence": "Independently reconstructed and compared W08:EXP-CCDE3257.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/18b7fdff06c27045187e.json",
+              "sha256": "98c2a0ba0a2bfb00fc82fcb6cbfc13a4f87633738fce8724163ba8adbc438e2f",
+              "bytes": 1353
+            }
+          ],
+          "isolation_id": "OGD-20260824-312BFDB7A088:18b7fdff06c27045187e:attempt:1"
+        },
+        {
+          "item_id": "W08:EXP-CD0D693B",
+          "input_fingerprint": "d1e520f9cdecbb7d0f7e493b4d935f56c73cbf6ad0128957d4b2c39068231fd0",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-312BFDB7A088:99e3ec2a3194830bbb64:attempt:1",
+              "maker_evidence": "Built one source-bound W08 record for W08:EXP-CD0D693B.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/99e3ec2a3194830bbb64.json",
+                  "sha256": "9bf5d21734273f2f73340bfc2b85fb56549f4b37dc658c804d61f5fb28fb29f9",
+                  "bytes": 1421
+                }
+              ],
+              "checker_evidence": "Independently reconstructed and compared W08:EXP-CD0D693B.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/99e3ec2a3194830bbb64.json",
+              "sha256": "9bf5d21734273f2f73340bfc2b85fb56549f4b37dc658c804d61f5fb28fb29f9",
+              "bytes": 1421
+            }
+          ],
+          "isolation_id": "OGD-20260824-312BFDB7A088:99e3ec2a3194830bbb64:attempt:1"
+        },
+        {
+          "item_id": "W08:EXP-D2C92739",
+          "input_fingerprint": "fb3e789ebae020e30f670486a0e6ff0bfc6c86301ad72774281f1d4de8d7b00c",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-312BFDB7A088:402bd337301a8e880002:attempt:1",
+              "maker_evidence": "Built one source-bound W08 record for W08:EXP-D2C92739.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/402bd337301a8e880002.json",
+                  "sha256": "13f2b1768fbf3a9d0e56f2f18b70f61e7d6597f614d064d8f8cf8f5c6b193c9a",
+                  "bytes": 1309
+                }
+              ],
+              "checker_evidence": "Independently reconstructed and compared W08:EXP-D2C92739.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/402bd337301a8e880002.json",
+              "sha256": "13f2b1768fbf3a9d0e56f2f18b70f61e7d6597f614d064d8f8cf8f5c6b193c9a",
+              "bytes": 1309
+            }
+          ],
+          "isolation_id": "OGD-20260824-312BFDB7A088:402bd337301a8e880002:attempt:1"
+        },
+        {
+          "item_id": "W08:EXP-D65EF7ED",
+          "input_fingerprint": "f02e4f4ce966c130d22712973200c3f9f7d0b4a7e0397a13eb0ede4db3215709",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-312BFDB7A088:9e5c100c048dc271efb1:attempt:1",
+              "maker_evidence": "Built one source-bound W08 record for W08:EXP-D65EF7ED.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/9e5c100c048dc271efb1.json",
+                  "sha256": "57af6299b2d37ae2f11bbdc74d79fce1ab249c7ee381692c0ad7ef156be6acfb",
+                  "bytes": 1265
+                }
+              ],
+              "checker_evidence": "Independently reconstructed and compared W08:EXP-D65EF7ED.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/9e5c100c048dc271efb1.json",
+              "sha256": "57af6299b2d37ae2f11bbdc74d79fce1ab249c7ee381692c0ad7ef156be6acfb",
+              "bytes": 1265
+            }
+          ],
+          "isolation_id": "OGD-20260824-312BFDB7A088:9e5c100c048dc271efb1:attempt:1"
+        },
+        {
+          "item_id": "W08:EXP-DF1A47C9",
+          "input_fingerprint": "5d9d5ad98997b3b41a9648b7fcad556faa9bac193be7f8d0b7351ebbc4e78413",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-312BFDB7A088:e2b2686a358526863993:attempt:1",
+              "maker_evidence": "Built one source-bound W08 record for W08:EXP-DF1A47C9.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/e2b2686a358526863993.json",
+                  "sha256": "13c36e1bdfab241987f121f4a8001321c1a53661ff97054dd2cdf1ccb2c3729d",
+                  "bytes": 1190
+                }
+              ],
+              "checker_evidence": "Independently reconstructed and compared W08:EXP-DF1A47C9.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/e2b2686a358526863993.json",
+              "sha256": "13c36e1bdfab241987f121f4a8001321c1a53661ff97054dd2cdf1ccb2c3729d",
+              "bytes": 1190
+            }
+          ],
+          "isolation_id": "OGD-20260824-312BFDB7A088:e2b2686a358526863993:attempt:1"
+        },
+        {
+          "item_id": "W08:EXP-FE8DB259",
+          "input_fingerprint": "99df39942cdaa6f1b061b38692c2e7bcf1b33c12c7a949d893cca0a96dc9b933",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-312BFDB7A088:60e9df21c9fad95a42bb:attempt:1",
+              "maker_evidence": "Built one source-bound W08 record for W08:EXP-FE8DB259.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/60e9df21c9fad95a42bb.json",
+                  "sha256": "06cc205c0b8e177ce2335e4c548701e66c6947587d3e697ab5245b676332f4b2",
+                  "bytes": 1259
+                }
+              ],
+              "checker_evidence": "Independently reconstructed and compared W08:EXP-FE8DB259.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/60e9df21c9fad95a42bb.json",
+              "sha256": "06cc205c0b8e177ce2335e4c548701e66c6947587d3e697ab5245b676332f4b2",
+              "bytes": 1259
+            }
+          ],
+          "isolation_id": "OGD-20260824-312BFDB7A088:60e9df21c9fad95a42bb:attempt:1"
+        },
+        {
+          "item_id": "W08:EXP-FF75F5FB",
+          "input_fingerprint": "88f730b6984dc57e3889f19e40762a7cc9611b7496555892383ab7a369a33f0b",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-312BFDB7A088:e4a4fcf5874e96a593e1:attempt:1",
+              "maker_evidence": "Built one source-bound W08 record for W08:EXP-FF75F5FB.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/e4a4fcf5874e96a593e1.json",
+                  "sha256": "1cdd266e61fe28ff4ac0c680b541359741e91ada8935b668803c92b83e882e53",
+                  "bytes": 1359
+                }
+              ],
+              "checker_evidence": "Independently reconstructed and compared W08:EXP-FF75F5FB.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/e4a4fcf5874e96a593e1.json",
+              "sha256": "1cdd266e61fe28ff4ac0c680b541359741e91ada8935b668803c92b83e882e53",
+              "bytes": 1359
+            }
+          ],
+          "isolation_id": "OGD-20260824-312BFDB7A088:e4a4fcf5874e96a593e1:attempt:1"
+        },
+        {
+          "item_id": "W08:EXP-SKI-VOICE-SANDBOX",
+          "input_fingerprint": "3dfdeb15d614bf51bca2e19ec99e48b6cdaa423fe1b78b283686ad84c3cfed04",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-312BFDB7A088:d3967b3a43ae935a90aa:attempt:1",
+              "maker_evidence": "Built one source-bound W08 record for W08:EXP-SKI-VOICE-SANDBOX.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/d3967b3a43ae935a90aa.json",
+                  "sha256": "1efed14980ab9f3cd7ea3e0c8f6f1034ba901108dc14e4e42d9dd13e9b639546",
+                  "bytes": 2665
+                }
+              ],
+              "checker_evidence": "Independently reconstructed and compared W08:EXP-SKI-VOICE-SANDBOX.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/workers/d3967b3a43ae935a90aa.json",
+              "sha256": "1efed14980ab9f3cd7ea3e0c8f6f1034ba901108dc14e4e42d9dd13e9b639546",
+              "bytes": 2665
+            }
+          ],
+          "isolation_id": "OGD-20260824-312BFDB7A088:d3967b3a43ae935a90aa:attempt:1"
+        }
+      ],
+      "reduction": {
+        "evidence": "Merged all checked isolated records and synthesized W10 from W04, W06, W08, W09, W11, queue, and health evidence.",
+        "artifacts": [
+          {
+            "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/W04-production-calendar.json",
+            "sha256": "3f06d2f39f2e5be9ced28c86808539d62c717c59b7fc4bdca605628c5124ba9b",
+            "bytes": 6034
+          },
+          {
+            "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/W06-client-report-packages.json",
+            "sha256": "fedfe6670d9ca9ce77c0a93343d1db90baae77d2298253826fb9227acfd8700f",
+            "bytes": 36769
+          },
+          {
+            "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/W08-experiment-decision-ledger.json",
+            "sha256": "aaa4096f5fe8accf66b5906bfe446edd13b46ca71376330e8ff8d0590ee065f3",
+            "bytes": 30154
+          },
+          {
+            "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/W10-executive-weekly-review.json",
+            "sha256": "b1271a9670580a41dc66f24e85ff0552afd94fa8fd2cbb7876d7e0c404e5d956",
+            "bytes": 3255
+          }
+        ]
+      },
+      "terminal_verification": {
+        "evidence": "Terminal verification recollected the entire source manifest and independently checked all four final weekly artifacts.",
+        "declared_pass": true,
+        "passed": true,
+        "assertions": [
+          {
+            "id": "source-manifest-stable",
+            "passed": true,
+            "detail": "The full source manifest is unchanged since planning."
+          },
+          {
+            "id": "W04-client-separated-no-invention",
+            "passed": true,
+            "detail": "Every content source is represented and no unsourced production commitment was created."
+          },
+          {
+            "id": "W06-report-packages-recompute",
+            "passed": true,
+            "detail": "All 12 report packages passed source, render, math, language, and hash checks."
+          },
+          {
+            "id": "W08-decisions-evidence-bound",
+            "passed": true,
+            "detail": "Every experiment has an explicit evidence-bound decision and uncertainty statement."
+          },
+          {
+            "id": "W10-proposal-only-ranked-review",
+            "passed": true,
+            "detail": "W10 ends in ranked, owned, evidence-linked proposals with no canonical or external action."
+          }
+        ],
+        "artifact_manifest": [
+          {
+            "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/W04-production-calendar.json",
+            "sha256": "3f06d2f39f2e5be9ced28c86808539d62c717c59b7fc4bdca605628c5124ba9b",
+            "bytes": 6034
+          },
+          {
+            "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/W06-client-report-packages.json",
+            "sha256": "fedfe6670d9ca9ce77c0a93343d1db90baae77d2298253826fb9227acfd8700f",
+            "bytes": 36769
+          },
+          {
+            "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/W08-experiment-decision-ledger.json",
+            "sha256": "aaa4096f5fe8accf66b5906bfe446edd13b46ca71376330e8ff8d0590ee065f3",
+            "bytes": 30154
+          },
+          {
+            "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/W10-executive-weekly-review.json",
+            "sha256": "b1271a9670580a41dc66f24e85ff0552afd94fa8fd2cbb7876d7e0c404e5d956",
+            "bytes": 3255
+          }
+        ],
+        "manifest_errors": []
+      },
+      "learning": {
+        "evidence": "Appended one hashed weekly-tranche correction entry.",
+        "corrections": [
+          "Preserve source-bound client isolation, keep unsupported experiments inconclusive, and end W10 at proposal-only authority."
+        ],
+        "ledger": "System/outcome-graph/tranche-2026-08-24-run-1-durable/corrections.jsonl",
+        "ledger_receipt": {
+          "locator": "System/outcome-graph/tranche-2026-08-24-run-1-durable/corrections.jsonl",
+          "entry_sha256": "b1d58095c3c65c0b7d33abe94b1991fd6fb8de8b8f88bf4ba8e4726884b83e73"
+        }
+      }
+    }
+  ],
+  "invocation_log": [
+    {
+      "adapter": "weekly-tranche-planner",
+      "invoked_at": "2026-08-24T21:55:53.491Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-record-maker",
+      "invoked_at": "2026-08-24T21:55:53.541Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-record-maker",
+      "invoked_at": "2026-08-24T21:55:53.541Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-record-maker",
+      "invoked_at": "2026-08-24T21:55:53.541Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-record-maker",
+      "invoked_at": "2026-08-24T21:55:53.541Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-independent-checker",
+      "invoked_at": "2026-08-24T21:55:53.555Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-independent-checker",
+      "invoked_at": "2026-08-24T21:55:53.555Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-independent-checker",
+      "invoked_at": "2026-08-24T21:55:53.555Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-independent-checker",
+      "invoked_at": "2026-08-24T21:55:53.555Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-record-maker",
+      "invoked_at": "2026-08-24T21:55:53.580Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-record-maker",
+      "invoked_at": "2026-08-24T21:55:53.594Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-independent-checker",
+      "invoked_at": "2026-08-24T21:55:53.608Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-record-maker",
+      "invoked_at": "2026-08-24T21:55:53.608Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-independent-checker",
+      "invoked_at": "2026-08-24T21:55:53.613Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-record-maker",
+      "invoked_at": "2026-08-24T21:55:53.613Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-independent-checker",
+      "invoked_at": "2026-08-24T21:55:53.617Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-independent-checker",
+      "invoked_at": "2026-08-24T21:55:53.629Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-record-maker",
+      "invoked_at": "2026-08-24T21:55:53.640Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-record-maker",
+      "invoked_at": "2026-08-24T21:55:53.657Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-independent-checker",
+      "invoked_at": "2026-08-24T21:55:53.672Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-record-maker",
+      "invoked_at": "2026-08-24T21:55:53.672Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-independent-checker",
+      "invoked_at": "2026-08-24T21:55:53.677Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-record-maker",
+      "invoked_at": "2026-08-24T21:55:53.677Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-independent-checker",
+      "invoked_at": "2026-08-24T21:55:53.681Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-independent-checker",
+      "invoked_at": "2026-08-24T21:55:53.694Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-record-maker",
+      "invoked_at": "2026-08-24T21:55:53.707Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-record-maker",
+      "invoked_at": "2026-08-24T21:55:53.722Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-independent-checker",
+      "invoked_at": "2026-08-24T21:55:53.738Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-record-maker",
+      "invoked_at": "2026-08-24T21:55:53.738Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-independent-checker",
+      "invoked_at": "2026-08-24T21:55:53.741Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-record-maker",
+      "invoked_at": "2026-08-24T21:55:53.741Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-independent-checker",
+      "invoked_at": "2026-08-24T21:55:53.745Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-independent-checker",
+      "invoked_at": "2026-08-24T21:55:53.757Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-record-maker",
+      "invoked_at": "2026-08-24T21:55:53.769Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-record-maker",
+      "invoked_at": "2026-08-24T21:55:53.785Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-independent-checker",
+      "invoked_at": "2026-08-24T21:55:53.800Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-record-maker",
+      "invoked_at": "2026-08-24T21:55:53.800Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-independent-checker",
+      "invoked_at": "2026-08-24T21:55:53.805Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-record-maker",
+      "invoked_at": "2026-08-24T21:55:53.805Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-independent-checker",
+      "invoked_at": "2026-08-24T21:55:53.809Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-independent-checker",
+      "invoked_at": "2026-08-24T21:55:53.821Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-record-maker",
+      "invoked_at": "2026-08-24T21:55:53.834Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-record-maker",
+      "invoked_at": "2026-08-24T21:55:53.849Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-independent-checker",
+      "invoked_at": "2026-08-24T21:55:53.865Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-record-maker",
+      "invoked_at": "2026-08-24T21:55:53.865Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-independent-checker",
+      "invoked_at": "2026-08-24T21:55:53.869Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-record-maker",
+      "invoked_at": "2026-08-24T21:55:53.869Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-independent-checker",
+      "invoked_at": "2026-08-24T21:55:53.873Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-independent-checker",
+      "invoked_at": "2026-08-24T21:55:53.886Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-record-maker",
+      "invoked_at": "2026-08-24T21:55:53.900Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-record-maker",
+      "invoked_at": "2026-08-24T21:55:53.916Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-independent-checker",
+      "invoked_at": "2026-08-24T21:55:53.933Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-record-maker",
+      "invoked_at": "2026-08-24T21:55:53.933Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-independent-checker",
+      "invoked_at": "2026-08-24T21:55:53.937Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-record-maker",
+      "invoked_at": "2026-08-24T21:55:53.937Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-independent-checker",
+      "invoked_at": "2026-08-24T21:55:53.941Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-independent-checker",
+      "invoked_at": "2026-08-24T21:55:53.954Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-record-maker",
+      "invoked_at": "2026-08-24T21:55:53.967Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-record-maker",
+      "invoked_at": "2026-08-24T21:55:53.984Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-independent-checker",
+      "invoked_at": "2026-08-24T21:55:54.001Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-record-maker",
+      "invoked_at": "2026-08-24T21:55:54.001Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-independent-checker",
+      "invoked_at": "2026-08-24T21:55:54.005Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-record-maker",
+      "invoked_at": "2026-08-24T21:55:54.005Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-independent-checker",
+      "invoked_at": "2026-08-24T21:55:54.008Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-independent-checker",
+      "invoked_at": "2026-08-24T21:55:54.022Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-record-maker",
+      "invoked_at": "2026-08-24T21:55:54.036Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-record-maker",
+      "invoked_at": "2026-08-24T21:55:54.053Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-independent-checker",
+      "invoked_at": "2026-08-24T21:55:54.071Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-record-maker",
+      "invoked_at": "2026-08-24T21:55:54.071Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-independent-checker",
+      "invoked_at": "2026-08-24T21:55:54.075Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-record-maker",
+      "invoked_at": "2026-08-24T21:55:54.075Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-independent-checker",
+      "invoked_at": "2026-08-24T21:55:54.079Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-independent-checker",
+      "invoked_at": "2026-08-24T21:55:54.093Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-record-maker",
+      "invoked_at": "2026-08-24T21:55:54.106Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-record-maker",
+      "invoked_at": "2026-08-24T21:55:54.123Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-independent-checker",
+      "invoked_at": "2026-08-24T21:55:54.144Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-independent-checker",
+      "invoked_at": "2026-08-24T21:55:54.144Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-reducer-and-w10-synthesizer",
+      "invoked_at": "2026-08-24T21:55:54.186Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-terminal-verifier",
+      "invoked_at": "2026-08-24T21:55:54.221Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "weekly-tranche-correction-ledger",
+      "invoked_at": "2026-08-24T21:55:54.283Z",
+      "status": "returned"
+    }
+  ],
+  "budget": {
+    "limit_units": 140,
+    "used_units": 80
+  },
+  "outcome": "complete",
+  "terminal_truth": true,
+  "finished_at": "2026-08-24T21:55:54.300Z",
+  "elapsed_seconds": 0.818,
+  "blocked_by": null,
+  "reason": "Finish line is proven by an independent terminal verifier.",
+  "terminal_evidence": {
+    "evidence": "Terminal verification recollected the entire source manifest and independently checked all four final weekly artifacts.",
+    "declared_pass": true,
+    "passed": true,
+    "assertions": [
+      {
+        "id": "source-manifest-stable",
+        "passed": true,
+        "detail": "The full source manifest is unchanged since planning."
+      },
+      {
+        "id": "W04-client-separated-no-invention",
+        "passed": true,
+        "detail": "Every content source is represented and no unsourced production commitment was created."
+      },
+      {
+        "id": "W06-report-packages-recompute",
+        "passed": true,
+        "detail": "All 12 report packages passed source, render, math, language, and hash checks."
+      },
+      {
+        "id": "W08-decisions-evidence-bound",
+        "passed": true,
+        "detail": "Every experiment has an explicit evidence-bound decision and uncertainty statement."
+      },
+      {
+        "id": "W10-proposal-only-ranked-review",
+        "passed": true,
+        "detail": "W10 ends in ranked, owned, evidence-linked proposals with no canonical or external action."
+      }
+    ],
+    "artifact_manifest": [
+      {
+        "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/W04-production-calendar.json",
+        "sha256": "3f06d2f39f2e5be9ced28c86808539d62c717c59b7fc4bdca605628c5124ba9b",
+        "bytes": 6034
+      },
+      {
+        "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/W06-client-report-packages.json",
+        "sha256": "fedfe6670d9ca9ce77c0a93343d1db90baae77d2298253826fb9227acfd8700f",
+        "bytes": 36769
+      },
+      {
+        "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/W08-experiment-decision-ledger.json",
+        "sha256": "aaa4096f5fe8accf66b5906bfe446edd13b46ca71376330e8ff8d0590ee065f3",
+        "bytes": 30154
+      },
+      {
+        "path": "System/outcome-graph/tranche-2026-08-24-run-1-durable/W10-executive-weekly-review.json",
+        "sha256": "b1271a9670580a41dc66f24e85ff0552afd94fa8fd2cbb7876d7e0c404e5d956",
+        "bytes": 3255
+      }
+    ],
+    "manifest_errors": []
+  },
+  "learning_evidence": {
+    "evidence": "Appended one hashed weekly-tranche correction entry.",
+    "corrections": [
+      "Preserve source-bound client isolation, keep unsupported experiments inconclusive, and end W10 at proposal-only authority."
+    ],
+    "ledger": "System/outcome-graph/tranche-2026-08-24-run-1-durable/corrections.jsonl",
+    "ledger_receipt": {
+      "locator": "System/outcome-graph/tranche-2026-08-24-run-1-durable/corrections.jsonl",
+      "entry_sha256": "b1d58095c3c65c0b7d33abe94b1991fd6fb8de8b8f88bf4ba8e4726884b83e73"
+    }
+  },
+  "drift_fingerprint": "c807f4784d7929deb99f1cf95cbf9a89c6477d39c11ef25c3a15665a8a18053a",
+  "deduped": true,
+  "durable_state": {
+    "schema_version": 1,
+    "dedupe_identity": "f14d4a5b24055f270d086cd4cb88bd091402c137c0692d5fdbe9980ff482d004",
+    "dedupe_hit": true,
+    "resumed": false,
+    "canonical_binding": {
+      "locator": "dillon-os://weekly/W04-W06-W08-W10-source-set",
+      "version": "queue-r415:2026-08-17:6:12:20",
+      "sha256": "61c83da54702f065df003bfb2d79057254b04cee5c49006a28eaec8b10b4b35e",
+      "captured_at": "2026-08-24T21:55:53.425Z"
+    },
+    "canonical_binding_fingerprint": "c43368d99375da442f76cdf5cd36be9294545af266f3df25a51f14b2947f07a6",
+    "contract_fingerprint": "5d11ac9b5af1dbe37ff68da2a8f35131e353daeb6f528fe61017921f51b99af1",
+    "checkpoint": "runs/OGD-20260824-312BFDB7A088/checkpoint.json"
+  }
+}

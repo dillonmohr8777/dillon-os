@@ -1,0 +1,9 @@
+{
+ "wakeId":"heartbeat:20260905T170821873Z",
+ "window":{"afterUnix":1788626119,"beforeUnix":1788628196},
+ "identities":{"gmail":"dillonmohr8777@gmail.com","slack":"Momentum Digital Agency / Dillon Mohr"},
+ "coverage":{"gmailMessages":4,"slackMessages":2,"sourcePages":2,"newKeys":2,"paginationExhausted":true},
+ "interpretation":"New headers were a retail promotion and unrelated personal account notice, suppressed without reading deeper. Both Slack messages were previously reviewed ongoing-discussion feedback. No new business ask, material source change, worker dispatch or external write.",
+ "daily":{"leadTableDue":false,"googleAdsReportDue":false,"predictionBriefDue":false,"bedtimeDue":false},
+ "decision":"DONT_NOTIFY"
+}

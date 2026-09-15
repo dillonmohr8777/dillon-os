@@ -1,0 +1,3026 @@
+[
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/21679608360",
+      "name": "Brand Keywords",
+      "id": "21679608360"
+    },
+    "metrics": {
+      "clicks": "57",
+      "conversions": 0,
+      "costMicros": "201670000",
+      "impressions": "306"
+    },
+    "segments": {
+      "month": "2024-09-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/21686057663",
+      "name": "Demand Gen",
+      "id": "21686057663"
+    },
+    "metrics": {
+      "clicks": "1286",
+      "conversions": 1,
+      "costMicros": "666180000",
+      "impressions": "14155"
+    },
+    "segments": {
+      "month": "2024-09-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/21679608360",
+      "name": "Brand Keywords",
+      "id": "21679608360"
+    },
+    "metrics": {
+      "clicks": "131",
+      "conversions": 4.280755,
+      "costMicros": "302680000",
+      "impressions": "610"
+    },
+    "segments": {
+      "month": "2024-10-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/21686057663",
+      "name": "Demand Gen",
+      "id": "21686057663"
+    },
+    "metrics": {
+      "clicks": "4384",
+      "conversions": 4,
+      "costMicros": "1999527153",
+      "impressions": "59447"
+    },
+    "segments": {
+      "month": "2024-10-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/21679608360",
+      "name": "Brand Keywords",
+      "id": "21679608360"
+    },
+    "metrics": {
+      "clicks": "125",
+      "conversions": 5.004042,
+      "costMicros": "285294507",
+      "impressions": "683"
+    },
+    "segments": {
+      "month": "2024-11-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/21686057663",
+      "name": "Demand Gen",
+      "id": "21686057663"
+    },
+    "metrics": {
+      "clicks": "6418",
+      "conversions": 15,
+      "costMicros": "3645757483",
+      "impressions": "118007"
+    },
+    "segments": {
+      "month": "2024-11-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/21679608360",
+      "name": "Brand Keywords",
+      "id": "21679608360"
+    },
+    "metrics": {
+      "clicks": "46",
+      "conversions": 3,
+      "costMicros": "171136374",
+      "impressions": "307"
+    },
+    "segments": {
+      "month": "2024-12-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/21686057663",
+      "name": "Demand Gen",
+      "id": "21686057663"
+    },
+    "metrics": {
+      "clicks": "2733",
+      "conversions": 8,
+      "costMicros": "2408799207",
+      "impressions": "61580"
+    },
+    "segments": {
+      "month": "2024-12-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22032126150",
+      "name": "G_US_S_NB_Data-Integration",
+      "id": "22032126150"
+    },
+    "metrics": {
+      "clicks": "83",
+      "conversions": 6,
+      "costMicros": "1986810042",
+      "impressions": "6111"
+    },
+    "segments": {
+      "month": "2024-12-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038365681",
+      "name": "G_US_S_Brand_Exact",
+      "id": "22038365681"
+    },
+    "metrics": {
+      "clicks": "29",
+      "conversions": 0,
+      "costMicros": "44310000",
+      "impressions": "142"
+    },
+    "segments": {
+      "month": "2024-12-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038435110",
+      "name": "G_US_S_Brand_Long-Tail",
+      "id": "22038435110"
+    },
+    "metrics": {
+      "clicks": "6",
+      "conversions": 0,
+      "costMicros": "20170000",
+      "impressions": "99"
+    },
+    "segments": {
+      "month": "2024-12-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038966953",
+      "name": "G_US_Competitor_Fivetran",
+      "id": "22038966953"
+    },
+    "metrics": {
+      "clicks": "36",
+      "conversions": 0,
+      "costMicros": "380440909",
+      "impressions": "1199"
+    },
+    "segments": {
+      "month": "2024-12-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22032126150",
+      "name": "G_US_S_NB_Data-Integration",
+      "id": "22032126150"
+    },
+    "metrics": {
+      "clicks": "462",
+      "conversions": 17,
+      "costMicros": "5912472310",
+      "impressions": "30017"
+    },
+    "segments": {
+      "month": "2025-01-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038365681",
+      "name": "G_US_S_Brand_Exact",
+      "id": "22038365681"
+    },
+    "metrics": {
+      "clicks": "114",
+      "conversions": 0,
+      "costMicros": "186469570",
+      "impressions": "688"
+    },
+    "segments": {
+      "month": "2025-01-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038435110",
+      "name": "G_US_S_Brand_Long-Tail",
+      "id": "22038435110"
+    },
+    "metrics": {
+      "clicks": "44",
+      "conversions": 0,
+      "costMicros": "177927833",
+      "impressions": "485"
+    },
+    "segments": {
+      "month": "2025-01-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038966953",
+      "name": "G_US_Competitor_Fivetran",
+      "id": "22038966953"
+    },
+    "metrics": {
+      "clicks": "121",
+      "conversions": 0,
+      "costMicros": "1460700143",
+      "impressions": "5464"
+    },
+    "segments": {
+      "month": "2025-01-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22032126150",
+      "name": "G_US_S_NB_Data-Integration",
+      "id": "22032126150"
+    },
+    "metrics": {
+      "clicks": "468",
+      "conversions": 1,
+      "costMicros": "4000126654",
+      "impressions": "26803"
+    },
+    "segments": {
+      "month": "2025-02-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038365681",
+      "name": "G_US_S_Brand_Exact",
+      "id": "22038365681"
+    },
+    "metrics": {
+      "clicks": "120",
+      "conversions": 3,
+      "costMicros": "759195674",
+      "impressions": "590"
+    },
+    "segments": {
+      "month": "2025-02-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038435110",
+      "name": "G_US_S_Brand_Long-Tail",
+      "id": "22038435110"
+    },
+    "metrics": {
+      "clicks": "52",
+      "conversions": 2.5,
+      "costMicros": "751047187",
+      "impressions": "604"
+    },
+    "segments": {
+      "month": "2025-02-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038966953",
+      "name": "G_US_Competitor_Fivetran",
+      "id": "22038966953"
+    },
+    "metrics": {
+      "clicks": "16",
+      "conversions": 1,
+      "costMicros": "1458830699",
+      "impressions": "1317"
+    },
+    "segments": {
+      "month": "2025-02-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22212011205",
+      "name": "G_US_S_Competitor_Boomi",
+      "id": "22212011205"
+    },
+    "metrics": {
+      "clicks": "7",
+      "conversions": 0,
+      "costMicros": "430840000",
+      "impressions": "433"
+    },
+    "segments": {
+      "month": "2025-02-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22212011211",
+      "name": "G_US_S_Competitor_Celigo",
+      "id": "22212011211"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "27310000",
+      "impressions": "181"
+    },
+    "segments": {
+      "month": "2025-02-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22212011214",
+      "name": "G_US_S_Competitor_Jitterbit",
+      "id": "22212011214"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "66"
+    },
+    "segments": {
+      "month": "2025-02-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22212011217",
+      "name": "G_US_S_Competitor_Informatica",
+      "id": "22212011217"
+    },
+    "metrics": {
+      "clicks": "7",
+      "conversions": 0.5,
+      "costMicros": "414140000",
+      "impressions": "488"
+    },
+    "segments": {
+      "month": "2025-02-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22228238128",
+      "name": "G_US_S_Competitor_SnapLogic",
+      "id": "22228238128"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "4710000",
+      "impressions": "64"
+    },
+    "segments": {
+      "month": "2025-02-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22032126150",
+      "name": "G_US_S_NB_Data-Integration",
+      "id": "22032126150"
+    },
+    "metrics": {
+      "clicks": "471",
+      "conversions": 0,
+      "costMicros": "4198153803",
+      "impressions": "28168"
+    },
+    "segments": {
+      "month": "2025-03-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038365681",
+      "name": "G_US_S_Brand_Exact",
+      "id": "22038365681"
+    },
+    "metrics": {
+      "clicks": "159",
+      "conversions": 1,
+      "costMicros": "759992192",
+      "impressions": "721"
+    },
+    "segments": {
+      "month": "2025-03-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038435110",
+      "name": "G_US_S_Brand_Long-Tail",
+      "id": "22038435110"
+    },
+    "metrics": {
+      "clicks": "47",
+      "conversions": 2,
+      "costMicros": "743531976",
+      "impressions": "665"
+    },
+    "segments": {
+      "month": "2025-03-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038966953",
+      "name": "G_US_Competitor_Fivetran",
+      "id": "22038966953"
+    },
+    "metrics": {
+      "clicks": "26",
+      "conversions": 0,
+      "costMicros": "1574829945",
+      "impressions": "2230"
+    },
+    "segments": {
+      "month": "2025-03-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22212011205",
+      "name": "G_US_S_Competitor_Boomi",
+      "id": "22212011205"
+    },
+    "metrics": {
+      "clicks": "3",
+      "conversions": 0,
+      "costMicros": "55170000",
+      "impressions": "345"
+    },
+    "segments": {
+      "month": "2025-03-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22212011211",
+      "name": "G_US_S_Competitor_Celigo",
+      "id": "22212011211"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "89"
+    },
+    "segments": {
+      "month": "2025-03-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22212011214",
+      "name": "G_US_S_Competitor_Jitterbit",
+      "id": "22212011214"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "21"
+    },
+    "segments": {
+      "month": "2025-03-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22212011217",
+      "name": "G_US_S_Competitor_Informatica",
+      "id": "22212011217"
+    },
+    "metrics": {
+      "clicks": "3",
+      "conversions": 0,
+      "costMicros": "55210000",
+      "impressions": "248"
+    },
+    "segments": {
+      "month": "2025-03-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22228238128",
+      "name": "G_US_S_Competitor_SnapLogic",
+      "id": "22228238128"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "60"
+    },
+    "segments": {
+      "month": "2025-03-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22347688788",
+      "name": "G_US_S_Competitor_Talend",
+      "id": "22347688788"
+    },
+    "metrics": {
+      "clicks": "11",
+      "conversions": 0,
+      "costMicros": "245470000",
+      "impressions": "638"
+    },
+    "segments": {
+      "month": "2025-03-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22032126150",
+      "name": "G_US_S_NB_Data-Integration",
+      "id": "22032126150"
+    },
+    "metrics": {
+      "clicks": "193",
+      "conversions": 2,
+      "costMicros": "2291507830",
+      "impressions": "9845"
+    },
+    "segments": {
+      "month": "2025-04-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038365681",
+      "name": "G_US_S_Brand_Exact",
+      "id": "22038365681"
+    },
+    "metrics": {
+      "clicks": "88",
+      "conversions": 4,
+      "costMicros": "366073556",
+      "impressions": "394"
+    },
+    "segments": {
+      "month": "2025-04-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038435110",
+      "name": "G_US_S_Brand_Long-Tail",
+      "id": "22038435110"
+    },
+    "metrics": {
+      "clicks": "6",
+      "conversions": 0,
+      "costMicros": "204860000",
+      "impressions": "138"
+    },
+    "segments": {
+      "month": "2025-04-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038966953",
+      "name": "G_US_Competitor_Fivetran",
+      "id": "22038966953"
+    },
+    "metrics": {
+      "clicks": "13",
+      "conversions": 0,
+      "costMicros": "1159138208",
+      "impressions": "976"
+    },
+    "segments": {
+      "month": "2025-04-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22212011205",
+      "name": "G_US_S_Competitor_Boomi",
+      "id": "22212011205"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "85"
+    },
+    "segments": {
+      "month": "2025-04-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22212011211",
+      "name": "G_US_S_Competitor_Celigo",
+      "id": "22212011211"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "32"
+    },
+    "segments": {
+      "month": "2025-04-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22212011214",
+      "name": "G_US_S_Competitor_Jitterbit",
+      "id": "22212011214"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "8"
+    },
+    "segments": {
+      "month": "2025-04-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22212011217",
+      "name": "G_US_S_Competitor_Informatica",
+      "id": "22212011217"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "67"
+    },
+    "segments": {
+      "month": "2025-04-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22228238128",
+      "name": "G_US_S_Competitor_SnapLogic",
+      "id": "22228238128"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "13"
+    },
+    "segments": {
+      "month": "2025-04-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22347688788",
+      "name": "G_US_S_Competitor_Talend",
+      "id": "22347688788"
+    },
+    "metrics": {
+      "clicks": "12",
+      "conversions": 0,
+      "costMicros": "344446191",
+      "impressions": "1359"
+    },
+    "segments": {
+      "month": "2025-04-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22032126150",
+      "name": "G_US_S_NB_Data-Integration",
+      "id": "22032126150"
+    },
+    "metrics": {
+      "clicks": "70",
+      "conversions": 0,
+      "costMicros": "934148634",
+      "impressions": "4082"
+    },
+    "segments": {
+      "month": "2025-05-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038365681",
+      "name": "G_US_S_Brand_Exact",
+      "id": "22038365681"
+    },
+    "metrics": {
+      "clicks": "50",
+      "conversions": 1,
+      "costMicros": "157687154",
+      "impressions": "238"
+    },
+    "segments": {
+      "month": "2025-05-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038435110",
+      "name": "G_US_S_Brand_Long-Tail",
+      "id": "22038435110"
+    },
+    "metrics": {
+      "clicks": "13",
+      "conversions": 1,
+      "costMicros": "229544901",
+      "impressions": "197"
+    },
+    "segments": {
+      "month": "2025-05-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038966953",
+      "name": "G_US_Competitor_Fivetran",
+      "id": "22038966953"
+    },
+    "metrics": {
+      "clicks": "6",
+      "conversions": 0,
+      "costMicros": "526330000",
+      "impressions": "863"
+    },
+    "segments": {
+      "month": "2025-05-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22212011205",
+      "name": "G_US_S_Competitor_Boomi",
+      "id": "22212011205"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "12"
+    },
+    "segments": {
+      "month": "2025-05-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22212011211",
+      "name": "G_US_S_Competitor_Celigo",
+      "id": "22212011211"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "5"
+    },
+    "segments": {
+      "month": "2025-05-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22212011214",
+      "name": "G_US_S_Competitor_Jitterbit",
+      "id": "22212011214"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "4"
+    },
+    "segments": {
+      "month": "2025-05-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22212011217",
+      "name": "G_US_S_Competitor_Informatica",
+      "id": "22212011217"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "21"
+    },
+    "segments": {
+      "month": "2025-05-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22228238128",
+      "name": "G_US_S_Competitor_SnapLogic",
+      "id": "22228238128"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "8"
+    },
+    "segments": {
+      "month": "2025-05-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22347688788",
+      "name": "G_US_S_Competitor_Talend",
+      "id": "22347688788"
+    },
+    "metrics": {
+      "clicks": "15",
+      "conversions": 1,
+      "costMicros": "380660000",
+      "impressions": "1010"
+    },
+    "segments": {
+      "month": "2025-05-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22032126150",
+      "name": "G_US_S_NB_Data-Integration",
+      "id": "22032126150"
+    },
+    "metrics": {
+      "clicks": "102",
+      "conversions": 5,
+      "costMicros": "4257350956",
+      "impressions": "10729"
+    },
+    "segments": {
+      "month": "2025-06-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038365681",
+      "name": "G_US_S_Brand_Exact",
+      "id": "22038365681"
+    },
+    "metrics": {
+      "clicks": "134",
+      "conversions": 3,
+      "costMicros": "740793408",
+      "impressions": "743"
+    },
+    "segments": {
+      "month": "2025-06-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038435110",
+      "name": "G_US_S_Brand_Long-Tail",
+      "id": "22038435110"
+    },
+    "metrics": {
+      "clicks": "39",
+      "conversions": 2,
+      "costMicros": "751812014",
+      "impressions": "576"
+    },
+    "segments": {
+      "month": "2025-06-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038966953",
+      "name": "G_US_Competitor_Fivetran",
+      "id": "22038966953"
+    },
+    "metrics": {
+      "clicks": "20",
+      "conversions": 0,
+      "costMicros": "1359461925",
+      "impressions": "6311"
+    },
+    "segments": {
+      "month": "2025-06-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22212011205",
+      "name": "G_US_S_Competitor_Boomi",
+      "id": "22212011205"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "25"
+    },
+    "segments": {
+      "month": "2025-06-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22212011211",
+      "name": "G_US_S_Competitor_Celigo",
+      "id": "22212011211"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "18720000",
+      "impressions": "13"
+    },
+    "segments": {
+      "month": "2025-06-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22212011214",
+      "name": "G_US_S_Competitor_Jitterbit",
+      "id": "22212011214"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "4"
+    },
+    "segments": {
+      "month": "2025-06-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22212011217",
+      "name": "G_US_S_Competitor_Informatica",
+      "id": "22212011217"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "9460000",
+      "impressions": "109"
+    },
+    "segments": {
+      "month": "2025-06-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22228238128",
+      "name": "G_US_S_Competitor_SnapLogic",
+      "id": "22228238128"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "4"
+    },
+    "segments": {
+      "month": "2025-06-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22347688788",
+      "name": "G_US_S_Competitor_Talend",
+      "id": "22347688788"
+    },
+    "metrics": {
+      "clicks": "28",
+      "conversions": 0,
+      "costMicros": "857780825",
+      "impressions": "2515"
+    },
+    "segments": {
+      "month": "2025-06-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22032126150",
+      "name": "G_US_S_NB_Data-Integration",
+      "id": "22032126150"
+    },
+    "metrics": {
+      "clicks": "249",
+      "conversions": 3,
+      "costMicros": "4599984255",
+      "impressions": "21411"
+    },
+    "segments": {
+      "month": "2025-07-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038365681",
+      "name": "G_US_S_Brand_Exact",
+      "id": "22038365681"
+    },
+    "metrics": {
+      "clicks": "143",
+      "conversions": 0,
+      "costMicros": "425377164",
+      "impressions": "781"
+    },
+    "segments": {
+      "month": "2025-07-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038435110",
+      "name": "G_US_S_Brand_Long-Tail",
+      "id": "22038435110"
+    },
+    "metrics": {
+      "clicks": "31",
+      "conversions": 1,
+      "costMicros": "624992689",
+      "impressions": "657"
+    },
+    "segments": {
+      "month": "2025-07-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038966953",
+      "name": "G_US_Competitor_Fivetran",
+      "id": "22038966953"
+    },
+    "metrics": {
+      "clicks": "27",
+      "conversions": 0,
+      "costMicros": "1723518601",
+      "impressions": "9487"
+    },
+    "segments": {
+      "month": "2025-07-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22212011205",
+      "name": "G_US_S_Competitor_Boomi",
+      "id": "22212011205"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "6"
+    },
+    "segments": {
+      "month": "2025-07-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22212011211",
+      "name": "G_US_S_Competitor_Celigo",
+      "id": "22212011211"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "26330000",
+      "impressions": "22"
+    },
+    "segments": {
+      "month": "2025-07-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22212011217",
+      "name": "G_US_S_Competitor_Informatica",
+      "id": "22212011217"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "111"
+    },
+    "segments": {
+      "month": "2025-07-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22228238128",
+      "name": "G_US_S_Competitor_SnapLogic",
+      "id": "22228238128"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "8"
+    },
+    "segments": {
+      "month": "2025-07-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22274713590",
+      "name": "G_US_RLSA",
+      "id": "22274713590"
+    },
+    "metrics": {
+      "clicks": "3",
+      "conversions": 0,
+      "costMicros": "136100000",
+      "impressions": "68"
+    },
+    "segments": {
+      "month": "2025-07-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22347688788",
+      "name": "G_US_S_Competitor_Talend",
+      "id": "22347688788"
+    },
+    "metrics": {
+      "clicks": "26",
+      "conversions": 0,
+      "costMicros": "782323091",
+      "impressions": "2800"
+    },
+    "segments": {
+      "month": "2025-07-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22765022280",
+      "name": "G_AUS_S_Brand_Exact",
+      "id": "22765022280"
+    },
+    "metrics": {
+      "clicks": "2",
+      "conversions": 0,
+      "costMicros": "346894",
+      "impressions": "7"
+    },
+    "segments": {
+      "month": "2025-07-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22774811908",
+      "name": "G_AUS_S_NB_Data-Integration",
+      "id": "22774811908"
+    },
+    "metrics": {
+      "clicks": "48",
+      "conversions": 1,
+      "costMicros": "711686893",
+      "impressions": "3631"
+    },
+    "segments": {
+      "month": "2025-07-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22032126150",
+      "name": "G_US_S_NB_Data-Integration",
+      "id": "22032126150"
+    },
+    "metrics": {
+      "clicks": "284",
+      "conversions": 0,
+      "costMicros": "4199925675",
+      "impressions": "25144"
+    },
+    "segments": {
+      "month": "2025-08-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038365681",
+      "name": "G_US_S_Brand_Exact",
+      "id": "22038365681"
+    },
+    "metrics": {
+      "clicks": "127",
+      "conversions": 3.5,
+      "costMicros": "194813270",
+      "impressions": "746"
+    },
+    "segments": {
+      "month": "2025-08-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038435110",
+      "name": "G_US_S_Brand_Long-Tail",
+      "id": "22038435110"
+    },
+    "metrics": {
+      "clicks": "19",
+      "conversions": 1,
+      "costMicros": "489563079",
+      "impressions": "446"
+    },
+    "segments": {
+      "month": "2025-08-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038966953",
+      "name": "G_US_Competitor_Fivetran",
+      "id": "22038966953"
+    },
+    "metrics": {
+      "clicks": "36",
+      "conversions": 1.5,
+      "costMicros": "1568715964",
+      "impressions": "13903"
+    },
+    "segments": {
+      "month": "2025-08-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22212011205",
+      "name": "G_US_S_Competitor_Boomi",
+      "id": "22212011205"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "4"
+    },
+    "segments": {
+      "month": "2025-08-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22212011211",
+      "name": "G_US_S_Competitor_Celigo",
+      "id": "22212011211"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "20"
+    },
+    "segments": {
+      "month": "2025-08-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22212011214",
+      "name": "G_US_S_Competitor_Jitterbit",
+      "id": "22212011214"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "2"
+    },
+    "segments": {
+      "month": "2025-08-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22212011217",
+      "name": "G_US_S_Competitor_Informatica",
+      "id": "22212011217"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "18760000",
+      "impressions": "86"
+    },
+    "segments": {
+      "month": "2025-08-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22228238128",
+      "name": "G_US_S_Competitor_SnapLogic",
+      "id": "22228238128"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "7"
+    },
+    "segments": {
+      "month": "2025-08-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22347688788",
+      "name": "G_US_S_Competitor_Talend",
+      "id": "22347688788"
+    },
+    "metrics": {
+      "clicks": "12",
+      "conversions": 0,
+      "costMicros": "355081109",
+      "impressions": "1124"
+    },
+    "segments": {
+      "month": "2025-08-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22765022280",
+      "name": "G_AUS_S_Brand_Exact",
+      "id": "22765022280"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "150000",
+      "impressions": "11"
+    },
+    "segments": {
+      "month": "2025-08-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22774811908",
+      "name": "G_AUS_S_NB_Data-Integration",
+      "id": "22774811908"
+    },
+    "metrics": {
+      "clicks": "70",
+      "conversions": 0,
+      "costMicros": "1029614353",
+      "impressions": "7153"
+    },
+    "segments": {
+      "month": "2025-08-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22804992418",
+      "name": "G_AUS_S_Brand_Long-Tail",
+      "id": "22804992418"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "3680000",
+      "impressions": "12"
+    },
+    "segments": {
+      "month": "2025-08-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22032126150",
+      "name": "G_US_S_NB_Data-Integration",
+      "id": "22032126150"
+    },
+    "metrics": {
+      "clicks": "142",
+      "conversions": 1,
+      "costMicros": "2190322726",
+      "impressions": "15841"
+    },
+    "segments": {
+      "month": "2025-09-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038365681",
+      "name": "G_US_S_Brand_Exact",
+      "id": "22038365681"
+    },
+    "metrics": {
+      "clicks": "115",
+      "conversions": 1,
+      "costMicros": "171512006",
+      "impressions": "714"
+    },
+    "segments": {
+      "month": "2025-09-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038435110",
+      "name": "G_US_S_Brand_Long-Tail",
+      "id": "22038435110"
+    },
+    "metrics": {
+      "clicks": "24",
+      "conversions": 0,
+      "costMicros": "484791217",
+      "impressions": "397"
+    },
+    "segments": {
+      "month": "2025-09-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038966953",
+      "name": "G_US_Competitor_Fivetran",
+      "id": "22038966953"
+    },
+    "metrics": {
+      "clicks": "22",
+      "conversions": 1,
+      "costMicros": "1464102805",
+      "impressions": "5369"
+    },
+    "segments": {
+      "month": "2025-09-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22212011205",
+      "name": "G_US_S_Competitor_Boomi",
+      "id": "22212011205"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "11"
+    },
+    "segments": {
+      "month": "2025-09-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22212011211",
+      "name": "G_US_S_Competitor_Celigo",
+      "id": "22212011211"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "12"
+    },
+    "segments": {
+      "month": "2025-09-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22212011214",
+      "name": "G_US_S_Competitor_Jitterbit",
+      "id": "22212011214"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "14190000",
+      "impressions": "4"
+    },
+    "segments": {
+      "month": "2025-09-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22212011217",
+      "name": "G_US_S_Competitor_Informatica",
+      "id": "22212011217"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "57"
+    },
+    "segments": {
+      "month": "2025-09-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22274713590",
+      "name": "G_US_RLSA",
+      "id": "22274713590"
+    },
+    "metrics": {
+      "clicks": "7",
+      "conversions": 1,
+      "costMicros": "499860000",
+      "impressions": "230"
+    },
+    "segments": {
+      "month": "2025-09-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22774811908",
+      "name": "G_AUS_S_NB_Data-Integration",
+      "id": "22774811908"
+    },
+    "metrics": {
+      "clicks": "14",
+      "conversions": 1,
+      "costMicros": "196467580",
+      "impressions": "999"
+    },
+    "segments": {
+      "month": "2025-09-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22988394145",
+      "name": "G_US_S_NB_AI-Data-Integration",
+      "id": "22988394145"
+    },
+    "metrics": {
+      "clicks": "67",
+      "conversions": 1,
+      "costMicros": "959358557",
+      "impressions": "5644"
+    },
+    "segments": {
+      "month": "2025-09-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23027231268",
+      "name": "G_US_S_NB_Data-Products",
+      "id": "23027231268"
+    },
+    "metrics": {
+      "clicks": "34",
+      "conversions": 0,
+      "costMicros": "456032536",
+      "impressions": "1963"
+    },
+    "segments": {
+      "month": "2025-09-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23037349600",
+      "name": "G_US_S_NB_B2B-Onboarding",
+      "id": "23037349600"
+    },
+    "metrics": {
+      "clicks": "34",
+      "conversions": 1,
+      "costMicros": "449960782",
+      "impressions": "2769"
+    },
+    "segments": {
+      "month": "2025-09-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038365681",
+      "name": "G_US_S_Brand_Exact",
+      "id": "22038365681"
+    },
+    "metrics": {
+      "clicks": "121",
+      "conversions": 2,
+      "costMicros": "194425403",
+      "impressions": "743"
+    },
+    "segments": {
+      "month": "2025-10-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038435110",
+      "name": "G_US_S_Brand_Long-Tail",
+      "id": "22038435110"
+    },
+    "metrics": {
+      "clicks": "23",
+      "conversions": 0,
+      "costMicros": "575001789",
+      "impressions": "302"
+    },
+    "segments": {
+      "month": "2025-10-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038966953",
+      "name": "G_US_Competitor_Fivetran",
+      "id": "22038966953"
+    },
+    "metrics": {
+      "clicks": "24",
+      "conversions": 0,
+      "costMicros": "987896062",
+      "impressions": "1823"
+    },
+    "segments": {
+      "month": "2025-10-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22212011205",
+      "name": "G_US_S_Competitor_Boomi",
+      "id": "22212011205"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "141910000",
+      "impressions": "110"
+    },
+    "segments": {
+      "month": "2025-10-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22212011211",
+      "name": "G_US_S_Competitor_Celigo",
+      "id": "22212011211"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "17"
+    },
+    "segments": {
+      "month": "2025-10-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22212011214",
+      "name": "G_US_S_Competitor_Jitterbit",
+      "id": "22212011214"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "15"
+    },
+    "segments": {
+      "month": "2025-10-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22212011217",
+      "name": "G_US_S_Competitor_Informatica",
+      "id": "22212011217"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "46"
+    },
+    "segments": {
+      "month": "2025-10-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22274713590",
+      "name": "G_US_RLSA",
+      "id": "22274713590"
+    },
+    "metrics": {
+      "clicks": "7",
+      "conversions": 0,
+      "costMicros": "414554495",
+      "impressions": "273"
+    },
+    "segments": {
+      "month": "2025-10-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22347688788",
+      "name": "G_US_S_Competitor_Talend",
+      "id": "22347688788"
+    },
+    "metrics": {
+      "clicks": "28",
+      "conversions": 1,
+      "costMicros": "714219235",
+      "impressions": "2423"
+    },
+    "segments": {
+      "month": "2025-10-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22988394145",
+      "name": "G_US_S_NB_AI-Data-Integration",
+      "id": "22988394145"
+    },
+    "metrics": {
+      "clicks": "43",
+      "conversions": 0,
+      "costMicros": "591597997",
+      "impressions": "3787"
+    },
+    "segments": {
+      "month": "2025-10-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23027231268",
+      "name": "G_US_S_NB_Data-Products",
+      "id": "23027231268"
+    },
+    "metrics": {
+      "clicks": "87",
+      "conversions": 0,
+      "costMicros": "1150015215",
+      "impressions": "5203"
+    },
+    "segments": {
+      "month": "2025-10-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23037349600",
+      "name": "G_US_S_NB_B2B-Onboarding",
+      "id": "23037349600"
+    },
+    "metrics": {
+      "clicks": "86",
+      "conversions": 1,
+      "costMicros": "1143109074",
+      "impressions": "7183"
+    },
+    "segments": {
+      "month": "2025-10-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038365681",
+      "name": "G_US_S_Brand_Exact",
+      "id": "22038365681"
+    },
+    "metrics": {
+      "clicks": "128",
+      "conversions": 0,
+      "costMicros": "222281473",
+      "impressions": "652"
+    },
+    "segments": {
+      "month": "2025-11-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038435110",
+      "name": "G_US_S_Brand_Long-Tail",
+      "id": "22038435110"
+    },
+    "metrics": {
+      "clicks": "13",
+      "conversions": 0,
+      "costMicros": "115560000",
+      "impressions": "154"
+    },
+    "segments": {
+      "month": "2025-11-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038966953",
+      "name": "G_US_Competitor_Fivetran",
+      "id": "22038966953"
+    },
+    "metrics": {
+      "clicks": "11",
+      "conversions": 0,
+      "costMicros": "395644925",
+      "impressions": "1097"
+    },
+    "segments": {
+      "month": "2025-11-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22212011205",
+      "name": "G_US_S_Competitor_Boomi",
+      "id": "22212011205"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "147790000",
+      "impressions": "386"
+    },
+    "segments": {
+      "month": "2025-11-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22212011211",
+      "name": "G_US_S_Competitor_Celigo",
+      "id": "22212011211"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "37"
+    },
+    "segments": {
+      "month": "2025-11-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22212011214",
+      "name": "G_US_S_Competitor_Jitterbit",
+      "id": "22212011214"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "60"
+    },
+    "segments": {
+      "month": "2025-11-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22212011217",
+      "name": "G_US_S_Competitor_Informatica",
+      "id": "22212011217"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "63"
+    },
+    "segments": {
+      "month": "2025-11-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22274713590",
+      "name": "G_US_RLSA",
+      "id": "22274713590"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "month": "2025-11-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22347688788",
+      "name": "G_US_S_Competitor_Talend",
+      "id": "22347688788"
+    },
+    "metrics": {
+      "clicks": "21",
+      "conversions": 0,
+      "costMicros": "506550000",
+      "impressions": "1634"
+    },
+    "segments": {
+      "month": "2025-11-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22988394145",
+      "name": "G_US_S_NB_AI-Data-Integration",
+      "id": "22988394145"
+    },
+    "metrics": {
+      "clicks": "22",
+      "conversions": 0,
+      "costMicros": "200680000",
+      "impressions": "1143"
+    },
+    "segments": {
+      "month": "2025-11-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23027231268",
+      "name": "G_US_S_NB_Data-Products",
+      "id": "23027231268"
+    },
+    "metrics": {
+      "clicks": "75",
+      "conversions": 0,
+      "costMicros": "997733563",
+      "impressions": "3829"
+    },
+    "segments": {
+      "month": "2025-11-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23037349600",
+      "name": "G_US_S_NB_B2B-Onboarding",
+      "id": "23037349600"
+    },
+    "metrics": {
+      "clicks": "71",
+      "conversions": 0,
+      "costMicros": "948143780",
+      "impressions": "5007"
+    },
+    "segments": {
+      "month": "2025-11-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038365681",
+      "name": "G_US_S_Brand_Exact",
+      "id": "22038365681"
+    },
+    "metrics": {
+      "clicks": "103",
+      "conversions": 1,
+      "costMicros": "393338384",
+      "impressions": "530"
+    },
+    "segments": {
+      "month": "2025-12-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038435110",
+      "name": "G_US_S_Brand_Long-Tail",
+      "id": "22038435110"
+    },
+    "metrics": {
+      "clicks": "23",
+      "conversions": 1,
+      "costMicros": "352802987",
+      "impressions": "193"
+    },
+    "segments": {
+      "month": "2025-12-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038966953",
+      "name": "G_US_Competitor_Fivetran",
+      "id": "22038966953"
+    },
+    "metrics": {
+      "clicks": "10",
+      "conversions": 0,
+      "costMicros": "507160000",
+      "impressions": "651"
+    },
+    "segments": {
+      "month": "2025-12-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22212011205",
+      "name": "G_US_S_Competitor_Boomi",
+      "id": "22212011205"
+    },
+    "metrics": {
+      "clicks": "2",
+      "conversions": 0,
+      "costMicros": "296540000",
+      "impressions": "118"
+    },
+    "segments": {
+      "month": "2025-12-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22212011211",
+      "name": "G_US_S_Competitor_Celigo",
+      "id": "22212011211"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "11"
+    },
+    "segments": {
+      "month": "2025-12-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22212011214",
+      "name": "G_US_S_Competitor_Jitterbit",
+      "id": "22212011214"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "25"
+    },
+    "segments": {
+      "month": "2025-12-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22212011217",
+      "name": "G_US_S_Competitor_Informatica",
+      "id": "22212011217"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "18"
+    },
+    "segments": {
+      "month": "2025-12-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22274713590",
+      "name": "G_US_RLSA",
+      "id": "22274713590"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "2"
+    },
+    "segments": {
+      "month": "2025-12-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22347688788",
+      "name": "G_US_S_Competitor_Talend",
+      "id": "22347688788"
+    },
+    "metrics": {
+      "clicks": "8",
+      "conversions": 0,
+      "costMicros": "193605103",
+      "impressions": "599"
+    },
+    "segments": {
+      "month": "2025-12-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22988394145",
+      "name": "G_US_S_NB_AI-Data-Integration",
+      "id": "22988394145"
+    },
+    "metrics": {
+      "clicks": "26",
+      "conversions": 0,
+      "costMicros": "229948739",
+      "impressions": "830"
+    },
+    "segments": {
+      "month": "2025-12-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23027231268",
+      "name": "G_US_S_NB_Data-Products",
+      "id": "23027231268"
+    },
+    "metrics": {
+      "clicks": "87",
+      "conversions": 0,
+      "costMicros": "1145918599",
+      "impressions": "4120"
+    },
+    "segments": {
+      "month": "2025-12-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23037349600",
+      "name": "G_US_S_NB_B2B-Onboarding",
+      "id": "23037349600"
+    },
+    "metrics": {
+      "clicks": "124",
+      "conversions": 0,
+      "costMicros": "1144076271",
+      "impressions": "5892"
+    },
+    "segments": {
+      "month": "2025-12-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038365681",
+      "name": "G_US_S_Brand_Exact",
+      "id": "22038365681"
+    },
+    "metrics": {
+      "clicks": "101",
+      "conversions": 2,
+      "costMicros": "550036733",
+      "impressions": "477"
+    },
+    "segments": {
+      "month": "2026-01-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038435110",
+      "name": "G_US_S_Brand_Long-Tail",
+      "id": "22038435110"
+    },
+    "metrics": {
+      "clicks": "19",
+      "conversions": 0,
+      "costMicros": "549424691",
+      "impressions": "237"
+    },
+    "segments": {
+      "month": "2026-01-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22988394145",
+      "name": "G_US_S_NB_AI-Data-Integration",
+      "id": "22988394145"
+    },
+    "metrics": {
+      "clicks": "34",
+      "conversions": 0,
+      "costMicros": "219219202",
+      "impressions": "1111"
+    },
+    "segments": {
+      "month": "2026-01-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23027231268",
+      "name": "G_US_S_NB_Data-Products",
+      "id": "23027231268"
+    },
+    "metrics": {
+      "clicks": "80",
+      "conversions": 4,
+      "costMicros": "1137316714",
+      "impressions": "3540"
+    },
+    "segments": {
+      "month": "2026-01-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23037349600",
+      "name": "G_US_S_NB_B2B-Onboarding",
+      "id": "23037349600"
+    },
+    "metrics": {
+      "clicks": "104",
+      "conversions": 3,
+      "costMicros": "753339184",
+      "impressions": "3226"
+    },
+    "segments": {
+      "month": "2026-01-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038365681",
+      "name": "G_US_S_Brand_Exact",
+      "id": "22038365681"
+    },
+    "metrics": {
+      "clicks": "92",
+      "conversions": 2,
+      "costMicros": "500011344",
+      "impressions": "316"
+    },
+    "segments": {
+      "month": "2026-02-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038435110",
+      "name": "G_US_S_Brand_Long-Tail",
+      "id": "22038435110"
+    },
+    "metrics": {
+      "clicks": "17",
+      "conversions": 0,
+      "costMicros": "391060620",
+      "impressions": "352"
+    },
+    "segments": {
+      "month": "2026-02-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22988394145",
+      "name": "G_US_S_NB_AI-Data-Integration",
+      "id": "22988394145"
+    },
+    "metrics": {
+      "clicks": "25",
+      "conversions": 0,
+      "costMicros": "222630000",
+      "impressions": "805"
+    },
+    "segments": {
+      "month": "2026-02-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23027231268",
+      "name": "G_US_S_NB_Data-Products",
+      "id": "23027231268"
+    },
+    "metrics": {
+      "clicks": "64",
+      "conversions": 0,
+      "costMicros": "999282075",
+      "impressions": "2260"
+    },
+    "segments": {
+      "month": "2026-02-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038365681",
+      "name": "G_US_S_Brand_Exact",
+      "id": "22038365681"
+    },
+    "metrics": {
+      "clicks": "128",
+      "conversions": 0,
+      "costMicros": "522984474",
+      "impressions": "489"
+    },
+    "segments": {
+      "month": "2026-03-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038435110",
+      "name": "G_US_S_Brand_Long-Tail",
+      "id": "22038435110"
+    },
+    "metrics": {
+      "clicks": "14",
+      "conversions": 0,
+      "costMicros": "256060000",
+      "impressions": "134"
+    },
+    "segments": {
+      "month": "2026-03-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22988394145",
+      "name": "G_US_S_NB_AI-Data-Integration",
+      "id": "22988394145"
+    },
+    "metrics": {
+      "clicks": "15",
+      "conversions": 0,
+      "costMicros": "178918942",
+      "impressions": "719"
+    },
+    "segments": {
+      "month": "2026-03-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23027231268",
+      "name": "G_US_S_NB_Data-Products",
+      "id": "23027231268"
+    },
+    "metrics": {
+      "clicks": "37",
+      "conversions": 0,
+      "costMicros": "1098682907",
+      "impressions": "5347"
+    },
+    "segments": {
+      "month": "2026-03-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038365681",
+      "name": "G_US_S_Brand_Exact",
+      "id": "22038365681"
+    },
+    "metrics": {
+      "clicks": "126",
+      "conversions": 0,
+      "costMicros": "506055435",
+      "impressions": "632"
+    },
+    "segments": {
+      "month": "2026-04-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22988394145",
+      "name": "G_US_S_NB_AI-Data-Integration",
+      "id": "22988394145"
+    },
+    "metrics": {
+      "clicks": "30",
+      "conversions": 0,
+      "costMicros": "206170935",
+      "impressions": "1715"
+    },
+    "segments": {
+      "month": "2026-04-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23027231268",
+      "name": "G_US_S_NB_Data-Products",
+      "id": "23027231268"
+    },
+    "metrics": {
+      "clicks": "2",
+      "conversions": 0,
+      "costMicros": "194390000",
+      "impressions": "164"
+    },
+    "segments": {
+      "month": "2026-04-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "metrics": {
+      "clicks": "342",
+      "conversions": 0,
+      "costMicros": "1763319217",
+      "impressions": "10860"
+    },
+    "segments": {
+      "month": "2026-04-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317335",
+      "name": "G_US_S_NB_ETL-Pipeline",
+      "id": "23705317335"
+    },
+    "metrics": {
+      "clicks": "297",
+      "conversions": 0,
+      "costMicros": "1763436596",
+      "impressions": "13793"
+    },
+    "segments": {
+      "month": "2026-04-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317338",
+      "name": "G_US_S_NB_Competitor",
+      "id": "23705317338"
+    },
+    "metrics": {
+      "clicks": "7",
+      "conversions": 0,
+      "costMicros": "501640000",
+      "impressions": "873"
+    },
+    "segments": {
+      "month": "2026-04-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317341",
+      "name": "G_US_S_NB_Governance",
+      "id": "23705317341"
+    },
+    "metrics": {
+      "clicks": "112",
+      "conversions": 0,
+      "costMicros": "1097331034",
+      "impressions": "3875"
+    },
+    "segments": {
+      "month": "2026-04-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038365681",
+      "name": "G_US_S_Brand_Exact",
+      "id": "22038365681"
+    },
+    "metrics": {
+      "clicks": "120",
+      "conversions": 1,
+      "costMicros": "408898545",
+      "impressions": "631"
+    },
+    "segments": {
+      "month": "2026-05-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22988394145",
+      "name": "G_US_S_NB_AI-Data-Integration",
+      "id": "22988394145"
+    },
+    "metrics": {
+      "clicks": "37",
+      "conversions": 0,
+      "costMicros": "205870100",
+      "impressions": "2894"
+    },
+    "segments": {
+      "month": "2026-05-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23027231268",
+      "name": "G_US_S_NB_Data-Products",
+      "id": "23027231268"
+    },
+    "metrics": {
+      "clicks": "36",
+      "conversions": 0,
+      "costMicros": "831380000",
+      "impressions": "4203"
+    },
+    "segments": {
+      "month": "2026-05-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "metrics": {
+      "clicks": "491",
+      "conversions": 0,
+      "costMicros": "2068419598",
+      "impressions": "32054"
+    },
+    "segments": {
+      "month": "2026-05-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317335",
+      "name": "G_US_S_NB_ETL-Pipeline",
+      "id": "23705317335"
+    },
+    "metrics": {
+      "clicks": "333",
+      "conversions": 0,
+      "costMicros": "1600506377",
+      "impressions": "24505"
+    },
+    "segments": {
+      "month": "2026-05-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317341",
+      "name": "G_US_S_NB_Governance",
+      "id": "23705317341"
+    },
+    "metrics": {
+      "clicks": "146",
+      "conversions": 0,
+      "costMicros": "1027385132",
+      "impressions": "8207"
+    },
+    "segments": {
+      "month": "2026-05-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038365681",
+      "name": "G_US_S_Brand_Exact",
+      "id": "22038365681"
+    },
+    "metrics": {
+      "clicks": "186",
+      "conversions": 1,
+      "costMicros": "457241509",
+      "impressions": "790"
+    },
+    "segments": {
+      "month": "2026-06-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22988394145",
+      "name": "G_US_S_NB_AI-Data-Integration",
+      "id": "22988394145"
+    },
+    "metrics": {
+      "clicks": "37",
+      "conversions": 0,
+      "costMicros": "225890858",
+      "impressions": "2358"
+    },
+    "segments": {
+      "month": "2026-06-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23027231268",
+      "name": "G_US_S_NB_Data-Products",
+      "id": "23027231268"
+    },
+    "metrics": {
+      "clicks": "95",
+      "conversions": 0,
+      "costMicros": "716817070",
+      "impressions": "7261"
+    },
+    "segments": {
+      "month": "2026-06-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "metrics": {
+      "clicks": "366",
+      "conversions": 1,
+      "costMicros": "1962713190",
+      "impressions": "24321"
+    },
+    "segments": {
+      "month": "2026-06-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317335",
+      "name": "G_US_S_NB_ETL-Pipeline",
+      "id": "23705317335"
+    },
+    "metrics": {
+      "clicks": "157",
+      "conversions": 0,
+      "costMicros": "976479419",
+      "impressions": "11780"
+    },
+    "segments": {
+      "month": "2026-06-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317341",
+      "name": "G_US_S_NB_Governance",
+      "id": "23705317341"
+    },
+    "metrics": {
+      "clicks": "95",
+      "conversions": 0,
+      "costMicros": "820558955",
+      "impressions": "5233"
+    },
+    "segments": {
+      "month": "2026-06-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038365681",
+      "name": "G_US_S_Brand_Exact",
+      "id": "22038365681"
+    },
+    "metrics": {
+      "clicks": "147",
+      "conversions": 2,
+      "costMicros": "315653865",
+      "impressions": "482"
+    },
+    "segments": {
+      "month": "2026-07-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22988394145",
+      "name": "G_US_S_NB_AI-Data-Integration",
+      "id": "22988394145"
+    },
+    "metrics": {
+      "clicks": "6",
+      "conversions": 0,
+      "costMicros": "80120000",
+      "impressions": "192"
+    },
+    "segments": {
+      "month": "2026-07-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23027231268",
+      "name": "G_US_S_NB_Data-Products",
+      "id": "23027231268"
+    },
+    "metrics": {
+      "clicks": "76",
+      "conversions": 0,
+      "costMicros": "176040000",
+      "impressions": "400"
+    },
+    "segments": {
+      "month": "2026-07-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "metrics": {
+      "clicks": "45",
+      "conversions": 0,
+      "costMicros": "625566280",
+      "impressions": "5511"
+    },
+    "segments": {
+      "month": "2026-07-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317335",
+      "name": "G_US_S_NB_ETL-Pipeline",
+      "id": "23705317335"
+    },
+    "metrics": {
+      "clicks": "27",
+      "conversions": 0,
+      "costMicros": "355450000",
+      "impressions": "3261"
+    },
+    "segments": {
+      "month": "2026-07-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317341",
+      "name": "G_US_S_NB_Governance",
+      "id": "23705317341"
+    },
+    "metrics": {
+      "clicks": "2",
+      "conversions": 0,
+      "costMicros": "64800000",
+      "impressions": "380"
+    },
+    "segments": {
+      "month": "2026-07-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038365681",
+      "name": "G_US_S_Brand_Exact",
+      "id": "22038365681"
+    },
+    "metrics": {
+      "clicks": "123",
+      "conversions": 0,
+      "costMicros": "357346169",
+      "impressions": "580"
+    },
+    "segments": {
+      "month": "2026-08-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22988394145",
+      "name": "G_US_S_NB_AI-Data-Integration",
+      "id": "22988394145"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "134"
+    },
+    "segments": {
+      "month": "2026-08-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23027231268",
+      "name": "G_US_S_NB_Data-Products",
+      "id": "23027231268"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "19840000",
+      "impressions": "114"
+    },
+    "segments": {
+      "month": "2026-08-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "metrics": {
+      "clicks": "62",
+      "conversions": 0,
+      "costMicros": "287348712",
+      "impressions": "3495"
+    },
+    "segments": {
+      "month": "2026-08-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317335",
+      "name": "G_US_S_NB_ETL-Pipeline",
+      "id": "23705317335"
+    },
+    "metrics": {
+      "clicks": "4",
+      "conversions": 0,
+      "costMicros": "39590000",
+      "impressions": "904"
+    },
+    "segments": {
+      "month": "2026-08-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317341",
+      "name": "G_US_S_NB_Governance",
+      "id": "23705317341"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "24"
+    },
+    "segments": {
+      "month": "2026-08-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/24177650112",
+      "name": "G_US_PMAX_NB_MCP-Agentic",
+      "id": "24177650112"
+    },
+    "metrics": {
+      "clicks": "35",
+      "conversions": 1,
+      "costMicros": "50312466",
+      "impressions": "1469"
+    },
+    "segments": {
+      "month": "2026-08-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038365681",
+      "name": "G_US_S_Brand_Exact",
+      "id": "22038365681"
+    },
+    "metrics": {
+      "clicks": "31",
+      "conversions": 0,
+      "costMicros": "59020054",
+      "impressions": "133"
+    },
+    "segments": {
+      "month": "2026-09-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "metrics": {
+      "clicks": "96",
+      "conversions": 0,
+      "costMicros": "393458118",
+      "impressions": "4990"
+    },
+    "segments": {
+      "month": "2026-09-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317335",
+      "name": "G_US_S_NB_ETL-Pipeline",
+      "id": "23705317335"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "11430000",
+      "impressions": "354"
+    },
+    "segments": {
+      "month": "2026-09-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317341",
+      "name": "G_US_S_NB_Governance",
+      "id": "23705317341"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "segments": {
+      "month": "2026-09-01"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/24177650112",
+      "name": "G_US_PMAX_NB_MCP-Agentic",
+      "id": "24177650112"
+    },
+    "metrics": {
+      "clicks": "47",
+      "conversions": 0,
+      "costMicros": "34068345",
+      "impressions": "11802"
+    },
+    "segments": {
+      "month": "2026-09-01"
+    }
+  }
+]

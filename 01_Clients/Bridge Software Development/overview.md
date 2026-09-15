@@ -4,7 +4,11 @@ client_id: bridge-software
 project: Bridge Software Development
 status: active-discovery
 confidentiality: private-nda
-github: "https://github.com/dillonmohr8777/bridge-discovery-prototype"
+github: "https://github.com/dillonmohr8777/bridge-software-frontend"
+github_prototype: "https://github.com/dillonmohr8777/bridge-discovery-prototype"
+local_repo: "C:\Users\dillo\repos\bridge-software-frontend"
+default_branch: production
+integration_branch: development
 tags: [client, bridge-software, product, ux, frontend, nextjs, cannabis]
 updated: 2026-07-11
 last_touched: 2026-08-01

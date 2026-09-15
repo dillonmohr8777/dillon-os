@@ -1,0 +1,252 @@
+{
+  "slug": "money-management-advisory-inc",
+  "preparedAt": "2026-08-26T10:43:19.221Z",
+  "sourceSite": "https://www.mmacentral.com/",
+  "sourceFinalUrl": "https://www.mmacentral.com/",
+  "sourcePageSha256": "1dd534f9907a3196541892fdee0420c8ea1c00baeae49c645cae9409da8565e1",
+  "exactLogoRequired": true,
+  "exactLogoSha256": "96cb925dc7fde42167555fe16bf01717cc325660ba5e14ef4d2db54df2b539c0",
+  "identityFallback": false,
+  "generatedImagePolicy": "All content visuals come from an Align HCM Image Gen editorial board, carry embedded plus interface-level grain, and are disclosed as illustrative concept material. They never serve as proof about the business, its staff, facilities, products, clients, or outcomes.",
+  "assets": [
+    {
+      "role": "first-party identity",
+      "output": "logo.png",
+      "sourceUrl": "https://static.fmgsuite.com/media/TransparentLogo/variantSize/9660fd59-f815-44a4-a69d-0e670468f5bd.png",
+      "sourceSha256": "94acec85ba8efe20aa472bba9e51877276dc793eec6b5ece3d042c3c919d5e2c",
+      "outputSha256": "96cb925dc7fde42167555fe16bf01717cc325660ba5e14ef4d2db54df2b539c0",
+      "transformation": "flat border color #fcfbfc removed with deterministic FFmpeg colorkey; geometry unchanged",
+      "transparent": true
+    },
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "money-management-advisory-inc",
+      "boardDescriptor": "financial",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/money-management-advisory-inc.png",
+      "sourceSha256": "6e263f6b898cc2edc5b10916c1214cec082505325ae4c8f46528a56716f47cd7",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Money Management Advisory, Inc. Four distinct but cohesive unlabelled panels in a generic retirement-planning practice: a financial professional speaking with an older adult couple at a calm daylight table; a close detail of hands with a calculator, pencil, and non-readable planning notebook; an advisor reviewing abstract, non-readable retirement charts on a laptop; a quiet moment of a client looking through a sunlit window after a meeting, no promise or outcome implied. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:28,eq=saturation=0.965:contrast=1.028:brightness=-0.018,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "5a4990f9654d868fb3ce4046c8793ead92e15c96d6bc697e2b3b39bba800394c",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "money-management-advisory-inc",
+      "boardDescriptor": "financial",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/money-management-advisory-inc.png",
+      "sourceSha256": "6e263f6b898cc2edc5b10916c1214cec082505325ae4c8f46528a56716f47cd7",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Money Management Advisory, Inc. Four distinct but cohesive unlabelled panels in a generic retirement-planning practice: a financial professional speaking with an older adult couple at a calm daylight table; a close detail of hands with a calculator, pencil, and non-readable planning notebook; an advisor reviewing abstract, non-readable retirement charts on a laptop; a quiet moment of a client looking through a sunlit window after a meeting, no promise or outcome implied. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:56,eq=saturation=0.990:contrast=1.082:brightness=-0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "1664426cd45901f29db459f5addc2669a2dc5afe0e4eaf4cdb586fc4339e9e69",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "money-management-advisory-inc",
+      "boardDescriptor": "financial",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/money-management-advisory-inc.png",
+      "sourceSha256": "6e263f6b898cc2edc5b10916c1214cec082505325ae4c8f46528a56716f47cd7",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Money Management Advisory, Inc. Four distinct but cohesive unlabelled panels in a generic retirement-planning practice: a financial professional speaking with an older adult couple at a calm daylight table; a close detail of hands with a calculator, pencil, and non-readable planning notebook; an advisor reviewing abstract, non-readable retirement charts on a laptop; a quiet moment of a client looking through a sunlit window after a meeting, no promise or outcome implied. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=1.015:contrast=1.046:brightness=0.000,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "e68edef60b5384fe559602b6c380072874762c84e01a06f75e17d421e8509410",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "money-management-advisory-inc",
+      "boardDescriptor": "financial",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/money-management-advisory-inc.png",
+      "sourceSha256": "6e263f6b898cc2edc5b10916c1214cec082505325ae4c8f46528a56716f47cd7",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Money Management Advisory, Inc. Four distinct but cohesive unlabelled panels in a generic retirement-planning practice: a financial professional speaking with an older adult couple at a calm daylight table; a close detail of hands with a calculator, pencil, and non-readable planning notebook; an advisor reviewing abstract, non-readable retirement charts on a laptop; a quiet moment of a client looking through a sunlit window after a meeting, no promise or outcome implied. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:28,eq=saturation=1.040:contrast=1.010:brightness=0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "4c230a80dcb93660c1b6c00aad6d053353656656ef33b8765927232a565b56a9",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "money-management-advisory-inc",
+      "boardDescriptor": "financial",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/money-management-advisory-inc.png",
+      "sourceSha256": "6e263f6b898cc2edc5b10916c1214cec082505325ae4c8f46528a56716f47cd7",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Money Management Advisory, Inc. Four distinct but cohesive unlabelled panels in a generic retirement-planning practice: a financial professional speaking with an older adult couple at a calm daylight table; a close detail of hands with a calculator, pencil, and non-readable planning notebook; an advisor reviewing abstract, non-readable retirement charts on a laptop; a quiet moment of a client looking through a sunlit window after a meeting, no promise or outcome implied. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:56,eq=saturation=0.940:contrast=1.064:brightness=-0.018,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "01f30d32551d437004dc2a60c3e6747ad502ea2dc7174c7e3c4d4a9d60eca0f6",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "money-management-advisory-inc",
+      "boardDescriptor": "financial",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/money-management-advisory-inc.png",
+      "sourceSha256": "6e263f6b898cc2edc5b10916c1214cec082505325ae4c8f46528a56716f47cd7",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Money Management Advisory, Inc. Four distinct but cohesive unlabelled panels in a generic retirement-planning practice: a financial professional speaking with an older adult couple at a calm daylight table; a close detail of hands with a calculator, pencil, and non-readable planning notebook; an advisor reviewing abstract, non-readable retirement charts on a laptop; a quiet moment of a client looking through a sunlit window after a meeting, no promise or outcome implied. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:0,eq=saturation=0.965:contrast=1.028:brightness=-0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "4c748f08359f1903d086b780c365d82f5f81edc7f5b5e658b7ad5573b9a4b6db",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "money-management-advisory-inc",
+      "boardDescriptor": "financial",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/money-management-advisory-inc.png",
+      "sourceSha256": "6e263f6b898cc2edc5b10916c1214cec082505325ae4c8f46528a56716f47cd7",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Money Management Advisory, Inc. Four distinct but cohesive unlabelled panels in a generic retirement-planning practice: a financial professional speaking with an older adult couple at a calm daylight table; a close detail of hands with a calculator, pencil, and non-readable planning notebook; an advisor reviewing abstract, non-readable retirement charts on a laptop; a quiet moment of a client looking through a sunlit window after a meeting, no promise or outcome implied. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:28,eq=saturation=0.990:contrast=1.082:brightness=0.000,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "45c960cfb9f1e01073822b2d76c60b7611d9a73077e4e4cd9162173d68f53070",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "money-management-advisory-inc",
+      "boardDescriptor": "financial",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/money-management-advisory-inc.png",
+      "sourceSha256": "6e263f6b898cc2edc5b10916c1214cec082505325ae4c8f46528a56716f47cd7",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Money Management Advisory, Inc. Four distinct but cohesive unlabelled panels in a generic retirement-planning practice: a financial professional speaking with an older adult couple at a calm daylight table; a close detail of hands with a calculator, pencil, and non-readable planning notebook; an advisor reviewing abstract, non-readable retirement charts on a laptop; a quiet moment of a client looking through a sunlit window after a meeting, no promise or outcome implied. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:56,eq=saturation=1.015:contrast=1.046:brightness=0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "db15819c659a679362ff8e1c4bdb29fc0e9121a7626a36d07a8ff9d78840032d",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "money-management-advisory-inc",
+      "boardDescriptor": "financial",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/money-management-advisory-inc.png",
+      "sourceSha256": "6e263f6b898cc2edc5b10916c1214cec082505325ae4c8f46528a56716f47cd7",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Money Management Advisory, Inc. Four distinct but cohesive unlabelled panels in a generic retirement-planning practice: a financial professional speaking with an older adult couple at a calm daylight table; a close detail of hands with a calculator, pencil, and non-readable planning notebook; an advisor reviewing abstract, non-readable retirement charts on a laptop; a quiet moment of a client looking through a sunlit window after a meeting, no promise or outcome implied. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:0,eq=saturation=1.040:contrast=1.010:brightness=-0.018,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "f5e23958fcf86d9a15ae8d87a2ef4c7ab8faf20dcf9f29b8f11d27d723f211ee",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "money-management-advisory-inc",
+      "boardDescriptor": "financial",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/money-management-advisory-inc.png",
+      "sourceSha256": "6e263f6b898cc2edc5b10916c1214cec082505325ae4c8f46528a56716f47cd7",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Money Management Advisory, Inc. Four distinct but cohesive unlabelled panels in a generic retirement-planning practice: a financial professional speaking with an older adult couple at a calm daylight table; a close detail of hands with a calculator, pencil, and non-readable planning notebook; an advisor reviewing abstract, non-readable retirement charts on a laptop; a quiet moment of a client looking through a sunlit window after a meeting, no promise or outcome implied. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:28,eq=saturation=0.940:contrast=1.064:brightness=-0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "4ba6705d9de6e1cab73e4dbde8bfb3846bcc22c9ca6acaf13d78a5e7d1b19a14",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "money-management-advisory-inc",
+      "boardDescriptor": "financial",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/money-management-advisory-inc.png",
+      "sourceSha256": "6e263f6b898cc2edc5b10916c1214cec082505325ae4c8f46528a56716f47cd7",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Money Management Advisory, Inc. Four distinct but cohesive unlabelled panels in a generic retirement-planning practice: a financial professional speaking with an older adult couple at a calm daylight table; a close detail of hands with a calculator, pencil, and non-readable planning notebook; an advisor reviewing abstract, non-readable retirement charts on a laptop; a quiet moment of a client looking through a sunlit window after a meeting, no promise or outcome implied. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:56,eq=saturation=0.965:contrast=1.028:brightness=0.000,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "c75181929e788f4bd9cbfc8f1e64b9ba6b063344a7355c7a88944a8e6fd80b93",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "money-management-advisory-inc",
+      "boardDescriptor": "financial",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/money-management-advisory-inc.png",
+      "sourceSha256": "6e263f6b898cc2edc5b10916c1214cec082505325ae4c8f46528a56716f47cd7",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Money Management Advisory, Inc. Four distinct but cohesive unlabelled panels in a generic retirement-planning practice: a financial professional speaking with an older adult couple at a calm daylight table; a close detail of hands with a calculator, pencil, and non-readable planning notebook; an advisor reviewing abstract, non-readable retirement charts on a laptop; a quiet moment of a client looking through a sunlit window after a meeting, no promise or outcome implied. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:0,eq=saturation=0.990:contrast=1.082:brightness=0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "c384944c45b46a95d0f134a66d9e133b8805bf120c98573935cfd29f63602ce8",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    }
+  ],
+  "fonts": {
+    "pair": {
+      "id": "plus-jakarta-dm-sans",
+      "display": "Plus Jakarta Sans",
+      "text": "DM Sans"
+    },
+    "source": "Google Fonts CSS API",
+    "files": [
+      {
+        "file": "font-display-400.woff2",
+        "sha256": "153fc85b70298beeb1d61a5f723331649e7f23bb77302a66e61cb3e2fbdb5e79"
+      },
+      {
+        "file": "font-display-800.woff2",
+        "sha256": "153fc85b70298beeb1d61a5f723331649e7f23bb77302a66e61cb3e2fbdb5e79"
+      },
+      {
+        "file": "font-text-400.woff2",
+        "sha256": "9fea608a947e67020c33cad9a6fe3d60c54119dfb8cff87768a8117a15ed7543"
+      },
+      {
+        "file": "font-text-700.woff2",
+        "sha256": "9fea608a947e67020c33cad9a6fe3d60c54119dfb8cff87768a8117a15ed7543"
+      }
+    ]
+  }
+}

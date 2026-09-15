@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "routine_id": "D14",
+  "generated_at": "2026-08-24T23:49:06.130Z",
+  "source_artifact": {
+    "path": "System/outcome-graph/factory-2026-08-24-run-1-durable/W05-website-factory-readiness.json",
+    "sha256": "4cbc7e46def665bc346c32375f21eea3a4ecdebc08a9b36732feb999a9e4de58",
+    "bytes": 8909
+  },
+  "source_receipt_run_id": "OGD-20260824-23145989F598",
+  "source_terminal_truth": true,
+  "deployment_attempted": false,
+  "authority": {
+    "read_only": true,
+    "proposal_only": true,
+    "external_action_attempted": false,
+    "canonical_write_attempted": false,
+    "provider_mutation_attempted": false,
+    "deployment_attempted": false,
+    "worktree_mutation_attempted": false,
+    "ui_mutation_attempted": false,
+    "acceptance_contract_changed": false
+  }
+}

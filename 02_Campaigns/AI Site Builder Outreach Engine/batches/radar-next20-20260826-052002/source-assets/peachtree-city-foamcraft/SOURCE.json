@@ -1,0 +1,54 @@
+{
+  "sourceUrl": "https://foamcraft.com/",
+  "finalUrl": "https://foamcraft.com/",
+  "sourceDomain": "foamcraft.com",
+  "httpStatus": 200,
+  "contentType": "",
+  "pageSha256": "97908a87190c4431a82e005e6c02a8cae7ed6fc9603613e7a6113677003115d2",
+  "title": "You are being redirected...",
+  "description": "",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260826-052002\\preflight\\peachtree-city-foamcraft\\logo.svg",
+    "fileName": "logo.svg",
+    "sourceUrl": "https://foamcraft.com/",
+    "sourceEvidence": "Exact business name from the verified official source; code-rendered transparent typographic fallback.",
+    "type": "svg",
+    "dimensions": {
+      "width": 1200,
+      "height": 320
+    },
+    "sha256": "dc09920f399be39afee33bfe4dd5b39076908ff4949b3ac9a9db9e8ccb2176a2",
+    "sourceSha256": null,
+    "sourceType": "verified business name",
+    "sourceFileName": null,
+    "transformation": "Disclosed exact-name typographic fallback; no icon, symbol, or first-party logo imitation.",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "reason": "SVG has no background rectangle."
+    },
+    "transparent": true,
+    "identityFallback": true,
+    "downloadFailures": [],
+    "bytes": 448
+  },
+  "references": [],
+  "contact": {
+    "phone": "",
+    "address": "",
+    "city": "",
+    "phoneSource": null,
+    "addressSource": null
+  },
+  "visualReferenceFallback": "No usable first-party photography was exposed by the legacy source. Use only disclosed Align Image Gen concept imagery.",
+  "referenceFailures": [],
+  "brandColors": [
+    "#f05a28"
+  ],
+  "checkedAt": "2026-08-26T09:34:34.857Z"
+}

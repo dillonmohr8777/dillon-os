@@ -1,0 +1,245 @@
+{
+  "schema": 1,
+  "business": "Bob Swayne Real Estate",
+  "domain": "brightmlshomes.com",
+  "route": "sites/bob-swayne-real-estate/",
+  "generatedAt": "2026-08-26T10:10:27.9767979Z",
+  "generator": "Align HCM Image Gen plugin contract",
+  "model": "gpt-image-2.0",
+  "board": {
+    "key": "bob-swayne-real-estate",
+    "descriptor": "estate-agent",
+    "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Bob Swayne Real Estate. Four distinct but cohesive unlabelled panels in a generic residential real estate practice: an agent and adult couple reviewing a home floor plan at a kitchen island; an agent photographing an anonymous home exterior with a tablet from behind; a close detail of house keys beside an unmarked property folder; a warm empty living room with a real-estate professional opening curtains to daylight, no property identifiers. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+    "sourceOutput": "C:/Users/dillo/.codex/generated_images/01a03d5e-c09f-74a0-b82e-14ad3c549703/exec-95691653-60a4-459c-af42-4d5ad781321c.png",
+    "file": "automation/prospect-radar-next20/generated-stock-library/bob-swayne-real-estate.png",
+    "sha256": "55fd632f0c491a523f28ea9b1a2b05a92e1c396c32b2fb695efc9928030473b5",
+    "dimensions": {
+      "width": 1448,
+      "height": 1086
+    }
+  },
+  "treatment": {
+    "palette": [
+      "#F05A28",
+      "#FF6B35",
+      "#0B1D2D",
+      "#071521",
+      "#F4EFE7",
+      "#EAF6FC",
+      "#91D5ED"
+    ],
+    "imageGrain": "Visible refined 35mm film grain authored in the generated board and preserved in every derivative.",
+    "interfaceGrain": {
+      "file": "grain.svg",
+      "sha256": "f8b8b72ee2a84cf2aaa04ce069edaaa459ee61650e76f307254572db67efb813",
+      "opacity": 0.13
+    },
+    "disclosure": "Illustrative generated imagery. These concept visuals do not depict the business, its staff, customers, facility, products, projects, or outcomes."
+  },
+  "outputs": [
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "bob-swayne-real-estate",
+      "boardDescriptor": "estate-agent",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/bob-swayne-real-estate.png",
+      "sourceSha256": "55fd632f0c491a523f28ea9b1a2b05a92e1c396c32b2fb695efc9928030473b5",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Bob Swayne Real Estate. Four distinct but cohesive unlabelled panels in a generic residential real estate practice: an agent and adult couple reviewing a home floor plan at a kitchen island; an agent photographing an anonymous home exterior with a tablet from behind; a close detail of house keys beside an unmarked property folder; a warm empty living room with a real-estate professional opening curtains to daylight, no property identifiers. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:28,eq=saturation=1.015:contrast=1.064:brightness=-0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "3aac701e210e01696a2846b24a64fdcf095938c8effdc6c82f179e3d05343ab7",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "bob-swayne-real-estate",
+      "boardDescriptor": "estate-agent",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/bob-swayne-real-estate.png",
+      "sourceSha256": "55fd632f0c491a523f28ea9b1a2b05a92e1c396c32b2fb695efc9928030473b5",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Bob Swayne Real Estate. Four distinct but cohesive unlabelled panels in a generic residential real estate practice: an agent and adult couple reviewing a home floor plan at a kitchen island; an agent photographing an anonymous home exterior with a tablet from behind; a close detail of house keys beside an unmarked property folder; a warm empty living room with a real-estate professional opening curtains to daylight, no property identifiers. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:56,eq=saturation=1.040:contrast=1.028:brightness=0.000,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "2437f8839e24a5873a5dc492c607a548afb5adfd29021203e4e66cb5f7d7da48",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "bob-swayne-real-estate",
+      "boardDescriptor": "estate-agent",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/bob-swayne-real-estate.png",
+      "sourceSha256": "55fd632f0c491a523f28ea9b1a2b05a92e1c396c32b2fb695efc9928030473b5",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Bob Swayne Real Estate. Four distinct but cohesive unlabelled panels in a generic residential real estate practice: an agent and adult couple reviewing a home floor plan at a kitchen island; an agent photographing an anonymous home exterior with a tablet from behind; a close detail of house keys beside an unmarked property folder; a warm empty living room with a real-estate professional opening curtains to daylight, no property identifiers. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=0.940:contrast=1.082:brightness=0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "6c71297f0838e83c9d4d15e7be0dc2852f3c1b64bbd8880dcfb2ab85b4729509",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "bob-swayne-real-estate",
+      "boardDescriptor": "estate-agent",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/bob-swayne-real-estate.png",
+      "sourceSha256": "55fd632f0c491a523f28ea9b1a2b05a92e1c396c32b2fb695efc9928030473b5",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Bob Swayne Real Estate. Four distinct but cohesive unlabelled panels in a generic residential real estate practice: an agent and adult couple reviewing a home floor plan at a kitchen island; an agent photographing an anonymous home exterior with a tablet from behind; a close detail of house keys beside an unmarked property folder; a warm empty living room with a real-estate professional opening curtains to daylight, no property identifiers. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:28,eq=saturation=0.965:contrast=1.046:brightness=-0.018,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "64ca143ade0788b73cf7d304029622cc674cd46786be2aa02bea121f73140366",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "bob-swayne-real-estate",
+      "boardDescriptor": "estate-agent",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/bob-swayne-real-estate.png",
+      "sourceSha256": "55fd632f0c491a523f28ea9b1a2b05a92e1c396c32b2fb695efc9928030473b5",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Bob Swayne Real Estate. Four distinct but cohesive unlabelled panels in a generic residential real estate practice: an agent and adult couple reviewing a home floor plan at a kitchen island; an agent photographing an anonymous home exterior with a tablet from behind; a close detail of house keys beside an unmarked property folder; a warm empty living room with a real-estate professional opening curtains to daylight, no property identifiers. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:56,eq=saturation=0.990:contrast=1.010:brightness=-0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "4d84cc16d1caaa66d4eb0e2a12cf951a37a2370d19129ccca9eda8d9b0295760",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "bob-swayne-real-estate",
+      "boardDescriptor": "estate-agent",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/bob-swayne-real-estate.png",
+      "sourceSha256": "55fd632f0c491a523f28ea9b1a2b05a92e1c396c32b2fb695efc9928030473b5",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Bob Swayne Real Estate. Four distinct but cohesive unlabelled panels in a generic residential real estate practice: an agent and adult couple reviewing a home floor plan at a kitchen island; an agent photographing an anonymous home exterior with a tablet from behind; a close detail of house keys beside an unmarked property folder; a warm empty living room with a real-estate professional opening curtains to daylight, no property identifiers. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:0,eq=saturation=1.015:contrast=1.064:brightness=0.000,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "30dc7d6642283a81175ce1f00b865f0f1d61c568f502e59b59480d914d94b1a1",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "bob-swayne-real-estate",
+      "boardDescriptor": "estate-agent",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/bob-swayne-real-estate.png",
+      "sourceSha256": "55fd632f0c491a523f28ea9b1a2b05a92e1c396c32b2fb695efc9928030473b5",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Bob Swayne Real Estate. Four distinct but cohesive unlabelled panels in a generic residential real estate practice: an agent and adult couple reviewing a home floor plan at a kitchen island; an agent photographing an anonymous home exterior with a tablet from behind; a close detail of house keys beside an unmarked property folder; a warm empty living room with a real-estate professional opening curtains to daylight, no property identifiers. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:28,eq=saturation=1.040:contrast=1.028:brightness=0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "92f64185126099fdae1ac2ab778e0b894f3467d7e6a4944716df6b20e807ac08",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "bob-swayne-real-estate",
+      "boardDescriptor": "estate-agent",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/bob-swayne-real-estate.png",
+      "sourceSha256": "55fd632f0c491a523f28ea9b1a2b05a92e1c396c32b2fb695efc9928030473b5",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Bob Swayne Real Estate. Four distinct but cohesive unlabelled panels in a generic residential real estate practice: an agent and adult couple reviewing a home floor plan at a kitchen island; an agent photographing an anonymous home exterior with a tablet from behind; a close detail of house keys beside an unmarked property folder; a warm empty living room with a real-estate professional opening curtains to daylight, no property identifiers. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:56,eq=saturation=0.940:contrast=1.082:brightness=-0.018,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "06a990dd561b8a7974b6a2e4998d1f77950f3ae42cdc117924a126292b8261b4",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "bob-swayne-real-estate",
+      "boardDescriptor": "estate-agent",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/bob-swayne-real-estate.png",
+      "sourceSha256": "55fd632f0c491a523f28ea9b1a2b05a92e1c396c32b2fb695efc9928030473b5",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Bob Swayne Real Estate. Four distinct but cohesive unlabelled panels in a generic residential real estate practice: an agent and adult couple reviewing a home floor plan at a kitchen island; an agent photographing an anonymous home exterior with a tablet from behind; a close detail of house keys beside an unmarked property folder; a warm empty living room with a real-estate professional opening curtains to daylight, no property identifiers. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:0,eq=saturation=0.965:contrast=1.046:brightness=-0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "36fc7fa51589969eeb20212a76969c602d0b98514d340def8b5bfaf3b376e7a2",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "bob-swayne-real-estate",
+      "boardDescriptor": "estate-agent",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/bob-swayne-real-estate.png",
+      "sourceSha256": "55fd632f0c491a523f28ea9b1a2b05a92e1c396c32b2fb695efc9928030473b5",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Bob Swayne Real Estate. Four distinct but cohesive unlabelled panels in a generic residential real estate practice: an agent and adult couple reviewing a home floor plan at a kitchen island; an agent photographing an anonymous home exterior with a tablet from behind; a close detail of house keys beside an unmarked property folder; a warm empty living room with a real-estate professional opening curtains to daylight, no property identifiers. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:28,eq=saturation=0.990:contrast=1.010:brightness=0.000,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "c0bcbb1b6203d87f3f1e5e35a447690ebb4f805aef434c94cbcde2d70fc4a067",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "bob-swayne-real-estate",
+      "boardDescriptor": "estate-agent",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/bob-swayne-real-estate.png",
+      "sourceSha256": "55fd632f0c491a523f28ea9b1a2b05a92e1c396c32b2fb695efc9928030473b5",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Bob Swayne Real Estate. Four distinct but cohesive unlabelled panels in a generic residential real estate practice: an agent and adult couple reviewing a home floor plan at a kitchen island; an agent photographing an anonymous home exterior with a tablet from behind; a close detail of house keys beside an unmarked property folder; a warm empty living room with a real-estate professional opening curtains to daylight, no property identifiers. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:56,eq=saturation=1.015:contrast=1.064:brightness=0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "bfd6fd5929625b4b01037fd2216531967fa61ebf74ce45733998be4221379e92",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "bob-swayne-real-estate",
+      "boardDescriptor": "estate-agent",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/bob-swayne-real-estate.png",
+      "sourceSha256": "55fd632f0c491a523f28ea9b1a2b05a92e1c396c32b2fb695efc9928030473b5",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Bob Swayne Real Estate. Four distinct but cohesive unlabelled panels in a generic residential real estate practice: an agent and adult couple reviewing a home floor plan at a kitchen island; an agent photographing an anonymous home exterior with a tablet from behind; a close detail of house keys beside an unmarked property folder; a warm empty living room with a real-estate professional opening curtains to daylight, no property identifiers. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:0,eq=saturation=1.040:contrast=1.028:brightness=-0.018,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "3d4197f04d1d3e27648e0c38302b9ad64e7ba04969a05ced287ed515837a6725",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    }
+  ]
+}

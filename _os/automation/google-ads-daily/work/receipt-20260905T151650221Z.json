@@ -1,0 +1,19 @@
+{
+  "wakeId": "heartbeat:20260905T151650221Z",
+  "completedAtUtc": "2026-09-05T15:20:23.503Z",
+  "identityChecks": {"gmail": "expected-account-verified", "slack": "expected-momentum-workspace-and-user-verified"},
+  "coverage": {"afterUnix": 1788615539, "beforeUnix": 1788621471, "gmailPages": 1, "gmailMessages": 11, "slackPages": 1, "slackMessages": 3, "paginationExhaustedBoth": true, "newSourceKeys": 12},
+  "candidateReviews": [
+    {"clientId": "puttery-nyc", "source": "gmail:1a0720015e9ea5ba", "threadId": "1a059f51edea301e", "messagesRead": 5, "disposition": "reviewed", "summary": "Stakeholder proposed Wednesday 14:00 Eastern for onboarding; later sent owner reaction confirms visibility. Other attendees have not confirmed in the available thread. No new assignment, confirmed meeting, or duplicate response inferred."},
+    {"clientId": "bok-law-firm", "source": "gmail:1a07200c268d20d0", "threadId": "1a07200b8d378022", "messagesRead": 1, "disposition": "reviewed", "summary": "Existing unsent follow-up draft with uncertain ownership. Preserved without editing, sending, or treating its content as a new inbound request or payment evidence."},
+    {"clientId": "internal-operations", "source": "slack:D0AGQGYHM5M:1788621416.471609", "disposition": "reviewed", "summary": "Owner asked colleague for AI Division press-release publication status. Full available thread has no reply. Await source response; no publication receipt, assignment to Dillon, or new production work inferred."}
+  ],
+  "dailyWork": "None due; prior daily report and lead-source blockers already notified and not repeated.",
+  "newWorkers": [],
+  "canonicalQueueMutation": false,
+  "externalDelivery": false,
+  "decision": "DONT_NOTIFY",
+  "privacy": "redacted",
+  "containsSecrets": false,
+  "containsRawCommunications": false
+}

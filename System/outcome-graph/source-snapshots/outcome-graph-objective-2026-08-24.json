@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-08-24T23:45:00.000Z",
+  "source": "current_user_request",
+  "request_fingerprint": "outcome-graph-replica-and-loop-engineering",
+  "business_outcome": "Every recurring Dillon workflow runs through bounded source-bound loops and can claim completion only when its real business finish line is independently reproduced from fresh evidence.",
+  "smallest_reviewable_artifact": "A durable Outcome Graph runtime, explicit routine contracts, live read-only shadow receipts, deduplicated replay proof, a canonical Marketing Chief handoff boundary, and an Obsidian operating record.",
+  "audience": "Dillon Mohr as final human authority and Codex acting as Marketing Chief as the sole canonical orchestrator.",
+  "scope": {
+    "systems": [
+      "Dillon OS",
+      "Obsidian evidence graph",
+      "Marketing Chief",
+      "client-operations",
+      "communications",
+      "content",
+      "paid media",
+      "reporting",
+      "design",
+      "web delivery",
+      "automation reliability"
+    ],
+    "legacy_scheduler_cutover_authorized": false,
+    "external_actions_authorized": false,
+    "canonical_queue_write_authorized": false
+  },
+  "acceptance": [
+    "All 29 executable routines have routine-specific source adapters and terminally verified durable shadow evidence.",
+    "All four governed weekly routes remain read-only and approval-gated.",
+    "False completion, stale evidence, ambiguity, blocked state, and missing downstream proof fail closed.",
+    "Duplicate triggers revalidate the canonical binding and final artifact hashes without redoing verified work.",
+    "The legacy scheduler remains unchanged until migration coverage and final cutover review are complete."
+  ],
+  "lifecycle_states": [
+    "defined",
+    "built",
+    "independently_verified",
+    "deep_shadow_verified",
+    "adopted_by_marketing_chief",
+    "externally_delivered"
+  ],
+  "authority": {
+    "proposal_only": true,
+    "external_action_attempted": false,
+    "canonical_write_attempted": false
+  }
+}
