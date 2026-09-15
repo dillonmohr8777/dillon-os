@@ -21,11 +21,11 @@ navigation is needed.
 Checkbox items only — `_os/vault-state.js` reads this section for the HUD
 directive feed and skips any other list format.
 
-- [ ] Close out Cindy May Christmas deliverable (`due: 2026-09-01`, now 13 days past due — carried forward again).
-- [ ] Get yes/no on the needs-approval queue item: BigOrange Marketing website build (35 days overdue on its own `due:` field).
-- [ ] Touch 3-5 stalled clients (real contact, not another scan) — lead with Tags 2 Go (freshest stall, access-blocked queue item); pick the rest from the 36 stalled in pulse-today.md.
-- [ ] Carry forward the 4 unanswered Momentum 360 Slack asks (open since ~2026-07-30, now ~6.5 weeks) — Momentum 360 has aged from "moving" into "watch" on git evidence; fix its `last_touched` frontmatter to stop the signal drifting further from reality.
-- [ ] BOK Law Firm predicted prep (bounded step only): window is 2026-09-15-09-17 (opens tomorrow) — locate/fingerprint the source packet and resolve topics/copy, no drafting or image generation yet.
+- [ ] Close out Cindy May Christmas deliverable (`due: 2026-09-01`, now 14 days past due — carried forward again).
+- [ ] Get yes/no on the needs-approval queue item: BigOrange Marketing website build (36 days overdue on its own `due:` field).
+- [ ] Touch 3-5 stalled clients (real contact, not another scan) — lead with Momentum 360 (4 Slack asks open 47 days, one ties directly to the blocked CallRail queue item) and Tags 2 Go (access-blocked queue item, 38 days overdue); pick the rest from the 37 stalled in pulse-today.md.
+- [ ] Escalate the open credential-rotation approval (`System/approval-queue.md:182`, open since 2026-08-13, now 33 days) — live security item, not routine backlog.
+- [ ] BOK Law Firm predicted prep (bounded step only): window is 2026-09-22–09-24 — locate/fingerprint the source packet and resolve topics/copy, no drafting or image generation yet.
 
 ## Active projects
 
