@@ -1,7 +1,7 @@
 ---
 note_type: index
 status: active
-updated: 2026-09-14
+updated: 2026-09-15
 tags:
   - index
   - brain
@@ -121,6 +121,13 @@ evidence.
   — seven claims checked against artifacts; the Bridge attribution correction.
 - [[12_Brain/04_Decisions/2026-09-07 - Align HCM registry record is superseded|Align HCM registry record is superseded]]
   — the stale active registry record is superseded by the vault.
+
+## Reliability — 2026-09-15
+
+- [[12_Brain/07_Reviews/2026-09-15 - Cadence tasks cannot run unattended|Cadence tasks cannot run unattended]]
+  — `Cadence-daily` never fired. All four cadence tasks are registered "run only
+  when the user is logged on," so a 03:31 Windows Update reboot blocked every
+  scheduled run until the 09:54 logon. The fix needs elevation.
 
 ## Handoff — 2026-09-10
 

@@ -1,6 +1,6 @@
 ---
 tags: [system, operating-status]
-last_updated: 2026-09-14
+last_updated: 2026-09-15
 callsign: D.I.L.L.O.N.
 operator: Dillon Mohr
 goal_label: ACTIVE CLIENTS
@@ -46,6 +46,17 @@ Everything in this block was measured on disk or in Task Scheduler on
   2026-09-15 09:05, 2026-09-21 09:20 and 2026-10-01 09:35. Registered is not
   the same as running; treat the first real daily fire as unproven until
   2026-09-15 09:05 passes and the ledger shows it.
+  **RESOLVED 2026-09-15, NEGATIVE.** `Cadence-daily` did not fire at 09:05.
+  LastRunTime is still the 11/30/1999 never-run sentinel and NextRunTime rolled
+  to 2026-09-16. Cause: all four tasks are registered `LogonType: Interactive`
+  -- run only when the user is logged on. Windows Update restarted the machine
+  at 03:31 (Id 1074, TrustedInstaller -- NOT the power fault), and `explorer.exe`
+  did not start until 09:54, so no task could run between those times. The
+  heartbeat's `NumberOfMissedRuns` reads exactly 6, matching 04:00-09:00.
+  `claude-daily-driver` last cycled 03:23 for the same reason. The fix is
+  `LogonType S4U` + `StartWhenAvailable` on all four; attempted 2026-09-15 and
+  refused with "Access is denied" -- it needs elevation, so it needs Dillon.
+  [[12_Brain/07_Reviews/2026-09-15 - Cadence tasks cannot run unattended]]
 - **Run ledger is live:** `_os/automation/cadence/run-ledger.jsonl` last wrote
   2026-09-14T19:01:38Z, daily-sweep ok, `cadence-absent=0`.
 - **AI division:** all 20 decisions D01-D20 in
