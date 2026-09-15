@@ -124,6 +124,11 @@ evidence.
 
 ## Reliability — 2026-09-15
 
+- [[12_Brain/04_Decisions/2026-09-15 - Mac's FAQ bot is a second surface, not an opened Workmate|Mac's FAQ bot is a second surface, not an opened Workmate]]
+  — Workmate is live and free per message, but its own prompt binds it to Dillon's
+  private DM with Dillon's tool authority. The team FAQ bot is a separate read-only
+  surface over a scoped corpus. Blocked on naming the corpus.
+
 - [[12_Brain/07_Reviews/2026-09-15 - The job lane fires but the productive path was never scheduled|The job lane fires, but the productive path was never scheduled]]
   — the shortlist and outreach tasks now run; the outreach runner is a green-exit
   no-op (180 qualified roles, 0 drafts), and the 09:15 Claude trigger a vault note

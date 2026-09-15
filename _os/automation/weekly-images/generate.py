@@ -48,8 +48,17 @@ LOGO_WIDTH_FRACTION = 0.18
 LOGO_MARGIN_FRACTION = 0.03
 
 
-def composite_logo(image: Image.Image, logo_path: Path) -> Image.Image:
-    """Paste the real client logo bottom-right, ~18% of image width.
+def composite_logo(
+    image: Image.Image, logo_path: Path, position: str = "bottom-right",
+    width_fraction: float | None = None,
+) -> Image.Image:
+    """Paste the real client logo, ~18% of image width by default.
+
+    `position` is "bottom-right" (the default weekly-post treatment) or
+    "top-center", which is where the July 2026 This Week With BOK reference
+    puts it -- centred on the scene above the wave. A brief sets it per slot
+    via "logo_position"/"logo_width_fraction"; the prompt must reserve the
+    matching patch.
 
     Hard-fails (does not silently skip) if the logo file is missing or has
     no alpha channel, since a missing/opaque logo composited anyway would
@@ -62,14 +71,20 @@ def composite_logo(image: Image.Image, logo_path: Path) -> Image.Image:
         raise AssertionError(f"logo has no alpha channel: {logo_path} (mode={logo.mode})")
     logo = logo.convert("RGBA")
 
-    target_w = round(image.width * LOGO_WIDTH_FRACTION)
+    target_w = round(image.width * (width_fraction or LOGO_WIDTH_FRACTION))
     scale = target_w / logo.width
     target_h = round(logo.height * scale)
     logo = logo.resize((target_w, target_h), Image.LANCZOS)
 
     margin = round(image.width * LOGO_MARGIN_FRACTION)
-    x = image.width - target_w - margin
-    y = image.height - target_h - margin
+    if position == "top-center":
+        x = round((image.width - target_w) / 2)
+        y = margin
+    elif position == "bottom-right":
+        x = image.width - target_w - margin
+        y = image.height - target_h - margin
+    else:
+        raise AssertionError(f"unknown logo position: {position}")
 
     base = image.convert("RGBA")
     base.alpha_composite(logo, dest=(x, y))
@@ -226,7 +241,11 @@ def run(brief_path: Path, week: str, only_slot: str | None, dry_run: bool) -> in
         logo_composited = False
         if logo_path is not None:
             img = Image.open(io.BytesIO(image_bytes))
-            img = composite_logo(img, logo_path)
+            img = composite_logo(
+                img, logo_path,
+                position=slot_def.get("logo_position", "bottom-right"),
+                width_fraction=slot_def.get("logo_width_fraction"),
+            )
             buf = io.BytesIO()
             img.save(buf, format="PNG")
             image_bytes = buf.getvalue()

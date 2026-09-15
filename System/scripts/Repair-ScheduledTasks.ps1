@@ -35,7 +35,8 @@ $ErrorActionPreference = 'Stop'
 
 $names = @(
   'Cadence-daily','Cadence-weekly','Cadence-monthly','Cadence-sweep-heartbeat',
-  'Job-Shortlist-Daily','Daily-Job-Outreach-Runner','Claude-Job-Outreach-Daily'
+  'Job-Shortlist-Daily','Daily-Job-Outreach-Runner','Claude-Job-Outreach-Daily',
+  'Momentum360-WorkmateOperator'
 )
 
 if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()
