@@ -70,7 +70,7 @@ links instead of loading the entire vault.
   platforms that are not already canonical clients.
 - [[12_Brain/03_Concepts/README|Concepts]] — reusable lessons and mental models.
 - [[12_Brain/04_Decisions/README|Decisions]] — choices, rationale, and review
-  dates.
+  dates. Open: [[12_Brain/04_Decisions/2026-09-03 - Channel access to Dillon OS automations for the Pritzker channel|channel access to OS automations for the Pritzker channel]] (proposed).
 - [[12_Brain/05_Projects/README|Projects]] — finite outcomes with owners and
   finish lines.
 - [[12_Brain/06_Research/README|Research]] — sourced, dated, expiring findings.
@@ -94,6 +94,8 @@ links instead of loading the entire vault.
 - [[12_Brain/09_Ops/Runbook|Second Brain Runbook]]
 - [[12_Brain/09_Ops/Health|Brain Health]]
 - [[12_Brain/09_Ops/Knowledge Coverage|Knowledge Coverage]]
+- [[12_Brain/09_Ops/Dillon OS capability index|Dillon OS Capability Index]] — every
+  automation and skill in one scannable reference (discoverability, not access control).
 - [[12_Brain/Bases/Strategy Library.base|Strategy Library Base]]
 - [[12_Brain/Bases/Client Strategy Overlays.base|Client Strategy Overlays Base]]
 - [[12_Brain/09_Ops/Client Intelligence Coverage|Client Intelligence Coverage]]
