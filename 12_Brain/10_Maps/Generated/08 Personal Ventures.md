@@ -4,7 +4,7 @@ status: active
 generated: true
 generated_by: Update-SecondBrainMaps
 map_type: domain
-updated: 2026-09-15
+updated: 2026-09-08
 tags:
   - brain
   - map
@@ -28,7 +28,6 @@ Book, personal, DBA, music, and owned web-property work.
 
 ## mohr-media-site
 
-- [[mohr-media-site/PRODUCT|PRODUCT]]
 - [[mohr-media-site/README|README]]
 
 ## Related domains

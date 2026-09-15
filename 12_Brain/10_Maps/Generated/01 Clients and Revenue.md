@@ -4,7 +4,7 @@ status: active
 generated: true
 generated_by: Update-SecondBrainMaps
 map_type: domain
-updated: 2026-09-15
+updated: 2026-09-08
 tags:
   - brain
   - map
@@ -33,7 +33,6 @@ Canonical client context, delivery records, active work, and revenue truth.
 - [[01_Clients/Commercial Cleaners Alliance|Commercial Cleaners Alliance]]
 - [[01_Clients/Florecita|Florecita]]
 - [[01_Clients/Hardwood Artisan|Hardwood Artisan]]
-- [[01_Clients/Jeff Hozias|Jeff Hozias]]
 - [[01_Clients/Link Eze|Link Eze]]
 - [[01_Clients/Next Gen Solutions|Next Gen Solutions]]
 - [[01_Clients/PNW Pro Clean|PNW Pro Clean]]
@@ -49,23 +48,18 @@ Canonical client context, delivery records, active work, and revenue truth.
 - [[12_Brain/10_Maps/Generated/client-bridge-software-development|Bridge Software Development]]
 - [[12_Brain/10_Maps/Generated/client-capsule-tonic|Capsule & Tonic]]
 - [[12_Brain/10_Maps/Generated/client-cindy-may-christmas|Cindy May Christmas]]
-- [[12_Brain/10_Maps/Generated/client-deborah-mara|Deborah-Mara]]
 - [[12_Brain/10_Maps/Generated/client-everyday-life-insurance|Everyday Life Insurance]]
-- [[12_Brain/10_Maps/Generated/client-fagan-painting|Fagan Painting]]
 - [[12_Brain/10_Maps/Generated/client-fresh-blends|Fresh Blends]]
 - [[12_Brain/10_Maps/Generated/client-hope-wellness-center|Hope Wellness Center]]
 - [[12_Brain/10_Maps/Generated/client-kimberly-james-bridal|Kimberly James Bridal]]
 - [[12_Brain/10_Maps/Generated/client-momentum-360|Momentum 360]]
-- [[12_Brain/10_Maps/Generated/client-nexla|Nexla]]
 - [[12_Brain/10_Maps/Generated/client-nkcdc|NKCDC]]
 - [[12_Brain/10_Maps/Generated/client-omega-landscaping|Omega Landscaping]]
 - [[12_Brain/10_Maps/Generated/client-onsite-concrete|Onsite Concrete]]
 - [[12_Brain/10_Maps/Generated/client-pritzker-law-group|Pritzker Law Group]]
 - [[12_Brain/10_Maps/Generated/client-pro-fence-deck|Pro Fence & Deck]]
-- [[12_Brain/10_Maps/Generated/client-puttery-nyc|Puttery NYC]]
 - [[12_Brain/10_Maps/Generated/client-replenish|Replenish]]
 - [[12_Brain/10_Maps/Generated/client-revive-systems|Revive Systems]]
-- [[12_Brain/10_Maps/Generated/client-shadow-hvac|Shadow HVAC]]
 - [[12_Brain/10_Maps/Generated/client-tags-2-go|Tags 2 Go]]
 - [[12_Brain/10_Maps/Generated/client-va-claims|VA Claims]]
 

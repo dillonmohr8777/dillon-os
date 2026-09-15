@@ -2,7 +2,7 @@
 note_type: dashboard
 status: active
 owner: Dillon Mohr
-updated: 2026-08-24
+updated: 2026-09-02
 review_cadence: daily
 tags:
   - brain
@@ -34,6 +34,11 @@ and reusable memory.
 - [[05_Projects/2026-07-30 - Dillon OS five-goal operating plan|Five-goal operating plan]]
 - [[05_Projects/2026-07-30 - Qualified pipeline recovery|Qualified pipeline recovery]]
 - [[04_Decisions/2026-07-30 - Marketing Chief is Dillon's sole agent interface|Marketing Chief interface decision]]
+- [[04_Decisions/2026-09-01 - Route numeric forecasts to a specialist|Forecast specialist routing]]
+- [[04_Decisions/2026-09-02 - Separate deliverable prediction from workload forecasting|Predictive work-planner decision]]
+- [[05_Projects/Experiments/EXP-TIMESFM-FORECAST-ROUTER|TimesFM forecast-router experiment]]
+- [[04_Decisions/2026-09-01 - Fable 5.1 routing and effort defaults|Fable 5.1 routing and effort defaults]]
+- [[06_Research/2026-09-01 - Fable 5.1 launch signal sweep|Fable 5.1 launch signal sweep]]
 
 ## Strategy brain
 
@@ -42,6 +47,9 @@ and reusable memory.
 - [[03_Concepts/Marketing Intelligence Operating System|Marketing intelligence operating system]]
 - [[03_Concepts/AEO GEO and AI Discovery|AEO, GEO, and AI discovery]]
 - [[03_Concepts/Automation and Workflow Engineering|Automation and workflow engineering]]
+- [[03_Concepts/Specialist Forecast Router|Specialist forecast router]]
+- [[03_Concepts/Predictive Work Planner|Predictive work planner]]
+- [[03_Concepts/Leading Indicators|Leading indicators]]
 - [[09_Ops/Knowledge Coverage|Knowledge coverage audit]]
 
 ## Experiment queue

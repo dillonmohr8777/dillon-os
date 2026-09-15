@@ -5,8 +5,8 @@
  *
  * The properties locked down here are the ones that make a registry worth more
  * than a graded CSV: history is never lost, a business already actioned cannot
- * resurface as a fresh lead, Philadelphia outranks the rest of the state at equal
- * merit, and a site that improved gets pulled out of the build queue before we
+ * resurface as a fresh lead, Pennsylvania markets rank equally at equal merit,
+ * and a site that improved gets pulled out of the build queue before we
  * pitch a redesign to someone who just paid for one.
  */
 
@@ -16,7 +16,7 @@ const assert = require('node:assert/strict');
 const radar = require('../lib/radar');
 const { renderDashboard, projectRows, crossTab } = require('../lib/radar-dashboard');
 const {
-  planDiscovery, AREA_TARGETS, REGISTRY_SOFT_CAP, REGISTRY_HARD_CAP,
+  planDiscovery, AREA_TARGETS, PA_REGIONS, REGISTRY_SOFT_CAP, REGISTRY_HARD_CAP,
 } = require('../lib/coverage-plan');
 const { classifyEmail } = require('../lib/contacts');
 const contactStore = require('../lib/contact-store');
@@ -193,10 +193,10 @@ test('setLifecycle rejects an unknown state', () => {
 });
 
 /* ------------------------------------------------------------------ *
- * Philadelphia priority
+ * Pennsylvania statewide priority
  * ------------------------------------------------------------------ */
 
-test('Philadelphia outranks the rest of Pennsylvania at equal merit', () => {
+test('Pennsylvania markets rank equally at equal merit', () => {
   const reg = emptyRegistry();
   radar.upsertDiscovered(
     reg,
@@ -215,14 +215,32 @@ test('Philadelphia outranks the rest of Pennsylvania at equal merit', () => {
   const collar = reg.prospects['collar.example'].priority_score;
   const pgh = reg.prospects['pgh.example'].priority_score;
 
-  assert.ok(phl > collar, `Philadelphia (${phl}) should outrank the collar counties (${collar})`);
-  assert.ok(collar > pgh, `the collar counties (${collar}) should outrank Pittsburgh (${pgh})`);
+  assert.equal(phl, collar, 'Philadelphia and the collar counties use the same statewide weight');
+  assert.equal(collar, pgh, 'Pittsburgh is no longer penalized against eastern Pennsylvania');
 });
 
-test('geoWeight falls back sensibly for unlabelled rows', () => {
+test('geoWeight keeps Pennsylvania uniform and lowers explicit out-of-state rows', () => {
   assert.equal(radar.geoWeight({ city: 'Philadelphia' }), 1);
-  assert.equal(radar.geoWeight({ market: 'PHL' }), 0.9);
-  assert.ok(radar.geoWeight({ market: 'ERI' }) < 0.9);
+  assert.equal(radar.geoWeight({ market: 'PHL' }), 1);
+  assert.equal(radar.geoWeight({ market: 'ERI' }), 1);
+  assert.equal(radar.geoWeight({ state: 'Pennsylvania', market: 'PA' }), 1);
+  assert.ok(radar.geoWeight({ state: 'New Jersey', market: 'NJ' }) < 1);
+});
+
+test('summarize immediately migrates stored priorities to the statewide policy', () => {
+  const reg = emptyRegistry();
+  radar.upsertDiscovered(reg, [
+    candidate({ domain: 'phl.example', area: 'Philadelphia', market: 'PHL' }),
+    candidate({ domain: 'pgh.example', area: 'Allegheny County', city: 'Pittsburgh', market: 'PGH' }),
+  ], { today: TODAY });
+  for (const d of ['phl.example', 'pgh.example']) {
+    radar.recordGrade(reg, d, gradeResult({ opportunity_score: 80 }), { today: TODAY });
+  }
+  reg.prospects['pgh.example'].priority_score = 50; // legacy Philadelphia penalty
+
+  radar.summarize(reg, { today: TODAY });
+
+  assert.equal(reg.prospects['pgh.example'].priority_score, reg.prospects['phl.example'].priority_score);
 });
 
 test('an actioned prospect cannot outrank a fresh one', () => {
@@ -648,9 +666,42 @@ function registryWith(counts) {
   return reg;
 }
 
-test('the plan sends the budget to the areas furthest behind target', () => {
-  // Mirrors the real skew that motivated this: one county badly over-collected,
-  // the priority market badly under-collected.
+test('the statewide target list contains every Pennsylvania county exactly once', () => {
+  const names = AREA_TARGETS.map((a) => a.name);
+  assert.equal(names.length, 67);
+  assert.equal(new Set(names).size, 67, 'county targets must not be duplicated');
+  assert.equal(PA_REGIONS.length, 6);
+  assert.ok(names.includes('Philadelphia'));
+  assert.ok(names.includes('Erie County'));
+  assert.ok(names.includes('Allegheny County'));
+  assert.ok(names.includes('Lackawanna County'));
+  assert.ok(names.includes('Centre County'));
+  assert.ok(Math.abs(AREA_TARGETS.reduce((sum, a) => sum + a.share, 0) - 1) < 1e-9);
+});
+
+test('every default daily plan reaches all six Pennsylvania regions', () => {
+  const plan = planDiscovery(emptyRegistry(), { budget: 60, today: TODAY });
+  assert.equal(plan.targets.length, PA_REGIONS.length);
+  assert.equal(new Set(plan.targets.map((t) => t.region)).size, PA_REGIONS.length);
+  assert.ok(plan.targets.every((t) => t.market === 'PA'));
+  assert.ok(plan.targets.every((t) => t.state === 'Pennsylvania'));
+});
+
+test('equally thin counties rotate by date instead of blocking a region forever', () => {
+  const first = planDiscovery(emptyRegistry(), { budget: 60, today: '2026-08-24' });
+  const afterFirstSweep = emptyRegistry();
+  afterFirstSweep.coverage_attempts = Object.fromEntries(
+    first.targets.map((t) => [t.name, { last_attempt: '2026-08-24', raw: 0, eligible: 0, added: 0 }])
+  );
+  const second = planDiscovery(afterFirstSweep, { budget: 60, today: '2026-08-25' });
+  for (const region of PA_REGIONS) {
+    const a = first.targets.find((t) => t.region === region.key);
+    const b = second.targets.find((t) => t.region === region.key);
+    assert.notEqual(a.name, b.name, `${region.label} should advance to another equally thin county`);
+  }
+});
+
+test('the plan avoids an over-collected county while preserving its region lane', () => {
   const reg = registryWith({
     'Montgomery County': { 'home-services': 400 },
     Philadelphia: { 'home-services': 100 },
@@ -658,8 +709,8 @@ test('the plan sends the budget to the areas furthest behind target', () => {
   const plan = planDiscovery(reg, { budget: 60 });
 
   const names = plan.targets.map((t) => t.name);
-  assert.ok(names.includes('Philadelphia'), 'the under-served priority market must be targeted');
   assert.ok(!names.includes('Montgomery County'), 'an over-collected county must not be targeted');
+  assert.equal(plan.targets.filter((t) => t.region === 'southeast').length, 1, 'Southeast still gets a daily lane');
 
   const mont = plan.areaDeficits.find((a) => a.name === 'Montgomery County');
   assert.ok(mont.deficit < 0, 'over-target areas carry a negative deficit');
@@ -672,9 +723,18 @@ test('no single area can absorb the whole budget', () => {
     assert.ok(t.cap <= plan.budget, `${t.name} cap ${t.cap} must not exceed the day's budget`);
   }
   const capSum = plan.targets.reduce((s, t) => s + t.cap, 0);
-  // Caps are per-area ceilings, not reservations, so they may sum above the
-  // budget — but the run stops at the budget, and no one cap may swallow it all.
   assert.ok(plan.targets.length > 1, 'the budget spreads across multiple areas');
+  assert.equal(capSum, plan.budget, 'regional caps exactly reserve the daily budget');
+  assert.ok(plan.targets.every((t) => t.cap >= 1), 'every selected region gets at least one discovery slot');
+});
+
+test('a throttled ten-row budget still reserves all six regional lanes', () => {
+  const reg = registryWith({ Philadelphia: { food: 500 }, 'Montgomery County': { food: 484 } });
+  const plan = planDiscovery(reg, { budget: 10, today: TODAY });
+  assert.equal(plan.targets.length, PA_REGIONS.length);
+  assert.equal(new Set(plan.targets.map((t) => t.region)).size, PA_REGIONS.length);
+  assert.equal(plan.targets.reduce((sum, t) => sum + t.cap, 0), 10);
+  assert.ok(plan.targets.every((t) => t.cap >= 1));
 });
 
 test('the plan picks verticals that are behind, not verticals that are plentiful', () => {

@@ -2,7 +2,7 @@
 note_type: concept
 status: active
 created: 2026-08-01
-updated: 2026-08-01
+updated: 2026-09-01
 domain: agent governance
 maturity: operational
 summary: One accountable orchestrator routes bounded work to specialists, requires evidence and independent checking, and preserves human approval for consequential actions.
@@ -14,6 +14,8 @@ source_refs:
   - "[[11_Agents/64gb Morning Orchestrator Spec 2026-07-08]]"
   - "[[12_Brain/09_Ops/AGENT_PROTOCOL]]"
   - "[[_os/automation/docs/OPERATOR]]"
+  - "[[12_Brain/03_Concepts/Specialist Forecast Router]]"
+  - "[[12_Brain/04_Decisions/2026-09-01 - Route numeric forecasts to a specialist]]"
 tags:
   - brain
   - concept
@@ -40,6 +42,15 @@ competing queues and opinions.
 - reconciles contradictions and dependencies;
 - requests human action only for a real gate; and
 - owns the final evidence-backed claim.
+
+### Forecast specialist
+
+- owns numeric timelines only;
+- consumes source-backed series and known-future covariates;
+- returns point and quantile bands with a license lane;
+- never ranks the canonical queue, never sends, and never spends; and
+- follows [[Specialist Forecast Router]] and
+  [[12_Brain/protocols/Forecast Specialist Protocol|Forecast Specialist Protocol]].
 
 ### Maker
 
@@ -186,4 +197,5 @@ Do not blur these stages.
 - Human approval inferred from enthusiasm about the build.
 - Worker output silently overwriting another workstream.
 - More agents added when the task is not parallelizable.
+- An LLM guessing a numeric business trend that should have gone to a forecast specialist.
 

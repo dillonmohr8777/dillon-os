@@ -1,0 +1,481 @@
+{
+  "schema_version": 1,
+  "updated": "2026-09-02",
+  "profiles": [
+    {
+      "id": "website-design-build",
+      "label": "Website, landing page, or frontend build",
+      "description": "A persuasive or operational web surface that needs verified brand truth, implementation, responsive QA, and a mapped release path.",
+      "signals": [
+        { "term": "website", "weight": 5 },
+        { "term": "homepage", "weight": 5 },
+        { "term": "landing page", "weight": 5 },
+        { "term": "landing pages", "weight": 5 },
+        { "term": "frontend", "weight": 4 },
+        { "term": "wordpress", "weight": 4 },
+        { "term": "wix", "weight": 4 },
+        { "term": "site build", "weight": 5 },
+        { "term": "site cleanup", "weight": 4 },
+        { "term": "page build", "weight": 4 },
+        { "term": "redesign", "weight": 3 },
+        { "term": "portal", "weight": 2 },
+        { "term": "netlify", "weight": 2 }
+      ],
+      "artifact_manifest": [
+        "Verified client route, site, repository, and release target",
+        "Product truth, approved copy, brand assets, and visual authority",
+        "Surface brief with mode, job, proof sequence, and acceptance criteria",
+        "Desktop and mobile implementation with responsive states",
+        "Accessibility, interaction, console, link, form, and overflow QA receipt",
+        "Reviewable preview or the exact mapped live URL when standing approval applies"
+      ],
+      "prepare_now": [
+        "Resolve the exact client, repository, current site, and deployment mapping",
+        "Collect the approved logo, imagery, copy, tokens, and reference surface",
+        "Write the smallest implementation and QA contract before building"
+      ],
+      "human_gates": [
+        "New public site, ambiguous deployment target, client sign-off, credentials, or non-Netlify publication"
+      ]
+    },
+    {
+      "id": "branded-client-report",
+      "label": "Branded client report or performance presentation",
+      "description": "A source-backed weekly, monthly, or milestone report that reconciles platform delivery with real outcomes and ships in a client-specific visual system.",
+      "signals": [
+        { "term": "weekly report", "weight": 6 },
+        { "term": "weekly reports", "weight": 6 },
+        { "term": "monthly report", "weight": 6 },
+        { "term": "monthly reports", "weight": 6 },
+        { "term": "client report", "weight": 5 },
+        { "term": "client reports", "weight": 5 },
+        { "term": "performance report", "weight": 5 },
+        { "term": "performance dashboard", "weight": 5 },
+        { "term": "performance presentation", "weight": 5 },
+        { "term": "progress update", "weight": 3 },
+        { "term": "scorecard", "weight": 3 },
+        { "term": "report redesign", "weight": 4 },
+        { "term": "weekly packet", "weight": 5 },
+        { "term": "report", "weight": 3 },
+        { "term": "reporting", "weight": 2 },
+        { "term": "dashboard", "weight": 2 }
+      ],
+      "artifact_manifest": [
+        "Exact reporting period, client route, and source-of-truth ledger",
+        "Platform, CRM, booking, or lead evidence with freshness and attribution labels",
+        "Client-specific branded source document or design template",
+        "Rendered PDF or presentation with whole-number lead and conversion-event counts where required",
+        "QA checklist covering KPI math, brand separation, claims, dates, and page rendering",
+        "Delivery manifest or draft message; sending remains separately governed"
+      ],
+      "prepare_now": [
+        "Freeze the reporting window and identify every required source",
+        "Reconcile platform events to CRM or booking outcomes before writing conclusions",
+        "Load the exact prior approved template and client visual assets"
+      ],
+      "human_gates": [
+        "Unverified conversion definitions, inaccessible source fields, external delivery, or a client/account mismatch"
+      ]
+    },
+    {
+      "id": "bok-weekly-designed-content-kit",
+      "label": "BOK weekly three-topic designed content kit",
+      "description": "The standing BOK Law Firm weekly package: source-bound legal copy, three expected generated visual backgrounds, and three branded template graphics, with the packet remaining authoritative if its count differs.",
+      "client_ids": ["bok-law-firm"],
+      "signals": [
+        { "term": "weekly", "weight": 4 },
+        { "term": "three blogs", "weight": 8 },
+        { "term": "three images", "weight": 8 },
+        { "term": "social content", "weight": 6 },
+        { "term": "facebook", "weight": 5 },
+        { "term": "blog", "weight": 4 },
+        { "term": "legal content", "weight": 5 },
+        { "term": "social graphic", "weight": 5 },
+        { "term": "designed template", "weight": 6 }
+      ],
+      "artifact_manifest": [
+        "The exact weekly PDF packet or current attorney-approved source, treated as sole content truth",
+        "Three expected topic and copy records; stop and surface a mismatch if the source requests another count",
+        "Three topic-specific background images generated with ChatGPT image generation, one per topic, with no fabricated legal claims or text baked into the art",
+        "Three branded template graphics in the required PNG and JPG formats",
+        "Source and final PDFs plus a contact sheet or rendered-page inspection set",
+        "Copy, geography, names, dates, distinctions, image count, and Facebook-page duplicate-check receipt"
+      ],
+      "prepare_now": [
+        "Locate and fingerprint the newest source packet before drafting or generating images",
+        "Resolve the three topics, exact copy, dates, and approved BOK template",
+        "Prepare three ChatGPT image-generation prompts and output slots without publishing anything"
+      ],
+      "human_gates": [
+        "Missing or conflicting packet, legal/geographic ambiguity, wrong Facebook page, duplicate schedule, or any content outside the exact approved source"
+      ]
+    },
+    {
+      "id": "prototype-wireframe",
+      "label": "Prototype, wireframe, or concept system",
+      "description": "A reviewable product or experience concept that makes decisions visible before implementation scope is locked.",
+      "signals": [
+        { "term": "prototype", "weight": 6 },
+        { "term": "wireframe", "weight": 6 },
+        { "term": "mockup", "weight": 5 },
+        { "term": "concept", "weight": 4 },
+        { "term": "proof of concept", "weight": 6 },
+        { "term": "ui handoff", "weight": 5 },
+        { "term": "discovery", "weight": 2 }
+      ],
+      "artifact_manifest": [
+        "Problem, audience, decision, and non-goals",
+        "Verified product and brand constraints",
+        "Primary flow, key states, and realistic content",
+        "Interactive or rendered prototype at the requested fidelity",
+        "Decision log, assumptions, open questions, and implementation handoff",
+        "Usability, accessibility, and responsive review notes appropriate to fidelity"
+      ],
+      "prepare_now": [
+        "Identify the decision the prototype must unlock",
+        "Collect only the context needed for the primary flow",
+        "Choose fidelity and acceptance criteria before producing screens"
+      ],
+      "human_gates": [
+        "Client sign-off, production implementation, public sharing, or scope changes inferred from a visual alone"
+      ]
+    },
+    {
+      "id": "data-source-integration",
+      "label": "Data source, tracking, or API integration",
+      "description": "A governed connection that maps identifiers, fields, freshness, privacy, and verification from source to consumer.",
+      "signals": [
+        { "term": "data source", "weight": 6 },
+        { "term": "webhook", "weight": 6 },
+        { "term": "api", "weight": 4 },
+        { "term": "integration", "weight": 4 },
+        { "term": "tracking", "weight": 4 },
+        { "term": "attribution", "weight": 4 },
+        { "term": "ga4", "weight": 5 },
+        { "term": "search console", "weight": 5 },
+        { "term": "hubspot", "weight": 4 },
+        { "term": "callrail", "weight": 4 },
+        { "term": "resy", "weight": 5 },
+        { "term": "tock", "weight": 5 },
+        { "term": "conversion path", "weight": 4 },
+        { "term": "lead intake", "weight": 5 },
+        { "term": "lead routing", "weight": 5 },
+        { "term": "forwarding", "weight": 3 },
+        { "term": "provider", "weight": 2 }
+      ],
+      "artifact_manifest": [
+        "Exact client, account, environment, source owner, and destination consumer",
+        "Identifier and field map with privacy, consent, and retention boundaries",
+        "Authentication and secret locator contract with no secret values in artifacts",
+        "Read-only or sandbox connection test and representative sample receipt",
+        "Freshness, deduplication, reconciliation, retry, and failure-state rules",
+        "Production activation and rollback checklist, kept behind the required account and approval gates"
+      ],
+      "prepare_now": [
+        "Resolve the exact source account and destination before configuring anything",
+        "Draft the field and identifier map, including missing decisions",
+        "Prepare a synthetic or read-only acceptance test"
+      ],
+      "human_gates": [
+        "MFA, CAPTCHA, new consent, credentials, billing, production writes, or account changes"
+      ]
+    },
+    {
+      "id": "repository-environment-configuration",
+      "label": "Repository, environment, connector, or deployment configuration",
+      "description": "A bounded engineering setup that establishes source control, runtime, connectors, deployment mapping, and verification without blending projects or secrets.",
+      "signals": [
+        { "term": "repository", "weight": 6 },
+        { "term": "repositories", "weight": 6 },
+        { "term": "repo", "weight": 5 },
+        { "term": "github", "weight": 5 },
+        { "term": "worktree", "weight": 5 },
+        { "term": "environment", "weight": 4 },
+        { "term": "configure", "weight": 3 },
+        { "term": "connector", "weight": 4 },
+        { "term": "mcp", "weight": 5 },
+        { "term": "deployment", "weight": 3 },
+        { "term": "netlify", "weight": 4 },
+        { "term": "cloudflare", "weight": 4 },
+        { "term": "runtime", "weight": 3 }
+      ],
+      "artifact_manifest": [
+        "Canonical project and client route plus current repository inventory",
+        "Branch, worktree, runtime, and environment contract",
+        "Non-secret account and access mapping",
+        "Configuration changes with reversible defaults and no embedded secrets",
+        "Build, test, connector, and deployment verification receipts",
+        "Handoff describing what is live, staged, blocked, or still approval-gated"
+      ],
+      "prepare_now": [
+        "Inspect current repository, branch, dirty state, and authenticated account",
+        "Resolve exact environment and connector ownership",
+        "Create a clean reversible implementation and verification path"
+      ],
+      "human_gates": [
+        "New repository visibility, account permissions, production deployment outside standing approval, billing, or secret entry"
+      ]
+    },
+    {
+      "id": "content-seo-package",
+      "label": "SEO, AEO, GEO, blog, or authority-content package",
+      "description": "A source-backed content deliverable tied to search intent, client truth, design, and measurable publication readiness.",
+      "signals": [
+        { "term": "blog", "weight": 5 },
+        { "term": "blogs", "weight": 5 },
+        { "term": "seo", "weight": 5 },
+        { "term": "aeo", "weight": 5 },
+        { "term": "geo", "weight": 4 },
+        { "term": "content", "weight": 3 },
+        { "term": "authority hub", "weight": 5 },
+        { "term": "service page", "weight": 5 },
+        { "term": "pillar", "weight": 4 },
+        { "term": "organic growth", "weight": 4 },
+        { "term": "organic ranking", "weight": 5 },
+        { "term": "ranking", "weight": 3 },
+        { "term": "copy", "weight": 3 },
+        { "term": "authored", "weight": 4 },
+        { "term": "keyword", "weight": 3 }
+      ],
+      "artifact_manifest": [
+        "Verified client positioning, audience, offer, and primary source set",
+        "Current search, competitor, and existing-content evidence with dates",
+        "Topic map, intent, internal links, and cannibalization decision",
+        "Draft content in the required format and client voice",
+        "Brand, legal/factual, SEO, accessibility, and rendering QA",
+        "Publication or review package with status explicitly labeled"
+      ],
+      "prepare_now": [
+        "Confirm the exact page, topic, intent, and existing canonical URL",
+        "Gather current first-party evidence and approved brand sources",
+        "Define the content and QA contract before drafting"
+      ],
+      "human_gates": [
+        "Unsupported legal or performance claims, client sign-off, CMS access, or publication without standing approval"
+      ]
+    },
+    {
+      "id": "creative-media-package",
+      "label": "Creative image, social, animation, audio, or video package",
+      "description": "A brand-specific media deliverable with source assets, output specs, visual review, and final render verification.",
+      "signals": [
+        { "term": "video", "weight": 5 },
+        { "term": "videos", "weight": 5 },
+        { "term": "animation", "weight": 5 },
+        { "term": "social clip", "weight": 5 },
+        { "term": "social graphic", "weight": 5 },
+        { "term": "image", "weight": 3 },
+        { "term": "images", "weight": 3 },
+        { "term": "graphic", "weight": 3 },
+        { "term": "graphics", "weight": 3 },
+        { "term": "template", "weight": 2 },
+        { "term": "templates", "weight": 2 },
+        { "term": "reel", "weight": 4 },
+        { "term": "audiobook", "weight": 4 },
+        { "term": "logo", "weight": 3 },
+        { "term": "cinematic", "weight": 4 },
+        { "term": "3d", "weight": 5 },
+        { "term": "outro", "weight": 4 },
+        { "term": "podcast", "weight": 4 },
+        { "term": "showcase", "weight": 3 },
+        { "term": "realtor templates", "weight": 5 }
+      ],
+      "artifact_manifest": [
+        "Exact brand, campaign, audience, message, and source-asset manifest",
+        "Aspect ratio, duration, resolution, file format, and channel requirements",
+        "Storyboard, shot list, image prompts, or template map appropriate to the medium",
+        "Editable source and final exports",
+        "Frame, copy, audio, subtitle, color, and artifact QA receipts",
+        "Verified final delivery file and channel-specific handoff"
+      ],
+      "prepare_now": [
+        "Resolve final specs and approved assets before generation",
+        "Build the smallest storyboard or template map",
+        "Reserve output names and QA checkpoints"
+      ],
+      "human_gates": [
+        "Unapproved likeness or brand use, public posting, paid generation, or missing final-render verification"
+      ]
+    },
+    {
+      "id": "workflow-automation-system",
+      "label": "Workflow, automation, agent, or operating-system build",
+      "description": "A deterministic orchestration package with explicit sources, routes, handoffs, evaluator gates, retries, evidence, and human boundaries.",
+      "signals": [
+        { "term": "automation", "weight": 6 },
+        { "term": "workflow", "weight": 6 },
+        { "term": "pipeline", "weight": 5 },
+        { "term": "agent", "weight": 4 },
+        { "term": "registry", "weight": 5 },
+        { "term": "batch", "weight": 3 },
+        { "term": "operations", "weight": 4 },
+        { "term": "radar", "weight": 5 },
+        { "term": "knowledge base", "weight": 4 },
+        { "term": "operating system", "weight": 5 }
+      ],
+      "artifact_manifest": [
+        "Workflow objective, owner, authority, and stop conditions",
+        "Source adapters, canonical identifiers, and freshness contract",
+        "Router and explicit handoff schema for each step",
+        "Evaluator, retry, timeout, idempotency, and circuit-breaker rules",
+        "State, receipts, observability, rollback, and recovery path",
+        "Dry-run and acceptance evidence with external actions still governed"
+      ],
+      "prepare_now": [
+        "Freeze the trigger, input, output, and canonical write authority",
+        "Choose the smallest sequential, router, orchestrator, or evaluator pattern that fits",
+        "Define handoffs and failure states before wiring tools"
+      ],
+      "human_gates": [
+        "New connector consent, credentials, external delivery, canonical queue mutation, spend, or irreversible account changes"
+      ]
+    },
+    {
+      "id": "sales-outreach-campaign",
+      "label": "Prospect, franchise, outreach, or sales-campaign package",
+      "description": "A source-verified prospect or opportunity package that separates research, assets, drafts, authority, and actual outreach.",
+      "signals": [
+        { "term": "outreach", "weight": 6 },
+        { "term": "prospect", "weight": 5 },
+        { "term": "prospects", "weight": 5 },
+        { "term": "franchise email", "weight": 7 },
+        { "term": "franchise emails", "weight": 7 },
+        { "term": "email expansion", "weight": 6 },
+        { "term": "webinar", "weight": 4 },
+        { "term": "workshop", "weight": 4 },
+        { "term": "growth opportunity", "weight": 5 },
+        { "term": "pre sale", "weight": 4 },
+        { "term": "campaign", "weight": 3 }
+      ],
+      "artifact_manifest": [
+        "Exact prospect or client identity with authoritative first-party evidence",
+        "Fit, offer, location, contact, and deduplication record",
+        "Required preview, audit, prototype, or supporting asset package",
+        "Channel-specific draft with evidence freshness and uncertainty",
+        "QA for routing, claims, links, personalization, and brand separation",
+        "Explicit send-authority and delivery receipt kept separate from preparation"
+      ],
+      "prepare_now": [
+        "Resolve exact identities and remove duplicates before drafting",
+        "Collect the authoritative site, logo, offer, and fit evidence",
+        "Prepare the reviewable asset and draft package without sending"
+      ],
+      "human_gates": [
+        "Email or Slack send authority, ad spend, list purchase, public posting, or uncertain prospect identity"
+      ]
+    },
+    {
+      "id": "paid-media-optimization",
+      "label": "Paid-media, conversion, or lead-performance work package",
+      "description": "A read-first advertising and lead-quality package that reconciles platform delivery, tracking, and real outcomes before recommending changes.",
+      "signals": [
+        { "term": "paid media", "weight": 7 },
+        { "term": "google ads", "weight": 7 },
+        { "term": "meta ads", "weight": 7 },
+        { "term": "lsa", "weight": 5 },
+        { "term": "call volume", "weight": 5 },
+        { "term": "lead performance", "weight": 5 },
+        { "term": "campaign performance", "weight": 4 },
+        { "term": "media dashboard", "weight": 5 },
+        { "term": "pixel", "weight": 4 }
+      ],
+      "artifact_manifest": [
+        "Exact client, brand, account, channel, reporting window, and conversion definition",
+        "Read-only platform delivery, spend, traffic, and event evidence",
+        "Tracking-health and CRM, call, form, booking, or lead-quality reconciliation",
+        "Separate channel findings with inaccessible fields marked pending",
+        "Recommendation, risk, expected measurement, and rollback contract",
+        "Reviewable report or change preview; budget and campaign mutations remain gated"
+      ],
+      "prepare_now": [
+        "Resolve the exact account and reporting window",
+        "Verify tracking and downstream outcomes before interpreting conversion counts",
+        "Draft the read-only audit and proposed measurement plan"
+      ],
+      "human_gates": [
+        "Budget, bidding, targeting, creative, billing, conversion-action, or account changes"
+      ]
+    },
+    {
+      "id": "client-communication-handoff",
+      "label": "Client communication, meeting, approval, or final handoff package",
+      "description": "A concise client-ready packet that resolves the exact thread, decision, attachments, owner, and delivery state before any send.",
+      "signals": [
+        { "term": "client communications", "weight": 6 },
+        { "term": "client handoff", "weight": 6 },
+        { "term": "meeting notes", "weight": 5 },
+        { "term": "approval status", "weight": 5 },
+        { "term": "paid trial terms", "weight": 5 },
+        { "term": "terms", "weight": 3 },
+        { "term": "final handoff", "weight": 6 },
+        { "term": "closeout", "weight": 4 }
+      ],
+      "artifact_manifest": [
+        "Exact client, sender identity, thread, recipients, and decision requested",
+        "Current evidence and attachment manifest",
+        "Client-ready draft or meeting brief in Dillon's voice",
+        "Open decisions, owners, dates, and dependencies",
+        "Brand, facts, routing, quoted-history, and signature QA",
+        "Draft, sent, live, blocked, or unverified state readback"
+      ],
+      "prepare_now": [
+        "Read the full exact thread and resolve sender and client identity",
+        "Collect only the current decision evidence and attachments",
+        "Prepare the clean draft or handoff without sending"
+      ],
+      "human_gates": [
+        "External send, client sign-off, recipient ambiguity, or account mismatch"
+      ]
+    },
+    {
+      "id": "research-audit-decision-brief",
+      "label": "Research, audit, scorecard, or decision brief",
+      "description": "A bounded evidence package that separates verified facts, modeled inference, unknowns, and the next decision.",
+      "signals": [
+        { "term": "audit", "weight": 5 },
+        { "term": "analysis", "weight": 4 },
+        { "term": "research", "weight": 4 },
+        { "term": "readiness", "weight": 3 },
+        { "term": "reconciliation", "weight": 4 },
+        { "term": "decision brief", "weight": 6 },
+        { "term": "scorecard", "weight": 4 },
+        { "term": "plan", "weight": 3 },
+        { "term": "evidence", "weight": 2 },
+        { "term": "status", "weight": 2 }
+      ],
+      "artifact_manifest": [
+        "Question, scope, owner, decision, and freshness cutoff",
+        "Primary evidence ledger with exact source locators",
+        "Verified facts, inferences, contradictions, and unknowns kept separate",
+        "Analysis or comparison method",
+        "Recommendation with risks and alternatives",
+        "Decision-ready brief and verification status"
+      ],
+      "prepare_now": [
+        "Freeze the question and evidence window",
+        "Identify authoritative sources and unavailable fields",
+        "Define the acceptance test for a decision-ready answer"
+      ],
+      "human_gates": [
+        "Consequential account, spend, legal, financial, delivery, or publication decisions"
+      ]
+    }
+  ],
+  "recurrences": [
+    {
+      "id": "bok-law-firm-weekly-designed-content",
+      "client_id": "bok-law-firm",
+      "profile_id": "bok-weekly-designed-content-kit",
+      "cadence": "weekly",
+      "anchor_date": "2026-09-01",
+      "confidence": 0.96,
+      "source_refs": [
+        "user://2026-09-02/predictive-work-planner-scope",
+        "client-operations://registry/clients.json#bok-law-firm",
+        "client-operations://clients/bok-law-firm/context/operating-context.md#recurring-work-patterns",
+        "client-operations://clients/bok-law-firm/deliverables/2026-09-01-three-blogs"
+      ],
+      "note": "Three designed topics and generated image backgrounds are expected from the latest verified pattern and Dillon's instruction; the exact current packet overrides the count."
+    }
+  ]
+}

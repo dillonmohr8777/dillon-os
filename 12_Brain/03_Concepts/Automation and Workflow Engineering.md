@@ -2,7 +2,7 @@
 note_type: concept
 status: active
 created: 2026-08-01
-updated: 2026-08-15
+updated: 2026-09-01
 domain: automation
 maturity: operational
 summary: Reliable automation is a stateful, idempotent, observable workflow with exact routing, evidence, verification, approval boundaries, readback, and recovery.
@@ -16,6 +16,8 @@ source_refs:
   - "[[12_Brain/04_Decisions/2026-07-30 - Adopt gated intelligence stack]]"
   - "[[04_SOPs/Communication Intelligence Ingestion]]"
   - "[[12_Brain/01_Captures/2026-08-15 - Chase AI Obsidian command center]]"
+  - "[[12_Brain/03_Concepts/Specialist Forecast Router]]"
+  - "[[12_Brain/04_Decisions/2026-09-01 - Route numeric forecasts to a specialist]]"
 tags:
   - brain
   - concept
@@ -36,7 +38,8 @@ flowchart LR
     Trigger["Trigger"] --> Intake["Bounded intake"]
     Intake --> Normalize["Normalize and dedupe"]
     Normalize --> Route["Exact route and policy"]
-    Route --> Work["Perform bounded work"]
+    Route --> Forecast["Optional forecast specialist"]
+    Forecast --> Work["Perform bounded work"]
     Work --> Verify["Deterministic and independent verification"]
     Verify --> Gate["Human or policy gate"]
     Gate --> Act["Authorized side effect"]
@@ -44,7 +47,11 @@ flowchart LR
     Readback --> Ledger["Outcome, evidence, and next review"]
 ```
 
-Every stage should be inspectable and resumable.
+Every stage should be inspectable and resumable. The forecast stage is
+optional evidence. It follows [[Specialist Forecast Router]] and never
+authorizes send, spend, publish, or account changes. Chronos-2 is the first
+licensed sandbox canary but remains unpromoted; TimesFM-3.0 weights stay off
+client series until a commercial license path exists.
 
 ## Workflow contract
 
@@ -257,3 +264,5 @@ are sufficient.
 - Logs that contain secrets or raw client communication.
 - A background job that floods the primary task with routine chatter.
 - Configuration presence being treated as runtime health.
+- An LLM guessing next week's spend, leads, or fill rate from prose.
+- A forecast artifact treated as campaign enablement or a conversion result.

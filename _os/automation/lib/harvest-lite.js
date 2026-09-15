@@ -36,6 +36,7 @@
  */
 
 const { auditTier0 } = require('./site-audit');
+const { classifySite } = require('./site-liveness');
 const { httpGet } = require('./net');
 
 /** Words that mark a heading as navigation furniture rather than real copy. */
@@ -240,18 +241,60 @@ async function harvestLite(url, opts = {}) {
   }
 
   const images = [];
-  const seenSrc = new Set();
-  const pushImage = (src, alt) => {
+  const seenSrc = new Map();
+
+  // Where an image sits is better evidence than what it is called. A real
+  // header logo is very often /wp-content/uploads/cropped-header-1.png with the
+  // business name as its alt text, and the filename-only picker in
+  // harvest-images scored that as "not a logo" -- which is why businesses whose
+  // logos demonstrably exist (fmberkinc.com, speckschicken.com both ship one)
+  // came back `logo_not_found` and could never reach the exact-logo gate.
+  const rangesFor = (open, close, cap) => {
+    const out = [];
+    for (const m of html.matchAll(open)) {
+      const end = html.indexOf(close, m.index);
+      if (end !== -1 && end - m.index < cap) out.push([m.index, end]);
+    }
+    return out;
+  };
+  const headerRanges = rangesFor(/<header\b[^>]*>/gi, '</header>', 20000);
+  // An anchor pointing at the site root wrapping an image is the single most
+  // reliable logo convention on the open web.
+  const homeAnchorRanges = rangesFor(
+    /<a\b[^>]*\bhref\s*=\s*["'](?:\/|https?:\/\/[^"'\/]+\/?)["'][^>]*>/gi, '</a>', 2000);
+  const inRange = (i, ranges) => ranges.some(([a, b]) => i >= a && i <= b);
+
+  const HINT_RANK = { 'jsonld-logo': 4, 'class-brand': 3, 'home-anchor': 2, header: 1, '': 0 };
+  const hintFor = (index, tag) => {
+    if (/\b(?:class|id)\s*=\s*["'][^"']*\b(?:logo|brand|site-?id|masthead|navbar-brand)\b/i.test(tag)) return 'class-brand';
+    if (inRange(index, homeAnchorRanges)) return 'home-anchor';
+    if (inRange(index, headerRanges)) return 'header';
+    return '';
+  };
+
+  const pushImage = (src, alt, hint = '') => {
     if (!src || /^data:/i.test(src)) return;
     // An unsubstituted template placeholder is not a URL. These 404 and, worse,
     // crowd out real candidates because they de-duplicate to a single entry.
     if (/[{}]|%7[bB]|%7[dD]/.test(src)) return;
-    if (seenSrc.has(src)) return;
-    seenSrc.add(src);
-    images.push({ src, alt: alt || '' });
+    const existing = seenSrc.get(src);
+    if (existing) {
+      // The same asset can appear in the masthead and again in the footer. Keep
+      // the strongest evidence rather than whichever came first in the markup.
+      if (HINT_RANK[hint] > HINT_RANK[existing.hint]) {
+        existing.hint = hint;
+        if (alt && !existing.alt) existing.alt = alt;
+      }
+      return;
+    }
+    const record = { src, alt: alt || '', hint };
+    seenSrc.set(src, record);
+    images.push(record);
   };
 
-  for (const tag of html.match(/<img\b[^>]*>/gi) || []) {
+  for (const m of html.matchAll(/<img\b[^>]*>/gi)) {
+    const tag = m[0];
+    const hint = hintFor(m.index, tag);
     const alt = (tag.match(/\balt=["']([^"']*)/i) || [])[1] || '';
     let picked = '';
     for (const attr of LAZY_ATTRS) {
@@ -266,7 +309,7 @@ async function harvestLite(url, opts = {}) {
       if (ss) picked = widestFromSrcset(ss) || '';
     }
     if (!picked) picked = (tag.match(/\bsrc=["']([^"']+)/i) || [])[1] || '';
-    pushImage(picked, alt);
+    pushImage(picked, alt, hint);
   }
 
   // <source> inside <picture> carries the real asset when <img> is a fallback.
@@ -292,8 +335,8 @@ async function harvestLite(url, opts = {}) {
   // through the same byte-fetch/provenance path as <img> assets.
   const addJsonLdLogos = (value) => {
     if (!value || typeof value !== 'object') return;
-    if (typeof value.logo === 'string') pushImage(value.logo, 'logo');
-    else if (value.logo && typeof value.logo === 'object') pushImage(value.logo.url || value.logo.contentUrl, 'logo');
+    if (typeof value.logo === 'string') pushImage(value.logo, 'logo', 'jsonld-logo');
+    else if (value.logo && typeof value.logo === 'object') pushImage(value.logo.url || value.logo.contentUrl, 'logo', 'jsonld-logo');
     for (const child of Object.values(value)) addJsonLdLogos(child);
   };
   for (const block of facts.jsonLd || []) addJsonLdLogos(block);
@@ -313,9 +356,16 @@ async function harvestLite(url, opts = {}) {
     limitations.unshift(`only ${wordCount} words readable — too thin to ground 1,200 words of new copy`);
   }
 
+  // Classify the URL itself before anything downstream tries to read a brand
+  // off it. A parked 114-byte redirect and a real homepage are both "HTTP 200
+  // with no images", and telling them apart is what stops dead domains eating
+  // the daily logo budget.
+  const liveness = classifySite(html, { status: 200 });
+
   return {
     source: 'harvest-lite',
     siteUrl: url,
+    liveness,
     finalUrl: audit.finalUrl || url,
     officialSocialUrls: [...html.matchAll(/<a\b[^>]*\bhref=["']([^"']+)["']/gi)]
       .map(m => { try { return new URL(m[1], audit.finalUrl || url).href; } catch { return ''; } })

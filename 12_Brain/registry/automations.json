@@ -323,7 +323,41 @@
       ],
       "external_actions": false,
       "notes": "Read-only source collection. Curated summaries and locators only; no raw archives, secrets, cross-client writes, sends, posts, labels, archives, publishing, spend, or account changes. Failed connectors do not advance their checkpoint. Registered through the supported Codex scheduler on 2026-08-03.",
-      "status": "active-scheduled"
+      "status": "active-scheduled",
+      "owner": "codex-windows",
+      "owner_note": "Single owner since 2026-09-01: Codex scheduled automation on the Windows box. See 12_Brain/04_Decisions/2026-09-01 - Daily comms single owner.md"
+    },
+    {
+      "id": "daily-communications-brain-workflow-def",
+      "name": "Daily communications brain — Dillon OS workflow definition (reference)",
+      "lane": "intelligence",
+      "tier": 0,
+      "cadence": "not scheduled",
+      "command": "node _os/automation/bin/communication-ingest.js --from <communication-run.json>",
+      "path": "_os/automation/workflows/daily-communications-brain.json",
+      "inputs": [
+        "12_Brain/schemas/daily-communication-run.json"
+      ],
+      "outputs": [],
+      "external_actions": false,
+      "superseded_by": "daily-communications-brain",
+      "notes": "kept as reference definition, not scheduled",
+      "status": "deprecated"
+    },
+    {
+      "id": "daily-morning-orchestrator-dry-board",
+      "name": "Daily morning orchestrator (dry board)",
+      "lane": "intelligence",
+      "tier": 0,
+      "cadence": "not scheduled",
+      "command": "Codex heartbeat automation daily-morning-orchestrator-dry-board",
+      "path": "11_Agents/Rockbot Operating System/workflow-estate/codex-automations/daily-morning-orchestrator-dry-board/memory.md",
+      "inputs": [],
+      "outputs": [],
+      "external_actions": false,
+      "superseded_by": "daily-communications-brain",
+      "notes": "morning dry board folded into the Codex daily-comms run",
+      "status": "deprecated"
     },
     {
       "id": "obsidian-guard-dog",
@@ -373,27 +407,6 @@
       "external_actions": false,
       "notes": "Archives every finalized weekly and monthly report with source provenance and SHA-256 integrity. Raw exports and ambiguous client routes fail closed. Ingestion does not imply or authorize external delivery.",
       "status": "active-scheduled"
-    },
-    {
-      "id": "claude-loop",
-      "name": "Claude operating-team dispatcher (Tier-0 read-only allowlist)",
-      "lane": "infrastructure",
-      "tier": 0,
-      "cadence": "every 15 min via Claude-Autonomous-Daily-Driver",
-      "stale_after_hours": 2,
-      "command": "node _os/automation/bin/claude-loop.js [--routine ID] [--execute] [--fixture] [--json] [--no-evidence]",
-      "inputs": [
-        "11_Agents/claude-operating-team.json",
-        "12_Brain/queue/claude-loop-*.jsonl"
-      ],
-      "outputs": [
-        "12_Brain/queue/claude-loop-<date>.jsonl",
-        "12_Brain/state/claude-routines/<ID>.json",
-        "12_Brain/state/claude-loop.json"
-      ],
-      "external_actions": false,
-      "notes": "Node port of System/scripts/Invoke-ClaudeLoop.ps1 (now a thin wrapper). 8 fail-closed gates, 9 stages, receipts, cadence-scoped dedupe, checkpoints with generated_at, lease, circuit breaker. `learn` is a required output: every executed routine records a concrete lesson or an explicit no-finding in its receipt. Never sends, publishes, deploys, spends, commits, or writes canonical client state.",
-      "status": "implemented"
     },
     {
       "id": "agent-craft-brief",
@@ -449,22 +462,55 @@
       "note": "Refuses forbidden port 9222 with exit 3 and marks chrome_isolated not-live unless the process on the port really runs a claude-chrome profile. probe/recommend describe agent-only rungs (WebFetch, WebSearch, Firecrawl) that a CLI cannot drive."
     },
     {
-      "id": "outreach-ledger",
-      "name": "Outreach engine Stage 8 learning ledger",
-      "lane": "outreach",
+      "id": "marketing-chief-twice-daily-brief",
+      "name": "Marketing Chief 9 AM and 5 PM operational brief (OmniRoute + Sites health)",
+      "lane": "infrastructure",
       "tier": 0,
-      "cadence": "daily",
-      "command": "node _os/automation/bin/outreach-ledger.js",
+      "cadence": "daily at 9:00 AM and 5:00 PM America/New_York",
+      "command": "Codex heartbeat automation marketing-chief-twice-daily-brief",
+      "path": "11_Agents/Rockbot Operating System/workflow-estate/codex-automations/marketing-chief-twice-daily-brief/memory.md",
       "inputs": [
-        "02_Campaigns/AI Site Builder Outreach Engine/batches/*/prospects.csv"
+        "C:/Users/dillo/.codex/skills/omniroute-gateway/SKILL.md",
+        "ChatGPT Sites connector project appgprj_6a61488852308191ba5cfb03ff59178f",
+        "MarketingChief-SitesBridge scheduled task state",
+        "C:/Users/dillo/Documents/Codex/projects/client-operations/AGENTS.md"
       ],
       "outputs": [
-        "12_Brain/state/outreach-ledger.json",
-        "Daily-Briefs/outreach-ledger.md"
+        "read-only evidence brief (not delivered to Marketing Chief chat)",
+        "11_Agents/Rockbot Operating System/workflow-estate/codex-automations/marketing-chief-twice-daily-brief/memory.md run log"
       ],
       "external_actions": false,
-      "notes": "Read-only aggregation. Reports 'not measured' for absent columns and omits rates with a zero denominator; never reports a missing column as zero conversion. Self-check: --selftest.",
-      "status": "implemented"
+      "owner": "codex-windows",
+      "notes": "automation.toml status=ACTIVE with a real DAILY BYHOUR=9,17 rrule and dated run history through 2026-08-12; this is the twice-daily brief that actually runs on schedule. Read-only OmniRoute + ChatGPT Sites/SitesBridge health check, not an inbox/client/content brief.",
+      "status": "active-scheduled",
+      "note": "Codex scheduled automation (09:00/17:00) checking OmniRoute/ChatGPT-Sites infra health. Reviewed 2026-09-01 against am-report: not a duplicate; kept separate pending Dillon's confirmation."
+    },
+    {
+      "id": "am-report",
+      "name": "AM report (Claude Code skill: inbox, client pulse, directives, content pipeline)",
+      "lane": "intelligence",
+      "tier": 0,
+      "cadence": "on-demand, intended each morning",
+      "command": "/am-report",
+      "path": ".claude/skills/am-report/SKILL.md",
+      "inputs": [
+        "Dashboard.md",
+        "Daily-Briefs/ (newest file)",
+        "System/OS Config.md",
+        "00_Inbox/ including 00_Inbox/slack/",
+        "01_Clients/",
+        "03_Content/"
+      ],
+      "outputs": [
+        "Daily-Briefs/am-report-YYYY-MM-DD.md",
+        "Dashboard.md ## Today section"
+      ],
+      "external_actions": false,
+      "superseded_by": null,
+      "notes": "No automation/cron registration and no Daily-Briefs/am-report-*.md file has ever been produced as of 2026-09-01, so it has no schedule evidence to claim active-scheduled. NOTE: content is not a duplicate of marketing-chief-twice-daily-brief (inbox/client/content vs. OmniRoute/Sites infra health) -- flagged for human review of this pairing, not a functional replacement. Kept as an on-demand skill.",
+      "status": "implemented",
+      "owner": "claude-code-skill",
+      "note": "On-demand Claude Code skill, run by Dillon; never cron-scheduled. Reviewed 2026-09-01 against marketing-chief-twice-daily-brief: different content (morning inbox/client/content brief vs infra health), so not collapsed. Dillon to confirm whether one should absorb the other."
     },
     {
       "id": "daily-sweep",
@@ -491,29 +537,6 @@
       ],
       "external_actions": false,
       "notes": "Local evidence only: no network, no model, no credential, no canonical client write. Exit 2 is a successful run reporting bad news (missed day, stale artifact, undelivered brief, absent cadence run, lying ledger row, unscheduled driver, or a counter that fell from non-zero to zero). Exit 1 is the script breaking. Backfills MISSED rows for every day it was skipped, so a machine that was powered off still produces a written gap rather than silence. Self-check: --selftest.",
-      "status": "implemented"
-    },
-    {
-      "id": "weekly-netlify-report-rebuild",
-      "name": "Weekly Netlify client report rebuild and deploy",
-      "lane": "reporting",
-      "tier": 1,
-      "cadence": "weekly, Monday 09:00 America/New_York, via Codex cron",
-      "command": "Codex automation weekly-netlify-report-rebuild",
-      "inputs": [
-        "client-operations/clients/*/deliverables/* dated in the prior Mon-Sun window",
-        "dillon-os/12_Brain/07_Reviews/* dated in the prior Mon-Sun window",
-        "live Google Ads and Analytics reads for in-scope accounts",
-        "weekly-report-dashboard/palettes.json (the logo gate)"
-      ],
-      "outputs": [
-        "weekly-report-dashboard/live/client-report-content-<date>.json",
-        "weekly-report-dashboard deploy tree, redeployed to Netlify site 0094c232-ba9e-429b-bcd0-df407b7137b5",
-        "a git commit + push on the weekly-report-dashboard repo",
-        "an approval-queue.md line when the new week contradicts a prior client-facing claim"
-      ],
-      "external_actions": true,
-      "notes": "AUTO PUBLISHES to the public internet weekly with no human review step, on Dillon's explicit instruction 2026-09-14. Never sends a client email or posts to Slack; those stay manual. Client inclusion is gated by the renderer's own verified-logo requirement, the same gate that excluded Deborah Mara on launch day, so a missing logo silently excludes a client rather than blocking the whole run. Must never run in the same window as the older weekly-client-marketing-reports automation (a different PDF+draft pipeline that also touches this folder); that one should stay paused. Full behavioural spec in ~/.codex/automations/weekly-netlify-report-rebuild/automation.toml.",
       "status": "implemented"
     }
   ],

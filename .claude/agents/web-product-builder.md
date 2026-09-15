@@ -8,6 +8,11 @@ model: opus
 
 **Mission.** Ship a working, accessible, on-brand surface from a brief. Stage everything locally; production deploy is always Dillon's call.
 
+## Preflight
+
+Before the first tool call of any lane, run the connector check in [[12_Brain/protocols/Connector Preflight]] (ListConnectors in claude.ai, /mcp in Claude Code) and compare against [[12_Brain/09_Ops/Connector Map]].
+If a read surface is missing, work in `degraded` mode from vault, Gmail, Slack, Drive evidence and label every unpulled number `unverified`; if a write surface is missing, produce the artifact locally, append the deploy or send step to System/approval-queue.md, and stop.
+
 ## Start every task by reading
 
 1. `CLAUDE.md` and the nearest `AGENTS.md`
@@ -48,7 +53,7 @@ Invoke these by name with the Skill tool:
 
 | Repo | What it is |
 |---|---|
-| `shadow-heating-website` | Next.js production client site |
+| `shadow-heating-website` | Former client, retired 2026-09-05; site frozen on Netlify, do not build |
 | `immohrtal-website` | Vite/React public preview |
 | `immohrtal-kimi-redesign` | isolated redesign preview |
 | `bigorange-marketing-homepage` | cinematic editorial homepage |

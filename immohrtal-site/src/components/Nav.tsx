@@ -25,8 +25,8 @@ export function Nav({ home = true, base = './' }: { home?: boolean; base?: strin
   return (
     <nav
       aria-label="Main"
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled ? 'glass-panel border-x-0 border-t-0' : 'border-b border-transparent'
+      className={`site-nav fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${home ? 'site-nav-home' : ''} ${
+        scrolled ? 'is-scrolled glass-panel border-x-0 border-t-0' : 'is-over-hero border-b border-transparent'
       }`}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
@@ -46,8 +46,7 @@ export function Nav({ home = true, base = './' }: { home?: boolean; base?: strin
             <a
               key={label}
               href={href}
-              className="font-mono text-[11px] uppercase tracking-[0.22em] no-underline transition-colors hover:text-[#141922]"
-              style={{ color: 'var(--dim)' }}
+              className="nav-link font-mono text-[11px] uppercase tracking-[0.22em] no-underline transition-colors"
             >
               {label}
             </a>

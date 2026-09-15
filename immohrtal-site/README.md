@@ -39,7 +39,8 @@ final until you change them.
 | **Album audio (MP3s)** | `public/audio/` (e.g. `01-signal.mp3`) | Set each track's `src` in `src/content/album.ts` (e.g. `'/audio/01-signal.mp3'`). Play buttons, sticky player, and the audio-reactive spine + visualizer light up automatically. |
 | **Cover art** | `public/cover.jpg` | Set `artist.coverArt = '/cover.jpg'`. Until then a generated placeholder cover renders. |
 | **Logo** | Already wired: `public/logo.jpg` renders in the hero box, nav, and loader | Swap the file to update it everywhere at once. |
-| **Artist photo (hero)** | `public/artist.jpg` | Set `artist.heroImage = '/artist.jpg'`. It renders huge under the hero lockup with the hover pop (Mac Miller style). |
+| **Opening campaign film** | `public/video/dance-with-the-delusional-hero.mp4` | Autoplays muted in the first viewport with an accessible sound control. Keep the matching poster beside it for reduced-motion visitors and loading. |
+| **Artist photo** | `public/artist.jpg` | Retained as the canonical press and structured-data portrait even though the home opening is now video-led. |
 | **Streaming links** | — | Fill the `href` for Spotify / Apple Music / YouTube / SoundCloud / Pre-Save (DistroKid hyperfollow) in `platforms`. A `null` href shows the platform as "SOON". |
 | **Socials + booking** | — | Swap the `@immohrtal` handles and `booking@` / `press@` emails in `socials` / `contact`. |
 

@@ -5,6 +5,9 @@
       "headers": {
         "Authorization": "Bearer ${env:LANDINGFOLIO_TOKEN}"
       }
+    },
+    "higgsfield": {
+      "url": "https://mcp.higgsfield.ai/mcp"
     }
   }
 }

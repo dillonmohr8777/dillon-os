@@ -2,6 +2,19 @@
 
 // One fail-closed contract for registry, dashboard, CSV and the Python selector.
 const LOGO_TTL_DAYS = 45;
+// Two ways a logo earns `verified`, and the audit trail always says which.
+//
+// `visual_review` is a person looking at the mark. `automated_pixel_audit` is
+// lib/logo-audit.js decoding the bitmap and counting transparent pixels; it is
+// admissible only alongside the measurements it claims to have taken, which is
+// why it carries extra required evidence below rather than fewer checks.
+//
+// Before this existed the only supply of verified logos was a hand review. One
+// ran on 2026-09-05, produced exactly 20 rows, and the same day's build consumed
+// all 20 — after which the active pool was 0 and the daily builder failed with
+// exit code 1 every morning while the sweep re-fetched 60 logos a day and
+// verified none of them.
+const VALIDATION_METHODS = new Set(['visual_review', 'automated_pixel_audit']);
 const SOCIAL_HOSTS = new Set(['facebook.com', 'fb.com', 'instagram.com', 'twitter.com', 'x.com', 'linkedin.com', 'tiktok.com', 'youtube.com', 'pinterest.com']);
 const text = value => String(value ?? '').trim();
 const exactFlag = value => value === true || value === 'exact';
@@ -30,7 +43,20 @@ function assessLogoEligibility(prospect = {}, { now = Date.now() } = {}) {
   if (e.status !== 'verified') return hold(e.reason || 'logo_verification_pending', e.status === 'rejected' ? 'rejected' : 'pending');
   if (!exactFlag(e.identity_match)) return hold('business_identity_unverified');
   if (!exactFlag(e.exact_match)) return hold('exact_logo_match_unverified');
-  if (e.logo_role !== 'business_logo' || e.validation_method !== 'visual_review' || !text(e.validated_by)) return hold('logo_visual_validation_missing');
+  if (e.logo_role !== 'business_logo' || !VALIDATION_METHODS.has(e.validation_method) || !text(e.validated_by)) return hold('logo_visual_validation_missing');
+  if (e.validation_method === 'automated_pixel_audit') {
+    // An automated pass must show its working. These are the numbers
+    // lib/logo-audit.js measured; absent or implausible values hold the row
+    // rather than inheriting the trust a human review would have carried.
+    const ratio = Number(e.transparent_ratio);
+    const content = Number(e.content_ratio);
+    if (!Number.isFinite(ratio) || ratio < 0.02) return hold('logo_transparency_unmeasured');
+    if (!Number.isFinite(content) || content < 0.02) return hold('logo_content_unmeasured');
+    if (!text(e.transformation)) return hold('logo_transformation_unrecorded');
+    // Background removal rewrites bytes, so the delivered asset can no longer be
+    // the source hash. It must still name the source it came from.
+    if (e.background_removed === true && !/^[a-f0-9]{64}$/i.test(text(e.output_sha256))) return hold('logo_output_hash_missing');
+  }
   const asset = webUrl(e.source_url), page = webUrl(e.source_page);
   if (!asset || !page) return hold('logo_source_url_invalid', 'rejected');
   if (/favicon|(?:^|[\/_-])(?:placeholder|spacer|tracking|pixel|facebook|instagram|twitter|linkedin|yelp|paypal)[-_.\/]/i.test(asset.pathname)) return hold('logo_is_icon_or_platform_asset', 'rejected');
@@ -50,7 +76,7 @@ function assessLogoEligibility(prospect = {}, { now = Date.now() } = {}) {
   } else return hold('logo_source_kind_unverified', 'rejected');
   // Allowlisted projection: never publish arbitrary review notes or local paths.
   const result = { eligible: true, status: 'verified', reason: `${e.source_kind}_exact` };
-  for (const key of ['source_kind', 'source_url', 'source_page', 'source_sha256', 'fetched_at', 'fetch_status', 'bytes', 'image_format', 'width', 'height', 'usable', 'transparent', 'clarity_reviewed', 'display_width', 'display_height', 'logo_role', 'validation_method', 'validated_by', 'identity_match', 'exact_match', 'profile_url', 'account_match', 'linked_from_official_site']) {
+  for (const key of ['source_kind', 'source_url', 'source_page', 'source_sha256', 'fetched_at', 'fetch_status', 'bytes', 'image_format', 'width', 'height', 'usable', 'transparent', 'clarity_reviewed', 'display_width', 'display_height', 'logo_role', 'validation_method', 'validated_by', 'identity_match', 'exact_match', 'profile_url', 'account_match', 'linked_from_official_site', 'transformation', 'background_removed', 'transparent_ratio', 'content_ratio', 'edge_transparent_ratio', 'output_sha256', 'output_bytes']) {
     if (e[key] !== undefined) result[key] = e[key];
   }
   return result;
@@ -94,7 +120,7 @@ function dedupeDecisions(prospects, { priorBuilds } = {}) {
     return decision;
   });
 }
-module.exports = { LOGO_TTL_DAYS, SOCIAL_HOSTS, assessLogoEligibility, applyLogoEligibility, exactFlag, hostOf, sameSite, isSocialUrl, prospectKeys, dedupeDecisions };
+module.exports = { LOGO_TTL_DAYS, VALIDATION_METHODS, SOCIAL_HOSTS, assessLogoEligibility, applyLogoEligibility, exactFlag, hostOf, sameSite, isSocialUrl, prospectKeys, dedupeDecisions };
 
 // The external selector calls the same validator rather than duplicating it.
 if (require.main === module) {

@@ -17,3 +17,217 @@
 .opening-line .ink-word:last-of-type {
   margin-right: 0.04em;
 }
+
+/* The campaign film is now the opening scene. It deliberately covers the
+   WebGL world until the visitor enters the rest of the album experience. */
+.home-hero {
+  min-height: 0;
+  padding: 0;
+  background: var(--paper);
+}
+
+.home-hero::before {
+  display: none;
+}
+
+.hero-video-stage {
+  position: relative;
+  z-index: 3;
+  isolation: isolate;
+  display: grid;
+  min-height: 100svh;
+  width: 100%;
+  place-items: center;
+  align-content: center;
+  gap: clamp(0.85rem, 2.2vh, 1.4rem);
+  padding: clamp(5.75rem, 10vh, 7rem) clamp(0.5rem, 3vw, 2rem) clamp(4.5rem, 8vh, 6rem);
+  color: var(--card);
+  background: var(--ink);
+}
+
+.hero-video-stage::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 50% 45%, rgba(31, 158, 255, 0.16), transparent 45%),
+    linear-gradient(180deg, rgba(20, 25, 34, 0.08), rgba(20, 25, 34, 0.86));
+}
+
+.hero-video-frame {
+  position: relative;
+  width: min(78svh, 900px, calc(100vw - 1rem));
+  aspect-ratio: 1;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: clamp(0.9rem, 2vw, 1.5rem);
+  background: var(--ink);
+  box-shadow:
+    0 2.5rem 7rem rgba(0, 0, 0, 0.42),
+    0 0 0 1px rgba(31, 158, 255, 0.1) inset;
+}
+
+.hero-video-frame::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, transparent 72%, rgba(5, 7, 12, 0.24));
+}
+
+.hero-video-media {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.hero-video-meta {
+  display: flex;
+  width: min(78svh, 900px, calc(100vw - 1rem));
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  text-align: left;
+}
+
+.hero-video-kicker {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: clamp(0.58rem, 1.4vw, 0.7rem);
+  letter-spacing: 0.16em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.hero-sound-control {
+  display: inline-flex;
+  min-height: 44px;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  padding: 0 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 999px;
+  color: var(--card);
+  background: rgba(255, 255, 255, 0.08);
+  font-family: var(--font-mono);
+  font-size: 0.67rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: border-color 180ms ease, background-color 180ms ease, transform 180ms ease;
+}
+
+.hero-sound-control:hover {
+  border-color: rgba(255, 255, 255, 0.48);
+  background: rgba(255, 255, 255, 0.13);
+  transform: translateY(-1px);
+}
+
+.hero-sound-indicator {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--faint);
+}
+
+.hero-sound-indicator.is-live {
+  background: var(--green);
+  box-shadow: 0 0 0.8rem rgba(23, 168, 107, 0.72);
+}
+
+.hero-video-scroll {
+  position: absolute;
+  right: clamp(1rem, 3vw, 2rem);
+  bottom: clamp(1rem, 2.5vh, 1.8rem);
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.hero-video-scroll::after {
+  content: '↓';
+  margin-left: 0.65rem;
+}
+
+.hero-copy {
+  margin-inline: auto;
+  max-width: 72rem;
+  padding-top: clamp(4.5rem, 9vw, 7rem);
+  padding-bottom: clamp(5rem, 10vw, 8rem);
+}
+
+.nav-link {
+  color: var(--dim);
+}
+
+.nav-link:hover {
+  color: var(--ink);
+}
+
+.site-nav-home.is-over-hero .nav-logo-img {
+  filter: invert(1) brightness(1.15) contrast(1.22) saturate(0.85);
+  mix-blend-mode: screen;
+  opacity: 0.92;
+}
+
+.site-nav-home.is-over-hero .nav-link {
+  color: var(--card);
+  opacity: 0.76;
+}
+
+.site-nav-home.is-over-hero .nav-link:hover {
+  opacity: 1;
+}
+
+.site-nav-home.is-over-hero .btn-chrome {
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: none;
+}
+
+#rail {
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(1rem, -50%);
+  transition: opacity 240ms ease, transform 240ms ease;
+}
+
+#rail.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(0, -50%);
+}
+
+@media (max-width: 640px) {
+  .hero-video-stage {
+    align-content: center;
+    padding-inline: 0.5rem;
+  }
+
+  .hero-video-meta {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .hero-sound-control {
+    width: 100%;
+  }
+
+  .hero-video-scroll {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-video-media {
+    object-position: center;
+  }
+}

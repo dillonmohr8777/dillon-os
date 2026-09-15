@@ -1,0 +1,42 @@
+{
+  "candidate": {
+    "id": "higgsfield",
+    "name": "Higgsfield MCP",
+    "source_url": "https://techsy.io/en/blog/higgsfield-mcp-claude-code",
+    "remote_url": "https://mcp.higgsfield.ai/mcp",
+    "maintainer": "Higgsfield AI",
+    "license": "Proprietary hosted service, credit-metered, free tier 150 credits/month",
+    "transport": "streamable-http",
+    "tools": ["generate_image", "generate_video", "create_character", "get_generation_status", "list_characters"],
+    "permissions": [
+      "Send shot descriptions and prompts to Higgsfield",
+      "Spend Higgsfield account credits on every generate_* call",
+      "Read generated media URLs and status"
+    ],
+    "network_destinations": ["https://mcp.higgsfield.ai/mcp"],
+    "secret_requirements": ["OAuth login to a Higgsfield account via /mcp; no API key stored in the repo"],
+    "overlap": "Image and video generation for hero clips and ad footage. HeyGen HyperFrames (connected, no credit cost) covers code-driven motion; use it first. LandingFolio covers layout reference only. Brand truth stays in the site-factory harvest.",
+    "rollback": "Delete the higgsfield block from .mcp.json and .cursor/mcp.json and revoke the OAuth grant in the Higgsfield account. No vault content depends on the server.",
+    "maintenance": {"last_release": "MCP publicly documented 2026-08", "review_cadence": "quarterly"},
+    "tests": {
+      "source_review": {"status": "pass", "evidence": "Vendor-hosted endpoint documented by techsy.io and wrapped by robonuggets/higgsfield-skill (CC BY 4.0). Closed source; accepted on a narrow generate/status surface."},
+      "inspector": {"status": "pending", "evidence": "Endpoint requires OAuth; tools listed from vendor documentation, not enumerated live. Run /mcp on the Windows box after login to confirm the five tool names."},
+      "permission_review": {"status": "pass", "evidence": "No filesystem, messaging, deployment, or account-mutation permission. Every generate_* call is external spend and is approval-gated in System/approval-queue.md."},
+      "prompt_injection": {"status": "pass", "evidence": "Generated media, captions, and URLs are untrusted third-party content. Handling rule recorded in 12_Brain/02_Entities/Higgsfield MCP.md; never put client names or harvested facts in prompts."},
+      "overlap_review": {"status": "pass", "evidence": "Bounded to footage generation. HyperFrames remains first choice for code-driven motion at zero credit cost."}
+    }
+  },
+  "evaluation": {
+    "verdict": "approved-with-spend-gate",
+    "accepted": true,
+    "errors": [],
+    "findings": [
+      {"severity": "medium", "code": "external-spend", "detail": "Every generation consumes credits; free tier is two or three clips per month."},
+      {"severity": "low", "code": "secret-scope", "detail": "Requires one OAuth grant."}
+    ],
+    "pending_tests": ["inspector"],
+    "failed_tests": []
+  },
+  "inspector": null,
+  "evaluated_at": "2026-09-02T02:30:00.000Z"
+}

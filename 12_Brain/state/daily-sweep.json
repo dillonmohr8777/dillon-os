@@ -2,35 +2,35 @@
   "schema": "12_Brain/schemas/daily-sweep.json",
   "automation_id": "daily-sweep",
   "version": 1,
-  "date": "2026-09-15",
-  "generated_at": "2026-09-15T14:00:01.764Z",
+  "date": "2026-09-14",
+  "generated_at": "2026-09-14T16:12:54.073Z",
   "generated_by": "_os/automation/bin/daily-sweep.js",
-  "previous_run": "2026-09-15T13:57:41.578Z",
+  "previous_run": "2026-09-14T16:10:24.521Z",
   "days_since_previous_sweep": 0,
-  "repos_scanned": 68,
+  "repos_scanned": 66,
   "freshness": [
     {
       "id": "daily-brief",
-      "path": "Daily-Briefs/2026-09-15.md",
+      "path": "Daily-Briefs/2026-09-14.md",
       "owner": "Codex cron daily-communications-brain (07:00 local)",
-      "state": "missing",
-      "age_hours": null,
+      "state": "fresh",
+      "age_hours": 5.2,
       "budget_hours": 26
     },
     {
       "id": "communications-brain",
       "path": "12_Brain/state/daily-communications-brain.json",
       "owner": "Codex cron daily-communications-brain",
-      "state": "stale",
-      "age_hours": 26.9,
+      "state": "fresh",
+      "age_hours": 5.1,
       "budget_hours": 26
     },
     {
       "id": "claude-daily-driver",
       "path": "12_Brain/state/claude-daily-driver.json",
       "owner": "Task Scheduler Claude-Autonomous-Daily-Driver (PT15M)",
-      "state": "stale",
-      "age_hours": 6.6,
+      "state": "fresh",
+      "age_hours": 0.1,
       "budget_hours": 2
     },
     {
@@ -38,15 +38,15 @@
       "path": "12_Brain/state/claude-loop.json",
       "owner": "claude-loop.js via the daily driver",
       "state": "fresh",
-      "age_hours": 8.9,
+      "age_hours": 10.8,
       "budget_hours": 26
     },
     {
       "id": "immohrtal-plan",
-      "path": "Daily-Briefs/plan-2026-09-15.md",
+      "path": "Daily-Briefs/plan-2026-09-14.md",
       "owner": "Task Scheduler Immohrtal-Crew",
       "state": "fresh",
-      "age_hours": 8.3,
+      "age_hours": 0.5,
       "budget_hours": 26
     },
     {
@@ -54,7 +54,7 @@
       "path": "12_Brain/state/frontmatter-validate.json",
       "owner": "frontmatter-validate.js, on demand + pre-pulse",
       "state": "fresh",
-      "age_hours": 69.8,
+      "age_hours": 48,
       "budget_hours": 168
     },
     {
@@ -62,11 +62,15 @@
       "path": "System/approval-queue.md",
       "owner": "every session that gates an external action",
       "state": "fresh",
-      "age_hours": 6.9,
+      "age_hours": 1.2,
       "budget_hours": 72
     }
   ],
   "daily_brief_days": [
+    {
+      "date": "2026-09-01",
+      "present": true
+    },
     {
       "date": "2026-09-02",
       "present": true
@@ -118,20 +122,16 @@
     {
       "date": "2026-09-14",
       "present": true
-    },
-    {
-      "date": "2026-09-15",
-      "present": false
     }
   ],
   "clients": {
     "registry_present": true,
     "registry_total": {
-      "value": 27,
+      "value": 24,
       "source_ref": "client-operations/registry/clients.json"
     },
     "registry_active": {
-      "value": 25,
+      "value": 22,
       "source_ref": "client-operations/registry/clients.json"
     },
     "vault_client_dirs": {
@@ -142,67 +142,27 @@
       "value": true,
       "source_ref": "01_Clients/Client Index.md"
     },
-    "roster_disagreement": null
+    "roster_disagreement": "registry 24 vs 27 vault directories"
   },
   "shipped": [
     {
       "repo": "dillon-os",
       "path": "C:\\Users\\dillo\\repos\\dillon-os",
-      "commits": 46,
+      "commits": 5,
       "subjects": [
-        "cadence(daily): daily-sweep",
-        "Register the weekly Netlify report auto-publish automation",
-        "inventory: correct spend to 75c and record the research calibration",
-        "Rewrite Managed Agents inventory for the full nine-role fleet, commit the local delivery bridge",
-        "gitignore: bridge journal and downloaded deliveries"
+        "cadence(daily): run ledger for 2026-09-14",
+        "cadence(daily): unfiled-sweep",
+        "cadence(daily): approval-queue-diff",
+        "cadence(daily): heartbeat",
+        "Add cadence layer: three manifests, one driver, ledger-gated"
       ]
     },
     {
       "repo": "momentum-slack-agent",
       "path": "C:\\Users\\dillo\\repos\\momentum-slack-agent",
-      "commits": 2,
+      "commits": 1,
       "subjects": [
-        "Retire this runtime: Workmate is the decided Slack surface",
         "Slack AI teammate on the Agents API, hosted sandbox instead of Docker"
-      ]
-    },
-    {
-      "repo": "mac-mini-handoff",
-      "path": "C:\\Users\\dillo\\Documents\\Codex\\mac-mini-handoff",
-      "commits": 4,
-      "subjects": [
-        "Correct the stale Puttery access claim in the first-boot file",
-        "Correct the Onsite tracking claim; add the Nexla call card",
-        "Mark what was resolved the same day the kit was written",
-        "Mac mini bootstrap kit and daily-sweep handoff"
-      ]
-    },
-    {
-      "repo": "weekly-report-dashboard",
-      "path": "C:\\Users\\dillo\\Documents\\Codex\\weekly-report-dashboard",
-      "commits": 1,
-      "subjects": [
-        "Initial commit: the weekly client report system"
-      ]
-    },
-    {
-      "repo": "client-operations",
-      "path": "C:\\Users\\dillo\\Documents\\Codex\\projects\\client-operations",
-      "commits": 7,
-      "subjects": [
-        "state: restore portfolio-priorities parity with the registry",
-        "gt-clinic: stage the kickoff email as a real Gmail draft",
-        "intake: packet on three stale registry records",
-        "Commit the weekend's client deliverables",
-        "release(omega): conversion tracking correction deployed, 6aa845a6c3319f697d18df73"
-      ]
-    },
-    {
-      "repo": "website-design-engine",
-      "path": "C:\\Users\\dillo\\Documents\\Codex\\projects\\website-design-engine",
-      "commits": 1,
-      "subjects": [
-        "Initial commit: local AI website design engine"
       ]
     }
   ],
@@ -210,18 +170,26 @@
     {
       "repo": "client-operations",
       "path": "C:\\Users\\dillo\\Documents\\Codex\\projects\\client-operations",
-      "dirty_files": 3437,
+      "dirty_files": 3447,
       "has_remote": true,
-      "unpushed_commits": 7,
-      "risk": "7 commit(s) exist only on this machine"
+      "unpushed_commits": 0,
+      "risk": "3447 uncommitted file(s)"
     },
     {
       "repo": "dillon-os",
       "path": "C:\\Users\\dillo\\repos\\dillon-os",
-      "dirty_files": 730,
+      "dirty_files": 696,
       "has_remote": true,
-      "unpushed_commits": 13,
-      "risk": "13 commit(s) exist only on this machine"
+      "unpushed_commits": 5,
+      "risk": "5 commit(s) exist only on this machine"
+    },
+    {
+      "repo": "website-design-engine",
+      "path": "C:\\Users\\dillo\\Documents\\Codex\\projects\\website-design-engine",
+      "dirty_files": 129,
+      "has_remote": false,
+      "unpushed_commits": null,
+      "risk": "NO REMOTE — a disk loss or a machine move loses this entirely"
     },
     {
       "repo": "dillon-os",
@@ -350,108 +318,124 @@
       "has_remote": true,
       "unpushed_commits": null,
       "risk": "branch has no upstream — nothing is pushing it"
+    },
+    {
+      "repo": "momentum-slack-agent",
+      "path": "C:\\Users\\dillo\\repos\\momentum-slack-agent",
+      "dirty_files": 0,
+      "has_remote": false,
+      "unpushed_commits": null,
+      "risk": "NO REMOTE — a disk loss or a machine move loses this entirely"
+    },
+    {
+      "repo": "momentum-design-system",
+      "path": "C:\\Users\\dillo\\Documents\\Codex\\momentum-design-system",
+      "dirty_files": 0,
+      "has_remote": false,
+      "unpushed_commits": null,
+      "risk": "NO REMOTE — a disk loss or a machine move loses this entirely"
     }
   ],
   "overdue": [
     {
       "note": "01_Clients/Bar Crawl USA/overview.md",
       "due": "2026-07-15",
-      "days_overdue": 62,
+      "days_overdue": 61,
       "status": "active"
     },
     {
       "note": "01_Clients/Hope Wellness Center/overview.md",
       "due": "2026-07-15",
-      "days_overdue": 62,
+      "days_overdue": 61,
       "status": "active"
     },
     {
       "note": "01_Clients/Kimberly James Bridal/overview.md",
       "due": "2026-07-15",
-      "days_overdue": 62,
+      "days_overdue": 61,
       "status": "active"
     },
     {
       "note": "01_Clients/Omega Landscaping/overview.md",
       "due": "2026-07-15",
-      "days_overdue": 62,
+      "days_overdue": 61,
       "status": "active"
     },
     {
       "note": "01_Clients/Onsite Concrete/overview.md",
       "due": "2026-07-15",
-      "days_overdue": 62,
+      "days_overdue": 61,
       "status": "active"
     },
     {
       "note": "01_Clients/Replenish/overview.md",
       "due": "2026-07-15",
-      "days_overdue": 62,
+      "days_overdue": 61,
       "status": "paused"
     },
     {
       "note": "01_Clients/Shadow HVAC/overview.md",
       "due": "2026-07-15",
-      "days_overdue": 62,
+      "days_overdue": 61,
       "status": "active"
     },
     {
       "note": "01_Clients/Tags 2 Go/overview.md",
       "due": "2026-08-08",
-      "days_overdue": 38,
+      "days_overdue": 37,
       "status": "active"
     },
     {
       "note": "01_Clients/BigOrange Marketing/Custom Home Builder Pillar Project.md",
       "due": "2026-08-10",
-      "days_overdue": 36,
+      "days_overdue": 35,
       "status": "active"
     },
     {
       "note": "01_Clients/BigOrange Marketing/overview.md",
       "due": "2026-08-10",
-      "days_overdue": 36,
+      "days_overdue": 35,
       "status": "active"
     },
     {
       "note": "12_Brain/05_Projects/2026-07-29 - Complete Dillon OS second brain.md",
       "due": "2026-08-23",
-      "days_overdue": 23,
+      "days_overdue": 22,
       "status": "active"
     },
     {
       "note": "01_Clients/Cindy May Christmas/overview.md",
       "due": "2026-09-01",
-      "days_overdue": 14,
+      "days_overdue": 13,
       "status": "active"
     }
   ],
   "waiting_on_human": {
     "present": true,
     "source_ref": "System/approval-queue.md",
-    "lines": 199,
-    "open_checkboxes": 114,
+    "lines": 133,
+    "open_checkboxes": 110,
     "risk_mentions": {
-      "low": 10,
-      "high": 50,
-      "mediumium": 20,
-      "medium": 34
+      "low": 14,
+      "high": 47,
+      "mediumium": 23,
+      "medium": 33
     },
-    "last_modified": "2026-09-15T07:04:35.418Z",
+    "last_modified": "2026-09-14T15:02:28.457Z",
     "note": "An item in the queue is a request, never a permission."
   },
   "machine": {
     "platform": "win32 10.0.26200",
     "hostname": "DESKTOP-4AHKEC4",
-    "uptime_hours": 6.5,
+    "uptime_hours": 2.1,
     "total_memory_gb": 63.8,
-    "free_memory_gb": 34.2,
+    "free_memory_gb": 36.3,
     "unclean_shutdowns_30d": 16,
     "unclean_shutdowns_source": "Windows System event log, Id 6008"
   },
   "cadence": {
     "ledger_present": true,
-    "ledger_rows": 24,
+    "ledger_rows": 3,
     "first_ledger_day": "2026-09-14",
     "days_with_no_ledger_entry": [],
     "ledger_claims_missing_artifacts": [],
@@ -459,7 +443,7 @@
       {
         "cadence": "daily",
         "present": true,
-        "jobs": 5,
+        "jobs": 3,
         "disabled": 0
       },
       {
@@ -477,30 +461,25 @@
     ],
     "scheduler": {
       "mechanism": "Windows Task Scheduler",
-      "registered": [
-        "Cadence-daily",
-        "Cadence-monthly",
-        "Cadence-sweep-heartbeat",
-        "Cadence-weekly"
-      ]
+      "registered": []
     }
   },
   "silent": {
     "counters": {
-      "shipped_repos": 6,
-      "at_risk_repos": 18,
+      "shipped_repos": 2,
+      "at_risk_repos": 21,
       "overdue_notes": 12,
-      "approval_open_checkboxes": 114,
-      "fresh_artifacts": 4
+      "approval_open_checkboxes": 110,
+      "fresh_artifacts": 7
     },
     "suspect": []
   },
   "counters": {
-    "shipped_repos": 6,
-    "at_risk_repos": 18,
+    "shipped_repos": 2,
+    "at_risk_repos": 21,
     "overdue_notes": 12,
-    "approval_open_checkboxes": 114,
-    "fresh_artifacts": 4
+    "approval_open_checkboxes": 110,
+    "fresh_artifacts": 7
   },
   "source_refs": [
     "12_Brain/registry/automations.json",
@@ -520,14 +499,9 @@
     {
       "date": "2026-09-14",
       "status": "ran",
-      "ran_at": "2026-09-14T23:00:01.496Z"
-    },
-    {
-      "date": "2026-09-15",
-      "status": "ran",
-      "ran_at": "2026-09-15T14:00:01.764Z"
+      "ran_at": "2026-09-14T16:12:54.073Z"
     }
   ],
   "exit_code": 2,
-  "verdict": "sweep-gaps=0 stale=3 silent=0 missed-briefs=5/14 cadence-absent=0"
+  "verdict": "sweep-gaps=0 stale=0 silent=0 missed-briefs=4/14 cadence-absent=0 cadence-UNSCHEDULED"
 }

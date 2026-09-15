@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "last_updated": "2026-07-12",
+  "last_updated": "2026-09-05",
   "description": "Current paid-media and reporting clients only. Paths resolve to the active client roster.",
   "clients": [
     {
@@ -25,25 +25,11 @@
       "dataPattern": "_os/reporting/data/onsite-concrete-{period}.json"
     },
     {
-      "slug": "shadow-hvac",
-      "name": "Shadow Heating & Cooling",
-      "status": "active_confirmed_source_check_required",
-      "overview": "01_Clients/Shadow HVAC/overview.md",
-      "dataPattern": "_os/reporting/data/shadow-hvac-{period}.json"
-    },
-    {
       "slug": "replenish",
       "name": "Replenish",
       "status": "active_fifth_slot_confirmation_required",
       "overview": "01_Clients/Replenish/overview.md",
       "dataPattern": "_os/reporting/data/replenish-{period}.json"
-    },
-    {
-      "slug": "fagan-painting",
-      "name": "Fagan Painting",
-      "status": "active_pre_scale",
-      "overview": "01_Clients/Fagan Painting/overview.md",
-      "dataPattern": "_os/reporting/data/fagan-painting-{period}.json"
     },
     {
       "slug": "capsule-and-tonic",

@@ -135,6 +135,46 @@ placeholder copy. A failing result blocks deployment. A pass must still be follo
 by visual review, functional QA, maker/checker review, and exact Netlify target
 verification.
 
+## Forecast specialist sandbox
+
+Route and run the Apache-licensed Chronos-2 canary with the verified local
+Windows runtime:
+
+```powershell
+_os/automation/bin/forecast-chronos2.ps1 `
+  -RequestPath _os/automation/fixtures/forecast/synthetic-chronos2-multitarget-request.json `
+  -OutputPath "$env:LOCALAPPDATA/Codex/Forecasting/chronos2-run.json"
+```
+
+The command validates the request before loading the model, pins the exact
+trusted Python and Torch stack, and reads the checkpoint from the local cache.
+It remains research-only and fails closed on client series, stale or unverified
+inputs, incomplete known-future covariates, runtime drift, or an unpromoted use.
+Its point and p10-p90 output is evidence only; it cannot send, publish, spend,
+or make a conversion claim.
+
+### Rolling-origin backtest
+
+A `rolling: true` entry in `CLIENT_RESEARCH_APPROVALS` freezes one sanitized
+series and admits only requests whose targets equal the first `k` approved
+values, with `k` between `min_context` and `length - horizon`. The driver
+builds every origin, routes it, runs Chronos-2, validates each run, and scores
+it against persistence and the trailing-four-week mean:
+
+```powershell
+node _os/automation/bin/forecast-backtest.js --dry-run   # route only
+node _os/automation/bin/forecast-backtest.js `
+  --series <approved weekly csv>   # blocks if history changed, exit 2 if extended
+```
+
+Output lands under `$env:LOCALAPPDATA/Codex/Forecasting/backtests/<experiment>/`
+as `backtest-receipt.json` and `backtest-summary.md`. The receipt's decision is
+`promotion-candidate-pending-human-gate` only when Chronos beats persistence on
+at least two-thirds of origins and mean p10-p90 coverage sits between 70% and
+90%. It never promotes anything by itself. The Python runner in
+`~/.codex/tools/chronos2-forecast.py` carries a mirror of the approval table
+and must be updated together with the router.
+
 ## Other existing commands
 
 ```powershell

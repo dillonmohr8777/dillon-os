@@ -52,7 +52,7 @@ const VERDICT_LABEL = {
 
 /** Queues, in the order they appear in the switcher. */
 const QUEUES = [
-  { key: 'rebuild', label: 'Rebuild', verdicts: ['rebuild'], sort: 'p', desc: 'Ranked by opportunity, weighted for Philadelphia. Each one earns a homepage concept — one page from their own copy and imagery, pitched as the first step of a rebuild.' },
+  { key: 'rebuild', label: 'Rebuild', verdicts: ['rebuild'], sort: 'p', desc: 'Ranked by website opportunity across Pennsylvania. Each one earns a homepage concept — one page from their own copy and imagery, pitched as the first step of a rebuild.' },
   { key: 'buildable', label: 'Buildable now', verdicts: ['rebuild'], buildableOnly: true, sort: 'p', desc: `Rebuild targets that already own enough imagery for a ${HOMEPAGE_IMAGE_SLOTS}-photo homepage concept. This is this week's batch — no asset chasing required.` },
   { key: 'verify', label: 'Needs render', verdicts: ['verify'], sort: 'lg', desc: 'Markup found no disqualifying fault, but nobody has seen the design. Not decisions yet.' },
   { key: 'polish', label: 'Polish', verdicts: ['polish'], sort: 'p', desc: 'Working sites with fixable gaps. A retainer or a paid tune-up, not a rebuild pitch.' },
@@ -306,26 +306,22 @@ function crossTab(rows) {
 /**
  * The gap worth naming in prose.
  *
- * A matrix shows you everything and therefore emphasises nothing. Philadelphia
- * is the stated priority for this pipeline, so the sentence that matters is the
- * one comparing it against whichever county the rotation has over-served.
+ * A matrix shows you everything and therefore emphasises nothing. Statewide
+ * coverage needs a compact breadth check: how many Pennsylvania counties are
+ * represented, how much of the registry sits outside the old Philly footprint,
+ * and which currently represented county is thinnest.
  */
 function coverageGap(ct) {
-  const phl = ct.areas.get('Philadelphia') || 0;
-  let biggest = null;
-  for (const [k, v] of ct.areas) {
-    if (k === 'Philadelphia') continue;
-    if (!biggest || v > biggest[1]) biggest = [k, v];
-  }
+  const oldPhillyFootprint = new Set([
+    'Philadelphia', 'Bucks County', 'Chester County', 'Delaware County', 'Montgomery County',
+  ]);
+  const outsidePhilly = [...ct.areas.entries()]
+    .filter(([area]) => !oldPhillyFootprint.has(area))
+    .reduce((sum, [, count]) => sum + count, 0);
+  const total = [...ct.areas.values()].reduce((sum, count) => sum + count, 0);
   const lines = [];
-  if (phl && biggest && biggest[1] > phl) {
-    lines.push(
-      `<strong>${esc(biggest[0])} holds ${biggest[1]} rows against Philadelphia's ${phl}</strong> — coverage is running ` +
-        `${(biggest[1] / phl).toFixed(1)}:1 away from the priority market. Point the next sweep at Philadelphia.`
-    );
-  } else if (phl && biggest) {
-    lines.push(`Philadelphia leads coverage at ${phl} rows; ${esc(biggest[0])} is next at ${biggest[1]}.`);
-  }
+  lines.push(`<strong>${ct.areas.size} Pennsylvania counties represented</strong>.`);
+  if (total) lines.push(`${outsidePhilly} rows (${Math.round((outsidePhilly / total) * 100)}%) are outside the former five-county Philly footprint.`);
   const thinAreas = [...ct.areas.entries()].sort((a, b) => a[1] - b[1]).slice(0, 1);
   const thinGroups = [...ct.groups.entries()].sort((a, b) => a[1] - b[1]).slice(0, 1);
   if (thinAreas.length) lines.push(`Thinnest county: <strong>${esc(thinAreas[0][0])}</strong> at ${thinAreas[0][1]}.`);
@@ -780,7 +776,6 @@ function renderDashboard(summary, opts = {}) {
   // disagree with what clicking the tab actually shows.
   // Counted from the projected rows so the stat and the queue tab agree.
   const buildableNow = rows.filter((r) => r.ra === 1 && r.r === 'rebuild' && r.bd === 1).length;
-  const needsRender = (s.needs_render || []).length;
   const imageryChecked = rows.filter((r) => r.bd !== null).length;
 
   const queueCounts = {};
@@ -807,47 +802,6 @@ function renderDashboard(summary, opts = {}) {
       return { k, n, stalled };
     });
   const funnelMax = Math.max(1, ...funnel.map((f) => f.n), s.total || 1);
-
-  // The headline is derived, not written.
-  //
-  // `funnel` already marks the first stage holding a zero while work is stacked
-  // up behind it. That stage is the constraint, and naming it is the whole job
-  // of this page — a morning sheet that opens with four healthy-looking totals
-  // while nothing has shipped in a week is worse than no sheet. So the masthead
-  // reads off the funnel: when the build step unblocks and the bottleneck moves
-  // to mail, the sentence moves with it instead of quietly going stale.
-  //
-  // Lifecycle keys are internal state names. These are the words for them.
-  // Two forms, because one does not fit both slots: the headline counts things
-  // that have happened ("0 built") and the sentence names a stage ("the build
-  // step"). Using the participle in both produces "the built step".
-  const STAGE_WORD = {
-    new: 'discovered',
-    graded: 'graded',
-    queued_build: 'briefed',
-    built: 'built',
-    mailed: 'mailed',
-    client: 'won',
-  };
-  const STAGE_NOUN = {
-    new: 'discovery',
-    graded: 'grading',
-    queued_build: 'brief',
-    built: 'build',
-    mailed: 'mail',
-    client: 'close',
-  };
-  const stageWord = (k) => STAGE_WORD[k] || String(k).replace(/_/g, ' ');
-  const stageNoun = (k) => STAGE_NOUN[k] || String(k).replace(/_/g, ' ');
-  const stallIdx = funnel.findIndex((f) => f.stalled);
-  const stall = stallIdx >= 0 ? funnel[stallIdx] : null;
-  // The nearest upstream stage that actually holds work — that is the number
-  // being held back, and the one worth setting at display size.
-  const feeder = stall ? funnel.slice(0, stallIdx).reverse().find((f) => f.n > 0) : null;
-  // Stated rather than hardcoded: the sweep has long since outgrown the collar
-  // counties, and a masthead that still says "Philadelphia metro" over 40
-  // counties of data is the kind of small lie that costs a pitch.
-  const scopeLabel = areaEntries.length > 8 ? 'Pennsylvania statewide' : 'Philadelphia metro';
 
   const graded = Number(s.graded) || 0;
   const ungraded = Number(s.ungraded) || 0;
@@ -887,15 +841,9 @@ function renderDashboard(summary, opts = {}) {
     rows,
   };
 
-  const html = `<meta charset="utf-8">
-<title>Prospect Radar — NeedMomentum</title>
+  const html = `<title>Prospect Radar — NeedMomentum</title>
 <meta name="robots" content="noindex,nofollow">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<!-- Netlify serves text/html;charset=utf-8, which is why the absence of this
-     line never showed up in production. Anywhere else — a plain static server,
-     or the file opened from disk — every em dash, arrow and middot on the page
-     turned to mojibake, including inside business names. The document declares
-     its own encoding rather than trusting the host to. -->
 <!-- This page names hundreds of real businesses next to a judgement about their
      website. It is an internal worksheet and must never be indexed, whatever
      host it ends up on. lib/netlify.js refuses to publish it without this. -->
@@ -910,20 +858,6 @@ function renderDashboard(summary, opts = {}) {
      it, and the print block below overrides both. */
   ${cssVariables({ theme: 'dark' })}
   :root { --bg-panel: var(--panel); --bg-sunk: var(--sunk); --accent: var(--brand-ink); }
-  /* Type, corrected. brand.js asks for "Avenir Next" first, but on Windows that
-     falls through to Segoe UI Variable Display while --sans falls through to
-     Segoe UI — near-identical faces, so the display/body pairing was a no-op on
-     the machine this is actually read on.
-
-     The instrument voice is the mono face instead. It is already in the stack,
-     costs no external request, and is what a graded readout wants: every score,
-     count and delta on this page is a figure you compare down a column, which
-     is the one job tabular mono does better than any proportional face. Prose
-     stays in the sans so the page never reads as a terminal. */
-  :root {
-    --readout: var(--mono);
-    --tick: rgba(255,255,255,.07);
-  }
   ${LOCKUP_CSS}
 
   * { box-sizing: border-box; }
@@ -937,12 +871,10 @@ function renderDashboard(summary, opts = {}) {
     -webkit-font-smoothing: antialiased;
     min-height: 100vh;
   }
-  /* One wash, from above, and nothing else. The previous ground used three
-     coloured pools including a gold one; gold now means exactly one thing on
-     this page (the constraint) and cannot also be ambient weather. A single
-     cool wash lights the top of the sheet so panels read as objects resting on
-     a surface, and the field goes flat by the time the table starts — which is
-     where reading begins and atmosphere stops helping. */
+  /* Depth without an image: two brand-tinted pools bleeding in from the top
+     corners — blue from the left, gold from the right — over a flat base. Fixed,
+     so it reads as a lit field the content sits on rather than something that
+     scrolls with the table. */
   body::before {
     content: '';
     position: fixed;
@@ -950,8 +882,9 @@ function renderDashboard(summary, opts = {}) {
     pointer-events: none;
     z-index: -1;
     background:
-      radial-gradient(1400px 520px at 12% -18%, var(--field-blue), transparent 72%),
-      linear-gradient(180deg, rgba(42,128,194,.05), transparent 420px);
+      radial-gradient(1150px 660px at 2% -12%, var(--field-blue), transparent 66%),
+      radial-gradient(1050px 620px at 100% 2%, var(--field-gold), transparent 64%),
+      radial-gradient(780px 540px at 46% 110%, var(--field-blue), transparent 70%);
   }
   /* A whisper of grain over the gradients. Large flat washes band on cheap
      panels; the texture breaks the ramp up without reading as a pattern. */
@@ -969,7 +902,7 @@ function renderDashboard(summary, opts = {}) {
      anyone who asked for less of it. */
   @media (prefers-reduced-motion: reduce) {
     * { transition: none !important; animation: none !important; }
-    .qtab:hover, tr.row:hover, .fchip:hover, .btn:hover { transform: none !important; }
+    .stat:hover, .qtab:hover, tr.row:hover, .fchip:hover, .btn:hover { transform: none !important; }
   }
   .wrap { max-width: 1280px; margin: 0 auto; padding: 0 24px 88px; }
   a { color: var(--brand-ink); text-decoration-thickness: 1px; text-underline-offset: 2px; }
@@ -983,25 +916,13 @@ function renderDashboard(summary, opts = {}) {
   .topbar__meta { font-family: var(--mono); font-size: 11.5px; color: var(--fg-faint); text-align: right; line-height: 1.6; }
   .topbar__meta b { color: var(--fg-mid); font-weight: 500; }
 
-  /* Masthead — a readout, not a hero.
-
-     The headline is computed from the funnel, not written, so it names whatever
-     is actually stuck today instead of going stale the week the bottleneck
-     moves. The figures are set in the mono face at display size: this is the
-     only place on the page where a number is meant to be read at a glance from
-     across a desk rather than compared against its neighbours. */
-  .mast { padding: 22px 0 4px; }
-  .mast h1 { font-family: var(--readout); font-size: clamp(30px, 4.6vw, 52px); font-weight: 600;
-    letter-spacing: -0.045em; margin: 0; line-height: 1.02; display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 18px; }
-  .mast h1 span { white-space: nowrap; }
-  .mast h1 i { font-style: normal; color: var(--fg-faint); font-weight: 400; }
-  /* The stalled stage is the only gold on the page above the table. */
-  .mast h1 .stuck { color: var(--gold); }
-  .mast .lede { color: var(--fg-mid); font-size: 14.5px; max-width: 62ch; margin: 14px 0 0; }
-  .mast .lede b { color: var(--fg); font-weight: 600; }
-  .eyebrow { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--fg-faint); margin-bottom: 14px; display: flex; align-items: center; gap: 9px; }
-  .eyebrow b { color: var(--brand-ink); font-weight: 500; }
-  .eyebrow::before { content: ''; width: 18px; height: 1px; background: var(--rule-strong); flex: none; }
+  /* Masthead — a ledger heading, not a hero. */
+  .mast { padding: 26px 0 16px; display: flex; flex-wrap: wrap; align-items: flex-end; gap: 10px 24px; }
+  .mast h1 { font-family: var(--display); font-size: clamp(28px, 4vw, 40px); font-weight: 700; letter-spacing: -0.028em; margin: 0; text-wrap: balance; line-height: 1.05; }
+  .mast h1 em { font-style: normal; color: var(--brand-ink); }
+  .mast .lede { color: var(--fg-mid); font-size: 14px; max-width: 54ch; margin: 8px 0 0; }
+  .eyebrow { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--brand-ink); margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+  .eyebrow::before { content: ''; width: 22px; height: 2px; background: linear-gradient(90deg, var(--brand), var(--gold)); flex: none; border-radius: 999px; }
 
   /* Run health: silence here is how a broken sweep went unnoticed for a week. */
   .health { display: flex; flex-wrap: wrap; align-items: center; gap: 7px 18px; margin: 20px 0 0; padding: 11px 15px;
@@ -1014,29 +935,35 @@ function renderDashboard(summary, opts = {}) {
   .health--bad .health__state { color: var(--s-broken); }
   .health__err { color: var(--s-broken); flex-basis: 100%; }
 
-  /* The readings.
-
-     Previously four equal cards with a 3D tilt and a gold sheen sweep on hover.
-     Both are gone. The tilt made a set of measurements behave like a marketing
-     tile, and equal cards asserted that these four numbers carry equal weight —
-     they do not. They are supporting evidence for the headline above them, so
-     they are set as a single instrument strip: hairline-divided columns, no
-     panel, no shadow, figures in the readout face on a shared baseline so the
-     eye compares them across the row instead of landing on one box at a time. */
-  .decide { display: flex; flex-wrap: wrap; margin: 26px 0 6px; border-top: 1px solid var(--rule);
-    border-bottom: 1px solid var(--rule); }
-  .stat { flex: 1 1 190px; padding: 15px 20px 14px; position: relative; min-width: 0; }
-  .stat + .stat { box-shadow: inset 1px 0 0 var(--rule); }
-  .stat__n { font-family: var(--readout); font-size: 30px; font-weight: 600; font-variant-numeric: tabular-nums;
-    line-height: 1; letter-spacing: -0.04em; color: var(--fg); }
-  .stat__l { font-size: 12.5px; color: var(--fg-mid); margin-top: 8px; line-height: 1.35; }
-  /* A reading is coloured only when its value carries a verdict. "Mean site
-     quality" is a fact and stays neutral; a backlog that is overdue is not. */
+  /* The four numbers that decide the morning. Cards, not a fused strip — each
+     one is a separate claim and reads better with air around it. */
+  .decide { display: grid; grid-template-columns: repeat(auto-fit, minmax(168px, 1fr)); gap: 12px; margin: 22px 0 10px; perspective: 900px; }
+  .stat { background: var(--panel); padding: 16px 18px 15px; border: 1px solid var(--rule); border-radius: 10px; position: relative; overflow: hidden;
+    transform-style: preserve-3d; will-change: transform;
+    transition: transform .28s cubic-bezier(.2,.7,.3,1), box-shadow .28s ease, border-color .28s ease; }
+  /* Tilt away from the viewer's cursor side and lift — the shadow is what sells
+     it, so it grows with the rotation rather than being a constant drop. */
+  .stat:hover { transform: translateY(-4px) rotateX(6deg) scale(1.014);
+    box-shadow: 0 16px 34px -14px rgba(8,14,22,.55), 0 3px 10px -4px rgba(8,14,22,.3);
+    border-color: var(--brand); }
+  .stat:hover .stat__n { transform: translateZ(14px); }
+  .stat__n, .stat__l { transition: transform .28s cubic-bezier(.2,.7,.3,1); }
+  .stat:hover .stat__l { transform: translateZ(6px); }
+  .stat::after { content: ''; position: absolute; inset: 0; pointer-events: none; opacity: 0;
+    background: linear-gradient(115deg, transparent 38%, var(--gold-wash) 50%, transparent 62%);
+    transition: opacity .32s ease; }
+  .stat:hover::after { opacity: 1; }
+  .stat::before { content: ''; position: absolute; inset: 0 auto 0 0; width: 3px; background: var(--fg-faint); }
+  .stat__n { font-family: var(--display); font-size: 34px; font-weight: 700; font-variant-numeric: tabular-nums; line-height: 1; letter-spacing: -0.035em; }
+  .stat__l { font-size: 12.5px; color: var(--fg-mid); margin-top: 6px; line-height: 1.35; }
+  .stat--act::before { background: var(--s-decayed); }
   .stat--act .stat__n { color: var(--s-decayed); }
+  .stat--hold::before { background: var(--s-unconfirmed); }
   .stat--hold .stat__n { color: var(--s-unconfirmed); }
-  .stat--ready .stat__n { color: var(--s-strong); }
-  .stat--brand .stat__n { color: var(--fg); }
-  .stat--zero .stat__n { color: var(--fg-faint); }
+  .stat--ready::before { background: var(--gold); }
+  .stat--ready .stat__n { color: var(--gold-ink); }
+  .stat--brand::before { background: var(--brand); }
+  .stat--brand .stat__n { color: var(--brand-ink); }
 
   h2 { font-family: var(--display); font-size: 21px; font-weight: 700; margin: 46px 0 5px; letter-spacing: -0.022em; }
   h3 { font-family: var(--mono); font-size: 10px; letter-spacing: 0.11em; text-transform: uppercase; color: var(--fg-faint); margin: 0 0 9px; font-weight: 500; }
@@ -1061,7 +988,7 @@ function renderDashboard(summary, opts = {}) {
   .feed__k--up { background: color-mix(in srgb, var(--s-strong) 20%, transparent); color: var(--s-strong); }
   .feed__k--down { background: color-mix(in srgb, var(--s-decayed) 20%, transparent); color: var(--s-decayed); }
   .feed__k--flat { background: var(--sunk); color: var(--fg-faint); }
-  .feed__k--new { background: var(--brand-fill); color: var(--on-brand); font-weight: 700; }
+  .feed__k--new { background: var(--gold); color: var(--on-gold); font-weight: 700; }
   .feed__n { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .feed__where { font-family: var(--mono); font-size: 10.5px; color: var(--fg-faint); flex: none; }
   .feed__more { margin: 6px 0 0; font-family: var(--mono); font-size: 10.5px; color: var(--fg-faint); }
@@ -1070,16 +997,15 @@ function renderDashboard(summary, opts = {}) {
      so the whole thing reads as a single instrument rather than stacked blocks. */
   .work { background: var(--panel); border: 1px solid var(--rule); border-radius: 12px; overflow: hidden;
     box-shadow: 0 24px 50px -30px rgba(8,14,22,.5), 0 2px 6px -3px rgba(8,14,22,.18); position: relative; }
-  /* A single brand hairline. This was a blue-to-gold gradient; gold is the
-     constraint colour now and cannot also be chrome on a panel edge. */
-  .work::before { content: ''; position: absolute; inset: 0 0 auto 0; height: 1px; z-index: 3; background: var(--brand); }
+  .work::before { content: ''; position: absolute; inset: 0 0 auto 0; height: 2px; z-index: 3;
+    background: linear-gradient(90deg, var(--brand) 0%, var(--brand) 34%, var(--gold) 72%, var(--gold) 100%); }
   .tabs { display: flex; flex-wrap: wrap; gap: 2px; padding: 8px 10px 0; background: var(--sunk); border-bottom: 1px solid var(--rule); }
   .qtab { background: none; border: 0; border-radius: 7px 7px 0 0; padding: 9px 15px; cursor: pointer;
     font-size: 13.5px; color: var(--fg-mid); position: relative; }
   .qtab b { font-family: var(--mono); font-variant-numeric: tabular-nums; margin-left: 8px; font-weight: 400; color: var(--fg-faint); font-size: 12px; }
   .qtab { transition: background .2s ease, color .2s ease, transform .2s cubic-bezier(.2,.7,.3,1); }
   .qtab[aria-selected="true"] { background: var(--panel); color: var(--fg); font-weight: 600;
-    box-shadow: inset 0 2px 0 var(--brand), 0 -6px 16px -10px rgba(8,14,22,.5); }
+    box-shadow: inset 0 2px 0 var(--gold), 0 -6px 16px -10px rgba(8,14,22,.5); }
   .qtab[aria-selected="true"] b { color: var(--brand-ink); }
   .qtab:hover:not([aria-selected="true"]) { color: var(--fg); background: var(--brand-wash); transform: translateY(-2px); }
 
@@ -1097,11 +1023,8 @@ function renderDashboard(summary, opts = {}) {
   .btn:active { transform: translateY(0); box-shadow: none; }
   /* The one gold call-to-action on the page. Gold is a fill with ink on it,
      which is the only way it clears contrast. */
-  /* Gold on this page means "act on this": the stalled stage in the masthead and
-     the READY rows you could build today. Exporting a CSV is a utility, not the
-     thing the page is asking you to do, so it takes the brand fill instead. */
-  .btn--brand { background: var(--brand-fill); border-color: var(--brand-fill); color: var(--on-brand); font-weight: 650; }
-  .btn--brand:hover { filter: brightness(1.1); color: var(--on-brand); box-shadow: 0 8px 20px -8px rgba(42,128,194,.55); }
+  .btn--brand { background: var(--gold); border-color: var(--gold); color: var(--on-gold); font-weight: 650; }
+  .btn--brand:hover { filter: brightness(1.06); color: var(--on-gold); box-shadow: 0 8px 20px -8px rgba(255,198,59,.5); }
   .linkish { background: none; border: 0; color: var(--brand-ink); cursor: pointer; text-decoration: underline; padding: 0; font-size: inherit; }
 
   .facets { display: flex; flex-direction: column; gap: 7px; padding: 0 16px 14px; }
@@ -1132,7 +1055,7 @@ function renderDashboard(summary, opts = {}) {
   /* Nudge, not a leap: a row is 40px tall and anything larger turns a scan
      down the list into a wobble. */
   tr.row:hover { transform: translateX(3px); }
-  tr.row:hover td:first-child { box-shadow: inset 3px 0 0 var(--brand); }
+  tr.row:hover td:first-child { box-shadow: inset 3px 0 0 var(--gold); }
   tr.row--open td { background: var(--brand-wash); box-shadow: inset 3px 0 0 var(--brand); }
   .c-rank { font-family: var(--mono); color: var(--fg-faint); font-size: 11.5px; width: 38px; font-variant-numeric: tabular-nums; }
   .c-biz .biz { font-weight: 600; letter-spacing: -0.008em; }
@@ -1280,34 +1203,29 @@ function renderDashboard(summary, opts = {}) {
   </div>
 
   <header class="mast">
-    <div class="eyebrow">${esc(scopeLabel)} · <b>site quality</b></div>
-    ${
-      stall && feeder
-        ? `<h1><span>${num(feeder.n)} <i>${esc(stageWord(feeder.k))}.</i></span><span class="stuck">0 ${esc(stageWord(stall.k))}.</span></h1>
-    <p class="lede">Everything upstream is working. <b>The constraint is the ${esc(stageNoun(stall.k))} step.</b>
-    The queue below is real and graded, so the sweep is not the problem. Nothing moves until the ${esc(stageNoun(stall.k))} step clears.</p>`
-        : `<h1><span>${num(s.build_queue_size)} <i>ready to brief.</i></span><span>${num(buildableNow)} <i>buildable today.</i></span></h1>
-    <p class="lede">Two numbers per business: how good their site already is, and whether it is worth a build slot.
-    <b>A great site is a traffic pitch, not a redesign.</b></p>`
-    }
+    <div>
+      <div class="eyebrow">Pennsylvania statewide · site quality</div>
+      <h1>Who to build for <em>today</em></h1>
+      <p class="lede">Two numbers per business: how good their site already is, and whether it is worth a build slot. A great site is a traffic pitch, not a redesign.</p>
+    </div>
   </header>
 ${run ? healthStrip(run) : ''}
   <div class="decide">
-    <div class="stat stat--${needsRender > 0 ? 'act' : 'zero'}">
-      <div class="stat__n">${num(needsRender)}</div>
-      <div class="stat__l">Blocked on a render pass, no verdict yet</div>
+    <div class="stat stat--act">
+      <div class="stat__n">${num(s.build_queue_size)}</div>
+      <div class="stat__l">Homepage concepts ready to brief</div>
     </div>
-    <div class="stat stat--${buildableNow > 0 ? 'ready' : 'zero'}">
+    <div class="stat stat--ready">
       <div class="stat__n">${num(buildableNow)}</div>
-      <div class="stat__l">Buildable today, imagery already in hand</div>
+      <div class="stat__l">Buildable today — imagery already in hand</div>
     </div>
     <div class="stat stat--brand">
       <div class="stat__n">${num(s.mean_site_quality)}</div>
       <div class="stat__l">Mean site quality, graded set</div>
     </div>
-    <div class="stat stat--${Number(s.due_now) > 0 ? 'hold' : 'zero'}">
+    <div class="stat">
       <div class="stat__n">${num(s.due_now)}</div>
-      <div class="stat__l">Past their re-audit date</div>
+      <div class="stat__l">Due for a re-audit</div>
     </div>
   </div>
 
@@ -1440,8 +1358,11 @@ ${changeFeed(s)}
           )
           .join('')}
       </ul>
-      ${/* The stall used to be called out here, in the smallest type on the page.
-            It is the masthead now. Saying it twice weakens both. */ ''}
+      ${
+        (lifecycle.built || 0) === 0 && (lifecycle.queued_build || 0) > 0
+          ? `<p class="note" style="margin-top:10px"><strong>${lifecycle.queued_build} briefed, none built.</strong> Everything upstream is working; the constraint is entirely at the build step.</p>`
+          : ''
+      }
     </section>
 
     <section>
@@ -1463,13 +1384,13 @@ ${changeFeed(s)}
   <div class="rails">
     <section>
       <h2>Coverage by county</h2>
-      <p class="note">Philadelphia and the collar counties carry the local-proof advantage, so they are weighted highest in the ranking. Orange marks rebuild targets.</p>
+      <p class="note">The daily planner gives all six Pennsylvania regions a discovery lane. Counties rank equally; orange marks rebuild targets.</p>
       ${areaEntries.map(([k, v]) => coverageBar(k, v.total, v.rebuild, areaMax)).join('')}
     </section>
 
     <section>
       <h2>Coverage by vertical</h2>
-      <p class="note">Home services, medical, and legal are the high-value verticals the shipped Philadelphia batch barely touched.</p>
+      <p class="note">Home services, medical, and legal remain the highest-value verticals across the statewide pipeline.</p>
       ${groupEntries.map(([k, v]) => coverageBar(k.replace(/-/g, ' '), v.total, v.rebuild, groupMax)).join('')}
     </section>
   </div>

@@ -30,3 +30,4 @@ client truth.
 ## AI division assets
 
 - [[01_Clients/Momentum 360/AI Division Library/README|Momentum AI Division Library]]
+- [[01_Clients/Momentum 360/AI Division Library/README|AI Division Library: videos, ebooks, blogs, deck and sources]]
