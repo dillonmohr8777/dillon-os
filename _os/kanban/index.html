@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dillon OS board</title>
+<style>
+  :root {
+    --bg: #14161a; --panel: #1c1f25; --card: #23272f; --line: #2f343d; --ink: #e6e8eb; --muted: #9aa3ad;
+    --red: #e0574f; --amber: #d9a441; --green: #5cb27a; --blue: #5b9bd5; --grey: #6b7480;
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 13px;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); height: 100vh; display: flex; flex-direction: column; }
+  header { padding: 10px 16px; border-bottom: 1px solid var(--line); background: var(--panel); display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; }
+  header h1 { font-size: 15px; margin: 0; font-weight: 600; }
+  header .src { color: var(--muted); font-size: 11.5px; }
+  header .src b { color: var(--ink); font-weight: 500; }
+  header input[type=search] { background: var(--card); border: 1px solid var(--line); color: var(--ink); padding: 5px 8px; border-radius: 4px; width: 220px; }
+  header label { color: var(--muted); display: inline-flex; gap: 4px; align-items: center; }
+  header select, header button { background: var(--card); border: 1px solid var(--line); color: var(--ink); padding: 4px 8px; border-radius: 4px; }
+  #err { color: var(--red); }
+  main { flex: 1; display: grid; grid-template-columns: repeat(5, minmax(280px, 1fr)); gap: 10px; padding: 10px; overflow: auto; min-height: 0; }
+  .col { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; display: flex; flex-direction: column; min-height: 0; }
+  .col h2 { font-size: 12px; letter-spacing: .04em; text-transform: uppercase; margin: 0; padding: 9px 12px; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; color: var(--muted); }
+  .col h2 .n { color: var(--ink); }
+  .col.failed h2 { border-top: 2px solid var(--red); } .col.awaiting h2 { border-top: 2px solid var(--amber); }
+  .col.running h2 { border-top: 2px solid var(--blue); } .col.done h2 { border-top: 2px solid var(--green); } .col.scheduled h2 { border-top: 2px solid var(--grey); }
+  .cards { overflow-y: auto; padding: 8px; display: flex; flex-direction: column; gap: 6px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 5px; padding: 8px 10px; cursor: pointer; }
+  .card:hover { border-color: #3d434e; }
+  .card .top { display: flex; gap: 6px; align-items: center; margin-bottom: 4px; flex-wrap: wrap; }
+  .chip { font-size: 10px; padding: 1px 6px; border-radius: 3px; background: #2c313a; color: var(--muted); text-transform: uppercase; letter-spacing: .03em; white-space: nowrap; }
+  .chip.high { background: #4a2320; color: #f2a39e; } .chip.medium { background: #4a3a1a; color: #ecc97a; } .chip.low { background: #2c313a; }
+  .chip.ok { background: #1f3b2a; color: #9bd9b1; } .chip.failed, .chip.error { background: #4a2320; color: #f2a39e; } .chip.warn, .chip.skipped { background: #4a3a1a; color: #ecc97a; }
+  .chip.running { background: #1f3040; color: #9ec8ee; }
+  .card .title { font-weight: 500; line-height: 1.35; }
+  .card .meta { color: var(--muted); font-size: 11.5px; margin-top: 3px; line-height: 1.4; }
+  .card .flag { color: var(--amber); font-size: 11.5px; margin-top: 4px; }
+  .col.failed .card .flag { color: #f2a39e; }
+  .card .prefix { color: var(--amber); font-size: 11.5px; margin-bottom: 3px; }
+  .card .rot { color: var(--red); }
+  .card .more { display: none; margin-top: 6px; padding-top: 6px; border-top: 1px dashed var(--line); font-size: 11.5px; color: var(--muted); white-space: pre-wrap; word-break: break-word; }
+  .card.open .more { display: block; }
+  .card .more b { color: var(--ink); font-weight: 500; }
+  .card.disabled { opacity: .5; }
+  .gates { font-size: 11px; color: var(--muted); padding: 6px 12px; border-top: 1px solid var(--line); }
+  .empty { color: var(--muted); padding: 12px; font-size: 12px; }
+  @media (max-width: 1400px) { main { grid-template-columns: repeat(5, 300px); } }
+</style>
+</head>
+<body>
+<header>
+  <h1>Dillon OS board</h1>
+  <input type="search" id="q" placeholder="filter cards">
+  <label><input type="checkbox" id="showDisabled"> show disabled tasks</label>
+  <label><input type="checkbox" id="showDaemons" checked> show long-running services</label>
+  <label>refresh <select id="every"><option value="30000">30 s</option><option value="60000" selected>60 s</option><option value="300000">5 min</option><option value="0">off</option></select></label>
+  <button id="reload">reload now</button>
+  <span class="src" id="srcline"></span>
+  <span id="err"></span>
+</header>
+<main id="board"></main>
+<script>
+const COLS = [
+  ['scheduled', 'Scheduled / queued'], ['running', 'Running'], ['failed', 'Failed / stale / absent'],
+  ['awaiting', 'Awaiting Dillon'], ['done', 'Done (last 3 days)'],
+];
+const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const ago = (iso) => {
+  if (!iso) return 'never';
+  const ms = Date.now() - Date.parse(iso);
+  if (!Number.isFinite(ms)) return iso;
+  const h = ms / 3.6e6;
+  if (Math.abs(h) < 1) return `${Math.round(ms / 6e4)} min ${ms < 0 ? 'ahead' : 'ago'}`;
+  if (Math.abs(h) < 48) return `${h.toFixed(1)} h ${ms < 0 ? 'ahead' : 'ago'}`;
+  return `${(h / 24).toFixed(1)} d ${ms < 0 ? 'ahead' : 'ago'}`;
+};
+const local = (iso) => iso ? new Date(iso).toLocaleString() : '';
+const chip = (t, cls = '') => `<span class="chip ${cls}">${esc(t)}</span>`;
+
+const RENDER = {
+  approval(c) {
+    const head = c.category || c.client || c.section;
+    return {
+      top: chip(c.risk || 'no risk label', c.risk || '') + chip(head),
+      body: (c.prefix ? `<div class="prefix">${esc(c.prefix)}</div>` : '') + `<div class="title">${esc(c.title)}</div>`,
+      meta: `${esc(c.date || 'undated')} · ${c.ageDays === null ? '' : c.ageDays + ' d open'}${c.rotting ? ' <span class="rot">· rotting (&gt;14 d)</span>' : ''}${c.notes.length ? ` · ${c.notes.length} note${c.notes.length > 1 ? 's' : ''}` : ''} · line ${c.line}`,
+      more: [c.source && `<b>Source:</b> ${esc(c.source)}`, c.evidence && `<b>Evidence:</b> ${esc(c.evidence)}`,
+        ...c.notes.map((n) => `<b>Note:</b> ${esc(n)}`), `<b>Section:</b> ${esc(c.section)}`].filter(Boolean).join('\n'),
+      search: [c.title, c.category, c.client, c.prefix, c.source, c.evidence, ...c.notes].join(' '),
+    };
+  },
+  job(c) {
+    const last = c.last;
+    return {
+      top: chip('job') + chip(c.cadence) + (last ? chip(last.status, last.status) : chip('never ran', 'warn')) + (c.client ? chip(c.client) : ''),
+      body: `<div class="title">${esc(c.title)}</div>`,
+      meta: `${esc(c.id)} · last ${last ? esc(ago(last.ts)) : 'never'}` +
+        (c.driver ? ` · driver ${esc(c.driver.name)} next ${c.driver.next ? esc(ago(c.driver.next)) : 'none'}${c.driver.neverFired ? ' (never fired)' : ''}${c.driver.missed ? ` (${c.driver.missed} missed)` : ''}` : ' · no Cadence-* task found'),
+      more: [`<b>Accept:</b> ${esc(c.accept)}`, `<b>Outputs:</b> ${esc(c.outputs)}`, last && `<b>Last row:</b> ${esc(last.ts)} ${esc(last.status)} ${esc(last.artifact || '')} ${last.note ? '\n' + esc(last.note) : ''}`,
+        c.driver && `<b>Driver next run:</b> ${esc(local(c.driver.next))}`].filter(Boolean).join('\n'),
+      search: [c.id, c.title, c.accept, c.client].join(' '),
+    };
+  },
+  run(c) {
+    const l = c.latest;
+    const st = Object.entries(c.statuses).map(([k, v]) => `${k}${v > 1 ? ' x' + v : ''}`).join(', ');
+    return {
+      top: chip('run') + chip(c.cadence || '?') + chip(l.status, l.status),
+      body: `<div class="title">${esc(c.job)}</div>`,
+      meta: `${esc(c.day)} · ${c.runs} run${c.runs > 1 ? 's' : ''} (${esc(st)}) · latest ${esc(ago(l.ts))}${l.commit ? ' · ' + esc(l.commit) : ''}`,
+      more: [`<b>Artifact:</b> ${esc(l.artifact || 'null')}`, l.note && `<b>Note:</b> ${esc(l.note)}`, `<b>Ledger line:</b> ${l._line}`].filter(Boolean).join('\n'),
+      search: [c.job, l.note, l.artifact].join(' '),
+    };
+  },
+  automation(c) {
+    const a = c.automation; const s = c.state;
+    return {
+      top: chip('self-report') + chip(a.lane) + (s ? chip(s.status || 'no status', String(s.status || '').toLowerCase()) : chip('no state', 'warn')),
+      body: `<div class="title">${esc(a.name)}</div>`,
+      meta: `${esc(a.id)} · ${esc(a.cadence)}` + (s ? ` · reported ${esc(ago(s.stamp))}${s.budgetHours ? ` (budget ${s.budgetHours} h)` : ''}` : ''),
+      more: [s && s.summary && `<b>Summary:</b> ${esc(s.summary)}`, s && s.errors && s.errors.length && `<b>Errors:</b> ${esc([].concat(s.errors).join('\n'))}`,
+        s && s.counts && `<b>Counts:</b> ${esc(JSON.stringify(s.counts))}`, c.stateFile && `<b>State file:</b> ${esc(c.stateFile)}`,
+        a.command && `<b>Command:</b> ${esc(a.command)}`, a.notes && `<b>Registry notes:</b> ${esc(a.notes)}`].filter(Boolean).join('\n'),
+      search: [a.id, a.name, a.lane, s && s.summary].join(' '),
+    };
+  },
+  task(c) {
+    return {
+      top: chip('task scheduler') + chip(c.state, c.state === 'Running' ? 'running' : '') + chip(c.resultText, c.verdict),
+      body: `<div class="title">${esc(c.name)}</div>`,
+      meta: `last ${esc(ago(c.last))} · next ${c.next ? esc(ago(c.next)) : 'none'}${c.missed ? ` · ${c.missed} missed` : ''}`,
+      more: [c.desc && `<b>Description:</b> ${esc(c.desc)}`, `<b>Last run:</b> ${esc(local(c.last)) || 'never'}`, `<b>Next run:</b> ${esc(local(c.next)) || 'none'}`, `<b>Result code:</b> ${c.result}`].filter(Boolean).join('\n'),
+      search: [c.name, c.desc, c.resultText].join(' '),
+    };
+  },
+  sweep(c) {
+    return { top: chip('daily-sweep verdict', 'failed'), body: `<div class="title">${esc(c.title)}</div>`, meta: esc(c.detail), more: c.sweptAt ? `<b>Swept:</b> ${esc(c.sweptAt)}` : '', search: c.title + ' ' + c.detail };
+  },
+};
+
+let data = null;
+function render() {
+  if (!data) return;
+  const q = document.getElementById('q').value.trim().toLowerCase();
+  const showDisabled = document.getElementById('showDisabled').checked;
+  const showDaemons = document.getElementById('showDaemons').checked;
+  const open = new Set([...document.querySelectorAll('.card.open')].map((e) => e.dataset.id));
+  const main = document.getElementById('board');
+  main.innerHTML = '';
+  for (const [key, label] of COLS) {
+    const col = document.createElement('section'); col.className = `col ${key}`;
+    const cards = [];
+    for (const c of data.columns[key]) {
+      if (c.type === 'task' && c.disabled && !showDisabled) continue;
+      if (c.type === 'task' && key === 'running' && !c.next && !showDaemons) continue;
+      const r = RENDER[c.type](c);
+      if (q && !r.search.toLowerCase().includes(q)) continue;
+      cards.push(`<div class="card ${c.disabled ? 'disabled' : ''} ${open.has(c.id) ? 'open' : ''}" data-id="${esc(c.id)}">
+        <div class="top">${r.top}</div>${r.body}<div class="meta">${r.meta}</div>${c.flag ? `<div class="flag">${esc(c.flag)}</div>` : ''}<div class="more">${r.more}</div></div>`);
+    }
+    col.innerHTML = `<h2><span>${label}</span><span class="n">${cards.length}${cards.length !== data.columns[key].length ? ' / ' + data.columns[key].length : ''}</span></h2>
+      <div class="cards">${cards.join('') || '<div class="empty">nothing here</div>'}</div>` +
+      (key === 'awaiting' ? `<div class="gates">approval-queue.md: ${data.approvals.open} open, ${data.approvals.rotting} rotting · ${esc(Object.entries(data.approvals.byRisk).map(([k, v]) => `${k} ${v}`).join(', '))}<br>registry gates: ${esc(Object.entries(data.gates).map(([k, v]) => `${k}=${v}`).join(', ') || 'none')}</div>` : '');
+    main.appendChild(col);
+  }
+  const probe = data.sources['Task Scheduler'] || {};
+  document.getElementById('srcline').innerHTML =
+    `read <b>${esc(new Date(data.generated_at).toLocaleTimeString())}</b> · queue <b>${esc(ago(data.sources['System/approval-queue.md']))}</b> · ledger <b>${esc(ago(data.sources['_os/automation/cadence/run-ledger.jsonl']))}</b> · sweep <b>${esc(ago(data.sources['12_Brain/state/daily-sweep.json']))}</b> · tasks ${probe.ok ? `<b>${probe.count}</b> in ${probe.elapsedMs} ms` : `<b>probe failed</b> ${esc(probe.error || '')}`}`;
+}
+
+async function load() {
+  const err = document.getElementById('err');
+  try {
+    const r = await fetch('/api/board', { cache: 'no-store' });
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    data = await r.json(); err.textContent = ''; render();
+  } catch (e) { err.textContent = `refresh failed: ${e.message}`; }
+}
+document.getElementById('board').addEventListener('click', (e) => { const card = e.target.closest('.card'); if (card && !window.getSelection().toString()) card.classList.toggle('open'); });
+document.getElementById('q').addEventListener('input', render);
+document.getElementById('showDisabled').addEventListener('change', render);
+document.getElementById('showDaemons').addEventListener('change', render);
+document.getElementById('reload').addEventListener('click', load);
+let timer = null;
+function schedule() { clearInterval(timer); const ms = Number(document.getElementById('every').value); if (ms) timer = setInterval(load, ms); }
+document.getElementById('every').addEventListener('change', schedule);
+load(); schedule();
+</script>
+</body>
+</html>
