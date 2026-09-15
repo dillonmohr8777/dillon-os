@@ -31,9 +31,13 @@ function integerArg(name, fallback, { min = 1, max = 365 } = {}) {
 
 function discoverClientOpsRoot() {
   const explicit = argValue('--client-ops-root') || process.env.DILLON_CLIENT_OPERATIONS_ROOT;
+  // Cloud routines clone repositories side by side under /home/user; the
+  // Windows box keeps the canonical checkout under Documents/Codex.
   const candidates = [
     explicit,
     path.join(os.homedir(), 'Documents', 'Codex', 'projects', 'client-operations'),
+    path.resolve(repoPath(), '..', 'client-operations-canonical'),
+    path.resolve(repoPath(), '..', 'client-operations'),
   ].filter(Boolean);
   return candidates.find((candidate) => fs.existsSync(path.join(candidate, 'registry', 'clients.json')))
     || explicit
