@@ -1,7 +1,7 @@
 ---
 note_type: index
 status: active
-updated: 2026-09-02
+updated: 2026-09-05
 tags:
   - index
   - brain
@@ -91,6 +91,9 @@ links instead of loading the entire vault.
 - [[12_Brain/09_Ops/Architecture|Second Brain Architecture]]
 - [[12_Brain/09_Ops/Schema|Canonical Properties]]
 - [[12_Brain/09_Ops/AGENT_PROTOCOL|Agent Protocol]]
+- [[12_Brain/11_Craft/00_Index|Agent Craft]] - how the agentic layer itself is built,
+  plus [[12_Brain/11_Craft/earned-lessons|earned lessons]] (append-only) and the dated
+  learning-loop passes over it.
 - [[12_Brain/09_Ops/Runbook|Second Brain Runbook]]
 - [[12_Brain/09_Ops/Health|Brain Health]]
 - [[12_Brain/09_Ops/Knowledge Coverage|Knowledge Coverage]]

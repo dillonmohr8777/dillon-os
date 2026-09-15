@@ -144,6 +144,16 @@ function main() {
   const dayList = days.map((d) => d.day);
   const span = dayList.length;
 
+  // loadDays() takes the last N receipt files by name, never by date, so once the
+  // writer stops the window keeps its shape and silently ages. `window_days: 3`
+  // read exactly the same on 2026-09-02 over receipts that ended 2026-08-18.
+  // Report the age so a dead input is visible instead of inferred.
+  const newestDay = dayList[dayList.length - 1];
+  const receiptAgeDays = Math.round(
+    (Date.parse(`${todayISO()}T00:00:00Z`) - Date.parse(`${newestDay}T00:00:00Z`)) / 86400000,
+  );
+  const staleInput = receiptAgeDays > span;
+
   const lessons = readLessons();
   const team = readJson(TEAM, { routines: [] });
   const meta = new Map((team.routines || []).map((r) => [r.routine_id, r]));
@@ -183,6 +193,9 @@ function main() {
     generated_for: todayISO(),
     window_days: span,
     days: dayList,
+    newest_receipt_day: newestDay,
+    receipt_age_days: receiptAgeDays,
+    stale_input: staleInput,
     counts: {
       routines_seen: rows.length,
       workhorses: workhorses.length,
@@ -209,6 +222,8 @@ function main() {
     const L = frontmatter('review', todayISO(), 'craft, agent-infrastructure, generated',
       '"12_Brain/queue/claude-loop-*.jsonl"', {
         window_days: span,
+        receipt_age_days: receiptAgeDays,
+        stale_input: staleInput,
         routines_seen: rows.length,
         workhorses: workhorses.length,
         unreliable: unreliable.length,
