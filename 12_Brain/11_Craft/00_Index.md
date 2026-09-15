@@ -2,7 +2,7 @@
 note_type: index
 status: active
 created: 2026-08-18
-updated: 2026-08-19
+updated: 2026-09-10
 source_refs: []
 tags: [craft, index]
 ---
@@ -29,6 +29,7 @@ Agents write there. Never into a generated brief.
 
 ## Briefs
 
+- [[12_Brain/11_Craft/2026-09-10 - operating brief|2026-09-10 - operating brief]]
 - [[12_Brain/11_Craft/2026-08-19 - operating brief|2026-08-19 - operating brief]]
 - [[12_Brain/11_Craft/2026-08-18 - operating brief|2026-08-18 - operating brief]]
 
