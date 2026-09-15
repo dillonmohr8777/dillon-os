@@ -1,7 +1,7 @@
 ---
 tags: [entity, tool, mcp, ai-video]
 source: "[[12_Brain/01_Captures/X/2026-09-01 - fable-5-1-launch-link-sweep]]"
-updated: 2026-09-01
+updated: 2026-09-06
 note_type: entity
 status: active
 created: 2026-09-01
@@ -61,6 +61,24 @@ HeyGen HyperFrames MCP is live through the Claude workspace (zero projects as of
 today). Its compose and render tools are disabled from CLI agents; authoring goes
 through the local `hyperframes` skill that `web-product-builder` already lists.
 Code-driven motion for hero sections costs no new subscription. Use it first.
+
+## Verified tool surface (2026-09-06, remote session, plan `max`)
+
+The "five tools" description above is out of date. Live on 2026-09-06 through
+the workspace connector: `generate_image` / `generate_video` / `generate_audio`
+plus `_batch` variants and `jobs_wait`; `models_explore` (Kling 3.0, Seedance
+2.0 / 2.5, Gemini Omni Flash, Grok Video, FLUX 3 Video, Nano Banana Pro / 2,
+GPT Image 2, Seedream, Recraft V4.1); `show_reference_elements` (Elements,
+several per prompt) and `show_characters` (Soul); `hf_mult_motion_control`
+(Genjutsu); `remove_background`, `reframe`, `upscale_image`, `upscale_video`;
+`generate_3d` and the `scene_builder_3d_*` (3D Jutsu) tools; `sandbox_exec`
+with `higgsedit` (native-clip video editor, built-in Archivo Black and Caveat)
+and bundled workflows (`video-editing`, `brand-asset-creation`, UGC flows,
+`faceless-video`, `subtitles`, `thumbnail-generation`); `balance`,
+`transactions`, `virality_predictor`; `tiktok_publish` (approval-gated).
+Observed costs: Kling 3.0 pro 8 s = 14 credits, Nano Banana Pro 2k = 2-4,
+Seedance 2.5 5 s = 32.5. Used by
+[[12_Brain/05_Projects/2026-09-06 - NeedMomentum AI Division Launch Films|NeedMomentum AI Division Launch Films]].
 
 ## Links
 

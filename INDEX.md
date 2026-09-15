@@ -1,7 +1,7 @@
 ---
 note_type: index
 status: active
-updated: 2026-09-02
+updated: 2026-09-06
 tags:
   - index
   - brain
@@ -54,6 +54,7 @@ links instead of loading the entire vault.
 - `03_Content/` — content plans and drafts.
 - [[12_Brain/05_Projects/2026-08-04 - Philadelphia 25 Site Factory Batch 3|Philadelphia 25-site factory Batch 3]] — private prospect previews and evidence.
 - [[12_Brain/05_Projects/2026-08-04 - Philadelphia 25 Site Factory Batch 4|Philadelphia 25-site factory Batch 4]] — separate real-business cohort with first-party logo evidence.
+- [[12_Brain/05_Projects/2026-09-06 - NeedMomentum AI Division Launch Films|NeedMomentum AI Division Launch Films]] — six Momentum-branded recreations of the X references, the Momo bot, the traced 2048 px mark, Higgsfield pipeline, staged credit gate. Sources: [[03_Content/momentum-launch-films/README|higgsedit film sources]]. Receipts: [[12_Brain/01_Captures/X/2026-09-06 - brand-launch-video-references|brand-launch video references]], [[12_Brain/01_Captures/X/2026-09-06 - motion-astra-launch-video-reference|Motion Astra]].
 - [[04_SOPs/SOP Index|SOP Index]] — repeatable operating procedures.
 - `05_Offers/` — products, packages, and pricing.
 - `10_Sessions/` — working-session records.
