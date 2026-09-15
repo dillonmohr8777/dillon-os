@@ -25,6 +25,10 @@ links instead of loading the entire vault.
   truth.
 - [[System/approval-queue|Approval Queue]] — consequential actions waiting for
   Dillon.
+- [[System/competitive-task-definition|Competitive Task Definition]] — what the
+  umbrella workflow optimizes for (operator throughput, one brief).
+- [[04_SOPs/company-os-umbrella|Company OS Umbrella SOP]] — single daily
+  automation with parallel agent lanes.
 - [[System/revenue-scorecard|Revenue Scorecard]] — verified revenue state.
 
 - [[12_Brain/Bases/Strategy Library.base|Strategy Library]] - the compiled

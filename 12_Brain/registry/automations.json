@@ -511,6 +511,44 @@
       "status": "implemented",
       "owner": "claude-code-skill",
       "note": "On-demand Claude Code skill, run by Dillon; never cron-scheduled. Reviewed 2026-09-01 against marketing-chief-twice-daily-brief: different content (morning inbox/client/content brief vs infra health), so not collapsed. Dillon to confirm whether one should absorb the other."
+    },
+    {
+      "id": "company-os-umbrella",
+      "name": "Company OS Umbrella — single daily operator workflow",
+      "lane": "command",
+      "tier": 0,
+      "cadence": "daily at 1:00 PM America/New_York",
+      "command": "node _os/automation/bin/dillon-command.js --profile company-os-umbrella --preflight",
+      "inputs": [
+        "System/competitive-task-definition.md",
+        "System/company-os-umbrella-prompt.md",
+        "11_Agents/company-os-umbrella-spec.md",
+        ".cursor/agents/*.md",
+        "Gmail MCP (optional)",
+        "Slack MCP (optional)"
+      ],
+      "outputs": [
+        "Daily-Briefs/competitive-task-today.md",
+        "System/urgent-replies.md",
+        "System/slack-action-queue.md",
+        "System/claude-memory-sync.md",
+        "System/routine-health.md",
+        "automation-runs/company-os-umbrella/YYYY-MM-DD/"
+      ],
+      "external_actions": false,
+      "notes": "Replaces nightly-client-pulse, gmail-to-vault-digest, vault-integrity-sync, chat-to-vault-sync, bok-law-social-content, linkedin-growth-engine, book-site-seo-sweep, and duplicate competitive-task consolidation crons. Eleven parallel subagent lanes + memory-consolidator. Execution stays with Codex/Marketing Chief.",
+      "status": "implemented",
+      "supersedes": [
+        "nightly-client-pulse",
+        "gmail-to-vault-digest",
+        "vault-integrity-sync",
+        "chat-to-vault-sync",
+        "bok-law-social-content",
+        "linkedin-growth-engine",
+        "book-site-seo-sweep",
+        "dillon-command-cron",
+        "competitive-task-orchestrator"
+      ]
     }
   ],
   "gates": {

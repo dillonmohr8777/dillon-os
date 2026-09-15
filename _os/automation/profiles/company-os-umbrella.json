@@ -1,0 +1,156 @@
+{
+  "id": "company-os-umbrella",
+  "name": "Company OS Umbrella",
+  "version": 1,
+  "contract": "System/competitive-task-definition.md",
+  "spec": "11_Agents/company-os-umbrella-spec.md",
+  "codex_handoff": "11_Agents/64gb Morning Orchestrator Spec 2026-07-08.md",
+  "parallel_lane_cap": 12,
+  "tier_policy": {
+    "0": "read, analyze, draft, vault writes, deterministic CLIs — unattended",
+    "1": "reversible platform tweaks — one approval executes the batch",
+    "2": "send, post, deploy, spend, credentials — prepared only, never autonomous"
+  },
+  "lanes": [
+    {
+      "id": "gmail-intel",
+      "label": "Gmail / urgent replies",
+      "subagent": "gmail-intel",
+      "tier_default": 0,
+      "parallel_group": "intel",
+      "skills": ["inbox-brief"],
+      "outputs": ["System/urgent-replies.md"],
+      "preflight": []
+    },
+    {
+      "id": "slack-intel",
+      "label": "Slack action queue",
+      "subagent": "slack-intel",
+      "tier_default": 0,
+      "parallel_group": "intel",
+      "skills": ["slack-intake"],
+      "outputs": ["System/slack-action-queue.md", "00_Inbox/slack/"],
+      "preflight": []
+    },
+    {
+      "id": "vault-pulse",
+      "label": "Client roster pulse",
+      "subagent": "vault-pulse",
+      "tier_default": 0,
+      "parallel_group": "intel",
+      "skills": ["client-pulse"],
+      "outputs": ["Daily-Briefs/pulse-today.md"],
+      "preflight": [
+        {
+          "script": "_os/automation/bin/frontmatter-validate.js",
+          "args": []
+        }
+      ]
+    },
+    {
+      "id": "codex-session-sync",
+      "label": "Session promotions",
+      "subagent": "codex-session-sync",
+      "tier_default": 0,
+      "parallel_group": "intel",
+      "skills": [],
+      "outputs": ["10_Sessions/"],
+      "preflight": []
+    },
+    {
+      "id": "domain-ads-seo",
+      "label": "Ads + SEO queues",
+      "subagent": "domain-ads-seo",
+      "tier_default": 0,
+      "parallel_group": "intel",
+      "skills": ["metrics-pull"],
+      "outputs": ["01_Clients/*/active-campaigns.md"],
+      "preflight": []
+    },
+    {
+      "id": "content-routines",
+      "label": "Day-gated content",
+      "subagent": "content-routines",
+      "tier_default": 0,
+      "parallel_group": "intel",
+      "skills": [],
+      "outputs": [],
+      "preflight": []
+    },
+    {
+      "id": "automation-health",
+      "label": "Scheduler + loop health",
+      "subagent": "automation-health",
+      "tier_default": 0,
+      "parallel_group": "intel",
+      "skills": ["automation-ops"],
+      "outputs": ["System/routine-health.md"],
+      "preflight": []
+    },
+    {
+      "id": "websites-scout",
+      "label": "Site health sentinel",
+      "subagent": "websites-scout",
+      "tier_default": 0,
+      "parallel_group": "scout",
+      "skills": ["site-grade", "ux-audit"],
+      "outputs": ["Daily-Briefs/site-health-report.md"],
+      "preflight": [
+        {
+          "script": "_os/automation/bin/site-health.js",
+          "args": []
+        }
+      ]
+    },
+    {
+      "id": "outreach-scout",
+      "label": "Prospect radar queue",
+      "subagent": "outreach-scout",
+      "tier_default": 0,
+      "parallel_group": "scout",
+      "skills": ["site-factory", "site-batch"],
+      "outputs": ["Daily-Briefs/radar-*.md", "12_Brain/queue/"],
+      "preflight": [
+        {
+          "script": "_os/automation/bin/queue-status.js",
+          "args": []
+        }
+      ]
+    },
+    {
+      "id": "ads-scout",
+      "label": "Paid media P0s",
+      "subagent": "ads-scout",
+      "tier_default": 0,
+      "parallel_group": "scout",
+      "skills": ["metrics-pull"],
+      "outputs": ["01_Clients/*/Optimization Ledger.md"],
+      "preflight": []
+    },
+    {
+      "id": "reporting-scout",
+      "label": "Report factory gaps",
+      "subagent": "reporting-scout",
+      "tier_default": 0,
+      "parallel_group": "scout",
+      "skills": ["client-report"],
+      "outputs": ["Daily-Briefs/reports/"],
+      "preflight": []
+    },
+    {
+      "id": "memory-consolidator",
+      "label": "Brief + approval board synthesis",
+      "subagent": "memory-consolidator",
+      "tier_default": 0,
+      "parallel_group": "command",
+      "skills": ["am-report", "plan-today"],
+      "outputs": [
+        "Daily-Briefs/competitive-task-today.md",
+        "System/claude-memory-sync.md",
+        "automation-runs/company-os-umbrella/YYYY-MM-DD/approval-board.md"
+      ],
+      "preflight": [],
+      "runs_after": "intel,scout"
+    }
+  ]
+}

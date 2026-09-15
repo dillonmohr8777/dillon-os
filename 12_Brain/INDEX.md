@@ -40,6 +40,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/03_Concepts/Research Verification Loop|Research Verification Loop]] — fan-out research with a skeptic gate.
 - [[12_Brain/03_Concepts/Truth Hierarchy|Truth Hierarchy]] — live surfaces beat memory beat artifacts.
 - [[12_Brain/03_Concepts/Draft-First Operating Rules|Draft-First Operating Rules]] — draft unless explicitly told to send.
+- [[12_Brain/03_Concepts/Dillon Command Center|Dillon Command Center]] — one umbrella workflow, parallel intel lanes, single daily brief.
 - [[12_Brain/03_Concepts/Access Verification Discipline|Access Verification Discipline]] — confirmed access needs direct proof (no inventories here).
 - [[12_Brain/03_Concepts/Evidence Boundaries in Reporting|Evidence Boundaries in Reporting]] — claim only what sources prove.
 - [[12_Brain/03_Concepts/Netlify Deploy Safety|Netlify Deploy Safety]] — pin site on every deploy; verify statically.

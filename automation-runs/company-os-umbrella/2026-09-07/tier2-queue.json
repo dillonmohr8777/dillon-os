@@ -1,0 +1,36 @@
+{
+  "date": "2026-09-07",
+  "items": [
+    {
+      "id": "cindy-may-christmas",
+      "action": "Chase four blocking prerequisites or send explicit reschedule request",
+      "client": "cindy-may-christmas",
+      "risk": "launch-blocker"
+    },
+    {
+      "id": "m360-slack-replies",
+      "action": "Draft four Momentum 360 Slack replies for approval",
+      "client": "momentum-360",
+      "risk": "client-relationship"
+    },
+    {
+      "id": "bar-crawl-billing",
+      "action": "Approve billing-account update path for paid-media optimization",
+      "client": "bar-crawl-usa",
+      "risk": "high"
+    },
+    {
+      "id": "bigorange-signoff",
+      "action": "BigOrange factual sign-off and invoice recipient confirmation",
+      "client": "bigorange-marketing",
+      "risk": "medium"
+    },
+    {
+      "id": "book-form-endpoint",
+      "action": "Deploy /api/dossier-leads Vercel serverless function",
+      "client": "ironic-ineptocracy",
+      "risk": "high"
+    }
+  ],
+  "note": "Tier-2 outbound/deploy/spend — prepared only, never auto-executed."
+}

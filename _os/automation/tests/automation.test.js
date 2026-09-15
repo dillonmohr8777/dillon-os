@@ -157,3 +157,31 @@ test('analyzeHtml detects missing viewport on broken fixture', () => {
   const viewport = analyzed.checks.find((c) => c.id === 'viewport');
   assert.equal(viewport.ok, false);
 });
+
+test('company-os-umbrella scaffold creates twelve lanes and state file', () => {
+  const { spawnSync } = require('child_process');
+  const date = '2099-01-16';
+  const runDir = repoPath('automation-runs/company-os-umbrella', date);
+  if (fs.existsSync(runDir)) {
+    fs.rmSync(runDir, { recursive: true, force: true });
+  }
+  const result = spawnSync(
+    process.execPath,
+    [
+      repoPath('_os/automation/bin/dillon-command.js'),
+      '--profile',
+      'company-os-umbrella',
+      '--preflight',
+      '--date',
+      date,
+    ],
+    { cwd: repoPath(), encoding: 'utf8' }
+  );
+  assert.equal(result.status, 0, result.stderr || result.stdout);
+  const runState = JSON.parse(fs.readFileSync(path.join(runDir, 'run-state.json'), 'utf8'));
+  assert.equal(runState.workflow_id, 'company-os-umbrella');
+  assert.equal(runState.lanes.length, 12);
+  assert.ok(fs.existsSync(path.join(runDir, 'approval-board.md')));
+  const stateFile = repoPath('12_Brain/state/company-os-umbrella.json');
+  assert.ok(fs.existsSync(stateFile));
+});
