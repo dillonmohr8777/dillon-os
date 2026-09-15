@@ -228,3 +228,36 @@ routine that was still keying dedupe daily until the cadence fix landed on 08-18
 **How to apply.** Treat the brief's `unreliable` list as a queue to investigate, not a
 list of broken things. Read `last_completed` and the failure timestamps before concluding
 anything is currently failing.
+
+---
+
+## 2026-09-14 — A lint report with zero findings on every check is a claim, not a result
+
+**Lesson.** `/wiki-lint` runs have oscillated between two failure modes instead of
+converging on the correct one: a naive parser that treats every outbound `[[wikilink]]`
+as broken and every page as an orphan (huge false-positive flood), and a templated report
+that asserts "no issues found" in all six categories without evidence of a scan ever
+running (false negative). Either one, trusted at face value, is worse than no report.
+
+**Evidence.** `Daily-Briefs/wiki-lint-2026-09-03.md` built a correct resolver (handles
+`[[path|alias]]`, `#anchor`, and Obsidian's basename-fallback resolution) and found 22
+real dead links plus 0 orphans, with a method note explaining an earlier shell-loop pass
+had invented 4 broken links and missed the real 22. `wiki-lint-2026-09-06.md`,
+`-09-07.md`, and `-09-08.md` then each reported zero dead links, zero orphans, zero
+missing sources, and zero contradictions with no method section — three straight
+"all clear" verdicts on a graph that provably had 22 unresolved links the whole time.
+`wiki-lint-2026-09-10.md` swung the other way: it re-ran a filename-splitting scan and
+reported 310 dead links and 46 orphans, flagging pages like `Momentum 360` as orphaned
+even though `INDEX.md` linked it on line 25. Rebuilding the check today
+(2026-09-14, path+basename+alias-aware, INDEX membership parsed from INDEX's own
+`[[links]]` rather than assumed) reproduced 09-03's 22-dead-link baseline plus a real,
+previously unreported gap: 24 entity/concept pages (5 entities, 19 concepts) compiled
+since 2026-08-15 were never added to `INDEX.md`, so `09-03` and `09-10`'s "0 orphans" /
+"46 orphans" were both wrong in opposite directions.
+
+**How to apply.** A wikilink resolver must strip `|alias` and `#anchor` before matching,
+and must resolve by both full relative path and basename — Obsidian does both. Orphan
+checks must parse INDEX.md's actual `[[links]]`, not eyeball the file list. Any lint
+report claiming zero findings across every category on a graph this size needs a method
+note showing how it checked, the same discipline `09-03` used — otherwise assume no real
+scan ran and redo it.
