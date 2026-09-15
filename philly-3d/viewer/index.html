@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Philadelphia 3D</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%230b0d12%27/%3E%3Cg fill=%27%23ffb257%27%3E%3Crect x=%275%27 y=%2718%27 width=%274%27 height=%279%27/%3E%3Crect x=%2711%27 y=%2712%27 width=%274%27 height=%2715%27/%3E%3Crect x=%2717%27 y=%275%27 width=%274%27 height=%2722%27/%3E%3Crect x=%2723%27 y=%2715%27 width=%274%27 height=%2712%27/%3E%3C/g%3E%3C/svg%3E">
+<meta name="description" content="Philadelphia in 3D, built from the city's own LiDAR building survey. 545,451 real footprints at measured heights.">
+<style>
+:root{
+  --bg:#0b0d12; --panel:#141821e6; --line:#ffffff1f; --ink:#eef2f8;
+  --muted:#9aa6ba; --accent:#ffb257; --focus:#7cc4ff;
+}
+:root[data-theme="light"]{
+  --bg:#eef1f6; --panel:#ffffffe8; --line:#0b0d1220; --ink:#141821;
+  --muted:#4c566b; --accent:#a35a00; --focus:#0d5ea8;
+}
+/* The light palette above was unreachable: nothing ever set data-theme. Honour
+   the system preference, while an explicit dark choice still wins. */
+@media (prefers-color-scheme:light){
+  :root:not([data-theme="dark"]){
+    --bg:#eef1f6; --panel:#ffffffe8; --line:#0b0d1220; --ink:#141821;
+    --muted:#4c566b; --accent:#a35a00; --focus:#0d5ea8;
+  }
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--ink);overscroll-behavior:none;
+  font:14px/1.5 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  -webkit-font-smoothing:antialiased}
+#stage{position:fixed;inset:0}
+canvas{width:100%;height:100%;display:block;touch-action:none;cursor:grab}
+canvas:active{cursor:grabbing}
+canvas:focus-visible{outline:3px solid var(--focus);outline-offset:-3px}
+
+.panel{position:absolute;background:var(--panel);border:1px solid var(--line);
+  border-radius:12px;backdrop-filter:blur(14px);padding:14px 16px}
+#head{top:16px;left:16px;max-width:min(380px,calc(100vw - 32px))}
+#head h1{margin:0 0 4px;font-size:1.05rem;letter-spacing:-.01em}
+#head p{margin:0;color:var(--muted);font-size:.8rem}
+#head .count{color:var(--ink);font-variant-numeric:tabular-nums}
+
+#controls{bottom:16px;left:16px;right:16px;display:flex;gap:14px;
+  align-items:center;flex-wrap:wrap}
+#controls label{display:flex;align-items:center;gap:8px;font-size:.78rem;
+  color:var(--muted);white-space:nowrap}
+input[type=range]{accent-color:var(--accent);width:min(230px,42vw)}
+button{min-height:38px;padding:0 13px;border-radius:9px;border:1px solid var(--line);
+  background:transparent;color:var(--ink);font:inherit;font-size:.78rem;cursor:pointer;
+  transition:background .15s ease,border-color .15s ease}
+button:hover{background:#ffffff14;border-color:#ffffff40}
+button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#1a1206}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+
+#readout{margin-left:auto;color:var(--muted);font-size:.74rem;
+  font-variant-numeric:tabular-nums;text-align:right;line-height:1.35}
+#readout b{color:var(--ink);font-weight:600}
+
+#pins{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.pin{position:absolute;transform:translate(-50%,-100%);pointer-events:auto;
+  display:flex;align-items:center;gap:7px;padding:5px 10px 5px 7px;
+  border-radius:999px;border:1px solid var(--line);background:var(--panel);
+  color:var(--ink);text-decoration:none;white-space:nowrap;
+  backdrop-filter:blur(10px);opacity:calc(.45 + .55 * var(--near,1));
+  transition:border-color .15s ease,background .15s ease}
+.pin[hidden]{display:none!important}
+.pin:hover,.pin:focus-visible{border-color:var(--accent);background:#ffffff1a;opacity:1}
+.pin-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);
+  box-shadow:0 0 0 3px #ffb2573d;flex:none}
+.pin-body{display:flex;flex-direction:column;line-height:1.25}
+.pin-body b{font-size:.76rem;font-weight:600}
+.pin-sub{font-size:.63rem;color:var(--muted)}
+/* Collapsed pins keep their dot and their link, but give up their label to a
+   nearer neighbour. The text stays in the DOM for screen readers. */
+.pin.collapsed{padding:5px;gap:0}
+.pin.collapsed .pin-body{position:absolute;width:1px;height:1px;overflow:hidden;
+  clip:rect(0 0 0 0);white-space:nowrap}
+.pin.collapsed:hover,.pin.collapsed:focus-visible{padding:5px 10px 5px 7px;gap:7px;
+  z-index:200000!important}
+.pin.collapsed:hover .pin-body,.pin.collapsed:focus-visible .pin-body{
+  position:static;width:auto;height:auto;clip:auto;overflow:visible}
+/* On a phone the subtitle costs more width than it is worth, but display:none
+   would also take the address away from a screen reader, and the pin is the
+   only place that address appears. Hide it visually, keep it in the tree. */
+@media (max-width:720px){
+  .pin-sub{position:absolute;width:1px;height:1px;overflow:hidden;
+    clip:rect(0 0 0 0);white-space:nowrap}
+}
+
+#sites{top:16px;right:16px;width:min(300px,calc(100vw - 32px));max-height:52vh;
+  overflow:auto;padding:12px}
+#sites h2{margin:0;font-size:inherit;letter-spacing:inherit;
+  text-transform:inherit;color:inherit;font-weight:600;display:inline}
+#sites ol{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:2px}
+#sites button.jump{width:100%;text-align:left;border:0;background:transparent;
+  padding:6px 8px;border-radius:7px;min-height:0;font-size:.78rem}
+#sites button.jump:hover{background:#ffffff14}
+#sites .vt{color:var(--muted);font-size:.68rem}
+#sites p.note{margin:8px 0 0;font-size:.66rem;color:var(--muted);line-height:1.4}
+#sites summary{cursor:pointer;list-style:none;display:flex;align-items:center;
+  gap:6px;margin:0 0 8px;font-size:.78rem;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--muted);border-radius:6px}
+#sites summary::-webkit-details-marker{display:none}
+#sites summary::before{content:"\25BE";font-size:.7em;transition:transform .15s ease}
+#sites:not([open]) summary{margin-bottom:0}
+#sites:not([open]) summary::before{transform:rotate(-90deg)}
+#sites summary:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+/* Never display:none. Collapsing the panel keeps the Philadelphia 25 reachable
+   on a phone; hiding it removed the whole prospect layer from small screens. */
+@media (max-width:980px){
+  #sites{width:auto;left:16px;max-height:38vh;padding:10px 12px}
+  #sites[open]{max-height:44vh}
+}
+
+#walkhud{position:absolute;left:50%;bottom:96px;transform:translateX(-50%);
+  padding:9px 16px;border-radius:999px;border:1px solid var(--line);
+  background:var(--panel);backdrop-filter:blur(12px);font-size:.78rem;
+  color:var(--muted);white-space:nowrap;pointer-events:none}
+#walkhud b{color:var(--ink);font-weight:600}
+#walkhud[hidden]{display:none}
+#crosshair{position:absolute;left:50%;top:50%;width:6px;height:6px;margin:-3px 0 0 -3px;
+  border-radius:50%;background:#ffffffcc;box-shadow:0 0 0 1px #0006;pointer-events:none}
+#crosshair[hidden]{display:none}
+
+#fallback{position:absolute;inset:0;display:none;place-content:center;
+  padding:32px;text-align:center}
+#fallback div{max-width:52ch;margin:auto}
+#fallback h2{margin:0 0 10px;font-size:1.15rem}
+#fallback p{color:var(--muted);margin:0 0 12px}
+#fallback img{max-width:100%;border-radius:12px;border:1px solid var(--line);margin-top:8px}
+body.no-webgl #fallback{display:grid}
+body.no-webgl #stage,body.no-webgl #controls,body.no-webgl #head{display:none}
+
+.sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
+  clip:rect(0 0 0 0);white-space:nowrap;border:0}
+/* The canvas takes focus on load and swallows tab order into a 3D scene, so a
+   keyboard user needs a stated way out to the controls. */
+.skip{position:absolute;left:12px;top:-60px;z-index:9;padding:9px 14px;
+  border-radius:9px;background:var(--panel);border:1px solid var(--line);
+  color:var(--ink);text-decoration:none;transition:top .12s ease}
+.skip:focus{top:12px}
+@media (max-width:720px){
+  #head{max-width:calc(100vw - 32px)}
+  #controls{gap:10px;padding:10px 12px}
+  #readout{width:100%;text-align:left;margin-left:0}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#controls">Skip to map controls</a>
+
+<div id="stage"><div id="pins"></div><div id="crosshair" hidden></div><canvas id="c" aria-label="Interactive 3D map of Philadelphia. Drag to orbit, shift-drag to pan, scroll to zoom. Arrow keys orbit, W A S D pan, plus and minus zoom." role="application" aria-describedby="keyhelp"></canvas></div>
+
+<div id="head" class="panel">
+  <h1>Philadelphia, actual size</h1>
+  <p><span class="count" id="bcount">545,451</span> real building footprints at
+     LiDAR-measured heights, from the City of Philadelphia survey.</p>
+</div>
+
+<details id="sites" class="panel">
+  <summary><h2>Philadelphia 25 · spec sites</h2></summary>
+  <ol id="sitelist"></ol>
+  <p class="note" id="sitenote"></p>
+</details>
+
+<div id="controls" class="panel">
+  <label>Time
+    <input id="time" type="range" min="0" max="1439" step="5" value="1125"
+           aria-label="Time of day in minutes past midnight, Eastern time">
+    <span id="clock" style="min-width:8ch;color:var(--ink);font-variant-numeric:tabular-nums">6:45 PM</span>
+  </label>
+  <button id="henge" aria-pressed="false" title="28 August 2026, 7:14 PM: the sun aligns with the street grid">Phillyhenge</button>
+  <button id="noon">Midday</button>
+  <button id="reset">Reset view</button>
+  <button id="pins-toggle" aria-pressed="true">Hide pins</button>
+  <button id="walk" aria-pressed="false">Walk the city</button>
+  <div id="readout">
+    <!-- Only the status line is live. #perf is rewritten every animation frame,
+         so leaving it inside a polite live region made a screen reader announce
+         the frame rate about sixty times a second. -->
+    <b id="status" role="status" aria-live="polite">Starting…</b><br>
+    <span id="perf" aria-hidden="true"></span>
+  </div>
+</div>
+
+<div id="walkhud" hidden><b>W A S D</b> walk · <b>Shift</b> run · <b>mouse</b> look · <b>Esc</b> back to the map</div>
+
+<div id="fallback">
+  <div>
+    <h2>This browser cannot open the interactive city</h2>
+    <p id="fbwhy">It needs WebGL2, which this browser or device does not provide.
+       Everything below is the same model, rendered offline.</p>
+    <img src="../renders/hero-04-golden.jpg"
+         alt="Philadelphia at golden hour seen from the south-east: the Center City tower cluster with City Hall's tower and the Liberty Place crowns, the rowhouse grid running out to the horizon, parks in green, and the real street centrelines cut through it.">
+  </div>
+</div>
+
+<p class="sr" id="keyhelp">Keyboard controls: arrow keys orbit the camera, W A S D pan across
+the city, plus and minus zoom. Hold shift for larger steps.</p>
+
+<script src="js/math.js"></script>
+<script src="js/gl.js"></script>
+<script src="js/phlbin.js"></script>
+<script src="js/mesh.js"></script>
+<script src="js/crowns.js"></script>
+<script src="js/terrain.js"></script>
+<script src="js/sun.js"></script>
+<script src="js/camera.js"></script>
+<script src="js/collision.js"></script>
+<script src="js/player.js"></script>
+<script src="js/prospects.js"></script>
+<script src="js/shaders.js"></script>
+<script src="js/main.js"></script>
+<script>
+(async function () {
+  const canvas = document.getElementById('c');
+  const statusEl = document.getElementById('status');
+  const perfEl = document.getElementById('perf');
+  const clockEl = document.getElementById('clock');
+  const timeEl = document.getElementById('time');
+
+  let viewer;
+  try {
+    viewer = new Viewer(canvas, statusEl);
+    window.__viewer = viewer;      // handle for headless capture and debugging
+  } catch (err) {
+    document.body.classList.add('no-webgl');
+    if (String(err.message) !== 'WEBGL2_UNAVAILABLE') {
+      document.getElementById('fbwhy').textContent =
+        'The interactive city failed to start: ' + err.message +
+        ' Everything below is the same model, rendered offline.';
+    }
+    console.error(err);
+    return;
+  }
+
+  // 28 August 2026 is a Phillyhenge date: the setting sun lines up with the
+  // 9.21 degree rotation of Penn's street grid.
+  const DAY = [2026, 7, 28];
+  const EDT_OFFSET = 4;                       // hours behind UTC
+  function dateFor(minutes) {
+    return new Date(Date.UTC(DAY[0], DAY[1], DAY[2],
+      Math.floor(minutes / 60) + EDT_OFFSET, minutes % 60));
+  }
+  function label(minutes) {
+    const h = Math.floor(minutes / 60), m = minutes % 60;
+    const ampm = h < 12 ? 'AM' : 'PM';
+    const hh = h % 12 === 0 ? 12 : h % 12;
+    return `${hh}:${String(m).padStart(2, '0')} ${ampm}`;
+  }
+  function applyTime(minutes) {
+    clockEl.textContent = label(Number(minutes));
+    viewer.setTime(dateFor(Number(minutes)));
+    document.getElementById('henge').setAttribute('aria-pressed',
+      String(Number(minutes) === 1154));
+  }
+  timeEl.addEventListener('input', (e) => applyTime(e.target.value));
+  document.getElementById('henge').addEventListener('click', () => {
+    timeEl.value = 1154;                      // 19:14 EDT
+    applyTime(1154);
+    viewer.camera.flyTo([-300, 60, 40], 2400, 100, 6);
+    viewer.needsRebuild = true;
+  });
+  document.getElementById('noon').addEventListener('click', () => {
+    timeEl.value = 780; applyTime(780);
+  });
+  const walkBtn = document.getElementById('walk');
+  const walkHud = document.getElementById('walkhud');
+  const crosshair = document.getElementById('crosshair');
+  function syncMode() {
+    const walking = viewer.mode === 'walk';
+    walkBtn.setAttribute('aria-pressed', String(walking));
+    walkBtn.textContent = walking ? 'Back to the map' : 'Walk the city';
+    walkHud.hidden = !walking;
+    crosshair.hidden = !walking;
+    document.getElementById('sites').hidden = walking;
+  }
+  walkBtn.addEventListener('click', () => {
+    if (viewer.mode === 'walk') viewer.exitWalk(); else viewer.enterWalk();
+    syncMode();
+    canvas.focus();
+  });
+  document.addEventListener('pointerlockchange', () => setTimeout(syncMode, 0));
+
+  document.getElementById('reset').addEventListener('click', () => {
+    viewer.camera.flyTo([0, 0, 30], 3200, 232, 24);
+    viewer.needsRebuild = true;
+  });
+
+  try {
+    await viewer.loadCrowns('../data/philly-crowns.json');
+    await viewer.loadTerrain('../data/philly-terrain.bin');
+    await viewer.load('../data/philly-buildings.bin');
+    await viewer.loadGround('../data/philly-ground.bin');
+    await viewer.loadWater('../data/philly-water.bin');
+
+  // The prospect list is a disclosure so it can collapse on a phone instead of
+  // being display:none'd off the page. Open it where there is room for it.
+  const sitesPanel = document.getElementById('sites');
+  const fitSites = () => { sitesPanel.open = window.innerWidth >= 980; };
+  fitSites();
+  addEventListener('resize', fitSites, { passive: true });
+
+  const prospects = new Prospects(viewer.gl, document.getElementById('pins'),
+    '../../philly-sites');
+  try {
+    const n = await prospects.load('../data/philly-prospects.json');
+    viewer.attachProspects(prospects);
+    const list = document.getElementById('sitelist');
+    for (const p of prospects.items) {
+      const li = document.createElement('li');
+      const b = document.createElement('button');
+      b.className = 'jump';
+      b.innerHTML = `${p.name}<br><span class="vt">${p.vertical} · ` +
+        `${p.building ? p.building.height_ft + ' ft' : 'height unknown'}</span>`;
+      b.addEventListener('click', () => {
+        viewer.camera.flyTo([p.x, p.y, 40], 420, 214, 20);
+        viewer.needsRebuild = true;
+      });
+      li.appendChild(b);
+      list.appendChild(li);
+    }
+    const m = prospects.meta;
+    // The pins name 25 real Philadelphia businesses that have no relationship
+    // with anyone here. Saying so is not optional: a branded 3D world with 25
+    // named businesses pinned in it reads as a client roster unless it says
+    // otherwise, and the spec pages themselves carry the same disclosure.
+    document.getElementById('sitenote').textContent =
+      `Unsolicited concept pages for 25 real Philadelphia businesses. None is a ` +
+      `client and none has been contacted; each page is a private staging ` +
+      `concept, noindex, and its details should be reconfirmed on the official ` +
+      `website. ${m.withBuilding} of ${m.count} are bound to a real building ` +
+      `footprint: ${m.byContainment} the address falls inside, ${m.byProximity} ` +
+      `the nearest within 25 m. Click a pin to open its concept page.`;
+    document.getElementById('pins-toggle').addEventListener('click', (e) => {
+      viewer.showPins = !viewer.showPins;
+      e.target.setAttribute('aria-pressed', String(viewer.showPins));
+      e.target.textContent = viewer.showPins ? 'Hide pins' : 'Show pins';
+      if (!viewer.showPins) {
+        for (const p of prospects.items) p._el.hidden = true;
+      }
+    });
+  } catch (err) {
+    console.warn('prospect layer unavailable:', err.message);
+    document.getElementById('sites').hidden = true;
+    document.getElementById('pins-toggle').hidden = true;
+  }
+  } catch (err) {
+    statusEl.textContent = 'Could not load the city data: ' + err.message;
+    console.error(err);
+    return;
+  }
+  document.getElementById('bcount').textContent =
+    viewer.city.buildingCount.toLocaleString();
+  applyTime(timeEl.value);
+  await viewer.updateTiles();
+  // Deliberately NOT canvas.focus(). Taking focus on load put the canvas ahead
+  // of the skip link in the tab ring, so the first Tab landed inside the 3D
+  // scene and the escape hatch could only be reached by shift-tabbing
+  // backwards. Tab order is now: skip link, canvas, panel, controls.
+
+  let lastTiles = 0;
+  function frame(now) {
+    viewer.render(now);
+    if (viewer.needsRebuild && now - lastTiles > 220) {
+      lastTiles = now;
+      viewer.needsRebuild = false;
+      viewer.updateTiles();
+    }
+    perfEl.textContent = viewer.mode === 'walk'
+      ? `${viewer.fps} fps · ${viewer.collider.segmentCount().toLocaleString()} wall segments · ` +
+        `${viewer.player.speed().toFixed(1)} m/s`
+      : `${viewer.fps} fps · ${viewer.drawnTiles || 0} tiles drawn · sun ` +
+        `${viewer.sun.elevation.toFixed(1)}° elev, ${viewer.sun.azimuth.toFixed(1)}° az`;
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+{
+  "generated_utc": "2026-09-07T18:29:02Z",
+  "source": {
+    "name": "LI_BUILDING_FOOTPRINTS",
+    "publisher": "City of Philadelphia, Department of Licenses & Inspections",
+    "endpoint": "https://services.arcgis.com/fLeGjb7u4uXqeF9q/arcgis/rest/services/LI_BUILDING_FOOTPRINTS/FeatureServer/0",
+    "height_field": "approx_hgt (feet, LiDAR-derived)",
+    "roof_field": "max_hgt (feet, LiDAR-derived, second measured height)",
+    "features_downloaded": 546459
+  },
+  "projection": {
+    "type": "local ENU tangent plane",
+    "origin_lat": 39.952583,
+    "origin_lon": -75.165222,
+    "origin_note": "Philadelphia City Hall, origin of the city street grid",
+    "units": "metres"
+  },
+  "processing": {
+    "simplify_tolerance_m": 0.25,
+    "min_footprint_m2": 8.0,
+    "max_ring_points": 200,
+    "quant_m": 0.03125,
+    "tile_size_m": 1024.0
+  },
+  "counts": {
+    "buildings_written": 545451,
+    "ring_points": 4185727,
+    "mean_points_per_building": 7.67,
+    "tiles": 402,
+    "skipped_no_geometry": 2,
+    "skipped_too_small": 1075,
+    "height_estimated": 2989,
+    "rings_decimated": 15,
+    "landmarks": 5586,
+    "roof_profiled": 102101
+  },
+  "roof_ft": {
+    "min_gap_drawn": 3.0,
+    "max_gap_drawn": 100.0,
+    "buildings_with_profile": 102101,
+    "fraction_with_profile": 0.1872,
+    "mean_ft": 7.82,
+    "max_ft": 100.0
+  },
+  "extent_local_m": {
+    "min_x": -9759.7,
+    "max_x": 17767.8,
+    "min_y": -8906.3,
+    "max_y": 20563.2,
+    "width_km": 27.53,
+    "height_km": 29.47
+  },
+  "heights_ft": {
+    "min": 0.2,
+    "max": 976.0,
+    "median": 26.0,
+    "p95": 39.0,
+    "p99": 52.0
+  },
+  "artifacts": {
+    "philly-buildings.bin": {
+      "bytes": 14804423,
+      "sha256": "cbd8f5fb173a0621b54703db156b49f32309e057c854f2ea9d95d9877b506c93"
+    },
+    "philly-terrain.bin": {
+      "bytes": 304607,
+      "sha256": "05cad902d398655e4cef46fa2b197e86cfe34be162116c24119c64f9385ca32f"
+    },
+    "philly-ground.bin": {
+      "bytes": 1991214,
+      "sha256": "574d2f337238b873218c845a5217ab475c94d401e17c3b545249a40734838220"
+    },
+    "philly-water.bin": {
+      "bytes": 66235,
+      "sha256": "e3c4f26657b21dc17b44e490f4674270830ce5f04d50d475dea0abafeb73a911"
+    },
+    "philly-landmarks.json": {
+      "bytes": 1133564,
+      "sha256": "d402fda546f27f3f9bb6ef40a2696053ee6d417dd09ca42b3c3e3e339ea563c1"
+    },
+    "philly-crowns.json": {
+      "bytes": 5154,
+      "sha256": "82c80406726796d84b536fac482cdc71f957ece4dad68b99d8d7ce04532c34f0"
+    },
+    "philly-prospects.json": {
+      "bytes": 14875,
+      "sha256": "e7fbb71f5ab750a525cd1569751d447aad0a7bc67a3d2d3f6ced2c1c78d685d6"
+    }
+  }
+}

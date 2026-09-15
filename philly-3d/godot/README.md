@@ -1,0 +1,232 @@
+# Real Philadelphia for Grand Theft Bureaucracy
+
+A drop-in world builder that replaces the invented district with a real one:
+449 building footprints at their LiDAR-measured heights, 12 sourced crown
+tiers restoring the towers the survey cannot see, and 216 street
+centrelines, straight from the City of Philadelphia survey.
+
+## Why this fits without a rewrite
+
+The engine already picks its world builder by path:
+
+```gdscript
+var builder_path := str(hub_profile.get("builder", "res://scripts/world_builder.gd"))
+```
+
+and already builds a building from a centre, a footprint and a height. That is
+exactly the shape of the survey data. So this is not a mesh import, it is the
+same builder contract fed by measurements instead of by `rng`.
+
+`philadelphia_world_builder.gd` exposes the identical public surface -
+`build()`, `landmark()`, `road_coords()`, `road_half()`, `world_half()`,
+`blackspots()`, `block_bounds()` - so `mission_director`, `traffic_system`,
+`minimap` and `hud` need no changes.
+
+## Install
+
+1. Copy `scripts/philadelphia_world_builder.gd` to `godot/scripts/`.
+2. Copy `data/philadelphia_district.json` and `data/philadelphia_buildings.json`
+   to `godot/data/`.
+3. Point the hub profile at it:
+   `hub_profile["builder"] = "res://scripts/philadelphia_world_builder.gd"`
+
+## The rotation, and why it matters
+
+Penn's grid runs **9.21 degrees off cardinal**, measured from 285 street
+centreline segments. The engine's road constants, lane maths and window
+punching are all axis-aligned, so the district is rotated by that bearing on
+export. Market and Chestnut then run along X, the numbered streets along Z.
+
+It works because Philadelphia is a planned grid: **94% of the exported
+footprints land within 5 degrees of an axis, median offset 0.39 degrees.** The
+bearing was derived from the street centrelines and is confirmed independently
+by the buildings.
+
+## Coordinates
+
+Source data is Z-up, +X east, +Y north, metres from City Hall. Godot is Y-up
+with -Z forward. The mapping is applied once, at export:
+
+```
+godot.x =  east
+godot.y =  up
+godot.z = -north
+```
+
+## What is real and what is inferred
+
+**Real:** every footprint outline, every building height, every base
+elevation, every street centreline and its width class, every landmark
+address. All from `LI_BUILDING_FOOTPRINTS` and `Street_Centerline`.
+
+**Inferred:** facade material. The survey gives one height per footprint and
+nothing about the facade, so the builder bands by height - brick at rowhouse
+scale, stone through the pre-war midrise, curtain wall above - and anything
+more specific would be invention. Window rhythm, parapets, cornices and lit
+windows are procedural, as in the shipped builder.
+
+**Sourced separately:** the crowns. The LiDAR measures the dominant roof mass,
+so a slender tower or spire returns too few points to register. Five buildings
+therefore arrive short: City Hall as its 170 ft cornice rather than its 548 ft
+tower. Their published architectural heights live in
+`../data/philly-crowns.json` and export as extra rows flagged `crown: true`,
+stacked on top of the measured mass, never replacing it. `_build_crown_tier`
+draws them: no `_building_rects` entry, so a tier never blocks a spawn or a
+pedestrian route at street level; material taken from the building below rather
+than from the tier's own 24 m; and no punched windows on a spire.
+
+The heights are sourced. The shape of the stack is not: tier widths read in
+silhouette, and tiers are centred on the footprint, so City Hall's tower rises
+from the middle of the block rather than over one portal.
+
+**Not modelled:** roof shape. `approx_hgt` is a single number, so every
+building is a flat-topped extrusion. See `../docs/SOURCES.md` for the full
+table of where the survey understates a landmark.
+
+## Landmarks
+
+Prospect landmarks carry the spec homepage already built for that business:
+
+```gdscript
+var url := builder.landmark_site("reading_terminal")
+# -> "philly-sites/reading-terminal/index.html"
+```
+
+which is what lets a mission reward open the real site for the business you
+just saved.
+
+## It has actually been run
+
+`test/philly_smoke.gd` builds the district in a real headless Godot 4.2.2 and
+asserts what comes out. The Node suite in `../test` only reads the exported JSON
+and greps this GDScript; it executes nothing, so until this existed the builder
+had never run at all.
+
+```bash
+cp scripts/philadelphia_world_builder.gd  <gtb>/godot/scripts/
+cp data/philadelphia_*.json               <gtb>/godot/data/
+cp test/philly_smoke.gd                   <gtb>/godot/
+godot --headless --path <gtb>/godot --script philly_smoke.gd
+```
+
+Last run, Godot 4.2.2-stable: 21 checks passed. 1,246 MeshInstance3D and 1,245
+StaticBody3D built in 282 ms, no mesh instance without a mesh, City Hall
+184.4 m off the district centre where the survey puts it, 22 street axes,
+both in-window prospects carrying their spec homepage.
+
+The 44.7 m this paragraph used to claim was the pre-fix number, measured while
+the exporter still assumed City Hall sits at the projection origin. It does
+not: the origin is Penn Square, and the survey puts the building 144.4 m east
+and 17.5 m south of it, which against the district centre at (-40, -20) is
+184.4 m. The fix corrected the exporter and the test bound and left this line
+behind, so the doc kept quoting a number the code no longer produces.
+
+It also renders. `test/philly_shot.gd` puts a camera and a sun in the district
+and saves PNGs, which needs a real GL context rather than `--headless`:
+
+```bash
+SHOT_DIR=<out> SUN_ELEV=31 SUN_AZ=246 CAM_NEAR=0.6 CAM_FAR=2400 \
+  xvfb-run -a -s "-screen 0 1600x900x24" \
+  godot --path <gtb>/godot --rendering-driver opengl3 \
+        --resolution 1600x900 --script philly_shot.gd
+```
+
+`renders/godot-01-district.png`, `godot-02-street.png` and `godot-03-aerial.png`
+are its output: real Philadelphia in the Grand Theft Bureaucracy engine, drawn
+with that engine's own glass shader, lit windows, parapets and cornices.
+
+Three things that run taught, which reading the code did not:
+
+- **The `city_hall` landmark pointed at the wrong place.** It was exported as
+  the projection origin, on the assumption that the origin is City Hall. It is
+  not: the origin is Penn Square, and the survey puts City Hall's footprint
+  centre 144.4 m east and 17.5 m south of it, agreeing with published
+  coordinates for the building. Anything that navigated to `city_hall` was sent
+  to the middle of the road a block west. The export test had encoded the same
+  assumption, so it agreed with the exporter and both were wrong.
+- **The district floated.** The engine draws its ground as one slab at y = 0
+  while the export put every footprint on its measured `base_elevation`, which
+  across this window runs 0.7 to 14.7 m with a median of 13.4. The whole
+  district sat thirteen metres above its own floor. It is shifted onto y = 0 by
+  its own ground datum now, recorded as `ground_datum_m` so the shift is never
+  silent, and the real relief between footprints survives it.
+- **Making the ground real broke the roads.** They were laid at a fixed
+  `y = 0.06`, correct only while the ground was one flat slab. `_ground_at()`
+  samples the same grid, so they lie on it.
+- The first camera used a 0.05 near plane against a 4000 far plane, a ratio of
+  80,000, which tore the pavement apart at street level. Both planes are set per
+  shot.
+
+Two more things that run taught:
+
+- `road_coords()` returns street AXIS coordinates, matching
+  `District.ROAD_COORDS` in the shipped builder, not the road polylines. An
+  840 m square of Penn's grid holds 22 of them.
+- Only landmarks inside the 840 m window are exported, so the district carries
+  City Hall plus two of the Philadelphia 25, not all 25.
+
+Expect a wall of `Parameter "m" is null` from `mesh_get_surface_count`. That is
+Godot's dummy renderer under `--headless`, one line per uniquely sized
+`BoxMesh`, and it is not this builder: 462 identically sized boxes through stock
+`civic_kit.box` produce one such line, 462 uniquely sized ones produce 462. Real
+footprints are all different sizes, so `civic_kit`'s `box_mesh` cache never
+hits. Quantising the sizes to reclaim it is not worth it either: 461 distinct
+meshes only falls to 443 at a metre of rounding, so the cache is left alone.
+
+## Four districts
+
+Each is a window on the same survey, centred on a real cluster of the
+Philadelphia 25 so a mission has somewhere to be. Set `district` on the builder
+before `build()`, or from the hub profile.
+
+| slug | where | footprints | bearing | grid strength | prospects |
+|---|---|---:|---:|---:|---:|
+| `philadelphia` | Centre City, Penn Square | 461 | +9.35 deg | 0.94 | 2 |
+| `market_east` | Reading Terminal, Filbert Street | 579 | +9.35 deg | 0.92 | 2 |
+| `south_philly` | the 9th Street corridor | 3,500 | +10.80 deg | 0.66 | 5 |
+| `fishtown` | Frankford Avenue | 3,238 | +10.40 deg | 0.51 | 5 |
+
+**Penn's 9.21 degrees is Centre City's grid and it does not hold across the
+county.** Each district measures its own bearing, and `grid_strength` is the
+share of footprint edge length that bearing brings within 5 degrees of an axis.
+Centre City and Market East are near-perfect grids. South Philadelphia is
+looser. Fishtown is 0.51: Frankford Avenue is an old turnpike and the blocks are
+built off it, so half the district is not square to anything and the engine's
+axis-aligned systems will fit it loosely. That is reported rather than papered
+over.
+
+Measuring the bearing is harder than it looks. From street centrelines it fails
+in exactly the districts where it matters, because South Philadelphia has
+Passyunk Avenue and Fishtown has Frankford Avenue, long diagonals cutting the
+grid, and a length-weighted mean over street segments amplifies precisely the
+streets that break it: South Philadelphia came out at 12.52 degrees and aligned
+68% of its footprints, worse than simply borrowing Centre City's 9.21. It is
+measured from the FOOTPRINTS now, with a von Mises kernel over a 0.05 degree
+sweep, which finds the dominant mode instead of the mean. A plain "within 5
+degrees" count does not work either: it makes a plateau wherever the grid is
+strong and the sweep then picks arbitrarily inside it, which put Centre City a
+degree off its own measured bearing.
+
+South Philadelphia is the densest fabric in the city: 3,500 footprints in an
+840 m square, against 461 in the same square of Centre City. All four build in
+Godot, the slowest in 872 ms.
+
+```bash
+godot --headless --path <gtb>/godot --script all_districts.gd
+```
+
+## Regenerating
+
+```bash
+python3 ../tools/export_godot.py
+```
+
+Edit `CENTRE`, `HALF` and `MAX_BUILDINGS` at the top to move or resize the
+district. The shipped GTB district is 248 m square; this one is 840 m.
+
+`npm test` covers the export: frame declaration, physical plausibility, id
+uniqueness, grid alignment, the real tower heights, road classes, landmark
+sites, City Hall's position under the rotation, that every crown tier stacks on
+a real building without gap or overlap and narrows as it rises, that City Hall
+reaches exactly 548 ft above its own grade, and a guard that the GDScript only
+calls `civic_kit` helpers and materials that actually exist.

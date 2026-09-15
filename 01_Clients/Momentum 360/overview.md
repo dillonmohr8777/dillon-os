@@ -18,6 +18,7 @@ must coordinate the portfolio without replacing or blending the underlying
 client truth.
 
 - [[Client Intelligence Overlay]]
+- [[01_Clients/Momentum 360/philadelphia-service-world-handoff|Philadelphia Service World handoff]]
 
 ## Communication intelligence - 2026-08-01
 

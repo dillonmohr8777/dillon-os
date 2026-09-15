@@ -1,0 +1,130 @@
+{
+  "purpose": "Restore the skyline silhouette where the LiDAR survey understates it.",
+  "why": "approx_hgt measures the dominant roof mass. A tower, spire or crown that is too slender returns too few LiDAR points to register, so City Hall reads as its 170 ft cornice rather than its 548 ft tower. These entries are NOT corrections to the measurement: the measured mass is still drawn exactly as surveyed, and the crown is added above it as separately sourced, separately coloured geometry.",
+  "units": "feet above the building's own grade, matching approx_hgt. Absolute height in the scene is the footprint's base elevation plus this.",
+  "fields": {
+    "objectid": "LI_BUILDING_FOOTPRINTS objectid, so a crown can never attach to the wrong building",
+    "mass_ft": "the LiDAR approx_hgt this crown sits on top of",
+    "architectural_ft": "published height the crown reaches",
+    "tiers": "stacked sections above the mass. frac is the fraction of the building footprint, to_ft the height its top reaches",
+    "solid": "optional per-tier override of the material rule. true = dressed stone or metal with no window grid; false = a framed storey wall like the mass below. Defaults from kind: spire, mast, statue, finial and belfry are solid.",
+    "frac": "linear scale of the parent footprint about its own area centroid. Tier placement is centroid-based: a silhouette approximation, not a survey of where the tower stands on its block.",
+    "to_ft": "the height this tier's top reaches above the building's grade, on the same datum as mass_ft.",
+    "shape": "optional per-tier plan shape. \"footprint\" (the default) scales the building's own outline about its centroid, which is right for a setback that follows the tower below it. \"square\" places a centred square on the block's own axes with side frac x the footprint's shorter span, which is right for a tower that is square in plan on a footprint that is not."
+  },
+  "crowns": [
+    {
+      "objectid": 489794,
+      "name": "City Hall",
+      "mass_ft": 170,
+      "architectural_ft": 548,
+      "source": "Height to the top of the William Penn statue, the standard published figure for the building.",
+      "note": "The masonry block is measured correctly at 170 ft; the tower and statue are the missing part. The surveyed footprint is the whole 152 by 148 m block, so the tiers are squared to the block's own axes rather than scaled from its outline. Two deliberate approximations: the tier widths are chosen to read correctly in silhouette, not surveyed; and the tower is centred on the block rather than standing over one portal. The whole tower is load-bearing granite and brick, so every tier is marked solid rather than taking the curtain-wall material the height rule would otherwise pick.",
+      "tiers": [
+        {
+          "frac": 0.2,
+          "to_ft": 337,
+          "kind": "tower",
+          "shape": "square",
+          "solid": true
+        },
+        {
+          "frac": 0.16,
+          "to_ft": 430,
+          "kind": "belfry",
+          "shape": "square"
+        },
+        {
+          "frac": 0.095,
+          "to_ft": 510,
+          "kind": "spire",
+          "shape": "square"
+        },
+        {
+          "frac": 0.05,
+          "to_ft": 548,
+          "kind": "statue",
+          "shape": "square"
+        }
+      ]
+    },
+    {
+      "objectid": 303038,
+      "name": "One Liberty Place",
+      "mass_ft": 677,
+      "architectural_ft": 945,
+      "source": "Published architectural height including the spire.",
+      "note": "The stepped glass crown and spire are too slender for the survey to hold.",
+      "tiers": [
+        {
+          "frac": 0.72,
+          "to_ft": 800,
+          "kind": "setback"
+        },
+        {
+          "frac": 0.44,
+          "to_ft": 880,
+          "kind": "crown"
+        },
+        {
+          "frac": 0.1,
+          "to_ft": 945,
+          "kind": "spire"
+        }
+      ]
+    },
+    {
+      "objectid": 268291,
+      "name": "Two Liberty Place",
+      "mass_ft": 754,
+      "architectural_ft": 848,
+      "source": "Published architectural height.",
+      "tiers": [
+        {
+          "frac": 0.66,
+          "to_ft": 812,
+          "kind": "setback"
+        },
+        {
+          "frac": 0.32,
+          "to_ft": 848,
+          "kind": "crown"
+        }
+      ]
+    },
+    {
+      "objectid": 418591,
+      "name": "Comcast Innovation and Technology Center",
+      "mass_ft": 914,
+      "architectural_ft": 1121,
+      "source": "Published architectural height including the mast.",
+      "note": "Tallest building in Philadelphia. The survey holds the shaft but not the mast.",
+      "tiers": [
+        {
+          "frac": 0.55,
+          "to_ft": 1000,
+          "kind": "setback"
+        },
+        {
+          "frac": 0.07,
+          "to_ft": 1121,
+          "kind": "mast"
+        }
+      ]
+    },
+    {
+      "objectid": 490619,
+      "name": "BNY Mellon Center",
+      "mass_ft": 744,
+      "architectural_ft": 792,
+      "source": "Published architectural height.",
+      "tiers": [
+        {
+          "frac": 0.58,
+          "to_ft": 792,
+          "kind": "pyramid"
+        }
+      ]
+    }
+  ]
+}
