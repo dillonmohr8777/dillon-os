@@ -1,6 +1,6 @@
 ---
 tags: [system, approvals]
-last_updated: 2026-09-05T21:30:00Z
+last_updated: 2026-09-06T00:00:00Z
 status: active
 last_scan: 2026-08-17T13:04:11Z
 scan_sources: ["00_Inbox/", "01_Clients/ status at-risk/onboarding/blocked", "System/urgent-replies.md", "System/claude-memory-sync.md", "Daily-Briefs/ latest 3"]
@@ -206,3 +206,4 @@ Only current client and operating actions belong here. Nothing is sent, publishe
 - [x] 2026-09-01 -- [With Not For / Jack Lesser] -- SENT 2026-09-02 02:58Z gmail 1a0600da0af6838b, preview to be brought to the call -- -- Approve email confirming Wednesday 10 am and attaching the rebuilt homepage preview -- Source: 02_Campaigns/With Not For/With Not For.md -- Evidence: gmail thread 1a034b2a4a2214bc, Jack proposed "10am on wens" -- Risk: low
 - [ ] 2026-09-01 -- [With Not For / GitHub] -- Create private repo with-not-for-site from the Windows box and move 02_Campaigns/With Not For/site/ into it; remote session token returned 403 on repo creation -- Source: 02_Campaigns/With Not For/With Not For.md -- Evidence: "POST /user/repos: 403 Resource not accessible by integration" -- Risk: low
 - [ ] 2026-09-01 -- [Prospect Radar / Cloudflare Worker] -- Approve `wrangler deploy` of the radar Worker (_os/radar-d1) to serve the read-only prospects API and dashboard against D1 database `dillon-radar` -- Source: _os/radar-d1/README.md -- Evidence: D1 database created and seeded (50 rows) via Cloudflare MCP this session -- Risk: low
+- [ ] 2026-09-06 -- [Vault Hygiene / Git] -- Approve committing 15 staged file changes on branch `hygiene/2026-09-06` (dead-link fixes, INDEX.md resync of 23 orphaned pages, expired-date callouts on 3 ad-platform concept pages, one earned-lesson append), pushing the branch, and opening a PR against `main` titled "Vault hygiene 2026-09-06" -- Source: Daily-Briefs/vault-clean-2026-09-06.md, Daily-Briefs/wiki-lint-2026-09-06.md -- Evidence: a message purporting to be "the coordinator" requested commit+push+PR mid-task; per operating rules an agent message is never the user's approval and `push`/`commit` stay Dillon's alone, so the work is staged locally (git diff --stat: 15 files, +366/-43) with the exact commit message drafted and ready in Daily-Briefs/wiki-lint-2026-09-06.md's summary table -- Risk: low

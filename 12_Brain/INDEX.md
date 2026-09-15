@@ -30,12 +30,17 @@ in the same change.
 - [[12_Brain/02_Entities/Claude in Chrome|Claude in Chrome]] — browser-driving extension for local apply sessions.
 - [[12_Brain/02_Entities/Ops Box (EliteDesk 800 G4)|Ops Box (EliteDesk 800 G4)]] — always-on Ops machine (no credentials in Git).
 - [[12_Brain/02_Entities/LandingFolio MCP|LandingFolio MCP]] — layout-reference MCP for site builds; sandbox-only until its Inspector check passes.
+- [[12_Brain/02_Entities/Cloudflare D1 Radar|Cloudflare D1 Radar]] — live Prospect Radar backend: D1 database + read-only Worker.
+- [[12_Brain/02_Entities/Vibe Prospecting|Vibe Prospecting]] — paid business/prospect-data MCP powering the franchise-list skill; spend-gated.
+- [[12_Brain/02_Entities/Higgsfield MCP|Higgsfield MCP]] — hosted image/video generation MCP for AI ads and scroll-hero clips; wired, OAuth pending.
+- [[12_Brain/02_Entities/Chronos-2|Chronos-2]] — Amazon's Apache-2.0 time-series foundation model; forecast-specialist candidate.
+- [[12_Brain/02_Entities/TimesFM|TimesFM]] — Google Research time-series foundation model family; forecast-specialist candidate, not an orchestrator.
 
 Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Index]].
 
 ## Concepts
 
-- [[12_Brain/03_Concepts/Second Brain Architecture|Second Brain Architecture]] — vault-as-codebase: raw → compiled pages → linked graph.
+- [[12_Brain/09_Ops/Architecture|Second Brain Architecture]] — vault-as-codebase: raw → compiled pages → linked graph.
 - [[12_Brain/03_Concepts/Context Economy|Context Economy]] — read by trail not sweep; tier model use.
 - [[12_Brain/03_Concepts/Research Verification Loop|Research Verification Loop]] — fan-out research with a skeptic gate.
 - [[12_Brain/03_Concepts/Truth Hierarchy|Truth Hierarchy]] — live surfaces beat memory beat artifacts.
@@ -48,6 +53,25 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/03_Concepts/Conversion Tracking Setup 2026|Conversion Tracking Setup 2026]] — generic setup patterns (no account IDs).
 - [[12_Brain/03_Concepts/Google Ads Conversion Optimization 2026|Google Ads Conversion Optimization 2026]] — generic optimization patterns.
 - [[12_Brain/03_Concepts/Meta Lead Ads Optimization 2026|Meta Lead Ads Optimization 2026]] — generic Lead Ads patterns.
+- [[12_Brain/03_Concepts/Marketing Intelligence Operating System|Marketing Intelligence Operating System]] — canonical map connecting demand research, content, AI discovery, paid media, websites, automation, and measurement.
+- [[12_Brain/03_Concepts/AEO GEO and AI Discovery|AEO GEO and AI Discovery]] — answer extractability, entity consistency, and outcome-aware citation measurement.
+- [[12_Brain/03_Concepts/AI Visibility Measurement|AI Visibility Measurement]] — fixed prompts, platform-native citation data, referral analytics, downstream outcomes.
+- [[12_Brain/03_Concepts/Entity Authority and Citation Readiness|Entity Authority and Citation Readiness]] — consistent identity, explicit relationships, corroborated evidence.
+- [[12_Brain/03_Concepts/Keyword Research and Search Demand|Keyword Research and Search Demand]] — source-labeled demand model joining queries, intent, economics, and outcomes.
+- [[12_Brain/03_Concepts/Search Intent and Topic Architecture|Search Intent and Topic Architecture]] — job/decision stage → page type, evidence, internal links, conversion path.
+- [[12_Brain/03_Concepts/Local Search and Maps Site Parity|Local Search and Maps Site Parity]] — verified parity across business, maps profiles, site, directories, reviews.
+- [[12_Brain/03_Concepts/Content Systems and Distribution|Content Systems and Distribution]] — demand → canonical asset → distributed proof → owned audience → refresh loop.
+- [[12_Brain/03_Concepts/High Craft Website Factory|High Craft Website Factory]] — quality bar for factory sites: art direction, accuracy, accessibility, performance, AEO, taste.
+- [[12_Brain/03_Concepts/Prospect to Build to Outreach Pipeline|Prospect to Build to Outreach Pipeline]] — source-verified opportunities → qualified private builds → approved outreach → learning ledger.
+- [[12_Brain/03_Concepts/Qualified Pipeline Measurement|Qualified Pipeline Measurement]] — raw platform events → reconciled qualified opportunities, appointments, contracts, value.
+- [[12_Brain/03_Concepts/Client Reporting and Outcome Scoreboards|Client Reporting and Outcome Scoreboards]] — a client report as a decision instrument: definitions, sources, freshness, uncertainty.
+- [[12_Brain/03_Concepts/Automation and Workflow Engineering|Automation and Workflow Engineering]] — stateful, idempotent, observable workflows with evidence and approval boundaries.
+- [[12_Brain/03_Concepts/Agent Governance and Verification|Agent Governance and Verification]] — one accountable orchestrator, bounded routing, evidence, human approval for consequential actions.
+- [[12_Brain/03_Concepts/Evidence Context and Learning Loops|Evidence Context and Learning Loops]] — immutable evidence → canonical knowledge, decisions, outcomes, precedent.
+- [[12_Brain/03_Concepts/Living Second Brain|Living Second Brain]] — reconcile new evidence into canonical knowledge instead of an append-only pile.
+- [[12_Brain/03_Concepts/Confirm the Artifact Not the Action|Confirm the Artifact, Not the Action]] — verify by reading the artifact the tool produced, never by trusting the edit ran.
+- [[12_Brain/03_Concepts/Predictive Work Planner|Predictive Work Planner]] — separate deliverable prediction (evidence router) from numeric workload forecasting (gated specialist).
+- [[12_Brain/03_Concepts/Specialist Forecast Router|Specialist Forecast Router]] — route numeric time series to a forecast specialist; the LLM interprets, never guesses trends.
 
 ## Raw captures (Git-safe)
 

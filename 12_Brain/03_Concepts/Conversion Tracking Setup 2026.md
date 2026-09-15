@@ -12,6 +12,8 @@ source_refs: ["[[12_Brain/01_Captures/2026-07-04 - full-autonomy-directive]]"]
 
 # Conversion Tracking Setup — 2026 (Google + Meta)
 
+> [!warning] Expired 2026-08-04 (wiki-lint 2026-09-06) — content below is unverified against current Google/Meta docs. Re-verify before using in a live audit.
+
 One-line: enhanced conversions, GA4 double-counting, gclid/fbclid offline
 stitching, verification order, and primary/secondary — verified July 2026.
 Feeds every [[02_Campaigns/Ads Ops/Ads Ops Hub|Ads Ops]] conversion audit.

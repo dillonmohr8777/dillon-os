@@ -228,3 +228,28 @@ routine that was still keying dedupe daily until the cadence fix landed on 08-18
 **How to apply.** Treat the brief's `unreliable` list as a queue to investigate, not a
 list of broken things. Read `last_completed` and the failure timestamps before concluding
 anything is currently failing.
+
+---
+
+## 2026-09-06 — A hygiene report with a timestamp is not evidence a scan ran
+
+**Lesson.** `vault-clean` and `wiki-lint` write their own dated report file. A stub at
+that path with the right filename, frontmatter, and a plausible-looking "hygiene grade: A,
+no issues found" body is indistinguishable from a real pass at a glance — the only way to
+tell the difference is to run the checks yourself and compare.
+
+**Evidence.** `Daily-Briefs/vault-clean-2026-09-06.md` and `Daily-Briefs/wiki-lint-2026-09-06.md`
+already existed (timestamp 2026-09-06 02:14 UTC, both claiming zero broken links, zero
+orphans, zero expired pages, "all checks passed") before this session's actual scan ran.
+The real scan found 25 real broken wikilinks, 23 orphaned entity/concept pages missing
+from `12_Brain/INDEX.md` (stale since 2026-08-15), 3 live ad-platform playbooks 33 days
+past `expires:`, and a dead link to a note renamed in commit `113f58e` that had gone
+unfixed since at least the 2026-09-03 pass. None of that was a new problem — it had been
+sitting there, undetected by whatever produced the 02:14 stub, which either did not run
+the checks it claimed to run or ran them against the wrong scope and reported success
+anyway.
+
+**How to apply.** Never trust a hygiene/lint report's conclusion because the file exists
+and looks complete — re-derive the counts from a live scan before citing or extending a
+prior pass. If a report claims zero findings, that is the claim most worth spot-checking,
+not the one most safe to skip.

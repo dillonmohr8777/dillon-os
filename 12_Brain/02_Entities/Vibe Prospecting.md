@@ -11,7 +11,7 @@ source_refs: ["[[12_Brain/01_Captures/Slack/2026-09-01 - jason-fallon-snap-fitne
 # Vibe Prospecting
 
 **Summary:** a paid business/prospect-data MCP (companies, contacts, franchise
-locations) — powers [[.claude/skills/franchise-list|franchise-list]] and future
+locations) — powers [[.claude/skills/franchise-list/SKILL|franchise-list]] and future
 lead-pull skills.
 
 ## What it is
