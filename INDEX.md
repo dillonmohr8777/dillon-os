@@ -124,6 +124,11 @@ evidence.
 
 ## Reliability — 2026-09-15
 
+- [[12_Brain/07_Reviews/2026-09-15 - The job lane fires but the productive path was never scheduled|The job lane fires, but the productive path was never scheduled]]
+  — the shortlist and outreach tasks now run; the outreach runner is a green-exit
+  no-op (180 qualified roles, 0 drafts), and the 09:15 Claude trigger a vault note
+  claimed existed had never been registered. Registered draft-only, $13.22/run.
+
 - [[12_Brain/07_Reviews/2026-09-15 - Cadence tasks cannot run unattended|Cadence tasks cannot run unattended]]
   — `Cadence-daily` never fired. All four cadence tasks are registered "run only
   when the user is logged on," so a 03:31 Windows Update reboot blocked every
