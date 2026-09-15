@@ -20,6 +20,9 @@ from [[12_Brain/11_Craft/00_Index|the craft index]].
 - 2026-08-19 → [[12_Brain/03_Concepts/Confirm the Artifact Not the Action|Confirm the
   artifact, not the action]] — four entries below share one root: generated-file drift,
   the unasserted replace, the date-keyed output, and the heredoc escaping failure.
+- 2026-09-15 → same concept, **fifth face**: the cross-session handoff. A claimed
+  artifact the next session cannot open. Seen twice (PR #388, 2026-09-09; the Align
+  cloud-session export, 2026-09-14).
 
 ---
 
@@ -228,3 +231,56 @@ routine that was still keying dedupe daily until the cadence fix landed on 08-18
 **How to apply.** Treat the brief's `unreliable` list as a queue to investigate, not a
 list of broken things. Read `last_completed` and the failure timestamps before concluding
 anything is currently failing.
+
+---
+
+## 2026-09-15 — A blocked verdict without its scope sends the next agent down the worse path
+
+**Lesson.** An access note must record *what* was blocked, not just *that* something was.
+A verdict written at connector granularity ("Composio: blocked") gets read as a fact about
+the whole connector, and the next agent routes around a door that was open.
+
+**Evidence.** `12_Brain/09_Ops/Connector Map.md:100` records, from a 2026-09-01
+`ListConnectors` observation, "Blocked Composio, Claude Browser, HubSpot, Ads/GA4/Meta,
+Semrush (absent from workspace)" — accurate about that cloud workspace on that date. It
+was then carried as a general fact. On 2026-09-14 a local session checked directly:
+`google_search_console`, `google_analytics` and `googleads` were all `active`, a live
+read-only `GET_SITE` on `alignhcm.com` returned `siteOwner`, and `LIST_ACCOUNT_SUMMARIES`
+returned property 320235048. The real blocker was narrower than the note: Google Ads
+*entitlement* only, because Explorer access attaches to Cloud project 150963436905 and
+Composio's OAuth client does not use it. Search Console and GA4 were never blocked.
+Cost: the cloud session took the Composio fallback path, and the local session had to
+re-pull the entire Align dataset from source — 14 files, 128k lines — because nothing the
+cloud session claimed to have produced could be found.
+
+**How to apply.** Write access verdicts as `<surface>: <state> because <scope>`, with the
+observation date and the workspace it was observed in. A note that says "blocked" with no
+scope is an invitation to stop checking. Corollary: a verdict older than a week is a
+hypothesis — re-probe before routing around it. See
+[[12_Brain/03_Concepts/Access Verification Discipline|Access Verification Discipline]].
+
+---
+
+## 2026-09-15 — A handoff is not complete until the receiving session can open the file
+
+**Lesson.** "Session A produced X" is a claim about a session, not about the repository.
+If B cannot find X by path on a fetched ref, X does not exist, and B's first job is to
+say so rather than to reconstruct what A meant.
+
+**Evidence.** Second occurrence. (1) 2026-09-09, PR #388 — *"the note cites seven files
+that are not in the repo."* (2) 2026-09-14 capture, section C: *"No compressed export,
+recorded SHA-256, ledger script or gap table from the cloud session exists anywhere
+reachable"* — not in `origin/claude/sales-pitch-planning-cgitew`, not in any branch of
+`client-operations-canonical` or `align-hcm-lead-intelligence`, not in the dated Codex
+folders, after two exhaustive searches. The receiving session did the right thing: it
+re-pulled from source and then cross-checked all seven of the cloud session's figures
+against the direct pull, which reproduced them exactly. The numbers were honest; the
+artifacts were never committed.
+
+**How to apply.** End any session that hands off with the paths and the ref they are on,
+and confirm by reading them back from that ref — not from the working tree, which may hold
+files that were never staged. On the receiving side, verify before reconstructing, and
+when the artifact is genuinely gone, re-derive from source and cross-check rather than
+trusting the prior summary. Promoted 2026-09-15 to
+[[12_Brain/03_Concepts/Confirm the Artifact Not the Action|Confirm the artifact, not the
+action]].
