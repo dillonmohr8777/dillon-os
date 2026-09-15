@@ -1,0 +1,275 @@
+{
+  "status": "ok",
+  "date": "2026-09-10",
+  "started_at": "2026-09-09T23:19:58.870Z",
+  "finished_at": "2026-09-09T23:20:01.791Z",
+  "stats": {
+    "raw_count": 5263,
+    "deduped": 4596,
+    "eligible": 40,
+    "rejected": 4556,
+    "sources": [
+      {
+        "source": "remotive",
+        "ok": true,
+        "count": 17
+      },
+      {
+        "source": "arbeitnow",
+        "ok": true,
+        "count": 250
+      },
+      {
+        "source": "himalayas",
+        "ok": true,
+        "count": 120
+      },
+      {
+        "source": "jobicy",
+        "ok": true,
+        "count": 150
+      },
+      {
+        "source": "greenhouse:anthropic",
+        "ok": true,
+        "count": 599
+      },
+      {
+        "source": "greenhouse:scaleai",
+        "ok": true,
+        "count": 217
+      },
+      {
+        "source": "greenhouse:figma",
+        "ok": true,
+        "count": 159
+      },
+      {
+        "source": "greenhouse:vercel",
+        "ok": true,
+        "count": 87
+      },
+      {
+        "source": "greenhouse:webflow",
+        "ok": true,
+        "count": 28
+      },
+      {
+        "source": "greenhouse:airtable",
+        "ok": true,
+        "count": 16
+      },
+      {
+        "source": "greenhouse:amplitude",
+        "ok": true,
+        "count": 36
+      },
+      {
+        "source": "greenhouse:asana",
+        "ok": true,
+        "count": 109
+      },
+      {
+        "source": "greenhouse:hubspot",
+        "ok": true,
+        "count": 0
+      },
+      {
+        "source": "greenhouse:klaviyo",
+        "ok": true,
+        "count": 136
+      },
+      {
+        "source": "greenhouse:mongodb",
+        "ok": true,
+        "count": 404
+      },
+      {
+        "source": "greenhouse:instacart",
+        "ok": true,
+        "count": 104
+      },
+      {
+        "source": "greenhouse:duolingo",
+        "ok": true,
+        "count": 87
+      },
+      {
+        "source": "greenhouse:cloudflare",
+        "ok": true,
+        "count": 351
+      },
+      {
+        "source": "greenhouse:sourcegraph91",
+        "ok": true,
+        "count": 8
+      },
+      {
+        "source": "greenhouse:attentive",
+        "ok": true,
+        "count": 36
+      },
+      {
+        "source": "greenhouse:togetherai",
+        "ok": true,
+        "count": 59
+      },
+      {
+        "source": "greenhouse:netlify",
+        "ok": true,
+        "count": 1
+      },
+      {
+        "source": "lever:mistral",
+        "ok": true,
+        "count": 0
+      },
+      {
+        "source": "ashby:openai",
+        "ok": true,
+        "count": 788
+      },
+      {
+        "source": "ashby:notion",
+        "ok": true,
+        "count": 131
+      },
+      {
+        "source": "ashby:ramp",
+        "ok": true,
+        "count": 145
+      },
+      {
+        "source": "ashby:clickup",
+        "ok": true,
+        "count": 62
+      },
+      {
+        "source": "ashby:elevenlabs",
+        "ok": true,
+        "count": 252
+      },
+      {
+        "source": "ashby:cursor",
+        "ok": true,
+        "count": 126
+      },
+      {
+        "source": "ashby:linear",
+        "ok": true,
+        "count": 29
+      },
+      {
+        "source": "ashby:replit",
+        "ok": true,
+        "count": 78
+      },
+      {
+        "source": "ashby:harvey",
+        "ok": true,
+        "count": 328
+      },
+      {
+        "source": "ashby:sierra",
+        "ok": true,
+        "count": 210
+      },
+      {
+        "source": "ashby:decagon",
+        "ok": true,
+        "count": 140
+      }
+    ],
+    "sources_ok": 34,
+    "sources_total": 34
+  },
+  "errors": [],
+  "outputs": {
+    "ranked_list": "02_FullTimeJob/JobSearch/daily/2026-09-10-ranked-roles.md",
+    "brief": "Daily-Briefs/job-search-2026-09-10.md",
+    "drafts": [
+      "02_FullTimeJob/JobSearch/applications/2026-09-10/2026-09-10-45ed770ff648da59be62-draft.md",
+      "02_FullTimeJob/JobSearch/applications/2026-09-10/2026-09-10-5b46ee538a32300c5a80-draft.md",
+      "02_FullTimeJob/JobSearch/applications/2026-09-10/2026-09-10-324a50c2e123bb978669-draft.md",
+      "02_FullTimeJob/JobSearch/applications/2026-09-10/2026-09-10-a553efbf952f47f826e3-draft.md",
+      "02_FullTimeJob/JobSearch/applications/2026-09-10/2026-09-10-c4218de68fb9d45ca194-draft.md",
+      "02_FullTimeJob/JobSearch/applications/2026-09-10/2026-09-10-94ca8f9d6f8067f7a852-draft.md",
+      "02_FullTimeJob/JobSearch/applications/2026-09-10/2026-09-10-d3ed6e0ee2e058fefbff-draft.md",
+      "02_FullTimeJob/JobSearch/applications/2026-09-10/2026-09-10-9ea31a32019954eac41f-draft.md"
+    ]
+  },
+  "top": [
+    {
+      "job_id": "45ed770ff648da59be62",
+      "title": "Senior Demand Generation Manager",
+      "company": "NetBox Labs",
+      "url": "https://jobicy.com/jobs/152939-senior-demand-generation-manager-2",
+      "fit": 81,
+      "odds": 99,
+      "priority": 89
+    },
+    {
+      "job_id": "5b46ee538a32300c5a80",
+      "title": "Events Marketing Manager",
+      "company": "Chili Piper",
+      "url": "https://jobicy.com/jobs/152812-events-marketing-manager",
+      "fit": 73,
+      "odds": 99,
+      "priority": 85
+    },
+    {
+      "job_id": "324a50c2e123bb978669",
+      "title": "Marketing Operations Manager",
+      "company": "Cordance",
+      "url": "https://jobicy.com/jobs/152954-marketing-operations-manager",
+      "fit": 78,
+      "odds": 91,
+      "priority": 84
+    },
+    {
+      "job_id": "a553efbf952f47f826e3",
+      "title": "Content Marketing Manager",
+      "company": "NetBox Labs",
+      "url": "https://jobicy.com/jobs/152943-content-marketing-manager-5",
+      "fit": 67,
+      "odds": 96,
+      "priority": 80
+    },
+    {
+      "job_id": "c4218de68fb9d45ca194",
+      "title": "Partner Marketing Manager",
+      "company": "6sense",
+      "url": "https://jobicy.com/jobs/152829-partner-marketing-manager",
+      "fit": 71,
+      "odds": 86,
+      "priority": 78
+    },
+    {
+      "job_id": "94ca8f9d6f8067f7a852",
+      "title": "AEO/GEO/SEO Lead",
+      "company": "replit",
+      "url": "https://jobs.ashbyhq.com/replit/72866fb1-d377-4d3e-9851-f3d705449190",
+      "fit": 68,
+      "odds": 90,
+      "priority": 78
+    },
+    {
+      "job_id": "d3ed6e0ee2e058fefbff",
+      "title": "Partner Marketing Manager - North America",
+      "company": "elevenlabs",
+      "url": "https://jobs.ashbyhq.com/elevenlabs/c892235d-d809-45b0-a65c-008fc75f6eab",
+      "fit": 60,
+      "odds": 92,
+      "priority": 74
+    },
+    {
+      "job_id": "9ea31a32019954eac41f",
+      "title": "Principal Technical Product Marketing Manager",
+      "company": "6sense",
+      "url": "https://jobicy.com/jobs/152834-principal-technical-product-marketing-manager",
+      "fit": 69,
+      "odds": 78,
+      "priority": 73
+    }
+  ]
+}

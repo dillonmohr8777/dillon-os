@@ -1,0 +1,226 @@
+{
+  "schema_version": 2,
+  "updated": "2026-09-09",
+  "disclosure_rule": "Two rules, both load-bearing, because items here get quoted into drafts that leave the building. (1) AGGREGATE ONLY: no named third-party deals, no lead PII, no confidential pipeline names from the Align HCM CRM. (2) CLIENTS GENERALIZED: agency clients appear by category ('a Philadelphia bridal retailer'), not by name, so a draft can never leak a client roster to a prospective employer.",
+  "do_not_claim": [
+    "Business outcomes for active paid-media clients. Dillon's own evidence pass (12_Brain/05_Projects/2026-09-07 - Momentum AI division launch.md) found NO verified qualified-lead or revenue outcome for any active paid-media client — every report reads 'pending validation'.",
+    "Agency MRR. Retired as stale in System/revenue-scorecard.md.",
+    "Direct reports or headcount managed. No org chart or headcount exists in any repo.",
+    "'$500K+ ad spend managed / 100+ campaigns'. That line lives only in an archived business-plan draft (_archive/05_Offers/Mohr Media Business Plan.md) with no backing evidence.",
+    "A lift from the after-hours call routing (38.4% to anything). The measurement windows differ; cite the finding, not a lift."
+  ],
+  "verification_key": {
+    "verified": "Traced to a specific file read directly on 2026-09-09.",
+    "unverified": "Plausible but not confirmed against a primary source. Confirm before using."
+  },
+  "items": [
+    {
+      "id": "attribution-rebuild",
+      "claim": "Reconstructed a B2B marketing attribution model that surfaced $3.22M in marketing-supported opportunity history the CRM had recorded as $0 — auditing all 1,479 deals in the pipeline to do it",
+      "metric": "$3.22M across 17 opportunities; $162K closed-won and $2.187M open; prior analysis had concluded $0",
+      "tags": ["attribution", "analytics", "b2b", "saas", "hubspot", "crm", "reporting", "demand generation", "pipeline", "revenue marketing", "data", "audit"],
+      "status": "verified",
+      "source_ref": "align-hcm-lead-intelligence/reports/2026-reconstructed-marketing-attribution.md"
+    },
+    {
+      "id": "organic-to-revenue-proof",
+      "claim": "Traced a closed-won deal end to end from organic search through blog content and a qualified form to booked revenue — the clean causal chain most marketing teams cannot produce",
+      "metric": "$54,000 closed-won, full path evidenced: Google Organic → blog → qualified form → deal → close",
+      "tags": ["seo", "organic search", "content", "content marketing", "conversion", "attribution", "b2b", "landing page", "demand generation"],
+      "status": "verified",
+      "source_ref": "align-hcm-lead-intelligence/reports/2026-qualified-lead-channel-attribution.md"
+    },
+    {
+      "id": "seo-visibility-gains",
+      "claim": "Ran the organic program that took new HCM content to position 1 within one to two weeks and moved every engagement metric on the site",
+      "metric": "5 position-1 keywords, 24 in Google top 100 (67% on blog pages), organic traffic +8.17% MoM, pages/visit +139.84%, bounce rate -69.92%",
+      "tags": ["seo", "organic search", "content", "content marketing", "keyword research", "analytics", "ga4", "google search console", "on-page seo"],
+      "status": "verified",
+      "source_ref": "align-hcm-lead-intelligence/data/presentation-facts-2026.json (organicSearch.visibility)"
+    },
+    {
+      "id": "dead-conversion-tag",
+      "claim": "Took over an enterprise software Google Ads account and found six figures of spend running against a conversion tag that had stopped reporting",
+      "metric": "$115,434.23 lifetime spend, 26,915 clicks, 133.28 reported conversions at $866.07 each — against an inactive tag",
+      "tags": ["google ads", "paid search", "ppc", "sem", "conversion", "google tag manager", "analytics", "audit", "attribution", "paid media"],
+      "status": "verified",
+      "source_ref": "dillon-os/01_Clients/Momentum 360/AI Division Library/Editable Sources/ebook-02-from-missed-call-to-booked-job.md"
+    },
+    {
+      "id": "followup-leak",
+      "claim": "Audited inbound form handling and found the majority of qualified leads were never followed up — including most of the hottest ones",
+      "metric": "82 of 103 form submissions had no logged follow-up; of 22 qualified buyers, 9 were missed and 7 of those 9 scored Hot",
+      "tags": ["lead generation", "demand generation", "crm", "hubspot", "lifecycle", "conversion", "audit", "marketing operations", "sales"],
+      "status": "verified",
+      "source_ref": "align-hcm-lead-intelligence/reports/raw-form-followup-audit.md"
+    },
+    {
+      "id": "duplicate-conversions",
+      "claim": "Found duplicate and overlapping conversion actions inflating a client's reported results, and refused to present the inflated number",
+      "metric": "14 enabled conversion actions with duplicate primaries; 87 reported conversion events that could not be presented as 87 leads",
+      "tags": ["google ads", "conversion", "analytics", "attribution", "reporting", "audit", "paid media", "ppc", "data"],
+      "status": "verified",
+      "source_ref": "dillon-os/01_Clients/Momentum 360/AI Division Library/Editable Sources/ebook-02-from-missed-call-to-booked-job.md"
+    },
+    {
+      "id": "automation-run-audit",
+      "claim": "Reviewed every automation run behind a client's lead dashboard and showed the real qualified volume was a fraction of what the dashboard claimed",
+      "metric": "22 runs over four weeks resolved to 4 genuine inquiries; the other 18 were solicitations, tests and duplicates",
+      "tags": ["marketing automation", "lead generation", "reporting", "analytics", "audit", "crm", "data", "operations"],
+      "status": "verified",
+      "source_ref": "dillon-os/01_Clients/Momentum 360/AI Division Library/Editable Sources/ebook-02-from-missed-call-to-booked-job.md"
+    },
+    {
+      "id": "budget-breach",
+      "claim": "Found a multi-location retail account running far past the spend cap the client believed was in writing, and documented the exposure",
+      "metric": "13 campaigns at $216.71/day potential exposure against a believed $500/location cap; $6,106.52 gross spend over four months",
+      "tags": ["google ads", "budget", "paid media", "ppc", "audit", "spend", "forecast", "operations", "multi-location"],
+      "status": "verified",
+      "source_ref": "dillon-os/01_Clients/Momentum 360/AI Division Library/Editable Sources/ebook-02-from-missed-call-to-booked-job.md"
+    },
+    {
+      "id": "untracked-campaigns",
+      "claim": "Found nine live store campaigns optimizing toward a conversion signal that could never arrive, because the destination site carried no tracking at all",
+      "metric": "9 campaigns pointed at a site with no Google tag, no GTM, no analytics and no Ads tag",
+      "tags": ["google ads", "google tag manager", "analytics", "conversion", "paid media", "ppc", "audit", "ga4", "tracking"],
+      "status": "verified",
+      "source_ref": "dillon-os/01_Clients/Momentum 360/AI Division Library/Editable Sources/ebook-02-from-missed-call-to-booked-job.md"
+    },
+    {
+      "id": "cold-email-reality-check",
+      "claim": "Ran a controlled cold-email test, got zero human replies from 241 sends, wrote that down, and rebuilt go-to-market around what actually worked instead",
+      "metric": "241 sends produced 0 verified human replies; in the same fortnight 2 hand-built AI-search audits both reached quote stage",
+      "tags": ["email marketing", "demand generation", "lead generation", "go-to-market", "growth", "experimentation", "a/b testing", "outbound"],
+      "status": "verified",
+      "source_ref": "dillon-os/01_Clients/Momentum 360/AI Division Library/Editable Sources/planning-POSITIONING.md"
+    },
+    {
+      "id": "agent-operating-team",
+      "claim": "Designed and runs a governed multi-agent operating team with per-role token budgets, retry policy, cadence freshness windows and a fail-closed rule that treats an unverifiable connector as a blocked result rather than a success",
+      "metric": "21 agents and 54 routines across 6 departments, 9 ledger stages per routine",
+      "tags": ["ai", "generative ai", "llm", "agents", "automation", "marketing automation", "operations", "systems", "workflow", "governance"],
+      "status": "verified",
+      "source_ref": "dillon-os/11_Agents/claude-operating-team.json"
+    },
+    {
+      "id": "autonomous-automation-estate",
+      "claim": "Built an automation estate that runs unattended on a schedule with tiered approval gates — reading and drafting run free, anything that sends, posts, deploys or spends requires a person",
+      "metric": "26 registered automations across intelligence, outreach, websites, reporting and infrastructure",
+      "tags": ["ai", "automation", "marketing automation", "agents", "operations", "marketing operations", "workflow", "systems", "governance"],
+      "status": "verified",
+      "source_ref": "dillon-os/12_Brain/registry/automations.json"
+    },
+    {
+      "id": "prospect-radar",
+      "claim": "Built a prospect intelligence system that discovers businesses, grades their websites and maintains a live rebuild queue with no manual research",
+      "metric": "1,401 businesses tracked with full grade history, refreshed by an unattended daily sweep",
+      "tags": ["automation", "lead generation", "prospecting", "demand generation", "data", "analytics", "growth", "ai", "web design", "systems"],
+      "status": "verified",
+      "source_ref": "dillon-os/12_Brain/state/radar/registry.json"
+    },
+    {
+      "id": "site-grader-waste-removal",
+      "claim": "Built a grader that decides which prospects are actually worth building for, and quantified the effort it saves",
+      "metric": "69 candidates graded down to 3 that warranted a build slot; the other 66 routed to a different offer or dropped",
+      "tags": ["automation", "prospecting", "lead generation", "web design", "data", "analytics", "growth", "qualification", "operations"],
+      "status": "verified",
+      "source_ref": "dillon-os/12_Brain/state/grades/built/report-2026-08-06.md"
+    },
+    {
+      "id": "site-factory-batches",
+      "claim": "Ships websites in batches of 25 through a factory with hard release gates — deterministic rebuilds, first-party logo capture, real-photo sourcing and responsive QA at three breakpoints",
+      "metric": "25/25 briefs and QA passes per batch, 175 unique asset hashes, 25/25 first-party logos, deterministic rebuild verified",
+      "tags": ["web design", "wordpress", "landing page", "html", "css", "ux", "figma", "quality assurance", "automation", "production"],
+      "status": "verified",
+      "source_ref": "dillon-os/12_Brain/05_Projects/2026-08-04 - Philadelphia 25 Site Factory Batch 4.md"
+    },
+    {
+      "id": "accessibility-gate",
+      "claim": "Built a design system whose build refuses to render if any colour pair fails contrast, then measured the existing estate against the same bar and published the failures",
+      "metric": "31 contrast pairs at 0 failures in the new system; 37 of 120 pairs across ten existing builds fail WCAG AA",
+      "tags": ["web design", "accessibility", "wcag", "design system", "ux", "quality assurance", "brand", "css", "figma"],
+      "status": "verified",
+      "source_ref": "dillon-os/12_Brain/05_Projects/2026-09-07 - Momentum AI division launch.md"
+    },
+    {
+      "id": "hubspot-attribution-agent",
+      "claim": "Built a read-only HubSpot attribution product that handles all seven of HubSpot's attribution models and deliberately refuses to sum them, with CRM writes gated behind a reviewed preview",
+      "metric": "Aggregate-only dashboard, preview-only backfill proposing blank fields only, WCAG 2.2 AA target",
+      "tags": ["hubspot", "crm", "attribution", "analytics", "reporting", "b2b", "saas", "ai", "automation", "data visualization"],
+      "status": "verified",
+      "source_ref": "align-hcm-lead-intelligence/hubspot-agent/PRODUCT.md"
+    },
+    {
+      "id": "generative-video-pipeline",
+      "claim": "Stood up a generative video pipeline with measured unit costs and a hard spend cap enforced by the runner, and used it to ship a broadcast-shaped set in a day",
+      "metric": ":30 spot plus :15 cutdown plus :06 bumper produced in one day for roughly $12; stills at $0.039, 4s/720p video at $0.20",
+      "tags": ["ai", "generative ai", "video production", "video marketing", "content", "creative", "brand", "automation", "budget"],
+      "status": "verified",
+      "source_ref": "dillon-os/12_Brain/05_Projects/2026-09-07 - Momentum AI division launch.md"
+    },
+    {
+      "id": "ai-content-library",
+      "claim": "Delivered a complete AI-produced content library in a single month — video, interactive ebooks, PDFs and long-form drafts",
+      "metric": "168 files: 39 MP4s across 18 narrative segments, 5 interactive ebook editions, 5 PDF companions totalling 174 pages, 10 article drafts",
+      "tags": ["ai", "generative ai", "content", "content marketing", "video production", "content strategy", "creative", "production", "copywriting"],
+      "status": "verified",
+      "source_ref": "dillon-os/01_Clients/Momentum 360/AI Division Library/README.md"
+    },
+    {
+      "id": "turnaround-speed",
+      "claim": "Turned a same-morning deck request into a finished 26-slide editable deck with native motion and source notes inside two hours, timestamp to timestamp",
+      "metric": "Requested 10:01, delivered 11:58 — 1 hour 58 minutes observed",
+      "tags": ["content", "presentation", "creative", "ai", "production", "brand", "speed", "design"],
+      "status": "verified",
+      "source_ref": "dillon-os/01_Clients/Momentum 360/AI Division Library/Editable Sources/BUSINESS-EVIDENCE.md"
+    },
+    {
+      "id": "agency-client-book",
+      "claim": "Runs marketing delivery across a live agency book spanning paid media, local SEO, content and web — as the operating owner, not a channel specialist",
+      "metric": "12 active clients against a documented 100-client target, 7 live ad accounts across Google and Meta, a 108-item governed work queue",
+      "tags": ["agency", "client", "account management", "paid media", "google ads", "meta ads", "seo", "local seo", "content", "web design", "leadership", "operations"],
+      "status": "verified",
+      "source_ref": "dillon-os/System/operating-status.md and client-operations-canonical/queue/work-items.json"
+    },
+    {
+      "id": "executive-sponsorship",
+      "claim": "Named AI Marketing Director and asked by the agency founder to build out the AI division — with another team member's work reassigned to free up the capacity",
+      "metric": null,
+      "tags": ["leadership", "ai", "strategy", "management", "agency", "growth", "go-to-market"],
+      "status": "verified",
+      "source_ref": "dillon-os/01_Clients/Momentum 360/AI Division Library/Editable Sources/BUSINESS-EVIDENCE.md (Slack permalinks captured)"
+    },
+    {
+      "id": "cmo-align",
+      "claim": "Holds the Chief Marketing Officer seat at an HCM software and services company while running an agency book at the same time — used to owning the number across more than one P&L",
+      "metric": null,
+      "tags": ["leadership", "b2b", "saas", "strategy", "brand", "go-to-market", "budget", "management", "cmo", "executive"],
+      "status": "verified",
+      "source_ref": "Indeed profile (connector read 2026-09-09)"
+    },
+    {
+      "id": "measurement-rigor",
+      "claim": "Ran an evidence pass across the agency's own client reporting, concluded no client outcome was actually verified, and published that finding rather than papering over it",
+      "metric": null,
+      "tags": ["analytics", "attribution", "reporting", "audit", "data", "governance", "integrity", "marketing operations", "kpi"],
+      "status": "verified",
+      "source_ref": "dillon-os/12_Brain/05_Projects/2026-09-07 - Momentum AI division launch.md"
+    },
+    {
+      "id": "full-funnel-channels",
+      "claim": "Hands-on across the whole stack — Google Ads, Meta Ads, GA4, Tag Manager, Search Console, HubSpot, SEMrush and Ahrefs — rather than directing channels from a distance",
+      "metric": null,
+      "tags": ["google ads", "meta ads", "paid search", "ppc", "sem", "ga4", "google analytics", "google tag manager", "google search console", "hubspot", "semrush", "ahrefs", "paid media", "seo"],
+      "status": "verified",
+      "source_ref": "Indeed profile skills (connector read 2026-09-09)"
+    },
+    {
+      "id": "masters-degree",
+      "claim": "Master's degree from West Virginia University; Bachelor's from Slippery Rock University of Pennsylvania",
+      "metric": null,
+      "tags": ["education", "degree", "masters", "bachelors"],
+      "status": "verified",
+      "source_ref": "Indeed profile (connector read 2026-09-09)"
+    }
+  ]
+}

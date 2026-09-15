@@ -50,7 +50,8 @@ links instead of loading the entire vault.
 
 - [[01_Clients/Client Index|Client Index]] — canonical client records.
 - `02_Campaigns/` — campaign plans and delivery.
-- `02_FullTimeJob/` — Align HCM work, kept separate from client revenue.
+- `02_FullTimeJob/` — full-time job matters. `AlignHCM/` is the job he has; `JobSearch/` is the single consolidated home for the job he wants, fed daily by the `job-search-daily` automation.
+- [[02_FullTimeJob/JobSearch/README|Job search]] — ranked remote roles, drafted application material, and the evidence file the drafts quote. Draft only; nothing is ever sent.
 - `03_Content/` — content plans and drafts.
 - [[12_Brain/05_Projects/2026-08-04 - Philadelphia 25 Site Factory Batch 3|Philadelphia 25-site factory Batch 3]] — private prospect previews and evidence.
 - [[12_Brain/05_Projects/2026-08-04 - Philadelphia 25 Site Factory Batch 4|Philadelphia 25-site factory Batch 4]] — separate real-business cohort with first-party logo evidence.
