@@ -1,9 +1,9 @@
 ---
 tags: [system, gateway, health]
-last_updated: 2026-09-15T14:32:26.077063Z
+last_updated: 2026-09-15T15:01:49.369565Z
 gateway_pid: 18656
-state: "degraded: process alive and command identity verified; root running; Telegram connected; heartbeat and log delayed about 36 minutes"
-heartbeat_age_sec: 2175
+state: "stale-warn: process alive and command identity verified; root running; Telegram connected; heartbeat and log silent for over one hour after benign housekeeping"
+heartbeat_age_sec: 3938
 conflicts_1h: 0
 conflicts_6h: 0
 conflicts_24h: 0
@@ -15,24 +15,25 @@ source_refs:
 
 # Gateway Health
 
-## 2026-09-15T14:32:26.077063Z - DEGRADED 18656 conflicts 0/0/0
+## 2026-09-15T15:01:49.369565Z - STALE-WARN 18656 conflicts 0/0/0
 
 - **Gateway PID:** 18656.
-- **Process liveness:** alive; native Windows process queries identify `python.exe` (working set 95,404,032 bytes) running `hermes.exe gateway run`, matching the intended gateway command.
+- **Process liveness:** alive; native Windows process queries identify `python.exe` (working set 230,064,128 bytes) running `hermes.exe gateway run`, matching the intended gateway command.
 - **Root state:** `running`; root heartbeat `updated_at` 2026-09-15T13:56:10.767533Z; `exit_reason` is null and `restart_requested` is false.
 - **Platform state:** Telegram `connected` (updated 2026-09-15T13:56:10.712787Z), with no error code or message.
-- **Heartbeat age:** 2,175 seconds (36m 15s). Telegram sub-state age is also 2,175 seconds.
+- **Heartbeat age:** 3,938 seconds. Telegram sub-state age is also 3,938 seconds.
 - **Telegram polling conflicts:** 1h **0**; 6h **0**; 24h **0**.
 - **Tail coverage:** exactly 2,000 of 14,926 log lines, from 2026-09-03T01:14:18.589Z through 2026-09-15T13:56:12.730Z. All rolling windows are fully covered. Naive timestamps were interpreted as `America/New_York` and converted to UTC.
-- **Log freshness:** final event is 2,173 seconds old (36m 13s); file mtime 2026-09-15T13:56:12.735851Z. The final event was benign `Gateway housekeeping started`; there is no dispatcher-deadlock signature.
+- **Log freshness:** final event is 3,936 seconds old; file mtime 2026-09-15T13:56:12.735851Z. The final event was benign `Gateway housekeeping started`; there is no dispatcher-deadlock signature in the requested tail.
 - **Latest conflict:** none in the requested tail.
 - **Last error/warning:** no retained state error. The latest warning was 2026-09-15T13:55:56.570Z, Telegram connection attempt 1/8; it was followed by successful polling connection and housekeeping startup. The tail contains 173 timeout/DNS/fallback signatures, latest 2026-09-15T13:55:56.534Z, but none are current at this snapshot.
-- **State:** **DEGRADED** — the intended process is alive and correctly identified, Telegram is connected, and heartbeat/log silence remains under one hour. This fits delayed state/log writers rather than a confirmed stall.
-- **Recommended action:** preserve PID 18656 and inspect again at the next scheduled snapshot. If heartbeat and gateway activity remain frozen beyond one hour, classify as stale-warn and continue bounded observation; seek scoped local soft-restart approval only after repeated frozen snapshots. No external-poller action is indicated.
+- **State:** **STALE-WARN** — the intended process is alive and correctly identified, Telegram's retained state is connected, but both the root heartbeat and gateway log have been silent for over one hour after benign housekeeping. This is not the dispatcher-deadlock signature and no active polling conflict is present.
+- **Recommended action:** preserve PID 18656 and inspect again at the next scheduled snapshot. If heartbeat and gateway activity remain frozen on another snapshot, seek approval for a scoped local soft restart; do not restart first while the single-snapshot state remains ambiguous. No external-poller action is indicated.
 - **Scope:** local-only observation; no message/email, token rotation, broadcast, process stop, or restart performed.
 
 ## Recent history
 
+- **2026-09-15T14:32:26.077063Z:** DEGRADED; PID 18656 alive and identity matched; heartbeat/log delayed ~36m; conflicts 0/0/0.
 - **2026-09-15T14:03:35.049822Z:** DEGRADED; PID 18656 alive and identity matched; heartbeat/log quiet ~7m after successful startup; conflicts 0/0/0.
 - **2026-09-15T07:01:18.231Z:** STALE-WARN; PID 39608 alive and identity matched; heartbeat/log silent ~5h10m after benign housekeeping; conflicts 0/0/0. Superseded by PID 18656.
 - **2026-09-15T06:31:14.047Z:** STALE-WARN; PID 39608 alive and identity matched; heartbeat/log silent ~4h40m; conflicts 0/0/0.
@@ -42,10 +43,9 @@ source_refs:
 - **2026-09-15T04:31:55.509Z:** STALE-WARN; PID 39608 alive and identity matched; heartbeat/log silent ~2h41m; conflicts 0/0/0.
 - **2026-09-15T04:01:58.513Z:** STALE-WARN; PID 39608 alive and identity matched; heartbeat/log silent ~2h11m; conflicts 0/0/0.
 - **2026-09-15T03:32:40.791Z:** STALE-WARN; PID 39608 alive and identity matched; heartbeat/log silent ~102m; conflicts 0/0/0.
-- **2026-09-15T03:01:57.093Z:** STALE-WARN; PID 39608 alive and identity matched; heartbeat/log silent ~71m; conflicts 0/0/0.
 
 ## Evidence notes
 
 - `System/automation-status.md` is historical context and does not override the live state/process/log snapshot.
 - Rolling conflict matches are case-insensitive for `polling conflict` or `terminated by other getUpdates`, counted once per matching log line.
-- The 1-hour threshold was not crossed, so no external-poller approval item was added. `System/approval-queue.md` was already above its preferred size guard at this snapshot and was left byte-for-byte unchanged because no threshold action was required.
+- The 1-hour threshold was not crossed, so no external-poller approval item was added. `System/approval-queue.md` was already above the requested line cap before this run and was left byte-for-byte unchanged because no threshold action was required.
