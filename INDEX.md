@@ -134,6 +134,16 @@ evidence.
 - [[12_Brain/04_Decisions/2026-09-07 - Align HCM registry record is superseded|Align HCM registry record is superseded]]
   — the stale active registry record is superseded by the vault.
 
+## Reliability — 2026-09-16
+
+- [[12_Brain/11_Craft/2026-09-16 - daily learning review|The merge that reunited the tree deleted two cadence jobs]]
+  — the working tree rejoined `main` after 28 days apart (`e32672f`, `215c09c`,
+  `121bf05`, landed as `54c4ac6`). The receipt writer never stopped; it was
+  writing where `main` could not see. The reunification merge then dropped
+  `daily-sweep` and `morning-chief` from `_os/automation/cadence/daily.yaml`, so
+  the layer that reports silence went partly silent itself. `daily-sweep` is
+  restored here; `morning-chief` posts to Slack and stays gated.
+
 ## Reliability — 2026-09-15
 
 - [[12_Brain/04_Decisions/2026-09-15 - Mac's FAQ bot is a second surface, not an opened Workmate|Mac's FAQ bot is a second surface, not an opened Workmate]]

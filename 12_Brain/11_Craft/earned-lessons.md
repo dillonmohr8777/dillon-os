@@ -550,3 +550,72 @@ only a live SERP can answer, such as who actually ranks. Also worth knowing: a
 `curl` status probe can return 403 from Cloudflare while the same URL fetched with
 `-L` and a browser user-agent returns 200 — check the status with the same request
 shape you used for the body, or you will report a site as broken when it is not.
+
+---
+
+## 2026-09-16 — Absent from `origin/main` is not absent from the machine
+
+**Lesson.** A reader whose only surface is a git remote can observe that output
+stopped arriving. It cannot observe that production stopped. Those are different
+failures with opposite fixes, and the cheap one — "the producer is dead" — is the
+one an agent reaches for. Before writing that a routine has stopped, state the
+surface you checked on, and check whether the *transport* is alive: is the tree
+that produces this output still on a branch that reaches here, and did anything
+at all arrive from it in the same window?
+
+**Evidence.** From 2026-08-19 to 2026-09-15, `main` received no
+`12_Brain/queue/claude-loop-*.jsonl`; its newest was `claude-loop-2026-08-18.jsonl`.
+Three cloud runs concluded the receipt writer had stopped — PR #368 "the
+self-reporting layer is what broke", PR #373 "the self-audit was green on a dead
+queue", PR #402 "the receipt writer … last wrote `claude-loop-2026-08-18.jsonl`".
+All three were wrong. The writer ran every single day. Commit `215c09c` on
+2026-09-15 added twenty-eight consecutive receipt files, 2026-08-19 through
+2026-09-15, with no gaps. The working tree had forked from `main` on 2026-08-18
+and, from 2026-08-23, could not commit at all: a zero-byte file named `NUL`, a
+reserved Windows device name created by a `> NUL` redirect, made `git add -A`
+fail with `invalid path` (`e32672f`). Eleven nights of correct observation,
+eleven nights of wrong diagnosis, because the observation and the diagnosis were
+never separated.
+
+**How to apply.** Write the verdict as `<thing>: <state> on <surface> as of
+<when>`, never a bare "stopped". When a producer's output goes missing from a
+remote, spend one command on the transport before spending a paragraph on the
+producer: `git log -1 --format=%ci` on the path, and whether *anything* from
+that tree landed in the window. If nothing at all did, the transport is the
+suspect, not the routine. The same rule already exists for access verdicts
+(`<surface>: <state> because <scope>`) — this is the freshness twin of it.
+
+---
+
+## 2026-09-16 — A wide merge resolves generated files by picking a side, and picking a side deletes work
+
+**Lesson.** Reuniting a long-diverged tree is not one decision, it is one
+decision per conflicted file, taken quickly, mostly on files nobody reads. Config
+and manifest files hide in that crowd and lose real entries. After any merge with
+more than a handful of conflicts, diff the *merged result* against **both**
+parents on every file that drives behaviour — schedulers, registries, agent
+definitions — not just the ones you expected to conflict.
+
+**Evidence.** The 2026-09-15 reunification merge (`121bf05`, landed as `54c4ac6`
+via PR #404) carried 87 conflicted paths across 466 files. Most were generated
+maps, radar artefacts and state JSON where taking `main` was right.
+`_os/automation/cadence/daily.yaml` was not: the working-tree side held five jobs
+(`daily-sweep`, `morning-chief`, `heartbeat`, `approval-queue-diff`,
+`unfiled-sweep`), `main` held three, and the merged result holds three. Both
+deleted jobs were live hours earlier — `run-ledger.jsonl` has three `daily-sweep`
+rows on 2026-09-15 (13:55:12Z, 13:57:41Z, 14:00:01Z) and `5a15192` is a
+`cadence(daily): morning-chief` commit from 10:03 that morning.
+`_os/automation/bin/daily-sweep.js` survived; only the entry that runs it did
+not. Worse, the heartbeat names ABSENT jobs by comparing the ledger to the
+manifest, so a job deleted from the manifest can never again be reported absent:
+the layer built to detect silence was silenced through the one path it does not
+watch.
+
+**How to apply.** Before pushing a wide merge, run
+`git diff <branch-side> <merge-result> -- <path>` for every manifest, registry
+and agent definition in the conflict list, and read the deletions. A job, a
+route or a rule that disappears in a merge leaves no rationale behind, which is
+exactly what distinguishes it from a retirement. In this estate the files that
+earn that check are `_os/automation/cadence/*.yaml`,
+`12_Brain/registry/automations.json`, `.claude/agents/*.md` and
+`_os/automation/workflows/*.json`.
