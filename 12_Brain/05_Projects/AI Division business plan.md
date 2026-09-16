@@ -189,15 +189,29 @@ pieces are the right pieces and they are wired to each other.
 
 Everything else is work. These two are the product.
 
-**1. Multi tenancy.** Today there is one tenant, Momentum, and one token. A
-client needs their agents, their data, and their credentials isolated from every
-other client, provably. This is the thing an SMB either trusts or does not, and
-it cannot be retrofitted convincingly. It means per tenant credential storage the
-operator cannot casually read, per tenant D1 or schema separation, and an audit
-trail that shows a client nobody else touched their data. The existing rule that
-client data never crosses into another client's channel or packet
-(MOMENTUM-ORG-PLAN.md) is the right instinct at the wrong scale; it has to become
-an enforced boundary, not a convention.
+**1. Tenancy, and it is simpler than it first looked.** Corrected 2026-09-16
+after Dillon clarified the model: Momentum monitors and manages every client's
+agents, and a client is INVITED into their own environment which lives inside
+Momentum's. That is the DataStrike shape, and it removes most of the difficulty.
+
+The isolation that matters is **client from client**, not client from operator.
+A client is not trying to hide their data from Momentum, they are paying
+Momentum to hold it. So there is no per tenant credential vault, no self serve
+signup, no per tenant runtime, no billing system. There is one operator who sees
+everything and a set of viewers who each see exactly one slice.
+
+Built 2026-09-16, and none of it needed the Mac mini:
+- a `tenants` table in D1: id, display name, token hash, operator flag, status
+- `tenant` columns on `agents` and `runs`, defaulting to `momentum`
+- `momentum` seeded as the operator tenant, is_operator=1, sees all rows
+- `_os/automation/bin/tenant-invite.js` to create, rotate and revoke a client
+  invite. The token prints once to the operator's terminal; D1 stores only its
+  sha256, so reading the database never yields a client token.
+
+The one place this can still go wrong: a client editing their own cookie to
+claim another tenant's id. The cookie therefore has to be signed, not merely
+set. That is the whole security boundary of the managed model, and it is the
+single thing to get right.
 
 **2. The command channel.** The cloud console is currently read only by design,
 because a mirror cannot safely write back to a runtime it does not control.
