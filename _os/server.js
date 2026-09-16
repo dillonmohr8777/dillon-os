@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * D.I.L.L.O.N. OS — visual agentic OS server.
+ * Momentum Agent Console — visual agentic OS server.
  *
  * Zero-dependency Node (18+) server that:
  *   - serves the HUD dashboard (public/index.html)
@@ -105,6 +105,9 @@ function agentsPayload() {
     cadence: a.cadence,
     enabled: !!a.enabled,
     lifecycle: a.lifecycle,
+    audience: a.audience || 'internal',
+    function: a.function || 'unassigned',
+    kind: a.kind || null,
     outputs: a.outputs || [],
     last: last[a.id] || null,
   }));
@@ -219,7 +222,7 @@ const server = http.createServer((req, res) => {
 
 if (require.main === module) {
   server.listen(PORT, HOST, () => {
-    console.log(`D.I.L.L.O.N. OS online → http://${HOST}:${PORT}`);
+    console.log(`Momentum Agent Console online → http://${HOST}:${PORT}`);
     console.log(`vault: ${VAULT}`);
     console.log(`brain: ${path.join(VAULT, '12_Brain')}`);
   });
