@@ -50,6 +50,7 @@ links instead of loading the entire vault.
 ## Work
 
 - [[01_Clients/Momentum 360/AI Division Library/README|Momentum AI Division Library]]: private videos, ebooks, blog drafts and source packages.
+- [[12_Brain/05_Projects/AI Division business plan|AI Division business plan]] — DataStrike delivery model x Brainforge taxonomy, four service lines, Momentum runs it on itself first.
 
 - [[01_Clients/Client Index|Client Index]] — canonical client records.
 - `02_Campaigns/` — campaign plans and delivery.
