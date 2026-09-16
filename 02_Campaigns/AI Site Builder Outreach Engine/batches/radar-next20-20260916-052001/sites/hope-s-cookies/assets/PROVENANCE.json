@@ -1,0 +1,168 @@
+{
+  "slug": "hope-s-cookies",
+  "preparedAt": "2026-09-16T09:22:59.021Z",
+  "sourceSite": "https://www.hopescookies.com/store",
+  "sourceFinalUrl": "https://www.hopescookies.com/store",
+  "sourcePageSha256": "27620826b03b01ffb13fd2b0c437d50678b63328c4c43983c5dbe6d096120e12",
+  "exactLogoRequired": true,
+  "exactLogoSha256": "cee4961a0b2385b988b5fdf20402495ebbdda786a6039de7198d7659e6d6c276",
+  "firstPartyDerivativePolicy": "Content visuals preserve first-party source photography while adapting crop and tonal balance for the private mobile concept. They are not evidence of additional projects or outcomes.",
+  "generatedCompositionReference": "automation/prospect-radar-next20/.impeccable/mocks/architerra-mobile-three-directions.png",
+  "assets": [
+    {
+      "role": "exact identity",
+      "output": "logo.png",
+      "sourceUrl": "https://www.hopescookies.com/assets/images/logo.png",
+      "sourceSha256": "cee4961a0b2385b988b5fdf20402495ebbdda786a6039de7198d7659e6d6c276",
+      "outputSha256": "cee4961a0b2385b988b5fdf20402495ebbdda786a6039de7198d7659e6d6c276",
+      "transformation": "none; exact first-party transparent asset",
+      "transparent": true
+    },
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "http://hopescookies.com/storage/images/slides/2026/BestMLMN_6-26.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "873d64e001da93a45f248f790aada3a3607de9f2482c97d5b19cc605794ff3fb",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=1.040:contrast=1.082:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "704216a3527385d6057a68cc58bc916ad9a1157939f7fcc5af87710eb5c401db"
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.hopescookies.com/assets/images/slides/2023/local-delivery4.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "a42afaadd95ac2a1e0405d6f1a9a5251df7b0c62607abf29869a03a085be3eed",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:0,eq=saturation=0.940:contrast=1.046:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "9b51589699b770b59786a31de65870c979e2ffebc603ff93b12c1521e5b4dff0"
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.hopescookies.com/assets/images/slides/MLtradition.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "ccc4eaeb3e3b2f9bac160cddd591d1cb1b2d9009aecd6af3abf702d9f8f8ce49",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:0,eq=saturation=0.965:contrast=1.010:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "957fe33cfa59465425303b9566328b6c0be2a0bbd78926cac8e3857b05216465"
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "http://hopescookies.com/storage/images/slides/2026/BestMLMN_6-26.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "873d64e001da93a45f248f790aada3a3607de9f2482c97d5b19cc605794ff3fb",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:0,eq=saturation=0.990:contrast=1.064:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "09690caf976838edecb0302beb811e31db9f967ffcb8af3449000c0076276cf0"
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.hopescookies.com/assets/images/slides/2023/local-delivery4.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "a42afaadd95ac2a1e0405d6f1a9a5251df7b0c62607abf29869a03a085be3eed",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:42,eq=saturation=1.015:contrast=1.028:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "66ccb69230096e6500515ccd71a02028106d1405c585bbe0241c83a258fa40ea"
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.hopescookies.com/assets/images/slides/MLtradition.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "ccc4eaeb3e3b2f9bac160cddd591d1cb1b2d9009aecd6af3abf702d9f8f8ce49",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:42,eq=saturation=1.040:contrast=1.082:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "cab3b474b610eefa6dfd9ae3f10182730a18d4ef3722c9baa9a64ba17fca4cf9"
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "http://hopescookies.com/storage/images/slides/2026/BestMLMN_6-26.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "873d64e001da93a45f248f790aada3a3607de9f2482c97d5b19cc605794ff3fb",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:42,eq=saturation=0.940:contrast=1.046:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "433bb5376c4ad2410ae0eef5793ac8a29d642541207d5d7a5e6e218faaf20e1f"
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.hopescookies.com/assets/images/slides/2023/local-delivery4.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "a42afaadd95ac2a1e0405d6f1a9a5251df7b0c62607abf29869a03a085be3eed",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:42,eq=saturation=0.965:contrast=1.010:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "ca23c6119256a37782caae300000c791ff1b78b3cc2fdc0c611fb7fb81a5cff1"
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.hopescookies.com/assets/images/slides/MLtradition.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "ccc4eaeb3e3b2f9bac160cddd591d1cb1b2d9009aecd6af3abf702d9f8f8ce49",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:84,eq=saturation=0.990:contrast=1.064:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "aef07fb3fdf0c4468c3133680e4c468dc4a8c2c29dd7db90e3e5b9ec1d48130c"
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "http://hopescookies.com/storage/images/slides/2026/BestMLMN_6-26.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "873d64e001da93a45f248f790aada3a3607de9f2482c97d5b19cc605794ff3fb",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:84,eq=saturation=1.015:contrast=1.028:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "daa8d55bd358150b9af8b96073c962df99b565a44e302527970bea3301869214"
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.hopescookies.com/assets/images/slides/2023/local-delivery4.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "a42afaadd95ac2a1e0405d6f1a9a5251df7b0c62607abf29869a03a085be3eed",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:84,eq=saturation=1.040:contrast=1.082:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "38e73ca70e3835745e742852491be7c850877ed7012043addd59d02e6a2f743a"
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.hopescookies.com/assets/images/slides/MLtradition.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "ccc4eaeb3e3b2f9bac160cddd591d1cb1b2d9009aecd6af3abf702d9f8f8ce49",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:84,eq=saturation=0.940:contrast=1.046:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "d73a6ec310fb9df31cc165f99b8a3d608c0a7058a7a5be217ac337a0a03d6c0f"
+    }
+  ],
+  "fonts": {
+    "pair": {
+      "id": "bodoni-urbanist",
+      "display": "Bodoni Moda",
+      "text": "Urbanist"
+    },
+    "source": "Google Fonts CSS API",
+    "files": [
+      {
+        "file": "font-display-400.woff2",
+        "sha256": "192ae876c21d9258d096a526dad5bddf37f0daa69cfe943cae5f6be5a52adda2"
+      },
+      {
+        "file": "font-display-700.woff2",
+        "sha256": "192ae876c21d9258d096a526dad5bddf37f0daa69cfe943cae5f6be5a52adda2"
+      },
+      {
+        "file": "font-text-400.woff2",
+        "sha256": "7981ef90c246352c7c217081b8d9337b9c95e9d17ae126bf56b0d3753d1e5ffb"
+      },
+      {
+        "file": "font-text-700.woff2",
+        "sha256": "7981ef90c246352c7c217081b8d9337b9c95e9d17ae126bf56b0d3753d1e5ffb"
+      }
+    ]
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "sourceUrl": "https://www.mankindsheadquarters.com/",
+  "finalUrl": "https://mankindsheadquarters.com/",
+  "sourceDomain": "mankindsheadquarters.com",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=UTF-8",
+  "pageSha256": "98f81b46db4e965d0f1d339ab2e0ac5f6668397c0f913b8aaee9a7538b840e66",
+  "title": "Mankind's HeadQuarters - Mankind's HeadQuarters",
+  "description": "",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "mankind",
+      "headquarters"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\mankind-s-headquarters\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://mankindsheadquarters.com/wp-content/uploads/2022/06/image.png",
+    "sourceEvidence": "JSON-LD logo URL",
+    "type": "png",
+    "dimensions": {
+      "width": 1200,
+      "height": 630
+    },
+    "sha256": "a3bbb97a1436a8482462c9c7027d38a0cc160e95cf1f42469f7917ff71f22dcb",
+    "sourceSha256": "e9be856a5e6f2a4c5ea1a06b20382af55383a30b78499e28bf6346a923db0a12",
+    "sourceType": "png",
+    "sourceFileName": "logo-source.png",
+    "transformation": "flat border color rgb(155,189,187) removed by border-seeded flood fill at tolerance 32; geometry unchanged",
+    "borderSpread": 0,
+    "alpha": {
+      "ok": true,
+      "transparentRatio": 0.9607,
+      "edgeTransparentRatio": 1,
+      "contentRatio": 0.0393,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 68874
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\mankind-s-headquarters\\reference-1.png",
+      "fileName": "reference-1.png",
+      "sourceUrl": "https://mankindsheadquarters.com/wp-content/uploads/2022/04/womens-600x600-1-480x324.png",
+      "sourceEvidence": "IMG attachment-blossom-spa-service size-blossom-spa-service  women's styles",
+      "type": "png",
+      "dimensions": {
+        "width": 480,
+        "height": 324
+      },
+      "sha256": "17c7d2000b61462ba477f27dcefdc963fbc075509fad2c228472ff520c012ace",
+      "bytes": 244058,
+      "visual": {
+        "ok": true,
+        "lumaRange": 238.6,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\mankind-s-headquarters\\reference-2.png",
+      "fileName": "reference-2.png",
+      "sourceUrl": "https://mankindsheadquarters.com/wp-content/uploads/2022/04/mens-600x600-1-480x324.png",
+      "sourceEvidence": "IMG attachment-blossom-spa-service size-blossom-spa-service  men's styles",
+      "type": "png",
+      "dimensions": {
+        "width": 480,
+        "height": 324
+      },
+      "sha256": "0fe4c8fdd240415daedcb7ce40b644a6cc3be3d1bbff598bd4e6f0cd70203431",
+      "bytes": 277922,
+      "visual": {
+        "ok": true,
+        "lumaRange": 230.5,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\mankind-s-headquarters\\reference-3.jpg",
+      "fileName": "reference-3.jpg",
+      "sourceUrl": "https://mankindsheadquarters.com/wp-content/uploads/2022/04/pexels-cottonbro-3993139-480x324.jpg",
+      "sourceEvidence": "IMG attachment-blossom-spa-service size-blossom-spa-service  coloring",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 324,
+        "width": 480
+      },
+      "sha256": "5a5cabff78eafd58901e58b59237e5de2fd63b17e4a559c645359a15c43faffb",
+      "bytes": 26166,
+      "visual": {
+        "ok": true,
+        "lumaRange": 252,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [
+    {
+      "url": "https://mankindsheadquarters.com/wp-content/uploads/2022/04/pexels-nataliya-vaitkevich-8468134-165x60.jpg",
+      "reason": "reference image is too small"
+    },
+    {
+      "url": "https://mankindsheadquarters.com/wp-content/uploads/2022/06/pexels-trinity-kubassek-242148-88x60.jpg",
+      "reason": "reference image is too small"
+    }
+  ],
+  "brandColors": [
+    "#9cbe9c",
+    "#003399",
+    "#00d084",
+    "#0693e3",
+    "#f1acbc"
+  ],
+  "checkedAt": "2026-09-16T09:21:02.607Z"
+}

@@ -1,0 +1,168 @@
+{
+  "slug": "patt-veterinary-hospital",
+  "preparedAt": "2026-09-16T09:22:47.028Z",
+  "sourceSite": "https://www.pattvet.com/",
+  "sourceFinalUrl": "https://pattvet.com/",
+  "sourcePageSha256": "c7dba00740f52432a66c7ef282feab1568a354daf75e97a704f6ed32ce32daf8",
+  "exactLogoRequired": true,
+  "exactLogoSha256": "644e44309b7d8eb1f78735a7918b903869fb313173e21cc7d8a268b77b3e744e",
+  "firstPartyDerivativePolicy": "Content visuals preserve first-party source photography while adapting crop and tonal balance for the private mobile concept. They are not evidence of additional projects or outcomes.",
+  "generatedCompositionReference": "automation/prospect-radar-next20/.impeccable/mocks/architerra-mobile-three-directions.png",
+  "assets": [
+    {
+      "role": "exact identity",
+      "output": "logo.png",
+      "sourceUrl": "https://pattvet.com/wp-content/uploads/2025/10/Patt-Veterinary-Hospital-Logo-White.png",
+      "sourceSha256": "8941508411c5f32da78723918299743227b9b655b21d29ed38ed2c4d48bf8275",
+      "outputSha256": "644e44309b7d8eb1f78735a7918b903869fb313173e21cc7d8a268b77b3e744e",
+      "transformation": "flat border color rgb(0,0,0) removed by border-seeded flood fill at tolerance 32; geometry unchanged",
+      "transparent": true
+    },
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://pattvet.com/wp-content/uploads/2025/11/cat-with-toy-480x480.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "6cef8b66f5aa382d8c4b9a69803b7a31048984a6cd4031fb846d569295181c7d",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=0.940:contrast=1.010:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "92167feadc2fca57f8921ac9512cd0733b1723e76cf3c83ea9960fb90fe75d85"
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://pattvet.com/wp-content/uploads/2025/11/Collage-team-members-480x472.png",
+      "sourceFile": "reference-2.png",
+      "sourceSha256": "d7bda1e07ec1735e7732bf925bcc4c915a405674715cd83143a8686034f47b5b",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:0,eq=saturation=0.965:contrast=1.064:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "fca11e5a0c3e32e1048a055366eeb569af82920f98e2b830cf8a3d757c4ec091"
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://pattvet.com/wp-content/uploads/2025/11/cat-with-toy-480x480.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "6cef8b66f5aa382d8c4b9a69803b7a31048984a6cd4031fb846d569295181c7d",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:0,eq=saturation=0.990:contrast=1.028:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "6fd930c2db3c904a109640169ccb757222c34a7640e05c35d266efe1cc18edd9"
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://pattvet.com/wp-content/uploads/2025/11/Collage-team-members-480x472.png",
+      "sourceFile": "reference-2.png",
+      "sourceSha256": "d7bda1e07ec1735e7732bf925bcc4c915a405674715cd83143a8686034f47b5b",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:0,eq=saturation=1.015:contrast=1.082:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "80b925436e0944e137ae4eb8fc697916993a911a1ca90bf4060b18a07594b9c7"
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://pattvet.com/wp-content/uploads/2025/11/cat-with-toy-480x480.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "6cef8b66f5aa382d8c4b9a69803b7a31048984a6cd4031fb846d569295181c7d",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:42,eq=saturation=1.040:contrast=1.046:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "17afc459a1bdb67f50bf4ae52bc8cefc323b0269dc29aceb38514079b0dbd26e"
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://pattvet.com/wp-content/uploads/2025/11/Collage-team-members-480x472.png",
+      "sourceFile": "reference-2.png",
+      "sourceSha256": "d7bda1e07ec1735e7732bf925bcc4c915a405674715cd83143a8686034f47b5b",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:42,eq=saturation=0.940:contrast=1.010:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "3cda80a7773237fcaa911c084d08877720d693203154a3b287be54bf60a229c2"
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://pattvet.com/wp-content/uploads/2025/11/cat-with-toy-480x480.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "6cef8b66f5aa382d8c4b9a69803b7a31048984a6cd4031fb846d569295181c7d",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:42,eq=saturation=0.965:contrast=1.064:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "ab6e58c97b6727ce7a48499cb2c8ee68adf22a071bfb4c958be19af7bad3740d"
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://pattvet.com/wp-content/uploads/2025/11/Collage-team-members-480x472.png",
+      "sourceFile": "reference-2.png",
+      "sourceSha256": "d7bda1e07ec1735e7732bf925bcc4c915a405674715cd83143a8686034f47b5b",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:42,eq=saturation=0.990:contrast=1.028:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "c4e4e4d65b343676ed6ed799dbf17dbb68ba912b88cc1c41eca8ca019c1d1c96"
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://pattvet.com/wp-content/uploads/2025/11/cat-with-toy-480x480.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "6cef8b66f5aa382d8c4b9a69803b7a31048984a6cd4031fb846d569295181c7d",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:84,eq=saturation=1.015:contrast=1.082:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "7d5305064d59aad6fc37e25689259ac68cbe6154b0838241c3f88928f2f2ca09"
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://pattvet.com/wp-content/uploads/2025/11/Collage-team-members-480x472.png",
+      "sourceFile": "reference-2.png",
+      "sourceSha256": "d7bda1e07ec1735e7732bf925bcc4c915a405674715cd83143a8686034f47b5b",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:84,eq=saturation=1.040:contrast=1.046:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "56eabd5ac046ed23c6a3852c9519a3ee025927cf1a5f8fb62841cddce30315b3"
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://pattvet.com/wp-content/uploads/2025/11/cat-with-toy-480x480.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "6cef8b66f5aa382d8c4b9a69803b7a31048984a6cd4031fb846d569295181c7d",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:84,eq=saturation=0.940:contrast=1.010:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "b14870025b845b18d425d65884aee2f3f634b7babc611287252644bc033c94e8"
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://pattvet.com/wp-content/uploads/2025/11/Collage-team-members-480x472.png",
+      "sourceFile": "reference-2.png",
+      "sourceSha256": "d7bda1e07ec1735e7732bf925bcc4c915a405674715cd83143a8686034f47b5b",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:84,eq=saturation=0.965:contrast=1.064:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "2861a196da6df241609d6dfd461208dd25770b8c715492a10d2f2b332ba97099"
+    }
+  ],
+  "fonts": {
+    "pair": {
+      "id": "syne-work",
+      "display": "Syne",
+      "text": "Work Sans"
+    },
+    "source": "Google Fonts CSS API",
+    "files": [
+      {
+        "file": "font-display-400.woff2",
+        "sha256": "68b623f0e45b905041b2edb9b2e4f563a505f13db1cd06b5f1946eb2e1f47048"
+      },
+      {
+        "file": "font-display-700.woff2",
+        "sha256": "68b623f0e45b905041b2edb9b2e4f563a505f13db1cd06b5f1946eb2e1f47048"
+      },
+      {
+        "file": "font-text-400.woff2",
+        "sha256": "1dd49afc07fb2231b2ff686cbf007725fb2742271bb1f28ebd98f22a0d817343"
+      },
+      {
+        "file": "font-text-700.woff2",
+        "sha256": "1dd49afc07fb2231b2ff686cbf007725fb2742271bb1f28ebd98f22a0d817343"
+      }
+    ]
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "sourceUrl": "https://meetinghousedental.com/",
+  "finalUrl": "https://www.meetinghousedental.com/",
+  "sourceDomain": "meetinghousedental.com",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=utf-8",
+  "pageSha256": "db41c6313d2476686b8194e1c29faa8dee72b6e6324a719d1276946e4e9b33ce",
+  "title": "Hatboro Integrative Dentistry | Hatboro Whole-Body Dentistry | Meetinghouse Dental Care",
+  "description": "Meetinghouse Dental Care is the premier provider of integrative, biologic, and whole-body dentistry in a leading-edge, high technology facility in Hatboro, PA. Whole-food nutritional counseling.",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "meetinghouse",
+      "dental",
+      "care"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\meetinghouse-dental-care\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://styles.prosites.com/customs/2291/123834/images/logo.png",
+    "sourceEvidence": "IMG logo  logo",
+    "type": "png",
+    "dimensions": {
+      "width": 700,
+      "height": 374
+    },
+    "sha256": "8188605d66d5277c103d1dd089cf499127380859ba67c7f8a83d0354708a4944",
+    "sourceSha256": "8188605d66d5277c103d1dd089cf499127380859ba67c7f8a83d0354708a4944",
+    "sourceType": "png",
+    "sourceFileName": null,
+    "transformation": "none; exact first-party transparent asset",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "transparentRatio": 0.5814,
+      "edgeTransparentRatio": 1,
+      "contentRatio": 0.4186,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 85045
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\meetinghouse-dental-care\\reference-1.jpg",
+      "fileName": "reference-1.jpg",
+      "sourceUrl": "https://styles.prosites.com/litesite/2291/images/panel1.jpg",
+      "sourceEvidence": "IMG ",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 533,
+        "width": 1200
+      },
+      "sha256": "70a5925dffadac52104b5e2b1ce99b764721ae188fa73714bd5c428c2a42e17e",
+      "bytes": 168344,
+      "visual": {
+        "ok": true,
+        "lumaRange": 253.3,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\meetinghouse-dental-care\\reference-2.jpg",
+      "fileName": "reference-2.jpg",
+      "sourceUrl": "https://styles.prosites.com/litesite/2291/images/panel2.jpg",
+      "sourceEvidence": "IMG ",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 533,
+        "width": 1200
+      },
+      "sha256": "15183c36a6459385ee09b65a62f9694a2ae3391475a6c51d0f00f9cecfa30860",
+      "bytes": 182408,
+      "visual": {
+        "ok": true,
+        "lumaRange": 253.9,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\meetinghouse-dental-care\\reference-3.jpg",
+      "fileName": "reference-3.jpg",
+      "sourceUrl": "https://styles.prosites.com/litesite/2291/images/panel3.jpg",
+      "sourceEvidence": "IMG ",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 533,
+        "width": 1200
+      },
+      "sha256": "2cf11f4b526572f4a2caba9e56206dd37a63fd91b6c9572b76b10e0d8d075219",
+      "bytes": 154548,
+      "visual": {
+        "ok": true,
+        "lumaRange": 254.4,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [],
+  "brandColors": [
+    "#c49a47",
+    "#ffd700",
+    "#ffff00",
+    "#f79646"
+  ],
+  "checkedAt": "2026-09-16T09:20:24.138Z"
+}

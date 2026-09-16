@@ -1,0 +1,168 @@
+{
+  "slug": "main-street-cafe",
+  "preparedAt": "2026-09-16T09:22:49.913Z",
+  "sourceSite": "https://breakfastnorristown.com/",
+  "sourceFinalUrl": "https://breakfastnorristown.com/",
+  "sourcePageSha256": "c2ad0079935a69aa74c788b7c575ae39a4ed5aae8eabe29cc8fe4a8e9823ab5c",
+  "exactLogoRequired": true,
+  "exactLogoSha256": "91c1d64614eba787f9061d3bde587ee00097e79d4154ae678e4979c727aab532",
+  "firstPartyDerivativePolicy": "Content visuals preserve first-party source photography while adapting crop and tonal balance for the private mobile concept. They are not evidence of additional projects or outcomes.",
+  "generatedCompositionReference": "automation/prospect-radar-next20/.impeccable/mocks/architerra-mobile-three-directions.png",
+  "assets": [
+    {
+      "role": "exact identity",
+      "output": "logo.png",
+      "sourceUrl": "https://breakfastnorristown.com/img/logo.png",
+      "sourceSha256": "91c1d64614eba787f9061d3bde587ee00097e79d4154ae678e4979c727aab532",
+      "outputSha256": "91c1d64614eba787f9061d3bde587ee00097e79d4154ae678e4979c727aab532",
+      "transformation": "none; exact first-party transparent asset",
+      "transparent": true
+    },
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "http://www.breakfastnorristown.com/img/gallery27.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "79ab9cfb7cc23fac57ba1403a0b21aa3ae4ebc627808a5a67ed3935ed270f14f",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=0.965:contrast=1.028:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "2fb260f4bc1823548e91a4a02a360048036f1b568be41bb8eee45bf86e91d237"
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://breakfastnorristown.com/img/gallery1.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "f49aae3e179618b8121e72cbe20ae61f6d20b17b280c4290632e5d94f5c3c4b1",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:0,eq=saturation=0.990:contrast=1.082:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "64ace98da9817bb59ce2abcc2faf6ee3082ad71be98bd9993837df27e922d3af"
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://breakfastnorristown.com/img/gallery2.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "171a595fc7f741044748171d18ccda707ed0409a90908382fc8da7c80dfdbf76",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:0,eq=saturation=1.015:contrast=1.046:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "256f292b82a45350bc7f757f65b275110033db7998ceaafcbb8108a7681ec238"
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "http://www.breakfastnorristown.com/img/gallery27.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "79ab9cfb7cc23fac57ba1403a0b21aa3ae4ebc627808a5a67ed3935ed270f14f",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:0,eq=saturation=1.040:contrast=1.010:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "739f3d60b0d086649be553df0ceaebc02c7f79fa93915a1f2257b160f023ce8b"
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://breakfastnorristown.com/img/gallery1.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "f49aae3e179618b8121e72cbe20ae61f6d20b17b280c4290632e5d94f5c3c4b1",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:42,eq=saturation=0.940:contrast=1.064:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "0d35faad776eed3cdc8cd21e7112cfe211014f15fc9f5f675dcd42eb0bf7bcd9"
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://breakfastnorristown.com/img/gallery2.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "171a595fc7f741044748171d18ccda707ed0409a90908382fc8da7c80dfdbf76",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:42,eq=saturation=0.965:contrast=1.028:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "0aad232d3bf8e224c54fe4e3a65bb4075916373cb52a7f01853071a28897b402"
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "http://www.breakfastnorristown.com/img/gallery27.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "79ab9cfb7cc23fac57ba1403a0b21aa3ae4ebc627808a5a67ed3935ed270f14f",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:42,eq=saturation=0.990:contrast=1.082:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "a2891c14cadb7ef979b72bf4fc1bf6d9e016c7d76176e0a40d987e0ff11230f6"
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://breakfastnorristown.com/img/gallery1.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "f49aae3e179618b8121e72cbe20ae61f6d20b17b280c4290632e5d94f5c3c4b1",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:42,eq=saturation=1.015:contrast=1.046:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "fd8cfa353bcbc159b9e9ac02e873936d77fd686a66a12d4e5e6213fd6218033b"
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://breakfastnorristown.com/img/gallery2.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "171a595fc7f741044748171d18ccda707ed0409a90908382fc8da7c80dfdbf76",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:84,eq=saturation=1.040:contrast=1.010:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "a866bdf3640e3251cdced61246d7ad3d6a64aadf6693da01d931400650f9a148"
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "http://www.breakfastnorristown.com/img/gallery27.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "79ab9cfb7cc23fac57ba1403a0b21aa3ae4ebc627808a5a67ed3935ed270f14f",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:84,eq=saturation=0.940:contrast=1.064:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "49c1eb22ccf268030ed324169bc8beb353fc9d0c7202650f3ac8184e3711ca51"
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://breakfastnorristown.com/img/gallery1.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "f49aae3e179618b8121e72cbe20ae61f6d20b17b280c4290632e5d94f5c3c4b1",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:84,eq=saturation=0.965:contrast=1.028:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "c2a51903d066f35d71ec750beb902a82e0f75d650c32fcbfe1f8b136545440a5"
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://breakfastnorristown.com/img/gallery2.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "171a595fc7f741044748171d18ccda707ed0409a90908382fc8da7c80dfdbf76",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:84,eq=saturation=0.990:contrast=1.082:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "069366b109d976231faa33c2c6a7163e9eef56799e140d3af80380bc5ea740ad"
+    }
+  ],
+  "fonts": {
+    "pair": {
+      "id": "bricolage-manrope",
+      "display": "Bricolage Grotesque",
+      "text": "Manrope"
+    },
+    "source": "Google Fonts CSS API",
+    "files": [
+      {
+        "file": "font-display-400.woff2",
+        "sha256": "a97804dc9fbe5fc972a08018c5eda4dab7ef2346f64c57e61419d05e6de4ea1c"
+      },
+      {
+        "file": "font-display-700.woff2",
+        "sha256": "a97804dc9fbe5fc972a08018c5eda4dab7ef2346f64c57e61419d05e6de4ea1c"
+      },
+      {
+        "file": "font-text-400.woff2",
+        "sha256": "a30ddcd349703aff7464c34bef3fffdff405ee50c113440d7c8693c02d210972"
+      },
+      {
+        "file": "font-text-700.woff2",
+        "sha256": "a30ddcd349703aff7464c34bef3fffdff405ee50c113440d7c8693c02d210972"
+      }
+    ]
+  }
+}

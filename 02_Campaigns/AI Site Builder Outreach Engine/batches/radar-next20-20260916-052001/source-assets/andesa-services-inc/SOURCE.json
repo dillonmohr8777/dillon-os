@@ -1,0 +1,122 @@
+{
+  "sourceUrl": "https://andesaservices.com/",
+  "finalUrl": "https://andesaservices.com/",
+  "sourceDomain": "andesaservices.com",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=UTF-8",
+  "pageSha256": "0b5f6ce6e1d1cc6e878bc3ede757cefd0772a896929b9064fd6f5c65f3fc3f57",
+  "title": "Life Insurance & Annuities Policy Lifecycle Solutions | Andesa",
+  "description": "Andesa helps carriers, brokers, key stakeholders, and participants pursue strategic sales opportunities and successfully navigate market change.",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "andesa"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\andesa-services-inc\\logo.svg",
+    "fileName": "logo.svg",
+    "sourceUrl": "https://andesaservices.com/wp-content/uploads/2024/05/andesa-logo-white.svg",
+    "sourceEvidence": "IMG style-svg",
+    "type": "svg",
+    "dimensions": {
+      "width": 372,
+      "height": 284
+    },
+    "sha256": "43c6055151f977988986cd638b7bff536c9dd9043658fad1d611231c7ec611d4",
+    "sourceSha256": "43c6055151f977988986cd638b7bff536c9dd9043658fad1d611231c7ec611d4",
+    "sourceType": "svg",
+    "sourceFileName": null,
+    "transformation": "none; exact first-party transparent asset",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "vector": true
+    },
+    "transparent": true,
+    "bytes": 15777
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\andesa-services-inc\\reference-1.png",
+      "fileName": "reference-1.png",
+      "sourceUrl": "https://andesaservices.com/wp-content/uploads/2025/11/SOC-1-2-768x950.png",
+      "sourceEvidence": "IMG attachment-full size-full",
+      "type": "png",
+      "dimensions": {
+        "width": 768,
+        "height": 950
+      },
+      "sha256": "6dd8970d64f1381144caa22a9a4856c72a78e155d5e2ba0f1d81be15cc252a69",
+      "bytes": 39174,
+      "visual": {
+        "ok": true,
+        "lumaRange": 251.7,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\andesa-services-inc\\reference-2.png",
+      "fileName": "reference-2.png",
+      "sourceUrl": "https://andesaservices.com/wp-content/uploads/2025/11/SOC-2-2-768x950.png",
+      "sourceEvidence": "IMG attachment-full size-full  is partners andesa services",
+      "type": "png",
+      "dimensions": {
+        "width": 768,
+        "height": 950
+      },
+      "sha256": "f66ab974f62cb4a93ab47086909a5372f552fba7a650cfef38e0dd816f38fe3b",
+      "bytes": 40852,
+      "visual": {
+        "ok": true,
+        "lumaRange": 239.1,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\andesa-services-inc\\reference-3.png",
+      "fileName": "reference-3.png",
+      "sourceUrl": "https://andesaservices.com/wp-content/uploads/2025/11/SOC-3-2-768x950.png",
+      "sourceEvidence": "IMG attachment-full size-full  andesa services partners",
+      "type": "png",
+      "dimensions": {
+        "width": 768,
+        "height": 950
+      },
+      "sha256": "6f6365476328e3a952b44c9e7af574414957b811ec30064198e3578dae5346e0",
+      "bytes": 37023,
+      "visual": {
+        "ok": true,
+        "lumaRange": 251.7,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [
+    {
+      "url": "https://andesaservices.com/wp-content/uploads/2023/04/BG_below_hero-v2@2x-1720x2048.jpg",
+      "reason": "progressive JPEG is not decodable here"
+    },
+    {
+      "url": "https://andesaservices.com/wp-content/uploads/2021/11/home_header_client_login.svg",
+      "reason": "unsupported reference type svg"
+    },
+    {
+      "url": "https://andesaservices.com/wp-content/uploads/2024/11/240823_Andesa_-HP-2-2048x1205.jpg",
+      "reason": "progressive JPEG is not decodable here"
+    },
+    {
+      "url": "https://andesaservices.com/wp-content/uploads/2024/11/240823_Andesa_-HP_mobile-1-2048x1352.jpg",
+      "reason": "progressive JPEG is not decodable here"
+    }
+  ],
+  "brandColors": [
+    "#c7dff4",
+    "#406ab3",
+    "#15254c",
+    "#16254c",
+    "#ec6a5b"
+  ],
+  "checkedAt": "2026-09-16T09:20:49.514Z"
+}

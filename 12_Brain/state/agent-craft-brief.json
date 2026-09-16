@@ -1,32 +1,58 @@
 {
   "automation_id": "agent-craft-brief",
   "status": "ok",
-  "generated_for": "2026-09-02",
-  "window_days": 3,
+  "generated_for": "2026-09-16",
+  "window_days": 14,
   "days": [
-    "2026-08-16",
-    "2026-08-17",
-    "2026-08-18"
+    "2026-09-03",
+    "2026-09-04",
+    "2026-09-05",
+    "2026-09-06",
+    "2026-09-07",
+    "2026-09-08",
+    "2026-09-09",
+    "2026-09-10",
+    "2026-09-11",
+    "2026-09-12",
+    "2026-09-13",
+    "2026-09-14",
+    "2026-09-15",
+    "2026-09-16"
   ],
   "counts": {
-    "routines_seen": 22,
-    "workhorses": 10,
-    "unreliable": 3,
-    "cadence_drift": 6,
-    "authorized_never_ran": 7,
-    "earned_lessons": 11
+    "routines_seen": 21,
+    "workhorses": 13,
+    "unreliable": 0,
+    "cadence_drift": 0,
+    "authorized_never_ran": 8,
+    "earned_lessons": 22,
+    "loop_lessons": 12,
+    "loop_no_findings": 185,
+    "loop_learn_missing": 0,
+    "promotion_candidates": 2
   },
   "gate_blocks": [],
   "workhorses": [
+    {
+      "id": "D03",
+      "name": "Review overnight automations and watchdogs",
+      "cadence": "daily",
+      "claude_role": "terminal_readonly",
+      "completions": 14,
+      "failures": 0,
+      "reliability": 1,
+      "last_completed": "2026-09-16",
+      "fail_reason": null
+    },
     {
       "id": "D07",
       "name": "Triage monitoring and system alerts",
       "cadence": "daily",
       "claude_role": "terminal_readonly",
-      "completions": 3,
+      "completions": 14,
       "failures": 0,
       "reliability": 1,
-      "last_completed": "2026-08-18",
+      "last_completed": "2026-09-16",
       "fail_reason": null
     },
     {
@@ -34,10 +60,10 @@
       "name": "Infer the real deliverable",
       "cadence": "daily",
       "claude_role": "analyst",
-      "completions": 3,
+      "completions": 14,
       "failures": 0,
       "reliability": 1,
-      "last_completed": "2026-08-18",
+      "last_completed": "2026-09-16",
       "fail_reason": null
     },
     {
@@ -45,10 +71,10 @@
       "name": "Plan dependencies and approval gates",
       "cadence": "daily",
       "claude_role": "analyst",
-      "completions": 3,
+      "completions": 14,
       "failures": 0,
       "reliability": 1,
-      "last_completed": "2026-08-18",
+      "last_completed": "2026-09-16",
       "fail_reason": null
     },
     {
@@ -56,10 +82,10 @@
       "name": "Run repository and worktree preflight",
       "cadence": "daily",
       "claude_role": "terminal_readonly",
-      "completions": 3,
+      "completions": 14,
       "failures": 0,
       "reliability": 1,
-      "last_completed": "2026-08-18",
+      "last_completed": "2026-09-16",
       "fail_reason": null
     },
     {
@@ -67,10 +93,10 @@
       "name": "Load product truth and visual authority",
       "cadence": "daily",
       "claude_role": "maker",
-      "completions": 3,
+      "completions": 14,
       "failures": 0,
       "reliability": 1,
-      "last_completed": "2026-08-18",
+      "last_completed": "2026-09-16",
       "fail_reason": null
     },
     {
@@ -78,21 +104,21 @@
       "name": "Produce content, copy, SEO, AEO, and GEO deliverables",
       "cadence": "daily",
       "claude_role": "maker",
-      "completions": 3,
+      "completions": 14,
       "failures": 0,
       "reliability": 1,
-      "last_completed": "2026-08-18",
+      "last_completed": "2026-09-16",
       "fail_reason": null
     },
     {
-      "id": "D19",
-      "name": "Build a report, dashboard, deck, or executive summary",
+      "id": "D24",
+      "name": "Run independent QA and release criticism",
       "cadence": "daily",
-      "claude_role": "maker",
-      "completions": 3,
+      "claude_role": "critic",
+      "completions": 14,
       "failures": 0,
       "reliability": 1,
-      "last_completed": "2026-08-18",
+      "last_completed": "2026-09-16",
       "fail_reason": null
     },
     {
@@ -100,10 +126,10 @@
       "name": "Create an evidence-backed completion handoff",
       "cadence": "daily",
       "claude_role": "critic",
-      "completions": 3,
+      "completions": 14,
       "failures": 0,
       "reliability": 1,
-      "last_completed": "2026-08-18",
+      "last_completed": "2026-09-16",
       "fail_reason": null
     },
     {
@@ -111,10 +137,10 @@
       "name": "Capture durable knowledge in Dillon OS",
       "cadence": "daily",
       "claude_role": "maker",
-      "completions": 3,
+      "completions": 14,
       "failures": 0,
       "reliability": 1,
-      "last_completed": "2026-08-18",
+      "last_completed": "2026-09-16",
       "fail_reason": null
     },
     {
@@ -122,117 +148,43 @@
       "name": "Onboard an existing repository or project",
       "cadence": "event",
       "claude_role": "architect",
-      "completions": 3,
+      "completions": 14,
       "failures": 0,
       "reliability": 1,
-      "last_completed": "2026-08-18",
+      "last_completed": "2026-09-16",
       "fail_reason": null
-    }
-  ],
-  "unreliable": [
-    {
-      "id": "W09",
-      "name": "Audit automation reliability",
-      "cadence": "weekly",
-      "claude_role": "critic",
-      "completions": 1,
-      "failures": 6,
-      "reliability": 0.14,
-      "last_completed": "2026-08-16",
-      "fail_reason": "3/9 stages ok; next: resolve stage:build"
     },
     {
-      "id": "D03",
-      "name": "Review overnight automations and watchdogs",
-      "cadence": "daily",
+      "id": "E10",
+      "name": "Take over or recover a live agent runtime",
+      "cadence": "event",
       "claude_role": "terminal_readonly",
-      "completions": 2,
-      "failures": 3,
-      "reliability": 0.4,
-      "last_completed": "2026-08-17",
-      "fail_reason": "3/9 stages ok; next: resolve stage:build"
-    },
-    {
-      "id": "W11",
-      "name": "Test Dillon OS knowledge graph health",
-      "cadence": "weekly",
-      "claude_role": "critic",
-      "completions": 2,
-      "failures": 3,
-      "reliability": 0.4,
-      "last_completed": "2026-08-17",
-      "fail_reason": "3/9 stages ok; next: resolve stage:build"
-    }
-  ],
-  "cadence_drift": [
-    {
-      "id": "W04",
-      "name": "Build the content and creative production calendar",
-      "cadence": "weekly",
-      "claude_role": "maker",
-      "completions": 3,
+      "completions": 14,
       "failures": 0,
       "reliability": 1,
-      "last_completed": "2026-08-18",
+      "last_completed": "2026-09-16",
       "fail_reason": null
     },
     {
-      "id": "W10",
-      "name": "Run the executive weekly review",
-      "cadence": "weekly",
-      "claude_role": "critic",
-      "completions": 3,
-      "failures": 0,
-      "reliability": 1,
-      "last_completed": "2026-08-18",
-      "fail_reason": null
-    },
-    {
-      "id": "M02",
-      "name": "Evaluate agents, permissions, and output quality",
-      "cadence": "monthly",
-      "claude_role": "critic",
-      "completions": 3,
-      "failures": 0,
-      "reliability": 1,
-      "last_completed": "2026-08-18",
-      "fail_reason": null
-    },
-    {
-      "id": "M03",
-      "name": "Audit scheduled work, usage, and cost",
-      "cadence": "monthly",
-      "claude_role": "critic",
-      "completions": 3,
-      "failures": 0,
-      "reliability": 1,
-      "last_completed": "2026-08-18",
-      "fail_reason": null
-    },
-    {
-      "id": "M04",
-      "name": "Audit client and account separation",
-      "cadence": "monthly",
-      "claude_role": "critic",
-      "completions": 3,
-      "failures": 0,
-      "reliability": 1,
-      "last_completed": "2026-08-18",
-      "fail_reason": null
-    },
-    {
-      "id": "M05",
-      "name": "Refresh operating rules, brand voice, and design truth",
-      "cadence": "monthly",
+      "id": "E11",
+      "name": "Capture and add a newly discovered routine",
+      "cadence": "event",
       "claude_role": "architect",
-      "completions": 3,
+      "completions": 14,
       "failures": 0,
       "reliability": 1,
-      "last_completed": "2026-08-18",
+      "last_completed": "2026-09-16",
       "fail_reason": null
     }
   ],
+  "unreliable": [],
+  "cadence_drift": [],
   "authorized_never_ran": [
+    {
+      "id": "D14",
+      "name": "Build a website, landing page, app, or dashboard",
+      "cadence": "daily"
+    },
     {
       "id": "D17",
       "name": "Inspect paid-media delivery read only",
@@ -244,24 +196,24 @@
       "cadence": "daily"
     },
     {
-      "id": "D24",
-      "name": "Run independent QA and release criticism",
-      "cadence": "daily"
-    },
-    {
-      "id": "W05",
-      "name": "Run the Prospect Radar Next 20 website factory",
-      "cadence": "weekly"
-    },
-    {
       "id": "W06",
       "name": "Produce client weekly reports",
       "cadence": "weekly"
     },
     {
-      "id": "W08",
-      "name": "Review CRO, SEO, AEO, GEO, offer, and outreach experiments",
-      "cadence": "weekly"
+      "id": "M02",
+      "name": "Evaluate agents, permissions, and output quality",
+      "cadence": "monthly"
+    },
+    {
+      "id": "M03",
+      "name": "Audit scheduled work, usage, and cost",
+      "cadence": "monthly"
+    },
+    {
+      "id": "M04",
+      "name": "Audit client and account separation",
+      "cadence": "monthly"
     },
     {
       "id": "E04",
@@ -269,6 +221,113 @@
       "cadence": "event"
     }
   ],
+  "loop_lessons": [
+    {
+      "day": "2026-09-04",
+      "id": "D03",
+      "key": "D03:route ok->blocked",
+      "text": "stage state changed since LOOP-20260903-000820922: route ok->blocked",
+      "run_id": "LOOP-20260904-084220171"
+    },
+    {
+      "day": "2026-09-04",
+      "id": "D07",
+      "key": "D07:route ok->blocked",
+      "text": "stage state changed since LOOP-20260903-000830339: route ok->blocked",
+      "run_id": "LOOP-20260904-084231653"
+    },
+    {
+      "day": "2026-09-04",
+      "id": "D12",
+      "key": "D12:route ok->blocked",
+      "text": "stage state changed since LOOP-20260903-002321475: route ok->blocked",
+      "run_id": "LOOP-20260904-084241451"
+    },
+    {
+      "day": "2026-09-05",
+      "id": "D03",
+      "key": "D03:route blocked->ok",
+      "text": "stage state changed since LOOP-20260904-084220171: route blocked->ok",
+      "run_id": "LOOP-20260905-000826236"
+    },
+    {
+      "day": "2026-09-05",
+      "id": "D07",
+      "key": "D07:route blocked->ok",
+      "text": "stage state changed since LOOP-20260904-084231653: route blocked->ok",
+      "run_id": "LOOP-20260905-000851436"
+    },
+    {
+      "day": "2026-09-05",
+      "id": "D12",
+      "key": "D12:route blocked->ok",
+      "text": "stage state changed since LOOP-20260904-084241451: route blocked->ok",
+      "run_id": "LOOP-20260905-002323395"
+    },
+    {
+      "day": "2026-09-06",
+      "id": "D03",
+      "key": "D03:build ok->blocked",
+      "text": "stage state changed since LOOP-20260905-000826236: build ok->blocked",
+      "run_id": "LOOP-20260906-000819255"
+    },
+    {
+      "day": "2026-09-06",
+      "id": "E10",
+      "key": "E10:build ok->blocked",
+      "text": "stage state changed since LOOP-20260905-005416082: build ok->blocked",
+      "run_id": "LOOP-20260906-005324447"
+    },
+    {
+      "day": "2026-09-07",
+      "id": "D03",
+      "key": "D03:build blocked->ok",
+      "text": "stage state changed since LOOP-20260906-000819255: build blocked->ok",
+      "run_id": "LOOP-20260907-000822438"
+    },
+    {
+      "day": "2026-09-07",
+      "id": "E10",
+      "key": "E10:build blocked->ok",
+      "text": "stage state changed since LOOP-20260906-005324447: build blocked->ok",
+      "run_id": "LOOP-20260907-012330274"
+    },
+    {
+      "day": "2026-09-15",
+      "id": "D03",
+      "key": "D03:build ok->blocked",
+      "text": "stage state changed since LOOP-20260914-000819572: build ok->blocked",
+      "run_id": "LOOP-20260915-000820127"
+    },
+    {
+      "day": "2026-09-15",
+      "id": "E10",
+      "key": "E10:build ok->blocked",
+      "text": "stage state changed since LOOP-20260914-012325569: build ok->blocked",
+      "run_id": "LOOP-20260915-005327871"
+    }
+  ],
+  "promotion_candidates": [
+    {
+      "key": "D03:build ok->blocked",
+      "id": "D03",
+      "text": "stage state changed since LOOP-20260905-000826236: build ok->blocked",
+      "days": [
+        "2026-09-06",
+        "2026-09-15"
+      ]
+    },
+    {
+      "key": "E10:build ok->blocked",
+      "id": "E10",
+      "text": "stage state changed since LOOP-20260905-005416082: build ok->blocked",
+      "days": [
+        "2026-09-06",
+        "2026-09-15"
+      ]
+    }
+  ],
   "dry_run": true,
-  "written_at": "2026-09-02T02:32:58.290Z"
+  "generated_at": "2026-09-16T22:28:05.859Z",
+  "written_at": "2026-09-16T22:28:05.859Z"
 }

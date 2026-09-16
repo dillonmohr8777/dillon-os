@@ -1,0 +1,168 @@
+{
+  "slug": "finesse-flooring",
+  "preparedAt": "2026-09-16T09:23:05.063Z",
+  "sourceSite": "https://www.finesseflooringinc.com/",
+  "sourceFinalUrl": "https://www.finesseflooringinc.com/",
+  "sourcePageSha256": "444c990a564d832fb9a1f7599e4c42c8bf27bcafe4bdb8fec50eb03a4c868cd0",
+  "exactLogoRequired": true,
+  "exactLogoSha256": "1dab37a9c177fb55db6be604245cf52f8057fade2b85fa3eb1c0e0386dbb0897",
+  "firstPartyDerivativePolicy": "Content visuals preserve first-party source photography while adapting crop and tonal balance for the private mobile concept. They are not evidence of additional projects or outcomes.",
+  "generatedCompositionReference": "automation/prospect-radar-next20/.impeccable/mocks/architerra-mobile-three-directions.png",
+  "assets": [
+    {
+      "role": "exact identity",
+      "output": "logo.png",
+      "sourceUrl": "https://www.roomvo.com/services/vendor/themes/e3556ada59d64d7d8b889c8e121795f0/images/vendor_logo_square_en-us.png",
+      "sourceSha256": "1dab37a9c177fb55db6be604245cf52f8057fade2b85fa3eb1c0e0386dbb0897",
+      "outputSha256": "1dab37a9c177fb55db6be604245cf52f8057fade2b85fa3eb1c0e0386dbb0897",
+      "transformation": "none; exact first-party transparent asset",
+      "transparent": true
+    },
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.finesseflooringinc.com/cms_images/6996d0dac0b1478faba6f5ef1f4a4ff9/Untitled_design_5.width-2000.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "0feca669fc11088aad2294852b58fc23e87856b732b36b9f16bc90f1197af38c",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=0.965:contrast=1.028:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "857ca2476afaba330f73e4a0852e17146f87800f2bbc9f3f3c368d4454091491"
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.finesseflooringinc.com/cms_images/9e143953a0e54254b388202c79d8b5a2/Untitled_design_1.width-2000.png",
+      "sourceFile": "reference-2.png",
+      "sourceSha256": "a1973dc2120f3ae22a65dad0454ec0eefe08fb2002f91181ec7099f3c4fae86e",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:0,eq=saturation=0.990:contrast=1.082:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "de19e58d023573e9e22d63fd953d97de7e0eb68069a6013d8f272f16f00f4048"
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.finesseflooringinc.com/cms_images/0865dbd07ba14703888089bbf1a23a59/Untitled_design_6.width-2000.png",
+      "sourceFile": "reference-3.png",
+      "sourceSha256": "041ac8404afd43a6e2162feabfb6151fb29a4a9de980025b4d51d65abb3c8057",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:0,eq=saturation=1.015:contrast=1.046:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "ec826e7017552b8c43fc814c790099ef39e7248ebe1ac2872c5816c3135fcaf5"
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.finesseflooringinc.com/cms_images/6996d0dac0b1478faba6f5ef1f4a4ff9/Untitled_design_5.width-2000.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "0feca669fc11088aad2294852b58fc23e87856b732b36b9f16bc90f1197af38c",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:0,eq=saturation=1.040:contrast=1.010:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "91564df8cb40d76186efc6e8cac678a30ab724557623e6b84c0dc8d3fdf27ca2"
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.finesseflooringinc.com/cms_images/9e143953a0e54254b388202c79d8b5a2/Untitled_design_1.width-2000.png",
+      "sourceFile": "reference-2.png",
+      "sourceSha256": "a1973dc2120f3ae22a65dad0454ec0eefe08fb2002f91181ec7099f3c4fae86e",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:42,eq=saturation=0.940:contrast=1.064:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "5fa9dfbf13c97e1efe1ceb84f2001c9cbe2305ec325291160eb412dc1a8e33e9"
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.finesseflooringinc.com/cms_images/0865dbd07ba14703888089bbf1a23a59/Untitled_design_6.width-2000.png",
+      "sourceFile": "reference-3.png",
+      "sourceSha256": "041ac8404afd43a6e2162feabfb6151fb29a4a9de980025b4d51d65abb3c8057",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:42,eq=saturation=0.965:contrast=1.028:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "26865e82f0501b248d5a575024187032c13aa482b2746ec4601e5e0cafb18706"
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.finesseflooringinc.com/cms_images/6996d0dac0b1478faba6f5ef1f4a4ff9/Untitled_design_5.width-2000.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "0feca669fc11088aad2294852b58fc23e87856b732b36b9f16bc90f1197af38c",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:42,eq=saturation=0.990:contrast=1.082:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "35c445d37652996054f260ba46daaa6e087ec1b72674e25d2e708150d05931e7"
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.finesseflooringinc.com/cms_images/9e143953a0e54254b388202c79d8b5a2/Untitled_design_1.width-2000.png",
+      "sourceFile": "reference-2.png",
+      "sourceSha256": "a1973dc2120f3ae22a65dad0454ec0eefe08fb2002f91181ec7099f3c4fae86e",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:42,eq=saturation=1.015:contrast=1.046:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "db90adf7fb200ac41b88c9ff43def850ed7418baa32d8cfed751268bb28b7a36"
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.finesseflooringinc.com/cms_images/0865dbd07ba14703888089bbf1a23a59/Untitled_design_6.width-2000.png",
+      "sourceFile": "reference-3.png",
+      "sourceSha256": "041ac8404afd43a6e2162feabfb6151fb29a4a9de980025b4d51d65abb3c8057",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:84,eq=saturation=1.040:contrast=1.010:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "a0af23d9b102026adf3e5af2b3c72d0388d113f2dce02253f53dcee7b533f197"
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.finesseflooringinc.com/cms_images/6996d0dac0b1478faba6f5ef1f4a4ff9/Untitled_design_5.width-2000.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "0feca669fc11088aad2294852b58fc23e87856b732b36b9f16bc90f1197af38c",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:84,eq=saturation=0.940:contrast=1.064:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "3ad47ad2eb63763b26efc27fa712c961e051e386266ce6e772a8d49eaa402997"
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.finesseflooringinc.com/cms_images/9e143953a0e54254b388202c79d8b5a2/Untitled_design_1.width-2000.png",
+      "sourceFile": "reference-2.png",
+      "sourceSha256": "a1973dc2120f3ae22a65dad0454ec0eefe08fb2002f91181ec7099f3c4fae86e",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:84,eq=saturation=0.965:contrast=1.028:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "5d969c6b1ac1eba801186984d6e9e2278122dafbcd385785451b44e179ccfd91"
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.finesseflooringinc.com/cms_images/0865dbd07ba14703888089bbf1a23a59/Untitled_design_6.width-2000.png",
+      "sourceFile": "reference-3.png",
+      "sourceSha256": "041ac8404afd43a6e2162feabfb6151fb29a4a9de980025b4d51d65abb3c8057",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:84,eq=saturation=0.990:contrast=1.082:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "d9fe0af1567d1e3dc8ac71d4cf04f50f31714fbd423eab574f9f74ff46f9d637"
+    }
+  ],
+  "fonts": {
+    "pair": {
+      "id": "bricolage-manrope",
+      "display": "Bricolage Grotesque",
+      "text": "Manrope"
+    },
+    "source": "Google Fonts CSS API",
+    "files": [
+      {
+        "file": "font-display-400.woff2",
+        "sha256": "a97804dc9fbe5fc972a08018c5eda4dab7ef2346f64c57e61419d05e6de4ea1c"
+      },
+      {
+        "file": "font-display-700.woff2",
+        "sha256": "a97804dc9fbe5fc972a08018c5eda4dab7ef2346f64c57e61419d05e6de4ea1c"
+      },
+      {
+        "file": "font-text-400.woff2",
+        "sha256": "a30ddcd349703aff7464c34bef3fffdff405ee50c113440d7c8693c02d210972"
+      },
+      {
+        "file": "font-text-700.woff2",
+        "sha256": "a30ddcd349703aff7464c34bef3fffdff405ee50c113440d7c8693c02d210972"
+      }
+    ]
+  }
+}

@@ -3,8 +3,8 @@ note_type: system
 status: blocked
 generated: true
 generated_by: Update-ClientIntelligenceCoverage
-updated: 2026-09-15
-checked_at: 2026-09-15T10:03:50
+updated: 2026-09-16
+checked_at: 2026-09-16T07:01:59
 tags:
   - brain
   - client-intelligence
@@ -20,9 +20,9 @@ tags:
 ## Snapshot
 
 - Canonical active routes: **25**
-- Active intelligence overlays present: **24**
-- Historical intelligence overlays retained: **0**
-- Missing overlays: **1**
+- Active intelligence overlays present: **22**
+- Historical intelligence overlays retained: **2**
+- Missing overlays: **3**
 - Duplicate overlays: **0**
 - Extra or non-active overlays: **1**
 - Active vault overviews without a canonical client_id: **0**
@@ -57,6 +57,8 @@ tags:
 ## Reconciliation findings
 
 - **Missing overlay:** Deborah Mara (`deborah-mara`).
+- **Missing overlay:** Fagan Painting (`fagan-painting`).
+- **Missing overlay:** Shadow Heating and Cooling (`shadow-heating-cooling`).
 - **Extra overlay:** [[01_Clients/AMI Cleaning/Client Intelligence Overlay]].
 
 ## Operating rule

@@ -1,0 +1,104 @@
+{
+  "sourceUrl": "https://breakfastnorristown.com/",
+  "finalUrl": "https://breakfastnorristown.com/",
+  "sourceDomain": "breakfastnorristown.com",
+  "httpStatus": 200,
+  "contentType": "text/html",
+  "pageSha256": "c2ad0079935a69aa74c788b7c575ae39a4ed5aae8eabe29cc8fe4a8e9823ab5c",
+  "title": "Main Street Cafe Breakfast norristown",
+  "description": "Main Street Cafe served the customers for more than 10 years. my family Jay J., my brother in law, his uncle and I have served the best quality food.",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "main",
+      "street",
+      "cafe"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\main-street-cafe\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://breakfastnorristown.com/img/logo.png",
+    "sourceEvidence": "IMG main street cafe logo",
+    "type": "png",
+    "dimensions": {
+      "width": 800,
+      "height": 234
+    },
+    "sha256": "91c1d64614eba787f9061d3bde587ee00097e79d4154ae678e4979c727aab532",
+    "sourceSha256": "91c1d64614eba787f9061d3bde587ee00097e79d4154ae678e4979c727aab532",
+    "sourceType": "png",
+    "sourceFileName": null,
+    "transformation": "none; exact first-party transparent asset",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "transparentRatio": 0.7528,
+      "edgeTransparentRatio": 1,
+      "contentRatio": 0.2472,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 38516
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\main-street-cafe\\reference-1.jpg",
+      "fileName": "reference-1.jpg",
+      "sourceUrl": "http://www.breakfastnorristown.com/img/gallery27.jpg",
+      "sourceEvidence": "og:image",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 800,
+        "width": 800
+      },
+      "sha256": "79ab9cfb7cc23fac57ba1403a0b21aa3ae4ebc627808a5a67ed3935ed270f14f",
+      "bytes": 73053,
+      "visual": {
+        "ok": true,
+        "lumaRange": 253.8,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\main-street-cafe\\reference-2.jpg",
+      "fileName": "reference-2.jpg",
+      "sourceUrl": "https://breakfastnorristown.com/img/gallery1.jpg",
+      "sourceEvidence": "IMG img-responsive  main street cafe eggs",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 800,
+        "width": 800
+      },
+      "sha256": "f49aae3e179618b8121e72cbe20ae61f6d20b17b280c4290632e5d94f5c3c4b1",
+      "bytes": 61912,
+      "visual": {
+        "ok": true,
+        "lumaRange": 251.2,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\main-street-cafe\\reference-3.jpg",
+      "fileName": "reference-3.jpg",
+      "sourceUrl": "https://breakfastnorristown.com/img/gallery2.jpg",
+      "sourceEvidence": "IMG img-responsive  main street cafe hashbrowns",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 900,
+        "width": 902
+      },
+      "sha256": "171a595fc7f741044748171d18ccda707ed0409a90908382fc8da7c80dfdbf76",
+      "bytes": 52795,
+      "visual": {
+        "ok": true,
+        "lumaRange": 243.4,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [],
+  "brandColors": [],
+  "checkedAt": "2026-09-16T09:20:42.867Z"
+}

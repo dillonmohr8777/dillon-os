@@ -1,0 +1,168 @@
+{
+  "slug": "hi-pot",
+  "preparedAt": "2026-09-16T09:22:24.895Z",
+  "sourceSite": "https://www.newhipot.com/",
+  "sourceFinalUrl": "https://www.newhipot.com/",
+  "sourcePageSha256": "bf2fced4083411ff43f573a9e5ad82f2d7c957ee6c4249f20890b1519297abc9",
+  "exactLogoRequired": true,
+  "exactLogoSha256": "87750d1714bb1c9b547232b6b7832fcd3029985066511a529eca3a9bd512fe6f",
+  "firstPartyDerivativePolicy": "Content visuals preserve first-party source photography while adapting crop and tonal balance for the private mobile concept. They are not evidence of additional projects or outcomes.",
+  "generatedCompositionReference": "automation/prospect-radar-next20/.impeccable/mocks/architerra-mobile-three-directions.png",
+  "assets": [
+    {
+      "role": "exact identity",
+      "output": "logo.png",
+      "sourceUrl": "https://website-cdn.menusifu.com/wp-content/uploads/newhipot.com/2024/03/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240327095657.png",
+      "sourceSha256": "87750d1714bb1c9b547232b6b7832fcd3029985066511a529eca3a9bd512fe6f",
+      "outputSha256": "87750d1714bb1c9b547232b6b7832fcd3029985066511a529eca3a9bd512fe6f",
+      "transformation": "none; exact first-party transparent asset",
+      "transparent": true
+    },
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://website-cdn.menusifu.com/wp-content/uploads/newhipot.com/2026/08/Assorted-Meat-Platters-for-BBQ-480x320.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "795194c6ecf0a432c6245d94b50d0a66fdef4eafb22fb135326e373b3b8bd685",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=1.040:contrast=1.082:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "4ee8c01388c236beb04995ec2fba60c6a31838671eaa7cedd639278de4a852a9"
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://website-cdn.menusifu.com/wp-content/uploads/newhipot.com/2026/08/BBQ-Grill-with-Mussels-Dumplings-Vegetables-480x320.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "777c8ec535d7c57ae7f56a5f79fce9c0541bea67c8fe0b16bb965262d819ca2e",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:0,eq=saturation=0.940:contrast=1.046:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "1322c9c1592a8c4a60a29ac7ea2f9d62936f9a31d756a662160934d209a6bcb0"
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://website-cdn.menusifu.com/wp-content/uploads/newhipot.com/2026/08/Grilled-Short-Ribs-LA-Galbi-with-Soju-480x320.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "c77f7a5603a3f9c1ecd9ec5b0103711cfc282c921e8607a002e115b95eb97d43",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:0,eq=saturation=0.965:contrast=1.010:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "162971ad8c246dfedde6c36a1eb9ce23c98a28475fe5f443509059f0228fd009"
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://website-cdn.menusifu.com/wp-content/uploads/newhipot.com/2026/08/Assorted-Meat-Platters-for-BBQ-480x320.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "795194c6ecf0a432c6245d94b50d0a66fdef4eafb22fb135326e373b3b8bd685",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:0,eq=saturation=0.990:contrast=1.064:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "f68245b5afa596ae5e36765253c78c0d7387344acdfa9af8822d51fee6521d25"
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://website-cdn.menusifu.com/wp-content/uploads/newhipot.com/2026/08/BBQ-Grill-with-Mussels-Dumplings-Vegetables-480x320.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "777c8ec535d7c57ae7f56a5f79fce9c0541bea67c8fe0b16bb965262d819ca2e",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:42,eq=saturation=1.015:contrast=1.028:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "91c067756fee8627858ec9b30b40246a8396779591d7df259fde8acd6d13a4c0"
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://website-cdn.menusifu.com/wp-content/uploads/newhipot.com/2026/08/Grilled-Short-Ribs-LA-Galbi-with-Soju-480x320.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "c77f7a5603a3f9c1ecd9ec5b0103711cfc282c921e8607a002e115b95eb97d43",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:42,eq=saturation=1.040:contrast=1.082:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "f73c85909ace7025020418601aebccce7110da49df918dc0d12a17396d43dfa5"
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://website-cdn.menusifu.com/wp-content/uploads/newhipot.com/2026/08/Assorted-Meat-Platters-for-BBQ-480x320.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "795194c6ecf0a432c6245d94b50d0a66fdef4eafb22fb135326e373b3b8bd685",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:42,eq=saturation=0.940:contrast=1.046:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "737326c1b79449e16350aaae96bc7f8e0cb9c572636459e54e874451f6ed9991"
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://website-cdn.menusifu.com/wp-content/uploads/newhipot.com/2026/08/BBQ-Grill-with-Mussels-Dumplings-Vegetables-480x320.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "777c8ec535d7c57ae7f56a5f79fce9c0541bea67c8fe0b16bb965262d819ca2e",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:42,eq=saturation=0.965:contrast=1.010:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "4ad9ee44b1357c0e2d9e84b80a0f3efcd0d2f3dc0e31440b7ab49493f83a607d"
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://website-cdn.menusifu.com/wp-content/uploads/newhipot.com/2026/08/Grilled-Short-Ribs-LA-Galbi-with-Soju-480x320.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "c77f7a5603a3f9c1ecd9ec5b0103711cfc282c921e8607a002e115b95eb97d43",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:84,eq=saturation=0.990:contrast=1.064:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "863644811484a98175ef708025ae25d8bf342e71d08e3ebf4dd899f310321a72"
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://website-cdn.menusifu.com/wp-content/uploads/newhipot.com/2026/08/Assorted-Meat-Platters-for-BBQ-480x320.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "795194c6ecf0a432c6245d94b50d0a66fdef4eafb22fb135326e373b3b8bd685",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:84,eq=saturation=1.015:contrast=1.028:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "c3d69b3345be6bf6cd441bc4e074f2367a80d30edd63183b08d762870a417e02"
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://website-cdn.menusifu.com/wp-content/uploads/newhipot.com/2026/08/BBQ-Grill-with-Mussels-Dumplings-Vegetables-480x320.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "777c8ec535d7c57ae7f56a5f79fce9c0541bea67c8fe0b16bb965262d819ca2e",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:84,eq=saturation=1.040:contrast=1.082:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "1a44d14f369055fd050a700afb0a6c9bfd669512ede73386c181488e104c930a"
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://website-cdn.menusifu.com/wp-content/uploads/newhipot.com/2026/08/Grilled-Short-Ribs-LA-Galbi-with-Soju-480x320.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "c77f7a5603a3f9c1ecd9ec5b0103711cfc282c921e8607a002e115b95eb97d43",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:84,eq=saturation=0.940:contrast=1.046:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "060cbbbaa0196909423ea7cbea1bb78352809f01c593d23741a432960e0b3688"
+    }
+  ],
+  "fonts": {
+    "pair": {
+      "id": "bodoni-urbanist",
+      "display": "Bodoni Moda",
+      "text": "Urbanist"
+    },
+    "source": "Google Fonts CSS API",
+    "files": [
+      {
+        "file": "font-display-400.woff2",
+        "sha256": "192ae876c21d9258d096a526dad5bddf37f0daa69cfe943cae5f6be5a52adda2"
+      },
+      {
+        "file": "font-display-700.woff2",
+        "sha256": "192ae876c21d9258d096a526dad5bddf37f0daa69cfe943cae5f6be5a52adda2"
+      },
+      {
+        "file": "font-text-400.woff2",
+        "sha256": "7981ef90c246352c7c217081b8d9337b9c95e9d17ae126bf56b0d3753d1e5ffb"
+      },
+      {
+        "file": "font-text-700.woff2",
+        "sha256": "7981ef90c246352c7c217081b8d9337b9c95e9d17ae126bf56b0d3753d1e5ffb"
+      }
+    ]
+  }
+}

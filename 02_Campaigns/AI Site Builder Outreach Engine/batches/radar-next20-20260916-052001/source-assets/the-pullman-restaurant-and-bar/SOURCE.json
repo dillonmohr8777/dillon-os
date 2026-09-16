@@ -1,0 +1,119 @@
+{
+  "sourceUrl": "https://thepullmanrestaurant.com/",
+  "finalUrl": "https://thepullmanrestaurant.com/",
+  "sourceDomain": "thepullmanrestaurant.com",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=utf-8",
+  "pageSha256": "a6b5e10593a342c87dd753fadcd72b72e9c544226187145ea751c77926b5bd19",
+  "title": "Best American Restaurant in Bryn Mawr, PA | The Pullman",
+  "description": "As you enter the Pullman Restaurant & Bar your eyes are directed to the dramatic mosaic tile floor announcing you've arrived. The atmosphere feels both theatrical and inviting. This ambitious renovation of the historic Bryn Mawr Train Station with huge chandeliers dripping from the ceilings and one of the largest dazzling bars in the entire Philadelphia/Main Line area draws a lively, young up market crowd. Crisp, elegant, edgy and smart there is still a casual mood with a cozy atmosphere. The Pullman is where the past and future co-exist with a distinctive old-world character. The gorgeous Music Lounge features live music on the week-ends and you will feel tucked away in the intimacy of the Private Dining Club Car. The Main Dining Car nestled right by the train tracks serves food that pays homage to the diversity of American culinary traditions with a playful Italian nod. Fresh seafood, USDA Choice beef, pasta, locally sourced produce and desserts that score a direct hit with your sweet spot. There is also an Inspired craft cocktail list and an approachable wine list for those who want to taste something measured in pleasure rather than price. Contact us and place your order off our Catering Menu for your home and office celebrations. For private soirees or grand company gatherings your event unfolds at The Pullman across a collection of spaces each one with its own spirit. In Spring, Summer and Fall experience Alfresco Dining and watch the trains pass by at The ‘10/14’ Bar On The Rails featuring 3 color TVs where the locals cheer on their favorite teams. This is your place without a doubt. Snag a spot at The Pullman Restaurant & Bar...where the laid back vibe doesn't sacrifice an ounce of style.",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "pullman",
+      "restaurant",
+      "bar"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\the-pullman-restaurant-and-bar\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://static.spotapps.co/website_images/ab_websites/118918_website_v1/logo_new_3.png",
+    "sourceEvidence": "IMG img-responsive logo-top  the pullman restaurant and bar logo top - homepage",
+    "type": "png",
+    "dimensions": {
+      "width": 450,
+      "height": 121
+    },
+    "sha256": "aaf58e463fcef049fd7f352c86be82013c3b047f84345ea195203a2010683cb3",
+    "sourceSha256": "aaf58e463fcef049fd7f352c86be82013c3b047f84345ea195203a2010683cb3",
+    "sourceType": "png",
+    "sourceFileName": null,
+    "transformation": "none; exact first-party transparent asset",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "transparentRatio": 0.7205,
+      "edgeTransparentRatio": 1,
+      "contentRatio": 0.2795,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 23508
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\the-pullman-restaurant-and-bar\\reference-1.jpg",
+      "fileName": "reference-1.jpg",
+      "sourceUrl": "https://static.spotapps.co/website_images/ab_websites/118918_website_v1/social_share.jpg",
+      "sourceEvidence": "og:image",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 630,
+        "width": 1200
+      },
+      "sha256": "d8a6313ba21379be3c633432b47a7ef7200356a22c19a5f94689c8e9203f5942",
+      "bytes": 236330,
+      "visual": {
+        "ok": true,
+        "lumaRange": 255,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\the-pullman-restaurant-and-bar\\reference-2.jpg",
+      "fileName": "reference-2.jpg",
+      "sourceUrl": "https://static.spotapps.co/spots/46/ade44869384a629e522ce0157a9a6a/full",
+      "sourceEvidence": "IMG img-responsive lazyload  gallery photo number 1",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 800,
+        "width": 800
+      },
+      "sha256": "1f74ebe06645181943b10c88f0db2337193dbd191a409a95783a90b58e301c5d",
+      "bytes": 174670,
+      "visual": {
+        "ok": true,
+        "lumaRange": 245.1,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\the-pullman-restaurant-and-bar\\reference-3.jpg",
+      "fileName": "reference-3.jpg",
+      "sourceUrl": "https://static.spotapps.co/spots/3e/4c28b96ab44c89b59bae1a9049839e/full",
+      "sourceEvidence": "IMG img-responsive lazyload  gallery photo number 2",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 800,
+        "width": 800
+      },
+      "sha256": "ea4f6a472f893127f376421d514eba8c682275668fe5dcee09f4d8d663867e3c",
+      "bytes": 121050,
+      "visual": {
+        "ok": true,
+        "lumaRange": 253,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [
+    {
+      "url": "https://thepullmanrestaurant.com/The%20Pullman%20Restaurant%20image",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://thepullmanrestaurant.com/image/png",
+      "reason": "HTTP 404"
+    }
+  ],
+  "brandColors": [
+    "#f3c745",
+    "#163e80",
+    "#173e81",
+    "#5e0e0e",
+    "#5bbad5"
+  ],
+  "checkedAt": "2026-09-16T09:20:42.034Z"
+}

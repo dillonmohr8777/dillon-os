@@ -1,0 +1,118 @@
+{
+  "sourceUrl": "https://www.hopescookies.com/store",
+  "finalUrl": "https://www.hopescookies.com/store",
+  "sourceDomain": "hopescookies.com",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=utf-8",
+  "pageSha256": "27620826b03b01ffb13fd2b0c437d50678b63328c4c43983c5dbe6d096120e12",
+  "title": "Visit Hope's Cookies Retail Store | Hope's Cookies - Hope's Cookies | Gourmet Cookie Gifts Online - Cookie Delivery Across the U.S.A.",
+  "description": "Can't wait for shipping? Stop by Hope's Cookies retail store in Rosemont, PA, and check out our freshly baked gourmet cookies, cookie dough, ice cream, and more!",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "hope",
+      "cookies"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\hope-s-cookies\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://www.hopescookies.com/assets/images/logo.png",
+    "sourceEvidence": "IMG logo mx-auto  hope's cookies",
+    "type": "png",
+    "dimensions": {
+      "width": 270,
+      "height": 124
+    },
+    "sha256": "cee4961a0b2385b988b5fdf20402495ebbdda786a6039de7198d7659e6d6c276",
+    "sourceSha256": "cee4961a0b2385b988b5fdf20402495ebbdda786a6039de7198d7659e6d6c276",
+    "sourceType": "png",
+    "sourceFileName": null,
+    "transformation": "none; exact first-party transparent asset",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "transparentRatio": 0.7182,
+      "edgeTransparentRatio": 1,
+      "contentRatio": 0.2818,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 10178
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\hope-s-cookies\\reference-1.jpg",
+      "fileName": "reference-1.jpg",
+      "sourceUrl": "http://hopescookies.com/storage/images/slides/2026/BestMLMN_6-26.jpg",
+      "sourceEvidence": "IMG ",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 637,
+        "width": 1920
+      },
+      "sha256": "873d64e001da93a45f248f790aada3a3607de9f2482c97d5b19cc605794ff3fb",
+      "bytes": 760100,
+      "visual": {
+        "ok": true,
+        "lumaRange": 255,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\hope-s-cookies\\reference-2.jpg",
+      "fileName": "reference-2.jpg",
+      "sourceUrl": "https://www.hopescookies.com/assets/images/slides/2023/local-delivery4.jpg",
+      "sourceEvidence": "IMG ",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 312,
+        "width": 940
+      },
+      "sha256": "a42afaadd95ac2a1e0405d6f1a9a5251df7b0c62607abf29869a03a085be3eed",
+      "bytes": 82972,
+      "visual": {
+        "ok": true,
+        "lumaRange": 255,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\hope-s-cookies\\reference-3.jpg",
+      "fileName": "reference-3.jpg",
+      "sourceUrl": "https://www.hopescookies.com/assets/images/slides/MLtradition.jpg",
+      "sourceEvidence": "IMG primary-img",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 312,
+        "width": 940
+      },
+      "sha256": "ccc4eaeb3e3b2f9bac160cddd591d1cb1b2d9009aecd6af3abf702d9f8f8ce49",
+      "bytes": 94256,
+      "visual": {
+        "ok": true,
+        "lumaRange": 255,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [
+    {
+      "url": "https://www.facebook.com/tr?id=340282627057943&ev=PageView&noscript=1",
+      "reason": "unsupported reference type unknown"
+    },
+    {
+      "url": "https://www.hopescookies.com/assets/images/layout/home_up.gif",
+      "reason": "unsupported reference type gif"
+    },
+    {
+      "url": "https://www.hopescookies.com/assets/images/layout/shopping-cart-32x32.png",
+      "reason": "reference image is too small"
+    }
+  ],
+  "brandColors": [
+    "#003399"
+  ],
+  "checkedAt": "2026-09-16T09:20:44.836Z"
+}

@@ -1,0 +1,126 @@
+{
+  "sourceUrl": "https://highswartz.com/",
+  "finalUrl": "https://highswartz.com/",
+  "sourceDomain": "highswartz.com",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=UTF-8",
+  "pageSha256": "f7357a9b77a787772da5037570f0430cb0f56eb75bb549b625d5b896b33b0d85",
+  "title": "Lawyers Near Me - Bucks, Delaware, Montgomery County, PA",
+  "description": "Looking for lawyers near you in Bucks, Delaware, Chester, or Montgomery County? Our law firm is recognized as a “Best Law Firm.\"",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "high",
+      "swartz"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\high-swartz\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://highswartz.com/wp-content/themes/highswartz2019-child/img/HS-logo-horizontal.png",
+    "sourceEvidence": "JSON-LD logo",
+    "type": "png",
+    "dimensions": {
+      "width": 613,
+      "height": 158
+    },
+    "sha256": "b9494ea6c9e9ea4e52716c3201ceb71aa3a9b57c4e128239081a9dce2ea756ea",
+    "sourceSha256": "b9494ea6c9e9ea4e52716c3201ceb71aa3a9b57c4e128239081a9dce2ea756ea",
+    "sourceType": "png",
+    "sourceFileName": null,
+    "transformation": "none; exact first-party transparent asset",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "transparentRatio": 0.564,
+      "edgeTransparentRatio": 0.6433,
+      "contentRatio": 0.436,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 9971
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\high-swartz\\reference-1.png",
+      "fileName": "reference-1.png",
+      "sourceUrl": "https://highswartz.com/wp-content/uploads/2025/08/Best-Lawyers-High-Swartz-LLP-2026-2048x620.png",
+      "sourceEvidence": "IMG attachment-full size-full  best lawyers 2026 high swartz llp",
+      "type": "png",
+      "dimensions": {
+        "width": 2048,
+        "height": 620
+      },
+      "sha256": "0bbae80a0e47a0082717dd02b9c6dbacb3f9c2cbb7151d1bda49e280a1bb4ce8",
+      "bytes": 133830,
+      "visual": {
+        "ok": true,
+        "lumaRange": 255,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\high-swartz\\reference-2.png",
+      "fileName": "reference-2.png",
+      "sourceUrl": "https://highswartz.com/wp-content/uploads/2025/09/chambers-high-swartz-llp-768x692.png",
+      "sourceEvidence": "IMG attachment-full size-full  chambers and partners",
+      "type": "png",
+      "dimensions": {
+        "width": 768,
+        "height": 692
+      },
+      "sha256": "496680d2f69b588c5926aa5145ff37cccee22dd41dca43025d4d445fbcddbd81",
+      "bytes": 155794,
+      "visual": {
+        "ok": true,
+        "lumaRange": 255,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\high-swartz\\reference-3.png",
+      "fileName": "reference-3.png",
+      "sourceUrl": "https://highswartz.com/wp-content/uploads/2025/08/Best-Lawyers-High-Swartz-LLP-2026.png",
+      "sourceEvidence": "IMG ",
+      "type": "png",
+      "dimensions": {
+        "width": 3000,
+        "height": 908
+      },
+      "sha256": "853ddcb54d1cb04920ba8bdf45eb9f11fe2ff773ed3f26f834bce78faa621c4a",
+      "bytes": 154619,
+      "visual": {
+        "ok": true,
+        "lumaRange": 255,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [
+    {
+      "url": "https://highswartz.com/wp-content/uploads/2023/01/high-swartz-norristown-entrance.jpg",
+      "reason": "not a PNG"
+    },
+    {
+      "url": "https://highswartz.com/823",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://highswartz.com/image/jpeg",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://highswartz.com/wp-content/uploads/2023/01/hero-bg-mainstreet_updated.jpg",
+      "reason": "not a PNG"
+    }
+  ],
+  "brandColors": [
+    "#003388",
+    "#003399",
+    "#c6b281",
+    "#1450a3",
+    "#192442"
+  ],
+  "checkedAt": "2026-09-16T09:21:08.284Z"
+}

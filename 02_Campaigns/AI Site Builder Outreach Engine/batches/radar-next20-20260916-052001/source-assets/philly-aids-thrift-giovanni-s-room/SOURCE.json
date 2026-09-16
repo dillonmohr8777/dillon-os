@@ -1,0 +1,129 @@
+{
+  "sourceUrl": "https://www.queerbooks.com/",
+  "finalUrl": "https://queerbooks.com/",
+  "sourceDomain": "queerbooks.com",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=UTF-8",
+  "pageSha256": "1fbd536a81f450a91093e85677d100fe3c07e69a1a4f2780dbc5590b8d0d5af1",
+  "title": "Giovanni’s Room | Historic LGBTQ+ Bookstore Philadelphia",
+  "description": "\"Philly",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "philly",
+      "aids",
+      "thrift",
+      "giovanni",
+      "room"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\philly-aids-thrift-giovanni-s-room\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://queerbooks.com/wp-content/uploads/2017/09/PATG-logo.png",
+    "sourceEvidence": "JSON-LD logo URL",
+    "type": "png",
+    "dimensions": {
+      "width": 350,
+      "height": 350
+    },
+    "sha256": "a2d92fe786d5c74d4107c58d65a228bd96b6a17a5386cd8184178a731c3b3572",
+    "sourceSha256": "a2d92fe786d5c74d4107c58d65a228bd96b6a17a5386cd8184178a731c3b3572",
+    "sourceType": "png",
+    "sourceFileName": null,
+    "transformation": "none; exact first-party transparent asset",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "transparentRatio": 0.2201,
+      "edgeTransparentRatio": 0.9721,
+      "contentRatio": 0.7799,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 88280
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\philly-aids-thrift-giovanni-s-room\\reference-1.png",
+      "fileName": "reference-1.png",
+      "sourceUrl": "https://queerbooks.com/wp-content/uploads/2025/12/Hero-Image-New-Gios-Room-1.png",
+      "sourceEvidence": "IMG img-responsive wp-image-103944   hero image new – gio’s room",
+      "type": "png",
+      "dimensions": {
+        "width": 702,
+        "height": 648
+      },
+      "sha256": "4273cc615420eb677ace909d151e10ea92846a09d24e09d05c07f663446085c1",
+      "bytes": 469586,
+      "visual": {
+        "ok": true,
+        "lumaRange": 255,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\philly-aids-thrift-giovanni-s-room\\reference-2.png",
+      "fileName": "reference-2.png",
+      "sourceUrl": "https://queerbooks.com/wp-content/uploads/2026/07/Next-months-mystery-book-e1783708580566.png",
+      "sourceEvidence": "IMG img-responsive wp-image-125509",
+      "type": "png",
+      "dimensions": {
+        "width": 748,
+        "height": 1066
+      },
+      "sha256": "236b24c98d2abec62a968ff3fd3677e6d78e516f3fbe219e232411768afc5921",
+      "bytes": 800602,
+      "visual": {
+        "ok": true,
+        "lumaRange": 253.4,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\philly-aids-thrift-giovanni-s-room\\reference-3.png",
+      "fileName": "reference-3.png",
+      "sourceUrl": "https://queerbooks.com/wp-content/uploads/2025/10/James-Baldwin-scaled.png",
+      "sourceEvidence": "IMG img-responsive wp-image-103554   james baldwin",
+      "type": "png",
+      "dimensions": {
+        "width": 2560,
+        "height": 1099
+      },
+      "sha256": "b6f7d354cf45fc9861b15d33c9d219ea226c0e20d6e2cd78624f0ca86a69d2ff",
+      "bytes": 126008,
+      "visual": {
+        "ok": true,
+        "lumaRange": 254,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [
+    {
+      "url": "https://queerbooks.com/wp-content/uploads/2026/02/Giovannis-Room-Short-Sleeve-T-Shirt-scaled.jpg",
+      "reason": "progressive JPEG is not decodable here"
+    },
+    {
+      "url": "https://queerbooks.com/wp-content/uploads/2026/02/PhillyAidsThrift-T-Shirt-scaled.webp",
+      "reason": "not a PNG"
+    },
+    {
+      "url": "https://queerbooks.com/wp-content/uploads/2026/02/Philly-LOVE-T-Shirt-scaled.webp",
+      "reason": "not a PNG"
+    },
+    {
+      "url": "https://queerbooks.com/wp-content/uploads/2026/05/Giovannis-Room.jpg",
+      "reason": "reference image is too small"
+    }
+  ],
+  "brandColors": [
+    "#003399",
+    "#003388",
+    "#415aff",
+    "#008080",
+    "#6ae06a"
+  ],
+  "checkedAt": "2026-09-16T09:21:05.378Z"
+}

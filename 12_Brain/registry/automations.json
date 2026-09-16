@@ -1223,6 +1223,31 @@
       "source": "_os/automation/cadence/daily.yaml",
       "owner": "cadence driver",
       "notes": "Built 2026-09-16 against Jason Fallon's named bottleneck. Measured that day: every Meta and audit lead double fires into HubSpot within a minute, and about 30 percent of the channel is caller ID noise. Reports only; the upstream Zap overlap is the real fix."
+    },
+    {
+      "id": "run-roster",
+      "name": "Run every free tier agent and record it",
+      "lane": "infrastructure",
+      "tier": 0,
+      "cadence": "on demand, and once per cadence pass",
+      "stale_after_hours": 26,
+      "command": "node _os/automation/bin/run-roster.js [--json]",
+      "inputs": [
+        "12_Brain/registry/automations.json"
+      ],
+      "outputs": [
+        "12_Brain/07_Reviews/Cadence",
+        "_os/automation/runs.jsonl"
+      ],
+      "external_actions": false,
+      "status": "implemented",
+      "lifecycle": "implemented",
+      "enabled": true,
+      "audience": "internal",
+      "function": "agent ops",
+      "source": "_os/automation/bin/run-roster.js",
+      "owner": "cadence driver",
+      "notes": "The repeatable run all agents entry point. Runs only node commands needing no arguments, records each into runs.jsonl, and reports every skip with a reason. Model backed jobs and subagents are deliberately excluded because they cost weekly quota."
     }
   ],
   "gates": {

@@ -1,0 +1,314 @@
+{
+  "batchId": "radar-next20-20260916-052001",
+  "targetCount": 20,
+  "briefCount": 20,
+  "allowPartial": false,
+  "skipQa": false,
+  "forceHoldAll": false,
+  "batchFailures": [],
+  "qaReadyCount": 0,
+  "mailReadyAlwaysHold": true,
+  "results": [
+    {
+      "slug": "andesa-services-inc",
+      "prospectId": "RADAR-NEXT20-015",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 419,
+      "images": 12,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "devon-veterinary-hospital",
+      "prospectId": "RADAR-NEXT20-007",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 430,
+      "images": 13,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "dittmer-and-company-p-c",
+      "prospectId": "RADAR-NEXT20-017",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 439,
+      "images": 13,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "fellini-cafe",
+      "prospectId": "RADAR-NEXT20-012",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 419,
+      "images": 13,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "finesse-flooring",
+      "prospectId": "RADAR-NEXT20-016",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 412,
+      "images": 13,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "forte-salon",
+      "prospectId": "RADAR-NEXT20-005",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 415,
+      "images": 13,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "hi-pot",
+      "prospectId": "RADAR-NEXT20-004",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 411,
+      "images": 13,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "high-swartz",
+      "prospectId": "RADAR-NEXT20-019",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 416,
+      "images": 13,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "hope-s-cookies",
+      "prospectId": "RADAR-NEXT20-014",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 426,
+      "images": 13,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "main-street-cafe",
+      "prospectId": "RADAR-NEXT20-011",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 429,
+      "images": 13,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "mankind-s-headquarters",
+      "prospectId": "RADAR-NEXT20-018",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 409,
+      "images": 13,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "marvin-e-kanze-inc",
+      "prospectId": "RADAR-NEXT20-002",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 429,
+      "images": 13,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "mcsurdy-orthodontics-the-smile-specialists",
+      "prospectId": "RADAR-NEXT20-008",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 440,
+      "images": 12,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "meetinghouse-dental-care",
+      "prospectId": "RADAR-NEXT20-001",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 427,
+      "images": 13,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "patt-veterinary-hospital",
+      "prospectId": "RADAR-NEXT20-010",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 424,
+      "images": 13,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "penn-animal-hospital",
+      "prospectId": "RADAR-NEXT20-009",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 432,
+      "images": 13,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "philly-aids-thrift-giovanni-s-room",
+      "prospectId": "RADAR-NEXT20-006",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 425,
+      "images": 13,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "the-pullman-restaurant-and-bar",
+      "prospectId": "RADAR-NEXT20-013",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 456,
+      "images": 13,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "wagner-group-compass",
+      "prospectId": "RADAR-NEXT20-003",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 432,
+      "images": 13,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "yudizza-spa",
+      "prospectId": "RADAR-NEXT20-020",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 409,
+      "images": 13,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    }
+  ],
+  "ok": false
+}

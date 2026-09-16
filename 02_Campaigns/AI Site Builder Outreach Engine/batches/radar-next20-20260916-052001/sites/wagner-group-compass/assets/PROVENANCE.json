@@ -1,0 +1,168 @@
+{
+  "slug": "wagner-group-compass",
+  "preparedAt": "2026-09-16T09:22:21.417Z",
+  "sourceSite": "https://wagnerrealestate.com/",
+  "sourceFinalUrl": "https://wagnerrealestate.com/",
+  "sourcePageSha256": "2deeaf7491b66a9c7d8b515887419bbb39faa55f26748a6eed65dea38b4082e4",
+  "exactLogoRequired": true,
+  "exactLogoSha256": "7b1a85c903549a338abb2a686d7136a3cd4863e89672f38776ddff6bf99d0d23",
+  "firstPartyDerivativePolicy": "Content visuals preserve first-party source photography while adapting crop and tonal balance for the private mobile concept. They are not evidence of additional projects or outcomes.",
+  "generatedCompositionReference": "automation/prospect-radar-next20/.impeccable/mocks/architerra-mobile-three-directions.png",
+  "assets": [
+    {
+      "role": "exact identity",
+      "output": "logo.png",
+      "sourceUrl": "https://media-production.lp-cdn.com/cdn-cgi/image/format=auto,quality=85/https://media-production.lp-cdn.com/media/b1stagd1r9zdhinnzyb3",
+      "sourceSha256": "77e7a051c750d70c3f961af5ed151d00ad7e0527044cad75052cdbefadffd425",
+      "outputSha256": "7b1a85c903549a338abb2a686d7136a3cd4863e89672f38776ddff6bf99d0d23",
+      "transformation": "flat border color rgb(71,112,76) removed by border-seeded flood fill at tolerance 32; geometry unchanged",
+      "transparent": true
+    },
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "http://bright-media01.prd.brightmls.com/bright/images/0000/8048/6914/5228/804869145228_1024_768_WM_0TsEz5d_Be6cDwFH.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "1b47fa16e33ce8bc32865ed8d76ac795c1d5dd257e562240acfee2925a6905de",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=1.015:contrast=1.064:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "a15654f90866a84cffbbe82c0cbfc9e9ac84c90691942b7f05d7712d144471fb"
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "http://bright-media02.prd.brightmls.com/bright/images/0000/8053/5840/4886/805358404886_1024_768_WM_pvOel_-2GTaEMTXM.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "e87b1b913bc1d1f18733f45536f757a657ea1eb90ce4a9267aea219787e91ce2",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:0,eq=saturation=1.040:contrast=1.028:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "65f9c61225bac91fb2ad16e3a51c0aae98d1c141da1a0a862e3e122e1944eb3c"
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "http://bright-media01.prd.brightmls.com/bright/images/0000/8053/2396/3142/805323963142_1024_768_WM_N5AQ6wOy1yYAZEIT.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "9d772642dafb84ac010a9518e872578efd9189ac7dc65641704413968536a522",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:0,eq=saturation=0.940:contrast=1.082:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "cf6dc6e74de82cf14e40f247250008b980c30cca1c718da4c72f0bd558b13d4f"
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "http://bright-media01.prd.brightmls.com/bright/images/0000/8048/6914/5228/804869145228_1024_768_WM_0TsEz5d_Be6cDwFH.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "1b47fa16e33ce8bc32865ed8d76ac795c1d5dd257e562240acfee2925a6905de",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:0,eq=saturation=0.965:contrast=1.046:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "f569ac26c073c623f78af24a6e0497aaf5c1991b3953c12146f5a35b9ed94c10"
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "http://bright-media02.prd.brightmls.com/bright/images/0000/8053/5840/4886/805358404886_1024_768_WM_pvOel_-2GTaEMTXM.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "e87b1b913bc1d1f18733f45536f757a657ea1eb90ce4a9267aea219787e91ce2",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:42,eq=saturation=0.990:contrast=1.010:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "c0c5b5790f707cdc1cf5a7b1ab6838514d1fc3f570bdf7405019b538993a78b5"
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "http://bright-media01.prd.brightmls.com/bright/images/0000/8053/2396/3142/805323963142_1024_768_WM_N5AQ6wOy1yYAZEIT.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "9d772642dafb84ac010a9518e872578efd9189ac7dc65641704413968536a522",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:42,eq=saturation=1.015:contrast=1.064:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "efc378b6894b9457b0855f0465ea7ca50fb58943aabb9f0a6170a18fb188ba17"
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "http://bright-media01.prd.brightmls.com/bright/images/0000/8048/6914/5228/804869145228_1024_768_WM_0TsEz5d_Be6cDwFH.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "1b47fa16e33ce8bc32865ed8d76ac795c1d5dd257e562240acfee2925a6905de",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:42,eq=saturation=1.040:contrast=1.028:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "6f3add215e1207e5f669a46e8409119effb95c6fff67d373d7f3aeb6a1418e97"
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "http://bright-media02.prd.brightmls.com/bright/images/0000/8053/5840/4886/805358404886_1024_768_WM_pvOel_-2GTaEMTXM.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "e87b1b913bc1d1f18733f45536f757a657ea1eb90ce4a9267aea219787e91ce2",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:42,eq=saturation=0.940:contrast=1.082:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "0653211b81826196436ac4987fcf00e430ffcb703ebb55bc6a41d41a3fe7312e"
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "http://bright-media01.prd.brightmls.com/bright/images/0000/8053/2396/3142/805323963142_1024_768_WM_N5AQ6wOy1yYAZEIT.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "9d772642dafb84ac010a9518e872578efd9189ac7dc65641704413968536a522",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:84,eq=saturation=0.965:contrast=1.046:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "0fa85b4808d44dea2dc3dafbab0feef723cf4b13ea48ca8a28be87144b1876b0"
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "http://bright-media01.prd.brightmls.com/bright/images/0000/8048/6914/5228/804869145228_1024_768_WM_0TsEz5d_Be6cDwFH.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "1b47fa16e33ce8bc32865ed8d76ac795c1d5dd257e562240acfee2925a6905de",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:84,eq=saturation=0.990:contrast=1.010:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "5c61ab5a0a64af52965f95224c0d4702f595ba33066166abe2b107b87bb6c858"
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "http://bright-media02.prd.brightmls.com/bright/images/0000/8053/5840/4886/805358404886_1024_768_WM_pvOel_-2GTaEMTXM.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "e87b1b913bc1d1f18733f45536f757a657ea1eb90ce4a9267aea219787e91ce2",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:84,eq=saturation=1.015:contrast=1.064:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "1b9f23c5cfb79b0ab3d0ffa7a7b4038ed20b1c12ffaa3d82ea424cd3a4061d68"
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "http://bright-media01.prd.brightmls.com/bright/images/0000/8053/2396/3142/805323963142_1024_768_WM_N5AQ6wOy1yYAZEIT.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "9d772642dafb84ac010a9518e872578efd9189ac7dc65641704413968536a522",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:84,eq=saturation=1.040:contrast=1.028:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "12b12a927a93291cdd79b5011e823811cb90f2743f45a0d498012c258420da06"
+    }
+  ],
+  "fonts": {
+    "pair": {
+      "id": "newsreader-figtree",
+      "display": "Newsreader",
+      "text": "Figtree"
+    },
+    "source": "Google Fonts CSS API",
+    "files": [
+      {
+        "file": "font-display-400.woff2",
+        "sha256": "62981321d9a3cc7a61a73792729043703fd6112da86e8ec848bb57f088578757"
+      },
+      {
+        "file": "font-display-700.woff2",
+        "sha256": "62981321d9a3cc7a61a73792729043703fd6112da86e8ec848bb57f088578757"
+      },
+      {
+        "file": "font-text-400.woff2",
+        "sha256": "4ba7d3d096695818fe0686be4f1e82c6b05134e18a22260336130335027462dd"
+      },
+      {
+        "file": "font-text-700.woff2",
+        "sha256": "4ba7d3d096695818fe0686be4f1e82c6b05134e18a22260336130335027462dd"
+      }
+    ]
+  }
+}

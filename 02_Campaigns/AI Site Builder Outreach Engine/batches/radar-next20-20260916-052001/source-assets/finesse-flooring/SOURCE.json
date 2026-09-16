@@ -1,0 +1,118 @@
+{
+  "sourceUrl": "https://www.finesseflooringinc.com/",
+  "finalUrl": "https://www.finesseflooringinc.com/",
+  "sourceDomain": "finesseflooringinc.com",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=utf-8",
+  "pageSha256": "444c990a564d832fb9a1f7599e4c42c8bf27bcafe4bdb8fec50eb03a4c868cd0",
+  "title": "Flooring Contractor | Finesse Flooring | Green Lane",
+  "description": "Quality flooring and installation. Competitive pricing and impeccable service. carpet, tile, vinyl, lvp",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "finesse",
+      "flooring"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\finesse-flooring\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://www.roomvo.com/services/vendor/themes/e3556ada59d64d7d8b889c8e121795f0/images/vendor_logo_square_en-us.png",
+    "sourceEvidence": "IMG finesse flooring, inc.",
+    "type": "png",
+    "dimensions": {
+      "width": 1024,
+      "height": 1024
+    },
+    "sha256": "1dab37a9c177fb55db6be604245cf52f8057fade2b85fa3eb1c0e0386dbb0897",
+    "sourceSha256": "1dab37a9c177fb55db6be604245cf52f8057fade2b85fa3eb1c0e0386dbb0897",
+    "sourceType": "png",
+    "sourceFileName": null,
+    "transformation": "none; exact first-party transparent asset",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "transparentRatio": 0.6763,
+      "edgeTransparentRatio": 1,
+      "contentRatio": 0.3237,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 1518632
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\finesse-flooring\\reference-1.png",
+      "fileName": "reference-1.png",
+      "sourceUrl": "https://www.finesseflooringinc.com/cms_images/6996d0dac0b1478faba6f5ef1f4a4ff9/Untitled_design_5.width-2000.png",
+      "sourceEvidence": "IMG shop flooring products from finesse flooring | green lane",
+      "type": "png",
+      "dimensions": {
+        "width": 2000,
+        "height": 680
+      },
+      "sha256": "0feca669fc11088aad2294852b58fc23e87856b732b36b9f16bc90f1197af38c",
+      "bytes": 1869037,
+      "visual": {
+        "ok": true,
+        "lumaRange": 254,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\finesse-flooring\\reference-2.png",
+      "fileName": "reference-2.png",
+      "sourceUrl": "https://www.finesseflooringinc.com/cms_images/9e143953a0e54254b388202c79d8b5a2/Untitled_design_1.width-2000.png",
+      "sourceEvidence": "IMG flooring advice from experts in green lane",
+      "type": "png",
+      "dimensions": {
+        "width": 2000,
+        "height": 680
+      },
+      "sha256": "a1973dc2120f3ae22a65dad0454ec0eefe08fb2002f91181ec7099f3c4fae86e",
+      "bytes": 1884659,
+      "visual": {
+        "ok": true,
+        "lumaRange": 241.5,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\finesse-flooring\\reference-3.png",
+      "fileName": "reference-3.png",
+      "sourceUrl": "https://www.finesseflooringinc.com/cms_images/0865dbd07ba14703888089bbf1a23a59/Untitled_design_6.width-2000.png",
+      "sourceEvidence": "IMG flooring installation from finesse flooring | green lane",
+      "type": "png",
+      "dimensions": {
+        "width": 2000,
+        "height": 680
+      },
+      "sha256": "041ac8404afd43a6e2162feabfb6151fb29a4a9de980025b4d51d65abb3c8057",
+      "bytes": 2231665,
+      "visual": {
+        "ok": true,
+        "lumaRange": 255,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [
+    {
+      "url": "https://www.finesseflooringinc.com/cms_images/d055ccd045dc4002948d9751f75aef50/featured_3.original.2e16d0ba.fill-.2e16d0ba.fill-800x800.jpg",
+      "reason": "reference image is too small"
+    },
+    {
+      "url": "https://www.finesseflooringinc.com/cms_images/1eacc94d41ae4c078f5a1056d19d9443/featured_2.original.2e16d0ba.fill-.2e16d0ba.fill-800x800.jpg",
+      "reason": "progressive JPEG is not decodable here"
+    }
+  ],
+  "brandColors": [
+    "#ff5f00",
+    "#eb001b",
+    "#f79e1b",
+    "#15195a",
+    "#fac610"
+  ],
+  "checkedAt": "2026-09-16T09:20:53.523Z"
+}

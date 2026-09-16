@@ -1,0 +1,108 @@
+{
+  "sourceUrl": "https://www.marvinekanze.com/",
+  "finalUrl": "https://www.marvinekanze.com/",
+  "sourceDomain": "marvinekanze.com",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=UTF-8",
+  "pageSha256": "1ac8c06a35f29486ead9322e814082cb7bfab8e1d26cc03f55cbeea6d5efeeba",
+  "title": "Marvin E Kanze",
+  "description": "",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "marvin",
+      "kanze"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\marvin-e-kanze-inc\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://www.marvinekanze.com/wp-content/uploads/2024/04/MarvinEKanzelogo_white.png",
+    "sourceEvidence": "IMG marvin e kanze",
+    "type": "png",
+    "dimensions": {
+      "width": 473,
+      "height": 71
+    },
+    "sha256": "7cd69d084fda0a260c764438d820a7e6834149cc6cddcda7c9c32f6566960e11",
+    "sourceSha256": "7cd69d084fda0a260c764438d820a7e6834149cc6cddcda7c9c32f6566960e11",
+    "sourceType": "png",
+    "sourceFileName": null,
+    "transformation": "none; exact first-party transparent asset",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "transparentRatio": 0.7719,
+      "edgeTransparentRatio": 1,
+      "contentRatio": 0.2281,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 5827
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\marvin-e-kanze-inc\\reference-1.jpg",
+      "fileName": "reference-1.jpg",
+      "sourceUrl": "https://www.marvinekanze.com/wp-content/uploads/2025/03/credit_2.jpg",
+      "sourceEvidence": "IMG size-medium wp-image-3333 aligncenter",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 612,
+        "width": 612
+      },
+      "sha256": "55e20047ba0c2ea1e377578aee4655d4decda0a57d800b80e999102259f35836",
+      "bytes": 28125,
+      "visual": {
+        "ok": true,
+        "lumaRange": 248.8,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\marvin-e-kanze-inc\\reference-2.jpg",
+      "fileName": "reference-2.jpg",
+      "sourceUrl": "https://www.marvinekanze.com/wp-content/uploads/2025/03/credit_1.jpg",
+      "sourceEvidence": "IMG alignnone size-medium wp-image-3332 aligncenter",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 612,
+        "width": 612
+      },
+      "sha256": "7ae32c0e12b4cc8e0db38a4e892ae1674a5e6aaf3979f6a0223d68a5b3ac9e15",
+      "bytes": 17359,
+      "visual": {
+        "ok": true,
+        "lumaRange": 188.9,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [
+    {
+      "url": "https://www.marvinekanze.com/wp-content/uploads/2024/04/cal.png",
+      "reason": "reference image is too small"
+    },
+    {
+      "url": "https://www.marvinekanze.com/wp-content/uploads/2025/04/phone-2.png",
+      "reason": "reference image is too small"
+    },
+    {
+      "url": "https://www.marvinekanze.com/wp-content/uploads/2025/07/play1-300x173.jpg",
+      "reason": "reference image is too small"
+    },
+    {
+      "url": "https://www.marvinekanze.com/wp-content/uploads/2025/07/video2-300x173.jpg",
+      "reason": "reference image is too small"
+    }
+  ],
+  "brandColors": [
+    "#9ba8c0",
+    "#003388",
+    "#abb8c3",
+    "#f78da7",
+    "#cf2e2e"
+  ],
+  "checkedAt": "2026-09-16T09:20:28.088Z"
+}

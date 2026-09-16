@@ -1,0 +1,109 @@
+{
+  "sourceUrl": "https://www.pattvet.com/",
+  "finalUrl": "https://pattvet.com/",
+  "sourceDomain": "pattvet.com",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=UTF-8",
+  "pageSha256": "c7dba00740f52432a66c7ef282feab1568a354daf75e97a704f6ed32ce32daf8",
+  "title": "Patt Veterinary Hospital | Best Veterinary Hospital In Gilbertsville, PA",
+  "description": "Welcome to Patt Veterinary Hospital, your trusted vet clinic in Gilbertsville, PA. Compassionate, comprehensive care for dogs and cats of all ages.",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "patt",
+      "veterinary",
+      "hospital"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\patt-veterinary-hospital\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://pattvet.com/wp-content/uploads/2025/10/Patt-Veterinary-Hospital-Logo-White.png",
+    "sourceEvidence": "JSON-LD logo URL",
+    "type": "png",
+    "dimensions": {
+      "width": 2000,
+      "height": 451
+    },
+    "sha256": "644e44309b7d8eb1f78735a7918b903869fb313173e21cc7d8a268b77b3e744e",
+    "sourceSha256": "8941508411c5f32da78723918299743227b9b655b21d29ed38ed2c4d48bf8275",
+    "sourceType": "png",
+    "sourceFileName": "logo-source.png",
+    "transformation": "flat border color rgb(0,0,0) removed by border-seeded flood fill at tolerance 32; geometry unchanged",
+    "borderSpread": 0,
+    "alpha": {
+      "ok": true,
+      "transparentRatio": 0.8678,
+      "edgeTransparentRatio": 1,
+      "contentRatio": 0.1322,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 70698
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\patt-veterinary-hospital\\reference-1.jpg",
+      "fileName": "reference-1.jpg",
+      "sourceUrl": "https://pattvet.com/wp-content/uploads/2025/11/cat-with-toy-480x480.jpg",
+      "sourceEvidence": "IMG wp-image-261380  cat playing with toy cat-with-toy",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 480,
+        "width": 480
+      },
+      "sha256": "6cef8b66f5aa382d8c4b9a69803b7a31048984a6cd4031fb846d569295181c7d",
+      "bytes": 34324,
+      "visual": {
+        "ok": true,
+        "lumaRange": 235.5,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\patt-veterinary-hospital\\reference-2.png",
+      "fileName": "reference-2.png",
+      "sourceUrl": "https://pattvet.com/wp-content/uploads/2025/11/Collage-team-members-480x472.png",
+      "sourceEvidence": "IMG wp-image-261386  collage-team-members collage-team-members",
+      "type": "png",
+      "dimensions": {
+        "width": 480,
+        "height": 472
+      },
+      "sha256": "d7bda1e07ec1735e7732bf925bcc4c915a405674715cd83143a8686034f47b5b",
+      "bytes": 116528,
+      "visual": {
+        "ok": true,
+        "lumaRange": 250.6,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [
+    {
+      "url": "https://pattvet.com/wp-content/uploads/2025/09/Patt-Veterinary-Hospital-front-entrance-01.webp",
+      "reason": "not a PNG"
+    },
+    {
+      "url": "https://pattvet.com/1920",
+      "reason": "unsupported reference type unknown"
+    },
+    {
+      "url": "https://pattvet.com/1080",
+      "reason": "unsupported reference type unknown"
+    },
+    {
+      "url": "https://pattvet.com/Exterior%20view%20of%20Patt%20Veterinary%20Hospital%20building%20with%20stone%20entryway,%20blue%20doors,%20and%20landscaped%20surroundings",
+      "reason": "unsupported reference type unknown"
+    }
+  ],
+  "brandColors": [
+    "#1b4b74",
+    "#fa8e0b",
+    "#003388",
+    "#2ea3f2",
+    "#0687ef"
+  ],
+  "checkedAt": "2026-09-16T09:20:37.710Z"
+}

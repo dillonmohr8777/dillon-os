@@ -1,0 +1,126 @@
+{
+  "sourceUrl": "https://yudizzamedspa.com/",
+  "finalUrl": "https://yudizzamedspa.com/",
+  "sourceDomain": "yudizzamedspa.com",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=UTF-8",
+  "pageSha256": "beb4e38fa5b443a95a353b959e72d54335c772e2f7e3af5866fcbebd30215dd6",
+  "title": "Yudizza Med Spa – Yudizza Med Spa",
+  "description": "",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "yudizza",
+      "spa"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\yudizza-spa\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://yudizzamedspa.com/wp-content/uploads/2023/07/logo-final-final.png",
+    "sourceEvidence": "IMG custom-logo",
+    "type": "png",
+    "dimensions": {
+      "width": 496,
+      "height": 162
+    },
+    "sha256": "f3cd1481cb5a81fe9a397f5a1257907830c2ad08c14a8c4f3395812ef3cb7213",
+    "sourceSha256": "f3cd1481cb5a81fe9a397f5a1257907830c2ad08c14a8c4f3395812ef3cb7213",
+    "sourceType": "png",
+    "sourceFileName": null,
+    "transformation": "none; exact first-party transparent asset",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "transparentRatio": 0.8379,
+      "edgeTransparentRatio": 0.655,
+      "contentRatio": 0.1621,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 22677
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\yudizza-spa\\reference-1.png",
+      "fileName": "reference-1.png",
+      "sourceUrl": "https://yudizzamedspa.com/wp-content/uploads/2023/06/banner.png",
+      "sourceEvidence": "CSS image URL",
+      "type": "png",
+      "dimensions": {
+        "width": 1440,
+        "height": 750
+      },
+      "sha256": "9169bd6106611113ba2d31a3435bbab0cf693cbddbccb63e1f6f1ce8d39303c3",
+      "bytes": 445823,
+      "visual": {
+        "ok": true,
+        "lumaRange": 248.3,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\yudizza-spa\\reference-2.png",
+      "fileName": "reference-2.png",
+      "sourceUrl": "https://yudizzamedspa.com/wp-content/uploads/2023/06/banner-piernas.png",
+      "sourceEvidence": "CSS image URL",
+      "type": "png",
+      "dimensions": {
+        "width": 3557,
+        "height": 2685
+      },
+      "sha256": "c25e9005aa25da7ed172eda8a9f7c280fccaa7491a92ec3581c1d9a34a41d590",
+      "bytes": 2823890,
+      "visual": {
+        "ok": true,
+        "lumaRange": 202.5,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\yudizza-spa\\reference-3.jpg",
+      "fileName": "reference-3.jpg",
+      "sourceUrl": "https://yudizzamedspa.com/wp-content/uploads/2023/06/78-768x1151.jpg",
+      "sourceEvidence": "IMG swiper-slide-image  78",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 1151,
+        "width": 768
+      },
+      "sha256": "925e62941d264ecd101ff4a14a659bd604e769b4a5e259730025b4dcaea7c44a",
+      "bytes": 44978,
+      "visual": {
+        "ok": true,
+        "lumaRange": 241.1,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [
+    {
+      "url": "https://yudizzamedspa.com/wp-content/uploads/2023/06/banner-1.png",
+      "reason": "duplicate identity/reference asset"
+    },
+    {
+      "url": "https://yudizzamedspa.com/wp-content/uploads/2023/06/Beige-Simple-Successful-Business-Tips-Carousel-Instagram-Post-2.png",
+      "reason": "reference image is too small"
+    },
+    {
+      "url": "https://yudizzamedspa.com/wp-content/uploads/2023/06/excel.png",
+      "reason": "reference image is too small"
+    },
+    {
+      "url": "https://yudizzamedspa.com/wp-content/uploads/2023/06/venus-vera.png",
+      "reason": "reference image is too small"
+    }
+  ],
+  "brandColors": [
+    "#a38a60",
+    "#003388",
+    "#003399",
+    "#bd995d",
+    "#dcb86a"
+  ],
+  "checkedAt": "2026-09-16T09:21:06.019Z"
+}

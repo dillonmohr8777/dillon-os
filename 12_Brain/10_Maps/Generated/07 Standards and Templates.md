@@ -4,7 +4,7 @@ status: active
 generated: true
 generated_by: Update-SecondBrainMaps
 map_type: domain
-updated: 2026-09-08
+updated: 2026-09-16
 tags:
   - brain
   - map
@@ -40,6 +40,7 @@ SOPs, reusable templates, and the rules that keep agent work consistent.
 - [[_templates/Keyword Research Brief|Keyword Research Brief]]
 - [[_templates/Offer|Offer]]
 - [[_templates/Outcome Scoreboard|Outcome Scoreboard]]
+- [[_templates/prospect-reference/DESIGN-CONTRACT|DESIGN-CONTRACT]]
 - [[_templates/Session|Session]]
 - [[_templates/site-factory/README|README]]
 - [[_templates/SOP|SOP]]

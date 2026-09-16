@@ -1,0 +1,168 @@
+{
+  "slug": "mcsurdy-orthodontics-the-smile-specialists",
+  "preparedAt": "2026-09-16T09:22:40.618Z",
+  "sourceSite": "https://drmcsurdy.com/",
+  "sourceFinalUrl": "https://drmcsurdy.com/",
+  "sourcePageSha256": "538ea64c3750653d77e5bcfc89518985c9ce3f64bfd9ce9b2b12752589adcdd8",
+  "exactLogoRequired": true,
+  "exactLogoSha256": "af65114025e277bf6ebeb07b4bb12a60fc921e20275a757ba235429fbf3d1dff",
+  "firstPartyDerivativePolicy": "Content visuals preserve first-party source photography while adapting crop and tonal balance for the private mobile concept. They are not evidence of additional projects or outcomes.",
+  "generatedCompositionReference": "automation/prospect-radar-next20/.impeccable/mocks/architerra-mobile-three-directions.png",
+  "assets": [
+    {
+      "role": "exact identity",
+      "output": "logo.svg",
+      "sourceUrl": "https://drmcsurdy.com/wp-content/uploads/2026/04/logo.svg",
+      "sourceSha256": "af65114025e277bf6ebeb07b4bb12a60fc921e20275a757ba235429fbf3d1dff",
+      "outputSha256": "af65114025e277bf6ebeb07b4bb12a60fc921e20275a757ba235429fbf3d1dff",
+      "transformation": "none; exact first-party transparent asset",
+      "transparent": true
+    },
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://drmcsurdy.com/wp-content/uploads/2026/07/closeup-of-smiling-person-with-retainers.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "abfa814e81045d208ee0014b12e278a730f94af32d85388fe2fa77a3c2dfd46d",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=1.015:contrast=1.064:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "2a629dc8ed4980bf6a0df44a9e95de8d1b221ecb210baca6f2f2c0f062406f34"
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://drmcsurdy.com/wp-content/uploads/2026/05/dr-david-mcsurdy-768x698.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "af2d3e41127925219141b24c8924edf161bde71f8acc114204b8694a5d791604",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:0,eq=saturation=1.040:contrast=1.028:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "5cc8acb5f2df4d67764de651a9f860c1fdbc833420133a2ae6452c791e1b6b15"
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://drmcsurdy.com/wp-content/uploads/2026/04/group-shot-of-medical-professionals-holding-hands-as-a-team-768x349.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "6abe87ad4ffdf72fd21ccee3f53f558da072712b7c8e0dc8604c9599e81c1060",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:0,eq=saturation=0.940:contrast=1.082:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "159256e62b4bcbf82630c40fde218f1ae918128316868294d408f1e06210e5af"
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://drmcsurdy.com/wp-content/uploads/2026/07/closeup-of-smiling-person-with-retainers.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "abfa814e81045d208ee0014b12e278a730f94af32d85388fe2fa77a3c2dfd46d",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:0,eq=saturation=0.965:contrast=1.046:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "ab9824627121f6fe282d0cee71119dde23d9b245ca6b230f7207cb5d47099a4f"
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://drmcsurdy.com/wp-content/uploads/2026/05/dr-david-mcsurdy-768x698.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "af2d3e41127925219141b24c8924edf161bde71f8acc114204b8694a5d791604",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:42,eq=saturation=0.990:contrast=1.010:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "5a9835e53336bc1cd1585d0eace59896462c44dfca570ee180f189854400d154"
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://drmcsurdy.com/wp-content/uploads/2026/04/group-shot-of-medical-professionals-holding-hands-as-a-team-768x349.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "6abe87ad4ffdf72fd21ccee3f53f558da072712b7c8e0dc8604c9599e81c1060",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:42,eq=saturation=1.015:contrast=1.064:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "90037aee58fec03d59505807c0a2261ca7b6d8cb4d262e208e19d5049ef24a73"
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://drmcsurdy.com/wp-content/uploads/2026/07/closeup-of-smiling-person-with-retainers.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "abfa814e81045d208ee0014b12e278a730f94af32d85388fe2fa77a3c2dfd46d",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:42,eq=saturation=1.040:contrast=1.028:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "1defdc7b6fda9dfbc5229a316e4758f232069ec6a41ff06b66438328ba987d03"
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://drmcsurdy.com/wp-content/uploads/2026/05/dr-david-mcsurdy-768x698.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "af2d3e41127925219141b24c8924edf161bde71f8acc114204b8694a5d791604",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:42,eq=saturation=0.940:contrast=1.082:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "1c7c2c67245f86c8d471952abd3a16c82ea7b9cfbd6aa97605c495b0cca7ce5c"
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://drmcsurdy.com/wp-content/uploads/2026/04/group-shot-of-medical-professionals-holding-hands-as-a-team-768x349.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "6abe87ad4ffdf72fd21ccee3f53f558da072712b7c8e0dc8604c9599e81c1060",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:84,eq=saturation=0.965:contrast=1.046:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "96706004cd637d5013d403b6ac634a8336596a6dc7ed3cbf5a08ffcd4a456a8c"
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://drmcsurdy.com/wp-content/uploads/2026/07/closeup-of-smiling-person-with-retainers.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "abfa814e81045d208ee0014b12e278a730f94af32d85388fe2fa77a3c2dfd46d",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:84,eq=saturation=0.990:contrast=1.010:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "998ca594254446730b59bf0e905934b4d00821bc47844fcc5aabadb1bf8e32a8"
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://drmcsurdy.com/wp-content/uploads/2026/05/dr-david-mcsurdy-768x698.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "af2d3e41127925219141b24c8924edf161bde71f8acc114204b8694a5d791604",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:84,eq=saturation=1.015:contrast=1.064:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "e894c17438452ddc4b9f78bbad9354ab921cf10f83121accb891782b264273ea"
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://drmcsurdy.com/wp-content/uploads/2026/04/group-shot-of-medical-professionals-holding-hands-as-a-team-768x349.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "6abe87ad4ffdf72fd21ccee3f53f558da072712b7c8e0dc8604c9599e81c1060",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:84,eq=saturation=1.040:contrast=1.028:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "5b2088d03b6d1ef94bdd469f5f2fee5210c41773137563203b35a55013f6efcb"
+    }
+  ],
+  "fonts": {
+    "pair": {
+      "id": "newsreader-figtree",
+      "display": "Newsreader",
+      "text": "Figtree"
+    },
+    "source": "Google Fonts CSS API",
+    "files": [
+      {
+        "file": "font-display-400.woff2",
+        "sha256": "62981321d9a3cc7a61a73792729043703fd6112da86e8ec848bb57f088578757"
+      },
+      {
+        "file": "font-display-700.woff2",
+        "sha256": "62981321d9a3cc7a61a73792729043703fd6112da86e8ec848bb57f088578757"
+      },
+      {
+        "file": "font-text-400.woff2",
+        "sha256": "4ba7d3d096695818fe0686be4f1e82c6b05134e18a22260336130335027462dd"
+      },
+      {
+        "file": "font-text-700.woff2",
+        "sha256": "4ba7d3d096695818fe0686be4f1e82c6b05134e18a22260336130335027462dd"
+      }
+    ]
+  }
+}

@@ -1,8 +1,8 @@
 {
     "schema":  1,
-    "cycle_id":  "CREW-20260915-134120001",
-    "started_at_utc":  "2026-09-15T17:41:20.0015214Z",
-    "finished_at_utc":  "2026-09-15T17:41:25.2597927Z",
+    "cycle_id":  "CREW-20260916-174120182",
+    "started_at_utc":  "2026-09-16T21:41:20.1824170Z",
+    "finished_at_utc":  "2026-09-16T21:41:25.6375102Z",
     "outcome":  "worked",
     "skip_reason":  null,
     "mail_ready":  "hold",
@@ -72,7 +72,7 @@
                                                         "automation_id":  "connector-health",
                                                         "status":  "blocked",
                                                         "window_hours":  48,
-                                                        "snapshot_age_hours":  453.66,
+                                                        "snapshot_age_hours":  481.66,
                                                         "generated_at":  "2026-08-27T20:02:00Z",
                                                         "counts":  {
                                                                        "connectors":  5,
@@ -85,7 +85,7 @@
                                                                                "status":  "active",
                                                                                "read_verified":  true,
                                                                                "observed_at_utc":  "2026-08-27T20:01:52.000Z",
-                                                                               "age_hours":  453.66,
+                                                                               "age_hours":  481.66,
                                                                                "usable":  false,
                                                                                "note":  "Live and usable. Two accounts: pass the account id explicitly, since account_selection is required."
                                                                            },
@@ -94,7 +94,7 @@
                                                                                "status":  "active",
                                                                                "read_verified":  false,
                                                                                "observed_at_utc":  "2026-08-27T12:06:00.000Z",
-                                                                               "age_hours":  461.59,
+                                                                               "age_hours":  489.59,
                                                                                "usable":  false,
                                                                                "note":  "Connection remains ACTIVE. LIST_ACCESSIBLE_CUSTOMERS returned 16 resource names (quota recovered; not 429). Child-account GAQL returned USER_PERMISSION_DENIED for login-customer-id. One listed customer returned CUSTOMER_NOT_ENABLED. Do not treat this as a re-auth problem. No pause/enable/budget. Replenish invite untouched."
                                                                            },
@@ -103,7 +103,7 @@
                                                                                "status":  "active",
                                                                                "read_verified":  false,
                                                                                "observed_at_utc":  "2026-08-18T19:25:22.000Z",
-                                                                               "age_hours":  670.27,
+                                                                               "age_hours":  698.27,
                                                                                "usable":  false,
                                                                                "note":  "Connection reported active by COMPOSIO_MANAGE_CONNECTIONS but no read was executed this session, so read_verified stays false. Verify before relying on it."
                                                                            },
@@ -112,7 +112,7 @@
                                                                                "status":  "not_connected",
                                                                                "read_verified":  false,
                                                                                "observed_at_utc":  "2026-08-18T19:25:22.000Z",
-                                                                               "age_hours":  670.27,
+                                                                               "age_hours":  698.27,
                                                                                "usable":  false,
                                                                                "note":  "Not in the connected-toolkit list. `instagram` is connected, which is not the same as Meta Ads. Routines needing Meta delivery data stay blocked."
                                                                            },
@@ -121,7 +121,7 @@
                                                                                "status":  "not_connected",
                                                                                "read_verified":  false,
                                                                                "observed_at_utc":  "2026-08-18T19:25:22.000Z",
-                                                                               "age_hours":  670.27,
+                                                                               "age_hours":  698.27,
                                                                                "usable":  false,
                                                                                "note":  "Not connected via Composio. The jason-fallon-hubspot-agent repo holds a portal-guarded path; treat that as the route, not this connector."
                                                                            }
@@ -276,7 +276,7 @@
                       "status":  "ok",
                       "summary":  "one ranked Immohrtal board; Codex remains canonical queue writer",
                       "evidence":  [
-                                       "Daily-Briefs/plan-2026-09-15.md"
+                                       "Daily-Briefs/plan-2026-09-16.md"
                                    ],
                       "detail":  {
                                      "board":  [

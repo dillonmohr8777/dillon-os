@@ -32,7 +32,13 @@ a ledger line with `status: failed` and `job: "__driver__"`, say so loudly, stop
   `cadence(<cadence>): <job id>`. Never `git push`.
 - Append one ledger line (below).
 
-**3. Report.** One short summary: counts by status, then every `failed` with its
+**3. Run the free tier.** Before reporting, run
+`node _os/automation/bin/run-roster.js`. It executes every roster agent that
+needs no model and no arguments, records each into `runs.jsonl` so the console
+shows live status, and writes its own dated report. Costs no quota. If it exits
+non zero, name the failed agents in your summary.
+
+**4. Report.** One short summary: counts by status, then every `failed` with its
 reason. If everything passed, one line. Do not narrate the runs that worked.
 
 ## The ledger

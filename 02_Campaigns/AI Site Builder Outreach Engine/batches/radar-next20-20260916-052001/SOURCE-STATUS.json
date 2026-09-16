@@ -1,0 +1,2916 @@
+{
+  "runId": "20260916-052001",
+  "generatedAt": "2026-09-16T09:22:06.531Z",
+  "selected": [
+    {
+      "rank": 1,
+      "domain": "meetinghousedental.com",
+      "slug": "meetinghouse-dental-care",
+      "sourceUrl": "https://meetinghousedental.com/",
+      "finalUrl": "https://www.meetinghousedental.com/",
+      "sourceDomain": "meetinghousedental.com",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "pageSha256": "db41c6313d2476686b8194e1c29faa8dee72b6e6324a719d1276946e4e9b33ce",
+      "title": "Hatboro Integrative Dentistry | Hatboro Whole-Body Dentistry | Meetinghouse Dental Care",
+      "description": "Meetinghouse Dental Care is the premier provider of integrative, biologic, and whole-body dentistry in a leading-edge, high technology facility in Hatboro, PA. Whole-food nutritional counseling.",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [
+          "meetinghouse",
+          "dental",
+          "care"
+        ],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/meetinghouse-dental-care/logo.png",
+        "fileName": "logo.png",
+        "sourceUrl": "https://styles.prosites.com/customs/2291/123834/images/logo.png",
+        "sourceEvidence": "IMG logo  logo",
+        "type": "png",
+        "dimensions": {
+          "width": 700,
+          "height": 374
+        },
+        "sha256": "8188605d66d5277c103d1dd089cf499127380859ba67c7f8a83d0354708a4944",
+        "sourceSha256": "8188605d66d5277c103d1dd089cf499127380859ba67c7f8a83d0354708a4944",
+        "sourceType": "png",
+        "sourceFileName": null,
+        "transformation": "none; exact first-party transparent asset",
+        "borderSpread": null,
+        "alpha": {
+          "ok": true,
+          "transparentRatio": 0.5814,
+          "edgeTransparentRatio": 1,
+          "contentRatio": 0.4186,
+          "reason": null
+        },
+        "transparent": true,
+        "bytes": 85045
+      },
+      "references": [
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/meetinghouse-dental-care/reference-1.jpg",
+          "fileName": "reference-1.jpg",
+          "sourceUrl": "https://styles.prosites.com/litesite/2291/images/panel1.jpg",
+          "sourceEvidence": "IMG ",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 533,
+            "width": 1200
+          },
+          "sha256": "70a5925dffadac52104b5e2b1ce99b764721ae188fa73714bd5c428c2a42e17e",
+          "bytes": 168344,
+          "visual": {
+            "ok": true,
+            "lumaRange": 253.3,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/meetinghouse-dental-care/reference-2.jpg",
+          "fileName": "reference-2.jpg",
+          "sourceUrl": "https://styles.prosites.com/litesite/2291/images/panel2.jpg",
+          "sourceEvidence": "IMG ",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 533,
+            "width": 1200
+          },
+          "sha256": "15183c36a6459385ee09b65a62f9694a2ae3391475a6c51d0f00f9cecfa30860",
+          "bytes": 182408,
+          "visual": {
+            "ok": true,
+            "lumaRange": 253.9,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/meetinghouse-dental-care/reference-3.jpg",
+          "fileName": "reference-3.jpg",
+          "sourceUrl": "https://styles.prosites.com/litesite/2291/images/panel3.jpg",
+          "sourceEvidence": "IMG ",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 533,
+            "width": 1200
+          },
+          "sha256": "2cf11f4b526572f4a2caba9e56206dd37a63fd91b6c9572b76b10e0d8d075219",
+          "bytes": 154548,
+          "visual": {
+            "ok": true,
+            "lumaRange": 254.4,
+            "reason": null
+          }
+        }
+      ],
+      "referenceFailures": [],
+      "brandColors": [
+        "#c49a47",
+        "#ffd700",
+        "#ffff00",
+        "#f79646"
+      ],
+      "checkedAt": "2026-09-16T09:20:24.138Z"
+    },
+    {
+      "rank": 2,
+      "domain": "marvinekanze.com",
+      "slug": "marvin-e-kanze-inc",
+      "sourceUrl": "https://www.marvinekanze.com/",
+      "finalUrl": "https://www.marvinekanze.com/",
+      "sourceDomain": "marvinekanze.com",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "pageSha256": "1ac8c06a35f29486ead9322e814082cb7bfab8e1d26cc03f55cbeea6d5efeeba",
+      "title": "Marvin E Kanze",
+      "description": "",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [
+          "marvin",
+          "kanze"
+        ],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/marvin-e-kanze-inc/logo.png",
+        "fileName": "logo.png",
+        "sourceUrl": "https://www.marvinekanze.com/wp-content/uploads/2024/04/MarvinEKanzelogo_white.png",
+        "sourceEvidence": "IMG marvin e kanze",
+        "type": "png",
+        "dimensions": {
+          "width": 473,
+          "height": 71
+        },
+        "sha256": "7cd69d084fda0a260c764438d820a7e6834149cc6cddcda7c9c32f6566960e11",
+        "sourceSha256": "7cd69d084fda0a260c764438d820a7e6834149cc6cddcda7c9c32f6566960e11",
+        "sourceType": "png",
+        "sourceFileName": null,
+        "transformation": "none; exact first-party transparent asset",
+        "borderSpread": null,
+        "alpha": {
+          "ok": true,
+          "transparentRatio": 0.7719,
+          "edgeTransparentRatio": 1,
+          "contentRatio": 0.2281,
+          "reason": null
+        },
+        "transparent": true,
+        "bytes": 5827
+      },
+      "references": [
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/marvin-e-kanze-inc/reference-1.jpg",
+          "fileName": "reference-1.jpg",
+          "sourceUrl": "https://www.marvinekanze.com/wp-content/uploads/2025/03/credit_2.jpg",
+          "sourceEvidence": "IMG size-medium wp-image-3333 aligncenter",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 612,
+            "width": 612
+          },
+          "sha256": "55e20047ba0c2ea1e377578aee4655d4decda0a57d800b80e999102259f35836",
+          "bytes": 28125,
+          "visual": {
+            "ok": true,
+            "lumaRange": 248.8,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/marvin-e-kanze-inc/reference-2.jpg",
+          "fileName": "reference-2.jpg",
+          "sourceUrl": "https://www.marvinekanze.com/wp-content/uploads/2025/03/credit_1.jpg",
+          "sourceEvidence": "IMG alignnone size-medium wp-image-3332 aligncenter",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 612,
+            "width": 612
+          },
+          "sha256": "7ae32c0e12b4cc8e0db38a4e892ae1674a5e6aaf3979f6a0223d68a5b3ac9e15",
+          "bytes": 17359,
+          "visual": {
+            "ok": true,
+            "lumaRange": 188.9,
+            "reason": null
+          }
+        }
+      ],
+      "referenceFailures": [
+        {
+          "url": "https://www.marvinekanze.com/wp-content/uploads/2024/04/cal.png",
+          "reason": "reference image is too small"
+        },
+        {
+          "url": "https://www.marvinekanze.com/wp-content/uploads/2025/04/phone-2.png",
+          "reason": "reference image is too small"
+        },
+        {
+          "url": "https://www.marvinekanze.com/wp-content/uploads/2025/07/play1-300x173.jpg",
+          "reason": "reference image is too small"
+        },
+        {
+          "url": "https://www.marvinekanze.com/wp-content/uploads/2025/07/video2-300x173.jpg",
+          "reason": "reference image is too small"
+        }
+      ],
+      "brandColors": [
+        "#9ba8c0",
+        "#003388",
+        "#abb8c3",
+        "#f78da7",
+        "#cf2e2e"
+      ],
+      "checkedAt": "2026-09-16T09:20:28.088Z"
+    },
+    {
+      "rank": 3,
+      "domain": "wagnerrealestate.com",
+      "slug": "wagner-group-compass",
+      "sourceUrl": "https://wagnerrealestate.com/",
+      "finalUrl": "https://wagnerrealestate.com/",
+      "sourceDomain": "wagnerrealestate.com",
+      "httpStatus": 200,
+      "contentType": "text/html",
+      "pageSha256": "2deeaf7491b66a9c7d8b515887419bbb39faa55f26748a6eed65dea38b4082e4",
+      "title": "Southeastern Pennsylvania Real Estate | Explore Homes",
+      "description": "Southeastern Pennsylvania real estate with local experts in Havertown, Hershey’s Mill, Main Line, and West Chester. Explore homes today.",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [
+          "wagner",
+          "compass"
+        ],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/wagner-group-compass/logo.png",
+        "fileName": "logo.png",
+        "sourceUrl": "https://media-production.lp-cdn.com/cdn-cgi/image/format=auto,quality=85/https://media-production.lp-cdn.com/media/b1stagd1r9zdhinnzyb3",
+        "sourceEvidence": "IMG logo__img dark",
+        "type": "png",
+        "dimensions": {
+          "width": 545,
+          "height": 311
+        },
+        "sha256": "7b1a85c903549a338abb2a686d7136a3cd4863e89672f38776ddff6bf99d0d23",
+        "sourceSha256": "77e7a051c750d70c3f961af5ed151d00ad7e0527044cad75052cdbefadffd425",
+        "sourceType": "png",
+        "sourceFileName": "logo-source.png",
+        "transformation": "flat border color rgb(71,112,76) removed by border-seeded flood fill at tolerance 32; geometry unchanged",
+        "borderSpread": 0,
+        "alpha": {
+          "ok": true,
+          "transparentRatio": 0.7405,
+          "edgeTransparentRatio": 0.6688,
+          "contentRatio": 0.2595,
+          "reason": null
+        },
+        "transparent": true,
+        "bytes": 13529
+      },
+      "references": [
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/wagner-group-compass/reference-1.jpg",
+          "fileName": "reference-1.jpg",
+          "sourceUrl": "http://bright-media01.prd.brightmls.com/bright/images/0000/8048/6914/5228/804869145228_1024_768_WM_0TsEz5d_Be6cDwFH.jpg",
+          "sourceEvidence": "IMG listing-card__image",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 682,
+            "width": 1024
+          },
+          "sha256": "1b47fa16e33ce8bc32865ed8d76ac795c1d5dd257e562240acfee2925a6905de",
+          "bytes": 124793,
+          "visual": {
+            "ok": true,
+            "lumaRange": 247.8,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/wagner-group-compass/reference-2.jpg",
+          "fileName": "reference-2.jpg",
+          "sourceUrl": "http://bright-media02.prd.brightmls.com/bright/images/0000/8053/5840/4886/805358404886_1024_768_WM_pvOel_-2GTaEMTXM.jpg",
+          "sourceEvidence": "IMG listing-card__image",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 767,
+            "width": 1024
+          },
+          "sha256": "e87b1b913bc1d1f18733f45536f757a657ea1eb90ce4a9267aea219787e91ce2",
+          "bytes": 161621,
+          "visual": {
+            "ok": true,
+            "lumaRange": 239.9,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/wagner-group-compass/reference-3.jpg",
+          "fileName": "reference-3.jpg",
+          "sourceUrl": "http://bright-media01.prd.brightmls.com/bright/images/0000/8053/2396/3142/805323963142_1024_768_WM_N5AQ6wOy1yYAZEIT.jpg",
+          "sourceEvidence": "IMG listing-card__image",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 768,
+            "width": 1024
+          },
+          "sha256": "9d772642dafb84ac010a9518e872578efd9189ac7dc65641704413968536a522",
+          "bytes": 147163,
+          "visual": {
+            "ok": true,
+            "lumaRange": 248.1,
+            "reason": null
+          }
+        }
+      ],
+      "referenceFailures": [
+        {
+          "url": "https://res.cloudinary.com/luxuryp/images/w_1920,c_limit,f_auto,q_auto/k6nkh56njymtyfxrlyel/screen-shot-2021-12-05-at-62035-pm",
+          "reason": "not a PNG"
+        },
+        {
+          "url": "https://wagnerrealestate.com/q_auto/qh2qwoqiqysl55zasrbk/wagner-real-estate-05-20-2021-tonjanika-smith-91",
+          "reason": "HTTP 404"
+        },
+        {
+          "url": "https://res.cloudinary.com/luxuryp/images/f_auto,q_auto/eclkljp19qbdwe6qtnpr/h0x1xdqo",
+          "reason": "not a PNG"
+        },
+        {
+          "url": "https://res.cloudinary.com/luxuryp/images/w_1920,c_limit,f_auto,q_auto/vb7fs4gncpfsi7zmkffl/wagner-real-estate-05-20-2021-tonjanika-smith-91-1",
+          "reason": "not a PNG"
+        }
+      ],
+      "brandColors": [
+        "#116600",
+        "#002349"
+      ],
+      "checkedAt": "2026-09-16T09:20:33.510Z"
+    },
+    {
+      "rank": 4,
+      "domain": "newhipot.com",
+      "slug": "hi-pot",
+      "sourceUrl": "https://www.newhipot.com/",
+      "finalUrl": "https://www.newhipot.com/",
+      "sourceDomain": "newhipot.com",
+      "httpStatus": 200,
+      "contentType": "text/html",
+      "pageSha256": "bf2fced4083411ff43f573a9e5ad82f2d7c957ee6c4249f20890b1519297abc9",
+      "title": "Home | Hi Pot - Hot Pot & Asian BBQ Restaurant丨Online Order丨Pottstown | PA",
+      "description": "",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [
+          "pot"
+        ],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/hi-pot/logo.png",
+        "fileName": "logo.png",
+        "sourceUrl": "https://website-cdn.menusifu.com/wp-content/uploads/newhipot.com/2024/03/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240327095657.png",
+        "sourceEvidence": "IMG hi pot logo",
+        "type": "png",
+        "dimensions": {
+          "width": 2039,
+          "height": 608
+        },
+        "sha256": "87750d1714bb1c9b547232b6b7832fcd3029985066511a529eca3a9bd512fe6f",
+        "sourceSha256": "87750d1714bb1c9b547232b6b7832fcd3029985066511a529eca3a9bd512fe6f",
+        "sourceType": "png",
+        "sourceFileName": null,
+        "transformation": "none; exact first-party transparent asset",
+        "borderSpread": null,
+        "alpha": {
+          "ok": true,
+          "transparentRatio": 0.745,
+          "edgeTransparentRatio": 1,
+          "contentRatio": 0.255,
+          "reason": null
+        },
+        "transparent": true,
+        "bytes": 254921
+      },
+      "references": [
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/hi-pot/reference-1.jpg",
+          "fileName": "reference-1.jpg",
+          "sourceUrl": "https://website-cdn.menusifu.com/wp-content/uploads/newhipot.com/2026/08/Assorted-Meat-Platters-for-BBQ-480x320.jpg",
+          "sourceEvidence": "IMG dsm-skip-lazyload  assorted meat platters for bbq at hi pot, hot pot & asian bbq restaurant in pottstown assorted meat platters for bbq at hi pot, hot pot & asian bbq restaurant in pottstown",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 320,
+            "width": 480
+          },
+          "sha256": "795194c6ecf0a432c6245d94b50d0a66fdef4eafb22fb135326e373b3b8bd685",
+          "bytes": 55064,
+          "visual": {
+            "ok": true,
+            "lumaRange": 254.4,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/hi-pot/reference-2.jpg",
+          "fileName": "reference-2.jpg",
+          "sourceUrl": "https://website-cdn.menusifu.com/wp-content/uploads/newhipot.com/2026/08/BBQ-Grill-with-Mussels-Dumplings-Vegetables-480x320.jpg",
+          "sourceEvidence": "IMG dsm-skip-lazyload  bbq grill with mussels, dumplings & vegetables at hi pot, hot pot & asian bbq restaurant in pottstown bbq grill with mussels, dumplings & vegetables at hi pot, hot pot & asian bbq restaurant in pottstown",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 320,
+            "width": 480
+          },
+          "sha256": "777c8ec535d7c57ae7f56a5f79fce9c0541bea67c8fe0b16bb965262d819ca2e",
+          "bytes": 38785,
+          "visual": {
+            "ok": true,
+            "lumaRange": 255,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/hi-pot/reference-3.jpg",
+          "fileName": "reference-3.jpg",
+          "sourceUrl": "https://website-cdn.menusifu.com/wp-content/uploads/newhipot.com/2026/08/Grilled-Short-Ribs-LA-Galbi-with-Soju-480x320.jpg",
+          "sourceEvidence": "IMG dsm-skip-lazyload  grilled short ribs (la galbi) with soju at hi pot, hot pot & asian bbq restaurant in pottstown grilled short ribs (la galbi) with soju at hi pot, hot pot & asian bbq restaurant in pottstown",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 320,
+            "width": 480
+          },
+          "sha256": "c77f7a5603a3f9c1ecd9ec5b0103711cfc282c921e8607a002e115b95eb97d43",
+          "bytes": 45418,
+          "visual": {
+            "ok": true,
+            "lumaRange": 255,
+            "reason": null
+          }
+        }
+      ],
+      "referenceFailures": [],
+      "brandColors": [
+        "#003388",
+        "#2ea3f2",
+        "#fe0100",
+        "#ffb600",
+        "#e02b20"
+      ],
+      "checkedAt": "2026-09-16T09:20:30.207Z"
+    },
+    {
+      "rank": 5,
+      "domain": "forte-salon.com",
+      "slug": "forte-salon",
+      "sourceUrl": "https://forte-salon.com/",
+      "finalUrl": "https://forte-salon.com/",
+      "sourceDomain": "forte-salon.com",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "pageSha256": "3b9d8637a0119e65a69a1b23275446710c81c496c6895a0b4fa292fdfd1fcf5f",
+      "title": "Home | Forte Salon | Bethlehem, PA",
+      "description": "Forte Salon is located in West Bethlehem, just a short distance from historic downtown. We invite you to experience a warm and inviting salon atmosphere.",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [
+          "forte",
+          "salon"
+        ],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/forte-salon/logo.png",
+        "fileName": "logo.png",
+        "sourceUrl": "https://forte-salon.com/wp-content/uploads/2018/01/forte-logo-mobile-x2.png",
+        "sourceEvidence": "JSON-LD logo URL",
+        "type": "png",
+        "dimensions": {
+          "width": 200,
+          "height": 138
+        },
+        "sha256": "ad5c445fa2b80bd0e58752fe11cffdeff80fa0210f42f9d82f728207c6b2398c",
+        "sourceSha256": "ad5c445fa2b80bd0e58752fe11cffdeff80fa0210f42f9d82f728207c6b2398c",
+        "sourceType": "png",
+        "sourceFileName": null,
+        "transformation": "none; exact first-party transparent asset",
+        "borderSpread": null,
+        "alpha": {
+          "ok": true,
+          "transparentRatio": 0.8275,
+          "edgeTransparentRatio": 1,
+          "contentRatio": 0.1725,
+          "reason": null
+        },
+        "transparent": true,
+        "bytes": 12377
+      },
+      "references": [
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/forte-salon/reference-1.png",
+          "fileName": "reference-1.png",
+          "sourceUrl": "https://forte-salon.com/wp-content/uploads/2018/06/hp-video.png",
+          "sourceEvidence": "og:image",
+          "type": "png",
+          "dimensions": {
+            "width": 800,
+            "height": 450
+          },
+          "sha256": "faecf274002b27b10d57fad1cfedf84b41809505253a3b78a4d8022edd3f1d40",
+          "bytes": 222333,
+          "visual": {
+            "ok": true,
+            "lumaRange": 226.1,
+            "reason": null
+          }
+        }
+      ],
+      "referenceFailures": [
+        {
+          "url": "https://forte-salon.com/wp-content/uploads/2017/08/homepage-hero1280x862.jpg",
+          "reason": "progressive JPEG is not decodable here"
+        },
+        {
+          "url": "https://forte-salon.com/wp-content/uploads/2017/08/trans-bg.png",
+          "reason": "reference image is too small"
+        },
+        {
+          "url": "https://forte-salon.com/wp-content/uploads/2018/06/hp-feel-our-energy-graphic.png",
+          "reason": "reference image is too small"
+        },
+        {
+          "url": "https://forte-salon.com/wp-content/uploads/2018/04/product-colorproof-bio-repair.jpg",
+          "reason": "progressive JPEG is not decodable here"
+        }
+      ],
+      "brandColors": [
+        "#d8568c",
+        "#c6356a",
+        "#e5aec1",
+        "#a0808e",
+        "#abb8c3"
+      ],
+      "checkedAt": "2026-09-16T09:20:49.702Z"
+    },
+    {
+      "rank": 6,
+      "domain": "queerbooks.com",
+      "slug": "philly-aids-thrift-giovanni-s-room",
+      "sourceUrl": "https://www.queerbooks.com/",
+      "finalUrl": "https://queerbooks.com/",
+      "sourceDomain": "queerbooks.com",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "pageSha256": "1fbd536a81f450a91093e85677d100fe3c07e69a1a4f2780dbc5590b8d0d5af1",
+      "title": "Giovanni’s Room | Historic LGBTQ+ Bookstore Philadelphia",
+      "description": "\"Philly",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [
+          "philly",
+          "aids",
+          "thrift",
+          "giovanni",
+          "room"
+        ],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/philly-aids-thrift-giovanni-s-room/logo.png",
+        "fileName": "logo.png",
+        "sourceUrl": "https://queerbooks.com/wp-content/uploads/2017/09/PATG-logo.png",
+        "sourceEvidence": "JSON-LD logo URL",
+        "type": "png",
+        "dimensions": {
+          "width": 350,
+          "height": 350
+        },
+        "sha256": "a2d92fe786d5c74d4107c58d65a228bd96b6a17a5386cd8184178a731c3b3572",
+        "sourceSha256": "a2d92fe786d5c74d4107c58d65a228bd96b6a17a5386cd8184178a731c3b3572",
+        "sourceType": "png",
+        "sourceFileName": null,
+        "transformation": "none; exact first-party transparent asset",
+        "borderSpread": null,
+        "alpha": {
+          "ok": true,
+          "transparentRatio": 0.2201,
+          "edgeTransparentRatio": 0.9721,
+          "contentRatio": 0.7799,
+          "reason": null
+        },
+        "transparent": true,
+        "bytes": 88280
+      },
+      "references": [
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/philly-aids-thrift-giovanni-s-room/reference-1.png",
+          "fileName": "reference-1.png",
+          "sourceUrl": "https://queerbooks.com/wp-content/uploads/2025/12/Hero-Image-New-Gios-Room-1.png",
+          "sourceEvidence": "IMG img-responsive wp-image-103944   hero image new – gio’s room",
+          "type": "png",
+          "dimensions": {
+            "width": 702,
+            "height": 648
+          },
+          "sha256": "4273cc615420eb677ace909d151e10ea92846a09d24e09d05c07f663446085c1",
+          "bytes": 469586,
+          "visual": {
+            "ok": true,
+            "lumaRange": 255,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/philly-aids-thrift-giovanni-s-room/reference-2.png",
+          "fileName": "reference-2.png",
+          "sourceUrl": "https://queerbooks.com/wp-content/uploads/2026/07/Next-months-mystery-book-e1783708580566.png",
+          "sourceEvidence": "IMG img-responsive wp-image-125509",
+          "type": "png",
+          "dimensions": {
+            "width": 748,
+            "height": 1066
+          },
+          "sha256": "236b24c98d2abec62a968ff3fd3677e6d78e516f3fbe219e232411768afc5921",
+          "bytes": 800602,
+          "visual": {
+            "ok": true,
+            "lumaRange": 253.4,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/philly-aids-thrift-giovanni-s-room/reference-3.png",
+          "fileName": "reference-3.png",
+          "sourceUrl": "https://queerbooks.com/wp-content/uploads/2025/10/James-Baldwin-scaled.png",
+          "sourceEvidence": "IMG img-responsive wp-image-103554   james baldwin",
+          "type": "png",
+          "dimensions": {
+            "width": 2560,
+            "height": 1099
+          },
+          "sha256": "b6f7d354cf45fc9861b15d33c9d219ea226c0e20d6e2cd78624f0ca86a69d2ff",
+          "bytes": 126008,
+          "visual": {
+            "ok": true,
+            "lumaRange": 254,
+            "reason": null
+          }
+        }
+      ],
+      "referenceFailures": [
+        {
+          "url": "https://queerbooks.com/wp-content/uploads/2026/02/Giovannis-Room-Short-Sleeve-T-Shirt-scaled.jpg",
+          "reason": "progressive JPEG is not decodable here"
+        },
+        {
+          "url": "https://queerbooks.com/wp-content/uploads/2026/02/PhillyAidsThrift-T-Shirt-scaled.webp",
+          "reason": "not a PNG"
+        },
+        {
+          "url": "https://queerbooks.com/wp-content/uploads/2026/02/Philly-LOVE-T-Shirt-scaled.webp",
+          "reason": "not a PNG"
+        },
+        {
+          "url": "https://queerbooks.com/wp-content/uploads/2026/05/Giovannis-Room.jpg",
+          "reason": "reference image is too small"
+        }
+      ],
+      "brandColors": [
+        "#003399",
+        "#003388",
+        "#415aff",
+        "#008080",
+        "#6ae06a"
+      ],
+      "checkedAt": "2026-09-16T09:21:05.378Z"
+    },
+    {
+      "rank": 7,
+      "domain": "devonvet.com",
+      "slug": "devon-veterinary-hospital",
+      "sourceUrl": "https://www.devonvet.com/",
+      "finalUrl": "https://www.devonvet.com/",
+      "sourceDomain": "devonvet.com",
+      "httpStatus": 200,
+      "contentType": "text/html",
+      "pageSha256": "cced9a02df43e85623dd309c21b7ca99abd983a35d6aaa164de79662ea70f535",
+      "title": "Veterinarian in Devon, PA | Devon Veterinary Hospital – Your Trusted Veterinary Clinic for Pet Wellness, Surgery, Emergency Care & More. Book an Appointment Today!",
+      "description": "Devon Veterinary Hospital provides comprehensive pet care in Devon, PA. Call us today to schedule your pet's appointment with our veterinarians.",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [
+          "devon",
+          "veterinary",
+          "hospital"
+        ],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/devon-veterinary-hospital/logo.png",
+        "fileName": "logo.png",
+        "sourceUrl": "https://www.devonvet.com/_files/images/logo.png",
+        "sourceEvidence": "IMG devon veterinary hospital & main line veterinary specialists logo",
+        "type": "png",
+        "dimensions": {
+          "width": 217,
+          "height": 75
+        },
+        "sha256": "b9a2e5201149b8d946dca2dc9924fb5647195f93b5325aa38f748364fe3e2eab",
+        "sourceSha256": "b9a2e5201149b8d946dca2dc9924fb5647195f93b5325aa38f748364fe3e2eab",
+        "sourceType": "png",
+        "sourceFileName": null,
+        "transformation": "none; exact first-party transparent asset",
+        "borderSpread": null,
+        "alpha": {
+          "ok": true,
+          "transparentRatio": 0.6375,
+          "edgeTransparentRatio": 0.7397,
+          "contentRatio": 0.3625,
+          "reason": null
+        },
+        "transparent": true,
+        "bytes": 24791
+      },
+      "references": [
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/devon-veterinary-hospital/reference-1.jpg",
+          "fileName": "reference-1.jpg",
+          "sourceUrl": "https://www.devonvet.com/_files/images/card-grid-left.jpg",
+          "sourceEvidence": "IMG card__background",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 800,
+            "width": 650
+          },
+          "sha256": "b17620bc998ff97a78762a16e78cff5c97c6f896bd788164bb4b97599ef8d311",
+          "bytes": 73684,
+          "visual": {
+            "ok": true,
+            "lumaRange": 254.6,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/devon-veterinary-hospital/reference-2.jpg",
+          "fileName": "reference-2.jpg",
+          "sourceUrl": "https://www.devonvet.com/_files/images/cta-section.jpg",
+          "sourceEvidence": "IMG section__background",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 680,
+            "width": 1920
+          },
+          "sha256": "648c9a58f243fd8ca0a23b59a7a95cd0bef0c8d9bdaf0fe58823ecc639a0be2d",
+          "bytes": 272129,
+          "visual": {
+            "ok": true,
+            "lumaRange": 238,
+            "reason": null
+          }
+        }
+      ],
+      "referenceFailures": [
+        {
+          "url": "https://www.devonvet.com/_files/images/homepage.jpg",
+          "reason": "progressive JPEG is not decodable here"
+        },
+        {
+          "url": "https://www.devonvet.com/_files/images/card-grid-right1.jpg",
+          "reason": "reference image is too small"
+        },
+        {
+          "url": "https://www.devonvet.com/_files/images/card-grid-right2.jpg",
+          "reason": "reference image is too small"
+        },
+        {
+          "url": "https://www.devonvet.com/_files/images/card-grid-right3.jpg",
+          "reason": "reference image is too small"
+        }
+      ],
+      "brandColors": [
+        "#116600"
+      ],
+      "checkedAt": "2026-09-16T09:20:27.805Z"
+    },
+    {
+      "rank": 8,
+      "domain": "drmcsurdy.com",
+      "slug": "mcsurdy-orthodontics-the-smile-specialists",
+      "sourceUrl": "https://drmcsurdy.com/",
+      "finalUrl": "https://drmcsurdy.com/",
+      "sourceDomain": "drmcsurdy.com",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "pageSha256": "538ea64c3750653d77e5bcfc89518985c9ce3f64bfd9ce9b2b12752589adcdd8",
+      "title": "Orthodontist in Montgomery County | The Smile Specialists",
+      "description": "The Smile Specialists at Dr. McSurdy Orthodontics provide advanced orthodontic care for all ages. 40+ years of personalized treatment. Complementary Smile Analysis.",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [
+          "mcsurdy",
+          "orthodontics",
+          "smile",
+          "specialists"
+        ],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/mcsurdy-orthodontics-the-smile-specialists/logo.svg",
+        "fileName": "logo.svg",
+        "sourceUrl": "https://drmcsurdy.com/wp-content/uploads/2026/04/logo.svg",
+        "sourceEvidence": "JSON-LD logo URL",
+        "type": "svg",
+        "dimensions": {
+          "width": 274,
+          "height": 62
+        },
+        "sha256": "af65114025e277bf6ebeb07b4bb12a60fc921e20275a757ba235429fbf3d1dff",
+        "sourceSha256": "af65114025e277bf6ebeb07b4bb12a60fc921e20275a757ba235429fbf3d1dff",
+        "sourceType": "svg",
+        "sourceFileName": null,
+        "transformation": "none; exact first-party transparent asset",
+        "borderSpread": null,
+        "alpha": {
+          "ok": true,
+          "vector": true
+        },
+        "transparent": true,
+        "bytes": 18738
+      },
+      "references": [
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/mcsurdy-orthodontics-the-smile-specialists/reference-1.png",
+          "fileName": "reference-1.png",
+          "sourceUrl": "https://drmcsurdy.com/wp-content/uploads/2026/07/closeup-of-smiling-person-with-retainers.png",
+          "sourceEvidence": "IMG closeup of smiling person with retainers",
+          "type": "png",
+          "dimensions": {
+            "width": 1072,
+            "height": 1068
+          },
+          "sha256": "abfa814e81045d208ee0014b12e278a730f94af32d85388fe2fa77a3c2dfd46d",
+          "bytes": 772432,
+          "visual": {
+            "ok": true,
+            "lumaRange": 239.8,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/mcsurdy-orthodontics-the-smile-specialists/reference-2.jpg",
+          "fileName": "reference-2.jpg",
+          "sourceUrl": "https://drmcsurdy.com/wp-content/uploads/2026/05/dr-david-mcsurdy-768x698.jpg",
+          "sourceEvidence": "IMG bg-image d-none d-lg-block object-fit-cover object-position-center-center  dr david mcsurdy",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 698,
+            "width": 768
+          },
+          "sha256": "af2d3e41127925219141b24c8924edf161bde71f8acc114204b8694a5d791604",
+          "bytes": 110953,
+          "visual": {
+            "ok": true,
+            "lumaRange": 244,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/mcsurdy-orthodontics-the-smile-specialists/reference-3.jpg",
+          "fileName": "reference-3.jpg",
+          "sourceUrl": "https://drmcsurdy.com/wp-content/uploads/2026/04/group-shot-of-medical-professionals-holding-hands-as-a-team-768x349.jpg",
+          "sourceEvidence": "IMG bg-image d-none d-lg-block object-fit-cover object-position-center-center  group shot of medical professionals holding hands as a team",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 349,
+            "width": 768
+          },
+          "sha256": "6abe87ad4ffdf72fd21ccee3f53f558da072712b7c8e0dc8604c9599e81c1060",
+          "bytes": 20873,
+          "visual": {
+            "ok": true,
+            "lumaRange": 36.6,
+            "reason": null
+          }
+        }
+      ],
+      "referenceFailures": [
+        {
+          "url": "https://www.facebook.com/tr?id=1159921164116390&ev=PageView&noscript=1",
+          "reason": "unsupported reference type unknown"
+        },
+        {
+          "url": "https://drmcsurdy.com/wp-content/uploads/2026/07/dr-mcsurdy-dr-boyle-and-team-1-1536x1024.jpg",
+          "reason": "progressive JPEG is not decodable here"
+        },
+        {
+          "url": "https://drmcsurdy.com/wp-content/uploads/2026/07/dr-mcsurdy-dr-boyle-and-team-1.jpg",
+          "reason": "progressive JPEG is not decodable here"
+        },
+        {
+          "url": "https://drmcsurdy.com/wp-content/uploads/2026/07/dr-boyle-with-patients-1.jpg",
+          "reason": "progressive JPEG is not decodable here"
+        }
+      ],
+      "brandColors": [
+        "#f28b22",
+        "#003388",
+        "#112681",
+        "#00d084",
+        "#0693e3"
+      ],
+      "checkedAt": "2026-09-16T09:20:28.502Z"
+    },
+    {
+      "rank": 9,
+      "domain": "pennanimal.com",
+      "slug": "penn-animal-hospital",
+      "sourceUrl": "https://www.pennanimal.com/",
+      "finalUrl": "https://www.pennanimal.com/",
+      "sourceDomain": "pennanimal.com",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "pageSha256": "24e63b7096ecd0b039173adbc3f9632613f92d477338331f5e4abdbfdb6d0efb",
+      "title": "Veterinarian in West Grove, PA | Penn Animal Hospital",
+      "description": "At Penn Animal Hospital, we provide compassionate veterinary care, from wellness exams to urgent care. Schedule your pet’s visit with our trusted team.",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [
+          "penn",
+          "animal",
+          "hospital"
+        ],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/penn-animal-hospital/logo.png",
+        "fileName": "logo.png",
+        "sourceUrl": "http://styles.prosites.com/litesite/6526/images/logo.png",
+        "sourceEvidence": "JSON-LD logo",
+        "type": "png",
+        "dimensions": {
+          "width": 808,
+          "height": 215
+        },
+        "sha256": "d6bf56e7a854311a4e6d0634c9f5446f3b1c16236526e6696bc35c6b537ec724",
+        "sourceSha256": "d6bf56e7a854311a4e6d0634c9f5446f3b1c16236526e6696bc35c6b537ec724",
+        "sourceType": "png",
+        "sourceFileName": null,
+        "transformation": "none; exact first-party transparent asset",
+        "borderSpread": null,
+        "alpha": {
+          "ok": true,
+          "transparentRatio": 0.7833,
+          "edgeTransparentRatio": 1,
+          "contentRatio": 0.2167,
+          "reason": null
+        },
+        "transparent": true,
+        "bytes": 79991
+      },
+      "references": [
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/penn-animal-hospital/reference-1.jpg",
+          "fileName": "reference-1.jpg",
+          "sourceUrl": "https://c3-preview.prosites.com/301387/wy/images/content/home-2.jpg",
+          "sourceEvidence": "IMG main-img mb-75px mb-lg-0  an image of a blind cat, sitting on  our front desk, looting at the camera.",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 726,
+            "width": 610
+          },
+          "sha256": "387b9787106c33c3764a44e43ab4da2d5aaf61b81b88a3dcbdffcdfe4fdf25c7",
+          "bytes": 290417,
+          "visual": {
+            "ok": true,
+            "lumaRange": 249.2,
+            "reason": null
+          }
+        }
+      ],
+      "referenceFailures": [
+        {
+          "url": "https://styles.prosites.com/litesite/6526/images/cta1Img.png",
+          "reason": "reference image is too small"
+        },
+        {
+          "url": "https://styles.prosites.com/litesite/6526/images/cta2Img.png",
+          "reason": "reference image is too small"
+        },
+        {
+          "url": "https://styles.prosites.com/litesite/6526/images/cta3Img.png",
+          "reason": "reference image is too small"
+        },
+        {
+          "url": "https://styles.prosites.com/litesite/6526/images/mainImg2.jpg",
+          "reason": "progressive JPEG is not decodable here"
+        }
+      ],
+      "brandColors": [
+        "#3b579d",
+        "#dc4a38",
+        "#b02616",
+        "#31859b"
+      ],
+      "checkedAt": "2026-09-16T09:20:28.090Z"
+    },
+    {
+      "rank": 10,
+      "domain": "pattvet.com",
+      "slug": "patt-veterinary-hospital",
+      "sourceUrl": "https://www.pattvet.com/",
+      "finalUrl": "https://pattvet.com/",
+      "sourceDomain": "pattvet.com",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "pageSha256": "c7dba00740f52432a66c7ef282feab1568a354daf75e97a704f6ed32ce32daf8",
+      "title": "Patt Veterinary Hospital | Best Veterinary Hospital In Gilbertsville, PA",
+      "description": "Welcome to Patt Veterinary Hospital, your trusted vet clinic in Gilbertsville, PA. Compassionate, comprehensive care for dogs and cats of all ages.",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [
+          "patt",
+          "veterinary",
+          "hospital"
+        ],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/patt-veterinary-hospital/logo.png",
+        "fileName": "logo.png",
+        "sourceUrl": "https://pattvet.com/wp-content/uploads/2025/10/Patt-Veterinary-Hospital-Logo-White.png",
+        "sourceEvidence": "JSON-LD logo URL",
+        "type": "png",
+        "dimensions": {
+          "width": 2000,
+          "height": 451
+        },
+        "sha256": "644e44309b7d8eb1f78735a7918b903869fb313173e21cc7d8a268b77b3e744e",
+        "sourceSha256": "8941508411c5f32da78723918299743227b9b655b21d29ed38ed2c4d48bf8275",
+        "sourceType": "png",
+        "sourceFileName": "logo-source.png",
+        "transformation": "flat border color rgb(0,0,0) removed by border-seeded flood fill at tolerance 32; geometry unchanged",
+        "borderSpread": 0,
+        "alpha": {
+          "ok": true,
+          "transparentRatio": 0.8678,
+          "edgeTransparentRatio": 1,
+          "contentRatio": 0.1322,
+          "reason": null
+        },
+        "transparent": true,
+        "bytes": 70698
+      },
+      "references": [
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/patt-veterinary-hospital/reference-1.jpg",
+          "fileName": "reference-1.jpg",
+          "sourceUrl": "https://pattvet.com/wp-content/uploads/2025/11/cat-with-toy-480x480.jpg",
+          "sourceEvidence": "IMG wp-image-261380  cat playing with toy cat-with-toy",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 480,
+            "width": 480
+          },
+          "sha256": "6cef8b66f5aa382d8c4b9a69803b7a31048984a6cd4031fb846d569295181c7d",
+          "bytes": 34324,
+          "visual": {
+            "ok": true,
+            "lumaRange": 235.5,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/patt-veterinary-hospital/reference-2.png",
+          "fileName": "reference-2.png",
+          "sourceUrl": "https://pattvet.com/wp-content/uploads/2025/11/Collage-team-members-480x472.png",
+          "sourceEvidence": "IMG wp-image-261386  collage-team-members collage-team-members",
+          "type": "png",
+          "dimensions": {
+            "width": 480,
+            "height": 472
+          },
+          "sha256": "d7bda1e07ec1735e7732bf925bcc4c915a405674715cd83143a8686034f47b5b",
+          "bytes": 116528,
+          "visual": {
+            "ok": true,
+            "lumaRange": 250.6,
+            "reason": null
+          }
+        }
+      ],
+      "referenceFailures": [
+        {
+          "url": "https://pattvet.com/wp-content/uploads/2025/09/Patt-Veterinary-Hospital-front-entrance-01.webp",
+          "reason": "not a PNG"
+        },
+        {
+          "url": "https://pattvet.com/1920",
+          "reason": "unsupported reference type unknown"
+        },
+        {
+          "url": "https://pattvet.com/1080",
+          "reason": "unsupported reference type unknown"
+        },
+        {
+          "url": "https://pattvet.com/Exterior%20view%20of%20Patt%20Veterinary%20Hospital%20building%20with%20stone%20entryway,%20blue%20doors,%20and%20landscaped%20surroundings",
+          "reason": "unsupported reference type unknown"
+        }
+      ],
+      "brandColors": [
+        "#1b4b74",
+        "#fa8e0b",
+        "#003388",
+        "#2ea3f2",
+        "#0687ef"
+      ],
+      "checkedAt": "2026-09-16T09:20:37.710Z"
+    },
+    {
+      "rank": 11,
+      "domain": "breakfastnorristown.com",
+      "slug": "main-street-cafe",
+      "sourceUrl": "https://breakfastnorristown.com/",
+      "finalUrl": "https://breakfastnorristown.com/",
+      "sourceDomain": "breakfastnorristown.com",
+      "httpStatus": 200,
+      "contentType": "text/html",
+      "pageSha256": "c2ad0079935a69aa74c788b7c575ae39a4ed5aae8eabe29cc8fe4a8e9823ab5c",
+      "title": "Main Street Cafe Breakfast norristown",
+      "description": "Main Street Cafe served the customers for more than 10 years. my family Jay J., my brother in law, his uncle and I have served the best quality food.",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [
+          "main",
+          "street",
+          "cafe"
+        ],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/main-street-cafe/logo.png",
+        "fileName": "logo.png",
+        "sourceUrl": "https://breakfastnorristown.com/img/logo.png",
+        "sourceEvidence": "IMG main street cafe logo",
+        "type": "png",
+        "dimensions": {
+          "width": 800,
+          "height": 234
+        },
+        "sha256": "91c1d64614eba787f9061d3bde587ee00097e79d4154ae678e4979c727aab532",
+        "sourceSha256": "91c1d64614eba787f9061d3bde587ee00097e79d4154ae678e4979c727aab532",
+        "sourceType": "png",
+        "sourceFileName": null,
+        "transformation": "none; exact first-party transparent asset",
+        "borderSpread": null,
+        "alpha": {
+          "ok": true,
+          "transparentRatio": 0.7528,
+          "edgeTransparentRatio": 1,
+          "contentRatio": 0.2472,
+          "reason": null
+        },
+        "transparent": true,
+        "bytes": 38516
+      },
+      "references": [
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/main-street-cafe/reference-1.jpg",
+          "fileName": "reference-1.jpg",
+          "sourceUrl": "http://www.breakfastnorristown.com/img/gallery27.jpg",
+          "sourceEvidence": "og:image",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 800,
+            "width": 800
+          },
+          "sha256": "79ab9cfb7cc23fac57ba1403a0b21aa3ae4ebc627808a5a67ed3935ed270f14f",
+          "bytes": 73053,
+          "visual": {
+            "ok": true,
+            "lumaRange": 253.8,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/main-street-cafe/reference-2.jpg",
+          "fileName": "reference-2.jpg",
+          "sourceUrl": "https://breakfastnorristown.com/img/gallery1.jpg",
+          "sourceEvidence": "IMG img-responsive  main street cafe eggs",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 800,
+            "width": 800
+          },
+          "sha256": "f49aae3e179618b8121e72cbe20ae61f6d20b17b280c4290632e5d94f5c3c4b1",
+          "bytes": 61912,
+          "visual": {
+            "ok": true,
+            "lumaRange": 251.2,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/main-street-cafe/reference-3.jpg",
+          "fileName": "reference-3.jpg",
+          "sourceUrl": "https://breakfastnorristown.com/img/gallery2.jpg",
+          "sourceEvidence": "IMG img-responsive  main street cafe hashbrowns",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 900,
+            "width": 902
+          },
+          "sha256": "171a595fc7f741044748171d18ccda707ed0409a90908382fc8da7c80dfdbf76",
+          "bytes": 52795,
+          "visual": {
+            "ok": true,
+            "lumaRange": 243.4,
+            "reason": null
+          }
+        }
+      ],
+      "referenceFailures": [],
+      "brandColors": [],
+      "checkedAt": "2026-09-16T09:20:42.867Z"
+    },
+    {
+      "rank": 12,
+      "domain": "fellinicafebrynmawr.com",
+      "slug": "fellini-cafe",
+      "sourceUrl": "https://www.fellinicafebrynmawr.com/",
+      "finalUrl": "https://www.fellinicafebrynmawr.com/",
+      "sourceDomain": "fellinicafebrynmawr.com",
+      "httpStatus": 200,
+      "contentType": "text/html;charset=utf-8",
+      "pageSha256": "ddc024c8fd3b9dd9965714b00247216210d4b4f30549f0ddbbc20d523f55f369",
+      "title": "Fellini Cafe Bryn Mawr",
+      "description": "",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [
+          "fellini",
+          "cafe"
+        ],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/fellini-cafe/logo.png",
+        "fileName": "logo.png",
+        "sourceUrl": "https://images.squarespace-cdn.com/content/v1/5e0a2bfea5d8587ca353c286/1577725409840-3F6HK57F1NDA96TF36YT/Fellini+Cafe-logo+2.png?format=2500w",
+        "sourceEvidence": "IMG mobile-bar-branding-logo  fellini cafe bryn mawr",
+        "type": "png",
+        "dimensions": {
+          "width": 2000,
+          "height": 1157
+        },
+        "sha256": "5ff0d2f4fa8252a64fefa428a5b1cfb0991aced394e99045792cc0a4e72a2275",
+        "sourceSha256": "5ff0d2f4fa8252a64fefa428a5b1cfb0991aced394e99045792cc0a4e72a2275",
+        "sourceType": "png",
+        "sourceFileName": null,
+        "transformation": "none; exact first-party transparent asset",
+        "borderSpread": null,
+        "alpha": {
+          "ok": true,
+          "transparentRatio": 0.936,
+          "edgeTransparentRatio": 1,
+          "contentRatio": 0.064,
+          "reason": null
+        },
+        "transparent": true,
+        "bytes": 29368
+      },
+      "references": [
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/fellini-cafe/reference-1.jpg",
+          "fileName": "reference-1.jpg",
+          "sourceUrl": "https://images.squarespace-cdn.com/content/v1/5e0a2bfea5d8587ca353c286/1577746872234-K5KT6L6JZESL41480T2N/b448c565-86dd-4987-861c-9441e76dac31.jpg",
+          "sourceEvidence": "IMG b448c565-86dd-4987-861c-9441e76dac31.jpg",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 1285,
+            "width": 964
+          },
+          "sha256": "4231c1174804a837a51c97cb57b8afc661ada4b775466b90a3d0d2e602dccb8b",
+          "bytes": 183922,
+          "visual": {
+            "ok": true,
+            "lumaRange": 230.9,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/fellini-cafe/reference-2.jpg",
+          "fileName": "reference-2.jpg",
+          "sourceUrl": "https://images.squarespace-cdn.com/content/v1/5e0a2bfea5d8587ca353c286/1577746908209-KY0H9KG40H4ITGXKDGAG/ded81438-07ed-4c2e-a850-6baab70b8e15.jpg",
+          "sourceEvidence": "IMG ded81438-07ed-4c2e-a850-6baab70b8e15.jpg",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 1324,
+            "width": 993
+          },
+          "sha256": "b8dc2fbc4c30aae529f8b39ede9cda99282383a5939cb325db3b194c54eaf42d",
+          "bytes": 217232,
+          "visual": {
+            "ok": true,
+            "lumaRange": 253.7,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/fellini-cafe/reference-3.jpg",
+          "fileName": "reference-3.jpg",
+          "sourceUrl": "https://images.squarespace-cdn.com/content/v1/5e0a2bfea5d8587ca353c286/1577747032994-QU2AT7T0YAWT0VUIO7A2/f4daef7a-ed05-46f2-9627-658a6a652d9e.jpg",
+          "sourceEvidence": "IMG f4daef7a-ed05-46f2-9627-658a6a652d9e.jpg",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 800,
+            "width": 1200
+          },
+          "sha256": "26664d88c87c8a90b479c170c0518784136053827aec650dd2546ca5eb373712",
+          "bytes": 138722,
+          "visual": {
+            "ok": true,
+            "lumaRange": 242.3,
+            "reason": null
+          }
+        }
+      ],
+      "referenceFailures": [
+        {
+          "url": "https://www.fellinicafebrynmawr.com/1500",
+          "reason": "HTTP 404"
+        },
+        {
+          "url": "https://www.fellinicafebrynmawr.com/867",
+          "reason": "HTTP 404"
+        },
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/5c64b0adb10f25d6387669dd/1550216033950-4SZL92UPF386Y4T9XFUI/image-asset.jpeg",
+          "reason": "not a PNG"
+        },
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/5e0a2bfea5d8587ca353c286/1577745852595-EM4230W97Q8IMDKWSIYI/image_5.jpg",
+          "reason": "not a PNG"
+        }
+      ],
+      "brandColors": [
+        "#112233",
+        "#112255"
+      ],
+      "checkedAt": "2026-09-16T09:20:46.491Z"
+    },
+    {
+      "rank": 13,
+      "domain": "thepullmanrestaurant.com",
+      "slug": "the-pullman-restaurant-and-bar",
+      "sourceUrl": "https://thepullmanrestaurant.com/",
+      "finalUrl": "https://thepullmanrestaurant.com/",
+      "sourceDomain": "thepullmanrestaurant.com",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "pageSha256": "a6b5e10593a342c87dd753fadcd72b72e9c544226187145ea751c77926b5bd19",
+      "title": "Best American Restaurant in Bryn Mawr, PA | The Pullman",
+      "description": "As you enter the Pullman Restaurant & Bar your eyes are directed to the dramatic mosaic tile floor announcing you've arrived. The atmosphere feels both theatrical and inviting. This ambitious renovation of the historic Bryn Mawr Train Station with huge chandeliers dripping from the ceilings and one of the largest dazzling bars in the entire Philadelphia/Main Line area draws a lively, young up market crowd. Crisp, elegant, edgy and smart there is still a casual mood with a cozy atmosphere. The Pullman is where the past and future co-exist with a distinctive old-world character. The gorgeous Music Lounge features live music on the week-ends and you will feel tucked away in the intimacy of the Private Dining Club Car. The Main Dining Car nestled right by the train tracks serves food that pays homage to the diversity of American culinary traditions with a playful Italian nod. Fresh seafood, USDA Choice beef, pasta, locally sourced produce and desserts that score a direct hit with your sweet spot. There is also an Inspired craft cocktail list and an approachable wine list for those who want to taste something measured in pleasure rather than price. Contact us and place your order off our Catering Menu for your home and office celebrations. For private soirees or grand company gatherings your event unfolds at The Pullman across a collection of spaces each one with its own spirit. In Spring, Summer and Fall experience Alfresco Dining and watch the trains pass by at The ‘10/14’ Bar On The Rails featuring 3 color TVs where the locals cheer on their favorite teams. This is your place without a doubt. Snag a spot at The Pullman Restaurant & Bar...where the laid back vibe doesn't sacrifice an ounce of style.",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [
+          "pullman",
+          "restaurant",
+          "bar"
+        ],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/the-pullman-restaurant-and-bar/logo.png",
+        "fileName": "logo.png",
+        "sourceUrl": "https://static.spotapps.co/website_images/ab_websites/118918_website_v1/logo_new_3.png",
+        "sourceEvidence": "IMG img-responsive logo-top  the pullman restaurant and bar logo top - homepage",
+        "type": "png",
+        "dimensions": {
+          "width": 450,
+          "height": 121
+        },
+        "sha256": "aaf58e463fcef049fd7f352c86be82013c3b047f84345ea195203a2010683cb3",
+        "sourceSha256": "aaf58e463fcef049fd7f352c86be82013c3b047f84345ea195203a2010683cb3",
+        "sourceType": "png",
+        "sourceFileName": null,
+        "transformation": "none; exact first-party transparent asset",
+        "borderSpread": null,
+        "alpha": {
+          "ok": true,
+          "transparentRatio": 0.7205,
+          "edgeTransparentRatio": 1,
+          "contentRatio": 0.2795,
+          "reason": null
+        },
+        "transparent": true,
+        "bytes": 23508
+      },
+      "references": [
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/the-pullman-restaurant-and-bar/reference-1.jpg",
+          "fileName": "reference-1.jpg",
+          "sourceUrl": "https://static.spotapps.co/website_images/ab_websites/118918_website_v1/social_share.jpg",
+          "sourceEvidence": "og:image",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 630,
+            "width": 1200
+          },
+          "sha256": "d8a6313ba21379be3c633432b47a7ef7200356a22c19a5f94689c8e9203f5942",
+          "bytes": 236330,
+          "visual": {
+            "ok": true,
+            "lumaRange": 255,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/the-pullman-restaurant-and-bar/reference-2.jpg",
+          "fileName": "reference-2.jpg",
+          "sourceUrl": "https://static.spotapps.co/spots/46/ade44869384a629e522ce0157a9a6a/full",
+          "sourceEvidence": "IMG img-responsive lazyload  gallery photo number 1",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 800,
+            "width": 800
+          },
+          "sha256": "1f74ebe06645181943b10c88f0db2337193dbd191a409a95783a90b58e301c5d",
+          "bytes": 174670,
+          "visual": {
+            "ok": true,
+            "lumaRange": 245.1,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/the-pullman-restaurant-and-bar/reference-3.jpg",
+          "fileName": "reference-3.jpg",
+          "sourceUrl": "https://static.spotapps.co/spots/3e/4c28b96ab44c89b59bae1a9049839e/full",
+          "sourceEvidence": "IMG img-responsive lazyload  gallery photo number 2",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 800,
+            "width": 800
+          },
+          "sha256": "ea4f6a472f893127f376421d514eba8c682275668fe5dcee09f4d8d663867e3c",
+          "bytes": 121050,
+          "visual": {
+            "ok": true,
+            "lumaRange": 253,
+            "reason": null
+          }
+        }
+      ],
+      "referenceFailures": [
+        {
+          "url": "https://thepullmanrestaurant.com/The%20Pullman%20Restaurant%20image",
+          "reason": "HTTP 404"
+        },
+        {
+          "url": "https://thepullmanrestaurant.com/image/png",
+          "reason": "HTTP 404"
+        }
+      ],
+      "brandColors": [
+        "#f3c745",
+        "#163e80",
+        "#173e81",
+        "#5e0e0e",
+        "#5bbad5"
+      ],
+      "checkedAt": "2026-09-16T09:20:42.034Z"
+    },
+    {
+      "rank": 14,
+      "domain": "hopescookies.com",
+      "slug": "hope-s-cookies",
+      "sourceUrl": "https://www.hopescookies.com/store",
+      "finalUrl": "https://www.hopescookies.com/store",
+      "sourceDomain": "hopescookies.com",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "pageSha256": "27620826b03b01ffb13fd2b0c437d50678b63328c4c43983c5dbe6d096120e12",
+      "title": "Visit Hope's Cookies Retail Store | Hope's Cookies - Hope's Cookies | Gourmet Cookie Gifts Online - Cookie Delivery Across the U.S.A.",
+      "description": "Can't wait for shipping? Stop by Hope's Cookies retail store in Rosemont, PA, and check out our freshly baked gourmet cookies, cookie dough, ice cream, and more!",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [
+          "hope",
+          "cookies"
+        ],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/hope-s-cookies/logo.png",
+        "fileName": "logo.png",
+        "sourceUrl": "https://www.hopescookies.com/assets/images/logo.png",
+        "sourceEvidence": "IMG logo mx-auto  hope's cookies",
+        "type": "png",
+        "dimensions": {
+          "width": 270,
+          "height": 124
+        },
+        "sha256": "cee4961a0b2385b988b5fdf20402495ebbdda786a6039de7198d7659e6d6c276",
+        "sourceSha256": "cee4961a0b2385b988b5fdf20402495ebbdda786a6039de7198d7659e6d6c276",
+        "sourceType": "png",
+        "sourceFileName": null,
+        "transformation": "none; exact first-party transparent asset",
+        "borderSpread": null,
+        "alpha": {
+          "ok": true,
+          "transparentRatio": 0.7182,
+          "edgeTransparentRatio": 1,
+          "contentRatio": 0.2818,
+          "reason": null
+        },
+        "transparent": true,
+        "bytes": 10178
+      },
+      "references": [
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/hope-s-cookies/reference-1.jpg",
+          "fileName": "reference-1.jpg",
+          "sourceUrl": "http://hopescookies.com/storage/images/slides/2026/BestMLMN_6-26.jpg",
+          "sourceEvidence": "IMG ",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 637,
+            "width": 1920
+          },
+          "sha256": "873d64e001da93a45f248f790aada3a3607de9f2482c97d5b19cc605794ff3fb",
+          "bytes": 760100,
+          "visual": {
+            "ok": true,
+            "lumaRange": 255,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/hope-s-cookies/reference-2.jpg",
+          "fileName": "reference-2.jpg",
+          "sourceUrl": "https://www.hopescookies.com/assets/images/slides/2023/local-delivery4.jpg",
+          "sourceEvidence": "IMG ",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 312,
+            "width": 940
+          },
+          "sha256": "a42afaadd95ac2a1e0405d6f1a9a5251df7b0c62607abf29869a03a085be3eed",
+          "bytes": 82972,
+          "visual": {
+            "ok": true,
+            "lumaRange": 255,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/hope-s-cookies/reference-3.jpg",
+          "fileName": "reference-3.jpg",
+          "sourceUrl": "https://www.hopescookies.com/assets/images/slides/MLtradition.jpg",
+          "sourceEvidence": "IMG primary-img",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 312,
+            "width": 940
+          },
+          "sha256": "ccc4eaeb3e3b2f9bac160cddd591d1cb1b2d9009aecd6af3abf702d9f8f8ce49",
+          "bytes": 94256,
+          "visual": {
+            "ok": true,
+            "lumaRange": 255,
+            "reason": null
+          }
+        }
+      ],
+      "referenceFailures": [
+        {
+          "url": "https://www.facebook.com/tr?id=340282627057943&ev=PageView&noscript=1",
+          "reason": "unsupported reference type unknown"
+        },
+        {
+          "url": "https://www.hopescookies.com/assets/images/layout/home_up.gif",
+          "reason": "unsupported reference type gif"
+        },
+        {
+          "url": "https://www.hopescookies.com/assets/images/layout/shopping-cart-32x32.png",
+          "reason": "reference image is too small"
+        }
+      ],
+      "brandColors": [
+        "#003399"
+      ],
+      "checkedAt": "2026-09-16T09:20:44.836Z"
+    },
+    {
+      "rank": 15,
+      "domain": "andesaservices.com",
+      "slug": "andesa-services-inc",
+      "sourceUrl": "https://andesaservices.com/",
+      "finalUrl": "https://andesaservices.com/",
+      "sourceDomain": "andesaservices.com",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "pageSha256": "0b5f6ce6e1d1cc6e878bc3ede757cefd0772a896929b9064fd6f5c65f3fc3f57",
+      "title": "Life Insurance & Annuities Policy Lifecycle Solutions | Andesa",
+      "description": "Andesa helps carriers, brokers, key stakeholders, and participants pursue strategic sales opportunities and successfully navigate market change.",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [
+          "andesa"
+        ],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/andesa-services-inc/logo.svg",
+        "fileName": "logo.svg",
+        "sourceUrl": "https://andesaservices.com/wp-content/uploads/2024/05/andesa-logo-white.svg",
+        "sourceEvidence": "IMG style-svg",
+        "type": "svg",
+        "dimensions": {
+          "width": 372,
+          "height": 284
+        },
+        "sha256": "43c6055151f977988986cd638b7bff536c9dd9043658fad1d611231c7ec611d4",
+        "sourceSha256": "43c6055151f977988986cd638b7bff536c9dd9043658fad1d611231c7ec611d4",
+        "sourceType": "svg",
+        "sourceFileName": null,
+        "transformation": "none; exact first-party transparent asset",
+        "borderSpread": null,
+        "alpha": {
+          "ok": true,
+          "vector": true
+        },
+        "transparent": true,
+        "bytes": 15777
+      },
+      "references": [
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/andesa-services-inc/reference-1.png",
+          "fileName": "reference-1.png",
+          "sourceUrl": "https://andesaservices.com/wp-content/uploads/2025/11/SOC-1-2-768x950.png",
+          "sourceEvidence": "IMG attachment-full size-full",
+          "type": "png",
+          "dimensions": {
+            "width": 768,
+            "height": 950
+          },
+          "sha256": "6dd8970d64f1381144caa22a9a4856c72a78e155d5e2ba0f1d81be15cc252a69",
+          "bytes": 39174,
+          "visual": {
+            "ok": true,
+            "lumaRange": 251.7,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/andesa-services-inc/reference-2.png",
+          "fileName": "reference-2.png",
+          "sourceUrl": "https://andesaservices.com/wp-content/uploads/2025/11/SOC-2-2-768x950.png",
+          "sourceEvidence": "IMG attachment-full size-full  is partners andesa services",
+          "type": "png",
+          "dimensions": {
+            "width": 768,
+            "height": 950
+          },
+          "sha256": "f66ab974f62cb4a93ab47086909a5372f552fba7a650cfef38e0dd816f38fe3b",
+          "bytes": 40852,
+          "visual": {
+            "ok": true,
+            "lumaRange": 239.1,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/andesa-services-inc/reference-3.png",
+          "fileName": "reference-3.png",
+          "sourceUrl": "https://andesaservices.com/wp-content/uploads/2025/11/SOC-3-2-768x950.png",
+          "sourceEvidence": "IMG attachment-full size-full  andesa services partners",
+          "type": "png",
+          "dimensions": {
+            "width": 768,
+            "height": 950
+          },
+          "sha256": "6f6365476328e3a952b44c9e7af574414957b811ec30064198e3578dae5346e0",
+          "bytes": 37023,
+          "visual": {
+            "ok": true,
+            "lumaRange": 251.7,
+            "reason": null
+          }
+        }
+      ],
+      "referenceFailures": [
+        {
+          "url": "https://andesaservices.com/wp-content/uploads/2023/04/BG_below_hero-v2@2x-1720x2048.jpg",
+          "reason": "progressive JPEG is not decodable here"
+        },
+        {
+          "url": "https://andesaservices.com/wp-content/uploads/2021/11/home_header_client_login.svg",
+          "reason": "unsupported reference type svg"
+        },
+        {
+          "url": "https://andesaservices.com/wp-content/uploads/2024/11/240823_Andesa_-HP-2-2048x1205.jpg",
+          "reason": "progressive JPEG is not decodable here"
+        },
+        {
+          "url": "https://andesaservices.com/wp-content/uploads/2024/11/240823_Andesa_-HP_mobile-1-2048x1352.jpg",
+          "reason": "progressive JPEG is not decodable here"
+        }
+      ],
+      "brandColors": [
+        "#c7dff4",
+        "#406ab3",
+        "#15254c",
+        "#16254c",
+        "#ec6a5b"
+      ],
+      "checkedAt": "2026-09-16T09:20:49.514Z"
+    },
+    {
+      "rank": 16,
+      "domain": "finesseflooringinc.com",
+      "slug": "finesse-flooring",
+      "sourceUrl": "https://www.finesseflooringinc.com/",
+      "finalUrl": "https://www.finesseflooringinc.com/",
+      "sourceDomain": "finesseflooringinc.com",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "pageSha256": "444c990a564d832fb9a1f7599e4c42c8bf27bcafe4bdb8fec50eb03a4c868cd0",
+      "title": "Flooring Contractor | Finesse Flooring | Green Lane",
+      "description": "Quality flooring and installation. Competitive pricing and impeccable service. carpet, tile, vinyl, lvp",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [
+          "finesse",
+          "flooring"
+        ],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/finesse-flooring/logo.png",
+        "fileName": "logo.png",
+        "sourceUrl": "https://www.roomvo.com/services/vendor/themes/e3556ada59d64d7d8b889c8e121795f0/images/vendor_logo_square_en-us.png",
+        "sourceEvidence": "IMG finesse flooring, inc.",
+        "type": "png",
+        "dimensions": {
+          "width": 1024,
+          "height": 1024
+        },
+        "sha256": "1dab37a9c177fb55db6be604245cf52f8057fade2b85fa3eb1c0e0386dbb0897",
+        "sourceSha256": "1dab37a9c177fb55db6be604245cf52f8057fade2b85fa3eb1c0e0386dbb0897",
+        "sourceType": "png",
+        "sourceFileName": null,
+        "transformation": "none; exact first-party transparent asset",
+        "borderSpread": null,
+        "alpha": {
+          "ok": true,
+          "transparentRatio": 0.6763,
+          "edgeTransparentRatio": 1,
+          "contentRatio": 0.3237,
+          "reason": null
+        },
+        "transparent": true,
+        "bytes": 1518632
+      },
+      "references": [
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/finesse-flooring/reference-1.png",
+          "fileName": "reference-1.png",
+          "sourceUrl": "https://www.finesseflooringinc.com/cms_images/6996d0dac0b1478faba6f5ef1f4a4ff9/Untitled_design_5.width-2000.png",
+          "sourceEvidence": "IMG shop flooring products from finesse flooring | green lane",
+          "type": "png",
+          "dimensions": {
+            "width": 2000,
+            "height": 680
+          },
+          "sha256": "0feca669fc11088aad2294852b58fc23e87856b732b36b9f16bc90f1197af38c",
+          "bytes": 1869037,
+          "visual": {
+            "ok": true,
+            "lumaRange": 254,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/finesse-flooring/reference-2.png",
+          "fileName": "reference-2.png",
+          "sourceUrl": "https://www.finesseflooringinc.com/cms_images/9e143953a0e54254b388202c79d8b5a2/Untitled_design_1.width-2000.png",
+          "sourceEvidence": "IMG flooring advice from experts in green lane",
+          "type": "png",
+          "dimensions": {
+            "width": 2000,
+            "height": 680
+          },
+          "sha256": "a1973dc2120f3ae22a65dad0454ec0eefe08fb2002f91181ec7099f3c4fae86e",
+          "bytes": 1884659,
+          "visual": {
+            "ok": true,
+            "lumaRange": 241.5,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/finesse-flooring/reference-3.png",
+          "fileName": "reference-3.png",
+          "sourceUrl": "https://www.finesseflooringinc.com/cms_images/0865dbd07ba14703888089bbf1a23a59/Untitled_design_6.width-2000.png",
+          "sourceEvidence": "IMG flooring installation from finesse flooring | green lane",
+          "type": "png",
+          "dimensions": {
+            "width": 2000,
+            "height": 680
+          },
+          "sha256": "041ac8404afd43a6e2162feabfb6151fb29a4a9de980025b4d51d65abb3c8057",
+          "bytes": 2231665,
+          "visual": {
+            "ok": true,
+            "lumaRange": 255,
+            "reason": null
+          }
+        }
+      ],
+      "referenceFailures": [
+        {
+          "url": "https://www.finesseflooringinc.com/cms_images/d055ccd045dc4002948d9751f75aef50/featured_3.original.2e16d0ba.fill-.2e16d0ba.fill-800x800.jpg",
+          "reason": "reference image is too small"
+        },
+        {
+          "url": "https://www.finesseflooringinc.com/cms_images/1eacc94d41ae4c078f5a1056d19d9443/featured_2.original.2e16d0ba.fill-.2e16d0ba.fill-800x800.jpg",
+          "reason": "progressive JPEG is not decodable here"
+        }
+      ],
+      "brandColors": [
+        "#ff5f00",
+        "#eb001b",
+        "#f79e1b",
+        "#15195a",
+        "#fac610"
+      ],
+      "checkedAt": "2026-09-16T09:20:53.523Z"
+    },
+    {
+      "rank": 17,
+      "domain": "dittmerco.com",
+      "slug": "dittmer-and-company-p-c",
+      "sourceUrl": "https://www.dittmerco.com/",
+      "finalUrl": "https://www.dittmerco.com/",
+      "sourceDomain": "dittmerco.com",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "pageSha256": "d0c52b6cc723b02338b773f996d56750e331060048405872c678fef82d2b6296",
+      "title": "Accounting and Tax Services in Chester County, PA | CPA firm",
+      "description": "Dittmer & Company, P.C. is a Chester County CPA firm that provides a wide variety of accounting, tax and financial management services.",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [
+          "dittmer"
+        ],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/dittmer-and-company-p-c/logo.png",
+        "fileName": "logo.png",
+        "sourceUrl": "https://www.dittmerco.com/site_images/logo.png",
+        "sourceEvidence": "IMG img-responsive  dittmer & company, p.c.",
+        "type": "png",
+        "dimensions": {
+          "width": 750,
+          "height": 375
+        },
+        "sha256": "e2010a63efc9d4fd21600b124122d2ce0bed4cf3e35e2b7ebabc072fc206d554",
+        "sourceSha256": "e2010a63efc9d4fd21600b124122d2ce0bed4cf3e35e2b7ebabc072fc206d554",
+        "sourceType": "png",
+        "sourceFileName": null,
+        "transformation": "none; exact first-party transparent asset",
+        "borderSpread": null,
+        "alpha": {
+          "ok": true,
+          "transparentRatio": 0.8943,
+          "edgeTransparentRatio": 1,
+          "contentRatio": 0.1057,
+          "reason": null
+        },
+        "transparent": true,
+        "bytes": 1147370
+      },
+      "references": [
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/dittmer-and-company-p-c/reference-1.jpg",
+          "fileName": "reference-1.jpg",
+          "sourceUrl": "https://www.dittmerco.com/site_images/banner.jpg",
+          "sourceEvidence": "IMG img-responsive  dittmer & company, p.c. banner",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 500,
+            "width": 1920
+          },
+          "sha256": "99680170db69411c8a48fc9b5876baa8f4cc9b36cbb29d6067b7f236f354f1f5",
+          "bytes": 516903,
+          "visual": {
+            "ok": true,
+            "lumaRange": 254.8,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/dittmer-and-company-p-c/reference-2.png",
+          "fileName": "reference-2.png",
+          "sourceUrl": "https://www.dittmerco.com/site_images/leadimg.png",
+          "sourceEvidence": "IMG 5 ways to improve youur cash flow",
+          "type": "png",
+          "dimensions": {
+            "width": 612,
+            "height": 676
+          },
+          "sha256": "5c6cec329e4765458a72ced30602df6ecaa5edf31ed374596a220ecd8919273f",
+          "bytes": 244108,
+          "visual": {
+            "ok": true,
+            "lumaRange": 205.1,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/dittmer-and-company-p-c/reference-3.jpg",
+          "fileName": "reference-3.jpg",
+          "sourceUrl": "https://www.dittmerco.com/site_images/sendfiles-768.jpg",
+          "sourceEvidence": "IMG img-responsive  send files",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 512,
+            "width": 768
+          },
+          "sha256": "23400fa4f97dff86886f3a990f05a19f562bb64455daaee00547e1f537dfe636",
+          "bytes": 218668,
+          "visual": {
+            "ok": true,
+            "lumaRange": 240.8,
+            "reason": null
+          }
+        }
+      ],
+      "referenceFailures": [],
+      "brandColors": [],
+      "checkedAt": "2026-09-16T09:20:49.491Z"
+    },
+    {
+      "rank": 18,
+      "domain": "mankindsheadquarters.com",
+      "slug": "mankind-s-headquarters",
+      "sourceUrl": "https://www.mankindsheadquarters.com/",
+      "finalUrl": "https://mankindsheadquarters.com/",
+      "sourceDomain": "mankindsheadquarters.com",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "pageSha256": "98f81b46db4e965d0f1d339ab2e0ac5f6668397c0f913b8aaee9a7538b840e66",
+      "title": "Mankind's HeadQuarters - Mankind's HeadQuarters",
+      "description": "",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [
+          "mankind",
+          "headquarters"
+        ],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/mankind-s-headquarters/logo.png",
+        "fileName": "logo.png",
+        "sourceUrl": "https://mankindsheadquarters.com/wp-content/uploads/2022/06/image.png",
+        "sourceEvidence": "JSON-LD logo URL",
+        "type": "png",
+        "dimensions": {
+          "width": 1200,
+          "height": 630
+        },
+        "sha256": "a3bbb97a1436a8482462c9c7027d38a0cc160e95cf1f42469f7917ff71f22dcb",
+        "sourceSha256": "e9be856a5e6f2a4c5ea1a06b20382af55383a30b78499e28bf6346a923db0a12",
+        "sourceType": "png",
+        "sourceFileName": "logo-source.png",
+        "transformation": "flat border color rgb(155,189,187) removed by border-seeded flood fill at tolerance 32; geometry unchanged",
+        "borderSpread": 0,
+        "alpha": {
+          "ok": true,
+          "transparentRatio": 0.9607,
+          "edgeTransparentRatio": 1,
+          "contentRatio": 0.0393,
+          "reason": null
+        },
+        "transparent": true,
+        "bytes": 68874
+      },
+      "references": [
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/mankind-s-headquarters/reference-1.png",
+          "fileName": "reference-1.png",
+          "sourceUrl": "https://mankindsheadquarters.com/wp-content/uploads/2022/04/womens-600x600-1-480x324.png",
+          "sourceEvidence": "IMG attachment-blossom-spa-service size-blossom-spa-service  women's styles",
+          "type": "png",
+          "dimensions": {
+            "width": 480,
+            "height": 324
+          },
+          "sha256": "17c7d2000b61462ba477f27dcefdc963fbc075509fad2c228472ff520c012ace",
+          "bytes": 244058,
+          "visual": {
+            "ok": true,
+            "lumaRange": 238.6,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/mankind-s-headquarters/reference-2.png",
+          "fileName": "reference-2.png",
+          "sourceUrl": "https://mankindsheadquarters.com/wp-content/uploads/2022/04/mens-600x600-1-480x324.png",
+          "sourceEvidence": "IMG attachment-blossom-spa-service size-blossom-spa-service  men's styles",
+          "type": "png",
+          "dimensions": {
+            "width": 480,
+            "height": 324
+          },
+          "sha256": "0fe4c8fdd240415daedcb7ce40b644a6cc3be3d1bbff598bd4e6f0cd70203431",
+          "bytes": 277922,
+          "visual": {
+            "ok": true,
+            "lumaRange": 230.5,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/mankind-s-headquarters/reference-3.jpg",
+          "fileName": "reference-3.jpg",
+          "sourceUrl": "https://mankindsheadquarters.com/wp-content/uploads/2022/04/pexels-cottonbro-3993139-480x324.jpg",
+          "sourceEvidence": "IMG attachment-blossom-spa-service size-blossom-spa-service  coloring",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 324,
+            "width": 480
+          },
+          "sha256": "5a5cabff78eafd58901e58b59237e5de2fd63b17e4a559c645359a15c43faffb",
+          "bytes": 26166,
+          "visual": {
+            "ok": true,
+            "lumaRange": 252,
+            "reason": null
+          }
+        }
+      ],
+      "referenceFailures": [
+        {
+          "url": "https://mankindsheadquarters.com/wp-content/uploads/2022/04/pexels-nataliya-vaitkevich-8468134-165x60.jpg",
+          "reason": "reference image is too small"
+        },
+        {
+          "url": "https://mankindsheadquarters.com/wp-content/uploads/2022/06/pexels-trinity-kubassek-242148-88x60.jpg",
+          "reason": "reference image is too small"
+        }
+      ],
+      "brandColors": [
+        "#9cbe9c",
+        "#003399",
+        "#00d084",
+        "#0693e3",
+        "#f1acbc"
+      ],
+      "checkedAt": "2026-09-16T09:21:02.607Z"
+    },
+    {
+      "rank": 19,
+      "domain": "highswartz.com",
+      "slug": "high-swartz",
+      "sourceUrl": "https://highswartz.com/",
+      "finalUrl": "https://highswartz.com/",
+      "sourceDomain": "highswartz.com",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "pageSha256": "f7357a9b77a787772da5037570f0430cb0f56eb75bb549b625d5b896b33b0d85",
+      "title": "Lawyers Near Me - Bucks, Delaware, Montgomery County, PA",
+      "description": "Looking for lawyers near you in Bucks, Delaware, Chester, or Montgomery County? Our law firm is recognized as a “Best Law Firm.\"",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [
+          "high",
+          "swartz"
+        ],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/high-swartz/logo.png",
+        "fileName": "logo.png",
+        "sourceUrl": "https://highswartz.com/wp-content/themes/highswartz2019-child/img/HS-logo-horizontal.png",
+        "sourceEvidence": "JSON-LD logo",
+        "type": "png",
+        "dimensions": {
+          "width": 613,
+          "height": 158
+        },
+        "sha256": "b9494ea6c9e9ea4e52716c3201ceb71aa3a9b57c4e128239081a9dce2ea756ea",
+        "sourceSha256": "b9494ea6c9e9ea4e52716c3201ceb71aa3a9b57c4e128239081a9dce2ea756ea",
+        "sourceType": "png",
+        "sourceFileName": null,
+        "transformation": "none; exact first-party transparent asset",
+        "borderSpread": null,
+        "alpha": {
+          "ok": true,
+          "transparentRatio": 0.564,
+          "edgeTransparentRatio": 0.6433,
+          "contentRatio": 0.436,
+          "reason": null
+        },
+        "transparent": true,
+        "bytes": 9971
+      },
+      "references": [
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/high-swartz/reference-1.png",
+          "fileName": "reference-1.png",
+          "sourceUrl": "https://highswartz.com/wp-content/uploads/2025/08/Best-Lawyers-High-Swartz-LLP-2026-2048x620.png",
+          "sourceEvidence": "IMG attachment-full size-full  best lawyers 2026 high swartz llp",
+          "type": "png",
+          "dimensions": {
+            "width": 2048,
+            "height": 620
+          },
+          "sha256": "0bbae80a0e47a0082717dd02b9c6dbacb3f9c2cbb7151d1bda49e280a1bb4ce8",
+          "bytes": 133830,
+          "visual": {
+            "ok": true,
+            "lumaRange": 255,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/high-swartz/reference-2.png",
+          "fileName": "reference-2.png",
+          "sourceUrl": "https://highswartz.com/wp-content/uploads/2025/09/chambers-high-swartz-llp-768x692.png",
+          "sourceEvidence": "IMG attachment-full size-full  chambers and partners",
+          "type": "png",
+          "dimensions": {
+            "width": 768,
+            "height": 692
+          },
+          "sha256": "496680d2f69b588c5926aa5145ff37cccee22dd41dca43025d4d445fbcddbd81",
+          "bytes": 155794,
+          "visual": {
+            "ok": true,
+            "lumaRange": 255,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/high-swartz/reference-3.png",
+          "fileName": "reference-3.png",
+          "sourceUrl": "https://highswartz.com/wp-content/uploads/2025/08/Best-Lawyers-High-Swartz-LLP-2026.png",
+          "sourceEvidence": "IMG ",
+          "type": "png",
+          "dimensions": {
+            "width": 3000,
+            "height": 908
+          },
+          "sha256": "853ddcb54d1cb04920ba8bdf45eb9f11fe2ff773ed3f26f834bce78faa621c4a",
+          "bytes": 154619,
+          "visual": {
+            "ok": true,
+            "lumaRange": 255,
+            "reason": null
+          }
+        }
+      ],
+      "referenceFailures": [
+        {
+          "url": "https://highswartz.com/wp-content/uploads/2023/01/high-swartz-norristown-entrance.jpg",
+          "reason": "not a PNG"
+        },
+        {
+          "url": "https://highswartz.com/823",
+          "reason": "HTTP 404"
+        },
+        {
+          "url": "https://highswartz.com/image/jpeg",
+          "reason": "HTTP 404"
+        },
+        {
+          "url": "https://highswartz.com/wp-content/uploads/2023/01/hero-bg-mainstreet_updated.jpg",
+          "reason": "not a PNG"
+        }
+      ],
+      "brandColors": [
+        "#003388",
+        "#003399",
+        "#c6b281",
+        "#1450a3",
+        "#192442"
+      ],
+      "checkedAt": "2026-09-16T09:21:08.284Z"
+    },
+    {
+      "rank": 20,
+      "domain": "yudizzamedspa.com",
+      "slug": "yudizza-spa",
+      "sourceUrl": "https://yudizzamedspa.com/",
+      "finalUrl": "https://yudizzamedspa.com/",
+      "sourceDomain": "yudizzamedspa.com",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "pageSha256": "beb4e38fa5b443a95a353b959e72d54335c772e2f7e3af5866fcbebd30215dd6",
+      "title": "Yudizza Med Spa – Yudizza Med Spa",
+      "description": "",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [
+          "yudizza",
+          "spa"
+        ],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/yudizza-spa/logo.png",
+        "fileName": "logo.png",
+        "sourceUrl": "https://yudizzamedspa.com/wp-content/uploads/2023/07/logo-final-final.png",
+        "sourceEvidence": "IMG custom-logo",
+        "type": "png",
+        "dimensions": {
+          "width": 496,
+          "height": 162
+        },
+        "sha256": "f3cd1481cb5a81fe9a397f5a1257907830c2ad08c14a8c4f3395812ef3cb7213",
+        "sourceSha256": "f3cd1481cb5a81fe9a397f5a1257907830c2ad08c14a8c4f3395812ef3cb7213",
+        "sourceType": "png",
+        "sourceFileName": null,
+        "transformation": "none; exact first-party transparent asset",
+        "borderSpread": null,
+        "alpha": {
+          "ok": true,
+          "transparentRatio": 0.8379,
+          "edgeTransparentRatio": 0.655,
+          "contentRatio": 0.1621,
+          "reason": null
+        },
+        "transparent": true,
+        "bytes": 22677
+      },
+      "references": [
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/yudizza-spa/reference-1.png",
+          "fileName": "reference-1.png",
+          "sourceUrl": "https://yudizzamedspa.com/wp-content/uploads/2023/06/banner.png",
+          "sourceEvidence": "CSS image URL",
+          "type": "png",
+          "dimensions": {
+            "width": 1440,
+            "height": 750
+          },
+          "sha256": "9169bd6106611113ba2d31a3435bbab0cf693cbddbccb63e1f6f1ce8d39303c3",
+          "bytes": 445823,
+          "visual": {
+            "ok": true,
+            "lumaRange": 248.3,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/yudizza-spa/reference-2.png",
+          "fileName": "reference-2.png",
+          "sourceUrl": "https://yudizzamedspa.com/wp-content/uploads/2023/06/banner-piernas.png",
+          "sourceEvidence": "CSS image URL",
+          "type": "png",
+          "dimensions": {
+            "width": 3557,
+            "height": 2685
+          },
+          "sha256": "c25e9005aa25da7ed172eda8a9f7c280fccaa7491a92ec3581c1d9a34a41d590",
+          "bytes": 2823890,
+          "visual": {
+            "ok": true,
+            "lumaRange": 202.5,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260916-052001/source-assets/yudizza-spa/reference-3.jpg",
+          "fileName": "reference-3.jpg",
+          "sourceUrl": "https://yudizzamedspa.com/wp-content/uploads/2023/06/78-768x1151.jpg",
+          "sourceEvidence": "IMG swiper-slide-image  78",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 1151,
+            "width": 768
+          },
+          "sha256": "925e62941d264ecd101ff4a14a659bd604e769b4a5e259730025b4dcaea7c44a",
+          "bytes": 44978,
+          "visual": {
+            "ok": true,
+            "lumaRange": 241.1,
+            "reason": null
+          }
+        }
+      ],
+      "referenceFailures": [
+        {
+          "url": "https://yudizzamedspa.com/wp-content/uploads/2023/06/banner-1.png",
+          "reason": "duplicate identity/reference asset"
+        },
+        {
+          "url": "https://yudizzamedspa.com/wp-content/uploads/2023/06/Beige-Simple-Successful-Business-Tips-Carousel-Instagram-Post-2.png",
+          "reason": "reference image is too small"
+        },
+        {
+          "url": "https://yudizzamedspa.com/wp-content/uploads/2023/06/excel.png",
+          "reason": "reference image is too small"
+        },
+        {
+          "url": "https://yudizzamedspa.com/wp-content/uploads/2023/06/venus-vera.png",
+          "reason": "reference image is too small"
+        }
+      ],
+      "brandColors": [
+        "#a38a60",
+        "#003388",
+        "#003399",
+        "#bd995d",
+        "#dcb86a"
+      ],
+      "checkedAt": "2026-09-16T09:21:06.019Z"
+    }
+  ],
+  "rejected": [
+    {
+      "domain": "coopermech.com",
+      "name": "Cooper Mechanical, Inc.",
+      "website": "https://coopermech.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "confidentsmiledental.com",
+      "name": "Confident Smile Dental",
+      "website": "https://www.confidentsmiledental.com/",
+      "reason": "exact transparent logo unavailable: logo source is too small"
+    },
+    {
+      "domain": "roxfallsvet.com",
+      "name": "Rox Falls Vet",
+      "website": "https://roxfallsvet.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "signaturehvac.com",
+      "name": "Signature HVAC",
+      "website": "https://www.signaturehvac.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "marioncentersupply.com",
+      "name": "Marion Center Supply Inc",
+      "website": "https://www.marioncentersupply.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "troopervet.com",
+      "name": "Trooper Veterinary Hospital",
+      "website": "https://www.troopervet.com/",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "orthodontistwayne.com",
+      "name": "Orthodontics on the Line",
+      "website": "https://orthodontistwayne.com/",
+      "reason": "exact transparent logo unavailable: no first-party logo candidate"
+    },
+    {
+      "domain": "thedentalspotpa.com",
+      "name": "The Dental Spot",
+      "website": "https://www.thedentalspotpa.com/",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "westchestervetmedcenter.com",
+      "name": "West Chester Veterinary Medical Center",
+      "website": "https://www.westchestervetmedcenter.com/site/home",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "uvpp.vet",
+      "name": "United Vision Pet Partners",
+      "website": "https://uvpp.vet/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "cityfitness.com",
+      "name": "City Fitness",
+      "website": "https://cityfitness.com/old-city-club/",
+      "reason": "approved generated-stock board is missing: category-fitness"
+    },
+    {
+      "domain": "metzlerforestproducts.com",
+      "name": "Metzler Forest Products",
+      "website": "https://www.metzlerforestproducts.com/",
+      "reason": "No relevant generated-stock category is approved for metzler-forest-products (metzler-forest-products metzler forest products timber other). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "uhpwireless.com",
+      "name": "UHP Wireless Networks",
+      "website": "http://www.uhpwireless.com/",
+      "reason": "exact transparent logo unavailable: Invalid URL"
+    },
+    {
+      "domain": "fillabagel.com",
+      "name": "Fill A Bagel & Breads",
+      "website": "https://www.fillabagel.com/jenkintown/",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "handynasty.net",
+      "name": "Han Dynasty",
+      "website": "https://www.handynasty.net/location/han-dynasty-royersford",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "toscositaliandelight.net",
+      "name": "Tosco's Italian Delight",
+      "website": "https://toscositaliandelight.net/",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "bccinteractive.com",
+      "name": "BCC Interactive",
+      "website": "https://www.bccinteractive.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "signsalacarte.com",
+      "name": "Signs A La Carte",
+      "website": "https://www.signsalacarte.com/",
+      "reason": "approved generated-stock board is missing: category-manufacturing"
+    },
+    {
+      "domain": "chainmar.com",
+      "name": "Chain-Mar Furniture Showcase",
+      "website": "https://www.chainmar.com/",
+      "reason": "No relevant generated-stock category is approved for chain-mar-furniture-showcase (chain-mar-furniture-showcase chain-mar furniture showcase furniture retail). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "stretchlab.com",
+      "name": "StretchLab",
+      "website": "https://www.stretchlab.com/location/newtownsquare",
+      "reason": "No relevant generated-stock category is approved for stretchlab (stretchlab stretchlab physiotherapist medical). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "verifyprotect.com",
+      "name": "VerifyProtect.com",
+      "website": "https://www.verifyprotect.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "premierhvacpa.com",
+      "name": "Premier HVAC Services",
+      "website": "https://www.premierhvacpa.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "ellisathleticcenter.com",
+      "name": "Ellis Athletic Center",
+      "website": "https://ellisathleticcenter.com/",
+      "reason": "approved generated-stock board is missing: category-fitness"
+    },
+    {
+      "domain": "unitedgsarts.com",
+      "name": "United Arts",
+      "website": "https://unitedgsarts.com/",
+      "reason": "approved generated-stock board is missing: category-fitness"
+    },
+    {
+      "domain": "bamboo46.com",
+      "name": "Bamboo",
+      "website": "https://www.bamboo46.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "abrandtandson.com",
+      "name": "Annette Brandt and Son",
+      "website": "https://www.abrandtandson.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "mekenneysauto.com",
+      "name": "Mekenney's Automotive Service",
+      "website": "https://mekenneysauto.com/",
+      "reason": "exact transparent logo unavailable: logo source is too small"
+    },
+    {
+      "domain": "salernotire.com",
+      "name": "Salerno Tire Corporation",
+      "website": "https://salernotire.com/",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "drdavidtucker.com",
+      "name": "Tucker Chiropractic Center",
+      "website": "https://drdavidtucker.com/",
+      "reason": "approved generated-stock board is missing: category-chiropractic"
+    },
+    {
+      "domain": "hmtaxes.com",
+      "name": "H&M Tax Service",
+      "website": "https://hmtaxes.com/",
+      "reason": "exact transparent logo unavailable: Invalid URL"
+    },
+    {
+      "domain": "sugaringnyc.com",
+      "name": "Sugaring NYC",
+      "website": "https://www.sugaringnyc.com/",
+      "reason": "HTTP 403"
+    },
+    {
+      "domain": "grossmanfurniture.com",
+      "name": "Grossman Furniture",
+      "website": "https://www.grossmanfurniture.com/",
+      "reason": "No relevant generated-stock category is approved for grossman-furniture (grossman-furniture grossman furniture furniture retail). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "needmomentum.com",
+      "name": "Momentum Digital",
+      "website": "https://needmomentum.com/",
+      "reason": "exact transparent logo unavailable: no first-party logo candidate"
+    },
+    {
+      "domain": "boehmerheating.com",
+      "name": "Boehmer Heating & Cooling",
+      "website": "https://www.boehmerheating.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "rawreplenish.com",
+      "name": "Raw Replenish",
+      "website": "https://www.rawreplenish.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "691pool.com",
+      "name": "B&B Pools",
+      "website": "https://www.691pool.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "chestercountyeyecare.com",
+      "name": "Chester County Eye Care",
+      "website": "https://www.chestercountyeyecare.com/",
+      "reason": "approved generated-stock board is missing: category-optometry"
+    },
+    {
+      "domain": "eyeconsultantsofpa.com",
+      "name": "Eye Consultants of Pennsylvania",
+      "website": "https://www.eyeconsultantsofpa.com/locations/pottstown-office",
+      "reason": "approved generated-stock board is missing: category-optometry"
+    },
+    {
+      "domain": "fivesaintsdistilling.com",
+      "name": "Five Saints Distilling",
+      "website": "https://fivesaintsdistilling.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "gibbonsautomotive.com",
+      "name": "Gibbons Automotive",
+      "website": "https://gibbonsautomotive.com/",
+      "reason": "exact transparent logo unavailable: logo source is too small"
+    },
+    {
+      "domain": "nicgrooming.com",
+      "name": "Nic Grooming",
+      "website": "https://www.nicgrooming.com/",
+      "reason": "exact transparent logo unavailable: unsupported background-removal source: not a PNG"
+    },
+    {
+      "domain": "trovegeneral.com",
+      "name": "Trove General Store",
+      "website": "https://trovegeneral.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "alliedroofingsolutions.com",
+      "name": "Allied Roofing Solutions",
+      "website": "https://www.alliedroofingsolutions.com/pa",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "allprodetail.com",
+      "name": "All Pro Detail",
+      "website": "https://www.allprodetail.com/",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "beemlightsauna.com",
+      "name": "Beem Light Sauna",
+      "website": "https://www.beemlightsauna.com/location/collegeville",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "homestarrinc.com",
+      "name": "Homestarr Realty",
+      "website": "https://homestarrinc.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "huntengineering.com",
+      "name": "Hunt Engineering Co",
+      "website": "https://www.huntengineering.com/",
+      "reason": "exact transparent logo unavailable: logo border is not a single removable color"
+    },
+    {
+      "domain": "marcheseopticians.com",
+      "name": "Marchese Opticians",
+      "website": "https://marcheseopticians.com/",
+      "reason": "approved generated-stock board is missing: category-optometry"
+    },
+    {
+      "domain": "mostardi.com",
+      "name": "Mostardi's Nursery & Greenhouse",
+      "website": "https://mostardi.com/",
+      "reason": "No relevant generated-stock category is approved for mostardi-s-nursery-and-greenhouse (mostardi-s-nursery-and-greenhouse mostardi's nursery & greenhouse garden-centre home-services). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "a1mulch.com",
+      "name": "A1 Mulch",
+      "website": "https://www.a1mulch.com/",
+      "reason": "No relevant generated-stock category is approved for a1-mulch (a1-mulch a1 mulch garden-centre home-services). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "alderferglass.com",
+      "name": "Alderfer Glass Company",
+      "website": "https://alderferglass.com/",
+      "reason": "No relevant generated-stock category is approved for alderfer-glass-company (alderfer-glass-company alderfer glass company glaziery home-services). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "creativepromarketing.com",
+      "name": "Creative Pro Marketing",
+      "website": "https://www.creativepromarketing.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "drgarymiller.com",
+      "name": "Springfield Family Chiropractic",
+      "website": "https://www.drgarymiller.com/",
+      "reason": "approved generated-stock board is missing: category-chiropractic"
+    },
+    {
+      "domain": "ivyrehab.com",
+      "name": "Ivy Rehab Physical Therapy",
+      "website": "https://www.ivyrehab.com/location/philadelphia-krewstown/",
+      "reason": "No relevant generated-stock category is approved for ivy-rehab-physical-therapy (ivy-rehab-physical-therapy ivy rehab physical therapy physiotherapist medical). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "jlbuilding.com",
+      "name": "J&L building materials",
+      "website": "https://www.jlbuilding.com/",
+      "reason": "approved generated-stock board is missing: category-manufacturing"
+    },
+    {
+      "domain": "northwalesrunningco.com",
+      "name": "North Wales Running Company",
+      "website": "https://northwalesrunningco.com/",
+      "reason": "No relevant generated-stock category is approved for north-wales-running-company (north-wales-running-company north wales running company sports retail). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "rambo-ortho.com",
+      "name": "Rambo Orthodontics",
+      "website": "https://www.rambo-ortho.com/",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "soleprovisions.com",
+      "name": "Sole Provisions",
+      "website": "https://www.soleprovisions.com/pages/collegeville",
+      "reason": "No relevant generated-stock category is approved for sole-provisions (sole-provisions sole provisions shoes retail). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "styergroup.com",
+      "name": "Styer & Associates",
+      "website": "https://styergroup.com/",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "theheavymetalhairsalon.com",
+      "name": "Heavy Metal Hair Salon",
+      "website": "https://www.theheavymetalhairsalon.com/",
+      "reason": "exact transparent logo unavailable: Invalid URL"
+    },
+    {
+      "domain": "youreyeassociates.com",
+      "name": "Lansdale Eye Associates",
+      "website": "https://www.youreyeassociates.com/",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "1digitalagency.com",
+      "name": "1DIGITAL AGENCY",
+      "website": "https://www.1digitalagency.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "abingtonneurology.com",
+      "name": "Abington Neurological Associates",
+      "website": "https://www.abingtonneurology.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "eyetoeyevisionpa.com",
+      "name": "Eye To Eye Vision",
+      "website": "https://www.eyetoeyevisionpa.com/",
+      "reason": "approved generated-stock board is missing: category-optometry"
+    },
+    {
+      "domain": "molestreet.com",
+      "name": "Mole Street",
+      "website": "https://molestreet.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "chaddsfordfiresideshop.com",
+      "name": "Chadds Ford Fireside Shop",
+      "website": "https://chaddsfordfiresideshop.com/",
+      "reason": "No relevant generated-stock category is approved for chadds-ford-fireside-shop (chadds-ford-fireside-shop chadds ford fireside shop fireplace home-services). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "esmsolutions.com",
+      "name": "ESM Solutions",
+      "website": "https://www.esmsolutions.com/",
+      "reason": "exact transparent logo unavailable: no first-party logo candidate"
+    },
+    {
+      "domain": "fellermanlaw.com",
+      "name": "Fellerman & Ciarimboli",
+      "website": "https://fellermanlaw.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "gehringermechanical.com",
+      "name": "Gehringer Mechanical",
+      "website": "https://gehringermechanical.com/",
+      "reason": "approved generated-stock board is missing: category-plumbing"
+    },
+    {
+      "domain": "joylandroofing.com",
+      "name": "Joyland Roofing & Exteriors",
+      "website": "https://joylandroofing.com/about-us/service-areas/montgomery-county",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "lacrosseunlimited.com",
+      "name": "Lacrosse Unlimited",
+      "website": "https://www.lacrosseunlimited.com/",
+      "reason": "No relevant generated-stock category is approved for lacrosse-unlimited (lacrosse-unlimited lacrosse unlimited sports retail). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "lifemedinstitute.com",
+      "name": "LifeMed Institute",
+      "website": "https://lifemedinstitute.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "malvernsaddlery.com",
+      "name": "Malvern Saddlery Ltd",
+      "website": "https://malvernsaddlery.com/",
+      "reason": "No relevant generated-stock category is approved for malvern-saddlery-ltd (malvern-saddlery-ltd malvern saddlery ltd sports retail). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "roxboroughmemorialurgentcare.com",
+      "name": "Roxborough Memorial Urgent Care",
+      "website": "https://roxboroughmemorialurgentcare.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "bondifurniture.com",
+      "name": "Bondi Furniture",
+      "website": "https://www.bondifurniture.com/",
+      "reason": "No relevant generated-stock category is approved for bondi-furniture (bondi-furniture bondi furniture furniture retail). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "dbdlaw.com",
+      "name": "Dischell, Bartle, & Dooley",
+      "website": "https://dbdlaw.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "wellsfordcabinetry.com",
+      "name": "Wellsford Fine Custom Cabinetry",
+      "website": "https://wellsfordcabinetry.com/",
+      "reason": "approved generated-stock board is missing: category-manufacturing"
+    },
+    {
+      "domain": "lbmlaw.com",
+      "name": "Lundy, Beldecos & Milby P.C.",
+      "website": "https://www.lbmlaw.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "puccimanuli.com",
+      "name": "pucciManuli",
+      "website": "https://puccimanuli.com/",
+      "reason": "No relevant generated-stock category is approved for puccimanuli (puccimanuli puccimanuli toys retail). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "ricciardibrothers.com",
+      "name": "Ricciardi Brothers Paint Shop",
+      "website": "https://ricciardibrothers.com/pages/media",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "sixfishes.com",
+      "name": "Six Fishes Neighborhood Acupuncture",
+      "website": "https://sixfishes.com/",
+      "reason": "No relevant generated-stock category is approved for six-fishes-neighborhood-acupuncture (six-fishes-neighborhood-acupuncture six fishes neighborhood acupuncture alternative medical). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "tryhitched.com",
+      "name": "Hitched",
+      "website": "https://tryhitched.com/pages/philadelphia",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "tspacollegeville.com",
+      "name": "The Salon Professional Academy Collegeville",
+      "website": "https://www.tspacollegeville.com/",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "vctilellc.com",
+      "name": "Vicentino Ceramic Tile LLC",
+      "website": "https://vctilellc.com/",
+      "reason": "No relevant generated-stock category is approved for vicentino-ceramic-tile-llc (vicentino-ceramic-tile-llc vicentino ceramic tile llc tiler home-services). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "jacksonplumbingerie.com",
+      "name": "Jackson Plumbing Inc.",
+      "website": "https://www.jacksonplumbingerie.com/",
+      "reason": "approved generated-stock board is missing: category-plumbing"
+    },
+    {
+      "domain": "openstock.co",
+      "name": "Openstock Home Warehouse",
+      "website": "https://openstock.co/pages/wyoming",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "chucksmithsautoservice.com",
+      "name": "Chuck Smith's Auto Service",
+      "website": "https://www.chucksmithsautoservice.com/",
+      "reason": "exact transparent logo unavailable: logo source is too small"
+    },
+    {
+      "domain": "aaamarble.com",
+      "name": "AAA Hellenic Marble",
+      "website": "https://aaamarble.com/",
+      "reason": "approved generated-stock board is missing: category-manufacturing"
+    },
+    {
+      "domain": "alpinepaintingandrestoration.com",
+      "name": "Alpine Painting and Restoration Services",
+      "website": "https://www.alpinepaintingandrestoration.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "axiva.com",
+      "name": "Axiva",
+      "website": "https://axiva.com/",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "majesticnailsandspaemmaus.com",
+      "name": "Majestic Nail Salon",
+      "website": "https://majesticnailsandspaemmaus.com/",
+      "reason": "exact transparent logo unavailable: logo source is too small"
+    },
+    {
+      "domain": "orpi.com",
+      "name": "Orpi Claire Canac Immobilier Castres",
+      "website": "https://www.orpi.com/clairecanac",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "piasecki.com",
+      "name": "Piasecki Aircraft Corporation",
+      "website": "https://piasecki.com/",
+      "reason": "approved generated-stock board is missing: category-manufacturing"
+    },
+    {
+      "domain": "pinevisioncare.com",
+      "name": "Pine Vision Care",
+      "website": "https://www.pinevisioncare.com/",
+      "reason": "approved generated-stock board is missing: category-optometry"
+    },
+    {
+      "domain": "salsnursery.com",
+      "name": "Sal's Nursery & Landscaping",
+      "website": "https://salsnursery.com/",
+      "reason": "No relevant generated-stock category is approved for sal-s-nursery-and-landscaping (sal-s-nursery-and-landscaping sal's nursery & landscaping garden-centre home-services). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "stumpplants.com",
+      "name": "Stump",
+      "website": "https://stumpplants.com/bellavista",
+      "reason": "No relevant generated-stock category is approved for stump (stump stump garden-centre home-services). Generate and approve a new board instead of guessing."
+    }
+  ]
+}

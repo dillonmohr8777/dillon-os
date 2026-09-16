@@ -103,6 +103,33 @@ already a paid media client.
    Never logs, never a chat transcript. A monthly outcome review on top of it,
    same cadence as DataStrike's BI reviews.
 
+## The proof loop, and why it is the product
+
+The offer is not "we will build you agents." Every agency says that. The offer is
+**we run agents in production, on a schedule, and we can show you the evidence
+trail** — which is exactly DataStrike's 24x7 monitored, SLA backed shape applied
+to agents instead of databases.
+
+That loop now exists and is repeatable:
+
+1. `node _os/automation/bin/run-roster.js` runs every free tier agent, records
+   each into `_os/automation/runs.jsonl`, and reports every skip with a reason.
+   Wired into the cadence driver, so it happens on every scheduled pass.
+2. Each run lands in the roster (`12_Brain/registry/automations.json`) joined to
+   its last run, visible in the local console and mirrored to the cloud console
+   at `momentum-console.dillonmohr8777.workers.dev`.
+3. Model backed agents and anything with external actions are excluded by
+   design and reported as skipped, so the evidence never overstates what ran.
+
+The 2026-09-16 first run: 6 agents ran, 0 failed, 2 reporting bad news, 48
+skipped with reasons. That table is the artifact a client would be shown, one
+level up, in their own colours.
+
+**This is the demo.** A prospect does not need a pitch deck; they need to see a
+dashboard of agents that ran today for somebody else, and the honest skip list
+next to it. The skip list is the trust signal: an agency willing to show what it
+did not run is one you can believe about what it did.
+
 ## Sequencing
 
 Momentum runs Phases 0 to 4 of the control plane (PR #406) on itself first. The

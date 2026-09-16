@@ -1,0 +1,123 @@
+{
+  "sourceUrl": "https://wagnerrealestate.com/",
+  "finalUrl": "https://wagnerrealestate.com/",
+  "sourceDomain": "wagnerrealestate.com",
+  "httpStatus": 200,
+  "contentType": "text/html",
+  "pageSha256": "2deeaf7491b66a9c7d8b515887419bbb39faa55f26748a6eed65dea38b4082e4",
+  "title": "Southeastern Pennsylvania Real Estate | Explore Homes",
+  "description": "Southeastern Pennsylvania real estate with local experts in Havertown, Hershey’s Mill, Main Line, and West Chester. Explore homes today.",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "wagner",
+      "compass"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\wagner-group-compass\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://media-production.lp-cdn.com/cdn-cgi/image/format=auto,quality=85/https://media-production.lp-cdn.com/media/b1stagd1r9zdhinnzyb3",
+    "sourceEvidence": "IMG logo__img dark",
+    "type": "png",
+    "dimensions": {
+      "width": 545,
+      "height": 311
+    },
+    "sha256": "7b1a85c903549a338abb2a686d7136a3cd4863e89672f38776ddff6bf99d0d23",
+    "sourceSha256": "77e7a051c750d70c3f961af5ed151d00ad7e0527044cad75052cdbefadffd425",
+    "sourceType": "png",
+    "sourceFileName": "logo-source.png",
+    "transformation": "flat border color rgb(71,112,76) removed by border-seeded flood fill at tolerance 32; geometry unchanged",
+    "borderSpread": 0,
+    "alpha": {
+      "ok": true,
+      "transparentRatio": 0.7405,
+      "edgeTransparentRatio": 0.6688,
+      "contentRatio": 0.2595,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 13529
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\wagner-group-compass\\reference-1.jpg",
+      "fileName": "reference-1.jpg",
+      "sourceUrl": "http://bright-media01.prd.brightmls.com/bright/images/0000/8048/6914/5228/804869145228_1024_768_WM_0TsEz5d_Be6cDwFH.jpg",
+      "sourceEvidence": "IMG listing-card__image",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 682,
+        "width": 1024
+      },
+      "sha256": "1b47fa16e33ce8bc32865ed8d76ac795c1d5dd257e562240acfee2925a6905de",
+      "bytes": 124793,
+      "visual": {
+        "ok": true,
+        "lumaRange": 247.8,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\wagner-group-compass\\reference-2.jpg",
+      "fileName": "reference-2.jpg",
+      "sourceUrl": "http://bright-media02.prd.brightmls.com/bright/images/0000/8053/5840/4886/805358404886_1024_768_WM_pvOel_-2GTaEMTXM.jpg",
+      "sourceEvidence": "IMG listing-card__image",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 767,
+        "width": 1024
+      },
+      "sha256": "e87b1b913bc1d1f18733f45536f757a657ea1eb90ce4a9267aea219787e91ce2",
+      "bytes": 161621,
+      "visual": {
+        "ok": true,
+        "lumaRange": 239.9,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\wagner-group-compass\\reference-3.jpg",
+      "fileName": "reference-3.jpg",
+      "sourceUrl": "http://bright-media01.prd.brightmls.com/bright/images/0000/8053/2396/3142/805323963142_1024_768_WM_N5AQ6wOy1yYAZEIT.jpg",
+      "sourceEvidence": "IMG listing-card__image",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 768,
+        "width": 1024
+      },
+      "sha256": "9d772642dafb84ac010a9518e872578efd9189ac7dc65641704413968536a522",
+      "bytes": 147163,
+      "visual": {
+        "ok": true,
+        "lumaRange": 248.1,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [
+    {
+      "url": "https://res.cloudinary.com/luxuryp/images/w_1920,c_limit,f_auto,q_auto/k6nkh56njymtyfxrlyel/screen-shot-2021-12-05-at-62035-pm",
+      "reason": "not a PNG"
+    },
+    {
+      "url": "https://wagnerrealestate.com/q_auto/qh2qwoqiqysl55zasrbk/wagner-real-estate-05-20-2021-tonjanika-smith-91",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://res.cloudinary.com/luxuryp/images/f_auto,q_auto/eclkljp19qbdwe6qtnpr/h0x1xdqo",
+      "reason": "not a PNG"
+    },
+    {
+      "url": "https://res.cloudinary.com/luxuryp/images/w_1920,c_limit,f_auto,q_auto/vb7fs4gncpfsi7zmkffl/wagner-real-estate-05-20-2021-tonjanika-smith-91-1",
+      "reason": "not a PNG"
+    }
+  ],
+  "brandColors": [
+    "#116600",
+    "#002349"
+  ],
+  "checkedAt": "2026-09-16T09:20:33.510Z"
+}

@@ -1,0 +1,123 @@
+{
+  "sourceUrl": "https://www.fellinicafebrynmawr.com/",
+  "finalUrl": "https://www.fellinicafebrynmawr.com/",
+  "sourceDomain": "fellinicafebrynmawr.com",
+  "httpStatus": 200,
+  "contentType": "text/html;charset=utf-8",
+  "pageSha256": "ddc024c8fd3b9dd9965714b00247216210d4b4f30549f0ddbbc20d523f55f369",
+  "title": "Fellini Cafe Bryn Mawr",
+  "description": "",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "fellini",
+      "cafe"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\fellini-cafe\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://images.squarespace-cdn.com/content/v1/5e0a2bfea5d8587ca353c286/1577725409840-3F6HK57F1NDA96TF36YT/Fellini+Cafe-logo+2.png?format=2500w",
+    "sourceEvidence": "IMG mobile-bar-branding-logo  fellini cafe bryn mawr",
+    "type": "png",
+    "dimensions": {
+      "width": 2000,
+      "height": 1157
+    },
+    "sha256": "5ff0d2f4fa8252a64fefa428a5b1cfb0991aced394e99045792cc0a4e72a2275",
+    "sourceSha256": "5ff0d2f4fa8252a64fefa428a5b1cfb0991aced394e99045792cc0a4e72a2275",
+    "sourceType": "png",
+    "sourceFileName": null,
+    "transformation": "none; exact first-party transparent asset",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "transparentRatio": 0.936,
+      "edgeTransparentRatio": 1,
+      "contentRatio": 0.064,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 29368
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\fellini-cafe\\reference-1.jpg",
+      "fileName": "reference-1.jpg",
+      "sourceUrl": "https://images.squarespace-cdn.com/content/v1/5e0a2bfea5d8587ca353c286/1577746872234-K5KT6L6JZESL41480T2N/b448c565-86dd-4987-861c-9441e76dac31.jpg",
+      "sourceEvidence": "IMG b448c565-86dd-4987-861c-9441e76dac31.jpg",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 1285,
+        "width": 964
+      },
+      "sha256": "4231c1174804a837a51c97cb57b8afc661ada4b775466b90a3d0d2e602dccb8b",
+      "bytes": 183922,
+      "visual": {
+        "ok": true,
+        "lumaRange": 230.9,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\fellini-cafe\\reference-2.jpg",
+      "fileName": "reference-2.jpg",
+      "sourceUrl": "https://images.squarespace-cdn.com/content/v1/5e0a2bfea5d8587ca353c286/1577746908209-KY0H9KG40H4ITGXKDGAG/ded81438-07ed-4c2e-a850-6baab70b8e15.jpg",
+      "sourceEvidence": "IMG ded81438-07ed-4c2e-a850-6baab70b8e15.jpg",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 1324,
+        "width": 993
+      },
+      "sha256": "b8dc2fbc4c30aae529f8b39ede9cda99282383a5939cb325db3b194c54eaf42d",
+      "bytes": 217232,
+      "visual": {
+        "ok": true,
+        "lumaRange": 253.7,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\fellini-cafe\\reference-3.jpg",
+      "fileName": "reference-3.jpg",
+      "sourceUrl": "https://images.squarespace-cdn.com/content/v1/5e0a2bfea5d8587ca353c286/1577747032994-QU2AT7T0YAWT0VUIO7A2/f4daef7a-ed05-46f2-9627-658a6a652d9e.jpg",
+      "sourceEvidence": "IMG f4daef7a-ed05-46f2-9627-658a6a652d9e.jpg",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 800,
+        "width": 1200
+      },
+      "sha256": "26664d88c87c8a90b479c170c0518784136053827aec650dd2546ca5eb373712",
+      "bytes": 138722,
+      "visual": {
+        "ok": true,
+        "lumaRange": 242.3,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [
+    {
+      "url": "https://www.fellinicafebrynmawr.com/1500",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://www.fellinicafebrynmawr.com/867",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/5c64b0adb10f25d6387669dd/1550216033950-4SZL92UPF386Y4T9XFUI/image-asset.jpeg",
+      "reason": "not a PNG"
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/5e0a2bfea5d8587ca353c286/1577745852595-EM4230W97Q8IMDKWSIYI/image_5.jpg",
+      "reason": "not a PNG"
+    }
+  ],
+  "brandColors": [
+    "#112233",
+    "#112255"
+  ],
+  "checkedAt": "2026-09-16T09:20:46.491Z"
+}

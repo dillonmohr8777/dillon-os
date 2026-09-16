@@ -1,0 +1,168 @@
+{
+  "slug": "andesa-services-inc",
+  "preparedAt": "2026-09-16T09:23:00.831Z",
+  "sourceSite": "https://andesaservices.com/",
+  "sourceFinalUrl": "https://andesaservices.com/",
+  "sourcePageSha256": "0b5f6ce6e1d1cc6e878bc3ede757cefd0772a896929b9064fd6f5c65f3fc3f57",
+  "exactLogoRequired": true,
+  "exactLogoSha256": "43c6055151f977988986cd638b7bff536c9dd9043658fad1d611231c7ec611d4",
+  "firstPartyDerivativePolicy": "Content visuals preserve first-party source photography while adapting crop and tonal balance for the private mobile concept. They are not evidence of additional projects or outcomes.",
+  "generatedCompositionReference": "automation/prospect-radar-next20/.impeccable/mocks/architerra-mobile-three-directions.png",
+  "assets": [
+    {
+      "role": "exact identity",
+      "output": "logo.svg",
+      "sourceUrl": "https://andesaservices.com/wp-content/uploads/2024/05/andesa-logo-white.svg",
+      "sourceSha256": "43c6055151f977988986cd638b7bff536c9dd9043658fad1d611231c7ec611d4",
+      "outputSha256": "43c6055151f977988986cd638b7bff536c9dd9043658fad1d611231c7ec611d4",
+      "transformation": "none; exact first-party transparent asset",
+      "transparent": true
+    },
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://andesaservices.com/wp-content/uploads/2025/11/SOC-1-2-768x950.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "6dd8970d64f1381144caa22a9a4856c72a78e155d5e2ba0f1d81be15cc252a69",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=0.940:contrast=1.010:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "cfb68f43fc81a22705819be6c0bf144a199fc50d3aa1752b4e11096d752b2059"
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://andesaservices.com/wp-content/uploads/2025/11/SOC-2-2-768x950.png",
+      "sourceFile": "reference-2.png",
+      "sourceSha256": "f66ab974f62cb4a93ab47086909a5372f552fba7a650cfef38e0dd816f38fe3b",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:0,eq=saturation=0.965:contrast=1.064:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "b8c5c007be962c9f0006f960fabcd7eb9a8242dbdef5b45c53666df2af799c4b"
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://andesaservices.com/wp-content/uploads/2025/11/SOC-3-2-768x950.png",
+      "sourceFile": "reference-3.png",
+      "sourceSha256": "6f6365476328e3a952b44c9e7af574414957b811ec30064198e3578dae5346e0",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:0,eq=saturation=0.990:contrast=1.028:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "7e755c4db95c439eaed8a937380c975cb889f41d2e2cdfc3505d108a0cd9622b"
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://andesaservices.com/wp-content/uploads/2025/11/SOC-1-2-768x950.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "6dd8970d64f1381144caa22a9a4856c72a78e155d5e2ba0f1d81be15cc252a69",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:0,eq=saturation=1.015:contrast=1.082:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "a007b8c9cd654813123e6cecb8debad0c0bdbbb43103b648cd76eb58c0b0be3f"
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://andesaservices.com/wp-content/uploads/2025/11/SOC-2-2-768x950.png",
+      "sourceFile": "reference-2.png",
+      "sourceSha256": "f66ab974f62cb4a93ab47086909a5372f552fba7a650cfef38e0dd816f38fe3b",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:42,eq=saturation=1.040:contrast=1.046:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "508383d1a48ee0864682345e991b29f12726028d2012747fdfb2498ef6af65ef"
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://andesaservices.com/wp-content/uploads/2025/11/SOC-3-2-768x950.png",
+      "sourceFile": "reference-3.png",
+      "sourceSha256": "6f6365476328e3a952b44c9e7af574414957b811ec30064198e3578dae5346e0",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:42,eq=saturation=0.940:contrast=1.010:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "345f3ddd4921b503ca7f06f6da930285f5be338c72e0b18cc3953ca272a7b4fe"
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://andesaservices.com/wp-content/uploads/2025/11/SOC-1-2-768x950.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "6dd8970d64f1381144caa22a9a4856c72a78e155d5e2ba0f1d81be15cc252a69",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:42,eq=saturation=0.965:contrast=1.064:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "b5d77abb92987a36c4cf2819aa1ee8c0c657975e47faeca0e105fe886686ba03"
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://andesaservices.com/wp-content/uploads/2025/11/SOC-2-2-768x950.png",
+      "sourceFile": "reference-2.png",
+      "sourceSha256": "f66ab974f62cb4a93ab47086909a5372f552fba7a650cfef38e0dd816f38fe3b",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:42,eq=saturation=0.990:contrast=1.028:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "1ecf118d27d5b362da959e28afae32d9f95b57ee6c85617f998304699ce49163"
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://andesaservices.com/wp-content/uploads/2025/11/SOC-3-2-768x950.png",
+      "sourceFile": "reference-3.png",
+      "sourceSha256": "6f6365476328e3a952b44c9e7af574414957b811ec30064198e3578dae5346e0",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:84,eq=saturation=1.015:contrast=1.082:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "220f27b426d4c7313ac8abee45b69f16a071abeae17de95b6cfaf52f1225f8c9"
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://andesaservices.com/wp-content/uploads/2025/11/SOC-1-2-768x950.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "6dd8970d64f1381144caa22a9a4856c72a78e155d5e2ba0f1d81be15cc252a69",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:84,eq=saturation=1.040:contrast=1.046:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "794bac910a601db883bd25b71eb1ceed6c1d66e43711d710e2d35e95a24eca71"
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://andesaservices.com/wp-content/uploads/2025/11/SOC-2-2-768x950.png",
+      "sourceFile": "reference-2.png",
+      "sourceSha256": "f66ab974f62cb4a93ab47086909a5372f552fba7a650cfef38e0dd816f38fe3b",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:84,eq=saturation=0.940:contrast=1.010:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "2ffa118538e7d0d3160c0e636c885956f626dd1a73b0bf93ac1914be42f5d7b9"
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://andesaservices.com/wp-content/uploads/2025/11/SOC-3-2-768x950.png",
+      "sourceFile": "reference-3.png",
+      "sourceSha256": "6f6365476328e3a952b44c9e7af574414957b811ec30064198e3578dae5346e0",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:84,eq=saturation=0.965:contrast=1.064:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "ef1a2434fcf01aaffab520b462db05353a8f6ed280f164aeaf9daadf5011439e"
+    }
+  ],
+  "fonts": {
+    "pair": {
+      "id": "syne-work",
+      "display": "Syne",
+      "text": "Work Sans"
+    },
+    "source": "Google Fonts CSS API",
+    "files": [
+      {
+        "file": "font-display-400.woff2",
+        "sha256": "68b623f0e45b905041b2edb9b2e4f563a505f13db1cd06b5f1946eb2e1f47048"
+      },
+      {
+        "file": "font-display-700.woff2",
+        "sha256": "68b623f0e45b905041b2edb9b2e4f563a505f13db1cd06b5f1946eb2e1f47048"
+      },
+      {
+        "file": "font-text-400.woff2",
+        "sha256": "1dd49afc07fb2231b2ff686cbf007725fb2742271bb1f28ebd98f22a0d817343"
+      },
+      {
+        "file": "font-text-700.woff2",
+        "sha256": "1dd49afc07fb2231b2ff686cbf007725fb2742271bb1f28ebd98f22a0d817343"
+      }
+    ]
+  }
+}

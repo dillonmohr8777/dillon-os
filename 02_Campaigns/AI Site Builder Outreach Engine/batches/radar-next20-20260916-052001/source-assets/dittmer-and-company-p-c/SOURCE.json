@@ -1,0 +1,102 @@
+{
+  "sourceUrl": "https://www.dittmerco.com/",
+  "finalUrl": "https://www.dittmerco.com/",
+  "sourceDomain": "dittmerco.com",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=UTF-8",
+  "pageSha256": "d0c52b6cc723b02338b773f996d56750e331060048405872c678fef82d2b6296",
+  "title": "Accounting and Tax Services in Chester County, PA | CPA firm",
+  "description": "Dittmer & Company, P.C. is a Chester County CPA firm that provides a wide variety of accounting, tax and financial management services.",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "dittmer"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\dittmer-and-company-p-c\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://www.dittmerco.com/site_images/logo.png",
+    "sourceEvidence": "IMG img-responsive  dittmer & company, p.c.",
+    "type": "png",
+    "dimensions": {
+      "width": 750,
+      "height": 375
+    },
+    "sha256": "e2010a63efc9d4fd21600b124122d2ce0bed4cf3e35e2b7ebabc072fc206d554",
+    "sourceSha256": "e2010a63efc9d4fd21600b124122d2ce0bed4cf3e35e2b7ebabc072fc206d554",
+    "sourceType": "png",
+    "sourceFileName": null,
+    "transformation": "none; exact first-party transparent asset",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "transparentRatio": 0.8943,
+      "edgeTransparentRatio": 1,
+      "contentRatio": 0.1057,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 1147370
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\dittmer-and-company-p-c\\reference-1.jpg",
+      "fileName": "reference-1.jpg",
+      "sourceUrl": "https://www.dittmerco.com/site_images/banner.jpg",
+      "sourceEvidence": "IMG img-responsive  dittmer & company, p.c. banner",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 500,
+        "width": 1920
+      },
+      "sha256": "99680170db69411c8a48fc9b5876baa8f4cc9b36cbb29d6067b7f236f354f1f5",
+      "bytes": 516903,
+      "visual": {
+        "ok": true,
+        "lumaRange": 254.8,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\dittmer-and-company-p-c\\reference-2.png",
+      "fileName": "reference-2.png",
+      "sourceUrl": "https://www.dittmerco.com/site_images/leadimg.png",
+      "sourceEvidence": "IMG 5 ways to improve youur cash flow",
+      "type": "png",
+      "dimensions": {
+        "width": 612,
+        "height": 676
+      },
+      "sha256": "5c6cec329e4765458a72ced30602df6ecaa5edf31ed374596a220ecd8919273f",
+      "bytes": 244108,
+      "visual": {
+        "ok": true,
+        "lumaRange": 205.1,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\dittmer-and-company-p-c\\reference-3.jpg",
+      "fileName": "reference-3.jpg",
+      "sourceUrl": "https://www.dittmerco.com/site_images/sendfiles-768.jpg",
+      "sourceEvidence": "IMG img-responsive  send files",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 512,
+        "width": 768
+      },
+      "sha256": "23400fa4f97dff86886f3a990f05a19f562bb64455daaee00547e1f537dfe636",
+      "bytes": 218668,
+      "visual": {
+        "ok": true,
+        "lumaRange": 240.8,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [],
+  "brandColors": [],
+  "checkedAt": "2026-09-16T09:20:49.491Z"
+}

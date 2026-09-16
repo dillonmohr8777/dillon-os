@@ -1,0 +1,108 @@
+{
+  "sourceUrl": "https://www.newhipot.com/",
+  "finalUrl": "https://www.newhipot.com/",
+  "sourceDomain": "newhipot.com",
+  "httpStatus": 200,
+  "contentType": "text/html",
+  "pageSha256": "bf2fced4083411ff43f573a9e5ad82f2d7c957ee6c4249f20890b1519297abc9",
+  "title": "Home | Hi Pot - Hot Pot & Asian BBQ Restaurant丨Online Order丨Pottstown | PA",
+  "description": "",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "pot"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\hi-pot\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://website-cdn.menusifu.com/wp-content/uploads/newhipot.com/2024/03/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240327095657.png",
+    "sourceEvidence": "IMG hi pot logo",
+    "type": "png",
+    "dimensions": {
+      "width": 2039,
+      "height": 608
+    },
+    "sha256": "87750d1714bb1c9b547232b6b7832fcd3029985066511a529eca3a9bd512fe6f",
+    "sourceSha256": "87750d1714bb1c9b547232b6b7832fcd3029985066511a529eca3a9bd512fe6f",
+    "sourceType": "png",
+    "sourceFileName": null,
+    "transformation": "none; exact first-party transparent asset",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "transparentRatio": 0.745,
+      "edgeTransparentRatio": 1,
+      "contentRatio": 0.255,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 254921
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\hi-pot\\reference-1.jpg",
+      "fileName": "reference-1.jpg",
+      "sourceUrl": "https://website-cdn.menusifu.com/wp-content/uploads/newhipot.com/2026/08/Assorted-Meat-Platters-for-BBQ-480x320.jpg",
+      "sourceEvidence": "IMG dsm-skip-lazyload  assorted meat platters for bbq at hi pot, hot pot & asian bbq restaurant in pottstown assorted meat platters for bbq at hi pot, hot pot & asian bbq restaurant in pottstown",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 320,
+        "width": 480
+      },
+      "sha256": "795194c6ecf0a432c6245d94b50d0a66fdef4eafb22fb135326e373b3b8bd685",
+      "bytes": 55064,
+      "visual": {
+        "ok": true,
+        "lumaRange": 254.4,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\hi-pot\\reference-2.jpg",
+      "fileName": "reference-2.jpg",
+      "sourceUrl": "https://website-cdn.menusifu.com/wp-content/uploads/newhipot.com/2026/08/BBQ-Grill-with-Mussels-Dumplings-Vegetables-480x320.jpg",
+      "sourceEvidence": "IMG dsm-skip-lazyload  bbq grill with mussels, dumplings & vegetables at hi pot, hot pot & asian bbq restaurant in pottstown bbq grill with mussels, dumplings & vegetables at hi pot, hot pot & asian bbq restaurant in pottstown",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 320,
+        "width": 480
+      },
+      "sha256": "777c8ec535d7c57ae7f56a5f79fce9c0541bea67c8fe0b16bb965262d819ca2e",
+      "bytes": 38785,
+      "visual": {
+        "ok": true,
+        "lumaRange": 255,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\hi-pot\\reference-3.jpg",
+      "fileName": "reference-3.jpg",
+      "sourceUrl": "https://website-cdn.menusifu.com/wp-content/uploads/newhipot.com/2026/08/Grilled-Short-Ribs-LA-Galbi-with-Soju-480x320.jpg",
+      "sourceEvidence": "IMG dsm-skip-lazyload  grilled short ribs (la galbi) with soju at hi pot, hot pot & asian bbq restaurant in pottstown grilled short ribs (la galbi) with soju at hi pot, hot pot & asian bbq restaurant in pottstown",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 320,
+        "width": 480
+      },
+      "sha256": "c77f7a5603a3f9c1ecd9ec5b0103711cfc282c921e8607a002e115b95eb97d43",
+      "bytes": 45418,
+      "visual": {
+        "ok": true,
+        "lumaRange": 255,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [],
+  "brandColors": [
+    "#003388",
+    "#2ea3f2",
+    "#fe0100",
+    "#ffb600",
+    "#e02b20"
+  ],
+  "checkedAt": "2026-09-16T09:20:30.207Z"
+}

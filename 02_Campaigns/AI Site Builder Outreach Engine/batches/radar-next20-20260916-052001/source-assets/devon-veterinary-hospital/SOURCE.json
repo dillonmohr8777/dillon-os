@@ -1,0 +1,105 @@
+{
+  "sourceUrl": "https://www.devonvet.com/",
+  "finalUrl": "https://www.devonvet.com/",
+  "sourceDomain": "devonvet.com",
+  "httpStatus": 200,
+  "contentType": "text/html",
+  "pageSha256": "cced9a02df43e85623dd309c21b7ca99abd983a35d6aaa164de79662ea70f535",
+  "title": "Veterinarian in Devon, PA | Devon Veterinary Hospital – Your Trusted Veterinary Clinic for Pet Wellness, Surgery, Emergency Care & More. Book an Appointment Today!",
+  "description": "Devon Veterinary Hospital provides comprehensive pet care in Devon, PA. Call us today to schedule your pet's appointment with our veterinarians.",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "devon",
+      "veterinary",
+      "hospital"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\devon-veterinary-hospital\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://www.devonvet.com/_files/images/logo.png",
+    "sourceEvidence": "IMG devon veterinary hospital & main line veterinary specialists logo",
+    "type": "png",
+    "dimensions": {
+      "width": 217,
+      "height": 75
+    },
+    "sha256": "b9a2e5201149b8d946dca2dc9924fb5647195f93b5325aa38f748364fe3e2eab",
+    "sourceSha256": "b9a2e5201149b8d946dca2dc9924fb5647195f93b5325aa38f748364fe3e2eab",
+    "sourceType": "png",
+    "sourceFileName": null,
+    "transformation": "none; exact first-party transparent asset",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "transparentRatio": 0.6375,
+      "edgeTransparentRatio": 0.7397,
+      "contentRatio": 0.3625,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 24791
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\devon-veterinary-hospital\\reference-1.jpg",
+      "fileName": "reference-1.jpg",
+      "sourceUrl": "https://www.devonvet.com/_files/images/card-grid-left.jpg",
+      "sourceEvidence": "IMG card__background",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 800,
+        "width": 650
+      },
+      "sha256": "b17620bc998ff97a78762a16e78cff5c97c6f896bd788164bb4b97599ef8d311",
+      "bytes": 73684,
+      "visual": {
+        "ok": true,
+        "lumaRange": 254.6,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\devon-veterinary-hospital\\reference-2.jpg",
+      "fileName": "reference-2.jpg",
+      "sourceUrl": "https://www.devonvet.com/_files/images/cta-section.jpg",
+      "sourceEvidence": "IMG section__background",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 680,
+        "width": 1920
+      },
+      "sha256": "648c9a58f243fd8ca0a23b59a7a95cd0bef0c8d9bdaf0fe58823ecc639a0be2d",
+      "bytes": 272129,
+      "visual": {
+        "ok": true,
+        "lumaRange": 238,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [
+    {
+      "url": "https://www.devonvet.com/_files/images/homepage.jpg",
+      "reason": "progressive JPEG is not decodable here"
+    },
+    {
+      "url": "https://www.devonvet.com/_files/images/card-grid-right1.jpg",
+      "reason": "reference image is too small"
+    },
+    {
+      "url": "https://www.devonvet.com/_files/images/card-grid-right2.jpg",
+      "reason": "reference image is too small"
+    },
+    {
+      "url": "https://www.devonvet.com/_files/images/card-grid-right3.jpg",
+      "reason": "reference image is too small"
+    }
+  ],
+  "brandColors": [
+    "#116600"
+  ],
+  "checkedAt": "2026-09-16T09:20:27.805Z"
+}

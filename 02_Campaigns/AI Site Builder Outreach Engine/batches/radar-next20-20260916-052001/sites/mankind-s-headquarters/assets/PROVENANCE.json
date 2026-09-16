@@ -1,0 +1,168 @@
+{
+  "slug": "mankind-s-headquarters",
+  "preparedAt": "2026-09-16T09:23:10.014Z",
+  "sourceSite": "https://www.mankindsheadquarters.com/",
+  "sourceFinalUrl": "https://mankindsheadquarters.com/",
+  "sourcePageSha256": "98f81b46db4e965d0f1d339ab2e0ac5f6668397c0f913b8aaee9a7538b840e66",
+  "exactLogoRequired": true,
+  "exactLogoSha256": "a3bbb97a1436a8482462c9c7027d38a0cc160e95cf1f42469f7917ff71f22dcb",
+  "firstPartyDerivativePolicy": "Content visuals preserve first-party source photography while adapting crop and tonal balance for the private mobile concept. They are not evidence of additional projects or outcomes.",
+  "generatedCompositionReference": "automation/prospect-radar-next20/.impeccable/mocks/architerra-mobile-three-directions.png",
+  "assets": [
+    {
+      "role": "exact identity",
+      "output": "logo.png",
+      "sourceUrl": "https://mankindsheadquarters.com/wp-content/uploads/2022/06/image.png",
+      "sourceSha256": "e9be856a5e6f2a4c5ea1a06b20382af55383a30b78499e28bf6346a923db0a12",
+      "outputSha256": "a3bbb97a1436a8482462c9c7027d38a0cc160e95cf1f42469f7917ff71f22dcb",
+      "transformation": "flat border color rgb(155,189,187) removed by border-seeded flood fill at tolerance 32; geometry unchanged",
+      "transparent": true
+    },
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://mankindsheadquarters.com/wp-content/uploads/2022/04/womens-600x600-1-480x324.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "17c7d2000b61462ba477f27dcefdc963fbc075509fad2c228472ff520c012ace",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=1.015:contrast=1.064:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "fa8d1b0f7a2941eee3fde7178ff3a782457f3c74a78839d440e165e5a915ad0b"
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://mankindsheadquarters.com/wp-content/uploads/2022/04/mens-600x600-1-480x324.png",
+      "sourceFile": "reference-2.png",
+      "sourceSha256": "0fe4c8fdd240415daedcb7ce40b644a6cc3be3d1bbff598bd4e6f0cd70203431",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:0,eq=saturation=1.040:contrast=1.028:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "48134ba777b828254ae5e0e1fb6a701733171f978c7ee7cabc7d753dd4165a0b"
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://mankindsheadquarters.com/wp-content/uploads/2022/04/pexels-cottonbro-3993139-480x324.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "5a5cabff78eafd58901e58b59237e5de2fd63b17e4a559c645359a15c43faffb",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:0,eq=saturation=0.940:contrast=1.082:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "848b1fac21aa4b92e4b203eed09dc58290fb71e1733479db0f26e9bbbd2bd920"
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://mankindsheadquarters.com/wp-content/uploads/2022/04/womens-600x600-1-480x324.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "17c7d2000b61462ba477f27dcefdc963fbc075509fad2c228472ff520c012ace",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:0,eq=saturation=0.965:contrast=1.046:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "5eb6acc134cc5bf28ce2bfcccba0e4d4aaf59823743a13a929cc7094c993a02a"
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://mankindsheadquarters.com/wp-content/uploads/2022/04/mens-600x600-1-480x324.png",
+      "sourceFile": "reference-2.png",
+      "sourceSha256": "0fe4c8fdd240415daedcb7ce40b644a6cc3be3d1bbff598bd4e6f0cd70203431",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:42,eq=saturation=0.990:contrast=1.010:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "af759b131a71ca920252e6bc2ec3d10bca00a39b7917498b36695577e595fd6a"
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://mankindsheadquarters.com/wp-content/uploads/2022/04/pexels-cottonbro-3993139-480x324.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "5a5cabff78eafd58901e58b59237e5de2fd63b17e4a559c645359a15c43faffb",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:42,eq=saturation=1.015:contrast=1.064:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "5658e2a335d93262535e4685e1958fdc0d389d2b65b0f21a7776653daaf0d535"
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://mankindsheadquarters.com/wp-content/uploads/2022/04/womens-600x600-1-480x324.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "17c7d2000b61462ba477f27dcefdc963fbc075509fad2c228472ff520c012ace",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:42,eq=saturation=1.040:contrast=1.028:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "b2700308010a4e27e09ebd29dd6611c463c60f73a9d7efe3c1935a518f7deb73"
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://mankindsheadquarters.com/wp-content/uploads/2022/04/mens-600x600-1-480x324.png",
+      "sourceFile": "reference-2.png",
+      "sourceSha256": "0fe4c8fdd240415daedcb7ce40b644a6cc3be3d1bbff598bd4e6f0cd70203431",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:42,eq=saturation=0.940:contrast=1.082:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "bb6273d801736e7b6784490bfcd432b72ac246416792b7d95b9558c95d1c0157"
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://mankindsheadquarters.com/wp-content/uploads/2022/04/pexels-cottonbro-3993139-480x324.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "5a5cabff78eafd58901e58b59237e5de2fd63b17e4a559c645359a15c43faffb",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:84,eq=saturation=0.965:contrast=1.046:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "042e8a13b385a4030048760a2e4719bc8b5b6d6b3be3fd6de7221765caad1ae7"
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://mankindsheadquarters.com/wp-content/uploads/2022/04/womens-600x600-1-480x324.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "17c7d2000b61462ba477f27dcefdc963fbc075509fad2c228472ff520c012ace",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:84,eq=saturation=0.990:contrast=1.010:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "58d6acdfab0f75c96fd9ee78266ef7d918c138b458c71fa586f238732b3da758"
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://mankindsheadquarters.com/wp-content/uploads/2022/04/mens-600x600-1-480x324.png",
+      "sourceFile": "reference-2.png",
+      "sourceSha256": "0fe4c8fdd240415daedcb7ce40b644a6cc3be3d1bbff598bd4e6f0cd70203431",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:84,eq=saturation=1.015:contrast=1.064:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "84d2e56e0ee9e3679367722d28eec74adb4f39105f2c36b516a3f97a731d0c05"
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://mankindsheadquarters.com/wp-content/uploads/2022/04/pexels-cottonbro-3993139-480x324.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "5a5cabff78eafd58901e58b59237e5de2fd63b17e4a559c645359a15c43faffb",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:84,eq=saturation=1.040:contrast=1.028:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "6743f9613b3593b0f09032e72913365f974fc36c8663965fcc6b49fc5d8535e4"
+    }
+  ],
+  "fonts": {
+    "pair": {
+      "id": "newsreader-figtree",
+      "display": "Newsreader",
+      "text": "Figtree"
+    },
+    "source": "Google Fonts CSS API",
+    "files": [
+      {
+        "file": "font-display-400.woff2",
+        "sha256": "62981321d9a3cc7a61a73792729043703fd6112da86e8ec848bb57f088578757"
+      },
+      {
+        "file": "font-display-700.woff2",
+        "sha256": "62981321d9a3cc7a61a73792729043703fd6112da86e8ec848bb57f088578757"
+      },
+      {
+        "file": "font-text-400.woff2",
+        "sha256": "4ba7d3d096695818fe0686be4f1e82c6b05134e18a22260336130335027462dd"
+      },
+      {
+        "file": "font-text-700.woff2",
+        "sha256": "4ba7d3d096695818fe0686be4f1e82c6b05134e18a22260336130335027462dd"
+      }
+    ]
+  }
+}

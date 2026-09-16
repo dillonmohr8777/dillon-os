@@ -1,0 +1,168 @@
+{
+  "slug": "penn-animal-hospital",
+  "preparedAt": "2026-09-16T09:22:43.808Z",
+  "sourceSite": "https://www.pennanimal.com/",
+  "sourceFinalUrl": "https://www.pennanimal.com/",
+  "sourcePageSha256": "24e63b7096ecd0b039173adbc3f9632613f92d477338331f5e4abdbfdb6d0efb",
+  "exactLogoRequired": true,
+  "exactLogoSha256": "d6bf56e7a854311a4e6d0634c9f5446f3b1c16236526e6696bc35c6b537ec724",
+  "firstPartyDerivativePolicy": "Content visuals preserve first-party source photography while adapting crop and tonal balance for the private mobile concept. They are not evidence of additional projects or outcomes.",
+  "generatedCompositionReference": "automation/prospect-radar-next20/.impeccable/mocks/architerra-mobile-three-directions.png",
+  "assets": [
+    {
+      "role": "exact identity",
+      "output": "logo.png",
+      "sourceUrl": "http://styles.prosites.com/litesite/6526/images/logo.png",
+      "sourceSha256": "d6bf56e7a854311a4e6d0634c9f5446f3b1c16236526e6696bc35c6b537ec724",
+      "outputSha256": "d6bf56e7a854311a4e6d0634c9f5446f3b1c16236526e6696bc35c6b537ec724",
+      "transformation": "none; exact first-party transparent asset",
+      "transparent": true
+    },
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://c3-preview.prosites.com/301387/wy/images/content/home-2.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "387b9787106c33c3764a44e43ab4da2d5aaf61b81b88a3dcbdffcdfe4fdf25c7",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=1.040:contrast=1.082:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "4378266e8ecfb53b57a72e5ef6fa6c9d9e41f66955c062b77a5fdcd30f72b836"
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://c3-preview.prosites.com/301387/wy/images/content/home-2.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "387b9787106c33c3764a44e43ab4da2d5aaf61b81b88a3dcbdffcdfe4fdf25c7",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:0,eq=saturation=0.940:contrast=1.046:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "c58ec81da7de03130006393caf719c4909d059fe6f845e1e04958ba4ccfd908e"
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://c3-preview.prosites.com/301387/wy/images/content/home-2.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "387b9787106c33c3764a44e43ab4da2d5aaf61b81b88a3dcbdffcdfe4fdf25c7",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:0,eq=saturation=0.965:contrast=1.010:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "ac0e74ca8b16455c2da444b3aaa11ad5949293721a4f6017506b0f65ea90d2b7"
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://c3-preview.prosites.com/301387/wy/images/content/home-2.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "387b9787106c33c3764a44e43ab4da2d5aaf61b81b88a3dcbdffcdfe4fdf25c7",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:0,eq=saturation=0.990:contrast=1.064:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "6abd199db78254383f7d643dafac071dfa1b9468c6be1955fa67bfbd29c16c6e"
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://c3-preview.prosites.com/301387/wy/images/content/home-2.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "387b9787106c33c3764a44e43ab4da2d5aaf61b81b88a3dcbdffcdfe4fdf25c7",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:42,eq=saturation=1.015:contrast=1.028:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "07dab16d54799df9fa917063be3013b30d0b8342f648d61a5f7e28e60d29f84d"
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://c3-preview.prosites.com/301387/wy/images/content/home-2.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "387b9787106c33c3764a44e43ab4da2d5aaf61b81b88a3dcbdffcdfe4fdf25c7",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:42,eq=saturation=1.040:contrast=1.082:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "1331b4336a03bad91ce6fabf18ef3e9ce28a0502229281b1b5fa61cdc439b74c"
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://c3-preview.prosites.com/301387/wy/images/content/home-2.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "387b9787106c33c3764a44e43ab4da2d5aaf61b81b88a3dcbdffcdfe4fdf25c7",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:42,eq=saturation=0.940:contrast=1.046:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "4d3c1c7f73d2ee79e4f1588fae10659a71a4c30c1e09d9ccc78648f84e85222c"
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://c3-preview.prosites.com/301387/wy/images/content/home-2.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "387b9787106c33c3764a44e43ab4da2d5aaf61b81b88a3dcbdffcdfe4fdf25c7",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:42,eq=saturation=0.965:contrast=1.010:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "59a613d025d79d00c21a961edc9980528b7dccdb633b825200fdc85613d01bab"
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://c3-preview.prosites.com/301387/wy/images/content/home-2.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "387b9787106c33c3764a44e43ab4da2d5aaf61b81b88a3dcbdffcdfe4fdf25c7",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:84,eq=saturation=0.990:contrast=1.064:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "199ff324c4e7f7315cbd807c01e380d5b337e0b721d03f1d64616f1792d6866e"
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://c3-preview.prosites.com/301387/wy/images/content/home-2.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "387b9787106c33c3764a44e43ab4da2d5aaf61b81b88a3dcbdffcdfe4fdf25c7",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:84,eq=saturation=1.015:contrast=1.028:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "106e6eacf83aac60196ef2a0147b460881f4ea6ab93aeee02c82d2a5c72250e5"
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://c3-preview.prosites.com/301387/wy/images/content/home-2.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "387b9787106c33c3764a44e43ab4da2d5aaf61b81b88a3dcbdffcdfe4fdf25c7",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:84,eq=saturation=1.040:contrast=1.082:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "42637c0f39359211fde713cd3663da71ecee0b50b76b4c6816f20b0482f36d87"
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://c3-preview.prosites.com/301387/wy/images/content/home-2.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "387b9787106c33c3764a44e43ab4da2d5aaf61b81b88a3dcbdffcdfe4fdf25c7",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:84,eq=saturation=0.940:contrast=1.046:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "5897ed73d740c34f8c6ba1c3e7df71d0cea1eb420d1387bde0c42441ed0867cf"
+    }
+  ],
+  "fonts": {
+    "pair": {
+      "id": "bodoni-urbanist",
+      "display": "Bodoni Moda",
+      "text": "Urbanist"
+    },
+    "source": "Google Fonts CSS API",
+    "files": [
+      {
+        "file": "font-display-400.woff2",
+        "sha256": "192ae876c21d9258d096a526dad5bddf37f0daa69cfe943cae5f6be5a52adda2"
+      },
+      {
+        "file": "font-display-700.woff2",
+        "sha256": "192ae876c21d9258d096a526dad5bddf37f0daa69cfe943cae5f6be5a52adda2"
+      },
+      {
+        "file": "font-text-400.woff2",
+        "sha256": "7981ef90c246352c7c217081b8d9337b9c95e9d17ae126bf56b0d3753d1e5ffb"
+      },
+      {
+        "file": "font-text-700.woff2",
+        "sha256": "7981ef90c246352c7c217081b8d9337b9c95e9d17ae126bf56b0d3753d1e5ffb"
+      }
+    ]
+  }
+}

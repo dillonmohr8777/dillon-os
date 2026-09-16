@@ -1,6 +1,6 @@
 {
   "automation_id": "site-health-sentinel",
-  "started_at": "2026-07-29T21:12:51.340Z",
+  "started_at": "2026-09-16T22:28:05.716Z",
   "status": "error",
   "dry_run": true,
   "counts": {
@@ -111,7 +111,8 @@
     }
   ],
   "artifact_paths": [
-    "/workspace/Daily-Briefs/site-health-report.md"
+    "C:\\Users\\dillo\\repos\\dillon-os\\Daily-Briefs\\site-health-report.md"
   ],
-  "written_at": "2026-07-29T21:12:51.340Z"
+  "generated_at": "2026-09-16T22:28:05.717Z",
+  "written_at": "2026-09-16T22:28:05.717Z"
 }

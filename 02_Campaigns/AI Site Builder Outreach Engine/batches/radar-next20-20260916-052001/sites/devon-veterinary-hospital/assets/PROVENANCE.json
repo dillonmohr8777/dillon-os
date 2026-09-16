@@ -1,0 +1,168 @@
+{
+  "slug": "devon-veterinary-hospital",
+  "preparedAt": "2026-09-16T09:22:37.937Z",
+  "sourceSite": "https://www.devonvet.com/",
+  "sourceFinalUrl": "https://www.devonvet.com/",
+  "sourcePageSha256": "cced9a02df43e85623dd309c21b7ca99abd983a35d6aaa164de79662ea70f535",
+  "exactLogoRequired": true,
+  "exactLogoSha256": "b9a2e5201149b8d946dca2dc9924fb5647195f93b5325aa38f748364fe3e2eab",
+  "firstPartyDerivativePolicy": "Content visuals preserve first-party source photography while adapting crop and tonal balance for the private mobile concept. They are not evidence of additional projects or outcomes.",
+  "generatedCompositionReference": "automation/prospect-radar-next20/.impeccable/mocks/architerra-mobile-three-directions.png",
+  "assets": [
+    {
+      "role": "exact identity",
+      "output": "logo.png",
+      "sourceUrl": "https://www.devonvet.com/_files/images/logo.png",
+      "sourceSha256": "b9a2e5201149b8d946dca2dc9924fb5647195f93b5325aa38f748364fe3e2eab",
+      "outputSha256": "b9a2e5201149b8d946dca2dc9924fb5647195f93b5325aa38f748364fe3e2eab",
+      "transformation": "none; exact first-party transparent asset",
+      "transparent": true
+    },
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.devonvet.com/_files/images/card-grid-left.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "b17620bc998ff97a78762a16e78cff5c97c6f896bd788164bb4b97599ef8d311",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=0.990:contrast=1.046:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "647e47d82e9a0de08ebf4730637fb388bef4d81b07cb4e9507d8dd49420cd83e"
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.devonvet.com/_files/images/cta-section.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "648c9a58f243fd8ca0a23b59a7a95cd0bef0c8d9bdaf0fe58823ecc639a0be2d",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:0,eq=saturation=1.015:contrast=1.010:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "a6fa88dc98712616a65cc86ecd06403ffff2bb71312b1d924fe878633311b313"
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.devonvet.com/_files/images/card-grid-left.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "b17620bc998ff97a78762a16e78cff5c97c6f896bd788164bb4b97599ef8d311",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:0,eq=saturation=1.040:contrast=1.064:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "af807ff0c5746c5f0b260860a682512439060dbc72654a9be65e8fd5a307f826"
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.devonvet.com/_files/images/cta-section.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "648c9a58f243fd8ca0a23b59a7a95cd0bef0c8d9bdaf0fe58823ecc639a0be2d",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:0,eq=saturation=0.940:contrast=1.028:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "d1178d6e447a0a2cdca49e61d86d706e063b92fd91c9e9af2561aaac060053cf"
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.devonvet.com/_files/images/card-grid-left.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "b17620bc998ff97a78762a16e78cff5c97c6f896bd788164bb4b97599ef8d311",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:42,eq=saturation=0.965:contrast=1.082:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "9aeb13bc511d6bce5136667633bbe95e7d00ba14ade1f2018b66390abd7a9ece"
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.devonvet.com/_files/images/cta-section.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "648c9a58f243fd8ca0a23b59a7a95cd0bef0c8d9bdaf0fe58823ecc639a0be2d",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:42,eq=saturation=0.990:contrast=1.046:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "afdbd14c27e3ae0c8ee3e00131f245644f7f4bf0230eca6aece8d0038bdb242d"
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.devonvet.com/_files/images/card-grid-left.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "b17620bc998ff97a78762a16e78cff5c97c6f896bd788164bb4b97599ef8d311",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:42,eq=saturation=1.015:contrast=1.010:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "1b1d8e122eba9f68ada66e341a3032ad7fd42b0debed5e7b763ea206a91f8614"
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.devonvet.com/_files/images/cta-section.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "648c9a58f243fd8ca0a23b59a7a95cd0bef0c8d9bdaf0fe58823ecc639a0be2d",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:42,eq=saturation=1.040:contrast=1.064:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "5f613a09204d0fe86128a93c08103969797e7d4dca4c2e4a267171abed999903"
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.devonvet.com/_files/images/card-grid-left.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "b17620bc998ff97a78762a16e78cff5c97c6f896bd788164bb4b97599ef8d311",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:84,eq=saturation=0.940:contrast=1.028:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "cdc80ea9930dbce6252c7ee3556347c78a08464b7e076dc12ab831fca6b2e6fb"
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.devonvet.com/_files/images/cta-section.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "648c9a58f243fd8ca0a23b59a7a95cd0bef0c8d9bdaf0fe58823ecc639a0be2d",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:84,eq=saturation=0.965:contrast=1.082:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "39c5df54191a65e2c80b7ace4f35d65b3ad306655cbb9dff9be4559d84be37ba"
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.devonvet.com/_files/images/card-grid-left.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "b17620bc998ff97a78762a16e78cff5c97c6f896bd788164bb4b97599ef8d311",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:84,eq=saturation=0.990:contrast=1.046:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "8efc7a7625f0b01e7b8dd9886740e70e1fce7d58c2537cb4b5a7293772bd331f"
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.devonvet.com/_files/images/cta-section.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "648c9a58f243fd8ca0a23b59a7a95cd0bef0c8d9bdaf0fe58823ecc639a0be2d",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:84,eq=saturation=1.015:contrast=1.010:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "53eb19ce2075b41fa69791dd0464d527bf09c136ad385026952e237a38cf75d3"
+    }
+  ],
+  "fonts": {
+    "pair": {
+      "id": "alegreya-karla",
+      "display": "Alegreya",
+      "text": "Karla"
+    },
+    "source": "Google Fonts CSS API",
+    "files": [
+      {
+        "file": "font-display-400.woff2",
+        "sha256": "2431eca3ed8ed66e713cf7093d170d77a083a793a5f19a615506d63770abd973"
+      },
+      {
+        "file": "font-display-700.woff2",
+        "sha256": "2431eca3ed8ed66e713cf7093d170d77a083a793a5f19a615506d63770abd973"
+      },
+      {
+        "file": "font-text-400.woff2",
+        "sha256": "3b1eb09a53fd7b26c107b099b3da5fb2ac90b77297cb3ad713a7b40438ae718b"
+      },
+      {
+        "file": "font-text-700.woff2",
+        "sha256": "3b1eb09a53fd7b26c107b099b3da5fb2ac90b77297cb3ad713a7b40438ae718b"
+      }
+    ]
+  }
+}

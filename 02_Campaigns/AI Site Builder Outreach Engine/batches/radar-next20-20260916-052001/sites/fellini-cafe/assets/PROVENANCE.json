@@ -1,0 +1,168 @@
+{
+  "slug": "fellini-cafe",
+  "preparedAt": "2026-09-16T09:22:52.855Z",
+  "sourceSite": "https://www.fellinicafebrynmawr.com/",
+  "sourceFinalUrl": "https://www.fellinicafebrynmawr.com/",
+  "sourcePageSha256": "ddc024c8fd3b9dd9965714b00247216210d4b4f30549f0ddbbc20d523f55f369",
+  "exactLogoRequired": true,
+  "exactLogoSha256": "5ff0d2f4fa8252a64fefa428a5b1cfb0991aced394e99045792cc0a4e72a2275",
+  "firstPartyDerivativePolicy": "Content visuals preserve first-party source photography while adapting crop and tonal balance for the private mobile concept. They are not evidence of additional projects or outcomes.",
+  "generatedCompositionReference": "automation/prospect-radar-next20/.impeccable/mocks/architerra-mobile-three-directions.png",
+  "assets": [
+    {
+      "role": "exact identity",
+      "output": "logo.png",
+      "sourceUrl": "https://images.squarespace-cdn.com/content/v1/5e0a2bfea5d8587ca353c286/1577725409840-3F6HK57F1NDA96TF36YT/Fellini+Cafe-logo+2.png?format=2500w",
+      "sourceSha256": "5ff0d2f4fa8252a64fefa428a5b1cfb0991aced394e99045792cc0a4e72a2275",
+      "outputSha256": "5ff0d2f4fa8252a64fefa428a5b1cfb0991aced394e99045792cc0a4e72a2275",
+      "transformation": "none; exact first-party transparent asset",
+      "transparent": true
+    },
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://images.squarespace-cdn.com/content/v1/5e0a2bfea5d8587ca353c286/1577746872234-K5KT6L6JZESL41480T2N/b448c565-86dd-4987-861c-9441e76dac31.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "4231c1174804a837a51c97cb57b8afc661ada4b775466b90a3d0d2e602dccb8b",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=0.990:contrast=1.046:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "e67074f33694802ab726f2696f15fef63822f87324bbb2a72cbfe10a85a84249"
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://images.squarespace-cdn.com/content/v1/5e0a2bfea5d8587ca353c286/1577746908209-KY0H9KG40H4ITGXKDGAG/ded81438-07ed-4c2e-a850-6baab70b8e15.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "b8dc2fbc4c30aae529f8b39ede9cda99282383a5939cb325db3b194c54eaf42d",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:0,eq=saturation=1.015:contrast=1.010:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "5b0aa1cc3e222a8a2c55ba211255b9910613f9722de69e7b5163147f0a71ba2c"
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://images.squarespace-cdn.com/content/v1/5e0a2bfea5d8587ca353c286/1577747032994-QU2AT7T0YAWT0VUIO7A2/f4daef7a-ed05-46f2-9627-658a6a652d9e.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "26664d88c87c8a90b479c170c0518784136053827aec650dd2546ca5eb373712",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:0,eq=saturation=1.040:contrast=1.064:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "ea63d138494132ea64c7d95797db88c67e0833a11d683fda9f309cf452a7ebc1"
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://images.squarespace-cdn.com/content/v1/5e0a2bfea5d8587ca353c286/1577746872234-K5KT6L6JZESL41480T2N/b448c565-86dd-4987-861c-9441e76dac31.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "4231c1174804a837a51c97cb57b8afc661ada4b775466b90a3d0d2e602dccb8b",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:0,eq=saturation=0.940:contrast=1.028:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "374f13d906d43c0708e3b1846680fa35aae54acc55464758db530877844e2a3f"
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://images.squarespace-cdn.com/content/v1/5e0a2bfea5d8587ca353c286/1577746908209-KY0H9KG40H4ITGXKDGAG/ded81438-07ed-4c2e-a850-6baab70b8e15.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "b8dc2fbc4c30aae529f8b39ede9cda99282383a5939cb325db3b194c54eaf42d",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:42,eq=saturation=0.965:contrast=1.082:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "b4fefc0f78c874938d195d04722615aa36e75a50209b2837878675ed3102d8d4"
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://images.squarespace-cdn.com/content/v1/5e0a2bfea5d8587ca353c286/1577747032994-QU2AT7T0YAWT0VUIO7A2/f4daef7a-ed05-46f2-9627-658a6a652d9e.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "26664d88c87c8a90b479c170c0518784136053827aec650dd2546ca5eb373712",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:42,eq=saturation=0.990:contrast=1.046:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "63118b2e4bb53d00e5652d7fff6828c47fe8c067475a30dbb5b6445ecccc4dcb"
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://images.squarespace-cdn.com/content/v1/5e0a2bfea5d8587ca353c286/1577746872234-K5KT6L6JZESL41480T2N/b448c565-86dd-4987-861c-9441e76dac31.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "4231c1174804a837a51c97cb57b8afc661ada4b775466b90a3d0d2e602dccb8b",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:42,eq=saturation=1.015:contrast=1.010:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "81de11373ced569ebdb65b5d332d526801666f7118789025be0b06aa66db90ae"
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://images.squarespace-cdn.com/content/v1/5e0a2bfea5d8587ca353c286/1577746908209-KY0H9KG40H4ITGXKDGAG/ded81438-07ed-4c2e-a850-6baab70b8e15.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "b8dc2fbc4c30aae529f8b39ede9cda99282383a5939cb325db3b194c54eaf42d",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:42,eq=saturation=1.040:contrast=1.064:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "81f9acf1a44b5c86648773e09b344fc4ea49fb62a9538404d642432ef713729f"
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://images.squarespace-cdn.com/content/v1/5e0a2bfea5d8587ca353c286/1577747032994-QU2AT7T0YAWT0VUIO7A2/f4daef7a-ed05-46f2-9627-658a6a652d9e.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "26664d88c87c8a90b479c170c0518784136053827aec650dd2546ca5eb373712",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:84,eq=saturation=0.940:contrast=1.028:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "20bdc181667861cddd544aa64bb1c470b295c9c8dee7b7e38a328bd3952d60b9"
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://images.squarespace-cdn.com/content/v1/5e0a2bfea5d8587ca353c286/1577746872234-K5KT6L6JZESL41480T2N/b448c565-86dd-4987-861c-9441e76dac31.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "4231c1174804a837a51c97cb57b8afc661ada4b775466b90a3d0d2e602dccb8b",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:84,eq=saturation=0.965:contrast=1.082:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "966ccc7d58a8bff848d1b85118a6c4f72e8c9aa826839b487255fa433085132d"
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://images.squarespace-cdn.com/content/v1/5e0a2bfea5d8587ca353c286/1577746908209-KY0H9KG40H4ITGXKDGAG/ded81438-07ed-4c2e-a850-6baab70b8e15.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "b8dc2fbc4c30aae529f8b39ede9cda99282383a5939cb325db3b194c54eaf42d",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:84,eq=saturation=0.990:contrast=1.046:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "b151b7e586c4ea0562c129babdb8cc163466266705f2c1647b2d959dfb6534e2"
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://images.squarespace-cdn.com/content/v1/5e0a2bfea5d8587ca353c286/1577747032994-QU2AT7T0YAWT0VUIO7A2/f4daef7a-ed05-46f2-9627-658a6a652d9e.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "26664d88c87c8a90b479c170c0518784136053827aec650dd2546ca5eb373712",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:84,eq=saturation=1.015:contrast=1.010:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "bf338be63ccb027c18d9ecdc023e78e686fe6d537da89ff1a25255d493cdc7c5"
+    }
+  ],
+  "fonts": {
+    "pair": {
+      "id": "alegreya-karla",
+      "display": "Alegreya",
+      "text": "Karla"
+    },
+    "source": "Google Fonts CSS API",
+    "files": [
+      {
+        "file": "font-display-400.woff2",
+        "sha256": "2431eca3ed8ed66e713cf7093d170d77a083a793a5f19a615506d63770abd973"
+      },
+      {
+        "file": "font-display-700.woff2",
+        "sha256": "2431eca3ed8ed66e713cf7093d170d77a083a793a5f19a615506d63770abd973"
+      },
+      {
+        "file": "font-text-400.woff2",
+        "sha256": "3b1eb09a53fd7b26c107b099b3da5fb2ac90b77297cb3ad713a7b40438ae718b"
+      },
+      {
+        "file": "font-text-700.woff2",
+        "sha256": "3b1eb09a53fd7b26c107b099b3da5fb2ac90b77297cb3ad713a7b40438ae718b"
+      }
+    ]
+  }
+}

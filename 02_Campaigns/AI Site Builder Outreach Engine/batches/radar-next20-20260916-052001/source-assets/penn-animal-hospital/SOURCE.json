@@ -1,0 +1,90 @@
+{
+  "sourceUrl": "https://www.pennanimal.com/",
+  "finalUrl": "https://www.pennanimal.com/",
+  "sourceDomain": "pennanimal.com",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=utf-8",
+  "pageSha256": "24e63b7096ecd0b039173adbc3f9632613f92d477338331f5e4abdbfdb6d0efb",
+  "title": "Veterinarian in West Grove, PA | Penn Animal Hospital",
+  "description": "At Penn Animal Hospital, we provide compassionate veterinary care, from wellness exams to urgent care. Schedule your pet’s visit with our trusted team.",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "penn",
+      "animal",
+      "hospital"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\penn-animal-hospital\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "http://styles.prosites.com/litesite/6526/images/logo.png",
+    "sourceEvidence": "JSON-LD logo",
+    "type": "png",
+    "dimensions": {
+      "width": 808,
+      "height": 215
+    },
+    "sha256": "d6bf56e7a854311a4e6d0634c9f5446f3b1c16236526e6696bc35c6b537ec724",
+    "sourceSha256": "d6bf56e7a854311a4e6d0634c9f5446f3b1c16236526e6696bc35c6b537ec724",
+    "sourceType": "png",
+    "sourceFileName": null,
+    "transformation": "none; exact first-party transparent asset",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "transparentRatio": 0.7833,
+      "edgeTransparentRatio": 1,
+      "contentRatio": 0.2167,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 79991
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\penn-animal-hospital\\reference-1.jpg",
+      "fileName": "reference-1.jpg",
+      "sourceUrl": "https://c3-preview.prosites.com/301387/wy/images/content/home-2.jpg",
+      "sourceEvidence": "IMG main-img mb-75px mb-lg-0  an image of a blind cat, sitting on  our front desk, looting at the camera.",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 726,
+        "width": 610
+      },
+      "sha256": "387b9787106c33c3764a44e43ab4da2d5aaf61b81b88a3dcbdffcdfe4fdf25c7",
+      "bytes": 290417,
+      "visual": {
+        "ok": true,
+        "lumaRange": 249.2,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [
+    {
+      "url": "https://styles.prosites.com/litesite/6526/images/cta1Img.png",
+      "reason": "reference image is too small"
+    },
+    {
+      "url": "https://styles.prosites.com/litesite/6526/images/cta2Img.png",
+      "reason": "reference image is too small"
+    },
+    {
+      "url": "https://styles.prosites.com/litesite/6526/images/cta3Img.png",
+      "reason": "reference image is too small"
+    },
+    {
+      "url": "https://styles.prosites.com/litesite/6526/images/mainImg2.jpg",
+      "reason": "progressive JPEG is not decodable here"
+    }
+  ],
+  "brandColors": [
+    "#3b579d",
+    "#dc4a38",
+    "#b02616",
+    "#31859b"
+  ],
+  "checkedAt": "2026-09-16T09:20:28.090Z"
+}

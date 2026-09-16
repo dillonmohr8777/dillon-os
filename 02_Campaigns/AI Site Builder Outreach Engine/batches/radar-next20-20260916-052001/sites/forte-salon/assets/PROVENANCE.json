@@ -1,0 +1,168 @@
+{
+  "slug": "forte-salon",
+  "preparedAt": "2026-09-16T09:22:33.011Z",
+  "sourceSite": "https://forte-salon.com/",
+  "sourceFinalUrl": "https://forte-salon.com/",
+  "sourcePageSha256": "3b9d8637a0119e65a69a1b23275446710c81c496c6895a0b4fa292fdfd1fcf5f",
+  "exactLogoRequired": true,
+  "exactLogoSha256": "ad5c445fa2b80bd0e58752fe11cffdeff80fa0210f42f9d82f728207c6b2398c",
+  "firstPartyDerivativePolicy": "Content visuals preserve first-party source photography while adapting crop and tonal balance for the private mobile concept. They are not evidence of additional projects or outcomes.",
+  "generatedCompositionReference": "automation/prospect-radar-next20/.impeccable/mocks/architerra-mobile-three-directions.png",
+  "assets": [
+    {
+      "role": "exact identity",
+      "output": "logo.png",
+      "sourceUrl": "https://forte-salon.com/wp-content/uploads/2018/01/forte-logo-mobile-x2.png",
+      "sourceSha256": "ad5c445fa2b80bd0e58752fe11cffdeff80fa0210f42f9d82f728207c6b2398c",
+      "outputSha256": "ad5c445fa2b80bd0e58752fe11cffdeff80fa0210f42f9d82f728207c6b2398c",
+      "transformation": "none; exact first-party transparent asset",
+      "transparent": true
+    },
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://forte-salon.com/wp-content/uploads/2018/06/hp-video.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "faecf274002b27b10d57fad1cfedf84b41809505253a3b78a4d8022edd3f1d40",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=0.940:contrast=1.010:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "7aa8d25d4273aa698fc83ffa407f474de863897c742a3ab26a7339e454ec7ba7"
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://forte-salon.com/wp-content/uploads/2018/06/hp-video.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "faecf274002b27b10d57fad1cfedf84b41809505253a3b78a4d8022edd3f1d40",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:0,eq=saturation=0.965:contrast=1.064:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "f81376d769ec6a4df8cca7adff3e312d592f8026390cff76d65878e0871684ad"
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://forte-salon.com/wp-content/uploads/2018/06/hp-video.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "faecf274002b27b10d57fad1cfedf84b41809505253a3b78a4d8022edd3f1d40",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:0,eq=saturation=0.990:contrast=1.028:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "a7ef8f27d80369ad8cd39637bc1239313ad5f2ef5bf3d6cd4024b23beba0ff31"
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://forte-salon.com/wp-content/uploads/2018/06/hp-video.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "faecf274002b27b10d57fad1cfedf84b41809505253a3b78a4d8022edd3f1d40",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:0,eq=saturation=1.015:contrast=1.082:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "25b5c351fa43fb0030b9125c742e7568b8663070ea63076ba2edd0fe42fc814d"
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://forte-salon.com/wp-content/uploads/2018/06/hp-video.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "faecf274002b27b10d57fad1cfedf84b41809505253a3b78a4d8022edd3f1d40",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:42,eq=saturation=1.040:contrast=1.046:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "c9b0e76f4f4d069785dbbe71c2daeccbcfc5d49ec25ad4db7e49d14934d82e04"
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://forte-salon.com/wp-content/uploads/2018/06/hp-video.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "faecf274002b27b10d57fad1cfedf84b41809505253a3b78a4d8022edd3f1d40",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:42,eq=saturation=0.940:contrast=1.010:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "1057559a65540ac5d6edd76134cb049a7b0d03f45c5e1297dc1e3fd75a77cd99"
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://forte-salon.com/wp-content/uploads/2018/06/hp-video.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "faecf274002b27b10d57fad1cfedf84b41809505253a3b78a4d8022edd3f1d40",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:42,eq=saturation=0.965:contrast=1.064:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "730e118512655f42284bcd9aabf8a78d3389aea83a5d400b9db03d8875530422"
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://forte-salon.com/wp-content/uploads/2018/06/hp-video.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "faecf274002b27b10d57fad1cfedf84b41809505253a3b78a4d8022edd3f1d40",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:42,eq=saturation=0.990:contrast=1.028:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "52006899afa62b71a119816877638f4b8ed1cae4357bb63478e6dff257dcb96a"
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://forte-salon.com/wp-content/uploads/2018/06/hp-video.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "faecf274002b27b10d57fad1cfedf84b41809505253a3b78a4d8022edd3f1d40",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:84,eq=saturation=1.015:contrast=1.082:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "2ff8fd4aed4c469c3cde2b51280cf6440ab235b6d84857647f0391a0971e8153"
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://forte-salon.com/wp-content/uploads/2018/06/hp-video.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "faecf274002b27b10d57fad1cfedf84b41809505253a3b78a4d8022edd3f1d40",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:84,eq=saturation=1.040:contrast=1.046:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "f24329e71a7fdc6552278f7f10568f749fb229363148d2a7ae12fe32a8a99f9c"
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://forte-salon.com/wp-content/uploads/2018/06/hp-video.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "faecf274002b27b10d57fad1cfedf84b41809505253a3b78a4d8022edd3f1d40",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:84,eq=saturation=0.940:contrast=1.010:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "153fffc386796494f772e877b850e756cb83bb26dcc8615cfee0627a97af03fe"
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://forte-salon.com/wp-content/uploads/2018/06/hp-video.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "faecf274002b27b10d57fad1cfedf84b41809505253a3b78a4d8022edd3f1d40",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:84,eq=saturation=0.965:contrast=1.064:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "7b659fe7cf7e0f3f1193c95e7f04215859b7aa37b0685edda97d53a93e15c48d"
+    }
+  ],
+  "fonts": {
+    "pair": {
+      "id": "syne-work",
+      "display": "Syne",
+      "text": "Work Sans"
+    },
+    "source": "Google Fonts CSS API",
+    "files": [
+      {
+        "file": "font-display-400.woff2",
+        "sha256": "68b623f0e45b905041b2edb9b2e4f563a505f13db1cd06b5f1946eb2e1f47048"
+      },
+      {
+        "file": "font-display-700.woff2",
+        "sha256": "68b623f0e45b905041b2edb9b2e4f563a505f13db1cd06b5f1946eb2e1f47048"
+      },
+      {
+        "file": "font-text-400.woff2",
+        "sha256": "1dd49afc07fb2231b2ff686cbf007725fb2742271bb1f28ebd98f22a0d817343"
+      },
+      {
+        "file": "font-text-700.woff2",
+        "sha256": "1dd49afc07fb2231b2ff686cbf007725fb2742271bb1f28ebd98f22a0d817343"
+      }
+    ]
+  }
+}

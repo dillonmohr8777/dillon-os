@@ -1,0 +1,168 @@
+{
+  "slug": "philly-aids-thrift-giovanni-s-room",
+  "preparedAt": "2026-09-16T09:22:35.848Z",
+  "sourceSite": "https://www.queerbooks.com/",
+  "sourceFinalUrl": "https://queerbooks.com/",
+  "sourcePageSha256": "1fbd536a81f450a91093e85677d100fe3c07e69a1a4f2780dbc5590b8d0d5af1",
+  "exactLogoRequired": true,
+  "exactLogoSha256": "a2d92fe786d5c74d4107c58d65a228bd96b6a17a5386cd8184178a731c3b3572",
+  "firstPartyDerivativePolicy": "Content visuals preserve first-party source photography while adapting crop and tonal balance for the private mobile concept. They are not evidence of additional projects or outcomes.",
+  "generatedCompositionReference": "automation/prospect-radar-next20/.impeccable/mocks/architerra-mobile-three-directions.png",
+  "assets": [
+    {
+      "role": "exact identity",
+      "output": "logo.png",
+      "sourceUrl": "https://queerbooks.com/wp-content/uploads/2017/09/PATG-logo.png",
+      "sourceSha256": "a2d92fe786d5c74d4107c58d65a228bd96b6a17a5386cd8184178a731c3b3572",
+      "outputSha256": "a2d92fe786d5c74d4107c58d65a228bd96b6a17a5386cd8184178a731c3b3572",
+      "transformation": "none; exact first-party transparent asset",
+      "transparent": true
+    },
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://queerbooks.com/wp-content/uploads/2025/12/Hero-Image-New-Gios-Room-1.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "4273cc615420eb677ace909d151e10ea92846a09d24e09d05c07f663446085c1",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=0.965:contrast=1.028:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "f0b534a4a67ed7aa338381b716d97144c8a1c8d3b4054d007e608afb57754bf6"
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://queerbooks.com/wp-content/uploads/2026/07/Next-months-mystery-book-e1783708580566.png",
+      "sourceFile": "reference-2.png",
+      "sourceSha256": "236b24c98d2abec62a968ff3fd3677e6d78e516f3fbe219e232411768afc5921",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:0,eq=saturation=0.990:contrast=1.082:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "1caab2d3d03a90838c9c42b40f762111b5487254974375e4a99db863906cafa9"
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://queerbooks.com/wp-content/uploads/2025/10/James-Baldwin-scaled.png",
+      "sourceFile": "reference-3.png",
+      "sourceSha256": "b6f7d354cf45fc9861b15d33c9d219ea226c0e20d6e2cd78624f0ca86a69d2ff",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:0,eq=saturation=1.015:contrast=1.046:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "c5988e472d70cf8b79857110a0a3316669b9d6f07f2b4888c509bce8509d58c1"
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://queerbooks.com/wp-content/uploads/2025/12/Hero-Image-New-Gios-Room-1.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "4273cc615420eb677ace909d151e10ea92846a09d24e09d05c07f663446085c1",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:0,eq=saturation=1.040:contrast=1.010:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "e15ee2b1ff5e4a92721c39723038f78d10a65c8ebb87b6eb1d6ae81faa267b58"
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://queerbooks.com/wp-content/uploads/2026/07/Next-months-mystery-book-e1783708580566.png",
+      "sourceFile": "reference-2.png",
+      "sourceSha256": "236b24c98d2abec62a968ff3fd3677e6d78e516f3fbe219e232411768afc5921",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:42,eq=saturation=0.940:contrast=1.064:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "f336666cd33b5bbfb375356d1694877bc1df1f6760d12a5e62eee6fd90451112"
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://queerbooks.com/wp-content/uploads/2025/10/James-Baldwin-scaled.png",
+      "sourceFile": "reference-3.png",
+      "sourceSha256": "b6f7d354cf45fc9861b15d33c9d219ea226c0e20d6e2cd78624f0ca86a69d2ff",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:42,eq=saturation=0.965:contrast=1.028:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "f4312beb8241c2878f415f5260d4cb4ad8beb756368f1f545c2ee9817cf9984b"
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://queerbooks.com/wp-content/uploads/2025/12/Hero-Image-New-Gios-Room-1.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "4273cc615420eb677ace909d151e10ea92846a09d24e09d05c07f663446085c1",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:42,eq=saturation=0.990:contrast=1.082:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "100790cd55312476b8469317af0f5e630f43f0177696bcfea1c9f14c70029d3f"
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://queerbooks.com/wp-content/uploads/2026/07/Next-months-mystery-book-e1783708580566.png",
+      "sourceFile": "reference-2.png",
+      "sourceSha256": "236b24c98d2abec62a968ff3fd3677e6d78e516f3fbe219e232411768afc5921",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:42,eq=saturation=1.015:contrast=1.046:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "181e7adac4b529eb70a8872136ff1f748c80c1e486045c7dd59447db52c91215"
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://queerbooks.com/wp-content/uploads/2025/10/James-Baldwin-scaled.png",
+      "sourceFile": "reference-3.png",
+      "sourceSha256": "b6f7d354cf45fc9861b15d33c9d219ea226c0e20d6e2cd78624f0ca86a69d2ff",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:84,eq=saturation=1.040:contrast=1.010:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "8320a7270af1a5aec915185cfa4f2773a2248fdcdd50b03022af4468ef46e275"
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://queerbooks.com/wp-content/uploads/2025/12/Hero-Image-New-Gios-Room-1.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "4273cc615420eb677ace909d151e10ea92846a09d24e09d05c07f663446085c1",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:84,eq=saturation=0.940:contrast=1.064:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "eeb32b9771a5bee0fdb9a52b50e34cf08d9fdda477f7b32819fd579d37926366"
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://queerbooks.com/wp-content/uploads/2026/07/Next-months-mystery-book-e1783708580566.png",
+      "sourceFile": "reference-2.png",
+      "sourceSha256": "236b24c98d2abec62a968ff3fd3677e6d78e516f3fbe219e232411768afc5921",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:84,eq=saturation=0.965:contrast=1.028:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "5098b95abc5db41608a9e6fc845c6b442f72397140f2146986fa9b3051cd4d33"
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://queerbooks.com/wp-content/uploads/2025/10/James-Baldwin-scaled.png",
+      "sourceFile": "reference-3.png",
+      "sourceSha256": "b6f7d354cf45fc9861b15d33c9d219ea226c0e20d6e2cd78624f0ca86a69d2ff",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:84,eq=saturation=0.990:contrast=1.082:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "2fefd7917502424ff41cb2428dbf1b299dd23755c653a56efacdbaff28867bf7"
+    }
+  ],
+  "fonts": {
+    "pair": {
+      "id": "bricolage-manrope",
+      "display": "Bricolage Grotesque",
+      "text": "Manrope"
+    },
+    "source": "Google Fonts CSS API",
+    "files": [
+      {
+        "file": "font-display-400.woff2",
+        "sha256": "a97804dc9fbe5fc972a08018c5eda4dab7ef2346f64c57e61419d05e6de4ea1c"
+      },
+      {
+        "file": "font-display-700.woff2",
+        "sha256": "a97804dc9fbe5fc972a08018c5eda4dab7ef2346f64c57e61419d05e6de4ea1c"
+      },
+      {
+        "file": "font-text-400.woff2",
+        "sha256": "a30ddcd349703aff7464c34bef3fffdff405ee50c113440d7c8693c02d210972"
+      },
+      {
+        "file": "font-text-700.woff2",
+        "sha256": "a30ddcd349703aff7464c34bef3fffdff405ee50c113440d7c8693c02d210972"
+      }
+    ]
+  }
+}

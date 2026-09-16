@@ -1,0 +1,125 @@
+{
+  "sourceUrl": "https://drmcsurdy.com/",
+  "finalUrl": "https://drmcsurdy.com/",
+  "sourceDomain": "drmcsurdy.com",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=UTF-8",
+  "pageSha256": "538ea64c3750653d77e5bcfc89518985c9ce3f64bfd9ce9b2b12752589adcdd8",
+  "title": "Orthodontist in Montgomery County | The Smile Specialists",
+  "description": "The Smile Specialists at Dr. McSurdy Orthodontics provide advanced orthodontic care for all ages. 40+ years of personalized treatment. Complementary Smile Analysis.",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "mcsurdy",
+      "orthodontics",
+      "smile",
+      "specialists"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\mcsurdy-orthodontics-the-smile-specialists\\logo.svg",
+    "fileName": "logo.svg",
+    "sourceUrl": "https://drmcsurdy.com/wp-content/uploads/2026/04/logo.svg",
+    "sourceEvidence": "JSON-LD logo URL",
+    "type": "svg",
+    "dimensions": {
+      "width": 274,
+      "height": 62
+    },
+    "sha256": "af65114025e277bf6ebeb07b4bb12a60fc921e20275a757ba235429fbf3d1dff",
+    "sourceSha256": "af65114025e277bf6ebeb07b4bb12a60fc921e20275a757ba235429fbf3d1dff",
+    "sourceType": "svg",
+    "sourceFileName": null,
+    "transformation": "none; exact first-party transparent asset",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "vector": true
+    },
+    "transparent": true,
+    "bytes": 18738
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\mcsurdy-orthodontics-the-smile-specialists\\reference-1.png",
+      "fileName": "reference-1.png",
+      "sourceUrl": "https://drmcsurdy.com/wp-content/uploads/2026/07/closeup-of-smiling-person-with-retainers.png",
+      "sourceEvidence": "IMG closeup of smiling person with retainers",
+      "type": "png",
+      "dimensions": {
+        "width": 1072,
+        "height": 1068
+      },
+      "sha256": "abfa814e81045d208ee0014b12e278a730f94af32d85388fe2fa77a3c2dfd46d",
+      "bytes": 772432,
+      "visual": {
+        "ok": true,
+        "lumaRange": 239.8,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\mcsurdy-orthodontics-the-smile-specialists\\reference-2.jpg",
+      "fileName": "reference-2.jpg",
+      "sourceUrl": "https://drmcsurdy.com/wp-content/uploads/2026/05/dr-david-mcsurdy-768x698.jpg",
+      "sourceEvidence": "IMG bg-image d-none d-lg-block object-fit-cover object-position-center-center  dr david mcsurdy",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 698,
+        "width": 768
+      },
+      "sha256": "af2d3e41127925219141b24c8924edf161bde71f8acc114204b8694a5d791604",
+      "bytes": 110953,
+      "visual": {
+        "ok": true,
+        "lumaRange": 244,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\mcsurdy-orthodontics-the-smile-specialists\\reference-3.jpg",
+      "fileName": "reference-3.jpg",
+      "sourceUrl": "https://drmcsurdy.com/wp-content/uploads/2026/04/group-shot-of-medical-professionals-holding-hands-as-a-team-768x349.jpg",
+      "sourceEvidence": "IMG bg-image d-none d-lg-block object-fit-cover object-position-center-center  group shot of medical professionals holding hands as a team",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 349,
+        "width": 768
+      },
+      "sha256": "6abe87ad4ffdf72fd21ccee3f53f558da072712b7c8e0dc8604c9599e81c1060",
+      "bytes": 20873,
+      "visual": {
+        "ok": true,
+        "lumaRange": 36.6,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [
+    {
+      "url": "https://www.facebook.com/tr?id=1159921164116390&ev=PageView&noscript=1",
+      "reason": "unsupported reference type unknown"
+    },
+    {
+      "url": "https://drmcsurdy.com/wp-content/uploads/2026/07/dr-mcsurdy-dr-boyle-and-team-1-1536x1024.jpg",
+      "reason": "progressive JPEG is not decodable here"
+    },
+    {
+      "url": "https://drmcsurdy.com/wp-content/uploads/2026/07/dr-mcsurdy-dr-boyle-and-team-1.jpg",
+      "reason": "progressive JPEG is not decodable here"
+    },
+    {
+      "url": "https://drmcsurdy.com/wp-content/uploads/2026/07/dr-boyle-with-patients-1.jpg",
+      "reason": "progressive JPEG is not decodable here"
+    }
+  ],
+  "brandColors": [
+    "#f28b22",
+    "#003388",
+    "#112681",
+    "#00d084",
+    "#0693e3"
+  ],
+  "checkedAt": "2026-09-16T09:20:28.502Z"
+}

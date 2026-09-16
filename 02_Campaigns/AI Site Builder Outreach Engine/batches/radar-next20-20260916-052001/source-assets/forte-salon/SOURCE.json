@@ -1,0 +1,90 @@
+{
+  "sourceUrl": "https://forte-salon.com/",
+  "finalUrl": "https://forte-salon.com/",
+  "sourceDomain": "forte-salon.com",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=UTF-8",
+  "pageSha256": "3b9d8637a0119e65a69a1b23275446710c81c496c6895a0b4fa292fdfd1fcf5f",
+  "title": "Home | Forte Salon | Bethlehem, PA",
+  "description": "Forte Salon is located in West Bethlehem, just a short distance from historic downtown. We invite you to experience a warm and inviting salon atmosphere.",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "forte",
+      "salon"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\forte-salon\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://forte-salon.com/wp-content/uploads/2018/01/forte-logo-mobile-x2.png",
+    "sourceEvidence": "JSON-LD logo URL",
+    "type": "png",
+    "dimensions": {
+      "width": 200,
+      "height": 138
+    },
+    "sha256": "ad5c445fa2b80bd0e58752fe11cffdeff80fa0210f42f9d82f728207c6b2398c",
+    "sourceSha256": "ad5c445fa2b80bd0e58752fe11cffdeff80fa0210f42f9d82f728207c6b2398c",
+    "sourceType": "png",
+    "sourceFileName": null,
+    "transformation": "none; exact first-party transparent asset",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "transparentRatio": 0.8275,
+      "edgeTransparentRatio": 1,
+      "contentRatio": 0.1725,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 12377
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260916-052001\\preflight\\forte-salon\\reference-1.png",
+      "fileName": "reference-1.png",
+      "sourceUrl": "https://forte-salon.com/wp-content/uploads/2018/06/hp-video.png",
+      "sourceEvidence": "og:image",
+      "type": "png",
+      "dimensions": {
+        "width": 800,
+        "height": 450
+      },
+      "sha256": "faecf274002b27b10d57fad1cfedf84b41809505253a3b78a4d8022edd3f1d40",
+      "bytes": 222333,
+      "visual": {
+        "ok": true,
+        "lumaRange": 226.1,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [
+    {
+      "url": "https://forte-salon.com/wp-content/uploads/2017/08/homepage-hero1280x862.jpg",
+      "reason": "progressive JPEG is not decodable here"
+    },
+    {
+      "url": "https://forte-salon.com/wp-content/uploads/2017/08/trans-bg.png",
+      "reason": "reference image is too small"
+    },
+    {
+      "url": "https://forte-salon.com/wp-content/uploads/2018/06/hp-feel-our-energy-graphic.png",
+      "reason": "reference image is too small"
+    },
+    {
+      "url": "https://forte-salon.com/wp-content/uploads/2018/04/product-colorproof-bio-repair.jpg",
+      "reason": "progressive JPEG is not decodable here"
+    }
+  ],
+  "brandColors": [
+    "#d8568c",
+    "#c6356a",
+    "#e5aec1",
+    "#a0808e",
+    "#abb8c3"
+  ],
+  "checkedAt": "2026-09-16T09:20:49.702Z"
+}
