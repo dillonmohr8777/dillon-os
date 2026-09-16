@@ -11,12 +11,27 @@
 //   POST /api/login   -> {token} -> sets the momentum_hud cookie, rate limited
 //   GET  /             -> the mirror page (auth gated)
 //   GET  /api/agents  -> JSON, same shape as the local server's /api/agents
+//   GET  /api/tenants -> JSON tenant list, operator only
 //   GET  /favicon.ico -> 204
 //
-// Auth mirrors _os/server.js exactly: shared secret in MOMENTUM_HUD_TOKEN
-// (here a Worker secret, not an env var), cookie gated, timing safe compare,
-// login rate limited. There is no POST /enabled route. This mirror cannot
-// toggle anything, on purpose.
+// Tenancy model: this is a managed service, not self serve. Momentum runs
+// every client's agents; a client is invited to view their own slice inside
+// Momentum's environment. Isolation is client from client, never client from
+// operator: the `momentum` tenant (is_operator=1) sees every row, across all
+// tenants; every other tenant sees only WHERE tenant = their id, with no
+// request parameter able to override that. Clients stay read only, same as
+// before.
+//
+// Auth: POST /api/login sha256's the submitted token and looks it up in
+// tenants.token_hash (status='active'). The legacy MOMENTUM_HUD_TOKEN secret
+// still works as a fallback that resolves to the `momentum` operator tenant,
+// so the pre-tenancy login flow does not break. The cookie carries the
+// tenant id plus an HMAC (keyed on MOMENTUM_HUD_TOKEN) over that id, so a
+// client cannot hand edit the cookie to read another tenant's roster: this
+// is the entire security boundary between clients. Timing safe compare,
+// Secure/HttpOnly/SameSite cookie flags, and the login rate limit are all
+// unchanged from before. There is no POST /enabled route. This mirror
+// cannot toggle anything, on purpose.
 
 const LOGIN_MAX_ATTEMPTS = 10;
 const LOGIN_WINDOW_MS = 5 * 60 * 1000;
@@ -48,11 +63,74 @@ function timingSafeEqual(a, b) {
   return crypto.subtle.timingSafeEqual(aBytes, bBytes);
 }
 
-function isAuthed(request, env) {
-  if (!env.MOMENTUM_HUD_TOKEN) return true; // matches local: no secret set stays open
+async function sha256Hex(s) {
+  const buf = await crypto.subtle.digest('SHA-256', encoder.encode(s));
+  return [...new Uint8Array(buf)].map((b) => b.toString(16).padStart(2, '0')).join('');
+}
+
+function b64url(bytes) {
+  let str = '';
+  for (const b of bytes) str += String.fromCharCode(b);
+  return btoa(str).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+}
+function b64urlToBytes(s) {
+  s = s.replace(/-/g, '+').replace(/_/g, '/');
+  while (s.length % 4) s += '=';
+  const str = atob(s);
+  const bytes = new Uint8Array(str.length);
+  for (let i = 0; i < str.length; i++) bytes[i] = str.charCodeAt(i);
+  return bytes;
+}
+function hmacKey(secret) {
+  return crypto.subtle.importKey('raw', encoder.encode(secret), { name: 'HMAC', hash: 'SHA-256' }, false, ['sign', 'verify']);
+}
+// Cookie shape: <base64url tenant id>.<base64url HMAC-SHA256 of that payload,
+// keyed on MOMENTUM_HUD_TOKEN>. crypto.subtle.verify does a constant time tag
+// compare, so hand editing the tenant id without the secret cannot forge a
+// matching signature.
+async function signCookie(tenantId, secret) {
+  const key = await hmacKey(secret);
+  const payload = b64url(encoder.encode(tenantId));
+  const sig = await crypto.subtle.sign('HMAC', key, encoder.encode(payload));
+  return `${payload}.${b64url(new Uint8Array(sig))}`;
+}
+async function verifyCookie(value, secret) {
+  const i = value.lastIndexOf('.');
+  if (i < 0) return null;
+  const payload = value.slice(0, i);
+  const sig = value.slice(i + 1);
+  let sigBytes;
+  try {
+    sigBytes = b64urlToBytes(sig);
+  } catch {
+    return null;
+  }
+  const key = await hmacKey(secret);
+  const ok = await crypto.subtle.verify('HMAC', key, sigBytes, encoder.encode(payload));
+  if (!ok) return null;
+  try {
+    return new TextDecoder().decode(b64urlToBytes(payload));
+  } catch {
+    return null;
+  }
+}
+
+// Resolves the request to a tenant context, or null if not authed. When no
+// MOMENTUM_HUD_TOKEN secret is configured the console stays open, same as
+// before tenancy existed, and opens as the operator so nothing regresses on
+// a machine with no secret set (matches local: no secret set stays open).
+async function getTenantFromRequest(request, env) {
+  if (!env.MOMENTUM_HUD_TOKEN) return { id: 'momentum', isOperator: true, displayName: 'Momentum Digital' };
   const cookie = request.headers.get('cookie') || '';
   const m = cookie.match(/(?:^|;\s*)momentum_hud=([^;]+)/);
-  return !!m && timingSafeEqual(m[1], env.MOMENTUM_HUD_TOKEN);
+  if (!m) return null;
+  const tenantId = await verifyCookie(m[1], env.MOMENTUM_HUD_TOKEN);
+  if (!tenantId) return null;
+  const row = await env.CONSOLE.prepare('SELECT id, display_name, is_operator FROM tenants WHERE id = ? AND status = ?')
+    .bind(tenantId, 'active')
+    .first();
+  if (!row) return null;
+  return { id: row.id, isOperator: !!row.is_operator, displayName: row.display_name };
 }
 
 function json(data, status = 200) {
@@ -66,12 +144,15 @@ function html(body, status = 200) {
 }
 function safeParse(text) { try { return JSON.parse(text || '[]'); } catch { return []; } }
 
-async function getAgents(env) {
-  const { results } = await env.CONSOLE.prepare(
-    `SELECT a.id, a.name, a.lane, a.function, a.audience, a.cadence, a.enabled, a.lifecycle, a.kind, a.outputs,
+async function getAgents(env, tenant) {
+  const base = `SELECT a.id, a.name, a.lane, a.function, a.audience, a.cadence, a.enabled, a.lifecycle, a.kind, a.outputs, a.tenant,
             r.run_id, r.started, r.ended, r.exit_code, r.status AS run_status, r.artifact, r.note
-     FROM agents a LEFT JOIN runs r ON r.agent_id = a.id`
-  ).all();
+     FROM agents a LEFT JOIN runs r ON r.agent_id = a.id AND r.tenant = a.tenant`;
+  // Operator sees every row, across every tenant. A client tenant is always
+  // scoped server side to their own rows; there is no request parameter
+  // that can widen this.
+  const stmt = tenant.isOperator ? env.CONSOLE.prepare(base) : env.CONSOLE.prepare(`${base} WHERE a.tenant = ?`).bind(tenant.id);
+  const { results } = await stmt.all();
   const agents = results.map((row) => ({
     id: row.id,
     name: row.name,
@@ -82,6 +163,7 @@ async function getAgents(env) {
     audience: row.audience || 'internal',
     function: row.function || 'unassigned',
     kind: row.kind || null,
+    tenant: row.tenant,
     outputs: safeParse(row.outputs),
     last: row.run_id
       ? { run_id: row.run_id, started: row.started, ended: row.ended, exit_code: row.exit_code, status: row.run_status, artifact: row.artifact, note: row.note }
@@ -96,6 +178,13 @@ async function getAgents(env) {
     return x.name.localeCompare(y.name);
   });
   return agents;
+}
+
+async function getTenants(env) {
+  const { results } = await env.CONSOLE.prepare(
+    "SELECT id, display_name FROM tenants WHERE status = 'active' ORDER BY is_operator DESC, display_name COLLATE NOCASE"
+  ).all();
+  return results;
 }
 
 async function getSyncedAt(env) {
@@ -151,7 +240,8 @@ document.getElementById('f').addEventListener('submit', async (e) => {
 // Tokens copied from _os/public/index.html, hosted Claude Design project
 // "Momentum Design System" 09b3bbc0-a8f7-4acc-88ae-8a47648d75a4 (v3 blue /
 // white / gold). Literal values only, same as the local console.
-function pageHtml(syncedAtIso) {
+function pageHtml(syncedAtIso, tenant) {
+  const cols = tenant.isOperator ? 8 : 7;
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -189,6 +279,9 @@ function pageHtml(syncedAtIso) {
     font-size:var(--size-micro); letter-spacing:var(--tracking-meta); text-transform:uppercase; color:var(--paper-dim); }
   .band-foot b { color:var(--paper); font-weight:var(--weight-nav); }
   .band-foot .synced { color:var(--gold); }
+  .band-foot select { background:var(--navy); color:var(--paper); border:1px solid var(--line-dark);
+    border-radius:var(--radius-control); padding:4px 8px; font-size:var(--size-micro); font-weight:var(--weight-nav);
+    letter-spacing:var(--tracking-meta); text-transform:uppercase; }
   main { padding:var(--space-panel) var(--wrap-gutter) var(--space-inset); display:grid; gap:var(--space-panel); }
   .notice { background:var(--paper); border:1px solid var(--line); border-left:4px solid var(--gold);
     border-radius:var(--radius-control); padding:var(--space-control) var(--space-detail);
@@ -208,7 +301,7 @@ function pageHtml(syncedAtIso) {
     padding:0 var(--space-control) var(--space-compact); border-bottom:2px solid var(--ink); }
   .agents-table td { padding:11px var(--space-control); border-bottom:1px solid var(--line);
     color:var(--ink); font-size:var(--size-label); vertical-align:middle; }
-  .agents-table td.c-cad, .agents-table td.c-last, .agents-table td.c-exit, .agents-table td.c-art, .agents-table td.c-en { color:var(--muted); }
+  .agents-table td.c-cad, .agents-table td.c-last, .agents-table td.c-exit, .agents-table td.c-art, .agents-table td.c-en, .agents-table td.c-tenant { color:var(--muted); }
   .agents-table .c-name { font-weight:var(--weight-nav); max-width:300px; }
   .agents-table .c-name, .agents-table .c-art, .agents-table .c-cad { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
   .agents-table .c-exit { text-align:right; font-variant-numeric:tabular-nums; }
@@ -238,7 +331,7 @@ function pageHtml(syncedAtIso) {
     padding:var(--space-detail) var(--wrap-gutter) var(--space-panel); color:var(--muted); font-size:var(--size-micro);
     letter-spacing:var(--tracking-meta); text-transform:uppercase; border-top:1px solid var(--line); }
   @media (max-width: 760px) {
-    .agents-table .c-cad, .agents-table .c-exit, .agents-table .c-art { display:none; }
+    .agents-table .c-cad, .agents-table .c-exit, .agents-table .c-art, .agents-table .c-tenant { display:none; }
     .agents-table th, .agents-table td { padding-left:0; padding-right:6px; }
     .agents-table .c-name { white-space:normal; max-width:none; overflow:visible; }
     .roster { padding:var(--space-control); }
@@ -253,6 +346,8 @@ function pageHtml(syncedAtIso) {
     <div class="wm-2">Agent Console Mirror</div>
     <div class="band-foot">
       <span>Read only cloud copy</span>
+      <span>Viewing <b>${escHtml(tenant.displayName)}</b></span>
+      ${tenant.isOperator ? '<span>Tenant <select id="tenant-switch"><option value="">All tenants</option></select></span>' : ''}
       <span>Last synced <b class="synced" id="synced" data-iso="${syncedAtIso || ''}">${syncedAtIso ? 'just now' : 'never'}</b></span>
     </div>
   </header>
@@ -263,7 +358,7 @@ function pageHtml(syncedAtIso) {
       <table class="agents-table">
         <thead><tr>
           <th class="c-name">Agent</th><th class="c-cad">Cadence</th><th class="c-last">Last run</th>
-          <th class="c-exit">Exit</th><th class="c-status">Status</th><th class="c-en">Enabled</th><th class="c-art">Artifact</th>
+          <th class="c-exit">Exit</th><th class="c-status">Status</th><th class="c-en">Enabled</th><th class="c-art">Artifact</th>${tenant.isOperator ? '<th class="c-tenant">Tenant</th>' : ''}
         </tr></thead>
         <tbody id="agents-body"></tbody>
       </table>
@@ -280,6 +375,9 @@ function pageHtml(syncedAtIso) {
 </div>
 <script>
 const $ = (id) => document.getElementById(id);
+const IS_OPERATOR = ${tenant.isOperator ? 'true' : 'false'};
+const COLS = ${cols};
+let tenantFilter = '';
 
 function agoStr(iso) {
   if (!iso) return null;
@@ -330,6 +428,7 @@ function agentRow(a) {
   const cadence = sub ? 'on demand' : (a.cadence || 'not scheduled');
   const exit = last && last.exit_code != null ? last.exit_code : '';
   const artifact = last && last.artifact ? esc(last.artifact) : '';
+  const tenantCell = IS_OPERATOR ? '<td class="c-tenant">' + esc(a.tenant || '') + '</td>' : '';
   return '<tr class="' + (status === 'running' ? 'running' : '') + ' ' + (a.enabled ? '' : 'off') + '">' +
     '<td class="c-name" title="' + esc(a.name) + '">' + esc(a.name) + (sub ? '<span class="sub-tag">in session</span>' : '') + '</td>' +
     '<td class="c-cad" title="' + esc(cadence) + '">' + esc(cadence) + '</td>' +
@@ -337,12 +436,12 @@ function agentRow(a) {
     '<td class="c-exit">' + exit + '</td>' +
     '<td class="c-status"><span class="status-pill ' + status + '">' + (status === 'never' ? 'never ran' : esc(status)) + '</span></td>' +
     '<td class="c-en">' + (a.enabled ? 'on' : 'off') + '</td>' +
-    '<td class="c-art" title="' + artifact + '">' + artifact + '</td>' +
+    '<td class="c-art" title="' + artifact + '">' + artifact + '</td>' + tenantCell +
     '</tr>';
 }
 function groupHead(g) {
   const on = g.rows.filter((r) => r.enabled).length;
-  return '<tr class="grp"><th colspan="7" scope="colgroup">' + esc(g.name) + '<span>' + on + ' on / ' + g.rows.length + '</span></th></tr>';
+  return '<tr class="grp"><th colspan="' + COLS + '" scope="colgroup">' + esc(g.name) + '<span>' + on + ' on / ' + g.rows.length + '</span></th></tr>';
 }
 
 let agentsState = [];
@@ -350,14 +449,15 @@ let showInternal = false;
 try { showInternal = localStorage.getItem('mac.show-internal') === '1'; } catch {}
 
 function renderAgents() {
-  const momentum = agentsState.filter((a) => a.audience === 'momentum');
-  const rest = agentsState.filter((a) => a.audience !== 'momentum');
+  const scoped = (IS_OPERATOR && tenantFilter) ? agentsState.filter((a) => a.tenant === tenantFilter) : agentsState;
+  const momentum = scoped.filter((a) => a.audience === 'momentum');
+  const rest = scoped.filter((a) => a.audience !== 'momentum');
   $('agents-count').textContent = momentum.filter((a) => a.enabled).length + ' on / ' + momentum.length + ' momentum';
-  $('foot-count').textContent = agentsState.length + ' agents total';
+  $('foot-count').textContent = scoped.length + ' agents total';
   let out = groupRows(momentum).map((g) => groupHead(g) + g.rows.map(agentRow).join('')).join('');
-  if (!out) out = '<tr><td colspan="7">no momentum agents synced yet</td></tr>';
+  if (!out) out = '<tr><td colspan="' + COLS + '">no momentum agents synced yet</td></tr>';
   if (showInternal && rest.length) {
-    out += '<tr class="grp split-row"><th colspan="7" scope="colgroup">internal and personal<span>' + rest.length + ' agents</span></th></tr>';
+    out += '<tr class="grp split-row"><th colspan="' + COLS + '" scope="colgroup">internal and personal<span>' + rest.length + ' agents</span></th></tr>';
     out += groupRows(rest).map((g) => groupHead(g) + g.rows.map(agentRow).join('')).join('');
   }
   $('agents-body').innerHTML = out;
@@ -371,6 +471,20 @@ $('show-internal').onchange = (e) => {
   renderAgents();
 };
 
+if (IS_OPERATOR) {
+  fetch('/api/tenants').then((r) => r.json()).then((d) => {
+    const sel = $('tenant-switch');
+    if (!sel) return;
+    for (const t of (d.tenants || [])) {
+      const opt = document.createElement('option');
+      opt.value = t.id; opt.textContent = t.display_name;
+      sel.appendChild(opt);
+    }
+  }).catch(() => {});
+  const sel = $('tenant-switch');
+  if (sel) sel.onchange = (e) => { tenantFilter = e.target.value; renderAgents(); };
+}
+
 async function syncAgents() {
   try {
     agentsState = (await (await fetch('/api/agents')).json()).agents || [];
@@ -382,6 +496,9 @@ setInterval(syncAgents, 60000); syncAgents();
 </body>
 </html>`;
 }
+// Small HTML-attribute/text escaper for values interpolated server side into
+// pageHtml (tenant display name). Same escaping rules as the client's esc().
+function escHtml(s) { return String(s).replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
 
 export default {
   async fetch(request, env) {
@@ -395,21 +512,32 @@ export default {
       if (loginRateLimited(ip)) return json({ error: 'too many attempts, wait a few minutes' }, 429);
       let parsed;
       try { parsed = await request.json(); } catch { return json({ error: 'bad request' }, 400); }
-      if (!env.MOMENTUM_HUD_TOKEN || !timingSafeEqual(String(parsed.token || ''), env.MOMENTUM_HUD_TOKEN)) {
-        return json({ error: 'wrong token' }, 401);
+      if (!env.MOMENTUM_HUD_TOKEN) return json({ error: 'wrong token' }, 401);
+      const token = String(parsed.token || '');
+      let tenantId = null;
+      const hash = await sha256Hex(token);
+      const row = await env.CONSOLE.prepare("SELECT id FROM tenants WHERE token_hash = ? AND status = 'active'").bind(hash).first();
+      if (row) {
+        tenantId = row.id;
+      } else if (timingSafeEqual(token, env.MOMENTUM_HUD_TOKEN)) {
+        tenantId = 'momentum'; // legacy shared secret, resolves to the operator tenant
       }
+      if (!tenantId) return json({ error: 'wrong token' }, 401);
       loginAttempts.delete(ip);
+      await env.CONSOLE.prepare('UPDATE tenants SET last_seen_at = ? WHERE id = ?').bind(new Date().toISOString(), tenantId).run();
+      const cookieValue = await signCookie(tenantId, env.MOMENTUM_HUD_TOKEN);
       return new Response(JSON.stringify({ ok: true }), {
         status: 200,
         headers: {
           'content-type': 'application/json',
           'cache-control': 'no-store',
-          'set-cookie': `momentum_hud=${env.MOMENTUM_HUD_TOKEN}; HttpOnly; Secure; SameSite=Lax; Max-Age=2592000; Path=/`,
+          'set-cookie': `momentum_hud=${cookieValue}; HttpOnly; Secure; SameSite=Lax; Max-Age=2592000; Path=/`,
         },
       });
     }
 
-    if (!isAuthed(request, env)) {
+    const tenant = await getTenantFromRequest(request, env);
+    if (!tenant) {
       if (p.startsWith('/api/')) return json({ error: 'login required' }, 401);
       return Response.redirect(url.origin + '/login', 302);
     }
@@ -419,11 +547,16 @@ export default {
     if (p === '/' || p === '/index.html') {
       if (request.method !== 'GET') return new Response('Method not allowed', { status: 405 });
       const syncedAt = await getSyncedAt(env);
-      return html(pageHtml(syncedAt));
+      return html(pageHtml(syncedAt, tenant));
     }
 
     if (p === '/api/agents' && request.method === 'GET') {
-      return json({ agents: await getAgents(env) });
+      return json({ agents: await getAgents(env, tenant) });
+    }
+
+    if (p === '/api/tenants' && request.method === 'GET') {
+      if (!tenant.isOperator) return json({ error: 'forbidden' }, 403);
+      return json({ tenants: await getTenants(env) });
     }
 
     return json({ error: 'not found' }, 404);
