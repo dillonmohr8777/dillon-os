@@ -244,6 +244,15 @@ jobs:
       client-operations/registry/clients.json. An id that does not resolve
       is a failure for that row, not a guess.
 
+      OUT OF SCOPE, confirmed by Dillon 2026-09-16, do not report these as
+      Momentum deliverables and do not re flag them as anomalies:
+        immohrtal-marketing   Dillon's own venture, not a Momentum client
+        bok-law-firm          registry is correct, not-client-of momentum-360
+        look-alive            no registry id, not a Momentum client
+      If one of these has an active pipeline, that is a filing question for
+      a human, not a Momentum delivery row. Mention it once in a closing
+      line, never as a tracked deliverable.
+
       Write "<date> - delivery milestones.md". Lead with anything built
       but never delivered, that is finished work nobody received.
 
