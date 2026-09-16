@@ -21,7 +21,9 @@
       "external_actions": false,
       "status": "implemented",
       "enabled": true,
-      "lifecycle": "implemented"
+      "lifecycle": "implemented",
+      "audience": "internal",
+      "function": "agent ops"
     },
     {
       "id": "frontmatter-repair",
@@ -40,7 +42,9 @@
       "notes": "Omit --dry-run to write missing required keys with safe defaults. Never invent due dates.",
       "status": "implemented",
       "enabled": true,
-      "lifecycle": "implemented"
+      "lifecycle": "implemented",
+      "audience": "internal",
+      "function": "agent ops"
     },
     {
       "id": "site-health-sentinel",
@@ -60,7 +64,9 @@
       "notes": "Dry-run uses fixtures. Live HTTP checks are opt-in via --live and still never POST real user data except a marked canary when --canary is set.",
       "status": "implemented",
       "enabled": true,
-      "lifecycle": "implemented"
+      "lifecycle": "implemented",
+      "audience": "momentum",
+      "function": "client sites"
     },
     {
       "id": "discover-qualify",
@@ -83,7 +89,9 @@
       "notes": "Drafts only. Feeds Mac's site-factory pipeline (#226). Indeed is an adapter, not a parallel stack.",
       "status": "implemented",
       "enabled": true,
-      "lifecycle": "implemented"
+      "lifecycle": "implemented",
+      "audience": "momentum",
+      "function": "lead gen"
     },
     {
       "id": "site-factory-batch",
@@ -99,7 +107,9 @@
       "external_actions": false,
       "status": "external-dependency",
       "enabled": false,
-      "lifecycle": "blocked"
+      "lifecycle": "blocked",
+      "audience": "momentum",
+      "function": "lead gen"
     },
     {
       "id": "outreach-activate",
@@ -116,7 +126,9 @@
       "external_actions": true,
       "status": "gated",
       "enabled": false,
-      "lifecycle": "gated"
+      "lifecycle": "gated",
+      "audience": "momentum",
+      "function": "lead gen"
     },
     {
       "id": "indeed-hiring-adapter",
@@ -129,7 +141,9 @@
       "notes": "Normalizes hiring signals into the shared prospect schema. Does not scrape Indeed live in this PR (fixture/import only — live scrape is a credential/ToS gate).",
       "status": "implemented",
       "enabled": true,
-      "lifecycle": "implemented"
+      "lifecycle": "implemented",
+      "audience": "personal",
+      "function": "job search"
     },
     {
       "id": "grok-intelligence-ingest",
@@ -151,7 +165,9 @@
       "notes": "Idempotent, immutable capture. The browser collector is separate and may only read completed Grok runs.",
       "status": "implemented",
       "enabled": true,
-      "lifecycle": "implemented"
+      "lifecycle": "implemented",
+      "audience": "momentum",
+      "function": "research"
     },
     {
       "id": "xai-daily-search",
@@ -178,7 +194,9 @@
       "notes": "Read-only X and web research through xAI Responses API. Chat-only key, 10 RPM, 250k TPM, expires 2026-10-28. Never logs the key.",
       "status": "implemented",
       "enabled": true,
-      "lifecycle": "implemented"
+      "lifecycle": "implemented",
+      "audience": "momentum",
+      "function": "research"
     },
     {
       "id": "experiment-queue",
@@ -200,7 +218,9 @@
       "notes": "Creates proposed experiments only. Adoption still requires the maker/checker and human gates.",
       "status": "implemented",
       "enabled": true,
-      "lifecycle": "implemented"
+      "lifecycle": "implemented",
+      "audience": "momentum",
+      "function": "growth"
     },
     {
       "id": "dillon-dev-sandbox",
@@ -221,7 +241,9 @@
       "notes": "Fixture-only prototype. No install, browser, secret, deployment, or external write.",
       "status": "implemented",
       "enabled": true,
-      "lifecycle": "implemented"
+      "lifecycle": "implemented",
+      "audience": "internal",
+      "function": "agent ops"
     },
     {
       "id": "maker-checker",
@@ -243,7 +265,9 @@
       "notes": "Maker and checker identities must differ. Human approval is required by default. Website-factory workflows also require a hashed screen recording and independent visual review across at least two viewports.",
       "status": "implemented",
       "enabled": true,
-      "lifecycle": "implemented"
+      "lifecycle": "implemented",
+      "audience": "internal",
+      "function": "agent ops"
     },
     {
       "id": "mcp-acceptance-gate",
@@ -264,7 +288,9 @@
       "notes": "Fail closed: pending tests are sandbox-only; failed tests or critical permissions reject.",
       "status": "implemented",
       "enabled": true,
-      "lifecycle": "implemented"
+      "lifecycle": "implemented",
+      "audience": "internal",
+      "function": "agent ops"
     },
     {
       "id": "context7-docs",
@@ -286,7 +312,9 @@
       "notes": "Official OpenAI questions continue to use OpenAI Developer Docs. Retrieved content is untrusted reference material.",
       "status": "implemented",
       "enabled": true,
-      "lifecycle": "implemented"
+      "lifecycle": "implemented",
+      "audience": "internal",
+      "function": "agent ops"
     },
     {
       "id": "landingfolio-design-reference",
@@ -310,7 +338,9 @@
       "notes": "Sandbox-only until the Inspector check passes; the endpoint refuses anonymous calls, so the operator must mint a free token first. Wiring lives in .cursor/mcp.json and .mcp.json and reads LANDINGFOLIO_TOKEN from the environment. Composition reference only: the harvest stays the source of brand truth, returned content is untrusted, and queries never carry a client or prospect name.",
       "status": "pending-gate",
       "enabled": false,
-      "lifecycle": "gated"
+      "lifecycle": "gated",
+      "audience": "internal",
+      "function": "agent ops"
     },
     {
       "id": "aeo-trust-gate",
@@ -331,7 +361,9 @@
       "notes": "A fail blocks deployment. A pass does not replace visual review, functional QA, or exact Netlify target verification.",
       "status": "implemented",
       "enabled": true,
-      "lifecycle": "implemented"
+      "lifecycle": "implemented",
+      "audience": "momentum",
+      "function": "client sites"
     },
     {
       "id": "daily-communications-brain",
@@ -359,7 +391,9 @@
       "owner": "codex-windows",
       "owner_note": "Single owner since 2026-09-01: Codex scheduled automation on the Windows box. See 12_Brain/04_Decisions/2026-09-01 - Daily comms single owner.md",
       "enabled": true,
-      "lifecycle": "implemented"
+      "lifecycle": "implemented",
+      "audience": "momentum",
+      "function": "client comms"
     },
     {
       "id": "daily-communications-brain-workflow-def",
@@ -378,7 +412,9 @@
       "notes": "kept as reference definition, not scheduled",
       "status": "deprecated",
       "enabled": false,
-      "lifecycle": "deprecated"
+      "lifecycle": "deprecated",
+      "audience": "internal",
+      "function": "agent ops"
     },
     {
       "id": "daily-morning-orchestrator-dry-board",
@@ -395,7 +431,9 @@
       "notes": "morning dry board folded into the Codex daily-comms run",
       "status": "deprecated",
       "enabled": false,
-      "lifecycle": "deprecated"
+      "lifecycle": "deprecated",
+      "audience": "internal",
+      "function": "agent ops"
     },
     {
       "id": "obsidian-guard-dog",
@@ -424,7 +462,9 @@
       "notes": "Public stable channel only. Brain growth is bounded to one measured variable and one retained improvement daily; unsupported learning is a healthy no-op. External research is untrusted evidence, blocked collectors fail closed, canonical pages are updated before duplicates, and fixed graph, coverage, source, and automation tests must pass. Never auto-enroll in Catalyst or beta, expose secrets, interrupt active use, delete user notes or scratch files, resolve Sync conflicts destructively, change production strategy, commit, push, reset, or clean.",
       "status": "active-scheduled",
       "enabled": true,
-      "lifecycle": "implemented"
+      "lifecycle": "implemented",
+      "audience": "internal",
+      "function": "agent ops"
     },
     {
       "id": "report-brain-ingest",
@@ -448,7 +488,9 @@
       "notes": "Archives every finalized weekly and monthly report with source provenance and SHA-256 integrity. Raw exports and ambiguous client routes fail closed. Ingestion does not imply or authorize external delivery.",
       "status": "active-scheduled",
       "enabled": true,
-      "lifecycle": "implemented"
+      "lifecycle": "implemented",
+      "audience": "momentum",
+      "function": "client reporting"
     },
     {
       "id": "agent-craft-brief",
@@ -469,7 +511,9 @@
       "external_actions": false,
       "status": "implemented",
       "enabled": true,
-      "lifecycle": "implemented"
+      "lifecycle": "implemented",
+      "audience": "internal",
+      "function": "agent ops"
     },
     {
       "id": "connector-health",
@@ -488,7 +532,9 @@
       "status": "implemented",
       "note": "Split write/read: an MCP-capable agent records observed connector status; this CLI only validates freshness. It never contacts a provider and never invents a status.",
       "enabled": true,
-      "lifecycle": "implemented"
+      "lifecycle": "implemented",
+      "audience": "internal",
+      "function": "agent ops"
     },
     {
       "id": "browser-access",
@@ -507,7 +553,9 @@
       "status": "implemented",
       "note": "Refuses forbidden port 9222 with exit 3 and marks chrome_isolated not-live unless the process on the port really runs a claude-chrome profile. probe/recommend describe agent-only rungs (WebFetch, WebSearch, Firecrawl) that a CLI cannot drive.",
       "enabled": true,
-      "lifecycle": "implemented"
+      "lifecycle": "implemented",
+      "audience": "internal",
+      "function": "agent ops"
     },
     {
       "id": "marketing-chief-twice-daily-brief",
@@ -533,7 +581,9 @@
       "status": "active-scheduled",
       "note": "Codex scheduled automation (09:00/17:00) checking OmniRoute/ChatGPT-Sites infra health. Reviewed 2026-09-01 against am-report: not a duplicate; kept separate pending Dillon's confirmation.",
       "enabled": true,
-      "lifecycle": "implemented"
+      "lifecycle": "implemented",
+      "audience": "momentum",
+      "function": "client comms"
     },
     {
       "id": "am-report",
@@ -562,7 +612,9 @@
       "owner": "claude-code-skill",
       "note": "On-demand Claude Code skill, run by Dillon; never cron-scheduled. Reviewed 2026-09-01 against marketing-chief-twice-daily-brief: different content (morning inbox/client/content brief vs infra health), so not collapsed. Dillon to confirm whether one should absorb the other.",
       "enabled": true,
-      "lifecycle": "implemented"
+      "lifecycle": "implemented",
+      "audience": "momentum",
+      "function": "client comms"
     },
     {
       "id": "daily-sweep",
@@ -591,7 +643,9 @@
       "notes": "Local evidence only: no network, no model, no credential, no canonical client write. Exit 2 is a successful run reporting bad news (missed day, stale artifact, undelivered brief, absent cadence run, lying ledger row, unscheduled driver, or a counter that fell from non-zero to zero). Exit 1 is the script breaking. Backfills MISSED rows for every day it was skipped, so a machine that was powered off still produces a written gap rather than silence. Self-check: --selftest.",
       "status": "implemented",
       "enabled": true,
-      "lifecycle": "implemented"
+      "lifecycle": "implemented",
+      "audience": "internal",
+      "function": "agent ops"
     },
     {
       "id": "heartbeat",
@@ -613,7 +667,9 @@
       "enabled": true,
       "source": "_os/automation/cadence/daily.yaml",
       "owner": "cadence driver",
-      "notes": "Manifest job. The prompt and accept gate live in the YAML; this record is the roster entry and the on/off switch."
+      "notes": "Manifest job. The prompt and accept gate live in the YAML; this record is the roster entry and the on/off switch.",
+      "audience": "internal",
+      "function": "agent ops"
     },
     {
       "id": "approval-queue-diff",
@@ -635,7 +691,9 @@
       "enabled": true,
       "source": "_os/automation/cadence/daily.yaml",
       "owner": "cadence driver",
-      "notes": "Manifest job. The prompt and accept gate live in the YAML; this record is the roster entry and the on/off switch."
+      "notes": "Manifest job. The prompt and accept gate live in the YAML; this record is the roster entry and the on/off switch.",
+      "audience": "internal",
+      "function": "agent ops"
     },
     {
       "id": "unfiled-sweep",
@@ -657,7 +715,9 @@
       "enabled": true,
       "source": "_os/automation/cadence/daily.yaml",
       "owner": "cadence driver",
-      "notes": "Manifest job. The prompt and accept gate live in the YAML; this record is the roster entry and the on/off switch."
+      "notes": "Manifest job. The prompt and accept gate live in the YAML; this record is the roster entry and the on/off switch.",
+      "audience": "internal",
+      "function": "agent ops"
     },
     {
       "id": "omega-search-terms",
@@ -679,7 +739,9 @@
       "enabled": true,
       "source": "_os/automation/cadence/weekly.yaml",
       "owner": "cadence driver",
-      "notes": "Manifest job. The prompt and accept gate live in the YAML; this record is the roster entry and the on/off switch."
+      "notes": "Manifest job. The prompt and accept gate live in the YAML; this record is the roster entry and the on/off switch.",
+      "audience": "momentum",
+      "function": "paid media"
     },
     {
       "id": "report-pairing-check",
@@ -701,7 +763,9 @@
       "enabled": true,
       "source": "_os/automation/cadence/weekly.yaml",
       "owner": "cadence driver",
-      "notes": "Manifest job. The prompt and accept gate live in the YAML; this record is the roster entry and the on/off switch."
+      "notes": "Manifest job. The prompt and accept gate live in the YAML; this record is the roster entry and the on/off switch.",
+      "audience": "momentum",
+      "function": "client reporting"
     },
     {
       "id": "registry-reconciliation",
@@ -723,7 +787,9 @@
       "enabled": true,
       "source": "_os/automation/cadence/monthly.yaml",
       "owner": "cadence driver",
-      "notes": "Manifest job. The prompt and accept gate live in the YAML; this record is the roster entry and the on/off switch."
+      "notes": "Manifest job. The prompt and accept gate live in the YAML; this record is the roster entry and the on/off switch.",
+      "audience": "internal",
+      "function": "agent ops"
     },
     {
       "id": "credential-age",
@@ -745,7 +811,9 @@
       "enabled": true,
       "source": "_os/automation/cadence/monthly.yaml",
       "owner": "cadence driver",
-      "notes": "Manifest job. The prompt and accept gate live in the YAML; this record is the roster entry and the on/off switch."
+      "notes": "Manifest job. The prompt and accept gate live in the YAML; this record is the roster entry and the on/off switch.",
+      "audience": "internal",
+      "function": "agent ops"
     },
     {
       "id": "backup-risk",
@@ -767,7 +835,369 @@
       "enabled": true,
       "source": "_os/automation/cadence/monthly.yaml",
       "owner": "cadence driver",
-      "notes": "Manifest job. The prompt and accept gate live in the YAML; this record is the roster entry and the on/off switch."
+      "notes": "Manifest job. The prompt and accept gate live in the YAML; this record is the roster entry and the on/off switch.",
+      "audience": "internal",
+      "function": "agent ops"
+    },
+    {
+      "id": "marketing-chief",
+      "name": "marketing chief",
+      "kind": "subagent",
+      "lane": "subagent",
+      "audience": "momentum",
+      "function": "command",
+      "tier": 1,
+      "cadence": "on demand",
+      "command": "Agent tool: marketing-chief",
+      "inputs": [],
+      "outputs": [],
+      "external_actions": false,
+      "status": "implemented",
+      "lifecycle": "implemented",
+      "enabled": true,
+      "source": ".claude/agents and plugin agent definitions",
+      "owner": "marketing-chief",
+      "notes": "Momentum business subagent. Runs inside a Claude Code session on demand; the toggle marks it allowed, not scheduled."
+    },
+    {
+      "id": "paid-media-analyst",
+      "name": "paid media analyst",
+      "kind": "subagent",
+      "lane": "subagent",
+      "audience": "momentum",
+      "function": "paid media",
+      "tier": 1,
+      "cadence": "on demand",
+      "command": "Agent tool: paid-media-analyst",
+      "inputs": [],
+      "outputs": [],
+      "external_actions": false,
+      "status": "implemented",
+      "lifecycle": "implemented",
+      "enabled": true,
+      "source": ".claude/agents and plugin agent definitions",
+      "owner": "marketing-chief",
+      "notes": "Momentum business subagent. Runs inside a Claude Code session on demand; the toggle marks it allowed, not scheduled."
+    },
+    {
+      "id": "conversion-truth",
+      "name": "conversion truth",
+      "kind": "subagent",
+      "lane": "subagent",
+      "audience": "momentum",
+      "function": "paid media",
+      "tier": 1,
+      "cadence": "on demand",
+      "command": "Agent tool: conversion-truth",
+      "inputs": [],
+      "outputs": [],
+      "external_actions": false,
+      "status": "implemented",
+      "lifecycle": "implemented",
+      "enabled": true,
+      "source": ".claude/agents and plugin agent definitions",
+      "owner": "marketing-chief",
+      "notes": "Momentum business subagent. Runs inside a Claude Code session on demand; the toggle marks it allowed, not scheduled."
+    },
+    {
+      "id": "client-success-advisor",
+      "name": "client success advisor",
+      "kind": "subagent",
+      "lane": "subagent",
+      "audience": "momentum",
+      "function": "client comms",
+      "tier": 1,
+      "cadence": "on demand",
+      "command": "Agent tool: client-success-advisor",
+      "inputs": [],
+      "outputs": [],
+      "external_actions": false,
+      "status": "implemented",
+      "lifecycle": "implemented",
+      "enabled": true,
+      "source": ".claude/agents and plugin agent definitions",
+      "owner": "marketing-chief",
+      "notes": "Momentum business subagent. Runs inside a Claude Code session on demand; the toggle marks it allowed, not scheduled."
+    },
+    {
+      "id": "client-conversion",
+      "name": "client conversion",
+      "kind": "subagent",
+      "lane": "subagent",
+      "audience": "momentum",
+      "function": "client comms",
+      "tier": 1,
+      "cadence": "on demand",
+      "command": "Agent tool: client-conversion",
+      "inputs": [],
+      "outputs": [],
+      "external_actions": false,
+      "status": "implemented",
+      "lifecycle": "implemented",
+      "enabled": true,
+      "source": ".claude/agents and plugin agent definitions",
+      "owner": "marketing-chief",
+      "notes": "Momentum business subagent. Runs inside a Claude Code session on demand; the toggle marks it allowed, not scheduled."
+    },
+    {
+      "id": "report-courier",
+      "name": "report courier",
+      "kind": "subagent",
+      "lane": "subagent",
+      "audience": "momentum",
+      "function": "client reporting",
+      "tier": 1,
+      "cadence": "on demand",
+      "command": "Agent tool: report-courier",
+      "inputs": [],
+      "outputs": [],
+      "external_actions": false,
+      "status": "implemented",
+      "lifecycle": "implemented",
+      "enabled": true,
+      "source": ".claude/agents and plugin agent definitions",
+      "owner": "marketing-chief",
+      "notes": "Momentum business subagent. Runs inside a Claude Code session on demand; the toggle marks it allowed, not scheduled."
+    },
+    {
+      "id": "revenue-ops-analyst",
+      "name": "revenue ops analyst",
+      "kind": "subagent",
+      "lane": "subagent",
+      "audience": "momentum",
+      "function": "revenue",
+      "tier": 1,
+      "cadence": "on demand",
+      "command": "Agent tool: revenue-ops-analyst",
+      "inputs": [],
+      "outputs": [],
+      "external_actions": false,
+      "status": "implemented",
+      "lifecycle": "implemented",
+      "enabled": true,
+      "source": ".claude/agents and plugin agent definitions",
+      "owner": "marketing-chief",
+      "notes": "Momentum business subagent. Runs inside a Claude Code session on demand; the toggle marks it allowed, not scheduled."
+    },
+    {
+      "id": "hubspot-tracker",
+      "name": "hubspot tracker",
+      "kind": "subagent",
+      "lane": "subagent",
+      "audience": "momentum",
+      "function": "revenue",
+      "tier": 1,
+      "cadence": "on demand",
+      "command": "Agent tool: hubspot-tracker",
+      "inputs": [],
+      "outputs": [],
+      "external_actions": false,
+      "status": "implemented",
+      "lifecycle": "implemented",
+      "enabled": true,
+      "source": ".claude/agents and plugin agent definitions",
+      "owner": "marketing-chief",
+      "notes": "Momentum business subagent. Runs inside a Claude Code session on demand; the toggle marks it allowed, not scheduled."
+    },
+    {
+      "id": "cross-reference",
+      "name": "cross reference",
+      "kind": "subagent",
+      "lane": "subagent",
+      "audience": "momentum",
+      "function": "client comms",
+      "tier": 1,
+      "cadence": "on demand",
+      "command": "Agent tool: cross-reference",
+      "inputs": [],
+      "outputs": [],
+      "external_actions": false,
+      "status": "implemented",
+      "lifecycle": "implemented",
+      "enabled": true,
+      "source": ".claude/agents and plugin agent definitions",
+      "owner": "marketing-chief",
+      "notes": "Momentum business subagent. Runs inside a Claude Code session on demand; the toggle marks it allowed, not scheduled."
+    },
+    {
+      "id": "email-outreach",
+      "name": "email outreach",
+      "kind": "subagent",
+      "lane": "subagent",
+      "audience": "momentum",
+      "function": "lead gen",
+      "tier": 1,
+      "cadence": "on demand",
+      "command": "Agent tool: email-outreach",
+      "inputs": [],
+      "outputs": [],
+      "external_actions": false,
+      "status": "implemented",
+      "lifecycle": "implemented",
+      "enabled": true,
+      "source": ".claude/agents and plugin agent definitions",
+      "owner": "marketing-chief",
+      "notes": "Momentum business subagent. Runs inside a Claude Code session on demand; the toggle marks it allowed, not scheduled."
+    },
+    {
+      "id": "scout",
+      "name": "scout",
+      "kind": "subagent",
+      "lane": "subagent",
+      "audience": "momentum",
+      "function": "lead gen",
+      "tier": 1,
+      "cadence": "on demand",
+      "command": "Agent tool: scout",
+      "inputs": [],
+      "outputs": [],
+      "external_actions": false,
+      "status": "implemented",
+      "lifecycle": "implemented",
+      "enabled": true,
+      "source": ".claude/agents and plugin agent definitions",
+      "owner": "marketing-chief",
+      "notes": "Momentum business subagent. Runs inside a Claude Code session on demand; the toggle marks it allowed, not scheduled."
+    },
+    {
+      "id": "prospect-intelligence-scout",
+      "name": "prospect intelligence scout",
+      "kind": "subagent",
+      "lane": "subagent",
+      "audience": "momentum",
+      "function": "lead gen",
+      "tier": 1,
+      "cadence": "on demand",
+      "command": "Agent tool: prospect-intelligence-scout",
+      "inputs": [],
+      "outputs": [],
+      "external_actions": false,
+      "status": "implemented",
+      "lifecycle": "implemented",
+      "enabled": true,
+      "source": ".claude/agents and plugin agent definitions",
+      "owner": "marketing-chief",
+      "notes": "Momentum business subagent. Runs inside a Claude Code session on demand; the toggle marks it allowed, not scheduled."
+    },
+    {
+      "id": "content-producer",
+      "name": "content producer",
+      "kind": "subagent",
+      "lane": "subagent",
+      "audience": "momentum",
+      "function": "content",
+      "tier": 1,
+      "cadence": "on demand",
+      "command": "Agent tool: content-producer",
+      "inputs": [],
+      "outputs": [],
+      "external_actions": false,
+      "status": "implemented",
+      "lifecycle": "implemented",
+      "enabled": true,
+      "source": ".claude/agents and plugin agent definitions",
+      "owner": "marketing-chief",
+      "notes": "Momentum business subagent. Runs inside a Claude Code session on demand; the toggle marks it allowed, not scheduled."
+    },
+    {
+      "id": "creative-foundry",
+      "name": "creative foundry",
+      "kind": "subagent",
+      "lane": "subagent",
+      "audience": "momentum",
+      "function": "content",
+      "tier": 1,
+      "cadence": "on demand",
+      "command": "Agent tool: creative-foundry",
+      "inputs": [],
+      "outputs": [],
+      "external_actions": false,
+      "status": "implemented",
+      "lifecycle": "implemented",
+      "enabled": true,
+      "source": ".claude/agents and plugin agent definitions",
+      "owner": "marketing-chief",
+      "notes": "Momentum business subagent. Runs inside a Claude Code session on demand; the toggle marks it allowed, not scheduled."
+    },
+    {
+      "id": "growth-content",
+      "name": "growth content",
+      "kind": "subagent",
+      "lane": "subagent",
+      "audience": "momentum",
+      "function": "content",
+      "tier": 1,
+      "cadence": "on demand",
+      "command": "Agent tool: growth-content",
+      "inputs": [],
+      "outputs": [],
+      "external_actions": false,
+      "status": "implemented",
+      "lifecycle": "implemented",
+      "enabled": true,
+      "source": ".claude/agents and plugin agent definitions",
+      "owner": "marketing-chief",
+      "notes": "Momentum business subagent. Runs inside a Claude Code session on demand; the toggle marks it allowed, not scheduled."
+    },
+    {
+      "id": "web-product-builder",
+      "name": "web product builder",
+      "kind": "subagent",
+      "lane": "subagent",
+      "audience": "momentum",
+      "function": "client sites",
+      "tier": 1,
+      "cadence": "on demand",
+      "command": "Agent tool: web-product-builder",
+      "inputs": [],
+      "outputs": [],
+      "external_actions": false,
+      "status": "implemented",
+      "lifecycle": "implemented",
+      "enabled": true,
+      "source": ".claude/agents and plugin agent definitions",
+      "owner": "marketing-chief",
+      "notes": "Momentum business subagent. Runs inside a Claude Code session on demand; the toggle marks it allowed, not scheduled."
+    },
+    {
+      "id": "qa-critic",
+      "name": "qa critic",
+      "kind": "subagent",
+      "lane": "subagent",
+      "audience": "momentum",
+      "function": "client sites",
+      "tier": 1,
+      "cadence": "on demand",
+      "command": "Agent tool: qa-critic",
+      "inputs": [],
+      "outputs": [],
+      "external_actions": false,
+      "status": "implemented",
+      "lifecycle": "implemented",
+      "enabled": true,
+      "source": ".claude/agents and plugin agent definitions",
+      "owner": "marketing-chief",
+      "notes": "Momentum business subagent. Runs inside a Claude Code session on demand; the toggle marks it allowed, not scheduled."
+    },
+    {
+      "id": "design-canvas",
+      "name": "design canvas",
+      "kind": "subagent",
+      "lane": "subagent",
+      "audience": "momentum",
+      "function": "content",
+      "tier": 1,
+      "cadence": "on demand",
+      "command": "Agent tool: design-canvas",
+      "inputs": [],
+      "outputs": [],
+      "external_actions": false,
+      "status": "implemented",
+      "lifecycle": "implemented",
+      "enabled": true,
+      "source": ".claude/agents and plugin agent definitions",
+      "owner": "marketing-chief",
+      "notes": "Momentum business subagent. Runs inside a Claude Code session on demand; the toggle marks it allowed, not scheduled."
     }
   ],
   "gates": {
