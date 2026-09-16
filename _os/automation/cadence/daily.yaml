@@ -91,3 +91,48 @@ jobs:
       Do NOT commit, stage, move, or delete anything. This job reports; a human
       decides. Committing 5.5 GB of unbacked media is exactly the wrong reflex -
       see the 2026-09-14 approval-queue entry on the backup destination.
+
+  # ----------------------------------------------------------- lead triage
+  # Jason Fallon's named bottleneck, from the 2026-09-16 team research:
+  # nothing dedupes #360leads. Measured that day, 40 messages deep: every
+  # Meta and audit lead double fires into HubSpot seconds later, and about
+  # 30 percent of the channel is caller ID noise with no identity at all.
+  - id: leads-triage
+    title: What in 360leads was actually a lead
+    enabled: true
+    outputs: 12_Brain/07_Reviews/Cadence
+    accept: |
+      A dated markdown file with counts by class (real, duplicate, noise)
+      and a named list of only the real leads, each with contact details
+      and source. A run that cannot reach Slack is a failure, not an empty
+      report.
+    prompt: |
+      Read Slack channel #360leads (C05R2B1ULF6) for the last 24 hours.
+
+      Classify every message into exactly one class:
+
+        real      - a person with a name AND at least one of email or a
+                    number that is not just caller ID. Keep the richest
+                    copy when the same person appears more than once.
+        duplicate - the same person already counted, matched on email, or
+                    on phone with the last 10 digits equal, or on a close
+                    name match within 10 minutes. "New Hubspot Lead /
+                    Contact" firing seconds after a "New Meta Lead" or a
+                    "SMALL BUSINESS SCHEDULE AUDIT CALL LEAD" for the same
+                    person is the known pattern: the Meta or audit copy is
+                    the one to keep, it carries campaign and qualifying
+                    answers.
+        noise     - caller ID only, no real person. Names that are a place
+                    (Philadelphia Pa, Salinas Ca, Herkimer Ny), or Wireless
+                    Caller, Toll Free Call, Na N/A, or a bare email in the
+                    name field with nothing else.
+
+      Write "<date> - lead triage.md" to the outputs dir:
+        - one line of counts: real / duplicate / noise, and the duplicate
+          and noise percentages
+        - the real leads as a table: name, email, phone, business, source
+        - a short list of which duplicate pairs fired, with both timestamps,
+          so the Zap overlap stays visible until someone fixes it upstream
+
+      Do NOT post to Slack, do NOT reply in the channel, do NOT touch
+      HubSpot. This job reports; Jason and Sean decide.

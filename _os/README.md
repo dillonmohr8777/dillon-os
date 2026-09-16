@@ -12,6 +12,13 @@ node _os/server.js
 Requires Node 18+ and the `claude` CLI on PATH (only needed for the Command
 Deck buttons; the dashboard itself works without it).
 
+## Always on
+
+Runs as the `Momentum-HUD` Task Scheduler task: triggers at logon for
+the current user, restarts on failure, no execution time limit.
+Install, refresh, or uninstall with `System/scripts/Install-MomentumHud.ps1`
+(`-Uninstall` removes it). Stop without removing: `Stop-ScheduledTask Momentum-HUD`.
+
 ## What's on screen
 
 | Region | Source |

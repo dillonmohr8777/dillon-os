@@ -12,7 +12,10 @@ a ledger line with `status: failed` and `job: "__driver__"`, say so loudly, stop
 
 **2. For each job, in file order:**
 
-- `enabled: false` → ledger `skipped`, move on. Do not run it.
+- Look the job id up in `12_Brain/registry/automations.json`. `enabled: false`
+  there → ledger `skipped`, move on. Do not run it. The registry is the switch
+  the HUD flips; the manifest's own `enabled` key is advisory and
+  `node _os/automation/bin/registry-validate.js` warns when they drift.
 - Run the job's `prompt` exactly as written. It is self-contained by design; the
   run has no memory of any previous run or of this conversation.
 - Resolve the output directory:
@@ -49,6 +52,24 @@ newline-delimited:
 
 Never rewrite or prune existing lines. The heartbeat reads this file and an
 edited history makes it lie.
+
+Also append one line per job to `_os/automation/runs.jsonl`. This is the row the
+HUD roster reads (`GET /api/agents`), keyed by `agent_id` = the job id:
+
+```json
+{"agent_id":"heartbeat","run_id":"<uuid>","started":"<iso>","ended":"<iso>","exit_code":0,"status":"ok","artifact":"12_Brain/07_Reviews/Cadence/2026-09-15 - cadence heartbeat.md","transcript":null,"tokens":null,"note":""}
+```
+
+`status` here adds `running` (write it before the job starts, then the final row
+with the same `run_id`). `transcript` is the Claude Code session file for this
+run if you can name it, else `null`. Schema and a `lastRuns()` reader live in
+`_os/automation/lib/run-record.js`.
+
+**After all jobs**, run `node _os/automation/bin/sync-cloud-console.js` once so
+the cloud console mirror (`_os/cloud-console/worker.js`, read only, shows last
+known roster state when this desktop is off) picks up today's pass. It needs
+`CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` set or it logs one line and
+exits clean. That is not a driver failure, just an unsynced mirror.
 
 ## Hard rules
 

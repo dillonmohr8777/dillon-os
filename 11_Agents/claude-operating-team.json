@@ -3013,7 +3013,8 @@
           "state": "not_applicable",
           "source": "never Claude-owned"
         }
-      }
+      },
+      "agent_id": null
     },
     {
       "routine_id": "D02",
@@ -3193,7 +3194,8 @@
           "state": "not_applicable",
           "source": "never Claude-owned"
         }
-      }
+      },
+      "agent_id": null
     },
     {
       "routine_id": "D03",
@@ -3403,7 +3405,8 @@
           "state": "delegated-autonomy-v1-2026-08-12",
           "source": "dedicated Claude routine checkpoint, created on first run"
         }
-      }
+      },
+      "agent_id": null
     },
     {
       "routine_id": "D04",
@@ -3584,7 +3587,8 @@
           "state": "derived",
           "source": "12_Brain/registry/automations.json id=daily-communications-brain"
         }
-      }
+      },
+      "agent_id": null
     },
     {
       "routine_id": "D05",
@@ -3765,7 +3769,8 @@
           "state": "derived",
           "source": "12_Brain/registry/automations.json id=daily-communications-brain"
         }
-      }
+      },
+      "agent_id": null
     },
     {
       "routine_id": "D06",
@@ -3946,7 +3951,8 @@
           "state": "not_applicable",
           "source": "never Claude-owned"
         }
-      }
+      },
+      "agent_id": null
     },
     {
       "routine_id": "D07",
@@ -4156,7 +4162,8 @@
           "state": "delegated-autonomy-v1-2026-08-12",
           "source": "dedicated Claude routine checkpoint, created on first run"
         }
-      }
+      },
+      "agent_id": null
     },
     {
       "routine_id": "D08",
@@ -4336,7 +4343,8 @@
           "state": "not_applicable",
           "source": "never Claude-owned"
         }
-      }
+      },
+      "agent_id": null
     },
     {
       "routine_id": "D09",
@@ -4516,7 +4524,8 @@
           "state": "not_applicable",
           "source": "never Claude-owned"
         }
-      }
+      },
+      "agent_id": null
     },
     {
       "routine_id": "D10",
@@ -4723,7 +4732,8 @@
           "state": "delegated-autonomy-v1-2026-08-12",
           "source": "dedicated Claude routine checkpoint, created on first run"
         }
-      }
+      },
+      "agent_id": null
     },
     {
       "routine_id": "D11",
@@ -4931,7 +4941,8 @@
           "state": "delegated-autonomy-v1-2026-08-12",
           "source": "dedicated Claude routine checkpoint, created on first run"
         }
-      }
+      },
+      "agent_id": null
     },
     {
       "routine_id": "D12",
@@ -5141,7 +5152,8 @@
           "state": "delegated-autonomy-v1-2026-08-12",
           "source": "dedicated Claude routine checkpoint, created on first run"
         }
-      }
+      },
+      "agent_id": null
     },
     {
       "routine_id": "D13",
@@ -5354,7 +5366,8 @@
           "state": "delegated-autonomy-v1-2026-08-12",
           "source": "dedicated Claude routine checkpoint, created on first run"
         }
-      }
+      },
+      "agent_id": null
     },
     {
       "routine_id": "D14",
@@ -5567,7 +5580,8 @@
           "state": "derived",
           "source": "12_Brain/registry/automations.json id=aeo-trust-gate"
         }
-      }
+      },
+      "agent_id": null
     },
     {
       "routine_id": "D15",
@@ -5748,7 +5762,8 @@
           "state": "not_applicable",
           "source": "never Claude-owned"
         }
-      }
+      },
+      "agent_id": null
     },
     {
       "routine_id": "D16",
@@ -5961,7 +5976,8 @@
           "state": "delegated-autonomy-v1-2026-08-12",
           "source": "dedicated Claude routine checkpoint, created on first run"
         }
-      }
+      },
+      "agent_id": null
     },
     {
       "routine_id": "D17",
@@ -6169,7 +6185,8 @@
           "state": "delegated-autonomy-v1-2026-08-12",
           "source": "dedicated Claude routine checkpoint, created on first run"
         }
-      }
+      },
+      "agent_id": null
     },
     {
       "routine_id": "D18",
@@ -6377,7 +6394,8 @@
           "state": "delegated-autonomy-v1-2026-08-12",
           "source": "dedicated Claude routine checkpoint, created on first run"
         }
-      }
+      },
+      "agent_id": null
     },
     {
       "routine_id": "D19",
@@ -6590,7 +6608,8 @@
           "state": "derived",
           "source": "12_Brain/registry/automations.json id=report-brain-ingest"
         }
-      }
+      },
+      "agent_id": null
     },
     {
       "routine_id": "D20",
@@ -6771,7 +6790,8 @@
           "state": "not_applicable",
           "source": "never Claude-owned"
         }
-      }
+      },
+      "agent_id": null
     },
     {
       "routine_id": "D21",
@@ -6952,7 +6972,8 @@
           "state": "not_applicable",
           "source": "never Claude-owned"
         }
-      }
+      },
+      "agent_id": null
     },
     {
       "routine_id": "D22",
@@ -7133,7 +7154,8 @@
           "state": "not_applicable",
           "source": "never Claude-owned"
         }
-      }
+      },
+      "agent_id": null
     },
     {
       "routine_id": "D23",
@@ -7314,7 +7336,8 @@
           "state": "not_applicable",
           "source": "never Claude-owned"
         }
-      }
+      },
+      "agent_id": null
     },
     {
       "routine_id": "D24",
@@ -7524,7 +7547,8 @@
           "state": "derived",
           "source": "12_Brain/registry/automations.json id=maker-checker"
         }
-      }
+      },
+      "agent_id": null
     },
     {
       "routine_id": "D25",
@@ -7734,7 +7758,8 @@
           "state": "delegated-autonomy-v1-2026-08-12",
           "source": "dedicated Claude routine checkpoint, created on first run"
         }
-      }
+      },
+      "agent_id": null
     },
     {
       "routine_id": "D26",
@@ -7947,7 +7972,8 @@
           "state": "delegated-autonomy-v1-2026-08-12",
           "source": "dedicated Claude routine checkpoint, created on first run"
         }
-      }
+      },
+      "agent_id": "agent-craft-brief"
     },
     {
       "routine_id": "D27",
@@ -8128,7 +8154,8 @@
           "state": "not_applicable",
           "source": "never Claude-owned"
         }
-      }
+      },
+      "agent_id": null
     },
     {
       "routine_id": "W01",
@@ -8309,7 +8336,8 @@
           "state": "not_applicable",
           "source": "never Claude-owned"
         }
-      }
+      },
+      "agent_id": null
     },
     {
       "routine_id": "W02",
@@ -8490,7 +8518,8 @@
           "state": "not_applicable",
           "source": "never Claude-owned"
         }
-      }
+      },
+      "agent_id": null
     },
     {
       "routine_id": "W03",
@@ -8671,7 +8700,8 @@
           "state": "not_applicable",
           "source": "never Claude-owned"
         }
-      }
+      },
+      "agent_id": null
     },
     {
       "routine_id": "W04",
@@ -8884,7 +8914,8 @@
           "state": "delegated-autonomy-v1-2026-08-12",
           "source": "dedicated Claude routine checkpoint, created on first run"
         }
-      }
+      },
+      "agent_id": null
     },
     {
       "routine_id": "W05",
@@ -9098,7 +9129,8 @@
           "state": "derived",
           "source": "12_Brain/registry/automations.json id=site-factory-batch"
         }
-      }
+      },
+      "agent_id": null
     },
     {
       "routine_id": "W06",
@@ -9311,7 +9343,8 @@
           "state": "derived",
           "source": "12_Brain/registry/automations.json id=report-brain-ingest"
         }
-      }
+      },
+      "agent_id": null
     },
     {
       "routine_id": "W07",
@@ -9492,7 +9525,8 @@
           "state": "not_applicable",
           "source": "never Claude-owned"
         }
-      }
+      },
+      "agent_id": null
     },
     {
       "routine_id": "W08",
@@ -9700,7 +9734,8 @@
           "state": "derived",
           "source": "12_Brain/registry/automations.json id=experiment-queue"
         }
-      }
+      },
+      "agent_id": null
     },
     {
       "routine_id": "W09",
@@ -9910,7 +9945,8 @@
           "state": "delegated-autonomy-v1-2026-08-12",
           "source": "dedicated Claude routine checkpoint, created on first run"
         }
-      }
+      },
+      "agent_id": null
     },
     {
       "routine_id": "W10",
@@ -10121,7 +10157,8 @@
           "state": "delegated-autonomy-v1-2026-08-12",
           "source": "dedicated Claude routine checkpoint, created on first run"
         }
-      }
+      },
+      "agent_id": null
     },
     {
       "routine_id": "W11",
@@ -10331,7 +10368,8 @@
           "state": "derived",
           "source": "12_Brain/registry/automations.json id=obsidian-guard-dog"
         }
-      }
+      },
+      "agent_id": null
     },
     {
       "routine_id": "M01",
@@ -10512,7 +10550,8 @@
           "state": "not_applicable",
           "source": "never Claude-owned"
         }
-      }
+      },
+      "agent_id": null
     },
     {
       "routine_id": "M02",
@@ -10722,7 +10761,8 @@
           "state": "delegated-autonomy-v1-2026-08-12",
           "source": "dedicated Claude routine checkpoint, created on first run"
         }
-      }
+      },
+      "agent_id": null
     },
     {
       "routine_id": "M03",
@@ -10932,7 +10972,8 @@
           "state": "delegated-autonomy-v1-2026-08-12",
           "source": "dedicated Claude routine checkpoint, created on first run"
         }
-      }
+      },
+      "agent_id": null
     },
     {
       "routine_id": "M04",
@@ -11142,7 +11183,8 @@
           "state": "delegated-autonomy-v1-2026-08-12",
           "source": "dedicated Claude routine checkpoint, created on first run"
         }
-      }
+      },
+      "agent_id": null
     },
     {
       "routine_id": "M05",
@@ -11351,7 +11393,8 @@
           "state": "delegated-autonomy-v1-2026-08-12",
           "source": "dedicated Claude routine checkpoint, created on first run"
         }
-      }
+      },
+      "agent_id": null
     },
     {
       "routine_id": "E01",
@@ -11532,7 +11575,8 @@
           "state": "not_applicable",
           "source": "never Claude-owned"
         }
-      }
+      },
+      "agent_id": null
     },
     {
       "routine_id": "E02",
@@ -11714,7 +11758,8 @@
           "state": "not_applicable",
           "source": "never Claude-owned"
         }
-      }
+      },
+      "agent_id": null
     },
     {
       "routine_id": "E03",
@@ -11895,7 +11940,8 @@
           "state": "not_applicable",
           "source": "never Claude-owned"
         }
-      }
+      },
+      "agent_id": null
     },
     {
       "routine_id": "E04",
@@ -12106,7 +12152,8 @@
           "state": "delegated-autonomy-v1-2026-08-12",
           "source": "dedicated Claude routine checkpoint, created on first run"
         }
-      }
+      },
+      "agent_id": "connector-health"
     },
     {
       "routine_id": "E05",
@@ -12315,7 +12362,8 @@
           "state": "delegated-autonomy-v1-2026-08-12",
           "source": "dedicated Claude routine checkpoint, created on first run"
         }
-      }
+      },
+      "agent_id": null
     },
     {
       "routine_id": "E06",
@@ -12496,7 +12544,8 @@
           "state": "not_applicable",
           "source": "never Claude-owned"
         }
-      }
+      },
+      "agent_id": null
     },
     {
       "routine_id": "E07",
@@ -12677,7 +12726,8 @@
           "state": "not_applicable",
           "source": "never Claude-owned"
         }
-      }
+      },
+      "agent_id": null
     },
     {
       "routine_id": "E08",
@@ -12859,7 +12909,8 @@
           "state": "not_applicable",
           "source": "never Claude-owned"
         }
-      }
+      },
+      "agent_id": null
     },
     {
       "routine_id": "E09",
@@ -13041,7 +13092,8 @@
           "state": "not_applicable",
           "source": "never Claude-owned"
         }
-      }
+      },
+      "agent_id": null
     },
     {
       "routine_id": "E10",
@@ -13251,7 +13303,8 @@
           "state": "delegated-autonomy-v1-2026-08-12",
           "source": "dedicated Claude routine checkpoint, created on first run"
         }
-      }
+      },
+      "agent_id": null
     },
     {
       "routine_id": "E11",
@@ -13461,7 +13514,8 @@
           "state": "delegated-autonomy-v1-2026-08-12",
           "source": "dedicated Claude routine checkpoint, created on first run"
         }
-      }
+      },
+      "agent_id": null
     }
   ]
 }

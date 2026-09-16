@@ -150,6 +150,17 @@ function countMdIn(vault, relDir) {
   return walkNotes(vault, full).length;
 }
 
+/** Agent roster counts from the automations registry (enabled/total). */
+function getAgentVitals(vault) {
+  try {
+    const text = fs.readFileSync(path.join(vault, '12_Brain', 'registry', 'automations.json'), 'utf8');
+    const list = JSON.parse(text).automations || [];
+    return { enabled: list.filter((a) => a.enabled).length, total: list.length };
+  } catch {
+    return { enabled: 0, total: 0 };
+  }
+}
+
 /** Brain-layer vitals derived from the canonical 12_Brain tree. */
 function getBrainVitals(vault) {
   const root = path.join(vault, BRAIN);
@@ -245,7 +256,7 @@ function buildState(vault) {
       clients: inDir('01_Clients'),
       content: inDir('03_Content'),
       sessions: inDir('10_Sessions'),
-      agents: inDir('11_Agents'),
+      agents: getAgentVitals(vault),
       brain: brain.entities + brain.concepts + brain.projects + brain.decisions + brain.memory + brain.protocols,
       tasksOpen: open,
       tasksDone: done,
@@ -273,6 +284,7 @@ module.exports = {
   getConfig,
   getDirectives,
   getSkills,
+  getAgentVitals,
   getBrainVitals,
   requiredBrainPaths,
   assertBrainStructure,

@@ -69,3 +69,4 @@ _os/automation/bridge/deliveries/
 # weekly-images: generated PNGs are regenerable client renders, not source.
 # Ledger rows (sha256/path/cost) are the durable record; keep the bytes local.
 _os/automation/weekly-images/out/
+_os/kanban/*.log

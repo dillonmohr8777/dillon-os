@@ -1,0 +1,24 @@
+# Momentum Agent Console tunnel — DRAFT, not active.
+# Exposes 127.0.0.1:4242 (already authed, see _os/server.js) at a real
+# hostname so the console is reachable from anywhere, not just this desk.
+#
+# Prerequisite, human only: `cloudflared tunnel login` opens a browser
+# to pick the zone. Nobody but Dillon can complete that.
+#
+# To activate (one time):
+#   cloudflared tunnel login
+#   cloudflared tunnel create momentum-agent-console
+#   cloudflared tunnel route dns momentum-agent-console agents.<yourdomain>
+#   cloudflared tunnel --config System/tunnel/cloudflared-config.yml run
+#
+# Then add Cloudflare Access (Zero Trust dashboard) in front of the
+# hostname, policy: allow dillonmohr8777@gmail.com only. Skipping Access
+# and relying on the token alone is not enough for a public hostname.
+
+tunnel: momentum-agent-console
+credentials-file: C:\Users\dillo\.cloudflared\momentum-agent-console.json
+
+ingress:
+  - hostname: agents.YOURDOMAIN.example
+    service: http://127.0.0.1:4242
+  - service: http_status:404

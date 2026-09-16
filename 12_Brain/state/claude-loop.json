@@ -1,11 +1,11 @@
 {
   "automation_id": "claude-loop",
   "status": "ok",
-  "run_id": "LOOP-20260915-010819062",
+  "run_id": "LOOP-20260915-110820818",
   "mode": "bounded-local-execute",
   "fixture": false,
-  "generated_at": "2026-09-15T05:08:23.792Z",
-  "written_at": "2026-09-15T05:08:23.792Z",
+  "generated_at": "2026-09-15T15:08:24.918Z",
+  "written_at": "2026-09-15T15:08:24.918Z",
   "counts": {
     "evaluated": 1,
     "complete": 1,
@@ -13,9 +13,9 @@
     "executed": 1
   },
   "outcomes": {
-    "E11": "complete"
+    "W05": "complete"
   },
   "learn": {
-    "E11": "no_finding"
+    "W05": "no_finding"
   }
 }

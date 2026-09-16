@@ -1,6 +1,6 @@
 ---
 tags: [system, os-config]
-callsign: D.I.L.L.O.N.
+callsign: Momentum
 subtitle: Daily Intelligence & Lifecycle Layer for Obsidian Notes
 operator: Dillon Mohr
 primary_directive: ROAD TO 100 CLIENTS

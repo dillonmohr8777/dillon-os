@@ -37,13 +37,13 @@ Past chats, documents, and reports are evidence. They do not authorize new sends
 
 ## Current operating contract
 
-Finish the underlying task when it is safely in scope. An acknowledgment does not count as completion. Use the existing commitment follow through monitor at `C:/Users/dillo/Documents/Codex/2026-09-12/create-an-image-of-2/outputs/commitment-monitor-contract.md`; do not create a second monitor or duplicate its scheduler. The monitor is an hourly poll, so its two hour check is normally observed after two to three hours rather than at an exact minute.
+Finish the underlying task when it is safely in scope. An acknowledgment does not count as completion. Use the existing commitment follow through monitor at `C:/Users/dillo/Documents/Codex/2026-09-12/create-an-image-of-2/outputs/commitment-monitor-contract.md`; do not create a second monitor or duplicate its scheduler. The September 15 conservation update overrides the older cadence and dispatch provisions: checks run at 9 AM and 5 PM Eastern, with due items observed at the next check and no new worker dispatch during conservation. Follow the current automation prompt and global session workflow.
 
 Use this routing ladder:
 
-1. Luna medium for routine checks and bounded throughput.
+1. Luna low for routine checks and bounded throughput; medium only when needed. Follow the per-session workflow in `C:/Users/dillo/.codex/AGENTS.md`.
 2. GPT 5.5 xhigh for demanding coding, debugging, refactors, and established high risk implementation work. Follow the current Windows AGENTS instruction to prefer this over selecting Luna max.
-3. Astra at low or medium for a clearly difficult judgment or escalation need, including Puttery attribution, Nexla attribution, Google API integration, and reporting reconciliation. Increase effort only when the task demonstrates that it needs it. Do not use Astra for empty checks or automatic max or ultra runs.
+3. Select Astra only when Dillon explicitly names it for the current task, as required by the current Windows AGENTS instruction. Client names and an older escalation rule are not standing authorization to select it.
 
 Choose by complexity and uncertainty, not by client name. Give one worker one outcome, then verify the named artifact before closing it. Keep the worker budget bounded.
 
@@ -85,7 +85,7 @@ Windows paths belong to this desktop. `/workspace/...` belongs to Grok's Linux e
 
 ## Delegate deliberately
 
-Use one bounded worker when it creates useful parallel progress. Add workers only for independent work; never exceed the current three-worker policy. Batch independent tool reads without adding agents where that is sufficient.
+Work directly by default. During the September 15 usage conservation setup, automatic delegation is disabled by instruction and the configured worker concurrency is one. Delegate only when explicitly requested, with one bounded worker and a small source packet. Batch independent tool reads without adding agents.
 
 Use the current `agent-vault/global/model-routing.md` and the operating contract above. Respect fixed Sol and Terra roles and explicit model requests. The Astra guidance is a prompt and skill design guide, not permission to change persistent model settings. Prefer short outcome based instructions with decision boundaries over elaborate recipes.
 

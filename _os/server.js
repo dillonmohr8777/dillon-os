@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * D.I.L.L.O.N. OS — visual agentic OS server.
+ * Momentum Agent Console — visual agentic OS server.
  *
  * Zero-dependency Node (18+) server that:
  *   - serves the HUD dashboard (public/index.html)
@@ -19,11 +19,49 @@ const path = require('node:path');
 const { spawn } = require('node:child_process');
 const crypto = require('node:crypto');
 const { buildState, getSkills } = require('./vault-state');
+const { lastRuns } = require('./automation/lib/run-record');
 
 const VAULT = path.resolve(__dirname, '..');
 const PUBLIC = path.join(__dirname, 'public');
+const REGISTRY = path.join(VAULT, '12_Brain', 'registry', 'automations.json');
 const PORT = Number(process.env.OS_PORT || 4242);
 const HOST = process.env.OS_HOST || '127.0.0.1';
+// Shared-secret auth. Local dev with no token set stays open on purpose
+// (matches every other Task Scheduler job on this machine); the moment
+// MOMENTUM_HUD_TOKEN exists (required before any tunnel/exposure), every
+// route except /login and /api/login demands the cookie. Locator only:
+// [Environment]::GetEnvironmentVariable('MOMENTUM_HUD_TOKEN','User')
+// ponytail: cookie == raw token, fine for a solo internal tool behind
+// Cloudflare Access; upgrade to signed sessions if this grows real users.
+const AUTH_TOKEN = process.env.MOMENTUM_HUD_TOKEN || null;
+const LOGIN_MAX_ATTEMPTS = 10;
+const LOGIN_WINDOW_MS = 5 * 60 * 1000;
+const loginAttempts = new Map(); // ip -> { count, windowStart }
+function loginRateLimited(ip) {
+  const now = Date.now();
+  const rec = loginAttempts.get(ip);
+  if (!rec || now - rec.windowStart > LOGIN_WINDOW_MS) {
+    loginAttempts.set(ip, { count: 1, windowStart: now });
+    return false;
+  }
+  rec.count += 1;
+  return rec.count > LOGIN_MAX_ATTEMPTS;
+}
+// Constant-time compare: plain !== / === leaks the token one byte at a
+// time to whoever can measure response latency, and this exact token is
+// meant to sit behind a public tunnel (System/tunnel/cloudflared-config.yml).
+function safeEq(a, b) {
+  const ab = Buffer.from(String(a));
+  const bb = Buffer.from(String(b));
+  if (ab.length !== bb.length) return false;
+  return crypto.timingSafeEqual(ab, bb);
+}
+function isAuthed(req) {
+  if (!AUTH_TOKEN) return true;
+  const cookie = req.headers.cookie || '';
+  const m = cookie.match(/(?:^|;\s*)momentum_hud=([^;]+)/);
+  return !!m && safeEq(m[1], AUTH_TOKEN);
+}
 
 // ---------------------------------------------------------------------------
 // Skill runner — headless Claude Code jobs with SSE log streaming
@@ -90,6 +128,52 @@ function statePayload() {
 }
 
 // ---------------------------------------------------------------------------
+// Agents roster — registry joined with last run (12_Brain/registry/automations.json)
+// ---------------------------------------------------------------------------
+
+function agentsPayload() {
+  const registry = JSON.parse(fs.readFileSync(REGISTRY, 'utf8'));
+  const last = lastRuns();
+  const agents = registry.automations.map((a) => ({
+    id: a.id,
+    name: a.name,
+    lane: a.lane,
+    cadence: a.cadence,
+    enabled: !!a.enabled,
+    lifecycle: a.lifecycle,
+    audience: a.audience || 'internal',
+    function: a.function || 'unassigned',
+    kind: a.kind || null,
+    outputs: a.outputs || [],
+    last: last[a.id] || null,
+  }));
+  agents.sort((x, y) => {
+    const xr = x.last && x.last.status === 'running';
+    const yr = y.last && y.last.status === 'running';
+    if (xr !== yr) return xr ? -1 : 1;
+    if (x.enabled !== y.enabled) return x.enabled ? -1 : 1;
+    return x.name.localeCompare(y.name);
+  });
+  return agents;
+}
+
+// Flips one record's `enabled` and rewrites the registry atomically (tmp + rename).
+// Only `automations[i].enabled` and top-level `updated` change; JSON.stringify
+// on a parsed object preserves key order, so formatting is otherwise untouched.
+function setAgentEnabled(id, enabled) {
+  const registry = JSON.parse(fs.readFileSync(REGISTRY, 'utf8'));
+  const record = registry.automations.find((a) => a.id === id);
+  if (!record) return null;
+  record.enabled = enabled;
+  registry.updated = new Date().toISOString().slice(0, 10);
+  const tmp = REGISTRY + '.tmp';
+  fs.writeFileSync(tmp, JSON.stringify(registry, null, 2) + '\n');
+  fs.renameSync(tmp, REGISTRY);
+  spawn('node', [path.join(__dirname, 'automation', 'bin', 'sync-cloud-console.js')], { cwd: VAULT, stdio: 'ignore' }).on('error', (err) => console.error('cloud console sync failed to start:', err.message));
+  return { id, enabled };
+}
+
+// ---------------------------------------------------------------------------
 // HTTP
 // ---------------------------------------------------------------------------
 
@@ -102,6 +186,36 @@ function json(res, code, body) {
 const server = http.createServer((req, res) => {
   const url = new URL(req.url, `http://${req.headers.host || 'localhost'}`);
   const p = url.pathname;
+
+  if (p === '/login' && req.method === 'GET') {
+    try {
+      res.writeHead(200, { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store' });
+      res.end(fs.readFileSync(path.join(PUBLIC, 'login.html')));
+    } catch { json(res, 500, { error: 'public/login.html missing' }); }
+    return;
+  }
+
+  if (p === '/api/login' && req.method === 'POST') {
+    const ip = req.socket.remoteAddress || 'unknown';
+    if (loginRateLimited(ip)) return json(res, 429, { error: 'too many attempts, wait a few minutes' });
+    let body = '';
+    req.on('data', (c) => { body += c; if (body.length > 4096) req.destroy(); });
+    req.on('end', () => {
+      let parsed;
+      try { parsed = JSON.parse(body || '{}'); } catch { return json(res, 400, { error: 'bad request' }); }
+      if (!AUTH_TOKEN || !safeEq(String(parsed.token || ''), AUTH_TOKEN)) return json(res, 401, { error: 'wrong token' });
+      loginAttempts.delete(ip);
+      res.setHeader('Set-Cookie', `momentum_hud=${AUTH_TOKEN}; HttpOnly; Secure; SameSite=Lax; Max-Age=2592000; Path=/`);
+      json(res, 200, { ok: true });
+    });
+    return;
+  }
+
+  if (!isAuthed(req)) {
+    if (p.startsWith('/api/')) return json(res, 401, { error: 'login required' });
+    res.writeHead(302, { location: '/login' });
+    return res.end();
+  }
 
   if (p === '/' || p === '/index.html') {
     try {
@@ -116,6 +230,28 @@ const server = http.createServer((req, res) => {
   if (p === '/api/state' && req.method === 'GET') {
     try { json(res, 200, statePayload()); }
     catch (err) { json(res, 500, { error: err.message }); }
+    return;
+  }
+
+  if (p === '/api/agents' && req.method === 'GET') {
+    try { json(res, 200, { agents: agentsPayload() }); }
+    catch (err) { json(res, 500, { error: err.message }); }
+    return;
+  }
+
+  const toggle = p.match(/^\/api\/agents\/([^/]+)\/enabled$/);
+  if (toggle && req.method === 'POST') {
+    let body = '';
+    req.on('data', (c) => { body += c; if (body.length > 4096) req.destroy(); });
+    req.on('end', () => {
+      let parsed;
+      try { parsed = JSON.parse(body || '{}'); } catch { return json(res, 400, { error: 'bad request' }); }
+      if (typeof parsed.enabled !== 'boolean') return json(res, 400, { error: 'enabled must be true or false' });
+      try {
+        const result = setAgentEnabled(decodeURIComponent(toggle[1]), parsed.enabled);
+        json(res, result ? 200 : 404, result || { error: 'unknown agent id' });
+      } catch (err) { json(res, 500, { error: err.message }); }
+    });
     return;
   }
 
@@ -151,8 +287,12 @@ const server = http.createServer((req, res) => {
   json(res, 404, { error: 'not found' });
 });
 
-server.listen(PORT, HOST, () => {
-  console.log(`D.I.L.L.O.N. OS online → http://${HOST}:${PORT}`);
-  console.log(`vault: ${VAULT}`);
-  console.log(`brain: ${path.join(VAULT, '12_Brain')}`);
-});
+if (require.main === module) {
+  server.listen(PORT, HOST, () => {
+    console.log(`Momentum Agent Console online → http://${HOST}:${PORT}`);
+    console.log(`vault: ${VAULT}`);
+    console.log(`brain: ${path.join(VAULT, '12_Brain')}`);
+  });
+}
+
+module.exports = { server, VAULT };

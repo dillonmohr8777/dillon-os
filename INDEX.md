@@ -50,6 +50,7 @@ links instead of loading the entire vault.
 ## Work
 
 - [[01_Clients/Momentum 360/AI Division Library/README|Momentum AI Division Library]]: private videos, ebooks, blog drafts and source packages.
+- [[12_Brain/05_Projects/AI Division business plan|AI Division business plan]] — DataStrike delivery model x Brainforge taxonomy, four service lines, Momentum runs it on itself first.
 
 - [[01_Clients/Client Index|Client Index]] — canonical client records.
 - `02_Campaigns/` — campaign plans and delivery.
@@ -135,6 +136,15 @@ evidence.
   — the stale active registry record is superseded by the vault.
 
 ## Reliability — 2026-09-15
+
+- [[12_Brain/07_Reviews/2026-09-15 - Astra consultation, the estate's root problem|Astra consultation, the estate's root problem]]
+  — a live GPT-6 Astra session, given today's own verified findings, names one root
+  cause under four of them, calls the job-outreach routing rule wrong rather than the
+  effort, and confirms live that this account has zero cost visibility into Agents API runs.
+
+- [[12_Brain/07_Reviews/2026-09-15 - Master orchestrator session record|Master orchestrator session record]]
+  — the full 2026-09-15 session: what access was exercised and what it proved,
+  the three root causes found, the 87-conflict main merge, and what is still open.
 
 - [[12_Brain/04_Decisions/2026-09-15 - Mac's FAQ bot is a second surface, not an opened Workmate|Mac's FAQ bot is a second surface, not an opened Workmate]]
   — Workmate is live and free per message, but its own prompt binds it to Dillon's
