@@ -34,11 +34,20 @@ const HOST = process.env.OS_HOST || '127.0.0.1';
 // ponytail: cookie == raw token, fine for a solo internal tool behind
 // Cloudflare Access; upgrade to signed sessions if this grows real users.
 const AUTH_TOKEN = process.env.MOMENTUM_HUD_TOKEN || null;
+// Constant-time compare: plain !== / === leaks the token one byte at a
+// time to whoever can measure response latency, and this exact token is
+// meant to sit behind a public tunnel (System/tunnel/cloudflared-config.yml).
+function safeEq(a, b) {
+  const ab = Buffer.from(String(a));
+  const bb = Buffer.from(String(b));
+  if (ab.length !== bb.length) return false;
+  return crypto.timingSafeEqual(ab, bb);
+}
 function isAuthed(req) {
   if (!AUTH_TOKEN) return true;
   const cookie = req.headers.cookie || '';
   const m = cookie.match(/(?:^|;\s*)momentum_hud=([^;]+)/);
-  return !!m && m[1] === AUTH_TOKEN;
+  return !!m && safeEq(m[1], AUTH_TOKEN);
 }
 
 // ---------------------------------------------------------------------------
@@ -178,7 +187,7 @@ const server = http.createServer((req, res) => {
     req.on('end', () => {
       let parsed;
       try { parsed = JSON.parse(body || '{}'); } catch { return json(res, 400, { error: 'bad request' }); }
-      if (!AUTH_TOKEN || parsed.token !== AUTH_TOKEN) return json(res, 401, { error: 'wrong token' });
+      if (!AUTH_TOKEN || !safeEq(String(parsed.token || ''), AUTH_TOKEN)) return json(res, 401, { error: 'wrong token' });
       res.setHeader('Set-Cookie', `momentum_hud=${AUTH_TOKEN}; HttpOnly; SameSite=Lax; Max-Age=2592000; Path=/`);
       json(res, 200, { ok: true });
     });
