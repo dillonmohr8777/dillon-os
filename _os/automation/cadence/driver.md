@@ -65,6 +65,12 @@ with the same `run_id`). `transcript` is the Claude Code session file for this
 run if you can name it, else `null`. Schema and a `lastRuns()` reader live in
 `_os/automation/lib/run-record.js`.
 
+**After all jobs**, run `node _os/automation/bin/sync-cloud-console.js` once so
+the cloud console mirror (`_os/cloud-console/worker.js`, read only, shows last
+known roster state when this desktop is off) picks up today's pass. It needs
+`CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` set or it logs one line and
+exits clean. That is not a driver failure, just an unsynced mirror.
+
 ## Hard rules
 
 These are not style preferences. Each one exists because of something that

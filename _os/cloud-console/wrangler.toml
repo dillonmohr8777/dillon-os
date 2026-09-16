@@ -1,0 +1,21 @@
+name = "momentum-console"
+main = "worker.js"
+compatibility_date = "2026-09-01"
+
+[[d1_databases]]
+binding = "CONSOLE"
+database_name = "momentum-console"
+database_id = "e9e219c7-740c-4573-8008-f192317ed992"
+
+# Deploy steps (approval gated, do not run without sign off):
+#   cd _os/cloud-console
+#   npx wrangler secret put MOMENTUM_HUD_TOKEN
+#   npx wrangler deploy
+#
+# Needs CLOUDFLARE_API_TOKEN + CLOUDFLARE_ACCOUNT_ID (same two GitHub Actions
+# secrets already used by .github/workflows/deploy-radar-d1-worker.yml) or an
+# already-authenticated `wrangler whoami`. Neither is available on this
+# machine as of 2026-09-16. No wrangler CLI installed, no token in the
+# environment. The fastest real path once reviewed: copy
+# .github/workflows/deploy-radar-d1-worker.yml to a momentum-console variant
+# (workingDirectory: _os/cloud-console) and run it the same way.

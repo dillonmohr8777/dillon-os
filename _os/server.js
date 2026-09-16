@@ -169,6 +169,7 @@ function setAgentEnabled(id, enabled) {
   const tmp = REGISTRY + '.tmp';
   fs.writeFileSync(tmp, JSON.stringify(registry, null, 2) + '\n');
   fs.renameSync(tmp, REGISTRY);
+  spawn('node', [path.join(__dirname, 'automation', 'bin', 'sync-cloud-console.js')], { cwd: VAULT, stdio: 'ignore' }).on('error', (err) => console.error('cloud console sync failed to start:', err.message));
   return { id, enabled };
 }
 
