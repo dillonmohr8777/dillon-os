@@ -15,8 +15,20 @@ const {
   getSkills,
   requiredBrainPaths,
 } = require('../vault-state');
+const { server } = require('../server');
 
 const VAULT = path.resolve(__dirname, '..', '..');
+const REGISTRY = path.join(VAULT, '12_Brain/registry/automations.json');
+
+// Starts the HUD server on an ephemeral port for the duration of `fn`, then closes it.
+async function withServer(fn) {
+  await new Promise((resolve) => server.listen(0, '127.0.0.1', resolve));
+  try {
+    await fn(`http://127.0.0.1:${server.address().port}`);
+  } finally {
+    await new Promise((resolve) => server.close(resolve));
+  }
+}
 
 describe('12_Brain canonical structure', () => {
   it('does not create a competing 1Z_Brain tree', () => {
@@ -110,5 +122,44 @@ describe('D.I.L.L.O.N. HUD vault state', () => {
     const state = buildState(VAULT);
     assert.ok(state.directives.length >= 1);
     assert.ok(state.directives.some((d) => d.source === 'Dashboard.md'));
+  });
+});
+
+describe('Agents roster API', () => {
+  it('GET /api/agents returns every row with a boolean enabled and last null-or-object', async () => {
+    await withServer(async (base) => {
+      const res = await fetch(`${base}/api/agents`);
+      assert.equal(res.status, 200);
+      const { agents } = await res.json();
+      assert.ok(Array.isArray(agents) && agents.length > 0);
+      for (const a of agents) {
+        assert.equal(typeof a.enabled, 'boolean');
+        assert.ok(a.last === null || typeof a.last === 'object');
+      }
+    });
+  });
+
+  it('POST /api/agents/:id/enabled flips the flag on disk, then restores it', async () => {
+    const original = JSON.parse(fs.readFileSync(REGISTRY, 'utf8'))
+      .automations.find((a) => a.id === 'frontmatter-repair').enabled;
+
+    await withServer(async (base) => {
+      const flip = async (enabled) => {
+        const res = await fetch(`${base}/api/agents/frontmatter-repair/enabled`, {
+          method: 'POST',
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({ enabled }),
+        });
+        assert.equal(res.status, 200);
+        assert.deepEqual(await res.json(), { id: 'frontmatter-repair', enabled });
+      };
+      await flip(!original);
+      const after = JSON.parse(fs.readFileSync(REGISTRY, 'utf8'));
+      assert.equal(after.automations.find((a) => a.id === 'frontmatter-repair').enabled, !original);
+      await flip(original); // restore so the registry ends this test unchanged
+    });
+
+    const restored = JSON.parse(fs.readFileSync(REGISTRY, 'utf8'));
+    assert.equal(restored.automations.find((a) => a.id === 'frontmatter-repair').enabled, original);
   });
 });

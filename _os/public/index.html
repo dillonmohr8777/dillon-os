@@ -14,6 +14,7 @@
     --green-dim: #3f8f5c;
     --amber: #fbbf24;
     --cyan: #67e8f9;
+    --red: #f87171;
     --mono: "SF Mono", "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -112,6 +113,28 @@
   .console pre .err { color: var(--amber); }
   .console pre .ok { color: var(--green); }
 
+  /* ---------- agents ---------- */
+  .agents-table { width: 100%; border-collapse: collapse; }
+  .agents-table th {
+    text-align: left; color: var(--ink-3); font-size: 9px; letter-spacing: .1em; text-transform: uppercase;
+    padding: 0 4px 4px; border-bottom: 1px solid var(--edge);
+  }
+  .agents-table td {
+    padding: 4px; border-bottom: 1px solid var(--edge); color: var(--ink-2);
+    max-width: 90px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  }
+  .agents-table tr:last-child td { border-bottom: 0; }
+  .agents-table tr.running td { color: var(--ink); }
+  .status-pill {
+    font-size: 9px; letter-spacing: .06em; text-transform: uppercase; border: 1px solid var(--edge-hi);
+    border-radius: 3px; padding: 1px 5px;
+  }
+  .status-pill.ok { color: var(--green); border-color: var(--green-dim); }
+  .status-pill.failed { color: var(--red); border-color: var(--red); }
+  .status-pill.running { color: var(--amber); border-color: var(--amber); animation: pulse 1.1s ease-in-out infinite; }
+  .status-pill.skipped, .status-pill.never { color: var(--ink-3); }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
+
   footer { display: flex; justify-content: space-between; color: var(--ink-3); font-size: 10px; letter-spacing: .08em; }
 
   #tip { position: fixed; z-index: 20; pointer-events: none; display: none;
@@ -188,6 +211,15 @@
 
     <!-- right -->
     <div class="col">
+      <div class="panel scroll" style="max-height:190px;flex-shrink:0">
+        <h2>Agents <span class="tag" id="agents-count"></span></h2>
+        <table class="agents-table">
+          <thead><tr>
+            <th>Name</th><th>Cadence</th><th>Last run</th><th>Exit</th><th>Status</th><th>On / off</th><th>Artifact</th>
+          </tr></thead>
+          <tbody id="agents-body"></tbody>
+        </table>
+      </div>
       <div class="panel">
         <h2>Command Deck <span class="tag" id="deck-count"></span></h2>
         <div class="deck" id="deck"></div>
@@ -238,6 +270,68 @@ async function sync() {
 }
 setInterval(sync, 15000); sync();
 
+// ---------------- agents roster ----------------
+let agentsState = [];
+
+function agoStr(iso) {
+  if (!iso) return null;
+  const s = Math.max(0, Math.floor((Date.now() - new Date(iso).getTime()) / 1000));
+  if (s < 60) return `${s}s`;
+  if (s < 3600) return `${Math.floor(s / 60)}m`;
+  if (s < 86400) return `${Math.floor(s / 3600)}h`;
+  return `${Math.floor(s / 86400)}d`;
+}
+
+function renderAgents() {
+  const list = agentsState;
+  $('agents-count').textContent = `${list.filter((a) => a.enabled).length} on / ${list.length}`;
+  $('agents-body').innerHTML = list.map((a) => {
+    const last = a.last;
+    const status = last ? last.status : 'never';
+    const when = last ? agoStr(last.ended || last.started) : null;
+    const exit = last && last.exit_code != null ? last.exit_code : '';
+    const artifact = last && last.artifact ? esc(last.artifact) : '';
+    return `<tr class="${status === 'running' ? 'running' : ''}">` +
+      `<td title="${esc(a.name)}">${esc(a.name)}</td>` +
+      `<td>${esc(a.cadence || '')}</td>` +
+      `<td>${when || 'never'}</td>` +
+      `<td>${exit}</td>` +
+      `<td><span class="status-pill ${status}">${esc(status)}</span></td>` +
+      `<td><input type="checkbox" data-id="${esc(a.id)}" ${a.enabled ? 'checked' : ''}></td>` +
+      `<td title="${artifact}">${artifact}</td>` +
+      `</tr>`;
+  }).join('');
+  for (const cb of document.querySelectorAll('#agents-body input[type=checkbox]')) {
+    cb.onchange = () => toggleAgent(cb);
+  }
+}
+
+async function toggleAgent(cb) {
+  const id = cb.dataset.id, enabled = cb.checked;
+  cb.disabled = true;
+  try {
+    const r = await fetch(`/api/agents/${encodeURIComponent(id)}/enabled`, {
+      method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ enabled }),
+    });
+    if (!r.ok) throw new Error('toggle failed');
+    const body = await r.json();
+    const row = agentsState.find((a) => a.id === id);
+    if (row) row.enabled = body.enabled;
+  } catch {
+    cb.checked = !enabled; // revert on error
+  } finally {
+    cb.disabled = false;
+  }
+}
+
+async function syncAgents() {
+  try {
+    agentsState = (await (await fetch('/api/agents')).json()).agents;
+    renderAgents();
+  } catch { /* keep last known table; next poll retries */ }
+}
+setInterval(syncAgents, 10000); syncAgents();
+
 function esc(s) { return s.replace(/[&<>]/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c])); }
 
 function render() {
@@ -256,7 +350,7 @@ function render() {
   const total = v.tasksOpen + v.tasksDone;
   $('taskmeter').style.width = total ? `${Math.round(100 * v.tasksDone / total)}%` : '0%';
   $('v-inbox').textContent = v.inbox;
-  $('v-ccs').textContent = `${v.clients} / ${v.content} / ${v.agents}`;
+  $('v-ccs').textContent = `${v.clients} / ${v.content} / ${v.agents.enabled}/${v.agents.total}`;
   $('v-sessions').textContent = `${v.sessions} sessions`;
   const b = state.brain || {};
   $('v-brain').textContent = v.brain != null ? v.brain : '—';

@@ -19,9 +19,11 @@ const path = require('node:path');
 const { spawn } = require('node:child_process');
 const crypto = require('node:crypto');
 const { buildState, getSkills } = require('./vault-state');
+const { lastRuns } = require('./automation/lib/run-record');
 
 const VAULT = path.resolve(__dirname, '..');
 const PUBLIC = path.join(__dirname, 'public');
+const REGISTRY = path.join(VAULT, '12_Brain', 'registry', 'automations.json');
 const PORT = Number(process.env.OS_PORT || 4242);
 const HOST = process.env.OS_HOST || '127.0.0.1';
 
@@ -90,6 +92,48 @@ function statePayload() {
 }
 
 // ---------------------------------------------------------------------------
+// Agents roster — registry joined with last run (12_Brain/registry/automations.json)
+// ---------------------------------------------------------------------------
+
+function agentsPayload() {
+  const registry = JSON.parse(fs.readFileSync(REGISTRY, 'utf8'));
+  const last = lastRuns();
+  const agents = registry.automations.map((a) => ({
+    id: a.id,
+    name: a.name,
+    lane: a.lane,
+    cadence: a.cadence,
+    enabled: !!a.enabled,
+    lifecycle: a.lifecycle,
+    outputs: a.outputs || [],
+    last: last[a.id] || null,
+  }));
+  agents.sort((x, y) => {
+    const xr = x.last && x.last.status === 'running';
+    const yr = y.last && y.last.status === 'running';
+    if (xr !== yr) return xr ? -1 : 1;
+    if (x.enabled !== y.enabled) return x.enabled ? -1 : 1;
+    return x.name.localeCompare(y.name);
+  });
+  return agents;
+}
+
+// Flips one record's `enabled` and rewrites the registry atomically (tmp + rename).
+// Only `automations[i].enabled` and top-level `updated` change; JSON.stringify
+// on a parsed object preserves key order, so formatting is otherwise untouched.
+function setAgentEnabled(id, enabled) {
+  const registry = JSON.parse(fs.readFileSync(REGISTRY, 'utf8'));
+  const record = registry.automations.find((a) => a.id === id);
+  if (!record) return null;
+  record.enabled = enabled;
+  registry.updated = new Date().toISOString().slice(0, 10);
+  const tmp = REGISTRY + '.tmp';
+  fs.writeFileSync(tmp, JSON.stringify(registry, null, 2) + '\n');
+  fs.renameSync(tmp, REGISTRY);
+  return { id, enabled };
+}
+
+// ---------------------------------------------------------------------------
 // HTTP
 // ---------------------------------------------------------------------------
 
@@ -116,6 +160,28 @@ const server = http.createServer((req, res) => {
   if (p === '/api/state' && req.method === 'GET') {
     try { json(res, 200, statePayload()); }
     catch (err) { json(res, 500, { error: err.message }); }
+    return;
+  }
+
+  if (p === '/api/agents' && req.method === 'GET') {
+    try { json(res, 200, { agents: agentsPayload() }); }
+    catch (err) { json(res, 500, { error: err.message }); }
+    return;
+  }
+
+  const toggle = p.match(/^\/api\/agents\/([^/]+)\/enabled$/);
+  if (toggle && req.method === 'POST') {
+    let body = '';
+    req.on('data', (c) => { body += c; if (body.length > 4096) req.destroy(); });
+    req.on('end', () => {
+      let parsed;
+      try { parsed = JSON.parse(body || '{}'); } catch { return json(res, 400, { error: 'bad request' }); }
+      if (typeof parsed.enabled !== 'boolean') return json(res, 400, { error: 'enabled must be true or false' });
+      try {
+        const result = setAgentEnabled(decodeURIComponent(toggle[1]), parsed.enabled);
+        json(res, result ? 200 : 404, result || { error: 'unknown agent id' });
+      } catch (err) { json(res, 500, { error: err.message }); }
+    });
     return;
   }
 
@@ -151,8 +217,12 @@ const server = http.createServer((req, res) => {
   json(res, 404, { error: 'not found' });
 });
 
-server.listen(PORT, HOST, () => {
-  console.log(`D.I.L.L.O.N. OS online → http://${HOST}:${PORT}`);
-  console.log(`vault: ${VAULT}`);
-  console.log(`brain: ${path.join(VAULT, '12_Brain')}`);
-});
+if (require.main === module) {
+  server.listen(PORT, HOST, () => {
+    console.log(`D.I.L.L.O.N. OS online → http://${HOST}:${PORT}`);
+    console.log(`vault: ${VAULT}`);
+    console.log(`brain: ${path.join(VAULT, '12_Brain')}`);
+  });
+}
+
+module.exports = { server, VAULT };
