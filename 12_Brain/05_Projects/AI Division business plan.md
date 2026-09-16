@@ -103,6 +103,32 @@ already a paid media client.
    Never logs, never a chat transcript. A monthly outcome review on top of it,
    same cadence as DataStrike's BI reviews.
 
+## The six agents, and who each one serves
+
+Built 2026-09-16 from MOMENTUM-ORG-PLAN.md, which specifies one mode per person
+with a first outcome and a proof of success gate. Every agent below carries that
+gate as its `accept` sentence, so it cannot report success without meeting it.
+
+| P | Agent | Serves | Service line | First outcome |
+|---|---|---|---|---|
+| 1 | `leads-triage` | Jason Fallon | Workflow Automation | Real leads separated from duplicates and caller ID noise |
+| 2 | `ops-decision-packets` | Sean Boyle | Copilots and Agents | Blocked work as one decision each, with a decider and a deadline |
+| 3 | `revenue-exceptions` | Mac Frederick | MarTech | Only the clients where spend, leads, CRM and payment disagree |
+| 4 | `production-briefs` | Melissa Silber | Knowledge Engineering | Every promised asset has a link or a named blocker |
+| 5 | `delivery-milestones` | Melissa Rigby | Workflow Automation | Build, review, acceptance and delivery as four separate states |
+| 6 | `agent-verifier` | shared | the trust layer | Whether the other five actually met their own gates |
+
+This is the answer to "what do you actually sell." Not four abstract service
+lines: six named agents that already run for a real five person company, each
+one traceable to a person whose specific daily problem it removes. A prospect
+gets shown this table with their own names in it.
+
+The org plan also fixes the architecture, and it is the same split the roster
+runner already uses: **deterministic code handles routing, deduplication, state
+checks and receipt matching; a model handles synthesis and judgment only where
+deterministic logic cannot finish.** That is why the free tier runs at no quota
+cost and the model tier is metered.
+
 ## The proof loop, and why it is the product
 
 The offer is not "we will build you agents." Every agency says that. The offer is

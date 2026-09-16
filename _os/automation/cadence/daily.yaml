@@ -136,3 +136,152 @@ jobs:
 
       Do NOT post to Slack, do NOT reply in the channel, do NOT touch
       HubSpot. This job reports; Jason and Sean decide.
+
+  # ------------------------------------------------- Sean, operations mode
+  # MOMENTUM-ORG-PLAN.md priority 2. Outcome: decision packets for blocked
+  # production, capacity and scope. Proof: each packet has one decision,
+  # current evidence, a responsible person, a deadline, and the effect of
+  # delay. Service line: Copilots and Agents.
+  - id: ops-decision-packets
+    title: Blocked work, turned into one decision each
+    enabled: true
+    outputs: 12_Brain/07_Reviews/Cadence
+    accept: |
+      A dated markdown file where every blocked item is a packet with
+      exactly one decision to make, the current evidence, a named
+      responsible person, a deadline, and what happens if it slips. An
+      open ended summary is a failure, not a packet.
+    prompt: |
+      Read System/approval-queue.md and the last 3 days of Slack in
+      #momentumsites, #outbound and #ghl-leads-apollo.
+
+      Find work that is BLOCKED: waiting on a decision, a credit, a
+      credential, a scope answer, or another person. Sean Boyle's named
+      blockers as of 2026-09-16 were Apollo credits, thin production
+      briefs, and Deborah Mara client confusion; treat those as examples
+      of the shape, not a fixed list.
+
+      For each, write one packet:
+        DECISION      one sentence, answerable yes/no or A/B
+        EVIDENCE      what is currently true, with a source path or a
+                      Slack permalink
+        RESPONSIBLE   the one named person who can decide it
+        DEADLINE      a real date, or "no deadline stated" if none exists
+        IF IT SLIPS   the concrete cost of waiting
+
+      Write "<date> - ops decision packets.md". Order by cost of delay,
+      highest first. If an item has no single decider, say so plainly:
+      that is itself the finding.
+
+      Do NOT decide anything. Do NOT message anyone. Packets only.
+
+  # --------------------------------- Melissa Silber, marketing production
+  # MOMENTUM-ORG-PLAN.md priority 4. Outcome: complete briefs and
+  # dependency maps carried to the requested artifact count. Proof:
+  # supplied answers are retained, only material missing inputs are asked,
+  # every promised asset has a review link or a precise blocker.
+  # Service line: Knowledge Engineering.
+  - id: production-briefs
+    title: Every promised asset has a link or a named blocker
+    enabled: true
+    outputs: 12_Brain/07_Reviews/Cadence
+    accept: |
+      A dated markdown file listing every in flight production item with
+      its requested asset count, how many exist, a review link for each
+      that exists, and a precise named blocker for each that does not.
+      "In progress" is not a blocker.
+    prompt: |
+      Read the last 7 days of Slack in #momentumsites and #outbound, plus
+      02_Campaigns/ and 03_Content/ in this vault.
+
+      For every piece of promised production work, record:
+        ITEM          what was asked for, and by whom
+        ASKED FOR     the requested count, if a count was named
+        DELIVERED     how many exist, with a link or path for each
+        BLOCKER       for anything missing: the exact thing it waits on
+                      and who holds it. Never "in progress", never "TBD".
+
+      Melissa Silber's standing problem is that press and website items
+      stall with no owner, and a bot re asks questions she already
+      answered. So: if an answer already exists anywhere in the thread or
+      the vault, carry it forward and mark it ANSWERED rather than asking
+      again. Only genuinely missing inputs get asked.
+
+      Write "<date> - production briefs.md". Lead with the items that
+      have a promised count and an unmet delivery.
+
+      Do NOT post, do NOT ask anyone anything directly. Report only.
+
+  # ------------------------------------ Melissa Rigby, client delivery
+  # MOMENTUM-ORG-PLAN.md priority 5. Outcome: milestone review agendas and
+  # specialist dependency packets. Proof: build completion, internal
+  # review, client acceptance and delivery stay separate evidenced states.
+  # Service line: Workflow Automation.
+  - id: delivery-milestones
+    title: Build, review, acceptance and delivery kept separate
+    enabled: true
+    outputs: 12_Brain/07_Reviews/Cadence
+    accept: |
+      A dated markdown file with one row per active client deliverable and
+      four SEPARATE state columns: built, internally reviewed, client
+      accepted, delivered. Each state carries its own evidence or reads
+      "no evidence". Collapsing any two states into one is a failure.
+    prompt: |
+      Read clients/*/deliverables/ under
+      C:/Users/dillo/Documents/Codex/projects/client-operations and the
+      last 7 days of the matching client Slack channels.
+
+      For every active deliverable, resolve four states INDEPENDENTLY.
+      A thing can be built and not reviewed, reviewed and not accepted,
+      accepted and not delivered. Never infer one state from another:
+
+        BUILT      the artifact exists on disk. Give the path.
+        REVIEWED   someone internal signed off. Give who and where.
+        ACCEPTED   the client said yes. Give the message or "no evidence".
+        DELIVERED  it actually reached the client. Give the receipt.
+
+      Resolve every client id against
+      client-operations/registry/clients.json. An id that does not resolve
+      is a failure for that row, not a guess.
+
+      Write "<date> - delivery milestones.md". Lead with anything built
+      but never delivered, that is finished work nobody received.
+
+      Do NOT deliver anything. Do NOT message a client. Report only.
+
+  # ------------------------------------------------- shared, the verifier
+  # MOMENTUM-ORG-PLAN.md: "No agent can close its own work from a success
+  # message alone." Runs LAST, checks the others. Service line: the trust
+  # layer that makes the other three sellable.
+  - id: agent-verifier
+    title: Check what the other agents claimed today
+    enabled: true
+    outputs: 12_Brain/07_Reviews/Cadence
+    accept: |
+      A dated markdown file naming every agent that produced a report
+      today, whether its claimed artifact actually exists on disk, and
+      whether its accept sentence is genuinely met. A verifier that finds
+      nothing wrong says so in one line, but it must have actually opened
+      the files to say it.
+    prompt: |
+      Read _os/automation/cadence/run-ledger.jsonl and
+      _os/automation/runs.jsonl for today, plus every file written to
+      12_Brain/07_Reviews/Cadence/ today.
+
+      For each agent that ran:
+        EXISTS     does the artifact it named actually exist on disk?
+        NONEMPTY   does it have real content, not a stub or a header only?
+        MEETS      re read that job's accept sentence in its manifest.
+                   Does the artifact actually satisfy it? Quote the line
+                   that proves it, or state exactly what is missing.
+        FRESH      is it dated today?
+
+      A ledger entry claiming ok whose artifact is absent, empty, or does
+      not meet its own accept gate is the single most important finding
+      here. Lead with those. That failure mode, work that runs and
+      produces nothing while reporting success, is the reason this whole
+      cadence exists.
+
+      Write "<date> - verifier.md".
+
+      Do NOT fix anything. Do NOT rerun anything. Report only.

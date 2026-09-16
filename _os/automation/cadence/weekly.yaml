@@ -67,3 +67,47 @@ jobs:
       2026-09-14 the worst was Omega at 34 days - last actual send August 11.
 
       Do not send anything. Do not resume the paused sender. Both are gated.
+
+  # -------------------------------------------- Mac, revenue and reporting
+  # MOMENTUM-ORG-PLAN.md priority 3. Outcome: weekly client exceptions that
+  # reconcile media delivery, leads, CRM outcomes and payment readiness.
+  # Proof: correct client, account and period are proven; unknown
+  # conversion or revenue fields stay pending validation rather than being
+  # invented. Service line: MarTech.
+  - id: revenue-exceptions
+    title: Clients where the numbers do not reconcile
+    enabled: true
+    outputs: 12_Brain/07_Reviews/Cadence
+    accept: |
+      A dated markdown file listing only the clients where media spend,
+      lead count, CRM outcome and payment state do NOT line up, each with
+      the exact account id and period that proves it. Any field that
+      cannot be sourced reads "pending validation" and is never estimated.
+    prompt: |
+      For each active client in
+      C:/Users/dillo/Documents/Codex/projects/client-operations/registry/clients.json,
+      reconcile for the last 7 days:
+        SPEND      from the Google Ads probe at
+                   %LOCALAPPDATA%/Dillon/GoogleAdsProbe/. Name the exact
+                   customer id and the period.
+        LEADS      named leads that actually arrived, from the lead triage
+                   reports in 12_Brain/07_Reviews/Cadence/.
+        CRM        what HubSpot shows, if reachable. If it is not
+                   reachable, write "pending validation", never a guess.
+        PAYMENT    invoice or payment state if evidenced in the vault.
+
+      Report ONLY the exceptions: clients where these four disagree.
+      A client whose numbers reconcile gets one line in a summary count,
+      not a section.
+
+      HARD RULES, these exist because of real incidents:
+        - Never query Google Ads account 7214914099.
+        - Never take an account level total on 6275014654; Replenish and
+          Fresh Blends share it and must never share metrics.
+        - Mac's standing complaint is reports without actual GA4/GSC
+          evidence. So every number carries its source, or it is marked
+          pending validation. An unsourced number is worse than a gap.
+
+      Write "<date> - revenue exceptions.md".
+
+      Do NOT send this to a client. Do NOT change a campaign. Report only.

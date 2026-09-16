@@ -1222,7 +1222,10 @@
       "function": "lead gen",
       "source": "_os/automation/cadence/daily.yaml",
       "owner": "cadence driver",
-      "notes": "Built 2026-09-16 against Jason Fallon's named bottleneck. Measured that day: every Meta and audit lead double fires into HubSpot within a minute, and about 30 percent of the channel is caller ID noise. Reports only; the upstream Zap overlap is the real fix."
+      "notes": "Built 2026-09-16 against Jason Fallon's named bottleneck. Measured that day: every Meta and audit lead double fires into HubSpot within a minute, and about 30 percent of the channel is caller ID noise. Reports only; the upstream Zap overlap is the real fix.",
+      "service_line": "Workflow Automation",
+      "org_plan_priority": 1,
+      "serves": "Jason Fallon"
     },
     {
       "id": "run-roster",
@@ -1248,6 +1251,141 @@
       "source": "_os/automation/bin/run-roster.js",
       "owner": "cadence driver",
       "notes": "The repeatable run all agents entry point. Runs only node commands needing no arguments, records each into runs.jsonl, and reports every skip with a reason. Model backed jobs and subagents are deliberately excluded because they cost weekly quota."
+    },
+    {
+      "id": "ops-decision-packets",
+      "name": "Blocked work, turned into one decision each",
+      "lane": "cadence",
+      "tier": 1,
+      "cadence": "daily via _os/automation/cadence/driver.md (Task Scheduler Cadence-daily)",
+      "stale_after_hours": 26,
+      "command": "claude -p \"Read _os/automation/cadence/driver.md and run the daily cadence.\"",
+      "inputs": [
+        "_os/automation/cadence/daily.yaml"
+      ],
+      "outputs": [
+        "12_Brain/07_Reviews/Cadence"
+      ],
+      "external_actions": false,
+      "status": "active-scheduled",
+      "lifecycle": "implemented",
+      "enabled": true,
+      "audience": "momentum",
+      "function": "operations",
+      "service_line": "Copilots and Agents",
+      "org_plan_priority": 2,
+      "serves": "Sean Boyle",
+      "source": "_os/automation/cadence/daily.yaml",
+      "owner": "cadence driver",
+      "notes": "MOMENTUM-ORG-PLAN.md priority 2. Outcome: decision packets for blocked production, capacity and scope. Proof gate: one decision, current evidence, named responsible person, deadline, effect of delay. An open ended summary fails the gate."
+    },
+    {
+      "id": "production-briefs",
+      "name": "Every promised asset has a link or a named blocker",
+      "lane": "cadence",
+      "tier": 1,
+      "cadence": "daily via _os/automation/cadence/driver.md (Task Scheduler Cadence-daily)",
+      "stale_after_hours": 26,
+      "command": "claude -p \"Read _os/automation/cadence/driver.md and run the daily cadence.\"",
+      "inputs": [
+        "_os/automation/cadence/daily.yaml"
+      ],
+      "outputs": [
+        "12_Brain/07_Reviews/Cadence"
+      ],
+      "external_actions": false,
+      "status": "active-scheduled",
+      "lifecycle": "implemented",
+      "enabled": true,
+      "audience": "momentum",
+      "function": "content",
+      "service_line": "Knowledge Engineering",
+      "org_plan_priority": 4,
+      "serves": "Melissa Silber",
+      "source": "_os/automation/cadence/daily.yaml",
+      "owner": "cadence driver",
+      "notes": "MOMENTUM-ORG-PLAN.md priority 4. Outcome: complete briefs and dependency maps carried to the requested artifact count. Proof gate: supplied answers retained, only material missing inputs asked, every promised asset has a review link or a precise blocker."
+    },
+    {
+      "id": "delivery-milestones",
+      "name": "Build, review, acceptance and delivery kept separate",
+      "lane": "cadence",
+      "tier": 1,
+      "cadence": "daily via _os/automation/cadence/driver.md (Task Scheduler Cadence-daily)",
+      "stale_after_hours": 26,
+      "command": "claude -p \"Read _os/automation/cadence/driver.md and run the daily cadence.\"",
+      "inputs": [
+        "_os/automation/cadence/daily.yaml"
+      ],
+      "outputs": [
+        "12_Brain/07_Reviews/Cadence"
+      ],
+      "external_actions": false,
+      "status": "active-scheduled",
+      "lifecycle": "implemented",
+      "enabled": true,
+      "audience": "momentum",
+      "function": "client delivery",
+      "service_line": "Workflow Automation",
+      "org_plan_priority": 5,
+      "serves": "Melissa Rigby",
+      "source": "_os/automation/cadence/daily.yaml",
+      "owner": "cadence driver",
+      "notes": "MOMENTUM-ORG-PLAN.md priority 5. Outcome: milestone review agendas and specialist dependency packets. Proof gate: build completion, internal review, client acceptance and delivery remain four separately evidenced states."
+    },
+    {
+      "id": "agent-verifier",
+      "name": "Check what the other agents claimed today",
+      "lane": "cadence",
+      "tier": 1,
+      "cadence": "daily via _os/automation/cadence/driver.md (Task Scheduler Cadence-daily)",
+      "stale_after_hours": 26,
+      "command": "claude -p \"Read _os/automation/cadence/driver.md and run the daily cadence.\"",
+      "inputs": [
+        "_os/automation/cadence/daily.yaml"
+      ],
+      "outputs": [
+        "12_Brain/07_Reviews/Cadence"
+      ],
+      "external_actions": false,
+      "status": "active-scheduled",
+      "lifecycle": "implemented",
+      "enabled": true,
+      "audience": "momentum",
+      "function": "agent ops",
+      "service_line": "the trust layer",
+      "org_plan_priority": 6,
+      "serves": "shared",
+      "source": "_os/automation/cadence/daily.yaml",
+      "owner": "cadence driver",
+      "notes": "MOMENTUM-ORG-PLAN.md shared verifier: no agent can close its own work from a success message alone. Checks artifact existence, non emptiness, freshness, and whether each job actually meets its own accept sentence. Runs last."
+    },
+    {
+      "id": "revenue-exceptions",
+      "name": "Clients where the numbers do not reconcile",
+      "lane": "cadence",
+      "tier": 1,
+      "cadence": "weekly via _os/automation/cadence/driver.md (Task Scheduler Cadence-weekly)",
+      "stale_after_hours": 192,
+      "command": "claude -p \"Read _os/automation/cadence/driver.md and run the weekly cadence.\"",
+      "inputs": [
+        "_os/automation/cadence/weekly.yaml"
+      ],
+      "outputs": [
+        "12_Brain/07_Reviews/Cadence"
+      ],
+      "external_actions": false,
+      "status": "active-scheduled",
+      "lifecycle": "implemented",
+      "enabled": true,
+      "audience": "momentum",
+      "function": "revenue",
+      "service_line": "MarTech",
+      "org_plan_priority": 3,
+      "serves": "Mac Frederick",
+      "source": "_os/automation/cadence/weekly.yaml",
+      "owner": "cadence driver",
+      "notes": "MOMENTUM-ORG-PLAN.md priority 3. Outcome: weekly client exceptions reconciling media delivery, leads, CRM outcomes and payment readiness. Proof gate: correct client, account and period proven; unsourced fields read pending validation and are never estimated. Carries the hard account rules: never query 7214914099, never take an account level total on shared 6275014654."
     }
   ],
   "gates": {
