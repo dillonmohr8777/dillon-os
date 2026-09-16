@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-09-14",
+  "updated": "2026-09-16",
   "contract": "00_Inbox/Automation Deep Analysis 2026-07-29.md",
   "dependency": "12_Brain/DEPENDENCY_PR226.md",
   "automations": [
@@ -19,7 +19,9 @@
         "Daily-Briefs/frontmatter-report.md"
       ],
       "external_actions": false,
-      "status": "implemented"
+      "status": "implemented",
+      "enabled": true,
+      "lifecycle": "implemented"
     },
     {
       "id": "frontmatter-repair",
@@ -36,7 +38,9 @@
       ],
       "external_actions": false,
       "notes": "Omit --dry-run to write missing required keys with safe defaults. Never invent due dates.",
-      "status": "implemented"
+      "status": "implemented",
+      "enabled": true,
+      "lifecycle": "implemented"
     },
     {
       "id": "site-health-sentinel",
@@ -54,7 +58,9 @@
       ],
       "external_actions": false,
       "notes": "Dry-run uses fixtures. Live HTTP checks are opt-in via --live and still never POST real user data except a marked canary when --canary is set.",
-      "status": "implemented"
+      "status": "implemented",
+      "enabled": true,
+      "lifecycle": "implemented"
     },
     {
       "id": "discover-qualify",
@@ -75,7 +81,9 @@
       ],
       "external_actions": false,
       "notes": "Drafts only. Feeds Mac's site-factory pipeline (#226). Indeed is an adapter, not a parallel stack.",
-      "status": "implemented"
+      "status": "implemented",
+      "enabled": true,
+      "lifecycle": "implemented"
     },
     {
       "id": "site-factory-batch",
@@ -89,7 +97,9 @@
         "pr-226"
       ],
       "external_actions": false,
-      "status": "external-dependency"
+      "status": "external-dependency",
+      "enabled": false,
+      "lifecycle": "blocked"
     },
     {
       "id": "outreach-activate",
@@ -104,7 +114,9 @@
         "netlify-token"
       ],
       "external_actions": true,
-      "status": "gated"
+      "status": "gated",
+      "enabled": false,
+      "lifecycle": "gated"
     },
     {
       "id": "indeed-hiring-adapter",
@@ -115,7 +127,9 @@
       "command": "node _os/automation/bin/qualify.js --adapter indeed --from <signals.json>",
       "external_actions": false,
       "notes": "Normalizes hiring signals into the shared prospect schema. Does not scrape Indeed live in this PR (fixture/import only — live scrape is a credential/ToS gate).",
-      "status": "implemented"
+      "status": "implemented",
+      "enabled": true,
+      "lifecycle": "implemented"
     },
     {
       "id": "grok-intelligence-ingest",
@@ -135,7 +149,9 @@
       ],
       "external_actions": false,
       "notes": "Idempotent, immutable capture. The browser collector is separate and may only read completed Grok runs.",
-      "status": "implemented"
+      "status": "implemented",
+      "enabled": true,
+      "lifecycle": "implemented"
     },
     {
       "id": "xai-daily-search",
@@ -160,7 +176,9 @@
       ],
       "external_actions": false,
       "notes": "Read-only X and web research through xAI Responses API. Chat-only key, 10 RPM, 250k TPM, expires 2026-10-28. Never logs the key.",
-      "status": "implemented"
+      "status": "implemented",
+      "enabled": true,
+      "lifecycle": "implemented"
     },
     {
       "id": "experiment-queue",
@@ -180,7 +198,9 @@
       ],
       "external_actions": false,
       "notes": "Creates proposed experiments only. Adoption still requires the maker/checker and human gates.",
-      "status": "implemented"
+      "status": "implemented",
+      "enabled": true,
+      "lifecycle": "implemented"
     },
     {
       "id": "dillon-dev-sandbox",
@@ -199,7 +219,9 @@
       ],
       "external_actions": false,
       "notes": "Fixture-only prototype. No install, browser, secret, deployment, or external write.",
-      "status": "implemented"
+      "status": "implemented",
+      "enabled": true,
+      "lifecycle": "implemented"
     },
     {
       "id": "maker-checker",
@@ -219,7 +241,9 @@
       ],
       "external_actions": false,
       "notes": "Maker and checker identities must differ. Human approval is required by default. Website-factory workflows also require a hashed screen recording and independent visual review across at least two viewports.",
-      "status": "implemented"
+      "status": "implemented",
+      "enabled": true,
+      "lifecycle": "implemented"
     },
     {
       "id": "mcp-acceptance-gate",
@@ -238,7 +262,9 @@
       ],
       "external_actions": false,
       "notes": "Fail closed: pending tests are sandbox-only; failed tests or critical permissions reject.",
-      "status": "implemented"
+      "status": "implemented",
+      "enabled": true,
+      "lifecycle": "implemented"
     },
     {
       "id": "context7-docs",
@@ -258,7 +284,9 @@
       ],
       "external_actions": false,
       "notes": "Official OpenAI questions continue to use OpenAI Developer Docs. Retrieved content is untrusted reference material.",
-      "status": "implemented"
+      "status": "implemented",
+      "enabled": true,
+      "lifecycle": "implemented"
     },
     {
       "id": "landingfolio-design-reference",
@@ -280,7 +308,9 @@
       ],
       "external_actions": false,
       "notes": "Sandbox-only until the Inspector check passes; the endpoint refuses anonymous calls, so the operator must mint a free token first. Wiring lives in .cursor/mcp.json and .mcp.json and reads LANDINGFOLIO_TOKEN from the environment. Composition reference only: the harvest stays the source of brand truth, returned content is untrusted, and queries never carry a client or prospect name.",
-      "status": "pending-gate"
+      "status": "pending-gate",
+      "enabled": false,
+      "lifecycle": "gated"
     },
     {
       "id": "aeo-trust-gate",
@@ -299,7 +329,9 @@
       ],
       "external_actions": false,
       "notes": "A fail blocks deployment. A pass does not replace visual review, functional QA, or exact Netlify target verification.",
-      "status": "implemented"
+      "status": "implemented",
+      "enabled": true,
+      "lifecycle": "implemented"
     },
     {
       "id": "daily-communications-brain",
@@ -325,7 +357,9 @@
       "notes": "Read-only source collection. Curated summaries and locators only; no raw archives, secrets, cross-client writes, sends, posts, labels, archives, publishing, spend, or account changes. Failed connectors do not advance their checkpoint. Registered through the supported Codex scheduler on 2026-08-03.",
       "status": "active-scheduled",
       "owner": "codex-windows",
-      "owner_note": "Single owner since 2026-09-01: Codex scheduled automation on the Windows box. See 12_Brain/04_Decisions/2026-09-01 - Daily comms single owner.md"
+      "owner_note": "Single owner since 2026-09-01: Codex scheduled automation on the Windows box. See 12_Brain/04_Decisions/2026-09-01 - Daily comms single owner.md",
+      "enabled": true,
+      "lifecycle": "implemented"
     },
     {
       "id": "daily-communications-brain-workflow-def",
@@ -342,7 +376,9 @@
       "external_actions": false,
       "superseded_by": "daily-communications-brain",
       "notes": "kept as reference definition, not scheduled",
-      "status": "deprecated"
+      "status": "deprecated",
+      "enabled": false,
+      "lifecycle": "deprecated"
     },
     {
       "id": "daily-morning-orchestrator-dry-board",
@@ -357,7 +393,9 @@
       "external_actions": false,
       "superseded_by": "daily-communications-brain",
       "notes": "morning dry board folded into the Codex daily-comms run",
-      "status": "deprecated"
+      "status": "deprecated",
+      "enabled": false,
+      "lifecycle": "deprecated"
     },
     {
       "id": "obsidian-guard-dog",
@@ -384,7 +422,9 @@
       ],
       "external_actions": false,
       "notes": "Public stable channel only. Brain growth is bounded to one measured variable and one retained improvement daily; unsupported learning is a healthy no-op. External research is untrusted evidence, blocked collectors fail closed, canonical pages are updated before duplicates, and fixed graph, coverage, source, and automation tests must pass. Never auto-enroll in Catalyst or beta, expose secrets, interrupt active use, delete user notes or scratch files, resolve Sync conflicts destructively, change production strategy, commit, push, reset, or clean.",
-      "status": "active-scheduled"
+      "status": "active-scheduled",
+      "enabled": true,
+      "lifecycle": "implemented"
     },
     {
       "id": "report-brain-ingest",
@@ -406,7 +446,9 @@
       ],
       "external_actions": false,
       "notes": "Archives every finalized weekly and monthly report with source provenance and SHA-256 integrity. Raw exports and ambiguous client routes fail closed. Ingestion does not imply or authorize external delivery.",
-      "status": "active-scheduled"
+      "status": "active-scheduled",
+      "enabled": true,
+      "lifecycle": "implemented"
     },
     {
       "id": "agent-craft-brief",
@@ -425,7 +467,9 @@
         "12_Brain/state/agent-craft-brief.json"
       ],
       "external_actions": false,
-      "status": "implemented"
+      "status": "implemented",
+      "enabled": true,
+      "lifecycle": "implemented"
     },
     {
       "id": "connector-health",
@@ -442,7 +486,9 @@
       ],
       "external_actions": false,
       "status": "implemented",
-      "note": "Split write/read: an MCP-capable agent records observed connector status; this CLI only validates freshness. It never contacts a provider and never invents a status."
+      "note": "Split write/read: an MCP-capable agent records observed connector status; this CLI only validates freshness. It never contacts a provider and never invents a status.",
+      "enabled": true,
+      "lifecycle": "implemented"
     },
     {
       "id": "browser-access",
@@ -459,7 +505,9 @@
       ],
       "external_actions": false,
       "status": "implemented",
-      "note": "Refuses forbidden port 9222 with exit 3 and marks chrome_isolated not-live unless the process on the port really runs a claude-chrome profile. probe/recommend describe agent-only rungs (WebFetch, WebSearch, Firecrawl) that a CLI cannot drive."
+      "note": "Refuses forbidden port 9222 with exit 3 and marks chrome_isolated not-live unless the process on the port really runs a claude-chrome profile. probe/recommend describe agent-only rungs (WebFetch, WebSearch, Firecrawl) that a CLI cannot drive.",
+      "enabled": true,
+      "lifecycle": "implemented"
     },
     {
       "id": "marketing-chief-twice-daily-brief",
@@ -483,7 +531,9 @@
       "owner": "codex-windows",
       "notes": "automation.toml status=ACTIVE with a real DAILY BYHOUR=9,17 rrule and dated run history through 2026-08-12; this is the twice-daily brief that actually runs on schedule. Read-only OmniRoute + ChatGPT Sites/SitesBridge health check, not an inbox/client/content brief.",
       "status": "active-scheduled",
-      "note": "Codex scheduled automation (09:00/17:00) checking OmniRoute/ChatGPT-Sites infra health. Reviewed 2026-09-01 against am-report: not a duplicate; kept separate pending Dillon's confirmation."
+      "note": "Codex scheduled automation (09:00/17:00) checking OmniRoute/ChatGPT-Sites infra health. Reviewed 2026-09-01 against am-report: not a duplicate; kept separate pending Dillon's confirmation.",
+      "enabled": true,
+      "lifecycle": "implemented"
     },
     {
       "id": "am-report",
@@ -510,7 +560,9 @@
       "notes": "No automation/cron registration and no Daily-Briefs/am-report-*.md file has ever been produced as of 2026-09-01, so it has no schedule evidence to claim active-scheduled. NOTE: content is not a duplicate of marketing-chief-twice-daily-brief (inbox/client/content vs. OmniRoute/Sites infra health) -- flagged for human review of this pairing, not a functional replacement. Kept as an on-demand skill.",
       "status": "implemented",
       "owner": "claude-code-skill",
-      "note": "On-demand Claude Code skill, run by Dillon; never cron-scheduled. Reviewed 2026-09-01 against marketing-chief-twice-daily-brief: different content (morning inbox/client/content brief vs infra health), so not collapsed. Dillon to confirm whether one should absorb the other."
+      "note": "On-demand Claude Code skill, run by Dillon; never cron-scheduled. Reviewed 2026-09-01 against marketing-chief-twice-daily-brief: different content (morning inbox/client/content brief vs infra health), so not collapsed. Dillon to confirm whether one should absorb the other.",
+      "enabled": true,
+      "lifecycle": "implemented"
     },
     {
       "id": "daily-sweep",
@@ -537,7 +589,185 @@
       ],
       "external_actions": false,
       "notes": "Local evidence only: no network, no model, no credential, no canonical client write. Exit 2 is a successful run reporting bad news (missed day, stale artifact, undelivered brief, absent cadence run, lying ledger row, unscheduled driver, or a counter that fell from non-zero to zero). Exit 1 is the script breaking. Backfills MISSED rows for every day it was skipped, so a machine that was powered off still produces a written gap rather than silence. Self-check: --selftest.",
-      "status": "implemented"
+      "status": "implemented",
+      "enabled": true,
+      "lifecycle": "implemented"
+    },
+    {
+      "id": "heartbeat",
+      "name": "Did yesterday actually happen",
+      "lane": "cadence",
+      "tier": 1,
+      "cadence": "daily via _os/automation/cadence/driver.md (Task Scheduler Cadence-daily)",
+      "stale_after_hours": 26,
+      "command": "claude -p \"Read _os/automation/cadence/driver.md and run the daily cadence.\"",
+      "inputs": [
+        "_os/automation/cadence/daily.yaml"
+      ],
+      "outputs": [
+        "12_Brain/07_Reviews/Cadence"
+      ],
+      "external_actions": false,
+      "status": "active-scheduled",
+      "lifecycle": "implemented",
+      "enabled": true,
+      "source": "_os/automation/cadence/daily.yaml",
+      "owner": "cadence driver",
+      "notes": "Manifest job. The prompt and accept gate live in the YAML; this record is the roster entry and the on/off switch."
+    },
+    {
+      "id": "approval-queue-diff",
+      "name": "What changed in the approval queue",
+      "lane": "cadence",
+      "tier": 1,
+      "cadence": "daily via _os/automation/cadence/driver.md (Task Scheduler Cadence-daily)",
+      "stale_after_hours": 26,
+      "command": "claude -p \"Read _os/automation/cadence/driver.md and run the daily cadence.\"",
+      "inputs": [
+        "_os/automation/cadence/daily.yaml"
+      ],
+      "outputs": [
+        "12_Brain/07_Reviews/Cadence"
+      ],
+      "external_actions": false,
+      "status": "active-scheduled",
+      "lifecycle": "implemented",
+      "enabled": true,
+      "source": "_os/automation/cadence/daily.yaml",
+      "owner": "cadence driver",
+      "notes": "Manifest job. The prompt and accept gate live in the YAML; this record is the roster entry and the on/off switch."
+    },
+    {
+      "id": "unfiled-sweep",
+      "name": "Finished work sitting untracked",
+      "lane": "cadence",
+      "tier": 1,
+      "cadence": "daily via _os/automation/cadence/driver.md (Task Scheduler Cadence-daily)",
+      "stale_after_hours": 26,
+      "command": "claude -p \"Read _os/automation/cadence/driver.md and run the daily cadence.\"",
+      "inputs": [
+        "_os/automation/cadence/daily.yaml"
+      ],
+      "outputs": [
+        "12_Brain/07_Reviews/Cadence"
+      ],
+      "external_actions": false,
+      "status": "active-scheduled",
+      "lifecycle": "implemented",
+      "enabled": true,
+      "source": "_os/automation/cadence/daily.yaml",
+      "owner": "cadence driver",
+      "notes": "Manifest job. The prompt and accept gate live in the YAML; this record is the roster entry and the on/off switch."
+    },
+    {
+      "id": "omega-search-terms",
+      "name": "Omega search terms - the unread pages",
+      "lane": "cadence",
+      "tier": 1,
+      "cadence": "weekly via _os/automation/cadence/driver.md (Task Scheduler Cadence-weekly)",
+      "stale_after_hours": 192,
+      "command": "claude -p \"Read _os/automation/cadence/driver.md and run the weekly cadence.\"",
+      "inputs": [
+        "_os/automation/cadence/weekly.yaml"
+      ],
+      "outputs": [
+        "clients/omega-landscaping/deliverables"
+      ],
+      "external_actions": false,
+      "status": "active-scheduled",
+      "lifecycle": "implemented",
+      "enabled": true,
+      "source": "_os/automation/cadence/weekly.yaml",
+      "owner": "cadence driver",
+      "notes": "Manifest job. The prompt and accept gate live in the YAML; this record is the roster entry and the on/off switch."
+    },
+    {
+      "id": "report-pairing-check",
+      "name": "Generated versus actually sent",
+      "lane": "cadence",
+      "tier": 1,
+      "cadence": "weekly via _os/automation/cadence/driver.md (Task Scheduler Cadence-weekly)",
+      "stale_after_hours": 192,
+      "command": "claude -p \"Read _os/automation/cadence/driver.md and run the weekly cadence.\"",
+      "inputs": [
+        "_os/automation/cadence/weekly.yaml"
+      ],
+      "outputs": [
+        "12_Brain/07_Reviews/Cadence"
+      ],
+      "external_actions": false,
+      "status": "active-scheduled",
+      "lifecycle": "implemented",
+      "enabled": true,
+      "source": "_os/automation/cadence/weekly.yaml",
+      "owner": "cadence driver",
+      "notes": "Manifest job. The prompt and accept gate live in the YAML; this record is the roster entry and the on/off switch."
+    },
+    {
+      "id": "registry-reconciliation",
+      "name": "Clients the registry cannot see",
+      "lane": "cadence",
+      "tier": 1,
+      "cadence": "monthly via _os/automation/cadence/driver.md (Task Scheduler Cadence-monthly)",
+      "stale_after_hours": 768,
+      "command": "claude -p \"Read _os/automation/cadence/driver.md and run the monthly cadence.\"",
+      "inputs": [
+        "_os/automation/cadence/monthly.yaml"
+      ],
+      "outputs": [
+        "12_Brain/07_Reviews/Cadence"
+      ],
+      "external_actions": false,
+      "status": "active-scheduled",
+      "lifecycle": "implemented",
+      "enabled": true,
+      "source": "_os/automation/cadence/monthly.yaml",
+      "owner": "cadence driver",
+      "notes": "Manifest job. The prompt and accept gate live in the YAML; this record is the roster entry and the on/off switch."
+    },
+    {
+      "id": "credential-age",
+      "name": "How old is every known exposure",
+      "lane": "cadence",
+      "tier": 1,
+      "cadence": "monthly via _os/automation/cadence/driver.md (Task Scheduler Cadence-monthly)",
+      "stale_after_hours": 768,
+      "command": "claude -p \"Read _os/automation/cadence/driver.md and run the monthly cadence.\"",
+      "inputs": [
+        "_os/automation/cadence/monthly.yaml"
+      ],
+      "outputs": [
+        "12_Brain/07_Reviews/Cadence"
+      ],
+      "external_actions": false,
+      "status": "active-scheduled",
+      "lifecycle": "implemented",
+      "enabled": true,
+      "source": "_os/automation/cadence/monthly.yaml",
+      "owner": "cadence driver",
+      "notes": "Manifest job. The prompt and accept gate live in the YAML; this record is the roster entry and the on/off switch."
+    },
+    {
+      "id": "backup-risk",
+      "name": "Finished work with no copy anywhere",
+      "lane": "cadence",
+      "tier": 1,
+      "cadence": "monthly via _os/automation/cadence/driver.md (Task Scheduler Cadence-monthly)",
+      "stale_after_hours": 768,
+      "command": "claude -p \"Read _os/automation/cadence/driver.md and run the monthly cadence.\"",
+      "inputs": [
+        "_os/automation/cadence/monthly.yaml"
+      ],
+      "outputs": [
+        "12_Brain/07_Reviews/Cadence"
+      ],
+      "external_actions": false,
+      "status": "active-scheduled",
+      "lifecycle": "implemented",
+      "enabled": true,
+      "source": "_os/automation/cadence/monthly.yaml",
+      "owner": "cadence driver",
+      "notes": "Manifest job. The prompt and accept gate live in the YAML; this record is the roster entry and the on/off switch."
     }
   ],
   "gates": {

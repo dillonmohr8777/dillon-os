@@ -371,6 +371,17 @@ function appendLedger(state) {
     note: state.verdict === 'clean' ? '' : state.verdict,
   });
   fs.appendFileSync(LEDGER, line + '\n', 'utf8');
+  // Same run, joined to the roster: 12_Brain/registry/automations.json id -> runs.jsonl.
+  try {
+    require('../lib/run-record').appendRun({
+      agent_id: 'daily-sweep',
+      started: now.toISOString(),
+      exit_code: state.exit_code,
+      status: state.exit_code === 1 ? 'failed' : 'ok',
+      artifact: 'System/sweep-status.md',
+      note: state.verdict === 'clean' ? '' : state.verdict,
+    });
+  } catch (e) { console.error('run-record append failed:', e.message); }
   return true;
 }
 
