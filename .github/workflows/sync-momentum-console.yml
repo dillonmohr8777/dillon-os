@@ -1,0 +1,43 @@
+name: Sync Momentum Console
+
+# Keeps the D1 mirror behind momentum-console.workers.dev current, so the
+# cloud console shows live roster state instead of a frozen snapshot.
+# Runs from Actions because CLOUDFLARE_API_TOKEN lives here as a repo
+# secret and deliberately does not exist on Dillon's desktop.
+on:
+  schedule:
+    - cron: '17,47 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: sync-momentum-console
+  cancel-in-progress: true
+
+jobs:
+  sync:
+    name: Push registry and runs to D1
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      # Checks out the feature branch on purpose: the sync script and the
+      # audience/enabled fields it reads are not on main yet (PR #406).
+      # Merging is approval gated, so the workflow lives on main and the
+      # data it reads comes from the branch. Change ref to main once #406 lands.
+      - name: Check out agent-control-plane
+        uses: actions/checkout@v6
+        with:
+          ref: agent-control-plane
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Sync to D1
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: node _os/automation/bin/sync-cloud-console.js
