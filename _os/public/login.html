@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Momentum Agent Console</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Nunito+Sans:wght@400;700;800&display=swap');
+  :root { --night:#0E1417; --paper:#FBF8F4; --gold:#E27113; --blue:#3897CC; }
+  * { box-sizing: border-box; }
+  body { margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center;
+    background:var(--night); color:var(--paper); font-family:'Nunito Sans',sans-serif; }
+  form { width:min(360px,90vw); padding:2rem; border:1px solid #1A2226; background:#111A1E; border-radius:16px; }
+  h1 { font-family:'Archivo Black',sans-serif; font-size:1.4rem; margin:0 0 .25rem; }
+  p { color:#8A9296; font-size:.9rem; margin:0 0 1.5rem; }
+  input { width:100%; padding:.75rem; border-radius:8px; border:1px solid #1A2226; background:var(--night);
+    color:var(--paper); font-size:1rem; margin-bottom:1rem; }
+  button { width:100%; padding:.75rem; border-radius:8px; border:none; background:var(--gold);
+    color:#14181B; font-weight:800; font-size:1rem; cursor:pointer; }
+  button:active { transform: translateY(1px); }
+  #err { color:#e2544a; font-size:.85rem; min-height:1.2em; margin-top:.75rem; }
+</style>
+</head>
+<body>
+<form id="f">
+  <h1>Momentum Agent Console</h1>
+  <p>Enter the access token to see and control the agent roster.</p>
+  <input id="tok" type="password" autocomplete="off" placeholder="Access token" autofocus>
+  <button type="submit">Enter</button>
+  <div id="err"></div>
+</form>
+<script>
+document.getElementById('f').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const token = document.getElementById('tok').value;
+  const err = document.getElementById('err');
+  err.textContent = '';
+  const r = await fetch('/api/login', { method:'POST', headers:{'content-type':'application/json'}, body: JSON.stringify({ token }) });
+  if (r.ok) { location.href = '/'; } else { err.textContent = 'Wrong token.'; }
+});
+</script>
+</body>
+</html>

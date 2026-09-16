@@ -26,6 +26,20 @@ const PUBLIC = path.join(__dirname, 'public');
 const REGISTRY = path.join(VAULT, '12_Brain', 'registry', 'automations.json');
 const PORT = Number(process.env.OS_PORT || 4242);
 const HOST = process.env.OS_HOST || '127.0.0.1';
+// Shared-secret auth. Local dev with no token set stays open on purpose
+// (matches every other Task Scheduler job on this machine); the moment
+// MOMENTUM_HUD_TOKEN exists (required before any tunnel/exposure), every
+// route except /login and /api/login demands the cookie. Locator only:
+// [Environment]::GetEnvironmentVariable('MOMENTUM_HUD_TOKEN','User')
+// ponytail: cookie == raw token, fine for a solo internal tool behind
+// Cloudflare Access; upgrade to signed sessions if this grows real users.
+const AUTH_TOKEN = process.env.MOMENTUM_HUD_TOKEN || null;
+function isAuthed(req) {
+  if (!AUTH_TOKEN) return true;
+  const cookie = req.headers.cookie || '';
+  const m = cookie.match(/(?:^|;\s*)momentum_hud=([^;]+)/);
+  return !!m && m[1] === AUTH_TOKEN;
+}
 
 // ---------------------------------------------------------------------------
 // Skill runner — headless Claude Code jobs with SSE log streaming
@@ -149,6 +163,33 @@ function json(res, code, body) {
 const server = http.createServer((req, res) => {
   const url = new URL(req.url, `http://${req.headers.host || 'localhost'}`);
   const p = url.pathname;
+
+  if (p === '/login' && req.method === 'GET') {
+    try {
+      res.writeHead(200, { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store' });
+      res.end(fs.readFileSync(path.join(PUBLIC, 'login.html')));
+    } catch { json(res, 500, { error: 'public/login.html missing' }); }
+    return;
+  }
+
+  if (p === '/api/login' && req.method === 'POST') {
+    let body = '';
+    req.on('data', (c) => { body += c; if (body.length > 4096) req.destroy(); });
+    req.on('end', () => {
+      let parsed;
+      try { parsed = JSON.parse(body || '{}'); } catch { return json(res, 400, { error: 'bad request' }); }
+      if (!AUTH_TOKEN || parsed.token !== AUTH_TOKEN) return json(res, 401, { error: 'wrong token' });
+      res.setHeader('Set-Cookie', `momentum_hud=${AUTH_TOKEN}; HttpOnly; SameSite=Lax; Max-Age=2592000; Path=/`);
+      json(res, 200, { ok: true });
+    });
+    return;
+  }
+
+  if (!isAuthed(req)) {
+    if (p.startsWith('/api/')) return json(res, 401, { error: 'login required' });
+    res.writeHead(302, { location: '/login' });
+    return res.end();
+  }
 
   if (p === '/' || p === '/index.html') {
     try {
