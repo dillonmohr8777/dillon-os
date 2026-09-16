@@ -156,6 +156,91 @@ dashboard of agents that ran today for somebody else, and the honest skip list
 next to it. The skip list is the trust signal: an agency willing to show what it
 did not run is one you can believe about what it did.
 
+## The product architecture, and why it is Claude Code's
+
+Dillon, 2026-09-16: a real mobile app clients log into to see their agents, where
+the actual work runs on a machine that holds the real connections, their CRM,
+their email, everything. Prompting from the phone, execution on the box.
+
+That is the correct shape, and it is worth naming why: **it is the same split
+Claude Code itself uses.** A thin client for viewing and prompting, a heavy
+runtime on a real machine with credentials and filesystem access, a session
+protocol between them, and approval gates surfaced back to the client. Reverse
+engineering it is a reasonable strategy because the design is already proven
+against exactly this problem.
+
+### What already exists, as of today
+
+More of it is built than it feels like:
+
+| Layer | Claude Code's version | What Momentum has today |
+|---|---|---|
+| Thin client | the mobile and desktop app | Momentum Agent Console, live at momentum-console.dillonmohr8777.workers.dev |
+| Always on view | cloud session state | Cloudflare Worker plus D1 mirror, survives the runtime being off |
+| Runtime | the local CLI process | the cadence driver on the desktop, holding every real credential |
+| State model | sessions and transcripts | the roster in automations.json joined to runs.jsonl |
+| Approval gate | permission prompts | System/approval-queue.md, every external action stops there |
+| Identity | account auth | shared secret token, timing safe, rate limited |
+
+That is a working single tenant version of the product. It is crude, but the
+pieces are the right pieces and they are wired to each other.
+
+### The two genuinely hard parts
+
+Everything else is work. These two are the product.
+
+**1. Multi tenancy.** Today there is one tenant, Momentum, and one token. A
+client needs their agents, their data, and their credentials isolated from every
+other client, provably. This is the thing an SMB either trusts or does not, and
+it cannot be retrofitted convincingly. It means per tenant credential storage the
+operator cannot casually read, per tenant D1 or schema separation, and an audit
+trail that shows a client nobody else touched their data. The existing rule that
+client data never crosses into another client's channel or packet
+(MOMENTUM-ORG-PLAN.md) is the right instinct at the wrong scale; it has to become
+an enforced boundary, not a convention.
+
+**2. The command channel.** The cloud console is currently read only by design,
+because a mirror cannot safely write back to a runtime it does not control.
+Prompting from the phone means a real channel: phone to cloud to runtime, with
+the runtime authenticating the request, executing under its own approval gates,
+and streaming results back. Claude Code solves this with its own session
+protocol. The honest version here is a queue: the phone writes an intent, the
+runtime polls, executes, and writes back a receipt. Slower than a socket, far
+easier to reason about, and it fails safe when the runtime is offline.
+
+### The runtime should move to the Mac mini
+
+Not a preference, an infrastructure fix. The current runtime is a Windows
+desktop with a diagnosed, unrepaired power supply fault: fourteen unclean power
+offs in thirty days
+([[12_Brain/07_Reviews/2026-09-09 - Machine power fault diagnosis]]). Every
+agent, every credential and every scheduled job sits on it. A Mac mini as the
+runtime host is the single highest value infrastructure change available, and it
+should happen before any client depends on this, not after.
+
+### App, or web
+
+A PWA gets ninety percent of this with none of the app store overhead: one
+codebase, installable to the home screen, push notifications, and the same
+Worker already serving it. Native is a later decision driven by whether push
+reliability or background execution actually becomes a constraint. Do not start
+with a native app.
+
+### Sequencing, honestly
+
+This is the product, not a feature, and it is a year of work to do properly. But
+it does not need to be finished to be sold. The order that keeps it honest:
+
+1. Move the runtime to the Mac mini. Nothing else matters if the host dies.
+2. Build the command channel single tenant, for Momentum only. Prove prompting
+   from the phone against a real runtime.
+3. Add the second tenant. The first client is where multi tenancy stops being
+   theoretical, and it should be a client who knows they are first.
+4. Only then a PWA polished enough to put in front of a stranger.
+
+Each step is independently useful to Momentum even if the product never ships,
+which is the property that makes it safe to start.
+
 ## Sequencing
 
 Momentum runs Phases 0 to 4 of the control plane (PR #406) on itself first. The
