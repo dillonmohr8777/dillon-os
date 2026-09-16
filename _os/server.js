@@ -34,6 +34,19 @@ const HOST = process.env.OS_HOST || '127.0.0.1';
 // ponytail: cookie == raw token, fine for a solo internal tool behind
 // Cloudflare Access; upgrade to signed sessions if this grows real users.
 const AUTH_TOKEN = process.env.MOMENTUM_HUD_TOKEN || null;
+const LOGIN_MAX_ATTEMPTS = 10;
+const LOGIN_WINDOW_MS = 5 * 60 * 1000;
+const loginAttempts = new Map(); // ip -> { count, windowStart }
+function loginRateLimited(ip) {
+  const now = Date.now();
+  const rec = loginAttempts.get(ip);
+  if (!rec || now - rec.windowStart > LOGIN_WINDOW_MS) {
+    loginAttempts.set(ip, { count: 1, windowStart: now });
+    return false;
+  }
+  rec.count += 1;
+  return rec.count > LOGIN_MAX_ATTEMPTS;
+}
 // Constant-time compare: plain !== / === leaks the token one byte at a
 // time to whoever can measure response latency, and this exact token is
 // meant to sit behind a public tunnel (System/tunnel/cloudflared-config.yml).
@@ -182,13 +195,16 @@ const server = http.createServer((req, res) => {
   }
 
   if (p === '/api/login' && req.method === 'POST') {
+    const ip = req.socket.remoteAddress || 'unknown';
+    if (loginRateLimited(ip)) return json(res, 429, { error: 'too many attempts, wait a few minutes' });
     let body = '';
     req.on('data', (c) => { body += c; if (body.length > 4096) req.destroy(); });
     req.on('end', () => {
       let parsed;
       try { parsed = JSON.parse(body || '{}'); } catch { return json(res, 400, { error: 'bad request' }); }
       if (!AUTH_TOKEN || !safeEq(String(parsed.token || ''), AUTH_TOKEN)) return json(res, 401, { error: 'wrong token' });
-      res.setHeader('Set-Cookie', `momentum_hud=${AUTH_TOKEN}; HttpOnly; SameSite=Lax; Max-Age=2592000; Path=/`);
+      loginAttempts.delete(ip);
+      res.setHeader('Set-Cookie', `momentum_hud=${AUTH_TOKEN}; HttpOnly; Secure; SameSite=Lax; Max-Age=2592000; Path=/`);
       json(res, 200, { ok: true });
     });
     return;
