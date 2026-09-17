@@ -1,0 +1,46 @@
+name: Cadence watchdog
+
+# Runs OFF the machine that runs Cadence. The local heartbeat
+# (Cadence-sweep-heartbeat, hourly) already checks "did yesterday run", but it
+# shares a power supply with the thing it watches — 14 unclean power-offs in
+# 30 days — so when the box dies, the watchdog dies with it, silently.
+#
+# This reads only what has reached origin. If nothing has pushed in
+# STALE_REPO_HOURS (see cadence-watchdog.js), that absence is itself the
+# alarm, independent of what the ledger says.
+on:
+  schedule:
+    - cron: '15 */6 * * *' # every 6 hours
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2 # only need HEAD's commit date; not a full history walk
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Run the watchdog
+        run: |
+          set -o pipefail
+          node _os/automation/bin/cadence-watchdog.js | tee watchdog.log
+
+      - name: Job summary
+        if: always()
+        run: |
+          {
+            echo "## Cadence watchdog"
+            echo
+            echo '```'
+            cat watchdog.log
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
