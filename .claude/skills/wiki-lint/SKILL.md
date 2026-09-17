@@ -8,12 +8,25 @@ description: Weekly graph hygiene for the wiki layer — contradictions, duplica
 Lint the brain layer: `12_Brain/02_Entities/`, `12_Brain/03_Concepts/`, `12_Brain/INDEX.md`. (File-level vault
 hygiene — stray files, empty notes — belongs to `/vault-clean`; don't repeat it.)
 
+**Count checks 1 and 2 before you write a word about them:**
+
+```
+node _os/automation/bin/wiki-lint-check.js
+```
+
+Report its numbers, not your own. It is read-only and takes about a second. On
+2026-09-16 this pass hand-counted instead and reported 220+ empty stubs in a
+file containing zero, and 53 orphans when the real number was five — a FAILING
+grade nobody could act on. A count you did not run is not a finding.
+
 Checks:
 
 1. **Dead links** — every `[[wikilink]]` in `12_Brain/02_Entities/`, `12_Brain/03_Concepts/` and
-   `12_Brain/INDEX.md` resolves to a real note. List the broken ones with their file.
+   `12_Brain/INDEX.md` resolves to a real note. `wiki-lint-check.js` lists these as
+   `unresolved links`; a link to a `.base`, `.canvas` or folder is resolved, not broken.
 2. **Orphans** — wiki pages not listed in `12_Brain/INDEX.md`, and INDEX entries whose
-   page is gone.
+   page is gone. `wiki-lint-check.js` reports these as `orphan pages`, checked against
+   both `INDEX.md` and `12_Brain/INDEX.md`.
 3. **Duplicates** — two pages covering the same entity/lesson (grep titles and
    summary lines for overlap). Propose which absorbs which.
 4. **Missing sources** — any wiki page without a `source:` line. Flag it as
