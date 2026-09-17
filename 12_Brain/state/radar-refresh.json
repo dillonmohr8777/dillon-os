@@ -1,35 +1,35 @@
 {
   "automation_id": "radar-refresh",
-  "started_at": "2026-09-16T11:29:50.134Z",
+  "started_at": "2026-09-17T11:45:31.974Z",
   "status": "error",
-  "date": "2026-09-16",
-  "rotation_slot": "PA: Forest County, Clinton County, Cambria County, Northampton County, Carbon County, York County",
+  "date": "2026-09-17",
+  "rotation_slot": "PA: Jefferson County, Fayette County, Columbia County, Lycoming County, Adams County, Lehigh County",
   "run": {
-    "discovered_raw": 149,
-    "discovered_new": 2,
-    "regraded": 2,
-    "enriched": 1,
+    "discovered_raw": 284,
+    "discovered_new": 3,
+    "regraded": 16,
+    "enriched": 2,
     "enrich_no_match": 1,
     "enrich_skipped": 0,
     "errors": [
-      "dashboard failed: dashboard is 1.69MB, over the 1.50MB limit — 1457 prospects. Trim projectRows() or paginate server-side before shipping this."
+      "dashboard failed: dashboard is 1.69MB, over the 1.50MB limit — 1460 prospects. Trim projectRows() or paginate server-side before shipping this."
     ],
-    "plan": "registry is at 1475 rows, past the 1200 soft cap — discovery ramped from 60 to 5",
+    "plan": "registry is at 1477 rows, past the 1200 soft cap — discovery ramped from 60 to 5",
     "throttled": true,
-    "rendered": 1,
-    "imagery_checked": 47,
-    "imagery_buildable": 20,
-    "logo_verified": 26,
-    "logo_pending": 18,
-    "logo_rejected": 3,
-    "not_live": 1
+    "rendered": 14,
+    "imagery_checked": 3,
+    "imagery_buildable": 0,
+    "logo_verified": 0,
+    "logo_pending": 3,
+    "logo_rejected": 0,
+    "not_live": 0
   },
-  "tracked": 1477,
+  "tracked": 1480,
   "active": 413,
-  "logo_holds": 1044,
+  "logo_holds": 1047,
   "logo_hold_reasons": {
-    "logo_fetch_failed": 147,
-    "logo_not_found": 203,
+    "logo_fetch_failed": 148,
+    "logo_not_found": 205,
     "previous_homepage_exists": 140,
     "logo_below_minimum_size": 8,
     "logo_format_not_auditable_webp": 58,
@@ -57,10 +57,10 @@
   "needs_render": 0,
   "mean_site_quality": 53,
   "by_verdict": {
-    "rebuild": 263,
-    "polish": 916,
-    "enrich": 26,
-    "nurture": 220,
+    "rebuild": 264,
+    "polish": 919,
+    "enrich": 24,
+    "nurture": 221,
     "ads_seo": 32
   },
   "by_verdict_active": {
@@ -70,8 +70,8 @@
     "rebuild": 4
   },
   "errors": [
-    "dashboard failed: dashboard is 1.69MB, over the 1.50MB limit — 1457 prospects. Trim projectRows() or paginate server-side before shipping this."
+    "dashboard failed: dashboard is 1.69MB, over the 1.50MB limit — 1460 prospects. Trim projectRows() or paginate server-side before shipping this."
   ],
-  "generated_at": "2026-09-16T11:29:50.231Z",
-  "written_at": "2026-09-16T11:29:50.231Z"
+  "generated_at": "2026-09-17T11:45:32.057Z",
+  "written_at": "2026-09-17T11:45:32.057Z"
 }
