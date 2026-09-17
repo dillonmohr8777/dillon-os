@@ -56,6 +56,15 @@ Everything in this block was measured on disk or in Task Scheduler on
   `claude-daily-driver` last cycled 03:23 for the same reason. The fix is
   `LogonType S4U` + `StartWhenAvailable` on all four; attempted 2026-09-15 and
   refused with "Access is denied" -- it needs elevation, so it needs Dillon.
+  **UPDATE 2026-09-16 23:0xZ, measured in Task Scheduler.** `Cadence-daily` DID
+  fire today: LastRunTime 2026-09-16 09:05:01, LastTaskResult 0, missed runs 0.
+  `Cadence-sweep-heartbeat` last ran 19:00:01 with result 2. `Cadence-weekly` and
+  `Cadence-monthly` are still on the 11/30/1999 never-run sentinel with result
+  267011 -- they have simply not reached their first scheduled fire (next 09-21
+  and 10-01). So the daily job is not broken; it is CONDITIONAL. All four are
+  still `LogonType: Interactive`, so any morning the machine is not logged in by
+  09:05 silently loses that run, exactly as 2026-09-15 did. The S4U elevation
+  fix is still required and still needs Dillon.
   [[12_Brain/07_Reviews/2026-09-15 - Cadence tasks cannot run unattended]]
 - **Run ledger is live:** `_os/automation/cadence/run-ledger.jsonl` last wrote
   2026-09-14T19:01:38Z, daily-sweep ok, `cadence-absent=0`.

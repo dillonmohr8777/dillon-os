@@ -10,6 +10,13 @@ param(
 
 $ErrorActionPreference = 'Stop'
 $statePath = Join-Path $HermesHome 'gateway_state.json'
+# gateway_state.json is written on state CHANGE only, so an idle-but-healthy
+# gateway leaves it untouched for hours. state\gateway.heartbeat is the 30s
+# liveness file (gateway.shutdown_watchdog.write_loop_heartbeat) and is the
+# only correct source for heartbeat age. Reading updated_at from
+# gateway_state.json produced 29 false "STALE CRITICAL" freezes and 7 stale
+# approval-queue items between 2026-07-16 and 2026-09-16. Fixed 2026-09-16.
+$heartbeatPath = Join-Path $HermesHome 'state\gateway.heartbeat'
 $logPath = Join-Path $HermesHome 'logs\gateway.log'
 $outPath = Join-Path $VaultRoot 'System\gateway-health.md'
 
@@ -19,8 +26,15 @@ if (-not (Test-Path $statePath)) {
 
 $state = Get-Content $statePath -Raw | ConvertFrom-Json
 $nowUtc = [datetime]::UtcNow
-$updatedAt = [datetime]$state.updated_at
-$hbAgeSec = [math]::Round(($nowUtc - $updatedAt).TotalSeconds, 0)
+if (Test-Path $heartbeatPath) {
+    $hb = Get-Content $heartbeatPath -Raw | ConvertFrom-Json
+    $updatedAt = [datetime]$hb.updated_at
+    $hbSource = 'state\gateway.heartbeat'
+} else {
+    $updatedAt = [datetime]$state.updated_at
+    $hbSource = 'gateway_state.json (FALLBACK - heartbeat file absent)'
+}
+$hbAgeSec = [math]::Round(($nowUtc.ToUniversalTime() - $updatedAt.ToUniversalTime()).TotalSeconds, 0)
 $gatewayPid = [int]$state.pid
 $proc = Get-Process -Id $gatewayPid -ErrorAction SilentlyContinue
 $alive = [bool]$proc
@@ -61,7 +75,7 @@ $entry = @"
 - **gateway_pid:** $gatewayPid - $(if ($alive) { 'ALIVE' } else { 'NOT RUNNING' }) $(if ($proc) { "WS $([math]::Round($proc.WorkingSet64/1MB,1))MB" })
 - **state file:** ``$statePath``
   - ``gateway_state``: $($state.gateway_state) / active_agents $($state.active_agents)
-  - ``updated_at``: $($state.updated_at) - age ${hbAgeSec}s $(if ($hbAgeSec -gt 120) { 'STALE' } else { 'healthy' })
+  - ``heartbeat`` (source: $hbSource): $($updatedAt.ToString('o')) - age ${hbAgeSec}s $(if ($hbAgeSec -gt 120) { 'STALE' } else { 'healthy' })
   - ``telegram.state``: $($state.platforms.telegram.state)
 - **log:** ``$logPath`` $(if ($logInfo) { "$($logInfo.Length) bytes mtime $($logInfo.LastWriteTime)" } else { 'MISSING' })
 - **conflict counts:** 1h=$c1h 6h=$c6h 24h=$c24h total=$total
@@ -81,6 +95,9 @@ if ($content -match '(?s)^---\r?\n.*?\r?\n---\r?\n') {
     $newFm = $fm -replace 'last_updated:.*', "last_updated: $stamp"
     $newFm = $newFm -replace 'gateway_pid:.*', "gateway_pid: $gatewayPid"
     $newFm = $newFm -replace 'heartbeat_age_sec:.*', "heartbeat_age_sec: $hbAgeSec"
+    # Without this, a recovered gateway kept a stale frontmatter verdict while
+    # the body reported healthy - the file contradicted itself. Added 2026-09-16.
+    $newFm = $newFm -replace '(?s)state: ".*?"', "state: `"$severity`: pid $gatewayPid $(if($alive){'alive'}else{'NOT RUNNING'}); heartbeat age ${hbAgeSec}s from $hbSource; conflicts 1h=$c1h`""
     $newFm = $newFm -replace 'conflicts_1h:.*', "conflicts_1h: $c1h"
     $newFm = $newFm -replace 'conflicts_6h:.*', "conflicts_6h: $c6h"
     $newFm = $newFm -replace 'conflicts_24h:.*', "conflicts_24h: $c24h"

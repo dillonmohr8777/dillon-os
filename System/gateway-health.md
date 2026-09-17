@@ -1,9 +1,9 @@
 ---
 tags: [system, gateway, health]
-last_updated: 2026-09-16T11:05:00.283Z
-gateway_pid: 18656
-state: "stale-warn: process alive and command identity verified; root heartbeat and gateway log activity are both stale over 60 minutes; Telegram state retained connected"
-heartbeat_age_sec: 76129
+last_updated: 2026-09-17T00:24:08Z
+gateway_pid: 10704
+state: "OK: pid 10704 alive; heartbeat age 14s from state\gateway.heartbeat; conflicts 1h=0"
+heartbeat_age_sec: 14
 conflicts_1h: 0
 conflicts_6h: 0
 conflicts_24h: 0
@@ -13,6 +13,29 @@ source_refs:
   - "System/automation-status.md"
 ---
 
+# Gateway Health
+> Local-only health report. No broadcasts. Latest at top.
+
+## 2026-09-17T00:24:08Z - OK Gateway Probe (script)
+- **timestamp:** 2026-09-17T00:24:08Z (2026-09-16 20:24:08 local) - local-only script
+- **gateway_pid:** 10704 - ALIVE WS 257MB
+- **state file:** `C:\Users\dillo\AppData\Local\hermes\gateway_state.json`
+  - `gateway_state`: running / active_agents 0
+  - `heartbeat` (source: state\gateway.heartbeat): 2026-09-16T20:23:54.2443700-04:00 - age 14s healthy
+  - `telegram.state`: connected
+- **log:** `C:\Users\dillo\AppData\Local\hermes\logs\gateway.log` 2580859 bytes mtime 09/16/2026 12:47:04
+- **conflict counts:** 1h=0 6h=0 24h=0 total=1881
+- **recommended action:** Continue monitoring
+## 2026-09-17T00:23:37Z - OK Gateway Probe (script)
+- **timestamp:** 2026-09-17T00:23:37Z (2026-09-16 20:23:37 local) - local-only script
+- **gateway_pid:** 10704 - ALIVE WS 257MB
+- **state file:** `C:\Users\dillo\AppData\Local\hermes\gateway_state.json`
+  - `gateway_state`: running / active_agents 0
+  - `heartbeat` (source: state\gateway.heartbeat): 2026-09-16T20:23:24.2315670-04:00 - age 13s healthy
+  - `telegram.state`: connected
+- **log:** `C:\Users\dillo\AppData\Local\hermes\logs\gateway.log` 2580859 bytes mtime 09/16/2026 12:47:04
+- **conflict counts:** 1h=0 6h=0 24h=0 total=1881
+- **recommended action:** Continue monitoring
 # Gateway Health
 
 ## 2026-09-16T11:05:00.283Z - STALE-WARN 18656 conflicts 0/0/0
@@ -48,3 +71,5 @@ source_refs:
 - `System/automation-status.md` is historical context and does not override the live state/process/log snapshot.
 - Rolling conflict matches are case-insensitive for `polling conflict` or `terminated by other getUpdates`, counted once per matching log line.
 - The 1-hour threshold was not crossed, so no external-poller approval item was added. `System/approval-queue.md` was left unchanged by this run.
+
+
