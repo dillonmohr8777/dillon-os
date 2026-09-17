@@ -130,3 +130,30 @@ asked it to judge whether a 30-day aggregate covers a specific weekend — a dat
 range comparison, which is a documented blind spot. The rubric was built on top
 of one of its known weaknesses. Any recalibration has to drop the date reasoning
 out of the model and into code first.
+
+## Gateway passes confidence through, and reports billed cost
+
+Probed 2026-09-17 with `confidence-probe.mjs`. A practitioner asked publicly
+whether the Gateway forwards TypeSafe's calibrated confidence. It does:
+
+```
+providerMetadata.typesafe.confidence  ->  { element: 1, risk: 0.6 }
+```
+
+Choice and Score carry confidence. Boolean does not, by design — for a
+boolean the probability IS the answer, not a confidence in it.
+
+More useful still, the Gateway reports **actual billed cost per call**:
+
+```
+providerMetadata.gateway.cost            "0.000016926"
+providerMetadata.gateway.outputInferenceCost  "0"
+providerMetadata.gateway.generationId    "gen_01M2R0FE16EHHR7SD3SFD96DC4"
+```
+
+`verify-claims.mjs` now reports this figure rather than multiplying tokens by
+the list price, and says which source it used. The routing block also carries
+per-attempt `startTime`/`endTime` — that probe round-tripped in **375 ms**.
+
+`rounding` comes back `{probabilityDecimals: 2, scoreDecimals: 2}`, so every
+probability is 2dp. Do not build a threshold that depends on finer resolution.

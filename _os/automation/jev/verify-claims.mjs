@@ -309,11 +309,18 @@ async function main() {
   const totals = { inputTokens: 0, outputTokens: 0 };
   const versions = new Set();
   const results = [];
+  // The Gateway reports the actual billed cost per call in providerMetadata.
+  // Prefer it over multiplying tokens by the list price: it is what was charged.
+  let billed = 0;
+  let billedFromGateway = true;
 
   for (const record of records) {
     const r = await evaluate({ model: MODEL, state: stateFor(record), questions: RUBRIC });
     totals.inputTokens += r.usage.inputTokens ?? 0;
     totals.outputTokens += r.usage.outputTokens ?? 0;
+    const reported = r.providerMetadata?.gateway?.cost;
+    if (reported === undefined) billedFromGateway = false;
+    else billed += Number(reported);
     // jev-latest is an alias that moves on release. Record which version
     // answered, so thresholds tuned today can be rechecked later.
     if (r.response?.modelId) versions.add(r.response.modelId);
@@ -341,12 +348,15 @@ async function main() {
   }
 
   const counts = results.reduce((a, r) => ((a[r.judgement.verdict] = (a[r.judgement.verdict] ?? 0) + 1), a), {});
-  const cost = totals.inputTokens * price.input + totals.outputTokens * price.output;
+  const computed = totals.inputTokens * price.input + totals.outputTokens * price.output;
+  const cost = billedFromGateway ? billed : computed;
+  const costSource = billedFromGateway ? 'billed, from providerMetadata.gateway.cost' : 'computed from tokens x list price';
 
   console.log(`verdicts  ${counts.flag ?? 0} flag, ${counts.review ?? 0} review, ${counts.ok ?? 0} ok  (of ${results.length})`);
   console.log(`version   ${[...versions].join(', ') || 'not reported'}`);
   console.log(`usage     ${totals.inputTokens} input tokens, ${totals.outputTokens} output tokens (measured, from result.usage)`);
-  console.log(`cost      $${cost.toFixed(6)}  (${results.length} requests, ${results.length * Object.keys(RUBRIC).length} questions, ${elapsed} ms wall)`);
+  console.log(`cost      $${cost.toFixed(6)}  (${costSource})`);
+  console.log(`          ${results.length} requests, ${results.length * Object.keys(RUBRIC).length} questions, ${elapsed} ms wall`);
 
   // Scored against held-out ground truth when the record file supplies it.
   const labelled = results.filter((r) => r.record.groundTruth);
