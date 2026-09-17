@@ -125,11 +125,38 @@ From `docs.typesafe.ai/model-jaggedness/jev-1.13`:
 | "Accuracy falls as the state grows with content unrelated to the decision" | passing whole documents as state |
 | "does not treat [adversarial content] as hostile by default" | anything reading inbound email or Slack unfiltered |
 
-**This explains the 2026-09-17 over-flagging.** The `scopeCoversClaim` question
-asked it to judge whether a 30-day aggregate covers a specific weekend — a date
-range comparison, which is a documented blind spot. The rubric was built on top
-of one of its known weaknesses. Any recalibration has to drop the date reasoning
-out of the model and into code first.
+### Why the 2026-09-17 rubric over-flagged
+
+Two wrong explanations were recorded before the right one. Both are struck out
+here rather than deleted, because the mistake is the same one this tool exists
+to catch: an explanation asserted without measuring it.
+
+1. ~~Date-range blindness.~~ **Retracted.** `jaggedness-probe.mjs` tested all
+   six documented weak spots — date ordering, date-in-window, counting, hex
+   proximity, hex difference, double negatives — and Jev answered **6/6
+   correctly** for $0.00008. The vendor's limitations page was taken as
+   measurement when it was a claim.
+2. The real cause, from independent benchmarks published after launch:
+   **Jev is weak when asked for a broad judgement and strong when asked narrow
+   factual sub-questions that code then combines.** On 2,000 phishing emails
+   (`anisselbd/jev-phishing-bench`) Jev scored **62.6% accuracy end-to-end
+   against Claude Haiku 4.5's 81.3%** — it lost badly as a drop-in labeller.
+   But its *decomposed signals*, fed to a logistic regression, reached
+   **AUROC 0.988**, matching the LLM at ~27x cheaper and ~5x faster.
+
+`scopeCoversClaim` is a broad judgement, and `judge()` gates on it directly with
+a hand-picked 0.5 threshold. That is precisely the shape the benchmark says
+fails. Calibration compounds it: Jev 1.13 measures **ECE 0.154** against Haiku's
+0.097, so the raw probabilities are not honest enough to threshold by hand.
+
+**The fix is not new questions, it is a fitted combiner.** Label 200-500 claims,
+run the battery once (cents), sweep the cutoff on a train split, confirm on
+held-out, and fit the weights rather than guessing them. `bitnovus/jev-spam-eval`
+moved false positives from **694 to 203** on criteria wording alone, and got
+98.33% — matching a trained TF-IDF classifier — by doing this.
+
+Worth keeping in view: on that phishing set, a **two-line regex scored 91.6%**.
+Climb the ladder before reaching for a model.
 
 ## Gateway passes confidence through, and reports billed cost
 
