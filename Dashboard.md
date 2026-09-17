@@ -22,10 +22,10 @@ Checkbox items only — `_os/vault-state.js` reads this section for the HUD
 directive feed and skips any other list format.
 
 - [x] Arm Immohrtal-Crew every 2 hours; mail_ready=hold; do not send.
-- [ ] Draft the Omega conversion-integrity disclosure (inflated Sep 7-13 conversions, fix live since 2026-09-14) and get the nine high-value negatives approved; no account mutation until approved.
-- [ ] Reconcile KJB Google Ads vs. CallRail/form leads for the $505 spend window and draft the reply to Mac Frederick (approval-gated, 14 days open).
+- [ ] Draft the Omega conversion-integrity disclosure (inflated Sep 7-13 conversions, fix live since 2026-09-14, now day 3 unaddressed) and get the nine high-value negatives approved; no account mutation until approved.
+- [ ] Reconcile KJB Google Ads vs. CallRail/form leads for the $505 spend window and draft the reply to Mac Frederick (approval-gated, 15 days open).
 - [ ] Settle the Replenish 0-impression mystery — one campaign-flight-date API read + billing banner check (`due` evidence points at expired flights, not the assumed billing block).
-- [ ] Close out Cindy May Christmas deliverable (`due: 2026-09-01`, now 15 days past due — carried forward again) or get an explicit reschedule.
+- [ ] Close out Cindy May Christmas deliverable (`due: 2026-09-01`, now 16 days past due — carried forward again) or get an explicit reschedule.
 
 ## Active projects
 
