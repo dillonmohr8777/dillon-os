@@ -184,3 +184,45 @@ per-attempt `startTime`/`endTime` — that probe round-tripped in **375 ms**.
 
 `rounding` comes back `{probabilityDecimals: 2, scoreDecimals: 2}`, so every
 probability is 2dp. Do not build a threshold that depends on finer resolution.
+
+## Bake-off, measured 2026-09-17
+
+Nine models, four real Momentum jobs, 35 of 36 runs succeeded, **$0.329 billed**
+(read from `providerMetadata.gateway.cost`, not computed).
+
+| model | avg ms | 4 jobs | code test |
+|---|---|---|---|
+| `anthropic/claude-sonnet-5` | **5,451** | $0.018274 | PASS |
+| `inclusionai/ling-3.0-flash` | 8,484 | **$0.000557** | PASS |
+| `openai/gpt-6-astra` | 9,705 | $0.062130 | PASS |
+| `moonshotai/kimi-k3` | 13,988 | $0.083800 | PASS |
+| `anthropic/claude-fable-5.1` | 17,010 | $0.115300 | 1 run failed |
+| `deepseek/deepseek-v4-flash` | 20,353 | $0.004646 | PASS |
+| `alibaba/qwen3.7-flash` | 32,077 | $0.001323 | PASS |
+| `spacexai/grok-4.20-reasoning` | 47,284 | $0.036557 | PASS |
+| `zai/glm-5.3-flash` | **107,733** | $0.006615 | PASS |
+
+**Two findings that overturned the benchmark research.**
+
+**Sonnet 5 is the fastest model in the set**, beating every cheap model and both
+frontier ones. Speed is not something you buy by going cheap.
+
+**GLM-5.3-Flash is the slowest by a wide margin** at 107s average, with single
+jobs at 147s and 189s. The benchmarks put it 29 points above Sonnet 5 on
+Terminal-Bench 4.0, and on this hardware against these jobs it is unusable
+interactively. Batch only. This is the entire argument for measuring your own
+work rather than reading a leaderboard.
+
+**Quality gap is narrower than price implies.** The code job carried a
+correctness trap (sRGB linearisation, the 0.03928 threshold). Every model's
+output was executed: **all eight that produced code passed their own asserts**,
+including `ling-3.0-flash` at $0.02/1M. On prose the cheap tier is more generic,
+but it is not wrong.
+
+`claude-fable-5.1` returned `GatewayRateLimitError: No access to this model` on
+one job. That key cannot reach Fable 5.1 reliably.
+
+Picks: **`deepseek-v4-flash`** as the default (1M context, passed the trap,
+4x cheaper than Sonnet), **`ling-3.0-flash`** for bulk, **Sonnet 5** when latency
+matters. Note DeepSeek is reported to ignore negative instructions, so "do not
+touch X" is unreliable with it.

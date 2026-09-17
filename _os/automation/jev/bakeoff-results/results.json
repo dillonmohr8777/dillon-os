@@ -1,0 +1,288 @@
+[
+  {
+    "jobId": "report",
+    "model": "openai/gpt-6-astra",
+    "ms": 11006,
+    "cost": 0.01592,
+    "chars": 829,
+    "ok": true
+  },
+  {
+    "jobId": "report",
+    "model": "anthropic/claude-fable-5.1",
+    "ms": 25887,
+    "cost": 0.05914,
+    "chars": 1371,
+    "ok": true
+  },
+  {
+    "jobId": "report",
+    "model": "spacexai/grok-4.20-reasoning",
+    "ms": 71421,
+    "cost": 0.0118856,
+    "chars": 390,
+    "ok": true
+  },
+  {
+    "jobId": "report",
+    "model": "moonshotai/kimi-k3",
+    "ms": 12219,
+    "cost": 0.0172782,
+    "chars": 1297,
+    "ok": true
+  },
+  {
+    "jobId": "report",
+    "model": "zai/glm-5.3-flash",
+    "ms": 79686,
+    "cost": 0.0012263,
+    "chars": 1175,
+    "ok": true
+  },
+  {
+    "jobId": "report",
+    "model": "deepseek/deepseek-v4-flash",
+    "ms": 12053,
+    "cost": 0.00037356,
+    "chars": 1172,
+    "ok": true
+  },
+  {
+    "jobId": "report",
+    "model": "alibaba/qwen3.7-flash",
+    "ms": 32780,
+    "cost": 0.00035623,
+    "chars": 1138,
+    "ok": true
+  },
+  {
+    "jobId": "report",
+    "model": "inclusionai/ling-3.0-flash",
+    "ms": 10156,
+    "cost": 0.00018879,
+    "chars": 753,
+    "ok": true
+  },
+  {
+    "jobId": "report",
+    "model": "anthropic/claude-sonnet-5",
+    "ms": 8116,
+    "cost": 0.004924,
+    "chars": 1535,
+    "ok": true
+  },
+  {
+    "jobId": "outreach",
+    "model": "openai/gpt-6-astra",
+    "ms": 9870,
+    "cost": 0.01278,
+    "chars": 569,
+    "ok": true
+  },
+  {
+    "jobId": "outreach",
+    "model": "anthropic/claude-fable-5.1",
+    "ms": 14791,
+    "cost": 0.05123,
+    "chars": 704,
+    "ok": true
+  },
+  {
+    "jobId": "outreach",
+    "model": "spacexai/grok-4.20-reasoning",
+    "ms": 57195,
+    "cost": 0.01005935,
+    "chars": 620,
+    "ok": true
+  },
+  {
+    "jobId": "outreach",
+    "model": "moonshotai/kimi-k3",
+    "ms": 18591,
+    "cost": 0.0290712,
+    "chars": 691,
+    "ok": true
+  },
+  {
+    "jobId": "outreach",
+    "model": "zai/glm-5.3-flash",
+    "ms": 147179,
+    "cost": 0.00250535,
+    "chars": 664,
+    "ok": true
+  },
+  {
+    "jobId": "outreach",
+    "model": "deepseek/deepseek-v4-flash",
+    "ms": 14456,
+    "cost": 0.00084744,
+    "chars": 432,
+    "ok": true
+  },
+  {
+    "jobId": "outreach",
+    "model": "alibaba/qwen3.7-flash",
+    "ms": 29118,
+    "cost": 0.00021836,
+    "chars": 587,
+    "ok": true
+  },
+  {
+    "jobId": "outreach",
+    "model": "inclusionai/ling-3.0-flash",
+    "ms": 6220,
+    "cost": 0.00006468,
+    "chars": 566,
+    "ok": true
+  },
+  {
+    "jobId": "outreach",
+    "model": "anthropic/claude-sonnet-5",
+    "ms": 4565,
+    "cost": 0.003282,
+    "chars": 743,
+    "ok": true
+  },
+  {
+    "jobId": "triage",
+    "model": "openai/gpt-6-astra",
+    "ms": 4815,
+    "cost": 0.00481,
+    "chars": 213,
+    "ok": true
+  },
+  {
+    "jobId": "triage",
+    "model": "anthropic/claude-fable-5.1",
+    "ms": 10353,
+    "cost": 0.00493,
+    "chars": 223,
+    "ok": true
+  },
+  {
+    "jobId": "triage",
+    "model": "spacexai/grok-4.20-reasoning",
+    "ms": 8680,
+    "cost": 0.00215185,
+    "chars": 190,
+    "ok": true
+  },
+  {
+    "jobId": "triage",
+    "model": "moonshotai/kimi-k3",
+    "ms": 5916,
+    "cost": 0.0075756,
+    "chars": 278,
+    "ok": true
+  },
+  {
+    "jobId": "triage",
+    "model": "zai/glm-5.3-flash",
+    "ms": 14952,
+    "cost": 0.00032815,
+    "chars": 219,
+    "ok": true
+  },
+  {
+    "jobId": "triage",
+    "model": "deepseek/deepseek-v4-flash",
+    "ms": 4497,
+    "cost": 0.00014322,
+    "chars": 194,
+    "ok": true
+  },
+  {
+    "jobId": "triage",
+    "model": "alibaba/qwen3.7-flash",
+    "ms": 13850,
+    "cost": 0.00015155,
+    "chars": 192,
+    "ok": true
+  },
+  {
+    "jobId": "triage",
+    "model": "inclusionai/ling-3.0-flash",
+    "ms": 5128,
+    "cost": 0.000066402,
+    "chars": 187,
+    "ok": true
+  },
+  {
+    "jobId": "triage",
+    "model": "anthropic/claude-sonnet-5",
+    "ms": 1805,
+    "cost": 0.001122,
+    "chars": 235,
+    "ok": true
+  },
+  {
+    "jobId": "code",
+    "model": "openai/gpt-6-astra",
+    "ms": 13130,
+    "cost": 0.02862,
+    "chars": 1116,
+    "ok": true
+  },
+  {
+    "jobId": "code",
+    "model": "anthropic/claude-fable-5.1",
+    "ok": false,
+    "error": "Failed after 3 attempts. Last error: GatewayRateLimitError: No access to this model at this time."
+  },
+  {
+    "jobId": "code",
+    "model": "spacexai/grok-4.20-reasoning",
+    "ms": 51839,
+    "cost": 0.0124606,
+    "chars": 1062,
+    "ok": true
+  },
+  {
+    "jobId": "code",
+    "model": "moonshotai/kimi-k3",
+    "ms": 19225,
+    "cost": 0.0298752,
+    "chars": 1027,
+    "ok": true
+  },
+  {
+    "jobId": "code",
+    "model": "zai/glm-5.3-flash",
+    "ms": 189114,
+    "cost": 0.00255485,
+    "chars": 1887,
+    "ok": true
+  },
+  {
+    "jobId": "code",
+    "model": "deepseek/deepseek-v4-flash",
+    "ms": 50405,
+    "cost": 0.00328218,
+    "chars": 1243,
+    "ok": true
+  },
+  {
+    "jobId": "code",
+    "model": "alibaba/qwen3.7-flash",
+    "ms": 52560,
+    "cost": 0.00059701,
+    "chars": 1073,
+    "ok": true
+  },
+  {
+    "jobId": "code",
+    "model": "inclusionai/ling-3.0-flash",
+    "ms": 12432,
+    "cost": 0.000237489,
+    "chars": 935,
+    "ok": true
+  },
+  {
+    "jobId": "code",
+    "model": "anthropic/claude-sonnet-5",
+    "ms": 7318,
+    "cost": 0.008946,
+    "chars": 1826,
+    "ok": true
+  }
+]
