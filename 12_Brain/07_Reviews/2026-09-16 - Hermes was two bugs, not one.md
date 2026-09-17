@@ -63,3 +63,36 @@ It produced a working config, but:
 5. Chose a primary (`openai-codex`) that it then reported was 429 rate-limited
 
 Treat Muse output as a draft to verify, not as applied work.
+
+
+## RESOLVED 21:33 EDT - Ollama Cloud is the fast free backend
+
+`gpt-oss:120b-cloud` via the local Ollama endpoint answers in **0.45s** raw.
+Wired as Hermes primary (`provider: custom`, `base_url: http://127.0.0.1:11434/v1`),
+fallbacks `copilot/gpt-5.4` then local `qwen3-coder:30b`.
+
+**Verified end to end: A2A probe HTTP 200, TASK_STATE_COMPLETED, reply `PONG`, 7.7s.**
+Was 229s. 30x faster. Zero marginal cost.
+
+Latency ladder measured this session:
+- gpt-oss:120b-cloud (Ollama Cloud)  0.45s raw / 7.7s through Hermes
+- copilot/gpt-5.4                    229-257s
+- local qwen3-coder:30b (CPU)        164s warm
+- local qwen3.5:9b (CPU)             timed out at 200s cold
+- glm-5.3:cloud                      HTTP 402, not entitled
+
+Root cause of the slow legs: this box is an i7-8700 with Intel UHD 630 (1GB VRAM),
+so all local inference is CPU-only and memory-bandwidth-bound. Backup before the
+change: `config.yaml.bak-20260916-2130-pre-cloud`.
+
+The 417 KB `.skills_prompt_snapshot.json` is still sent on every call. At 7.7s it no
+longer dominates, but trimming it remains the next win.
+
+## Hardware change dated - Mac mini M5 Pro, delivers 2026-09-25 to 09-30
+
+Apple order W1682306538, ordered 2026-09-08. M5 Pro, 15-core CPU, 16-core GPU,
+16-core Neural Engine, **48GB unified memory**, 512GB storage.
+
+This clears the bar for self-hosted Muse Glimmer (29.6B, Apache 2.0), whose
+published Apple Silicon target is 32GB+ unified memory. Glimmer is not viable on
+the EliteDesk and is viable on the Mac mini. Revisit after delivery.
