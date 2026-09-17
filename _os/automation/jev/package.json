@@ -1,0 +1,12 @@
+{
+  "name": "jev-verify",
+  "private": true,
+  "type": "module",
+  "description": "Claim verification against typesafe-ai/jev on the Vercel AI Gateway.",
+  "scripts": {
+    "test": "node test-verify-claims.mjs"
+  },
+  "dependencies": {
+    "ai": "^7.0.105"
+  }
+}
