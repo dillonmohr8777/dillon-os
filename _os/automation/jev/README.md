@@ -91,3 +91,42 @@ on whether the output reads plausibly.
 `orchestrator-claims-2026-09-17.json` holds nine real claims from the record:
 six later overturned or narrowed by measurement, three true controls. A correct
 rubric must pass the controls, not just flag everything.
+
+## What Jev cannot do
+
+Probed live 2026-09-17 with `limits-probe.mjs`. Re-run it after a version bump —
+`jev-latest` is a moving alias, so these limits can shift under you.
+
+`generateText` against `typesafe-ai/jev` returns, verbatim from the Gateway:
+
+> Model 'typesafe-ai/jev' is an evaluation model, not a language model.
+> Use the evaluation generation API instead.
+
+TypeSafe's own limitations page agrees: **"Jev 1.13 is not trained to generate
+text."** The model registry reports `context_window: 0` and `max_tokens: 0`.
+
+An open-ended question is refused before it reaches the model:
+`choice criteria must be a nonempty option map`. You supply every option it may
+pick. It cannot propose one you did not write.
+
+So it cannot write, cannot call a tool, cannot loop, and cannot choose its own
+next step. In the function-calling cookbook it selects a function and its
+arguments; the surrounding code executes them. It is a router, not an agent.
+
+### Documented weak spots that hit this vault directly
+
+From `docs.typesafe.ai/model-jaggedness/jev-1.13`:
+
+| Weakness, their words | What it rules out here |
+|---|---|
+| "Jev is not a calculator", "does not count reliably" | any metrics, spend or lead reconciliation |
+| "cannot reliably judge whether two values are near each other" given RGB or hex | the design-token and palette QA idea. Use arithmetic. |
+| "reads dates as text, not as ordered quantities" | date-window checks |
+| "Accuracy falls as the state grows with content unrelated to the decision" | passing whole documents as state |
+| "does not treat [adversarial content] as hostile by default" | anything reading inbound email or Slack unfiltered |
+
+**This explains the 2026-09-17 over-flagging.** The `scopeCoversClaim` question
+asked it to judge whether a 30-day aggregate covers a specific weekend — a date
+range comparison, which is a documented blind spot. The rubric was built on top
+of one of its known weaknesses. Any recalibration has to drop the date reasoning
+out of the model and into code first.
