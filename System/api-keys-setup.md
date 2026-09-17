@@ -199,6 +199,23 @@ optional, `{true, false}`). Answers come back keyed by the original question
 IDs; there is no partial success. Several questions run in parallel in one
 request against the same state.
 
+### Measured live, 2026-09-17
+
+First live run. Smoke: 282 input / 21 output tokens, **$0.000012**, SMOKE PASS.
+Full run, 9 claims x 6 questions = 54 questions in 9 requests: **13,194 input
+tokens, 1,098 output, $0.000554, 2,168 ms wall** for all nine.
+
+Two things worth carrying forward:
+
+- The char/4 dry-run heuristic estimated 8,853 input tokens. Actual was 13,194,
+  **49% higher**. Treat the dry-run figure as a floor, not a forecast. The
+  structured question objects tokenize heavier than raw character count implies.
+- `result.response.modelId` came back as `typesafe-ai/jev`, **not** the
+  versioned `jev-1.13.0`. The Gateway does not pass TypeSafe's version through,
+  so the version-pinning advice below cannot be satisfied via the Gateway route.
+  If you need a pinned version, that is an argument for the direct
+  `api.typesafe.ai` route with `TYPESAFE_API_KEY`.
+
 **Rate limits, from TypeSafe's own model page:** Jev 1.13 is 250,000 tokens per
 second and 1,200 requests per minute. Over either limit returns `429`. TypeSafe
 warns these "are adjusting dynamically… can change without notice". The AI SDK
