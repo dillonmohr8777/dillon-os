@@ -15,19 +15,18 @@ source_refs:
 
 # Roster run, 2026-09-17
 
-**7 ran, 1 failed, 2 reporting bad news, 53 skipped.** Free tier only: no model quota spent.
+**6 ran, 0 failed, 2 reporting bad news, 54 skipped.** Free tier only: no model quota spent.
 
 ## Ran
 
 | Agent | Exit | ms | Result |
 |---|---|---|---|
-| frontmatter-validate | 0 | 124 | ok |
-| frontmatter-repair | 0 | 118 | ok |
-| site-health-sentinel | 0 | 133 | ok |
-| agent-craft-brief | 0 | 118 | ok |
-| connector-health | 2 | 105 | ran, reporting bad news |
-| daily-sweep | 2 | 14090 | ran, reporting bad news |
-| run-roster | 1 | 120015 | FAILED  |
+| frontmatter-validate | 0 | 152 | ok |
+| frontmatter-repair | 0 | 133 | ok |
+| site-health-sentinel | 0 | 147 | ok |
+| agent-craft-brief | 0 | 137 | ok |
+| connector-health | 2 | 120 | ran, reporting bad news |
+| daily-sweep | 2 | 14540 | ran, reporting bad news |
 
 ## Skipped, with reason
 
@@ -81,6 +80,7 @@ source_refs:
 | qa-critic | subagent, runs inside a session |
 | design-canvas | subagent, runs inside a session |
 | leads-triage | model backed, costs weekly quota |
+| run-roster | this runner; running it from itself recursed 2026-09-17 |
 | ops-decision-packets | model backed, costs weekly quota |
 | production-briefs | model backed, costs weekly quota |
 | delivery-milestones | model backed, costs weekly quota |

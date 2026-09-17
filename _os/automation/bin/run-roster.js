@@ -42,6 +42,7 @@ function classify(a) {
   if (a.kind === 'subagent') return { skip: 'subagent, runs inside a session' };
   const cmd = a.command || '';
   if (/claude -p/.test(cmd)) return { skip: 'model backed, costs weekly quota' };
+  if (/run-roster.js/.test(cmd)) return { skip: 'this runner; running it from itself recursed 2026-09-17' };
   const run = runnable(cmd);
   if (!run) return { skip: cmd ? 'needs arguments' : 'no command' };
   return { run };
