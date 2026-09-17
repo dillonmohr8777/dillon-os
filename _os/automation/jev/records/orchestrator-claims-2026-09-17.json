@@ -1,0 +1,65 @@
+[
+  {
+    "id": "empeon-addendum-merged-to-main",
+    "claim": "The Empeon addendum work was merged to GitHub. Commit cef14b3e added the branded addendum, keyword map and evidence PNGs, and every one of these files exists in origin/main. It is absent locally only because the vault checkout is 77 commits behind origin/main on an unrelated branch.",
+    "evidence": "Verified with `git cat-file -e origin/main:<path>` for each file. The daily-sweep and staged client report email commits are ancestors of current HEAD, meaning they were merged in, so those files genuinely exist on disk now.",
+    "source": "auditor subagent final report, 2026-09-15T14:08Z, session e5f7a04e transcript",
+    "groundTruth": "FALSE. `gh pr view 399` at 2026-09-15T14:44Z returned isDraft:true, state OPEN, base main. main had ZERO Empeon files. The commit sat in draft PR #399 the whole time. The cited evidence is about DIFFERENT commits - daily-sweep and the report emails - and was generalised to a commit it never covered. Corrected in 12_Brain/07_Reviews/2026-09-15 - Master orchestrator session record.md lines 131-132."
+  },
+  {
+    "id": "power-fault-caused-weekend-gaps",
+    "claim": "The machine's power-supply fault is the root cause behind session death, config resets, and orphaned lock folders, including the gap in work between 2026-09-11 and 2026-09-13.",
+    "evidence": "14 unclean power-offs in 30 days, zero bugchecks, zero WHEA, no battery, an HP EliteDesk 800 G4 SFF. Uptime collapsed from 204 hours in August to 4-12 hours, with two deaths at 10 seconds after POST. It is the power supply.",
+    "source": "System/daily-orchestrator.md, Open items carried forward, as written 2026-09-09",
+    "groundTruth": "FALSE for the weekend window. The 2026-09-14 correction reads the System event log and finds the last unclean shutdown was 2026-09-10 20:00, before the window; uptime was 228,748s at 2026-09-13 12:00. The evidence filed is a 30-day aggregate and a hardware diagnosis. It never covers the specific window the claim extends to."
+  },
+  {
+    "id": "design-system-not-a-git-repo",
+    "claim": "The Momentum design system is not a git repository.",
+    "evidence": "No evidence recorded alongside the claim.",
+    "source": "System/daily-orchestrator.md, as written before the 2026-09-14 revision",
+    "groundTruth": "FALSE. It IS a git repository, baseline 75b386a, clean on main, and pushed to dillonmohr8777/momentum-design-system as of 2026-09-14."
+  },
+  {
+    "id": "composio-is-dead",
+    "claim": "Composio is dead.",
+    "evidence": "The manager route 403s because the MCC and the children are separately accessible, not hierarchical.",
+    "source": "System/daily-orchestrator.md, Google Ads bullet, as written 2026-09-10",
+    "groundTruth": "OVERBROAD. The 2026-09-14 correction found its Search Console, GA4 and Ads connections all report active, and a live Search Console read of alignhcm.com succeeded. 'Dead' is an Ads-entitlement fact, not a connector fact. The filed evidence is about Ads only but the claim is unscoped."
+  },
+  {
+    "id": "vendored-palette-has-drifted",
+    "claim": "The client-operations copy of the Momentum design tokens is a vendored copy that has drifted from the source.",
+    "evidence": "No measurement recorded alongside the claim.",
+    "source": "System/daily-orchestrator.md, as written before the 2026-09-14 revision",
+    "groundTruth": "WITHDRAWN. The file is a derived output artifact with its own schema, 173 canonical keys against 100, with exactly one shared value conflict, 'version'. Not a vendored copy at all."
+  },
+  {
+    "id": "mac-meeting-readout",
+    "claim": "The Friday 2026-09-11 gate meeting with Mac produced decisions that unblock D01, D10 and D18.",
+    "evidence": "The meeting was on the calendar for Friday 2026-09-11.",
+    "source": "System/daily-orchestrator.md, decisions bullet, as carried before 2026-09-14",
+    "groundTruth": "FALSE. Dillon confirmed 2026-09-14 the meeting was not held; it was his birthday. There is no readout to recover. A calendar entry is not attendance."
+  },
+  {
+    "id": "omega-buying-competitor-brand-terms",
+    "claim": "Omega's ads were buying competitors' brand names, and this is the actual cause of the lead-quality complaint.",
+    "evidence": "First search-terms audit ever run, 2026-09-09: 'timberline landscaping' is the top term by clicks and produced 6 of 17 conversions. Three concrete terms burned $1,113 at $39-54 a click for zero conversions.",
+    "source": "System/daily-orchestrator.md, Omega bullet, 2026-09-09",
+    "groundTruth": "TRUE and measured. This is the control case. Named terms, click counts, conversion counts and dollar amounts were all read out of the search-terms report. A correct rubric must NOT flag this."
+  },
+  {
+    "id": "daily-sweep-current",
+    "claim": "The daily sweep is current as of 2026-09-17 and reports no sweep gaps.",
+    "evidence": "Ran node _os/automation/bin/daily-sweep.js on 2026-09-17; it printed 'daily-sweep 2026-09-17: sweep-gaps=0 stale=1 silent=0 missed-briefs=5/14 cadence-absent=0' and exited 0.",
+    "source": "Live run, this session, 2026-09-17",
+    "groundTruth": "TRUE and measured. Second control case. The command, its output and its exit code are all recorded. A correct rubric must NOT flag this."
+  },
+  {
+    "id": "match-back-closes-on-zero-accounts",
+    "claim": "Match-back now closes on zero accounts.",
+    "evidence": "Fagan Painting was the one where it worked and it is no longer an active client, per Dillon 2026-09-09. The Zap fix also only recovers form leads. Omega has no call tracking at all, and 'phone call lead' is primary on 9 of 9 campaigns.",
+    "source": "System/daily-orchestrator.md, match-back bullet, 2026-09-09",
+    "groundTruth": "TRUE, and the evidence is mixed: a named account confirmed by a person, plus a counted 9 of 9 campaign configuration. Third control, harder than the other two because part of the support is testimony rather than measurement."
+  }
+]
