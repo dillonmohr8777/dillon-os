@@ -213,18 +213,39 @@ function judge(answers) {
   return { verdict, evidenceScore, reasons, p };
 }
 
-/** Live prices, read from the gateway registry rather than hardcoded. */
-async function pricing() {
-  const res = await fetch(REGISTRY);
-  if (!res.ok) throw new Error(`model registry returned ${res.status}`);
-  const jev = ((await res.json()).data ?? []).find((m) => m.id === MODEL);
-  if (!jev) throw new Error(`${MODEL} not found in the gateway registry`);
-  return {
-    input: Number(jev.pricing.input),
-    output: Number(jev.pricing.output),
-    zdr: jev.zdr,
-    noTraining: jev.no_training,
-  };
+/**
+ * Prices as published by the gateway registry on 2026-09-17. Only used when the
+ * registry is unreachable, and labelled as stale wherever it is shown - a cloud
+ * session with no egress should still be able to see the payload shape rather
+ * than die on a DNS error.
+ */
+const FALLBACK_PRICE = { input: 0.000000042, output: 0, zdr: 'all', noTraining: 'all', stale: true };
+
+/**
+ * Live prices, read from the gateway registry rather than hardcoded.
+ *
+ * `required` is true for a live run, where guessing at the price would be
+ * dishonest, and false for a dry run, where showing the payload matters more
+ * than the price being current.
+ */
+async function pricing({ required }) {
+  try {
+    const res = await fetch(REGISTRY);
+    if (!res.ok) throw new Error(`model registry returned ${res.status}`);
+    const jev = ((await res.json()).data ?? []).find((m) => m.id === MODEL);
+    if (!jev) throw new Error(`${MODEL} not found in the gateway registry`);
+    return {
+      input: Number(jev.pricing.input),
+      output: Number(jev.pricing.output),
+      zdr: jev.zdr,
+      noTraining: jev.no_training,
+      stale: false,
+    };
+  } catch (err) {
+    if (required) throw err;
+    console.error(`  (registry unreachable: ${err.message.split('\n')[0]} - using 2026-09-17 published prices)`);
+    return FALLBACK_PRICE;
+  }
 }
 
 /** Only these three fields reach the model. groundTruth is held out on purpose. */
@@ -249,7 +270,7 @@ function parseArgs(argv) {
  * contract moved, not that our rubric is off.
  */
 async function smoke() {
-  const price = await pricing();
+  const price = await pricing({ required: live });
   const r = await evaluate({
     model: MODEL,
     state: 'The support agent issued a full refund to the customer.',
@@ -273,7 +294,11 @@ async function main() {
   // Checked before any network call. process.exit() while a fetch handle is in
   // flight aborts libuv on Windows and reports 127 instead of this code.
   if (live && !process.env[KEY_VAR]) {
-    console.error(`${KEY_VAR} is not set. Set it as a Windows user environment variable and restart the terminal.`);
+    console.error(`${KEY_VAR} is not set.`);
+    console.error('  Local (Windows):  set it as a user environment variable, then restart the terminal.');
+    console.error('  Local (macOS/Linux):  export it in your shell profile.');
+    console.error("  Remote / cloud session:  add it in that environment's own secrets settings.");
+    console.error('  See System/api-keys-setup.md. Nothing was sent; a dry run needs no key at all.');
     process.exitCode = 2;
     return;
   }
@@ -281,11 +306,14 @@ async function main() {
   if (isSmoke) return smoke();
 
   const records = JSON.parse(readFileSync(input, 'utf8'));
-  const price = await pricing();
+  const price = await pricing({ required: live });
   const nQ = Object.keys(RUBRIC).length;
 
   console.log(`model     ${MODEL}  (zdr=${price.zdr}, no_training=${price.noTraining})`);
-  console.log(`price     $${(price.input * 1e6).toFixed(3)}/1M input, $${(price.output * 1e6).toFixed(3)}/1M output  [live from the gateway registry]`);
+  console.log(
+    `price     $${(price.input * 1e6).toFixed(3)}/1M input, $${(price.output * 1e6).toFixed(3)}/1M output  ` +
+      (price.stale ? '[published 2026-09-17, registry unreachable]' : '[live from the gateway registry]'),
+  );
   console.log(`records   ${records.length} claims x ${nQ} atomic questions, one request per claim`);
   console.log(`input     ${input}\n`);
 

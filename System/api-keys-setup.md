@@ -224,6 +224,53 @@ Questions run in parallel against the same state, so decomposition costs no
 extra round trip. Route on confidence: escalate uncertain cases rather than
 guessing.
 
+### Running it from a remote / cloud session
+
+A cloud session cannot see this machine. No local filesystem, no local MCPs, and
+**no Windows user environment variables** - so the local `AI_GATEWAY_API_KEY`
+does nothing for it, and `_os/automation/jev/` only exists there if it is on
+**main**, not on a working branch.
+
+**1. The key goes in that environment's own secrets settings.** Same place the
+environment's repo list is configured, exactly as for `GEMINI_API_KEY` above.
+Add `AI_GATEWAY_API_KEY` there once; every session using that environment picks
+it up. It cannot be copied across from this machine and must never be pasted
+into a chat, a commit, or a log line.
+
+**2. Validate the pipeline before wiring any secret.** The dry run needs no key
+at all, and as of 2026-09-17 it also survives with **no outbound network**: if
+the gateway registry is unreachable it falls back to the published prices and
+says so on the price line rather than dying on a DNS error. Verified by stubbing
+`fetch` to fail:
+
+```bash
+node _os/automation/jev/verify-claims.mjs --input records/orchestrator-claims-2026-09-17.json
+node _os/automation/jev/test-verify-claims.mjs      # no network at all
+```
+
+Exit codes: `0` clean, `1` a claim was flagged, `2` the key is unset, `64` bad
+arguments. With the key unset, `--live` and `--smoke` both name the variable and
+exit `2` before any network call, printing guidance for Windows, macOS/Linux and
+remote separately. Confirmed on Windows; the code paths are platform-independent
+(`pathToFileURL` for the entrypoint guard, no shell-outs, no `%LOCALAPPDATA%`,
+no PowerShell, `.gitattributes` pins `*.mjs text eol=lf` so the shebang stays
+LF), but it has **not** been executed on Linux - there is no WSL or container on
+this machine to test in.
+
+**3. Two measured results that will mislead a remote session otherwise.**
+
+- **The dry-run token estimate is a floor, not a forecast.** It uses a char/4
+  heuristic and measured **49% low** on the real run: 8,853 estimated against
+  **13,194 actual** input tokens. Structured question objects tokenize heavier
+  than character count implies. Budget from the live figure, never the estimate.
+- **Version pinning is not achievable on the Gateway route.**
+  `result.response.modelId` comes back as `typesafe-ai/jev`, not `jev-1.13.0`.
+  The Gateway does not pass TypeSafe's version through, and `jev-latest` is an
+  alias that moves on release - so a threshold tuned today cannot be tied to the
+  version that produced it. If pinning matters, that is the argument for the
+  direct `api.typesafe.ai` route with `TYPESAFE_API_KEY`, which does report the
+  versioned id.
+
 Alternative direct-provider route, **not** used here: `@ai-sdk/typesafe-ai`
 with `TYPESAFE_AI_API_KEY` and model id `jev-latest`. That bypasses the Gateway,
 its budgets and its observability. Gateway route is the one wired.
