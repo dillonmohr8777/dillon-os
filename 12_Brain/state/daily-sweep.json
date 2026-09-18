@@ -2,27 +2,27 @@
   "schema": "12_Brain/schemas/daily-sweep.json",
   "automation_id": "daily-sweep",
   "version": 1,
-  "date": "2026-09-16",
-  "generated_at": "2026-09-16T22:28:06.082Z",
+  "date": "2026-09-18",
+  "generated_at": "2026-09-18T00:00:01.711Z",
   "generated_by": "_os/automation/bin/daily-sweep.js",
-  "previous_run": "2026-09-16T22:27:20.450Z",
-  "days_since_previous_sweep": 0,
-  "repos_scanned": 68,
+  "previous_run": "2026-09-17T23:00:01.708Z",
+  "days_since_previous_sweep": 1,
+  "repos_scanned": 72,
   "freshness": [
     {
       "id": "daily-brief",
-      "path": "Daily-Briefs/2026-09-16.md",
+      "path": "Daily-Briefs/2026-09-18.md",
       "owner": "Codex cron daily-communications-brain (07:00 local)",
-      "state": "fresh",
-      "age_hours": 11.4,
+      "state": "missing",
+      "age_hours": null,
       "budget_hours": 26
     },
     {
       "id": "communications-brain",
       "path": "12_Brain/state/daily-communications-brain.json",
       "owner": "Codex cron daily-communications-brain",
-      "state": "fresh",
-      "age_hours": 2.9,
+      "state": "stale",
+      "age_hours": 28.4,
       "budget_hours": 26
     },
     {
@@ -38,15 +38,15 @@
       "path": "12_Brain/state/claude-loop.json",
       "owner": "claude-loop.js via the daily driver",
       "state": "fresh",
-      "age_hours": 2.9,
+      "age_hours": 18.9,
       "budget_hours": 26
     },
     {
       "id": "immohrtal-plan",
-      "path": "Daily-Briefs/plan-2026-09-16.md",
+      "path": "Daily-Briefs/plan-2026-09-18.md",
       "owner": "Task Scheduler Immohrtal-Crew",
-      "state": "fresh",
-      "age_hours": 0.8,
+      "state": "missing",
+      "age_hours": null,
       "budget_hours": 26
     },
     {
@@ -54,7 +54,7 @@
       "path": "12_Brain/state/frontmatter-validate.json",
       "owner": "frontmatter-validate.js, on demand + pre-pulse",
       "state": "fresh",
-      "age_hours": 0,
+      "age_hours": 10.8,
       "budget_hours": 168
     },
     {
@@ -62,19 +62,11 @@
       "path": "System/approval-queue.md",
       "owner": "every session that gates an external action",
       "state": "fresh",
-      "age_hours": 0.1,
+      "age_hours": 8.8,
       "budget_hours": 72
     }
   ],
   "daily_brief_days": [
-    {
-      "date": "2026-09-03",
-      "present": true
-    },
-    {
-      "date": "2026-09-04",
-      "present": true
-    },
     {
       "date": "2026-09-05",
       "present": true
@@ -122,6 +114,14 @@
     {
       "date": "2026-09-16",
       "present": true
+    },
+    {
+      "date": "2026-09-17",
+      "present": false
+    },
+    {
+      "date": "2026-09-18",
+      "present": false
     }
   ],
   "clients": {
@@ -146,24 +146,34 @@
   },
   "shipped": [
     {
-      "repo": "dillon-os",
-      "path": "C:\\Users\\dillo\\repos\\dillon-os",
-      "commits": 25,
+      "repo": "bridge-software-frontend",
+      "path": "C:\\Users\\dillo\\repos\\bridge-software-frontend",
+      "commits": 2,
       "subjects": [
-        "cadence: first lead triage run, validating the classifier",
-        "security: close poisoned pipeline in the sync workflow; add lead triage job",
-        "approval-queue: D1 Edit scope needed on the Actions Cloudflare token",
-        "ci: scheduled D1 sync for the cloud console",
-        "approval-queue: rotate GoDaddy key pasted into chat"
+        "Saved folders and an interactive mascot, plus the phase map for Tori's notes",
+        "Apply Tori's redesign-demo notes from 2026-09-16"
       ]
     },
     {
-      "repo": "client-operations",
-      "path": "C:\\Users\\dillo\\Documents\\Codex\\projects\\client-operations",
-      "commits": 2,
+      "repo": "dillon-os",
+      "path": "C:\\Users\\dillo\\repos\\dillon-os",
+      "commits": 22,
       "subjects": [
-        "gt-clinic: add registry record, correct the access ask",
-        "Fix Workmate silently losing answers and misreporting delivery"
+        "Cadence watchdog: external staleness check, decoupled from the machine it watches",
+        "jev: bake-off across nine models on four real jobs",
+        "jev: retract the date-blindness explanation, record the measured one",
+        "jev: read billed cost from the gateway, document confidence passthrough",
+        "jev: record measured capability limits"
+      ]
+    },
+    {
+      "repo": "jev-router",
+      "path": "C:\\Users\\dillo\\Documents\\Codex\\projects\\jev-router",
+      "commits": 3,
+      "subjects": [
+        "Checkpoint: simple-alt rung + qwen-jev-bridge Phase 3 + frontier provider script (model router 2026-09-17, tsc green)",
+        "jev-router: per-turn model selection with the decision surfaced",
+        "Initial commit from eve"
       ]
     }
   ],
@@ -171,7 +181,7 @@
     {
       "repo": "client-operations",
       "path": "C:\\Users\\dillo\\Documents\\Codex\\projects\\client-operations",
-      "dirty_files": 3470,
+      "dirty_files": 3515,
       "has_remote": true,
       "unpushed_commits": 12,
       "risk": "12 commit(s) exist only on this machine"
@@ -179,10 +189,10 @@
     {
       "repo": "dillon-os",
       "path": "C:\\Users\\dillo\\repos\\dillon-os",
-      "dirty_files": 92,
+      "dirty_files": 46,
       "has_remote": true,
-      "unpushed_commits": 0,
-      "risk": "92 uncommitted file(s)"
+      "unpushed_commits": 22,
+      "risk": "22 commit(s) exist only on this machine"
     },
     {
       "repo": "dillon-os",
@@ -207,6 +217,14 @@
       "has_remote": true,
       "unpushed_commits": 0,
       "risk": "6 uncommitted file(s)"
+    },
+    {
+      "repo": "jev-router",
+      "path": "C:\\Users\\dillo\\Documents\\Codex\\projects\\jev-router",
+      "dirty_files": 5,
+      "has_remote": false,
+      "unpushed_commits": null,
+      "risk": "NO REMOTE — a disk loss or a machine move loses this entirely"
     },
     {
       "repo": "dillon-os-films",
@@ -325,110 +343,112 @@
     {
       "note": "01_Clients/Bar Crawl USA/overview.md",
       "due": "2026-07-15",
-      "days_overdue": 63,
+      "days_overdue": 65,
       "status": "active"
     },
     {
       "note": "01_Clients/Hope Wellness Center/overview.md",
       "due": "2026-07-15",
-      "days_overdue": 63,
+      "days_overdue": 65,
       "status": "active"
     },
     {
       "note": "01_Clients/Kimberly James Bridal/overview.md",
       "due": "2026-07-15",
-      "days_overdue": 63,
+      "days_overdue": 65,
       "status": "active"
     },
     {
       "note": "01_Clients/Omega Landscaping/overview.md",
       "due": "2026-07-15",
-      "days_overdue": 63,
+      "days_overdue": 65,
       "status": "active"
     },
     {
       "note": "01_Clients/Onsite Concrete/overview.md",
       "due": "2026-07-15",
-      "days_overdue": 63,
+      "days_overdue": 65,
       "status": "active"
     },
     {
       "note": "01_Clients/Replenish/overview.md",
       "due": "2026-07-15",
-      "days_overdue": 63,
+      "days_overdue": 65,
       "status": "paused"
     },
     {
       "note": "01_Clients/Tags 2 Go/overview.md",
       "due": "2026-08-08",
-      "days_overdue": 39,
+      "days_overdue": 41,
       "status": "active"
     },
     {
       "note": "01_Clients/BigOrange Marketing/Custom Home Builder Pillar Project.md",
       "due": "2026-08-10",
-      "days_overdue": 37,
+      "days_overdue": 39,
       "status": "active"
     },
     {
       "note": "01_Clients/BigOrange Marketing/overview.md",
       "due": "2026-08-10",
-      "days_overdue": 37,
+      "days_overdue": 39,
       "status": "active"
     },
     {
       "note": "12_Brain/05_Projects/2026-07-29 - Complete Dillon OS second brain.md",
       "due": "2026-08-23",
-      "days_overdue": 24,
+      "days_overdue": 26,
       "status": "active"
     },
     {
       "note": "01_Clients/Cindy May Christmas/overview.md",
       "due": "2026-09-01",
-      "days_overdue": 15,
+      "days_overdue": 17,
       "status": "active"
     }
   ],
   "waiting_on_human": {
     "present": true,
     "source_ref": "System/approval-queue.md",
-    "lines": 203,
-    "open_checkboxes": 134,
+    "lines": 214,
+    "open_checkboxes": 137,
     "risk_mentions": {
-      "low": 17,
-      "high": 52,
+      "low": 18,
+      "high": 53,
       "mediumium": 25,
-      "medium": 40
+      "medium": 41
     },
-    "last_modified": "2026-09-16T22:21:17.386Z",
+    "last_modified": "2026-09-17T15:14:51.518Z",
     "note": "An item in the queue is a request, never a permission."
   },
   "machine": {
     "platform": "win32 10.0.26200",
     "hostname": "DESKTOP-4AHKEC4",
-    "uptime_hours": 5.8,
+    "uptime_hours": 5.3,
     "total_memory_gb": 63.8,
-    "free_memory_gb": 34.3,
-    "unclean_shutdowns_30d": 17,
+    "free_memory_gb": 40,
+    "unclean_shutdowns_30d": 18,
     "unclean_shutdowns_source": "Windows System event log, Id 6008"
   },
   "cadence": {
     "ledger_present": true,
-    "ledger_rows": 71,
+    "ledger_rows": 253,
     "first_ledger_day": "2026-09-14",
-    "days_with_no_ledger_entry": [],
+    "days_with_no_ledger_entry": [
+      "2026-09-18"
+    ],
     "ledger_claims_missing_artifacts": [],
     "manifests": [
       {
         "cadence": "daily",
         "present": true,
-        "jobs": 4,
+        "jobs": 8,
         "disabled": 0
       },
       {
         "cadence": "weekly",
         "present": true,
-        "jobs": 2,
+        "jobs": 3,
         "disabled": 0
       },
       {
@@ -442,6 +462,7 @@
       "mechanism": "Windows Task Scheduler",
       "registered": [
         "Cadence-daily",
+        "Cadence-ledger-push",
         "Cadence-monthly",
         "Cadence-sweep-heartbeat",
         "Cadence-weekly"
@@ -450,20 +471,20 @@
   },
   "silent": {
     "counters": {
-      "shipped_repos": 2,
-      "at_risk_repos": 19,
+      "shipped_repos": 3,
+      "at_risk_repos": 20,
       "overdue_notes": 11,
-      "approval_open_checkboxes": 134,
-      "fresh_artifacts": 7
+      "approval_open_checkboxes": 137,
+      "fresh_artifacts": 4
     },
     "suspect": []
   },
   "counters": {
-    "shipped_repos": 2,
-    "at_risk_repos": 19,
+    "shipped_repos": 3,
+    "at_risk_repos": 20,
     "overdue_notes": 11,
-    "approval_open_checkboxes": 134,
-    "fresh_artifacts": 7
+    "approval_open_checkboxes": 137,
+    "fresh_artifacts": 4
   },
   "source_refs": [
     "12_Brain/registry/automations.json",
@@ -493,9 +514,19 @@
     {
       "date": "2026-09-16",
       "status": "ran",
-      "ran_at": "2026-09-16T22:28:06.082Z"
+      "ran_at": "2026-09-16T23:00:01.596Z"
+    },
+    {
+      "date": "2026-09-17",
+      "status": "ran",
+      "ran_at": "2026-09-17T23:00:01.708Z"
+    },
+    {
+      "date": "2026-09-18",
+      "status": "ran",
+      "ran_at": "2026-09-18T00:00:01.711Z"
     }
   ],
   "exit_code": 2,
-  "verdict": "sweep-gaps=0 stale=0 silent=0 missed-briefs=4/14 cadence-absent=0"
+  "verdict": "sweep-gaps=0 stale=3 silent=0 missed-briefs=6/14 cadence-absent=1"
 }

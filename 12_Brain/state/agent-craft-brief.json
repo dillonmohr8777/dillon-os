@@ -1,10 +1,9 @@
 {
   "automation_id": "agent-craft-brief",
   "status": "ok",
-  "generated_for": "2026-09-16",
+  "generated_for": "2026-09-17",
   "window_days": 14,
   "days": [
-    "2026-09-03",
     "2026-09-04",
     "2026-09-05",
     "2026-09-06",
@@ -17,17 +16,18 @@
     "2026-09-13",
     "2026-09-14",
     "2026-09-15",
-    "2026-09-16"
+    "2026-09-16",
+    "2026-09-17"
   ],
   "counts": {
-    "routines_seen": 21,
+    "routines_seen": 20,
     "workhorses": 13,
     "unreliable": 0,
     "cadence_drift": 0,
-    "authorized_never_ran": 8,
+    "authorized_never_ran": 9,
     "earned_lessons": 22,
     "loop_lessons": 12,
-    "loop_no_findings": 185,
+    "loop_no_findings": 184,
     "loop_learn_missing": 0,
     "promotion_candidates": 2
   },
@@ -41,7 +41,7 @@
       "completions": 14,
       "failures": 0,
       "reliability": 1,
-      "last_completed": "2026-09-16",
+      "last_completed": "2026-09-17",
       "fail_reason": null
     },
     {
@@ -52,29 +52,7 @@
       "completions": 14,
       "failures": 0,
       "reliability": 1,
-      "last_completed": "2026-09-16",
-      "fail_reason": null
-    },
-    {
-      "id": "D10",
-      "name": "Infer the real deliverable",
-      "cadence": "daily",
-      "claude_role": "analyst",
-      "completions": 14,
-      "failures": 0,
-      "reliability": 1,
-      "last_completed": "2026-09-16",
-      "fail_reason": null
-    },
-    {
-      "id": "D11",
-      "name": "Plan dependencies and approval gates",
-      "cadence": "daily",
-      "claude_role": "analyst",
-      "completions": 14,
-      "failures": 0,
-      "reliability": 1,
-      "last_completed": "2026-09-16",
+      "last_completed": "2026-09-17",
       "fail_reason": null
     },
     {
@@ -85,7 +63,29 @@
       "completions": 14,
       "failures": 0,
       "reliability": 1,
-      "last_completed": "2026-09-16",
+      "last_completed": "2026-09-17",
+      "fail_reason": null
+    },
+    {
+      "id": "D10",
+      "name": "Infer the real deliverable",
+      "cadence": "daily",
+      "claude_role": "analyst",
+      "completions": 14,
+      "failures": 0,
+      "reliability": 1,
+      "last_completed": "2026-09-17",
+      "fail_reason": null
+    },
+    {
+      "id": "D11",
+      "name": "Plan dependencies and approval gates",
+      "cadence": "daily",
+      "claude_role": "analyst",
+      "completions": 14,
+      "failures": 0,
+      "reliability": 1,
+      "last_completed": "2026-09-17",
       "fail_reason": null
     },
     {
@@ -96,7 +96,7 @@
       "completions": 14,
       "failures": 0,
       "reliability": 1,
-      "last_completed": "2026-09-16",
+      "last_completed": "2026-09-17",
       "fail_reason": null
     },
     {
@@ -107,7 +107,7 @@
       "completions": 14,
       "failures": 0,
       "reliability": 1,
-      "last_completed": "2026-09-16",
+      "last_completed": "2026-09-17",
       "fail_reason": null
     },
     {
@@ -118,7 +118,7 @@
       "completions": 14,
       "failures": 0,
       "reliability": 1,
-      "last_completed": "2026-09-16",
+      "last_completed": "2026-09-17",
       "fail_reason": null
     },
     {
@@ -129,7 +129,7 @@
       "completions": 14,
       "failures": 0,
       "reliability": 1,
-      "last_completed": "2026-09-16",
+      "last_completed": "2026-09-17",
       "fail_reason": null
     },
     {
@@ -140,7 +140,7 @@
       "completions": 14,
       "failures": 0,
       "reliability": 1,
-      "last_completed": "2026-09-16",
+      "last_completed": "2026-09-17",
       "fail_reason": null
     },
     {
@@ -151,7 +151,7 @@
       "completions": 14,
       "failures": 0,
       "reliability": 1,
-      "last_completed": "2026-09-16",
+      "last_completed": "2026-09-17",
       "fail_reason": null
     },
     {
@@ -162,7 +162,7 @@
       "completions": 14,
       "failures": 0,
       "reliability": 1,
-      "last_completed": "2026-09-16",
+      "last_completed": "2026-09-17",
       "fail_reason": null
     },
     {
@@ -173,7 +173,7 @@
       "completions": 14,
       "failures": 0,
       "reliability": 1,
-      "last_completed": "2026-09-16",
+      "last_completed": "2026-09-17",
       "fail_reason": null
     }
   ],
@@ -213,6 +213,11 @@
     {
       "id": "M04",
       "name": "Audit client and account separation",
+      "cadence": "monthly"
+    },
+    {
+      "id": "M05",
+      "name": "Refresh operating rules, brand voice, and design truth",
       "cadence": "monthly"
     },
     {
@@ -328,6 +333,6 @@
     }
   ],
   "dry_run": true,
-  "generated_at": "2026-09-16T22:28:05.859Z",
-  "written_at": "2026-09-16T22:28:05.859Z"
+  "generated_at": "2026-09-17T13:10:11.543Z",
+  "written_at": "2026-09-17T13:10:11.543Z"
 }

@@ -30,3 +30,5 @@ Sensitive session mines go to `12_Brain/private/sessions/` (gitignored).
 - 2026-09-16 09:07 — session ended (run /session-mine if decisions were made)
 - 2026-09-16 13:05 — session ended (run /session-mine if decisions were made)
 - 2026-09-16 13:06 — session ended (run /session-mine if decisions were made)
+- 2026-09-17 09:13 — session ended (run /session-mine if decisions were made)
+- 2026-09-17 20:05 — qwen-loop-20260917-200101: Qwen38 ingest evidence plan executed by Muse loop (mirrored to sessions/qwen-loop-20260917-200101/)

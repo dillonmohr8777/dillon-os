@@ -1,8 +1,8 @@
 ---
 note_type: proposal
 status: worked
-created: 2026-09-16
-verified_at: 2026-09-17T03:41:29.7288339Z
+created: 2026-09-17
+verified_at: 2026-09-17T23:42:45.9663086Z
 agent: marketing-chief
 privacy: redacted
 external_action_attempted: none
@@ -11,9 +11,9 @@ source_refs:
   - 12_Brain/state/immohrtal-crew/latest.json
 ---
 
-# Immohrtal crew - 2026-09-16
+# Immohrtal crew - 2026-09-17
 
-cycle `CREW-20260916-234121332` outcome **worked**
+cycle `CREW-20260917-194140201` outcome **worked**
 
 ## Lanes
 
