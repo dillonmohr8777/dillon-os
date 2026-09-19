@@ -550,3 +550,62 @@ only a live SERP can answer, such as who actually ranks. Also worth knowing: a
 `curl` status probe can return 403 from Cloudflare while the same URL fetched with
 `-L` and a browser user-agent returns 200 — check the status with the same request
 shape you used for the body, or you will report a site as broken when it is not.
+
+---
+
+## 2026-09-17 — A workflow on the default branch that runs code from another branch is a secret handoff
+
+**Lesson.** GitHub only fires scheduled workflows from the default branch, so a
+workflow file naturally lives on `main` while the script it runs may not. That
+split is the whole defect: the file is reviewed, the code is not, and the runner
+hands the repo's secrets to the unreviewed half. If a workflow carries secrets,
+the ref it checks out must be a reviewed one — `main`, or a pinned commit SHA.
+Never a moving branch name.
+
+**Evidence.** `c2f9504` (2026-09-16 18:18 ET) added
+`.github/workflows/sync-momentum-console.yml` to `main` with
+`cron: '17,47 * * * *'` — 48 unattended runs a day — checking out the moving
+branch `agent-control-plane` and running its
+`_os/automation/bin/sync-cloud-console.js` with `CLOUDFLARE_API_TOKEN` and
+`CLOUDFLARE_ACCOUNT_ID` in env. Anyone able to write that branch could have
+rewritten the script and had it run with the account token. `a95a0db` closed it
+five minutes later: schedule removed, ref pinned to `89d1471`,
+`workflow_dispatch` only. It was caught by a person reading the file. Nothing in
+`_os/test/` checks workflow shape, and `public-safety.test.js` tests for
+secret-shaped *values*, not for a pipeline that gives a secret to unreviewed
+code.
+
+**How to apply.** Before adding or editing anything under `.github/workflows/`,
+answer three questions in the file's header: does it carry secrets, does it run
+unattended, and is the ref it checks out reviewed? If the first two are yes and
+the third is no, it is dispatch-only until the code lands on `main`. And record
+what the fix broke — removing this schedule also stopped the D1 mirror the
+console reads, which no surface announces.
+
+---
+
+## 2026-09-17 — A grade computed from counts you did not run is worse than no grade
+
+**Lesson.** A hygiene routine that estimates its own numbers produces a verdict
+nobody can act on and nobody can diff against last night. Count with a program,
+or report that you did not count. Never stamp a grade on an impression.
+
+**Evidence.** `Daily-Briefs/wiki-lint-2026-09-16.md` graded the vault
+"⚠️ FAILING — Critical INDEX sync issue" on three numbers. All three were wrong.
+It reported "220+ empty link stubs `[[]]` in `12_Brain/INDEX.md`": that file
+contains zero, and vault-wide only three tracked files carry the pattern — two
+of which are the 09-16 hygiene reports themselves, quoting it. It reported "53
+orphan pages … not listed in INDEX.md": 47 of the 54 names it listed are
+indexed, 40 of them in `12_Brain/INDEX.md`, the exact file its own skill names.
+The real state, counted: 0 stubs, 7 unresolved links, 5 orphans. Alongside it
+`vault-clean-2026-09-16.md` graded B+ with "Actions Taken: None," having flagged
+the same two empty inbox files on 09-14 and 09-16 and moved neither. Three weeks
+of these reports have produced zero moves.
+
+**How to apply.** Run `node _os/automation/bin/wiki-lint-check.js` and report its
+numbers. It is read-only, dependency-free, and covers the two checks that are
+arithmetic — empty stubs, unresolved links, orphan pages. Duplicates,
+contradictions, missing sources and expiry stay judgment, and should be labelled
+as judgment rather than graded. The general form: when a routine's output is a
+number, the routine needs a program; when it is a reading, it needs a model. Do
+not let the model do the arithmetic.

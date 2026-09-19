@@ -151,6 +151,15 @@ evidence.
   when the user is logged on," so a 03:31 Windows Update reboot blocked every
   scheduled run until the 09:54 logon. The fix needs elevation.
 
+## Reliability — 2026-09-17
+
+- [[12_Brain/11_Craft/2026-09-17 - daily learning review|Daily learning review 2026-09-17]]
+  — a scheduled workflow ran unreviewed branch code with the Cloudflare account
+  token for five minutes (`c2f9504` → `a95a0db`); closing it also stopped the D1
+  sync behind `momentum-console.workers.dev`, and nothing announces that. Same
+  night, the hygiene pair graded the vault FAILING on three counts that are all
+  wrong — 0 empty stubs not "220+", 5 orphans not 53.
+
 ## Handoff — 2026-09-10
 
 - [[System/handoff-2026-09-10|Session handoff]] — 02:30 ET overnight note. Several
