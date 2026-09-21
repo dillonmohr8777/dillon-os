@@ -1,0 +1,14 @@
+{
+"wakeId":"heartbeat:20260905T155320707Z",
+"identityChecks":{"gmail":"expected-account-verified","slack":"expected-momentum-workspace-and-user-verified"},
+"coverage":{"afterUnix":1788621691,"beforeUnix":1788623615,"gmailPages":1,"gmailMessages":3,"slackPages":1,"slackMessages":3,"paginationExhaustedBoth":true,"newSourceKeys":4},
+"interpretation":"One new automated profile notification suppressed; two Gmail overlaps already known. Slack contains two explicit requests to other named colleagues and the addressed colleague's response. No new ask or commitment by Dillon, incident, or deliverable trigger.",
+"dailyWork":"None due; previously reported blockers unchanged and not redispatched.",
+"newWorkers":[],
+"canonicalQueueMutation":false,
+"externalDelivery":false,
+"decision":"DONT_NOTIFY",
+"privacy":"redacted",
+"containsSecrets":false,
+"containsRawCommunications":false
+}

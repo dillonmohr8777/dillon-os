@@ -93,3 +93,7 @@ verification receipts, training simulator, and evidence pack live at
   phone notification.
 - Calls sign D.I.L.L.O.N.; primary directive ROAD TO 100 CLIENTS per
   `System/OS Config.md`.
+
+## Grok Bot CEO link (2026-09-10)
+
+Live front door is The CEO (Grok Bot). Durable queue when thin on usage: `System/MASTER-ORCHESTRATOR.md`. Daily routines listed in `OPERATING-PLAN-2026-09-10-ADDENDUM.md`.

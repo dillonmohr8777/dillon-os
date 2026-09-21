@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-09-12T19:28:21.5420883Z",
+  "receipt_status": "completed",
+  "session_id": "sess_0dc5d265da51d012006aa5a7ae2fbc81918dcf3633ed9147be",
+  "session_status": "idle",
+  "environment": "openai_hosted",
+  "model": "gpt-6-astra",
+  "reasoning_effort": "low",
+  "multi_agent": false,
+  "max_concurrent_subagents": 0,
+  "elapsed_seconds": 39,
+  "poll_timeout_seconds": 120,
+  "request_timeout_seconds": 30,
+  "error": null,
+  "required_actions": null,
+  "usage": null,
+  "items": {
+    "count": 4,
+    "types": [
+      "command_execution",
+      "message"
+    ],
+    "message_count": 3,
+    "assistant_message_count": 2,
+    "records": [
+      {
+        "id": "msg_85a5ecd7282544038919cf9bddbf1553b7da862cd65f01952e",
+        "type": "message",
+        "role": "user",
+        "status": "completed",
+        "turn_id": "turn_0dc5d265da51d012006aa5a7b593e08191b18cf884fc8f8b6e",
+        "phase": null,
+        "created_at": null
+      },
+      {
+        "id": "msg_04160e4b5394961c016aa5a7b500ac87d19fdd9dd7a3e0afdc",
+        "type": "message",
+        "role": "assistant",
+        "status": "completed",
+        "turn_id": "turn_0dc5d265da51d012006aa5a7b593e08191b18cf884fc8f8b6e",
+        "phase": "commentary",
+        "created_at": null
+      },
+      {
+        "id": "exec-3ed771f5-2ce5-41a0-a634-d5f768512590",
+        "type": "command_execution",
+        "role": null,
+        "status": "completed",
+        "turn_id": "turn_0dc5d265da51d012006aa5a7b593e08191b18cf884fc8f8b6e",
+        "phase": null,
+        "created_at": null
+      },
+      {
+        "id": "msg_04160e4b5394961c016aa5a7cc9f5487d197a4f382e833d25c",
+        "type": "message",
+        "role": "assistant",
+        "status": "completed",
+        "turn_id": "turn_0dc5d265da51d012006aa5a7b593e08191b18cf884fc8f8b6e",
+        "phase": "final_answer",
+        "created_at": null
+      }
+    ]
+  },
+  "turns": {
+    "count": 1,
+    "types": [],
+    "message_count": 0,
+    "assistant_message_count": 0,
+    "records": [
+      {
+        "id": "turn_0dc5d265da51d012006aa5a7b593e08191b18cf884fc8f8b6e",
+        "type": null,
+        "role": null,
+        "status": "completed",
+        "turn_id": null,
+        "phase": null,
+        "created_at": 1789241268
+      }
+    ]
+  },
+  "turn_statuses": "completed",
+  "tool_failures": null,
+  "evidence_error": "",
+  "deletion": null
+}

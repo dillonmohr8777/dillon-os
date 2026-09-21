@@ -1,0 +1,1052 @@
+[
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "metrics": {
+      "clicks": "11",
+      "conversions": 0,
+      "costMicros": "137441105",
+      "impressions": "518"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1013962",
+      "geoTargetMetro": "geoTargetConstants/200803",
+      "geoTargetRegion": "geoTargetConstants/21137"
+    },
+    "geographicView": {
+      "resourceName": "customers/7917802207/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317335",
+      "name": "G_US_S_NB_ETL-Pipeline",
+      "id": "23705317335"
+    },
+    "metrics": {
+      "clicks": "4",
+      "conversions": 0,
+      "costMicros": "134980000",
+      "impressions": "229"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1013962",
+      "geoTargetMetro": "geoTargetConstants/200803",
+      "geoTargetRegion": "geoTargetConstants/21137"
+    },
+    "geographicView": {
+      "resourceName": "customers/7917802207/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038365681",
+      "name": "G_US_S_Brand_Exact",
+      "id": "22038365681"
+    },
+    "metrics": {
+      "clicks": "71",
+      "conversions": 2,
+      "costMicros": "133114170",
+      "impressions": "242"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1014221",
+      "geoTargetMetro": "geoTargetConstants/200807",
+      "geoTargetRegion": "geoTargetConstants/9073451"
+    },
+    "geographicView": {
+      "resourceName": "customers/7917802207/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038365681",
+      "name": "G_US_S_Brand_Exact",
+      "id": "22038365681"
+    },
+    "metrics": {
+      "clicks": "34",
+      "conversions": 0,
+      "costMicros": "127749650",
+      "impressions": "152"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1023191",
+      "geoTargetMetro": "geoTargetConstants/200501",
+      "geoTargetRegion": "geoTargetConstants/21167"
+    },
+    "geographicView": {
+      "resourceName": "customers/7917802207/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317335",
+      "name": "G_US_S_NB_ETL-Pipeline",
+      "id": "23705317335"
+    },
+    "metrics": {
+      "clicks": "3",
+      "conversions": 0,
+      "costMicros": "102013134",
+      "impressions": "551"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1023191",
+      "geoTargetMetro": "geoTargetConstants/200501",
+      "geoTargetRegion": "geoTargetConstants/21167"
+    },
+    "geographicView": {
+      "resourceName": "customers/7917802207/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "metrics": {
+      "clicks": "11",
+      "conversions": 0,
+      "costMicros": "84144648",
+      "impressions": "1284"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1023191",
+      "geoTargetMetro": "geoTargetConstants/200501",
+      "geoTargetRegion": "geoTargetConstants/21167"
+    },
+    "geographicView": {
+      "resourceName": "customers/7917802207/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23027231268",
+      "name": "G_US_S_NB_Data-Products",
+      "id": "23027231268"
+    },
+    "metrics": {
+      "clicks": "6",
+      "conversions": 0,
+      "costMicros": "61310000",
+      "impressions": "440"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1023191",
+      "geoTargetMetro": "geoTargetConstants/200501",
+      "geoTargetRegion": "geoTargetConstants/21167"
+    },
+    "geographicView": {
+      "resourceName": "customers/7917802207/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "metrics": {
+      "clicks": "5",
+      "conversions": 0,
+      "costMicros": "60730000",
+      "impressions": "388"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1016367",
+      "geoTargetMetro": "geoTargetConstants/200602",
+      "geoTargetRegion": "geoTargetConstants/21147"
+    },
+    "geographicView": {
+      "resourceName": "customers/7917802207/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "metrics": {
+      "clicks": "4",
+      "conversions": 0,
+      "costMicros": "58915191",
+      "impressions": "144"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1026339",
+      "geoTargetMetro": "geoTargetConstants/200623",
+      "geoTargetRegion": "geoTargetConstants/21176"
+    },
+    "geographicView": {
+      "resourceName": "customers/7917802207/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "metrics": {
+      "clicks": "5",
+      "conversions": 0,
+      "costMicros": "56520000",
+      "impressions": "104"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1025197",
+      "geoTargetMetro": "geoTargetConstants/200504",
+      "geoTargetRegion": "geoTargetConstants/21171"
+    },
+    "geographicView": {
+      "resourceName": "customers/7917802207/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317341",
+      "name": "G_US_S_NB_Governance",
+      "id": "23705317341"
+    },
+    "metrics": {
+      "clicks": "2",
+      "conversions": 0,
+      "costMicros": "54850000",
+      "impressions": "50"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1014221",
+      "geoTargetMetro": "geoTargetConstants/200807",
+      "geoTargetRegion": "geoTargetConstants/9073451"
+    },
+    "geographicView": {
+      "resourceName": "customers/7917802207/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317335",
+      "name": "G_US_S_NB_ETL-Pipeline",
+      "id": "23705317335"
+    },
+    "metrics": {
+      "clicks": "2",
+      "conversions": 0,
+      "costMicros": "54690000",
+      "impressions": "184"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1014221",
+      "geoTargetMetro": "geoTargetConstants/200807",
+      "geoTargetRegion": "geoTargetConstants/9073451"
+    },
+    "geographicView": {
+      "resourceName": "customers/7917802207/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317335",
+      "name": "G_US_S_NB_ETL-Pipeline",
+      "id": "23705317335"
+    },
+    "metrics": {
+      "clicks": "2",
+      "conversions": 0,
+      "costMicros": "54120000",
+      "impressions": "118"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1027028",
+      "geoTargetMetro": "geoTargetConstants/200511",
+      "geoTargetRegion": "geoTargetConstants/21178"
+    },
+    "geographicView": {
+      "resourceName": "customers/7917802207/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317335",
+      "name": "G_US_S_NB_ETL-Pipeline",
+      "id": "23705317335"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "48440000",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9052842",
+      "geoTargetMetro": "geoTargetConstants/200819",
+      "geoTargetRegion": "geoTargetConstants/21180"
+    },
+    "geographicView": {
+      "resourceName": "customers/7917802207/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317335",
+      "name": "G_US_S_NB_ETL-Pipeline",
+      "id": "23705317335"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "48160000",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1015486",
+      "geoTargetMetro": "geoTargetConstants/200507",
+      "geoTargetRegion": "geoTargetConstants/21143"
+    },
+    "geographicView": {
+      "resourceName": "customers/7917802207/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22988394145",
+      "name": "G_US_S_NB_AI-Data-Integration",
+      "id": "22988394145"
+    },
+    "metrics": {
+      "clicks": "3",
+      "conversions": 0,
+      "costMicros": "47055439",
+      "impressions": "9"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1026481",
+      "geoTargetMetro": "geoTargetConstants/200618",
+      "geoTargetRegion": "geoTargetConstants/21176"
+    },
+    "geographicView": {
+      "resourceName": "customers/7917802207/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317341",
+      "name": "G_US_S_NB_Governance",
+      "id": "23705317341"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "45800000",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1015150",
+      "geoTargetMetro": "geoTargetConstants/200534",
+      "geoTargetRegion": "geoTargetConstants/21142"
+    },
+    "geographicView": {
+      "resourceName": "customers/7917802207/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "45390000",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1021670",
+      "geoTargetMetro": "geoTargetConstants/200652",
+      "geoTargetRegion": "geoTargetConstants/21162"
+    },
+    "geographicView": {
+      "resourceName": "customers/7917802207/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038365681",
+      "name": "G_US_S_Brand_Exact",
+      "id": "22038365681"
+    },
+    "metrics": {
+      "clicks": "17",
+      "conversions": 0,
+      "costMicros": "44680000",
+      "impressions": "47"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1027744",
+      "geoTargetMetro": "geoTargetConstants/200819",
+      "geoTargetRegion": "geoTargetConstants/21180"
+    },
+    "geographicView": {
+      "resourceName": "customers/7917802207/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317335",
+      "name": "G_US_S_NB_ETL-Pipeline",
+      "id": "23705317335"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "44560000",
+      "impressions": "3"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9053205",
+      "geoTargetMetro": "geoTargetConstants/200512",
+      "geoTargetRegion": "geoTargetConstants/21153"
+    },
+    "geographicView": {
+      "resourceName": "customers/7917802207/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "40410000",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1023226",
+      "geoTargetMetro": "geoTargetConstants/200526",
+      "geoTargetRegion": "geoTargetConstants/21167"
+    },
+    "geographicView": {
+      "resourceName": "customers/7917802207/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "metrics": {
+      "clicks": "2",
+      "conversions": 0,
+      "costMicros": "39840000",
+      "impressions": "201"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1018127",
+      "geoTargetMetro": "geoTargetConstants/200506",
+      "geoTargetRegion": "geoTargetConstants/21152"
+    },
+    "geographicView": {
+      "resourceName": "customers/7917802207/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "metrics": {
+      "clicks": "5",
+      "conversions": 0,
+      "costMicros": "36120000",
+      "impressions": "14"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1014778",
+      "geoTargetMetro": "geoTargetConstants/200533",
+      "geoTargetRegion": "geoTargetConstants/21139"
+    },
+    "geographicView": {
+      "resourceName": "customers/7917802207/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038365681",
+      "name": "G_US_S_Brand_Exact",
+      "id": "22038365681"
+    },
+    "metrics": {
+      "clicks": "3",
+      "conversions": 0,
+      "costMicros": "35163355",
+      "impressions": "4"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1014080",
+      "geoTargetMetro": "geoTargetConstants/200807",
+      "geoTargetRegion": "geoTargetConstants/9073451"
+    },
+    "geographicView": {
+      "resourceName": "customers/7917802207/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317335",
+      "name": "G_US_S_NB_ETL-Pipeline",
+      "id": "23705317335"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "34750000",
+      "impressions": "5"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1020476",
+      "geoTargetMetro": "geoTargetConstants/200609",
+      "geoTargetRegion": "geoTargetConstants/21157"
+    },
+    "geographicView": {
+      "resourceName": "customers/7917802207/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038365681",
+      "name": "G_US_S_Brand_Exact",
+      "id": "22038365681"
+    },
+    "metrics": {
+      "clicks": "7",
+      "conversions": 0,
+      "costMicros": "34125278",
+      "impressions": "18"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1014226",
+      "geoTargetMetro": "geoTargetConstants/200807",
+      "geoTargetRegion": "geoTargetConstants/9073451"
+    },
+    "geographicView": {
+      "resourceName": "customers/7917802207/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "33360000",
+      "impressions": "7"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1020519",
+      "geoTargetMetro": "geoTargetConstants/200609",
+      "geoTargetRegion": "geoTargetConstants/21157"
+    },
+    "geographicView": {
+      "resourceName": "customers/7917802207/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "metrics": {
+      "clicks": "2",
+      "conversions": 0,
+      "costMicros": "32620000",
+      "impressions": "7"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9051563",
+      "geoTargetMetro": "geoTargetConstants/200542",
+      "geoTargetRegion": "geoTargetConstants/21168"
+    },
+    "geographicView": {
+      "resourceName": "customers/7917802207/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "metrics": {
+      "clicks": "5",
+      "conversions": 0,
+      "costMicros": "31200000",
+      "impressions": "178"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1014226",
+      "geoTargetMetro": "geoTargetConstants/200807",
+      "geoTargetRegion": "geoTargetConstants/9073451"
+    },
+    "geographicView": {
+      "resourceName": "customers/7917802207/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "metrics": {
+      "clicks": "2",
+      "conversions": 0,
+      "costMicros": "29650000",
+      "impressions": "55"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1021085",
+      "geoTargetMetro": "geoTargetConstants/200560",
+      "geoTargetRegion": "geoTargetConstants/21160"
+    },
+    "geographicView": {
+      "resourceName": "customers/7917802207/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "metrics": {
+      "clicks": "4",
+      "conversions": 0,
+      "costMicros": "29250000",
+      "impressions": "213"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1026481",
+      "geoTargetMetro": "geoTargetConstants/200618",
+      "geoTargetRegion": "geoTargetConstants/21176"
+    },
+    "geographicView": {
+      "resourceName": "customers/7917802207/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "29020000",
+      "impressions": "3"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1021959",
+      "geoTargetMetro": "geoTargetConstants/200506",
+      "geoTargetRegion": "geoTargetConstants/21163"
+    },
+    "geographicView": {
+      "resourceName": "customers/7917802207/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "29000000",
+      "impressions": "3"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9197597",
+      "geoTargetMetro": "geoTargetConstants/200561",
+      "geoTargetRegion": "geoTargetConstants/21142"
+    },
+    "geographicView": {
+      "resourceName": "customers/7917802207/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "metrics": {
+      "clicks": "3",
+      "conversions": 0,
+      "costMicros": "27636280",
+      "impressions": "99"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1014315",
+      "geoTargetMetro": "geoTargetConstants/200807",
+      "geoTargetRegion": "geoTargetConstants/9073452"
+    },
+    "geographicView": {
+      "resourceName": "customers/7917802207/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "metrics": {
+      "clicks": "5",
+      "conversions": 0,
+      "costMicros": "26738901",
+      "impressions": "151"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1021048",
+      "geoTargetMetro": "geoTargetConstants/200517",
+      "geoTargetRegion": "geoTargetConstants/21160"
+    },
+    "geographicView": {
+      "resourceName": "customers/7917802207/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "metrics": {
+      "clicks": "5",
+      "conversions": 0,
+      "costMicros": "26194446",
+      "impressions": "270"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1014221",
+      "geoTargetMetro": "geoTargetConstants/200807",
+      "geoTargetRegion": "geoTargetConstants/9073451"
+    },
+    "geographicView": {
+      "resourceName": "customers/7917802207/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038365681",
+      "name": "G_US_S_Brand_Exact",
+      "id": "22038365681"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "25970000",
+      "impressions": "4"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9052629",
+      "geoTargetMetro": "geoTargetConstants/200561",
+      "geoTargetRegion": "geoTargetConstants/21142"
+    },
+    "geographicView": {
+      "resourceName": "customers/7917802207/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "25310000",
+      "impressions": "12"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1015113",
+      "geoTargetMetro": "geoTargetConstants/200534",
+      "geoTargetRegion": "geoTargetConstants/21142"
+    },
+    "geographicView": {
+      "resourceName": "customers/7917802207/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "25080000",
+      "impressions": "16"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1028087",
+      "geoTargetMetro": "geoTargetConstants/200617",
+      "geoTargetRegion": "geoTargetConstants/21182"
+    },
+    "geographicView": {
+      "resourceName": "customers/7917802207/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23027231268",
+      "name": "G_US_S_NB_Data-Products",
+      "id": "23027231268"
+    },
+    "metrics": {
+      "clicks": "4",
+      "conversions": 0,
+      "costMicros": "24930000",
+      "impressions": "149"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1014221",
+      "geoTargetMetro": "geoTargetConstants/200807",
+      "geoTargetRegion": "geoTargetConstants/9073451"
+    },
+    "geographicView": {
+      "resourceName": "customers/7917802207/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23027231268",
+      "name": "G_US_S_NB_Data-Products",
+      "id": "23027231268"
+    },
+    "metrics": {
+      "clicks": "7",
+      "conversions": 0,
+      "costMicros": "24450000",
+      "impressions": "141"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1013962",
+      "geoTargetMetro": "geoTargetConstants/200803",
+      "geoTargetRegion": "geoTargetConstants/21137"
+    },
+    "geographicView": {
+      "resourceName": "customers/7917802207/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038365681",
+      "name": "G_US_S_Brand_Exact",
+      "id": "22038365681"
+    },
+    "metrics": {
+      "clicks": "3",
+      "conversions": 0,
+      "costMicros": "24334486",
+      "impressions": "6"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1014339",
+      "geoTargetMetro": "geoTargetConstants/200803",
+      "geoTargetRegion": "geoTargetConstants/21137"
+    },
+    "geographicView": {
+      "resourceName": "customers/7917802207/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "metrics": {
+      "clicks": "2",
+      "conversions": 0,
+      "costMicros": "23020000",
+      "impressions": "20"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1013387",
+      "geoTargetMetro": "geoTargetConstants/200753",
+      "geoTargetRegion": "geoTargetConstants/21136"
+    },
+    "geographicView": {
+      "resourceName": "customers/7917802207/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038365681",
+      "name": "G_US_S_Brand_Exact",
+      "id": "22038365681"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "22970000",
+      "impressions": "1"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9192153",
+      "geoTargetMetro": "geoTargetConstants/200819",
+      "geoTargetRegion": "geoTargetConstants/21180"
+    },
+    "geographicView": {
+      "resourceName": "customers/7917802207/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "22800000",
+      "impressions": "2"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1015241",
+      "geoTargetMetro": "geoTargetConstants/200539",
+      "geoTargetRegion": "geoTargetConstants/21142"
+    },
+    "geographicView": {
+      "resourceName": "customers/7917802207/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "metrics": {
+      "clicks": "2",
+      "conversions": 0,
+      "costMicros": "22720000",
+      "impressions": "218"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1014226",
+      "geoTargetMetro": "geoTargetConstants/200807",
+      "geoTargetRegion": "geoTargetConstants/9073452"
+    },
+    "geographicView": {
+      "resourceName": "customers/7917802207/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038365681",
+      "name": "G_US_S_Brand_Exact",
+      "id": "22038365681"
+    },
+    "metrics": {
+      "clicks": "6",
+      "conversions": 0,
+      "costMicros": "21995707",
+      "impressions": "31"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1014249",
+      "geoTargetMetro": "geoTargetConstants/200807",
+      "geoTargetRegion": "geoTargetConstants/9073452"
+    },
+    "geographicView": {
+      "resourceName": "customers/7917802207/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "metrics": {
+      "clicks": "4",
+      "conversions": 0,
+      "costMicros": "21850000",
+      "impressions": "217"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1026201",
+      "geoTargetMetro": "geoTargetConstants/200635",
+      "geoTargetRegion": "geoTargetConstants/21176"
+    },
+    "geographicView": {
+      "resourceName": "customers/7917802207/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23027231268",
+      "name": "G_US_S_NB_Data-Products",
+      "id": "23027231268"
+    },
+    "metrics": {
+      "clicks": "4",
+      "conversions": 0,
+      "costMicros": "21500000",
+      "impressions": "34"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1014218",
+      "geoTargetMetro": "geoTargetConstants/200825",
+      "geoTargetRegion": "geoTargetConstants/21137"
+    },
+    "geographicView": {
+      "resourceName": "customers/7917802207/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "name": "G_US_S_NB_MCP-Agentic",
+      "id": "23705317332"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "20090000",
+      "impressions": "29"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1017825",
+      "geoTargetMetro": "geoTargetConstants/200529",
+      "geoTargetRegion": "geoTargetConstants/21150"
+    },
+    "geographicView": {
+      "resourceName": "customers/7917802207/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  }
+]

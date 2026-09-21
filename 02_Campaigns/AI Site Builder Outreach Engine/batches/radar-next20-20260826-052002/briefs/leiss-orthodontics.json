@@ -1,0 +1,221 @@
+{
+  "slug": "leiss-orthodontics",
+  "prospectId": "RADAR-NEXT20-001",
+  "name": "Leiss Orthodontics",
+  "city": "Elverson",
+  "market": "Elverson",
+  "address": "201 Darby Square, Elverson, PA 19520",
+  "phone": "610-363-2900",
+  "category": "Dentist",
+  "vertical": "dentist",
+  "verticalGroup": "medical",
+  "attitude": "editorial",
+  "url": "https://leisshendrix.com/location/elverson-orthodontics/",
+  "description": "Private mobile-first concept for Leiss Orthodontics, grounded in its official identity and first-party visual source.",
+  "logo": true,
+  "logoFile": "logo.svg",
+  "filmGrain": true,
+  "logoOutroLine": "Elverson | Dentist",
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "qualityPolicy": {
+    "minImages": 12,
+    "maxWords": 500
+  },
+  "sections": [
+    "hero",
+    "proof",
+    "offerings",
+    "story",
+    "experience",
+    "gallery",
+    "feature",
+    "catalog",
+    "contact",
+    "closing"
+  ],
+  "tokens": {
+    "paper": "#F4EFE7",
+    "ink": "#0B1D2D",
+    "accent": "#F05A28",
+    "accent2": "#91D5ED",
+    "panel": "#EAF6FC",
+    "deep": "#071521",
+    "onPaper": "#0B1D2D",
+    "onAccent": "#071521",
+    "onAccent2": "#071521",
+    "onPanel": "#0B1D2D",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "14px"
+  },
+  "fonts": {
+    "display": "Plus Jakarta Sans",
+    "displayFallback": "Arial,sans-serif",
+    "text": "DM Sans",
+    "textFallback": "Arial,sans-serif"
+  },
+  "skinCss": ".slug-leiss-orthodontics .hero h1,.slug-leiss-orthodontics .section-head h2,.slug-leiss-orthodontics .story h2,.slug-leiss-orthodontics .feature h2,.slug-leiss-orthodontics .spotlight h2,.slug-leiss-orthodontics .contact-intro h2,.slug-leiss-orthodontics .closing h2,.slug-leiss-orthodontics .offering-card h3,.slug-leiss-orthodontics .experience-grid h3,.slug-leiss-orthodontics .catalog-card h3,.slug-leiss-orthodontics .footer-identity strong{font-weight:800}",
+  "directionContract": {
+    "thesis": "Leiss Orthodontics should feel immediate, composed, and unmistakably itself on a phone.",
+    "ownWorld": "image first editorial system in deep navy, vivid orange, warm paper, cyan glints, and visibly tactile film grain.",
+    "story": "Move from orientation to care question, source context, disclosed visual direction, and a direct official action.",
+    "firstViewport": "Source-verifiable identity, one clear proposition, one Align editorial image, and one thumb-ready action.",
+    "form": "Mobile-first care practice homepage with an ink-resolved identity finale."
+  },
+  "hero": {
+    "eyebrow": "",
+    "headline": "A calmer route to the right next step.",
+    "sub": "Leiss Orthodontics deserves a first screen that makes the next step legible without flattening the character of the work. This private concept begins with the official identity and first-party source material.",
+    "ctaPrimary": {
+      "label": "Visit official website",
+      "href": "https://leisshendrix.com/location/elverson-orthodontics/"
+    },
+    "ctaSecondary": {
+      "label": "Explore the concept",
+      "href": "#offerings"
+    },
+    "glassFloat": null,
+    "marquee": []
+  },
+  "proof": {
+    "items": [
+      "Leiss Orthodontics",
+      "Elverson",
+      "Dentist",
+      "Official source connected"
+    ]
+  },
+  "offerings": {
+    "heading": "A homepage organized around the decision a visitor is actually making.",
+    "items": [
+      "Understand the role of Leiss Orthodontics without searching through the page",
+      "See a clearly disclosed, business-relevant visual direction before choosing the next care question",
+      "Reach the official source through one direct, clearly labelled action"
+    ]
+  },
+  "story": {
+    "heading": "Identity and evidence lead. The interface follows.",
+    "imageIndex": 2,
+    "paragraphs": [
+      "Looking for braces or Invisalign® in Elverson, PA? Visit Dr. Jeffrey Leiss at Darby Square off W Main St. Free consultations available!",
+      "This concept uses generated editorial imagery as illustrative direction, not as evidence about the business. The composition gives each image room to establish scale and character while the written hierarchy stays concise enough for a phone.",
+      "No testimonial, result, price, award, schedule, or service promise is added here. Current operational details remain under the control of the official website."
+    ]
+  },
+  "experience": {
+    "heading": "A deliberate path from first impression to official action.",
+    "items": [
+      "Immediate identity and location context",
+      "Readable source-led narrative with decisive image rhythm",
+      "A consistent action that stays reachable without interrupting the page"
+    ]
+  },
+  "gallery": {
+    "heading": "Illustrative concept imagery, cut into a tactile mobile editorial rhythm.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ]
+  },
+  "feature": {
+    "heading": "The page disappears behind the work, then returns to the identity.",
+    "text": "As each section passes, progressive motion lets completed information soften without turning the page into a scroll experiment. The final scene returns to the verified Leiss Orthodontics logo with its geometry preserved.",
+    "imageIndex": 9,
+    "cta": {
+      "label": "Open official source",
+      "href": "https://leisshendrix.com/location/elverson-orthodontics/"
+    }
+  },
+  "catalog": {
+    "heading": "Three useful routes, kept honest and direct.",
+    "items": [
+      {
+        "title": "Review current services and project information",
+        "href": "https://leisshendrix.com/location/elverson-orthodontics/",
+        "imageIndex": 10
+      },
+      {
+        "title": "Confirm current location and contact details",
+        "href": "https://leisshendrix.com/location/elverson-orthodontics/",
+        "imageIndex": 11
+      },
+      {
+        "title": "Decide whether the next care question makes sense",
+        "href": "https://leisshendrix.com/location/elverson-orthodontics/",
+        "imageIndex": 12
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Current details belong to the official source.",
+    "sub": "This private concept sends nothing. Generated imagery does not depict Leiss Orthodontics, its staff, customers, facility, products, projects, or outcomes. Use the official website to confirm services, availability, hours, and contact details."
+  },
+  "closing": {
+    "heading": "A stronger first impression, resolved to the verified logo.",
+    "cta": {
+      "label": "Visit official website",
+      "href": "https://leisshendrix.com/location/elverson-orthodontics/"
+    }
+  },
+  "links": [
+    {
+      "label": "Official website",
+      "href": "https://leisshendrix.com/location/elverson-orthodontics/"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Illustrative generated dentist concept image 1 for the Leiss Orthodontics private homepage direction"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Illustrative generated dentist concept image 2 for the Leiss Orthodontics private homepage direction"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Illustrative generated dentist concept image 3 for the Leiss Orthodontics private homepage direction"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Illustrative generated dentist concept image 4 for the Leiss Orthodontics private homepage direction"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Illustrative generated dentist concept image 5 for the Leiss Orthodontics private homepage direction"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Illustrative generated dentist concept image 6 for the Leiss Orthodontics private homepage direction"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Illustrative generated dentist concept image 7 for the Leiss Orthodontics private homepage direction"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Illustrative generated dentist concept image 8 for the Leiss Orthodontics private homepage direction"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Illustrative generated dentist concept image 9 for the Leiss Orthodontics private homepage direction"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Illustrative generated dentist concept image 10 for the Leiss Orthodontics private homepage direction"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Illustrative generated dentist concept image 11 for the Leiss Orthodontics private homepage direction"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Illustrative generated dentist concept image 12 for the Leiss Orthodontics private homepage direction"
+    }
+  ]
+}

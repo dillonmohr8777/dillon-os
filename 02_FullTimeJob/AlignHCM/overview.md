@@ -3,16 +3,20 @@ employer: Align HCM
 client_id: align-hcm
 website: alignhcm.com
 role: Digital Marketing Manager
-employment_type: full-time W2
+employment_type: former full-time W2
 division: Align HCM (full-time)
-status: active
-last_touched: 2026-04-15
+status: ended
+last_touched: 2026-09-02
 tags: [fulltime, align-hcm, smartcare, linkedin, content]
 ---
 
-# Align HCM (Full-Time Employer)
+# Align HCM (Former Employer)
 
-Dillon's full-time W2 employer. **Not a freelance client. Not under Buzz Bull or Momentum 360.** All routines and memory files that reference "clients" should exclude Align HCM from client lists unless explicitly called out.
+> **Ended.** Dillon no longer works at Align HCM, confirmed by him on 2026-09-02. This page is
+> historical record only. Do not treat it as a current employer, client, or income source. See
+> `System/operating-status.md` for current status.
+
+Dillon's former full-time W2 employer. **Not a freelance client. Not under Buzz Bull or Momentum 360.** All routines and memory files that reference "clients" should exclude Align HCM from client lists unless explicitly called out.
 
 ## Role
 Digital Marketing Manager. Owns LinkedIn content production across five profiles, SmartCare brand marketing, case studies, sales enablement, SEO blogs, and monthly performance reporting for the broader leadership team.

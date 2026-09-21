@@ -318,6 +318,7 @@ function ingestGrokRun(envelope, options = {}) {
   };
   state.processed[payloadHash] = record;
   state.updated_at = nowISO();
+  state.generated_at = state.updated_at; // timestamp contract: 12_Brain/schemas/automation-run.json
   writeJson(INGEST_STATE, state);
   enqueue('grok-intelligence-ingest', 'captured', {
     payload_hash: payloadHash,

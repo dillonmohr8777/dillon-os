@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Summer AC Tune-Up | Shadow Heating & Cooling</title>
+  <style>
+    :root {
+      --bg: #05070c;
+      --card: #121826;
+      --ember: #ff5a1f;
+      --ice: #38bdf8;
+      --gold: #f4b740;
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      padding: 4rem 6vw;
+      align-items: center;
+      background:
+        radial-gradient(ellipse 80% 60% at 20% 20%, rgba(255,90,31,.15), transparent),
+        radial-gradient(ellipse 60% 50% at 80% 80%, rgba(56,189,248,.12), transparent),
+        var(--bg);
+    }
+    @media (max-width: 900px) { .hero { grid-template-columns: 1fr; } }
+    .badge {
+      display: inline-block;
+      padding: .35rem .9rem;
+      border-radius: 999px;
+      background: rgba(255,90,31,.15);
+      border: 1px solid rgba(255,90,31,.4);
+      color: var(--ember);
+      font-size: .75rem;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+    }
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+    h1 span { color: var(--ice); }
+    .sub { font-size: 1.15rem; color: var(--muted); max-width: 32ch; margin-bottom: 2rem; }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      padding: 1rem 1.75rem;
+      background: linear-gradient(135deg, var(--ember), #e23c00);
+      color: #fff;
+      font-weight: 700;
+      font-size: 1rem;
+      border: none;
+      border-radius: 12px;
+      text-decoration: none;
+      box-shadow: 0 0 40px -8px rgba(255,90,31,.55);
+    }
+    .btn-secondary {
+      color: var(--ice);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .phone { font-size: 1.25rem; font-weight: 700; color: var(--gold); }
+    .visual {
+      aspect-ratio: 4/5;
+      border-radius: 24px;
+      background: var(--card);
+      border: 1px solid rgba(56,189,248,.2);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .orb {
+      width: 180px; height: 180px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, var(--ice), var(--ember));
+      animation: pulse 3s ease-in-out infinite;
+      box-shadow: 0 0 80px rgba(56,189,248,.4);
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: .9; }
+      50% { transform: scale(1.08); opacity: 1; }
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      padding: 3rem 6vw;
+      background: var(--card);
+      border-top: 1px solid rgba(255,255,255,.06);
+    }
+    @media (max-width: 700px) { .stats { grid-template-columns: repeat(2, 1fr); } }
+    .stat strong { display: block; font-size: 1.75rem; color: var(--gold); }
+    .stat span { font-size: .8rem; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; }
+    .benefits {
+      padding: 4rem 6vw;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    @media (max-width: 800px) { .benefits { grid-template-columns: 1fr; } }
+    .benefit {
+      padding: 1.5rem;
+      background: var(--card);
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,.06);
+    }
+    .benefit h3 { color: var(--ember); margin-bottom: .5rem; font-size: 1rem; }
+    .benefit p { color: var(--muted); font-size: .9rem; }
+    .projects {
+      padding: 0 6vw 4rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+    @media (max-width: 800px) { .projects { grid-template-columns: 1fr; } }
+    .projects img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 16px;
+      display: block;
+      border: 1px solid rgba(255,255,255,.06);
+    }
+    footer {
+      padding: 2rem 6vw;
+      text-align: center;
+      color: var(--muted);
+      font-size: .8rem;
+      border-top: 1px solid rgba(255,255,255,.06);
+    }
+    .m360 { color: var(--ice); font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; margin-top: .5rem; }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <div>
+      <div class="badge">Hampshire, IL · 24/7 Emergency</div>
+      <h1>Beat the Heat.<br><span>Defend Your Comfort Zone.</span></h1>
+      <p class="sub">Professional AC tune-up before peak summer. Same-day slots available. Locally owned, 5-star rated.</p>
+      <div class="cta-row">
+        <a class="btn-primary" href="https://book.housecallpro.com/book/Shadow-Heating--Cooling/">Book AC Tune-Up</a>
+        <a class="btn-secondary" href="tel:+18477579450">Call Now</a>
+      </div>
+      <p class="phone" style="margin-top:1.5rem">(847) 757-9450</p>
+    </div>
+    <div class="visual"><div class="orb"></div></div>
+  </section>
+  <section class="stats">
+    <div class="stat"><strong>24/7</strong><span>Emergency Response</span></div>
+    <div class="stat"><strong>100%</strong><span>Satisfaction Guarantee</span></div>
+    <div class="stat"><strong>5★</strong><span>Local Reviews</span></div>
+    <div class="stat"><strong>15+</strong><span>Communities Served</span></div>
+  </section>
+  <section class="benefits">
+    <div class="benefit">
+      <h3>Full System Inspection</h3>
+      <p>Coils, refrigerant, electrical, and airflow checked so your AC runs efficient all season.</p>
+    </div>
+    <div class="benefit">
+      <h3>No Surprise Charges</h3>
+      <p>Upfront pricing. We diagnose before we recommend. Hampshire neighbors trust honest work.</p>
+    </div>
+    <div class="benefit">
+      <h3>Emergency Ready</h3>
+      <p>Furnace out at 2 a.m.? We answer. Real technicians, not an answering machine.</p>
+    </div>
+  </section>
+  <section class="projects" aria-label="Shadow Heating and Cooling service photos">
+    <!-- First-party WordPress uploads from shadowheatingandcooling.com, live HTTP 200 on 2026-08-27. -->
+    <img src="https://shadowheatingandcooling.com/wp-content/uploads/2025/03/air-conditioner-cleaning-and-man-with-electrical-machine-check-in-a-home-with-ac-repair-maintenan.jpg" alt="Shadow Heating and Cooling technician checking a home air conditioner" width="1280" height="854" />
+    <img src="https://shadowheatingandcooling.com/wp-content/uploads/2025/03/service-man-is-cleaning-repair-and-maintenance-of-air-conditioner-1-2.jpg" alt="Shadow technician performing AC cleaning and maintenance" width="1280" height="852" />
+    <img src="https://shadowheatingandcooling.com/wp-content/uploads/2025/03/male-technicians-service-for-repair-and-maintenance-of-air-conditioners.jpg" alt="Shadow Heating and Cooling AC repair and maintenance service" width="1280" height="852" />
+  </section>
+  <footer>
+    Shadow Heating & Cooling · 334 E Grove, Hampshire, IL 60140<br>
+    <span class="m360">Paid media by Momentum 360</span>
+  </footer>
+</body>
+</html>

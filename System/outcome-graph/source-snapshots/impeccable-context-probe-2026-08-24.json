@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-08-25T02:35:00.000Z",
+  "target": "automation/prospect-radar-next20/PRODUCT.md",
+  "mode": "Persuade",
+  "product_truth": {
+    "present": true,
+    "locator": "automation/prospect-radar-next20/PRODUCT.md"
+  },
+  "design_truth": {
+    "present": true,
+    "locator": "automation/prospect-radar-next20/DESIGN.md",
+    "status": "seed"
+  },
+  "context_probe": {
+    "attempted": true,
+    "passed": true,
+    "surface_brief_present": false,
+    "visual_implementation_detected": false
+  },
+  "design_system_test": {
+    "attempted": true,
+    "passed": true,
+    "gate": "no-ui-implementation",
+    "design_is_seed": true,
+    "manual_detector_required": true,
+    "blocker": null
+  },
+  "preflight_repairs": [
+    "Renamed the case-insensitive isWindows variable so it no longer collides with PowerShell's read-only IsWindows automatic variable.",
+    "Recognize YAML status: seed in addition to the legacy HTML seed marker."
+  ],
+  "interpretation": "The Windows design preflight now runs and correctly recognizes the seed DESIGN.md. Product and seed design truth are resolved, but no surface brief or visual implementation exists, so D13 remains held at no-ui-implementation rather than being promoted to mature design context.",
+  "authority": {
+    "read_only": true,
+    "external_action_attempted": false,
+    "ui_mutation_attempted": false,
+    "design_truth_overwrite_attempted": false
+  }
+}

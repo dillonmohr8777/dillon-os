@@ -1,0 +1,122 @@
+[
+  {
+    "conversionAction": {
+      "resourceName": "customers/2853981364/conversionActions/6944987758",
+      "status": "ENABLED",
+      "type": "GOOGLE_ANALYTICS_4_CUSTOM",
+      "category": "CONTACT",
+      "id": "6944987758",
+      "name": "Contact Us",
+      "ownerCustomer": "customers/2853981364",
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/2853981364/conversionActions/6945011031",
+      "status": "HIDDEN",
+      "type": "GOOGLE_ANALYTICS_4_PURCHASE",
+      "category": "PURCHASE",
+      "id": "6945011031",
+      "name": "omegalandscapingandconcrete.com (web) purchase",
+      "ownerCustomer": "customers/2853981364",
+      "primaryForGoal": false
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/2853981364/conversionActions/7228962397",
+      "status": "ENABLED",
+      "type": "AD_CALL",
+      "category": "PHONE_CALL_LEAD",
+      "id": "7228962397",
+      "name": "Calls from ads",
+      "ownerCustomer": "customers/2853981364",
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/2853981364/conversionActions/7489423141",
+      "status": "ENABLED",
+      "type": "WEBPAGE",
+      "category": "SUBMIT_LEAD_FORM",
+      "id": "7489423141",
+      "name": "Form Submission | S",
+      "ownerCustomer": "customers/2853981364",
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/2853981364/conversionActions/7489434940",
+      "status": "ENABLED",
+      "type": "WEBPAGE",
+      "category": "CONTACT",
+      "id": "7489434940",
+      "name": "Email Clicks | S",
+      "ownerCustomer": "customers/2853981364",
+      "primaryForGoal": false
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/2853981364/conversionActions/7489436842",
+      "status": "ENABLED",
+      "type": "WEBPAGE",
+      "category": "CONTACT",
+      "id": "7489436842",
+      "name": "Phone Number Clicks | S",
+      "ownerCustomer": "customers/2853981364",
+      "primaryForGoal": false
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/2853981364/conversionActions/7489644222",
+      "status": "ENABLED",
+      "type": "WEBSITE_CALL",
+      "category": "PHONE_CALL_LEAD",
+      "id": "7489644222",
+      "name": "Calls from Website | S",
+      "ownerCustomer": "customers/2853981364",
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/2853981364/conversionActions/7703225462",
+      "status": "ENABLED",
+      "type": "LEAD_FORM_SUBMIT",
+      "category": "SUBMIT_LEAD_FORM",
+      "id": "7703225462",
+      "name": "Lead form - Submit",
+      "ownerCustomer": "customers/2853981364",
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/2853981364/conversionActions/7703438397",
+      "status": "ENABLED",
+      "type": "UPLOAD_CLICKS",
+      "category": "QUALIFIED_LEAD",
+      "id": "7703438397",
+      "name": "Omega Qualified Lead (Upload)",
+      "ownerCustomer": "customers/2853981364",
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/2853981364/conversionActions/7703584468",
+      "status": "ENABLED",
+      "type": "UPLOAD_CLICKS",
+      "category": "CONVERTED_LEAD",
+      "id": "7703584468",
+      "name": "Omega Won Contract (Upload)",
+      "ownerCustomer": "customers/2853981364",
+      "primaryForGoal": true
+    }
+  }
+]

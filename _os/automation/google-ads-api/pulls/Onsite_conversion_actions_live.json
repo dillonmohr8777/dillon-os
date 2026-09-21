@@ -1,0 +1,197 @@
+[
+  {
+    "conversionAction": {
+      "resourceName": "customers/1033715894/conversionActions/7040507252",
+      "status": "ENABLED",
+      "type": "SMART_CAMPAIGN_MAP_CLICKS_TO_CALL",
+      "category": "CONTACT",
+      "countingType": "MANY_PER_CLICK",
+      "id": "7040507252",
+      "name": "Smart campaign map clicks to call",
+      "includeInConversionsMetric": false,
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/1033715894/conversionActions/7040507273",
+      "status": "ENABLED",
+      "type": "SMART_CAMPAIGN_AD_CLICKS_TO_CALL",
+      "category": "CONTACT",
+      "countingType": "MANY_PER_CLICK",
+      "id": "7040507273",
+      "name": "Smart campaign ad clicks to call",
+      "includeInConversionsMetric": true,
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/1033715894/conversionActions/7040703274",
+      "status": "ENABLED",
+      "type": "GOOGLE_ANALYTICS_4_CUSTOM",
+      "category": "SUBMIT_LEAD_FORM",
+      "countingType": "MANY_PER_CLICK",
+      "id": "7040703274",
+      "name": "Form",
+      "includeInConversionsMetric": true,
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/1033715894/conversionActions/7040727804",
+      "status": "HIDDEN",
+      "type": "GOOGLE_ANALYTICS_4_PURCHASE",
+      "category": "PURCHASE",
+      "countingType": "MANY_PER_CLICK",
+      "id": "7040727804",
+      "name": "onsiteconcretelandscape.com (web) purchase",
+      "includeInConversionsMetric": false,
+      "primaryForGoal": false
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/1033715894/conversionActions/7040760628",
+      "status": "ENABLED",
+      "type": "GOOGLE_HOSTED",
+      "category": "GET_DIRECTIONS",
+      "countingType": "MANY_PER_CLICK",
+      "id": "7040760628",
+      "name": "Local actions - Directions",
+      "includeInConversionsMetric": false,
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/1033715894/conversionActions/7040760871",
+      "status": "ENABLED",
+      "type": "SMART_CAMPAIGN_MAP_DIRECTIONS",
+      "category": "GET_DIRECTIONS",
+      "countingType": "MANY_PER_CLICK",
+      "id": "7040760871",
+      "name": "Smart campaign map directions",
+      "includeInConversionsMetric": false,
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/1033715894/conversionActions/7040783892",
+      "status": "ENABLED",
+      "type": "GOOGLE_HOSTED",
+      "category": "CONTACT",
+      "countingType": "MANY_PER_CLICK",
+      "id": "7040783892",
+      "name": "Clicks to call",
+      "includeInConversionsMetric": false,
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/1033715894/conversionActions/7040785125",
+      "status": "ENABLED",
+      "type": "SMART_CAMPAIGN_TRACKED_CALLS",
+      "category": "PHONE_CALL_LEAD",
+      "countingType": "ONE_PER_CLICK",
+      "id": "7040785125",
+      "name": "Calls from Smart Campaign Ads",
+      "includeInConversionsMetric": true,
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/1033715894/conversionActions/7045037269",
+      "status": "ENABLED",
+      "type": "WEBPAGE",
+      "category": "CONTACT",
+      "countingType": "ONE_PER_CLICK",
+      "id": "7045037269",
+      "name": "Web Contact Form",
+      "includeInConversionsMetric": true,
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/1033715894/conversionActions/7045037272",
+      "status": "ENABLED",
+      "type": "WEBPAGE",
+      "category": "CONTACT",
+      "countingType": "ONE_PER_CLICK",
+      "id": "7045037272",
+      "name": "Web Phone Calls",
+      "includeInConversionsMetric": true,
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/1033715894/conversionActions/7104646974",
+      "status": "ENABLED",
+      "type": "WEBPAGE",
+      "category": "SUBMIT_LEAD_FORM",
+      "countingType": "ONE_PER_CLICK",
+      "id": "7104646974",
+      "name": "Submit lead form",
+      "includeInConversionsMetric": true,
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/1033715894/conversionActions/7584759323",
+      "status": "ENABLED",
+      "type": "WEBPAGE",
+      "category": "SUBMIT_LEAD_FORM",
+      "countingType": "ONE_PER_CLICK",
+      "id": "7584759323",
+      "name": "OnSite \u2014 Form Submission",
+      "includeInConversionsMetric": true,
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/1033715894/conversionActions/7584766715",
+      "status": "ENABLED",
+      "type": "AD_CALL",
+      "category": "PHONE_CALL_LEAD",
+      "countingType": "ONE_PER_CLICK",
+      "id": "7584766715",
+      "name": "OnSite \u2014 Phone Call from Ads",
+      "includeInConversionsMetric": true,
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/1033715894/conversionActions/7585080922",
+      "status": "ENABLED",
+      "type": "CLICK_TO_CALL",
+      "category": "PHONE_CALL_LEAD",
+      "countingType": "ONE_PER_CLICK",
+      "id": "7585080922",
+      "name": "OnSite \u2014 Phone Click from Website",
+      "includeInConversionsMetric": true,
+      "primaryForGoal": true
+    }
+  },
+  {
+    "conversionAction": {
+      "resourceName": "customers/1033715894/conversionActions/7587878574",
+      "status": "ENABLED",
+      "type": "WEBPAGE",
+      "category": "CONTACT",
+      "countingType": "ONE_PER_CLICK",
+      "id": "7587878574",
+      "name": "Phone Call Click",
+      "includeInConversionsMetric": true,
+      "primaryForGoal": true
+    }
+  }
+]

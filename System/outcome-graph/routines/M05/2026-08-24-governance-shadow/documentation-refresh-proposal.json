@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "routine_id": "M05",
+  "generated_at": "2026-08-25T00:36:59.945Z",
+  "source_set_sha256": "a3c86d4d760e9e2e952b65eacafa75aed1aabf3b9fff94e40840d045d92e2fa5",
+  "state": "proposal_only",
+  "proposals": [
+    {
+      "schema_version": 1,
+      "routine_id": "M05",
+      "id": "M05:synthetic-review-production-boundary",
+      "isolation_key": "global-design-governance:review-authority",
+      "observed_at": "2026-08-25T00:36:59.945Z",
+      "source_set_sha256": "a3c86d4d760e9e2e952b65eacafa75aed1aabf3b9fff94e40840d045d92e2fa5",
+      "authority_layer": "global design workflow plus surface receipt",
+      "current_state": "aligned_nonproduction_hold",
+      "conflict": null,
+      "evidence": {
+        "graph_ready": true,
+        "production_ready": false,
+        "review_type": "synthetic_canary"
+      },
+      "proposal": "Document that synthetic review proves loop plumbing only; production-intent surfaces require an independent agent or human reviewer.",
+      "effective_date": "2026-08-25",
+      "generated_sidecar_change_required": false,
+      "canonical_overwrite_attempted": false,
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "permission_change_attempted": false,
+        "deletion_attempted": false,
+        "schedule_change_attempted": false,
+        "billing_change_attempted": false,
+        "record_move_attempted": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "M05",
+      "id": "M05:windows-design-preflight-regression",
+      "isolation_key": "global-tool:impeccable-preflight:windows",
+      "observed_at": "2026-08-25T00:36:59.945Z",
+      "source_set_sha256": "a3c86d4d760e9e2e952b65eacafa75aed1aabf3b9fff94e40840d045d92e2fa5",
+      "authority_layer": "global Codex design workflow and user tool",
+      "current_state": "repaired_needs_regression_contract",
+      "conflict": null,
+      "evidence": {
+        "passed": true,
+        "repairs": [
+          "Renamed the case-insensitive isWindows variable so it no longer collides with PowerShell's read-only IsWindows automatic variable.",
+          "Recognize YAML status: seed in addition to the legacy HTML seed marker."
+        ]
+      },
+      "proposal": "Add a regression check for the PowerShell IsWindows collision and YAML seed recognition to the supported preflight tool tests.",
+      "effective_date": "2026-08-25",
+      "generated_sidecar_change_required": false,
+      "canonical_overwrite_attempted": false,
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "permission_change_attempted": false,
+        "deletion_attempted": false,
+        "schedule_change_attempted": false,
+        "billing_change_attempted": false,
+        "record_move_attempted": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "M05",
+      "id": "M05:prospect-radar-seed-state",
+      "isolation_key": "project:prospect-radar:design-seed",
+      "observed_at": "2026-08-25T00:36:59.945Z",
+      "source_set_sha256": "a3c86d4d760e9e2e952b65eacafa75aed1aabf3b9fff94e40840d045d92e2fa5",
+      "authority_layer": "project DESIGN.md plus Impeccable preflight",
+      "current_state": "aligned_with_hold",
+      "conflict": null,
+      "evidence": {
+        "design_is_seed": true,
+        "gate": "no-ui-implementation"
+      },
+      "proposal": "Keep DESIGN.md marked seed and do not generate a mature sidecar until a real visual implementation exists.",
+      "effective_date": "2026-08-25",
+      "generated_sidecar_change_required": false,
+      "canonical_overwrite_attempted": false,
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "permission_change_attempted": false,
+        "deletion_attempted": false,
+        "schedule_change_attempted": false,
+        "billing_change_attempted": false,
+        "record_move_attempted": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "M05",
+      "id": "M05:missing-visual-direction-output",
+      "isolation_key": "project:prospect-radar:visual-authority-output",
+      "observed_at": "2026-08-25T00:36:59.945Z",
+      "source_set_sha256": "a3c86d4d760e9e2e952b65eacafa75aed1aabf3b9fff94e40840d045d92e2fa5",
+      "authority_layer": "project VISUALIZE-RECEIPT.md and .impeccable/mocks",
+      "current_state": "stale_receipt_missing_output",
+      "conflict": "The receipt names a hashed direction image that is not present at its declared project path.",
+      "evidence": {
+        "output_present": false
+      },
+      "proposal": "Regenerate the direction image through the supported visualize flow or mark the receipt superseded; never treat the missing file as inspected authority.",
+      "effective_date": "2026-08-25",
+      "generated_sidecar_change_required": false,
+      "canonical_overwrite_attempted": false,
+      "authority": {
+        "read_only": true,
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "canonical_write_attempted": false,
+        "provider_mutation_attempted": false,
+        "permission_change_attempted": false,
+        "deletion_attempted": false,
+        "schedule_change_attempted": false,
+        "billing_change_attempted": false,
+        "record_move_attempted": false
+      }
+    }
+  ],
+  "applied_updates": 0,
+  "authority": {
+    "read_only": true,
+    "proposal_only": true,
+    "external_action_attempted": false,
+    "canonical_write_attempted": false,
+    "provider_mutation_attempted": false,
+    "permission_change_attempted": false,
+    "deletion_attempted": false,
+    "schedule_change_attempted": false,
+    "billing_change_attempted": false,
+    "record_move_attempted": false
+  }
+}

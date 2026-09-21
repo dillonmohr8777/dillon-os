@@ -1,0 +1,48 @@
+name: Sync Momentum Console
+
+# Keeps the D1 mirror behind momentum-console.workers.dev current.
+#
+# SECURITY, read before changing the ref or adding a schedule back.
+# This workflow definition lives on main, but the code it runs comes from
+# elsewhere in the repo. That combination plus repo secrets is poisoned
+# pipeline execution: whoever can write the checked out ref can rewrite
+# sync-cloud-console.js and have it run with CLOUDFLARE_API_TOKEN in env.
+#
+# So, until PR 406 lands on main:
+#   - no schedule trigger. Nothing unattended runs unreviewed code.
+#   - workflow_dispatch only, so a human with write access chooses each run.
+#   - ref is pinned to a reviewed commit, never a moving branch name.
+#
+# When 406 merges: set ref to main, drop the pin, then a schedule is safe
+# to add back because main is the reviewed branch.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: sync-momentum-console
+  cancel-in-progress: true
+
+jobs:
+  sync:
+    name: Push registry and runs to D1
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out pinned commit
+        uses: actions/checkout@v6
+        with:
+          ref: 89d14716b24aca8cecef6b646b4c5e39fa87bd86
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Sync to D1
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: node _os/automation/bin/sync-cloud-console.js

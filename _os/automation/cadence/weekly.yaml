@@ -1,0 +1,69 @@
+version: 1
+cadence: weekly
+
+# Runs Monday early, before the existing Codex weekly-client-marketing-reports
+# automation fires at 10:00 - so its findings are available when reports build.
+
+jobs:
+  # ------------------------------------------------------------ Omega, the money
+  # 2026-09-09 audit found competitor-brand terms taking 6 of 17 conversions and
+  # three terms burning $1,113 at $39-54/click for zero. 21 of 22 pages remain
+  # unread because nobody can hold that much in one sitting. This is the job.
+  - id: omega-search-terms
+    title: Omega search terms - the unread pages
+    enabled: true
+    client: omega-landscaping
+    outputs: clients/omega-landscaping/deliverables
+    accept: |
+      A dated markdown findings file naming every term reviewed this run, the
+      spend and conversions against each, and a clear competitor/supplier/generic
+      classification. Page position must be recorded so the next run resumes.
+    prompt: |
+      Read the most recent findings file in the outputs dir to find where the
+      last run stopped. If none, start at page 1.
+
+      Pull Omega Landscaping search-terms data for account 285-398-1364 using the
+      local Google Ads probe at %LOCALAPPDATA%/Dillon/GoogleAdsProbe/. Query the
+      account DIRECT - the manager route returns USER_PERMISSION_DENIED. Never
+      query 7214914099.
+
+      Work through the NEXT 5 pages only. Five, not all of them - a run that tries
+      to do 21 pages will produce nothing, which is how they came to be unread.
+
+      For each term record: clicks, cost, conversions, and a classification of
+      competitor brand / supplier / generic / on-intent. Flag any term with spend
+      and zero conversions, and any term that is another business's name.
+
+      Write "<date> - search terms pages N-M.md" and state plainly which page the
+      next run resumes at.
+
+      Negatives are NOT applied here. Append proposed negatives to
+      System/approval-queue.md with the exact terms, spend and click counts.
+      Campaign changes are gated - launch-authority.json is still status:draft,
+      approvedBy:null.
+
+  # ------------------------------------------------- the report backlog machine
+  # weekly-client-marketing-reports (ACTIVE, Mondays 10:00) generates a fresh
+  # draft batch every week. finish-twelve-weekly-report-sends (PAUSED) is its
+  # send half. That asymmetry manufactures the ~29-report backlog.
+  - id: report-pairing-check
+    title: Generated versus actually sent
+    enabled: true
+    outputs: 12_Brain/07_Reviews/Cadence
+    accept: |
+      A dated markdown file with a per-client table: last report generated, last
+      report actually sent, and the gap in days.
+    prompt: |
+      For each active client in
+      C:/Users/dillo/Documents/Codex/projects/client-operations/registry/clients.json,
+      find the most recent generated report under that client's deliverables/,
+      and the most recent evidence of one actually being SENT (a delivery receipt,
+      a recorded Gmail message id, a DELIVERY-STATUS marked SENT).
+
+      Write "<date> - report pairing.md" as a table: client, last generated, last
+      sent, gap in days. Sort by gap descending.
+
+      Call out explicitly any client where the gap exceeds 21 days. As of
+      2026-09-14 the worst was Omega at 34 days - last actual send August 11.
+
+      Do not send anything. Do not resume the paused sender. Both are gated.

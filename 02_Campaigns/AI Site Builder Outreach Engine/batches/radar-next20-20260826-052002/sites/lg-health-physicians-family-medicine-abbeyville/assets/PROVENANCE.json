@@ -1,0 +1,252 @@
+{
+  "slug": "lg-health-physicians-family-medicine-abbeyville",
+  "preparedAt": "2026-08-26T10:42:04.411Z",
+  "sourceSite": "https://www.lancastergeneralhealth.org/LGH/Locations/LG-Health-Physicians/Family-Medicine/Abbeyville-Family-Medicine.aspx",
+  "sourceFinalUrl": "https://www.lancastergeneralhealth.org/LGH/Locations/LG-Health-Physicians/Family-Medicine/Abbeyville-Family-Medicine.aspx",
+  "sourcePageSha256": "ac72e9e89f8805d98cc3e21b01d340e25d0381f2ae142c8a11f66e4e23e8fe5b",
+  "exactLogoRequired": false,
+  "exactLogoSha256": "631381d20b2739f9948edb07c13438ed971efe4caf6000538fac8cf76e0e2867",
+  "identityFallback": true,
+  "generatedImagePolicy": "All content visuals come from an Align HCM Image Gen editorial board, carry embedded plus interface-level grain, and are disclosed as illustrative concept material. They never serve as proof about the business, its staff, facilities, products, clients, or outcomes.",
+  "assets": [
+    {
+      "role": "verified exact-name identity fallback",
+      "output": "logo.svg",
+      "sourceUrl": "https://www.lancastergeneralhealth.org/LGH/Locations/LG-Health-Physicians/Family-Medicine/Abbeyville-Family-Medicine.aspx",
+      "sourceSha256": "631381d20b2739f9948edb07c13438ed971efe4caf6000538fac8cf76e0e2867",
+      "outputSha256": "631381d20b2739f9948edb07c13438ed971efe4caf6000538fac8cf76e0e2867",
+      "transformation": "Disclosed exact-name typographic fallback; no icon, symbol, or first-party logo imitation.",
+      "transparent": true
+    },
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "lg-health-physicians-family-medicine-abbeyville",
+      "boardDescriptor": "clinic",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/lg-health-physicians-family-medicine-abbeyville.png",
+      "sourceSha256": "2c0b880258d26d979fbb4f702b28d03664b69a9a3b7fe82ddafc7938a1d99364",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for LG Health Physicians Family Medicine Abbeyville. Four distinct but cohesive unlabelled panels in a generic credible family medicine clinic: a physician and adult patient speaking in a calm exam room from non-identifying angles; a nurse preparing routine diagnostic tools on a clean tray; a clinician reviewing a neutral wellness chart on a tablet with no readable data; a warmly lit reception-side consultation with an adult and clinician, no signage or identifiers. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:56,eq=saturation=0.940:contrast=1.010:brightness=-0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "0fe78c666ce428320377aa20753af14046d9258d3cf6793f33565ebd33871188",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "lg-health-physicians-family-medicine-abbeyville",
+      "boardDescriptor": "clinic",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/lg-health-physicians-family-medicine-abbeyville.png",
+      "sourceSha256": "2c0b880258d26d979fbb4f702b28d03664b69a9a3b7fe82ddafc7938a1d99364",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for LG Health Physicians Family Medicine Abbeyville. Four distinct but cohesive unlabelled panels in a generic credible family medicine clinic: a physician and adult patient speaking in a calm exam room from non-identifying angles; a nurse preparing routine diagnostic tools on a clean tray; a clinician reviewing a neutral wellness chart on a tablet with no readable data; a warmly lit reception-side consultation with an adult and clinician, no signage or identifiers. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=0.965:contrast=1.064:brightness=0.000,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "be34df052551202232add1efdc911691fa1673617437cc608055566fe005eebe",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "lg-health-physicians-family-medicine-abbeyville",
+      "boardDescriptor": "clinic",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/lg-health-physicians-family-medicine-abbeyville.png",
+      "sourceSha256": "2c0b880258d26d979fbb4f702b28d03664b69a9a3b7fe82ddafc7938a1d99364",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for LG Health Physicians Family Medicine Abbeyville. Four distinct but cohesive unlabelled panels in a generic credible family medicine clinic: a physician and adult patient speaking in a calm exam room from non-identifying angles; a nurse preparing routine diagnostic tools on a clean tray; a clinician reviewing a neutral wellness chart on a tablet with no readable data; a warmly lit reception-side consultation with an adult and clinician, no signage or identifiers. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:28,eq=saturation=0.990:contrast=1.028:brightness=0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "8517ad716468cde33dae5a7a24af667bd61da2089ab46aca3d1e5265e4be4d36",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "lg-health-physicians-family-medicine-abbeyville",
+      "boardDescriptor": "clinic",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/lg-health-physicians-family-medicine-abbeyville.png",
+      "sourceSha256": "2c0b880258d26d979fbb4f702b28d03664b69a9a3b7fe82ddafc7938a1d99364",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for LG Health Physicians Family Medicine Abbeyville. Four distinct but cohesive unlabelled panels in a generic credible family medicine clinic: a physician and adult patient speaking in a calm exam room from non-identifying angles; a nurse preparing routine diagnostic tools on a clean tray; a clinician reviewing a neutral wellness chart on a tablet with no readable data; a warmly lit reception-side consultation with an adult and clinician, no signage or identifiers. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:56,eq=saturation=1.015:contrast=1.082:brightness=-0.018,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "b4e9daab94ac83a0906ca2043080bd179373e940ee9af3da0f184c549812bc79",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "lg-health-physicians-family-medicine-abbeyville",
+      "boardDescriptor": "clinic",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/lg-health-physicians-family-medicine-abbeyville.png",
+      "sourceSha256": "2c0b880258d26d979fbb4f702b28d03664b69a9a3b7fe82ddafc7938a1d99364",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for LG Health Physicians Family Medicine Abbeyville. Four distinct but cohesive unlabelled panels in a generic credible family medicine clinic: a physician and adult patient speaking in a calm exam room from non-identifying angles; a nurse preparing routine diagnostic tools on a clean tray; a clinician reviewing a neutral wellness chart on a tablet with no readable data; a warmly lit reception-side consultation with an adult and clinician, no signage or identifiers. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:0,eq=saturation=1.040:contrast=1.046:brightness=-0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "f37830772451e9ab8566de5cadc0431b5dfc144c3aef1e3bdd6ac463e9224366",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "lg-health-physicians-family-medicine-abbeyville",
+      "boardDescriptor": "clinic",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/lg-health-physicians-family-medicine-abbeyville.png",
+      "sourceSha256": "2c0b880258d26d979fbb4f702b28d03664b69a9a3b7fe82ddafc7938a1d99364",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for LG Health Physicians Family Medicine Abbeyville. Four distinct but cohesive unlabelled panels in a generic credible family medicine clinic: a physician and adult patient speaking in a calm exam room from non-identifying angles; a nurse preparing routine diagnostic tools on a clean tray; a clinician reviewing a neutral wellness chart on a tablet with no readable data; a warmly lit reception-side consultation with an adult and clinician, no signage or identifiers. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:28,eq=saturation=0.940:contrast=1.010:brightness=0.000,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "836a0d50e426d4364a33ee4af5588ff70bf01faefb0432fc1a1abfae48335ddb",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "lg-health-physicians-family-medicine-abbeyville",
+      "boardDescriptor": "clinic",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/lg-health-physicians-family-medicine-abbeyville.png",
+      "sourceSha256": "2c0b880258d26d979fbb4f702b28d03664b69a9a3b7fe82ddafc7938a1d99364",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for LG Health Physicians Family Medicine Abbeyville. Four distinct but cohesive unlabelled panels in a generic credible family medicine clinic: a physician and adult patient speaking in a calm exam room from non-identifying angles; a nurse preparing routine diagnostic tools on a clean tray; a clinician reviewing a neutral wellness chart on a tablet with no readable data; a warmly lit reception-side consultation with an adult and clinician, no signage or identifiers. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:56,eq=saturation=0.965:contrast=1.064:brightness=0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "f0906706ee3e048458bf4f48b78ccf044c02b6d77265fdb6395372fe6241a91e",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "lg-health-physicians-family-medicine-abbeyville",
+      "boardDescriptor": "clinic",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/lg-health-physicians-family-medicine-abbeyville.png",
+      "sourceSha256": "2c0b880258d26d979fbb4f702b28d03664b69a9a3b7fe82ddafc7938a1d99364",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for LG Health Physicians Family Medicine Abbeyville. Four distinct but cohesive unlabelled panels in a generic credible family medicine clinic: a physician and adult patient speaking in a calm exam room from non-identifying angles; a nurse preparing routine diagnostic tools on a clean tray; a clinician reviewing a neutral wellness chart on a tablet with no readable data; a warmly lit reception-side consultation with an adult and clinician, no signage or identifiers. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:0,eq=saturation=0.990:contrast=1.028:brightness=-0.018,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "97009b625a50dd5c1b8b067e71e505a2ef19c9a4054821cfeb7f58638d686698",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "lg-health-physicians-family-medicine-abbeyville",
+      "boardDescriptor": "clinic",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/lg-health-physicians-family-medicine-abbeyville.png",
+      "sourceSha256": "2c0b880258d26d979fbb4f702b28d03664b69a9a3b7fe82ddafc7938a1d99364",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for LG Health Physicians Family Medicine Abbeyville. Four distinct but cohesive unlabelled panels in a generic credible family medicine clinic: a physician and adult patient speaking in a calm exam room from non-identifying angles; a nurse preparing routine diagnostic tools on a clean tray; a clinician reviewing a neutral wellness chart on a tablet with no readable data; a warmly lit reception-side consultation with an adult and clinician, no signage or identifiers. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:28,eq=saturation=1.015:contrast=1.082:brightness=-0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "c2994b358fd716b569089b194e32a47d94a18794b2fd3ca93047f96c60d12b73",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "lg-health-physicians-family-medicine-abbeyville",
+      "boardDescriptor": "clinic",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/lg-health-physicians-family-medicine-abbeyville.png",
+      "sourceSha256": "2c0b880258d26d979fbb4f702b28d03664b69a9a3b7fe82ddafc7938a1d99364",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for LG Health Physicians Family Medicine Abbeyville. Four distinct but cohesive unlabelled panels in a generic credible family medicine clinic: a physician and adult patient speaking in a calm exam room from non-identifying angles; a nurse preparing routine diagnostic tools on a clean tray; a clinician reviewing a neutral wellness chart on a tablet with no readable data; a warmly lit reception-side consultation with an adult and clinician, no signage or identifiers. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:56,eq=saturation=1.040:contrast=1.046:brightness=0.000,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "235aab8127a47315cfb035aabd2aeaccef40721c8f91a50bf5de4ac75fa9d5a1",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "lg-health-physicians-family-medicine-abbeyville",
+      "boardDescriptor": "clinic",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/lg-health-physicians-family-medicine-abbeyville.png",
+      "sourceSha256": "2c0b880258d26d979fbb4f702b28d03664b69a9a3b7fe82ddafc7938a1d99364",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for LG Health Physicians Family Medicine Abbeyville. Four distinct but cohesive unlabelled panels in a generic credible family medicine clinic: a physician and adult patient speaking in a calm exam room from non-identifying angles; a nurse preparing routine diagnostic tools on a clean tray; a clinician reviewing a neutral wellness chart on a tablet with no readable data; a warmly lit reception-side consultation with an adult and clinician, no signage or identifiers. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:0,eq=saturation=0.940:contrast=1.010:brightness=0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "912f26a7ecc7be3622dd84d4513d18a26e2a7d3c4af98ffc4f957ef6f7880c94",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "lg-health-physicians-family-medicine-abbeyville",
+      "boardDescriptor": "clinic",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/lg-health-physicians-family-medicine-abbeyville.png",
+      "sourceSha256": "2c0b880258d26d979fbb4f702b28d03664b69a9a3b7fe82ddafc7938a1d99364",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for LG Health Physicians Family Medicine Abbeyville. Four distinct but cohesive unlabelled panels in a generic credible family medicine clinic: a physician and adult patient speaking in a calm exam room from non-identifying angles; a nurse preparing routine diagnostic tools on a clean tray; a clinician reviewing a neutral wellness chart on a tablet with no readable data; a warmly lit reception-side consultation with an adult and clinician, no signage or identifiers. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:28,eq=saturation=0.965:contrast=1.064:brightness=-0.018,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "5f21abff3238a4a7f6ecd8b164bd8f57e1a4012d2fbaede0b16540d8e1c7a03e",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    }
+  ],
+  "fonts": {
+    "pair": {
+      "id": "plus-jakarta-dm-sans",
+      "display": "Plus Jakarta Sans",
+      "text": "DM Sans"
+    },
+    "source": "Google Fonts CSS API",
+    "files": [
+      {
+        "file": "font-display-400.woff2",
+        "sha256": "153fc85b70298beeb1d61a5f723331649e7f23bb77302a66e61cb3e2fbdb5e79"
+      },
+      {
+        "file": "font-display-800.woff2",
+        "sha256": "153fc85b70298beeb1d61a5f723331649e7f23bb77302a66e61cb3e2fbdb5e79"
+      },
+      {
+        "file": "font-text-400.woff2",
+        "sha256": "9fea608a947e67020c33cad9a6fe3d60c54119dfb8cff87768a8117a15ed7543"
+      },
+      {
+        "file": "font-text-700.woff2",
+        "sha256": "9fea608a947e67020c33cad9a6fe3d60c54119dfb8cff87768a8117a15ed7543"
+      }
+    ]
+  }
+}

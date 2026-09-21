@@ -1,0 +1,218 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-25T00:09:38.525Z",
+  "source_set_sha256": "64db51d408423660fa02b50ba1ae771b206dfd53d10241504dfb90c568377ea2",
+  "surfaces": [
+    {
+      "surface_id": "closed-loop-canary",
+      "attempts": [
+        {
+          "attempt": 1,
+          "passed": false,
+          "findings": [
+            {
+              "id": "gate-responsive-failed",
+              "gate_id": "responsive",
+              "severity": "major",
+              "summary": "responsive requires the recorded repair.",
+              "repair_instruction": "responsive requires the recorded repair.",
+              "regression_test": "Re-run the affected gate.",
+              "learning_target": "qa_rule",
+              "state": "resolved_by_later_attempt"
+            },
+            {
+              "id": "gate-interaction-failed",
+              "gate_id": "interaction",
+              "severity": "major",
+              "summary": "interaction requires the recorded repair.",
+              "repair_instruction": "interaction requires the recorded repair.",
+              "regression_test": "Re-run the affected gate.",
+              "learning_target": "qa_rule",
+              "state": "resolved_by_later_attempt"
+            },
+            {
+              "id": "gate-accessibility-failed",
+              "gate_id": "accessibility",
+              "severity": "major",
+              "summary": "accessibility requires the recorded repair.",
+              "repair_instruction": "accessibility requires the recorded repair.",
+              "regression_test": "Re-run the affected gate.",
+              "learning_target": "qa_rule",
+              "state": "resolved_by_later_attempt"
+            },
+            {
+              "id": "gate-design-system-failed",
+              "gate_id": "design-system",
+              "severity": "major",
+              "summary": "design-system requires the recorded repair.",
+              "repair_instruction": "design-system requires the recorded repair.",
+              "regression_test": "Re-run the affected gate.",
+              "learning_target": "qa_rule",
+              "state": "resolved_by_later_attempt"
+            },
+            {
+              "id": "gate-independent-craft-failed",
+              "gate_id": "independent-craft",
+              "severity": "major",
+              "summary": "independent-craft requires the recorded repair.",
+              "repair_instruction": "independent-craft requires the recorded repair.",
+              "regression_test": "Re-run the affected gate.",
+              "learning_target": "qa_rule",
+              "state": "resolved_by_later_attempt"
+            },
+            {
+              "id": "craft-brand-specificity-below-floor",
+              "gate_id": "independent-craft",
+              "severity": "major",
+              "summary": "brand_specificity must score at least 4 of 5.",
+              "repair_instruction": "brand_specificity must score at least 4 of 5.",
+              "regression_test": "Re-run the affected gate.",
+              "learning_target": "qa_rule",
+              "state": "resolved_by_later_attempt"
+            },
+            {
+              "id": "craft-visual-hierarchy-below-floor",
+              "gate_id": "independent-craft",
+              "severity": "major",
+              "summary": "visual_hierarchy must score at least 4 of 5.",
+              "repair_instruction": "visual_hierarchy must score at least 4 of 5.",
+              "regression_test": "Re-run the affected gate.",
+              "learning_target": "qa_rule",
+              "state": "resolved_by_later_attempt"
+            },
+            {
+              "id": "craft-composition-rhythm-below-floor",
+              "gate_id": "independent-craft",
+              "severity": "major",
+              "summary": "composition_rhythm must score at least 4 of 5.",
+              "repair_instruction": "composition_rhythm must score at least 4 of 5.",
+              "regression_test": "Re-run the affected gate.",
+              "learning_target": "qa_rule",
+              "state": "resolved_by_later_attempt"
+            },
+            {
+              "id": "craft-typography-below-floor",
+              "gate_id": "independent-craft",
+              "severity": "major",
+              "summary": "typography must score at least 4 of 5.",
+              "repair_instruction": "typography must score at least 4 of 5.",
+              "regression_test": "Re-run the affected gate.",
+              "learning_target": "qa_rule",
+              "state": "resolved_by_later_attempt"
+            },
+            {
+              "id": "craft-imagery-below-floor",
+              "gate_id": "independent-craft",
+              "severity": "major",
+              "summary": "imagery must score at least 4 of 5.",
+              "repair_instruction": "imagery must score at least 4 of 5.",
+              "regression_test": "Re-run the affected gate.",
+              "learning_target": "qa_rule",
+              "state": "resolved_by_later_attempt"
+            },
+            {
+              "id": "craft-interaction-motion-below-floor",
+              "gate_id": "independent-craft",
+              "severity": "major",
+              "summary": "interaction_motion must score at least 4 of 5.",
+              "repair_instruction": "interaction_motion must score at least 4 of 5.",
+              "regression_test": "Re-run the affected gate.",
+              "learning_target": "qa_rule",
+              "state": "resolved_by_later_attempt"
+            },
+            {
+              "id": "craft-responsive-integrity-below-floor",
+              "gate_id": "independent-craft",
+              "severity": "major",
+              "summary": "responsive_integrity must score at least 4 of 5.",
+              "repair_instruction": "responsive_integrity must score at least 4 of 5.",
+              "regression_test": "Re-run the affected gate.",
+              "learning_target": "qa_rule",
+              "state": "resolved_by_later_attempt"
+            },
+            {
+              "id": "craft-content-clarity-below-floor",
+              "gate_id": "independent-craft",
+              "severity": "major",
+              "summary": "content_clarity must score at least 4 of 5.",
+              "repair_instruction": "content_clarity must score at least 4 of 5.",
+              "regression_test": "Re-run the affected gate.",
+              "learning_target": "qa_rule",
+              "state": "resolved_by_later_attempt"
+            },
+            {
+              "id": "craft-verdict-below-floor",
+              "gate_id": "independent-craft",
+              "severity": "major",
+              "summary": "Independent craft review must pass with a 4.2 average and a written rationale.",
+              "repair_instruction": "Independent craft review must pass with a 4.2 average and a written rationale.",
+              "regression_test": "Re-run the affected gate.",
+              "learning_target": "qa_rule",
+              "state": "resolved_by_later_attempt"
+            },
+            {
+              "id": "composition-generic-and-flat",
+              "gate_id": "independent-craft",
+              "severity": "major",
+              "summary": "The draft uses interchangeable translucent cards and gives every message equal weight.",
+              "repair_instruction": "Commit to the editorial signal-path thesis with one dominant headline, flat fields, and a visible loop sequence.",
+              "regression_test": "Re-run independent-craft on desktop and mobile after the repair.",
+              "learning_target": "brief",
+              "state": "resolved_by_later_attempt"
+            },
+            {
+              "id": "mobile-horizontal-overflow",
+              "gate_id": "responsive",
+              "severity": "major",
+              "summary": "The fixed-width composition exceeds the mobile viewport.",
+              "repair_instruction": "Replace fixed canvas widths with bounded fluid grids and verify 390 pixels without horizontal overflow.",
+              "regression_test": "Re-run responsive on desktop and mobile after the repair.",
+              "learning_target": "component",
+              "state": "resolved_by_later_attempt"
+            },
+            {
+              "id": "primary-action-below-touch-floor",
+              "gate_id": "accessibility",
+              "severity": "major",
+              "summary": "The primary action is shorter than the 44 pixel touch floor.",
+              "repair_instruction": "Give the primary action at least 48 pixels of usable height and preserve it on mobile.",
+              "regression_test": "Re-run accessibility on desktop and mobile after the repair.",
+              "learning_target": "token",
+              "state": "resolved_by_later_attempt"
+            },
+            {
+              "id": "keyboard-focus-not-visible",
+              "gate_id": "interaction",
+              "severity": "major",
+              "summary": "Keyboard focus has no visible authored state.",
+              "repair_instruction": "Add a high-contrast focus-visible treatment that does not depend on hover.",
+              "regression_test": "Re-run interaction on desktop and mobile after the repair.",
+              "learning_target": "component",
+              "state": "resolved_by_later_attempt"
+            },
+            {
+              "id": "reduced-motion-fallback-missing",
+              "gate_id": "interaction",
+              "severity": "major",
+              "summary": "Decorative animation continues for reduced-motion users.",
+              "repair_instruction": "Resolve animated elements to their final state inside prefers-reduced-motion.",
+              "regression_test": "Re-run interaction on desktop and mobile after the repair.",
+              "learning_target": "motion",
+              "state": "resolved_by_later_attempt"
+            }
+          ]
+        },
+        {
+          "attempt": 2,
+          "passed": true,
+          "findings": []
+        }
+      ]
+    }
+  ],
+  "open_defects": 0,
+  "authority": {
+    "external_action_attempted": false,
+    "canonical_write_attempted": false
+  }
+}

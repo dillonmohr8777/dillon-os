@@ -1,0 +1,48 @@
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'out\NeedMomentumAILaunch30-review.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf62.12.102
+    comment         : Made with Remotion 4.0.523
+  Duration: 00:00:30.00, start: 0.000000, bitrate: 2423 kb/s
+  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709/unknown/unknown, progressive), 1920x1080 [SAR 1:1 DAR 16:9], 2224 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      encoder         : Lavc62.28.102 libx264
+    Side data:
+      ICC Profile: (456 bytes)
+  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 189 kb/s (default)
+    Metadata:
+      handler_name    : SoundHandler
+Stream mapping:
+  Stream #0:1 -> #0:0 (aac (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, null, to 'pipe:':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    comment         : Made with Remotion 4.0.523
+    encoder         : Lavf62.12.102
+  Stream #0:0(und): Audio: pcm_s16le, 192000 Hz, stereo, s16, 6144 kb/s (default)
+    Metadata:
+      encoder         : Lavc62.28.102 pcm_s16le
+      handler_name    : SoundHandler
+size=N/A time=00:00:11.40 bitrate=N/A speed=21.9x elapsed=0:00:00.51    
+size=N/A time=00:00:23.20 bitrate=N/A speed=22.7x elapsed=0:00:01.02    
+[Parsed_loudnorm_0 @ 000002960a89d700] 
+{
+	"input_i" : "-25.59",
+	"input_tp" : "-8.39",
+	"input_lra" : "7.10",
+	"input_thresh" : "-36.76",
+	"output_i" : "-24.00",
+	"output_tp" : "-6.61",
+	"output_lra" : "3.90",
+	"output_thresh" : "-34.98",
+	"normalization_type" : "dynamic",
+	"target_offset" : "-0.00"
+}
+[out#0/null @ 0000029608a02b40] video:0KiB audio:22512KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
+size=N/A time=00:00:30.10 bitrate=N/A speed=23.8x elapsed=0:00:01.26    

@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "routine_id": "E11",
+  "generated_at": "2026-08-25T00:37:00.889Z",
+  "source_set_sha256": "72a5c74d2a761527a36ea78fcab22e4c52cf832cb6cf95016cf15687dd9393b1",
+  "state": "proposal_only",
+  "proposed_routine_id": "WEB-DESIGN-CLOSED-LOOP",
+  "proposed_fingerprint": "21b69ca047b1f55146a6cf5e19a28206d5757c15b12e9150c20817bd91b722e5",
+  "demonstrated_permissions_only": true,
+  "registry_mutated": false,
+  "scheduler_mutated": false,
+  "permissions_expanded": false,
+  "authority": {
+    "read_only": true,
+    "proposal_only": true,
+    "external_action_attempted": false,
+    "canonical_write_attempted": false,
+    "provider_mutation_attempted": false,
+    "permission_change_attempted": false,
+    "deletion_attempted": false,
+    "schedule_change_attempted": false,
+    "billing_change_attempted": false,
+    "record_move_attempted": false
+  }
+}

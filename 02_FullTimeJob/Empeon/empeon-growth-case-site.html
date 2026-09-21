@@ -1,0 +1,279 @@
+<title>EMPEON Growth Case</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<style>
+  :root{
+    --ink:#020711; --gunmetal:#07101f; --raised:#0b1729; --raised-2:#0e1c33;
+    --paper:#f3f7fb; --muted:#a7bbd1; --platinum:#dce4ed;
+    --blue:#287dff; --cyan:#18c8ff; --mint:#58edb2; --amber:#ffb347;
+    --line:rgba(166,204,240,.22); --line-strong:rgba(181,218,250,.42);
+    --shadow:0 32px 90px rgba(0,0,0,.34);
+    --ease:cubic-bezier(.16,1,.3,1);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--ink);color:var(--paper);
+    font-family:"Manrope",-apple-system,BlinkMacSystemFont,sans-serif;
+    font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:"Unbounded","Manrope",sans-serif;font-weight:700;line-height:1.06;margin:0;letter-spacing:-.01em}
+  .mono{font-family:"JetBrains Mono",ui-monospace,monospace}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 26px}
+
+  /* nav */
+  nav{position:sticky;top:0;z-index:50;background:rgba(4,14,29,.82);
+    backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:1120px;margin:0 auto;padding:15px 26px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+  .brand{font-family:"Unbounded";font-weight:800;font-size:17px;letter-spacing:.02em}
+  .brand b{color:var(--cyan)}
+  .nav-links{display:flex;gap:26px;font-size:14px;color:var(--muted)}
+  .nav-links a:hover{color:var(--paper)}
+  .cta{background:var(--paper);color:var(--ink);border-radius:10px;padding:9px 16px;font-weight:700;font-size:14px;border:none;cursor:pointer;transition:transform .3s var(--ease)}
+  .cta:hover{transform:translateY(-2px)}
+  @media(max-width:720px){.nav-links{display:none}}
+
+  /* hero */
+  .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line);
+    background:radial-gradient(120% 90% at 78% 20%,rgba(40,125,255,.14),transparent 60%),var(--ink)}
+  .hero-in{max-width:1120px;margin:0 auto;padding:64px 26px 72px;display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:center;position:relative;z-index:2}
+  .eyebrow{font-family:"JetBrains Mono";font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);font-weight:700;margin-bottom:16px}
+  h1{font-size:clamp(30px,4.4vw,50px);font-weight:800;text-wrap:balance}
+  h1 .grad{background:linear-gradient(100deg,var(--blue),var(--cyan) 60%,var(--mint));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .lede{color:var(--muted);font-size:clamp(16px,1.7vw,19px);max-width:52ch;margin:20px 0 26px}
+  .hero-cta{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+  .ghost{border:1px solid var(--line-strong);border-radius:10px;padding:11px 18px;font-weight:600;font-size:14px;color:var(--paper);background:rgba(5,16,34,.6);cursor:pointer;transition:border-color .3s var(--ease)}
+  .ghost:hover{border-color:var(--cyan)}
+  .stage{position:relative;height:400px}
+  #atom{width:100%;height:100%;display:block}
+  .seqctl{position:absolute;bottom:6px;right:6px;display:flex;gap:8px}
+  .seqctl button{background:rgba(5,16,34,.86);color:var(--muted);border:1px solid var(--line);border-radius:10px;font-size:11px;padding:6px 11px;cursor:pointer;font-family:"JetBrains Mono"}
+  .seqctl button:hover{color:var(--paper);border-color:var(--line-strong)}
+  @media(max-width:820px){.hero-in{grid-template-columns:1fr}.stage{height:300px;order:-1}}
+
+  /* sections */
+  section.band{padding:60px 0;border-bottom:1px solid var(--line)}
+  .kicker{font-family:"JetBrains Mono";font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:var(--cyan);font-weight:700;margin-bottom:12px}
+  h2{font-size:clamp(24px,3vw,34px);font-weight:700;margin-bottom:8px}
+  .sectlede{color:var(--muted);max-width:64ch;margin-bottom:30px}
+
+  /* stat tiles */
+  .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+  .tile{background:linear-gradient(180deg,var(--raised),var(--gunmetal));border:1px solid var(--line);border-radius:14px;padding:24px;box-shadow:var(--shadow)}
+  .tile .lab{font-family:"JetBrains Mono";font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+  .tile .fig{font-family:"Unbounded";font-size:38px;font-weight:700;line-height:1;font-variant-numeric:tabular-nums}
+  .tile .fig.win{color:var(--mint)}
+  .tile .fig.grow{color:var(--cyan)}
+  .tile .note{color:var(--muted);font-size:13.5px;margin-top:10px;line-height:1.5}
+  .pill{display:inline-block;margin-top:12px;font-family:"JetBrains Mono";font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:6px;background:rgba(88,237,178,.13);color:var(--mint);border:1px solid rgba(88,237,178,.3)}
+
+  /* channel bars */
+  .chans{display:grid;gap:14px;max-width:640px}
+  .chanrow{display:grid;grid-template-columns:150px 1fr 44px;gap:16px;align-items:center}
+  .chanrow .l{font-family:"JetBrains Mono";font-size:12px;color:var(--platinum);text-transform:uppercase;letter-spacing:.04em}
+  .track{height:14px;background:var(--raised);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+  .track span{display:block;height:100%;border-radius:8px}
+  .track.s1 span{background:linear-gradient(90deg,var(--blue),var(--cyan))}
+  .track.s2 span{background:var(--blue)}
+  .track.s3 span{background:var(--mint)}
+  .track.s4 span{background:repeating-linear-gradient(45deg,var(--amber),var(--amber) 3px,transparent 3px,transparent 8px)}
+  .chanrow .n{font-family:"JetBrains Mono";font-size:13px;text-align:right;color:var(--muted);font-variant-numeric:tabular-nums}
+
+  /* table */
+  .twrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--gunmetal)}
+  table{border-collapse:collapse;width:100%;min-width:560px;font-size:14px}
+  th{text-align:left;font-family:"JetBrains Mono";font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600;padding:16px 16px 12px;border-bottom:1px solid var(--line)}
+  td{padding:13px 16px;border-bottom:1px solid rgba(166,204,240,.1);vertical-align:baseline}
+  tr:last-child td{border-bottom:none}
+  .mono-cell{font-family:"JetBrains Mono";font-size:12px;color:var(--platinum)}
+  .cyan{color:var(--cyan)}
+
+  /* two views */
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .two .card{border:1px solid var(--line);border-radius:14px;padding:24px;background:var(--gunmetal)}
+  .two .card.pos{border-color:rgba(88,237,178,.35)}
+  .two h4{font-family:"JetBrains Mono";font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 12px;font-weight:600}
+  .two .big{font-family:"Unbounded";font-size:24px;font-weight:700;display:block;margin-bottom:8px}
+  .two .pos .big{color:var(--mint)} .two .b .big{color:var(--platinum)}
+  .two p{color:var(--muted);font-size:13.5px;margin:0}
+  @media(max-width:640px){.two{grid-template-columns:1fr}.chanrow{grid-template-columns:110px 1fr 40px}}
+
+  /* recs */
+  .recs{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+  .rec{border:1px solid var(--line);border-radius:14px;padding:22px;background:linear-gradient(180deg,var(--raised),var(--gunmetal));position:relative;overflow:hidden}
+  .rec .no{font-family:"JetBrains Mono";font-size:12px;color:var(--cyan);font-weight:700}
+  .rec h3{font-size:18px;font-family:"Unbounded";font-weight:600;margin:8px 0 8px}
+  .rec p{color:var(--muted);font-size:13.5px;margin:0}
+  .rec .ev{display:block;margin-top:12px;font-family:"JetBrains Mono";font-size:10.5px;color:var(--blue);letter-spacing:.02em}
+
+  .thesis{font-family:"Unbounded";font-weight:600;font-size:clamp(19px,2.4vw,26px);line-height:1.4;max-width:60ch}
+  .thesis .grad{background:linear-gradient(100deg,var(--cyan),var(--mint));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+
+  footer{padding:40px 0 60px;color:var(--muted)}
+  footer .fbrand{font-family:"Unbounded";font-weight:800;font-size:16px;color:var(--paper);margin-bottom:10px}
+  footer .fine{font-family:"JetBrains Mono";font-size:11px;line-height:1.9;color:#6f83999e;max-width:78ch}
+  footer .fine b{color:var(--muted);font-weight:500}
+</style>
+
+<nav>
+  <div class="nav-in">
+    <div class="brand">IMM<b>OHRTAL</b></div>
+    <div class="nav-links">
+      <a href="#find">The find</a><a href="#ledger">The ledger</a><a href="#empeon">For EMPEON</a>
+    </div>
+    <button class="cta" onclick="document.getElementById('empeon').scrollIntoView()">What I'd build</button>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-in">
+    <div>
+      <div class="eyebrow">HCM software · marketing attribution</div>
+      <h1>What the marketing <span class="grad">actually sourced</span> — and how I proved it</h1>
+      <p class="lede">A program I ran at an HCM software company: the deals it traces to at high confidence, the AI-sourced buyer nobody was looking for, and the discipline that keeps every number defensible. Then what I'd build for EMPEON.</p>
+      <div class="hero-cta">
+        <button class="cta" onclick="document.getElementById('empeon').scrollIntoView()">See the EMPEON plan</button>
+        <a class="ghost" href="#ledger">Read the ledger</a>
+      </div>
+    </div>
+    <div class="stage">
+      <canvas id="atom"></canvas>
+      <div class="seqctl"><button id="pause">Pause sequence</button></div>
+    </div>
+  </div>
+</header>
+
+<section class="band" id="wins">
+  <div class="wrap">
+    <div class="kicker">What the channels sourced</div>
+    <h2>Deals, not impressions</h2>
+    <p class="sectlede">Company-level attribution from HubSpot's own original-source field — deterministic, marked high-confidence in the CRM. Not modeled.</p>
+    <div class="tiles">
+      <div class="tile"><div class="lab">Closed-won · sourced</div><div class="fig win">$54,000</div><div class="note">Weissman — SmartCare 2026 Optimization. Original source: Organic Search / Google.</div><span class="pill">High confidence</span></div>
+      <div class="tile"><div class="lab">Open pipeline · sourced</div><div class="fig">$15,000</div><div class="note">RPM Construction — SmartCare Services 2026, in Proposal / Quote.</div><span class="pill">High confidence</span></div>
+      <div class="tile"><div class="lab">Whole-pipeline shift</div><div class="fig grow">+128%</div><div class="note">Program-period open pipeline $4.52M → $10.33M; open deal count +146%.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="channels">
+  <div class="wrap">
+    <div class="kicker">Where the leads came from</div>
+    <h2>Every source is deterministic</h2>
+    <p class="sectlede">Sourced companies by channel — including the channels most B2B companies can't track at all. LinkedIn content mapped to named accounts through HubSpot's native social source, not a guess.</p>
+    <div class="chans">
+      <div class="chanrow"><span class="l">Organic Search</span><div class="track s1"><span style="width:100%"></span></div><span class="n">14</span></div>
+      <div class="chanrow"><span class="l">LinkedIn / Social</span><div class="track s2"><span style="width:57%"></span></div><span class="n">8</span></div>
+      <div class="chanrow"><span class="l">AI Assistants</span><div class="track s3"><span style="width:22%"></span></div><span class="n">3+</span></div>
+      <div class="chanrow"><span class="l">Paid Search</span><div class="track s4"><span style="width:4%"></span></div><span class="n">0</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="find">
+  <div class="wrap">
+    <div class="kicker">The AI find</div>
+    <h2>An unbroken trail from ChatGPT to a conversion</h2>
+    <p class="sectlede">In mid-2026, almost no B2B company has this instrumented. Four buyers arrived through AI assistants — one carried a machine-readable path end to end.</p>
+    <div class="twrap">
+      <table>
+        <thead><tr><th>Company</th><th>First URL / referrer</th><th>Stage</th><th>Confidence</th></tr></thead>
+        <tbody>
+          <tr><td>Therapeutic Associates</td><td class="mono-cell">/dayforce-implementation?utm_source=chatgpt.com</td><td>Lead score 98/100</td><td class="mono-cell cyan">Direct</td></tr>
+          <tr><td>Haisla</td><td class="mono-cell">chatgpt.com → SmartRescue</td><td>Expressing interest</td><td class="mono-cell cyan">Native</td></tr>
+          <tr><td>Parrys Pizza</td><td class="mono-cell">chatgpt.com → Managed Payroll</td><td>Expressing interest</td><td class="mono-cell cyan">Deterministic</td></tr>
+          <tr><td>Org. not captured</td><td class="mono-cell">chatgpt.com (13 contacts)</td><td>Top of funnel</td><td class="mono-cell cyan">Native</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="ledger">
+  <div class="wrap">
+    <div class="kicker">Integrity</div>
+    <h2>Two views, both shown</h2>
+    <p class="sectlede">The reason to trust the numbers above is that I ran the stricter test too — and report where it came up short.</p>
+    <div class="two">
+      <div class="card pos"><h4>Native-source attribution</h4><span class="big">$54K won · $15K open</span><p>HubSpot's own deterministic first-touch source field. High confidence. This is what the channels sourced.</p></div>
+      <div class="card b"><h4>Strict session-level causal model</h4><span class="big">Couldn't confirm $</span><p>HubSpot's session-level traffic API was blocked and UTM coverage was partial, so full-journey causal proof wasn't possible. A measurement limit — shown for integrity, not a claim of zero impact.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="empeon" style="background:radial-gradient(120% 80% at 20% 0%,rgba(40,125,255,.12),transparent 55%),var(--ink)">
+  <div class="wrap">
+    <div class="kicker">Applied to EMPEON</div>
+    <h2>What I'd build — and why I know it works</h2>
+    <p class="sectlede">EMPEON runs zero paid search, sits 93% on organic, and has thin AI-assistant visibility — the same channel map I already instrumented and grew at another HCM company. Four moves, each one shipped before.</p>
+    <div class="recs">
+      <div class="rec"><span class="no">01</span><h3>Instrument before spending</h3><p>Full UTM coverage and session-level source capture first, so every dollar is provable. The gap in my last program is the first thing I'd close here.</p><span class="ev">Evidence: the two-views test</span></div>
+      <div class="rec"><span class="no">02</span><h3>Own the AI-assistant channel</h3><p>AEO/GEO so EMPEON is the answer ChatGPT gives for healthcare payroll and HCM. I have a 98-scored buyer that arrived exactly this way.</p><span class="ev">Evidence: Therapeutic Associates</span></div>
+      <div class="rec"><span class="no">03</span><h3>Open paid search deliberately</h3><p>A channel at zero against ADP, Paycom and Paylocity is upside, not a weakness — entered after tracking exists, not before.</p><span class="ev">Semrush: 0 paid keywords, 2026-09-09</span></div>
+      <div class="rec"><span class="no">04</span><h3>LinkedIn content → named pipeline</h3><p>Map social content to specific companies in the CRM, the way I traced eight named accounts — plus agentic workflows to run it daily at low cost.</p><span class="ev">Evidence: LinkedIn source roster</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <p class="thesis">Most marketing reports are built to survive scrutiny. This one is built to apply it — <span class="grad">the same instrumentation that let me report a limit honestly is what surfaced a $54K sourced deal and the AI trail nobody was looking for.</span></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fbrand">IMM<span style="color:var(--cyan)">OHRTAL</span> Marketing</div>
+    <p class="fine">
+      Prepared by Dillon Mohr · 2026-09-09. Figures from a company-level HubSpot native-source attribution export (2026-01 → 2026-07). "High confidence" denotes HubSpot's deterministic original-source field, not a modeled estimate.<br>
+      <b>EMPEON figures:</b> Semrush Domain Overview, 2026-09-09, public tool output. No client-confidential data is reproduced on this page.
+    </p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var c=document.getElementById('atom'); if(!c) return;
+  var ctx=c.getContext('2d'), DPR=Math.min(2,window.devicePixelRatio||1), W=0,H=0, running=true;
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  function size(){var r=c.getBoundingClientRect();W=r.width;H=r.height;c.width=W*DPR;c.height=H*DPR;ctx.setTransform(DPR,0,0,DPR,0,0);}
+  size(); window.addEventListener('resize',size);
+  // electron shells = acquisition channels; paid shell is dashed + empty = the gap
+  var shells=[
+    {r:58, e:3, sp:0.6,  col:'#287dff'},  // organic search
+    {r:100,e:2, sp:-0.42, col:'#18c8ff'}, // linkedin
+    {r:144,e:1, sp:0.32, col:'#58edb2'},  // AI
+    {r:188,e:0, sp:0.22, col:'#ffb347', dash:true} // paid — empty orbit
+  ];
+  var t=0;
+  function frame(){
+    ctx.clearRect(0,0,W,H);
+    var cx=W*0.5, cy=H*0.5;
+    // nucleus glow (EMPEON core)
+    var g=ctx.createRadialGradient(cx,cy,2,cx,cy,34);
+    g.addColorStop(0,'rgba(88,237,178,.9)');g.addColorStop(.5,'rgba(24,200,255,.35)');g.addColorStop(1,'rgba(24,200,255,0)');
+    ctx.fillStyle=g;ctx.beginPath();ctx.arc(cx,cy,34,0,7);ctx.fill();
+    ctx.fillStyle='#eafff6';ctx.beginPath();ctx.arc(cx,cy,7,0,7);ctx.fill();
+    for(var i=0;i<shells.length;i++){
+      var s=shells[i];
+      ctx.save();ctx.translate(cx,cy);ctx.rotate(t*0.05*(i%2?1:-1));
+      ctx.strokeStyle=s.col;ctx.globalAlpha=s.dash?0.4:0.55;ctx.lineWidth=1.1;
+      ctx.setLineDash(s.dash?[3,7]:[]);
+      ctx.beginPath();ctx.ellipse(0,0,s.r,s.r*0.4,0,0,7);ctx.stroke();
+      ctx.setLineDash([]);ctx.globalAlpha=1;
+      for(var e=0;e<s.e;e++){
+        var a=t*s.sp+e*(6.283/s.e);
+        var x=Math.cos(a)*s.r, y=Math.sin(a)*s.r*0.4;
+        var gg=ctx.createRadialGradient(x,y,0,x,y,7);
+        gg.addColorStop(0,s.col);gg.addColorStop(1,'rgba(0,0,0,0)');
+        ctx.fillStyle=gg;ctx.beginPath();ctx.arc(x,y,7,0,7);ctx.fill();
+        ctx.fillStyle=s.col;ctx.beginPath();ctx.arc(x,y,3,0,7);ctx.fill();
+      }
+      ctx.restore();
+    }
+    if(running&&!reduce){t+=0.016;requestAnimationFrame(frame);} else if(!running){/*hold*/}
+  }
+  frame();
+  var btn=document.getElementById('pause');
+  if(btn) btn.addEventListener('click',function(){running=!running;btn.textContent=running?'Pause sequence':'Replay sequence';if(running)frame();});
+})();
+</script>

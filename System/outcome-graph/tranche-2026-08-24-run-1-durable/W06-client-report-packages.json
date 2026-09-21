@@ -1,0 +1,1057 @@
+{
+  "schema_version": 1,
+  "routine_id": "W06",
+  "reporting_window": {
+    "prepared": "2026-08-24",
+    "period_start": "2026-08-17",
+    "period_end": "2026-08-23",
+    "month": "2026-08"
+  },
+  "objective": "Prove every discovered current-period client report package from its source-data, rendered HTML, PDF hash, and recomputable metrics.",
+  "report_packages": [
+    {
+      "schema_version": 1,
+      "routine_id": "W06",
+      "client_id": "bar-crawl-usa",
+      "client_name": "Bar Crawl USA",
+      "client_status": "active",
+      "reporting_window": "2026-08-17 through 2026-08-23",
+      "prepared": "2026-08-24",
+      "evidence_mode": "read-only",
+      "metrics": [
+        [
+          "Landing pages built",
+          "10"
+        ],
+        [
+          "Seasonal focus",
+          "October"
+        ],
+        [
+          "Teaser cut",
+          "55 sec"
+        ],
+        [
+          "Publishing state",
+          "Draft"
+        ]
+      ],
+      "checks": [
+        {
+          "id": "metric-values-render-from-source-ledger",
+          "passed": true,
+          "detail": "Every source-ledger metric label and value appears in the rendered report."
+        },
+        {
+          "id": "reporting-window-exact",
+          "passed": true,
+          "detail": "2026-08-17 through 2026-08-23"
+        },
+        {
+          "id": "named-sources-present",
+          "passed": true,
+          "detail": "3 named sources."
+        },
+        {
+          "id": "unsupported-conversion-language-absent",
+          "passed": true,
+          "detail": "No prohibited conversion claim appears."
+        }
+      ],
+      "passed": true,
+      "source_ledger": [
+        {
+          "locator": "client-operations/clients/bar-crawl-usa/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/source-data.json",
+          "sha256": "e492ca53c473c6e910b62a2cd21db731f581404d4ccccda7b1c57160056cb5ae",
+          "bytes": 1694
+        },
+        {
+          "locator": "client-operations/clients/bar-crawl-usa/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/report.html",
+          "sha256": "9cbb430c18124276f388a785cf31e968bb148a906788177dbd5b5808f161cb9c",
+          "bytes": 6520
+        },
+        {
+          "locator": "client-operations/clients/bar-crawl-usa/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/bar-crawl-usa-weekly-report-2026-08-17-to-2026-08-23.pdf",
+          "sha256": "c5e9b4c49652af32b50c5022f2b718ad2af26fd0549058d56e7ea87b94893ab1",
+          "bytes": 188984,
+          "modified_at": "2026-08-24T14:17:36.985Z",
+          "selected_current": true
+        }
+      ],
+      "named_sources": [
+        "Slack #bar-crawl-usa, Aug 17 to Aug 23",
+        "Gmail production screenshot handoffs, Aug 21 and Aug 22",
+        "Canonical 2026-08-21 Halloween landing page deliverable"
+      ],
+      "delivery_readiness": {
+        "state": "pending_exact_route_and_approval",
+        "draft_created": false,
+        "reason": "This shadow verifies report production. Recipient, thread, exact signature, and delivery approval remain outside the graph."
+      },
+      "external_action_attempted": false,
+      "validation_fingerprint": "80d6640a5c4d2b121c1e62fd4f1e4786af47eec415a80f8c9eec9a9d1477b20f"
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W06",
+      "client_id": "fagan-painting",
+      "client_name": "Fagan Painting",
+      "client_status": "active",
+      "reporting_window": "2026-08-17 through 2026-08-23",
+      "prepared": "2026-08-24",
+      "evidence_mode": "read-only",
+      "metrics": [
+        [
+          "New blog",
+          "1"
+        ],
+        [
+          "Service pages",
+          "4"
+        ],
+        [
+          "Paid media",
+          "Off"
+        ],
+        [
+          "AEO and GEO",
+          "Early September"
+        ]
+      ],
+      "checks": [
+        {
+          "id": "metric-values-render-from-source-ledger",
+          "passed": true,
+          "detail": "Every source-ledger metric label and value appears in the rendered report."
+        },
+        {
+          "id": "reporting-window-exact",
+          "passed": true,
+          "detail": "2026-08-17 through 2026-08-23"
+        },
+        {
+          "id": "named-sources-present",
+          "passed": true,
+          "detail": "3 named sources."
+        },
+        {
+          "id": "unsupported-conversion-language-absent",
+          "passed": true,
+          "detail": "No prohibited conversion claim appears."
+        }
+      ],
+      "passed": true,
+      "source_ledger": [
+        {
+          "locator": "client-operations/clients/fagan-painting/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/source-data.json",
+          "sha256": "9d4a4a7724009c94c18e51056f5522c19b7f0c690c72292127f571607584cd6a",
+          "bytes": 1404
+        },
+        {
+          "locator": "client-operations/clients/fagan-painting/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/report.html",
+          "sha256": "89388f78e6ce96796768b1425bb3ac7490520b6879df9f5b7292a8782f0d654d",
+          "bytes": 6155
+        },
+        {
+          "locator": "client-operations/clients/fagan-painting/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/fagan-painting-weekly-report-2026-08-17-to-2026-08-23.pdf",
+          "sha256": "31aa6aa02c9bd3c544142a3f167a5125c5ff2f86117164421966e431ad7656c9",
+          "bytes": 109057,
+          "modified_at": "2026-08-24T14:14:43.223Z",
+          "selected_current": true
+        }
+      ],
+      "named_sources": [
+        "Slack #fagan-painting, Aug 17 to Aug 23",
+        "Canonical Fagan client context",
+        "Current site work note from Phil"
+      ],
+      "delivery_readiness": {
+        "state": "pending_exact_route_and_approval",
+        "draft_created": false,
+        "reason": "This shadow verifies report production. Recipient, thread, exact signature, and delivery approval remain outside the graph."
+      },
+      "external_action_attempted": false,
+      "validation_fingerprint": "600ba6f3268b4920708448f916565ba344d0f120745b70e93d0c0aa4befd5fa5"
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W06",
+      "client_id": "fresh-blends-kwik-trip",
+      "client_name": "Fresh Blends / Kwik Trip",
+      "client_status": "active",
+      "reporting_window": "2026-08-17 through 2026-08-23",
+      "prepared": "2026-08-24",
+      "evidence_mode": "read-only",
+      "metrics": [
+        [
+          "Brand boundary",
+          "Fresh Blends only"
+        ],
+        [
+          "Campaign state",
+          "Paused"
+        ],
+        [
+          "New activation",
+          "Not verified"
+        ],
+        [
+          "Metrics",
+          "Pending"
+        ]
+      ],
+      "checks": [
+        {
+          "id": "metric-values-render-from-source-ledger",
+          "passed": true,
+          "detail": "Every source-ledger metric label and value appears in the rendered report."
+        },
+        {
+          "id": "reporting-window-exact",
+          "passed": true,
+          "detail": "2026-08-17 through 2026-08-23"
+        },
+        {
+          "id": "named-sources-present",
+          "passed": true,
+          "detail": "3 named sources."
+        },
+        {
+          "id": "unsupported-conversion-language-absent",
+          "passed": true,
+          "detail": "No prohibited conversion claim appears."
+        }
+      ],
+      "passed": true,
+      "source_ledger": [
+        {
+          "locator": "client-operations/clients/fresh-blends-kwik-trip/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/source-data.json",
+          "sha256": "d2901214aae368839f67791b7788e14ebf133320e629c6f7b042b3d533c69567",
+          "bytes": 1455
+        },
+        {
+          "locator": "client-operations/clients/fresh-blends-kwik-trip/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/report.html",
+          "sha256": "072cbd32cbbda7ab7c83f911af0832d862459e77a2ff0918746bc96781c5c6b5",
+          "bytes": 6341
+        },
+        {
+          "locator": "client-operations/clients/fresh-blends-kwik-trip/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/fresh-blends-kwik-trip-weekly-report-2026-08-17-to-2026-08-23.pdf",
+          "sha256": "3389a8f15ad64a2deb86f662675d9d47a087d274ae49fe59c408b67279dd3223",
+          "bytes": 97210,
+          "modified_at": "2026-08-24T14:14:46.738Z",
+          "selected_current": true
+        }
+      ],
+      "named_sources": [
+        "Slack #fresh-blends shared channel, Aug 17 to Aug 23",
+        "Prior approved Fresh Blends handoff",
+        "Canonical Fresh Blends client boundary"
+      ],
+      "delivery_readiness": {
+        "state": "pending_exact_route_and_approval",
+        "draft_created": false,
+        "reason": "This shadow verifies report production. Recipient, thread, exact signature, and delivery approval remain outside the graph."
+      },
+      "external_action_attempted": false,
+      "validation_fingerprint": "e40706cb14f4e41da8140ef740024640a32ab1373b85b0bd167bc12cde5c9f59"
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W06",
+      "client_id": "hope-wellness-center",
+      "client_name": "Hope Wellness Center",
+      "client_status": "active",
+      "reporting_window": "2026-08-17 through 2026-08-23",
+      "prepared": "2026-08-24",
+      "evidence_mode": "read-only",
+      "metrics": [
+        [
+          "Review cleanup",
+          "Completion pass"
+        ],
+        [
+          "Therapist video",
+          "In editing"
+        ],
+        [
+          "Growth audit",
+          "Delivered"
+        ],
+        [
+          "Paid media",
+          "Off"
+        ]
+      ],
+      "checks": [
+        {
+          "id": "metric-values-render-from-source-ledger",
+          "passed": true,
+          "detail": "Every source-ledger metric label and value appears in the rendered report."
+        },
+        {
+          "id": "reporting-window-exact",
+          "passed": true,
+          "detail": "2026-08-17 through 2026-08-23"
+        },
+        {
+          "id": "named-sources-present",
+          "passed": true,
+          "detail": "3 named sources."
+        },
+        {
+          "id": "unsupported-conversion-language-absent",
+          "passed": true,
+          "detail": "No prohibited conversion claim appears."
+        }
+      ],
+      "passed": true,
+      "source_ledger": [
+        {
+          "locator": "client-operations/clients/hope-wellness-center/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/source-data.json",
+          "sha256": "ef74f4ce01b3872758dfbca1a1345a175f65d9eec02b3511db3437554f212f58",
+          "bytes": 1579
+        },
+        {
+          "locator": "client-operations/clients/hope-wellness-center/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/report.html",
+          "sha256": "e9e385d869d7428ec911026c1c37de2a123bdd38528aee1bda2af1254cd162a5",
+          "bytes": 6442
+        },
+        {
+          "locator": "client-operations/clients/hope-wellness-center/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/hope-wellness-center-weekly-report-2026-08-17-to-2026-08-23.pdf",
+          "sha256": "75c7762866956d85e92b2e4100cbac3775e38a3b0d93719993a591dbb66e91af",
+          "bytes": 252206,
+          "modified_at": "2026-08-24T14:14:45.631Z",
+          "selected_current": true
+        }
+      ],
+      "named_sources": [
+        "Slack #hope-wellness-center, Aug 17 to Aug 23",
+        "Hope competitor audit handoff",
+        "Canonical Hope operating context"
+      ],
+      "delivery_readiness": {
+        "state": "pending_exact_route_and_approval",
+        "draft_created": false,
+        "reason": "This shadow verifies report production. Recipient, thread, exact signature, and delivery approval remain outside the graph."
+      },
+      "external_action_attempted": false,
+      "validation_fingerprint": "a45194beece4f78ea09b2b71b75ef40bfdc57493cf7fbe295e8dd492f026ce14"
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W06",
+      "client_id": "kimberly-james-bridal",
+      "client_name": "Kimberly James Bridal",
+      "client_status": "active",
+      "reporting_window": "2026-08-17 through 2026-08-23",
+      "prepared": "2026-08-24",
+      "evidence_mode": "read-only",
+      "metrics": [
+        [
+          "Meta leads",
+          "9"
+        ],
+        [
+          "Meta cost per lead",
+          "$7.72"
+        ],
+        [
+          "Google spend",
+          "$103.98"
+        ],
+        [
+          "Google clicks",
+          "25"
+        ],
+        [
+          "Google impressions",
+          "557"
+        ],
+        [
+          "Google CTR",
+          "4.49%"
+        ]
+      ],
+      "checks": [
+        {
+          "id": "metric-values-render-from-source-ledger",
+          "passed": true,
+          "detail": "Every source-ledger metric label and value appears in the rendered report."
+        },
+        {
+          "id": "reporting-window-exact",
+          "passed": true,
+          "detail": "2026-08-17 through 2026-08-23"
+        },
+        {
+          "id": "named-sources-present",
+          "passed": true,
+          "detail": "3 named sources."
+        },
+        {
+          "id": "unsupported-conversion-language-absent",
+          "passed": true,
+          "detail": "No prohibited conversion claim appears."
+        }
+      ],
+      "passed": true,
+      "source_ledger": [
+        {
+          "locator": "client-operations/clients/kimberly-james-bridal/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/source-data.json",
+          "sha256": "554a662e424f03d69d3b626ae45d36c28e100907f73cab6fe3ac414866aebd50",
+          "bytes": 2045
+        },
+        {
+          "locator": "client-operations/clients/kimberly-james-bridal/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/report.html",
+          "sha256": "44b05656f9cdecab5ec759267aecaa1b442177bb0d8f5d3009ab5a9d871c07b3",
+          "bytes": 10790
+        },
+        {
+          "locator": "client-operations/clients/kimberly-james-bridal/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/kimberly-james-bridal-weekly-report-2026-08-17-to-2026-08-23-UPDATED.pdf",
+          "sha256": "ff7cf0578e3bff329b23d3df52d0b889c5fd3f2a2a1a14aa2b83ca1482389c8e",
+          "bytes": 148361,
+          "modified_at": "2026-08-24T21:45:54.637Z",
+          "selected_current": true
+        },
+        {
+          "locator": "client-operations/clients/kimberly-james-bridal/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/kimberly-james-bridal-weekly-report-2026-08-17-to-2026-08-23.pdf",
+          "sha256": "cb51eb8271e9f95ba22e723ee891777fb0ccb5a0ee030fa4ee515a2ed78ee87a",
+          "bytes": 137555,
+          "modified_at": "2026-08-24T14:14:53.571Z",
+          "selected_current": false
+        }
+      ],
+      "named_sources": [
+        "Meta Ads account 1249689223687250, live Aug 17 to Aug 23 read",
+        "Google Ads customer 814-550-6229, live Aug 17 to Aug 23 read",
+        "Slack #kimberly-james-bridal and current Gmail thread"
+      ],
+      "delivery_readiness": {
+        "state": "pending_exact_route_and_approval",
+        "draft_created": false,
+        "reason": "This shadow verifies report production. Recipient, thread, exact signature, and delivery approval remain outside the graph."
+      },
+      "external_action_attempted": false,
+      "validation_fingerprint": "b4373f5f0283a01a85e7fed59ecc81869a693c91437fb91d2035fe7782ff930e"
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W06",
+      "client_id": "nexla",
+      "client_name": "Nexla",
+      "client_status": "active",
+      "reporting_window": "2026-08-17 through 2026-08-23",
+      "prepared": "2026-08-24",
+      "evidence_mode": "deliverable and communication research only",
+      "metrics": [
+        [
+          "Audit delivered",
+          "Aug 20"
+        ],
+        [
+          "Proposed budget",
+          "$2,000 monthly"
+        ],
+        [
+          "Campaign structure",
+          "Brand + Nonbrand"
+        ],
+        [
+          "Build state",
+          "Unpublished"
+        ],
+        [
+          "Client inputs",
+          "3 pending"
+        ],
+        [
+          "Live Ads read",
+          "Out of scope"
+        ]
+      ],
+      "checks": [
+        {
+          "id": "metric-values-render-from-source-ledger",
+          "passed": true,
+          "detail": "Every source-ledger metric label and value appears in the rendered report."
+        },
+        {
+          "id": "reporting-window-exact",
+          "passed": true,
+          "detail": "2026-08-17 through 2026-08-23"
+        },
+        {
+          "id": "named-sources-present",
+          "passed": true,
+          "detail": "3 named sources."
+        },
+        {
+          "id": "unsupported-conversion-language-absent",
+          "passed": true,
+          "detail": "No prohibited conversion claim appears."
+        }
+      ],
+      "passed": true,
+      "source_ledger": [
+        {
+          "locator": "client-operations/clients/nexla/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/source-data.json",
+          "sha256": "f644f6a0d6a06e1ae84c684e8e387fe8ff3f026ffb089a8ddc59e12b538a25c0",
+          "bytes": 1522
+        },
+        {
+          "locator": "client-operations/clients/nexla/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/report.html",
+          "sha256": "dc21782b3a5a6a834fd9dd1125b3d0bc29a5ae3e230843040a11808e352cee7e",
+          "bytes": 6918
+        },
+        {
+          "locator": "client-operations/clients/nexla/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/nexla-weekly-report-2026-08-17-to-2026-08-23.pdf",
+          "sha256": "15795714d562336a2b3ecaf768f3cb6446a5232b8e32551a61ef6ccf81a94191",
+          "bytes": 103513,
+          "modified_at": "2026-08-24T15:08:52.268Z",
+          "selected_current": true
+        }
+      ],
+      "named_sources": [
+        "Gmail thread Following Up / Google Audit, Aug 20 to Aug 21",
+        "Nexla Google Ads Audit, delivered Aug 20",
+        "Canonical Nexla campaign plan and client context"
+      ],
+      "delivery_readiness": {
+        "state": "pending_exact_route_and_approval",
+        "draft_created": false,
+        "reason": "This shadow verifies report production. Recipient, thread, exact signature, and delivery approval remain outside the graph."
+      },
+      "external_action_attempted": false,
+      "validation_fingerprint": "8552b53d17264b2151ab340834fa3a01167c8c9456bb1cdba95d7c9684dc2b46"
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W06",
+      "client_id": "nkcdc",
+      "client_name": "NKCDC",
+      "client_status": "active",
+      "reporting_window": "2026-08-17 through 2026-08-23",
+      "prepared": "2026-08-24",
+      "evidence_mode": "read-only",
+      "metrics": [
+        [
+          "Account state",
+          "Paused"
+        ],
+        [
+          "Phase Two",
+          "Awaiting decision"
+        ],
+        [
+          "New production",
+          "None verified"
+        ],
+        [
+          "Source of truth",
+          "Growth plan"
+        ]
+      ],
+      "checks": [
+        {
+          "id": "metric-values-render-from-source-ledger",
+          "passed": true,
+          "detail": "Every source-ledger metric label and value appears in the rendered report."
+        },
+        {
+          "id": "reporting-window-exact",
+          "passed": true,
+          "detail": "2026-08-17 through 2026-08-23"
+        },
+        {
+          "id": "named-sources-present",
+          "passed": true,
+          "detail": "3 named sources."
+        },
+        {
+          "id": "unsupported-conversion-language-absent",
+          "passed": true,
+          "detail": "No prohibited conversion claim appears."
+        }
+      ],
+      "passed": true,
+      "source_ledger": [
+        {
+          "locator": "client-operations/clients/nkcdc/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/source-data.json",
+          "sha256": "ad9052e2cd45b2105918802536a60dbdff995e8ff0cb3489e94a28e09fc68a7b",
+          "bytes": 1392
+        },
+        {
+          "locator": "client-operations/clients/nkcdc/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/report.html",
+          "sha256": "33179a3b21c76b475fa68e15fbeedf0c96961fa4a20b11d09283754b499e9729",
+          "bytes": 6144
+        },
+        {
+          "locator": "client-operations/clients/nkcdc/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/nkcdc-weekly-report-2026-08-17-to-2026-08-23.pdf",
+          "sha256": "40af175b5d82fcc814a571d350a739f5f65eab21f80fbecf49a7277c6bdc4f7d",
+          "bytes": 115385,
+          "modified_at": "2026-08-24T14:14:52.475Z",
+          "selected_current": true
+        }
+      ],
+      "named_sources": [
+        "Slack #nkcdc, Aug 17 to Aug 23",
+        "Canonical Phase Two growth strategy",
+        "NKCDC operating context"
+      ],
+      "delivery_readiness": {
+        "state": "pending_exact_route_and_approval",
+        "draft_created": false,
+        "reason": "This shadow verifies report production. Recipient, thread, exact signature, and delivery approval remain outside the graph."
+      },
+      "external_action_attempted": false,
+      "validation_fingerprint": "c67e2aabce22e33a1885e6e2d09a282e03eab380dda68b53f10f129b1c89cc73"
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W06",
+      "client_id": "omega-landscaping",
+      "client_name": "Omega Landscaping and Concrete",
+      "client_status": "active",
+      "reporting_window": "2026-08-17 through 2026-08-23",
+      "prepared": "2026-08-24",
+      "evidence_mode": "read-only",
+      "metrics": [
+        [
+          "Google spend",
+          "$279.34"
+        ],
+        [
+          "Clicks",
+          "37"
+        ],
+        [
+          "Impressions",
+          "728"
+        ],
+        [
+          "CTR",
+          "5.08%"
+        ],
+        [
+          "Avg. CPC",
+          "$7.55"
+        ],
+        [
+          "Optimization score",
+          "91.7%"
+        ]
+      ],
+      "checks": [
+        {
+          "id": "metric-values-render-from-source-ledger",
+          "passed": true,
+          "detail": "Every source-ledger metric label and value appears in the rendered report."
+        },
+        {
+          "id": "reporting-window-exact",
+          "passed": true,
+          "detail": "2026-08-17 through 2026-08-23"
+        },
+        {
+          "id": "named-sources-present",
+          "passed": true,
+          "detail": "3 named sources."
+        },
+        {
+          "id": "unsupported-conversion-language-absent",
+          "passed": true,
+          "detail": "No prohibited conversion claim appears."
+        },
+        {
+          "id": "ctr-recomputes",
+          "passed": true,
+          "detail": "computed 5.08 percent from 37 / 728"
+        },
+        {
+          "id": "average-cpc-recomputes",
+          "passed": true,
+          "detail": "computed 7.55 from 279.34 / 37"
+        }
+      ],
+      "passed": true,
+      "source_ledger": [
+        {
+          "locator": "client-operations/clients/omega-landscaping/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/source-data.json",
+          "sha256": "fafdc2c4f693c102b357ec09189eb8916f7bccaa6ea258d93100dae822f63124",
+          "bytes": 1719
+        },
+        {
+          "locator": "client-operations/clients/omega-landscaping/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/report.html",
+          "sha256": "65ac319302e1ab5b55f242dca07d5d6fdd52fdefbbfe4e1ebef845c325a66963",
+          "bytes": 6677
+        },
+        {
+          "locator": "client-operations/clients/omega-landscaping/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/omega-landscaping-weekly-report-2026-08-17-to-2026-08-23.pdf",
+          "sha256": "9fa130daaadfb13480c4a44bac5e3026a5961443ba0785dfad05669d4150fadc",
+          "bytes": 227353,
+          "modified_at": "2026-08-24T14:14:49.044Z",
+          "selected_current": true
+        }
+      ],
+      "named_sources": [
+        "Google Ads customer 285-398-1364, live Aug 17 to Aug 23 read",
+        "Slack #omega-landscape, Aug 17 to Aug 23",
+        "Canonical Omega landing page and GBP batch"
+      ],
+      "delivery_readiness": {
+        "state": "pending_exact_route_and_approval",
+        "draft_created": false,
+        "reason": "This shadow verifies report production. Recipient, thread, exact signature, and delivery approval remain outside the graph."
+      },
+      "external_action_attempted": false,
+      "validation_fingerprint": "35c64527437551c6679b9b05f95d582f18b7a534e419d82d2327c53186fa0c00"
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W06",
+      "client_id": "onsite-concrete-landscape",
+      "client_name": "Onsite Concrete & Landscape",
+      "client_status": "active",
+      "reporting_window": "2026-08-17 through 2026-08-23",
+      "prepared": "2026-08-24",
+      "evidence_mode": "read-only",
+      "metrics": [
+        [
+          "Google spend",
+          "$46.70"
+        ],
+        [
+          "Clicks",
+          "337"
+        ],
+        [
+          "Avg. CPC",
+          "$0.14"
+        ],
+        [
+          "Phone call actions",
+          "3"
+        ],
+        [
+          "Fairfield pages",
+          "2 live"
+        ],
+        [
+          "Account state",
+          "Running"
+        ]
+      ],
+      "checks": [
+        {
+          "id": "metric-values-render-from-source-ledger",
+          "passed": true,
+          "detail": "Every source-ledger metric label and value appears in the rendered report."
+        },
+        {
+          "id": "reporting-window-exact",
+          "passed": true,
+          "detail": "2026-08-17 through 2026-08-23"
+        },
+        {
+          "id": "named-sources-present",
+          "passed": true,
+          "detail": "3 named sources."
+        },
+        {
+          "id": "unsupported-conversion-language-absent",
+          "passed": true,
+          "detail": "No prohibited conversion claim appears."
+        },
+        {
+          "id": "average-cpc-recomputes",
+          "passed": true,
+          "detail": "computed 0.14 from 46.7 / 337"
+        }
+      ],
+      "passed": true,
+      "source_ledger": [
+        {
+          "locator": "client-operations/clients/onsite-concrete-landscape/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/source-data.json",
+          "sha256": "ad117ace25afa6bc3c297236963d56fb4819d5fd8a64a876a207ca30cf42597d",
+          "bytes": 1628
+        },
+        {
+          "locator": "client-operations/clients/onsite-concrete-landscape/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/report.html",
+          "sha256": "6a9a2fe4fc41ee03602fd3273d60742fa628a648d586e6bc5a9dc6678a73cd88",
+          "bytes": 6600
+        },
+        {
+          "locator": "client-operations/clients/onsite-concrete-landscape/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/onsite-concrete-landscape-weekly-report-2026-08-17-to-2026-08-23.pdf",
+          "sha256": "f4bfa805cc37bd16bd8cb62e1e85a91727696c275ca829f5da04140d80c5f7b4",
+          "bytes": 257515,
+          "modified_at": "2026-08-24T14:14:51.385Z",
+          "selected_current": true
+        }
+      ],
+      "named_sources": [
+        "Google Ads customer 103-371-5894, live Aug 17 to Aug 23 read",
+        "Slack #onsite-construction, Aug 17 to Aug 23",
+        "Live Fairfield page URLs and canonical SEO work"
+      ],
+      "delivery_readiness": {
+        "state": "pending_exact_route_and_approval",
+        "draft_created": false,
+        "reason": "This shadow verifies report production. Recipient, thread, exact signature, and delivery approval remain outside the graph."
+      },
+      "external_action_attempted": false,
+      "validation_fingerprint": "b042ee2420880800a3baf9a618a0fd4317342e208d5d1230c5e20136b302d7f8"
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W06",
+      "client_id": "replenish-7-eleven",
+      "client_name": "Replenish / 7-Eleven",
+      "client_status": "active",
+      "reporting_window": "2026-08-17 through 2026-08-23",
+      "prepared": "2026-08-24",
+      "evidence_mode": "read-only",
+      "metrics": [
+        [
+          "Store campaigns",
+          "9 requested"
+        ],
+        [
+          "Account access",
+          "Follow up"
+        ],
+        [
+          "CPC audit",
+          "Planned"
+        ],
+        [
+          "Ads read",
+          "Not opened"
+        ]
+      ],
+      "checks": [
+        {
+          "id": "metric-values-render-from-source-ledger",
+          "passed": true,
+          "detail": "Every source-ledger metric label and value appears in the rendered report."
+        },
+        {
+          "id": "reporting-window-exact",
+          "passed": true,
+          "detail": "2026-08-17 through 2026-08-23"
+        },
+        {
+          "id": "named-sources-present",
+          "passed": true,
+          "detail": "3 named sources."
+        },
+        {
+          "id": "unsupported-conversion-language-absent",
+          "passed": true,
+          "detail": "No prohibited conversion claim appears."
+        }
+      ],
+      "passed": true,
+      "source_ledger": [
+        {
+          "locator": "client-operations/clients/replenish-7-eleven/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/source-data.json",
+          "sha256": "9e9532a34e7474a1e6710bd2a2d2d953d72e6101543509d69149223555d76a00",
+          "bytes": 1561
+        },
+        {
+          "locator": "client-operations/clients/replenish-7-eleven/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/report.html",
+          "sha256": "9c6e109ea67a910ff08fc2f7bd57c62c895df3dd9bded91a1116bd428df268f7",
+          "bytes": 6373
+        },
+        {
+          "locator": "client-operations/clients/replenish-7-eleven/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/replenish-7-eleven-weekly-report-2026-08-17-to-2026-08-23.pdf",
+          "sha256": "75ee3e78f543b1478eb9b5fdf5c33d33dadbbcd0d3b5b20d605c72e3ca3072ca",
+          "bytes": 169236,
+          "modified_at": "2026-08-24T14:14:47.910Z",
+          "selected_current": true
+        }
+      ],
+      "named_sources": [
+        "Slack #fresh-blends shared channel, Replenish messages Aug 17 to Aug 23",
+        "Canonical Replenish client context",
+        "Automation account scope boundary"
+      ],
+      "delivery_readiness": {
+        "state": "pending_exact_route_and_approval",
+        "draft_created": false,
+        "reason": "This shadow verifies report production. Recipient, thread, exact signature, and delivery approval remain outside the graph."
+      },
+      "external_action_attempted": false,
+      "validation_fingerprint": "969d42a3e66f18ce58989dfb5525c4172fd392e074e0c2dcea7d6dc8fe2e86e3"
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W06",
+      "client_id": "revive-systems",
+      "client_name": "Revive Systems",
+      "client_status": "active",
+      "reporting_window": "2026-08-17 through 2026-08-23",
+      "prepared": "2026-08-24",
+      "evidence_mode": "read-only",
+      "metrics": [
+        [
+          "Strategy document",
+          "Created"
+        ],
+        [
+          "Content package",
+          "5 pieces"
+        ],
+        [
+          "Publishing state",
+          "Pending"
+        ],
+        [
+          "Paid media",
+          "Off"
+        ]
+      ],
+      "checks": [
+        {
+          "id": "metric-values-render-from-source-ledger",
+          "passed": true,
+          "detail": "Every source-ledger metric label and value appears in the rendered report."
+        },
+        {
+          "id": "reporting-window-exact",
+          "passed": true,
+          "detail": "2026-08-17 through 2026-08-23"
+        },
+        {
+          "id": "named-sources-present",
+          "passed": true,
+          "detail": "3 named sources."
+        },
+        {
+          "id": "unsupported-conversion-language-absent",
+          "passed": true,
+          "detail": "No prohibited conversion claim appears."
+        }
+      ],
+      "passed": true,
+      "source_ledger": [
+        {
+          "locator": "client-operations/clients/revive-systems/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/source-data.json",
+          "sha256": "48c1e29fff25d85066b29602efedf6b5aadd1a9eddc85ed78128844b9cf2ca67",
+          "bytes": 1460
+        },
+        {
+          "locator": "client-operations/clients/revive-systems/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/report.html",
+          "sha256": "f3e5fe1544f83ffefce336788efe9da18418950ee326d38efc21e10f6f8231c8",
+          "bytes": 6285
+        },
+        {
+          "locator": "client-operations/clients/revive-systems/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/revive-systems-weekly-report-2026-08-17-to-2026-08-23.pdf",
+          "sha256": "a2740656a44c494ec91eb6b084c0068435f22c6b0cc6871c48d0f91de4a13216",
+          "bytes": 238095,
+          "modified_at": "2026-08-24T14:14:54.693Z",
+          "selected_current": true
+        }
+      ],
+      "named_sources": [
+        "Slack #revive-systems, Aug 17 to Aug 23",
+        "REVIVE SYSTEMS MARKETING THOUGHTS.docx, Aug 18",
+        "Canonical Revive operating context"
+      ],
+      "delivery_readiness": {
+        "state": "pending_exact_route_and_approval",
+        "draft_created": false,
+        "reason": "This shadow verifies report production. Recipient, thread, exact signature, and delivery approval remain outside the graph."
+      },
+      "external_action_attempted": false,
+      "validation_fingerprint": "6a97445fa1806cf4d91eef2cb5415e44459cdbb02b383c525c43f6f46b2cc277"
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W06",
+      "client_id": "va-claims-edge",
+      "client_name": "VA Claims Edge",
+      "client_status": "active",
+      "reporting_window": "2026-08-17 through 2026-08-23",
+      "prepared": "2026-08-24",
+      "evidence_mode": "read-only",
+      "metrics": [
+        [
+          "Product phase",
+          "Phase Three"
+        ],
+        [
+          "Nexus page",
+          "Started"
+        ],
+        [
+          "Readiness review",
+          "Aug 20"
+        ],
+        [
+          "Portal state",
+          "Meeting ready"
+        ]
+      ],
+      "checks": [
+        {
+          "id": "metric-values-render-from-source-ledger",
+          "passed": true,
+          "detail": "Every source-ledger metric label and value appears in the rendered report."
+        },
+        {
+          "id": "reporting-window-exact",
+          "passed": true,
+          "detail": "2026-08-17 through 2026-08-23"
+        },
+        {
+          "id": "named-sources-present",
+          "passed": true,
+          "detail": "3 named sources."
+        },
+        {
+          "id": "unsupported-conversion-language-absent",
+          "passed": true,
+          "detail": "No prohibited conversion claim appears."
+        }
+      ],
+      "passed": true,
+      "source_ledger": [
+        {
+          "locator": "client-operations/clients/va-claims-edge/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/source-data.json",
+          "sha256": "5cac15e15ff70d2a84f52ab5e8c20e610aaa5b7980bc31b9e40835ef1e9cb045",
+          "bytes": 1560
+        },
+        {
+          "locator": "client-operations/clients/va-claims-edge/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/report.html",
+          "sha256": "d094e5905bba2bb9348bc1ccc33cf535418e19fa766a67655c74f30c040beeea",
+          "bytes": 6406
+        },
+        {
+          "locator": "client-operations/clients/va-claims-edge/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/va-claims-edge-weekly-report-2026-08-17-to-2026-08-23.pdf",
+          "sha256": "4713457dfb069f7bd6bdc916c92af165687fa4bf70185070eb3dd6e258f1b111",
+          "bytes": 191747,
+          "modified_at": "2026-08-24T14:14:50.224Z",
+          "selected_current": true
+        }
+      ],
+      "named_sources": [
+        "Slack #va-claims-edge, Aug 17 to Aug 23",
+        "2026-08-20 portal meeting readiness readback",
+        "Canonical VA Claims Edge workspace and operating context"
+      ],
+      "delivery_readiness": {
+        "state": "pending_exact_route_and_approval",
+        "draft_created": false,
+        "reason": "This shadow verifies report production. Recipient, thread, exact signature, and delivery approval remain outside the graph."
+      },
+      "external_action_attempted": false,
+      "validation_fingerprint": "466aa27177119211d381b463d8c52249e0a63c55ad45853f2af8cad8144d3c92"
+    }
+  ],
+  "summary": {
+    "discovered": 12,
+    "passed": 12,
+    "pending_delivery_route": 12
+  },
+  "external_action_attempted": false
+}

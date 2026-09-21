@@ -1,0 +1,26 @@
+[
+  {
+    "campaign": {
+      "resourceName": "customers/1033715894/campaigns/24183437726",
+      "name": "Search | High Intent | Solano County | 2026-07-30",
+      "id": "24183437726"
+    },
+    "adGroup": {
+      "resourceName": "customers/1033715894/adGroups/208045326628",
+      "id": "208045326628",
+      "name": "Ad group 1"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversionsValue": 0,
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "searchTermView": {
+      "resourceName": "customers/1033715894/searchTermViews/24183437726~208045326628~aG9yaXpvbiBsYW5kc2NhcGUgdmFjYXZpbGxl",
+      "status": "NONE",
+      "searchTerm": "horizon landscape vacaville"
+    }
+  }
+]

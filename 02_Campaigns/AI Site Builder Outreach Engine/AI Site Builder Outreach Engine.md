@@ -17,6 +17,9 @@ Companion notes:
 - [[Pipeline Spec]] — the seven stages, what's built, what's open
 - [[Market Roster]] — the Philly to PA to national ladder
 - [[Batch Runbook]] — how to actually run a weekly batch
+- [[Outreach Copy - Dillon Voice]] — the cold email sequence in Dillon's voice
+- [[Verified Contacts 2026-09-03]] — 20 prospects researched, who is reachable and who must not be contacted
+- [[2026-09-03 - Outreach engine reaches its first prospect]] — the activation goal and the Stage 8 numbers
 
 ## The ask (Mac, 2026-07-09)
 

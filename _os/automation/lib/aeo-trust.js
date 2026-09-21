@@ -264,7 +264,8 @@ function runAeoTrustGate(siteDir, options = {}) {
   const result = analyzeSite(path.resolve(siteDir), profile);
   const stateFile = repoPath('12_Brain/state/aeo-trust-gate.json');
   const reportFile = repoPath('Daily-Briefs/aeo-trust-report.md');
-  writeJson(stateFile, { ...result, profile_file: profileFile, report_file: path.relative(REPO_ROOT, reportFile) });
+  // generated_at is the timestamp contract (12_Brain/schemas/automation-run.json); checked_at stays.
+  writeJson(stateFile, { ...result, generated_at: result.checked_at || nowISO(), profile_file: profileFile, report_file: path.relative(REPO_ROOT, reportFile) });
   ensureDir(path.dirname(reportFile));
   fs.writeFileSync(reportFile, renderReport(result, profileFile), 'utf8');
   enqueue('aeo-trust-gate', 'evaluated', {

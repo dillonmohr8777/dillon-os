@@ -1,0 +1,114 @@
+[
+  {
+    "campaign": {
+      "resourceName": "customers/8145506229/campaigns/23690389385",
+      "name": "Campaign #1",
+      "id": "23690389385"
+    },
+    "metrics": {
+      "clicks": "78",
+      "conversions": 0,
+      "costMicros": "89143851",
+      "impressions": "3133"
+    },
+    "segments": {
+      "device": "DESKTOP"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/8145506229/campaigns/24069334480",
+      "name": "KJB | Search | Local Bridal | Philadelphia",
+      "id": "24069334480"
+    },
+    "metrics": {
+      "clicks": "41",
+      "conversions": 0,
+      "costMicros": "163475040",
+      "impressions": "785"
+    },
+    "segments": {
+      "device": "DESKTOP"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/8145506229/campaigns/23690389385",
+      "name": "Campaign #1",
+      "id": "23690389385"
+    },
+    "metrics": {
+      "clicks": "1080",
+      "conversions": 1,
+      "costMicros": "518129672",
+      "impressions": "39882"
+    },
+    "segments": {
+      "device": "MOBILE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/8145506229/campaigns/24069334480",
+      "name": "KJB | Search | Local Bridal | Philadelphia",
+      "id": "24069334480"
+    },
+    "metrics": {
+      "clicks": "134",
+      "conversions": 0,
+      "costMicros": "463723316",
+      "impressions": "2338"
+    },
+    "segments": {
+      "device": "MOBILE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/8145506229/campaigns/23690389385",
+      "name": "Campaign #1",
+      "id": "23690389385"
+    },
+    "metrics": {
+      "clicks": "612",
+      "conversions": 0,
+      "costMicros": "259749945",
+      "impressions": "34280"
+    },
+    "segments": {
+      "device": "TABLET"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/8145506229/campaigns/24069334480",
+      "name": "KJB | Search | Local Bridal | Philadelphia",
+      "id": "24069334480"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "14"
+    },
+    "segments": {
+      "device": "TABLET"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/8145506229/campaigns/23690389385",
+      "name": "Campaign #1",
+      "id": "23690389385"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "14555540",
+      "impressions": "3259"
+    },
+    "segments": {
+      "device": "CONNECTED_TV"
+    }
+  }
+]

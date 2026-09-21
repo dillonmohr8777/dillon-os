@@ -1,0 +1,245 @@
+{
+  "schema": 1,
+  "business": "Wesley Works Real Estate",
+  "domain": "wesleyworksrealestate.com",
+  "route": "sites/wesley-works-real-estate/",
+  "generatedAt": "2026-08-26T10:15:26.1520860Z",
+  "generator": "Align HCM Image Gen plugin contract",
+  "model": "gpt-image-2.0",
+  "board": {
+    "key": "wesley-works-real-estate",
+    "descriptor": "estate-agent",
+    "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Wesley Works Real Estate. Four distinct but cohesive unlabelled panels in a generic neighborhood real estate practice: a real-estate professional walking with an adult client toward an anonymous suburban home from behind; a close detail of a paper floor plan, measuring tape, and unmarked house keys; a bright home interior being viewed by an adult couple from non-identifying angles; an agent explaining a simple neighborhood map with all labels unreadable. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+    "sourceOutput": "C:/Users/dillo/.codex/generated_images/01a03d5e-c09f-74a0-b82e-14ad3c549703/exec-fc1a9931-3430-44ae-a317-ec5d5363b23a.png",
+    "file": "automation/prospect-radar-next20/generated-stock-library/wesley-works-real-estate.png",
+    "sha256": "91f770a3eedf5031b5ec2509a923e23eb2010fbede96a24c73a33be5cd5deadc",
+    "dimensions": {
+      "width": 1448,
+      "height": 1086
+    }
+  },
+  "treatment": {
+    "palette": [
+      "#F05A28",
+      "#FF6B35",
+      "#0B1D2D",
+      "#071521",
+      "#F4EFE7",
+      "#EAF6FC",
+      "#91D5ED"
+    ],
+    "imageGrain": "Visible refined 35mm film grain authored in the generated board and preserved in every derivative.",
+    "interfaceGrain": {
+      "file": "grain.svg",
+      "sha256": "f8b8b72ee2a84cf2aaa04ce069edaaa459ee61650e76f307254572db67efb813",
+      "opacity": 0.13
+    },
+    "disclosure": "Illustrative generated imagery. These concept visuals do not depict the business, its staff, customers, facility, products, projects, or outcomes."
+  },
+  "outputs": [
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "wesley-works-real-estate",
+      "boardDescriptor": "estate-agent",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/wesley-works-real-estate.png",
+      "sourceSha256": "91f770a3eedf5031b5ec2509a923e23eb2010fbede96a24c73a33be5cd5deadc",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Wesley Works Real Estate. Four distinct but cohesive unlabelled panels in a generic neighborhood real estate practice: a real-estate professional walking with an adult client toward an anonymous suburban home from behind; a close detail of a paper floor plan, measuring tape, and unmarked house keys; a bright home interior being viewed by an adult couple from non-identifying angles; an agent explaining a simple neighborhood map with all labels unreadable. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=1.015:contrast=1.064:brightness=0.000,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "c457fa8bd9aed88d7cf15fb5a49c1da4725288cb6d4141a3caa99e462d2beb88",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "wesley-works-real-estate",
+      "boardDescriptor": "estate-agent",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/wesley-works-real-estate.png",
+      "sourceSha256": "91f770a3eedf5031b5ec2509a923e23eb2010fbede96a24c73a33be5cd5deadc",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Wesley Works Real Estate. Four distinct but cohesive unlabelled panels in a generic neighborhood real estate practice: a real-estate professional walking with an adult client toward an anonymous suburban home from behind; a close detail of a paper floor plan, measuring tape, and unmarked house keys; a bright home interior being viewed by an adult couple from non-identifying angles; an agent explaining a simple neighborhood map with all labels unreadable. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:28,eq=saturation=1.040:contrast=1.028:brightness=0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "cbe528ee79577ba8c5520793fc8cdcb12f10d1c3ceb8b39947d427deb914652d",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "wesley-works-real-estate",
+      "boardDescriptor": "estate-agent",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/wesley-works-real-estate.png",
+      "sourceSha256": "91f770a3eedf5031b5ec2509a923e23eb2010fbede96a24c73a33be5cd5deadc",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Wesley Works Real Estate. Four distinct but cohesive unlabelled panels in a generic neighborhood real estate practice: a real-estate professional walking with an adult client toward an anonymous suburban home from behind; a close detail of a paper floor plan, measuring tape, and unmarked house keys; a bright home interior being viewed by an adult couple from non-identifying angles; an agent explaining a simple neighborhood map with all labels unreadable. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:56,eq=saturation=0.940:contrast=1.082:brightness=-0.018,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "1ce5390c839a17e3d6e382d5fb8b503f3e275b45ab6d12d4e574c8158c09c07e",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "wesley-works-real-estate",
+      "boardDescriptor": "estate-agent",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/wesley-works-real-estate.png",
+      "sourceSha256": "91f770a3eedf5031b5ec2509a923e23eb2010fbede96a24c73a33be5cd5deadc",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Wesley Works Real Estate. Four distinct but cohesive unlabelled panels in a generic neighborhood real estate practice: a real-estate professional walking with an adult client toward an anonymous suburban home from behind; a close detail of a paper floor plan, measuring tape, and unmarked house keys; a bright home interior being viewed by an adult couple from non-identifying angles; an agent explaining a simple neighborhood map with all labels unreadable. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=0.965:contrast=1.046:brightness=-0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "9a5115c7833a3bf80e078100cfcf499118e939b5f5dd9c5b4460b889d5bfc6da",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "wesley-works-real-estate",
+      "boardDescriptor": "estate-agent",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/wesley-works-real-estate.png",
+      "sourceSha256": "91f770a3eedf5031b5ec2509a923e23eb2010fbede96a24c73a33be5cd5deadc",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Wesley Works Real Estate. Four distinct but cohesive unlabelled panels in a generic neighborhood real estate practice: a real-estate professional walking with an adult client toward an anonymous suburban home from behind; a close detail of a paper floor plan, measuring tape, and unmarked house keys; a bright home interior being viewed by an adult couple from non-identifying angles; an agent explaining a simple neighborhood map with all labels unreadable. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:28,eq=saturation=0.990:contrast=1.010:brightness=0.000,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "82eb452969257784634ed90e1cc60e1ee6784300a36bd8c0bacb7eac2789ca67",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "wesley-works-real-estate",
+      "boardDescriptor": "estate-agent",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/wesley-works-real-estate.png",
+      "sourceSha256": "91f770a3eedf5031b5ec2509a923e23eb2010fbede96a24c73a33be5cd5deadc",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Wesley Works Real Estate. Four distinct but cohesive unlabelled panels in a generic neighborhood real estate practice: a real-estate professional walking with an adult client toward an anonymous suburban home from behind; a close detail of a paper floor plan, measuring tape, and unmarked house keys; a bright home interior being viewed by an adult couple from non-identifying angles; an agent explaining a simple neighborhood map with all labels unreadable. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:56,eq=saturation=1.015:contrast=1.064:brightness=0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "4ecd4fcaabd7f16f1301b0e557d23810220c414bc94bdfeeeac37fac99ba3dca",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "wesley-works-real-estate",
+      "boardDescriptor": "estate-agent",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/wesley-works-real-estate.png",
+      "sourceSha256": "91f770a3eedf5031b5ec2509a923e23eb2010fbede96a24c73a33be5cd5deadc",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Wesley Works Real Estate. Four distinct but cohesive unlabelled panels in a generic neighborhood real estate practice: a real-estate professional walking with an adult client toward an anonymous suburban home from behind; a close detail of a paper floor plan, measuring tape, and unmarked house keys; a bright home interior being viewed by an adult couple from non-identifying angles; an agent explaining a simple neighborhood map with all labels unreadable. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:0,eq=saturation=1.040:contrast=1.028:brightness=-0.018,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "a94edeb41240cf930eb898abf1c05136e57456b7b1c570116a266dbb491e0c4f",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "wesley-works-real-estate",
+      "boardDescriptor": "estate-agent",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/wesley-works-real-estate.png",
+      "sourceSha256": "91f770a3eedf5031b5ec2509a923e23eb2010fbede96a24c73a33be5cd5deadc",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Wesley Works Real Estate. Four distinct but cohesive unlabelled panels in a generic neighborhood real estate practice: a real-estate professional walking with an adult client toward an anonymous suburban home from behind; a close detail of a paper floor plan, measuring tape, and unmarked house keys; a bright home interior being viewed by an adult couple from non-identifying angles; an agent explaining a simple neighborhood map with all labels unreadable. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:28,eq=saturation=0.940:contrast=1.082:brightness=-0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "2244825d8a5f4c59f20282187e52da08b2a75aab157c3925cf026e6d832d2155",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "wesley-works-real-estate",
+      "boardDescriptor": "estate-agent",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/wesley-works-real-estate.png",
+      "sourceSha256": "91f770a3eedf5031b5ec2509a923e23eb2010fbede96a24c73a33be5cd5deadc",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Wesley Works Real Estate. Four distinct but cohesive unlabelled panels in a generic neighborhood real estate practice: a real-estate professional walking with an adult client toward an anonymous suburban home from behind; a close detail of a paper floor plan, measuring tape, and unmarked house keys; a bright home interior being viewed by an adult couple from non-identifying angles; an agent explaining a simple neighborhood map with all labels unreadable. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:56,eq=saturation=0.965:contrast=1.046:brightness=0.000,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "9af1ab86d9c6c5fe8ab6f9502dcf5855d11e86ad800a7f653cd5a34ed3022b85",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "wesley-works-real-estate",
+      "boardDescriptor": "estate-agent",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/wesley-works-real-estate.png",
+      "sourceSha256": "91f770a3eedf5031b5ec2509a923e23eb2010fbede96a24c73a33be5cd5deadc",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Wesley Works Real Estate. Four distinct but cohesive unlabelled panels in a generic neighborhood real estate practice: a real-estate professional walking with an adult client toward an anonymous suburban home from behind; a close detail of a paper floor plan, measuring tape, and unmarked house keys; a bright home interior being viewed by an adult couple from non-identifying angles; an agent explaining a simple neighborhood map with all labels unreadable. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:0,eq=saturation=0.990:contrast=1.010:brightness=0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "63f284b3db5b6f176f0ee74d22bfdf8d3ffcd8a5d1c59d29d69c679872287bfb",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "wesley-works-real-estate",
+      "boardDescriptor": "estate-agent",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/wesley-works-real-estate.png",
+      "sourceSha256": "91f770a3eedf5031b5ec2509a923e23eb2010fbede96a24c73a33be5cd5deadc",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Wesley Works Real Estate. Four distinct but cohesive unlabelled panels in a generic neighborhood real estate practice: a real-estate professional walking with an adult client toward an anonymous suburban home from behind; a close detail of a paper floor plan, measuring tape, and unmarked house keys; a bright home interior being viewed by an adult couple from non-identifying angles; an agent explaining a simple neighborhood map with all labels unreadable. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:28,eq=saturation=1.015:contrast=1.064:brightness=-0.018,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "37a4064f0437fef9dc70e19d6364d88b1c66803bfd49567d00a157911f0600d9",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "wesley-works-real-estate",
+      "boardDescriptor": "estate-agent",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/wesley-works-real-estate.png",
+      "sourceSha256": "91f770a3eedf5031b5ec2509a923e23eb2010fbede96a24c73a33be5cd5deadc",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Wesley Works Real Estate. Four distinct but cohesive unlabelled panels in a generic neighborhood real estate practice: a real-estate professional walking with an adult client toward an anonymous suburban home from behind; a close detail of a paper floor plan, measuring tape, and unmarked house keys; a bright home interior being viewed by an adult couple from non-identifying angles; an agent explaining a simple neighborhood map with all labels unreadable. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:56,eq=saturation=1.040:contrast=1.028:brightness=-0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "2ab82367889f8dbba6f5e24d1e3156004f051385bf9343c5f0e20b56fc41f82d",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    }
+  ]
+}

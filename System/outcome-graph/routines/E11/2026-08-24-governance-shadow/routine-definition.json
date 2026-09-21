@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "routine_id": "E11",
+  "generated_at": "2026-08-25T00:37:00.889Z",
+  "source_set_sha256": "72a5c74d2a761527a36ea78fcab22e4c52cf832cb6cf95016cf15687dd9393b1",
+  "definition": {
+    "routine_id_proposal": "WEB-DESIGN-CLOSED-LOOP",
+    "trigger": "A substantive web or UI task has one exact repository, named surface, resolved mode, complete brief, hash-bound product/design authority, and local implementation authority.",
+    "finish_line": "The isolated candidate passes authority, brief, build, responsive, interaction, accessibility, performance, content-truth, design-system, and independent-craft gates; desktop and mobile evidence is hash-bound; the repair ledger is closed; terminal replay passes; adoption and deployment remain separate.",
+    "inputs": [
+      "exact repository and branch",
+      "PRODUCT.md",
+      "DESIGN.md",
+      "surface brief",
+      "approved visual authority",
+      "current implementation or greenfield seed"
+    ],
+    "steps": [
+      "bind authority",
+      "build in isolation",
+      "render desktop and mobile",
+      "independent critique",
+      "feed exact defects to maker",
+      "bounded repair",
+      "terminal re-render",
+      "proposal-only learning"
+    ],
+    "outputs": [
+      "candidate files",
+      "desktop and mobile captures",
+      "defect ledger",
+      "final manifest",
+      "terminal receipt",
+      "learning proposal"
+    ],
+    "systems": [
+      "project repository",
+      "Impeccable preflight and detector",
+      "Playwright or browser QA",
+      "Outcome Graph durable state",
+      "Marketing Chief approval path"
+    ],
+    "client_scope": "one exact client or internal surface per run; no cross-client fan-in",
+    "approvals": [
+      "independent production reviewer",
+      "adoption into source project",
+      "exact mapped deployment"
+    ],
+    "never_record": [
+      "passwords",
+      "tokens",
+      "cookies",
+      "one-time codes",
+      "raw private contacts",
+      "unredacted cross-client source material"
+    ],
+    "forbidden_actions": [
+      "canonical queue write",
+      "send",
+      "publish",
+      "deploy",
+      "spend",
+      "account change",
+      "secret access"
+    ]
+  },
+  "trigger_finish_line_fingerprint": "21b69ca047b1f55146a6cf5e19a28206d5757c15b12e9150c20817bd91b722e5",
+  "overlap_analysis": {
+    "overlapping_stage_routines": [
+      "D13",
+      "D14",
+      "D24",
+      "D25",
+      "W05"
+    ],
+    "unique_delta": "This routine owns the feedback edge from rendered checker defects into the next maker attempt plus terminal re-render and production-review eligibility.",
+    "duplicate": false
+  },
+  "authority": {
+    "read_only": true,
+    "proposal_only": true,
+    "external_action_attempted": false,
+    "canonical_write_attempted": false,
+    "provider_mutation_attempted": false,
+    "permission_change_attempted": false,
+    "deletion_attempted": false,
+    "schedule_change_attempted": false,
+    "billing_change_attempted": false,
+    "record_move_attempted": false
+  }
+}

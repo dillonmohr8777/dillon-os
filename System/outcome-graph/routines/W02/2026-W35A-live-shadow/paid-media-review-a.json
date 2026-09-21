@@ -1,0 +1,628 @@
+{
+  "schema_version": 1,
+  "routine_id": "W02",
+  "pass": "A",
+  "cadence_bucket": "2026-W35A",
+  "review_date": "2026-08-24",
+  "objective": "Classify the first weekly paid-media review for every exact client-account-channel lane from current delivery and downstream attribution evidence without mutating any provider, CRM, delivery surface, or canonical queue.",
+  "source_set_sha256": "d9999ce6c6b447b97dca8c7fd68c14e8b0981ef414085b0a05ce49a5a94f2928",
+  "manifest_diagnostics": {
+    "declared_status": "ready-for-read-only-review",
+    "lane_count": 7,
+    "non_verified_check_count": 56,
+    "false_ready_detected": true,
+    "interpretation": "Manifest readiness authorizes evidence collection only; it is not an outcome-complete paid-media review."
+  },
+  "lanes": [
+    {
+      "schema_version": 1,
+      "routine_id": "W02",
+      "pass": "A",
+      "lane_id": "google-ads--fresh-blends-kwik-trip",
+      "client_id": "fresh-blends-kwik-trip",
+      "platform": "google-ads",
+      "isolation_key": "W02:fresh-blends-kwik-trip:google-ads:2026-W35A",
+      "review_window": null,
+      "expected_delivery_state": "paused-unless-live-readback",
+      "historical_state_as_of": "2026-07-16",
+      "route_binding": {
+        "ready": true,
+        "config_sha256": "be5f5b1384c8b9c02b6ad534bc70737406b230b1b1f0b2279b83f9b59585714d",
+        "account_reference_sha256": "8407719bb83bd3ab19af75de701e35ff7069cae056cdd011f558e9b320047271",
+        "access_state": "resolved_authorized_read_only",
+        "access_system_sha256": "c7d7550e4d2c41e27648e2969dd0f86ac3b9cd1b104fd6bbd1b147efdd47d0d3"
+      },
+      "account_binding": {
+        "state": "unverified",
+        "exact": false,
+        "provider_account_sha256": null,
+        "candidate_account_sha256s": []
+      },
+      "source_freshness": {
+        "fresh": true,
+        "age_hours": 0.182,
+        "observed_at": "2026-08-24T23:01:56.736Z"
+      },
+      "d17": {
+        "passed": false,
+        "checks": {
+          "session_account": "blocked",
+          "delivery_pacing": "blocked",
+          "landing_page_health": "pending",
+          "search-terms-and-negatives": "blocked",
+          "change_history": "blocked",
+          "readback_freshness": "blocked"
+        },
+        "reporting_window_explicit": false,
+        "provider_mutation_attempted": false
+      },
+      "d18": {
+        "passed": false,
+        "conversion_tracking_status": "blocked",
+        "attribution_status": "pending_validation",
+        "conversion_definition_present": false,
+        "attribution_window_present": false,
+        "latency_state": "unverified",
+        "tracking_health": "unverified",
+        "downstream_source_bound": false,
+        "downstream_reconciled": false,
+        "client_language": "Conversion reporting is pending validation"
+      },
+      "platform_claims": [],
+      "provider_drafts": {
+        "observed": false,
+        "count": null,
+        "mutation_attempted": false
+      },
+      "proposals": [],
+      "review_ready": false,
+      "outcome_state": "held_pending_evidence",
+      "findings": [
+        "d17-change_history-blocked",
+        "d17-delivery_pacing-blocked",
+        "d17-landing_page_health-pending",
+        "d17-readback_freshness-blocked",
+        "d17-search-terms-and-negatives-blocked",
+        "d17-session_account-blocked",
+        "d18-attribution-and-downstream-pending-validation",
+        "d18-conversion-tracking-and-dedup-not-verified",
+        "exact-provider-account-unverified",
+        "reporting-window-or-timezone-missing"
+      ],
+      "authority": {
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "provider_mutation_attempted": false,
+        "crm_mutation_attempted": false,
+        "canonical_write_attempted": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W02",
+      "pass": "A",
+      "lane_id": "google-ads--kimberly-james-bridal",
+      "client_id": "kimberly-james-bridal",
+      "platform": "google-ads",
+      "isolation_key": "W02:kimberly-james-bridal:google-ads:2026-W35A",
+      "review_window": null,
+      "expected_delivery_state": "active",
+      "historical_state_as_of": "2026-07-16",
+      "route_binding": {
+        "ready": true,
+        "config_sha256": "cdace6d28fcae812ece635810347eaccb6560ebbfc1d1b005390791fa8b82d6a",
+        "account_reference_sha256": "c2681618a4afb0d5fd4fb3c2d3c93d82b00c3269d615091e7f3d76d4b288b2b0",
+        "access_state": "resolved_authorized_read_only",
+        "access_system_sha256": "7805d96540063374516ad40b749c0b1e9ad6ee58e5c8269ba16c0ee696ef307a"
+      },
+      "account_binding": {
+        "state": "exact",
+        "exact": true,
+        "provider_account_sha256": "5a12d8241b68162141eeae928b7d12271f22487dfb028c42a8c91de155f87468",
+        "candidate_account_sha256s": []
+      },
+      "source_freshness": {
+        "fresh": true,
+        "age_hours": 0.182,
+        "observed_at": "2026-08-24T23:01:56.736Z"
+      },
+      "d17": {
+        "passed": false,
+        "checks": {
+          "session_account": "verified",
+          "delivery_pacing": "pending",
+          "landing_page_health": "pending",
+          "search-terms-and-negatives": "pending",
+          "change_history": "pending",
+          "readback_freshness": "partial"
+        },
+        "reporting_window_explicit": false,
+        "provider_mutation_attempted": false
+      },
+      "d18": {
+        "passed": false,
+        "conversion_tracking_status": "pending",
+        "attribution_status": "pending_validation",
+        "conversion_definition_present": false,
+        "attribution_window_present": false,
+        "latency_state": "unverified",
+        "tracking_health": "unverified",
+        "downstream_source_bound": false,
+        "downstream_reconciled": false,
+        "client_language": "Conversion reporting is pending validation"
+      },
+      "platform_claims": [],
+      "provider_drafts": {
+        "observed": false,
+        "count": null,
+        "mutation_attempted": false
+      },
+      "proposals": [],
+      "review_ready": false,
+      "outcome_state": "held_pending_evidence",
+      "findings": [
+        "d17-change_history-pending",
+        "d17-delivery_pacing-pending",
+        "d17-landing_page_health-pending",
+        "d17-readback_freshness-partial",
+        "d17-search-terms-and-negatives-pending",
+        "d18-attribution-and-downstream-pending-validation",
+        "d18-conversion-tracking-and-dedup-not-verified",
+        "reporting-window-or-timezone-missing"
+      ],
+      "authority": {
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "provider_mutation_attempted": false,
+        "crm_mutation_attempted": false,
+        "canonical_write_attempted": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W02",
+      "pass": "A",
+      "lane_id": "google-ads--omega-landscaping",
+      "client_id": "omega-landscaping",
+      "platform": "google-ads",
+      "isolation_key": "W02:omega-landscaping:google-ads:2026-W35A",
+      "review_window": null,
+      "expected_delivery_state": "active",
+      "historical_state_as_of": "2026-07-16",
+      "route_binding": {
+        "ready": true,
+        "config_sha256": "08c23d83be8f4be1eaadc34c4c32d8d3a9e2cceec56ade5adfe7639cffb21cc8",
+        "account_reference_sha256": "28362f51e2226b493a2e231f809344e7045e8065ed912d25714897e9e87ca0f9",
+        "access_state": "resolved_authorized_read_only",
+        "access_system_sha256": "3c54fac39eabab2870744be70c93b120b675323634f2d92a34fcb44a2175186a"
+      },
+      "account_binding": {
+        "state": "exact",
+        "exact": true,
+        "provider_account_sha256": "7ce89ae5bb4b719b356f3831ae0dbab513c9f47b6aa825362b560932fe22441d",
+        "candidate_account_sha256s": []
+      },
+      "source_freshness": {
+        "fresh": true,
+        "age_hours": 0.182,
+        "observed_at": "2026-08-24T23:01:56.736Z"
+      },
+      "d17": {
+        "passed": false,
+        "checks": {
+          "session_account": "verified",
+          "delivery_pacing": "pending",
+          "landing_page_health": "pending",
+          "search-terms-and-negatives": "pending",
+          "change_history": "pending",
+          "readback_freshness": "partial"
+        },
+        "reporting_window_explicit": false,
+        "provider_mutation_attempted": false
+      },
+      "d18": {
+        "passed": false,
+        "conversion_tracking_status": "pending",
+        "attribution_status": "pending_validation",
+        "conversion_definition_present": false,
+        "attribution_window_present": false,
+        "latency_state": "unverified",
+        "tracking_health": "unverified",
+        "downstream_source_bound": false,
+        "downstream_reconciled": false,
+        "client_language": "Conversion reporting is pending validation"
+      },
+      "platform_claims": [],
+      "provider_drafts": {
+        "observed": false,
+        "count": null,
+        "mutation_attempted": false
+      },
+      "proposals": [],
+      "review_ready": false,
+      "outcome_state": "held_pending_evidence",
+      "findings": [
+        "d17-change_history-pending",
+        "d17-delivery_pacing-pending",
+        "d17-landing_page_health-pending",
+        "d17-readback_freshness-partial",
+        "d17-search-terms-and-negatives-pending",
+        "d18-attribution-and-downstream-pending-validation",
+        "d18-conversion-tracking-and-dedup-not-verified",
+        "reporting-window-or-timezone-missing"
+      ],
+      "authority": {
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "provider_mutation_attempted": false,
+        "crm_mutation_attempted": false,
+        "canonical_write_attempted": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W02",
+      "pass": "A",
+      "lane_id": "google-ads--onsite-concrete-landscape",
+      "client_id": "onsite-concrete-landscape",
+      "platform": "google-ads",
+      "isolation_key": "W02:onsite-concrete-landscape:google-ads:2026-W35A",
+      "review_window": null,
+      "expected_delivery_state": "active",
+      "historical_state_as_of": "2026-07-16",
+      "route_binding": {
+        "ready": true,
+        "config_sha256": "efdc1e47aed5fb061f450328d12d486e3ad0e9d8ec4f424456b28261baf93ddc",
+        "account_reference_sha256": "c787ea2bf0c933041321d291267600c67da39c7bc48251e3f822fbbe7d208386",
+        "access_state": "resolved_authorized_read_only",
+        "access_system_sha256": "afaead19fea1c6760616e330761e182a33560d22eae2233126ff8fa2d966849b"
+      },
+      "account_binding": {
+        "state": "exact",
+        "exact": true,
+        "provider_account_sha256": "0de066d1bfbbceb8ae1fd12ad7b3d79d8077470d90eab20718e2fa4d0587211e",
+        "candidate_account_sha256s": []
+      },
+      "source_freshness": {
+        "fresh": true,
+        "age_hours": 0.182,
+        "observed_at": "2026-08-24T23:01:56.736Z"
+      },
+      "d17": {
+        "passed": false,
+        "checks": {
+          "session_account": "verified",
+          "delivery_pacing": "pending",
+          "landing_page_health": "pending",
+          "search-terms-and-negatives": "pending",
+          "change_history": "pending",
+          "readback_freshness": "partial"
+        },
+        "reporting_window_explicit": false,
+        "provider_mutation_attempted": false
+      },
+      "d18": {
+        "passed": false,
+        "conversion_tracking_status": "pending",
+        "attribution_status": "pending_validation",
+        "conversion_definition_present": false,
+        "attribution_window_present": false,
+        "latency_state": "unverified",
+        "tracking_health": "unverified",
+        "downstream_source_bound": false,
+        "downstream_reconciled": false,
+        "client_language": "Conversion reporting is pending validation"
+      },
+      "platform_claims": [],
+      "provider_drafts": {
+        "observed": false,
+        "count": null,
+        "mutation_attempted": false
+      },
+      "proposals": [],
+      "review_ready": false,
+      "outcome_state": "held_pending_evidence",
+      "findings": [
+        "d17-change_history-pending",
+        "d17-delivery_pacing-pending",
+        "d17-landing_page_health-pending",
+        "d17-readback_freshness-partial",
+        "d17-search-terms-and-negatives-pending",
+        "d18-attribution-and-downstream-pending-validation",
+        "d18-conversion-tracking-and-dedup-not-verified",
+        "reporting-window-or-timezone-missing"
+      ],
+      "authority": {
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "provider_mutation_attempted": false,
+        "crm_mutation_attempted": false,
+        "canonical_write_attempted": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W02",
+      "pass": "A",
+      "lane_id": "google-ads--replenish-7-eleven",
+      "client_id": "replenish-7-eleven",
+      "platform": "google-ads",
+      "isolation_key": "W02:replenish-7-eleven:google-ads:2026-W35A",
+      "review_window": null,
+      "expected_delivery_state": "active-four-san-diego-campaigns",
+      "historical_state_as_of": "2026-07-26",
+      "route_binding": {
+        "ready": true,
+        "config_sha256": "4e9c87e453fe5bea8b7ce58e02aeb7a992055f8b0962fba767a75de295321fe8",
+        "account_reference_sha256": "8a52747e5fcb35d127d6f9792c2f9ea9535bdc23a64e26b29ec161ed6d86ab0a",
+        "access_state": "resolved_authorized_read_only",
+        "access_system_sha256": "6ea2333699bf49a79ba010959e24980db4fe41c9536ba35773f9d0dc7d444ca1"
+      },
+      "account_binding": {
+        "state": "exact",
+        "exact": true,
+        "provider_account_sha256": "90a6a66370175821d88c61e1185bf2a7a69d3e9b5654a5d144acf6bdbdc70a59",
+        "candidate_account_sha256s": []
+      },
+      "source_freshness": {
+        "fresh": true,
+        "age_hours": 0.182,
+        "observed_at": "2026-08-24T23:01:56.736Z"
+      },
+      "d17": {
+        "passed": false,
+        "checks": {
+          "session_account": "verified",
+          "delivery_pacing": "pending",
+          "landing_page_health": "pending",
+          "search-terms-and-negatives": "pending",
+          "change_history": "pending",
+          "readback_freshness": "partial"
+        },
+        "reporting_window_explicit": false,
+        "provider_mutation_attempted": false
+      },
+      "d18": {
+        "passed": false,
+        "conversion_tracking_status": "pending",
+        "attribution_status": "pending_validation",
+        "conversion_definition_present": false,
+        "attribution_window_present": false,
+        "latency_state": "unverified",
+        "tracking_health": "unverified",
+        "downstream_source_bound": false,
+        "downstream_reconciled": false,
+        "client_language": "Conversion reporting is pending validation"
+      },
+      "platform_claims": [],
+      "provider_drafts": {
+        "observed": false,
+        "count": null,
+        "mutation_attempted": false
+      },
+      "proposals": [],
+      "review_ready": false,
+      "outcome_state": "held_pending_evidence",
+      "findings": [
+        "d17-change_history-pending",
+        "d17-delivery_pacing-pending",
+        "d17-landing_page_health-pending",
+        "d17-readback_freshness-partial",
+        "d17-search-terms-and-negatives-pending",
+        "d18-attribution-and-downstream-pending-validation",
+        "d18-conversion-tracking-and-dedup-not-verified",
+        "reporting-window-or-timezone-missing"
+      ],
+      "authority": {
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "provider_mutation_attempted": false,
+        "crm_mutation_attempted": false,
+        "canonical_write_attempted": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W02",
+      "pass": "A",
+      "lane_id": "meta-ads--kimberly-james-bridal",
+      "client_id": "kimberly-james-bridal",
+      "platform": "meta-ads",
+      "isolation_key": "W02:kimberly-james-bridal:meta-ads:2026-W35A",
+      "review_window": {
+        "start": "2026-07-25",
+        "end": "2026-08-23",
+        "timezone": "America/New_York"
+      },
+      "expected_delivery_state": "active",
+      "historical_state_as_of": "2026-07-16",
+      "route_binding": {
+        "ready": true,
+        "config_sha256": "cdace6d28fcae812ece635810347eaccb6560ebbfc1d1b005390791fa8b82d6a",
+        "account_reference_sha256": "1fd60c5f3aef0bacc8def54821c7b4dd0ca1836be963ddbb539ccce78341a74c",
+        "access_state": "blocked_or_incomplete",
+        "access_system_sha256": "95550b904109fd5b66144f78b13c54f93fa962ec6f61da46dc94c784c92295ed"
+      },
+      "account_binding": {
+        "state": "exact",
+        "exact": true,
+        "provider_account_sha256": "6582c950246c525d53150adaf5170ee1b68806cdd383af38bedad8a1b954d2f5",
+        "candidate_account_sha256s": []
+      },
+      "source_freshness": {
+        "fresh": true,
+        "age_hours": 0.182,
+        "observed_at": "2026-08-24T23:01:56.736Z"
+      },
+      "d17": {
+        "passed": false,
+        "checks": {
+          "session_account": "verified",
+          "delivery_pacing": "partial",
+          "landing_page_health": "pending",
+          "creative-fatigue-and-placements": "pending",
+          "change_history": "pending",
+          "readback_freshness": "partial"
+        },
+        "reporting_window_explicit": true,
+        "provider_mutation_attempted": false
+      },
+      "d18": {
+        "passed": false,
+        "conversion_tracking_status": "pending",
+        "attribution_status": "pending_validation",
+        "conversion_definition_present": false,
+        "attribution_window_present": false,
+        "latency_state": "unverified",
+        "tracking_health": "unverified",
+        "downstream_source_bound": false,
+        "downstream_reconciled": false,
+        "client_language": "Conversion reporting is pending validation"
+      },
+      "platform_claims": [
+        {
+          "metric": "form_leads",
+          "value": 24,
+          "definition_label": "Platform-reported form leads",
+          "source_of_truth": false,
+          "downstream_reconciled": false
+        }
+      ],
+      "provider_drafts": {
+        "observed": true,
+        "count": 1,
+        "mutation_attempted": false
+      },
+      "proposals": [],
+      "review_ready": false,
+      "outcome_state": "held_pending_evidence",
+      "findings": [
+        "access-registry-account-read-capability-missing",
+        "access-registry-insights-read-capability-missing",
+        "d17-change_history-pending",
+        "d17-creative-fatigue-and-placements-pending",
+        "d17-delivery_pacing-partial",
+        "d17-landing_page_health-pending",
+        "d17-readback_freshness-partial",
+        "d18-attribution-and-downstream-pending-validation",
+        "d18-conversion-tracking-and-dedup-not-verified"
+      ],
+      "authority": {
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "provider_mutation_attempted": false,
+        "crm_mutation_attempted": false,
+        "canonical_write_attempted": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "routine_id": "W02",
+      "pass": "A",
+      "lane_id": "meta-ads--shadow-heating-cooling",
+      "client_id": "shadow-heating-cooling",
+      "platform": "meta-ads",
+      "isolation_key": "W02:shadow-heating-cooling:meta-ads:2026-W35A",
+      "review_window": null,
+      "expected_delivery_state": "off-excluded-from-client-facing-reporting",
+      "historical_state_as_of": "2026-07-27",
+      "route_binding": {
+        "ready": true,
+        "config_sha256": "dce37f02bdae8d87a80032cf2393f7d31b7416fa7cefffa87dd0f481e6af7b63",
+        "account_reference_sha256": "d23238bc9403df187cd57977da7ab541d5d05879ae8cb10c8cfea88cc108d9b9",
+        "access_state": "blocked_or_incomplete",
+        "access_system_sha256": "775f445ddba32dccef475066af9b5cad90aa9b7130894c0cf28e666172f48729"
+      },
+      "account_binding": {
+        "state": "ambiguous",
+        "exact": false,
+        "provider_account_sha256": null,
+        "candidate_account_sha256s": [
+          "67751e358e907676c55ca5429bf5acd317612bb35b94507e1036b7aae796da9e",
+          "8cb1924bc8d90b6e8e5f22537ec626df8e2a313871786580628ab6f80740501f"
+        ]
+      },
+      "source_freshness": {
+        "fresh": true,
+        "age_hours": 0.182,
+        "observed_at": "2026-08-24T23:01:56.736Z"
+      },
+      "d17": {
+        "passed": false,
+        "checks": {
+          "session_account": "blocked",
+          "delivery_pacing": "blocked",
+          "landing_page_health": "pending",
+          "creative-fatigue-and-placements": "blocked",
+          "change_history": "blocked",
+          "readback_freshness": "blocked"
+        },
+        "reporting_window_explicit": false,
+        "provider_mutation_attempted": false
+      },
+      "d18": {
+        "passed": false,
+        "conversion_tracking_status": "blocked",
+        "attribution_status": "pending_validation",
+        "conversion_definition_present": false,
+        "attribution_window_present": false,
+        "latency_state": "unverified",
+        "tracking_health": "unverified",
+        "downstream_source_bound": false,
+        "downstream_reconciled": false,
+        "client_language": "Conversion reporting is pending validation"
+      },
+      "platform_claims": [],
+      "provider_drafts": {
+        "observed": false,
+        "count": null,
+        "mutation_attempted": false
+      },
+      "proposals": [],
+      "review_ready": false,
+      "outcome_state": "held_pending_evidence",
+      "findings": [
+        "access-registry-account-read-capability-missing",
+        "access-registry-insights-read-capability-missing",
+        "d17-change_history-blocked",
+        "d17-creative-fatigue-and-placements-blocked",
+        "d17-delivery_pacing-blocked",
+        "d17-landing_page_health-pending",
+        "d17-readback_freshness-blocked",
+        "d17-session_account-blocked",
+        "d18-attribution-and-downstream-pending-validation",
+        "d18-conversion-tracking-and-dedup-not-verified",
+        "exact-provider-account-ambiguous",
+        "reporting-window-or-timezone-missing"
+      ],
+      "authority": {
+        "proposal_only": true,
+        "external_action_attempted": false,
+        "provider_mutation_attempted": false,
+        "crm_mutation_attempted": false,
+        "canonical_write_attempted": false
+      }
+    }
+  ],
+  "summary": {
+    "lanes": 7,
+    "exact_account_bindings": 5,
+    "d17_passed": 0,
+    "d18_passed": 0,
+    "review_ready": 0,
+    "held": 7,
+    "conversion_reporting_pending_validation": 7,
+    "unpublished_provider_drafts_observed": 1,
+    "account_ambiguities": 1,
+    "proposal_count": 0
+  },
+  "workflow_ready": false,
+  "authority": {
+    "read_only": true,
+    "proposal_only": true,
+    "external_action_attempted": false,
+    "provider_mutation_attempted": false,
+    "crm_mutation_attempted": false,
+    "canonical_write_attempted": false
+  }
+}

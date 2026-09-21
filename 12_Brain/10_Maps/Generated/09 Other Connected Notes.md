@@ -4,7 +4,7 @@ status: active
 generated: true
 generated_by: Update-SecondBrainMaps
 map_type: domain
-updated: 2026-09-02
+updated: 2026-09-08
 tags:
   - brain
   - map
@@ -21,6 +21,19 @@ Visible notes that do not yet belong to a stable operating domain.
 
 ## _archive
 
+- [[_archive/01_Clients/Fagan Painting/Client Intelligence Overlay|Client Intelligence Overlay]]
+- [[_archive/01_Clients/Fagan Painting/overview|overview]]
+- [[_archive/01_Clients/Jeff Hozias|Jeff Hozias]]
+- [[_archive/01_Clients/Shadow HVAC/active-campaigns|active-campaigns]]
+- [[_archive/01_Clients/Shadow HVAC/Agent Memory|Agent Memory]]
+- [[_archive/01_Clients/Shadow HVAC/brand-guidelines|brand-guidelines]]
+- [[_archive/01_Clients/Shadow HVAC/Client Intelligence Overlay|Client Intelligence Overlay]]
+- [[_archive/01_Clients/Shadow HVAC/contact-info|contact-info]]
+- [[_archive/01_Clients/Shadow HVAC/content-calendar|content-calendar]]
+- [[_archive/01_Clients/Shadow HVAC/notes|notes]]
+- [[_archive/01_Clients/Shadow HVAC/overview|overview]]
+- [[_archive/01_Clients/Shadow HVAC/Reporting Log|Reporting Log]]
+- [[_archive/01_Clients/Shadow HVAC/website/README|README]]
 - [[_archive/05_Book/characters|characters]]
 - [[_archive/05_Book/email-growth-tracker|email-growth-tracker]]
 - [[_archive/05_Book/guest-post-pipeline|guest-post-pipeline]]
@@ -40,10 +53,6 @@ Visible notes that do not yet belong to a stable operating domain.
 - [[.github/skills/dillon-frontend-maker/SKILL|SKILL]]
 - [[.github/skills/dillon-independent-web-checker/SKILL|SKILL]]
 - [[.github/skills/dillon-plan-grill/SKILL|SKILL]]
-
-## Vault front doors
-
-- [[GROK-HANDOFF-DILLON-OS|GROK-HANDOFF-DILLON-OS]]
 
 ## 08_Prospects
 

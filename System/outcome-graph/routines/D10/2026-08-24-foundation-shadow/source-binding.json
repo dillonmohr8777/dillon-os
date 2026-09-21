@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "routine_id": "D10",
+  "generated_at": "2026-08-24T23:48:48.772Z",
+  "request_fingerprint": "outcome-graph-replica-and-loop-engineering",
+  "source_set_sha256": "bee6d7037763d45601274702c12c8e31ad280fed7e97757744fc5930b1d39065",
+  "sources": [
+    {
+      "locator": "_os/README.md",
+      "sha256": "e1cb9e89f7154e2ffd2c9e33bea8d7c0e37ec3c5b72f653523b8dde9e021c517",
+      "bytes": 2860
+    },
+    {
+      "locator": "11_Agents/claude-operating-team.json",
+      "sha256": "05e6a21e884f4a6748b824ef5d58f4c786861ce892a2c8c3514ebb8b7cf8677e",
+      "bytes": 415812
+    },
+    {
+      "locator": "AGENTS.md",
+      "sha256": "c5a7c091a395855ebb9f9481b679c1c243c51a6f8ab8927b12f709db0dc230ff",
+      "bytes": 11085
+    },
+    {
+      "locator": "automation/prospect-radar-next20/AUTOMATION.md",
+      "sha256": "1b13597002febc5b6fc952d0b059d70cd80111fa5fa952edc4752a8c935edb4b",
+      "bytes": 2087
+    },
+    {
+      "locator": "automation/prospect-radar-next20/DESIGN.md",
+      "sha256": "d503a937aac0e034d755ff7bfe94c85554952074492b296ea872a253afc50b1e",
+      "bytes": 2564
+    },
+    {
+      "locator": "automation/prospect-radar-next20/PRODUCT.md",
+      "sha256": "90d9bceeaafa613f3e7498d276f9b474ee9b4377102340be55cf57548e803eda",
+      "bytes": 3070
+    },
+    {
+      "locator": "System/outcome-graph/factory-2026-08-24-run-1-durable/run-receipt.json",
+      "sha256": "f497ab86836fe80627a149cf8ad8e7b6fead55d83a03b3291d33a866626ded18",
+      "bytes": 24403
+    },
+    {
+      "locator": "System/outcome-graph/factory-2026-08-24-run-1-durable/W05-website-factory-readiness.json",
+      "sha256": "4cbc7e46def665bc346c32375f21eea3a4ecdebc08a9b36732feb999a9e4de58",
+      "bytes": 8909
+    },
+    {
+      "locator": "System/outcome-graph/source-snapshots/impeccable-context-probe-2026-08-24.json",
+      "sha256": "43cfa9c9f4d5cbda97337ef6d2c407703b9ed4b440c51623740990d722c43897",
+      "bytes": 1173
+    },
+    {
+      "locator": "System/outcome-graph/source-snapshots/outcome-graph-objective-2026-08-24.json",
+      "sha256": "c4f66a749c2795f303402fa87c21b7a7eb937f3b17892184a57ee245c5007b33",
+      "bytes": 2043
+    }
+  ],
+  "authority": {
+    "read_only": true,
+    "proposal_only": true,
+    "external_action_attempted": false,
+    "canonical_write_attempted": false,
+    "provider_mutation_attempted": false,
+    "deployment_attempted": false,
+    "worktree_mutation_attempted": false,
+    "ui_mutation_attempted": false,
+    "acceptance_contract_changed": false
+  }
+}

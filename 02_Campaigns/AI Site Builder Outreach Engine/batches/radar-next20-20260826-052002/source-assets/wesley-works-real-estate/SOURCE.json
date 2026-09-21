@@ -1,0 +1,78 @@
+{
+  "sourceUrl": "https://wesleyworksrealestate.com/",
+  "finalUrl": "https://wesleyworksrealestate.com/",
+  "sourceDomain": "wesleyworksrealestate.com",
+  "httpStatus": 200,
+  "contentType": "",
+  "pageSha256": "b774d9c33eaa482de41d98a0e79e69cd73e145ec3da126e6d438fe9061ee9613",
+  "title": "Wesley Works Real Estate - Buy & Sell in Emmaus, PA - #1 Realtor",
+  "description": "\"Wesley",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "wesley",
+      "works",
+      "real",
+      "estate"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260826-052002\\preflight\\wesley-works-real-estate\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://wesleyworksrealestate.com/wp-content/uploads/2016/01/wesley-works-logo.png",
+    "sourceEvidence": "JSON-LD logo URL",
+    "type": "png",
+    "dimensions": {
+      "width": 684,
+      "height": 226
+    },
+    "sha256": "8182f6a5d1fa5e93f784770a7d15263a65f66193e4f39ed09e1457dd3430a1a2",
+    "sourceSha256": "544258bb4b4389c3be0c8c32762e9b3e5f2023353a2d1033747884f5ee581fc0",
+    "sourceType": "png",
+    "sourceFileName": "logo-source.png",
+    "transformation": "flat border color #000000 removed with deterministic FFmpeg colorkey; geometry unchanged",
+    "borderSpread": 0,
+    "alpha": {
+      "ok": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "alphaAverage": 34.7374,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 25078
+  },
+  "references": [],
+  "contact": {
+    "phone": "610.928.1000",
+    "address": "",
+    "city": "",
+    "phoneSource": "official tel link",
+    "addressSource": null
+  },
+  "visualReferenceFallback": "No usable first-party photography was exposed by the legacy source. Use only disclosed Align Image Gen concept imagery.",
+  "referenceFailures": [
+    {
+      "url": "https://wesleyworksrealestate.com/350",
+      "reason": "HTTP 403; curl: curl: (22) The requested URL returned error: 404"
+    },
+    {
+      "url": "https://wesleyworksrealestate.com/65",
+      "reason": "HTTP 403; curl: curl: (22) The requested URL returned error: 404"
+    },
+    {
+      "url": "https://wesleyworksrealestate.com/image/png",
+      "reason": "HTTP 403; curl: curl: (22) The requested URL returned error: 404"
+    },
+    {
+      "url": "https://www.facebook.com/tr?id=619597451958498&ev=PageView&noscript=1",
+      "reason": "unsupported reference type unknown"
+    }
+  ],
+  "brandColors": [
+    "#ffcf36",
+    "#003388"
+  ],
+  "checkedAt": "2026-08-26T09:34:59.258Z"
+}

@@ -1,10 +1,14 @@
 ---
 tags: [concept, prediction]
+source: "12_Brain/01_Captures/2026-07-04 - lost-clients-confirmation-2 (capture never landed; unverified)"
+updated: 2026-09-02
 source: "[[12_Brain/01_Captures/2026-07-04 - lost-clients-confirmation-2]]"
 updated: 2026-09-01
 note_type: concept
 status: active
+verification_status: unverified
 created: 2026-07-04
+source_refs: ["12_Brain/01_Captures/2026-07-04 - lost-clients-confirmation-2 (capture never landed; unverified)"]
 source_refs:
   - "[[12_Brain/01_Captures/2026-07-04 - lost-clients-confirmation-2]]"
   - "[[12_Brain/03_Concepts/Specialist Forecast Router]]"

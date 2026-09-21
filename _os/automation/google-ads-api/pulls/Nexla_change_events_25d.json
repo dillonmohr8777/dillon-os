@@ -1,0 +1,1102 @@
+[
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1786986780675864~0~0",
+      "changeDateTime": "2026-08-17 12:13:00.675864",
+      "changeResourceType": "CAMPAIGN",
+      "changeResourceName": "customers/7917802207/campaigns/22038365681",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "coralie@coraliewood.com",
+      "resourceChangeOperation": "UPDATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787069675343119~0~0",
+      "changeDateTime": "2026-08-18 11:14:35.343119",
+      "changeResourceType": "AD_GROUP_AD",
+      "changeResourceName": "customers/7917802207/adGroupAds/195300844695~805329874711",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "coralie@coraliewood.com",
+      "resourceChangeOperation": "REMOVE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787069726497871~0~0",
+      "changeDateTime": "2026-08-18 11:15:26.497871",
+      "changeResourceType": "AD_GROUP_AD",
+      "changeResourceName": "customers/7917802207/adGroupAds/195300844695~821391777734",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "coralie@coraliewood.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787069751042774~0~0",
+      "changeDateTime": "2026-08-18 11:15:51.042774",
+      "changeResourceType": "AD",
+      "changeResourceName": "customers/7917802207/ads/821391777734",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "coralie@coraliewood.com",
+      "resourceChangeOperation": "UPDATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787069758447722~0~0",
+      "changeDateTime": "2026-08-18 11:15:58.447722",
+      "changeResourceType": "AD_GROUP_AD",
+      "changeResourceName": "customers/7917802207/adGroupAds/195300844695~803140315828",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "coralie@coraliewood.com",
+      "resourceChangeOperation": "UPDATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787069987783819~0~0",
+      "changeDateTime": "2026-08-18 11:19:47.783819",
+      "changeResourceType": "AD",
+      "changeResourceName": "customers/7917802207/ads/821391777734",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "coralie@coraliewood.com",
+      "resourceChangeOperation": "UPDATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787070026456863~0~0",
+      "changeDateTime": "2026-08-18 11:20:26.456863",
+      "changeResourceType": "AD_GROUP_AD",
+      "changeResourceName": "customers/7917802207/adGroupAds/195300844695~821391944579",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "coralie@coraliewood.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787070046889837~0~0",
+      "changeDateTime": "2026-08-18 11:20:46.889837",
+      "changeResourceType": "AD",
+      "changeResourceName": "customers/7917802207/ads/821391944579",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "coralie@coraliewood.com",
+      "resourceChangeOperation": "UPDATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787070081258511~0~0",
+      "changeDateTime": "2026-08-18 11:21:21.258511",
+      "changeResourceType": "AD_GROUP_AD",
+      "changeResourceName": "customers/7917802207/adGroupAds/195300844695~821391959420",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "coralie@coraliewood.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787070100439170~0~0",
+      "changeDateTime": "2026-08-18 11:21:40.43917",
+      "changeResourceType": "AD",
+      "changeResourceName": "customers/7917802207/ads/821391959420",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "coralie@coraliewood.com",
+      "resourceChangeOperation": "UPDATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787070150748905~0~0",
+      "changeDateTime": "2026-08-18 11:22:30.748905",
+      "changeResourceType": "AD_GROUP_AD",
+      "changeResourceName": "customers/7917802207/adGroupAds/195300844735~803140315831",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "coralie@coraliewood.com",
+      "resourceChangeOperation": "UPDATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787070189359871~0~0",
+      "changeDateTime": "2026-08-18 11:23:09.359871",
+      "changeResourceType": "AD_GROUP_AD",
+      "changeResourceName": "customers/7917802207/adGroupAds/195300844735~821392076060",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "coralie@coraliewood.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787112581409395~0~0",
+      "changeDateTime": "2026-08-18 23:09:41.409395",
+      "changeResourceType": "AD_GROUP_CRITERION",
+      "changeResourceName": "customers/7917802207/adGroupCriteria/195300844935~1464829659570",
+      "clientType": "GOOGLE_ADS_RECOMMENDATIONS_SUBSCRIPTION",
+      "userEmail": "Recommendations Auto-Apply",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787201266836240~0~0",
+      "changeDateTime": "2026-08-19 23:47:46.83624",
+      "changeResourceType": "CAMPAIGN",
+      "changeResourceName": "customers/7917802207/campaigns/23705317332",
+      "clientType": "GOOGLE_ADS_RECOMMENDATIONS_SUBSCRIPTION",
+      "userEmail": "Recommendations Auto-Apply",
+      "resourceChangeOperation": "UPDATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787263063500943~0~0",
+      "changeDateTime": "2026-08-20 16:57:43.500943",
+      "changeResourceType": "ASSET",
+      "changeResourceName": "customers/7917802207/assets/410680340613",
+      "clientType": "INTERNAL_TOOL",
+      "userEmail": "dillonmohr8777@gmail.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787263064732447~0~0",
+      "changeDateTime": "2026-08-20 16:57:44.732447",
+      "changeResourceType": "ASSET",
+      "changeResourceName": "customers/7917802207/assets/410680336062",
+      "clientType": "INTERNAL_TOOL",
+      "userEmail": "dillonmohr8777@gmail.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787263065932767~0~0",
+      "changeDateTime": "2026-08-20 16:57:45.932767",
+      "changeResourceType": "ASSET",
+      "changeResourceName": "customers/7917802207/assets/410609624143",
+      "clientType": "INTERNAL_TOOL",
+      "userEmail": "dillonmohr8777@gmail.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787263067191391~0~0",
+      "changeDateTime": "2026-08-20 16:57:47.191391",
+      "changeResourceType": "ASSET",
+      "changeResourceName": "customers/7917802207/assets/410680351965",
+      "clientType": "INTERNAL_TOOL",
+      "userEmail": "dillonmohr8777@gmail.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787264188480879~0~0",
+      "changeDateTime": "2026-08-20 17:16:28.480879",
+      "changeResourceType": "ASSET",
+      "changeResourceName": "customers/7917802207/assets/410685456732",
+      "clientType": "INTERNAL_TOOL",
+      "userEmail": "dillonmohr8777@gmail.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787264189545071~0~0",
+      "changeDateTime": "2026-08-20 17:16:29.545071",
+      "changeResourceType": "ASSET",
+      "changeResourceName": "customers/7917802207/assets/410685475458",
+      "clientType": "INTERNAL_TOOL",
+      "userEmail": "dillonmohr8777@gmail.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787264960696271~0~0",
+      "changeDateTime": "2026-08-20 17:29:20.696271",
+      "changeResourceType": "ASSET",
+      "changeResourceName": "customers/7917802207/assets/410689130313",
+      "clientType": "INTERNAL_TOOL",
+      "userEmail": "dillonmohr8777@gmail.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787264961645135~0~0",
+      "changeDateTime": "2026-08-20 17:29:21.645135",
+      "changeResourceType": "ASSET",
+      "changeResourceName": "customers/7917802207/assets/410516333315",
+      "clientType": "INTERNAL_TOOL",
+      "userEmail": "dillonmohr8777@gmail.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787264965623199~0~0",
+      "changeDateTime": "2026-08-20 17:29:25.623199",
+      "changeResourceType": "ASSET",
+      "changeResourceName": "customers/7917802207/assets/410689131651",
+      "clientType": "INTERNAL_TOOL",
+      "userEmail": "dillonmohr8777@gmail.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787265002949423~0~0",
+      "changeDateTime": "2026-08-20 17:30:02.949423",
+      "changeResourceType": "ASSET",
+      "changeResourceName": "customers/7917802207/assets/410516546165",
+      "clientType": "INTERNAL_TOOL",
+      "userEmail": "dillonmohr8777@gmail.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787265004199823~0~0",
+      "changeDateTime": "2026-08-20 17:30:04.199823",
+      "changeResourceType": "ASSET",
+      "changeResourceName": "customers/7917802207/assets/410689333404",
+      "clientType": "INTERNAL_TOOL",
+      "userEmail": "dillonmohr8777@gmail.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787265005255391~0~0",
+      "changeDateTime": "2026-08-20 17:30:05.255391",
+      "changeResourceType": "ASSET",
+      "changeResourceName": "customers/7917802207/assets/410689334967",
+      "clientType": "INTERNAL_TOOL",
+      "userEmail": "dillonmohr8777@gmail.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787265006464367~0~0",
+      "changeDateTime": "2026-08-20 17:30:06.464367",
+      "changeResourceType": "ASSET",
+      "changeResourceName": "customers/7917802207/assets/410516554715",
+      "clientType": "INTERNAL_TOOL",
+      "userEmail": "dillonmohr8777@gmail.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787265397384079~0~0",
+      "changeDateTime": "2026-08-20 17:36:37.384079",
+      "changeResourceType": "ASSET",
+      "changeResourceName": "customers/7917802207/assets/410690929260",
+      "clientType": "INTERNAL_TOOL",
+      "userEmail": "dillonmohr8777@gmail.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787265398286255~0~0",
+      "changeDateTime": "2026-08-20 17:36:38.286255",
+      "changeResourceType": "ASSET",
+      "changeResourceName": "customers/7917802207/assets/410518167566",
+      "clientType": "INTERNAL_TOOL",
+      "userEmail": "dillonmohr8777@gmail.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787265401186559~0~0",
+      "changeDateTime": "2026-08-20 17:36:41.186559",
+      "changeResourceType": "ASSET",
+      "changeResourceName": "customers/7917802207/assets/410620180762",
+      "clientType": "INTERNAL_TOOL",
+      "userEmail": "dillonmohr8777@gmail.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787265402242271~0~0",
+      "changeDateTime": "2026-08-20 17:36:42.242271",
+      "changeResourceType": "ASSET",
+      "changeResourceName": "customers/7917802207/assets/410620175863",
+      "clientType": "INTERNAL_TOOL",
+      "userEmail": "dillonmohr8777@gmail.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787269363444575~0~0",
+      "changeDateTime": "2026-08-20 18:42:43.444575",
+      "changeResourceType": "ASSET",
+      "changeResourceName": "customers/7917802207/assets/410710346226",
+      "clientType": "INTERNAL_TOOL",
+      "userEmail": "dillonmohr8777@gmail.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787269949144335~0~0",
+      "changeDateTime": "2026-08-20 18:52:29.144335",
+      "changeResourceType": "ASSET",
+      "changeResourceName": "customers/7917802207/assets/410540819294",
+      "clientType": "INTERNAL_TOOL",
+      "userEmail": "dillonmohr8777@gmail.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787269950073727~0~0",
+      "changeDateTime": "2026-08-20 18:52:30.073727",
+      "changeResourceType": "ASSET",
+      "changeResourceName": "customers/7917802207/assets/410713501557",
+      "clientType": "INTERNAL_TOOL",
+      "userEmail": "dillonmohr8777@gmail.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787269953155375~0~0",
+      "changeDateTime": "2026-08-20 18:52:33.155375",
+      "changeResourceType": "ASSET",
+      "changeResourceName": "customers/7917802207/assets/410642237716",
+      "clientType": "INTERNAL_TOOL",
+      "userEmail": "dillonmohr8777@gmail.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787270442313647~0~0",
+      "changeDateTime": "2026-08-20 19:00:42.313647",
+      "changeResourceType": "ASSET",
+      "changeResourceName": "customers/7917802207/assets/410715867456",
+      "clientType": "INTERNAL_TOOL",
+      "userEmail": "dillonmohr8777@gmail.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787270443382415~0~0",
+      "changeDateTime": "2026-08-20 19:00:43.382415",
+      "changeResourceType": "ASSET",
+      "changeResourceName": "customers/7917802207/assets/410543424731",
+      "clientType": "INTERNAL_TOOL",
+      "userEmail": "dillonmohr8777@gmail.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787270445882815~0~0",
+      "changeDateTime": "2026-08-20 19:00:45.882815",
+      "changeResourceType": "ASSET",
+      "changeResourceName": "customers/7917802207/assets/410715867552",
+      "clientType": "INTERNAL_TOOL",
+      "userEmail": "dillonmohr8777@gmail.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787270447065231~0~0",
+      "changeDateTime": "2026-08-20 19:00:47.065231",
+      "changeResourceType": "ASSET",
+      "changeResourceName": "customers/7917802207/assets/410543386364",
+      "clientType": "INTERNAL_TOOL",
+      "userEmail": "dillonmohr8777@gmail.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787340385712479~0~0",
+      "changeDateTime": "2026-08-21 14:26:25.712479",
+      "changeResourceType": "ASSET",
+      "changeResourceName": "customers/7917802207/assets/410926778342",
+      "clientType": "INTERNAL_TOOL",
+      "userEmail": "dana.palko@nexla.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787340387118575~0~0",
+      "changeDateTime": "2026-08-21 14:26:27.118575",
+      "changeResourceType": "ASSET",
+      "changeResourceName": "customers/7917802207/assets/411029237869",
+      "clientType": "INTERNAL_TOOL",
+      "userEmail": "dana.palko@nexla.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787340389532655~0~0",
+      "changeDateTime": "2026-08-21 14:26:29.532655",
+      "changeResourceType": "ASSET",
+      "changeResourceName": "customers/7917802207/assets/411029244661",
+      "clientType": "INTERNAL_TOOL",
+      "userEmail": "dana.palko@nexla.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787365810910799~0~0",
+      "changeDateTime": "2026-08-21 21:30:10.910799",
+      "changeResourceType": "ASSET",
+      "changeResourceName": "customers/7917802207/assets/411145972540",
+      "clientType": "INTERNAL_TOOL",
+      "userEmail": "dillonmohr8777@gmail.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787365811933167~0~0",
+      "changeDateTime": "2026-08-21 21:30:11.933167",
+      "changeResourceType": "ASSET",
+      "changeResourceName": "customers/7917802207/assets/411145981000",
+      "clientType": "INTERNAL_TOOL",
+      "userEmail": "dillonmohr8777@gmail.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787545573925055~0~0",
+      "changeDateTime": "2026-08-23 23:26:13.925055",
+      "changeResourceType": "AD",
+      "changeResourceName": "customers/7917802207/ads/803140315639",
+      "clientType": "GOOGLE_ADS_RECOMMENDATIONS_SUBSCRIPTION",
+      "userEmail": "Recommendations Auto-Apply",
+      "resourceChangeOperation": "UPDATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787686720925903~0~0",
+      "changeDateTime": "2026-08-25 14:38:40.925903",
+      "changeResourceType": "ASSET",
+      "changeResourceName": "customers/7917802207/assets/412880007854",
+      "clientType": "INTERNAL_TOOL",
+      "userEmail": "dillonmohr8777@gmail.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787686721783055~0~0",
+      "changeDateTime": "2026-08-25 14:38:41.783055",
+      "changeResourceType": "ASSET",
+      "changeResourceName": "customers/7917802207/assets/412880013500",
+      "clientType": "INTERNAL_TOOL",
+      "userEmail": "dillonmohr8777@gmail.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787687326859989~0~0",
+      "changeDateTime": "2026-08-25 14:48:46.859989",
+      "changeResourceType": "AD_GROUP_CRITERION",
+      "changeResourceName": "customers/7917802207/adGroupCriteria/195300844735~2471107142314",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "coralie@coraliewood.com",
+      "resourceChangeOperation": "UPDATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787703053079711~0~0",
+      "changeDateTime": "2026-08-25 19:10:53.079711",
+      "changeResourceType": "ASSET",
+      "changeResourceName": "customers/7917802207/assets/413180848986",
+      "clientType": "INTERNAL_TOOL",
+      "userEmail": "dana.palko@nexla.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787703054333103~0~0",
+      "changeDateTime": "2026-08-25 19:10:54.333103",
+      "changeResourceType": "ASSET",
+      "changeResourceName": "customers/7917802207/assets/413003465405",
+      "clientType": "INTERNAL_TOOL",
+      "userEmail": "dana.palko@nexla.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787782215699786~0~0",
+      "changeDateTime": "2026-08-26 17:10:15.699786",
+      "changeResourceType": "CAMPAIGN",
+      "changeResourceName": "customers/7917802207/campaigns/23705317332",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "coralie@coraliewood.com",
+      "resourceChangeOperation": "UPDATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787782284263654~0~0",
+      "changeDateTime": "2026-08-26 17:11:24.263654",
+      "changeResourceType": "CAMPAIGN",
+      "changeResourceName": "customers/7917802207/campaigns/23705317335",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "coralie@coraliewood.com",
+      "resourceChangeOperation": "UPDATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787782289472308~0~0",
+      "changeDateTime": "2026-08-26 17:11:29.472308",
+      "changeResourceType": "CAMPAIGN",
+      "changeResourceName": "customers/7917802207/campaigns/23705317335",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "coralie@coraliewood.com",
+      "resourceChangeOperation": "UPDATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787782300983668~0~0",
+      "changeDateTime": "2026-08-26 17:11:40.983668",
+      "changeResourceType": "CAMPAIGN",
+      "changeResourceName": "customers/7917802207/campaigns/22038365681",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "coralie@coraliewood.com",
+      "resourceChangeOperation": "UPDATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787782306015354~0~0",
+      "changeDateTime": "2026-08-26 17:11:46.015354",
+      "changeResourceType": "CAMPAIGN",
+      "changeResourceName": "customers/7917802207/campaigns/22038365681",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "coralie@coraliewood.com",
+      "resourceChangeOperation": "UPDATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787782316304466~0~0",
+      "changeDateTime": "2026-08-26 17:11:56.304466",
+      "changeResourceType": "CAMPAIGN",
+      "changeResourceName": "customers/7917802207/campaigns/22988394145",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "coralie@coraliewood.com",
+      "resourceChangeOperation": "UPDATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787782321338356~0~0",
+      "changeDateTime": "2026-08-26 17:12:01.338356",
+      "changeResourceType": "CAMPAIGN",
+      "changeResourceName": "customers/7917802207/campaigns/22988394145",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "coralie@coraliewood.com",
+      "resourceChangeOperation": "UPDATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787782331224928~0~0",
+      "changeDateTime": "2026-08-26 17:12:11.224928",
+      "changeResourceType": "CAMPAIGN",
+      "changeResourceName": "customers/7917802207/campaigns/23027231268",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "coralie@coraliewood.com",
+      "resourceChangeOperation": "UPDATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787782337321284~0~0",
+      "changeDateTime": "2026-08-26 17:12:17.321284",
+      "changeResourceType": "CAMPAIGN",
+      "changeResourceName": "customers/7917802207/campaigns/23027231268",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "coralie@coraliewood.com",
+      "resourceChangeOperation": "UPDATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787782347498278~0~0",
+      "changeDateTime": "2026-08-26 17:12:27.498278",
+      "changeResourceType": "CAMPAIGN",
+      "changeResourceName": "customers/7917802207/campaigns/23705317341",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "coralie@coraliewood.com",
+      "resourceChangeOperation": "UPDATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787782353032658~0~0",
+      "changeDateTime": "2026-08-26 17:12:33.032658",
+      "changeResourceType": "CAMPAIGN",
+      "changeResourceName": "customers/7917802207/campaigns/23705317341",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "coralie@coraliewood.com",
+      "resourceChangeOperation": "UPDATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787782379358560~0~0",
+      "changeDateTime": "2026-08-26 17:12:59.35856",
+      "changeResourceType": "AD_GROUP_CRITERION",
+      "changeResourceName": "customers/7917802207/adGroupCriteria/195300844695~2478910093395",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "coralie@coraliewood.com",
+      "resourceChangeOperation": "UPDATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787782820329215~0~0",
+      "changeDateTime": "2026-08-26 17:20:20.329215",
+      "changeResourceType": "ASSET",
+      "changeResourceName": "customers/7917802207/assets/413642839563",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "coralie@coraliewood.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787782820949631~0~0",
+      "changeDateTime": "2026-08-26 17:20:20.949631",
+      "changeResourceType": "ASSET",
+      "changeResourceName": "customers/7917802207/assets/413642829795",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "coralie@coraliewood.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787782821466191~0~0",
+      "changeDateTime": "2026-08-26 17:20:21.466191",
+      "changeResourceType": "ASSET",
+      "changeResourceName": "customers/7917802207/assets/413464413131",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "coralie@coraliewood.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787782821495567~0~0",
+      "changeDateTime": "2026-08-26 17:20:21.495567",
+      "changeResourceType": "ASSET",
+      "changeResourceName": "customers/7917802207/assets/413642830203",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "coralie@coraliewood.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787782822103295~0~0",
+      "changeDateTime": "2026-08-26 17:20:22.103295",
+      "changeResourceType": "ASSET",
+      "changeResourceName": "customers/7917802207/assets/413464413293",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "coralie@coraliewood.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787782840444143~0~0",
+      "changeDateTime": "2026-08-26 17:20:40.444143",
+      "changeResourceType": "ASSET",
+      "changeResourceName": "customers/7917802207/assets/413572755631",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "coralie@coraliewood.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787782842078543~0~0",
+      "changeDateTime": "2026-08-26 17:20:42.078543",
+      "changeResourceType": "ASSET",
+      "changeResourceName": "customers/7917802207/assets/413464667987",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "coralie@coraliewood.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787782848942591~0~0",
+      "changeDateTime": "2026-08-26 17:20:48.942591",
+      "changeResourceType": "ASSET",
+      "changeResourceName": "customers/7917802207/assets/413572923805",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "coralie@coraliewood.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787782858426991~0~0",
+      "changeDateTime": "2026-08-26 17:20:58.426991",
+      "changeResourceType": "ASSET",
+      "changeResourceName": "customers/7917802207/assets/413643215877",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "coralie@coraliewood.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787782952105829~0~0",
+      "changeDateTime": "2026-08-26 17:22:32.105829",
+      "changeResourceType": "ASSET",
+      "changeResourceName": "customers/7917802207/assets/413465729192",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "coralie@coraliewood.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787783589555096~0~0",
+      "changeDateTime": "2026-08-26 17:33:09.555096",
+      "changeResourceType": "CAMPAIGN",
+      "changeResourceName": "customers/7917802207/campaigns/24177650112",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "coralie@coraliewood.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787789035488203~0~0",
+      "changeDateTime": "2026-08-26 19:03:55.488203",
+      "changeResourceType": "CAMPAIGN",
+      "changeResourceName": "customers/7917802207/campaigns/24177650112",
+      "clientType": "GOOGLE_ADS_API",
+      "userEmail": "saket@nexla.com",
+      "resourceChangeOperation": "UPDATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787936402518367~0~0",
+      "changeDateTime": "2026-08-28 12:00:02.518367",
+      "changeResourceType": "ASSET",
+      "changeResourceName": "customers/7917802207/assets/414361837260",
+      "clientType": "INTERNAL_TOOL",
+      "userEmail": "dana.palko@nexla.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787936405099647~0~0",
+      "changeDateTime": "2026-08-28 12:00:05.099647",
+      "changeResourceType": "ASSET",
+      "changeResourceName": "customers/7917802207/assets/414361840605",
+      "clientType": "INTERNAL_TOOL",
+      "userEmail": "dana.palko@nexla.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787936406577359~0~0",
+      "changeDateTime": "2026-08-28 12:00:06.577359",
+      "changeResourceType": "ASSET",
+      "changeResourceName": "customers/7917802207/assets/414361841541",
+      "clientType": "INTERNAL_TOOL",
+      "userEmail": "dana.palko@nexla.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1787936407723375~0~0",
+      "changeDateTime": "2026-08-28 12:00:07.723375",
+      "changeResourceType": "ASSET",
+      "changeResourceName": "customers/7917802207/assets/414183637535",
+      "clientType": "INTERNAL_TOOL",
+      "userEmail": "dana.palko@nexla.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1788191443299727~0~0",
+      "changeDateTime": "2026-08-31 10:50:43.299727",
+      "changeResourceType": "ASSET",
+      "changeResourceName": "customers/7917802207/assets/415571690799",
+      "clientType": "INTERNAL_TOOL",
+      "userEmail": "dillonmohr8777@gmail.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1788194248565663~0~0",
+      "changeDateTime": "2026-08-31 11:37:28.565663",
+      "changeResourceType": "ASSET",
+      "changeResourceName": "customers/7917802207/assets/415412720171",
+      "clientType": "INTERNAL_TOOL",
+      "userEmail": "dana.palko@nexla.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1788194249915759~0~0",
+      "changeDateTime": "2026-08-31 11:37:29.915759",
+      "changeResourceType": "ASSET",
+      "changeResourceName": "customers/7917802207/assets/415412747591",
+      "clientType": "INTERNAL_TOOL",
+      "userEmail": "dana.palko@nexla.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1788194251400895~0~0",
+      "changeDateTime": "2026-08-31 11:37:31.400895",
+      "changeResourceType": "ASSET",
+      "changeResourceName": "customers/7917802207/assets/415519678147",
+      "clientType": "INTERNAL_TOOL",
+      "userEmail": "dana.palko@nexla.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1788221855859343~0~0",
+      "changeDateTime": "2026-08-31 19:17:35.859343",
+      "changeResourceType": "CAMPAIGN_CRITERION",
+      "changeResourceName": "customers/7917802207/campaignCriteria/24177650112~351095910647",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "coraliewood@gmail.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1788228494535698~0~0",
+      "changeDateTime": "2026-08-31 21:08:14.535698",
+      "changeResourceType": "AD_GROUP_CRITERION",
+      "changeResourceName": "customers/7917802207/adGroupCriteria/199955134019~337407963594",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "coraliewood@gmail.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1788228494537672~0~0",
+      "changeDateTime": "2026-08-31 21:08:14.537672",
+      "changeResourceType": "AD_GROUP_CRITERION",
+      "changeResourceName": "customers/7917802207/adGroupCriteria/199955133819~2488587878878",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "coraliewood@gmail.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1788228494594020~0~0",
+      "changeDateTime": "2026-08-31 21:08:14.59402",
+      "changeResourceType": "AD_GROUP_CRITERION",
+      "changeResourceName": "customers/7917802207/adGroupCriteria/199955133739~2500362437720",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "coraliewood@gmail.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1788228494649580~0~0",
+      "changeDateTime": "2026-08-31 21:08:14.64958",
+      "changeResourceType": "AD_GROUP_CRITERION",
+      "changeResourceName": "customers/7917802207/adGroupCriteria/199955133579~2447480466690",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "coraliewood@gmail.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1788228494651096~0~0",
+      "changeDateTime": "2026-08-31 21:08:14.651096",
+      "changeResourceType": "AD_GROUP_CRITERION",
+      "changeResourceName": "customers/7917802207/adGroupCriteria/199955133979~2500363738760",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "coraliewood@gmail.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1788228494735728~0~0",
+      "changeDateTime": "2026-08-31 21:08:14.735728",
+      "changeResourceType": "AD_GROUP_CRITERION",
+      "changeResourceName": "customers/7917802207/adGroupCriteria/199955133779~2499595066045",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "coraliewood@gmail.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1788228494766714~0~0",
+      "changeDateTime": "2026-08-31 21:08:14.766714",
+      "changeResourceType": "AD_GROUP_CRITERION",
+      "changeResourceName": "customers/7917802207/adGroupCriteria/199955133339~2500363735080",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "coraliewood@gmail.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1788228494875662~0~0",
+      "changeDateTime": "2026-08-31 21:08:14.875662",
+      "changeResourceType": "AD_GROUP_CRITERION",
+      "changeResourceName": "customers/7917802207/adGroupCriteria/199955133299~2498686265688",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "coraliewood@gmail.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1788228495048327~0~0",
+      "changeDateTime": "2026-08-31 21:08:15.048327",
+      "changeResourceType": "AD_GROUP_CRITERION",
+      "changeResourceName": "customers/7917802207/adGroupCriteria/195300844735~2497869626389",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "coraliewood@gmail.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1788363767864308~0~0",
+      "changeDateTime": "2026-09-02 10:42:47.864308",
+      "changeResourceType": "CAMPAIGN_BUDGET",
+      "changeResourceName": "customers/7917802207/campaignBudgets/15467446061",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "coraliewood@gmail.com",
+      "resourceChangeOperation": "UPDATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1788363774632399~0~0",
+      "changeDateTime": "2026-09-02 10:42:54.632399",
+      "changeResourceType": "CAMPAIGN_BUDGET",
+      "changeResourceName": "customers/7917802207/campaignBudgets/14181179446",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "coraliewood@gmail.com",
+      "resourceChangeOperation": "UPDATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1788363778292293~0~0",
+      "changeDateTime": "2026-09-02 10:42:58.292293",
+      "changeResourceType": "CAMPAIGN",
+      "changeResourceName": "customers/7917802207/campaigns/24039385907",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "coraliewood@gmail.com",
+      "resourceChangeOperation": "UPDATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1788363784887116~0~0",
+      "changeDateTime": "2026-09-02 10:43:04.887116",
+      "changeResourceType": "CAMPAIGN",
+      "changeResourceName": "customers/7917802207/campaigns/23027231268",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "coraliewood@gmail.com",
+      "resourceChangeOperation": "UPDATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1788363787446232~0~0",
+      "changeDateTime": "2026-09-02 10:43:07.446232",
+      "changeResourceType": "CAMPAIGN",
+      "changeResourceName": "customers/7917802207/campaigns/22988394145",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "coraliewood@gmail.com",
+      "resourceChangeOperation": "UPDATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1788400437557213~0~0",
+      "changeDateTime": "2026-09-02 20:53:57.557213",
+      "changeResourceType": "AD_GROUP",
+      "changeResourceName": "customers/7917802207/adGroups/198539814686",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "coraliewood@gmail.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1788400526192685~0~0",
+      "changeDateTime": "2026-09-02 20:55:26.192685",
+      "changeResourceType": "AD_GROUP_AD",
+      "changeResourceName": "customers/7917802207/adGroupAds/198539814686~823137232776",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "coraliewood@gmail.com",
+      "resourceChangeOperation": "CREATE"
+    }
+  },
+  {
+    "changeEvent": {
+      "resourceName": "customers/7917802207/changeEvents/1788400564962521~0~0",
+      "changeDateTime": "2026-09-02 20:56:04.962521",
+      "changeResourceType": "CAMPAIGN",
+      "changeResourceName": "customers/7917802207/campaigns/24177650112",
+      "clientType": "GOOGLE_ADS_WEB_CLIENT",
+      "userEmail": "coraliewood@gmail.com",
+      "resourceChangeOperation": "UPDATE"
+    }
+  }
+]

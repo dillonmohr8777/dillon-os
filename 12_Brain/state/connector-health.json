@@ -1,14 +1,14 @@
 {
   "schema": 1,
-  "recorded_by": "claude/session 2026-08-18 via Composio MCP",
-  "recorded_at_utc": "2026-08-18T19:25:22Z",
+  "recorded_by": "cursor/private-worker 2026-08-27 via Composio MCP",
+  "recorded_at_utc": "2026-08-27T20:02:00Z",
   "note": "Written by an MCP-capable agent, read by _os/automation/bin/connector-health.js. Every status below was observed, not assumed. Do not hand-edit to open a gate.",
   "connectors": [
     {
       "toolkit": "google_search_console",
       "status": "active",
       "read_verified": true,
-      "last_verified_utc": "2026-08-18T19:25:22Z",
+      "last_verified_utc": "2026-08-27T20:01:52Z",
       "accounts": [
         {
           "id": "google_search_console_mooner-urban",
@@ -21,7 +21,8 @@
             "sc-domain:ami-cleaning.com",
             "https://www.zenspatropicana.com/",
             "sc-domain:revive-systems.com",
-            "https://ironicineptocracy.com/"
+            "https://ironicineptocracy.com/",
+            "sc-domain:immohrtalmarketing.com"
           ]
         },
         {
@@ -40,11 +41,20 @@
       "read_proof": {
         "tool": "GOOGLE_SEARCH_CONSOLE_SEARCH_ANALYTICS_QUERY",
         "site_url": "sc-domain:shadow-heating.com",
-        "range": "2026-07-19..2026-08-15",
-        "clicks": 3,
-        "impressions": 164,
-        "ctr": 0.0183,
-        "avg_position": 13.41
+        "range": "2026-08-21..2026-08-25",
+        "clicks": 1,
+        "impressions": 26,
+        "second_site_url": "https://onsiteconcretelandscape.com/",
+        "second_site_account": "google_search_console_kindle-spurt",
+        "second_site_clicks": 6,
+        "second_site_impressions": 715,
+        "kjb_site_url": "https://www.kimberlyjamesbridal.com/",
+        "kjb_clicks": 20,
+        "kjb_impressions": 1964,
+        "agency_site_url": "sc-domain:immohrtalmarketing.com",
+        "agency_clicks": 0,
+        "agency_impressions": 3,
+        "agency_query_rows": 0
       },
       "note": "Live and usable. Two accounts: pass the account id explicitly, since account_selection is required."
     },
@@ -52,7 +62,7 @@
       "toolkit": "googleads",
       "status": "active",
       "read_verified": false,
-      "last_verified_utc": "2026-08-18T19:25:22Z",
+      "last_verified_utc": "2026-08-27T12:06:00Z",
       "accounts": [
         {
           "id": "googleads_shover-norard",
@@ -61,14 +71,12 @@
         }
       ],
       "blocker": {
-        "http": 429,
-        "code": "RESOURCE_EXHAUSTED",
-        "rate_scope": "DEVELOPER",
-        "rate_name": "Number of operations for basic access",
-        "retry_delay_seconds": 54858,
-        "request_id": "T9XdqxH4RWn5UB_4ACRV_w"
+        "http": 403,
+        "code": "USER_PERMISSION_DENIED",
+        "rate_scope": null,
+        "detail": "LIST_ACCESSIBLE_CUSTOMERS succeeded. GAQL searchStream needs a manager login-customer-id header that the Composio tool does not expose."
       },
-      "note": "OAuth is fine and 16 customer accounts are reachable in principle. The block is the DEVELOPER-scope quota on a Basic-access developer token, exhausted at the time of writing with a ~15h retry. Nothing in this repo or in hidden-scheduled-tasks.tsv calls the Ads API, so the quota is being consumed by another client sharing that token. Fix is quota headroom or Standard access, not re-auth."
+      "note": "Connection remains ACTIVE. LIST_ACCESSIBLE_CUSTOMERS returned 16 resource names (quota recovered; not 429). Child-account GAQL returned USER_PERMISSION_DENIED for login-customer-id. One listed customer returned CUSTOMER_NOT_ENABLED. Do not treat this as a re-auth problem. No pause/enable/budget. Replenish invite untouched."
     },
     {
       "toolkit": "google_analytics",

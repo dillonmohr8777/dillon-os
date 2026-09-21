@@ -1,11 +1,12 @@
 ---
 tags: [concept, ops-rule, web-design]
-source: "[[12_Brain/01_Captures/2026-06-26 - intel-core-7-master-operating-transfer]]"
-updated: 2026-07-04
+source: "12_Brain/01_Captures/2026-06-26 - intel-core-7-master-operating-transfer (capture never landed; unverified)"
+updated: 2026-09-02
 note_type: concept
 status: active
+verification_status: unverified
 created: 2026-07-04
-source_refs: ["[[12_Brain/01_Captures/2026-06-26 - intel-core-7-master-operating-transfer]]"]
+source_refs: ["12_Brain/01_Captures/2026-06-26 - intel-core-7-master-operating-transfer (capture never landed; unverified)"]
 ---
 
 

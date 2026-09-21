@@ -1,0 +1,254 @@
+[
+ {
+  "id": "16689200340",
+  "name": "aws",
+  "status": "PAUSED",
+  "channel": "PERFORMANCE_MAX",
+  "budget": 1.0
+ },
+ {
+  "id": "21679608360",
+  "name": "Brand Keywords",
+  "status": "PAUSED",
+  "channel": "SEARCH",
+  "budget": 1.0
+ },
+ {
+  "id": "21686057663",
+  "name": "Demand Gen",
+  "status": "PAUSED",
+  "channel": "SEARCH",
+  "budget": 1.0
+ },
+ {
+  "id": "22032126150",
+  "name": "G_US_S_NB_Data-Integration",
+  "status": "PAUSED",
+  "channel": "SEARCH",
+  "budget": 1.0
+ },
+ {
+  "id": "22038365681",
+  "name": "G_US_S_Brand_Exact",
+  "status": "ENABLED",
+  "channel": "SEARCH",
+  "budget": 25.0
+ },
+ {
+  "id": "22038435110",
+  "name": "G_US_S_Brand_Long-Tail",
+  "status": "PAUSED",
+  "channel": "SEARCH",
+  "budget": 1.0
+ },
+ {
+  "id": "22038966953",
+  "name": "G_US_Competitor_Fivetran",
+  "status": "PAUSED",
+  "channel": "SEARCH",
+  "budget": 1.0
+ },
+ {
+  "id": "22212011205",
+  "name": "G_US_S_Competitor_Boomi",
+  "status": "PAUSED",
+  "channel": "SEARCH",
+  "budget": 1.0
+ },
+ {
+  "id": "22212011208",
+  "name": "G_US_S_NB_iPaaS",
+  "status": "PAUSED",
+  "channel": "SEARCH",
+  "budget": 1.0
+ },
+ {
+  "id": "22212011211",
+  "name": "G_US_S_Competitor_Celigo",
+  "status": "PAUSED",
+  "channel": "SEARCH",
+  "budget": 1.0
+ },
+ {
+  "id": "22212011214",
+  "name": "G_US_S_Competitor_Jitterbit",
+  "status": "PAUSED",
+  "channel": "SEARCH",
+  "budget": 1.0
+ },
+ {
+  "id": "22212011217",
+  "name": "G_US_S_Competitor_Informatica",
+  "status": "PAUSED",
+  "channel": "SEARCH",
+  "budget": 1.0
+ },
+ {
+  "id": "22228238128",
+  "name": "G_US_S_Competitor_SnapLogic",
+  "status": "PAUSED",
+  "channel": "SEARCH",
+  "budget": 1.0
+ },
+ {
+  "id": "22228238131",
+  "name": "G_US_S_Competitor_TrayAI",
+  "status": "PAUSED",
+  "channel": "SEARCH",
+  "budget": 1.0
+ },
+ {
+  "id": "22274713590",
+  "name": "G_US_RLSA",
+  "status": "PAUSED",
+  "channel": "SEARCH",
+  "budget": 1.0
+ },
+ {
+  "id": "22347688788",
+  "name": "G_US_S_Competitor_Talend",
+  "status": "PAUSED",
+  "channel": "SEARCH",
+  "budget": 1.0
+ },
+ {
+  "id": "22765022280",
+  "name": "G_AUS_S_Brand_Exact",
+  "status": "PAUSED",
+  "channel": "SEARCH",
+  "budget": 1.0
+ },
+ {
+  "id": "22765028826",
+  "name": "G_AUS_S_Competitor_Talend",
+  "status": "PAUSED",
+  "channel": "SEARCH",
+  "budget": 1.0
+ },
+ {
+  "id": "22765030269",
+  "name": "G_AUS_S_Competitor_Jitterbit",
+  "status": "PAUSED",
+  "channel": "SEARCH",
+  "budget": 1.0
+ },
+ {
+  "id": "22771066316",
+  "name": "G_AUS_S_Competitor_SnapLogic",
+  "status": "PAUSED",
+  "channel": "SEARCH",
+  "budget": 1.0
+ },
+ {
+  "id": "22771074893",
+  "name": "G_AUS_S_Competitor_Boomi",
+  "status": "PAUSED",
+  "channel": "SEARCH",
+  "budget": 1.0
+ },
+ {
+  "id": "22771076546",
+  "name": "G_AUS_S_Competitor_Celigo",
+  "status": "PAUSED",
+  "channel": "SEARCH",
+  "budget": 1.0
+ },
+ {
+  "id": "22771076609",
+  "name": "G_AUS_S_Competitor_Informatica",
+  "status": "PAUSED",
+  "channel": "SEARCH",
+  "budget": 1.0
+ },
+ {
+  "id": "22774811908",
+  "name": "G_AUS_S_NB_Data-Integration",
+  "status": "PAUSED",
+  "channel": "SEARCH",
+  "budget": 1.0
+ },
+ {
+  "id": "22795443543",
+  "name": "G_US_S_NB_Data-Transformation",
+  "status": "PAUSED",
+  "channel": "SEARCH",
+  "budget": 1.0
+ },
+ {
+  "id": "22804992418",
+  "name": "G_AUS_S_Brand_Long-Tail",
+  "status": "PAUSED",
+  "channel": "SEARCH",
+  "budget": 1.0
+ },
+ {
+  "id": "22988394145",
+  "name": "G_US_S_NB_AI-Data-Integration",
+  "status": "PAUSED",
+  "channel": "SEARCH",
+  "budget": 1.0
+ },
+ {
+  "id": "23027231268",
+  "name": "G_US_S_NB_Data-Products",
+  "status": "PAUSED",
+  "channel": "SEARCH",
+  "budget": 1.0
+ },
+ {
+  "id": "23037349600",
+  "name": "G_US_S_NB_B2B-Onboarding",
+  "status": "PAUSED",
+  "channel": "SEARCH",
+  "budget": 1.0
+ },
+ {
+  "id": "23164249614",
+  "name": "G_US_S_NB_AI-Data-Integration Long Tail",
+  "status": "PAUSED",
+  "channel": "SEARCH",
+  "budget": 1.0
+ },
+ {
+  "id": "23705317332",
+  "name": "G_US_S_NB_MCP-Agentic",
+  "status": "ENABLED",
+  "channel": "SEARCH",
+  "budget": 40.75
+ },
+ {
+  "id": "23705317335",
+  "name": "G_US_S_NB_ETL-Pipeline",
+  "status": "PAUSED",
+  "channel": "SEARCH",
+  "budget": 1.0
+ },
+ {
+  "id": "23705317338",
+  "name": "G_US_S_NB_Competitor",
+  "status": "PAUSED",
+  "channel": "SEARCH",
+  "budget": 1.0
+ },
+ {
+  "id": "23705317341",
+  "name": "G_US_S_NB_Governance",
+  "status": "PAUSED",
+  "channel": "SEARCH",
+  "budget": 1.0
+ },
+ {
+  "id": "24039385907",
+  "name": "Retargeting",
+  "status": "PAUSED",
+  "channel": "DISPLAY",
+  "budget": 1.0
+ },
+ {
+  "id": "24177650112",
+  "name": "G_US_PMAX_NB_MCP-Agentic",
+  "status": "PAUSED",
+  "channel": "PERFORMANCE_MAX",
+  "budget": 1.0
+ }
+]

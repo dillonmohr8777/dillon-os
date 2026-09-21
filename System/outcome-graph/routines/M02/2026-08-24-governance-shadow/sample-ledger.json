@@ -1,0 +1,317 @@
+{
+  "schema_version": 1,
+  "routine_id": "M02",
+  "generated_at": "2026-08-25T00:31:32.989Z",
+  "source_set_sha256": "95467c386177ab42843d44141520028ba92de271325601238127f6a1dd16d696",
+  "samples": [
+    {
+      "routine_id": "D03",
+      "run_id": "OGD-20260824-AB98BE6292F0",
+      "terminal_truth": true,
+      "terminal_passed": true,
+      "artifact": {
+        "locator": "System/outcome-graph/routines/D03/2026-08-24-reliability-shadow/automation-health-brief.json",
+        "sha256": "162ea5eb7231c511acf30ab87e1cf02c71a50d1b3c9cbb079dd3d7a72dad3614",
+        "bytes": 10805
+      }
+    },
+    {
+      "routine_id": "D07",
+      "run_id": "OGD-20260824-B630ED6F0337",
+      "terminal_truth": true,
+      "terminal_passed": true,
+      "artifact": {
+        "locator": "System/outcome-graph/routines/D07/2026-08-24-reliability-shadow/incident-triage.json",
+        "sha256": "ea6d61cefa296799ea6f33c37e3d8567c11a3762a907b5b2494794a69ea30505",
+        "bytes": 10391
+      }
+    },
+    {
+      "routine_id": "D10",
+      "run_id": "OGD-20260824-249BFB6E49B4",
+      "terminal_truth": true,
+      "terminal_passed": true,
+      "artifact": {
+        "locator": "System/outcome-graph/routines/D10/2026-08-24-foundation-shadow/deliverable-contract.json",
+        "sha256": "f732363f4ddac2380173b3183caac0c2dc20507f6538e6c692b3dd0b015040ba",
+        "bytes": 2912
+      }
+    },
+    {
+      "routine_id": "D11",
+      "run_id": "OGD-20260824-A8DA8DCB0A3D",
+      "terminal_truth": true,
+      "terminal_passed": true,
+      "artifact": {
+        "locator": "System/outcome-graph/routines/D11/2026-08-24-foundation-shadow/bounded-execution-graph.json",
+        "sha256": "afe7b61796ce8630f6703d186b0e19f6a9c0f9f102a5af6bf7f3f29717d7ff71",
+        "bytes": 9028
+      }
+    },
+    {
+      "routine_id": "D12",
+      "run_id": "OGD-20260824-FF87593F7F21",
+      "terminal_truth": true,
+      "terminal_passed": true,
+      "artifact": {
+        "locator": "System/outcome-graph/routines/D12/2026-08-24-foundation-shadow/preflight-receipt.json",
+        "sha256": "e1f37605b4aed8cc3b61d9a0d1162ca7faf0f87da538d9efb0e9487c851ea8f9",
+        "bytes": 22366
+      }
+    },
+    {
+      "routine_id": "D13",
+      "run_id": "OGD-20260825-8F0AF1C77426",
+      "terminal_truth": true,
+      "terminal_passed": true,
+      "artifact": {
+        "locator": "System/outcome-graph/routines/D13/2026-08-24-foundation-shadow/design-context-receipt.json",
+        "sha256": "8922e2ff0b0a3e971dfe16b668cdbe017f57620b915f57c26abc3e9031f9a3f7",
+        "bytes": 2121
+      }
+    },
+    {
+      "routine_id": "D14",
+      "run_id": "OGD-20260824-E72D0ED862F3",
+      "terminal_truth": true,
+      "terminal_passed": true,
+      "artifact": {
+        "locator": "System/outcome-graph/routines/D14/2026-08-24-foundation-shadow/build-receipt.json",
+        "sha256": "aeae1f8a0a97791031131d4676b8661803b536e9cbf3f47887bcd71ce3144de7",
+        "bytes": 10096
+      }
+    },
+    {
+      "routine_id": "D16",
+      "run_id": "OGD-20260824-64CC5614F238",
+      "terminal_truth": true,
+      "terminal_passed": true,
+      "artifact": {
+        "locator": "System/outcome-graph/routines/D16/2026-08-24-foundation-shadow/content-artifact.json",
+        "sha256": "6d1938a5bce612d9c7344032aa1667736468b65c6f5e6b1b2dc67e6507dd604b",
+        "bytes": 1246
+      }
+    },
+    {
+      "routine_id": "D17",
+      "run_id": "OGD-20260824-38FE26FF0DFE",
+      "terminal_truth": true,
+      "terminal_passed": true,
+      "artifact": {
+        "locator": "System/outcome-graph/routines/D17/2026-08-24-performance-shadow/paid-media-evidence.json",
+        "sha256": "f13750cf0f4502219db363d0543adafc3de2bc43b69a472f8258d23a9788248a",
+        "bytes": 20661
+      }
+    },
+    {
+      "routine_id": "D18",
+      "run_id": "OGD-20260824-8D1DBB3F5BB8",
+      "terminal_truth": true,
+      "terminal_passed": true,
+      "artifact": {
+        "locator": "System/outcome-graph/routines/D18/2026-08-24-performance-shadow/attribution-validation.json",
+        "sha256": "9e9e56d39e5ea0081b17a6bacda57684f2c3f10972cc67fd6a4271574b5bd8ed",
+        "bytes": 10604
+      }
+    },
+    {
+      "routine_id": "D19",
+      "run_id": "OGD-20260824-2C0740118A5A",
+      "terminal_truth": true,
+      "terminal_passed": true,
+      "artifact": {
+        "locator": "System/outcome-graph/routines/D19/2026-08-24-performance-shadow/report.json",
+        "sha256": "e3fb57688ef1103961e1daf33364ebdd16a3d4e8b33733dd700526156a5e739b",
+        "bytes": 27031
+      }
+    },
+    {
+      "routine_id": "D24",
+      "run_id": "OGD-20260824-C0E82BC36886",
+      "terminal_truth": true,
+      "terminal_passed": true,
+      "artifact": {
+        "locator": "System/outcome-graph/routines/D24/2026-08-24-foundation-shadow/independent-qa-verdict.json",
+        "sha256": "7d6e3c1196c32bf88d10df0bb79e49a87b236690954a7a7eb9f8e7c841e66df6",
+        "bytes": 2343
+      }
+    },
+    {
+      "routine_id": "D25",
+      "run_id": "OGD-20260824-2937C899B585",
+      "terminal_truth": true,
+      "terminal_passed": true,
+      "artifact": {
+        "locator": "System/outcome-graph/routines/D25/2026-08-24-foundation-shadow/final-status-receipt.json",
+        "sha256": "1164d9e4bcc0169c42711f0ccac79b435874231343e58f6384c55b05a4e69350",
+        "bytes": 1835
+      }
+    },
+    {
+      "routine_id": "E04",
+      "run_id": "OGD-20260824-5977C3E84A99",
+      "terminal_truth": true,
+      "terminal_passed": true,
+      "artifact": {
+        "locator": "System/outcome-graph/routines/E04/2026-08-24-reliability-shadow/recovery-or-blocked-receipt.json",
+        "sha256": "4dc39e2da10516379c359ba8f3ac63619068cf361fe4e3d4c3404a22b90122f0",
+        "bytes": 9277
+      }
+    },
+    {
+      "routine_id": "E05",
+      "run_id": "OGD-20260824-83DC60999116",
+      "terminal_truth": true,
+      "terminal_passed": true,
+      "artifact": {
+        "locator": "System/outcome-graph/routines/E05/2026-08-24-foundation-shadow/codebase-onboarding-receipt.json",
+        "sha256": "b885b117d616a52d04754a9c5618b1f213aa2f3be748f77e1d4aa98c7ee66215",
+        "bytes": 1792
+      }
+    },
+    {
+      "routine_id": "E10",
+      "run_id": "OGD-20260824-1CA32B8705DA",
+      "terminal_truth": true,
+      "terminal_passed": true,
+      "artifact": {
+        "locator": "System/outcome-graph/routines/E10/2026-08-24-reliability-shadow/runtime-recovery-receipt.json",
+        "sha256": "53a57c86652786bd1b0641aad5063753054b600fb2e93a84b98b191d348e4f7e",
+        "bytes": 2123
+      }
+    },
+    {
+      "routine_id": "W01",
+      "run_id": "OGD-20260824-C071D3426A15",
+      "terminal_truth": true,
+      "terminal_passed": true,
+      "artifact": {
+        "locator": "System/outcome-graph/readiness-2026-08-24-run-2-durable/W01-weekly-operating-slate.json",
+        "sha256": "6dfe16e330e8dbd342fe31b5e4c8e1e281e1a7545b89272f11174aeb02e9a256",
+        "bytes": 25495
+      }
+    },
+    {
+      "routine_id": "W02",
+      "run_id": "OGD-20260824-201320896830",
+      "terminal_truth": true,
+      "terminal_passed": true,
+      "artifact": {
+        "locator": "System/outcome-graph/routines/W02/2026-W35A-live-shadow/paid-media-review-a.json",
+        "sha256": "7d65a000d0d8dce4a234394a7051b3ae677684f6b75f779a670fbf9bdc854098",
+        "bytes": 22981
+      }
+    },
+    {
+      "routine_id": "W03",
+      "run_id": "OGD-20260824-B4CE4BE41CCE",
+      "terminal_truth": true,
+      "terminal_passed": true,
+      "artifact": {
+        "locator": "System/outcome-graph/routines/W03/2026-W35B-live-shadow/paid-media-review-b.json",
+        "sha256": "1d0c18e96809a9e5e2ddd336acac23f79f2b8d250aad92104ba235233825d3db",
+        "bytes": 26436
+      }
+    },
+    {
+      "routine_id": "W04",
+      "run_id": "OGD-20260824-6B0B68A4B5B4",
+      "terminal_truth": true,
+      "terminal_passed": true,
+      "artifact": {
+        "locator": "System/outcome-graph/tranche-2026-08-24-run-2-durable/W04-production-calendar.json",
+        "sha256": "3f06d2f39f2e5be9ced28c86808539d62c717c59b7fc4bdca605628c5124ba9b",
+        "bytes": 6034
+      }
+    },
+    {
+      "routine_id": "W05",
+      "run_id": "OGD-20260824-23145989F598",
+      "terminal_truth": true,
+      "terminal_passed": true,
+      "artifact": {
+        "locator": "System/outcome-graph/factory-2026-08-24-run-1-durable/W05-website-factory-readiness.json",
+        "sha256": "4cbc7e46def665bc346c32375f21eea3a4ecdebc08a9b36732feb999a9e4de58",
+        "bytes": 8909
+      }
+    },
+    {
+      "routine_id": "W06",
+      "run_id": "OGD-20260824-6B0B68A4B5B4",
+      "terminal_truth": true,
+      "terminal_passed": true,
+      "artifact": {
+        "locator": "System/outcome-graph/tranche-2026-08-24-run-2-durable/W06-client-report-packages.json",
+        "sha256": "fedfe6670d9ca9ce77c0a93343d1db90baae77d2298253826fb9227acfd8700f",
+        "bytes": 36769
+      }
+    },
+    {
+      "routine_id": "W07",
+      "run_id": "OGD-20260824-C071D3426A15",
+      "terminal_truth": true,
+      "terminal_passed": true,
+      "artifact": {
+        "locator": "System/outcome-graph/readiness-2026-08-24-run-2-durable/W07-unsent-draft-queue.json",
+        "sha256": "f96f62d519945d0c9bf0aa22e5041b3056ef3053851abc678d1385cc6e719d26",
+        "bytes": 66585
+      }
+    },
+    {
+      "routine_id": "W08",
+      "run_id": "OGD-20260824-6B0B68A4B5B4",
+      "terminal_truth": true,
+      "terminal_passed": true,
+      "artifact": {
+        "locator": "System/outcome-graph/tranche-2026-08-24-run-2-durable/W08-experiment-decision-ledger.json",
+        "sha256": "aaa4096f5fe8accf66b5906bfe446edd13b46ca71376330e8ff8d0590ee065f3",
+        "bytes": 30154
+      }
+    },
+    {
+      "routine_id": "W09",
+      "run_id": "OGD-20260824-CC761B2EBA1E",
+      "terminal_truth": true,
+      "terminal_passed": true,
+      "artifact": {
+        "locator": "System/outcome-graph/shadow-2026-08-24-run-6-durable/W09-automation-reliability.json",
+        "sha256": "58541f6d81f8baee7d3ab12a00b96190d2d1d00be152385ebc3d9191aed4b996",
+        "bytes": 45734
+      }
+    },
+    {
+      "routine_id": "W10",
+      "run_id": "OGD-20260824-6B0B68A4B5B4",
+      "terminal_truth": true,
+      "terminal_passed": true,
+      "artifact": {
+        "locator": "System/outcome-graph/tranche-2026-08-24-run-2-durable/W10-executive-weekly-review.json",
+        "sha256": "80997a5e720e924042e3140118475f3a7d7a8b19e4140b384a05398d81e0816c",
+        "bytes": 3282
+      }
+    },
+    {
+      "routine_id": "W11",
+      "run_id": "OGD-20260824-CC761B2EBA1E",
+      "terminal_truth": true,
+      "terminal_passed": true,
+      "artifact": {
+        "locator": "System/outcome-graph/shadow-2026-08-24-run-6-durable/W11-knowledge-graph-health.json",
+        "sha256": "2438ad8f91a3539c5c7c341363c231cd1817afd3ed3a242391d84c8df66e6e24",
+        "bytes": 14979
+      }
+    }
+  ],
+  "authority": {
+    "read_only": true,
+    "proposal_only": true,
+    "external_action_attempted": false,
+    "canonical_write_attempted": false,
+    "provider_mutation_attempted": false,
+    "permission_change_attempted": false,
+    "deletion_attempted": false,
+    "schedule_change_attempted": false,
+    "billing_change_attempted": false,
+    "record_move_attempted": false
+  }
+}

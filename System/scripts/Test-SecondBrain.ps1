@@ -150,6 +150,18 @@ foreach ($baseFile in $baseFiles) {
     $notesByStem[$baseRelativeStem.ToLowerInvariant()] = $true
 }
 
+# Canvas files are link targets too ([[12_Brain/Brain Map.canvas]]); without this the
+# front door's own visual-view link is reported as unresolved every run.
+$canvasFiles = @(
+    Get-ChildItem -LiteralPath $resolvedVault -Recurse -Filter '*.canvas' -File |
+        Where-Object { $_.FullName -notmatch '\\.git\\' }
+)
+foreach ($canvasFile in $canvasFiles) {
+    $canvasRelativePath = Get-RelativeVaultPath -FullName $canvasFile.FullName
+    $notesByStem[$canvasRelativePath.ToLowerInvariant()] = $true
+    $notesByStem[$canvasRelativePath.Substring(0, $canvasRelativePath.Length - 7).ToLowerInvariant()] = $true
+}
+
 $compiledFolders = @(
     '12_Brain/02_Entities/',
     '12_Brain/03_Concepts/',
@@ -178,7 +190,10 @@ foreach ($record in $noteRecords) {
 
     # _archive holds retired sections. They stay in the vault and in git, but they
     # are not live knowledge, so they must not generate link or schema warnings.
-    if ($record.relativePath -match '^\.(?:claude|cursor|hermes)/' -or $record.relativePath -match '^_archive/') {
+    # Tool-harness folders (.claude, .agents for Codex, .codex, .cursor, .hermes) hold skill
+    # and agent definitions with placeholder links like [[01_Clients/<Client>]]; they are
+    # not vault knowledge and must not raise link warnings.
+    if ($record.relativePath -match '^\.(?:claude|agents|codex|cursor|hermes)/' -or $record.relativePath -match '^_archive/') {
         continue
     }
 

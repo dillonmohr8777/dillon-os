@@ -1,0 +1,285 @@
+{
+  "run_id": "OGD-20260824-249BFB6E49B4",
+  "graph_id": "daily-d10-deliverable-contract-shadow",
+  "objective": "Convert the current Outcome Graph request into the smallest independently reviewable deliverable contract without broadening authority.",
+  "value_signal": "The business outcome, artifact, audience, inputs, acceptance assertions, lifecycle states, and authority boundary are explicit.",
+  "contract_sha256": "4ec243a5fab55628a617f9ee8c7ddbdaed694dc2b6c47592ef57066d6433a2a7",
+  "started_at": "2026-08-24T23:48:48.755Z",
+  "source_evidence": "The exact objective, registry, git state, rules, product/design documents, design probe, and W05 receipt are recollected before planning and at terminal verification.",
+  "finish_line": "The exact user objective reproduces as one scope-bounded contract and source binding with build, verification, adoption, and external delivery kept separate.",
+  "governance": {
+    "orchestrator": "Codex acting as Marketing Chief",
+    "canonical_state": "The exact user objective, Dillon OS registry and rules, repository state, product/design authority, and W05 durable evidence remain canonical and read only.",
+    "dedupe_key": "D10:2026-08-24:source-bound-shadow",
+    "checkpoint": "System/outcome-graph/routines/D10/2026-08-24-foundation-shadow/run-receipt.json",
+    "rollback": "Discard foundation shadow artifacts; preserve the worktree, product/design truth, deployment state, canonical queue, and external systems unchanged.",
+    "escalation": "Return exact scope, repository, design-context, build-gate, QA, delivery, or authority evidence to Marketing Chief."
+  },
+  "graph_iterations": [
+    {
+      "iteration": 1,
+      "status": "verified",
+      "planner": {
+        "evidence": "Collected 1 isolated D10 item(s) from source set bee6d7037763d45601274702c12c8e31ad280fed7e97757744fc5930b1d39065.",
+        "item_count": 1,
+        "plan_signature": "3f31d44fdf83430856399f4fba9e6f0f49bcfb2a726f3dc20170f9be213f8c07",
+        "items": [
+          {
+            "id": "D10:current-outcome-graph-request",
+            "isolation_key": "request:outcome-graph-replica-and-loop-engineering",
+            "input_fingerprint": "129d0841ba4785c68881cc6e8890c3df21302f3fe9b88458888bd6ff6a1769bc",
+            "task": null
+          }
+        ]
+      },
+      "workers": [
+        {
+          "item_id": "D10:current-outcome-graph-request",
+          "input_fingerprint": "129d0841ba4785c68881cc6e8890c3df21302f3fe9b88458888bd6ff6a1769bc",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-249BFB6E49B4:217dbeb61384cc0313f7:attempt:1",
+              "maker_evidence": "Built one privacy-safe D10 record for D10:current-outcome-graph-request.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D10/2026-08-24-foundation-shadow/workers/217dbeb61384cc0313f7.json",
+                  "sha256": "493bc352f14aacec2694099e350bb5ce16f41f8dacfd5d2b96d87ec0373c7aed",
+                  "bytes": 2713
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D10:current-outcome-graph-request from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D10/2026-08-24-foundation-shadow/workers/217dbeb61384cc0313f7.json",
+              "sha256": "493bc352f14aacec2694099e350bb5ce16f41f8dacfd5d2b96d87ec0373c7aed",
+              "bytes": 2713
+            }
+          ],
+          "isolation_id": "OGD-20260824-249BFB6E49B4:217dbeb61384cc0313f7:attempt:1"
+        }
+      ],
+      "reduction": {
+        "evidence": "Reduced all checked D10 records without blending isolation keys.",
+        "artifacts": [
+          {
+            "path": "System/outcome-graph/routines/D10/2026-08-24-foundation-shadow/deliverable-contract.json",
+            "sha256": "f732363f4ddac2380173b3183caac0c2dc20507f6538e6c692b3dd0b015040ba",
+            "bytes": 2912
+          },
+          {
+            "path": "System/outcome-graph/routines/D10/2026-08-24-foundation-shadow/source-binding.json",
+            "sha256": "0e317dc708ace64d4da27d97f743c8f048b137d802ac350cf6fc5d6a51c7081f",
+            "bytes": 2510
+          }
+        ]
+      },
+      "terminal_verification": {
+        "evidence": "Recollected and independently verified all D10 sources, records, negative states, and artifact hashes.",
+        "declared_pass": true,
+        "passed": true,
+        "assertions": [
+          {
+            "id": "source-manifest-stable",
+            "passed": true,
+            "detail": "Every named source remains hash-bound at terminal verification."
+          },
+          {
+            "id": "every-isolated-item-reconstructed-exactly-once",
+            "passed": true,
+            "detail": "Every in-scope item has one collision-resistant reconstructed record."
+          },
+          {
+            "id": "reducer-output-reproduces-exactly",
+            "passed": true,
+            "detail": "Final artifacts reproduce exactly from current sources and the frozen evaluation clock."
+          },
+          {
+            "id": "business-outcome-is-observable",
+            "passed": true,
+            "detail": "The finish line has independently testable assertions."
+          },
+          {
+            "id": "artifact-audience-and-acceptance-named",
+            "passed": true,
+            "detail": "Artifact, audience, inputs, and acceptance are explicit."
+          },
+          {
+            "id": "lifecycle-states-separated",
+            "passed": true,
+            "detail": "Build, verification, adoption, and delivery are separate."
+          },
+          {
+            "id": "scope-not-materially-broadened",
+            "passed": true,
+            "detail": "No new authority was inferred."
+          },
+          {
+            "id": "privacy-and-no-mutation-boundary",
+            "passed": true,
+            "detail": "Final artifacts are redacted and attest no external, canonical, provider, restart, or checkpoint mutation."
+          }
+        ],
+        "artifact_manifest": [
+          {
+            "path": "System/outcome-graph/routines/D10/2026-08-24-foundation-shadow/deliverable-contract.json",
+            "sha256": "f732363f4ddac2380173b3183caac0c2dc20507f6538e6c692b3dd0b015040ba",
+            "bytes": 2912
+          },
+          {
+            "path": "System/outcome-graph/routines/D10/2026-08-24-foundation-shadow/source-binding.json",
+            "sha256": "0e317dc708ace64d4da27d97f743c8f048b137d802ac350cf6fc5d6a51c7081f",
+            "bytes": 2510
+          }
+        ],
+        "manifest_errors": []
+      },
+      "learning": {
+        "evidence": "Appended one hashed D10 correction entry.",
+        "corrections": [
+          "Retain D10 source bindings, negative states, exact authority, and terminal assertions until the underlying evidence changes."
+        ],
+        "ledger": "System/outcome-graph/routines/D10/2026-08-24-foundation-shadow/corrections.jsonl",
+        "ledger_receipt": {
+          "locator": "System/outcome-graph/routines/D10/2026-08-24-foundation-shadow/corrections.jsonl",
+          "entry_sha256": "f175e3c5a772454e863e28391d9edebca8e5f3461b28418707e14cf57d591a4c"
+        }
+      }
+    }
+  ],
+  "invocation_log": [
+    {
+      "adapter": "source-bound-d10-planner",
+      "invoked_at": "2026-08-24T23:48:48.767Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d10-maker",
+      "invoked_at": "2026-08-24T23:48:49.192Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d10-checker",
+      "invoked_at": "2026-08-24T23:48:49.562Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d10-reducer",
+      "invoked_at": "2026-08-24T23:48:49.966Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d10-terminal-verifier",
+      "invoked_at": "2026-08-24T23:48:49.989Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d10-learner",
+      "invoked_at": "2026-08-24T23:48:50.376Z",
+      "status": "returned"
+    }
+  ],
+  "budget": {
+    "limit_units": 96,
+    "used_units": 6
+  },
+  "outcome": "complete",
+  "terminal_truth": true,
+  "finished_at": "2026-08-24T23:48:50.391Z",
+  "elapsed_seconds": 1.636,
+  "blocked_by": null,
+  "reason": "Finish line is proven by an independent terminal verifier.",
+  "terminal_evidence": {
+    "evidence": "Recollected and independently verified all D10 sources, records, negative states, and artifact hashes.",
+    "declared_pass": true,
+    "passed": true,
+    "assertions": [
+      {
+        "id": "source-manifest-stable",
+        "passed": true,
+        "detail": "Every named source remains hash-bound at terminal verification."
+      },
+      {
+        "id": "every-isolated-item-reconstructed-exactly-once",
+        "passed": true,
+        "detail": "Every in-scope item has one collision-resistant reconstructed record."
+      },
+      {
+        "id": "reducer-output-reproduces-exactly",
+        "passed": true,
+        "detail": "Final artifacts reproduce exactly from current sources and the frozen evaluation clock."
+      },
+      {
+        "id": "business-outcome-is-observable",
+        "passed": true,
+        "detail": "The finish line has independently testable assertions."
+      },
+      {
+        "id": "artifact-audience-and-acceptance-named",
+        "passed": true,
+        "detail": "Artifact, audience, inputs, and acceptance are explicit."
+      },
+      {
+        "id": "lifecycle-states-separated",
+        "passed": true,
+        "detail": "Build, verification, adoption, and delivery are separate."
+      },
+      {
+        "id": "scope-not-materially-broadened",
+        "passed": true,
+        "detail": "No new authority was inferred."
+      },
+      {
+        "id": "privacy-and-no-mutation-boundary",
+        "passed": true,
+        "detail": "Final artifacts are redacted and attest no external, canonical, provider, restart, or checkpoint mutation."
+      }
+    ],
+    "artifact_manifest": [
+      {
+        "path": "System/outcome-graph/routines/D10/2026-08-24-foundation-shadow/deliverable-contract.json",
+        "sha256": "f732363f4ddac2380173b3183caac0c2dc20507f6538e6c692b3dd0b015040ba",
+        "bytes": 2912
+      },
+      {
+        "path": "System/outcome-graph/routines/D10/2026-08-24-foundation-shadow/source-binding.json",
+        "sha256": "0e317dc708ace64d4da27d97f743c8f048b137d802ac350cf6fc5d6a51c7081f",
+        "bytes": 2510
+      }
+    ],
+    "manifest_errors": []
+  },
+  "learning_evidence": {
+    "evidence": "Appended one hashed D10 correction entry.",
+    "corrections": [
+      "Retain D10 source bindings, negative states, exact authority, and terminal assertions until the underlying evidence changes."
+    ],
+    "ledger": "System/outcome-graph/routines/D10/2026-08-24-foundation-shadow/corrections.jsonl",
+    "ledger_receipt": {
+      "locator": "System/outcome-graph/routines/D10/2026-08-24-foundation-shadow/corrections.jsonl",
+      "entry_sha256": "f175e3c5a772454e863e28391d9edebca8e5f3461b28418707e14cf57d591a4c"
+    }
+  },
+  "drift_fingerprint": "aa734fe6489d3bf3839a8a6c1cb2d33061b19924121bd5a828d0f64450d9b721",
+  "deduped": true,
+  "durable_state": {
+    "schema_version": 1,
+    "dedupe_identity": "ca7c81d839acc345f8d1df2b27799c7051befb8b2aba54b594ab5b4192276dd9",
+    "dedupe_hit": true,
+    "resumed": false,
+    "canonical_binding": {
+      "locator": "dillon-os://routine/D10/2026-08-24",
+      "version": "2026-08-24:e1cb9e89.05e6a21e.c5a7c091.1b135970.d503a937.90d9bcee.f497ab86.4cbc7e46.43cfa9c9.c4f66a74",
+      "sha256": "bee6d7037763d45601274702c12c8e31ad280fed7e97757744fc5930b1d39065",
+      "captured_at": "2026-08-24T23:48:47.935Z"
+    },
+    "canonical_binding_fingerprint": "6f2322900829b6b88427a53b66f970478ed36854886a08187c2080a2366187bf",
+    "contract_fingerprint": "f2a0a1d22d62c17efe00baf24c8b4a67c256d3627f9a9a25d4991c1a1e0c1426",
+    "checkpoint": "runs/OGD-20260824-249BFB6E49B4/checkpoint.json"
+  }
+}

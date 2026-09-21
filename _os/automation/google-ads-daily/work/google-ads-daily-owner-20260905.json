@@ -1,0 +1,16 @@
+{
+  "date":"2026-09-05",
+  "wakeId":"heartbeat:20260905T133136179Z",
+  "kind":"collaboration",
+  "owner":"/root/active_ads_review",
+  "dispatchTool":"collaboration.followup_task",
+  "status":"completed-partial-daily-blocked",
+  "scope":["omega-landscaping","onsite-concrete-landscape","nexla"],
+  "externalMode":"read-only",
+  "timeoutMinutes":12,
+  "parentReviewPending":false,
+  "interruptedAfterCompletion":true,
+  "parentReviewAtUtc":"2026-09-05T13:54:29Z",
+  "artifacts":["clients/omega-landscaping/deliverables/2026-09-05-google-ads-daily-health/run-receipt.json","clients/onsite-concrete-landscape/deliverables/2026-09-05-google-ads-daily-health/run-receipt.json","clients/nexla/deliverables/2026-09-05-google-ads-daily-health/run-receipt.json"],
+  "note":"Parent read all three actual receipts and renderer README/code. Fresh partial delivery evidence exists; no HTML/PDF. Renderer is explicitly Sep4-only; daily date/input/output extension and missing source periods remain unfinished. Browser access worked; not an authentication or filesystem blocker. No guessed app thread UUID and no complete daily-report claim."
+}

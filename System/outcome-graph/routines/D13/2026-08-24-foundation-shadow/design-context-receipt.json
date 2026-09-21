@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "routine_id": "D13",
+  "id": "D13:prospect-radar-next20",
+  "isolation_key": "repo-surface:automation/prospect-radar-next20",
+  "observed_at": "2026-08-25T00:16:11.045Z",
+  "source_set_sha256": "d2b021c79a0d7aa43517314c1c1c6e668ac16b6c79caf5fc8ac3247e8a69a0c1",
+  "surface": "automation/prospect-radar-next20",
+  "mode": "Persuade",
+  "product_truth": {
+    "locator": "automation/prospect-radar-next20/PRODUCT.md",
+    "sha256": "90d9bceeaafa613f3e7498d276f9b474ee9b4377102340be55cf57548e803eda",
+    "bytes": 3070
+  },
+  "design_truth": {
+    "locator": "automation/prospect-radar-next20/DESIGN.md",
+    "sha256": "d503a937aac0e034d755ff7bfe94c85554952074492b296ea872a253afc50b1e",
+    "bytes": 2564
+  },
+  "visual_authority": [
+    {
+      "locator": "automation/prospect-radar-next20/AUTOMATION.md",
+      "sha256": "1b13597002febc5b6fc952d0b059d70cd80111fa5fa952edc4752a8c935edb4b",
+      "bytes": 2087
+    }
+  ],
+  "context_probe": {
+    "attempted": true,
+    "passed": true,
+    "surface_brief_present": false,
+    "visual_implementation_detected": false
+  },
+  "design_system_test": {
+    "attempted": true,
+    "passed": true,
+    "gate": "no-ui-implementation",
+    "design_is_seed": true,
+    "manual_detector_required": true,
+    "blocker": null
+  },
+  "unsupported_brand_or_claim_created": false,
+  "outcome_state": "held_design_context_incomplete",
+  "workflow_ready": false,
+  "limitations": [
+    "The Windows design preflight now runs and correctly recognizes the seed DESIGN.md. Product and seed design truth are resolved, but no surface brief or visual implementation exists, so D13 remains held at no-ui-implementation rather than being promoted to mature design context."
+  ],
+  "authority": {
+    "read_only": true,
+    "proposal_only": true,
+    "external_action_attempted": false,
+    "canonical_write_attempted": false,
+    "provider_mutation_attempted": false,
+    "deployment_attempted": false,
+    "worktree_mutation_attempted": false,
+    "ui_mutation_attempted": false,
+    "acceptance_contract_changed": false
+  },
+  "generated_at": "2026-08-25T00:16:11.045Z"
+}

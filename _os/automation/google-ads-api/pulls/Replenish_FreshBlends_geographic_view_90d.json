@@ -1,0 +1,1052 @@
+[
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/23944175995",
+      "name": "Replenish | PMAX | Miami 56 | Consumer Foot Traffic",
+      "id": "23944175995"
+    },
+    "metrics": {
+      "clicks": "710",
+      "conversions": 3,
+      "costMicros": "350319812",
+      "impressions": "35079"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1014959",
+      "geoTargetMetro": "geoTargetConstants/200548",
+      "geoTargetRegion": "geoTargetConstants/21142"
+    },
+    "geographicView": {
+      "resourceName": "customers/6275014654/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/23944102690",
+      "name": "Replenish | PMAX | Boca | Consumer Foot Traffic",
+      "id": "23944102690"
+    },
+    "metrics": {
+      "clicks": "448",
+      "conversions": 2,
+      "costMicros": "306225570",
+      "impressions": "25987"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1014959",
+      "geoTargetMetro": "geoTargetConstants/200548",
+      "geoTargetRegion": "geoTargetConstants/21142"
+    },
+    "geographicView": {
+      "resourceName": "customers/6275014654/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/24012722869",
+      "name": "Replenish | PMAX | Miramar 43130 | Consumer Foot Traffic",
+      "id": "24012722869"
+    },
+    "metrics": {
+      "clicks": "820",
+      "conversions": 0,
+      "costMicros": "276819129",
+      "impressions": "20023"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1014218",
+      "geoTargetMetro": "geoTargetConstants/200825",
+      "geoTargetRegion": "geoTargetConstants/21137"
+    },
+    "geographicView": {
+      "resourceName": "customers/6275014654/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/23944174558",
+      "name": "Replenish | PMAX | Coral Springs | Consumer Foot Traffic",
+      "id": "23944174558"
+    },
+    "metrics": {
+      "clicks": "671",
+      "conversions": 0,
+      "costMicros": "254286324",
+      "impressions": "34699"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9052391",
+      "geoTargetMetro": "geoTargetConstants/200528",
+      "geoTargetRegion": "geoTargetConstants/21142"
+    },
+    "geographicView": {
+      "resourceName": "customers/6275014654/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/23944174558",
+      "name": "Replenish | PMAX | Coral Springs | Consumer Foot Traffic",
+      "id": "23944174558"
+    },
+    "metrics": {
+      "clicks": "489",
+      "conversions": 0,
+      "costMicros": "208418878",
+      "impressions": "29531"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9052641",
+      "geoTargetMetro": "geoTargetConstants/200528",
+      "geoTargetRegion": "geoTargetConstants/21142"
+    },
+    "geographicView": {
+      "resourceName": "customers/6275014654/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/23944175995",
+      "name": "Replenish | PMAX | Miami 56 | Consumer Foot Traffic",
+      "id": "23944175995"
+    },
+    "metrics": {
+      "clicks": "416",
+      "conversions": 2,
+      "costMicros": "182766255",
+      "impressions": "16132"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1015004",
+      "geoTargetMetro": "geoTargetConstants/200528",
+      "geoTargetRegion": "geoTargetConstants/21142"
+    },
+    "geographicView": {
+      "resourceName": "customers/6275014654/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/23902535468",
+      "name": "Fresh Blends x Kwik Trip #573 | Ice Box | PMax",
+      "id": "23902535468"
+    },
+    "metrics": {
+      "clicks": "359",
+      "conversions": 0,
+      "costMicros": "173471418",
+      "impressions": "23440"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1027944",
+      "geoTargetMetro": "geoTargetConstants/200702",
+      "geoTargetRegion": "geoTargetConstants/21182"
+    },
+    "geographicView": {
+      "resourceName": "customers/6275014654/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/23944102690",
+      "name": "Replenish | PMAX | Boca | Consumer Foot Traffic",
+      "id": "23944102690"
+    },
+    "metrics": {
+      "clicks": "287",
+      "conversions": 1,
+      "costMicros": "162768393",
+      "impressions": "11221"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1015004",
+      "geoTargetMetro": "geoTargetConstants/200528",
+      "geoTargetRegion": "geoTargetConstants/21142"
+    },
+    "geographicView": {
+      "resourceName": "customers/6275014654/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/23944175995",
+      "name": "Replenish | PMAX | Miami 56 | Consumer Foot Traffic",
+      "id": "23944175995"
+    },
+    "metrics": {
+      "clicks": "358",
+      "conversions": 4,
+      "costMicros": "153054922",
+      "impressions": "13522"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9051612",
+      "geoTargetMetro": "geoTargetConstants/200548",
+      "geoTargetRegion": "geoTargetConstants/21142"
+    },
+    "geographicView": {
+      "resourceName": "customers/6275014654/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/23895251475",
+      "name": "Fresh Blends x Kwik Trip #633 | Ice Box | PMax",
+      "id": "23895251475"
+    },
+    "metrics": {
+      "clicks": "214",
+      "conversions": 0,
+      "costMicros": "152622096",
+      "impressions": "1597"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1027825",
+      "geoTargetMetro": "geoTargetConstants/200702",
+      "geoTargetRegion": "geoTargetConstants/21182"
+    },
+    "geographicView": {
+      "resourceName": "customers/6275014654/geographicViews/2840~AREA_OF_INTEREST"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/23895251475",
+      "name": "Fresh Blends x Kwik Trip #633 | Ice Box | PMax",
+      "id": "23895251475"
+    },
+    "metrics": {
+      "clicks": "140",
+      "conversions": 0,
+      "costMicros": "134797591",
+      "impressions": "3633"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1027944",
+      "geoTargetMetro": "geoTargetConstants/200702",
+      "geoTargetRegion": "geoTargetConstants/21182"
+    },
+    "geographicView": {
+      "resourceName": "customers/6275014654/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/23902535468",
+      "name": "Fresh Blends x Kwik Trip #573 | Ice Box | PMax",
+      "id": "23902535468"
+    },
+    "metrics": {
+      "clicks": "183",
+      "conversions": 0,
+      "costMicros": "131457264",
+      "impressions": "1246"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1027825",
+      "geoTargetMetro": "geoTargetConstants/200702",
+      "geoTargetRegion": "geoTargetConstants/21182"
+    },
+    "geographicView": {
+      "resourceName": "customers/6275014654/geographicViews/2840~AREA_OF_INTEREST"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/24012666388",
+      "name": "Replenish | PMAX | Torrey Del Mar 3458 | Consumer Foot Traffic",
+      "id": "24012666388"
+    },
+    "metrics": {
+      "clicks": "211",
+      "conversions": 0,
+      "costMicros": "121601565",
+      "impressions": "7268"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1015176",
+      "geoTargetMetro": "geoTargetConstants/200528",
+      "geoTargetRegion": "geoTargetConstants/21142"
+    },
+    "geographicView": {
+      "resourceName": "customers/6275014654/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/23944174558",
+      "name": "Replenish | PMAX | Coral Springs | Consumer Foot Traffic",
+      "id": "23944174558"
+    },
+    "metrics": {
+      "clicks": "201",
+      "conversions": 1,
+      "costMicros": "103319104",
+      "impressions": "11988"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9051769",
+      "geoTargetMetro": "geoTargetConstants/200528",
+      "geoTargetRegion": "geoTargetConstants/21142"
+    },
+    "geographicView": {
+      "resourceName": "customers/6275014654/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/23944175995",
+      "name": "Replenish | PMAX | Miami 56 | Consumer Foot Traffic",
+      "id": "23944175995"
+    },
+    "metrics": {
+      "clicks": "246",
+      "conversions": 1,
+      "costMicros": "101876828",
+      "impressions": "8557"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9052319",
+      "geoTargetMetro": "geoTargetConstants/200528",
+      "geoTargetRegion": "geoTargetConstants/21142"
+    },
+    "geographicView": {
+      "resourceName": "customers/6275014654/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/24008391755",
+      "name": "Replenish | PMAX | Carmel Mountain 19223 | Consumer Foot Traffic",
+      "id": "24008391755"
+    },
+    "metrics": {
+      "clicks": "150",
+      "conversions": 0,
+      "costMicros": "101197464",
+      "impressions": "6722"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1015176",
+      "geoTargetMetro": "geoTargetConstants/200528",
+      "geoTargetRegion": "geoTargetConstants/21142"
+    },
+    "geographicView": {
+      "resourceName": "customers/6275014654/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/23883827641",
+      "name": "Howard Camaign",
+      "id": "23883827641"
+    },
+    "metrics": {
+      "clicks": "102",
+      "conversions": 0,
+      "costMicros": "98622702",
+      "impressions": "8209"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1015176",
+      "geoTargetMetro": "geoTargetConstants/200528",
+      "geoTargetRegion": "geoTargetConstants/21142"
+    },
+    "geographicView": {
+      "resourceName": "customers/6275014654/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/23944102690",
+      "name": "Replenish | PMAX | Boca | Consumer Foot Traffic",
+      "id": "23944102690"
+    },
+    "metrics": {
+      "clicks": "169",
+      "conversions": 2,
+      "costMicros": "97183815",
+      "impressions": "7315"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9051612",
+      "geoTargetMetro": "geoTargetConstants/200548",
+      "geoTargetRegion": "geoTargetConstants/21142"
+    },
+    "geographicView": {
+      "resourceName": "customers/6275014654/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/23733909990",
+      "name": "Pampano Campaign",
+      "id": "23733909990"
+    },
+    "metrics": {
+      "clicks": "178",
+      "conversions": 0,
+      "costMicros": "92911608",
+      "impressions": "4941"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1015176",
+      "geoTargetMetro": "geoTargetConstants/200528",
+      "geoTargetRegion": "geoTargetConstants/21142"
+    },
+    "geographicView": {
+      "resourceName": "customers/6275014654/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/23733909990",
+      "name": "Pampano Campaign",
+      "id": "23733909990"
+    },
+    "metrics": {
+      "clicks": "161",
+      "conversions": 0,
+      "costMicros": "91594835",
+      "impressions": "2691"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9052544",
+      "geoTargetMetro": "geoTargetConstants/200528",
+      "geoTargetRegion": "geoTargetConstants/21142"
+    },
+    "geographicView": {
+      "resourceName": "customers/6275014654/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/23733909990",
+      "name": "Pampano Campaign",
+      "id": "23733909990"
+    },
+    "metrics": {
+      "clicks": "181",
+      "conversions": 0,
+      "costMicros": "87780645",
+      "impressions": "3889"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9052391",
+      "geoTargetMetro": "geoTargetConstants/200528",
+      "geoTargetRegion": "geoTargetConstants/21142"
+    },
+    "geographicView": {
+      "resourceName": "customers/6275014654/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/24008391755",
+      "name": "Replenish | PMAX | Carmel Mountain 19223 | Consumer Foot Traffic",
+      "id": "24008391755"
+    },
+    "metrics": {
+      "clicks": "138",
+      "conversions": 0,
+      "costMicros": "85295598",
+      "impressions": "4421"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9052544",
+      "geoTargetMetro": "geoTargetConstants/200528",
+      "geoTargetRegion": "geoTargetConstants/21142"
+    },
+    "geographicView": {
+      "resourceName": "customers/6275014654/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/23733909990",
+      "name": "Pampano Campaign",
+      "id": "23733909990"
+    },
+    "metrics": {
+      "clicks": "150",
+      "conversions": 0,
+      "costMicros": "80182639",
+      "impressions": "3869"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9052319",
+      "geoTargetMetro": "geoTargetConstants/200528",
+      "geoTargetRegion": "geoTargetConstants/21142"
+    },
+    "geographicView": {
+      "resourceName": "customers/6275014654/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/23733909990",
+      "name": "Pampano Campaign",
+      "id": "23733909990"
+    },
+    "metrics": {
+      "clicks": "118",
+      "conversions": 0,
+      "costMicros": "76916505",
+      "impressions": "2879"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9052641",
+      "geoTargetMetro": "geoTargetConstants/200528",
+      "geoTargetRegion": "geoTargetConstants/21142"
+    },
+    "geographicView": {
+      "resourceName": "customers/6275014654/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/23895251475",
+      "name": "Fresh Blends x Kwik Trip #633 | Ice Box | PMax",
+      "id": "23895251475"
+    },
+    "metrics": {
+      "clicks": "87",
+      "conversions": 0,
+      "costMicros": "74693406",
+      "impressions": "796"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1027944",
+      "geoTargetMetro": "geoTargetConstants/200702",
+      "geoTargetRegion": "geoTargetConstants/21182"
+    },
+    "geographicView": {
+      "resourceName": "customers/6275014654/geographicViews/2840~AREA_OF_INTEREST"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/23944174558",
+      "name": "Replenish | PMAX | Coral Springs | Consumer Foot Traffic",
+      "id": "23944174558"
+    },
+    "metrics": {
+      "clicks": "116",
+      "conversions": 0,
+      "costMicros": "74313070",
+      "impressions": "5834"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9051746",
+      "geoTargetMetro": "geoTargetConstants/200528",
+      "geoTargetRegion": "geoTargetConstants/21142"
+    },
+    "geographicView": {
+      "resourceName": "customers/6275014654/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/23944102690",
+      "name": "Replenish | PMAX | Boca | Consumer Foot Traffic",
+      "id": "23944102690"
+    },
+    "metrics": {
+      "clicks": "180",
+      "conversions": 1,
+      "costMicros": "71487562",
+      "impressions": "6804"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9052319",
+      "geoTargetMetro": "geoTargetConstants/200528",
+      "geoTargetRegion": "geoTargetConstants/21142"
+    },
+    "geographicView": {
+      "resourceName": "customers/6275014654/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/23883827641",
+      "name": "Howard Camaign",
+      "id": "23883827641"
+    },
+    "metrics": {
+      "clicks": "69",
+      "conversions": 0,
+      "costMicros": "71300653",
+      "impressions": "5419"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9052641",
+      "geoTargetMetro": "geoTargetConstants/200528",
+      "geoTargetRegion": "geoTargetConstants/21142"
+    },
+    "geographicView": {
+      "resourceName": "customers/6275014654/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/24012660853",
+      "name": "Replenish | PMAX | Solana Beach 4344 | Consumer Foot Traffic",
+      "id": "24012660853"
+    },
+    "metrics": {
+      "clicks": "181",
+      "conversions": 0,
+      "costMicros": "71124924",
+      "impressions": "7018"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1014284",
+      "geoTargetMetro": "geoTargetConstants/200825",
+      "geoTargetRegion": "geoTargetConstants/21137"
+    },
+    "geographicView": {
+      "resourceName": "customers/6275014654/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/24012666388",
+      "name": "Replenish | PMAX | Torrey Del Mar 3458 | Consumer Foot Traffic",
+      "id": "24012666388"
+    },
+    "metrics": {
+      "clicks": "189",
+      "conversions": 0,
+      "costMicros": "69551033",
+      "impressions": "5313"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9052544",
+      "geoTargetMetro": "geoTargetConstants/200528",
+      "geoTargetRegion": "geoTargetConstants/21142"
+    },
+    "geographicView": {
+      "resourceName": "customers/6275014654/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/23895254871",
+      "name": "Fresh Blends x Kwik Trip #1110 | Ice Box | PMax",
+      "id": "23895254871"
+    },
+    "metrics": {
+      "clicks": "82",
+      "conversions": 0,
+      "costMicros": "68112059",
+      "impressions": "6223"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1015176",
+      "geoTargetMetro": "geoTargetConstants/200528",
+      "geoTargetRegion": "geoTargetConstants/21142"
+    },
+    "geographicView": {
+      "resourceName": "customers/6275014654/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/23904822223",
+      "name": "Fresh Blends x Kwik Trip #1161 | Ice Box | PMax",
+      "id": "23904822223"
+    },
+    "metrics": {
+      "clicks": "114",
+      "conversions": 0,
+      "costMicros": "66200606",
+      "impressions": "5454"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/1015176",
+      "geoTargetMetro": "geoTargetConstants/200528",
+      "geoTargetRegion": "geoTargetConstants/21142"
+    },
+    "geographicView": {
+      "resourceName": "customers/6275014654/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/23904822223",
+      "name": "Fresh Blends x Kwik Trip #1161 | Ice Box | PMax",
+      "id": "23904822223"
+    },
+    "metrics": {
+      "clicks": "135",
+      "conversions": 0,
+      "costMicros": "64682322",
+      "impressions": "5840"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9052391",
+      "geoTargetMetro": "geoTargetConstants/200528",
+      "geoTargetRegion": "geoTargetConstants/21142"
+    },
+    "geographicView": {
+      "resourceName": "customers/6275014654/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/24008391755",
+      "name": "Replenish | PMAX | Carmel Mountain 19223 | Consumer Foot Traffic",
+      "id": "24008391755"
+    },
+    "metrics": {
+      "clicks": "91",
+      "conversions": 0,
+      "costMicros": "61664379",
+      "impressions": "4407"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9052641",
+      "geoTargetMetro": "geoTargetConstants/200528",
+      "geoTargetRegion": "geoTargetConstants/21142"
+    },
+    "geographicView": {
+      "resourceName": "customers/6275014654/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/24008391755",
+      "name": "Replenish | PMAX | Carmel Mountain 19223 | Consumer Foot Traffic",
+      "id": "24008391755"
+    },
+    "metrics": {
+      "clicks": "61",
+      "conversions": 0,
+      "costMicros": "59620199",
+      "impressions": "3738"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9051769",
+      "geoTargetMetro": "geoTargetConstants/200528",
+      "geoTargetRegion": "geoTargetConstants/21142"
+    },
+    "geographicView": {
+      "resourceName": "customers/6275014654/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/24012666388",
+      "name": "Replenish | PMAX | Torrey Del Mar 3458 | Consumer Foot Traffic",
+      "id": "24012666388"
+    },
+    "metrics": {
+      "clicks": "114",
+      "conversions": 0,
+      "costMicros": "59368815",
+      "impressions": "4822"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9052641",
+      "geoTargetMetro": "geoTargetConstants/200528",
+      "geoTargetRegion": "geoTargetConstants/21142"
+    },
+    "geographicView": {
+      "resourceName": "customers/6275014654/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/23883827641",
+      "name": "Howard Camaign",
+      "id": "23883827641"
+    },
+    "metrics": {
+      "clicks": "90",
+      "conversions": 0,
+      "costMicros": "59149984",
+      "impressions": "5103"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9052544",
+      "geoTargetMetro": "geoTargetConstants/200528",
+      "geoTargetRegion": "geoTargetConstants/21142"
+    },
+    "geographicView": {
+      "resourceName": "customers/6275014654/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/23895254871",
+      "name": "Fresh Blends x Kwik Trip #1110 | Ice Box | PMax",
+      "id": "23895254871"
+    },
+    "metrics": {
+      "clicks": "68",
+      "conversions": 0,
+      "costMicros": "58762129",
+      "impressions": "4050"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9052544",
+      "geoTargetMetro": "geoTargetConstants/200528",
+      "geoTargetRegion": "geoTargetConstants/21142"
+    },
+    "geographicView": {
+      "resourceName": "customers/6275014654/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/24008391755",
+      "name": "Replenish | PMAX | Carmel Mountain 19223 | Consumer Foot Traffic",
+      "id": "24008391755"
+    },
+    "metrics": {
+      "clicks": "123",
+      "conversions": 0,
+      "costMicros": "55612015",
+      "impressions": "3396"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9052391",
+      "geoTargetMetro": "geoTargetConstants/200528",
+      "geoTargetRegion": "geoTargetConstants/21142"
+    },
+    "geographicView": {
+      "resourceName": "customers/6275014654/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/24008391755",
+      "name": "Replenish | PMAX | Carmel Mountain 19223 | Consumer Foot Traffic",
+      "id": "24008391755"
+    },
+    "metrics": {
+      "clicks": "105",
+      "conversions": 0,
+      "costMicros": "52096369",
+      "impressions": "3162"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9052319",
+      "geoTargetMetro": "geoTargetConstants/200528",
+      "geoTargetRegion": "geoTargetConstants/21142"
+    },
+    "geographicView": {
+      "resourceName": "customers/6275014654/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/23883827641",
+      "name": "Howard Camaign",
+      "id": "23883827641"
+    },
+    "metrics": {
+      "clicks": "55",
+      "conversions": 0,
+      "costMicros": "47974931",
+      "impressions": "4738"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9051769",
+      "geoTargetMetro": "geoTargetConstants/200528",
+      "geoTargetRegion": "geoTargetConstants/21142"
+    },
+    "geographicView": {
+      "resourceName": "customers/6275014654/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/23883827641",
+      "name": "Howard Camaign",
+      "id": "23883827641"
+    },
+    "metrics": {
+      "clicks": "68",
+      "conversions": 0,
+      "costMicros": "45219800",
+      "impressions": "3960"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9052319",
+      "geoTargetMetro": "geoTargetConstants/200528",
+      "geoTargetRegion": "geoTargetConstants/21142"
+    },
+    "geographicView": {
+      "resourceName": "customers/6275014654/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/23883827641",
+      "name": "Howard Camaign",
+      "id": "23883827641"
+    },
+    "metrics": {
+      "clicks": "76",
+      "conversions": 0,
+      "costMicros": "44836797",
+      "impressions": "3976"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9052391",
+      "geoTargetMetro": "geoTargetConstants/200528",
+      "geoTargetRegion": "geoTargetConstants/21142"
+    },
+    "geographicView": {
+      "resourceName": "customers/6275014654/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/23904822223",
+      "name": "Fresh Blends x Kwik Trip #1161 | Ice Box | PMax",
+      "id": "23904822223"
+    },
+    "metrics": {
+      "clicks": "111",
+      "conversions": 0,
+      "costMicros": "44774762",
+      "impressions": "4066"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9052544",
+      "geoTargetMetro": "geoTargetConstants/200528",
+      "geoTargetRegion": "geoTargetConstants/21142"
+    },
+    "geographicView": {
+      "resourceName": "customers/6275014654/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/23895254871",
+      "name": "Fresh Blends x Kwik Trip #1110 | Ice Box | PMax",
+      "id": "23895254871"
+    },
+    "metrics": {
+      "clicks": "56",
+      "conversions": 0,
+      "costMicros": "43517194",
+      "impressions": "5202"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9051769",
+      "geoTargetMetro": "geoTargetConstants/200528",
+      "geoTargetRegion": "geoTargetConstants/21142"
+    },
+    "geographicView": {
+      "resourceName": "customers/6275014654/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/23895254871",
+      "name": "Fresh Blends x Kwik Trip #1110 | Ice Box | PMax",
+      "id": "23895254871"
+    },
+    "metrics": {
+      "clicks": "63",
+      "conversions": 0,
+      "costMicros": "43295260",
+      "impressions": "5310"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9052641",
+      "geoTargetMetro": "geoTargetConstants/200528",
+      "geoTargetRegion": "geoTargetConstants/21142"
+    },
+    "geographicView": {
+      "resourceName": "customers/6275014654/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/24012666388",
+      "name": "Replenish | PMAX | Torrey Del Mar 3458 | Consumer Foot Traffic",
+      "id": "24012666388"
+    },
+    "metrics": {
+      "clicks": "152",
+      "conversions": 0,
+      "costMicros": "43111543",
+      "impressions": "3670"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9052391",
+      "geoTargetMetro": "geoTargetConstants/200528",
+      "geoTargetRegion": "geoTargetConstants/21142"
+    },
+    "geographicView": {
+      "resourceName": "customers/6275014654/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/23904822223",
+      "name": "Fresh Blends x Kwik Trip #1161 | Ice Box | PMax",
+      "id": "23904822223"
+    },
+    "metrics": {
+      "clicks": "79",
+      "conversions": 0,
+      "costMicros": "42912684",
+      "impressions": "5129"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9052641",
+      "geoTargetMetro": "geoTargetConstants/200528",
+      "geoTargetRegion": "geoTargetConstants/21142"
+    },
+    "geographicView": {
+      "resourceName": "customers/6275014654/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/23904822223",
+      "name": "Fresh Blends x Kwik Trip #1161 | Ice Box | PMax",
+      "id": "23904822223"
+    },
+    "metrics": {
+      "clicks": "89",
+      "conversions": 0,
+      "costMicros": "40872314",
+      "impressions": "3543"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9051769",
+      "geoTargetMetro": "geoTargetConstants/200528",
+      "geoTargetRegion": "geoTargetConstants/21142"
+    },
+    "geographicView": {
+      "resourceName": "customers/6275014654/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/6275014654/campaigns/23904822223",
+      "name": "Fresh Blends x Kwik Trip #1161 | Ice Box | PMax",
+      "id": "23904822223"
+    },
+    "metrics": {
+      "clicks": "97",
+      "conversions": 0,
+      "costMicros": "39417596",
+      "impressions": "4203"
+    },
+    "segments": {
+      "geoTargetCity": "geoTargetConstants/9052319",
+      "geoTargetMetro": "geoTargetConstants/200528",
+      "geoTargetRegion": "geoTargetConstants/21142"
+    },
+    "geographicView": {
+      "resourceName": "customers/6275014654/geographicViews/2840~LOCATION_OF_PRESENCE"
+    }
+  }
+]

@@ -2,13 +2,20 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "dillon-os/automation-run",
   "title": "AutomationRun",
+  "description": "Run and state record for one automation. `generated_at` is the single machine-readable timestamp contract for routine and automation state: an ISO-8601 instant stamped when the state was produced. Staleness is always measured from it. `written_at` is a backward-compatible alias kept for older readers and must equal `generated_at` when both are present.",
   "type": "object",
-  "required": ["automation_id", "started_at", "status"],
+  "required": ["automation_id", "started_at", "status", "generated_at"],
   "properties": {
     "automation_id": { "type": "string" },
     "run_id": { "type": "string" },
     "started_at": { "type": "string" },
     "finished_at": { "type": ["string", "null"] },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d+)?(Z|[+-]\\d{2}:\\d{2})$"
+    },
+    "written_at": { "type": "string", "format": "date-time", "deprecated": true },
     "status": { "type": "string", "enum": ["ok", "warn", "error", "dry-run"] },
     "dry_run": { "type": "boolean" },
     "summary": { "type": "string" },

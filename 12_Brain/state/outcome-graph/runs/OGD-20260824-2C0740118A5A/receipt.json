@@ -1,0 +1,811 @@
+{
+  "run_id": "OGD-20260824-2C0740118A5A",
+  "graph_id": "daily-d19-report-verification-shadow",
+  "objective": "Reconstruct every current client report package from its named metric fields and source hashes while keeping delivery and approval separate.",
+  "value_signal": "Every report remains client-separated and its KPI, date, source, limitation, decision, and owner fields reproduce without fabricated or blended totals.",
+  "contract_sha256": "b8cf0e8732bc56555f84cef34fc4ae5ef69a84197422f81a41bf3d9b750faaf8",
+  "started_at": "2026-08-24T23:42:22.148Z",
+  "source_evidence": "Current hashed W02 lane evidence and W06 client report packages are re-collected before planning and at terminal verification.",
+  "finish_line": "Every discovered report package is independently reconstructed exactly once with recomputable metric fields, current source hashes, neutral limitations, and no delivery action.",
+  "governance": {
+    "orchestrator": "Codex acting as Marketing Chief",
+    "canonical_state": "The exact W02 paid-media source binding and W06 client-separated report packages remain canonical read-only evidence.",
+    "dedupe_key": "D19:2026-08-24:source-bound-shadow",
+    "checkpoint": "System/outcome-graph/routines/D19/2026-08-24-performance-shadow/run-receipt.json",
+    "rollback": "Discard performance shadow artifacts; retain accounts, providers, CRM, reports, delivery state, spend, and canonical queue state unchanged.",
+    "escalation": "Return exact account ambiguity, pending metric, attribution gap, report limitation, or delivery gate to Marketing Chief."
+  },
+  "graph_iterations": [
+    {
+      "iteration": 1,
+      "status": "verified",
+      "planner": {
+        "evidence": "Collected 12 isolated D19 item(s) from source set cd4877517666380542f1ea8d7c4be50549fa27d98e354f32850b01cab67f172e.",
+        "item_count": 12,
+        "plan_signature": "effa4bb37904a706ad279eb56c3f4817f7b0f2ce57aa733329c736d0e05cd949",
+        "items": [
+          {
+            "id": "D19:bar-crawl-usa:082d14c129d0",
+            "isolation_key": "bar-crawl-usa:2026-08-17 through 2026-08-23",
+            "input_fingerprint": "ab1216acc7e27cf53943bd3252a31cfb0882b9ca1e28cf38bfde2d9e53c71a9a",
+            "task": null
+          },
+          {
+            "id": "D19:fagan-painting:082d14c129d0",
+            "isolation_key": "fagan-painting:2026-08-17 through 2026-08-23",
+            "input_fingerprint": "beaa801439f6154149d53e6295c1baf13a0a79e535252f6dbf57b0c408fc75df",
+            "task": null
+          },
+          {
+            "id": "D19:fresh-blends-kwik-trip:082d14c129d0",
+            "isolation_key": "fresh-blends-kwik-trip:2026-08-17 through 2026-08-23",
+            "input_fingerprint": "437349e7b3d4e4307afd89159b7a705ac2d5fbcabd89fae082ee0b773dcdec59",
+            "task": null
+          },
+          {
+            "id": "D19:hope-wellness-center:082d14c129d0",
+            "isolation_key": "hope-wellness-center:2026-08-17 through 2026-08-23",
+            "input_fingerprint": "8f847ecc1fa2b399ca25b4d84cd15cc454096d227ab22fc2d14e42dcafc8e7a4",
+            "task": null
+          },
+          {
+            "id": "D19:kimberly-james-bridal:082d14c129d0",
+            "isolation_key": "kimberly-james-bridal:2026-08-17 through 2026-08-23",
+            "input_fingerprint": "1671b2aa1075fea94117aac268fdd7b2970279b896f678ccd26fe35c296bd671",
+            "task": null
+          },
+          {
+            "id": "D19:nexla:082d14c129d0",
+            "isolation_key": "nexla:2026-08-17 through 2026-08-23",
+            "input_fingerprint": "f16a8dc8eace5a64fd1859c97f5319eed8e41f81d1db9eb7586d1965913fcbbf",
+            "task": null
+          },
+          {
+            "id": "D19:nkcdc:082d14c129d0",
+            "isolation_key": "nkcdc:2026-08-17 through 2026-08-23",
+            "input_fingerprint": "4e2866f25f73ca6dd918b42dbc1dc50f60c134b386ddaddc133a415a247f4727",
+            "task": null
+          },
+          {
+            "id": "D19:omega-landscaping:082d14c129d0",
+            "isolation_key": "omega-landscaping:2026-08-17 through 2026-08-23",
+            "input_fingerprint": "cdf0e747e54c4f695deed0564f7ae9ed609e5b64c810abe22910cd15a98812d8",
+            "task": null
+          },
+          {
+            "id": "D19:onsite-concrete-landscape:082d14c129d0",
+            "isolation_key": "onsite-concrete-landscape:2026-08-17 through 2026-08-23",
+            "input_fingerprint": "c217442b9431527536540b0c74b2b663f6ca77f61f105595f7774cccd3d8293c",
+            "task": null
+          },
+          {
+            "id": "D19:replenish-7-eleven:082d14c129d0",
+            "isolation_key": "replenish-7-eleven:2026-08-17 through 2026-08-23",
+            "input_fingerprint": "2f511527e20f76c05772976dcc3a61b93fca83e20069855bd3d060e3b9bbabf8",
+            "task": null
+          },
+          {
+            "id": "D19:revive-systems:082d14c129d0",
+            "isolation_key": "revive-systems:2026-08-17 through 2026-08-23",
+            "input_fingerprint": "4651dc135fa8574b9aeb9c2cd1fcadc9af4552c714085664f367cdd43d5f8817",
+            "task": null
+          },
+          {
+            "id": "D19:va-claims-edge:082d14c129d0",
+            "isolation_key": "va-claims-edge:2026-08-17 through 2026-08-23",
+            "input_fingerprint": "e36f3797ed8687bee27ad0025b5a6fdd2e8305894de8d8ac649de51cbe28fc75",
+            "task": null
+          }
+        ]
+      },
+      "workers": [
+        {
+          "item_id": "D19:bar-crawl-usa:082d14c129d0",
+          "input_fingerprint": "ab1216acc7e27cf53943bd3252a31cfb0882b9ca1e28cf38bfde2d9e53c71a9a",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-2C0740118A5A:a9e49c644655f37667bc:attempt:1",
+              "maker_evidence": "Built one privacy-safe D19 record for D19:bar-crawl-usa:082d14c129d0.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D19/2026-08-24-performance-shadow/workers/a9e49c644655f37667bc.json",
+                  "sha256": "54368fbd2f4be57530c13cb218765cb3c1b3f037e1705b3a53fd83a5c5ef089f",
+                  "bytes": 1870
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D19:bar-crawl-usa:082d14c129d0 from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D19/2026-08-24-performance-shadow/workers/a9e49c644655f37667bc.json",
+              "sha256": "54368fbd2f4be57530c13cb218765cb3c1b3f037e1705b3a53fd83a5c5ef089f",
+              "bytes": 1870
+            }
+          ],
+          "isolation_id": "OGD-20260824-2C0740118A5A:a9e49c644655f37667bc:attempt:1"
+        },
+        {
+          "item_id": "D19:fagan-painting:082d14c129d0",
+          "input_fingerprint": "beaa801439f6154149d53e6295c1baf13a0a79e535252f6dbf57b0c408fc75df",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-2C0740118A5A:f69a571aceffd681a0ff:attempt:1",
+              "maker_evidence": "Built one privacy-safe D19 record for D19:fagan-painting:082d14c129d0.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D19/2026-08-24-performance-shadow/workers/f69a571aceffd681a0ff.json",
+                  "sha256": "28ec7d62b42cc4a113b3039b684c674adb2097816cdc9d48460dffef0fb42242",
+                  "bytes": 1856
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D19:fagan-painting:082d14c129d0 from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D19/2026-08-24-performance-shadow/workers/f69a571aceffd681a0ff.json",
+              "sha256": "28ec7d62b42cc4a113b3039b684c674adb2097816cdc9d48460dffef0fb42242",
+              "bytes": 1856
+            }
+          ],
+          "isolation_id": "OGD-20260824-2C0740118A5A:f69a571aceffd681a0ff:attempt:1"
+        },
+        {
+          "item_id": "D19:fresh-blends-kwik-trip:082d14c129d0",
+          "input_fingerprint": "437349e7b3d4e4307afd89159b7a705ac2d5fbcabd89fae082ee0b773dcdec59",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-2C0740118A5A:e533be269ed4348e40c7:attempt:1",
+              "maker_evidence": "Built one privacy-safe D19 record for D19:fresh-blends-kwik-trip:082d14c129d0.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D19/2026-08-24-performance-shadow/workers/e533be269ed4348e40c7.json",
+                  "sha256": "27f13de487fb7b63fa113b2526a5e51863f1af26e11b6e8a5d5a0d284875399a",
+                  "bytes": 1909
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D19:fresh-blends-kwik-trip:082d14c129d0 from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D19/2026-08-24-performance-shadow/workers/e533be269ed4348e40c7.json",
+              "sha256": "27f13de487fb7b63fa113b2526a5e51863f1af26e11b6e8a5d5a0d284875399a",
+              "bytes": 1909
+            }
+          ],
+          "isolation_id": "OGD-20260824-2C0740118A5A:e533be269ed4348e40c7:attempt:1"
+        },
+        {
+          "item_id": "D19:hope-wellness-center:082d14c129d0",
+          "input_fingerprint": "8f847ecc1fa2b399ca25b4d84cd15cc454096d227ab22fc2d14e42dcafc8e7a4",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-2C0740118A5A:c1c0f2183d5a6aa1965f:attempt:1",
+              "maker_evidence": "Built one privacy-safe D19 record for D19:hope-wellness-center:082d14c129d0.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D19/2026-08-24-performance-shadow/workers/c1c0f2183d5a6aa1965f.json",
+                  "sha256": "932280f919194672165b2fae653d44ffadc891fb2ae28582ac5c32de31a115cd",
+                  "bytes": 1900
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D19:hope-wellness-center:082d14c129d0 from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D19/2026-08-24-performance-shadow/workers/c1c0f2183d5a6aa1965f.json",
+              "sha256": "932280f919194672165b2fae653d44ffadc891fb2ae28582ac5c32de31a115cd",
+              "bytes": 1900
+            }
+          ],
+          "isolation_id": "OGD-20260824-2C0740118A5A:c1c0f2183d5a6aa1965f:attempt:1"
+        },
+        {
+          "item_id": "D19:kimberly-james-bridal:082d14c129d0",
+          "input_fingerprint": "1671b2aa1075fea94117aac268fdd7b2970279b896f678ccd26fe35c296bd671",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-2C0740118A5A:5aaefc3dc8398261a2fd:attempt:1",
+              "maker_evidence": "Built one privacy-safe D19 record for D19:kimberly-james-bridal:082d14c129d0.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D19/2026-08-24-performance-shadow/workers/5aaefc3dc8398261a2fd.json",
+                  "sha256": "73227932bb5a6fc2881e8ba42cf36187ffb282b409fbe55ab53f346ce8ee8c53",
+                  "bytes": 2075
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D19:kimberly-james-bridal:082d14c129d0 from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D19/2026-08-24-performance-shadow/workers/5aaefc3dc8398261a2fd.json",
+              "sha256": "73227932bb5a6fc2881e8ba42cf36187ffb282b409fbe55ab53f346ce8ee8c53",
+              "bytes": 2075
+            }
+          ],
+          "isolation_id": "OGD-20260824-2C0740118A5A:5aaefc3dc8398261a2fd:attempt:1"
+        },
+        {
+          "item_id": "D19:nexla:082d14c129d0",
+          "input_fingerprint": "f16a8dc8eace5a64fd1859c97f5319eed8e41f81d1db9eb7586d1965913fcbbf",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-2C0740118A5A:f92be78027831bb47dae:attempt:1",
+              "maker_evidence": "Built one privacy-safe D19 record for D19:nexla:082d14c129d0.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D19/2026-08-24-performance-shadow/workers/f92be78027831bb47dae.json",
+                  "sha256": "02169a2d4984b28157de7dea38870737ca3204936c0052436e386e1101e47b79",
+                  "bytes": 2076
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D19:nexla:082d14c129d0 from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D19/2026-08-24-performance-shadow/workers/f92be78027831bb47dae.json",
+              "sha256": "02169a2d4984b28157de7dea38870737ca3204936c0052436e386e1101e47b79",
+              "bytes": 2076
+            }
+          ],
+          "isolation_id": "OGD-20260824-2C0740118A5A:f92be78027831bb47dae:attempt:1"
+        },
+        {
+          "item_id": "D19:nkcdc:082d14c129d0",
+          "input_fingerprint": "4e2866f25f73ca6dd918b42dbc1dc50f60c134b386ddaddc133a415a247f4727",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-2C0740118A5A:c5bf46b18cf59572963a:attempt:1",
+              "maker_evidence": "Built one privacy-safe D19 record for D19:nkcdc:082d14c129d0.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D19/2026-08-24-performance-shadow/workers/c5bf46b18cf59572963a.json",
+                  "sha256": "6f5c76cbbe4bfab20a8d4daadd4935d396d8f06ecae50f84db2f444b45bba222",
+                  "bytes": 1865
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D19:nkcdc:082d14c129d0 from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D19/2026-08-24-performance-shadow/workers/c5bf46b18cf59572963a.json",
+              "sha256": "6f5c76cbbe4bfab20a8d4daadd4935d396d8f06ecae50f84db2f444b45bba222",
+              "bytes": 1865
+            }
+          ],
+          "isolation_id": "OGD-20260824-2C0740118A5A:c5bf46b18cf59572963a:attempt:1"
+        },
+        {
+          "item_id": "D19:omega-landscaping:082d14c129d0",
+          "input_fingerprint": "cdf0e747e54c4f695deed0564f7ae9ed609e5b64c810abe22910cd15a98812d8",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-2C0740118A5A:b65efde562e5d3ab78e8:attempt:1",
+              "maker_evidence": "Built one privacy-safe D19 record for D19:omega-landscaping:082d14c129d0.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D19/2026-08-24-performance-shadow/workers/b65efde562e5d3ab78e8.json",
+                  "sha256": "f4ddffdc72e8118aa92d918589eadd9c2fd7889b4a0c6467365b9136c5a06d7d",
+                  "bytes": 2044
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D19:omega-landscaping:082d14c129d0 from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D19/2026-08-24-performance-shadow/workers/b65efde562e5d3ab78e8.json",
+              "sha256": "f4ddffdc72e8118aa92d918589eadd9c2fd7889b4a0c6467365b9136c5a06d7d",
+              "bytes": 2044
+            }
+          ],
+          "isolation_id": "OGD-20260824-2C0740118A5A:b65efde562e5d3ab78e8:attempt:1"
+        },
+        {
+          "item_id": "D19:onsite-concrete-landscape:082d14c129d0",
+          "input_fingerprint": "c217442b9431527536540b0c74b2b663f6ca77f61f105595f7774cccd3d8293c",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-2C0740118A5A:759cb4ab0db21bf19cab:attempt:1",
+              "maker_evidence": "Built one privacy-safe D19 record for D19:onsite-concrete-landscape:082d14c129d0.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D19/2026-08-24-performance-shadow/workers/759cb4ab0db21bf19cab.json",
+                  "sha256": "24187fa3e7fd04a7c8a660d351ca1fc6799478ee70f7fa9c576fb57c56175610",
+                  "bytes": 2083
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D19:onsite-concrete-landscape:082d14c129d0 from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D19/2026-08-24-performance-shadow/workers/759cb4ab0db21bf19cab.json",
+              "sha256": "24187fa3e7fd04a7c8a660d351ca1fc6799478ee70f7fa9c576fb57c56175610",
+              "bytes": 2083
+            }
+          ],
+          "isolation_id": "OGD-20260824-2C0740118A5A:759cb4ab0db21bf19cab:attempt:1"
+        },
+        {
+          "item_id": "D19:replenish-7-eleven:082d14c129d0",
+          "input_fingerprint": "2f511527e20f76c05772976dcc3a61b93fca83e20069855bd3d060e3b9bbabf8",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-2C0740118A5A:ec33ac5c6a104c809e7d:attempt:1",
+              "maker_evidence": "Built one privacy-safe D19 record for D19:replenish-7-eleven:082d14c129d0.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D19/2026-08-24-performance-shadow/workers/ec33ac5c6a104c809e7d.json",
+                  "sha256": "ffd48655f531bf977a9f1c68c7471e15b6ca05c9d4260f6ab2cfc08c656fb5d0",
+                  "bytes": 1889
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D19:replenish-7-eleven:082d14c129d0 from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D19/2026-08-24-performance-shadow/workers/ec33ac5c6a104c809e7d.json",
+              "sha256": "ffd48655f531bf977a9f1c68c7471e15b6ca05c9d4260f6ab2cfc08c656fb5d0",
+              "bytes": 1889
+            }
+          ],
+          "isolation_id": "OGD-20260824-2C0740118A5A:ec33ac5c6a104c809e7d:attempt:1"
+        },
+        {
+          "item_id": "D19:revive-systems:082d14c129d0",
+          "input_fingerprint": "4651dc135fa8574b9aeb9c2cd1fcadc9af4552c714085664f367cdd43d5f8817",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-2C0740118A5A:7e4922f376c98d3ee0a0:attempt:1",
+              "maker_evidence": "Built one privacy-safe D19 record for D19:revive-systems:082d14c129d0.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D19/2026-08-24-performance-shadow/workers/7e4922f376c98d3ee0a0.json",
+                  "sha256": "75d04b0eeab7c0b25393d648615dc8b5bb67b640f47739e2682030a5dd44f42f",
+                  "bytes": 1877
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D19:revive-systems:082d14c129d0 from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D19/2026-08-24-performance-shadow/workers/7e4922f376c98d3ee0a0.json",
+              "sha256": "75d04b0eeab7c0b25393d648615dc8b5bb67b640f47739e2682030a5dd44f42f",
+              "bytes": 1877
+            }
+          ],
+          "isolation_id": "OGD-20260824-2C0740118A5A:7e4922f376c98d3ee0a0:attempt:1"
+        },
+        {
+          "item_id": "D19:va-claims-edge:082d14c129d0",
+          "input_fingerprint": "e36f3797ed8687bee27ad0025b5a6fdd2e8305894de8d8ac649de51cbe28fc75",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-2C0740118A5A:8cdd7848b57e7e8d776f:attempt:1",
+              "maker_evidence": "Built one privacy-safe D19 record for D19:va-claims-edge:082d14c129d0.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D19/2026-08-24-performance-shadow/workers/8cdd7848b57e7e8d776f.json",
+                  "sha256": "3baf8a65f278cc320b65e2878eabe4d264ed79d0e17cc3bfbe14c1d68c3c7e15",
+                  "bytes": 1882
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D19:va-claims-edge:082d14c129d0 from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D19/2026-08-24-performance-shadow/workers/8cdd7848b57e7e8d776f.json",
+              "sha256": "3baf8a65f278cc320b65e2878eabe4d264ed79d0e17cc3bfbe14c1d68c3c7e15",
+              "bytes": 1882
+            }
+          ],
+          "isolation_id": "OGD-20260824-2C0740118A5A:8cdd7848b57e7e8d776f:attempt:1"
+        }
+      ],
+      "reduction": {
+        "evidence": "Reduced all checked D19 records without blending isolation keys.",
+        "artifacts": [
+          {
+            "path": "System/outcome-graph/routines/D19/2026-08-24-performance-shadow/report.json",
+            "sha256": "e3fb57688ef1103961e1daf33364ebdd16a3d4e8b33733dd700526156a5e739b",
+            "bytes": 27031
+          },
+          {
+            "path": "System/outcome-graph/routines/D19/2026-08-24-performance-shadow/source-ledger.json",
+            "sha256": "1af36dc7f130be43d687faf9ff0efe4697df7569b2e7c891503ff6b8a81bc80a",
+            "bytes": 3368
+          }
+        ]
+      },
+      "terminal_verification": {
+        "evidence": "Recollected and independently verified all D19 sources, records, negative states, and artifact hashes.",
+        "declared_pass": true,
+        "passed": true,
+        "assertions": [
+          {
+            "id": "source-manifest-stable",
+            "passed": true,
+            "detail": "Every named source remains hash-bound at terminal verification."
+          },
+          {
+            "id": "every-isolated-item-reconstructed-exactly-once",
+            "passed": true,
+            "detail": "Every in-scope item has one collision-resistant reconstructed record."
+          },
+          {
+            "id": "reducer-output-reproduces-exactly",
+            "passed": true,
+            "detail": "Final artifacts reproduce exactly from current sources and the frozen evaluation clock."
+          },
+          {
+            "id": "client-and-date-window-isolated",
+            "passed": true,
+            "detail": "Each client-window report appears exactly once."
+          },
+          {
+            "id": "derived-kpis-recompute",
+            "passed": true,
+            "detail": "Every retained metric field and source hash revalidates."
+          },
+          {
+            "id": "definitions-dates-and-sources-visible",
+            "passed": true,
+            "detail": "Dates and source counts are visible."
+          },
+          {
+            "id": "limitations-and-business-meaning-explicit",
+            "passed": true,
+            "detail": "Every report explains its evidence boundary."
+          },
+          {
+            "id": "next-decision-and-owner-named",
+            "passed": true,
+            "detail": "Every package has one bounded next decision and owner."
+          },
+          {
+            "id": "no-fabricated-or-blended-totals",
+            "passed": true,
+            "detail": "No report is blended or externally delivered."
+          },
+          {
+            "id": "privacy-and-no-mutation-boundary",
+            "passed": true,
+            "detail": "Final artifacts are redacted and attest no external, canonical, provider, restart, or checkpoint mutation."
+          }
+        ],
+        "artifact_manifest": [
+          {
+            "path": "System/outcome-graph/routines/D19/2026-08-24-performance-shadow/report.json",
+            "sha256": "e3fb57688ef1103961e1daf33364ebdd16a3d4e8b33733dd700526156a5e739b",
+            "bytes": 27031
+          },
+          {
+            "path": "System/outcome-graph/routines/D19/2026-08-24-performance-shadow/source-ledger.json",
+            "sha256": "1af36dc7f130be43d687faf9ff0efe4697df7569b2e7c891503ff6b8a81bc80a",
+            "bytes": 3368
+          }
+        ],
+        "manifest_errors": []
+      },
+      "learning": {
+        "evidence": "Appended one hashed D19 correction entry.",
+        "corrections": [
+          "Keep local report verification separate from exact-route delivery approval and readback."
+        ],
+        "ledger": "System/outcome-graph/routines/D19/2026-08-24-performance-shadow/corrections.jsonl",
+        "ledger_receipt": {
+          "locator": "System/outcome-graph/routines/D19/2026-08-24-performance-shadow/corrections.jsonl",
+          "entry_sha256": "7acb24bbbfa620a0e81b1f391435e4c425c7462595eb748c8ca2522191841664"
+        }
+      }
+    }
+  ],
+  "invocation_log": [
+    {
+      "adapter": "source-bound-d19-planner",
+      "invoked_at": "2026-08-24T23:42:22.161Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d19-maker",
+      "invoked_at": "2026-08-24T23:42:22.188Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d19-maker",
+      "invoked_at": "2026-08-24T23:42:22.188Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d19-maker",
+      "invoked_at": "2026-08-24T23:42:22.188Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d19-maker",
+      "invoked_at": "2026-08-24T23:42:22.188Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d19-checker",
+      "invoked_at": "2026-08-24T23:42:22.233Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d19-checker",
+      "invoked_at": "2026-08-24T23:42:22.233Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d19-checker",
+      "invoked_at": "2026-08-24T23:42:22.233Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d19-checker",
+      "invoked_at": "2026-08-24T23:42:22.233Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d19-maker",
+      "invoked_at": "2026-08-24T23:42:22.286Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d19-maker",
+      "invoked_at": "2026-08-24T23:42:22.311Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d19-maker",
+      "invoked_at": "2026-08-24T23:42:22.340Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d19-checker",
+      "invoked_at": "2026-08-24T23:42:22.341Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d19-maker",
+      "invoked_at": "2026-08-24T23:42:22.359Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d19-checker",
+      "invoked_at": "2026-08-24T23:42:22.359Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d19-checker",
+      "invoked_at": "2026-08-24T23:42:22.372Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d19-checker",
+      "invoked_at": "2026-08-24T23:42:22.389Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d19-maker",
+      "invoked_at": "2026-08-24T23:42:22.413Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d19-maker",
+      "invoked_at": "2026-08-24T23:42:22.440Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d19-maker",
+      "invoked_at": "2026-08-24T23:42:22.461Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d19-checker",
+      "invoked_at": "2026-08-24T23:42:22.461Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d19-maker",
+      "invoked_at": "2026-08-24T23:42:22.474Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d19-checker",
+      "invoked_at": "2026-08-24T23:42:22.474Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d19-checker",
+      "invoked_at": "2026-08-24T23:42:22.487Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d19-checker",
+      "invoked_at": "2026-08-24T23:42:22.508Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d19-reducer",
+      "invoked_at": "2026-08-24T23:42:22.590Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d19-terminal-verifier",
+      "invoked_at": "2026-08-24T23:42:22.622Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-d19-learner",
+      "invoked_at": "2026-08-24T23:42:22.653Z",
+      "status": "returned"
+    }
+  ],
+  "budget": {
+    "limit_units": 96,
+    "used_units": 28
+  },
+  "outcome": "complete",
+  "terminal_truth": true,
+  "finished_at": "2026-08-24T23:42:22.673Z",
+  "elapsed_seconds": 0.525,
+  "blocked_by": null,
+  "reason": "Finish line is proven by an independent terminal verifier.",
+  "terminal_evidence": {
+    "evidence": "Recollected and independently verified all D19 sources, records, negative states, and artifact hashes.",
+    "declared_pass": true,
+    "passed": true,
+    "assertions": [
+      {
+        "id": "source-manifest-stable",
+        "passed": true,
+        "detail": "Every named source remains hash-bound at terminal verification."
+      },
+      {
+        "id": "every-isolated-item-reconstructed-exactly-once",
+        "passed": true,
+        "detail": "Every in-scope item has one collision-resistant reconstructed record."
+      },
+      {
+        "id": "reducer-output-reproduces-exactly",
+        "passed": true,
+        "detail": "Final artifacts reproduce exactly from current sources and the frozen evaluation clock."
+      },
+      {
+        "id": "client-and-date-window-isolated",
+        "passed": true,
+        "detail": "Each client-window report appears exactly once."
+      },
+      {
+        "id": "derived-kpis-recompute",
+        "passed": true,
+        "detail": "Every retained metric field and source hash revalidates."
+      },
+      {
+        "id": "definitions-dates-and-sources-visible",
+        "passed": true,
+        "detail": "Dates and source counts are visible."
+      },
+      {
+        "id": "limitations-and-business-meaning-explicit",
+        "passed": true,
+        "detail": "Every report explains its evidence boundary."
+      },
+      {
+        "id": "next-decision-and-owner-named",
+        "passed": true,
+        "detail": "Every package has one bounded next decision and owner."
+      },
+      {
+        "id": "no-fabricated-or-blended-totals",
+        "passed": true,
+        "detail": "No report is blended or externally delivered."
+      },
+      {
+        "id": "privacy-and-no-mutation-boundary",
+        "passed": true,
+        "detail": "Final artifacts are redacted and attest no external, canonical, provider, restart, or checkpoint mutation."
+      }
+    ],
+    "artifact_manifest": [
+      {
+        "path": "System/outcome-graph/routines/D19/2026-08-24-performance-shadow/report.json",
+        "sha256": "e3fb57688ef1103961e1daf33364ebdd16a3d4e8b33733dd700526156a5e739b",
+        "bytes": 27031
+      },
+      {
+        "path": "System/outcome-graph/routines/D19/2026-08-24-performance-shadow/source-ledger.json",
+        "sha256": "1af36dc7f130be43d687faf9ff0efe4697df7569b2e7c891503ff6b8a81bc80a",
+        "bytes": 3368
+      }
+    ],
+    "manifest_errors": []
+  },
+  "learning_evidence": {
+    "evidence": "Appended one hashed D19 correction entry.",
+    "corrections": [
+      "Keep local report verification separate from exact-route delivery approval and readback."
+    ],
+    "ledger": "System/outcome-graph/routines/D19/2026-08-24-performance-shadow/corrections.jsonl",
+    "ledger_receipt": {
+      "locator": "System/outcome-graph/routines/D19/2026-08-24-performance-shadow/corrections.jsonl",
+      "entry_sha256": "7acb24bbbfa620a0e81b1f391435e4c425c7462595eb748c8ca2522191841664"
+    }
+  },
+  "drift_fingerprint": "c2c8d8eef84928d610428e3204c4725d0f79a1b300ffca082d2e74ee8e4ff4f4",
+  "deduped": false,
+  "durable_state": {
+    "schema_version": 1,
+    "dedupe_identity": "3fa4ef1460ba4df78a3eb0efb19ffaceef87e548ea083d2da1933ae727614e1e",
+    "dedupe_hit": false,
+    "resumed": false,
+    "canonical_binding": {
+      "locator": "dillon-os://routine/D19/2026-08-24",
+      "version": "2026-08-24:7d65a000d0.6216ed7d8b.fedfe6670d",
+      "sha256": "cd4877517666380542f1ea8d7c4be50549fa27d98e354f32850b01cab67f172e",
+      "captured_at": "2026-08-24T23:42:22.129Z"
+    },
+    "canonical_binding_fingerprint": "3ff5a328749a9a2f3b96437a812ffbc018908a4192141ecf9741bbdb7a84731e",
+    "contract_fingerprint": "c6c157ad6e325fc556072d74072c9dde45ac521efd8dc096a838fa52dd81d8da",
+    "checkpoint": "runs/OGD-20260824-2C0740118A5A/checkpoint.json"
+  }
+}

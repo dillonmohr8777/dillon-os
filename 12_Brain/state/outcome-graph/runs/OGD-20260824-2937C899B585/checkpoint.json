@@ -1,0 +1,306 @@
+{
+  "schema_version": 1,
+  "run_id": "OGD-20260824-2937C899B585",
+  "graph_id": "daily-d25-evidence-handoff-shadow",
+  "dedupe_identity": "6caaaa268e1403e2bfd2f67f006c2439dc0a8d2052845f354676eb11ebba957d",
+  "dedupe_key": "D25:2026-08-24:source-bound-shadow",
+  "contract_fingerprint": "ba935a0fa3dd5991b2e6a075b7d45182510428de6d686e4b35a491f4f92b4863",
+  "canonical_binding": {
+    "locator": "dillon-os://routine/D25/2026-08-24",
+    "version": "2026-08-24:e1cb9e89.05e6a21e.c5a7c091.1b135970.d503a937.90d9bcee.f497ab86.4cbc7e46.43cfa9c9.c4f66a74",
+    "sha256": "bee6d7037763d45601274702c12c8e31ad280fed7e97757744fc5930b1d39065",
+    "captured_at": "2026-08-24T23:49:19.628Z"
+  },
+  "canonical_binding_fingerprint": "718c6da2d4b11d3afb0bb308a361300055f0343c5cb69ca9bfd81185ae359d63",
+  "status": "complete",
+  "started_at": "2026-08-24T23:49:20.269Z",
+  "updated_at": "2026-08-24T23:49:21.959Z",
+  "event_sequence": 9,
+  "events": [
+    {
+      "sequence": 1,
+      "event": "run_started",
+      "at": "2026-08-24T23:49:20.269Z",
+      "resumed": false
+    },
+    {
+      "sequence": 2,
+      "event": "planned",
+      "at": "2026-08-24T23:49:20.581Z",
+      "graph_attempt": 1,
+      "item_id": null
+    },
+    {
+      "sequence": 3,
+      "event": "worker_verified",
+      "at": "2026-08-24T23:49:21.201Z",
+      "graph_attempt": 1,
+      "item_id": "D25:OGD-20260824-23145989F598"
+    },
+    {
+      "sequence": 4,
+      "event": "workers_verified",
+      "at": "2026-08-24T23:49:21.219Z",
+      "graph_attempt": 1,
+      "item_id": null
+    },
+    {
+      "sequence": 5,
+      "event": "reduced",
+      "at": "2026-08-24T23:49:21.241Z",
+      "graph_attempt": 1,
+      "item_id": null
+    },
+    {
+      "sequence": 6,
+      "event": "terminal_verified",
+      "at": "2026-08-24T23:49:21.596Z",
+      "graph_attempt": 1,
+      "item_id": null
+    },
+    {
+      "sequence": 7,
+      "event": "learned",
+      "at": "2026-08-24T23:49:21.614Z",
+      "graph_attempt": 1,
+      "item_id": null
+    },
+    {
+      "sequence": 8,
+      "event": "finished",
+      "at": "2026-08-24T23:49:21.628Z",
+      "graph_attempt": 1,
+      "item_id": null
+    },
+    {
+      "sequence": 9,
+      "event": "receipt_committed",
+      "at": "2026-08-24T23:49:21.959Z",
+      "outcome": "complete"
+    }
+  ],
+  "engine": {
+    "stage": "finished",
+    "graph_attempt": 1,
+    "plan_signature": "e1fbe6d18e7d3d87637ac4f710cf307ebe898bfa58a76f1d5c4b5bc9e24d1a13",
+    "verified_workers": {
+      "D25:OGD-20260824-23145989F598": {
+        "input_fingerprint": "cf948198badf0a6f5c5faeeb476cd9f7ee9cbd16fd6a0f7ea4137bd150241010",
+        "worker_result": {
+          "item_id": "D25:OGD-20260824-23145989F598",
+          "input_fingerprint": "cf948198badf0a6f5c5faeeb476cd9f7ee9cbd16fd6a0f7ea4137bd150241010",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260824-2937C899B585:a210425747a894e3421e:attempt:1",
+              "maker_evidence": "Built one privacy-safe D25 record for D25:OGD-20260824-23145989F598.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/D25/2026-08-24-foundation-shadow/workers/a210425747a894e3421e.json",
+                  "sha256": "09164bbdb094d36a69bd910873bd2d666d87a76b7f6d87a02247445082789212",
+                  "bytes": 1789
+                }
+              ],
+              "checker_evidence": "Independently reconstructed D25:OGD-20260824-23145989F598 from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D25/2026-08-24-foundation-shadow/workers/a210425747a894e3421e.json",
+              "sha256": "09164bbdb094d36a69bd910873bd2d666d87a76b7f6d87a02247445082789212",
+              "bytes": 1789
+            }
+          ],
+          "isolation_id": "OGD-20260824-2937C899B585:a210425747a894e3421e:attempt:1"
+        }
+      }
+    },
+    "budget_used": 6,
+    "previous_terminal_findings": [],
+    "graph_iterations": [
+      {
+        "iteration": 1,
+        "status": "verified",
+        "planner": {
+          "evidence": "Collected 1 isolated D25 item(s) from source set bee6d7037763d45601274702c12c8e31ad280fed7e97757744fc5930b1d39065.",
+          "item_count": 1,
+          "plan_signature": "e1fbe6d18e7d3d87637ac4f710cf307ebe898bfa58a76f1d5c4b5bc9e24d1a13",
+          "items": [
+            {
+              "id": "D25:OGD-20260824-23145989F598",
+              "isolation_key": "handoff:OGD-20260824-23145989F598:4cbc7e46def665bc346c32375f21eea3a4ecdebc08a9b36732feb999a9e4de58",
+              "input_fingerprint": "cf948198badf0a6f5c5faeeb476cd9f7ee9cbd16fd6a0f7ea4137bd150241010",
+              "task": null
+            }
+          ]
+        },
+        "workers": [
+          {
+            "item_id": "D25:OGD-20260824-23145989F598",
+            "input_fingerprint": "cf948198badf0a6f5c5faeeb476cd9f7ee9cbd16fd6a0f7ea4137bd150241010",
+            "status": "verified",
+            "attempts": [
+              {
+                "attempt": 1,
+                "isolation_id": "OGD-20260824-2937C899B585:a210425747a894e3421e:attempt:1",
+                "maker_evidence": "Built one privacy-safe D25 record for D25:OGD-20260824-23145989F598.",
+                "artifacts": [
+                  {
+                    "path": "System/outcome-graph/routines/D25/2026-08-24-foundation-shadow/workers/a210425747a894e3421e.json",
+                    "sha256": "09164bbdb094d36a69bd910873bd2d666d87a76b7f6d87a02247445082789212",
+                    "bytes": 1789
+                  }
+                ],
+                "checker_evidence": "Independently reconstructed D25:OGD-20260824-23145989F598 from the same source-bound contract.",
+                "passed": true,
+                "findings": []
+              }
+            ],
+            "final_artifacts": [
+              {
+                "path": "System/outcome-graph/routines/D25/2026-08-24-foundation-shadow/workers/a210425747a894e3421e.json",
+                "sha256": "09164bbdb094d36a69bd910873bd2d666d87a76b7f6d87a02247445082789212",
+                "bytes": 1789
+              }
+            ],
+            "isolation_id": "OGD-20260824-2937C899B585:a210425747a894e3421e:attempt:1"
+          }
+        ],
+        "reduction": {
+          "evidence": "Reduced all checked D25 records without blending isolation keys.",
+          "artifacts": [
+            {
+              "path": "System/outcome-graph/routines/D25/2026-08-24-foundation-shadow/final-status-receipt.json",
+              "sha256": "1164d9e4bcc0169c42711f0ccac79b435874231343e58f6384c55b05a4e69350",
+              "bytes": 1835
+            },
+            {
+              "path": "System/outcome-graph/routines/D25/2026-08-24-foundation-shadow/artifact-manifest.json",
+              "sha256": "65e4785742112fbd7615581f5cc2ac5e88e7a60f9583cc477c22172fb8a2abd1",
+              "bytes": 952
+            }
+          ]
+        },
+        "terminal_verification": {
+          "evidence": "Recollected and independently verified all D25 sources, records, negative states, and artifact hashes.",
+          "declared_pass": true,
+          "passed": true,
+          "assertions": [
+            {
+              "id": "source-manifest-stable",
+              "passed": true,
+              "detail": "Every named source remains hash-bound at terminal verification."
+            },
+            {
+              "id": "every-isolated-item-reconstructed-exactly-once",
+              "passed": true,
+              "detail": "Every in-scope item has one collision-resistant reconstructed record."
+            },
+            {
+              "id": "reducer-output-reproduces-exactly",
+              "passed": true,
+              "detail": "Final artifacts reproduce exactly from current sources and the frozen evaluation clock."
+            },
+            {
+              "id": "status-vocabulary-is-exact",
+              "passed": true,
+              "detail": "Graph completion remains distinct from business, deployment, and delivery state."
+            },
+            {
+              "id": "artifact-paths-hashes-and-bytes-present",
+              "passed": true,
+              "detail": "Artifacts have exact manifests."
+            },
+            {
+              "id": "local-and-external-proof-separated",
+              "passed": true,
+              "detail": "Missing external proof is explicit."
+            },
+            {
+              "id": "risks-and-one-next-action-present",
+              "passed": true,
+              "detail": "Risk and next action are explicit."
+            },
+            {
+              "id": "marketing-chief-owns-canonical-completion",
+              "passed": true,
+              "detail": "The shadow writes no canonical completion."
+            },
+            {
+              "id": "privacy-and-no-mutation-boundary",
+              "passed": true,
+              "detail": "Final artifacts are redacted and attest no external, canonical, provider, restart, or checkpoint mutation."
+            }
+          ],
+          "artifact_manifest": [
+            {
+              "path": "System/outcome-graph/routines/D25/2026-08-24-foundation-shadow/final-status-receipt.json",
+              "sha256": "1164d9e4bcc0169c42711f0ccac79b435874231343e58f6384c55b05a4e69350",
+              "bytes": 1835
+            },
+            {
+              "path": "System/outcome-graph/routines/D25/2026-08-24-foundation-shadow/artifact-manifest.json",
+              "sha256": "65e4785742112fbd7615581f5cc2ac5e88e7a60f9583cc477c22172fb8a2abd1",
+              "bytes": 952
+            }
+          ],
+          "manifest_errors": []
+        },
+        "learning": {
+          "evidence": "Appended one hashed D25 correction entry.",
+          "corrections": [
+            "Retain D25 source bindings, negative states, exact authority, and terminal assertions until the underlying evidence changes."
+          ],
+          "ledger": "System/outcome-graph/routines/D25/2026-08-24-foundation-shadow/corrections.jsonl",
+          "ledger_receipt": {
+            "locator": "System/outcome-graph/routines/D25/2026-08-24-foundation-shadow/corrections.jsonl",
+            "entry_sha256": "82c53f55bb1bc09df4de40c414e7abdb31715d1faaeb45e64cfccf97f63aaf01"
+          }
+        }
+      }
+    ],
+    "invocation_log": [
+      {
+        "adapter": "source-bound-d25-planner",
+        "invoked_at": "2026-08-24T23:49:20.282Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-d25-maker",
+        "invoked_at": "2026-08-24T23:49:20.601Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-d25-checker",
+        "invoked_at": "2026-08-24T23:49:20.910Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-d25-reducer",
+        "invoked_at": "2026-08-24T23:49:21.232Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-d25-terminal-verifier",
+        "invoked_at": "2026-08-24T23:49:21.255Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-d25-learner",
+        "invoked_at": "2026-08-24T23:49:21.613Z",
+        "status": "returned"
+      }
+    ]
+  },
+  "last_event": "receipt_committed",
+  "state_revision": 9,
+  "previous_state_sha256": "125a5324fce21a2b0e8749c5fb9db665e87b4e8a0932eb546c601d83f20e3e20",
+  "receipt": {
+    "path": "runs/OGD-20260824-2937C899B585/receipt.json",
+    "sha256": "97c43c5d8eeb5419b9a37db09433230c9a239837b168162446d3d8a548e0cdf9",
+    "bytes": 12598
+  }
+}

@@ -38,3 +38,12 @@ The wider local Codex installation includes connectors/plugins for GitHub, Gmail
 ## Skills and plugins
 
 Codex skills are mirrored as global Cursor Agent Skills from `C:\Users\dillo\.codex\skills`. Cursor-native skills remain under `C:\Users\dillo\.cursor\skills-cursor`. Plugin capabilities that depend on the Codex host are documented here but are not falsely presented as executable Cursor plugins; portable MCP and skill content is used instead.
+
+## OpenAI Agents API (added 2026-09-10)
+
+- Managed Codex harness via `POST /v1/agents/sessions` with `OpenAI-Beta: agents=v1`.
+- Use for long-running coding/research agents; not for CEO chat, Hermes cron, OmniRoute routing, or client delivery.
+- Skill: `.agents/skills/openai-agents-api/SKILL.md`
+- Wrapper: `System/scripts/Invoke-OpenAIAgentsSession.ps1` (dry-run default)
+- Secret: `OPENAI_API_KEY` with `api.agents.read`, `api.agents.write`, `api.responses.write` — see `System/api-keys-setup.md`
+- Live Hermes remains on `http://127.0.0.1:9900/`; OmniRoute on `http://127.0.0.1:20128/` (model gateway, not Agents API).

@@ -1,0 +1,355 @@
+{
+  "schema_version": 1,
+  "run_id": "OGD-20260824-CC761B2EBA1E",
+  "graph_id": "weekly-w09-w11-shadow",
+  "dedupe_identity": "642277f1cafd0fc0510549ff2fbd0b213ac84ed4f63714f97a0317a10a02d5cf",
+  "dedupe_key": "internal:weekly-w09-w11-shadow:System/outcome-graph/shadow-2026-08-24-run-6-durable",
+  "contract_fingerprint": "b8cfb09e0e3a4b0de08828e62f4b9be0a6db47cf32826b9b3667682365f3c1e0",
+  "canonical_binding": {
+    "locator": "dillon-os://weekly/W09-W11-source-set",
+    "version": "29986f4d56b9:dd2f3ecb6350:688:1816",
+    "sha256": "b78545f8450957b5d520bcaa73c0a2c67d66747c2fb230bdc58fa9ad405f8c38",
+    "captured_at": "2026-08-24T21:35:51.648Z"
+  },
+  "canonical_binding_fingerprint": "ae4f7a7e7ab7557375ba9cc4350a97b68c0194b2be63cabd4372222648b1df4e",
+  "status": "complete",
+  "started_at": "2026-08-24T21:35:58.671Z",
+  "updated_at": "2026-08-24T21:36:24.288Z",
+  "event_sequence": 10,
+  "events": [
+    {
+      "sequence": 1,
+      "event": "run_started",
+      "at": "2026-08-24T21:35:58.671Z",
+      "resumed": false
+    },
+    {
+      "sequence": 2,
+      "event": "planned",
+      "at": "2026-08-24T21:36:06.906Z",
+      "graph_attempt": 1,
+      "item_id": null
+    },
+    {
+      "sequence": 3,
+      "event": "worker_verified",
+      "at": "2026-08-24T21:36:11.281Z",
+      "graph_attempt": 1,
+      "item_id": "W09"
+    },
+    {
+      "sequence": 4,
+      "event": "worker_verified",
+      "at": "2026-08-24T21:36:13.540Z",
+      "graph_attempt": 1,
+      "item_id": "W11"
+    },
+    {
+      "sequence": 5,
+      "event": "workers_verified",
+      "at": "2026-08-24T21:36:13.548Z",
+      "graph_attempt": 1,
+      "item_id": null
+    },
+    {
+      "sequence": 6,
+      "event": "reduced",
+      "at": "2026-08-24T21:36:13.558Z",
+      "graph_attempt": 1,
+      "item_id": null
+    },
+    {
+      "sequence": 7,
+      "event": "terminal_verified",
+      "at": "2026-08-24T21:36:18.808Z",
+      "graph_attempt": 1,
+      "item_id": null
+    },
+    {
+      "sequence": 8,
+      "event": "learned",
+      "at": "2026-08-24T21:36:18.820Z",
+      "graph_attempt": 1,
+      "item_id": null
+    },
+    {
+      "sequence": 9,
+      "event": "finished",
+      "at": "2026-08-24T21:36:18.829Z",
+      "graph_attempt": 1,
+      "item_id": null
+    },
+    {
+      "sequence": 10,
+      "event": "receipt_committed",
+      "at": "2026-08-24T21:36:24.288Z",
+      "outcome": "complete"
+    }
+  ],
+  "engine": {
+    "stage": "finished",
+    "graph_attempt": 1,
+    "plan_signature": "6dde908f3c4652280811a5ec3911b2f71e5ab4fbb08fa4ee89d49bda1ebfba69",
+    "verified_workers": {
+      "W09": {
+        "input_fingerprint": "d2aa8f6a9625977321fc904c4d8c3f172daf46e8701d168ed0195fa5ff895d6a",
+        "worker_result": {
+          "item_id": "W09",
+          "input_fingerprint": "d2aa8f6a9625977321fc904c4d8c3f172daf46e8701d168ed0195fa5ff895d6a",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "W09-graph-1-attempt-1",
+              "maker_evidence": "Built the W09 evidence artifact in isolated workspace W09-graph-1-attempt-1.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/shadow-2026-08-24-run-6-durable/W09-automation-reliability.json",
+                  "sha256": "58541f6d81f8baee7d3ab12a00b96190d2d1d00be152385ebc3d9191aed4b996",
+                  "bytes": 45734
+                }
+              ],
+              "checker_evidence": "Re-ran live W09 sources and compared outcome-specific assertions.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/shadow-2026-08-24-run-6-durable/W09-automation-reliability.json",
+              "sha256": "58541f6d81f8baee7d3ab12a00b96190d2d1d00be152385ebc3d9191aed4b996",
+              "bytes": 45734
+            }
+          ],
+          "isolation_id": "W09-graph-1-attempt-1"
+        }
+      },
+      "W11": {
+        "input_fingerprint": "d6dc36d248a703ba7c0aff0260beef4b6e657e4aaee66c40dca17713b7cbe5e5",
+        "worker_result": {
+          "item_id": "W11",
+          "input_fingerprint": "d6dc36d248a703ba7c0aff0260beef4b6e657e4aaee66c40dca17713b7cbe5e5",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "W11-graph-1-attempt-1",
+              "maker_evidence": "Built the W11 evidence artifact in isolated workspace W11-graph-1-attempt-1.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/shadow-2026-08-24-run-6-durable/W11-knowledge-graph-health.json",
+                  "sha256": "2438ad8f91a3539c5c7c341363c231cd1817afd3ed3a242391d84c8df66e6e24",
+                  "bytes": 14979
+                }
+              ],
+              "checker_evidence": "Re-ran live W11 sources and compared outcome-specific assertions.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/shadow-2026-08-24-run-6-durable/W11-knowledge-graph-health.json",
+              "sha256": "2438ad8f91a3539c5c7c341363c231cd1817afd3ed3a242391d84c8df66e6e24",
+              "bytes": 14979
+            }
+          ],
+          "isolation_id": "W11-graph-1-attempt-1"
+        }
+      }
+    },
+    "budget_used": 8,
+    "previous_terminal_findings": [],
+    "graph_iterations": [
+      {
+        "iteration": 1,
+        "status": "verified",
+        "planner": {
+          "evidence": "Collected current W09 and W11 source packets before fan-out.",
+          "item_count": 2,
+          "plan_signature": "6dde908f3c4652280811a5ec3911b2f71e5ab4fbb08fa4ee89d49bda1ebfba69",
+          "items": [
+            {
+              "id": "W09",
+              "isolation_key": "routine:W09",
+              "input_fingerprint": "d2aa8f6a9625977321fc904c4d8c3f172daf46e8701d168ed0195fa5ff895d6a"
+            },
+            {
+              "id": "W11",
+              "isolation_key": "routine:W11",
+              "input_fingerprint": "d6dc36d248a703ba7c0aff0260beef4b6e657e4aaee66c40dca17713b7cbe5e5"
+            }
+          ]
+        },
+        "workers": [
+          {
+            "item_id": "W09",
+            "input_fingerprint": "d2aa8f6a9625977321fc904c4d8c3f172daf46e8701d168ed0195fa5ff895d6a",
+            "status": "verified",
+            "attempts": [
+              {
+                "attempt": 1,
+                "isolation_id": "W09-graph-1-attempt-1",
+                "maker_evidence": "Built the W09 evidence artifact in isolated workspace W09-graph-1-attempt-1.",
+                "artifacts": [
+                  {
+                    "path": "System/outcome-graph/shadow-2026-08-24-run-6-durable/W09-automation-reliability.json",
+                    "sha256": "58541f6d81f8baee7d3ab12a00b96190d2d1d00be152385ebc3d9191aed4b996",
+                    "bytes": 45734
+                  }
+                ],
+                "checker_evidence": "Re-ran live W09 sources and compared outcome-specific assertions.",
+                "passed": true,
+                "findings": []
+              }
+            ],
+            "final_artifacts": [
+              {
+                "path": "System/outcome-graph/shadow-2026-08-24-run-6-durable/W09-automation-reliability.json",
+                "sha256": "58541f6d81f8baee7d3ab12a00b96190d2d1d00be152385ebc3d9191aed4b996",
+                "bytes": 45734
+              }
+            ],
+            "isolation_id": "W09-graph-1-attempt-1"
+          },
+          {
+            "item_id": "W11",
+            "input_fingerprint": "d6dc36d248a703ba7c0aff0260beef4b6e657e4aaee66c40dca17713b7cbe5e5",
+            "status": "verified",
+            "attempts": [
+              {
+                "attempt": 1,
+                "isolation_id": "W11-graph-1-attempt-1",
+                "maker_evidence": "Built the W11 evidence artifact in isolated workspace W11-graph-1-attempt-1.",
+                "artifacts": [
+                  {
+                    "path": "System/outcome-graph/shadow-2026-08-24-run-6-durable/W11-knowledge-graph-health.json",
+                    "sha256": "2438ad8f91a3539c5c7c341363c231cd1817afd3ed3a242391d84c8df66e6e24",
+                    "bytes": 14979
+                  }
+                ],
+                "checker_evidence": "Re-ran live W11 sources and compared outcome-specific assertions.",
+                "passed": true,
+                "findings": []
+              }
+            ],
+            "final_artifacts": [
+              {
+                "path": "System/outcome-graph/shadow-2026-08-24-run-6-durable/W11-knowledge-graph-health.json",
+                "sha256": "2438ad8f91a3539c5c7c341363c231cd1817afd3ed3a242391d84c8df66e6e24",
+                "bytes": 14979
+              }
+            ],
+            "isolation_id": "W11-graph-1-attempt-1"
+          }
+        ],
+        "reduction": {
+          "evidence": "Merged the two checked routine artifacts into a collision-free staging directory.",
+          "artifacts": [
+            {
+              "path": "System/outcome-graph/shadow-2026-08-24-run-6-durable/W09-automation-reliability.json",
+              "sha256": "58541f6d81f8baee7d3ab12a00b96190d2d1d00be152385ebc3d9191aed4b996",
+              "bytes": 45734
+            },
+            {
+              "path": "System/outcome-graph/shadow-2026-08-24-run-6-durable/W11-knowledge-graph-health.json",
+              "sha256": "2438ad8f91a3539c5c7c341363c231cd1817afd3ed3a242391d84c8df66e6e24",
+              "bytes": 14979
+            }
+          ]
+        },
+        "terminal_verification": {
+          "evidence": "Terminal verifier independently repeated both live source checks after reduction.",
+          "declared_pass": true,
+          "passed": true,
+          "assertions": [
+            {
+              "id": "W09-reproduces-current-reliability-state",
+              "passed": true,
+              "detail": "W09 structural passes and false-completion migration risk both remain visible."
+            },
+            {
+              "id": "W11-proves-connected-vault-graph",
+              "passed": true,
+              "detail": "W11 has zero structural errors, one component, full coverage, and zero orphans."
+            }
+          ],
+          "artifact_manifest": [
+            {
+              "path": "System/outcome-graph/shadow-2026-08-24-run-6-durable/W09-automation-reliability.json",
+              "sha256": "58541f6d81f8baee7d3ab12a00b96190d2d1d00be152385ebc3d9191aed4b996",
+              "bytes": 45734
+            },
+            {
+              "path": "System/outcome-graph/shadow-2026-08-24-run-6-durable/W11-knowledge-graph-health.json",
+              "sha256": "2438ad8f91a3539c5c7c341363c231cd1817afd3ed3a242391d84c8df66e6e24",
+              "bytes": 14979
+            }
+          ],
+          "manifest_errors": []
+        },
+        "learning": {
+          "evidence": "Appended one hashed correction entry for graph outcome terminal_true.",
+          "corrections": [
+            "Keep W09 false-completion risk visible while migrating W09 and W11 to outcome-specific terminal predicates."
+          ],
+          "ledger": "System/outcome-graph/shadow-2026-08-24-run-6-durable/corrections.jsonl",
+          "ledger_receipt": {
+            "locator": "System/outcome-graph/shadow-2026-08-24-run-6-durable/corrections.jsonl",
+            "entry_sha256": "57dcab346d502889320087acbe67550b9d21e3089c7abe35bc6731c5db60c0e3"
+          }
+        }
+      }
+    ],
+    "invocation_log": [
+      {
+        "adapter": "weekly-shadow-planner",
+        "invoked_at": "2026-08-24T21:35:58.681Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "weekly-shadow-evidence-maker",
+        "invoked_at": "2026-08-24T21:36:06.916Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "weekly-shadow-evidence-maker",
+        "invoked_at": "2026-08-24T21:36:06.917Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "weekly-shadow-independent-checker",
+        "invoked_at": "2026-08-24T21:36:06.920Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "weekly-shadow-independent-checker",
+        "invoked_at": "2026-08-24T21:36:06.920Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "weekly-shadow-reducer",
+        "invoked_at": "2026-08-24T21:36:13.555Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "weekly-shadow-terminal-verifier",
+        "invoked_at": "2026-08-24T21:36:13.566Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "weekly-shadow-correction-ledger",
+        "invoked_at": "2026-08-24T21:36:18.820Z",
+        "status": "returned"
+      }
+    ]
+  },
+  "last_event": "receipt_committed",
+  "receipt": {
+    "path": "runs/OGD-20260824-CC761B2EBA1E/receipt.json",
+    "sha256": "2c06a23e2c7577073d55718eab1d65029f42c847125c8174141a9b6287e9006a",
+    "bytes": 12014
+  },
+  "state_revision": 1,
+  "previous_state_sha256": "b76201a05398777a2458de2da85a23424b38b8ebeaf1dbc869f312a2489439a8"
+}

@@ -1,0 +1,49 @@
+[
+ {
+  "resourceName": "customers/7917802207/customerConversionGoals/DEFAULT~WEBSITE",
+  "category": "DEFAULT",
+  "origin": "WEBSITE"
+ },
+ {
+  "resourceName": "customers/7917802207/customerConversionGoals/PURCHASE~WEBSITE",
+  "category": "PURCHASE",
+  "origin": "WEBSITE"
+ },
+ {
+  "resourceName": "customers/7917802207/customerConversionGoals/PAGE_VIEW~WEBSITE",
+  "category": "PAGE_VIEW",
+  "origin": "WEBSITE"
+ },
+ {
+  "resourceName": "customers/7917802207/customerConversionGoals/SUBMIT_LEAD_FORM~WEBSITE",
+  "category": "SUBMIT_LEAD_FORM",
+  "origin": "WEBSITE"
+ },
+ {
+  "resourceName": "customers/7917802207/customerConversionGoals/SUBMIT_LEAD_FORM~GOOGLE_HOSTED",
+  "category": "SUBMIT_LEAD_FORM",
+  "origin": "GOOGLE_HOSTED"
+ },
+ {
+  "resourceName": "customers/7917802207/customerConversionGoals/ENGAGEMENT~YOUTUBE_HOSTED",
+  "category": "ENGAGEMENT",
+  "origin": "YOUTUBE_HOSTED",
+  "biddable": true
+ },
+ {
+  "resourceName": "customers/7917802207/customerConversionGoals/QUALIFIED_LEAD~WEBSITE",
+  "category": "QUALIFIED_LEAD",
+  "origin": "WEBSITE"
+ },
+ {
+  "resourceName": "customers/7917802207/customerConversionGoals/CONVERTED_LEAD~WEBSITE",
+  "category": "CONVERTED_LEAD",
+  "origin": "WEBSITE"
+ },
+ {
+  "resourceName": "customers/7917802207/customerConversionGoals/YOUTUBE_FOLLOW_ON_VIEWS~YOUTUBE_HOSTED",
+  "category": "YOUTUBE_FOLLOW_ON_VIEWS",
+  "origin": "YOUTUBE_HOSTED",
+  "biddable": true
+ }
+]

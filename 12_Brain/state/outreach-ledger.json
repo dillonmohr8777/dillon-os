@@ -1,0 +1,221 @@
+{
+  "generated_at": "2026-09-03T07:11:23.111Z",
+  "batches_with_data": 1,
+  "prospects_built": 20,
+  "totals": {
+    "built": 20,
+    "qa_ready": 20,
+    "approved": 0,
+    "mailed": 0,
+    "emailed": null,
+    "bounced": null,
+    "scanned": 0,
+    "replied": null,
+    "call_booked": 0
+  },
+  "reached": 0,
+  "rates": {
+    "qa_pass_pct": 100,
+    "approved_of_ready_pct": 0,
+    "activated_of_approved_pct": null,
+    "reply_of_emailed_pct": null,
+    "bounce_of_emailed_pct": null,
+    "call_of_reached_pct": null
+  },
+  "by_market": {
+    "Service area": {
+      "built": 16,
+      "qa_ready": 16,
+      "approved": 0,
+      "mailed": 0,
+      "emailed": null,
+      "bounced": null,
+      "scanned": 0,
+      "replied": null,
+      "call_booked": 0
+    },
+    "valuedclient@balafinancial.com": {
+      "built": 1,
+      "qa_ready": 1,
+      "approved": 0,
+      "mailed": 0,
+      "emailed": null,
+      "bounced": null,
+      "scanned": 0,
+      "replied": null,
+      "call_booked": 0
+    },
+    "Phoenixville": {
+      "built": 1,
+      "qa_ready": 1,
+      "approved": 0,
+      "mailed": 0,
+      "emailed": null,
+      "bounced": null,
+      "scanned": 0,
+      "replied": null,
+      "call_booked": 0
+    },
+    "Elverson": {
+      "built": 1,
+      "qa_ready": 1,
+      "approved": 0,
+      "mailed": 0,
+      "emailed": null,
+      "bounced": null,
+      "scanned": 0,
+      "replied": null,
+      "call_booked": 0
+    },
+    "Feasterville": {
+      "built": 1,
+      "qa_ready": 1,
+      "approved": 0,
+      "mailed": 0,
+      "emailed": null,
+      "bounced": null,
+      "scanned": 0,
+      "replied": null,
+      "call_booked": 0
+    }
+  },
+  "by_vertical": {
+    "swimming-pool": {
+      "built": 2,
+      "qa_ready": 2,
+      "approved": 0,
+      "mailed": 0,
+      "emailed": null,
+      "bounced": null,
+      "scanned": 0,
+      "replied": null,
+      "call_booked": 0
+    },
+    "financial": {
+      "built": 2,
+      "qa_ready": 2,
+      "approved": 0,
+      "mailed": 0,
+      "emailed": null,
+      "bounced": null,
+      "scanned": 0,
+      "replied": null,
+      "call_booked": 0
+    },
+    "hardware": {
+      "built": 2,
+      "qa_ready": 2,
+      "approved": 0,
+      "mailed": 0,
+      "emailed": null,
+      "bounced": null,
+      "scanned": 0,
+      "replied": null,
+      "call_booked": 0
+    },
+    "estate-agent": {
+      "built": 2,
+      "qa_ready": 2,
+      "approved": 0,
+      "mailed": 0,
+      "emailed": null,
+      "bounced": null,
+      "scanned": 0,
+      "replied": null,
+      "call_booked": 0
+    },
+    "trade": {
+      "built": 2,
+      "qa_ready": 2,
+      "approved": 0,
+      "mailed": 0,
+      "emailed": null,
+      "bounced": null,
+      "scanned": 0,
+      "replied": null,
+      "call_booked": 0
+    },
+    "insurance": {
+      "built": 1,
+      "qa_ready": 1,
+      "approved": 0,
+      "mailed": 0,
+      "emailed": null,
+      "bounced": null,
+      "scanned": 0,
+      "replied": null,
+      "call_booked": 0
+    },
+    "lawyer": {
+      "built": 2,
+      "qa_ready": 2,
+      "approved": 0,
+      "mailed": 0,
+      "emailed": null,
+      "bounced": null,
+      "scanned": 0,
+      "replied": null,
+      "call_booked": 0
+    },
+    "clinic": {
+      "built": 3,
+      "qa_ready": 3,
+      "approved": 0,
+      "mailed": 0,
+      "emailed": null,
+      "bounced": null,
+      "scanned": 0,
+      "replied": null,
+      "call_booked": 0
+    },
+    "dentist": {
+      "built": 1,
+      "qa_ready": 1,
+      "approved": 0,
+      "mailed": 0,
+      "emailed": null,
+      "bounced": null,
+      "scanned": 0,
+      "replied": null,
+      "call_booked": 0
+    },
+    "car": {
+      "built": 2,
+      "qa_ready": 2,
+      "approved": 0,
+      "mailed": 0,
+      "emailed": null,
+      "bounced": null,
+      "scanned": 0,
+      "replied": null,
+      "call_booked": 0
+    },
+    "architect": {
+      "built": 1,
+      "qa_ready": 1,
+      "approved": 0,
+      "mailed": 0,
+      "emailed": null,
+      "bounced": null,
+      "scanned": 0,
+      "replied": null,
+      "call_booked": 0
+    }
+  },
+  "batches": [
+    {
+      "batch_id": "radar-next20-20260826-052002",
+      "funnel": {
+        "built": 20,
+        "qa_ready": 20,
+        "approved": 0,
+        "mailed": 0,
+        "emailed": null,
+        "bounced": null,
+        "scanned": 0,
+        "replied": null,
+        "call_booked": 0
+      }
+    }
+  ]
+}

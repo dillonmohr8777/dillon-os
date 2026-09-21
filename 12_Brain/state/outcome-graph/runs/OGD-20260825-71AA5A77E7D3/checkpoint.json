@@ -1,0 +1,317 @@
+{
+  "schema_version": 1,
+  "run_id": "OGD-20260825-71AA5A77E7D3",
+  "graph_id": "event-e11-web-design-routine-proposal-shadow",
+  "dedupe_identity": "7045ba07c4fcf1692d7c79176fd3478540ee65190070b22f9ebc4e8aa8a3f208",
+  "dedupe_key": "E11:2026-08-24:source-bound-shadow",
+  "contract_fingerprint": "621d6f2c7bdfaff98945c3be0bf76c4c235d915d1c08ae9290e25f40cd5462c8",
+  "canonical_binding": {
+    "locator": "dillon-os://routine/E11/2026-08-24",
+    "version": "2026-08-25:f7aa7149.05e6a21e.c4f66a74.f349bdba.699fd0a4.df76a269.03f91cd6",
+    "sha256": "72cdee567924ef25d3f5a033c4f31702020c3d7b890b4fd71d0e5a308f84ff5c",
+    "captured_at": "2026-08-25T00:25:51.288Z"
+  },
+  "canonical_binding_fingerprint": "d8145e847f5932d9d46a1e89dccefb57b5fd23811c0134a64a3a2f6f197fe787",
+  "status": "blocked",
+  "started_at": "2026-08-25T00:25:51.304Z",
+  "updated_at": "2026-08-25T00:25:51.427Z",
+  "event_sequence": 8,
+  "events": [
+    {
+      "sequence": 1,
+      "event": "run_started",
+      "at": "2026-08-25T00:25:51.304Z",
+      "resumed": false
+    },
+    {
+      "sequence": 2,
+      "event": "planned",
+      "at": "2026-08-25T00:25:51.319Z",
+      "graph_attempt": 1,
+      "item_id": null
+    },
+    {
+      "sequence": 3,
+      "event": "worker_verified",
+      "at": "2026-08-25T00:25:51.350Z",
+      "graph_attempt": 1,
+      "item_id": "E11:closed-loop-web-design"
+    },
+    {
+      "sequence": 4,
+      "event": "workers_verified",
+      "at": "2026-08-25T00:25:51.360Z",
+      "graph_attempt": 1,
+      "item_id": null
+    },
+    {
+      "sequence": 5,
+      "event": "reduced",
+      "at": "2026-08-25T00:25:51.383Z",
+      "graph_attempt": 1,
+      "item_id": null
+    },
+    {
+      "sequence": 6,
+      "event": "terminal_verified",
+      "at": "2026-08-25T00:25:51.402Z",
+      "graph_attempt": 1,
+      "item_id": null
+    },
+    {
+      "sequence": 7,
+      "event": "learned",
+      "at": "2026-08-25T00:25:51.412Z",
+      "graph_attempt": 1,
+      "item_id": null
+    },
+    {
+      "sequence": 8,
+      "event": "receipt_committed",
+      "at": "2026-08-25T00:25:51.427Z",
+      "outcome": "blocked"
+    }
+  ],
+  "engine": {
+    "stage": "learned",
+    "graph_attempt": 1,
+    "plan_signature": "4a952551333d8bd097fd9f0f4cb93fac3df5abd1a715950a22d1eeeaaceee2db",
+    "verified_workers": {
+      "E11:closed-loop-web-design": {
+        "input_fingerprint": "0bef2f15a08c951219fe5c2b4534bba515c2768cdf85b085bd838e27d631dc12",
+        "worker_result": {
+          "item_id": "E11:closed-loop-web-design",
+          "input_fingerprint": "0bef2f15a08c951219fe5c2b4534bba515c2768cdf85b085bd838e27d631dc12",
+          "status": "verified",
+          "attempts": [
+            {
+              "attempt": 1,
+              "isolation_id": "OGD-20260825-71AA5A77E7D3:20c0f6afbd5ddb40c253:attempt:1",
+              "maker_evidence": "Built one privacy-safe E11 record for E11:closed-loop-web-design.",
+              "artifacts": [
+                {
+                  "path": "System/outcome-graph/routines/E11/2026-08-24-governance-shadow/workers/20c0f6afbd5ddb40c253.json",
+                  "sha256": "e17c32134c44dbbd4b0d6f0db53ad8bfb033fdb34dd4eb08097fb27373d85d20",
+                  "bytes": 3543
+                }
+              ],
+              "checker_evidence": "Independently reconstructed E11:closed-loop-web-design from the same source-bound contract.",
+              "passed": true,
+              "findings": []
+            }
+          ],
+          "final_artifacts": [
+            {
+              "path": "System/outcome-graph/routines/E11/2026-08-24-governance-shadow/workers/20c0f6afbd5ddb40c253.json",
+              "sha256": "e17c32134c44dbbd4b0d6f0db53ad8bfb033fdb34dd4eb08097fb27373d85d20",
+              "bytes": 3543
+            }
+          ],
+          "isolation_id": "OGD-20260825-71AA5A77E7D3:20c0f6afbd5ddb40c253:attempt:1"
+        }
+      }
+    },
+    "budget_used": 6,
+    "previous_terminal_findings": [
+      "The feedback edge and terminal replay distinguish the routine from existing stages.",
+      "The workflow can be reproduced without route guessing."
+    ],
+    "graph_iterations": [
+      {
+        "iteration": 1,
+        "status": "terminal_failed",
+        "planner": {
+          "evidence": "Collected 1 isolated E11 item(s) from source set 72cdee567924ef25d3f5a033c4f31702020c3d7b890b4fd71d0e5a308f84ff5c.",
+          "item_count": 1,
+          "plan_signature": "4a952551333d8bd097fd9f0f4cb93fac3df5abd1a715950a22d1eeeaaceee2db",
+          "items": [
+            {
+              "id": "E11:closed-loop-web-design",
+              "isolation_key": "routine:web-design-closed-loop:v1",
+              "input_fingerprint": "0bef2f15a08c951219fe5c2b4534bba515c2768cdf85b085bd838e27d631dc12",
+              "task": null
+            }
+          ]
+        },
+        "workers": [
+          {
+            "item_id": "E11:closed-loop-web-design",
+            "input_fingerprint": "0bef2f15a08c951219fe5c2b4534bba515c2768cdf85b085bd838e27d631dc12",
+            "status": "verified",
+            "attempts": [
+              {
+                "attempt": 1,
+                "isolation_id": "OGD-20260825-71AA5A77E7D3:20c0f6afbd5ddb40c253:attempt:1",
+                "maker_evidence": "Built one privacy-safe E11 record for E11:closed-loop-web-design.",
+                "artifacts": [
+                  {
+                    "path": "System/outcome-graph/routines/E11/2026-08-24-governance-shadow/workers/20c0f6afbd5ddb40c253.json",
+                    "sha256": "e17c32134c44dbbd4b0d6f0db53ad8bfb033fdb34dd4eb08097fb27373d85d20",
+                    "bytes": 3543
+                  }
+                ],
+                "checker_evidence": "Independently reconstructed E11:closed-loop-web-design from the same source-bound contract.",
+                "passed": true,
+                "findings": []
+              }
+            ],
+            "final_artifacts": [
+              {
+                "path": "System/outcome-graph/routines/E11/2026-08-24-governance-shadow/workers/20c0f6afbd5ddb40c253.json",
+                "sha256": "e17c32134c44dbbd4b0d6f0db53ad8bfb033fdb34dd4eb08097fb27373d85d20",
+                "bytes": 3543
+              }
+            ],
+            "isolation_id": "OGD-20260825-71AA5A77E7D3:20c0f6afbd5ddb40c253:attempt:1"
+          }
+        ],
+        "reduction": {
+          "evidence": "Reduced all checked E11 records without blending isolation keys.",
+          "artifacts": [
+            {
+              "path": "System/outcome-graph/routines/E11/2026-08-24-governance-shadow/routine-definition.json",
+              "sha256": "5cee1d07ab489921036235cea737a9f82585a72780de9f44940274ffb413463c",
+              "bytes": 3042
+            },
+            {
+              "path": "System/outcome-graph/routines/E11/2026-08-24-governance-shadow/synthetic-canary-receipt.json",
+              "sha256": "6247b55597e45d40bc82b3a64db9aaad6f1105a44575560f3aba60de68600b45",
+              "bytes": 902
+            },
+            {
+              "path": "System/outcome-graph/routines/E11/2026-08-24-governance-shadow/manifest-ledger-proposal.json",
+              "sha256": "745ac043533733d7e217db57eda796c8c99c701b882bd6e7eb6481b1b55a87f1",
+              "bytes": 875
+            }
+          ]
+        },
+        "terminal_verification": {
+          "evidence": "Recollected and independently verified all E11 sources, records, negative states, and artifact hashes.",
+          "declared_pass": true,
+          "passed": false,
+          "assertions": [
+            {
+              "id": "source-manifest-stable",
+              "passed": true,
+              "detail": "Every named source remains hash-bound at terminal verification."
+            },
+            {
+              "id": "every-isolated-item-reconstructed-exactly-once",
+              "passed": true,
+              "detail": "Every in-scope item has one collision-resistant reconstructed record."
+            },
+            {
+              "id": "reducer-output-reproduces-exactly",
+              "passed": true,
+              "detail": "Final artifacts reproduce exactly from current sources and the frozen evaluation clock."
+            },
+            {
+              "id": "trigger-and-finish-line-unique-and-observable",
+              "passed": "The isolated candidate passes authority, brief, build, responsive, interaction, accessibility, performance, content-truth, design-system, and independent-craft gates; desktop and mobile evidence is hash-bound; the repair ledger is closed; terminal replay passes; adoption and deployment remain separate.",
+              "detail": "The feedback edge and terminal replay distinguish the routine from existing stages."
+            },
+            {
+              "id": "inputs-steps-outputs-systems-and-client-scope-complete",
+              "passed": "one exact client or internal surface per run; no cross-client fan-in",
+              "detail": "The workflow can be reproduced without route guessing."
+            },
+            {
+              "id": "approvals-and-never-record-surfaces-explicit",
+              "passed": true,
+              "detail": "Human gates, privacy, and prohibited captures are explicit."
+            },
+            {
+              "id": "synthetic-canary-passes-terminal-verifier",
+              "passed": true,
+              "detail": "The positive terminal case passes and the weak first draft plus production overclaim are rejected."
+            },
+            {
+              "id": "manifest-and-ledger-change-is-proposal-only",
+              "passed": true,
+              "detail": "Canonical adoption remains with Marketing Chief."
+            },
+            {
+              "id": "permissions-do-not-exceed-demonstrated-task",
+              "passed": true,
+              "detail": "The routine proposes no broader capability."
+            },
+            {
+              "id": "privacy-and-no-mutation-boundary",
+              "passed": true,
+              "detail": "Final artifacts are redacted and attest no external, canonical, provider, restart, or checkpoint mutation."
+            }
+          ],
+          "artifact_manifest": [
+            {
+              "path": "System/outcome-graph/routines/E11/2026-08-24-governance-shadow/routine-definition.json",
+              "sha256": "5cee1d07ab489921036235cea737a9f82585a72780de9f44940274ffb413463c",
+              "bytes": 3042
+            },
+            {
+              "path": "System/outcome-graph/routines/E11/2026-08-24-governance-shadow/synthetic-canary-receipt.json",
+              "sha256": "6247b55597e45d40bc82b3a64db9aaad6f1105a44575560f3aba60de68600b45",
+              "bytes": 902
+            },
+            {
+              "path": "System/outcome-graph/routines/E11/2026-08-24-governance-shadow/manifest-ledger-proposal.json",
+              "sha256": "745ac043533733d7e217db57eda796c8c99c701b882bd6e7eb6481b1b55a87f1",
+              "bytes": 875
+            }
+          ],
+          "manifest_errors": []
+        },
+        "learning": {
+          "evidence": "Appended one hashed E11 correction entry.",
+          "corrections": [
+            "Repair only the exact E11 source, isolation, reducer, privacy, or assertion mismatch."
+          ],
+          "ledger": "System/outcome-graph/routines/E11/2026-08-24-governance-shadow/corrections.jsonl",
+          "ledger_receipt": {
+            "locator": "System/outcome-graph/routines/E11/2026-08-24-governance-shadow/corrections.jsonl",
+            "entry_sha256": "d5a254ec265ba81ec638ff1ec2d27910b30adab66c99b6f01370b3f38d4b4151"
+          }
+        }
+      }
+    ],
+    "invocation_log": [
+      {
+        "adapter": "source-bound-e11-planner",
+        "invoked_at": "2026-08-25T00:25:51.313Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-e11-maker",
+        "invoked_at": "2026-08-25T00:25:51.333Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-e11-checker",
+        "invoked_at": "2026-08-25T00:25:51.342Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-e11-reducer",
+        "invoked_at": "2026-08-25T00:25:51.372Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-e11-terminal-verifier",
+        "invoked_at": "2026-08-25T00:25:51.392Z",
+        "status": "returned"
+      },
+      {
+        "adapter": "source-bound-e11-learner",
+        "invoked_at": "2026-08-25T00:25:51.411Z",
+        "status": "returned"
+      }
+    ]
+  },
+  "last_event": "receipt_committed",
+  "state_revision": 8,
+  "previous_state_sha256": "5aca62b10470281e8fe399719a264ae68490d23367d637d0f11e1ba456e1bb1d",
+  "receipt": {
+    "path": "runs/OGD-20260825-71AA5A77E7D3/receipt.json",
+    "sha256": "f6ab6b605a519a71465f51f81879f257f2f86f065c9944edc6022e1b906093fa",
+    "bytes": 11068
+  }
+}

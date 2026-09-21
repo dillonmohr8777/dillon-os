@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "verified_at": "2026-08-24T21:18:00-04:00",
+  "verification_mode": "Authenticated Netlify CLI status plus exact-name site lookup",
+  "account_slug": "dillonmohr8777",
+  "product_root": "C:/Users/dillo/Documents/Codex/2026-08-20/dillon-portfolio-signal-foundry/mohr-media-site",
+  "targets": [
+    {
+      "variant": "hrchitect",
+      "build_binding": "VITE_PROSPECT_SLUG=hrchitect",
+      "site_name": "dillon-mohr-portfolio",
+      "site_id": "da170eb6-ae55-4a2e-9392-b864e6c12948",
+      "canonical_url": "https://dillon-mohr-portfolio.netlify.app",
+      "mapping_evidence": "Current project link returned by netlify status"
+    },
+    {
+      "variant": "general",
+      "build_binding": "VITE_PROSPECT_SLUG=general",
+      "site_name": "dillon-mohr-for-you",
+      "site_id": "e4223be4-36eb-467a-b28e-d6406ddc3249",
+      "canonical_url": "https://dillon-mohr-for-you.netlify.app",
+      "mapping_evidence": "Exact-name live Netlify site lookup"
+    }
+  ],
+  "state": "exact_existing_targets_verified",
+  "authority": {
+    "read_only_verification": true,
+    "deployment_attempted": false,
+    "eligible_for_existing_site_standing_approval_after_terminal_gate": true,
+    "new_site_creation_authorized": false,
+    "target_substitution_authorized": false
+  },
+  "privacy": {
+    "contains_secret": false,
+    "contains_access_token": false,
+    "contains_session_cookie": false
+  }
+}

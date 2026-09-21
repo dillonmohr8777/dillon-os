@@ -8,7 +8,7 @@ Site builds, landing pages, funnel fixes, and deploy-lane preparation for client
 
 | Property | Stack | Location |
 |----------|-------|----------|
-| Shadow HVAC | Next.js | `01_Clients/Shadow HVAC/website/` |
+| Shadow HVAC (former client, retired 2026-09-05) | Next.js | `_archive/01_Clients/Shadow HVAC/website/` — frozen, do not build |
 | Bar Crawl USA | WordPress + Elementor | External; publisher tool in vault history |
 | KJB | Squarespace | kimberlyjamesbridal.com |
 | Onsite Concrete | WordPress/Divi | onsiteconcretelandscape.com |

@@ -1,0 +1,121 @@
+{
+  "sourceUrl": "https://www.mmacentral.com/",
+  "finalUrl": "https://www.mmacentral.com/",
+  "sourceDomain": "mmacentral.com",
+  "httpStatus": 200,
+  "contentType": "",
+  "pageSha256": "1dd534f9907a3196541892fdee0420c8ea1c00baeae49c645cae9409da8565e1",
+  "title": "Money Management Advisory in Feasterville, PA",
+  "description": "We help people with retirement.",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "money",
+      "management",
+      "advisory"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260826-052002\\preflight\\money-management-advisory-inc\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://static.fmgsuite.com/media/TransparentLogo/variantSize/9660fd59-f815-44a4-a69d-0e670468f5bd.png",
+    "sourceEvidence": "JSON-LD logo",
+    "type": "png",
+    "dimensions": {
+      "width": 232,
+      "height": 150
+    },
+    "sha256": "96cb925dc7fde42167555fe16bf01717cc325660ba5e14ef4d2db54df2b539c0",
+    "sourceSha256": "94acec85ba8efe20aa472bba9e51877276dc793eec6b5ece3d042c3c919d5e2c",
+    "sourceType": "png",
+    "sourceFileName": "logo-source.png",
+    "transformation": "flat border color #fcfbfc removed with deterministic FFmpeg colorkey; geometry unchanged",
+    "borderSpread": 1.41,
+    "alpha": {
+      "ok": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "alphaAverage": 82.8272,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 50899
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260826-052002\\preflight\\money-management-advisory-inc\\reference-1.jpg",
+      "fileName": "reference-1.jpg",
+      "sourceUrl": "https://static.fmgsuite.com/media/images/f0876416-075d-4e61-9e26-b6ecefb4127b.jpg",
+      "sourceEvidence": "IMG img-responsive  we've been helping people with their money since 1982.",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 350,
+        "width": 525
+      },
+      "sha256": "da44a22f26443fe0e24678909bdd1d0bc4e1e25628f16eb712f4ee1d148f1c1f",
+      "bytes": 98783,
+      "visual": {
+        "ok": true,
+        "lumaRange": 255,
+        "chromaURange": 0,
+        "chromaVRange": 0,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260826-052002\\preflight\\money-management-advisory-inc\\reference-2.jpg",
+      "fileName": "reference-2.jpg",
+      "sourceUrl": "https://static.fmgsuite.com/media/images/cb00f80a-a9bc-4e88-9d7a-aa53ae871fe0.jpg",
+      "sourceEvidence": "IMG img-responsive visibleimage  our process",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 381,
+        "width": 500
+      },
+      "sha256": "e619c231adef745a69d5ba9cecba680d4ebc3caab268b6e0fc684d2ff28796a9",
+      "bytes": 44836,
+      "visual": {
+        "ok": true,
+        "lumaRange": 255,
+        "chromaURange": 66,
+        "chromaVRange": 76,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260826-052002\\preflight\\money-management-advisory-inc\\reference-3.jpg",
+      "fileName": "reference-3.jpg",
+      "sourceUrl": "https://static.fmgsuite.com/media/images/abf5b595-3850-4790-bdf4-724fdce4b153.jpg",
+      "sourceEvidence": "IMG img-responsive visibleimage  our history",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 381,
+        "width": 500
+      },
+      "sha256": "426d10588adf8559ce9f8d3d1c7e09b0d4346fe3ee8b8a851b0bd2728a8772c4",
+      "bytes": 50827,
+      "visual": {
+        "ok": true,
+        "lumaRange": 254,
+        "chromaURange": 88,
+        "chromaVRange": 108,
+        "reason": null
+      }
+    }
+  ],
+  "contact": {
+    "phone": "215-322-7670",
+    "address": "102 West Street Road, Feasterville, PA 19053",
+    "city": "Feasterville",
+    "phoneSource": "official JSON-LD",
+    "addressSource": "official JSON-LD"
+  },
+  "visualReferenceFallback": null,
+  "referenceFailures": [],
+  "brandColors": [
+    "#116600",
+    "#004a98"
+  ],
+  "checkedAt": "2026-08-26T09:34:59.784Z"
+}

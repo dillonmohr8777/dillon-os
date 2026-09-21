@@ -61,4 +61,7 @@ $state = [ordered]@{
 [Environment]::SetEnvironmentVariable('CLAUDE_CDP_URL', "http://127.0.0.1:$Port", 'User')
 
 if (-not $Quiet) { Write-Host "Claude browser READY at loopback port $Port (PID owner $($existing[0].OwningProcess))." }
-exit 0
+
+# This bootstrap is also invoked from the daily-driver host. `exit` would terminate
+# that caller before it can write its state and receipts, so return control instead.
+return

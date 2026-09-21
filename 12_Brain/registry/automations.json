@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-09-01",
+  "updated": "2026-09-14",
   "contract": "00_Inbox/Automation Deep Analysis 2026-07-29.md",
   "dependency": "12_Brain/DEPENDENCY_PR226.md",
   "automations": [
@@ -511,6 +511,33 @@
       "status": "implemented",
       "owner": "claude-code-skill",
       "note": "On-demand Claude Code skill, run by Dillon; never cron-scheduled. Reviewed 2026-09-01 against marketing-chief-twice-daily-brief: different content (morning inbox/client/content brief vs infra health), so not collapsed. Dillon to confirm whether one should absorb the other."
+    },
+    {
+      "id": "daily-sweep",
+      "name": "Daily evidence sweep and gap detector",
+      "lane": "infrastructure",
+      "tier": 0,
+      "cadence": "daily, as the first job in _os/automation/cadence/daily.yaml",
+      "stale_after_hours": 26,
+      "command": "node _os/automation/bin/daily-sweep.js [--json] [--selftest]",
+      "inputs": [
+        "12_Brain/state/*.json",
+        "Daily-Briefs/*.md",
+        "System/approval-queue.md",
+        "01_Clients/Client Index.md",
+        "C:/Users/dillo/Documents/Codex/projects/client-operations/registry/clients.json",
+        "_os/automation/cadence/run-ledger.jsonl",
+        "git status and git log across the local estate roots",
+        "Windows System event log Id 6008, or the macOS equivalent"
+      ],
+      "outputs": [
+        "12_Brain/state/daily-sweep.json",
+        "System/sweep-status.md",
+        "one appended row in _os/automation/cadence/run-ledger.jsonl"
+      ],
+      "external_actions": false,
+      "notes": "Local evidence only: no network, no model, no credential, no canonical client write. Exit 2 is a successful run reporting bad news (missed day, stale artifact, undelivered brief, absent cadence run, lying ledger row, unscheduled driver, or a counter that fell from non-zero to zero). Exit 1 is the script breaking. Backfills MISSED rows for every day it was skipped, so a machine that was powered off still produces a written gap rather than silence. Self-check: --selftest.",
+      "status": "implemented"
     }
   ],
   "gates": {

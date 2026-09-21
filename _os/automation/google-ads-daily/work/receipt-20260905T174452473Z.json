@@ -1,0 +1,9 @@
+{
+ "wakeId":"heartbeat:20260905T174452473Z",
+ "window":{"afterUnix":1788628371,"beforeUnix":1788630318},
+ "identities":{"gmail":"dillonmohr8777@gmail.com","slack":"Momentum Digital Agency / Dillon Mohr"},
+ "coverage":{"gmailMessages":3,"slackMessages":0,"sourcePages":2,"supplementalThreadReads":1,"newKeys":2,"paginationExhausted":true},
+ "observations":[{"source":"gmail:1a072a1380beff63","repository":"dillonmohr8777/dillon-os","pullRequest":371,"status":"Two-message bot thread read. Netlify reports immohrtal-site deploy preview canceled; Vercel separately reports dillon-os preview ready. Different destinations, neither establishes production success or outage. No human request or demonstrated production impact. No duplicate implementation dispatched; cancellation cause unverified."}],
+ "daily":{"leadTableDue":false,"googleAdsReportDue":false,"predictionBriefDue":false,"bedtimeDue":false},
+ "workersDispatched":0,"externalWrites":0,"decision":"DONT_NOTIFY"
+}

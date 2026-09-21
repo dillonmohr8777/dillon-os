@@ -1,82 +1,187 @@
-# Daily Pulse — 2026-09-02
+---
+title: Client Pulse — 2026-09-21
+date: 2026-09-21
+type: daily-brief
+---
 
-## Coverage Notes
+# Client Pulse — 2026-09-21
 
-- Scanned all 40 client entries under `01_Clients/` — 24 folder-based clients (`overview.md` + supporting notes) and 16 single-file clients — for filesystem last-modified time, `due`/`next_action`/`last_touched` frontmatter, and open `- [ ]` tasks.
-- **Filesystem last-modified time is not usable as a signal this run.** Every file in `01_Clients/` carries the identical mtime `2026-09-02T03:25:34 UTC` — a git-checkout artifact, not real edit history. Classification below runs entirely on the `last_touched` frontmatter field instead.
-- **Zero open `- [ ]` tasks anywhere in `01_Clients/`.** No task-level signal to report; either work isn't tracked as checkboxes here or the board is genuinely clear.
-- Predictive work file (`12_Brain/state/work-predictor/latest.json`, generated 2026-09-02T11:11:29Z) read as instructed — not re-run.
-- `latest-chronos.json` fingerprint (`d58cc5d6…`) does **not** match the current prediction's fingerprint (`4f53cda1…`) — the file itself flags this ("not attached to this brief"). Per instructions, its holdout/forecast numbers are excluded from ranking and shown only as a stale receipt below.
-- No Gmail or Slack access performed (out of scope for this run; only local `00_Inbox/slack/` vault files would have qualified, and none were referenced by client frontmatter).
-- Blind spot inherited from the predictor: canonical client-operations queue was unavailable, so predictions rest on folder/deliverable evidence only, not a live queue.
+## Coverage notes
 
-## Moving (touched < 48h)
-None. No client's `last_touched` frontmatter falls inside the last 2 days.
+- Scanned 25 folder-based client records under `01_Clients/` plus 16
+  single-file client records (41 total, `Client Index.md` excluded as an
+  index, not a client) for `due`/`next_action`/`last_touched`/`status`
+  frontmatter, open `- [ ]` tasks, and git history.
+- Ran `node _os/automation/bin/predict-work.js --lookahead-days 35
+  --history-days 90 --client-ops-root /home/user/client-operations-canonical`.
+  **Status: ok** (not degraded). Provenance: `client_operations_root_available:
+  true`, `canonical_queue_available: true`, source
+  `client-operations://queue/work-items.json`, 31 deliverable events and 16
+  active queue items scanned, 5 queue candidates used, 11 stale queue items
+  excluded on freshness grounds. Source fingerprint
+  `de4391c869f67484ec6254e1a7a7c9a07e2dbea3e3c6991bd84311538806f7f4`. (The
+  plain command without `--client-ops-root` comes back degraded — root
+  unavailable, 1 candidate — because the vault's Windows-path default doesn't
+  exist in this Linux session; the explicit read-only checkout path is
+  required and was used.)
+- **Git history in this session is a shallow clone: 95 commits, oldest
+  2026-09-05.** Raw `git log -1` per client file is unreliable — most files
+  show the shallow boundary itself (`Add Repository Access Map for remote
+  sessions (#358)`, 2026-09-05) or a bulk disaster-recovery commit
+  (`vault: commit the uncommitted working tree on this branch`, 2026-09-15,
+  2,210 paths recovered from a failing disk) rather than genuine per-client
+  edits. Neither commit is real client work. Classification below uses
+  frontmatter `last_touched` as the primary signal and only promotes a client
+  above its frontmatter date when a specific, non-bulk commit touching that
+  client's content is identifiable — as with Omega Landscaping below.
+- Open `- [ ]` task count inside every scanned client note: 0, except
+  **Momentum 360** (14 open tasks — a Google Ads conversion-tracking audit
+  checklist inside `overview.md`), which real vault content lives in but
+  isn't reflected in `last_touched`.
+- **Align HCM roster/reality mismatch, still open**: `01_Clients/Align
+  HCM.md` carries `status: active`, `next_action: TBD` — but `CLAUDE.md`
+  confirms the relationship ended 2026-09-02. The canonical queue still
+  carries a live, blocked `align-hcm` work item
+  (`wi-20260723-0005`, data-source-integration, gated on an Align
+  Microsoft/HubSpot MFA reauth). This is a data conflict between the vault
+  and the canonical queue, not something this brief resolves — flagging for
+  the queue owner.
+- Four clients (**Deborah-Mara, Nexla, Puttery NYC**, and the `Client
+  Index`) carry no `last_touched` field at all — their primary content lives
+  in `Client Intelligence Overlay.md` / README files that don't follow the
+  standard client schema. Cannot classify their staleness by frontmatter;
+  they default to stalled on git evidence (oldest available, since the
+  9-15 bulk-recovery commit is not genuine per-client evidence).
+
+## Moving (< 48h)
+
+None. No client note shows genuine content changed in the last 48 hours —
+neither by `last_touched` frontmatter nor by a non-bulk git commit.
 
 ## Watch (2–7 days)
-None. No client's `last_touched` frontmatter falls inside the 2–7 day window.
 
-## Stalled (7+ days untouched)
-All 40 clients. Nothing in the vault's own `last_touched` frontmatter shows a touch inside the last 26 days — that gap itself is the headline finding (see Tomorrow's Priority Stack). Sorted least-to-most stale within the 24 folder-based clients; the 16 single-file clients are grouped since they're identical in shape (skeleton note, no real next_action recorded).
+- **Omega Landscaping** — real, non-bulk content commit 2026-09-14
+  (`queue: closing pass 2026-09-14 -- 127 open to 109`), exactly 7 days ago
+  as of this brief — the edge of the watch window; it flips to stalled
+  tomorrow if untouched. `last_touched` frontmatter is still stuck at
+  `2026-08-01` and was never fixed. Suggested next touch: the Zapier
+  lead-field addition to Momentum's own account (the client-contact access
+  path is confirmed dead), and fix the stale `last_touched` field in the
+  same edit.
 
-| Days stale | Client | Evidence (`last_touched` / `next_action`) | Suggested next touch |
-|---|---|---|---|
-| 26d | Tags 2 Go | 2026-08-07 — "Map Google Ads access through Access Broker/Bitwarden, confirm admin invite status, then produce a redacted audit baseline before any rebuild." `due: 2026-08-08` (25 days overdue) | Resolve the access-mapping blocker; this is the freshest stalled item and has a blown due date |
-| 32d | AMI Cleaning | 2026-08-01 — verify HubSpot form routing and lead owner | Confirm HubSpot routing owner |
-| 32d | BOK Law Firm | 2026-08-01 — maintain approved weekly content workflow, resolve geo/embargo guardrails | See predicted work package below — content kit expected ~9/8 |
-| 32d | Bercos Popcorn | 2026-08-01 — obtain finished Shopify build/staging handoff | Ping for Shopify handoff status |
-| 32d | Capsule & Tonic | 2026-08-01 — confirm canonical registry disposition | Decide active vs. archive |
-| 32d | VA Claims | 2026-08-01 — convert Phase 2 backlog from David's approved direction | Draft Phase 2 backlog |
-| 32d | Bridge Software Development | 2026-08-01 — next_action TBD (Overlay note has real detail: approve Phase 1 roles/acceptance criteria) | Get Phase 1 approval decision |
-| 32d | Revive Systems | 2026-08-01 — inspect authorized Local Services Ads account, record verification stage | Check LSA verification status |
-| 32d | Everyday Life Insurance | 2026-08-01 — resolve missing decision context, confirm registry disposition | Decide active vs. archive |
-| 32d | Cindy May Christmas | 2026-08-01 — build from approved site package once video/newsletter/photo/Shopify deps resolve. **`due: 2026-09-01` — already 1 day overdue.** | See Due in 48h below |
-| 32d | Fresh Blends | 2026-08-01 — verify Google Ads pause/restart state | Confirm live pause status before touching budget |
-| 32d | Omega Landscaping | 2026-08-01 — verify Wix/Ads/GoHighLevel roles, prep access request for approval | Draft access request for approval queue |
-| 32d | NKCDC | 2026-08-01 — get leadership pick of Phase Two priorities | Follow up for leadership decision |
-| 32d | Pro Fence & Deck | 2026-08-01 — recheck Yelp/Apple Maps verification after wait period | Recheck verification status |
-| 32d | Fagan Painting | 2026-08-01 — settle AEO/GEO scope and price, prep proposal for approval | Draft proposal for approval queue |
-| 32d | Momentum 360 | 2026-08-01 — reconcile agency-level scorecard, resolve AI/CRM/attribution decisions | Reconcile scorecard |
-| 32d | Pritzker Law Group | 2026-08-01 — confirm podcast landing-page goal, form destination, analytics, reviewer | Get outstanding confirmations from client |
-| 32d | Replenish | 2026-08-01 — reconcile Google Ads billing owner, wait on San Diego expansion decision. `due: 2026-07-15` (49 days overdue) | Chase billing-owner confirmation |
-| 34d | BigOrange Marketing | 2026-07-30 — prep Custom Home Builder pillar audit + Janice interview. `due: 2026-08-10` (23 days overdue) | Schedule Janice interview |
-| 35d | 16 single-file clients (AWCI, Align HCM, Bend Plastic Surgery, Blissful Events, Bluegrass Janitorial, Bridge of Hope OTC, Buzz Bull, Coach B, Commercial Cleaners Alliance, Florecita, Hardwood Artisan, Jeff Hozias, Link Eze, Next Gen Solutions, PNW Pro Clean, Vanessa) | 2026-07-29 — every one carries `next_action: TBD — needs human next action` | These read as parked/inactive roster entries, not active delivery threads. Worth a human pass to confirm active vs. archive rather than treating as daily-touch clients |
-| 52d | Onsite Concrete, Kimberly James Bridal, Shadow HVAC, Hope Wellness Center | 2026-07-12 | Oldest active-detail clients; prioritize below the fresher stalls |
-| 53d | Bar Crawl USA | 2026-07-11 — complete QA/cleanup on event pages, repair hub listing | Oldest touch in the whole roster |
+## Stalled (7+ days)
+
+- **Have an active canonical work item** (real work may be moving in the
+  canonical queue even though the vault note isn't touched): BigOrange
+  Marketing (`website-design-build`, needs approval, past due), Revive
+  Systems (`workflow-automation-system`, blocked on OAuth), Momentum 360
+  (`data-source-integration`, blocked on CallRail access, past due), Align
+  HCM (`data-source-integration`, blocked on MFA — see reconciliation flag
+  above), Tags 2 Go (`research-audit-decision-brief`, blocked on Ads
+  access), BOK Law Firm (weekly designed-content recurrence, confirmed
+  pattern, next window 2026-09-22–24). Suggested next touch: clear the
+  listed gates (see Likely Next Work Packages) rather than editing the
+  notes themselves.
+- **No canonical work item surfaced, stale by frontmatter `last_touched`**,
+  grouped by that date:
+  - **~72 days** (since 2026-07-11/12): Bar Crawl USA, Hope Wellness
+    Center, Kimberly James Bridal, Onsite Concrete.
+  - **~52 days** (since 2026-07-30): (BigOrange Marketing also has the
+    canonical item above).
+  - **~51 days** (since 2026-08-01): AMI Cleaning, Bercos Popcorn, Bridge
+    Software Development, Capsule & Tonic, Cindy May Christmas, Everyday
+    Life Insurance, Fresh Blends, NKCDC, Pritzker Law Group, Pro Fence &
+    Deck, Replenish (`status: paused` — billing owner unresolved), VA
+    Claims.
+  - **~45 days** (since 2026-08-07): Tags 2 Go (also has the canonical item
+    above).
+  - **~54 days** (since 2026-07-29): AWCI, Bend Plastic Surgery, Blissful
+    Events (`status: completed`), Bluegrass Janitorial, Bridge of Hope OTC,
+    Buzz Bull, Coach B, Commercial Cleaners Alliance, Florecita, Hardwood
+    Artisan, Link Eze, Next Gen Solutions, PNW Pro Clean, Vanessa.
+  - **No frontmatter `last_touched` at all**, stalled by default: Deborah-
+    Mara, Nexla, Puttery NYC.
 
 ## Due in 48h
 
-- **Cindy May Christmas — `due: 2026-09-01`, already 1 day past.** Not a new deadline surfacing inside the window; it's already missed. Flagging because it's the only client whose recorded due date sits at the edge of "now." Blocked on video destination / newsletter connection / photo map / Shopify prerequisites per its own `next_action`.
-- No other client carries a `due` date inside 2026-09-02 through 2026-09-04. Most `due` fields are either `none` or already weeks overdue (Tags 2 Go 8/8, BigOrange Marketing 8/10, Replenish 7/15) — those are stale-due, not upcoming-due, and are logged in the Stalled table above rather than repeated here.
+None. No client `due:` frontmatter field falls inside 2026-09-21–2026-09-23.
+Every `due` value found in scanned client notes is already months in the
+past (e.g., `2026-07-15`, `2026-08-08`, `2026-08-10`, `2026-09-01`) or set to
+`none` — these are stale demo/placeholder values, not live deadlines, and
+are a vault data-quality gap rather than an actionable 48h list.
 
-## Likely Next Work Packages
+## Likely next work packages
 
-From `12_Brain/state/work-predictor/latest.json` (generated 2026-09-02T11:11:29Z, 35-day lookahead, 90-day history). One candidate this cycle:
+1. **BOK Law Firm — weekly three-topic designed content kit.**
+   Evidence tier: `owner-verified-recurrence`. Confidence: 0.96
+   (confirmed-pattern). Predicted window: 2026-09-22–24 (weekly basis).
+   Deliverable: three designed topics, three ChatGPT-generated topic
+   background images, three branded template graphics (PNG/JPG), source +
+   final PDFs, and a copy/geography/image-count/duplicate-check receipt.
+   First safe prep step: locate and fingerprint the newest source packet
+   before drafting or generating anything. Gate: any packet mismatch, legal/
+   geographic ambiguity, wrong Facebook page, or duplicate schedule stops
+   the work.
+2. **BigOrange Marketing — website-design-build.** Evidence tier:
+   canonical-queue (`wi-20260718-0001`). Confidence: 0.86 (likely), state
+   `needs_approval`, past due. Deliverable: final factual sign-off on the
+   completed private WordPress pilot plus the exact invoice recipient/date/
+   timing before publication or invoicing. Gate: this item requires its
+   recorded approval — do not treat as ready to execute.
+3. **Revive Systems — workflow-automation-system.** Evidence tier:
+   canonical-queue (`wi-20260717-0002`). Confidence: 0.68 (watch), state
+   `blocked`. Gate: blocked on a human Google OAuth reauth for the recorded
+   HighLevel location; no execution until the gate clears.
+4. **Momentum 360 — data-source-integration.** Evidence tier: canonical-
+   queue (`wi-20260718-0003`). Confidence: 0.68 (watch), state `blocked`,
+   past due. Gate: blocked on restoring direct CallRail membership and
+   Track 360/Google Suspension test destinations; no execution until
+   cleared.
+5. **Align HCM — data-source-integration.** Evidence tier: canonical-queue
+   (`wi-20260723-0005`). Confidence: 0.68 (watch), state `blocked`. Gate:
+   blocked on Align Microsoft/HubSpot MFA reauth. **Flag:** this client
+   relationship is confirmed ended per `CLAUDE.md` (2026-09-02) — the queue
+   owner should confirm whether this item should still be open before any
+   prep happens.
+6. **Tags 2 Go — research-audit-decision-brief.** Evidence tier: canonical-
+   queue (`wi-20260807-0001`). Confidence: 0.68 (watch), state `blocked`.
+   Gate: blocked on restoring agency-admin Google Ads access.
 
-**BOK weekly three-topic designed content kit**
-- Evidence tier: `owner-verified-recurrence`
-- Confidence: 0.96 (`confirmed-pattern`)
-- Predicted window: 2026-09-08 to 2026-09-10 (weekly basis)
-- Expected deliverable: three topic-specific copy records; three ChatGPT-generated topic background images (no fabricated legal claims/text in the art); three branded template graphics (PNG + JPG); source/final PDFs with a rendered-page inspection set; a copy/geography/dates/distinctions/image-count/Facebook-duplicate-check receipt
-- First safe preparation step: locate and fingerprint the newest source packet before drafting or generating anything — do not draft copy or images off a stale packet
-- Gates (stop conditions, not authorization to act): missing/conflicting packet, legal or geographic ambiguity, wrong Facebook page, duplicate schedule, or content outside the exact approved source
-- Reminder: this is planning evidence, not proof a request exists or a deadline is live — confirm against the actual weekly packet before treating it as real work
+Only item 1 (BOK Law Firm) is unblocked and its predicted window opens
+within 48h — everything else is either awaiting approval or blocked on a
+human-only gate, so none of them belong in tomorrow's priority stack as
+executable work; they're listed here as gates to clear, not tasks to start.
 
-No other candidates were generated this cycle (`deliverable_events_scanned: 0`, `canonical_queue_available: false`) — the predictor is working off a thin evidence base.
+## Capacity shadow
 
-## Capacity Shadow
+- Chronos shadow status: **`request-ready`** (a routeable workload request
+  was built this run, but Chronos has not cleared its own bar).
+  `planner_consumption_gate: false` — per the skill's own rule, Chronos
+  output is **not** used to rank clients while this gate is false.
+- The only stored Chronos receipt (`latest-chronos.json`, generated
+  2026-09-02) carries source fingerprint `d58cc5d6...`, which does **not**
+  match this run's fingerprint (`de4391c8...`). Per the skill instructions,
+  a mismatched receipt is not read into this brief — no baseline decision,
+  holdout result, or total-workload band is shown today.
+- Net: no capacity shadow warning this cycle. The portfolio's dated
+  work-package history series is all zeros across the 90-day window scanned
+  (`deliverable_events_scanned` in the local history builder found no dated
+  deliverable events, separate from the 31 canonical-queue deliverable
+  events picked up via `--client-ops-root`) — a coverage gap for the
+  time-series builder specifically, not evidence that no work happened.
 
-- Embedded `chronos_shadow` block inside `latest.json`: status `request-ready`, `planner_consumption_gate: false` — a workload-forecast request is packaged but not yet consumed by planning.
-- The standalone `latest-chronos.json` holdout/forecast receipt (fingerprint `d58cc5d6…`) does **not** match the current prediction's fingerprint (`4f53cda1…`), so per instructions it is excluded from today's ranking and shown only for awareness, not as live capacity guidance:
-  - Baseline decision: `retain-deterministic-baseline-primary` (Chronos did not beat the trailing-7-day-mean baseline: MAE 3.34 vs. 3.06)
-  - Holdout: single 14-observation window, `single_holdout_beats_best_baseline: false`, `single_holdout_quantile_calibration: false`, `repeated_holdouts: false`
-  - Total-workload band (14-day horizon, stale receipt): p10 = 1.3, p50 = 15.0, p90 = 96.9 work packages — a very wide, low-confidence spread
-  - **Planner-consumption gate: false.** Not used to rank clients or reorder priorities today, per instructions.
+## Tomorrow's priority stack
 
-## Tomorrow's Priority Stack
-
-1. **Confirm the Cindy May Christmas launch blockers.** It's the only client with a blown `due` date this close to today (2026-09-01, 1 day overdue) and the site package is implementation-ready — the fastest deliverable if video/newsletter/photo/Shopify dependencies clear.
-2. **Prep the BOK weekly content-kit source packet.** `owner-verified-recurrence` at 0.96 confidence, window opens 2026-09-08 — the one safe prep step (locate/fingerprint the newest packet) can start now without waiting on the window.
-3. **Force a human pass on the 16 parked single-file clients and the oldest stalls (Bar Crawl USA, Onsite Concrete, Kimberly James Bridal, Shadow HVAC, Hope Wellness Center).** Every client in the vault reads as 26+ days untouched by frontmatter — that's either a real backlog or a sign `last_touched` isn't being updated as work happens. Either way it blocks this brief from telling moving from stalled, and it's cheaper to fix once than to keep flagging.
-
-**Kept out of the stack as gates, not priorities:** the BOK content kit is approval-gated on packet/Facebook-page/geography checks before anything ships; the Chronos capacity band is excluded from ranking per the `planner_consumption` gate.
+1. **BOK Law Firm weekly content kit** — the only unblocked, confirmed-
+   pattern predicted work package, window opens 2026-09-22. Locate and
+   fingerprint the source packet today so drafting can start the moment the
+   window opens.
+2. **Omega Landscaping** — sitting at the exact watch/stalled boundary (7
+   days). One small edit (the Zapier lead-field addition, plus fixing the
+   stale `last_touched` field) both advances real client work and prevents
+   it from falling into the stalled pile unexamined.
+3. **Align HCM reconciliation** — not client delivery work, but a standing
+   vault/queue data-integrity gap (ended relationship, still-open blocked
+   queue item) that's been carried forward for multiple pulse cycles now.
+   Worth a five-minute registry check to close the loop rather than let it
+   keep surfacing as a false candidate.

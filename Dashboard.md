@@ -21,11 +21,11 @@ navigation is needed.
 Checkbox items only — `_os/vault-state.js` reads this section for the HUD
 directive feed and skips any other list format.
 
-- [ ] 10:00 AM — Jack Lesser / With Not For call.
-- [ ] Close out Cindy May Christmas deliverable (`due: 2026-09-01`, 1 day past due).
-- [ ] BOK Law Firm predicted prep: locate/fingerprint the weekly source packet, resolve 3 topics, stage 3 image slots — no drafting yet.
-- [ ] Touch 3-5 stalled clients (real contact, not another scan) — pick from the 40 stalled in pulse-today.md.
-- [ ] Carry forward the 4 unanswered Momentum 360 Slack asks (open since ~2026-07-30) into tomorrow's plan.
+- [x] Arm Immohrtal-Crew every 2 hours; mail_ready=hold; do not send.
+- [ ] Draft the Omega conversion-integrity disclosure (inflated Sep 7-13 conversions, fix live since 2026-09-14, now day 7 unaddressed) and fix the staged weekly-report drafts' wrong-week problem so the nine negatives aren't blocked on bad data; no account mutation until Dillon says the exact AI-division release phrase.
+- [ ] Reconcile KJB Google Ads vs. CallRail/form leads for the $505 spend window and draft the reply to Mac Frederick (approval-gated, 19 days open).
+- [ ] Close out Cindy May Christmas deliverable (`due: 2026-09-01`, now 20 days past due — carried forward again) or get an explicit reschedule.
+- [ ] BOK Law Firm weekly content kit prep (window opens 2026-09-22, 1 day out): locate/fingerprint the source packet and resolve the three topics/copy/dates — prep only, no drafting or image generation yet.
 
 ## Active projects
 

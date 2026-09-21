@@ -17,7 +17,7 @@ function Test-IsGraphNote {
     param([string]$RelativePath)
 
     return (
-        $RelativePath -notmatch '^(?:\.git|\.obsidian|\.claude|\.cursor|\.hermes)(?:/|$)' -and
+        $RelativePath -notmatch '^(?:\.git|\.obsidian|\.claude|\.agents|\.codex|\.cursor|\.hermes)(?:/|$)' -and
         $RelativePath -notmatch '(?:^|/)node_modules(?:/|$)'
     )
 }
@@ -106,8 +106,13 @@ foreach ($record in $records) {
         }
 
         if ($null -eq $resolvedTarget) {
-            $targetBaseName = [IO.Path]::GetFileName($target).ToLowerInvariant()
+            # A placeholder target such as [[01_Clients/<Client>]] is not a path. On .NET
+            # Framework GetFileName throws on it and took the whole health check down;
+            # an unparseable target is simply an unresolved link.
+            $targetBaseName = $null
+            try { $targetBaseName = [IO.Path]::GetFileName($target).ToLowerInvariant() } catch { $targetBaseName = $null }
             if (
+                $null -ne $targetBaseName -and
                 $notesByBaseName.ContainsKey($targetBaseName) -and
                 $notesByBaseName[$targetBaseName].Count -eq 1
             ) {

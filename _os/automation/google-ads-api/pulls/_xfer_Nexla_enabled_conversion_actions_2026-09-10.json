@@ -1,0 +1,90 @@
+[
+ {
+  "resourceName": "customers/7917802207/conversionActions/899954048",
+  "status": "ENABLED",
+  "type": "LEAD_FORM_SUBMIT",
+  "category": "SUBMIT_LEAD_FORM",
+  "id": "899954048",
+  "name": "Lead form - Submit",
+  "includeInConversionsMetric": false,
+  "origin": "GOOGLE_HOSTED",
+  "primaryForGoal": true
+ },
+ {
+  "resourceName": "customers/7917802207/conversionActions/7534625037",
+  "status": "ENABLED",
+  "type": "WEBPAGE",
+  "category": "SUBMIT_LEAD_FORM",
+  "id": "7534625037",
+  "name": "HubSpot-Demo Request",
+  "includeInConversionsMetric": false,
+  "origin": "WEBSITE",
+  "primaryForGoal": true
+ },
+ {
+  "resourceName": "customers/7917802207/conversionActions/7672793025",
+  "status": "ENABLED",
+  "type": "UNKNOWN",
+  "category": "YOUTUBE_FOLLOW_ON_VIEWS",
+  "id": "7672793025",
+  "name": "YouTube follow-on views",
+  "includeInConversionsMetric": true,
+  "origin": "YOUTUBE_HOSTED",
+  "primaryForGoal": true
+ },
+ {
+  "resourceName": "customers/7917802207/conversionActions/7672822300",
+  "status": "ENABLED",
+  "type": "UNKNOWN",
+  "category": "ENGAGEMENT",
+  "id": "7672822300",
+  "name": "YouTube channel subscriptions",
+  "includeInConversionsMetric": true,
+  "origin": "YOUTUBE_HOSTED",
+  "primaryForGoal": true
+ },
+ {
+  "resourceName": "customers/7917802207/conversionActions/7724496703",
+  "status": "ENABLED",
+  "type": "UPLOAD_CLICKS",
+  "category": "SUBMIT_LEAD_FORM",
+  "id": "7724496703",
+  "name": "Contacts - Contacts Lifecycle Stage becomes Lead",
+  "includeInConversionsMetric": false,
+  "origin": "WEBSITE",
+  "primaryForGoal": false
+ },
+ {
+  "resourceName": "customers/7917802207/conversionActions/7724498875",
+  "status": "ENABLED",
+  "type": "UPLOAD_CLICKS",
+  "category": "CONVERTED_LEAD",
+  "id": "7724498875",
+  "name": "Contacts - Contacts Lifecycle Stage becomes Opportunity",
+  "includeInConversionsMetric": false,
+  "origin": "WEBSITE",
+  "primaryForGoal": false
+ },
+ {
+  "resourceName": "customers/7917802207/conversionActions/7724501725",
+  "status": "ENABLED",
+  "type": "UPLOAD_CLICKS",
+  "category": "QUALIFIED_LEAD",
+  "id": "7724501725",
+  "name": "Contacts - Contacts Lifecycle Stage becomes Marketing Qualified Lead",
+  "includeInConversionsMetric": false,
+  "origin": "WEBSITE",
+  "primaryForGoal": false
+ },
+ {
+  "resourceName": "customers/7917802207/conversionActions/7724503645",
+  "status": "ENABLED",
+  "type": "UPLOAD_CLICKS",
+  "category": "PURCHASE",
+  "id": "7724503645",
+  "name": "Contacts - Contacts Lifecycle Stage becomes Customer",
+  "includeInConversionsMetric": false,
+  "origin": "WEBSITE",
+  "primaryForGoal": false
+ }
+]

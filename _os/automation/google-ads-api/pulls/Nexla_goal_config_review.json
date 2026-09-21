@@ -1,0 +1,24 @@
+[
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/22038365681",
+      "id": "22038365681"
+    },
+    "conversionGoalCampaignConfig": {
+      "resourceName": "customers/7917802207/conversionGoalCampaignConfigs/22038365681",
+      "goalConfigLevel": "CAMPAIGN",
+      "customConversionGoal": "customers/7917802207/customConversionGoals/6458843017"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/23705317332",
+      "id": "23705317332"
+    },
+    "conversionGoalCampaignConfig": {
+      "resourceName": "customers/7917802207/conversionGoalCampaignConfigs/23705317332",
+      "goalConfigLevel": "CAMPAIGN",
+      "customConversionGoal": "customers/7917802207/customConversionGoals/6458843017"
+    }
+  }
+]

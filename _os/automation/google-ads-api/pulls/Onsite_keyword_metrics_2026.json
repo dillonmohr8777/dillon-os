@@ -1,0 +1,116 @@
+[
+  {
+    "campaign": {
+      "resourceName": "customers/1033715894/campaigns/24183437726",
+      "name": "Search | High Intent | Solano County | 2026-07-30",
+      "id": "24183437726"
+    },
+    "adGroup": {
+      "resourceName": "customers/1033715894/adGroups/208045326628",
+      "id": "208045326628"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/1033715894/adGroupCriteria/208045326628~395354420141",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "landscape contractor vacaville"
+      },
+      "criterionId": "395354420141"
+    },
+    "keywordView": {
+      "resourceName": "customers/1033715894/keywordViews/208045326628~395354420141"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/1033715894/campaigns/24183437726",
+      "name": "Search | High Intent | Solano County | 2026-07-30",
+      "id": "24183437726"
+    },
+    "adGroup": {
+      "resourceName": "customers/1033715894/adGroups/208045326628",
+      "id": "208045326628"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "1"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/1033715894/adGroupCriteria/208045326628~958255064073",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "concrete contractor vacaville"
+      },
+      "criterionId": "958255064073"
+    },
+    "keywordView": {
+      "resourceName": "customers/1033715894/keywordViews/208045326628~958255064073"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/1033715894/campaigns/24183437726",
+      "name": "Search | High Intent | Solano County | 2026-07-30",
+      "id": "24183437726"
+    },
+    "adGroup": {
+      "resourceName": "customers/1033715894/adGroups/208045326628",
+      "id": "208045326628"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "3920000",
+      "averageCpc": 3920000,
+      "impressions": "2"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/1033715894/adGroupCriteria/208045326628~958255067233",
+      "keyword": {
+        "matchType": "EXACT",
+        "text": "concrete contractor vacaville"
+      },
+      "criterionId": "958255067233"
+    },
+    "keywordView": {
+      "resourceName": "customers/1033715894/keywordViews/208045326628~958255067233"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/1033715894/campaigns/24183437726",
+      "name": "Search | High Intent | Solano County | 2026-07-30",
+      "id": "24183437726"
+    },
+    "adGroup": {
+      "resourceName": "customers/1033715894/adGroups/208045326628",
+      "id": "208045326628"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "2480000",
+      "averageCpc": 2480000,
+      "impressions": "4"
+    },
+    "adGroupCriterion": {
+      "resourceName": "customers/1033715894/adGroupCriteria/208045326628~2392814089626",
+      "keyword": {
+        "matchType": "PHRASE",
+        "text": "landscape contractor vacaville"
+      },
+      "criterionId": "2392814089626"
+    },
+    "keywordView": {
+      "resourceName": "customers/1033715894/keywordViews/208045326628~2392814089626"
+    }
+  }
+]

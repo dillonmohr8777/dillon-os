@@ -1,0 +1,248 @@
+{
+  "batch_id": "M360-WEEKLY-2026-08-17-2026-08-23",
+  "generated_at": "2026-08-24T14:00:38.025Z",
+  "reports": [
+    {
+      "report_id": "momentum-360-weekly-2026-08-17-fagan-painting",
+      "cadence": "weekly",
+      "title": "Fagan Painting Weekly Report | August 17 to August 23, 2026",
+      "period_start": "2026-08-17",
+      "period_end": "2026-08-23",
+      "generated_at": "2026-08-24T14:00:38.025Z",
+      "verification_status": "partial",
+      "delivery_status": "email-and-slack-draft-only-unsent",
+      "summary": "Three-page client-specific weekly report built from current Slack, Gmail, canonical deliverable evidence, and live paid-media evidence only where explicitly authorized. Unavailable fields remain pending validation.",
+      "source_refs": [
+        "C:/Users/dillo/Documents/Codex/projects/client-operations/clients/fagan-painting/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/source-data.json"
+      ],
+      "client": {
+        "id": "fagan-painting",
+        "name": "Fagan Painting",
+        "vault_note": "01_Clients/Fagan Painting/overview.md"
+      },
+      "artifact": {
+        "path": "C:/Users/dillo/Documents/Codex/projects/client-operations/clients/fagan-painting/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/fagan-painting-weekly-report-2026-08-17-to-2026-08-23.pdf"
+      }
+    },
+    {
+      "report_id": "momentum-360-weekly-2026-08-17-bar-crawl-usa",
+      "cadence": "weekly",
+      "title": "Bar Crawl USA Weekly Report | August 17 to August 23, 2026",
+      "period_start": "2026-08-17",
+      "period_end": "2026-08-23",
+      "generated_at": "2026-08-24T14:00:38.025Z",
+      "verification_status": "partial",
+      "delivery_status": "email-and-slack-draft-only-unsent",
+      "summary": "Three-page client-specific weekly report built from current Slack, Gmail, canonical deliverable evidence, and live paid-media evidence only where explicitly authorized. Unavailable fields remain pending validation.",
+      "source_refs": [
+        "C:/Users/dillo/Documents/Codex/projects/client-operations/clients/bar-crawl-usa/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/source-data.json"
+      ],
+      "client": {
+        "id": "bar-crawl-usa",
+        "name": "Bar Crawl USA",
+        "vault_note": "01_Clients/Bar Crawl USA/overview.md"
+      },
+      "artifact": {
+        "path": "C:/Users/dillo/Documents/Codex/projects/client-operations/clients/bar-crawl-usa/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/bar-crawl-usa-weekly-report-2026-08-17-to-2026-08-23.pdf"
+      }
+    },
+    {
+      "report_id": "momentum-360-weekly-2026-08-17-hope-wellness-center",
+      "cadence": "weekly",
+      "title": "Hope Wellness Center Weekly Report | August 17 to August 23, 2026",
+      "period_start": "2026-08-17",
+      "period_end": "2026-08-23",
+      "generated_at": "2026-08-24T14:00:38.025Z",
+      "verification_status": "partial",
+      "delivery_status": "email-and-slack-draft-only-unsent",
+      "summary": "Three-page client-specific weekly report built from current Slack, Gmail, canonical deliverable evidence, and live paid-media evidence only where explicitly authorized. Unavailable fields remain pending validation.",
+      "source_refs": [
+        "C:/Users/dillo/Documents/Codex/projects/client-operations/clients/hope-wellness-center/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/source-data.json"
+      ],
+      "client": {
+        "id": "hope-wellness-center",
+        "name": "Hope Wellness Center",
+        "vault_note": "01_Clients/Hope Wellness Center/overview.md"
+      },
+      "artifact": {
+        "path": "C:/Users/dillo/Documents/Codex/projects/client-operations/clients/hope-wellness-center/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/hope-wellness-center-weekly-report-2026-08-17-to-2026-08-23.pdf"
+      }
+    },
+    {
+      "report_id": "momentum-360-weekly-2026-08-17-fresh-blends-kwik-trip",
+      "cadence": "weekly",
+      "title": "Fresh Blends / Kwik Trip Weekly Report | August 17 to August 23, 2026",
+      "period_start": "2026-08-17",
+      "period_end": "2026-08-23",
+      "generated_at": "2026-08-24T14:00:38.025Z",
+      "verification_status": "partial",
+      "delivery_status": "email-and-slack-draft-only-unsent",
+      "summary": "Three-page client-specific weekly report built from current Slack, Gmail, canonical deliverable evidence, and live paid-media evidence only where explicitly authorized. Unavailable fields remain pending validation.",
+      "source_refs": [
+        "C:/Users/dillo/Documents/Codex/projects/client-operations/clients/fresh-blends-kwik-trip/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/source-data.json"
+      ],
+      "client": {
+        "id": "fresh-blends-kwik-trip",
+        "name": "Fresh Blends / Kwik Trip",
+        "vault_note": "01_Clients/Fresh Blends/overview.md"
+      },
+      "artifact": {
+        "path": "C:/Users/dillo/Documents/Codex/projects/client-operations/clients/fresh-blends-kwik-trip/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/fresh-blends-kwik-trip-weekly-report-2026-08-17-to-2026-08-23.pdf"
+      }
+    },
+    {
+      "report_id": "momentum-360-weekly-2026-08-17-replenish-7-eleven",
+      "cadence": "weekly",
+      "title": "Replenish / 7-Eleven Weekly Report | August 17 to August 23, 2026",
+      "period_start": "2026-08-17",
+      "period_end": "2026-08-23",
+      "generated_at": "2026-08-24T14:00:38.025Z",
+      "verification_status": "partial",
+      "delivery_status": "email-and-slack-draft-only-unsent",
+      "summary": "Three-page client-specific weekly report built from current Slack, Gmail, canonical deliverable evidence, and live paid-media evidence only where explicitly authorized. Unavailable fields remain pending validation.",
+      "source_refs": [
+        "C:/Users/dillo/Documents/Codex/projects/client-operations/clients/replenish-7-eleven/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/source-data.json"
+      ],
+      "client": {
+        "id": "replenish-7-eleven",
+        "name": "Replenish / 7-Eleven",
+        "vault_note": "01_Clients/Replenish/overview.md"
+      },
+      "artifact": {
+        "path": "C:/Users/dillo/Documents/Codex/projects/client-operations/clients/replenish-7-eleven/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/replenish-7-eleven-weekly-report-2026-08-17-to-2026-08-23.pdf"
+      }
+    },
+    {
+      "report_id": "momentum-360-weekly-2026-08-17-omega-landscaping",
+      "cadence": "weekly",
+      "title": "Omega Landscaping and Concrete Weekly Report | August 17 to August 23, 2026",
+      "period_start": "2026-08-17",
+      "period_end": "2026-08-23",
+      "generated_at": "2026-08-24T14:00:38.025Z",
+      "verification_status": "partial",
+      "delivery_status": "email-and-slack-draft-only-unsent",
+      "summary": "Three-page client-specific weekly report built from current Slack, Gmail, canonical deliverable evidence, and live paid-media evidence only where explicitly authorized. Unavailable fields remain pending validation.",
+      "source_refs": [
+        "C:/Users/dillo/Documents/Codex/projects/client-operations/clients/omega-landscaping/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/source-data.json"
+      ],
+      "client": {
+        "id": "omega-landscaping",
+        "name": "Omega Landscaping and Concrete",
+        "vault_note": "01_Clients/Omega Landscaping/overview.md"
+      },
+      "artifact": {
+        "path": "C:/Users/dillo/Documents/Codex/projects/client-operations/clients/omega-landscaping/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/omega-landscaping-weekly-report-2026-08-17-to-2026-08-23.pdf"
+      }
+    },
+    {
+      "report_id": "momentum-360-weekly-2026-08-17-va-claims-edge",
+      "cadence": "weekly",
+      "title": "VA Claims Edge Weekly Report | August 17 to August 23, 2026",
+      "period_start": "2026-08-17",
+      "period_end": "2026-08-23",
+      "generated_at": "2026-08-24T14:00:38.025Z",
+      "verification_status": "partial",
+      "delivery_status": "email-and-slack-draft-only-unsent",
+      "summary": "Three-page client-specific weekly report built from current Slack, Gmail, canonical deliverable evidence, and live paid-media evidence only where explicitly authorized. Unavailable fields remain pending validation.",
+      "source_refs": [
+        "C:/Users/dillo/Documents/Codex/projects/client-operations/clients/va-claims-edge/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/source-data.json"
+      ],
+      "client": {
+        "id": "va-claims-edge",
+        "name": "VA Claims Edge",
+        "vault_note": "01_Clients/VA Claims/overview.md"
+      },
+      "artifact": {
+        "path": "C:/Users/dillo/Documents/Codex/projects/client-operations/clients/va-claims-edge/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/va-claims-edge-weekly-report-2026-08-17-to-2026-08-23.pdf"
+      }
+    },
+    {
+      "report_id": "momentum-360-weekly-2026-08-17-onsite-concrete-landscape",
+      "cadence": "weekly",
+      "title": "Onsite Concrete and Landscape Weekly Report | August 17 to August 23, 2026",
+      "period_start": "2026-08-17",
+      "period_end": "2026-08-23",
+      "generated_at": "2026-08-24T14:00:38.025Z",
+      "verification_status": "partial",
+      "delivery_status": "email-and-slack-draft-only-unsent",
+      "summary": "Three-page client-specific weekly report built from current Slack, Gmail, canonical deliverable evidence, and live paid-media evidence only where explicitly authorized. Unavailable fields remain pending validation.",
+      "source_refs": [
+        "C:/Users/dillo/Documents/Codex/projects/client-operations/clients/onsite-concrete-landscape/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/source-data.json"
+      ],
+      "client": {
+        "id": "onsite-concrete-landscape",
+        "name": "Onsite Concrete and Landscape",
+        "vault_note": "01_Clients/Onsite Concrete/overview.md"
+      },
+      "artifact": {
+        "path": "C:/Users/dillo/Documents/Codex/projects/client-operations/clients/onsite-concrete-landscape/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/onsite-concrete-landscape-weekly-report-2026-08-17-to-2026-08-23.pdf"
+      }
+    },
+    {
+      "report_id": "momentum-360-weekly-2026-08-17-nkcdc",
+      "cadence": "weekly",
+      "title": "NKCDC Weekly Report | August 17 to August 23, 2026",
+      "period_start": "2026-08-17",
+      "period_end": "2026-08-23",
+      "generated_at": "2026-08-24T14:00:38.025Z",
+      "verification_status": "partial",
+      "delivery_status": "email-and-slack-draft-only-unsent",
+      "summary": "Three-page client-specific weekly report built from current Slack, Gmail, canonical deliverable evidence, and live paid-media evidence only where explicitly authorized. Unavailable fields remain pending validation.",
+      "source_refs": [
+        "C:/Users/dillo/Documents/Codex/projects/client-operations/clients/nkcdc/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/source-data.json"
+      ],
+      "client": {
+        "id": "nkcdc",
+        "name": "NKCDC",
+        "vault_note": "01_Clients/NKCDC/overview.md"
+      },
+      "artifact": {
+        "path": "C:/Users/dillo/Documents/Codex/projects/client-operations/clients/nkcdc/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/nkcdc-weekly-report-2026-08-17-to-2026-08-23.pdf"
+      }
+    },
+    {
+      "report_id": "momentum-360-weekly-2026-08-17-kimberly-james-bridal",
+      "cadence": "weekly",
+      "title": "Kimberly James Bridal Weekly Report | August 17 to August 23, 2026",
+      "period_start": "2026-08-17",
+      "period_end": "2026-08-23",
+      "generated_at": "2026-08-24T14:00:38.025Z",
+      "verification_status": "partial",
+      "delivery_status": "email-and-slack-draft-only-unsent",
+      "summary": "Three-page client-specific weekly report built from current Slack, Gmail, canonical deliverable evidence, and live paid-media evidence only where explicitly authorized. Unavailable fields remain pending validation.",
+      "source_refs": [
+        "C:/Users/dillo/Documents/Codex/projects/client-operations/clients/kimberly-james-bridal/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/source-data.json"
+      ],
+      "client": {
+        "id": "kimberly-james-bridal",
+        "name": "Kimberly James Bridal",
+        "vault_note": "01_Clients/Kimberly James Bridal/overview.md"
+      },
+      "artifact": {
+        "path": "C:/Users/dillo/Documents/Codex/projects/client-operations/clients/kimberly-james-bridal/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/kimberly-james-bridal-weekly-report-2026-08-17-to-2026-08-23.pdf"
+      }
+    },
+    {
+      "report_id": "momentum-360-weekly-2026-08-17-revive-systems",
+      "cadence": "weekly",
+      "title": "Revive Systems Weekly Report | August 17 to August 23, 2026",
+      "period_start": "2026-08-17",
+      "period_end": "2026-08-23",
+      "generated_at": "2026-08-24T14:00:38.025Z",
+      "verification_status": "partial",
+      "delivery_status": "email-and-slack-draft-only-unsent",
+      "summary": "Three-page client-specific weekly report built from current Slack, Gmail, canonical deliverable evidence, and live paid-media evidence only where explicitly authorized. Unavailable fields remain pending validation.",
+      "source_refs": [
+        "C:/Users/dillo/Documents/Codex/projects/client-operations/clients/revive-systems/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/source-data.json"
+      ],
+      "client": {
+        "id": "revive-systems",
+        "name": "Revive Systems",
+        "vault_note": "01_Clients/Revive Systems/overview.md"
+      },
+      "artifact": {
+        "path": "C:/Users/dillo/Documents/Codex/projects/client-operations/clients/revive-systems/deliverables/2026-08-24-weekly-report-2026-08-17-to-2026-08-23/revive-systems-weekly-report-2026-08-17-to-2026-08-23.pdf"
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "wakeId":"heartbeat:20260905T120105850Z",
+  "identityVerified":{"gmail":true,"slack":true},
+  "window":{"afterUnix":1788607786,"beforeUnix":1788609674},
+  "sources":{"slack":{"pages":1,"messages":0,"paginationExhausted":true},"gmail":{"pages":1,"messages":1,"newSuppressed":1,"paginationExhausted":true}},
+  "due":{"bedtime":false,"leadTable":true,"googleAdsReport":false,"predictionBrief":true},
+  "worker":{"kind":"collaboration","path":"/root/kjb_daily_leads","clientId":"kimberly-james-bridal","status":"completed-blocked-receipt","threadId":null,"interruptedAfterCompletion":true},
+  "externalMutations":0,
+  "decision":"NOTIFY",
+  "artifact":"C:/Users/dillo/Documents/Codex/projects/client-operations/clients/kimberly-james-bridal/deliverables/2026-09-05-daily-meta-leads/verification.json",
+  "parentArtifactReviewed":true,
+  "reason":"No new actionable intake. Scheduled KJB native lead retrieval blocked by saved-profile login continuation; fresh counts null, no fallback coverage claimed. Google Ads reports not due."
+}

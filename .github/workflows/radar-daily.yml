@@ -24,6 +24,10 @@ on:
         description: 'Force re-audit of these verdicts, e.g. verify,polish'
         required: false
         default: ''
+      imagery:
+        description: 'Rows to audit for an exact, transparent logo'
+        required: false
+        default: '150'
 
 # One sweep at a time. Two concurrent runs would both load the registry, both
 # write it, and the second push would silently discard the first run's work.
@@ -58,6 +62,9 @@ jobs:
           npm install --no-save playwright@1.56.1
           npx playwright install --with-deps chromium
 
+      # --imagery is the supply line for the whole build lane, not a nicety: it is
+      # the only stage that mints the verified exact-logo evidence the Next 20
+      # builder selects on. The default budget of 60 left ~1,300 rows unaudited.
       - name: Run the sweep
         env:
           GOOGLE_PLACES_API_KEY: ${{ secrets.GOOGLE_PLACES_API_KEY }}
@@ -67,6 +74,7 @@ jobs:
           node _os/automation/bin/radar-refresh.js \
             --discover "${{ github.event.inputs.discover || '60' }}" \
             --render "${{ github.event.inputs.render || '80' }}" \
+            --imagery "${{ github.event.inputs.imagery || '150' }}" \
             --max-tier 1 \
             --concurrency 8 \
             ${{ github.event.inputs.regrade && format('--regrade {0}', github.event.inputs.regrade) || '' }} \
@@ -119,9 +127,23 @@ jobs:
             # Contact discovery writes to the private layer, so any address in a
             # tracked file means that separation broke. needmomentum.com is our
             # own and appears in the footer by design.
-            if grep -oE '[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}' "$f" \
-                 | grep -vE '@(needmomentum\.com|momentum360\.com)$' | head -1 | grep -q .; then
-              echo "::error file=$f::a third-party email address is present in a tracked file"
+            # A retina asset filename is not an email address. `logo@2x-1.png`
+            # and `m-header-logo@3x.png` match the address pattern exactly, and
+            # they entered the registry legitimately once logo provenance began
+            # recording each mark's source URL -- which failed this guard and
+            # blocked the dashboard publish on an entirely clean run.
+            #
+            # The exclusion is narrow on purpose: it drops only strings whose
+            # domain part ends in a file extension. No real address has a TLD of
+            # .png, so this cannot hide an actual leak.
+            leaked=$(grep -oE '[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}' "$f" \
+                 | grep -vE '@(needmomentum\.com|momentum360\.com)$' \
+                 | grep -viE '\.(png|jpe?g|gif|webp|avif|svg|ico|bmp|tiff?|css|js|mjs|json|woff2?|ttf|otf|eot|mp4|webm|pdf)$' \
+                 | wc -l)
+            if [ "$leaked" -gt 0 ]; then
+              # Count only. Printing the address into a public build log would
+              # publish the very thing this step exists to stop.
+              echo "::error file=$f::$leaked third-party email address(es) present in a tracked file"
               fail=1
             fi
           done
@@ -197,6 +219,10 @@ jobs:
                 console.log(\`| Re-graded | \${s.run.regraded||0} |\`);
                 console.log(\`| Tier 1 rendered | \${s.run.rendered||0} |\`);
                 console.log(\`| Tracked | \${s.tracked} |\`);
+                console.log(\`| Active exact-logo rows | \${s.active||0} |\`);
+                console.log(\`| Logos audited | \${s.run.imagery_checked||0} |\`);
+                console.log(\`| Logos newly verified | \${s.run.logo_verified||0} |\`);
+                console.log(\`| Held for logo verification | \${s.logo_holds||0} |\`);
                 console.log(\`| Rebuild queue | \${v.rebuild||0} |\`);
                 console.log(\`| Awaiting a render | \${v.verify||0} |\`);
                 console.log(\`| Mean site quality | \${s.mean_site_quality} |\`);

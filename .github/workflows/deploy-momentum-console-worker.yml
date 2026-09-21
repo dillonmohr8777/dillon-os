@@ -1,0 +1,36 @@
+name: Deploy Momentum Console Worker
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-momentum-console-worker
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Deploy momentum-console
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Deploy Worker
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          workingDirectory: _os/cloud-console
+          command: deploy
+
+      - name: Set Worker auth secret
+        working-directory: _os/cloud-console
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          HUD_TOKEN: ${{ secrets.MOMENTUM_HUD_TOKEN }}
+        run: echo "$HUD_TOKEN" | npx wrangler secret put MOMENTUM_HUD_TOKEN

@@ -1,0 +1,56 @@
+[
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/24177650112",
+      "name": "G_US_PMAX_NB_MCP-Agentic",
+      "id": "24177650112"
+    },
+    "metrics": {
+      "conversionsValue": 0,
+      "conversions": 0,
+      "allConversions": 1
+    },
+    "segments": {
+      "conversionActionCategory": "SUBMIT_LEAD_FORM",
+      "date": "2026-09-02",
+      "conversionAction": "customers/7917802207/conversionActions/7534625037",
+      "conversionActionName": "HubSpot-Demo Request"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/24177650112",
+      "name": "G_US_PMAX_NB_MCP-Agentic",
+      "id": "24177650112"
+    },
+    "metrics": {
+      "conversionsValue": 0,
+      "conversions": 0,
+      "allConversions": 2
+    },
+    "segments": {
+      "conversionActionCategory": "SUBMIT_LEAD_FORM",
+      "date": "2026-08-31",
+      "conversionAction": "customers/7917802207/conversionActions/7534625037",
+      "conversionActionName": "HubSpot-Demo Request"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/7917802207/campaigns/24177650112",
+      "name": "G_US_PMAX_NB_MCP-Agentic",
+      "id": "24177650112"
+    },
+    "metrics": {
+      "conversionsValue": 1,
+      "conversions": 1,
+      "allConversions": 1
+    },
+    "segments": {
+      "conversionActionCategory": "SUBMIT_LEAD_FORM",
+      "date": "2026-08-31",
+      "conversionAction": "customers/7917802207/conversionActions/7724496703",
+      "conversionActionName": "Contacts - Contacts Lifecycle Stage becomes Lead"
+    }
+  }
+]

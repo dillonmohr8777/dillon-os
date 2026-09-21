@@ -1,0 +1,248 @@
+{
+  "schema_version": 1,
+  "routine_id": "W02",
+  "review_date": "2026-08-24",
+  "source_set_sha256": "d9999ce6c6b447b97dca8c7fd68c14e8b0981ef414085b0a05ce49a5a94f2928",
+  "source_items": [
+    {
+      "locator": "access-broker/registry.json#paid-media-redacted-projection",
+      "sha256": "c485865d1d3a217730c24bdcaae0428478f966ec150182d22ec23301b706e0fa",
+      "bytes": 4284
+    },
+    {
+      "locator": "client-operations/clients/fresh-blends-kwik-trip/paid-media/launch-config.json",
+      "sha256": "be5f5b1384c8b9c02b6ad534bc70737406b230b1b1f0b2279b83f9b59585714d",
+      "bytes": 1994
+    },
+    {
+      "locator": "client-operations/clients/kimberly-james-bridal/paid-media/launch-config.json",
+      "sha256": "cdace6d28fcae812ece635810347eaccb6560ebbfc1d1b005390791fa8b82d6a",
+      "bytes": 2255
+    },
+    {
+      "locator": "client-operations/clients/kimberly-james-bridal/paid-media/launch-config.json",
+      "sha256": "cdace6d28fcae812ece635810347eaccb6560ebbfc1d1b005390791fa8b82d6a",
+      "bytes": 2255
+    },
+    {
+      "locator": "client-operations/clients/omega-landscaping/paid-media/launch-config.json",
+      "sha256": "08c23d83be8f4be1eaadc34c4c32d8d3a9e2cceec56ade5adfe7639cffb21cc8",
+      "bytes": 1924
+    },
+    {
+      "locator": "client-operations/clients/onsite-concrete-landscape/paid-media/launch-config.json",
+      "sha256": "efdc1e47aed5fb061f450328d12d486e3ad0e9d8ec4f424456b28261baf93ddc",
+      "bytes": 1958
+    },
+    {
+      "locator": "client-operations/clients/replenish-7-eleven/paid-media/launch-config.json",
+      "sha256": "4e9c87e453fe5bea8b7ce58e02aeb7a992055f8b0962fba767a75de295321fe8",
+      "bytes": 1984
+    },
+    {
+      "locator": "client-operations/clients/shadow-heating-cooling/paid-media/launch-config.json",
+      "sha256": "dce37f02bdae8d87a80032cf2393f7d31b7416fa7cefffa87dd0f481e6af7b63",
+      "bytes": 1648
+    },
+    {
+      "locator": "client-operations/registry/clients.json",
+      "sha256": "f94d3231f5e4c54e0254ac314b5d4c69bef30e0d5663d42f9795d8b3366bea40",
+      "bytes": 48014
+    },
+    {
+      "locator": "client-operations/registry/paid-media-roster.json",
+      "sha256": "47d8f66f75c478d4a09ee962ab16ec691d36c62b7673cb4ea0f2c53491d9224d",
+      "bytes": 9350
+    },
+    {
+      "locator": "client-operations/state/paid-media/daily-review-2026-08-24.json",
+      "sha256": "03e922584e92fe97f375f4fd4c3877302db8a0022b85bee300defa64aab91b3f",
+      "bytes": 65599
+    },
+    {
+      "locator": "System/outcome-graph/source-snapshots/paid-media-live-2026-08-24.json",
+      "sha256": "48f8da8609ab79e901c8ff80237f0a2436e35ad1aef6954dcfbca6f1c725b90d",
+      "bytes": 9150
+    }
+  ],
+  "live_snapshot": {
+    "locator": "System/outcome-graph/source-snapshots/paid-media-live-2026-08-24.json",
+    "sha256": "48f8da8609ab79e901c8ff80237f0a2436e35ad1aef6954dcfbca6f1c725b90d",
+    "observed_at": "2026-08-24T23:01:56.736Z",
+    "collector_states": {
+      "windsor_connector": "blocked_reauthentication_required",
+      "google_ads_ui": "authenticated_account_selector_read_only",
+      "meta_ads_ui": "authenticated_exact_kjb_and_ambiguous_shadow_read_only"
+    }
+  },
+  "config_bindings": [
+    {
+      "lane_id": "google-ads--kimberly-james-bridal",
+      "client_id": "kimberly-james-bridal",
+      "platform": "google-ads",
+      "config_locator": "client-operations/clients/kimberly-james-bridal/paid-media/launch-config.json",
+      "config_sha256": "cdace6d28fcae812ece635810347eaccb6560ebbfc1d1b005390791fa8b82d6a",
+      "account_reference_sha256": "c2681618a4afb0d5fd4fb3c2d3c93d82b00c3269d615091e7f3d76d4b288b2b0",
+      "access_binding": {
+        "state": "resolved_authorized_read_only",
+        "client_route_count": 1,
+        "platform_system_count": 1,
+        "logical_match_count": 1,
+        "account_reference_sha256": "c2681618a4afb0d5fd4fb3c2d3c93d82b00c3269d615091e7f3d76d4b288b2b0",
+        "matched_system_sha256": "7805d96540063374516ad40b749c0b1e9ad6ee58e5c8269ba16c0ee696ef307a",
+        "environment": "production",
+        "metadata_read_allowed": true,
+        "insights_read_allowed": true,
+        "last_verified_at": null,
+        "findings": []
+      }
+    },
+    {
+      "lane_id": "google-ads--replenish-7-eleven",
+      "client_id": "replenish-7-eleven",
+      "platform": "google-ads",
+      "config_locator": "client-operations/clients/replenish-7-eleven/paid-media/launch-config.json",
+      "config_sha256": "4e9c87e453fe5bea8b7ce58e02aeb7a992055f8b0962fba767a75de295321fe8",
+      "account_reference_sha256": "8a52747e5fcb35d127d6f9792c2f9ea9535bdc23a64e26b29ec161ed6d86ab0a",
+      "access_binding": {
+        "state": "resolved_authorized_read_only",
+        "client_route_count": 1,
+        "platform_system_count": 1,
+        "logical_match_count": 1,
+        "account_reference_sha256": "8a52747e5fcb35d127d6f9792c2f9ea9535bdc23a64e26b29ec161ed6d86ab0a",
+        "matched_system_sha256": "6ea2333699bf49a79ba010959e24980db4fe41c9536ba35773f9d0dc7d444ca1",
+        "environment": "production",
+        "metadata_read_allowed": true,
+        "insights_read_allowed": true,
+        "last_verified_at": null,
+        "findings": []
+      }
+    },
+    {
+      "lane_id": "google-ads--fresh-blends-kwik-trip",
+      "client_id": "fresh-blends-kwik-trip",
+      "platform": "google-ads",
+      "config_locator": "client-operations/clients/fresh-blends-kwik-trip/paid-media/launch-config.json",
+      "config_sha256": "be5f5b1384c8b9c02b6ad534bc70737406b230b1b1f0b2279b83f9b59585714d",
+      "account_reference_sha256": "8407719bb83bd3ab19af75de701e35ff7069cae056cdd011f558e9b320047271",
+      "access_binding": {
+        "state": "resolved_authorized_read_only",
+        "client_route_count": 1,
+        "platform_system_count": 1,
+        "logical_match_count": 1,
+        "account_reference_sha256": "8407719bb83bd3ab19af75de701e35ff7069cae056cdd011f558e9b320047271",
+        "matched_system_sha256": "c7d7550e4d2c41e27648e2969dd0f86ac3b9cd1b104fd6bbd1b147efdd47d0d3",
+        "environment": "production",
+        "metadata_read_allowed": true,
+        "insights_read_allowed": true,
+        "last_verified_at": null,
+        "findings": []
+      }
+    },
+    {
+      "lane_id": "google-ads--omega-landscaping",
+      "client_id": "omega-landscaping",
+      "platform": "google-ads",
+      "config_locator": "client-operations/clients/omega-landscaping/paid-media/launch-config.json",
+      "config_sha256": "08c23d83be8f4be1eaadc34c4c32d8d3a9e2cceec56ade5adfe7639cffb21cc8",
+      "account_reference_sha256": "28362f51e2226b493a2e231f809344e7045e8065ed912d25714897e9e87ca0f9",
+      "access_binding": {
+        "state": "resolved_authorized_read_only",
+        "client_route_count": 1,
+        "platform_system_count": 1,
+        "logical_match_count": 1,
+        "account_reference_sha256": "28362f51e2226b493a2e231f809344e7045e8065ed912d25714897e9e87ca0f9",
+        "matched_system_sha256": "3c54fac39eabab2870744be70c93b120b675323634f2d92a34fcb44a2175186a",
+        "environment": "production",
+        "metadata_read_allowed": true,
+        "insights_read_allowed": true,
+        "last_verified_at": "2026-07-30T19:08:47.5919945Z",
+        "findings": []
+      }
+    },
+    {
+      "lane_id": "google-ads--onsite-concrete-landscape",
+      "client_id": "onsite-concrete-landscape",
+      "platform": "google-ads",
+      "config_locator": "client-operations/clients/onsite-concrete-landscape/paid-media/launch-config.json",
+      "config_sha256": "efdc1e47aed5fb061f450328d12d486e3ad0e9d8ec4f424456b28261baf93ddc",
+      "account_reference_sha256": "c787ea2bf0c933041321d291267600c67da39c7bc48251e3f822fbbe7d208386",
+      "access_binding": {
+        "state": "resolved_authorized_read_only",
+        "client_route_count": 1,
+        "platform_system_count": 1,
+        "logical_match_count": 1,
+        "account_reference_sha256": "c787ea2bf0c933041321d291267600c67da39c7bc48251e3f822fbbe7d208386",
+        "matched_system_sha256": "afaead19fea1c6760616e330761e182a33560d22eae2233126ff8fa2d966849b",
+        "environment": "production",
+        "metadata_read_allowed": true,
+        "insights_read_allowed": true,
+        "last_verified_at": null,
+        "findings": []
+      }
+    },
+    {
+      "lane_id": "meta-ads--shadow-heating-cooling",
+      "client_id": "shadow-heating-cooling",
+      "platform": "meta-ads",
+      "config_locator": "client-operations/clients/shadow-heating-cooling/paid-media/launch-config.json",
+      "config_sha256": "dce37f02bdae8d87a80032cf2393f7d31b7416fa7cefffa87dd0f481e6af7b63",
+      "account_reference_sha256": "d23238bc9403df187cd57977da7ab541d5d05879ae8cb10c8cfea88cc108d9b9",
+      "access_binding": {
+        "state": "blocked_or_incomplete",
+        "client_route_count": 1,
+        "platform_system_count": 1,
+        "logical_match_count": 1,
+        "account_reference_sha256": "d23238bc9403df187cd57977da7ab541d5d05879ae8cb10c8cfea88cc108d9b9",
+        "matched_system_sha256": "775f445ddba32dccef475066af9b5cad90aa9b7130894c0cf28e666172f48729",
+        "environment": "production",
+        "metadata_read_allowed": false,
+        "insights_read_allowed": false,
+        "last_verified_at": null,
+        "findings": [
+          "access-registry-account-read-capability-missing",
+          "access-registry-insights-read-capability-missing"
+        ]
+      }
+    },
+    {
+      "lane_id": "meta-ads--kimberly-james-bridal",
+      "client_id": "kimberly-james-bridal",
+      "platform": "meta-ads",
+      "config_locator": "client-operations/clients/kimberly-james-bridal/paid-media/launch-config.json",
+      "config_sha256": "cdace6d28fcae812ece635810347eaccb6560ebbfc1d1b005390791fa8b82d6a",
+      "account_reference_sha256": "1fd60c5f3aef0bacc8def54821c7b4dd0ca1836be963ddbb539ccce78341a74c",
+      "access_binding": {
+        "state": "blocked_or_incomplete",
+        "client_route_count": 1,
+        "platform_system_count": 1,
+        "logical_match_count": 1,
+        "account_reference_sha256": "1fd60c5f3aef0bacc8def54821c7b4dd0ca1836be963ddbb539ccce78341a74c",
+        "matched_system_sha256": "95550b904109fd5b66144f78b13c54f93fa962ec6f61da46dc94c784c92295ed",
+        "environment": "production",
+        "metadata_read_allowed": false,
+        "insights_read_allowed": false,
+        "last_verified_at": null,
+        "findings": [
+          "access-registry-account-read-capability-missing",
+          "access-registry-insights-read-capability-missing"
+        ]
+      }
+    }
+  ],
+  "manifest_diagnostics": {
+    "declared_status": "ready-for-read-only-review",
+    "lane_count": 7,
+    "non_verified_check_count": 56,
+    "false_ready_detected": true,
+    "interpretation": "Manifest readiness authorizes evidence collection only; it is not an outcome-complete paid-media review."
+  },
+  "authority": {
+    "read_only": true,
+    "proposal_only": true,
+    "external_action_attempted": false,
+    "provider_mutation_attempted": false,
+    "crm_mutation_attempted": false,
+    "canonical_write_attempted": false
+  }
+}

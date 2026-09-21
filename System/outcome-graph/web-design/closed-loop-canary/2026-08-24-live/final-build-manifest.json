@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-25T00:09:38.525Z",
+  "source_set_sha256": "64db51d408423660fa02b50ba1ae771b206dfd53d10241504dfb90c568377ea2",
+  "surfaces": [
+    {
+      "surface_id": "closed-loop-canary",
+      "root": "System/outcome-graph/web-design/closed-loop-canary/2026-08-24-live/candidates/closed-loop-canary",
+      "manifest_sha256": "0a97aada73fbf990174252576a5a867203fb65cdd380d5e1b05f8a102d95362e",
+      "files": [
+        {
+          "path": "System/outcome-graph/web-design/closed-loop-canary/2026-08-24-live/candidates/closed-loop-canary/index.html",
+          "sha256": "d18588f11b7218992dde818c9747f4846ca6b2ee638c8ab16ce6913d93b68c75",
+          "bytes": 8082
+        }
+      ]
+    }
+  ],
+  "authority": {
+    "external_action_attempted": false,
+    "canonical_write_attempted": false
+  }
+}

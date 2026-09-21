@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-24T22:50:00.000Z",
+  "source_snapshot": {
+    "locator": "System/outcome-graph/source-snapshots/google-drive-list-state-2026-08-24.json",
+    "sha256": "fbbe012f3b6b6d242a88c1c43af6420603f54dce3e8715acf42362c68a720720",
+    "captured_at": "2026-08-24T22:28:03.4525458Z"
+  },
+  "objective": "Replace independently editable list sheets with one versioned identity-keyed canonical state table and generated read-only projections.",
+  "current_state": "blocked_requires_identity_and_projection_reconciliation",
+  "holds": [
+    "momentum_assign_stable_identity_to_every_canonical_row",
+    "momentum_reconcile_238_state_rows_to_236_declared_businesses",
+    "momentum_prove_one_current_eligibility_state_per_identity",
+    "franchise_repair_one_missing_prospect_id",
+    "franchise_regenerate_wave_1_from_full_canonical_source",
+    "franchise_supersede_conflicting_instruction_document"
+  ],
+  "target_model": {
+    "canonical_unit": "one opaque stable entity_id per real business or prospect",
+    "separate_state_dimensions": [
+      "eligibility",
+      "presentation",
+      "outreach",
+      "approval",
+      "delivery"
+    ],
+    "transition_contract": [
+      "expected_version",
+      "from_state",
+      "to_state",
+      "reason",
+      "actor",
+      "evidence_sha256",
+      "timestamp"
+    ],
+    "required_bindings": [
+      "source_sha256",
+      "content_sha256",
+      "entity_version",
+      "instruction_version",
+      "approval_receipt_sha256",
+      "delivery_readback_sha256"
+    ],
+    "generated_projections": [
+      "call_list",
+      "hold",
+      "do_not_pitch",
+      "wave_1",
+      "draft_ready"
+    ]
+  },
+  "migration_sequence": [
+    "Freeze independent edits and export one read-only source snapshot.",
+    "Assign or repair opaque stable IDs in the full canonical source.",
+    "Reconcile duplicate identities and the 238-versus-236 Momentum delta.",
+    "Choose exactly one eligibility state and reason per identity.",
+    "Separate presentation clearance from outreach and approval state.",
+    "Regenerate CALL LIST, HOLD, DO NOT PITCH, Wave 1, and draft-ready views from queries.",
+    "Make one versioned instruction document current and mark predecessors superseded.",
+    "Run exact row, hash, projection, privacy, and approval-boundary readback before adoption."
+  ],
+  "acceptance_assertions": [
+    "Every canonical row has one unique stable entity_id and current entity_version.",
+    "Momentum distinct identities, state rows, and duplicate resolution reconcile exactly.",
+    "Every generated projection exactly reproduces from the bound canonical set hash.",
+    "The franchise full source has 720 of 720 stable IDs and Wave 1 matches 50 of 50 rows exactly.",
+    "Exactly one current instruction version governs each workflow.",
+    "Cleared to show, draft ready, verified outcome, exact approval, and sent readback remain separate states."
+  ],
+  "authority": {
+    "plan_only": true,
+    "drive_write_attempted": false,
+    "contact_mutation_attempted": false,
+    "send_attempted": false,
+    "canonical_queue_write_attempted": false,
+    "exact_human_approval_still_required": true
+  }
+}

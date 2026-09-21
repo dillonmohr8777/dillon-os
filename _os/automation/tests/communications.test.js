@@ -9,6 +9,8 @@ const { repoPath } = require('../lib/fsutil');
 const {
   validateCommunicationEnvelope,
   normalizeCommunicationItems,
+  communicationEventFingerprint,
+  filterNewCommunicationItems,
   renderDailyReview,
   appendReview,
 } = require('../lib/communications');
@@ -45,6 +47,30 @@ test('communication item normalization deduplicates within a run', () => {
   envelope.items.push({ ...envelope.items[0] });
   const normalized = normalizeCommunicationItems(envelope.items);
   assert.equal(normalized.length, 2);
+});
+
+test('cross-run event fingerprint ignores key drift but allows a later thread event', () => {
+  const item = fixture().items[0];
+  const sameEvent = {
+    ...item,
+    dedupe_key: `${item.source_type}:replacement-key`,
+    occurred_at: new Date(item.occurred_at).toISOString(),
+  };
+  const laterEvent = {
+    ...sameEvent,
+    occurred_at: new Date(Date.parse(item.occurred_at) + 60_000).toISOString(),
+  };
+  const processed = {
+    [item.dedupe_key]: {
+      source_ref: item.source_ref,
+      occurred_at: item.occurred_at,
+    },
+  };
+
+  assert.equal(communicationEventFingerprint(sameEvent), communicationEventFingerprint(item));
+  assert.notEqual(communicationEventFingerprint(laterEvent), communicationEventFingerprint(item));
+  assert.deepEqual(filterNewCommunicationItems([sameEvent], processed), []);
+  assert.deepEqual(filterNewCommunicationItems([laterEvent], processed), [laterEvent]);
 });
 
 test('daily communication review surfaces priority and preserves the no-send boundary', () => {

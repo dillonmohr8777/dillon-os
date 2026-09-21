@@ -1,0 +1,1443 @@
+{
+  "run_id": "OGD-20260825-4E80C5760430",
+  "graph_id": "monthly-m04-client-separation-shadow",
+  "objective": "Prove sampled route, asset, communication, metric, account, and access metadata maps to one canonical client or is quarantined without guessing.",
+  "value_signal": "Every client surface is identity-bound; duplicate identifiers and missing evidence are visible without exposing raw contacts or moving records.",
+  "contract_sha256": "1151eb7cc0d61c9840547f2d2cc5cff0ad98608dc9533887ff683f089386e9e6",
+  "started_at": "2026-08-25T00:24:02.253Z",
+  "source_evidence": "Each governance routine recollects its exact registry, receipt, client, design, or knowledge source set before planning and terminal verification.",
+  "finish_line": "All six required surfaces are sampled, every sample has one client or quarantine state, overlaps are hash-only, and no record or provider state changes.",
+  "governance": {
+    "orchestrator": "Codex acting as Marketing Chief",
+    "canonical_state": "The agent registry, routine contracts, current durable receipts, client registry, access metadata, design authority, Obsidian vault, and Marketing Chief queue remain canonical and read only.",
+    "dedupe_key": "M04:2026-08-24:source-bound-shadow",
+    "checkpoint": "System/outcome-graph/routines/M04/2026-08-24-governance-shadow/run-receipt.json",
+    "rollback": "Discard governance shadow artifacts and the unadopted proposal; preserve registry, permissions, schedules, billing, client records, design truth, sidecars, queue, and external systems.",
+    "escalation": "Return the exact missing sample, cost source, client ambiguity, stale authority, duplicate routine, or proposal decision to Marketing Chief."
+  },
+  "graph_iterations": [
+    {
+      "iteration": 1,
+      "status": "running",
+      "planner": {
+        "evidence": "Collected 150 isolated M04 item(s) from source set cdfe18d064fb4ab1aa137f1f8499d9d289d46bc081c9eee4885b131f5bbada4a.",
+        "item_count": 150,
+        "plan_signature": "8b32a4f2f2117519c907823ec37c52800f019dd386fe62f8a9211b3407314147",
+        "items": [
+          {
+            "id": "M04:align-hcm:route",
+            "isolation_key": "align-hcm:route",
+            "input_fingerprint": "dc9c31fec09617123217e228ff533ead7c4501c3206a7e590118c3b3509c01ad",
+            "task": null
+          },
+          {
+            "id": "M04:align-hcm:asset",
+            "isolation_key": "align-hcm:asset",
+            "input_fingerprint": "d18278e59995ef0839110510b801cc90a080e6058b19548bf77e9627e6241c72",
+            "task": null
+          },
+          {
+            "id": "M04:align-hcm:communication",
+            "isolation_key": "align-hcm:communication",
+            "input_fingerprint": "fbf29a96b76f3356eb6021cd0e47518225c818d3638d66b2e853ef45b93bd9f2",
+            "task": null
+          },
+          {
+            "id": "M04:align-hcm:metric",
+            "isolation_key": "align-hcm:metric",
+            "input_fingerprint": "f05974a4136ad946464da1effa46e6e0fd1ccbf16d7a555ec3bd79762cc0d43c",
+            "task": null
+          },
+          {
+            "id": "M04:align-hcm:account",
+            "isolation_key": "align-hcm:account",
+            "input_fingerprint": "4da7fbdf3050fb0fa99078b6ffb9a8cc1b7a4b2a40abbe15f5f6c272af77d272",
+            "task": null
+          },
+          {
+            "id": "M04:align-hcm:access_metadata",
+            "isolation_key": "align-hcm:access_metadata",
+            "input_fingerprint": "569e2c7b21a51afb4b6bbf0123f3e685dc5988e8fdf05cc4dd115b0dde0bcc8f",
+            "task": null
+          },
+          {
+            "id": "M04:momentum-360:route",
+            "isolation_key": "momentum-360:route",
+            "input_fingerprint": "18bea86870c1b25926fb1ca73ac423a7235d192a1f9704cfd2b3a82238a72def",
+            "task": null
+          },
+          {
+            "id": "M04:momentum-360:asset",
+            "isolation_key": "momentum-360:asset",
+            "input_fingerprint": "5f9cbcf49baf3afaebf6cb7aa8619239c952ef68eee4f321e808005ec53c75f4",
+            "task": null
+          },
+          {
+            "id": "M04:momentum-360:communication",
+            "isolation_key": "momentum-360:communication",
+            "input_fingerprint": "7ed605b7fece99eadfecde4dcacae61de2e91b900847eba65bc4473c6ea6df9f",
+            "task": null
+          },
+          {
+            "id": "M04:momentum-360:metric",
+            "isolation_key": "momentum-360:metric",
+            "input_fingerprint": "91d05aa5b9ec288d8d8f7db04c42db465e5e3c99c96cf85fefeb06449e1354ab",
+            "task": null
+          },
+          {
+            "id": "M04:momentum-360:account",
+            "isolation_key": "momentum-360:account",
+            "input_fingerprint": "d027d63cc863c5df8818e10c1e60f291d3e295e6541d1b3fa4462244c4282393",
+            "task": null
+          },
+          {
+            "id": "M04:momentum-360:access_metadata",
+            "isolation_key": "momentum-360:access_metadata",
+            "input_fingerprint": "056f814f46654be2f6896e3edc0598fbc1285e3d48996c8cd8a4a0622ceca3a1",
+            "task": null
+          },
+          {
+            "id": "M04:kimberly-james-bridal:route",
+            "isolation_key": "kimberly-james-bridal:route",
+            "input_fingerprint": "ea32492c6966a9ae690183bfe60d7a5775bce465c20be5cb82ccf4b4a617dc5c",
+            "task": null
+          },
+          {
+            "id": "M04:kimberly-james-bridal:asset",
+            "isolation_key": "kimberly-james-bridal:asset",
+            "input_fingerprint": "270111fcdb983842ee26449310987ac3f5891bc79eba917c595f5ce16c7220cc",
+            "task": null
+          },
+          {
+            "id": "M04:kimberly-james-bridal:communication",
+            "isolation_key": "kimberly-james-bridal:communication",
+            "input_fingerprint": "7df69eed060b772df3d0e99f0e18cf30b73ec8291b175f00ce58e64fb5b48d18",
+            "task": null
+          },
+          {
+            "id": "M04:kimberly-james-bridal:metric",
+            "isolation_key": "kimberly-james-bridal:metric",
+            "input_fingerprint": "24d5acbc6dc9b133b2506d05767f9d9f16841a77bf20122a40bc6c321d1ec870",
+            "task": null
+          },
+          {
+            "id": "M04:kimberly-james-bridal:account",
+            "isolation_key": "kimberly-james-bridal:account",
+            "input_fingerprint": "bb6942808cbe4c4d3106a87a5d9cd5519d0a9cee502bcfa93d23b97227c461ed",
+            "task": null
+          },
+          {
+            "id": "M04:kimberly-james-bridal:access_metadata",
+            "isolation_key": "kimberly-james-bridal:access_metadata",
+            "input_fingerprint": "3189ca6f7a92aa4db805b46b517d9c86ee71bb1510a4a405dd3bf30cd0186425",
+            "task": null
+          },
+          {
+            "id": "M04:bok-law-firm:route",
+            "isolation_key": "bok-law-firm:route",
+            "input_fingerprint": "41a1050a8ffed6c1b1051aff85496bb879d42433fe7905dfb8adad4c61cfb7c7",
+            "task": null
+          },
+          {
+            "id": "M04:bok-law-firm:asset",
+            "isolation_key": "bok-law-firm:asset",
+            "input_fingerprint": "b9bcc360f7e68c91bd31a03b93ff24606a83f3878f0f791355de38b37233131f",
+            "task": null
+          },
+          {
+            "id": "M04:bok-law-firm:communication",
+            "isolation_key": "bok-law-firm:communication",
+            "input_fingerprint": "c217947bbcaac18284d0c1101b5a8f17d54b491f42604fd96d6cfe1ce280cf71",
+            "task": null
+          },
+          {
+            "id": "M04:bok-law-firm:metric",
+            "isolation_key": "bok-law-firm:metric",
+            "input_fingerprint": "f382cf5c9fcbc0236f62c7e572342cfab11f096dd870a0ca65cb39a4de7e57ef",
+            "task": null
+          },
+          {
+            "id": "M04:bok-law-firm:account",
+            "isolation_key": "bok-law-firm:account",
+            "input_fingerprint": "56aea78c9890b816c3aa1924bfc2052b69ab043b108d16d1d7ecd2103bde45fb",
+            "task": null
+          },
+          {
+            "id": "M04:bok-law-firm:access_metadata",
+            "isolation_key": "bok-law-firm:access_metadata",
+            "input_fingerprint": "1a71294b5bc121924eb94c5021446de143c53e989d2ff70c44ad90a7a270ed8d",
+            "task": null
+          },
+          {
+            "id": "M04:fagan-painting:route",
+            "isolation_key": "fagan-painting:route",
+            "input_fingerprint": "c8875c116480083b8587230ba099de6b965e08a272a31f21d5468963ccfb05ff",
+            "task": null
+          },
+          {
+            "id": "M04:fagan-painting:asset",
+            "isolation_key": "fagan-painting:asset",
+            "input_fingerprint": "99ada7cb6aa36210e80f4760c06a3488bea876cbf9adf3123d57f5e66fb53683",
+            "task": null
+          },
+          {
+            "id": "M04:fagan-painting:communication",
+            "isolation_key": "fagan-painting:communication",
+            "input_fingerprint": "020ac81d665e602426b072fce83684a98fc888dc08d8c86e31e1af2ca76d8319",
+            "task": null
+          },
+          {
+            "id": "M04:fagan-painting:metric",
+            "isolation_key": "fagan-painting:metric",
+            "input_fingerprint": "32b49094da1b081f41c1c713ffe818964d42d49e65a9ffb8f3970311fae46a86",
+            "task": null
+          },
+          {
+            "id": "M04:fagan-painting:account",
+            "isolation_key": "fagan-painting:account",
+            "input_fingerprint": "fe7e71983faed8e5419dbfee1bb27c5cb63869b9ebbd9eb0df496259edf59eeb",
+            "task": null
+          },
+          {
+            "id": "M04:fagan-painting:access_metadata",
+            "isolation_key": "fagan-painting:access_metadata",
+            "input_fingerprint": "744b5e1b0213aa56a8e8e327fbe625adae2d5d9cb460ccca1d5872bbe0523a04",
+            "task": null
+          },
+          {
+            "id": "M04:pro-fence-deck:route",
+            "isolation_key": "pro-fence-deck:route",
+            "input_fingerprint": "81dcc88c489886db84e1ac5ae71663b0c637e5ae9d8356bd4f833ff6a091cd3a",
+            "task": null
+          },
+          {
+            "id": "M04:pro-fence-deck:asset",
+            "isolation_key": "pro-fence-deck:asset",
+            "input_fingerprint": "7ef5b49f838f657a79ce273b162294499a3a65f325683afa9d4d7386b252fdad",
+            "task": null
+          },
+          {
+            "id": "M04:pro-fence-deck:communication",
+            "isolation_key": "pro-fence-deck:communication",
+            "input_fingerprint": "eea6bc4c3ca186ad754a4c84d60446f8a70c5cfc530107765a311f598e39c881",
+            "task": null
+          },
+          {
+            "id": "M04:pro-fence-deck:metric",
+            "isolation_key": "pro-fence-deck:metric",
+            "input_fingerprint": "a8d9f86ae39add8051207c54d8614aadc274bb698f9981391b7a36e4a1accb8a",
+            "task": null
+          },
+          {
+            "id": "M04:pro-fence-deck:account",
+            "isolation_key": "pro-fence-deck:account",
+            "input_fingerprint": "d122c8d70ec55cb26085c6f50035ba91a9109be75efd994fe28f9645446d5431",
+            "task": null
+          },
+          {
+            "id": "M04:pro-fence-deck:access_metadata",
+            "isolation_key": "pro-fence-deck:access_metadata",
+            "input_fingerprint": "41daca0efc21fe2611572151d95331519fc7e870428a5409de0915469910d3f6",
+            "task": null
+          },
+          {
+            "id": "M04:replenish-7-eleven:route",
+            "isolation_key": "replenish-7-eleven:route",
+            "input_fingerprint": "c46b1af8799023fefcce9c7dbb77c161402d0c2d7c3de8b9c9ef199e2744ed75",
+            "task": null
+          },
+          {
+            "id": "M04:replenish-7-eleven:asset",
+            "isolation_key": "replenish-7-eleven:asset",
+            "input_fingerprint": "8c82ccc5c96c532106d32a34d83ba652cfdd5557ead5579d9767a304b9ee5377",
+            "task": null
+          },
+          {
+            "id": "M04:replenish-7-eleven:communication",
+            "isolation_key": "replenish-7-eleven:communication",
+            "input_fingerprint": "7eaad4d1a2883d449391da50f39b5cfc7b5d11332859fa658d209aee79189aa9",
+            "task": null
+          },
+          {
+            "id": "M04:replenish-7-eleven:metric",
+            "isolation_key": "replenish-7-eleven:metric",
+            "input_fingerprint": "993e7cb69fa544791281dec2170bd7fc8956fb74b4f885b4f9b5ddd98cc4c749",
+            "task": null
+          },
+          {
+            "id": "M04:replenish-7-eleven:account",
+            "isolation_key": "replenish-7-eleven:account",
+            "input_fingerprint": "b4d52652406b99d402542aca19bc49cda9386215953c571aa7fd9dfd78f5fc6c",
+            "task": null
+          },
+          {
+            "id": "M04:replenish-7-eleven:access_metadata",
+            "isolation_key": "replenish-7-eleven:access_metadata",
+            "input_fingerprint": "c8c82a3ba300146092a629282f91b74ae2c7bc5b762026f64421d07474fdfe1d",
+            "task": null
+          },
+          {
+            "id": "M04:fresh-blends-kwik-trip:route",
+            "isolation_key": "fresh-blends-kwik-trip:route",
+            "input_fingerprint": "f79b3098149b61582a9cca596d8057e458c3d5dce314ee7e8a50e6a49f6cec5b",
+            "task": null
+          },
+          {
+            "id": "M04:fresh-blends-kwik-trip:asset",
+            "isolation_key": "fresh-blends-kwik-trip:asset",
+            "input_fingerprint": "3a36e9022ade846dabd4691fb458ed268b1bebc09dcb2dba7142c004fd077b2a",
+            "task": null
+          },
+          {
+            "id": "M04:fresh-blends-kwik-trip:communication",
+            "isolation_key": "fresh-blends-kwik-trip:communication",
+            "input_fingerprint": "7d1cd3db86ba3db45fb7674d0645aa5381c57dfe0876798a61b979e17110f9e7",
+            "task": null
+          },
+          {
+            "id": "M04:fresh-blends-kwik-trip:metric",
+            "isolation_key": "fresh-blends-kwik-trip:metric",
+            "input_fingerprint": "99280909248be1aa0fd5f2d82962a99412171f595dfa1eea64b482d4ecadd2f8",
+            "task": null
+          },
+          {
+            "id": "M04:fresh-blends-kwik-trip:account",
+            "isolation_key": "fresh-blends-kwik-trip:account",
+            "input_fingerprint": "7b976743bea439a40fb7d56e3b5033f1875b30ce110812653254f7aac9c71e97",
+            "task": null
+          },
+          {
+            "id": "M04:fresh-blends-kwik-trip:access_metadata",
+            "isolation_key": "fresh-blends-kwik-trip:access_metadata",
+            "input_fingerprint": "e3104330bfd0e0909edb144845c0a21cbd9936e39a7738b8e4322f3fd1e0bc4a",
+            "task": null
+          },
+          {
+            "id": "M04:nkcdc:route",
+            "isolation_key": "nkcdc:route",
+            "input_fingerprint": "c33f9cf69e3ac63038a5dc5096a65bd1e8dc50e8b7714a642dc1b32ab4cbf8e8",
+            "task": null
+          },
+          {
+            "id": "M04:nkcdc:asset",
+            "isolation_key": "nkcdc:asset",
+            "input_fingerprint": "a84de8551231dce91a3f73777c585e668de0724f303b3f22dd97e75763a23556",
+            "task": null
+          },
+          {
+            "id": "M04:nkcdc:communication",
+            "isolation_key": "nkcdc:communication",
+            "input_fingerprint": "275833f84ee0929ded957003d48f5ddc0c3977eb3bc5861b2773ff899902e791",
+            "task": null
+          },
+          {
+            "id": "M04:nkcdc:metric",
+            "isolation_key": "nkcdc:metric",
+            "input_fingerprint": "0b80acc767969d4003e9f8111f30b6d3451b7cf449a88c9673993f026b140dd2",
+            "task": null
+          },
+          {
+            "id": "M04:nkcdc:account",
+            "isolation_key": "nkcdc:account",
+            "input_fingerprint": "fe565e4b83e08afc22e6164123fd7f463dffc34b81f7ce4446d48fbefa014dde",
+            "task": null
+          },
+          {
+            "id": "M04:nkcdc:access_metadata",
+            "isolation_key": "nkcdc:access_metadata",
+            "input_fingerprint": "bc3febb7ab528462736fc7c1d9f5d8c64948e839a2da847144fece86c96ec547",
+            "task": null
+          },
+          {
+            "id": "M04:zen-spa-tropicana:route",
+            "isolation_key": "zen-spa-tropicana:route",
+            "input_fingerprint": "4a7ff1532248769edab2891f32fb9263a324a04059e418573015d9609a8e1752",
+            "task": null
+          },
+          {
+            "id": "M04:zen-spa-tropicana:asset",
+            "isolation_key": "zen-spa-tropicana:asset",
+            "input_fingerprint": "84d6d16a460c5470b88e2b353ec4fab4ba7794dff39cf8674a17e3a931e6ae9e",
+            "task": null
+          },
+          {
+            "id": "M04:zen-spa-tropicana:communication",
+            "isolation_key": "zen-spa-tropicana:communication",
+            "input_fingerprint": "52991bdfb55842f4c191f6cb6359055417f2ed7ecfd7837cbf2502cb0f3b38f6",
+            "task": null
+          },
+          {
+            "id": "M04:zen-spa-tropicana:metric",
+            "isolation_key": "zen-spa-tropicana:metric",
+            "input_fingerprint": "d246855aa92c32e6bdc51c82c695204f847bf6fb6c66a9935f3592163ac1fd2b",
+            "task": null
+          },
+          {
+            "id": "M04:zen-spa-tropicana:account",
+            "isolation_key": "zen-spa-tropicana:account",
+            "input_fingerprint": "f0847139c46ad401ac640ba750838110feed6b28f484dc3ffb9d123825ced4d6",
+            "task": null
+          },
+          {
+            "id": "M04:zen-spa-tropicana:access_metadata",
+            "isolation_key": "zen-spa-tropicana:access_metadata",
+            "input_fingerprint": "3a70a1b5aeed02b644fe51e3f3c705bdb62f5cffd4ab45ba4845f0e3d0532fbc",
+            "task": null
+          },
+          {
+            "id": "M04:hope-wellness-center:route",
+            "isolation_key": "hope-wellness-center:route",
+            "input_fingerprint": "1049125d18a3bf3a59ebb9f24b4988ed0069e157b72749c05ad76d65cda377d9",
+            "task": null
+          },
+          {
+            "id": "M04:hope-wellness-center:asset",
+            "isolation_key": "hope-wellness-center:asset",
+            "input_fingerprint": "b7b5283ecce6d9d6ff85e97f279a5373713101abaa35abae461b0488c1cd392d",
+            "task": null
+          },
+          {
+            "id": "M04:hope-wellness-center:communication",
+            "isolation_key": "hope-wellness-center:communication",
+            "input_fingerprint": "4206165ea63b9b92f2bd661c37344fa16e14ce134aa1163f833286f5e802f1ab",
+            "task": null
+          },
+          {
+            "id": "M04:hope-wellness-center:metric",
+            "isolation_key": "hope-wellness-center:metric",
+            "input_fingerprint": "75ee57afce9f6b46d456db026c34d094cf75599dc62c5a2733e57f052b1adbd6",
+            "task": null
+          },
+          {
+            "id": "M04:hope-wellness-center:account",
+            "isolation_key": "hope-wellness-center:account",
+            "input_fingerprint": "9afce6dcc9a1de84900f86358f65e0e37494bab638ef5341180f26bfbf098a7c",
+            "task": null
+          },
+          {
+            "id": "M04:hope-wellness-center:access_metadata",
+            "isolation_key": "hope-wellness-center:access_metadata",
+            "input_fingerprint": "675460ddde26807f9fad6f9ef6c86251dba3701e8b539fded96a5990c46358f6",
+            "task": null
+          },
+          {
+            "id": "M04:omega-landscaping:route",
+            "isolation_key": "omega-landscaping:route",
+            "input_fingerprint": "56c0f74880740b161b53a414f04c1c838f5f31a9d9fd2e83eed81f303ceff3c7",
+            "task": null
+          },
+          {
+            "id": "M04:omega-landscaping:asset",
+            "isolation_key": "omega-landscaping:asset",
+            "input_fingerprint": "b7c90a2cee176d4f56c39da50547cabaece01a926e76e4891400a7dd665bab21",
+            "task": null
+          },
+          {
+            "id": "M04:omega-landscaping:communication",
+            "isolation_key": "omega-landscaping:communication",
+            "input_fingerprint": "8aba13a97c98da5cc51ca56da8c4f2bb5cb47b6efb648238352ae415d0144a8f",
+            "task": null
+          },
+          {
+            "id": "M04:omega-landscaping:metric",
+            "isolation_key": "omega-landscaping:metric",
+            "input_fingerprint": "7faf1a3342f8c63fef3769e35a7e598aeae639aa792e8d2f3c92744cb7ade124",
+            "task": null
+          },
+          {
+            "id": "M04:omega-landscaping:account",
+            "isolation_key": "omega-landscaping:account",
+            "input_fingerprint": "189285b0aacab69e04971e703f1f2844ed46325081dc77b71d7dcf5ff7926aa0",
+            "task": null
+          },
+          {
+            "id": "M04:omega-landscaping:access_metadata",
+            "isolation_key": "omega-landscaping:access_metadata",
+            "input_fingerprint": "c1aacdef20e2a29c3ed751aca2d0e3dc7cd1ee9006c9291d1396399ff4fe71c5",
+            "task": null
+          },
+          {
+            "id": "M04:shadow-heating-cooling:route",
+            "isolation_key": "shadow-heating-cooling:route",
+            "input_fingerprint": "59f5d56c4b52ec1de8c18e0bcd65f0626a6ffc49dd33c23e44f91e1d4d1f293f",
+            "task": null
+          },
+          {
+            "id": "M04:shadow-heating-cooling:asset",
+            "isolation_key": "shadow-heating-cooling:asset",
+            "input_fingerprint": "dcb731450b89e25c556646d9d7d4188160c449d615cf52675d438a24d9fd5792",
+            "task": null
+          },
+          {
+            "id": "M04:shadow-heating-cooling:communication",
+            "isolation_key": "shadow-heating-cooling:communication",
+            "input_fingerprint": "4c155ba337a47f29a846f79aeb32289265bc8514086cda8c693c7918d687af76",
+            "task": null
+          },
+          {
+            "id": "M04:shadow-heating-cooling:metric",
+            "isolation_key": "shadow-heating-cooling:metric",
+            "input_fingerprint": "1220ab4db83ae7019ba2a96b1f2304ef7faa0482d1b00b36a67b75eb79045895",
+            "task": null
+          },
+          {
+            "id": "M04:shadow-heating-cooling:account",
+            "isolation_key": "shadow-heating-cooling:account",
+            "input_fingerprint": "a8a778594624e216305c4f2266bdd45c19fac428973492b73e401f4f46d346d2",
+            "task": null
+          },
+          {
+            "id": "M04:shadow-heating-cooling:access_metadata",
+            "isolation_key": "shadow-heating-cooling:access_metadata",
+            "input_fingerprint": "5b8db8828ab85f50f4ae65a42fc34a5f9aafd927199ddf04f20357540edb37e4",
+            "task": null
+          },
+          {
+            "id": "M04:va-claims-edge:route",
+            "isolation_key": "va-claims-edge:route",
+            "input_fingerprint": "78808a8ba4171e9d329c2413939abb48de43b1ebfae39895e45b5a6a5b954445",
+            "task": null
+          },
+          {
+            "id": "M04:va-claims-edge:asset",
+            "isolation_key": "va-claims-edge:asset",
+            "input_fingerprint": "cb0da40b911d0cdff6b6a410781c09d76bc133fe5ec8599bc982f21ea90572b4",
+            "task": null
+          },
+          {
+            "id": "M04:va-claims-edge:communication",
+            "isolation_key": "va-claims-edge:communication",
+            "input_fingerprint": "07f6c5e2b7615edb345c50432335652e2246cce537643988c008bc5e21d865b6",
+            "task": null
+          },
+          {
+            "id": "M04:va-claims-edge:metric",
+            "isolation_key": "va-claims-edge:metric",
+            "input_fingerprint": "461264878d2d8ec78fc0f8fdd3cf1be090b4d20b553c3a4806c0e554a42b9bea",
+            "task": null
+          },
+          {
+            "id": "M04:va-claims-edge:account",
+            "isolation_key": "va-claims-edge:account",
+            "input_fingerprint": "4354f40f2b9bd70f5639d93eecf7c94110561c691ca0a034fac18a7c441fe777",
+            "task": null
+          },
+          {
+            "id": "M04:va-claims-edge:access_metadata",
+            "isolation_key": "va-claims-edge:access_metadata",
+            "input_fingerprint": "407e3be4ab8ab00b41b29324f2f61493c76d7d3f94746eb48d481f12eb16e1cd",
+            "task": null
+          },
+          {
+            "id": "M04:bercos-popcorn:route",
+            "isolation_key": "bercos-popcorn:route",
+            "input_fingerprint": "88bceb885433ab87bee9136cd6fb0bb1d4e41799b1db2a80ebeaf6cb329abd47",
+            "task": null
+          },
+          {
+            "id": "M04:bercos-popcorn:asset",
+            "isolation_key": "bercos-popcorn:asset",
+            "input_fingerprint": "85ccf7244c9bdd73009edacf2418ce6233236cd0fdf12c4fe1434b12be273593",
+            "task": null
+          },
+          {
+            "id": "M04:bercos-popcorn:communication",
+            "isolation_key": "bercos-popcorn:communication",
+            "input_fingerprint": "00b3ea7bd3a834d375aeb7e3431f7ea6257c1d6366ba423bc2d540d5adf43947",
+            "task": null
+          },
+          {
+            "id": "M04:bercos-popcorn:metric",
+            "isolation_key": "bercos-popcorn:metric",
+            "input_fingerprint": "7fe49efa2c70a5b90ec34d3e6c5164510fb46c7581aa351e5c50389a9a5057ee",
+            "task": null
+          },
+          {
+            "id": "M04:bercos-popcorn:account",
+            "isolation_key": "bercos-popcorn:account",
+            "input_fingerprint": "f9d2c976ab7b98f87672a03e6e4703181f78b45c55ca47c9bbcff60053f81743",
+            "task": null
+          },
+          {
+            "id": "M04:bercos-popcorn:access_metadata",
+            "isolation_key": "bercos-popcorn:access_metadata",
+            "input_fingerprint": "d32f5e46a79f1e0052240230e733616386343932830a72db62eea1ed0ef81f85",
+            "task": null
+          },
+          {
+            "id": "M04:ami-cleaning:route",
+            "isolation_key": "ami-cleaning:route",
+            "input_fingerprint": "ac4ee76ee74f837a77c848214dd2477032b92c320dde2d50a82523f81f82a104",
+            "task": null
+          },
+          {
+            "id": "M04:ami-cleaning:asset",
+            "isolation_key": "ami-cleaning:asset",
+            "input_fingerprint": "7829dab23c8b5cf0d765eac77a7ed8b891df27a4589191e9a5cecd13475201da",
+            "task": null
+          },
+          {
+            "id": "M04:ami-cleaning:communication",
+            "isolation_key": "ami-cleaning:communication",
+            "input_fingerprint": "250397ef2aa79f6a98ffbfc56e9c04ca85a557fa89ca918130e3718b2304fd84",
+            "task": null
+          },
+          {
+            "id": "M04:ami-cleaning:metric",
+            "isolation_key": "ami-cleaning:metric",
+            "input_fingerprint": "0970f42e38fc339369eab767bd436970cf7d6dfa1f4e1547adf4a78ce723a60d",
+            "task": null
+          },
+          {
+            "id": "M04:ami-cleaning:account",
+            "isolation_key": "ami-cleaning:account",
+            "input_fingerprint": "7ba32a1bbceaf6013205a43743ad8191dcfd44fac87a0bf74f41b4b4c09ded2d",
+            "task": null
+          },
+          {
+            "id": "M04:ami-cleaning:access_metadata",
+            "isolation_key": "ami-cleaning:access_metadata",
+            "input_fingerprint": "b6f5bf5d8625789ff48fe053f03f6b4507fcd7fc631c907a561b3ad354590723",
+            "task": null
+          },
+          {
+            "id": "M04:cindy-may-christmas:route",
+            "isolation_key": "cindy-may-christmas:route",
+            "input_fingerprint": "bb0b55636a7d4b85ef40b1b1743add13325aef015fb0ea1038066fbfdcca1486",
+            "task": null
+          },
+          {
+            "id": "M04:cindy-may-christmas:asset",
+            "isolation_key": "cindy-may-christmas:asset",
+            "input_fingerprint": "513eeeab3c396852a342c35e0447dd05773c4c81f0bab74260e5bc691531211d",
+            "task": null
+          },
+          {
+            "id": "M04:cindy-may-christmas:communication",
+            "isolation_key": "cindy-may-christmas:communication",
+            "input_fingerprint": "d99271249355857551076a6057ac39eabb6729f65eb9ba07db5e22fffd737386",
+            "task": null
+          },
+          {
+            "id": "M04:cindy-may-christmas:metric",
+            "isolation_key": "cindy-may-christmas:metric",
+            "input_fingerprint": "990ab0f0a4ef63cc85ecf0696682c3fdc6a823fc14e89adf6e43c009a0862023",
+            "task": null
+          },
+          {
+            "id": "M04:cindy-may-christmas:account",
+            "isolation_key": "cindy-may-christmas:account",
+            "input_fingerprint": "e1f84b38f78e6a3257cf786db95915801495de82c408792fb40d57a0e9b375e7",
+            "task": null
+          },
+          {
+            "id": "M04:cindy-may-christmas:access_metadata",
+            "isolation_key": "cindy-may-christmas:access_metadata",
+            "input_fingerprint": "48dbcb5a9c325614d9ed7a65227da54f0873d3d8563f64fedd16ebefaf0de68d",
+            "task": null
+          },
+          {
+            "id": "M04:bar-crawl-usa:route",
+            "isolation_key": "bar-crawl-usa:route",
+            "input_fingerprint": "b62025c2e8c8cdd5dd1781747d8346fe37547b5b3d553d7df6e047fe0dae02ff",
+            "task": null
+          },
+          {
+            "id": "M04:bar-crawl-usa:asset",
+            "isolation_key": "bar-crawl-usa:asset",
+            "input_fingerprint": "b29fe02b6c19cd2afc6b2bca48c5569fca969b292e2be761d51b87f3d6a5046f",
+            "task": null
+          },
+          {
+            "id": "M04:bar-crawl-usa:communication",
+            "isolation_key": "bar-crawl-usa:communication",
+            "input_fingerprint": "c576cd140f6a1d6204254a1f78267384169b6279d3e290ce41d4350bbf2a492c",
+            "task": null
+          },
+          {
+            "id": "M04:bar-crawl-usa:metric",
+            "isolation_key": "bar-crawl-usa:metric",
+            "input_fingerprint": "00d3bb308d67e961eb28e082da8cd08442c8e51ce5805c68c83b58bd4b47dac0",
+            "task": null
+          },
+          {
+            "id": "M04:bar-crawl-usa:account",
+            "isolation_key": "bar-crawl-usa:account",
+            "input_fingerprint": "4f9b46752c62f5d60c992238f3828cafd3fdef61db4aeca8c9b512b8c464d412",
+            "task": null
+          },
+          {
+            "id": "M04:bar-crawl-usa:access_metadata",
+            "isolation_key": "bar-crawl-usa:access_metadata",
+            "input_fingerprint": "d6504c2aaca64cebd1426f90d1391bef39af184b8abadece57ddd22a40b5afbe",
+            "task": null
+          },
+          {
+            "id": "M04:bridge-software:route",
+            "isolation_key": "bridge-software:route",
+            "input_fingerprint": "58a677a5b8b0c9094c89f19408800d598f15c8e23115b26a102d9ae0e956060f",
+            "task": null
+          },
+          {
+            "id": "M04:bridge-software:asset",
+            "isolation_key": "bridge-software:asset",
+            "input_fingerprint": "54c0438bce2e4db1df534bf2d3ec9a8f1a51bd546b79827f49138dbed25f60e4",
+            "task": null
+          },
+          {
+            "id": "M04:bridge-software:communication",
+            "isolation_key": "bridge-software:communication",
+            "input_fingerprint": "54fc560e6a5412f961a7c25300d138647dd6f3933540853abbb94e964f112c4a",
+            "task": null
+          },
+          {
+            "id": "M04:bridge-software:metric",
+            "isolation_key": "bridge-software:metric",
+            "input_fingerprint": "ea54c1b2d474ef51e2a3dce0d010d1a12f3d5651a2568ce77403a7be83046544",
+            "task": null
+          },
+          {
+            "id": "M04:bridge-software:account",
+            "isolation_key": "bridge-software:account",
+            "input_fingerprint": "17efd67dcbb4ec346af277b869602eb5571354bf6e24b79ac410c70a2ed424db",
+            "task": null
+          },
+          {
+            "id": "M04:bridge-software:access_metadata",
+            "isolation_key": "bridge-software:access_metadata",
+            "input_fingerprint": "c88331b19e7922d6c2b237a6c9f73d0260b937d8d3f7f4cfc4d44a9d335f87bd",
+            "task": null
+          },
+          {
+            "id": "M04:onsite-concrete-landscape:route",
+            "isolation_key": "onsite-concrete-landscape:route",
+            "input_fingerprint": "40db99317e669229145f85ca11994e7baa9d5f21ab999695778c67c074baaed6",
+            "task": null
+          },
+          {
+            "id": "M04:onsite-concrete-landscape:asset",
+            "isolation_key": "onsite-concrete-landscape:asset",
+            "input_fingerprint": "5d9ade499ef1a21a7a35b93664813d9e26b9da62d313ca5d8238dd6cc9203756",
+            "task": null
+          },
+          {
+            "id": "M04:onsite-concrete-landscape:communication",
+            "isolation_key": "onsite-concrete-landscape:communication",
+            "input_fingerprint": "9602802f1f57e5de0d528b1b53e451b9098244536666b2211c61a07ec52fd792",
+            "task": null
+          },
+          {
+            "id": "M04:onsite-concrete-landscape:metric",
+            "isolation_key": "onsite-concrete-landscape:metric",
+            "input_fingerprint": "030fea20db9939bac519b1e47e9e941559fa69f8ab181f559f6f5f15368523db",
+            "task": null
+          },
+          {
+            "id": "M04:onsite-concrete-landscape:account",
+            "isolation_key": "onsite-concrete-landscape:account",
+            "input_fingerprint": "6d64e4b04889ee1c1a3fbe25260322a7a0601096cebb79bc25ee653ef296213d",
+            "task": null
+          },
+          {
+            "id": "M04:onsite-concrete-landscape:access_metadata",
+            "isolation_key": "onsite-concrete-landscape:access_metadata",
+            "input_fingerprint": "1193f33c68b0a11246216a687f5b45d68b3ebb2a4a000e341dabef1131ccfd23",
+            "task": null
+          },
+          {
+            "id": "M04:revive-systems:route",
+            "isolation_key": "revive-systems:route",
+            "input_fingerprint": "9b274bf3dda913a84d78934309e931c1e5070db0694ccd868c868de6b9f042f3",
+            "task": null
+          },
+          {
+            "id": "M04:revive-systems:asset",
+            "isolation_key": "revive-systems:asset",
+            "input_fingerprint": "794a3cfc91641c024a75b1bad64d2c6772178fc3c56adaff6290199e373f1c4e",
+            "task": null
+          },
+          {
+            "id": "M04:revive-systems:communication",
+            "isolation_key": "revive-systems:communication",
+            "input_fingerprint": "92c204e0993e3c0884b7a727a5149714ff92688b06fbc5df6ddac2f5dd1b03a3",
+            "task": null
+          },
+          {
+            "id": "M04:revive-systems:metric",
+            "isolation_key": "revive-systems:metric",
+            "input_fingerprint": "38c72681e446e54e0a5515df0b108d4bd5f696a1e59dbb329258aa53faa9b2c9",
+            "task": null
+          },
+          {
+            "id": "M04:revive-systems:account",
+            "isolation_key": "revive-systems:account",
+            "input_fingerprint": "a7a52b192395b7f89b4b98c1b434c700f8ba25fbc3310d7141996ee6713fe696",
+            "task": null
+          },
+          {
+            "id": "M04:revive-systems:access_metadata",
+            "isolation_key": "revive-systems:access_metadata",
+            "input_fingerprint": "c1bde6932634727a1e9fe6f12fe1ffc34bfdaa77a7c4281e858182d2211a642c",
+            "task": null
+          },
+          {
+            "id": "M04:bigorange-marketing:route",
+            "isolation_key": "bigorange-marketing:route",
+            "input_fingerprint": "f398d28aa91efc38e36119280075bf122adece0618a4ddbbfe22526a2057eaf5",
+            "task": null
+          },
+          {
+            "id": "M04:bigorange-marketing:asset",
+            "isolation_key": "bigorange-marketing:asset",
+            "input_fingerprint": "aa6caaab2908c9fca885006c8180123cd00c1e59020d2a57f525f0bd24886de1",
+            "task": null
+          },
+          {
+            "id": "M04:bigorange-marketing:communication",
+            "isolation_key": "bigorange-marketing:communication",
+            "input_fingerprint": "53b37f59ce4a02026bef51c746209116f07bea39b585999b9fb211c8735b64ae",
+            "task": null
+          },
+          {
+            "id": "M04:bigorange-marketing:metric",
+            "isolation_key": "bigorange-marketing:metric",
+            "input_fingerprint": "3a866b031f2f16802621ab8a85866dc540fb32207176d46f44d28afbfe8b40fb",
+            "task": null
+          },
+          {
+            "id": "M04:bigorange-marketing:account",
+            "isolation_key": "bigorange-marketing:account",
+            "input_fingerprint": "dbb5ca812f521e7134cba69dcdff3cdaab1d0f71cd18d6bca4cdfd4e41d0e8d4",
+            "task": null
+          },
+          {
+            "id": "M04:bigorange-marketing:access_metadata",
+            "isolation_key": "bigorange-marketing:access_metadata",
+            "input_fingerprint": "abfdcf48005bd5ce53e32aea6d2c5a390162f60b6484691786ec6a071b8dfdeb",
+            "task": null
+          },
+          {
+            "id": "M04:pritzker-law-group:route",
+            "isolation_key": "pritzker-law-group:route",
+            "input_fingerprint": "2687ea6d8f0d2c36dccf2f11279dd06ee67fe1f79f57e9aea9bd13c5d7cd998e",
+            "task": null
+          },
+          {
+            "id": "M04:pritzker-law-group:asset",
+            "isolation_key": "pritzker-law-group:asset",
+            "input_fingerprint": "e1da176999531d6f41e7b9f9f5e0eb571ab9c3b009ea8f776955b712389c9bdb",
+            "task": null
+          },
+          {
+            "id": "M04:pritzker-law-group:communication",
+            "isolation_key": "pritzker-law-group:communication",
+            "input_fingerprint": "4b4dd16e2b12edf62e2dd82c82e88369ff6a8f36467ac4cb4fec0e157ccae925",
+            "task": null
+          },
+          {
+            "id": "M04:pritzker-law-group:metric",
+            "isolation_key": "pritzker-law-group:metric",
+            "input_fingerprint": "ac245d5b10b6e92bae1aa677cf7041226366027f7df2646850c415b8bd81857d",
+            "task": null
+          },
+          {
+            "id": "M04:pritzker-law-group:account",
+            "isolation_key": "pritzker-law-group:account",
+            "input_fingerprint": "889150f218fd12d0b2e2db2761227d0635f859cc8de0905b00717224f3095fda",
+            "task": null
+          },
+          {
+            "id": "M04:pritzker-law-group:access_metadata",
+            "isolation_key": "pritzker-law-group:access_metadata",
+            "input_fingerprint": "056d29af13b622b2dc0ff71c401396ce68f8f22d1b80f26ce6204155af7b94aa",
+            "task": null
+          },
+          {
+            "id": "M04:tags-2-go:route",
+            "isolation_key": "tags-2-go:route",
+            "input_fingerprint": "4fa3b0f23900ab6dd775e7b0ffcdb27b60e7f10a03acf8b9fa628caa0eba01fd",
+            "task": null
+          },
+          {
+            "id": "M04:tags-2-go:asset",
+            "isolation_key": "tags-2-go:asset",
+            "input_fingerprint": "a93e71f5373b7278101510736cef2fe8d6160821ce9309cf613ba2393954a21f",
+            "task": null
+          },
+          {
+            "id": "M04:tags-2-go:communication",
+            "isolation_key": "tags-2-go:communication",
+            "input_fingerprint": "70dd073be68f46792397ba5a660855efd330dcc42b3e0151165efe4ea5f9e3d6",
+            "task": null
+          },
+          {
+            "id": "M04:tags-2-go:metric",
+            "isolation_key": "tags-2-go:metric",
+            "input_fingerprint": "a1e1d8ec621034f456f4a544c024d2a7530e4c63cb3f9612d442e8d3917eb61c",
+            "task": null
+          },
+          {
+            "id": "M04:tags-2-go:account",
+            "isolation_key": "tags-2-go:account",
+            "input_fingerprint": "63594a82d514823e3b962f51cbc1a3ee946bb5fcaec65df74c0e97458ea3a017",
+            "task": null
+          },
+          {
+            "id": "M04:tags-2-go:access_metadata",
+            "isolation_key": "tags-2-go:access_metadata",
+            "input_fingerprint": "e0ac6002abd7c19dddc0a544e08cf8cc6a9423dc95648bc11db614672952934a",
+            "task": null
+          },
+          {
+            "id": "M04:nexla:route",
+            "isolation_key": "nexla:route",
+            "input_fingerprint": "702286875626e22982a54a9f310773209ea93e84b8830c84039ff675518d42f9",
+            "task": null
+          },
+          {
+            "id": "M04:nexla:asset",
+            "isolation_key": "nexla:asset",
+            "input_fingerprint": "a6cfca56a23495ec1d280eca82cb9da2b069291f62c44fd29ae847fffa2bf3d5",
+            "task": null
+          },
+          {
+            "id": "M04:nexla:communication",
+            "isolation_key": "nexla:communication",
+            "input_fingerprint": "7273d84671d315c63b675443466f8544e539945b1f217350e1f16dc67ffbe6ac",
+            "task": null
+          },
+          {
+            "id": "M04:nexla:metric",
+            "isolation_key": "nexla:metric",
+            "input_fingerprint": "ff5df3a48e25db0096e9f27e837f51fe53ed3e521bfe08d3c7cc9d120e7d7219",
+            "task": null
+          },
+          {
+            "id": "M04:nexla:account",
+            "isolation_key": "nexla:account",
+            "input_fingerprint": "ce446b2ab809babd25f654762c0c3e1661caf34ce7a9bfb06aa61e3de4e70414",
+            "task": null
+          },
+          {
+            "id": "M04:nexla:access_metadata",
+            "isolation_key": "nexla:access_metadata",
+            "input_fingerprint": "4b4228d0b0059c4f05000e5c0d51aa7400a07412416f9d1912d08107809defff",
+            "task": null
+          }
+        ]
+      },
+      "workers": [],
+      "reduction": null,
+      "terminal_verification": null,
+      "learning": null
+    }
+  ],
+  "invocation_log": [
+    {
+      "adapter": "source-bound-m04-planner",
+      "invoked_at": "2026-08-25T00:24:02.263Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-maker",
+      "invoked_at": "2026-08-25T00:24:02.439Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-maker",
+      "invoked_at": "2026-08-25T00:24:02.439Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-maker",
+      "invoked_at": "2026-08-25T00:24:02.439Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-maker",
+      "invoked_at": "2026-08-25T00:24:02.439Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-maker",
+      "invoked_at": "2026-08-25T00:24:02.439Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-maker",
+      "invoked_at": "2026-08-25T00:24:02.439Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-checker",
+      "invoked_at": "2026-08-25T00:24:03.273Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-checker",
+      "invoked_at": "2026-08-25T00:24:03.273Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-checker",
+      "invoked_at": "2026-08-25T00:24:03.273Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-checker",
+      "invoked_at": "2026-08-25T00:24:03.273Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-checker",
+      "invoked_at": "2026-08-25T00:24:03.273Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-checker",
+      "invoked_at": "2026-08-25T00:24:03.273Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-maker",
+      "invoked_at": "2026-08-25T00:24:04.030Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-maker",
+      "invoked_at": "2026-08-25T00:24:04.184Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-maker",
+      "invoked_at": "2026-08-25T00:24:04.317Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-checker",
+      "invoked_at": "2026-08-25T00:24:04.317Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-maker",
+      "invoked_at": "2026-08-25T00:24:04.575Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-checker",
+      "invoked_at": "2026-08-25T00:24:04.575Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-maker",
+      "invoked_at": "2026-08-25T00:24:04.830Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-checker",
+      "invoked_at": "2026-08-25T00:24:04.830Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-maker",
+      "invoked_at": "2026-08-25T00:24:05.088Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-checker",
+      "invoked_at": "2026-08-25T00:24:05.088Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-checker",
+      "invoked_at": "2026-08-25T00:24:05.327Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-maker",
+      "invoked_at": "2026-08-25T00:24:05.327Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-checker",
+      "invoked_at": "2026-08-25T00:24:05.554Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-maker",
+      "invoked_at": "2026-08-25T00:24:05.557Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-maker",
+      "invoked_at": "2026-08-25T00:24:05.794Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-checker",
+      "invoked_at": "2026-08-25T00:24:05.794Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-maker",
+      "invoked_at": "2026-08-25T00:24:06.063Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-checker",
+      "invoked_at": "2026-08-25T00:24:06.063Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-maker",
+      "invoked_at": "2026-08-25T00:24:06.327Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-checker",
+      "invoked_at": "2026-08-25T00:24:06.327Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-maker",
+      "invoked_at": "2026-08-25T00:24:06.571Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-checker",
+      "invoked_at": "2026-08-25T00:24:06.571Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-checker",
+      "invoked_at": "2026-08-25T00:24:06.794Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-maker",
+      "invoked_at": "2026-08-25T00:24:06.795Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-checker",
+      "invoked_at": "2026-08-25T00:24:07.021Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-maker",
+      "invoked_at": "2026-08-25T00:24:07.024Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-maker",
+      "invoked_at": "2026-08-25T00:24:07.242Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-checker",
+      "invoked_at": "2026-08-25T00:24:07.242Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-maker",
+      "invoked_at": "2026-08-25T00:24:07.475Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-checker",
+      "invoked_at": "2026-08-25T00:24:07.476Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-maker",
+      "invoked_at": "2026-08-25T00:24:07.744Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-checker",
+      "invoked_at": "2026-08-25T00:24:07.744Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-maker",
+      "invoked_at": "2026-08-25T00:24:07.974Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-checker",
+      "invoked_at": "2026-08-25T00:24:07.974Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-checker",
+      "invoked_at": "2026-08-25T00:24:08.204Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-maker",
+      "invoked_at": "2026-08-25T00:24:08.204Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-checker",
+      "invoked_at": "2026-08-25T00:24:08.418Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-maker",
+      "invoked_at": "2026-08-25T00:24:08.421Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-maker",
+      "invoked_at": "2026-08-25T00:24:08.637Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-checker",
+      "invoked_at": "2026-08-25T00:24:08.637Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-maker",
+      "invoked_at": "2026-08-25T00:24:08.857Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-checker",
+      "invoked_at": "2026-08-25T00:24:08.857Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-maker",
+      "invoked_at": "2026-08-25T00:24:09.090Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-checker",
+      "invoked_at": "2026-08-25T00:24:09.091Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-maker",
+      "invoked_at": "2026-08-25T00:24:09.311Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-checker",
+      "invoked_at": "2026-08-25T00:24:09.311Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-checker",
+      "invoked_at": "2026-08-25T00:24:09.523Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-maker",
+      "invoked_at": "2026-08-25T00:24:09.523Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-checker",
+      "invoked_at": "2026-08-25T00:24:09.740Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-maker",
+      "invoked_at": "2026-08-25T00:24:09.742Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-maker",
+      "invoked_at": "2026-08-25T00:24:09.969Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-checker",
+      "invoked_at": "2026-08-25T00:24:09.969Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-maker",
+      "invoked_at": "2026-08-25T00:24:10.187Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-checker",
+      "invoked_at": "2026-08-25T00:24:10.187Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-maker",
+      "invoked_at": "2026-08-25T00:24:10.424Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-checker",
+      "invoked_at": "2026-08-25T00:24:10.424Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-maker",
+      "invoked_at": "2026-08-25T00:24:10.645Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-checker",
+      "invoked_at": "2026-08-25T00:24:10.646Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-checker",
+      "invoked_at": "2026-08-25T00:24:10.872Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-maker",
+      "invoked_at": "2026-08-25T00:24:10.872Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-checker",
+      "invoked_at": "2026-08-25T00:24:11.088Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-maker",
+      "invoked_at": "2026-08-25T00:24:11.090Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-maker",
+      "invoked_at": "2026-08-25T00:24:11.312Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-checker",
+      "invoked_at": "2026-08-25T00:24:11.313Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-maker",
+      "invoked_at": "2026-08-25T00:24:11.535Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-checker",
+      "invoked_at": "2026-08-25T00:24:11.535Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-maker",
+      "invoked_at": "2026-08-25T00:24:11.756Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-checker",
+      "invoked_at": "2026-08-25T00:24:11.756Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-maker",
+      "invoked_at": "2026-08-25T00:24:11.979Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-checker",
+      "invoked_at": "2026-08-25T00:24:11.979Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-checker",
+      "invoked_at": "2026-08-25T00:24:12.238Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-maker",
+      "invoked_at": "2026-08-25T00:24:12.238Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-checker",
+      "invoked_at": "2026-08-25T00:24:12.500Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-maker",
+      "invoked_at": "2026-08-25T00:24:12.504Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-maker",
+      "invoked_at": "2026-08-25T00:24:12.858Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-checker",
+      "invoked_at": "2026-08-25T00:24:12.859Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-maker",
+      "invoked_at": "2026-08-25T00:24:13.198Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-checker",
+      "invoked_at": "2026-08-25T00:24:13.198Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-maker",
+      "invoked_at": "2026-08-25T00:24:13.526Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-checker",
+      "invoked_at": "2026-08-25T00:24:13.526Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-maker",
+      "invoked_at": "2026-08-25T00:24:13.829Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-checker",
+      "invoked_at": "2026-08-25T00:24:13.829Z",
+      "status": "returned"
+    },
+    {
+      "adapter": "source-bound-m04-checker",
+      "invoked_at": "2026-08-25T00:24:14.161Z",
+      "status": "returned"
+    }
+  ],
+  "budget": {
+    "limit_units": 96,
+    "used_units": 96
+  },
+  "outcome": "blocked",
+  "terminal_truth": false,
+  "finished_at": "2026-08-25T00:24:14.331Z",
+  "elapsed_seconds": 12.078,
+  "blocked_by": "budget_exhausted",
+  "reason": "Outcome graph exhausted its budget",
+  "deduped": false,
+  "durable_state": {
+    "schema_version": 1,
+    "dedupe_identity": "5ea47cc430fffcceb73d3ddcc5fb41ed0d487b2f63245b764906acd8829bb049",
+    "dedupe_hit": false,
+    "resumed": false,
+    "canonical_binding": {
+      "locator": "dillon-os://routine/M04/2026-08-24",
+      "version": "2026-08-25:f7aa7149.05e6a21e.2acd2c02.f94d3231.c4f66a74",
+      "sha256": "cdfe18d064fb4ab1aa137f1f8499d9d289d46bc081c9eee4885b131f5bbada4a",
+      "captured_at": "2026-08-25T00:24:02.090Z"
+    },
+    "canonical_binding_fingerprint": "87e64bf8e23007fa8e7d05fa40839dd3c05128d2f76a94e84a84f901759587bf",
+    "contract_fingerprint": "e34e3505103b3e3d8a541071d46cffecc8573b33bb44d52d911c2cf53406c44a",
+    "checkpoint": "runs/OGD-20260825-4E80C5760430/checkpoint.json"
+  }
+}

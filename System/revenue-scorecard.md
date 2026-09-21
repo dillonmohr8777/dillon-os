@@ -29,7 +29,7 @@ The prior $2,700 MRR subtotal was built from the stale April roster and is retir
 
 ## Exclusions
 
-- Align HCM is full-time employment, not client MRR.
+- Align HCM was full-time employment, not client MRR. **Ended 2026-09-02** and is no longer income.
 - Internal Momentum service lines are not clients.
 - Paused, past, prospect, and offboarding accounts are not included.
 

@@ -1,0 +1,89 @@
+{
+ "pulled_at_utc": "2026-09-14T18:32:47+00:00",
+ "site": "https://www.alignhcm.com/",
+ "ga4_property": "properties/320235048",
+ "start": "2026-01-01",
+ "end": "2026-09-11",
+ "auth": "gcloud ADC, project 150963436905, read-only",
+ "files": {
+  "gsc-sitemaps.json": {
+   "sha256": "dddb0af5575a9654058103e6d7adbc06fef2200db35840b4f3b9668f153bf6e7",
+   "bytes": 468,
+   "rows": 1
+  },
+  "gsc-query.json": {
+   "sha256": "3c1c4a078c8d8e28d9b4eb52aa51275500c5152be64227d77b48fe9194585c2e",
+   "bytes": 864289,
+   "rows": 3316
+  },
+  "gsc-page.json": {
+   "sha256": "b5bb4102e1ca0be57ff5f8c4e013e6878f4e46c53aa4dad95711d1738a5c2af0",
+   "bytes": 34355,
+   "rows": 188
+  },
+  "gsc-date.json": {
+   "sha256": "6e2dfdfb7bb8eb230c9e885bbfdb05471ab1a811d1cc08725b92dae9fc66903e",
+   "bytes": 6676,
+   "rows": 47
+  },
+  "gsc-query+page.json": {
+   "sha256": "d45ffb658afb8bc37dcf9b081a78778ccc6fd8fb36f672fafce8e68be629a4c6",
+   "bytes": 1364573,
+   "rows": 4296
+  },
+  "gsc-device.json": {
+   "sha256": "4c773982f1d91790f9d4473262411d40752f31dc440fc64a4657963c0cfd8e0d",
+   "bytes": 421,
+   "rows": 3
+  },
+  "gsc-country.json": {
+   "sha256": "bd9dd5600e24eeadae7326eabf36bba4f4c373c784fa40c5e3ec003790745501",
+   "bytes": 17701,
+   "rows": 162
+  },
+  "gsc-date+page.json": {
+   "sha256": "431a34c91f8497726cafffafee2531601a2985a94e20ec0df9ba3a99f9f3abfa",
+   "bytes": 930555,
+   "rows": 4873
+  },
+  "gsc-totals.json": {
+   "sha256": "1d6ef7bb992843587ff87c953626820178522d1b816cb8ec87726a3f6d11884d",
+   "bytes": 114,
+   "rows": 1
+  },
+  "ga4-date+channel.json": {
+   "sha256": "126e0aaf2fd854a26418396d0ad29c478c230b3d803389eb7b70d926df103f63",
+   "bytes": 25008,
+   "rows": 177
+  },
+  "ga4-landing+channel.json": {
+   "sha256": "26ce379817f9d2c5e97d4251793bafa5e62803b70c875d5afa12ed16df747a1f",
+   "bytes": 23433,
+   "rows": 123
+  },
+  "ga4-source+medium.json": {
+   "sha256": "f1cdcec375225db27e0344183bf3a2f8b2f9f53786af9e2cee2713302dcbc6bf",
+   "bytes": 3075,
+   "rows": 21
+  },
+  "ga4-events.json": {
+   "sha256": "016d096dc956b67c10ce568ac6729850f5bd4a3e46c84190151714dc0efd7998",
+   "bytes": 774,
+   "rows": 13
+  },
+  "gap-table.csv": {
+   "sha256": "f7c803c97a7b185986e7891f3c4d0cb91ac0b0632dfcd9811a994f3f7d229b08",
+   "bytes": 7362
+  }
+ },
+ "gap_summary": {
+  "days": 254,
+  "gsc_days_present": 47,
+  "ga4_days_present": 59,
+  "both_missing": 190,
+  "gsc_only": 5,
+  "ga4_only": 17,
+  "first_gsc_day": "2026-07-27",
+  "first_ga4_day": "2026-01-01"
+ }
+}

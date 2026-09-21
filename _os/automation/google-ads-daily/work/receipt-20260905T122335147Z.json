@@ -1,0 +1,11 @@
+{
+  "wakeId":"heartbeat:20260905T122335147Z",
+  "identityVerified":{"gmail":true,"slack":true},
+  "window":{"afterUnix":1788608774,"beforeUnix":1788611024},
+  "sources":{"slack":{"pages":1,"messages":0,"paginationExhausted":true},"gmail":{"pages":1,"messages":3,"newSuppressed":2,"knownSuppressedOverlap":1,"paginationExhausted":true}},
+  "due":{"bedtime":false,"leadTable":false,"googleAdsReport":false,"predictionBrief":true},
+  "predictionReview":{"offered":0,"status":"quiet","reason":"No new deadline, commitment or dependency evidence in current intake. Prior intake observations unchanged; KJB access checkpoint already notified. No speculative client promises."},
+  "externalMutations":0,
+  "decision":"DONT_NOTIFY",
+  "reason":"Only newsletters and known overlap; KJB source gap unchanged and Google Ads reporting not due."
+}

@@ -15,6 +15,13 @@
       T9  connector failure        an external_connector probe fails closed, never synthetic success
       T10 browser-canary refusal   the canary refuses and the loop records blocked, not failed
       T11 output validation        an accepted exit code alone cannot pass a stage
+      T12 cadence dedupe           weekly/monthly keys are not daily keys
+      T13 node dispatcher          the PS entry point is a thin wrapper over claude-loop.js; learn is required
+      T14 timestamp contract       generated_at on checkpoints, driver state, and the run schema
+
+    The allowlist and stage logic live in _os/automation/bin/claude-loop.js (the Node
+    dispatcher); Invoke-ClaudeLoop.ps1 is the compatibility wrapper the task and driver call.
+    Source-level assertions read the Node file; behavioural probes go through the wrapper.
 
     Fail-closed: a missing source or an unparseable artifact fails the test.
 
@@ -40,6 +47,7 @@ $resolvedVault = (Resolve-Path -LiteralPath $VaultRoot).Path
 $scripts = Join-Path $resolvedVault 'System/scripts'
 $registryPath = Join-Path $resolvedVault '11_Agents/claude-operating-team.json'
 $loopPath = Join-Path $scripts 'Invoke-ClaudeLoop.ps1'
+$loopNodePath = Join-Path $resolvedVault '_os/automation/bin/claude-loop.js'
 $driverPath = Join-Path $scripts 'Invoke-ClaudeDailyDriver.ps1'
 
 $tests = New-Object System.Collections.Generic.List[object]
@@ -48,12 +56,13 @@ function Add-T {
     $tests.Add([pscustomobject]@{ id = $Id; test = $Name; expected = $Expected; actual = $Actual; ok = $Ok })
 }
 
-foreach ($p in @($registryPath, $loopPath, $driverPath)) {
+foreach ($p in @($registryPath, $loopPath, $loopNodePath, $driverPath)) {
     if (-not (Test-Path -LiteralPath $p)) { Write-Host "BLOCKED: missing $p"; exit 1 }
 }
 $reg = Get-Content -LiteralPath $registryPath -Raw | ConvertFrom-Json
 $routines = @($reg.routines)
-$loopSrc = Get-Content -LiteralPath $loopPath -Raw
+$loopSrc = Get-Content -LiteralPath $loopNodePath -Raw -Encoding UTF8
+$wrapperSrc = Get-Content -LiteralPath $loopPath -Raw -Encoding UTF8
 
 # ---------------------------------------------- T1 policy completeness
 $missing = New-Object System.Collections.Generic.List[string]
@@ -78,25 +87,26 @@ $forbidden = @('send', 'post', 'publish', 'deploy', 'spend', 'purchase', 'rotate
                'merge', 'Remove-Item', 'git push', 'git commit', 'Invoke-WebRequest', 'Invoke-RestMethod',
                'Start-Process chrome', 'Netlify', 'curl ')
 $allowBlock = ''
-if ($loopSrc -match '(?s)\$ALLOWLIST = @\{(?<b>.*?)\n\}') { $allowBlock = $Matches['b'] }
+if ($loopSrc -match '(?s)const ALLOWLIST = \{(?<b>.*?)\r?\n  \};') { $allowBlock = $Matches['b'] }
 Add-T 'T2a' 'allowlist_block_found' 'non-empty' $allowBlock.Length ($allowBlock.Length -gt 0)
 
 $dangerous = @($forbidden | Where-Object { $allowBlock -match [regex]::Escape($_) })
 Add-T 'T2b' 'allowlist_has_no_forbidden_verb' '0' $dangerous.Count ($dangerous.Count -eq 0)
 
-$entryIds = @([regex]::Matches($allowBlock, "(?m)^\s*'(?<id>[a-z_]+)'\s*=\s*@\{") | ForEach-Object { $_.Groups['id'].Value })
+$entryPattern = "(?m)^\s*(?<id>[a-z_]+):\s*\{\s*$"
+$entryIds = @([regex]::Matches($allowBlock, $entryPattern) | ForEach-Object { $_.Groups['id'].Value })
 Add-T 'T2c' 'allowlist_entries_discovered' '>=6' $entryIds.Count ($entryIds.Count -ge 6)
 
-$noTimeout = @([regex]::Matches($allowBlock, "(?m)^\s*'[a-z_]+'\s*=\s*@\{")).Count - @([regex]::Matches($allowBlock, 'timeout\s*=')).Count
+$noTimeout = @([regex]::Matches($allowBlock, $entryPattern)).Count - @([regex]::Matches($allowBlock, 'timeout:\s*\d+')).Count
 Add-T 'T2d' 'every_entry_has_timeout' '0 without' $noTimeout ($noTimeout -eq 0)
-$noValidator = @([regex]::Matches($allowBlock, "(?m)^\s*'[a-z_]+'\s*=\s*@\{")).Count - @([regex]::Matches($allowBlock, 'validate\s*=')).Count
+$noValidator = @([regex]::Matches($allowBlock, $entryPattern)).Count - @([regex]::Matches($allowBlock, "validate:\s*'")).Count
 Add-T 'T2e' 'every_entry_has_validator' '0 without' $noValidator ($noValidator -eq 0)
 
 $badPaths = New-Object System.Collections.Generic.List[string]
-foreach ($m in [regex]::Matches($allowBlock, "Join-Path \`$SCRIPTS '(?<f>[^']+)'")) {
+foreach ($m in [regex]::Matches($allowBlock, "script\('(?<f>[^']+)'\)")) {
     if (-not (Test-Path -LiteralPath (Join-Path $scripts $m.Groups['f'].Value))) { $badPaths.Add($m.Groups['f'].Value) }
 }
-foreach ($m in [regex]::Matches($allowBlock, "Join-Path \`$BIN '(?<f>[^']+)'")) {
+foreach ($m in [regex]::Matches($allowBlock, "bin\('(?<f>[^']+)'\)")) {
     if (-not (Test-Path -LiteralPath (Join-Path $resolvedVault ('_os/automation/bin/' + $m.Groups['f'].Value)))) { $badPaths.Add($m.Groups['f'].Value) }
 }
 Add-T 'T3a' 'allowlisted_script_paths_exist' '0 missing' $badPaths.Count ($badPaths.Count -eq 0)
@@ -114,9 +124,9 @@ if (Test-Path -LiteralPath $ManifestPath) {
     }
 }
 Add-T 'T4a' 'manifest_row_present_and_parseable' 'row found' ($null -ne $manifestRow) ($null -ne $manifestRow)
-Add-T 'T4b' 'manifest_row_targets_driver' 'Invoke-ClaudeDailyDriver.ps1' `
-    $(if ($manifestRow) { $manifestRow -match 'Invoke-ClaudeDailyDriver\.ps1' } else { $false }) `
-    $(if ($manifestRow) { [bool]($manifestRow -match 'Invoke-ClaudeDailyDriver\.ps1') } else { $false })
+Add-T 'T4b' 'manifest_row_targets_driver' 'Invoke-ClaudeDailyDriverGpuSafe.ps1' `
+    $(if ($manifestRow) { $manifestRow -match 'Invoke-ClaudeDailyDriverGpuSafe\.ps1' } else { $false }) `
+    $(if ($manifestRow) { [bool]($manifestRow -match 'Invoke-ClaudeDailyDriverGpuSafe\.ps1') } else { $false })
 Add-T 'T4c' 'manifest_row_is_console_free' '-WindowStyle Hidden' `
     $(if ($manifestRow) { [bool]($manifestRow -match '-WindowStyle Hidden') } else { $false }) `
     $(if ($manifestRow) { [bool]($manifestRow -match '-WindowStyle Hidden') } else { $false })
@@ -166,7 +176,7 @@ if ($taskQueryBlocked) {
         (($null -ne $execMin) -and ($wallBudget -lt $execMin))
 
     $maxCmdTimeout = 0
-    foreach ($m in [regex]::Matches($allowBlock, 'timeout = (?<t>\d+)')) {
+    foreach ($m in [regex]::Matches($allowBlock, 'timeout:\s*(?<t>\d+)')) {
         if ([int]$m.Groups['t'].Value -gt $maxCmdTimeout) { $maxCmdTimeout = [int]$m.Groups['t'].Value }
     }
     Add-T 'T4j' 'slowest_command_inside_execution_limit' "<= $execMin min" ("{0}s" -f $maxCmdTimeout) `
@@ -186,7 +196,7 @@ if (Test-Path -LiteralPath $loopLog) {
         if (@('complete', 'complete_degraded') -contains $j.outcome) { $completedKeys += $j.dedupe_key }
     }
 }
-$dedupeCodePath = ($loopSrc -match "@\('complete', 'complete_degraded'\) -contains \`$p\.outcome")
+$dedupeCodePath = ($loopSrc -match "\['complete', 'complete_degraded'\]\.includes\(p\.outcome\)")
 Add-T 'T6a' 'dedupe_counts_degraded_completion' 'code path present' $dedupeCodePath $dedupeCodePath
 if ($completedKeys.Count -gt 0) {
     $rid = ($completedKeys[0] -split ':')[2]
@@ -263,16 +273,42 @@ if (Test-Path -LiteralPath $canary) {
 Add-T 'T10a' 'canary_launches_nothing' 'launched=false' $canaryOk $canaryOk
 Add-T 'T10b' 'canary_refuses_while_tunnel_present' 'NOT-READY' $verdict ($verdict -like 'NOT-READY*')
 Add-T 'T10c' 'loop_treats_canary_refusal_as_blocked' 'blocked_exit declares 1' `
-    ($allowBlock -match "blocked_exit = @\(1\)") ($allowBlock -match 'blocked_exit = @\(1\)')
+    ($allowBlock -match "blocked_exit: \[1\]") ($allowBlock -match 'blocked_exit: \[1\]')
 
 # ---------------------------------------------- T11 output validation
 Add-T 'T11a' 'exit_code_alone_cannot_pass' 'validator gate present' `
-    ($loopSrc -match "if \(\`$state -eq 'ok' -and -not \`$valid\) \{ \`$state = 'failed' \}") `
-    ($loopSrc -match "if \(\`$state -eq 'ok' -and -not \`$valid\) \{ \`$state = 'failed' \}")
+    ($loopSrc -match "if \(state === 'ok' && !valid\) state = 'failed';") `
+    ($loopSrc -match "if \(state === 'ok' && !valid\) state = 'failed';")
 Add-T 'T11b' 'redaction_tripwire_on_child_stdout' 'tripwire present' `
     ($loopSrc -match 'redaction tripwire on stdout') ($loopSrc -match 'redaction tripwire on stdout')
 Add-T 'T11c' 'unknown_command_fails_closed' 'not on allowlist' `
     ($loopSrc -match "not on allowlist") ($loopSrc -match 'not on allowlist')
+
+# ---------------------------------------------- T13 node dispatcher + required learn
+Add-T 'T13a' 'ps_entry_point_delegates_to_node' 'wrapper calls claude-loop.js' `
+    ($wrapperSrc -match 'claude-loop\.js') ($wrapperSrc -match 'claude-loop\.js')
+Add-T 'T13b' 'wrapper_holds_no_second_allowlist' 'no ALLOWLIST table in wrapper' `
+    ($wrapperSrc -cnotmatch 'ALLOWLIST') ($wrapperSrc -cnotmatch 'ALLOWLIST')
+Add-T 'T13c' 'wrapper_returns_one_json_string' 'joins child stdout' `
+    ($wrapperSrc -match '-join "`n"') ($wrapperSrc -match '-join "`n"')
+$learnRequired = ($loopSrc -match "case 'learn':") -and ($loopSrc -match 'if \(!learn\) learn = deriveLearn\(') -and ($loopSrc -match 'learn: row\.learn')
+Add-T 'T13d' 'learn_is_required_routine_output' 'derived on every execution, written to receipt' $learnRequired $learnRequired
+$learnKinds = ($loopSrc -match "kind: 'lesson'") -and ($loopSrc -match "kind: 'no_finding'")
+Add-T 'T13e' 'learn_is_lesson_or_explicit_no_finding' 'both kinds present' $learnKinds $learnKinds
+$nodeProbe = & $loopPath -VaultRoot $resolvedVault -CanonicalRoot $CanonicalRoot -RoutineId D03 -Json -NoEvidence | ConvertFrom-Json
+Add-T 'T13f' 'wrapper_output_parses_with_eight_gates' '8 gates via wrapper' @($nodeProbe.rows[0].gates).Count `
+    (($nodeProbe.engine -eq 'claude-loop.js') -and (@($nodeProbe.rows[0].gates).Count -eq 8))
+
+# ---------------------------------------------- T14 generated_at timestamp contract
+Add-T 'T14a' 'checkpoint_carries_generated_at' 'generated_at + stage_states' `
+    ($loopSrc -match 'generated_at: ts, stage_states') ($loopSrc -match 'generated_at: ts, stage_states')
+$driverSrcTs = Get-Content -LiteralPath $driverPath -Raw -Encoding UTF8
+$driverStamps = @([regex]::Matches($driverSrcTs, 'generated_at = \$nowUtc')).Count
+Add-T 'T14b' 'driver_state_and_ledger_stamp_generated_at' '2 writes stamped' $driverStamps ($driverStamps -eq 2)
+$runSchema = Get-Content -LiteralPath (Join-Path $resolvedVault '12_Brain/schemas/automation-run.json') -Raw -Encoding UTF8 | ConvertFrom-Json
+Add-T 'T14c' 'automation_run_schema_requires_generated_at' 'required' ($runSchema.required -contains 'generated_at') ($runSchema.required -contains 'generated_at')
+Add-T 'T14d' 'freshness_probe_prefers_generated_at' 'registry_state reads the contract' `
+    ($loopSrc -match "via = 'generated_at'") ($loopSrc -match "via = 'generated_at'")
 
 # ---------------------------------------------------------------------------
 $failed = @($tests | Where-Object { -not $_.ok })

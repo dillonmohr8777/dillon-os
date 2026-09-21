@@ -1,0 +1,194 @@
+[
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/21959397587",
+      "name": "Omega Landscaping & Concrete | Colorado Springs | PMax",
+      "id": "21959397587"
+    },
+    "metrics": {
+      "clicks": "39",
+      "conversions": 0,
+      "costMicros": "343591333",
+      "impressions": "1707"
+    },
+    "segments": {
+      "device": "DESKTOP"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/21959397587",
+      "name": "Omega Landscaping & Concrete | Colorado Springs | PMax",
+      "id": "21959397587"
+    },
+    "metrics": {
+      "clicks": "964",
+      "conversions": 16,
+      "costMicros": "1995124276",
+      "impressions": "32237"
+    },
+    "segments": {
+      "device": "MOBILE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/21959397587",
+      "name": "Omega Landscaping & Concrete | Colorado Springs | PMax",
+      "id": "21959397587"
+    },
+    "metrics": {
+      "clicks": "34",
+      "conversions": 0,
+      "costMicros": "14282540",
+      "impressions": "1826"
+    },
+    "segments": {
+      "device": "TABLET"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/21959397587",
+      "name": "Omega Landscaping & Concrete | Colorado Springs | PMax",
+      "id": "21959397587"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "1654783",
+      "impressions": "401"
+    },
+    "segments": {
+      "device": "CONNECTED_TV"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23307822197",
+      "name": "Search_Concrete Services_Call Only",
+      "id": "23307822197"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "5"
+    },
+    "segments": {
+      "device": "MOBILE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23440060242",
+      "name": "Search_Services_Standard",
+      "id": "23440060242"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "3"
+    },
+    "segments": {
+      "device": "DESKTOP"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23440060242",
+      "name": "Search_Services_Standard",
+      "id": "23440060242"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "59358429",
+      "impressions": "18"
+    },
+    "segments": {
+      "device": "MOBILE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23441013566",
+      "name": "Search_Services_Call Only",
+      "id": "23441013566"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "21"
+    },
+    "segments": {
+      "device": "DESKTOP"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/23441013566",
+      "name": "Search_Services_Call Only",
+      "id": "23441013566"
+    },
+    "metrics": {
+      "clicks": "1",
+      "conversions": 0,
+      "costMicros": "44520000",
+      "impressions": "33"
+    },
+    "segments": {
+      "device": "MOBILE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/24082267830",
+      "name": "Search | High Intent | Colorado Springs | 2026-07-30",
+      "id": "24082267830"
+    },
+    "metrics": {
+      "clicks": "54",
+      "conversions": 1,
+      "costMicros": "398277302",
+      "impressions": "888"
+    },
+    "segments": {
+      "device": "DESKTOP"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/24082267830",
+      "name": "Search | High Intent | Colorado Springs | 2026-07-30",
+      "id": "24082267830"
+    },
+    "metrics": {
+      "clicks": "134",
+      "conversions": 2,
+      "costMicros": "987801813",
+      "impressions": "3289"
+    },
+    "segments": {
+      "device": "MOBILE"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/2853981364/campaigns/24082267830",
+      "name": "Search | High Intent | Colorado Springs | 2026-07-30",
+      "id": "24082267830"
+    },
+    "metrics": {
+      "clicks": "7",
+      "conversions": 0,
+      "costMicros": "48970000",
+      "impressions": "102"
+    },
+    "segments": {
+      "device": "TABLET"
+    }
+  }
+]

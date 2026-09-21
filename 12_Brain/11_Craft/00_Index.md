@@ -2,7 +2,7 @@
 note_type: index
 status: active
 created: 2026-08-18
-updated: 2026-08-19
+updated: 2026-09-15
 source_refs: []
 tags: [craft, index]
 ---
@@ -24,11 +24,40 @@ repeat get promoted into `12_Brain/03_Concepts/` and linked back here.
 
 ## Earned lessons
 
-[[12_Brain/11_Craft/earned-lessons|earned-lessons]] - **11** recorded, append-only.
+[[12_Brain/11_Craft/earned-lessons|earned-lessons]] - **22** recorded, append-only.
 Agents write there. Never into a generated brief.
+
+Loop learn output, last 14 day(s): **11** concrete lesson(s), **168** explicit no-finding(s), **1** promotion candidate(s). Recorded per execution in the loop receipts; the latest brief lists them.
 
 ## Briefs
 
+- [[12_Brain/11_Craft/2026-09-15 - operating brief|2026-09-15 - operating brief]]
+- [[12_Brain/11_Craft/2026-09-14 - operating brief|2026-09-14 - operating brief]]
+- [[12_Brain/11_Craft/2026-09-13 - operating brief|2026-09-13 - operating brief]]
+- [[12_Brain/11_Craft/2026-09-12 - operating brief|2026-09-12 - operating brief]]
+- [[12_Brain/11_Craft/2026-09-11 - operating brief|2026-09-11 - operating brief]]
+- [[12_Brain/11_Craft/2026-09-10 - operating brief|2026-09-10 - operating brief]]
+- [[12_Brain/11_Craft/2026-09-09 - operating brief|2026-09-09 - operating brief]]
+- [[12_Brain/11_Craft/2026-09-08 - operating brief|2026-09-08 - operating brief]]
+- [[12_Brain/11_Craft/2026-09-07 - operating brief|2026-09-07 - operating brief]]
+- [[12_Brain/11_Craft/2026-09-06 - operating brief|2026-09-06 - operating brief]]
+- [[12_Brain/11_Craft/2026-09-05 - operating brief|2026-09-05 - operating brief]]
+- [[12_Brain/11_Craft/2026-09-04 - operating brief|2026-09-04 - operating brief]]
+- [[12_Brain/11_Craft/2026-09-03 - operating brief|2026-09-03 - operating brief]]
+- [[12_Brain/11_Craft/2026-09-02 - operating brief|2026-09-02 - operating brief]]
+- [[12_Brain/11_Craft/2026-09-01 - operating brief|2026-09-01 - operating brief]]
+- [[12_Brain/11_Craft/2026-08-31 - operating brief|2026-08-31 - operating brief]]
+- [[12_Brain/11_Craft/2026-08-30 - operating brief|2026-08-30 - operating brief]]
+- [[12_Brain/11_Craft/2026-08-29 - operating brief|2026-08-29 - operating brief]]
+- [[12_Brain/11_Craft/2026-08-28 - operating brief|2026-08-28 - operating brief]]
+- [[12_Brain/11_Craft/2026-08-27 - operating brief|2026-08-27 - operating brief]]
+- [[12_Brain/11_Craft/2026-08-26 - operating brief|2026-08-26 - operating brief]]
+- [[12_Brain/11_Craft/2026-08-25 - operating brief|2026-08-25 - operating brief]]
+- [[12_Brain/11_Craft/2026-08-24 - operating brief|2026-08-24 - operating brief]]
+- [[12_Brain/11_Craft/2026-08-23 - operating brief|2026-08-23 - operating brief]]
+- [[12_Brain/11_Craft/2026-08-22 - operating brief|2026-08-22 - operating brief]]
+- [[12_Brain/11_Craft/2026-08-21 - operating brief|2026-08-21 - operating brief]]
+- [[12_Brain/11_Craft/2026-08-20 - operating brief|2026-08-20 - operating brief]]
 - [[12_Brain/11_Craft/2026-08-19 - operating brief|2026-08-19 - operating brief]]
 - [[12_Brain/11_Craft/2026-08-18 - operating brief|2026-08-18 - operating brief]]
 

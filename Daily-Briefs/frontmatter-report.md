@@ -1,6 +1,8 @@
 # Frontmatter validation report
 
-Generated: 2026-09-21T19:40:38.102Z
-Complete: 40/40
-Incomplete: 0
+Generated: 2026-09-21T19:42:45.631Z
+Complete: 37/39
+Incomplete: 2
 
+- `01_Clients/Nexla/overview.md` missing: last_touched, next_action, due
+- `01_Clients/Puttery NYC/overview.md` missing: last_touched, next_action, due

@@ -1,0 +1,252 @@
+{
+  "slug": "lancaster-general-health-express",
+  "preparedAt": "2026-08-26T10:42:10.033Z",
+  "sourceSite": "https://www.lghealthexpress.org/",
+  "sourceFinalUrl": "https://www.lghealthexpress.org/",
+  "sourcePageSha256": "84b1ca130d85380a891010818e64130756c0b994b28ce08290876206e8907385",
+  "exactLogoRequired": false,
+  "exactLogoSha256": "5fb0f4f79b8062ba7d2f4c99947d111707747296f7a07772ac6ec558aff05cdd",
+  "identityFallback": true,
+  "generatedImagePolicy": "All content visuals come from an Align HCM Image Gen editorial board, carry embedded plus interface-level grain, and are disclosed as illustrative concept material. They never serve as proof about the business, its staff, facilities, products, clients, or outcomes.",
+  "assets": [
+    {
+      "role": "verified exact-name identity fallback",
+      "output": "logo.svg",
+      "sourceUrl": "https://www.lghealthexpress.org/",
+      "sourceSha256": "5fb0f4f79b8062ba7d2f4c99947d111707747296f7a07772ac6ec558aff05cdd",
+      "outputSha256": "5fb0f4f79b8062ba7d2f4c99947d111707747296f7a07772ac6ec558aff05cdd",
+      "transformation": "Disclosed exact-name typographic fallback; no icon, symbol, or first-party logo imitation.",
+      "transparent": true
+    },
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "lancaster-general-health-express",
+      "boardDescriptor": "clinic",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/lancaster-general-health-express.png",
+      "sourceSha256": "979dfec684b1fcb8ac719ef791a483b418810ef246b97ab97c43ab999de91c7c",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Lancaster General Health Express. Four distinct but cohesive unlabelled panels in a generic walk-in medical care setting: a triage nurse greeting an adult patient at a calm intake desk with no readable forms; a clinician preparing a blood-pressure cuff and basic diagnostic tools; an adult clinician listening to a patient in a modest exam room from a non-identifying angle; a clean close detail of a stethoscope, pulse oximeter, and paper-toned clinical counter. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=0.965:contrast=1.028:brightness=0.000,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "88542bf08c22e82f13b628ea92ec99bc81a99fa6699184f24cc1b3a51bc29eb2",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "lancaster-general-health-express",
+      "boardDescriptor": "clinic",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/lancaster-general-health-express.png",
+      "sourceSha256": "979dfec684b1fcb8ac719ef791a483b418810ef246b97ab97c43ab999de91c7c",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Lancaster General Health Express. Four distinct but cohesive unlabelled panels in a generic walk-in medical care setting: a triage nurse greeting an adult patient at a calm intake desk with no readable forms; a clinician preparing a blood-pressure cuff and basic diagnostic tools; an adult clinician listening to a patient in a modest exam room from a non-identifying angle; a clean close detail of a stethoscope, pulse oximeter, and paper-toned clinical counter. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:28,eq=saturation=0.990:contrast=1.082:brightness=0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "791fca4df194c1691932211ba941ab066dc9993f649a32dea8a8fd8dc3d681a8",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "lancaster-general-health-express",
+      "boardDescriptor": "clinic",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/lancaster-general-health-express.png",
+      "sourceSha256": "979dfec684b1fcb8ac719ef791a483b418810ef246b97ab97c43ab999de91c7c",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Lancaster General Health Express. Four distinct but cohesive unlabelled panels in a generic walk-in medical care setting: a triage nurse greeting an adult patient at a calm intake desk with no readable forms; a clinician preparing a blood-pressure cuff and basic diagnostic tools; an adult clinician listening to a patient in a modest exam room from a non-identifying angle; a clean close detail of a stethoscope, pulse oximeter, and paper-toned clinical counter. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:56,eq=saturation=1.015:contrast=1.046:brightness=-0.018,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "9cc729dfa4c4c85ced90704166a590e32f371c8801d28257b90f6426ed3e582a",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "lancaster-general-health-express",
+      "boardDescriptor": "clinic",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/lancaster-general-health-express.png",
+      "sourceSha256": "979dfec684b1fcb8ac719ef791a483b418810ef246b97ab97c43ab999de91c7c",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Lancaster General Health Express. Four distinct but cohesive unlabelled panels in a generic walk-in medical care setting: a triage nurse greeting an adult patient at a calm intake desk with no readable forms; a clinician preparing a blood-pressure cuff and basic diagnostic tools; an adult clinician listening to a patient in a modest exam room from a non-identifying angle; a clean close detail of a stethoscope, pulse oximeter, and paper-toned clinical counter. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=1.040:contrast=1.010:brightness=-0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "7b874eb4003df72e10cd08166c3dfa4d74be80c04b063242f3dc91745a11da98",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "lancaster-general-health-express",
+      "boardDescriptor": "clinic",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/lancaster-general-health-express.png",
+      "sourceSha256": "979dfec684b1fcb8ac719ef791a483b418810ef246b97ab97c43ab999de91c7c",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Lancaster General Health Express. Four distinct but cohesive unlabelled panels in a generic walk-in medical care setting: a triage nurse greeting an adult patient at a calm intake desk with no readable forms; a clinician preparing a blood-pressure cuff and basic diagnostic tools; an adult clinician listening to a patient in a modest exam room from a non-identifying angle; a clean close detail of a stethoscope, pulse oximeter, and paper-toned clinical counter. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:28,eq=saturation=0.940:contrast=1.064:brightness=0.000,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "4256a099cef5729e0d3fc191dd37da275dfa362d833e60b087a6909df2453dbc",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "lancaster-general-health-express",
+      "boardDescriptor": "clinic",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/lancaster-general-health-express.png",
+      "sourceSha256": "979dfec684b1fcb8ac719ef791a483b418810ef246b97ab97c43ab999de91c7c",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Lancaster General Health Express. Four distinct but cohesive unlabelled panels in a generic walk-in medical care setting: a triage nurse greeting an adult patient at a calm intake desk with no readable forms; a clinician preparing a blood-pressure cuff and basic diagnostic tools; an adult clinician listening to a patient in a modest exam room from a non-identifying angle; a clean close detail of a stethoscope, pulse oximeter, and paper-toned clinical counter. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:56,eq=saturation=0.965:contrast=1.028:brightness=0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "8c21cd5cca05754629dd892b8dd1a9024f835fa084aafc4ef90639b3eeda74f4",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "lancaster-general-health-express",
+      "boardDescriptor": "clinic",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/lancaster-general-health-express.png",
+      "sourceSha256": "979dfec684b1fcb8ac719ef791a483b418810ef246b97ab97c43ab999de91c7c",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Lancaster General Health Express. Four distinct but cohesive unlabelled panels in a generic walk-in medical care setting: a triage nurse greeting an adult patient at a calm intake desk with no readable forms; a clinician preparing a blood-pressure cuff and basic diagnostic tools; an adult clinician listening to a patient in a modest exam room from a non-identifying angle; a clean close detail of a stethoscope, pulse oximeter, and paper-toned clinical counter. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:0,eq=saturation=0.990:contrast=1.082:brightness=-0.018,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "25b121cb8ab466ee0521a4005307d3a679a2308c6506429dad6024eab918480b",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "lancaster-general-health-express",
+      "boardDescriptor": "clinic",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/lancaster-general-health-express.png",
+      "sourceSha256": "979dfec684b1fcb8ac719ef791a483b418810ef246b97ab97c43ab999de91c7c",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Lancaster General Health Express. Four distinct but cohesive unlabelled panels in a generic walk-in medical care setting: a triage nurse greeting an adult patient at a calm intake desk with no readable forms; a clinician preparing a blood-pressure cuff and basic diagnostic tools; an adult clinician listening to a patient in a modest exam room from a non-identifying angle; a clean close detail of a stethoscope, pulse oximeter, and paper-toned clinical counter. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:36:28,eq=saturation=1.015:contrast=1.046:brightness=-0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "f94112aade3f4cfe110e93018b92b8d238517e970d10834cd816de9f14196bfb",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "lancaster-general-health-express",
+      "boardDescriptor": "clinic",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/lancaster-general-health-express.png",
+      "sourceSha256": "979dfec684b1fcb8ac719ef791a483b418810ef246b97ab97c43ab999de91c7c",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Lancaster General Health Express. Four distinct but cohesive unlabelled panels in a generic walk-in medical care setting: a triage nurse greeting an adult patient at a calm intake desk with no readable forms; a clinician preparing a blood-pressure cuff and basic diagnostic tools; an adult clinician listening to a patient in a modest exam room from a non-identifying angle; a clean close detail of a stethoscope, pulse oximeter, and paper-toned clinical counter. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:56,eq=saturation=1.040:contrast=1.010:brightness=0.000,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "3082f9be888be1f58880c92cb96c029db47b5451ab3612d18dbbf71fc16f1098",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "lancaster-general-health-express",
+      "boardDescriptor": "clinic",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/lancaster-general-health-express.png",
+      "sourceSha256": "979dfec684b1fcb8ac719ef791a483b418810ef246b97ab97c43ab999de91c7c",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Lancaster General Health Express. Four distinct but cohesive unlabelled panels in a generic walk-in medical care setting: a triage nurse greeting an adult patient at a calm intake desk with no readable forms; a clinician preparing a blood-pressure cuff and basic diagnostic tools; an adult clinician listening to a patient in a modest exam room from a non-identifying angle; a clean close detail of a stethoscope, pulse oximeter, and paper-toned clinical counter. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:0*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:0,eq=saturation=0.940:contrast=1.064:brightness=0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "9ce6a26ca9813c5ca22b6f817f97fdcb356cd61709d656a8ac0ed9b5f4b20172",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "lancaster-general-health-express",
+      "boardDescriptor": "clinic",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/lancaster-general-health-express.png",
+      "sourceSha256": "979dfec684b1fcb8ac719ef791a483b418810ef246b97ab97c43ab999de91c7c",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Lancaster General Health Express. Four distinct but cohesive unlabelled panels in a generic walk-in medical care setting: a triage nurse greeting an adult patient at a calm intake desk with no readable forms; a clinician preparing a blood-pressure cuff and basic diagnostic tools; an adult clinician listening to a patient in a modest exam room from a non-identifying angle; a clean close detail of a stethoscope, pulse oximeter, and paper-toned clinical counter. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:0*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:28,eq=saturation=0.965:contrast=1.028:brightness=-0.018,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "51d786d790f7ed22cda13e31639dde21b988637f1fbaf21b763053a9ecf8a23e",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "Align HCM Image Gen editorial board derivative",
+      "boardKey": "lancaster-general-health-express",
+      "boardDescriptor": "clinic",
+      "sourceFile": "automation/prospect-radar-next20/generated-stock-library/lancaster-general-health-express.png",
+      "sourceSha256": "979dfec684b1fcb8ac719ef791a483b418810ef246b97ab97c43ab999de91c7c",
+      "prompt": "Create one unique 2x2 editorial photographic concept board for a private, noindex website concept for Lancaster General Health Express. Four distinct but cohesive unlabelled panels in a generic walk-in medical care setting: a triage nurse greeting an adult patient at a calm intake desk with no readable forms; a clinician preparing a blood-pressure cuff and basic diagnostic tools; an adult clinician listening to a patient in a modest exam room from a non-identifying angle; a clean close detail of a stethoscope, pulse oximeter, and paper-toned clinical counter. This is illustrative art only: do not depict, name, or imply the real business, its staff, customers, facility, projects, products, outcomes, or brand. No readable text, no logos, no watermarks, no signage, no fake testimonials, and no branded uniforms. Human documentary editorial photography, grounded natural light, refined pronounced 35mm grain, tactile paper texture, credible tools and materials, subtle deep navy, warm paper, orange, and cyan color accents, never glossy stock photography. Compose as a true 2x2 board with four balanced image quadrants and narrow clean gutters. Landscape 4:3 overall framing.",
+      "model": "gpt-image-2.0",
+      "transformation": "crop=iw/2:ih/2:1*iw/2:1*ih/2,scale=1300:975:force_original_aspect_ratio=increase,crop=1200:900:72:56,eq=saturation=0.990:contrast=1.082:brightness=-0.009,noise=alls=4:allf=t+u,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "4452d2009ff548a813f6623c47fb9159b15fc3ea35e1583d9d16c4cc8ee70143",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      }
+    }
+  ],
+  "fonts": {
+    "pair": {
+      "id": "plus-jakarta-dm-sans",
+      "display": "Plus Jakarta Sans",
+      "text": "DM Sans"
+    },
+    "source": "Google Fonts CSS API",
+    "files": [
+      {
+        "file": "font-display-400.woff2",
+        "sha256": "153fc85b70298beeb1d61a5f723331649e7f23bb77302a66e61cb3e2fbdb5e79"
+      },
+      {
+        "file": "font-display-800.woff2",
+        "sha256": "153fc85b70298beeb1d61a5f723331649e7f23bb77302a66e61cb3e2fbdb5e79"
+      },
+      {
+        "file": "font-text-400.woff2",
+        "sha256": "9fea608a947e67020c33cad9a6fe3d60c54119dfb8cff87768a8117a15ed7543"
+      },
+      {
+        "file": "font-text-700.woff2",
+        "sha256": "9fea608a947e67020c33cad9a6fe3d60c54119dfb8cff87768a8117a15ed7543"
+      }
+    ]
+  }
+}

@@ -1,0 +1,110 @@
+[
+  {
+    "campaign": {
+      "resourceName": "customers/1033715894/campaigns/22233329038",
+      "status": "PAUSED",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "TARGET_SPEND",
+      "name": "Onsite Concrete & Landscape",
+      "id": "22233329038"
+    },
+    "metrics": {
+      "clicks": "469",
+      "conversionsValue": 0,
+      "conversions": 3,
+      "costMicros": "71201122",
+      "impressions": "11540"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/1033715894/campaignBudgets/14318141220",
+      "amountMicros": "7000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/1033715894/campaigns/22454241769",
+      "status": "PAUSED",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "MAXIMIZE_CONVERSIONS",
+      "name": "Leads-Performance Max-1",
+      "id": "22454241769"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversionsValue": 0,
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "0"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/1033715894/campaignBudgets/14484250490",
+      "amountMicros": "5000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/1033715894/campaigns/23068725075",
+      "status": "PAUSED",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "MAXIMIZE_CONVERSIONS",
+      "name": "LocalServicesCampaign:SystemGenerated:0006401c1fc27d91",
+      "id": "23068725075"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversionsValue": 0,
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "0"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/1033715894/campaignBudgets/14982151864",
+      "amountMicros": "1000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/1033715894/campaigns/24183437726",
+      "status": "PAUSED",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "TARGET_SPEND",
+      "name": "Search | High Intent | Solano County | 2026-07-30",
+      "id": "24183437726"
+    },
+    "metrics": {
+      "clicks": "2",
+      "searchBudgetLostImpressionShare": 0.1565217391304348,
+      "searchImpressionShare": 0.0999,
+      "searchRankLostImpressionShare": 0.7739130434782608,
+      "conversionsValue": 0,
+      "conversions": 0,
+      "costMicros": "6400000",
+      "impressions": "8"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/1033715894/campaignBudgets/15831011752",
+      "amountMicros": "7000000"
+    }
+  },
+  {
+    "campaign": {
+      "resourceName": "customers/1033715894/campaigns/24243107659",
+      "status": "PAUSED",
+      "servingStatus": "SERVING",
+      "biddingStrategyType": "TARGET_SPEND",
+      "name": "Onsite | Search | Concrete | Vacaville | 2026-09-10",
+      "id": "24243107659"
+    },
+    "metrics": {
+      "clicks": "0",
+      "conversionsValue": 0,
+      "conversions": 0,
+      "costMicros": "0",
+      "impressions": "0"
+    },
+    "campaignBudget": {
+      "resourceName": "customers/1033715894/campaignBudgets/15867354918",
+      "amountMicros": "15000000"
+    }
+  }
+]

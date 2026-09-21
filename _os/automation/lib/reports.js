@@ -340,6 +340,7 @@ function ingestReportBatch(envelope, options = {}) {
   }
 
   state.updated_at = nowISO();
+  state.generated_at = state.updated_at; // timestamp contract: 12_Brain/schemas/automation-run.json
   state.last_batch_id = cleanScalar(envelope.batch_id);
   writeJson(REPORT_STATE, state);
   return {

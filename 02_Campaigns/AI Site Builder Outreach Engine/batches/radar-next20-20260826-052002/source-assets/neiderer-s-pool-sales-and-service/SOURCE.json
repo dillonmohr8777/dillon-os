@@ -1,0 +1,99 @@
+{
+  "sourceUrl": "https://www.neidererspoolsales.com/",
+  "finalUrl": "https://www.neidererspoolsales.com/",
+  "sourceDomain": "neidererspoolsales.com",
+  "httpStatus": 200,
+  "contentType": "text/html",
+  "pageSha256": "8c5891b00297210262b2319a926e85dda5c4153131cf6b566a4c1e4016f139bf",
+  "title": "Neiderer's Pool Sales & Service, Inc.",
+  "description": "",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "neiderer",
+      "pool",
+      "sales"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260826-052002\\preflight\\neiderer-s-pool-sales-and-service\\logo.svg",
+    "fileName": "logo.svg",
+    "sourceUrl": "https://www.neidererspoolsales.com/",
+    "sourceEvidence": "Exact business name from the verified official source; code-rendered transparent typographic fallback.",
+    "type": "svg",
+    "dimensions": {
+      "width": 1200,
+      "height": 320
+    },
+    "sha256": "62a1d11092dc3c79ca7f5b8d5b2f71bc8ec893971196d5fa8661f4f4d2577f31",
+    "sourceSha256": null,
+    "sourceType": "verified business name",
+    "sourceFileName": null,
+    "transformation": "Disclosed exact-name typographic fallback; no icon, symbol, or first-party logo imitation.",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "reason": "SVG has no background rectangle."
+    },
+    "transparent": true,
+    "identityFallback": true,
+    "downloadFailures": [],
+    "bytes": 480
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260826-052002\\preflight\\neiderer-s-pool-sales-and-service\\reference-1.png",
+      "fileName": "reference-1.png",
+      "sourceUrl": "https://www.neidererspoolsales.com/images/topphoto.png",
+      "sourceEvidence": "IMG ",
+      "type": "png",
+      "dimensions": {
+        "width": 980,
+        "height": 305
+      },
+      "sha256": "7525b3c2cb9d98c02f86452950876b22834061071d4e46eb7ed979b9a4340d5a",
+      "bytes": 525454,
+      "visual": {
+        "ok": true,
+        "lumaRange": 219,
+        "chromaURange": 132,
+        "chromaVRange": 216,
+        "reason": null
+      }
+    }
+  ],
+  "contact": {
+    "phone": "",
+    "address": "",
+    "city": "",
+    "phoneSource": null,
+    "addressSource": null
+  },
+  "visualReferenceFallback": null,
+  "referenceFailures": [
+    {
+      "url": "https://www.neidererspoolsales.com/images/header.png",
+      "reason": "reference image is too small"
+    },
+    {
+      "url": "https://www.neidererspoolsales.com/images/home.png",
+      "reason": "reference image is too small"
+    },
+    {
+      "url": "https://www.neidererspoolsales.com/images/pools.png",
+      "reason": "reference image is too small"
+    },
+    {
+      "url": "https://www.neidererspoolsales.com/images/products.png",
+      "reason": "reference image is too small"
+    }
+  ],
+  "brandColors": [
+    "#154092",
+    "#f05a28",
+    "#18b6ff",
+    "#ff0000"
+  ],
+  "checkedAt": "2026-08-26T09:30:18.241Z"
+}

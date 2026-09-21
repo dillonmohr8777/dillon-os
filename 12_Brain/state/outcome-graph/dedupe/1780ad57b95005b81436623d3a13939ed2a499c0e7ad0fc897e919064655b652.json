@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "graph_id": "weekly-w02-paid-media-pass-a-shadow",
+  "dedupe_key": "W02:2026-W35A:paid-media-shadow",
+  "dedupe_identity": "1780ad57b95005b81436623d3a13939ed2a499c0e7ad0fc897e919064655b652",
+  "contract_fingerprint": "9faed60ade00dbfeb662b07dfd2019fe07c9dff43abad4e27a9c658dd6ad422f",
+  "canonical_binding": {
+    "locator": "dillon-os://paid-media/W02/2026-W35A",
+    "version": "2026-08-24:7:no-baseline",
+    "sha256": "d9999ce6c6b447b97dca8c7fd68c14e8b0981ef414085b0a05ce49a5a94f2928",
+    "captured_at": "2026-08-24T23:12:52.401Z"
+  },
+  "canonical_binding_fingerprint": "0e74192d0e53b024ddf688c85b8b5ba858f9a96c839d61af107f1970d183d5b7",
+  "status": "complete",
+  "run_id": "OGD-20260824-201320896830",
+  "checkpoint": {
+    "path": "runs/OGD-20260824-201320896830/checkpoint.json"
+  },
+  "created_at": "2026-08-24T23:12:52.431Z",
+  "updated_at": "2026-08-24T23:12:52.847Z",
+  "state_revision": 29,
+  "previous_state_sha256": "f0acf4850ed9f9a1bdbd397a8bc6887619be4aa3b7f6d82fced43b3cf08618dd",
+  "completed_at": "2026-08-24T23:12:52.847Z",
+  "receipt": {
+    "path": "runs/OGD-20260824-201320896830/receipt.json",
+    "sha256": "d2df29da4b88bbc66e7f7c14067f8774ff4897915d92e8086dda694e7b0401ea",
+    "bytes": 25598
+  }
+}
