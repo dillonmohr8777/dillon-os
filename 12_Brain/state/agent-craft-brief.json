@@ -1,13 +1,9 @@
 {
   "automation_id": "agent-craft-brief",
   "status": "ok",
-  "generated_for": "2026-09-17",
+  "generated_for": "2026-09-21",
   "window_days": 14,
   "days": [
-    "2026-09-04",
-    "2026-09-05",
-    "2026-09-06",
-    "2026-09-07",
     "2026-09-08",
     "2026-09-09",
     "2026-09-10",
@@ -17,7 +13,11 @@
     "2026-09-14",
     "2026-09-15",
     "2026-09-16",
-    "2026-09-17"
+    "2026-09-17",
+    "2026-09-18",
+    "2026-09-19",
+    "2026-09-20",
+    "2026-09-21"
   ],
   "counts": {
     "routines_seen": 20,
@@ -26,10 +26,10 @@
     "cadence_drift": 0,
     "authorized_never_ran": 9,
     "earned_lessons": 22,
-    "loop_lessons": 12,
-    "loop_no_findings": 184,
+    "loop_lessons": 4,
+    "loop_no_findings": 192,
     "loop_learn_missing": 0,
-    "promotion_candidates": 2
+    "promotion_candidates": 0
   },
   "gate_blocks": [],
   "workhorses": [
@@ -41,7 +41,7 @@
       "completions": 14,
       "failures": 0,
       "reliability": 1,
-      "last_completed": "2026-09-17",
+      "last_completed": "2026-09-21",
       "fail_reason": null
     },
     {
@@ -52,18 +52,7 @@
       "completions": 14,
       "failures": 0,
       "reliability": 1,
-      "last_completed": "2026-09-17",
-      "fail_reason": null
-    },
-    {
-      "id": "D12",
-      "name": "Run repository and worktree preflight",
-      "cadence": "daily",
-      "claude_role": "terminal_readonly",
-      "completions": 14,
-      "failures": 0,
-      "reliability": 1,
-      "last_completed": "2026-09-17",
+      "last_completed": "2026-09-21",
       "fail_reason": null
     },
     {
@@ -74,7 +63,7 @@
       "completions": 14,
       "failures": 0,
       "reliability": 1,
-      "last_completed": "2026-09-17",
+      "last_completed": "2026-09-21",
       "fail_reason": null
     },
     {
@@ -85,7 +74,18 @@
       "completions": 14,
       "failures": 0,
       "reliability": 1,
-      "last_completed": "2026-09-17",
+      "last_completed": "2026-09-21",
+      "fail_reason": null
+    },
+    {
+      "id": "D12",
+      "name": "Run repository and worktree preflight",
+      "cadence": "daily",
+      "claude_role": "terminal_readonly",
+      "completions": 14,
+      "failures": 0,
+      "reliability": 1,
+      "last_completed": "2026-09-21",
       "fail_reason": null
     },
     {
@@ -96,7 +96,7 @@
       "completions": 14,
       "failures": 0,
       "reliability": 1,
-      "last_completed": "2026-09-17",
+      "last_completed": "2026-09-21",
       "fail_reason": null
     },
     {
@@ -107,7 +107,7 @@
       "completions": 14,
       "failures": 0,
       "reliability": 1,
-      "last_completed": "2026-09-17",
+      "last_completed": "2026-09-21",
       "fail_reason": null
     },
     {
@@ -118,7 +118,7 @@
       "completions": 14,
       "failures": 0,
       "reliability": 1,
-      "last_completed": "2026-09-17",
+      "last_completed": "2026-09-21",
       "fail_reason": null
     },
     {
@@ -129,7 +129,7 @@
       "completions": 14,
       "failures": 0,
       "reliability": 1,
-      "last_completed": "2026-09-17",
+      "last_completed": "2026-09-21",
       "fail_reason": null
     },
     {
@@ -140,7 +140,7 @@
       "completions": 14,
       "failures": 0,
       "reliability": 1,
-      "last_completed": "2026-09-17",
+      "last_completed": "2026-09-21",
       "fail_reason": null
     },
     {
@@ -151,7 +151,7 @@
       "completions": 14,
       "failures": 0,
       "reliability": 1,
-      "last_completed": "2026-09-17",
+      "last_completed": "2026-09-21",
       "fail_reason": null
     },
     {
@@ -162,7 +162,7 @@
       "completions": 14,
       "failures": 0,
       "reliability": 1,
-      "last_completed": "2026-09-17",
+      "last_completed": "2026-09-21",
       "fail_reason": null
     },
     {
@@ -173,7 +173,7 @@
       "completions": 14,
       "failures": 0,
       "reliability": 1,
-      "last_completed": "2026-09-17",
+      "last_completed": "2026-09-21",
       "fail_reason": null
     }
   ],
@@ -228,76 +228,6 @@
   ],
   "loop_lessons": [
     {
-      "day": "2026-09-04",
-      "id": "D03",
-      "key": "D03:route ok->blocked",
-      "text": "stage state changed since LOOP-20260903-000820922: route ok->blocked",
-      "run_id": "LOOP-20260904-084220171"
-    },
-    {
-      "day": "2026-09-04",
-      "id": "D07",
-      "key": "D07:route ok->blocked",
-      "text": "stage state changed since LOOP-20260903-000830339: route ok->blocked",
-      "run_id": "LOOP-20260904-084231653"
-    },
-    {
-      "day": "2026-09-04",
-      "id": "D12",
-      "key": "D12:route ok->blocked",
-      "text": "stage state changed since LOOP-20260903-002321475: route ok->blocked",
-      "run_id": "LOOP-20260904-084241451"
-    },
-    {
-      "day": "2026-09-05",
-      "id": "D03",
-      "key": "D03:route blocked->ok",
-      "text": "stage state changed since LOOP-20260904-084220171: route blocked->ok",
-      "run_id": "LOOP-20260905-000826236"
-    },
-    {
-      "day": "2026-09-05",
-      "id": "D07",
-      "key": "D07:route blocked->ok",
-      "text": "stage state changed since LOOP-20260904-084231653: route blocked->ok",
-      "run_id": "LOOP-20260905-000851436"
-    },
-    {
-      "day": "2026-09-05",
-      "id": "D12",
-      "key": "D12:route blocked->ok",
-      "text": "stage state changed since LOOP-20260904-084241451: route blocked->ok",
-      "run_id": "LOOP-20260905-002323395"
-    },
-    {
-      "day": "2026-09-06",
-      "id": "D03",
-      "key": "D03:build ok->blocked",
-      "text": "stage state changed since LOOP-20260905-000826236: build ok->blocked",
-      "run_id": "LOOP-20260906-000819255"
-    },
-    {
-      "day": "2026-09-06",
-      "id": "E10",
-      "key": "E10:build ok->blocked",
-      "text": "stage state changed since LOOP-20260905-005416082: build ok->blocked",
-      "run_id": "LOOP-20260906-005324447"
-    },
-    {
-      "day": "2026-09-07",
-      "id": "D03",
-      "key": "D03:build blocked->ok",
-      "text": "stage state changed since LOOP-20260906-000819255: build blocked->ok",
-      "run_id": "LOOP-20260907-000822438"
-    },
-    {
-      "day": "2026-09-07",
-      "id": "E10",
-      "key": "E10:build blocked->ok",
-      "text": "stage state changed since LOOP-20260906-005324447: build blocked->ok",
-      "run_id": "LOOP-20260907-012330274"
-    },
-    {
       "day": "2026-09-15",
       "id": "D03",
       "key": "D03:build ok->blocked",
@@ -310,29 +240,24 @@
       "key": "E10:build ok->blocked",
       "text": "stage state changed since LOOP-20260914-012325569: build ok->blocked",
       "run_id": "LOOP-20260915-005327871"
-    }
-  ],
-  "promotion_candidates": [
-    {
-      "key": "D03:build ok->blocked",
-      "id": "D03",
-      "text": "stage state changed since LOOP-20260905-000826236: build ok->blocked",
-      "days": [
-        "2026-09-06",
-        "2026-09-15"
-      ]
     },
     {
-      "key": "E10:build ok->blocked",
-      "id": "E10",
-      "text": "stage state changed since LOOP-20260905-005416082: build ok->blocked",
-      "days": [
-        "2026-09-06",
-        "2026-09-15"
-      ]
+      "day": "2026-09-20",
+      "id": "E05",
+      "key": "E05:build ok->blocked",
+      "text": "stage state changed since LOOP-20260919-005322359: build ok->blocked",
+      "run_id": "LOOP-20260920-005436022"
+    },
+    {
+      "day": "2026-09-21",
+      "id": "E05",
+      "key": "E05:build blocked->ok",
+      "text": "stage state changed since LOOP-20260920-005436022: build blocked->ok",
+      "run_id": "LOOP-20260921-012337236"
     }
   ],
+  "promotion_candidates": [],
   "dry_run": true,
-  "generated_at": "2026-09-17T13:10:11.543Z",
-  "written_at": "2026-09-17T13:10:11.543Z"
+  "generated_at": "2026-09-21T12:21:58.296Z",
+  "written_at": "2026-09-21T12:21:58.296Z"
 }

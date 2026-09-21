@@ -21,12 +21,12 @@ source_refs:
 
 | Agent | Exit | ms | Result |
 |---|---|---|---|
-| frontmatter-validate | 0 | 184 | ok |
-| frontmatter-repair | 0 | 189 | ok |
-| site-health-sentinel | 0 | 170 | ok |
-| agent-craft-brief | 0 | 153 | ok |
-| connector-health | 2 | 158 | ran, reporting bad news |
-| daily-sweep | 2 | 20215 | ran, reporting bad news |
+| frontmatter-validate | 0 | 179 | ok |
+| frontmatter-repair | 0 | 175 | ok |
+| site-health-sentinel | 0 | 206 | ok |
+| agent-craft-brief | 0 | 170 | ok |
+| connector-health | 2 | 161 | ran, reporting bad news |
+| daily-sweep | 2 | 22784 | ran, reporting bad news |
 
 ## Skipped, with reason
 

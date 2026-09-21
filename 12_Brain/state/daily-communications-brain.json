@@ -1414,6 +1414,16 @@
       "review_file": "12_Brain\\07_Reviews\\Daily Intelligence\\2026-09-16 - Communication Intelligence.md",
       "review_action": "created",
       "written_at": "2026-09-16T11:01:54.277Z"
+    },
+    "COMMS-2026-09-19-DAY-1": {
+      "status": "degraded",
+      "payload_hash": "b7bcc7cd861309f95a46df4143cf731efa35d543f9114437db798feeae105496",
+      "new_items": 0,
+      "duplicate_items": 0,
+      "capture_file": "12_Brain\\01_Captures\\Communications\\2026-09-19 - daily-communications-comms-2026-09-19-day-1.md",
+      "review_file": "12_Brain\\07_Reviews\\Daily Intelligence\\2026-09-19 - Communication Intelligence.md",
+      "review_action": "created",
+      "written_at": "2026-09-19T11:03:00.818Z"
     }
   },
   "checkpoints": {
@@ -1421,8 +1431,8 @@
     "slack": "1789556475.000000"
   },
   "last_successful_run": "2026-09-14T07:03:38-04:00",
-  "last_run": "2026-09-16T07:03:00-04:00",
+  "last_run": "2026-09-19T07:02:37-04:00",
   "last_status": "degraded",
-  "updated_at": "2026-09-16T11:01:54.277Z",
-  "generated_at": "2026-09-16T11:01:54.277Z"
+  "updated_at": "2026-09-19T11:03:00.818Z",
+  "generated_at": "2026-09-19T11:03:00.818Z"
 }
