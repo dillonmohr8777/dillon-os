@@ -29,8 +29,28 @@ def slug(value: str) -> str:
     return value[:72] or "unknown"
 
 
+# Momentum is the agency, not a client of itself, and its operating knowledge is
+# not Dillon's personal brain. Both used to be true: "01_Clients/Momentum 360"
+# fell into the client branch below and was sealed by client-isolation rules,
+# and every company folder fell through to the dillon-shared catch-all.
+MOMENTUM_CLIENT_DIRS = {"Momentum 360", "Momentum Digital"}
+MOMENTUM_TOP_DIRS = {
+    "03_Content",
+    "04_SOPs",
+    "08_Prospects",
+    "11_Agents",
+    "SEO",
+    "ai-division",
+}
+MOMENTUM_SPACE = ("momentum-shared", "Momentum operating memory", "Momentum company knowledge")
+
+
 def classify(relative: Path) -> tuple[str, str, str]:
     parts = relative.parts
+    if len(parts) >= 2 and parts[0] == "01_Clients" and parts[1] in MOMENTUM_CLIENT_DIRS:
+        return MOMENTUM_SPACE
+    if parts and parts[0] in MOMENTUM_TOP_DIRS:
+        return MOMENTUM_SPACE
     if len(parts) >= 2 and parts[0] == "01_Clients":
         label = parts[1]
         return f"client-{slug(label)}", label, "Isolated Obsidian client memory"
