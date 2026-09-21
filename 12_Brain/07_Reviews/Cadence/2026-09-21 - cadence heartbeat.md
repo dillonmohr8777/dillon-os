@@ -7,63 +7,66 @@ cadence: daily
 
 # Cadence heartbeat, 2026-09-21
 
-Reports on **yesterday, Saturday 2026-09-20**.
+Reports on **yesterday, Sunday 2026-09-20**.
 
 ## Due yesterday
 
-**Nothing.** Daily jobs are due every weekday; 2026-09-20 was a Saturday. Weekly
-is due Monday, monthly on the 1st. Zero jobs were due, zero jobs are ABSENT for
-that date, and the ledger correctly carries no row for it.
+**Nothing.** Daily jobs are due every weekday; 2026-09-20 was a Sunday. Weekly is
+due Monday, monthly on the 1st. Zero jobs were due, zero are ABSENT for that
+date, and the ledger correctly carries no row for it.
 
-That would be the whole report, except the ledger shows a gap that a strict
+That would be the whole report, except the ledger shows a gap a strict
 "yesterday only" read would hide.
 
-## ABSENT, the real finding: two full weekdays never ran
+## ABSENT: Friday 2026-09-18 never ran
 
-The last daily cadence pass was **2026-09-17**. There is no ledger row for any
-daily job on **Thursday 2026-09-18** or **Friday 2026-09-19**, both weekdays,
-both due.
+The last daily cadence pass was **Thursday 2026-09-17**. There is no ledger row
+for any daily job on **Friday 2026-09-18**, a weekday, all eight due.
 
-| Job | Last ledger entry | Due 09-18 | Due 09-19 |
-| --- | --- | --- | --- |
-| heartbeat | 2026-09-17T08:10 ok | ABSENT | ABSENT |
-| approval-queue-diff | 2026-09-17T08:11 ok | ABSENT | ABSENT |
-| unfiled-sweep | 2026-09-17T08:15 ok | ABSENT | ABSENT |
-| leads-triage | 2026-09-17T08:17 ok | ABSENT | ABSENT |
-| ops-decision-packets | 2026-09-17T08:26 ok | ABSENT | ABSENT |
-| production-briefs | 2026-09-17T08:31 ok | ABSENT | ABSENT |
-| delivery-milestones | 2026-09-17T08:38 ok | ABSENT | ABSENT |
-| agent-verifier | 2026-09-17T08:44 ok | ABSENT | ABSENT |
+| Job | Last ledger entry | Due Fri 09-18 |
+| --- | --- | --- |
+| heartbeat | 2026-09-17T08:10 ok | ABSENT |
+| approval-queue-diff | 2026-09-17T08:11 ok | ABSENT |
+| unfiled-sweep | 2026-09-17T08:15 ok | ABSENT |
+| leads-triage | 2026-09-17T08:17 ok | ABSENT |
+| ops-decision-packets | 2026-09-17T08:26 ok | ABSENT |
+| production-briefs | 2026-09-17T08:31 ok | ABSENT |
+| delivery-milestones | 2026-09-17T08:38 ok | ABSENT |
+| agent-verifier | 2026-09-17T08:44 ok | ABSENT |
 
-**16 absent job-days.** The driver never fired on either date. This is the exact
-failure mode the heartbeat exists to catch: not a job that failed loudly, a
-driver that went quiet and nobody noticed for four days.
+**8 absent job-days.** The driver did not fire on Friday. This is the failure the
+heartbeat exists to catch: not a job that failed loudly, a driver that went quiet
+into a weekend and stayed quiet for three days.
 
 Corroborating evidence, independent of the ledger: `12_Brain/07_Reviews/Cadence/`
-contains dated reports for 09-14, 09-15, 09-16, 09-17 and 09-21, and nothing at
-all for 09-18, 09-19 or 09-20. Absence on disk matches absence in the ledger, so
-the ledger is honest here; the driver simply did not run.
+holds dated reports for 09-14, 09-15, 09-16, 09-17 and 09-21, and nothing for
+09-18, 09-19 or 09-20. Absence on disk matches absence in the ledger, so the
+ledger is honest here; the driver simply did not run.
 
-The hourly `daily-sweep` watchdog also stopped: its last row before today is
+The hourly `daily-sweep` watchdog stopped too. Its last row before today is
 `2026-09-18T00:00:01Z`, then silence until `2026-09-21T11:07Z`. Both the cadence
 driver and the hourly sweep went dark across the same window, which points at the
-host rather than at any one job. See the recorded machine power fault (14 unclean
-power-offs in 30 days) as the standing candidate cause.
+host rather than at any one job. The recorded machine power fault, 14 unclean
+power-offs in 30 days, is the standing candidate cause.
 
-Today's sweep row carries `cadence-absent=2`, so the sweep independently counts
-the same two missing days.
+Today's sweep row carries `cadence-absent=2`, so the sweep independently counts a
+gap of its own.
 
-## Weekly, for context
+## Weekly, due today, already ran
 
-Weekly was due Monday 2026-09-15 and did not run that day either; it ran late
-this morning, 2026-09-21, and all three jobs are ok with artifacts on disk:
+Monday 2026-09-21 is a weekly day. All three weekly jobs ran this morning ahead
+of this pass and are ok with artifacts on disk:
 
 - `omega-search-terms` ok, `clients/omega-landscaping/deliverables/2026-09-21 - search terms pages 1-5.md`
 - `report-pairing-check` ok, `12_Brain/07_Reviews/Cadence/2026-09-21 - report pairing.md`
 - `revenue-exceptions` ok, `12_Brain/07_Reviews/Cadence/2026-09-21 - revenue exceptions.md`
 
+The prior weekly day, Monday 2026-09-14, has no weekly ledger rows at all, so
+weekly was also ABSENT that week and this morning's pass was the first one to
+land.
+
 ## Ledger honesty check
 
 Every `ok` row for the eight daily jobs names an artifact that **exists on disk**.
-Checked all eight most recent entries against the filesystem; no ledger entry
-claims a file that is not there. No lying rows found.
+All eight most recent entries checked against the filesystem. No ledger row
+claims a file that is not there.
