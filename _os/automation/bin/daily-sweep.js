@@ -89,6 +89,8 @@ const WATCHED = [
     owner: 'frontmatter-validate.js, on demand + pre-pulse' },
   { id: 'approval-queue', path: 'System/approval-queue.md', budget_h: 72,
     owner: 'every session that gates an external action' },
+  { id: 'umbrella-run', path: '12_Brain/state/umbrella-latest.json', budget_h: 26,
+    owner: 'umbrella-run.js (morning/midday/nightly slices)' },
 ];
 
 function freshness() {

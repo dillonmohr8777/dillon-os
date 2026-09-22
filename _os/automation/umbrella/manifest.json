@@ -1,0 +1,184 @@
+{
+  "version": 1,
+  "updated": "2026-09-22",
+  "authority": "System/UMBRELLA-WORKFLOW.md",
+  "description": "Single entry contract for Dillon OS daily operations. Parallel lanes share one ledger; legacy schedulers map to slices instead of opening duplicate pull requests.",
+  "slices": {
+    "morning": {
+      "label": "Morning operating picture",
+      "legacy_triggers": [
+        "claude.ai Routine morning brief (0 11 * * 1-5)",
+        "Cadence-daily first wave (09:05 local)"
+      ],
+      "lanes": [
+        "evidence-sweep",
+        "predict-work",
+        "surface-morning-briefs",
+        "plan-today",
+        "client-pulse"
+      ]
+    },
+    "midday": {
+      "label": "Competitive task rollup and drift check",
+      "legacy_triggers": [
+        "Cursor automation competitive task consolidation (0 13 * * *)"
+      ],
+      "lanes": [
+        "evidence-sweep",
+        "competitive-task-rollup",
+        "approval-surface"
+      ]
+    },
+    "nightly": {
+      "label": "Hygiene and learning carry-forward",
+      "legacy_triggers": [
+        "claude.ai Routine nightly vault hygiene (0 6 * * *)",
+        "claude.ai Routine daily learning loop (0 4 * * *)"
+      ],
+      "lanes": [
+        "evidence-sweep",
+        "learning-carryforward",
+        "hygiene-signal"
+      ]
+    },
+    "local-continuous": {
+      "label": "Windows Task Scheduler (not invoked by this repo cron)",
+      "legacy_triggers": [
+        "Claude-Autonomous-Daily-Driver (every 15 min)",
+        "Immohrtal-Crew (every 2 h)",
+        "Prospect Radar Next 20 (05:20 daily)",
+        "Cadence-sweep-heartbeat (hourly)"
+      ],
+      "lanes": [
+        "local-scheduler-receipts"
+      ]
+    }
+  },
+  "lanes": {
+    "evidence-sweep": {
+      "title": "Daily evidence sweep",
+      "parallel_group": "deterministic",
+      "type": "script",
+      "command": ["node", "_os/automation/bin/daily-sweep.js", "--json"],
+      "accept_exit_codes": [0, 2],
+      "outputs": ["12_Brain/state/daily-sweep.json", "System/sweep-status.md"]
+    },
+    "predict-work": {
+      "title": "Predictive work planner",
+      "parallel_group": "deterministic",
+      "type": "script",
+      "command": ["node", "_os/automation/bin/predict-work.js", "--lookahead-days", "35", "--history-days", "90"],
+      "accept_exit_codes": [0],
+      "outputs": [
+        "12_Brain/state/work-predictor/latest.json",
+        "Daily-Briefs/predicted-work-%DATE%.md"
+      ],
+      "env": ["DILLON_CLIENT_OPERATIONS_ROOT", "DILLON_REPORT_SOURCE_ROOTS"]
+    },
+    "surface-morning-briefs": {
+      "title": "Verify morning brief artifacts exist",
+      "parallel_group": "deterministic",
+      "type": "artifact_check",
+      "paths": [
+        "Daily-Briefs/pulse-today.md",
+        "Daily-Briefs/inbox-brief-%DATE%.md",
+        "Daily-Briefs/metrics-%DATE%.md"
+      ]
+    },
+    "plan-today": {
+      "title": "Daily plan artifact",
+      "parallel_group": "deterministic",
+      "type": "artifact_check",
+      "paths": ["Daily-Briefs/plan-%DATE%.md", "Dashboard.md"]
+    },
+    "client-pulse": {
+      "title": "Client pulse brief",
+      "parallel_group": "deterministic",
+      "type": "artifact_check",
+      "paths": ["Daily-Briefs/pulse-today.md"]
+    },
+    "competitive-task-rollup": {
+      "title": "Rank competing priorities into one board",
+      "parallel_group": "deterministic",
+      "type": "builtin",
+      "handler": "competitiveTaskRollup"
+    },
+    "approval-surface": {
+      "title": "Approval queue open count and rot list",
+      "parallel_group": "deterministic",
+      "type": "builtin",
+      "handler": "approvalSurface"
+    },
+    "learning-carryforward": {
+      "title": "Open daily-learning proposals to carry forward",
+      "parallel_group": "deterministic",
+      "type": "builtin",
+      "handler": "learningCarryforward"
+    },
+    "hygiene-signal": {
+      "title": "Latest vault-clean / wiki-lint receipts",
+      "parallel_group": "deterministic",
+      "type": "artifact_check",
+      "paths": [
+        "Daily-Briefs/vault-clean-%DATE%.md",
+        "Daily-Briefs/wiki-lint-%DATE%.md"
+      ],
+      "optional": true
+    },
+    "local-scheduler-receipts": {
+      "title": "Local automation state freshness",
+      "parallel_group": "deterministic",
+      "type": "artifact_check",
+      "paths": [
+        "12_Brain/state/claude-daily-driver.json",
+        "12_Brain/state/claude-loop.json"
+      ],
+      "optional": true
+    }
+  },
+  "agent_lanes": [
+    {
+      "id": "marketing-chief",
+      "agent": "marketing-chief",
+      "when": "After morning slice deterministic lanes; only if plan-%DATE%.md is missing or stale",
+      "skills": ["/client-pulse", "/inbox-brief", "/metrics-pull", "/plan-today"],
+      "parallel_with": ["paid-media-analyst", "revenue-ops-analyst", "reliability-scout"]
+    },
+    {
+      "id": "paid-media-analyst",
+      "agent": "paid-media-analyst",
+      "when": "When approval-queue or plan names conversion integrity, billing, or negatives",
+      "skills": ["/client-report", "/metrics-pull"]
+    },
+    {
+      "id": "revenue-ops-analyst",
+      "agent": "revenue-ops-analyst",
+      "when": "When metrics brief or queue mentions MRR, invoices, or registry reconciliation",
+      "skills": ["/week-review", "/metrics-pull"]
+    },
+    {
+      "id": "reliability-scout",
+      "agent": "reliability-scout",
+      "when": "When sweep or competitive rollup reports ABSENT cadence, stale claude-loop, or automation gaps",
+      "skills": ["/automation-ops"]
+    },
+    {
+      "id": "brain-curator",
+      "agent": "brain-curator",
+      "when": "Nightly slice; vault-clean or wiki-lint signals only",
+      "skills": ["/vault-clean", "/wiki-lint", "/session-mine"]
+    }
+  ],
+  "deprecated_standalone_automations": [
+    {
+      "name": "Cursor competitive task consolidation (daily draft PR)",
+      "action": "Replace with umbrella-run --slice midday; push to main or one rolling branch; never open a new PR per day",
+      "source_ref": "12_Brain/07_Reviews/2026-09-03 - Year Quarter Month Alignment.md"
+    },
+    {
+      "name": "Duplicate morning brief without env exports",
+      "action": "Use morning slice; export DILLON_CLIENT_OPERATIONS_ROOT per 11_Agents/Cloud Routine Prompts 2026-09-05.md",
+      "source_ref": "11_Agents/Cloud Routine Prompts 2026-09-05.md"
+    }
+  ]
+}

@@ -27,3 +27,7 @@
 {"ts":"2026-09-15T13:55:12.548Z","cadence":"daily","job":"daily-sweep","status":"ok","artifact":"System/sweep-status.md","commit":null,"note":"sweep-gaps=0 stale=3 silent=0 missed-briefs=5/14 cadence-absent=0"}
 {"ts":"2026-09-15T13:57:41.578Z","cadence":"daily","job":"daily-sweep","status":"ok","artifact":"System/sweep-status.md","commit":null,"note":"sweep-gaps=0 stale=3 silent=0 missed-briefs=5/14 cadence-absent=0"}
 {"ts":"2026-09-15T14:00:01.764Z","cadence":"daily","job":"daily-sweep","status":"ok","artifact":"System/sweep-status.md","commit":null,"note":"sweep-gaps=0 stale=3 silent=0 missed-briefs=5/14 cadence-absent=0"}
+{"ts":"2026-09-22T13:06:02.080Z","cadence":"daily","job":"daily-sweep","status":"ok","artifact":"System/sweep-status.md","commit":null,"note":"sweep-gaps=7 stale=2 silent=0 missed-briefs=10/14 cadence-absent=7"}
+{"ts":"2026-09-22T13:06:02.121Z","cadence":"umbrella","job":"evidence-sweep","status":"ok","artifact":"12_Brain/state/umbrella-latest.json","note":"ok"}
+{"ts":"2026-09-22T13:06:02.121Z","cadence":"umbrella","job":"competitive-task-rollup","status":"ok","artifact":"12_Brain/state/umbrella-latest.json","note":"ok"}
+{"ts":"2026-09-22T13:06:02.121Z","cadence":"umbrella","job":"approval-surface","status":"ok","artifact":"12_Brain/state/umbrella-latest.json","note":"ok"}
