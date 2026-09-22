@@ -2,7 +2,7 @@
 note_type: index
 status: active
 created: 2026-08-18
-updated: 2026-09-15
+updated: 2026-09-22
 source_refs: []
 tags: [craft, index]
 ---
@@ -21,13 +21,18 @@ repeat get promoted into `12_Brain/03_Concepts/` and linked back here.
 - **One unapproved input must not sink a finished batch.** Collect refusals per item; never let item 20 discard items 1-19.
 - **Untracked code that a scheduler runs is the highest-risk code in an estate.** Source belongs in git; artifacts do not.
 - **A generated file and its generator drift.** Fix the generator, then verify it reproduces the committed output before regenerating.
+- **A check that evaluated nothing must not exit 0.** Report the denominator — jobs matched, rows compared — and fail when it is zero. Otherwise *checked everything, all fine* and *checked nothing* are the same green.
 
 ## Earned lessons
 
-[[12_Brain/11_Craft/earned-lessons|earned-lessons]] - **22** recorded, append-only.
+[[12_Brain/11_Craft/earned-lessons|earned-lessons]] - **23** recorded, append-only.
 Agents write there. Never into a generated brief.
 
 Loop learn output, last 14 day(s): **11** concrete lesson(s), **168** explicit no-finding(s), **1** promotion candidate(s). Recorded per execution in the loop receipts; the latest brief lists them.
+
+## Reviews
+
+- [[12_Brain/11_Craft/2026-09-22 - daily learning review|2026-09-22 - daily learning review]] — the cadence watchdog checks zero jobs and reports green; the cadence layer has been dark since 2026-09-15.
 
 ## Briefs
 

@@ -1,7 +1,7 @@
 ---
 note_type: index
 status: active
-updated: 2026-09-15
+updated: 2026-09-22
 tags:
   - index
   - brain
@@ -133,6 +133,14 @@ evidence.
   — seven claims checked against artifacts; the Bridge attribution correction.
 - [[12_Brain/04_Decisions/2026-09-07 - Align HCM registry record is superseded|Align HCM registry record is superseded]]
   — the stale active registry record is superseded by the vault.
+
+## Reliability — 2026-09-22
+
+- [[12_Brain/11_Craft/2026-09-22 - daily learning review|The watchdog checks zero jobs and calls it clean]]
+  — `cadence-watchdog.js` ran 16 times on GitHub Actions, green every time, having
+  evaluated no jobs at all; the cadence layer it watches has written nothing since
+  2026-09-15. Blind-check detection and a test are applied; the registry/ledger join
+  and the staleness clock are proposed.
 
 ## Reliability — 2026-09-15
 

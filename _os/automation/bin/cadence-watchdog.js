@@ -111,9 +111,26 @@ function run() {
 
   const repoStale = repoAgeHours > STALE_REPO_HOURS;
   const problems = rows.filter((r) => r.state !== 'ok');
-  const ok = !repoStale && problems.length === 0;
+  // A check that evaluated nothing must not report the same green as one that
+  // evaluated everything. If the registry filter matched no job at all, this
+  // watchdog is blind and says so — that is a defect in the watchdog, not a
+  // clean bill of health for the cadence layer. "Due today" legitimately
+  // narrows to zero (weekends, monthly jobs), so only an empty REGISTRY match
+  // is a failure.
+  const blind = jobs.length === 0;
+  const ok = !blind && !repoStale && problems.length === 0;
 
-  return { ok, checkedAt: now.toISOString(), repoAgeHours: Math.round(repoAgeHours * 10) / 10, repoStale, rows, problems };
+  return {
+    ok,
+    checkedAt: now.toISOString(),
+    repoAgeHours: Math.round(repoAgeHours * 10) / 10,
+    repoStale,
+    blind,
+    jobsRegistered: jobs.length,
+    jobsDue: rows.length,
+    rows,
+    problems,
+  };
 }
 
 function main() {
@@ -125,18 +142,31 @@ function main() {
   } else {
     console.log(`cadence-watchdog  checked ${result.checkedAt}`);
     console.log(`repo age          ${result.repoAgeHours}h since last commit reached this checkout (stale past ${STALE_REPO_HOURS}h)`);
+    // Always print the denominator. A verdict without one cannot be audited.
+    console.log(`coverage          ${result.jobsRegistered} cadence job(s) matched in the registry, ${result.jobsDue} due today`);
     if (result.repoStale) {
       console.log(`  STALE REPO — nothing has reached origin in ${result.repoAgeHours}h. The ledger below cannot be trusted regardless of what it says.`);
     }
+    if (result.blind) {
+      console.log(
+        `  BLIND — no record in ${path.relative(VAULT, REGISTRY)} matched this watchdog's filter ` +
+          `(needs \`enabled\` true and a cadence like "daily via <driver>.md"), so nothing was checked. ` +
+          `This is green only because there was nothing to be red about. Fix the filter or the registry before trusting any run.`,
+      );
+    }
     if (!result.rows.length) {
-      console.log('no cadence jobs due today');
+      console.log(result.blind ? 'no cadence jobs evaluated' : 'no cadence jobs due today');
     } else {
       for (const r of result.rows) {
         const mark = r.state === 'ok' ? 'ok    ' : r.state.padEnd(6);
         console.log(`  ${mark}  ${r.cadence.padEnd(8)} ${r.id.padEnd(24)} last=${r.lastRun ?? 'never'}${r.note ? '  ' + r.note : ''}`);
       }
     }
-    console.log(result.ok ? '\nclean' : `\n${result.problems.length} problem(s)` + (result.repoStale ? ' + stale repo' : ''));
+    const faults = [];
+    if (result.problems.length) faults.push(`${result.problems.length} problem(s)`);
+    if (result.repoStale) faults.push('stale repo');
+    if (result.blind) faults.push('blind watchdog');
+    console.log(result.ok ? '\nclean' : `\n${faults.join(' + ')}`);
   }
 
   process.exit(result.ok ? 0 : 1);
