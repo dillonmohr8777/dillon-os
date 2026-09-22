@@ -1,7 +1,7 @@
 ---
 note_type: index
 status: active
-updated: 2026-09-15
+updated: 2026-09-22
 tags:
   - index
   - brain
@@ -28,6 +28,8 @@ links instead of loading the entire vault.
 - [[System/sweep-status|Sweep Status]] — today's evidence sweep, and the loud
   record of every day it did not run. If the date at the top of that file is not
   today, nothing below it was collected today.
+- [[System/UMBRELLA-WORKFLOW|Umbrella Workflow]] — one orchestrator, parallel
+  agent lanes, replaces competing daily PR automations.
 - [[System/revenue-scorecard|Revenue Scorecard]] — verified revenue state.
 
 - [[12_Brain/Bases/Strategy Library.base|Strategy Library]] - the compiled
@@ -137,6 +139,7 @@ evidence.
 ## Reliability — 2026-09-15
 
 - [[12_Brain/04_Decisions/2026-09-15 - Mac's FAQ bot is a second surface, not an opened Workmate|Mac's FAQ bot is a second surface, not an opened Workmate]]
+- [[12_Brain/04_Decisions/2026-09-22 - Umbrella workflow supersedes competing daily automations|Umbrella workflow supersedes competing daily automations]]
   — Workmate is live and free per message, but its own prompt binds it to Dillon's
   private DM with Dillon's tool authority. The team FAQ bot is a separate read-only
   surface over a scoped corpus. Blocked on naming the corpus.
