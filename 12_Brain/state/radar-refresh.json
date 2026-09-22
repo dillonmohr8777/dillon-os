@@ -1,13 +1,13 @@
 {
   "automation_id": "radar-refresh",
-  "started_at": "2026-09-21T13:00:51.216Z",
+  "started_at": "2026-09-22T11:36:54.925Z",
   "status": "error",
-  "date": "2026-09-21",
-  "rotation_slot": "PA: Warren County, Union County, Somerset County, McKean County, Franklin County, Delaware County",
+  "date": "2026-09-22",
+  "rotation_slot": "PA: Fulton County, Elk County, Clarion County, Lackawanna County, Westmoreland County, Philadelphia",
   "run": {
-    "discovered_raw": 1,
+    "discovered_raw": 81,
     "discovered_new": 0,
-    "regraded": 23,
+    "regraded": 9,
     "enriched": 0,
     "enrich_no_match": 0,
     "enrich_skipped": 0,
@@ -16,24 +16,24 @@
     ],
     "plan": "registry is at 1483 rows, past the 1200 soft cap — discovery ramped from 60 to 3",
     "throttled": true,
-    "rendered": 5,
+    "rendered": 4,
     "imagery_checked": 150,
-    "imagery_buildable": 3,
-    "logo_verified": 5,
-    "logo_pending": 120,
-    "logo_rejected": 25,
-    "not_live": 20
+    "imagery_buildable": 2,
+    "logo_verified": 4,
+    "logo_pending": 119,
+    "logo_rejected": 27,
+    "not_live": 5
   },
   "tracked": 1483,
   "active": 419,
   "logo_holds": 1044,
   "logo_hold_reasons": {
-    "logo_fetch_failed": 141,
-    "logo_not_found": 205,
+    "logo_fetch_failed": 140,
+    "logo_not_found": 207,
     "previous_homepage_exists": 140,
     "logo_below_minimum_size": 8,
-    "logo_format_not_auditable_webp": 57,
-    "logo_source_not_official_site": 21,
+    "logo_format_not_auditable_webp": 55,
+    "logo_source_not_official_site": 22,
     "business_identity_mismatch": 130,
     "logo_background_not_removable: logo border is not a single removable color": 29,
     "logo_undecodable: interlaced PNG is not decodable here": 7,
@@ -52,25 +52,25 @@
     "logo_not_usable": 4,
     "site_not_live_parked": 1
   },
-  "build_queue_size": 4,
+  "build_queue_size": 3,
   "needs_render": 0,
   "mean_site_quality": 54,
   "by_verdict": {
     "enrich": 32,
-    "rebuild": 190,
+    "rebuild": 186,
     "polish": 934,
-    "nurture": 275,
+    "nurture": 279,
     "ads_seo": 32
   },
   "by_verdict_active": {
     "polish": 350,
     "ads_seo": 17,
-    "nurture": 48,
-    "rebuild": 4
+    "nurture": 49,
+    "rebuild": 3
   },
   "errors": [
     "dashboard failed: dashboard is 1.73MB, over the 1.50MB limit — 1463 prospects. Trim projectRows() or paginate server-side before shipping this."
   ],
-  "generated_at": "2026-09-21T13:00:51.325Z",
-  "written_at": "2026-09-21T13:00:51.325Z"
+  "generated_at": "2026-09-22T11:36:55.021Z",
+  "written_at": "2026-09-22T11:36:55.021Z"
 }
