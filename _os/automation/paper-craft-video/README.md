@@ -119,6 +119,15 @@ optional and every earlier receipt builds byte-identically without them.
   extent *at maximum drift*, or keep the drift small. Measured 2026-09-10: at `drift.from
   1.14` the indigo ran out from under the last cover and the final reveal revealed nothing.
 
+  **`print[]` on a peel** (added 2026-09-22) — type printed on the sheet, so it lifts,
+  drops and tears with its paper and never moves on its own. `{text, x, y, fontSize,
+  family, rule, underline, color}` in sheet-local pixels. `family` is `"text"` (Nunito
+  Sans, uppercase, tracked — a form field label), `"display"` (Archivo Black) or `"plain"`
+  (Nunito Sans 700, sentence case). `rule` is the width of a pencil field line drawn under
+  the text; `underline` sets it as a link. A dissection of blank sheets shows that
+  something was removed but never *what*; printing the field name on each layer is what
+  makes an anatomy film an anatomy. Optional; receipts without it build unchanged.
+
 - **`focus: {from, to, dur, steps, at}`** — rack focus, as a stepped `blur()` on the plate.
   Discrete stops, so it reads as a lens turned by hand rather than a dissolve. A blur
   transition *between* plates is still banned; this is a camera move inside one shot.
