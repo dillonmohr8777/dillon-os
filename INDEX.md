@@ -1,7 +1,7 @@
 ---
 note_type: index
 status: active
-updated: 2026-09-15
+updated: 2026-09-23
 tags:
   - index
   - brain
@@ -133,6 +133,14 @@ evidence.
   — seven claims checked against artifacts; the Bridge attribution correction.
 - [[12_Brain/04_Decisions/2026-09-07 - Align HCM registry record is superseded|Align HCM registry record is superseded]]
   — the stale active registry record is superseded by the vault.
+
+## Reliability — 2026-09-23
+
+- [[12_Brain/11_Craft/2026-09-23 - daily learning review|The fix is always written, never installed]]
+  — 137 open pull requests, zero merged since 2026-09-17, and the replacement
+  routine prompts in [[11_Agents/Cloud Routine Prompts 2026-09-05]] still read
+  `awaiting-paste` eighteen days on. The cadence ledger and the generated craft
+  briefs both stop at 2026-09-15; merging and the cadence layer share one machine.
 
 ## Reliability — 2026-09-15
 

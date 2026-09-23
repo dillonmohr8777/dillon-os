@@ -17,6 +17,17 @@ Each block is the complete prompt; replace the old one wholesale.
 
 Verified on 2026-09-05 against the live Routine definitions (`list_triggers`).
 
+**Still not pasted as of 2026-09-23 — 18 days.** The daily learning loop fired that
+morning with the *old* PHASE 5 text ("open a SINGLE DRAFT pull request ... never
+close or comment on someone else's PR"), with no carry-forward step and no close
+step, which is first-hand proof its replacement below was never installed. The
+count this note was written to fix has gone the wrong way: 135 open pull requests
+on 2026-09-05, **137** on 2026-09-23, with four daily-learning PRs stacked unmerged
+(#402, #405, #407, #411) and no merge into `main` since PR #409 on 2026-09-17.
+The morning-brief and hygiene blocks could not be decided from a cloud session
+either way. Evidence and the full window:
+[[12_Brain/11_Craft/2026-09-23 - daily learning review]].
+
 ## Why each change
 
 | Routine | Change | Why |
