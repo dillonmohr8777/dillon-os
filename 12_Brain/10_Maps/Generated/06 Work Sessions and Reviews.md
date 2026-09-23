@@ -26,7 +26,7 @@ Inbox material, sessions, daily briefs, dashboards, and dated operating context.
 
 ## 00_Inbox
 
-- [[00_Inbox/2026-04-09|2026-04-09]]
+- [[07_Daily_Notes/2026-04-09|2026-04-09]]
 - [[00_Inbox/Agent-Proposals/Claude/2026-08-12-claude-loop-corrections|2026-08-12-claude-loop-corrections]]
 - [[00_Inbox/Agent-Proposals/Claude/2026-08-12-daily-driver-approval-package|2026-08-12-daily-driver-approval-package]]
 - [[00_Inbox/Agent-Proposals/Claude/2026-08-13-daily-driver-approval-package|2026-08-13-daily-driver-approval-package]]
