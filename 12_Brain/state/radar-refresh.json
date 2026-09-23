@@ -1,50 +1,49 @@
 {
   "automation_id": "radar-refresh",
-  "started_at": "2026-09-22T11:36:54.925Z",
+  "started_at": "2026-09-23T11:38:54.869Z",
   "status": "error",
-  "date": "2026-09-22",
-  "rotation_slot": "PA: Fulton County, Elk County, Clarion County, Lackawanna County, Westmoreland County, Philadelphia",
+  "date": "2026-09-23",
+  "rotation_slot": "PA: Juniata County, Clearfield County, Butler County, Monroe County, Washington County, Montgomery County",
   "run": {
-    "discovered_raw": 81,
-    "discovered_new": 0,
-    "regraded": 9,
-    "enriched": 0,
+    "discovered_raw": 27,
+    "discovered_new": 1,
+    "regraded": 5,
+    "enriched": 1,
     "enrich_no_match": 0,
     "enrich_skipped": 0,
     "errors": [
-      "dashboard failed: dashboard is 1.73MB, over the 1.50MB limit — 1463 prospects. Trim projectRows() or paginate server-side before shipping this."
+      "dashboard failed: dashboard is 1.73MB, over the 1.50MB limit — 1464 prospects. Trim projectRows() or paginate server-side before shipping this."
     ],
     "plan": "registry is at 1483 rows, past the 1200 soft cap — discovery ramped from 60 to 3",
     "throttled": true,
-    "rendered": 4,
+    "rendered": 1,
     "imagery_checked": 150,
     "imagery_buildable": 2,
-    "logo_verified": 4,
+    "logo_verified": 2,
     "logo_pending": 119,
-    "logo_rejected": 27,
-    "not_live": 5
+    "logo_rejected": 29,
+    "not_live": 1
   },
-  "tracked": 1483,
-  "active": 419,
-  "logo_holds": 1044,
+  "tracked": 1484,
+  "active": 421,
+  "logo_holds": 1043,
   "logo_hold_reasons": {
-    "logo_fetch_failed": 140,
+    "logo_fetch_failed": 143,
     "logo_not_found": 207,
     "previous_homepage_exists": 140,
-    "logo_below_minimum_size": 8,
+    "logo_below_minimum_size": 7,
     "logo_format_not_auditable_webp": 55,
     "logo_source_not_official_site": 22,
-    "business_identity_mismatch": 130,
+    "business_identity_mismatch": 129,
     "logo_background_not_removable: logo border is not a single removable color": 29,
     "logo_undecodable: interlaced PNG is not decodable here": 7,
-    "site_not_live_empty": 115,
+    "site_not_live_empty": 116,
     "logo_resolution_insufficient": 102,
-    "logo_format_not_auditable_jpg: progressive JPEG is not decodable here": 46,
+    "logo_format_not_auditable_jpg: progressive JPEG is not decodable here": 45,
     "logo_has_no_transparent_area": 4,
     "logo_format_not_auditable_gif": 7,
     "business_identity_unverified": 2,
     "SVG paints an opaque background plate": 6,
-    "logo_bytes_unavailable": 2,
     "logo_background_not_removable: no flat background found to remove": 1,
     "logo_undecodable: filtered paletted PNG is not decodable here": 9,
     "logo_is_icon_or_platform_asset": 4,
@@ -57,20 +56,20 @@
   "mean_site_quality": 54,
   "by_verdict": {
     "enrich": 32,
-    "rebuild": 186,
-    "polish": 934,
-    "nurture": 279,
+    "rebuild": 184,
+    "polish": 935,
+    "nurture": 281,
     "ads_seo": 32
   },
   "by_verdict_active": {
-    "polish": 350,
+    "polish": 352,
     "ads_seo": 17,
     "nurture": 49,
     "rebuild": 3
   },
   "errors": [
-    "dashboard failed: dashboard is 1.73MB, over the 1.50MB limit — 1463 prospects. Trim projectRows() or paginate server-side before shipping this."
+    "dashboard failed: dashboard is 1.73MB, over the 1.50MB limit — 1464 prospects. Trim projectRows() or paginate server-side before shipping this."
   ],
-  "generated_at": "2026-09-22T11:36:55.021Z",
-  "written_at": "2026-09-22T11:36:55.021Z"
+  "generated_at": "2026-09-23T11:38:54.944Z",
+  "written_at": "2026-09-23T11:38:54.944Z"
 }
