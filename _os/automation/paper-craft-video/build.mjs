@@ -209,6 +209,25 @@ const chipId = (b, i) => `${b.id}-c${i}`;
 const linkId = (b, i) => `${b.id}-l${i}`;
 const peelId = (b, i) => `${b.id}-p${i}`;
 
+// Type printed on a peel sheet. It lives inside the clipped, filled sheet, so it lifts,
+// drops and tears with its paper and never animates on its own (contract section 5).
+// `rule` draws a pencil field line under the text, the way a form field is ruled;
+// `underline` sets the text as a link. Coordinates are sheet-local pixels.
+const printHtml = (p) =>
+  (p.print || [])
+    .map(
+      (t) => `
+              <p class="print ${t.family === "display" ? "d" : t.family === "plain" ? "p" : "t"}"
+                 style="left:${t.x}px;top:${t.y}px;font-size:${t.fontSize}px;color:${t.color || P.ink};${
+                   t.underline ? "text-decoration:underline;text-decoration-thickness:0.08em;text-underline-offset:0.18em;" : ""
+                 }">${esc(t.text)}</p>${
+                t.rule
+                  ? `<div class="print-rule" style="left:${t.x}px;top:${t.y + Math.round(t.fontSize * 1.5)}px;width:${t.rule}px;"></div>`
+                  : ""
+              }`
+    )
+    .join("");
+
 // Peels are the reveal. A peel is a real sheet of photographed paper lying *on* the
 // plate, and it either lifts away (`lift`, the covering layer comes off and what was
 // underneath was always there in the photograph), lands (`drop`, something is covered
@@ -225,7 +244,7 @@ const peelsHtml = (b) =>
               p.amp ?? Math.min(26, Math.max(8, Math.min(p.w, p.h) * 0.028)),
               p.step ?? Math.min(90, Math.max(34, Math.min(p.w, p.h) * 0.075))
             )};">
-              <div class="peel-fill" style="${fillCss(p.fill)}"></div>
+              <div class="peel-fill" style="${fillCss(p.fill)}"></div>${printHtml(p)}
             </div>
           </div>`
     )
@@ -361,7 +380,18 @@ const html = `<!doctype html>
         filter: drop-shadow(0 12px 18px ${P.shadowSoft}) drop-shadow(0 3px 4px ${P.shadowTight});
       }
       .peel { position:relative; width:100%; height:100%; }
-      .peel-fill { position:absolute; inset:0; }
+      .peel-fill { position:absolute; inset:0; }${
+        receipt.beats.some((b) => (b.peels || []).some((p) => (p.print || []).length))
+          ? `
+      .print { position:absolute; margin:0; white-space:nowrap; line-height:1.04;
+               text-shadow: 0 0 0.75px currentColor, 0 0.5px 0.7px ${P.shadowSoft}; }
+      .print.d { font-family:"Archivo Black","Arial Black",system-ui,sans-serif; letter-spacing:-0.02em; }
+      .print.t { font-family:"Nunito Sans", system-ui, sans-serif; font-weight:700;
+                 letter-spacing:0.14em; text-transform:uppercase; }
+      .print.p { font-family:"Nunito Sans", system-ui, sans-serif; font-weight:700; }
+      .print-rule { position:absolute; height:1.5px; background:${P.pencil}; }`
+          : ""
+      }
 
       /* Anatomy chips: same construction as the caption card, smaller. Shadow on the
          parent so it follows the torn silhouette, not the box. */
