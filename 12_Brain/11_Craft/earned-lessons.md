@@ -550,3 +550,32 @@ only a live SERP can answer, such as who actually ranks. Also worth knowing: a
 `curl` status probe can return 403 from Cloudflare while the same URL fetched with
 `-L` and a browser user-agent returns 200 — check the status with the same request
 shape you used for the body, or you will report a site as broken when it is not.
+
+---
+
+## 2026-09-23 — A fix that needs a human hand is not shipped until the hand moves
+
+**Lesson.** When a diagnosis ends in a change only a person can install — a prompt
+pasted into a vendor UI, a scheduled task registered with elevation, a merge — the
+note recording it must carry an expiry, not a status. `awaiting-paste` looks like a
+state. It behaves like a silence: nothing rereads it, nothing counts the days, and
+the defect it describes keeps running.
+
+**Evidence.** `11_Agents/Cloud Routine Prompts 2026-09-05.md` was written the day
+dillon-os reached 135 open pull requests. It names the cause exactly — three
+claude.ai Routines that open a PR a day and close nothing — and carries the
+complete replacement prompts. Its frontmatter has read `status: awaiting-paste`
+since. Eighteen days later the repository holds 137 open pull requests, and the
+daily-learning routine fired on 2026-09-23 with the *old* Phase 5 text still in
+place: no carry-forward step, no close step. Four of its own pull requests are
+stacked unmerged (#402, #405, #407, #411), and the 2026-09-22 run's diagnosis of
+`cadence-watchdog.js` had to be rediscovered from scratch on 2026-09-23 because it
+lives on an unmerged branch. The same shape appears one rung down: the last merge
+into `main` was PR #409 on 2026-09-17, and every commit since is a bot.
+
+**How to apply.** Give a human-gated fix a due date and a check that fails when it
+passes, the way research notes carry `expires:`. Second: measure a learning loop by
+what reaches `main`, never by what it writes — a routine whose output is a branch
+has produced nothing that the next run can read. This estate recorded that lesson
+once already on 2026-09-03 ("a routine whose only output is an unmerged PR has no
+output") and then reproduced it eight times.

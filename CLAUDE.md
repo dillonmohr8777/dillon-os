@@ -51,6 +51,7 @@ scheme; new notes there are invisible to the Bases and to the HUD.
 | `12_Brain/08_Memory/` | Believed state + point-in-time snapshots |
 | `12_Brain/09_Ops/` | Agent protocol, architecture, health, coverage audits |
 | `12_Brain/10_Maps/` | Maps of content; `10_Maps/00_Atlas` is the connected map |
+| `12_Brain/11_Craft/` | Agent craft: generated operating briefs from the loop receipts, plus append-only earned lessons |
 | `12_Brain/Bases/` | Native Obsidian Bases — the database views over frontmatter |
 | `12_Brain/protocols/` | Agent protocols distilled from `11_Agents/` |
 | `12_Brain/schemas/` | Frontmatter contracts the validator enforces |

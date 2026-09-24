@@ -2,7 +2,7 @@
 note_type: index
 status: active
 created: 2026-08-18
-updated: 2026-09-15
+updated: 2026-09-23
 source_refs: []
 tags: [craft, index]
 ---
@@ -28,6 +28,13 @@ repeat get promoted into `12_Brain/03_Concepts/` and linked back here.
 Agents write there. Never into a generated brief.
 
 Loop learn output, last 14 day(s): **11** concrete lesson(s), **168** explicit no-finding(s), **1** promotion candidate(s). Recorded per execution in the loop receipts; the latest brief lists them.
+
+## Reviews
+
+Hand-written passes over the generated briefs and the loop that produces them.
+Unlike the briefs, these are not generated and may be edited.
+
+- [[12_Brain/11_Craft/2026-09-23 - daily learning review|2026-09-23 - daily learning review]] - the diagnosis lane works, the installation lane does not: 137 open PRs, zero merges since 2026-09-17, and the replacement routine prompts still unpasted after eighteen days.
 
 ## Briefs
 
