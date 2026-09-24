@@ -22,10 +22,10 @@ Checkbox items only — `_os/vault-state.js` reads this section for the HUD
 directive feed and skips any other list format.
 
 - [x] Arm Immohrtal-Crew every 2 hours; mail_ready=hold; do not send.
-- [ ] Draft the Omega conversion-integrity disclosure (inflated Sep 7-13 conversions, fix live since 2026-09-14, now day 9 unaddressed) and fix the staged weekly-report drafts' wrong-week problem so the nine negatives aren't blocked on bad data; no account mutation until Dillon says the exact AI-division release phrase.
-- [ ] Reconcile KJB Google Ads vs. CallRail/form leads for the $505 spend window and draft the reply to Mac Frederick (approval-gated, 21 days open).
-- [ ] Close out Cindy May Christmas deliverable (`due: 2026-09-01`, now 22 days past due — carried forward again) or get an explicit reschedule.
-- [ ] BOK Law Firm weekly content kit prep (window now predicted 2026-09-29 to 10-01, 6 days out — corrected from yesterday's stale window): locate/fingerprint the source packet and resolve the three topics/copy/dates — prep only, no drafting or image generation yet.
+- [ ] Draft the Omega conversion-integrity disclosure (inflated Sep 7-13 conversions, fix live since 2026-09-14, now day 10 unaddressed) and fix the staged weekly-report drafts' wrong-week problem so the nine negatives aren't blocked on bad data; no account mutation until Dillon says the exact AI-division release phrase.
+- [ ] Reconcile KJB Google Ads vs. CallRail/form leads for the $505 spend window and draft the reply to Mac Frederick (approval-gated, 22 days open).
+- [ ] Close out Cindy May Christmas deliverable (`due: 2026-09-01`, now 23 days past due — carried forward again) or get an explicit reschedule.
+- [ ] BOK Law Firm weekly content kit prep (window predicted 2026-09-29 to 10-01, 5 days out): locate/fingerprint the source packet and resolve the three topics/copy/dates — prep only, no drafting or image generation yet.
 
 ## Active projects
 
