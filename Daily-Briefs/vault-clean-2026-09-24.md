@@ -1,0 +1,617 @@
+# Vault Clean — 2026-09-24
+
+**Hygiene Grade: B (0 moves, 417 broken links)**
+
+## Summary
+- 0 stray file(s) at root
+- 0 stale inbox item(s) (>14 days)
+- 5 empty/near-empty note(s) (<3 lines)
+- 417 broken wikilink(s) detected
+
+## Empty / Near-Empty Notes (Under 3 Lines)
+- `00_Inbox/2026-04-09.md` (0 lines)
+- `00_Inbox/Dryer Vent John.md` (0 lines)
+- `07_Daily_Notes/2026-06-04.md` (0 lines)
+- `ai-division/craft/need-momentum-birds/assets/prompts/README.md` (1 lines)
+- `ai-division/craft/need-momentum-birds/compositions/COMPOSITIONS.md` (2 lines)
+
+## Stale Inbox Items
+None older than 14 days. Inbox current.
+
+## Broken Wikilinks
+- `00_Inbox/Automation Deep Analysis 2026-07-29.md`
+  - `[[_os/automation/docs/OPERATOR]]`
+  - `[[_os/automation/evidence/VERIFICATION]]`
+- `00_Inbox/Top 15 Opportunities 2026-07-02.md`
+  - `[[05_Book/overview]]`
+  - `[[05_Book/email-growth-tracker]]`
+  - `[[05_Offers/Offer Index]]`
+  - `[[07_DBA/assignment-tracker]]`
+- `00_Inbox/slack/2026-07-30-jason-sean-bot-case-status-alert.md`
+  - `[[2026-07-30 Slack Open Loops]]`
+- `00_Inbox/slack/2026-07-30-jenny-brand-direction.md`
+  - `[[2026-07-30 Slack Open Loops]]`
+- `00_Inbox/slack/2026-07-30-melissa-guidelines-training-prompt.md`
+  - `[[2026-07-30 Slack Open Loops]]`
+- `00_Inbox/slack/2026-07-30-sean-callrail-status.md`
+  - `[[2026-07-30 Slack Open Loops]]`
+- `00_Inbox/slack/2026-09-02-mac-kjb-conversion-check.md`
+  - `[[01_Clients/Kimberly James Bridal]]`
+- `01_Clients/AMI Cleaning/Client Intelligence Overlay.md`
+  - `[[overview]]`
+- `01_Clients/AMI Cleaning/overview.md`
+  - `[[Client Intelligence Overlay]]`
+- `01_Clients/AWCI.md`
+  - `[[Client Index]]`
+- `01_Clients/Align HCM.md`
+  - `[[Client Index]]`
+- `01_Clients/BOK Law Firm/Client Intelligence Overlay.md`
+  - `[[overview]]`
+- `01_Clients/BOK Law Firm/overview.md`
+  - `[[Client Intelligence Overlay]]`
+- `01_Clients/Bar Crawl USA/Client Intelligence Overlay.md`
+  - `[[overview]]`
+- `01_Clients/Bar Crawl USA/overview.md`
+  - `[[Client Intelligence Overlay]]`
+- `01_Clients/Bend Plastic Surgery.md`
+  - `[[Client Index]]`
+- `01_Clients/Bercos Popcorn/Client Intelligence Overlay.md`
+  - `[[overview]]`
+- `01_Clients/Bercos Popcorn/overview.md`
+  - `[[Client Intelligence Overlay]]`
+- `01_Clients/BigOrange Marketing/Client Intelligence Overlay.md`
+  - `[[overview]]`
+- `01_Clients/BigOrange Marketing/Custom Home Builder Pillar Project.md`
+  - `[[Communication Intelligence Map]]`
+- `01_Clients/BigOrange Marketing/overview.md`
+  - `[[Align HCM]]`
+  - `[[Custom Home Builder Pillar Project]]`
+  - `[[Communication Intelligence Map]]`
+- `01_Clients/Blissful Events.md`
+  - `[[Client Index]]`
+- `01_Clients/Bluegrass Janitorial.md`
+  - `[[Client Index]]`
+- `01_Clients/Bridge Software Development/Client Intelligence Overlay.md`
+  - `[[overview]]`
+  - `[[Product and Technical Handoff]]`
+  - `[[Source Audit]]`
+- `01_Clients/Bridge Software Development/overview.md`
+  - `[[Agent Memory]]`
+  - `[[Product and Technical Handoff]]`
+  - `[[Meeting Prep - Tori]]`
+  - `[[Brand Guidelines - Provisional]]`
+  - `[[Source Audit]]`
+  - `[[Client Intelligence Overlay]]`
+  - `[[../../10_Sessions/Bridge Software Development - 2026-07-11]]`
+- `01_Clients/Bridge of Hope OTC.md`
+  - `[[Client Index]]`
+- `01_Clients/Buzz Bull.md`
+  - `[[Client Index]]`
+- `01_Clients/Cindy May Christmas/Client Intelligence Overlay.md`
+  - `[[overview]]`
+- `01_Clients/Cindy May Christmas/overview.md`
+  - `[[Client Intelligence Overlay]]`
+- `01_Clients/Client Index.md`
+  - `[[../12_Brain/Bases/Client Strategy Overlays.base#Active Portfolio Intelligence]]`
+  - `[[../12_Brain/Bases/Client Strategy Overlays.base#Immediate Attention]]`
+  - `[[../12_Brain/Bases/Client Intelligence.base#Active Clients]]`
+  - `[[../02_FullTimeJob/AlignHCM/overview]]`
+  - `[[Momentum 360/overview]]`
+  - `[[Capsule & Tonic/overview]]`
+  - `[[Everyday Life Insurance/overview]]`
+  - `[[../12_Brain/09_Ops/Client Intelligence Coverage]]`
+- `01_Clients/Coach B.md`
+  - `[[Client Index]]`
+- `01_Clients/Commercial Cleaners Alliance.md`
+  - `[[Client Index]]`
+- `01_Clients/Florecita.md`
+  - `[[Client Index]]`
+- `01_Clients/Fresh Blends/Client Intelligence Overlay.md`
+  - `[[overview]]`
+- `01_Clients/Fresh Blends/overview.md`
+  - `[[Client Intelligence Overlay]]`
+- `01_Clients/Hardwood Artisan.md`
+  - `[[Client Index]]`
+- `01_Clients/Hope Wellness Center/Client Intelligence Overlay.md`
+  - `[[overview]]`
+- `01_Clients/Kimberly James Bridal/Client Intelligence Overlay.md`
+  - `[[overview]]`
+- `01_Clients/Link Eze.md`
+  - `[[Client Index]]`
+- `01_Clients/Momentum 360/Client Intelligence Overlay.md`
+  - `[[overview]]`
+- `01_Clients/Momentum 360/overview.md`
+  - `[[Client Intelligence Overlay]]`
+- `01_Clients/NKCDC/Client Intelligence Overlay.md`
+  - `[[overview]]`
+- `01_Clients/NKCDC/overview.md`
+  - `[[Client Intelligence Overlay]]`
+- `01_Clients/Nexla/Client Intelligence Overlay.md`
+  - `[[overview]]`
+- `01_Clients/Next Gen Solutions.md`
+  - `[[Client Index]]`
+- `01_Clients/Omega Landscaping/Client Intelligence Overlay.md`
+  - `[[overview]]`
+- `01_Clients/Omega Landscaping/Reporting Log.md`
+  - `[[2026-09-09 - Omega search terms, first audit]]`
+- `01_Clients/Onsite Concrete/Client Intelligence Overlay.md`
+  - `[[overview]]`
+- `01_Clients/PNW Pro Clean.md`
+  - `[[Client Index]]`
+- `01_Clients/Pritzker Law Group/Client Intelligence Overlay.md`
+  - `[[overview]]`
+- `01_Clients/Pritzker Law Group/overview.md`
+  - `[[Client Intelligence Overlay]]`
+- `01_Clients/Pro Fence & Deck/Client Intelligence Overlay.md`
+  - `[[overview]]`
+- `01_Clients/Puttery NYC/Client Intelligence Overlay.md`
+  - `[[overview]]`
+- `01_Clients/Replenish/Client Intelligence Overlay.md`
+  - `[[overview]]`
+- `01_Clients/Replenish/Google Ads Billing Block 2026-07-30.md`
+  - `[[Communication Intelligence Map]]`
+- `01_Clients/Revive Systems/Client Intelligence Overlay.md`
+  - `[[overview]]`
+- `01_Clients/Tags 2 Go/Client Intelligence Overlay.md`
+  - `[[overview]]`
+  - `[[Google Ads Client Slack Reports/tags-2-go-slack-channel-read]]`
+- `01_Clients/Tags 2 Go/overview.md`
+  - `[[Client Intelligence Overlay]]`
+  - `[[contact-info]]`
+  - `[[Google Ads Client Slack Reports/tags-2-go-slack-channel-read]]`
+- `01_Clients/VA Claims/Client Intelligence Overlay.md`
+  - `[[overview]]`
+- `01_Clients/Vanessa.md`
+  - `[[Client Index]]`
+- `02_Campaigns/AI Site Builder Outreach Engine/AI Site Builder Outreach Engine.md`
+  - `[[Slack Evidence Log]]`
+  - `[[Pipeline Spec]]`
+  - `[[Market Roster]]`
+  - `[[Batch Runbook]]`
+  - `[[Outreach Copy - Dillon Voice]]`
+  - `[[Verified Contacts 2026-09-03]]`
+  - `[[2026-09-03 - Outreach engine reaches its first prospect]]`
+- `02_Campaigns/AI Site Builder Outreach Engine/Batch Runbook.md`
+  - `[[AI Site Builder Outreach Engine]]`
+  - `[[Pipeline Spec]]`
+  - `[[Market Roster]]`
+  - `[[Slack Evidence Log]]`
+- `02_Campaigns/AI Site Builder Outreach Engine/DEPENDENCY_PR228.md`
+  - `[[AI Site Builder Outreach Engine]]`
+- `02_Campaigns/AI Site Builder Outreach Engine/Market Roster.md`
+  - `[[AI Site Builder Outreach Engine]]`
+  - `[[Slack Evidence Log]]`
+  - `[[Pipeline Spec]]`
+  - `[[Site Grader]]`
+- `02_Campaigns/AI Site Builder Outreach Engine/Outreach Copy - Dillon Voice.md`
+  - `[[AI Site Builder Outreach Engine]]`
+  - `[[Dillon Voice Profile]]`
+  - `[[Drip Copy]]`
+- `02_Campaigns/AI Site Builder Outreach Engine/Pipeline Spec.md`
+  - `[[AI Site Builder Outreach Engine]]`
+  - `[[Market Roster]]`
+  - `[[Site Grader]]`
+  - `[[outreach-ledger]]`
+  - `[[2026-09-03 - Outreach engine reaches its first prospect]]`
+- `02_Campaigns/AI Site Builder Outreach Engine/Site Grader.md`
+  - `[[AI Site Builder Outreach Engine]]`
+  - `[[Pipeline Spec]]`
+  - `[[Market Roster]]`
+  - `[[Batch Runbook]]`
+- `02_Campaigns/AI Site Builder Outreach Engine/Slack Evidence Log.md`
+  - `[[AI Site Builder Outreach Engine]]`
+  - `[[Pipeline Spec]]`
+  - `[[Market Roster]]`
+- `02_Campaigns/AI Site Builder Outreach Engine/Verified Contacts 2026-09-03.md`
+  - `[[AI Site Builder Outreach Engine]]`
+  - `[[2026-09-03 - Outreach engine reaches its first prospect]]`
+  - `[[Outreach Copy - Dillon Voice]]`
+- `02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260826-052002/batch-report.md`
+  - `[[AI Site Builder Outreach Engine]]`
+- `02_Campaigns/Campaign Index.md`
+  - `[[AI Site Builder Outreach Engine/AI Site Builder Outreach Engine]]`
+  - `[[IMMOHRTAL/AEO-SEO-Strategy]]`
+  - `[[Google Ads Optimization Queue]]`
+  - `[[Search Terms Review Queue]]`
+  - `[[Facebook Ads Optimization Queue]]`
+  - `[[Facebook Ads Testing Queue]]`
+  - `[[Facebook Ads Creative Requests]]`
+  - `[[Facebook Ads Budget Shift Log]]`
+  - `[[Facebook Ads Weekly Review]]`
+  - `[[Landing Page Build Queue]]`
+- `02_Campaigns/Growth Workshop/200-List Clean Report.md`
+  - `[[Growth Workshop]]`
+  - `[[Outreach Plan]]`
+- `02_Campaigns/Growth Workshop/Calendar Auto-Add.md`
+  - `[[Growth Workshop]]`
+  - `[[Google RSVP Rail]]`
+- `02_Campaigns/Growth Workshop/Drip Copy.md`
+  - `[[Growth Workshop]]`
+- `02_Campaigns/Growth Workshop/Franchise Email Sourcing Playbook.md`
+  - `[[Growth Workshop]]`
+  - `[[Outreach Plan]]`
+- `02_Campaigns/Growth Workshop/Google RSVP Rail.md`
+  - `[[Growth Workshop]]`
+- `02_Campaigns/Growth Workshop/Growth Workshop.md`
+  - `[[Outreach Plan]]`
+  - `[[Google RSVP Rail]]`
+  - `[[Drip Copy]]`
+  - `[[Franchise Email Sourcing Playbook]]`
+  - `[[Tracker Spec]]`
+  - `[[Scale Harvest Report]]`
+  - `[[lp-date-push/DEPLOY-CHECKLIST]]`
+  - `[[Calendar Auto-Add]]`
+- `02_Campaigns/Growth Workshop/Outreach Plan.md`
+  - `[[Growth Workshop]]`
+  - `[[Drip Copy]]`
+  - `[[Franchise Email Sourcing Playbook]]`
+  - `[[Calendar Auto-Add]]`
+  - `[[Google RSVP Rail]]`
+  - `[[Slack Draft — Sean]]`
+- `02_Campaigns/Growth Workshop/Scale Harvest Report.md`
+  - `[[Growth Workshop]]`
+  - `[[Franchise Email Sourcing Playbook]]`
+  - `[[Google RSVP Rail]]`
+- `02_Campaigns/Growth Workshop/Slack Draft — Sean.md`
+  - `[[Growth Workshop]]`
+- `02_Campaigns/Growth Workshop/Tracker Spec.md`
+  - `[[Growth Workshop]]`
+- `02_Campaigns/Growth Workshop/lp-date-push/DEPLOY-CHECKLIST.md`
+  - `[[Growth Workshop]]`
+  - `[[../Calendar Auto-Add]]`
+- `02_FullTimeJob/AlignHCM/AMP Image Size Warning 2026-07-30.md`
+  - `[[Communication Intelligence Map]]`
+- `02_FullTimeJob/AlignHCM/Intelligence Overlay.md`
+  - `[[overview]]`
+  - `[[content-calendar]]`
+- `02_FullTimeJob/AlignHCM/overview.md`
+  - `[[Intelligence Overlay]]`
+- `02_FullTimeJob/Job Search/Remote Marketing Roles.md`
+  - `[[Dillon Voice Profile]]`
+- `03_Content/Content Index.md`
+  - `[[SEO Keyword Targets]]`
+  - `[[Blog Opportunities]]`
+  - `[[Conversion Ad Copy Ideas]]`
+  - `[[Facebook Ads Hook Library]]`
+  - `[[Facebook Ads Offer Angles]]`
+  - `[[Lead Form Ad Copy Ideas]]`
+  - `[[Retargeting Ad Ideas]]`
+- `04_SOPs/Communication Intelligence Ingestion.md`
+  - `[[Communication Intelligence Map]]`
+  - `[[2026-07-30 Slack Open Loops]]`
+  - `[[2026-07-30 Live Slack Scan]]`
+  - `[[12_Brain/Bases/Daily Communication Intelligence.base]]`
+- `04_SOPs/SOP Index.md`
+  - `[[AM Client Review Dashboard Rollout SOP]]`
+- `10_Sessions/2026-07-29 Reporting Dashboard Training.md`
+  - `[[Communication Intelligence Map]]`
+- `10_Sessions/2026-09-14 Weekend accounting 2026-09-11 to 09-13.md`
+  - `[[machine-power-fault]]`
+- `10_Sessions/Bridge Software Development - 2026-07-11.md`
+  - `[[../01_Clients/Bridge Software Development/overview]]`
+- `10_Sessions/Session Index.md`
+  - `[[2026-09-14 Weekend accounting 2026-09-11 to 09-13]]`
+  - `[[2026-07-29 Reporting Dashboard Training]]`
+- `11_Agents/Daily Learning Loop (Local).md`
+  - `[[wikilinks]]`
+- `11_Agents/Master Agent.md`
+  - `[[Web Agent]]`
+  - `[[Google Ads Agent]]`
+  - `[[Reporting Agent]]`
+  - `[[SEO Agent]]`
+- `11_Agents/OPERATING-PLAN-2026-09-09.md`
+  - `[[dillon-real-priorities]]`
+  - `[[client-roster-drift-20260909]]`
+  - `[[OPERATING-PLAN-2026-09-10-ADDENDUM]]`
+- `11_Agents/OPERATING-PLAN-2026-09-10-ADDENDUM.md`
+  - `[[OPERATING-PLAN-2026-09-09]]`
+- `12_Brain/00_Home.md`
+  - `[[10_Maps/00_Atlas]]`
+  - `[[Bases/Command Center.base#Active Projects]]`
+  - `[[05_Projects/2026-08-24 - Perfect outcome graph engineering]]`
+  - `[[05_Projects/2026-07-30 - Dillon OS five-goal operating plan]]`
+  - `[[05_Projects/2026-07-30 - Qualified pipeline recovery]]`
+  - `[[04_Decisions/2026-07-30 - Marketing Chief is Dillon's sole agent interface]]`
+  - `[[04_Decisions/2026-09-01 - Route numeric forecasts to a specialist]]`
+  - `[[04_Decisions/2026-09-02 - Separate deliverable prediction from workload forecasting]]`
+  - `[[05_Projects/Experiments/EXP-TIMESFM-FORECAST-ROUTER]]`
+  - `[[04_Decisions/2026-09-01 - Fable 5.1 routing and effort defaults]]`
+  - `[[06_Research/2026-09-01 - Fable 5.1 launch signal sweep]]`
+  - `[[Bases/Strategy Library.base#Strategy Library]]`
+  - `[[03_Concepts/Marketing Intelligence Operating System]]`
+  - `[[03_Concepts/AEO GEO and AI Discovery]]`
+  - `[[03_Concepts/Automation and Workflow Engineering]]`
+  - `[[03_Concepts/Specialist Forecast Router]]`
+  - `[[03_Concepts/Predictive Work Planner]]`
+  - `[[03_Concepts/Leading Indicators]]`
+  - `[[09_Ops/Knowledge Coverage]]`
+  - `[[bases/Experiment Queue.base#Active Experiments]]`
+  - `[[Bases/Command Center.base#Decision Review]]`
+  - `[[Bases/Command Center.base#Research Due]]`
+  - `[[Bases/Memory Ledger.base#Needs Review]]`
+  - `[[Bases/Client Intelligence.base#Active Clients]]`
+  - `[[Bases/Client Strategy Overlays.base#Immediate Attention]]`
+  - `[[09_Ops/Client Intelligence Coverage]]`
+  - `[[../01_Clients/Client Index]]`
+  - `[[Bases/Report Archive.base#All Reports]]`
+  - `[[07_Reviews/Reports/README]]`
+  - `[[../04_SOPs/Weekly and Monthly Report Brain Ingestion]]`
+  - `[[Bases/Daily Communication Intelligence.base#Immediate Attention]]`
+  - `[[10_Maps/README]]`
+  - `[[09_Ops/Architecture]]`
+  - `[[09_Ops/Claude Target Architecture Proposal]]`
+  - `[[09_Ops/AGENT_PROTOCOL]]`
+  - `[[09_Ops/Runbook]]`
+  - `[[09_Ops/Health]]`
+  - `[[Bases/Daily Communication Intelligence.base]]`
+  - `[[../INDEX]]`
+- `12_Brain/01_Captures/2026-07-04 - obsidian-second-brain-article.md`
+  - `[[wikilinks]]`
+  - `[[link]]`
+- `12_Brain/01_Captures/2026-09-14 - Align Search Console and GA4 direct snapshot, gap table, and the Google access answer.md`
+  - `[[12_Brain/01_Captures/2026-09-14 - Empeon keyword map and Align Google evidence]]`
+  - `[[12_Brain/01_Captures/2026-09-14 - Empeon audit text and live evidence]]`
+- `12_Brain/01_Captures/Slack/2026-07-30 Live Slack Scan.md`
+  - `[[Communication Intelligence Map]]`
+  - `[[2026-07-30 Slack Open Loops]]`
+  - `[[Netlify Credits Suspension 2026-07-30]]`
+- `12_Brain/01_Captures/Slack/2026-07-30 Slack Open Loops.md`
+  - `[[2026-07-30-jason-sean-bot-case-status-alert]]`
+  - `[[2026-07-30-melissa-guidelines-training-prompt]]`
+  - `[[2026-07-30-sean-callrail-status]]`
+  - `[[2026-07-30-jenny-brand-direction]]`
+  - `[[Communication Intelligence Map]]`
+- `12_Brain/01_Captures/Slack/2026-09-02 Dillon Voice Corpus.md`
+  - `[[Dillon Voice Profile]]`
+- `12_Brain/01_Captures/research/2026-09-14 Gym and Automotive Franchise Probe.md`
+  - `[[Growth Workshop]]`
+- `12_Brain/01_Captures/sessions/2026-09-02 - recursive-vault-loop.md`
+  - `[[01_Clients/<Client>]]`
+- `12_Brain/02_Entities/Cloudflare D1 Radar.md`
+  - `[[Prospect Radar]]`
+- `12_Brain/02_Entities/Vibe Prospecting.md`
+  - `[[12_Brain/01_Captures/Slack/2026-09-01 - jason-fallon-snap-fitness-pa-request]]`
+  - `[[.claude/skills/franchise-list]]`
+- `12_Brain/03_Concepts/2026-09-07 - Conversion match-back is the differentiator.md`
+  - `[[01_Clients/Fagan Painting/overview]]`
+- `12_Brain/03_Concepts/Agent Governance and Verification.md`
+  - `[[_os/automation/docs/OPERATOR]]`
+  - `[[Specialist Forecast Router]]`
+- `12_Brain/03_Concepts/Automation and Workflow Engineering.md`
+  - `[[_os/automation/docs/OPERATOR]]`
+  - `[[_os/automation/evidence/VERIFICATION]]`
+  - `[[Specialist Forecast Router]]`
+- `12_Brain/03_Concepts/Client Reporting and Outcome Scoreboards.md`
+  - `[[_os/reporting/am-dashboard-build-prompt]]`
+- `12_Brain/03_Concepts/Content Systems and Distribution.md`
+  - `[[05_Offers/Mohr Media Business Plan]]`
+- `12_Brain/03_Concepts/Context Economy.md`
+  - `[[wikilinks]]`
+  - `[[Second Brain Architecture]]`
+- `12_Brain/03_Concepts/Conversion Tracking Setup 2026.md`
+  - `[[Google Ads Conversion Optimization 2026]]`
+- `12_Brain/03_Concepts/Dillon Voice Profile.md`
+  - `[[2026-09-02 Dillon Voice Corpus]]`
+  - `[[Prospect to Build to Outreach Pipeline]]`
+- `12_Brain/03_Concepts/Leading Indicators.md`
+  - `[[12_Brain/01_Captures/2026-07-04 - lost-clients-confirmation-2]]`
+- `12_Brain/03_Concepts/Living Second Brain.md`
+  - `[[Evidence Context and Learning Loops]]`
+  - `[[Automation and Workflow Engineering]]`
+  - `[[Marketing Intelligence Operating System]]`
+  - `[[Agent Governance and Verification]]`
+- `12_Brain/03_Concepts/Marketing Intelligence Operating System.md`
+  - `[[_os/automation/docs/OPERATOR]]`
+- `12_Brain/03_Concepts/Prospect to Build to Outreach Pipeline.md`
+  - `[[_os/automation/docs/OPERATOR]]`
+- `12_Brain/03_Concepts/README.md`
+  - `[[../Bases/Strategy Library.base#Strategy Library]]`
+  - `[[Marketing Intelligence Operating System]]`
+  - `[[Keyword Research and Search Demand]]`
+  - `[[Search Intent and Topic Architecture]]`
+  - `[[AEO GEO and AI Discovery]]`
+  - `[[Entity Authority and Citation Readiness]]`
+  - `[[Local Search and Maps Site Parity]]`
+  - `[[AI Visibility Measurement]]`
+  - `[[Qualified Pipeline Measurement]]`
+  - `[[Client Reporting and Outcome Scoreboards]]`
+  - `[[Content Systems and Distribution]]`
+  - `[[High Craft Website Factory]]`
+  - `[[Prospect to Build to Outreach Pipeline]]`
+  - `[[Automation and Workflow Engineering]]`
+  - `[[Agent Governance and Verification]]`
+  - `[[Evidence Context and Learning Loops]]`
+  - `[[Dillon Voice Profile]]`
+  - `[[Specialist Forecast Router]]`
+  - `[[Leading Indicators]]`
+  - `[[../09_Ops/Knowledge Coverage]]`
+- `12_Brain/03_Concepts/Research Verification Loop.md`
+  - `[[Second Brain Architecture]]`
+  - `[[Context Economy]]`
+- `12_Brain/03_Concepts/Second Brain Architecture.md`
+  - `[[link]]`
+  - `[[Context Economy]]`
+  - `[[Research Verification Loop]]`
+- `12_Brain/03_Concepts/Specialist Forecast Router.md`
+  - `[[Leading Indicators]]`
+- `12_Brain/04_Decisions/2026-08-13 - Prospect Radar V2 audit engine.md`
+  - `[[_os/automation/docs/RADAR-SETUP]]`
+- `12_Brain/04_Decisions/2026-09-01 - Daily comms single owner.md`
+  - `[[_os/automation/workflows/daily-communications-brain.json]]`
+  - `[[12_Brain/registry/automations.json]]`
+- `12_Brain/04_Decisions/2026-09-14 - Claude orchestrates the Agents API as primary execution space.md`
+  - `[[machine-power-fault]]`
+  - `[[agents-api-curl-path]]`
+- `12_Brain/05_Projects/2026-08-01 - Build client intelligence overlays.md`
+  - `[[12_Brain/Bases/Client Strategy Overlays.base]]`
+- `12_Brain/05_Projects/2026-09-03 - Outreach engine reaches its first prospect.md`
+  - `[[Dillon Voice Profile]]`
+  - `[[Drip Copy]]`
+- `12_Brain/06_Research/2026-08-05 - DesignSpells interaction reference.md`
+  - `[[03_Concepts/High Craft Website Factory]]`
+- `12_Brain/07_Reviews/2026-09-03 - Year Quarter Month Alignment.md`
+  - `[[12_Brain/07_Reviews/2026-09-02 - Slack open-loop sweep]]`
+- `12_Brain/07_Reviews/2026-09-09 - Google Ads API access is blocked at the connector.md`
+  - `[[_os/automation/google-ads-daily/PROVENANCE]]`
+- `12_Brain/07_Reviews/Reports/2026-08/2026-08-23 - fagan-painting - weekly - momentum-360-weekly-2026-08-17-fagan-painting.md`
+  - `[[01_Clients/Fagan Painting/overview]]`
+- `12_Brain/07_Reviews/Reports/2026-08/2026-08-31 - fagan-painting - monthly - momentum-360-august-2026-fagan-painting.md`
+  - `[[01_Clients/Fagan Painting/overview]]`
+- `12_Brain/07_Reviews/Reports/2026-09/2026-09-08 - fagan-painting - weekly - fagan-painting-weekly-2026-09-01-to-2026-09-08.md`
+  - `[[01_Clients/Fagan Painting/overview]]`
+- `12_Brain/07_Reviews/Reports/README.md`
+  - `[[12_Brain/Bases/Report Archive.base#All Reports]]`
+- `12_Brain/09_Ops/Client Intelligence Coverage.md`
+  - `[[12_Brain/Bases/Client Strategy Overlays.base]]`
+- `12_Brain/09_Ops/Netlify Credits Suspension 2026-07-30.md`
+  - `[[Communication Intelligence Map]]`
+- `12_Brain/10_Maps/Communication Intelligence Map.md`
+  - `[[2026-07-30 Slack Open Loops]]`
+  - `[[2026-07-30 Live Slack Scan]]`
+  - `[[2026-07-30-jason-sean-bot-case-status-alert]]`
+  - `[[2026-07-30-melissa-guidelines-training-prompt]]`
+  - `[[2026-07-30-sean-callrail-status]]`
+  - `[[2026-07-30-jenny-brand-direction]]`
+  - `[[Netlify Credits Suspension 2026-07-30]]`
+  - `[[2026-07-29 Reporting Dashboard Training]]`
+  - `[[12_Brain/Bases/Daily Communication Intelligence.base]]`
+- `12_Brain/10_Maps/Generated/04 Agents and Automation.md`
+  - `[[_os/automation/docs/CURSOR-HANDOFF]]`
+  - `[[_os/automation/docs/OPERATOR]]`
+  - `[[_os/automation/docs/RADAR-SETUP]]`
+  - `[[_os/automation/evidence/VERIFICATION]]`
+  - `[[_os/automation/fixtures/clients/Fixture Client One]]`
+  - `[[_os/automation/fixtures/clients/Fixture Client Two]]`
+  - `[[_os/automation/incoming/communications/README]]`
+  - `[[_os/automation/incoming/grok/README]]`
+  - `[[_os/automation/incoming/reports/README]]`
+  - `[[_os/creative-factory/README]]`
+  - `[[_os/radar-d1/README]]`
+  - `[[_os/radar-engine/README]]`
+  - `[[_os/README]]`
+  - `[[_os/reporting/am-dashboard-build-prompt]]`
+  - `[[_os/test/fixtures/public-safety-allowlisted]]`
+- `12_Brain/10_Maps/Generated/09 Other Connected Notes.md`
+  - `[[.github/skills/dillon-frontend-maker/SKILL]]`
+  - `[[.github/skills/dillon-independent-web-checker/SKILL]]`
+  - `[[.github/skills/dillon-plan-grill/SKILL]]`
+- `12_Brain/10_Maps/README.md`
+  - `[[00_Atlas]]`
+- `12_Brain/INDEX.md`
+  - `[[12_Brain/Brain Map.canvas]]`
+  - `[[12_Brain/Bases/Clients.base]]`
+  - `[[12_Brain/Bases/Projects.base]]`
+  - `[[12_Brain/Bases/Decisions.base]]`
+- `12_Brain/protocols/HUD Protocol.md`
+  - `[[_os/README]]`
+- `CLAUDE.md`
+  - `[[wikilinks]]`
+- `Daily-Briefs/outreach-ledger.md`
+  - `[[Pipeline Spec]]`
+- `Daily-Briefs/source-intake-2026-07-30.md`
+  - `[[Netlify Credits Suspension 2026-07-30]]`
+  - `[[2026-07-30-jason-sean-bot-case-status-alert]]`
+  - `[[2026-07-30-melissa-guidelines-training-prompt]]`
+  - `[[2026-07-30 Live Slack Scan]]`
+  - `[[2026-07-29 Reporting Dashboard Training]]`
+  - `[[Communication Intelligence Map]]`
+- `Daily-Briefs/vault-clean-2026-09-02.md`
+  - `[[wikilinks]]`
+  - `[[link]]`
+  - `[[12_Brain/Brain Map.canvas]]`
+- `Daily-Briefs/vault-clean-2026-09-03.md`
+  - `[[wikilinks]]`
+  - `[[link]]`
+  - `[[path]]`
+- `Daily-Briefs/vault-clean-2026-09-06.md`
+  - `[[wikilinks]]`
+- `Daily-Briefs/vault-clean-2026-09-07.md`
+  - `[[wikilinks]]`
+- `Daily-Briefs/vault-clean-2026-09-17.md`
+  - `[[link]]`
+  - `[[01_Clients/<Client>/overview]]`
+  - `[[wiki-links]]`
+- `Daily-Briefs/wiki-lint-2026-09-02.md`
+  - `[[link]]`
+- `Daily-Briefs/wiki-lint-2026-09-03.md`
+  - `[[path]]`
+- `Daily-Briefs/wiki-lint-2026-09-06.md`
+  - `[[wikilinks]]`
+- `Daily-Briefs/wiki-lint-2026-09-07.md`
+  - `[[wikilinks]]`
+- `Daily-Briefs/wiki-lint-2026-09-16.md`
+  - `[[Page Name]]`
+- `Dashboard.md`
+  - `[[12_Brain/Bases/Command Center.base#Active Projects]]`
+  - `[[12_Brain/Bases/Strategy Library.base#Strategy Library]]`
+  - `[[12_Brain/Bases/Command Center.base]]`
+  - `[[12_Brain/Bases/Daily Communication Intelligence.base]]`
+  - `[[12_Brain/Bases/Report Archive.base]]`
+  - `[[12_Brain/Bases/Client Strategy Overlays.base#Immediate Attention]]`
+  - `[[05_Offers/Offer Index]]`
+- `INDEX.md`
+  - `[[12_Brain/Bases/Strategy Library.base]]`
+  - `[[12_Brain/Bases/Client Strategy Overlays.base]]`
+  - `[[12_Brain/Bases/Daily Communication Intelligence.base]]`
+  - `[[.claude/skills/franchise-list]]`
+  - `[[_os/automation/google-ads-daily/PROVENANCE]]`
+- `SEO/AlignHCM/Blogs/adp-alternatives-blog.md`
+  - `[[switching-from-adp-blog]]`
+  - `[[best-hcm-software-blog]]`
+  - `[[ukg-vs-adp-blog]]`
+- `SEO/AlignHCM/Blogs/best-hcm-software-blog.md`
+  - `[[hcm-vs-hris-blog]]`
+  - `[[adp-alternatives-blog]]`
+  - `[[mid-market-hcm-software-blog]]`
+- `SEO/AlignHCM/Blogs/best-hris-for-small-business-blog.md`
+  - `[[hcm-vs-hris-blog]]`
+  - `[[hris-vs-hrms-blog]]`
+  - `[[best-hcm-software-blog]]`
+- `SEO/AlignHCM/Blogs/hcm-implementation-services-blog.md`
+  - `[[best-hcm-software-blog]]`
+  - `[[switching-from-adp-blog]]`
+  - `[[mid-market-hcm-software-blog]]`
+- `SEO/AlignHCM/Blogs/hcm-vs-hris-blog.md`
+  - `[[best-hcm-software-blog]]`
+  - `[[hris-vs-hrms-blog]]`
+  - `[[what-is-hcm-software-blog]]`
+- `SEO/AlignHCM/Blogs/hris-vs-hrms-blog.md`
+  - `[[hcm-vs-hris-blog]]`
+  - `[[what-is-hcm-software-blog]]`
+  - `[[best-hris-for-small-business-blog]]`
+- `SEO/AlignHCM/Blogs/mid-market-hcm-software-blog.md`
+  - `[[best-hcm-software-blog]]`
+  - `[[ukg-vs-adp-blog]]`
+  - `[[hcm-implementation-services-blog]]`
+- `SEO/AlignHCM/Blogs/switching-from-adp-blog.md`
+  - `[[adp-alternatives-blog]]`
+  - `[[ukg-vs-adp-blog]]`
+  - `[[hcm-implementation-services-blog]]`
+  - `[[best-hcm-software-blog]]`
+- `SEO/AlignHCM/Blogs/ukg-vs-adp-blog.md`
+  - `[[adp-alternatives-blog]]`
+  - `[[switching-from-adp-blog]]`
+  - `[[best-hcm-software-blog]]`
+- `SEO/AlignHCM/Blogs/what-is-hcm-software-blog.md`
+  - `[[hcm-vs-hris-blog]]`
+  - `[[best-hcm-software-blog]]`
+  - `[[mid-market-hcm-software-blog]]`
+- `_archive/01_Clients/Fagan Painting/Client Intelligence Overlay.md`
+  - `[[overview]]`
+- `_archive/01_Clients/Jeff Hozias.md`
+  - `[[Client Index]]`
+- `_archive/01_Clients/Shadow HVAC/Client Intelligence Overlay.md`
+  - `[[overview]]`
+- `_archive/09_Transcripts/Transcript Index.md`
+  - `[[../_templates/Transcript]]`
+  - `[[../12_Brain/10_Maps/README]]`
+  - `[[../12_Brain/10_Maps/00_Atlas]]`
+  - `[[../12_Brain/01_Captures/README]]`
+  - `[[../10_Sessions/Session Index]]`
+
+## Actions Taken
+None. Vault state stable from baseline.
+
+---
+
+*Generated by vault-clean automated routine*
