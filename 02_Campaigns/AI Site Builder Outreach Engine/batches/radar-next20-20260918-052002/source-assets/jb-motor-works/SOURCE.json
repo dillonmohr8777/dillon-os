@@ -1,0 +1,109 @@
+{
+  "sourceUrl": "https://www.jbmotorwork.com/",
+  "finalUrl": "https://www.jbmotorwork.com/",
+  "sourceDomain": "jbmotorwork.com",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=UTF-8",
+  "pageSha256": "717d95984fd702326e2b9cf34c2188d1d62dc6a17525a1d64e4392e00733c737",
+  "title": "Home - JB Motor Works",
+  "description": "JB Motor Works, based in Philadelphia, primarily focuses on providing automotive repair and maintenance services. This includes mechanical repairs, servicing,",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "motor",
+      "works"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\jb-motor-works\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://www.jbmotorwork.com/wp-content/uploads/2023/03/Logo-outlined-01.png",
+    "sourceEvidence": "JSON-LD logo URL",
+    "type": "png",
+    "dimensions": {
+      "width": 1000,
+      "height": 520
+    },
+    "sha256": "7cbbd3a3418ee498baf6df61101b65cc6d7be5d5df9eacf4f8993999ba8e42d7",
+    "sourceSha256": "7cbbd3a3418ee498baf6df61101b65cc6d7be5d5df9eacf4f8993999ba8e42d7",
+    "sourceType": "png",
+    "sourceFileName": null,
+    "transformation": "none; exact first-party transparent asset",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "transparentRatio": 0.3362,
+      "edgeTransparentRatio": 1,
+      "contentRatio": 0.6638,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 82709
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\jb-motor-works\\reference-1.jpg",
+      "fileName": "reference-1.jpg",
+      "sourceUrl": "https://www.jbmotorwork.com/wp-content/uploads/elementor/thumbs/mechanic-auto-repair_1_2000x1335-1536x1025-1-q37o1ku653v0u1t2h377e392z4ag05uxidjk4fab34.jpg",
+      "sourceEvidence": "IMG mechanic-auto-repair_1_2000x1335-1536x1025 mechanic-auto-repair_1_2000x1335-1536×1025",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 400,
+        "width": 600
+      },
+      "sha256": "2d2cf98e01c8b265f0d0aece0e7943de13f30798e4b914d88f65f401d398fd26",
+      "bytes": 46153,
+      "visual": {
+        "ok": true,
+        "lumaRange": 255,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\jb-motor-works\\reference-2.jpg",
+      "fileName": "reference-2.jpg",
+      "sourceUrl": "https://www.jbmotorwork.com/wp-content/uploads/elementor/thumbs/Manufacturers-warranty-2-q393b1aw7a5j8x6easq6se8ph49kf0738jig1r0asg.jpg",
+      "sourceEvidence": "IMG manufacturers-warranty-2 manufacturers-warranty-2",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 400,
+        "width": 600
+      },
+      "sha256": "e8d2a7e2491382f8f9a54bcf8f614bc73cf0758f814a4211baa94539c498955a",
+      "bytes": 53437,
+      "visual": {
+        "ok": true,
+        "lumaRange": 255,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\jb-motor-works\\reference-3.jpg",
+      "fileName": "reference-3.jpg",
+      "sourceUrl": "https://www.jbmotorwork.com/wp-content/uploads/elementor/thumbs/car-paint-repair-q393e3a0ewc2zaqngm9je4hmz77iflbonnu974h8kg.jpg",
+      "sourceEvidence": "IMG car-paint-repair car-paint-repair",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 400,
+        "width": 600
+      },
+      "sha256": "e41ae87a5c1107fc176fc0bcff062fdb3a0c6fb91bc71106a51935e0dbd52250",
+      "bytes": 35194,
+      "visual": {
+        "ok": true,
+        "lumaRange": 251,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [],
+  "brandColors": [
+    "#3f6de4",
+    "#003388",
+    "#655997",
+    "#fd3e3e",
+    "#abb8c3"
+  ],
+  "checkedAt": "2026-09-18T09:21:50.132Z"
+}

@@ -1,0 +1,168 @@
+{
+  "slug": "polka-dots",
+  "preparedAt": "2026-09-17T09:22:59.442Z",
+  "sourceSite": "https://shopatpolkadots.com/",
+  "sourceFinalUrl": "https://shopatpolkadots.com/",
+  "sourcePageSha256": "dc4157c7a28b3f7b80f5c17b21e242f904c220e59793e671e44ae92297f4fb4c",
+  "exactLogoRequired": true,
+  "exactLogoSha256": "1c17d9728670ea8dca7529bffb84f27f6430cdd33ed9faae6887162e056f06bd",
+  "firstPartyDerivativePolicy": "Content visuals preserve first-party source photography while adapting crop and tonal balance for the private mobile concept. They are not evidence of additional projects or outcomes.",
+  "generatedCompositionReference": "automation/prospect-radar-next20/.impeccable/mocks/architerra-mobile-three-directions.png",
+  "assets": [
+    {
+      "role": "exact identity",
+      "output": "logo.png",
+      "sourceUrl": "https://shopatpolkadots.com/wp-content/uploads/2018/12/polka_dots_standard_logo@05x.png",
+      "sourceSha256": "1c17d9728670ea8dca7529bffb84f27f6430cdd33ed9faae6887162e056f06bd",
+      "outputSha256": "1c17d9728670ea8dca7529bffb84f27f6430cdd33ed9faae6887162e056f06bd",
+      "transformation": "none; exact first-party transparent asset",
+      "transparent": true
+    },
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://shopatpolkadots.com/wp-content/uploads/2026/04/bcp-8398-f-2048x1513.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "79f0451a7741f470f02dea6e00bdc8cb6737323e056b445947c9fced31522a9a",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=0.940:contrast=1.010:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "15076e54579d3de31fb8770d6ca9caa07dd8d9399ceb61e41a091ea7d2d41dd7"
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://shopatpolkadots.com/wp-content/uploads/2026/04/bcp-7942-f-2048x1345.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "7f3677835feea0e3f53956e97b0085535b662aff2919bc39195ba69cd61d82fb",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:0,eq=saturation=0.965:contrast=1.064:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "93c2313c4506bcde8fa08a9273acbfda346ea7941d74e9d0dfe4335d20bacffe"
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://shopatpolkadots.com/wp-content/uploads/2026/04/bcp-8170-f-2048x1365.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "2ef1240bde4bcf470b6281246d2a008ae2db0cc0763575f7478dd1585946d1fb",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:0,eq=saturation=0.990:contrast=1.028:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "d76c096a56497414d6a3ccdd926dc6f85be7c2d70aa23c6cec16189271ed1c24"
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://shopatpolkadots.com/wp-content/uploads/2026/04/bcp-8398-f-2048x1513.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "79f0451a7741f470f02dea6e00bdc8cb6737323e056b445947c9fced31522a9a",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:0,eq=saturation=1.015:contrast=1.082:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "3060b1b127493d6378e81e085bf2432fff1913a9b5a327391a32409f1a68ad78"
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://shopatpolkadots.com/wp-content/uploads/2026/04/bcp-7942-f-2048x1345.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "7f3677835feea0e3f53956e97b0085535b662aff2919bc39195ba69cd61d82fb",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:42,eq=saturation=1.040:contrast=1.046:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "1597891ca074bbc322b0f31af87a29246dacada7d928ae7c0664508dc3e6508f"
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://shopatpolkadots.com/wp-content/uploads/2026/04/bcp-8170-f-2048x1365.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "2ef1240bde4bcf470b6281246d2a008ae2db0cc0763575f7478dd1585946d1fb",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:42,eq=saturation=0.940:contrast=1.010:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "1eed8a4ed8785b354c0b454efa2ef62d152f194bb1ba7a63b8b38243b0137a5c"
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://shopatpolkadots.com/wp-content/uploads/2026/04/bcp-8398-f-2048x1513.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "79f0451a7741f470f02dea6e00bdc8cb6737323e056b445947c9fced31522a9a",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:42,eq=saturation=0.965:contrast=1.064:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "e25bdfbeb6750aa05fab1403f22ac61976b6626b7bbdf5b8742bc8d8d5e315a0"
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://shopatpolkadots.com/wp-content/uploads/2026/04/bcp-7942-f-2048x1345.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "7f3677835feea0e3f53956e97b0085535b662aff2919bc39195ba69cd61d82fb",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:42,eq=saturation=0.990:contrast=1.028:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "e48e693f51eed7b3de8ac67a7c9a357c7394120b5d59cf161d764641011f44d3"
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://shopatpolkadots.com/wp-content/uploads/2026/04/bcp-8170-f-2048x1365.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "2ef1240bde4bcf470b6281246d2a008ae2db0cc0763575f7478dd1585946d1fb",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:84,eq=saturation=1.015:contrast=1.082:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "c0a0077b9a1df6cfda10d1601f397b84e9b0bfd914ef1054a7bb480b15449e0e"
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://shopatpolkadots.com/wp-content/uploads/2026/04/bcp-8398-f-2048x1513.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "79f0451a7741f470f02dea6e00bdc8cb6737323e056b445947c9fced31522a9a",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:84,eq=saturation=1.040:contrast=1.046:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "df3b6b037dfd7b3e0307d0718e129667477f1a44e43d5289fc03c38291dc4b85"
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://shopatpolkadots.com/wp-content/uploads/2026/04/bcp-7942-f-2048x1345.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "7f3677835feea0e3f53956e97b0085535b662aff2919bc39195ba69cd61d82fb",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:84,eq=saturation=0.940:contrast=1.010:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "df09d638d47fc81f4febac79e9a0de23a5cad9dd71f453fde8803e18fe589451"
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://shopatpolkadots.com/wp-content/uploads/2026/04/bcp-8170-f-2048x1365.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "2ef1240bde4bcf470b6281246d2a008ae2db0cc0763575f7478dd1585946d1fb",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:84,eq=saturation=0.965:contrast=1.064:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "228be8bd0abecf58921d471031d1b3090eef7ce8a6130856504c604b5fd05e6c"
+    }
+  ],
+  "fonts": {
+    "pair": {
+      "id": "syne-work",
+      "display": "Syne",
+      "text": "Work Sans"
+    },
+    "source": "Google Fonts CSS API",
+    "files": [
+      {
+        "file": "font-display-400.woff2",
+        "sha256": "68b623f0e45b905041b2edb9b2e4f563a505f13db1cd06b5f1946eb2e1f47048"
+      },
+      {
+        "file": "font-display-700.woff2",
+        "sha256": "68b623f0e45b905041b2edb9b2e4f563a505f13db1cd06b5f1946eb2e1f47048"
+      },
+      {
+        "file": "font-text-400.woff2",
+        "sha256": "1dd49afc07fb2231b2ff686cbf007725fb2742271bb1f28ebd98f22a0d817343"
+      },
+      {
+        "file": "font-text-700.woff2",
+        "sha256": "1dd49afc07fb2231b2ff686cbf007725fb2742271bb1f28ebd98f22a0d817343"
+      }
+    ]
+  }
+}

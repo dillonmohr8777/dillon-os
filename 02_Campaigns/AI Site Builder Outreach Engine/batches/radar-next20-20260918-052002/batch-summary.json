@@ -1,0 +1,314 @@
+{
+  "batchId": "radar-next20-20260918-052002",
+  "targetCount": 20,
+  "briefCount": 20,
+  "allowPartial": false,
+  "skipQa": false,
+  "forceHoldAll": false,
+  "batchFailures": [],
+  "qaReadyCount": 0,
+  "mailReadyAlwaysHold": true,
+  "results": [
+    {
+      "slug": "a-w-miller-technical-sales",
+      "prospectId": "RADAR-NEXT20-015",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 436,
+      "images": 13,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "api-autobody-products",
+      "prospectId": "RADAR-NEXT20-003",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 407,
+      "images": 13,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "avalon-flooring",
+      "prospectId": "RADAR-NEXT20-002",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 431,
+      "images": 13,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "bedford-carpet-one-floor-and-home",
+      "prospectId": "RADAR-NEXT20-007",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 449,
+      "images": 13,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "china-moon",
+      "prospectId": "RADAR-NEXT20-012",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 404,
+      "images": 13,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "compass-financial-solutions-financial-planner",
+      "prospectId": "RADAR-NEXT20-019",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 454,
+      "images": 13,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "dental-wellness",
+      "prospectId": "RADAR-NEXT20-008",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 397,
+      "images": 13,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "friendly-tax-advisors",
+      "prospectId": "RADAR-NEXT20-014",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 426,
+      "images": 13,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "jb-motor-works",
+      "prospectId": "RADAR-NEXT20-016",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 423,
+      "images": 13,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "jl-alliance-group",
+      "prospectId": "RADAR-NEXT20-013",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 431,
+      "images": 13,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "john-holroyd-agency",
+      "prospectId": "RADAR-NEXT20-018",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 426,
+      "images": 13,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "jonathan-stone-d-m-d",
+      "prospectId": "RADAR-NEXT20-009",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 422,
+      "images": 13,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "keyes-water-wells",
+      "prospectId": "RADAR-NEXT20-010",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 424,
+      "images": 13,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "mazzoni-center",
+      "prospectId": "RADAR-NEXT20-006",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 406,
+      "images": 13,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "panitch-schwarze-belisario-and-nadel",
+      "prospectId": "RADAR-NEXT20-020",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 437,
+      "images": 13,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "positano-ristorante",
+      "prospectId": "RADAR-NEXT20-011",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 409,
+      "images": 13,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "rambo-orthodontics",
+      "prospectId": "RADAR-NEXT20-001",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 413,
+      "images": 13,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "rubin-glickman-steinberg-and-gifford-p-c",
+      "prospectId": "RADAR-NEXT20-017",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 446,
+      "images": 13,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "the-sprowls-insurance-group",
+      "prospectId": "RADAR-NEXT20-004",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 441,
+      "images": 13,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "veekoo",
+      "prospectId": "RADAR-NEXT20-005",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 412,
+      "images": 13,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    }
+  ],
+  "ok": false
+}

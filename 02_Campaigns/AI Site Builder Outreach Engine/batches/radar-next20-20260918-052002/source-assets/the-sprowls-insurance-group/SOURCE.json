@@ -1,0 +1,126 @@
+{
+  "sourceUrl": "https://sprowlsinsurance.com/",
+  "finalUrl": "https://sprowlsinsurance.com/",
+  "sourceDomain": "sprowlsinsurance.com",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=UTF-8",
+  "pageSha256": "dd84f8e8e9a9d83ba30f01afedcb9fcb74e641c82cddcfb5fb5d493d144fb635",
+  "title": "Sprowls Insurance Group - Independent Agency - PA, MD, WV",
+  "description": "Since 1963, Sprowls Insurance group has expanded to serve clients across PA, MD, and WV with business, benefits, and personal insurance. Get a quote!",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "sprowls",
+      "insurance"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\the-sprowls-insurance-group\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://sprowlsinsurance.com/wp-content/uploads/2020/06/Sprowls-Insurance-Group-Logo-New-800.png",
+    "sourceEvidence": "IMG stnd default-logo skip-lazy-aaso dark-version  sprowls insurance group",
+    "type": "png",
+    "dimensions": {
+      "width": 800,
+      "height": 607
+    },
+    "sha256": "d978e2564fff0a2b173b8d95c248ea3fe92d138a5c2eaf8f586ed183a4bb55cf",
+    "sourceSha256": "e526863a85fa08290d40b91a4c8264b645257b2beb8ec33be6589b4d98d6deb1",
+    "sourceType": "png",
+    "sourceFileName": "logo-source.png",
+    "transformation": "flat border color rgb(0,0,0) removed by border-seeded flood fill at tolerance 32; geometry unchanged",
+    "borderSpread": 0,
+    "alpha": {
+      "ok": true,
+      "transparentRatio": 0.7749,
+      "edgeTransparentRatio": 1,
+      "contentRatio": 0.2251,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 37215
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\the-sprowls-insurance-group\\reference-1.jpg",
+      "fileName": "reference-1.jpg",
+      "sourceUrl": "https://sprowlsinsurance.com/wp-content/uploads/2020/05/Sprowls-Insurance-Group-Open-Graph.jpg",
+      "sourceEvidence": "og:image",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 630,
+        "width": 1200
+      },
+      "sha256": "0cec2da093d30565ecce203046facc85c5947f9211362233803cf9a19cbedaca",
+      "bytes": 460390,
+      "visual": {
+        "ok": true,
+        "lumaRange": 250.1,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\the-sprowls-insurance-group\\reference-2.png",
+      "fileName": "reference-2.png",
+      "sourceUrl": "https://sprowlsinsurance.com/wp-content/uploads/2025/10/Award-Silver-Best-in-Fayette-2025.png",
+      "sourceEvidence": "IMG alignnone wp-image-19971 size-thumbnail  award - silver best in fayette 2025",
+      "type": "png",
+      "dimensions": {
+        "width": 500,
+        "height": 500
+      },
+      "sha256": "8a23d75fcf731a24b7ea6aaed36450d431d8a26a36b900666e0d48e0b262f73d",
+      "bytes": 192946,
+      "visual": {
+        "ok": true,
+        "lumaRange": 255,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\the-sprowls-insurance-group\\reference-3.png",
+      "fileName": "reference-3.png",
+      "sourceUrl": "https://sprowlsinsurance.com/wp-content/uploads/2024/10/Award-Silver-Best-in-Fayette-2024.png",
+      "sourceEvidence": "IMG alignnone wp-image-19762 size-thumbnail  award - silver best in fayette 2024",
+      "type": "png",
+      "dimensions": {
+        "width": 500,
+        "height": 500
+      },
+      "sha256": "cd7e7262ba76d32691fd089af053ae1f2f9c49a4869285c9575b26a1b6b021df",
+      "bytes": 174380,
+      "visual": {
+        "ok": true,
+        "lumaRange": 255,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [
+    {
+      "url": "https://sprowlsinsurance.com/1200",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://sprowlsinsurance.com/630",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://sprowlsinsurance.com/image/jpeg",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://sprowlsinsurance.com/wp-content/uploads/2020/05/Keystone-Insurance-Partnership-Small.jpg",
+      "reason": "reference image is too small"
+    }
+  ],
+  "brandColors": [
+    "#94181e",
+    "#003388",
+    "#9b1c1e",
+    "#c52b02",
+    "#003399"
+  ],
+  "checkedAt": "2026-09-18T09:21:26.878Z"
+}

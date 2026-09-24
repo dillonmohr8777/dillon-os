@@ -1,0 +1,314 @@
+{
+  "batchId": "radar-next20-20260917-052001",
+  "targetCount": 20,
+  "briefCount": 20,
+  "allowPartial": false,
+  "skipQa": false,
+  "forceHoldAll": false,
+  "batchFailures": [],
+  "qaReadyCount": 0,
+  "mailReadyAlwaysHold": true,
+  "results": [
+    {
+      "slug": "8-cylinders-auto-repair-philadelphia",
+      "prospectId": "RADAR-NEXT20-018",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 438,
+      "images": 13,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "anthony-and-sylvan-pool-supplies",
+      "prospectId": "RADAR-NEXT20-001",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 443,
+      "images": 12,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "chester-county-carpet-and-flooring",
+      "prospectId": "RADAR-NEXT20-014",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 447,
+      "images": 13,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "impriano-roofing-and-siding",
+      "prospectId": "RADAR-NEXT20-008",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 429,
+      "images": 13,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "infratek-solutions-inc",
+      "prospectId": "RADAR-NEXT20-004",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 426,
+      "images": 13,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "kauffman-metals",
+      "prospectId": "RADAR-NEXT20-017",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 429,
+      "images": 12,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "kc-s-alley",
+      "prospectId": "RADAR-NEXT20-006",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 423,
+      "images": 13,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "mondo-contract-flooring",
+      "prospectId": "RADAR-NEXT20-010",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 420,
+      "images": 13,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "national-real-estate-development-llc",
+      "prospectId": "RADAR-NEXT20-011",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 444,
+      "images": 12,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "nemours-childrens-health",
+      "prospectId": "RADAR-NEXT20-002",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 403,
+      "images": 12,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "oaks-nail-spa",
+      "prospectId": "RADAR-NEXT20-012",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 406,
+      "images": 13,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "occasions-boutique",
+      "prospectId": "RADAR-NEXT20-013",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 422,
+      "images": 13,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "passion-day-spa",
+      "prospectId": "RADAR-NEXT20-003",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 418,
+      "images": 13,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "polka-dots",
+      "prospectId": "RADAR-NEXT20-005",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 411,
+      "images": 13,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "providence-spa-and-nails",
+      "prospectId": "RADAR-NEXT20-009",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 411,
+      "images": 12,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "suburban-autoworks",
+      "prospectId": "RADAR-NEXT20-007",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 410,
+      "images": 13,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "temple-health-northeastern-campus",
+      "prospectId": "RADAR-NEXT20-019",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 428,
+      "images": 12,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "the-salon-professional-academy-collegeville",
+      "prospectId": "RADAR-NEXT20-015",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 444,
+      "images": 12,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "vp-nails",
+      "prospectId": "RADAR-NEXT20-020",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 417,
+      "images": 13,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "zommick-mcmahon-commercial-real-estate-inc",
+      "prospectId": "RADAR-NEXT20-016",
+      "qa": "FAIL",
+      "visualQa": "ran",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 457,
+      "images": 13,
+      "failures": [
+        "Generator concept copy is still in the first viewport"
+      ],
+      "warnings": []
+    }
+  ],
+  "ok": false
+}

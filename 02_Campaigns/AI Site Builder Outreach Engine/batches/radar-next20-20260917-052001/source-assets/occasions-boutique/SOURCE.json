@@ -1,0 +1,90 @@
+{
+  "sourceUrl": "https://www.occasions-boutique.com/",
+  "finalUrl": "https://www.occasions-boutique.com/",
+  "sourceDomain": "occasions-boutique.com",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=UTF-8",
+  "pageSha256": "de0122e1b234bd12ab19c90c3deb547e19f3d30818707b0ad363889cfe36c0f3",
+  "title": "Women's Dresses in Malvern, PA | Occasions Boutique",
+  "description": "Located in Malvern, PA - Occasions Boutique offers a wide selection of women's dresses, clothing and accessories for a variety of special occasions.",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "occasions",
+      "boutique"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\occasions-boutique\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://www.occasions-boutique.com/wp-content/uploads/2017/12/occasions-boutique-logo.png",
+    "sourceEvidence": "IMG mkhb-logo-el__image  30 east king street. malvern, pa 19355. | phone: (610) 296-0442 | fax: (610) 296-0489 | occasions@verizon.net 30 east king street. malvern, pa 19355. | phone: (610) 296-0442 | fax: (610) 296-0489 | occasions@verizon.net",
+    "type": "png",
+    "dimensions": {
+      "width": 545,
+      "height": 187
+    },
+    "sha256": "8a15b55367be821e9064ad74dfbeada3a233a8a7070f76055ccd45cdcb323f9f",
+    "sourceSha256": "8a15b55367be821e9064ad74dfbeada3a233a8a7070f76055ccd45cdcb323f9f",
+    "sourceType": "png",
+    "sourceFileName": null,
+    "transformation": "none; exact first-party transparent asset",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "transparentRatio": 0.833,
+      "edgeTransparentRatio": 1,
+      "contentRatio": 0.167,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 21002
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\occasions-boutique\\reference-1.png",
+      "fileName": "reference-1.png",
+      "sourceUrl": "https://www.occasions-boutique.com/wp-content/uploads/2026/03/bridalad2.png",
+      "sourceEvidence": "IMG lightbox-false  bridalad2 bridalad2",
+      "type": "png",
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "sha256": "ae6a4f4e10f7ed9c4cf1c6ad10ffbae1d75480e31229178d68dddf362706311e",
+      "bytes": 559908,
+      "visual": {
+        "ok": true,
+        "lumaRange": 228,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [
+    {
+      "url": "https://www.occasions-boutique.com/wp-content/plugins/revslider/public/assets/assets/dummy.png",
+      "reason": "reference image is too small"
+    },
+    {
+      "url": "https://www.occasions-boutique.com/wp-content/uploads/2019/11/christening-collection2020.jpg",
+      "reason": "progressive JPEG is not decodable here"
+    },
+    {
+      "url": "https://www.occasions-boutique.com/wp-content/uploads/2021/10/girls-2021.jpg",
+      "reason": "progressive JPEG is not decodable here"
+    },
+    {
+      "url": "https://www.occasions-boutique.com/wp-content/uploads/2021/10/communion-2021.jpg",
+      "reason": "progressive JPEG is not decodable here"
+    }
+  ],
+  "brandColors": [
+    "#003388",
+    "#003399",
+    "#b3e5fc",
+    "#00d084",
+    "#0693e3"
+  ],
+  "checkedAt": "2026-09-17T09:21:12.670Z"
+}

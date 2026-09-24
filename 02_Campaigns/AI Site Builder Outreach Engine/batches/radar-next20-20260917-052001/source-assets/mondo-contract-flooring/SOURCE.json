@@ -1,0 +1,127 @@
+{
+  "sourceUrl": "https://mondocontractflooring.com/",
+  "finalUrl": "https://mondocontractflooring.com/",
+  "sourceDomain": "mondocontractflooring.com",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=UTF-8",
+  "pageSha256": "93b1d167e324bc77540995e11a9c2da64cc3dd7a562fe88f2fadd5f82c910bf6",
+  "title": "Mondo Contract Flooring | Premium Rubber Flooring",
+  "description": "Mondo Contract Flooring specializes in rubber flooring for healthcare, education, corporate, and more applications. Contact us today about your project!",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "mondo",
+      "contract",
+      "flooring"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\mondo-contract-flooring\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://mondocontractflooring.com/wp-content/uploads/2026/05/Logo-EN.png",
+    "sourceEvidence": "IMG custom-logo  mondo contract flooring",
+    "type": "png",
+    "dimensions": {
+      "width": 800,
+      "height": 90
+    },
+    "sha256": "70a2a2c7bf43ab68ba01df2758b9c80e2bbb7a0b8b26a94f7780cc122e21d7ee",
+    "sourceSha256": "70a2a2c7bf43ab68ba01df2758b9c80e2bbb7a0b8b26a94f7780cc122e21d7ee",
+    "sourceType": "png",
+    "sourceFileName": null,
+    "transformation": "none; exact first-party transparent asset",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "transparentRatio": 0.4089,
+      "edgeTransparentRatio": 0.6287,
+      "contentRatio": 0.5911,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 12109
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\mondo-contract-flooring\\reference-1.jpg",
+      "fileName": "reference-1.jpg",
+      "sourceUrl": "https://mondocontractflooring.com/wp-content/uploads/2026/06/Mondo_UMMH_Hallway_HAR_-1-500x331.jpg",
+      "sourceEvidence": "IMG attachment-woocommerce_thumbnail size-woocommerce_thumbnail lazyloaded  umass memorial hospital",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 331,
+        "width": 500
+      },
+      "sha256": "1cc60b5a409ed78249e5a78d2ed8011affb4e541191310b889206d0a1771d68f",
+      "bytes": 29595,
+      "visual": {
+        "ok": true,
+        "lumaRange": 249.1,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\mondo-contract-flooring\\reference-2.jpg",
+      "fileName": "reference-2.jpg",
+      "sourceUrl": "https://mondocontractflooring.com/wp-content/uploads/2026/01/TENGBOM-OK3-1-1024x649-1-500x317.jpg",
+      "sourceEvidence": "IMG attachment-woocommerce_thumbnail size-woocommerce_thumbnail lazyloaded  offices of tengbom arkitekter",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 317,
+        "width": 500
+      },
+      "sha256": "4381187850f59fd7c98273a175a91c4fa84ee6e53a6aefa09265eb0700f207b9",
+      "bytes": 25814,
+      "visual": {
+        "ok": true,
+        "lumaRange": 254.2,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\mondo-contract-flooring\\reference-3.jpg",
+      "fileName": "reference-3.jpg",
+      "sourceUrl": "https://mondocontractflooring.com/wp-content/uploads/2026/01/Mondo_TwinValley_Reception_GTO-1024x731-1-500x357.jpg",
+      "sourceEvidence": "IMG attachment-woocommerce_thumbnail size-woocommerce_thumbnail lazyloaded  twin valley behavioral health hospital",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 357,
+        "width": 500
+      },
+      "sha256": "1fc412560ef6ceb3018f1dd8ac72e21e69361e39b7e4c10e195c837048ca43b2",
+      "bytes": 28085,
+      "visual": {
+        "ok": true,
+        "lumaRange": 254.6,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [
+    {
+      "url": "https://mondocontractflooring.com/wp-content/uploads/2024/06/HEAD_SUST_ITA_ok-3500x1763.jpg",
+      "reason": "progressive JPEG is not decodable here"
+    },
+    {
+      "url": "https://mondocontractflooring.com/1920",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://mondocontractflooring.com/967",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://mondocontractflooring.com/Homepage",
+      "reason": "unsupported reference type unknown"
+    }
+  ],
+  "brandColors": [
+    "#003388",
+    "#5e6d80",
+    "#6b7a8b",
+    "#96a5b5",
+    "#0170b9"
+  ],
+  "checkedAt": "2026-09-17T09:21:01.205Z"
+}

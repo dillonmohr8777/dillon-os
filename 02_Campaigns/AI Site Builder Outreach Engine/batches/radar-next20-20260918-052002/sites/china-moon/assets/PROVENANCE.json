@@ -1,0 +1,168 @@
+{
+  "slug": "china-moon",
+  "preparedAt": "2026-09-18T09:23:34.231Z",
+  "sourceSite": "http://www.chinamoonboyertown.com/",
+  "sourceFinalUrl": "https://www.chinamoonboyertown.com/",
+  "sourcePageSha256": "0b59d3f08261bca9bc46047cefa04da768aa26fe5c4faf6e943a7b62399ae523",
+  "exactLogoRequired": true,
+  "exactLogoSha256": "1891c47368ca3b9711c32b75b77de5c0005b3aad0d5d2df3bf7db2128ab91d46",
+  "firstPartyDerivativePolicy": "Content visuals preserve first-party source photography while adapting crop and tonal balance for the private mobile concept. They are not evidence of additional projects or outcomes.",
+  "generatedCompositionReference": "automation/prospect-radar-next20/.impeccable/mocks/architerra-mobile-three-directions.png",
+  "assets": [
+    {
+      "role": "exact identity",
+      "output": "logo.png",
+      "sourceUrl": "https://images.eatermenu.com/gallery/6b770e7c-a732-4925-a348-0336c2de6d74/logo.png?v=1780521089906",
+      "sourceSha256": "1891c47368ca3b9711c32b75b77de5c0005b3aad0d5d2df3bf7db2128ab91d46",
+      "outputSha256": "1891c47368ca3b9711c32b75b77de5c0005b3aad0d5d2df3bf7db2128ab91d46",
+      "transformation": "none; exact first-party transparent asset",
+      "transparent": true
+    },
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://images.eatermenu.com/banners/Chinese/banner1.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "8c07ea21f02609edc0a3252d26630c9f3890db411384d6754f406dbd59373583",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=0.990:contrast=1.046:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "2073c24afcdbc569aabc7afc8eae7791de371477ff0b382b973702971820d8aa"
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://images.eatermenu.com/banners/Chinese/banner2.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "23326231492b71a34149de90be6489aca948f9c2fcb1262d78f957932e5a9e53",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:0,eq=saturation=1.015:contrast=1.010:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "f6e10c9cf0ab2f3ad643ce159786bf0b43f070d4cb44e7ddffabcefacbaf0791"
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://images.eatermenu.com/banners/Chinese/banner1.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "8c07ea21f02609edc0a3252d26630c9f3890db411384d6754f406dbd59373583",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:0,eq=saturation=1.040:contrast=1.064:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "a791e93e5451f1d8b41a240a6404945f7ca4225e5de6ee60d9994a7970366672"
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://images.eatermenu.com/banners/Chinese/banner2.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "23326231492b71a34149de90be6489aca948f9c2fcb1262d78f957932e5a9e53",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:0,eq=saturation=0.940:contrast=1.028:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "3e288da3e8793c507d15e676a4d8f9abbdc661bc04076302fe7e42587f5e4d47"
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://images.eatermenu.com/banners/Chinese/banner1.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "8c07ea21f02609edc0a3252d26630c9f3890db411384d6754f406dbd59373583",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:42,eq=saturation=0.965:contrast=1.082:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "048fcefb45de606267fae576f9260b0d5ea01308d59c75332d987ff4eaa6ec2e"
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://images.eatermenu.com/banners/Chinese/banner2.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "23326231492b71a34149de90be6489aca948f9c2fcb1262d78f957932e5a9e53",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:42,eq=saturation=0.990:contrast=1.046:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "26e8aba0f4748878c1121e6da8a416cf7b2694f30e5c763a00d8c8731b2f7bac"
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://images.eatermenu.com/banners/Chinese/banner1.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "8c07ea21f02609edc0a3252d26630c9f3890db411384d6754f406dbd59373583",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:42,eq=saturation=1.015:contrast=1.010:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "0c851d43089e57753ee12c825b33a8d7c2efbcba2b4e6d657dfc06a4c8183423"
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://images.eatermenu.com/banners/Chinese/banner2.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "23326231492b71a34149de90be6489aca948f9c2fcb1262d78f957932e5a9e53",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:42,eq=saturation=1.040:contrast=1.064:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "27323c37a9dc9671a8ca0f94ae8b8087735cf5d29c263bbf223073ea4b0cc041"
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://images.eatermenu.com/banners/Chinese/banner1.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "8c07ea21f02609edc0a3252d26630c9f3890db411384d6754f406dbd59373583",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:84,eq=saturation=0.940:contrast=1.028:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "66ac90e6ee1a653bb168ef5dfeabe7a4dc799425a46c32cf2883afea54e656a9"
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://images.eatermenu.com/banners/Chinese/banner2.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "23326231492b71a34149de90be6489aca948f9c2fcb1262d78f957932e5a9e53",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:84,eq=saturation=0.965:contrast=1.082:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "1053726b1d7e4674632818535d8d183f16a5610cee4d27fca1a179ee00db8a01"
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://images.eatermenu.com/banners/Chinese/banner1.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "8c07ea21f02609edc0a3252d26630c9f3890db411384d6754f406dbd59373583",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:84,eq=saturation=0.990:contrast=1.046:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "9cd4fca4e6c2286b8ee920f0f54079d137a8b847d62fa017c3da8e58386b4965"
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://images.eatermenu.com/banners/Chinese/banner2.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "23326231492b71a34149de90be6489aca948f9c2fcb1262d78f957932e5a9e53",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:84,eq=saturation=1.015:contrast=1.010:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "1abdaba1a49b52eed695fc0dfe31c90eecf77185b5a5877996ea6b30b21f007e"
+    }
+  ],
+  "fonts": {
+    "pair": {
+      "id": "alegreya-karla",
+      "display": "Alegreya",
+      "text": "Karla"
+    },
+    "source": "Google Fonts CSS API",
+    "files": [
+      {
+        "file": "font-display-400.woff2",
+        "sha256": "2431eca3ed8ed66e713cf7093d170d77a083a793a5f19a615506d63770abd973"
+      },
+      {
+        "file": "font-display-700.woff2",
+        "sha256": "2431eca3ed8ed66e713cf7093d170d77a083a793a5f19a615506d63770abd973"
+      },
+      {
+        "file": "font-text-400.woff2",
+        "sha256": "3b1eb09a53fd7b26c107b099b3da5fb2ac90b77297cb3ad713a7b40438ae718b"
+      },
+      {
+        "file": "font-text-700.woff2",
+        "sha256": "3b1eb09a53fd7b26c107b099b3da5fb2ac90b77297cb3ad713a7b40438ae718b"
+      }
+    ]
+  }
+}

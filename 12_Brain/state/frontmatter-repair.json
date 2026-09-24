@@ -1,6 +1,6 @@
 {
   "automation_id": "frontmatter-repair",
-  "started_at": "2026-09-21T12:21:57.919Z",
+  "started_at": "2026-09-24T12:20:21.360Z",
   "status": "dry-run",
   "dry_run": true,
   "counts": {
@@ -10,7 +10,7 @@
     {
       "file": "01_Clients\\Nexla\\overview.md",
       "applied": [
-        "last_touched=2026-09-21",
+        "last_touched=2026-09-24",
         "next_action=TBD",
         "due=none"
       ],
@@ -19,13 +19,13 @@
     {
       "file": "01_Clients\\Puttery NYC\\overview.md",
       "applied": [
-        "last_touched=2026-09-21",
+        "last_touched=2026-09-24",
         "next_action=TBD",
         "due=none"
       ],
       "dry_run": true
     }
   ],
-  "generated_at": "2026-09-21T12:21:57.920Z",
-  "written_at": "2026-09-21T12:21:57.920Z"
+  "generated_at": "2026-09-24T12:20:21.360Z",
+  "written_at": "2026-09-24T12:20:21.360Z"
 }

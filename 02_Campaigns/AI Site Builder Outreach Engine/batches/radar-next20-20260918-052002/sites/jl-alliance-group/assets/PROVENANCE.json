@@ -1,0 +1,168 @@
+{
+  "slug": "jl-alliance-group",
+  "preparedAt": "2026-09-18T09:23:38.396Z",
+  "sourceSite": "https://jlalliancegroup.com/",
+  "sourceFinalUrl": "https://jlalliancegroup.com/",
+  "sourcePageSha256": "912dddf98d65c2446ea7d38f54032d77687008db028e72e59796e5e44627a7b8",
+  "exactLogoRequired": true,
+  "exactLogoSha256": "e33f6f6548e8515e2c88774731ce2e497ad2b9892419525810d9da67ee5c6ed4",
+  "firstPartyDerivativePolicy": "Content visuals preserve first-party source photography while adapting crop and tonal balance for the private mobile concept. They are not evidence of additional projects or outcomes.",
+  "generatedCompositionReference": "automation/prospect-radar-next20/.impeccable/mocks/architerra-mobile-three-directions.png",
+  "assets": [
+    {
+      "role": "exact identity",
+      "output": "logo.png",
+      "sourceUrl": "https://jlalliancegroup.com/wp-content/uploads/2024/01/JL-Alliance-Group-fav.png",
+      "sourceSha256": "e33f6f6548e8515e2c88774731ce2e497ad2b9892419525810d9da67ee5c6ed4",
+      "outputSha256": "e33f6f6548e8515e2c88774731ce2e497ad2b9892419525810d9da67ee5c6ed4",
+      "transformation": "none; exact first-party transparent asset",
+      "transparent": true
+    },
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://jlalliancegroup.com/wp-content/uploads/2024/11/image.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "0e9d7af4d557fe9a33b33d251ab949a783414cbeed56cf960bbccebbb1452710",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=1.015:contrast=1.064:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "50da11c8ac58608a3db59f6c92ba8cb5626a0a423d7f5cbbe62133038507ede6"
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://jlalliancegroup.com/wp-content/uploads/2024/11/image.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "0e9d7af4d557fe9a33b33d251ab949a783414cbeed56cf960bbccebbb1452710",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:0,eq=saturation=1.040:contrast=1.028:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "957ee1db5df85c06ba6d0279505cb0a954075b1895ebc0ea952c8136f0a9fde1"
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://jlalliancegroup.com/wp-content/uploads/2024/11/image.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "0e9d7af4d557fe9a33b33d251ab949a783414cbeed56cf960bbccebbb1452710",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:0,eq=saturation=0.940:contrast=1.082:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "9e4663be8dc3736fafdf722a940f35d05c82cd7e32cb99a51c4a51268cb03b7f"
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://jlalliancegroup.com/wp-content/uploads/2024/11/image.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "0e9d7af4d557fe9a33b33d251ab949a783414cbeed56cf960bbccebbb1452710",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:0,eq=saturation=0.965:contrast=1.046:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "3b1d2e5b603058353d2c1f0d4e2ad66630fc474b09e74422affcabf2ad48fa06"
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://jlalliancegroup.com/wp-content/uploads/2024/11/image.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "0e9d7af4d557fe9a33b33d251ab949a783414cbeed56cf960bbccebbb1452710",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:42,eq=saturation=0.990:contrast=1.010:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "3c8e8c7994005c26f4ed4044bc8bb8cf2968219c04798d1f0eeb2c36bac22d7f"
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://jlalliancegroup.com/wp-content/uploads/2024/11/image.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "0e9d7af4d557fe9a33b33d251ab949a783414cbeed56cf960bbccebbb1452710",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:42,eq=saturation=1.015:contrast=1.064:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "57245efe531daa97a4e21f1d83e1dbb8bb9fb4f4d0adfedb923302d218829f49"
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://jlalliancegroup.com/wp-content/uploads/2024/11/image.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "0e9d7af4d557fe9a33b33d251ab949a783414cbeed56cf960bbccebbb1452710",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:42,eq=saturation=1.040:contrast=1.028:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "08c558d2f14dc79ff126361b8870c62e716152d6f0297cf9ae833b02ac2bba93"
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://jlalliancegroup.com/wp-content/uploads/2024/11/image.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "0e9d7af4d557fe9a33b33d251ab949a783414cbeed56cf960bbccebbb1452710",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:42,eq=saturation=0.940:contrast=1.082:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "09ff069836b43a31dd52502a353bfcc2c1e2ce9a7fbc9bbb899823d2391c71ad"
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://jlalliancegroup.com/wp-content/uploads/2024/11/image.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "0e9d7af4d557fe9a33b33d251ab949a783414cbeed56cf960bbccebbb1452710",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:84,eq=saturation=0.965:contrast=1.046:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "01fd79ef23885639a2c1884b8e74c870221f96919e325e075cb1d042e845d87c"
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://jlalliancegroup.com/wp-content/uploads/2024/11/image.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "0e9d7af4d557fe9a33b33d251ab949a783414cbeed56cf960bbccebbb1452710",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:84,eq=saturation=0.990:contrast=1.010:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "8c5e8deb8599af2bdb606d184ae15809298621d4453ff2ad6596eb47ce0b8274"
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://jlalliancegroup.com/wp-content/uploads/2024/11/image.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "0e9d7af4d557fe9a33b33d251ab949a783414cbeed56cf960bbccebbb1452710",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:84,eq=saturation=1.015:contrast=1.064:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "c4d10283277ea44df9a65e5b971f720ca267f817050cea5fabba26b3c2a29469"
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://jlalliancegroup.com/wp-content/uploads/2024/11/image.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "0e9d7af4d557fe9a33b33d251ab949a783414cbeed56cf960bbccebbb1452710",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:84,eq=saturation=1.040:contrast=1.028:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "7b22d4b407cef00b80fd4e3a354f9a2c01e1ceacf784f732d8ce0d311d847b7b"
+    }
+  ],
+  "fonts": {
+    "pair": {
+      "id": "newsreader-figtree",
+      "display": "Newsreader",
+      "text": "Figtree"
+    },
+    "source": "Google Fonts CSS API",
+    "files": [
+      {
+        "file": "font-display-400.woff2",
+        "sha256": "62981321d9a3cc7a61a73792729043703fd6112da86e8ec848bb57f088578757"
+      },
+      {
+        "file": "font-display-700.woff2",
+        "sha256": "62981321d9a3cc7a61a73792729043703fd6112da86e8ec848bb57f088578757"
+      },
+      {
+        "file": "font-text-400.woff2",
+        "sha256": "4ba7d3d096695818fe0686be4f1e82c6b05134e18a22260336130335027462dd"
+      },
+      {
+        "file": "font-text-700.woff2",
+        "sha256": "4ba7d3d096695818fe0686be4f1e82c6b05134e18a22260336130335027462dd"
+      }
+    ]
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "sourceUrl": "https://vpnailspapottstown.com/",
+  "finalUrl": "https://vpnailspapottstown.com/",
+  "sourceDomain": "vpnailspapottstown.com",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=utf-8",
+  "pageSha256": "49bd5e79de4cb2617682bc1039b4cca7b97072f84fed0f128b8fbc50c51f76e3",
+  "title": "V P Nails - Nail salon near me Pottstown, PA 19464",
+  "description": "V P Nails is one of the best nail salon in Pottstown, PA 19464 with premier services: Manicure, pedicure, waxing ,A La Carte, Eyelashes, Pink & White...",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "nails"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\vp-nails\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://nz-website-media-r2-pub.gocheckin.net/1950-9685/page/header-logo-72628.png",
+    "sourceEvidence": "IMG image md:max-h-[104px] max-h-[70px]  v p nails - nail salon near me pottstown, pa 19464",
+    "type": "png",
+    "dimensions": {
+      "width": 404,
+      "height": 396
+    },
+    "sha256": "46590352e4cdb57aae36bca2aee87cff0aeef246b2e5479cc739d9fe963ac14f",
+    "sourceSha256": "46590352e4cdb57aae36bca2aee87cff0aeef246b2e5479cc739d9fe963ac14f",
+    "sourceType": "png",
+    "sourceFileName": null,
+    "transformation": "none; exact first-party transparent asset",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "transparentRatio": 0.8215,
+      "edgeTransparentRatio": 1,
+      "contentRatio": 0.1785,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 50956
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\vp-nails\\reference-1.jpg",
+      "fileName": "reference-1.jpg",
+      "sourceUrl": "https://nz-website-media-r2-pub.gocheckin.net/1950-9685/page/index-3_1532743054_41_dreamstime_xxl_5113725-86769.jpg",
+      "sourceEvidence": "IMG image  nail beauty 1",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 498,
+        "width": 1354
+      },
+      "sha256": "795bfbb9f6aab2ee48804e12132bc5f08ef5b2046ec77ea2b94b5ff4cfb9069f",
+      "bytes": 686334,
+      "visual": {
+        "ok": true,
+        "lumaRange": 250.3,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\vp-nails\\reference-2.jpg",
+      "fileName": "reference-2.jpg",
+      "sourceUrl": "https://nz-website-media-r2-pub.gocheckin.net/1950-9685/page/index-3-21546.jpg",
+      "sourceEvidence": "IMG image  nail beauty 4",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 498,
+        "width": 1354
+      },
+      "sha256": "d6421ec0061594f4d7b09c19605b78aa50d8729fed57ec3cea67490230d69e32",
+      "bytes": 591004,
+      "visual": {
+        "ok": true,
+        "lumaRange": 255,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\vp-nails\\reference-3.jpg",
+      "fileName": "reference-3.jpg",
+      "sourceUrl": "https://nz-website-media-r2-pub.gocheckin.net/1950-9685/page/index-4-30185.jpg",
+      "sourceEvidence": "IMG image  nail beauty 1",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 498,
+        "width": 1354
+      },
+      "sha256": "6275f0ea08ab9772df51683ef1f2d8fb09e209b1865a585acf05bc082a6d22b3",
+      "bytes": 468660,
+      "visual": {
+        "ok": true,
+        "lumaRange": 254.7,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [
+    {
+      "url": "https://nz-website-media-r2-pub.gocheckin.net/1950-9685/page/gallery-vp-nails-sep-16%20(1)-41.webp",
+      "reason": "not a PNG"
+    },
+    {
+      "url": "https://nz-website-media-r2-pub.gocheckin.net/1950-9685/page/gallery-vp-nails-sep-16%20(2)-41.webp",
+      "reason": "not a PNG"
+    },
+    {
+      "url": "https://nz-website-media-r2-pub.gocheckin.net/1950-9685/page/gallery-vp-nails-sep-16%20(3)-41.webp",
+      "reason": "not a PNG"
+    },
+    {
+      "url": "https://nz-website-media-r2-pub.gocheckin.net/1950-9685/page/gallery-vp-nails-sep-16%20(4)-41.webp",
+      "reason": "not a PNG"
+    }
+  ],
+  "brandColors": [
+    "#ff0000",
+    "#2563eb",
+    "#ffd700",
+    "#ffdd94",
+    "#26ab33"
+  ],
+  "checkedAt": "2026-09-17T09:21:34.920Z"
+}

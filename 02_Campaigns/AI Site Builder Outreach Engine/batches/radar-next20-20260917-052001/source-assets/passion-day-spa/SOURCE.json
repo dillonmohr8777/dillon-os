@@ -1,0 +1,119 @@
+{
+  "sourceUrl": "https://passiondayspallc.com/",
+  "finalUrl": "https://passiondayspallc.com/",
+  "sourceDomain": "passiondayspallc.com",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=UTF-8",
+  "pageSha256": "7d4a08549a2d2e3811860e7ebd8fed386faca69c82612a54ef9b49af4d07fe8e",
+  "title": "Home - Nail Salon 18951 | PASSION DAY SPA | Quakertown, PA 18951",
+  "description": "",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "passion",
+      "day",
+      "spa"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\passion-day-spa\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://passiondayspallc.com/wp-content/uploads/2022/01/PASSION-DAY-SPA-logo-18951.png",
+    "sourceEvidence": "JSON-LD logo URL",
+    "type": "png",
+    "dimensions": {
+      "width": 512,
+      "height": 440
+    },
+    "sha256": "c8b2db6bcd93fe0bd521867916a62c2c0510cb1b826fcd3b6747607a5d6a7810",
+    "sourceSha256": "c8b2db6bcd93fe0bd521867916a62c2c0510cb1b826fcd3b6747607a5d6a7810",
+    "sourceType": "png",
+    "sourceFileName": null,
+    "transformation": "none; exact first-party transparent asset",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "transparentRatio": 0.8317,
+      "edgeTransparentRatio": 1,
+      "contentRatio": 0.1683,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 71285
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\passion-day-spa\\reference-1.png",
+      "fileName": "reference-1.png",
+      "sourceUrl": "https://passiondayspallc.com/wp-content/uploads/2022/01/rose-red-480x381.png",
+      "sourceEvidence": "IMG wp-image-272743   rose-red",
+      "type": "png",
+      "dimensions": {
+        "width": 480,
+        "height": 381
+      },
+      "sha256": "36d05673df6e9b9f26fd750264c5c7aded336be084cb9ce4aa21ce7e610f2434",
+      "bytes": 103108,
+      "visual": {
+        "ok": true,
+        "lumaRange": 217.8,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\passion-day-spa\\reference-2.jpg",
+      "fileName": "reference-2.jpg",
+      "sourceUrl": "https://passiondayspallc.com/wp-content/uploads/2022/01/PASSION-DAY-SPA-manicure-18951-480x480.jpg",
+      "sourceEvidence": "IMG wp-image-272757   passion-day-spa-manicure-18951",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 480,
+        "width": 480
+      },
+      "sha256": "a9ae91cd6c4b274a6e3fec01ba8a036ab10aed8201e05cfdab15e3b3c09d16c2",
+      "bytes": 32115,
+      "visual": {
+        "ok": true,
+        "lumaRange": 245.6,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\passion-day-spa\\reference-3.jpg",
+      "fileName": "reference-3.jpg",
+      "sourceUrl": "https://passiondayspallc.com/wp-content/uploads/2021/04/services27-2-480x480.jpg",
+      "sourceEvidence": "IMG wp-image-272008   services27-2",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 480,
+        "width": 480
+      },
+      "sha256": "a0ca081f8509b69a82f180607865a97d1490c3c358a27d5e129c88a1f135ba17",
+      "bytes": 19261,
+      "visual": {
+        "ok": true,
+        "lumaRange": 244.6,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [
+    {
+      "url": "https://passiondayspallc.com/512",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://passiondayspallc.com/440",
+      "reason": "HTTP 404"
+    }
+  ],
+  "brandColors": [
+    "#2ea3f2",
+    "#ed253c",
+    "#003388",
+    "#f77f00",
+    "#a34a41"
+  ],
+  "checkedAt": "2026-09-17T09:20:46.961Z"
+}

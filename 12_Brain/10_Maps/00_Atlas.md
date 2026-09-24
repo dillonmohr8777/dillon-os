@@ -4,7 +4,7 @@ status: active
 generated: true
 generated_by: Update-SecondBrainMaps
 map_type: atlas
-updated: 2026-09-16
+updated: 2026-09-23
 tags:
   - brain
   - map

@@ -1,0 +1,123 @@
+{
+  "sourceUrl": "https://www.kauffmanmetals.com/",
+  "finalUrl": "https://kauffmanmetals.com/",
+  "sourceDomain": "kauffmanmetals.com",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=UTF-8",
+  "pageSha256": "dff3572f4466e524f89a4a9ccb53ee06ce0e371e16cf5339e96fffe2daea3d81",
+  "title": "Kauffman Metals | Supplying Roofing, Siding and Trim",
+  "description": "Kauffman Metals is your metal supply center for all your roofing and siding needs. Reach out to us today to get a quote for supplies on your next project.",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "kauffman",
+      "metals"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\kauffman-metals\\logo.svg",
+    "fileName": "logo.svg",
+    "sourceUrl": "https://kauffmanmetals.com/wp-content/uploads/2024/02/kauffman-metals-logo-fc-300.svg",
+    "sourceEvidence": "JSON-LD logo URL",
+    "type": "svg",
+    "dimensions": {
+      "width": 930,
+      "height": 476
+    },
+    "sha256": "d6344fb5c18193e1f2688f6c9e3270c33d6dded3fe92371a1cd22451e9ebc6f0",
+    "sourceSha256": "d6344fb5c18193e1f2688f6c9e3270c33d6dded3fe92371a1cd22451e9ebc6f0",
+    "sourceType": "svg",
+    "sourceFileName": null,
+    "transformation": "none; exact first-party transparent asset",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "vector": true
+    },
+    "transparent": true,
+    "bytes": 4919
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\kauffman-metals\\reference-1.jpg",
+      "fileName": "reference-1.jpg",
+      "sourceUrl": "https://kauffmanmetals.com/wp-content/uploads/2024/03/person-with-cap.jpeg",
+      "sourceEvidence": "IMG attachment-medium_large size-medium_large wp-image-2541  worker holds his head at a construction site.",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 467,
+        "width": 800
+      },
+      "sha256": "8c8f9deae515aca2e8921b8421a40d9f04272c90a1a9706868374ddc48a89138",
+      "bytes": 121637,
+      "visual": {
+        "ok": true,
+        "lumaRange": 253.3,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\kauffman-metals\\reference-2.jpg",
+      "fileName": "reference-2.jpg",
+      "sourceUrl": "https://kauffmanmetals.com/wp-content/uploads/2024/03/agriculture-Post-Frame-Photos-015-e1711485129716.jpg",
+      "sourceEvidence": "IMG attachment-medium_large size-medium_large wp-image-2887  agriculture post frame implement building",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 505,
+        "width": 800
+      },
+      "sha256": "f5d27f78e67743c0e8f21633277d3ca75c33e1209f4b1dc3a00e169d095dd2d1",
+      "bytes": 110116,
+      "visual": {
+        "ok": true,
+        "lumaRange": 247.1,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\kauffman-metals\\reference-3.png",
+      "fileName": "reference-3.png",
+      "sourceUrl": "https://kauffmanmetals.com/wp-content/uploads/2025/06/Kauffman-metal-5.png",
+      "sourceEvidence": "IMG attachment-medium_large size-medium_large wp-image-6975",
+      "type": "png",
+      "dimensions": {
+        "width": 1400,
+        "height": 894
+      },
+      "sha256": "7576882ff1f084c185bfd9dbd408a5add1f57fc24dcd4c7c02ebe22c7aebc885",
+      "bytes": 511584,
+      "visual": {
+        "ok": true,
+        "lumaRange": 226.5,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [
+    {
+      "url": "https://kauffmanmetals.com/900",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://kauffmanmetals.com/462",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://kauffmanmetals.com/image/jpeg",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://kauffmanmetals.com/wp-content/uploads/2024/02/Kauffman-Metals-25th-Anniversary-Banner1-768x96.jpg",
+      "reason": "reference image is too small"
+    }
+  ],
+  "brandColors": [
+    "#003388",
+    "#dc3232",
+    "#abb8c3",
+    "#f78da7",
+    "#cf2e2e"
+  ],
+  "checkedAt": "2026-09-17T09:21:17.122Z"
+}

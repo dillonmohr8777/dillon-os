@@ -1,6 +1,6 @@
 'use strict';
 
-const { analyzeTier0, visibleText, detectPlatform } = require('../../automation/lib/site-audit');
+const { analyzeTier0, fetchPage, visibleText, detectPlatform } = require('../../automation/lib/site-audit');
 const { parseJsonLd, robotsPolicy } = require('../../automation/lib/aeo-trust');
 const { classifyEmail } = require('../../automation/lib/contacts');
 const { id } = require('./ids.ts');
@@ -240,11 +240,60 @@ function scanFixture({ html, url, prospect = {}, places = null }) {
   };
 }
 
+async function scanPublicWebsite({ url, prospect = {}, fetchPageFn = fetchPage }) {
+  const safeUrl = assertSafeScanUrl(url);
+  const fetched = await fetchPageFn(safeUrl.href, { timeoutMs: 15000, maxRedirects: 5 });
+  if (!fetched || !fetched.ok) {
+    throw new Error(`public website fetch failed: ${String(fetched?.error || 'no response').slice(0, 160)}`);
+  }
+  if (fetched.status < 200 || fetched.status >= 300) {
+    throw new Error(`public website returned HTTP ${fetched.status}`);
+  }
+  const contentType = String(fetched.headers?.['content-type'] || '').toLowerCase();
+  if (contentType && !/(?:text\/html|application\/xhtml\+xml)/i.test(contentType)) {
+    throw new Error('public website response was not HTML');
+  }
+
+  const html = String(fetched.html || fetched.body || '');
+  if (!html) throw new Error('public website response contained no HTML');
+  const finalUrl = fetched.finalUrl || safeUrl.href;
+  const audit = analyzeTier0({ ...fetched, html, body: fetched.body || html }, safeUrl.href);
+  if (audit.reachable !== true) throw new Error('public website could not be audited');
+  const social = [...html.matchAll(/https?:\/\/(?:www\.)?(facebook|instagram|linkedin|yelp)\.com\/[^\s"'<]+/gi)]
+    .map((m) => m[0]);
+  const { items, aeo, contacts } = evidenceFromAudit(audit, html, finalUrl, {
+    source: 'tier0',
+    social,
+  });
+  return {
+    scanner_version: SCANNER_VERSION,
+    fixture: false,
+    audit: {
+      ...audit,
+      finalUrl,
+      hasCta: audit.hasCta === true || /contact|schedule|call now|get a quote/i.test(html),
+      hasPhone: audit.clickToCall === true || audit.phoneVisible === true,
+      hasForm: /<form[\s>]/i.test(html),
+      wordCount: visibleText(html).split(/\s+/).filter(Boolean).length,
+      publicSignals: {
+        emailCount: contacts.emails.length,
+        hasPhone: Boolean(contacts.phone),
+        hasForm: contacts.form,
+      },
+    },
+    evidence: items,
+    aeo,
+    contacts,
+    prospect,
+  };
+}
+
 module.exports = {
   SCANNER_VERSION,
   analyzeHtmlDocument,
   evidenceFromAudit,
   scanFixture,
+  scanPublicWebsite,
   publishedContacts,
   aeoSignals,
 };

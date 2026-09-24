@@ -1,0 +1,168 @@
+{
+  "slug": "bedford-carpet-one-floor-and-home",
+  "preparedAt": "2026-09-18T09:23:20.347Z",
+  "sourceSite": "https://www.bedfordcarpetonebedford.com/",
+  "sourceFinalUrl": "https://www.bedfordcarpetonebedford.com/",
+  "sourcePageSha256": "c13e417d4776a547fd85fc0823f7564d328ad4d00feaa514e17b4b8e84d6c665",
+  "exactLogoRequired": true,
+  "exactLogoSha256": "8f05673613d159fbdaa86ca66b9fa172d3589362226954ca1a55dee67235494d",
+  "firstPartyDerivativePolicy": "Content visuals preserve first-party source photography while adapting crop and tonal balance for the private mobile concept. They are not evidence of additional projects or outcomes.",
+  "generatedCompositionReference": "automation/prospect-radar-next20/.impeccable/mocks/architerra-mobile-three-directions.png",
+  "assets": [
+    {
+      "role": "exact identity",
+      "output": "logo.png",
+      "sourceUrl": "https://www.bedfordcarpetonebedford.com/root/client/0380/img/logo/logo.png?rnd=1574",
+      "sourceSha256": "8f05673613d159fbdaa86ca66b9fa172d3589362226954ca1a55dee67235494d",
+      "outputSha256": "8f05673613d159fbdaa86ca66b9fa172d3589362226954ca1a55dee67235494d",
+      "transformation": "none; exact first-party transparent asset",
+      "transparent": true
+    },
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.bedfordcarpetonebedford.com/root/client/0380/hero/page-1/hero-1.jpg?rnd=5570",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "fba31769adb45f9e5fe50f5b2cdab1071fad6ba50ee51306dab8d02bb41f9be1",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=0.990:contrast=1.046:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "94d0b8dbf3d7dcddec09b0aa4e6f4ace341f8c95e681c94bc71f6d4be024bb03"
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.bedfordcarpetonebedford.com/root/client/0380/hero/page-1/mobile-hero-1.jpg?rnd=8895",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "c11b6519cbe6461a088ad3cc798353b68956fabac230d1465184eec2faf25e78",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:0,eq=saturation=1.015:contrast=1.010:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "c5877121126f3aee523bef64807b06663a4da2b1bc55a74ed4a7e9f8dfaaf99b"
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.bedfordcarpetonebedford.com/root/client/0380/hero/page-1/mobile-hero-3.jpg?rnd=3172",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "1870cd2c3b155a3308f55e43e2349d222ea8c7e0aa19b1cc379f6d2e22524243",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:0,eq=saturation=1.040:contrast=1.064:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "ddf9e2c9df058c5d773c5d9d7a3e1fa76cac94b09db7c8d063dabe948a84c022"
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.bedfordcarpetonebedford.com/root/client/0380/hero/page-1/hero-1.jpg?rnd=5570",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "fba31769adb45f9e5fe50f5b2cdab1071fad6ba50ee51306dab8d02bb41f9be1",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:0,eq=saturation=0.940:contrast=1.028:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "3187a9fd92b84332efc149bce45d75d6a20d6c954b709b583a4c1b206b0c6323"
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.bedfordcarpetonebedford.com/root/client/0380/hero/page-1/mobile-hero-1.jpg?rnd=8895",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "c11b6519cbe6461a088ad3cc798353b68956fabac230d1465184eec2faf25e78",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:42,eq=saturation=0.965:contrast=1.082:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "3d26528669630993b0014f6263c34fc157837dace6d44c82baea8c92e68ae9f8"
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.bedfordcarpetonebedford.com/root/client/0380/hero/page-1/mobile-hero-3.jpg?rnd=3172",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "1870cd2c3b155a3308f55e43e2349d222ea8c7e0aa19b1cc379f6d2e22524243",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:42,eq=saturation=0.990:contrast=1.046:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "94efc82e5c914563cb86ab077f686606de79a4a4b44fef71958e44cf2e6f4320"
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.bedfordcarpetonebedford.com/root/client/0380/hero/page-1/hero-1.jpg?rnd=5570",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "fba31769adb45f9e5fe50f5b2cdab1071fad6ba50ee51306dab8d02bb41f9be1",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:42,eq=saturation=1.015:contrast=1.010:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "9b33ddf40bb29f5513064bc94a0c3ebd4be23306e5e6102c01851e31a8138605"
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.bedfordcarpetonebedford.com/root/client/0380/hero/page-1/mobile-hero-1.jpg?rnd=8895",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "c11b6519cbe6461a088ad3cc798353b68956fabac230d1465184eec2faf25e78",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:42,eq=saturation=1.040:contrast=1.064:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "3d637eacac8bfab1041ec6d25e13ec5265379e055e5aacddc224dccb8b5bc8e7"
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.bedfordcarpetonebedford.com/root/client/0380/hero/page-1/mobile-hero-3.jpg?rnd=3172",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "1870cd2c3b155a3308f55e43e2349d222ea8c7e0aa19b1cc379f6d2e22524243",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:84,eq=saturation=0.940:contrast=1.028:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "cefb479fd18387a0896cb4d61597ae4880827052397ef0bb3aa6243e84894ba3"
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.bedfordcarpetonebedford.com/root/client/0380/hero/page-1/hero-1.jpg?rnd=5570",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "fba31769adb45f9e5fe50f5b2cdab1071fad6ba50ee51306dab8d02bb41f9be1",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:84,eq=saturation=0.965:contrast=1.082:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "ae2b19f4e0afb8c5b86f37aa0364ab1b66d0bd0d854872093e4a971791b00e92"
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.bedfordcarpetonebedford.com/root/client/0380/hero/page-1/mobile-hero-1.jpg?rnd=8895",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "c11b6519cbe6461a088ad3cc798353b68956fabac230d1465184eec2faf25e78",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:84,eq=saturation=0.990:contrast=1.046:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "1b0d1e79c5ef03b30d7913f74dca1e04ce533f984e98b3ff557b1bdaee4188ef"
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.bedfordcarpetonebedford.com/root/client/0380/hero/page-1/mobile-hero-3.jpg?rnd=3172",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "1870cd2c3b155a3308f55e43e2349d222ea8c7e0aa19b1cc379f6d2e22524243",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:84,eq=saturation=1.015:contrast=1.010:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "f629db3911ed01abd94099391d85f39f1274f36c6b7957226617b964820b8751"
+    }
+  ],
+  "fonts": {
+    "pair": {
+      "id": "alegreya-karla",
+      "display": "Alegreya",
+      "text": "Karla"
+    },
+    "source": "Google Fonts CSS API",
+    "files": [
+      {
+        "file": "font-display-400.woff2",
+        "sha256": "2431eca3ed8ed66e713cf7093d170d77a083a793a5f19a615506d63770abd973"
+      },
+      {
+        "file": "font-display-700.woff2",
+        "sha256": "2431eca3ed8ed66e713cf7093d170d77a083a793a5f19a615506d63770abd973"
+      },
+      {
+        "file": "font-text-400.woff2",
+        "sha256": "3b1eb09a53fd7b26c107b099b3da5fb2ac90b77297cb3ad713a7b40438ae718b"
+      },
+      {
+        "file": "font-text-700.woff2",
+        "sha256": "3b1eb09a53fd7b26c107b099b3da5fb2ac90b77297cb3ad713a7b40438ae718b"
+      }
+    ]
+  }
+}

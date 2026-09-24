@@ -53,6 +53,8 @@ async function applyRetention(store, cfg, now = new Date()) {
         requester_name: '[deleted]',
         requester_email: '[deleted]',
         requester_phone: '',
+        business_description: '',
+        growth_goals: '',
         notes: '',
       });
       anonymized.push(sub.id);

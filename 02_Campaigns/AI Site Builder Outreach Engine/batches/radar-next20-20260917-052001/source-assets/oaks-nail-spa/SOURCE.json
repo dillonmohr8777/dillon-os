@@ -1,0 +1,123 @@
+{
+  "sourceUrl": "https://oaksnailsspaphoenixville.com/",
+  "finalUrl": "https://oaksnailsspaphoenixville.com/",
+  "sourceDomain": "oaksnailsspaphoenixville.com",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=utf-8",
+  "pageSha256": "fb59da37597e83236e9c61168ac05ba3f847313e4af90fcbcb6ae48c24adda4b",
+  "title": "Oaks Nails Spa",
+  "description": "A polished, marketing website template built with Eleventy",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "oaks",
+      "nail",
+      "spa"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\oaks-nail-spa\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://nz-website-media-r2-pub.gocheckin.net/8424-9753/page/header-1767821799_logo_untitled-design-removebg-preview-w576-44253.png",
+    "sourceEvidence": "IMG logo alt",
+    "type": "png",
+    "dimensions": {
+      "width": 576,
+      "height": 215
+    },
+    "sha256": "50c4a2e143eb0092514ec7d74f99f10a988d93b5a2fc17ba13dac3cda6e1adf3",
+    "sourceSha256": "50c4a2e143eb0092514ec7d74f99f10a988d93b5a2fc17ba13dac3cda6e1adf3",
+    "sourceType": "png",
+    "sourceFileName": null,
+    "transformation": "none; exact first-party transparent asset",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "transparentRatio": 0.8472,
+      "edgeTransparentRatio": 1,
+      "contentRatio": 0.1528,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 52315
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\oaks-nail-spa\\reference-1.png",
+      "fileName": "reference-1.png",
+      "sourceUrl": "https://oaksnailsspaphoenixville.com/images/cosmetics-model-beauty-nail-polish-makeup-model-18a92d3302588051668883da6ff03b3b.png",
+      "sourceEvidence": "IMG main-hero-image  hero",
+      "type": "png",
+      "dimensions": {
+        "width": 1000,
+        "height": 995
+      },
+      "sha256": "37cd32c3c5e7c88bcaa8e48bbbfcd5b9d081010fbbebb209092d64f47b160c03",
+      "bytes": 806523,
+      "visual": {
+        "ok": true,
+        "lumaRange": 253.6,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\oaks-nail-spa\\reference-2.png",
+      "fileName": "reference-2.png",
+      "sourceUrl": "https://oaksnailsspaphoenixville.com/images/decor_hero_1.png",
+      "sourceEvidence": "IMG flower-decor  flower",
+      "type": "png",
+      "dimensions": {
+        "width": 795,
+        "height": 804
+      },
+      "sha256": "7e229177516a6ee7a23e5cbdd7e620a1d2d4aef716b1862e0da06bb238e816cd",
+      "bytes": 121120,
+      "visual": {
+        "ok": true,
+        "lumaRange": 63.5,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\oaks-nail-spa\\reference-3.png",
+      "fileName": "reference-3.png",
+      "sourceUrl": "https://oaksnailsspaphoenixville.com/images/img_hero_2.png",
+      "sourceEvidence": "IMG main-hero-image  hero",
+      "type": "png",
+      "dimensions": {
+        "width": 890,
+        "height": 810
+      },
+      "sha256": "fe4acf6e912ac603c3cdc7e91a4c150fed84a589032a9f38fc8c4fc9a3fe9b4a",
+      "bytes": 166431,
+      "visual": {
+        "ok": true,
+        "lumaRange": 227,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [
+    {
+      "url": "https://oaksnailsspaphoenixville.com/images/decor_hero.svg",
+      "reason": "unsupported reference type svg"
+    },
+    {
+      "url": "https://oaksnailsspaphoenixville.com/images/decor_hero_5.png",
+      "reason": "reference image is too small"
+    },
+    {
+      "url": "https://oaksnailsspaphoenixville.com/images/decor_hero_2.png",
+      "reason": "reference image is too small"
+    }
+  ],
+  "brandColors": [
+    "#0d6efd",
+    "#dc3545",
+    "#198754",
+    "#ffc107",
+    "#0dcaf0"
+  ],
+  "checkedAt": "2026-09-17T09:21:08.534Z"
+}

@@ -2,14 +2,14 @@
 note_type: project
 status: active
 created: 2026-07-29
-updated: 2026-08-23
+updated: 2026-09-19
 owner: Dillon Mohr
 area: company operating system
 priority: high
 outcome: Obsidian is synced, the CLI and native Bases work, and the strategy brain compiles research, workflows, automations, measurement, and delivery knowledge into verified operating systems.
-next_action: Restore or register the authorized read-only communication and frontier-research collectors, replay the preserved overlap windows, and require a successful source receipt before advancing freshness or experiments.
+next_action: Semantically review the highest-value Claude sessions from the 937-row index, verify referenced artifacts, and recover hosted or phone history through an existing authenticated route.
 due: 2026-08-23
-review_on: 2026-08-23
+review_on: 2026-09-26
 source_refs:
   - "[[12_Brain/09_Ops/Architecture]]"
   - "[[12_Brain/09_Ops/Runbook]]"
@@ -18,6 +18,7 @@ source_refs:
   - "[[12_Brain/01_Captures/2026-08-15 - Chase AI Obsidian command center]]"
   - "[[12_Brain/07_Reviews/2026-08-16 - Weekly Brain Synthesis]]"
   - "[[12_Brain/07_Reviews/2026-08-23 - Weekly Brain Synthesis]]"
+  - "[[12_Brain/07_Reviews/2026-09-19 - Agent and source estate coverage]]"
 tags:
   - brain
   - project
@@ -102,3 +103,13 @@ remain deferred until the app is opened by the user.
 
 - [[12_Brain/09_Ops/Knowledge Coverage]]
 - [[12_Brain/09_Ops/Health]]
+
+## 2026-09-19 checkpoint
+
+- Canonical vault verified at `repos/dillon-os`; 113 pre-existing dirty entries preserved.
+- Compiled [[12_Brain/07_Reviews/2026-09-19 - Agent and source estate coverage]].
+- Indexed 937 Claude JSONL files across 49 roots; metadata coverage is complete, semantic coverage is partial.
+- Indexed 3,082 Codex rollouts plus Cursor, Grok, and Hermes source surfaces without opening secret stores.
+- Corrected the Hermes and machine-context paths and separated strategy-domain coverage from estate coverage.
+- Hosted/browser and phone Claude history remain unverified after the supported browser route timed out.
+- Next batch: high-value Claude sessions, artifact verification, then authenticated hosted-history recovery.

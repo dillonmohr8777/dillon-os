@@ -80,6 +80,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 ## Projects · Decisions · Research · Memory · Protocols
 
 - [[12_Brain/05_Projects/README|Projects]] — active delivery threads and goals.
+- [[12_Brain/07_Reviews/2026-09-19 - Agent and source estate coverage|Agent and source estate coverage]] — current Claude and cross-agent source map, with explicit inspection gaps.
 - [[12_Brain/05_Projects/Prospect Radar V2|Prospect Radar V2]] — Momentum audit engine wrapping the existing radar.
 - [[12_Brain/05_Projects/Growth Workshop Franchise Pilot|Growth Workshop Franchise Pilot]] — Sean's Aug 27 webinar + free franchise-email engine; canonical Google event + Meet live.
 - [[12_Brain/04_Decisions/README|Decisions]] — bi-temporal decision log.

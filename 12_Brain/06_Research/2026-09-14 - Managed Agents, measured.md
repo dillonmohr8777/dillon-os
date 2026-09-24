@@ -1,8 +1,13 @@
 ---
+note_type: research
 tags: [research, agents, anthropic, billing]
 created: 2026-09-14
+updated: 2026-09-14
 status: measured
 spend: 11 cents of a 429 cent balance
+source_refs:
+  - System/managed-agents-inventory.md
+  - System/approval-queue.md
 ---
 
 # Managed Agents, measured

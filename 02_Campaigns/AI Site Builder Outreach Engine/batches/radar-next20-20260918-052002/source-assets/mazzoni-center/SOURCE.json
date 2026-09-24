@@ -1,0 +1,102 @@
+{
+  "sourceUrl": "https://www.mazzonicenter.org/",
+  "finalUrl": "https://www.mazzonicenter.org/",
+  "sourceDomain": "mazzonicenter.org",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=utf-8",
+  "pageSha256": "72506184298a98d1739906ab381141b68ef96fcea5dfea3440015455ae127e74",
+  "title": "Mazzoni Center",
+  "description": "We provide quality comprehensive health and wellness services in an LGBTQ-focused environment.",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "mazzoni"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\mazzoni-center\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://www.mazzonicenter.org/themes/custom/mazzoni_ci/mazzoni_center_logo.png",
+    "sourceEvidence": "IMG site logo",
+    "type": "png",
+    "dimensions": {
+      "width": 1243,
+      "height": 1569
+    },
+    "sha256": "59076adc773691923798a3f0d347c6bb291ad7cae09dae1082218e705c54e66c",
+    "sourceSha256": "59076adc773691923798a3f0d347c6bb291ad7cae09dae1082218e705c54e66c",
+    "sourceType": "png",
+    "sourceFileName": null,
+    "transformation": "none; exact first-party transparent asset",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "transparentRatio": 0.8315,
+      "edgeTransparentRatio": 0.9963,
+      "contentRatio": 0.1685,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 63673
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\mazzoni-center\\reference-1.jpg",
+      "fileName": "reference-1.jpg",
+      "sourceUrl": "https://www.mazzonicenter.org/sites/default/files/styles/billboard_xl/public/2024-08/date.jpeg",
+      "sourceEvidence": "og:image",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 1200,
+        "width": 2400
+      },
+      "sha256": "8e813ddc02b8a8c52c5f811c38bb1bffac572f4b014fcadbb345bab836362417",
+      "bytes": 950333,
+      "visual": {
+        "ok": true,
+        "lumaRange": 241.5,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\mazzoni-center\\reference-2.jpg",
+      "fileName": "reference-2.jpg",
+      "sourceUrl": "https://www.mazzonicenter.org/sites/default/files/styles/billboard_xs/public/2026-05/AdobeStock_603744573.jpeg?h=3c273a8a&itok=9a74L2ZI",
+      "sourceEvidence": "IMG img-fluid  welcome banner",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 1150,
+        "width": 575
+      },
+      "sha256": "f5b2b7f58ea7ce04521d2b697a43b536c86d0c42b4692e7488ef775e268b2a23",
+      "bytes": 199553,
+      "visual": {
+        "ok": true,
+        "lumaRange": 243.3,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\mazzoni-center\\reference-3.png",
+      "fileName": "reference-3.png",
+      "sourceUrl": "https://www.mazzonicenter.org/sites/default/files/styles/tile_xs/public/2026-09/Bi%20Week.png?h=734c934c&itok=b6K_6LC0",
+      "sourceEvidence": "IMG img-fluid  bisexual awareness week banner",
+      "type": "png",
+      "dimensions": {
+        "width": 720,
+        "height": 550
+      },
+      "sha256": "2e6a8eda5dec145ae0a09a63cd252c2c30b2ae8e1482cfa228df0535e645654a",
+      "bytes": 109743,
+      "visual": {
+        "ok": true,
+        "lumaRange": 207.1,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [],
+  "brandColors": [],
+  "checkedAt": "2026-09-18T09:21:14.496Z"
+}

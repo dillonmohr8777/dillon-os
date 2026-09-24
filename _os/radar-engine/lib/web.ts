@@ -2,13 +2,13 @@
 
 const http = require('http');
 const { URL } = require('url');
-const { cssVariables, lockup, LOCKUP_CSS } = require('../../automation/lib/brand');
+const { cssVariables, LOCKUP_CSS } = require('../../automation/lib/brand');
 const { escapeHtml } = require('./redact.ts');
 const { hmac } = require('./ids.ts');
 const { validateIntake } = require('./intake.ts');
 const { submitIntake, resolveProspect, funnelView, qaDecision } = require('./pipeline.ts');
 const { loadConfig } = require('./config.ts');
-const { storageAdapter, reportAccessible } = require('./reports.ts');
+const { storageAdapter, reportAccessible, prospectLabel, momentumLogoDataUri } = require('./reports.ts');
 
 function layout(title, body, { noindex = true } = {}) {
   return `<!doctype html>
@@ -27,8 +27,12 @@ function layout(title, body, { noindex = true } = {}) {
     .card { background: var(--panel); border: 1px solid var(--rule); border-radius: 16px; padding: 22px; margin-top: 16px; }
     label { display: block; font-size: 13px; color: var(--fg-mid); margin: 12px 0 4px; }
     input, select, textarea { width: 100%; padding: 10px 12px; border: 1px solid var(--rule-strong); border-radius: 10px; font: inherit; }
+    input[type="checkbox"] { width: auto; }
     button, .btn { background: var(--brand-fill); color: var(--on-brand); border: 0; padding: 12px 18px; border-radius: 999px; font-weight: 650; cursor: pointer; text-decoration: none; display: inline-block; }
     .err { color: var(--s-broken); }
+    .field-error { margin: 4px 0 0; font-size: 13px; }
+    .consent { display: flex; align-items: flex-start; gap: 8px; }
+    .consent label { display: inline; margin: 0; }
     table { width: 100%; border-collapse: collapse; font-size: 14px; }
     th, td { text-align: left; padding: 8px 4px; border-bottom: 1px solid var(--rule); }
     .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
@@ -38,40 +42,36 @@ function layout(title, body, { noindex = true } = {}) {
 <body><main>${body}</main></body></html>`;
 }
 
-function intakeForm(cfg, errors = [], values = {}) {
-  const err = errors.length ? `<p class="err">${errors.map(escapeHtml).join('<br>')}</p>` : '';
+function intakeForm(cfg, errors = [], values = {}, fieldErrors = {}) {
+  const needsCaptcha = cfg.captcha === 'turnstile';
+  const captchaUnavailable = needsCaptcha && (!cfg.captchaSiteKey || !cfg.captchaSecret || !cfg.captchaExpectedHostname || process.env.RADAR_V2_CAPTCHA_LIVE !== 'true');
+  const captcha = !needsCaptcha ? '' : captchaUnavailable
+    ? '<p class="err" role="alert">Audit requests are temporarily unavailable. Please try again later.</p>'
+    : `<p>Complete the security check before requesting your audit.</p><div class="cf-turnstile" data-sitekey="${escapeHtml(cfg.captchaSiteKey)}" data-action="${escapeHtml(cfg.captchaExpectedAction || 'intake')}" data-response-field-name="captcha_token" data-size="flexible"></div><script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script><noscript><p>JavaScript is required for the security check.</p></noscript>`;
+  const err = errors.length ? `<div class="err" role="alert" aria-live="assertive"><p>Please correct the following:</p><ul>${errors.map(escapeHtml).map((message) => `<li>${message}</li>`).join('')}</ul></div>` : '';
   const v = (k) => escapeHtml(values[k] || '');
-  return layout('Request a marketing audit', `
-    ${lockup({ subtitle: 'Free public-presence audit' })}
+  const errorAttrs = (name) => fieldErrors[name] ? ` aria-invalid="true" aria-describedby="${name}-error"` : '';
+  const fieldError = (name) => fieldErrors[name] ? `<p class="err field-error" id="${name}-error">${escapeHtml(fieldErrors[name])}</p>` : '';
+  return layout('Request your free audit', `
+    ${cfg.staging ? '<aside class="card" role="note"><strong>Private staging: synthetic test data only.</strong><p>This is a test of the audit workflow. Do not enter customer details. Email and CRM delivery are disabled.</p></aside>' : ''}
+    <img src="${momentumLogoDataUri}" alt="Momentum Digital" width="260" style="max-width:100%;height:auto;background:#fff">
     <div class="card">
-      <h1>Request a marketing audit</h1>
-      <p>We will analyze the public website and listing signals you submit. Required consent covers this report only, not recurring marketing.</p>
+      <h1>Get my free website + search visibility audit</h1>
+      <p>We review publicly available signals from the website you submit. This form records an audit request and does not subscribe you to marketing.</p>
       ${err}
       <form method="post" action="/intake">
-        <label>Business name</label><input name="business_name" required value="${v('business_name')}">
-        <label>Website</label><input name="website" required value="${v('website')}">
-        <label>City / state or service area</label><input name="city_state" required value="${v('city_state')}">
         <div class="row">
-          <div><label>Your name</label><input name="requester_name" required value="${v('requester_name')}"></div>
-          <div><label>Role</label>
-            <select name="role" required>
-              <option value="">Select</option>
-              ${['owner', 'manager', 'marketing', 'other'].map((r) => `<option value="${r}" ${values.role === r ? 'selected' : ''}>${r}</option>`).join('')}
-            </select>
-          </div>
+          <div><label for="name">Name</label><input id="name" name="name" autocomplete="name" required${errorAttrs('name')} value="${v('name')}">${fieldError('name')}</div>
+          <div><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" autocomplete="tel" required${errorAttrs('phone')} value="${v('phone')}">${fieldError('phone')}</div>
         </div>
-        <div class="row">
-          <div><label>Business email</label><input name="requester_email" type="email" required value="${v('requester_email')}"></div>
-          <div><label>Phone (optional)</label><input name="requester_phone" value="${v('requester_phone')}"></div>
-        </div>
-        <label>Primary services</label><input name="primary_services" required value="${v('primary_services')}">
-        <label>Main growth goals</label><textarea name="growth_goals" required>${v('growth_goals')}</textarea>
-        <label>Current marketing channels</label><input name="current_channels" required value="${v('current_channels')}">
-        <label>Notes (optional)</label><textarea name="notes">${v('notes')}</textarea>
-        <p><label><input type="checkbox" name="consent_analyze" ${values.consent_analyze ? 'checked' : ''}> I consent to analysis of this business's public website and listings, and to delivery of the requested report.</label></p>
-        <p><label><input type="checkbox" name="consent_marketing"> Optional: you may follow up with marketing. Leave unchecked if you only want the report.</label></p>
-        <p><a href="${escapeHtml(cfg.privacyUrl)}">Privacy</a> · <a href="${escapeHtml(cfg.termsUrl)}">Terms</a></p>
-        <button type="submit">Submit audit request</button>
+        <label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required${errorAttrs('email')} value="${v('email')}">${fieldError('email')}
+        <label for="website">Website</label><input id="website" name="website" type="url" autocomplete="url" required${errorAttrs('website')} value="${v('website')}">${fieldError('website')}
+        <label for="business_description">Brief business description</label><textarea id="business_description" name="business_description" required${errorAttrs('business_description')}>${v('business_description')}</textarea>${fieldError('business_description')}
+        <label for="goals">Goals</label><textarea id="goals" name="goals" required${errorAttrs('goals')}>${v('goals')}</textarea>${fieldError('goals')}
+        <div class="consent"><input id="consent_analyze" type="checkbox" name="consent_analyze" required${errorAttrs('consent_analyze')} ${values.consent_analyze ? 'checked' : ''}> <label for="consent_analyze">I’m requesting a one-time public website audit and consent to receive the report by email and one review call. This does not subscribe me to marketing.</label></div>${fieldError('consent_analyze')}
+        <p><a href="${escapeHtml(cfg.privacyUrl)}">Privacy notice</a> · <a href="${escapeHtml(cfg.termsUrl)}">Terms</a></p>
+        ${captcha}
+        <button type="submit"${captchaUnavailable ? ' disabled' : ''}>Request my audit</button>
       </form>
     </div>
   `);
@@ -145,10 +145,33 @@ function parseForm(body) {
   return obj;
 }
 
+async function readBody(req) {
+  const limit = 64 * 1024;
+  const tooLarge = () => Object.assign(new Error('Request body too large'), { statusCode: 413 });
+  if (Number(req.headers['content-length']) > limit) throw tooLarge();
+  let bytes = 0;
+  const chunks = [];
+  for await (const chunk of req.iterator({ destroyOnReturn: false })) {
+    bytes += chunk.length;
+    if (bytes > limit) throw tooLarge();
+    chunks.push(chunk);
+  }
+  return Buffer.concat(chunks).toString('utf8');
+}
+
 function requireQa(req, cfg) {
   const url = new URL(req.url, cfg.publicOrigin);
   const token = url.searchParams.get('token') || '';
   return Boolean(cfg.qaToken) && token === cfg.qaToken;
+}
+
+function reportReleased(store, report) {
+  if (!reportAccessible(report)) return false;
+  const prospect = store.get('prospects', report.prospect_id);
+  return Boolean(prospect && [
+    'report_approved', 'enrichment_pending', 'outreach_ready', 'outreach_approved', 'handed_off',
+    'contacted', 'engaged', 'booked', 'qualified', 'proposal', 'won', 'lost', 'nurture',
+  ].includes(prospect.lifecycle));
 }
 
 function createServer({ store, adapters, campaign, cfg }) {
@@ -158,7 +181,7 @@ function createServer({ store, adapters, campaign, cfg }) {
       const url = new URL(req.url, config.publicOrigin);
       if (req.method === 'GET' && url.pathname === '/health') {
         res.writeHead(200, { 'content-type': 'application/json' });
-        return res.end(JSON.stringify({ ok: true, killSwitch: config.killSwitch }));
+        return res.end(JSON.stringify({ ok: true, killSwitch: config.killSwitch, staging: config.staging }));
       }
       if (req.method === 'GET' && (url.pathname === '/' || url.pathname === '/intake')) {
         res.writeHead(200, { 'content-type': 'text/html; charset=utf-8' });
@@ -173,14 +196,12 @@ function createServer({ store, adapters, campaign, cfg }) {
         return res.end(layout('Terms', `<div class="card"><h1>Terms</h1><p>Placeholder. This is a public-presence audit, not a ranking or spend guarantee.</p></div>`));
       }
       if (req.method === 'POST' && url.pathname === '/intake') {
-        const chunks = [];
-        for await (const c of req) chunks.push(c);
-        const body = parseForm(Buffer.concat(chunks).toString('utf8'));
+        const body = parseForm(await readBody(req));
         const ip = String(req.socket.remoteAddress || '');
         const result = await submitIntake(store, adapters, config, campaign, body, { ip });
         if (!result.ok) {
           res.writeHead(400, { 'content-type': 'text/html; charset=utf-8' });
-          return res.end(intakeForm(config, result.errors, body));
+          return res.end(intakeForm(config, result.errors, body, result.fieldErrors || {}));
         }
         res.writeHead(303, { location: `/status/${result.submission.status_token}` });
         return res.end();
@@ -188,23 +209,49 @@ function createServer({ store, adapters, campaign, cfg }) {
       if (req.method === 'GET' && url.pathname.startsWith('/status/')) {
         const tok = url.pathname.slice('/status/'.length);
         const sub = store.findOne('intake_submissions', (s) => s.status_token === tok);
+        const statusHeaders = {
+          'content-type': 'text/html; charset=utf-8',
+          'cache-control': 'no-store',
+          'referrer-policy': 'no-referrer',
+          'x-robots-tag': 'noindex, nofollow',
+        };
         if (!sub) {
-          res.writeHead(404); return res.end('not found');
+          res.writeHead(404, statusHeaders); return res.end('not found');
         }
-        const prospect = sub.prospect_id ? store.get('prospects', sub.prospect_id) : null;
-        res.writeHead(200, { 'content-type': 'text/html; charset=utf-8' });
-        return res.end(layout('Audit status', `
+        const sourceSubmission = sub.duplicate_of ? store.get('intake_submissions', sub.duplicate_of) || sub : sub;
+        const job = store.findOne('jobs', (row) => row.type === 'intake.audit' && row.payload?.submission_id === sourceSubmission.id);
+        const prospect = (sub.prospect_id && store.get('prospects', sub.prospect_id)) ||
+          (sourceSubmission.prospect_id && store.get('prospects', sourceSubmission.prospect_id));
+        const report = prospect && store.findOne('reports', (row) => row.prospect_id === prospect.id);
+        const released = report && reportReleased(store, report);
+        let progress;
+        if (sub.duplicate_of) {
+          progress = '<p>This request matches an earlier request. A second audit was not started.</p>';
+        } else if (released) {
+          progress = `<p>Your public website audit is ready: <a href="/r/${escapeHtml(report.access_token)}">view the report</a>.</p>`;
+        } else if (report) {
+          progress = '<p>The public website scan and draft report are complete. The report is awaiting human quality review. Nothing has been emailed.</p>';
+        } else if (job?.status === 'dead_letter') {
+          progress = '<p>The scan could not be completed after retries. No report has been generated or emailed.</p>';
+        } else if (job?.status === 'running') {
+          progress = '<p>Your public website scan is in progress.</p>';
+        } else if (job?.status === 'succeeded' && prospect?.lifecycle === 'suppressed') {
+          progress = '<p>The request was received, but the site was not eligible for this audit. No scan or report was created.</p>';
+        } else {
+          progress = '<p>Your audit is queued. The report has not been generated or emailed yet.</p>';
+        }
+        res.writeHead(200, statusHeaders);
+        return res.end(layout('Audit request received', `
           <div class="card">
             <h1>Request received</h1>
-            <p>We will analyze the public presence of ${escapeHtml(sub.business_name)}.</p>
-            <p>Status: ${escapeHtml(prospect ? prospect.lifecycle : 'received')}</p>
-            <p>Marketing follow-up consent: ${sub.consent_marketing ? 'yes' : 'no (report only)'}</p>
+            <p>Your audit request for <strong>${escapeHtml(sub.website)}</strong> has been saved.</p>
+            ${progress}
           </div>`));
       }
       if (req.method === 'GET' && url.pathname.startsWith('/r/')) {
         const tok = url.pathname.slice('/r/'.length);
         const report = store.findOne('reports', (r) => r.access_token === tok);
-        if (!reportAccessible(report)) {
+        if (!reportReleased(store, report)) {
           res.writeHead(404); return res.end('not found');
         }
         const version = store.get('report_versions', report.current_version_id);
@@ -217,7 +264,7 @@ function createServer({ store, adapters, campaign, cfg }) {
       if (req.method === 'GET' && url.pathname.startsWith('/cta/')) {
         const tok = url.pathname.slice('/cta/'.length);
         const report = store.findOne('reports', (r) => r.access_token === tok);
-        if (!reportAccessible(report)) { res.writeHead(404); return res.end('not found'); }
+        if (!reportReleased(store, report)) { res.writeHead(404); return res.end('not found'); }
         await store.emitEvent({ actor: 'prospect', type: 'cta.clicked', prospectId: report.prospect_id, reason: 'cta clicked', payload: { report_id: report.id } });
         res.writeHead(302, { location: config.bookingUrl });
         return res.end();
@@ -231,8 +278,8 @@ function createServer({ store, adapters, campaign, cfg }) {
           res.writeHead(200, { 'content-type': 'text/html; charset=utf-8' });
           return res.end(layout('QA queue', `
             <div class="card"><h1>QA queue</h1>
-            <table><tr><th>Business</th><th>Offer</th><th></th></tr>
-            ${queue.map((p) => `<tr><td>${escapeHtml(p.business_name)}</td><td>${escapeHtml(p.selected_offer || '')}</td><td><a href="/qa/${p.id}?token=${escapeHtml(config.qaToken)}">review</a></td></tr>`).join('')}
+            <table><tr><th>Website</th><th>Offer</th><th></th></tr>
+            ${queue.map((p) => `<tr><td>${escapeHtml(prospectLabel(p))}</td><td>${escapeHtml(p.selected_offer || '')}</td><td><a href="/qa/${p.id}?token=${escapeHtml(config.qaToken)}">review</a></td></tr>`).join('')}
             </table></div>`));
         }
         const m = url.pathname.match(/^\/qa\/([^/]+)(?:\/(approve|reject|rescan))?$/);
@@ -246,7 +293,7 @@ function createServer({ store, adapters, campaign, cfg }) {
           res.writeHead(200, { 'content-type': 'text/html; charset=utf-8' });
           return res.end(layout('QA review', `
             <div class="card">
-              <h1>${escapeHtml(p.business_name)}</h1>
+              <h1>${escapeHtml(prospectLabel(p))}</h1>
               <p>Lifecycle ${escapeHtml(p.lifecycle)} · offer ${escapeHtml(p.selected_offer || '')} · suppression ${escapeHtml(p.suppression_reason || 'none')}</p>
               ${scoreTable(snap)}
               <p><a class="btn" href="/r/${report ? report.access_token : ''}">Open report</a></p>
@@ -260,9 +307,7 @@ function createServer({ store, adapters, campaign, cfg }) {
             </div>`));
         }
         if (m && req.method === 'POST') {
-          const chunks = [];
-          for await (const c of req) chunks.push(c);
-          const body = parseForm(Buffer.concat(chunks).toString('utf8'));
+          const body = parseForm(await readBody(req));
           const p = store.get('prospects', m[1]);
           const report = store.findOne('reports', (r) => r.prospect_id === p.id);
           const decision = m[2] === 'approve' ? 'approve' : m[2] === 'rescan' ? 'rescan' : 'reject';
@@ -278,9 +323,7 @@ function createServer({ store, adapters, campaign, cfg }) {
         return res.end(funnelPage(view));
       }
       if (req.method === 'POST' && url.pathname === '/webhooks/booking') {
-        const chunks = [];
-        for await (const c of req) chunks.push(c);
-        const raw = Buffer.concat(chunks).toString('utf8');
+        const raw = await readBody(req);
         const sig = req.headers['x-radar-signature'] || '';
         const ok = config.webhookSecret && hmac(config.webhookSecret, raw) === String(sig).replace(/^sha256=/i, '');
         if (!ok) { res.writeHead(401); return res.end('bad signature'); }
@@ -291,6 +334,11 @@ function createServer({ store, adapters, campaign, cfg }) {
       }
       res.writeHead(404); res.end('not found');
     } catch (err) {
+      if (err.statusCode === 413) {
+        res.writeHead(413, { 'content-type': 'text/plain', connection: 'close' });
+        req.resume();
+        return res.end('Request body too large');
+      }
       res.writeHead(500, { 'content-type': 'text/plain' });
       res.end('error');
       console.error(String(err && err.message || err));
@@ -299,4 +347,4 @@ function createServer({ store, adapters, campaign, cfg }) {
   return server;
 }
 
-module.exports = { createServer, intakeForm, layout, funnelPage, scoreTable };
+module.exports = { createServer, intakeForm, layout, funnelPage, scoreTable, reportReleased };

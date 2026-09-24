@@ -1,0 +1,85 @@
+{
+  "sourceUrl": "https://compassfinancialsolutionsinc.com/",
+  "finalUrl": "https://compassfinancialsolutionsinc.com/",
+  "sourceDomain": "compassfinancialsolutionsinc.com",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=UTF-8",
+  "pageSha256": "bdfe7c80df6c53d85544da3bc2417cd11889950b7f89dadb9d4f628639ea829f",
+  "title": "Havertown Retirement Planning PA 19083 | Havertown PA Retirement Planning | Retirement Planning Havertown PA 19083 | Retirement Planning Services Havertown Pennsylvania | Havertown Financial Services Pennsylvania | Pension Planning in Havertown | Retirement Planners Havertown PA 19083 | Retirement Planning Professionals | Havertown Income Planning Services | Retirement Financial Planning Havertown PA 19083 | Help Planning for Retirement in Havertown",
+  "description": "Compass Financial Solutions is the premier Havertown retirement planning company for custom retirement plans, financial services and income planning in Havertown PA 19083. We specialize in providing clients with retirement planning strategies and financial planning services in Pennsylvania. If you live in Havertown and need quality retirement planners, give Compass a call.",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "compass",
+      "financial",
+      "solutions",
+      "financial",
+      "planner"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\compass-financial-solutions-financial-planner\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://compassfinancialsolutionsinc.com/wp-content/uploads/compass-financial-solutions-logo-2.png",
+    "sourceEvidence": "JSON-LD logo URL",
+    "type": "png",
+    "dimensions": {
+      "width": 457,
+      "height": 120
+    },
+    "sha256": "0659eeee005a77e73bedf31ed8e50a2114524b0998c1085a6b5b4ed84f3f477d",
+    "sourceSha256": "0659eeee005a77e73bedf31ed8e50a2114524b0998c1085a6b5b4ed84f3f477d",
+    "sourceType": "png",
+    "sourceFileName": null,
+    "transformation": "none; exact first-party transparent asset",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "transparentRatio": 0.7308,
+      "edgeTransparentRatio": 0.948,
+      "contentRatio": 0.2692,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 17832
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\compass-financial-solutions-financial-planner\\reference-1.jpg",
+      "fileName": "reference-1.jpg",
+      "sourceUrl": "https://compassfinancialsolutionsinc.com/wp-content/uploads/compass-financial-solution-young-man-with-dog-2.jpg",
+      "sourceEvidence": "IMG scale-with-grid  home",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 1040,
+        "width": 710
+      },
+      "sha256": "681a7ff7c6052cf834a9a874b9a1d131d5a93e84515ca7d19fc8a2d6ad5a8ecf",
+      "bytes": 109327,
+      "visual": {
+        "ok": true,
+        "lumaRange": 243.3,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [
+    {
+      "url": "https://compassfinancialsolutionsinc.com/wp-content/plugins/revslider/public/assets/assets/dummy.png",
+      "reason": "reference image is too small"
+    },
+    {
+      "url": "https://www.facebook.com/tr?id=406459627946129&ev=PageView&noscript=1",
+      "reason": "unsupported reference type unknown"
+    }
+  ],
+  "brandColors": [
+    "#fc2820",
+    "#cd1225",
+    "#00345b",
+    "#0089f7",
+    "#003388"
+  ],
+  "checkedAt": "2026-09-18T09:22:08.945Z"
+}

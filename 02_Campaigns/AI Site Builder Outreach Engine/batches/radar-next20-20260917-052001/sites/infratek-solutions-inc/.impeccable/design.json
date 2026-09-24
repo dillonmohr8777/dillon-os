@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "generatedBy": "Prospect Radar Next 20",
+  "impeccableVersion": "4.0.4",
+  "mode": "Persuade",
+  "direction": "image first",
+  "tokens": {
+    "palette": {
+      "paper": "#E7F3F4",
+      "ink": "#132B32",
+      "accent": "#146B72",
+      "accent2": "#E36D4F",
+      "panel": "#CFE5E5",
+      "deep": "#0D353B",
+      "onPaper": "#132B32",
+      "onAccent": "#FFFFFF",
+      "onAccent2": "#132B32",
+      "onPanel": "#132B32",
+      "onDeep": "#FFFFFF",
+      "border": "1px",
+      "radius": "18px"
+    },
+    "fonts": {
+      "id": "bodoni-urbanist",
+      "display": "Bodoni Moda",
+      "text": "Urbanist"
+    }
+  },
+  "exactLogoSha256": "5cae48f423c9ba8f288ff662435a061fe0088c1b80684df759ce771817137eed"
+}

@@ -1,0 +1,112 @@
+{
+  "sourceUrl": "https://mainlinenails.com/locations/providence-spa-nails/",
+  "finalUrl": "https://mainlinenails.com/providence-spa-nails",
+  "sourceDomain": "mainlinenails.com",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=utf-8",
+  "pageSha256": "8d730dc26b489abc757d2612a08ef6d99b78e110c58020ae0395f7b1eaee9767",
+  "title": "Providence Nails & Spa",
+  "description": "Nail salon in Collegeville PA",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "providence",
+      "spa",
+      "nails"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\providence-spa-and-nails\\logo.svg",
+    "fileName": "logo.svg",
+    "sourceUrl": "https://assets.cdn.filesafe.space/J78YigTcZwUhjM5Rd4S8/media/66f4b8099fb6e50731fde855.svg",
+    "sourceEvidence": "Branded parent container IMG",
+    "type": "svg",
+    "dimensions": {
+      "width": 240,
+      "height": 70
+    },
+    "sha256": "75b5d690fb098ff4b48f8c15dffab8910ede8ef0a065ad36b39bc3e65c918883",
+    "sourceSha256": "75b5d690fb098ff4b48f8c15dffab8910ede8ef0a065ad36b39bc3e65c918883",
+    "sourceType": "svg",
+    "sourceFileName": null,
+    "transformation": "none; exact first-party transparent asset",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "vector": true
+    },
+    "transparent": true,
+    "bytes": 2419
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\providence-spa-and-nails\\reference-1.jpg",
+      "fileName": "reference-1.jpg",
+      "sourceUrl": "https://assets.cdn.filesafe.space/J78YigTcZwUhjM5Rd4S8/media/66f4cf5ab3c24e4701e2b458.jpeg",
+      "sourceEvidence": "IMG img-none img-border-none img-shadow-none img-effects-none",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 400,
+        "width": 600
+      },
+      "sha256": "8d3b2e26bea6d28c757687aa5171a6117a168b2595d3990ed90298fef3e2867d",
+      "bytes": 76476,
+      "visual": {
+        "ok": true,
+        "lumaRange": 248.1,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\providence-spa-and-nails\\reference-2.jpg",
+      "fileName": "reference-2.jpg",
+      "sourceUrl": "https://assets.cdn.filesafe.space/J78YigTcZwUhjM5Rd4S8/media/66f4db11b3c24e7982e2bc3b.jpeg",
+      "sourceEvidence": "IMG img-none img-border-none img-shadow-none img-effects-none",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 800,
+        "width": 600
+      },
+      "sha256": "0419ce8904e961682e675ab285fe1a5be098d54e481017c8cb4b0b86a1586912",
+      "bytes": 244453,
+      "visual": {
+        "ok": true,
+        "lumaRange": 245.2,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\providence-spa-and-nails\\reference-3.png",
+      "fileName": "reference-3.png",
+      "sourceUrl": "https://firebasestorage.googleapis.com/v0/b/highlevel-backend.appspot.com/o/location%2FJ78YigTcZwUhjM5Rd4S8%2Fimages%2FfVoCXo8kGsqGkvVsRLqB%2FChIJedEXiFWQxokRUelFSe8UDQY%2Fmap-5kLmo6cKQY.jpg?alt=media",
+      "sourceEvidence": "IMG map-element  500 broad street, collegeville, pa 19426, usa",
+      "type": "png",
+      "dimensions": {
+        "width": 1100,
+        "height": 600
+      },
+      "sha256": "2e3fbe62e33dc52730e38b36e43294f3e2ee36b19ec591eb593338ca6eb50529",
+      "bytes": 107822,
+      "visual": {
+        "ok": true,
+        "lumaRange": 220.2,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [
+    {
+      "url": "https://assets.cdn.filesafe.space/J78YigTcZwUhjM5Rd4S8/media/66f4b8099fb6e50731fde855.svg",
+      "reason": "unsupported reference type svg"
+    }
+  ],
+  "brandColors": [
+    "#1d3659",
+    "#188bf6",
+    "#d0936a",
+    "#9ae6b4",
+    "#565a7c"
+  ],
+  "checkedAt": "2026-09-17T09:20:55.481Z"
+}

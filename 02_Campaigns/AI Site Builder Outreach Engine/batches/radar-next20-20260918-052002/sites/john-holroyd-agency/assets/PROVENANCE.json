@@ -1,0 +1,168 @@
+{
+  "slug": "john-holroyd-agency",
+  "preparedAt": "2026-09-18T09:24:16.095Z",
+  "sourceSite": "https://www.jphagency.com/",
+  "sourceFinalUrl": "https://www.jphagency.com/",
+  "sourcePageSha256": "83c12fc62d3590bafe452c7253e809428e406fc869ea16d8347f637739b01f12",
+  "exactLogoRequired": true,
+  "exactLogoSha256": "36aeb3fffed9b120e6e2e059dfd0b2ea8c59813f2f43bc6048ba41b272740bf9",
+  "firstPartyDerivativePolicy": "Content visuals preserve first-party source photography while adapting crop and tonal balance for the private mobile concept. They are not evidence of additional projects or outcomes.",
+  "generatedCompositionReference": "automation/prospect-radar-next20/.impeccable/mocks/architerra-mobile-three-directions.png",
+  "assets": [
+    {
+      "role": "exact identity",
+      "output": "logo.png",
+      "sourceUrl": "https://www.jphagency.com/wp-content/uploads/sites/151/2023/01/AgencylogoVector-2-3.png",
+      "sourceSha256": "f29aef7badafee8bf8b13f5b8694f05ddae6bf089b5b42f182ca2462e1192356",
+      "outputSha256": "36aeb3fffed9b120e6e2e059dfd0b2ea8c59813f2f43bc6048ba41b272740bf9",
+      "transformation": "flat border color rgb(255,255,255) removed by border-seeded flood fill at tolerance 32; geometry unchanged",
+      "transparent": true
+    },
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.jphagency.com/wp-content/uploads/sites/151/2023/01/jhnhdebug.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "d17d4d9a7125fda63c483694bc4a41fc731612deb20fae6eb31eedc3160da574",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=1.015:contrast=1.064:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "6da7ebd9d619c3f45de555d4660b8b0b6794fa721ee661e273af307c96b28679"
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.jphagency.com/wp-content/uploads/sites/151/2020/10/business-insurance-image-1-768x512.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "016a7fc05cd9ede3ae38a1684a8f521f3d8a8f750a89ee2fd5466ab944ed4320",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:0,eq=saturation=1.040:contrast=1.028:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "8a06ff13bce8e85d438c87802d01d6df29cfb431a223abebdca70947ab2a5e3b"
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.jphagency.com/wp-content/uploads/sites/151/2023/01/jhnhdebug.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "d17d4d9a7125fda63c483694bc4a41fc731612deb20fae6eb31eedc3160da574",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:0,eq=saturation=0.940:contrast=1.082:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "28f996e799f7796ed33f670ebdb6a1e21dce0cf19824bb1faf3b43a5afb1f97c"
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.jphagency.com/wp-content/uploads/sites/151/2020/10/business-insurance-image-1-768x512.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "016a7fc05cd9ede3ae38a1684a8f521f3d8a8f750a89ee2fd5466ab944ed4320",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:0,eq=saturation=0.965:contrast=1.046:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "dc42208905155b55879f60624237ceddd6baea7b45064b04db8b29253884915f"
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.jphagency.com/wp-content/uploads/sites/151/2023/01/jhnhdebug.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "d17d4d9a7125fda63c483694bc4a41fc731612deb20fae6eb31eedc3160da574",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:42,eq=saturation=0.990:contrast=1.010:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "be1d1a29a41b52d87c18df585fdf97ff46035fd886d84d3087b5285b6cd87d9b"
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.jphagency.com/wp-content/uploads/sites/151/2020/10/business-insurance-image-1-768x512.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "016a7fc05cd9ede3ae38a1684a8f521f3d8a8f750a89ee2fd5466ab944ed4320",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:42,eq=saturation=1.015:contrast=1.064:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "fba1ee5c6f1f25ddf5a327f9b7032ecf949217a4382d960fd7b8a97e1b3fb9df"
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.jphagency.com/wp-content/uploads/sites/151/2023/01/jhnhdebug.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "d17d4d9a7125fda63c483694bc4a41fc731612deb20fae6eb31eedc3160da574",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:42,eq=saturation=1.040:contrast=1.028:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "cd41357a626a6b7489fd47df465c891f571269bcc20f95134c3d23e15e22370c"
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.jphagency.com/wp-content/uploads/sites/151/2020/10/business-insurance-image-1-768x512.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "016a7fc05cd9ede3ae38a1684a8f521f3d8a8f750a89ee2fd5466ab944ed4320",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:42,eq=saturation=0.940:contrast=1.082:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "2189e180156e35c14874e69916c3e7272e6b72c1304e21bfd93d30aa4d1048ad"
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.jphagency.com/wp-content/uploads/sites/151/2023/01/jhnhdebug.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "d17d4d9a7125fda63c483694bc4a41fc731612deb20fae6eb31eedc3160da574",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:84,eq=saturation=0.965:contrast=1.046:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "2f9e151c0c39fc70ab79a996ec8b2b67a7fd58cf8be600030c01402b10e44e1c"
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.jphagency.com/wp-content/uploads/sites/151/2020/10/business-insurance-image-1-768x512.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "016a7fc05cd9ede3ae38a1684a8f521f3d8a8f750a89ee2fd5466ab944ed4320",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:84,eq=saturation=0.990:contrast=1.010:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "0a7532e4b7f94d33939f69cd81a5af9b86473a8b0d8f1dbec3a81e4463df7a63"
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.jphagency.com/wp-content/uploads/sites/151/2023/01/jhnhdebug.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "d17d4d9a7125fda63c483694bc4a41fc731612deb20fae6eb31eedc3160da574",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:84,eq=saturation=1.015:contrast=1.064:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "a90a8ca539e6878982aadd7d62779cd41a130268735e9d7d95c94a178ef182ad"
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.jphagency.com/wp-content/uploads/sites/151/2020/10/business-insurance-image-1-768x512.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "016a7fc05cd9ede3ae38a1684a8f521f3d8a8f750a89ee2fd5466ab944ed4320",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:84,eq=saturation=1.040:contrast=1.028:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "c980a91808dc9e182db178a3d3590573d708475a1182fa83b315e1fafc4dfae0"
+    }
+  ],
+  "fonts": {
+    "pair": {
+      "id": "newsreader-figtree",
+      "display": "Newsreader",
+      "text": "Figtree"
+    },
+    "source": "Google Fonts CSS API",
+    "files": [
+      {
+        "file": "font-display-400.woff2",
+        "sha256": "62981321d9a3cc7a61a73792729043703fd6112da86e8ec848bb57f088578757"
+      },
+      {
+        "file": "font-display-700.woff2",
+        "sha256": "62981321d9a3cc7a61a73792729043703fd6112da86e8ec848bb57f088578757"
+      },
+      {
+        "file": "font-text-400.woff2",
+        "sha256": "4ba7d3d096695818fe0686be4f1e82c6b05134e18a22260336130335027462dd"
+      },
+      {
+        "file": "font-text-700.woff2",
+        "sha256": "4ba7d3d096695818fe0686be4f1e82c6b05134e18a22260336130335027462dd"
+      }
+    ]
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "sourceUrl": "https://www.apiauto.com/",
+  "finalUrl": "https://www.apiauto.com/",
+  "sourceDomain": "apiauto.com",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=utf-8",
+  "pageSha256": "2db74fb0fae58d1857831719fe70836a46b11dccc95a87ef1eb6692045302efb",
+  "title": "api",
+  "description": "API, Autobody Products, Inc.",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "api",
+      "autobody",
+      "products"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\api-autobody-products\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://www.apiauto.com/api_logo_transparent_2025.png",
+    "sourceEvidence": "IMG ",
+    "type": "png",
+    "dimensions": {
+      "width": 1152,
+      "height": 530
+    },
+    "sha256": "8e1b48949d54335f4062e46454f3f7fcf454ff8f68d0a75fbfcdaec21035f5f5",
+    "sourceSha256": "8e1b48949d54335f4062e46454f3f7fcf454ff8f68d0a75fbfcdaec21035f5f5",
+    "sourceType": "png",
+    "sourceFileName": null,
+    "transformation": "none; exact first-party transparent asset",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "transparentRatio": 0.4616,
+      "edgeTransparentRatio": 1,
+      "contentRatio": 0.5384,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 189144
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\api-autobody-products\\reference-1.jpg",
+      "fileName": "reference-1.jpg",
+      "sourceUrl": "https://www.apiauto.com/images/headers/publish_003.jpg",
+      "sourceEvidence": "IMG bg static",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 1200,
+        "width": 1920
+      },
+      "sha256": "2f8fa821910a8d7b084ea8294c1f1334e0a2a0729bdeda372a07c808d4102dbd",
+      "bytes": 765596,
+      "visual": {
+        "ok": true,
+        "lumaRange": 255,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\api-autobody-products\\reference-2.jpg",
+      "fileName": "reference-2.jpg",
+      "sourceUrl": "https://www.apiauto.com/images/headers/publish_001.jpg",
+      "sourceEvidence": "IMG bg",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 1200,
+        "width": 1920
+      },
+      "sha256": "d78cefecbcdd8322c876a3a0d2a67b3a0bd7d6801daf63c5b75e570736be917d",
+      "bytes": 1208635,
+      "visual": {
+        "ok": true,
+        "lumaRange": 255,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\api-autobody-products\\reference-3.jpg",
+      "fileName": "reference-3.jpg",
+      "sourceUrl": "https://www.apiauto.com/images/headers/publish_002.jpg",
+      "sourceEvidence": "IMG bg",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 1200,
+        "width": 1920
+      },
+      "sha256": "bf7cc655030556cc7467d64e730ee79bcc44adb3a64110ff78bbcb6312f7333b",
+      "bytes": 766273,
+      "visual": {
+        "ok": true,
+        "lumaRange": 255,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [],
+  "brandColors": [
+    "#65861d",
+    "#81a03d"
+  ],
+  "checkedAt": "2026-09-18T09:21:20.825Z"
+}

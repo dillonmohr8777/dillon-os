@@ -1,0 +1,77 @@
+'use strict';
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const os = require('node:os');
+const path = require('node:path');
+const { createStore } = require('./lib/store.ts');
+const { createCampaign, processIntakeAuditJob } = require('./lib/pipeline.ts');
+const { createAdapters } = require('./lib/adapters.ts');
+const { loadConfig } = require('./lib/config.ts');
+const { createServer } = require('./lib/web.ts');
+const { processJobs } = require('./lib/jobs.ts');
+const { JOB_LEASE_MS } = require('./lib/schema.ts');
+(async () => {
+  const db = process.env.DATABASE_URL;
+  process.env.RADAR_V2_FIELD_KEY = 'ab'.repeat(32);
+  const stamp = Date.now();
+  const storageDir = fs.mkdtempSync(path.join(os.tmpdir(), 'radar-pg-flow-'));
+  const cfg = loadConfig({ databaseUrl: db, storageDir, storage: 'fs', publicOrigin: 'http://127.0.0.1', captcha: 'off', captchaSecret: '', killSwitch: true });
+  const store = await createStore({ databaseUrl: db });
+  assert.equal(store.kind, 'postgres');
+  let server;
+  try {
+    const campaign = await createCampaign(store, { name: `Disposable PG ${stamp}` });
+    server = createServer({ store, adapters: createAdapters(cfg), campaign, cfg });
+    await new Promise((resolve) => server.listen(0, '127.0.0.1', resolve));
+    const base = `http://127.0.0.1:${server.address().port}`;
+    const email = `pg-check-${stamp}@example.org`;
+    const accepted = await fetch(`${base}/intake`, { method: 'POST', redirect: 'manual', headers: { 'content-type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams({ name: 'QA Verification', phone: '+12155550100', email, website: 'https://example.org', business_description: 'Roofing company', goals: 'More qualified leads', consent_analyze: 'on' }) });
+    assert.equal(accepted.status, 303);
+    const statusUrl = new URL(accepted.headers.get('location'), base);
+    const sub = store.findOne('intake_submissions', (row) => row.status_token === statusUrl.pathname.split('/').at(-1));
+    assert.ok(sub);
+    assert.equal(sub.business_name, null);
+    const initial = await (await fetch(statusUrl)).text();
+    assert.match(initial, /audit is queued/i);
+    assert.doesNotMatch(initial, /QA Verification|pg-check-|2155550100/);
+    const html = '<!doctype html><html><head><title>Roofing services</title><meta name="viewport" content="width=device-width"><meta name="description" content="Roof repair"></head><body><h1>Roofing services</h1><p>Roof repair and replacement.</p><a href="tel:2155550101">Call</a></body></html>';
+    const fetchPageFn = async (url) => ({ ok: true, status: 200, finalUrl: url, html, body: html, headers: { 'content-type': 'text/html; charset=utf-8' }, bytes: Buffer.byteLength(html), responseMs: 20, hops: [{ url, status: 200 }] });
+    const done = await processJobs(store, { 'intake.audit': (payload) => processIntakeAuditJob(store, cfg, payload, { fetchPageFn }) }, { workerId: 'pg-flow-worker', max: 1 });
+    assert.equal(done[0].status, 'succeeded');
+    await store.flush();
+    const linked = store.get('intake_submissions', sub.id);
+    const prospect = store.get('prospects', linked.prospect_id);
+    assert.equal(prospect.lifecycle, 'qa_pending');
+    const report = store.findOne('reports', (row) => row.prospect_id === prospect.id);
+    assert.ok(report && report.current_version_id);
+    assert.ok(store.get('report_versions', report.current_version_id).manifest.evidence.length);
+    assert.equal((await fetch(`${base}/r/${report.access_token}`)).status, 404);
+    const waiting = await (await fetch(statusUrl)).text();
+    assert.match(waiting, /awaiting human quality review/i);
+    assert.match(waiting, /Nothing has been emailed/i);
+    const raw = await store.query('SELECT requester_email, business_description FROM intake_submissions WHERE id = $1', [sub.id]);
+    assert.match(raw.rows[0].requester_email, /^enc:v1:/);
+    assert.match(raw.rows[0].business_description, /^enc:v1:/);
+
+    const lease = await store.enqueueJob({ type: 'intake.audit', idempotencyKey: `reclaim-${stamp}`, payload: {} });
+    assert.equal((await store.claimJob('crashed-worker')).id, lease.job.id);
+    await store.query('UPDATE jobs SET locked_at = $2 WHERE id = $1', [lease.job.id, new Date(Date.now() - JOB_LEASE_MS - 1000).toISOString()]);
+    const reclaimed = await store.claimJob('recovery-worker');
+    assert.equal(reclaimed.id, lease.job.id);
+    assert.equal(reclaimed.locked_by, 'recovery-worker');
+    await store.completeJob(reclaimed.id);
+
+    const external = await store.enqueueJob({ type: 'crm.send', idempotencyKey: `crm-${stamp}`, payload: {} });
+    assert.equal((await store.claimJob('crm-worker')).id, external.job.id);
+    await store.query('UPDATE jobs SET locked_at = $2 WHERE id = $1', [external.job.id, new Date(Date.now() - JOB_LEASE_MS - 1000).toISOString()]);
+    assert.equal(await store.claimJob('must-not-reclaim'), null);
+    const protectedJob = await store.query('SELECT status, locked_by FROM jobs WHERE id = $1', [external.job.id]);
+    assert.equal(protectedJob.rows[0].status, 'running');
+    assert.equal(protectedJob.rows[0].locked_by, 'crm-worker');
+    console.log(JSON.stringify({ intake: 'six fields queued, scanned, report saved at qa_pending', report_release: 'blocked pending human QA', pii_storage: 'encrypted', stale_intake_lease: 'reclaimed', crm_lease: 'preserved' }));
+  } finally {
+    if (server) await new Promise((resolve) => server.close(resolve));
+    await store.close();
+    fs.rmSync(storageDir, { recursive: true, force: true });
+  }
+})().catch((err) => { console.error(String(err && err.stack || err)); process.exitCode = 1; });

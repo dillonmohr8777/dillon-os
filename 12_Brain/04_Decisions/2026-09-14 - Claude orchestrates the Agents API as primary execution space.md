@@ -3,6 +3,11 @@ note_type: decision
 status: directed
 date: 2026-09-14
 directed_by: Dillon Mohr
+created: 2026-09-14
+updated: 2026-09-14
+source_refs:
+  - System/2026-09-14 - Open items from the closing-layer session.md
+  - 10_Sessions/2026-09-14 Weekend accounting 2026-09-11 to 09-13.md
 tags: [architecture, agents-api, orchestration, mac-mini]
 ---
 

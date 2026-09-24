@@ -1,0 +1,168 @@
+{
+  "slug": "mazzoni-center",
+  "preparedAt": "2026-09-18T09:23:17.186Z",
+  "sourceSite": "https://www.mazzonicenter.org/",
+  "sourceFinalUrl": "https://www.mazzonicenter.org/",
+  "sourcePageSha256": "72506184298a98d1739906ab381141b68ef96fcea5dfea3440015455ae127e74",
+  "exactLogoRequired": true,
+  "exactLogoSha256": "59076adc773691923798a3f0d347c6bb291ad7cae09dae1082218e705c54e66c",
+  "firstPartyDerivativePolicy": "Content visuals preserve first-party source photography while adapting crop and tonal balance for the private mobile concept. They are not evidence of additional projects or outcomes.",
+  "generatedCompositionReference": "automation/prospect-radar-next20/.impeccable/mocks/architerra-mobile-three-directions.png",
+  "assets": [
+    {
+      "role": "exact identity",
+      "output": "logo.png",
+      "sourceUrl": "https://www.mazzonicenter.org/themes/custom/mazzoni_ci/mazzoni_center_logo.png",
+      "sourceSha256": "59076adc773691923798a3f0d347c6bb291ad7cae09dae1082218e705c54e66c",
+      "outputSha256": "59076adc773691923798a3f0d347c6bb291ad7cae09dae1082218e705c54e66c",
+      "transformation": "none; exact first-party transparent asset",
+      "transparent": true
+    },
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.mazzonicenter.org/sites/default/files/styles/billboard_xl/public/2024-08/date.jpeg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "8e813ddc02b8a8c52c5f811c38bb1bffac572f4b014fcadbb345bab836362417",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=0.965:contrast=1.028:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "8cb07483b3c2d0a547a4635d5e6ef39c822f619cbf960c0cb848ed6470cef3ba"
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.mazzonicenter.org/sites/default/files/styles/billboard_xs/public/2026-05/AdobeStock_603744573.jpeg?h=3c273a8a&itok=9a74L2ZI",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "f5b2b7f58ea7ce04521d2b697a43b536c86d0c42b4692e7488ef775e268b2a23",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:0,eq=saturation=0.990:contrast=1.082:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "7abd68e9be2a044698aa6045830bd27068d922e2f867de9c65b9d65b4989bf7e"
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.mazzonicenter.org/sites/default/files/styles/tile_xs/public/2026-09/Bi%20Week.png?h=734c934c&itok=b6K_6LC0",
+      "sourceFile": "reference-3.png",
+      "sourceSha256": "2e6a8eda5dec145ae0a09a63cd252c2c30b2ae8e1482cfa228df0535e645654a",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:0,eq=saturation=1.015:contrast=1.046:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "3ab913dd810f07fb4df76812f7a0f4c8a3a204ea750577f6c17c3211b450e565"
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.mazzonicenter.org/sites/default/files/styles/billboard_xl/public/2024-08/date.jpeg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "8e813ddc02b8a8c52c5f811c38bb1bffac572f4b014fcadbb345bab836362417",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:0,eq=saturation=1.040:contrast=1.010:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "8f9342022e11aaeaea651c36bd06b1a16b93c2d1320098a1d2e69ca7c8f17073"
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.mazzonicenter.org/sites/default/files/styles/billboard_xs/public/2026-05/AdobeStock_603744573.jpeg?h=3c273a8a&itok=9a74L2ZI",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "f5b2b7f58ea7ce04521d2b697a43b536c86d0c42b4692e7488ef775e268b2a23",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:42,eq=saturation=0.940:contrast=1.064:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "df78306c3272b97c677fc7efafcb7100125cef6ec0ae7469472f8a10897ba21f"
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.mazzonicenter.org/sites/default/files/styles/tile_xs/public/2026-09/Bi%20Week.png?h=734c934c&itok=b6K_6LC0",
+      "sourceFile": "reference-3.png",
+      "sourceSha256": "2e6a8eda5dec145ae0a09a63cd252c2c30b2ae8e1482cfa228df0535e645654a",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:42,eq=saturation=0.965:contrast=1.028:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "61b579189103cd6178613d2c1be96a8fe475108b111461d2f2f78bf76babf620"
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.mazzonicenter.org/sites/default/files/styles/billboard_xl/public/2024-08/date.jpeg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "8e813ddc02b8a8c52c5f811c38bb1bffac572f4b014fcadbb345bab836362417",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:42,eq=saturation=0.990:contrast=1.082:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "6cb48116e54da854ebb731573000b87a55dae34ae8992dca905030b2f69c9c47"
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.mazzonicenter.org/sites/default/files/styles/billboard_xs/public/2026-05/AdobeStock_603744573.jpeg?h=3c273a8a&itok=9a74L2ZI",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "f5b2b7f58ea7ce04521d2b697a43b536c86d0c42b4692e7488ef775e268b2a23",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:42,eq=saturation=1.015:contrast=1.046:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "d6d35dde658c7be19901be1649eb20f022b42200ad7b943b64be07458e9109df"
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.mazzonicenter.org/sites/default/files/styles/tile_xs/public/2026-09/Bi%20Week.png?h=734c934c&itok=b6K_6LC0",
+      "sourceFile": "reference-3.png",
+      "sourceSha256": "2e6a8eda5dec145ae0a09a63cd252c2c30b2ae8e1482cfa228df0535e645654a",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:84,eq=saturation=1.040:contrast=1.010:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "19dae3e3bd39b89cc757a608565eeb561a964944f9f1a41f8f683abbe244431b"
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.mazzonicenter.org/sites/default/files/styles/billboard_xl/public/2024-08/date.jpeg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "8e813ddc02b8a8c52c5f811c38bb1bffac572f4b014fcadbb345bab836362417",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:84,eq=saturation=0.940:contrast=1.064:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "8ecc69b50bae18d2874cfd59dfe54cc6311b3d0eabc89b40f58cef95d6a237bc"
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.mazzonicenter.org/sites/default/files/styles/billboard_xs/public/2026-05/AdobeStock_603744573.jpeg?h=3c273a8a&itok=9a74L2ZI",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "f5b2b7f58ea7ce04521d2b697a43b536c86d0c42b4692e7488ef775e268b2a23",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:84,eq=saturation=0.965:contrast=1.028:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "4613a5a71a10dc26cf63f83e6e2803bd7f9a870c4144f108b18e15d8a00cf3bd"
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.mazzonicenter.org/sites/default/files/styles/tile_xs/public/2026-09/Bi%20Week.png?h=734c934c&itok=b6K_6LC0",
+      "sourceFile": "reference-3.png",
+      "sourceSha256": "2e6a8eda5dec145ae0a09a63cd252c2c30b2ae8e1482cfa228df0535e645654a",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:84,eq=saturation=0.990:contrast=1.082:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "00f058cce8a0dfe86d76c8c0a424e4c3b76211aef4236333bc4ea2fc25502c6f"
+    }
+  ],
+  "fonts": {
+    "pair": {
+      "id": "bricolage-manrope",
+      "display": "Bricolage Grotesque",
+      "text": "Manrope"
+    },
+    "source": "Google Fonts CSS API",
+    "files": [
+      {
+        "file": "font-display-400.woff2",
+        "sha256": "a97804dc9fbe5fc972a08018c5eda4dab7ef2346f64c57e61419d05e6de4ea1c"
+      },
+      {
+        "file": "font-display-700.woff2",
+        "sha256": "a97804dc9fbe5fc972a08018c5eda4dab7ef2346f64c57e61419d05e6de4ea1c"
+      },
+      {
+        "file": "font-text-400.woff2",
+        "sha256": "a30ddcd349703aff7464c34bef3fffdff405ee50c113440d7c8693c02d210972"
+      },
+      {
+        "file": "font-text-700.woff2",
+        "sha256": "a30ddcd349703aff7464c34bef3fffdff405ee50c113440d7c8693c02d210972"
+      }
+    ]
+  }
+}

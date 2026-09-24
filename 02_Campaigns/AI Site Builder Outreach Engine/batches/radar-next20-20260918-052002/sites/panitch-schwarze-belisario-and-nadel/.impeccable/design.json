@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "generatedBy": "Prospect Radar Next 20",
+  "impeccableVersion": "4.0.4",
+  "mode": "Persuade",
+  "direction": "type first",
+  "tokens": {
+    "palette": {
+      "paper": "#EFE9F7",
+      "ink": "#24221E",
+      "accent": "#5E3F96",
+      "accent2": "#D5E15B",
+      "panel": "#DED4EC",
+      "deep": "#292039",
+      "onPaper": "#24221E",
+      "onAccent": "#FFFFFF",
+      "onAccent2": "#24221E",
+      "onPanel": "#24221E",
+      "onDeep": "#FFFFFF",
+      "border": "1px",
+      "radius": "14px"
+    },
+    "fonts": {
+      "id": "syne-work",
+      "display": "Syne",
+      "text": "Work Sans"
+    }
+  },
+  "exactLogoSha256": "3857647659ff305c0514298ced8285c066aeb5e255c2232c6e8d47baf6085e2d"
+}

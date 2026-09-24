@@ -1,0 +1,114 @@
+{
+  "sourceUrl": "https://www.nemours.org/locations/pennsylvania-primary-care-pediatrician-paoli.html",
+  "finalUrl": "https://www.nemours.org/locations/pennsylvania-primary-care-pediatrician-paoli.html",
+  "sourceDomain": "nemours.org",
+  "httpStatus": 200,
+  "contentType": "text/html;charset=utf-8",
+  "pageSha256": "4a1d66b0d6755eae336cd8788fedc396828df410c0d9a80074e94ca4ef29fd62",
+  "title": "Primary Care Pediatrician, Paoli",
+  "description": "\"Your",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "nemours",
+      "childrens",
+      "health"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\nemours-childrens-health\\logo.svg",
+    "fileName": "logo.svg",
+    "sourceUrl": "https://www.nemours.org/content/experience-fragments/nemours/us/en/navigation/header/master/_jcr_content/root/container/container_1613541240/image.coreimg.svg/1683290005293/nemours-logo-horizontal-condensed-v2.svg",
+    "sourceEvidence": "IMG cmp-image__image  nemours children's health logo",
+    "type": "svg",
+    "dimensions": {
+      "width": 220,
+      "height": 53
+    },
+    "sha256": "dd042392de59d8762b38f5c63c1f088f22535ae0f23c9c641ea2d663c2bdb3e6",
+    "sourceSha256": "dd042392de59d8762b38f5c63c1f088f22535ae0f23c9c641ea2d663c2bdb3e6",
+    "sourceType": "svg",
+    "sourceFileName": null,
+    "transformation": "none; exact first-party transparent asset",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "vector": true
+    },
+    "transparent": true,
+    "bytes": 6671
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\nemours-childrens-health\\reference-1.png",
+      "fileName": "reference-1.png",
+      "sourceUrl": "https://www.nemours.org/content/dam/platform/nemours-org/images/default-og-image/default-og-image.png",
+      "sourceEvidence": "og:image",
+      "type": "png",
+      "dimensions": {
+        "width": 708,
+        "height": 708
+      },
+      "sha256": "3623fb6b9a363cabac446ec31c9d0a7bd0ec3349f2e96a74f58c77f7d49308cb",
+      "bytes": 201598,
+      "visual": {
+        "ok": true,
+        "lumaRange": 143.6,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\nemours-childrens-health\\reference-2.jpg",
+      "fileName": "reference-2.jpg",
+      "sourceUrl": "https://www.nemours.org/content/dam/nemours/nemours-org/en/cloud-migration/hero-doctor-child-primary-care-j10143.jpg",
+      "sourceEvidence": "CSS image URL",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 800,
+        "width": 1440
+      },
+      "sha256": "0567bd9b74d7a98b621048afbee0391350d1d419ea4892ee3c835634cd038e85",
+      "bytes": 113531,
+      "visual": {
+        "ok": true,
+        "lumaRange": 255,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\nemours-childrens-health\\reference-3.png",
+      "fileName": "reference-3.png",
+      "sourceUrl": "https://www.nemours.org/content/experience-fragments/nemours/us/en/site/cloud/nemours-app/_jcr_content/root/two_panel_block_righ/col2/image.coreimg.85.1600.png/1777924392416/block-nemours-app-smart-phone-j7348.png",
+      "sourceEvidence": "IMG cmp-image__image  woman holding an iphone using nemours children's mychart. woman holding an iphone using nemours children's mychart.",
+      "type": "png",
+      "dimensions": {
+        "width": 940,
+        "height": 600
+      },
+      "sha256": "f2da6823d131712c1cee5e4112f119fe8dd311ba253e2317f9d345edbfe3970d",
+      "bytes": 367442,
+      "visual": {
+        "ok": true,
+        "lumaRange": 252,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [
+    {
+      "url": "https://www.nemours.org/content/experience-fragments/nemours/us/en/navigation/header-megamenu-content/location-menu-content/_jcr_content/root/columnsplitter/col2/image.coreimg.85.1600.png/1789418877848/menu-promo-usnwr.png",
+      "reason": "reference image is too small"
+    },
+    {
+      "url": "https://www.nemours.org/content/experience-fragments/nemours/us/en/navigation/header-megamenu-content/master/_jcr_content/root/columnsplitter/col2/image.coreimg.85.1600.jpeg/1786629695761/menu-promo-mychart.jpeg",
+      "reason": "reference image is too small"
+    },
+    {
+      "url": "https://www.nemours.org/content/experience-fragments/nemours/us/en/navigation/header-megamenu-content/patient---family-menu-content/_jcr_content/root/columnsplitter/col4/image.coreimg.85.1600.jpeg/1687980754196/menu-promo-kidshealth.jpeg",
+      "reason": "reference image is too small"
+    }
+  ],
+  "brandColors": [],
+  "checkedAt": "2026-09-17T09:20:44.418Z"
+}

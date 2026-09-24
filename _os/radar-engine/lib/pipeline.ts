@@ -9,7 +9,7 @@ const { createAdapters } = require('./adapters.ts');
 const { validateIntake } = require('./intake.ts');
 const { normalizeDomain, normalizeWebsite, normalizeEmail, normalizePhone, normalizeName } = require('./normalize.ts');
 const { checkSuppression } = require('./suppress.ts');
-const { scanFixture } = require('./scan.ts');
+const { scanFixture, scanPublicWebsite } = require('./scan.ts');
 const { scoreAudit } = require('./scoring.ts');
 const { selectOffer } = require('./routing.ts');
 const { buildManifest } = require('./manifest.ts');
@@ -57,10 +57,10 @@ async function createCampaign(store, input = {}) {
   });
 }
 
-async function submitIntake(store, adapters, cfg, campaign, body, { ip = '203.0.113.10' } = {}) {
+async function submitIntake(store, adapters, cfg, campaign, body, { ip = '203.0.113.10', queueAudit = true } = {}) {
   const captcha = await adapters.captcha.verify(body.captcha_token, ip);
   const parsed = validateIntake(body, { requireCaptcha: cfg.captcha === 'turnstile' });
-  if (!parsed.ok) return { ok: false, errors: parsed.errors };
+  if (!parsed.ok) return { ok: false, errors: parsed.errors, fieldErrors: parsed.fieldErrors };
   if (!captcha.ok) return { ok: false, errors: ['captcha failed'] };
 
   const ipHash = sha256(ip);
@@ -70,12 +70,7 @@ async function submitIntake(store, adapters, cfg, campaign, body, { ip = '203.0.
   if (!ipLimit.allowed) return { ok: false, errors: ['rate limited (ip)'] };
   if (!domLimit.allowed) return { ok: false, errors: ['rate limited (domain)'] };
 
-  const dup = store.findOne(
-    'intake_submissions',
-    (s) => normalizeDomain(s.website) === domain && s.requester_email === parsed.value.requester_email
-  );
-
-  const submission = store.insert('intake_submissions', {
+  const submissionInput = {
     id: id('intake'),
     campaign_id: campaign.id,
     status_token: token(18),
@@ -83,8 +78,25 @@ async function submitIntake(store, adapters, cfg, campaign, body, { ip = '203.0.
     ...parsed.value,
     email_verification: 'unverified',
     captcha_state: captcha.state,
-    duplicate_of: dup ? dup.id : null,
-  });
+  };
+  if (store.commitIntake) {
+    const committed = await store.commitIntake(submissionInput, { domain, queueAudit });
+    return { ok: true, ...committed };
+  }
+  const dup = store.findOne(
+    'intake_submissions',
+    (s) => normalizeDomain(s.website) === domain && s.requester_email === parsed.value.requester_email
+  );
+  const submission = store.insert('intake_submissions', { ...submissionInput, duplicate_of: dup ? dup.id : null });
+  if (store.flush) await store.flush();
+  if (!dup && queueAudit) {
+    await store.enqueueJob({
+      type: 'intake.audit',
+      idempotencyKey: `intake-audit:${submission.id}`,
+      payload: { submission_id: submission.id, campaign_id: campaign.id },
+    });
+    if (store.flush) await store.flush();
+  }
   await store.emitEvent({
     actor: 'prospect',
     reason: 'intake submitted',
@@ -92,36 +104,40 @@ async function submitIntake(store, adapters, cfg, campaign, body, { ip = '203.0.
     type: 'intake.submitted',
     payload: { campaign_id: campaign.id, domain, consent_analyze: parsed.value.consent_analyze, consent_marketing: parsed.value.consent_marketing },
   });
+  if (store.flush) await store.flush();
   return { ok: true, submission, duplicate: Boolean(dup) };
 }
 
 async function resolveProspect(store, campaign, submission, { actor = 'system', correlationId } = {}) {
   const loc = splitCityState(submission.city_state);
   const domain = normalizeDomain(submission.website);
-  const existing = store.findOne('prospects', (p) => p.domain === domain && p.campaign_id === campaign.id);
+  const linked = submission.prospect_id && store.get('prospects', submission.prospect_id);
+  const existing = linked || store.findOne('prospects', (p) => p.domain === domain && p.campaign_id === campaign.id);
   const prospect = existing || store.insert('prospects', {
     id: id('prospect'),
     campaign_id: campaign.id,
     lifecycle: 'discovered',
-    business_name: submission.business_name,
+    business_name: String(submission.business_name || '').trim() || null,
     website: normalizeWebsite(submission.website),
     domain,
-    city: loc.city,
-    state: loc.state,
-    service_area: submission.city_state,
-    vertical: 'hvac',
-    public_fields: { domain, city: loc.city, state: loc.state, vertical: 'hvac' },
+    city: loc.city || null,
+    state: loc.state || null,
+    service_area: submission.city_state || null,
+    vertical: null,
+    public_fields: { domain, city: loc.city || null, state: loc.state || null },
     private_fields: {},
     correlation_id: correlationId || submission.id,
   });
   store.update('intake_submissions', submission.id, { prospect_id: prospect.id });
-  store.insert('prospect_sources', {
-    id: id('source'),
-    prospect_id: prospect.id,
-    source: 'intake',
-    source_record_id: submission.id,
-    payload: { channel: 'self-serve' },
-  });
+  if (!store.findOne('prospect_sources', (source) => source.source === 'intake' && source.source_record_id === submission.id)) {
+    store.insert('prospect_sources', {
+      id: id('source'),
+      prospect_id: prospect.id,
+      source: 'intake',
+      source_record_id: submission.id,
+      payload: { channel: 'self-serve' },
+    });
+  }
   const ident = store.findOne('prospect_identities', (i) => i.kind === 'domain' && i.value_normalized === domain);
   if (!ident) {
     store.insert('prospect_identities', {
@@ -133,17 +149,115 @@ async function resolveProspect(store, campaign, submission, { actor = 'system', 
       confidence: 0.99,
     });
   }
-  if (!existing) {
+  if (store.get('prospects', prospect.id).lifecycle === 'discovered') {
     await store.transition(prospect.id, 'deduped', { actor, reason: 'intake identity resolved', correlationId: prospect.correlation_id });
   }
   const suppression = checkSuppression({ store, prospect, campaign, intake: submission });
   if (suppression.suppressed) {
     store.update('prospects', prospect.id, { suppression_reason: `${suppression.reason}: ${suppression.detail}` });
-    await store.transition(prospect.id, 'suppressed', { actor, reason: suppression.reason, correlationId: prospect.correlation_id });
+    if (prospect.lifecycle !== 'suppressed') {
+      await store.transition(prospect.id, 'suppressed', { actor, reason: suppression.reason, correlationId: prospect.correlation_id });
+    }
     return { prospect: store.get('prospects', prospect.id), suppression };
   }
-  await store.transition(prospect.id, 'scan_pending', { actor, reason: 'cleared suppression', correlationId: prospect.correlation_id });
+  const current = store.get('prospects', prospect.id);
+  if (current.lifecycle === 'deduped' || current.lifecycle === 'failed_retryable') {
+    await store.transition(prospect.id, 'scan_pending', { actor, reason: 'cleared suppression', correlationId: prospect.correlation_id });
+  }
   return { prospect: store.get('prospects', prospect.id), suppression };
+}
+
+async function runPublicScan(store, cfg, prospect, { fetchPageFn } = {}) {
+  const state = store.get('prospects', prospect.id).lifecycle;
+  if (state === 'scan_pending') {
+    await store.transition(prospect.id, 'scanning', { actor: 'scanner', reason: 'public audit run started', correlationId: prospect.correlation_id });
+  } else if (state !== 'scanning') {
+    throw new Error(`cannot start public scan from ${state}`);
+  }
+  await store.emitEvent({ actor: 'scanner', type: 'scan.started', prospectId: prospect.id, correlationId: prospect.correlation_id, reason: 'public scan started' });
+  const startedAt = nowIso();
+  const scanned = await scanPublicWebsite({ url: prospect.website, prospect, fetchPageFn });
+  const run = store.insert('audit_runs', {
+    id: id('audit'),
+    prospect_id: prospect.id,
+    scanner_version: scanned.scanner_version,
+    score_version: cfg.scoreVersion,
+    tier: scanned.audit.tier || 0,
+    status: 'completed',
+    started_at: startedAt,
+    completed_at: nowIso(),
+    fixture: false,
+    raw_audit: scanned.audit,
+  });
+  const evidence = scanned.evidence.map((entry) => store.insert('evidence_items', { ...entry, audit_run_id: run.id }));
+  await store.transition(prospect.id, 'scanned', { actor: 'scanner', reason: 'public website scan complete', correlationId: prospect.correlation_id });
+  await store.emitEvent({ actor: 'scanner', type: 'scan.completed', prospectId: prospect.id, correlationId: prospect.correlation_id, reason: 'public website scan complete', payload: { audit_run_id: run.id } });
+  return { run, evidence, scanned };
+}
+
+function restorePublicScan(run, evidence, prospect) {
+  const audit = run.raw_audit || {};
+  const emailCount = Number(audit.publicSignals?.emailCount || 0);
+  return {
+    run,
+    evidence,
+    scanned: {
+      scanner_version: run.scanner_version,
+      fixture: false,
+      audit,
+      prospect,
+      contacts: {
+        emails: Array.from({ length: emailCount }, () => ({})),
+        phone: audit.publicSignals?.hasPhone ? 'published' : '',
+        form: Boolean(audit.publicSignals?.hasForm),
+      },
+      aeo: {},
+    },
+  };
+}
+
+async function processIntakeAuditJob(store, cfg, payload, { fetchPageFn } = {}) {
+  const submission = store.readThrough
+    ? await store.readThrough('intake_submissions', payload.submission_id)
+    : store.get('intake_submissions', payload.submission_id);
+  if (!submission) throw new Error('intake submission was not found');
+  if (submission.duplicate_of) return { skipped: true, reason: 'duplicate request' };
+  const campaignId = payload.campaign_id || submission.campaign_id;
+  const campaign = store.readThrough
+    ? await store.readThrough('campaigns', campaignId)
+    : store.get('campaigns', campaignId);
+  if (!campaign) throw new Error('intake campaign was not found');
+  if (submission.prospect_id) {
+    const existingReport = store.findOne('reports', (report) => report.prospect_id === submission.prospect_id);
+    if (existingReport?.current_version_id && store.get('report_versions', existingReport.current_version_id)) {
+      return { prospect_id: submission.prospect_id, report_id: existingReport.id, resumed: true };
+    }
+  }
+
+  const resolved = await resolveProspect(store, campaign, submission, { correlationId: submission.id });
+  if (resolved.suppression?.suppressed) return { skipped: true, prospect_id: resolved.prospect.id, reason: resolved.suppression.reason };
+  if (!resolved.prospect) throw new Error(resolved.reason || 'prospect could not be resolved');
+  const prospect = store.get('prospects', resolved.prospect.id);
+  let scanned;
+  let run;
+  let evidence;
+  const priorRun = store.find('audit_runs', (auditRun) => auditRun.prospect_id === prospect.id)
+    .sort((a, b) => String(a.created_at).localeCompare(String(b.created_at)))[0];
+  if (priorRun?.status === 'completed') {
+    ({ run, evidence, scanned } = restorePublicScan(priorRun, store.find('evidence_items', (entry) => entry.audit_run_id === priorRun.id), prospect));
+    if (prospect.lifecycle === 'scanning') {
+      await store.transition(prospect.id, 'scanned', { actor: 'scanner', reason: 'resumed completed public scan', correlationId: prospect.correlation_id });
+    }
+  } else {
+    ({ run, evidence, scanned } = await runPublicScan(store, cfg, prospect, { fetchPageFn }));
+  }
+  const scored = await scoreAndRoute(store, cfg, campaign, prospect, run, evidence, scanned);
+  const report = await generateReport(
+    store, cfg, store.get('prospects', prospect.id), run, scored.snapshot,
+    scored.snapshotIn, evidence, scored.routed.offer
+  );
+  if (store.flush) await store.flush();
+  return { prospect_id: prospect.id, audit_run_id: run.id, report_id: report.report.id };
 }
 
 async function runScan(store, cfg, prospect, fixture, adapters) {
@@ -271,7 +385,12 @@ async function generateReport(store, cfg, prospect, run, snapshot, snapshotIn, e
   let pdfPut = { ref: null };
   const pdfPath = path.join(cfg.storageDir, 'reports', `${report.id}.pdf`);
   fs.mkdirSync(path.dirname(pdfPath), { recursive: true });
-  const pdf = await renderPdf(rendered.html, pdfPath);
+  let pdf;
+  try {
+    pdf = await renderPdf(rendered.html, pdfPath);
+  } catch (error) {
+    pdf = { ok: false, path: null, reason: `PDF rendering unavailable: ${String(error && error.message || error).slice(0, 180)}` };
+  }
   if (pdf.ok) pdfPut = { ref: pdf.path };
   const version = store.insert('report_versions', {
     id: id('reportVersion'),
@@ -283,7 +402,10 @@ async function generateReport(store, cfg, prospect, run, snapshot, snapshotIn, e
     check_results: checks,
   });
   store.update('reports', report.id, { current_version_id: version.id });
-  await store.transition(prospect.id, 'report_draft', { actor: 'reporter', reason: 'manifest rendered', correlationId: prospect.correlation_id });
+  const beforeReport = store.get('prospects', prospect.id).lifecycle;
+  if (beforeReport !== 'needs_review') {
+    await store.transition(prospect.id, 'report_draft', { actor: 'reporter', reason: 'manifest rendered', correlationId: prospect.correlation_id });
+  }
   await store.transition(prospect.id, 'qa_pending', { actor: 'reporter', reason: 'human QA mandatory', correlationId: prospect.correlation_id });
   await store.emitEvent({ actor: 'reporter', type: 'report.generated', prospectId: prospect.id, correlationId: prospect.correlation_id, reason: 'report generated', payload: { report_id: report.id } });
   return { report, version, html: rendered.html, checks, pdf, bookingUrl, reportUrl, manifest };
@@ -364,13 +486,14 @@ async function enrichContacts(store, prospect, scanned) {
 }
 
 function draftCopy(prospect, snapshot, reportUrl, bookingUrl) {
+  const subject = prospect.business_name || `the website at ${prospect.website}`;
   const findings = (snapshot.explanations || []).slice(0, 3).map((e) => e.because);
   const email = {
     channel: 'email',
-    subject: `${prospect.business_name}: three things we measured on your site`,
+    subject: `${subject}: three things we measured on your site`,
     body: [
       `Hi, this is a draft for Jesse, not a send.`,
-      `We looked at the public homepage for ${prospect.business_name}.`,
+      `We looked at the public homepage for ${subject}.`,
       ...findings.map((f, i) => `${i + 1}. ${f}`),
       `Report: ${reportUrl}`,
       `Book a walkthrough: ${bookingUrl}`,
@@ -380,7 +503,7 @@ function draftCopy(prospect, snapshot, reportUrl, bookingUrl) {
   };
   const callBrief = {
     channel: 'call-brief',
-    subject: `Jesse call brief: ${prospect.business_name}`,
+    subject: `Jesse call brief: ${subject}`,
     body: [
       `Offer: ${snapshot.selected_offer}`,
       `SQS: ${snapshot.site_quality_score}`,
@@ -570,9 +693,10 @@ async function runVerticalSlice({ fixtureName = 'cedar-ridge-hvac', reviewer = '
 
   try {
     const campaign = await createCampaign(store, { booking_link: cfg.bookingUrl });
-    const intake = await submitIntake(store, adapters, cfg, campaign, fixture.meta.intake);
+    const intake = await submitIntake(store, adapters, cfg, campaign, fixture.meta.intake, { queueAudit: false });
     if (!intake.ok) throw new Error(intake.errors.join('; '));
     const resolved = await resolveProspect(store, campaign, intake.submission);
+    if (resolved.blocked) throw new Error(resolved.reason);
     if (resolved.suppression.suppressed) throw new Error(`suppressed: ${resolved.suppression.reason}`);
     const scanned = await runScan(store, cfg, resolved.prospect, fixture, adapters);
     const scored = await scoreAndRoute(store, cfg, campaign, resolved.prospect, scanned.run, scanned.evidence, { ...scanned.scanned, prospect: { ...resolved.prospect, ...fixture.meta.signals } });
@@ -648,6 +772,8 @@ module.exports = {
   submitIntake,
   resolveProspect,
   runScan,
+  runPublicScan,
+  processIntakeAuditJob,
   scoreAndRoute,
   generateReport,
   qaDecision,

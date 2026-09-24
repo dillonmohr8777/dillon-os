@@ -22,6 +22,8 @@ enrichment, Tier 0/1 audits, Site Quality Score, or Opportunity Score.
 
 ## Local run
 
+Private synthetic staging sets `RADAR_V2_STAGING=true` to label the intake form and health response. Keep all delivery flags off. Every parsed POST body is limited to 64 KiB, including chunked requests; oversized requests receive HTTP 413 before processing.
+
 ```bash
 # Optional Postgres
 docker compose -f _os/radar-engine/docker-compose.yml up -d

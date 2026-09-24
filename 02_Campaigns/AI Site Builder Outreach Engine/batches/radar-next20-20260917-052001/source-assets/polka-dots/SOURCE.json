@@ -1,0 +1,109 @@
+{
+  "sourceUrl": "https://shopatpolkadots.com/",
+  "finalUrl": "https://shopatpolkadots.com/",
+  "sourceDomain": "shopatpolkadots.com",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=UTF-8",
+  "pageSha256": "dc4157c7a28b3f7b80f5c17b21e242f904c220e59793e671e44ae92297f4fb4c",
+  "title": "Polka Dots – A Fun & Flirty Women's Boutique",
+  "description": "",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "polka",
+      "dots"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\polka-dots\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://shopatpolkadots.com/wp-content/uploads/2018/12/polka_dots_standard_logo@05x.png",
+    "sourceEvidence": "IMG polka dots",
+    "type": "png",
+    "dimensions": {
+      "width": 1000,
+      "height": 360
+    },
+    "sha256": "1c17d9728670ea8dca7529bffb84f27f6430cdd33ed9faae6887162e056f06bd",
+    "sourceSha256": "1c17d9728670ea8dca7529bffb84f27f6430cdd33ed9faae6887162e056f06bd",
+    "sourceType": "png",
+    "sourceFileName": null,
+    "transformation": "none; exact first-party transparent asset",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "transparentRatio": 0.8412,
+      "edgeTransparentRatio": 1,
+      "contentRatio": 0.1588,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 51321
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\polka-dots\\reference-1.jpg",
+      "fileName": "reference-1.jpg",
+      "sourceUrl": "https://shopatpolkadots.com/wp-content/uploads/2026/04/bcp-8398-f-2048x1513.jpg",
+      "sourceEvidence": "IMG ls-bg",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 1513,
+        "width": 2048
+      },
+      "sha256": "79f0451a7741f470f02dea6e00bdc8cb6737323e056b445947c9fced31522a9a",
+      "bytes": 528252,
+      "visual": {
+        "ok": true,
+        "lumaRange": 254.9,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\polka-dots\\reference-2.jpg",
+      "fileName": "reference-2.jpg",
+      "sourceUrl": "https://shopatpolkadots.com/wp-content/uploads/2026/04/bcp-7942-f-2048x1345.jpg",
+      "sourceEvidence": "IMG ls-bg",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 1345,
+        "width": 2048
+      },
+      "sha256": "7f3677835feea0e3f53956e97b0085535b662aff2919bc39195ba69cd61d82fb",
+      "bytes": 604216,
+      "visual": {
+        "ok": true,
+        "lumaRange": 253.7,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\polka-dots\\reference-3.jpg",
+      "fileName": "reference-3.jpg",
+      "sourceUrl": "https://shopatpolkadots.com/wp-content/uploads/2026/04/bcp-8170-f-2048x1365.jpg",
+      "sourceEvidence": "IMG ls-bg",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 1365,
+        "width": 2048
+      },
+      "sha256": "2ef1240bde4bcf470b6281246d2a008ae2db0cc0763575f7478dd1585946d1fb",
+      "bytes": 468969,
+      "visual": {
+        "ok": true,
+        "lumaRange": 255,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [],
+  "brandColors": [
+    "#003388",
+    "#003399",
+    "#abb8c3",
+    "#f78da7",
+    "#cf2e2e"
+  ],
+  "checkedAt": "2026-09-17T09:21:05.812Z"
+}

@@ -1,0 +1,3468 @@
+{
+  "runId": "20260918-052002",
+  "generatedAt": "2026-09-18T09:22:37.240Z",
+  "selected": [
+    {
+      "rank": 1,
+      "domain": "rambo-ortho.com",
+      "slug": "rambo-orthodontics",
+      "sourceUrl": "https://www.rambo-ortho.com/",
+      "finalUrl": "https://rambo-ortho.com/",
+      "sourceDomain": "rambo-ortho.com",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "pageSha256": "3099f3c2142115db84570fd7d6fc93e2d6e05374ebaa11b907d0fe4c937e3d1f",
+      "title": "Souderton Orthodontics | Rambo Orthodontics | Lansdale Orthodontist",
+      "description": "Rambo Orthodontics in Lansdale, PA: Expert orthodontist offering Invisalign, braces & clear aligners for families. Schedule your consultation today!",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [
+          "rambo",
+          "orthodontics"
+        ],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/rambo-orthodontics/logo.png",
+        "fileName": "logo.png",
+        "sourceUrl": "https://rambo-ortho.com/wp-content/themes/canvas/img/RamboOrthodontics_Logo-RO.png",
+        "sourceEvidence": "IMG ro logo",
+        "type": "png",
+        "dimensions": {
+          "width": 841,
+          "height": 499
+        },
+        "sha256": "f1ad0cdcd5f3b60edfa1b783214a90a4aa415668b3ff9968290a7e2b8de664b4",
+        "sourceSha256": "f1ad0cdcd5f3b60edfa1b783214a90a4aa415668b3ff9968290a7e2b8de664b4",
+        "sourceType": "png",
+        "sourceFileName": null,
+        "transformation": "none; exact first-party transparent asset",
+        "borderSpread": null,
+        "alpha": {
+          "ok": true,
+          "transparentRatio": 0.5196,
+          "edgeTransparentRatio": 0.9228,
+          "contentRatio": 0.4804,
+          "reason": null
+        },
+        "transparent": true,
+        "bytes": 13904
+      },
+      "references": [
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/rambo-orthodontics/reference-1.png",
+          "fileName": "reference-1.png",
+          "sourceUrl": "https://rambo-ortho.com/wp-content/themes/canvas/img/vp-img-1.png",
+          "sourceEvidence": "IMG personal care consultation at orthodontist office",
+          "type": "png",
+          "dimensions": {
+            "width": 700,
+            "height": 650
+          },
+          "sha256": "6b462554ad4da63644eaa1fd4e35615bd5024daeab63c5f8a62c4164fde7974c",
+          "bytes": 172337,
+          "visual": {
+            "ok": true,
+            "lumaRange": 245.5,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/rambo-orthodontics/reference-2.png",
+          "fileName": "reference-2.png",
+          "sourceUrl": "https://rambo-ortho.com/wp-content/themes/canvas/img/vp-img-2.png",
+          "sourceEvidence": "IMG financing and insurance options for orthodontic treatment",
+          "type": "png",
+          "dimensions": {
+            "width": 700,
+            "height": 665
+          },
+          "sha256": "ae65f718e51691a7ac26765e869132204960765d2110e42d48e909e97a0027a6",
+          "bytes": 165857,
+          "visual": {
+            "ok": true,
+            "lumaRange": 249,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/rambo-orthodontics/reference-3.png",
+          "fileName": "reference-3.png",
+          "sourceUrl": "https://rambo-ortho.com/wp-content/themes/canvas/img/vp-img-3.png",
+          "sourceEvidence": "IMG convenient appointment scheduling for orthodontic care",
+          "type": "png",
+          "dimensions": {
+            "width": 700,
+            "height": 649
+          },
+          "sha256": "f54d92d9c6d2c88f353de7e7c7e1f6de355325d1af2ce9d3e0901b476b1cc155",
+          "bytes": 158508,
+          "visual": {
+            "ok": true,
+            "lumaRange": 252.7,
+            "reason": null
+          }
+        }
+      ],
+      "referenceFailures": [
+        {
+          "url": "https://rambo-ortho.com/wp-content/uploads/2026/01/rambo-orthodontics.jpg",
+          "reason": "reference image is too small"
+        },
+        {
+          "url": "https://rambo-ortho.com/350",
+          "reason": "HTTP 404"
+        },
+        {
+          "url": "https://rambo-ortho.com/image/jpeg",
+          "reason": "HTTP 404"
+        },
+        {
+          "url": "https://rambo-ortho.com/wp-content/themes/canvas/img/consult-cta-btn.svg",
+          "reason": "unsupported reference type svg"
+        }
+      ],
+      "brandColors": [
+        "#8dc642",
+        "#13444c",
+        "#e952a8",
+        "#00b5d1",
+        "#00bbff"
+      ],
+      "checkedAt": "2026-09-18T09:20:49.712Z"
+    },
+    {
+      "rank": 2,
+      "domain": "avalonflooring.com",
+      "slug": "avalon-flooring",
+      "sourceUrl": "https://www.avalonflooring.com/a/store-locator/king-of-prussia-pa.html",
+      "finalUrl": "https://www.avalonflooring.com/a/store-locator/king-of-prussia-pa.html",
+      "sourceDomain": "avalonflooring.com",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "pageSha256": "eeeb18a6442e0c4eea893f728199d2b352bae465ee944edd844c8dce1bed6c70",
+      "title": "Flooring, Carpet, & Tile Store in King of Prussia, PA | Avalon Flooring",
+      "description": "Visit our local flooring and tile store in King of Prussia, PA. Browse our incredible selection of flooring, tile, window treatments, area rugs, and more.",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [
+          "avalon",
+          "flooring"
+        ],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/avalon-flooring/logo.png",
+        "fileName": "logo.png",
+        "sourceUrl": "https://cdn.shopify.com/s/files/1/0660/1906/6074/files/av-footer.png?v=1676911053",
+        "sourceEvidence": "IMG av-footer-logo  white logo that reads avalon flooring in large letters, with an employee owned company in smaller text below, all on a light gray background.",
+        "type": "png",
+        "dimensions": {
+          "width": 704,
+          "height": 121
+        },
+        "sha256": "cbb97a7906c336ef5db408296cdd905bcf94c659a5aff95df4c9c9a2f2152d88",
+        "sourceSha256": "cbb97a7906c336ef5db408296cdd905bcf94c659a5aff95df4c9c9a2f2152d88",
+        "sourceType": "png",
+        "sourceFileName": null,
+        "transformation": "none; exact first-party transparent asset",
+        "borderSpread": null,
+        "alpha": {
+          "ok": true,
+          "transparentRatio": 0.7155,
+          "edgeTransparentRatio": 0.8424,
+          "contentRatio": 0.2845,
+          "reason": null
+        },
+        "transparent": true,
+        "bytes": 11639
+      },
+      "references": [
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/avalon-flooring/reference-1.jpg",
+          "fileName": "reference-1.jpg",
+          "sourceUrl": "https://sl.storeify.app/images/base/store-1666792453.jpg",
+          "sourceEvidence": "IMG king of prussia, pa",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 586,
+            "width": 884
+          },
+          "sha256": "0db4aea41c6c31533ed7294fc5405d9897ca5b0e6d87cce9a6ed76ada69f4c59",
+          "bytes": 112117,
+          "visual": {
+            "ok": true,
+            "lumaRange": 254.3,
+            "reason": null
+          }
+        }
+      ],
+      "referenceFailures": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0660/1906/6074/files/Utmost-SW753-Optimized.jpg?v=1716316928",
+          "reason": "not a PNG"
+        },
+        {
+          "url": "https://www.avalonflooring.com/cdn/shop/files/BRICK-NJ-1_medium.jpg?v=1666885927",
+          "reason": "reference image has insufficient evidence of usable size"
+        },
+        {
+          "url": "https://www.avalonflooring.com/cdn/shop/files/Avalon-NJ_map_medium.jpg?v=1666885819",
+          "reason": "reference image has insufficient evidence of usable size"
+        },
+        {
+          "url": "https://www.avalonflooring.com/cdn/shop/files/DEPTFORD-NJ-300x300_medium.jpg?v=1666916466",
+          "reason": "reference image has insufficient evidence of usable size"
+        }
+      ],
+      "brandColors": [
+        "#113255",
+        "#181f38",
+        "#54bbe3",
+        "#003e69",
+        "#eb1256"
+      ],
+      "checkedAt": "2026-09-18T09:21:02.313Z"
+    },
+    {
+      "rank": 3,
+      "domain": "apiauto.com",
+      "slug": "api-autobody-products",
+      "sourceUrl": "https://www.apiauto.com/",
+      "finalUrl": "https://www.apiauto.com/",
+      "sourceDomain": "apiauto.com",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "pageSha256": "2db74fb0fae58d1857831719fe70836a46b11dccc95a87ef1eb6692045302efb",
+      "title": "api",
+      "description": "API, Autobody Products, Inc.",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [
+          "api",
+          "autobody",
+          "products"
+        ],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/api-autobody-products/logo.png",
+        "fileName": "logo.png",
+        "sourceUrl": "https://www.apiauto.com/api_logo_transparent_2025.png",
+        "sourceEvidence": "IMG ",
+        "type": "png",
+        "dimensions": {
+          "width": 1152,
+          "height": 530
+        },
+        "sha256": "8e1b48949d54335f4062e46454f3f7fcf454ff8f68d0a75fbfcdaec21035f5f5",
+        "sourceSha256": "8e1b48949d54335f4062e46454f3f7fcf454ff8f68d0a75fbfcdaec21035f5f5",
+        "sourceType": "png",
+        "sourceFileName": null,
+        "transformation": "none; exact first-party transparent asset",
+        "borderSpread": null,
+        "alpha": {
+          "ok": true,
+          "transparentRatio": 0.4616,
+          "edgeTransparentRatio": 1,
+          "contentRatio": 0.5384,
+          "reason": null
+        },
+        "transparent": true,
+        "bytes": 189144
+      },
+      "references": [
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/api-autobody-products/reference-1.jpg",
+          "fileName": "reference-1.jpg",
+          "sourceUrl": "https://www.apiauto.com/images/headers/publish_003.jpg",
+          "sourceEvidence": "IMG bg static",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 1200,
+            "width": 1920
+          },
+          "sha256": "2f8fa821910a8d7b084ea8294c1f1334e0a2a0729bdeda372a07c808d4102dbd",
+          "bytes": 765596,
+          "visual": {
+            "ok": true,
+            "lumaRange": 255,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/api-autobody-products/reference-2.jpg",
+          "fileName": "reference-2.jpg",
+          "sourceUrl": "https://www.apiauto.com/images/headers/publish_001.jpg",
+          "sourceEvidence": "IMG bg",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 1200,
+            "width": 1920
+          },
+          "sha256": "d78cefecbcdd8322c876a3a0d2a67b3a0bd7d6801daf63c5b75e570736be917d",
+          "bytes": 1208635,
+          "visual": {
+            "ok": true,
+            "lumaRange": 255,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/api-autobody-products/reference-3.jpg",
+          "fileName": "reference-3.jpg",
+          "sourceUrl": "https://www.apiauto.com/images/headers/publish_002.jpg",
+          "sourceEvidence": "IMG bg",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 1200,
+            "width": 1920
+          },
+          "sha256": "bf7cc655030556cc7467d64e730ee79bcc44adb3a64110ff78bbcb6312f7333b",
+          "bytes": 766273,
+          "visual": {
+            "ok": true,
+            "lumaRange": 255,
+            "reason": null
+          }
+        }
+      ],
+      "referenceFailures": [],
+      "brandColors": [
+        "#65861d",
+        "#81a03d"
+      ],
+      "checkedAt": "2026-09-18T09:21:20.825Z"
+    },
+    {
+      "rank": 4,
+      "domain": "sprowlsinsurance.com",
+      "slug": "the-sprowls-insurance-group",
+      "sourceUrl": "https://sprowlsinsurance.com/",
+      "finalUrl": "https://sprowlsinsurance.com/",
+      "sourceDomain": "sprowlsinsurance.com",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "pageSha256": "dd84f8e8e9a9d83ba30f01afedcb9fcb74e641c82cddcfb5fb5d493d144fb635",
+      "title": "Sprowls Insurance Group - Independent Agency - PA, MD, WV",
+      "description": "Since 1963, Sprowls Insurance group has expanded to serve clients across PA, MD, and WV with business, benefits, and personal insurance. Get a quote!",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [
+          "sprowls",
+          "insurance"
+        ],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/the-sprowls-insurance-group/logo.png",
+        "fileName": "logo.png",
+        "sourceUrl": "https://sprowlsinsurance.com/wp-content/uploads/2020/06/Sprowls-Insurance-Group-Logo-New-800.png",
+        "sourceEvidence": "IMG stnd default-logo skip-lazy-aaso dark-version  sprowls insurance group",
+        "type": "png",
+        "dimensions": {
+          "width": 800,
+          "height": 607
+        },
+        "sha256": "d978e2564fff0a2b173b8d95c248ea3fe92d138a5c2eaf8f586ed183a4bb55cf",
+        "sourceSha256": "e526863a85fa08290d40b91a4c8264b645257b2beb8ec33be6589b4d98d6deb1",
+        "sourceType": "png",
+        "sourceFileName": "logo-source.png",
+        "transformation": "flat border color rgb(0,0,0) removed by border-seeded flood fill at tolerance 32; geometry unchanged",
+        "borderSpread": 0,
+        "alpha": {
+          "ok": true,
+          "transparentRatio": 0.7749,
+          "edgeTransparentRatio": 1,
+          "contentRatio": 0.2251,
+          "reason": null
+        },
+        "transparent": true,
+        "bytes": 37215
+      },
+      "references": [
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/the-sprowls-insurance-group/reference-1.jpg",
+          "fileName": "reference-1.jpg",
+          "sourceUrl": "https://sprowlsinsurance.com/wp-content/uploads/2020/05/Sprowls-Insurance-Group-Open-Graph.jpg",
+          "sourceEvidence": "og:image",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 630,
+            "width": 1200
+          },
+          "sha256": "0cec2da093d30565ecce203046facc85c5947f9211362233803cf9a19cbedaca",
+          "bytes": 460390,
+          "visual": {
+            "ok": true,
+            "lumaRange": 250.1,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/the-sprowls-insurance-group/reference-2.png",
+          "fileName": "reference-2.png",
+          "sourceUrl": "https://sprowlsinsurance.com/wp-content/uploads/2025/10/Award-Silver-Best-in-Fayette-2025.png",
+          "sourceEvidence": "IMG alignnone wp-image-19971 size-thumbnail  award - silver best in fayette 2025",
+          "type": "png",
+          "dimensions": {
+            "width": 500,
+            "height": 500
+          },
+          "sha256": "8a23d75fcf731a24b7ea6aaed36450d431d8a26a36b900666e0d48e0b262f73d",
+          "bytes": 192946,
+          "visual": {
+            "ok": true,
+            "lumaRange": 255,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/the-sprowls-insurance-group/reference-3.png",
+          "fileName": "reference-3.png",
+          "sourceUrl": "https://sprowlsinsurance.com/wp-content/uploads/2024/10/Award-Silver-Best-in-Fayette-2024.png",
+          "sourceEvidence": "IMG alignnone wp-image-19762 size-thumbnail  award - silver best in fayette 2024",
+          "type": "png",
+          "dimensions": {
+            "width": 500,
+            "height": 500
+          },
+          "sha256": "cd7e7262ba76d32691fd089af053ae1f2f9c49a4869285c9575b26a1b6b021df",
+          "bytes": 174380,
+          "visual": {
+            "ok": true,
+            "lumaRange": 255,
+            "reason": null
+          }
+        }
+      ],
+      "referenceFailures": [
+        {
+          "url": "https://sprowlsinsurance.com/1200",
+          "reason": "HTTP 404"
+        },
+        {
+          "url": "https://sprowlsinsurance.com/630",
+          "reason": "HTTP 404"
+        },
+        {
+          "url": "https://sprowlsinsurance.com/image/jpeg",
+          "reason": "HTTP 404"
+        },
+        {
+          "url": "https://sprowlsinsurance.com/wp-content/uploads/2020/05/Keystone-Insurance-Partnership-Small.jpg",
+          "reason": "reference image is too small"
+        }
+      ],
+      "brandColors": [
+        "#94181e",
+        "#003388",
+        "#9b1c1e",
+        "#c52b02",
+        "#003399"
+      ],
+      "checkedAt": "2026-09-18T09:21:26.878Z"
+    },
+    {
+      "rank": 5,
+      "domain": "veekoorestaurants.com",
+      "slug": "veekoo",
+      "sourceUrl": "https://veekoorestaurants.com/",
+      "finalUrl": "https://veekoorestaurants.com/",
+      "sourceDomain": "veekoorestaurants.com",
+      "httpStatus": 200,
+      "contentType": "text/html",
+      "pageSha256": "16c97be4d6c0e6f52079bdc9fd300dfd95b95d9387076659073d0267a15db12f",
+      "title": "Veekoo Restaurants",
+      "description": "Authentically us, but not always traditional, explore contemporary Asian cuisine with comforting classic American Chinese dishes that you grew up loving, with a fun twist of Japanese-influenced fare.",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [
+          "veekoo"
+        ],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/veekoo/logo.png",
+        "fileName": "logo.png",
+        "sourceUrl": "https://veekoorestaurants.com/img/logo.png",
+        "sourceEvidence": "IMG ...",
+        "type": "png",
+        "dimensions": {
+          "width": 685,
+          "height": 443
+        },
+        "sha256": "93e8e40f4c55ec7d1aac4737032858b7159931307d33b96ad16a92fe29efd6b0",
+        "sourceSha256": "93e8e40f4c55ec7d1aac4737032858b7159931307d33b96ad16a92fe29efd6b0",
+        "sourceType": "png",
+        "sourceFileName": null,
+        "transformation": "none; exact first-party transparent asset",
+        "borderSpread": null,
+        "alpha": {
+          "ok": true,
+          "transparentRatio": 0.8046,
+          "edgeTransparentRatio": 0.9725,
+          "contentRatio": 0.1954,
+          "reason": null
+        },
+        "transparent": true,
+        "bytes": 130463
+      },
+      "references": [
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/veekoo/reference-1.png",
+          "fileName": "reference-1.png",
+          "sourceUrl": "https://veekoorestaurants.com/upload/pop20251204.png",
+          "sourceEvidence": "IMG w-100  new year image",
+          "type": "png",
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          },
+          "sha256": "f415300802f459cecd36cbd910732b52d145774bb4e48cdc4c05b8cdfe9465e0",
+          "bytes": 223154,
+          "visual": {
+            "ok": true,
+            "lumaRange": 255,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/veekoo/reference-2.jpg",
+          "fileName": "reference-2.jpg",
+          "sourceUrl": "https://veekoorestaurants.com/nt230117.jpg",
+          "sourceEvidence": "IMG w-100",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 1433,
+            "width": 1088
+          },
+          "sha256": "62ef067105ca4daaa6991944f09445bdd61b09deab59f8d4e9e5d966f2607198",
+          "bytes": 919114,
+          "visual": {
+            "ok": true,
+            "lumaRange": 249.1,
+            "reason": null
+          }
+        }
+      ],
+      "referenceFailures": [],
+      "brandColors": [
+        "#776748"
+      ],
+      "checkedAt": "2026-09-18T09:21:32.669Z"
+    },
+    {
+      "rank": 6,
+      "domain": "mazzonicenter.org",
+      "slug": "mazzoni-center",
+      "sourceUrl": "https://www.mazzonicenter.org/",
+      "finalUrl": "https://www.mazzonicenter.org/",
+      "sourceDomain": "mazzonicenter.org",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "pageSha256": "72506184298a98d1739906ab381141b68ef96fcea5dfea3440015455ae127e74",
+      "title": "Mazzoni Center",
+      "description": "We provide quality comprehensive health and wellness services in an LGBTQ-focused environment.",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [
+          "mazzoni"
+        ],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/mazzoni-center/logo.png",
+        "fileName": "logo.png",
+        "sourceUrl": "https://www.mazzonicenter.org/themes/custom/mazzoni_ci/mazzoni_center_logo.png",
+        "sourceEvidence": "IMG site logo",
+        "type": "png",
+        "dimensions": {
+          "width": 1243,
+          "height": 1569
+        },
+        "sha256": "59076adc773691923798a3f0d347c6bb291ad7cae09dae1082218e705c54e66c",
+        "sourceSha256": "59076adc773691923798a3f0d347c6bb291ad7cae09dae1082218e705c54e66c",
+        "sourceType": "png",
+        "sourceFileName": null,
+        "transformation": "none; exact first-party transparent asset",
+        "borderSpread": null,
+        "alpha": {
+          "ok": true,
+          "transparentRatio": 0.8315,
+          "edgeTransparentRatio": 0.9963,
+          "contentRatio": 0.1685,
+          "reason": null
+        },
+        "transparent": true,
+        "bytes": 63673
+      },
+      "references": [
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/mazzoni-center/reference-1.jpg",
+          "fileName": "reference-1.jpg",
+          "sourceUrl": "https://www.mazzonicenter.org/sites/default/files/styles/billboard_xl/public/2024-08/date.jpeg",
+          "sourceEvidence": "og:image",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 1200,
+            "width": 2400
+          },
+          "sha256": "8e813ddc02b8a8c52c5f811c38bb1bffac572f4b014fcadbb345bab836362417",
+          "bytes": 950333,
+          "visual": {
+            "ok": true,
+            "lumaRange": 241.5,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/mazzoni-center/reference-2.jpg",
+          "fileName": "reference-2.jpg",
+          "sourceUrl": "https://www.mazzonicenter.org/sites/default/files/styles/billboard_xs/public/2026-05/AdobeStock_603744573.jpeg?h=3c273a8a&itok=9a74L2ZI",
+          "sourceEvidence": "IMG img-fluid  welcome banner",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 1150,
+            "width": 575
+          },
+          "sha256": "f5b2b7f58ea7ce04521d2b697a43b536c86d0c42b4692e7488ef775e268b2a23",
+          "bytes": 199553,
+          "visual": {
+            "ok": true,
+            "lumaRange": 243.3,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/mazzoni-center/reference-3.png",
+          "fileName": "reference-3.png",
+          "sourceUrl": "https://www.mazzonicenter.org/sites/default/files/styles/tile_xs/public/2026-09/Bi%20Week.png?h=734c934c&itok=b6K_6LC0",
+          "sourceEvidence": "IMG img-fluid  bisexual awareness week banner",
+          "type": "png",
+          "dimensions": {
+            "width": 720,
+            "height": 550
+          },
+          "sha256": "2e6a8eda5dec145ae0a09a63cd252c2c30b2ae8e1482cfa228df0535e645654a",
+          "bytes": 109743,
+          "visual": {
+            "ok": true,
+            "lumaRange": 207.1,
+            "reason": null
+          }
+        }
+      ],
+      "referenceFailures": [],
+      "brandColors": [],
+      "checkedAt": "2026-09-18T09:21:14.496Z"
+    },
+    {
+      "rank": 7,
+      "domain": "bedfordcarpetonebedford.com",
+      "slug": "bedford-carpet-one-floor-and-home",
+      "sourceUrl": "https://www.bedfordcarpetonebedford.com/",
+      "finalUrl": "https://www.bedfordcarpetonebedford.com/",
+      "sourceDomain": "bedfordcarpetonebedford.com",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "pageSha256": "c13e417d4776a547fd85fc0823f7564d328ad4d00feaa514e17b4b8e84d6c665",
+      "title": "Floor Store in Bedford, PA | Bedford Carpet One Floor & Home",
+      "description": "Want to shop local for floors in Bedford, PA? Discover carpet, hardwood, vinyl, and more, with professional installations at Bedford Carpet One Floor & Home.",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [
+          "bedford",
+          "carpet",
+          "one",
+          "floor",
+          "home"
+        ],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/bedford-carpet-one-floor-and-home/logo.png",
+        "fileName": "logo.png",
+        "sourceUrl": "https://www.bedfordcarpetonebedford.com/root/client/0380/img/logo/logo.png?rnd=1574",
+        "sourceEvidence": "IMG carpet one logo",
+        "type": "png",
+        "dimensions": {
+          "width": 296,
+          "height": 40
+        },
+        "sha256": "8f05673613d159fbdaa86ca66b9fa172d3589362226954ca1a55dee67235494d",
+        "sourceSha256": "8f05673613d159fbdaa86ca66b9fa172d3589362226954ca1a55dee67235494d",
+        "sourceType": "png",
+        "sourceFileName": null,
+        "transformation": "none; exact first-party transparent asset",
+        "borderSpread": null,
+        "alpha": {
+          "ok": true,
+          "transparentRatio": 0.7292,
+          "edgeTransparentRatio": 1,
+          "contentRatio": 0.2708,
+          "reason": null
+        },
+        "transparent": true,
+        "bytes": 3976
+      },
+      "references": [
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/bedford-carpet-one-floor-and-home/reference-1.jpg",
+          "fileName": "reference-1.jpg",
+          "sourceUrl": "https://www.bedfordcarpetonebedford.com/root/client/0380/hero/page-1/hero-1.jpg?rnd=5570",
+          "sourceEvidence": "IMG hero-carousel__background hero-carousel__image--desktop  bedford carpet one storefront",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 1000,
+            "width": 1920
+          },
+          "sha256": "fba31769adb45f9e5fe50f5b2cdab1071fad6ba50ee51306dab8d02bb41f9be1",
+          "bytes": 303233,
+          "visual": {
+            "ok": true,
+            "lumaRange": 251.6,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/bedford-carpet-one-floor-and-home/reference-2.jpg",
+          "fileName": "reference-2.jpg",
+          "sourceUrl": "https://www.bedfordcarpetonebedford.com/root/client/0380/hero/page-1/mobile-hero-1.jpg?rnd=8895",
+          "sourceEvidence": "IMG hero-carousel__background hero-carousel__image--mobile darken  bedford carpet one storefront",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 1150,
+            "width": 863
+          },
+          "sha256": "c11b6519cbe6461a088ad3cc798353b68956fabac230d1465184eec2faf25e78",
+          "bytes": 180857,
+          "visual": {
+            "ok": true,
+            "lumaRange": 244.8,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/bedford-carpet-one-floor-and-home/reference-3.jpg",
+          "fileName": "reference-3.jpg",
+          "sourceUrl": "https://www.bedfordcarpetonebedford.com/root/client/0380/hero/page-1/mobile-hero-3.jpg?rnd=3172",
+          "sourceEvidence": "IMG hero-carousel__background hero-carousel__image--mobile darken  room scene with mobile phone to show how our room visualizer tool works.",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 1000,
+            "width": 750
+          },
+          "sha256": "1870cd2c3b155a3308f55e43e2349d222ea8c7e0aa19b1cc379f6d2e22524243",
+          "bytes": 118660,
+          "visual": {
+            "ok": true,
+            "lumaRange": 255,
+            "reason": null
+          }
+        }
+      ],
+      "referenceFailures": [
+        {
+          "url": "https://www.bedfordcarpetonebedford.com/root/client/0380/hero/page-1/hero-3.jpg?rnd=1294",
+          "reason": "progressive JPEG is not decodable here"
+        }
+      ],
+      "brandColors": [
+        "#008c99",
+        "#117744"
+      ],
+      "checkedAt": "2026-09-18T09:21:22.689Z"
+    },
+    {
+      "rank": 8,
+      "domain": "padentalwellness.com",
+      "slug": "dental-wellness",
+      "sourceUrl": "https://padentalwellness.com/",
+      "finalUrl": "https://padentalwellness.com/",
+      "sourceDomain": "padentalwellness.com",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "pageSha256": "a2553186241717b01fb73bfc8dcc82278bef8c81bc61cdf859cfb1cd9c1cf907",
+      "title": "Home - Dental Wellness Phoenixville",
+      "description": "{{ acf.home_meta }}",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [
+          "dental",
+          "wellness"
+        ],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/dental-wellness/logo.png",
+        "fileName": "logo.png",
+        "sourceUrl": "https://padentalwellness.com/wp-content/uploads/2026/03/footer_dental-wellness-logo.png",
+        "sourceEvidence": "JSON-LD logo URL",
+        "type": "png",
+        "dimensions": {
+          "width": 1024,
+          "height": 309
+        },
+        "sha256": "f11cd4132ba7632822588c38fb7ecac75d9b08213421a3aba19c6a35fd2dbed0",
+        "sourceSha256": "f11cd4132ba7632822588c38fb7ecac75d9b08213421a3aba19c6a35fd2dbed0",
+        "sourceType": "png",
+        "sourceFileName": null,
+        "transformation": "none; exact first-party transparent asset",
+        "borderSpread": null,
+        "alpha": {
+          "ok": true,
+          "transparentRatio": 0.8127,
+          "edgeTransparentRatio": 0.8897,
+          "contentRatio": 0.1873,
+          "reason": null
+        },
+        "transparent": true,
+        "bytes": 72321
+      },
+      "references": [
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/dental-wellness/reference-1.jpg",
+          "fileName": "reference-1.jpg",
+          "sourceUrl": "https://padentalwellness.com/wp-content/uploads/2026/03/dr-dan-david-1.jpg",
+          "sourceEvidence": "og:image",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 963,
+            "width": 800
+          },
+          "sha256": "f79dc98f9f40a5320c67419a3c248490d7bc41ceeb363398614135873b21a184",
+          "bytes": 86484,
+          "visual": {
+            "ok": true,
+            "lumaRange": 233.8,
+            "reason": null
+          }
+        }
+      ],
+      "referenceFailures": [
+        {
+          "url": "https://padentalwellness.com/800",
+          "reason": "HTTP 404"
+        },
+        {
+          "url": "https://padentalwellness.com/963",
+          "reason": "HTTP 404"
+        },
+        {
+          "url": "https://padentalwellness.com/image/jpeg",
+          "reason": "HTTP 404"
+        },
+        {
+          "url": "https://padentalwellness.com/wp-content/uploads/2026/03/dr-dan-david-1-125x150.jpg",
+          "reason": "reference image is too small"
+        }
+      ],
+      "brandColors": [
+        "#a4cf17",
+        "#f76a0c",
+        "#003388",
+        "#adcd45",
+        "#ffd700"
+      ],
+      "checkedAt": "2026-09-18T09:21:30.415Z"
+    },
+    {
+      "rank": 9,
+      "domain": "drstonedentistry.com",
+      "slug": "jonathan-stone-d-m-d",
+      "sourceUrl": "https://drstonedentistry.com/",
+      "finalUrl": "https://drstonedentistry.com/",
+      "sourceDomain": "drstonedentistry.com",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "pageSha256": "fdacb282a7c4019cd1d90a4b9858dc389adc98b067d3648eefa69feaa02b2c33",
+      "title": "Jonathan D. Stone, DMD LLC",
+      "description": "",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [
+          "jonathan",
+          "stone"
+        ],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/jonathan-stone-d-m-d/logo.png",
+        "fileName": "logo.png",
+        "sourceUrl": "https://drstonedentistry.com/wp-content/uploads/2019/11/Dr.-Stone-Logo.png",
+        "sourceEvidence": "IMG normal-logo  jonathan d. stone, dmd llc",
+        "type": "png",
+        "dimensions": {
+          "width": 420,
+          "height": 118
+        },
+        "sha256": "55681148ad18a06bed7080c812a3aa21b0ad33bbeb0a638134a505385468f40f",
+        "sourceSha256": "55681148ad18a06bed7080c812a3aa21b0ad33bbeb0a638134a505385468f40f",
+        "sourceType": "png",
+        "sourceFileName": null,
+        "transformation": "none; exact first-party transparent asset",
+        "borderSpread": null,
+        "alpha": {
+          "ok": true,
+          "transparentRatio": 0.6705,
+          "edgeTransparentRatio": 0.9461,
+          "contentRatio": 0.3295,
+          "reason": null
+        },
+        "transparent": true,
+        "bytes": 12797
+      },
+      "references": [
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/jonathan-stone-d-m-d/reference-1.jpg",
+          "fileName": "reference-1.jpg",
+          "sourceUrl": "https://drstonedentistry.com/wp-content/uploads/2020/01/20200109_Action_Shot_0004-1320x880.jpg",
+          "sourceEvidence": "IMG attachment-full size-full",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 880,
+            "width": 1320
+          },
+          "sha256": "0f35c617f5d90770a93ba3c8fbad2de3c94f8a6900e728d89dcf3bf6aceacfdf",
+          "bytes": 127386,
+          "visual": {
+            "ok": true,
+            "lumaRange": 255,
+            "reason": null
+          }
+        }
+      ],
+      "referenceFailures": [
+        {
+          "url": "https://drstonedentistry.com/wp-content/plugins/revslider/sr6/assets/assets/dummy.png",
+          "reason": "reference image is too small"
+        }
+      ],
+      "brandColors": [
+        "#003388",
+        "#00d084",
+        "#0693e3",
+        "#00325b",
+        "#3b5998"
+      ],
+      "checkedAt": "2026-09-18T09:21:19.677Z"
+    },
+    {
+      "rank": 10,
+      "domain": "keyesinc.com",
+      "slug": "keyes-water-wells",
+      "sourceUrl": "https://keyesinc.com/",
+      "finalUrl": "https://keyesinc.com/",
+      "sourceDomain": "keyesinc.com",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "pageSha256": "01740815c7a3272af49f3aaa88392606611ff1e8b9f1bd2c14dbfbe80116345c",
+      "title": "Keyes Inc. | Trusted Water Well & Pump Experts Since 1945",
+      "description": "Keyes Inc. delivers clean, reliable water through expert well drilling, pump service, treatment & inspections in Southeastern PA. Trusted since 1945—contact us today.",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [
+          "keyes",
+          "water"
+        ],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/keyes-water-wells/logo.png",
+        "fileName": "logo.png",
+        "sourceUrl": "https://keyesinc.com/wp-content/uploads/2025/06/Keyes_ICO.png",
+        "sourceEvidence": "JSON-LD logo URL",
+        "type": "png",
+        "dimensions": {
+          "width": 512,
+          "height": 512
+        },
+        "sha256": "a7d1f490328cd226c438efe7ab5bc0229197c4ece973164054a5a2b1a36525c2",
+        "sourceSha256": "a7d1f490328cd226c438efe7ab5bc0229197c4ece973164054a5a2b1a36525c2",
+        "sourceType": "png",
+        "sourceFileName": null,
+        "transformation": "none; exact first-party transparent asset",
+        "borderSpread": null,
+        "alpha": {
+          "ok": true,
+          "transparentRatio": 0.2274,
+          "edgeTransparentRatio": 1,
+          "contentRatio": 0.7726,
+          "reason": null
+        },
+        "transparent": true,
+        "bytes": 77946
+      },
+      "references": [
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/keyes-water-wells/reference-1.jpg",
+          "fileName": "reference-1.jpg",
+          "sourceUrl": "https://keyesinc.com/wp-content/uploads/2025/02/home-partners-480x365.jpg",
+          "sourceEvidence": "IMG wp-image-105   our partners",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 365,
+            "width": 480
+          },
+          "sha256": "41eea934394783698d4dad69033dde1d4f72fde926b19205286629fb5a8c3bc6",
+          "bytes": 34930,
+          "visual": {
+            "ok": true,
+            "lumaRange": 196.9,
+            "reason": null
+          }
+        }
+      ],
+      "referenceFailures": [],
+      "brandColors": [
+        "#2ea3f2",
+        "#003388",
+        "#abb8c3",
+        "#f78da7",
+        "#cf2e2e"
+      ],
+      "checkedAt": "2026-09-18T09:21:37.559Z"
+    },
+    {
+      "rank": 11,
+      "domain": "positanoristorante.com",
+      "slug": "positano-ristorante",
+      "sourceUrl": "https://www.positanoristorante.com/",
+      "finalUrl": "https://www.positanoristorante.com/",
+      "sourceDomain": "positanoristorante.com",
+      "httpStatus": 200,
+      "contentType": "text/html",
+      "pageSha256": "a9e75acb5e457fb7fd51d5ab90d5f0093dd8c0ecefb865df82d34a69c1d40859",
+      "title": "Positano Ristorante — Authentic Italian Cuisine",
+      "description": "Positano Ristorante — Authentic Italian cuisine in a warm, welcoming setting. Dine in, banquets, and private events.",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [
+          "positano",
+          "ristorante"
+        ],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/positano-ristorante/logo.png",
+        "fileName": "logo.png",
+        "sourceUrl": "https://www.positanoristorante.com/images/positano_logo.png",
+        "sourceEvidence": "IMG positano ristorante logo",
+        "type": "png",
+        "dimensions": {
+          "width": 800,
+          "height": 395
+        },
+        "sha256": "3e13c47f028c16c676371113025f83aa491fc0466a0af497d066b9d2c374107c",
+        "sourceSha256": "bb8db22bb4c5c5d418a959aa2f3b9f68ca59e145f8618cc3670bb65eae2b29dd",
+        "sourceType": "png",
+        "sourceFileName": "logo-source.png",
+        "transformation": "flat border color rgb(251,251,251) removed by border-seeded flood fill at tolerance 32; geometry unchanged",
+        "borderSpread": 11,
+        "alpha": {
+          "ok": true,
+          "transparentRatio": 0.6525,
+          "edgeTransparentRatio": 1,
+          "contentRatio": 0.3475,
+          "reason": null
+        },
+        "transparent": true,
+        "bytes": 155691
+      },
+      "references": [
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/positano-ristorante/reference-1.jpg",
+          "fileName": "reference-1.jpg",
+          "sourceUrl": "https://www.positanoristorante.com/images/pic01.jpg",
+          "sourceEvidence": "IMG inside positano ristorante",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 386,
+            "width": 600
+          },
+          "sha256": "fff6e3cdc323dcf69449222caf77056c54bde38c2a424d780534cb55df8077cf",
+          "bytes": 112344,
+          "visual": {
+            "ok": true,
+            "lumaRange": 254.2,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/positano-ristorante/reference-2.jpg",
+          "fileName": "reference-2.jpg",
+          "sourceUrl": "https://www.positanoristorante.com/images/pic02.jpg",
+          "sourceEvidence": "IMG italian cuisine at positano",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 386,
+            "width": 600
+          },
+          "sha256": "af15fc532c1cf714c916e44ea4c4023dc070ae888d83a38dfff80db95d507d5a",
+          "bytes": 65152,
+          "visual": {
+            "ok": true,
+            "lumaRange": 250.4,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/positano-ristorante/reference-3.jpg",
+          "fileName": "reference-3.jpg",
+          "sourceUrl": "https://www.positanoristorante.com/images/pic03.jpg",
+          "sourceEvidence": "IMG fine dining at positano",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 386,
+            "width": 600
+          },
+          "sha256": "833bd7d73beab215a6952fc2fc81075d34eb36188d9d8fc8d6761e8fe98c1e67",
+          "bytes": 98508,
+          "visual": {
+            "ok": true,
+            "lumaRange": 250.1,
+            "reason": null
+          }
+        }
+      ],
+      "referenceFailures": [],
+      "brandColors": [],
+      "checkedAt": "2026-09-18T09:21:38.354Z"
+    },
+    {
+      "rank": 12,
+      "domain": "chinamoonboyertown.com",
+      "slug": "china-moon",
+      "sourceUrl": "http://www.chinamoonboyertown.com/",
+      "finalUrl": "https://www.chinamoonboyertown.com/",
+      "sourceDomain": "chinamoonboyertown.com",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "pageSha256": "0b59d3f08261bca9bc46047cefa04da768aa26fe5c4faf6e943a7b62399ae523",
+      "title": "China Moon - Online Ordering",
+      "description": "Order online from China Moon in Boyertown, PA. Pickup and delivery available.",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [
+          "china",
+          "moon"
+        ],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/china-moon/logo.png",
+        "fileName": "logo.png",
+        "sourceUrl": "https://images.eatermenu.com/gallery/6b770e7c-a732-4925-a348-0336c2de6d74/logo.png?v=1780521089906",
+        "sourceEvidence": "IMG h-10 w-auto max-w-[40vw] sm:max-w-[220px] object-contain  china moon",
+        "type": "png",
+        "dimensions": {
+          "width": 960,
+          "height": 170
+        },
+        "sha256": "1891c47368ca3b9711c32b75b77de5c0005b3aad0d5d2df3bf7db2128ab91d46",
+        "sourceSha256": "1891c47368ca3b9711c32b75b77de5c0005b3aad0d5d2df3bf7db2128ab91d46",
+        "sourceType": "png",
+        "sourceFileName": null,
+        "transformation": "none; exact first-party transparent asset",
+        "borderSpread": null,
+        "alpha": {
+          "ok": true,
+          "transparentRatio": 0.7777,
+          "edgeTransparentRatio": 1,
+          "contentRatio": 0.2223,
+          "reason": null
+        },
+        "transparent": true,
+        "bytes": 57702
+      },
+      "references": [
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/china-moon/reference-1.jpg",
+          "fileName": "reference-1.jpg",
+          "sourceUrl": "https://images.eatermenu.com/banners/Chinese/banner1.jpg",
+          "sourceEvidence": "IMG w-full h-full object-cover  china moon photo 1",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 1535,
+            "width": 2730
+          },
+          "sha256": "8c07ea21f02609edc0a3252d26630c9f3890db411384d6754f406dbd59373583",
+          "bytes": 1532299,
+          "visual": {
+            "ok": true,
+            "lumaRange": 255,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/china-moon/reference-2.jpg",
+          "fileName": "reference-2.jpg",
+          "sourceUrl": "https://images.eatermenu.com/banners/Chinese/banner2.jpg",
+          "sourceEvidence": "IMG w-full h-full object-cover  china moon photo 2",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 1535,
+            "width": 2730
+          },
+          "sha256": "23326231492b71a34149de90be6489aca948f9c2fcb1262d78f957932e5a9e53",
+          "bytes": 1860693,
+          "visual": {
+            "ok": true,
+            "lumaRange": 255,
+            "reason": null
+          }
+        }
+      ],
+      "referenceFailures": [],
+      "brandColors": [],
+      "checkedAt": "2026-09-18T09:21:37.364Z"
+    },
+    {
+      "rank": 13,
+      "domain": "jlalliancegroup.com",
+      "slug": "jl-alliance-group",
+      "sourceUrl": "https://jlalliancegroup.com/",
+      "finalUrl": "https://jlalliancegroup.com/",
+      "sourceDomain": "jlalliancegroup.com",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "pageSha256": "912dddf98d65c2446ea7d38f54032d77687008db028e72e59796e5e44627a7b8",
+      "title": "JL Alliance Group | Cheltenham's Auto Tag Service",
+      "description": "JL Alliance Group Auto Tags Inc. in Cheltenham, PA is an online agency that works with the DMV to meet your auto tag needs. Our services include auto tags",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [
+          "alliance"
+        ],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/jl-alliance-group/logo.png",
+        "fileName": "logo.png",
+        "sourceUrl": "https://jlalliancegroup.com/wp-content/uploads/2024/01/JL-Alliance-Group-fav.png",
+        "sourceEvidence": "JSON-LD logo URL",
+        "type": "png",
+        "dimensions": {
+          "width": 955,
+          "height": 750
+        },
+        "sha256": "e33f6f6548e8515e2c88774731ce2e497ad2b9892419525810d9da67ee5c6ed4",
+        "sourceSha256": "e33f6f6548e8515e2c88774731ce2e497ad2b9892419525810d9da67ee5c6ed4",
+        "sourceType": "png",
+        "sourceFileName": null,
+        "transformation": "none; exact first-party transparent asset",
+        "borderSpread": null,
+        "alpha": {
+          "ok": true,
+          "transparentRatio": 0.668,
+          "edgeTransparentRatio": 0.9575,
+          "contentRatio": 0.332,
+          "reason": null
+        },
+        "transparent": true,
+        "bytes": 80574
+      },
+      "references": [
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/jl-alliance-group/reference-1.png",
+          "fileName": "reference-1.png",
+          "sourceUrl": "https://jlalliancegroup.com/wp-content/uploads/2024/11/image.png",
+          "sourceEvidence": "IMG img-responsive wp-image-162   image",
+          "type": "png",
+          "dimensions": {
+            "width": 680,
+            "height": 390
+          },
+          "sha256": "0e9d7af4d557fe9a33b33d251ab949a783414cbeed56cf960bbccebbb1452710",
+          "bytes": 534784,
+          "visual": {
+            "ok": true,
+            "lumaRange": 235.1,
+            "reason": null
+          }
+        }
+      ],
+      "referenceFailures": [
+        {
+          "url": "https://jlalliancegroup.com/wp-content/uploads/2024/03/Screenshot-2024-03-22-at-1.28.44",
+          "reason": "HTTP 404"
+        },
+        {
+          "url": "https://jlalliancegroup.com/wp-content/uploads/2024/03/Screenshot-2024-03-22-at-1.28.49",
+          "reason": "HTTP 404"
+        },
+        {
+          "url": "https://jlalliancegroup.com/wp-content/uploads/2024/03/Screenshot-2024-03-22-at-1.28.56",
+          "reason": "HTTP 404"
+        },
+        {
+          "url": "https://jlalliancegroup.com/wp-content/uploads/2024/03/Screenshot-2024-03-22-at-1.29.12",
+          "reason": "HTTP 404"
+        }
+      ],
+      "brandColors": [
+        "#bd962d",
+        "#110033",
+        "#003399",
+        "#003388",
+        "#00d084"
+      ],
+      "checkedAt": "2026-09-18T09:21:46.000Z"
+    },
+    {
+      "rank": 14,
+      "domain": "ftaphiladelphia.com",
+      "slug": "friendly-tax-advisors",
+      "sourceUrl": "https://www.ftaphiladelphia.com/",
+      "finalUrl": "https://www.ftaphiladelphia.com/",
+      "sourceDomain": "ftaphiladelphia.com",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "pageSha256": "d6da13aac62229366ddbaf2419fe56dc2061678d7241e7a7562388def39eca77",
+      "title": "Friendly Tax Advisors – Friendly and Reliable Tax Services",
+      "description": "",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [
+          "friendly",
+          "tax",
+          "advisors"
+        ],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/friendly-tax-advisors/logo.png",
+        "fileName": "logo.png",
+        "sourceUrl": "https://www.ftaphiladelphia.com/wp-content/uploads/2023/01/FTA-Full-Color-Logo.png",
+        "sourceEvidence": "IMG custom-logo  friendly tax advisors",
+        "type": "png",
+        "dimensions": {
+          "width": 291,
+          "height": 150
+        },
+        "sha256": "743a57b10229e7dde0ccef3c3e4537e30414fde03cd86466e3d54bae61011b29",
+        "sourceSha256": "743a57b10229e7dde0ccef3c3e4537e30414fde03cd86466e3d54bae61011b29",
+        "sourceType": "png",
+        "sourceFileName": null,
+        "transformation": "none; exact first-party transparent asset",
+        "borderSpread": null,
+        "alpha": {
+          "ok": true,
+          "transparentRatio": 0.7179,
+          "edgeTransparentRatio": 0.9535,
+          "contentRatio": 0.2821,
+          "reason": null
+        },
+        "transparent": true,
+        "bytes": 2572
+      },
+      "references": [
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/friendly-tax-advisors/reference-1.jpg",
+          "fileName": "reference-1.jpg",
+          "sourceUrl": "https://www.ftaphiladelphia.com/wp-content/uploads/2023/01/actionvance-guy5aS3GvgA-unsplash-1-2048x1365.jpg",
+          "sourceEvidence": "IMG wp-block-cover__image-background wp-image-5301",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 1365,
+            "width": 2048
+          },
+          "sha256": "81f8175a3549af4612d123226575ccdf367403e4797478aa52c57b9d49682cb4",
+          "bytes": 581542,
+          "visual": {
+            "ok": true,
+            "lumaRange": 255,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/friendly-tax-advisors/reference-2.jpg",
+          "fileName": "reference-2.jpg",
+          "sourceUrl": "https://www.ftaphiladelphia.com/wp-content/uploads/2023/01/Lyn-OBrien-McDevitt-square-1-1536x1536.jpg",
+          "sourceEvidence": "IMG wp-image-5339 size-full",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 1536,
+            "width": 1536
+          },
+          "sha256": "3c6a156f07a438e30dff8a8bc6d66a6a29d3fdb1448013bdf5999ca5b6b97185",
+          "bytes": 279895,
+          "visual": {
+            "ok": true,
+            "lumaRange": 254.1,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/friendly-tax-advisors/reference-3.jpg",
+          "fileName": "reference-3.jpg",
+          "sourceUrl": "https://www.ftaphiladelphia.com/wp-content/uploads/2023/01/Kaitlyn-Miller-Cox-square.jpg",
+          "sourceEvidence": "IMG wp-image-5340 size-medium",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 489,
+            "width": 489
+          },
+          "sha256": "298b61d39b4e8648517d05e7161cf4d70bd888065c5197f4653d85a23daac5b8",
+          "bytes": 128754,
+          "visual": {
+            "ok": true,
+            "lumaRange": 254.8,
+            "reason": null
+          }
+        }
+      ],
+      "referenceFailures": [
+        {
+          "url": "http://www.ftaphiladelphia.com/wp-content/uploads/2023/01/clinical_notes_FILL0_wght400_GRAD0_opsz48.png",
+          "reason": "reference image is too small"
+        },
+        {
+          "url": "http://www.ftaphiladelphia.com/wp-content/uploads/2023/01/gavel_FILL0_wght400_GRAD0_opsz48-1.png",
+          "reason": "reference image is too small"
+        },
+        {
+          "url": "http://www.ftaphiladelphia.com/wp-content/uploads/2023/01/forum_FILL0_wght400_GRAD0_opsz48.png",
+          "reason": "reference image is too small"
+        }
+      ],
+      "brandColors": [
+        "#003388",
+        "#0693e3",
+        "#00d084",
+        "#fcb900",
+        "#7a00df"
+      ],
+      "checkedAt": "2026-09-18T09:21:47.299Z"
+    },
+    {
+      "rank": 15,
+      "domain": "awmiller.com",
+      "slug": "a-w-miller-technical-sales",
+      "sourceUrl": "https://www.awmiller.com/",
+      "finalUrl": "https://awmiller.com/",
+      "sourceDomain": "awmiller.com",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "pageSha256": "518b6c5c263ee7e490a7a9e8049d8d230cddc2a893585e92890cb0247a341f0c",
+      "title": "CNC Machine Dealer | Mazak & 3D Printing Solutions | AW Miller",
+      "description": "AW Miller Technical Sales Inc. is a CNC Machinery distributor, specializing as a Mazak supplier, offering solutions, service, and support.",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [
+          "miller",
+          "technical",
+          "sales"
+        ],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/a-w-miller-technical-sales/logo.png",
+        "fileName": "logo.png",
+        "sourceUrl": "https://awmiller.com/wp-content/uploads/2021/01/Logo_AW_Miller.png",
+        "sourceEvidence": "JSON-LD logo URL",
+        "type": "png",
+        "dimensions": {
+          "width": 624,
+          "height": 326
+        },
+        "sha256": "9acd2e261bc8e74ce9d789c1e794400100663937bee344d18bfc44af9c140103",
+        "sourceSha256": "9acd2e261bc8e74ce9d789c1e794400100663937bee344d18bfc44af9c140103",
+        "sourceType": "png",
+        "sourceFileName": null,
+        "transformation": "none; exact first-party transparent asset",
+        "borderSpread": null,
+        "alpha": {
+          "ok": true,
+          "transparentRatio": 0.6418,
+          "edgeTransparentRatio": 1,
+          "contentRatio": 0.3582,
+          "reason": null
+        },
+        "transparent": true,
+        "bytes": 164676
+      },
+      "references": [
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/a-w-miller-technical-sales/reference-1.png",
+          "fileName": "reference-1.png",
+          "sourceUrl": "https://awmiller.com/wp-content/uploads/2025/11/CNC-machining-and-automation-solutions.png",
+          "sourceEvidence": "IMG attachment-large size-large wp-image-34775  agile robotic system loading a mazak integrex cnc machine",
+          "type": "png",
+          "dimensions": {
+            "width": 1080,
+            "height": 750
+          },
+          "sha256": "4a43d2e9be9d3b604a1e0157fa779eb5afdf36e805e861ffa708c734fe221254",
+          "bytes": 1328265,
+          "visual": {
+            "ok": true,
+            "lumaRange": 253.5,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/a-w-miller-technical-sales/reference-2.png",
+          "fileName": "reference-2.png",
+          "sourceUrl": "https://awmiller.com/wp-content/uploads/2025/11/Screenshot-2025-11-26-at-11.25.22-AM.png",
+          "sourceEvidence": "IMG attachment-large size-large wp-image-34779  aw miller east aurora technical center",
+          "type": "png",
+          "dimensions": {
+            "width": 1664,
+            "height": 1286
+          },
+          "sha256": "843289de9a4340a90f8f6b49cddae4adeb6f17e6858d8c56c321ab9b8a738bab",
+          "bytes": 2972853,
+          "visual": {
+            "ok": true,
+            "lumaRange": 254.4,
+            "reason": null
+          }
+        }
+      ],
+      "referenceFailures": [
+        {
+          "url": "https://awmiller.com/wp-content/uploads/2022/11/General-Page-Banner.jpg",
+          "reason": "not a PNG"
+        },
+        {
+          "url": "https://secure.imaginativeenterprising-intelligent.com/794591.png",
+          "reason": "unsupported reference type unknown"
+        },
+        {
+          "url": "https://awmiller.com/wp-content/uploads/2025/11/qrx-50msy-600x371.webp",
+          "reason": "not a PNG"
+        },
+        {
+          "url": "https://awmiller.com/wp-content/uploads/2025/11/1.png",
+          "reason": "reference image is too small"
+        }
+      ],
+      "brandColors": [
+        "#fd5d14",
+        "#003388",
+        "#0e4564",
+        "#116600",
+        "#abb8c3"
+      ],
+      "checkedAt": "2026-09-18T09:21:54.367Z"
+    },
+    {
+      "rank": 16,
+      "domain": "jbmotorwork.com",
+      "slug": "jb-motor-works",
+      "sourceUrl": "https://www.jbmotorwork.com/",
+      "finalUrl": "https://www.jbmotorwork.com/",
+      "sourceDomain": "jbmotorwork.com",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "pageSha256": "717d95984fd702326e2b9cf34c2188d1d62dc6a17525a1d64e4392e00733c737",
+      "title": "Home - JB Motor Works",
+      "description": "JB Motor Works, based in Philadelphia, primarily focuses on providing automotive repair and maintenance services. This includes mechanical repairs, servicing,",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [
+          "motor",
+          "works"
+        ],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/jb-motor-works/logo.png",
+        "fileName": "logo.png",
+        "sourceUrl": "https://www.jbmotorwork.com/wp-content/uploads/2023/03/Logo-outlined-01.png",
+        "sourceEvidence": "JSON-LD logo URL",
+        "type": "png",
+        "dimensions": {
+          "width": 1000,
+          "height": 520
+        },
+        "sha256": "7cbbd3a3418ee498baf6df61101b65cc6d7be5d5df9eacf4f8993999ba8e42d7",
+        "sourceSha256": "7cbbd3a3418ee498baf6df61101b65cc6d7be5d5df9eacf4f8993999ba8e42d7",
+        "sourceType": "png",
+        "sourceFileName": null,
+        "transformation": "none; exact first-party transparent asset",
+        "borderSpread": null,
+        "alpha": {
+          "ok": true,
+          "transparentRatio": 0.3362,
+          "edgeTransparentRatio": 1,
+          "contentRatio": 0.6638,
+          "reason": null
+        },
+        "transparent": true,
+        "bytes": 82709
+      },
+      "references": [
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/jb-motor-works/reference-1.jpg",
+          "fileName": "reference-1.jpg",
+          "sourceUrl": "https://www.jbmotorwork.com/wp-content/uploads/elementor/thumbs/mechanic-auto-repair_1_2000x1335-1536x1025-1-q37o1ku653v0u1t2h377e392z4ag05uxidjk4fab34.jpg",
+          "sourceEvidence": "IMG mechanic-auto-repair_1_2000x1335-1536x1025 mechanic-auto-repair_1_2000x1335-1536×1025",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 400,
+            "width": 600
+          },
+          "sha256": "2d2cf98e01c8b265f0d0aece0e7943de13f30798e4b914d88f65f401d398fd26",
+          "bytes": 46153,
+          "visual": {
+            "ok": true,
+            "lumaRange": 255,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/jb-motor-works/reference-2.jpg",
+          "fileName": "reference-2.jpg",
+          "sourceUrl": "https://www.jbmotorwork.com/wp-content/uploads/elementor/thumbs/Manufacturers-warranty-2-q393b1aw7a5j8x6easq6se8ph49kf0738jig1r0asg.jpg",
+          "sourceEvidence": "IMG manufacturers-warranty-2 manufacturers-warranty-2",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 400,
+            "width": 600
+          },
+          "sha256": "e8d2a7e2491382f8f9a54bcf8f614bc73cf0758f814a4211baa94539c498955a",
+          "bytes": 53437,
+          "visual": {
+            "ok": true,
+            "lumaRange": 255,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/jb-motor-works/reference-3.jpg",
+          "fileName": "reference-3.jpg",
+          "sourceUrl": "https://www.jbmotorwork.com/wp-content/uploads/elementor/thumbs/car-paint-repair-q393e3a0ewc2zaqngm9je4hmz77iflbonnu974h8kg.jpg",
+          "sourceEvidence": "IMG car-paint-repair car-paint-repair",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 400,
+            "width": 600
+          },
+          "sha256": "e41ae87a5c1107fc176fc0bcff062fdb3a0c6fb91bc71106a51935e0dbd52250",
+          "bytes": 35194,
+          "visual": {
+            "ok": true,
+            "lumaRange": 251,
+            "reason": null
+          }
+        }
+      ],
+      "referenceFailures": [],
+      "brandColors": [
+        "#3f6de4",
+        "#003388",
+        "#655997",
+        "#fd3e3e",
+        "#abb8c3"
+      ],
+      "checkedAt": "2026-09-18T09:21:50.132Z"
+    },
+    {
+      "rank": 17,
+      "domain": "rgsglaw.com",
+      "slug": "rubin-glickman-steinberg-and-gifford-p-c",
+      "sourceUrl": "https://www.rgsglaw.com/newtown-office",
+      "finalUrl": "https://www.rgsglaw.com/bucks-county/",
+      "sourceDomain": "rgsglaw.com",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "pageSha256": "94a0cb78d4c374474155e44f169a919e496b1dff4d93d3eca5629386c1c6c2f8",
+      "title": "Newtown Office | Rubin, Glickman, Steinberg & Gifford P.C.",
+      "description": "PA personal injury law firm Rubin, Glickman, Steinberg & Gifford has an office located in Newtown, Pennsylvania. Call today: 215-822-7575.",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [
+          "rubin",
+          "glickman",
+          "steinberg",
+          "gifford"
+        ],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/rubin-glickman-steinberg-and-gifford-p-c/logo.png",
+        "fileName": "logo.png",
+        "sourceUrl": "https://www.rgsglaw.com/wp-content/uploads/2024/02/logo-v2.png",
+        "sourceEvidence": "JSON-LD logo URL",
+        "type": "png",
+        "dimensions": {
+          "width": 2062,
+          "height": 369
+        },
+        "sha256": "f4e38d759761b30b368c7cc88641fdc9f7acc8ea994c6b255be2e2a5061e1174",
+        "sourceSha256": "704952fbbf409400e08a1b548c1b937ffd26167bc0c2d0be99106f6e8bee2749",
+        "sourceType": "png",
+        "sourceFileName": "logo-source.png",
+        "transformation": "flat border color rgb(71,112,76) removed by border-seeded flood fill at tolerance 32; geometry unchanged",
+        "borderSpread": 0,
+        "alpha": {
+          "ok": true,
+          "transparentRatio": 0.7489,
+          "edgeTransparentRatio": 0.9336,
+          "contentRatio": 0.2511,
+          "reason": null
+        },
+        "transparent": true,
+        "bytes": 44083
+      },
+      "references": [
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/rubin-glickman-steinberg-and-gifford-p-c/reference-1.png",
+          "fileName": "reference-1.png",
+          "sourceUrl": "https://www.rgsglaw.com/wp-content/uploads/2026/03/National-39022-spec-ccUS-ed16-Year-Original.png",
+          "sourceEvidence": "IMG award image",
+          "type": "png",
+          "dimensions": {
+            "width": 1921,
+            "height": 2246
+          },
+          "sha256": "50fb9020d683325107e529f92a8b639f2c56cbf4d658c03534be8178b80360d8",
+          "bytes": 403680,
+          "visual": {
+            "ok": true,
+            "lumaRange": 255,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/rubin-glickman-steinberg-and-gifford-p-c/reference-2.png",
+          "fileName": "reference-2.png",
+          "sourceUrl": "https://www.rgsglaw.com/wp-content/uploads/2026/03/2025-Best-Law-Firm-Badge-scaled.png",
+          "sourceEvidence": "IMG award image",
+          "type": "png",
+          "dimensions": {
+            "width": 2560,
+            "height": 880
+          },
+          "sha256": "d7dad98b7cd148443623fca1ad7050b51d8d713982eccfb6cccb896fce75757d",
+          "bytes": 229140,
+          "visual": {
+            "ok": true,
+            "lumaRange": 255,
+            "reason": null
+          }
+        }
+      ],
+      "referenceFailures": [
+        {
+          "url": "https://www.rgsglaw.com/wp-content/uploads/2018/04/top-100.png",
+          "reason": "reference image is too small"
+        },
+        {
+          "url": "https://www.rgsglaw.com/wp-content/uploads/2018/06/pennsurban.jpg",
+          "reason": "reference image is too small"
+        },
+        {
+          "url": "https://www.rgsglaw.com/wp-content/uploads/2018/06/scales.jpg",
+          "reason": "reference image is too small"
+        },
+        {
+          "url": "https://www.rgsglaw.com/wp-content/uploads/2018/04/superlawyers.jpg",
+          "reason": "reference image is too small"
+        }
+      ],
+      "brandColors": [
+        "#003388",
+        "#c1ac7a",
+        "#e0c27a",
+        "#c9a84c",
+        "#00d084"
+      ],
+      "checkedAt": "2026-09-18T09:22:01.117Z"
+    },
+    {
+      "rank": 18,
+      "domain": "jphagency.com",
+      "slug": "john-holroyd-agency",
+      "sourceUrl": "https://www.jphagency.com/",
+      "finalUrl": "https://www.jphagency.com/",
+      "sourceDomain": "jphagency.com",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "pageSha256": "83c12fc62d3590bafe452c7253e809428e406fc869ea16d8347f637739b01f12",
+      "title": "Insurance Agency in Warminster, PA | John Holroyd Agency",
+      "description": "Looking for a highly rated insurance agency in Warminster, PA? We've got you covered! Start your quotes online in seconds or call us today!",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [
+          "john",
+          "holroyd",
+          "agency"
+        ],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/john-holroyd-agency/logo.png",
+        "fileName": "logo.png",
+        "sourceUrl": "https://www.jphagency.com/wp-content/uploads/sites/151/2023/01/AgencylogoVector-2-3.png",
+        "sourceEvidence": "JSON-LD logo URL",
+        "type": "png",
+        "dimensions": {
+          "width": 300,
+          "height": 194
+        },
+        "sha256": "36aeb3fffed9b120e6e2e059dfd0b2ea8c59813f2f43bc6048ba41b272740bf9",
+        "sourceSha256": "f29aef7badafee8bf8b13f5b8694f05ddae6bf089b5b42f182ca2462e1192356",
+        "sourceType": "png",
+        "sourceFileName": "logo-source.png",
+        "transformation": "flat border color rgb(255,255,255) removed by border-seeded flood fill at tolerance 32; geometry unchanged",
+        "borderSpread": 0,
+        "alpha": {
+          "ok": true,
+          "transparentRatio": 0.7878,
+          "edgeTransparentRatio": 0.9464,
+          "contentRatio": 0.2122,
+          "reason": null
+        },
+        "transparent": true,
+        "bytes": 30355
+      },
+      "references": [
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/john-holroyd-agency/reference-1.png",
+          "fileName": "reference-1.png",
+          "sourceUrl": "https://www.jphagency.com/wp-content/uploads/sites/151/2023/01/jhnhdebug.png",
+          "sourceEvidence": "og:image",
+          "type": "png",
+          "dimensions": {
+            "width": 1024,
+            "height": 683
+          },
+          "sha256": "d17d4d9a7125fda63c483694bc4a41fc731612deb20fae6eb31eedc3160da574",
+          "bytes": 376612,
+          "visual": {
+            "ok": true,
+            "lumaRange": 255,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/john-holroyd-agency/reference-2.jpg",
+          "fileName": "reference-2.jpg",
+          "sourceUrl": "https://www.jphagency.com/wp-content/uploads/sites/151/2020/10/business-insurance-image-1-768x512.jpg",
+          "sourceEvidence": "IMG fl-photo-img wp-image-23635 size-full perfmatters-lazy  office with desk business insurance image",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 512,
+            "width": 768
+          },
+          "sha256": "016a7fc05cd9ede3ae38a1684a8f521f3d8a8f750a89ee2fd5466ab944ed4320",
+          "bytes": 36765,
+          "visual": {
+            "ok": true,
+            "lumaRange": 252.6,
+            "reason": null
+          }
+        }
+      ],
+      "referenceFailures": [
+        {
+          "url": "https://www.jphagency.com/1024",
+          "reason": "HTTP 404"
+        },
+        {
+          "url": "https://www.jphagency.com/683",
+          "reason": "HTTP 404"
+        },
+        {
+          "url": "https://www.jphagency.com/image/png",
+          "reason": "HTTP 404"
+        },
+        {
+          "url": "https://www.jphagency.com/wp-content/uploads/sites/151/2023/01/Johns-head-shot-240x300.jpg",
+          "reason": "reference image is too small"
+        }
+      ],
+      "brandColors": [
+        "#110033",
+        "#188bf6",
+        "#003399",
+        "#006644",
+        "#009977"
+      ],
+      "checkedAt": "2026-09-18T09:21:56.246Z"
+    },
+    {
+      "rank": 19,
+      "domain": "compassfinancialsolutionsinc.com",
+      "slug": "compass-financial-solutions-financial-planner",
+      "sourceUrl": "https://compassfinancialsolutionsinc.com/",
+      "finalUrl": "https://compassfinancialsolutionsinc.com/",
+      "sourceDomain": "compassfinancialsolutionsinc.com",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "pageSha256": "bdfe7c80df6c53d85544da3bc2417cd11889950b7f89dadb9d4f628639ea829f",
+      "title": "Havertown Retirement Planning PA 19083 | Havertown PA Retirement Planning | Retirement Planning Havertown PA 19083 | Retirement Planning Services Havertown Pennsylvania | Havertown Financial Services Pennsylvania | Pension Planning in Havertown | Retirement Planners Havertown PA 19083 | Retirement Planning Professionals | Havertown Income Planning Services | Retirement Financial Planning Havertown PA 19083 | Help Planning for Retirement in Havertown",
+      "description": "Compass Financial Solutions is the premier Havertown retirement planning company for custom retirement plans, financial services and income planning in Havertown PA 19083. We specialize in providing clients with retirement planning strategies and financial planning services in Pennsylvania. If you live in Havertown and need quality retirement planners, give Compass a call.",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [
+          "compass",
+          "financial",
+          "solutions",
+          "financial",
+          "planner"
+        ],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/compass-financial-solutions-financial-planner/logo.png",
+        "fileName": "logo.png",
+        "sourceUrl": "https://compassfinancialsolutionsinc.com/wp-content/uploads/compass-financial-solutions-logo-2.png",
+        "sourceEvidence": "JSON-LD logo URL",
+        "type": "png",
+        "dimensions": {
+          "width": 457,
+          "height": 120
+        },
+        "sha256": "0659eeee005a77e73bedf31ed8e50a2114524b0998c1085a6b5b4ed84f3f477d",
+        "sourceSha256": "0659eeee005a77e73bedf31ed8e50a2114524b0998c1085a6b5b4ed84f3f477d",
+        "sourceType": "png",
+        "sourceFileName": null,
+        "transformation": "none; exact first-party transparent asset",
+        "borderSpread": null,
+        "alpha": {
+          "ok": true,
+          "transparentRatio": 0.7308,
+          "edgeTransparentRatio": 0.948,
+          "contentRatio": 0.2692,
+          "reason": null
+        },
+        "transparent": true,
+        "bytes": 17832
+      },
+      "references": [
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/compass-financial-solutions-financial-planner/reference-1.jpg",
+          "fileName": "reference-1.jpg",
+          "sourceUrl": "https://compassfinancialsolutionsinc.com/wp-content/uploads/compass-financial-solution-young-man-with-dog-2.jpg",
+          "sourceEvidence": "IMG scale-with-grid  home",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 1040,
+            "width": 710
+          },
+          "sha256": "681a7ff7c6052cf834a9a874b9a1d131d5a93e84515ca7d19fc8a2d6ad5a8ecf",
+          "bytes": 109327,
+          "visual": {
+            "ok": true,
+            "lumaRange": 243.3,
+            "reason": null
+          }
+        }
+      ],
+      "referenceFailures": [
+        {
+          "url": "https://compassfinancialsolutionsinc.com/wp-content/plugins/revslider/public/assets/assets/dummy.png",
+          "reason": "reference image is too small"
+        },
+        {
+          "url": "https://www.facebook.com/tr?id=406459627946129&ev=PageView&noscript=1",
+          "reason": "unsupported reference type unknown"
+        }
+      ],
+      "brandColors": [
+        "#fc2820",
+        "#cd1225",
+        "#00345b",
+        "#0089f7",
+        "#003388"
+      ],
+      "checkedAt": "2026-09-18T09:22:08.945Z"
+    },
+    {
+      "rank": 20,
+      "domain": "panitchlaw.com",
+      "slug": "panitch-schwarze-belisario-and-nadel",
+      "sourceUrl": "https://www.panitchlaw.com/",
+      "finalUrl": "https://www.panitchlaw.com/",
+      "sourceDomain": "panitchlaw.com",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "pageSha256": "e11b446980daf48946b26bb6737ce74674567777693b8acbb11911573f102d3c",
+      "title": "Intellectual Property Law | Panitch Schwarze",
+      "description": "Panitch Schwarze Belisario & Nadel LLP focuses on intellectual property laws for large Fortune 500 corporations and individuals alike.",
+      "identity": {
+        "ok": true,
+        "matchedTokens": [
+          "panitch",
+          "schwarze",
+          "belisario",
+          "nadel"
+        ],
+        "domainRelated": true
+      },
+      "logo": {
+        "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/panitch-schwarze-belisario-and-nadel/logo.png",
+        "fileName": "logo.png",
+        "sourceUrl": "https://www.panitchlaw.com/app/uploads/2022/01/Screen-Shot-2022-01-17-at-11.07.23-AM.png",
+        "sourceEvidence": "JSON-LD logo URL",
+        "type": "png",
+        "dimensions": {
+          "width": 604,
+          "height": 300
+        },
+        "sha256": "3857647659ff305c0514298ced8285c066aeb5e255c2232c6e8d47baf6085e2d",
+        "sourceSha256": "9a110fdbf6bcc00c516ee78fbac63d5c8c4ad23ef70ed80d55b1f7445116dadc",
+        "sourceType": "png",
+        "sourceFileName": "logo-source.png",
+        "transformation": "flat border color rgb(5,16,47) removed by border-seeded flood fill at tolerance 32; geometry unchanged",
+        "borderSpread": 13.64,
+        "alpha": {
+          "ok": true,
+          "transparentRatio": 0.7715,
+          "edgeTransparentRatio": 1,
+          "contentRatio": 0.2285,
+          "reason": null
+        },
+        "transparent": true,
+        "bytes": 29056
+      },
+      "references": [
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/panitch-schwarze-belisario-and-nadel/reference-1.jpg",
+          "fileName": "reference-1.jpg",
+          "sourceUrl": "https://www.panitchlaw.com/app/uploads/2026/01/Our-Work-Website-2025-Philadelphia-Candid-for-Marketing-Chad-and-Holly-scaled.jpg",
+          "sourceEvidence": "og:image",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 1707,
+            "width": 2560
+          },
+          "sha256": "46921eebcecbf5b7de917d7a4aa123e80203850d2fdfc515260fd700cacaa17e",
+          "bytes": 580758,
+          "visual": {
+            "ok": true,
+            "lumaRange": 252.9,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/panitch-schwarze-belisario-and-nadel/reference-2.jpg",
+          "fileName": "reference-2.jpg",
+          "sourceUrl": "https://www.panitchlaw.com/app/uploads/2026/01/Our-Work-Website-2025-Philadelphia-Candid-for-Marketing-Chad-and-Holly-2048x1365.jpg",
+          "sourceEvidence": "IMG wp-image-6501",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 1365,
+            "width": 2048
+          },
+          "sha256": "9ca7a7d986f74d867b5814e783cb9d705b272375d54432730268e19bc4b5b3d9",
+          "bytes": 389587,
+          "visual": {
+            "ok": true,
+            "lumaRange": 252.6,
+            "reason": null
+          }
+        },
+        {
+          "file": "02_Campaigns/AI Site Builder Outreach Engine/batches/radar-next20-20260918-052002/source-assets/panitch-schwarze-belisario-and-nadel/reference-3.jpg",
+          "fileName": "reference-3.jpg",
+          "sourceUrl": "https://www.panitchlaw.com/app/uploads/2026/01/Our-Team-Website-Photo-Ikenna-Ava-Julianna-Stephany-Travis-Dennis-scaled-e1774905512650-2048x1507.jpg",
+          "sourceEvidence": "IMG wp-image-6502",
+          "type": "jpeg",
+          "dimensions": {
+            "height": 1507,
+            "width": 2048
+          },
+          "sha256": "916ba9731f18558bac2c0cd088a881e28e4453d71e1a54af4b011ea832dfd98c",
+          "bytes": 536547,
+          "visual": {
+            "ok": true,
+            "lumaRange": 255,
+            "reason": null
+          }
+        }
+      ],
+      "referenceFailures": [
+        {
+          "url": "https://www.panitchlaw.com/2560",
+          "reason": "unsupported reference type unknown"
+        },
+        {
+          "url": "https://www.panitchlaw.com/1707",
+          "reason": "unsupported reference type unknown"
+        },
+        {
+          "url": "https://www.panitchlaw.com/image/jpeg",
+          "reason": "unsupported reference type unknown"
+        }
+      ],
+      "brandColors": [
+        "#003388",
+        "#f15d4f",
+        "#003399",
+        "#5bbad5",
+        "#da532c"
+      ],
+      "checkedAt": "2026-09-18T09:22:11.576Z"
+    }
+  ],
+  "rejected": [
+    {
+      "domain": "coopermech.com",
+      "name": "Cooper Mechanical, Inc.",
+      "website": "https://coopermech.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "confidentsmiledental.com",
+      "name": "Confident Smile Dental",
+      "website": "https://www.confidentsmiledental.com/",
+      "reason": "exact transparent logo unavailable: logo source is too small"
+    },
+    {
+      "domain": "roxfallsvet.com",
+      "name": "Rox Falls Vet",
+      "website": "https://roxfallsvet.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "signaturehvac.com",
+      "name": "Signature HVAC",
+      "website": "https://www.signaturehvac.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "marioncentersupply.com",
+      "name": "Marion Center Supply Inc",
+      "website": "https://www.marioncentersupply.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "troopervet.com",
+      "name": "Trooper Veterinary Hospital",
+      "website": "https://www.troopervet.com/",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "orthodontistwayne.com",
+      "name": "Orthodontics on the Line",
+      "website": "https://orthodontistwayne.com/",
+      "reason": "exact transparent logo unavailable: no first-party logo candidate"
+    },
+    {
+      "domain": "thedentalspotpa.com",
+      "name": "The Dental Spot",
+      "website": "https://www.thedentalspotpa.com/",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "westchestervetmedcenter.com",
+      "name": "West Chester Veterinary Medical Center",
+      "website": "https://www.westchestervetmedcenter.com/site/home",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "uvpp.vet",
+      "name": "United Vision Pet Partners",
+      "website": "https://uvpp.vet/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "cityfitness.com",
+      "name": "City Fitness",
+      "website": "https://cityfitness.com/old-city-club/",
+      "reason": "approved generated-stock board is missing: category-fitness"
+    },
+    {
+      "domain": "metzlerforestproducts.com",
+      "name": "Metzler Forest Products",
+      "website": "https://www.metzlerforestproducts.com/",
+      "reason": "No relevant generated-stock category is approved for metzler-forest-products (metzler-forest-products metzler forest products timber other). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "uhpwireless.com",
+      "name": "UHP Wireless Networks",
+      "website": "http://www.uhpwireless.com/",
+      "reason": "exact transparent logo unavailable: Invalid URL"
+    },
+    {
+      "domain": "fillabagel.com",
+      "name": "Fill A Bagel & Breads",
+      "website": "https://www.fillabagel.com/jenkintown/",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "handynasty.net",
+      "name": "Han Dynasty",
+      "website": "https://www.handynasty.net/location/han-dynasty-royersford",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "toscositaliandelight.net",
+      "name": "Tosco's Italian Delight",
+      "website": "https://toscositaliandelight.net/",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "bccinteractive.com",
+      "name": "BCC Interactive",
+      "website": "https://www.bccinteractive.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "signsalacarte.com",
+      "name": "Signs A La Carte",
+      "website": "https://www.signsalacarte.com/",
+      "reason": "approved generated-stock board is missing: category-manufacturing"
+    },
+    {
+      "domain": "chainmar.com",
+      "name": "Chain-Mar Furniture Showcase",
+      "website": "https://www.chainmar.com/",
+      "reason": "No relevant generated-stock category is approved for chain-mar-furniture-showcase (chain-mar-furniture-showcase chain-mar furniture showcase furniture retail). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "stretchlab.com",
+      "name": "StretchLab",
+      "website": "https://www.stretchlab.com/location/newtownsquare",
+      "reason": "No relevant generated-stock category is approved for stretchlab (stretchlab stretchlab physiotherapist medical). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "verifyprotect.com",
+      "name": "VerifyProtect.com",
+      "website": "https://www.verifyprotect.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "premierhvacpa.com",
+      "name": "Premier HVAC Services",
+      "website": "https://www.premierhvacpa.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "ellisathleticcenter.com",
+      "name": "Ellis Athletic Center",
+      "website": "https://ellisathleticcenter.com/",
+      "reason": "approved generated-stock board is missing: category-fitness"
+    },
+    {
+      "domain": "unitedgsarts.com",
+      "name": "United Arts",
+      "website": "https://unitedgsarts.com/",
+      "reason": "approved generated-stock board is missing: category-fitness"
+    },
+    {
+      "domain": "bamboo46.com",
+      "name": "Bamboo",
+      "website": "https://www.bamboo46.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "abrandtandson.com",
+      "name": "Annette Brandt and Son",
+      "website": "https://www.abrandtandson.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "mekenneysauto.com",
+      "name": "Mekenney's Automotive Service",
+      "website": "https://mekenneysauto.com/",
+      "reason": "exact transparent logo unavailable: logo source is too small"
+    },
+    {
+      "domain": "salernotire.com",
+      "name": "Salerno Tire Corporation",
+      "website": "https://salernotire.com/",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "drdavidtucker.com",
+      "name": "Tucker Chiropractic Center",
+      "website": "https://drdavidtucker.com/",
+      "reason": "approved generated-stock board is missing: category-chiropractic"
+    },
+    {
+      "domain": "hmtaxes.com",
+      "name": "H&M Tax Service",
+      "website": "https://hmtaxes.com/",
+      "reason": "exact transparent logo unavailable: Invalid URL"
+    },
+    {
+      "domain": "sugaringnyc.com",
+      "name": "Sugaring NYC",
+      "website": "https://www.sugaringnyc.com/",
+      "reason": "HTTP 403"
+    },
+    {
+      "domain": "grossmanfurniture.com",
+      "name": "Grossman Furniture",
+      "website": "https://www.grossmanfurniture.com/",
+      "reason": "No relevant generated-stock category is approved for grossman-furniture (grossman-furniture grossman furniture furniture retail). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "needmomentum.com",
+      "name": "Momentum Digital",
+      "website": "https://needmomentum.com/",
+      "reason": "exact transparent logo unavailable: no first-party logo candidate"
+    },
+    {
+      "domain": "boehmerheating.com",
+      "name": "Boehmer Heating & Cooling",
+      "website": "https://www.boehmerheating.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "rawreplenish.com",
+      "name": "Raw Replenish",
+      "website": "https://www.rawreplenish.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "691pool.com",
+      "name": "B&B Pools",
+      "website": "https://www.691pool.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "chestercountyeyecare.com",
+      "name": "Chester County Eye Care",
+      "website": "https://www.chestercountyeyecare.com/",
+      "reason": "approved generated-stock board is missing: category-optometry"
+    },
+    {
+      "domain": "eyeconsultantsofpa.com",
+      "name": "Eye Consultants of Pennsylvania",
+      "website": "https://www.eyeconsultantsofpa.com/locations/pottstown-office",
+      "reason": "approved generated-stock board is missing: category-optometry"
+    },
+    {
+      "domain": "fivesaintsdistilling.com",
+      "name": "Five Saints Distilling",
+      "website": "https://fivesaintsdistilling.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "gibbonsautomotive.com",
+      "name": "Gibbons Automotive",
+      "website": "https://gibbonsautomotive.com/",
+      "reason": "exact transparent logo unavailable: logo source is too small"
+    },
+    {
+      "domain": "nicgrooming.com",
+      "name": "Nic Grooming",
+      "website": "https://www.nicgrooming.com/",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "trovegeneral.com",
+      "name": "Trove General Store",
+      "website": "https://trovegeneral.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "alliedroofingsolutions.com",
+      "name": "Allied Roofing Solutions",
+      "website": "https://www.alliedroofingsolutions.com/pa",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "allprodetail.com",
+      "name": "All Pro Detail",
+      "website": "https://www.allprodetail.com/",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "beemlightsauna.com",
+      "name": "Beem Light Sauna",
+      "website": "https://www.beemlightsauna.com/location/collegeville",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "homestarrinc.com",
+      "name": "Homestarr Realty",
+      "website": "https://homestarrinc.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "huntengineering.com",
+      "name": "Hunt Engineering Co",
+      "website": "https://www.huntengineering.com/",
+      "reason": "exact transparent logo unavailable: logo border is not a single removable color"
+    },
+    {
+      "domain": "marcheseopticians.com",
+      "name": "Marchese Opticians",
+      "website": "https://marcheseopticians.com/",
+      "reason": "approved generated-stock board is missing: category-optometry"
+    },
+    {
+      "domain": "mostardi.com",
+      "name": "Mostardi's Nursery & Greenhouse",
+      "website": "https://mostardi.com/",
+      "reason": "No relevant generated-stock category is approved for mostardi-s-nursery-and-greenhouse (mostardi-s-nursery-and-greenhouse mostardi's nursery & greenhouse garden-centre home-services). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "a1mulch.com",
+      "name": "A1 Mulch",
+      "website": "https://www.a1mulch.com/",
+      "reason": "No relevant generated-stock category is approved for a1-mulch (a1-mulch a1 mulch garden-centre home-services). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "alderferglass.com",
+      "name": "Alderfer Glass Company",
+      "website": "https://alderferglass.com/",
+      "reason": "No relevant generated-stock category is approved for alderfer-glass-company (alderfer-glass-company alderfer glass company glaziery home-services). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "creativepromarketing.com",
+      "name": "Creative Pro Marketing",
+      "website": "https://www.creativepromarketing.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "drgarymiller.com",
+      "name": "Springfield Family Chiropractic",
+      "website": "https://www.drgarymiller.com/",
+      "reason": "approved generated-stock board is missing: category-chiropractic"
+    },
+    {
+      "domain": "ivyrehab.com",
+      "name": "Ivy Rehab Physical Therapy",
+      "website": "https://www.ivyrehab.com/location/philadelphia-krewstown/",
+      "reason": "No relevant generated-stock category is approved for ivy-rehab-physical-therapy (ivy-rehab-physical-therapy ivy rehab physical therapy physiotherapist medical). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "jlbuilding.com",
+      "name": "J&L building materials",
+      "website": "https://www.jlbuilding.com/",
+      "reason": "approved generated-stock board is missing: category-manufacturing"
+    },
+    {
+      "domain": "northwalesrunningco.com",
+      "name": "North Wales Running Company",
+      "website": "https://northwalesrunningco.com/",
+      "reason": "No relevant generated-stock category is approved for north-wales-running-company (north-wales-running-company north wales running company sports retail). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "soleprovisions.com",
+      "name": "Sole Provisions",
+      "website": "https://www.soleprovisions.com/pages/collegeville",
+      "reason": "No relevant generated-stock category is approved for sole-provisions (sole-provisions sole provisions shoes retail). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "styergroup.com",
+      "name": "Styer & Associates",
+      "website": "https://styergroup.com/",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "theheavymetalhairsalon.com",
+      "name": "Heavy Metal Hair Salon",
+      "website": "https://www.theheavymetalhairsalon.com/",
+      "reason": "exact transparent logo unavailable: Invalid URL"
+    },
+    {
+      "domain": "youreyeassociates.com",
+      "name": "Lansdale Eye Associates",
+      "website": "https://www.youreyeassociates.com/",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "1digitalagency.com",
+      "name": "1DIGITAL AGENCY",
+      "website": "https://www.1digitalagency.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "abingtonneurology.com",
+      "name": "Abington Neurological Associates",
+      "website": "https://www.abingtonneurology.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "eyetoeyevisionpa.com",
+      "name": "Eye To Eye Vision",
+      "website": "https://www.eyetoeyevisionpa.com/",
+      "reason": "approved generated-stock board is missing: category-optometry"
+    },
+    {
+      "domain": "molestreet.com",
+      "name": "Mole Street",
+      "website": "https://molestreet.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "chaddsfordfiresideshop.com",
+      "name": "Chadds Ford Fireside Shop",
+      "website": "https://chaddsfordfiresideshop.com/",
+      "reason": "No relevant generated-stock category is approved for chadds-ford-fireside-shop (chadds-ford-fireside-shop chadds ford fireside shop fireplace home-services). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "esmsolutions.com",
+      "name": "ESM Solutions",
+      "website": "https://www.esmsolutions.com/",
+      "reason": "exact transparent logo unavailable: no first-party logo candidate"
+    },
+    {
+      "domain": "fellermanlaw.com",
+      "name": "Fellerman & Ciarimboli",
+      "website": "https://fellermanlaw.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "gehringermechanical.com",
+      "name": "Gehringer Mechanical",
+      "website": "https://gehringermechanical.com/",
+      "reason": "approved generated-stock board is missing: category-plumbing"
+    },
+    {
+      "domain": "joylandroofing.com",
+      "name": "Joyland Roofing & Exteriors",
+      "website": "https://joylandroofing.com/about-us/service-areas/montgomery-county",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "lacrosseunlimited.com",
+      "name": "Lacrosse Unlimited",
+      "website": "https://www.lacrosseunlimited.com/",
+      "reason": "No relevant generated-stock category is approved for lacrosse-unlimited (lacrosse-unlimited lacrosse unlimited sports retail). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "lifemedinstitute.com",
+      "name": "LifeMed Institute",
+      "website": "https://lifemedinstitute.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "malvernsaddlery.com",
+      "name": "Malvern Saddlery Ltd",
+      "website": "https://malvernsaddlery.com/",
+      "reason": "No relevant generated-stock category is approved for malvern-saddlery-ltd (malvern-saddlery-ltd malvern saddlery ltd sports retail). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "roxboroughmemorialurgentcare.com",
+      "name": "Roxborough Memorial Urgent Care",
+      "website": "https://roxboroughmemorialurgentcare.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "bondifurniture.com",
+      "name": "Bondi Furniture",
+      "website": "https://www.bondifurniture.com/",
+      "reason": "No relevant generated-stock category is approved for bondi-furniture (bondi-furniture bondi furniture furniture retail). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "dbdlaw.com",
+      "name": "Dischell, Bartle, & Dooley",
+      "website": "https://dbdlaw.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "wellsfordcabinetry.com",
+      "name": "Wellsford Fine Custom Cabinetry",
+      "website": "https://wellsfordcabinetry.com/",
+      "reason": "approved generated-stock board is missing: category-manufacturing"
+    },
+    {
+      "domain": "lbmlaw.com",
+      "name": "Lundy, Beldecos & Milby P.C.",
+      "website": "https://www.lbmlaw.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "puccimanuli.com",
+      "name": "pucciManuli",
+      "website": "https://puccimanuli.com/",
+      "reason": "No relevant generated-stock category is approved for puccimanuli (puccimanuli puccimanuli toys retail). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "ricciardibrothers.com",
+      "name": "Ricciardi Brothers Paint Shop",
+      "website": "https://ricciardibrothers.com/pages/media",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "sixfishes.com",
+      "name": "Six Fishes Neighborhood Acupuncture",
+      "website": "https://sixfishes.com/",
+      "reason": "No relevant generated-stock category is approved for six-fishes-neighborhood-acupuncture (six-fishes-neighborhood-acupuncture six fishes neighborhood acupuncture alternative medical). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "tryhitched.com",
+      "name": "Hitched",
+      "website": "https://tryhitched.com/pages/philadelphia",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "vctilellc.com",
+      "name": "Vicentino Ceramic Tile LLC",
+      "website": "https://vctilellc.com/",
+      "reason": "No relevant generated-stock category is approved for vicentino-ceramic-tile-llc (vicentino-ceramic-tile-llc vicentino ceramic tile llc tiler home-services). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "jacksonplumbingerie.com",
+      "name": "Jackson Plumbing Inc.",
+      "website": "https://www.jacksonplumbingerie.com/",
+      "reason": "approved generated-stock board is missing: category-plumbing"
+    },
+    {
+      "domain": "openstock.co",
+      "name": "Openstock Home Warehouse",
+      "website": "https://openstock.co/pages/wyoming",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "chucksmithsautoservice.com",
+      "name": "Chuck Smith's Auto Service",
+      "website": "https://www.chucksmithsautoservice.com/",
+      "reason": "exact transparent logo unavailable: logo source is too small"
+    },
+    {
+      "domain": "aaamarble.com",
+      "name": "AAA Hellenic Marble",
+      "website": "https://aaamarble.com/",
+      "reason": "approved generated-stock board is missing: category-manufacturing"
+    },
+    {
+      "domain": "alpinepaintingandrestoration.com",
+      "name": "Alpine Painting and Restoration Services",
+      "website": "https://www.alpinepaintingandrestoration.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "axiva.com",
+      "name": "Axiva",
+      "website": "https://axiva.com/",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "majesticnailsandspaemmaus.com",
+      "name": "Majestic Nail Salon",
+      "website": "https://majesticnailsandspaemmaus.com/",
+      "reason": "exact transparent logo unavailable: logo source is too small"
+    },
+    {
+      "domain": "orpi.com",
+      "name": "Orpi Claire Canac Immobilier Castres",
+      "website": "https://www.orpi.com/clairecanac",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "piasecki.com",
+      "name": "Piasecki Aircraft Corporation",
+      "website": "https://piasecki.com/",
+      "reason": "approved generated-stock board is missing: category-manufacturing"
+    },
+    {
+      "domain": "pinevisioncare.com",
+      "name": "Pine Vision Care",
+      "website": "https://www.pinevisioncare.com/",
+      "reason": "approved generated-stock board is missing: category-optometry"
+    },
+    {
+      "domain": "salsnursery.com",
+      "name": "Sal's Nursery & Landscaping",
+      "website": "https://salsnursery.com/",
+      "reason": "No relevant generated-stock category is approved for sal-s-nursery-and-landscaping (sal-s-nursery-and-landscaping sal's nursery & landscaping garden-centre home-services). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "stumpplants.com",
+      "name": "Stump",
+      "website": "https://stumpplants.com/bellavista",
+      "reason": "No relevant generated-stock category is approved for stump (stump stump garden-centre home-services). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "parksbestcarwash.com",
+      "name": "Park's Best Car Wash",
+      "website": "https://www.parksbestcarwash.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "crimsonphilly.com",
+      "name": "Crimson Hair Studio - West",
+      "website": "https://www.crimsonphilly.com/",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "bluemarsh.com",
+      "name": "Blue Marsh Insurance, Inc.",
+      "website": "https://www.bluemarsh.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "coleshardware.com",
+      "name": "Cole's Hardware",
+      "website": "https://www.coleshardware.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "stirlingeyecenter.com",
+      "name": "Stirling Eyecare Center",
+      "website": "https://stirlingeyecenter.com/",
+      "reason": "approved generated-stock board is missing: category-optometry"
+    },
+    {
+      "domain": "buildersmanagementplus.com",
+      "name": "Builders & Management Plus, LLC",
+      "website": "https://buildersmanagementplus.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "fortifiedroofing.com",
+      "name": "Fortified Roofing",
+      "website": "https://www.fortifiedroofing.com/bucks/levittown/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "rollingthunderexpresscarwash.com",
+      "name": "Rolling Thunder Express Car Wash",
+      "website": "https://www.rollingthunderexpresscarwash.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "delgrossofoods.com",
+      "name": "DelGrosso Foods, Inc.",
+      "website": "https://www.delgrossofoods.com/",
+      "reason": "approved generated-stock board is missing: category-manufacturing"
+    },
+    {
+      "domain": "firehousebicycles.com",
+      "name": "Firehouse Bicycles",
+      "website": "https://firehousebicycles.com/",
+      "reason": "No relevant generated-stock category is approved for firehouse-bicycles (firehouse-bicycles firehouse bicycles bicycle retail). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "icarespecialists.com",
+      "name": "Eye Care Specialists",
+      "website": "https://www.icarespecialists.com/locations/berwick-pa/",
+      "reason": "approved generated-stock board is missing: category-optometry"
+    },
+    {
+      "domain": "tusseylandscaping.com",
+      "name": "Tussey Landscaping",
+      "website": "https://www.tusseylandscaping.com/",
+      "reason": "No relevant generated-stock category is approved for tussey-landscaping (tussey-landscaping tussey landscaping gardener home-services). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "callmvpplumbing.com",
+      "name": "MVP Plumbing",
+      "website": "https://callmvpplumbing.com/",
+      "reason": "approved generated-stock board is missing: category-plumbing"
+    },
+    {
+      "domain": "petrosjewelers.com",
+      "name": "Petro's Jewelers",
+      "website": "https://petrosjewelers.com/",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "haltermaterials.com",
+      "name": "Halter Materials & Landscape Supply",
+      "website": "https://haltermaterials.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "guthrie.org",
+      "name": "Guthrie Clinic Wellsboro",
+      "website": "https://www.guthrie.org/locations/wellsboro",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "steelcitywheelhouse.com",
+      "name": "Steel City Wheelhouse",
+      "website": "https://steelcitywheelhouse.com/",
+      "reason": "exact transparent logo unavailable: logo source is too small"
+    },
+    {
+      "domain": "gettysburgbicycle.com",
+      "name": "Gettysburg Bicycle",
+      "website": "https://gettysburgbicycle.com/",
+      "reason": "No relevant generated-stock category is approved for gettysburg-bicycle (gettysburg-bicycle gettysburg bicycle bicycle retail). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "zimmermanmulch.com",
+      "name": "Zimmerman Mulch Products",
+      "website": "https://www.zimmermanmulch.com/",
+      "reason": "No relevant generated-stock category is approved for zimmerman-mulch-products (zimmerman-mulch-products zimmerman mulch products garden-centre home-services). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "rcmoore.com",
+      "name": "R.C. Moore Transportation",
+      "website": "https://www.rcmoore.com/",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "justaboutwealth.com",
+      "name": "Justabout Wealth Management",
+      "website": "https://justaboutwealth.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "rocknblock.com",
+      "name": "Rock n Block Materials",
+      "website": "https://rocknblock.com/",
+      "reason": "approved generated-stock board is missing: category-manufacturing"
+    },
+    {
+      "domain": "modern-eye.com",
+      "name": "Modern Eye",
+      "website": "https://www.modern-eye.com/",
+      "reason": "approved generated-stock board is missing: category-optometry"
+    },
+    {
+      "domain": "stevericelaw.com",
+      "name": "Steve Rice Law",
+      "website": "https://stevericelaw.com/chambersburg-criminal-lawyer",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "ghilfigercontracting.com",
+      "name": "Grant Hilfiger",
+      "website": "https://www.ghilfigercontracting.com/",
+      "reason": "No relevant generated-stock category is approved for grant-hilfiger (grant-hilfiger grant hilfiger carpenter home-services). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "kesselco.com",
+      "name": "Kessel Construction, Inc.",
+      "website": "https://www.kesselco.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "malpractice-injury-lawyers.com",
+      "name": "PA Medical Malpractice Lawyers P.C.",
+      "website": "https://malpractice-injury-lawyers.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "pittsburghnorth.garageforce.com",
+      "name": "Garage Force of Pittsburgh North",
+      "website": "https://pittsburghnorth.garageforce.com/",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "hardersports.com",
+      "name": "Harder Sporting Goods",
+      "website": "https://www.hardersports.com/",
+      "reason": "No relevant generated-stock category is approved for harder-sporting-goods (harder-sporting-goods harder sporting goods sports retail). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "collegevillefamilydentistry.com",
+      "name": "Advanced and Elite Dentistry",
+      "website": "https://www.collegevillefamilydentistry.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "astonvet.com",
+      "name": "Aston Veterinary Hospital",
+      "website": "https://www.astonvet.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "luminousdentistry.com",
+      "name": "Luminous Smiles",
+      "website": "https://luminousdentistry.com/",
+      "reason": "exact transparent logo unavailable: no first-party logo candidate"
+    },
+    {
+      "domain": "philadelphiadental.com",
+      "name": "Philadelphia Dental - Broad St",
+      "website": "http://philadelphiadental.com/",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "delfera.com",
+      "name": "Delfera Heating & Cooling Company",
+      "website": "https://delfera.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "lincelectricpa.com",
+      "name": "Linc Electric Inc",
+      "website": "https://lincelectricpa.com/",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "everythingbagelcafe.net",
+      "name": "Everything Bagel Cafe",
+      "website": "https://www.everythingbagelcafe.net/",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "julesthincrust.com",
+      "name": "Jules Thin Crust",
+      "website": "https://www.julesthincrust.com/locations/jenkintown",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "volcanmexicanrestaurant.com",
+      "name": "El Volcan",
+      "website": "https://volcanmexicanrestaurant.com/",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "mcilwainbus.com",
+      "name": "McIlwain School Bus Lines",
+      "website": "https://mcilwainbus.com/",
+      "reason": "No relevant generated-stock category is approved for mcilwain-school-bus-lines (mcilwain-school-bus-lines mcilwain school bus lines depot other). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "ordergracescafe.com",
+      "name": "Grace's Cafe",
+      "website": "https://www.ordergracescafe.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "bellas-jenkintown.com",
+      "name": "Bella's Restaurant & Pizzeria",
+      "website": "https://bellas-jenkintown.com/",
+      "reason": "exact transparent logo unavailable: background removal would erase the whole image"
+    },
+    {
+      "domain": "springgardenpizza.com",
+      "name": "Spring Garden Pizza & Restaurant",
+      "website": "https://www.springgardenpizza.com/",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "cioccacollisioncenters.com",
+      "name": "Ciocca Collision Center",
+      "website": "https://cioccacollisioncenters.com/quakertown/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "fredjmoyer.com",
+      "name": "Fred J. Moyer Plumbing",
+      "website": "https://www.fredjmoyer.com/",
+      "reason": "approved generated-stock board is missing: category-plumbing"
+    },
+    {
+      "domain": "mainlineopticalardmore.com",
+      "name": "Mainline Optical",
+      "website": "https://mainlineopticalardmore.com/",
+      "reason": "approved generated-stock board is missing: category-optometry"
+    },
+    {
+      "domain": "ugservicecenter.com",
+      "name": "Upper Gwynedd Service Center",
+      "website": "https://ugservicecenter.com/",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "endgameboxandfit.us",
+      "name": "Endgame Boxing + Fitness",
+      "website": "https://endgameboxandfit.us/",
+      "reason": "approved generated-stock board is missing: category-fitness"
+    },
+    {
+      "domain": "animapets.com",
+      "name": "Anima",
+      "website": "https://www.animapets.com/bonejour-pet-supply/",
+      "reason": "exact transparent logo unavailable: Invalid URL"
+    },
+    {
+      "domain": "toadhollowathletics.com",
+      "name": "Toad Hollow",
+      "website": "https://toadhollowathletics.com/",
+      "reason": "No relevant generated-stock category is approved for toad-hollow (toad-hollow toad hollow sports retail). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "historicbethlehem.org",
+      "name": "1750 Smithy",
+      "website": "https://www.historicbethlehem.org/visit-us/museums-sites/1760-smithy/",
+      "reason": "approved generated-stock board is missing: category-manufacturing"
+    },
+    {
+      "domain": "bluestonegardens.com",
+      "name": "Bluestone Gardens",
+      "website": "https://www.bluestonegardens.com/",
+      "reason": "No relevant generated-stock category is approved for bluestone-gardens (bluestone-gardens bluestone gardens garden-centre home-services). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "brinkerfinancial.com",
+      "name": "Brinker Financial",
+      "website": "https://www.brinkerfinancial.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "evolvechiropracticpllc.com",
+      "name": "Evolve Chiropractic",
+      "website": "https://evolvechiropracticpllc.com/",
+      "reason": "approved generated-stock board is missing: category-chiropractic"
+    },
+    {
+      "domain": "insurancefromberks.com",
+      "name": "Berks Insurance",
+      "website": "https://www.insurancefromberks.com/",
+      "reason": "exact transparent logo unavailable: Invalid URL"
+    },
+    {
+      "domain": "eastpennroofing.com",
+      "name": "East Penn Roofing",
+      "website": "https://www.eastpennroofing.com/emmaus",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "mrmulchpa.com",
+      "name": "Mr. Mulch",
+      "website": "https://www.mrmulchpa.com/",
+      "reason": "No relevant generated-stock category is approved for mr-mulch (mr-mulch mr. mulch garden-centre home-services). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "americasbest.com",
+      "name": "America's Best",
+      "website": "https://www.americasbest.com/location/pa/east-norriton/northtowne-plaza-shopping-center/",
+      "reason": "approved generated-stock board is missing: category-optometry"
+    },
+    {
+      "domain": "concordautobodyinc.com",
+      "name": "Concord Auto Body",
+      "website": "https://www.concordautobodyinc.com/",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "headhuntersfamilysalon.com",
+      "name": "Head Hunters",
+      "website": "https://www.headhuntersfamilysalon.com/",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "mottaslandscaping.com",
+      "name": "Motta's Country Gardens & Landscaping",
+      "website": "https://www.mottaslandscaping.com/",
+      "reason": "No relevant generated-stock category is approved for motta-s-country-gardens-and-landscaping (motta-s-country-gardens-and-landscaping motta's country gardens & landscaping gardener home-services). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "philapregnancycenter.com",
+      "name": "Philly Pregnancy Center",
+      "website": "https://philapregnancycenter.com/",
+      "reason": "exact transparent logo unavailable: fetch failed"
+    },
+    {
+      "domain": "trucksmartisuzu.com",
+      "name": "TruckSmart Isuzu",
+      "website": "https://trucksmartisuzu.com/",
+      "reason": "HTTP 403"
+    },
+    {
+      "domain": "tristateseniors.com",
+      "name": "Tri-State Senior Insurance",
+      "website": "https://tristateseniors.com/",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "capitol-hvac.com",
+      "name": "Capitol Heating and Air, LLC",
+      "website": "https://www.capitol-hvac.com/",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "autoworksgilbertsville.com",
+      "name": "AutoWorks Inc",
+      "website": "https://autoworksgilbertsville.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "californiapools.com",
+      "name": "California Pools - Philadelphia",
+      "website": "https://californiapools.com/locations/philadelphia",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "faziotagservice.com",
+      "name": "Fazio Tag Service",
+      "website": "https://faziotagservice.com/",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "rutterroofing.com",
+      "name": "Rutter Roofing",
+      "website": "https://rutterroofing.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "tafjkgroup.com",
+      "name": "TAF JK Group",
+      "website": "https://tafjkgroup.com/",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "vintagehomepaoli.com",
+      "name": "Vintage Home",
+      "website": "https://vintagehomepaoli.com/",
+      "reason": "No relevant generated-stock category is approved for vintage-home (vintage-home vintage home furniture retail). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "bigbluemarblebooks.com",
+      "name": "Big Blue Marble Bookstore",
+      "website": "https://www.bigbluemarblebooks.com/",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "captnchuckysnewtownsquare.com",
+      "name": "Capt'n Chucky's Crab Cake Co.",
+      "website": "https://captnchuckysnewtownsquare.com/trappe/",
+      "reason": "exact transparent logo unavailable: logo source is too small"
+    },
+    {
+      "domain": "citiautogroup.com",
+      "name": "Citi Auto Group LLC",
+      "website": "https://citiautogroup.com/",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "oakstreethealth.com",
+      "name": "Oak Street Health",
+      "website": "https://www.oakstreethealth.com/locations/philadelphia/aramingo",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "philadelphiarunner.com",
+      "name": "Philadelphia Runner",
+      "website": "https://philadelphiarunner.com/content/pr-university-city",
+      "reason": "No relevant generated-stock category is approved for philadelphia-runner (philadelphia-runner philadelphia runner sports retail). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "pmsiforlife.com",
+      "name": "Stowe Medical Group",
+      "website": "https://www.pmsiforlife.com/stowe-medical-group",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "springdancehottubs.com",
+      "name": "Spring Dance Hot Tubs",
+      "website": "https://springdancehottubs.com/locations/exton-pa-chester-county/",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "pennopto.com",
+      "name": "Pennsylvania Optometrics",
+      "website": "https://www.pennopto.com/",
+      "reason": "approved generated-stock board is missing: category-optometry"
+    },
+    {
+      "domain": "casseyoptical.com",
+      "name": "Cassey's Optical",
+      "website": "https://www.casseyoptical.com/",
+      "reason": "approved generated-stock board is missing: category-optometry"
+    },
+    {
+      "domain": "lentheplumber.com",
+      "name": "Len the Plumber",
+      "website": "https://lentheplumber.com/pennsylvania-delaware",
+      "reason": "approved generated-stock board is missing: category-plumbing"
+    },
+    {
+      "domain": "nissleywine.com",
+      "name": "Nissley Vineyards",
+      "website": "https://www.nissleywine.com/philadelphiapremiumoutlets",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "patitleandtag.com",
+      "name": "PA Title & Tag of Emmaus",
+      "website": "https://patitleandtag.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "pvpeteatery.com",
+      "name": "Perk Valley Pet Eatery",
+      "website": "https://pvpeteatery.com/",
+      "reason": "exact transparent logo unavailable: Invalid URL"
+    },
+    {
+      "domain": "scottsofpa.com",
+      "name": "Scott's Car Wash and Auto Lube",
+      "website": "https://scottsofpa.com/scotts-of-exeter",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "smokercpa.com",
+      "name": "Smoker & Company",
+      "website": "https://www.smokercpa.com/",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "usrenalcare.com",
+      "name": "U.S. Renal Care",
+      "website": "https://www.usrenalcare.com/location/philadelphia/",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "vaughnsrestoration.com",
+      "name": "Vaughn's Collision & Restoration",
+      "website": "https://www.vaughnsrestoration.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "cavalloautobody.com",
+      "name": "Cavallo Auto Body",
+      "website": "https://cavalloautobody.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "chochiropractic.com",
+      "name": "Cho Chiropractic",
+      "website": "https://www.chochiropractic.com/chiropractic.html",
+      "reason": "approved generated-stock board is missing: category-chiropractic"
+    },
+    {
+      "domain": "damari.us",
+      "name": "Damari",
+      "website": "https://damari.us/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "hkm.com",
+      "name": "HKM Employment Attorneys LLP",
+      "website": "https://hkm.com/philadelphia",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "nissmaneye.com",
+      "name": "Nissman Eye Associates",
+      "website": "https://nissmaneye.com/",
+      "reason": "approved generated-stock board is missing: category-optometry"
+    },
+    {
+      "domain": "quadcountyoralsurgery.com",
+      "name": "Quad County Oral & Maxillofacial Surgery",
+      "website": "http://quadcountyoralsurgery.com/",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "kingsfitnessforlife.com",
+      "name": "King's Fitness",
+      "website": "http://www.kingsfitnessforlife.com/",
+      "reason": "approved generated-stock board is missing: category-fitness"
+    },
+    {
+      "domain": "1stoprecruiting.com",
+      "name": "Pennsylvania Medical Staffing",
+      "website": "https://www.1stoprecruiting.com/a-top-rated-pennsylvania-medical-staffing-agency/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "berrodin.com",
+      "name": "Berrodin Parts Warehouse",
+      "website": "https://www.berrodin.com/DrexelHill.html",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "kcba-architects.com",
+      "name": "KCBA Architects",
+      "website": "https://www.kcba-architects.com/contact/",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "anylabtestnow.com",
+      "name": "Any Lab Test Now!",
+      "website": "https://www.anylabtestnow.com/springfield-19064/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "drmikecheng.com",
+      "name": "Comprehensive Chiropractic & Rehab, Inc.",
+      "website": "https://drmikecheng.com/",
+      "reason": "approved generated-stock board is missing: category-chiropractic"
+    },
+    {
+      "domain": "warringtonderm.com",
+      "name": "Dermatology Specialists of Warrington",
+      "website": "https://www.warringtonderm.com/",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "norwinsupply.com",
+      "name": "Norwin Landscape Supply",
+      "website": "https://norwinsupply.com/",
+      "reason": "approved generated-stock board is missing: category-manufacturing"
+    },
+    {
+      "domain": "mavis.com",
+      "name": "Jack Williams Tire & Auto",
+      "website": "https://www.mavis.com/locations/palmyra-duke-st-pa/?stnum=1388",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "kettermanelectricalservices.kohlergeneratordealer.com",
+      "name": "Ketterman Electrical Services",
+      "website": "https://kettermanelectricalservices.kohlergeneratordealer.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "cnplasticsurgery.com",
+      "name": "Claytor Noone Plastic Surgery: Dr. R. Brannon Claytor",
+      "website": "https://www.cnplasticsurgery.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "larosalawfirm.com",
+      "name": "LaRosa Law Firm",
+      "website": "https://larosalawfirm.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "martinsflooring.com",
+      "name": "Martins Flooring",
+      "website": "https://www.martinsflooring.com/locations/oxford-pa/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "spectaclesfyeye.com",
+      "name": "Spectacles",
+      "website": "https://www.spectaclesfyeye.com/",
+      "reason": "approved generated-stock board is missing: category-optometry"
+    },
+    {
+      "domain": "bluemtmachine.com",
+      "name": "Blue Mountain Machine",
+      "website": "https://bluemtmachine.com/",
+      "reason": "approved generated-stock board is missing: category-manufacturing"
+    },
+    {
+      "domain": "pioneermetalroofing.com",
+      "name": "Pioneer Metal Roofing",
+      "website": "https://pioneermetalroofing.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "adamsspinalcenter.com",
+      "name": "Adams Spinal Center",
+      "website": "https://adamsspinalcenter.com/",
+      "reason": "No relevant generated-stock category is approved for adams-spinal-center (adams-spinal-center adams spinal center alternative medical). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "drdanmonti.com",
+      "name": "Daniel A. Monti, MD, MBA: Integrative Health Specialist",
+      "website": "https://drdanmonti.com/",
+      "reason": "No relevant generated-stock category is approved for daniel-a-monti-md-mba-integrative-health-specialist (daniel-a-monti-md-mba-integrative-health-specialist daniel a. monti, md, mba: integrative health specialist alternative medical). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "pattersonaw.com",
+      "name": "Patterson Auto Wrecking",
+      "website": "https://www.pattersonaw.com/",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "joefidasautoplateservice.com",
+      "name": "Joe Fidas Instant Auto Plate Service",
+      "website": "https://www.joefidasautoplateservice.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "helminiaks.com",
+      "name": "Helminiak's Greenhouse & Landscaping",
+      "website": "https://helminiaks.com/",
+      "reason": "No relevant generated-stock category is approved for helminiak-s-greenhouse-and-landscaping (helminiak-s-greenhouse-and-landscaping helminiak's greenhouse & landscaping garden-centre home-services). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "freysgreenhouse.com",
+      "name": "Frey's Greenhouse",
+      "website": "https://freysgreenhouse.com/lebanon-pa/",
+      "reason": "No relevant generated-stock category is approved for frey-s-greenhouse (frey-s-greenhouse frey's greenhouse garden-centre home-services). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "argotshardware.com",
+      "name": "Argot's Hardware",
+      "website": "https://www.argotshardware.com/",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "confluencecyclery.com",
+      "name": "Confluence Cyclery",
+      "website": "https://www.confluencecyclery.com/",
+      "reason": "No relevant generated-stock category is approved for confluence-cyclery (confluence-cyclery confluence cyclery bicycle retail). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "vybe.care",
+      "name": "vybe urgent care",
+      "website": "https://www.vybe.care/vybe-locations/spring-garden/",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "cirbalaw.com",
+      "name": "Cirba Law, P. C.",
+      "website": "https://www.cirbalaw.com/",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "midatlanticmachinery.com",
+      "name": "Mid Atlantic Machinery Inc.",
+      "website": "https://midatlanticmachinery.com/",
+      "reason": "approved generated-stock board is missing: category-manufacturing"
+    },
+    {
+      "domain": "cdwaterproofingcorp.com",
+      "name": "C & D Waterproofing Corporation",
+      "website": "https://cdwaterproofingcorp.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "dayinsurance.com",
+      "name": "Day Insurance Agency Inc",
+      "website": "http://www.dayinsurance.com/",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "peaksalesmkt.com",
+      "name": "Peak Sales & Marketing Inc.",
+      "website": "https://www.peaksalesmkt.com/",
+      "reason": "exact transparent logo unavailable: Invalid URL"
+    },
+    {
+      "domain": "precisionipt.com",
+      "name": "Precision Aircraft Maintenance",
+      "website": "https://precisionipt.com/",
+      "reason": "approved generated-stock board is missing: category-manufacturing"
+    },
+    {
+      "domain": "witlane.com",
+      "name": "Wit-Lane, Inc",
+      "website": "https://witlane.com/",
+      "reason": "approved generated-stock board is missing: category-manufacturing"
+    },
+    {
+      "domain": "theinsulationguy.com",
+      "name": "The Insulation Guy",
+      "website": "https://www.theinsulationguy.com/",
+      "reason": "No relevant generated-stock category is approved for the-insulation-guy (the-insulation-guy the insulation guy insulation home-services). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "seisan.com",
+      "name": "Seisan Consulting",
+      "website": "https://www.seisan.com/",
+      "reason": "Fetched logo differs from the reviewed exact business logo"
+    },
+    {
+      "domain": "sceyeworks.com",
+      "name": "Sharon City Eyeworks",
+      "website": "https://sceyeworks.com/",
+      "reason": "approved generated-stock board is missing: category-optometry"
+    },
+    {
+      "domain": "ashlandfoundrymachineworks.com",
+      "name": "Ashland Foundry & Machine",
+      "website": "https://www.ashlandfoundrymachineworks.com/",
+      "reason": "approved generated-stock board is missing: category-manufacturing"
+    },
+    {
+      "domain": "plantsgoodwin.com",
+      "name": "Plants and Goodwin, Inc.",
+      "website": "https://plantsgoodwin.com/",
+      "reason": "no usable first-party visual reference"
+    },
+    {
+      "domain": "exelos.com",
+      "name": "Exelos - Business Services",
+      "website": "https://www.exelos.com/",
+      "reason": "exact transparent logo unavailable: HTTP 403"
+    },
+    {
+      "domain": "metalicobradford.com",
+      "name": "Metalico Bradford",
+      "website": "https://metalicobradford.com/",
+      "reason": "No relevant generated-stock category is approved for metalico-bradford (metalico-bradford metalico bradford scrap-yard other). Generate and approve a new board instead of guessing."
+    },
+    {
+      "domain": "trinity-accounting.com",
+      "name": "Trinity Accounting & Consulting Services",
+      "website": "https://trinity-accounting.com/",
+      "reason": "no usable first-party visual reference"
+    }
+  ]
+}

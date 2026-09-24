@@ -1,0 +1,126 @@
+{
+  "sourceUrl": "https://www.rambo-ortho.com/",
+  "finalUrl": "https://rambo-ortho.com/",
+  "sourceDomain": "rambo-ortho.com",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=UTF-8",
+  "pageSha256": "3099f3c2142115db84570fd7d6fc93e2d6e05374ebaa11b907d0fe4c937e3d1f",
+  "title": "Souderton Orthodontics | Rambo Orthodontics | Lansdale Orthodontist",
+  "description": "Rambo Orthodontics in Lansdale, PA: Expert orthodontist offering Invisalign, braces & clear aligners for families. Schedule your consultation today!",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "rambo",
+      "orthodontics"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\rambo-orthodontics\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://rambo-ortho.com/wp-content/themes/canvas/img/RamboOrthodontics_Logo-RO.png",
+    "sourceEvidence": "IMG ro logo",
+    "type": "png",
+    "dimensions": {
+      "width": 841,
+      "height": 499
+    },
+    "sha256": "f1ad0cdcd5f3b60edfa1b783214a90a4aa415668b3ff9968290a7e2b8de664b4",
+    "sourceSha256": "f1ad0cdcd5f3b60edfa1b783214a90a4aa415668b3ff9968290a7e2b8de664b4",
+    "sourceType": "png",
+    "sourceFileName": null,
+    "transformation": "none; exact first-party transparent asset",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "transparentRatio": 0.5196,
+      "edgeTransparentRatio": 0.9228,
+      "contentRatio": 0.4804,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 13904
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\rambo-orthodontics\\reference-1.png",
+      "fileName": "reference-1.png",
+      "sourceUrl": "https://rambo-ortho.com/wp-content/themes/canvas/img/vp-img-1.png",
+      "sourceEvidence": "IMG personal care consultation at orthodontist office",
+      "type": "png",
+      "dimensions": {
+        "width": 700,
+        "height": 650
+      },
+      "sha256": "6b462554ad4da63644eaa1fd4e35615bd5024daeab63c5f8a62c4164fde7974c",
+      "bytes": 172337,
+      "visual": {
+        "ok": true,
+        "lumaRange": 245.5,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\rambo-orthodontics\\reference-2.png",
+      "fileName": "reference-2.png",
+      "sourceUrl": "https://rambo-ortho.com/wp-content/themes/canvas/img/vp-img-2.png",
+      "sourceEvidence": "IMG financing and insurance options for orthodontic treatment",
+      "type": "png",
+      "dimensions": {
+        "width": 700,
+        "height": 665
+      },
+      "sha256": "ae65f718e51691a7ac26765e869132204960765d2110e42d48e909e97a0027a6",
+      "bytes": 165857,
+      "visual": {
+        "ok": true,
+        "lumaRange": 249,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\rambo-orthodontics\\reference-3.png",
+      "fileName": "reference-3.png",
+      "sourceUrl": "https://rambo-ortho.com/wp-content/themes/canvas/img/vp-img-3.png",
+      "sourceEvidence": "IMG convenient appointment scheduling for orthodontic care",
+      "type": "png",
+      "dimensions": {
+        "width": 700,
+        "height": 649
+      },
+      "sha256": "f54d92d9c6d2c88f353de7e7c7e1f6de355325d1af2ce9d3e0901b476b1cc155",
+      "bytes": 158508,
+      "visual": {
+        "ok": true,
+        "lumaRange": 252.7,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [
+    {
+      "url": "https://rambo-ortho.com/wp-content/uploads/2026/01/rambo-orthodontics.jpg",
+      "reason": "reference image is too small"
+    },
+    {
+      "url": "https://rambo-ortho.com/350",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://rambo-ortho.com/image/jpeg",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://rambo-ortho.com/wp-content/themes/canvas/img/consult-cta-btn.svg",
+      "reason": "unsupported reference type svg"
+    }
+  ],
+  "brandColors": [
+    "#8dc642",
+    "#13444c",
+    "#e952a8",
+    "#00b5d1",
+    "#00bbff"
+  ],
+  "checkedAt": "2026-09-18T09:20:49.712Z"
+}

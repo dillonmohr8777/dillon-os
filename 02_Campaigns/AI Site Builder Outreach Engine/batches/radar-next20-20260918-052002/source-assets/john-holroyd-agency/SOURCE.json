@@ -1,0 +1,109 @@
+{
+  "sourceUrl": "https://www.jphagency.com/",
+  "finalUrl": "https://www.jphagency.com/",
+  "sourceDomain": "jphagency.com",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=UTF-8",
+  "pageSha256": "83c12fc62d3590bafe452c7253e809428e406fc869ea16d8347f637739b01f12",
+  "title": "Insurance Agency in Warminster, PA | John Holroyd Agency",
+  "description": "Looking for a highly rated insurance agency in Warminster, PA? We've got you covered! Start your quotes online in seconds or call us today!",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "john",
+      "holroyd",
+      "agency"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\john-holroyd-agency\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://www.jphagency.com/wp-content/uploads/sites/151/2023/01/AgencylogoVector-2-3.png",
+    "sourceEvidence": "JSON-LD logo URL",
+    "type": "png",
+    "dimensions": {
+      "width": 300,
+      "height": 194
+    },
+    "sha256": "36aeb3fffed9b120e6e2e059dfd0b2ea8c59813f2f43bc6048ba41b272740bf9",
+    "sourceSha256": "f29aef7badafee8bf8b13f5b8694f05ddae6bf089b5b42f182ca2462e1192356",
+    "sourceType": "png",
+    "sourceFileName": "logo-source.png",
+    "transformation": "flat border color rgb(255,255,255) removed by border-seeded flood fill at tolerance 32; geometry unchanged",
+    "borderSpread": 0,
+    "alpha": {
+      "ok": true,
+      "transparentRatio": 0.7878,
+      "edgeTransparentRatio": 0.9464,
+      "contentRatio": 0.2122,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 30355
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\john-holroyd-agency\\reference-1.png",
+      "fileName": "reference-1.png",
+      "sourceUrl": "https://www.jphagency.com/wp-content/uploads/sites/151/2023/01/jhnhdebug.png",
+      "sourceEvidence": "og:image",
+      "type": "png",
+      "dimensions": {
+        "width": 1024,
+        "height": 683
+      },
+      "sha256": "d17d4d9a7125fda63c483694bc4a41fc731612deb20fae6eb31eedc3160da574",
+      "bytes": 376612,
+      "visual": {
+        "ok": true,
+        "lumaRange": 255,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\john-holroyd-agency\\reference-2.jpg",
+      "fileName": "reference-2.jpg",
+      "sourceUrl": "https://www.jphagency.com/wp-content/uploads/sites/151/2020/10/business-insurance-image-1-768x512.jpg",
+      "sourceEvidence": "IMG fl-photo-img wp-image-23635 size-full perfmatters-lazy  office with desk business insurance image",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 512,
+        "width": 768
+      },
+      "sha256": "016a7fc05cd9ede3ae38a1684a8f521f3d8a8f750a89ee2fd5466ab944ed4320",
+      "bytes": 36765,
+      "visual": {
+        "ok": true,
+        "lumaRange": 252.6,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [
+    {
+      "url": "https://www.jphagency.com/1024",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://www.jphagency.com/683",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://www.jphagency.com/image/png",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://www.jphagency.com/wp-content/uploads/sites/151/2023/01/Johns-head-shot-240x300.jpg",
+      "reason": "reference image is too small"
+    }
+  ],
+  "brandColors": [
+    "#110033",
+    "#188bf6",
+    "#003399",
+    "#006644",
+    "#009977"
+  ],
+  "checkedAt": "2026-09-18T09:21:56.246Z"
+}

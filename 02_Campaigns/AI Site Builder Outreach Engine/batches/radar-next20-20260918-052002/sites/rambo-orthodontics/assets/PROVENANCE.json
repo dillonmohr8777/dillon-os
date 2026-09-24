@@ -1,0 +1,168 @@
+{
+  "slug": "rambo-orthodontics",
+  "preparedAt": "2026-09-18T09:22:48.865Z",
+  "sourceSite": "https://www.rambo-ortho.com/",
+  "sourceFinalUrl": "https://rambo-ortho.com/",
+  "sourcePageSha256": "3099f3c2142115db84570fd7d6fc93e2d6e05374ebaa11b907d0fe4c937e3d1f",
+  "exactLogoRequired": true,
+  "exactLogoSha256": "f1ad0cdcd5f3b60edfa1b783214a90a4aa415668b3ff9968290a7e2b8de664b4",
+  "firstPartyDerivativePolicy": "Content visuals preserve first-party source photography while adapting crop and tonal balance for the private mobile concept. They are not evidence of additional projects or outcomes.",
+  "generatedCompositionReference": "automation/prospect-radar-next20/.impeccable/mocks/architerra-mobile-three-directions.png",
+  "assets": [
+    {
+      "role": "exact identity",
+      "output": "logo.png",
+      "sourceUrl": "https://rambo-ortho.com/wp-content/themes/canvas/img/RamboOrthodontics_Logo-RO.png",
+      "sourceSha256": "f1ad0cdcd5f3b60edfa1b783214a90a4aa415668b3ff9968290a7e2b8de664b4",
+      "outputSha256": "f1ad0cdcd5f3b60edfa1b783214a90a4aa415668b3ff9968290a7e2b8de664b4",
+      "transformation": "none; exact first-party transparent asset",
+      "transparent": true
+    },
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://rambo-ortho.com/wp-content/themes/canvas/img/vp-img-1.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "6b462554ad4da63644eaa1fd4e35615bd5024daeab63c5f8a62c4164fde7974c",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=0.965:contrast=1.028:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "ae161864566c64a65e28d11c8aec54612340658f7bf1102b55023ddce447e874"
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://rambo-ortho.com/wp-content/themes/canvas/img/vp-img-2.png",
+      "sourceFile": "reference-2.png",
+      "sourceSha256": "ae65f718e51691a7ac26765e869132204960765d2110e42d48e909e97a0027a6",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:0,eq=saturation=0.990:contrast=1.082:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "5aa44e4d487fc92528f74c89825ca8bd12e836de039e68c7428f378408bc2643"
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://rambo-ortho.com/wp-content/themes/canvas/img/vp-img-3.png",
+      "sourceFile": "reference-3.png",
+      "sourceSha256": "f54d92d9c6d2c88f353de7e7c7e1f6de355325d1af2ce9d3e0901b476b1cc155",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:0,eq=saturation=1.015:contrast=1.046:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "b761449b0ae363c683621ca32b3424dd311df84b8df6d1f017fa52077c50f1a9"
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://rambo-ortho.com/wp-content/themes/canvas/img/vp-img-1.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "6b462554ad4da63644eaa1fd4e35615bd5024daeab63c5f8a62c4164fde7974c",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:0,eq=saturation=1.040:contrast=1.010:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "c4bd59fdab462cf1b0edf0be78eb19ec722eeb8a210cef556afc0bdf9884da00"
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://rambo-ortho.com/wp-content/themes/canvas/img/vp-img-2.png",
+      "sourceFile": "reference-2.png",
+      "sourceSha256": "ae65f718e51691a7ac26765e869132204960765d2110e42d48e909e97a0027a6",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:42,eq=saturation=0.940:contrast=1.064:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "6a488822304eeff727542279f818792c62c657652393d46e037d2bc47ba9ac3e"
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://rambo-ortho.com/wp-content/themes/canvas/img/vp-img-3.png",
+      "sourceFile": "reference-3.png",
+      "sourceSha256": "f54d92d9c6d2c88f353de7e7c7e1f6de355325d1af2ce9d3e0901b476b1cc155",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:42,eq=saturation=0.965:contrast=1.028:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "ddeda564c3fdf0b4a670bd7e2239a0fa999480aa62f94b5701ee5de9e7f93dbe"
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://rambo-ortho.com/wp-content/themes/canvas/img/vp-img-1.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "6b462554ad4da63644eaa1fd4e35615bd5024daeab63c5f8a62c4164fde7974c",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:42,eq=saturation=0.990:contrast=1.082:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "bfead8690c836b7978b58fb532c3aab19abdd6d3bc24a4ac07112f57a6110d8d"
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://rambo-ortho.com/wp-content/themes/canvas/img/vp-img-2.png",
+      "sourceFile": "reference-2.png",
+      "sourceSha256": "ae65f718e51691a7ac26765e869132204960765d2110e42d48e909e97a0027a6",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:42,eq=saturation=1.015:contrast=1.046:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "bea5acf8f924ab2da9c26bec3f3bb211ede3d15dd6f7d17a8a90d0161fc6254d"
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://rambo-ortho.com/wp-content/themes/canvas/img/vp-img-3.png",
+      "sourceFile": "reference-3.png",
+      "sourceSha256": "f54d92d9c6d2c88f353de7e7c7e1f6de355325d1af2ce9d3e0901b476b1cc155",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:84,eq=saturation=1.040:contrast=1.010:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "9c5c1cf7edcaafdfac8a19ddfd03cdf8958bf70c3562d3a0621562f3b335d4e8"
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://rambo-ortho.com/wp-content/themes/canvas/img/vp-img-1.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "6b462554ad4da63644eaa1fd4e35615bd5024daeab63c5f8a62c4164fde7974c",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:84,eq=saturation=0.940:contrast=1.064:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "aae851134c817a7c715804d8c084d3a7b810ffce39c5d98091ac0b43dff2718b"
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://rambo-ortho.com/wp-content/themes/canvas/img/vp-img-2.png",
+      "sourceFile": "reference-2.png",
+      "sourceSha256": "ae65f718e51691a7ac26765e869132204960765d2110e42d48e909e97a0027a6",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:84,eq=saturation=0.965:contrast=1.028:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "a7725636da967d9fba1e9e5350bc7f388515599b6b79b49a6bf05b09ad3469d5"
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://rambo-ortho.com/wp-content/themes/canvas/img/vp-img-3.png",
+      "sourceFile": "reference-3.png",
+      "sourceSha256": "f54d92d9c6d2c88f353de7e7c7e1f6de355325d1af2ce9d3e0901b476b1cc155",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:84,eq=saturation=0.990:contrast=1.082:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "4ce6f85eee9457f539b2b8ba5747e2ee0d62f096793b10d84c7e801383da96ac"
+    }
+  ],
+  "fonts": {
+    "pair": {
+      "id": "bricolage-manrope",
+      "display": "Bricolage Grotesque",
+      "text": "Manrope"
+    },
+    "source": "Google Fonts CSS API",
+    "files": [
+      {
+        "file": "font-display-400.woff2",
+        "sha256": "a97804dc9fbe5fc972a08018c5eda4dab7ef2346f64c57e61419d05e6de4ea1c"
+      },
+      {
+        "file": "font-display-700.woff2",
+        "sha256": "a97804dc9fbe5fc972a08018c5eda4dab7ef2346f64c57e61419d05e6de4ea1c"
+      },
+      {
+        "file": "font-text-400.woff2",
+        "sha256": "a30ddcd349703aff7464c34bef3fffdff405ee50c113440d7c8693c02d210972"
+      },
+      {
+        "file": "font-text-700.woff2",
+        "sha256": "a30ddcd349703aff7464c34bef3fffdff405ee50c113440d7c8693c02d210972"
+      }
+    ]
+  }
+}

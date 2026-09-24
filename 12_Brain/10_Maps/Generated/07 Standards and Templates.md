@@ -4,7 +4,7 @@ status: active
 generated: true
 generated_by: Update-SecondBrainMaps
 map_type: domain
-updated: 2026-09-16
+updated: 2026-09-23
 tags:
   - brain
   - map
@@ -18,6 +18,11 @@ tags:
 > renaming notes. Edit source notes, not this generated file.
 
 SOPs, reusable templates, and the rules that keep agent work consistent.
+
+## Vault front doors
+
+- [[AGENTS|AGENTS]]
+- [[CLAUDE|CLAUDE]]
 
 ## _templates
 
@@ -45,11 +50,6 @@ SOPs, reusable templates, and the rules that keep agent work consistent.
 - [[_templates/site-factory/README|README]]
 - [[_templates/SOP|SOP]]
 - [[_templates/Transcript|Transcript]]
-
-## Vault front doors
-
-- [[AGENTS|AGENTS]]
-- [[CLAUDE|CLAUDE]]
 
 ## 04_SOPs
 

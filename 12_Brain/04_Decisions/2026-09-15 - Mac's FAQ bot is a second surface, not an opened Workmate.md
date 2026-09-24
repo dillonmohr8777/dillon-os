@@ -3,6 +3,7 @@ note_type: decision
 status: proposed
 date: 2026-09-15
 updated: 2026-09-15
+created: 2026-09-15
 tags:
   - decision
   - agents

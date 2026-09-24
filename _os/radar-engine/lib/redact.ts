@@ -34,7 +34,7 @@ function sanitizeExport(row) {
   const out = { ...row };
   for (const k of [
     'requester_name', 'requester_role', 'requester_email', 'requester_phone',
-    'value', 'person_name', 'person_title', 'notes', 'private_fields',
+    'value', 'person_name', 'person_title', 'business_description', 'growth_goals', 'notes', 'private_fields',
     'payload_preview',
   ]) {
     if (k in out) delete out[k];

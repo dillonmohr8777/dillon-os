@@ -1,0 +1,86 @@
+{
+  "sourceUrl": "https://veekoorestaurants.com/",
+  "finalUrl": "https://veekoorestaurants.com/",
+  "sourceDomain": "veekoorestaurants.com",
+  "httpStatus": 200,
+  "contentType": "text/html",
+  "pageSha256": "16c97be4d6c0e6f52079bdc9fd300dfd95b95d9387076659073d0267a15db12f",
+  "title": "Veekoo Restaurants",
+  "description": "Authentically us, but not always traditional, explore contemporary Asian cuisine with comforting classic American Chinese dishes that you grew up loving, with a fun twist of Japanese-influenced fare.",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "veekoo"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\veekoo\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://veekoorestaurants.com/img/logo.png",
+    "sourceEvidence": "IMG ...",
+    "type": "png",
+    "dimensions": {
+      "width": 685,
+      "height": 443
+    },
+    "sha256": "93e8e40f4c55ec7d1aac4737032858b7159931307d33b96ad16a92fe29efd6b0",
+    "sourceSha256": "93e8e40f4c55ec7d1aac4737032858b7159931307d33b96ad16a92fe29efd6b0",
+    "sourceType": "png",
+    "sourceFileName": null,
+    "transformation": "none; exact first-party transparent asset",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "transparentRatio": 0.8046,
+      "edgeTransparentRatio": 0.9725,
+      "contentRatio": 0.1954,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 130463
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\veekoo\\reference-1.png",
+      "fileName": "reference-1.png",
+      "sourceUrl": "https://veekoorestaurants.com/upload/pop20251204.png",
+      "sourceEvidence": "IMG w-100  new year image",
+      "type": "png",
+      "dimensions": {
+        "width": 1080,
+        "height": 1080
+      },
+      "sha256": "f415300802f459cecd36cbd910732b52d145774bb4e48cdc4c05b8cdfe9465e0",
+      "bytes": 223154,
+      "visual": {
+        "ok": true,
+        "lumaRange": 255,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\veekoo\\reference-2.jpg",
+      "fileName": "reference-2.jpg",
+      "sourceUrl": "https://veekoorestaurants.com/nt230117.jpg",
+      "sourceEvidence": "IMG w-100",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 1433,
+        "width": 1088
+      },
+      "sha256": "62ef067105ca4daaa6991944f09445bdd61b09deab59f8d4e9e5d966f2607198",
+      "bytes": 919114,
+      "visual": {
+        "ok": true,
+        "lumaRange": 249.1,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [],
+  "brandColors": [
+    "#776748"
+  ],
+  "checkedAt": "2026-09-18T09:21:32.669Z"
+}

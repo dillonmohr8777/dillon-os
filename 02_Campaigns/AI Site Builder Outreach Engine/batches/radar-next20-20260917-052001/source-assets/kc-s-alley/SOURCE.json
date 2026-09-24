@@ -1,0 +1,124 @@
+{
+  "sourceUrl": "https://kc-alley.com/",
+  "finalUrl": "https://kc-alley.com/",
+  "sourceDomain": "kc-alley.com",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=utf-8",
+  "pageSha256": "49744f300e616ba89744bab2fc5c4c5cb837b646c9e11adb4f12602504bd2d95",
+  "title": "Best American Restaurant in Ambler, PA | KC's Alley",
+  "description": "Established in 1999, KC’s Alley became the first Ambler tavern. We have created a relaxed atmosphere, and the exposed brick walls make you feel at home at 10 West Butler Ave.",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "alley"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\kc-s-alley\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://static.spotapps.co/website_images/ab_websites/158612_website_v1/logo.png",
+    "sourceEvidence": "JSON-LD logo",
+    "type": "png",
+    "dimensions": {
+      "width": 640,
+      "height": 341
+    },
+    "sha256": "4db787234b762ceac05a6ea27df851214f7147a764c7d9e6927a0db68f25a0b0",
+    "sourceSha256": "4db787234b762ceac05a6ea27df851214f7147a764c7d9e6927a0db68f25a0b0",
+    "sourceType": "png",
+    "sourceFileName": null,
+    "transformation": "none; exact first-party transparent asset",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "transparentRatio": 0.6915,
+      "edgeTransparentRatio": 1,
+      "contentRatio": 0.3085,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 84488
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\kc-s-alley\\reference-1.jpg",
+      "fileName": "reference-1.jpg",
+      "sourceUrl": "https://static.spotapps.co/website_images/ab_websites/158612_website_v1/about_left.jpg",
+      "sourceEvidence": "og:image",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 800,
+        "width": 1200
+      },
+      "sha256": "8ecfb507caf1df9f237b0aff634f2d0af287e5847c55829f24bc36dadf8dab1f",
+      "bytes": 244374,
+      "visual": {
+        "ok": true,
+        "lumaRange": 250.4,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\kc-s-alley\\reference-2.jpg",
+      "fileName": "reference-2.jpg",
+      "sourceUrl": "https://static.spotapps.co/spots/83/4ba0ea73d84ecf968474a562715859/full",
+      "sourceEvidence": "IMG img-responsive lazyload  customers having drinks.",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 800,
+        "width": 800
+      },
+      "sha256": "485c7493ada0e3a956c04c78a7aa2c7d2d35a72b9c34c1bd6f089beff0a5680a",
+      "bytes": 175740,
+      "visual": {
+        "ok": true,
+        "lumaRange": 254.1,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\kc-s-alley\\reference-3.jpg",
+      "fileName": "reference-3.jpg",
+      "sourceUrl": "https://static.spotapps.co/spots/2c/2a1263e1d24174a679575f99a6d854/full",
+      "sourceEvidence": "IMG img-responsive lazyload  citrus cocktail.",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 800,
+        "width": 800
+      },
+      "sha256": "57c38e949a7651930e69625b6a7f316eee7526f1f37e40eb36255dc7021f3333",
+      "bytes": 87181,
+      "visual": {
+        "ok": true,
+        "lumaRange": 254.4,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [
+    {
+      "url": "https://kc-alley.com/Exterior,%20street%20view",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://kc-alley.com/image/png",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://cdn.spotapps.co/spothopper/image/fetch/f_auto,q_auto:best,c_fit,h_1200/http://static.spotapps.co/spots/c0/629bc1e3ca4141bdea78aab9191435/:original",
+      "reason": "progressive JPEG is not decodable here"
+    },
+    {
+      "url": "https://cdn.spotapps.co/spothopper/image/fetch/f_auto,q_auto:best,c_fit,h_1200/http://static.spotapps.co/spots/11/df78d48606488fb78f36e549aaac04/:original",
+      "reason": "progressive JPEG is not decodable here"
+    }
+  ],
+  "brandColors": [
+    "#00b2ff",
+    "#00354c",
+    "#5bbad5",
+    "#da532c"
+  ],
+  "checkedAt": "2026-09-17T09:21:09.410Z"
+}

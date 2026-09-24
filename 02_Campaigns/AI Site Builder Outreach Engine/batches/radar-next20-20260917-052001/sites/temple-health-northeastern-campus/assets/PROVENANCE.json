@@ -1,0 +1,168 @@
+{
+  "slug": "temple-health-northeastern-campus",
+  "preparedAt": "2026-09-17T09:23:54.350Z",
+  "sourceSite": "https://www.templehealth.org/locations/northeastern-campus-tuh",
+  "sourceFinalUrl": "https://www.templehealth.org/locations/northeastern-campus-tuh",
+  "sourcePageSha256": "77cbb079b3304ef0a1840bdb8f263be0ebfa3777dec89fa13248f6fc3e7ec95a",
+  "exactLogoRequired": true,
+  "exactLogoSha256": "3eff86fef9190e730f89301d74589f6737a43b0a7492440cf563934429183a28",
+  "firstPartyDerivativePolicy": "Content visuals preserve first-party source photography while adapting crop and tonal balance for the private mobile concept. They are not evidence of additional projects or outcomes.",
+  "generatedCompositionReference": "automation/prospect-radar-next20/.impeccable/mocks/architerra-mobile-three-directions.png",
+  "assets": [
+    {
+      "role": "exact identity",
+      "output": "logo.svg",
+      "sourceUrl": "https://www.templehealth.org/themes/custom/tuhsmasterbrand/logo.svg",
+      "sourceSha256": "3eff86fef9190e730f89301d74589f6737a43b0a7492440cf563934429183a28",
+      "outputSha256": "3eff86fef9190e730f89301d74589f6737a43b0a7492440cf563934429183a28",
+      "transformation": "none; exact first-party transparent asset",
+      "transparent": true
+    },
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.templehealth.org/sites/default/files/styles/hero/public/temple-health-northeastern-campus.jpg?itok=O8cxTX9g",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "9abf76d961554989f4ccd3458f3ccbf3a50d3e6da4095722e3934359c06b7896",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=1.040:contrast=1.082:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "9709ada7f26363cf2dbe171e9d2f2513143bd663d2480ac308c603afe94fb353"
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.templehealth.org/sites/default/files/styles/standard/public/2021-05/telemedicine-appointment-dr-neil-king.jpg?itok=4hqp8Sxz",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "9920ad73336fc595375133797ecacfca4b81fc9335ba6c333748513b221dba0d",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:0,eq=saturation=0.940:contrast=1.046:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "655601fd433d4bf144cb3308c1a2797a3f5dc31fec5f1707c335eec5f65a7512"
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.templehealth.org/sites/default/files/styles/standard/public/oncologist-talking-with-nurse_0.jpg?itok=Jn28HwXX",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "e8c079f75246aef6c08993650e96373d574f6a55621065ecbe08e553693f94b6",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:0,eq=saturation=0.965:contrast=1.010:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "f9df056cabcb85f204c1333f4313385e6026bedda3b6dda7ca0d26e21bd3f9e3"
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.templehealth.org/sites/default/files/styles/hero/public/temple-health-northeastern-campus.jpg?itok=O8cxTX9g",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "9abf76d961554989f4ccd3458f3ccbf3a50d3e6da4095722e3934359c06b7896",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:0,eq=saturation=0.990:contrast=1.064:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "4c010525277d64f20bad0dfbd3ef8515feecbefa5ae3e3393074f2c44b44a7fd"
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.templehealth.org/sites/default/files/styles/standard/public/2021-05/telemedicine-appointment-dr-neil-king.jpg?itok=4hqp8Sxz",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "9920ad73336fc595375133797ecacfca4b81fc9335ba6c333748513b221dba0d",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:42,eq=saturation=1.015:contrast=1.028:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "589dbd1005e90c98e7ec2d4c765ab305be448b9476651c6c0d729e74864b5283"
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.templehealth.org/sites/default/files/styles/standard/public/oncologist-talking-with-nurse_0.jpg?itok=Jn28HwXX",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "e8c079f75246aef6c08993650e96373d574f6a55621065ecbe08e553693f94b6",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:42,eq=saturation=1.040:contrast=1.082:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "19cede94b621fcec3edf7f96231f427ff7371cbb00ecd1f3859a6190e5f121a6"
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.templehealth.org/sites/default/files/styles/hero/public/temple-health-northeastern-campus.jpg?itok=O8cxTX9g",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "9abf76d961554989f4ccd3458f3ccbf3a50d3e6da4095722e3934359c06b7896",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:42,eq=saturation=0.940:contrast=1.046:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "6f40995a2ddd52ba36edf3ef0f5d41d920d1a810e374c16ca42f1b40c848f1c3"
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.templehealth.org/sites/default/files/styles/standard/public/2021-05/telemedicine-appointment-dr-neil-king.jpg?itok=4hqp8Sxz",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "9920ad73336fc595375133797ecacfca4b81fc9335ba6c333748513b221dba0d",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:42,eq=saturation=0.965:contrast=1.010:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "5e7bc43ac80e57478a6e0a7ec3247206a2c8614112a585efaa7b244abfeed6e7"
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.templehealth.org/sites/default/files/styles/standard/public/oncologist-talking-with-nurse_0.jpg?itok=Jn28HwXX",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "e8c079f75246aef6c08993650e96373d574f6a55621065ecbe08e553693f94b6",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:84,eq=saturation=0.990:contrast=1.064:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "2974004cef9c29f2cbca119a8d6bfcc33b7dd8b88fb52112fbcefb5415107879"
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.templehealth.org/sites/default/files/styles/hero/public/temple-health-northeastern-campus.jpg?itok=O8cxTX9g",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "9abf76d961554989f4ccd3458f3ccbf3a50d3e6da4095722e3934359c06b7896",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:84,eq=saturation=1.015:contrast=1.028:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "bdc77ee250d3a279f1e02ab3159dea5a21aa2afa4aee7b15ae2b8f1900b68f2a"
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.templehealth.org/sites/default/files/styles/standard/public/2021-05/telemedicine-appointment-dr-neil-king.jpg?itok=4hqp8Sxz",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "9920ad73336fc595375133797ecacfca4b81fc9335ba6c333748513b221dba0d",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:84,eq=saturation=1.040:contrast=1.082:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "539190e0caf850c20dc63d30bd660552d4e48f331e2a83c75b5bea8699d57632"
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.templehealth.org/sites/default/files/styles/standard/public/oncologist-talking-with-nurse_0.jpg?itok=Jn28HwXX",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "e8c079f75246aef6c08993650e96373d574f6a55621065ecbe08e553693f94b6",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:84,eq=saturation=0.940:contrast=1.046:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "9a7e5c1e5dd8f4d1016d3ec0e3ff391ac91f011dc9ac67532f50388eab70a4a8"
+    }
+  ],
+  "fonts": {
+    "pair": {
+      "id": "bodoni-urbanist",
+      "display": "Bodoni Moda",
+      "text": "Urbanist"
+    },
+    "source": "Google Fonts CSS API",
+    "files": [
+      {
+        "file": "font-display-400.woff2",
+        "sha256": "192ae876c21d9258d096a526dad5bddf37f0daa69cfe943cae5f6be5a52adda2"
+      },
+      {
+        "file": "font-display-700.woff2",
+        "sha256": "192ae876c21d9258d096a526dad5bddf37f0daa69cfe943cae5f6be5a52adda2"
+      },
+      {
+        "file": "font-text-400.woff2",
+        "sha256": "7981ef90c246352c7c217081b8d9337b9c95e9d17ae126bf56b0d3753d1e5ffb"
+      },
+      {
+        "file": "font-text-700.woff2",
+        "sha256": "7981ef90c246352c7c217081b8d9337b9c95e9d17ae126bf56b0d3753d1e5ffb"
+      }
+    ]
+  }
+}

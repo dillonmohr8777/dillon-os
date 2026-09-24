@@ -7,8 +7,8 @@ const { loadConfig } = require('../lib/config.ts');
 const { createStore, migrate, listMigrationTables } = require('../lib/store.ts');
 const { createAdapters } = require('../lib/adapters.ts');
 const { createServer } = require('../lib/web.ts');
-const { runVerticalSlice, createCampaign } = require('../lib/pipeline.ts');
-const { applyRetention } = require('../lib/jobs.ts');
+const { runVerticalSlice, createCampaign, processIntakeAuditJob } = require('../lib/pipeline.ts');
+const { applyRetention, processJobs } = require('../lib/jobs.ts');
 
 async function main() {
   const args = process.argv.slice(2);
@@ -67,11 +67,27 @@ async function main() {
   }
 
   if (cmd === 'serve') {
-    const store = await createStore({ databaseUrl: cfg.databaseUrl });
+    const store = await createStore({ databaseUrl: cfg.databaseUrl, requirePersistent: true });
     const adapters = createAdapters(cfg);
     const campaign = await createCampaign(store);
     const server = createServer({ store, adapters, campaign, cfg });
     await new Promise((resolve) => server.listen(cfg.port, cfg.host, resolve));
+    let workerStopped = false;
+    const processIntakeQueue = async () => {
+      try {
+        await processJobs(store, {
+          'intake.audit': (payload) => processIntakeAuditJob(store, cfg, payload),
+        }, { workerId: 'radar-intake-audit', max: 1 });
+      } catch (error) {
+        console.error(`intake worker error: ${String(error && error.message || error)}`);
+      }
+      if (!workerStopped) {
+        const timer = setTimeout(processIntakeQueue, 1000);
+        timer.unref();
+      }
+    };
+    server.once('close', () => { workerStopped = true; });
+    void processIntakeQueue();
     console.log(JSON.stringify({ listen: `http://${cfg.host}:${cfg.port}`, killSwitch: cfg.killSwitch }, null, 2));
     return;
   }

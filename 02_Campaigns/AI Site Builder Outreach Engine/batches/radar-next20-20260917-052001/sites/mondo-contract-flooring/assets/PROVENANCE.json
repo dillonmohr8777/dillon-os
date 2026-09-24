@@ -1,0 +1,168 @@
+{
+  "slug": "mondo-contract-flooring",
+  "preparedAt": "2026-09-17T09:23:17.154Z",
+  "sourceSite": "https://mondocontractflooring.com/",
+  "sourceFinalUrl": "https://mondocontractflooring.com/",
+  "sourcePageSha256": "93b1d167e324bc77540995e11a9c2da64cc3dd7a562fe88f2fadd5f82c910bf6",
+  "exactLogoRequired": true,
+  "exactLogoSha256": "70a2a2c7bf43ab68ba01df2758b9c80e2bbb7a0b8b26a94f7780cc122e21d7ee",
+  "firstPartyDerivativePolicy": "Content visuals preserve first-party source photography while adapting crop and tonal balance for the private mobile concept. They are not evidence of additional projects or outcomes.",
+  "generatedCompositionReference": "automation/prospect-radar-next20/.impeccable/mocks/architerra-mobile-three-directions.png",
+  "assets": [
+    {
+      "role": "exact identity",
+      "output": "logo.png",
+      "sourceUrl": "https://mondocontractflooring.com/wp-content/uploads/2026/05/Logo-EN.png",
+      "sourceSha256": "70a2a2c7bf43ab68ba01df2758b9c80e2bbb7a0b8b26a94f7780cc122e21d7ee",
+      "outputSha256": "70a2a2c7bf43ab68ba01df2758b9c80e2bbb7a0b8b26a94f7780cc122e21d7ee",
+      "transformation": "none; exact first-party transparent asset",
+      "transparent": true
+    },
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://mondocontractflooring.com/wp-content/uploads/2026/06/Mondo_UMMH_Hallway_HAR_-1-500x331.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "1cc60b5a409ed78249e5a78d2ed8011affb4e541191310b889206d0a1771d68f",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=0.940:contrast=1.010:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "5b8a56d33600e78eb4925083fe51bc6538349a67a34ff315e1413a5edb9e423f"
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://mondocontractflooring.com/wp-content/uploads/2026/01/TENGBOM-OK3-1-1024x649-1-500x317.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "4381187850f59fd7c98273a175a91c4fa84ee6e53a6aefa09265eb0700f207b9",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:0,eq=saturation=0.965:contrast=1.064:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "100d8e5300a90929470a182eb39af9cf1d6a52bdec7d4e0107e04d02bc066e47"
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://mondocontractflooring.com/wp-content/uploads/2026/01/Mondo_TwinValley_Reception_GTO-1024x731-1-500x357.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "1fc412560ef6ceb3018f1dd8ac72e21e69361e39b7e4c10e195c837048ca43b2",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:0,eq=saturation=0.990:contrast=1.028:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "e77cedac987d42f362302b4f855774c99af3a86d39625d8d20b7de8870b4e0e3"
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://mondocontractflooring.com/wp-content/uploads/2026/06/Mondo_UMMH_Hallway_HAR_-1-500x331.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "1cc60b5a409ed78249e5a78d2ed8011affb4e541191310b889206d0a1771d68f",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:0,eq=saturation=1.015:contrast=1.082:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "3ce77ba93382d01ee1575acd615000da7d64ac1b9cc182bcc7f98e40542a9c17"
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://mondocontractflooring.com/wp-content/uploads/2026/01/TENGBOM-OK3-1-1024x649-1-500x317.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "4381187850f59fd7c98273a175a91c4fa84ee6e53a6aefa09265eb0700f207b9",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:42,eq=saturation=1.040:contrast=1.046:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "434edaee00cf1853fc79372ea0434b98ce71a10a3ee6c110173bacfe59ff63b5"
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://mondocontractflooring.com/wp-content/uploads/2026/01/Mondo_TwinValley_Reception_GTO-1024x731-1-500x357.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "1fc412560ef6ceb3018f1dd8ac72e21e69361e39b7e4c10e195c837048ca43b2",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:42,eq=saturation=0.940:contrast=1.010:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "c9a4c9d091e3d9fcd41b9f69cdb19e3d315647bc799aae0bb987a837076f5222"
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://mondocontractflooring.com/wp-content/uploads/2026/06/Mondo_UMMH_Hallway_HAR_-1-500x331.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "1cc60b5a409ed78249e5a78d2ed8011affb4e541191310b889206d0a1771d68f",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:42,eq=saturation=0.965:contrast=1.064:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "11f105d42c412d4eb976a642a5137d4e2bf380557276d59f80e8face69560716"
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://mondocontractflooring.com/wp-content/uploads/2026/01/TENGBOM-OK3-1-1024x649-1-500x317.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "4381187850f59fd7c98273a175a91c4fa84ee6e53a6aefa09265eb0700f207b9",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:42,eq=saturation=0.990:contrast=1.028:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "48435c18ba1dde3d58bb551fc402c2faf4de9303c33b57889104cb17b2eb9d0d"
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://mondocontractflooring.com/wp-content/uploads/2026/01/Mondo_TwinValley_Reception_GTO-1024x731-1-500x357.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "1fc412560ef6ceb3018f1dd8ac72e21e69361e39b7e4c10e195c837048ca43b2",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:84,eq=saturation=1.015:contrast=1.082:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "02a670c98b4b21af76dd6687ecd0464ad757916e8a635d8d014bbed1d5726302"
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://mondocontractflooring.com/wp-content/uploads/2026/06/Mondo_UMMH_Hallway_HAR_-1-500x331.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "1cc60b5a409ed78249e5a78d2ed8011affb4e541191310b889206d0a1771d68f",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:84,eq=saturation=1.040:contrast=1.046:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "9b0bbcc4116738be7431f2487d1078f123127615c03da9dc14cab5742616af7c"
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://mondocontractflooring.com/wp-content/uploads/2026/01/TENGBOM-OK3-1-1024x649-1-500x317.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "4381187850f59fd7c98273a175a91c4fa84ee6e53a6aefa09265eb0700f207b9",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:84,eq=saturation=0.940:contrast=1.010:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "a28d174e09feb5c2b7ba7d934211fd2d38052674c27306d9602c6eeabbca1e8b"
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://mondocontractflooring.com/wp-content/uploads/2026/01/Mondo_TwinValley_Reception_GTO-1024x731-1-500x357.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "1fc412560ef6ceb3018f1dd8ac72e21e69361e39b7e4c10e195c837048ca43b2",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:84,eq=saturation=0.965:contrast=1.064:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "a4c4d9df820da3a30598fa93fb3d22fd1327423dc7bfe96e0c7db22a87f0125a"
+    }
+  ],
+  "fonts": {
+    "pair": {
+      "id": "syne-work",
+      "display": "Syne",
+      "text": "Work Sans"
+    },
+    "source": "Google Fonts CSS API",
+    "files": [
+      {
+        "file": "font-display-400.woff2",
+        "sha256": "68b623f0e45b905041b2edb9b2e4f563a505f13db1cd06b5f1946eb2e1f47048"
+      },
+      {
+        "file": "font-display-700.woff2",
+        "sha256": "68b623f0e45b905041b2edb9b2e4f563a505f13db1cd06b5f1946eb2e1f47048"
+      },
+      {
+        "file": "font-text-400.woff2",
+        "sha256": "1dd49afc07fb2231b2ff686cbf007725fb2742271bb1f28ebd98f22a0d817343"
+      },
+      {
+        "file": "font-text-700.woff2",
+        "sha256": "1dd49afc07fb2231b2ff686cbf007725fb2742271bb1f28ebd98f22a0d817343"
+      }
+    ]
+  }
+}

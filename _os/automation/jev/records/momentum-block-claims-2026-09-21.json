@@ -1,0 +1,51 @@
+[
+  {
+    "id": "backend-branding-slice-merged-green",
+    "claim": "The backend workspace-branding slice (migration 0030, three endpoints, 15 tests) is merged green in wt-l2-merge at 91e8761e with 140 backend tests passing, and the migration round-trip on a copy of the live database left the table set identical after downgrade.",
+    "evidence": "L2 lead report 19:24 ET: gate run with PYTHONPATH verified (app.__file__ and deerflow.__file__ under wt-l2-merge): 140 passed, 7 warnings, 88.27s across test_workspace_branding, test_migration_0030_workspace_branding, test_persistence_bootstrap, test_custom_agent, test_user_profile_isolation. DB copy via --rm --network none --read-only container, WAL checkpointed into the copy; 31 tables at 0029 -> 32 at 0030 -> downgrade 31 tables set-equal to pre-upgrade -> re-upgrade set-identical. Commits 4167a363, f837d2a7, 80f1e838.",
+    "source": "L2 Backend/Security lead (Opus 5) SendMessage to main, 2026-09-21 19:24 ET; CHECKPOINT.md line appended by L2",
+    "groundTruth": "TRUE as far as the block can tell: the counts and commits were reported by the lead that ran them and the merge SHA exists. Not independently re-run by main. Not deployed."
+  },
+  {
+    "id": "frontend-suite-green-no-flakes",
+    "claim": "After fixing the Idle assertion, the full frontend suite passes 1924/1924 and three consecutive runs showed zero flakes.",
+    "evidence": "S10 report: target file 2 passed 0 failed; full suite 1924 passed 0 failed, 229 files; two additional full runs each 1924/1924; no test flipped across 3 runs; documented in VERIFY-NOTES.md committed at 5c110eb1. Backend: test_persistence_bootstrap 27, test_custom_agent 78, test_user_profile_isolation 4, all 0 failed.",
+    "source": "S10 worker (Sonnet) SendMessage to main, 2026-09-21 19:24 ET",
+    "groundTruth": "TRUE per the worker's three runs with counts. Note S01 ran the suite on ITS branch (without S10's fix) and got 1938/1939, the 1 failure being the very assertion S10 fixed; consistent."
+  },
+  {
+    "id": "paper-tokens-contrast-verified-by-test",
+    "claim": "Every approved paper-treatment text/surface pairing meets its WCAG ratio, verified by a test that reads the real hex values out of paper.css rather than a copied table.",
+    "evidence": "S01 report: tests/unit/paper-tokens.test.ts parses --paper-* hexes from paper.css, computes contrast itself, asserts every approved pairing >= threshold and that brass/cyan stay below text-safe and never appear on a color: declaration. Full suite 1939 tests, 1938 pass. S01 also found the spec table's 10.49 for royal-deep/cream is actually 10.31 (still AAA) and asserts the true value.",
+    "source": "S01 worker (Sonnet) SendMessage to main, 2026-09-21 19:24 ET; commit c11936c3",
+    "groundTruth": "TRUE. The discrepancy S01 found is evidence the test computes rather than copies."
+  },
+  {
+    "id": "screenshot-delivery-cron-fired",
+    "claim": "Screenshots are delivered to Dillon every 15 minutes by the CronCreate job 9d912cc6 while the orchestrator is idle.",
+    "evidence": "CronList shows job 9d912cc6 scheduled 7,22,37,52 * * * * (recurring). The capture loop produced 64 PNGs across 8 ticks at exact 15-minute intervals from 17:35 to 19:21.",
+    "source": "main orchestrator status file MOMENTUM-BLOCK-STATUS.md as written 17:40 ET",
+    "groundTruth": "FALSE. delivered.txt still read 'delivered-marker: (none yet)' at 19:36 ET; no cron-triggered turn occurred in 100 idle minutes. Capture worked; delivery never fired. The evidence is about the SCHEDULE and the CAPTURE, not about delivery. Main corrected this at 19:37 and now sends batches by hand."
+  },
+  {
+    "id": "all-codex-and-claude-changes-deployed",
+    "claim": "All of Codex's and Claude's changes from today are deployed and live on 127.0.0.1:2026.",
+    "evidence": "docker ps at 16:00 ET: frontend and gateway on momentum-secure-20260921; live tree momentum-integrate-20260921 at e919c45f includes Codex commits dd875650, d70c3624, 01c016a9, 12e3f5b1, 0f4c3ece and Claude commits 7001a7b2, e919c45f; / /invite /login 200.",
+    "source": "main orchestrator to Dillon, 2026-09-21 ~16:50 ET",
+    "groundTruth": "OVERBROAD. True for everything EXCEPT the backend workspace-branding slice and Astra's paired frontend files in momentum-branding-next, which were committed at ff8ac344 (16:57) and not deployed. Main qualified this in the next sentence, but the headline claim as stated is unscoped."
+  },
+  {
+    "id": "momo-canon-relocked",
+    "claim": "Momo's canon is now 'blue, white, grey, with a hint of gold', superseding the 2026-09-17 teal lock, and the canon file reflects it.",
+    "evidence": "Dillon's AskUserQuestion answer 17:05 ET: 'Blue white grey with a hint of gold'. Follow-up 19:44 ET on hardware: 'Grey hardware, gold only on the antenna ball'. CANONICAL-MOMO.md rewritten 17:34 ET with the new spec on top and the Sep 17 block retained below marked Superseded; backup .bak-20260917-teal.",
+    "source": "main orchestrator; two AskUserQuestion answers from Dillon; file write at 17:34 ET",
+    "groundTruth": "TRUE. Two direct answers from the owner and a file diff."
+  },
+  {
+    "id": "luna-spark-off-under-floor",
+    "claim": "OpenRouter Luna and Spark waves are not firing because the account has $0.02 of credit, below the $25 floor.",
+    "evidence": "GET /api/v1/credits at 17:31 ET: total_credits=25, total_usage=24.978688861, available=0.0213. GET /api/v1/key: limit=1000, limit_remaining=983.27 (a cap, not money). BLOCK-STATE.md openrouter_status: OFF.",
+    "source": "main orchestrator, curl to OpenRouter with the key referenced from env and never printed, 2026-09-21 17:31 ET",
+    "groundTruth": "TRUE. Instrument reading, correct window."
+  }
+]

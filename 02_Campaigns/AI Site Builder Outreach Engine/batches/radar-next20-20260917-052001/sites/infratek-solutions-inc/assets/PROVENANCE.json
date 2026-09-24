@@ -1,0 +1,168 @@
+{
+  "slug": "infratek-solutions-inc",
+  "preparedAt": "2026-09-17T09:22:55.155Z",
+  "sourceSite": "https://www.infrateksolutions.com/",
+  "sourceFinalUrl": "https://infrateksolutions.com/mainsite/",
+  "sourcePageSha256": "413ac1d002d65cf66256fd68924f9260ac5378486424cbf6e257075a56a8ca4c",
+  "exactLogoRequired": true,
+  "exactLogoSha256": "5cae48f423c9ba8f288ff662435a061fe0088c1b80684df759ce771817137eed",
+  "firstPartyDerivativePolicy": "Content visuals preserve first-party source photography while adapting crop and tonal balance for the private mobile concept. They are not evidence of additional projects or outcomes.",
+  "generatedCompositionReference": "automation/prospect-radar-next20/.impeccable/mocks/architerra-mobile-three-directions.png",
+  "assets": [
+    {
+      "role": "exact identity",
+      "output": "logo.png",
+      "sourceUrl": "https://infrateksolutions.com/mainsite/wp-content/uploads/2023/08/Infratek-Solutions-Logo.png",
+      "sourceSha256": "5cae48f423c9ba8f288ff662435a061fe0088c1b80684df759ce771817137eed",
+      "outputSha256": "5cae48f423c9ba8f288ff662435a061fe0088c1b80684df759ce771817137eed",
+      "transformation": "none; exact first-party transparent asset",
+      "transparent": true
+    },
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://infrateksolutions.com/mainsite/wp-content/uploads/2023/08/4387A-copy.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "91d55117de3a76015009a94fa351271643f0d38c5dec7c258314287d0cfe1ee7",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=1.040:contrast=1.082:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "fd2de878ce8ea43a5fbd6a8dfe00ad63b7cc08287c42782a7869c752da7d782c"
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://infrateksolutions.com/mainsite/wp-content/uploads/2023/08/4387A-copy-768x501.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "ad53ffa59cc81b56e6e1d9697960ec973344b679df7c839a07ed902944a468ea",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:0,eq=saturation=0.940:contrast=1.046:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "d06bd6d89411a5cf6e9e6c2c974d0302decf086b594f86a9f98c511856640dfa"
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://infrateksolutions.com/mainsite/wp-content/uploads/2023/08/NDERD-768x501.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "3ffe21ef80d6a25a18db0318e9152ce4bced569ed6eac11a95d9ceaa3554bae7",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:0,eq=saturation=0.965:contrast=1.010:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "d59eba2bd9afa01f2be82057e175e4c29d601574c122d66b6b133c587c81bd2e"
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://infrateksolutions.com/mainsite/wp-content/uploads/2023/08/4387A-copy.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "91d55117de3a76015009a94fa351271643f0d38c5dec7c258314287d0cfe1ee7",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:0,eq=saturation=0.990:contrast=1.064:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "f6c79537ac93f3685e8cf6857c70566801222978c9a53007376b6ad2e9072af4"
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://infrateksolutions.com/mainsite/wp-content/uploads/2023/08/4387A-copy-768x501.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "ad53ffa59cc81b56e6e1d9697960ec973344b679df7c839a07ed902944a468ea",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:42,eq=saturation=1.015:contrast=1.028:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "05d977b07dc39cb56341e953625e40ed469e47f0dce761568b8e8c880b6535df"
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://infrateksolutions.com/mainsite/wp-content/uploads/2023/08/NDERD-768x501.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "3ffe21ef80d6a25a18db0318e9152ce4bced569ed6eac11a95d9ceaa3554bae7",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:42,eq=saturation=1.040:contrast=1.082:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "0c0ace36940a86b6a917ba9ddf8928a1e8e7208edf3f6dace1f21db3c2dc297a"
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://infrateksolutions.com/mainsite/wp-content/uploads/2023/08/4387A-copy.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "91d55117de3a76015009a94fa351271643f0d38c5dec7c258314287d0cfe1ee7",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:42,eq=saturation=0.940:contrast=1.046:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "1530340ebd19ad10fb174f9f824dadfc5917ecebe88d1c0c78906c324e8f7c62"
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://infrateksolutions.com/mainsite/wp-content/uploads/2023/08/4387A-copy-768x501.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "ad53ffa59cc81b56e6e1d9697960ec973344b679df7c839a07ed902944a468ea",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:42,eq=saturation=0.965:contrast=1.010:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "492dfe7d0f2c10c6fd5da5dbe98057deb977c017ded5abcb6b20bbddd5996ca6"
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://infrateksolutions.com/mainsite/wp-content/uploads/2023/08/NDERD-768x501.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "3ffe21ef80d6a25a18db0318e9152ce4bced569ed6eac11a95d9ceaa3554bae7",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:84,eq=saturation=0.990:contrast=1.064:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "10559a9b181a9bef0b367b21dfec0f85a29efc83b312eb2da3ae097401750979"
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://infrateksolutions.com/mainsite/wp-content/uploads/2023/08/4387A-copy.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "91d55117de3a76015009a94fa351271643f0d38c5dec7c258314287d0cfe1ee7",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:84,eq=saturation=1.015:contrast=1.028:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "23e7e672c69c78502596b2f8d6348012a38b29605d261d618bf7adfca0d0adf3"
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://infrateksolutions.com/mainsite/wp-content/uploads/2023/08/4387A-copy-768x501.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "ad53ffa59cc81b56e6e1d9697960ec973344b679df7c839a07ed902944a468ea",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:84,eq=saturation=1.040:contrast=1.082:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "5d97a14d9285c88b9fb3ed1c0509955ce1a56836c184c19838aae84e25a70f13"
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://infrateksolutions.com/mainsite/wp-content/uploads/2023/08/NDERD-768x501.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "3ffe21ef80d6a25a18db0318e9152ce4bced569ed6eac11a95d9ceaa3554bae7",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:84,eq=saturation=0.940:contrast=1.046:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "c19490a0ef0cdab830dbf10fb6a95cd2e8ebca191e0d640c741272096ac2bc3e"
+    }
+  ],
+  "fonts": {
+    "pair": {
+      "id": "bodoni-urbanist",
+      "display": "Bodoni Moda",
+      "text": "Urbanist"
+    },
+    "source": "Google Fonts CSS API",
+    "files": [
+      {
+        "file": "font-display-400.woff2",
+        "sha256": "192ae876c21d9258d096a526dad5bddf37f0daa69cfe943cae5f6be5a52adda2"
+      },
+      {
+        "file": "font-display-700.woff2",
+        "sha256": "192ae876c21d9258d096a526dad5bddf37f0daa69cfe943cae5f6be5a52adda2"
+      },
+      {
+        "file": "font-text-400.woff2",
+        "sha256": "7981ef90c246352c7c217081b8d9337b9c95e9d17ae126bf56b0d3753d1e5ffb"
+      },
+      {
+        "file": "font-text-700.woff2",
+        "sha256": "7981ef90c246352c7c217081b8d9337b9c95e9d17ae126bf56b0d3753d1e5ffb"
+      }
+    ]
+  }
+}

@@ -8,8 +8,11 @@ const { hmac } = require('./ids.ts');
 const { enrichProspect } = require('../../automation/lib/places');
 const { safePathJoin } = require('./ssrf.ts');
 
-function captchaAdapter(cfg) {
+function captchaAdapter(cfg = {}, options = {}) {
   const mode = cfg.captcha || 'off';
+  const fetchImpl = options.fetchImpl || global.fetch;
+  const expectedHostname = options.expectedHostname ?? cfg.captchaExpectedHostname;
+  const expectedAction = options.expectedAction ?? cfg.captchaExpectedAction;
   return {
     mode,
     async verify(token, ip) {
@@ -23,7 +26,45 @@ function captchaAdapter(cfg) {
         if (process.env.RADAR_V2_CAPTCHA_LIVE !== 'true') {
           return { ok: false, state: 'live-verify-disabled' };
         }
-        return { ok: false, state: 'live-verify-not-implemented', reason: 'Turnstile siteverify is not enabled in v1' };
+        if (!expectedHostname) return { ok: false, state: 'hostname-not-configured' };
+        if (typeof token !== 'string' || !token.trim() || token.length > 2048) {
+          return { ok: false, state: 'invalid-token' };
+        }
+        if (typeof fetchImpl !== 'function') return { ok: false, state: 'provider-error' };
+
+        const body = new URLSearchParams({ secret: cfg.captchaSecret, response: token });
+        if (typeof ip === 'string' && ip) body.set('remoteip', ip);
+        const controller = new AbortController();
+        const timeout = setTimeout(() => controller.abort(), options.timeoutMs ?? 5000);
+        try {
+          const response = await fetchImpl('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+            method: 'POST',
+            redirect: 'error',
+            headers: { 'content-type': 'application/x-www-form-urlencoded' },
+            body: body.toString(),
+            signal: controller.signal,
+          });
+          if (controller.signal.aborted) return { ok: false, state: 'timeout' };
+          if (!response || response.ok !== true) return { ok: false, state: 'provider-error' };
+
+          const result = await response.json();
+          if (controller.signal.aborted) return { ok: false, state: 'timeout' };
+          if (!result || typeof result !== 'object' || Array.isArray(result)) {
+            return { ok: false, state: 'provider-error' };
+          }
+          if (result.success !== true) return { ok: false, state: 'provider-rejected' };
+          if (expectedHostname && result.hostname !== expectedHostname) {
+            return { ok: false, state: 'hostname-mismatch' };
+          }
+          if (expectedAction && result.action !== expectedAction) {
+            return { ok: false, state: 'action-mismatch' };
+          }
+          return { ok: true, state: 'verified' };
+        } catch {
+          return { ok: false, state: controller.signal.aborted ? 'timeout' : 'provider-error' };
+        } finally {
+          clearTimeout(timeout);
+        }
       }
       return { ok: false, state: 'provider-not-configured' };
     },

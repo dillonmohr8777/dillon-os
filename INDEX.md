@@ -15,6 +15,8 @@ links instead of loading the entire vault.
 
 ## Command center
 
+- [[Daily-Briefs/plan-2026-09-19|September 19 supervised plan]] and [[01_Clients/Momentum 360/AI Division Library/asset-manifest-supplement-2026-09-19|AI Division new asset provenance]].
+
 - [[12_Brain/10_Maps/00_Atlas|Knowledge Atlas]] - the connected map of clients,
   work, agents, decisions, sessions, and reusable knowledge.
 
@@ -87,6 +89,7 @@ links instead of loading the entire vault.
   New skill: [[.claude/skills/franchise-list|franchise-list]] on [[12_Brain/02_Entities/Vibe Prospecting|Vibe Prospecting]] (spend-gated franchise location pulls).
 - [[12_Brain/07_Reviews/README|Reviews]] — daily, weekly, and quarterly
   synthesis.
+- [[12_Brain/07_Reviews/2026-09-19 - Agent and source estate coverage|Agent and source estate coverage]] — current source counts, Claude session index, and unresolved access gaps.
 - [[12_Brain/07_Reviews/2026-09-03 - Year Quarter Month Alignment|Year, Quarter,
   Month — One Alignment]] — 2026-09-03 filesystem-verified planning review across
   42 repos: strengths, flaws, time waste, dependability ledger, the one upskill,

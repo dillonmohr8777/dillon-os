@@ -1,0 +1,103 @@
+{
+  "sourceUrl": "https://www.positanoristorante.com/",
+  "finalUrl": "https://www.positanoristorante.com/",
+  "sourceDomain": "positanoristorante.com",
+  "httpStatus": 200,
+  "contentType": "text/html",
+  "pageSha256": "a9e75acb5e457fb7fd51d5ab90d5f0093dd8c0ecefb865df82d34a69c1d40859",
+  "title": "Positano Ristorante — Authentic Italian Cuisine",
+  "description": "Positano Ristorante — Authentic Italian cuisine in a warm, welcoming setting. Dine in, banquets, and private events.",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "positano",
+      "ristorante"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\positano-ristorante\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://www.positanoristorante.com/images/positano_logo.png",
+    "sourceEvidence": "IMG positano ristorante logo",
+    "type": "png",
+    "dimensions": {
+      "width": 800,
+      "height": 395
+    },
+    "sha256": "3e13c47f028c16c676371113025f83aa491fc0466a0af497d066b9d2c374107c",
+    "sourceSha256": "bb8db22bb4c5c5d418a959aa2f3b9f68ca59e145f8618cc3670bb65eae2b29dd",
+    "sourceType": "png",
+    "sourceFileName": "logo-source.png",
+    "transformation": "flat border color rgb(251,251,251) removed by border-seeded flood fill at tolerance 32; geometry unchanged",
+    "borderSpread": 11,
+    "alpha": {
+      "ok": true,
+      "transparentRatio": 0.6525,
+      "edgeTransparentRatio": 1,
+      "contentRatio": 0.3475,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 155691
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\positano-ristorante\\reference-1.jpg",
+      "fileName": "reference-1.jpg",
+      "sourceUrl": "https://www.positanoristorante.com/images/pic01.jpg",
+      "sourceEvidence": "IMG inside positano ristorante",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 386,
+        "width": 600
+      },
+      "sha256": "fff6e3cdc323dcf69449222caf77056c54bde38c2a424d780534cb55df8077cf",
+      "bytes": 112344,
+      "visual": {
+        "ok": true,
+        "lumaRange": 254.2,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\positano-ristorante\\reference-2.jpg",
+      "fileName": "reference-2.jpg",
+      "sourceUrl": "https://www.positanoristorante.com/images/pic02.jpg",
+      "sourceEvidence": "IMG italian cuisine at positano",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 386,
+        "width": 600
+      },
+      "sha256": "af15fc532c1cf714c916e44ea4c4023dc070ae888d83a38dfff80db95d507d5a",
+      "bytes": 65152,
+      "visual": {
+        "ok": true,
+        "lumaRange": 250.4,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\positano-ristorante\\reference-3.jpg",
+      "fileName": "reference-3.jpg",
+      "sourceUrl": "https://www.positanoristorante.com/images/pic03.jpg",
+      "sourceEvidence": "IMG fine dining at positano",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 386,
+        "width": 600
+      },
+      "sha256": "833bd7d73beab215a6952fc2fc81075d34eb36188d9d8fc8d6761e8fe98c1e67",
+      "bytes": 98508,
+      "visual": {
+        "ok": true,
+        "lumaRange": 250.1,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [],
+  "brandColors": [],
+  "checkedAt": "2026-09-18T09:21:38.354Z"
+}

@@ -4,12 +4,13 @@ services:
   postgres:
     image: postgres:16-alpine
     environment:
-      POSTGRES_USER: radar
-      POSTGRES_PASSWORD: radar
-      POSTGRES_DB: radar_v2
+      POSTGRES_USER: ${RADAR_V2_PG_USER:-radar}
+      POSTGRES_PASSWORD: ${RADAR_V2_PG_PASSWORD:-radar}
+      POSTGRES_DB: ${RADAR_V2_PG_DATABASE:-radar_v2}
     ports:
-      - "5433:5432"
+      - "127.0.0.1:${RADAR_V2_DB_PORT:-5433}:5432"
     volumes:
       - radar_v2_pg:/var/lib/postgresql/data
 volumes:
   radar_v2_pg:
+    name: ${RADAR_V2_PG_VOLUME:-radar_v2_pg}

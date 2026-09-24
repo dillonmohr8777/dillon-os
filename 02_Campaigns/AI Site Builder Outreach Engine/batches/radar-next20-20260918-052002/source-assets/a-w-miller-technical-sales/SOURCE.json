@@ -1,0 +1,109 @@
+{
+  "sourceUrl": "https://www.awmiller.com/",
+  "finalUrl": "https://awmiller.com/",
+  "sourceDomain": "awmiller.com",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=UTF-8",
+  "pageSha256": "518b6c5c263ee7e490a7a9e8049d8d230cddc2a893585e92890cb0247a341f0c",
+  "title": "CNC Machine Dealer | Mazak & 3D Printing Solutions | AW Miller",
+  "description": "AW Miller Technical Sales Inc. is a CNC Machinery distributor, specializing as a Mazak supplier, offering solutions, service, and support.",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "miller",
+      "technical",
+      "sales"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\a-w-miller-technical-sales\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://awmiller.com/wp-content/uploads/2021/01/Logo_AW_Miller.png",
+    "sourceEvidence": "JSON-LD logo URL",
+    "type": "png",
+    "dimensions": {
+      "width": 624,
+      "height": 326
+    },
+    "sha256": "9acd2e261bc8e74ce9d789c1e794400100663937bee344d18bfc44af9c140103",
+    "sourceSha256": "9acd2e261bc8e74ce9d789c1e794400100663937bee344d18bfc44af9c140103",
+    "sourceType": "png",
+    "sourceFileName": null,
+    "transformation": "none; exact first-party transparent asset",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "transparentRatio": 0.6418,
+      "edgeTransparentRatio": 1,
+      "contentRatio": 0.3582,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 164676
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\a-w-miller-technical-sales\\reference-1.png",
+      "fileName": "reference-1.png",
+      "sourceUrl": "https://awmiller.com/wp-content/uploads/2025/11/CNC-machining-and-automation-solutions.png",
+      "sourceEvidence": "IMG attachment-large size-large wp-image-34775  agile robotic system loading a mazak integrex cnc machine",
+      "type": "png",
+      "dimensions": {
+        "width": 1080,
+        "height": 750
+      },
+      "sha256": "4a43d2e9be9d3b604a1e0157fa779eb5afdf36e805e861ffa708c734fe221254",
+      "bytes": 1328265,
+      "visual": {
+        "ok": true,
+        "lumaRange": 253.5,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\a-w-miller-technical-sales\\reference-2.png",
+      "fileName": "reference-2.png",
+      "sourceUrl": "https://awmiller.com/wp-content/uploads/2025/11/Screenshot-2025-11-26-at-11.25.22-AM.png",
+      "sourceEvidence": "IMG attachment-large size-large wp-image-34779  aw miller east aurora technical center",
+      "type": "png",
+      "dimensions": {
+        "width": 1664,
+        "height": 1286
+      },
+      "sha256": "843289de9a4340a90f8f6b49cddae4adeb6f17e6858d8c56c321ab9b8a738bab",
+      "bytes": 2972853,
+      "visual": {
+        "ok": true,
+        "lumaRange": 254.4,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [
+    {
+      "url": "https://awmiller.com/wp-content/uploads/2022/11/General-Page-Banner.jpg",
+      "reason": "not a PNG"
+    },
+    {
+      "url": "https://secure.imaginativeenterprising-intelligent.com/794591.png",
+      "reason": "unsupported reference type unknown"
+    },
+    {
+      "url": "https://awmiller.com/wp-content/uploads/2025/11/qrx-50msy-600x371.webp",
+      "reason": "not a PNG"
+    },
+    {
+      "url": "https://awmiller.com/wp-content/uploads/2025/11/1.png",
+      "reason": "reference image is too small"
+    }
+  ],
+  "brandColors": [
+    "#fd5d14",
+    "#003388",
+    "#0e4564",
+    "#116600",
+    "#abb8c3"
+  ],
+  "checkedAt": "2026-09-18T09:21:54.367Z"
+}

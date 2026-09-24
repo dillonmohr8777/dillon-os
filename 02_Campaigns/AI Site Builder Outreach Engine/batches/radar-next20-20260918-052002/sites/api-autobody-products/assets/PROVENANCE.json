@@ -1,0 +1,168 @@
+{
+  "slug": "api-autobody-products",
+  "preparedAt": "2026-09-18T09:22:57.104Z",
+  "sourceSite": "https://www.apiauto.com/",
+  "sourceFinalUrl": "https://www.apiauto.com/",
+  "sourcePageSha256": "2db74fb0fae58d1857831719fe70836a46b11dccc95a87ef1eb6692045302efb",
+  "exactLogoRequired": true,
+  "exactLogoSha256": "8e1b48949d54335f4062e46454f3f7fcf454ff8f68d0a75fbfcdaec21035f5f5",
+  "firstPartyDerivativePolicy": "Content visuals preserve first-party source photography while adapting crop and tonal balance for the private mobile concept. They are not evidence of additional projects or outcomes.",
+  "generatedCompositionReference": "automation/prospect-radar-next20/.impeccable/mocks/architerra-mobile-three-directions.png",
+  "assets": [
+    {
+      "role": "exact identity",
+      "output": "logo.png",
+      "sourceUrl": "https://www.apiauto.com/api_logo_transparent_2025.png",
+      "sourceSha256": "8e1b48949d54335f4062e46454f3f7fcf454ff8f68d0a75fbfcdaec21035f5f5",
+      "outputSha256": "8e1b48949d54335f4062e46454f3f7fcf454ff8f68d0a75fbfcdaec21035f5f5",
+      "transformation": "none; exact first-party transparent asset",
+      "transparent": true
+    },
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.apiauto.com/images/headers/publish_003.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "2f8fa821910a8d7b084ea8294c1f1334e0a2a0729bdeda372a07c808d4102dbd",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=1.015:contrast=1.064:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "5a53ba4625dc40399e0b6c2615c97afa48edaf3c40224c2772899cda5ebd6fa8"
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.apiauto.com/images/headers/publish_001.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "d78cefecbcdd8322c876a3a0d2a67b3a0bd7d6801daf63c5b75e570736be917d",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:0,eq=saturation=1.040:contrast=1.028:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "bc2acb7d55aa8a1c578808d74195407bd6e991f3835d75589447928ebc0c2aa6"
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.apiauto.com/images/headers/publish_002.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "bf7cc655030556cc7467d64e730ee79bcc44adb3a64110ff78bbcb6312f7333b",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:0,eq=saturation=0.940:contrast=1.082:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "f527bea4fa326c02f416ac179231c8989ba87c0039e6acf08dae04aa31dba002"
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.apiauto.com/images/headers/publish_003.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "2f8fa821910a8d7b084ea8294c1f1334e0a2a0729bdeda372a07c808d4102dbd",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:0,eq=saturation=0.965:contrast=1.046:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "77a96568914892eb83631d29367404c063b6c809c27f410b8750300ba0520749"
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.apiauto.com/images/headers/publish_001.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "d78cefecbcdd8322c876a3a0d2a67b3a0bd7d6801daf63c5b75e570736be917d",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:42,eq=saturation=0.990:contrast=1.010:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "0f319c2b541f461fe98af1bc69049e38c64d2fc5459aa8a5d6dc933a095132d0"
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.apiauto.com/images/headers/publish_002.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "bf7cc655030556cc7467d64e730ee79bcc44adb3a64110ff78bbcb6312f7333b",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:42,eq=saturation=1.015:contrast=1.064:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "c3ed43d9f5b0961d090c21b3d359bfc5015e8efe995b7ec37fd85656c36c63f8"
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.apiauto.com/images/headers/publish_003.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "2f8fa821910a8d7b084ea8294c1f1334e0a2a0729bdeda372a07c808d4102dbd",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:42,eq=saturation=1.040:contrast=1.028:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "a3a3e3a30920eec83702ab6bd99447567c91a5f4df4ff462426d1c2bd99f8452"
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.apiauto.com/images/headers/publish_001.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "d78cefecbcdd8322c876a3a0d2a67b3a0bd7d6801daf63c5b75e570736be917d",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:42,eq=saturation=0.940:contrast=1.082:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "3ef2e467c2b1d71a192016b1c3c9338224a8185be0f9b9dd9e306f6a8c249bb0"
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.apiauto.com/images/headers/publish_002.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "bf7cc655030556cc7467d64e730ee79bcc44adb3a64110ff78bbcb6312f7333b",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:84,eq=saturation=0.965:contrast=1.046:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "bd08e259c8e376e0461edc30de9408c43c65b5ca3ad286c26994d1643088972b"
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.apiauto.com/images/headers/publish_003.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "2f8fa821910a8d7b084ea8294c1f1334e0a2a0729bdeda372a07c808d4102dbd",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:84,eq=saturation=0.990:contrast=1.010:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "7dceacf994e36dbc6e3e8cf66ddb96ef17386339d9cc636e2205aadae526f360"
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.apiauto.com/images/headers/publish_001.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "d78cefecbcdd8322c876a3a0d2a67b3a0bd7d6801daf63c5b75e570736be917d",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:84,eq=saturation=1.015:contrast=1.064:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "24ec23d33c785a45eab99a80e13347153667cf0403fcffe823da101d9d15eae4"
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.apiauto.com/images/headers/publish_002.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "bf7cc655030556cc7467d64e730ee79bcc44adb3a64110ff78bbcb6312f7333b",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:84,eq=saturation=1.040:contrast=1.028:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "acec7213ea85d83eefe89f6407b1d134c429dd50b6bd52218b935c8591e6d573"
+    }
+  ],
+  "fonts": {
+    "pair": {
+      "id": "newsreader-figtree",
+      "display": "Newsreader",
+      "text": "Figtree"
+    },
+    "source": "Google Fonts CSS API",
+    "files": [
+      {
+        "file": "font-display-400.woff2",
+        "sha256": "62981321d9a3cc7a61a73792729043703fd6112da86e8ec848bb57f088578757"
+      },
+      {
+        "file": "font-display-700.woff2",
+        "sha256": "62981321d9a3cc7a61a73792729043703fd6112da86e8ec848bb57f088578757"
+      },
+      {
+        "file": "font-text-400.woff2",
+        "sha256": "4ba7d3d096695818fe0686be4f1e82c6b05134e18a22260336130335027462dd"
+      },
+      {
+        "file": "font-text-700.woff2",
+        "sha256": "4ba7d3d096695818fe0686be4f1e82c6b05134e18a22260336130335027462dd"
+      }
+    ]
+  }
+}

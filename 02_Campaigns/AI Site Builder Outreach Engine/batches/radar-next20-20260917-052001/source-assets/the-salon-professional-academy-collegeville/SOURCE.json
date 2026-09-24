@@ -1,0 +1,89 @@
+{
+  "sourceUrl": "https://www.tspacollegeville.com/",
+  "finalUrl": "https://www.tspacollegeville.com/",
+  "sourceDomain": "tspacollegeville.com",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=UTF-8",
+  "pageSha256": "7d395f307cb86dcbbaead64825744057e6d7634ba21a1991f97e7d2d86bc45fb",
+  "title": "The Salon Professional Academy | Collegeville Beauty School",
+  "description": "Looking to advance or start your beauty career? Our Beauty & Cosmetology School in Collegeville offers a variety of professional programs that value a culture of creativity, inclusivity, and support.",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "salon",
+      "professional",
+      "academy",
+      "collegeville"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\the-salon-professional-academy-collegeville\\logo.svg",
+    "fileName": "logo.svg",
+    "sourceUrl": "https://www.tspacollegeville.com/wp-content/themes/tspa-2026/images/tspa-logo.svg",
+    "sourceEvidence": "IMG img-fluid  tspa collegeville logo",
+    "type": "svg",
+    "dimensions": {
+      "width": 126,
+      "height": 49
+    },
+    "sha256": "14c437578edf9076e89fcb1e1e7da9164eedbe17fa3879da5843ba99a3451922",
+    "sourceSha256": "14c437578edf9076e89fcb1e1e7da9164eedbe17fa3879da5843ba99a3451922",
+    "sourceType": "svg",
+    "sourceFileName": null,
+    "transformation": "none; exact first-party transparent asset",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "vector": true
+    },
+    "transparent": true,
+    "bytes": 27232
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\the-salon-professional-academy-collegeville\\reference-1.png",
+      "fileName": "reference-1.png",
+      "sourceUrl": "https://www.tspacollegeville.com/wp-content/uploads/sites/17/2025/12/New-Instructor-Desktop-1536x853.png",
+      "sourceEvidence": "IMG tspa-banner-img tspa-hero-media  tspa - home",
+      "type": "png",
+      "dimensions": {
+        "width": 1536,
+        "height": 853
+      },
+      "sha256": "35d50fd76fb763522544efabdff93e1da4a5fb3a07309a5ff43d44a0678b4f3d",
+      "bytes": 565733,
+      "visual": {
+        "ok": true,
+        "lumaRange": 244,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [
+    {
+      "url": "https://www.tspacollegeville.com/wp-content/uploads/sites/17/2025/11/Cosmo-Desktop-1536x853.webp",
+      "reason": "not a PNG"
+    },
+    {
+      "url": "https://www.tspacollegeville.com/wp-content/uploads/sites/17/2025/11/Esthetics-Deskstop-1536x853.webp",
+      "reason": "not a PNG"
+    },
+    {
+      "url": "https://www.tspacollegeville.com/wp-content/uploads/sites/17/2025/11/Manicuring-Desktop-1-1536x853.webp",
+      "reason": "not a PNG"
+    },
+    {
+      "url": "https://www.tspacollegeville.com/wp-content/uploads/sites/17/2025/11/Cosmo-Tile-1-214x300.webp",
+      "reason": "reference image is too small"
+    }
+  ],
+  "brandColors": [
+    "#003388",
+    "#00d084",
+    "#0693e3",
+    "#7a00df",
+    "#007cba"
+  ],
+  "checkedAt": "2026-09-17T09:21:16.514Z"
+}

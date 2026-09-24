@@ -1,0 +1,90 @@
+{
+  "sourceUrl": "https://padentalwellness.com/",
+  "finalUrl": "https://padentalwellness.com/",
+  "sourceDomain": "padentalwellness.com",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=UTF-8",
+  "pageSha256": "a2553186241717b01fb73bfc8dcc82278bef8c81bc61cdf859cfb1cd9c1cf907",
+  "title": "Home - Dental Wellness Phoenixville",
+  "description": "{{ acf.home_meta }}",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "dental",
+      "wellness"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\dental-wellness\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://padentalwellness.com/wp-content/uploads/2026/03/footer_dental-wellness-logo.png",
+    "sourceEvidence": "JSON-LD logo URL",
+    "type": "png",
+    "dimensions": {
+      "width": 1024,
+      "height": 309
+    },
+    "sha256": "f11cd4132ba7632822588c38fb7ecac75d9b08213421a3aba19c6a35fd2dbed0",
+    "sourceSha256": "f11cd4132ba7632822588c38fb7ecac75d9b08213421a3aba19c6a35fd2dbed0",
+    "sourceType": "png",
+    "sourceFileName": null,
+    "transformation": "none; exact first-party transparent asset",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "transparentRatio": 0.8127,
+      "edgeTransparentRatio": 0.8897,
+      "contentRatio": 0.1873,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 72321
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\dental-wellness\\reference-1.jpg",
+      "fileName": "reference-1.jpg",
+      "sourceUrl": "https://padentalwellness.com/wp-content/uploads/2026/03/dr-dan-david-1.jpg",
+      "sourceEvidence": "og:image",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 963,
+        "width": 800
+      },
+      "sha256": "f79dc98f9f40a5320c67419a3c248490d7bc41ceeb363398614135873b21a184",
+      "bytes": 86484,
+      "visual": {
+        "ok": true,
+        "lumaRange": 233.8,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [
+    {
+      "url": "https://padentalwellness.com/800",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://padentalwellness.com/963",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://padentalwellness.com/image/jpeg",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://padentalwellness.com/wp-content/uploads/2026/03/dr-dan-david-1-125x150.jpg",
+      "reason": "reference image is too small"
+    }
+  ],
+  "brandColors": [
+    "#a4cf17",
+    "#f76a0c",
+    "#003388",
+    "#adcd45",
+    "#ffd700"
+  ],
+  "checkedAt": "2026-09-18T09:21:30.415Z"
+}

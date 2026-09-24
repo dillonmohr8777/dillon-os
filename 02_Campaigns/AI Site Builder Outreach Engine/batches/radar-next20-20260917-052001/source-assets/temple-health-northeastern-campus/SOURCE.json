@@ -1,0 +1,106 @@
+{
+  "sourceUrl": "https://www.templehealth.org/locations/northeastern-campus-tuh",
+  "finalUrl": "https://www.templehealth.org/locations/northeastern-campus-tuh",
+  "sourceDomain": "templehealth.org",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=UTF-8",
+  "pageSha256": "77cbb079b3304ef0a1840bdb8f263be0ebfa3777dec89fa13248f6fc3e7ec95a",
+  "title": "Temple University Hospital – Northeastern Campus | Temple Health",
+  "description": "Temple University Hospital – Northeastern Campus offers outpatient healthcare services that are convenient for you and your family.",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "temple",
+      "health",
+      "northeastern",
+      "campus"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\temple-health-northeastern-campus\\logo.svg",
+    "fileName": "logo.svg",
+    "sourceUrl": "https://www.templehealth.org/themes/custom/tuhsmasterbrand/logo.svg",
+    "sourceEvidence": "IMG temple health logo",
+    "type": "svg",
+    "dimensions": {
+      "width": 309,
+      "height": 35
+    },
+    "sha256": "3eff86fef9190e730f89301d74589f6737a43b0a7492440cf563934429183a28",
+    "sourceSha256": "3eff86fef9190e730f89301d74589f6737a43b0a7492440cf563934429183a28",
+    "sourceType": "svg",
+    "sourceFileName": null,
+    "transformation": "none; exact first-party transparent asset",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "vector": true
+    },
+    "transparent": true,
+    "bytes": 10556
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\temple-health-northeastern-campus\\reference-1.jpg",
+      "fileName": "reference-1.jpg",
+      "sourceUrl": "https://www.templehealth.org/sites/default/files/styles/hero/public/temple-health-northeastern-campus.jpg?itok=O8cxTX9g",
+      "sourceEvidence": "IMG temple health – northeastern campus",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 657,
+        "width": 1387
+      },
+      "sha256": "9abf76d961554989f4ccd3458f3ccbf3a50d3e6da4095722e3934359c06b7896",
+      "bytes": 213420,
+      "visual": {
+        "ok": true,
+        "lumaRange": 254.2,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\temple-health-northeastern-campus\\reference-2.jpg",
+      "fileName": "reference-2.jpg",
+      "sourceUrl": "https://www.templehealth.org/sites/default/files/styles/standard/public/2021-05/telemedicine-appointment-dr-neil-king.jpg?itok=4hqp8Sxz",
+      "sourceEvidence": "IMG b-lazy  dr. neil king on a telemedicine appointment with patient",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 600,
+        "width": 900
+      },
+      "sha256": "9920ad73336fc595375133797ecacfca4b81fc9335ba6c333748513b221dba0d",
+      "bytes": 53411,
+      "visual": {
+        "ok": true,
+        "lumaRange": 255,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\temple-health-northeastern-campus\\reference-3.jpg",
+      "fileName": "reference-3.jpg",
+      "sourceUrl": "https://www.templehealth.org/sites/default/files/styles/standard/public/oncologist-talking-with-nurse_0.jpg?itok=Jn28HwXX",
+      "sourceEvidence": "IMG b-lazy  oncologist talking with nurse",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 600,
+        "width": 900
+      },
+      "sha256": "e8c079f75246aef6c08993650e96373d574f6a55621065ecbe08e553693f94b6",
+      "bytes": 57928,
+      "visual": {
+        "ok": true,
+        "lumaRange": 254.8,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [],
+  "brandColors": [
+    "#003399",
+    "#5bbad5",
+    "#da532c"
+  ],
+  "checkedAt": "2026-09-17T09:21:32.227Z"
+}

@@ -1,0 +1,168 @@
+{
+  "slug": "passion-day-spa",
+  "preparedAt": "2026-09-17T09:22:51.611Z",
+  "sourceSite": "https://passiondayspallc.com/",
+  "sourceFinalUrl": "https://passiondayspallc.com/",
+  "sourcePageSha256": "7d4a08549a2d2e3811860e7ebd8fed386faca69c82612a54ef9b49af4d07fe8e",
+  "exactLogoRequired": true,
+  "exactLogoSha256": "c8b2db6bcd93fe0bd521867916a62c2c0510cb1b826fcd3b6747607a5d6a7810",
+  "firstPartyDerivativePolicy": "Content visuals preserve first-party source photography while adapting crop and tonal balance for the private mobile concept. They are not evidence of additional projects or outcomes.",
+  "generatedCompositionReference": "automation/prospect-radar-next20/.impeccable/mocks/architerra-mobile-three-directions.png",
+  "assets": [
+    {
+      "role": "exact identity",
+      "output": "logo.png",
+      "sourceUrl": "https://passiondayspallc.com/wp-content/uploads/2022/01/PASSION-DAY-SPA-logo-18951.png",
+      "sourceSha256": "c8b2db6bcd93fe0bd521867916a62c2c0510cb1b826fcd3b6747607a5d6a7810",
+      "outputSha256": "c8b2db6bcd93fe0bd521867916a62c2c0510cb1b826fcd3b6747607a5d6a7810",
+      "transformation": "none; exact first-party transparent asset",
+      "transparent": true
+    },
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://passiondayspallc.com/wp-content/uploads/2022/01/rose-red-480x381.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "36d05673df6e9b9f26fd750264c5c7aded336be084cb9ce4aa21ce7e610f2434",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=1.015:contrast=1.064:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "4102bb3fab7f369dbe01f70e306810c5c75fc293bc18c2d55cc6f0e04e91e229"
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://passiondayspallc.com/wp-content/uploads/2022/01/PASSION-DAY-SPA-manicure-18951-480x480.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "a9ae91cd6c4b274a6e3fec01ba8a036ab10aed8201e05cfdab15e3b3c09d16c2",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:0,eq=saturation=1.040:contrast=1.028:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "ed223a9c6214d5945c9202eab29e833ce55b14ba5d7bf2de45bd3afa3a942c56"
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://passiondayspallc.com/wp-content/uploads/2021/04/services27-2-480x480.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "a0ca081f8509b69a82f180607865a97d1490c3c358a27d5e129c88a1f135ba17",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:0,eq=saturation=0.940:contrast=1.082:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "a39aa92b73eed0ecab7b6ddc828e5bc45c455a347b3952a2408a57239828fc72"
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://passiondayspallc.com/wp-content/uploads/2022/01/rose-red-480x381.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "36d05673df6e9b9f26fd750264c5c7aded336be084cb9ce4aa21ce7e610f2434",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:0,eq=saturation=0.965:contrast=1.046:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "b9cd256f587ded7f7287965e9b75c08a8318bdbecbc8d2ba14d1f3ac2c8d8e1b"
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://passiondayspallc.com/wp-content/uploads/2022/01/PASSION-DAY-SPA-manicure-18951-480x480.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "a9ae91cd6c4b274a6e3fec01ba8a036ab10aed8201e05cfdab15e3b3c09d16c2",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:42,eq=saturation=0.990:contrast=1.010:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "566df78b494cb99703355bada2d1e73945f9ca707797a88a4005f81ce87eb630"
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://passiondayspallc.com/wp-content/uploads/2021/04/services27-2-480x480.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "a0ca081f8509b69a82f180607865a97d1490c3c358a27d5e129c88a1f135ba17",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:42,eq=saturation=1.015:contrast=1.064:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "0b0d09fa2c22f6c92cbe0dd52634f511996683903112c33a0b1c669fd465ef1d"
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://passiondayspallc.com/wp-content/uploads/2022/01/rose-red-480x381.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "36d05673df6e9b9f26fd750264c5c7aded336be084cb9ce4aa21ce7e610f2434",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:42,eq=saturation=1.040:contrast=1.028:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "180f50f4f4c3eadb19dd7685de95872374f2d6f8040c188dc138f33a4902b587"
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://passiondayspallc.com/wp-content/uploads/2022/01/PASSION-DAY-SPA-manicure-18951-480x480.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "a9ae91cd6c4b274a6e3fec01ba8a036ab10aed8201e05cfdab15e3b3c09d16c2",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:42,eq=saturation=0.940:contrast=1.082:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "caa0704647807a4046619be5c182aa7965f8b839fde48971f9d6a5df1fa3ee0d"
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://passiondayspallc.com/wp-content/uploads/2021/04/services27-2-480x480.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "a0ca081f8509b69a82f180607865a97d1490c3c358a27d5e129c88a1f135ba17",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:84,eq=saturation=0.965:contrast=1.046:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "672fe60572782e9cebf7a620cef407f00db1a3175ed9f245437ee0dffc745ee3"
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://passiondayspallc.com/wp-content/uploads/2022/01/rose-red-480x381.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "36d05673df6e9b9f26fd750264c5c7aded336be084cb9ce4aa21ce7e610f2434",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:84,eq=saturation=0.990:contrast=1.010:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "7b475368f78138181b40f77428981bfd9b042036e3e7b95f5c33e4d8ec675fdc"
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://passiondayspallc.com/wp-content/uploads/2022/01/PASSION-DAY-SPA-manicure-18951-480x480.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "a9ae91cd6c4b274a6e3fec01ba8a036ab10aed8201e05cfdab15e3b3c09d16c2",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:84,eq=saturation=1.015:contrast=1.064:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "d22b9296dea0ae5fe09fde7506215c8f02fe19673edecf7c8c69b1473c6f77e7"
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://passiondayspallc.com/wp-content/uploads/2021/04/services27-2-480x480.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "a0ca081f8509b69a82f180607865a97d1490c3c358a27d5e129c88a1f135ba17",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:84,eq=saturation=1.040:contrast=1.028:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "b26cd535f2309c7e1b25b641572e2cc5ecac015079c060db6e40aae889186eb1"
+    }
+  ],
+  "fonts": {
+    "pair": {
+      "id": "newsreader-figtree",
+      "display": "Newsreader",
+      "text": "Figtree"
+    },
+    "source": "Google Fonts CSS API",
+    "files": [
+      {
+        "file": "font-display-400.woff2",
+        "sha256": "62981321d9a3cc7a61a73792729043703fd6112da86e8ec848bb57f088578757"
+      },
+      {
+        "file": "font-display-700.woff2",
+        "sha256": "62981321d9a3cc7a61a73792729043703fd6112da86e8ec848bb57f088578757"
+      },
+      {
+        "file": "font-text-400.woff2",
+        "sha256": "4ba7d3d096695818fe0686be4f1e82c6b05134e18a22260336130335027462dd"
+      },
+      {
+        "file": "font-text-700.woff2",
+        "sha256": "4ba7d3d096695818fe0686be4f1e82c6b05134e18a22260336130335027462dd"
+      }
+    ]
+  }
+}

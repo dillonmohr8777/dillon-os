@@ -1,0 +1,107 @@
+{
+  "sourceUrl": "https://chestercountycarpetandflooring.com/",
+  "finalUrl": "https://chestercountycarpetandflooring.com/",
+  "sourceDomain": "chestercountycarpetandflooring.com",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=UTF-8",
+  "pageSha256": "ae1c57ac6d175a42672cc219da81a48ed4936dbc0e2c205a60537157b54bfa3f",
+  "title": "Chester County Carpet & Flooring: Home Page",
+  "description": "Quality flooring services in Chester County, Pennsylvania, including (carpet/vinyl/laminate/hardwood) installations, repairs, & replacements, play a signigicant role in our company's (Chester County Carpet & Flooring) success a leading local flooring company. Get in touch soon to learn more!",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "chester",
+      "county",
+      "carpet",
+      "flooring"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\chester-county-carpet-and-flooring\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://chestercountycarpetandflooring.com/img/logo.png",
+    "sourceEvidence": "JSON-LD logo URL",
+    "type": "png",
+    "dimensions": {
+      "width": 704,
+      "height": 149
+    },
+    "sha256": "44bd1a4b62dcf4248badadd5fa9506ac8a6a6e00b1f8572ee2974fab27444564",
+    "sourceSha256": "44bd1a4b62dcf4248badadd5fa9506ac8a6a6e00b1f8572ee2974fab27444564",
+    "sourceType": "png",
+    "sourceFileName": null,
+    "transformation": "none; exact first-party transparent asset",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "transparentRatio": 0.6566,
+      "edgeTransparentRatio": 0.9853,
+      "contentRatio": 0.3434,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 18644
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\chester-county-carpet-and-flooring\\reference-1.jpg",
+      "fileName": "reference-1.jpg",
+      "sourceUrl": "https://chestercountycarpetandflooring.com/img/coupon1.jpg",
+      "sourceEvidence": "IMG img-fluid  200 dollars off coupon - carpet & flooring installation in chester county pennsylvania",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 471,
+        "width": 1000
+      },
+      "sha256": "d2dcac13bf7334539724a9460bccf077645ff559738a55c049bde6b4f357ecf7",
+      "bytes": 53955,
+      "visual": {
+        "ok": true,
+        "lumaRange": 252.7,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\chester-county-carpet-and-flooring\\reference-2.jpg",
+      "fileName": "reference-2.jpg",
+      "sourceUrl": "https://chestercountycarpetandflooring.com/img/home-slide-1.jpg",
+      "sourceEvidence": "IMG rev-slidebg  home page slide one",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 500,
+        "width": 1200
+      },
+      "sha256": "6e6a148e0cae14843a55229673966846413df42e2588fa14fe8d12628590dc27",
+      "bytes": 164880,
+      "visual": {
+        "ok": true,
+        "lumaRange": 252.8,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\chester-county-carpet-and-flooring\\reference-3.jpg",
+      "fileName": "reference-3.jpg",
+      "sourceUrl": "https://chestercountycarpetandflooring.com/img/home-slide-2.jpg",
+      "sourceEvidence": "IMG rev-slidebg  home page slide one",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 876,
+        "width": 2103
+      },
+      "sha256": "e4ad0b180c808e825b5b1caa92609e128fede97a39b2e3d441ca9be0c5ccde22",
+      "bytes": 407128,
+      "visual": {
+        "ok": true,
+        "lumaRange": 254.9,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [],
+  "brandColors": [
+    "#116600"
+  ],
+  "checkedAt": "2026-09-17T09:21:10.383Z"
+}

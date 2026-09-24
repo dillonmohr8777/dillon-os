@@ -11,6 +11,18 @@ source_of_truth: C:\Users\dillo\repos\dillon-os
 
 # Operating Status
 
+## Claude chief handoff — 2026-09-24
+
+- Outcome: native Claude Opus 5.5 is master orchestrator, Marketing Chief, and root project coordinator; Codex is an execution and verification worker.
+- Policy: [[System/MASTER-ORCHESTRATOR]]; home `CLAUDE.md`, global `.claude/CLAUDE.md`, and `.Codex/AGENTS.md` now point to that authority.
+- Verified 16:26 UTC: native Claude Code 2.1.281; first-party `claude-opus-5-5` read the master, client-operations, agent-vault, and machine index with zero permission denials ([readback](claude-chief-readback-2026-09-24.json)); no permission or scheduler changes.
+- Existing chief: `Master session 9-24`, `f6ed5521-07c9-4116-b141-7cff206a1ef0`, cwd `C:\Users\dillo\Documents`; observed busy before handoff. Runtime adoption remains unverified until it reads the revised contract.
+- Routine migration pending: D01 D02 D04 D05 D06 D08 D09 D15 D20 D21 D22 D23 D27 W01 W02 W03 W07 M01 E01 E02 E03 E06 E07 E08 E09 remain `claude_role: never` in `11_Agents/claude-operating-team.json`.
+- Shared agent-vault and client-operations AGENTS now route chief work to Claude; `Sync-AgentVault.ps1` and `Test-AgentVault.ps1` passed (queue revision 434, 11 sources, 6 workflow steps).
+- Codex load at 12:19 EDT: 7 app servers, 302 descendants, about 8 GB working set; after Sean's completed send it fell to 2.4 GB at 12:29, though 297 descendants remained. Auto watchdog deferred restart during live work; Sean's 506-contact Sheet was verified in Slack at 12:23:58 EDT.
+- Validation: scoped diff check passed; full vault check reports 9 issues in untouched graph/decision/project notes. Next: existing chief reads the revised master/checkpoint and resumes; send, publish, spend, MFA, destructive-action, and client-message gates remain.
+- **Adopted 16:45 UTC (12:45 EDT):** the existing chief `f6ed5521` read the revised master contract and this checkpoint in full, and runs under them from this turn. Worker routing now follows the contract ladder (Muse Spark and GPT 5.6 Luna default lanes; UI/UX design on Opus 5.5 per Dillon). No planner, queue or scheduler added. The day's goal and deploy runbook live in `C:\Users\dillo\.claude\plans\snappy-munching-heron.md`. Known conflicts being fixed: one Claude lane was working in the shared main checkout of `Qwen/deer-flow` (the contract requires separate worktrees), and the `MomoBot health` scheduled task proposed for tonight is a service health check, not a second commitment monitor; confirm before registering.
+
 ## Verified 2026-09-14 — refreshed by the approval-queue closing pass
 
 Everything in this block was measured on disk or in Task Scheduler on

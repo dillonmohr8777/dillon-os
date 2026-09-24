@@ -1,0 +1,114 @@
+{
+  "sourceUrl": "https://www.bedfordcarpetonebedford.com/",
+  "finalUrl": "https://www.bedfordcarpetonebedford.com/",
+  "sourceDomain": "bedfordcarpetonebedford.com",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=utf-8",
+  "pageSha256": "c13e417d4776a547fd85fc0823f7564d328ad4d00feaa514e17b4b8e84d6c665",
+  "title": "Floor Store in Bedford, PA | Bedford Carpet One Floor & Home",
+  "description": "Want to shop local for floors in Bedford, PA? Discover carpet, hardwood, vinyl, and more, with professional installations at Bedford Carpet One Floor & Home.",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "bedford",
+      "carpet",
+      "one",
+      "floor",
+      "home"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\bedford-carpet-one-floor-and-home\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://www.bedfordcarpetonebedford.com/root/client/0380/img/logo/logo.png?rnd=1574",
+    "sourceEvidence": "IMG carpet one logo",
+    "type": "png",
+    "dimensions": {
+      "width": 296,
+      "height": 40
+    },
+    "sha256": "8f05673613d159fbdaa86ca66b9fa172d3589362226954ca1a55dee67235494d",
+    "sourceSha256": "8f05673613d159fbdaa86ca66b9fa172d3589362226954ca1a55dee67235494d",
+    "sourceType": "png",
+    "sourceFileName": null,
+    "transformation": "none; exact first-party transparent asset",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "transparentRatio": 0.7292,
+      "edgeTransparentRatio": 1,
+      "contentRatio": 0.2708,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 3976
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\bedford-carpet-one-floor-and-home\\reference-1.jpg",
+      "fileName": "reference-1.jpg",
+      "sourceUrl": "https://www.bedfordcarpetonebedford.com/root/client/0380/hero/page-1/hero-1.jpg?rnd=5570",
+      "sourceEvidence": "IMG hero-carousel__background hero-carousel__image--desktop  bedford carpet one storefront",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 1000,
+        "width": 1920
+      },
+      "sha256": "fba31769adb45f9e5fe50f5b2cdab1071fad6ba50ee51306dab8d02bb41f9be1",
+      "bytes": 303233,
+      "visual": {
+        "ok": true,
+        "lumaRange": 251.6,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\bedford-carpet-one-floor-and-home\\reference-2.jpg",
+      "fileName": "reference-2.jpg",
+      "sourceUrl": "https://www.bedfordcarpetonebedford.com/root/client/0380/hero/page-1/mobile-hero-1.jpg?rnd=8895",
+      "sourceEvidence": "IMG hero-carousel__background hero-carousel__image--mobile darken  bedford carpet one storefront",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 1150,
+        "width": 863
+      },
+      "sha256": "c11b6519cbe6461a088ad3cc798353b68956fabac230d1465184eec2faf25e78",
+      "bytes": 180857,
+      "visual": {
+        "ok": true,
+        "lumaRange": 244.8,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\bedford-carpet-one-floor-and-home\\reference-3.jpg",
+      "fileName": "reference-3.jpg",
+      "sourceUrl": "https://www.bedfordcarpetonebedford.com/root/client/0380/hero/page-1/mobile-hero-3.jpg?rnd=3172",
+      "sourceEvidence": "IMG hero-carousel__background hero-carousel__image--mobile darken  room scene with mobile phone to show how our room visualizer tool works.",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 1000,
+        "width": 750
+      },
+      "sha256": "1870cd2c3b155a3308f55e43e2349d222ea8c7e0aa19b1cc379f6d2e22524243",
+      "bytes": 118660,
+      "visual": {
+        "ok": true,
+        "lumaRange": 255,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [
+    {
+      "url": "https://www.bedfordcarpetonebedford.com/root/client/0380/hero/page-1/hero-3.jpg?rnd=1294",
+      "reason": "progressive JPEG is not decodable here"
+    }
+  ],
+  "brandColors": [
+    "#008c99",
+    "#117744"
+  ],
+  "checkedAt": "2026-09-18T09:21:22.689Z"
+}

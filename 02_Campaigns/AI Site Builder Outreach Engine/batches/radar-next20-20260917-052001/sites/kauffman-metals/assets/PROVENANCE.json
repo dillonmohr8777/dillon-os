@@ -1,0 +1,168 @@
+{
+  "slug": "kauffman-metals",
+  "preparedAt": "2026-09-17T09:23:47.478Z",
+  "sourceSite": "https://www.kauffmanmetals.com/",
+  "sourceFinalUrl": "https://kauffmanmetals.com/",
+  "sourcePageSha256": "dff3572f4466e524f89a4a9ccb53ee06ce0e371e16cf5339e96fffe2daea3d81",
+  "exactLogoRequired": true,
+  "exactLogoSha256": "d6344fb5c18193e1f2688f6c9e3270c33d6dded3fe92371a1cd22451e9ebc6f0",
+  "firstPartyDerivativePolicy": "Content visuals preserve first-party source photography while adapting crop and tonal balance for the private mobile concept. They are not evidence of additional projects or outcomes.",
+  "generatedCompositionReference": "automation/prospect-radar-next20/.impeccable/mocks/architerra-mobile-three-directions.png",
+  "assets": [
+    {
+      "role": "exact identity",
+      "output": "logo.svg",
+      "sourceUrl": "https://kauffmanmetals.com/wp-content/uploads/2024/02/kauffman-metals-logo-fc-300.svg",
+      "sourceSha256": "d6344fb5c18193e1f2688f6c9e3270c33d6dded3fe92371a1cd22451e9ebc6f0",
+      "outputSha256": "d6344fb5c18193e1f2688f6c9e3270c33d6dded3fe92371a1cd22451e9ebc6f0",
+      "transformation": "none; exact first-party transparent asset",
+      "transparent": true
+    },
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://kauffmanmetals.com/wp-content/uploads/2024/03/person-with-cap.jpeg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "8c8f9deae515aca2e8921b8421a40d9f04272c90a1a9706868374ddc48a89138",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=0.990:contrast=1.046:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "5273ac80005e54a5feee1e0660c28917fed52e2d071af9a4721b251baa165dce"
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://kauffmanmetals.com/wp-content/uploads/2024/03/agriculture-Post-Frame-Photos-015-e1711485129716.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "f5d27f78e67743c0e8f21633277d3ca75c33e1209f4b1dc3a00e169d095dd2d1",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:0,eq=saturation=1.015:contrast=1.010:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "80b0bd953bc41c5033a0eea18ebef3444e92c9eb061872fe3288674471484707"
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://kauffmanmetals.com/wp-content/uploads/2025/06/Kauffman-metal-5.png",
+      "sourceFile": "reference-3.png",
+      "sourceSha256": "7576882ff1f084c185bfd9dbd408a5add1f57fc24dcd4c7c02ebe22c7aebc885",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:0,eq=saturation=1.040:contrast=1.064:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "65689a30779a3cfd2de028c8be23780033f55a4712f3527ca1f01c2c00403244"
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://kauffmanmetals.com/wp-content/uploads/2024/03/person-with-cap.jpeg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "8c8f9deae515aca2e8921b8421a40d9f04272c90a1a9706868374ddc48a89138",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:0,eq=saturation=0.940:contrast=1.028:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "5dfd5864b25fefba49ae9eb2867cd11cfcb3b646c4b871a526124a21c5849371"
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://kauffmanmetals.com/wp-content/uploads/2024/03/agriculture-Post-Frame-Photos-015-e1711485129716.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "f5d27f78e67743c0e8f21633277d3ca75c33e1209f4b1dc3a00e169d095dd2d1",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:42,eq=saturation=0.965:contrast=1.082:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "b195c407452c6844907c35b1cbca0d615f4fc12f584c36bef6be0a6c2f0a044f"
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://kauffmanmetals.com/wp-content/uploads/2025/06/Kauffman-metal-5.png",
+      "sourceFile": "reference-3.png",
+      "sourceSha256": "7576882ff1f084c185bfd9dbd408a5add1f57fc24dcd4c7c02ebe22c7aebc885",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:42,eq=saturation=0.990:contrast=1.046:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "f27d7ec9654a0ccfdaecf69ea86e97633091f2498f4130fa11bada264f115c47"
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://kauffmanmetals.com/wp-content/uploads/2024/03/person-with-cap.jpeg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "8c8f9deae515aca2e8921b8421a40d9f04272c90a1a9706868374ddc48a89138",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:42,eq=saturation=1.015:contrast=1.010:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "0ca96ce5707a5948785a8685eaa51b464136a2a7ef0bc0092980955f0073883b"
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://kauffmanmetals.com/wp-content/uploads/2024/03/agriculture-Post-Frame-Photos-015-e1711485129716.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "f5d27f78e67743c0e8f21633277d3ca75c33e1209f4b1dc3a00e169d095dd2d1",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:42,eq=saturation=1.040:contrast=1.064:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "d1c2adf597173c0865236b1aa9c94898c64abf7aae678ccbb35f4533ed72661f"
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://kauffmanmetals.com/wp-content/uploads/2025/06/Kauffman-metal-5.png",
+      "sourceFile": "reference-3.png",
+      "sourceSha256": "7576882ff1f084c185bfd9dbd408a5add1f57fc24dcd4c7c02ebe22c7aebc885",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:84,eq=saturation=0.940:contrast=1.028:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "34d2d354817f7d7adae54e0dfd4fd3ce05e40041c015f28436729a8b2ea5feef"
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://kauffmanmetals.com/wp-content/uploads/2024/03/person-with-cap.jpeg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "8c8f9deae515aca2e8921b8421a40d9f04272c90a1a9706868374ddc48a89138",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:84,eq=saturation=0.965:contrast=1.082:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "d6c6f2d9f7bea1598ac561ff41b6c9b06f3d58e060558936172d8b67b570c623"
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://kauffmanmetals.com/wp-content/uploads/2024/03/agriculture-Post-Frame-Photos-015-e1711485129716.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "f5d27f78e67743c0e8f21633277d3ca75c33e1209f4b1dc3a00e169d095dd2d1",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:84,eq=saturation=0.990:contrast=1.046:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "985a286cb67eccf0e07c222c1bb631cf5bb05f61d81ad05468e30a29619c62d1"
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://kauffmanmetals.com/wp-content/uploads/2025/06/Kauffman-metal-5.png",
+      "sourceFile": "reference-3.png",
+      "sourceSha256": "7576882ff1f084c185bfd9dbd408a5add1f57fc24dcd4c7c02ebe22c7aebc885",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:84,eq=saturation=1.015:contrast=1.010:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "5436e1f2fbe0fb950e95338c04ba77e269cb66da843035a6a60e024828d69394"
+    }
+  ],
+  "fonts": {
+    "pair": {
+      "id": "alegreya-karla",
+      "display": "Alegreya",
+      "text": "Karla"
+    },
+    "source": "Google Fonts CSS API",
+    "files": [
+      {
+        "file": "font-display-400.woff2",
+        "sha256": "2431eca3ed8ed66e713cf7093d170d77a083a793a5f19a615506d63770abd973"
+      },
+      {
+        "file": "font-display-700.woff2",
+        "sha256": "2431eca3ed8ed66e713cf7093d170d77a083a793a5f19a615506d63770abd973"
+      },
+      {
+        "file": "font-text-400.woff2",
+        "sha256": "3b1eb09a53fd7b26c107b099b3da5fb2ac90b77297cb3ad713a7b40438ae718b"
+      },
+      {
+        "file": "font-text-700.woff2",
+        "sha256": "3b1eb09a53fd7b26c107b099b3da5fb2ac90b77297cb3ad713a7b40438ae718b"
+      }
+    ]
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "slug": "oaks-nail-spa",
+  "preparedAt": "2026-09-17T09:23:33.452Z",
+  "sourceSite": "https://oaksnailsspaphoenixville.com/",
+  "sourceFinalUrl": "https://oaksnailsspaphoenixville.com/",
+  "sourcePageSha256": "fb59da37597e83236e9c61168ac05ba3f847313e4af90fcbcb6ae48c24adda4b",
+  "exactLogoRequired": true,
+  "exactLogoSha256": "50c4a2e143eb0092514ec7d74f99f10a988d93b5a2fc17ba13dac3cda6e1adf3",
+  "firstPartyDerivativePolicy": "Content visuals preserve first-party source photography while adapting crop and tonal balance for the private mobile concept. They are not evidence of additional projects or outcomes.",
+  "generatedCompositionReference": "automation/prospect-radar-next20/.impeccable/mocks/architerra-mobile-three-directions.png",
+  "assets": [
+    {
+      "role": "exact identity",
+      "output": "logo.png",
+      "sourceUrl": "https://nz-website-media-r2-pub.gocheckin.net/8424-9753/page/header-1767821799_logo_untitled-design-removebg-preview-w576-44253.png",
+      "sourceSha256": "50c4a2e143eb0092514ec7d74f99f10a988d93b5a2fc17ba13dac3cda6e1adf3",
+      "outputSha256": "50c4a2e143eb0092514ec7d74f99f10a988d93b5a2fc17ba13dac3cda6e1adf3",
+      "transformation": "none; exact first-party transparent asset",
+      "transparent": true
+    },
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://oaksnailsspaphoenixville.com/images/cosmetics-model-beauty-nail-polish-makeup-model-18a92d3302588051668883da6ff03b3b.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "37cd32c3c5e7c88bcaa8e48bbbfcd5b9d081010fbbebb209092d64f47b160c03",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=0.990:contrast=1.046:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "697ca5cf03a3027c5ff6803eda4aa09042defb19379d5524239490829ad986c5"
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://oaksnailsspaphoenixville.com/images/decor_hero_1.png",
+      "sourceFile": "reference-2.png",
+      "sourceSha256": "7e229177516a6ee7a23e5cbdd7e620a1d2d4aef716b1862e0da06bb238e816cd",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:0,eq=saturation=1.015:contrast=1.010:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "c9a5c87c0aeaf70d6fa217be3214a4423727cbc98b969fb96a3707752f42bad6"
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://oaksnailsspaphoenixville.com/images/img_hero_2.png",
+      "sourceFile": "reference-3.png",
+      "sourceSha256": "fe4acf6e912ac603c3cdc7e91a4c150fed84a589032a9f38fc8c4fc9a3fe9b4a",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:0,eq=saturation=1.040:contrast=1.064:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "9c6f3b87cc6420a3eb7f78dff96188a64a262b9a2634b2b116bea67030a7f0c0"
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://oaksnailsspaphoenixville.com/images/cosmetics-model-beauty-nail-polish-makeup-model-18a92d3302588051668883da6ff03b3b.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "37cd32c3c5e7c88bcaa8e48bbbfcd5b9d081010fbbebb209092d64f47b160c03",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:0,eq=saturation=0.940:contrast=1.028:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "8a44aa65fb6694ccf8628d5207254fdaedc35cc6d53e6c99cf5a12af235bb6fe"
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://oaksnailsspaphoenixville.com/images/decor_hero_1.png",
+      "sourceFile": "reference-2.png",
+      "sourceSha256": "7e229177516a6ee7a23e5cbdd7e620a1d2d4aef716b1862e0da06bb238e816cd",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:42,eq=saturation=0.965:contrast=1.082:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "63276cd491baca9a5852564d6db88f5c45f7ff38ce179fb502cd1bc97c8f1daa"
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://oaksnailsspaphoenixville.com/images/img_hero_2.png",
+      "sourceFile": "reference-3.png",
+      "sourceSha256": "fe4acf6e912ac603c3cdc7e91a4c150fed84a589032a9f38fc8c4fc9a3fe9b4a",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:42,eq=saturation=0.990:contrast=1.046:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "c783573f3f0dfd67bcd3ffe9f4465306fcaef63b7d2dd0f4b7772d4ab0a36b85"
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://oaksnailsspaphoenixville.com/images/cosmetics-model-beauty-nail-polish-makeup-model-18a92d3302588051668883da6ff03b3b.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "37cd32c3c5e7c88bcaa8e48bbbfcd5b9d081010fbbebb209092d64f47b160c03",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:42,eq=saturation=1.015:contrast=1.010:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "0bd979427a763d4c960ee50e1e81f86833777f43dcdb4e1a1a3eeb6a1cceb5a7"
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://oaksnailsspaphoenixville.com/images/decor_hero_1.png",
+      "sourceFile": "reference-2.png",
+      "sourceSha256": "7e229177516a6ee7a23e5cbdd7e620a1d2d4aef716b1862e0da06bb238e816cd",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:42,eq=saturation=1.040:contrast=1.064:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "a740880dd28613f8813f6203c6c82d3e09175792d3c2b94546fe58ab6ad5d1f7"
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://oaksnailsspaphoenixville.com/images/img_hero_2.png",
+      "sourceFile": "reference-3.png",
+      "sourceSha256": "fe4acf6e912ac603c3cdc7e91a4c150fed84a589032a9f38fc8c4fc9a3fe9b4a",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:84,eq=saturation=0.940:contrast=1.028:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "31e19c061d5dc8746176b637287e9fc372bbdfb7a0ce316bf27807d8eee120e2"
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://oaksnailsspaphoenixville.com/images/cosmetics-model-beauty-nail-polish-makeup-model-18a92d3302588051668883da6ff03b3b.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "37cd32c3c5e7c88bcaa8e48bbbfcd5b9d081010fbbebb209092d64f47b160c03",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:84,eq=saturation=0.965:contrast=1.082:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "a674b0350efb06a5ec13ea41e9323cf7957fd348c9268af0ee5f12a038426725"
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://oaksnailsspaphoenixville.com/images/decor_hero_1.png",
+      "sourceFile": "reference-2.png",
+      "sourceSha256": "7e229177516a6ee7a23e5cbdd7e620a1d2d4aef716b1862e0da06bb238e816cd",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:84,eq=saturation=0.990:contrast=1.046:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "15618a7590c74a00502607b948d31194ea72e964b87316cc40b2bac64373773f"
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://oaksnailsspaphoenixville.com/images/img_hero_2.png",
+      "sourceFile": "reference-3.png",
+      "sourceSha256": "fe4acf6e912ac603c3cdc7e91a4c150fed84a589032a9f38fc8c4fc9a3fe9b4a",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:84,eq=saturation=1.015:contrast=1.010:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "b204ef58b50b416e738e62241ed2a2dbc87f097f4a73dfbee07e2dc0d4e11235"
+    }
+  ],
+  "fonts": {
+    "pair": {
+      "id": "alegreya-karla",
+      "display": "Alegreya",
+      "text": "Karla"
+    },
+    "source": "Google Fonts CSS API",
+    "files": [
+      {
+        "file": "font-display-400.woff2",
+        "sha256": "2431eca3ed8ed66e713cf7093d170d77a083a793a5f19a615506d63770abd973"
+      },
+      {
+        "file": "font-display-700.woff2",
+        "sha256": "2431eca3ed8ed66e713cf7093d170d77a083a793a5f19a615506d63770abd973"
+      },
+      {
+        "file": "font-text-400.woff2",
+        "sha256": "3b1eb09a53fd7b26c107b099b3da5fb2ac90b77297cb3ad713a7b40438ae718b"
+      },
+      {
+        "file": "font-text-700.woff2",
+        "sha256": "3b1eb09a53fd7b26c107b099b3da5fb2ac90b77297cb3ad713a7b40438ae718b"
+      }
+    ]
+  }
+}

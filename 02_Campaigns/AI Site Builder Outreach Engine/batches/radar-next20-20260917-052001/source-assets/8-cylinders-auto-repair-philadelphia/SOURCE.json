@@ -1,0 +1,124 @@
+{
+  "sourceUrl": "https://8cylindersautorepair.com/",
+  "finalUrl": "https://8cylindersautorepair.com/",
+  "sourceDomain": "8cylindersautorepair.com",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=UTF-8",
+  "pageSha256": "d4e2b0b7cb46a746fd1cd0e7291ece1e73e8dd59f3b29940212abd475bd04564",
+  "title": "8 Cylinders Auto Repair: Philadelphia Car Repair Experts",
+  "description": "8 Cylinders Auto Repair in Philadelphia: Expert car repair services. Certified mechanics offer top-quality engine diagnostics and brake repair.",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "cylinders",
+      "auto",
+      "repair",
+      "philadelphia"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\8-cylinders-auto-repair-philadelphia\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://8cylindersautorepair.com/wp-content/uploads/2026/04/cropped-cropped-d3e43cb2af014640d11d1b9992b183a3-scaled-1-1.png",
+    "sourceEvidence": "IMG logo lazyload  moving logo",
+    "type": "png",
+    "dimensions": {
+      "width": 2131,
+      "height": 650
+    },
+    "sha256": "601c452124aa9e4799ec513dccd5ad36e44d1ade05f8ee2f19bbb1f75d93898e",
+    "sourceSha256": "94b398a90a6ac58f8186af9aea620e2ad10cef81b1d6422920ef5b2a54907ff8",
+    "sourceType": "png",
+    "sourceFileName": "logo-source.png",
+    "transformation": "flat border color rgb(71,112,76) removed by border-seeded flood fill at tolerance 32; geometry unchanged",
+    "borderSpread": 0,
+    "alpha": {
+      "ok": true,
+      "transparentRatio": 0.3969,
+      "edgeTransparentRatio": 1,
+      "contentRatio": 0.6031,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 390739
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\8-cylinders-auto-repair-philadelphia\\reference-1.png",
+      "fileName": "reference-1.png",
+      "sourceUrl": "https://8cylindersautorepair.com/wp-content/uploads/2025/06/58-image.png",
+      "sourceEvidence": "og:image",
+      "type": "png",
+      "dimensions": {
+        "width": 1920,
+        "height": 1282
+      },
+      "sha256": "f644d1c998c17e7fce4ecb2da58ba4e92e53b1922f3e21e94686c98f4c081a73",
+      "bytes": 736227,
+      "visual": {
+        "ok": true,
+        "lumaRange": 249.9,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\8-cylinders-auto-repair-philadelphia\\reference-2.png",
+      "fileName": "reference-2.png",
+      "sourceUrl": "https://8cylindersautorepair.com/wp-content/uploads/2026/04/cropped-cropped-d3e43cb2af014640d11d1b9992b183a3-scaled-1-1.png",
+      "sourceEvidence": "IMG lazyload  8cylindersautorepair",
+      "type": "png",
+      "dimensions": {
+        "width": 2131,
+        "height": 650
+      },
+      "sha256": "94b398a90a6ac58f8186af9aea620e2ad10cef81b1d6422920ef5b2a54907ff8",
+      "bytes": 259419,
+      "visual": {
+        "ok": true,
+        "lumaRange": 253,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\8-cylinders-auto-repair-philadelphia\\reference-3.png",
+      "fileName": "reference-3.png",
+      "sourceUrl": "https://8cylindersautorepair.com/wp-content/uploads/2026/08/File-3.png",
+      "sourceEvidence": "IMG ec-dir__thumb wp-post-image  engine services at 8 cylinders auto repair engine 1",
+      "type": "png",
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sha256": "36dd5e7f0ae31fc9308e52ef16b612b3fc7f7b16135bfa3d3188099a4c17c44e",
+      "bytes": 584245,
+      "visual": {
+        "ok": true,
+        "lumaRange": 254,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [
+    {
+      "url": "https://8cylindersautorepair.com/wp-content/uploads/2026/09/v5-49956-section-0-hero_text.webp",
+      "reason": "not a PNG"
+    },
+    {
+      "url": "https://8cylindersautorepair.com/wp-content/uploads/2026/09/v5-49954-section-0-hero_text.webp",
+      "reason": "not a PNG"
+    },
+    {
+      "url": "https://8cylindersautorepair.com/wp-content/uploads/2026/09/v5-49955-section-0-hero_text.webp",
+      "reason": "not a PNG"
+    }
+  ],
+  "brandColors": [
+    "#24802b",
+    "#f2811d",
+    "#1c6622",
+    "#00d084",
+    "#0693e3"
+  ],
+  "checkedAt": "2026-09-17T09:21:25.050Z"
+}

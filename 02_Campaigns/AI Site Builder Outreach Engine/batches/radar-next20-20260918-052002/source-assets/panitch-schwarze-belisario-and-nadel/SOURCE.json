@@ -1,0 +1,124 @@
+{
+  "sourceUrl": "https://www.panitchlaw.com/",
+  "finalUrl": "https://www.panitchlaw.com/",
+  "sourceDomain": "panitchlaw.com",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=UTF-8",
+  "pageSha256": "e11b446980daf48946b26bb6737ce74674567777693b8acbb11911573f102d3c",
+  "title": "Intellectual Property Law | Panitch Schwarze",
+  "description": "Panitch Schwarze Belisario & Nadel LLP focuses on intellectual property laws for large Fortune 500 corporations and individuals alike.",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "panitch",
+      "schwarze",
+      "belisario",
+      "nadel"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\panitch-schwarze-belisario-and-nadel\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://www.panitchlaw.com/app/uploads/2022/01/Screen-Shot-2022-01-17-at-11.07.23-AM.png",
+    "sourceEvidence": "JSON-LD logo URL",
+    "type": "png",
+    "dimensions": {
+      "width": 604,
+      "height": 300
+    },
+    "sha256": "3857647659ff305c0514298ced8285c066aeb5e255c2232c6e8d47baf6085e2d",
+    "sourceSha256": "9a110fdbf6bcc00c516ee78fbac63d5c8c4ad23ef70ed80d55b1f7445116dadc",
+    "sourceType": "png",
+    "sourceFileName": "logo-source.png",
+    "transformation": "flat border color rgb(5,16,47) removed by border-seeded flood fill at tolerance 32; geometry unchanged",
+    "borderSpread": 13.64,
+    "alpha": {
+      "ok": true,
+      "transparentRatio": 0.7715,
+      "edgeTransparentRatio": 1,
+      "contentRatio": 0.2285,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 29056
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\panitch-schwarze-belisario-and-nadel\\reference-1.jpg",
+      "fileName": "reference-1.jpg",
+      "sourceUrl": "https://www.panitchlaw.com/app/uploads/2026/01/Our-Work-Website-2025-Philadelphia-Candid-for-Marketing-Chad-and-Holly-scaled.jpg",
+      "sourceEvidence": "og:image",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 1707,
+        "width": 2560
+      },
+      "sha256": "46921eebcecbf5b7de917d7a4aa123e80203850d2fdfc515260fd700cacaa17e",
+      "bytes": 580758,
+      "visual": {
+        "ok": true,
+        "lumaRange": 252.9,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\panitch-schwarze-belisario-and-nadel\\reference-2.jpg",
+      "fileName": "reference-2.jpg",
+      "sourceUrl": "https://www.panitchlaw.com/app/uploads/2026/01/Our-Work-Website-2025-Philadelphia-Candid-for-Marketing-Chad-and-Holly-2048x1365.jpg",
+      "sourceEvidence": "IMG wp-image-6501",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 1365,
+        "width": 2048
+      },
+      "sha256": "9ca7a7d986f74d867b5814e783cb9d705b272375d54432730268e19bc4b5b3d9",
+      "bytes": 389587,
+      "visual": {
+        "ok": true,
+        "lumaRange": 252.6,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\panitch-schwarze-belisario-and-nadel\\reference-3.jpg",
+      "fileName": "reference-3.jpg",
+      "sourceUrl": "https://www.panitchlaw.com/app/uploads/2026/01/Our-Team-Website-Photo-Ikenna-Ava-Julianna-Stephany-Travis-Dennis-scaled-e1774905512650-2048x1507.jpg",
+      "sourceEvidence": "IMG wp-image-6502",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 1507,
+        "width": 2048
+      },
+      "sha256": "916ba9731f18558bac2c0cd088a881e28e4453d71e1a54af4b011ea832dfd98c",
+      "bytes": 536547,
+      "visual": {
+        "ok": true,
+        "lumaRange": 255,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [
+    {
+      "url": "https://www.panitchlaw.com/2560",
+      "reason": "unsupported reference type unknown"
+    },
+    {
+      "url": "https://www.panitchlaw.com/1707",
+      "reason": "unsupported reference type unknown"
+    },
+    {
+      "url": "https://www.panitchlaw.com/image/jpeg",
+      "reason": "unsupported reference type unknown"
+    }
+  ],
+  "brandColors": [
+    "#003388",
+    "#f15d4f",
+    "#003399",
+    "#5bbad5",
+    "#da532c"
+  ],
+  "checkedAt": "2026-09-18T09:22:11.576Z"
+}

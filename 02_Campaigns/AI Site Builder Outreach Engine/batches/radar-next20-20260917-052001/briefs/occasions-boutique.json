@@ -1,0 +1,217 @@
+{
+  "slug": "occasions-boutique",
+  "prospectId": "RADAR-NEXT20-013",
+  "name": "Occasions Boutique",
+  "city": "Chester County",
+  "market": "Chester County",
+  "address": "Chester County, Pennsylvania",
+  "category": "Clothes",
+  "vertical": "clothes",
+  "attitude": "warm",
+  "url": "https://www.occasions-boutique.com/",
+  "description": "Private mobile-first concept for Occasions Boutique, grounded in its official identity and first-party visual source.",
+  "logo": true,
+  "logoFile": "logo.png",
+  "logoOutroLine": "Chester County | Clothes",
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "qualityPolicy": {
+    "minImages": 12,
+    "maxWords": 500
+  },
+  "sections": [
+    "hero",
+    "proof",
+    "offerings",
+    "story",
+    "experience",
+    "gallery",
+    "feature",
+    "catalog",
+    "contact",
+    "closing"
+  ],
+  "tokens": {
+    "paper": "#F4E7EC",
+    "ink": "#331D20",
+    "accent": "#9C2E40",
+    "accent2": "#E7A843",
+    "panel": "#E9D1DB",
+    "deep": "#401C25",
+    "onPaper": "#331D20",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#331D20",
+    "onPanel": "#331D20",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "10px"
+  },
+  "fonts": {
+    "display": "Newsreader",
+    "displayFallback": "Georgia,serif",
+    "text": "Figtree",
+    "textFallback": "Arial,sans-serif"
+  },
+  "directionContract": {
+    "thesis": "Occasions Boutique should feel immediate, composed, and unmistakably itself on a phone.",
+    "ownWorld": "image first editorial system drawn from the exact identity and first-party project material.",
+    "story": "Move from orientation to question, source context, visual proof, and a direct official action.",
+    "firstViewport": "Exact identity, one clear proposition, a first-party image, and one thumb-ready action.",
+    "form": "Mobile-first local business homepage with an ink-resolved identity finale."
+  },
+  "hero": {
+    "eyebrow": "Chester County | Clothes",
+    "headline": "A clearer first impression, from the first tap.",
+    "sub": "Occasions Boutique deserves a first screen that makes the next step legible without flattening the character of the work. This private concept begins with the official identity and first-party source material.",
+    "ctaPrimary": {
+      "label": "Visit official website",
+      "href": "https://www.occasions-boutique.com/"
+    },
+    "ctaSecondary": {
+      "label": "Explore the concept",
+      "href": "#offerings"
+    },
+    "glassFloat": null,
+    "marquee": []
+  },
+  "proof": {
+    "items": [
+      "Occasions Boutique",
+      "Chester County, Pennsylvania",
+      "Clothes",
+      "Official source connected"
+    ]
+  },
+  "offerings": {
+    "heading": "A homepage organized around the decision a visitor is actually making.",
+    "items": [
+      "Understand the role of Occasions Boutique without searching through the page",
+      "See first-party visual context before choosing the next question",
+      "Reach the official source through one direct, clearly labelled action"
+    ]
+  },
+  "story": {
+    "heading": "Identity and evidence lead. The interface follows.",
+    "imageIndex": 2,
+    "paragraphs": [
+      "Located in Malvern, PA - Occasions Boutique offers a wide selection of women's dresses, clothing and accessories for a variety of special occasions.",
+      "This concept treats the source material as visual evidence, not decoration. The composition gives each image room to establish scale and character while the written hierarchy stays concise enough for a phone.",
+      "No testimonial, result, price, award, schedule, or service promise is added here. Current operational details remain under the control of the official website."
+    ]
+  },
+  "experience": {
+    "heading": "A deliberate path from first impression to official action.",
+    "items": [
+      "Immediate identity and location context",
+      "Readable source-led narrative with decisive image rhythm",
+      "A consistent action that stays reachable without interrupting the page"
+    ]
+  },
+  "gallery": {
+    "heading": "First-party source material, recut for a mobile editorial rhythm.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ]
+  },
+  "feature": {
+    "heading": "The page disappears behind the work, then returns to the identity.",
+    "text": "As each section passes, progressive motion lets completed information soften without turning the page into a scroll experiment. The final scene resolves the exact Occasions Boutique logo over a code-native ink field, crisp on every phone density.",
+    "imageIndex": 9,
+    "cta": {
+      "label": "Open official source",
+      "href": "https://www.occasions-boutique.com/"
+    }
+  },
+  "catalog": {
+    "heading": "Three useful routes, kept honest and direct.",
+    "items": [
+      {
+        "title": "Review current services and project information",
+        "href": "https://www.occasions-boutique.com/",
+        "imageIndex": 10
+      },
+      {
+        "title": "Confirm current location and contact details",
+        "href": "https://www.occasions-boutique.com/",
+        "imageIndex": 11
+      },
+      {
+        "title": "Decide whether the next question makes sense",
+        "href": "https://www.occasions-boutique.com/",
+        "imageIndex": 12
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Current details belong to the official source.",
+    "sub": "This private concept does not collect or send information. Use the official Occasions Boutique website to confirm services, availability, hours, and direct contact details."
+  },
+  "closing": {
+    "heading": "A stronger first impression, resolved to the exact mark.",
+    "cta": {
+      "label": "Visit official website",
+      "href": "https://www.occasions-boutique.com/"
+    }
+  },
+  "links": [
+    {
+      "label": "Official website",
+      "href": "https://www.occasions-boutique.com/"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "First-party visual reference for Occasions Boutique, mobile crop 1"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "First-party visual reference for Occasions Boutique, mobile crop 2"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "First-party visual reference for Occasions Boutique, mobile crop 3"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "First-party visual reference for Occasions Boutique, mobile crop 4"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "First-party visual reference for Occasions Boutique, mobile crop 5"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "First-party visual reference for Occasions Boutique, mobile crop 6"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "First-party visual reference for Occasions Boutique, mobile crop 7"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "First-party visual reference for Occasions Boutique, mobile crop 8"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "First-party visual reference for Occasions Boutique, mobile crop 9"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "First-party visual reference for Occasions Boutique, mobile crop 10"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "First-party visual reference for Occasions Boutique, mobile crop 11"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "First-party visual reference for Occasions Boutique, mobile crop 12"
+    }
+  ]
+}

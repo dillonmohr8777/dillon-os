@@ -1,0 +1,168 @@
+{
+  "slug": "dental-wellness",
+  "preparedAt": "2026-09-18T09:23:22.515Z",
+  "sourceSite": "https://padentalwellness.com/",
+  "sourceFinalUrl": "https://padentalwellness.com/",
+  "sourcePageSha256": "a2553186241717b01fb73bfc8dcc82278bef8c81bc61cdf859cfb1cd9c1cf907",
+  "exactLogoRequired": true,
+  "exactLogoSha256": "f11cd4132ba7632822588c38fb7ecac75d9b08213421a3aba19c6a35fd2dbed0",
+  "firstPartyDerivativePolicy": "Content visuals preserve first-party source photography while adapting crop and tonal balance for the private mobile concept. They are not evidence of additional projects or outcomes.",
+  "generatedCompositionReference": "automation/prospect-radar-next20/.impeccable/mocks/architerra-mobile-three-directions.png",
+  "assets": [
+    {
+      "role": "exact identity",
+      "output": "logo.png",
+      "sourceUrl": "https://padentalwellness.com/wp-content/uploads/2026/03/footer_dental-wellness-logo.png",
+      "sourceSha256": "f11cd4132ba7632822588c38fb7ecac75d9b08213421a3aba19c6a35fd2dbed0",
+      "outputSha256": "f11cd4132ba7632822588c38fb7ecac75d9b08213421a3aba19c6a35fd2dbed0",
+      "transformation": "none; exact first-party transparent asset",
+      "transparent": true
+    },
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://padentalwellness.com/wp-content/uploads/2026/03/dr-dan-david-1.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "f79dc98f9f40a5320c67419a3c248490d7bc41ceeb363398614135873b21a184",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=1.015:contrast=1.064:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "6798c3af3b2c75f15d1762d25ab59bfd1b19fdbfbafae011a7c7ab0c6d8dbf0a"
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://padentalwellness.com/wp-content/uploads/2026/03/dr-dan-david-1.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "f79dc98f9f40a5320c67419a3c248490d7bc41ceeb363398614135873b21a184",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:0,eq=saturation=1.040:contrast=1.028:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "b42001b32eec8aa724bc68bfcb933240cdefd124c550365e3dd034db0926ecaa"
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://padentalwellness.com/wp-content/uploads/2026/03/dr-dan-david-1.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "f79dc98f9f40a5320c67419a3c248490d7bc41ceeb363398614135873b21a184",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:0,eq=saturation=0.940:contrast=1.082:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "78dd340c6ea24e76ba1d25be1c50f0c0c7b76e5ba7be0b32e5f77e35e147b260"
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://padentalwellness.com/wp-content/uploads/2026/03/dr-dan-david-1.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "f79dc98f9f40a5320c67419a3c248490d7bc41ceeb363398614135873b21a184",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:0,eq=saturation=0.965:contrast=1.046:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "a5784f444fc286c36cdf66787f5eff7459701d88a2a18670bdd444336b09a112"
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://padentalwellness.com/wp-content/uploads/2026/03/dr-dan-david-1.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "f79dc98f9f40a5320c67419a3c248490d7bc41ceeb363398614135873b21a184",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:42,eq=saturation=0.990:contrast=1.010:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "af5bcccbe6694cf3e82b4a56ed0f3eb3bbb1306dc5b37a7184ab3d51e654430e"
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://padentalwellness.com/wp-content/uploads/2026/03/dr-dan-david-1.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "f79dc98f9f40a5320c67419a3c248490d7bc41ceeb363398614135873b21a184",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:42,eq=saturation=1.015:contrast=1.064:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "d6f55050574cef5a469c62c3ee48f3918684cfe4a4afbc3dd8ca76e0ff3cb267"
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://padentalwellness.com/wp-content/uploads/2026/03/dr-dan-david-1.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "f79dc98f9f40a5320c67419a3c248490d7bc41ceeb363398614135873b21a184",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:42,eq=saturation=1.040:contrast=1.028:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "a7b0faa596b461b6d4929bff2bfe54111b74bbc04c4c242e421bcc5c35272cc0"
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://padentalwellness.com/wp-content/uploads/2026/03/dr-dan-david-1.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "f79dc98f9f40a5320c67419a3c248490d7bc41ceeb363398614135873b21a184",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:42,eq=saturation=0.940:contrast=1.082:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "0072dc0640b2256cc93a076e6db56b65191c8492eb246211795508b8adc0da78"
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://padentalwellness.com/wp-content/uploads/2026/03/dr-dan-david-1.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "f79dc98f9f40a5320c67419a3c248490d7bc41ceeb363398614135873b21a184",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:84,eq=saturation=0.965:contrast=1.046:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "b0c06dfdff39451f7629017a299dd0e3d1ec6f0dbcdac062c102307a5d27d959"
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://padentalwellness.com/wp-content/uploads/2026/03/dr-dan-david-1.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "f79dc98f9f40a5320c67419a3c248490d7bc41ceeb363398614135873b21a184",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:84,eq=saturation=0.990:contrast=1.010:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "4fcc7c6fd8def4b192c5487123e729301e8ec651d110f651f010ecd3f8cda45a"
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://padentalwellness.com/wp-content/uploads/2026/03/dr-dan-david-1.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "f79dc98f9f40a5320c67419a3c248490d7bc41ceeb363398614135873b21a184",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:84,eq=saturation=1.015:contrast=1.064:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "e3a0a5da4e06b5e89b511cafec2c2f3cb6b3edbc26711fd6219f64f7ee383eb8"
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://padentalwellness.com/wp-content/uploads/2026/03/dr-dan-david-1.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "f79dc98f9f40a5320c67419a3c248490d7bc41ceeb363398614135873b21a184",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:84,eq=saturation=1.040:contrast=1.028:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "a84f4904cbc0b879e311e06c005d02349be15b56ee17c7eabbb9f883d13bddae"
+    }
+  ],
+  "fonts": {
+    "pair": {
+      "id": "newsreader-figtree",
+      "display": "Newsreader",
+      "text": "Figtree"
+    },
+    "source": "Google Fonts CSS API",
+    "files": [
+      {
+        "file": "font-display-400.woff2",
+        "sha256": "62981321d9a3cc7a61a73792729043703fd6112da86e8ec848bb57f088578757"
+      },
+      {
+        "file": "font-display-700.woff2",
+        "sha256": "62981321d9a3cc7a61a73792729043703fd6112da86e8ec848bb57f088578757"
+      },
+      {
+        "file": "font-text-400.woff2",
+        "sha256": "4ba7d3d096695818fe0686be4f1e82c6b05134e18a22260336130335027462dd"
+      },
+      {
+        "file": "font-text-700.woff2",
+        "sha256": "4ba7d3d096695818fe0686be4f1e82c6b05134e18a22260336130335027462dd"
+      }
+    ]
+  }
+}

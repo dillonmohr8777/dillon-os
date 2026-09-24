@@ -1,9 +1,9 @@
 ---
 note_type: status
 status: active
-date: 2026-09-21
-updated: 2026-09-21
-generated_at: 2026-09-21T12:21:58.644Z
+date: 2026-09-24
+updated: 2026-09-24
+generated_at: 2026-09-24T16:00:01.744Z
 generated_by: _os/automation/bin/daily-sweep.js
 days_since_previous_sweep: 0
 tags:
@@ -27,9 +27,9 @@ source_refs:
 
 # Sweep status
 
-**ATTENTION — 1 stale or missing daily artifact(s); 5 of 14 daily briefs never produced; 2 day(s) with no cadence ledger entry at all; 1 ledger entr(ies) naming an artifact that is not on disk.**
+**ATTENTION — 2 stale or missing daily artifact(s); 4 of 14 daily briefs never produced; 8 day(s) with no cadence ledger entry at all; 2 ledger entr(ies) naming an artifact that is not on disk.**
 
-Swept `2026-09-21T12:21:58.644Z`. Previous sweep: 2026-09-21T12:00:01.332Z.
+Swept `2026-09-24T16:00:01.744Z`. Previous sweep: 2026-09-24T15:00:01.915Z.
 
 This file is written by the sweep and by nothing else. If the date in
 the frontmatter above is not today, the sweep did not run today — that
@@ -37,7 +37,7 @@ is the first thing to fix, before trusting anything below it.
 
 ## Sweep run history (last 30 days)
 
-Ran: **8** of 8 days.
+Ran: **11** of 11 days.
 
 No missed days on record.
 
@@ -50,19 +50,19 @@ written down are the actual failure.
 
 | Artifact | State | Age (h) | Budget (h) | Produced by |
 | --- | --- | --- | --- | --- |
-| `Daily-Briefs/2026-09-21.md` | fresh | 1.3 | 26 | Codex cron daily-communications-brain (07:00 local) |
-| `12_Brain/state/daily-communications-brain.json` | **stale** | 49.3 | 26 | Codex cron daily-communications-brain |
-| `12_Brain/state/claude-daily-driver.json` | fresh | 0.2 | 2 | Task Scheduler Claude-Autonomous-Daily-Driver (PT15M) |
-| `12_Brain/state/claude-loop.json` | fresh | 6.7 | 26 | claude-loop.js via the daily driver |
-| `Daily-Briefs/plan-2026-09-21.md` | fresh | 0.7 | 26 | Task Scheduler Immohrtal-Crew |
-| `12_Brain/state/frontmatter-validate.json` | fresh | 0 | 168 | frontmatter-validate.js, on demand + pre-pulse |
-| `System/approval-queue.md` | fresh | 0.3 | 72 | every session that gates an external action |
+| `Daily-Briefs/2026-09-24.md` | **missing** | — | 26 | Codex cron daily-communications-brain (07:00 local) |
+| `12_Brain/state/daily-communications-brain.json` | **stale** | 125 | 26 | Codex cron daily-communications-brain |
+| `12_Brain/state/claude-daily-driver.json` | fresh | 0.1 | 2 | Task Scheduler Claude-Autonomous-Daily-Driver (PT15M) |
+| `12_Brain/state/claude-loop.json` | fresh | 10.9 | 26 | claude-loop.js via the daily driver |
+| `Daily-Briefs/plan-2026-09-24.md` | fresh | 0.3 | 26 | Task Scheduler Immohrtal-Crew |
+| `12_Brain/state/frontmatter-validate.json` | fresh | 3.7 | 168 | frontmatter-validate.js, on demand + pre-pulse |
+| `System/approval-queue.md` | fresh | 2 | 72 | every session that gates an external action |
 
 ## Daily brief delivery, last 14 days
 
-2026-09-08 yes · 2026-09-09 **NO** · 2026-09-10 **NO** · 2026-09-11 **NO** · 2026-09-12 yes · 2026-09-13 yes · 2026-09-14 yes · 2026-09-15 yes · 2026-09-16 yes · 2026-09-17 **NO** · 2026-09-18 **NO** · 2026-09-19 yes · 2026-09-20 yes · 2026-09-21 yes
+2026-09-11 **NO** · 2026-09-12 yes · 2026-09-13 yes · 2026-09-14 yes · 2026-09-15 yes · 2026-09-16 yes · 2026-09-17 **NO** · 2026-09-18 **NO** · 2026-09-19 yes · 2026-09-20 yes · 2026-09-21 yes · 2026-09-22 yes · 2026-09-23 yes · 2026-09-24 **NO**
 
-Delivered **9 of 14** days.
+Delivered **10 of 14** days.
 
 ## Cadence layer
 
@@ -70,10 +70,11 @@ Scheduling is owned by `_os/automation/cadence/`. This sweep is a job in
 its `daily.yaml` manifest and writes to its ledger — one ledger, not two.
 
 - Windows Task Scheduler entries: `Cadence-daily`, `Cadence-ledger-push`, `Cadence-monthly`, `Cadence-sweep-heartbeat`, `Cadence-weekly`.
-- Ledger rows: **267**, first entry 2026-09-14.
-- **Days with NO ledger entry at all: 2026-09-19, 2026-09-20.**
+- Ledger rows: **377**, first entry 2026-09-07.
+- **Days with NO ledger entry at all: 2026-09-08, 2026-09-09, 2026-09-10, 2026-09-11, 2026-09-12, 2026-09-13, 2026-09-19, 2026-09-20.**
   Absent is louder than failed: it means the driver never started.
 - **Ledger lies:** job `omega-search-terms` claims `clients/omega-landscaping/deliverables/2026-09-21 - search terms pages 1-5.md`, which is not on disk.
+- **Ledger lies:** job `omega-search-terms` claims `clients/omega-landscaping/deliverables/2026-09-21 - search terms pages 6-10.md`, which is not on disk.
 - `daily.yaml`: 8 job(s), 0 disabled.
 - `weekly.yaml`: 3 job(s), 0 disabled.
 - `monthly.yaml`: 3 job(s), 0 disabled.
@@ -82,7 +83,7 @@ its `daily.yaml` manifest and writes to its ledger — one ledger, not two.
 
 No counter dropped from non-zero to zero since the previous sweep.
 
-Counters this run: shipped_repos=3, at_risk_repos=20, overdue_notes=11, approval_open_checkboxes=137, fresh_artifacts=6.
+Counters this run: shipped_repos=2, at_risk_repos=20, overdue_notes=11, approval_open_checkboxes=149, fresh_artifacts=5.
 
 ## Client state
 
@@ -93,14 +94,13 @@ Counters this run: shipped_repos=3, at_risk_repos=20, overdue_notes=11, approval
 
 ## What shipped in the last 24 hours
 
-- **bridge-software-frontend** — 1 commit(s): Tori's card visuals and her category words, plus a real font-weight fix
-- **dillon-os** — 14 commit(s): cadence(daily): agent-verifier; cadence(daily): delivery-milestones; cadence(daily): production-briefs; cadence(daily): heartbeat, correct day-of-week and gap scope; cadence(daily): ops-decision-packets
-- **client-operations** — 1 commit(s): cadence(weekly): omega-search-terms
+- **dillon-os** — 9 commit(s): cadence(daily): run ledger, runs and free-tier roster; cadence(daily): agent-verifier; cadence(daily): delivery-milestones; cadence(daily): production-briefs; cadence(daily): ops-decision-packets
+- **client-operations** — 2 commit(s): chore: sweep tracked-file edits left in the working tree (2026-09-24); chore: sweep root/config/state working-tree changes (2026-09-24)
 
 ## Work that would not survive this machine
 
-- **client-operations** — 13 commit(s) exist only on this machine
-- **dillon-os** — 14 commit(s) exist only on this machine
+- **client-operations** — branch has no upstream — nothing is pushing it
+- **dillon-os** — 28 commit(s) exist only on this machine
 - **dillon-os** — 33 uncommitted file(s)
 - **agent-vault** — 12 uncommitted file(s)
 - **client-operations-ami-pdfs-d9e7** — 6 uncommitted file(s)
@@ -122,29 +122,29 @@ Counters this run: shipped_repos=3, at_risk_repos=20, overdue_notes=11, approval
 
 ## Overdue
 
-- `01_Clients/Bar Crawl USA/overview.md` — due 2026-07-15, **68 days** overdue (status: active)
-- `01_Clients/Hope Wellness Center/overview.md` — due 2026-07-15, **68 days** overdue (status: active)
-- `01_Clients/Kimberly James Bridal/overview.md` — due 2026-07-15, **68 days** overdue (status: active)
-- `01_Clients/Omega Landscaping/overview.md` — due 2026-07-15, **68 days** overdue (status: active)
-- `01_Clients/Onsite Concrete/overview.md` — due 2026-07-15, **68 days** overdue (status: active)
-- `01_Clients/Replenish/overview.md` — due 2026-07-15, **68 days** overdue (status: paused)
-- `01_Clients/Tags 2 Go/overview.md` — due 2026-08-08, **44 days** overdue (status: active)
-- `01_Clients/BigOrange Marketing/Custom Home Builder Pillar Project.md` — due 2026-08-10, **42 days** overdue (status: active)
-- `01_Clients/BigOrange Marketing/overview.md` — due 2026-08-10, **42 days** overdue (status: active)
-- `12_Brain/05_Projects/2026-07-29 - Complete Dillon OS second brain.md` — due 2026-08-23, **29 days** overdue (status: active)
-- `01_Clients/Cindy May Christmas/overview.md` — due 2026-09-01, **20 days** overdue (status: active)
+- `01_Clients/Bar Crawl USA/overview.md` — due 2026-07-15, **71 days** overdue (status: active)
+- `01_Clients/Hope Wellness Center/overview.md` — due 2026-07-15, **71 days** overdue (status: active)
+- `01_Clients/Kimberly James Bridal/overview.md` — due 2026-07-15, **71 days** overdue (status: active)
+- `01_Clients/Omega Landscaping/overview.md` — due 2026-07-15, **71 days** overdue (status: active)
+- `01_Clients/Onsite Concrete/overview.md` — due 2026-07-15, **71 days** overdue (status: active)
+- `01_Clients/Replenish/overview.md` — due 2026-07-15, **71 days** overdue (status: paused)
+- `01_Clients/Tags 2 Go/overview.md` — due 2026-08-08, **47 days** overdue (status: active)
+- `01_Clients/BigOrange Marketing/Custom Home Builder Pillar Project.md` — due 2026-08-10, **45 days** overdue (status: active)
+- `01_Clients/BigOrange Marketing/overview.md` — due 2026-08-10, **45 days** overdue (status: active)
+- `12_Brain/05_Projects/2026-07-29 - Complete Dillon OS second brain.md` — due 2026-08-23, **32 days** overdue (status: active)
+- `01_Clients/Cindy May Christmas/overview.md` — due 2026-09-01, **23 days** overdue (status: active)
 
 ## Waiting on a human
 
-- Queue: 199 lines, last modified 2026-09-21T12:06:24.896Z.
-- Open checkboxes: **137**.
-- Risk labels present: low=16, high=56, mediumium=19, medium=46.
+- Queue: 193 lines, last modified 2026-09-24T13:58:03.584Z.
+- Open checkboxes: **149**.
+- Risk labels present: low=24, high=60, mediumium=19, medium=51.
 - An item in the queue is a request, never a permission.
 
 ## Machine health
 
 - win32 10.0.26200, host `DESKTOP-4AHKEC4`.
-- Uptime **19.4 h**. Memory 26.6 GB free of 63.8 GB.
+- Uptime **1.2 h**. Memory 30.2 GB free of 63.8 GB.
 - Unclean shutdowns in 30 days: **22** (Windows System event log, Id 6008).
 
 ---

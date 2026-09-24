@@ -1,0 +1,109 @@
+{
+  "sourceUrl": "https://www.impriano.com/",
+  "finalUrl": "https://www.impriano.com/",
+  "sourceDomain": "impriano.com",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=utf-8",
+  "pageSha256": "199747812f2cc40c59004c463806a30e437b22e342167a4bd492f8b918834293",
+  "title": "Top Exterior Remodeling Company Southeastern PA | Impriano Roofing & Siding",
+  "description": "Discover expert exterior remodeling solutions from Impriano Roofing & Siding. Explore our full range of services today and schedule your consultation!",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "impriano",
+      "roofing",
+      "siding"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\impriano-roofing-and-siding\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://cdn.prod.website-files.com/667c361a02a0d571d7fe973f/667c361a02a0d571d7fe9b58_main-logo.png",
+    "sourceEvidence": "IMG navbar_logo is-sticky",
+    "type": "png",
+    "dimensions": {
+      "width": 214,
+      "height": 106
+    },
+    "sha256": "2386cabc459d1cf1650d52ce9ef8f173dddc87078e7ace4590ea48d1bb435f72",
+    "sourceSha256": "2386cabc459d1cf1650d52ce9ef8f173dddc87078e7ace4590ea48d1bb435f72",
+    "sourceType": "png",
+    "sourceFileName": null,
+    "transformation": "none; exact first-party transparent asset",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "transparentRatio": 0.2226,
+      "edgeTransparentRatio": 0.9797,
+      "contentRatio": 0.7774,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 21692
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\impriano-roofing-and-siding\\reference-1.jpg",
+      "fileName": "reference-1.jpg",
+      "sourceUrl": "https://cdn.prod.website-files.com/667c361a02a0d571d7fe9710/667c361a02a0d571d7fe98d3_hero.jpg",
+      "sourceEvidence": "IMG hero_background-image",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 1080,
+        "width": 1920
+      },
+      "sha256": "76d8ec23464d1d63d628bb411ba4a9500196c70ddbcd6c6d09f7e9e566077fbb",
+      "bytes": 380484,
+      "visual": {
+        "ok": true,
+        "lumaRange": 255,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\impriano-roofing-and-siding\\reference-2.jpg",
+      "fileName": "reference-2.jpg",
+      "sourceUrl": "https://cdn.prod.website-files.com/667c361a02a0d571d7fe9710/68bfc1c178998cb01e947ec9_gallery%201.JPG",
+      "sourceEvidence": "IMG gallery_image",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 837,
+        "width": 1750
+      },
+      "sha256": "892393cb2c61a2a8a5763793e8a11434fa0eaffc8a3f44527bd845d90cd22ab9",
+      "bytes": 647205,
+      "visual": {
+        "ok": true,
+        "lumaRange": 255,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\impriano-roofing-and-siding\\reference-3.jpg",
+      "fileName": "reference-3.jpg",
+      "sourceUrl": "https://cdn.prod.website-files.com/667c361a02a0d571d7fe9710/6968f2b934e95115b859d1f8_2.jpg",
+      "sourceEvidence": "IMG gallery_image",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 1500,
+        "width": 2000
+      },
+      "sha256": "c27a7700ba84ee23a8644bd6456da80f1350d24023f5c941d59a4094c6720af9",
+      "bytes": 717341,
+      "visual": {
+        "ok": true,
+        "lumaRange": 254.7,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [
+    {
+      "url": "https://cdn.prod.website-files.com/667c361a02a0d571d7fe9710/667c361a02a0d571d7fe97a1_gallery-ro.png",
+      "reason": "reference image is too small"
+    }
+  ],
+  "brandColors": [],
+  "checkedAt": "2026-09-17T09:20:54.844Z"
+}

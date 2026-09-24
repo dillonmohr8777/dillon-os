@@ -1,0 +1,168 @@
+{
+  "slug": "a-w-miller-technical-sales",
+  "preparedAt": "2026-09-18T09:23:57.570Z",
+  "sourceSite": "https://www.awmiller.com/",
+  "sourceFinalUrl": "https://awmiller.com/",
+  "sourcePageSha256": "518b6c5c263ee7e490a7a9e8049d8d230cddc2a893585e92890cb0247a341f0c",
+  "exactLogoRequired": true,
+  "exactLogoSha256": "9acd2e261bc8e74ce9d789c1e794400100663937bee344d18bfc44af9c140103",
+  "firstPartyDerivativePolicy": "Content visuals preserve first-party source photography while adapting crop and tonal balance for the private mobile concept. They are not evidence of additional projects or outcomes.",
+  "generatedCompositionReference": "automation/prospect-radar-next20/.impeccable/mocks/architerra-mobile-three-directions.png",
+  "assets": [
+    {
+      "role": "exact identity",
+      "output": "logo.png",
+      "sourceUrl": "https://awmiller.com/wp-content/uploads/2021/01/Logo_AW_Miller.png",
+      "sourceSha256": "9acd2e261bc8e74ce9d789c1e794400100663937bee344d18bfc44af9c140103",
+      "outputSha256": "9acd2e261bc8e74ce9d789c1e794400100663937bee344d18bfc44af9c140103",
+      "transformation": "none; exact first-party transparent asset",
+      "transparent": true
+    },
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://awmiller.com/wp-content/uploads/2025/11/CNC-machining-and-automation-solutions.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "4a43d2e9be9d3b604a1e0157fa779eb5afdf36e805e861ffa708c734fe221254",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=0.940:contrast=1.010:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "40addd5db2742799a3c05e410be87289743273157c29adc4a6f714ff7b583c26"
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://awmiller.com/wp-content/uploads/2025/11/Screenshot-2025-11-26-at-11.25.22-AM.png",
+      "sourceFile": "reference-2.png",
+      "sourceSha256": "843289de9a4340a90f8f6b49cddae4adeb6f17e6858d8c56c321ab9b8a738bab",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:0,eq=saturation=0.965:contrast=1.064:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "fe7e8b4823bcf086f1294294200c774050bb40a3d6ce07b46b40888c8b21cd68"
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://awmiller.com/wp-content/uploads/2025/11/CNC-machining-and-automation-solutions.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "4a43d2e9be9d3b604a1e0157fa779eb5afdf36e805e861ffa708c734fe221254",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:0,eq=saturation=0.990:contrast=1.028:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "0aa9c526d9ae9cbb849735bde7ccad83bf849b8cd9473a4005d545a162784aac"
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://awmiller.com/wp-content/uploads/2025/11/Screenshot-2025-11-26-at-11.25.22-AM.png",
+      "sourceFile": "reference-2.png",
+      "sourceSha256": "843289de9a4340a90f8f6b49cddae4adeb6f17e6858d8c56c321ab9b8a738bab",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:0,eq=saturation=1.015:contrast=1.082:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "34a6ec765dfcc95a3628f8f58715e4bab5af583f5c92b5557a2b1a4ccc036f52"
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://awmiller.com/wp-content/uploads/2025/11/CNC-machining-and-automation-solutions.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "4a43d2e9be9d3b604a1e0157fa779eb5afdf36e805e861ffa708c734fe221254",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:42,eq=saturation=1.040:contrast=1.046:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "844008b9fcd0e0fd064485d3e143b35cc59016c8f52b47a53baca36ec141ec9b"
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://awmiller.com/wp-content/uploads/2025/11/Screenshot-2025-11-26-at-11.25.22-AM.png",
+      "sourceFile": "reference-2.png",
+      "sourceSha256": "843289de9a4340a90f8f6b49cddae4adeb6f17e6858d8c56c321ab9b8a738bab",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:42,eq=saturation=0.940:contrast=1.010:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "385718b4ddce8ad584d4cf2ce3bbe2a69623b034d5f5b58ebc3d03f0c100bb1f"
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://awmiller.com/wp-content/uploads/2025/11/CNC-machining-and-automation-solutions.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "4a43d2e9be9d3b604a1e0157fa779eb5afdf36e805e861ffa708c734fe221254",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:42,eq=saturation=0.965:contrast=1.064:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "596d728e0f395eb1c07196e5c89a8e4eea35dc77332a5eac21ea174aae6a9ca1"
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://awmiller.com/wp-content/uploads/2025/11/Screenshot-2025-11-26-at-11.25.22-AM.png",
+      "sourceFile": "reference-2.png",
+      "sourceSha256": "843289de9a4340a90f8f6b49cddae4adeb6f17e6858d8c56c321ab9b8a738bab",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:42,eq=saturation=0.990:contrast=1.028:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "b4a292b688ef9cb6917305940117838b954418fa6dabb6ee731805246a6c3da3"
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://awmiller.com/wp-content/uploads/2025/11/CNC-machining-and-automation-solutions.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "4a43d2e9be9d3b604a1e0157fa779eb5afdf36e805e861ffa708c734fe221254",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:84,eq=saturation=1.015:contrast=1.082:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "928a6ffff95ec8d568bd752879de64dc53fa270ad0d95de917ec036975db2465"
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://awmiller.com/wp-content/uploads/2025/11/Screenshot-2025-11-26-at-11.25.22-AM.png",
+      "sourceFile": "reference-2.png",
+      "sourceSha256": "843289de9a4340a90f8f6b49cddae4adeb6f17e6858d8c56c321ab9b8a738bab",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:84,eq=saturation=1.040:contrast=1.046:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "37f59f15b463c9e5de450a6cffc252b192c4bef5bb256601887ceebd1d652224"
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://awmiller.com/wp-content/uploads/2025/11/CNC-machining-and-automation-solutions.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "4a43d2e9be9d3b604a1e0157fa779eb5afdf36e805e861ffa708c734fe221254",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:84,eq=saturation=0.940:contrast=1.010:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "d6d2b9410472f77c81ae4d01d25809d04a3c5ffba3e84594f4a138c6ae29c775"
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://awmiller.com/wp-content/uploads/2025/11/Screenshot-2025-11-26-at-11.25.22-AM.png",
+      "sourceFile": "reference-2.png",
+      "sourceSha256": "843289de9a4340a90f8f6b49cddae4adeb6f17e6858d8c56c321ab9b8a738bab",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:84,eq=saturation=0.965:contrast=1.064:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "dda77449f59df952367ea23ae4f6d5382f3910e10766224e41434086e3b9e2dc"
+    }
+  ],
+  "fonts": {
+    "pair": {
+      "id": "syne-work",
+      "display": "Syne",
+      "text": "Work Sans"
+    },
+    "source": "Google Fonts CSS API",
+    "files": [
+      {
+        "file": "font-display-400.woff2",
+        "sha256": "68b623f0e45b905041b2edb9b2e4f563a505f13db1cd06b5f1946eb2e1f47048"
+      },
+      {
+        "file": "font-display-700.woff2",
+        "sha256": "68b623f0e45b905041b2edb9b2e4f563a505f13db1cd06b5f1946eb2e1f47048"
+      },
+      {
+        "file": "font-text-400.woff2",
+        "sha256": "1dd49afc07fb2231b2ff686cbf007725fb2742271bb1f28ebd98f22a0d817343"
+      },
+      {
+        "file": "font-text-700.woff2",
+        "sha256": "1dd49afc07fb2231b2ff686cbf007725fb2742271bb1f28ebd98f22a0d817343"
+      }
+    ]
+  }
+}

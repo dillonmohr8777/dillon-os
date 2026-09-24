@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "generatedBy": "Prospect Radar Next 20",
+  "impeccableVersion": "4.0.4",
+  "mode": "Persuade",
+  "direction": "image first",
+  "tokens": {
+    "palette": {
+      "paper": "#F4E7EC",
+      "ink": "#331D20",
+      "accent": "#9C2E40",
+      "accent2": "#E7A843",
+      "panel": "#E9D1DB",
+      "deep": "#401C25",
+      "onPaper": "#331D20",
+      "onAccent": "#FFFFFF",
+      "onAccent2": "#331D20",
+      "onPanel": "#331D20",
+      "onDeep": "#FFFFFF",
+      "border": "1px",
+      "radius": "10px"
+    },
+    "fonts": {
+      "id": "newsreader-figtree",
+      "display": "Newsreader",
+      "text": "Figtree"
+    }
+  },
+  "exactLogoSha256": "e33f6f6548e8515e2c88774731ce2e497ad2b9892419525810d9da67ee5c6ed4"
+}

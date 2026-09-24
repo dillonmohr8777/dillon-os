@@ -1,0 +1,168 @@
+{
+  "slug": "kc-s-alley",
+  "preparedAt": "2026-09-17T09:23:02.977Z",
+  "sourceSite": "https://kc-alley.com/",
+  "sourceFinalUrl": "https://kc-alley.com/",
+  "sourcePageSha256": "49744f300e616ba89744bab2fc5c4c5cb837b646c9e11adb4f12602504bd2d95",
+  "exactLogoRequired": true,
+  "exactLogoSha256": "4db787234b762ceac05a6ea27df851214f7147a764c7d9e6927a0db68f25a0b0",
+  "firstPartyDerivativePolicy": "Content visuals preserve first-party source photography while adapting crop and tonal balance for the private mobile concept. They are not evidence of additional projects or outcomes.",
+  "generatedCompositionReference": "automation/prospect-radar-next20/.impeccable/mocks/architerra-mobile-three-directions.png",
+  "assets": [
+    {
+      "role": "exact identity",
+      "output": "logo.png",
+      "sourceUrl": "https://static.spotapps.co/website_images/ab_websites/158612_website_v1/logo.png",
+      "sourceSha256": "4db787234b762ceac05a6ea27df851214f7147a764c7d9e6927a0db68f25a0b0",
+      "outputSha256": "4db787234b762ceac05a6ea27df851214f7147a764c7d9e6927a0db68f25a0b0",
+      "transformation": "none; exact first-party transparent asset",
+      "transparent": true
+    },
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://static.spotapps.co/website_images/ab_websites/158612_website_v1/about_left.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "8ecfb507caf1df9f237b0aff634f2d0af287e5847c55829f24bc36dadf8dab1f",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=0.965:contrast=1.028:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "b052a09cbdfa2fc801f712402c675774c7c6c4770281807b84582c03326f452c"
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://static.spotapps.co/spots/83/4ba0ea73d84ecf968474a562715859/full",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "485c7493ada0e3a956c04c78a7aa2c7d2d35a72b9c34c1bd6f089beff0a5680a",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:0,eq=saturation=0.990:contrast=1.082:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "a05ad505a4b6b5c7453267f6d19d3eadb6bebdfacf85df1390a32f81aae7c1fd"
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://static.spotapps.co/spots/2c/2a1263e1d24174a679575f99a6d854/full",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "57c38e949a7651930e69625b6a7f316eee7526f1f37e40eb36255dc7021f3333",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:0,eq=saturation=1.015:contrast=1.046:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "6b34283388945cc510703d71f9e52f395da7f4576475b520d4400efcedfec6bd"
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://static.spotapps.co/website_images/ab_websites/158612_website_v1/about_left.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "8ecfb507caf1df9f237b0aff634f2d0af287e5847c55829f24bc36dadf8dab1f",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:0,eq=saturation=1.040:contrast=1.010:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "80e6b91c132a16a8dffc1f6e81f4621e2ba8159fdd4c6b4d0fa1062f3ad509a8"
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://static.spotapps.co/spots/83/4ba0ea73d84ecf968474a562715859/full",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "485c7493ada0e3a956c04c78a7aa2c7d2d35a72b9c34c1bd6f089beff0a5680a",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:42,eq=saturation=0.940:contrast=1.064:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "f93311bd8ffc8594f50d4ad9084cd257f1300fc2ba32b1408ae4bd625a83e2d4"
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://static.spotapps.co/spots/2c/2a1263e1d24174a679575f99a6d854/full",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "57c38e949a7651930e69625b6a7f316eee7526f1f37e40eb36255dc7021f3333",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:42,eq=saturation=0.965:contrast=1.028:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "62ee7ba711efba91225e3fc6830774e3d8b741f189b9d6c85ff8c856828219c4"
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://static.spotapps.co/website_images/ab_websites/158612_website_v1/about_left.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "8ecfb507caf1df9f237b0aff634f2d0af287e5847c55829f24bc36dadf8dab1f",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:42,eq=saturation=0.990:contrast=1.082:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "5565ad1cc0fd919eca0e42d9ba7f39d3dee144cb3846b5344286350ca7b61bc8"
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://static.spotapps.co/spots/83/4ba0ea73d84ecf968474a562715859/full",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "485c7493ada0e3a956c04c78a7aa2c7d2d35a72b9c34c1bd6f089beff0a5680a",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:42,eq=saturation=1.015:contrast=1.046:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "ff3d3372a3db9351f567036752ab59b4e978416d7b2aeef6a780e6d7630027ba"
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://static.spotapps.co/spots/2c/2a1263e1d24174a679575f99a6d854/full",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "57c38e949a7651930e69625b6a7f316eee7526f1f37e40eb36255dc7021f3333",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:84,eq=saturation=1.040:contrast=1.010:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "29e009c011153fe78a0a6ab63e916bd914aae6f75cfa4c685bb17b3b1e2483b9"
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://static.spotapps.co/website_images/ab_websites/158612_website_v1/about_left.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "8ecfb507caf1df9f237b0aff634f2d0af287e5847c55829f24bc36dadf8dab1f",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:84,eq=saturation=0.940:contrast=1.064:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "c587908afe3895de72cf24309489e509b1ecef18930e3750261d47ceda67fa39"
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://static.spotapps.co/spots/83/4ba0ea73d84ecf968474a562715859/full",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "485c7493ada0e3a956c04c78a7aa2c7d2d35a72b9c34c1bd6f089beff0a5680a",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:84,eq=saturation=0.965:contrast=1.028:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "312a83e9f4dda63983153078539efca948c98ce7bd11a7b82f1e712274431f9e"
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://static.spotapps.co/spots/2c/2a1263e1d24174a679575f99a6d854/full",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "57c38e949a7651930e69625b6a7f316eee7526f1f37e40eb36255dc7021f3333",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:84,eq=saturation=0.990:contrast=1.082:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "e6d4a597a9d37c3a100c57378d24318ecbbc65d326a5dee24cf07e7ed7490c36"
+    }
+  ],
+  "fonts": {
+    "pair": {
+      "id": "bricolage-manrope",
+      "display": "Bricolage Grotesque",
+      "text": "Manrope"
+    },
+    "source": "Google Fonts CSS API",
+    "files": [
+      {
+        "file": "font-display-400.woff2",
+        "sha256": "a97804dc9fbe5fc972a08018c5eda4dab7ef2346f64c57e61419d05e6de4ea1c"
+      },
+      {
+        "file": "font-display-700.woff2",
+        "sha256": "a97804dc9fbe5fc972a08018c5eda4dab7ef2346f64c57e61419d05e6de4ea1c"
+      },
+      {
+        "file": "font-text-400.woff2",
+        "sha256": "a30ddcd349703aff7464c34bef3fffdff405ee50c113440d7c8693c02d210972"
+      },
+      {
+        "file": "font-text-700.woff2",
+        "sha256": "a30ddcd349703aff7464c34bef3fffdff405ee50c113440d7c8693c02d210972"
+      }
+    ]
+  }
+}

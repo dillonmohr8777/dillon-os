@@ -1,0 +1,123 @@
+{
+  "sourceUrl": "https://www.ftaphiladelphia.com/",
+  "finalUrl": "https://www.ftaphiladelphia.com/",
+  "sourceDomain": "ftaphiladelphia.com",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=UTF-8",
+  "pageSha256": "d6da13aac62229366ddbaf2419fe56dc2061678d7241e7a7562388def39eca77",
+  "title": "Friendly Tax Advisors – Friendly and Reliable Tax Services",
+  "description": "",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "friendly",
+      "tax",
+      "advisors"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\friendly-tax-advisors\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://www.ftaphiladelphia.com/wp-content/uploads/2023/01/FTA-Full-Color-Logo.png",
+    "sourceEvidence": "IMG custom-logo  friendly tax advisors",
+    "type": "png",
+    "dimensions": {
+      "width": 291,
+      "height": 150
+    },
+    "sha256": "743a57b10229e7dde0ccef3c3e4537e30414fde03cd86466e3d54bae61011b29",
+    "sourceSha256": "743a57b10229e7dde0ccef3c3e4537e30414fde03cd86466e3d54bae61011b29",
+    "sourceType": "png",
+    "sourceFileName": null,
+    "transformation": "none; exact first-party transparent asset",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "transparentRatio": 0.7179,
+      "edgeTransparentRatio": 0.9535,
+      "contentRatio": 0.2821,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 2572
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\friendly-tax-advisors\\reference-1.jpg",
+      "fileName": "reference-1.jpg",
+      "sourceUrl": "https://www.ftaphiladelphia.com/wp-content/uploads/2023/01/actionvance-guy5aS3GvgA-unsplash-1-2048x1365.jpg",
+      "sourceEvidence": "IMG wp-block-cover__image-background wp-image-5301",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 1365,
+        "width": 2048
+      },
+      "sha256": "81f8175a3549af4612d123226575ccdf367403e4797478aa52c57b9d49682cb4",
+      "bytes": 581542,
+      "visual": {
+        "ok": true,
+        "lumaRange": 255,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\friendly-tax-advisors\\reference-2.jpg",
+      "fileName": "reference-2.jpg",
+      "sourceUrl": "https://www.ftaphiladelphia.com/wp-content/uploads/2023/01/Lyn-OBrien-McDevitt-square-1-1536x1536.jpg",
+      "sourceEvidence": "IMG wp-image-5339 size-full",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 1536,
+        "width": 1536
+      },
+      "sha256": "3c6a156f07a438e30dff8a8bc6d66a6a29d3fdb1448013bdf5999ca5b6b97185",
+      "bytes": 279895,
+      "visual": {
+        "ok": true,
+        "lumaRange": 254.1,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\friendly-tax-advisors\\reference-3.jpg",
+      "fileName": "reference-3.jpg",
+      "sourceUrl": "https://www.ftaphiladelphia.com/wp-content/uploads/2023/01/Kaitlyn-Miller-Cox-square.jpg",
+      "sourceEvidence": "IMG wp-image-5340 size-medium",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 489,
+        "width": 489
+      },
+      "sha256": "298b61d39b4e8648517d05e7161cf4d70bd888065c5197f4653d85a23daac5b8",
+      "bytes": 128754,
+      "visual": {
+        "ok": true,
+        "lumaRange": 254.8,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [
+    {
+      "url": "http://www.ftaphiladelphia.com/wp-content/uploads/2023/01/clinical_notes_FILL0_wght400_GRAD0_opsz48.png",
+      "reason": "reference image is too small"
+    },
+    {
+      "url": "http://www.ftaphiladelphia.com/wp-content/uploads/2023/01/gavel_FILL0_wght400_GRAD0_opsz48-1.png",
+      "reason": "reference image is too small"
+    },
+    {
+      "url": "http://www.ftaphiladelphia.com/wp-content/uploads/2023/01/forum_FILL0_wght400_GRAD0_opsz48.png",
+      "reason": "reference image is too small"
+    }
+  ],
+  "brandColors": [
+    "#003388",
+    "#0693e3",
+    "#00d084",
+    "#fcb900",
+    "#7a00df"
+  ],
+  "checkedAt": "2026-09-18T09:21:47.299Z"
+}

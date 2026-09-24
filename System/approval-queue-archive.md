@@ -1,6 +1,6 @@
 ---
 tags: [system, approvals, archive]
-last_updated: 2026-09-15T16:05Z
+last_updated: 2026-09-18T17:11Z
 ---
 
 # Approval Queue Archive
@@ -92,3 +92,26 @@ Moved from the active queue because each item was already explicitly completed.
 
 - [x] 2026-09-14 -- [Cadence / the driver has no scheduled task, so it only runs when someone remembers] -- `_os/automation/cadence/README.md` describes three scheduled tasks reading the manifests. None exist: no Task Scheduler entry matches "cadence". Every run to date was hand-started, which means the layer built to detect silence is itself silent whenever nobody starts it. `System/sweep-install.md` carries the registration for both Windows and launchd -- Source: Get-ScheduledTask 2026-09-14; daily-sweep cadence probe -- Risk: high
   — ARCHIVED 2026-09-15, STALE DUPLICATE: the archive already records the corrected version of this item. Four Cadence tasks are registered; the unresolved issue is their Interactive logon mode, not their existence. Source: System/operating-status.md, verified 2026-09-15.
+
+## Completed batch 2026-09-18 - queue size maintenance
+
+Moved from the active queue because all eight gateway approvals were explicitly
+superseded by the 2026-09-16 heartbeat-monitor correction. No restart, config
+change, token rotation, poller shutdown, or broadcast was performed.
+
+- [x] 2026-07-16 -- [Hermes Gateway / System] -- Approve config.yaml change kanban.dispatcher_embedded=false to break recurrence #14 dispatcher deadlock; local-only, no token rotation -- Source: System/gateway-health.md -- Evidence: "consider config.yaml `kanban.dispatcher_embedded=false` to break deadlock recurrence (14th freeze at same embed point)" -- Risk: medium
+  -- ARCHIVED 2026-09-18, SUPERSEDED: the monitor had read state-change time as heartbeat time. The real 30-second heartbeat was fresh, `kanban.dispatch_in_gateway` was already false, and no action was needed.
+- [x] 2026-07-16 -- [Hermes Gateway / System] -- Approve local-only soft-restart of Hermes Gateway PID 10864 after 294m heartbeat freeze at dispatcher embedded recurrence #29; no token rotation, no broadcast -- Source: System/gateway-health.md -- Evidence: "heartbeat 17671s (294.5m) STALE CRITICAL, PID ALIVE 198MB, recurrence #29 freeze at dispatcher embedded, conflicts 0/0/0" -- Risk: low
+  -- ARCHIVED 2026-09-18, SUPERSEDED: the 2026-09-16 correction found a fresh real heartbeat and healthy endpoints. No restart was needed or performed.
+- [x] 2026-07-18 -- [Hermes Gateway / System] -- Approve local-only soft-restart of Hermes Gateway PID 21992 after 22.3h heartbeat freeze + 11.6h log freeze post-conflict storm (503/24h, external poller reappeared Jul17); no token rotation, no broadcast; verify heartbeat <120s and log advances -- Source: System/gateway-health.md -- Evidence: "heartbeat 80490s (1341.5m / 22.36h) STALE CRITICAL, log frozen 11.6h at terminated by other getUpdates, conflicts 0/0/503 storm Jul17 14:18- Jul18 06:22" -- Risk: low
+  -- ARCHIVED 2026-09-18, SUPERSEDED by the 2026-09-16 heartbeat-monitor correction; no restart was needed or performed.
+- [x] 2026-07-19 -- [Hermes Gateway / System] -- ACTIVE CONFLICT STORM 81/h - Approve hunt and shutdown of external Telegram poller using same token (bot 8542609781 @DillonHermesAgentBot). Local PID 10312 alive; heartbeat age 202s and log advances, with 81/247/247 conflicts in 1h/6h/24h from the required 2,000-line tail. No token rotation, no broadcast. Check VPS/2nd laptop/Cursor env/WSL. Source: System/gateway-health.md -- Evidence: "2026-07-19 17:01:13 EDT latest WARNING polling conflict; 81 in 1h, PID 10312 alive, log advancing" -- Risk: medium
+  -- ARCHIVED 2026-09-18, SUPERSEDED by the 2026-09-16 heartbeat-monitor correction; no poller shutdown or token rotation was performed.
+- [x] 2026-07-25 -- [Hermes Gateway / System] -- ACTIVE CONFLICT STORM 28/h - Approve read-only attribution and scoped shutdown of the competing external Telegram poller using the same token; preserve unrelated jobs and keep local gateway PID 12580 alive. No token rotation, no broadcast, no restart-first response -- Source: System/gateway-health.md -- Evidence: "2026-07-24 23:51:51.052 EDT (2026-07-25T03:51:51.052Z); 28/439/996 conflicts in available 1h/6h/24h tail (24h lower bound after log rotation), PID 12580 alive, heartbeat age 109241s, log age 2357s" -- Risk: medium
+  -- ARCHIVED 2026-09-18, SUPERSEDED by the 2026-09-16 heartbeat-monitor correction; no poller shutdown or token rotation was performed.
+- [x] 2026-07-29 -- [Hermes Gateway / System] -- ACTIVE CONFLICT STORM 21/h - Approve read-only attribution and scoped shutdown of the competing external Telegram poller using the same token; preserve unrelated jobs and keep local gateway PID 14756 alive. No token rotation, no broadcast, no restart-first response -- Source: System/gateway-health.md -- Evidence: "2026-07-29T20:40:08.365Z latest conflict; 21/519/966 conflicts in required 2,000-line tail (24h lower bound), PID 14756 alive but heartbeat/log frozen at dispatcher embed; heartbeat age 2527s, log age 2521s" -- Risk: medium
+  -- ARCHIVED 2026-09-18, SUPERSEDED by the 2026-09-16 heartbeat-monitor correction; no poller shutdown or token rotation was performed.
+- [x] 2026-07-30 -- [Hermes Gateway / System] -- ACTIVE CONFLICT STORM 24/h - Approve read-only attribution and scoped shutdown of the competing external Telegram poller using the same token; preserve unrelated jobs and keep local gateway PID 20032 alive. No token rotation, no broadcast, no restart-first response -- Source: System/gateway-health.md -- Evidence: "2026-07-30T13:31:26.114Z latest conflict; 24/24/776 conflicts in required 2,000-line tail, PID 20032 alive, log current, heartbeat age 612s" -- Risk: medium
+  -- ARCHIVED 2026-09-18, SUPERSEDED by the 2026-09-16 heartbeat-monitor correction; no poller shutdown or token rotation was performed.
+- [x] 2026-07-30 -- [Hermes Gateway / System] -- ACTIVE CONFLICT STORM 93/h - Approve read-only attribution and scoped shutdown of the competing external Telegram poller using the same token; preserve unrelated jobs and keep local gateway PID 20032 alive. No token rotation, no broadcast, no restart-first response -- Source: System/gateway-health.md -- Evidence: "2026-07-30T14:01:16.674Z latest conflict; 93/93/775 conflicts in required 2,000-line tail, PID 20032 alive, heartbeat age 2412s, log age 9s" -- Risk: medium
+  -- ARCHIVED 2026-09-18, SUPERSEDED by the 2026-09-16 heartbeat-monitor correction; no poller shutdown or token rotation was performed.

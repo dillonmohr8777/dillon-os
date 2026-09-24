@@ -30,6 +30,7 @@ and reusable memory.
 
 ## Operating priorities
 
+- [[05_Projects/2026-07-29 - Complete Dillon OS second brain|Complete Dillon OS second brain]] · [[07_Reviews/2026-09-19 - Agent and source estate coverage|current source coverage]]
 - [[05_Projects/2026-08-24 - Perfect outcome graph engineering|Perfect outcome graph engineering]]
 - [[05_Projects/2026-07-30 - Dillon OS five-goal operating plan|Five-goal operating plan]]
 - [[05_Projects/2026-07-30 - Qualified pipeline recovery|Qualified pipeline recovery]]

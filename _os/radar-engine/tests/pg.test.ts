@@ -2,8 +2,138 @@
 
 const { describe, it } = require('node:test');
 const assert = require('node:assert/strict');
-const { migrate, createStore } = require('../lib/store.ts');
+const { migrate, createStore, PgStore } = require('../lib/store.ts');
+const { PREFIX } = require('../lib/crypto.ts');
+const { loadMigrationSchema } = require('../lib/schema.ts');
 const { processJobs } = require('../lib/jobs.ts');
+const { submitIntake, processIntakeAuditJob } = require('../lib/pipeline.ts');
+const { createAdapters } = require('../lib/adapters.ts');
+const { loadConfig } = require('../lib/config.ts');
+
+it('rolls back an incomplete intake and repairs a missing audit job on retry', async () => {
+  const saved = Object.fromEntries(['intake_submissions', 'jobs', 'events'].map((name) => [name, new Map()]));
+  let staged = [];
+  let failEvent = true;
+  let rollbacks = 0;
+  let locks = 0;
+  const client = {
+    async query(sql, args = []) {
+      if (sql === 'BEGIN') { staged = []; return { rows: [] }; }
+      if (sql === 'COMMIT') {
+        for (const [table, row] of staged) saved[table].set(row.id, row);
+        staged = [];
+        return { rows: [] };
+      }
+      if (sql === 'ROLLBACK') { staged = []; rollbacks += 1; return { rows: [] }; }
+      if (sql.includes('pg_advisory_xact_lock')) { locks += 1; return { rows: [] }; }
+      if (sql.startsWith('SELECT * FROM intake_submissions')) {
+        return { rows: [...saved.intake_submissions.values()].filter((row) => args[0].includes(row.website)) };
+      }
+      if (sql.startsWith('SELECT * FROM jobs')) {
+        return { rows: [...saved.jobs.values()].filter((row) => row.idempotency_key === args[0]) };
+      }
+      throw new Error(`unexpected SQL: ${sql}`);
+    },
+    release() {},
+  };
+  const store = new PgStore({ connect: async () => client });
+  store.bumpRateLimit = async () => ({ allowed: true });
+  store.upsertRow = async (table, row, executor) => {
+    assert.equal(executor, client);
+    if (table === 'events' && failEvent) throw new Error('synthetic event write failure');
+    staged.push([table, row]);
+  };
+  const cfg = { ...loadConfig({ databaseUrl: '' }), captcha: 'off' };
+  const body = {
+    name: 'Jordan Hale', phone: '5550100199', email: 'jordan@example.org',
+    website: 'https://www.example.org', business_description: 'Local roofing company',
+    goals: 'More qualified leads', consent_analyze: true,
+  };
+  const accept = (campaignId = 'campaign-test') => submitIntake(store, createAdapters(cfg), cfg, { id: campaignId }, body);
+
+  await assert.rejects(accept(), /synthetic event write failure/);
+  assert.equal(rollbacks, 1);
+  for (const table of Object.keys(saved)) {
+    assert.equal(saved[table].size, 0, `${table} persisted after rollback`);
+    assert.equal(store.all(table).length, 0, `${table} leaked into cache`);
+  }
+
+  failEvent = false;
+  const accepted = await accept();
+  assert.equal(accepted.ok, true);
+  assert.equal(accepted.duplicate, false);
+  assert.equal(saved.intake_submissions.size, 1);
+  assert.equal(saved.jobs.size, 1);
+  assert.equal(saved.events.size, 1);
+  assert.equal([...saved.jobs.values()][0].payload.submission_id, accepted.submission.id);
+  assert.equal([...saved.events.values()][0].correlation_id, accepted.submission.id);
+  assert.equal(store.all('jobs').length, 1);
+
+  saved.jobs.clear();
+  store.memory.tables.jobs.clear();
+  const retried = await accept('campaign-second');
+  assert.equal(retried.ok, true);
+  assert.equal(retried.duplicate, true);
+  assert.equal(retried.submission.duplicate_of, accepted.submission.id);
+  assert.equal(saved.jobs.size, 1);
+  assert.equal([...saved.jobs.values()][0].payload.submission_id, accepted.submission.id);
+  assert.equal(saved.events.size, 2);
+  assert.equal([...saved.jobs.values()][0].payload.campaign_id, 'campaign-test');
+  assert.equal(locks, 3);
+});
+
+it('reads claimed intake data and campaign from shared PostgreSQL storage', async () => {
+  const previousKey = process.env.RADAR_V2_FIELD_KEY;
+  process.env.RADAR_V2_FIELD_KEY = 'cd'.repeat(32);
+  const tables = new Map();
+  const schema = loadMigrationSchema();
+  const pool = {
+    async query(sql, values = []) {
+      const insert = sql.match(/^INSERT INTO (\w+) \(([^)]+)\) VALUES/);
+      if (insert) {
+        const [, table, columns] = insert;
+        const row = Object.fromEntries(columns.split(', ').map((column, index) => [column.replaceAll('"', ''), values[index]]));
+        for (const column of schema[table].jsonb) {
+          if (typeof row[column] === 'string') row[column] = JSON.parse(row[column]);
+        }
+        if (!tables.has(table)) tables.set(table, new Map());
+        tables.get(table).set(row.id, row);
+        return { rows: [] };
+      }
+      const select = sql.match(/^SELECT \* FROM (\w+) WHERE id = \$1$/);
+      if (select) return { rows: [tables.get(select[1])?.get(values[0])].filter(Boolean) };
+      throw new Error(`unexpected SQL: ${sql}`);
+    },
+  };
+
+  try {
+    const writer = new PgStore(pool, schema);
+    const campaign = writer.insert('campaigns', {
+      id: 'campaign-shared', name: 'Shared campaign', allowed_offers: ['rebuild'],
+    });
+    const submission = writer.insert('intake_submissions', {
+      id: 'intake-shared', campaign_id: campaign.id, requester_email: 'private@example.org',
+      business_description: 'Private business details', website: 'https://example.org',
+    });
+    await writer.flush();
+    assert.ok(tables.get('intake_submissions').get(submission.id).requester_email.startsWith(PREFIX));
+
+    const worker = new PgStore(pool, schema);
+    assert.equal(worker.get('intake_submissions', submission.id), null);
+    const freshSubmission = await worker.readThrough('intake_submissions', submission.id);
+    const freshCampaign = await worker.readThrough('campaigns', submission.campaign_id);
+    assert.equal(freshSubmission.requester_email, 'private@example.org');
+    assert.equal(freshSubmission.business_description, 'Private business details');
+    assert.deepEqual(freshCampaign.allowed_offers, ['rebuild']);
+    await assert.rejects(
+      processIntakeAuditJob(worker, {}, { submission_id: 'missing', campaign_id: 'missing' }),
+      /intake submission was not found/
+    );
+  } finally {
+    if (previousKey == null) delete process.env.RADAR_V2_FIELD_KEY;
+    else process.env.RADAR_V2_FIELD_KEY = previousKey;
+  }
+});
 
 describe('postgres repositories', () => {
   it('applies migrations, hydrates, writes JSONB, and claims jobs with SKIP LOCKED', async (t) => {

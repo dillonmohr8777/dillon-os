@@ -4,7 +4,8 @@
   "type": "module",
   "description": "Claim verification against typesafe-ai/jev on the Vercel AI Gateway.",
   "scripts": {
-    "test": "node test-verify-claims.mjs"
+    "test": "node test-verify-claims.mjs && node test-choose-computer-action.mjs",
+    "choose:cua": "node choose-computer-action.mjs"
   },
   "dependencies": {
     "ai": "^7.0.105"

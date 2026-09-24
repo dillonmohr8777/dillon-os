@@ -1,0 +1,110 @@
+{
+  "sourceUrl": "https://www.rgsglaw.com/newtown-office",
+  "finalUrl": "https://www.rgsglaw.com/bucks-county/",
+  "sourceDomain": "rgsglaw.com",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=UTF-8",
+  "pageSha256": "94a0cb78d4c374474155e44f169a919e496b1dff4d93d3eca5629386c1c6c2f8",
+  "title": "Newtown Office | Rubin, Glickman, Steinberg & Gifford P.C.",
+  "description": "PA personal injury law firm Rubin, Glickman, Steinberg & Gifford has an office located in Newtown, Pennsylvania. Call today: 215-822-7575.",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "rubin",
+      "glickman",
+      "steinberg",
+      "gifford"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\rubin-glickman-steinberg-and-gifford-p-c\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://www.rgsglaw.com/wp-content/uploads/2024/02/logo-v2.png",
+    "sourceEvidence": "JSON-LD logo URL",
+    "type": "png",
+    "dimensions": {
+      "width": 2062,
+      "height": 369
+    },
+    "sha256": "f4e38d759761b30b368c7cc88641fdc9f7acc8ea994c6b255be2e2a5061e1174",
+    "sourceSha256": "704952fbbf409400e08a1b548c1b937ffd26167bc0c2d0be99106f6e8bee2749",
+    "sourceType": "png",
+    "sourceFileName": "logo-source.png",
+    "transformation": "flat border color rgb(71,112,76) removed by border-seeded flood fill at tolerance 32; geometry unchanged",
+    "borderSpread": 0,
+    "alpha": {
+      "ok": true,
+      "transparentRatio": 0.7489,
+      "edgeTransparentRatio": 0.9336,
+      "contentRatio": 0.2511,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 44083
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\rubin-glickman-steinberg-and-gifford-p-c\\reference-1.png",
+      "fileName": "reference-1.png",
+      "sourceUrl": "https://www.rgsglaw.com/wp-content/uploads/2026/03/National-39022-spec-ccUS-ed16-Year-Original.png",
+      "sourceEvidence": "IMG award image",
+      "type": "png",
+      "dimensions": {
+        "width": 1921,
+        "height": 2246
+      },
+      "sha256": "50fb9020d683325107e529f92a8b639f2c56cbf4d658c03534be8178b80360d8",
+      "bytes": 403680,
+      "visual": {
+        "ok": true,
+        "lumaRange": 255,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\rubin-glickman-steinberg-and-gifford-p-c\\reference-2.png",
+      "fileName": "reference-2.png",
+      "sourceUrl": "https://www.rgsglaw.com/wp-content/uploads/2026/03/2025-Best-Law-Firm-Badge-scaled.png",
+      "sourceEvidence": "IMG award image",
+      "type": "png",
+      "dimensions": {
+        "width": 2560,
+        "height": 880
+      },
+      "sha256": "d7dad98b7cd148443623fca1ad7050b51d8d713982eccfb6cccb896fce75757d",
+      "bytes": 229140,
+      "visual": {
+        "ok": true,
+        "lumaRange": 255,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [
+    {
+      "url": "https://www.rgsglaw.com/wp-content/uploads/2018/04/top-100.png",
+      "reason": "reference image is too small"
+    },
+    {
+      "url": "https://www.rgsglaw.com/wp-content/uploads/2018/06/pennsurban.jpg",
+      "reason": "reference image is too small"
+    },
+    {
+      "url": "https://www.rgsglaw.com/wp-content/uploads/2018/06/scales.jpg",
+      "reason": "reference image is too small"
+    },
+    {
+      "url": "https://www.rgsglaw.com/wp-content/uploads/2018/04/superlawyers.jpg",
+      "reason": "reference image is too small"
+    }
+  ],
+  "brandColors": [
+    "#003388",
+    "#c1ac7a",
+    "#e0c27a",
+    "#c9a84c",
+    "#00d084"
+  ],
+  "checkedAt": "2026-09-18T09:22:01.117Z"
+}

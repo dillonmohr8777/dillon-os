@@ -1,0 +1,168 @@
+{
+  "slug": "positano-ristorante",
+  "preparedAt": "2026-09-18T09:23:29.832Z",
+  "sourceSite": "https://www.positanoristorante.com/",
+  "sourceFinalUrl": "https://www.positanoristorante.com/",
+  "sourcePageSha256": "a9e75acb5e457fb7fd51d5ab90d5f0093dd8c0ecefb865df82d34a69c1d40859",
+  "exactLogoRequired": true,
+  "exactLogoSha256": "3e13c47f028c16c676371113025f83aa491fc0466a0af497d066b9d2c374107c",
+  "firstPartyDerivativePolicy": "Content visuals preserve first-party source photography while adapting crop and tonal balance for the private mobile concept. They are not evidence of additional projects or outcomes.",
+  "generatedCompositionReference": "automation/prospect-radar-next20/.impeccable/mocks/architerra-mobile-three-directions.png",
+  "assets": [
+    {
+      "role": "exact identity",
+      "output": "logo.png",
+      "sourceUrl": "https://www.positanoristorante.com/images/positano_logo.png",
+      "sourceSha256": "bb8db22bb4c5c5d418a959aa2f3b9f68ca59e145f8618cc3670bb65eae2b29dd",
+      "outputSha256": "3e13c47f028c16c676371113025f83aa491fc0466a0af497d066b9d2c374107c",
+      "transformation": "flat border color rgb(251,251,251) removed by border-seeded flood fill at tolerance 32; geometry unchanged",
+      "transparent": true
+    },
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.positanoristorante.com/images/pic01.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "fff6e3cdc323dcf69449222caf77056c54bde38c2a424d780534cb55df8077cf",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=0.965:contrast=1.028:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "a0c06fcfd955e10980c86ffc8727735281e234c9bb231cbf759f177335319b68"
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.positanoristorante.com/images/pic02.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "af15fc532c1cf714c916e44ea4c4023dc070ae888d83a38dfff80db95d507d5a",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:0,eq=saturation=0.990:contrast=1.082:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "26445ef6e2975736edb0efba574eea9b0bf3f739afb6ac0d8252ea2106e00f69"
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.positanoristorante.com/images/pic03.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "833bd7d73beab215a6952fc2fc81075d34eb36188d9d8fc8d6761e8fe98c1e67",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:0,eq=saturation=1.015:contrast=1.046:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "4811c5018519f5a457aebae5e6cc8f1de0d02dbbf653e8076177b8107640212a"
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.positanoristorante.com/images/pic01.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "fff6e3cdc323dcf69449222caf77056c54bde38c2a424d780534cb55df8077cf",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:0,eq=saturation=1.040:contrast=1.010:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "374b4b9c4b73188eac941d2e952d23c51177c711cf17b688198b6b0e98f172b7"
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.positanoristorante.com/images/pic02.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "af15fc532c1cf714c916e44ea4c4023dc070ae888d83a38dfff80db95d507d5a",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:42,eq=saturation=0.940:contrast=1.064:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "7011f065fd914d6113ae7a7548c2092299311897b429c115db359b1d1e08d531"
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.positanoristorante.com/images/pic03.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "833bd7d73beab215a6952fc2fc81075d34eb36188d9d8fc8d6761e8fe98c1e67",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:42,eq=saturation=0.965:contrast=1.028:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "6b85e9e2353bba4a249481dd012376509ce6aaf14543914f8c4b223ea25a1bf5"
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.positanoristorante.com/images/pic01.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "fff6e3cdc323dcf69449222caf77056c54bde38c2a424d780534cb55df8077cf",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:42,eq=saturation=0.990:contrast=1.082:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "74f630b899f3b6703f8b119cbac7f7891b9f3460ef6ffa5dfef084db470b0a22"
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.positanoristorante.com/images/pic02.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "af15fc532c1cf714c916e44ea4c4023dc070ae888d83a38dfff80db95d507d5a",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:42,eq=saturation=1.015:contrast=1.046:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "5ecae327630496eacd78edbcee3b3d94df13ba38b71fd669148cf7555b89b0f1"
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.positanoristorante.com/images/pic03.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "833bd7d73beab215a6952fc2fc81075d34eb36188d9d8fc8d6761e8fe98c1e67",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:84,eq=saturation=1.040:contrast=1.010:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "b39e24540189ca2fa9fcb1131d4303ff32a5b645086fb478976965349786c383"
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.positanoristorante.com/images/pic01.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "fff6e3cdc323dcf69449222caf77056c54bde38c2a424d780534cb55df8077cf",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:84,eq=saturation=0.940:contrast=1.064:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "31db9f6e7a6f1d08807b8114434ecab3b6039081e598d64d5387f09f1a3bd1fa"
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.positanoristorante.com/images/pic02.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "af15fc532c1cf714c916e44ea4c4023dc070ae888d83a38dfff80db95d507d5a",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:84,eq=saturation=0.965:contrast=1.028:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "030c45e88bfe5940133e6c96f7c0ad4a58a895ad9b56d16b71ba7b31b581f144"
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.positanoristorante.com/images/pic03.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "833bd7d73beab215a6952fc2fc81075d34eb36188d9d8fc8d6761e8fe98c1e67",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:84,eq=saturation=0.990:contrast=1.082:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "43026a27cedd5d2a371951a6183094bde5242ef49acc41dd16d257f6e967e25a"
+    }
+  ],
+  "fonts": {
+    "pair": {
+      "id": "bricolage-manrope",
+      "display": "Bricolage Grotesque",
+      "text": "Manrope"
+    },
+    "source": "Google Fonts CSS API",
+    "files": [
+      {
+        "file": "font-display-400.woff2",
+        "sha256": "a97804dc9fbe5fc972a08018c5eda4dab7ef2346f64c57e61419d05e6de4ea1c"
+      },
+      {
+        "file": "font-display-700.woff2",
+        "sha256": "a97804dc9fbe5fc972a08018c5eda4dab7ef2346f64c57e61419d05e6de4ea1c"
+      },
+      {
+        "file": "font-text-400.woff2",
+        "sha256": "a30ddcd349703aff7464c34bef3fffdff405ee50c113440d7c8693c02d210972"
+      },
+      {
+        "file": "font-text-700.woff2",
+        "sha256": "a30ddcd349703aff7464c34bef3fffdff405ee50c113440d7c8693c02d210972"
+      }
+    ]
+  }
+}

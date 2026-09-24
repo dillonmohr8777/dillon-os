@@ -1,0 +1,168 @@
+{
+  "slug": "panitch-schwarze-belisario-and-nadel",
+  "preparedAt": "2026-09-18T09:24:24.016Z",
+  "sourceSite": "https://www.panitchlaw.com/",
+  "sourceFinalUrl": "https://www.panitchlaw.com/",
+  "sourcePageSha256": "e11b446980daf48946b26bb6737ce74674567777693b8acbb11911573f102d3c",
+  "exactLogoRequired": true,
+  "exactLogoSha256": "3857647659ff305c0514298ced8285c066aeb5e255c2232c6e8d47baf6085e2d",
+  "firstPartyDerivativePolicy": "Content visuals preserve first-party source photography while adapting crop and tonal balance for the private mobile concept. They are not evidence of additional projects or outcomes.",
+  "generatedCompositionReference": "automation/prospect-radar-next20/.impeccable/mocks/architerra-mobile-three-directions.png",
+  "assets": [
+    {
+      "role": "exact identity",
+      "output": "logo.png",
+      "sourceUrl": "https://www.panitchlaw.com/app/uploads/2022/01/Screen-Shot-2022-01-17-at-11.07.23-AM.png",
+      "sourceSha256": "9a110fdbf6bcc00c516ee78fbac63d5c8c4ad23ef70ed80d55b1f7445116dadc",
+      "outputSha256": "3857647659ff305c0514298ced8285c066aeb5e255c2232c6e8d47baf6085e2d",
+      "transformation": "flat border color rgb(5,16,47) removed by border-seeded flood fill at tolerance 32; geometry unchanged",
+      "transparent": true
+    },
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.panitchlaw.com/app/uploads/2026/01/Our-Work-Website-2025-Philadelphia-Candid-for-Marketing-Chad-and-Holly-scaled.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "46921eebcecbf5b7de917d7a4aa123e80203850d2fdfc515260fd700cacaa17e",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=0.940:contrast=1.010:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "15cd94bc9ddff72be2670c27e7f8e71ee417650e0b5df3156eab0abf87cfcea3"
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.panitchlaw.com/app/uploads/2026/01/Our-Work-Website-2025-Philadelphia-Candid-for-Marketing-Chad-and-Holly-2048x1365.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "9ca7a7d986f74d867b5814e783cb9d705b272375d54432730268e19bc4b5b3d9",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:0,eq=saturation=0.965:contrast=1.064:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "8281b0db44b500a8b877605085387da6ec525300809fa65268892895b6364d8a"
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.panitchlaw.com/app/uploads/2026/01/Our-Team-Website-Photo-Ikenna-Ava-Julianna-Stephany-Travis-Dennis-scaled-e1774905512650-2048x1507.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "916ba9731f18558bac2c0cd088a881e28e4453d71e1a54af4b011ea832dfd98c",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:0,eq=saturation=0.990:contrast=1.028:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "a32ad8b185901192bac627bc0b35f552adc00be86409eddf67b5a8bb75cfe4a3"
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.panitchlaw.com/app/uploads/2026/01/Our-Work-Website-2025-Philadelphia-Candid-for-Marketing-Chad-and-Holly-scaled.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "46921eebcecbf5b7de917d7a4aa123e80203850d2fdfc515260fd700cacaa17e",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:0,eq=saturation=1.015:contrast=1.082:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "013a69fb62d6c0b06ef9b380979a894891b7f3fc0927f89f4a58ba484311e47a"
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.panitchlaw.com/app/uploads/2026/01/Our-Work-Website-2025-Philadelphia-Candid-for-Marketing-Chad-and-Holly-2048x1365.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "9ca7a7d986f74d867b5814e783cb9d705b272375d54432730268e19bc4b5b3d9",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:42,eq=saturation=1.040:contrast=1.046:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "dd83060f269eafdf4e5b03bab0d6f93ffecd175e6346e28e326a5aa01279fbdc"
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.panitchlaw.com/app/uploads/2026/01/Our-Team-Website-Photo-Ikenna-Ava-Julianna-Stephany-Travis-Dennis-scaled-e1774905512650-2048x1507.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "916ba9731f18558bac2c0cd088a881e28e4453d71e1a54af4b011ea832dfd98c",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:42,eq=saturation=0.940:contrast=1.010:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "3888e57004dee9c920e6fa0d6ef8d4236993e400fd3ea3f827dc562004a7e9a9"
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.panitchlaw.com/app/uploads/2026/01/Our-Work-Website-2025-Philadelphia-Candid-for-Marketing-Chad-and-Holly-scaled.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "46921eebcecbf5b7de917d7a4aa123e80203850d2fdfc515260fd700cacaa17e",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:42,eq=saturation=0.965:contrast=1.064:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "7aeab433cdc758e6783b7deda16bde78296d2f5aaa19ed0921f816625f7bd8f0"
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.panitchlaw.com/app/uploads/2026/01/Our-Work-Website-2025-Philadelphia-Candid-for-Marketing-Chad-and-Holly-2048x1365.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "9ca7a7d986f74d867b5814e783cb9d705b272375d54432730268e19bc4b5b3d9",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:42,eq=saturation=0.990:contrast=1.028:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "70331fef60d48f91919bb670ba9571544324c0eff7b1d710ee9185802c9332f7"
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.panitchlaw.com/app/uploads/2026/01/Our-Team-Website-Photo-Ikenna-Ava-Julianna-Stephany-Travis-Dennis-scaled-e1774905512650-2048x1507.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "916ba9731f18558bac2c0cd088a881e28e4453d71e1a54af4b011ea832dfd98c",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:84,eq=saturation=1.015:contrast=1.082:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "c94d557cd526d4ae98db7610118e59fd87f26b0e71b00a2db2867a405d67e69b"
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.panitchlaw.com/app/uploads/2026/01/Our-Work-Website-2025-Philadelphia-Candid-for-Marketing-Chad-and-Holly-scaled.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "46921eebcecbf5b7de917d7a4aa123e80203850d2fdfc515260fd700cacaa17e",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:84,eq=saturation=1.040:contrast=1.046:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "d18f0379530524d4bf715900c665cb3fcaddd5e3658a23ee6c550441905396fd"
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.panitchlaw.com/app/uploads/2026/01/Our-Work-Website-2025-Philadelphia-Candid-for-Marketing-Chad-and-Holly-2048x1365.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "9ca7a7d986f74d867b5814e783cb9d705b272375d54432730268e19bc4b5b3d9",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:84,eq=saturation=0.940:contrast=1.010:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "7124d00b1164a31eb56e5bbb7835e0723779a7778c4f441bbf99ee48af340537"
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.panitchlaw.com/app/uploads/2026/01/Our-Team-Website-Photo-Ikenna-Ava-Julianna-Stephany-Travis-Dennis-scaled-e1774905512650-2048x1507.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "916ba9731f18558bac2c0cd088a881e28e4453d71e1a54af4b011ea832dfd98c",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:84,eq=saturation=0.965:contrast=1.064:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "0078afaf9b6562c7202e0b45294ce104b4c01daade3e163279f2721a698c60ab"
+    }
+  ],
+  "fonts": {
+    "pair": {
+      "id": "syne-work",
+      "display": "Syne",
+      "text": "Work Sans"
+    },
+    "source": "Google Fonts CSS API",
+    "files": [
+      {
+        "file": "font-display-400.woff2",
+        "sha256": "68b623f0e45b905041b2edb9b2e4f563a505f13db1cd06b5f1946eb2e1f47048"
+      },
+      {
+        "file": "font-display-700.woff2",
+        "sha256": "68b623f0e45b905041b2edb9b2e4f563a505f13db1cd06b5f1946eb2e1f47048"
+      },
+      {
+        "file": "font-text-400.woff2",
+        "sha256": "1dd49afc07fb2231b2ff686cbf007725fb2742271bb1f28ebd98f22a0d817343"
+      },
+      {
+        "file": "font-text-700.woff2",
+        "sha256": "1dd49afc07fb2231b2ff686cbf007725fb2742271bb1f28ebd98f22a0d817343"
+      }
+    ]
+  }
+}

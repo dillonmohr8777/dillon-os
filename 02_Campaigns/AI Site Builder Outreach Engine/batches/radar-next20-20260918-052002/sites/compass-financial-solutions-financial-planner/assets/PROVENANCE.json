@@ -1,0 +1,168 @@
+{
+  "slug": "compass-financial-solutions-financial-planner",
+  "preparedAt": "2026-09-18T09:24:18.774Z",
+  "sourceSite": "https://compassfinancialsolutionsinc.com/",
+  "sourceFinalUrl": "https://compassfinancialsolutionsinc.com/",
+  "sourcePageSha256": "bdfe7c80df6c53d85544da3bc2417cd11889950b7f89dadb9d4f628639ea829f",
+  "exactLogoRequired": true,
+  "exactLogoSha256": "0659eeee005a77e73bedf31ed8e50a2114524b0998c1085a6b5b4ed84f3f477d",
+  "firstPartyDerivativePolicy": "Content visuals preserve first-party source photography while adapting crop and tonal balance for the private mobile concept. They are not evidence of additional projects or outcomes.",
+  "generatedCompositionReference": "automation/prospect-radar-next20/.impeccable/mocks/architerra-mobile-three-directions.png",
+  "assets": [
+    {
+      "role": "exact identity",
+      "output": "logo.png",
+      "sourceUrl": "https://compassfinancialsolutionsinc.com/wp-content/uploads/compass-financial-solutions-logo-2.png",
+      "sourceSha256": "0659eeee005a77e73bedf31ed8e50a2114524b0998c1085a6b5b4ed84f3f477d",
+      "outputSha256": "0659eeee005a77e73bedf31ed8e50a2114524b0998c1085a6b5b4ed84f3f477d",
+      "transformation": "none; exact first-party transparent asset",
+      "transparent": true
+    },
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://compassfinancialsolutionsinc.com/wp-content/uploads/compass-financial-solution-young-man-with-dog-2.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "681a7ff7c6052cf834a9a874b9a1d131d5a93e84515ca7d19fc8a2d6ad5a8ecf",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=1.040:contrast=1.082:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "7a26665fe5c0a2710a9b5c094fcaba57d862c1a8e6a50dfb569932a8e431e6d8"
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://compassfinancialsolutionsinc.com/wp-content/uploads/compass-financial-solution-young-man-with-dog-2.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "681a7ff7c6052cf834a9a874b9a1d131d5a93e84515ca7d19fc8a2d6ad5a8ecf",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:0,eq=saturation=0.940:contrast=1.046:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "22b71bc60d2a21231adbceaa34bbcf9432e8e38796d72b1e229ad168246f863d"
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://compassfinancialsolutionsinc.com/wp-content/uploads/compass-financial-solution-young-man-with-dog-2.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "681a7ff7c6052cf834a9a874b9a1d131d5a93e84515ca7d19fc8a2d6ad5a8ecf",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:0,eq=saturation=0.965:contrast=1.010:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "dde8dd3ef1af0c36ef65c186428bbf7bb73bd93e8769e185625255578dd50f36"
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://compassfinancialsolutionsinc.com/wp-content/uploads/compass-financial-solution-young-man-with-dog-2.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "681a7ff7c6052cf834a9a874b9a1d131d5a93e84515ca7d19fc8a2d6ad5a8ecf",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:0,eq=saturation=0.990:contrast=1.064:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "9be12b8427768c11654fb4c4cee3a054e2bdc7e98f889d193f1de70ed7961dfe"
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://compassfinancialsolutionsinc.com/wp-content/uploads/compass-financial-solution-young-man-with-dog-2.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "681a7ff7c6052cf834a9a874b9a1d131d5a93e84515ca7d19fc8a2d6ad5a8ecf",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:42,eq=saturation=1.015:contrast=1.028:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "6cf4024524ed3cb9acd30383cfa5f66b941877016b1330ae62afa4239a07f7a5"
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://compassfinancialsolutionsinc.com/wp-content/uploads/compass-financial-solution-young-man-with-dog-2.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "681a7ff7c6052cf834a9a874b9a1d131d5a93e84515ca7d19fc8a2d6ad5a8ecf",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:42,eq=saturation=1.040:contrast=1.082:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "be02b35a0e4fbbefb9a6e4d1b07d5c33c032acae05d993e35794b7078df4e10b"
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://compassfinancialsolutionsinc.com/wp-content/uploads/compass-financial-solution-young-man-with-dog-2.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "681a7ff7c6052cf834a9a874b9a1d131d5a93e84515ca7d19fc8a2d6ad5a8ecf",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:42,eq=saturation=0.940:contrast=1.046:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "9b4042fb58db6337afa4a9650185c3e6fb51f3dbcb2435c8627ebf6433813438"
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://compassfinancialsolutionsinc.com/wp-content/uploads/compass-financial-solution-young-man-with-dog-2.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "681a7ff7c6052cf834a9a874b9a1d131d5a93e84515ca7d19fc8a2d6ad5a8ecf",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:42,eq=saturation=0.965:contrast=1.010:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "b79f97f01901ef7d5dceb4c524c6287ddf35c0e87b0a1029ad9fa9f5984641ff"
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://compassfinancialsolutionsinc.com/wp-content/uploads/compass-financial-solution-young-man-with-dog-2.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "681a7ff7c6052cf834a9a874b9a1d131d5a93e84515ca7d19fc8a2d6ad5a8ecf",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:84,eq=saturation=0.990:contrast=1.064:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "631f05dca59361b0669a8a7e9ec08e6864402917c728fe1138e69c84d7cd6f01"
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://compassfinancialsolutionsinc.com/wp-content/uploads/compass-financial-solution-young-man-with-dog-2.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "681a7ff7c6052cf834a9a874b9a1d131d5a93e84515ca7d19fc8a2d6ad5a8ecf",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:84,eq=saturation=1.015:contrast=1.028:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "8cd79992bb76f0767713cb30d3cb8fa2c49bae2f0884f13f6af02fa29eb86e32"
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://compassfinancialsolutionsinc.com/wp-content/uploads/compass-financial-solution-young-man-with-dog-2.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "681a7ff7c6052cf834a9a874b9a1d131d5a93e84515ca7d19fc8a2d6ad5a8ecf",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:84,eq=saturation=1.040:contrast=1.082:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "fe89e866bba2517939934e059abee7566cbcef37da6f5bd299001d6b2622a611"
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://compassfinancialsolutionsinc.com/wp-content/uploads/compass-financial-solution-young-man-with-dog-2.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "681a7ff7c6052cf834a9a874b9a1d131d5a93e84515ca7d19fc8a2d6ad5a8ecf",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:84,eq=saturation=0.940:contrast=1.046:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "41472714a4d3346cf8a86ad7f0881d0123376899ee12dfc066546eef1687883f"
+    }
+  ],
+  "fonts": {
+    "pair": {
+      "id": "bodoni-urbanist",
+      "display": "Bodoni Moda",
+      "text": "Urbanist"
+    },
+    "source": "Google Fonts CSS API",
+    "files": [
+      {
+        "file": "font-display-400.woff2",
+        "sha256": "192ae876c21d9258d096a526dad5bddf37f0daa69cfe943cae5f6be5a52adda2"
+      },
+      {
+        "file": "font-display-700.woff2",
+        "sha256": "192ae876c21d9258d096a526dad5bddf37f0daa69cfe943cae5f6be5a52adda2"
+      },
+      {
+        "file": "font-text-400.woff2",
+        "sha256": "7981ef90c246352c7c217081b8d9337b9c95e9d17ae126bf56b0d3753d1e5ffb"
+      },
+      {
+        "file": "font-text-700.woff2",
+        "sha256": "7981ef90c246352c7c217081b8d9337b9c95e9d17ae126bf56b0d3753d1e5ffb"
+      }
+    ]
+  }
+}

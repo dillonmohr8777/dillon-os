@@ -1,0 +1,168 @@
+{
+  "slug": "occasions-boutique",
+  "preparedAt": "2026-09-17T09:23:35.460Z",
+  "sourceSite": "https://www.occasions-boutique.com/",
+  "sourceFinalUrl": "https://www.occasions-boutique.com/",
+  "sourcePageSha256": "de0122e1b234bd12ab19c90c3deb547e19f3d30818707b0ad363889cfe36c0f3",
+  "exactLogoRequired": true,
+  "exactLogoSha256": "8a15b55367be821e9064ad74dfbeada3a233a8a7070f76055ccd45cdcb323f9f",
+  "firstPartyDerivativePolicy": "Content visuals preserve first-party source photography while adapting crop and tonal balance for the private mobile concept. They are not evidence of additional projects or outcomes.",
+  "generatedCompositionReference": "automation/prospect-radar-next20/.impeccable/mocks/architerra-mobile-three-directions.png",
+  "assets": [
+    {
+      "role": "exact identity",
+      "output": "logo.png",
+      "sourceUrl": "https://www.occasions-boutique.com/wp-content/uploads/2017/12/occasions-boutique-logo.png",
+      "sourceSha256": "8a15b55367be821e9064ad74dfbeada3a233a8a7070f76055ccd45cdcb323f9f",
+      "outputSha256": "8a15b55367be821e9064ad74dfbeada3a233a8a7070f76055ccd45cdcb323f9f",
+      "transformation": "none; exact first-party transparent asset",
+      "transparent": true
+    },
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.occasions-boutique.com/wp-content/uploads/2026/03/bridalad2.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "ae6a4f4e10f7ed9c4cf1c6ad10ffbae1d75480e31229178d68dddf362706311e",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=1.015:contrast=1.064:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "0b4aeb3689664d8f54f5ee4dd2657913bb1bca458f4b1e6964dc98e2b725106f"
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.occasions-boutique.com/wp-content/uploads/2026/03/bridalad2.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "ae6a4f4e10f7ed9c4cf1c6ad10ffbae1d75480e31229178d68dddf362706311e",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:0,eq=saturation=1.040:contrast=1.028:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "753b384b5a94969cc78346461930b6bb8376560b2508ade8e89eaee9acd546c4"
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.occasions-boutique.com/wp-content/uploads/2026/03/bridalad2.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "ae6a4f4e10f7ed9c4cf1c6ad10ffbae1d75480e31229178d68dddf362706311e",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:0,eq=saturation=0.940:contrast=1.082:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "00b59ed422f5d31096bf4ebca653654271121e5ed436fdae794d6c650a58547b"
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.occasions-boutique.com/wp-content/uploads/2026/03/bridalad2.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "ae6a4f4e10f7ed9c4cf1c6ad10ffbae1d75480e31229178d68dddf362706311e",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:0,eq=saturation=0.965:contrast=1.046:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "1e29164dc772fa1d17d3359075cd207faafeb4e5f1fc0cdb20906479eedbb63f"
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.occasions-boutique.com/wp-content/uploads/2026/03/bridalad2.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "ae6a4f4e10f7ed9c4cf1c6ad10ffbae1d75480e31229178d68dddf362706311e",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:42,eq=saturation=0.990:contrast=1.010:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "33f0a8c29bd01da675bb2f5bd27cc84e5c6402c317f2445a110c44589fbf8136"
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.occasions-boutique.com/wp-content/uploads/2026/03/bridalad2.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "ae6a4f4e10f7ed9c4cf1c6ad10ffbae1d75480e31229178d68dddf362706311e",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:42,eq=saturation=1.015:contrast=1.064:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "83bf2abecd61096964bd4a16350ca8e320f90fedb7c99f62754d0b76bda10bbd"
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.occasions-boutique.com/wp-content/uploads/2026/03/bridalad2.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "ae6a4f4e10f7ed9c4cf1c6ad10ffbae1d75480e31229178d68dddf362706311e",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:42,eq=saturation=1.040:contrast=1.028:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "3ffe433109d74eb3773c33e28221f844c7772ad4ef21cd391a78182838bdc65b"
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.occasions-boutique.com/wp-content/uploads/2026/03/bridalad2.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "ae6a4f4e10f7ed9c4cf1c6ad10ffbae1d75480e31229178d68dddf362706311e",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:42,eq=saturation=0.940:contrast=1.082:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "1f005c256a47476c36cef1fc2ede5ac624e156894b66397233c8d20fc7bed6a1"
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.occasions-boutique.com/wp-content/uploads/2026/03/bridalad2.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "ae6a4f4e10f7ed9c4cf1c6ad10ffbae1d75480e31229178d68dddf362706311e",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:84,eq=saturation=0.965:contrast=1.046:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "2fa1369404ab477eccebc6c22d55e1d57e5ba00f3f77fad3945e6d510b02a7b6"
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.occasions-boutique.com/wp-content/uploads/2026/03/bridalad2.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "ae6a4f4e10f7ed9c4cf1c6ad10ffbae1d75480e31229178d68dddf362706311e",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:84,eq=saturation=0.990:contrast=1.010:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "73e3b55cd7acf0dd9269ef739797fbbbba22bf8335e464a210f88d36fdf3988c"
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.occasions-boutique.com/wp-content/uploads/2026/03/bridalad2.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "ae6a4f4e10f7ed9c4cf1c6ad10ffbae1d75480e31229178d68dddf362706311e",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:84,eq=saturation=1.015:contrast=1.064:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "8b8fb75bf71829ef2cb0563692cf896d32192d44b1add8a67df425f8dd117af9"
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.occasions-boutique.com/wp-content/uploads/2026/03/bridalad2.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "ae6a4f4e10f7ed9c4cf1c6ad10ffbae1d75480e31229178d68dddf362706311e",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:84,eq=saturation=1.040:contrast=1.028:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "54321765b84e5099ad180e1365688776e774a8482635315a0f4460b9600cadf5"
+    }
+  ],
+  "fonts": {
+    "pair": {
+      "id": "newsreader-figtree",
+      "display": "Newsreader",
+      "text": "Figtree"
+    },
+    "source": "Google Fonts CSS API",
+    "files": [
+      {
+        "file": "font-display-400.woff2",
+        "sha256": "62981321d9a3cc7a61a73792729043703fd6112da86e8ec848bb57f088578757"
+      },
+      {
+        "file": "font-display-700.woff2",
+        "sha256": "62981321d9a3cc7a61a73792729043703fd6112da86e8ec848bb57f088578757"
+      },
+      {
+        "file": "font-text-400.woff2",
+        "sha256": "4ba7d3d096695818fe0686be4f1e82c6b05134e18a22260336130335027462dd"
+      },
+      {
+        "file": "font-text-700.woff2",
+        "sha256": "4ba7d3d096695818fe0686be4f1e82c6b05134e18a22260336130335027462dd"
+      }
+    ]
+  }
+}

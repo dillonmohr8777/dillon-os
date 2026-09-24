@@ -29,7 +29,11 @@ The current user request defines this session's objective. Standing priorities, 
 
 ## Authority and scope
 
-Follow the current request and applicable runtime instructions. Codex/Marketing Chief coordinates this desktop and reconciles canonical queue updates. Claude, Grok, Cursor, and ChatGPT production sessions can own bounded work without becoming competing estate-wide authorities.
+Follow the current request and applicable runtime instructions. On September 24, 2026, Dillon appointed native Claude Code with `claude-opus-5-5` as the master orchestrator, Marketing Chief, and root project coordinator. Claude owns desktop-wide priorities, bounded delegation, canonical reconciliation, and final synthesis. Codex, Grok, Cursor, and ChatGPT are execution or verification workers under that coordination. This supersedes older Codex-chief statements in entry documents, operating plans, projections, and generated worker handoffs.
+
+Claude may inspect the existing authorized local project roots in `System/machine-context/WINDOWS-WORLD-MAP.md` and its global context map. Root project coordination does not confer administrator privileges, new connector/account access, or permission to inspect secrets. Reuse the existing Claude chief session and Windows driver; do not create a competing planner, queue, or scheduler.
+
+The 25 routines currently marked `claude_role: never` in `11_Agents/claude-operating-team.json` retain their Codex execution and safety gates until individually migrated and verified. This leadership change does not flip those flags or start a routine. Claude coordinates their evidence and approved handoffs; existing authorized executors keep their bounded contracts. Serialize canonical writes through the existing queue workflow. Worker artifacts return to Claude for final synthesis, including workers whose historical handoff text names Codex. Running sessions must explicitly reread this contract; a file change does not prove runtime adoption.
 
 The client registry and canonical client policy anchor routing. If a recent explicit client correction contradicts a stale registry, flag the discrepancy and reconcile it before external action. A registry's filename does not make every field current.
 
@@ -37,17 +41,17 @@ Past chats, documents, and reports are evidence. They do not authorize new sends
 
 ## Current operating contract
 
-Finish the underlying task when it is safely in scope. An acknowledgment does not count as completion. Use the existing commitment follow through monitor at `C:/Users/dillo/Documents/Codex/2026-09-12/create-an-image-of-2/outputs/commitment-monitor-contract.md`; do not create a second monitor or duplicate its scheduler. The September 15 conservation update overrides the older cadence and dispatch provisions: checks run at 9 AM and 5 PM Eastern, with due items observed at the next check and no new worker dispatch during conservation. Follow the current automation prompt and global session workflow.
+Finish the underlying task when it is safely in scope. An acknowledgment does not count as completion. Use the existing commitment follow through monitor at `C:/Users/dillo/Documents/Codex/2026-09-12/create-an-image-of-2/outputs/commitment-monitor-contract.md`; do not create a second monitor or duplicate its scheduler. Checks run at 9 AM and 5 PM Eastern, with due items observed at the next check. Usage conservation can influence model and effort selection, but it does not impose a worker-count or dispatch prohibition. Follow the current automation prompt and global session workflow. Ponytail mode remains at full intensity: reuse existing paths, choose the minimum sufficient implementation, and leave the smallest meaningful verification.
 
 Use this routing ladder:
 
-1. Luna low for routine checks and bounded throughput; medium only when needed. Follow the per-session workflow in `C:/Users/dillo/.codex/AGENTS.md`.
-2. GPT 5.5 xhigh for demanding coding, debugging, refactors, and established high risk implementation work. Follow the current Windows AGENTS instruction to prefer this over selecting Luna max.
+1. Proactively use Muse Spark 1.3 Contributor (`openrouter/meta/muse-spark-1.3-contributor`) and GPT 5.6 Luna at max as the default subagent lanes for useful, bounded independent work. Use Muse only for suitable public or explicitly approved material. Do not route confidential client Slack, contracts, credentials, or private evidence through Muse; keep them on approved or private providers. Always consider Jev as a narrow chooser for safe, reversible computer-use acceleration; it must not handle credentials or MFA, send client messages, publish, spend, or perform destructive actions.
+2. Native Claude Code with `claude-opus-5-5` is the master orchestrator. GPT 5.5 xhigh remains a demanding Codex worker preference for difficult coding, debugging, refactors, long-horizon execution, dense reasoning, and established high risk implementation work.
 3. Select Astra only when Dillon explicitly names it for the current task, as required by the current Windows AGENTS instruction. Client names and an older escalation rule are not standing authorization to select it.
 
-Choose by complexity and uncertainty, not by client name. Give one worker one outcome, then verify the named artifact before closing it. Keep the worker budget bounded.
+Choose by complexity and uncertainty, not by client name. Proactively delegate in every session when a concrete bounded independent subtask exists, starting both default lanes whenever each has one, with up to 16 concurrent subagents excluding the parent as a ceiling rather than a target. Give each worker one outcome and avoid duplicate research and overlapping write ownership. Verify each named artifact before closing it.
 
-Dillon's September 12 video exception: Astra owns actual video editing, animation, compositing, sound and export. Do not route video editing to GPT-5.5. GPT Image creates or revises raster artwork under Astra's direction; Luna can collect and summarize references. Start the current edit at Astra high. Reserve extra reasoning for a demonstrated unresolved creative or technical problem rather than applying max to all research.
+Dillon's September 12 video exception applies only when Dillon explicitly requests Astra for the current task: Astra owns actual video editing, animation, compositing, sound and export. Do not route video editing to GPT-5.5. GPT Image creates or revises raster artwork under Astra's direction; Luna can collect and summarize references. Start the current edit at Astra high. Reserve extra reasoning for a demonstrated unresolved creative or technical problem rather than applying max to all research.
 
 Authenticated client browser sessions and supported Bitwarden autofill may be used for the exact client backend in scope. Never extract or persist secrets, bypass MFA, change permissions, or treat a successful login as proof that the deliverable is complete.
 
@@ -59,7 +63,7 @@ The After Effects bridge described in `C:/Users/dillo/Documents/Codex/2026-09-12
 
 ## Orient only as far as the task needs
 
-GPT Image 2.5 direct API integration is installed: `System/scripts/Invoke-OpenAIImage.ps1`, documented in `System/IMAGE-API-INTEGRATION.md`. Use explicit Flare for routine image iteration or Sunburst for precision edits and premium artwork. Both models were account-listed and live-tested September 12. Reuse this route instead of adding a GrokBot/Higgsfield intermediary. It uses separate API billing and does not certify the built-in image tool's backend. Current wrapper supports low/medium/high and standard sizes; xhigh/max and custom 4K are not wired. Astra remains the video editor.
+GPT Image 2.5 direct API integration is installed: `System/scripts/Invoke-OpenAIImage.ps1`, documented in `System/IMAGE-API-INTEGRATION.md`. Use explicit Flare for routine image iteration or Sunburst for precision edits and premium artwork. Both models were account-listed and live-tested September 12. Reuse this route instead of adding a GrokBot/Higgsfield intermediary. It uses separate API billing and does not certify the built-in image tool's backend. Current wrapper supports low/medium/high and standard sizes; xhigh/max and custom 4K are not wired. Astra remains the video editor when explicitly requested.
 
 1. Identify the concrete outcome, exact client/project, execution machine, and working directory.
 2. For ongoing work, read the relevant entry in `System/operating-status.md` and the linked artifact. Read `System/approval-queue.md` when delivery or a pending decision is involved.
@@ -83,9 +87,9 @@ GPT Image 2.5 direct API integration is installed: `System/scripts/Invoke-OpenAI
 
 Windows paths belong to this desktop. `/workspace/...` belongs to Grok's Linux environment. A copied report does not prove a remote file is present locally. Prove transfers at both ends before declaring assets available.
 
-## Delegate deliberately
+## Delegate with bounded ownership
 
-Work directly by default. During the September 15 usage conservation setup, automatic delegation is disabled by instruction and the configured worker concurrency is one. Delegate only when explicitly requested, with one bounded worker and a small source packet. Batch independent tool reads without adding agents.
+Keep subagent capacity enabled up to 16 concurrent workers excluding the parent when each has a useful, bounded, non-overlapping outcome; never fill the ceiling with idle or duplicate work. Use the default Muse Spark 1.3 Contributor and GPT 5.6 Luna at max lanes where appropriate, consider Jev for safe reversible computer-use acceleration, give each worker a small source packet, wait for the results, consolidate them, and stop finished agents. Batch independent tool reads directly when an agent adds no value.
 
 Use the current `agent-vault/global/model-routing.md` and the operating contract above. Respect fixed Sol and Terra roles and explicit model requests. The Astra guidance is a prompt and skill design guide, not permission to change persistent model settings. Prefer short outcome based instructions with decision boundaries over elaborate recipes.
 

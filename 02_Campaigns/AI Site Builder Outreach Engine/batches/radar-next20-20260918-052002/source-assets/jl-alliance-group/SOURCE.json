@@ -1,0 +1,89 @@
+{
+  "sourceUrl": "https://jlalliancegroup.com/",
+  "finalUrl": "https://jlalliancegroup.com/",
+  "sourceDomain": "jlalliancegroup.com",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=UTF-8",
+  "pageSha256": "912dddf98d65c2446ea7d38f54032d77687008db028e72e59796e5e44627a7b8",
+  "title": "JL Alliance Group | Cheltenham's Auto Tag Service",
+  "description": "JL Alliance Group Auto Tags Inc. in Cheltenham, PA is an online agency that works with the DMV to meet your auto tag needs. Our services include auto tags",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "alliance"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\jl-alliance-group\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://jlalliancegroup.com/wp-content/uploads/2024/01/JL-Alliance-Group-fav.png",
+    "sourceEvidence": "JSON-LD logo URL",
+    "type": "png",
+    "dimensions": {
+      "width": 955,
+      "height": 750
+    },
+    "sha256": "e33f6f6548e8515e2c88774731ce2e497ad2b9892419525810d9da67ee5c6ed4",
+    "sourceSha256": "e33f6f6548e8515e2c88774731ce2e497ad2b9892419525810d9da67ee5c6ed4",
+    "sourceType": "png",
+    "sourceFileName": null,
+    "transformation": "none; exact first-party transparent asset",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "transparentRatio": 0.668,
+      "edgeTransparentRatio": 0.9575,
+      "contentRatio": 0.332,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 80574
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\jl-alliance-group\\reference-1.png",
+      "fileName": "reference-1.png",
+      "sourceUrl": "https://jlalliancegroup.com/wp-content/uploads/2024/11/image.png",
+      "sourceEvidence": "IMG img-responsive wp-image-162   image",
+      "type": "png",
+      "dimensions": {
+        "width": 680,
+        "height": 390
+      },
+      "sha256": "0e9d7af4d557fe9a33b33d251ab949a783414cbeed56cf960bbccebbb1452710",
+      "bytes": 534784,
+      "visual": {
+        "ok": true,
+        "lumaRange": 235.1,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [
+    {
+      "url": "https://jlalliancegroup.com/wp-content/uploads/2024/03/Screenshot-2024-03-22-at-1.28.44",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://jlalliancegroup.com/wp-content/uploads/2024/03/Screenshot-2024-03-22-at-1.28.49",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://jlalliancegroup.com/wp-content/uploads/2024/03/Screenshot-2024-03-22-at-1.28.56",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://jlalliancegroup.com/wp-content/uploads/2024/03/Screenshot-2024-03-22-at-1.29.12",
+      "reason": "HTTP 404"
+    }
+  ],
+  "brandColors": [
+    "#bd962d",
+    "#110033",
+    "#003399",
+    "#003388",
+    "#00d084"
+  ],
+  "checkedAt": "2026-09-18T09:21:46.000Z"
+}

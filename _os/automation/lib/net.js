@@ -156,6 +156,33 @@ function needsAbsoluteForm(u) {
   return u.protocol === 'http:' && !bypassesProxy(u.hostname) && !!proxyForProtocol('http:');
 }
 
+function mappedIpv4(host) {
+  if (!host.includes(':')) return '';
+  const groups = host.split('::');
+  if (groups.length > 2) return '';
+  const left = groups[0] ? groups[0].split(':') : [];
+  const right = groups.length === 2 && groups[1] ? groups[1].split(':') : [];
+  const missing = 8 - left.length - right.length;
+  if ((groups.length === 1 && missing !== 0) || (groups.length === 2 && missing < 1)) return '';
+  const expanded = [...left, ...Array(Math.max(0, missing)).fill('0'), ...right]
+    .map((part) => Number.parseInt(part, 16));
+  if (expanded.length !== 8 || expanded.some((part) => !Number.isInteger(part) || part < 0 || part > 0xffff)) return '';
+  if (expanded.slice(0, 5).some((part) => part !== 0) || expanded[5] !== 0xffff) return '';
+  const high = expanded[6];
+  const low = expanded[7];
+  return `${high >> 8}.${high & 0xff}.${low >> 8}.${low & 0xff}`;
+}
+
+function isNonPublicIpv4(host) {
+  return host === '0.0.0.0' ||
+    /^127\./.test(host) ||
+    /^10\./.test(host) ||
+    /^192\.168\./.test(host) ||
+    /^169\.254\./.test(host) ||
+    /^172\.(1[6-9]|2\d|3[01])\./.test(host) ||
+    /^0\./.test(host);
+}
+
 /**
  * Public http(s) hosts only. Blocks loopback, link-local and RFC1918 ranges so
  * a candidate list can never turn the grader into an internal port scanner.
@@ -166,19 +193,15 @@ function assertPublicHttpUrl(raw) {
     throw new Error(`unsupported protocol: ${u.protocol}`);
   }
   const host = u.hostname.toLowerCase().replace(/^\[|\]$/g, '');
+  const mapped = mappedIpv4(host);
   const blocked =
     host === 'localhost' ||
     host === '::1' ||
-    host === '0.0.0.0' ||
     host.endsWith('.local') ||
     host.endsWith('.internal') ||
     host.endsWith('.localhost') ||
-    /^127\./.test(host) ||
-    /^10\./.test(host) ||
-    /^192\.168\./.test(host) ||
-    /^169\.254\./.test(host) ||
-    /^172\.(1[6-9]|2\d|3[01])\./.test(host) ||
-    /^0\./.test(host) ||
+    isNonPublicIpv4(host) ||
+    Boolean(mapped && isNonPublicIpv4(mapped)) ||
     /^f[cd][0-9a-f]{2}:/i.test(host) ||
     /^fe80:/i.test(host);
   if (blocked) throw new Error(`non-public host: ${host}`);

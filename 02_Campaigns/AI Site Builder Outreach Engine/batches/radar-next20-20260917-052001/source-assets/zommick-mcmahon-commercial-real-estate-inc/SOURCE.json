@@ -1,0 +1,125 @@
+{
+  "sourceUrl": "https://zmcre.com/",
+  "finalUrl": "https://zmcre.com/",
+  "sourceDomain": "zmcre.com",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=UTF-8",
+  "pageSha256": "31c5b9121960c49035273ce86fc1e8c2aae692f5054e71a0b40cb3e486e143d9",
+  "title": "Commercial Real Estate Brokerage in PA, NJ, & DE | Zommick McMahon",
+  "description": "Based in the Philadelphia area, Zommick McMahon specializes in retail, and industrial commercial real estate brokerage and investing. Explore our listings!",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "zommick",
+      "mcmahon",
+      "commercial",
+      "real",
+      "estate"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\zommick-mcmahon-commercial-real-estate-inc\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://zmcre.com/wp-content/uploads/2017/07/ZMCRE_Logo_Yellow-White-4.png",
+    "sourceEvidence": "JSON-LD logo",
+    "type": "png",
+    "dimensions": {
+      "width": 1800,
+      "height": 644
+    },
+    "sha256": "f9ba9f686b20ba7d67c2588de60b8b605e04be5b4fed5d0a1b0d6f024e9caa71",
+    "sourceSha256": "f9ba9f686b20ba7d67c2588de60b8b605e04be5b4fed5d0a1b0d6f024e9caa71",
+    "sourceType": "png",
+    "sourceFileName": null,
+    "transformation": "none; exact first-party transparent asset",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "transparentRatio": 0.7503,
+      "edgeTransparentRatio": 1,
+      "contentRatio": 0.2497,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 245638
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\zommick-mcmahon-commercial-real-estate-inc\\reference-1.jpg",
+      "fileName": "reference-1.jpg",
+      "sourceUrl": "https://zmcre.com/wp-content/uploads/2018/12/TenantRep.jpg",
+      "sourceEvidence": "IMG ",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 800,
+        "width": 1200
+      },
+      "sha256": "23f1899233c29acbb52a79e1a2fbd9ec7a5eb10ffc66120ab9cf6d0203ad77fb",
+      "bytes": 309628,
+      "visual": {
+        "ok": true,
+        "lumaRange": 255,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\zommick-mcmahon-commercial-real-estate-inc\\reference-2.jpg",
+      "fileName": "reference-2.jpg",
+      "sourceUrl": "https://zmcre.com/wp-content/uploads/2018/12/InvestmentSales.jpg",
+      "sourceEvidence": "IMG ",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 800,
+        "width": 1200
+      },
+      "sha256": "3bb74230bca2c2c434878bf336e769bae165a69c1408b9ad397f16b1a8a579bc",
+      "bytes": 401918,
+      "visual": {
+        "ok": true,
+        "lumaRange": 252.6,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\zommick-mcmahon-commercial-real-estate-inc\\reference-3.jpg",
+      "fileName": "reference-3.jpg",
+      "sourceUrl": "https://zmcre.com/wp-content/uploads/2018/12/LeasingServices.jpg",
+      "sourceEvidence": "IMG ",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 800,
+        "width": 1200
+      },
+      "sha256": "2fb1625e8220673a9255fa3b0792999b4564dc3dcfa1b836c714e6a363f857f7",
+      "bytes": 381003,
+      "visual": {
+        "ok": true,
+        "lumaRange": 255,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [
+    {
+      "url": "https://zmcre.com/wp-content/uploads/2018/12/RiteAid-1.png",
+      "reason": "reference is flat or lacks enough tonal variation to serve as visual evidence"
+    },
+    {
+      "url": "https://zmcre.com/wp-content/uploads/2018/12/ExpressEmployment.jpg",
+      "reason": "reference image is too small"
+    },
+    {
+      "url": "https://zmcre.com/wp-content/uploads/2018/12/WSFS.png",
+      "reason": "reference image is too small"
+    }
+  ],
+  "brandColors": [
+    "#003388",
+    "#edf000",
+    "#ffff00",
+    "#003399",
+    "#fff200"
+  ],
+  "checkedAt": "2026-09-17T09:21:19.873Z"
+}

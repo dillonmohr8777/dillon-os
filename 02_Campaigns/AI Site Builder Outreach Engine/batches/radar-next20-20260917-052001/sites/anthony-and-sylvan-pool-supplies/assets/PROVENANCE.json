@@ -1,0 +1,168 @@
+{
+  "slug": "anthony-and-sylvan-pool-supplies",
+  "preparedAt": "2026-09-17T09:22:33.437Z",
+  "sourceSite": "https://anthonysylvan.com/locations/doylestown-pa/",
+  "sourceFinalUrl": "https://anthonysylvan.com/locations/doylestown-pa/",
+  "sourcePageSha256": "858f433909efdd20f5fa9775d8bc70efdfe9a855a1b953229eba360e39ac84ee",
+  "exactLogoRequired": true,
+  "exactLogoSha256": "7547a1c67e1d2a533e8f23faba7c7675399d8283cf64bb1ab19f9fb574e05b4d",
+  "firstPartyDerivativePolicy": "Content visuals preserve first-party source photography while adapting crop and tonal balance for the private mobile concept. They are not evidence of additional projects or outcomes.",
+  "generatedCompositionReference": "automation/prospect-radar-next20/.impeccable/mocks/architerra-mobile-three-directions.png",
+  "assets": [
+    {
+      "role": "exact identity",
+      "output": "logo.svg",
+      "sourceUrl": "https://anthonysylvan.com/wp-content/uploads/2024/02/logo__anthony-sylvan-pools-stacked.svg",
+      "sourceSha256": "7547a1c67e1d2a533e8f23faba7c7675399d8283cf64bb1ab19f9fb574e05b4d",
+      "outputSha256": "7547a1c67e1d2a533e8f23faba7c7675399d8283cf64bb1ab19f9fb574e05b4d",
+      "transformation": "none; exact first-party transparent asset",
+      "transparent": true
+    },
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://anthonysylvan.com/wp-content/uploads/2024/03/Houzz.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "94c9fc74923b94c641fa40afd355b9831703ff1b962a1faef4437e8d35b85117",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=0.965:contrast=1.028:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "167846544b35f3c51785ad2f719e775e5e9851fb28fd8d31870192a228d9fc51"
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://anthonysylvan.com/wp-content/uploads/2024/03/Header-1-2.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "cadfac3122c6345b51ec3696d73a7439233edccbcbe0d5ebb25ff42400c2e555",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:0,eq=saturation=0.990:contrast=1.082:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "3e051a928f82f2673d75bff61ba2ab6f3b1c91575d7a31a2f1bcdebc0edcc32e"
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://anthonysylvan.com/wp-content/uploads/2024/03/Opening-Your-Pool-for-the-Season-Cropped-2048x760.png",
+      "sourceFile": "reference-3.png",
+      "sourceSha256": "4c75fd4841234e0efddf668dd3a2d0101133125c672504ab7bf1e43d143b6e9d",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:0,eq=saturation=1.015:contrast=1.046:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "d73db482b47ee95711b28e479dfb15af134f9a14ea7e53a8d4b279e6bf7db48e"
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://anthonysylvan.com/wp-content/uploads/2024/03/Houzz.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "94c9fc74923b94c641fa40afd355b9831703ff1b962a1faef4437e8d35b85117",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:0,eq=saturation=1.040:contrast=1.010:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "eb7e0ebee5cb9f966b457fdf8a7362873f035804dfebeb89aa9be1d8b4d911e6"
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://anthonysylvan.com/wp-content/uploads/2024/03/Header-1-2.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "cadfac3122c6345b51ec3696d73a7439233edccbcbe0d5ebb25ff42400c2e555",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:42,eq=saturation=0.940:contrast=1.064:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "f2d0e27aeb711012d260d4ccddbff65800d696b22ea494e5059a16b1ad57c7bb"
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://anthonysylvan.com/wp-content/uploads/2024/03/Opening-Your-Pool-for-the-Season-Cropped-2048x760.png",
+      "sourceFile": "reference-3.png",
+      "sourceSha256": "4c75fd4841234e0efddf668dd3a2d0101133125c672504ab7bf1e43d143b6e9d",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:42,eq=saturation=0.965:contrast=1.028:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "635abe79cacecd486c9a62413ac496d5f50dbf78992b4945803a2ddc8fa4e271"
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://anthonysylvan.com/wp-content/uploads/2024/03/Houzz.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "94c9fc74923b94c641fa40afd355b9831703ff1b962a1faef4437e8d35b85117",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:42,eq=saturation=0.990:contrast=1.082:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "a48eb54a866f1356d5abfed73223c69c6ffb8e072a28bb3e8cccb98569a7f2b5"
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://anthonysylvan.com/wp-content/uploads/2024/03/Header-1-2.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "cadfac3122c6345b51ec3696d73a7439233edccbcbe0d5ebb25ff42400c2e555",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:42,eq=saturation=1.015:contrast=1.046:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "f14ae6c92b6eb8a01e0964829b3fc6de3de9bf2d6252be23246fe7e763a5afcc"
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://anthonysylvan.com/wp-content/uploads/2024/03/Opening-Your-Pool-for-the-Season-Cropped-2048x760.png",
+      "sourceFile": "reference-3.png",
+      "sourceSha256": "4c75fd4841234e0efddf668dd3a2d0101133125c672504ab7bf1e43d143b6e9d",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:84,eq=saturation=1.040:contrast=1.010:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "87ddf8447f62db3e1a8ad809c0dfcc251c2f4a9274cde20471feb4fd34124f02"
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://anthonysylvan.com/wp-content/uploads/2024/03/Houzz.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "94c9fc74923b94c641fa40afd355b9831703ff1b962a1faef4437e8d35b85117",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:84,eq=saturation=0.940:contrast=1.064:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "57143aeb59feccf66ad1924f574fa154e4af436bb4e917999ab73be0e8eb965d"
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://anthonysylvan.com/wp-content/uploads/2024/03/Header-1-2.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "cadfac3122c6345b51ec3696d73a7439233edccbcbe0d5ebb25ff42400c2e555",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:84,eq=saturation=0.965:contrast=1.028:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "54f21864623bfcca5d9cad9e16750eae80b764775660f479e593849cae712a4b"
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://anthonysylvan.com/wp-content/uploads/2024/03/Opening-Your-Pool-for-the-Season-Cropped-2048x760.png",
+      "sourceFile": "reference-3.png",
+      "sourceSha256": "4c75fd4841234e0efddf668dd3a2d0101133125c672504ab7bf1e43d143b6e9d",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:84,eq=saturation=0.990:contrast=1.082:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "16e38e358f2fb9d3fead62b0201dd21b818fd48605d46548e8823cffef4c5d1e"
+    }
+  ],
+  "fonts": {
+    "pair": {
+      "id": "bricolage-manrope",
+      "display": "Bricolage Grotesque",
+      "text": "Manrope"
+    },
+    "source": "Google Fonts CSS API",
+    "files": [
+      {
+        "file": "font-display-400.woff2",
+        "sha256": "a97804dc9fbe5fc972a08018c5eda4dab7ef2346f64c57e61419d05e6de4ea1c"
+      },
+      {
+        "file": "font-display-700.woff2",
+        "sha256": "a97804dc9fbe5fc972a08018c5eda4dab7ef2346f64c57e61419d05e6de4ea1c"
+      },
+      {
+        "file": "font-text-400.woff2",
+        "sha256": "a30ddcd349703aff7464c34bef3fffdff405ee50c113440d7c8693c02d210972"
+      },
+      {
+        "file": "font-text-700.woff2",
+        "sha256": "a30ddcd349703aff7464c34bef3fffdff405ee50c113440d7c8693c02d210972"
+      }
+    ]
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "sourceUrl": "https://www.infrateksolutions.com/",
+  "finalUrl": "https://infrateksolutions.com/mainsite/",
+  "sourceDomain": "infrateksolutions.com",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=UTF-8",
+  "pageSha256": "413ac1d002d65cf66256fd68924f9260ac5378486424cbf6e257075a56a8ca4c",
+  "title": "Home - Infratek Solutions Inc.",
+  "description": "",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "infratek",
+      "solutions"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\infratek-solutions-inc\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://infrateksolutions.com/mainsite/wp-content/uploads/2023/08/Infratek-Solutions-Logo.png",
+    "sourceEvidence": "JSON-LD logo URL",
+    "type": "png",
+    "dimensions": {
+      "width": 407,
+      "height": 150
+    },
+    "sha256": "5cae48f423c9ba8f288ff662435a061fe0088c1b80684df759ce771817137eed",
+    "sourceSha256": "5cae48f423c9ba8f288ff662435a061fe0088c1b80684df759ce771817137eed",
+    "sourceType": "png",
+    "sourceFileName": null,
+    "transformation": "none; exact first-party transparent asset",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "transparentRatio": 0.3834,
+      "edgeTransparentRatio": 1,
+      "contentRatio": 0.6166,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 20313
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\infratek-solutions-inc\\reference-1.jpg",
+      "fileName": "reference-1.jpg",
+      "sourceUrl": "https://infrateksolutions.com/mainsite/wp-content/uploads/2023/08/4387A-copy.jpg",
+      "sourceEvidence": "og:image",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 652,
+        "width": 1000
+      },
+      "sha256": "91d55117de3a76015009a94fa351271643f0d38c5dec7c258314287d0cfe1ee7",
+      "bytes": 328696,
+      "visual": {
+        "ok": true,
+        "lumaRange": 255,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\infratek-solutions-inc\\reference-2.jpg",
+      "fileName": "reference-2.jpg",
+      "sourceUrl": "https://infrateksolutions.com/mainsite/wp-content/uploads/2023/08/4387A-copy-768x501.jpg",
+      "sourceEvidence": "IMG elementor-animation-grow attachment-full size-full wp-image-145",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 501,
+        "width": 768
+      },
+      "sha256": "ad53ffa59cc81b56e6e1d9697960ec973344b679df7c839a07ed902944a468ea",
+      "bytes": 147099,
+      "visual": {
+        "ok": true,
+        "lumaRange": 253.1,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\infratek-solutions-inc\\reference-3.jpg",
+      "fileName": "reference-3.jpg",
+      "sourceUrl": "https://infrateksolutions.com/mainsite/wp-content/uploads/2023/08/NDERD-768x501.jpg",
+      "sourceEvidence": "IMG elementor-animation-grow attachment-full size-full wp-image-146",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 501,
+        "width": 768
+      },
+      "sha256": "3ffe21ef80d6a25a18db0318e9152ce4bced569ed6eac11a95d9ceaa3554bae7",
+      "bytes": 84839,
+      "visual": {
+        "ok": true,
+        "lumaRange": 255,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [],
+  "brandColors": [
+    "#003388",
+    "#00d084",
+    "#0693e3",
+    "#7a00df",
+    "#007cba"
+  ],
+  "checkedAt": "2026-09-17T09:20:57.542Z"
+}

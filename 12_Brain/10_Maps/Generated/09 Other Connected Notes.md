@@ -4,7 +4,7 @@ status: active
 generated: true
 generated_by: Update-SecondBrainMaps
 map_type: domain
-updated: 2026-09-16
+updated: 2026-09-23
 tags:
   - brain
   - map
@@ -18,35 +18,6 @@ tags:
 > renaming notes. Edit source notes, not this generated file.
 
 Visible notes that do not yet belong to a stable operating domain.
-
-## _archive
-
-- [[_archive/01_Clients/Fagan Painting/Client Intelligence Overlay|Client Intelligence Overlay]]
-- [[_archive/01_Clients/Fagan Painting/overview|overview]]
-- [[_archive/01_Clients/Jeff Hozias|Jeff Hozias]]
-- [[_archive/01_Clients/Shadow HVAC/active-campaigns|active-campaigns]]
-- [[_archive/01_Clients/Shadow HVAC/Agent Memory|Agent Memory]]
-- [[_archive/01_Clients/Shadow HVAC/brand-guidelines|brand-guidelines]]
-- [[_archive/01_Clients/Shadow HVAC/Client Intelligence Overlay|Client Intelligence Overlay]]
-- [[_archive/01_Clients/Shadow HVAC/contact-info|contact-info]]
-- [[_archive/01_Clients/Shadow HVAC/content-calendar|content-calendar]]
-- [[_archive/01_Clients/Shadow HVAC/notes|notes]]
-- [[_archive/01_Clients/Shadow HVAC/overview|overview]]
-- [[_archive/01_Clients/Shadow HVAC/Reporting Log|Reporting Log]]
-- [[_archive/01_Clients/Shadow HVAC/website/README|README]]
-- [[_archive/05_Book/characters|characters]]
-- [[_archive/05_Book/email-growth-tracker|email-growth-tracker]]
-- [[_archive/05_Book/guest-post-pipeline|guest-post-pipeline]]
-- [[_archive/05_Book/overview|overview]]
-- [[_archive/05_Book/seo-strategy|seo-strategy]]
-- [[_archive/05_Offers/Mohr Media Business Plan|Mohr Media Business Plan]]
-- [[_archive/05_Offers/Offer Index|Offer Index]]
-- [[_archive/06_Personal/Personal Index|Personal Index]]
-- [[_archive/07_DBA/assignment-tracker|assignment-tracker]]
-- [[_archive/07_DBA/notes|notes]]
-- [[_archive/07_DBA/overview|overview]]
-- [[_archive/09_Transcripts/Transcript Index|Transcript Index]]
-- [[_archive/README|README]]
 
 ## .agents
 
@@ -85,6 +56,44 @@ Visible notes that do not yet belong to a stable operating domain.
 - [[.github/skills/dillon-frontend-maker/SKILL|SKILL]]
 - [[.github/skills/dillon-independent-web-checker/SKILL|SKILL]]
 - [[.github/skills/dillon-plan-grill/SKILL|SKILL]]
+
+## .remember
+
+- [[.remember/archive|archive]]
+- [[.remember/now|now]]
+- [[.remember/recent|recent]]
+- [[.remember/today-2026-09-16.done|today-2026-09-16.done]]
+- [[.remember/today-2026-09-17.done|today-2026-09-17.done]]
+- [[.remember/today-2026-09-21|today-2026-09-21]]
+
+## _archive
+
+- [[_archive/01_Clients/Fagan Painting/Client Intelligence Overlay|Client Intelligence Overlay]]
+- [[_archive/01_Clients/Fagan Painting/overview|overview]]
+- [[_archive/01_Clients/Jeff Hozias|Jeff Hozias]]
+- [[_archive/01_Clients/Shadow HVAC/active-campaigns|active-campaigns]]
+- [[_archive/01_Clients/Shadow HVAC/Agent Memory|Agent Memory]]
+- [[_archive/01_Clients/Shadow HVAC/brand-guidelines|brand-guidelines]]
+- [[_archive/01_Clients/Shadow HVAC/Client Intelligence Overlay|Client Intelligence Overlay]]
+- [[_archive/01_Clients/Shadow HVAC/contact-info|contact-info]]
+- [[_archive/01_Clients/Shadow HVAC/content-calendar|content-calendar]]
+- [[_archive/01_Clients/Shadow HVAC/notes|notes]]
+- [[_archive/01_Clients/Shadow HVAC/overview|overview]]
+- [[_archive/01_Clients/Shadow HVAC/Reporting Log|Reporting Log]]
+- [[_archive/01_Clients/Shadow HVAC/website/README|README]]
+- [[_archive/05_Book/characters|characters]]
+- [[_archive/05_Book/email-growth-tracker|email-growth-tracker]]
+- [[_archive/05_Book/guest-post-pipeline|guest-post-pipeline]]
+- [[_archive/05_Book/overview|overview]]
+- [[_archive/05_Book/seo-strategy|seo-strategy]]
+- [[_archive/05_Offers/Mohr Media Business Plan|Mohr Media Business Plan]]
+- [[_archive/05_Offers/Offer Index|Offer Index]]
+- [[_archive/06_Personal/Personal Index|Personal Index]]
+- [[_archive/07_DBA/assignment-tracker|assignment-tracker]]
+- [[_archive/07_DBA/notes|notes]]
+- [[_archive/07_DBA/overview|overview]]
+- [[_archive/09_Transcripts/Transcript Index|Transcript Index]]
+- [[_archive/README|README]]
 
 ## 07_Daily_Notes
 

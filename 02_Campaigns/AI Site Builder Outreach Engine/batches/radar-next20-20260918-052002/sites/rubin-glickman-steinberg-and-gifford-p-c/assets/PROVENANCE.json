@@ -1,0 +1,168 @@
+{
+  "slug": "rubin-glickman-steinberg-and-gifford-p-c",
+  "preparedAt": "2026-09-18T09:24:12.973Z",
+  "sourceSite": "https://www.rgsglaw.com/newtown-office",
+  "sourceFinalUrl": "https://www.rgsglaw.com/bucks-county/",
+  "sourcePageSha256": "94a0cb78d4c374474155e44f169a919e496b1dff4d93d3eca5629386c1c6c2f8",
+  "exactLogoRequired": true,
+  "exactLogoSha256": "f4e38d759761b30b368c7cc88641fdc9f7acc8ea994c6b255be2e2a5061e1174",
+  "firstPartyDerivativePolicy": "Content visuals preserve first-party source photography while adapting crop and tonal balance for the private mobile concept. They are not evidence of additional projects or outcomes.",
+  "generatedCompositionReference": "automation/prospect-radar-next20/.impeccable/mocks/architerra-mobile-three-directions.png",
+  "assets": [
+    {
+      "role": "exact identity",
+      "output": "logo.png",
+      "sourceUrl": "https://www.rgsglaw.com/wp-content/uploads/2024/02/logo-v2.png",
+      "sourceSha256": "704952fbbf409400e08a1b548c1b937ffd26167bc0c2d0be99106f6e8bee2749",
+      "outputSha256": "f4e38d759761b30b368c7cc88641fdc9f7acc8ea994c6b255be2e2a5061e1174",
+      "transformation": "flat border color rgb(71,112,76) removed by border-seeded flood fill at tolerance 32; geometry unchanged",
+      "transparent": true
+    },
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.rgsglaw.com/wp-content/uploads/2026/03/National-39022-spec-ccUS-ed16-Year-Original.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "50fb9020d683325107e529f92a8b639f2c56cbf4d658c03534be8178b80360d8",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=0.990:contrast=1.046:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "c0d24738a3e3701f1e4059d1bfcdf4701073be25a3c1a33c33faeb51b80f6145"
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.rgsglaw.com/wp-content/uploads/2026/03/2025-Best-Law-Firm-Badge-scaled.png",
+      "sourceFile": "reference-2.png",
+      "sourceSha256": "d7dad98b7cd148443623fca1ad7050b51d8d713982eccfb6cccb896fce75757d",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:0,eq=saturation=1.015:contrast=1.010:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "46fa22d7c66ed2fb6e3972d8e0840b2f66e95a58d25013112e6702b3b5051ea7"
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.rgsglaw.com/wp-content/uploads/2026/03/National-39022-spec-ccUS-ed16-Year-Original.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "50fb9020d683325107e529f92a8b639f2c56cbf4d658c03534be8178b80360d8",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:0,eq=saturation=1.040:contrast=1.064:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "14125fc7bf54a6db070dc0e71be5c2f30646d493348e60065a24b9082998922e"
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.rgsglaw.com/wp-content/uploads/2026/03/2025-Best-Law-Firm-Badge-scaled.png",
+      "sourceFile": "reference-2.png",
+      "sourceSha256": "d7dad98b7cd148443623fca1ad7050b51d8d713982eccfb6cccb896fce75757d",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:0,eq=saturation=0.940:contrast=1.028:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "cdfbc2633118128c6a20d46aaa64b8532143957a8abccd861ac5ada34900cb94"
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.rgsglaw.com/wp-content/uploads/2026/03/National-39022-spec-ccUS-ed16-Year-Original.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "50fb9020d683325107e529f92a8b639f2c56cbf4d658c03534be8178b80360d8",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:42,eq=saturation=0.965:contrast=1.082:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "2909898c7bb5c2951be6bf030181af73a1b26011dbd489160fa87b89b09b8e59"
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.rgsglaw.com/wp-content/uploads/2026/03/2025-Best-Law-Firm-Badge-scaled.png",
+      "sourceFile": "reference-2.png",
+      "sourceSha256": "d7dad98b7cd148443623fca1ad7050b51d8d713982eccfb6cccb896fce75757d",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:42,eq=saturation=0.990:contrast=1.046:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "d9c480aee7f9ca261a534d5e8d51267056ad5056d6edb252beb9f2b1e3ccfddf"
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.rgsglaw.com/wp-content/uploads/2026/03/National-39022-spec-ccUS-ed16-Year-Original.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "50fb9020d683325107e529f92a8b639f2c56cbf4d658c03534be8178b80360d8",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:42,eq=saturation=1.015:contrast=1.010:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "838d87f8f0e3a114d07893654cb6750f1c9d030f965d67d64996350e4a29003b"
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.rgsglaw.com/wp-content/uploads/2026/03/2025-Best-Law-Firm-Badge-scaled.png",
+      "sourceFile": "reference-2.png",
+      "sourceSha256": "d7dad98b7cd148443623fca1ad7050b51d8d713982eccfb6cccb896fce75757d",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:42,eq=saturation=1.040:contrast=1.064:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "833772428cbd57a59cd49829eae3dd6808929dd50fe05c68532179b357dc51f3"
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.rgsglaw.com/wp-content/uploads/2026/03/National-39022-spec-ccUS-ed16-Year-Original.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "50fb9020d683325107e529f92a8b639f2c56cbf4d658c03534be8178b80360d8",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:84,eq=saturation=0.940:contrast=1.028:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "857ba8da8383b1baa30aa33a716a1d0b61022b8e9ac92673caf18e9331b77b14"
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.rgsglaw.com/wp-content/uploads/2026/03/2025-Best-Law-Firm-Badge-scaled.png",
+      "sourceFile": "reference-2.png",
+      "sourceSha256": "d7dad98b7cd148443623fca1ad7050b51d8d713982eccfb6cccb896fce75757d",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:84,eq=saturation=0.965:contrast=1.082:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "77c4b75d712b1ae3fbe8edc95e76b8010bd82313725c9f76900c4653e1666da7"
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.rgsglaw.com/wp-content/uploads/2026/03/National-39022-spec-ccUS-ed16-Year-Original.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "50fb9020d683325107e529f92a8b639f2c56cbf4d658c03534be8178b80360d8",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:84,eq=saturation=0.990:contrast=1.046:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "af92911283a8301f9ca973bbe2231c130ad104cfee1fcbd7797d0fa86bd67afe"
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.rgsglaw.com/wp-content/uploads/2026/03/2025-Best-Law-Firm-Badge-scaled.png",
+      "sourceFile": "reference-2.png",
+      "sourceSha256": "d7dad98b7cd148443623fca1ad7050b51d8d713982eccfb6cccb896fce75757d",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:84,eq=saturation=1.015:contrast=1.010:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "5cd0d4723727012312cfec95a80e03e4001219b48d1bb148c3438674fa775de9"
+    }
+  ],
+  "fonts": {
+    "pair": {
+      "id": "alegreya-karla",
+      "display": "Alegreya",
+      "text": "Karla"
+    },
+    "source": "Google Fonts CSS API",
+    "files": [
+      {
+        "file": "font-display-400.woff2",
+        "sha256": "2431eca3ed8ed66e713cf7093d170d77a083a793a5f19a615506d63770abd973"
+      },
+      {
+        "file": "font-display-700.woff2",
+        "sha256": "2431eca3ed8ed66e713cf7093d170d77a083a793a5f19a615506d63770abd973"
+      },
+      {
+        "file": "font-text-400.woff2",
+        "sha256": "3b1eb09a53fd7b26c107b099b3da5fb2ac90b77297cb3ad713a7b40438ae718b"
+      },
+      {
+        "file": "font-text-700.woff2",
+        "sha256": "3b1eb09a53fd7b26c107b099b3da5fb2ac90b77297cb3ad713a7b40438ae718b"
+      }
+    ]
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "sourceUrl": "https://www.suburbanautoworks.com/",
+  "finalUrl": "https://suburbanautoworks.com/",
+  "sourceDomain": "suburbanautoworks.com",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=UTF-8",
+  "pageSha256": "220898a27e5d5bc55324cb7da196064e9e2810811dcc9d338383d8023e632b71",
+  "title": "Home - Suburban Autoworks, Inc.",
+  "description": "Vehicle damage is stressful enough. Let us turn a difficult situation into a worry-free experience",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "suburban",
+      "autoworks"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\suburban-autoworks\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://suburbanautoworks.com/wp-content/uploads/2024/02/Suburban-Auto-Works-Logo-Main.png",
+    "sourceEvidence": "JSON-LD logo URL",
+    "type": "png",
+    "dimensions": {
+      "width": 1000,
+      "height": 299
+    },
+    "sha256": "506b4840021c106b5325b97cf942c5083071561e7b8f54c2967bd822c680c817",
+    "sourceSha256": "506b4840021c106b5325b97cf942c5083071561e7b8f54c2967bd822c680c817",
+    "sourceType": "png",
+    "sourceFileName": null,
+    "transformation": "none; exact first-party transparent asset",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "transparentRatio": 0.7234,
+      "edgeTransparentRatio": 0.9261,
+      "contentRatio": 0.2766,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 57246
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\suburban-autoworks\\reference-1.jpg",
+      "fileName": "reference-1.jpg",
+      "sourceUrl": "https://suburbanautoworks.com/wp-content/uploads/2024/08/IMG_4589-2-2048x1536.jpg",
+      "sourceEvidence": "IMG vcex-before skip-lazy",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 1536,
+        "width": 2048
+      },
+      "sha256": "40b6c028e0e9c9fb06816289a4ecd2c36295d8f3b5d12f3f20fdda928650460a",
+      "bytes": 593520,
+      "visual": {
+        "ok": true,
+        "lumaRange": 254.8,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\suburban-autoworks\\reference-2.jpg",
+      "fileName": "reference-2.jpg",
+      "sourceUrl": "https://suburbanautoworks.com/wp-content/uploads/2024/08/IMG_4753-2-2048x1536.jpg",
+      "sourceEvidence": "IMG vcex-after skip-lazy",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 1536,
+        "width": 2048
+      },
+      "sha256": "53be585ff6423097a55298493da535fb7e3fdeaf80e2ca8d50268f587aa2ba80",
+      "bytes": 647368,
+      "visual": {
+        "ok": true,
+        "lumaRange": 255,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\suburban-autoworks\\reference-3.jpg",
+      "fileName": "reference-3.jpg",
+      "sourceUrl": "https://suburbanautoworks.com/wp-content/uploads/2025/09/IMG_5700-2048x1536.jpg",
+      "sourceEvidence": "IMG vcex-before skip-lazy",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 1536,
+        "width": 2048
+      },
+      "sha256": "c35df1d970c80e3b3a825988ad5ba65d34a750d0ea040b34a23369610ba93bf3",
+      "bytes": 664667,
+      "visual": {
+        "ok": true,
+        "lumaRange": 255,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [
+    {
+      "url": "https://suburbanautoworks.com/wp-content/uploads/2024/02/SAW-Mobile-Estimator-Button-Header.png",
+      "reason": "reference image is too small"
+    }
+  ],
+  "brandColors": [
+    "#243e8c",
+    "#19bdd6",
+    "#003388",
+    "#00d084",
+    "#0693e3"
+  ],
+  "checkedAt": "2026-09-17T09:21:24.920Z"
+}

@@ -1,0 +1,168 @@
+{
+  "slug": "nemours-childrens-health",
+  "preparedAt": "2026-09-17T09:22:35.858Z",
+  "sourceSite": "https://www.nemours.org/locations/pennsylvania-primary-care-pediatrician-paoli.html",
+  "sourceFinalUrl": "https://www.nemours.org/locations/pennsylvania-primary-care-pediatrician-paoli.html",
+  "sourcePageSha256": "4a1d66b0d6755eae336cd8788fedc396828df410c0d9a80074e94ca4ef29fd62",
+  "exactLogoRequired": true,
+  "exactLogoSha256": "dd042392de59d8762b38f5c63c1f088f22535ae0f23c9c641ea2d663c2bdb3e6",
+  "firstPartyDerivativePolicy": "Content visuals preserve first-party source photography while adapting crop and tonal balance for the private mobile concept. They are not evidence of additional projects or outcomes.",
+  "generatedCompositionReference": "automation/prospect-radar-next20/.impeccable/mocks/architerra-mobile-three-directions.png",
+  "assets": [
+    {
+      "role": "exact identity",
+      "output": "logo.svg",
+      "sourceUrl": "https://www.nemours.org/content/experience-fragments/nemours/us/en/navigation/header/master/_jcr_content/root/container/container_1613541240/image.coreimg.svg/1683290005293/nemours-logo-horizontal-condensed-v2.svg",
+      "sourceSha256": "dd042392de59d8762b38f5c63c1f088f22535ae0f23c9c641ea2d663c2bdb3e6",
+      "outputSha256": "dd042392de59d8762b38f5c63c1f088f22535ae0f23c9c641ea2d663c2bdb3e6",
+      "transformation": "none; exact first-party transparent asset",
+      "transparent": true
+    },
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.nemours.org/content/dam/platform/nemours-org/images/default-og-image/default-og-image.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "3623fb6b9a363cabac446ec31c9d0a7bd0ec3349f2e96a74f58c77f7d49308cb",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=0.990:contrast=1.046:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "636461127838d03e92ca4ba99a7165bb1d899f5d2451ac200ce50b08df30dfa9"
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.nemours.org/content/dam/nemours/nemours-org/en/cloud-migration/hero-doctor-child-primary-care-j10143.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "0567bd9b74d7a98b621048afbee0391350d1d419ea4892ee3c835634cd038e85",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:0,eq=saturation=1.015:contrast=1.010:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "15e9e2c5a20fd7b1b84fb036a78cf73dbd2035058e7b93ce7b19086f6fbe9d0a"
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.nemours.org/content/experience-fragments/nemours/us/en/site/cloud/nemours-app/_jcr_content/root/two_panel_block_righ/col2/image.coreimg.85.1600.png/1777924392416/block-nemours-app-smart-phone-j7348.png",
+      "sourceFile": "reference-3.png",
+      "sourceSha256": "f2da6823d131712c1cee5e4112f119fe8dd311ba253e2317f9d345edbfe3970d",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:0,eq=saturation=1.040:contrast=1.064:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "2ae984d2d5c9246a6c19592f741297b42dde4f62408cdc4de830161c03e83616"
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.nemours.org/content/dam/platform/nemours-org/images/default-og-image/default-og-image.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "3623fb6b9a363cabac446ec31c9d0a7bd0ec3349f2e96a74f58c77f7d49308cb",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:0,eq=saturation=0.940:contrast=1.028:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "efd00daeb64073f09d48e91ea7b48d8f160186128ad178713a340dd72d912a93"
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.nemours.org/content/dam/nemours/nemours-org/en/cloud-migration/hero-doctor-child-primary-care-j10143.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "0567bd9b74d7a98b621048afbee0391350d1d419ea4892ee3c835634cd038e85",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:42,eq=saturation=0.965:contrast=1.082:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "b12ecef87006c083e1f7a2edf859b9c0aa690d2b363bdfdfa84e0b0f949b836f"
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.nemours.org/content/experience-fragments/nemours/us/en/site/cloud/nemours-app/_jcr_content/root/two_panel_block_righ/col2/image.coreimg.85.1600.png/1777924392416/block-nemours-app-smart-phone-j7348.png",
+      "sourceFile": "reference-3.png",
+      "sourceSha256": "f2da6823d131712c1cee5e4112f119fe8dd311ba253e2317f9d345edbfe3970d",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:42,eq=saturation=0.990:contrast=1.046:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "7cb5e1cc3a242d968f6064a647f05781cf841583e29f25bb549d62ce2e703777"
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.nemours.org/content/dam/platform/nemours-org/images/default-og-image/default-og-image.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "3623fb6b9a363cabac446ec31c9d0a7bd0ec3349f2e96a74f58c77f7d49308cb",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:42,eq=saturation=1.015:contrast=1.010:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "ae2dd9a80642e83bd78a1552d8d2e7958f6fa1ffd1020a05602e1cb0ce8bdf0a"
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.nemours.org/content/dam/nemours/nemours-org/en/cloud-migration/hero-doctor-child-primary-care-j10143.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "0567bd9b74d7a98b621048afbee0391350d1d419ea4892ee3c835634cd038e85",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:42,eq=saturation=1.040:contrast=1.064:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "2a8342d64439fce2640a838dd7bd93bedf4a9469270058fa771d263cfe64ade0"
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.nemours.org/content/experience-fragments/nemours/us/en/site/cloud/nemours-app/_jcr_content/root/two_panel_block_righ/col2/image.coreimg.85.1600.png/1777924392416/block-nemours-app-smart-phone-j7348.png",
+      "sourceFile": "reference-3.png",
+      "sourceSha256": "f2da6823d131712c1cee5e4112f119fe8dd311ba253e2317f9d345edbfe3970d",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:84,eq=saturation=0.940:contrast=1.028:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "b521d5cfdbe984dc59a36072ff1efe8bfeab8126b0960b1f828a0a375135c863"
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.nemours.org/content/dam/platform/nemours-org/images/default-og-image/default-og-image.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "3623fb6b9a363cabac446ec31c9d0a7bd0ec3349f2e96a74f58c77f7d49308cb",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:84,eq=saturation=0.965:contrast=1.082:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "3fd7c8318e3affff5227943bef8c5e50b16dffa61071f8bea6e66131f34add93"
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.nemours.org/content/dam/nemours/nemours-org/en/cloud-migration/hero-doctor-child-primary-care-j10143.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "0567bd9b74d7a98b621048afbee0391350d1d419ea4892ee3c835634cd038e85",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:84,eq=saturation=0.990:contrast=1.046:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "2587e66e72917e3e7216525f2bf723abf27269eb1aa84d75e34926daf1953e42"
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.nemours.org/content/experience-fragments/nemours/us/en/site/cloud/nemours-app/_jcr_content/root/two_panel_block_righ/col2/image.coreimg.85.1600.png/1777924392416/block-nemours-app-smart-phone-j7348.png",
+      "sourceFile": "reference-3.png",
+      "sourceSha256": "f2da6823d131712c1cee5e4112f119fe8dd311ba253e2317f9d345edbfe3970d",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:84,eq=saturation=1.015:contrast=1.010:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "40581213f53ab90bf4f36b03f9290c7a13eca44a4cf80e65c38c761152024fb5"
+    }
+  ],
+  "fonts": {
+    "pair": {
+      "id": "alegreya-karla",
+      "display": "Alegreya",
+      "text": "Karla"
+    },
+    "source": "Google Fonts CSS API",
+    "files": [
+      {
+        "file": "font-display-400.woff2",
+        "sha256": "2431eca3ed8ed66e713cf7093d170d77a083a793a5f19a615506d63770abd973"
+      },
+      {
+        "file": "font-display-700.woff2",
+        "sha256": "2431eca3ed8ed66e713cf7093d170d77a083a793a5f19a615506d63770abd973"
+      },
+      {
+        "file": "font-text-400.woff2",
+        "sha256": "3b1eb09a53fd7b26c107b099b3da5fb2ac90b77297cb3ad713a7b40438ae718b"
+      },
+      {
+        "file": "font-text-700.woff2",
+        "sha256": "3b1eb09a53fd7b26c107b099b3da5fb2ac90b77297cb3ad713a7b40438ae718b"
+      }
+    ]
+  }
+}

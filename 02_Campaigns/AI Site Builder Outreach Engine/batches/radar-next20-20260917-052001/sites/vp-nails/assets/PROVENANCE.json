@@ -1,0 +1,168 @@
+{
+  "slug": "vp-nails",
+  "preparedAt": "2026-09-17T09:23:57.161Z",
+  "sourceSite": "https://vpnailspapottstown.com/",
+  "sourceFinalUrl": "https://vpnailspapottstown.com/",
+  "sourcePageSha256": "49bd5e79de4cb2617682bc1039b4cca7b97072f84fed0f128b8fbc50c51f76e3",
+  "exactLogoRequired": true,
+  "exactLogoSha256": "46590352e4cdb57aae36bca2aee87cff0aeef246b2e5479cc739d9fe963ac14f",
+  "firstPartyDerivativePolicy": "Content visuals preserve first-party source photography while adapting crop and tonal balance for the private mobile concept. They are not evidence of additional projects or outcomes.",
+  "generatedCompositionReference": "automation/prospect-radar-next20/.impeccable/mocks/architerra-mobile-three-directions.png",
+  "assets": [
+    {
+      "role": "exact identity",
+      "output": "logo.png",
+      "sourceUrl": "https://nz-website-media-r2-pub.gocheckin.net/1950-9685/page/header-logo-72628.png",
+      "sourceSha256": "46590352e4cdb57aae36bca2aee87cff0aeef246b2e5479cc739d9fe963ac14f",
+      "outputSha256": "46590352e4cdb57aae36bca2aee87cff0aeef246b2e5479cc739d9fe963ac14f",
+      "transformation": "none; exact first-party transparent asset",
+      "transparent": true
+    },
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://nz-website-media-r2-pub.gocheckin.net/1950-9685/page/index-3_1532743054_41_dreamstime_xxl_5113725-86769.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "795bfbb9f6aab2ee48804e12132bc5f08ef5b2046ec77ea2b94b5ff4cfb9069f",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=0.940:contrast=1.010:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "8f8cfd85a34d499ff717386f7423fd9e2b3538f396e3f76b8e8d1cb4859d95e1"
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://nz-website-media-r2-pub.gocheckin.net/1950-9685/page/index-3-21546.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "d6421ec0061594f4d7b09c19605b78aa50d8729fed57ec3cea67490230d69e32",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:0,eq=saturation=0.965:contrast=1.064:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "e37928aab2662a47d86a3dbb482bff6c1eb671b467ef8899a5a9fd8055b3e4ec"
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://nz-website-media-r2-pub.gocheckin.net/1950-9685/page/index-4-30185.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "6275f0ea08ab9772df51683ef1f2d8fb09e209b1865a585acf05bc082a6d22b3",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:0,eq=saturation=0.990:contrast=1.028:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "9534b3f4c905720133fabd467ebfbc97e27c8465a5c88c73c5d26a0d723e2aef"
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://nz-website-media-r2-pub.gocheckin.net/1950-9685/page/index-3_1532743054_41_dreamstime_xxl_5113725-86769.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "795bfbb9f6aab2ee48804e12132bc5f08ef5b2046ec77ea2b94b5ff4cfb9069f",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:0,eq=saturation=1.015:contrast=1.082:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "85002c01bdd2be27e0969a53eb33a340eacf742838fa5005f45b5fa67a381cd5"
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://nz-website-media-r2-pub.gocheckin.net/1950-9685/page/index-3-21546.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "d6421ec0061594f4d7b09c19605b78aa50d8729fed57ec3cea67490230d69e32",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:42,eq=saturation=1.040:contrast=1.046:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "2ea03ab5bc2a83569d8a68ef2bf2a17d42588e0c22bc8c473650627e5e259408"
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://nz-website-media-r2-pub.gocheckin.net/1950-9685/page/index-4-30185.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "6275f0ea08ab9772df51683ef1f2d8fb09e209b1865a585acf05bc082a6d22b3",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:42,eq=saturation=0.940:contrast=1.010:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "583dc940c4fec97c161b06821f32e8739a0bcfd1c787dd246f4bb834092a18ae"
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://nz-website-media-r2-pub.gocheckin.net/1950-9685/page/index-3_1532743054_41_dreamstime_xxl_5113725-86769.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "795bfbb9f6aab2ee48804e12132bc5f08ef5b2046ec77ea2b94b5ff4cfb9069f",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:42,eq=saturation=0.965:contrast=1.064:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "dc0415649fbe0c3d632caf8f904f36e08230ecf8ee0e9fc0f9630489127f3262"
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://nz-website-media-r2-pub.gocheckin.net/1950-9685/page/index-3-21546.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "d6421ec0061594f4d7b09c19605b78aa50d8729fed57ec3cea67490230d69e32",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:42,eq=saturation=0.990:contrast=1.028:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "e822bcc5c02fc389da97049925e3a33463e965cc9fea3dea92204416a2c4e163"
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://nz-website-media-r2-pub.gocheckin.net/1950-9685/page/index-4-30185.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "6275f0ea08ab9772df51683ef1f2d8fb09e209b1865a585acf05bc082a6d22b3",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:84,eq=saturation=1.015:contrast=1.082:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "0e9d4579b33268450b734778c64749ffce94a8b1f7179a6617c2bb3075ad62e5"
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://nz-website-media-r2-pub.gocheckin.net/1950-9685/page/index-3_1532743054_41_dreamstime_xxl_5113725-86769.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "795bfbb9f6aab2ee48804e12132bc5f08ef5b2046ec77ea2b94b5ff4cfb9069f",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:84,eq=saturation=1.040:contrast=1.046:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "4714eff495b3136b0a640818b43c944ac59e527688afb7358997ec0115cfecbe"
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://nz-website-media-r2-pub.gocheckin.net/1950-9685/page/index-3-21546.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "d6421ec0061594f4d7b09c19605b78aa50d8729fed57ec3cea67490230d69e32",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:84,eq=saturation=0.940:contrast=1.010:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "3ce06bf1433f694b3e0157c70594521fcb4a2f6dc7711a358c17ec8a8df644d3"
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://nz-website-media-r2-pub.gocheckin.net/1950-9685/page/index-4-30185.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "6275f0ea08ab9772df51683ef1f2d8fb09e209b1865a585acf05bc082a6d22b3",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:84,eq=saturation=0.965:contrast=1.064:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "bbd064bbbfa48eade0529a3087212afaa2c3a8db8e3b07c913ede3459affa26b"
+    }
+  ],
+  "fonts": {
+    "pair": {
+      "id": "syne-work",
+      "display": "Syne",
+      "text": "Work Sans"
+    },
+    "source": "Google Fonts CSS API",
+    "files": [
+      {
+        "file": "font-display-400.woff2",
+        "sha256": "68b623f0e45b905041b2edb9b2e4f563a505f13db1cd06b5f1946eb2e1f47048"
+      },
+      {
+        "file": "font-display-700.woff2",
+        "sha256": "68b623f0e45b905041b2edb9b2e4f563a505f13db1cd06b5f1946eb2e1f47048"
+      },
+      {
+        "file": "font-text-400.woff2",
+        "sha256": "1dd49afc07fb2231b2ff686cbf007725fb2742271bb1f28ebd98f22a0d817343"
+      },
+      {
+        "file": "font-text-700.woff2",
+        "sha256": "1dd49afc07fb2231b2ff686cbf007725fb2742271bb1f28ebd98f22a0d817343"
+      }
+    ]
+  }
+}

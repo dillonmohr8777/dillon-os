@@ -1,0 +1,168 @@
+{
+  "slug": "zommick-mcmahon-commercial-real-estate-inc",
+  "preparedAt": "2026-09-17T09:23:44.772Z",
+  "sourceSite": "https://zmcre.com/",
+  "sourceFinalUrl": "https://zmcre.com/",
+  "sourcePageSha256": "31c5b9121960c49035273ce86fc1e8c2aae692f5054e71a0b40cb3e486e143d9",
+  "exactLogoRequired": true,
+  "exactLogoSha256": "f9ba9f686b20ba7d67c2588de60b8b605e04be5b4fed5d0a1b0d6f024e9caa71",
+  "firstPartyDerivativePolicy": "Content visuals preserve first-party source photography while adapting crop and tonal balance for the private mobile concept. They are not evidence of additional projects or outcomes.",
+  "generatedCompositionReference": "automation/prospect-radar-next20/.impeccable/mocks/architerra-mobile-three-directions.png",
+  "assets": [
+    {
+      "role": "exact identity",
+      "output": "logo.png",
+      "sourceUrl": "https://zmcre.com/wp-content/uploads/2017/07/ZMCRE_Logo_Yellow-White-4.png",
+      "sourceSha256": "f9ba9f686b20ba7d67c2588de60b8b605e04be5b4fed5d0a1b0d6f024e9caa71",
+      "outputSha256": "f9ba9f686b20ba7d67c2588de60b8b605e04be5b4fed5d0a1b0d6f024e9caa71",
+      "transformation": "none; exact first-party transparent asset",
+      "transparent": true
+    },
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://zmcre.com/wp-content/uploads/2018/12/TenantRep.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "23f1899233c29acbb52a79e1a2fbd9ec7a5eb10ffc66120ab9cf6d0203ad77fb",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=0.965:contrast=1.028:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "926d0b2eef7c2402bbab0b68729d79318289ce9bea299a832f895526048cc803"
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://zmcre.com/wp-content/uploads/2018/12/InvestmentSales.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "3bb74230bca2c2c434878bf336e769bae165a69c1408b9ad397f16b1a8a579bc",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:0,eq=saturation=0.990:contrast=1.082:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "e6e9df2679c7a149f515e8e6fca62d5e94f078035bd4df84814d63ac218ea63d"
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://zmcre.com/wp-content/uploads/2018/12/LeasingServices.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "2fb1625e8220673a9255fa3b0792999b4564dc3dcfa1b836c714e6a363f857f7",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:0,eq=saturation=1.015:contrast=1.046:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "84a70ef9ff20fcae4bc52d9afc31f0b8325f469a9cdc8a676b068ff14ddceb11"
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://zmcre.com/wp-content/uploads/2018/12/TenantRep.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "23f1899233c29acbb52a79e1a2fbd9ec7a5eb10ffc66120ab9cf6d0203ad77fb",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:0,eq=saturation=1.040:contrast=1.010:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "6cffbcb628493421d228480ff8f3df8282af87fcb1983a7be29898980e8d7245"
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://zmcre.com/wp-content/uploads/2018/12/InvestmentSales.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "3bb74230bca2c2c434878bf336e769bae165a69c1408b9ad397f16b1a8a579bc",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:42,eq=saturation=0.940:contrast=1.064:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "b7c44b9822257645feba136b0c91b5fa9da2fc006c24753d8f6c40acbb7a1736"
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://zmcre.com/wp-content/uploads/2018/12/LeasingServices.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "2fb1625e8220673a9255fa3b0792999b4564dc3dcfa1b836c714e6a363f857f7",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:42,eq=saturation=0.965:contrast=1.028:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "d6782e91e28f0b14cba692e403542a8d6c34987b39601ce37ab4b084298cf3b8"
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://zmcre.com/wp-content/uploads/2018/12/TenantRep.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "23f1899233c29acbb52a79e1a2fbd9ec7a5eb10ffc66120ab9cf6d0203ad77fb",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:42,eq=saturation=0.990:contrast=1.082:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "af8c232e64186abb7259ad18858a3a9e8ff667964745582f94d0afbb29eb59c5"
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://zmcre.com/wp-content/uploads/2018/12/InvestmentSales.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "3bb74230bca2c2c434878bf336e769bae165a69c1408b9ad397f16b1a8a579bc",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:42,eq=saturation=1.015:contrast=1.046:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "b3d4b3364cd3bd2ee6e1dddb0cbf64d79fb09d86d8e60e3b1d89d46bf3fe72c2"
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://zmcre.com/wp-content/uploads/2018/12/LeasingServices.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "2fb1625e8220673a9255fa3b0792999b4564dc3dcfa1b836c714e6a363f857f7",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:84,eq=saturation=1.040:contrast=1.010:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "9ecf37d73794efda1f179325dcf5177bfda35c5b7dcd3f8d9aac511d5c025192"
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://zmcre.com/wp-content/uploads/2018/12/TenantRep.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "23f1899233c29acbb52a79e1a2fbd9ec7a5eb10ffc66120ab9cf6d0203ad77fb",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:84,eq=saturation=0.940:contrast=1.064:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "04f76dc104c1937292e11af96152743f2512b8ef0a92feb6a2b191d90957351d"
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://zmcre.com/wp-content/uploads/2018/12/InvestmentSales.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "3bb74230bca2c2c434878bf336e769bae165a69c1408b9ad397f16b1a8a579bc",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:84,eq=saturation=0.965:contrast=1.028:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "9d5aab563bc9fbee98dc5d40910b4dcd66f2f5f996bce3b8d132a25286050780"
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://zmcre.com/wp-content/uploads/2018/12/LeasingServices.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "2fb1625e8220673a9255fa3b0792999b4564dc3dcfa1b836c714e6a363f857f7",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:84,eq=saturation=0.990:contrast=1.082:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "90fcb611c454395b156a3791a1940f46c36bede51ce3c0d0d777c19a8c509c30"
+    }
+  ],
+  "fonts": {
+    "pair": {
+      "id": "bricolage-manrope",
+      "display": "Bricolage Grotesque",
+      "text": "Manrope"
+    },
+    "source": "Google Fonts CSS API",
+    "files": [
+      {
+        "file": "font-display-400.woff2",
+        "sha256": "a97804dc9fbe5fc972a08018c5eda4dab7ef2346f64c57e61419d05e6de4ea1c"
+      },
+      {
+        "file": "font-display-700.woff2",
+        "sha256": "a97804dc9fbe5fc972a08018c5eda4dab7ef2346f64c57e61419d05e6de4ea1c"
+      },
+      {
+        "file": "font-text-400.woff2",
+        "sha256": "a30ddcd349703aff7464c34bef3fffdff405ee50c113440d7c8693c02d210972"
+      },
+      {
+        "file": "font-text-700.woff2",
+        "sha256": "a30ddcd349703aff7464c34bef3fffdff405ee50c113440d7c8693c02d210972"
+      }
+    ]
+  }
+}

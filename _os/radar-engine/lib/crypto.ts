@@ -5,7 +5,7 @@ const crypto = require('crypto');
 const PREFIX = 'enc:v1:';
 
 const SENSITIVE = {
-  intake_submissions: ['requester_name', 'requester_email', 'requester_phone', 'notes'],
+  intake_submissions: ['requester_name', 'requester_email', 'requester_phone', 'business_description', 'growth_goals', 'notes'],
   contacts: ['value', 'person_name', 'person_title'],
 };
 

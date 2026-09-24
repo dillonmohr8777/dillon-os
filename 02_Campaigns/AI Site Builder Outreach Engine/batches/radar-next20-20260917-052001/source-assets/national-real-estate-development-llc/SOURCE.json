@@ -1,0 +1,89 @@
+{
+  "sourceUrl": "https://natrealestatedevelopment.com/",
+  "finalUrl": "https://natrealestatedevelopment.com/",
+  "sourceDomain": "natrealestatedevelopment.com",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=UTF-8",
+  "pageSha256": "e3d1819919e12d883b3cf3f0e065a158bb6f31c773278799aa94166fd54510a4",
+  "title": "Home - National Real Estate Development",
+  "description": "",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "national",
+      "real",
+      "estate",
+      "development"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\national-real-estate-development-llc\\logo.svg",
+    "fileName": "logo.svg",
+    "sourceUrl": "https://natrealestatedevelopment.com/wp-content/themes/national/assets/images/flag-rvsd.svg",
+    "sourceEvidence": "Branded parent container IMG",
+    "type": "svg",
+    "dimensions": {
+      "width": 95,
+      "height": 89
+    },
+    "sha256": "6d61c01704114921baa1d69ec5fef38d76a6526c49293f3037f01e86098450a9",
+    "sourceSha256": "6d61c01704114921baa1d69ec5fef38d76a6526c49293f3037f01e86098450a9",
+    "sourceType": "svg",
+    "sourceFileName": null,
+    "transformation": "none; exact first-party transparent asset",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "vector": true
+    },
+    "transparent": true,
+    "bytes": 844
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\national-real-estate-development-llc\\reference-1.png",
+      "fileName": "reference-1.png",
+      "sourceUrl": "https://natrealestatedevelopment.com/wp-content/uploads/2020/11/Screenshot-2025-02-18-123800-500x378.png",
+      "sourceEvidence": "IMG lazyload  wp-post-image  jefferson health honickman center",
+      "type": "png",
+      "dimensions": {
+        "width": 500,
+        "height": 378
+      },
+      "sha256": "01640de1e2932b4bbba56a15ca50f4363fd3345c4024e132fc5aa86a732fc04e",
+      "bytes": 287010,
+      "visual": {
+        "ok": true,
+        "lumaRange": 254,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [
+    {
+      "url": "https://natrealestatedevelopment.com/wp-content/uploads/2025/03/12.19.24-A1-National-Dupont-Circle-Project-_52_3975-21-1024x683.jpg",
+      "reason": "progressive JPEG is not decodable here"
+    },
+    {
+      "url": "https://natrealestatedevelopment.com/1024",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://natrealestatedevelopment.com/683",
+      "reason": "HTTP 404"
+    },
+    {
+      "url": "https://natrealestatedevelopment.com/image/jpeg",
+      "reason": "HTTP 404"
+    }
+  ],
+  "brandColors": [
+    "#003388",
+    "#00d084",
+    "#0693e3",
+    "#7a00df",
+    "#007cba"
+  ],
+  "checkedAt": "2026-09-17T09:21:06.707Z"
+}

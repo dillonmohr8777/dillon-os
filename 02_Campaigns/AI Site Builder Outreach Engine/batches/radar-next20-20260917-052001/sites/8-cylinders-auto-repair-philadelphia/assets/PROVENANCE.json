@@ -1,0 +1,168 @@
+{
+  "slug": "8-cylinders-auto-repair-philadelphia",
+  "preparedAt": "2026-09-17T09:23:51.382Z",
+  "sourceSite": "https://8cylindersautorepair.com/",
+  "sourceFinalUrl": "https://8cylindersautorepair.com/",
+  "sourcePageSha256": "d4e2b0b7cb46a746fd1cd0e7291ece1e73e8dd59f3b29940212abd475bd04564",
+  "exactLogoRequired": true,
+  "exactLogoSha256": "601c452124aa9e4799ec513dccd5ad36e44d1ade05f8ee2f19bbb1f75d93898e",
+  "firstPartyDerivativePolicy": "Content visuals preserve first-party source photography while adapting crop and tonal balance for the private mobile concept. They are not evidence of additional projects or outcomes.",
+  "generatedCompositionReference": "automation/prospect-radar-next20/.impeccable/mocks/architerra-mobile-three-directions.png",
+  "assets": [
+    {
+      "role": "exact identity",
+      "output": "logo.png",
+      "sourceUrl": "https://8cylindersautorepair.com/wp-content/uploads/2026/04/cropped-cropped-d3e43cb2af014640d11d1b9992b183a3-scaled-1-1.png",
+      "sourceSha256": "94b398a90a6ac58f8186af9aea620e2ad10cef81b1d6422920ef5b2a54907ff8",
+      "outputSha256": "601c452124aa9e4799ec513dccd5ad36e44d1ade05f8ee2f19bbb1f75d93898e",
+      "transformation": "flat border color rgb(71,112,76) removed by border-seeded flood fill at tolerance 32; geometry unchanged",
+      "transparent": true
+    },
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://8cylindersautorepair.com/wp-content/uploads/2025/06/58-image.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "f644d1c998c17e7fce4ecb2da58ba4e92e53b1922f3e21e94686c98f4c081a73",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=1.015:contrast=1.064:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "45d908ae8f4f643ce554c769569da42de279ac08f4d0d498d11876862689ec3f"
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://8cylindersautorepair.com/wp-content/uploads/2026/04/cropped-cropped-d3e43cb2af014640d11d1b9992b183a3-scaled-1-1.png",
+      "sourceFile": "reference-2.png",
+      "sourceSha256": "94b398a90a6ac58f8186af9aea620e2ad10cef81b1d6422920ef5b2a54907ff8",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:0,eq=saturation=1.040:contrast=1.028:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "2c0ea2a53d6e12ad8dfaea8378bfc363e34e3b81e57acf0e30476c412ad6bdb8"
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://8cylindersautorepair.com/wp-content/uploads/2026/08/File-3.png",
+      "sourceFile": "reference-3.png",
+      "sourceSha256": "36dd5e7f0ae31fc9308e52ef16b612b3fc7f7b16135bfa3d3188099a4c17c44e",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:0,eq=saturation=0.940:contrast=1.082:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "c682b45cac845da523db5aeb5dc146b45c88145cce2f432a418a3972f9325ca1"
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://8cylindersautorepair.com/wp-content/uploads/2025/06/58-image.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "f644d1c998c17e7fce4ecb2da58ba4e92e53b1922f3e21e94686c98f4c081a73",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:0,eq=saturation=0.965:contrast=1.046:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "32ea51ad43feb55087319680808d91fffeba40dba3923cbc19419ad33c365143"
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://8cylindersautorepair.com/wp-content/uploads/2026/04/cropped-cropped-d3e43cb2af014640d11d1b9992b183a3-scaled-1-1.png",
+      "sourceFile": "reference-2.png",
+      "sourceSha256": "94b398a90a6ac58f8186af9aea620e2ad10cef81b1d6422920ef5b2a54907ff8",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:42,eq=saturation=0.990:contrast=1.010:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "dac513d0c1dbe262079c168b2c5530c96b35bbf95b1082e5d0cb5a0e4dda68f9"
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://8cylindersautorepair.com/wp-content/uploads/2026/08/File-3.png",
+      "sourceFile": "reference-3.png",
+      "sourceSha256": "36dd5e7f0ae31fc9308e52ef16b612b3fc7f7b16135bfa3d3188099a4c17c44e",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:42,eq=saturation=1.015:contrast=1.064:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "ba087da56ca017b0732dff19b0c6b5c43b5fab5ff770b179ff61ad8835b6c039"
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://8cylindersautorepair.com/wp-content/uploads/2025/06/58-image.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "f644d1c998c17e7fce4ecb2da58ba4e92e53b1922f3e21e94686c98f4c081a73",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:42,eq=saturation=1.040:contrast=1.028:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "b910f7aaa69f60f693d331d8c3ad2227cf288c0698cdff39f19a145461f97adb"
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://8cylindersautorepair.com/wp-content/uploads/2026/04/cropped-cropped-d3e43cb2af014640d11d1b9992b183a3-scaled-1-1.png",
+      "sourceFile": "reference-2.png",
+      "sourceSha256": "94b398a90a6ac58f8186af9aea620e2ad10cef81b1d6422920ef5b2a54907ff8",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:42,eq=saturation=0.940:contrast=1.082:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "0659c7ecb3cda164bdc3fc089340adbab9d25b9f366c781d3f341b0759419a84"
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://8cylindersautorepair.com/wp-content/uploads/2026/08/File-3.png",
+      "sourceFile": "reference-3.png",
+      "sourceSha256": "36dd5e7f0ae31fc9308e52ef16b612b3fc7f7b16135bfa3d3188099a4c17c44e",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:84,eq=saturation=0.965:contrast=1.046:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "b84dae22314e65689466fdad954d6a14402452193386baf6eb01a147697a5478"
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://8cylindersautorepair.com/wp-content/uploads/2025/06/58-image.png",
+      "sourceFile": "reference-1.png",
+      "sourceSha256": "f644d1c998c17e7fce4ecb2da58ba4e92e53b1922f3e21e94686c98f4c081a73",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:84,eq=saturation=0.990:contrast=1.010:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "d584f2179380e587b54fbeb7df479af08b9cce20c644ec08e8b076f8ac513126"
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://8cylindersautorepair.com/wp-content/uploads/2026/04/cropped-cropped-d3e43cb2af014640d11d1b9992b183a3-scaled-1-1.png",
+      "sourceFile": "reference-2.png",
+      "sourceSha256": "94b398a90a6ac58f8186af9aea620e2ad10cef81b1d6422920ef5b2a54907ff8",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:84,eq=saturation=1.015:contrast=1.064:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "18477e66e86f27cbaa795a7421b2b6bc2cd11090523322fd372245683245cd9e"
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://8cylindersautorepair.com/wp-content/uploads/2026/08/File-3.png",
+      "sourceFile": "reference-3.png",
+      "sourceSha256": "36dd5e7f0ae31fc9308e52ef16b612b3fc7f7b16135bfa3d3188099a4c17c44e",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:84,eq=saturation=1.040:contrast=1.028:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "c91f33069176c948022af973cce8c1cafa87b237e3295e192bf7d93df3bf95c1"
+    }
+  ],
+  "fonts": {
+    "pair": {
+      "id": "newsreader-figtree",
+      "display": "Newsreader",
+      "text": "Figtree"
+    },
+    "source": "Google Fonts CSS API",
+    "files": [
+      {
+        "file": "font-display-400.woff2",
+        "sha256": "62981321d9a3cc7a61a73792729043703fd6112da86e8ec848bb57f088578757"
+      },
+      {
+        "file": "font-display-700.woff2",
+        "sha256": "62981321d9a3cc7a61a73792729043703fd6112da86e8ec848bb57f088578757"
+      },
+      {
+        "file": "font-text-400.woff2",
+        "sha256": "4ba7d3d096695818fe0686be4f1e82c6b05134e18a22260336130335027462dd"
+      },
+      {
+        "file": "font-text-700.woff2",
+        "sha256": "4ba7d3d096695818fe0686be4f1e82c6b05134e18a22260336130335027462dd"
+      }
+    ]
+  }
+}

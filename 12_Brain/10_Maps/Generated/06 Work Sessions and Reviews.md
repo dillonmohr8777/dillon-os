@@ -4,7 +4,7 @@ status: active
 generated: true
 generated_by: Update-SecondBrainMaps
 map_type: domain
-updated: 2026-09-16
+updated: 2026-09-23
 tags:
   - brain
   - map
@@ -66,6 +66,13 @@ Inbox material, sessions, daily briefs, dashboards, and dated operating context.
 - [[00_Inbox/Agent-Proposals/Claude/2026-09-14-daily-driver-approval-package|2026-09-14-daily-driver-approval-package]]
 - [[00_Inbox/Agent-Proposals/Claude/2026-09-15-daily-driver-approval-package|2026-09-15-daily-driver-approval-package]]
 - [[00_Inbox/Agent-Proposals/Claude/2026-09-16-daily-driver-approval-package|2026-09-16-daily-driver-approval-package]]
+- [[00_Inbox/Agent-Proposals/Claude/2026-09-17-daily-driver-approval-package|2026-09-17-daily-driver-approval-package]]
+- [[00_Inbox/Agent-Proposals/Claude/2026-09-18-daily-driver-approval-package|2026-09-18-daily-driver-approval-package]]
+- [[00_Inbox/Agent-Proposals/Claude/2026-09-19-daily-driver-approval-package|2026-09-19-daily-driver-approval-package]]
+- [[00_Inbox/Agent-Proposals/Claude/2026-09-20-daily-driver-approval-package|2026-09-20-daily-driver-approval-package]]
+- [[00_Inbox/Agent-Proposals/Claude/2026-09-21-daily-driver-approval-package|2026-09-21-daily-driver-approval-package]]
+- [[00_Inbox/Agent-Proposals/Claude/2026-09-22-daily-driver-approval-package|2026-09-22-daily-driver-approval-package]]
+- [[00_Inbox/Agent-Proposals/Claude/2026-09-23-daily-driver-approval-package|2026-09-23-daily-driver-approval-package]]
 - [[00_Inbox/Agent-Proposals/Codex/2026-08-24-outcome-graph-knowledge-proposal|2026-08-24-outcome-graph-knowledge-proposal]]
 - [[00_Inbox/Agent-Proposals/Cursor/2026-08-26-client-success-advisor-canary|2026-08-26-client-success-advisor-canary]]
 - [[00_Inbox/Agent-Proposals/Cursor/2026-08-26-growth-content-immohrtal-scan|2026-08-26-growth-content-immohrtal-scan]]
@@ -79,11 +86,11 @@ Inbox material, sessions, daily briefs, dashboards, and dated operating context.
 - [[00_Inbox/Agent-Proposals/Cursor/2026-08-27-gsc-read|2026-08-27-gsc-read]]
 - [[00_Inbox/Agent-Proposals/Cursor/2026-08-27-kjb-cta-fix|2026-08-27-kjb-cta-fix]]
 - [[00_Inbox/Agent-Proposals/Cursor/2026-08-27-kjb-cta-qa|2026-08-27-kjb-cta-qa]]
-- [[00_Inbox/Agent-Proposals/Cursor/2026-08-27-omega-photos-qa|2026-08-27-omega-photos-qa]]
 - [[00_Inbox/Agent-Proposals/Cursor/2026-08-27-omega-photos|2026-08-27-omega-photos]]
+- [[00_Inbox/Agent-Proposals/Cursor/2026-08-27-omega-photos-qa|2026-08-27-omega-photos-qa]]
 - [[00_Inbox/Agent-Proposals/Cursor/2026-08-27-outreach-live-verify|2026-08-27-outreach-live-verify]]
-- [[00_Inbox/Agent-Proposals/Cursor/2026-08-27-shadow-kjb-photos-qa|2026-08-27-shadow-kjb-photos-qa]]
 - [[00_Inbox/Agent-Proposals/Cursor/2026-08-27-shadow-kjb-photos|2026-08-27-shadow-kjb-photos]]
+- [[00_Inbox/Agent-Proposals/Cursor/2026-08-27-shadow-kjb-photos-qa|2026-08-27-shadow-kjb-photos-qa]]
 - [[00_Inbox/Agent-Proposals/Cursor/google-ads-chrome-readback-2026-08-27|google-ads-chrome-readback-2026-08-27]]
 - [[00_Inbox/Agent-Proposals/Cursor/immohrtal-crew-2026-08-27|immohrtal-crew-2026-08-27]]
 - [[00_Inbox/Agent-Proposals/Cursor/immohrtal-crew-2026-08-28|immohrtal-crew-2026-08-28]]
@@ -106,6 +113,13 @@ Inbox material, sessions, daily briefs, dashboards, and dated operating context.
 - [[00_Inbox/Agent-Proposals/Cursor/immohrtal-crew-2026-09-14|immohrtal-crew-2026-09-14]]
 - [[00_Inbox/Agent-Proposals/Cursor/immohrtal-crew-2026-09-15|immohrtal-crew-2026-09-15]]
 - [[00_Inbox/Agent-Proposals/Cursor/immohrtal-crew-2026-09-16|immohrtal-crew-2026-09-16]]
+- [[00_Inbox/Agent-Proposals/Cursor/immohrtal-crew-2026-09-17|immohrtal-crew-2026-09-17]]
+- [[00_Inbox/Agent-Proposals/Cursor/immohrtal-crew-2026-09-18|immohrtal-crew-2026-09-18]]
+- [[00_Inbox/Agent-Proposals/Cursor/immohrtal-crew-2026-09-19|immohrtal-crew-2026-09-19]]
+- [[00_Inbox/Agent-Proposals/Cursor/immohrtal-crew-2026-09-20|immohrtal-crew-2026-09-20]]
+- [[00_Inbox/Agent-Proposals/Cursor/immohrtal-crew-2026-09-21|immohrtal-crew-2026-09-21]]
+- [[00_Inbox/Agent-Proposals/Cursor/immohrtal-crew-2026-09-22|immohrtal-crew-2026-09-22]]
+- [[00_Inbox/Agent-Proposals/Cursor/immohrtal-crew-2026-09-23|immohrtal-crew-2026-09-23]]
 - [[00_Inbox/Agent-Proposals/Cursor/immohrtal-outreach-hold-2026-08-27|immohrtal-outreach-hold-2026-08-27]]
 - [[00_Inbox/Agent-Proposals/Grok/2026-08-12-active-vault-access-canary|2026-08-12-active-vault-access-canary]]
 - [[00_Inbox/Agent-Proposals/Grok/2026-08-26-developer-cursor-access-canary|2026-08-26-developer-cursor-access-canary]]
@@ -118,6 +132,7 @@ Inbox material, sessions, daily briefs, dashboards, and dated operating context.
 - [[00_Inbox/slack/2026-09-02-mac-kjb-conversion-check|2026-09-02-mac-kjb-conversion-check]]
 - [[00_Inbox/Start Here|Start Here]]
 - [[00_Inbox/Top 15 Opportunities 2026-07-02|Top 15 Opportunities 2026-07-02]]
+- [[00_Inbox/WORKFLOW-RETHINK-DECISION-BRIEF-2026-09-18|WORKFLOW-RETHINK-DECISION-BRIEF-2026-09-18]]
 
 ## 10_Sessions
 
@@ -163,6 +178,12 @@ Inbox material, sessions, daily briefs, dashboards, and dated operating context.
 - [[Daily-Briefs/2026-09-13|2026-09-13]]
 - [[Daily-Briefs/2026-09-14|2026-09-14]]
 - [[Daily-Briefs/2026-09-15|2026-09-15]]
+- [[Daily-Briefs/2026-09-16|2026-09-16]]
+- [[Daily-Briefs/2026-09-19|2026-09-19]]
+- [[Daily-Briefs/2026-09-20|2026-09-20]]
+- [[Daily-Briefs/2026-09-21|2026-09-21]]
+- [[Daily-Briefs/2026-09-22|2026-09-22]]
+- [[Daily-Briefs/2026-09-23|2026-09-23]]
 - [[Daily-Briefs/aeo-trust-report|aeo-trust-report]]
 - [[Daily-Briefs/artifacts/2026-07-20-meeting-risk-workpack|2026-07-20-meeting-risk-workpack]]
 - [[Daily-Briefs/frontmatter-report|frontmatter-report]]
@@ -208,6 +229,13 @@ Inbox material, sessions, daily briefs, dashboards, and dated operating context.
 - [[Daily-Briefs/plan-2026-09-14|plan-2026-09-14]]
 - [[Daily-Briefs/plan-2026-09-15|plan-2026-09-15]]
 - [[Daily-Briefs/plan-2026-09-16|plan-2026-09-16]]
+- [[Daily-Briefs/plan-2026-09-17|plan-2026-09-17]]
+- [[Daily-Briefs/plan-2026-09-18|plan-2026-09-18]]
+- [[Daily-Briefs/plan-2026-09-19|plan-2026-09-19]]
+- [[Daily-Briefs/plan-2026-09-20|plan-2026-09-20]]
+- [[Daily-Briefs/plan-2026-09-21|plan-2026-09-21]]
+- [[Daily-Briefs/plan-2026-09-22|plan-2026-09-22]]
+- [[Daily-Briefs/plan-2026-09-23|plan-2026-09-23]]
 - [[Daily-Briefs/predicted-work-2026-09-02|predicted-work-2026-09-02]]
 - [[Daily-Briefs/predicted-work-2026-09-03|predicted-work-2026-09-03]]
 - [[Daily-Briefs/predicted-work-2026-09-04|predicted-work-2026-09-04]]
@@ -259,6 +287,11 @@ Inbox material, sessions, daily briefs, dashboards, and dated operating context.
 - [[Daily-Briefs/radar-2026-09-13|radar-2026-09-13]]
 - [[Daily-Briefs/radar-2026-09-14|radar-2026-09-14]]
 - [[Daily-Briefs/radar-2026-09-15|radar-2026-09-15]]
+- [[Daily-Briefs/radar-2026-09-19|radar-2026-09-19]]
+- [[Daily-Briefs/radar-2026-09-20|radar-2026-09-20]]
+- [[Daily-Briefs/radar-2026-09-21|radar-2026-09-21]]
+- [[Daily-Briefs/radar-2026-09-22|radar-2026-09-22]]
+- [[Daily-Briefs/radar-2026-09-23|radar-2026-09-23]]
 - [[Daily-Briefs/site-health-report|site-health-report]]
 - [[Daily-Briefs/slack-intake-2026-09-02|slack-intake-2026-09-02]]
 - [[Daily-Briefs/slack-intake-2026-09-10|slack-intake-2026-09-10]]

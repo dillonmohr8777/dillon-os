@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const { id, nowIso } = require('./ids.ts');
 const { assertTransition } = require('./states.ts');
-const { loadMigrationSchema, encodeRow, decodeRow, CLAIM_JOB_SQL } = require('./schema.ts');
+const { loadMigrationSchema, encodeRow, decodeRow, JOB_LEASE_MS, CLAIM_JOB_SQL } = require('./schema.ts');
 const { keyFromHex, encryptRow, decryptRow } = require('./crypto.ts');
 
 function stamp(row, extra = {}) {
@@ -132,16 +132,27 @@ class MemoryStore {
   async claimJob(workerId) {
     const now = Date.now();
     const due = this.all('jobs')
-      .filter((j) => j.status === 'queued' && !j.dead_letter && new Date(j.next_attempt_at).getTime() <= now)
-      .sort((a, b) => new Date(a.next_attempt_at) - new Date(b.next_attempt_at));
+      .filter((j) =>
+        (j.status === 'queued' && !j.dead_letter && new Date(j.next_attempt_at).getTime() <= now) ||
+        (j.type === 'intake.audit' && j.status === 'running' && !j.dead_letter &&
+          j.locked_at && new Date(j.locked_at).getTime() <= now - JOB_LEASE_MS)
+      )
+      .sort((a, b) => {
+        const timeA = new Date(a.status === 'running' ? a.locked_at : a.next_attempt_at).getTime();
+        const timeB = new Date(b.status === 'running' ? b.locked_at : b.next_attempt_at).getTime();
+        return timeA - timeB;
+      });
     const job = due[0];
     if (!job) return null;
-    if (this.locks.has(job.id)) return null;
+    const staleIntake = job.type === 'intake.audit' && job.status === 'running';
+    if (this.locks.has(job.id) && !staleIntake) return null;
+    if (staleIntake) this.locks.delete(job.id);
     this.locks.set(job.id, workerId);
     return this.update('jobs', job.id, {
       status: 'running',
       locked_at: nowIso(),
       locked_by: workerId,
+      last_error: staleIntake ? job.last_error || 'worker lease expired' : job.last_error,
     });
   }
 
@@ -227,7 +238,7 @@ class PgStore {
     if (this.lastWriteError) throw this.lastWriteError;
   }
 
-  async upsertRow(table, row) {
+  async upsertRow(table, row, executor = this.pool) {
     const protectedRow = encryptRow(table, row, this.fieldKey);
     const encoded = encodeRow(this.schema, table, protectedRow);
     const keys = Object.keys(encoded);
@@ -239,10 +250,72 @@ class PgStore {
       .map((k) => `"${k}" = EXCLUDED."${k}"`)
       .join(', ');
     const values = keys.map((k) => encoded[k]);
-    await this.pool.query(
+    await executor.query(
       `INSERT INTO ${table} (${cols}) VALUES (${placeholders}) ON CONFLICT (id) DO UPDATE SET ${updates}`,
       values
     );
+  }
+
+  async commitIntake(input, { domain, queueAudit = true } = {}) {
+    await this.flush();
+    const client = await this.pool.connect();
+    let inTransaction = false;
+    let discardClient = false;
+    try {
+      await client.query('BEGIN');
+      inTransaction = true;
+      await client.query('SELECT pg_advisory_xact_lock(hashtext($1), hashtext($2))', [domain, input.requester_email]);
+      const { rows } = await client.query(
+        'SELECT * FROM intake_submissions WHERE website = ANY($1::text[]) ORDER BY created_at, id',
+        [[`https://${domain}`, `http://${domain}`]]
+      );
+      const duplicate = rows
+        .map((row) => decryptRow('intake_submissions', decodeRow(row), this.fieldKey))
+        .find((row) => row.requester_email === input.requester_email) || null;
+      const staged = new MemoryStore();
+      const submission = staged.insert('intake_submissions', { ...input, duplicate_of: duplicate ? duplicate.duplicate_of || duplicate.id : null });
+      const rootId = duplicate?.duplicate_of || duplicate?.id || submission.id;
+      let job = null;
+      let newJob = false;
+      if (queueAudit) {
+        const idempotencyKey = `intake-audit:${rootId}`;
+        const existing = await client.query('SELECT * FROM jobs WHERE idempotency_key = $1', [idempotencyKey]);
+        if (existing.rows[0]) job = decodeRow(existing.rows[0]);
+        else {
+          job = (await staged.enqueueJob({
+            type: 'intake.audit',
+            idempotencyKey,
+            payload: { submission_id: rootId, campaign_id: duplicate?.campaign_id || input.campaign_id },
+          })).job;
+          newJob = true;
+        }
+      }
+      const event = await staged.emitEvent({
+        actor: 'prospect',
+        reason: 'intake submitted',
+        correlationId: submission.id,
+        type: 'intake.submitted',
+        payload: { campaign_id: input.campaign_id, domain, consent_analyze: input.consent_analyze, consent_marketing: input.consent_marketing },
+      });
+      await this.upsertRow('intake_submissions', submission, client);
+      if (newJob) await this.upsertRow('jobs', job, client);
+      await this.upsertRow('events', event, client);
+      await client.query('COMMIT');
+      inTransaction = false;
+      this.memory.tables.intake_submissions.set(submission.id, submission);
+      if (duplicate && !this.memory.get('intake_submissions', duplicate.id)) this.memory.tables.intake_submissions.set(duplicate.id, duplicate);
+      if (newJob || (job && !this.memory.get('jobs', job.id))) this.memory.tables.jobs.set(job.id, job);
+      this.memory.tables.events.set(event.id, event);
+      return { submission, duplicate: Boolean(duplicate) };
+    } catch (error) {
+      if (inTransaction) {
+        try { await client.query('ROLLBACK'); }
+        catch { discardClient = true; }
+      }
+      throw error;
+    } finally {
+      client.release(discardClient);
+    }
   }
 
   insert(table, row) {
@@ -260,6 +333,25 @@ class PgStore {
   get(table, idValue) {
     return this.memory.get(table, idValue);
   }
+
+  async readThrough(table, idValue) {
+    if (!Object.hasOwn(this.memory.tables, table)) throw new Error(`unknown table ${table}`);
+    if (typeof idValue !== 'string' || !idValue) return null;
+    await this.flush();
+    const { rows } = await this.pool.query(`SELECT * FROM ${table} WHERE id = $1`, [idValue]);
+    if (!rows[0]) {
+      this.memory.tables[table].delete(idValue);
+      return null;
+    }
+    const rec = decryptRow(table, decodeRow(rows[0]), this.fieldKey);
+    if (!rec?.id) {
+      this.memory.tables[table].delete(idValue);
+      return null;
+    }
+    this.memory.tables[table].set(rec.id, rec);
+    return rec;
+  }
+
   all(table) {
     return this.memory.all(table);
   }
@@ -296,7 +388,7 @@ class PgStore {
 
   async claimJob(workerId) {
     await this.flush();
-    const { rows } = await this.pool.query(CLAIM_JOB_SQL, [workerId]);
+    const { rows } = await this.pool.query(CLAIM_JOB_SQL, [workerId, JOB_LEASE_MS]);
     if (!rows[0]) return null;
     const rec = decodeRow(rows[0]);
     this.memory.tables.jobs.set(rec.id, rec);
@@ -352,6 +444,10 @@ class PgStore {
 async function migrate(databaseUrl) {
   const sqlPath = path.join(__dirname, '..', 'migrations', '001_init.sql');
   const sql = fs.readFileSync(sqlPath, 'utf8');
+  const forwardMigrations = ['002_intake_six_fields', '003_nullable_prospect_identity'].map((migrationId) => ({
+    id: migrationId,
+    sql: fs.readFileSync(path.join(__dirname, '..', 'migrations', `${migrationId}.sql`), 'utf8'),
+  }));
   if (!databaseUrl) {
     return { applied: false, reason: 'DATABASE_URL not set; schema file validated only' };
   }
@@ -363,28 +459,47 @@ async function migrate(databaseUrl) {
       `INSERT INTO schema_migrations (id) VALUES ($1) ON CONFLICT (id) DO NOTHING`,
       ['001_init']
     );
-    return { applied: true, reason: '001_init' };
+    for (const migration of forwardMigrations) {
+      const { rows } = await pool.query('SELECT id FROM schema_migrations WHERE id = $1', [migration.id]);
+      if (rows.length) continue;
+      await pool.query(migration.sql);
+      await pool.query(
+        `INSERT INTO schema_migrations (id) VALUES ($1) ON CONFLICT (id) DO NOTHING`,
+        [migration.id]
+      );
+    }
+    return { applied: true, reason: `001_init, ${forwardMigrations.map((migration) => migration.id).join(', ')}` };
   } finally {
     await pool.end();
   }
 }
 
-async function createStore({ databaseUrl } = {}) {
-  if (!databaseUrl) return new MemoryStore();
-  const { Pool } = require('pg');
-  const pool = new Pool({ connectionString: databaseUrl });
-  try {
-    await pool.query('SELECT 1');
-  } catch (err) {
-    await pool.end().catch(() => {});
-    const store = new MemoryStore();
-    store.pgUnavailable = String(err.message || err);
-    return store;
+async function createStore({ databaseUrl, requirePersistent = false } = {}) {
+  if (!databaseUrl) {
+    if (requirePersistent) throw new Error('persistent storage requires DATABASE_URL');
+    return new MemoryStore();
   }
-  const store = new PgStore(pool, loadMigrationSchema());
-  store.pgReady = true;
-  await store.hydrate();
-  return store;
+  let Pool;
+  try {
+    ({ Pool } = require('pg'));
+  } catch {
+    throw new Error('persistent storage unavailable');
+  }
+  let pool;
+  let ready = false;
+  try {
+    pool = new Pool({ connectionString: databaseUrl });
+    await pool.query('SELECT 1');
+    const store = new PgStore(pool, loadMigrationSchema());
+    store.pgReady = true;
+    await store.hydrate();
+    ready = true;
+    return store;
+  } catch {
+    throw new Error('persistent storage unavailable');
+  } finally {
+    if (!ready && pool) await pool.end().catch(() => {});
+  }
 }
 
 function listMigrationTables() {

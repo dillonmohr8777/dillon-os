@@ -1,6 +1,6 @@
 # WINDOWS WORLD MAP — DESKTOP-4AHKEC4
 Updated: 2026-09-11 ~12:54 PM ET
-Authority: Dillon Mohr — full local READ of every folder on this PC for Grok/Codex context expansion.
+Authority: Dillon Mohr — full local READ of every folder on this PC for authorized context expansion; Claude Opus 5.5 is master and root project coordinator from September 24, 2026 (see MASTER-ORCHESTRATOR.md).
 Secrets: never dump tokens/cookies/keys; `.secrets` / Bitwarden / auth files = existence only.
 
 ## Drive
@@ -26,7 +26,7 @@ Secrets: never dump tokens/cookies/keys; `.secrets` / Bitwarden / auth files = e
 - `C:\Codex`, `C:\DillonOS`, `C:\Users\dillo\Desktop` (Desktop via OneDrive)
 - Prompt path `C:\Users\Dillo.codex` → real `C:\Users\dillo\.codex`
 
-## Access policy for master orchestrator / Terminal Codex / Grok
+## Access policy for Claude master / Codex workers / Grok
 1. **Any folder on this PC** may be inspected for context, inventories, client SoT, automations.
 2. Prefer client-operations registry + dillon-os System before wandering.
 3. Preserve dirty worktrees; do not discard Dillon's local changes.

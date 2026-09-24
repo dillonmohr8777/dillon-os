@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "generatedBy": "Prospect Radar Next 20",
+  "impeccableVersion": "4.0.4",
+  "mode": "Persuade",
+  "direction": "type first",
+  "tokens": {
+    "palette": {
+      "paper": "#EAF0FA",
+      "ink": "#17213E",
+      "accent": "#2446A8",
+      "accent2": "#F3BF37",
+      "panel": "#D8E2F4",
+      "deep": "#111A37",
+      "onPaper": "#17213E",
+      "onAccent": "#FFFFFF",
+      "onAccent2": "#17213E",
+      "onPanel": "#17213E",
+      "onDeep": "#FFFFFF",
+      "border": "1px",
+      "radius": "16px"
+    },
+    "fonts": {
+      "id": "alegreya-karla",
+      "display": "Alegreya",
+      "text": "Karla"
+    }
+  },
+  "exactLogoSha256": "cbb97a7906c336ef5db408296cdd905bcf94c659a5aff95df4c9c9a2f2152d88"
+}

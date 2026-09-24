@@ -1,0 +1,124 @@
+{
+  "sourceUrl": "https://anthonysylvan.com/locations/doylestown-pa/",
+  "finalUrl": "https://anthonysylvan.com/locations/doylestown-pa/",
+  "sourceDomain": "anthonysylvan.com",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=UTF-8",
+  "pageSha256": "858f433909efdd20f5fa9775d8bc70efdfe9a855a1b953229eba360e39ac84ee",
+  "title": "Doylestown, PA Pool Supply Store| Anthony & Sylvan Pools",
+  "description": "Whether you’re in search of pool chemicals or a robot vacuum, find everything you need at Anthony & Sylvan Doylestown’s pool supply retail store.",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "anthony",
+      "sylvan",
+      "pool"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\anthony-and-sylvan-pool-supplies\\logo.svg",
+    "fileName": "logo.svg",
+    "sourceUrl": "https://anthonysylvan.com/wp-content/uploads/2024/02/logo__anthony-sylvan-pools-stacked.svg",
+    "sourceEvidence": "JSON-LD logo URL",
+    "type": "svg",
+    "dimensions": {
+      "width": 150,
+      "height": 72
+    },
+    "sha256": "7547a1c67e1d2a533e8f23faba7c7675399d8283cf64bb1ab19f9fb574e05b4d",
+    "sourceSha256": "7547a1c67e1d2a533e8f23faba7c7675399d8283cf64bb1ab19f9fb574e05b4d",
+    "sourceType": "svg",
+    "sourceFileName": null,
+    "transformation": "none; exact first-party transparent asset",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "vector": true
+    },
+    "transparent": true,
+    "bytes": 8773
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\anthony-and-sylvan-pool-supplies\\reference-1.jpg",
+      "fileName": "reference-1.jpg",
+      "sourceUrl": "https://anthonysylvan.com/wp-content/uploads/2024/03/Houzz.jpg",
+      "sourceEvidence": "IMG post-image",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 552,
+        "width": 1440
+      },
+      "sha256": "94c9fc74923b94c641fa40afd355b9831703ff1b962a1faef4437e8d35b85117",
+      "bytes": 939134,
+      "visual": {
+        "ok": true,
+        "lumaRange": 253.6,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\anthony-and-sylvan-pool-supplies\\reference-2.jpg",
+      "fileName": "reference-2.jpg",
+      "sourceUrl": "https://anthonysylvan.com/wp-content/uploads/2024/03/Header-1-2.jpg",
+      "sourceEvidence": "IMG post-image",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 784,
+        "width": 1440
+      },
+      "sha256": "cadfac3122c6345b51ec3696d73a7439233edccbcbe0d5ebb25ff42400c2e555",
+      "bytes": 1664688,
+      "visual": {
+        "ok": true,
+        "lumaRange": 242.3,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260917-052001\\preflight\\anthony-and-sylvan-pool-supplies\\reference-3.png",
+      "fileName": "reference-3.png",
+      "sourceUrl": "https://anthonysylvan.com/wp-content/uploads/2024/03/Opening-Your-Pool-for-the-Season-Cropped-2048x760.png",
+      "sourceEvidence": "IMG post-image",
+      "type": "png",
+      "dimensions": {
+        "width": 2048,
+        "height": 760
+      },
+      "sha256": "4c75fd4841234e0efddf668dd3a2d0101133125c672504ab7bf1e43d143b6e9d",
+      "bytes": 988972,
+      "visual": {
+        "ok": true,
+        "lumaRange": 240.3,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [
+    {
+      "url": "https://anthonysylvan.com/wp-content/uploads/2024/02/Image1-10.jpg",
+      "reason": "progressive JPEG is not decodable here"
+    },
+    {
+      "url": "https://anthonysylvan.com/locations/doylestown-pa/666",
+      "reason": "unsupported reference type unknown"
+    },
+    {
+      "url": "https://anthonysylvan.com/locations/doylestown-pa/420",
+      "reason": "unsupported reference type unknown"
+    },
+    {
+      "url": "https://anthonysylvan.com/locations/doylestown-pa/image/jpeg",
+      "reason": "unsupported reference type unknown"
+    }
+  ],
+  "brandColors": [
+    "#003388",
+    "#0c2746",
+    "#6dc3cd",
+    "#112337",
+    "#ef3e42"
+  ],
+  "checkedAt": "2026-09-17T09:20:52.121Z"
+}

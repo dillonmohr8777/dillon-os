@@ -2,6 +2,9 @@
 
 const { describe, it } = require('node:test');
 const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const os = require('node:os');
+const path = require('node:path');
 const { normalizeDomain, normalizePhone, normalizeEmail, normalizeName, normalizeAddress } = require('../lib/normalize.ts');
 const { assertTransition, allowedFrom } = require('../lib/states.ts');
 const { MemoryStore } = require('../lib/store.ts');
@@ -13,15 +16,15 @@ const { validateNarrative } = require('../lib/claims.ts');
 const { buildManifest } = require('../lib/manifest.ts');
 const { checkReport, renderReportHtml, reportAccessible } = require('../lib/reports.ts');
 const { processJobs, applyRetention } = require('../lib/jobs.ts');
-const { encryptValue, decryptValue, PREFIX, keyFromHex } = require('../lib/crypto.ts');
+const { encryptValue, decryptValue, encryptRow, decryptRow, PREFIX, keyFromHex } = require('../lib/crypto.ts');
 const { hmac } = require('../lib/ids.ts');
 const { bookingAdapter, captchaAdapter, placesAdapter } = require('../lib/adapters.ts');
-const { listMigrationTables } = require('../lib/store.ts');
-const { loadMigrationSchema, encodeRow, CLAIM_JOB_SQL } = require('../lib/schema.ts');
-const { containsPii } = require('../lib/redact.ts');
+const { listMigrationTables, migrate } = require('../lib/store.ts');
+const { loadMigrationSchema, encodeRow, JOB_LEASE_MS, CLAIM_JOB_SQL } = require('../lib/schema.ts');
+const { containsPii, sanitizeExport } = require('../lib/redact.ts');
 const { validateIntake } = require('../lib/intake.ts');
-const { runVerticalSlice, finishVerticalSlice, funnelView, createCampaign, submitIntake, resolveProspect } = require('../lib/pipeline.ts');
-const { funnelPage } = require('../lib/web.ts');
+const { runVerticalSlice, finishVerticalSlice, funnelView, createCampaign, submitIntake, resolveProspect, processIntakeAuditJob } = require('../lib/pipeline.ts');
+const { funnelPage, createServer } = require('../lib/web.ts');
 const { loadConfig } = require('../lib/config.ts');
 const { storageAdapter } = require('../lib/reports.ts');
 const { createAdapters } = require('../lib/adapters.ts');
@@ -185,6 +188,16 @@ describe('privacy', () => {
     assert.equal(decryptValue(cipher, key), 'jordan.hale@cedarridgehvac.example');
     assert.equal(decryptValue('plain', key), 'plain');
     assert.equal(encryptValue(cipher, key), cipher);
+    const protectedRow = encryptRow('intake_submissions', {
+      business_description: 'Local roofing company', growth_goals: 'More booked estimates',
+    }, key);
+    assert.ok(String(protectedRow.business_description).startsWith(PREFIX));
+    assert.equal(decryptRow('intake_submissions', protectedRow, key).business_description, 'Local roofing company');
+    assert.ok(String(protectedRow.growth_goals).startsWith(PREFIX));
+    assert.equal(decryptRow('intake_submissions', protectedRow, key).growth_goals, 'More booked estimates');
+    const exported = sanitizeExport({ business_description: 'Local roofing company', growth_goals: 'More booked estimates' });
+    assert.equal(exported.business_description, undefined);
+    assert.equal(exported.growth_goals, undefined);
     assert.throws(() => keyFromHex('short'));
   });
 
@@ -201,6 +214,8 @@ describe('privacy', () => {
       requester_name: 'Jordan Hale',
       requester_email: 'jordan.hale@cedarridgehvac.example',
       requester_phone: '555-010-0199',
+      business_description: 'Local roofing company',
+      growth_goals: 'More booked estimates',
       notes: 'call back',
       created_at: '2025-01-01T00:00:00Z',
     });
@@ -216,6 +231,8 @@ describe('privacy', () => {
     assert.ok(store.get('reports', 'report-old').revoked_at);
     assert.equal(reportAccessible(store.get('reports', 'report-old'), now), false);
     assert.equal(store.get('intake_submissions', 'intake-old').requester_email, '[deleted]');
+    assert.equal(store.get('intake_submissions', 'intake-old').business_description, '');
+    assert.equal(store.get('intake_submissions', 'intake-old').growth_goals, '');
     assert.equal(store.get('contacts', 'contact-old').value, '[deleted]');
     assert.equal(store.get('contacts', 'contact-old').person_name, null);
   });
@@ -239,6 +256,33 @@ describe('jobs', () => {
     const job = store.get('jobs', a.job.id);
     assert.equal(job.dead_letter, true);
     assert.ok(attempts >= 6);
+  });
+
+  it('reclaims an expired intake lease after restart but leaves external jobs untouched', async () => {
+    const store = new MemoryStore();
+    const intake = await store.enqueueJob({ type: 'intake.audit', idempotencyKey: 'intake-lease:1' });
+    const firstClaim = await store.claimJob('worker-before-crash');
+    assert.equal(firstClaim.id, intake.job.id);
+    store.update('jobs', intake.job.id, {
+      locked_at: new Date(Date.now() - JOB_LEASE_MS - 1000).toISOString(),
+    });
+    store.locks.clear();
+
+    const reclaimed = await store.claimJob('worker-after-restart');
+    assert.equal(reclaimed.id, intake.job.id);
+    assert.equal(reclaimed.status, 'running');
+    assert.equal(reclaimed.locked_by, 'worker-after-restart');
+    await store.completeJob(reclaimed.id);
+    assert.equal(await store.claimJob('worker-again'), null);
+
+    const external = await store.enqueueJob({ type: 'crm.send', idempotencyKey: 'crm-lease:1' });
+    await store.claimJob('external-worker');
+    store.update('jobs', external.job.id, {
+      locked_at: new Date(Date.now() - JOB_LEASE_MS - 1000).toISOString(),
+    });
+    store.locks.clear();
+    assert.equal(await store.claimJob('worker-after-restart'), null);
+    assert.equal(store.get('jobs', external.job.id).status, 'running');
   });
 });
 
@@ -324,6 +368,183 @@ describe('intake validation', () => {
     assert.equal(ok.ok, true);
     assert.equal(ok.value.consent_marketing, false);
   });
+
+  it('waits for the submitted event write before returning success', async () => {
+    const cfg = { ...loadConfig(), captcha: 'off', captchaSecret: '' };
+    const store = new MemoryStore();
+    const originalEmitEvent = store.emitEvent.bind(store);
+    let markEventQueued;
+    const eventQueued = new Promise((resolve) => { markEventQueued = resolve; });
+    let finishWrite;
+    const pendingWrite = new Promise((resolve) => { finishWrite = resolve; });
+    let eventWritePending = false;
+    store.flush = async () => { if (eventWritePending) await pendingWrite; };
+    store.emitEvent = async (args) => {
+      const event = await originalEmitEvent(args);
+      eventWritePending = true;
+      markEventQueued();
+      return event;
+    };
+    const campaign = await createCampaign(store);
+    const body = {
+      business_name: 'Acme HVAC', website: 'https://acmehvac.example', city_state: 'Hatboro, PA',
+      requester_name: 'Pat', role: 'owner', requester_email: 'pat@acmehvac.example',
+      primary_services: 'hvac', growth_goals: 'leads', current_channels: 'none', consent_analyze: true,
+    };
+
+    const resultPromise = submitIntake(store, createAdapters(cfg), cfg, campaign, body);
+    await eventQueued;
+    let settled = false;
+    void resultPromise.then(() => { settled = true; }, () => { settled = true; });
+    await new Promise((resolve) => setImmediate(resolve));
+    assert.equal(settled, false);
+
+    finishWrite();
+    const result = await resultPromise;
+    assert.equal(result.ok, true);
+    assert.equal(store.findOne('events', (event) => event.type === 'intake.submitted')?.correlation_id, result.submission.id);
+  });
+
+  it('does not return success when the submitted event write fails', async () => {
+    const cfg = { ...loadConfig(), captcha: 'off', captchaSecret: '' };
+    const store = new MemoryStore();
+    const originalEmitEvent = store.emitEvent.bind(store);
+    let markEventQueued;
+    const eventQueued = new Promise((resolve) => { markEventQueued = resolve; });
+    let failWrite;
+    const pendingWrite = new Promise((_, reject) => { failWrite = reject; });
+    let eventWritePending = false;
+    store.flush = async () => { if (eventWritePending) await pendingWrite; };
+    store.emitEvent = async (args) => {
+      const event = await originalEmitEvent(args);
+      eventWritePending = true;
+      markEventQueued();
+      return event;
+    };
+    const campaign = await createCampaign(store);
+    const body = {
+      business_name: 'Acme HVAC', website: 'https://acmehvac.example', city_state: 'Hatboro, PA',
+      requester_name: 'Pat', role: 'owner', requester_email: 'pat@acmehvac.example',
+      primary_services: 'hvac', growth_goals: 'leads', current_channels: 'none', consent_analyze: true,
+    };
+
+    const resultPromise = submitIntake(store, createAdapters(cfg), cfg, campaign, body);
+    await eventQueued;
+    failWrite(new Error('event persistence failed'));
+    await assert.rejects(resultPromise, /event persistence failed/);
+  });
+
+  it('queues a six-field request, scans the public page, and creates a QA-pending report without inventing a business name', async () => {
+    const storageDir = fs.mkdtempSync(path.join(os.tmpdir(), 'radar-intake-e2e-'));
+    const cfg = { ...loadConfig({ databaseUrl: '', storageDir, storage: 'fs', publicOrigin: 'https://audit.example' }), captcha: 'off', captchaSecret: '' };
+    const store = new MemoryStore();
+    let flushCalls = 0;
+    store.flush = async () => { flushCalls += 1; };
+    const campaign = await createCampaign(store);
+    const server = createServer({ store, adapters: createAdapters(cfg), campaign, cfg });
+    await new Promise((resolve) => server.listen(0, '127.0.0.1', resolve));
+    const base = `http://127.0.0.1:${server.address().port}`;
+    try {
+      const form = await (await fetch(`${base}/intake`)).text();
+      for (const name of ['name', 'phone', 'email', 'website', 'business_description', 'goals']) {
+        assert.match(form, new RegExp(`name="${name}"`));
+      }
+      assert.doesNotMatch(form, /name="business_name"/);
+
+      const invalid = await fetch(`${base}/intake`, {
+        method: 'POST',
+        headers: { 'content-type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams({
+          name: 'Jordan Hale', phone: '5550100199', email: 'bad', website: 'http://192.168.1.2',
+          business_description: 'Local roofing company', goals: 'More qualified leads',
+        }),
+      });
+      const invalidHtml = await invalid.text();
+      assert.equal(invalid.status, 400);
+      assert.match(invalidHtml, /role="alert"/);
+      assert.match(invalidHtml, /aria-invalid="true" aria-describedby="email-error"/);
+      assert.match(invalidHtml, /aria-invalid="true" aria-describedby="website-error"/);
+      assert.equal(store.all('intake_submissions').length, 0);
+
+      const accepted = await fetch(`${base}/intake`, {
+        method: 'POST',
+        redirect: 'manual',
+        headers: { 'content-type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams({
+          name: 'Jordan Hale', phone: '5550100199', email: 'jordan@example.org',
+          website: 'https://www.example.org', business_description: 'Local roofing company',
+          goals: 'More qualified leads', consent_analyze: 'on',
+        }),
+      });
+      assert.equal(accepted.status, 303);
+      assert.equal(flushCalls, 3);
+      assert.ok(store.findOne('events', (event) => event.type === 'intake.submitted'));
+      const submission = store.all('intake_submissions')[0];
+      assert.equal(submission.business_name, null);
+      assert.equal(submission.business_description, 'Local roofing company');
+      assert.equal(submission.consent_review_call, true);
+      const job = store.findOne('jobs', (row) => row.type === 'intake.audit');
+      assert.ok(job);
+      assert.equal(job.status, 'queued');
+
+      const receiptResponse = await fetch(new URL(accepted.headers.get('location'), base));
+      assert.equal(receiptResponse.headers.get('cache-control'), 'no-store');
+      assert.equal(receiptResponse.headers.get('referrer-policy'), 'no-referrer');
+      const receipt = await receiptResponse.text();
+      assert.match(receipt, /Request received/);
+      assert.match(receipt, /audit is queued/i);
+      assert.doesNotMatch(receipt, /Jordan Hale|jordan@example\.org|\+1555010199|5550100199/);
+      assert.match(receipt, /https:\/\/example\.org/);
+      assert.match(receipt, /report has not been generated or emailed yet/);
+
+      const html = '<!doctype html><html><head><title>Roofing services</title><meta name="viewport" content="width=device-width"><meta name="description" content="Roof repair and replacement"></head><body><h1>Roofing services</h1><p>Roof repair and replacement for residential properties.</p><a href="tel:5550100200">Call now</a><form><input name="email"></form></body></html>';
+      let fetchedUrl = '';
+      const fetchPageFn = async (url) => {
+        fetchedUrl = url;
+        return {
+          ok: true, status: 200, finalUrl: url, html, body: html,
+          headers: { 'content-type': 'text/html; charset=utf-8' },
+          bytes: Buffer.byteLength(html), responseMs: 25, hops: [{ url, status: 200 }],
+        };
+      };
+      const processed = await processJobs(store, {
+        'intake.audit': (payload) => processIntakeAuditJob(store, cfg, payload, { fetchPageFn }),
+      }, { workerId: 'intake-e2e', max: 1 });
+      assert.equal(processed[0].status, 'succeeded');
+      assert.equal(new URL(fetchedUrl).origin, 'https://example.org');
+      const linkedSubmission = store.get('intake_submissions', submission.id);
+      const prospect = store.get('prospects', linkedSubmission.prospect_id);
+      assert.ok(prospect);
+      assert.equal(prospect.business_name, null);
+      assert.equal(prospect.vertical, null);
+      assert.equal(prospect.lifecycle, 'qa_pending');
+      const audit = store.findOne('audit_runs', (row) => row.prospect_id === prospect.id);
+      assert.equal(audit.fixture, false);
+      assert.equal(audit.raw_audit.reachable, true);
+      assert.equal(store.find('evidence_items', (row) => row.audit_run_id === audit.id).length > 0, true);
+      const report = store.findOne('reports', (row) => row.prospect_id === prospect.id);
+      assert.ok(report?.current_version_id);
+      const version = store.get('report_versions', report.current_version_id);
+      assert.match(version.manifest.prospect.website, /example\.org/);
+      assert.equal(version.manifest.prospect.business_name, null);
+      const reportHtml = fs.readFileSync(version.html_ref, 'utf8');
+      assert.match(reportHtml, /Website audit/);
+      assert.match(reportHtml, /https:\/\/example\.org/);
+      assert.equal(store.all('outreach_drafts').length, 0);
+      assert.equal(store.all('crm_handoffs').length, 0);
+
+      const reportBeforeQa = await fetch(`${base}/r/${report.access_token}`);
+      assert.equal(reportBeforeQa.status, 404);
+      const completedResponse = await fetch(new URL(accepted.headers.get('location'), base));
+      const completedReceipt = await completedResponse.text();
+      assert.match(completedReceipt, /awaiting human quality review/i);
+      assert.match(completedReceipt, /Nothing has been emailed/);
+      assert.doesNotMatch(completedReceipt, /Jordan Hale|jordan@example\.org|\+1555010199|5550100199/);
+    } finally {
+      await new Promise((resolve, reject) => server.close((error) => error ? reject(error) : resolve()));
+      fs.rmSync(storageDir, { recursive: true, force: true });
+    }
+  });
 });
 
 describe('migrations', () => {
@@ -341,6 +562,9 @@ describe('migrations', () => {
 
   it('encodes JSONB objects and text arrays without double-stringifying', () => {
     const schema = loadMigrationSchema();
+    assert.ok(schema.intake_submissions.columns.includes('business_description'));
+    assert.ok(schema.intake_submissions.columns.includes('consent_review_call'));
+    assert.ok(schema.prospects.columns.includes('business_name'));
     assert.ok(schema.jobs.columns.includes('payload'));
     assert.ok(schema.jobs.jsonb.has('payload'));
     assert.ok(schema.campaigns.arrays.has('allowed_offers'));
@@ -355,7 +579,24 @@ describe('migrations', () => {
     assert.equal(typeof encoded.geography, 'string');
     assert.equal(JSON.parse(encoded.geography).market, 'PHL');
     assert.deepEqual(encoded.allowed_offers, ['rebuild', 'seo_aeo']);
+    const intake = encodeRow(schema, 'intake_submissions', {
+      id: 'intake_1', business_name: null, business_description: 'Local roofing company', consent_review_call: true,
+    });
+    assert.equal(intake.business_name, null);
+    assert.equal(intake.business_description, 'Local roofing company');
+    assert.equal(intake.consent_review_call, true);
     assert.match(CLAIM_JOB_SQL, /FOR UPDATE SKIP LOCKED/);
+    assert.match(CLAIM_JOB_SQL, /type = 'intake\.audit'/);
+  });
+
+  it('provides a forward migration for databases that already applied the original schema', async () => {
+    const sql = fs.readFileSync(path.join(__dirname, '..', 'migrations', '002_intake_six_fields.sql'), 'utf8');
+    const prospectMigration = fs.readFileSync(path.join(__dirname, '..', 'migrations', '003_nullable_prospect_identity.sql'), 'utf8');
+    assert.match(sql, /ALTER TABLE intake_submissions ALTER COLUMN business_name DROP NOT NULL/);
+    assert.match(sql, /ADD COLUMN IF NOT EXISTS business_description TEXT/);
+    assert.match(sql, /ADD COLUMN IF NOT EXISTS consent_review_call BOOLEAN NOT NULL DEFAULT FALSE/);
+    assert.match(prospectMigration, /ALTER TABLE prospects ALTER COLUMN business_name DROP NOT NULL/);
+    assert.equal((await migrate('')).applied, false);
   });
 });
 
@@ -375,7 +616,7 @@ describe('vertical slice', () => {
     assert.ok(result.report.checks.ok, result.report.checks.fails.join(','));
     const html = result.report.html;
     assert.match(html, /noindex/);
-    assert.match(html, /NeedMomentum/);
+    assert.match(html, /Momentum Digital/);
     assert.match(html, /Source appendix/);
     assert.match(html, /Private analytics\/CMS access required/);
     assert.equal(containsPii(html, { allowAgencyEmail: true }).leaked, false);

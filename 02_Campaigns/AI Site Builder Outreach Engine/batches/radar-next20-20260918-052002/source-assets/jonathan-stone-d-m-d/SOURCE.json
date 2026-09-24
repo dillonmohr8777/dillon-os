@@ -1,0 +1,78 @@
+{
+  "sourceUrl": "https://drstonedentistry.com/",
+  "finalUrl": "https://drstonedentistry.com/",
+  "sourceDomain": "drstonedentistry.com",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=UTF-8",
+  "pageSha256": "fdacb282a7c4019cd1d90a4b9858dc389adc98b067d3648eefa69feaa02b2c33",
+  "title": "Jonathan D. Stone, DMD LLC",
+  "description": "",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "jonathan",
+      "stone"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\jonathan-stone-d-m-d\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://drstonedentistry.com/wp-content/uploads/2019/11/Dr.-Stone-Logo.png",
+    "sourceEvidence": "IMG normal-logo  jonathan d. stone, dmd llc",
+    "type": "png",
+    "dimensions": {
+      "width": 420,
+      "height": 118
+    },
+    "sha256": "55681148ad18a06bed7080c812a3aa21b0ad33bbeb0a638134a505385468f40f",
+    "sourceSha256": "55681148ad18a06bed7080c812a3aa21b0ad33bbeb0a638134a505385468f40f",
+    "sourceType": "png",
+    "sourceFileName": null,
+    "transformation": "none; exact first-party transparent asset",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "transparentRatio": 0.6705,
+      "edgeTransparentRatio": 0.9461,
+      "contentRatio": 0.3295,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 12797
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\jonathan-stone-d-m-d\\reference-1.jpg",
+      "fileName": "reference-1.jpg",
+      "sourceUrl": "https://drstonedentistry.com/wp-content/uploads/2020/01/20200109_Action_Shot_0004-1320x880.jpg",
+      "sourceEvidence": "IMG attachment-full size-full",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 880,
+        "width": 1320
+      },
+      "sha256": "0f35c617f5d90770a93ba3c8fbad2de3c94f8a6900e728d89dcf3bf6aceacfdf",
+      "bytes": 127386,
+      "visual": {
+        "ok": true,
+        "lumaRange": 255,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [
+    {
+      "url": "https://drstonedentistry.com/wp-content/plugins/revslider/sr6/assets/assets/dummy.png",
+      "reason": "reference image is too small"
+    }
+  ],
+  "brandColors": [
+    "#003388",
+    "#00d084",
+    "#0693e3",
+    "#00325b",
+    "#3b5998"
+  ],
+  "checkedAt": "2026-09-18T09:21:19.677Z"
+}

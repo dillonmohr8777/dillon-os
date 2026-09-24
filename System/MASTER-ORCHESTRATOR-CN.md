@@ -155,10 +155,11 @@ Carried over from `~/.Codex/AGENTS.md` without relaxation:
 
 1. One concrete outcome per session. Reuse its existing checkpoint and named
    evidence; read only the context this task needs.
-2. Work directly in one session. No automatic workers, parallel model calls,
-   nested delegation, or second-model review for routine work. When delegation
-   is explicitly requested, at most one worker, a small source packet, and stop
-   it after completion.
+2. Work directly in one session by default. Keep subagent capacity enabled,
+   but do not fan out automatically. When Dillon explicitly requests delegation,
+   use as many independent workers as the requested work warrants, give each a
+   bounded non-overlapping outcome and a small source packet, and stop finished
+   threads after consolidating their results.
 3. Reuse scripts, connector results, finished drafts, and prior research. Batch
    independent reads. Run required checks once; expand only for a failure,
    changed code, or unresolved material risk.

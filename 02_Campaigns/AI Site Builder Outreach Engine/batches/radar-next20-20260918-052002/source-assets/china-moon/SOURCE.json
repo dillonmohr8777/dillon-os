@@ -1,0 +1,85 @@
+{
+  "sourceUrl": "http://www.chinamoonboyertown.com/",
+  "finalUrl": "https://www.chinamoonboyertown.com/",
+  "sourceDomain": "chinamoonboyertown.com",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=utf-8",
+  "pageSha256": "0b59d3f08261bca9bc46047cefa04da768aa26fe5c4faf6e943a7b62399ae523",
+  "title": "China Moon - Online Ordering",
+  "description": "Order online from China Moon in Boyertown, PA. Pickup and delivery available.",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "china",
+      "moon"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\china-moon\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://images.eatermenu.com/gallery/6b770e7c-a732-4925-a348-0336c2de6d74/logo.png?v=1780521089906",
+    "sourceEvidence": "IMG h-10 w-auto max-w-[40vw] sm:max-w-[220px] object-contain  china moon",
+    "type": "png",
+    "dimensions": {
+      "width": 960,
+      "height": 170
+    },
+    "sha256": "1891c47368ca3b9711c32b75b77de5c0005b3aad0d5d2df3bf7db2128ab91d46",
+    "sourceSha256": "1891c47368ca3b9711c32b75b77de5c0005b3aad0d5d2df3bf7db2128ab91d46",
+    "sourceType": "png",
+    "sourceFileName": null,
+    "transformation": "none; exact first-party transparent asset",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "transparentRatio": 0.7777,
+      "edgeTransparentRatio": 1,
+      "contentRatio": 0.2223,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 57702
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\china-moon\\reference-1.jpg",
+      "fileName": "reference-1.jpg",
+      "sourceUrl": "https://images.eatermenu.com/banners/Chinese/banner1.jpg",
+      "sourceEvidence": "IMG w-full h-full object-cover  china moon photo 1",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 1535,
+        "width": 2730
+      },
+      "sha256": "8c07ea21f02609edc0a3252d26630c9f3890db411384d6754f406dbd59373583",
+      "bytes": 1532299,
+      "visual": {
+        "ok": true,
+        "lumaRange": 255,
+        "reason": null
+      }
+    },
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\china-moon\\reference-2.jpg",
+      "fileName": "reference-2.jpg",
+      "sourceUrl": "https://images.eatermenu.com/banners/Chinese/banner2.jpg",
+      "sourceEvidence": "IMG w-full h-full object-cover  china moon photo 2",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 1535,
+        "width": 2730
+      },
+      "sha256": "23326231492b71a34149de90be6489aca948f9c2fcb1262d78f957932e5a9e53",
+      "bytes": 1860693,
+      "visual": {
+        "ok": true,
+        "lumaRange": 255,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [],
+  "brandColors": [],
+  "checkedAt": "2026-09-18T09:21:37.364Z"
+}

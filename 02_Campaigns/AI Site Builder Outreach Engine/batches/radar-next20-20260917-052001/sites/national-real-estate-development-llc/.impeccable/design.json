@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "generatedBy": "Prospect Radar Next 20",
+  "impeccableVersion": "4.0.4",
+  "mode": "Persuade",
+  "direction": "type first",
+  "tokens": {
+    "palette": {
+      "paper": "#EAF4F0",
+      "ink": "#14251F",
+      "accent": "#006B55",
+      "accent2": "#F36B35",
+      "panel": "#D4E7DE",
+      "deep": "#073F34",
+      "onPaper": "#14251F",
+      "onAccent": "#FFFFFF",
+      "onAccent2": "#14251F",
+      "onPanel": "#14251F",
+      "onDeep": "#FFFFFF",
+      "border": "1px",
+      "radius": "12px"
+    },
+    "fonts": {
+      "id": "bricolage-manrope",
+      "display": "Bricolage Grotesque",
+      "text": "Manrope"
+    }
+  },
+  "exactLogoSha256": "6d61c01704114921baa1d69ec5fef38d76a6526c49293f3037f01e86098450a9"
+}

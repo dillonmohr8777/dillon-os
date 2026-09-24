@@ -1,0 +1,168 @@
+{
+  "slug": "jonathan-stone-d-m-d",
+  "preparedAt": "2026-09-18T09:23:24.884Z",
+  "sourceSite": "https://drstonedentistry.com/",
+  "sourceFinalUrl": "https://drstonedentistry.com/",
+  "sourcePageSha256": "fdacb282a7c4019cd1d90a4b9858dc389adc98b067d3648eefa69feaa02b2c33",
+  "exactLogoRequired": true,
+  "exactLogoSha256": "55681148ad18a06bed7080c812a3aa21b0ad33bbeb0a638134a505385468f40f",
+  "firstPartyDerivativePolicy": "Content visuals preserve first-party source photography while adapting crop and tonal balance for the private mobile concept. They are not evidence of additional projects or outcomes.",
+  "generatedCompositionReference": "automation/prospect-radar-next20/.impeccable/mocks/architerra-mobile-three-directions.png",
+  "assets": [
+    {
+      "role": "exact identity",
+      "output": "logo.png",
+      "sourceUrl": "https://drstonedentistry.com/wp-content/uploads/2019/11/Dr.-Stone-Logo.png",
+      "sourceSha256": "55681148ad18a06bed7080c812a3aa21b0ad33bbeb0a638134a505385468f40f",
+      "outputSha256": "55681148ad18a06bed7080c812a3aa21b0ad33bbeb0a638134a505385468f40f",
+      "transformation": "none; exact first-party transparent asset",
+      "transparent": true
+    },
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://drstonedentistry.com/wp-content/uploads/2020/01/20200109_Action_Shot_0004-1320x880.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "0f35c617f5d90770a93ba3c8fbad2de3c94f8a6900e728d89dcf3bf6aceacfdf",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=1.040:contrast=1.082:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "c410f1db1d618cb6dd7706adb40964141f49925887210706bf87a69fde1f8c24"
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://drstonedentistry.com/wp-content/uploads/2020/01/20200109_Action_Shot_0004-1320x880.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "0f35c617f5d90770a93ba3c8fbad2de3c94f8a6900e728d89dcf3bf6aceacfdf",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:0,eq=saturation=0.940:contrast=1.046:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "f00f8e9a2daf90e972d61cefc50a2ee1f6b4839dccf821940e42e501a81391f7"
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://drstonedentistry.com/wp-content/uploads/2020/01/20200109_Action_Shot_0004-1320x880.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "0f35c617f5d90770a93ba3c8fbad2de3c94f8a6900e728d89dcf3bf6aceacfdf",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:0,eq=saturation=0.965:contrast=1.010:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "e539fa3a2b98ddfd0c397d4c0a94babbe02b6f36c87467d1c5766b8faf2fec26"
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://drstonedentistry.com/wp-content/uploads/2020/01/20200109_Action_Shot_0004-1320x880.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "0f35c617f5d90770a93ba3c8fbad2de3c94f8a6900e728d89dcf3bf6aceacfdf",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:0,eq=saturation=0.990:contrast=1.064:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "e6e6b81fab2bb2a5492c0380ab96d8cfc0a5dd3691aec90d7cd20a799f59140a"
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://drstonedentistry.com/wp-content/uploads/2020/01/20200109_Action_Shot_0004-1320x880.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "0f35c617f5d90770a93ba3c8fbad2de3c94f8a6900e728d89dcf3bf6aceacfdf",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:42,eq=saturation=1.015:contrast=1.028:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "31f8ce8833a4d793ffc79b2dd71bc9f471133eb82e03975adf05fa3e18bc32fb"
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://drstonedentistry.com/wp-content/uploads/2020/01/20200109_Action_Shot_0004-1320x880.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "0f35c617f5d90770a93ba3c8fbad2de3c94f8a6900e728d89dcf3bf6aceacfdf",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:42,eq=saturation=1.040:contrast=1.082:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "d1046fcebed8d09bef2dff3550c8e712c3466b060a65899c3d07e63ced45a04c"
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://drstonedentistry.com/wp-content/uploads/2020/01/20200109_Action_Shot_0004-1320x880.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "0f35c617f5d90770a93ba3c8fbad2de3c94f8a6900e728d89dcf3bf6aceacfdf",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:42,eq=saturation=0.940:contrast=1.046:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "b9586af5ebdb2929ff2b5e046d67affae39e4deff86fc7a6c19c6e344dfb96cd"
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://drstonedentistry.com/wp-content/uploads/2020/01/20200109_Action_Shot_0004-1320x880.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "0f35c617f5d90770a93ba3c8fbad2de3c94f8a6900e728d89dcf3bf6aceacfdf",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:42,eq=saturation=0.965:contrast=1.010:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "139059e55d7c48afa774cef277ebf526a733335774bd25c450c1dddd60ffc8f1"
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://drstonedentistry.com/wp-content/uploads/2020/01/20200109_Action_Shot_0004-1320x880.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "0f35c617f5d90770a93ba3c8fbad2de3c94f8a6900e728d89dcf3bf6aceacfdf",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:84,eq=saturation=0.990:contrast=1.064:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "930c8c355eb2ca33da4e7d59d23ef00b6d145190b464c60f9ee293671f2419b8"
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://drstonedentistry.com/wp-content/uploads/2020/01/20200109_Action_Shot_0004-1320x880.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "0f35c617f5d90770a93ba3c8fbad2de3c94f8a6900e728d89dcf3bf6aceacfdf",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:84,eq=saturation=1.015:contrast=1.028:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "a0f607c7c70328ec1fa0872786dcd58df900afce7a59dfc8f0a15f11494c9d4f"
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://drstonedentistry.com/wp-content/uploads/2020/01/20200109_Action_Shot_0004-1320x880.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "0f35c617f5d90770a93ba3c8fbad2de3c94f8a6900e728d89dcf3bf6aceacfdf",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:84,eq=saturation=1.040:contrast=1.082:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "e1fc8406dcbeec90ebb3d10dfd3f88bf9f444b80ca348ffbeb65bff06e9c38a6"
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://drstonedentistry.com/wp-content/uploads/2020/01/20200109_Action_Shot_0004-1320x880.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "0f35c617f5d90770a93ba3c8fbad2de3c94f8a6900e728d89dcf3bf6aceacfdf",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:84,eq=saturation=0.940:contrast=1.046:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "c72359a8f80dfe3aa692185f98b4c88a1f46559b09bcb71e44500e0a18045550"
+    }
+  ],
+  "fonts": {
+    "pair": {
+      "id": "bodoni-urbanist",
+      "display": "Bodoni Moda",
+      "text": "Urbanist"
+    },
+    "source": "Google Fonts CSS API",
+    "files": [
+      {
+        "file": "font-display-400.woff2",
+        "sha256": "192ae876c21d9258d096a526dad5bddf37f0daa69cfe943cae5f6be5a52adda2"
+      },
+      {
+        "file": "font-display-700.woff2",
+        "sha256": "192ae876c21d9258d096a526dad5bddf37f0daa69cfe943cae5f6be5a52adda2"
+      },
+      {
+        "file": "font-text-400.woff2",
+        "sha256": "7981ef90c246352c7c217081b8d9337b9c95e9d17ae126bf56b0d3753d1e5ffb"
+      },
+      {
+        "file": "font-text-700.woff2",
+        "sha256": "7981ef90c246352c7c217081b8d9337b9c95e9d17ae126bf56b0d3753d1e5ffb"
+      }
+    ]
+  }
+}

@@ -81,21 +81,32 @@ function decodeRow(row) {
   return out;
 }
 
+const JOB_LEASE_MS = 15 * 60 * 1000;
+
 const CLAIM_JOB_SQL = `
+WITH candidate AS (
+  SELECT id FROM jobs
+  WHERE (
+      status = 'queued'
+      AND dead_letter = false
+      AND next_attempt_at <= now()
+    ) OR (
+      type = 'intake.audit'
+      AND status = 'running'
+      AND dead_letter = false
+      AND locked_at <= now() - ($2::double precision * interval '1 millisecond')
+    )
+  ORDER BY CASE WHEN status = 'running' THEN locked_at ELSE next_attempt_at END ASC
+  FOR UPDATE SKIP LOCKED
+  LIMIT 1
+)
 UPDATE jobs
 SET status = 'running',
     locked_at = now(),
     locked_by = $1,
-    updated_at = now()
-WHERE id = (
-  SELECT id FROM jobs
-  WHERE status = 'queued'
-    AND dead_letter = false
-    AND next_attempt_at <= now()
-  ORDER BY next_attempt_at ASC
-  FOR UPDATE SKIP LOCKED
-  LIMIT 1
-)
+    updated_at = now(),
+    last_error = CASE WHEN status = 'running' THEN COALESCE(last_error, 'worker lease expired') ELSE last_error END
+WHERE id = (SELECT id FROM candidate)
 RETURNING *`;
 
 module.exports = {
@@ -103,5 +114,6 @@ module.exports = {
   loadMigrationSchema,
   encodeRow,
   decodeRow,
+  JOB_LEASE_MS,
   CLAIM_JOB_SQL,
 };

@@ -1,0 +1,168 @@
+{
+  "slug": "keyes-water-wells",
+  "preparedAt": "2026-09-18T09:23:27.300Z",
+  "sourceSite": "https://keyesinc.com/",
+  "sourceFinalUrl": "https://keyesinc.com/",
+  "sourcePageSha256": "01740815c7a3272af49f3aaa88392606611ff1e8b9f1bd2c14dbfbe80116345c",
+  "exactLogoRequired": true,
+  "exactLogoSha256": "a7d1f490328cd226c438efe7ab5bc0229197c4ece973164054a5a2b1a36525c2",
+  "firstPartyDerivativePolicy": "Content visuals preserve first-party source photography while adapting crop and tonal balance for the private mobile concept. They are not evidence of additional projects or outcomes.",
+  "generatedCompositionReference": "automation/prospect-radar-next20/.impeccable/mocks/architerra-mobile-three-directions.png",
+  "assets": [
+    {
+      "role": "exact identity",
+      "output": "logo.png",
+      "sourceUrl": "https://keyesinc.com/wp-content/uploads/2025/06/Keyes_ICO.png",
+      "sourceSha256": "a7d1f490328cd226c438efe7ab5bc0229197c4ece973164054a5a2b1a36525c2",
+      "outputSha256": "a7d1f490328cd226c438efe7ab5bc0229197c4ece973164054a5a2b1a36525c2",
+      "transformation": "none; exact first-party transparent asset",
+      "transparent": true
+    },
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://keyesinc.com/wp-content/uploads/2025/02/home-partners-480x365.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "41eea934394783698d4dad69033dde1d4f72fde926b19205286629fb5a8c3bc6",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=0.940:contrast=1.010:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "78ceba4ae3f7bf871847898f6f611353879a13923b40dfe60a36a7900c96785f"
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://keyesinc.com/wp-content/uploads/2025/02/home-partners-480x365.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "41eea934394783698d4dad69033dde1d4f72fde926b19205286629fb5a8c3bc6",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:0,eq=saturation=0.965:contrast=1.064:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "99f8009d10f4ec5812eda923862af18b3e4b64ee2060fcf6d81fb0bcd6adbc32"
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://keyesinc.com/wp-content/uploads/2025/02/home-partners-480x365.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "41eea934394783698d4dad69033dde1d4f72fde926b19205286629fb5a8c3bc6",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:0,eq=saturation=0.990:contrast=1.028:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "d92660f5b1795663edc1be2fff5e21010efc60b5d7dfe7abf4a573cdc9b5cfd1"
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://keyesinc.com/wp-content/uploads/2025/02/home-partners-480x365.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "41eea934394783698d4dad69033dde1d4f72fde926b19205286629fb5a8c3bc6",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:0,eq=saturation=1.015:contrast=1.082:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "347befe4c8aead86e1b0b3f9fa783f14a92d35f97f5271625c9811eda4de5df3"
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://keyesinc.com/wp-content/uploads/2025/02/home-partners-480x365.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "41eea934394783698d4dad69033dde1d4f72fde926b19205286629fb5a8c3bc6",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:42,eq=saturation=1.040:contrast=1.046:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "4795d5f54a405b1a79058383e0ba045c85762813827a000538f558c1b0f92f42"
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://keyesinc.com/wp-content/uploads/2025/02/home-partners-480x365.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "41eea934394783698d4dad69033dde1d4f72fde926b19205286629fb5a8c3bc6",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:42,eq=saturation=0.940:contrast=1.010:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "0147d789f53b871383690957e748d383b6176cf07ef5d5275021cc9560eb19af"
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://keyesinc.com/wp-content/uploads/2025/02/home-partners-480x365.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "41eea934394783698d4dad69033dde1d4f72fde926b19205286629fb5a8c3bc6",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:42,eq=saturation=0.965:contrast=1.064:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "746cc0ac2544b874a47b419fc1c7c7f02aa81a541789278c480414c5a2ecae99"
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://keyesinc.com/wp-content/uploads/2025/02/home-partners-480x365.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "41eea934394783698d4dad69033dde1d4f72fde926b19205286629fb5a8c3bc6",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:42,eq=saturation=0.990:contrast=1.028:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "0f6d6d656fa34f8e3f48ed32c3182ab3dff4d2b4c1fa0fda0aa7f5fbf6ed758b"
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://keyesinc.com/wp-content/uploads/2025/02/home-partners-480x365.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "41eea934394783698d4dad69033dde1d4f72fde926b19205286629fb5a8c3bc6",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:84,eq=saturation=1.015:contrast=1.082:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "2e5c6c582fbb9052d6b6abfe5d12077b9ed563a07aa7da83a7c8bf11bdcdcbbd"
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://keyesinc.com/wp-content/uploads/2025/02/home-partners-480x365.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "41eea934394783698d4dad69033dde1d4f72fde926b19205286629fb5a8c3bc6",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:84,eq=saturation=1.040:contrast=1.046:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "cd25bed91124349db81d50d88670faef7fbd5af7be0eb478b0ce64070886b14c"
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://keyesinc.com/wp-content/uploads/2025/02/home-partners-480x365.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "41eea934394783698d4dad69033dde1d4f72fde926b19205286629fb5a8c3bc6",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:84,eq=saturation=0.940:contrast=1.010:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "806222574d22becdf70ffdc7ce87e93c3d3b8306191901f3bb5bcc36850c82f9"
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://keyesinc.com/wp-content/uploads/2025/02/home-partners-480x365.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "41eea934394783698d4dad69033dde1d4f72fde926b19205286629fb5a8c3bc6",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:84,eq=saturation=0.965:contrast=1.064:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "3fc8057c4f3d1dbcfbee1486719dc42b0f1344b1064d919e97415067fa527761"
+    }
+  ],
+  "fonts": {
+    "pair": {
+      "id": "syne-work",
+      "display": "Syne",
+      "text": "Work Sans"
+    },
+    "source": "Google Fonts CSS API",
+    "files": [
+      {
+        "file": "font-display-400.woff2",
+        "sha256": "68b623f0e45b905041b2edb9b2e4f563a505f13db1cd06b5f1946eb2e1f47048"
+      },
+      {
+        "file": "font-display-700.woff2",
+        "sha256": "68b623f0e45b905041b2edb9b2e4f563a505f13db1cd06b5f1946eb2e1f47048"
+      },
+      {
+        "file": "font-text-400.woff2",
+        "sha256": "1dd49afc07fb2231b2ff686cbf007725fb2742271bb1f28ebd98f22a0d817343"
+      },
+      {
+        "file": "font-text-700.woff2",
+        "sha256": "1dd49afc07fb2231b2ff686cbf007725fb2742271bb1f28ebd98f22a0d817343"
+      }
+    ]
+  }
+}

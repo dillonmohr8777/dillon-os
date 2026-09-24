@@ -1,0 +1,168 @@
+{
+  "slug": "the-sprowls-insurance-group",
+  "preparedAt": "2026-09-18T09:23:11.090Z",
+  "sourceSite": "https://sprowlsinsurance.com/",
+  "sourceFinalUrl": "https://sprowlsinsurance.com/",
+  "sourcePageSha256": "dd84f8e8e9a9d83ba30f01afedcb9fcb74e641c82cddcfb5fb5d493d144fb635",
+  "exactLogoRequired": true,
+  "exactLogoSha256": "d978e2564fff0a2b173b8d95c248ea3fe92d138a5c2eaf8f586ed183a4bb55cf",
+  "firstPartyDerivativePolicy": "Content visuals preserve first-party source photography while adapting crop and tonal balance for the private mobile concept. They are not evidence of additional projects or outcomes.",
+  "generatedCompositionReference": "automation/prospect-radar-next20/.impeccable/mocks/architerra-mobile-three-directions.png",
+  "assets": [
+    {
+      "role": "exact identity",
+      "output": "logo.png",
+      "sourceUrl": "https://sprowlsinsurance.com/wp-content/uploads/2020/06/Sprowls-Insurance-Group-Logo-New-800.png",
+      "sourceSha256": "e526863a85fa08290d40b91a4c8264b645257b2beb8ec33be6589b4d98d6deb1",
+      "outputSha256": "d978e2564fff0a2b173b8d95c248ea3fe92d138a5c2eaf8f586ed183a4bb55cf",
+      "transformation": "flat border color rgb(0,0,0) removed by border-seeded flood fill at tolerance 32; geometry unchanged",
+      "transparent": true
+    },
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://sprowlsinsurance.com/wp-content/uploads/2020/05/Sprowls-Insurance-Group-Open-Graph.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "0cec2da093d30565ecce203046facc85c5947f9211362233803cf9a19cbedaca",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=1.040:contrast=1.082:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "b894b8c2f469ebbb699e5b8e835956f5e4d023ff989442dd762fdfd459c3acd1"
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://sprowlsinsurance.com/wp-content/uploads/2025/10/Award-Silver-Best-in-Fayette-2025.png",
+      "sourceFile": "reference-2.png",
+      "sourceSha256": "8a23d75fcf731a24b7ea6aaed36450d431d8a26a36b900666e0d48e0b262f73d",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:0,eq=saturation=0.940:contrast=1.046:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "7031b5c9d040cee6de41840da80490a2b0cf84993a7bf32528e900f3db244f7a"
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://sprowlsinsurance.com/wp-content/uploads/2024/10/Award-Silver-Best-in-Fayette-2024.png",
+      "sourceFile": "reference-3.png",
+      "sourceSha256": "cd7e7262ba76d32691fd089af053ae1f2f9c49a4869285c9575b26a1b6b021df",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:0,eq=saturation=0.965:contrast=1.010:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "6f7ae4be4155ab34950244f81338ce0be38111f91dc9b4c5e0e695b6f91b326b"
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://sprowlsinsurance.com/wp-content/uploads/2020/05/Sprowls-Insurance-Group-Open-Graph.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "0cec2da093d30565ecce203046facc85c5947f9211362233803cf9a19cbedaca",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:0,eq=saturation=0.990:contrast=1.064:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "9256b881fe4a6e0d626b4c42429631be5303dfb0fc960b2e862a83160d799687"
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://sprowlsinsurance.com/wp-content/uploads/2025/10/Award-Silver-Best-in-Fayette-2025.png",
+      "sourceFile": "reference-2.png",
+      "sourceSha256": "8a23d75fcf731a24b7ea6aaed36450d431d8a26a36b900666e0d48e0b262f73d",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:42,eq=saturation=1.015:contrast=1.028:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "026189d95451a3df857159a5adc7d081a0dac8d29c9b4b61bc8fee58415564fb"
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://sprowlsinsurance.com/wp-content/uploads/2024/10/Award-Silver-Best-in-Fayette-2024.png",
+      "sourceFile": "reference-3.png",
+      "sourceSha256": "cd7e7262ba76d32691fd089af053ae1f2f9c49a4869285c9575b26a1b6b021df",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:42,eq=saturation=1.040:contrast=1.082:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "627485e10f8c5a6d22ce22c036f6206a9777110052920632349efc49096d9c72"
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://sprowlsinsurance.com/wp-content/uploads/2020/05/Sprowls-Insurance-Group-Open-Graph.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "0cec2da093d30565ecce203046facc85c5947f9211362233803cf9a19cbedaca",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:42,eq=saturation=0.940:contrast=1.046:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "f47dc826c241fba6a60c9c2388e66f0bb47362d51255730670499d21df8a46c5"
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://sprowlsinsurance.com/wp-content/uploads/2025/10/Award-Silver-Best-in-Fayette-2025.png",
+      "sourceFile": "reference-2.png",
+      "sourceSha256": "8a23d75fcf731a24b7ea6aaed36450d431d8a26a36b900666e0d48e0b262f73d",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:42,eq=saturation=0.965:contrast=1.010:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "e45f189c2b8ecbbd97f3a2139264a119d88c96536435c520913bac10ebc717be"
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://sprowlsinsurance.com/wp-content/uploads/2024/10/Award-Silver-Best-in-Fayette-2024.png",
+      "sourceFile": "reference-3.png",
+      "sourceSha256": "cd7e7262ba76d32691fd089af053ae1f2f9c49a4869285c9575b26a1b6b021df",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:84,eq=saturation=0.990:contrast=1.064:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "c7a8ccc2646c113c309703c1492076a09509a5124e1c8541984e120f11958cfe"
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://sprowlsinsurance.com/wp-content/uploads/2020/05/Sprowls-Insurance-Group-Open-Graph.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "0cec2da093d30565ecce203046facc85c5947f9211362233803cf9a19cbedaca",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:84,eq=saturation=1.015:contrast=1.028:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "8c2c2d25f463f592db22c8e1c409d7ebe2c1a529ae1c038266138a7a7415f84a"
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://sprowlsinsurance.com/wp-content/uploads/2025/10/Award-Silver-Best-in-Fayette-2025.png",
+      "sourceFile": "reference-2.png",
+      "sourceSha256": "8a23d75fcf731a24b7ea6aaed36450d431d8a26a36b900666e0d48e0b262f73d",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:84,eq=saturation=1.040:contrast=1.082:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "4e4fe66d28301d8ac4d45afbd6450729ec9370174aa58d354361e971df5d7fef"
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://sprowlsinsurance.com/wp-content/uploads/2024/10/Award-Silver-Best-in-Fayette-2024.png",
+      "sourceFile": "reference-3.png",
+      "sourceSha256": "cd7e7262ba76d32691fd089af053ae1f2f9c49a4869285c9575b26a1b6b021df",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:84,eq=saturation=0.940:contrast=1.046:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "f24486334f31c2187014df0867ef1d58074912d0de13a146b56c77fc2cda11ae"
+    }
+  ],
+  "fonts": {
+    "pair": {
+      "id": "bodoni-urbanist",
+      "display": "Bodoni Moda",
+      "text": "Urbanist"
+    },
+    "source": "Google Fonts CSS API",
+    "files": [
+      {
+        "file": "font-display-400.woff2",
+        "sha256": "192ae876c21d9258d096a526dad5bddf37f0daa69cfe943cae5f6be5a52adda2"
+      },
+      {
+        "file": "font-display-700.woff2",
+        "sha256": "192ae876c21d9258d096a526dad5bddf37f0daa69cfe943cae5f6be5a52adda2"
+      },
+      {
+        "file": "font-text-400.woff2",
+        "sha256": "7981ef90c246352c7c217081b8d9337b9c95e9d17ae126bf56b0d3753d1e5ffb"
+      },
+      {
+        "file": "font-text-700.woff2",
+        "sha256": "7981ef90c246352c7c217081b8d9337b9c95e9d17ae126bf56b0d3753d1e5ffb"
+      }
+    ]
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "slug": "jb-motor-works",
+  "preparedAt": "2026-09-18T09:24:01.107Z",
+  "sourceSite": "https://www.jbmotorwork.com/",
+  "sourceFinalUrl": "https://www.jbmotorwork.com/",
+  "sourcePageSha256": "717d95984fd702326e2b9cf34c2188d1d62dc6a17525a1d64e4392e00733c737",
+  "exactLogoRequired": true,
+  "exactLogoSha256": "7cbbd3a3418ee498baf6df61101b65cc6d7be5d5df9eacf4f8993999ba8e42d7",
+  "firstPartyDerivativePolicy": "Content visuals preserve first-party source photography while adapting crop and tonal balance for the private mobile concept. They are not evidence of additional projects or outcomes.",
+  "generatedCompositionReference": "automation/prospect-radar-next20/.impeccable/mocks/architerra-mobile-three-directions.png",
+  "assets": [
+    {
+      "role": "exact identity",
+      "output": "logo.png",
+      "sourceUrl": "https://www.jbmotorwork.com/wp-content/uploads/2023/03/Logo-outlined-01.png",
+      "sourceSha256": "7cbbd3a3418ee498baf6df61101b65cc6d7be5d5df9eacf4f8993999ba8e42d7",
+      "outputSha256": "7cbbd3a3418ee498baf6df61101b65cc6d7be5d5df9eacf4f8993999ba8e42d7",
+      "transformation": "none; exact first-party transparent asset",
+      "transparent": true
+    },
+    {
+      "role": "homepage visual 1",
+      "output": "image-1.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.jbmotorwork.com/wp-content/uploads/elementor/thumbs/mechanic-auto-repair_1_2000x1335-1536x1025-1-q37o1ku653v0u1t2h377e392z4ag05uxidjk4fab34.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "2d2cf98e01c8b265f0d0aece0e7943de13f30798e4b914d88f65f401d398fd26",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:0,eq=saturation=0.965:contrast=1.028:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "0dda13f951c9386db7a7c44a8fc4d33c8c6444cb3a78b1f1853bcf2d75ec962b"
+    },
+    {
+      "role": "homepage visual 2",
+      "output": "image-2.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.jbmotorwork.com/wp-content/uploads/elementor/thumbs/Manufacturers-warranty-2-q393b1aw7a5j8x6easq6se8ph49kf0738jig1r0asg.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "e8d2a7e2491382f8f9a54bcf8f614bc73cf0758f814a4211baa94539c498955a",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:0,eq=saturation=0.990:contrast=1.082:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "5763e1d2d501161b098851e05fef049dee8ad7a0e6f035e9fd4ded226ef2991f"
+    },
+    {
+      "role": "homepage visual 3",
+      "output": "image-3.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.jbmotorwork.com/wp-content/uploads/elementor/thumbs/car-paint-repair-q393e3a0ewc2zaqngm9je4hmz77iflbonnu974h8kg.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "e41ae87a5c1107fc176fc0bcff062fdb3a0c6fb91bc71106a51935e0dbd52250",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:0,eq=saturation=1.015:contrast=1.046:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "9e1cc0111f90fbc9787373057acd59aea4c58826ce2d3b24302a6973d2468a07"
+    },
+    {
+      "role": "homepage visual 4",
+      "output": "image-4.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.jbmotorwork.com/wp-content/uploads/elementor/thumbs/mechanic-auto-repair_1_2000x1335-1536x1025-1-q37o1ku653v0u1t2h377e392z4ag05uxidjk4fab34.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "2d2cf98e01c8b265f0d0aece0e7943de13f30798e4b914d88f65f401d398fd26",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:0,eq=saturation=1.040:contrast=1.010:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "3cbf6e0109d946dc756efcc034584e5dbf8715e2dc8f153758449ed076b56354"
+    },
+    {
+      "role": "homepage visual 5",
+      "output": "image-5.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.jbmotorwork.com/wp-content/uploads/elementor/thumbs/Manufacturers-warranty-2-q393b1aw7a5j8x6easq6se8ph49kf0738jig1r0asg.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "e8d2a7e2491382f8f9a54bcf8f614bc73cf0758f814a4211baa94539c498955a",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:42,eq=saturation=0.940:contrast=1.064:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "abf2b69b91ab480e3585b58c5942d08feccd91a09d9d286915cf9f43e2607da8"
+    },
+    {
+      "role": "homepage visual 6",
+      "output": "image-6.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.jbmotorwork.com/wp-content/uploads/elementor/thumbs/car-paint-repair-q393e3a0ewc2zaqngm9je4hmz77iflbonnu974h8kg.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "e41ae87a5c1107fc176fc0bcff062fdb3a0c6fb91bc71106a51935e0dbd52250",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:42,eq=saturation=0.965:contrast=1.028:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "da4585d5341352f44025958bf6607e183ab6a465c6d67480a53e9f4fa8f0238b"
+    },
+    {
+      "role": "homepage visual 7",
+      "output": "image-7.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.jbmotorwork.com/wp-content/uploads/elementor/thumbs/mechanic-auto-repair_1_2000x1335-1536x1025-1-q37o1ku653v0u1t2h377e392z4ag05uxidjk4fab34.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "2d2cf98e01c8b265f0d0aece0e7943de13f30798e4b914d88f65f401d398fd26",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:42,eq=saturation=0.990:contrast=1.082:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "d9d51578234799a84042928a1333fc32accc068eb8c9f16adf0366d8ec600806"
+    },
+    {
+      "role": "homepage visual 8",
+      "output": "image-8.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.jbmotorwork.com/wp-content/uploads/elementor/thumbs/Manufacturers-warranty-2-q393b1aw7a5j8x6easq6se8ph49kf0738jig1r0asg.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "e8d2a7e2491382f8f9a54bcf8f614bc73cf0758f814a4211baa94539c498955a",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:42,eq=saturation=1.015:contrast=1.046:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "13c6e367f41bd7df35ad2d9344f36af6bafdecce1377c39e3cc41d1bb4ac9ba8"
+    },
+    {
+      "role": "homepage visual 9",
+      "output": "image-9.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.jbmotorwork.com/wp-content/uploads/elementor/thumbs/car-paint-repair-q393e3a0ewc2zaqngm9je4hmz77iflbonnu974h8kg.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "e41ae87a5c1107fc176fc0bcff062fdb3a0c6fb91bc71106a51935e0dbd52250",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:0:84,eq=saturation=1.040:contrast=1.010:brightness=-0.018,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "8943610bb512a8eb327bd3ef3d4b5f4da16824684af55591cfdaa0e391913751"
+    },
+    {
+      "role": "homepage visual 10",
+      "output": "image-10.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.jbmotorwork.com/wp-content/uploads/elementor/thumbs/mechanic-auto-repair_1_2000x1335-1536x1025-1-q37o1ku653v0u1t2h377e392z4ag05uxidjk4fab34.jpg",
+      "sourceFile": "reference-1.jpg",
+      "sourceSha256": "2d2cf98e01c8b265f0d0aece0e7943de13f30798e4b914d88f65f401d398fd26",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:48:84,eq=saturation=0.940:contrast=1.064:brightness=-0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "4be9f01a0f9b4e10bd8e5b810b459b2b26ff2e629bb2a66d3264e1561e9d16b2"
+    },
+    {
+      "role": "homepage visual 11",
+      "output": "image-11.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.jbmotorwork.com/wp-content/uploads/elementor/thumbs/Manufacturers-warranty-2-q393b1aw7a5j8x6easq6se8ph49kf0738jig1r0asg.jpg",
+      "sourceFile": "reference-2.jpg",
+      "sourceSha256": "e8d2a7e2491382f8f9a54bcf8f614bc73cf0758f814a4211baa94539c498955a",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:96:84,eq=saturation=0.965:contrast=1.028:brightness=0.000,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "fb8fa282c42959cec1dbbd2d53757781f55fd84edf730df5e0c906bf13d7fe62"
+    },
+    {
+      "role": "homepage visual 12",
+      "output": "image-12.webp",
+      "sourceType": "first-party photo derivative",
+      "sourceUrl": "https://www.jbmotorwork.com/wp-content/uploads/elementor/thumbs/car-paint-repair-q393e3a0ewc2zaqngm9je4hmz77iflbonnu974h8kg.jpg",
+      "sourceFile": "reference-3.jpg",
+      "sourceSha256": "e41ae87a5c1107fc176fc0bcff062fdb3a0c6fb91bc71106a51935e0dbd52250",
+      "transformation": "scale=1400:1050:force_original_aspect_ratio=increase,crop=1200:900:144:84,eq=saturation=0.990:contrast=1.082:brightness=0.009,unsharp=5:5:0.35:5:5:0.0",
+      "outputSha256": "8dc20743ef96b555fb36075c63b3be5075ca6c2b4a561f3c2d74d8134fdfa85e"
+    }
+  ],
+  "fonts": {
+    "pair": {
+      "id": "bricolage-manrope",
+      "display": "Bricolage Grotesque",
+      "text": "Manrope"
+    },
+    "source": "Google Fonts CSS API",
+    "files": [
+      {
+        "file": "font-display-400.woff2",
+        "sha256": "a97804dc9fbe5fc972a08018c5eda4dab7ef2346f64c57e61419d05e6de4ea1c"
+      },
+      {
+        "file": "font-display-700.woff2",
+        "sha256": "a97804dc9fbe5fc972a08018c5eda4dab7ef2346f64c57e61419d05e6de4ea1c"
+      },
+      {
+        "file": "font-text-400.woff2",
+        "sha256": "a30ddcd349703aff7464c34bef3fffdff405ee50c113440d7c8693c02d210972"
+      },
+      {
+        "file": "font-text-700.woff2",
+        "sha256": "a30ddcd349703aff7464c34bef3fffdff405ee50c113440d7c8693c02d210972"
+      }
+    ]
+  }
+}

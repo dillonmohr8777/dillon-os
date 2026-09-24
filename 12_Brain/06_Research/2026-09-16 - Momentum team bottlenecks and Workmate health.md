@@ -3,6 +3,7 @@ note_type: research
 status: active
 date: 2026-09-16
 updated: 2026-09-16
+created: 2026-09-16
 expires: 2026-10-16
 tags:
   - momentum

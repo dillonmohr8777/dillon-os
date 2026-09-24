@@ -1,0 +1,90 @@
+{
+  "sourceUrl": "https://www.avalonflooring.com/a/store-locator/king-of-prussia-pa.html",
+  "finalUrl": "https://www.avalonflooring.com/a/store-locator/king-of-prussia-pa.html",
+  "sourceDomain": "avalonflooring.com",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=utf-8",
+  "pageSha256": "eeeb18a6442e0c4eea893f728199d2b352bae465ee944edd844c8dce1bed6c70",
+  "title": "Flooring, Carpet, & Tile Store in King of Prussia, PA | Avalon Flooring",
+  "description": "Visit our local flooring and tile store in King of Prussia, PA. Browse our incredible selection of flooring, tile, window treatments, area rugs, and more.",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "avalon",
+      "flooring"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\avalon-flooring\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://cdn.shopify.com/s/files/1/0660/1906/6074/files/av-footer.png?v=1676911053",
+    "sourceEvidence": "IMG av-footer-logo  white logo that reads avalon flooring in large letters, with an employee owned company in smaller text below, all on a light gray background.",
+    "type": "png",
+    "dimensions": {
+      "width": 704,
+      "height": 121
+    },
+    "sha256": "cbb97a7906c336ef5db408296cdd905bcf94c659a5aff95df4c9c9a2f2152d88",
+    "sourceSha256": "cbb97a7906c336ef5db408296cdd905bcf94c659a5aff95df4c9c9a2f2152d88",
+    "sourceType": "png",
+    "sourceFileName": null,
+    "transformation": "none; exact first-party transparent asset",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "transparentRatio": 0.7155,
+      "edgeTransparentRatio": 0.8424,
+      "contentRatio": 0.2845,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 11639
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\avalon-flooring\\reference-1.jpg",
+      "fileName": "reference-1.jpg",
+      "sourceUrl": "https://sl.storeify.app/images/base/store-1666792453.jpg",
+      "sourceEvidence": "IMG king of prussia, pa",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 586,
+        "width": 884
+      },
+      "sha256": "0db4aea41c6c31533ed7294fc5405d9897ca5b0e6d87cce9a6ed76ada69f4c59",
+      "bytes": 112117,
+      "visual": {
+        "ok": true,
+        "lumaRange": 254.3,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0660/1906/6074/files/Utmost-SW753-Optimized.jpg?v=1716316928",
+      "reason": "not a PNG"
+    },
+    {
+      "url": "https://www.avalonflooring.com/cdn/shop/files/BRICK-NJ-1_medium.jpg?v=1666885927",
+      "reason": "reference image has insufficient evidence of usable size"
+    },
+    {
+      "url": "https://www.avalonflooring.com/cdn/shop/files/Avalon-NJ_map_medium.jpg?v=1666885819",
+      "reason": "reference image has insufficient evidence of usable size"
+    },
+    {
+      "url": "https://www.avalonflooring.com/cdn/shop/files/DEPTFORD-NJ-300x300_medium.jpg?v=1666916466",
+      "reason": "reference image has insufficient evidence of usable size"
+    }
+  ],
+  "brandColors": [
+    "#113255",
+    "#181f38",
+    "#54bbe3",
+    "#003e69",
+    "#eb1256"
+  ],
+  "checkedAt": "2026-09-18T09:21:02.313Z"
+}

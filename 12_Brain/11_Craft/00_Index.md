@@ -2,7 +2,7 @@
 note_type: index
 status: active
 created: 2026-08-18
-updated: 2026-09-17
+updated: 2026-09-24
 source_refs: []
 tags: [craft, index]
 ---
@@ -27,10 +27,17 @@ repeat get promoted into `12_Brain/03_Concepts/` and linked back here.
 [[12_Brain/11_Craft/earned-lessons|earned-lessons]] - **22** recorded, append-only.
 Agents write there. Never into a generated brief.
 
-Loop learn output, last 14 day(s): **12** concrete lesson(s), **180** explicit no-finding(s), **2** promotion candidate(s). Recorded per execution in the loop receipts; the latest brief lists them.
+Loop learn output, last 14 day(s): **4** concrete lesson(s), **188** explicit no-finding(s), **0** promotion candidate(s). Recorded per execution in the loop receipts; the latest brief lists them.
 
 ## Briefs
 
+- [[12_Brain/11_Craft/2026-09-24 - operating brief|2026-09-24 - operating brief]]
+- [[12_Brain/11_Craft/2026-09-23 - operating brief|2026-09-23 - operating brief]]
+- [[12_Brain/11_Craft/2026-09-22 - operating brief|2026-09-22 - operating brief]]
+- [[12_Brain/11_Craft/2026-09-21 - operating brief|2026-09-21 - operating brief]]
+- [[12_Brain/11_Craft/2026-09-20 - operating brief|2026-09-20 - operating brief]]
+- [[12_Brain/11_Craft/2026-09-19 - operating brief|2026-09-19 - operating brief]]
+- [[12_Brain/11_Craft/2026-09-18 - operating brief|2026-09-18 - operating brief]]
 - [[12_Brain/11_Craft/2026-09-17 - operating brief|2026-09-17 - operating brief]]
 - [[12_Brain/11_Craft/2026-09-16 - operating brief|2026-09-16 - operating brief]]
 - [[12_Brain/11_Craft/2026-09-15 - operating brief|2026-09-15 - operating brief]]

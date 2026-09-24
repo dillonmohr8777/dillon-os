@@ -1,0 +1,73 @@
+{
+  "sourceUrl": "https://keyesinc.com/",
+  "finalUrl": "https://keyesinc.com/",
+  "sourceDomain": "keyesinc.com",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=UTF-8",
+  "pageSha256": "01740815c7a3272af49f3aaa88392606611ff1e8b9f1bd2c14dbfbe80116345c",
+  "title": "Keyes Inc. | Trusted Water Well & Pump Experts Since 1945",
+  "description": "Keyes Inc. delivers clean, reliable water through expert well drilling, pump service, treatment & inspections in Southeastern PA. Trusted since 1945—contact us today.",
+  "identity": {
+    "ok": true,
+    "matchedTokens": [
+      "keyes",
+      "water"
+    ],
+    "domainRelated": true
+  },
+  "logo": {
+    "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\keyes-water-wells\\logo.png",
+    "fileName": "logo.png",
+    "sourceUrl": "https://keyesinc.com/wp-content/uploads/2025/06/Keyes_ICO.png",
+    "sourceEvidence": "JSON-LD logo URL",
+    "type": "png",
+    "dimensions": {
+      "width": 512,
+      "height": 512
+    },
+    "sha256": "a7d1f490328cd226c438efe7ab5bc0229197c4ece973164054a5a2b1a36525c2",
+    "sourceSha256": "a7d1f490328cd226c438efe7ab5bc0229197c4ece973164054a5a2b1a36525c2",
+    "sourceType": "png",
+    "sourceFileName": null,
+    "transformation": "none; exact first-party transparent asset",
+    "borderSpread": null,
+    "alpha": {
+      "ok": true,
+      "transparentRatio": 0.2274,
+      "edgeTransparentRatio": 1,
+      "contentRatio": 0.7726,
+      "reason": null
+    },
+    "transparent": true,
+    "bytes": 77946
+  },
+  "references": [
+    {
+      "file": "C:\\Users\\dillo\\repos\\dillon-os\\automation\\prospect-radar-next20\\runs\\20260918-052002\\preflight\\keyes-water-wells\\reference-1.jpg",
+      "fileName": "reference-1.jpg",
+      "sourceUrl": "https://keyesinc.com/wp-content/uploads/2025/02/home-partners-480x365.jpg",
+      "sourceEvidence": "IMG wp-image-105   our partners",
+      "type": "jpeg",
+      "dimensions": {
+        "height": 365,
+        "width": 480
+      },
+      "sha256": "41eea934394783698d4dad69033dde1d4f72fde926b19205286629fb5a8c3bc6",
+      "bytes": 34930,
+      "visual": {
+        "ok": true,
+        "lumaRange": 196.9,
+        "reason": null
+      }
+    }
+  ],
+  "referenceFailures": [],
+  "brandColors": [
+    "#2ea3f2",
+    "#003388",
+    "#abb8c3",
+    "#f78da7",
+    "#cf2e2e"
+  ],
+  "checkedAt": "2026-09-18T09:21:37.559Z"
+}

@@ -4,7 +4,7 @@ status: active
 generated: true
 generated_by: Update-SecondBrainMaps
 map_type: client
-updated: 2026-09-16
+updated: 2026-09-23
 tags:
   - brain
   - map
@@ -22,6 +22,7 @@ Client cluster for **Momentum 360**.
 ## Canonical notes
 
 - [[01_Clients/Momentum 360/overview|overview]]
+- [[01_Clients/Momentum 360/AI Division Library/asset-manifest-supplement-2026-09-19|asset-manifest-supplement-2026-09-19]]
 - [[01_Clients/Momentum 360/AI Division Library/Editable Sources/article-01-what-is-aeo-answer-engine-optimization-local-business|article-01-what-is-aeo-answer-engine-optimization-local-business]]
 - [[01_Clients/Momentum 360/AI Division Library/Editable Sources/article-02-how-to-get-your-business-to-show-up-in-chatgpt|article-02-how-to-get-your-business-to-show-up-in-chatgpt]]
 - [[01_Clients/Momentum 360/AI Division Library/Editable Sources/article-03-does-ai-search-replace-google-local-business|article-03-does-ai-search-replace-google-local-business]]

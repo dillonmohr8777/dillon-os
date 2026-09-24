@@ -3,6 +3,11 @@ note_type: decision
 status: confirmed
 date: 2026-09-14
 confirmed_by: Dillon Mohr
+created: 2026-09-14
+updated: 2026-09-14
+source_refs:
+  - 10_Sessions/2026-09-14 Weekend accounting 2026-09-11 to 09-13.md
+  - System/daily-orchestrator.md
 tags: [ai-division, decisions, outbound, mac-frederick]
 ---
 

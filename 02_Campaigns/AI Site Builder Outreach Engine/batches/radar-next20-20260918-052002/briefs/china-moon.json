@@ -1,0 +1,217 @@
+{
+  "slug": "china-moon",
+  "prospectId": "RADAR-NEXT20-012",
+  "name": "China Moon",
+  "city": "Boyertown",
+  "market": "Montgomery County",
+  "address": "Boyertown, Pennsylvania",
+  "category": "Restaurant",
+  "vertical": "restaurant",
+  "attitude": "warm",
+  "url": "https://www.chinamoonboyertown.com/",
+  "description": "Private mobile-first concept for China Moon, grounded in its official identity and first-party visual source.",
+  "logo": true,
+  "logoFile": "logo.png",
+  "logoOutroLine": "Boyertown | Restaurant",
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "qualityPolicy": {
+    "minImages": 12,
+    "maxWords": 500
+  },
+  "sections": [
+    "hero",
+    "proof",
+    "offerings",
+    "story",
+    "experience",
+    "gallery",
+    "feature",
+    "catalog",
+    "contact",
+    "closing"
+  ],
+  "tokens": {
+    "paper": "#EAF0FA",
+    "ink": "#17213E",
+    "accent": "#2446A8",
+    "accent2": "#F3BF37",
+    "panel": "#D8E2F4",
+    "deep": "#111A37",
+    "onPaper": "#17213E",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#17213E",
+    "onPanel": "#17213E",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "16px"
+  },
+  "fonts": {
+    "display": "Alegreya",
+    "displayFallback": "Georgia,serif",
+    "text": "Karla",
+    "textFallback": "Arial,sans-serif"
+  },
+  "directionContract": {
+    "thesis": "China Moon should feel immediate, composed, and unmistakably itself on a phone.",
+    "ownWorld": "split signal editorial system drawn from the exact identity and first-party project material.",
+    "story": "Move from orientation to question, source context, visual proof, and a direct official action.",
+    "firstViewport": "Exact identity, one clear proposition, a first-party image, and one thumb-ready action.",
+    "form": "Mobile-first local business homepage with an ink-resolved identity finale."
+  },
+  "hero": {
+    "eyebrow": "Boyertown | Restaurant",
+    "headline": "A clearer first impression, from the first tap.",
+    "sub": "China Moon deserves a first screen that makes the next step legible without flattening the character of the work. This private concept begins with the official identity and first-party source material.",
+    "ctaPrimary": {
+      "label": "Visit official website",
+      "href": "https://www.chinamoonboyertown.com/"
+    },
+    "ctaSecondary": {
+      "label": "Explore the concept",
+      "href": "#offerings"
+    },
+    "glassFloat": null,
+    "marquee": []
+  },
+  "proof": {
+    "items": [
+      "China Moon",
+      "Boyertown, Pennsylvania",
+      "Restaurant",
+      "Official source connected"
+    ]
+  },
+  "offerings": {
+    "heading": "A homepage organized around the decision a visitor is actually making.",
+    "items": [
+      "Understand the role of China Moon without searching through the page",
+      "See first-party visual context before choosing the next question",
+      "Reach the official source through one direct, clearly labelled action"
+    ]
+  },
+  "story": {
+    "heading": "Identity and evidence lead. The interface follows.",
+    "imageIndex": 2,
+    "paragraphs": [
+      "Order online from China Moon in Boyertown, PA. Pickup and delivery available.",
+      "This concept treats the source material as visual evidence, not decoration. The composition gives each image room to establish scale and character while the written hierarchy stays concise enough for a phone.",
+      "No testimonial, result, price, award, schedule, or service promise is added here. Current operational details remain under the control of the official website."
+    ]
+  },
+  "experience": {
+    "heading": "A deliberate path from first impression to official action.",
+    "items": [
+      "Immediate identity and location context",
+      "Readable source-led narrative with decisive image rhythm",
+      "A consistent action that stays reachable without interrupting the page"
+    ]
+  },
+  "gallery": {
+    "heading": "First-party source material, recut for a mobile editorial rhythm.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ]
+  },
+  "feature": {
+    "heading": "The page disappears behind the work, then returns to the identity.",
+    "text": "As each section passes, progressive motion lets completed information soften without turning the page into a scroll experiment. The final scene resolves the exact China Moon logo over a code-native ink field, crisp on every phone density.",
+    "imageIndex": 9,
+    "cta": {
+      "label": "Open official source",
+      "href": "https://www.chinamoonboyertown.com/"
+    }
+  },
+  "catalog": {
+    "heading": "Three useful routes, kept honest and direct.",
+    "items": [
+      {
+        "title": "Review current services and project information",
+        "href": "https://www.chinamoonboyertown.com/",
+        "imageIndex": 10
+      },
+      {
+        "title": "Confirm current location and contact details",
+        "href": "https://www.chinamoonboyertown.com/",
+        "imageIndex": 11
+      },
+      {
+        "title": "Decide whether the next question makes sense",
+        "href": "https://www.chinamoonboyertown.com/",
+        "imageIndex": 12
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Current details belong to the official source.",
+    "sub": "This private concept does not collect or send information. Use the official China Moon website to confirm services, availability, hours, and direct contact details."
+  },
+  "closing": {
+    "heading": "A stronger first impression, resolved to the exact mark.",
+    "cta": {
+      "label": "Visit official website",
+      "href": "https://www.chinamoonboyertown.com/"
+    }
+  },
+  "links": [
+    {
+      "label": "Official website",
+      "href": "https://www.chinamoonboyertown.com/"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "First-party visual reference for China Moon, mobile crop 1"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "First-party visual reference for China Moon, mobile crop 2"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "First-party visual reference for China Moon, mobile crop 3"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "First-party visual reference for China Moon, mobile crop 4"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "First-party visual reference for China Moon, mobile crop 5"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "First-party visual reference for China Moon, mobile crop 6"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "First-party visual reference for China Moon, mobile crop 7"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "First-party visual reference for China Moon, mobile crop 8"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "First-party visual reference for China Moon, mobile crop 9"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "First-party visual reference for China Moon, mobile crop 10"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "First-party visual reference for China Moon, mobile crop 11"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "First-party visual reference for China Moon, mobile crop 12"
+    }
+  ]
+}
