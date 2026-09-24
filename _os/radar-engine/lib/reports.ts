@@ -1,14 +1,36 @@
 'use strict';
 
 const fs = require('fs');
+const os = require('os');
 const path = require('path');
-const { cssVariables, markDataUri } = require('../../automation/lib/brand');
+const { markDataUri } = require('../../automation/lib/brand');
 const { escapeHtml, containsPii } = require('./redact.ts');
 const { validateNarrative } = require('./claims.ts');
 const { paraphraseAllowed } = require('./claims.ts');
 const { safePathJoin } = require('./ssrf.ts');
 const { token } = require('./ids.ts');
 const momentumLogoDataUri = `data:image/png;base64,${fs.readFileSync(path.join(__dirname, '../assets/need-momentum-logo.png')).toString('base64')}`;
+
+// Brand faces already in this repo (latin subsets), embedded so neither the PDF
+// nor the hosted report ever fetches a font. Nunito Sans is the variable face.
+const FONT_DIR = path.join(__dirname, '../../automation/paper-craft-video/assets/fonts');
+const fontUri = (file) => `data:font/woff2;base64,${fs.readFileSync(path.join(FONT_DIR, file)).toString('base64')}`;
+const FONT_CSS = `@font-face{font-family:"Archivo Black";font-weight:400;font-display:block;src:url(${fontUri('archivo-black-400-2.woff2')}) format("woff2")}
+@font-face{font-family:"Nunito Sans";font-weight:200 1000;font-display:block;src:url(${fontUri('nunito-sans-400-7.woff2')}) format("woff2")}`;
+
+// The Momentum design system is the only token source. It is read at render
+// time and never copied into this repo, so a token change reaches the next report.
+function designTokensCss() {
+  const file = process.env.MOMENTUM_TOKENS_CSS
+    || path.join(os.homedir(), 'Documents', 'Codex', 'momentum-design-system', 'tokens.css');
+  let css;
+  try {
+    css = fs.readFileSync(file, 'utf8');
+  } catch {
+    throw new Error(`Momentum design tokens not found at ${file}; set MOMENTUM_TOKENS_CSS`);
+  }
+  return css.replace(/\/\*[\s\S]*?\*\//g, ''); // internal notes stay out of customer HTML
+}
 
 function loadPlaywright() {
   try {
@@ -63,26 +85,66 @@ function storageAdapter(cfg) {
   };
 }
 
-function sectionHtml(title, body) {
-  return `<section class="mod"><h2>${escapeHtml(title)}</h2>${body}</section>`;
-}
-
-function scoreRow(label, value) {
-  const n = value == null ? '—' : String(value);
-  return `<tr><th>${escapeHtml(label)}</th><td>${escapeHtml(n)}</td></tr>`;
-}
+const esc = escapeHtml;
+const SEVERITY = { high: 'High', medium: 'Medium', low: 'Low', info: 'Info' };
+const sevKey = (s) => (SEVERITY[s] ? s : 'info');
+const humanize = (s) => {
+  const t = String(s || '').replace(/_/g, ' ');
+  return t.charAt(0).toUpperCase() + t.slice(1);
+};
+const pad2 = (n) => String(n).padStart(2, '0');
 
 function findingsFor(manifest, section) {
   return (manifest.findings || []).filter((f) => f.section === section);
 }
 
-function findingHtml(f) {
+function scoreValue(v) {
+  if (v == null || v === '') return { text: 'Not scored', pct: null };
+  const n = Number(v);
+  return { text: String(v), pct: Number.isFinite(n) && n >= 0 && n <= 100 ? n : null };
+}
+
+function meter(pct) {
+  return pct == null ? '' : `<span class="meter" aria-hidden="true"><span style="width:${pct}%"></span></span>`;
+}
+
+function head(num, title, aside = '', id = '') {
+  return `<header class="mod__head">
+    <p class="mod__num" aria-hidden="true">${pad2(num)}</p>
+    <h2${id ? ` id="${id}"` : ''}>${esc(title)}</h2>
+    ${aside ? `<p class="mod__aside">${esc(aside)}</p>` : ''}
+  </header>`;
+}
+
+function findingHtml(f, srcNum) {
+  const refs = (f.evidence_ids || []).map((id) => srcNum.get(id)).filter(Boolean);
   return `<article class="find">
-    <p class="claim">${escapeHtml(paraphraseAllowed(f))}</p>
-    <p class="meta"><span>${escapeHtml(f.type)}</span> · confidence ${Math.round(f.confidence * 100)}% · ${escapeHtml(f.severity)}</p>
-    <p>${escapeHtml(f.why_it_matters)}</p>
-    <p class="act">${escapeHtml(f.recommended_action)}</p>
+    <div class="find__rail">
+      <p class="sev sev--${sevKey(f.severity)}"><span class="sev__mark" aria-hidden="true"></span>${esc(SEVERITY[f.severity] || humanize(f.severity || 'info'))}</p>
+      <p class="find__meta">${esc(humanize(f.type))}<br>Confidence ${Math.round(f.confidence * 100)}%${refs.length ? `<br>Source${refs.length > 1 ? 's' : ''} ${refs.join(', ')}` : ''}</p>
+    </div>
+    <div class="find__body">
+      <p class="claim">${esc(paraphraseAllowed(f))}</p>
+      <p class="why">${esc(f.why_it_matters)}</p>
+      <p class="act"><span class="act__label">Recommended action</span>${esc(f.recommended_action)}</p>
+    </div>
   </article>`;
+}
+
+// Heading and first item travel together so no page ends on a bare heading.
+// A lead block (the roadmap plan) sits between the heading and the first finding.
+function findingsSection(num, title, list, srcNum, lead = '', extra = '') {
+  const items = list.map((f) => findingHtml(f, srcNum));
+  const first = lead + (items.shift() || '');
+  const count = list.length ? `${list.length} finding${list.length === 1 ? '' : 's'}` : '';
+  return `<section class="mod mod--findings ${extra}">
+    <div class="keep">${head(num, title, count)}${first}</div>
+    ${items.join('')}
+  </section>`;
+}
+
+function steps(items) {
+  return `<ol class="steps">${items.map((t, i) => `<li><span class="steps__n" aria-hidden="true">${pad2(i + 1)}</span><span>${esc(t)}</span></li>`).join('')}</ol>`;
 }
 
 function prospectLabel(prospect) {
@@ -101,48 +163,73 @@ function renderReportHtml(manifest, { reportUrl, bookingUrl, config }) {
   const label = prospectLabel(p);
   const observed = manifest.observed_at.slice(0, 10);
   const mods = new Set(manifest.modules || []);
-  const narrative = (manifest.findings || []).map((f) => paraphraseAllowed(f)).join(' ');
+  const findings = manifest.findings || [];
+  const scores = manifest.scores || {};
+  const evidence = manifest.evidence || [];
+  const srcNum = new Map(evidence.map((e, i) => [e.id, i + 1]));
+  const narrative = findings.map((f) => paraphraseAllowed(f)).join(' ');
   const claimCheck = validateNarrative(manifest, narrative);
   if (!claimCheck.ok) {
     throw new Error(`unsupported claims in narrative: ${JSON.stringify(claimCheck.unsupported)}`);
   }
+  const tokensCss = designTokensCss();
 
-  const parts = [];
-  parts.push(`<header class="cover">
-    <img class="brand-logo" src="${logo}" alt="Momentum Digital" width="260">
-    <p class="report-brand">Momentum Digital · Private marketing audit</p>
-    <p class="kicker">Confidential · ${escapeHtml(observed)}</p>
-    <h1>${escapeHtml(label)}</h1>
-    <p class="lede">${escapeHtml(p.website || '')} · ${escapeHtml([p.city, p.state].filter(Boolean).join(', '))}</p>
-    <p class="ids">Audit ${escapeHtml(manifest.audit_id)} · Score ${escapeHtml(manifest.score_version)}</p>
-  </header>`);
+  const body = [];
+  const toc = [];
+  const add = (title, html) => {
+    toc.push(title);
+    body.push(html(toc.length));
+  };
 
   if (mods.has('executive_summary')) {
-    const sqs = manifest.scores.site_quality_score;
-    parts.push(sectionHtml('Executive summary', `
-      <p>This review examines the public homepage at ${escapeHtml(p.website || 'the submitted website')}. Its Site Quality Score is ${escapeHtml(sqs == null ? 'ungraded' : String(sqs))}. Scores summarize the checks in this report; they are not search-engine rankings or forecasts.</p>
-      <p>Start with the documented issues and recommended actions below. Any larger redesign should follow a confirmed need and an agreed scope.</p>
-    `));
+    const sqs = scores.site_quality_score;
+    const tally = Object.keys(SEVERITY)
+      .map((k) => [k, findings.filter((f) => sevKey(f.severity) === k).length])
+      .filter(([, n]) => n);
+    add('Executive summary', (n) => `<section class="mod mod--summary">
+      <div class="keep">${head(n, 'Executive summary')}
+      <div class="summary${tally.length ? '' : ' summary--solo'}">
+        <div class="summary__text">
+          <p class="lead">This review examines the public homepage at ${esc(p.website || 'the submitted website')}. Its Site Quality Score is ${esc(sqs == null ? 'ungraded' : String(sqs))}. Scores summarize the checks in this report; they are not search-engine rankings or forecasts.</p>
+          <p>Start with the documented issues and recommended actions below. Any larger redesign should follow a confirmed need and an agreed scope.</p>
+        </div>
+        ${tally.length ? `<aside class="tally" aria-label="Findings by severity">
+          <p class="tally__label">Findings by severity</p>
+          <ul>${tally.map(([k, c]) => `<li><span class="sev sev--${k}"><span class="sev__mark" aria-hidden="true"></span>${SEVERITY[k]}</span><b>${c}</b></li>`).join('')}</ul>
+        </aside>` : ''}
+      </div></div>
+    </section>`);
   }
 
   if (mods.has('opportunity_scorecard')) {
-    const s = manifest.scores;
-    parts.push(sectionHtml('Opportunity scorecard', `
-      <table class="scores">
-        ${scoreRow('Site Quality Score', s.site_quality_score)}
-        ${scoreRow('Opportunity Score', s.opportunity_score)}
-        ${scoreRow('Rebuild opportunity', s.rebuild_opportunity)}
-        ${scoreRow('SEO / AEO opportunity', s.seo_aeo_opportunity)}
-        ${scoreRow('Local opportunity', s.local_opportunity)}
-        ${scoreRow('Paid opportunity', s.paid_opportunity)}
-        ${scoreRow('Conversion opportunity', s.conversion_opportunity)}
-        ${scoreRow('Market fit', s.market_fit_score)}
-        ${scoreRow('Contactability', s.contactability_score)}
-        ${scoreRow('Audit confidence', s.audit_confidence)}
-        ${scoreRow('Priority', s.priority_score)}
-      </table>
+    const row = ([lbl, key]) => {
+      const v = scoreValue(scores[key]);
+      return `<li><p class="score__row"><span>${esc(lbl)}</span><b${v.text === 'Not scored' ? ' class="is-empty"' : ''}>${esc(v.text)}</b></p>${meter(v.pct)}</li>`;
+    };
+    const hero = ([lbl, key]) => {
+      const v = scoreValue(scores[key]);
+      return `<div class="hero-score"><p class="hero-score__label">${esc(lbl)}</p><p class="hero-score__value${v.text === 'Not scored' ? ' is-empty' : ''}">${esc(v.text)}</p>${meter(v.pct)}</div>`;
+    };
+    add('Opportunity scorecard', (n) => `<section class="mod mod--scores">
+      ${head(n, 'Opportunity scorecard')}
+      <div class="scores-hero">${[['Site Quality Score', 'site_quality_score'], ['Opportunity Score', 'opportunity_score']].map(hero).join('')}</div>
+      <div class="scores-grid">
+        <div><p class="scores__group">Opportunity by area</p><ul class="scores">${[
+          ['Rebuild opportunity', 'rebuild_opportunity'],
+          ['SEO / AEO opportunity', 'seo_aeo_opportunity'],
+          ['Local opportunity', 'local_opportunity'],
+          ['Paid opportunity', 'paid_opportunity'],
+          ['Conversion opportunity', 'conversion_opportunity'],
+        ].map(row).join('')}</ul></div>
+        <div><p class="scores__group">Audit signals</p><ul class="scores">${[
+          ['Market fit', 'market_fit_score'],
+          ['Contactability', 'contactability_score'],
+          ['Audit confidence', 'audit_confidence'],
+          ['Priority', 'priority_score'],
+        ].map(row).join('')}</ul></div>
+      </div>
       <p class="note">Each score stores components and explanations in the snapshot. Review volume is a fit signal, not proof of budget.</p>
-    `));
+    </section>`);
   }
 
   const named = [
@@ -156,46 +243,92 @@ function renderReportHtml(manifest, { reportUrl, bookingUrl, config }) {
   ];
   for (const [key, title] of named) {
     if (!mods.has(key)) continue;
-    const fs = findingsFor(manifest, key);
-    if (!fs.length) continue;
-    parts.push(sectionHtml(title, fs.map(findingHtml).join('')));
+    const list = findingsFor(manifest, key);
+    if (!list.length) continue;
+    add(title, (n) => findingsSection(n, title, list, srcNum));
   }
 
   if (mods.has('roadmap_90_day')) {
-    const fs = findingsFor(manifest, 'roadmap_90_day');
-    parts.push(sectionHtml('Prioritized 90-day roadmap', `
-      ${fs.map(findingHtml).join('')}
-      <ol>
-        <li>Fix proven hard faults or confirm the site is strong enough to keep.</li>
-        <li>Agree on the highest-priority improvements, their owners and how success will be checked.</li>
-        <li>Only then consider paid media, and only if the site can hold the click.</li>
-      </ol>
-    `));
+    const title = 'Prioritized 90-day roadmap';
+    const plan = `<div class="plan">${steps([
+      'Fix proven hard faults or confirm the site is strong enough to keep.',
+      'Agree on the highest-priority improvements, their owners and how success will be checked.',
+      'Only then consider paid media, and only if the site can hold the click.',
+    ])}</div>`;
+    add(title, (n) => findingsSection(n, title, findingsFor(manifest, 'roadmap_90_day'), srcNum, plan, 'mod--roadmap'));
   }
 
-  parts.push(sectionHtml('Sources and limitations', `
-    <ul>${(manifest.limitations || []).map((l) => `<li>${escapeHtml(l)}</li>`).join('')}</ul>
-    <p><strong>Private analytics/CMS access required</strong> before any traffic, conversion, or spend claim.</p>
+  add('Sources and limitations', (n) => `<section class="mod mod--sources">
+    <div class="keep">${head(n, 'Sources and limitations', evidence.length ? `${evidence.length} source${evidence.length === 1 ? '' : 's'}` : '')}
+      <ul class="limits">${(manifest.limitations || []).map((l) => `<li>${esc(l)}</li>`).join('')}</ul>
+      <p class="access"><strong>Private analytics/CMS access required</strong> before any traffic, conversion, or spend claim.</p>
+    </div>
     <h3>Source appendix</h3>
-    <ol class="src">${(manifest.evidence || []).map((e) => `
-      <li><code>${escapeHtml(e.id)}</code> · ${escapeHtml(e.source)} · ${escapeHtml(e.classification)} · ${escapeHtml(e.metric)} · ${escapeHtml(e.captured_at)}</li>
-    `).join('')}</ol>
-  `));
-
-  parts.push(`<section class="mod next-steps" aria-labelledby="next-steps-title">
-    <img class="brand-logo" src="${logo}" alt="Momentum Digital" width="260">
-    <h2 id="next-steps-title">Turn the findings into a practical plan.</h2>
-    <p>Bring this report to a walkthrough with Momentum Digital. We can discuss the evidence, confirm what needs deeper access and decide which improvements fit your business.</p>
-    <h3>What to discuss</h3>
-    <ol><li>Confirm the most important issue and its effect on the customer journey.</li>
-    <li>Choose a focused scope, responsibilities and a way to measure the work.</li>
-    <li>Agree on access and review steps before changes are made.</li></ol>
-    <h3>Why work with Momentum Digital?</h3>
-    <p>Our services span websites, local search, content and digital advertising. That gives you a way to discuss connected problems with one team and choose the work your business needs.</p>
-    <p><a class="cta" href="${escapeHtml(bookingUrl)}">Discuss your website audit</a></p>
-    <p class="contact"><a href="${escapeHtml(config.contactUrl)}">${escapeHtml(config.contactUrl)}</a><br>${escapeHtml(config.contactEmail)}</p>
-    <p class="note">This report is a starting point for discussion. It does not guarantee rankings, traffic, leads or revenue. No changes to your website have been made by this report.</p>
+    <ol class="src">${evidence.map((e) => `<li>
+      <p class="src__id"><code>${esc(e.id)}</code></p>
+      <p class="src__line"><b>${esc(e.source)}</b> · ${esc(e.classification)} · <span class="nw">${esc(e.captured_at)}</span></p>
+      <p class="src__metric"><code>${esc(e.metric)}</code></p>
+    </li>`).join('')}</ol>
   </section>`);
+
+  const sqs = scoreValue(scores.site_quality_score);
+  const place = [p.city, p.state].filter(Boolean).join(', ');
+  const cover = `<header class="cover">
+    <div class="cover__top">
+      <img class="brand-logo" src="${logo}" alt="Momentum Digital" width="260">
+      <div class="cover__stamp">
+        <p class="report-brand">Momentum Digital · Private marketing audit</p>
+        <p class="kicker">Confidential · ${esc(observed)}</p>
+      </div>
+    </div>
+    <div class="cover__main">
+      <p class="eyebrow">Prepared for</p>
+      <h1${label.length > 80 ? ' class="is-longer"' : label.length > 40 ? ' class="is-long"' : ''}>${esc(label)}</h1>
+      <p class="lede">${[p.website ? `<span class="site">${esc(p.website)}</span>` : '', esc(place)].filter(Boolean).join(' · ')}</p>
+      <div class="cover__foot">
+        <div class="cover__score">
+          <p class="cover__label">Site Quality Score</p>
+          <p class="cover__value${sqs.text === 'Not scored' ? ' is-empty' : ''}">${esc(sqs.text === 'Not scored' ? 'Ungraded' : sqs.text)}</p>
+          ${meter(sqs.pct)}
+        </div>
+        <nav class="cover__toc" aria-label="In this report">
+          <p class="cover__label">In this report</p>
+          <ol>${toc.map((t, i) => `<li><span class="toc__n">${pad2(i + 1)}</span>${esc(t)}</li>`).join('')}<li><span class="toc__n" aria-hidden="true"></span>Next steps</li></ol>
+        </nav>
+      </div>
+      <p class="ids">Audit ${esc(manifest.audit_id)} · Score ${esc(manifest.score_version)}</p>
+    </div>
+  </header>`;
+
+  const closing = `<section class="mod next-steps" aria-labelledby="next-steps-title">
+    <div class="close__main">
+      <p class="eyebrow">Next steps</p>
+      <h2 id="next-steps-title">Turn the findings into a practical plan.</h2>
+      <p class="lead">Bring this report to a walkthrough with Momentum Digital. We can discuss the evidence, confirm what needs deeper access and decide which improvements fit your business.</p>
+      <div class="close__cta">
+        <a class="cta" href="${esc(bookingUrl)}">Discuss your website audit</a>
+        <p class="contact"><a href="${esc(config.contactUrl)}">${esc(config.contactUrl)}</a><br>${esc(config.contactEmail)}</p>
+      </div>
+    </div>
+    <div class="close__detail">
+      <div>
+        <h3>What to discuss</h3>
+        ${steps([
+          'Confirm the most important issue and its effect on the customer journey.',
+          'Choose a focused scope, responsibilities and a way to measure the work.',
+          'Agree on access and review steps before changes are made.',
+        ])}
+      </div>
+      <div>
+        <h3>Why work with Momentum Digital?</h3>
+        <p>Our services span websites, local search, content and digital advertising. That gives you a way to discuss connected problems with one team and choose the work your business needs.</p>
+      </div>
+    </div>
+    <div class="close__sign">
+      <img class="brand-logo" src="${logo}" alt="Momentum Digital" width="260">
+      <p class="note">This report is a starting point for discussion. It does not guarantee rankings, traffic, leads or revenue. No changes to your website have been made by this report.</p>
+    </div>
+  </section>`;
 
   const html = `<!doctype html>
 <html lang="en">
@@ -203,45 +336,177 @@ function renderReportHtml(manifest, { reportUrl, bookingUrl, config }) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
-  <title>${escapeHtml(label)} · ${escapeHtml(config.brandName)} audit</title>
+  <title>${esc(label)} · ${esc(config.brandName)} audit</title>
   <style>
-    ${cssVariables({ theme: 'light', followSystem: false })}
-    :root { --brand-fill: #155e86; --brand-ink: #0f4b6a; --on-brand: #ffffff; }
-    .brand-logo { display: block; width: 260px; max-width: 100%; height: auto; background: #fff; }
-    .report-brand { color: #0f4b6a; font-weight: 650; }
-    .next-steps { border-top: 4px solid #e27113 !important; }
-    .next-steps h2 { margin-top: 24px; }
-    a { overflow-wrap: anywhere; }
-    a:focus-visible { outline: 3px solid #e27113; outline-offset: 3px; }
-    @media print {
-      body { background: #fff; }
-      main { max-width: none; padding: 0 !important; }
-      .cover, .find, .scores tr { break-inside: avoid; }
-      h2, h3 { break-after: avoid; }
-      .next-steps { break-before: page; break-inside: avoid; }
-      .mod { border-radius: 0 !important; }
+    ${tokensCss}
+    ${FONT_CSS}
+    @page {
+      size: Letter; margin: 17mm 18mm 20mm; background: var(--m-paper);
+      @bottom-left { content: "Momentum Digital · Private marketing audit"; font-family: var(--m-font-text); font-size: var(--m-fs-xs); font-weight: 700; letter-spacing: .04em; color: var(--m-muted); vertical-align: top; padding-top: 7mm; }
+      @bottom-right { content: "Page " counter(page) " of " counter(pages); font-family: var(--m-font-text); font-size: var(--m-fs-xs); font-weight: 700; color: var(--m-muted); vertical-align: top; padding-top: 7mm; }
     }
-    * { box-sizing: border-box; }
-    body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--sans); line-height: 1.5; }
-    main { max-width: 860px; margin: 0 auto; padding: 32px 20px 80px; }
-    .cover { background: var(--panel); border: 1px solid var(--rule); padding: 28px; border-radius: 16px; }
-    h1 { font-family: var(--display); font-size: clamp(28px, 4vw, 42px); margin: 12px 0 8px; }
-    h2 { font-family: var(--display); font-size: 22px; margin: 0 0 12px; }
-    .kicker, .ids, .meta, .note, .contact { color: var(--fg-mid); font-size: 13px; }
-    .mod { background: var(--panel); border: 1px solid var(--rule); border-radius: 16px; padding: 22px; margin-top: 18px; }
-    .find { border-top: 1px solid var(--rule); padding-top: 12px; margin-top: 12px; }
-    .claim { font-weight: 650; }
-    .act { color: var(--brand-ink); }
-    table.scores { width: 100%; border-collapse: collapse; }
-    table.scores th { text-align: left; padding: 6px 0; color: var(--fg-mid); font-weight: 550; }
-    table.scores td { text-align: right; font-variant-numeric: tabular-nums; }
-    .cta { display: inline-block; background: var(--brand-fill); color: var(--on-brand); text-decoration: none; padding: 12px 18px; border-radius: 999px; font-weight: 650; }
-    .src { font-size: 12px; color: var(--fg-mid); }
-    @media (max-width: 640px) { main { padding: 16px 12px 48px; } }
+    @page cover { margin: 0; @bottom-left { content: none; } @bottom-right { content: none; } }
+    @page closing { margin: 0; @bottom-left { content: none; } @bottom-right { content: none; } }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { background: var(--m-paper); color: var(--m-ink); font-family: var(--m-font-text); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    body { margin: 0; font-size: var(--m-fs-body); line-height: var(--m-lh-body); }
+    h1, h2, h3 { font-family: var(--m-font-display); font-weight: var(--m-weight-display); line-height: var(--m-lh-head); letter-spacing: var(--m-track-display); margin: 0; text-wrap: balance; }
+    p, ul, ol { margin: 0; }
+    p { orphans: 3; widows: 3; }
+    a { color: var(--m-brand); overflow-wrap: anywhere; }
+    a:focus-visible { outline: var(--m-focus-ring); outline-offset: var(--m-focus-offset); }
+    code { font-family: var(--m-font-mono); font-size: .92em; }
+    .brand-logo { display: block; height: auto; max-width: 100%; }
+    .eyebrow, .kicker, .mod__aside, .sev, .act__label, .tally__label, .scores__group, .cover__label, .hero-score__label {
+      font-size: var(--m-fs-xs); font-weight: 800; letter-spacing: var(--m-track-caps); text-transform: uppercase;
+    }
+    main { max-width: 62rem; margin: 0 auto; padding-bottom: var(--m-s-8); }
+
+    .cover__top { display: flex; justify-content: space-between; align-items: flex-end; gap: var(--m-s-5); padding: var(--m-s-7) var(--m-gutter) var(--m-s-6); }
+    .cover__top .brand-logo { width: 17rem; }
+    .cover__stamp { text-align: right; }
+    .report-brand { font-weight: 800; color: var(--m-brand); font-size: var(--m-fs-sm); }
+    .kicker { color: var(--m-muted); margin-top: var(--m-s-1); }
+    .cover__main { background: var(--m-deep); color: var(--m-on-deep); padding: var(--m-s-8) var(--m-gutter); display: flex; flex-direction: column; gap: var(--m-s-5); }
+    .cover__main .eyebrow { color: var(--m-signal); }
+    .cover h1 { font-size: var(--m-fs-display); line-height: var(--m-lh-display); overflow-wrap: anywhere; max-width: 16ch; }
+    .cover h1.is-long { font-size: var(--m-fs-h1); line-height: var(--m-lh-head); max-width: 22ch; }
+    .cover h1.is-longer { font-size: var(--m-fs-h2); line-height: var(--m-lh-head); max-width: 30ch; }
+    .lede { color: var(--m-on-deep-muted); font-size: var(--m-fs-lead); overflow-wrap: anywhere; }
+    .lede .site { color: var(--m-brand-lift); font-weight: 700; }
+    .cover__foot { margin-top: var(--m-s-7); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); gap: var(--m-s-6); align-items: end; }
+    .cover__score { background: var(--m-deep-raised); border-radius: var(--m-r-md); padding: var(--m-s-5) var(--m-s-6) var(--m-s-6); box-shadow: var(--m-block-sm) var(--m-block-tint); }
+    .cover__label { color: var(--m-on-deep-muted); }
+    .cover__value { font-family: var(--m-font-display); font-size: var(--m-fs-h1); line-height: 1; margin-top: var(--m-s-3); }
+    .cover__score .meter { background: var(--m-deep); }
+    .cover__score .meter > span { background: var(--m-signal); }
+    .cover__toc ol { list-style: none; padding: 0; margin-top: var(--m-s-3); }
+    .cover__toc li { display: flex; gap: var(--m-s-3); padding: var(--m-s-2) 0; border-top: 1px solid var(--m-deep-raised); font-weight: 700; font-size: var(--m-fs-sm); }
+    .toc__n { color: var(--m-signal); font-weight: 800; min-width: 1.75rem; font-variant-numeric: tabular-nums; }
+    .ids { color: var(--m-on-deep-muted); font-size: var(--m-fs-xs); overflow-wrap: anywhere; padding-top: var(--m-s-4); border-top: 1px solid var(--m-deep-raised); }
+
+    .meter { display: block; height: .375rem; margin-top: var(--m-s-3); border-radius: var(--m-r-pill); background: var(--m-deep-raised); overflow: hidden; }
+    .meter > span { display: block; height: 100%; border-radius: var(--m-r-pill); background: var(--m-brand-lift); }
+
+    .mod { padding: var(--m-s-8) var(--m-gutter) 0; }
+    .mod__head { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: baseline; gap: var(--m-s-4); padding-bottom: var(--m-s-4); margin-bottom: var(--m-s-5); border-bottom: 2px solid var(--m-ink); }
+    .mod__num { font-family: var(--m-font-display); font-size: var(--m-fs-h3); line-height: 1; color: var(--m-signal-ink); }
+    .mod__head h2 { font-size: var(--m-fs-h2); }
+    .mod__aside { color: var(--m-muted); white-space: nowrap; }
+
+    .summary { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: var(--m-s-7); align-items: start; }
+    .summary--solo { grid-template-columns: minmax(0, 1fr); }
+    .summary__text { max-width: var(--m-measure); }
+    .summary__text .lead { font-size: var(--m-fs-lead); line-height: 1.5; overflow-wrap: anywhere; }
+    .summary__text p + p { margin-top: var(--m-s-4); }
+    .tally { background: var(--m-panel); border-radius: var(--m-r-md); padding: var(--m-s-5); }
+    .tally__label { color: var(--m-muted); }
+    .tally ul { list-style: none; padding: 0; margin-top: var(--m-s-3); }
+    .tally li { display: flex; justify-content: space-between; align-items: center; padding: var(--m-s-2) 0; border-top: 1px solid var(--m-line); }
+    .tally b { font-family: var(--m-font-display); font-weight: var(--m-weight-display); font-size: var(--m-fs-h3); line-height: 1; }
+
+    .sev { display: inline-flex; align-items: center; gap: var(--m-s-2); color: var(--m-ink); }
+    .sev__mark { width: .625rem; height: .625rem; border-radius: var(--m-r-pill); flex: none; }
+    .sev--high .sev__mark { background: var(--m-signal); }
+    .sev--medium .sev__mark { background: var(--m-brand); }
+    .sev--low .sev__mark { background: var(--m-line-strong); }
+    .sev--info .sev__mark { box-shadow: inset 0 0 0 2px var(--m-line-strong); }
+
+    .mod--scores { background: var(--m-deep); color: var(--m-on-deep); border-radius: var(--m-r-md); padding: var(--m-s-7) var(--m-s-7) var(--m-s-6); margin-top: var(--m-s-8); }
+    .mod--scores .mod__head { border-bottom-color: var(--m-deep-raised); }
+    .mod--scores .mod__num { color: var(--m-signal); }
+    .scores-hero { display: grid; grid-template-columns: 1fr 1fr; gap: var(--m-s-5); }
+    .hero-score { background: var(--m-deep-raised); border-radius: var(--m-r-md); padding: var(--m-s-5); }
+    .hero-score__label, .scores__group { color: var(--m-on-deep-muted); }
+    .hero-score__value { font-family: var(--m-font-display); font-size: var(--m-fs-h1); line-height: 1; margin-top: var(--m-s-3); }
+    .hero-score__value.is-empty, .cover__value.is-empty { font-size: var(--m-fs-h3); }
+    .hero-score .meter { background: var(--m-deep); }
+    .hero-score .meter > span { background: var(--m-signal); }
+    .scores-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--m-s-7); margin-top: var(--m-s-6); }
+    .scores { list-style: none; padding: 0; margin-top: var(--m-s-2); }
+    .scores li { padding: var(--m-s-3) 0; border-top: 1px solid var(--m-deep-raised); }
+    .score__row { display: flex; justify-content: space-between; gap: var(--m-s-3); font-size: var(--m-fs-sm); }
+    .score__row b { font-weight: 800; font-variant-numeric: tabular-nums; }
+    .score__row b.is-empty { font-weight: 400; color: var(--m-on-deep-muted); }
+    .scores .meter { height: .25rem; margin-top: var(--m-s-2); }
+    .mod--scores .note { color: var(--m-on-deep-muted); font-size: var(--m-fs-xs); margin-top: var(--m-s-5); }
+
+    .find { display: grid; grid-template-columns: 8.5rem minmax(0, 1fr); gap: var(--m-s-6); padding: var(--m-s-5) 0; border-top: 1px solid var(--m-line); }
+    .mod__head + .find { border-top: 0; padding-top: 0; }
+    .find__meta { color: var(--m-muted); font-size: var(--m-fs-xs); line-height: 1.55; margin-top: var(--m-s-2); }
+    .claim { font-size: var(--m-fs-lead); font-weight: 800; line-height: 1.35; overflow-wrap: anywhere; }
+    .why { margin-top: var(--m-s-2); overflow-wrap: anywhere; }
+    .act { margin-top: var(--m-s-4); padding: var(--m-s-3) var(--m-s-4); background: var(--m-panel); border-left: 3px solid var(--m-brand); border-radius: 0 var(--m-r-sm) var(--m-r-sm) 0; overflow-wrap: anywhere; }
+    .act__label { display: block; color: var(--m-brand); margin-bottom: var(--m-s-1); }
+
+    .steps { list-style: none; padding: 0; }
+    .steps li { display: grid; grid-template-columns: 3rem minmax(0, 1fr); gap: var(--m-s-3); align-items: baseline; padding: var(--m-s-3) 0; border-top: 1px solid var(--m-line); }
+    .steps li:first-child { border-top: 0; }
+    .steps__n { font-family: var(--m-font-display); font-size: var(--m-fs-h3); line-height: 1; color: var(--m-signal-ink); }
+    .plan { margin-bottom: var(--m-s-5); background: var(--m-panel); border-radius: var(--m-r-md); padding: var(--m-s-3) var(--m-s-6); }
+
+    .limits { padding-left: 1.1rem; max-width: var(--m-measure); }
+    .limits li + li { margin-top: var(--m-s-2); }
+    .access { margin-top: var(--m-s-5); padding: var(--m-s-3) var(--m-s-4); background: var(--m-panel); border-left: 3px solid var(--m-brand); border-radius: 0 var(--m-r-sm) var(--m-r-sm) 0; }
+    .mod--sources h3 { font-size: var(--m-fs-h3); margin: var(--m-s-7) 0 var(--m-s-3); break-after: avoid; }
+    .src { list-style: none; padding: 0; counter-reset: src; font-size: var(--m-fs-xs); line-height: 1.5; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: var(--m-s-6); }
+    .nw { white-space: nowrap; }
+    .src li { counter-increment: src; position: relative; padding: var(--m-s-2) 0 var(--m-s-2) 2rem; border-top: 1px solid var(--m-line); break-inside: avoid; }
+    .src li::before { content: counter(src); position: absolute; left: 0; top: var(--m-s-2); font-weight: 800; color: var(--m-signal-ink); font-variant-numeric: tabular-nums; }
+    .src__id code { color: var(--m-muted); word-break: break-all; }
+    .src__line { color: var(--m-muted); overflow-wrap: anywhere; }
+    .src__line b { color: var(--m-ink); }
+    .src__metric code { color: var(--m-ink); word-break: break-all; }
+
+    .next-steps { padding: 0; margin-top: var(--m-s-9); break-before: page; }
+    .close__main { background: var(--m-deep); color: var(--m-on-deep); padding: var(--m-s-8) var(--m-gutter); }
+    .close__main .eyebrow { color: var(--m-signal); }
+    .close__main h2 { font-size: var(--m-fs-h1); margin-top: var(--m-s-4); max-width: 20ch; }
+    .close__main .lead { font-size: var(--m-fs-lead); margin-top: var(--m-s-5); max-width: 38rem; }
+    .close__cta { display: flex; flex-wrap: wrap; align-items: center; gap: var(--m-s-6); margin-top: var(--m-s-7); }
+    .cta { display: inline-block; background: var(--m-signal); color: var(--m-on-signal); font-weight: 800; font-size: var(--m-fs-lead); text-decoration: none; padding: var(--m-s-4) var(--m-s-6); border-radius: var(--m-r-pill); box-shadow: var(--m-block-sm) var(--m-block-tint); overflow-wrap: normal; }
+    .contact { color: var(--m-on-deep-muted); font-size: var(--m-fs-sm); }
+    .contact a { color: var(--m-brand-lift); font-weight: 700; }
+    .close__detail { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: var(--m-s-7); padding: var(--m-s-8) var(--m-gutter) var(--m-s-7); }
+    .close__detail h3 { font-size: var(--m-fs-h3); margin-bottom: var(--m-s-4); }
+    .close__sign { display: flex; justify-content: space-between; align-items: flex-end; gap: var(--m-s-6); margin: 0 var(--m-gutter); padding: var(--m-s-5) 0 var(--m-s-6); border-top: 2px solid var(--m-ink); }
+    .close__sign .brand-logo { width: 12rem; flex: none; }
+    .close__sign .note { max-width: 25rem; color: var(--m-muted); font-size: var(--m-fs-xs); text-align: right; }
+
+    @media (max-width: 640px) {
+      .cover__top, .close__sign { flex-direction: column; align-items: flex-start; }
+      .cover__stamp, .close__sign .note { text-align: left; }
+      .cover__foot, .summary, .scores-hero, .scores-grid, .close__detail { grid-template-columns: minmax(0, 1fr); }
+      .find { grid-template-columns: minmax(0, 1fr); gap: var(--m-s-2); }
+      .mod__head { grid-template-columns: auto minmax(0, 1fr); }
+      .mod__aside { grid-column: 2; white-space: normal; }
+      .mod--scores { padding: var(--m-s-6) var(--m-s-5); border-radius: 0; }
+      .src { grid-template-columns: minmax(0, 1fr); }
+    }
+
+    @media print {
+      html { font-size: 14px; }
+      main { max-width: none; padding: 0; }
+      .cover { page: cover; min-height: 11in; display: flex; flex-direction: column; }
+      .cover__top { padding: 0.6in 0.7in 0.45in; }
+      .cover__main { flex: 1; padding: 0.7in; }
+      .cover__foot { margin-top: auto; }
+      .mod { padding: 0; margin-top: var(--m-s-8); }
+      .cover + .mod { margin-top: 0; }
+      .keep, .find, .plan, .mod--scores, .tally, .steps li { break-inside: avoid; }
+      .mod.mod--scores { margin-top: var(--m-s-7); padding: var(--m-s-6) var(--m-s-6) var(--m-s-5); }
+      .next-steps { page: closing; min-height: 11in; margin: 0; display: flex; flex-direction: column; }
+      .close__main { padding: 0.9in 0.7in 0.7in; }
+      .close__detail { flex: 1; padding: 0.55in 0.7in 0.3in; }
+      .close__sign { margin: 0 0.7in; padding-bottom: 0.6in; }
+    }
   </style>
 </head>
 <body>
-  <main id="main">${parts.join('\n')}</main>
+  <main id="main">${cover}
+${body.join('\n')}
+${closing}</main>
 </body>
 </html>`;
 
@@ -256,7 +521,7 @@ function checkReport(html, manifest) {
   if (!/Private analytics\/CMS access required/i.test(html)) fails.push('missing limitation language');
   if (!/Momentum Digital|NeedMomentum|needmomentum/i.test(html)) fails.push('missing Momentum identity');
   if (/lorem ipsum|TODO|placeholder copy|\[insert/i.test(html)) fails.push('placeholder copy');
-  if (/[\u2014]/g.test(html)) fails.push('em dash in customer-facing copy');
+  if (/[–—]/.test(html)) fails.push('em or en dash in customer-facing copy');
   const pii = containsPii(html, { allowAgencyEmail: true });
   if (pii.leaked) fails.push('pii leakage');
   const pagesGuess = Math.max(1, Math.round(html.length / 3500));
@@ -280,12 +545,9 @@ async function renderPdf(html, outPath) {
   try {
     const page = await browser.newPage();
     await page.setContent(html, { waitUntil: 'load' });
-    await page.pdf({
-      path: outPath,
-      format: 'Letter',
-      printBackground: true,
-      margin: { top: '16mm', bottom: '16mm', left: '14mm', right: '14mm' },
-    });
+    await page.evaluate(() => document.fonts.ready);
+    // Page size, margins and the running footer live in the report's @page rules.
+    await page.pdf({ path: outPath, format: 'Letter', printBackground: true, preferCSSPageSize: true });
     return { ok: true, path: outPath };
   } finally {
     await browser.close();

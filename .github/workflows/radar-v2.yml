@@ -39,6 +39,13 @@ jobs:
       - name: Install engine deps
         working-directory: _os/radar-engine
         run: npm install --omit=dev
+      # The report reads the private momentum-design-system tokens.css at render
+      # time and never vendors it. CI only checks structure, so an empty stand-in
+      # file is enough here; real renders use the canonical token file.
+      - name: Stand in for the private design tokens
+        run: |
+          echo ':root{}' > "$RUNNER_TEMP/tokens.css"
+          echo "MOMENTUM_TOKENS_CSS=$RUNNER_TEMP/tokens.css" >> "$GITHUB_ENV"
       - name: Run Radar V2 tests
         env:
           DATABASE_URL: postgres://radar:radar@127.0.0.1:5432/radar_v2
