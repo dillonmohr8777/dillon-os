@@ -29,6 +29,13 @@ jobs:
         with:
           node-version: '22'
 
+      # A --selftest nothing invokes is documentation, not a control. Run the
+      # watchdog's own assertions before trusting its verdict.
+      - name: Self-check the watchdog
+        run: |
+          node _os/automation/bin/cadence-watchdog.js --selftest
+          node --test _os/automation/tests/cadence-watchdog.test.js
+
       - name: Run the watchdog
         run: |
           set -o pipefail

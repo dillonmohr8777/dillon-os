@@ -2,7 +2,7 @@
 note_type: concept
 status: active
 created: 2026-08-18
-updated: 2026-08-18
+updated: 2026-09-22
 source_refs: ["12_Brain/11_Craft/00_Index.md", "System/browser-access.policy.json"]
 tags: [craft, agent-infrastructure, lessons]
 ---
@@ -550,3 +550,52 @@ only a live SERP can answer, such as who actually ranks. Also worth knowing: a
 `curl` status probe can return 403 from Cloudflare while the same URL fetched with
 `-L` and a browser user-agent returns 200 — check the status with the same request
 shape you used for the body, or you will report a site as broken when it is not.
+
+---
+
+## 2026-09-22 — A check that evaluates nothing must not exit 0
+
+**Lesson.** A monitor has two green states that look identical from outside:
+*I checked everything and it was fine*, and *I checked nothing*. If the second
+one exits 0, the monitor is worse than no monitor, because it also consumes the
+attention that would have gone to looking. Make an empty evaluation set a loud
+failure. The count of things actually checked belongs in the output, every run.
+
+**Evidence.** `_os/automation/bin/cadence-watchdog.js` was built on 2026-09-17
+(`aaba6cc`) precisely because the local heartbeat shares a power supply with the
+box it watches. It ran 16 times on GitHub Actions between 2026-09-18T04:36Z and
+2026-09-21T21:56Z and returned `success` every time. It had evaluated zero jobs
+on all 16. Four defects composed: `cadenceJobs()` requires `a.enabled`, a field
+that 0 of the 27 records in `12_Brain/registry/automations.json` on `main`
+carry (it is added by PR #406, open and merge-conflicted); the cadence regex
+`/^(daily|weekly|monthly) via .*driver\.md/` matches 0 of those 27 values;
+`ledger.filter(e => e.job === job.id)` joins registry automation ids against
+ledger job names (`daily-sweep`, `morning-chief`, `heartbeat` …) that come from
+`daily.yaml` and were never the same vocabulary; and `hoursSinceLastCommit()`
+reads `git log -1` over the whole checkout, which gets a radar-bot or Claude
+cloud commit nearly every day, so the 30-hour staleness trip never fires no
+matter how long the watched machine stays silent.
+
+Meanwhile the thing being watched had stopped on 2026-09-15: last
+`run-ledger.jsonl` row `2026-09-15T14:00:01Z`, last loop receipt
+`claude-loop-2026-09-15.jsonl`, `12_Brain/state/claude-loop.json` frozen at
+`2026-09-15T05:08:23Z`, six generated operating briefs missing from
+`12_Brain/11_Craft/`. Six and a half days, sixteen green checks.
+
+The estate already knew this. `00_Index.md` has carried *"a driver that reports
+`noop` cannot distinguish 'nothing to do' from 'everything is stuck'"* since
+2026-08-18, and *"2026-08-18 — A zero exit code and a zero error count can still
+be a failed routine"* is four entries up this file. The watchdog was written a
+month later and reproduced it one rung higher. A lesson recorded in a file no
+build step reads is not a control.
+
+**How to apply.** Any script whose verdict is an exit code must report its
+denominator — jobs evaluated, rows compared, files asserted — and must fail when
+that denominator is zero. Write the assertion as a test, not a comment: a
+`--selftest` that CI never invokes is documentation. When a monitor joins two
+data sources by a key, assert the join is non-empty against real committed data,
+because a join that silently matches nothing is the same green. And when a
+monitor's staleness check is meant to detect *one machine* going quiet, point
+its clock at an artifact only that machine writes; pointing it at "any commit on
+the branch" measures the cloud, not the box.
+
