@@ -1,7 +1,7 @@
 ---
 tags: [index, moc, brain]
 canonical: 12_Brain
-updated: 2026-09-02
+updated: 2026-09-23
 ---
 
 # INDEX — the front door
@@ -30,6 +30,12 @@ in the same change.
 - [[12_Brain/02_Entities/Claude in Chrome|Claude in Chrome]] — browser-driving extension for local apply sessions.
 - [[12_Brain/02_Entities/Ops Box (EliteDesk 800 G4)|Ops Box (EliteDesk 800 G4)]] — always-on Ops machine (no credentials in Git).
 - [[12_Brain/02_Entities/LandingFolio MCP|LandingFolio MCP]] — layout-reference MCP for site builds; sandbox-only until its Inspector check passes.
+- [[12_Brain/02_Entities/Cloudflare D1 Radar|Cloudflare D1 Radar]] — live backend for Prospect Radar; database live, Worker deploy approval-gated.
+- [[12_Brain/02_Entities/Higgsfield MCP|Higgsfield MCP]] — hosted image/video generation MCP; wired 2026-09-01, OAuth pending.
+- [[12_Brain/02_Entities/Vibe Prospecting|Vibe Prospecting]] — paid business/prospect-data MCP powering the franchise-list skill; spend-gated.
+- [[12_Brain/02_Entities/Momentum Design System|Momentum Design System]] — token source of truth for the Momentum brand, now under git.
+- [[12_Brain/02_Entities/Chronos-2|Chronos-2]] — Amazon's time-series foundation model, forecast-specialist candidate.
+- [[12_Brain/02_Entities/TimesFM|TimesFM]] — Google Research time-series foundation model, forecast-specialist candidate.
 
 Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Index]].
 
@@ -65,6 +71,13 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/03_Concepts/Evidence Context and Learning Loops|Evidence, Context, and Learning Loops]] — the brain improves when an observation changes a supported model.
 - [[12_Brain/03_Concepts/Living Second Brain|Living Second Brain]] — a living brain improves its current model rather than accumulating files.
 - [[12_Brain/03_Concepts/Confirm the Artifact Not the Action|Confirm the Artifact, Not the Action]] — promoted craft lesson: a change you believe you made is the dangerous one.
+- [[12_Brain/03_Concepts/2026-09-07 - The delivery machinery is the product|The delivery machinery is the product]] — sell the assembly line, not the category.
+- [[12_Brain/03_Concepts/2026-09-07 - One token cannot do two jobs|One token cannot do two jobs]] — a colour token cannot serve as both a field and text on that field.
+- [[12_Brain/03_Concepts/2026-09-07 - Conversion match-back is the differentiator|Conversion match-back is the differentiator]] — naming the human behind a conversion is a claim most SMB agencies cannot make.
+- [[12_Brain/03_Concepts/Dillon Voice Profile|Dillon Voice Profile]] — Dillon sounds like an operator texting a colleague, not an agency.
+- [[12_Brain/03_Concepts/OpenAI Agents API|OpenAI Agents API]] — managed Codex harness exposed as an API (public beta 2026-09-10).
+- [[12_Brain/03_Concepts/Specialist Forecast Router|Specialist Forecast Router]] — numeric futures go to a forecast specialist; LLMs do not guess trends.
+- [[12_Brain/03_Concepts/Predictive Work Planner|Predictive Work Planner]] — likely deliverables and workload predicted in separate evidence and authority lanes.
 
 ## Raw captures (Git-safe)
 
