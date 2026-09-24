@@ -2,7 +2,7 @@
 note_type: concept
 status: active
 created: 2026-08-18
-updated: 2026-08-18
+updated: 2026-09-24
 source_refs: ["12_Brain/11_Craft/00_Index.md", "System/browser-access.policy.json"]
 tags: [craft, agent-infrastructure, lessons]
 ---
@@ -550,3 +550,37 @@ only a live SERP can answer, such as who actually ranks. Also worth knowing: a
 `curl` status probe can return 403 from Cloudflare while the same URL fetched with
 `-L` and a browser user-agent returns 200 — check the status with the same request
 shape you used for the body, or you will report a site as broken when it is not.
+
+---
+
+## 2026-09-24 — When each silence is ambiguous, read them together
+
+**Lesson.** A routine that produces nothing is individually undecidable: "ran and
+correctly found nothing" and "never fired" leave the same trace. Stop trying to settle
+it one routine at a time. Line the independent producers up on the same calendar and
+look for coincidence. Routines with different prompts, different schedules and
+different silence rules do not all go quiet on the same days by chance — correlated
+absence is a shared-substrate outage, and it is provable from artifacts you already
+have.
+
+**Evidence.** PR #415 (2026-09-23) reached the ambiguity honestly and stopped there:
+*"'Ran and correctly stayed silent on a quiet night' and 'did not fire' are
+indistinguishable from outside; the absence is not evidence of failure."* True of one
+routine. Laid side by side over 2026-09-17 to 09-23, all three claude.ai Routines —
+morning brief, vault hygiene, daily learning — produced nothing on 09-18, 09-19 and
+09-20, and all three resumed on 09-21, while the two GitHub Actions producers went
+7/7. Hygiene settles it on its own once you look for the right artifact: it has no
+silent mode, writing `Daily-Briefs/vault-clean-<date>.md` and `wiki-lint-<date>.md` on
+every completed run, and it wrote them on 09-17, 09-21, 09-22 and 09-23. The
+`cadence-watchdog` workflow reported `success` on all three blackout days, because its
+only liveness signal is any commit reaching `main` and `radar-bot` — the healthiest
+producer in the estate — supplies one nearly every day.
+
+**How to apply.** Two rules, both cheap. First, when a producer's silence is
+ambiguous, find the artifact it writes on *every* completed run, including its
+quietest one, and check for that instead of for its headline output; a routine with no
+silent mode is a free oracle for the ones that have one. Second, never let a monitor's
+liveness signal be something a *different* producer also writes. A watchdog that
+shares its heartbeat with the one component that never fails will report green through
+every outage it was built to catch, and its success rate will measure nothing. See
+[[12_Brain/11_Craft/2026-09-24 - daily learning review|the 2026-09-24 review]].
