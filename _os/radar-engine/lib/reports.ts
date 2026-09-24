@@ -2,12 +2,13 @@
 
 const fs = require('fs');
 const path = require('path');
-const { cssVariables, lockup, LOCKUP_CSS, markDataUri } = require('../../automation/lib/brand');
+const { cssVariables, markDataUri } = require('../../automation/lib/brand');
 const { escapeHtml, containsPii } = require('./redact.ts');
 const { validateNarrative } = require('./claims.ts');
 const { paraphraseAllowed } = require('./claims.ts');
 const { safePathJoin } = require('./ssrf.ts');
 const { token } = require('./ids.ts');
+const momentumLogoDataUri = `data:image/png;base64,${fs.readFileSync(path.join(__dirname, '../assets/need-momentum-logo.png')).toString('base64')}`;
 
 function loadPlaywright() {
   try {
@@ -84,8 +85,20 @@ function findingHtml(f) {
   </article>`;
 }
 
+function prospectLabel(prospect) {
+  const name = String(prospect.business_name || '').trim();
+  if (name) return name;
+  try {
+    return `Website audit · ${new URL(prospect.website).hostname}`;
+  } catch {
+    return 'Website audit';
+  }
+}
+
 function renderReportHtml(manifest, { reportUrl, bookingUrl, config }) {
+  const logo = momentumLogoDataUri;
   const p = manifest.prospect;
+  const label = prospectLabel(p);
   const observed = manifest.observed_at.slice(0, 10);
   const mods = new Set(manifest.modules || []);
   const narrative = (manifest.findings || []).map((f) => paraphraseAllowed(f)).join(' ');
@@ -96,19 +109,19 @@ function renderReportHtml(manifest, { reportUrl, bookingUrl, config }) {
 
   const parts = [];
   parts.push(`<header class="cover">
-    ${lockup({ size: 36, subtitle: 'Private marketing audit' })}
+    <img class="brand-logo" src="${logo}" alt="Momentum Digital" width="260">
+    <p class="report-brand">Momentum Digital · Private marketing audit</p>
     <p class="kicker">Confidential · ${escapeHtml(observed)}</p>
-    <h1>${escapeHtml(p.business_name)}</h1>
+    <h1>${escapeHtml(label)}</h1>
     <p class="lede">${escapeHtml(p.website || '')} · ${escapeHtml([p.city, p.state].filter(Boolean).join(', '))}</p>
     <p class="ids">Audit ${escapeHtml(manifest.audit_id)} · Score ${escapeHtml(manifest.score_version)}</p>
   </header>`);
 
   if (mods.has('executive_summary')) {
-    const offer = manifest.selected_offer || 'needs review';
     const sqs = manifest.scores.site_quality_score;
     parts.push(sectionHtml('Executive summary', `
-      <p>This audit measured the public homepage for ${escapeHtml(p.business_name)}. Site Quality Score is ${escapeHtml(sqs == null ? 'ungraded' : String(sqs))}. The highest eligible offer is <strong>${escapeHtml(offer)}</strong>, not simply the highest raw score.</p>
-      <p>Rebuild is only on the table when a hard fault is proven. Strong verified websites are not offered a redesign.</p>
+      <p>This review examines the public homepage at ${escapeHtml(p.website || 'the submitted website')}. Its Site Quality Score is ${escapeHtml(sqs == null ? 'ungraded' : String(sqs))}. Scores summarize the checks in this report; they are not search-engine rankings or forecasts.</p>
+      <p>Start with the documented issues and recommended actions below. Any larger redesign should follow a confirmed need and an agreed scope.</p>
     `));
   }
 
@@ -154,22 +167,35 @@ function renderReportHtml(manifest, { reportUrl, bookingUrl, config }) {
       ${fs.map(findingHtml).join('')}
       <ol>
         <li>Fix proven hard faults or confirm the site is strong enough to keep.</li>
-        <li>Close the highest eligible offer: ${escapeHtml(manifest.selected_offer || 'review')}.</li>
+        <li>Agree on the highest-priority improvements, their owners and how success will be checked.</li>
         <li>Only then consider paid media, and only if the site can hold the click.</li>
       </ol>
     `));
   }
 
-  parts.push(sectionHtml('Sources, limitations and next step', `
+  parts.push(sectionHtml('Sources and limitations', `
     <ul>${(manifest.limitations || []).map((l) => `<li>${escapeHtml(l)}</li>`).join('')}</ul>
     <p><strong>Private analytics/CMS access required</strong> before any traffic, conversion, or spend claim.</p>
-    <p><a class="cta" href="${escapeHtml(bookingUrl)}">Book a walkthrough with ${escapeHtml(config.contactName)}</a></p>
-    <p class="contact">${escapeHtml(config.contactName)} · <a href="${escapeHtml(config.contactUrl)}">${escapeHtml(config.contactUrl)}</a> · ${escapeHtml(config.contactEmail)}</p>
     <h3>Source appendix</h3>
     <ol class="src">${(manifest.evidence || []).map((e) => `
       <li><code>${escapeHtml(e.id)}</code> · ${escapeHtml(e.source)} · ${escapeHtml(e.classification)} · ${escapeHtml(e.metric)} · ${escapeHtml(e.captured_at)}</li>
     `).join('')}</ol>
   `));
+
+  parts.push(`<section class="mod next-steps" aria-labelledby="next-steps-title">
+    <img class="brand-logo" src="${logo}" alt="Momentum Digital" width="260">
+    <h2 id="next-steps-title">Turn the findings into a practical plan.</h2>
+    <p>Bring this report to a walkthrough with Momentum Digital. We can discuss the evidence, confirm what needs deeper access and decide which improvements fit your business.</p>
+    <h3>What to discuss</h3>
+    <ol><li>Confirm the most important issue and its effect on the customer journey.</li>
+    <li>Choose a focused scope, responsibilities and a way to measure the work.</li>
+    <li>Agree on access and review steps before changes are made.</li></ol>
+    <h3>Why work with Momentum Digital?</h3>
+    <p>Our services span websites, local search, content and digital advertising. That gives you a way to discuss connected problems with one team and choose the work your business needs.</p>
+    <p><a class="cta" href="${escapeHtml(bookingUrl)}">Discuss your website audit</a></p>
+    <p class="contact"><a href="${escapeHtml(config.contactUrl)}">${escapeHtml(config.contactUrl)}</a><br>${escapeHtml(config.contactEmail)}</p>
+    <p class="note">This report is a starting point for discussion. It does not guarantee rankings, traffic, leads or revenue. No changes to your website have been made by this report.</p>
+  </section>`);
 
   const html = `<!doctype html>
 <html lang="en">
@@ -177,10 +203,24 @@ function renderReportHtml(manifest, { reportUrl, bookingUrl, config }) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
-  <title>${escapeHtml(p.business_name)} · ${escapeHtml(config.brandName)} audit</title>
+  <title>${escapeHtml(label)} · ${escapeHtml(config.brandName)} audit</title>
   <style>
     ${cssVariables({ theme: 'light', followSystem: false })}
-    ${LOCKUP_CSS}
+    :root { --brand-fill: #155e86; --brand-ink: #0f4b6a; --on-brand: #ffffff; }
+    .brand-logo { display: block; width: 260px; max-width: 100%; height: auto; background: #fff; }
+    .report-brand { color: #0f4b6a; font-weight: 650; }
+    .next-steps { border-top: 4px solid #e27113 !important; }
+    .next-steps h2 { margin-top: 24px; }
+    a { overflow-wrap: anywhere; }
+    a:focus-visible { outline: 3px solid #e27113; outline-offset: 3px; }
+    @media print {
+      body { background: #fff; }
+      main { max-width: none; padding: 0 !important; }
+      .cover, .find, .scores tr { break-inside: avoid; }
+      h2, h3 { break-after: avoid; }
+      .next-steps { break-before: page; break-inside: avoid; }
+      .mod { border-radius: 0 !important; }
+    }
     * { box-sizing: border-box; }
     body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--sans); line-height: 1.5; }
     main { max-width: 860px; margin: 0 auto; padding: 32px 20px 80px; }
@@ -214,7 +254,7 @@ function checkReport(html, manifest) {
   if (!/noindex/i.test(html)) fails.push('missing noindex');
   if (!/Source appendix/i.test(html)) fails.push('missing source appendix');
   if (!/Private analytics\/CMS access required/i.test(html)) fails.push('missing limitation language');
-  if (!/NeedMomentum|needmomentum/i.test(html)) fails.push('missing Momentum identity');
+  if (!/Momentum Digital|NeedMomentum|needmomentum/i.test(html)) fails.push('missing Momentum identity');
   if (/lorem ipsum|TODO|placeholder copy|\[insert/i.test(html)) fails.push('placeholder copy');
   if (/[\u2014]/g.test(html)) fails.push('em dash in customer-facing copy');
   const pii = containsPii(html, { allowAgencyEmail: true });
@@ -286,6 +326,8 @@ module.exports = {
   renderPdf,
   visualCheck,
   reportAccessible,
+  prospectLabel,
   token,
   markDataUri,
+  momentumLogoDataUri,
 };
