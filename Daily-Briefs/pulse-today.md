@@ -1,21 +1,22 @@
 ---
 note_type: daily_brief
 brief_type: client_pulse
-date: 2026-09-24
+date: 2026-09-25
 generated_by: client-pulse skill (automated morning brief)
 ---
 
-# Client Pulse — 2026-09-24
+# Client Pulse — 2026-09-25
 
 ## Coverage notes
 
 - Scanned all 40 client records under `01_Clients/` (excluding `Client Index.md`): frontmatter (`updated`, `next_action`, `review_on`, `due`, `status`, `priority`) plus open `- [ ]` checklist items, across every `.md` file in each client's folder (or the single file, for flat-file clients).
-- **Recency proxy caveat:** filesystem mtimes are useless (fresh container checkout stamps everything at clone time), so "last touched" is the most recent of (a) the latest git commit date touching that client's path and (b) any `updated` frontmatter value. This is vault-record staleness, not proof that no real work happened — work logged only in the canonical `client-operations` queue or done outside the vault won't move this number.
-- By that proxy, **every client record in the vault is 8+ days stale** as of today (newest touch: 2026-09-15, one client — Omega Landscaping — touched 2026-09-14; the bulk of the roster last moved 2026-09-07/08). Nothing qualifies as "moving" (<48h) or "watch" (2–7 days) — this is the headline finding, not a scan failure. Every client's staleness number is +1 day versus yesterday's report; nothing moved.
-- `predict-work.js` initially ran against the wrong default root (`~/Documents/Codex/projects/client-operations`, which doesn't exist in this container) and came back with 0 events scanned. Re-ran with `--client-ops-root /home/user/client-operations-canonical` (the read-only checkout provided for this session, never written to) and got real signal: 31 deliverable events, 16 active queue items scanned, 2 queue candidates used, 14 stale queue items correctly excluded. **Provenance:** `client_operations_root_available: true`, `canonical_queue_available: true`, source `client-operations://queue/work-items.json`, fingerprint `de4391c869f67484ec6254e1a7a7c9a07e2dbea3e3c6991bd84311538806f7f4`. **Status: `ok`, not degraded.**
-- `latest-chronos.json` fingerprint (`d58cc5d65bff84e252f6bbc2a506b73aab0178411b4a2c6993f53e5edba113d5`, generated 2026-09-02) does **not** match today's prediction fingerprint — chronos shadow is stale and excluded from this report entirely, not just downweighted. Its `planner_consumption` gate is also absent/false, so it was never eligible to rank clients regardless.
+- **Recency proxy caveat:** filesystem mtimes are useless (fresh container checkout stamps everything at clone time), so "last touched" is the most recent git commit date touching that client's path. This is vault-record staleness, not proof that no real work happened — work logged only in the canonical `client-operations` queue or done outside the vault won't move this number.
+- By that proxy, **every client record in the vault is 10+ days stale** as of today. Newest touches: seven clients (Tags 2 Go, Puttery NYC, Nexla, Momentum 360, Deborah-Mara, Bridge Software Development, Bar Crawl USA) at 2026-09-15 (10 days), Omega Landscaping at 2026-09-14 (11 days). The remaining 32 clients (17 folder clients + 15 flat files) last moved 2026-09-09 (16 days). Nothing qualifies as "moving" (<48h) or "watch" (2–7 days) — this is the headline finding, not a scan failure.
+- `predict-work.js` first ran against its default root (`~/Documents/Codex/projects/client-operations`, Windows-style path that doesn't exist in this container) and came back with 0 deliverable events / 0 queue items scanned (`client_operations_root_available: false`). Re-ran with `--client-ops-root /home/user/client-operations-canonical` (the read-only checkout provided for this session, never written to) and got real signal: 37 deliverable events, 16 active queue items scanned, 2 queue candidates used, 14 stale queue items correctly excluded. **Provenance:** `client_operations_root_available: true`, `canonical_queue_available: true`, source `client-operations://queue/work-items.json`, fingerprint `693b9367c315b82f1d0a249edeaf1c03ef413089b0ec5c76010b94484e44c1c4`. **Status: `ok`, not degraded.**
+- `latest-chronos.json` fingerprint (`d58cc5d65bff84e252f6bbc2a506b73aab0178411b4a2c6993f53e5edba113d5`, generated 2026-09-02) does **not** match today's prediction fingerprint — chronos shadow is stale and excluded from this report entirely, not just downweighted. Its `planner_consumption` gate is also false, so it was never eligible to rank clients regardless.
 - Blind spot: 15 of the 40 client files are flat single-page records with no `next_action`/`priority` frontmatter at all (marked "TBD — needs human next action" below) — invisible to automated triage until someone fills them in.
-- No `00_Inbox/slack/` notes from the last 24 hours — nothing to fold in as candidate tasks.
+- No `00_Inbox/slack/` notes from the last 24 hours (newest is 2026-09-02) — nothing to fold in as candidate tasks.
+- Standing data gap, not fixed here per "keep changes to what the task asks": `Align HCM.md` still carries `status: active` despite CLAUDE.md stating that engagement ended, confirmed 2026-09-02.
 
 ## Moving
 
@@ -29,47 +30,45 @@ None. No client record changed in the 2–7 day window.
 
 All 40 clients. Ranked by staleness, high-signal ones first:
 
-| Client | Days stale | Priority | Next action on file |
-|---|---|---|---|
-| Bar Crawl USA | 9 | high | Repair confirmed-event schema and hub inventory, then connect city/theme demand to verified tickets |
-| Bridge Software Development | 9 | high | Approve Phase 1 roles, verification meaning, priority journeys, ownership, acceptance criteria |
-| Deborah-Mara | 9 | — | No next_action set |
-| Momentum 360 | 9 | high | Create agency-level operating scoreboard and decision ledger (14 open checklist items — most of any client) |
-| Nexla | 9 | high | Confirm exact budget, landing pages, primary conversion action, Google Ads vs. GA4 tracking |
-| Puttery NYC | 9 | high | Rotate/verify Tock role credential, approve durable HTTPS host, register Reservation Webhook |
-| Tags 2 Go | 9 | standard | Map Google Ads access via Access Broker/Bitwarden; confirm agency admin invite need |
-| Omega Landscaping | 10 | high | Reconcile Google-counted event to a named call/form/inbox/CRM record before budget or Search changes |
-| AMI Cleaning | 15 | high | Verify secure HubSpot form routing and a named production-lead owner before expanding acquisition |
-| BOK Law Firm | 15 | medium | Connect approved content calendar to legal-service demand, geography, consultation patterns |
-| Bercos Popcorn | 15 | high | Obtain current Shopify build and confirmed engagement scope before creating the launch plan |
-| BigOrange Marketing | 15 | high | Complete custom-home-builder pillar audit; define authorized WordPress/Semrush scope |
-| Capsule & Tonic | 15 | — | Confirm canonical registry disposition before promoting any dated campaign |
-| Cindy May Christmas | 15 | medium | Resolve video/newsletter/image/Shopify/destination dependencies (overdue `due`: 2026-09-01) |
-| Everyday Life Insurance | 15 | — | Resolve missing decision context; confirm canonical registry status |
-| Fresh Blends | 15 | medium | Keep all four Ice Box campaigns paused until restart authority, store scope, measurement resolved |
-| Hope Wellness Center | 15 | high | Obtain leadership/clinical decisions; repair contact/eligibility/homepage issues |
-| Kimberly James Bridal | 15 | high | Reconcile qualified Meta form through stylist contact and booked appointment |
-| NKCDC | 15 | high | Secure leadership selection of 2–3 Phase Two priorities; define exact audience |
-| Onsite Concrete | 15 | high | Reconcile six Google-counted events to named contacts/qualified estimates before reallocating |
-| Pritzker Law Group | 15 | high | Confirm approved podcast facts, conversion goal, form destination, analytics property |
-| Pro Fence & Deck | 15 | high | Verify production website, logo, service area, offer, CTA, contact route, real proof |
-| Replenish | 15 | high | Preserve store-level separation; validate direction intent against approved business outcomes |
-| Revive Systems | 15 | high | Map authorized HighLevel access; implement/verify entry-offer-to-VIP journey |
-| VA Claims | 15 | high | Refresh Phase 2 backend/decision status; reconcile portal with approved plan |
-| AWCI, Align HCM, Bend Plastic Surgery, Blissful Events, Bluegrass Janitorial, Bridge of Hope OTC, Buzz Bull, Coach B, Commercial Cleaners Alliance, Florecita, Hardwood Artisan, Link Eze, Next Gen Solutions, PNW Pro Clean, Vanessa | 15 | — | No `next_action`/`priority` frontmatter — flat files, "TBD — needs human next action" |
-
-Note: `Align HCM.md` still carries an active-looking record despite CLAUDE.md stating that engagement ended 2026-09-02 — flagging again as a standing data-gap follow-up, not fixing it here per the "keep changes to what the task asks" rule.
+| Client | Days stale | Suggested next touch |
+|---|---|---|
+| Tags 2 Go | 10 | Map Google Ads access via Access Broker/Bitwarden; confirm agency admin invite need |
+| Puttery NYC | 10 | Rotate/verify Tock role credential, approve durable HTTPS host, register Reservation Webhook |
+| Nexla | 10 | Confirm exact budget, landing pages, primary conversion action, Google Ads vs. GA4 tracking |
+| Momentum 360 | 10 | Reconcile the agency-level operating scorecard while preserving separate client records |
+| Deborah-Mara | 10 | No `next_action` set — needs one |
+| Bridge Software Development | 10 | Approve Phase 1 roles, verification meaning, priority journeys, ownership, acceptance criteria |
+| Bar Crawl USA | 10 | Complete QA/cleanup for confirmed Boos & Booze city/event pages; repair current-event hub listing |
+| Omega Landscaping | 11 | Put lead fields into Momentum's own Zapier account — client-contact path is dead (confirmed 2026-09-14) |
+| AMI Cleaning | 16 | Verify HubSpot form routing and a named production-lead owner |
+| BOK Law Firm | 16 | Maintain approved weekly content workflow; resolve geographic/embargo guardrails |
+| Bercos Popcorn | 16 | Obtain finished Shopify site/staging handoff, then run launch/SEO/conversion QA |
+| BigOrange Marketing | 16 | Prepare Custom Home Builder pillar audit and Janice interview (overdue `due`: 2026-08-10) |
+| Capsule & Tonic | 16 | Confirm canonical registry disposition before promoting any dated campaign evidence |
+| Cindy May Christmas | 16 | Resolve video/newsletter/photo-map/Shopify dependencies (overdue `due`: 2026-09-01) |
+| Everyday Life Insurance | 16 | Resolve missing decision context; confirm canonical registry disposition |
+| Fresh Blends | 16 | Verify live Google Ads pause/restart state; restore separate store-level reporting |
+| Hope Wellness Center | 16 | Complete deeper request analysis; decide on graphic-design support; close GBP/reporting follow-up |
+| Kimberly James Bridal | 16 | Fix desktop FAQ image crop, QA breakpoints, reconcile appointment routing |
+| NKCDC | 16 | Get leadership selection of 2–3 Phase Two priorities; define audience/offer/owner/path |
+| Onsite Concrete | 16 | Complete allowlisted technical crawl; standardize entity/NAP signals |
+| Pritzker Law Group | 16 | Confirm podcast landing-page conversion goal, host, form destination, analytics property |
+| Pro Fence & Deck | 16 | Recheck Yelp/Apple Maps verification after wait period; escalate if still blocked |
+| Replenish | 16 | Reconcile Google Ads billing owner; wait for verified San Diego expansion decision |
+| Revive Systems | 16 | Inspect authorized Local Services Ads account; record verification stage/owner/blocker (priority: urgent) |
+| VA Claims | 16 | Convert David's approved direction into a prioritized Phase 2 backlog |
+| AWCI, Align HCM, Bend Plastic Surgery, Blissful Events, Bluegrass Janitorial, Bridge of Hope OTC, Buzz Bull, Coach B, Commercial Cleaners Alliance, Florecita, Hardwood Artisan, Link Eze, Next Gen Solutions, PNW Pro Clean, Vanessa | 16 | No `next_action`/`priority` frontmatter — flat files, "TBD — needs human next action" |
 
 ## Due in 48h
 
-None due forward. Four records carry **overdue** `review_on`/`due` dates that predate today by an amount recent enough to be a live signal (the batch of clients pinned to the generic 2026-08-08 `review_on` default is excluded as noise — same call as yesterday):
+None due forward. Four records carry **overdue** `review_on`/`due` dates recent enough to be a live signal (the batch of clients pinned to the generic 2026-08-08 `review_on` default is excluded as noise):
 
 | Client | Field | Date | Days overdue |
 |---|---|---|---|
-| Nexla | review_on | 2026-08-31 | 24 |
-| Cindy May Christmas | due | 2026-09-01 | 23 |
-| Puttery NYC | review_on | 2026-09-09 | 15 |
-| Tags 2 Go | review_on | 2026-09-20 | 4 |
+| Nexla | review_on | 2026-08-31 | 25 |
+| Cindy May Christmas | due | 2026-09-01 | 24 |
+| Puttery NYC | review_on | 2026-09-09 | 16 |
+| Tags 2 Go | review_on | 2026-09-20 | 5 |
 
 ## Likely next work packages
 
@@ -86,7 +85,7 @@ From `_os/automation/bin/predict-work.js` (re-run against `/home/user/client-ope
    - Confidence: 0.86 · Basis: `past-due-needs_approval` (no predicted window — this is a stuck queue item, not a forecast)
    - Gate: canonical work item still requires its recorded approval before any further preparation is appropriate
 
-3. **Momentum 360 — implement the caller auto-response workflow** (queue item `wi-20260718-0003`)
+3. **Momentum 360 — restore CallRail/Track 360 data source integration** (queue item `wi-20260718-0003`)
    - Confidence: 0.68 · Basis: `past-due-blocked`
    - Gate: blocked on restoring CallRail membership access; no predicted preparation appropriate until the block clears
 
@@ -94,12 +93,12 @@ Only #1 has a genuine forward-looking window and clean evidence tier; #2 and #3 
 
 ## Capacity shadow
 
-**Excluded this run.** `latest-chronos.json` fingerprint does not match today's prediction fingerprint (stale from 2026-09-02 vs. today's 2026-09-24 run against live canonical data). Per the skill's freshness rule, a mismatched chronos file is not read for the shadow band. Separately, even the stale file has no `planner_consumption` gate set true, so it was never eligible to rank clients. No capacity shadow to report today — this needs the chronos job re-run against current data before it's usable again.
+**Excluded this run.** `latest-chronos.json` fingerprint does not match today's prediction fingerprint (stale from 2026-09-02 vs. today's 2026-09-25 run against live canonical data). Per the skill's freshness rule, a mismatched chronos file is not read for the shadow band. Separately, even the stale file has no `planner_consumption` gate set true, so it was never eligible to rank clients. No capacity shadow to report today — this needs the chronos job re-run against current data before it's usable again.
 
 ## Tomorrow's priority stack
 
 1. **BOK Law Firm weekly content kit prep** — confirmed-pattern, 0.96 confidence, window opens 2026-09-29. Highest-quality, least-ambiguous piece of forward work on the board; start the source-packet fingerprint step now so it isn't a scramble next week.
-2. **Overdue review/due dates: Nexla (24d), Cindy May Christmas (23d), Puttery NYC (15d)** — these have blown past their own stated review checkpoints. Each has a concrete, high-priority `next_action` already written down (budget/tracking confirmation, dependency resolution, credential rotation) — the blocker looks like a decision/approval, not missing information.
-3. **Momentum 360 — 14 open checklist items, highest of any client** — the agency-level scoreboard/decision-ledger next_action has been sitting since the last touch 9 days ago; it's the internal-facing record with the most accumulated unfinished work.
+2. **Overdue review/due dates: Nexla (25d), Cindy May Christmas (24d), Puttery NYC (16d)** — each has blown past its own stated review checkpoint, and each has a concrete `next_action` already written down (budget/tracking confirmation, dependency resolution, credential rotation). The blocker reads as a decision/approval, not missing information.
+3. **Momentum 360 agency-level scorecard** — last touched 10 days ago; the reconciliation `next_action` (agency scorecard + AI/CRM/call-attribution/product-rollout decisions) has been sitting the longest of any internal-facing record.
 
-Kept out of the stack (approval-gated or blocked, not actionable prep): BigOrange Marketing trial scope confirmation (needs approval) and Momentum 360 caller auto-response (blocked) — see Likely next work packages above.
+Kept out of the stack (approval-gated or blocked, not actionable prep): BigOrange Marketing trial scope confirmation (needs approval) and Momentum 360 CallRail restoration (blocked) — see Likely next work packages above.
