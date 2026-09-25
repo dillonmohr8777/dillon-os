@@ -550,3 +550,74 @@ only a live SERP can answer, such as who actually ranks. Also worth knowing: a
 `curl` status probe can return 403 from Cloudflare while the same URL fetched with
 `-L` and a browser user-agent returns 200 — check the status with the same request
 shape you used for the body, or you will report a site as broken when it is not.
+
+---
+
+## 2026-09-25 — A gate is a path, not a promise
+
+**Lesson.** Before trusting a safety check, run it and ask it what it read. A gate
+scoped to one directory keeps passing forever while the risky content lands in the
+directory next to it, and the passing test is what stops anyone from looking.
+
+**Evidence.** `CLAUDE.md` states that `_os/test/public-safety.test.js` "fails the
+build on any secret-shaped value." `listBrainFiles()` at `_os/public-safety.js:82`
+walks `12_Brain/` and nothing else — 902 tracked files, against 2,399 tracked text
+files outside it. On 2026-09-24, PR #418 (`98c6e79`) landed 661 recovered Codex
+transcripts under `10_Sessions/`, and its commit message records that one Align HCM
+HubSpot token quoted verbatim in a July transcript was redacted before commit. A
+person reading a 132,723-line diff caught it. The suite passed 9/9 before and
+after, having opened none of those files. Running the gate's own blocking rules
+across the blind spot the same night returned 12 files still on `main`, nine of
+them in the new archive.
+
+**How to apply.** Make coverage a reported number, not an assumption:
+`node _os/automation/bin/secret-coverage-audit.js` prints what the gate scans, what
+it cannot see, and which ungated files trip its own rules — paths and rule ids
+only, never a matched value. Widen a gate only after that number says it is safe;
+switching `listBrainFiles()` to the whole repo today would fail the build on
+content already merged.
+
+---
+
+## 2026-09-25 — Commit the scanner, not just the scan
+
+**Lesson.** A one-off analysis that produces a large durable artifact should ship
+the code that produced it in the same commit. Otherwise the artifact is a
+photograph of a moving thing, and the next pass pays the full cost again.
+
+**Evidence.** `10_Sessions/Codex-Recovery-2026-09-23/` reduced 3,505 Codex
+sessions and ~31 GB to 655 thread notes, a 3,506-row CSV and a hand-verified loss
+report — the estate's best self-observation to date. Its README documents the
+method exactly: three passes, the JSONL keys that carry the signal
+(`session_meta`, `task_complete.last_agent_message`, `apply_patch`, `error`), the
+`task_started` minus `task_complete` abandonment test, eight regex flag classes.
+`git show --name-only 98c6e79` returns six non-thread paths and **none is code**.
+`.codex` keeps growing — the archive's own peak day is 110 sessions — so the next
+recovery restarts from zero over a larger corpus.
+
+**How to apply.** When a session is about to write more than a few hundred files,
+stop and ask what re-runs it in a month. `_os/automation/bin/harvest-sessions.py`
+is the precedent that worked: the Claude-transcript harvester is committed, so
+every later run invokes it instead of reinventing it.
+
+---
+
+## 2026-09-25 — Route the output to the reader, or it is not filed
+
+**Lesson.** An intake scanner only sees the folders it was told about. When a new
+kind of artifact starts landing somewhere new, the scanner's source list is the
+thing that has to change — not the writer's diligence.
+
+**Evidence.** `02_Campaigns/2026-09-24 Ads Playbook - Nexla, Deb Mara, Onsite.md`
+ends with a section headed "Decisions only you can make" — three approval-gated
+items and a drafted, unsent client reply. None reached `System/approval-queue.md`,
+whose `last_scan` reads `2026-09-15T07:04:22Z` and whose newest open item of 123
+is dated 2026-09-14. Its own `scan_sources` frontmatter lists `00_Inbox/`,
+`01_Clients/`, `System/urgent-replies.md`, `System/claude-memory-sync.md` and
+`Daily-Briefs/`. `02_Campaigns/` is absent, so a healthy scan would also have
+walked past it.
+
+**How to apply.** When a note carries a gated action, the note is not the filing —
+the queue entry is. Check the consumer's source list whenever you introduce a
+folder, and treat `scan_sources` as a contract even though nothing in `_os/` or
+`System/` currently parses it.
