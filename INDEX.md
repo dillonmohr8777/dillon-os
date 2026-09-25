@@ -90,6 +90,7 @@ links instead of loading the entire vault.
   Month — One Alignment]] — 2026-09-03 filesystem-verified planning review across
   42 repos: strengths, flaws, time waste, dependability ledger, the one upskill,
   and the reorganization.
+- [[12_Brain/07_Reviews/2026-09-02 - Slack open-loop sweep|Slack open-loop sweep 2026-09-02]] — every open ask across 109 channels, with the three time-sensitive ones named.
 - [[12_Brain/08_Memory/README|Memory Ledger]] — corrections, preferences, and
   facts with observation and validity dates.
 
