@@ -1,7 +1,7 @@
 ---
 note_type: index
 status: active
-updated: 2026-09-15
+updated: 2026-09-25
 tags:
   - index
   - brain
@@ -86,6 +86,12 @@ links instead of loading the entire vault.
   New skill: [[.claude/skills/franchise-list|franchise-list]] on [[12_Brain/02_Entities/Vibe Prospecting|Vibe Prospecting]] (spend-gated franchise location pulls).
 - [[12_Brain/07_Reviews/README|Reviews]] — daily, weekly, and quarterly
   synthesis.
+- [[12_Brain/11_Craft/00_Index|Agent Craft]] — how the agentic layer is built and
+  what it gets wrong. Latest nightly pass:
+  [[12_Brain/11_Craft/2026-09-25 - daily learning review|2026-09-25 daily learning review]]
+  — the secret gate reads only `12_Brain/`, so the 661-file Codex archive that
+  landed on `main` was never scanned. Coverage audit:
+  `node _os/automation/bin/secret-coverage-audit.js`.
 - [[12_Brain/07_Reviews/2026-09-03 - Year Quarter Month Alignment|Year, Quarter,
   Month — One Alignment]] — 2026-09-03 filesystem-verified planning review across
   42 repos: strengths, flaws, time waste, dependability ledger, the one upskill,
