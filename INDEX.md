@@ -133,6 +133,12 @@ evidence.
   — seven claims checked against artifacts; the Bridge attribution correction.
 - [[12_Brain/04_Decisions/2026-09-07 - Align HCM registry record is superseded|Align HCM registry record is superseded]]
   — the stale active registry record is superseded by the vault.
+- [[ai-division/MomoBot/README|MomoBot]] — the product itself: DeerFlow fork,
+  private per-client workspaces, live/rehearsal/private-workspace ports. See
+  [[ai-division/MomoBot/DEMO-2026-09-23|the 2026-09-23 demo]],
+  [[ai-division/MomoBot/EVIDENCE|the evidence ledger]] (fork PRs, m4 deploy,
+  cookie-collision fix), and [[ai-division/MomoBot/WORKSPACE|Dillon's private
+  workspace]] (21-agent roster).
 
 ## Reliability — 2026-09-15
 
