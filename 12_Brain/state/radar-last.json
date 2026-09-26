@@ -1,49 +1,49 @@
 {
   "automation_id": "radar-refresh",
-  "started_at": "2026-09-25T11:52:10.766Z",
+  "started_at": "2026-09-26T11:25:14.300Z",
   "status": "error",
-  "date": "2026-09-25",
-  "rotation_slot": "PA: Pike County, Erie County, Armstrong County, Centre County, Mifflin County, Lehigh County",
+  "date": "2026-09-26",
+  "rotation_slot": "PA: Forest County, Bradford County, Beaver County, Wayne County, Lebanon County, Berks County",
   "run": {
-    "discovered_raw": 49,
+    "discovered_raw": 13,
     "discovered_new": 1,
-    "regraded": 14,
+    "regraded": 4,
     "enriched": 0,
     "enrich_no_match": 1,
     "enrich_skipped": 0,
     "errors": [
-      "dashboard failed: dashboard is 1.74MB, over the 1.50MB limit — 1465 prospects. Trim projectRows() or paginate server-side before shipping this."
+      "dashboard failed: dashboard is 1.74MB, over the 1.50MB limit — 1466 prospects. Trim projectRows() or paginate server-side before shipping this."
     ],
-    "plan": "registry is at 1484 rows, past the 1200 soft cap — discovery ramped from 60 to 3",
+    "plan": "registry is at 1485 rows, past the 1200 soft cap — discovery ramped from 60 to 3",
     "throttled": true,
-    "rendered": 7,
-    "imagery_checked": 77,
-    "imagery_buildable": 0,
-    "logo_verified": 0,
-    "logo_pending": 58,
-    "logo_rejected": 19,
-    "not_live": 1
+    "rendered": 0,
+    "imagery_checked": 36,
+    "imagery_buildable": 9,
+    "logo_verified": 12,
+    "logo_pending": 20,
+    "logo_rejected": 4,
+    "not_live": 3
   },
-  "tracked": 1485,
+  "tracked": 1486,
   "active": 427,
-  "logo_holds": 1038,
+  "logo_holds": 1039,
   "logo_hold_reasons": {
     "logo_fetch_failed": 143,
     "logo_not_found": 204,
     "previous_homepage_exists": 140,
     "logo_below_minimum_size": 7,
     "logo_format_not_auditable_webp": 55,
-    "logo_source_not_official_site": 22,
-    "business_identity_mismatch": 128,
+    "logo_source_not_official_site": 21,
+    "business_identity_mismatch": 129,
     "logo_background_not_removable: logo border is not a single removable color": 29,
-    "logo_undecodable: interlaced PNG is not decodable here": 7,
-    "site_not_live_empty": 116,
+    "logo_undecodable: interlaced PNG is not decodable here": 6,
+    "site_not_live_empty": 117,
     "logo_resolution_insufficient": 101,
     "logo_format_not_auditable_jpg: progressive JPEG is not decodable here": 44,
     "logo_has_no_transparent_area": 4,
     "logo_format_not_auditable_gif": 7,
     "business_identity_unverified": 2,
-    "SVG paints an opaque background plate": 6,
+    "SVG paints an opaque background plate": 7,
     "logo_background_not_removable: no flat background found to remove": 1,
     "site_not_live_parked": 2,
     "logo_undecodable: filtered paletted PNG is not decodable here": 9,
@@ -58,7 +58,7 @@
     "enrich": 30,
     "rebuild": 175,
     "polish": 935,
-    "nurture": 293,
+    "nurture": 294,
     "ads_seo": 32
   },
   "by_verdict_active": {
@@ -68,6 +68,6 @@
     "rebuild": 2
   },
   "errors": [
-    "dashboard failed: dashboard is 1.74MB, over the 1.50MB limit — 1465 prospects. Trim projectRows() or paginate server-side before shipping this."
+    "dashboard failed: dashboard is 1.74MB, over the 1.50MB limit — 1466 prospects. Trim projectRows() or paginate server-side before shipping this."
   ]
 }
