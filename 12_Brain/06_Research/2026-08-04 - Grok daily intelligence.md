@@ -8,6 +8,7 @@ question: "What should Dillon OS test or change based on today's Grok and X inte
 verification_status: partial
 confidence: 0.75
 expires: 2026-08-04
+status: EXPIRED
 review_on: 2026-08-04
 source_refs:
   - "https://www.aikido.dev/blog/keyv-and-friends-compromised-in-npm-supply-chain-attack"

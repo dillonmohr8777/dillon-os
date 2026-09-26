@@ -8,6 +8,7 @@ question: "What should Dillon OS test or change based on today's Grok and X inte
 verification_status: partial
 confidence: 0.75
 expires: 2026-08-02
+status: EXPIRED
 review_on: 2026-08-02
 source_refs:
   - "https://github.blog/changelog/2026-07-29-copilot-code-review-agent-skills-and-mcp-now-generally-available/"

@@ -8,6 +8,7 @@ question: "What should Dillon OS test or change based on today's Grok and X inte
 verification_status: partial
 confidence: 0.75
 expires: 2026-08-01
+status: EXPIRED
 review_on: 2026-08-01
 source_refs:
   - "https://blog.modelcontextprotocol.io/posts/2026-07-28/"
