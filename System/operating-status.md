@@ -1,6 +1,6 @@
 ---
 tags: [system, operating-status]
-last_updated: 2026-09-15
+last_updated: 2026-09-26
 callsign: D.I.L.L.O.N.
 operator: Dillon Mohr
 goal_label: ACTIVE CLIENTS
@@ -66,6 +66,42 @@ Everything in this block was measured on disk or in Task Scheduler on
   client-facing paid generation.
 - **Open PR:** dillon-os #339 on `cursor/immohrtal-standing-canary-3c2e`, state
   OPEN. The cadence layer and daily-sweep commits are already on origin.
+
+## Verified 2026-09-26 — the cadence layer has been dead for 11 days
+
+Measured from this repository on 2026-09-26T04:15Z by the daily learning loop. A
+cloud checkout cannot see the Windows box, so everything here is read off what has
+reached origin.
+
+- **The run ledger stopped on 2026-09-15.**
+  `_os/automation/cadence/run-ledger.jsonl` holds 29 rows; the last is
+  `2026-09-15T14:00:01.764Z` (`daily-sweep`, ok). Nothing appended in 11 days. The
+  block above reads "Run ledger is live" as of 2026-09-14 — that line is now
+  historical, not current. This is the outcome the 2026-09-15 `LogonType:
+  Interactive` finding predicted, and the elevation that fix needs was refused, so
+  the most likely reading is that nothing has changed on the box since.
+- **`12_Brain/11_Craft/` stopped with it.** 29 consecutive dated operating briefs,
+  2026-08-18 through 2026-09-15, then none. `agent-craft-brief.js` runs at cadence
+  "daily via routine D26", inside the loop that stopped. `12_Brain/09_Ops/` and
+  `12_Brain/01_Captures/` have had no commit since 2026-09-15 either.
+- **The external watchdog did not catch it and could not have.**
+  `.github/workflows/cadence-watchdog.yml` has run every 6 hours since 2026-09-17
+  and reported clean every time, because `cadenceJobs()` matches 0 of the 27
+  records in `12_Brain/registry/automations.json` — it filters on a field the
+  registry does not have and a cadence vocabulary it does not use. Its repo-staleness
+  check cannot trip either: `radar-bot` pushes from GitHub Actions and has committed
+  on 17 of 17 consecutive days regardless of the box's state. Detection of the empty
+  case was applied 2026-09-26; the registry join still needs a decision.
+  [[12_Brain/07_Reviews/2026-09-26 - The external watchdog watches nothing]]
+- **What still runs** is the cloud layer only: the `radar-daily` Action, and the
+  `morning-brief` / `vault-clean` / `week-review` routines that commit as author
+  `Claude`. Those have their own gaps — `morning-brief` absent 2026-09-18 to 09-20,
+  `vault-clean` absent 09-18 to 09-20 and 09-23 — with no recorded cause. Which
+  harness fires them, and whether it is the same box, is NOT determinable from a
+  cloud checkout.
+- **`Daily-Briefs/week-review-2026-09-25.md` states the opposite** ("Daily automation
+  cadence held ... The scaffolding is reliable"). Treat that section as wrong; the
+  rest of that review's business findings were checked and hold.
 
 
 The vault was reconciled on 2026-07-12 against current work from the rolling three-week window. The April-era client roster is superseded.

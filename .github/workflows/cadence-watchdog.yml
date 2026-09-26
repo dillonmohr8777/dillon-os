@@ -29,6 +29,10 @@ jobs:
         with:
           node-version: '22'
 
+      # A selftest nobody runs is the same class of bug this watchdog just had.
+      - name: Selftest
+        run: node _os/automation/bin/cadence-watchdog.js --selftest
+
       - name: Run the watchdog
         run: |
           set -o pipefail
