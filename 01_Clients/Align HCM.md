@@ -49,5 +49,11 @@ due: none
 - First-person presentation script for Dillon
 - Presented to: Maher, Barbara, Tammi, Rich, Joann, Allison
 
+## Reporting stack (2026-07-30)
+- Targets: HubSpot portal `242825734`, GA4 `G-0Y6LQTTBRJ`, `alignhcm.com`
+- Computer-use audit: `handoffs/align-reporting-stack-audit-2026-07-30.md`
+- Status: hard-stopped on MFA/login — no in-account changes this pass
+- After Align sessions available: `node handoffs/align-reporting-post-auth-configure.mjs`
+
 ## Links
 - [[Client Index]]
